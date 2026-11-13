@@ -43,6 +43,7 @@ Hooks: `git config core.hooksPath .githooks`.
 ## Working style
 
 - The owner wants proposals and pushback, not option menus. Recommend one thing and say why.
+- **The owner takes the recommendation by default** (stated 2026-11-14). Don't stop to ask. Decide, record an accepted decision record that names the alternatives you rejected, and proceed. Stop only for things outside design and code: money, publishing, outward-facing or irreversible actions. The owner can overturn a decision at any time by superseding it.
 - Git history is the ledger. Don't write changelogs into canon docs.
 - Edit an existing doc rather than creating a new process document.
 - Related repos: `F:\A-War-Without-Victory` (AWWV, the ancestor premise) and `F:\Star Trek` (Starfleet Career, the source of the pack and process patterns). Mine them; don't copy their process weight.

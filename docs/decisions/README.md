@@ -10,3 +10,9 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0004](0004-first-slice-union-1861-62.md) | First vertical slice: the Union, 1861–62 | accepted |
 | [0005](0005-living-people.md) | Real historical and living people, under a sensitivity policy | accepted (policy details open) |
 | [0006](0006-single-or-collective-principal.md) | The principal can be one person or a collective | accepted |
+| [0007](0007-no-dice-for-people.md) | No dice for people | accepted |
+| [0008](0008-declared-telegraphing.md) | The player sees what proxies say, not what they will do | accepted |
+| [0009](0009-symmetric-opponents.md) | Opponents run on the same machinery | accepted |
+| [0010](0010-variable-tempo.md) | Variable tempo: the tick is a day | accepted |
+| [0011](0011-single-player-faction-scoped-knowledge.md) | Single-player, with knowledge scoped per faction | accepted |
+| [0012](0012-port-ideas-not-code.md) | Port ideas from AWWV, not code | accepted |
