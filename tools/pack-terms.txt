@@ -1,0 +1,54 @@
+# Setting terms that must never appear in engine code (decision 0003).
+# One term per line, matched whole-word and case-sensitive at the start.
+# Add every proper name a pack introduces.
+
+# union-1861
+Lincoln
+McClellan
+Halleck
+Stanton
+Seward
+Chase
+Grant
+Sherman
+Frémont
+Fremont
+Burnside
+McDowell
+Pope
+Butler
+Banks
+Confederate
+Confederacy
+Potomac
+Richmond
+Antietam
+Gettysburg
+Davis
+Republican
+Copperhead
+
+# rome-punic
+Hannibal
+Scipio
+Fabius
+Varro
+Carthage
+Carthaginian
+Cannae
+Roman
+Senatus
+
+# ukraine-2022
+Ukraine
+Ukrainian
+Kyiv
+Russia
+Russian
+Zelensky
+Zelenskyy
+Zaluzhnyi
+Syrskyi
+Putin
+Wagner
+Prigozhin

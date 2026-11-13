@@ -1,0 +1,4 @@
+#!/bin/sh
+# Mandate pre-commit: typecheck, tests, pack boundary.
+set -e
+npm run --silent check

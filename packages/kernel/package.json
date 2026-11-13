@@ -1,0 +1,9 @@
+{
+  "name": "@mandate/kernel",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pure deterministic simulation core for Mandate. No DOM, no Node APIs, no I/O, no clock.",
+  "main": "src/index.ts",
+  "types": "src/index.ts"
+}
