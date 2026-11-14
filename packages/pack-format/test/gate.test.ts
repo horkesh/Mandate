@@ -283,7 +283,9 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     const optionOnly = editJson(sit('eastwatch_followup'), (s) => ((s.options[2].gate = { topics: ['fen-flight'], placement: 'decision' }), (s.citations = [])));
     firesAt(optionOnly, 'gate-citation', { file: sit('eastwatch_followup'), at: 'citations' });
     firesAt(optionOnly, 'gate-unsigned', { file: sit('eastwatch_followup'), at: 'gateReview' });
-    firesAt(optionOnly, 'gate-no-locked-cost', { file: sit('eastwatch_followup'), at: 'options[0].lockedCosts' });
+    // B5 per option: the tagged option needs locked costs; its untagged siblings, under a `none` situation, do not.
+    firesAt(optionOnly, 'gate-no-locked-cost', { file: sit('eastwatch_followup'), at: 'options[2].lockedCosts' });
+    expect(issues(optionOnly).filter((i) => i.kind === 'gate-no-locked-cost' && i.at !== 'options[2].lockedCosts')).toEqual([]);
     // Probe G4: an atrocity-class decision whose options carry their own tags.
     const atrocity = editJson(sit('fen_crossing'), (s) => {
       s.gate = { topics: ['harbour-burning'], placement: 'event', risks: [], actingSide: 'south' };

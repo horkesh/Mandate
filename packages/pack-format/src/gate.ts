@@ -386,9 +386,13 @@ export function checkGate(
       for (const id of own) if (atrocity(id)) err('gate-atrocity-lever', `options[${i}]`, `an option carries atrocity-class topic "${id}"`, 'atrocities are events and text only, never a choice for any seat (B4, D4; rule 1)');
     });
 
-    // B5: a gated decision's options all carry locked costs, and nothing cancels them.
-    if (gated && def.kind === 'decision') {
+    // B5, per option (the lead's ruling on standing review S5): every option of a decision whose effective tag (its own,
+    // else the situation's) names a topic carries locked costs, and nothing cancels them. A gated option is a facet of a
+    // decision, so its effective placement is `decision` (A2), even where the situation is wrongly placed.
+    const costed = new Set(def.kind === 'decision' ? def.options.filter((o) => topicsOf(o.gate ?? tag).length > 0).map((o) => o.id) : []);
+    if (costed.size > 0) {
       def.options.forEach((o, i) => {
+        if (!costed.has(o.id)) return;
         if (o.lockedCosts.length === 0) err('gate-no-locked-cost', `options[${i}].lockedCosts`, `option "${o.id}" has no locked costs`, 'at least one locked cost on every option of a gated decision (B5)');
       });
       const opposes = (e: phase0.Effect, cost: Extract<phase0.Effect, { propose: unknown }>): boolean =>
@@ -398,6 +402,7 @@ export function checkGate(
         e.propose.subject === cost.propose.subject &&
         Math.sign(e.propose.delta) === -Math.sign(cost.propose.delta);
       def.options.forEach((o, i) => {
+        if (!costed.has(o.id)) return;
         for (const cost of o.lockedCosts) {
           if (!('propose' in cost)) continue;
           // Inside the item (review S4): the option's own effects, and options that can be taken with it.
@@ -412,7 +417,7 @@ export function checkGate(
           });
         }
       });
-      for (const o of def.options) {
+      for (const o of def.options.filter((x) => costed.has(x.id))) {
         for (const cost of o.lockedCosts) {
           if (!('propose' in cost)) continue;
           for (const other of items) {
