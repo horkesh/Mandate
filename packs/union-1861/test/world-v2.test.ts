@@ -95,6 +95,47 @@ describe('Union 1861 world v2', () => {
     expect([creatable('harbour_command'), creatable('temporary_command'), creatable('navy_squadron')]).toEqual(['directive', 'directive', 'directive']);
   });
 
+  it('cites a primary source, not only a research note, for the five cabinet holders (0050, ruling S3)', () => {
+    for (const id of ['us_secretary_state', 'us_secretary_treasury', 'us_secretary_interior', 'us_attorney_general', 'us_postmaster_general']) {
+      const post = start.posts.find((p) => p.id === id)!;
+      expect(JSON.stringify(post.provenance), id).toContain('NYT-1861-03-06');
+    }
+  });
+
+  it('gives each man the side of the post he holds on 5 March, else of his home state (0055, ruling S1)', () => {
+    const person = (id: string) => world.people.find((p) => p.id === id)!;
+    // US commissions on 5 March: Union, whatever they did in April.
+    for (const id of ['lee_robert_e', 'stuart_james_e_b', 'longstreet_james', 'smith_edmund_k']) expect(person(id).faction, id).toBe('union');
+    // A man from one of the eight no-faction states has no side; so does a man holding a state post there.
+    for (const id of ['jackson_thomas_j', 'mason_james_m', 'vance_zebulon_b', 'breckinridge_john_c', 'forrest_nathan_b']) expect(person(id).faction, id).toBeNull();
+    // Seceded home states start Confederate; a man whose home the draft does not name is unknown, not guessed.
+    for (const id of ['bragg_braxton', 'slidell_john', 'semmes_raphael']) expect(person(id).faction, id).toBe('confederate');
+    expect(person('hardee_william_j').unknowns).toContain('faction');
+    // The only Confederate men with no post on 5 March are those the table ruled so from a seceded home state or office.
+    const holders = new Set(start.posts.map((p) => p.holder).filter((h) => h !== null));
+    const confederateNoPost = world.people.filter((p) => p.faction === 'confederate' && !holders.has(p.id)).map((p) => p.id as string).sort();
+    expect(confederateNoPost).toEqual([
+      'bragg_braxton', 'cobb_howell', 'mcculloch_ben', 'northrop_lucius_b', 'polk_leonidas', 'reagan_john_h', 'semmes_raphael', 'slidell_john', 'tattnall_josiah', 'twiggs_david_e', 'wigfall_louis_t', 'yancey_william_l',
+    ]);
+  });
+
+  it('holds Fort Pickens by Slemmer, who commanded the garrison; Vogdes stayed aboard (0055, ruling S2)', () => {
+    expect(start.posts.find((p) => p.id === 'us_fort_pickens')!.holder).toBe('slemmer_adam_j');
+    expect(world.people.some((p) => p.id === 'vogdes_israel')).toBe(true);
+  });
+
+  it('has supply sources for both sides, each in a region that side holds, and depots at the navy yards (0055)', () => {
+    const sources = world.depots.filter((d) => d.kind === 'source');
+    expect(sources.length).toBeGreaterThan(8);
+    const holder = (region: string) => controlOf(region).find((s) => s.permille >= 250)?.faction;
+    expect(sources.some((d) => holder(d.region) === 'union')).toBe(true);
+    expect(sources.some((d) => holder(d.region) === 'confederate')).toBe(true);
+    expect(sources.filter((d) => ['montgomery'].includes(d.region as string)).length).toBe(1);
+    for (const id of ['depot_washington_navy_yard', 'depot_washington_arsenal', 'depot_gosport_navy_yard', 'depot_brooklyn_navy_yard']) expect(world.depots.some((d) => d.id === id), id).toBe(true);
+    // Every figure is a design parameter and says so.
+    expect(world.depots.every((d) => JSON.stringify(d.provenance).includes('LANE-0.3'))).toBe(true);
+  });
+
   it('has a Mediterranean box for the squadron there, with one leg to the North Atlantic', () => {
     const box = world.regions.find((r) => r.id === 'mediterranean')!;
     expect([box.kind, box.offMapRole]).toEqual(['off_map', 'distant_theatre']);

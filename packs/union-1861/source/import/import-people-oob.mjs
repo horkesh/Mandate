@@ -10,6 +10,9 @@ import { citeText } from './registry.mjs';
 
 const resolve = makeResolver(regions.map((r) => ({ id: r.id, counties: r.counties, flags: r.flags })));
 const scen = (t) => `source/scenarios/${SCENARIO}/${t}.csv`;
+// The cabinet's confirmation on 5 March rests on research notes in the draft; the note itself (march-1861-facts question 10) cites the
+// New York Times of 6 March 1861, a primary source, so the record cites it too (lead ruling S3, 0050: pointers are never enough alone).
+const confirmedCites = (cell) => (/march-1861-facts\.md q\.10/.test(cell) ? ['NYT-1861-03-06 Washington dispatch of 5 March, cabinet nominations confirmed'] : []);
 
 // ---- posts ---------------------------------------------------------------------
 const postRows = rows('oob/posts.csv');
@@ -37,7 +40,7 @@ for (const r of postRows) {
   const loc = r.get('location');
   posts.push({
     id, name: r.get('name'), kind: r.get('kind'), side, dept, parent: r.get('parent_post'), loc, region: resolve(loc) ?? '',
-    sources: convertSources(r.get('sources'), 'OOB-LANE'), notes: r.get('notes'), est,
+    sources: convertSources(r.get('sources'), 'OOB-LANE', confirmedCites(r.get('sources'))), notes: r.get('notes'), est,
   });
 }
 const postById = new Map(posts.map((p) => [p.id, p]));
@@ -75,6 +78,11 @@ for (const r of tenureRows) {
   const t = { person, name: r.get('person_name'), post: r.get('post_id'), from, to, acting: r.get('acting') === 'yes', notes, sources: r.get('sources'), cover, line: r.line };
   tenuresByPost.set(t.post, [...(tenuresByPost.get(t.post) ?? []), t]);
 }
+const HOLDER_RULING = {
+  us_fort_pickens: { person: 'slemmer_adam_j', why: "Slemmer commanded the garrison from 10 January; Vogdes was senior on the station from 6 February but stayed afloat in Brooklyn (the draft's own rows); Vogdes's company is aboard Brooklyn" },
+};
+/** Men who hold no post at the start but whose record is kept (they command forces afloat or are named by a ruling). */
+const ALSO_RECORD = ['vogdes_israel'];
 const holders = []; // { post, person | 'unknown', acting, from, to, sources, notes }
 const holderOf = new Map();
 const unresolved = [];
@@ -84,7 +92,12 @@ for (const p of posts) {
   const maybe = ts.filter((t) => t.cover === 'maybe');
   let win;
   let why = '';
-  if (yes.length === 1) win = yes[0];
+  const ruled = HOLDER_RULING[p.id] && yes.find((t) => t.person === HOLDER_RULING[p.id].person);
+  if (ruled) {
+    // Lead ruling S2 (0055 review): the man who commanded the garrison holds the fort; the senior officer who stayed afloat does not.
+    win = ruled;
+    win.notes = `${win.notes} [chosen over ${yes.filter((t) => t !== ruled).map((t) => t.person).join(', ')}: ${HOLDER_RULING[p.id].why}]`;
+  } else if (yes.length === 1) win = yes[0];
   else if (yes.length > 1) {
     const dated = yes.filter((t) => t.from !== '').sort((a, b) => cmp(b.from, a.from));
     if (dated.length >= 1 && (dated.length === 1 || dated[0].from !== dated[1].from)) win = dated[0];
@@ -92,7 +105,7 @@ for (const p of posts) {
   } else if (maybe.length > 0) why = `no tenure is certain to cover the start (a start or end is needs-source): ${maybe.map((t) => t.person).join(', ')}`;
   else why = ts.length > 0 ? 'its tenures all fall outside the start' : 'the draft gives no holder';
   if (win) {
-    holders.push({ post: p.id, person: win.person, acting: win.acting, from: win.from, to: win.to, sources: convertSources(win.sources, 'OOB-LANE'), notes: win.notes });
+    holders.push({ post: p.id, person: win.person, acting: win.acting, from: win.from, to: win.to, sources: convertSources(win.sources, 'OOB-LANE', confirmedCites(win.sources)), notes: win.notes });
     holderOf.set(p.id, win.person);
   } else {
     holders.push({ post: p.id, person: 'unknown', acting: false, from: '', to: '', sources: '', notes: why });
@@ -176,18 +189,76 @@ const startFaction = (personId) => {
   const mine = holders.filter((h) => h.person === personId).map((h) => deptFaction.get(postById.get(h.post).dept));
   return mine.length > 0 ? (mine[0] ?? '') : undefined;
 };
+// Starting sides (decision 0055, lead ruling S1): a man's side on 5 March comes from the post he holds then; with no post, from his home
+// state's government (a man from one of the eight no-faction states has no side); a man holding a US commission starts on the Union side.
+// The 44 Confederate-coded men with no post are decided here, each by what the draft's own rows say; his eventual side stays in his note.
+// [side, reason]: 'none' is no faction; 'unknown' is a home state the draft does not name.
+const START_SIDE = {
+  bragg_braxton: ['confederate', 'a Louisiana sugar planter (Lafourche Parish) with no post on 5 March; Louisiana had seceded'],
+  breckinridge_john_c: ['none', 'a Kentucky man, Senator from 4 March (a federal seat, not a post in this pack); the Kentucky government has no faction'],
+  buckner_simon_b: ['none', 'Inspector-General of Kentucky (a state office) 1860-61'],
+  bulloch_james_d: ['unknown', 'a merchant-service captain and civilian on 5 March; the draft names no home state'],
+  cobb_howell: ['confederate', 'a Georgia man; President of the Confederate Provisional Congress from 4 February 1861'],
+  crittenden_george_b: ['union', 'lieutenant colonel, Mounted Rifles, US Army (Fort Stanton), until 10 June 1861'],
+  daniel_john_m: ['none', 'a Richmond man, back from his Buchanan mission; the Virginia government has no faction'],
+  ewell_richard_s: ['union', 'captain, 1st Dragoons, US Army (Fort Bliss), until 7 May 1861'],
+  floyd_john_b: ['none', 'a private citizen on 5 March, former Governor of Virginia'],
+  forrest_nathan_b: ['none', 'a planter near Memphis, Tennessee'],
+  gorgas_josiah: ['union', 'captain, US Army (Frankford Arsenal), until 3 April 1861'],
+  hardee_william_j: ['unknown', 'resigned from the US Army on 31 January 1861; the draft names no home state'],
+  hill_ambrose_p: ['none', 'resigned from the US Army on 1 March 1861; colonel of the 13th Virginia Infantry from May: a Virginia man'],
+  hill_daniel_h: ['none', 'Superintendent of the North Carolina Military Institute 1859-61'],
+  holmes_theophilus_h: ['union', 'major, 8th Infantry, US Army, until 22 April 1861'],
+  hunter_robert_m_t: ['none', 'US Senator for Virginia until 28 March 1861'],
+  jackson_thomas_j: ['none', 'professor at the Virginia Military Institute; "held no military rank in Mar 1861" (the draft)'],
+  lee_robert_e: ['union', 'colonel, 1st Cavalry, US Army, on leave at Arlington until 25 April 1861 (decision 0055)'],
+  longstreet_james: ['union', 'major and paymaster, US Army, until 1 June 1861'],
+  loring_william_w: ['union', 'colonel, Mounted Rifles, US Army, commanding the Department of New Mexico, until 13 May 1861'],
+  lovell_mansfield: ['union', 'a New York merchant and Deputy Street Commissioner of New York City 1858-61; the New York government is Union'],
+  magruder_john_b: ['union', 'captain, 1st Artillery, US Army, at Washington, until 20 April 1861'],
+  mason_james_m: ['none', 'US Senator for Virginia until 28 March 1861'],
+  mcculloch_ben: ['confederate', 'a Texas frontiersman (the draft: "Texas 1861"); Texas had seceded'],
+  morgan_john_h: ['none', 'a Lexington, Kentucky hemp manufacturer'],
+  northrop_lucius_b: ['confederate', 'a Charleston physician (South Carolina) from 1853; resigned from the US Army on 8 January 1861'],
+  pemberton_john_c: ['union', 'captain, 4th Artillery, US Army, at the Washington Arsenal, until 29 April 1861'],
+  pike_albert: ['none', 'an Arkansas lawyer and editor'],
+  pillow_gideon_j: ['none', 'a Tennessee lawyer and planter'],
+  polk_leonidas: ['confederate', 'Episcopal Bishop of Louisiana 1841-61; Louisiana had seceded'],
+  price_sterling: ['none', 'President of the Missouri State Convention on 4 March 1861'],
+  randolph_george_w: ['none', 'a Richmond lawyer'],
+  reagan_john_h: ['confederate', 'a Texas man; US Representative until 3 March 1861, Confederate Postmaster General from 6 March'],
+  seddon_james_a: ['none', 'a Richmond lawyer'],
+  semmes_raphael: ['confederate', 'resigned from the US Navy on 15 February 1861 and became a Confederate purchasing agent that day'],
+  slidell_john: ['confederate', 'a New Orleans lawyer and Senator for Louisiana; Louisiana had seceded'],
+  smith_edmund_k: ['union', 'major, 2nd Cavalry, US Army, until 6 April 1861'],
+  stuart_james_e_b: ['union', 'first lieutenant, 1st Cavalry, US Army (Fort Wise), until 14 May 1861 (decision 0055)'],
+  tattnall_josiah: ['confederate', 'senior flag officer of the Georgia navy from 28 February 1861; resigned from the US Navy on 20-21 February'],
+  twiggs_david_e: ['confederate', 'dismissed from the US Army on 1 March 1861; "a Georgia officer" (the draft)'],
+  van_dorn_earl: ['unknown', 'resigned from the US Army on 31 January 1861; his Texas command is dated 1861-03 only and the draft names no home state'],
+  vance_zebulon_b: ['none', 'a Buncombe County man, later of North Carolina posts; US Representative until March 1861'],
+  wigfall_louis_t: ['confederate', 'a Texas man; US Senator for Texas until 28 March 1861, delegate to the Provisional Congress from 16 March'],
+  yancey_william_l: ['confederate', 'an Alabama lawyer and editor who reported the Alabama ordinance of secession'],
+};
 const people = [];
 const factionNotes = [];
+const sideCount = {};
 for (const r of rosterRows) {
   const id = r.get('id');
   const sf = startFaction(id);
   const draftSide = sideFaction[r.get('side')] ?? '';
-  const faction = sf !== undefined ? sf : draftSide;
+  let faction = sf !== undefined ? sf : draftSide;
+  let sideNote = '';
+  if (sf === undefined && START_SIDE[id]) {
+    const [side, why] = START_SIDE[id];
+    faction = side === 'none' ? '' : side;
+    sideNote = `[start side ${side === 'none' ? 'none (no-faction home state)' : side}: ${why}; his eventual side in the draft is ${draftSide || 'none'}]`;
+    sideCount[side] = (sideCount[side] ?? 0) + 1;
+  } else if (sf === undefined && draftSide === 'confederate') say(`CONFEDERATE-CODED MAN WITH NO START SIDE RULING: ${id}`);
   if (sf !== undefined && sf !== draftSide) factionNotes.push(`${id}: ${sf || 'no faction'} at the start (post), ${draftSide || 'none'} in the draft`);
   const born = r.get('born'), died = r.get('died');
-  const notes = [r.get('notes'), r.get('posts_1861_62') && `[posts 1861-62: ${r.get('posts_1861_62')}]`, r.get('west_point_class') && `[West Point class ${r.get('west_point_class')}]`, r.get('prewar') && `[prewar: ${r.get('prewar')}]`].filter(Boolean).join(' ');
+  const notes = [sideNote, r.get('notes'), r.get('posts_1861_62') && `[posts 1861-62: ${r.get('posts_1861_62')}]`, r.get('west_point_class') && `[West Point class ${r.get('west_point_class')}]`, r.get('prewar') && `[prewar: ${r.get('prewar')}]`].filter(Boolean).join(' ');
   people.push([
-    id, r.get('name'), '', faction, r.get('kind'), born === '' ? 'unknown' : born, died === '' ? 'unknown' : died,
+    id, r.get('name'), '', faction === 'unknown' ? 'unknown' : faction, r.get('kind'), born === '' ? 'unknown' : born, died === '' ? 'unknown' : died,
     centreCell(id, 'competence', r.get('competence')), centreCell(id, 'nerve', r.get('nerve')), centreCell(id, 'experience', r.get('experience')), centreCell(id, 'reputation', r.get('reputation_1861')),
     traitsCell(id, r.get('traits_evidence')), r.get('bloc'), ranksCell(id, r.get('rank_dates')), convertSources(r.get('sources'), 'PEOPLE-LANE'), notes,
   ]);
@@ -202,6 +273,12 @@ for (const h of holders) {
   e.sources.push(t.sources); e.posts.push(h.post);
   extra.set(h.person, e);
 }
+for (const id of ALSO_RECORD) {
+  if (rosterIds.has(id) || extra.has(id)) continue;
+  const t = [...tenuresByPost.values()].flat().find((x) => x.person === id);
+  const post = postById.get(t.post);
+  extra.set(id, { id, name: t.name, kind: PERSON_KIND[post.kind] ?? 'other', faction: deptFaction.get(post.dept) ?? '', sources: [t.sources], posts: [`${t.post} (not the holder: ${HOLDER_RULING[t.post]?.why ?? 'kept by ruling'})`] });
+}
 for (const e of [...extra.values()].sort((a, b) => cmp(a.id, b.id))) {
   people.push([e.id, e.name, '', e.faction, e.kind, 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', '', '', '', convertSources(e.sources.join('; '), 'OOB-LANE'),
     `[not in the people roster: a post-holder of the oob draft; kind from his post (${e.posts.join(', ')})]`]);
@@ -209,6 +286,7 @@ for (const e of [...extra.values()].sort((a, b) => cmp(a.id, b.id))) {
 say(`people: ${rosterRows.length} from the roster + ${extra.size} post-holders not in it = ${people.length}`);
 say(`stat directions kept with citations: ${personStats.directions}; dropped to unknown or trait dropped for lack of an admissible citation: ${personStats.dropped.length}${personStats.dropped.length ? ` (${personStats.dropped.slice(0, 40).join(', ')}${personStats.dropped.length > 40 ? ', ...' : ''})` : ''}`);
 say(`ranks: ${usedRanks.size} distinct; entries dropped for an unknown date: ${rankDropped}; entries that are a status, not a rank: ${rankStatus}`);
+say(`start sides decided by table for men with no post: ${JSON.stringify(sideCount)} (${Object.keys(START_SIDE).length} entries)`);
 say(`people whose faction at the start differs from the draft's side: ${factionNotes.length}${factionNotes.length ? ` (${factionNotes.slice(0, 12).join('; ')}${factionNotes.length > 12 ? '; ...' : ''})` : ''}`);
 write('source/world/people.csv', ['id', 'name', 'invented', 'faction', 'kind', 'born', 'died', 'competence', 'nerve', 'experience', 'reputation', 'traits', 'bloc', 'ranks', 'sources', 'notes'], people);
 

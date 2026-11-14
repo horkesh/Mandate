@@ -66,6 +66,7 @@ const WORKS = {
   'NEWTON-LYONS': ['Lord Newton, Lord Lyons (1913)', 'secondary', OLD, 'archive.org; Gutenberg 43317; partisan'],
   'JORDAN-PRYOR-1868': ['J. Jordan and J. P. Pryor, The Campaigns of Lieut.-Gen. N. B. Forrest (1868)', 'secondary', OLD, 'archive.org; admiring biography'],
   'LEE-1904': ['R. E. Lee Jr., Recollections and Letters of General Robert E. Lee (1904)', 'secondary', OLD, 'archive.org; family compilation'],
+  'NYT-1861-03-06': ["The New York Times, 6 March 1861: the Washington dispatch of 5 March reporting the cabinet nominations confirmed (cited by research note march-1861-facts, question 10)", 'primary', OLD, 'archive.org sim_new-york-times_the-new-york-times_1861-03-06_10_2950 (the note read it on 2026-11-14)'],
   STEPHENS: ['A. H. Stephens, speech at Savannah, 21 March 1861 (the "Cornerstone" speech), newspaper report', 'primary', OLD, 'a transcription of the period newspaper text'],
   LINCOLN: ['Lincoln letters, as read through the sources the people draft names in its Part 2', 'primary', OLD, 'people draft Part 2 says where each text was read'],
 };

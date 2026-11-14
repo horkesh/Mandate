@@ -51,15 +51,18 @@ const slug = (s) => s.toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g
 const pointerKey = (k) => k.startsWith('NOTE-');
 
 /** Canonicalise a draft `sources` cell. Returns the cell text; pointers never stand alone. */
-function convertSources(cell, fallback) {
+function convertSources(cell, fallback, extra = []) {
   const out = [];
   for (const tok of splitOutsideParens(cell, ';')) {
     const c = cites.canon(tok);
     if (c.key) out.push(c);
     else if (c.unknown) say(`UNRESOLVED source token: ${c.unknown}`);
   }
+  // A primary source a research note itself cites (lead ruling S3: pointers are never enough alone).
+  for (const e of extra) out.push(cites.canon(e));
   if (!out.some((c) => !pointerKey(c.key))) {
-    const f = cites.canon(fallback);
+    // Nothing admissible: the record says so in its data (the place of the citation reads needs-source).
+    const f = cites.canon(`${fallback} needs-source (primary source not reached)`);
     out.push(f);
     stats.fallbackCites[fallback] = (stats.fallbackCites[fallback] ?? 0) + 1;
   }
@@ -314,6 +317,45 @@ const instRows = INSTALLATIONS.map((i) => {
   return [i.id, i.name, i.region, i.kind, water, commands, convertSources(reg.sources.split('; ').filter((s) => !s.startsWith('NOTE-')).join('; '), 'MAP-LANE'), i.note];
 });
 write('source/world/installations.csv', ['id', 'name', 'region', 'kind', 'fort_water', 'commands_edges', 'sources', 'notes'], instRows);
+
+// Supply sources and depots (decision 0055, lead ruling; the draft has none, so without them every traced region is a pocket on day 1).
+// Every capacity and every choice of region below is a DESIGN PARAMETER of this lane (cited LANE-0.3), not a sourced figure.
+// Sources: coarse northern regions for the Union; for the Confederacy its capital and the arsenals its states held on 5 March.
+// Depots: the navy yards and the Washington Arsenal, which the drafts and the installation list name.
+const DESIGN = (what) => `LANE-0.3 ${what}`;
+const SOURCES_UNION = [
+  ['new_england', 'New England', 4], ['new_york', 'New York', 5], ['new_jersey', 'New Jersey', 3], ['pennsylvania_north', 'Northern Pennsylvania', 4],
+  ['ohio_north', 'Northern Ohio', 4], ['indiana_north', 'Northern Indiana', 3], ['illinois_north', 'Northern Illinois', 4], ['michigan_wisconsin', 'Michigan and Wisconsin', 3],
+];
+const SOURCES_CONFEDERATE = [
+  ['montgomery', 'Montgomery (Confederate capital)', 4, ''],
+  ['baton_rouge', 'Baton Rouge Arsenal', 3, 'baton_rouge_arsenal'], ['mobile', 'Mount Vernon Arsenal', 3, 'mount_vernon_arsenal'],
+  ['augusta', 'Augusta Arsenal', 3, 'augusta_arsenal'], ['charleston', 'Charleston Arsenal', 3, 'charleston_arsenal'],
+  ['tx_san_antonio_austin', 'San Antonio Arsenal', 3, 'san_antonio_arsenal'],
+];
+const DEPOT_INSTALLATIONS = [
+  'washington_navy_yard', 'washington_arsenal', 'gosport_navy_yard', 'philadelphia_navy_yard', 'brooklyn_navy_yard', 'charlestown_navy_yard',
+  'portsmouth_navy_yard', 'sackets_harbor_navy_yard', 'mare_island_navy_yard', 'pensacola_navy_yard',
+];
+const instSources = (id) => instRows.find((r) => r[0] === id)[6];
+const depotRows = [];
+for (const [region, name, cap] of SOURCES_UNION) {
+  depotRows.push([`source_${region}`, `${name} (Union supply source)`, region, 'source', String(cap), convertSources(DESIGN('Union supply source: the region and its capacity are design parameters standing for the North\'s railways and industry'), 'LANE-0.3'),
+    'Design parameter (decision 0055): a Union source in a coarse northern region; capacity chosen by lane 0.3, not sourced.']);
+}
+for (const [region, name, cap, inst] of SOURCES_CONFEDERATE) {
+  const srcCell = inst ? `${instSources(inst)}; ${DESIGN('Confederate supply source: capacity is a design parameter')}` : DESIGN('Confederate supply source at the capital: capacity is a design parameter');
+  depotRows.push([`source_${region}`, `${name} (Confederate supply source)`, region, 'source', String(cap), convertSources(srcCell, 'LANE-0.3'),
+    inst ? 'Design parameter (decision 0055): a Confederate source at an arsenal in a region the seceded state held on 5 March (control row); capacity chosen by lane 0.3, not sourced.'
+      : 'Design parameter (decision 0055): a Confederate source at the capital; capacity chosen by lane 0.3, not sourced.']);
+}
+for (const id of DEPOT_INSTALLATIONS) {
+  const inst = INSTALLATIONS.find((i) => i.id === id);
+  depotRows.push([`depot_${id}`, `${inst.name} depot`, inst.region, 'depot', '3', convertSources(`${instSources(id)}; ${DESIGN('depot capacity is a design parameter')}`, 'LANE-0.3'),
+    'Design parameter (decision 0055): a forward depot at an installation the drafts name (navy yard or arsenal); capacity chosen by lane 0.3, not sourced.']);
+}
+write('source/world/depots.csv', ['id', 'name', 'region', 'kind', 'capacity', 'sources', 'notes'], depotRows);
+say(`depots.csv: ${depotRows.length} rows (${depotRows.filter((r) => r[3] === 'source').length} sources)`);
 
 // Obstructions (scenario): which installation obstructs which water edge at the start.
 const OBS_BY = {

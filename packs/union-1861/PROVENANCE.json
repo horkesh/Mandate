@@ -482,6 +482,16 @@
       "licenceReadOn": null
     },
     {
+      "key": "NYT-1861-03-06",
+      "title": "The New York Times, 6 March 1861: the Washington dispatch of 5 March reporting the cabinet nominations confirmed (cited by research note march-1861-facts, question 10)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org sim_new-york-times_the-new-york-times_1861-03-06_10_2950 (the note read it on 2026-11-14)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
       "key": "NavyReg1861",
       "title": "Register of the Commissioned and Warrant Officers of the Navy, corrected to 1 January 1861 (GPO)",
       "kind": "primary",

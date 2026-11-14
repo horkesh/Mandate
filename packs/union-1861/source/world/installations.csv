@@ -42,8 +42,8 @@ ship_island_naval_base,Ship Island naval base,ship_island,naval_base,,,OR I-1 (c
 forts_pike_macomb,Forts Pike and Macomb,new_orleans,fort,,,"CEN1860-POP; OR I-1 (ch. VI summary); CEN1860-RR (New Orleans, Jackson, and Great Northern; New Orleans, Opelousas and Great Western)",
 forts_jackson_st_philip,Forts Jackson and St. Philip,forts_jackson_st_philip,fort,passage,river:forts_jackson_st_philip:mississippi_lower,CEN1860-POP; OR I-1 (ch. VI summary),
 baton_rouge_arsenal,Baton Rouge Arsenal,baton_rouge,arsenal,,,CEN1860-POP; OR I-1 (ch. VI summary),
-island_no_10_works,Island No. 10 works,island_no_10,fort,reduction,river:island_no_10:mississippi_cairo_memphis,MAP-LANE,fortified later in 1861 (region notes)
-fort_henry,Fort Henry,fort_henry,fort,passage,river:fort_henry:tennessee_lower,MAP-LANE,built later in 1861 (region notes)
+island_no_10_works,Island No. 10 works,island_no_10,fort,reduction,river:island_no_10:mississippi_cairo_memphis,MAP-LANE needs-source (primary source not reached),fortified later in 1861 (region notes)
+fort_henry,Fort Henry,fort_henry,fort,passage,river:fort_henry:tennessee_lower,MAP-LANE needs-source (primary source not reached),built later in 1861 (region notes)
 fort_donelson,Fort Donelson,fort_donelson,fort,reduction,river:cumberland_river:fort_donelson,CEN1860-POP,
 cumberland_gap_works,Cumberland Gap works,cumberland_gap,fort,,,CEN1860-POP,the draft flags fort; no name in its notes
 columbus_ky_works,Columbus works,columbus_ky,fort,reduction,river:columbus_ky:mississippi_cairo_memphis,CEN1860-POP; CEN1860-RR (Mobile and Ohio),seized and fortified by Polk in September 1861 (region notes)
@@ -61,6 +61,6 @@ fort_leavenworth_arsenal,Fort Leavenworth Arsenal,kansas_east,arsenal,,,CEN1860-
 fort_snelling,Fort Snelling,minnesota,fort,,,CEN1860-POP,
 forts_union_craig,Fort Union and Fort Craig,new_mexico,fort,,,CEN1860-POP,
 fort_fillmore,Fort Fillmore,arizona,fort,,,CEN1860-POP,
-fort_gibson,Fort Gibson,it_cherokee_creek,fort,,,MAP-LANE,
+fort_gibson,Fort Gibson,it_cherokee_creek,fort,,,MAP-LANE needs-source (primary source not reached),
 forts_washita_arbuckle_cobb,"Forts Washita, Arbuckle and Cobb",it_choctaw_chickasaw,fort,,,OR I-1 (ch. VIII summary),
-mare_island_navy_yard,Mare Island Navy Yard,pacific_coast,navy_yard,,,MAP-LANE,
+mare_island_navy_yard,Mare Island Navy Yard,pacific_coast,navy_yard,,,MAP-LANE needs-source (primary source not reached),
