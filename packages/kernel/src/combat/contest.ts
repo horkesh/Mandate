@@ -83,7 +83,8 @@ export interface ContestResult {
 /** Each side's land troops standing (not marching, not aboard) in each region, by region then strength. */
 export function presenceByRegion(ground: MarchGround, state: State): Map<RegionId, Presence[]> {
   const raw = new Map<RegionId, Map<FactionId, { men: number; blocks: ForceBlockId[]; pressing: ForceBlockId[]; unknown: ForceBlockId[] }>>();
-  for (const id of (Object.keys(state.forceLocations) as ForceBlockId[]).sort(strictCompare)) {
+  const ids = Object.keys(state.forceLocations) as ForceBlockId[];
+  for (const id of ids.sort(strictCompare)) {
     const loc = state.forceLocations[id]!;
     if (loc.locMarch !== null || loc.locAboard !== null) continue;
     const kind = ground.map.regions.get(loc.locRegion)!.kind;

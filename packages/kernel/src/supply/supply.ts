@@ -50,10 +50,12 @@ export interface NetworkConditions {
   /** Water edges obstructed, by an installation's works or by works not modelled (`by: null`). */
   readonly obstructions: readonly { readonly edge: EdgeId; readonly by: InstallationId | null }[];
   /**
-   * Regions nobody controls whose government has closed its territory (0055), in id order.
-   * Absent or empty: every such region is open to every side's movement and supply.
+   * Neutral ground (0055, 0058): each land region whose civil government is a department
+   * of no faction, and whether that government has its territory open or closed. Built from
+   * `command`'s governments and closing flags. A region absent here is not neutral ground
+   * (its government is a side's, or unknown). Absent or empty: no neutral passage.
    */
-  readonly closedNeutral?: readonly RegionId[];
+  readonly neutralGround?: Readonly<Record<RegionId, 'open' | 'closed'>>;
 }
 
 export const INTACT_NETWORK: NetworkConditions = Object.freeze({ edgeCondition: Object.freeze({}), depotCondition: Object.freeze({}), obstructions: Object.freeze([]) });
@@ -245,11 +247,17 @@ function legOf(ctx: Ctx, edge: EdgeRecord, from: RegionId): EdgeLeg {
 }
 
 /**
- * Neutral passage (0055): a land region or key point nobody controls is open to
- * every side, as open water is, unless its government has closed it.
+ * Neutral passage (0055, 0058): a land region or key point no side traces is open
+ * to every side, as open water is, when its government is a neutral one that has
+ * not closed it. A region whose government is unknown is not neutral ground.
  */
-export function neutralOpen(holding: { readonly region: RegionId; readonly reason: string }, network: NetworkConditions): boolean {
-  return holding.reason === 'no_control' && !(network.closedNeutral ?? []).includes(holding.region);
+export function neutralOpen(holding: { readonly region: RegionId; readonly tracedBy: readonly FactionId[] }, network: NetworkConditions): boolean {
+  return holding.tracedBy.length === 0 && network.neutralGround?.[holding.region] === 'open';
+}
+
+/** Whether a region is a neutral government's territory, closed to every side (0055, 0058). */
+export function neutralClosed(holding: { readonly region: RegionId; readonly tracedBy: readonly FactionId[] }, network: NetworkConditions): boolean {
+  return holding.tracedBy.length === 0 && network.neutralGround?.[holding.region] === 'closed';
 }
 
 /** Why a faction cannot pass a region, or null if it can. */

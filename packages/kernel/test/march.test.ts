@@ -6,21 +6,21 @@ import { initialForces } from '../src/forces/forces.ts';
 import { advanceMarches, legsFrom, marchBar, marchSteps, startLeg, type MarchGround } from '../src/movement/march.ts';
 import { initialLocations, MovementError } from '../src/movement/movement.ts';
 import type { State } from '../src/root-state.ts';
-import { edgeLeg, INTACT_NETWORK, type NetworkConditions } from '../src/supply/supply.ts';
+import { deriveSupply, edgeLeg, INTACT_NETWORK, type NetworkConditions } from '../src/supply/supply.ts';
 import { emptyState } from '../src/tick/setup.ts';
 import type { ScenarioStart } from '../src/world/scenario.ts';
 import { B, block, forcesIndex, forcesStart } from './support/forces-fixture.ts';
-import { E, edge, F, fort, R, region } from './support/map-fixture.ts';
+import { D, E, edge, F, fort, R, region } from './support/map-fixture.ts';
 
 /**
  *   a1 ==rail 1d== a2 --road 2d-- mid --road 2d-- b1
  *   a1 --road 3d (mud)-- a2
- *   a2 ==rail 1d== n1 (neutral) ==rail 1d== b1
+ *   a2 ==rail 1d== n1 (no side's) ==rail 1d== b1;  n1 --road-- a3 (a's, reached only through n1)
  *   a2 ~~river cap 1 (low water Aug-Oct)~~ w ~~river~~ b1 (b's fort commands it)
  *   b1 --road-- box (off the map)
  */
 const MAP = forcesIndex({
-  regions: ['a1', 'a2', 'mid', 'n1', 'b1'].map((r) => region(r)).concat([region('w', 'river'), region('box', 'off_map')]),
+  regions: ['a1', 'a2', 'mid', 'n1', 'a3', 'b1'].map((r) => region(r)).concat([region('w', 'river'), region('box', 'off_map')]),
   edges: [
     edge('a1', 'a2', { type: 'rail', days: 1, line: 'a_line' }),
     edge('a1', 'a2', { days: 3, seasons: [{ reason: 'mud', months: [1, 2, 3, 12], depthFeet: null }] }),
@@ -31,11 +31,13 @@ const MAP = forcesIndex({
     edge('a2', 'w', { type: 'river', days: 1, capacity: 1, seasons: [{ reason: 'low_water', months: [8, 9, 10], depthFeet: null }] }),
     edge('w', 'b1', { type: 'river', days: 1, capacity: 3 }),
     edge('b1', 'box', { days: 1 }),
+    edge('n1', 'a3', { days: 1 }),
   ],
+  depots: [{ id: D('a_src'), region: R('a1'), kind: 'source', name: 'depot.a_src.name', capacity: 5, provenance: [] }],
   installations: [fort('b_fort', 'b1', ['river:b1:w'])],
 });
 
-const CONTROL = { a1: { a: 1000 }, a2: { a: 1000 }, mid: { a: 300, b: 300 }, b1: { b: 1000 } };
+const CONTROL = { a1: { a: 1000 }, a2: { a: 1000 }, a3: { a: 1000 }, mid: { a: 300, b: 300 }, b1: { b: 1000 } };
 const BLOCKS = [
   block('foot', { department: 'a_war', region: 'a1' }),
   block('foot2', { department: 'a_war', region: 'a1' }),
@@ -125,20 +127,37 @@ describe('seasons (0029)', () => {
   });
 });
 
-describe('neutral passage (0055)', () => {
-  it('open neutral ground passes either side\'s rail; a closed government bars it (positive control)', () => {
-    const open = ground(6);
+describe('neutral passage (0055, 0058)', () => {
+  const OPEN: NetworkConditions = { ...INTACT_NETWORK, neutralGround: { [R('n1')]: 'open' } };
+  const CLOSED: NetworkConditions = { ...INTACT_NETWORK, neutralGround: { [R('n1')]: 'closed' } };
+
+  it('an open neutral government passes either side\'s rail and supply', () => {
+    const open = ground(6, S.regionControl, OPEN);
     expect(marchBar(open, leg(open, 'rail:a2:n1:n_line', 'a2'), F('a'), false)).toBeNull();
     expect(marchSteps(open, R('a2'), R('n1'), F('a'), false).map((s) => s.leg.edge)).toEqual([E('rail:a2:n1:n_line')]);
-    // Rail on into b1 needs b1 traced: a's way to b1 is the road through mid, even with n1 open.
+    // Rail on into b1 still needs b1 traced: a's way to b1 is the road through mid.
     expect(marchBar(open, leg(open, 'rail:b1:n1:n_line', 'n1'), F('a'), false)).toBe('rail_not_traced');
-    expect(marchSteps(open, R('a2'), R('b1'), F('a'), false).map((s) => s.leg.edge)).toEqual([E('road:a2:mid')]);
-    const closed = ground(6, S.regionControl, { ...INTACT_NETWORK, closedNeutral: [R('n1')] });
+    const supply = deriveSupply(MAP, open.index, 6, OPEN).factions.get(F('a'))!;
+    expect(supply.paths.get(R('a3'))!.legs.map((l) => l.to)).toEqual(['a2', 'n1', 'a3']);
+    expect(supply.pockets).toEqual([]);
+  });
+
+  it('a closed government bars every march into it and cuts the line through it (positive control)', () => {
+    const closed = ground(6, S.regionControl, CLOSED);
     expect(marchBar(closed, leg(closed, 'rail:a2:n1:n_line', 'a2'), F('a'), false)).toBe('closed_neutral');
+    expect(marchBar(closed, leg(closed, 'road:a3:n1', 'a3'), F('a'), false)).toBe('closed_neutral');
     expect(marchSteps(closed, R('a2'), R('n1'), F('a'), false)).toEqual([]);
+    const supply = deriveSupply(MAP, closed.index, 6, CLOSED).factions.get(F('a'))!;
+    expect(supply.pockets.map((p) => p.regions)).toEqual([['a3']]);
+  });
+
+  it('ground whose government is unknown is not neutral: no passage for supply or rail, but troops may march in by road', () => {
+    const unknown = ground(6);
+    expect(marchBar(unknown, leg(unknown, 'rail:a2:n1:n_line', 'a2'), F('a'), false)).toBe('rail_not_traced');
+    expect(marchBar(unknown, leg(unknown, 'road:a3:n1', 'a3'), F('a'), false)).toBeNull();
+    expect(deriveSupply(MAP, unknown.index, 6).factions.get(F('a'))!.pockets.map((p) => p.regions)).toEqual([['a3']]);
   });
 });
-
 describe('ships, troops aboard and what each may use', () => {
   it('troops aboard arrive with their ship', () => {
     const june = ground(6);

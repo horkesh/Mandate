@@ -30,7 +30,7 @@ import { strictCompare } from '../compare.ts';
 import type { ControlIndex } from '../control-index/control-index.ts';
 import type { EdgeId, FactionId, ForceBlockId, RegionId } from '../ids.ts';
 import type { State } from '../root-state.ts';
-import { edgeLeg, neutralOpen, obstructionFor, type EdgeLeg, type NetworkConditions } from '../supply/supply.ts';
+import { edgeLeg, neutralClosed, neutralOpen, obstructionFor, type EdgeLeg, type NetworkConditions } from '../supply/supply.ts';
 import { MinHeap } from '../supply/heap.ts';
 import { otherEnd, type WorldIndex } from '../world/index.ts';
 import { MovementError, type ForceLocation } from './movement.ts';
@@ -79,7 +79,8 @@ export function marchBar(ground: MarchGround, leg: EdgeLeg, faction: FactionId, 
     if (water) return 'needs_ship';
     if (to.kind === 'river' || to.kind === 'sea') return 'open_water';
     const holding = ground.index.holdings.get(leg.to)!;
-    if (holding.reason === 'no_control' && !neutralOpen(holding, ground.network)) return 'closed_neutral';
+    // A neutral government's closed territory bars every side (0058); ground with an unknown government is not neutral.
+    if (neutralClosed(holding, ground.network)) return 'closed_neutral';
     if (leg.type === 'rail' && (!railPasses(ground, leg.from, faction) || !railPasses(ground, leg.to, faction))) return 'rail_not_traced';
   }
   if (leg.capacityMilli < MARCH_MIN_CAPACITY_MILLI) return 'edge_closed';
