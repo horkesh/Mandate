@@ -124,7 +124,7 @@ Run with `lane-0.2-fit-drafts.mts` in the shared notes folder (full output in `l
 | 2, 2, 1, 1 | missing-value, unknown-not-allowed, shape/too_big, licence-not-allowed | Two Confederate posts without a department; `needs-source` as a ship's location; one location over 128 characters; Bates's diary (licence unconfirmed). |
 | 130, 26 | warnings: unknown-value, tenure-outside-start | People's `unknown` centres (allowed in a draft); tenures that begin after 4 March. |
 
-Records that fail their shape are set aside, so more reference errors will surface once the ids are fixed (department ids above all, since there is no departments table).
+Records that fail their shape are set aside, so more reference errors will surface once the ids are fixed (department ids above all, since there is no departments table). Rerun after the review fixes: the same totals, since the new side, link and afloat checks reach only records that pass their shape; once ids are fixed, expect them to fire on the drafts too (troops afloat with no carrier, the Sumter expedition's links).
 
 ## Deferred, and not done
 
