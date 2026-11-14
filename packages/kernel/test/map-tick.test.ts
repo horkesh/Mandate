@@ -43,10 +43,27 @@ describe('setup with a map (0050: control is copied from the start once)', () =>
   });
 
   it('copies each region’s government from the start, in region order, with no government closed (0058)', () => {
-    const state = createState(world, { seed: 1, start: startWith(START, '1900-03-15', { mid: 'unknown', b1: 'b_gov', a1: 'a_gov' }) });
+    const governed = indexWorld(commsFixture(), lineMap(['a_gov', 'b_gov']));
+    const state = createState(governed, { seed: 1, start: startWith(START, '1900-03-15', { mid: 'unknown', b1: 'b_gov', a1: 'a_gov' }) });
     expect(state.regionGovernments).toEqual({ a1: 'a_gov', b1: 'b_gov', mid: 'unknown' });
     expect(Object.keys(state.regionGovernments)).toEqual(['a1', 'b1', 'mid']);
     expect(state.closedGovernments).toEqual({});
+  });
+
+  it('refuses a government row for a region not in the World, on water, listed twice, or naming no department in the World (format review N2)', () => {
+    const governed = indexWorld(commsFixture(), lineMap(['a_gov', 'b_gov']));
+    const setup = (rows: readonly { readonly region: string; readonly department: string }[]) => () => {
+      const base = startWith(START, '1900-03-15');
+      const governments = rows.map((r) => ({ region: R(r.region), department: r.department === 'unknown' ? ('unknown' as const) : (r.department as never), provenance: [{ source: 'FIXTURE', at: null }] }));
+      return createState(governed, { seed: 1, start: { ...base, governments } });
+    };
+    expect(setup([{ region: 'ghost', department: 'a_gov' }])).toThrow('region ghost is not in the World');
+    expect(setup([{ region: 'w', department: 'a_gov' }])).toThrow('region w is river, which has no civil government');
+    expect(setup([{ region: 'mid', department: 'a_gov' }, { region: 'mid', department: 'unknown' }])).toThrow('region mid is listed twice');
+    expect(setup([{ region: 'a1', department: 'c_gov' }])).toThrow('region a1: department c_gov is not in the World');
+    // Every problem at once, and the control: the same rows done right set up.
+    expect(setup([{ region: 'ghost', department: 'a_gov' }, { region: 'w', department: 'unknown' }])).toThrow(/ghost is not in the World\n- region w is river/);
+    expect(setup([{ region: 'a1', department: 'a_gov' }, { region: 'mid', department: 'unknown' }])).not.toThrow();
   });
 });
 

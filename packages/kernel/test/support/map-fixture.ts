@@ -86,6 +86,8 @@ export interface WorldParts {
   readonly depots?: readonly DepotRecord[];
   readonly installations?: readonly InstallationRecord[];
   readonly factions?: readonly string[];
+  /** Department ids, each on the faction its prefix names (`a_gov` is a's), or none for a `neutral_` id. */
+  readonly departments?: readonly string[];
   readonly supplyControlPermille?: number;
   readonly retreatControlPermille?: number;
 }
@@ -103,7 +105,7 @@ export function mapWorld(parts: WorldParts): World {
     },
     vocabularies: { terrains: [], postKinds: [], departmentKinds: [], arms: [], personKinds: [], traits: [], ranks: [], blocs: [], standingOrderKinds: [] },
     factions: (parts.factions ?? ['a', 'b']).map((f) => ({ id: F(f), name: `faction.${f}.name` })),
-    departments: [],
+    departments: (parts.departments ?? []).map((d) => ({ id: toId('department', d), faction: d.startsWith('neutral_') ? null : F(d.split('_')[0]!), kind: 'government', name: `department.${d}.name`, provenance: [] })),
     regions: parts.regions,
     installations: parts.installations ?? [],
     edges: parts.edges,
@@ -160,8 +162,9 @@ export function startWith(
  *          \          /
  *           +-- w ---+   (river edges)
  */
-export function lineMap(): WorldIndex {
+export function lineMap(departments: readonly string[] = []): WorldIndex {
   return mapIndex({
+    departments,
     regions: ['a1', 'a2', 'mid', 'b2', 'b1'].map((r) => region(r)).concat([region('w', 'river')]),
     edges: [
       edge('a1', 'a2', { type: 'rail', days: 1, capacity: 4, line: 'a_line' }),
