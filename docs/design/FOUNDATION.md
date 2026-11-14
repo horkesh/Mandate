@@ -77,7 +77,7 @@ The staff map (0013) draws regions, fronts and arrows from the player's knowledg
 | Verb | Targets | Notes |
 |---|---|---|
 | Appoint, relieve, promote | a person and a post | Relief has modes with different costs: to a quiet department, "at his own request", outright. Promotions arrive as lists from superiors and the War Department, which the player approves, amends or overrides; overriding or promoting over seniors costs standing; a nomination can lapse at the Senate's session end (0026). |
-| Transfer divisions | from one army or department to another | The stripped commander resents it; his friends in Congress notice. Inside an army, the commander assigns. |
+| Transfer a force | from one army or department to another | Name the two commanders and a force (a number of divisions, a corps, or a strength in men); the sending commander picks which units go (0033). The stripped commander resents it; his friends in Congress notice. Inside an army, the commander assigns. |
 | Set a goal | a commander | Objective (a region, a force or a line), posture, risk, deadline, permissions (rail, river, sea), and the divisions committed. |
 | Review a plan | a commander's draft | Approve, send back with notes, or edit the arrows. |
 | Audience | a commander, before or during | Hear him out; offer counters (P3, M2's typed counters). |

@@ -19,7 +19,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0013](0013-the-staff-map.md) | The map is the staff's map: hand-drawn, procedural, drawn from claims | accepted; extended by 0019 |
 | [0014](0014-licence.md) | Source-available under the PolyForm Noncommercial licence | accepted |
 | [0015](0015-seats.md) | Every person is a seat; rules first; the command log is the truth | accepted |
-| [0016](0016-goals-plans-and-arrows.md) | Goals, plans and arrow edits: places are targeted only through a person | accepted; amended by 0026 |
+| [0016](0016-goals-plans-and-arrows.md) | Goals, plans and arrow edits: places are targeted only through a person | accepted; amended by 0026, 0033 |
 | [0017](0017-real-time-with-pause.md) | Real time with pause on a daily tick | superseded by 0027 |
 | [0018](0018-civil-war-scope.md) | The American Civil War, 1861–65; the engine's promise is wars with fronts | accepted; amended by 0028 |
 | [0019](0019-regions-over-a-typed-graph.md) | The map is regions over a typed graph; fronts and pockets are derived | accepted; extended by 0031 |
@@ -36,3 +36,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0030](0030-foundation-commitments.md) | Foundation commitments: scenario starts, packs as the modding format, string tables, playable at every phase, a planner spike | accepted |
 | [0031](0031-map-extent-size-sources.md) | The map covers the whole war at about 250 regions, built from licence-clean sources | accepted |
 | [0032](0032-reports-authors-routes-filters.md) | A report has an author, a route and filters; the telegraph office is a seat | accepted |
+| [0033](0033-forces-scale-and-data-sources.md) | Transfers name a force, not divisions one by one; force blocks fit the period; data comes from public-domain sources | accepted |
