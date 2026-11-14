@@ -87,6 +87,7 @@ The theatre column follows state lines (listed above). Theatres are conventions;
 - **passage:** Forts Jackson and St. Philip; Fort Morgan at Mobile; Fort Henry, which fell to gunboats alone.
 - **reduction:** Fort Donelson, Vicksburg, Port Hudson, Island No. 10, Charleston and Sumter, Columbus, Fort Monroe, Pulaski, Fort Macon and the Cape Fear forts, Pickens and Barrancas, Key West, Ship Island, Fort McHenry.
 - **Judgement calls:** Pensacola, Fernandina and New Madrid are my calls; check them.
+- The `fort_mode` column holds only these two values or is empty. Seven land rows once held a quoted "lon,lat" there by mistake; the PR-fixes lane blanked them and moved the point into the notes as "[town point …]". The three `passage` rows are `forts_jackson_st_philip`, `mobile` (Fort Morgan) and `fort_henry`.
 
 **Edge `type`**: road, rail, river, sea.
 - A ferry crossing is a road edge with capacity 1–2 and a note. River crossings without a ferry note have no road edge.
@@ -106,7 +107,7 @@ The theatre column follows state lines (listed above). Theatres are conventions;
 - **Roads:** `mud` where winter and spring mud mattered (every dirt road), `none` for macadamised turnpikes and arid routes.
 - **River edges:** the months when low water limits draught, or a sourced statement.
 - **Sea and rail:** `none`. Winter gales off Hatteras are a weather matter for 0029, not an edge field.
-- **Unsourced months** are marked "to confirm".
+- **Unsourced months** are marked "to confirm". Where nothing is known the cell is empty and the notes carry "[seasonal: needs-source]" (12 river edges). About 60 river edges still hold free text (months, ice, falls); lane 0.3 normalises these when it fixes the format.
 
 **`obstruction_1861`** (water edges only): batteries or works in hostile hands on 4 March 1861, or `none`. Works built later are noted in `notes` but are not obstructions. The obstructed edges:
 - the Charleston bar and harbour;
@@ -182,6 +183,7 @@ Every source below is public domain. All were read as full text on archive.org; 
 | OR-I-1 | *War of the Rebellion: Official Records*, Series I, vol. 1 (GPO, 1880): the "Summary of principal events" for each chapter (Charleston, Georgia, Alabama and Mississippi, Florida, North Carolina, Louisiana, Texas, Arkansas and Indian Territory); Whiting's report of 7 January 1861 (p. 319); Ellis to Buchanan, 12 January 1861 | archive.org `warofrebellion01secrrich` | Public domain |
 | OR-I-3 | *Official Records*, Series I, vol. 3 (GPO, 1881): Sweeny's report of 12 July 1861 ("Rolla, the terminus of the Southwest Branch"); autumn 1861 despatches placing the railhead near Georgetown and Sedalia | archive.org `warofrebellion03secrrich` | Public domain |
 | LLOYD1856 | James T. Lloyd, *Lloyd's Steamboat Directory, and Disasters on the Western Waters* (Cincinnati, 1856): Ohio River chapter (Tennessee, Cumberland, the falls); sketch of the Mississippi and its tributaries (Arkansas, White, Red, Yazoo); Nashville sketch; distance table from Louisville | archive.org `lloydssteamboatd00lloy` (Library of Congress copy) | Published 1856, public domain. The distance tables' OCR is column-scrambled; only the Louisville–Cairo rows were legible. |
+| MO-AR-1861 | Mobile and Ohio Railroad Co., Annual Report as of 1 April 1861 (President Milton Brown's report; Chief Engineer L. J. Fleming's letter of 6 May 1861), for the thirteenth annual meeting, 7 May 1861 | transcription on csa-railroads.com | 1861 company report, public domain; only facts are taken. Added by the PR-fixes lane, not the original map lane. |
 | research note … | `docs/research/2026-11-14-map-extent-size-sources.md`, `-union-navy.md`, `-secession-winter-1861.md`, `-march-1861-facts.md` | this repository | Our own notes; they cite their sources |
 | own-work (zone layout) | Sea zones, river reaches and their adjacency are authored here | | To be drawn from Natural Earth (public domain) per 0031 |
 
@@ -192,7 +194,7 @@ Not used: Wikipedia, Nafziger, copyrighted compendia, NHGIS, the Atack and UNL r
 - **Roads.** Every road edge's existence and capacity rests on county adjacency and general knowledge of the period roads; none is sourced to a period map. The candidate is the *Official Records Atlas* General Topographical Map. Turnpike names in the notes are general knowledge.
 - **Counties created after the census and before 1 March 1861**: Clay, Mitchell and Transylvania (N.C.), Polk (Fla.), Worth (Mo.). Also the renaming notes (Cass to Bartow, Cass to Davis, New River to Bradford, Lykins to Miami) and the territorial dates.
 - **Railheads and completion dates in March 1861:**
-  - the Mobile and Ohio's last gap (closed April 1861; location unknown, so one of its edges should carry an "unbuilt" condition until then);
+  - the Mobile and Ohio's last gap. The company's annual report of 1 April 1861 (MO-AR-1861) says the track stood complete from Mobile to Okolona and from Columbus, Ky. to two miles below Jackson, Tenn., and that the last spike closing the line was driven on 22 April 1861. So the gap lay between Okolona and Jackson, Tenn.; the report does not say where inside that stretch. The Okolona–Tupelo and Tupelo–Corinth edges carry capacity 1 and an "unbuilt in March 1861" note, and the other Mobile and Ohio edges in the stretch carry a note. The location is needs-source (the contemporary press, or the Chief Engineer's report, may place it);
   - the Southern Railroad to Meridian; the Mississippi and Tennessee to Grenada;
   - the Pacific Railroad to Sedalia and the Southwest Branch to Rolla (both in operation by mid-1861 per OR I-3; opening dates unconfirmed);
   - the Florida Railroad (about 1 March 1861) and the Pensacola and Georgia to Lake City;
