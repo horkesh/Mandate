@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { IMMUTABLE_STATE_KEYS, KERNEL_MODULES, LEGACY_STATE_RECORDS, OWNED_FIELDS, type OwnedField } from '../src/ownership.ts';
+import { IMMUTABLE_STATE_KEYS, KERNEL_MODULES, LEGACY_STATE_RECORDS, OWNED_FIELDS, STATE_CONSTRUCTORS, type OwnedField } from '../src/ownership.ts';
 import {
   classificationProblems,
   isInModule,
@@ -58,7 +58,7 @@ describe('one writer per field, over every package', () => {
   });
 
   it('writes each owned field only from its writer, and never writes an immutable key', () => {
-    const violations = writeViolations(sources, ownedKeys(OWNED_FIELDS), IMMUTABLE_STATE_KEYS).map(
+    const violations = writeViolations(sources, ownedKeys(OWNED_FIELDS), IMMUTABLE_STATE_KEYS, STATE_CONSTRUCTORS).map(
       (v) => `${v.path}:${v.line}: ${v.form} of "${v.key}" (only ${v.writer} may write it)`,
     );
     expect(violations).toEqual([]);
@@ -124,6 +124,9 @@ describe('the scanner catches violations (positive control)', () => {
       'packages/kernel/src/supply.ts:8 spread update controller',
       'packages/kernel/src/supply.ts:9 spread update controller',
       'packages/kernel/src/supply.ts:10 spread update controller',
+      // A literal carrying an owned key is a write under copy-on-write State (review F6): owned
+      // key names are reserved everywhere, so the copy must use another property name.
+      'packages/kernel/src/supply.ts:13 object literal controller',
       'packages/kernel/src/supply.ts:11 assignment id',
       'packages/cli/src/console.ts:1 assignment controller',
     ]);
@@ -204,6 +207,30 @@ describe('the scanner catches violations (positive control)', () => {
       'packages/kernel/src/state.ts: ForceBlock.strength has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
       'packages/kernel/src/state.ts: SupplyRow.level has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
     ]);
+  });
+
+  it('catches a whole new State literal built outside the writer, except in a named constructor (review F6)', () => {
+    const fields: OwnedField[] = [
+      { field: 'the current day', writer: 'tick', proposedBy: [], code: [{ record: 'State', key: 'stateDay' }] },
+      { field: 'messages in transit', writer: 'messages', proposedBy: [], code: [{ record: 'State', key: 'messagesInTransit' }] },
+    ];
+    const forge: SourceFile = {
+      path: 'packages/kernel/src/view/view.ts',
+      code: [
+        'export const forge = (s: State): State => ({',
+        '  gameSeed: s.gameSeed,',
+        '  stateDay: 0,',
+        '  messagesInTransit: [],',
+        '});',
+        'const { stateDay } = s;',
+        'const seen = { day: s.stateDay };',
+      ].join('\n'),
+    };
+    const setup: SourceFile = { path: 'packages/kernel/src/tick/setup.ts', code: 'export const createState = () => ({ gameSeed: 1, stateDay: 0, messagesInTransit: [] });' };
+    const found = writeViolations([forge, setup], ownedKeys(fields), ['gameSeed'], ['tick/setup']).map((v) => `${v.path}:${v.line} ${v.form} ${v.key}`);
+    expect(found).toEqual(['packages/kernel/src/view/view.ts:1 object literal stateDay', 'packages/kernel/src/view/view.ts:1 object literal messagesInTransit']);
+    // Without the constructor exemption, setup's literal is a violation too (setup sits in `tick`, so its day is its own).
+    expect(writeViolations([setup], ownedKeys(fields), [], []).map((v) => v.key)).toEqual(['messagesInTransit']);
   });
 
   it('counts increments as writes', () => {

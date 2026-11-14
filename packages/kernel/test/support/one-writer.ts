@@ -105,10 +105,19 @@ interface FileIndex {
   readonly patterns: readonly { readonly offset: number; readonly text: string }[];
   /** Object literals (at their own nesting level) that contain a spread. */
   readonly spreads: readonly { readonly offset: number; readonly text: string }[];
+  /** Brace groups (at their own nesting level) with no spread that are not destructuring targets: literals built whole. */
+  readonly literals: readonly { readonly offset: number; readonly text: string }[];
 }
 
 function indexFile(path: string, lexed: LexedSource): FileIndex {
-  return { path, lexed, patterns: destructuringPatterns(lexed.code), spreads: spreadGroups(lexed.code) };
+  const groups = braceGroups(lexed.code);
+  return {
+    path,
+    lexed,
+    patterns: destructuringPatterns(lexed.code),
+    spreads: groups.filter((g) => g.text.includes('...')),
+    literals: groups.filter((g) => !g.text.includes('...') && !/^\s*=(?![=>])/.test(lexed.code.slice(g.offset + g.length))),
+  };
 }
 
 /** Every write to `key` in one indexed file. */
@@ -122,6 +131,7 @@ function sitesIn(file: FileIndex, p: KeyPatterns): WriteSite[] {
   }
   for (const g of file.patterns) if (p.target.test(g.text)) sites.push({ path, line: lexed.lineOf(g.offset), key: p.key, form: 'destructuring assignment' });
   for (const g of file.spreads) if (p.property.test(g.text)) sites.push({ path, line: lexed.lineOf(g.offset), key: p.key, form: 'spread update' });
+  for (const g of file.literals) if (p.property.test(g.text)) sites.push({ path, line: lexed.lineOf(g.offset), key: p.key, form: 'object literal' });
   return sites.sort((a, b) => a.line - b.line || (a.form < b.form ? -1 : a.form > b.form ? 1 : 0));
 }
 
@@ -157,19 +167,22 @@ function matchingOpen(code: string, close: number): number {
 }
 
 /**
- * Spread updates: an object literal that spreads something and sets the key.
- * Peels brace groups innermost-first, replacing each with blanks of the same
- * length, so offsets stay true and nested literals don't hide outer ones.
+ * Every brace group at its own nesting level. Peels groups innermost-first,
+ * replacing each with blanks of the same length, so offsets stay true and
+ * nested literals don't hide outer ones. A group that spreads something and
+ * sets an owned key is a spread update; one built whole with an owned key is
+ * an object literal (review F6: with copy-on-write State, "return a new State"
+ * is a write, however the object is built).
  */
-function spreadGroups(code: string): { offset: number; text: string }[] {
-  const out: { offset: number; text: string }[] = [];
+function braceGroups(code: string): { offset: number; length: number; text: string }[] {
+  const out: { offset: number; length: number; text: string }[] = [];
   let text = code;
   const innermost = /\{[^{}]*\}/g;
   for (;;) {
     let found = false;
     text = text.replace(innermost, (group: string, offset: number) => {
       found = true;
-      if (group.includes('...')) out.push({ offset, text: group });
+      out.push({ offset, length: group.length, text: group });
       return `0${group.slice(1).replace(/[^\n]/g, ' ')}`;
     });
     if (!found) break;
@@ -177,11 +190,16 @@ function spreadGroups(code: string): { offset: number; text: string }[] {
   return out;
 }
 
-/** Writes to owned keys outside their writer module, any in-place write to an immutable key, and files the lexer cannot read. */
+/**
+ * Writes to owned keys outside their writer module (including building a
+ * whole object literal with the key, except in a named State constructor),
+ * any in-place write to an immutable key, and files the lexer cannot read.
+ */
 export function writeViolations(
   files: readonly SourceFile[],
   owned: readonly { readonly key: string; readonly writer: string }[],
   immutableKeys: readonly string[],
+  constructors: readonly string[] = [],
 ): WriteViolation[] {
   const ownedPatterns = owned.map((o) => ({ writer: o.writer, p: patternsFor(o.key) }));
   const immutablePatterns = immutableKeys.map(patternsFor);
@@ -195,16 +213,20 @@ export function writeViolations(
       violations.push({ path: file.path, line: e.line, key: '-', form: e.message, writer: '-' });
       continue;
     }
+    const isConstructor = constructors.some((c) => isInModule(file.path, c));
     for (const { writer, p } of ownedPatterns) {
       if (isInModule(file.path, writer)) continue;
-      for (const site of sitesIn(index, p)) violations.push({ ...site, writer });
+      for (const site of sitesIn(index, p)) {
+        if (site.form === 'object literal' && isConstructor) continue;
+        violations.push({ ...site, writer });
+      }
     }
     for (const p of immutablePatterns) {
       // Creating a record is not a write, and `{ ...template, id: newId() }`
-      // is how records are created, so spread forms are allowed here; every
-      // in-place change to an immutable key is a violation.
+      // is how records are created, so spread and literal forms are allowed
+      // here; every in-place change to an immutable key is a violation.
       for (const site of sitesIn(index, p)) {
-        if (site.form !== 'spread update') violations.push({ ...site, writer: 'nobody' });
+        if (site.form !== 'spread update' && site.form !== 'object literal') violations.push({ ...site, writer: 'nobody' });
       }
     }
   }

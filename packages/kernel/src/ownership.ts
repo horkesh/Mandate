@@ -219,3 +219,11 @@ export const IMMUTABLE_STATE_KEYS: readonly string[] = [
 export const LEGACY_STATE_RECORDS: readonly { readonly file: string; readonly record: string; readonly reason: string }[] = [
   { file: 'packages/kernel/src/state.ts', record: 'GameState', reason: 'M2 state; replaced by the new State in Phase 0' },
 ];
+
+/**
+ * Lane 0.6 (review F6). State is copy-on-write, so building a new object
+ * literal that carries an owned key is a write too: only the key's writer may
+ * do it. These modules are the named exceptions, the constructors that build a
+ * whole new State at setup, and nothing else.
+ */
+export const STATE_CONSTRUCTORS: readonly string[] = ['tick/setup'];
