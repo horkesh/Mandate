@@ -1,6 +1,6 @@
 # Assets: one brief per asset family
 
-Status: design lane output (2026-11-14), revised the same day for decisions 0048 (assets are made by Codex through `CODEX.md`) and 0049 (ultrawide first), and again for decision 0051 (real people without AI; recipes; binaries), which followed the image-sources note (`docs/research/2026-11-14-portrait-and-image-sources.md`, branch `claude/research-images-8509c1`, commit 0ae2893) and the Codex-terms note (`docs/research/2026-11-14-codex-output-terms.md`, branch `claude/research-codex-terms-529042`); then for the standing reviewer's review (`review-presentation.md`). A proposal like everything in `docs/design/`: nothing here is accepted until a decision record accepts it. It briefs every asset the desk and the staff map in `PRESENTATION.md` need, so that **a Codex request in `CODEX.md` can point to a brief and add only the request's specifics**.
+Status: design lane output (2026-11-14), revised the same day for decisions 0048 (assets are made by Codex through `CODEX.md`) and 0049 (ultrawide first), and again for decision 0051 (real people without AI; recipes; binaries), which followed the image-sources note (`docs/research/2026-11-14-portrait-and-image-sources.md`) and the Codex-terms note (`docs/research/2026-11-14-codex-output-terms.md`), both on main; then for the standing reviewer's review (`review-presentation.md`) and the gate review (`review-gate-presentation.md`). A proposal like everything in `docs/design/`: nothing here is accepted until a decision record accepts it. It briefs every asset the desk and the staff map in `PRESENTATION.md` need, so that **a Codex request in `CODEX.md` can point to a brief and add only the request's specifics**.
 
 **Marks.** **[canon: NNNN]** means an accepted record fixes it; **[proposed]** means this document introduces it. Every count is an estimate unless it cites a record.
 
@@ -44,6 +44,8 @@ There is no art-direction lane: the briefs, the lead and the reviewer cover dire
 - **A licence note beside `art/`** says the files are AI-assisted, the owner claims whatever rights exist, and the PolyForm licence (0014) applies only to the extent those rights exist [proposed, from the Codex-terms note's recommendation 8].
 - **Credit lines** for portraits (LOC's and NARA's requested forms, the image-sources note section 4) go on a credits screen in the game's about section, never on the desk [proposed, following that note].
 - **The sensitive-history rules apply to images and sound** [canon: 0046, `CODEX.md`]: no Lost Cause imagery or symbols as decoration; no moral caricature; enslaved and free Black people, Native nations and civilians shown as people, never as props or a resource; no period racist imagery outside a cited document a gate reviewer has placed. The gate reviewer sees any delivery that depicts people other than the named sitters, and **any rendering of either side's flags, seals or emblems, whether a Codex delivery or a procedural one** (the map's headquarters flags, the era skin's ornaments and seals) [proposed; the procedural half from the review's N2].
+- **No human figures in decoration** [proposed, from the gate review's G1]: decorative art (ornaments, vignettes, mastheads, rules, textures, chrome) depicts **no human figures** and no plantation, cotton-field or slave-labour motifs. Period cartouches, vignettes, banknotes and letterheads often carry allegorical figures, Native people as emblems, or enslaved people as scenery, and none of that may enter through a reference. Reference scans are chosen from non-figural examples, and **the reviewer checks the references named in the recipe, not only the output**.
+- **Confederate symbols** [proposed, from the gate review's G2]: the staff map marks enemy forces with estimate signs only. **No Confederate flag, seal or emblem is a map marker, an ornament, chrome or store art.** Confederate symbols appear only inside a cited document or image a gate reviewer has placed (for example a captured order, or a Confederate newspaper's masthead in a clipping). The rule is written for the Union game; a playable Confederate seat would need its own.
 
 ### 0.4 Where deliveries go
 
@@ -132,7 +134,7 @@ A request names [proposed, extending `CODEX.md`'s "Requests point to briefs"]: t
 - **Licence:** Codex output; references public domain with URLs.
 - **Priority:** demo-critical (icons and the compass, cartouche and scale frame); seals full game.
 - **Dependencies:** era skin tokens; lane 0.2's world format; 0043's label hints.
-- **Acceptance (reviewer):** icons: each identifiable in a 20 px silhouette test against the legend, no two sharing an outline, readable in ink, pencil and faded states and under simulated deuteranopia, protanopia and tritanopia. Ornaments: transparent background with no halo when composited on the darkest and lightest paper stocks; line weight consistent across the set (a single stroke reads at 1× without aliasing); no lettering baked in; nothing traced from a source not named in the recipe; seals carry no real emblem unless the recipe cites a cleared reference.
+- **Acceptance (reviewer):** icons: each identifiable in a 20 px silhouette test against the legend, no two sharing an outline, readable in ink, pencil and faded states and under simulated deuteranopia, protanopia and tritanopia. Ornaments: transparent background with no halo when composited on the darkest and lightest paper stocks; line weight consistent across the set (a single stroke reads at 1× without aliasing); no lettering baked in; nothing traced from a source not named in the recipe; seals carry no real emblem unless the recipe cites a cleared reference; no human figure and no plantation, cotton-field or slave-labour motif in any ornament, checked in the recipe's references as well as the output (section 0.3); no Confederate flag, seal or emblem among the icons or ornaments, and enemy forces drawn with estimate signs only.
 
 ## 2. Paper and desk textures
 
@@ -160,7 +162,7 @@ A request names [proposed, extending `CODEX.md`'s "Requests point to briefs"]: t
 - **Licence:** Codex output; references public domain.
 - **Priority:** demo-critical.
 - **Dependencies:** the era skin; the contrast rule (body text at 4.5:1 on every stock, `PRESENTATION.md` section 5).
-- **Acceptance (reviewer):** a 3×3 tiling of each tile shows no visible seam or repeating blotch at 100% and 200%; desk surface: nothing important outside the 16:9 safe area, no objects, no text; paper stocks: black body text at 18 px on the stock measures at least 4.5:1 everywhere (checked at the darkest 1% of pixels); no watermark, maker's mark or legible writing; recipe present.
+- **Acceptance (reviewer):** a 3×3 tiling of each tile shows no visible seam or repeating blotch at 100% and 200%; desk surface: nothing important outside the 16:9 safe area, no objects, no text; paper stocks: black body text at 18 px on the stock measures at least 4.5:1 everywhere (checked at the darkest 1% of pixels); no watermark, maker's mark or legible writing; no human figures or figural motifs, in the output or the references (section 0.3); recipe present.
 
 ## 3. Desk chrome
 
@@ -187,7 +189,7 @@ A request names [proposed, extending `CODEX.md`'s "Requests point to briefs"]: t
 - **Licence:** Codex output.
 - **Priority:** demo-critical.
 - **Dependencies:** `PRESENTATION.md` sections 1–2 (sizes follow its 3440×1440 columns: left edge 560 px, right edge 660 px); typography (brief 5).
-- **Acceptance (reviewer):** same light direction and shadow length across the set; no baked text anywhere (words come from string tables, 0030); alpha clean on the desk surface and on the high-contrast skin's flat background; each object reads at its 1× size inside the column it belongs to in the 3440×1440 layout and at 1920×1080 in its drawer; recipe present.
+- **Acceptance (reviewer):** same light direction and shadow length across the set; no baked text anywhere (words come from string tables, 0030); alpha clean on the desk surface and on the high-contrast skin's flat background; each object reads at its 1× size inside the column it belongs to in the 3440×1440 layout and at 1920×1080 in its drawer; no human figures or figural motifs and no Confederate symbol, in the output or the references (section 0.3); recipe present.
 
 ## 4. Document templates
 
@@ -206,11 +208,11 @@ A request names [proposed, extending `CODEX.md`'s "Requests point to briefs"]: t
 | `masthead-ornament.png` (ornament only; titles set in type) | 1520×240 |
 | `rule-double.png`, `rule-thick-thin.png` | 760×24 |
 
-- **Style references, partly sourced.** The image-sources note (section 3) gives: General Orders No. 94 of 4 August 1862 as the best printed exemplar ([Internet Archive](https://archive.org/details/101653841.nlm.nih.gov)); 1861 issues of *Frank Leslie's Illustrated Newspaper* and *Harper's Weekly* and the *New York Times* of 22 December 1861 for front pages (Internet Archive, public domain by age); and a period telegram from Governor Ellis, April 1861 ([DocsTeach](https://docsteach.org/documents/document/telegram-from-governor-john-w-ellis-of-north-carolina-responding-to-abraham-lincolns-request-for-troops), "Public Domain"). It found **no verified scan of a blank telegraph form or a War Department letterhead**, and recommends drawing both ourselves from the genuine messages and from Bates's *Lincoln in the Telegraph Office* (1907), with letterhead type set from the General Orders' printed heading. Returns, endorsements and forms of address remain **needs-source** (`PRESENTATION.md` section 9). Each request names the scans to work from; the Duke exhibit image is not to be used (a modern photograph, per the note).
+- **Style references, partly sourced.** The image-sources note (section 3) gives: General Orders No. 94 of 4 August 1862 as the best printed exemplar ([Internet Archive](https://archive.org/details/101653841.nlm.nih.gov)); 1861 issues of *Frank Leslie's Illustrated Newspaper* and *Harper's Weekly* and the *New York Times* of 22 December 1861 for front pages (Internet Archive, public domain by age); and a period telegram from Governor Ellis, April 1861 ([DocsTeach](https://docsteach.org/documents/document/telegram-from-governor-john-w-ellis-of-north-carolina-responding-to-abraham-lincolns-request-for-troops), "Public Domain"). It found **no verified scan of a blank telegraph form or a War Department letterhead**, and recommends drawing both ourselves from the genuine messages and from Bates's *Lincoln in the Telegraph Office* (1907), with letterhead type set from the General Orders' printed heading. Returns, endorsements and forms of address remain **needs-source** (`PRESENTATION.md` section 9). Each request names the scans to work from; the Duke exhibit image is not to be used (a modern photograph, per the note). **The newspaper scans are references for layout and type only** [proposed, from the gate review's nit 1]: period front pages carry engravings, cartoons and advertisements, including fugitive and sale notices and caricature, so the template carries **no illustrations or advertisements** unless a gate reviewer places a cited one. Template voices for partisan papers describe a racist campaign without reproducing its language [canon: the `northern-racism-cost` text facet, `SENSITIVE-HISTORY.md`].
 - **Licence:** our templates; Codex decoration; references public domain. Newspaper titles a pack uses are checked by a research lane before ship.
 - **Priority:** demo-critical for telegram, letter, memorandum, opinion, strength return, newspaper, plan sheet, docket card and briefing.
 - **Dependencies:** the period-conventions research; string tables (lane 0.2); the gate's pattern lists [canon: 0046].
-- **Acceptance (reviewer):** every decoration has blank areas wherever text goes and contains no legible words; each template compared side by side with its cited period scan; every string in the template passes the gate's pattern checks; text reflows at 200% type without clipping and never exceeds the reading column's line length [canon: 0049 item 4]; the same paper renders as text in the console (the presenter's output).
+- **Acceptance (reviewer):** every decoration has blank areas wherever text goes and contains no legible words; no human figures and no plantation, cotton-field or slave-labour motifs in vignettes or mastheads, checked in the referenced scans as well as the output (section 0.3); no illustrations or advertisements in the newspaper template; each template compared side by side with its cited period scan; every string in the template passes the gate's pattern checks; text reflows at 200% type without clipping and never exceeds the reading column's line length [canon: 0049 item 4]; the same paper renders as text in the console (the presenter's output).
 
 ## 5. Typography
 
@@ -231,7 +233,7 @@ A request names [proposed, extending `CODEX.md`'s "Requests point to briefs"]: t
 - **Route:** **the public-domain photograph itself, processed by ordinary image processing** [canon: 0051]. No AI generation and no AI editing of a real person's likeness until a lawyer answers (the Codex-terms note, sections 1 and 6, item 2). Codex may run the processing as a script, but **must not use its image tool** on a real person; the Phase 2 desk lane may run the same script. Sources and rights: `docs/research/2026-11-14-portrait-and-image-sources.md`, section 2 (the per-person table) and section 4 (treatment and credit).
 - **Count:** about 150–180 named people in 1861–62 and about 450 over the war [canon: 0033]. The demo's first cast is the table below (24 people).
 - **The treatment rule** [canon: 0051 for the principle; proposed details]:
-  - **Allowed, with non-machine-learned tools only:** crop to head and shoulders at 4:5; rotate to level; adjust levels, curves and contrast to the set's standard; convert to greyscale; remove dust and scratches by hand or with classical filters (clone, median, non-learned inpainting) where no facial feature is touched; resize down with a standard resampling filter.
+  - **Allowed, with non-machine-learned tools only:** crop to head and shoulders at 4:5; rotate to level; adjust levels, curves and contrast per photograph to the set's standard, set so that facial detail survives for every sitter (no single curve that crushes shadows on darker skin or darker prints) [proposed, from the gate review's nit 3]; convert to greyscale; remove dust and scratches by hand or with classical filters (clone, median, non-learned inpainting) where no facial feature is touched; resize down with a standard resampling filter.
   - **Not allowed:** any machine-learned upscaling, denoising, restoration, inpainting, face enhancement or style filter; changing the face, expression, age, hair, beard, pose or build; adding or altering insignia, medals or rank marks; colourising; extending the image beyond its frame; combining two photographs; caricature; inventing a likeness for anyone without a cited photograph (such a person gets "no likeness on file", brief 7).
   - **One version only:** the processed photograph. The engraving-like finish of the earlier draft is dropped [canon: 0051]; the era skin's runtime toning, vignette and paper border are the only styling, and they are presentation, applied equally to every portrait.
   - **Resolution:** never upscale. Deliver at 1152×1440 where the master allows, otherwise at the master's own resolution down to a floor of 576×720; below the floor, the reviewer decides between using it and "no likeness on file".
@@ -252,6 +254,10 @@ A request names [proposed, extending `CODEX.md`'s "Requests point to briefs"]: t
 | `thumb.png` (derived by the build) | 96×120 | 192×240 |
 
 - **Before processing, for each sitter** [proposed, from the image-sources note's warnings]: a person with a browser opens the item (LOC refuses automated requests, so never a script or CI), records the item's own Rights Advisory, reproduction number and date range in the recipe, and saves the master outside the repository with its SHA-256 (section 0.7). Until that is done, an LOC row is "collection-level rights, item unseen" (Medium confidence in the note).
+- **The search is even** [proposed, from the gate review's G5]:
+  - the image-sources pass searches **every rostered person with the same effort**, including Black and Native people who appear as writers, petitioners or leaders, not only cabinet members and generals. **"No likeness on file" is used only after a search**, and the recipe or the person data records that search (where, when, what was found);
+  - a photograph made of the sitter **in captivity, under sentence, or for another's propaganda** is used only if a gate reviewer places it, and its caption states the circumstances;
+  - cards name **Native sitters by their own name** with the English one, set the same way for everyone.
 
 **The demo's first cast and their references** [proposed cast, from the catalogue's March 1862 entries (S32, S34, S35, S36, S38), the cabinet in that month and Lincoln; every reference from the image-sources note's section 2, never from memory]. Rights codes are the note's: **BH** Brady-Handy statement, **CWP** LOC Civil War Photographs statement, **NARA** NARA select-list statement, **item?** an LOC series whose collection statement the note did not read. "Use" is this lane's pick where the note lists several.
 
@@ -286,8 +292,8 @@ Tally: 13 ready for the browser pass (McDowell's date to check), 6 later photogr
 
 - **Licence:** the collection statements the note read: Brady-Handy "considered to be in the public domain" (LOC); Civil War Photographs "no known restrictions" (LOC), which LOC says does not itself mean public domain, so for `cwpb` items public domain is the note's reading by age, not LOC's statement; NARA's select list "public domain" with no use restrictions. Each item is confirmed at item level by the browser pass; the processed file is a derivative of the photograph, under the note's section 4 [proposed wording, from the review's N5]. Credit lines on the credits screen.
 - **Priority:** demo-critical for the cast above; full game for the rest.
-- **Dependencies:** the image-sources note (under review; cite it once merged); the browser pass; the processing script; the pack's person ids (lane 0.3); Git LFS (section 0.7).
-- **Acceptance (reviewer):** the recipe cites the item URL, the item's Rights Advisory and reproduction number as recorded by the browser pass, the master's SHA-256, the script and its parameters, and no image tool; side by side at the same scale, the processed portrait and the master differ only by crop, rotation, tone and dust removal (the reviewer checks eyes, nose, mouth, ears, hairline, beard line and insignia); no colour; no upscaling (the delivered size is at most the master's); any photograph later than the scenario's start carries its date range in the person data for the card; the portrait reads at 96×120; the sitter's identity matches the note's row and the pack person id.
+- **Dependencies:** the image-sources note (on main); the browser pass; the processing script; the pack's person ids (lane 0.3); Git LFS (section 0.7).
+- **Acceptance (reviewer):** the recipe cites the item URL, the item's Rights Advisory and reproduction number as recorded by the browser pass, the master's SHA-256, the script and its parameters, and no image tool; side by side at the same scale, the processed portrait and the master differ only by crop, rotation, tone and dust removal (the reviewer checks eyes, nose, mouth, ears, hairline, beard line and insignia, for each sitter, at full size and at card size, and facial detail is legible in both); no colour; no upscaling (the delivered size is at most the master's); any photograph later than the scenario's start carries its date range in the person data for the card; the portrait reads at 96×120; the sitter's identity matches the note's row and the pack person id; a "no likeness on file" entry has a recorded search; a photograph taken in captivity, under sentence or for propaganda has a gate placement and a caption saying so.
 - **Who:** the image-sources lane (references); a person with a browser (item checks and masters; the owner or a lane with a human); Codex by script or the Phase 2 desk lane (processing); the reviewer.
 
 ## 7. Portraits for generated officers and the "hidden gems"
@@ -301,7 +307,7 @@ Tally: 13 ready for the browser pass (McDowell's date to check), 6 later photogr
 - **Licence:** Codex output under 0048, disclosed as AI-generated.
 - **Priority:** layer 1 demo-critical (trivial); layer 2 demo-useful (a battle report may name a junior officer), full set full game.
 - **Dependencies:** the officer generator (Phase 1); the real-portrait set (for the look-alike check below).
-- **Acceptance (reviewer):** the recipe shows no photographic reference and carries the 0051 fields; **look-alike check**: no face resembles any portrait in the real set (the reviewer compares each new face against a contact sheet of the real set) or any recognisable existing artwork or person; no duplicates within the library; uniforms and ranks plausible for the period per the research notes; a C2PA manifest present (checked with `c2patool`; SynthID as recorded, not checked); each reads at 96×120.
+- **Acceptance (reviewer):** the recipe shows no photographic reference and carries the 0051 fields; **look-alike check**: no face resembles any portrait in the real set (the reviewer compares each new face against a contact sheet of the real set) or any recognisable existing artwork or person; no duplicates within the library; uniforms and ranks plausible for the period per the research notes; a C2PA manifest present (checked with `c2patool`; SynthID as recorded, not checked); each reads at 96×120; **any generated face of a Black or Native officer** (for example line officers of the Native Guards or the Indian Home Guard) is seen by the gate reviewer before it enters the library [proposed, from the gate review's G5].
 
 ## 8. Sound
 
@@ -314,7 +320,7 @@ Tally: 13 ready for the browser pass (McDowell's date to check), 6 later photogr
 - **Licence:** Codex output or own recording.
 - **Priority:** demo-critical for 8 core effects (paper, stamp, pen, sounder, calendar, door, clock, room tone).
 - **Dependencies:** the desk's act list (`PRESENTATION.md` section 2).
-- **Acceptance (reviewer):** no clipping (peaks under −1 dBFS); loudness within 2 LU across the set; the loop has no audible seam; no speech or voice-like sounds; muting all sound loses no information (`PRESENTATION.md` section 5).
+- **Acceptance (reviewer):** no clipping (peaks under −1 dBFS); loudness within 2 LU across the set; the loop has no audible seam; no speech or voice-like sounds; no effect depicts violence against people or stands in for people (no chains, whips, cries or crowds) [proposed, from the gate review's nit 2]; muting all sound loses no information (`PRESENTATION.md` section 5).
 
 ## 9. Music
 
@@ -323,9 +329,13 @@ Tally: 13 ready for the browser pass (McDowell's date to check), 6 later photogr
 - **Count:** none in the demo, or one menu piece; 4–8 pieces of 2–4 minutes for the full game.
 - **Output folder:** `art/union-1861/music/`; files 48 kHz, 24-bit stereo WAV with loop points in the recipe.
 - **Style references:** parlour, band and church music of the period, described in words; no modern recordings as references.
-- **The gate:** no piece built on a melody whose origin or words the gate's lists would fail, without the gate reviewer's ruling [proposed, from the gate's F2 and Q9]. The request states the melody's source if it uses one.
+- **The gate** [proposed, from the gate's F2 and Q9 and the gate review's G6]:
+  - **refused outright:** no melody of minstrel-show origin and no Confederate song or anthem is used in the bed;
+  - **no spiritual, work song or other music of enslaved people as atmosphere**; if such music appears at all, it is an attributed, cited item a gate reviewer has placed;
+  - every other period melody: its origin and words are checked by a research lane before the gate reviewer rules, and the request states the melody's source;
+  - **music never cues on a gate event** (an atrocity, an execution, an act of emancipation) **or on a victory or defeat**; the bed does not react to moral outcomes.
 - **Priority:** full game only.
-- **Acceptance (reviewer):** loop points clean; no recognisable modern or copyrighted melody; the gate reviewer has signed off any period melody used.
+- **Acceptance (reviewer):** loop points clean; no recognisable modern or copyrighted melody; no minstrel-origin or Confederate melody; the research lane's origin check and the gate reviewer's sign-off recorded for any period melody used; no cue tied to a gate event, victory or defeat.
 
 ## 10. Store art
 
@@ -337,7 +347,7 @@ Tally: 13 ready for the browser pass (McDowell's date to check), 6 later photogr
 - **Licence:** Codex output, the game's assets, cleared portraits; the AI disclosure covers it [canon: 0048].
 - **Priority:** in-house screenshots and a first capsule are demo-critical (the page goes up with or before the demo); key art can follow.
 - **Dependencies:** a playable desk (`PRESENTATION.md` section 6, steps 3–5); portraits (brief 6); 0039's disclosure question settled first.
-- **Acceptance (reviewer):** every image meets Steam's then-current rules as read from Steamworks; the capsule's title reads at its smallest size; the first screenshot shows a letter and a face, not the map; no real person shown except from brief 6's portraits.
+- **Acceptance (reviewer):** every image meets Steam's then-current rules as read from Steamworks; the capsule's title reads at its smallest size; the first screenshot shows a letter and a face, not the map; no real person shown except from brief 6's portraits; **the gate reviewer signs off every capsule, key art and trailer**; no Confederate symbol (section 0.3); no composition centred on a Confederate leader; store copy and trailer text pass the gate's fail patterns (`PRESENTATION.md` section 4) [proposed, from the gate review's G2 and G3].
 
 ---
 

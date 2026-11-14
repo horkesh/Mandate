@@ -265,6 +265,8 @@ At 16:9 [proposed]: the engaged commanders become a row of small cards along the
 
 A screen outside the turn, offered after each major battle (optional) and at campaign end [canon: FOUNDATION section 6]: two columns, "what you were told" (the reports, signed and dated) and "what happened" (this game's truth, and the retrospective statements), with the map shown twice, staff map against truth [proposed layout]. This is the one screen that uses 21:9 for two maps side by side (each about 1,600 px); at 16:9 the two maps share one frame with a slider between them [proposed]. It is the only place truth is ever drawn in a shipped game [proposed, from 0013 item 5 and FOUNDATION section 6].
 
+**Retrospective statements are attributed claims, never the game's explanation** [proposed, from the gate review's G4; canon for the rules it applies: `SENSITIVE-HISTORY.md` F3, H4, Q10, Q12, A6]. Each carries its speaker and citation (F3) and sits in the "what you were told" column's register, beside "what happened" but never as its caption or summary. They fall under the disputed-thesis list (H4) and Q10 and Q12. A statement drawn from a memoir the checklist bans as evidence (A6) appears, if at all, only as an attributed claim, and never in the "what happened" column.
+
 ### 1.11 The verdict
 
 The end screen: which will broke and why, as typed terms, with the gate's required clauses [canon: 0026, 0028, gate H1–H3; R5 pending]. Text only, set like a printed proclamation page; no score, no grade [canon: gate H5, Q5].
@@ -388,12 +390,12 @@ The map is the staff's map on the president's desk, drawn only from what the fac
 |---|---|---|
 | Base: coast, water lines, rivers, relief, towns, rail, roads | baked once per scenario, in the era skin (1862: ink on linen, hachured ridges, engraver's water lines, miles) | canon (0013, prototype `map-style`) |
 | Regions | irregular, roughened borders from seeded noise | canon (0019, 0035, 0043) |
-| Claimed control | washes in the faction's and the enemy's colours, strength of wash from claimed permille, hatched where contested | canon (0013 derived from claimed control); wash rules proposed |
+| Claimed control | washes in the faction's and the enemy's colours, strength of wash from claimed permille, hatched where contested; **Native nations' lands are labelled with the nations' own names and no wash hides those labels** (how nations are represented beyond that waits for R3) | canon (0013 derived from claimed control); wash rules proposed; the Native-lands rule proposed, from the gate review's G7 |
 | Fronts | a heavy line with teeth toward the enemy, segment by segment: ink where confirmed by more than one source, pencil where it rests on one report | canon (0013 items 1–2) |
 | Pockets | the staff's own reading: a friendly area ringed in pencil with "no supply path (staff)", derived from **claimed** control and from reports with an author, never from the kernel's pocket index over true control | canon (the staff map draws from claims, 0013 item 2); derivation from claims and style proposed |
 | Supply | "the line to X is open / cut at Y" as the staff reads it from claimed control and from signed reports, drawn on the rail and road lines with a cut mark and its source; never the kernel's true supply path | canon (0013 item 2; FOUNDATION section 4 for what supply is); derivation from claims and style proposed |
 | Own forces | a headquarters flag per post at its **last reported position**, labelled with the holder's name, the last reported strength, and the report's date and author; it fades like any pencil as the report ages; a corps under its army's flag. The true position exists only in the developer truth layer | canon (posts, 0016; truth layer, 0013 item 5); flags proposed |
-| Enemy | pencilled estimates: a shaded area or a figure range, each signed by its author and dated ("Pinkerton: 100,000–120,000", his Yorktown figure in the information-flows note) | canon (pencil for single reports, 0013); style proposed |
+| Enemy | pencilled estimates: a shaded area or a figure range, each signed by its author and dated ("Pinkerton: 100,000–120,000", his Yorktown figure in the information-flows note); **estimate signs only: no Confederate flag, seal or emblem as a marker** (`ASSETS.md` section 0.3) | canon (pencil for single reports, 0013); style proposed; the no-symbol rule proposed, from the gate review's G2 |
 | Plans | broad hatched arrows per axis; a draft outlined, an approved plan filled, an operation under way solid | canon (0013 item 2, 0016); draft/approved distinction proposed |
 | The president's marks | blue pencil: edits, notes, orders | canon (0013 item 1) |
 | Corrections | red strike-through over the original, initialled by the correcting source (an observer, an inspector) | canon (0013 item 1) |
@@ -433,7 +435,8 @@ The map is the staff's map on the president's desk, drawn only from what the fac
 - **Authored hints** per region (anchor, spine, size class, minimum zoom) are pack data, so a modder fixes a label without code [canon: 0043].
 - **Key points** get small horizontal labels beside the point once it is about 11 pixels across [canon: tripwire section 5].
 - **Rivers and ridges** follow their own lines in an italic [proposed, from the prototype].
-- **Names are the pack's names as of the scenario date**, checked by the gate's anachronism list [canon: gate F6; proposed application to map labels].
+- **Names are the pack's names as of the scenario date**, checked by the gate's anachronism list [canon: gate F6; proposed application to map labels]. **Map labels also pass F2's slur list**: a period place name that fails it goes to the gate reviewer, who chooses a neutral form with a note [proposed, from the gate review's G7].
+- **Native nations' lands carry the nations' own names**, and claimed-control washes never hide those labels; how nations are represented beyond that waits for R3 [proposed, from the gate review's G7].
 - **Labels dim** under fronts and arrows and while a plan is under review [proposed, from the tripwire's remaining-work table].
 - **Fit:** at fit zoom the tripwire showed 140 of 250 names; labels that do not fit hide, and the region's name is always available on hover and in "what we know" [proposed].
 
@@ -453,7 +456,7 @@ The map is the staff's map on the president's desk, drawn only from what the fac
   - disputed numbers as ranges with citations (F4);
   - no terms dated after the display date (F6);
   - the forbidden and review lists in `packs/<pack>/gate/forbidden.json` (F2).
-- **Out-of-world text** (menus, the key card, settings, tooltips) is plain modern English, scoped `out-of-world` so the period patterns do not apply [canon: gate string scope, section 5 of the checklist]. The narrator is sparing and never says "you" to judge [canon: gate F5; proposed tone].
+- **Out-of-world text** (menus, the key card, settings, tooltips, store copy, trailer text) is plain modern English, scoped `out-of-world` [canon: gate string scope, section 5 of the checklist]. **The scope lifts only the anachronism list (F6) and period-voice conventions.** The F2 fail patterns (Lost Cause wording, resource words near protected groups, slurs) and the praise-and-scold list (F5) apply to every string, including store copy and trailer text [proposed, from the gate review's G3]. The narrator is sparing and never says "you" to judge [canon: gate F5; proposed tone].
 - **Document genres** [proposed list; period conventions **needs-source**, section 9]:
 
 | Genre | Report type (0032, 0040) | Form |
@@ -471,7 +474,7 @@ The map is the staff's map on the president's desk, drawn only from what the fac
 | Plan | plan ready for review | the plan sheet (section 1.4) |
 | Situation card | situation | a docket card (section 2.3) |
 | Briefing | text | the opening paper |
-| Retrospective statement | retrospective statement | the reckoning only |
+| Retrospective statement | retrospective statement | the reckoning only; an attributed claim with speaker and citation, never the game's explanation (section 1.10) |
 
 ---
 
@@ -513,7 +516,7 @@ Each step keeps the previous one playable; the console stays as the headless and
 
 The working demo start is early March 1862, opening the day the *Virginia*'s attack is reported (8 March) [canon: 0046, catalogue section 2]. History here comes only from the catalogue entries named; the turn timings, seat choices and attention numbers are **[game]**. Attention assumes 6 a week, refilling Tuesdays, which is not canon (the pack sets it) [game]. The scenario begins with S27, S28 and S24 resolved and S31's order missed [catalogue P17].
 
-**Stop 1. Saturday 8 March, the opening.** The briefing is the first paper: who holds what (Stanton at War, per S28 resolved), the army in winter camp, the missed date for a general advance (S31). The map shows the Army of the Potomac's flag near Washington with a pencilled enemy estimate across the river, signed by its source; western flags further off. The docket holds **S35** (war orders: corps, the top command, the West), live from the start because the 22 February date was missed. The tray brings a wire: the *Virginia* has sunk the *Cumberland* and taken the *Congress*, which opens **S34** on the docket with a clock of a day or two. S34's staff line is Stanton's: recall Burnside and stop the campaign (in Welles's account, which the card cites as one-sided). The president **consults the cabinet in writing** on S34 (1 attention; 5 left) and leaves S35 open.
+**Stop 1. Saturday 8 March, the opening.** The briefing is the first paper: the premise text the gate requires (the `cause-of-secession` and inaugural text facets, section 1.12), who holds what (Stanton at War, per S28 resolved), the army in winter camp, the missed date for a general advance (S31). The map shows the Army of the Potomac's flag near Washington with a pencilled enemy estimate across the river, signed by its source; western flags further off. The docket holds **S35** (war orders: corps, the top command, the West), live from the start because the 22 February date was missed. The tray brings a wire: the *Virginia* has sunk the *Cumberland* and taken the *Congress*, which opens **S34** on the docket with a clock of a day or two. S34's staff line is Stanton's: recall Burnside and stop the campaign (in Welles's account, which the card cites as one-sided). The president **consults the cabinet in writing** on S34 (1 attention; 5 left) and leaves S35 open.
 
 *On screen:* the docket card for S34 with two options in their display order, "Hold course: the ironclad cannot leave the Capes or pass the Potomac shoals" (Welles) and "Recall Burnside and stop the campaign" (Stanton, per Welles); the "Ask in writing" form; the meter striking one token.
 
@@ -535,7 +538,10 @@ The president **asks for the exact numbers** (Inquire, free) and **asks Halleck 
 
 *On screen at the end of the week:* the map with the Army of the Potomac's sea arrow approved and filled, one corps flag left near Washington under a new department, a red-initialled correction where an observer's letter contradicts a flag's strength [game]; the daybook showing the week. Attention: 1 or 2 before Tuesday's refill, then 1 or 2 of the refilled 6, so 2–4 across 8–15 March [game]. That is no tighter than the first month's slack weeks, so this week does not yet show attention biting; the walkthrough expected the war to make it bite (FIRST-MONTH, pacing verdict 3), and that is for Phase 1's tuning to show.
 
-**Gate exposure in this week.** S33 (compensated emancipation) sits inside these dates and is gate-flagged with placement pending [catalogue S33]. If the gate has placed it when the demo ships, it appears as a docket card; if not, the demo may not omit the topic's derived and text facets, so the briefing and the press carry them [canon: the ship rule and G5, 0046]. This storyboard does not depend on either.
+**Gate exposure in this week.**
+- **S33 (compensated emancipation)** is gate-flagged with placement pending [catalogue S33]. The proposal went to Congress on 6 March 1862, two days before the start; border-state members met the president on 10 March, and the House passed the resolution on 11 March, both inside this week (the gate-and-catalogue facts note, section 3.2). **Whether the scenario starts with S33 resolved or live is open**, for lane 0.7's scenario setup to decide, as P17 did for S27, S28 and S24. If it is live and placed, it appears as a docket card; if not placed, the demo may not omit the topic's derived and text facets, so the briefing and the press carry them [canon: the ship rule and G5, 0046].
+- **Other topics whose windows cover the week**, whose derived and text facets G5 likewise requires: `self-emancipation`, `fugitive-policy` (until 17 July 1862), `union-habeas-and-arrests` and `guerrilla-war-west` [canon: the register, `SENSITIVE-HISTORY.md`]. The briefing and the week's press carry them; none needs a docket card in this storyboard.
+- The storyboard's four stops do not depend on how any of these is placed.
 
 ---
 
