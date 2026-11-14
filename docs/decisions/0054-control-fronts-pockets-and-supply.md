@@ -1,6 +1,6 @@
 # 0054: Control, fronts, pockets and supply
 
-Status: accepted (2026-11-14). From Phase 0 lane 0.4 (`notes/lane-0.4-control.md`, fifteen choices, each with what it rejected) and the standing reviewer's two passes (approved after fixes). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 4 and 10, and decisions 0013, 0019, 0029, 0044, 0050 and 0052.
+Status: accepted (2026-11-14). From Phase 0 lane 0.4 (`notes/lane-0.4-control.md`, fifteen choices, each with what it rejected) and the standing reviewer's two passes (approved after fixes). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 4 and 10, and decisions 0013, 0019, 0029, 0044, 0050 and 0052. Amended by 0055 (neutral regions are passable unless their government closes them).
 
 ## Decision
 
