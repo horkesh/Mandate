@@ -61,6 +61,31 @@ export interface PackFiles {
   read(path: string): string | undefined;
   /** Immediate subfolder names of a folder (for scenario sources). */
   folders(path: string): string[];
+  /** Immediate file names in a folder, so a misnamed table is reported rather than ignored. */
+  files(path: string): string[];
+}
+
+/** Edit distance, for "did you mean" on a misnamed table. */
+function distance(a: string, b: string): number {
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i];
+    for (let j = 1; j <= b.length; j++) cur.push(Math.min(prev[j]! + 1, cur[j - 1]! + 1, prev[j - 1]! + (a[i - 1] === b[j - 1] ? 0 : 1)));
+    prev = cur;
+  }
+  return prev[b.length]!;
+}
+
+/** Report every file or folder in a source folder that is not one of its known tables (review F3). */
+function unknownEntries(files: PackFiles, dir: string, known: readonly string[], sink: IssueSink): void {
+  for (const name of [...files.files(dir)].sort(strictCompare)) {
+    if (known.includes(name)) continue;
+    const nearest = [...known].sort((x, y) => distance(name, x) - distance(name, y) || strictCompare(x, y))[0];
+    sink.error('unknown-table', `${dir}/${name}`, '', `"${name}" is not a table of this folder, so it would be ignored`, nearest ? `a known table name (the nearest is ${nearest})` : 'no files here');
+  }
+  for (const name of [...files.folders(dir)].sort(strictCompare)) {
+    sink.error('unknown-table', `${dir}/${name}`, '', `"${name}/" is a folder the generator does not read`, `only the tables: ${known.join(', ')}`);
+  }
 }
 
 export interface GenerateResult {
@@ -331,6 +356,8 @@ export function generatePack(files: PackFiles): GenerateResult {
     return sorted.map((it) => it.rec);
   }
   const wt = (key: keyof typeof WORLD_TABLES) => readTable(files, `source/world/${WORLD_TABLES[key].file}`, WORLD_TABLES[key], sink);
+  unknownEntries(files, 'source/world', Object.values(WORLD_TABLES).map((t) => t.file), sink);
+  for (const name of files.files('source/scenarios')) sink.error('unknown-table', `source/scenarios/${name}`, '', 'scenario tables live in a folder per scenario', 'source/scenarios/<id>/');
 
   // ---- World tables
   const departments = place(
@@ -503,6 +530,7 @@ export function generatePack(files: PackFiles): GenerateResult {
   const scenarioFolders = files.folders('source/scenarios').sort(strictCompare);
   for (const sid of scenarioFolders) {
     const dir = scenarioSourceDir(sid);
+    unknownEntries(files, dir, ['scenario.json', ...Object.values(SCENARIO_TABLES).map((t) => t.file)], sink);
     const header = readJson(files, `${dir}/scenario.json`, ScenarioHeaderSchema, sink);
     if (!header) continue;
     const scope = `scenario:${sid}`;

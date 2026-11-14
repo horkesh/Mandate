@@ -35,6 +35,13 @@ export function packFilesAt(root: string): PackFiles {
         .filter((d) => d.isDirectory())
         .map((d) => d.name);
     },
+    files(path: string): string[] {
+      const full = join(root, ...path.split('/'));
+      if (!existsSync(full)) return [];
+      return readdirSync(full, { withFileTypes: true })
+        .filter((d) => d.isFile())
+        .map((d) => d.name);
+    },
   };
 }
 

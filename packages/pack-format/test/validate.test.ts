@@ -3,6 +3,10 @@ import { errorsOf, formatGenerated, formatIssue, generatePack, type Issue, type 
 import { appendRow, filesOf, fixture, type FileMap, replaceOnce, withFile, withNewFile, withoutFile } from './support/fixture.ts';
 
 const run = (files: FileMap) => generatePack(filesOf(files));
+const renamed = (from: string, to: string) => {
+  const base = fixture();
+  return withNewFile(to, base.get(from)!, withoutFile(from, base));
+};
 const kinds = (issues: readonly Issue[]) => [...new Set(issues.map((i) => `${i.severity} ${i.kind}`))].sort();
 
 describe('the fixture pack', () => {
@@ -29,6 +33,11 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'a header wider than its rows', files: () => withFile(`${W}/rail_lines.csv`, replaceOnce('id,name,sources,notes', 'id,name,sources,notes,colour')), kind: 'csv-syntax', file: `${W}/rail_lines.csv` },
   { name: 'a JSON file that does not parse', files: () => withFile('pack.json', (t) => t.slice(0, -2)), kind: 'json-syntax', file: 'pack.json' },
   { name: 'a required table that is missing', files: () => withoutFile(`${W}/edges.csv`), kind: 'missing-file', file: `${W}/edges.csv` },
+  { name: 'a misnamed optional scenario table (review F3)', files: () => renamed(`${S}/force_blocks.csv`, `${S}/force_block.csv`), kind: 'unknown-table', file: `${S}/force_block.csv` },
+  { name: 'a misnamed optional world table', files: () => renamed(`${W}/installations.csv`, `${W}/installation.csv`), kind: 'unknown-table', file: `${W}/installation.csv` },
+  { name: 'an extra file among the world tables', files: () => withNewFile(`${W}/roads_extra.csv`, 'id\n'), kind: 'unknown-table', file: `${W}/roads_extra.csv` },
+  { name: 'a folder among the world tables', files: () => withNewFile(`${W}/old/regions.csv`, 'id\n'), kind: 'unknown-table', file: `${W}/old` },
+  { name: 'a table outside any scenario folder', files: () => withNewFile('source/scenarios/control.csv', 'region,shares\n'), kind: 'unknown-table', file: 'source/scenarios/control.csv' },
   { name: 'a column named twice', files: () => withFile(`${W}/rail_lines.csv`, () => 'id,name,sources,sources\nmain_line,Main Line,DESIGN,DESIGN'), kind: 'duplicate-column', file: `${W}/rail_lines.csv` },
   { name: 'an unknown column (well-formed rows)', files: () => withFile(`${W}/depots.csv`, (t) => t.replace('notes', 'notes,colour').replace(/DESIGN,$/m, 'DESIGN,,red')), kind: 'unknown-column', file: `${W}/depots.csv` },
   { name: 'a missing required column', files: () => withFile(`${W}/rail_lines.csv`, () => 'id,name,notes\nmain_line,Main Line,'), kind: 'missing-column', file: `${W}/rail_lines.csv` },
@@ -215,6 +224,13 @@ describe('issues read like sentences (decision 0030: file, field, what is wrong,
     const issue = result.issues.find((i) => i.kind === 'unknown-reference')!;
     expect(formatIssue(issue)).toBe(
       'error [unknown-reference] source/world/depots.csv (row 2 (alpha_stores), column region): "gamma" is not a region. Expected: a region id defined in the pack.',
+    );
+  });
+
+  it('names the nearest table for a misnamed one', () => {
+    const issue = run(renamed(`${S}/force_blocks.csv`, `${S}/force_block.csv`)).issues.find((i) => i.kind === 'unknown-table')!;
+    expect(formatIssue(issue)).toBe(
+      'error [unknown-table] source/scenarios/start/force_block.csv: "force_block.csv" is not a table of this folder, so it would be ignored. Expected: a known table name (the nearest is force_blocks.csv).',
     );
   });
 

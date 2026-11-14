@@ -23,6 +23,10 @@ function packFiles(root: string): PackFiles {
       const full = join(root, ...p.split('/'));
       return existsSync(full) ? readdirSync(full, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name) : [];
     },
+    files: (p) => {
+      const full = join(root, ...p.split('/'));
+      return existsSync(full) ? readdirSync(full, { withFileTypes: true }).filter((d) => d.isFile()).map((d) => d.name) : [];
+    },
   };
 }
 

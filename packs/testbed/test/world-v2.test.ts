@@ -19,6 +19,7 @@ const files: PackFiles = {
     return existsSync(full) && statSync(full).isFile() ? readFileSync(full, 'utf8') : undefined;
   },
   folders: (p) => readdirSync(join(root, ...p.split('/')), { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name),
+  files: (p) => readdirSync(join(root, ...p.split('/')), { withFileTypes: true }).filter((d) => d.isFile()).map((d) => d.name),
 };
 const { pack, issues } = loadPack(files);
 const world = pack!.world;

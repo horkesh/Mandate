@@ -65,6 +65,7 @@ Conventions: lists use `;`; the word `unknown` (or `needs-source`) marks a value
 21. **Label hints** (anchor, spine, size class, minimum zoom) are optional per region (0043).
 22. **NFC**: every string in every pack file, keys included, must be NFC (0044).
 23. **Record-level shape checks.** A record that fails its schema is reported and set aside, and the rest are still validated; references to it are not reported again. *Rejected:* whole-file schema failure (one bad enum hid every other error in the fit test).
+24. **A file the generator does not read is an error** (review F3): any file or folder in `source/world/` or a scenario folder that is not one of its tables is reported with the nearest table name, so a misnamed optional table can no longer vanish silently.
 
 ## The four open format questions, settled
 

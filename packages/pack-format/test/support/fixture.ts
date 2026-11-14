@@ -155,14 +155,11 @@ export function fixture(): FileMap {
 }
 
 export function filesOf(map: ReadonlyMap<string, string>): PackFiles {
+  const below = (path: string) => [...map.keys()].filter((k) => k.startsWith(`${path}/`)).map((k) => k.slice(path.length + 1));
   return {
     read: (path) => map.get(path),
-    folders: (path) => {
-      const prefix = `${path}/`;
-      return [...new Set([...map.keys()].filter((k) => k.startsWith(prefix)).map((k) => k.slice(prefix.length).split('/')[0]!).filter((_, i, all) => all.length > 0))].filter(
-        (name) => [...map.keys()].some((k) => k.startsWith(`${prefix}${name}/`)),
-      );
-    },
+    folders: (path) => [...new Set(below(path).filter((rest) => rest.includes('/')).map((rest) => rest.split('/')[0]!))],
+    files: (path) => below(path).filter((rest) => !rest.includes('/')),
   };
 }
 
