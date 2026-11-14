@@ -170,4 +170,6 @@ export const SCENARIO_TABLES = {
   edgeConditions: { file: 'edge_conditions.csv', required: false, columns: [c('edge', true), c('condition', true), c('notes')] },
   obstructions: { file: 'obstructions.csv', required: false, columns: [c('edge', true), c('by'), c('sources', true), c('notes')] },
   depotConditions: { file: 'depot_conditions.csv', required: false, columns: [c('depot', true), c('condition', true), c('notes')] },
+  /** Each land region's civil government on the start date (0058): a department, or unknown with the reason in notes. */
+  governments: { file: 'governments.csv', required: true, columns: [c('region', true), c('department', true), c('sources', true), c('notes')] },
 } as const satisfies Record<string, TableSpec>;

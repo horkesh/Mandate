@@ -1,0 +1,23 @@
+region,department,sources,notes
+n_capital,n_executive,TB-DESIGN,The North is governed from Aldmoor; the First Minister's office is its civil government.
+n_heartland,n_executive,TB-DESIGN,
+n_west_hills,n_executive,TB-DESIGN,
+n_railhead,n_executive,TB-DESIGN,
+n_east_plain,n_executive,TB-DESIGN,
+n_coast,n_executive,TB-DESIGN,
+n_naval_base,n_executive,TB-DESIGN,
+n_centre_line,n_executive,TB-DESIGN,
+n_west_front,n_executive,TB-DESIGN,
+n_east_front,n_executive,TB-DESIGN,
+salient_tip,s_executive,TB-DESIGN,
+salient_base,s_executive,TB-DESIGN,
+w_valley,s_executive,TB-DESIGN,
+e_lowlands,s_executive,TB-DESIGN,
+mere_crossing,s_executive,TB-DESIGN,
+s_west_hills,s_executive,TB-DESIGN,
+s_heartland,s_executive,TB-DESIGN,
+s_capital,s_executive,TB-DESIGN,"The Southern Council governs the South directly, outside Lowmarch."
+s_west_plain,s_executive,TB-DESIGN,
+s_coast,s_executive,TB-DESIGN,
+s_coast_east,s_province,TB-DESIGN,The Province of Lowmarch: its governor sits here.
+island_fort,unknown,TB-DESIGN,"A fort with no civil government of its own: unknown, so control alone decides passage (0054, 0058)."

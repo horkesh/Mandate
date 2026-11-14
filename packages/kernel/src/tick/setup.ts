@@ -5,7 +5,9 @@
  * required: its control is copied once into State, to be written only by
  * `control` from then on (0050), and its date becomes the calendar's day 0.
  */
+import { strictCompare } from '../compare.ts';
 import { initialControl } from '../control/control.ts';
+import type { DepartmentId, RegionId } from '../ids.ts';
 import { initialHeadquarters } from '../movement/headquarters.ts';
 import { initialGoals } from '../plans/standing.ts';
 import type { State } from '../root-state.ts';
@@ -33,6 +35,8 @@ export function emptyState(): State {
     calendarStart: null,
     stateDay: 0,
     regionControl: {},
+    regionGovernments: {},
+    closedGovernments: {},
     seatAssignments: {},
     messagesInTransit: [],
     knowledgeBySeat: {},
@@ -44,6 +48,13 @@ export function emptyState(): State {
   };
 }
 
+/** Each region's government from the start, in canonical (region id) order (0058). */
+function initialGovernments(start: ScenarioStart): Record<RegionId, DepartmentId | 'unknown'> {
+  const out: Record<RegionId, DepartmentId | 'unknown'> = {};
+  for (const g of [...start.governments].sort((a, b) => strictCompare(a.region, b.region))) out[g.region] = g.department;
+  return out;
+}
+
 export function createState(world: IndexedWorld, options: SetupOptions): State {
   if (!Number.isSafeInteger(options.seed) || options.seed < 0 || options.seed > 0xffffffff) throw new RangeError('seed must be a 32-bit unsigned integer');
   if ((world.map === null) !== (options.start === undefined)) throw new RangeError('a scenario start is given exactly when the World has a map');
@@ -53,6 +64,8 @@ export function createState(world: IndexedWorld, options: SetupOptions): State {
     calendarStart: options.start?.startDate ?? null,
     stateDay: 0,
     regionControl: world.map !== null && options.start !== undefined ? initialControl(world.map, options.start) : {},
+    regionGovernments: world.map !== null && options.start !== undefined ? initialGovernments(options.start) : {},
+    closedGovernments: {},
     seatAssignments: initialSeats(world, options.drivers),
     messagesInTransit: [],
     knowledgeBySeat: {},

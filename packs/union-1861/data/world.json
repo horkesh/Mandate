@@ -1721,15 +1721,15 @@
 {"id":"peace_democrats","name":"bloc.peace_democrats"}
 ],
 "departmentKinds": [
-{"id":"executive","name":"department_kind.executive"},
-{"id":"war","name":"department_kind.war"},
-{"id":"navy","name":"department_kind.navy"},
-{"id":"treasury","name":"department_kind.treasury"},
-{"id":"diplomatic","name":"department_kind.diplomatic"},
-{"id":"justice","name":"department_kind.justice"},
-{"id":"interior","name":"department_kind.interior"},
-{"id":"post_office","name":"department_kind.post_office"},
-{"id":"state_government","name":"department_kind.state_government"}
+{"government":false,"id":"executive","name":"department_kind.executive"},
+{"government":false,"id":"war","name":"department_kind.war"},
+{"government":false,"id":"navy","name":"department_kind.navy"},
+{"government":false,"id":"treasury","name":"department_kind.treasury"},
+{"government":false,"id":"diplomatic","name":"department_kind.diplomatic"},
+{"government":false,"id":"justice","name":"department_kind.justice"},
+{"government":false,"id":"interior","name":"department_kind.interior"},
+{"government":false,"id":"post_office","name":"department_kind.post_office"},
+{"government":true,"id":"state_government","name":"department_kind.state_government"}
 ],
 "personKinds": [
 {"id":"general","name":"person_kind.general"},

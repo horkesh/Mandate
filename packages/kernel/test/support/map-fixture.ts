@@ -129,8 +129,12 @@ export function controlTable(spec: Readonly<Record<string, Readonly<Record<strin
   return out;
 }
 
-/** A scenario start carrying only control (the rest empty), for setup tests. */
-export function startWith(control: Readonly<Record<string, Readonly<Record<string, number>>>>, startDate = '1900-03-01'): ScenarioStart {
+/** A scenario start carrying only control and, optionally, governments (the rest empty), for setup tests. */
+export function startWith(
+  control: Readonly<Record<string, Readonly<Record<string, number>>>>,
+  startDate = '1900-03-01',
+  governments: Readonly<Record<string, string>> = {},
+): ScenarioStart {
   return {
     id: toId('scenario', 'fixture_start'),
     name: 'scenario.fixture_start.name',
@@ -144,6 +148,7 @@ export function startWith(control: Readonly<Record<string, Readonly<Record<strin
     depotConditions: [],
     posts: [],
     forceBlocks: [],
+    governments: Object.keys(governments).map((r) => ({ region: R(r), department: governments[r] === 'unknown' ? 'unknown' : toId('department', governments[r]!), provenance: [{ source: 'FIXTURE', at: null }] })),
   };
 }
 

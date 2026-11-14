@@ -39,6 +39,14 @@ describe('setup with a map (0050: control is copied from the start once)', () =>
     const plain = createState(indexWorld(commsFixture()), { seed: 1 });
     expect(plain.regionControl).toEqual({});
     expect(plain.calendarStart).toBeNull();
+    expect([plain.regionGovernments, plain.closedGovernments]).toEqual([{}, {}]);
+  });
+
+  it('copies each region’s government from the start, in region order, with no government closed (0058)', () => {
+    const state = createState(world, { seed: 1, start: startWith(START, '1900-03-15', { mid: 'unknown', b1: 'b_gov', a1: 'a_gov' }) });
+    expect(state.regionGovernments).toEqual({ a1: 'a_gov', b1: 'b_gov', mid: 'unknown' });
+    expect(Object.keys(state.regionGovernments)).toEqual(['a1', 'b1', 'mid']);
+    expect(state.closedGovernments).toEqual({});
   });
 });
 

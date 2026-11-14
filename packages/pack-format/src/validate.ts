@@ -156,7 +156,11 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   /** Which side a department is on: its faction. Unknown departments give undefined, already reported. */
   const allegiance = (dept: string): string | undefined => (deptFaction.has(dept) ? (deptFaction.get(dept) ?? `neutral:${dept}`) : undefined);
   const personFaction = new Map(world.people.map((p) => [p.id as string, p.faction as string | null]));
+  const deptKind = new Map(world.departments.map((d) => [d.id as string, d.kind]));
+  const governmentKinds = new Set(vocab.departmentKinds.filter((k) => k.government).map((k) => k.id));
   world.departments.forEach((d, i) => {
+    // `unknown` is the governments table's word for no known government (0058), so no department may take it as an id.
+    if (d.id === w.UNKNOWN_GOVERNMENT) err('reserved-id', W('departments', i, 'id'), `"${w.UNKNOWN_GOVERNMENT}" is reserved for a region whose government is not known`, 'another department id');
     refCheck(factions, 'faction', d.faction, W('departments', i, 'faction'));
     term('departmentKinds', d.kind, W('departments', i, 'kind'));
     useKey(d.name, W('departments', i, 'name'));
@@ -399,6 +403,30 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       const e = edgeById.get(o.edge);
       if (e && e.type !== 'river' && e.type !== 'sea') err('obstruction-on-land', S('obstructions', i, 'edge'), `only water edges are obstructed, and "${o.edge}" is ${e.type}`);
       citeCheck(o.provenance, S('obstructions', i), true, 'this obstruction');
+    });
+
+    // 0058: each land region's civil government. Jurisdiction, not control: a department whose kind the pack marks
+    // as a government, or unknown (not neutral ground). Water and off-map regions have none.
+    const governed = new Set<string>();
+    s.governments.forEach((g, i) => {
+      refCheck(regions, 'region', g.region, S('governments', i, 'region'));
+      if (governed.has(g.region)) err('duplicate-entry', S('governments', i, 'region'), `region "${g.region}" has two government rows`, 'one row per region');
+      governed.add(g.region);
+      const rk = regionKind.get(g.region);
+      if (rk !== undefined && rk !== 'land' && rk !== 'key_point') err('government-on-water', S('governments', i, 'region'), `"${g.region}" is a ${rk} region, which has no civil government`, 'rows for land regions and key points only');
+      if (g.department !== w.UNKNOWN_GOVERNMENT) {
+        refCheck(departments, 'department', g.department, S('governments', i, 'department'));
+        const dk = deptKind.get(g.department);
+        if (dk !== undefined && !governmentKinds.has(dk)) {
+          err('not-a-government', S('governments', i, 'department'), `"${g.department}" is a ${dk} department, which the pack does not mark as a government`, `a department of a government kind (${[...governmentKinds].join(', ') || 'none in this pack'}), or unknown`);
+        }
+      }
+      citeCheck(g.provenance, S('governments', i), true, 'this government');
+    });
+    world.regions.forEach((r) => {
+      if ((r.kind === 'land' || r.kind === 'key_point') && !governed.has(r.id)) {
+        err('government-missing', S('governments', s.governments.length), `region "${r.id}" has no government row`, 'a row for every land region and key point: a government department, or unknown with the reason');
+      }
     });
 
     const posts = idSet('posts', s.posts, scope);

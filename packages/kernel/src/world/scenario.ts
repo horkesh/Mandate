@@ -136,6 +136,21 @@ export interface PostStart {
   readonly provenance: Provenance;
 }
 
+/** A region whose civil government is not known: not neutral ground, so control alone decides passage (0054, 0058). */
+export const UNKNOWN_GOVERNMENT = 'unknown' as const;
+
+/**
+ * A land region's civil government on the start date (0058): jurisdiction, not control, which stays with
+ * `control` (0050). It becomes State written by `command`; situations change it through proposals (a restored
+ * state government, rival governments in one state).
+ */
+export interface GovernmentStart {
+  readonly region: RegionId;
+  /** A department whose kind the pack marks as a government, or `unknown`. */
+  readonly department: DepartmentId | typeof UNKNOWN_GOVERNMENT;
+  readonly provenance: Provenance;
+}
+
 export const FORCE_BLOCK_KINDS = ['block', 'detachment'] as const;
 export type ForceBlockKind = (typeof FORCE_BLOCK_KINDS)[number];
 
@@ -184,6 +199,8 @@ export interface ScenarioStart {
   readonly depotConditions: readonly DepotConditionStart[];
   readonly posts: readonly PostStart[];
   readonly forceBlocks: readonly ForceBlockStart[];
+  /** One row per land region and key point (0058); none for water or off-map regions. */
+  readonly governments: readonly GovernmentStart[];
 }
 
 /**
@@ -201,6 +218,7 @@ export const START_OWNERS: Readonly<Record<string, string>> = Object.freeze({
   'forceBlocks.region': 'movement',
   'forceBlocks (strength, stores, detachments, non-combatants)': 'forces',
   'forceBlocks.post': 'command',
+  governments: 'command',
   'people ranks at the start date': 'people',
   'weather (reserved: nothing at a start yet)': 'weather',
 });

@@ -103,10 +103,17 @@ export interface Term {
   readonly name: StringKey;
 }
 
+/** A department kind. `government`: a civil government that can hold a region's jurisdiction (0058), which the engine reads instead of kind names. */
+export interface DepartmentKindTerm {
+  readonly id: string;
+  readonly name: StringKey;
+  readonly government: boolean;
+}
+
 export interface Vocabularies {
   readonly terrains: readonly TerrainTerm[];
   readonly postKinds: readonly PostKindTerm[];
-  readonly departmentKinds: readonly Term[];
+  readonly departmentKinds: readonly DepartmentKindTerm[];
   readonly arms: readonly ArmTerm[];
   readonly personKinds: readonly Term[];
   readonly traits: readonly TraitTerm[];

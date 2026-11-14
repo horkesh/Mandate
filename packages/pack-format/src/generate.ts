@@ -748,6 +748,9 @@ export function generatePack(files: PackFiles): GenerateResult {
         depotConditions: keyed('depotConditions', 'depot', (r, id) => ({ depot: id, conditionPermille: r.int('condition', 1000) })),
         posts,
         forceBlocks,
+        // `unknown` here is a modelled value (no known government: not neutral ground, 0058), not the "needs a source"
+        // marker other columns use; the reason goes in the row's notes.
+        governments: keyed('governments', 'region', (r, id) => ({ region: id, department: isUnknownMarker(r.raw('department')) ? w.UNKNOWN_GOVERNMENT : r.id_('department'), provenance: cites(r) })),
       },
     });
   }
@@ -832,7 +835,7 @@ export function generatePack(files: PackFiles): GenerateResult {
   const scenarios: w.ScenarioStart[] = [];
   for (const s of rawScenarios) {
     const scope = `scenario:${s.id}`;
-    const raw = s.raw as Record<string, unknown> & Record<'control' | 'fortification' | 'edgeConditions' | 'obstructions' | 'depotConditions' | 'posts' | 'forceBlocks', unknown[]>;
+    const raw = s.raw as Record<string, unknown> & Record<'control' | 'fortification' | 'edgeConditions' | 'obstructions' | 'depotConditions' | 'posts' | 'forceBlocks' | 'governments', unknown[]>;
     const headRaw = { id: raw.id, name: raw.name, startDate: raw.startDate, seed: raw.seed, factions: raw.factions };
     const head = shapeCheck(Head, headRaw, (p) => ({ file: `${scenarioSourceDir(s.id)}/scenario.json`, at: zodPath(p) }), sink);
     if (!head) continue;
@@ -845,6 +848,7 @@ export function generatePack(files: PackFiles): GenerateResult {
       depotConditions: records(scope, 'depotConditions', SS.depotConditions.element, raw.depotConditions),
       posts: records(scope, 'posts', SS.posts.element, raw.posts),
       forceBlocks: records(scope, 'forceBlocks', SS.forceBlocks.element, raw.forceBlocks),
+      governments: records(scope, 'governments', SS.governments.element, raw.governments),
     });
   }
 

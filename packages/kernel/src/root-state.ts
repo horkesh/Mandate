@@ -19,7 +19,7 @@
  * The command log sits beside State, not in it (`log/log.ts`).
  */
 import type { RegionControlTable } from './control/control.ts';
-import type { MessageId, PostId, SeatId, SituationId } from './ids.ts';
+import type { DepartmentId, MessageId, PostId, RegionId, SeatId, SituationId } from './ids.ts';
 import type { SituationRecord } from './situations/situations.ts';
 import type { SeatKnowledge } from './knowledge/knowledge.ts';
 import type { ReportTruth } from './knowledge/truth.ts';
@@ -37,6 +37,13 @@ export interface State {
   readonly stateDay: number;
   /** Control: permille per faction per region, from the scenario start (0050); a region absent is no one's. Writer: `control`. */
   readonly regionControl: RegionControlTable;
+  /**
+   * Each land region's civil government (0058): a department, or `unknown`. Jurisdiction, not control. From the
+   * scenario start's `governments`; situations propose changes. Empty without a map. Writer: `command`.
+   */
+  readonly regionGovernments: Readonly<Record<RegionId, DepartmentId | 'unknown'>>;
+  /** Neutral governments closed to passage, with the day each closed (0055 as amended by 0058). Empty at the start. Writer: `command`. */
+  readonly closedGovernments: Readonly<Record<DepartmentId, number>>;
   /** Who drives each person. Writer: `seats`. */
   readonly seatAssignments: Readonly<Record<SeatId, SeatAssignment>>;
   /** Orders and reports on their way, in (arrival day, id) order. Writer: `messages`. */

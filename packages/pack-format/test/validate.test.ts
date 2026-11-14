@@ -178,6 +178,16 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   // Every other call site of a check (the post-review mutation run)
   { name: 'a block with a parent', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_ship,Red Ship,block,,', 'red_ship,Red Ship,block,red_1,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
   { name: 'a detachment of a detachment', files: () => withFile(`${S}/force_blocks.csv`, appendRow('red_det2,Red Picket,detachment,red_1_det,r_war,red_army,alpha,,foot,10,1900-04,,5,DESIGN,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
+  // 0058: every land region and key point has one government row: a government department, or unknown.
+  { name: 'a land region with no government row', files: () => withFile(`${S}/governments.csv`, replaceOnce('beta,r_prov,DESIGN,\n', '')), kind: 'government-missing', file: `${S}/governments.csv` },
+  { name: 'a region with two government rows', files: () => withFile(`${S}/governments.csv`, appendRow('beta,unknown,DESIGN,')), kind: 'duplicate-entry', file: `${S}/governments.csv` },
+  { name: 'a government row for a sea region', files: () => withFile(`${S}/governments.csv`, appendRow('bay,r_prov,DESIGN,')), kind: 'government-on-water', file: `${S}/governments.csv` },
+  { name: 'a government row for an off-map box', files: () => withFile(`${S}/governments.csv`, appendRow('abroad,unknown,DESIGN,')), kind: 'government-on-water', file: `${S}/governments.csv` },
+  { name: 'a ministry named as a region’s government', files: () => withFile(`${S}/governments.csv`, replaceOnce('alpha,r_prov,', 'alpha,r_war,')), kind: 'not-a-government', file: `${S}/governments.csv` },
+  { name: 'a government that is not a department', files: () => withFile(`${S}/governments.csv`, replaceOnce('alpha,r_prov,', 'alpha,nowhere,')), kind: 'unknown-reference', file: `${S}/governments.csv` },
+  { name: 'a government row citing only a pointer', files: () => withFile(`${S}/governments.csv`, replaceOnce('alpha,r_prov,DESIGN,', 'alpha,r_prov,NOTE-x,')), kind: 'pointer-only', file: `${S}/governments.csv` },
+  { name: 'a department that takes the reserved id unknown', files: () => withFile(`${W}/departments.csv`, appendRow('unknown,Nobody,red,province,DESIGN,')), kind: 'reserved-id', file: `${W}/departments.csv` },
+  { name: 'a start with no governments table', files: () => withoutFile(`${S}/governments.csv`), kind: 'missing-file', file: `${S}/governments.csv` },
   // 0058: an intelligence chief is a person, on the post's side.
   { name: 'an intelligence chief who is not a person', files: () => withChief('red_army', 'nobody'), kind: 'unknown-reference', file: `${S}/posts.csv` },
   { name: 'an intelligence chief of the other side', files: () => withChief('red_army', 'blue_chief'), kind: 'faction-mismatch', file: `${S}/posts.csv` },
