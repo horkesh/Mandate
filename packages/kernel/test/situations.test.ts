@@ -332,12 +332,21 @@ describe('situations in the log, the view and the hash', () => {
     expect(canonicalHash(run.state)).toBe(run.hashes.at(-1)!.hash);
   });
 
-  it('never shows the historical default to any seat, in a view or a request (gate B9)', () => {
-    const run = playDays(world, createState(world, { seed: 5, drivers: { a_lead: 'human' } }), scriptedSeats(), 3);
-    const views = Object.keys(run.state.seatAssignments).map((s) => JSON.stringify(viewFor(world, run.state, s as never)));
-    const requests = pendingRequests(world, run.state).map((r) => JSON.stringify(r));
-    for (const text of [...views, ...requests]) expect(text).not.toMatch(/historicalDefault|history-default|unsourced/);
-    const v = viewFor(world, run.state, lead);
+  it('never shows the historical default to any seat, in a view or a request (gate B9): worlds differing only in it look the same', () => {
+    // Standing review N1: a differential, not a search for field names. Four worlds identical but for the default.
+    const defaults: SituationDef['historicalDefault'][] = [{ options: ['hold'] }, { options: ['press'] }, { delegate: POST('a_office') }, { unsourced: 'test' }];
+    const seen = defaults.map((historicalDefault) => {
+      const w = indexWorld({ ...commsFixture(), situations: [decision('a', { historicalDefault })] });
+      const run = playDays(w, createState(w, { seed: 5, drivers: { a_lead: 'human' } }), scriptedSeats(), 4);
+      const views = Object.keys(run.state.seatAssignments).sort().map((s) => JSON.stringify(viewFor(w, run.state, s as never)));
+      return JSON.stringify([views, pendingRequests(w, run.state)]);
+    });
+    expect(new Set(seen).size).toBe(1);
+    const v = viewFor(world, playDays(world, createState(world, { seed: 5, drivers: { a_lead: 'human' } }), scriptedSeats(), 3).state, lead);
     expect(v.situations.map((s) => [s.id, s.status, s.options.map((o) => o.id)])).toEqual([[S('a'), 'open', ['hold', 'press']]]);
+    // The control: a world differing in something a seat may see (the staff recommendation) does look different.
+    const w2 = indexWorld({ ...commsFixture(), situations: [decision('a', { staffLine: { authors: [POST('a_office')], recommends: ['press'], reasons: [], confidence: 700 } })] });
+    const r2 = playDays(w2, createState(w2, { seed: 5, drivers: { a_lead: 'human' } }), scriptedSeats(), 4);
+    expect(JSON.stringify([Object.keys(r2.state.seatAssignments).sort().map((s) => JSON.stringify(viewFor(w2, r2.state, s as never))), pendingRequests(w2, r2.state)])).not.toBe(seen[0]);
   });
 });
