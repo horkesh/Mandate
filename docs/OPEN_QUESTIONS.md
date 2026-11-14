@@ -42,9 +42,10 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - Person ids use the convention surname_firstgiven_initials (`lee_robert_e`).
 - Navy data (navy note): pre-Sumter navy holders for March 1861 are not yet covered; the Western Flotilla belongs to the Army until 1 October 1862, then the Navy (a post changing department); the Strategy Board is a temporary post; squadrons are created by directive during play, not all at start.
 - Anderson's 28 February 1861 strength figure differs between his letter as printed (70,000) and Holt's covering letter (20,000): carry the figure Lincoln read once known (March facts note).
-- Source fixes: the Union dossier's Johnston seniority episode cites a 2026 blog, so replace it with Encyclopedia Virginia and the Official Records; the Confederate-side note's command-friction episodes rest on secondary pages, so pull the Official Records dispatches before pack data cites them. The status of the first fix is unclear; it may have been covered by the verification pass (PR 1).
+- Source fixes: the Union dossier's Johnston seniority episode is fixed (the verification pass, PR 1, cited OR IV,1 pp. 605–11, OR I,2 p. 985 and the Confederate Congress journal, and marked the blog superseded); the Confederate-side note's command-friction episodes rest on secondary pages, so pull the Official Records dispatches before pack data cites them.
 
 **Lanes 0.4 and 0.5 (derived indexes; forces and movement)**
+- The M2 names (RegionId and similar) are not retired: lane 0.2 kept the `ids` namespace, since retiring it touches M2's aliases; it goes when lanes 0.4 and 0.5 replace M2 (0050).
 - Every new State field needs an `OWNED_FIELDS` entry in `packages/kernel/src/ownership.ts`; owned keys must be unique across State records (lane 0.1 hand-over, `notes/lane-0.1-foundations.md`).
 - Edges and regions (navy note): river and sea edges need depth by season and an obstruction state; fort regions need a passage-versus-reduction flag; naval bases are key points; blockade-running ports are off-map boxes. A support request needs three terms: the commander's compliance, his department's consent, and physical limits (depth, season, passage).
 - Forces need a stragglers and absent field (rejoin over days); writer-table rows are needed for battle records (owner `combat`) and for fortification, which 0029 does not give a writer (combat note).
@@ -58,7 +59,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - Authors follow `SENSITIVE-HISTORY.md` over the older gate tables in the secession (6.8), union-politics and confederate-side (4.7) notes (0046).
 - Test fixtures under `packages/` use the fictional testbed register, never Civil War terms (`check:boundary` flags them).
 - 0042 parks an optional "draft the address with advisers" prologue until the March situations exist.
-- Unclear: the FIRST-MONTH document may still date the Pickens situation 4 March, where the catalogue says otherwise; a check is not done.
+- Unverified: the FIRST-MONTH document may still date the Pickens situation 4 March; the author of the March 1861 situations checks it against 0042 (situations start on 5 March).
 
 **Lane 0.8 (headless runner)**
 - Phase 0's day tick must hash each day with `canonicalHash` (lane 0.5 or 0.8); M2 hashes per turn.
@@ -69,8 +70,6 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - An `npm run check` check that every decision file is in the index and the index's amendment notes match each record's Status line (hard rule 7; my own repeat duty).
 - The pre-commit hook checks the working tree, not the staged tree, so intermediate commits beside unstaged edits are never checked alone: check the staged tree, or rely on CI per commit.
 - App-created worktrees set `core.hooksPath` to the main checkout's absolute `.githooks`, so a lane's own hook changes do not run in its worktree until merged. Low impact (CI covers); a candidate LESSONS entry; it is app-managed config.
-- Lane 0.1 finding 7: the source-scan lexer now handles regex literals (b1c4445); unclear whether any rule banning such regexes in `src` remains owed.
-- Lane 0.2 was to retire the M2 names (RegionId and similar) behind the `ids` namespace; unclear whether it did.
 
 **Phase 1**
 - Combat (combat note and model proposal): one battle per day per region; men in contact are the lesser of those engaged, capped by frontage; five battle types with base loss rates; additive typed terms; one named stream per battle-day with fixed draws; commanders decide commit, stand or pursue without dice; missing go to stragglers; rout by morale does not kill; destruction only when cut off; a four-phase template drives hour-stamped dispatches. Generals killed or wounded need their own named stream with fixed draws per day, and generated colonels need a stream keyed by report, so reading a report cannot shift later draws. Livermore's public-domain tables become a calibration fixture for a CI harness of named set-ups; the ODC-BY acw-battle-data CSV is a cross-check only. Cite Livermore, not Kirkpatrick's ambiguous abstract.
