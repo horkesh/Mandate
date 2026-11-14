@@ -300,7 +300,8 @@ export function runSituations(ctx: TickContext, start: State): State {
       const waitsOn = def.options.find((o) => o.id === record.sitWaitingOn)!.waitsOn!;
       // News the principal had before he chose to wait does not end the wait.
       if (holds(waitsOn, conditionContext(ctx, state, def, record.sitDecidedDay ?? record.sitFiredDay))) {
-        state = reopenSituation(state, def.id, ctx.day, openOptionsNow(ctx, state, def, [record.sitWaitingOn]));
+        // Every option already taken stays spent, as the live step treats it (standing review N3).
+        state = reopenSituation(state, def.id, ctx.day, openOptionsNow(ctx, state, def, record.sitChosen));
         fire(ctx, 'situations.resurfaced');
         point(ctx, def, 'situation-resurfaced');
       }

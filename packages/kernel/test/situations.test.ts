@@ -220,6 +220,17 @@ describe('deciding: the principal, a history default, several options, waiting, 
     expect(world({ event: { flag: 'x' }, knowledge: { all: [{ dayAtLeast: 2 }, { decided: S('mine'), options: null }] }, options: [option('hold', 1, { expiresWhen: { clockAtLeast: 3 } })] })).not.toThrow();
   });
 
+  it('reopens without every option already taken, not only the waiting one, and shows no spurious change the next day (standing review N3)', () => {
+    const sit = decision('both', { options: [option('hold-until', 1, { group: 'x', waitsOn: { clockAtLeast: 3 } }), option('send-word', 2, { group: 'y' }), option('other', 3, { group: 'y' })] });
+    const { world, state } = setup([sit]);
+    const run = days(world, state, 6, { 2: [{ cmd: 'decide', situation: S('both'), options: ['hold-until', 'send-word'] }] });
+    const rec = run.state.situationStates[S('both')]!;
+    expect(rec.sitStatus).toBe('open');
+    expect(rec.sitOpenOptions).toEqual(['other']);
+    // Reopened once, on the clock, and no options change after it.
+    expect(run.points).toEqual(['situation-surfaced:both', 'situation-resurfaced:both']);
+  });
+
   it('a chain stage fires only after the stage it follows was decided with a leading option', () => {
     const first = decision('first');
     const second = decision('second', { chain: { id: 'c', stage: 2, follows: { situation: S('first'), options: ['press'] } } });
