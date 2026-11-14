@@ -33,9 +33,9 @@ The pack loader refuses gate content that skips a step, and a scenario cannot sh
 Three statuses sit beside the placement, on the topic in the register:
 - **Window.** `slice` (inside 4 March 1861 to 31 December 1862) or `later` (provisional: re-ruled before authoring).
 - **record.** The topic is held until its own decision record places it (section 4); 0026 forbids authoring before placement. Draft items may live in a drafts folder the runner never loads. The register may give a held topic one **interim placement**, which can only be `text` with citations (no effects): the loader then accepts cited text-only items for it and nothing else.
-- **needs-source.** The placement depends on a fact no note sources. The loader treats the topic as `record` with no interim placement until the flag is cleared.
+- **needs-source.** The placement depends on a fact no note sources. The flag sits on what it names: **on a facet, it holds only that facet** (for example the District of Columbia within `emancipation-policy`, or direct acceptance within `black-enlistment-1861-offers`), and the topic's other facets may be authored; **on a whole topic**, the loader treats the topic as `record` with no interim placement until the flag is cleared.
 
-**The ship rule.** A scenario cannot ship (the release check, not the loader) while any topic in `record` or needs-source status has a window overlapping the scenario's dates. G1's principle ("leaving the topic out is itself a framing", 0021) applies to the whole slice: a slice that ships silent on the Dakota War or unequal pay would be framing by omission. **A scenario that starts later** (the public demo, 0039 and 0040) may omit a gated *situation* whose moment has passed, but only if the topic's derived terms and text facets are present; it may never omit the whole topic. Emancipation in a demo that starts after September 1862, for example, is present as derived terms, the state of policy and briefing text, even if the proclamation situation itself is not offered.
+**The ship rule.** A scenario cannot ship (the release check, not the loader) while any topic in `record` status, or needs-source as a whole topic, has a window overlapping the scenario's dates. A facet-level needs-source flag does not block release; the facet is simply absent until sourced. Section 4 lists the slice's ship-blockers. G1's principle ("leaving the topic out is itself a framing", 0021) applies to the whole slice: a slice that ships silent on the Dakota War or unequal pay would be framing by omission. **A scenario that starts later** (the public demo, 0039 and 0040) may omit a gated *situation* whose moment has passed, but only if the topic's derived terms and text facets are present; it may never omit the whole topic. Emancipation in a demo that starts after September 1862, for example, is present as derived terms, the state of policy and briefing text, even if the proclamation situation itself is not offered.
 
 **The interim Confederate rule** (until the playable-Confederacy record, R1). In the Union game the Confederacy is a rule seat on the same machinery (0009, 0029). Until R1:
 - a Confederate act that touches a protected population or an atrocity class is an **event**, fired by its cause, never the rule seat's choice (the Twenty-Slave Law, impressment, the policy on captured Black soldiers, the treaties with Native nations);
@@ -92,7 +92,7 @@ The mechanical questions, and the mechanical halves of the questions merged into
 | A5 | Does every historical claim cite a source in the pack's sources table? | [field] |
 | A6 | Does no claim rest solely on a source the pack's source policy bans or marks weak (Davis's *Rise and Fall* and Johnston's *Narrative* are advocacy [CS 4.6]; snippet-only citations are leads, not facts [UE])? | [field] |
 | A7 | Is there a sign-off by a reviewer who is not the item's author, recording the current versions of the questions that apply and the item's current content hash? | [hash] |
-| A8 | (Release check.) Does no topic in `record` or needs-source status have a window overlapping the scenario being shipped? | [field] |
+| A8 | (Release check.) Does no topic in `record` status, or needs-source as a whole topic, have a window overlapping the scenario being shipped? (Facet-level needs-source flags do not count.) | [field] |
 
 **B. Situations**
 
@@ -383,7 +383,7 @@ Each entry gives the window, the placement of each facet, the refused facets, th
 ### 3.6 Atrocities, guerrilla war and civilians
 
 **`civilian-deaths-1861`** (added). Window: slice.
-- *event* (Pratt Street): the Baltimore riot of 19 April 1861 is a fixed scenario-level event, and it is the cause of the situation about routing troops around Baltimore (catalogue S12), not its outcome. The dead: 9–12 civilians and 4–5 soldiers (the NPS counts 11 and 16 on different pages) [SW 6.7], [SW, gaps], shown as ranges (F4).
+- *event* (Pratt Street): the Baltimore riot fires **from its cause, not a date**: troops answering the call for militia are routed through Baltimore while the city's state (its loyalty, and Kane's police and the secessionist-leaning mayor that [SW]'s Baltimore row records) is hostile past a pack-set threshold. It is not a railroad: the one deliberate railroad is the Confederate seat opening the war (0028, 0040), and B2 applies. Historically a mob attacked Massachusetts troops on 19 April 1861, when the B&O was the only rail route north to Washington ([UE 5], snippet; [SW 6.7]). The riot is the cause of the situation about routing troops around Baltimore (catalogue S12), not its outcome. The dead: 9–12 civilians and 4–5 soldiers (the NPS counts 11 and 16 on different pages) [SW 6.7], [SW, gaps], shown as ranges (F4).
 - *event* (Camp Jackson, 10 May 1861): at least 28 civilians killed [SW 6.7], an event from the conduct of the commander's troops (Lyon's seat), not a draw from a stream (0007: people's conduct is not dice) and not a player option. The president's decision in catalogue S14 concerns the arsenal and the commander; the killings follow from the commander's seat, under the sign rule.
 - *refused*: an option to fire on a crowd; any benefit to the acting side from the deaths (E7).
 - Change from [SW 6.8] (narrated only): both become events, because each changes state: troops went by Annapolis instead of through Baltimore [SW, situation S7], and the note's own border table proposes a swing of Missouri's moderates after Camp Jackson [SW, border-state proposals, interpretation].
@@ -409,7 +409,7 @@ Each entry gives the window, the placement of each facet, the refused facets, th
 - The Sand Creek massacre itself is not in the notes: needs-source, and it falls under R3. Retaliation falls under R4.
 - Risks: atrocity, agency.
 
-**`prisoners-and-exchange`** (added). Window: mostly later. 0021 puts prison camps in the gate; the notes cover only the 1863 exchange talks and Lee's 1864 offer [CS 4.4]. The 1862 exchange arrangements are not in any note.
+**`prisoners-and-exchange`** (added). Window: `later` until research places any 1861–62 facet. 0021 puts prison camps in the gate; the notes cover only the 1863 exchange talks and Lee's 1864 offer [CS 4.4]. The 1862 exchange arrangements are not in any note.
 - Status: `record` (R4) and needs-source.
 - Risks: atrocity, agency.
 
@@ -450,7 +450,15 @@ Each entry gives the window, the placement of each facet, the refused facets, th
 
 ## 4. Records needed
 
-The lead writes these; each states the question the record must answer and this lane's recommendation. R3 and R2 block the slice's release under the ship rule; the others block only the topics they hold.
+The lead writes these; each states the question the record must answer and this lane's recommendation.
+
+**The slice's ship-blockers** (A8): the 1861–62 slice cannot ship until each of these is cleared.
+- **R2**, which holds `black-soldiers-pay`.
+- **R3**, which holds `dakota-war-1862` (and the Native-nation questions of `indian-territory-1861`, whose agency facets may be authored meanwhile).
+- **`union-freedpeople-camps`**, needs-source as a whole topic.
+- **`confederate-habeas`**, needs-source as a whole topic (its only facet is the decision, which waits for the suspensions' dates and terms).
+
+`prisoners-and-exchange` (R4) is placed in the `later` window; if research finds 1861–62 facets, they join this list. The other records block only the topics they hold, and facet-level needs-source flags block nothing.
 
 | # | Record | Question it must answer | Recommendation |
 |---|---|---|---|
@@ -519,7 +527,7 @@ Loader rules: refuse gated items without a valid review outside a drafts folder;
 | gate-text | F1, F7: authors and routes; voice requests tagged with passing fallbacks. |
 | gate-setup (run) | G2, G4, G5: premise items immutable; presentation options leave a seeded run's state hash unchanged; omitted situations keep their topics' derived and text facets. |
 | gate-verdict | H1, H2, H3, H5: required clauses present per outcome class; typed terms in every verdict; no virtue, morality or karma field in the schema. |
-| gate-release | A8: no held topic overlaps a shipping scenario's window. |
+| gate-release | A8: no topic in `record` status, or needs-source as a whole topic, overlaps a shipping scenario's window. |
 
 ## 6. Changes from the brief's proposals and the notes' tables
 
@@ -537,7 +545,7 @@ Gate placements in research notes are inputs; authors follow section 3 wherever 
 | Confederate habeas and civil liberties | [CS 4.7]: narrated with locked consequences | A decision of the Confederate rule seat under the interim rule; needs-source | Coercive policy, not an atrocity or an act on a protected population; 0009 |
 | Interim Confederate rule | (none; the first version made every Confederate act on a gate topic an event, contradicting its own habeas entry) | Stated once in section 1 and recorded in R1 | Consistency, and it narrows 0009 for a non-playable seat |
 | Black enlistment, 1861 | [SW 6.8]: no player recruit before the 1862 law, which it attributes to 0026 (0026 does not say it); the first version allowed `accept` | Acceptance only through `ask-congress` (S13); a direct lawful acceptance is needs-source | The legal basis rests on one line [SW 6.4]; Congress routing slows hindsight play |
-| Pratt Street and Camp Jackson | [SW 6.8]: narrated only; the first version made both outcomes drawn from a stream | Pratt Street a fixed scenario event and the cause of S12; Camp Jackson an event from the commander's seat; ranges 9–12 civilians | Each changed state; 0007 rules out dice for people's conduct |
+| Pratt Street and Camp Jackson | [SW 6.8]: narrated only; the first version made both outcomes drawn from a stream | Pratt Street an event fired from its cause (troops routed through a hostile Baltimore), not a date, and the cause of S12; Camp Jackson an event from the commander's seat; ranges 9–12 civilians | Each changed state; 0007 rules out dice for people's conduct |
 | Commanders' conduct | (none; the first version's D5 missed benefits that flow through derived terms) | The sign rule and its test; appointment is not exempt (R6) | Otherwise appointing a harsh man is the lever |
 | Unequal pay | Brief: "0026 says it needs its own record" | Needs its own record (R2), but the recommendation is the economy note's, not 0026's | Attribution checked against 0026 |
 | Impressed labour | Brief: no verb, no labour stat | Agreed; census population allowed only as protected input to derived terms | A precise line for the test |
