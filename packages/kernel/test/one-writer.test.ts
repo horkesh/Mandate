@@ -185,6 +185,86 @@ describe('the scanner catches violations (positive control)', () => {
     ]);
   });
 
+  it('catches writes through a cast and delete through a cast, and their siblings (review of lane 0.4)', () => {
+    const writes: SourceFile = {
+      path: 'packages/kernel/src/supply.ts',
+      code: [
+        // The reviewer's two probes.
+        "(s.controller as Record<string, unknown>)['x'] = {};",
+        'delete (s as any).controller;',
+        // Siblings: casts, a comma expression, a conditional, `??`, an angle assertion, a group after a control head.
+        '(s.controller as T[]).push(f);',
+        '(0, s.controller).push(f);',
+        '(cond ? s.controller : t).push(f);',
+        '(s.controller ?? []).push(f);',
+        '(<T[]>s.controller).push(f);',
+        'if (c) (s.controller as T[]).push(f);',
+        '(s.controller) = f;',
+        '(s.controller as T).length = 0;',
+        "delete (s.controller as any)['x'];",
+        '++(s.controller as any).n;',
+        // Siblings: optional chaining, bracket forms, a prefix write through a receiver cast.
+        's.controller?.push(f);',
+        's?.controller.push(f);',
+        "delete s['controller'];",
+        "s['controller']++;",
+        "++s['controller'];",
+        '++(s as any).controller;',
+        // Siblings: a borrowed mutator and reflective writes with the key as the target.
+        'Array.prototype.push.call(s.controller, f);',
+        '[].splice.apply(s.controller, [0, 1]);',
+        "Object.assign(s.controller, { a: 1 });",
+        "Reflect.set(s.controller, 'a', 1);",
+      ].join('\n'),
+    };
+    const found = writeViolations([writes], owned, []).map((v) => `${v.line} ${v.form}`);
+    expect(found).toEqual([
+      '1 write through a parenthesised target',
+      '2 delete',
+      '3 write through a parenthesised target',
+      '4 write through a parenthesised target',
+      '5 write through a parenthesised target',
+      '6 write through a parenthesised target',
+      '7 write through a parenthesised target',
+      '8 write through a parenthesised target',
+      '9 write through a parenthesised target',
+      '10 write through a parenthesised target',
+      '11 delete',
+      '11 write through a parenthesised target',
+      '12 increment',
+      '12 write through a parenthesised target',
+      '13 mutating call',
+      '14 mutating call',
+      '15 bracket delete',
+      '16 bracket increment',
+      '17 bracket increment',
+      '18 increment',
+      '19 borrowed mutator',
+      '20 borrowed mutator',
+      '21 reflective write',
+      '22 reflective write',
+    ]);
+  });
+
+  it('does not flag reads, or the key passed as a source rather than a target (negative controls)', () => {
+    const reads: SourceFile = {
+      path: 'packages/kernel/src/supply.ts',
+      code: [
+        'Object.assign(other, s.controller);',
+        'Array.prototype.push.call(other, s.controller);',
+        'const n = (s.controller as T[]).length;',
+        'const m = (s.controller as T[]).map((x) => x);',
+        'if (s.controller) y = 1;',
+        'foo(s.controller, f);',
+        'foo(s.controller as T).bar = 1;',
+        'const k = (s.controller as T) === f;',
+        'while (n--) keep(s.controller);',
+        'for (let i = 0; i < n; i--) other = s.controller;',
+      ].join('\n'),
+    };
+    expect(writeViolations([reads], owned, []).map((v) => `${v.line} ${v.form}`)).toEqual([]);
+  });
+
   it('treats a record named exactly State, and every record reachable from it, as State (reviewer probes)', () => {
     const root: SourceFile = {
       path: 'packages/kernel/src/state.ts',
