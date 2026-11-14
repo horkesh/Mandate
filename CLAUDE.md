@@ -38,6 +38,7 @@ npm test                 # vitest
 npm run typecheck
 npm run check:boundary
 npm run check:licences  # dependency-licence check over every lockfile
+npm run check:decisions  # every decision record has an index row, and the index's amendment notes match each record's Status
 npm run demo             # headless demo: three proxies receive the same directive
 npm run run:testbed      # M1: a scripted 20-turn headless game on the fictional testbed pack
 npm run run:headless       # Phase 0 headless runner on the new kernel
@@ -47,7 +48,7 @@ npm run play -- union-1861       # M2: play Lincoln in the text console (default
 npm run run:pack -- union-1861 75  # watch the generic scripted leader play a pack
 ```
 
-Hooks: `git config core.hooksPath .githooks`.
+Hooks: `git config core.hooksPath .githooks`. The pre-commit hook checks exactly the staged tree, in a private snapshot when the working tree differs from the index.
 
 ## Working style
 
