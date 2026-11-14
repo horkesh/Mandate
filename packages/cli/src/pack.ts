@@ -108,9 +108,9 @@ function releaseCheck(packId: string): number {
     console.error(`packs/${packId}: fix the pack's errors (and give it a gate/ folder) before a release check`);
     return 1;
   }
-  const problems = releaseProblems(readSituations(files, new IssueSink()), pack.gate);
+  const problems = releaseProblems(readSituations(files, new IssueSink()), pack.gate, pack.manifest.scenarios);
   for (const p of problems) console.log(`ship-blocker: ${p}`);
-  console.log(problems.length === 0 ? `packs/${packId}: no ship-blockers for ${pack.gate.release.scenarios.map((s) => s.scenario).join(', ') || 'no listed scenario'}.` : `packs/${packId}: ${problems.length} ship-blockers.`);
+  console.log(problems.length === 0 ? `packs/${packId}: no ship-blockers for ${pack.manifest.scenarios.join(', ')}.` : `packs/${packId}: ${problems.length} ship-blockers.`);
   return problems.length === 0 ? 0 : 1;
 }
 

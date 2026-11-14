@@ -96,7 +96,8 @@ export interface GateData {
   readonly anachronisms: z.output<typeof AnachronismsSchema>;
   readonly sourcePolicy: z.output<typeof SourcePolicySchema>;
   readonly checklist: z.output<typeof ChecklistSchema>;
-  readonly release: z.output<typeof ReleaseSchema>;
+  /** Null when `gate/release.json` is missing, which the release check refuses (review S7). */
+  readonly release: z.output<typeof ReleaseSchema> | null;
 }
 
 /** Read `gate/`. The first five files are required once a pack has situations; the rest default to empty. */
@@ -108,7 +109,7 @@ export function readGate(files: PackFiles, sink: IssueSink): GateData | null {
   const checklist = readJson(files, gateFile('checklist.json'), ChecklistSchema, sink);
   const anachronisms = readJson(files, gateFile('anachronisms.json'), AnachronismsSchema, sink, false) ?? { terms: [] };
   const sourcePolicy = readJson(files, gateFile('source-policy.json'), SourcePolicySchema, sink, false) ?? { banned: [], weak: [] };
-  const release = readJson(files, gateFile('release.json'), ReleaseSchema, sink, false) ?? { scenarios: [] };
+  const release = readJson(files, gateFile('release.json'), ReleaseSchema, sink, false);
   if (!register || !classes || !triggers || !forbidden || !checklist) return null;
   return { register, classes, triggers, forbidden, anachronisms, sourcePolicy, checklist, release };
 }
@@ -431,9 +432,13 @@ function decidedWith(c: phase0.Condition, situation: string, option: string): bo
  * no held topic's window may overlap a scenario the release ships, and no
  * sign-off may be a fixture's (a testbed's placeholder, never a reviewer's).
  */
-export function releaseProblems(items: readonly { readonly file: string; readonly def: SituationDef }[], gate: GateData): string[] {
+export function releaseProblems(items: readonly { readonly file: string; readonly def: SituationDef }[], gate: GateData, shipped: readonly string[]): string[] {
   const problems: string[] = [];
-  for (const s of gate.release.scenarios) {
+  // Review S7: no release.json, or a shipped scenario without a window, is not a pass.
+  if (gate.release === null) problems.push('gate/release.json is missing: list every scenario the pack ships, with its window');
+  const windows = gate.release?.scenarios ?? [];
+  for (const id of shipped) if (!windows.some((w) => w.scenario === id)) problems.push(`scenario ${id} ships but has no window in gate/release.json`);
+  for (const s of windows) {
     for (const t of gate.register.topics) {
       if (!(t.status === 'record' || t.needsSource)) continue;
       const overlaps = t.window.from <= s.to && (t.window.to === null || t.window.to >= s.from);

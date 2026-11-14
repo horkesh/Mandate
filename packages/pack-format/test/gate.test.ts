@@ -297,7 +297,8 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     const files = testbedFiles();
     const gate = readGate(files, new IssueSink())!;
     const items = readSituations(files, new IssueSink());
-    expect(releaseProblems(items, gate)).toEqual([
+    const shipped = ['opening', 'summer_front'];
+    expect(releaseProblems(items, gate, shipped)).toEqual([
       'scenario opening (1861-04-01 to 1862-12-31) overlaps held topic old-oath (awaiting its record, 1861-03-04 to 1861-12-31)',
       'situations/fen_arrivals.json: signed off by a fixture (fixture-signoff), not a gate reviewer',
       'situations/fen_crossing.json: signed off by a fixture (fixture-signoff), not a gate reviewer',
@@ -305,9 +306,15 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
       'situations/sanctuary_act.json: signed off by a fixture (fixture-signoff), not a gate reviewer',
     ]);
     // Shipping only the later scenario, with real reviewers' sign-offs, passes.
-    const later = { ...gate, release: { scenarios: [gate.release.scenarios[1]!] } };
+    const later = { ...gate, release: { scenarios: [gate.release!.scenarios[1]!] } };
     const signed = items.map((x) => ({ ...x, def: { ...x.def, gateReview: x.def.gateReview === null ? null : { ...x.def.gateReview, reviewer: 'gate-reviewer' } } }));
-    expect(releaseProblems(signed, later)).toEqual([]);
+    expect(releaseProblems(signed, later, ['summer_front'])).toEqual([]);
+    // Review S7: a missing release.json, or a shipped scenario with no window, blocks the release.
+    expect(releaseProblems(signed, { ...later, release: null }, ['summer_front'])).toEqual([
+      'gate/release.json is missing: list every scenario the pack ships, with its window',
+      'scenario summer_front ships but has no window in gate/release.json',
+    ]);
+    expect(releaseProblems(signed, later, ['opening', 'summer_front'])).toEqual(['scenario opening ships but has no window in gate/release.json']);
   });
 
   it('H5: the situation schema has no virtue, morality or karma field to grade the player with', () => {
