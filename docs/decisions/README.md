@@ -17,3 +17,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0011](0011-single-player-faction-scoped-knowledge.md) | Single-player, with knowledge scoped per faction | accepted |
 | [0012](0012-port-ideas-not-code.md) | Port ideas from AWWV, not code | accepted |
 | [0013](0013-the-staff-map.md) | The map is the staff's map: hand-drawn, procedural, drawn from claims | accepted |
+| [0014](0014-licence.md) | Source-available under the PolyForm Noncommercial licence | accepted |

@@ -22,3 +22,7 @@ npm run demo
 ```
 
 Node 22 LTS.
+
+## Licence
+
+Source-available under the [PolyForm Noncommercial License 1.0.0](LICENSE.md): you may read, study, modify and share Mandate for noncommercial purposes, such as personal study, hobby projects, mods and research. Commercial use needs a separate licence from the owner. See [decision 0014](docs/decisions/0014-licence.md).

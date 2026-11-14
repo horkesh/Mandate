@@ -64,7 +64,7 @@ Every lane gets a written brief containing:
 
 | AWWV practice | Why not now | Trigger to adopt |
 |---|---|---|
-| Cloud lanes reporting on draft PRs, Linux CI | Mandate has no GitHub remote | When the owner creates a repository |
+| Cloud lanes reporting on draft PRs, Linux CI | The repository is public on GitHub since 2026-11-14 (`horkesh/Mandate`); CI comes in Phase 0, and cloud lanes need a cloud environment | When CI is green on GitHub and a cloud environment exists |
 | Standing integration-steward lane | The lead can keep docs in sync at this size | More than four lanes at once |
 | Four separate review seats | One reviewer with four lenses is enough at this size | A merge the reviewer can't settle alone |
 | Per-PR ledger fragments | Git history is the ledger here | Never, unless commit messages stop being enough |
