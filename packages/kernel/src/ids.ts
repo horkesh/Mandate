@@ -24,6 +24,7 @@ export const ID_KINDS = [
   'faction',
   'forceBlock',
   'installation',
+  'message',
   'person',
   'post',
   'railLine',
@@ -48,6 +49,8 @@ export type EdgeId = Id<'edge'>;
 export type FactionId = Id<'faction'>;
 export type ForceBlockId = Id<'forceBlock'>;
 export type InstallationId = Id<'installation'>;
+/** A message in transit, and the report it carries once delivered (content-keyed: see `messages/transit.ts`). */
+export type MessageId = Id<'message'>;
 export type PersonId = Id<'person'>;
 export type PostId = Id<'post'>;
 export type RailLineId = Id<'railLine'>;

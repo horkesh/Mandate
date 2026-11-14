@@ -6,7 +6,8 @@
   "description": "Headless runners for Mandate packs. Reads pack files; the kernel itself does no I/O.",
   "dependencies": {
     "@mandate/kernel": "*",
-    "@mandate/pack-format": "*"
+    "@mandate/pack-format": "*",
+    "@mandate/rule-seats": "*"
   },
   "mandate": {
     "deterministic": false,

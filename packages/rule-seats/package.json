@@ -1,0 +1,16 @@
+{
+  "name": "@mandate/rule-seats",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Rule seats: the rules model that decides for any person, offline and free (decision 0015). Their answers enter the command log, so they are checked like the kernel.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@mandate/kernel": "*"
+  },
+  "mandate": {
+    "deterministic": true,
+    "playerFacing": true
+  }
+}

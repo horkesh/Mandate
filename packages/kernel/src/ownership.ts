@@ -56,7 +56,7 @@ export const KERNEL_MODULES: readonly KernelModule[] = [
   { name: 'planner', layer: 'pure', owns: 'candidate plans for a goal, on request' },
   { name: 'infrastructure', layer: 'State', owns: 'edge condition (damage and repair), water obstructions, depot condition' },
   { name: 'weather', layer: 'State', owns: "today's weather per zone, drawn from a named seeded stream (0029)" },
-  { name: 'tick', layer: 'infrastructure', owns: 'the fixed day order and the decision-point signal' },
+  { name: 'tick', layer: 'writer', owns: 'the fixed day order and the decision-point signal; the only writer of the day counter' },
   { name: 'log', layer: 'infrastructure', owns: 'command log, snapshots, replay' },
   { name: 'serialize', layer: 'infrastructure', owns: 'canonical JSON, state hash, versioned saves' },
   { name: 'invariants', layer: 'infrastructure', owns: 'post-tick assertions with typed failures' },
@@ -79,7 +79,8 @@ export interface OwnedField {
   readonly code: readonly FieldLocation[];
 }
 
-const field = (f: string, writer: string, proposedBy: readonly string[]): OwnedField => ({ field: f, writer, proposedBy, code: [] });
+const field = (f: string, writer: string, proposedBy: readonly string[], code: readonly FieldLocation[] = []): OwnedField => ({ field: f, writer, proposedBy, code });
+const at = (record: string, key: string): FieldLocation => ({ record, key });
 
 export const OWNED_FIELDS: readonly OwnedField[] = [
   field('region control', 'control', ['combat', 'occupation']),
@@ -100,16 +101,17 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field("a person's ladder rung and rivals", 'ladder', ['weekly people step']),
   field('responses to orders (declared and actual rungs, reasons)', 'proxy', ['message arrival']),
   field('audience state', 'audience', ['the audience verb']),
-  field('goals, plans, approvals, edits', 'plans', ['verbs', 'seat selections']),
+  // Lane 0.6 builds only the stand-in standing goals (hold, or advance to a region).
+  field('goals, plans, approvals, edits', 'plans', ['verbs', 'seat selections', 'order arrival'], [at('State', 'standingGoals')]),
   field('operations and their lifecycles', 'operations', ['plan approval', 'movement and combat outcomes']),
-  field('knowledge (reports per seat)', 'knowledge', ['message delivery', 'pruning']),
-  field('messages in transit', 'messages', ['commands', 'reports', 'relay links forwarding an order', "the kernel's latency rules"]),
+  field('knowledge (reports per seat)', 'knowledge', ['message delivery', 'pruning'], [at('State', 'knowledgeBySeat'), at('State', 'reportTruth')]),
+  field('messages in transit', 'messages', ['commands', 'reports', 'relay links forwarding an order', "the kernel's latency rules"], [at('State', 'messagesInTransit')]),
   field('economy stocks', 'economy', ['weekly step', 'verbs']),
   field('situations fired, live (open options, clocks) and decided', 'situations', ['cause evaluation', 'decisions', "delegated seats' choices"]),
   field('blocs, mandate, election results', 'politics', ['weekly step', 'battles', 'the press', 'checkpoints']),
   field("each chamber of Congress's state (sitting, adjourned, special session called)", 'politics', ['situations', 'the weekly step']),
   field('the framing term (who the public believes began the war)', 'politics', ["the war's opening situations", 'the press']),
-  field('seat assignments', 'seats', ['setup', "the player's settings"]),
+  field('seat assignments', 'seats', ['setup', "the player's settings"], [at('State', 'seatAssignments')]),
   // Reserved by world format v2 (lane 0.2): State that starts from a scenario
   // start or a World rule, with its owner named before the mechanic is built.
   field('water edge obstructions (works or batteries in hostile hands; cleared)', 'infrastructure', ['combat', 'operations (a siege, a clearing)', 'situations']),
@@ -120,13 +122,94 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   // Guerrilla pressure (0029) is not here on purpose: the gate register
   // (SENSITIVE-HISTORY section 3.6, accepted by 0046) places it as derived,
   // computed with typed reasons and never stored, and no option may target it.
+  // Lane 0.6: the day counter, and a stand-in that lane 0.5's forces and movement replace.
+  field('the current day', 'tick', ['the day tick'], [at('State', 'stateDay')]),
+  field("a post's headquarters region (stand-in until force blocks)", 'movement', ['standing-goal steps (stand-in operations)'], [at('State', 'headquarters')]),
 ];
 
 /**
  * Keys a State record may carry that are set once, when the record is
  * created, and never written after: any assignment to them anywhere fails.
  */
-export const IMMUTABLE_STATE_KEYS: readonly string[] = ['id'];
+export const IMMUTABLE_STATE_KEYS: readonly string[] = [
+  'id',
+  // Lane 0.6. State is copy-on-write: below the root, records are immutable values,
+  // replaced whole by the writer of the root field that holds them.
+  'gameSeed',
+  // SeatAssignment
+  'seatPerson',
+  'seatDriver',
+  // TransitMessage, Hop, OrderBody
+  'msgOrigin',
+  'msgFrom',
+  'msgTo',
+  'msgToPost',
+  'msgRole',
+  'msgRoute',
+  'msgSentDay',
+  'msgArriveDay',
+  'msgVia',
+  'msgPending',
+  'msgOrder',
+  'msgReport',
+  'msgTruth',
+  'hopPerson',
+  'hopPost',
+  'hopRole',
+  'orderIssuer',
+  'orderTarget',
+  'orderGoal',
+  'orderBypass',
+  'orderIssuedDay',
+  // GoalSpec, StandingGoal
+  'goalSpecKind',
+  'goalSpecRegion',
+  'standingSpec',
+  'standingIssuer',
+  'standingViaChain',
+  'standingSetDay',
+  'standingOrder',
+  // ReportBody, ReportClaim, AdviceBody, StatedReason
+  'reportType',
+  'reportSubtype',
+  'reportAuthor',
+  'reportAuthorPost',
+  'reportSubjectKind',
+  'reportSubjectId',
+  'reportClaims',
+  'reportDay',
+  'reportHour',
+  'reportAdvice',
+  'reportAnswers',
+  'claimKind',
+  'claimRegion',
+  'claimValue',
+  'claimToken',
+  'claimConfidence',
+  'adviceRecommends',
+  'adviceReasons',
+  'adviceConfidence',
+  'reasonKind',
+  'reasonWeight',
+  // ReportTruth, BiasTerm
+  'truthTerms',
+  'truthTrimmed',
+  'termKind',
+  'termPerson',
+  'termPost',
+  'termRegion',
+  'termValue',
+  'termRule',
+  // SeatKnowledge, KnownReport
+  'knownReports',
+  'knownReceivedDay',
+  'knownRoute',
+  'knownVia',
+  'knownBody',
+  // Headquarters (stand-in)
+  'hqRegion',
+  'hqSinceDay',
+];
 
 /**
  * State records the classification check skips, because the M2 kernel that
@@ -136,3 +219,11 @@ export const IMMUTABLE_STATE_KEYS: readonly string[] = ['id'];
 export const LEGACY_STATE_RECORDS: readonly { readonly file: string; readonly record: string; readonly reason: string }[] = [
   { file: 'packages/kernel/src/state.ts', record: 'GameState', reason: 'M2 state; replaced by the new State in Phase 0' },
 ];
+
+/**
+ * Lane 0.6 (review F6). State is copy-on-write, so building a new object
+ * literal that carries an owned key is a write too: only the key's writer may
+ * do it. These modules are the named exceptions, the constructors that build a
+ * whole new State at setup, and nothing else.
+ */
+export const STATE_CONSTRUCTORS: readonly string[] = ['tick/setup'];
