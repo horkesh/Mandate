@@ -1,6 +1,6 @@
 # 0040: Revisions from the first-month walkthrough
 
-Status: accepted (2026-11-14). From `docs/design/FIRST-MONTH.md`, a paper play-through of 4 March to 11 April 1861 against the design (11 stops, 16 decisions, 12 of 36 attention, about 41 minutes). Its verdict: fun as a political thriller, and cheap to operate once these gaps are fixed. The lead accepted its fixes; the owner can overturn any of them. Amends 0016, 0020, 0023, 0025, 0026, 0027, 0028, 0032, 0033 and 0039; supersedes 0028's "who is seen to fire first" lever. Amended by 0041 (clarifications).
+Status: accepted (2026-11-14). From `docs/design/FIRST-MONTH.md`, a paper play-through of 4 March to 11 April 1861 against the design (11 stops, 16 decisions, 12 of 36 attention, about 41 minutes). Its verdict: fun as a political thriller, and cheap to operate once these gaps are fixed. The lead accepted its fixes; the owner can overturn any of them. Amends 0016, 0020, 0023, 0025, 0026, 0027, 0028, 0032, 0033 and 0039; supersedes 0028's "who is seen to fire first" lever. Amended by 0041 (clarifications) and 0046 (two triggers, waiting options, chains, staff-line authors, decision and notice kinds).
 
 ## Decision
 
