@@ -4,9 +4,12 @@
  * MPL-2.0 (file-level copyleft) is allowed only for development tools, which
  * never ship in the game.
  *
- * Reads `package-lock.json` (lockfile v3 records each package's licence), so
- * it covers platform packages that are not installed on this machine too.
+ * Reads every `package-lock.json` in the repository (lockfile v3 records each
+ * package's licence), so it covers self-contained prototypes outside the npm
+ * workspaces, and platform packages not installed on this machine.
  */
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 /** Permissive licences, allowed for any dependency. SPDX ids. */
 export const ALLOWED: readonly string[] = [
@@ -80,6 +83,44 @@ export function licenceAllowed(expression: string, dev: boolean): boolean {
   } catch {
     return false;
   }
+}
+
+/**
+ * Every `package-lock.json` under `root`, repo-relative with forward slashes,
+ * sorted: the workspace's own and each self-contained prototype's. Skips
+ * `node_modules`, `runs` and dot-folders (`.git`, and `.claude`, which holds
+ * other sessions' worktrees).
+ */
+export function findLockfiles(root: string, dir = ''): string[] {
+  const out: string[] = [];
+  for (const entry of readdirSync(join(root, dir), { withFileTypes: true })) {
+    const rel = dir ? `${dir}/${entry.name}` : entry.name;
+    if (entry.isDirectory()) {
+      if (entry.name === 'node_modules' || entry.name === 'runs' || entry.name.startsWith('.')) continue;
+      out.push(...findLockfiles(root, rel));
+    } else if (entry.name === 'package-lock.json') {
+      out.push(rel);
+    }
+  }
+  return out.sort();
+}
+
+export interface LockfileReport {
+  readonly file: string;
+  readonly checked: number;
+  readonly problems: readonly LicenceProblem[];
+  /** Set when the file is not a usable lockfile v3. */
+  readonly unreadable?: string;
+}
+
+/** Check every lockfile under `root`. */
+export function checkLockfiles(root: string): LockfileReport[] {
+  return findLockfiles(root).map((file) => {
+    const lock = JSON.parse(readFileSync(join(root, file), 'utf8')) as { lockfileVersion?: number; packages?: Record<string, LockEntry> };
+    if (lock.lockfileVersion !== 3 || !lock.packages) return { file, checked: 0, problems: [], unreadable: 'not lockfile v3' };
+    const checked = Object.entries(lock.packages).filter(([path, e]) => path.includes('node_modules/') && !e.link).length;
+    return { file, checked, problems: licenceProblems(lock.packages) };
+  });
 }
 
 /** Problems across a lockfile's `packages` map. Workspace links (our own packages) are skipped. */
