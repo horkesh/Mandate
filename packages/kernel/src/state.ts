@@ -160,6 +160,10 @@ export interface Directive {
   readonly insisted: boolean;
   /** Set when this directive is the principal accepting the holder's own counter-proposal. */
   readonly counterOf: DirectiveId | null;
+  /** A value the principal framed the order in, during an audience (P3). */
+  readonly framing: ValueId | null;
+  /** Reinforcements the principal promised in an audience; the holder counts on them as far as he believes promises. */
+  readonly promisedForce: number;
   status: 'in_transit' | 'awaiting_answer' | 'executing' | 'done' | 'refused' | 'superseded';
   response: ResponseRecord | null;
 }
@@ -258,6 +262,8 @@ export interface Verdict {
 export interface ObjectiveValues {
   readonly honours: readonly ValueId[];
   readonly offends: readonly ValueId[];
+  /** Values the principal may plausibly frame this kind of order in, in an audience. */
+  readonly frames?: readonly ValueId[];
 }
 
 export interface GameState {

@@ -1,19 +1,12 @@
+import { commitAudience, type Counter } from './audience.ts';
 import { sortedKeys } from './compare.ts';
 import { clampRegard, postOf, promiseCredibility } from './derive.ts';
-import { log, send } from './messages.ts';
+import { log } from './messages.ts';
+import { addGrievance, direct, keepPromise } from './orders.ts';
 import type { PersonId } from './people.ts';
 import { clamp, clampPermille, scale, type Permille } from './permille.ts';
 import type { KernelRules } from './rules.ts';
-import {
-  newId,
-  type BlocId,
-  type DirectiveId,
-  type FactionId,
-  type GameState,
-  type GrievanceKind,
-  type Objective,
-  type PostId,
-} from './state.ts';
+import type { BlocId, DirectiveId, FactionId, GameState, Objective, PostId } from './state.ts';
 
 /**
  * The leader's verbs (decision 0001). Every verb targets a person, post, bloc
@@ -22,6 +15,7 @@ import {
  */
 export type Decision =
   | { readonly verb: 'direct'; readonly postId: PostId; readonly objective: Objective; readonly boldness: Permille }
+  | { readonly verb: 'audience'; readonly postId: PostId; readonly objective: Objective; readonly boldness: Permille; readonly counters: readonly Counter[] }
   | { readonly verb: 'appoint'; readonly postId: PostId; readonly personId: PersonId }
   | { readonly verb: 'dismiss'; readonly personId: PersonId }
   | { readonly verb: 'allocate'; readonly fromPostId: PostId; readonly toPostId: PostId; readonly amount: number }
@@ -68,12 +62,14 @@ export function applyDecisions(
 function apply(state: GameState, factionId: FactionId, d: Decision, rules: KernelRules): string | null {
   switch (d.verb) {
     case 'direct':
-      return direct(state, factionId, d.postId, d.objective, d.boldness, false);
+      return direct(state, factionId, d.postId, d.objective, d.boldness);
+    case 'audience':
+      return commitAudience(state, factionId, { postId: d.postId, objective: d.objective, boldness: d.boldness, counters: d.counters }, rules);
     case 'allocate': {
       const to = state.posts[d.toPostId];
       if (!to || to.factionId !== factionId) return `unknown post ${d.toPostId}`;
       if (!Number.isSafeInteger(d.amount) || d.amount <= 0) return 'amount must be a positive integer';
-      return direct(state, factionId, d.fromPostId, { kind: 'transfer', toPostId: d.toPostId, amount: d.amount }, 300, false);
+      return direct(state, factionId, d.fromPostId, { kind: 'transfer', toPostId: d.toPostId, amount: d.amount }, 300);
     }
     case 'appoint':
       return appoint(state, factionId, d.postId, d.personId, rules);
@@ -131,37 +127,6 @@ function apply(state: GameState, factionId: FactionId, d: Decision, rules: Kerne
   }
 }
 
-/** Issue a directive: it travels to the post and is read by whoever holds it on arrival. */
-export function direct(
-  state: GameState,
-  factionId: FactionId,
-  postId: PostId,
-  objective: Objective,
-  boldness: Permille,
-  insisted: boolean,
-  counterOf: DirectiveId | null = null,
-): string | null {
-  const post = state.posts[postId];
-  if (!post || post.factionId !== factionId) return `unknown post ${postId}`;
-  if (!Number.isSafeInteger(boldness) || boldness < 0 || boldness > 1000) return 'boldness must be an integer permille';
-  if (objective.kind === 'attack') {
-    const region = state.regions[post.regionId]!;
-    if (!region.neighbours.includes(objective.targetRegionId)) return `region ${objective.targetRegionId} is not adjacent to ${postId}`;
-    if (state.regions[objective.targetRegionId]!.controllerId === factionId) return 'cannot attack a region you control';
-  }
-  // A new directive supersedes any earlier one to the same post that is not yet executing.
-  for (const id of sortedKeys(state.directives)) {
-    const prior = state.directives[id]!;
-    if (prior.postId === postId && (prior.status === 'in_transit' || prior.status === 'awaiting_answer')) {
-      prior.status = 'superseded';
-    }
-  }
-  const id = newId(state, 'dir');
-  state.directives[id] = { id, factionId, postId, issuedDay: state.day, objective, boldness, insisted, counterOf, status: 'in_transit', response: null };
-  send(state, state.day, post.linkDays, { kind: 'directive', directiveId: id });
-  return null;
-}
-
 function answerObjection(state: GameState, factionId: FactionId, directiveId: DirectiveId, insist: boolean, rules: KernelRules): string | null {
   const directive = state.directives[directiveId];
   if (!directive || directive.factionId !== factionId) return `unknown directive ${directiveId}`;
@@ -175,11 +140,15 @@ function answerObjection(state: GameState, factionId: FactionId, directiveId: Di
     state.factions[factionId]!.record.push({ day: state.day, kind: 'override', personId: holderId });
     addGrievance(state, holderId, 'overruled', rules);
     directive.status = 'superseded';
-    return direct(state, factionId, directive.postId, directive.objective, directive.boldness, true);
+    return direct(state, factionId, directive.postId, directive.objective, directive.boldness, {
+      insisted: true,
+      framing: directive.framing,
+      promisedForce: directive.promisedForce,
+    });
   }
   const counter = directive.response.counterBoldness ?? directive.boldness;
   directive.status = 'superseded';
-  return direct(state, factionId, directive.postId, directive.objective, counter, false, directive.id);
+  return direct(state, factionId, directive.postId, directive.objective, counter, { counterOf: directive.id });
 }
 
 function appoint(state: GameState, factionId: FactionId, postId: PostId, personId: PersonId, rules: KernelRules): string | null {
@@ -229,25 +198,10 @@ function ownPerson(state: GameState, factionId: FactionId, personId: PersonId) {
   return p;
 }
 
-function keepPromise(state: GameState, factionId: FactionId, personId: PersonId): void {
-  const faction = state.factions[factionId]!;
-  const index = faction.promises.findIndex((p) => p.personId === personId);
-  if (index < 0) return;
-  faction.promises.splice(index, 1);
-  faction.record.push({ day: state.day, kind: 'promise_kept', personId });
-}
-
-/** Add a typed grievance. It also costs regard immediately. */
-export function addGrievance(state: GameState, personId: PersonId, kind: GrievanceKind, rules: KernelRules): void {
-  const person = state.persons[personId]!;
-  const weight = rules.grievanceWeight[kind];
-  person.grievances.push({ kind, weight, sinceDay: state.day });
-  person.regard = clampRegard(person.regard - Math.trunc(weight / 2));
-}
-
 function actorsOf(d: Decision): string[] {
   switch (d.verb) {
     case 'direct':
+    case 'audience':
       return [d.postId];
     case 'allocate':
       return [d.fromPostId, d.toPostId];
@@ -264,8 +218,13 @@ function actorsOf(d: Decision): string[] {
 }
 
 function detailOf(d: Decision): Record<string, number | string> {
-  if (d.verb === 'direct') {
-    return { objective: d.objective.kind, boldness: d.boldness, ...(d.objective.kind === 'attack' ? { target: d.objective.targetRegionId } : {}) };
+  if (d.verb === 'direct' || d.verb === 'audience') {
+    return {
+      objective: d.objective.kind,
+      boldness: d.boldness,
+      ...(d.objective.kind === 'attack' ? { target: d.objective.targetRegionId } : {}),
+      ...(d.verb === 'audience' ? { counters: d.counters.map((c) => c.kind).join(',') } : {}),
+    };
   }
   if (d.verb === 'allocate') return { amount: d.amount };
   return {};

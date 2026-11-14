@@ -51,6 +51,8 @@ export interface KernelRules {
   readonly overseerOversight: number;
   readonly insistCredibility: number;
   readonly grievanceWeight: Readonly<Record<GrievanceKind, number>>;
+  /** Counters the principal can offer in one audience ("you have twenty minutes with him"). */
+  readonly audienceMaxCounters: number;
 
   // Credibility (P7)
   readonly baseCredibility: number;
@@ -126,6 +128,7 @@ export const DEFAULT_KERNEL_RULES: KernelRules = Object.freeze({
     promise_broken: 300,
     blamed: 250,
   }),
+  audienceMaxCounters: 2,
 
   baseCredibility: 250,
   credibilityPerDismissal: 150,

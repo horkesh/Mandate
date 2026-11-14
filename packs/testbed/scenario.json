@@ -5,9 +5,9 @@
   "maxTurnDays": 21,
   "endDay": 240,
   "objectiveValues": {
-    "attack": { "honours": ["duty", "glory"], "offends": ["caution"] },
-    "hold": { "honours": ["caution", "order"], "offends": ["glory"] },
-    "transfer": { "honours": ["order"], "offends": ["reputation"] }
+    "attack": { "honours": ["duty", "glory"], "offends": ["caution"], "frames": ["reputation", "order", "party"] },
+    "hold": { "honours": ["caution", "order"], "offends": ["glory"], "frames": ["duty"] },
+    "transfer": { "honours": ["order"], "offends": ["reputation"], "frames": ["duty"] }
   },
   "factions": [
     { "id": "north", "principalId": "n_leader", "capitalRegionId": "n_capital", "isPlayer": true, "attentionPerTurn": 3, "baseOversight": 700, "oversightLossPerLinkDay": 60 },

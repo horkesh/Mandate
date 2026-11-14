@@ -99,9 +99,15 @@ export function defendingCompetence(state: GameState, regionId: RegionId): Permi
  * The holder's own assessment of an assault: how much of what is needed he has.
  * Proxies know local truth; the principal only knows what they report.
  */
-export function assaultAvailability(state: GameState, post: Post, targetRegionId: RegionId, rules: KernelRules): Permille {
+export function assaultAvailability(
+  state: GameState,
+  post: Post,
+  targetRegionId: RegionId,
+  rules: KernelRules,
+  extraForce = 0,
+): Permille {
   const needed = Math.max(1, scale(defendingForce(state, targetRegionId), rules.attackRatio));
-  return clampPermille(Math.trunc((post.force * 1000) / needed));
+  return clampPermille(Math.trunc(((post.force + extraForce) * 1000) / needed));
 }
 
 /** Days for a message between a faction's principal and one of its posts. */

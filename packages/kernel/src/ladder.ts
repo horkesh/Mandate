@@ -5,7 +5,7 @@ import { clamp, clampPermille } from './permille.ts';
 import type { KernelRules } from './rules.ts';
 import { LADDER, type GameState, type LadderRung, type Person } from './state.ts';
 import { hasPendingOperation, launchOperation } from './theatre.ts';
-import { addGrievance } from './verbs.ts';
+import { addGrievance } from './orders.ts';
 
 /**
  * Weekly politics of the people (P5, P6): grievances fade, discontent moves

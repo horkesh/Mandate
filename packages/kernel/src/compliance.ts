@@ -51,6 +51,11 @@ export interface ComplianceRules {
   /** Deterrence at or below which a proxy feels protected enough to refuse. */
   readonly protectedDeterrenceAt: Permille;
 
+  /** Weight of held grievances in willingness (permille of total grievance weight). */
+  readonly grievanceWeight: Permille;
+  /** A grievance at or above this weight is a reason the proxy can name. */
+  readonly grievanceReasonAt: number;
+
   /** Reason thresholds. */
   readonly temperamentReasonAt: Permille;
   readonly regardReasonAt: Permille;
@@ -74,6 +79,9 @@ export const DEFAULT_COMPLIANCE_RULES: ComplianceRules = Object.freeze({
   candidAt: 500,
   protectedStandingAt: 600,
   protectedDeterrenceAt: 200,
+
+  grievanceWeight: 300,
+  grievanceReasonAt: 100,
 
   temperamentReasonAt: 300,
   regardReasonAt: 300,
@@ -156,6 +164,19 @@ export function resolveDirective(
 
   const disposition = context.disposition ?? 0;
 
+  // Grievances: what he holds against the principal, each a nameable reason.
+  let grievanceTotal = 0;
+  const byKind = new Map<string, number>();
+  for (const g of context.grievances ?? []) {
+    grievanceTotal += g.weight;
+    byKind.set(g.kind, (byKind.get(g.kind) ?? 0) + g.weight);
+  }
+  for (const kind of [...byKind.keys()].sort(strictCompare)) {
+    const weight = byKind.get(kind)!;
+    if (weight >= rules.grievanceReasonAt) reasons.push({ kind: 'holds_grievance', grievance: kind, weight });
+  }
+  const grievances = -scale(grievanceTotal, rules.grievanceWeight);
+
   const contributions: Contribution[] = [
     { term: 'values', amount: values },
     { term: 'temperament', amount: temperament },
@@ -163,8 +184,9 @@ export function resolveDirective(
     { term: 'deterrence', amount: deterrence },
     { term: 'capacity', amount: capacity },
     { term: 'disposition', amount: disposition },
+    { term: 'grievances', amount: grievances },
   ];
-  const willingness = values + temperament + regard + deterrence + capacity + disposition;
+  const willingness = values + temperament + regard + deterrence + capacity + disposition + grievances;
 
   const honoursAHeldValue = reasons.some((r) => r.kind === 'values_honoured');
   const isProtected =
@@ -199,6 +221,8 @@ const PRIVATE_REASONS: ReadonlySet<Reason['kind']> = new Set([
   'distrusts_leader',
   'fears_sanction',
   'shielded_by_standing',
+  // An uncandid man nurses a grudge in silence; you counter what he tells you, not what he feels.
+  'holds_grievance',
 ]);
 const FLATTERING_REASONS: ReadonlySet<Reason['kind']> = new Set(['values_honoured', 'trusts_leader']);
 

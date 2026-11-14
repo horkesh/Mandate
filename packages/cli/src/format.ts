@@ -1,16 +1,32 @@
-import type { Claim, Decision, LedgerEntry, Reason } from '@mandate/kernel';
+import type { Claim, Counter, Decision, LedgerEntry, Reason } from '@mandate/kernel';
 
 export function reason(r: Reason): string {
   if ('value' in r) return `${r.kind}(${r.value})`;
   if ('shortfall' in r) return `${r.kind}(${r.shortfall})`;
   if ('gap' in r) return `${r.kind}(${r.gap})`;
+  if (r.kind === 'holds_grievance') return `grievance(${r.grievance})`;
   return r.kind;
+}
+
+export function counter(c: Counter): string {
+  switch (c.kind) {
+    case 'frame':
+      return `frame as ${c.value}`;
+    case 'adjust':
+      return `adjust to ${c.boldness}`;
+    case 'reinforce':
+      return `reinforce ${c.amount} from ${c.fromPostId}`;
+    default:
+      return c.kind.replace(/_/g, ' ');
+  }
 }
 
 export function decision(d: Decision): string {
   switch (d.verb) {
     case 'direct':
       return `direct ${d.postId}: ${d.objective.kind}${d.objective.kind === 'attack' ? ` ${d.objective.targetRegionId}` : ''} @${d.boldness}`;
+    case 'audience':
+      return `audience with ${d.postId}: ${d.objective.kind}${d.objective.kind === 'attack' ? ` ${d.objective.targetRegionId}` : ''} @${d.boldness}${d.counters.length ? ` [${d.counters.map(counter).join(', ')}]` : ''}`;
     case 'allocate':
       return `allocate ${d.amount} ${d.fromPostId} -> ${d.toPostId}`;
     case 'appoint':

@@ -1,14 +1,7 @@
 import { sortedKeys } from './compare.ts';
-import { resolveDirective } from './compliance.ts';
 import type { ComplianceRung } from './directive.ts';
-import {
-  assaultAvailability,
-  dispositionOf,
-  oversightOf,
-  sanctionCredibility,
-} from './derive.ts';
 import { log, report, send } from './messages.ts';
-import { clampPermille } from './permille.ts';
+import { readOrder } from './reading.ts';
 import type { KernelRules } from './rules.ts';
 import type { Directive, GameState } from './state.ts';
 import { launchOperation } from './theatre.ts';
@@ -35,23 +28,7 @@ export function receiveDirective(state: GameState, directive: Directive, rules: 
     return;
   }
 
-  const values = state.objectiveValues[objective.kind];
-  const required = objective.kind === 'attack' ? 1000 : 0;
-  const available = objective.kind === 'attack' ? assaultAvailability(state, post, objective.targetRegionId, rules) : 1000;
-  let credibility = sanctionCredibility(state, directive.factionId, rules);
-  if (directive.insisted) credibility = clampPermille(credibility + rules.insistCredibility);
-
-  const response = resolveDirective(
-    holder,
-    { boldness: directive.boldness, honours: values.honours, offends: values.offends, required },
-    {
-      available,
-      oversight: oversightOf(state, holder.id, rules),
-      leaderCredibility: credibility,
-      disposition: dispositionOf(state, holder.id, rules),
-    },
-    rules.compliance,
-  );
+  const response = readOrder(state, directive.factionId, holder, post, directive, rules);
 
   // Once overruled, a man can no longer object: he refuses if protected, or complies grudgingly.
   let actual: ComplianceRung = response.actual;

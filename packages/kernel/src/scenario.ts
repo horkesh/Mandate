@@ -32,6 +32,7 @@ export interface ScenarioData {
     readonly attentionPerTurn: number;
     readonly baseOversight: number;
     readonly oversightLossPerLinkDay: number;
+    readonly name?: string;
   }[];
   readonly persons: readonly {
     readonly id: PersonId;
@@ -42,6 +43,7 @@ export interface ScenarioData {
     readonly competence: number;
     readonly standing: number;
     readonly regard: number;
+    readonly name?: string;
   }[];
   readonly posts: readonly {
     readonly id: string;
@@ -51,12 +53,14 @@ export interface ScenarioData {
     readonly holderId: PersonId | null;
     readonly force: number;
     readonly linkDays: number;
+    readonly name?: string;
   }[];
   readonly regions: readonly {
     readonly id: string;
     readonly controllerId: string;
     readonly neighbours: readonly string[];
     readonly garrison: number;
+    readonly name?: string;
   }[];
   readonly blocs: readonly {
     readonly id: string;
@@ -64,6 +68,7 @@ export interface ScenarioData {
     readonly weight: number;
     readonly values: readonly ValueId[];
     readonly support: number;
+    readonly name?: string;
   }[];
   readonly checkpoints: readonly Checkpoint[];
 }
@@ -80,8 +85,9 @@ export function createGame(data: ScenarioData): GameState {
   const problems = validateScenario(data);
   if (problems.length > 0) throw new ScenarioError(problems);
 
+  // Display names are pack text: they stay out of game state (decision 0003).
   const factions: Record<string, Faction> = {};
-  for (const f of data.factions) {
+  for (const { name: _name, ...f } of data.factions) {
     factions[f.id] = {
       ...f,
       attentionLeft: f.attentionPerTurn,
@@ -90,7 +96,7 @@ export function createGame(data: ScenarioData): GameState {
     };
   }
   const persons: Record<string, Person> = {};
-  for (const p of data.persons) {
+  for (const { name: _name, ...p } of data.persons) {
     persons[p.id] = {
       ...p,
       values: [...p.values].sort(strictCompare),
@@ -104,11 +110,11 @@ export function createGame(data: ScenarioData): GameState {
     };
   }
   const posts: Record<string, Post> = {};
-  for (const p of data.posts) posts[p.id] = { ...p };
+  for (const { name: _name, ...p } of data.posts) posts[p.id] = { ...p };
   const regions: Record<string, Region> = {};
-  for (const r of data.regions) regions[r.id] = { ...r, neighbours: [...r.neighbours].sort(strictCompare) };
+  for (const { name: _name, ...r } of data.regions) regions[r.id] = { ...r, neighbours: [...r.neighbours].sort(strictCompare) };
   const blocs: Record<string, Bloc> = {};
-  for (const b of data.blocs) blocs[b.id] = { ...b, values: [...b.values].sort(strictCompare) };
+  for (const { name: _name, ...b } of data.blocs) blocs[b.id] = { ...b, values: [...b.values].sort(strictCompare) };
 
   return {
     schemaVersion: 1,

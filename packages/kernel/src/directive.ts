@@ -30,6 +30,8 @@ export interface CommandContext {
   readonly leaderCredibility: Permille;
   /** Signed willingness adjustment from the proxy's insubordination-ladder rung (P5). Default 0. */
   readonly disposition?: number;
+  /** Grievances the proxy holds against the principal (typed; each is answered by specific counters, P3). */
+  readonly grievances?: readonly { readonly kind: string; readonly weight: number }[];
 }
 
 /**
@@ -59,13 +61,14 @@ export type Reason =
   | { readonly kind: 'distrusts_leader' }
   | { readonly kind: 'fears_sanction' }
   | { readonly kind: 'shielded_by_standing' }
-  | { readonly kind: 'lacks_resources'; readonly shortfall: Permille };
+  | { readonly kind: 'lacks_resources'; readonly shortfall: Permille }
+  | { readonly kind: 'holds_grievance'; readonly grievance: string; readonly weight: number };
 
 export type ReasonKind = Reason['kind'];
 
 /** One term of the willingness sum, kept so every number is explainable (CLAUDE.md rule 6). */
 export interface Contribution {
-  readonly term: 'values' | 'temperament' | 'regard' | 'deterrence' | 'capacity' | 'disposition';
+  readonly term: 'values' | 'temperament' | 'regard' | 'deterrence' | 'capacity' | 'disposition' | 'grievances';
   readonly amount: number;
 }
 
