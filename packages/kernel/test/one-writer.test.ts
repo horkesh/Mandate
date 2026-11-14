@@ -53,7 +53,7 @@ describe('one writer per field, over every package', () => {
   });
 
   it('classifies every property of every State record, and no key is owned twice', () => {
-    const records = sources.flatMap(stateRecords);
+    const records = stateRecords(sources);
     expect(classificationProblems(records, OWNED_FIELDS, IMMUTABLE_STATE_KEYS, LEGACY_STATE_RECORDS)).toEqual([]);
   });
 
@@ -145,7 +145,65 @@ describe('the scanner catches violations (positive control)', () => {
   });
 
   it('fails closed when the lexer loses sync', () => {
-    expect(() => writeSites({ path: 'x.ts', code: "const s = 'open\nr.controller = f;" }, 'controller')).toThrow('lexer lost sync at line 1');
+    const broken: SourceFile = { path: 'packages/kernel/src/supply.ts', code: "const s = 'open\nr.controller = f;" };
+    expect(() => writeSites(broken, 'controller')).toThrow('lexer lost sync at line 1');
+    expect(writeViolations([broken], owned, ['id']).map((v) => `${v.path}:${v.line} ${v.form}`)).toEqual([
+      'packages/kernel/src/supply.ts:1 lexer lost sync at line 1: a quoted string meets a newline',
+    ]);
+  });
+
+  it('catches index writes, ! forms and destructuring assignment (reviewer probes)', () => {
+    const probes: SourceFile = {
+      path: 'packages/kernel/src/supply.ts',
+      code: [
+        'state.controller[regionId] = faction;',
+        "state.controller['r1'] = f;",
+        'r.controller!.push(f);',
+        'r.controller![i] = f;',
+        'state.controller[ids[0]].holder ??= f;',
+        '[r.controller] = [f];',
+        '({ controller: r.controller } = other);',
+        'r.controller![i]++;',
+        'delete state.controller[regionId];',
+        'const seen = state.controller[regionId] === f;',
+        'const [a, b] = pair;',
+      ].join('\n'),
+    };
+    expect(writeViolations([probes], owned, []).map((v) => `${v.line} ${v.form}`)).toEqual([
+      '1 assignment',
+      '2 assignment',
+      '3 mutating call',
+      '4 assignment',
+      '5 assignment',
+      '6 destructuring assignment',
+      '7 destructuring assignment',
+      '8 increment',
+      '9 delete',
+    ]);
+  });
+
+  it('treats a record named exactly State, and every record reachable from it, as State (reviewer probes)', () => {
+    const root: SourceFile = {
+      path: 'packages/kernel/src/state.ts',
+      code: [
+        'export interface State { readonly day: number; regions: Readonly<Record<RegionId, Region>>; forces: ForceBlock[] }',
+        'export interface Region { readonly id: RegionId; controller: FactionId; supply: SupplyRow }',
+        'export type ForceBlock = { readonly id: ForceBlockId; strength: number };',
+        'export interface SupplyRow { level: number }',
+        'export interface Unrelated { anything: number }',
+      ].join('\n'),
+    };
+    const records = stateRecords([root]);
+    expect(records.map((r) => r.record).sort()).toEqual(['ForceBlock', 'Region', 'State', 'SupplyRow']);
+    const regionFields: OwnedField[] = [{ field: 'region control', writer: 'control', proposedBy: [], code: [{ record: 'Region', key: 'controller' }] }];
+    expect(classificationProblems(records, regionFields, ['id'], [])).toEqual([
+      'packages/kernel/src/state.ts: State.day has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
+      'packages/kernel/src/state.ts: State.regions has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
+      'packages/kernel/src/state.ts: State.forces has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
+      'packages/kernel/src/state.ts: Region.supply has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
+      'packages/kernel/src/state.ts: ForceBlock.strength has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
+      'packages/kernel/src/state.ts: SupplyRow.level has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
+    ]);
   });
 
   it('counts increments as writes', () => {
@@ -158,7 +216,7 @@ describe('the scanner catches violations (positive control)', () => {
       code: 'export interface ForceBlockState {\n  readonly id: ForceBlockId;\n  strength: number;\n  location: { region: RegionId };\n}',
     };
     const stale: OwnedField = { field: 'ghost', writer: 'forces', proposedBy: [], code: [{ record: 'GhostState', key: 'ghost' }] };
-    const records = [control, unclassified].flatMap(stateRecords);
+    const records = stateRecords([control, unclassified]);
     expect(records.find((r) => r.record === 'ForceBlockState')?.keys).toEqual(['id', 'strength', 'location']);
     expect(classificationProblems(records, [...fixtureFields, stale], ['id'], [])).toEqual([
       'packages/kernel/src/forces.ts: ForceBlockState.strength has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
@@ -169,7 +227,7 @@ describe('the scanner catches violations (positive control)', () => {
 
   it('flags a key owned twice', () => {
     const twice: OwnedField = { field: 'other', writer: 'combat', proposedBy: [], code: [{ record: 'RegionState', key: 'controller' }] };
-    const problems = classificationProblems(stateRecords(control), [...fixtureFields, twice], ['id'], []);
+    const problems = classificationProblems(stateRecords([control]), [...fixtureFields, twice], ['id'], []);
     expect(problems[0]).toContain('owned key "controller" is claimed 2 times');
   });
 });
