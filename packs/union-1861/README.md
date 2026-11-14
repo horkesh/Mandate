@@ -1,5 +1,12 @@
 # Pack: the Union, 1861–62 (decision 0004)
 
+## Two formats, side by side
+
+- **World format v2 (lane 0.3):** `pack.json`, `PROVENANCE.json`, `strings/en.json`, `source/world/` and `source/scenarios/march_1861/` are the data of record; `data/` is generated from them (`npm run pack:generate -- union-1861`; `npm test` fails when it is stale). One start, 5 March 1861; the pack is a `draft`, so values no source gives are `unknown`. `source/drafts/` holds the three interim drafts the import started from, kept as the archive (columns the format has no field for, such as the people's prewar careers, stay there). `source/import/` is the one-time conversion record, not a build step: from the merge on the source CSVs are the source of truth, and re-running the importer would overwrite hand edits (it refuses to run without `UNION1861_REPRODUCE_IMPORT=1`). Read `notes/lane-0.3-union-data.md` for every rule and judgement.
+- **The M2 pack below** (`scenario.json`, `source/generate.mjs`, `test/union-pack.test.ts`) is what today's kernel plays, from 1 August 1861. It stays until lanes 0.4 and 0.5 replace the M2 theatre.
+
+## The M2 pack
+
 You are Abraham Lincoln, from 1 August 1861 (day 0, after First Bull Run) to 31 December 1862 (day 517). Every army, department, ministry and governorship is held by someone else.
 
 ```bash

@@ -1,0 +1,50 @@
+id,name,faction,kind,sources,notes
+us_executive,Executive Office,union,executive,OOB-LANE department structure of the oob draft,
+us_war,War Department,union,war,OOB-LANE department structure of the oob draft,
+us_navy,Navy Department,union,navy,OOB-LANE department structure of the oob draft,
+us_treasury,Treasury Department,union,treasury,OOB-LANE department structure of the oob draft,
+us_diplomatic,Department of State,union,diplomatic,OOB-LANE department structure of the oob draft,
+us_justice,Department of Justice,union,justice,OOB-LANE department structure of the oob draft,
+us_interior,Department of the Interior,union,interior,OOB-LANE department structure of the oob draft,
+us_post_office,Post Office Department,union,post_office,OOB-LANE department structure of the oob draft,
+cs_executive,Confederate Executive Office,confederate,executive,OOB-LANE department structure of the oob draft,
+cs_war,Confederate War Department,confederate,war,OOB-LANE department structure of the oob draft,
+cs_navy,Confederate Navy Department,confederate,navy,OOB-LANE department structure of the oob draft,
+cs_treasury,Confederate Treasury Department,confederate,treasury,OOB-LANE department structure of the oob draft,
+cs_diplomatic,Confederate Department of State,confederate,diplomatic,OOB-LANE department structure of the oob draft,
+cs_justice,Confederate Department of Justice,confederate,justice,OOB-LANE department structure of the oob draft,
+cs_post_office,Confederate Post-Office Department,confederate,post_office,OOB-LANE department structure of the oob draft,
+st_alabama,Alabama state government,confederate,state_government,OOB-LANE department structure of the oob draft,
+st_arkansas,Arkansas state government,,state_government,OOB-LANE department structure of the oob draft,"uncommitted on 5 March 1861: no faction (modelling rule, lane 0.3 note)"
+st_california,California state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_connecticut,Connecticut state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_delaware,Delaware state government,,state_government,OOB-LANE department structure of the oob draft,"uncommitted on 5 March 1861: no faction (modelling rule, lane 0.3 note)"
+st_florida,Florida state government,confederate,state_government,OOB-LANE department structure of the oob draft,
+st_georgia,Georgia state government,confederate,state_government,OOB-LANE department structure of the oob draft,
+st_illinois,Illinois state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_indiana,Indiana state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_iowa,Iowa state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_kansas,Kansas state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_kentucky,Kentucky state government,,state_government,OOB-LANE department structure of the oob draft,"uncommitted on 5 March 1861: no faction (modelling rule, lane 0.3 note)"
+st_louisiana,Louisiana state government,confederate,state_government,OOB-LANE department structure of the oob draft,
+st_maine,Maine state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_maryland,Maryland state government,,state_government,OOB-LANE department structure of the oob draft,"uncommitted on 5 March 1861: no faction (modelling rule, lane 0.3 note)"
+st_massachusetts,Massachusetts state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_michigan,Michigan state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_minnesota,Minnesota state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_mississippi,Mississippi state government,confederate,state_government,OOB-LANE department structure of the oob draft,
+st_missouri,Missouri state government,,state_government,OOB-LANE department structure of the oob draft,"uncommitted on 5 March 1861: no faction (modelling rule, lane 0.3 note)"
+st_new_hampshire,New Hampshire state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_new_jersey,New Jersey state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_new_york,New York state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_north_carolina,North Carolina state government,,state_government,OOB-LANE department structure of the oob draft,"uncommitted on 5 March 1861: no faction (modelling rule, lane 0.3 note)"
+st_ohio,Ohio state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_oregon,Oregon state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_pennsylvania,Pennsylvania state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_rhode_island,Rhode Island state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_south_carolina,South Carolina state government,confederate,state_government,OOB-LANE department structure of the oob draft,
+st_tennessee,Tennessee state government,,state_government,OOB-LANE department structure of the oob draft,"uncommitted on 5 March 1861: no faction (modelling rule, lane 0.3 note)"
+st_texas,Texas state government,confederate,state_government,OOB-LANE department structure of the oob draft,
+st_vermont,Vermont state government,union,state_government,OOB-LANE department structure of the oob draft,
+st_virginia,Virginia state government,,state_government,OOB-LANE department structure of the oob draft,"uncommitted on 5 March 1861: no faction (modelling rule, lane 0.3 note)"
+st_wisconsin,Wisconsin state government,union,state_government,OOB-LANE department structure of the oob draft,

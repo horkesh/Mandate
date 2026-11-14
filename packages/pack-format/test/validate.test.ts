@@ -299,6 +299,19 @@ describe('checks that guard committed data (positive controls)', () => {
   });
 });
 
+describe('harbour channels (lane 0.3)', () => {
+  const harbour = (type: string, regionRow: string) =>
+    withFile(`${W}/edges.csv`, appendRow(`,port,harbour,${type},,1,,2,,,,DESIGN,`), withFile(`${W}/regions.csv`, appendRow(regionRow)));
+  it('a sea edge may join two key points on one harbour', () => {
+    const result = run(harbour('sea', 'harbour,Harbour,key_point,plain,,,,,,,,,,DESIGN,'));
+    expect(result.issues.filter((i) => i.kind === 'edge-end-kind')).toEqual([]);
+  });
+  it('but not a key point and an ordinary land region (positive control)', () => {
+    const result = run(harbour('sea', 'harbour,Harbour,land,plain,,,,,,,,,,DESIGN,'));
+    expect(result.issues.filter((i) => i.kind === 'edge-end-kind').map((i) => i.severity)).toEqual(['error']);
+  });
+});
+
 describe('invented people (review F7)', () => {
   it('need no citations for their centres and traits where the pack allows them', () => {
     const result = run(withFile(`${W}/people.csv`, appendRow(INVENTED), allowInvented()));

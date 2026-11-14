@@ -1,0 +1,811 @@
+{
+  "formatVersion": 2,
+  "id": "union-1861",
+  "status": "draft",
+  "name": "pack.name",
+  "defaultLocale": "en",
+  "locales": [
+    "en"
+  ],
+  "rules": {
+    "capacityMax": 5,
+    "supplyControlPermille": 250,
+    "retreatControlPermille": 50,
+    "seasons": [
+      {
+        "reason": "mud",
+        "defaultMonths": [
+          1,
+          2,
+          3,
+          12
+        ],
+        "lengthPermille": 1500,
+        "capacityPermille": 600
+      },
+      {
+        "reason": "low_water",
+        "defaultMonths": [
+          8,
+          9,
+          10
+        ],
+        "lengthPermille": 1300,
+        "capacityPermille": 500
+      },
+      {
+        "reason": "flood",
+        "defaultMonths": [
+          3,
+          4,
+          5
+        ],
+        "lengthPermille": 1200,
+        "capacityPermille": 800
+      },
+      {
+        "reason": "ice",
+        "defaultMonths": [
+          1,
+          2,
+          12
+        ],
+        "lengthPermille": 2000,
+        "capacityPermille": 300
+      }
+    ]
+  },
+  "vocabularies": {
+    "terrains": [
+      {
+        "id": "plain",
+        "name": "terrain.plain",
+        "roadLengthPermille": 1000,
+        "water": false
+      },
+      {
+        "id": "rolling",
+        "name": "terrain.rolling",
+        "roadLengthPermille": 1000,
+        "water": false
+      },
+      {
+        "id": "prairie",
+        "name": "terrain.prairie",
+        "roadLengthPermille": 1000,
+        "water": false
+      },
+      {
+        "id": "valley",
+        "name": "terrain.valley",
+        "roadLengthPermille": 1000,
+        "water": false
+      },
+      {
+        "id": "urban",
+        "name": "terrain.urban",
+        "roadLengthPermille": 1000,
+        "water": false
+      },
+      {
+        "id": "tidewater",
+        "name": "terrain.tidewater",
+        "roadLengthPermille": 1000,
+        "water": false
+      },
+      {
+        "id": "hills",
+        "name": "terrain.hills",
+        "roadLengthPermille": 1200,
+        "water": false
+      },
+      {
+        "id": "forest",
+        "name": "terrain.forest",
+        "roadLengthPermille": 1200,
+        "water": false
+      },
+      {
+        "id": "desert",
+        "name": "terrain.desert",
+        "roadLengthPermille": 1200,
+        "water": false
+      },
+      {
+        "id": "swamp",
+        "name": "terrain.swamp",
+        "roadLengthPermille": 1400,
+        "water": false
+      },
+      {
+        "id": "delta",
+        "name": "terrain.delta",
+        "roadLengthPermille": 1400,
+        "water": false
+      },
+      {
+        "id": "mountains",
+        "name": "terrain.mountains",
+        "roadLengthPermille": 1500,
+        "water": false
+      },
+      {
+        "id": "open_sea",
+        "name": "terrain.open_sea",
+        "roadLengthPermille": 1000,
+        "water": true
+      },
+      {
+        "id": "coastal",
+        "name": "terrain.coastal",
+        "roadLengthPermille": 1000,
+        "water": true
+      },
+      {
+        "id": "sound",
+        "name": "terrain.sound",
+        "roadLengthPermille": 1000,
+        "water": true
+      },
+      {
+        "id": "river",
+        "name": "terrain.river",
+        "roadLengthPermille": 1000,
+        "water": true
+      }
+    ],
+    "postKinds": [
+      {
+        "id": "president",
+        "name": "post_kind.president",
+        "creatable": "start_only",
+        "temporary": false
+      },
+      {
+        "id": "vice_president",
+        "name": "post_kind.vice_president",
+        "creatable": "start_only",
+        "temporary": false
+      },
+      {
+        "id": "cabinet",
+        "name": "post_kind.cabinet",
+        "creatable": "start_only",
+        "temporary": false
+      },
+      {
+        "id": "bureau",
+        "name": "post_kind.bureau",
+        "creatable": "start_only",
+        "temporary": false
+      },
+      {
+        "id": "general_in_chief",
+        "name": "post_kind.general_in_chief",
+        "creatable": "start_only",
+        "temporary": false
+      },
+      {
+        "id": "army_department",
+        "name": "post_kind.army_department",
+        "creatable": "directive",
+        "temporary": false
+      },
+      {
+        "id": "fort_command",
+        "name": "post_kind.fort_command",
+        "creatable": "appoint",
+        "temporary": false
+      },
+      {
+        "id": "arsenal",
+        "name": "post_kind.arsenal",
+        "creatable": "start_only",
+        "temporary": false
+      },
+      {
+        "id": "navy_squadron",
+        "name": "post_kind.navy_squadron",
+        "creatable": "directive",
+        "temporary": false
+      },
+      {
+        "id": "navy_yard",
+        "name": "post_kind.navy_yard",
+        "creatable": "start_only",
+        "temporary": false
+      },
+      {
+        "id": "ship_command",
+        "name": "post_kind.ship_command",
+        "creatable": "appoint",
+        "temporary": false
+      },
+      {
+        "id": "marine_corps",
+        "name": "post_kind.marine_corps",
+        "creatable": "start_only",
+        "temporary": false
+      },
+      {
+        "id": "governor",
+        "name": "post_kind.governor",
+        "creatable": "start_only",
+        "temporary": false
+      },
+      {
+        "id": "harbour_command",
+        "name": "post_kind.harbour_command",
+        "creatable": "directive",
+        "temporary": false
+      },
+      {
+        "id": "state_military",
+        "name": "post_kind.state_military",
+        "creatable": "start_only",
+        "temporary": false
+      },
+      {
+        "id": "temporary_command",
+        "name": "post_kind.temporary_command",
+        "creatable": "directive",
+        "temporary": true
+      }
+    ],
+    "departmentKinds": [
+      {
+        "id": "executive",
+        "name": "department_kind.executive"
+      },
+      {
+        "id": "war",
+        "name": "department_kind.war"
+      },
+      {
+        "id": "navy",
+        "name": "department_kind.navy"
+      },
+      {
+        "id": "treasury",
+        "name": "department_kind.treasury"
+      },
+      {
+        "id": "diplomatic",
+        "name": "department_kind.diplomatic"
+      },
+      {
+        "id": "justice",
+        "name": "department_kind.justice"
+      },
+      {
+        "id": "interior",
+        "name": "department_kind.interior"
+      },
+      {
+        "id": "post_office",
+        "name": "department_kind.post_office"
+      },
+      {
+        "id": "state_government",
+        "name": "department_kind.state_government"
+      }
+    ],
+    "arms": [
+      {
+        "id": "infantry",
+        "name": "arm.infantry",
+        "naval": false
+      },
+      {
+        "id": "artillery",
+        "name": "arm.artillery",
+        "naval": false
+      },
+      {
+        "id": "cavalry",
+        "name": "arm.cavalry",
+        "naval": false
+      },
+      {
+        "id": "mixed",
+        "name": "arm.mixed",
+        "naval": false
+      },
+      {
+        "id": "engineers",
+        "name": "arm.engineers",
+        "naval": false
+      },
+      {
+        "id": "ordnance",
+        "name": "arm.ordnance",
+        "naval": false
+      },
+      {
+        "id": "marines",
+        "name": "arm.marines",
+        "naval": false
+      },
+      {
+        "id": "naval",
+        "name": "arm.naval",
+        "naval": true
+      }
+    ],
+    "personKinds": [
+      {
+        "id": "general",
+        "name": "person_kind.general"
+      },
+      {
+        "id": "naval_officer",
+        "name": "person_kind.naval_officer"
+      },
+      {
+        "id": "cabinet",
+        "name": "person_kind.cabinet"
+      },
+      {
+        "id": "bureau",
+        "name": "person_kind.bureau"
+      },
+      {
+        "id": "governor",
+        "name": "person_kind.governor"
+      },
+      {
+        "id": "congress",
+        "name": "person_kind.congress"
+      },
+      {
+        "id": "diplomat",
+        "name": "person_kind.diplomat"
+      },
+      {
+        "id": "editor",
+        "name": "person_kind.editor"
+      },
+      {
+        "id": "other",
+        "name": "person_kind.other"
+      }
+    ],
+    "traits": [
+      {
+        "id": "slow",
+        "name": "trait.slow",
+        "gate": false
+      },
+      {
+        "id": "overestimates_enemy",
+        "name": "trait.overestimates_enemy",
+        "gate": false
+      },
+      {
+        "id": "organiser",
+        "name": "trait.organiser",
+        "gate": false
+      },
+      {
+        "id": "poor_administrator",
+        "name": "trait.poor_administrator",
+        "gate": false
+      },
+      {
+        "id": "incorruptible",
+        "name": "trait.incorruptible",
+        "gate": false
+      },
+      {
+        "id": "contract_scandal",
+        "name": "trait.contract_scandal",
+        "gate": false
+      },
+      {
+        "id": "insubordinate",
+        "name": "trait.insubordinate",
+        "gate": false
+      },
+      {
+        "id": "makes_policy",
+        "name": "trait.makes_policy",
+        "gate": true
+      },
+      {
+        "id": "disdains_superiors",
+        "name": "trait.disdains_superiors",
+        "gate": false
+      },
+      {
+        "id": "secretive",
+        "name": "trait.secretive",
+        "gate": false
+      },
+      {
+        "id": "ambitious",
+        "name": "trait.ambitious",
+        "gate": false
+      },
+      {
+        "id": "rank_proud",
+        "name": "trait.rank_proud",
+        "gate": false
+      },
+      {
+        "id": "credit_seeking",
+        "name": "trait.credit_seeking",
+        "gate": false
+      },
+      {
+        "id": "shifts_blame",
+        "name": "trait.shifts_blame",
+        "gate": false
+      },
+      {
+        "id": "candid",
+        "name": "trait.candid",
+        "gate": false
+      },
+      {
+        "id": "self_doubting",
+        "name": "trait.self_doubting",
+        "gate": false
+      },
+      {
+        "id": "boastful",
+        "name": "trait.boastful",
+        "gate": false
+      },
+      {
+        "id": "uses_press",
+        "name": "trait.uses_press",
+        "gate": false
+      },
+      {
+        "id": "political_patron",
+        "name": "trait.political_patron",
+        "gate": false
+      },
+      {
+        "id": "joint_minded",
+        "name": "trait.joint_minded",
+        "gate": false
+      },
+      {
+        "id": "service_proud",
+        "name": "trait.service_proud",
+        "gate": false
+      },
+      {
+        "id": "quarrelsome",
+        "name": "trait.quarrelsome",
+        "gate": false
+      },
+      {
+        "id": "holds_grudges",
+        "name": "trait.holds_grudges",
+        "gate": false
+      },
+      {
+        "id": "dutiful",
+        "name": "trait.dutiful",
+        "gate": false
+      },
+      {
+        "id": "intrigues",
+        "name": "trait.intrigues",
+        "gate": false
+      },
+      {
+        "id": "micromanages",
+        "name": "trait.micromanages",
+        "gate": false
+      },
+      {
+        "id": "infirm",
+        "name": "trait.infirm",
+        "gate": false
+      },
+      {
+        "id": "popular_with_troops",
+        "name": "trait.popular_with_troops",
+        "gate": false
+      },
+      {
+        "id": "drink_rumour",
+        "name": "trait.drink_rumour",
+        "gate": false
+      },
+      {
+        "id": "antislavery",
+        "name": "trait.antislavery",
+        "gate": true
+      },
+      {
+        "id": "opposes_emancipation",
+        "name": "trait.opposes_emancipation",
+        "gate": true
+      },
+      {
+        "id": "slaveholder",
+        "name": "trait.slaveholder",
+        "gate": true
+      },
+      {
+        "id": "harsh_with_civilians",
+        "name": "trait.harsh_with_civilians",
+        "gate": true
+      }
+    ],
+    "ranks": [
+      {
+        "id": "usa_lt",
+        "name": "rank.usa_lt",
+        "seniority": 10
+      },
+      {
+        "id": "usn_lt",
+        "name": "rank.usn_lt",
+        "seniority": 10
+      },
+      {
+        "id": "usa_bvt_capt",
+        "name": "rank.usa_bvt_capt",
+        "seniority": 19
+      },
+      {
+        "id": "other_capt",
+        "name": "rank.other_capt",
+        "seniority": 20
+      },
+      {
+        "id": "state_capt",
+        "name": "rank.state_capt",
+        "seniority": 20
+      },
+      {
+        "id": "usa_capt",
+        "name": "rank.usa_capt",
+        "seniority": 20
+      },
+      {
+        "id": "usv_capt",
+        "name": "rank.usv_capt",
+        "seniority": 20
+      },
+      {
+        "id": "usn_lt_cdr",
+        "name": "rank.usn_lt_cdr",
+        "seniority": 25
+      },
+      {
+        "id": "usa_bvt_maj",
+        "name": "rank.usa_bvt_maj",
+        "seniority": 29
+      },
+      {
+        "id": "other_maj",
+        "name": "rank.other_maj",
+        "seniority": 30
+      },
+      {
+        "id": "state_maj",
+        "name": "rank.state_maj",
+        "seniority": 30
+      },
+      {
+        "id": "usa_maj",
+        "name": "rank.usa_maj",
+        "seniority": 30
+      },
+      {
+        "id": "usv_maj",
+        "name": "rank.usv_maj",
+        "seniority": 30
+      },
+      {
+        "id": "csn_cdr",
+        "name": "rank.csn_cdr",
+        "seniority": 35
+      },
+      {
+        "id": "usn_cdr",
+        "name": "rank.usn_cdr",
+        "seniority": 35
+      },
+      {
+        "id": "usa_bvt_lt_col",
+        "name": "rank.usa_bvt_lt_col",
+        "seniority": 39
+      },
+      {
+        "id": "usa_lt_col",
+        "name": "rank.usa_lt_col",
+        "seniority": 40
+      },
+      {
+        "id": "usa_bvt_col",
+        "name": "rank.usa_bvt_col",
+        "seniority": 49
+      },
+      {
+        "id": "csa_col",
+        "name": "rank.csa_col",
+        "seniority": 50
+      },
+      {
+        "id": "csn_capt",
+        "name": "rank.csn_capt",
+        "seniority": 50
+      },
+      {
+        "id": "other_col",
+        "name": "rank.other_col",
+        "seniority": 50
+      },
+      {
+        "id": "state_col",
+        "name": "rank.state_col",
+        "seniority": 50
+      },
+      {
+        "id": "usa_col",
+        "name": "rank.usa_col",
+        "seniority": 50
+      },
+      {
+        "id": "usn_capt",
+        "name": "rank.usn_capt",
+        "seniority": 50
+      },
+      {
+        "id": "usv_col",
+        "name": "rank.usv_col",
+        "seniority": 50
+      },
+      {
+        "id": "usa_bvt_brig_gen",
+        "name": "rank.usa_bvt_brig_gen",
+        "seniority": 59
+      },
+      {
+        "id": "csa_brig_gen",
+        "name": "rank.csa_brig_gen",
+        "seniority": 60
+      },
+      {
+        "id": "pacs_brig_gen",
+        "name": "rank.pacs_brig_gen",
+        "seniority": 60
+      },
+      {
+        "id": "state_brig_gen",
+        "name": "rank.state_brig_gen",
+        "seniority": 60
+      },
+      {
+        "id": "state_flag_officer",
+        "name": "rank.state_flag_officer",
+        "seniority": 60
+      },
+      {
+        "id": "usa_brig_gen",
+        "name": "rank.usa_brig_gen",
+        "seniority": 60
+      },
+      {
+        "id": "usn_commodore",
+        "name": "rank.usn_commodore",
+        "seniority": 60
+      },
+      {
+        "id": "usv_brig_gen",
+        "name": "rank.usv_brig_gen",
+        "seniority": 60
+      },
+      {
+        "id": "usa_bvt_maj_gen",
+        "name": "rank.usa_bvt_maj_gen",
+        "seniority": 69
+      },
+      {
+        "id": "csa_maj_gen",
+        "name": "rank.csa_maj_gen",
+        "seniority": 70
+      },
+      {
+        "id": "pacs_maj_gen",
+        "name": "rank.pacs_maj_gen",
+        "seniority": 70
+      },
+      {
+        "id": "state_maj_gen",
+        "name": "rank.state_maj_gen",
+        "seniority": 70
+      },
+      {
+        "id": "usa_maj_gen",
+        "name": "rank.usa_maj_gen",
+        "seniority": 70
+      },
+      {
+        "id": "usn_rear_admiral",
+        "name": "rank.usn_rear_admiral",
+        "seniority": 70
+      },
+      {
+        "id": "usv_maj_gen",
+        "name": "rank.usv_maj_gen",
+        "seniority": 70
+      },
+      {
+        "id": "usa_bvt_lt_gen",
+        "name": "rank.usa_bvt_lt_gen",
+        "seniority": 79
+      },
+      {
+        "id": "pacs_lt_gen",
+        "name": "rank.pacs_lt_gen",
+        "seniority": 80
+      },
+      {
+        "id": "csa_gen",
+        "name": "rank.csa_gen",
+        "seniority": 90
+      }
+    ],
+    "blocs": [
+      {
+        "id": "confederate",
+        "name": "bloc.confederate"
+      },
+      {
+        "id": "army",
+        "name": "bloc.army"
+      },
+      {
+        "id": "moderates",
+        "name": "bloc.moderates"
+      },
+      {
+        "id": "radicals",
+        "name": "bloc.radicals"
+      },
+      {
+        "id": "war_democrats",
+        "name": "bloc.war_democrats"
+      },
+      {
+        "id": "border_unionists",
+        "name": "bloc.border_unionists"
+      },
+      {
+        "id": "peace_democrats",
+        "name": "bloc.peace_democrats"
+      }
+    ],
+    "standingOrderKinds": [
+      {
+        "id": "truce",
+        "name": "order_kind.truce"
+      },
+      {
+        "id": "prior_order",
+        "name": "order_kind.prior_order"
+      }
+    ]
+  },
+  "factions": [
+    {
+      "id": "union",
+      "name": "faction.union"
+    },
+    {
+      "id": "confederate",
+      "name": "faction.confederate"
+    }
+  ],
+  "scenarios": [
+    "march_1861"
+  ]
+}

@@ -1,0 +1,675 @@
+{
+  "formatVersion": 2,
+  "sources": [
+    {
+      "key": "APPLETONS",
+      "title": "Appletons' Cyclopaedia of American Biography (1887-89), vols 1-6",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org appletonscyclop01wilsuoft and companions; Wikisource. Period but secondary: an Appletons-only direction is a single source",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "BDAC",
+      "title": "Biographical Directory of the American Congress, 1774-1927 (GPO, 1928)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org in.ernet.dli.2015.74142, OCR; digits often garbled",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "BL",
+      "title": "Battles and Leaders of the Civil War (Century, 1887-88), vols 1-2",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org bwb_S0-BUN-264_1 and battlesleadersof02cent; participants' articles, memoirs with the author named",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "BULLOCH",
+      "title": "J. D. Bulloch, The Secret Service of the Confederate States in Europe (1883)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; own memoir",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CEN1860-POP",
+      "title": "J. C. G. Kennedy, Population of the United States in 1860 (GPO, 1864)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org populationofusin00kennrich (University of California copy), OCR; used to check county names",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CEN1860-RR",
+      "title": "Statistics of the United States ... in 1860 (GPO, 1866), Miscellaneous Statistics, \"Railroads\"",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org statisticsunite00goog (Google-digitised), OCR. The scan's front matter asks for non-commercial use and no automated querying: a request, not a licence, and only facts are taken; cite the federal census.gov PDF in a release pack (map draft README)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CHANDLER-OS",
+      "title": "Zachariah Chandler: An Outline Sketch of His Life and Public Services (1880)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; admiring biography",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CHASE-D",
+      "title": "S. P. Chase, Diary and Correspondence (Annual Report of the American Historical Association for 1902, vol. 2, 1903)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CHESNUT",
+      "title": "M. B. Chesnut, A Diary from Dixie (1905 edition)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org diaryfromdixieas00chesiala; the 1905 text was revised",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "COX-3DEC",
+      "title": "S. S. Cox, Union-Disunion-Reunion (1885)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; own memoir",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "Callahan",
+      "title": "E. W. Callahan, List of Officers of the Navy of the United States and of the Marine Corps, 1775-1900 (1901)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org listofofficersof00unit, OCR (Navy Department compilation)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CongDir37",
+      "title": "Congressional Directory, 37th Congress, 2nd session (1861)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org congressionaldirunit, OCR",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "Cullum",
+      "title": "G. W. Cullum, Biographical Register of the Officers and Graduates of the U.S. Military Academy, 2nd ed. (1879) and 3rd ed. (1891)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org biographicalregi01cull, biographicalregi02cull, biographicalregi03bost, OCR; Thayer transcription of the 3rd ed. (people draft Part 1)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "DANA-RCW",
+      "title": "C. A. Dana, Recollections of the Civil War (1898)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; own memoir",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "DAVIS-RF",
+      "title": "J. Davis, The Rise and Fall of the Confederate Government (1881)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; advocacy, cited only for what the author claimed",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "DNB",
+      "title": "Dictionary of National Biography (1885-1900)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "Wikisource",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "Dyer",
+      "title": "Frederick H. Dyer, A Compendium of the War of the Rebellion (Des Moines, 1908)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org scan, OCR (oob draft README)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "FOULKE-MORTON",
+      "title": "W. D. Foulke, Life of Oliver P. Morton (1899)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; admiring biography",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "GRANT-PM",
+      "title": "U. S. Grant, Personal Memoirs (1885-86)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "Gutenberg 4367; archive.org; own memoir",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "GREELEY-RBL",
+      "title": "H. Greeley, Recollections of a Busy Life (1868)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; own memoir",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "HAY-D",
+      "title": "Letters of John Hay and Extracts from Diary (1908), vol. 1",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org lettersofjohnhay01hayj",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "HR-37-2-2",
+      "title": "House of Representatives, 37th Congress, 2nd session, Report No. 2, Government Contracts (1862)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org governmentcontra00wash, OCR",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "Heitman",
+      "title": "Francis B. Heitman, Historical Register and Dictionary of the United States Army, 1789-1903 (GPO, 1903), vols 1-2",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org historicalregist01heitrich and historicalregist02heitrich, OCR",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "JCCS",
+      "title": "Journal of the Congress of the Confederate States of America, 1861-1865 (Senate Doc. 234, GPO, 1904-05)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org journalofcongres00conf and journalofcongres02confiala, OCR",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "JCCW",
+      "title": "Report of the Joint Committee on the Conduct of the War (1863), parts 1-3",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org reportjointcomm01wargoog and reportjointcomm03wargoog, OCR",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "JOHNSTON-1874",
+      "title": "J. E. Johnston, Narrative of Military Operations (1874)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; advocacy, cited only for what the author claimed",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "JONES",
+      "title": "J. B. Jones, A Rebel War Clerk's Diary (1866)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org arebelwarclerks01jonegoog; hostile to Benjamin and Cooper",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "JORDAN-PRYOR-1868",
+      "title": "J. Jordan and J. P. Pryor, The Campaigns of Lieut.-Gen. N. B. Forrest (1868)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; admiring biography",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "JULIAN-PR",
+      "title": "G. W. Julian, Political Recollections (1884)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; own memoir",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "LANE-0.3",
+      "title": "Lane 0.3 import (this lane): design parameters and modelling rules, named as such in notes/lane-0.3-union-data.md",
+      "kind": "own-work",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "notes/lane-0.3-union-data.md (this repository)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "LEE-1904",
+      "title": "R. E. Lee Jr., Recollections and Letters of General Robert E. Lee (1904)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; family compilation",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "LINCOLN",
+      "title": "Lincoln letters, as read through the sources the people draft names in its Part 2",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "people draft Part 2 says where each text was read",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "LLOYD1856",
+      "title": "James T. Lloyd, Lloyd's Steamboat Directory, and Disasters on the Western Waters (Cincinnati, 1856)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org lloydssteamboatd00lloy (Library of Congress copy), OCR; the distance tables are column-scrambled",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "LONGSTREET-1896",
+      "title": "J. Longstreet, From Manassas to Appomattox (1896)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; own memoir",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "MAP-LANE",
+      "title": "Map data lane (2026-11-14): the authored graph, sea zones, river reaches, off-map boxes and road edges (from county adjacency, a check and never a source), with the lengths computed in the map draft README",
+      "kind": "own-work",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "packs/union-1861/source/drafts/map (this repository)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "MCCLELLAN-OS",
+      "title": "G. B. McClellan, McClellan's Own Story (1887)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; own memoir",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "MO-AR-1861",
+      "title": "Mobile and Ohio Railroad Co., Annual Report as of 1 April 1861 (President Milton Brown; Chief Engineer L. J. Fleming, 6 May 1861)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "transcription on csa-railroads.com (company report of 1861)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NASON-WILSON",
+      "title": "E. Nason and T. Russell, Life and Public Services of Henry Wilson (1876)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; admiring biography",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NEWTON-LYONS",
+      "title": "Lord Newton, Lord Lyons (1913)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; Gutenberg 43317; partisan",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NH",
+      "title": "J. G. Nicolay and J. Hay, Abraham Lincoln: A History (Century, 1890)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org abrahamlincolnhi03nico, johnnicolayabe03nicorich and companions; Lincoln's secretaries, so own-side",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NOTE-confederate-side",
+      "title": "Project research note docs/research/2026-11-14-confederate-side.md (a pointer to primary documents, never the source of a fact)",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "docs/research/2026-11-14-confederate-side.md",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NOTE-map-extent-size-sources",
+      "title": "Project research note docs/research/2026-11-14-map-extent-size-sources.md (a pointer to primary documents, never the source of a fact)",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "docs/research/2026-11-14-map-extent-size-sources.md",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NOTE-march-1861-facts",
+      "title": "Project research note docs/research/2026-11-14-march-1861-facts.md (a pointer to primary documents, never the source of a fact)",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "docs/research/2026-11-14-march-1861-facts.md",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NOTE-secession-winter-1861",
+      "title": "Project research note docs/research/2026-11-14-secession-winter-1861.md (a pointer to primary documents, never the source of a fact)",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "docs/research/2026-11-14-secession-winter-1861.md",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NOTE-union-1861-62",
+      "title": "Project research note docs/research/2026-11-14-union-1861-62.md (a pointer to primary documents, never the source of a fact)",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "docs/research/2026-11-14-union-1861-62.md",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NOTE-union-navy",
+      "title": "Project research note docs/research/2026-11-14-union-navy.md (a pointer to primary documents, never the source of a fact)",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "docs/research/2026-11-14-union-navy.md",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NOTE-union-politics",
+      "title": "Project research note docs/research/2026-11-14-union-politics.md (a pointer to primary documents, never the source of a fact)",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "docs/research/2026-11-14-union-politics.md",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NOTE-union-war-economy",
+      "title": "Project research note docs/research/2026-11-14-union-war-economy.md (a pointer to primary documents, never the source of a fact)",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "docs/research/2026-11-14-union-war-economy.md",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NYT-1861-03-06",
+      "title": "The New York Times, 6 March 1861: the Washington dispatch of 5 March reporting the cabinet nominations confirmed (cited by research note march-1861-facts, question 10)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org sim_new-york-times_the-new-york-times_1861-03-06_10_2950 (the note read it on 2026-11-14)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NavyReg1861",
+      "title": "Register of the Commissioned and Warrant Officers of the Navy, corrected to 1 January 1861 (GPO)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org scan, OCR (oob draft README)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "OOB-LANE",
+      "title": "Order-of-battle data lane (2026-11-14): the posts, force blocks and tenures of 4 March to 15 April 1861",
+      "kind": "own-work",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "packs/union-1861/source/drafts/oob (this repository)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "OR",
+      "title": "The War of the Rebellion: Official Records of the Union and Confederate Armies (GPO, 1880-1901)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org volume scans, OCR, and civilwar.com transcriptions (identifiers by volume in the three drafts READMEs); page numbers from running heads can drift by one page",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "ORN",
+      "title": "Official Records of the Union and Confederate Navies, Series I vols 1 and 4, Series II vol. 1 (GPO, 1894-1921)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org volume scans, OCR (oob draft README)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "PEARSON-ANDREW",
+      "title": "H. G. Pearson, Life of John A. Andrew (1904)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; admiring biography",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "PIERCE-SUMNER",
+      "title": "E. L. Pierce, Memoir and Letters of Charles Sumner (1893)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; admiring biography",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "PRFA",
+      "title": "Papers Relating to Foreign Affairs (December 1861 and December 1862 volumes)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org papersrelatingto00unit_0 and papersrelatingt00unit, OCR",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "REBREC",
+      "title": "Frank Moore, ed., The Rebellion Record, vol. 2 (1862)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org rebellionrecord0002fran, OCR",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "RICH",
+      "title": "J. D. Richardson, ed., A Compendium of the Messages and Papers of the Confederacy (1905), vol. 2",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org compilationofmes02conf, OCR; cited by dispatch date",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "RIDDLE-WADE",
+      "title": "A. G. Riddle, Life of Benjamin F. Wade (1886)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; admiring biography",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "SHERMAN-M",
+      "title": "W. T. Sherman, Memoirs (1875)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "Gutenberg 4361; archive.org; own memoir",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "STEPHENS",
+      "title": "A. H. Stephens, speech at Savannah, 21 March 1861 (the \"Cornerstone\" speech), newspaper report",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "a transcription of the period newspaper text",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "SecNav1860",
+      "title": "Report of the Secretary of the Navy (Toucey), December 1860, in the 36th Congress, 2nd session printing of the Presidents message (Bowman, 1860)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org scan, OCR (oob draft README)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "SecNav1861",
+      "title": "Lincoln's message of 4 July 1861 with the reports of the Secretaries of War and the Navy (Welles's report: the 4 March snapshot), 37th Congress 1st session",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org scan, OCR (oob draft README)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "WEED-MEM",
+      "title": "T. Weed, Autobiography (1883), with Barnes, Memoir (1884)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; own memoir",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "WELLES-D",
+      "title": "Diary of Gideon Welles (1911), vol. 1",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org diaryofgideonwel0001unse_i9v3; Welles is hostile to Seward, Chase and Stanton",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "WOODBURN-STEVENS",
+      "title": "J. A. Woodburn, Life of Thaddeus Stevens (1913)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org; admiring biography",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "Wright",
+      "title": "Marcus J. Wright, General Officers of the Confederate Army (Neale, 1911)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org generalofficers00wrigrich, OCR",
+      "licencePage": null,
+      "licenceReadOn": null
+    }
+  ]
+}

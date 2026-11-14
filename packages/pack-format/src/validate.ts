@@ -211,7 +211,11 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     if (ka !== undefined && kb !== undefined) {
       const ends = [ka, kb];
       if ((e.type === 'road' || e.type === 'rail') && ends.some(isWater)) err('edge-end-kind', at('type'), `a ${e.type} edge cannot touch a ${isWater(ka) ? ka : kb} region`, 'land, key point or off-map ends');
-      if (e.type === 'sea' && !ends.some((k) => k === 'sea' || k === 'off_map')) err('edge-end-kind', at('type'), 'a sea edge must touch a sea region or an off-map box', 'at least one sea or off-map end');
+      // A harbour channel joins two key points (a fort and its city) with no sea zone between them (lane 0.3: the Union 1861 draft has two).
+      const harbour = ka === 'key_point' && kb === 'key_point';
+      if (e.type === 'sea' && !harbour && !ends.some((k) => k === 'sea' || k === 'off_map')) {
+        err('edge-end-kind', at('type'), 'a sea edge must touch a sea region or an off-map box, or join two key points on one harbour', 'at least one sea or off-map end, or two key points');
+      }
       if (e.type === 'river' && ends.includes('off_map')) err('edge-end-kind', at('type'), 'a river edge cannot reach an off-map box', 'land, key point, river or sea ends');
     }
     if (e.type === 'rail') {
