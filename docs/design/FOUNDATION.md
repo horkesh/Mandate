@@ -180,7 +180,7 @@ Module map, adapted from the AWWV-architecture note:
 | `economy` | State | money, men, munitions, rail capacity at their holders |
 | `situations` | State | cause predicates, offers, decisions |
 | `politics` | State + Derived | blocs, mandate, elections, verdict |
-| `planner` | Derived | candidate plans for a goal, drafted on request |
+| `planner` | pure function | drafts candidate plans for a goal on request; the drafts are saved as State by `plans` on the request day, because a later call would see a changed map (planner-design note) |
 | `infrastructure` | State | edge condition (damage and repair) |
 | `tick` | — | the fixed day order and the decision-point signal |
 | `log`, `serialize` | — | command log, snapshots, replay, canonical JSON, state hash |
@@ -279,6 +279,11 @@ Lanes, sized from `docs/LANES.md`:
 | 0.8 | Headless runner with liveness, hashes and resume check; the Phase 0 done check | 0.3–0.7 | Sonnet, high |
 | 0.9 | Planner spike: design and prototype candidate-plan drafting (including a two-commander pincer and a supply-aware route) on the testbed graph; report what works (0030) | 0.4 | Opus, high |
 | 0.10 | Map tripwire spike: bake the first 40 regions in tiles with PixiJS, draw one curved region name, test hit-testing; reopen MapLibre for labels if they would cost more than a week (0035) | 0.3's first 40 regions | Sonnet, high |
+
+Notes for lanes not yet started, from research:
+- **0.2:** the testbed pack's graph needs the features the planner spike tests: a direct road and a longer flank route, limited rail, a river, a fort, two posts around a salient, and a depot (`docs/research/2026-11-14-planner-design.md`).
+- **0.6:** a commander's overestimate of the enemy lives in belief derivation, so his dispatches and his plans inflate the enemy by the same amount (planner-design note).
+- **0.9:** builds on `docs/research/2026-11-14-planner-design.md` and its spike plan and success criteria.
 
 Lane 0.1 starts by upgrading to Vitest 5 and TypeScript 7 and adds a dependency-licence check (0035). Lane 0.2 also covers several scenario starts per pack, published schemas with readable validation errors, and string tables for all player text (0030). The Union data in lane 0.3 starts at the March 1861 inauguration (0028), and the world format reserves state fields and owners for weather, fortification and raids (0029).
 
