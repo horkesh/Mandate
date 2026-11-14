@@ -44,3 +44,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0038](0038-no-live-ai-on-steam-until-cleared.md) | No live AI in the Steam build until Valve clears bring-your-own-key | accepted |
 | [0039](0039-positioning-and-go-no-go.md) | Positioning, price and the go or no-go bands | accepted |
 | [0040](0040-first-month-revisions.md) | Revisions from the first-month walkthrough | accepted |
+| [0041](0041-clarifications-owners-and-wording.md) | Clarifications: owners for new state, business during a visit, and neutral option wording | accepted |

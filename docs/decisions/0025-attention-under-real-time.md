@@ -1,6 +1,6 @@
 # 0025: The president's attention is a weekly budget
 
-Status: accepted (2026-11-14). The foundation review found that attention (proposal P9; `attentionPerTurn` in the M2 kernel) vanished when turns became real time (0017). Recommended by the lead. Amended by 0040 (first-month walkthrough revisions).
+Status: accepted (2026-11-14). The foundation review found that attention (proposal P9; `attentionPerTurn` in the M2 kernel) vanished when turns became real time (0017). Recommended by the lead. Amended by 0040 (first-month walkthrough revisions). Amended by 0041 (clarifications).
 
 ## Context
 

@@ -1,6 +1,6 @@
 # 0030: Foundation commitments: scenario starts, packs as the modding format, string tables, playable at every phase, a planner spike
 
-Status: accepted (2026-11-14). Recommendations from the lead's foundation checklist; the owner takes recommendations by default. Amends the Phase 0 and Phase 1 plan in `docs/design/FOUNDATION.md` section 12.
+Status: accepted (2026-11-14). Recommendations from the lead's foundation checklist; the owner takes recommendations by default. Amends the Phase 0 and Phase 1 plan in `docs/design/FOUNDATION.md` section 12. Amended by 0041 (clarifications).
 
 ## Context
 

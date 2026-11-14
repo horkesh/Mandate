@@ -1,6 +1,6 @@
 # 0029: Seasons through commanders, sieges as operations, raids and insurgency, and a Confederacy on the same machinery
 
-Status: accepted (2026-11-14). The owner chose the lead's recommendation on all four questions.
+Status: accepted (2026-11-14). The owner chose the lead's recommendation on all four questions. Amended by 0041 (clarifications).
 
 ## Decision
 
