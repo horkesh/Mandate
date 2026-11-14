@@ -31,8 +31,12 @@ const MAP = forcesIndex({
 });
 const WORLD = indexComms(commsFixture(), MAP);
 
-function stateWith(control: Readonly<Record<string, Readonly<Record<string, number>>>>, blocks: readonly ForceBlockStart[]): State {
-  return createState(WORLD, { seed: 1, start: forcesStart(control, [], blocks) });
+/** A start, with the named blocks having marched in on day 1 (so they press for their region). */
+function stateWith(control: Readonly<Record<string, Readonly<Record<string, number>>>>, blocks: readonly ForceBlockStart[], marchedIn: readonly string[] = blocks.map((b) => b.id)): State {
+  const s = createState(WORLD, { seed: 1, start: forcesStart(control, [], blocks) });
+  const locations = { ...s.forceLocations };
+  for (const id of marchedIn) locations[B(id)] = { ...locations[B(id)]!, locSinceDay: 1 };
+  return { ...s, forceLocations: locations };
 }
 
 const ground = (s: State): MarchGround => ({ map: MAP, index: buildControlIndex(MAP, s.regionControl), network: INTACT_NETWORK, month: 6 });
@@ -47,9 +51,15 @@ describe('occupation: a side alone in held ground gains it day by day', () => {
   it('proposes control for the side present, cause occupation; no troops, no change (positive control)', () => {
     const s = stateWith(BASE, [block('a_1', { department: 'a_war', region: 'mid', strength: 3000 })]);
     const r = contest(ground(s), s);
-    expect(r.records).toEqual([{ region: 'mid', kind: 'occupation', sides: [{ faction: 'a', men: 3000, blocks: ['a_1'], unknown: [] }], gainer: 'a', deltaPermille: 100 }]);
+    expect(r.records).toEqual([{ region: 'mid', kind: 'occupation', sides: [{ faction: 'a', men: 3000, blocks: ['a_1'], pressing: ['a_1'], unknown: [] }], gainer: 'a', deltaPermille: 100 }]);
     expect(r.deltas).toEqual([{ region: R('mid'), faction: F('a'), deltaPermille: 100, cause: 'occupation' }]);
     expect(contest(ground(stateWith(BASE, [])), stateWith(BASE, [])).deltas).toEqual([]);
+  });
+
+  it('takes nothing with troops the start put there: garrisons hold, they do not press (positive control)', () => {
+    const garrison = stateWith(BASE, [block('a_1', { department: 'a_war', region: 'mid', strength: 3000 }), block('b_1', { department: 'b_war', region: 'mid', strength: 10 })], []);
+    const r = contest(ground(garrison), garrison);
+    expect(r).toEqual({ records: [], deltas: [], retreats: [] });
   });
 
   it('takes nothing on neutral ground: passing through a neutral government\'s land is not taking it (0055)', () => {

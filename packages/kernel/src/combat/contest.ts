@@ -14,7 +14,7 @@
  *   the gain comes out of the others' shares). Ground nobody controls is a
  *   neutral government's, and passing through it takes nothing (0055): taking
  *   it is a situation's work.
- * - **Contest.** Where two or more sides stand, the strongest (most men; a tie
+ * - **Contest.** Where two or more sides stand and one of them presses, the strongest (most men; a tie
  *   changes nothing) gains `contestPermille` times its margin over the next,
  *   `(s1 - s2) / s1`, a day (cause `combat`).
  * - **Retreat** (0019). A side whose share there, after today's deltas, is
@@ -47,6 +47,8 @@ export interface Presence {
   readonly faction: FactionId;
   readonly men: number;
   readonly blocks: readonly ForceBlockId[];
+  /** Blocks that marched in during play, and so press for the region. */
+  readonly pressing: readonly ForceBlockId[];
   /** Blocks whose strength no source gives, counted as none. */
   readonly unknown: readonly ForceBlockId[];
 }
@@ -80,7 +82,7 @@ export interface ContestResult {
 
 /** Each side's land troops standing (not marching, not aboard) in each region, by region then strength. */
 export function presenceByRegion(ground: MarchGround, state: State): Map<RegionId, Presence[]> {
-  const raw = new Map<RegionId, Map<FactionId, { men: number; blocks: ForceBlockId[]; unknown: ForceBlockId[] }>>();
+  const raw = new Map<RegionId, Map<FactionId, { men: number; blocks: ForceBlockId[]; pressing: ForceBlockId[]; unknown: ForceBlockId[] }>>();
   for (const id of (Object.keys(state.forceLocations) as ForceBlockId[]).sort(strictCompare)) {
     const loc = state.forceLocations[id]!;
     if (loc.locMarch !== null || loc.locAboard !== null) continue;
@@ -91,10 +93,11 @@ export function presenceByRegion(ground: MarchGround, state: State): Map<RegionI
     if (faction === null) continue;
     const byFaction = raw.get(loc.locRegion) ?? new Map();
     raw.set(loc.locRegion, byFaction);
-    const p = byFaction.get(faction) ?? { men: 0, blocks: [], unknown: [] };
+    const p = byFaction.get(faction) ?? { men: 0, blocks: [], pressing: [], unknown: [] };
     byFaction.set(faction, p);
     const men = state.forceBlockStates[id]!.fbStrength;
     p.blocks.push(id);
+    if (loc.locSinceDay > 0) p.pressing.push(id);
     if (men === null) p.unknown.push(id);
     else p.men += men;
   }
@@ -112,6 +115,8 @@ export function contest(ground: MarchGround, state: State, rules: ContestRules =
   const deltas: ControlDelta[] = [];
   const presence = presenceByRegion(ground, state);
   for (const [region, sides] of presence) {
+    // Nobody marched in: garrisons and armies where the start put them take nothing.
+    if (!sides.some((s) => s.pressing.length > 0)) continue;
     const shares = state.regionControl[region] ?? {};
     if (sides.length === 1) {
       const side = sides[0]!;
@@ -133,16 +138,18 @@ export function contest(ground: MarchGround, state: State, rules: ContestRules =
     records.push({ region, kind: 'contest', sides, gainer: first.faction, deltaPermille: delta });
     if (delta > 0) deltas.push({ region, faction: first.faction, deltaPermille: delta, cause: 'combat' });
   }
-  return { records, deltas, retreats: retreatsAfter(ground, state, presence, deltas) };
+  const contested = new Set(records.filter((r) => r.kind === 'contest').map((r) => r.region));
+  return { records, deltas, retreats: retreatsAfter(ground, state, presence, deltas, contested) };
 }
 
-function retreatsAfter(ground: MarchGround, state: State, presence: ReadonlyMap<RegionId, readonly Presence[]>, deltas: readonly ControlDelta[]): Retreat[] {
+/** Retreats from today's contested regions only: where nobody pressed, nobody is driven out. */
+function retreatsAfter(ground: MarchGround, state: State, presence: ReadonlyMap<RegionId, readonly Presence[]>, deltas: readonly ControlDelta[], contested: ReadonlySet<RegionId>): Retreat[] {
   const threshold = ground.map.world.rules.retreatControlPermille;
   // Shares after today's deltas, exactly as `control` will apply them (reused, never copied: FOUNDATION 11.11).
   const control = applyControl(ground.map, state, deltas).state.regionControl;
   const retreats: Retreat[] = [];
   for (const [region, sides] of presence) {
-    if (sides.length < 2) continue;
+    if (!contested.has(region)) continue;
     for (const side of sides) {
       const share = control[region]?.[side.faction] ?? 0;
       if (share >= threshold) continue;
