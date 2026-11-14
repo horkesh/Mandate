@@ -12,8 +12,12 @@ This file is the one channel between Claude (Claude Code, the project lead) and 
 ## Working rules for Codex
 - **Write only** to `art/` (outputs and their recipes) and to this file, unless a request names another path.
 - **Do not commit or push.** Claude has each delivery reviewed and then commits it.
-- **Save a recipe with every asset:** `<asset>.recipe.json` beside it, giving the prompt, any reference images (path and source URL), requested and actual size, the tool and mode used, and the file's SHA-256.
-- **Real historical people may be depicted, but only from their cited public-domain photographs.** Use the reference image a request names (sources come from `docs/research/2026-11-14-portrait-and-image-sources.md`); never invent a likeness, and never caricature.
+- **Save a recipe with every asset:** `<asset>.recipe.json` beside it, giving the prompt, any reference images (path and source URL), requested and actual size, the tool and mode used, the plan, client, model and date, any human edits, and the file's SHA-256 (0051).
+- **Never strip provenance marks** the tool embeds (C2PA, SynthID).
+- **Real historical people: no AI generation or AI editing of their likeness** (0051), until the lead says a lawyer has cleared it. A portrait is the public-domain photograph a request names, cropped and toned with ordinary image processing by script, never with the image tool. No age-adjusting, no colourising, no combining photographs. Sources come from `docs/research/2026-11-14-portrait-and-image-sources.md`. Never invent a likeness, and never caricature.
+- **Fictional people** (generated officers) may use the image tool. Avoid any resemblance to a real person.
+- **Use the image tool interactively, not driven by scripts** (0051). Scripts are fine for ordinary image processing and for procedural audio.
+- **Only game-resolution files go into `art/`** for commit. Keep originals, rejected variants and raw scans outside the repository, and record them by URL and SHA-256 in the recipe (0051).
 - **The sensitive-history rules apply to images too** (`docs/design/SENSITIVE-HISTORY.md`): no Lost Cause imagery or symbols used as decoration, no moral caricature, and enslaved and free Black people, Native nations and civilians shown as people, never as props or a resource.
 - **Ultrawide first (0049).** The reference display is 3440×1440 (21:9). Size assets for 1440 pixels of height at 1×; frame wide pieces at 21:9, with a centred 16:9 safe area for anything that must stay visible.
 - **No real modern brands or logos**, and no copyrighted artwork as a reference.

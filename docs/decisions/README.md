@@ -51,6 +51,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0045](0045-the-steward-integrates.md) | The steward integrates; reviews are lanes | accepted; amended by 0047 |
 | [0046](0046-gate-checklist-and-situations-catalogue.md) | The sensitive-history checklist and the situations catalogue are accepted | accepted |
 | [0047](0047-a-standing-reviewer.md) | A standing reviewer lane | accepted |
-| [0048](0048-assets-are-made-by-codex.md) | Assets are made by Codex, through one coordination file | accepted |
+| [0048](0048-assets-are-made-by-codex.md) | Assets are made by Codex, through one coordination file | accepted; amended by 0051 |
 | [0049](0049-ultrawide-first.md) | The game is designed for ultrawide displays first (3440×1440 reference) | accepted |
 | [0050](0050-world-format-v2.md) | World format v2: the pack format, its validator and generator, and what becomes State at scenario start | accepted |
+| [0051](0051-codex-output-rules.md) | Rules for Codex output: no AI likenesses of real people, game-resolution assets only, and full provenance | accepted |

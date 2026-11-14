@@ -1,6 +1,6 @@
 # 0048: Assets are made by Codex, through one coordination file
 
-Status: accepted (2026-11-14). The owner: commissioning "can be done by Codex. He made all the assets for my other games too", through one coordination file that Claude writes requests into and Codex reports in. Mirrors the owner's other projects (Far Postings' `CODEX.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.
+Status: accepted (2026-11-14). The owner: commissioning "can be done by Codex. He made all the assets for my other games too", through one coordination file that Claude writes requests into and Codex reports in. Mirrors the owner's other projects (Far Postings' `CODEX.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amended by 0051 (no AI likenesses of real people until a lawyer clears it; game-resolution assets only; full provenance).
 
 ## Decision
 
