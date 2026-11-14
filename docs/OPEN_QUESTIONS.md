@@ -50,13 +50,14 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - Every new State field needs an `OWNED_FIELDS` entry in `packages/kernel/src/ownership.ts`; owned keys must be unique across State records (lane 0.1 hand-over, `notes/lane-0.1-foundations.md`).
 - Edges and regions (navy note): river and sea edges need depth by season and an obstruction state; fort regions need a passage-versus-reduction flag; naval bases are key points; blockade-running ports are off-map boxes. A support request needs three terms: the commander's compliance, his department's consent, and physical limits (depth, season, passage).
 - From lane 0.6: two World models exist (lane 0.2's `world` and lane 0.6's stand-in); unify them when M2 is replaced.
+- From lane 0.6: the testbed save fixture (`packages/cli/test/fixtures/saves/testbed-seats-day40.json`) fails its resume test on any new State field. Before a public build, regenerate it with `npx tsx tools/make-save-fixture.ts` and say so in the commit; after one, it needs a schema bump and a migration.
 - Forces need a stragglers and absent field (rejoin over days); writer-table rows are needed for battle records (owner `combat`) and for fortification, which 0029 does not give a writer (combat note).
 
 **Lane 0.6 (seats)**
-- Split the "informal source" route into sub-types: 44 of the catalogue's 60 situations use it (`SITUATIONS-1861-62.md`; whether FOUNDATION 5 or 8 already does so is unclear).
 - Cross-service orders are a refusal path: compliance must weigh which department an order comes from (Captain Adams refused Scott's order partly for that reason); Seward as shadow executive is a case for seat initiative (0040) (March facts note).
 
 **Lane 0.7 (situations)**
+- From lane 0.6: options that issue orders need a kernel path, since the kernel takes orders only from a principal, by courier, special messenger or wire. The ruling goes into decision 0052 (the lead is writing it).
 - Event caps defer rather than drop (AWWV lane; also listed above).
 - Authors follow `SENSITIVE-HISTORY.md` over the older gate tables in the secession (6.8), union-politics and confederate-side (4.7) notes (0046).
 - Test fixtures under `packages/` use the fictional testbed register, never Civil War terms (`check:boundary` flags them).
@@ -64,9 +65,13 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - Unverified: the FIRST-MONTH document may still date the Pickens situation 4 March; the author of the March 1861 situations checks it against 0042 (situations start on 5 March).
 
 **Lane 0.8 (headless runner)**
+- From lane 0.6: `playDays` and `replay` hash every day with no switch, so add a checkpoints-only option for Monte Carlo runs (0044); normal play leaves the `freeze` option off; `compare-runs` matches on pack and `kernel`, so a Phase 0 runner needs its own `kernel` value or must replace the `run:seats` step.
 - Phase 0's day tick must hash each day with `canonicalHash` (lane 0.5 or 0.8); M2 hashes per turn.
 - The liveness gate is a skeleton (12 M2 mechanics at minFires 0); lane 0.8 sets the Phase 0 bands.
 - The testbed reference run never fires audience, honour or pressure verbs, rivals or broken promises, so the M2 people core is barely exercised headless; it needs a script or rule seat that does (also for Phase 1's people recast).
+
+**Any lane that adds phases to the tick**
+- The standing-goal menus are built first, from the morning's State (lane 0.6; also in 0052).
 
 **Tooling, small, after lane 0.1 (lead queued them)**
 - An `npm run check` check that every decision file is in the index and the index's amendment notes match each record's Status line (hard rule 7; my own repeat duty).
