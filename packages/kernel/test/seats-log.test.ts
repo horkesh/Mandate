@@ -316,12 +316,14 @@ describe('ownership of the new State (0044)', () => {
       'headquarters:movement',
       'knowledgeBySeat:knowledge',
       'messagesInTransit:messages',
+      'regionControl:control',
       'reportTruth:knowledge',
       'seatAssignments:seats',
       'standingGoals:plans',
       'stateDay:tick',
     ]);
     expect(IMMUTABLE_STATE_KEYS).toContain('gameSeed');
+    expect(IMMUTABLE_STATE_KEYS).toContain('calendarStart');
   });
 
   it('declares every seats mechanic once, and a reference game fires most of them', () => {

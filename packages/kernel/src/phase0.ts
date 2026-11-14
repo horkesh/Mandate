@@ -32,3 +32,5 @@ export * from './tick/context.ts';
 export * from './tick/freeze.ts';
 export * from './tick/setup.ts';
 export * from './tick/tick.ts';
+// Lane 0.4: control.
+export * from './control/control.ts';
