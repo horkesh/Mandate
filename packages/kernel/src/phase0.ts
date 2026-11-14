@@ -1,0 +1,34 @@
+/**
+ * The Phase 0 kernel's seats layer (lane 0.6), exported as the `phase0`
+ * namespace from the package index while the M2 kernel still owns names such
+ * as `viewFor`, `Message` and `Post`. When M2 retires the namespace flattens.
+ *
+ * The shell (the CLI runners) uses this; player-facing code and seats use
+ * only `@mandate/kernel/seat-api`.
+ */
+export type { State } from './root-state.ts';
+export * from './standin/world.ts';
+export * from './standin/traits.ts';
+export * from './standin/from-scenario.ts';
+export * from './knowledge/report.ts';
+export * from './knowledge/templates.ts';
+export * from './knowledge/truth.ts';
+export * from './knowledge/knowledge.ts';
+export * from './knowledge/beliefs.ts';
+export * from './messages/latency.ts';
+export * from './messages/transit.ts';
+export * from './plans/goal.ts';
+export * from './plans/standing.ts';
+export * from './movement/headquarters.ts';
+export * from './seats/api.ts';
+export * from './seats/seats.ts';
+export * from './seats/requests.ts';
+export * from './view/types.ts';
+export * from './view/view.ts';
+export * from './log/commands.ts';
+export * from './log/log.ts';
+export * from './log/session.ts';
+export * from './tick/context.ts';
+export * from './tick/freeze.ts';
+export * from './tick/setup.ts';
+export * from './tick/tick.ts';
