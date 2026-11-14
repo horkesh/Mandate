@@ -562,18 +562,8 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     if (!locales.has(locale)) sink.warn('missing-string-table', 'pack.json', 'locales', `no string table for locale "${locale}"`);
   }
 
-  // ---- NFC over every string in every pack file (decision 0044)
-  const nfc = (file: string, value: unknown, path: string) => {
-    walkStrings(value, path, (s, p) => {
-      if (s.normalize('NFC') !== s) sink.error('not-nfc', file, p, 'text is not in Unicode NFC', 'NFC-normalised text (decision 0044)');
-    });
-  };
-  nfc('data/world.json', world, '');
-  for (const s of scenarios) nfc(`data/scenarios/${s.id}.json`, s, '');
-  nfc('PROVENANCE.json', provenance, '');
-  nfc('pack.json', manifest, '');
-  for (const tables of locales.values()) for (const { file, table } of tables) nfc(file, table, '');
-
+  // NFC (decision 0044) is checked where text is read, in `readJson` and the
+  // CSV reader, so each problem points at the cell or JSON path a person edits.
   return sink.issues;
 }
 

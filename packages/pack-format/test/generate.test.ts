@@ -59,6 +59,33 @@ describe('the generator', () => {
   });
 });
 
+describe('tenures', () => {
+  it("cite the post they fill: a holder row's citations join the post's provenance, without repeats", () => {
+    const files = withFile('source/scenarios/start/holders.csv', replaceOnce('red_top,red_chief,no,1890,,DESIGN,', 'red_top,red_chief,no,1890,,REG A p.7;DESIGN,'));
+    const post = generatePack(filesOf(files)).pack!.scenarios[0]!.posts.find((p) => p.id === 'red_top')!;
+    expect(post.provenance).toEqual([{ source: 'DESIGN', at: null }, { source: 'REG A', at: 'p.7' }]);
+  });
+});
+
+describe('text as people save it', () => {
+  it('reads a table saved with a byte-order mark ("CSV UTF-8" from a spreadsheet) exactly as one without (review N3)', () => {
+    const withBom = withFile('source/world/regions.csv', (t) => `﻿${t}`);
+    const plain = generatePack(filesOf(fixture()));
+    const bom = generatePack(filesOf(withBom));
+    expect(errorsOf(bom.issues)).toEqual([]);
+    expect([...bom.outputs]).toEqual([...plain.outputs]);
+  });
+
+  it('refuses committed data that is not NFC when loading without sources', () => {
+    const { outputs } = generatePack(filesOf(fixture()));
+    const committed = new Map([...fixture()].filter(([p]) => !p.startsWith('source/')));
+    for (const [p, t] of outputs) committed.set(p, t);
+    committed.set('data/strings/en.json', committed.get('data/strings/en.json')!.replace('"Alpha"', '"Alpha Café"'));
+    const loaded = loadPack(filesOf(committed));
+    expect(loaded.issues.filter((i) => i.kind === 'not-nfc').map((i) => i.file)).toEqual(['data/strings/en.json']);
+  });
+});
+
 describe('the staleness check (FOUNDATION 11.7)', () => {
   const outputs = new Map([
     ['data/world.json', '{}\n'],

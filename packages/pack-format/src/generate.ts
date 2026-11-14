@@ -54,7 +54,7 @@ import {
   StringTableSchema,
   WorldSchema,
 } from './schemas.ts';
-import { locateInData, type Locate, type PackData, validatePack, type Where } from './validate.ts';
+import { locateInData, type Locate, type PackData, validatePack, walkStrings, type Where } from './validate.ts';
 
 /** Read access to one pack's files, by pack-relative path with forward slashes. */
 export interface PackFiles {
@@ -115,6 +115,9 @@ export function readJson<S extends z.ZodType>(files: PackFiles, path: string, sc
     sink.error('json-syntax', path, '', `not valid JSON: ${(e as Error).message}`);
     return null;
   }
+  walkStrings(raw, '', (s, at) => {
+    if (s.normalize('NFC') !== s) sink.error('not-nfc', path, at, 'text is not in Unicode NFC', 'NFC-normalised text (decision 0044)');
+  });
   return shapeCheck(schema, raw, (p) => ({ file: path, at: zodPath(p) }), sink);
 }
 
@@ -275,6 +278,11 @@ function readTable(files: PackFiles, path: string, spec: TableSpec, sink: IssueS
   for (const col of spec.columns) {
     if (col.required && !table.header.includes(col.name)) sink.error('missing-column', path, '', `required column "${col.name}" is missing`, spec.columns.map((x) => x.name).join(', '));
   }
+  const nfc = (text: string, at: string) => {
+    if (text.normalize('NFC') !== text) sink.error('not-nfc', path, at, 'text is not in Unicode NFC', 'NFC-normalised text (decision 0044)');
+  };
+  table.header.forEach((h, i) => nfc(h, `column ${i + 1}`));
+  for (const r of table.rows) r.cells.forEach((cell, i) => nfc(cell, `row ${r.line}, column ${table.header[i] ?? i + 1}`));
   const rows = new Rows(path, true);
   for (const r of table.rows) {
     const cells = new Map<string, string>();
@@ -617,6 +625,10 @@ export function generatePack(files: PackFiles): GenerateResult {
       target.rec.acting = r.bool('acting');
       if (person === null && r.unknowns.includes('holder')) target.rec.unknowns.push('holder');
       target.origin.nested.set('holder', r.origin());
+      // Who held the post at the start is cited with the post (review N6); a release pack must cite it.
+      const tenureCites = cites(r);
+      if (tenureCites.length === 0 && manifest.status === 'release') r.error('holder-without-citation', 'sources', `who held "${target.rec.id}" at the start is not cited`, 'a citation: a release pack cites every holder');
+      for (const c of tenureCites) if (!target.rec.provenance.some((x) => x.source === c.source && x.at === c.at)) target.rec.provenance.push(c);
     }
     for (const r of st('postLinks').rows) {
       const target = attach(r, 'post');
@@ -745,6 +757,11 @@ export function generatePack(files: PackFiles): GenerateResult {
         }
       }
       return { file: origin.file, at: `row ${origin.line}${origin.id ? ` (${origin.id})` : ''}${field ? `, column ${columnFor(field)}` : ''}` };
+    }
+    // A record that is not there (a missing control row): point at the table it belongs in, never at data/.
+    if (where.scope === 'world' && where.table in WORLD_TABLES) return { file: `source/world/${WORLD_TABLES[where.table as keyof typeof WORLD_TABLES].file}`, at: '' };
+    if (where.scope.startsWith('scenario:') && where.table in SCENARIO_TABLES) {
+      return { file: `${scenarioSourceDir(where.scope.slice('scenario:'.length))}/${SCENARIO_TABLES[where.table as keyof typeof SCENARIO_TABLES].file}`, at: '' };
     }
     return locateInData(where);
   };

@@ -76,7 +76,16 @@ export interface PostLink {
   readonly post: PostId;
 }
 
-/** A post's department changing on a date (a flotilla moved from one ministry to another). Applied by `command`. */
+/**
+ * A post's department changing on a date (a flotilla moved from one ministry
+ * to another). Applied by `command`.
+ *
+ * LABELLED SCHEDULED CHANGE (FOUNDATION section 11: a railroad we cannot
+ * avoid is labelled in code and docs). It moves an administrative line on a
+ * fixed date and decides no outcome; it can never move a post to another side
+ * (the validator refuses that). Where play should decide the date, author it
+ * as a situation instead and leave this list empty.
+ */
 export interface DepartmentChange {
   readonly on: string;
   readonly department: DepartmentId;
@@ -191,4 +200,5 @@ export const START_OWNERS: Readonly<Record<string, string>> = Object.freeze({
   'forceBlocks (strength, stores, detachments, non-combatants)': 'forces',
   'forceBlocks.post': 'command',
   'people ranks at the start date': 'people',
+  'weather (reserved: nothing at a start yet)': 'weather',
 });

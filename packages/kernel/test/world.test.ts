@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { IdError, toId } from '../src/ids.ts';
-import { edgeDays, edgesOf, indexWorld, otherEnd, worldHash, type EdgeRecord, type World } from '../src/world/index.ts';
+import { KERNEL_MODULES, OWNED_FIELDS, type KernelModule, type OwnedField } from '../src/ownership.ts';
+import { edgeDays, edgesOf, indexWorld, otherEnd, START_OWNERS, worldHash, type EdgeRecord, type World } from '../src/world/index.ts';
 
 const r = (id: string) => toId('region', id);
 const edge = (id: string, a: string, b: string, lengthDays = 1, lengthDaysBA: number | null = null): EdgeRecord => ({
@@ -44,6 +45,32 @@ const world = (edges: EdgeRecord[]): World => ({
   depots: [],
   weatherZones: [],
   people: [],
+});
+
+/** Every writer named for a start part is a State module or writer that owns at least one field (review N4). */
+function startOwnerProblems(owners: Readonly<Record<string, string>>, modules: readonly KernelModule[], fields: readonly OwnedField[]): string[] {
+  return Object.entries(owners).flatMap(([part, writer]) => {
+    const m = modules.find((x) => x.name === writer);
+    if (!m) return [`${part}: "${writer}" is not a kernel module`];
+    if (m.layer !== 'State' && m.layer !== 'writer') return [`${part}: "${writer}" is ${m.layer}, which writes nothing`];
+    if (!fields.some((f) => f.writer === writer)) return [`${part}: "${writer}" owns no field in OWNED_FIELDS`];
+    return [];
+  });
+}
+
+describe('START_OWNERS agrees with the module map and the field table', () => {
+  it('names only State modules that own a field', () => {
+    expect(startOwnerProblems(START_OWNERS, KERNEL_MODULES, OWNED_FIELDS)).toEqual([]);
+  });
+
+  it('flags an unknown module, a module that writes nothing, and one that owns nothing (positive control)', () => {
+    expect(startOwnerProblems({ a: 'nowhere', b: 'planner', c: 'view' }, KERNEL_MODULES, OWNED_FIELDS)).toEqual([
+      'a: "nowhere" is not a kernel module',
+      'b: "planner" is pure, which writes nothing',
+      'c: "view" is Derived, which writes nothing',
+    ]);
+    expect(startOwnerProblems({ d: 'weather' }, KERNEL_MODULES, [])).toEqual(['d: "weather" owns no field in OWNED_FIELDS']);
+  });
 });
 
 describe('the World index (world/graph)', () => {

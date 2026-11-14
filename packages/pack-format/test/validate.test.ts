@@ -22,6 +22,13 @@ const neutral = (post = 'grey_top,Grey Governor,chief,g_gov,,beta,,,,DESIGN,', b
 const INVENTED = 'pool_officer,Pool Officer,yes,red,officer,1830,1890,above,average,low,low,bold,,,DESIGN,';
 const allowInvented = () =>
   withFile('pack.json', (t) => JSON.stringify({ ...(JSON.parse(t) as object), allowsInventedPeople: true }));
+/** A copy of the fixture with one JSON file edited as an object. */
+const editJson = <T,>(path: string, change: (value: T) => unknown) =>
+  withFile(path, (t) => {
+    const value = JSON.parse(t) as T;
+    change(value);
+    return JSON.stringify(value);
+  });
 const renamed = (from: string, to: string) => {
   const base = fixture();
   return withNewFile(to, base.get(from)!, withoutFile(from, base));
@@ -126,7 +133,7 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'a rank junior to the one before', files: () => withFile(`${W}/people.csv`, replaceOnce('junior:1840;senior:1850-05', 'senior:1840;junior:1850-05')), kind: 'rank-demotion', file: `${W}/people.csv`, severity: 'warning' },
   // scenario starts
   { name: 'control over 1000', files: () => withFile(`${S}/control.csv`, replaceOnce('red:600;blue:300', 'red:600;blue:500')), kind: 'control-sum', file: `${S}/control.csv` },
-  { name: 'a land region without control', files: () => withFile(`${S}/control.csv`, replaceOnce('port,blue:1000,', '')), kind: 'control-missing', file: 'data/scenarios/start.json' },
+  { name: 'a land region without control', files: () => withFile(`${S}/control.csv`, replaceOnce('port,blue:1000,', '')), kind: 'control-missing', file: `${S}/control.csv` },
   { name: 'a chain of command with a loop', files: () => withFile(`${S}/posts.csv`, replaceOnce('red_top,Red Chief,chief,r_war,,', 'red_top,Red Chief,chief,r_war,red_army,')), kind: 'chain-cycle', file: `${S}/posts.csv` },
   { name: 'a chain across factions', files: () => withFile(`${S}/posts.csv`, replaceOnce('red_army,Red Army,army,r_war,red_top,', 'red_army,Red Army,army,r_war,blue_top,')), kind: 'chain-crosses-factions', file: `${S}/posts.csv` },
   { name: 'a temporary post with no operation', files: () => withFile(`${S}/posts.csv`, appendRow('red_raid,Red Raid,expedition,r_war,red_top,beta,,,,DESIGN,')), kind: 'temporary-post', file: `${S}/posts.csv` },
@@ -165,6 +172,41 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'infantry standing on the sea', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce(',red_army,alpha,,foot,200', ',red_army,bay,,foot,200')), kind: 'afloat-without-ship', file: `${S}/force_blocks.csv` },
   { name: 'a ship aboard a ship', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_ship,Red Ship,block,,r_sea,red_fleet,alpha,,', 'red_ship,Red Ship,block,,r_sea,red_fleet,alpha,red_ship,')), kind: 'aboard-cycle', file: `${S}/force_blocks.csv` },
   { name: 'a ship inland', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_ship,Red Ship,block,,r_sea,red_fleet,alpha,', 'red_ship,Red Ship,block,,r_sea,red_fleet,beta,')), kind: 'ship-ashore', file: `${S}/force_blocks.csv`, severity: 'warning' },
+  // Every other call site of a check (the post-review mutation run)
+  { name: 'a block with a parent', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_ship,Red Ship,block,,', 'red_ship,Red Ship,block,red_1,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
+  { name: 'a detachment of a detachment', files: () => withFile(`${S}/force_blocks.csv`, appendRow('red_det2,Red Picket,detachment,red_1_det,r_war,red_army,alpha,,foot,10,1900-04,,5,DESIGN,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
+  { name: 'a season reason defined twice in the rules', files: () => editJson('pack.json', (m: { rules: { seasons: unknown[] } }) => m.rules.seasons.push(m.rules.seasons[0])), kind: 'duplicate-id', file: 'pack.json' },
+  { name: 'a source key defined twice', files: () => editJson('PROVENANCE.json', (m: { sources: unknown[] }) => m.sources.push(m.sources[0])), kind: 'duplicate-id', file: 'PROVENANCE.json' },
+  { name: 'a standing order id twice on one post', files: () => withFile(`${S}/standing_orders.csv`, appendRow('stay,red_army,hold,red_top,1900-04-02,Hold it still.,DESIGN,')), kind: 'duplicate-id', file: `${S}/standing_orders.csv` },
+  { name: 'a sea edge between two land regions', files: () => withFile(`${W}/edges.csv`, appendRow(',alpha,beta,sea,,1,,1,,,,DESIGN,')), kind: 'edge-end-kind', file: `${W}/edges.csv` },
+  { name: 'a river edge to an off-map box', files: () => withFile(`${W}/edges.csv`, appendRow(',stream,abroad,river,,1,,1,,,,DESIGN,')), kind: 'edge-end-kind', file: `${W}/edges.csv` },
+  { name: 'a post linked to itself', files: () => withNewFile(`${S}/post_links.csv`, 'post,kind,other,notes\nred_army,liaison,red_army,'), kind: 'edge-self-loop', file: `${S}/post_links.csv` },
+  { name: 'a water fort commanding nothing', files: () => withFile(`${W}/installations.csv`, replaceOnce('reduction,sea:bay:port,', 'reduction,,')), kind: 'fort-edge', file: `${W}/installations.csv`, severity: 'warning' },
+  { name: 'a land fort commanding water', files: () => withFile(`${W}/installations.csv`, replaceOnce('reduction,sea:bay:port,', ',sea:bay:port,')), kind: 'fort-edge', file: `${W}/installations.csv` },
+  { name: 'own work under another licence', files: () => editJson('PROVENANCE.json', (m: { sources: { licence: string; basis: string | null }[] }) => Object.assign(m.sources[0]!, { licence: 'public-domain', basis: 'expired-copyright' })), kind: 'licence-not-allowed', file: 'PROVENANCE.json' },
+  { name: 'a land region with an off-map role', files: () => withFile(`${W}/regions.csv`, replaceOnce('beta,Beta,land,plain,,,', 'beta,Beta,land,plain,,foreign_power,')), kind: 'off-map-role', file: `${W}/regions.csv` },
+  { name: 'an off-map box with a terrain', files: () => withFile(`${W}/regions.csv`, replaceOnce('abroad,Abroad,off_map,,', 'abroad,Abroad,off_map,plain,')), kind: 'region-terrain', file: `${W}/regions.csv` },
+  { name: 'a land region without a terrain', files: () => withFile(`${W}/regions.csv`, replaceOnce('beta,Beta,land,plain,', 'beta,Beta,land,,')), kind: 'region-terrain', file: `${W}/regions.csv` },
+  { name: 'a retreat threshold above the supply threshold', files: () => editJson('pack.json', (m: { rules: { retreatControlPermille: number } }) => (m.rules.retreatControlPermille = 300)), kind: 'rules-order', file: 'pack.json', severity: 'warning' },
+  {
+    name: 'a scenario folder the manifest does not list',
+    files: () => {
+      const base = fixture();
+      return withNewFile('source/scenarios/later/control.csv', base.get(`${S}/control.csv`)!, withNewFile('source/scenarios/later/scenario.json', base.get(`${S}/scenario.json`)!, base));
+    },
+    kind: 'scenario-missing',
+    file: 'pack.json',
+  },
+  { name: 'mud on a railway', files: () => withFile(`${W}/edges.csv`, replaceOnce(',alpha,port,rail,main_line,1,,2,,,,', ',alpha,port,rail,main_line,1,,2,,,mud,')), kind: 'season-reason', file: `${W}/edges.csv` },
+  { name: 'a fort commanding an edge that does not exist', files: () => withFile(`${W}/installations.csv`, replaceOnce('sea:bay:port', 'sea:nowhere:port')), kind: 'unknown-reference', file: `${W}/installations.csv` },
+  { name: 'a season reason with no effect in the rules', files: () => withFile(`${W}/edges.csv`, replaceOnce('6,low_water,', '6,flood:4-5,')), kind: 'unknown-term', file: `${W}/edges.csv` },
+  { name: 'a seasonal depth on a road', files: () => withFile(`${W}/edges.csv`, replaceOnce(',alpha,beta,road,,2,,3,,,mud', ',alpha,beta,road,,2,,3,,,mud:12-2:3')), kind: 'water-field', file: `${W}/edges.csv` },
+  { name: 'an empty required cell', files: () => withFile(`${W}/rail_lines.csv`, replaceOnce('main_line,Main Line,', 'main_line,,')), kind: 'missing-value', file: `${W}/rail_lines.csv` },
+  { name: 'a tenure beginning after the start', files: () => withFile(`${S}/holders.csv`, appendRow('red_army,red_captain,no,1900-06-01,,DESIGN,')), kind: 'tenure-outside-start', file: `${S}/holders.csv`, severity: 'warning' },
+  { name: 'unknown as a carrier', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_1,Red First,block,,r_war,red_army,beta,,', 'red_1,Red First,block,,r_war,red_army,beta,unknown,')), kind: 'unknown-not-allowed', file: `${S}/force_blocks.csv` },
+  { name: 'unknown as a depth', files: () => withFile(`${W}/edges.csv`, replaceOnce(',port,bay,sea,,1,,4,,12,', ',port,bay,sea,,1,,4,,unknown,')), kind: 'unknown-not-allowed', file: `${W}/edges.csv` },
+  { name: 'unknown as a tenure date', files: () => withFile(`${S}/holders.csv`, replaceOnce('red_top,red_chief,no,1890,', 'red_top,red_chief,no,unknown,')), kind: 'unknown-not-allowed', file: `${S}/holders.csv` },
+  { name: 'a tenure of a post that does not exist', files: () => withFile(`${S}/holders.csv`, appendRow('nobody_post,red_captain,no,,,DESIGN,')), kind: 'unknown-reference', file: `${S}/holders.csv` },
   // A neutral government (review F6)
   { name: "a neutral government's guard under a faction's general", files: () => neutral(undefined, 'grey_guard,Grey Guard,block,,g_gov,red_army,beta,,foot,800,1900-04,,20,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/force_blocks.csv` },
   { name: "a faction's troops under a neutral governor", files: () => neutral(undefined, 'grey_guard,Grey Guard,block,,r_war,grey_top,beta,,foot,800,1900-04,,20,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/force_blocks.csv` },
@@ -181,13 +223,20 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'two shares for one faction', files: () => withFile(`${S}/control.csv`, replaceOnce('red:600;blue:300', 'red:600;red:300')), kind: 'duplicate-entry', file: `${S}/control.csv` },
   { name: 'an obstructed road', files: () => withNewFile(`${S}/obstructions.csv`, 'edge,by,sources,notes\nroad:alpha:beta,,DESIGN,'), kind: 'obstruction-on-land', file: `${S}/obstructions.csv` },
   { name: 'troops aboard a ship in another region', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_1,Red First,block,,r_war,red_army,beta,,', 'red_1,Red First,block,,r_war,red_army,beta,red_ship,')), kind: 'aboard-elsewhere', file: `${S}/force_blocks.csv` },
+  {
+    name: 'an uncited holder in a release pack (review N6)',
+    files: () => withFile(`${S}/holders.csv`, replaceOnce('red_top,red_chief,no,1890,,DESIGN,', 'red_top,red_chief,no,1890,,,'), withFile('pack.json', replaceOnce('"status": "draft"', '"status": "release"'))),
+    kind: 'holder-without-citation',
+    file: `${S}/holders.csv`,
+  },
   { name: 'two holders for one post', files: () => withFile(`${S}/holders.csv`, appendRow('red_top,red_captain,no,,,DESIGN,')), kind: 'duplicate-holder', file: `${S}/holders.csv` },
   { name: 'a tenure ending before the start', files: () => withFile(`${S}/holders.csv`, appendRow('red_army,red_captain,no,1890,1899-12-31,DESIGN,')), kind: 'tenure-outside-start', file: `${S}/holders.csv`, severity: 'warning' },
   { name: 'a listed scenario with no data', files: () => withFile('pack.json', replaceOnce('"scenarios": [\n    "start"\n  ]', '"scenarios": ["start", "later"]')), kind: 'scenario-missing', file: 'pack.json' },
   // strings and text
   { name: 'a vocabulary name with no text', files: () => withFile('strings/en.json', replaceOnce('"trait.bold": "bold",', '')), kind: 'missing-string', file: 'pack.json' },
   { name: 'a broken ICU message', files: () => withFile('strings/en.json', replaceOnce('"trait.bold": "bold"', '"trait.bold": "{n, plural, one {bold"')), kind: 'icu-syntax', file: 'strings/en.json' },
-  { name: 'text not in NFC', files: () => withFile(`${W}/rail_lines.csv`, replaceOnce('Main Line', 'Main Line Café')), kind: 'not-nfc', file: 'data/strings/en.json' },
+  { name: 'text not in NFC', files: () => withFile(`${W}/rail_lines.csv`, replaceOnce('Main Line', 'Main Line Café')), kind: 'not-nfc', file: `${W}/rail_lines.csv` },
+  { name: 'hand-written text not in NFC', files: () => withFile('strings/en.json', replaceOnce('"Fixture"', '"Café"')), kind: 'not-nfc', file: 'strings/en.json' },
   { name: 'no hand-written table for the default locale', files: () => withoutFile('strings/en.json'), kind: 'missing-file', file: 'strings/en.json' },
   { name: 'a listed locale with no table', files: () => withFile('pack.json', replaceOnce('"locales": [\n    "en"\n  ]', '"locales": ["en", "fr"]')), kind: 'missing-string-table', file: 'pack.json', severity: 'warning' },
   { name: 'a key defined twice', files: () => withFile('strings/en.json', replaceOnce('"pack.name": "Fixture",', '"pack.name": "Fixture", "rail_line.main_line.name": "Again",')), kind: 'duplicate-string', file: 'strings/en.json' },
