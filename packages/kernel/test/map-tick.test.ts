@@ -59,11 +59,28 @@ describe('the map phase: control changes through the writer, pockets reported', 
     expect(telemetry.mechanics['map.pocket_closed']!.fires).toBe(1);
     expect(telemetry.mechanics['control.threshold_crossed']!.fires).toBe(4);
 
-    // a takes it back: the pocket opens.
+    // a takes it back: the pocket is relieved.
     const ctx2 = ctxFor(state, 2, telemetry);
     ctx2.controlDeltas.push({ region: R('a2'), faction: F('a'), deltaPermille: 1000, cause: 'occupation' });
     mapPhase(ctx2, state, cache);
-    expect(ctx2.mapEvents.filter((e) => e.event === 'pocket_opened')).toEqual([{ event: 'pocket_opened', faction: 'a', pocket: 'pocket:a:mid', regions: ['mid'], cut: null }]);
+    expect(ctx2.mapEvents.filter((e) => e.event === 'pocket_relieved' || e.event === 'pocket_lost')).toEqual([{ event: 'pocket_relieved', faction: 'a', pocket: 'pocket:a:mid', regions: ['mid'], cut: null }]);
+    expect(telemetry.mechanics['map.pocket_relieved']!.fires).toBe(1);
+  });
+
+  it('reports an overrun pocket as lost, never as relieved (review S2)', () => {
+    // a's garrison in mid is cut off (b holds a2); then b overruns mid itself.
+    const start = createState(world, { seed: 1, start: startWith({ ...START, a2: { b: 1000 }, mid: { a: 600, b: 300 } }, '1900-06-01') });
+    const telemetry = createTelemetry([...SEATS_MECHANICS, ...MAP_MECHANICS]);
+    const cache = createDerivedMapCache();
+    const ctx = ctxFor(start, 1, telemetry);
+    ctx.controlDeltas.push({ region: R('mid'), faction: F('b'), deltaPermille: 700, cause: 'combat' });
+    const { derived } = mapPhase(ctx, start, cache);
+    expect(derived!.index.holdings.get(R('mid'))!.tracedBy).toEqual(['b']);
+    expect(ctx.mapEvents.filter((e) => e.event === 'pocket_relieved' || e.event === 'pocket_lost')).toEqual([
+      { event: 'pocket_lost', faction: 'a', pocket: 'pocket:a:mid', regions: ['mid'], cut: { why: 'not_traced', region: 'a2', edge: null, by: null } },
+    ]);
+    expect(telemetry.mechanics['map.pocket_lost']!.fires).toBe(1);
+    expect(telemetry.mechanics['map.pocket_relieved']!.fires).toBe(0);
   });
 
   it('refuses control deltas in a game with no map', () => {

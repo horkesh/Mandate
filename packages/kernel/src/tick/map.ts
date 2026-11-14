@@ -23,7 +23,7 @@ import { dateOfDay } from '../world/calendar.ts';
 import { fire, type MapEvent, type TickContext } from './context.ts';
 
 /** Every mechanic the map phases count (FOUNDATION section 11.5). */
-export const MAP_MECHANICS = ['control.changed', 'control.threshold_crossed', 'map.pocket_closed', 'map.pocket_opened', 'map.recomputed'] as const;
+export const MAP_MECHANICS = ['control.changed', 'control.threshold_crossed', 'map.pocket_closed', 'map.pocket_lost', 'map.pocket_relieved', 'map.recomputed'] as const;
 
 /** The month of a day, from the State's calendar. */
 export function monthOf(state: State, day: number): number {
@@ -31,7 +31,7 @@ export function monthOf(state: State, day: number): number {
   return dateOfDay(state.calendarStart, day).month;
 }
 
-/** Apply today's control deltas and derive the map, reporting what changed. */
+/** Apply today's control deltas and derive the map, reporting what changed: pockets closed, relieved and lost. */
 export function mapPhase(ctx: TickContext, start: State, cache: DerivedMapCache): { readonly state: State; readonly derived: DerivedMap | null } {
   const map = ctx.world.map;
   if (map === null) {
@@ -61,11 +61,21 @@ export function mapPhase(ctx: TickContext, start: State, cache: DerivedMapCache)
         ctx.mapEvents.push({ event: 'pocket_closed', faction, pocket: pocket.id, regions: newly, cut: pocket.cut });
         fire(ctx, 'map.pocket_closed');
       }
+      // A region leaves a pocket in one of two ways: a supply path reaches it
+      // (relieved), or the faction no longer traces it (lost: overrun or given up).
+      const paths = today.supply.factions.get(faction)!.paths;
       for (const pocket of yesterday.supply.factions.get(faction)!.pockets) {
         const freed = pocket.regions.filter((r) => !after.has(r));
-        if (freed.length === 0) continue;
-        ctx.mapEvents.push({ event: 'pocket_opened', faction, pocket: pocket.id, regions: freed, cut: null });
-        fire(ctx, 'map.pocket_opened');
+        const relieved = freed.filter((r) => paths.has(r));
+        const lost = freed.filter((r) => !paths.has(r));
+        if (relieved.length > 0) {
+          ctx.mapEvents.push({ event: 'pocket_relieved', faction, pocket: pocket.id, regions: relieved, cut: null });
+          fire(ctx, 'map.pocket_relieved');
+        }
+        if (lost.length > 0) {
+          ctx.mapEvents.push({ event: 'pocket_lost', faction, pocket: pocket.id, regions: lost, cut: pocket.cut });
+          fire(ctx, 'map.pocket_lost');
+        }
       }
     }
   }

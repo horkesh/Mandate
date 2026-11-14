@@ -74,7 +74,8 @@ export interface DecisionPoint {
 export type MapEvent =
   | { readonly event: 'control_changed'; readonly change: ControlChange }
   | { readonly event: 'threshold_crossed'; readonly crossing: ThresholdCrossing }
-  | { readonly event: 'pocket_closed' | 'pocket_opened'; readonly faction: FactionId; readonly pocket: string; readonly regions: readonly RegionId[]; readonly cut: Cut | null };
+  /** A pocket closed (regions newly cut off), relieved (a path reaches them again) or lost (no longer traced: overrun or abandoned). The cut is yesterday's for a lost pocket. */
+  | { readonly event: 'pocket_closed' | 'pocket_relieved' | 'pocket_lost'; readonly faction: FactionId; readonly pocket: string; readonly regions: readonly RegionId[]; readonly cut: Cut | null };
 
 export interface TickContext {
   readonly world: IndexedWorld;
