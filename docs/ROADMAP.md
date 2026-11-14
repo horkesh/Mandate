@@ -1,6 +1,6 @@
 # Roadmap
 
-The game and engine were redesigned on 2026-11-14 (decisions 0014–0026; design in [design/FOUNDATION.md](design/FOUNDATION.md)). The phases below come from FOUNDATION section 12.
+The game and engine were redesigned on 2026-11-14 (decision records from 0014 on, listed in [decisions/README.md](decisions/README.md); design in [design/FOUNDATION.md](design/FOUNDATION.md)). The phases below come from FOUNDATION section 12.
 
 ## Done
 

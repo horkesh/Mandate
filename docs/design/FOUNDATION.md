@@ -271,8 +271,9 @@ Lanes, sized from `docs/LANES.md`:
 | 0.7 | Situations schema with historical default and staff recommendation enforced by test, and the sensitive-history placement checklist | 0.1 | Opus, high |
 | 0.8 | Headless runner with liveness, hashes and resume check; the Phase 0 done check | 0.3–0.7 | Sonnet, high |
 | 0.9 | Planner spike: design and prototype candidate-plan drafting (including a two-commander pincer and a supply-aware route) on the testbed graph; report what works (0030) | 0.4 | Opus, high |
+| 0.10 | Map tripwire spike: bake the first 40 regions in tiles with PixiJS, draw one curved region name, test hit-testing; reopen MapLibre for labels if they would cost more than a week (0035) | 0.3's first 40 regions | Sonnet, high |
 
-Lane 0.2 also covers several scenario starts per pack, published schemas with readable validation errors, and string tables for all player text (0030). The Union data in lane 0.3 starts at the March 1861 inauguration (0028), and the world format reserves state fields and owners for weather, fortification and raids (0029).
+Lane 0.1 starts by upgrading to Vitest 5 and TypeScript 7 and adds a dependency-licence check (0035). Lane 0.2 also covers several scenario starts per pack, published schemas with readable validation errors, and string tables for all player text (0030). The Union data in lane 0.3 starts at the March 1861 inauguration (0028), and the world format reserves state fields and owners for weather, fortification and raids (0029).
 
 Sequence within the limit of four lanes, two of them moving the simulation (reviewer lanes count, and run after their implementer):
 1. 0.1, then its reviewer.

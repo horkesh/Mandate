@@ -16,7 +16,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0010](0010-variable-tempo.md) | Variable tempo: the tick is a day | superseded by 0017 |
 | [0011](0011-single-player-faction-scoped-knowledge.md) | Single-player, with knowledge scoped per faction | superseded by 0015 |
 | [0012](0012-port-ideas-not-code.md) | Port ideas from AWWV, not code | accepted |
-| [0013](0013-the-staff-map.md) | The map is the staff's map: hand-drawn, procedural, drawn from claims | accepted; extended by 0019 |
+| [0013](0013-the-staff-map.md) | The map is the staff's map: hand-drawn, procedural, drawn from claims | accepted; extended by 0019, confirmed by 0035 |
 | [0014](0014-licence.md) | Source-available under the PolyForm Noncommercial licence | accepted |
 | [0015](0015-seats.md) | Every person is a seat; rules first; the command log is the truth | accepted |
 | [0016](0016-goals-plans-and-arrows.md) | Goals, plans and arrow edits: places are targeted only through a person | accepted; amended by 0026, 0033 |
@@ -37,3 +37,5 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0031](0031-map-extent-size-sources.md) | The map covers the whole war at about 250 regions, built from licence-clean sources | accepted |
 | [0032](0032-reports-authors-routes-filters.md) | A report has an author, a route and filters; the telegraph office is a seat | accepted |
 | [0033](0033-forces-scale-and-data-sources.md) | Transfers name a force, not divisions one by one; force blocks fit the period; data comes from public-domain sources | accepted |
+| [0034](0034-one-standing-steward.md) | One standing steward lane from Phase 0 | accepted |
+| [0035](0035-the-stack.md) | The stack, and a map-rendering tripwire | accepted |

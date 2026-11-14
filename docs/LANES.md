@@ -9,6 +9,12 @@ Adapted from AWWV's orchestrator and its founding brief for this project (2026-1
 - **A lane** is a separate session started from the lead, with its own brief. Work that ends in a branch, a document of its own or anything the owner may want to watch or steer is a lane. A quick read-only lookup whose result the lead needs this turn can be a subagent instead.
 - **If the app refuses to start a session** (it has done so on some turns while the owner was on Remote Control), retry on the next turn. Never assume a refusal still holds. If it keeps refusing, tell the owner and ask before running the work as a subagent instead (lesson L11).
 
+## Standing lanes
+
+Decision 0034. A standing lane is never archived as "done"; if it ends, the lead starts a replacement at once. Standing lanes do not count toward the work-in-progress limit.
+
+- **The steward** (Sonnet, medium): after each merge batch, accepted decision, lane close or phase boundary, it brings `docs/ROADMAP.md`, `docs/OPEN_QUESTIONS.md`, the decisions index, factual pointers in `CLAUDE.md` and the tables here in line, on its own branch, for the lead to merge. It is the single writer of `docs/OPEN_QUESTIONS.md` and runs the zero-loss audit when a lane closes. It never edits decisions, `VISION.md`, `FOUNDATION.md` content or hard rules. It keeps no private state and reports in 150 words or less. Its full duties and limits are in 0034.
+
 ## The brief
 
 Every lane gets a written brief containing:
@@ -32,7 +38,7 @@ Every lane gets a written brief containing:
 - **Facts about the world come from a lane, never from the lead's memory.** History, other games, prices, licences: if a design argument rests on it, a research lane sources it first, or the lead marks it plainly as unverified.
 - **Experiments in parallel, merges in series.** Lanes that edit code work in their own worktree or on disjoint files. The lead merges one at a time, and a lane re-checks after rebasing.
 - **Non-trivial code gets one implementer lane and one separate reviewer lane.** The reviewer covers four lenses in one verdict: canon and decisions, determinism, history, and realism ("would a real commander or president find this absurd?"). Work touching the sensitive-history gate gets a second, separate reviewer for that gate.
-- **Work-in-progress limit:** at most four lanes at once, and at most two that move the simulation. Lanes never grow. New findings go to `docs/OPEN_QUESTIONS.md` and are triaged within a day: act now, park, or drop with a reason.
+- **Work-in-progress limit:** at most four lanes at once (standing lanes excepted), and at most two that move the simulation. Lanes never grow. New findings go to `docs/OPEN_QUESTIONS.md` and are triaged within a day: act now, park, or drop with a reason.
 - **Model and effort are set per lane, never inherited by default** (owner's standing rule, 2026-11-14). Pick from this table when starting a lane and say which row in the brief; go up a row only with a stated reason.
 
   | Kind of lane | Model | Effort |
@@ -67,7 +73,6 @@ Every lane gets a written brief containing:
 | AWWV practice | Why not now | Trigger to adopt |
 |---|---|---|
 | Cloud lanes reporting on draft PRs, Linux CI | The repository is public on GitHub since 2026-11-14 (`horkesh/Mandate`); CI comes in Phase 0, and cloud lanes need a cloud environment | When CI is green on GitHub and a cloud environment exists |
-| Standing integration-steward lane | The lead can keep docs in sync at this size | More than four lanes at once |
 | Four separate review seats | One reviewer with four lenses is enough at this size | A merge the reviewer can't settle alone |
 | Per-PR ledger fragments | Git history is the ledger here | Never, unless commit messages stop being enough |
 | A shared orchestration board for announcements | Few lanes; briefs carry what they need | Five or more lanes at once |

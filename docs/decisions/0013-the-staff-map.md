@@ -1,6 +1,6 @@
 # 0013: The map is the staff's map: hand-drawn, procedural, drawn from claims
 
-Status: accepted (2026-11-14). The owner asked for maps that are "beautiful and handdrawn but adaptable, with HoI4 influence lines". This record supersedes the "map last" ordering in proposal P17. Prototype: `prototypes/map-style/`. Extended by 0019 (what the map is: regions over a typed graph).
+Status: accepted (2026-11-14). The owner asked for maps that are "beautiful and handdrawn but adaptable, with HoI4 influence lines". This record supersedes the "map last" ordering in proposal P17. Prototype: `prototypes/map-style/`. Extended by 0019 (what the map is: regions over a typed graph). Renderer confirmed by 0035, with a tripwire spike.
 
 ## Context
 
