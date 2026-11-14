@@ -373,6 +373,24 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     expect(d5(editJson(sit('eastwatch_followup'), (s) => ((s.event = { flag: 'fen_arrivals' }), (s.chain = null))), sit('eastwatch_followup'))).toEqual([]);
   });
 
+  it('gate G5 (0060): a decision responding to an atrocity can be decided honestly, at its own cost; a notice cannot lower the victim', () => {
+    const news = { knows: { subjectKind: 'situation', subjectId: 'harbour_burning' } };
+    const d5 = (edits: Edits, file: string) => issues(edits).filter((i) => i.file === file && i.kind === 'gate-atrocity-benefit');
+    // fen_crossing on news of the burning: every locked cost and the inaction cost fall on the North, the decider. They pass.
+    const responds = editJson(sit('fen_crossing'), (s) => (s.knowledge = { all: [s.knowledge, news] }));
+    expect(d5(responds, sit('fen_crossing'))).toEqual([]);
+    expect(issues(responds).filter((i) => i.kind === 'gate-cost-not-own')).toEqual([]);
+    // A fake cost that lowers the enemy passes D5 (the enemy is the actor) but is no cost: B5 refuses it.
+    const fake = editJson(sit('fen_crossing'), (s) => ((s.knowledge = { all: [s.knowledge, news] }), (s.options[0].lockedCosts = [{ propose: { owner: 'politics', field: 'national-will', subject: 'south', delta: -10, reason: 'no-word-from-the-capital', side: 'south' } }])));
+    firesAt(fake, 'gate-cost-not-own', { file: sit('fen_crossing'), at: 'options[0].lockedCosts' });
+    // A rise in a dependent decision still fails, on any side.
+    const rise = editJson(sit('fen_crossing'), (s) => ((s.knowledge = { all: [s.knowledge, news] }), (s.options[1].effects ??= []).push({ propose: { owner: 'politics', field: 'national-will', subject: 'north', delta: 15, reason: 'a-harbour-burned', side: 'north' } })));
+    firesAt(rise, 'gate-atrocity-benefit', { file: sit('fen_crossing'), message: 'raises another side' });
+    // A notice keeps the strict rule: the North's own fall, conditioned on the burning, still fails.
+    const notice = editJson(sit('sanctuary_act'), (s) => ((s.knowledge = news), s.effects.push({ propose: { owner: 'politics', field: 'national-will', subject: 'north', delta: -15, reason: 'a-harbour-burned', side: 'north' } })));
+    firesAt(notice, 'gate-atrocity-benefit', { file: sit('sanctuary_act'), at: 'effects[1]', message: 'lowers another side' });
+  });
+
   it('B10: an option a later law forbids expires with it', () => {
     fires(editJson(sit('fen_crossing'), (s) => (s.options[2].expiresWhen = null)), 'gate-no-expiry');
   });
@@ -403,8 +421,9 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
       s.effects.push({ propose: { owner: 'politics', field: 'national-will', subject: 'south', delta: -15, reason: 'a-harbour-burned', side: 'south' } });
     });
     expect(issues(cost).filter((i) => i.kind === 'gate-atrocity-benefit' && i.file === sit('sanctuary_act'))).toEqual([]);
-    // Gate G4: fen_crossing's send_back expires on news of sanctuary_act, which now depends on the atrocity, so its costs do too.
-    firesAt(cost, 'gate-atrocity-benefit', { file: sit('fen_crossing'), at: 'options[2].lockedCosts[0]', message: 'through "sanctuary_act" (option "send_back" depends on it)' });
+    // Gate G4: fen_crossing's send_back expires on news of sanctuary_act, which now depends on the atrocity, so its costs do too;
+    // they are the North's own falls in a decision, the price of its choice, so they pass (0060, gate G5).
+    expect(issues(cost).filter((i) => i.kind === 'gate-atrocity-benefit' && i.file === sit('fen_crossing'))).toEqual([]);
     // The lead's ruling on N2: lowering the victim's measure, conditioned the same way, helps the actor too.
     const harm = editJson(sit('sanctuary_act'), (s) => {
       s.event = { all: [{ fired: 'harbour_burning' }, { decided: 'fen_crossing' }] };

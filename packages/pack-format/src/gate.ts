@@ -397,6 +397,10 @@ export function checkGate(
       def.options.forEach((o, i) => {
         if (!costed.has(o.id)) return;
         if (o.lockedCosts.length === 0) err('gate-no-locked-cost', `options[${i}].lockedCosts`, `option "${o.id}" has no locked costs`, 'at least one locked cost on every option of a gated decision (B5)');
+        // 0060 (gate G5): a real cost is a fall on the deciding side's own measures; lowering the enemy is never a price.
+        else if (!o.lockedCosts.some((c) => 'propose' in c && c.propose.side === def.faction && c.propose.delta < 0)) {
+          err('gate-cost-not-own', `options[${i}].lockedCosts`, `option "${o.id}" has no locked cost that falls on ${def.faction}'s own measures`, 'at least one locked cost lowering the deciding side’s own measure; a fall on the enemy is never a cost (B5, 0060)');
+        }
       });
       const opposes = (e: phase0.Effect, cost: Extract<phase0.Effect, { propose: unknown }>): boolean =>
         'propose' in e &&
@@ -478,8 +482,10 @@ export function checkGate(
           err('gate-acting-side', `${at}.propose.side`, `an effect conditioned on ${route} names no side`, 'the side whose measure it moves, so D5 can check that no seat gains (D5)');
           continue;
         }
-        const wrong = atrocityMove(effect, t.actingSide);
-        if (wrong !== null) err('gate-atrocity-benefit', at, `this effect, conditioned on ${route}, ${wrong}`, 'no positive effect for any seat, and no fall but the acting side’s, conditioned on atrocity-class conduct (D5)');
+        const wrong = atrocityMove(effect, t.actingSide, def.kind === 'decision' ? def.faction : null);
+        if (wrong !== null) {
+          err('gate-atrocity-benefit', at, `this effect, conditioned on ${route}, ${wrong}`, def.kind === 'decision' ? 'no rise for any side; a fall only on the acting side’s measures, or the deciding side’s own as the cost of its choice (D5, 0060)' : 'no positive effect for any seat, and no fall but the acting side’s, conditioned on atrocity-class conduct (D5)');
+        }
       }
     }
     // C3/F6 anachronisms, C4/F5 forbidden patterns, F2 proximity.
@@ -640,12 +646,17 @@ function decidedWith(c: phase0.Condition, situation: string, option: string): bo
  * What is wrong with an atrocity-class term's effect, or null (E7, D5; the lead's ruling on gate re-check G1, which
  * corrects his ruling on N2). It may only lower the acting side's own measures: no seat gains anything from an
  * atrocity (0046), so a rise on any side is refused, outrage included, and a fall on any other side helps the actor.
+ * `decider` is the deciding side of a decision that depends on an atrocity: its own falls are the price of its choice (0060).
  * Every side measure reads higher-is-better for its own side (the published schema states it for `propose.delta`).
  */
-export function atrocityMove(effect: phase0.Effect, actingSide: string): string | null {
+export function atrocityMove(effect: phase0.Effect, actingSide: string, decider: string | null = null): string | null {
   if (!('propose' in effect) || effect.propose.side === null || effect.propose.delta === 0) return null;
   if (effect.propose.delta > 0) return effect.propose.side === actingSide ? 'raises the acting side’s measure' : 'raises another side’s measure';
-  return effect.propose.side === actingSide ? null : 'lowers another side’s measure, which helps the side that acted';
+  if (effect.propose.side === actingSide) return null;
+  // 0060 (gate G5): in a decision that depends on an atrocity, a fall on the deciding side's own measures is the cost
+  // of the choice, not a gain from the atrocity. Notices have no decider, so only the actor's measures may fall.
+  if (decider !== null && effect.propose.side === decider) return null;
+  return 'lowers another side’s measure, which helps the side that acted';
 }
 /**
  * The ship rule (A8; section 1), a release check rather than a loader rule:
