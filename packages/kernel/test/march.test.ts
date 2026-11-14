@@ -3,6 +3,7 @@ import { initialCommand } from '../src/command/command.ts';
 import { buildControlIndex } from '../src/control-index/control-index.ts';
 import { initialControl } from '../src/control/control.ts';
 import { initialForces } from '../src/forces/forces.ts';
+import { applyInfrastructure, networkOf } from '../src/infrastructure/infrastructure.ts';
 import { advanceMarches, legsFrom, marchBar, marchSteps, startLeg, type MarchGround } from '../src/movement/march.ts';
 import { initialLocations, MovementError } from '../src/movement/movement.ts';
 import type { State } from '../src/root-state.ts';
@@ -176,6 +177,18 @@ describe('ships, troops aboard and what each may use', () => {
     const obstructed = ground(6, S.regionControl, { ...INTACT_NETWORK, obstructions: [{ edge: E('river:b1:w'), by: fort('b_fort', 'b1').id }] });
     expect(marchBar(obstructed, leg(obstructed, 'river:b1:w', 'w'), F('a'), true)).toBe('obstructed');
     expect(marchBar(obstructed, leg(obstructed, 'river:b1:w', 'b1'), F('b'), true)).toBeNull();
+  });
+
+  it('works no fort holds (a boom) close a water edge to every side; clearing them reopens it (lane 0.9 ask 3)', () => {
+    const boom = applyInfrastructure(MAP, S, [{ change: 'obstruct', edge: E('river:a2:w'), by: null, cause: 'situations' }]).state;
+    const shut = ground(6, S.regionControl, networkOf(boom));
+    expect(marchBar(shut, leg(shut, 'river:a2:w', 'a2'), F('a'), true)).toBe('obstructed');
+    expect(marchBar(shut, leg(shut, 'river:a2:w', 'w'), F('b'), true)).toBe('obstructed');
+    // A relief clears them, deliberately or by force (cause `operations` or `combat`).
+    const cleared = applyInfrastructure(MAP, boom, [{ change: 'clear', edge: E('river:a2:w'), cause: 'operations' }]).state;
+    expect(cleared.infraObstructions).toEqual([]);
+    const open = ground(6, S.regionControl, networkOf(cleared));
+    expect(marchBar(open, leg(open, 'river:a2:w', 'a2'), F('a'), true)).toBeNull();
   });
 
   it('refuses a leg for a block not at its start, aboard a ship, or already marching (positive controls)', () => {
