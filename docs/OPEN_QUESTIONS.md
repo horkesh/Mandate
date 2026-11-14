@@ -39,6 +39,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 **Lane 0.3 (Union data) and the map and posts data lanes**
 - Tripwire close-out (0043): `npm run measure` in `prototypes/map-tripwire/` needs the regions as lon/lat GeoJSON with `properties.kind` (land, river, or a region), `properties.name`, optional `id` and `controlA`, and a `projection` member (else it fits its own conic). Keep `glsync=1`, or bake timings read about 100 times low. Expect per-tile cost to rise with real vertex counts.
 - Provenance: Natural Earth is the only geometry source confirmed public domain (terms read 2026-11-14); the Census licence stays unconfirmed. census.gov blocks this machine's IP (Cloudflare 403), so the local pipeline must not fetch from it; do not brief the Wayback route (the permission system refused it as routing around the block).
+- From lane 0.2's close-out: the first commit with `packs/union-1861/pack.json` must generate clean (or build the pack up on a branch), because `npm test` checks every pack with a manifest; settle region ids before writing forts' `commands_edges`, `obstructions.csv` and `edge_conditions.csv` (edge ids derive from their ends), or give those edges explicit ids; author lane 0.3's own vocabularies (ranks with seniority above all) and source registry, not the fit test's scaffold; the people roster has no priority column (image-sources note).
 - Person ids use the convention surname_firstgiven_initials (`lee_robert_e`).
 - Navy data (navy note): pre-Sumter navy holders for March 1861 are not yet covered; the Western Flotilla belongs to the Army until 1 October 1862, then the Navy (a post changing department); the Strategy Board is a temporary post; squadrons are created by directive during play, not all at start.
 - Anderson's 28 February 1861 strength figure differs between his letter as printed (70,000) and Holt's covering letter (20,000): carry the figure Lincoln read once known (March facts note).
@@ -48,6 +49,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - The M2 names (RegionId and similar) are not retired: lane 0.2 kept the `ids` namespace, since retiring it touches M2's aliases; it goes when lanes 0.4 and 0.5 replace M2 (0050).
 - Every new State field needs an `OWNED_FIELDS` entry in `packages/kernel/src/ownership.ts`; owned keys must be unique across State records (lane 0.1 hand-over, `notes/lane-0.1-foundations.md`).
 - Edges and regions (navy note): river and sea edges need depth by season and an obstruction state; fort regions need a passage-versus-reduction flag; naval bases are key points; blockade-running ports are off-map boxes. A support request needs three terms: the commander's compliance, his department's consent, and physical limits (depth, season, passage).
+- From lane 0.6: two World models exist (lane 0.2's `world` and lane 0.6's stand-in); unify them when M2 is replaced.
 - Forces need a stragglers and absent field (rejoin over days); writer-table rows are needed for battle records (owner `combat`) and for fortification, which 0029 does not give a writer (combat note).
 
 **Lane 0.6 (seats)**
@@ -79,3 +81,14 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 
 **Phase 2 (desk and map)**
 - Tripwire measurements cover only the RX 7800 XT; integrated GPUs, the Steam Deck and Electron's Chromium are untested, and WebGPU and an OffscreenCanvas worker bake are untried. The prototype points Playwright 1.65 at the installed chromium-1234 (`CHROMIUM_PATH` overrides); adopting Playwright for screenshots means `npx playwright install`, a browser download that is the owner's call.
+
+**Pack format and Phase 2 (images and assets; from the image-sources note)**
+- Images need a provenance schema and validator in the pack.
+- loc.gov limits automated requests (10 a minute) and blocks addresses, so asset ingest must be manual or rate-limited.
+- Before Codex's portrait pilot, someone with a browser checks the Library of Congress item pages and the National Portrait Gallery's terms for the demo cast (the owner's).
+
+**Codex and legal (from the Codex-terms note)**
+- Whether the PolyForm licence does anything for files with no copyright (AI-made art): a question for the lawyer.
+- The store-page AI disclosure wording is drafted in the repo before submission, alongside 0038's question to Valve.
+- Re-check OpenAI's terms before Codex's first delivery and again before Steam submission (they changed on 2026-11-13; new usage policies take effect on 2026-11-20).
+- One short lawyer consultation, covering real-person likeness references, scripted tool use and PolyForm: the owner's spending call (0037).
