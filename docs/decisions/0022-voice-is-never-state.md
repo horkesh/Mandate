@@ -1,6 +1,6 @@
 # 0022: AI text is voice, never state
 
-Status: accepted (2026-11-14). From the AI-players research, which recommends this record. Amends 0005 for generated prose about real people. Design: `docs/design/FOUNDATION.md` section 8.
+Status: accepted (2026-11-14). From the AI-players research, which recommends this record. Amends 0005 for generated prose about real people. Amended by 0038 (no live AI in the Steam build until Valve clears it). Design: `docs/design/FOUNDATION.md` section 8.
 
 ## Context
 

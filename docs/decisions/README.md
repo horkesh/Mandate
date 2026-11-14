@@ -25,7 +25,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0019](0019-regions-over-a-typed-graph.md) | The map is regions over a typed graph; fronts and pockets are derived | accepted; extended by 0031 |
 | [0020](0020-people-hidden-stats-and-assessment.md) | Generals have hidden stats that battle changes; the player sees an assessment | accepted; amended by 0026 |
 | [0021](0021-sensitive-history-gate.md) | A sensitive-history gate; no Lost Cause framing; enslaved people as agents | accepted; amended by 0026 |
-| [0022](0022-voice-is-never-state.md) | AI text is voice, never state | accepted |
+| [0022](0022-voice-is-never-state.md) | AI text is voice, never state | accepted; amended by 0038 |
 | [0023](0023-the-home-front.md) | The home front: a light economy through people, elections, and history as situations | accepted; amended by 0026, 0028 |
 | [0024](0024-the-wars-with-fronts-test.md) | The engine test is "wars with fronts", not three settings | accepted |
 | [0025](0025-attention-under-real-time.md) | The president's attention is a weekly budget | accepted |
@@ -41,3 +41,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0035](0035-the-stack.md) | The stack, and a map-rendering tripwire | accepted |
 | [0036](0036-the-title.md) | The game is called By Order of the President; Mandate stays the engine's codename | accepted |
 | [0037](0037-commercial-prove-it-first.md) | Commercial, but prove the hook before spending | accepted |
+| [0038](0038-no-live-ai-on-steam-until-cleared.md) | No live AI in the Steam build until Valve clears bring-your-own-key | accepted |
