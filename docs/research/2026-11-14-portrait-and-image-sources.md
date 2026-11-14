@@ -6,13 +6,13 @@ Conventions: confidence is **High** (text read on the holding institution's page
 
 ## Summary
 
-1. **Licence-clean sources exist for the portraits.** Three holdings carry a stated public-domain or no-known-restriction position that covers commercial use: LOC's Brady-Handy collection, LOC's Civil War photographs (glass negatives and related prints), and NARA's Civil War photographs (Brady series 111-B and others). None of the three charges permission fees or makes a licence claim. All three ask only for a credit line (a courtesy at LOC, "encouraged" at NARA).
-2. **60-person priority set:** 51 have a candidate portrait located, 8 have none located in this pass (Caleb B. Smith, Wool, Du Pont, Fox, Gooch, Odell, Governor Andrew, Memminger), and 1 (Montgomery Blair) has an image found with its LOC item ID not captured. Nine of the 51 are post-war or later-than-1862 faces (date caveat). So **about 42 have a good-date image**. "Not located" means this pass did not find one, not that none exists.
+1. **Licence-clean sources exist for the portraits.** Three holdings give a position that supports commercial use: LOC's Brady-Handy collection (which **asserts** public domain), NARA's Civil War photographs (which **assert** public domain and no use restrictions), and LOC's Civil War photographs (glass negatives and related prints), which say only that LOC knows of **no restrictions**. LOC itself says "no known restrictions" does not mean public domain. That the 1861–65 Civil War negatives are public domain by age is **[I] this note's own inference** (the images are about 160 years old and their photographers long dead), not LOC's statement. None of the three charges permission fees or makes a licence claim. All three ask only for a credit line (a courtesy at LOC, "encouraged" at NARA).
+2. **60-person priority set:** 51 have a candidate portrait located, 8 have none located in this pass (Caleb B. Smith, Wool, Du Pont, Fox, Gooch, Odell, Governor Andrew, Memminger), and 1 (Montgomery Blair) has an image found with its LOC item ID not captured. Of the 51, only **4 have date evidence inside 1861–62** (Lincoln via the LOC Feb 1861 and Oct 1862 items, Cameron, Pope, Anderson), **37 have an open date** (undated, or bounded only from below by a rank in the title, so possibly 1863–65), and **10 are dated or captioned after 1862** (Banks, Goldsborough, Wilkes, Julian, Johnson, Morton, Magoffin, Reagan, Lee, Jackson). Open-date rows need the record read before they are called period-correct. "Not located" means this pass did not find one, not that none exists.
 3. **Rest of the roster (118):** 45 located as a by-product. The estimate for the whole 118 is 80–90 with a usable image (about 70%), lowest for Confederate division generals, Union bureau chiefs and most governors. This is an estimate, not a count.
 4. **The Brady-Handy collection is mostly post-war.** Its negatives are largely 1860s–1880s portraits of congressmen and officials. For 1861–62 faces, prefer LOC's Civil War photographs (`cwpb` IDs) and NARA 111-B, and check the date range in each record.
 5. **National Portrait Gallery open-access images are unconfirmed.** The Smithsonian site refused automated requests. A search summary says CC0 items may be used commercially with no attribution, and non-CC0 items need written permission (snippet). A human must check each item before use.
 6. **Period documents:** public-domain by age is easy for newspapers and printed General Orders (all 1861–62), but this pass found **no verified, openly licensed exemplar of a blank 1861–62 telegram form or War Department letterhead**. Section 3 says what exists and what to draw ourselves.
-7. **Processing is unrestricted** where the statement says public domain or no known restrictions: crop, tint, retouch and engrave-filter freely. What we owe is a provenance record per image and a credit line (section 4).
+7. **Processing is unrestricted** where the holder asserts public domain (Brady-Handy, NARA), and by **[I] inference** for the `cwpb` Civil War negatives, where LOC says only that publication is permitted and no restriction is known: crop, tint, retouch and engrave-filter freely. What we owe is a provenance record per image and a credit line (section 4).
 
 ## 1. The collections and their rights statements
 
@@ -38,72 +38,72 @@ Pages with instructions aimed at the agent: none.
 - *Best item* is the holder's persistent handle or NAID. A `cwpb`, `cwpbh` or `ppmsca` ID is `https://hdl.loc.gov/loc.pnp/<id>`, which redirects to the item page. A NAID is `https://catalog.archives.gov/id/<NAID>`. Where I found a direct item URL it is given in full.
 - *Rights* is one of **BH** (Brady-Handy statement, section 1), **CWP** (Civil War Photographs statement), **NARA** (select-list statement), or **item?** (a different LOC series whose collection statement was not read). For LOC IDs the item's own "Rights Advisory" was not read.
 - *Date* is LOC's date range as Commons reproduces it, or what the record's title says (a title naming a later rank is a dating clue).
-- Status: **ok** = good-date candidate located; **ok\*** = located, but post-war or outside 1861–62 only; **ID?** = image found, LOC item not identified; **none** = not located in this pass.
+- Status: **win** = located, with date evidence inside 1861–62 (a title rank bounding the date on both sides, or an in-window caption); **open** = located, but the date is unknown or bounded only from below (a rank in the title, or a loose LOC range such as 1855–65), so it may be 1863–65; **late** = located, but dated or captioned after 1862 (post-war, 1863 or later); **ID?** = image found, LOC item not identified; **none** = not located in this pass.
 
 | Roster id | Best item | Rights | Image notes (pose, date, quality) | Status |
 |---|---|---|---|---|
-| lincoln_abraham | [LOC LCCN 2013648766](https://www.loc.gov/pictures/item/2013648766/) (full-length, seated, 24 Feb 1861); NARA [527823](https://catalog.archives.gov/id/527823) (3/4 standing, Brady, ca. 1863); LOC [ppmsca.12544](https://hdl.loc.gov/loc.pnp/ppmsca.12544) (Antietam, Oct 1862) | item? / NARA | LOC print dated 1911 in the finder (publication or copyright date; read the record) | ok |
-| hamlin_hannibal | [LOC cwpb.04944](https://hdl.loc.gov/loc.pnp/cwpb.04944) | CWP | Seated, 1860–65; title "Vice President" | ok |
-| seward_william_h | [LOC cwpb.04948](https://hdl.loc.gov/loc.pnp/cwpb.04948); NARA [528347](https://catalog.archives.gov/id/528347) (bust profile) | CWP / NARA | Title "Secretary of State" (1861 on) | ok |
-| chase_salmon_p | [LOC cwpb.05620](https://hdl.loc.gov/loc.pnp/cwpb.05620) (Brady); NARA [528414](https://catalog.archives.gov/id/528414) (3/4 standing) | CWP / NARA | 1860–65, title "Secretary of the Treasury" | ok |
-| cameron_simon | [LOC cwpb.05310](https://hdl.loc.gov/loc.pnp/cwpb.05310); BH [cwpbh.00627](https://hdl.loc.gov/loc.pnp/cwpbh.00627) | CWP / BH | Title "Secretary of War" fits Mar 1861–Jan 1862 | ok |
-| stanton_edwin_m | [LOC cwpb.06437](https://hdl.loc.gov/loc.pnp/cwpb.06437); NARA [528682](https://catalog.archives.gov/id/528682) (half-length seated) | CWP / NARA | Title "Secretary of War" (from Jan 1862). The BH print [cwpbh.04318](https://hdl.loc.gov/loc.pnp/cwpbh.04318) is dated 1865–80: avoid | ok |
-| welles_gideon | [LOC cwpb.04843](https://hdl.loc.gov/loc.pnp/cwpb.04843); NARA [525398](https://catalog.archives.gov/id/525398) (half-length seated); BH [cwpbh.01102](https://hdl.loc.gov/loc.pnp/cwpbh.01102) | CWP / NARA / BH | Title "Secretary of the Navy" | ok |
-| bates_edward | [LOC cwpb.05606](https://hdl.loc.gov/loc.pnp/cwpb.05606); BH [cwpbh.02099](https://hdl.loc.gov/loc.pnp/cwpbh.02099) | CWP / BH | Title "Attorney-General" | ok |
+| lincoln_abraham | NARA [527823](https://catalog.archives.gov/id/527823) (3/4 standing, Brady, **ca. 1863**: firmest rights, outside the window); LOC [LCCN 2013648766](https://www.loc.gov/pictures/item/2013648766/) (full-length, seated, 24 Feb 1861); LOC [ppmsca.12544](https://hdl.loc.gov/loc.pnp/ppmsca.12544) (Antietam, Oct 1862) | NARA / item? | The in-window dates are the LOC items (series statements unread; the Feb 1861 print shows 1911 in the finder, a publication or copyright date, so read the record) | win |
+| hamlin_hannibal | [LOC cwpb.04944](https://hdl.loc.gov/loc.pnp/cwpb.04944) | CWP | Seated, 1860–65; title "Vice President" | open |
+| seward_william_h | [LOC cwpb.04948](https://hdl.loc.gov/loc.pnp/cwpb.04948); NARA [528347](https://catalog.archives.gov/id/528347) (bust profile) | CWP / NARA | Title "Secretary of State" (1861 on) | open |
+| chase_salmon_p | [LOC cwpb.05620](https://hdl.loc.gov/loc.pnp/cwpb.05620) (Brady); NARA [528414](https://catalog.archives.gov/id/528414) (3/4 standing) | CWP / NARA | 1860–65, title "Secretary of the Treasury" | open |
+| cameron_simon | [LOC cwpb.05310](https://hdl.loc.gov/loc.pnp/cwpb.05310); BH [cwpbh.00627](https://hdl.loc.gov/loc.pnp/cwpbh.00627) | CWP / BH | Title "Secretary of War" fits Mar 1861–Jan 1862 | win |
+| stanton_edwin_m | [LOC cwpb.06437](https://hdl.loc.gov/loc.pnp/cwpb.06437); NARA [528682](https://catalog.archives.gov/id/528682) (half-length seated) | CWP / NARA | Title "Secretary of War" (from Jan 1862). The BH print [cwpbh.04318](https://hdl.loc.gov/loc.pnp/cwpbh.04318) is dated 1865–80: avoid | open |
+| welles_gideon | [LOC cwpb.04843](https://hdl.loc.gov/loc.pnp/cwpb.04843); NARA [525398](https://catalog.archives.gov/id/525398) (half-length seated); BH [cwpbh.01102](https://hdl.loc.gov/loc.pnp/cwpbh.01102) | CWP / NARA / BH | Title "Secretary of the Navy" | open |
+| bates_edward | [LOC cwpb.05606](https://hdl.loc.gov/loc.pnp/cwpb.05606); BH [cwpbh.02099](https://hdl.loc.gov/loc.pnp/cwpbh.02099) | CWP / BH | Title "Attorney-General" | open |
 | blair_montgomery | Commons file "Montgomery Blair, photo three-quarters length seated" (LOC source not shown in its metadata) | item? | Seated; the LOC ID has to be found on loc.gov | ID? |
 | smith_caleb_b | none located | n/a | Interior Secretary to Dec 1862; search LOC by name | none |
-| nicolay_john_g | BH [cwpbh.00729](https://hdl.loc.gov/loc.pnp/cwpbh.00729) | BH | 1855–65 | ok |
-| scott_winfield | NARA [528333](https://catalog.archives.gov/id/528333) (half-length, standing); LOC [cph.3c10151](https://hdl.loc.gov/loc.pnp/cph.3c10151) is an 1849 print: too early | NARA | NARA caption: "Lt. Gen." | ok |
-| mcclellan_george_b | NARA [528744](https://catalog.archives.gov/id/528744) (3/4 standing); [LOC cwpb.05665](https://hdl.loc.gov/loc.pnp/cwpb.05665) (with his wife; [item page](https://www.loc.gov/pictures/item/cwp2003000344/)) | NARA / CWP | 1860–65; title "Maj. Gen." | ok |
-| halleck_henry_w | [LOC cwpb.06956](https://hdl.loc.gov/loc.pnp/cwpb.06956); NARA [526731](https://catalog.archives.gov/id/526731) (3/4 standing) | CWP / NARA | Title "Maj. Gen." | ok |
-| grant_ulysses_s | [LOC cwpb.06941](https://hdl.loc.gov/loc.pnp/cwpb.06941); NARA [558720](https://catalog.archives.gov/id/558720) (Brady, "Lt. Gen.", so 1864 on: avoid) | CWP / NARA | Title "Maj. Gen." (from Feb 1862). BH [cwpbh.05120](https://hdl.loc.gov/loc.pnp/cwpbh.05120) is 1865–80: avoid | ok |
-| sherman_william_t | [LOC cwpb.07136](https://hdl.loc.gov/loc.pnp/cwpb.07136); NARA [525970](https://catalog.archives.gov/id/525970) (half-length seated) | CWP / NARA | Title "Maj. Gen." (from May 1862) | ok |
-| buell_don_c | BH [cwpbh.01154](https://hdl.loc.gov/loc.pnp/cwpbh.01154) | BH | 1855–65 | ok |
-| mcdowell_irvin | [LOC cwpb.05377](https://hdl.loc.gov/loc.pnp/cwpb.05377); BH [cwpbh.01150](https://hdl.loc.gov/loc.pnp/cwpbh.01150); NARA [527993](https://catalog.archives.gov/id/527993) (3/4 standing) | CWP / BH / NARA | Title "Maj. Gen." (from Mar 1862) | ok |
-| burnside_ambrose_e | [LOC cwpb.05368](https://hdl.loc.gov/loc.pnp/cwpb.05368); NARA [527863](https://catalog.archives.gov/id/527863) (half-length) | CWP / NARA | BH [cwpbh.04980](https://hdl.loc.gov/loc.pnp/cwpbh.04980) is 1865–80: avoid | ok |
-| hooker_joseph | [LOC cwpb.06979](https://hdl.loc.gov/loc.pnp/cwpb.06979); BH [cwpbh.00839](https://hdl.loc.gov/loc.pnp/cwpbh.00839) (1861–65); NARA [526959](https://catalog.archives.gov/id/526959) (full-length seated) | CWP / BH / NARA | Title "Maj. Gen." (from May 1862) | ok |
-| pope_john | [LOC cwpb.06342](https://hdl.loc.gov/loc.pnp/cwpb.06342); NARA [527743](https://catalog.archives.gov/id/527743) (half-length) | CWP / NARA | Title "Brig. Gen. (Maj. Gen. after Mar. 21, 1862)": a pre-Mar 1862 pose; the best date fit in the table | ok |
-| fremont_john_c | BH [cwpbh.00792](https://hdl.loc.gov/loc.pnp/cwpbh.00792) | BH | 1855–65 | ok |
-| banks_nathaniel_p | BH [cwpbh.00064](https://hdl.loc.gov/loc.pnp/cwpbh.00064) (c.1860–75); BH [cwpbh.05011](https://hdl.loc.gov/loc.pnp/cwpbh.05011) (1865–80) | BH | Both dated loosely; no 1861–62 pose confirmed | ok\* |
-| butler_benjamin_f | [LOC cwpb.04894](https://hdl.loc.gov/loc.pnp/cwpb.04894); NARA [528659](https://catalog.archives.gov/id/528659) (3/4-length) | CWP / NARA | Title "Maj. Gen." (from May 1861) | ok |
-| sumner_edwin_v | [LOC cwpb.04626](https://hdl.loc.gov/loc.pnp/cwpb.04626) | CWP | Title "Maj. Gen." (from mid-1862) | ok |
-| heintzelman_samuel_p | [LOC cwpb.04857](https://hdl.loc.gov/loc.pnp/cwpb.04857) | CWP | Title "Maj. Gen." (from May 1862) | ok |
-| keyes_erasmus_d | [LOC cwpb.04476](https://hdl.loc.gov/loc.pnp/cwpb.04476) ([item page](https://www.loc.gov/pictures/item/cwp2003001398/)); BH [cwpbh.03189](https://hdl.loc.gov/loc.pnp/cwpbh.03189) (1860–65) | CWP / BH | Good date fit | ok |
-| franklin_william_b | [LOC cwpb.06688](https://hdl.loc.gov/loc.pnp/cwpb.06688) | CWP | Title "Maj. Gen." (from Sept 1862) | ok |
+| nicolay_john_g | BH [cwpbh.00729](https://hdl.loc.gov/loc.pnp/cwpbh.00729) | BH | 1855–65 | open |
+| scott_winfield | NARA [528333](https://catalog.archives.gov/id/528333) (half-length, standing); LOC [cph.3c10151](https://hdl.loc.gov/loc.pnp/cph.3c10151) is an 1849 print: too early | NARA | NARA caption: "Lt. Gen." | open |
+| mcclellan_george_b | NARA [528744](https://catalog.archives.gov/id/528744) (3/4 standing); [LOC cwpb.05665](https://hdl.loc.gov/loc.pnp/cwpb.05665) (with his wife; [item page](https://www.loc.gov/pictures/item/cwp2003000344/)) | NARA / CWP | 1860–65; title "Maj. Gen." | open |
+| halleck_henry_w | [LOC cwpb.06956](https://hdl.loc.gov/loc.pnp/cwpb.06956); NARA [526731](https://catalog.archives.gov/id/526731) (3/4 standing) | CWP / NARA | Title "Maj. Gen." | open |
+| grant_ulysses_s | [LOC cwpb.06941](https://hdl.loc.gov/loc.pnp/cwpb.06941); NARA [558720](https://catalog.archives.gov/id/558720) (Brady, "Lt. Gen.", so 1864 on: avoid) | CWP / NARA | Title "Maj. Gen." (from Feb 1862). BH [cwpbh.05120](https://hdl.loc.gov/loc.pnp/cwpbh.05120) is 1865–80: avoid | open |
+| sherman_william_t | [LOC cwpb.07136](https://hdl.loc.gov/loc.pnp/cwpb.07136); NARA [525970](https://catalog.archives.gov/id/525970) (half-length seated) | CWP / NARA | Title "Maj. Gen." (from May 1862) | open |
+| buell_don_c | BH [cwpbh.01154](https://hdl.loc.gov/loc.pnp/cwpbh.01154) | BH | 1855–65 | open |
+| mcdowell_irvin | [LOC cwpb.05377](https://hdl.loc.gov/loc.pnp/cwpb.05377); BH [cwpbh.01150](https://hdl.loc.gov/loc.pnp/cwpbh.01150); NARA [527993](https://catalog.archives.gov/id/527993) (3/4 standing) | CWP / BH / NARA | Title "Maj. Gen." (from Mar 1862) | open |
+| burnside_ambrose_e | [LOC cwpb.05368](https://hdl.loc.gov/loc.pnp/cwpb.05368); NARA [527863](https://catalog.archives.gov/id/527863) (half-length) | CWP / NARA | BH [cwpbh.04980](https://hdl.loc.gov/loc.pnp/cwpbh.04980) is 1865–80: avoid | open |
+| hooker_joseph | [LOC cwpb.06979](https://hdl.loc.gov/loc.pnp/cwpb.06979); BH [cwpbh.00839](https://hdl.loc.gov/loc.pnp/cwpbh.00839) (1861–65); NARA [526959](https://catalog.archives.gov/id/526959) (full-length seated) | CWP / BH / NARA | Title "Maj. Gen." (from May 1862) | open |
+| pope_john | [LOC cwpb.06342](https://hdl.loc.gov/loc.pnp/cwpb.06342); NARA [527743](https://catalog.archives.gov/id/527743) (half-length) | CWP / NARA | Title "Brig. Gen. (Maj. Gen. after Mar. 21, 1862)": a pre-Mar 1862 pose; the best date fit in the table | win |
+| fremont_john_c | BH [cwpbh.00792](https://hdl.loc.gov/loc.pnp/cwpbh.00792) | BH | 1855–65 | open |
+| banks_nathaniel_p | BH [cwpbh.00064](https://hdl.loc.gov/loc.pnp/cwpbh.00064) (c.1860–75); BH [cwpbh.05011](https://hdl.loc.gov/loc.pnp/cwpbh.05011) (1865–80) | BH | Both dated loosely; no 1861–62 pose confirmed | late |
+| butler_benjamin_f | [LOC cwpb.04894](https://hdl.loc.gov/loc.pnp/cwpb.04894); NARA [528659](https://catalog.archives.gov/id/528659) (3/4-length) | CWP / NARA | Title "Maj. Gen." (from May 1861) | open |
+| sumner_edwin_v | [LOC cwpb.04626](https://hdl.loc.gov/loc.pnp/cwpb.04626) | CWP | Title "Maj. Gen." (from mid-1862) | open |
+| heintzelman_samuel_p | [LOC cwpb.04857](https://hdl.loc.gov/loc.pnp/cwpb.04857) | CWP | Title "Maj. Gen." (from May 1862) | open |
+| keyes_erasmus_d | [LOC cwpb.04476](https://hdl.loc.gov/loc.pnp/cwpb.04476) ([item page](https://www.loc.gov/pictures/item/cwp2003001398/)); BH [cwpbh.03189](https://hdl.loc.gov/loc.pnp/cwpbh.03189) (1860–65) | CWP / BH | Good date fit | open |
+| franklin_william_b | [LOC cwpb.06688](https://hdl.loc.gov/loc.pnp/cwpb.06688) | CWP | Title "Maj. Gen." (from Sept 1862) | open |
 | wool_john_e | none located | n/a | Aged 77 in 1861; search LOC by name | none |
-| hunter_david | [LOC cwpb.04526](https://hdl.loc.gov/loc.pnp/cwpb.04526) | CWP | Title "Maj. Gen." (from Sept 1861) | ok |
-| thomas_george_h | [LOC cwpb.07196](https://hdl.loc.gov/loc.pnp/cwpb.07196); NARA [528908](https://catalog.archives.gov/id/528908) (half-length) | CWP / NARA | Title "Maj. Gen." (from Apr 1862) | ok |
-| rosecrans_william_s | [LOC cwpb.06052](https://hdl.loc.gov/loc.pnp/cwpb.06052); NARA [527814](https://catalog.archives.gov/id/527814) (half-length) | CWP / NARA | Title "Maj. Gen." (from Sept 1862) | ok |
-| anderson_robert | [LOC cwpb.05635](https://hdl.loc.gov/loc.pnp/cwpb.05635); NARA [528328](https://catalog.archives.gov/id/528328) (full-length standing) | CWP / NARA | Title "Maj. Robert Anderson (Brig. Gen. from May 15, 1861)": a 1861 pose | ok |
-| farragut_david_g | [LOC cwpb.05210](https://hdl.loc.gov/loc.pnp/cwpb.05210); NARA [529975](https://catalog.archives.gov/id/529975) (3/4-length) | CWP / NARA | 1860–65 | ok |
+| hunter_david | [LOC cwpb.04526](https://hdl.loc.gov/loc.pnp/cwpb.04526) | CWP | Title "Maj. Gen." (from Sept 1861) | open |
+| thomas_george_h | [LOC cwpb.07196](https://hdl.loc.gov/loc.pnp/cwpb.07196); NARA [528908](https://catalog.archives.gov/id/528908) (half-length) | CWP / NARA | Title "Maj. Gen." (from Apr 1862) | open |
+| rosecrans_william_s | [LOC cwpb.06052](https://hdl.loc.gov/loc.pnp/cwpb.06052); NARA [527814](https://catalog.archives.gov/id/527814) (half-length) | CWP / NARA | Title "Maj. Gen." (from Sept 1862) | open |
+| anderson_robert | [LOC cwpb.05635](https://hdl.loc.gov/loc.pnp/cwpb.05635); NARA [528328](https://catalog.archives.gov/id/528328) (full-length standing) | CWP / NARA | Title "Maj. Robert Anderson (Brig. Gen. from May 15, 1861)": a 1861 pose | win |
+| farragut_david_g | [LOC cwpb.05210](https://hdl.loc.gov/loc.pnp/cwpb.05210); NARA [529975](https://catalog.archives.gov/id/529975) (3/4-length) | CWP / NARA | 1860–65 | open |
 | du_pont_samuel_f | none located | n/a | Search LOC and NARA by name | none |
-| goldsborough_louis_m | BH [cwpbh.03629](https://hdl.loc.gov/loc.pnp/cwpbh.03629) | BH | Dated 1870–80: an old man; he died 1877 | ok\* |
-| wilkes_charles | [LOC cwpb.04830](https://hdl.loc.gov/loc.pnp/cwpb.04830) | CWP | Dated c. 1866 | ok\* |
+| goldsborough_louis_m | BH [cwpbh.03629](https://hdl.loc.gov/loc.pnp/cwpbh.03629) | BH | Dated 1870–80: an old man; he died 1877 | late |
+| wilkes_charles | [LOC cwpb.04830](https://hdl.loc.gov/loc.pnp/cwpb.04830) | CWP | Dated c. 1866 | late |
 | fox_gustavus_v | none located | n/a | Assistant Secretary of the Navy; search LOC by name | none |
-| wade_benjamin_f | BH [cwpbh.02080](https://hdl.loc.gov/loc.pnp/cwpbh.02080) | BH | 1855–65 | ok |
-| chandler_zachariah | BH [cwpbh.02070](https://hdl.loc.gov/loc.pnp/cwpbh.02070) | BH | 1855–65 | ok |
-| julian_george_w | BH [cwpbh.04616](https://hdl.loc.gov/loc.pnp/cwpbh.04616) | BH | 1865–80 | ok\* |
-| covode_john | BH [cwpbh.00056](https://hdl.loc.gov/loc.pnp/cwpbh.00056) | BH | 1860–75 | ok |
+| wade_benjamin_f | BH [cwpbh.02080](https://hdl.loc.gov/loc.pnp/cwpbh.02080) | BH | 1855–65 | open |
+| chandler_zachariah | BH [cwpbh.02070](https://hdl.loc.gov/loc.pnp/cwpbh.02070) | BH | 1855–65 | open |
+| julian_george_w | BH [cwpbh.04616](https://hdl.loc.gov/loc.pnp/cwpbh.04616) | BH | 1865–80 | late |
+| covode_john | BH [cwpbh.00056](https://hdl.loc.gov/loc.pnp/cwpbh.00056) | BH | 1860–75 | open |
 | gooch_daniel_w | none located | n/a | Search LOC by name | none |
 | odell_moses_f | none located | n/a | Search LOC by name | none |
-| johnson_andrew | NARA [528284](https://catalog.archives.gov/id/528284) (3/4-length seated) | NARA | The NARA caption names him "Vice President and President", so the photograph is probably 1865 or later; a Commons "1860s" file points to a NARA print | ok\* |
+| johnson_andrew | NARA [528284](https://catalog.archives.gov/id/528284) (3/4-length seated) | NARA | The NARA caption names him "Vice President and President", so the photograph is probably 1865 or later; a Commons "1860s" file points to a NARA print | late |
 | andrew_john_a | none located | n/a | Governor of Massachusetts; search LOC by name | none |
-| curtin_andrew_g | BH [cwpbh.01288](https://hdl.loc.gov/loc.pnp/cwpbh.01288) | BH | 1855–65 | ok |
-| morton_oliver_h_p_t | BH [cwpbh.04000](https://hdl.loc.gov/loc.pnp/cwpbh.04000) | BH | Dated 1870–80 (after his 1865 stroke) | ok\* |
-| magoffin_beriah | BH [cwpbh.04523](https://hdl.loc.gov/loc.pnp/cwpbh.04523) | BH | Dated 1865–80 | ok\* |
-| davis_jefferson | BH [cwpbh.00995](https://hdl.loc.gov/loc.pnp/cwpbh.00995) (also [cwpbh.00879](https://hdl.loc.gov/loc.pnp/cwpbh.00879)), 1855–65; NARA [528293](https://catalog.archives.gov/id/528293) (3/4 standing, Brady "before the war") | BH / NARA | Good date fit | ok |
-| stephens_alexander_h | NARA [528288](https://catalog.archives.gov/id/528288) (3/4-length seated) | NARA | Date not stated; BH [cwpbh.03911](https://hdl.loc.gov/loc.pnp/cwpbh.03911) is 1870–80: avoid | ok |
-| benjamin_judah_p | NARA [526652](https://catalog.archives.gov/id/526652) (3/4 standing); LOC [ppmsca.05642](https://hdl.loc.gov/loc.pnp/ppmsca.05642) (c. 1856) | NARA / item? | Good date fit | ok |
-| mallory_stephen_r | NARA [528705](https://catalog.archives.gov/id/528705) (3/4 standing); BH [cwpbh.01215](https://hdl.loc.gov/loc.pnp/cwpbh.01215) (1855–65) | NARA / BH | Good date fit | ok |
+| curtin_andrew_g | BH [cwpbh.01288](https://hdl.loc.gov/loc.pnp/cwpbh.01288) | BH | 1855–65 | open |
+| morton_oliver_h_p_t | BH [cwpbh.04000](https://hdl.loc.gov/loc.pnp/cwpbh.04000) | BH | Dated 1870–80 (after his 1865 stroke) | late |
+| magoffin_beriah | BH [cwpbh.04523](https://hdl.loc.gov/loc.pnp/cwpbh.04523) | BH | Dated 1865–80 | late |
+| davis_jefferson | BH [cwpbh.00995](https://hdl.loc.gov/loc.pnp/cwpbh.00995) (also [cwpbh.00879](https://hdl.loc.gov/loc.pnp/cwpbh.00879)), 1855–65; NARA [528293](https://catalog.archives.gov/id/528293) (3/4 standing, Brady "before the war") | BH / NARA | Good date fit | open |
+| stephens_alexander_h | NARA [528288](https://catalog.archives.gov/id/528288) (3/4-length seated) | NARA | Date not stated; BH [cwpbh.03911](https://hdl.loc.gov/loc.pnp/cwpbh.03911) is 1870–80: avoid | open |
+| benjamin_judah_p | NARA [526652](https://catalog.archives.gov/id/526652) (3/4 standing); LOC [ppmsca.05642](https://hdl.loc.gov/loc.pnp/ppmsca.05642) (c. 1856) | NARA / item? | Good date fit | open |
+| mallory_stephen_r | NARA [528705](https://catalog.archives.gov/id/528705) (3/4 standing); BH [cwpbh.01215](https://hdl.loc.gov/loc.pnp/cwpbh.01215) (1855–65) | NARA / BH | Good date fit | open |
 | memminger_christopher_g | none located | n/a | Search LOC and NARA by name | none |
-| reagan_john_h | BH [cwpbh.04952](https://hdl.loc.gov/loc.pnp/cwpbh.04952) | BH | Dated 1865–80 | ok\* |
-| seddon_james_a | NARA [530492](https://catalog.archives.gov/id/530492) (half-length seated) | NARA | He joined the cabinet in Nov 1862; date of photograph not stated | ok |
-| lee_robert_e | [LOC cwpb.04402](https://hdl.loc.gov/loc.pnp/cwpb.04402); NARA [525769](https://catalog.archives.gov/id/525769) (full-length standing, Brady, **April 1865**) | CWP / NARA | Both 1865 (bearded, grey); no 1861–62 pose identified in this pass | ok\* |
-| johnston_joseph_e | [LOC cwpb.06280](https://hdl.loc.gov/loc.pnp/cwpb.06280); NARA [525983](https://catalog.archives.gov/id/525983) (half-length) | CWP / NARA | Date not read | ok |
-| beauregard_pierre_g_t | NARA [525441](https://catalog.archives.gov/id/525441) (half-length); LOC [cwpb.07617](https://hdl.loc.gov/loc.pnp/cwpb.07617) is a group of Virginia generals | NARA / CWP | Date not stated | ok |
-| jackson_thomas_j | NARA [526067](https://catalog.archives.gov/id/526067) (bust, **April 1863**, photographed by Minnis) | NARA | Outside the window by a few months, but his best-known likeness | ok |
+| reagan_john_h | BH [cwpbh.04952](https://hdl.loc.gov/loc.pnp/cwpbh.04952) | BH | Dated 1865–80 | late |
+| seddon_james_a | NARA [530492](https://catalog.archives.gov/id/530492) (half-length seated) | NARA | He joined the cabinet in Nov 1862; date of photograph not stated | open |
+| lee_robert_e | [LOC cwpb.04402](https://hdl.loc.gov/loc.pnp/cwpb.04402); NARA [525769](https://catalog.archives.gov/id/525769) (full-length standing, Brady, **April 1865**) | CWP / NARA | Both 1865 (bearded, grey); no 1861–62 pose identified in this pass | late |
+| johnston_joseph_e | [LOC cwpb.06280](https://hdl.loc.gov/loc.pnp/cwpb.06280); NARA [525983](https://catalog.archives.gov/id/525983) (half-length) | CWP / NARA | Date not read | open |
+| beauregard_pierre_g_t | NARA [525441](https://catalog.archives.gov/id/525441) (half-length); LOC [cwpb.07617](https://hdl.loc.gov/loc.pnp/cwpb.07617) is a group of Virginia generals | NARA / CWP | Date not stated | open |
+| jackson_thomas_j | NARA [526067](https://catalog.archives.gov/id/526067) (bust, **April 1863**, photographed by Minnis) | NARA | Outside the window by a few months, but his best-known likeness | late |
 
-**Tally (60 rows):** 51 have a located item; 42 are good-date (ok) and 9 date-caveat (ok\*: Banks, Goldsborough, Wilkes, Julian, Johnson, Morton, Magoffin, Reagan, Lee); 1 is ID? (Blair); 8 are none (Smith, Wool, Du Pont, Fox, Gooch, Odell, Andrew, Memminger). Jackson counts as ok at April 1863.
+**Tally (60 rows):** 51 have a located item; 4 are win (Lincoln, Cameron, Pope, Anderson), 37 are open, and 10 are late (Banks, Goldsborough, Wilkes, Julian, Johnson, Morton, Magoffin, Reagan, Lee, Jackson: April 1863 is outside the window); 1 is ID? (Blair); 8 are none (Smith, Wool, Du Pont, Fox, Gooch, Odell, Andrew, Memminger). Rows whose notes say "date not stated" or "date not read" (Stephens, Seddon, Johnston, Beauregard) are open.
 
 **Warnings on the table.**
 - Every LOC row is Medium confidence on the item and High on the collection statement. Before a portrait goes into the pack, someone with a browser should open the handle and record the item's Rights Advisory and reproduction number.
@@ -131,7 +131,7 @@ Pages with instructions aimed at the agent: none.
 | U.S. Military Telegraph registers (Eckert papers) | [Huntington Library finding aid](https://www.oac.cdlib.org/findaid/ark:/13030/c86m3964/entire_text/) | Not checked; the Huntington sets its own terms | Registers, not forms; do not use without a licence check |
 | Lincoln's telegrams in the War Department Telegraph Office | LOC Lincoln Papers and NARA series "Telegrams Sent and Received" **(snippet)** | LOC refused; NARA catalogue not readable | Needs a browser pass |
 
-**Gap.** No verified exemplar of a blank American Telegraph Company or U.S. Military Telegraph form was found. **Recommendation:** draw the desk's blanks ourselves (our own work, 0014/0033) from a description in a PD source such as Bates's *Lincoln in the Telegraph Office* (1907; [IA record](https://archive.org/details/lincolnintelegra00bates), metadata flags it `NOT_IN_COPYRIGHT`) and from the genuine messages above as layout references.
+**Gap.** No verified exemplar of a blank American Telegraph Company or U.S. Military Telegraph form was found. **Recommendation:** draw the desk's blanks ourselves (our own work, 0014/0033, each with a provenance record that names it as own work and lists the public-domain sources used as layout references) from a description in a PD source such as Bates's *Lincoln in the Telegraph Office* (1907; [IA record](https://archive.org/details/lincolnintelegra00bates), metadata flags it `NOT_IN_COPYRIGHT`) and from the genuine messages above as layout references.
 
 ### War Department letterheads and General Orders
 
@@ -159,7 +159,7 @@ Notes: signed or syndicated items inside a paper can carry separate rights, but 
 
 ## 4. Treatment: what the sources permit
 
-- **Cropping, tinting, retouching, engraving-style filters, compositing.** LOC (Brady-Handy: "Publication and other forms of distribution: Permitted"; Civil War Photographs likewise) and NARA (no use restrictions, no licence) place no limit on alteration. A processed derivative of a public-domain photograph is ours to license and need not carry the institution's name or logo. Do not use institution logos or seals (NARA has a separate permission process for them).
+- **Cropping, tinting, retouching, engraving-style filters, compositing.** LOC (Brady-Handy: "Publication and other forms of distribution: Permitted"; Civil War Photographs likewise) and NARA (no use restrictions, no licence) place no stated limit on alteration. That no limit applies follows from public-domain status, which Brady-Handy and NARA assert; for the `cwpb` negatives it is **[I] our inference** (LOC's text says only that publication is permitted and no restriction is known). A processed derivative of a public-domain photograph is ours to license and need not carry the institution's name or logo. Do not use institution logos or seals (NARA has a separate permission process for them).
 - **Credit.** None is required, but both ask for one. Adopt LOC's form as the default: *Library of Congress, Prints & Photographs Division, [reproduction number]* (for a cwpb item: *… Civil War Photographs, [reproduction number]*). NARA asks only that credit lines be "encouraged": *National Archives, [NAID or local identifier]*. Put credits in a screen of the game's about section, not on the desk.
 - **Rights outside copyright.** LOC reminds users that privacy, publicity and trademark rights can still apply, and NARA says the user is responsible for clearances. For people who died more than a century ago these are remote, but the pack's clearance record should say that someone considered them. For any modern photograph of a document or object (the Duke exhibit image, a museum's photograph of a form), the photograph can carry its own copyright: avoid those, take the document from the holder.
 - **Take the master from the holder, not from Commons.** Commons files marked "restored" or "cropped" are volunteer derivatives that can carry their own licence tag. The LOC or NARA master has the cleanest chain.
