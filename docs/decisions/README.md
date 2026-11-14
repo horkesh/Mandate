@@ -45,3 +45,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0039](0039-positioning-and-go-no-go.md) | Positioning, price and the go or no-go bands | accepted |
 | [0040](0040-first-month-revisions.md) | Revisions from the first-month walkthrough | accepted |
 | [0041](0041-clarifications-owners-and-wording.md) | Clarifications: owners for new state, business during a visit, and neutral option wording | accepted |
+| [0042](0042-the-inaugural-is-the-premise.md) | The inaugural address is the premise, not a choice | accepted |
