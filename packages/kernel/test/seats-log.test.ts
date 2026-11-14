@@ -72,13 +72,29 @@ describe('the command log is the truth (0015)', () => {
     expect(canonicalHash(resumed.state)).toBe(canonicalHash(state));
   });
 
-  it('finds malformed log entries', () => {
+  it('finds malformed log entries: shape, and the type and vocabulary of each value (review F5)', () => {
     expect(logProblems([{ day: 2, seat: 's', command: { cmd: 'order', to: 'x' } }, { day: 1, seat: 's', command: { cmd: 'fly' } }, null])).toEqual([
       'entry 0: order has fields [cmd, to], expected [bypass, cmd, goal, region, route, to]',
-      'entry 1: day 1 comes after day 2',
       'entry 1: unknown command',
+      'entry 1: day 1 comes after day 2',
       'entry 2: not an object',
     ]);
+    expect(logProblems([{ day: 1, seat: 's', command: { cmd: 'order', to: 'a_army', goal: 'charge', region: 7, route: 'balloon', bypass: 'no' } }])).toEqual([
+      'entry 0: order.goal must be one of advance, hold',
+      'entry 0: order.region must be a region id or null',
+      'entry 0: order.route must be one of courier, in-person, mail, rail, ship, special-messenger, wire',
+      'entry 0: order.bypass must be true or false',
+    ]);
+  });
+
+  it('refuses a malformed entry in play, and a malformed log in replay (review F5, positive control)', () => {
+    const world = indexedFixture();
+    const start = createState(world, { seed: 1 });
+    const bad = { day: 1, seat: lead, command: { ...order('a_army', 'hold', null), bypass: 'no' } } as unknown as LogEntry;
+    const r = tick(world, start, [bad]);
+    expect(r.rejections.map((x) => x.reason)).toEqual(['malformed']);
+    expect(r.state.messagesInTransit.filter((m) => m.msgOrder !== null)).toEqual([]);
+    expect(() => replay(world, start, [bad], 3)).toThrow('order.bypass must be true or false');
   });
 });
 

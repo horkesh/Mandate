@@ -9,7 +9,9 @@
  * log saved beside it. The save envelope carries the log and its hash.
  */
 import { strictCompare } from '../compare.ts';
-import type { SeatId } from '../ids.ts';
+import { isWellFormedId, type SeatId } from '../ids.ts';
+import { ROUTE_KINDS } from '../messages/latency.ts';
+import { GOAL_KINDS } from '../plans/goal.ts';
 import { COMMAND_KINDS, type Command } from './commands.ts';
 
 export interface LogEntry {
@@ -32,25 +34,67 @@ export function logThrough(log: CommandLog, day: number): LogEntry[] {
 }
 
 /**
- * Problems with a log's shape (as read from a save): days must not go
- * backwards, and each command must be a known kind with its fields. The tick
- * still validates what each command asks for; this only guards the format.
+ * Problems with one entry's shape and value types: a known command kind with
+ * exactly its fields, each of the right type and, where the vocabulary is
+ * closed (goal kinds, routes), a known word (review F5). The tick still judges
+ * what a well-formed command asks for (a known post, a legal route for it).
+ */
+export function entryProblems(raw: unknown, i: number): string[] {
+  const at = `entry ${i}`;
+  const e = raw as Partial<LogEntry> | null;
+  if (typeof e !== 'object' || e === null || Array.isArray(e)) return [`${at}: not an object`];
+  const problems: string[] = [];
+  const top = Object.keys(e).sort(strictCompare).join();
+  if (top !== 'command,day,seat') problems.push(`${at}: has fields [${top}], expected [command, day, seat]`);
+  if (typeof e.day !== 'number' || !Number.isSafeInteger(e.day) || e.day < 1) problems.push(`${at}: day must be a positive integer`);
+  if (typeof e.seat !== 'string' || !isWellFormedId(e.seat)) problems.push(`${at}: seat must be a seat id`);
+  const c = e.command as Partial<Record<string, unknown>> | undefined;
+  if (typeof c !== 'object' || c === null || !(COMMAND_KINDS as readonly unknown[]).includes(c.cmd)) return [...problems, `${at}: unknown command`];
+  const fields = c.cmd === 'order' ? ['bypass', 'cmd', 'goal', 'region', 'route', 'to'] : ['cmd', 'option', 'request'];
+  const keys = Object.keys(c).sort(strictCompare);
+  if (keys.join() !== fields.join()) return [...problems, `${at}: ${String(c.cmd)} has fields [${keys.join(', ')}], expected [${fields.join(', ')}]`];
+  const id = (v: unknown) => typeof v === 'string' && isWellFormedId(v);
+  if (c.cmd === 'order') {
+    if (!id(c.to)) problems.push(`${at}: order.to must be a post id`);
+    if (!(GOAL_KINDS as readonly unknown[]).includes(c.goal)) problems.push(`${at}: order.goal must be one of ${GOAL_KINDS.join(', ')}`);
+    if (c.region !== null && !id(c.region)) problems.push(`${at}: order.region must be a region id or null`);
+    if (!(ROUTE_KINDS as readonly unknown[]).includes(c.route)) problems.push(`${at}: order.route must be one of ${ROUTE_KINDS.join(', ')}`);
+    if (typeof c.bypass !== 'boolean') problems.push(`${at}: order.bypass must be true or false`);
+  } else {
+    if (typeof c.request !== 'string' || c.request.length === 0) problems.push(`${at}: choose.request must be a request key`);
+    if (typeof c.option !== 'string' || c.option.length === 0) problems.push(`${at}: choose.option must be an option id`);
+  }
+  return problems;
+}
+
+/**
+ * Problems with a whole log (as read from a save): every entry well formed
+ * (`entryProblems`), and days never going backwards.
  */
 export function logProblems(log: readonly unknown[]): string[] {
   const problems: string[] = [];
   let lastDay = 0;
   log.forEach((raw, i) => {
-    const e = raw as Partial<LogEntry> | null;
-    if (typeof e !== 'object' || e === null) return void problems.push(`entry ${i}: not an object`);
-    if (typeof e.day !== 'number' || !Number.isSafeInteger(e.day) || e.day < 1) return void problems.push(`entry ${i}: day must be a positive integer`);
-    if (e.day < lastDay) problems.push(`entry ${i}: day ${e.day} comes after day ${lastDay}`);
-    lastDay = e.day;
-    if (typeof e.seat !== 'string') problems.push(`entry ${i}: seat must be a seat id`);
-    const c = e.command as Partial<Record<string, unknown>> | undefined;
-    if (typeof c !== 'object' || c === null || !(COMMAND_KINDS as readonly unknown[]).includes(c.cmd)) return void problems.push(`entry ${i}: unknown command`);
-    const fields = c.cmd === 'order' ? ['bypass', 'cmd', 'goal', 'region', 'route', 'to'] : ['cmd', 'option', 'request'];
-    const keys = Object.keys(c).sort(strictCompare);
-    if (keys.join() !== fields.join()) problems.push(`entry ${i}: ${String(c.cmd)} has fields [${keys.join(', ')}], expected [${fields.join(', ')}]`);
+    problems.push(...entryProblems(raw, i));
+    const day = (raw as Partial<LogEntry> | null)?.day;
+    if (typeof day === 'number' && Number.isSafeInteger(day)) {
+      if (day < lastDay) problems.push(`entry ${i}: day ${day} comes after day ${lastDay}`);
+      lastDay = Math.max(lastDay, day);
+    }
   });
   return problems;
+}
+
+export class LogError extends Error {
+  constructor(readonly problems: readonly string[]) {
+    super(`malformed command log:\n- ${problems.join('\n- ')}`);
+    this.name = 'LogError';
+  }
+}
+
+/** Throw `LogError` listing every problem unless the log is well formed; return it typed. */
+export function checkedLog(log: readonly unknown[]): CommandLog {
+  const problems = logProblems(log);
+  if (problems.length > 0) throw new LogError(problems);
+  return log as CommandLog;
 }

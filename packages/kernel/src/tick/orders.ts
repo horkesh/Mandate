@@ -15,6 +15,7 @@ import type { ReportBody } from '../knowledge/report.ts';
 import type { OrderCommand } from '../log/commands.ts';
 import type { Hop, TransitMessage } from '../messages/transit.ts';
 import { mintMessageId } from '../messages/transit.ts';
+import { GOAL_KINDS } from '../plans/goal.ts';
 import { receiveOrder } from '../plans/standing.ts';
 import type { State } from '../root-state.ts';
 import { relayDecision } from '../standin/traits.ts';
@@ -40,6 +41,7 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   const target = world.post(cmd.to);
   if (target.kind !== 'field' || target.faction !== issuer.faction) return 'not_field_post';
   if (target.holder === null) return 'vacant_post';
+  if (!(GOAL_KINDS as readonly string[]).includes(cmd.goal)) return 'bad_goal';
   if (cmd.goal === 'advance' ? cmd.region === null || !world.regionIds.includes(cmd.region) : cmd.region !== null) return 'bad_goal';
   if (!(ORDER_ROUTES_ALLOWED as readonly string[]).includes(cmd.route)) return 'route_unavailable';
   // The whole chain of posts above the target relays a principal's order.

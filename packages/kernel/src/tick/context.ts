@@ -18,6 +18,7 @@ import type { IndexedWorld } from '../standin/world.ts';
 export type RejectionReason =
   | 'bad_goal'
   | 'duplicate_choice'
+  | 'malformed'
   | 'no_such_request'
   | 'not_a_principal'
   | 'not_an_option'

@@ -17,7 +17,7 @@
  */
 import type { PostId } from '../ids.ts';
 import { pruneKnowledge } from '../knowledge/knowledge.ts';
-import type { LogEntry } from '../log/log.ts';
+import { entryProblems, type LogEntry } from '../log/log.ts';
 import { createIdMint, sendMessages } from '../messages/transit.ts';
 import type { State } from '../root-state.ts';
 import type { OptionView } from '../seats/api.ts';
@@ -102,6 +102,8 @@ export function tick(world: IndexedWorld, start: State, entries: readonly LogEnt
       ctx.rejections.push({ day, seat: entry.seat, entry: index, reason });
       fire(ctx, 'commands.rejected');
     };
+    // A malformed entry (wrong field types, an unknown goal or route) is refused before anything reads it.
+    if (entryProblems(entry, index).length > 0) return reject('malformed');
     if (entry.day !== day) return reject('wrong_day');
     if (state.seatAssignments[entry.seat] === undefined) return reject('unknown_seat');
     const c = entry.command;

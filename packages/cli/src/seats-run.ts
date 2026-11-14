@@ -92,7 +92,8 @@ export function seatsRun(options: SeatsRunOptions): SeatsSummary {
     const text = encodeSave({ worldHash, state: mid.state, log });
     options.onSave?.(text, at);
     const loaded = decodeSave(text, { expectedWorldHash: worldHash });
-    const savedLog = loaded.log as unknown as phase0.CommandLog;
+    // The saved log is the truth: refuse a malformed one before replaying or resuming (review F5).
+    const savedLog = phase0.checkedLog(loaded.log);
     const savedLogReplays = canonicalHash(phase0.replay(world, initial, savedLog, at).state) === loaded.stateHash;
     const resumed = phase0.playDays(world, loaded.state as unknown as phase0.State, seats, options.days - at, { freeze: true });
     const resumedHash = canonicalHash(resumed.state);

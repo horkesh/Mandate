@@ -19,7 +19,7 @@ import type { Telemetry } from '../telemetry.ts';
 import { deepFreeze } from '../tick/freeze.ts';
 import { tick, type TickResult } from '../tick/tick.ts';
 import { createViewCache } from '../view/view.ts';
-import { entriesForDay, type CommandLog, type LogEntry } from './log.ts';
+import { checkedLog, entriesForDay, type LogEntry } from './log.ts';
 
 export interface DayHash {
   readonly day: number;
@@ -71,14 +71,19 @@ export function playDays(
   return { state, log, hashes };
 }
 
-/** Replay a log from `start` through `throughDay`, hashing every day. Seats are never asked. */
+/**
+ * Replay a log from `start` through `throughDay`, hashing every day. Seats are
+ * never asked. A malformed log throws `LogError` before any day runs: the log
+ * is the truth, so it must be well formed (review F5).
+ */
 export function replay(
   world: IndexedWorld,
   start: State,
-  log: CommandLog,
+  rawLog: readonly unknown[],
   throughDay: number,
   options: PlayOptions = {},
 ): { readonly state: State; readonly hashes: DayHash[] } {
+  const log = checkedLog(rawLog);
   let state = options.freeze === true ? deepFreeze(start) : start;
   const hashes: DayHash[] = [];
   while (state.stateDay < throughDay) {
