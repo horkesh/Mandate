@@ -231,6 +231,9 @@ export function validateSituations(items: readonly { readonly file: string; read
   const people = new Set(pack.world.people.map((p) => p.id as string));
   const regions = new Set(pack.world.regions.map((r) => r.id as string));
   const posts = new Set(pack.scenarios.flatMap((s) => s.posts.map((p) => p.id as string)));
+  // A post's side is its department's (null for a neutral government).
+  const departmentSide = new Map(pack.world.departments.map((d) => [d.id as string, d.faction as string | null]));
+  const postSide = new Map(pack.scenarios.flatMap((s) => s.posts.map((p) => [p.id as string, departmentSide.get(p.department) ?? null] as const)));
   const byId = new Map<string, SituationDef>();
   const defaultStrings = new Map<string, string>();
   for (const { table } of pack.strings.get(pack.manifest.defaultLocale) ?? []) for (const [k, v] of Object.entries(table)) defaultStrings.set(k, v);
@@ -249,6 +252,14 @@ export function validateSituations(items: readonly { readonly file: string; read
       if (!set.has(value)) err('unknown-reference', at, `"${value}" is not a ${what}`, `a ${what} id defined in the pack`);
     };
     ref(factions, 'faction', def.faction, 'faction');
+    // Standing review S6 (0050: sides are checked wherever two records meet): every post a situation names is its side's.
+    const ownSide = (p: string, at: string) => {
+      if (postSide.has(p) && postSide.get(p) !== def.faction) err('situation-side', at, `"${p}" is ${postSide.get(p) ?? 'a neutral government'}'s post, not ${def.faction}'s`, "a post of the situation's own side: the other side neither decides, advises nor reports for it");
+    };
+    def.delegableTo.forEach((p, i) => ownSide(p, `delegableTo[${i}]`));
+    def.staffLine?.authors.forEach((p, i) => ownSide(p, `staffLine.authors[${i}]`));
+    def.report?.authors.forEach((p, i) => ownSide(p, `report.authors[${i}]`));
+    def.options.forEach((o, i) => o.orders.forEach((order, j) => ownSide(order.to, `options[${i}].orders[${j}].to`)));
     def.subjects.forEach((p, i) => ref(people, 'person', p, `subjects[${i}]`));
     def.delegableTo.forEach((p, i) => ref(posts, 'post in any scenario', p, `delegableTo[${i}]`));
     const optionIds = def.options.map((o) => o.id);

@@ -12,7 +12,7 @@ import type { Condition, Effect, SituationDef } from './types.ts';
 
 export interface SituationRefs {
   readonly factions: ReadonlyMap<string, unknown>;
-  readonly posts: ReadonlyMap<string, unknown>;
+  readonly posts: ReadonlyMap<string, { readonly faction: string }>;
   readonly persons: ReadonlyMap<string, unknown>;
   readonly regions: ReadonlyMap<string, unknown>;
 }
@@ -71,6 +71,13 @@ export function situationReferenceProblems(defs: readonly SituationDef[], refs: 
     if (d.kind === 'decision' && d.report !== null) at('report', 'a decision is told through its staff line, not a notice report');
     for (const p of d.report?.authors ?? []) if (!refs.posts.has(p)) at('report.authors', `${p} is not a post`);
     for (const p of [...(d.staffLine?.authors ?? []), ...d.delegableTo]) if (!refs.posts.has(p)) at('posts', `${p} is not a post`);
+    // Standing review S6: every post the situation names is its own side's, so the other side never decides,
+    // advises or reports for it (0050). An option's order to the other side is also refused by `issueOrder`.
+    const named = [...(d.report?.authors ?? []), ...(d.staffLine?.authors ?? []), ...d.delegableTo, ...d.options.flatMap((o) => o.orders.map((x) => x.to))];
+    for (const p of named) {
+      const side = refs.posts.get(p)?.faction;
+      if (side !== undefined && side !== d.faction) at('posts', `${p} is ${side}'s post, not ${d.faction}'s`);
+    }
     for (const p of d.subjects) if (!refs.persons.has(p)) at('subjects', `${p} is not a person`);
     for (const r of d.staffLine?.recommends ?? []) if (!optionIds.has(r)) at('staffLine.recommends', `${r} is not an option`);
     const hd = d.historicalDefault;

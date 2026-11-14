@@ -89,6 +89,17 @@ describe('situations in the pack format', () => {
     firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.options[0].proposedBy = ['nobody'])), 'unknown-reference', { at: 'options[0].proposedBy[0]' });
   });
 
+  it('standing review S6: every post a situation names is its own side’s', () => {
+    // Probe G5: the other side's war office as delegate, delegated default and staff author on a northern decision.
+    const theirs = editJson(sit('eastwatch_stalls'), (s) => ((s.delegableTo = ['s_war_office']), (s.historicalDefault = { delegate: 's_war_office' }), (s.staffLine.authors = ['s_war_office'])));
+    firesAt(theirs, 'situation-side', { at: 'delegableTo[0]', message: 's_war_office' });
+    firesAt(theirs, 'situation-side', { at: 'staffLine.authors[0]' });
+    firesAt(editJson(sit('fen_arrivals'), (s) => (s.report.authors = ['s_war_office'])), 'situation-side', { at: 'report.authors[0]' });
+    firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.options[0].orders[0].to = 's_war_office')), 'situation-side', { at: 'options[0].orders[0].to' });
+    // The control: the unedited testbed names only its own side's posts.
+    expect(issues().filter((i) => i.kind === 'situation-side')).toEqual([]);
+  });
+
   it('references resolve: people, posts, regions, routes, situations and options', () => {
     fires(editJson(sit('eastwatch_stalls'), (s) => (s.options[0].proposedBy = ['nobody'])), 'unknown-reference');
     fires(editJson(sit('eastwatch_stalls'), (s) => (s.options[0].orders[0].to = 'no_post')), 'unknown-reference');

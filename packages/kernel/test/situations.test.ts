@@ -235,14 +235,14 @@ describe('deciding: the principal, a history default, several options, waiting, 
 describe('orders an option issues, and delegation (0052)', () => {
   it('issues an option’s orders in the principal’s name through the validated path, and reports a refused one', () => {
     const sit = decision('order', {
-      options: [option('advance', 1, { orders: [{ to: POST('a_reserve'), goal: 'advance', region: R('b_mid'), route: 'special-messenger' }, { to: POST('b_army'), goal: 'hold', region: null, route: 'courier' }] }), option('hold', 2)],
+      options: [option('advance', 1, { orders: [{ to: POST('a_reserve'), goal: 'advance', region: R('b_mid'), route: 'special-messenger' }, { to: POST('a_office'), goal: 'hold', region: null, route: 'courier' }] }), option('hold', 2)],
       historicalDefault: { options: ['advance'] },
     });
     const { world, state } = setup([sit], { a_lead: 'rules' });
     const run = days(world, state, 1);
     const orders = run.state.messagesInTransit.filter((m) => m.msgOrder !== null);
     expect(orders.map((m) => [m.msgOrder!.orderIssuer, m.msgOrder!.orderTarget, m.msgRoute])).toEqual([[P('a_lead'), POST('a_reserve'), 'special-messenger']]);
-    // An option ordering the other side's army is refused like any order: entry -1 marks it as option-issued.
+    // An option ordering a post that commands no army is refused like any order: entry -1 marks it as option-issued.
     expect(run.results[0]!.rejections).toEqual([{ day: 1, seat: lead, entry: -1, reason: 'not_field_post' }]);
   });
 
@@ -270,6 +270,15 @@ describe('orders an option issues, and delegation (0052)', () => {
     expect(after.situationStates[S('handed')]!.sitChosen).toEqual(['careful']);
     expect(after.situationStates[S('handed')]!.sitDecidedBy).toBe('delegate');
     expect(after.messagesInTransit.filter((m) => m.msgOrder !== null).map((m) => m.msgOrder!.orderIssuer)).toEqual([P('a_lead')]);
+  });
+
+  it('the guard refuses a situation naming the other side’s posts: no enemy decides, advises, reports or is ordered (standing review S6)', () => {
+    const world = (over: Partial<SituationDef>) => () => setup([decision('d', over)]);
+    expect(world({ delegableTo: [POST('b_army')], historicalDefault: { delegate: POST('b_army') } })).toThrow(/b_army is b's post, not a's/);
+    expect(world({ staffLine: { authors: [POST('b_office')], recommends: ['hold'], reasons: [], confidence: 500 } })).toThrow(/b_office is b's post/);
+    expect(world({ options: [option('hold', 1, { orders: [{ to: POST('b_army'), goal: 'hold', region: null, route: 'courier' }] })] })).toThrow(/b_army is b's post/);
+    // The control: the same situation with its own side's posts runs.
+    expect(world({ delegableTo: [POST('a_army')], historicalDefault: { delegate: POST('a_army') } })).not.toThrow();
   });
 
   it('lets the principal delegate by command, only to a listed post', () => {
