@@ -40,4 +40,4 @@ Rejected:
   - Ancient World Mapping Center / Pleiades for Rome;
   - geoBoundaries for Ukraine.
 - The kernel's `Region` gains optional geometry references (not geometry itself; the kernel stays geometry-free).
-- The map is built as part of the desk UI (M3), not after it.
+- The map is built as part of the desk UI (M3 at the time; Phase 2 in the current roadmap), not after it.

@@ -1,6 +1,6 @@
 # 0021: A sensitive-history gate; no Lost Cause framing; enslaved people as agents
 
-Status: accepted (2026-11-14). AWWV's founding brief for this project recommends a gate from day one and states, "Recommended default, which I confirm: no Lost Cause framing", which the owner forwarded as guidance. The representation of enslaved people is the lead's recommendation, open to the owner's review like every record.
+Status: accepted (2026-11-14). AWWV's founding brief for this project recommends a gate from day one and states, "Recommended default, which I confirm: no Lost Cause framing", which the owner forwarded as guidance. The representation of enslaved people is the lead's recommendation, open to the owner's review like every record. Amended by 0026 (wider scope, placement rule, Black regiments, a playable Confederacy needs its own record).
 
 ## Context
 
@@ -18,4 +18,4 @@ Rejected: leaving the topic out (that is itself a framing); a single reviewer fo
 ## Consequences
 
 - Situations and copy touching the gate are written and reviewed under it.
-- A short gate checklist lives with the situations schema when it is built (Phase 0, lane 0.8).
+- A short gate checklist lives with the situations schema when it is built (Phase 0, the situations lane: lane 0.7 after the re-sequencing in 0026).

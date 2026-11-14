@@ -2,11 +2,15 @@
 
 Each proposal names the problem it solves, how it works, and how it plays in the three reference wars. Status for all of them: **proposed**. The owner accepts, rejects or reshapes them, and accepted ones become decision records.
 
+> **Status (2026-11-14):** [FOUNDATION.md](FOUNDATION.md) is now the integrated design, and decisions 0014–0026 settle much of what follows. These proposals are kept as written for their reasoning; the notes at the top of each say where a decision has superseded or changed one. The "three reference wars" framing is replaced by the wars-with-fronts test (0018, 0024).
+
 ---
 
 ## Part A: core mechanisms
 
 ### P1. Assets belong to posts, not to factions
+
+> **Status:** changed by 0016 and 0026. Transfers between armies are a verb aimed at two commanders; inside an army the commander assigns divisions; corps are posts.
 
 **Problem.** In almost every strategy game the faction owns the army, and the general is a buff on top of it. That makes "command through proxies" a skin over direct control.
 
@@ -17,6 +21,8 @@ Each proposal names the problem it solves, how it works, and how it plays in the
 - **Ukraine:** a brigade with its own donors and media channel is not fully the ministry's to move.
 
 ### P2. Directives are contracts, and compliance is a ladder
+
+> **Status:** changed by 0016 and 0026. Directives become goals, kernel-drafted plans and arrow edits; the compliance ladder applies to each edit as a counter-order.
 
 **Problem.** AWWV's compliance formula is a single number on a four-rung stance ladder. Other games roll a die.
 
@@ -49,6 +55,8 @@ Grievances are not interchangeable: gold doesn't fix a denied promotion. Resolut
 
 ### P4. Political fog of war: every fact has an author
 
+> **Status:** extended by 0020. Generals' own stats are hidden too, and the player sees a staff assessment; observers are office-holders with bias.
+
 **Problem.** Fog of war is almost always spatial. The leader's real problem is that the people reporting to him have reasons to shade the truth.
 
 **Proposal.** The player never reads state. The player reads **claims**. Every report is written by a person, with:
@@ -74,6 +82,8 @@ Each step is caused by something specific, such as accumulated grievances, stand
 
 ### P6. Success breeds rivals: Standing
 
+> **Status:** extended by 0020 and 0026. Reputation and nerve are separate; a popular or sacked general can be drawn as the opposition's 1864 candidate.
+
 **Problem.** Victory has no political downside in most games.
 
 **Proposal.** Each proxy accumulates **Standing**: their own political capital, from victories, fame, a constituency and patrons. Standing:
@@ -97,6 +107,8 @@ If you've never sacked anyone, the threat to sack loses its force (Feaver's puni
 
 ### P8. Distance is time: latency is the era dial
 
+> **Status:** changed by 0018, 0024 and 0026. The engine's promise is wars with fronts, not three eras; the kernel owns all latency, and messages travel along the map graph.
+
 **Problem.** One engine has to make Rome, the 1860s and 2022 feel different without separate code.
 
 **Proposal.** Every message (order or report) travels along a channel with a latency and a leak rate:
@@ -108,6 +120,8 @@ The same mechanism produces three different games.
 
 ### P9. Attention is the scarce resource
 
+> **Status:** superseded by 0025. Attention is a weekly budget under real time; approving a good draft is free; a visit costs days away instead of points.
+
 **Problem.** Micromanagement creeps back whenever doing it yourself is free and better.
 
 **Proposal.** Each turn you have a small number of **audiences**, set by your health, your staff and the crisis level. Every decision that reaches you can be:
@@ -118,6 +132,8 @@ The same mechanism produces three different games.
 Delegation must be genuinely good when you pick the right person, or players will micromanage (HOI4's lesson).
 
 ### P10. The coalition is the second clock
+
+> **Status:** changed by 0023 and 0026. The 1862 midterms and 1864 election are the checkpoints; losing 1864 ends the game with a verdict that the electorate rejected the war.
 
 **Problem.** Most games end on territory.
 
@@ -131,6 +147,8 @@ Delegation must be genuinely good when you pick the right person, or players wil
 The outcome is a **verdict** on several axes (AWWV), not a win screen.
 
 ### P11. Patrons are proxies with their own scoring
+
+> **Status:** changed by 0023 for the Civil War: Britain and France are pressure clocks worked through the Secretary of State's seat, not playable factions or patrons with aid ladders.
 
 **Problem.** Foreign aid in games is a faucet.
 
@@ -153,6 +171,8 @@ Each one lowers the risk of the higher rungs of the ladder (P5) and measurably l
 
 ### P13. The theatre model is coarse and hidden: spend the fidelity budget on people
 
+> **Status:** superseded by 0019. The map is regions in the hundreds over a typed graph of road, rail, river and sea links, with fronts and pockets derived from control.
+
 AWWV's hardest problem was never the command premise. It was tuning a 150-step combat engine to reproduce history cell by cell. In Mandate the player **never sees the battlefield raw**, only reports, which is the point of the game. So the theatre model can be:
 - a coarse region graph;
 - force strength, supply and posture per region;
@@ -163,9 +183,13 @@ The design budget goes into people, information and politics instead.
 
 ### P14. A variable-tempo clock
 
+> **Status:** superseded by 0017 (which supersedes 0010). Real time with pause on a daily tick; the decision-point signal survives as the shell's auto-pause.
+
 The tick is one **day**. A turn runs until the next **decision point**: a report that needs you, a deadline, a crisis. The scenario sets a minimum and maximum. Rome can run months between turns in winter quarters. Ukraine can stop daily during an offensive. This uses one engine and needs no per-setting turn code.
 
 ### P15. History is pressure, not rails
+
+> **Status:** accepted in substance by 0023. Situations fire on cause predicates and carry a historical default and a staff recommendation.
 
 The leader is a headline cause by definition, so Starfleet Career's "canon happens" cannot apply. Instead:
 - historical **people, blocs, patrons and starting conditions** are data;
@@ -176,11 +200,13 @@ AWWV's Codex "ghost entries" show where your war diverged from the real one. A p
 
 ### P16. Systems own truth, text only renders, and the offline game is the product
 
+> **Status:** accepted in substance by 0015 and 0022. Rule seats first and fully playable offline; AI text is voice, never state, with a template fallback for every line.
+
 This is carried over from Starfleet Career decisions 0001 and 0028. Proxy dialogue comes from **typed reasons → authored templates**. An LLM layer may later dress the same structured reasons in voice. It never decides anything, and nothing a player needs depends on it.
 
 ### P17. A headless people sim first, the map last
 
-> The map ordering is superseded by decision 0013: the hand-drawn staff map is built with the desk UI (M3). The headless-first part stands.
+> **Status:** changed by 0013 and FOUNDATION section 12. The map ordering is superseded by decision 0013: the hand-drawn staff map is built with the desk UI. The headless-first part stands as Phases 0 and 1 (headless kernel and war machine) before Phase 2 (the desk and the staff map); the text-console Audience playtest is superseded by the redesign.
 
 The map is the most expensive thing to build and the least central to the premise. AWWV rebuilt its map UI four times. Build order:
 1. Kernel and the people sim, run headless with a text console. Prove the Audience is fun in text.
@@ -190,6 +216,8 @@ The map is the most expensive thing to build and the least central to the premis
 ---
 
 ## Part C: where I push back on the brief
+
+> **Status:** items 1, 3, 4 and 5 are settled by 0018 and 0024: the first game is the whole Civil War, 1861–65; the engine's promise is wars with fronts; Ukraine is rejected; Rome is a possible later game.
 
 1. **"One engine that fits them all" is right for the engine and wrong for the first game.** Generic engines die of generality. Build **one vertical slice** of one war against a kernel that obeys the three-setting test. Extract further engine abstractions only when the second setting needs them, the rule of three. The packs boundary keeps us honest without designing for three settings at once.
 2. **Don't rebuild AWWV's combat engine.** See P13. If the theatre is the hard part again, we've built the wrong game.

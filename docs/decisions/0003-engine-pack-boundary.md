@@ -1,6 +1,6 @@
 # 0003: Settings are packs; engine code names no setting
 
-Status: accepted (2026-11-13)
+Status: accepted (2026-11-13); its three-setting test is replaced by 0024 (the "wars with fronts" test).
 
 ## Context
 

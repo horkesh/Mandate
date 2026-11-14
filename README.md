@@ -1,16 +1,17 @@
 # Mandate (working title)
 
-An engine for strategy games in which you are not the general. You lead a faction at war, and every army, province and ministry is held by someone else: people with their own ambitions, who report what suits them and who can and will push back.
+A strategy game in which you are not the general. You lead a faction at war, and every army, department and ministry is held by someone else: people with their own ambitions, who report what suits them and who can and will push back.
 
-Reference wars: Rome · the US Civil War · Russia–Ukraine. First slice: the Union, 1861–62.
+The first game is the American Civil War, 1861–65: you play Lincoln, the Union first. The engine underneath is built for wars with fronts, with each setting as a pack. The design was reworked on 2026-11-14; Phase 0 (the new kernel's foundation and the Union 1861 world) is next.
 
 ## Start here
 
-- [docs/VISION.md](docs/VISION.md): the pitch, pillars and kernel
-- [docs/design/PROPOSALS.md](docs/design/PROPOSALS.md): the mechanisms and where the brief gets pushback
+- [docs/VISION.md](docs/VISION.md): the pitch and pillars
+- [docs/design/FOUNDATION.md](docs/design/FOUNDATION.md): the integrated design and the kernel's architecture
 - [docs/decisions/](docs/decisions/): settled decisions
+- [docs/design/PROPOSALS.md](docs/design/PROPOSALS.md): the original mechanism proposals, with their status
 - [docs/OPEN_QUESTIONS.md](docs/OPEN_QUESTIONS.md): what still needs the owner
-- [docs/ROADMAP.md](docs/ROADMAP.md): milestones
+- [docs/ROADMAP.md](docs/ROADMAP.md): phases
 
 ## Develop
 

@@ -1,9 +1,19 @@
 # Roadmap
 
-| Milestone | Goal | Done when |
+The game and engine were redesigned on 2026-11-14 (decisions 0014–0026; design in [design/FOUNDATION.md](design/FOUNDATION.md)). The phases below come from FOUNDATION section 12.
+
+## Done
+
+- **M0 Foundations** (2026-11-13): repo, decisions, kernel primitives, and a demo of three proxies answering one directive differently.
+- **M1 People kernel, headless** (2026-11-14): persons, posts, directives and the compliance ladder, claims with authors, the insubordination ladder, standing, the leader's record, latency and attention, in a scripted 20-turn run with typed reasons. Gaps in [design/KERNEL.md](design/KERNEL.md).
+- **M2 Union 1861–62 slice, console** (built 2026-11-14): the Audience with typed counters, `packs/union-1861`, and `npm run play`. Its pending playtest and calibration are superseded by the redesign; its people core and Union people data carry into Phase 1.
+
+## Next
+
+| Phase | Goal | Done when |
 |---|---|---|
-| **M0 Foundations** (done 2026-11-13) | Repo, decisions, kernel primitives, first mechanism | `npm run check` green; demo shows three proxies answering one directive differently, with declared vs actual responses |
-| **M1 People kernel, headless** (done 2026-11-14, gaps in [design/KERNEL.md](design/KERNEL.md); typed Audience counters carried into M2) | Persons, posts, assets-held-by-posts (P1), directives and the compliance ladder (P2), the Audience with typed counters (P3), claims with authors (P4), the insubordination ladder (P5), standing (P6), the leader's record (P7), message latency (P8), attention (P9) | A scripted 20-turn headless run produces a readable log in which every outcome traces to caused, typed reasons |
-| **M2 Union 1861–62 slice, console** (built 2026-11-14: Audience with typed counters, `npm run play`, `packs/union-1861`; waiting on the owner's playtest and calibration) | `packs/union-1861`: about 15 people, posts, 4 blocs, a coarse theatre graph, telegraph latency, the 1862 midterms | A full slice plays end to end in a text console and produces a verdict, and a playtest says the Audience is fun in text |
-| **M3 Desk and staff map** | One inbox (dispatches), the audience scene, org chart, ledger, and the hand-drawn staff map (0013): a PixiJS renderer with baked static layers, fronts and arrows drawn from claims, and the 1862 skin | The slice plays in the browser, and the map never shows ground truth to the player |
-| **M4 Rome review** | Test the kernel against the Second Punic War (collective principal, annual magistrates, multi-week latency) and the parchment skin | Kernel changes recorded as decisions; API frozen at v1 |
+| **Phase 0: foundation and world** | Engineering foundations (CI on Linux and Windows, typed IDs, canonical serialization and state hash, versioned saves, one-writer and verb-list architecture tests, liveness counters); world format v2 with regions, typed edges and provenance; the Union 1861 map and order of battle; control, fronts, pockets and supply as derived indexes; forces, command, movement and a simple control contest; seats, per-seat knowledge, kernel-owned latency, the player-visible boundary and the command log; the situations schema and the sensitive-history checklist; a headless runner | A headless run on the new kernel, on the Union 1861 map and order of battle, with rule seats holding standing goals, moves divisions, changes control through a simple deterministic contest, and derives fronts, pockets and supply; and it gives the same state hash on Linux and Windows CI, resumes from a mid-run save to the same final hash as the continuous run, passes the liveness gate for every Phase 0 mechanic, keeps the surviving tests named in FOUNDATION section 10 passing, and stays inside the tick budget |
+| **Phase 1: the war machine** | The kernel planner and plan selection; operations; combat with breakdowns and shaded reports; the people core recast for goals, plans and edits; stats, assessment and the officer pool; politics, the press and the 1862 midterms; the economy; attention | A headless history run of 1861–62 reaches the midterms with checkpoints in plausible bands |
+| **Phase 2: the desk and the staff map** | One inbox, the audience scene, the org chart, the ledger, and the hand-drawn staff map (0013) drawing regions, fronts and arrows from the player's knowledge | Set when Phase 1 lands. Working version (FOUNDATION section 12): the owner plays Lincoln through 1861–62 at the desk, on the staff map, and finds plan review and the audience worth playing; the map never shows ground truth |
+
+Later, on the same machinery: the full war to 1865, a playable Confederacy (which needs its own record under the sensitive-history gate, 0026), playing a general, and multiplayer (0015). Rome is a possible later game, not a milestone (0018).

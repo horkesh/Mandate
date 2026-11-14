@@ -1,6 +1,6 @@
 # 0023: The home front: a light economy through people, elections, and history as situations
 
-Status: accepted (2026-11-14). The owner chose a HoI-light economy run through people, "losing the 1864 election ends the game, you play as Lincoln", and history as pressure. Design: `docs/design/FOUNDATION.md` section 7.
+Status: accepted (2026-11-14). The owner chose a HoI-light economy run through people, "losing the 1864 election ends the game, you play as Lincoln", and history as pressure. Amended by 0026 (the ending is a verdict, not a historical claim). Design: `docs/design/FOUNDATION.md` section 7.
 
 ## Context
 

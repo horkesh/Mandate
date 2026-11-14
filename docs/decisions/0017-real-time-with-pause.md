@@ -1,6 +1,6 @@
 # 0017: Real time with pause on a daily tick
 
-Status: accepted (2026-11-14). The lead proposed it in the brainstorm and the owner did not object; the owner's favourite games (Europa Universalis, Imperator, HoI) all run this way. Supersedes 0010. Design: `docs/design/FOUNDATION.md` section 9.
+Status: accepted (2026-11-14). The lead proposed it in the brainstorm and the owner did not object; the owner's favourite games (Europa Universalis, Imperator, HoI) all run this way. Supersedes 0010. Amended by 0026 (the kernel owns all latency). Design: `docs/design/FOUNDATION.md` section 9.
 
 ## Context
 

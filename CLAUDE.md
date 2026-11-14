@@ -1,14 +1,14 @@
 # CLAUDE.md: Mandate
 
-Mandate is a setting-agnostic engine for strategy games in which the player is the political leader of a faction at war and commands only through human proxies who can and do push back. Reference wars: Rome, the US Civil War, Russia–Ukraine. First slice: the Union, 1861–62.
+Mandate is a strategy game, and an engine for wars with fronts, in which the player is the political leader of a faction at war and commands only through people who can and do push back. First game: the American Civil War, 1861–65; you play Lincoln (0018).
 
-**Phase: M2 built (Audience + Union 1861–62 in a text console).** The kernel runs whole games: directives with latency, compliance and lies, the Audience with typed counters, a coarse theatre, recruitment into posts, the insubordination ladder, rivals, promises, mandate tests, and a bot principal. `npm run play -- union-1861` plays Lincoln in the terminal. Pending: the owner's playtest and calibration. Next is M3, the desk UI and the staff map. There is no UI yet beyond the console and the map prototype. See [docs/ROADMAP.md](docs/ROADMAP.md) and [docs/design/KERNEL.md](docs/design/KERNEL.md).
+**Phase: redesign agreed; Phase 0 next.** The game and kernel were redesigned on 2026-11-14 (goals and plans as arrows, hidden stats and assessment, seats, real time with pause, regions over a typed graph). The design is [docs/design/FOUNDATION.md](docs/design/FOUNDATION.md), accepted through decisions 0015–0026; its section 12 is the Phase 0 plan. The code in `packages/` is still the M2 kernel described in [docs/design/KERNEL.md](docs/design/KERNEL.md) (a coarse theatre and a text console, `npm run play -- union-1861`), which Phase 0 replaces.
 
 ## Hard rules
 
-1. **The player is the principal** (decision 0001). No verb ever targets a unit or a place. Reject features that put the player back in the general's seat.
+1. **The player is the principal** (0016, which supersedes 0001). The player never moves a division. A verb may name a place only as part of an order to a person (a goal, or an edit to a commander's plan within the edit grammar of 0026). Reject features that put the player back in the general's seat.
 2. **Settled decisions are settled.** Read [docs/decisions/](docs/decisions/) before proposing anything they cover. To change one, write a superseding record.
-3. **Settings are packs** (0003). No setting names in `packages/`. `npm run check:boundary` enforces this.
+3. **Settings are packs** (0003, test amended by 0024). No setting names in `packages/`. `npm run check:boundary` enforces this.
 4. **Determinism** (0002). The kernel uses integer permille math only. No `Math.random`, `Date`, I/O, `localeCompare` or transcendental `Math`. Randomness comes from named seeded streams. Enforced by `packages/kernel/test/banned-apis.test.ts`.
 5. **One owner per truth.** Every piece of state has exactly one writer. Derived data is recomputed, never saved. (This was AWWV's most expensive lesson.)
 6. **Every number is explainable.** Mechanisms return their contributing terms and typed reasons, not only a result.
@@ -23,7 +23,7 @@ Mandate is a setting-agnostic engine for strategy games in which the player is t
 
 ## Where things live
 
-- `packages/kernel/`: the pure deterministic sim core (module map in `docs/design/KERNEL.md`)
+- `packages/kernel/`: the pure deterministic sim core (today's M2 module map in `docs/design/KERNEL.md`; the target module map in `docs/design/FOUNDATION.md` section 10)
 - `packages/cli/`: headless runners that read packs from disk
 - `packs/`: setting data (one folder per pack)
 - `docs/decisions/`, `docs/design/`, `docs/research/` (dated, sourced), `docs/LESSONS.md`, `docs/OPEN_QUESTIONS.md`

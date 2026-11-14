@@ -1,6 +1,6 @@
 # Foundation design: the game's shape and the kernel's architecture
 
-Status: proposed (2026-11-14), written by the lead from the owner's brainstorm decisions and four research notes. Decision records 0015–0023 accept its parts; until a record accepts a part, it is a proposal (canon precedence in `CLAUDE.md`). It replaces the M1/M2 kernel described in `KERNEL.md` and the coarse theatre of proposal P13.
+Status: proposed (2026-11-14), written by the lead from the owner's brainstorm decisions and four research notes, then revised after an independent review (verdict "ready after fixes"; fixes in 0024–0026). Decision records 0015–0026 accept its parts; until a record accepts a part, it is a proposal (canon precedence in `CLAUDE.md`). It replaces the M1/M2 kernel described in `KERNEL.md` and the coarse theatre of proposal P13.
 
 Sources:
 - the owner's answers in the 2026-11-14 brainstorm (recorded in 0015–0023);
@@ -12,7 +12,7 @@ Sources:
 
 ## 1. The game in one paragraph
 
-You are Lincoln, from 1861 to 1865. You cannot move a division. You set goals for your commanders, and each drafts a plan that appears on the map as arrows. You approve it, send it back, or redraw the arrows yourself, and every redraw is a counter-order he can resent. You move divisions between commanders, which is a political act. You never see the truth about your own armies: you see what your generals report, what your observers write, and what the newspapers print. Generals gain and lose nerve and fame, leak to friendly papers, and may run against you. Your mandate is a clock as real as the front: lose the 1864 election and the war ends in a negotiated peace.
+You are Lincoln, from 1861 to 1865. You cannot move a division. You set goals for your commanders, and each drafts a plan that appears on the map as arrows. You approve it, send it back, or redraw the arrows yourself, and every redraw is a counter-order he can resent. You move divisions between commanders, which is a political act. You never see the truth about your own armies: you see what your generals report, what your observers write, and what the newspapers print. Generals gain and lose nerve and fame, leak to friendly papers, and may run against you. Your mandate is a clock as real as the front: lose the 1864 election and the game ends: the electorate has rejected the war.
 
 ## 2. What is ours, and what isn't
 
@@ -47,6 +47,9 @@ The two warnings from the closest precedents bind the design:
 | Home front | A light war economy run through people; elections; history as situations triggered by causes; losing 1864 ends the game. | 0023 |
 | Sensitive history | A written gate; no Lost Cause framing; enslaved people as agents of their own freedom. | 0021 |
 | Licence | PolyForm Noncommercial 1.0.0. | 0014 |
+| Engine test | A mechanism is engine code if it makes sense in any war with fronts and works on the testbed pack. | 0024 |
+| Attention | Lincoln's attention is a weekly budget; approving a good draft is free. | 0025 |
+| Review fixes | Kernel-drafted plans, a limited edit grammar, corps as posts, promotion lists, kernel-owned latency, visits that aren't truth, gate scope. | 0026 |
 
 Accepted features from the brainstorm: finding your Grant (0020); the night of the battle (section 9); going to see for yourself (section 6); the reckoning (section 6); leaks (section 7); joint army–navy operations (section 5). The general who runs against you in 1864 was proposed and not objected to (section 7).
 
@@ -54,8 +57,8 @@ Accepted features from the brainstorm: finding your Grant (0020); the night of t
 
 The games survey compared hexes, AGEoD-style regions, point-to-point graphs and free movement, and recommends regions on top of a typed graph. AWWV's polygon-derived adjacency produced phantom fronts and dropped real links, so the graph is authored, not derived from geometry.
 
-- **Regions.** Irregular, drawn to real terrain, numbering in the hundreds (AGEoD's 3,000+ is the commonest complaint). Navigable rivers and sea lanes can be their own regions. Each region has terrain, population, loyalty and a supply value.
-- **Edges.** Typed links between regions: road, rail, river, sea. Each has a length in days for a division and a capacity. Railways are edges, not region attributes, so "cut the line at the junction" is a real thing.
+- **Regions.** Irregular, drawn to real terrain, numbering in the hundreds (AGEoD's 3,000+ is the commonest complaint). Navigable rivers and sea lanes can be their own regions. A region's terrain and starting values are World data; its population, loyalty and supply value change during play and are State (section 10).
+- **Edges.** Typed links between regions: road, rail, river, sea. Each has a length in days for a division and a capacity (World). Railways are edges, not region attributes, so "cut the line at the junction" is a real thing: an edge's **condition** (damaged, repaired) is State with one writer.
 - **Depots and sources.** Supply sources (states' rail hubs, ports) and depots sit on regions.
 - **Control** is a permille per faction per region, not a flag, so fronts are soft. Thresholds start from AGEoD's tested values: a faction needs at least 250‰ control of a region to trace supply or rail through it, and an army cannot retreat into a region where it holds under 50‰. Both are pack-tunable.
 - **Fronts** are derived, never saved: a front is the set of contact edges between regions where opposing control meets. **Pockets** are derived too: a friendly component with no supply path to a source. Divisions belong to commanders, never to fronts (AWWV's costliest mistake was saving front sectors).
@@ -66,27 +69,27 @@ The staff map (0013) draws regions, fronts and arrows from the player's knowledg
 
 ## 5. Forces, command, goals and plans
 
-**Forces.** A division has a strength, a region, a commander's post, experience, morale and equipment. There is no corps level in the first version: divisions sit directly under an army or department commander. A chain of command (corps commanders as seats who relay and filter) is a later dial, not a foundation.
+**Forces.** A division has a strength, a region, a commander's post, experience, morale and equipment. **Corps are posts that hold people** (Lincoln imposed corps on the Army of the Potomac in March 1862, per the Union dossier, so appointing corps commanders is a real lever), but they have no relay mechanic yet: the army commander assigns divisions to corps and axes. A chain of command in which corps commanders relay and filter orders is a later dial (0026).
 
 **Command.** Posts (armies, departments, governorships, cabinet offices, the navy's squadrons) hold people and assets (P1). The player's command verbs:
 
 | Verb | Targets | Notes |
 |---|---|---|
-| Appoint, relieve, promote | a person and a post | Relief has modes with different costs: to a quiet department, "at his own request", outright. Promotion over seniors costs standing; a nomination can lapse at the Senate's session end. |
-| Transfer divisions | from one commander to another | The stripped commander resents it; his friends in Congress notice. |
+| Appoint, relieve, promote | a person and a post | Relief has modes with different costs: to a quiet department, "at his own request", outright. Promotions arrive as lists from superiors and the War Department, which the player approves, amends or overrides; overriding or promoting over seniors costs standing; a nomination can lapse at the Senate's session end (0026). |
+| Transfer divisions | from one army or department to another | The stripped commander resents it; his friends in Congress notice. Inside an army, the commander assigns. |
 | Set a goal | a commander | Objective (a region, a force or a line), posture, risk, deadline, permissions (rail, river, sea), and the divisions committed. |
 | Review a plan | a commander's draft | Approve, send back with notes, or edit the arrows. |
 | Audience | a commander, before or during | Hear him out; offer counters (P3, M2's typed counters). |
-| Visit | an army | Days away from Washington; see the true state of that army; your counters there weigh more. |
+| Visit | an army | Days away from Washington, while the cabinet's and Congress's business resolves by default (0025). You get several independent first-hand reports from the army's officers: better than dispatches, **not the truth** (0026). Your counters there weigh more. |
 | Send an observer | a person to a commander's headquarters | The observer is an office-holder with bias who reports to whoever sent him. |
 | Honour, promise, pressure, address | people and blocs | As in M2. |
 
-**Goals and plans.** A goal goes to a commander; his seat drafts a **plan**: one or more axes, each with assigned divisions, a route along graph edges, phases with timings, and requests for support from other posts (a fleet, a neighbouring army, rail capacity). The plan reflects who he is: a cautious man's plan is slow and asks for more; an aggressive man's outruns his supply.
+**Goals and plans.** A goal goes to a commander. **The kernel's planner drafts candidate plans** deterministically from the goal, the commander's stats and traits, his forces and the map; his seat selects one, adjusts it within kernel bounds and annotates it (0026). A plan has one or more axes, each with assigned divisions, a route along graph edges, phases with timings, and requests for support from other posts (a fleet, a neighbouring army, rail capacity). The candidates reflect who he is: a cautious man's are slow and ask for more; an aggressive man's outrun his supply. Plans are drafted on request, never every tick.
 
 The plan appears as arrows. The player can:
-- **approve** it as drafted;
-- **send it back** with notes, which the commander reads like any order (`reading.ts`);
-- **edit the arrows**: move an axis, change a timing, add a pincer. Each edit is a counter-order. It passes through the commander's compliance like any directive, and the further it departs from his own judgement, the more likely he complies with reservations, slow-walks, reinterprets or objects (0007, P2).
+- **approve** it as drafted (free: 0025);
+- **send it back** with notes, which the commander reads like any order (`reading`);
+- **edit the arrows**, within a limited grammar: an axis's objective, its waypoint regions, its timing, and adding or removing an axis with an objective. The commander assigns divisions to axes; the player can ask for a force size. Each edit is a counter-order. It passes through the commander's compliance like any directive, and the further it departs from his own judgement, the more likely he complies with reservations, slow-walks, reinterprets or objects (0007, P2).
 
 **Joint operations.** A support request to another post (the navy's squadron, a neighbouring department) is a directive to that holder, who answers with his own compliance. An encirclement is two commanders' arrows meeting, so it fails for human reasons as well as geographic ones.
 
@@ -96,7 +99,7 @@ The plan appears as arrows. The player can:
 
 ## 6. People
 
-- **True stats** (hidden): competence, nerve, experience, plus innate traits (some hidden until circumstances reveal them). Drawn once per game from a range centred on the historical record (history's shadow), from a seeded stream at setup. Setup options: history's shadow (default), as history, unknown men.
+- **True stats** (hidden): competence, nerve, experience, plus innate traits (some hidden until circumstances reveal them). Drawn once per game from a range centred on the historical record (history's shadow), from a seeded stream at setup. Each real person's centre cites its sources in the pack, and the validator rejects a centre without a citation (0005, 0026). Setup options: history's shadow (default), as history, unknown men.
 - **Public standing** moves with the newspapers and the blocs, not with the truth. **Reputation and nerve are separate**: the history lane found that victory does not reliably make generals bolder, nor defeat more cautious, so a general's traits decide how a result moves him.
 - **Earned traits** come from what happens: a string of wins, a rout, the love of his men, a quarrel with the navy.
 - **Assessment.** The player sees his staff's assessment of each general, built from independent sources (the general's own reports, observers, newspapers, rivals' gossip, West Point reputation), each with its own bias. It converges on the truth as the general fights, fastest with independent sources. Memoirs and self-reports are weak evidence.
@@ -107,21 +110,22 @@ The plan appears as arrows. The player can:
 ## 7. Politics, the press and the home front
 
 - **Blocs** with weights and support, as in M2; the mandate derived from them.
-- **Elections.** The 1862 midterms and the 1864 presidential election are checkpoints. Losing 1864 ends the game with a negotiated peace.
-- **Generals as political actors.** Standing breeds rivals (P6). A popular general, or a sacked martyr, can court the opposition, leak, appeal to Congress, and be drawn as the 1864 opponent.
+- **Elections.** The 1862 midterms and the 1864 presidential election are checkpoints. Losing 1864 ends the game with a verdict: the electorate has rejected the war. The game makes no claim about what the winner would have done, and the months before the March 1865 inauguration are not played (0026).
+- **Generals as political actors.** Standing breeds rivals (P6). A popular general, or a sacked martyr, can court the opposition, leak, appeal to Congress, and be drawn as the opposition's 1864 candidate (0026).
 - **The press.** A weekly front page shows what the public believes. Generals leak to friendly papers (the history lane found McClellan's friends did; whether he did himself is unsourced); the player can leak too. Belief drives the blocs.
 - **Economy.** Four resources: money, men, munitions, rail capacity. Each lever has a holder who can stall: the treasury raises money, governors raise regiments, the War Department turns munitions into equipped divisions. The player sets priorities and picks people.
 - **Situations.** Historical pressures arrive when their causes are present, not on dates (P15). Each situation is pack data: a cause predicate, options, consequences, and, per AWWV's lesson, a **historical default and a staff recommendation** so unattended history runs can play it. A test enforces both fields.
 - **Foreign powers.** Britain and France are pressure clocks driven by the blockade, victories and emancipation, worked through the Secretary of State's seat, not playable factions.
 - **Border states.** Contested regions whose governors and legislatures are seats with loyalties of their own.
-- **Enslaved people** are agents of their own freedom, never a resource either side manages: self-emancipation toward Union lines, the effect of policy (the confiscation acts, the Emancipation Proclamation), and Black regiments. This sits under the sensitive-history gate (0021).
+- **Enslaved people** are agents of their own freedom, never a resource either side manages: self-emancipation toward Union lines, and the effect of policy (the confiscation acts, the Emancipation Proclamation). **Black regiments** come from the enlistment choices of free Black men and freedpeople responding to policy, not from a pool in the "men" resource (0026). This sits under the sensitive-history gate (0021), which also covers the wars against Native nations (the Dakota War of 1862 falls inside the first slice), the draft riots and civil liberties. Every sensitive feature is placed before it is authored: modelled with locked consequences, narrated only, or refused. The test is "Is this a lever?"
 
 ## 8. Seats, knowledge and voice
 
 - **A seat** is whoever decides for a person: the rules model, an AI model, or later a human. Every seat receives a request built only from what that person may know, plus the kernel's menu of legal responses, and returns a typed response. One set of decision types serves all three kinds of seat.
 - **The rules model is always there.** An AI seat wraps a rule seat and falls back to it on timeout, invalid output, a failed consistency check or no key, logging the fallback.
-- **What an AI may decide.** A principal's choices (the opposing president's decisions, from the same legal set as the player's), and a choice among options the kernel has already judged equally consistent with a person's state. Compliance itself never moves to the AI: the kernel decides what a general actually does and what he says he does. The AI writes the words from what he declared and chose to state, never from what he will actually do, so it cannot leak a lie (0022).
-- **Knowledge per seat.** Each seat stores the reports that reached it, with latency (courier, telegraph). Beliefs are derived on read. `viewFor(state, seatId)` generalises today's per-faction view (0011 is superseded by 0015).
+- **What an AI may decide.** A principal's choices (the opposing president's decisions, from the same legal set as the player's), and a choice among options the kernel has already judged equally consistent with a person's state, such as which of the planner's candidate plans a commander picks. Compliance itself never moves to the AI: the kernel decides what a general actually does and what he says he does. The AI writes the words from what he declared and chose to state, never from what he will actually do, so it cannot leak a lie (0022).
+- **Knowledge per seat.** Each seat stores the reports that reached it, with latency (courier, telegraph). Beliefs are derived on read. Faded reports are pruned by a pack rule (age and supersession), so knowledge does not grow without limit. `viewFor(state, seatId)` generalises today's per-faction view (0011 is superseded by 0015).
+- **Rule seats live in their own package**, outside the kernel but inside the banned-API and pack-boundary checks, because their output enters the log.
 - **Think time is courier latency.** An AI seat's request is stamped with the in-game day its answer is due; if the model has not answered by then, the shell pauses with "awaiting dispatch". The answer applies on its stamped day whatever the wall clock did, so replays are exact.
 - **The player-visible boundary is built in Phase 0**, before any generated text exists. True reasons in a response are reachable only through the truth layer, and an architecture test proves the view layer and the AI caller cannot import it.
 
@@ -129,15 +133,20 @@ The plan appears as arrows. The player can:
 
 - The kernel ticks one day at a time and never sees the wall clock. Speed, pause and the auto-pause rules live in the shell.
 - The day tick returns a decision-point signal (an objection arrived, a battle report, a pocket closed, a situation fired, a seat is awaiting dispatch); the shell pauses on it according to the player's settings.
-- **The night of the battle.** Battles may last several days; each day of battle is resolved in the day tick, and also emits that day's dispatches stamped by hour. The shell slows time and releases them hour by hour: fragments, contradictions, silence. Orders the player wires during the battle are commands stamped for when they would arrive. The kernel stays daily.
-- **Performance budget.** A headless full campaign (about 1,460 days) must run in under a minute on the reference machine, so a day tick costs under about 40 ms. AWWV's weekly turn took about 1.6 s. Derived indexes (control, fronts, supply) are recomputed only when control changes.
+- **The kernel owns all latency** (0026). A command applies on the day it is issued and creates a message (an order, a telegram, a courier) that travels along the graph; the recipient's seat acts when it arrives. The shell never computes arrival times.
+- **The night of the battle.** Battles may last several days; each day of battle is resolved in the day tick, and also emits that day's dispatches stamped by hour. The shell slows time and releases them hour by hour: fragments, contradictions, silence. Orders the player wires meanwhile are ordinary commands: they cannot change a day already resolved, and arrive for a later day of the battle or after it. The kernel stays daily.
+- **Performance budget.** A headless full campaign (about 1,460 days) must run in under a minute on the reference machine (the owner's Windows development PC until CI hardware is named), so a day tick costs under about 40 ms. AWWV's weekly turn took about 1.6 s. Rules that keep it there:
+  - derived indexes (fronts, pockets, supply) are recomputed only when a region's control crosses a threshold (50‰, 250‰), not on every change;
+  - plans are drafted on request, never scanned every tick;
+  - knowledge is pruned (section 8);
+  - the full canonical state hash runs every tick in tests and CI, and at saves and checkpoints in play.
 
 ## 10. Kernel architecture
 
 Three layers:
-- **World**: static pack data (regions, edges, people's historical records, situations). Immutable, hashed, never saved; a save references it by hash.
-- **State**: mutable truth. Saved.
-- **Derived**: pure functions of World and State, memoised, never saved.
+- **World**: static pack data (region terrain and starting values, edges with lengths and capacities, people's historical records with citations, situations). Immutable, hashed, never saved; a save references it by hash.
+- **State**: mutable truth, including everything that changes during play (control, region population and loyalty, edge condition, divisions, people, plans, knowledge). Saved.
+- **Derived**: pure functions of World and State. Their caches are keyed by a version counter that the owning writer bumps (for example a control version bumped when a threshold is crossed), and live outside State, so no "dirty" flag or cache can be saved.
 
 The **command log** sits beside State and is the truth about what happened: replay and resume run from it, and resuming from a save must equal the continuous run (AWWV's resumed games drifted by 616 differences).
 
@@ -162,24 +171,56 @@ Module map, adapted from the AWWV-architecture note:
 | `economy` | State | money, men, munitions, rail capacity at their holders |
 | `situations` | State | cause predicates, offers, decisions |
 | `politics` | State + Derived | blocs, mandate, elections, verdict |
+| `planner` | Derived | candidate plans for a goal, drafted on request |
+| `infrastructure` | State | edge condition (damage and repair) |
 | `tick` | — | the fixed day order and the decision-point signal |
 | `log`, `serialize` | — | command log, snapshots, replay, canonical JSON, state hash |
 | `invariants` | — | post-tick assertions with typed failures |
 
+**One writer per field.** Other modules propose typed deltas; the owner applies them. This table is the source for the architecture test in section 11.
+
+| State field | Only writer | Proposed by |
+|---|---|---|
+| region control | `control` | combat, occupation |
+| region population, loyalty, supply value | `regions` | economy, situations, occupation |
+| edge condition | `infrastructure` | combat, raids, repair orders |
+| division location | `movement` | operations |
+| division strength, morale, experience, equipment | `forces` | combat, attrition, economy, recruitment |
+| division-to-post assignment | `command` | transfers, the army commander's assignments |
+| people in posts | `command` | appoint, relieve, promotion lists |
+| a person's stats, traits, standing, grievances, regard | `people` | combat results, the press, verbs, ladder |
+| a person's ladder rung and rivals | `ladder` | weekly people step |
+| responses to orders (declared and actual rungs, reasons) | `proxy` | message arrival; computed by `compliance` and `reading`, which are pure and write nothing |
+| audience state | `audience` | the audience verb |
+| goals, plans, approvals, edits | `plans` | verbs, seat selections |
+| operations and their lifecycles | `operations` | plan approval, movement and combat outcomes |
+| knowledge (reports per seat) | `knowledge` | message delivery, pruning |
+| messages in transit | `messages` | commands, reports, the kernel's latency rules |
+| economy stocks | `economy` | weekly step, verbs |
+| situations fired and decided | `situations` | cause evaluation, decisions |
+| blocs, mandate, election results | `politics` | weekly step, battles, the press, checkpoints |
+| seat assignments | `seats` | setup, the player's settings |
+
 The day tick, each phase declaring what it reads and writes:
-1. Apply the commands stamped for today, validated; rejections logged.
-2. Deliver due messages into seat knowledge.
+1. Apply today's commands, validated; each creates messages in transit (the kernel computes their arrival). Rejections are logged.
+2. Deliver messages due today into seat knowledge; recipients' responses are computed on arrival.
 3. Movement.
 4. Combat.
-5. Control changes; mark derived indexes dirty.
+5. Control changes; bump the control version when a threshold is crossed.
 6. Operations advance.
-7. Weekly: economy, recruitment, people's politics, bloc drift.
+7. Weekly: economy, recruitment, people's politics, bloc drift, attention refill.
 8. Situations evaluate their causes.
 9. Checkpoints and the verdict.
 10. The invariant barrier.
 11. Decision-point detection.
 
-**What survives from today's kernel:** `permille`, `rng`, `compare`, `rules`, scenario validation, and the people core (`people`, `compliance`, `reading`, `audience`, `proxy`, `ladder`), recast. `view` survives, generalised to seats. `theatre` and `turn` are replaced; `bot` becomes a rule seat outside the kernel. The Union pack is rebuilt for the new world format; its people data and research carry over.
+**What happens to today's kernel:**
+- **Survive as they are:** `permille`, `rng`, `compare`, `rules`, scenario validation.
+- **Survive, recast in Phase 1:** the people core (`people`, `compliance`, `reading`, `audience`, `proxy`, `ladder`) for goals, plans and edits; `orders` and `verbs` into the new verb list; `messages` into `knowledge` and messages in transit; `derive` into `politics` and the credibility functions.
+- **Generalised:** `view`, to seats.
+- **Replaced:** `theatre` and `turn`; `bot` becomes a rule seat in its own package.
+- **Tests that must keep passing through Phase 0:** `compliance.test.ts`, `rng.test.ts`, `banned-apis.test.ts` (extended), and the M2 audience tests in `audience.test.ts`. `turn.test.ts`, `testbed-run.test.ts`, `console.test.ts` and the union pack's play test retire with `turn` and `theatre`; `ladder` and `proxy` lose their `theatre` imports in Phase 1.
+- The Union pack is rebuilt for the new world format; its people data and research carry over.
 
 ## 11. Engineering foundations (from AWWV's founding brief)
 
@@ -194,8 +235,9 @@ Built in Phase 0, before gameplay code, because AWWV's pain came from foundation
 7. **Derived data from scripts.** Map graphs and orders of battle are generated by deterministic scripts from pack sources; CI fails if committed generated data is stale.
 8. **Runs write only to the ignored `runs/` folder**, outside folders agents search.
 9. **Honest CI** on GitHub Actions: it lists the steps that actually ran.
-10. **The verb list is the interface.** An architecture test asserts the app's commands match the kernel's verb list exactly, so no screen can order a division (AWWV's shell let unit orders back in).
+10. **The verb list is the interface.** An architecture test asserts the app's commands match the kernel's verb list exactly, so no screen can order a division (AWWV's shell let unit orders back in). The edit grammar for arrows (0026) is part of the verb list.
 11. **Export and reuse; never copy a function** (a copy is a second owner).
+12. **The rule-seat package is checked like the kernel:** banned APIs and the pack boundary apply to it.
 
 Simulation discipline, kept from AWWV's lessons:
 - Emergent, not railroads: no scripted captures and no "X falls on date Y". A railroad we cannot avoid is labelled in code and docs.
@@ -205,23 +247,35 @@ Simulation discipline, kept from AWWV's lessons:
 
 ## 12. Phase 0 plan
 
-Done when: **a headless history run of 1861–62 on the new kernel completes, gives the same state hash on Linux and Windows, passes the liveness gate, and the existing people tests pass on the recast core.** The full war (to 1865) and the desk come after Phase 0.
+The review found the first draft's done check (a full 1861–62 history run) needed combat, politics, the planner and a people pack that no lane built. Phase 0 is therefore the foundation and the world; Phase 1 is the war machine.
 
-Lanes, in order. Each is sized from `docs/LANES.md`.
+**Phase 0 is done when** a headless run on the new kernel, on the Union 1861 map and order of battle, with rule seats holding standing goals (hold, or advance to a region), moves divisions, changes control through a simple deterministic contest, derives fronts, pockets and supply, and:
+- gives the same state hash on Linux and Windows CI;
+- resumes from a mid-run save to the same final hash as the continuous run;
+- passes the liveness gate for every Phase 0 mechanic;
+- keeps the tests named in section 10 passing;
+- stays inside the tick budget.
+
+Lanes, sized from `docs/LANES.md`:
 
 | # | Lane | Depends on | Size |
 |---|---|---|---|
-| 0.1 | Engineering foundations: CI on Linux and Windows, `runs/`, typed IDs, canonical serialization and state hash, save schema with atomic writes, one-writer and verb-list architecture tests, liveness counters | — | Opus, high (determinism) |
-| 0.2 | World format v2: regions, typed edges, depots, provenance; validator; generator script; staleness check | 0.1 | Opus, high |
-| 0.3 | Union map data for 1861–62: regions and edges from sources, with provenance and licences | 0.2's format | Sonnet, high (data from sources) |
+| 0.1 | Engineering foundations: CI on Linux and Windows, `runs/`, typed IDs, canonical serialization and state hash, save schema with atomic writes, one-writer and verb-list architecture tests, liveness counters, banned-API and boundary checks over the rule-seat package | — | Opus, high |
+| 0.2 | World format v2: regions, typed edges, depots, provenance, cited people records; validator; generator script; staleness check; the testbed pack's small graph | 0.1 | Opus, high |
+| 0.3 | Union 1861 data: regions and edges, posts, the division-level order of battle, people records carried over, all with provenance and licences | 0.2's format | Sonnet, high |
 | 0.4 | Control, fronts, pockets and supply as derived indexes, with invariants and a performance test | 0.2 | Opus, high |
-| 0.5 | Forces, command, transfers and movement | 0.1, 0.4 | Opus, high |
-| 0.6 | Seats, knowledge per seat, the player-visible boundary, the command log and replay; `bot` as a rule seat | 0.1 | Opus, high |
-| 0.7 | Goals, plans and operations, with compliance recast for plans and edits | 0.5, 0.6 | Opus, high |
-| 0.8 | Situations schema with historical default and staff recommendation, enforced by test | 0.1 | Sonnet, high |
-| 0.9 | Headless history runner with liveness and checkpoints; the Phase 0 done check | 0.3–0.8 | Sonnet, high |
+| 0.5 | Forces, command (posts, corps as posts, transfers), movement, infrastructure, and a simple deterministic control contest | 0.4 | Opus, high |
+| 0.6 | Seats, knowledge per seat with pruning, messages in transit (kernel-owned latency), the player-visible boundary, the command log and replay; the rule-seat package with standing-goal seats | 0.1 | Opus, high |
+| 0.7 | Situations schema with historical default and staff recommendation enforced by test, and the sensitive-history placement checklist | 0.1 | Opus, high |
+| 0.8 | Headless runner with liveness, hashes and resume check; the Phase 0 done check | 0.3–0.7 | Sonnet, high |
 
-Parallelism: 0.1 first. Then 0.2 and 0.6 and 0.8 in parallel (0.3's source research can start alongside). Then 0.4, then 0.5, then 0.7, then 0.9. At most two lanes move the simulation at once (`docs/LANES.md`). Each simulation lane gets a separate reviewer lane.
+Sequence within the limit of four lanes, two of them moving the simulation (reviewer lanes count, and run after their implementer):
+1. 0.1, then its reviewer.
+2. 0.2 and 0.6 (simulation), with 0.3's source research and 0.7 alongside.
+3. 0.4, then 0.5 (simulation), with 0.3's data entry alongside.
+4. 0.8.
+
+**Phase 1, the war machine** (planned after Phase 0 lands): the kernel planner and plan selection; operations; combat with breakdowns and shaded reports; the people core recast for goals, plans and edits; stats, assessment and the officer pool; politics, the press and the 1862 midterms; the economy; attention. Phase 1 is done when a headless history run of 1861–62 reaches the midterms with checkpoints in plausible bands. **Phase 2** is the desk and the staff map. Its done check is set when Phase 1 lands; the working version is that the owner plays Lincoln through 1861–62 at the desk, on the staff map, and finds plan review and the audience worth playing.
 
 ## 13. Open after this design
 
