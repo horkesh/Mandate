@@ -15,7 +15,9 @@
  *   chaining (`x.key?.push(v)`);
  * - a mutator borrowed for the key (`Array.prototype.push.call(x.key, v)`) and
  *   a reflective write with the key as its target (`Object.assign(x.key, ...)`,
- *   `Reflect.set(x.key, ...)`);
+ *   `Reflect.set(x.key, ...)`) or named as a string argument
+ *   (`Reflect.set(x, 'key', v)`, `Object.defineProperty(x, 'key', d)`,
+ *   `Reflect.deleteProperty(x, 'key')`);
  * - a write through a parenthesised target that mentions the key: a cast
  *   (`(x.key as T)['k'] = v`), a comma expression (`(0, x.key).push(v)`), a
  *   conditional (`(c ? x.key : y).push(v)`);
@@ -78,6 +80,9 @@ const PATH_CHARS = String.raw`[\w$.\[\]!?\s()'"\x60]*?`;
 /** The functions that mutate their first argument, or whatever `this` they are called with. */
 const REFLECTIVE = String.raw`(?:Object\s*\.\s*(?:assign|defineProperty|defineProperties|setPrototypeOf)|Reflect\s*\.\s*(?:set|defineProperty|deleteProperty|setPrototypeOf|apply))`;
 
+/** The reflective writes that take the target's key as a string: `Reflect.set(x, 'key', v)`, `Object.defineProperty(x, 'key', d)`. */
+const KEYED_REFLECTIVE = String.raw`(?:Reflect\s*\.\s*(?:set|defineProperty|deleteProperty)|Object\s*\.\s*defineProperty)`;
+
 function escape(text: string): string {
   return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
@@ -113,6 +118,13 @@ function patternsFor(key: string): KeyPatterns {
   both('borrowed mutator', 'bracket borrowed mutator', (ref) => String.raw`\.\s*(?:${MUTATORS})\s*\.\s*(?:call|apply|bind)\s*\(\s*${PATH_CHARS}${ref}`);
   // `Object.assign(x.key, ...)`, `Reflect.set(x.key, ...)`: the key's value is the first argument.
   both('reflective write', 'bracket reflective write', (ref) => String.raw`\b${REFLECTIVE}\s*\(\s*${PATH_CHARS}${ref}`);
+  // `Reflect.set(x, 'key', v)`, `Object.defineProperty(x, 'key', d)`, `Reflect.deleteProperty(x, 'key')`: the key as a
+  // string argument (the natural spelling of a reflective write). Needs the strings, so only the withStrings view.
+  forms.push({
+    pattern: new RegExp(String.raw`\b${KEYED_REFLECTIVE}\s*\([^;]*?,\s*(?:'${k}'|"${k}"|\x60${k}\x60)\s*[,)]`, 'g'),
+    form: 'reflective write by name',
+    view: 'withStrings',
+  });
   return {
     key,
     forms,

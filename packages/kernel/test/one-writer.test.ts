@@ -265,6 +265,49 @@ describe('the scanner catches violations (positive control)', () => {
     ]);
   });
 
+  it('catches a reflective write that names the key as a string (review of the tooling batch)', () => {
+    const writes: SourceFile = {
+      path: 'packages/cli/src/shell.ts',
+      code: [
+        // The reviewer's three probes.
+        "Reflect.set(s, 'controller', v);",
+        "Object.defineProperty(s, 'controller', { value: v });",
+        "Reflect.deleteProperty(s, 'controller');",
+        // Siblings: the other quote styles, a cast target, a multi-line call, defineProperties with the key in its map.
+        'Reflect.set(s, "controller", v);',
+        'Reflect.set(s, `controller`, v);',
+        "Reflect.defineProperty((s as any), 'controller', d);",
+        "Reflect.set(\n  getState(a, b),\n  'controller',\n  v,\n);",
+        'Object.defineProperties(s, { controller: { value: v } });',
+      ].join('\n'),
+    };
+    expect(writeViolations([writes], owned, []).map((v) => `${v.line} ${v.form}`)).toEqual([
+      '1 reflective write by name',
+      '2 reflective write by name',
+      '3 reflective write by name',
+      '4 reflective write by name',
+      '5 reflective write by name',
+      '6 reflective write by name',
+      '7 reflective write by name',
+      '12 object literal',
+    ]);
+  });
+
+  it('does not flag a reflective read, another key, or a key that only starts like it (negative controls)', () => {
+    const reads: SourceFile = {
+      path: 'packages/cli/src/shell.ts',
+      code: [
+        "Reflect.get(s, 'controller');",
+        "Reflect.has(s, 'controller');",
+        "Reflect.set(s, 'other', v);",
+        "Reflect.set(s, 'controllerAlso', v);",
+        "Object.defineProperty(s, 'other', d);",
+        "log('controller');",
+      ].join('\n'),
+    };
+    expect(writeViolations([reads], owned, []).map((v) => `${v.line} ${v.form}`)).toEqual([]);
+  });
+
   it('does not flag reads, or the key passed as a source rather than a target (negative controls)', () => {
     const reads: SourceFile = {
       path: 'packages/kernel/src/supply.ts',
