@@ -5,9 +5,12 @@
  * required: its control is copied once into State, to be written only by
  * `control` from then on (0050), and its date becomes the calendar's day 0.
  */
+import { initialCommand } from '../command/command.ts';
 import { strictCompare } from '../compare.ts';
 import { initialControl } from '../control/control.ts';
+import { initialForces } from '../forces/forces.ts';
 import type { DepartmentId, RegionId } from '../ids.ts';
+import { initialLocations } from '../movement/movement.ts';
 import { initialHeadquarters } from '../movement/headquarters.ts';
 import { initialGoals } from '../plans/standing.ts';
 import type { State } from '../root-state.ts';
@@ -46,6 +49,10 @@ export function emptyState(): State {
     headquarters: {},
     situationStates: {},
     situationFlags: {},
+    forceBlockStates: {},
+    forceLocations: {},
+    postStates: {},
+    forceAssignments: {},
   };
 }
 
@@ -85,6 +92,9 @@ export function createState(world: IndexedWorld, options: SetupOptions): State {
   if (!Number.isSafeInteger(options.seed) || options.seed < 0 || options.seed > 0xffffffff) throw new RangeError('seed must be a 32-bit unsigned integer');
   if ((world.map === null) !== (options.start === undefined)) throw new RangeError('a scenario start is given exactly when the World has a map');
   if (options.start !== undefined) parseIsoDate(options.start.startDate);
+  // Each part of the start is copied once into the field its owner writes from then on (0050).
+  const map = world.map !== null && options.start !== undefined ? { index: world.map, start: options.start } : null;
+  const command = map === null ? { posts: {}, assignments: {} } : initialCommand(map.index, map.start);
   return {
     gameSeed: options.seed,
     calendarStart: options.start?.startDate ?? null,
@@ -100,5 +110,9 @@ export function createState(world: IndexedWorld, options: SetupOptions): State {
     headquarters: initialHeadquarters(world),
     situationStates: {},
     situationFlags: {},
+    forceBlockStates: map === null ? {} : initialForces(map.index, map.start),
+    forceLocations: map === null ? {} : initialLocations(map.index, map.start),
+    postStates: command.posts,
+    forceAssignments: command.assignments,
   };
 }

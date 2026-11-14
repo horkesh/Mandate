@@ -90,15 +90,22 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('neutral governments closed to passage, with the day each closed', 'command', ['situations'], [at('State', 'closedGovernments')]),
   field('region population, loyalty, supply value', 'regions', ['economy', 'situations', 'occupation']),
   field('edge condition', 'infrastructure', ['combat', 'raids', 'repair orders']),
-  field('division location', 'movement', ['operations']),
-  field('division strength, morale, experience, equipment', 'forces', ['combat', 'attrition', 'economy', 'recruitment']),
+  // Lane 0.5: a block's region (or the ship it is aboard), from the start (0050).
+  field('division location', 'movement', ['operations'], [at('State', 'forceLocations')]),
+  // Lane 0.5: one record per block or detachment carries strength, stores and
+  // non-combatants (`forces/forces.ts`), so the three `forces` rows below share it.
+  field('division strength, morale, experience, equipment', 'forces', ['combat', 'attrition', 'economy', 'recruitment'], [at('State', 'forceBlockStates')]),
   field("a force block's stores on hand", 'forces', ['supply (daily)', 'operations (a sea delivery)']),
   field('detachments below the force block (garrisons, landings)', 'forces', ['command', 'operations']),
   field('stragglers: men absent from a force block who rejoin over days', 'forces', ['combat', 'attrition']),
   field('battle records', 'combat', []),
   field('fortification and entrenchment', 'regions', ['operations', 'combat']),
-  field('division-to-post assignment', 'command', ['transfers', "the army commander's assignments"]),
-  field('people in posts; temporary posts', 'command', ['appoint', 'relieve', 'promotion lists', "an operation's end"]),
+  // Lane 0.5: which post commands each block; transfers name a force (0033).
+  field('division-to-post assignment', 'command', ['transfers', "the army commander's assignments"], [at('State', 'forceAssignments')]),
+  // Lane 0.5: one record per post carries its holder, chain, department, temporary operation,
+  // links, scheduled changes and standing orders (`command/command.ts`), so the `command`
+  // rows for standing orders and a post's department below share it.
+  field('people in posts; temporary posts', 'command', ['appoint', 'relieve', 'promotion lists', "an operation's end"], [at('State', 'postStates')]),
   field('standing agreements and prior orders on a post', 'command', ['verbs', 'situations', "orders from the holder's own department"]),
   field("a person's stats, traits, standing, grievances, regard", 'people', ['combat results', 'the press', 'verbs', 'ladder']),
   field("a person's stances on record (from Consult)", 'people', ['Consult answers']),
@@ -171,6 +178,13 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'Headquarters',
   // Situations (lane 0.7: the live record of one situation, replaced whole by `situations`)
   'SituationRecord',
+  // Lane 0.5: forces, movement and command (each replaced whole by its writer)
+  'ForceBlockState',
+  'ForceLocation',
+  'PostState',
+  'ScheduledChangeState',
+  'StandingOrderState',
+  'PostLinkState',
 ];
 
 /** State's own root fields that are set once at setup and never written after (the game's seed, the calendar's day 0). */

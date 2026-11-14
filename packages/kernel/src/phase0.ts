@@ -45,3 +45,7 @@ export * from './situations/conditions.ts';
 export * from './situations/references.ts';
 export * from './situations/situations.ts';
 export * from './tick/situations.ts';
+// Lane 0.5: forces, command and movement.
+export * from './forces/forces.ts';
+export * from './command/command.ts';
+export * from './movement/movement.ts';

@@ -18,8 +18,11 @@
  *
  * The command log sits beside State, not in it (`log/log.ts`).
  */
+import type { AssignmentTable, PostTable } from './command/command.ts';
 import type { RegionControlTable } from './control/control.ts';
-import type { DepartmentId, MessageId, PostId, RegionId, SeatId, SituationId } from './ids.ts';
+import type { ForceTable } from './forces/forces.ts';
+import type { ForceLocation } from './movement/movement.ts';
+import type { DepartmentId, ForceBlockId, MessageId, PostId, RegionId, SeatId, SituationId } from './ids.ts';
 import type { SituationRecord } from './situations/situations.ts';
 import type { SeatKnowledge } from './knowledge/knowledge.ts';
 import type { ReportTruth } from './knowledge/truth.ts';
@@ -60,4 +63,12 @@ export interface State {
   readonly situationStates: Readonly<Record<SituationId, SituationRecord>>;
   /** Situation chain state: flags set by effects, with the day each was set. Writer: `situations`. */
   readonly situationFlags: Readonly<Record<string, number>>;
+  /** Force blocks and detachments: strength, stores, non-combatants (0050). Writer: `forces`. */
+  readonly forceBlockStates: ForceTable;
+  /** Where each block stands, or the ship it is aboard. Writer: `movement`. */
+  readonly forceLocations: Readonly<Record<ForceBlockId, ForceLocation>>;
+  /** Posts: holders, chain, departments, temporary posts, standing orders. Writer: `command`. */
+  readonly postStates: PostTable;
+  /** Which post commands each block (division-to-post assignment). Writer: `command`. */
+  readonly forceAssignments: AssignmentTable;
 }
