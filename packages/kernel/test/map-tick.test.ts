@@ -20,7 +20,7 @@ const START = { a1: { a: 1000 }, a2: { a: 1000 }, mid: { a: 300, b: 550 }, b2: {
 const world = indexWorld(commsFixture(), lineMap());
 
 function ctxFor(state: State, day: number, telemetry = createTelemetry([...SEATS_MECHANICS, ...MAP_MECHANICS])): TickContext {
-  return { world, day, seed: state.gameSeed, mint: createIdMint(state), telemetry, outbox: [], rejections: [], events: [], proposals: [], prices: [], decisionPoints: [], controlDeltas: [], mapEvents: [] };
+  return { world, day, seed: state.gameSeed, mint: createIdMint(state), telemetry, outbox: [], rejections: [], events: [], proposals: [], prices: [], decisionPoints: [], controlDeltas: [], infrastructureDeltas: [], mapEvents: [] };
 }
 
 describe('setup with a map (0050: control is copied from the start once)', () => {

@@ -21,8 +21,9 @@
 import type { AssignmentTable, PostTable } from './command/command.ts';
 import type { RegionControlTable } from './control/control.ts';
 import type { ForceTable } from './forces/forces.ts';
+import type { ConditionTable, ObstructionState } from './infrastructure/infrastructure.ts';
 import type { ForceLocation } from './movement/movement.ts';
-import type { DepartmentId, ForceBlockId, MessageId, PostId, RegionId, SeatId, SituationId } from './ids.ts';
+import type { DepartmentId, DepotId, EdgeId, ForceBlockId, MessageId, PostId, RegionId, SeatId, SituationId } from './ids.ts';
 import type { SituationRecord } from './situations/situations.ts';
 import type { SeatKnowledge } from './knowledge/knowledge.ts';
 import type { ReportTruth } from './knowledge/truth.ts';
@@ -71,4 +72,10 @@ export interface State {
   readonly postStates: PostTable;
   /** Which post commands each block (division-to-post assignment). Writer: `command`. */
   readonly forceAssignments: AssignmentTable;
+  /** Edge condition, permille, for edges not intact (an intact edge is absent). Writer: `infrastructure`. */
+  readonly infraEdgeCondition: ConditionTable<EdgeId>;
+  /** Depot condition, permille, for depots not intact. Writer: `infrastructure`. */
+  readonly infraDepotCondition: ConditionTable<DepotId>;
+  /** Water edges obstructed by works or batteries, in edge order. Writer: `infrastructure`. */
+  readonly infraObstructions: readonly ObstructionState[];
 }

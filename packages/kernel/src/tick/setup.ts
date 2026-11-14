@@ -10,6 +10,7 @@ import { strictCompare } from '../compare.ts';
 import { initialControl } from '../control/control.ts';
 import { initialForces } from '../forces/forces.ts';
 import type { DepartmentId, RegionId } from '../ids.ts';
+import { initialInfrastructure } from '../infrastructure/infrastructure.ts';
 import { initialLocations } from '../movement/movement.ts';
 import { initialHeadquarters } from '../movement/headquarters.ts';
 import { initialGoals } from '../plans/standing.ts';
@@ -53,6 +54,9 @@ export function emptyState(): State {
     forceLocations: {},
     postStates: {},
     forceAssignments: {},
+    infraEdgeCondition: {},
+    infraDepotCondition: {},
+    infraObstructions: [],
   };
 }
 
@@ -95,6 +99,7 @@ export function createState(world: IndexedWorld, options: SetupOptions): State {
   // Each part of the start is copied once into the field its owner writes from then on (0050).
   const map = world.map !== null && options.start !== undefined ? { index: world.map, start: options.start } : null;
   const command = map === null ? { posts: {}, assignments: {} } : initialCommand(map.index, map.start);
+  const network = map === null ? { edges: {}, depots: {}, obstructions: [] } : initialInfrastructure(map.index, map.start);
   return {
     gameSeed: options.seed,
     calendarStart: options.start?.startDate ?? null,
@@ -114,5 +119,8 @@ export function createState(world: IndexedWorld, options: SetupOptions): State {
     forceLocations: map === null ? {} : initialLocations(map.index, map.start),
     postStates: command.posts,
     forceAssignments: command.assignments,
+    infraEdgeCondition: network.edges,
+    infraDepotCondition: network.depots,
+    infraObstructions: network.obstructions,
   };
 }

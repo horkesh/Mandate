@@ -104,6 +104,7 @@ export function tick(world: IndexedWorld, start: State, entries: readonly LogEnt
     prices: [],
     decisionPoints: [],
     controlDeltas: [],
+    infrastructureDeltas: [],
     mapEvents: [],
   };
 

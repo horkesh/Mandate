@@ -6,6 +6,7 @@
  * identically on replay.
  */
 import type { ControlChange, ControlDelta, ThresholdCrossing } from '../control/control.ts';
+import type { InfrastructureChange, InfrastructureDelta } from '../infrastructure/infrastructure.ts';
 import type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import type { Cut } from '../supply/supply.ts';
 import type { ReportBody } from '../knowledge/report.ts';
@@ -90,6 +91,8 @@ export interface DecisionPoint {
 export type MapEvent =
   | { readonly event: 'control_changed'; readonly change: ControlChange }
   | { readonly event: 'threshold_crossed'; readonly crossing: ThresholdCrossing }
+  /** The network's condition changed (lane 0.5): an edge or depot damaged or repaired, an edge obstructed or cleared. */
+  | { readonly event: 'network_changed'; readonly change: InfrastructureChange }
   /** A pocket closed (regions newly cut off), relieved (a path reaches them again) or lost (no longer traced: overrun or abandoned). The cut is yesterday's for a lost pocket. */
   | { readonly event: 'pocket_closed' | 'pocket_relieved' | 'pocket_lost'; readonly faction: FactionId; readonly pocket: string; readonly regions: readonly RegionId[]; readonly cut: Cut | null };
 
@@ -107,6 +110,8 @@ export interface TickContext {
   readonly decisionPoints: DecisionPoint[];
   /** Control changes proposed today, for `control` to apply (combat, occupation: lane 0.5). */
   readonly controlDeltas: ControlDelta[];
+  /** Network changes proposed today, for `infrastructure` to apply (combat, raids, repair, operations, situations: lane 0.5). */
+  readonly infrastructureDeltas: InfrastructureDelta[];
   readonly mapEvents: MapEvent[];
 }
 

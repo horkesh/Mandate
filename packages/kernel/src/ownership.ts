@@ -89,7 +89,8 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field("each land region's civil government (a department, or unknown)", 'command', ['situations'], [at('State', 'regionGovernments')]),
   field('neutral governments closed to passage, with the day each closed', 'command', ['situations'], [at('State', 'closedGovernments')]),
   field('region population, loyalty, supply value', 'regions', ['economy', 'situations', 'occupation']),
-  field('edge condition', 'infrastructure', ['combat', 'raids', 'repair orders']),
+  // Lane 0.5: from the start (0050), changed only through `applyInfrastructure`.
+  field('edge condition', 'infrastructure', ['combat', 'raids', 'repair orders'], [at('State', 'infraEdgeCondition')]),
   // Lane 0.5: a block's region (or the ship it is aboard), from the start (0050).
   field('division location', 'movement', ['operations'], [at('State', 'forceLocations')]),
   // Lane 0.5: one record per block or detachment carries strength, stores and
@@ -125,8 +126,8 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('seat assignments', 'seats', ['setup', "the player's settings"], [at('State', 'seatAssignments')]),
   // Reserved by world format v2 (lane 0.2): State that starts from a scenario
   // start or a World rule, with its owner named before the mechanic is built.
-  field('water edge obstructions (works or batteries in hostile hands; cleared)', 'infrastructure', ['combat', 'operations (a siege, a clearing)', 'situations']),
-  field('depot condition (struck by raids, repaired)', 'infrastructure', ['raids', 'combat', 'repair orders']),
+  field('water edge obstructions (works or batteries in hostile hands; cleared)', 'infrastructure', ['combat', 'operations (a siege, a clearing)', 'situations'], [at('State', 'infraObstructions')]),
+  field('depot condition (struck by raids, repaired)', 'infrastructure', ['raids', 'combat', 'repair orders'], [at('State', 'infraDepotCondition')]),
   field("a post's department (changed on a scheduled date or by a situation)", 'command', ['scheduled department changes in the scenario start', 'situations']),
   field("a person's rank and its date (seniority)", 'people', ['promotion lists', 'appoint']),
   field("today's weather per weather zone", 'weather', ['the day tick, from its named seeded stream (0029)']),
@@ -185,6 +186,7 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'ScheduledChangeState',
   'StandingOrderState',
   'PostLinkState',
+  'ObstructionState',
 ];
 
 /** State's own root fields that are set once at setup and never written after (the game's seed, the calendar's day 0). */

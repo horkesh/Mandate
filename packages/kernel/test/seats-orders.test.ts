@@ -157,7 +157,7 @@ describe('filters on the wire (0032)', () => {
   it('holds a wire for a day and cuts the losses from it, keeping the cut in the truth layer', () => {
     const world = indexedFixture();
     let state = createState(world, { seed: 2 });
-    const ctx: TickContext = { world, day: 1, seed: 2, mint: createIdMint(state), telemetry: undefined, outbox: [], rejections: [], events: [], proposals: [], prices: [], decisionPoints: [], controlDeltas: [], mapEvents: [] };
+    const ctx: TickContext = { world, day: 1, seed: 2, mint: createIdMint(state), telemetry: undefined, outbox: [], rejections: [], events: [], proposals: [], prices: [], decisionPoints: [], controlDeltas: [], infrastructureDeltas: [], mapEvents: [] };
     sendReport(ctx, state, {
       body: {
         reportType: 'wire-dispatch',
