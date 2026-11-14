@@ -103,7 +103,9 @@ Both approved. Folded in, one commit each with a control: G1 (atrocity terms low
 
 - **G3:** an effect that names no side, in an item depending on an atrocity, is rejected (`gate-acting-side`), as in the atrocity item itself (E7).
 - **G4:** D5 follows every route to a fixed point (`atrocityTaint`). A scope depends on a tainted item when it fires on it, reads its decision, waits for news of it (`knows` with that item as subject), follows it in a chain, or reads a flag it sets. An item's trigger (event, knowledge condition, chain) makes all its effects depend; one option's appear, expire or wait condition makes only that option's. An option-level dependence passes on only through that option's flags or a decision naming it. The fixed point is the default; the gate reviewer narrows it case by case if the real pack needs that.
-- **For the reviewer (Q7):** a `knows` pattern with no subject, matching an atrocity's report only by type, subtype or token, is beyond the mechanical check.
+- **G5 (0060):** in a decision that depends on an atrocity, a fall on the deciding side's own measures is the cost of the choice and passes D5; rises fail for every side, and notices keep the strict rule. B5 requires every gated option to carry a locked cost that falls on the deciding side's own measures (`gate-cost-not-own`).
+- **G6 (0060):** a `knows` pattern with no subject that could match a tainted notice's own declared report (type, subtype, no claims) counts as news of it. Tainted, never refused.
+- **For the reviewer (Q7):** reports about an atrocity from other modules (the press, later), whose fields are not known at load; and a decision every option of which depends on the atrocity, read later with no options named (ignoring it needs no option).
 
 ## For later lanes
 

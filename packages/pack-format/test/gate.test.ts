@@ -391,6 +391,19 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     firesAt(notice, 'gate-atrocity-benefit', { file: sit('sanctuary_act'), at: 'effects[1]', message: 'lowers another side' });
   });
 
+  it('gate G6 (0060): a knows pattern with no subject that could match the atrocity’s own report counts as news of it', () => {
+    const raise = { propose: { owner: 'politics', field: 'national-will', subject: 'north', delta: 15, reason: 'a-harbour-burned', side: 'north' } };
+    const asking = (knows: Record<string, string>) => editJson(sit('sanctuary_act'), (s) => ((s.knowledge = { knows }), s.effects.push(raise)));
+    const d5 = (edits: Edits) => issues(edits).filter((i) => i.file === sit('sanctuary_act') && i.kind === 'gate-atrocity-benefit');
+    // The gate reviewer's probe: harbour_burning's report is informal / cabinet-word, so asking for that type and subtype is news of it.
+    firesAt(asking({ reportType: 'informal', subtype: 'cabinet-word' }), 'gate-atrocity-benefit', { file: sit('sanctuary_act'), at: 'effects[1]', message: 'raises another side' });
+    firesAt(asking({ reportType: 'informal' }), 'gate-atrocity-benefit', { file: sit('sanctuary_act'), at: 'effects[1]' });
+    // The controls: a pattern the report cannot match (another subtype, another subject kind, or a claim it has none of) is not.
+    expect(d5(asking({ reportType: 'informal', subtype: 'press-word' }))).toEqual([]);
+    expect(d5(asking({ reportType: 'informal', subjectKind: 'post' }))).toEqual([]);
+    expect(d5(asking({ reportType: 'informal', subtype: 'cabinet-word', claimKind: 'goal-status' }))).toEqual([]);
+  });
+
   it('B10: an option a later law forbids expires with it', () => {
     fires(editJson(sit('fen_crossing'), (s) => (s.options[2].expiresWhen = null)), 'gate-no-expiry');
   });

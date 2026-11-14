@@ -564,8 +564,9 @@ export interface AtrocityTaint {
  * knowledge condition and the stage it follows; or one option's appear, expire and wait conditions) depends on a
  * tainted item when it fires on it, reads its decision, waits for news of it (a `knows` pattern whose subject is that
  * item), or reads a flag it sets. An option-level taint passes on only through that option's flags or a decision
- * naming that option: a decision read with no options named holds whatever was chosen. A `knows` pattern with no subject, matching an atrocity's report only by type, subtype or token,
- * is beyond this check: the gate reviewer reads for it (Q7).
+ * naming that option: a decision read with no options named holds whatever was chosen. A `knows` pattern with no
+ * subject that could match a tainted notice's own declared report counts too (0060, gate G6). Reports about it from
+ * other modules (the press, later) are beyond this check; the gate reviewer reads for them (Q7).
  */
 export function atrocityTaint(
   items: readonly { readonly def: SituationDef }[],
@@ -583,7 +584,7 @@ export function atrocityTaint(
     if (flagsSet(on, onOption).some((f) => reads.has(f))) return true;
     if (onOption === null) {
       if (scope.follows?.situation === on.id) return true;
-      return scope.conditions.some((c) => phase0.situationsIn(c).includes(on.id) || knowsSubjects(c).includes(on.id));
+      return scope.conditions.some((c) => phase0.situationsIn(c).includes(on.id) || knowsSubjects(c).includes(on.id) || knowsPatterns(c).some((p) => couldMatchReport(p, on)));
     }
     const followsIt = scope.follows?.situation === on.id && scope.follows.options !== null && scope.follows.options.includes(onOption);
     return followsIt || scope.conditions.some((c) => decidedNaming(c, on.id, onOption));
@@ -623,6 +624,32 @@ function decidedNaming(c: phase0.Condition, situation: string, option: string): 
   if ('any' in c) return c.any.some((x) => decidedNaming(x, situation, option));
   if ('not' in c) return decidedNaming(c.not, situation, option);
   return 'decided' in c && c.decided === situation && c.options !== null && c.options.includes(option);
+}
+
+/** Every `knows` pattern in a condition. */
+function knowsPatterns(c: phase0.Condition): phase0.KnowsPattern[] {
+  if ('all' in c) return c.all.flatMap(knowsPatterns);
+  if ('any' in c) return c.any.flatMap(knowsPatterns);
+  if ('not' in c) return knowsPatterns(c.not);
+  return 'knows' in c ? [c.knows] : [];
+}
+
+/**
+ * Whether a `knows` pattern could match a notice's own report (0060, gate G6). The report is declared in the item: its
+ * type and subtype, its subject the item itself, and no claims. So a pattern matches it when every field it names agrees,
+ * and it names no claim. A decision's staff line is not matched by type alone: every decision has one of the same type.
+ */
+function couldMatchReport(p: phase0.KnowsPattern, def: SituationDef): boolean {
+  const r = def.report;
+  if (r === null) return false;
+  return (
+    (p.subjectKind === null || p.subjectKind === 'situation') &&
+    (p.subjectId === null || p.subjectId === def.id) &&
+    (p.reportType === null || p.reportType === r.reportType) &&
+    (p.subtype === null || p.subtype === r.subtype) &&
+    p.claimKind === null &&
+    p.token === null
+  );
 }
 
 /** The situations whose reports a condition waits for (knows with subject kind situation). */
