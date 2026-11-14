@@ -1,0 +1,19 @@
+{
+  "name": "March 1861: the inauguration",
+  "startDate": "1861-03-04",
+  "seed": 1861,
+  "factions": [
+    {
+      "faction": "union",
+      "principal": "lincoln_abraham",
+      "capital": "washington",
+      "playable": true
+    },
+    {
+      "faction": "confederate",
+      "principal": "davis_jefferson",
+      "capital": "montgomery",
+      "playable": false
+    }
+  ]
+}

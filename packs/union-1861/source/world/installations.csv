@@ -1,0 +1,66 @@
+id,name,region,kind,fort_water,commands_edges,sources,notes
+washington_navy_yard,Washington Navy Yard,washington,navy_yard,,,"CEN1860-POP; CEN1860-RR (Baltimore and Ohio, Washington branch)",
+washington_arsenal,Washington Arsenal,washington,arsenal,,,"CEN1860-POP; CEN1860-RR (Baltimore and Ohio, Washington branch)",
+richmond_armory,Richmond state armory,richmond,arsenal,,,"CEN1860-POP; CEN1860-RR (Richmond and Danville; Richmond, Fredericksburg and Potomac; Richmond and Petersburg; Richmond and York River; Virginia Central)",Tredegar works and the state armory (region notes)
+fort_monroe,Fort Monroe,fort_monroe,fort,reduction,sea:fort_monroe:hampton_roads,CEN1860-POP,
+fort_monroe_naval_base,Fort Monroe naval base,fort_monroe,naval_base,,,CEN1860-POP,the draft flags naval_base; no name in its notes
+gosport_navy_yard,Gosport Navy Yard,norfolk,navy_yard,,,CEN1860-POP; CEN1860-RR (Norfolk and Petersburg; Seaboard and Roanoke),
+harpers_ferry_armory,Harpers Ferry Armory and Arsenal,harpers_ferry,arsenal,,,CEN1860-POP; CEN1860-RR (Baltimore and Ohio; Winchester and Potomac),
+fort_delaware,Fort Delaware,delaware,fort,,,"CEN1860-POP; CEN1860-RR (Philadelphia, Wilmington and Baltimore; Delaware)",Pea Patch Island
+fort_mchenry,Fort McHenry,baltimore,fort,reduction,sea:baltimore:chesapeake_upper,"CEN1860-POP; CEN1860-RR (Baltimore and Ohio; Northern Central; Philadelphia, Wilmington and Baltimore; Western Maryland)",
+fort_washington,Fort Washington,southern_maryland,fort,,,CEN1860-POP; CEN1860-RR (Annapolis and Elkridge),
+philadelphia_navy_yard,Philadelphia Navy Yard,philadelphia,navy_yard,,,"CEN1860-POP; CEN1860-RR (Pennsylvania; Philadelphia, Wilmington and Baltimore)",
+frankford_arsenal,Frankford Arsenal,philadelphia,arsenal,,,"CEN1860-POP; CEN1860-RR (Pennsylvania; Philadelphia, Wilmington and Baltimore)",
+schuylkill_arsenal,Schuylkill Arsenal,philadelphia,arsenal,,,"CEN1860-POP; CEN1860-RR (Pennsylvania; Philadelphia, Wilmington and Baltimore)",
+allegheny_arsenal,Allegheny Arsenal,pittsburgh,arsenal,,,"CEN1860-POP; CEN1860-RR (Pennsylvania; Pittsburg, Fort Wayne and Chicago)",
+brooklyn_navy_yard,Brooklyn Navy Yard,new_york,navy_yard,,,CEN1860-POP,
+watervliet_arsenal,Watervliet Arsenal,new_york,arsenal,,,CEN1860-POP,
+sackets_harbor_navy_yard,Sackets Harbor navy yard,new_york,navy_yard,,,CEN1860-POP,from the oob draft post us_navy_yard_sacketts_harbor; not a flag in the map draft
+charlestown_navy_yard,Charlestown (Boston) Navy Yard,new_england,navy_yard,,,CEN1860-POP,
+portsmouth_navy_yard,Portsmouth (Kittery) Navy Yard,new_england,navy_yard,,,CEN1860-POP,
+springfield_armory,Springfield Armory,new_england,arsenal,,,CEN1860-POP,
+fort_macon,Fort Macon,new_bern,fort,reduction,sea:carolina_sounds:new_bern;sea:new_bern:onslow_bay,CEN1860-POP; OR I-1 (ch. V summary); CEN1860-RR (Atlantic and North Carolina),
+forts_caswell_johnston,Forts Caswell and Johnston,wilmington,fort,reduction,river:cape_fear:wilmington;sea:long_bay:wilmington;sea:onslow_bay:wilmington,"CEN1860-POP; OR I-1 (ch. V summary; Ellis to Buchanan, 12 Jan 1861); CEN1860-RR (Wilmington and Weldon; Wilmington and Manchester; Wilmington, Charlotte and Rutherfordton)",
+fayetteville_arsenal,Fayetteville Arsenal,cape_fear,arsenal,,,CEN1860-POP; OR I-1 (ch. V summary); CEN1860-RR (Wilmington and Manchester; Wilmington and Weldon),
+fort_sumter,Fort Sumter,fort_sumter,fort,reduction,sea:charleston:fort_sumter;sea:charleston_bar:fort_sumter,OR I-1 (ch. I summary),
+charleston_harbour_forts,"Charleston harbour forts (Moultrie, Johnson, Castle Pinckney)",charleston,fort,reduction,sea:charleston:charleston_bar;sea:charleston:fort_sumter,CEN1860-POP; OR I-1 (ch. I summary); CEN1860-RR (South Carolina; Charleston and Savannah),
+charleston_arsenal,Charleston Arsenal,charleston,arsenal,,,CEN1860-POP; OR I-1 (ch. I summary); CEN1860-RR (South Carolina; Charleston and Savannah),
+fort_pulaski,Fort Pulaski,savannah,fort,reduction,river:augusta:savannah;sea:savannah:sea_islands_coast,"CEN1860-POP; OR I-1 (ch. II summary); CEN1860-RR (Central, of Georgia; Charleston and Savannah; Savannah, Albany, and Gulf)",
+augusta_arsenal,Augusta Arsenal,augusta,arsenal,,,"CEN1860-POP; OR I-1 (ch. II summary); CEN1860-RR (Georgia; Augusta and Savannah; Central, of Georgia)",
+pensacola_navy_yard,Pensacola Navy Yard (Warrington),pensacola,navy_yard,,,CEN1860-POP; OR I-1 (ch. IV summary); CEN1860-RR (Alabama and Florida),
+forts_barrancas_mcree,Forts Barrancas and McRee,pensacola,fort,reduction,sea:fort_pickens:pensacola;sea:pensacola:pensacola_coast,CEN1860-POP; OR I-1 (ch. IV summary); CEN1860-RR (Alabama and Florida),
+fort_pickens,Fort Pickens,fort_pickens,fort,reduction,sea:fort_pickens:pensacola;sea:fort_pickens:pensacola_coast,OR I-1 (ch. IV summary),
+forts_clinch_marion,Fort Clinch and Fort Marion,northeast_florida,fort,reduction,sea:florida_east_coast:northeast_florida;sea:georgia_bight:northeast_florida,"CEN1860-POP; OR I-1 (ch. IV summary); CEN1860-RR (Florida; Florida, Atlantic and Gulf Central)",
+fort_taylor,Fort Taylor,key_west,fort,reduction,sea:florida_straits:key_west,CEN1860-POP; OR I-1 (ch. IV summary),
+fort_jefferson,Fort Jefferson,key_west,fort,reduction,sea:florida_straits:key_west,CEN1860-POP; OR I-1 (ch. IV summary),"Garden Key, Dry Tortugas"
+key_west_naval_base,Key West naval base,key_west,naval_base,,,CEN1860-POP; OR I-1 (ch. IV summary),
+forts_morgan_gaines,Forts Morgan and Gaines,mobile,fort,passage,river:al_southwest:mobile;sea:mobile:mobile_bay,CEN1860-POP; OR I-1 (ch. III summary); CEN1860-RR (Mobile and Ohio; Mobile and Great Northern),
+mount_vernon_arsenal,Mount Vernon Arsenal,mobile,arsenal,,,CEN1860-POP; OR I-1 (ch. III summary); CEN1860-RR (Mobile and Ohio; Mobile and Great Northern),
+vicksburg_battery,Vicksburg battery,vicksburg,fort,reduction,river:mississippi_memphis_vicksburg:vicksburg;river:mississippi_vicksburg_baton_rouge:vicksburg;river:ms_central_north:vicksburg,"CEN1860-POP; CEN1860-RR (Vicksburg, Shreveport and Texas)",whether guns stood there in March 1861 is unconfirmed (region notes)
+ship_island_fort,Ship Island fort,ship_island,fort,reduction,sea:mississippi_sound:ship_island,OR I-1 (ch. III summary),"unfinished fort, seized 20 January 1861"
+ship_island_naval_base,Ship Island naval base,ship_island,naval_base,,,OR I-1 (ch. III summary),"the draft flags naval_base (""later the Union's staging base"")"
+forts_pike_macomb,Forts Pike and Macomb,new_orleans,fort,,,"CEN1860-POP; OR I-1 (ch. VI summary); CEN1860-RR (New Orleans, Jackson, and Great Northern; New Orleans, Opelousas and Great Western)",
+forts_jackson_st_philip,Forts Jackson and St. Philip,forts_jackson_st_philip,fort,passage,river:forts_jackson_st_philip:mississippi_lower,CEN1860-POP; OR I-1 (ch. VI summary),
+baton_rouge_arsenal,Baton Rouge Arsenal,baton_rouge,arsenal,,,CEN1860-POP; OR I-1 (ch. VI summary),
+island_no_10_works,Island No. 10 works,island_no_10,fort,reduction,river:island_no_10:mississippi_cairo_memphis,MAP-LANE,fortified later in 1861 (region notes)
+fort_henry,Fort Henry,fort_henry,fort,passage,river:fort_henry:tennessee_lower,MAP-LANE,built later in 1861 (region notes)
+fort_donelson,Fort Donelson,fort_donelson,fort,reduction,river:cumberland_river:fort_donelson,CEN1860-POP,
+cumberland_gap_works,Cumberland Gap works,cumberland_gap,fort,,,CEN1860-POP,the draft flags fort; no name in its notes
+columbus_ky_works,Columbus works,columbus_ky,fort,reduction,river:columbus_ky:mississippi_cairo_memphis,CEN1860-POP; CEN1860-RR (Mobile and Ohio),seized and fortified by Polk in September 1861 (region notes)
+cairo_naval_base,Cairo naval base,cairo,naval_base,,,CEN1860-POP; CEN1860-RR (Illinois Central),
+st_louis_arsenal,St. Louis Arsenal,st_louis,arsenal,,,CEN1860-POP; CEN1860-RR (Pacific; North Missouri; St. Louis and Iron Mountain),
+new_madrid_works,New Madrid works,new_madrid,fort,reduction,river:mississippi_cairo_memphis:new_madrid,CEN1860-POP,fortified with Island No. 10 in 1861-62 (region notes)
+liberty_arsenal,Liberty Arsenal,mo_northwest,arsenal,,,CEN1860-POP; CEN1860-RR (Hannibal and St. Joseph); OR I-1 (ch. VIII summary),
+little_rock_arsenal,Little Rock Arsenal,little_rock,arsenal,,,CEN1860-POP; OR I-1 (ch. VIII summary),
+fort_smith,Fort Smith,ar_northwest,fort,,,CEN1860-POP; OR I-1 (ch. VIII summary),
+san_antonio_arsenal,San Antonio Arsenal,tx_san_antonio_austin,arsenal,,,CEN1860-POP; OR I-1 (ch. VII summary),
+fort_brown,Fort Brown,brownsville,fort,,,CEN1860-POP; OR I-1 (ch. VII summary),
+west_texas_frontier_forts,West Texas frontier forts,tx_west,fort,,,CEN1860-POP,
+fort_leavenworth,Fort Leavenworth,kansas_east,fort,,,CEN1860-POP,
+fort_leavenworth_arsenal,Fort Leavenworth Arsenal,kansas_east,arsenal,,,CEN1860-POP,
+fort_snelling,Fort Snelling,minnesota,fort,,,CEN1860-POP,
+forts_union_craig,Fort Union and Fort Craig,new_mexico,fort,,,CEN1860-POP,
+fort_fillmore,Fort Fillmore,arizona,fort,,,CEN1860-POP,
+fort_gibson,Fort Gibson,it_cherokee_creek,fort,,,MAP-LANE,
+forts_washita_arbuckle_cobb,"Forts Washita, Arbuckle and Cobb",it_choctaw_chickasaw,fort,,,OR I-1 (ch. VIII summary),
+mare_island_navy_yard,Mare Island Navy Yard,pacific_coast,navy_yard,,,MAP-LANE,
