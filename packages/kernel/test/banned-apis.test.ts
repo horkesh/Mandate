@@ -66,8 +66,8 @@ const MUTABLE_CONST_WHY = 'module-level mutable object or array: type it readonl
 export interface ImportContext {
   /** Absolute path of the file. */
   readonly file: string;
-  /** Absolute path of its package root. */
-  readonly packageRoot: string;
+  /** Absolute path of its package's `src` folder: relative imports must stay inside it (tests and tools live outside `src` and may use Node). */
+  readonly sourceRoot: string;
   /** Names of workspace packages that declare `deterministic: true`. */
   readonly deterministicPackages: ReadonlySet<string>;
 }
@@ -134,9 +134,9 @@ function importSpecifiers(withStrings: string): { index: number; specifier: stri
 export function importProblem(specifier: string, ctx: ImportContext): string | null {
   if (specifier.startsWith('.')) {
     const target = resolve(dirname(ctx.file), specifier);
-    const rel = relative(ctx.packageRoot, target);
+    const rel = relative(ctx.sourceRoot, target);
     if (rel.split(sep)[0] === '..' || isAbsolute(rel)) {
-      return `import "${specifier}" leaves the package: relative imports must stay inside it`;
+      return `import "${specifier}" leaves the package's src: relative imports must stay inside it`;
     }
     return null;
   }
@@ -192,14 +192,14 @@ describe('banned APIs in deterministic packages (decision 0002)', () => {
 
     it(`${pkg.dir}: uses no banned API and imports nothing unscanned`, () => {
       const violations = files.flatMap((file) =>
-        bannedApiViolations(repoPath(file), readFileSync(file, 'utf8'), { file, packageRoot: pkg.root, deterministicPackages: deterministicNames }),
+        bannedApiViolations(repoPath(file), readFileSync(file, 'utf8'), { file, sourceRoot: join(pkg.root, 'src'), deterministicPackages: deterministicNames }),
       );
       expect(violations).toEqual([]);
     });
   }
 
   const kernelRoot = join(packages.find((p) => p.dir === 'kernel')!.root);
-  const ctx: ImportContext = { file: join(kernelRoot, 'src', 'zz-probe.ts'), packageRoot: kernelRoot, deterministicPackages: deterministicNames };
+  const ctx: ImportContext = { file: join(kernelRoot, 'src', 'zz-probe.ts'), sourceRoot: join(kernelRoot, 'src'), deterministicPackages: deterministicNames };
 
   it('catches each kind of violation (positive control)', () => {
     const bad = [
@@ -217,19 +217,20 @@ describe('banned APIs in deterministic packages (decision 0002)', () => {
     }
   });
 
-  it('allow-lists imports: inside the package, or a deterministic workspace package (reviewer probes)', () => {
+  it("allow-lists imports: inside the package's src, or a deterministic workspace package (reviewer probes)", () => {
     const src = [
       "import { writeFileAtomic } from '../../cli/src/io/atomic.ts';",
       "import { expect } from 'vitest';",
       "import type { Verb } from '@mandate/cli';",
       "export * from '../package.json';",
+      "import { tsFiles } from '../test/support/source.ts';",
       "import { strictCompare } from './compare.ts';",
       "import { ids } from '@mandate/kernel';",
       "export { canonicalJson } from './serialize/canonical.ts';",
     ].join('\n');
-    expect(bannedApiViolations('fixture.ts', src, ctx).map((v) => v.split(': ')[0])).toEqual(['fixture.ts:1', 'fixture.ts:2', 'fixture.ts:3']);
-    expect(importProblem('../outside.ts', { ...ctx, file: join(kernelRoot, 'src', 'a.ts') })).toBeNull();
-    expect(importProblem('../../outside.ts', { ...ctx, file: join(kernelRoot, 'src', 'a.ts') })).toContain('leaves the package');
+    expect(bannedApiViolations('fixture.ts', src, ctx).map((v) => v.split(': ')[0])).toEqual(['fixture.ts:1', 'fixture.ts:2', 'fixture.ts:3', 'fixture.ts:4', 'fixture.ts:5']);
+    expect(importProblem('../ids.ts', { ...ctx, file: join(kernelRoot, 'src', 'serialize', 'a.ts') })).toBeNull();
+    expect(importProblem('../outside.ts', { ...ctx, file: join(kernelRoot, 'src', 'a.ts') })).toContain("leaves the package's src");
   });
 
   it('allow-lists Math members, so aliases, brackets and destructuring fail (reviewer probes)', () => {
