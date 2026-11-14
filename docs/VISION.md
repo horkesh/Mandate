@@ -1,6 +1,6 @@
-# Mandate: vision (draft 0.2)
+# By Order of the President: vision (draft 0.2)
 
-"Mandate" is a working codename. This is the pitch; the integrated design is [design/FOUNDATION.md](design/FOUNDATION.md), and the accepted decisions in [decisions/](decisions/) outrank both.
+The game is *By Order of the President* (0036); its engine is codenamed Mandate. This is the pitch; the integrated design is [design/FOUNDATION.md](design/FOUNDATION.md), and the accepted decisions in [decisions/](decisions/) outrank both.
 
 ## The pitch
 

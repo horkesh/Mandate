@@ -39,3 +39,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0033](0033-forces-scale-and-data-sources.md) | Transfers name a force, not divisions one by one; force blocks fit the period; data comes from public-domain sources | accepted |
 | [0034](0034-one-standing-steward.md) | One standing steward lane from Phase 0 | accepted |
 | [0035](0035-the-stack.md) | The stack, and a map-rendering tripwire | accepted |
+| [0036](0036-the-title.md) | The game is called By Order of the President; Mandate stays the engine's codename | accepted |

@@ -1,6 +1,6 @@
-# CLAUDE.md: Mandate
+# CLAUDE.md: By Order of the President
 
-Mandate is a strategy game, and an engine for wars with fronts, in which the player is the political leader of a faction at war and commands only through people who can and do push back. First game: the American Civil War, 1861–65; you play Lincoln (0018).
+*By Order of the President* (0036) is a strategy game, built on an engine codenamed **Mandate** for wars with fronts, in which the player is the political leader of a faction at war and commands only through people who can and do push back. First game: the American Civil War, 1861–65; you play Lincoln (0018).
 
 **Phase: redesign agreed; Phase 0 next.** The game and kernel were redesigned on 2026-11-14 (goals and plans as arrows, hidden stats and assessment, seats, variable turns of up to a week, regions over a typed graph). The design is [docs/design/FOUNDATION.md](docs/design/FOUNDATION.md), accepted through the decision records from 0015 on (see [the index](docs/decisions/README.md)); its section 12 is the Phase 0 plan. The code in `packages/` is still the M2 kernel described in [docs/design/KERNEL.md](docs/design/KERNEL.md) (a coarse theatre and a text console, `npm run play -- union-1861`), which Phase 0 replaces.
 
