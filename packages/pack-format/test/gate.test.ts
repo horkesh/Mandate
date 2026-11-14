@@ -427,10 +427,8 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     const shipped = ['opening', 'summer_front'];
     expect(releaseProblems(items, gate, shipped)).toEqual([
       'scenario opening (1861-04-01 to 1862-12-31) overlaps held topic old-oath (awaiting its record, 1861-03-04 to 1861-12-31)',
-      'situations/fen_arrivals.json: signed off by a fixture (fixture-signoff), not a gate reviewer',
-      'situations/fen_crossing.json: signed off by a fixture (fixture-signoff), not a gate reviewer',
+      // The gate reviewer signed three of the four (gate re-check); harbour_burning stays a fixture, so it blocks.
       'situations/harbour_burning.json: signed off by a fixture (fixture-signoff), not a gate reviewer',
-      'situations/sanctuary_act.json: signed off by a fixture (fixture-signoff), not a gate reviewer',
     ]);
     // Shipping only the later scenario, with real reviewers' sign-offs, passes.
     const later = { ...gate, release: { scenarios: [gate.release!.scenarios[1]!] } };
