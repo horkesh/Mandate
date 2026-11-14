@@ -45,6 +45,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - Provenance: Natural Earth is the only geometry source confirmed public domain (terms read 2026-11-14); the Census licence stays unconfirmed. census.gov blocks this machine's IP (Cloudflare 403), so the local pipeline must not fetch from it; do not brief the Wayback route (the permission system refused it as routing around the block).
 - From lane 0.2's close-out: the first commit with `packs/union-1861/pack.json` must generate clean (or build the pack up on a branch), because `npm test` checks every pack with a manifest; settle region ids before writing forts' `commands_edges`, `obstructions.csv` and `edge_conditions.csv` (edge ids derive from their ends), or give those edges explicit ids; author lane 0.3's own vocabularies (ranks with seniority above all) and source registry, not the fit test's scaffold; the people roster has no priority column (image-sources note).
 - From lane 0.4's report: the World has no telegraph data, so every held land region counts as wired. Whether wires follow the railways needs a format flag and data (lane 0.3 or the format).
+- From the lead (lane 0.4 review and the data drafts): edges have no unknown marker; people's careers (`posts_1861_62`, `prewar`, `west_point_class`) have no field; the people draft cites `HAY-L1908-intro`, which its source table does not list; two oob draft rows still say "needs-source" in a place cell; thirty rail edges name several lines and only the first is used (parallel edges later); 69 post-holders outside the roster need people records (a people-data lane); loyalty needs a field in the format and the start, so the research note's loyalty shares have a home and never stand in for control.
 - Person ids use the convention surname_firstgiven_initials (`lee_robert_e`).
 - Navy data (navy note): pre-Sumter navy holders for March 1861 are not yet covered; the Western Flotilla belongs to the Army until 1 October 1862, then the Navy (a post changing department); the Strategy Board is a temporary post; squadrons are created by directive during play, not all at start.
 - Anderson's 28 February 1861 strength figure differs between his letter as printed (70,000) and Holt's covering letter (20,000): carry the figure Lincoln read once known (March facts note).
@@ -69,6 +70,9 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - Test fixtures under `packages/` use the fictional testbed register, never Civil War terms (`check:boundary` flags them).
 - 0042 parks an optional "draft the address with advisers" prologue until the March situations exist.
 - Scenario setup: whether S33, compensated emancipation (proposed 6 March 1862), is already resolved at the demo's 8 March start is a call for the demo scenario's author (gate review of the presentation design).
+- The schema does not yet carry catalogue pressures P6, P8, P10, P11, P15 and P16; each waits for its owning module.
+- Situation effects proposed to politics, regions and forces are reported but not applied until those owners exist.
+- The Union pack's gate register needs real content, written from `SENSITIVE-HISTORY.md` section 3 with sources (a gate-content lane after lane 0.3).
 - Unverified: the FIRST-MONTH document may still date the Pickens situation 4 March; the author of the March 1861 situations checks it against 0042 (situations start on 5 March).
 
 **Lane 0.8 (headless runner)**
@@ -86,6 +90,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - The pre-commit hook checks the working tree, not the staged tree, so intermediate commits beside unstaged edits are never checked alone: check the staged tree, or rely on CI per commit.
 - App-created worktrees set `core.hooksPath` to the main checkout's absolute `.githooks`, so a lane's own hook changes do not run in its worktree until merged. Low impact (CI covers); a candidate LESSONS entry; it is app-managed config.
 - From lane 0.6 (finding 3): replace the growing `IMMUTABLE_STATE_KEYS` list (68 keys) with a per-record "immutable record" declaration in `ownership.ts`, a change to the one-writer scanner.
+- The one-writer scan misses a write through a parenthesised cast, and a `delete` (reviewer, `review-lane-0.4.md`); extend it with the immutable-record change above.
 
 **Phase 1**
 - Combat (combat note and model proposal): one battle per day per region; men in contact are the lesser of those engaged, capped by frontage; five battle types with base loss rates; additive typed terms; one named stream per battle-day with fixed draws; commanders decide commit, stand or pursue without dice; missing go to stragglers; rout by morale does not kill; destruction only when cut off; a four-phase template drives hour-stamped dispatches. Generals killed or wounded need their own named stream with fixed draws per day, and generated colonels need a stream keyed by report, so reading a report cannot shift later draws. Livermore's public-domain tables become a calibration fixture for a CI harness of named set-ups; the ODC-BY acw-battle-data CSV is a cross-check only. Cite Livermore, not Kirkpatrick's ambiguous abstract.
@@ -107,5 +112,5 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - The store-page AI disclosure wording is drafted in the repo before submission, alongside 0038's question to Valve.
 - Re-check OpenAI's terms (see `docs/research/2026-11-14-codex-output-terms.md`, merged) before Codex's first delivery and again before Steam submission (they changed on 2026-11-13; new usage policies take effect on 2026-11-20).
 - One short lawyer consultation, covering real-person likeness references, scripted tool use and PolyForm: the owner's spending call (0037).
-- Both image research notes are now on main (`docs/research/2026-11-14-codex-output-terms.md` and `docs/research/2026-11-14-portrait-and-image-sources.md`). `docs/design/ASSETS.md` (not yet on main) should cite them by those paths, not as branches under review (presentation lane, item 4).
+- Both image research notes are on main (`docs/research/2026-11-14-codex-output-terms.md` and `docs/research/2026-11-14-portrait-and-image-sources.md`), and `docs/design/ASSETS.md` is now on main too (dfac152), citing them by those paths (presentation lane, item 4).
 - The handwriting typeface the presentation design proposes needs a licence check, and 0035's typeface list needs amending if it is adopted (reviewer's presentation review).
