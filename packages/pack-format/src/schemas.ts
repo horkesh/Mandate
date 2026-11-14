@@ -179,7 +179,8 @@ const faction = z.strictObject({ id: idOf('faction'), name: stringKey });
 
 export const DepartmentSchema = z.strictObject({
   id: idOf('department'),
-  faction: idOf('faction'),
+  /** Null for a neutral government (review F6). */
+  faction: idOf('faction').nullable(),
   kind: termId,
   name: stringKey,
   provenance,

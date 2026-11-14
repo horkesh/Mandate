@@ -115,10 +115,15 @@ export interface FactionRecord {
  * government). Posts belong to one; relay follows it, so a newer order from a
  * holder's own department supersedes his standing orders, and another
  * department's order does not (0040).
+ *
+ * A department with no faction is a neutral government (a border state's
+ * during its neutrality, review F6): its posts and forces are a side of their
+ * own, never under or over either faction's chain, and the regions it holds
+ * are no one's in control. Choosing a side is a situation's work, not data.
  */
 export interface DepartmentRecord {
   readonly id: DepartmentId;
-  readonly faction: FactionId;
+  readonly faction: FactionId | null;
   readonly kind: string;
   readonly name: StringKey;
   readonly provenance: Provenance;

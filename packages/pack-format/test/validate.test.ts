@@ -10,6 +10,14 @@ const joint = (links: string, secondOperation = 'raid', secondDepartment = 'r_se
     `post,kind,other,notes\n${links}`,
     withFile(`${S}/posts.csv`, appendRow(`red_raid_a,Raid troops,expedition,r_war,red_top,beta,raid,,,DESIGN,\nred_raid_b,Raid ships,expedition,${secondDepartment},red_top,beta,${secondOperation},,,DESIGN,`)),
   );
+/** A neutral government (review F6): a department with no faction, its governor, and its guard in beta. */
+const neutral = (post = 'grey_top,Grey Governor,chief,g_gov,,beta,,,,DESIGN,', block = 'grey_guard,Grey Guard,block,,g_gov,grey_top,beta,,foot,800,1900-04,,20,DESIGN,') => {
+  let files = withFile(`${W}/departments.csv`, appendRow('g_gov,Grey Government,,ministry,DESIGN,'));
+  files = withFile(`${W}/people.csv`, appendRow('grey_chief,Grey Chief,,,officer,1805,1875,average:DESIGN,average:DESIGN,average:DESIGN,average:DESIGN,,,,DESIGN,'), files);
+  files = withFile(`${S}/posts.csv`, appendRow(post), files);
+  files = withFile(`${S}/holders.csv`, appendRow('grey_top,grey_chief,no,,,DESIGN,'), files);
+  return withFile(`${S}/force_blocks.csv`, appendRow(block), files);
+};
 const renamed = (from: string, to: string) => {
   const base = fixture();
   return withNewFile(to, base.get(from)!, withoutFile(from, base));
@@ -150,6 +158,11 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'infantry standing on the sea', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce(',red_army,alpha,,foot,200', ',red_army,bay,,foot,200')), kind: 'afloat-without-ship', file: `${S}/force_blocks.csv` },
   { name: 'a ship aboard a ship', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_ship,Red Ship,block,,r_sea,red_fleet,alpha,,', 'red_ship,Red Ship,block,,r_sea,red_fleet,alpha,red_ship,')), kind: 'aboard-cycle', file: `${S}/force_blocks.csv` },
   { name: 'a ship inland', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_ship,Red Ship,block,,r_sea,red_fleet,alpha,', 'red_ship,Red Ship,block,,r_sea,red_fleet,beta,')), kind: 'ship-ashore', file: `${S}/force_blocks.csv`, severity: 'warning' },
+  // A neutral government (review F6)
+  { name: "a neutral government's guard under a faction's general", files: () => neutral(undefined, 'grey_guard,Grey Guard,block,,g_gov,red_army,beta,,foot,800,1900-04,,20,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/force_blocks.csv` },
+  { name: "a faction's troops under a neutral governor", files: () => neutral(undefined, 'grey_guard,Grey Guard,block,,r_war,grey_top,beta,,foot,800,1900-04,,20,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/force_blocks.csv` },
+  { name: "a neutral government's post answering to a faction", files: () => neutral('grey_top,Grey Governor,chief,g_gov,red_top,beta,,,,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/posts.csv` },
+  { name: "a faction's man holding a neutral post", files: () => withFile(`${S}/holders.csv`, replaceOnce('grey_top,grey_chief,', 'grey_top,red_captain,'), neutral()), kind: 'faction-mismatch', file: `${S}/holders.csv` },
   { name: 'no playable faction', files: () => withFile(`${S}/scenario.json`, replaceOnce('"playable":true', '"playable":false')), kind: 'no-playable-faction', file: `${S}/scenario.json` },
   {
     name: 'a faction listed twice in a start',
@@ -227,6 +240,19 @@ describe('checks that guard committed data (positive controls)', () => {
 
   it('the canonical writer refuses a float rather than writing it', () => {
     expect(() => formatGenerated({ regions: [{ lengthDays: 1.5 }] })).toThrow();
+  });
+});
+
+describe('a neutral government (review F6)', () => {
+  it('loads: a department with no faction, its governor and its guard, on no one\'s ground', () => {
+    const result = run(withFile(`${S}/control.csv`, replaceOnce('beta,red:600;blue:300,', 'beta,,'), neutral()));
+    expect(errorsOf(result.issues).map(formatIssue)).toEqual([]);
+    expect(result.pack!.world.departments.find((d) => d.id === 'g_gov')?.faction).toBeNull();
+  });
+
+  it('cannot change sides by a scheduled department change', () => {
+    const files = withNewFile(`${S}/department_changes.csv`, 'post,on,department,parent,sources,notes\ngrey_top,1900-09-01,r_war,red_top,DESIGN,', neutral());
+    expect(run(files).issues.filter((i) => i.kind === 'chain-crosses-factions').length).toBeGreaterThan(0);
   });
 });
 

@@ -147,7 +147,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   const factions = idSet('factions', world.factions);
   world.factions.forEach((f, i) => useKey(f.name, W('factions', i, 'name')));
   const departments = idSet('departments', world.departments);
-  const deptFaction = new Map(world.departments.map((d) => [d.id as string, d.faction as string]));
+  const deptFaction = new Map(world.departments.map((d) => [d.id as string, d.faction as string | null]));
   /** Which side a department is on: its faction. Unknown departments give undefined, already reported. */
   const allegiance = (dept: string): string | undefined => (deptFaction.has(dept) ? (deptFaction.get(dept) ?? `neutral:${dept}`) : undefined);
   const personFaction = new Map(world.people.map((p) => [p.id as string, p.faction as string | null]));

@@ -367,7 +367,7 @@ export function generatePack(files: PackFiles): GenerateResult {
       origin: r.origin(),
       rec: {
         id: r.id_('id'),
-        faction: r.id_('faction'),
+        faction: r.optionalId('faction'),
         kind: r.text('kind'),
         name: names.add(`department.${r.id}.name`, r.text('name')),
         provenance: cites(r),
