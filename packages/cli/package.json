@@ -6,5 +6,9 @@
   "description": "Headless runners for Mandate packs. Reads pack files; the kernel itself does no I/O.",
   "dependencies": {
     "@mandate/kernel": "*"
+  },
+  "mandate": {
+    "deterministic": false,
+    "reason": "Headless runners: they read packs from disk and write saves and runs/ output."
   }
 }
