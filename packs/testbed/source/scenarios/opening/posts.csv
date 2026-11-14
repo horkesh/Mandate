@@ -1,0 +1,22 @@
+id,name,kind,department,parent,region,temporary_operation,installation,rail_line,sources,notes
+n_head,First Minister of the North,head_of_state,n_executive,,n_capital,,,,TB-DESIGN,The player's seat.
+n_war_office,Minister of War,minister,n_war,n_head,n_capital,,,,TB-DESIGN,
+n_navy_office,First Lord of the Admiralty,minister,n_navy,n_head,n_capital,,,,TB-DESIGN,
+n_army_west,Army of the Westwatch,army,n_war,n_war_office,n_west_front,,,,TB-DESIGN,West of the salient.
+n_army_east,Army of the Eastwatch,army,n_war,n_war_office,n_east_front,,,,TB-DESIGN,East of the salient.
+n_capital_defences,Defences of Aldmoor,garrison_command,n_war,n_war_office,n_capital,,,,TB-DESIGN,
+n_capital_yard,Aldmoor Navy Yard,yard,n_navy,n_navy_office,n_capital,,capital_yard,,TB-DESIGN,"An Admiralty post inside a region whose defences the War Ministry commands."
+n_kestrel_yard,Kestrel Haven Yard,yard,n_navy,n_navy_office,n_naval_base,,kestrel_yard,,TB-DESIGN,
+n_home_squadron,Home Squadron,squadron,n_navy,n_navy_office,n_naval_base,,,,TB-DESIGN,
+n_gull_rock,Gull Rock Fort,fort_command,n_war,n_war_office,island_fort,,gull_rock_fort,,TB-DESIGN,"Besieged; under standing orders not to fire first."
+n_relief_army,Gull Rock relief: troops,expedition,n_war,n_war_office,n_naval_base,gull_rock_relief,,,TB-DESIGN,"A joint expedition is two temporary posts, one per ministry, linked; each dissolves when the operation ends."
+n_relief_squadron,Gull Rock relief: ships,expedition,n_navy,n_navy_office,n_naval_base,gull_rock_relief,,,TB-DESIGN,
+n_river_flotilla,Westwatch River Flotilla,squadron,n_war,n_army_west,n_west_front,,,,TB-DESIGN,Built by the War Ministry; passes to the Admiralty on a date.
+n_trunk_president,President of the Aldmoor and Brenn Railway,rail_president,n_railways,,n_capital,,,north_trunk,TB-DESIGN,"A holder outside the chain of command, reached by requisition."
+s_head,President of the Southern Council,head_of_state,s_executive,,s_capital,,,,TB-DESIGN,
+s_war_office,Southern Secretary of War,minister,s_war,s_head,s_capital,,,,TB-DESIGN,
+s_army_salient,Army of the Harrow,army,s_war,s_war_office,salient_base,,,,TB-DESIGN,
+s_army_west,Army of Highcairn,army,s_war,s_war_office,s_west_hills,,,,TB-DESIGN,
+s_corran_command,Corran Fort,fort_command,s_war,s_war_office,mere_crossing,,corran_fort,,TB-DESIGN,
+s_coast_command,Gullhaven Batteries,fort_command,s_war,s_war_office,s_coast,,southern_batteries,,TB-DESIGN,
+s_lowmarch_governor,Governor of Lowmarch,governor,s_province,,s_coast_east,,,,TB-DESIGN,"Answers the Southern War Office by requisition, not by command."

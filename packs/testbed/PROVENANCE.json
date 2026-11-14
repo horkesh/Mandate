@@ -1,0 +1,15 @@
+{
+  "formatVersion": 2,
+  "sources": [
+    {
+      "key": "TB-DESIGN",
+      "title": "The Two Rivers testbed: a fictional, setting-free war authored in this repository to exercise the kernel",
+      "kind": "own-work",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "packs/testbed/source (this repository)",
+      "licencePage": null,
+      "licenceReadOn": null
+    }
+  ]
+}

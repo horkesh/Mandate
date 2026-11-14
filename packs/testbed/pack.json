@@ -1,0 +1,104 @@
+{
+  "formatVersion": 2,
+  "id": "testbed",
+  "status": "release",
+  "name": "pack.name",
+  "defaultLocale": "en",
+  "locales": ["en"],
+  "rules": {
+    "capacityMax": 5,
+    "supplyControlPermille": 250,
+    "retreatControlPermille": 50,
+    "seasons": [
+      { "reason": "mud", "defaultMonths": [1, 2, 3, 12], "lengthPermille": 1500, "capacityPermille": 600 },
+      { "reason": "low_water", "defaultMonths": [8, 9, 10], "lengthPermille": 1300, "capacityPermille": 500 },
+      { "reason": "flood", "defaultMonths": [4, 5], "lengthPermille": 1200, "capacityPermille": 800 },
+      { "reason": "ice", "defaultMonths": [1, 2], "lengthPermille": 2000, "capacityPermille": 300 }
+    ]
+  },
+  "vocabularies": {
+    "terrains": [
+      { "id": "plain", "name": "terrain.plain", "roadLengthPermille": 1000, "water": false },
+      { "id": "rolling", "name": "terrain.rolling", "roadLengthPermille": 1000, "water": false },
+      { "id": "prairie", "name": "terrain.prairie", "roadLengthPermille": 1000, "water": false },
+      { "id": "valley", "name": "terrain.valley", "roadLengthPermille": 1000, "water": false },
+      { "id": "urban", "name": "terrain.urban", "roadLengthPermille": 1000, "water": false },
+      { "id": "tidewater", "name": "terrain.tidewater", "roadLengthPermille": 1000, "water": false },
+      { "id": "hills", "name": "terrain.hills", "roadLengthPermille": 1200, "water": false },
+      { "id": "swamp", "name": "terrain.swamp", "roadLengthPermille": 1400, "water": false },
+      { "id": "mountains", "name": "terrain.mountains", "roadLengthPermille": 1500, "water": false },
+      { "id": "river", "name": "terrain.river", "roadLengthPermille": 1000, "water": true },
+      { "id": "coastal", "name": "terrain.coastal", "roadLengthPermille": 1000, "water": true },
+      { "id": "open_sea", "name": "terrain.open_sea", "roadLengthPermille": 1000, "water": true }
+    ],
+    "postKinds": [
+      { "id": "head_of_state", "name": "post_kind.head_of_state", "creatable": "start_only", "temporary": false },
+      { "id": "minister", "name": "post_kind.minister", "creatable": "start_only", "temporary": false },
+      { "id": "army", "name": "post_kind.army", "creatable": "appoint", "temporary": false },
+      { "id": "garrison_command", "name": "post_kind.garrison_command", "creatable": "appoint", "temporary": false },
+      { "id": "fort_command", "name": "post_kind.fort_command", "creatable": "appoint", "temporary": false },
+      { "id": "squadron", "name": "post_kind.squadron", "creatable": "directive", "temporary": false },
+      { "id": "yard", "name": "post_kind.yard", "creatable": "start_only", "temporary": false },
+      { "id": "governor", "name": "post_kind.governor", "creatable": "start_only", "temporary": false },
+      { "id": "rail_president", "name": "post_kind.rail_president", "creatable": "start_only", "temporary": false },
+      { "id": "expedition", "name": "post_kind.expedition", "creatable": "appoint", "temporary": true }
+    ],
+    "departmentKinds": [
+      { "id": "executive", "name": "department_kind.executive" },
+      { "id": "war_ministry", "name": "department_kind.war_ministry" },
+      { "id": "navy_ministry", "name": "department_kind.navy_ministry" },
+      { "id": "province", "name": "department_kind.province" },
+      { "id": "private", "name": "department_kind.private" }
+    ],
+    "arms": [
+      { "id": "infantry", "name": "arm.infantry", "naval": false },
+      { "id": "artillery", "name": "arm.artillery", "naval": false },
+      { "id": "cavalry", "name": "arm.cavalry", "naval": false },
+      { "id": "mixed", "name": "arm.mixed", "naval": false },
+      { "id": "naval", "name": "arm.naval", "naval": true }
+    ],
+    "personKinds": [
+      { "id": "leader", "name": "person_kind.leader" },
+      { "id": "general", "name": "person_kind.general" },
+      { "id": "minister", "name": "person_kind.minister" },
+      { "id": "naval_officer", "name": "person_kind.naval_officer" },
+      { "id": "governor", "name": "person_kind.governor" },
+      { "id": "magnate", "name": "person_kind.magnate" }
+    ],
+    "traits": [
+      { "id": "slow", "name": "trait.slow", "gate": false },
+      { "id": "organiser", "name": "trait.organiser", "gate": false },
+      { "id": "candid", "name": "trait.candid", "gate": false },
+      { "id": "insubordinate", "name": "trait.insubordinate", "gate": false },
+      { "id": "ambitious", "name": "trait.ambitious", "gate": false },
+      { "id": "uses_press", "name": "trait.uses_press", "gate": false },
+      { "id": "joint_minded", "name": "trait.joint_minded", "gate": false },
+      { "id": "harsh_with_civilians", "name": "trait.harsh_with_civilians", "gate": true }
+    ],
+    "ranks": [
+      { "id": "colonel", "name": "rank.colonel", "seniority": 1 },
+      { "id": "brigadier", "name": "rank.brigadier", "seniority": 2 },
+      { "id": "major_general", "name": "rank.major_general", "seniority": 3 },
+      { "id": "captain_navy", "name": "rank.captain_navy", "seniority": 2 },
+      { "id": "flag_officer", "name": "rank.flag_officer", "seniority": 3 }
+    ],
+    "blocs": [
+      { "id": "n_hawks", "name": "bloc.n_hawks" },
+      { "id": "n_moderates", "name": "bloc.n_moderates" },
+      { "id": "n_machine", "name": "bloc.n_machine" },
+      { "id": "s_traditionalists", "name": "bloc.s_traditionalists" },
+      { "id": "s_firebrands", "name": "bloc.s_firebrands" }
+    ],
+    "standingOrderKinds": [
+      { "id": "hold_position", "name": "order_kind.hold_position" },
+      { "id": "do_not_provoke", "name": "order_kind.do_not_provoke" },
+      { "id": "truce", "name": "order_kind.truce" },
+      { "id": "supply_by_sea", "name": "order_kind.supply_by_sea" }
+    ]
+  },
+  "factions": [
+    { "id": "north", "name": "faction.north" },
+    { "id": "south", "name": "faction.south" }
+  ],
+  "scenarios": ["opening", "summer_front"]
+}

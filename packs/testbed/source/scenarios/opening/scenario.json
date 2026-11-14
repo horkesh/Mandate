@@ -1,0 +1,9 @@
+{
+  "name": "The opening: two armies around the Harrow salient, and Gull Rock besieged",
+  "startDate": "1861-04-01",
+  "seed": 1861,
+  "factions": [
+    { "faction": "north", "principal": "n_leader", "capital": "n_capital", "playable": true },
+    { "faction": "south", "principal": "s_leader", "capital": "s_capital", "playable": false }
+  ]
+}

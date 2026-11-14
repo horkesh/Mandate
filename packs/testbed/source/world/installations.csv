@@ -1,0 +1,9 @@
+id,name,region,kind,fort_water,commands_edges,sources,notes
+capital_yard,Aldmoor Navy Yard,n_capital,navy_yard,,,TB-DESIGN,"Inside the capital, held by the Admiralty while the War Ministry commands the capital's defences."
+capital_arsenal,Aldmoor Arsenal,n_capital,arsenal,,,TB-DESIGN,
+kestrel_base,Kestrel Haven Naval Base,n_naval_base,naval_base,,,TB-DESIGN,
+kestrel_yard,Kestrel Haven Yard,n_naval_base,navy_yard,,,TB-DESIGN,
+corran_fort,Corran Fort,mere_crossing,fort,reduction,river:mere_crossing:mere_lower;river:mere_crossing:mere_upper,TB-DESIGN,Boats cannot run past it: it must be taken.
+gull_rock_fort,Gull Rock Fort,island_fort,fort,reduction,sea:island_fort:south_sea,TB-DESIGN,
+southern_batteries,Gullhaven Batteries,s_coast,fort,passage,sea:s_coast:south_sea,TB-DESIGN,Ships can run past the batteries at night.
+salient_works,Harrow Neck Works,salient_base,fort,,,TB-DESIGN,A land fort with no water to command.

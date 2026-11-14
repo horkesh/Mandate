@@ -1,0 +1,6 @@
+post,kind,other,notes
+n_relief_army,joint,n_relief_squadron,The two halves of one joint expedition.
+n_relief_squadron,joint,n_relief_army,
+n_trunk_president,requisition,n_war_office,The War Ministry requisitions trains; the president is not in its chain.
+s_lowmarch_governor,requisition,s_war_office,The governor answers requisitions for militia.
+n_capital_yard,liaison,n_capital_defences,

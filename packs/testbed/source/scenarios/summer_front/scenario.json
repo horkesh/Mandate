@@ -1,0 +1,9 @@
+{
+  "name": "Summer on the Mere: the salient pinched out and Corran Fort under siege",
+  "startDate": "1862-06-01",
+  "seed": 1862,
+  "factions": [
+    { "faction": "north", "principal": "n_leader", "capital": "n_capital", "playable": true },
+    { "faction": "south", "principal": "s_leader", "capital": "s_capital", "playable": false }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+"control": [
+{"region":"e_lowlands","shares":[{"faction":"north","permille":200},{"faction":"south","permille":600}]},
+{"region":"island_fort","shares":[{"faction":"north","permille":1000}]},
+{"region":"mere_crossing","shares":[{"faction":"south","permille":1000}]},
+{"region":"n_capital","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_centre_line","shares":[{"faction":"north","permille":900},{"faction":"south","permille":50}]},
+{"region":"n_coast","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_east_front","shares":[{"faction":"north","permille":850},{"faction":"south","permille":100}]},
+{"region":"n_east_plain","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_heartland","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_naval_base","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_railhead","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_west_front","shares":[{"faction":"north","permille":850},{"faction":"south","permille":100}]},
+{"region":"n_west_hills","shares":[{"faction":"north","permille":1000}]},
+{"region":"s_capital","shares":[{"faction":"south","permille":1000}]},
+{"region":"s_coast","shares":[{"faction":"south","permille":1000}]},
+{"region":"s_coast_east","shares":[{"faction":"south","permille":950}]},
+{"region":"s_heartland","shares":[{"faction":"south","permille":1000}]},
+{"region":"s_west_hills","shares":[{"faction":"south","permille":1000}]},
+{"region":"s_west_plain","shares":[{"faction":"south","permille":1000}]},
+{"region":"salient_base","shares":[{"faction":"south","permille":950}]},
+{"region":"salient_tip","shares":[{"faction":"north","permille":150},{"faction":"south","permille":750}]},
+{"region":"w_valley","shares":[{"faction":"north","permille":300},{"faction":"south","permille":550}]}
+],
+"depotConditions": [
+{"conditionPermille":800,"depot":"brenn_depot"}
+],
+"edgeConditions": [
+{"conditionPermille":600,"edge":"rail:mere_crossing:s_heartland:south_line"}
+],
+"factions": [
+{"capital":"n_capital","faction":"north","playable":true,"principal":"n_leader"},
+{"capital":"s_capital","faction":"south","playable":false,"principal":"s_leader"}
+],
+"forceBlocks": [
+{"aboard":null,"arm":"artillery","department":"n_war","id":"n_capital_guard","kind":"block","name":"force_block.n_capital_guard.name","nonCombatants":0,"parent":null,"post":"n_capital_defences","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_capital","storesDays":30,"strength":2200,"strengthDate":"1861-03-30","unknowns":[]},
+{"aboard":null,"arm":"infantry","department":"n_war","id":"n_east_1","kind":"block","name":"force_block.n_east_1.name","nonCombatants":0,"parent":null,"post":"n_army_east","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_east_front","storesDays":14,"strength":5100,"strengthDate":"1861-03-25","unknowns":[]},
+{"aboard":null,"arm":"infantry","department":"n_war","id":"n_east_2","kind":"block","name":"force_block.n_east_2.name","nonCombatants":0,"parent":null,"post":"n_army_east","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_east_front","storesDays":14,"strength":4900,"strengthDate":"1861-03-25","unknowns":[]},
+{"aboard":null,"arm":"cavalry","department":"n_war","id":"n_east_horse","kind":"block","name":"force_block.n_east_horse.name","nonCombatants":0,"parent":null,"post":"n_army_east","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_east_front","storesDays":10,"strength":900,"strengthDate":"1861-03-25","unknowns":[]},
+{"aboard":null,"arm":"naval","department":"n_war","id":"n_flotilla_boats","kind":"block","name":"force_block.n_flotilla_boats.name","nonCombatants":0,"parent":null,"post":"n_river_flotilla","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_west_front","storesDays":20,"strength":180,"strengthDate":"1861-03-28","unknowns":[]},
+{"aboard":null,"arm":"artillery","department":"n_war","id":"n_gull_garrison","kind":"block","name":"force_block.n_gull_garrison.name","nonCombatants":45,"parent":null,"post":"n_gull_rock","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"island_fort","storesDays":9,"strength":90,"strengthDate":"1861-03-31","unknowns":[]},
+{"aboard":"n_ship_resolute","arm":"infantry","department":"n_war","id":"n_relief_troops","kind":"block","name":"force_block.n_relief_troops.name","nonCombatants":0,"parent":null,"post":"n_relief_army","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_naval_base","storesDays":60,"strength":200,"strengthDate":"1861-03-31","unknowns":[]},
+{"aboard":null,"arm":"naval","department":"n_navy","id":"n_ship_resolute","kind":"block","name":"force_block.n_ship_resolute.name","nonCombatants":0,"parent":null,"post":"n_home_squadron","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_naval_base","storesDays":40,"strength":420,"strengthDate":"1861-03-31","unknowns":[]},
+{"aboard":null,"arm":"naval","department":"n_navy","id":"n_ship_vigil","kind":"block","name":"force_block.n_ship_vigil.name","nonCombatants":0,"parent":null,"post":"n_home_squadron","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_naval_base","storesDays":40,"strength":260,"strengthDate":"1861-03-31","unknowns":[]},
+{"aboard":null,"arm":"infantry","department":"n_war","id":"n_west_1","kind":"block","name":"force_block.n_west_1.name","nonCombatants":0,"parent":null,"post":"n_army_west","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_west_front","storesDays":12,"strength":4200,"strengthDate":"1861-03-28","unknowns":[]},
+{"aboard":null,"arm":"infantry","department":"n_war","id":"n_west_1_railguard","kind":"detachment","name":"force_block.n_west_1_railguard.name","nonCombatants":0,"parent":"n_west_1","post":"n_army_west","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_railhead","storesDays":20,"strength":300,"strengthDate":"1861-03-28","unknowns":[]},
+{"aboard":null,"arm":"infantry","department":"n_war","id":"n_west_2","kind":"block","name":"force_block.n_west_2.name","nonCombatants":0,"parent":null,"post":"n_army_west","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_west_front","storesDays":12,"strength":3800,"strengthDate":"1861-03-28","unknowns":[]},
+{"aboard":null,"arm":"artillery","department":"s_war","id":"s_corran_garrison","kind":"block","name":"force_block.s_corran_garrison.name","nonCombatants":0,"parent":null,"post":"s_corran_command","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"mere_crossing","storesDays":40,"strength":700,"strengthDate":"1861-03-27","unknowns":[]},
+{"aboard":null,"arm":"artillery","department":"s_war","id":"s_gullhaven_gunners","kind":"block","name":"force_block.s_gullhaven_gunners.name","nonCombatants":0,"parent":null,"post":"s_coast_command","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"s_coast","storesDays":30,"strength":1100,"strengthDate":"1861-03-27","unknowns":[]},
+{"aboard":null,"arm":"infantry","department":"s_war","id":"s_harrow_1","kind":"block","name":"force_block.s_harrow_1.name","nonCombatants":0,"parent":null,"post":"s_army_salient","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"salient_tip","storesDays":10,"strength":4600,"strengthDate":"1861-03-29","unknowns":[]},
+{"aboard":null,"arm":"infantry","department":"s_war","id":"s_harrow_2","kind":"block","name":"force_block.s_harrow_2.name","nonCombatants":0,"parent":null,"post":"s_army_salient","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"salient_base","storesDays":10,"strength":4400,"strengthDate":"1861-03-29","unknowns":[]},
+{"aboard":null,"arm":"mixed","department":"s_war","id":"s_highcairn_1","kind":"block","name":"force_block.s_highcairn_1.name","nonCombatants":0,"parent":null,"post":"s_army_west","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"s_west_hills","storesDays":12,"strength":3900,"strengthDate":"1861-03-27","unknowns":[]},
+{"aboard":null,"arm":"infantry","department":"s_province","id":"s_lowmarch_militia","kind":"block","name":"force_block.s_lowmarch_militia.name","nonCombatants":0,"parent":null,"post":"s_army_salient","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"salient_tip","storesDays":8,"strength":2500,"strengthDate":"1861-03-29","unknowns":[]},
+{"aboard":null,"arm":"infantry","department":"s_war","id":"s_merrow_guard","kind":"block","name":"force_block.s_merrow_guard.name","nonCombatants":0,"parent":null,"post":"s_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"s_capital","storesDays":30,"strength":1500,"strengthDate":"1861-03-27","unknowns":[]}
+],
+"fortification": [
+{"levelPermille":800,"region":"island_fort"},
+{"levelPermille":600,"region":"mere_crossing"},
+{"levelPermille":400,"region":"n_capital"},
+{"levelPermille":300,"region":"salient_base"}
+],
+"id": "opening",
+"name": "scenario.opening.name",
+"obstructions": [
+{"by":"corran_fort","edge":"river:mere_crossing:mere_lower","provenance":[{"at":null,"source":"TB-DESIGN"}]},
+{"by":"corran_fort","edge":"river:mere_crossing:mere_upper","provenance":[{"at":null,"source":"TB-DESIGN"}]},
+{"by":null,"edge":"sea:island_fort:south_sea","provenance":[{"at":null,"source":"TB-DESIGN"}]},
+{"by":"southern_batteries","edge":"sea:s_coast:south_sea","provenance":[{"at":null,"source":"TB-DESIGN"}]}
+],
+"posts": [
+{"acting":false,"department":"n_war","departmentChanges":[],"holder":"n_organiser","id":"n_army_east","installation":null,"kind":"army","links":[],"name":"post.n_army_east.name","parent":"n_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_east_front","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_war","departmentChanges":[],"holder":"n_appointee","id":"n_army_west","installation":null,"kind":"army","links":[],"name":"post.n_army_west.name","parent":"n_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_west_front","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_war","departmentChanges":[],"holder":null,"id":"n_capital_defences","installation":null,"kind":"garrison_command","links":[],"name":"post.n_capital_defences.name","parent":"n_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_capital","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_navy","departmentChanges":[],"holder":null,"id":"n_capital_yard","installation":"capital_yard","kind":"yard","links":[{"kind":"liaison","post":"n_capital_defences"}],"name":"post.n_capital_yard.name","parent":"n_navy_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_capital","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_war","departmentChanges":[],"holder":"n_engineer","id":"n_gull_rock","installation":"gull_rock_fort","kind":"fort_command","links":[],"name":"post.n_gull_rock.name","parent":"n_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"island_fort","standingOrders":[{"cites":[{"at":null,"source":"TB-DESIGN"}],"from":"n_war_office","id":"hold_rock","issuedOn":"1861-01-10","kind":"hold_position","summary":"post.n_gull_rock.order.hold_rock"},{"cites":[{"at":null,"source":"TB-DESIGN"}],"from":"n_war_office","id":"no_first_shot","issuedOn":"1861-01-10","kind":"do_not_provoke","summary":"post.n_gull_rock.order.no_first_shot"}],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_executive","departmentChanges":[],"holder":"n_leader","id":"n_head","installation":null,"kind":"head_of_state","links":[],"name":"post.n_head.name","parent":null,"provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_capital","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_navy","departmentChanges":[],"holder":"n_commodore","id":"n_home_squadron","installation":null,"kind":"squadron","links":[],"name":"post.n_home_squadron.name","parent":"n_navy_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_naval_base","standingOrders":[{"cites":[{"at":null,"source":"TB-DESIGN"}],"from":null,"id":"sound_truce","issuedOn":"1861-02-01","kind":"truce","summary":"post.n_home_squadron.order.sound_truce"}],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_navy","departmentChanges":[],"holder":null,"id":"n_kestrel_yard","installation":"kestrel_yard","kind":"yard","links":[],"name":"post.n_kestrel_yard.name","parent":"n_navy_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_naval_base","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_navy","departmentChanges":[],"holder":"n_navy_secretary","id":"n_navy_office","installation":null,"kind":"minister","links":[],"name":"post.n_navy_office.name","parent":"n_head","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_capital","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":true,"department":"n_war","departmentChanges":[],"holder":"n_fighter","id":"n_relief_army","installation":null,"kind":"expedition","links":[{"kind":"joint","post":"n_relief_squadron"}],"name":"post.n_relief_army.name","parent":"n_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_naval_base","standingOrders":[],"temporary":{"operation":"gull_rock_relief"},"unknowns":[]},
+{"acting":false,"department":"n_navy","departmentChanges":[],"holder":null,"id":"n_relief_squadron","installation":null,"kind":"expedition","links":[{"kind":"joint","post":"n_relief_army"}],"name":"post.n_relief_squadron.name","parent":"n_navy_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_naval_base","standingOrders":[{"cites":[{"at":null,"source":"TB-DESIGN"}],"from":"n_navy_office","id":"supply_rock","issuedOn":"1861-03-30","kind":"supply_by_sea","summary":"post.n_relief_squadron.order.supply_rock"}],"temporary":{"operation":"gull_rock_relief"},"unknowns":[]},
+{"acting":false,"department":"n_war","departmentChanges":[{"department":"n_navy","on":"1861-10-01","parent":"n_navy_office","provenance":[{"at":null,"source":"TB-DESIGN"}]}],"holder":null,"id":"n_river_flotilla","installation":null,"kind":"squadron","links":[],"name":"post.n_river_flotilla.name","parent":"n_army_west","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_west_front","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_railways","departmentChanges":[],"holder":"n_rail_baron","id":"n_trunk_president","installation":null,"kind":"rail_president","links":[{"kind":"requisition","post":"n_war_office"}],"name":"post.n_trunk_president.name","parent":null,"provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":"north_trunk","region":"n_capital","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_war","departmentChanges":[],"holder":"n_secretary","id":"n_war_office","installation":null,"kind":"minister","links":[],"name":"post.n_war_office.name","parent":"n_head","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_capital","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"s_war","departmentChanges":[],"holder":"s_cavalier","id":"s_army_salient","installation":null,"kind":"army","links":[],"name":"post.s_army_salient.name","parent":"s_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"salient_base","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"s_war","departmentChanges":[],"holder":"s_veteran","id":"s_army_west","installation":null,"kind":"army","links":[],"name":"post.s_army_west.name","parent":"s_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"s_west_hills","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"s_war","departmentChanges":[],"holder":null,"id":"s_coast_command","installation":"southern_batteries","kind":"fort_command","links":[],"name":"post.s_coast_command.name","parent":"s_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"s_coast","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"s_war","departmentChanges":[],"holder":"s_reserve","id":"s_corran_command","installation":"corran_fort","kind":"fort_command","links":[],"name":"post.s_corran_command.name","parent":"s_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"mere_crossing","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"s_executive","departmentChanges":[],"holder":"s_leader","id":"s_head","installation":null,"kind":"head_of_state","links":[],"name":"post.s_head.name","parent":null,"provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"s_capital","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"s_province","departmentChanges":[],"holder":"s_governor","id":"s_lowmarch_governor","installation":null,"kind":"governor","links":[{"kind":"requisition","post":"s_war_office"}],"name":"post.s_lowmarch_governor.name","parent":null,"provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"s_coast_east","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"s_war","departmentChanges":[],"holder":"s_minister","id":"s_war_office","installation":null,"kind":"minister","links":[],"name":"post.s_war_office.name","parent":"s_head","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"s_capital","standingOrders":[],"temporary":null,"unknowns":[]}
+],
+"seed": 1861,
+"startDate": "1861-04-01"
+}

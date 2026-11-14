@@ -1,0 +1,8 @@
+id,name,faction,kind,sources,notes
+n_executive,Office of the First Minister,north,executive,TB-DESIGN,
+n_war,Northern War Ministry,north,war_ministry,TB-DESIGN,
+n_navy,Northern Admiralty,north,navy_ministry,TB-DESIGN,"A separate ministry, so an order from the War Ministry does not supersede a squadron's standing orders (0040)."
+n_railways,Northern Railway Companies,north,private,TB-DESIGN,Rail presidents hold posts here.
+s_executive,Southern Council,south,executive,TB-DESIGN,
+s_war,Southern War Office,south,war_ministry,TB-DESIGN,
+s_province,Province of Lowmarch,south,province,TB-DESIGN,"Its militia serves under a Southern War Office general while still provincial troops: authority and command differ."

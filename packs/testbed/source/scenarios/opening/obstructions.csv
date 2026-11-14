@@ -1,0 +1,5 @@
+edge,by,sources,notes
+river:mere_crossing:mere_lower,corran_fort,TB-DESIGN,
+river:mere_crossing:mere_upper,corran_fort,TB-DESIGN,
+sea:s_coast:south_sea,southern_batteries,TB-DESIGN,The batteries cover the sound's northern shore.
+sea:island_fort:south_sea,,TB-DESIGN,"A boom and hulks in the channel, not modelled as an installation."

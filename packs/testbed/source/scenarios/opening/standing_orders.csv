@@ -1,0 +1,5 @@
+id,post,kind,from,issued_on,summary,sources,notes
+hold_rock,n_gull_rock,hold_position,n_war_office,1861-01-10,"Hold Gull Rock; act strictly on the defensive.",TB-DESIGN,
+no_first_shot,n_gull_rock,do_not_provoke,n_war_office,1861-01-10,Do not fire unless fired upon.,TB-DESIGN,
+sound_truce,n_home_squadron,truce,,1861-02-01,"Keep the truce in Gull Sound: no reinforcement of Gull Rock while it holds.",TB-DESIGN,"An agreement with no issuing post. A newer order from the Admiralty supersedes it; an order from the War Ministry does not (0040)."
+supply_rock,n_relief_squadron,supply_by_sea,n_navy_office,1861-03-30,Carry stores to Gull Rock and land them if not opposed.,TB-DESIGN,

@@ -19,7 +19,10 @@
     "run:testbed": "tsx packages/cli/src/run-testbed.ts",
     "run:pack": "tsx packages/cli/src/run-pack.ts",
     "run:headless": "tsx packages/cli/src/run-headless.ts",
-    "play": "tsx packages/cli/src/play.ts"
+    "play": "tsx packages/cli/src/play.ts",
+    "pack:generate": "tsx packages/cli/src/pack.ts generate",
+    "pack:validate": "tsx packages/cli/src/pack.ts validate",
+    "pack:schemas": "tsx packages/cli/src/pack.ts schemas"
   },
   "devDependencies": {
     "@types/node": "22.20.5",
