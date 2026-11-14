@@ -33,7 +33,23 @@ import { repoPath, tsFiles, workspacePackages } from './support/source.ts';
  * module that isn't the owner.
  */
 
-/** What is immutable, as ownership.ts declares it: records by name, State's set-once root fields, and ids. */
+/** The 69 keys that `IMMUTABLE_STATE_KEYS` listed by hand before records were declared (f18b073), pinned once: the derived keys must never lose one. */
+const IMMUTABLE_KEYS_OF_THE_OLD_LIST: readonly string[] = [
+    'adviceConfidence', 'adviceReasons', 'adviceRecommends', 'calendarStart', 'claimConfidence', 'claimKind',
+    'claimRegion', 'claimToken', 'claimValue', 'gameSeed', 'goalSpecKind', 'goalSpecRegion',
+    'hopPerson', 'hopPost', 'hopRole', 'hqRegion', 'hqSinceDay', 'id',
+    'knownBody', 'knownReceivedDay', 'knownReports', 'knownRoute', 'knownVia', 'msgArriveDay',
+    'msgFrom', 'msgOrder', 'msgOrigin', 'msgPending', 'msgReport', 'msgRole',
+    'msgRoute', 'msgSentDay', 'msgTo', 'msgToPost', 'msgTruth', 'msgVia',
+    'orderBypass', 'orderGoal', 'orderIssuedDay', 'orderIssuer', 'orderTarget', 'reasonKind',
+    'reasonWeight', 'reportAdvice', 'reportAnswers', 'reportAuthor', 'reportAuthorPost', 'reportClaims',
+    'reportDay', 'reportHour', 'reportSubjectId', 'reportSubjectKind', 'reportSubtype', 'reportType',
+    'seatDriver', 'seatPerson', 'standingIssuer', 'standingOrder', 'standingSetDay', 'standingSpec',
+    'standingViaChain', 'termKind', 'termPerson', 'termPost', 'termRegion', 'termRule',
+    'termValue', 'truthTerms', 'truthTrimmed',
+];
+
+/** What is immutable, as `ownership.ts` declares it: records by name, State's set-once root fields, and ids. */
 const IMMUTABLE: ImmutableDeclaration = { records: IMMUTABLE_RECORDS, rootFields: IMMUTABLE_ROOT_FIELDS, neverReassigned: NEVER_REASSIGNED_KEYS };
 /** Fixtures that need only the id rule. */
 const ID_ONLY: ImmutableDeclaration = { ...NO_IMMUTABLES, neverReassigned: ['id'] };
@@ -460,7 +476,10 @@ describe('the scanner catches violations (positive control)', () => {
     it('is the real declaration: every nested State record is declared, and the derived keys include the ones the old list named', () => {
       const real = stateRecords(sources);
       const keys = immutableKeys(real, IMMUTABLE);
-      for (const key of ['gameSeed', 'calendarStart', 'id', 'msgOrigin', 'hopRole', 'orderIssuer', 'standingSpec', 'reportAuthor', 'claimValue', 'termRule', 'knownBody', 'hqRegion', 'seatDriver']) expect(keys, key).toContain(key);
+      // The ratchet: every key the old hand-kept list named (69) is still derived. New records add keys freely;
+      // a key leaves only by a deliberate edit to the pinned list above.
+      expect(keys).toEqual(expect.arrayContaining([...IMMUTABLE_KEYS_OF_THE_OLD_LIST]));
+      expect(IMMUTABLE_KEYS_OF_THE_OLD_LIST).toHaveLength(69);
       const nestedNames = real.filter((r) => r.record !== 'State' && !LEGACY_STATE_RECORDS.some((l) => l.record === r.record)).map((r) => r.record).sort();
       expect(nestedNames).toEqual([...IMMUTABLE_RECORDS].sort());
     });
