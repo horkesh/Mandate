@@ -260,13 +260,13 @@ export function checkGate(
     if (t.interim !== null && !held(t)) sink.warn('gate-register', gateFile('register.json'), `topics[${i}].interim`, 'an interim placement on a topic that is not held does nothing');
   });
 
-  // D5's inputs: every atrocity-class item, its acting side and the flags it sets.
+  // D5's inputs: every atrocity-class item and its acting side, and what depends on each, to a fixed point (gate G4).
   const atrocityItems = items.flatMap(({ def }) => {
     const t = def.gate;
     if ('none' in t || !t.topics.some(atrocity) || t.actingSide === null) return [];
-    const flags = phase0.effectsOf(def).flatMap(({ effect }) => ('setFlag' in effect ? [effect.setFlag] : []));
-    return [{ id: def.id as string, actingSide: t.actingSide as string, flags }];
+    return [{ id: def.id as string, actingSide: t.actingSide as string }];
   });
+  const taint = atrocityTaint(items, atrocityItems);
 
   // C2's pack-wide count: the display position of the default in gated decisions of three or more options.
   const positions: number[] = [];
@@ -461,24 +461,27 @@ export function checkGate(
       }
     }
 
-    // D5 (review S5; the lead's ruling on gate re-check G1): an effect conditioned on an atrocity-class item (its firing, its
-    // decision, a flag it sets) may only lower the acting side's measures. No seat gains anything from an atrocity (0046).
-    const referenced = new Set<string>([...phase0.conditionsOf(def).flatMap((c) => phase0.situationsIn(c.condition)), ...(def.chain?.follows ? [def.chain.follows.situation] : [])]);
-    const readFlags = new Set(phase0.conditionsOf(def).flatMap((c) => phase0.flagsIn(c.condition)));
-    for (const a of atrocityItems) {
-      if (a.id === def.id || !(referenced.has(a.id) || a.flags.some((f) => readFlags.has(f)))) continue;
-      for (const { at, effect } of effects) {
-        // Gate G3: a measure no side is named for cannot be checked, so a follow-up of an atrocity names the side of every
-        // measure it moves, as the atrocity item itself must (E7, review S5). Rejected rather than read as the actor's.
+    // D5 (review S5; the lead's rulings on gate re-checks G1 and G4): an effect that depends on an atrocity-class item, by
+    // any route and through any chain of items (its firing, its decision, a flag it sets, news of it), may only lower the
+    // acting side's measures. No seat gains anything from an atrocity (0046). An option's own appear, expire or wait
+    // condition makes only that option's effects depend on it; the item's trigger makes all of them depend on it.
+    const tainted = taint.get(def.id) ?? [];
+    for (const t of tainted) {
+      if (t.atrocity === def.id) continue;
+      if (t.option !== null && tainted.some((w) => w.option === null && w.atrocity === t.atrocity)) continue;
+      const route = `atrocity-class item "${t.atrocity}"${t.via.length === 0 ? '' : `, through ${t.via.map((v) => `"${v}"`).join(' then ')}`}${t.option === null ? '' : ` (option "${t.option}" depends on it)`}`;
+      for (const { at, effect, option } of effects) {
+        if (t.option !== null && option !== t.option) continue;
+        // Gate G3: a measure no side is named for cannot be checked, so anything depending on an atrocity names the side of
+        // every measure it moves, as the atrocity item itself must (E7, review S5). Rejected rather than read as the actor's.
         if ('propose' in effect && effect.propose.side === null) {
-          err('gate-acting-side', `${at}.propose.side`, `an effect conditioned on atrocity-class item "${a.id}" names no side`, 'the side whose measure it moves, so D5 can check that no seat gains (D5)');
+          err('gate-acting-side', `${at}.propose.side`, `an effect conditioned on ${route} names no side`, 'the side whose measure it moves, so D5 can check that no seat gains (D5)');
           continue;
         }
-        const wrong = atrocityMove(effect, a.actingSide);
-        if (wrong !== null) err('gate-atrocity-benefit', at, `this effect, conditioned on atrocity-class item "${a.id}", ${wrong}`, 'no positive effect for any seat, and no fall but the acting side’s, conditioned on atrocity-class conduct (D5)');
+        const wrong = atrocityMove(effect, t.actingSide);
+        if (wrong !== null) err('gate-atrocity-benefit', at, `this effect, conditioned on ${route}, ${wrong}`, 'no positive effect for any seat, and no fall but the acting side’s, conditioned on atrocity-class conduct (D5)');
       }
     }
-
     // C3/F6 anachronisms, C4/F5 forbidden patterns, F2 proximity.
     for (const [locale, key, text] of texts) {
       const scope = def.options.some((o) => o.label === key) ? 'label' : 'narrator';
@@ -539,6 +542,82 @@ export function checkGate(
 
 /** The fewest gated decisions of three or more options before C2 counts positions. */
 export const C2_MINIMUM = 3;
+
+/** One route by which an item, or one of its options, depends on an atrocity-class item (D5; gate G4). */
+export interface AtrocityTaint {
+  /** The option whose own condition depends on it, or null when the item's trigger does (all its effects depend on it). */
+  readonly option: string | null;
+  readonly atrocity: string;
+  readonly actingSide: string;
+  /** The items in between, nearest the atrocity first; empty when the dependence is direct. */
+  readonly via: readonly string[];
+}
+
+/**
+ * What depends on each atrocity-class item, to a fixed point (gate G4). A scope (an item's trigger: its event, its
+ * knowledge condition and the stage it follows; or one option's appear, expire and wait conditions) depends on a
+ * tainted item when it fires on it, reads its decision, waits for news of it (a `knows` pattern whose subject is that
+ * item), or reads a flag it sets. An option-level taint passes on only through that option's flags or a decision
+ * naming that option: a decision read with no options named holds whatever was chosen. A `knows` pattern with no subject, matching an atrocity's report only by type, subtype or token,
+ * is beyond this check: the gate reviewer reads for it (Q7).
+ */
+export function atrocityTaint(
+  items: readonly { readonly def: SituationDef }[],
+  atrocities: readonly { readonly id: string; readonly actingSide: string }[],
+): Map<string, AtrocityTaint[]> {
+  const defs = items.map((x) => x.def).sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+  const flagsSet = (def: SituationDef, option: string | null) =>
+    phase0.effectsOf(def).flatMap(({ effect, option: o }) => ('setFlag' in effect && (option === null || o === option) ? [effect.setFlag] : []));
+  const scopesOf = (def: SituationDef) => [
+    { option: null as string | null, conditions: [def.event, ...(def.knowledge === null ? [] : [def.knowledge])], follows: def.chain?.follows ?? null },
+    ...def.options.map((o) => ({ option: o.id as string | null, conditions: [o.appearsWhen, o.expiresWhen, o.waitsOn].filter((c): c is phase0.Condition => c !== null), follows: null })),
+  ];
+  const dependsOn = (scope: ReturnType<typeof scopesOf>[number], on: SituationDef, onOption: string | null): boolean => {
+    const reads = new Set(scope.conditions.flatMap((c) => phase0.flagsIn(c)));
+    if (flagsSet(on, onOption).some((f) => reads.has(f))) return true;
+    if (onOption === null) {
+      if (scope.follows?.situation === on.id) return true;
+      return scope.conditions.some((c) => phase0.situationsIn(c).includes(on.id) || knowsSubjects(c).includes(on.id));
+    }
+    const followsIt = scope.follows?.situation === on.id && scope.follows.options !== null && scope.follows.options.includes(onOption);
+    return followsIt || scope.conditions.some((c) => decidedNaming(c, on.id, onOption));
+  };
+  const taint = new Map<string, AtrocityTaint[]>();
+  const add = (id: string, t: AtrocityTaint): boolean => {
+    const list = taint.get(id) ?? [];
+    if (list.some((x) => x.option === t.option && x.atrocity === t.atrocity)) return false;
+    taint.set(id, [...list, t]);
+    return true;
+  };
+  for (const a of atrocities) add(a.id, { option: null, atrocity: a.id, actingSide: a.actingSide, via: [] });
+  for (let changed = true; changed; ) {
+    changed = false;
+    for (const x of defs) {
+      for (const scope of scopesOf(x)) {
+        for (const on of defs) {
+          if (on.id === x.id) continue;
+          for (const src of taint.get(on.id) ?? []) {
+            if (!dependsOn(scope, on, src.option)) continue;
+            const via = on.id === src.atrocity ? src.via : [...src.via, on.id as string];
+            if (add(x.id, { option: scope.option, atrocity: src.atrocity, actingSide: src.actingSide, via })) changed = true;
+          }
+        }
+      }
+    }
+  }
+  return taint;
+}
+
+/**
+ * Whether a condition reads a decision of `situation` that took `option` by name. A decision read with no options named
+ * holds whatever was chosen, so it does not depend on that option being on offer.
+ */
+function decidedNaming(c: phase0.Condition, situation: string, option: string): boolean {
+  if ('all' in c) return c.all.some((x) => decidedNaming(x, situation, option));
+  if ('any' in c) return c.any.some((x) => decidedNaming(x, situation, option));
+  if ('not' in c) return decidedNaming(c.not, situation, option);
+  return 'decided' in c && c.decided === situation && c.options !== null && c.options.includes(option);
+}
 
 /** The situations whose reports a condition waits for (knows with subject kind situation). */
 function knowsSubjects(c: phase0.Condition): string[] {
