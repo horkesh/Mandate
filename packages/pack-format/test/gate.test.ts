@@ -147,6 +147,16 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     fires(editJson(sit('harbour_burning'), (s) => (s.gate.placement = 'decision')), 'gate-placement');
   });
 
+  it('A2 and B5 (review S1): the placement matches the kind, so no gated decision skips its locked costs', () => {
+    firesAt(editJson(sit('fen_crossing'), (s) => (s.gate.placement = 'event')), 'gate-placement-kind', { at: 'gate.placement', message: 'a gated decision' });
+    firesAt(editJson(sit('fen_arrivals'), (s) => (s.gate.placement = 'decision')), 'gate-placement-kind', { at: 'gate.placement', message: 'a notice is placed decision' });
+    firesAt(editJson(sit('fen_arrivals'), (s) => (s.gate.placement = 'text')), 'gate-placement-kind', { at: 'gate.placement', message: 'a text item carries effects' });
+    firesAt(editJson(sit('fen_arrivals'), (s) => (s.gate.placement = 'derived')), 'gate-placement-kind', { at: 'gate.placement', message: 'cannot be placed' });
+    firesAt(editJson(sit('fen_crossing'), (s) => (s.options[0].gate = { topics: ['fen-flight'], placement: 'event' })), 'gate-placement-kind', { at: 'options[0].gate.placement' });
+    // An event-placed decision with an uncosted option is still caught by B5.
+    firesAt(editJson(sit('fen_crossing'), (s) => ((s.gate.placement = 'event'), (s.options[0].lockedCosts = []))), 'gate-no-locked-cost', { at: 'options[0].lockedCosts' });
+  });
+
   it('A3: a held topic admits only a cited, text-only item', () => {
     fires(editJson(sit('fen_arrivals'), (s) => (s.gate.topics = ['old-oath'])), 'gate-held-topic');
     const textOnly = editJson(sit('fen_arrivals'), (s) => ((s.gate = { topics: ['old-oath'], placement: 'text', risks: [] }), (s.effects = []), (s.earliest = '1861-06-01')));

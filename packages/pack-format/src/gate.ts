@@ -236,6 +236,20 @@ export function checkGate(items: readonly { readonly file: string; readonly def:
       }
     }
 
+    // A2 and B5 (review S1): the placement matches the item's kind. A gated decision is placed `decision`,
+    // so its locked costs are always checked; `event` is a notice; `text` is a notice with no effects;
+    // `derived` and `refused` are never situations.
+    if (!('none' in tag)) {
+      const p = tag.placement;
+      if (p === 'derived' || p === 'refused') err('gate-placement-kind', 'gate.placement', `a situation cannot be placed "${p}"`, 'decision for a decision; event or text for a notice');
+      else if (def.kind === 'decision' && p !== 'decision') err('gate-placement-kind', 'gate.placement', `a gated decision is placed "${p}"`, 'placement decision, so its locked costs are checked (A2, B5)');
+      else if (def.kind === 'notice' && p === 'decision') err('gate-placement-kind', 'gate.placement', 'a notice is placed decision', 'event, or text for a notice with no effects');
+      else if (p === 'text' && effects.length > 0) err('gate-placement-kind', 'gate.placement', 'a text item carries effects', 'no effects on a text item (section 1: text changes no state)');
+    }
+    def.options.forEach((o, i) => {
+      if (o.gate !== null && !('none' in o.gate) && o.gate.placement !== 'decision') err('gate-placement-kind', `options[${i}].gate.placement`, `an option is placed "${o.gate.placement}"`, 'decision: an option is a facet of a decision');
+    });
+
     // A5, A6: citations resolve; none banned, and not weak alone.
     if (gated && def.citations.length === 0) err('gate-citation', 'citations', 'a gated item cites no source', 'at least one source from PROVENANCE.json (A5)');
     def.citations.forEach((c, i) => {
@@ -279,7 +293,7 @@ export function checkGate(items: readonly { readonly file: string; readonly def:
     });
 
     // B5: a gated decision's options all carry locked costs, and nothing cancels them.
-    if (gated && def.kind === 'decision' && !('none' in tag) && tag.placement === 'decision') {
+    if (gated && def.kind === 'decision') {
       def.options.forEach((o, i) => {
         if (o.lockedCosts.length === 0) err('gate-no-locked-cost', `options[${i}].lockedCosts`, `option "${o.id}" has no locked costs`, 'at least one locked cost on every option of a gated decision (B5)');
       });
