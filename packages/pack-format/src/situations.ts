@@ -88,6 +88,7 @@ export const GateReviewSchema = z.strictObject({
   date: historicalDate,
   questionVersions: z.record(z.string().regex(/^[A-HQ][0-9]+$/, 'a checklist question id such as B5'), positive),
   contentHash: z.string().regex(/^[0-9a-f]{64}$/, 'a SHA-256 hash in 64 hex digits'),
+  notes: z.record(z.string().min(1), z.string().min(1)).default({}),
 });
 
 const conditionOrNull = ConditionSchema.nullable().default(null);

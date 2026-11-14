@@ -190,6 +190,8 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     fires(editJson(sit('fen_crossing'), (s) => (s.gateReview.reviewer = s.gateReview.author)), 'gate-self-signed');
     fires(editJson(sit('fen_crossing'), (s) => (s.gateReview = null)), 'gate-unsigned');
     fires(editJson('gate/checklist.json', (c) => (c.questions.find((q: { id: string }) => q.id === 'B5').version = 2)), 'gate-stale-review', sit('fen_crossing'));
+    // Review S8: string-only questions (Q9, Q10, the F-questions) are part of a situation's sign-off.
+    firesAt(editJson('gate/checklist.json', (c) => (c.questions.find((q: { id: string }) => q.id === 'Q9').version = 2)), 'gate-stale-review', { file: sit('fen_crossing'), at: 'gateReview.questionVersions.Q9' });
     // Editing a string the item shows voids its sign-off: the hash covers resolved text.
     fires(editJson('strings/en.json', (t) => (t['situation.fen_crossing.option.shelter'] = 'Let them stay')), 'gate-stale-review', sit('fen_crossing'));
     // Changing only the review (here its reviewer) does not: the hash excludes the sign-off itself.
@@ -269,8 +271,11 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     // A label-only pattern does not apply to narrator text.
     expect(kinds(editJson('strings/en.json', (t) => (t['situation.eastwatch_stalls.text'] = 'He thinks it noble to wait.')))).not.toContainEqual(expect.stringContaining('gate-forbidden-wording'));
     fires(editJson('strings/en.json', (t) => (t['situation.fen_arrivals.text'] = 'A quota of fen folk was taken.')), 'gate-forbidden-wording');
-    const review = issues(editJson('strings/en.json', (t) => (t['situation.fen_crossing.text'] = 'Their masters want them back.')));
-    expect(review.filter((i) => i.kind === 'gate-review-wording').map((i) => i.severity)).toEqual(['warning']);
+    // Review S8: a review-severity hit needs the reviewer's note in the sign-off.
+    const reviewEdit = editJson('strings/en.json', (t) => (t['situation.fen_crossing.text'] = 'Their masters want them back.'));
+    firesAt(reviewEdit, 'gate-review-note-missing', { at: 'text', file: sit('fen_crossing') });
+    const noted = merge(reviewEdit, editJson(sit('fen_crossing'), (s) => (s.gateReview.notes = { 'situation.fen_crossing.text|\\bmasters?\\b': 'Spoken of the holders as the fen folk name them; kept.' })));
+    expect(issues(noted).filter((i) => i.kind === 'gate-review-note-missing')).toEqual([]);
     expect(proximityHit('the fen folk were counted as stock', ['stock'], ['fen folk'], 5)).toBe('"stock" near "fen folk"');
     expect(proximityHit('fen folk crossed the river and the mill kept its old stock of grain', ['stock'], ['fen folk'], 5)).toBeNull();
   });

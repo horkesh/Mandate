@@ -273,7 +273,8 @@ export function checkGate(items: readonly { readonly file: string; readonly def:
       if (review === null) err('gate-unsigned', 'gateReview', 'a gated item has no sign-off', 'a sign-off by a reviewer who is not the author (A7), or move it to situations/drafts/');
       else {
         if (review.author === review.reviewer) err('gate-self-signed', 'gateReview.reviewer', 'the reviewer is the author', 'a separate gate reviewer (A7; 0021)');
-        const applicable = gate.checklist.questions.filter((q) => q.appliesTo.includes('situation') || q.appliesTo.includes('option'));
+        // Every situation shows strings, so string questions (Q9, Q10, the F-questions) are recorded too (review S8).
+        const applicable = gate.checklist.questions.filter((q) => q.appliesTo.includes('situation') || q.appliesTo.includes('option') || q.appliesTo.includes('string'));
         for (const q of applicable) {
           if (review.questionVersions[q.id] !== q.version) err('gate-stale-review', `gateReview.questionVersions.${q.id}`, `the sign-off read ${q.id} at version ${review.questionVersions[q.id] ?? 'none'}`, `version ${q.version}: re-review against the current question (A7)`);
         }
@@ -393,7 +394,10 @@ export function checkGate(items: readonly { readonly file: string; readonly def:
         const m = new RegExp(p.pattern, 'iu').exec(text);
         if (m === null) continue;
         if (p.severity === 'fail') err('gate-forbidden-wording', at, `"${m[0]}": ${p.reason}`, 'wording free of the pack’s forbidden patterns (C4, F2, F5)');
-        else sink.warn('gate-review-wording', file, at, `"${m[0]}": ${p.reason}; the reviewer must note it`);
+        else if (def.gateReview?.notes[`${key}|${p.pattern}`] === undefined) {
+          // Section 5: a review hit forces a reviewer note, recorded in the sign-off (review S8).
+          err('gate-review-note-missing', at, `"${m[0]}": ${p.reason}`, `a reviewer's note in gateReview.notes["${key}|${p.pattern}"]`);
+        }
       }
       const near = proximityHit(text, gate.forbidden.resourceWords, groups, gate.forbidden.proximityTokens);
       if (near !== null) err('gate-forbidden-wording', at, `resource wording ${near}`, 'people of a protected group are never a resource (F2; 0021)');

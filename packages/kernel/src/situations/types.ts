@@ -115,6 +115,11 @@ export interface GateReview {
   readonly date: string;
   readonly questionVersions: Readonly<Record<string, number>>;
   readonly contentHash: string;
+  /**
+   * The reviewer's notes on wording the pack marks for review (section 5: a
+   * `review` hit forces a note), keyed `<string key>|<pattern>`.
+   */
+  readonly notes: Readonly<Record<string, string>>;
 }
 
 export interface SituationCitation {
