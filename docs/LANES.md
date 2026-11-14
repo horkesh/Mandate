@@ -15,6 +15,8 @@ Decision 0034. A standing lane is never archived as "done"; if it ends, the lead
 
 - **The steward** (Sonnet, medium) is the integration steward (0045): when the lead names accepted work, it verifies it on disk (scope, clean tree, `npm run check` after rebasing on main, CI green), merges it into main, pushes, and syncs the docs in the same batch. It never merges code without a reviewer's approval or gate work without the gate reviewer's, and never resolves a conflict by choosing content. After each merge batch, accepted decision, lane close or phase boundary, it brings `docs/ROADMAP.md`, `docs/OPEN_QUESTIONS.md`, the decisions index, factual pointers in `CLAUDE.md` and the tables here in line, on its own branch, for the lead to merge. It is the single writer of `docs/OPEN_QUESTIONS.md` and runs the zero-loss audit when a lane closes. It never edits decisions, `VISION.md`, `FOUNDATION.md` content or hard rules. It keeps no private state and reports in 150 words or less. Its full duties and limits are in 0034.
 
+- **The reviewer** (Opus, high; 0047) reviews any lane output the lead names by message: code over the four lenses below, data, research and design. It is read-only, keeps no private state, writes detail to the shared notes folder as `review-<topic>.md`, and gives a verdict of approve, approve after fixes or block. Gate work still gets a second, separate gate reviewer. A lane's author never reviews it, and the reviewer never integrates.
+
 ## The brief
 
 Every lane gets a written brief containing:

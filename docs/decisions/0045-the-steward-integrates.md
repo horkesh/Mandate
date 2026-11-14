@@ -1,6 +1,6 @@
 # 0045: The steward integrates; reviews are lanes
 
-Status: accepted (2026-11-14). The owner asked why reviews didn't run as sessions and pointed to AWWV's integration steward. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0034 and `docs/LANES.md`.
+Status: accepted (2026-11-14). The owner asked why reviews didn't run as sessions and pointed to AWWV's integration steward. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0034 and `docs/LANES.md`. Amended by 0047 (reviews go to a standing reviewer lane).
 
 ## Context
 
