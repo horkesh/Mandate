@@ -461,6 +461,21 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     expect(graded(z.toJSONSchema(z.strictObject({ karma: z.int() })))).toEqual(['karma']);
   });
 
+  it('gate re-check N7: the published schema states the convention the sign rule relies on, on propose.delta and propose.side', () => {
+    const described: string[] = [];
+    const walk = (v: unknown) => {
+      if (Array.isArray(v)) v.forEach(walk);
+      else if (v !== null && typeof v === 'object') {
+        const o = v as Record<string, unknown>;
+        const props = o.properties as Record<string, { description?: string }> | undefined;
+        if (props?.delta !== undefined && props.reason !== undefined) for (const k of ['delta', 'side']) if (/higher-is-better for (its own|that) side/.test(props[k]?.description ?? '')) described.push(k);
+        Object.values(o).forEach(walk);
+      }
+    };
+    walk(JSON.parse(publishedSchemas().get('situation.schema.json')!));
+    expect(new Set(described)).toEqual(new Set(['delta', 'side']));
+  });
+
   it('lists the questions it tests, and each one listed is named by a test here or in the kernel (review S11)', () => {
     expect(GATE_QUESTIONS_TESTED).toEqual(['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4', 'B5', 'B7', 'B9', 'B10', 'C1', 'C2', 'C3', 'C4', 'E7', 'F2', 'F5', 'F6', 'H5']);
     expect(GATE_QUESTIONS_PARTIAL).toEqual(['D3', 'D4', 'D5', 'E3', 'F1']);

@@ -65,9 +65,14 @@ export const EffectSchema = z.union([
       owner: termId,
       field: termId,
       subject: z.string().min(1).nullable().default(null),
-      delta: int,
+      delta: int.describe(
+        'Signed permille. Every side measure reads higher-is-better for its own side: a rise helps that side, a fall harms it. The gate’s sign rule (E7, D5) relies on this, so a field where higher is worse for its side (war-weariness, say) must be declared the other way round.',
+      ),
       reason: termId,
-      side: idOf('faction').nullable().default(null),
+      side: idOf('faction')
+        .nullable()
+        .default(null)
+        .describe('The side whose measure this is, higher-is-better for that side (see delta); null for a measure no side owns. An atrocity-class item may only lower its acting side’s measures (E7, D5).'),
     }),
   }),
 ]);
