@@ -11,15 +11,16 @@
  * re-rendering them. Every view object is frozen: a seat cannot edit what it
  * was shown.
  */
-import type { PersonId, PostId, RegionId, SeatId } from '../ids.ts';
+import type { PersonId, RegionId, SeatId } from '../ids.ts';
 import { latestEnemyClaims, perceived } from '../knowledge/beliefs.ts';
 import { knowledgeOf, type KnownReport, type SeatKnowledge } from '../knowledge/knowledge.ts';
-import { headquartersOf } from '../movement/headquarters.ts';
 import type { StandingGoal } from '../plans/goal.ts';
 import type { State } from '../root-state.ts';
 import { seatOf } from '../seats/seats.ts';
 import { perceptionBias } from '../standin/traits.ts';
-import type { IndexedWorld } from '../standin/world.ts';
+import { heldPost } from '../command/command.ts';
+import { whereIsPerson } from '../seats/posts.ts';
+import type { SeatsWorld } from '../seats/world.ts';
 import type { BeliefView, GoalView, ReportView, SeatView, SituationView } from './types.ts';
 
 export interface ViewCache {
@@ -85,9 +86,9 @@ function same<T>(a: readonly T[], b: readonly T[]): boolean {
 }
 
 /** What `seat` may see the morning after `state.stateDay`. Pass a cache to get stable references for unchanged data. */
-export function viewFor(world: IndexedWorld, state: State, seat: SeatId, cache: ViewCache = createViewCache()): SeatView {
+export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: ViewCache = createViewCache()): SeatView {
   const person = world.person(seatOf(state, seat).seatPerson);
-  const post = world.postOf(person.id);
+  const post = heldPost(state, person.id);
   const knowledge = knowledgeOf(state, seat);
 
   let reports = cache.lists.get(knowledge);
@@ -117,7 +118,7 @@ export function viewFor(world: IndexedWorld, state: State, seat: SeatId, cache: 
   }
 
   let goal: GoalView | null = null;
-  const standing = post === null ? undefined : state.standingGoals[post.id];
+  const standing = post === null ? undefined : state.standingGoals[post];
   if (standing !== undefined) {
     goal = cache.goals.get(standing) ?? null;
     if (goal === null) {
@@ -126,7 +127,7 @@ export function viewFor(world: IndexedWorld, state: State, seat: SeatId, cache: 
     }
   }
 
-  const region = post === null ? world.faction(person.faction).seatRegion : headquartersOf(state, post.id as PostId);
+  const region = whereIsPerson(world, state, person.id);
   const situations = situationViews(world, state, seat, person.id, cache);
   const previous = cache.views.get(seat);
   if (
@@ -145,7 +146,7 @@ export function viewFor(world: IndexedWorld, state: State, seat: SeatId, cache: 
     seat,
     person: person.id,
     faction: person.faction,
-    post: post?.id ?? null,
+    post,
     region,
     goal,
     reports,
@@ -161,7 +162,7 @@ export function viewFor(world: IndexedWorld, state: State, seat: SeatId, cache: 
  * surfaced, if he is its principal, and any handed to him. Built from the
  * situation's record and its text keys; the historical default is never read.
  */
-function situationViews(world: IndexedWorld, state: State, seat: SeatId, person: PersonId, cache: ViewCache): readonly SituationView[] {
+function situationViews(world: SeatsWorld, state: State, seat: SeatId, person: PersonId, cache: ViewCache): readonly SituationView[] {
   const cached = cache.situations.get(seat);
   if (cached !== undefined && cached.states === state.situationStates) return cached.views;
   const out: SituationView[] = [];

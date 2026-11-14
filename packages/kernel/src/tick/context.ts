@@ -14,11 +14,13 @@ import type { Cut } from '../supply/supply.ts';
 import type { ReportBody } from '../knowledge/report.ts';
 import { templateFor } from '../knowledge/templates.ts';
 import type { BiasTerm, ReportTruth } from '../knowledge/truth.ts';
-import { routeLatency, type RouteKind } from '../messages/latency.ts';
+import { routeLatency, type LatencyMap, type RouteKind } from '../messages/latency.ts';
 import { mintMessageId, type IdMint, type Hop, type TransitMessage } from '../messages/transit.ts';
 import type { State } from '../root-state.ts';
 import { recordFire, type Telemetry } from '../telemetry.ts';
-import type { IndexedWorld } from '../standin/world.ts';
+import { heldPost } from '../command/command.ts';
+import { filterPostOf, whereIsPerson } from '../seats/posts.ts';
+import type { SeatsWorld } from '../seats/world.ts';
 
 export type RejectionReason =
   | 'bad_goal'
@@ -109,7 +111,9 @@ export type MapEvent =
   | { readonly event: 'pocket_closed' | 'pocket_relieved' | 'pocket_lost'; readonly faction: FactionId; readonly pocket: string; readonly regions: readonly RegionId[]; readonly cut: Cut | null };
 
 export interface TickContext {
-  readonly world: IndexedWorld;
+  readonly world: SeatsWorld;
+  /** Latency on the morning's map: courier days from the edges, the wire of whoever holds each region (0052). */
+  readonly latency: LatencyMap;
   readonly day: number;
   readonly seed: number;
   readonly mint: IdMint;
@@ -133,23 +137,26 @@ export function fire(ctx: TickContext, mechanic: string, change = 1): void {
 
 /** Where a person is: his post's headquarters, or his faction's seat region for a principal without a post. */
 export function whereIs(ctx: TickContext, state: State, person: PersonId): RegionId {
-  const post = ctx.world.postOf(person);
-  if (post === null) return ctx.world.faction(ctx.world.person(person).faction).seatRegion;
-  const hq = state.headquarters[post.id];
-  if (hq === undefined) throw new RangeError(`post ${post.id} has no headquarters`);
-  return hq.hqRegion;
+  return whereIsPerson(ctx.world, state, person);
+}
+
+/** A person's side; every man who sends or receives in the seats layer has one. */
+export function sideOf(ctx: TickContext, person: PersonId): FactionId {
+  const f = ctx.world.person(person).faction;
+  if (f === null) throw new RangeError(`${person} has no side`);
+  return f;
 }
 
 /** The route a message by `route` really takes (a wire sent off the wire goes by courier). No dice drawn. */
 export function takenRoute(ctx: TickContext, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId): RouteKind {
   if (route !== 'wire' || from === to) return route;
-  const l = routeLatency(ctx.world, ctx.world.rules.latency, route, from, to, ctx.world.person(sender).faction, null);
+  const l = routeLatency(ctx.latency, ctx.world.rules.latency, route, from, to, sideOf(ctx, sender), null);
   return l.ok && l.latency.parts.some((p) => p.part === 'wire') ? 'wire' : 'courier';
 }
 
 /** Arrival of one hop by `route`, sent by `sender`, and the route actually taken (a wire sent off his side's wire goes by courier). */
 export function hop(ctx: TickContext, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId, id: MessageId, extraDays = 0): { readonly arrive: number; readonly route: RouteKind } {
-  const l = routeLatency(ctx.world, ctx.world.rules.latency, route, from, to, ctx.world.person(sender).faction, { seed: ctx.seed, message: id });
+  const l = routeLatency(ctx.latency, ctx.world.rules.latency, route, from, to, sideOf(ctx, sender), { seed: ctx.seed, message: id });
   if (!l.ok) throw new RangeError(`route ${route} is not available from ${from} to ${to}`);
   const weather = l.latency.parts.find((p) => p.part === 'weather');
   if (weather) fire(ctx, 'messages.courier_delay', weather.days);
@@ -178,13 +185,15 @@ export function sendReport(
   const from = report.body.reportAuthor;
   const fromRegion = report.fromRegion ?? whereIs(ctx, state, from);
   const route = report.route ?? templateFor(world.rules.templates, report.body.reportType, report.body.reportSubtype).templateRoute;
-  const faction = world.faction(world.person(report.to).faction);
-  const filter = world.postIds.map((id) => world.post(id)).find((p) => p.faction === faction.id && p.kind === 'filter' && p.holder !== null && p.holder !== from);
-  const toPost = world.postOf(report.to)?.id ?? null;
+  const faction = world.faction(sideOf(ctx, report.to));
+  const filterId = filterPostOf(world, state, faction.id);
+  const filterHolder = filterId === null ? null : state.postStates[filterId]!.postHolder;
+  const filter = filterId !== null && filterHolder !== null && filterHolder !== from ? { id: filterId, holder: filterHolder } : undefined;
+  const toPost = heldPost(state, report.to);
   const addressee: Hop = { hopPerson: report.to, hopPost: toPost, hopRole: 'addressee' };
   // Only a report that really goes by wire meets the filter; one sent off the wire rides past it.
   const throughFilter = filter !== undefined && report.to === faction.principal && takenRoute(ctx, route, from, fromRegion, whereIs(ctx, state, report.to)) === 'wire';
-  const first: Hop = throughFilter ? { hopPerson: filter.holder!, hopPost: filter.id, hopRole: 'filter' } : addressee;
+  const first: Hop = throughFilter ? { hopPerson: filter.holder, hopPost: filter.id, hopRole: 'filter' } : addressee;
   const id = mintMessageId(ctx.mint, ctx.day, from, first.hopPerson, report.tag);
   const leg = hop(ctx, route, from, fromRegion, whereIs(ctx, state, first.hopPerson), id);
   ctx.outbox.push({

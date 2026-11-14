@@ -5,17 +5,24 @@
  */
 import type { MessageId, PersonId, PostId, RegionId } from '../ids.ts';
 import type { State } from '../root-state.ts';
-import type { IndexedWorld } from '../standin/world.ts';
+import type { AssignmentTable, PostTable } from '../command/command.ts';
+import type { WorldIndex } from '../world/index.ts';
 import type { GoalSpec, StandingGoal } from './goal.ts';
 
 /** Days within which a chain order stands against a newer order that went around the chain (0040: conflicting orders). */
 export const CONFLICT_WINDOW_DAYS = 7;
 
-/** The goals the scenario starts with: every field post holds where it stands. */
-export function initialGoals(world: IndexedWorld): Readonly<Record<PostId, StandingGoal>> {
+/**
+ * The goals the scenario starts with: every held field post on a side (one that commands a force block)
+ * holds where it stands. Read from the post and assignment tables `command` was just given at setup.
+ */
+export function initialGoals(map: WorldIndex, posts: PostTable, assignments: AssignmentTable): Readonly<Record<PostId, StandingGoal>> {
+  const sided = new Set(map.world.departments.filter((d) => d.faction !== null).map((d) => d.id));
+  const commanding = new Set(Object.values(assignments).filter((p): p is PostId => p !== null));
   const goals: Record<PostId, StandingGoal> = {};
-  for (const id of world.postIds) {
-    if (world.post(id).kind !== 'field') continue;
+  for (const id of (Object.keys(posts) as PostId[]).sort()) {
+    const p = posts[id]!;
+    if (p.postHolder === null || !commanding.has(id) || !sided.has(p.postDepartment)) continue;
     goals[id] = { standingSpec: { goalSpecKind: 'hold', goalSpecRegion: null }, standingIssuer: null, standingViaChain: true, standingSetDay: 0, standingOrder: null };
   }
   return goals;

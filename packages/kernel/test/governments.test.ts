@@ -4,14 +4,13 @@ import { createDerivedMapCache } from '../src/control-index/derived.ts';
 import type { DepartmentId } from '../src/ids.ts';
 import { createIdMint } from '../src/messages/transit.ts';
 import type { State } from '../src/root-state.ts';
-import { indexWorld as indexComms } from '../src/standin/world.ts';
 import { createTelemetry } from '../src/telemetry.ts';
 import type { Proposal, TickContext } from '../src/tick/context.ts';
 import { commandProposalsPhase } from '../src/tick/forces.ts';
 import { MAP_MECHANICS, mapPhase } from '../src/tick/map.ts';
 import { passageOf } from '../src/tick/passage.ts';
 import { createState } from '../src/tick/setup.ts';
-import { commsFixture } from './support/comms-fixture.ts';
+import { ctxFor as ctxIn, worldOf } from './support/tick-context.ts';
 import { DEP, forcesIndex, forcesStart } from './support/forces-fixture.ts';
 import { depot, edge, F, R, region } from './support/map-fixture.ts';
 
@@ -25,7 +24,6 @@ const MAP = forcesIndex({
   edges: [edge('a1', 'a2'), edge('a2', 'n1'), edge('n1', 'a3'), edge('a2', 'u1'), edge('u1', 'a4'), edge('n1', 'b1')],
   depots: [depot('a_src', 'a1')],
 });
-const WORLD = indexComms(commsFixture(), MAP);
 const START = forcesStart({ a1: { a: 1000 }, a2: { a: 1000 }, a3: { a: 1000 }, a4: { a: 1000 }, b1: { b: 1000 } }, [], [], {
   governments: [
     { region: R('a1'), department: DEP('a_war'), provenance: [] },
@@ -36,7 +34,7 @@ const START = forcesStart({ a1: { a: 1000 }, a2: { a: 1000 }, a3: { a: 1000 }, a
 const NEUTRAL: DepartmentId = DEP('neutral_gov');
 
 function ctxFor(state: State, day: number): TickContext {
-  return { world: WORLD, day, seed: state.gameSeed, mint: createIdMint(state), telemetry: createTelemetry([...MAP_MECHANICS]), outbox: [], rejections: [], events: [], proposals: [], prices: [], decisionPoints: [], controlDeltas: [], infrastructureDeltas: [], mapEvents: [] };
+  return ctxIn(worldOf(MAP, START), state, day, MAP_MECHANICS);
 }
 
 /** The proposal a situation's effect pushes (tick/situations.ts), closing (+) or reopening (-) a government. */
@@ -45,7 +43,7 @@ function proposal(delta: number, subject: string = NEUTRAL): Extract<Proposal, {
 }
 
 describe('neutral ground from governments (0055 as amended by 0058)', () => {
-  const s0 = createState(WORLD, { seed: 1, start: START });
+  const s0 = createState(worldOf(MAP, START), { seed: 1 });
 
   it('a neutral government\'s regions are neutral ground, open until it closes; a side\'s or an unknown government\'s are not', () => {
     expect(neutralGroundOf(MAP, s0)).toEqual({ n1: 'open' });
@@ -74,7 +72,7 @@ describe('neutral ground from governments (0055 as amended by 0058)', () => {
 describe('a situation closing neutral passage, through the tick\'s phases', () => {
   it('open: a3 is supplied across n1. Closed by a proposal: a3 is a pocket, reported once. Reopened: relieved', () => {
     const cache = createDerivedMapCache();
-    let state = createState(WORLD, { seed: 1, start: START });
+    let state = createState(worldOf(MAP, START), { seed: 1 });
     const pockets = (ctx: TickContext) => ctx.mapEvents.flatMap((e) => (e.event === 'pocket_closed' || e.event === 'pocket_relieved' ? [`${e.event}:${e.regions.join(',')}`] : []));
 
     // Day 1: open. a3's line runs through n1; a4, behind ground of unknown government, is a pocket from the start.

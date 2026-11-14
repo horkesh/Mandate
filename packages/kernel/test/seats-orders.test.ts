@@ -8,13 +8,16 @@ import { playDays } from '../src/log/session.ts';
 import { DEFAULT_LATENCY_RULES, routeLatency } from '../src/messages/latency.ts';
 import { createIdMint, sendMessages } from '../src/messages/transit.ts';
 import type { State } from '../src/root-state.ts';
-import { standingOptions } from '../src/seats/requests.ts';
+import { buildControlIndex } from '../src/control-index/control-index.ts';
+import { headquartersOf } from '../src/seats/posts.ts';
+import { morningGround, standingOptions } from '../src/seats/requests.ts';
+import { latencyMapFor } from '../src/seats/world.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
 import { sendReport, type TickContext } from '../src/tick/context.ts';
 import { createState } from '../src/tick/setup.ts';
 import { tick, type TickResult } from '../src/tick/tick.ts';
 import { viewFor } from '../src/view/view.ts';
-import { F, indexedFixture, P, POST, R } from './support/comms-fixture.ts';
+import { F, indexedFixture, P, POST, R } from './support/seats-fixture.ts';
 import { order, scriptedSeats } from './support/test-seats.ts';
 
 const lead = seatIdFor(P('a_lead'));
@@ -28,8 +31,10 @@ function run(world: ReturnType<typeof indexedFixture>, days: number, script: Par
 
 describe('latency is the kernel’s (0026)', () => {
   const world = indexedFixture();
+  // Latency on the start's map: the wire is the holder's (0052).
+  const latency = latencyMapFor(world, buildControlIndex(world.map, createState(world, { seed: 1 }).regionControl));
   const L = (route: Parameters<typeof routeLatency>[2], from: string, to: string, noise: { seed: number; message: MessageId } | null = null) =>
-    routeLatency(world, DEFAULT_LATENCY_RULES, route, R(from), R(to), F('a'), noise);
+    routeLatency(latency, DEFAULT_LATENCY_RULES, route, R(from), R(to), F('a'), noise);
   const days = (r: ReturnType<typeof L>) => (r.ok ? r.latency.days : -1);
 
   it('computes courier, wire, special messenger and mail from the map', () => {
@@ -157,7 +162,7 @@ describe('filters on the wire (0032)', () => {
   it('holds a wire for a day and cuts the losses from it, keeping the cut in the truth layer', () => {
     const world = indexedFixture();
     let state = createState(world, { seed: 2 });
-    const ctx: TickContext = { world, day: 1, seed: 2, mint: createIdMint(state), telemetry: undefined, outbox: [], rejections: [], events: [], proposals: [], prices: [], decisionPoints: [], controlDeltas: [], infrastructureDeltas: [], mapEvents: [] };
+    const ctx: TickContext = { world, latency: latencyMapFor(world, buildControlIndex(world.map, state.regionControl)), day: 1, seed: 2, mint: createIdMint(state), telemetry: undefined, outbox: [], rejections: [], events: [], proposals: [], prices: [], decisionPoints: [], controlDeltas: [], infrastructureDeltas: [], mapEvents: [] };
     sendReport(ctx, state, {
       body: {
         reportType: 'wire-dispatch',
@@ -215,7 +220,7 @@ describe('belief: perception in belief derivation, the intelligence chief a sepa
     // 800 men seen, doubled by the chief, then 2.4 times by a timid, cautious general.
     expect(belief.value).toBe(3840);
     expect(belief.terms.map((t) => `${t.termKind}:${t.termValue}`)).toEqual(['observed:800', 'intelligence_bias:2000', 'reported:1600', 'perception_bias:2400']);
-    const options = standingOptions(world, state, POST('a_army'), state.stateDay + 1)!;
+    const options = standingOptions(world, state, POST('a_army'), morningGround(world, state, state.stateDay + 1))!;
     expect(options.find((o) => o.region === R('b_front'))!.perceivedEnemy).toBe(3840);
     expect(viewFor(world, state, seatIdFor(gen.id)).enemyBeliefs[R('b_front')]!.value).toBe(3840);
     // The next dispatch he writes carries the same figure to the principal.
@@ -245,8 +250,8 @@ describe('belief: perception in belief derivation, the intelligence chief a sepa
   it('holds a timid general whose belief makes every advance inconsistent, and has him ask for men', () => {
     const world = indexedFixture();
     const { state } = run(world, 8, { a: { 1: [order('a_army', 'advance', 'b_cap', 'special-messenger', true)] } });
-    expect(standingOptions(world, state, POST('a_army'), state.stateDay + 1)!.map((o) => o.optionId)).toEqual(['hold']);
-    expect(state.headquarters[POST('a_army')]!.hqRegion).toBe(R('a_front'));
+    expect(standingOptions(world, state, POST('a_army'), morningGround(world, state, state.stateDay + 1))!.map((o) => o.optionId)).toEqual(['hold']);
+    expect(headquartersOf(world, state, POST('a_army'))).toBe(R('a_front'));
     const last = knowledgeOf(state, lead).knownReports.filter((r) => r.knownBody.reportAuthor === P('a_gen') && r.knownBody.reportType === 'wire-dispatch').at(-1)!;
     expect(last.knownBody.reportClaims.find((c) => c.claimKind === 'goal-status')!.claimToken).toBe('awaiting-strength');
     expect(last.knownBody.reportClaims.find((c) => c.claimKind === 'effective-strength')!.claimValue).toBe(800);
@@ -256,7 +261,7 @@ describe('belief: perception in belief derivation, the intelligence chief a sepa
   it('advances a bold commander to his objective, and he wires that he has arrived', () => {
     const world = indexedFixture({ posts: { a_reserve: { strength: 2000 } } });
     const { state, results } = run(world, 30, { a: { 1: [order('a_reserve', 'advance', 'b_mid', 'special-messenger', true)] } });
-    expect(state.headquarters[POST('a_reserve')]!.hqRegion).toBe(R('b_mid'));
+    expect(headquartersOf(world, state, POST('a_reserve'))).toBe(R('b_mid'));
     expect(state.standingGoals[POST('a_reserve')]!.standingSpec).toEqual({ goalSpecKind: 'hold', goalSpecRegion: R('b_mid') });
     expect(results.flatMap((r) => r.decisionPoints).map((d) => d.point)).toContain('objective-reached');
   });

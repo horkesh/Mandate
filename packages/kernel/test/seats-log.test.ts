@@ -3,7 +3,7 @@ import { INFORMAL_SUBTYPES, reportProblems, type ReportBody } from '../src/knowl
 import { DEFAULT_REPORT_TEMPLATES, MAX_REPORT_AGE_DAYS, templateFor, templateProblems } from '../src/knowledge/templates.ts';
 import { ORDER_ROUTES } from '../src/messages/latency.ts';
 import { createIdMint, mintMessageId } from '../src/messages/transit.ts';
-import { principalMenu } from '../src/seats/requests.ts';
+import { morningGround, principalMenu } from '../src/seats/requests.ts';
 import { createFreezeLedger } from '../src/tick/freeze.ts';
 import { logProblems, type LogEntry } from '../src/log/log.ts';
 import { answerEntries, playDays, replay } from '../src/log/session.ts';
@@ -16,9 +16,10 @@ import { decodeSave, encodeSave } from '../src/serialize/save.ts';
 import { createTelemetry } from '../src/telemetry.ts';
 import { deepFreeze } from '../src/tick/freeze.ts';
 import { createState } from '../src/tick/setup.ts';
+import { MAP_MECHANICS } from '../src/tick/map.ts';
 import { SEATS_MECHANICS, tick } from '../src/tick/tick.ts';
 import { createViewCache, viewFor } from '../src/view/view.ts';
-import { F, indexedFixture, P, R } from './support/comms-fixture.ts';
+import { F, indexedFixture, P, R } from './support/seats-fixture.ts';
 import { order, scriptedSeats } from './support/test-seats.ts';
 
 const lead = seatIdFor(P('a_lead'));
@@ -63,8 +64,8 @@ describe('the command log is the truth (0015)', () => {
   it('saves State and the log, with both hashes, and resumes to the continuous runÃ¢â‚¬â„¢s hash', () => {
     const { world, start, log, hashes, state } = game(60);
     const mid = replay(world, start, log, 25);
-    const text = encodeSave({ worldHash: canonicalHash(world.world), state: mid.state, log: log.filter((e) => e.day <= 25) });
-    const loaded = decodeSave(text, { expectedWorldHash: canonicalHash(world.world) });
+    const text = encodeSave({ worldHash: canonicalHash(world.map.world), state: mid.state, log: log.filter((e) => e.day <= 25) });
+    const loaded = decodeSave(text, { expectedWorldHash: canonicalHash(world.map.world) });
     expect(loaded.log.length).toBeGreaterThan(0);
     expect(loaded.logHash).toBe(canonicalHash(log.filter((e) => e.day <= 25)));
     expect(logProblems(loaded.log)).toEqual([]);
@@ -105,7 +106,7 @@ describe('the command log is the truth (0015)', () => {
 describe('knowledge stays bounded (FOUNDATION section 8)', () => {
   it('prunes by age and supersession, so what a seat holds plateaus while deliveries grow', () => {
     const world = indexedFixture(REFERENCE);
-    const telemetry = createTelemetry(SEATS_MECHANICS);
+    const telemetry = createTelemetry([...SEATS_MECHANICS, ...MAP_MECHANICS]);
     const sizes: number[] = [];
     const { state } = playDays(world, createState(world, { seed: 3 }), scriptedSeats(SCRIPT), 240, {
       telemetry,
@@ -243,7 +244,7 @@ describe('review nits, each with a positive control', () => {
       [0, 'route_unavailable'],
       [1, 'route_unavailable'],
     ]);
-    const offered = principalMenu(world, start, F('a')).commandable.flatMap((c) => c.routes.map((x) => x.route));
+    const offered = principalMenu(world, start, F('a'), morningGround(world, start, 1)).commandable.flatMap((c) => c.routes.map((x) => x.route));
     expect([...new Set(offered)].sort()).toEqual([...ORDER_ROUTES].sort());
   });
 
@@ -317,7 +318,6 @@ describe('ownership of the new State (0044)', () => {
       'forceAssignments:command',
       'forceBlockStates:forces',
       'forceLocations:movement',
-      'headquarters:movement',
       'infraDepotCondition:infrastructure',
       'infraEdgeCondition:infrastructure',
       'infraObstructions:infrastructure',
@@ -340,7 +340,7 @@ describe('ownership of the new State (0044)', () => {
   it('declares every seats mechanic once, and a reference game fires most of them', () => {
     expect(new Set(SEATS_MECHANICS).size).toBe(SEATS_MECHANICS.length);
     const world = indexedFixture(REFERENCE);
-    const telemetry = createTelemetry(SEATS_MECHANICS);
+    const telemetry = createTelemetry([...SEATS_MECHANICS, ...MAP_MECHANICS]);
     playDays(world, createState(world, { seed: 99 }), scriptedSeats(SCRIPT), 60, { telemetry });
     const dead = SEATS_MECHANICS.filter((m) => telemetry.mechanics[m]!.fires === 0);
     // Each of these has its own test above. Rejections need a bad command and defaults an

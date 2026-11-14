@@ -16,11 +16,10 @@ import {
 import { applyForces, factionOfBlock, ForcesError, initialForces, sumStrength } from '../src/forces/forces.ts';
 import { blocksIn, initialLocations, MovementError } from '../src/movement/movement.ts';
 import type { State } from '../src/root-state.ts';
-import { indexWorld as indexComms } from '../src/standin/world.ts';
 import { createState, emptyState } from '../src/tick/setup.ts';
 import type { WorldIndex } from '../src/world/index.ts';
 import type { ScenarioStart } from '../src/world/scenario.ts';
-import { commsFixture } from './support/comms-fixture.ts';
+import { worldOf } from './support/tick-context.ts';
 import { B, block, DEP, forcesIndex, forcesStart, P, PER, post } from './support/forces-fixture.ts';
 import { depot, edge, R, region } from './support/map-fixture.ts';
 
@@ -84,12 +83,11 @@ describe('setup: forces, locations and command copied once from the start (0050)
     expect(factionOfBlock(MAP, S, B('a_ship'))).toBe('a');
   });
 
-  it('runs through createState when the World has a map, and stays empty without one', () => {
-    const state = createState(indexComms(commsFixture(), MAP), { seed: 1, start: START });
+  it('runs through createState, from the start the seats World was indexed with', () => {
+    const state = createState(worldOf(MAP, START), { seed: 1 });
     expect(Object.keys(state.forceBlockStates)).toHaveLength(BLOCKS.length);
     expect(state.forceAssignments[B('b_1')]).toBe('b_army');
-    const plain = createState(indexComms(commsFixture()), { seed: 1 });
-    expect([plain.forceBlockStates, plain.forceLocations, plain.postStates, plain.forceAssignments]).toEqual([{}, {}, {}, {}]);
+    expect(state.postStates).toEqual(S.postStates);
   });
 
   it('refuses a start that breaks the format, listing every problem (positive controls)', () => {

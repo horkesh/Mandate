@@ -8,11 +8,11 @@ import { pendingRequests } from '../src/seats/requests.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
 import { canonicalHash } from '../src/serialize/hash.ts';
 import type { OptionDef, SituationDef } from '../src/situations/types.ts';
-import { indexWorld, type CommsWorld } from '../src/standin/world.ts';
+import type { SeatsWorld } from '../src/seats/world.ts';
 import { createState } from '../src/tick/setup.ts';
 import { tick, type TickResult } from '../src/tick/tick.ts';
 import { viewFor } from '../src/view/view.ts';
-import { commsFixture, F, P, POST, R } from './support/comms-fixture.ts';
+import { F, indexedFixture, P, POST, R } from './support/seats-fixture.ts';
 import { scriptedSeats } from './support/test-seats.ts';
 
 const S = (id: string): SituationId => toId('situation', id);
@@ -69,13 +69,12 @@ function decision(id: string, over: Partial<SituationDef> = {}): SituationDef {
 }
 
 function setup(situations: SituationDef[], drivers: Record<string, 'human' | 'rules'> = { a_lead: 'human' }) {
-  const comms: CommsWorld = { ...commsFixture(), situations };
-  const world = indexWorld(comms);
+  const world = indexedFixture({}, situations);
   return { world, state: createState(world, { seed: 3, drivers }) };
 }
 
 /** Tick day by day with the given entries per day (by day number). */
-function days(world: ReturnType<typeof indexWorld>, start: State, n: number, entries: Record<number, LogEntry['command'][]> = {}, seat = lead) {
+function days(world: SeatsWorld, start: State, n: number, entries: Record<number, LogEntry['command'][]> = {}, seat = lead) {
   let state = start;
   const results: TickResult[] = [];
   for (let i = 0; i < n; i++) {
@@ -339,16 +338,16 @@ describe('orders an option issues, and delegation (0052)', () => {
   });
 
   it('never hands a situation to the other side’s holder, by command or by default, even in a World that skipped validation (S6, the lead’s ruling)', () => {
-    // An adapter World whose own-side office is held by the other side's man: the guard would refuse it, so bypass it.
-    const turned = (base: ReturnType<typeof indexWorld>) => ({ ...base, post: (id: Parameters<typeof base.post>[0]) => (id === POST('a_office') ? { ...base.post(id), holder: P('b_min') } : base.post(id)) });
+    // A State whose own-side office is held by the other side's man, put there past `command`'s guard (which refuses it).
+    const turned = (s: State): State => ({ ...s, postStates: { ...s.postStates, [POST('a_office')]: { ...s.postStates[POST('a_office')]!, postHolder: P('b_min') } } });
     const { world, state } = setup([decision('d')]);
     const morning = days(world, state, 1).state;
-    const r = tick(turned(world), morning, [{ day: 2, seat: lead, command: { cmd: 'delegate', situation: S('d'), to: POST('a_office') } }]);
+    const r = tick(world, turned(morning), [{ day: 2, seat: lead, command: { cmd: 'delegate', situation: S('d'), to: POST('a_office') } }]);
     expect(r.rejections.map((x) => x.reason)).toEqual(['other_side']);
     expect(r.state.situationStates[S('d')]!.sitDelegate).toBeNull();
     // By default: a history run takes inaction rather than hand it over.
     const ruled = setup([decision('h', { historicalDefault: { delegate: POST('a_office') } })], { a_lead: 'rules' });
-    const after = tick(turned(ruled.world), ruled.state, []).state.situationStates[S('h')]!;
+    const after = tick(ruled.world, turned(ruled.state), []).state.situationStates[S('h')]!;
     expect([after.sitDelegate, after.sitDecidedBy]).toEqual([null, 'inaction']);
     // The control: the unturned World delegates as before.
     expect(tick(ruled.world, ruled.state, []).state.situationStates[S('h')]!.sitDelegate).toBe(P('a_sec'));
@@ -393,10 +392,7 @@ describe('notices, effects and proposals', () => {
 });
 
 describe('situations in the log, the view and the hash', () => {
-  const world = indexWorld({
-    ...commsFixture(),
-    situations: [decision('a'), decision('b', { event: { decided: S('a'), options: null }, railroad: null, historicalDefault: { delegate: POST('a_office') } })],
-  });
+  const world = indexedFixture({}, [decision('a'), decision('b', { event: { decided: S('a'), options: null }, railroad: null, historicalDefault: { delegate: POST('a_office') } })]);
 
   it('replays to every day’s hash, decisions and delegations included', () => {
     const start = createState(world, { seed: 5 });
@@ -409,7 +405,7 @@ describe('situations in the log, the view and the hash', () => {
     // Standing review N1: a differential, not a search for field names. Four worlds identical but for the default.
     const defaults: SituationDef['historicalDefault'][] = [{ options: ['hold'] }, { options: ['press'] }, { delegate: POST('a_office') }, { unsourced: 'test' }];
     const seen = defaults.map((historicalDefault) => {
-      const w = indexWorld({ ...commsFixture(), situations: [decision('a', { historicalDefault })] });
+      const w = indexedFixture({}, [decision('a', { historicalDefault })]);
       const run = playDays(w, createState(w, { seed: 5, drivers: { a_lead: 'human' } }), scriptedSeats(), 4);
       const views = Object.keys(run.state.seatAssignments).sort().map((s) => JSON.stringify(viewFor(w, run.state, s as never)));
       return JSON.stringify([views, pendingRequests(w, run.state)]);
@@ -418,7 +414,7 @@ describe('situations in the log, the view and the hash', () => {
     const v = viewFor(world, playDays(world, createState(world, { seed: 5, drivers: { a_lead: 'human' } }), scriptedSeats(), 3).state, lead);
     expect(v.situations.map((s) => [s.id, s.status, s.options.map((o) => o.id)])).toEqual([[S('a'), 'open', ['hold', 'press']]]);
     // The control: a world differing in something a seat may see (the staff recommendation) does look different.
-    const w2 = indexWorld({ ...commsFixture(), situations: [decision('a', { staffLine: { authors: [POST('a_office')], recommends: ['press'], reasons: [], confidence: 700 } })] });
+    const w2 = indexedFixture({}, [decision('a', { staffLine: { authors: [POST('a_office')], recommends: ['press'], reasons: [], confidence: 700 } })]);
     const r2 = playDays(w2, createState(w2, { seed: 5, drivers: { a_lead: 'human' } }), scriptedSeats(), 4);
     expect(JSON.stringify([Object.keys(r2.state.seatAssignments).sort().map((s) => JSON.stringify(viewFor(w2, r2.state, s as never))), pendingRequests(w2, r2.state)])).not.toBe(seen[0]);
   });

@@ -3,14 +3,13 @@ import { createDerivedMapCache } from '../src/control-index/derived.ts';
 import { applyInfrastructure, edgeConditionOf, InfrastructureError, initialInfrastructure, networkOf } from '../src/infrastructure/infrastructure.ts';
 import { createIdMint } from '../src/messages/transit.ts';
 import type { State } from '../src/root-state.ts';
-import { indexWorld as indexComms } from '../src/standin/world.ts';
 import { networkConditions } from '../src/supply/supply.ts';
 import { createTelemetry } from '../src/telemetry.ts';
 import type { TickContext } from '../src/tick/context.ts';
 import { MAP_MECHANICS, mapPhase } from '../src/tick/map.ts';
 import { createState } from '../src/tick/setup.ts';
 import type { ScenarioStart } from '../src/world/scenario.ts';
-import { commsFixture } from './support/comms-fixture.ts';
+import { ctxFor as ctxIn, worldOf } from './support/tick-context.ts';
 import { forcesIndex, forcesStart } from './support/forces-fixture.ts';
 import { D, depot, E, edge, F, fort, I, R, region } from './support/map-fixture.ts';
 
@@ -27,25 +26,9 @@ function startWith(extra: Partial<ScenarioStart>): ScenarioStart {
   return forcesStart(CONTROL, [], [], extra);
 }
 
-const WORLD = indexComms(commsFixture(), MAP);
 
 function ctxFor(state: State, day: number): TickContext {
-  return {
-    world: WORLD,
-    day,
-    seed: state.gameSeed,
-    mint: createIdMint(state),
-    telemetry: createTelemetry([...MAP_MECHANICS]),
-    outbox: [],
-    rejections: [],
-    events: [],
-    proposals: [],
-    prices: [],
-    decisionPoints: [],
-    controlDeltas: [],
-    infrastructureDeltas: [],
-    mapEvents: [],
-  };
+  return ctxIn(worldOf(MAP, startWith({})), state, day, MAP_MECHANICS);
 }
 
 describe('infrastructure: the network as State, copied once from the start (0050)', () => {
@@ -62,7 +45,7 @@ describe('infrastructure: the network as State, copied once from the start (0050
     expect(net.edges).toEqual({ [RAIL]: 400 });
     expect(net.depots).toEqual({ b_src: 0 });
     expect(net.obstructions).toEqual([{ obsEdge: 'river:b2:w', obsBy: 'b_fort' }]);
-    const state = createState(WORLD, { seed: 1, start });
+    const state = createState(worldOf(MAP, start), { seed: 1 });
     // The same network the start describes; the intact edge it lists is simply absent.
     expect(networkOf(state)).toEqual(networkConditions({ ...start, edgeConditions: [{ edge: RAIL, conditionPermille: 400 }] }));
     expect(networkOf(state)).toEqual({ edgeCondition: { [RAIL]: 400 }, depotCondition: { b_src: 0 }, obstructions: [{ edge: 'river:b2:w', by: 'b_fort' }] });
@@ -96,7 +79,7 @@ describe('infrastructure: the network as State, copied once from the start (0050
 });
 
 describe('infrastructure: the only writer of the network', () => {
-  const base = createState(WORLD, { seed: 1, start: startWith({}) });
+  const base = createState(worldOf(MAP, startWith({})), { seed: 1 });
 
   it('damages and repairs edges and depots within 0..1000, intact stored as absent', () => {
     const hit = applyInfrastructure(MAP, base, [
@@ -130,7 +113,7 @@ describe('infrastructure: the only writer of the network', () => {
 describe('the tick reads the network from State (lane 0.4 seam closed)', () => {
   it('a cut proposed today closes a pocket the same day; a repair relieves it', () => {
     const cache = createDerivedMapCache();
-    const start = createState(WORLD, { seed: 1, start: startWith({}) });
+    const start = createState(worldOf(MAP, startWith({})), { seed: 1 });
     // Control: nothing changes the map without the cut.
     const quiet = ctxFor(start, 1);
     const unchanged = mapPhase(quiet, start, cache);

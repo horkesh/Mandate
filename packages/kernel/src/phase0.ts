@@ -7,9 +7,7 @@
  * only `@mandate/kernel/seat-api`.
  */
 export type { State } from './root-state.ts';
-export * from './standin/world.ts';
 export * from './standin/traits.ts';
-export * from './standin/from-scenario.ts';
 export * from './knowledge/report.ts';
 export * from './knowledge/templates.ts';
 export * from './knowledge/truth.ts';
@@ -19,7 +17,8 @@ export * from './messages/latency.ts';
 export * from './messages/transit.ts';
 export * from './plans/goal.ts';
 export * from './plans/standing.ts';
-export * from './movement/headquarters.ts';
+export * from './seats/world.ts';
+export * from './seats/posts.ts';
 export * from './seats/api.ts';
 export * from './seats/seats.ts';
 export * from './seats/requests.ts';

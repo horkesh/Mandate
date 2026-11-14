@@ -7,7 +7,6 @@ import type { ForceBlockId } from '../src/ids.ts';
 import { createIdMint } from '../src/messages/transit.ts';
 import type { MarchGround } from '../src/movement/march.ts';
 import type { State } from '../src/root-state.ts';
-import { indexWorld as indexComms } from '../src/standin/world.ts';
 import { INTACT_NETWORK } from '../src/supply/supply.ts';
 import { createTelemetry } from '../src/telemetry.ts';
 import type { TickContext } from '../src/tick/context.ts';
@@ -15,7 +14,7 @@ import { contestPhase } from '../src/tick/forces.ts';
 import { MAP_MECHANICS, mapPhase } from '../src/tick/map.ts';
 import { createState } from '../src/tick/setup.ts';
 import type { ForceBlockStart } from '../src/world/scenario.ts';
-import { commsFixture } from './support/comms-fixture.ts';
+import { ctxFor as ctxIn, worldOf } from './support/tick-context.ts';
 import { B, block, forcesIndex, forcesStart } from './support/forces-fixture.ts';
 import { depot, edge, F, R, region } from './support/map-fixture.ts';
 
@@ -29,11 +28,10 @@ const MAP = forcesIndex({
   edges: [edge('a1', 'a2', { type: 'rail', line: 'a_line' }), edge('a2', 'mid'), edge('mid', 'b2'), edge('b2', 'b1', { type: 'rail', line: 'b_line' }), edge('mid', 'n')],
   depots: [depot('a_src', 'a1'), depot('b_src', 'b1')],
 });
-const WORLD = indexComms(commsFixture(), MAP);
 
 /** A start, with the named blocks having marched in on day 1 (so they press for their region). */
 function stateWith(control: Readonly<Record<string, Readonly<Record<string, number>>>>, blocks: readonly ForceBlockStart[], marchedIn: readonly string[] = blocks.map((b) => b.id)): State {
-  const s = createState(WORLD, { seed: 1, start: forcesStart(control, [], blocks) });
+  const s = createState(worldOf(MAP, forcesStart(control, [], blocks)), { seed: 1 });
   const locations = { ...s.forceLocations };
   for (const id of marchedIn) locations[B(id)] = { ...locations[B(id)]!, locSinceDay: 1 };
   return { ...s, forceLocations: locations };
@@ -42,18 +40,25 @@ function stateWith(control: Readonly<Record<string, Readonly<Record<string, numb
 const ground = (s: State): MarchGround => ({ map: MAP, index: buildControlIndex(MAP, s.regionControl), network: INTACT_NETWORK, month: 6 });
 
 function ctxFor(state: State, day: number): TickContext {
-  return { world: WORLD, day, seed: state.gameSeed, mint: createIdMint(state), telemetry: createTelemetry([...MAP_MECHANICS]), outbox: [], rejections: [], events: [], proposals: [], prices: [], decisionPoints: [], controlDeltas: [], infrastructureDeltas: [], mapEvents: [] };
+  return ctxIn(worldOf(MAP, forcesStart(BASE, [], [])), state, day, MAP_MECHANICS);
 }
 
 const BASE = { a1: { a: 1000 }, a2: { a: 1000 }, mid: { a: 300, b: 550 }, b2: { b: 1000 }, b1: { b: 1000 } };
 
 describe('occupation: a side alone in held ground gains it day by day', () => {
   it('proposes control for the side present, cause occupation; no troops, no change (positive control)', () => {
-    const s = stateWith(BASE, [block('a_1', { department: 'a_war', region: 'mid', strength: 3000 })]);
+    const s = stateWith(BASE, [block('a_1', { department: 'a_war', region: 'mid', strength: 5000 })]);
     const r = contest(ground(s), s);
-    expect(r.records).toEqual([{ region: 'mid', kind: 'occupation', sides: [{ faction: 'a', men: 3000, blocks: ['a_1'], pressing: ['a_1'], unknown: [] }], gainer: 'a', deltaPermille: 100 }]);
+    expect(r.records).toEqual([{ region: 'mid', kind: 'occupation', sides: [{ faction: 'a', men: 5000, blocks: ['a_1'], pressing: ['a_1'], unknown: [] }], gainer: 'a', deltaPermille: 100 }]);
     expect(r.deltas).toEqual([{ region: R('mid'), faction: F('a'), deltaPermille: 100, cause: 'occupation' }]);
     expect(contest(ground(stateWith(BASE, [])), stateWith(BASE, [])).deltas).toEqual([]);
+  });
+
+  it('a small force occupies in proportion: 600 men gain 12 a day, not the full 100', () => {
+    const s = stateWith(BASE, [block('a_1', { department: 'a_war', region: 'mid', strength: 600 })]);
+    expect(contest(ground(s), s).deltas).toEqual([{ region: R('mid'), faction: F('a'), deltaPermille: 12, cause: 'occupation' }]);
+    const tiny = stateWith(BASE, [block('a_1', { department: 'a_war', region: 'mid', strength: 40 })]);
+    expect(contest(ground(tiny), tiny).records).toEqual([]);
   });
 
   it('takes nothing with troops the start put there: garrisons hold, they do not press (positive control)', () => {
@@ -117,7 +122,7 @@ describe('retreat below the pack\'s threshold (0019)', () => {
 describe('a pocket forming when a force cuts a line, and lifting when it is relieved', () => {
   it('a raid occupies b2 until b no longer traces it, cutting mid off; relief wins it back and the pocket lifts', () => {
     const cache = createDerivedMapCache();
-    let state = stateWith({ ...BASE, mid: { b: 1000 } }, [block('a_raid', { department: 'a_war', region: 'b2', strength: 2000 })]);
+    let state = stateWith({ ...BASE, mid: { b: 1000 } }, [block('a_raid', { department: 'a_war', region: 'b2', strength: 5000 })]);
     const events: string[] = [];
     const day = (d: number) => {
       const ctx = ctxFor(state, d);
@@ -130,11 +135,11 @@ describe('a pocket forming when a force cuts a line, and lifting when it is reli
     expect(state.regionControl[R('b2')]).toEqual({ a: 800, b: 200 });
     // Day 3: the raiders trace b2 (300) with no line of their own to it: their own pocket. Day 8: b's line to mid is cut.
     expect(events).toEqual(['3:a:pocket_closed', '8:b:pocket_closed']);
-    // Relief: b's force arrives in b2, five to one; it wins the ground back.
+    // Relief: b's force arrives in b2, two to one; it wins the ground back.
     const relief: ForceBlockId = B('b_relief');
     state = { ...state, forceBlockStates: { ...state.forceBlockStates, [relief]: { ...state.forceBlockStates[B('a_raid')]!, fbDepartment: 'b_war' as never, fbStrength: 10000 } }, forceLocations: { ...state.forceLocations, [relief]: { locRegion: R('b2'), locAboard: null, locSinceDay: 8, locMarch: null } } };
     day(9);
-    expect(state.regionControl[R('b2')]).toEqual({ a: 640, b: 360 });
+    expect(state.regionControl[R('b2')]).toEqual({ a: 700, b: 300 });
     expect(events).toEqual(['3:a:pocket_closed', '8:b:pocket_closed', '9:b:pocket_relieved']);
   });
 });

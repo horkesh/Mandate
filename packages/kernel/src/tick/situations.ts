@@ -23,6 +23,7 @@
  * orders, by the route the option names; a delegated choice hands over the
  * choice, not the authority to order (0052).
  */
+import { headquartersOf } from '../seats/posts.ts';
 import type { PersonId, SeatId, SituationId } from '../ids.ts';
 import { knowledgeOf } from '../knowledge/knowledge.ts';
 import type { DecideCommand, DelegateCommand } from '../log/commands.ts';
@@ -69,7 +70,14 @@ function principalOf(ctx: TickContext, def: SituationDef): PersonId {
 
 /** `since`: for a trigger that waits for news, the day its wait began, so older reports never satisfy it (review S1). */
 function conditionContext(ctx: TickContext, state: State, def: SituationDef, since: number | null = null): ConditionContext {
-  return { state, day: ctx.day, situation: def.id, knowledge: knowledgeOf(state, seatIdFor(principalOf(ctx, def))), since };
+  return {
+    state,
+    day: ctx.day,
+    situation: def.id,
+    knowledge: knowledgeOf(state, seatIdFor(principalOf(ctx, def))),
+    since,
+    headquartersOf: (post) => (state.postStates[post] === undefined ? null : headquartersOf(ctx.world, state, post)),
+  };
 }
 
 /** The options open today, in display order: appeared (or always there) and not expired, less any excluded. */
@@ -165,7 +173,7 @@ export function delegateCommand(ctx: TickContext, state: State, seat: SeatId, cm
   if (def === null || record === undefined || record.sitStatus !== 'open' || record.sitSurfacedDay === null || record.sitDelegate !== null) return { state, reason: 'situation_not_open' };
   if (state.seatAssignments[seat]?.seatPerson !== principalOf(ctx, def)) return { state, reason: 'not_the_decider' };
   if (!def.delegableTo.includes(cmd.to)) return { state, reason: 'not_delegable' };
-  const holder = ctx.world.post(cmd.to).holder;
+  const holder = state.postStates[cmd.to]?.postHolder ?? null;
   if (holder === null) return { state, reason: 'vacant_post' };
   // The lead's ruling on standing review S6: never the other side's holder, even in a World that skipped validation.
   if (ctx.world.person(holder).faction !== def.faction) return { state, reason: 'other_side' };
@@ -183,7 +191,7 @@ function writeReport(ctx: TickContext, state: State, def: SituationDef): PersonI
   const notice = def.report;
   const authors = line?.authors ?? notice?.authors ?? [];
   for (const post of authors) {
-    const holder = ctx.world.post(post).holder;
+    const holder = state.postStates[post]?.postHolder ?? null;
     if (holder === null || def.subjects.includes(holder)) continue;
     sendReport(ctx, state, {
       body: {
@@ -317,7 +325,7 @@ function historyDefault(ctx: TickContext, state: State, def: SituationDef, recor
   const hd = def.historicalDefault;
   if (hd === null || 'unsourced' in hd) return applyDecision(ctx, state, def, [], 'inaction');
   if ('delegate' in hd) {
-    const holder = ctx.world.post(hd.delegate).holder;
+    const holder = state.postStates[hd.delegate]?.postHolder ?? null;
     if (holder === null || ctx.world.person(holder).faction !== def.faction) return applyDecision(ctx, state, def, [], 'inaction');
     fire(ctx, 'situations.delegated');
     return delegateSituation(state, def.id, holder);

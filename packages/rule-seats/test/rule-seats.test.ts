@@ -1,5 +1,5 @@
 import { readFileSync } from 'node:fs';
-import { ids, phase0, type ScenarioData } from '@mandate/kernel';
+import { ids, phase0, world as w } from '@mandate/kernel';
 import type { OptionView, PrincipalMenu, ReportView, SeatRequest, SeatView, StandingMenu } from '@mandate/kernel/seat-api';
 import { describe, expect, it } from 'vitest';
 import { chooseDelegated, chooseStep, createRuleSeat, principalOrders } from '../src/index.ts';
@@ -83,13 +83,15 @@ describe('a principal', () => {
 });
 
 describe('rule seats run a whole side (the testbed, every seat on the rules model)', () => {
-  const data = JSON.parse(readFileSync(new URL('../../../packs/testbed/scenario.json', import.meta.url), 'utf8')) as ScenarioData;
-  const world = phase0.indexWorld(phase0.commsWorldFromScenario(data));
+  // The testbed's generated v2 data (world format v2: lane 0.5 retired the M2 scenario adapter).
+  const read = (p: string) => JSON.parse(readFileSync(new URL(`../../../packs/testbed/data/${p}`, import.meta.url), 'utf8')) as unknown;
+  const start = read('scenarios/opening.json') as w.ScenarioStart;
+  const world = phase0.indexSeatsWorld(w.indexWorld(read('world.json') as w.World), start);
   const seat = createRuleSeat();
 
   it('orders each side’s opening advance, and every command it sends is accepted', () => {
     const rejected: unknown[] = [];
-    const { state, log } = phase0.playDays(world, phase0.createState(world, { seed: data.seed }), () => seat, 60, { freeze: true, onDay: (r) => rejected.push(...r.rejections) });
+    const { state, log } = phase0.playDays(world, phase0.createState(world, { seed: start.seed }), () => seat, 60, { freeze: true, onDay: (r) => rejected.push(...r.rejections) });
     expect(rejected).toEqual([]);
     const opening = log.filter((e) => e.day === 1 && e.command.cmd === 'order');
     expect(opening.map((e) => e.seat).sort()).toEqual(['seat:n_leader', 'seat:s_leader']);

@@ -60,6 +60,8 @@ export interface PostState {
   readonly postParent: PostId | null;
   readonly postHolder: PersonId | null;
   readonly postActing: boolean;
+  /** Who runs the post's intelligence (0058), on its side; null when none is sourced. */
+  readonly postIntelChief: PersonId | null;
   /** Where the office sits; its headquarters when it commands no force. */
   readonly postSeat: RegionId | null;
   /** For a temporary post, the operation it dissolves with; null otherwise. */
@@ -104,6 +106,11 @@ export function initialCommand(map: WorldIndex, start: ScenarioStart): { readonl
       if (held !== undefined) problems.push(`post ${p.id}: ${p.holder} already holds ${held}`);
       holders.set(p.holder, p.id);
     }
+    if (p.intelligenceChief !== null) {
+      const chief = map.world.people.find((x) => x.id === p.intelligenceChief);
+      if (chief === undefined) problems.push(`post ${p.id}: intelligence chief ${p.intelligenceChief} is not a person in the World`);
+      else if (chief.faction !== departments.get(p.department)?.faction) problems.push(`post ${p.id}: intelligence chief ${p.intelligenceChief} is not on its side`);
+    }
     for (const c of p.departmentChanges) {
       try {
         parseIsoDate(c.on);
@@ -120,6 +127,7 @@ export function initialCommand(map: WorldIndex, start: ScenarioStart): { readonl
       postParent: p.parent,
       postHolder: p.holder,
       postActing: p.acting,
+      postIntelChief: p.intelligenceChief,
       postSeat: p.region,
       postOperation: p.temporary?.operation ?? null,
       postInstallation: p.installation,
@@ -331,6 +339,7 @@ export function createTemporaryPost(map: WorldIndex, state: State, spec: Tempora
     postParent: spec.parent,
     postHolder: spec.holder,
     postActing: false,
+    postIntelChief: null,
     postSeat: spec.seat,
     postOperation: spec.operation,
     postInstallation: null,

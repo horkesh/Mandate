@@ -7,18 +7,15 @@
  * - resume: play resumed from the save (seats asked again) ends on the
  *   continuous run's final hash.
  *
- * On the testbed this runs through the stand-in comms World built from the M2
- * scenario file, with lane 0.2's World beside it when the pack has one: its
- * first scenario start sets control, and the map phases (control, fronts,
- * pockets, supply, the invariant barrier) run every day (lane 0.4). Lane 0.5
- * replaces the comms World with lane 0.2's.
+ * It runs on a pack's v2 World and first scenario start (lane 0.5): forces,
+ * command, movement and the map phases (control, fronts, pockets, supply,
+ * stores, the contest, the invariant barrier) run every day.
  */
 import { canonicalHash, createTelemetry, decodeSave, encodeSave, HASH_SCHEME, livenessReport, phase0, world as w, type LivenessRow } from '@mandate/kernel';
 import { errorsOf, formatIssue, loadPack } from '@mandate/pack-format';
 import { createRuleSeat } from '@mandate/rule-seats';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { loadScenario } from './load.ts';
 import { packFilesAt, packRoot, v2Packs } from './pack-files.ts';
 
 export const SEATS_KERNEL = 'phase0-seats';
@@ -52,10 +49,10 @@ export interface SeatsRunOptions {
 }
 
 export interface SeatsWorld {
-  readonly world: phase0.IndexedWorld;
+  readonly world: phase0.SeatsWorld;
   readonly worldHash: string;
   readonly seed: number;
-  /** What `createState` takes: the seed, and the map's scenario start when the pack has one. */
+  /** What `createState` takes: the seed (the start is the World's). */
   readonly setup: phase0.SetupOptions;
 }
 
@@ -70,22 +67,25 @@ export function v2Map(pack: string): { readonly world: w.World; readonly start: 
   return { world: data.world, start };
 }
 
+/**
+ * The seats layer's World for a v2 pack: its World, its first scenario start and its situations (lane 0.5:
+ * the stand-in comms World built from an M2 scenario file is gone). The seed is the start's.
+ */
 export function seatsWorld(pack: string): SeatsWorld {
-  const scenario = loadScenario(pack);
-  const comms = { ...phase0.commsWorldFromScenario(scenario), situations: packSituations(pack) };
   const map = v2Map(pack);
-  if (map === null) return { world: phase0.indexWorld(comms), worldHash: canonicalHash(comms), seed: scenario.seed, setup: { seed: scenario.seed } };
+  if (map === null) throw new Error(`pack ${pack} has no v2 manifest (pack.json); the seats layer runs only on world format v2`);
+  const situations = packSituations(pack);
   return {
-    world: phase0.indexWorld(comms, w.indexWorld(map.world)),
-    worldHash: canonicalHash({ comms: canonicalHash(comms), map: w.worldHash(map.world), start: w.scenarioHash(map.start) }),
-    seed: scenario.seed,
-    setup: { seed: scenario.seed, start: map.start },
+    world: phase0.indexSeatsWorld(w.indexWorld(map.world), map.start, { situations }),
+    worldHash: canonicalHash({ map: w.worldHash(map.world), start: w.scenarioHash(map.start), situations: canonicalHash(situations) }),
+    seed: map.start.seed,
+    setup: { seed: map.start.seed },
   };
 }
 
-/** Every mechanic a seats run counts: the tick's (the seats layer's and the situations phase's), and the map's when the pack has a map. */
-export function seatsMechanics(world: phase0.IndexedWorld): readonly string[] {
-  return world.map === null ? phase0.TICK_MECHANICS : [...phase0.TICK_MECHANICS, ...phase0.MAP_MECHANICS];
+/** Every mechanic a seats run counts: the tick's (the seats layer's, movement's and the situations phase's) and the map's. */
+export function seatsMechanics(): readonly string[] {
+  return [...phase0.TICK_MECHANICS, ...phase0.MAP_MECHANICS];
 }
 
 /**
@@ -117,7 +117,7 @@ export function seatsRun(options: SeatsRunOptions): SeatsSummary {
   const seat = createRuleSeat();
   const seats = () => seat;
   const initial = phase0.createState(world, setup);
-  const telemetry = createTelemetry(seatsMechanics(world));
+  const telemetry = createTelemetry(seatsMechanics());
   let rejections = 0;
   let decisionPoints = 0;
   const run = phase0.playDays(world, initial, seats, options.days, {

@@ -134,9 +134,8 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   // Guerrilla pressure (0029) is not here on purpose: the gate register
   // (SENSITIVE-HISTORY section 3.6, accepted by 0046) places it as derived,
   // computed with typed reasons and never stored, and no option may target it.
-  // Lane 0.6: the day counter, and a stand-in that lane 0.5's forces and movement replace.
+  // Lane 0.6: the day counter.
   field('the current day', 'tick', ['the day tick'], [at('State', 'stateDay')]),
-  field("a post's headquarters region (stand-in until force blocks)", 'movement', ['standing-goal steps (stand-in operations)'], [at('State', 'headquarters')]),
   // Lane 0.7 (0046): situation chain and wait state. The wait itself is a status on the situation's record above.
   field('situation chain and wait state', 'situations', ['situation effects (flags set and cleared)'], [at('State', 'situationFlags')]),
 ];
@@ -175,8 +174,6 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'BiasTerm',
   'KnownReport',
   'SeatKnowledge',
-  // Movement (stand-in headquarters)
-  'Headquarters',
   // Situations (lane 0.7: the live record of one situation, replaced whole by `situations`)
   'SituationRecord',
   // Lane 0.5: forces, movement and command (each replaced whole by its writer)

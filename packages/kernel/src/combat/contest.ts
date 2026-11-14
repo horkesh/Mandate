@@ -34,13 +34,15 @@ import { otherEnd } from '../world/index.ts';
 
 /** DESIGN PARAMETERS until the pack format carries them (listed for the lead). */
 export interface ContestRules {
-  /** Control a side alone in a held region gains a day, permille. */
+  /** Control a side alone in a held region gains a day at full strength, permille. */
   readonly occupyPermille: number;
+  /** The men at which occupation reaches its full rate; fewer gain in proportion. */
+  readonly occupyFullMen: number;
   /** Control the stronger side gains a day at an overwhelming margin, permille. */
   readonly contestPermille: number;
 }
 
-export const DEFAULT_CONTEST_RULES: ContestRules = Object.freeze({ occupyPermille: 100, contestPermille: 200 });
+export const DEFAULT_CONTEST_RULES: ContestRules = Object.freeze({ occupyPermille: 100, occupyFullMen: 5000, contestPermille: 200 });
 
 /** One side's presence in a region (hard rule 6: the terms behind a contest). */
 export interface Presence {
@@ -125,7 +127,9 @@ export function contest(ground: MarchGround, state: State, rules: ContestRules =
       if (Object.keys(shares).length === 0) continue;
       const have = shares[side.faction] ?? 0;
       if (have >= 1000) continue;
-      const delta = Math.min(rules.occupyPermille, 1000 - have);
+      const rate = Math.trunc((rules.occupyPermille * Math.min(side.men, rules.occupyFullMen)) / rules.occupyFullMen);
+      const delta = Math.min(rate, 1000 - have);
+      if (delta <= 0) continue;
       records.push({ region, kind: 'occupation', sides, gainer: side.faction, deltaPermille: delta });
       deltas.push({ region, faction: side.faction, deltaPermille: delta, cause: 'occupation' });
       continue;

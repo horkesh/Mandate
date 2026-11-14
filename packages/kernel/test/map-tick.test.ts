@@ -5,57 +5,49 @@ import { playDays, replay } from '../src/log/session.ts';
 import { createIdMint } from '../src/messages/transit.ts';
 import type { State } from '../src/root-state.ts';
 import { canonicalHash } from '../src/serialize/hash.ts';
-import { indexWorld } from '../src/standin/world.ts';
 import { createTelemetry } from '../src/telemetry.ts';
 import type { TickContext } from '../src/tick/context.ts';
 import { MAP_MECHANICS, mapBarrier, mapPhase, monthOf } from '../src/tick/map.ts';
 import { createState } from '../src/tick/setup.ts';
 import { SEATS_MECHANICS, tick } from '../src/tick/tick.ts';
-import { commsFixture } from './support/comms-fixture.ts';
+import { ctxFor as ctxIn, worldOf } from './support/tick-context.ts';
+import type { ScenarioStart } from '../src/world/scenario.ts';
 import { F, lineMap, R, startWith } from './support/map-fixture.ts';
 import { scriptedSeats } from './support/test-seats.ts';
 
 const START = { a1: { a: 1000 }, a2: { a: 1000 }, mid: { a: 300, b: 550 }, b2: { b: 1000 }, b1: { b: 1000 } };
-// The comms fixture's factions are a and b too; its map is separate (the seam lane 0.5 closes).
-const world = indexWorld(commsFixture(), lineMap());
+/** A seats World over the line map and a start (lane 0.5: the seats layer runs on the v2 map). */
+const W = (start: ScenarioStart, departments: readonly string[] = []) => worldOf(lineMap(departments), start);
 
 function ctxFor(state: State, day: number, telemetry = createTelemetry([...SEATS_MECHANICS, ...MAP_MECHANICS])): TickContext {
-  return { world, day, seed: state.gameSeed, mint: createIdMint(state), telemetry, outbox: [], rejections: [], events: [], proposals: [], prices: [], decisionPoints: [], controlDeltas: [], infrastructureDeltas: [], mapEvents: [] };
+  return { ...ctxIn(W(startWith(START)), state, day), telemetry };
 }
 
 describe('setup with a map (0050: control is copied from the start once)', () => {
   it('sets control and the calendar from the start', () => {
-    const state = createState(world, { seed: 1, start: startWith(START, '1900-03-15') });
+    const state = createState(W(startWith(START, '1900-03-15')), { seed: 1 });
     expect(state.regionControl).toEqual({ a1: { a: 1000 }, a2: { a: 1000 }, b1: { b: 1000 }, b2: { b: 1000 }, mid: { a: 300, b: 550 } });
     expect(state.calendarStart).toBe('1900-03-15');
     expect(monthOf(state, 0)).toBe(3);
     expect(monthOf(state, 17)).toBe(4);
   });
 
-  it('requires a start exactly when the World has a map, and a real date (positive controls)', () => {
-    expect(() => createState(world, { seed: 1 })).toThrow('exactly when the World has a map');
-    expect(() => createState(indexWorld(commsFixture()), { seed: 1, start: startWith(START) })).toThrow('exactly when the World has a map');
-    expect(() => createState(world, { seed: 1, start: startWith(START, '1900-02-30') })).toThrow('not an ISO date');
-    const plain = createState(indexWorld(commsFixture()), { seed: 1 });
-    expect(plain.regionControl).toEqual({});
-    expect(plain.calendarStart).toBeNull();
-    expect([plain.regionGovernments, plain.closedGovernments]).toEqual([{}, {}]);
+  it('requires a real start date (positive control)', () => {
+    expect(() => createState(W(startWith(START, '1900-02-30')), { seed: 1 })).toThrow('not an ISO date');
   });
 
   it('copies each region’s government from the start, in region order, with no government closed (0058)', () => {
-    const governed = indexWorld(commsFixture(), lineMap(['a_gov', 'b_gov']));
-    const state = createState(governed, { seed: 1, start: startWith(START, '1900-03-15', { mid: 'unknown', b1: 'b_gov', a1: 'a_gov' }) });
+    const state = createState(W(startWith(START, '1900-03-15', { mid: 'unknown', b1: 'b_gov', a1: 'a_gov' }), ['a_gov', 'b_gov']), { seed: 1 });
     expect(state.regionGovernments).toEqual({ a1: 'a_gov', b1: 'b_gov', mid: 'unknown' });
     expect(Object.keys(state.regionGovernments)).toEqual(['a1', 'b1', 'mid']);
     expect(state.closedGovernments).toEqual({});
   });
 
   it('refuses a government row for a region not in the World, on water, listed twice, or naming no department in the World (format review N2)', () => {
-    const governed = indexWorld(commsFixture(), lineMap(['a_gov', 'b_gov']));
     const setup = (rows: readonly { readonly region: string; readonly department: string }[]) => () => {
       const base = startWith(START, '1900-03-15');
       const governments = rows.map((r) => ({ region: R(r.region), department: r.department === 'unknown' ? ('unknown' as const) : (r.department as never), provenance: [{ source: 'FIXTURE', at: null }] }));
-      return createState(governed, { seed: 1, start: { ...base, governments } });
+      return createState(W({ ...base, governments }, ['a_gov', 'b_gov']), { seed: 1 });
     };
     expect(setup([{ region: 'ghost', department: 'a_gov' }])).toThrow('region ghost is not in the World');
     expect(setup([{ region: 'w', department: 'a_gov' }])).toThrow('region w is river, which has no civil government');
@@ -69,7 +61,7 @@ describe('setup with a map (0050: control is copied from the start once)', () =>
 
 describe('the map phase: control changes through the writer, pockets reported', () => {
   it('applies proposed deltas, reports changes, crossings and a pocket closing, then its opening', () => {
-    const start = createState(world, { seed: 1, start: startWith(START, '1900-06-01') });
+    const start = createState(W(startWith(START, '1900-06-01')), { seed: 1 });
     const telemetry = createTelemetry([...SEATS_MECHANICS, ...MAP_MECHANICS]);
     const cache = createDerivedMapCache();
     // b takes a2 outright: a's mid is then cut off from both its origins.
@@ -94,7 +86,7 @@ describe('the map phase: control changes through the writer, pockets reported', 
 
   it('reports an overrun pocket as lost, never as relieved (review S2)', () => {
     // a's garrison in mid is cut off (b holds a2); then b overruns mid itself.
-    const start = createState(world, { seed: 1, start: startWith({ ...START, a2: { b: 1000 }, mid: { a: 600, b: 300 } }, '1900-06-01') });
+    const start = createState(W(startWith({ ...START, a2: { b: 1000 }, mid: { a: 600, b: 300 } }, '1900-06-01')), { seed: 1 });
     const telemetry = createTelemetry([...SEATS_MECHANICS, ...MAP_MECHANICS]);
     const cache = createDerivedMapCache();
     const ctx = ctxFor(start, 1, telemetry);
@@ -108,16 +100,9 @@ describe('the map phase: control changes through the writer, pockets reported', 
     expect(telemetry.mechanics['map.pocket_relieved']!.fires).toBe(0);
   });
 
-  it('refuses control deltas in a game with no map', () => {
-    const plainWorld = indexWorld(commsFixture());
-    const plain = createState(plainWorld, { seed: 1 });
-    const ctx: TickContext = { ...ctxFor(plain, 1), world: plainWorld };
-    ctx.controlDeltas.push({ region: R('a2'), faction: F('b'), deltaPermille: 10, cause: 'combat' });
-    expect(() => mapPhase(ctx, plain, createDerivedMapCache())).toThrow('no map');
-  });
-
   it('the barrier throws on corrupted control with every typed failure (positive control)', () => {
-    const start = createState(world, { seed: 1, start: startWith(START) });
+    const world = W(startWith(START));
+    const start = createState(world, { seed: 1 });
     const corrupt = { ...start, regionControl: { ...start.regionControl, [R('mid')]: { a: 600, b: 550 } } } as State;
     try {
       mapBarrier(ctxFor(corrupt, 1), corrupt, null, false);
@@ -132,7 +117,8 @@ describe('the map phase: control changes through the writer, pockets reported', 
 
 describe('whole games with a map', () => {
   it('play, replay and hash identically, with the derived map rebuilt only when the month changes', () => {
-    const start = createState(world, { seed: 7, start: startWith(START, '1900-01-20') });
+    const world = W(startWith(START, '1900-01-20'));
+    const start = createState(world, { seed: 7 });
     const telemetry = createTelemetry([...SEATS_MECHANICS, ...MAP_MECHANICS]);
     const run = playDays(world, start, scriptedSeats(), 60, { freeze: true, deepChecks: true, telemetry });
     // Day 1 builds it (January); February and March each rebuild it once.
@@ -144,10 +130,10 @@ describe('whole games with a map', () => {
   });
 
   it('report the day map in the tick result, derived and never in State', () => {
-    const start = createState(world, { seed: 7, start: startWith(START, '1900-06-01') });
+    const world = W(startWith(START, '1900-06-01'));
+    const start = createState(world, { seed: 7 });
     const r = tick(world, start, []);
     expect(r.map!.index.contactEdges.map((c) => c.edge)).toEqual(['road:a2:mid']);
     expect(Object.keys(r.state)).not.toContain('map');
-    expect(tick(indexWorld(commsFixture()), createState(indexWorld(commsFixture()), { seed: 1 }), []).map).toBeNull();
   });
 });

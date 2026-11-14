@@ -7,7 +7,7 @@
 import { strictCompare } from '../compare.ts';
 import { toId, type PersonId, type SeatId } from '../ids.ts';
 import type { State } from '../root-state.ts';
-import type { IndexedWorld } from '../standin/world.ts';
+import type { SeatsWorld } from './world.ts';
 import type { SeatDriver } from './api.ts';
 
 export interface SeatAssignment {
@@ -22,7 +22,7 @@ export function seatIdFor(person: PersonId): SeatId {
 }
 
 /** Every person gets a seat on the rules model; `drivers` overrides some (the player's seat: `human`). */
-export function initialSeats(world: IndexedWorld, drivers: Readonly<Record<string, SeatDriver>> = {}): Readonly<Record<SeatId, SeatAssignment>> {
+export function initialSeats(world: SeatsWorld, drivers: Readonly<Record<string, SeatDriver>> = {}): Readonly<Record<SeatId, SeatAssignment>> {
   const out: Record<SeatId, SeatAssignment> = {};
   for (const person of world.personIds) {
     const id = seatIdFor(person);

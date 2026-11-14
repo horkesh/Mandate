@@ -1,20 +1,25 @@
 /**
- * The day tick for the seats layer (FOUNDATION section 10's fixed day order,
- * the phases lane 0.6 owns, with stand-ins marked):
+ * The day tick (FOUNDATION section 10's fixed day order, as built in Phase 0):
  *
- *  0. Morning: the standing-goal menus the seats were offered.
+ *  0. Morning: the map and latency the seats were asked from, and the
+ *     standing-goal menus they were offered.
  *  1. Apply today's log entries, validated; orders become messages in transit
  *     (the kernel computes their arrival). Rejections are reported.
  *  2. Deliver messages due today: relays, filters, arrivals, knowledge.
- *  3. STAND-IN operations and movement: standing-goal steps.
- *  4. Control changes and the derived map (lane 0.4; only with a map).
+ *  3. Movement: commanders' steps toward their goals, every march a day further
+ *     (lane 0.5; goals stand in for lane 0.9's plans).
+ *  3b. The simple control contest and occupation: control deltas, retreats (lane 0.5).
+ *  4. Control and network changes, and the derived map (lane 0.4).
+ *  4a. Stores on hand fall or refill from today's supply trace (lane 0.5).
+ *  4b. Situations fire, surface, stay live, take history defaults (lane 0.7).
+ *  4c. Proposals `command` owns: a neutral government closing or reopening (0058).
  *  5. Reports written on a cycle.
  *  6. Knowledge pruning.
  *  7. The day counter.
  *  8. The invariant barrier (lane 0.4).
  *
- * Lanes 0.5 and 0.7 insert movement, combat and situations between 2 and 4. The tick is a pure function of (World, State, the day's
- * log entries); telemetry is passed in, never held.
+ * The tick is a pure function of (World, State, the day's log entries);
+ * telemetry is passed in, never held.
  */
 import { createDerivedMapCache, type DerivedMap, type DerivedMapCache } from '../control-index/derived.ts';
 import type { PostId } from '../ids.ts';
@@ -23,8 +28,10 @@ import { entryProblems, type LogEntry } from '../log/log.ts';
 import { createIdMint, sendMessages } from '../messages/transit.ts';
 import type { State } from '../root-state.ts';
 import type { OptionView } from '../seats/api.ts';
-import { standingKey, standingOptions } from '../seats/requests.ts';
-import type { IndexedWorld } from '../standin/world.ts';
+import { morningGround, standingKey, standingOptions } from '../seats/requests.ts';
+import { heldPost } from '../command/command.ts';
+import { fieldPosts } from '../seats/posts.ts';
+import type { SeatsWorld } from '../seats/world.ts';
 import type { Telemetry } from '../telemetry.ts';
 import { fire, type DecisionPoint, type MapEvent, type Price, type Proposal, type Rejection, type TickContext, type TickEvent } from './context.ts';
 import { deliverDue } from './deliver.ts';
@@ -34,7 +41,7 @@ import { commandProposalsPhase, contestPhase, storesPhase } from './forces.ts';
 import { mapBarrier, mapPhase } from './map.ts';
 import { issueOrder } from './orders.ts';
 import { decideCommand, delegateCommand, runSituations, SITUATION_MECHANICS } from './situations.ts';
-import { applyStanding } from './standing.ts';
+import { applyStanding, MOVEMENT_MECHANICS } from './standing.ts';
 
 /** Every mechanic the seats layer counts (FOUNDATION section 11.5). */
 export const SEATS_MECHANICS = [
@@ -55,8 +62,7 @@ export const SEATS_MECHANICS = [
   'reports.trimmed',
   'seats.choices',
   'seats.defaulted',
-  'standin.advance',
-  'standin.goal_reached',
+  ...MOVEMENT_MECHANICS,
 ] as const;
 
 /** Every mechanic the tick counts: the seats layer's and the situations phase's. Runners declare these. */
@@ -87,13 +93,16 @@ export interface TickResult {
   readonly map: DerivedMap | null;
 }
 
-export function tick(world: IndexedWorld, start: State, entries: readonly LogEntry[], options: TickOptions = {}): TickResult {
+export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry[], options: TickOptions = {}): TickResult {
   const ledger = options.freezeLedger ?? createFreezeLedger();
   const freeze = options.freeze === true ? <T>(s: T): T => deepFreeze(s, ledger) : <T>(s: T): T => s;
   const day = start.stateDay + 1;
   let state = freeze(start);
+  // The morning's ground: the map and latency the seats were asked from (0052: menus first, from the morning's State).
+  const ground = morningGround(world, state, day);
   const ctx: TickContext = {
     world,
+    latency: ground.latency,
     day,
     seed: state.gameSeed,
     mint: createIdMint(state),
@@ -111,8 +120,8 @@ export function tick(world: IndexedWorld, start: State, entries: readonly LogEnt
 
   // 0. The morning's menus, exactly as `pendingRequests` built them for the seats.
   const menus = new Map<PostId, readonly OptionView[]>();
-  for (const post of world.postIds) {
-    const options = standingOptions(world, state, post, day);
+  for (const post of fieldPosts(world, state)) {
+    const options = standingOptions(world, state, post, ground);
     if (options !== null) menus.set(post, options);
   }
 
@@ -139,8 +148,8 @@ export function tick(world: IndexedWorld, start: State, entries: readonly LogEnt
       if (result.reason !== null) reject(result.reason);
       return;
     }
-    const post = world.postOf(state.seatAssignments[entry.seat]!.seatPerson)?.id;
-    if (post === undefined || c.request !== standingKey(post, day) || !menus.has(post)) return reject('no_such_request');
+    const post = heldPost(state, state.seatAssignments[entry.seat]!.seatPerson);
+    if (post === null || c.request !== standingKey(post, day) || !menus.has(post)) return reject('no_such_request');
     if (choices.has(post)) return reject('duplicate_choice');
     if (!menus.get(post)!.some((o) => o.optionId === c.option)) return reject('not_an_option');
     choices.set(post, c.option);
@@ -151,7 +160,7 @@ export function tick(world: IndexedWorld, start: State, entries: readonly LogEnt
   // 2. Deliveries.
   state = freeze(deliverDue(ctx, state));
 
-  // 3. STAND-IN standing goals.
+  // 3. Movement: commanders' steps toward their goals, and every march a day further (lane 0.5).
   state = freeze(applyStanding(ctx, state, menus, choices));
 
   // 3b. The simple control contest and occupation (lane 0.5; only with a map): deltas for control, retreats now.

@@ -4,13 +4,12 @@ import { dailyNeedMilli, DEFAULT_STORES_RULES, storesStep } from '../src/forces/
 import { networkOf } from '../src/infrastructure/infrastructure.ts';
 import { createIdMint } from '../src/messages/transit.ts';
 import type { State } from '../src/root-state.ts';
-import { indexWorld as indexComms } from '../src/standin/world.ts';
 import { createTelemetry } from '../src/telemetry.ts';
 import type { TickContext } from '../src/tick/context.ts';
 import { storesPhase } from '../src/tick/forces.ts';
 import { MAP_MECHANICS, mapPhase } from '../src/tick/map.ts';
 import { createState } from '../src/tick/setup.ts';
-import { commsFixture } from './support/comms-fixture.ts';
+import { ctxFor as ctxIn, worldOf } from './support/tick-context.ts';
 import { B, block, forcesIndex, forcesStart } from './support/forces-fixture.ts';
 import { depot, E, edge, F, region } from './support/map-fixture.ts';
 
@@ -41,18 +40,17 @@ const BLOCKS = [
   block('unknown_stores', { department: 'a_war', region: 'a2', strength: 500, storesDays: null }),
   block('neutral', { department: 'neutral_gov', region: 'a2', strength: 500, storesDays: 10 }),
 ];
-const WORLD = indexComms(commsFixture(), MAP);
 const START = forcesStart(CONTROL, [], BLOCKS);
 
 function ctxFor(state: State, day: number): TickContext {
-  return { world: WORLD, day, seed: state.gameSeed, mint: createIdMint(state), telemetry: createTelemetry([...MAP_MECHANICS]), outbox: [], rejections: [], events: [], proposals: [], prices: [], decisionPoints: [], controlDeltas: [], infrastructureDeltas: [], mapEvents: [] };
+  return ctxIn(worldOf(MAP, START), state, day, MAP_MECHANICS);
 }
 
 const supplyOf = (s: State, month = 6) => deriveMap(MAP, { control: s.regionControl, month, network: networkOf(s) }).supply;
 const stores = (s: State, id: string) => s.forceBlockStates[B(id)]!.fbStoresMilli;
 
 describe('stores on hand: eaten daily, refilled by supply (FOUNDATION section 4)', () => {
-  const s0 = createState(WORLD, { seed: 1, start: START });
+  const s0 = createState(worldOf(MAP, START), { seed: 1 });
 
   it('needs men over the capacity unit, a day at a time', () => {
     expect(dailyNeedMilli(DEFAULT_STORES_RULES, s0, B('line'))).toBe(500);
@@ -82,7 +80,7 @@ describe('stores on hand: eaten daily, refilled by supply (FOUNDATION section 4)
 describe('stores falling in a pocket, and refilling when it is relieved', () => {
   it('a garrison cut off eats a day a day and crosses the low threshold; relief refills it (positive control: on its line it refills)', () => {
     const cache = createDerivedMapCache();
-    let state = createState(WORLD, { seed: 1, start: START });
+    let state = createState(worldOf(MAP, START), { seed: 1 });
     // Day 1: raiders cut the rail; a2 and mid are a pocket from today.
     const cut = ctxFor(state, 1);
     cut.infrastructureDeltas.push({ change: 'edge', edge: RAIL, deltaPermille: -1000, cause: 'raids' });
