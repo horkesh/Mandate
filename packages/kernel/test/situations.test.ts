@@ -128,6 +128,23 @@ describe('situations fire on their causes and surface on what the seat knows (00
     expect(held(rec.sitSurfacedDay!).some((r) => r.knownReceivedDay === rec.sitSurfacedDay)).toBe(true);
     expect(held(rec.sitSurfacedDay! - 1).every((r) => r.knownReceivedDay < 21)).toBe(true);
   });
+  it('runs an option’s clock from when the principal is told, not from the event (gate re-check N6)', () => {
+    const pattern = { reportType: 'wire-dispatch', subtype: null, subjectKind: 'post', subjectId: 'a_army', claimKind: 'goal-status', token: null } as const;
+    // Fires on day 21; surfaces when the next army dispatch arrives, a day or more later.
+    const sit = decision('heard', { event: { dayAtLeast: 21 }, knowledge: { knows: pattern }, options: [option('act', 1, { expiresWhen: { clockAtLeast: 1 } })], historicalDefault: { unsourced: 'test' }, resurfaceOn: [] });
+    const { world, state } = setup([sit]);
+    const run = days(world, state, 45);
+    const rec = run.state.situationStates[S('heard')]!;
+    expect(rec.sitFiredDay).toBe(21);
+    expect(rec.sitSurfacedDay).toBeGreaterThan(21);
+    // On the day he hears, the option is still open: counted from the event it would already have expired.
+    const onTheDay = run.results[rec.sitSurfacedDay! - 1]!.state.situationStates[S('heard')]!;
+    expect([onTheDay.sitStatus, onTheDay.sitOpenOptions]).toEqual(['open', ['act']]);
+    // The control: a day after he heard, it expires and the decision lapses.
+    expect([rec.sitStatus, rec.sitDecidedDay]).toEqual(['lapsed', rec.sitSurfacedDay! + 1]);
+    expect(run.points).toEqual(['situation-surfaced:heard', 'situation-lapsed:heard']);
+  });
+
   it('passes the staff line to the next author when the first is a subject, and records none when no author is available', () => {
     const fallsThrough = decision('subject', { subjects: [P('a_sec')], staffLine: { authors: [POST('a_office'), POST('a_filter')], recommends: ['hold'], reasons: [], confidence: 500 } });
     const nobody = decision('nobody', { subjects: [P('a_sec')], staffLine: { authors: [POST('a_office')], recommends: ['hold'], reasons: [], confidence: 500 } });
@@ -207,6 +224,8 @@ describe('deciding: the principal, a history default, several options, waiting, 
     expect(rec.sitStatus).toBe('open');
     expect(rec.sitOpenOptions).toEqual(['now', 'never']);
     expect(run.points).toContain('situation-resurfaced:wait');
+    // Reopening keeps the day it first surfaced, so its clock does not restart (gate re-check N6).
+    expect(rec.sitSurfacedDay).toBe(1);
   });
 
   it('the guard holds each condition the principal must know to its allow-list (the lead’s rulings on S2 and S10)', () => {

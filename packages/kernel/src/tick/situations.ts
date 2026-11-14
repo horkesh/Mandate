@@ -283,7 +283,8 @@ export function runSituations(ctx: TickContext, start: State): State {
         if (surfaced) point(ctx, def, 'situation-lapsed');
         continue;
       }
-      const clock = ctx.day - record.sitFiredDay;
+      // The clock runs from when he was told (gate re-check N6); before that no threshold is crossed.
+      const clock = record.sitSurfacedDay === null ? -1 : ctx.day - record.sitSurfacedDay;
       for (const t of def.resurfaceOn) {
         if (clock >= t && !state.situationStates[def.id]!.sitResurfaced.includes(t)) {
           state = markResurfaced(state, def.id, t);
@@ -303,7 +304,7 @@ export function runSituations(ctx: TickContext, start: State): State {
       // News the principal had before he chose to wait does not end the wait.
       if (holds(waitsOn, conditionContext(ctx, state, def, record.sitDecidedDay ?? record.sitFiredDay))) {
         // Every option already taken stays spent, as the live step treats it (standing review N3).
-        state = reopenSituation(state, def.id, ctx.day, openOptionsNow(ctx, state, def, record.sitChosen));
+        state = reopenSituation(state, def.id, openOptionsNow(ctx, state, def, record.sitChosen));
         fire(ctx, 'situations.resurfaced');
         point(ctx, def, 'situation-resurfaced');
       }

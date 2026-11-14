@@ -24,13 +24,13 @@ export type DecidedBy = (typeof DECIDED_BY)[number];
 
 export interface SituationRecord {
   readonly sitStatus: SituationStatus;
-  /** The day its event held: its clock starts here. */
+  /** The day its event held: the truth's day, which no knowledge condition looks before. */
   readonly sitFiredDay: number;
   /** The day news reached the deciding seat (its knowledge condition held); null until then. */
   readonly sitSurfacedDay: number | null;
   /** Options open now, in display order (appeared and not expired). */
   readonly sitOpenOptions: readonly string[];
-  /** Clock thresholds already crossed (each ends a turn once). */
+  /** Clock thresholds already crossed (each ends a turn once). The clock runs from `sitSurfacedDay`. */
   readonly sitResurfaced: readonly number[];
   readonly sitDecidedDay: number | null;
   /** Options taken, in display order; empty for inaction or a lapse. While a reopened decision is pending, the spent waiting option. */
@@ -113,9 +113,10 @@ export function recordDecision(state: State, id: SituationId, day: number, chose
 }
 
 /** A waiting situation's condition held: it opens again with a reduced set of options (0046). */
-export function reopenSituation(state: State, id: SituationId, day: number, openOptions: readonly string[]): State {
+export function reopenSituation(state: State, id: SituationId, openOptions: readonly string[]): State {
   // The waiting option stays in sitChosen as spent, so it is never offered again; the decision is pending once more.
-  return put(state, id, { ...existing(state, id), sitStatus: 'open', sitOpenOptions: openOptions, sitWaitingOn: null, sitSurfacedDay: day, sitDelegate: null, sitDecidedDay: null, sitDecidedBy: null });
+  // It keeps the day it first surfaced, so its clock does not restart (gate re-check N6).
+  return put(state, id, { ...existing(state, id), sitStatus: 'open', sitOpenOptions: openOptions, sitWaitingOn: null, sitDelegate: null, sitDecidedDay: null, sitDecidedBy: null });
 }
 
 /** Set and clear chain flags; a flag records the day it was set. */

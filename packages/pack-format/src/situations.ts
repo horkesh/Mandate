@@ -357,7 +357,7 @@ export function validateSituations(items: readonly { readonly file: string; read
     // Conditions.
     for (const { at, condition } of phase0.conditionsOf(def)) {
       walk(condition, (c) => {
-        if ('clockAtLeast' in c && (at === 'event' || at === 'knowledge')) err('situation-clock', at, 'the clock is read before it starts', 'clockAtLeast only in an option condition: the clock starts when the event holds');
+        if ('clockAtLeast' in c && (at === 'event' || at === 'knowledge')) err('situation-clock', at, 'the clock is read before it starts', 'clockAtLeast only in an option condition: the clock starts when the situation surfaces');
         if ('fired' in c || 'decided' in c) {
           const id = 'fired' in c ? c.fired : c.decided;
           const other = byId.get(id);

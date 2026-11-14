@@ -62,7 +62,7 @@ export type Condition =
   | { readonly goal: { readonly post: PostId; readonly kind: GoalKind } }
   /** A post's headquarters stands in a region (stand-in until lane 0.5's forces). */
   | { readonly headquartersAt: { readonly post: PostId; readonly region: RegionId } }
-  /** Days since this situation fired (its clock): for `expiresWhen`, `appearsWhen` and `waitsOn`. */
+  /** Days since this situation surfaced to the principal (its clock; gate re-check N6): for `expiresWhen`, `appearsWhen` and `waitsOn`. */
   | { readonly clockAtLeast: number };
 
 /**
@@ -217,7 +217,7 @@ export interface SituationDef {
   readonly historicalDefault: HistoricalDefault | null;
   readonly staffLine: StaffLine | null;
   readonly delegableTo: readonly PostId[];
-  /** Clock days at which an open decision comes back to the seat and ends the turn (0040). */
+  /** Clock days (since it surfaced) at which an open decision comes back to the seat and ends the turn (0040). */
   readonly resurfaceOn: readonly number[];
   /** A notice's effects, applied when it fires. Empty for a decision. */
   readonly effects: readonly Effect[];

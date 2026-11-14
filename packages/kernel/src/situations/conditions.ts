@@ -58,7 +58,9 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
   // clockAtLeast
   if (ctx.situation === null) return false;
   const r = ctx.state.situationStates[ctx.situation];
-  return r !== undefined && ctx.day - r.sitFiredDay >= c.clockAtLeast;
+  // The clock runs from when the principal was told, never from the event (gate re-check N6): an option's timing must
+  // not tell him when the thing happened, nor lapse a decision he has not seen.
+  return r !== undefined && r.sitSurfacedDay !== null && ctx.day - r.sitSurfacedDay >= c.clockAtLeast;
 }
 
 /** The predicate at the top of a condition. */
