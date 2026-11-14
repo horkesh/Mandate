@@ -22,24 +22,28 @@ import { fire, hop, sendReport, whereIs, type RejectionReason, type TickContext 
 
 const ORDER_ROUTES_ALLOWED = ['courier', 'in-person', 'mail', 'special-messenger', 'wire'] as const;
 
-/** Validate and send an order. Returns the reason for a rejection, or null when it is on its way. */
+/**
+ * Validate and send an order. Returns the reason for a rejection, or null when it is on its way.
+ *
+ * Only a principal sends orders (review F3): a seat may make a principal's
+ * choices or choose among options the kernel judged consistent, never issue
+ * commands of its own (decision 0015, FOUNDATION section 8). A commander who
+ * should order his subordinates needs a menu the kernel builds and judges.
+ */
 export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: OrderCommand): RejectionReason | null {
   const { world } = ctx;
   const assignment = state.seatAssignments[seat];
   if (assignment === undefined) return 'unknown_seat';
   const issuer = world.person(assignment.seatPerson);
+  if (world.faction(issuer.faction).principal !== issuer.id) return 'not_a_principal';
   if (!world.postIds.includes(cmd.to)) return 'unknown_post';
   const target = world.post(cmd.to);
   if (target.kind !== 'field' || target.faction !== issuer.faction) return 'not_field_post';
   if (target.holder === null) return 'vacant_post';
   if (cmd.goal === 'advance' ? cmd.region === null || !world.regionIds.includes(cmd.region) : cmd.region !== null) return 'bad_goal';
   if (!(ORDER_ROUTES_ALLOWED as readonly string[]).includes(cmd.route)) return 'route_unavailable';
-  const isPrincipal = world.faction(issuer.faction).principal === issuer.id;
-  const issuerPost = world.postOf(issuer.id);
-  const top = isPrincipal ? null : issuerPost?.id ?? null;
-  const chain = world.chainBelow(top, target.id);
-  // `chainBelow` stops at `top`; if it climbed to the root without meeting him, he is not above the target.
-  if (!isPrincipal && (top === null || top === target.id || world.chainBelow(null, target.id).indexOf(top) === -1)) return 'not_in_chain';
+  // The whole chain of posts above the target relays a principal's order.
+  const chain = world.chainBelow(null, target.id);
   // Vacant relay posts cannot relay: the order skips them.
   const relays = chain.slice(0, -1).filter((p) => world.post(p).holder !== null);
   const hops: Hop[] = [...(cmd.bypass ? [] : relays), target.id].map((p, i, all) => ({

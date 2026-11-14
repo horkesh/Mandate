@@ -98,23 +98,43 @@ describe('orders through chains (0040)', () => {
     expect(state.standingGoals[POST('a_army')]!.standingViaChain).toBe(true);
   });
 
-  it('resolves conflicting orders by keeping the chain’s, and reports which it obeyed', () => {
+  describe('conflicting orders: one down the chain, one around it (the office holds what it relays)', () => {
+    const world = indexedFixture({ persons: { a_sec: { values: ['duty'], regard: -500 } } });
+    function play(script: Record<number, LogEntry['command']>, days: number) {
+      let state = createState(world, { seed: 5 });
+      const results: TickResult[] = [];
+      for (let d = 1; d <= days; d++) {
+        const r = tick(world, state, script[d] ? [{ day: d, seat: lead, command: script[d]! }] : [], { freeze: true });
+        results.push(r);
+        state = r.state;
+      }
+      const tokens = knowledgeOf(state, lead).knownReports.flatMap((r) => r.knownBody.reportClaims.filter((c) => c.claimKind === 'order-obeyed').map((c) => c.claimToken));
+      return { state, results, tokens };
+    }
+
+    it('keeps the chain’s order against a later one sent around it, and says so', () => {
+      // The chain order lands on day 5 (held two days by the office); the bypass on day 7.
+      const { state, results, tokens } = play({ 1: order('a_army', 'advance', 'b_front'), 6: order('a_army', 'hold', null, 'special-messenger', true) }, 12);
+      expect(state.standingGoals[POST('a_army')]!.standingSpec).toEqual({ goalSpecKind: 'advance', goalSpecRegion: R('b_front') });
+      expect(results.flatMap((r) => r.events).filter((e) => e.event === 'conflict')).toHaveLength(1);
+      expect(results.flatMap((r) => r.decisionPoints).map((d) => d.point)).toContain('order-conflict');
+      expect(tokens).toEqual(['new', 'conflict-kept']);
+    });
+
+    it('lets a slow chain order supersede a quicker one sent around it, and says so', () => {
+      // The bypass lands on day 3; the chain order, written first, on day 5.
+      const { state, tokens } = play({ 1: order('a_army', 'advance', 'b_front'), 2: order('a_army', 'hold', null, 'special-messenger', true) }, 12);
+      expect(state.standingGoals[POST('a_army')]!.standingSpec).toEqual({ goalSpecKind: 'advance', goalSpecRegion: R('b_front') });
+      expect(tokens).toEqual(['new', 'conflict-new']);
+    });
+  });
+
+  it('accepts orders only from a principal (review F3, positive control: the office holder’s order is refused)', () => {
     const world = indexedFixture();
     const sec = seatIdFor(P('a_sec'));
-    let state = createState(world, { seed: 5 });
-    const results: TickResult[] = [];
-    const day = (entries: LogEntry[]) => {
-      const r = tick(world, state, entries, { freeze: true });
-      results.push(r);
-      state = r.state;
-    };
-    day([{ day: 1, seat: sec, command: order('a_army', 'advance', 'b_front') }]);
-    day([]);
-    day([{ day: 3, seat: lead, command: order('a_army', 'hold', null, 'special-messenger', true) }]);
-    for (let i = 0; i < 6; i++) day([]);
-    expect(state.standingGoals[POST('a_army')]!.standingSpec).toEqual({ goalSpecKind: 'advance', goalSpecRegion: R('b_front') });
-    expect(results.flatMap((r) => r.events).filter((e) => e.event === 'conflict')).toHaveLength(1);
-    expect(results.flatMap((r) => r.decisionPoints).map((d) => d.point)).toContain('order-conflict');
+    const r = tick(world, createState(world, { seed: 5 }), [{ day: 1, seat: sec, command: order('a_army', 'advance', 'b_cap') }]);
+    expect(r.rejections.map((x) => x.reason)).toEqual(['not_a_principal']);
+    expect(r.state.messagesInTransit.filter((m) => m.msgOrder !== null)).toEqual([]);
   });
 
   it('rejects commands the kernel cannot carry, with a reason each', () => {
@@ -129,7 +149,7 @@ describe('orders through chains (0040)', () => {
       { day: 1, seat: lead, command: { cmd: 'choose', request: 'standing:a_army:1', option: 'hold' } },
       { day: 2, seat: lead, command: order('a_army', 'hold', null) },
     ]);
-    expect(r.rejections.map((x) => x.reason)).toEqual(['unknown_post', 'not_field_post', 'not_in_chain', 'bad_goal', 'route_unavailable', 'no_such_request', 'wrong_day']);
+    expect(r.rejections.map((x) => x.reason)).toEqual(['unknown_post', 'not_field_post', 'not_a_principal', 'bad_goal', 'route_unavailable', 'no_such_request', 'wrong_day']);
   });
 });
 

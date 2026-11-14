@@ -33,10 +33,14 @@ function sameGoal(a: GoalSpec, b: GoalSpec): boolean {
 }
 
 /**
- * An order reaches the holder of `post`. A newer order from his own chain
- * supersedes what he had (0040). An order that went around his chain, against
- * a different chain order less than `CONFLICT_WINDOW_DAYS` old, conflicts: he
- * keeps the chain's order (stand-in for resolving by his compliance) and says so.
+ * An order reaches the holder of `post`. Two orders conflict (0040) when they
+ * differ, the one he holds is less than `CONFLICT_WINDOW_DAYS` old, and one
+ * came down his chain while the other went around it: with relays holding
+ * orders, they arrive out of the order they were written. He resolves it by
+ * his department (stand-in for resolving by his compliance): the chain's order
+ * stands against one that went around it, and a chain order supersedes one
+ * that went around (0040: a newer order from his own department supersedes).
+ * Either way he says which he obeyed.
  */
 export function receiveOrder(
   state: State,
@@ -47,10 +51,9 @@ export function receiveOrder(
   const current = state.standingGoals[post];
   if (current === undefined) throw new RangeError(`post ${post} has no standing goal to replace`);
   const differs = !sameGoal(current.standingSpec, order.goal);
-  const conflict = differs && current.standingOrder !== null && current.standingIssuer !== order.issuer;
-  if (conflict && !order.viaChain && current.standingViaChain && day - current.standingSetDay < CONFLICT_WINDOW_DAYS) {
-    return { state, outcome: { obeyed: 'kept', conflict: true } };
-  }
+  const recent = current.standingOrder !== null && day - current.standingSetDay < CONFLICT_WINDOW_DAYS;
+  const conflict = differs && recent && current.standingViaChain !== order.viaChain;
+  if (conflict && !order.viaChain) return { state, outcome: { obeyed: 'kept', conflict: true } };
   const next: StandingGoal = { standingSpec: order.goal, standingIssuer: order.issuer, standingViaChain: order.viaChain, standingSetDay: day, standingOrder: order.id };
   return { state: { ...state, standingGoals: { ...state.standingGoals, [post]: next } }, outcome: { obeyed: 'new', conflict } };
 }
