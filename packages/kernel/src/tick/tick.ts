@@ -30,6 +30,7 @@ import { fire, type DecisionPoint, type MapEvent, type Price, type Proposal, typ
 import { deliverDue } from './deliver.ts';
 import { createFreezeLedger, deepFreeze, type FreezeLedger } from './freeze.ts';
 import { generateReports } from './generate.ts';
+import { contestPhase, storesPhase } from './forces.ts';
 import { mapBarrier, mapPhase } from './map.ts';
 import { issueOrder } from './orders.ts';
 import { decideCommand, delegateCommand, runSituations, SITUATION_MECHANICS } from './situations.ts';
@@ -153,9 +154,15 @@ export function tick(world: IndexedWorld, start: State, entries: readonly LogEnt
   // 3. STAND-IN standing goals.
   state = freeze(applyStanding(ctx, state, menus, choices));
 
+  // 3b. The simple control contest and occupation (lane 0.5; only with a map): deltas for control, retreats now.
+  state = freeze(contestPhase(ctx, state).state);
+
   // 4. Control changes and the derived map.
   const mapped = mapPhase(ctx, state, options.mapCache ?? createDerivedMapCache());
   state = freeze(mapped.state);
+
+  // 4a. Stores on hand fall or refill from today's supply trace (lane 0.5; only with a map).
+  state = freeze(storesPhase(ctx, state, mapped.derived));
 
   // 4b. Situations, after the map so a cause sees today's control: fire on their causes, surface on what the seat
   // knows, stay live, take history defaults (lane 0.7).

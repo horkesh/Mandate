@@ -21,9 +21,10 @@ import type { State } from '../root-state.ts';
 import { applyInfrastructure, networkOf } from '../infrastructure/infrastructure.ts';
 import { dateOfDay } from '../world/calendar.ts';
 import { fire, type MapEvent, type TickContext } from './context.ts';
+import { FORCES_MECHANICS } from './forces.ts';
 
 /** Every mechanic the map phases count (FOUNDATION section 11.5). */
-export const MAP_MECHANICS = ['control.changed', 'control.threshold_crossed', 'infrastructure.changed', 'map.pocket_closed', 'map.pocket_lost', 'map.pocket_relieved', 'map.recomputed'] as const;
+export const MAP_MECHANICS = ['control.changed', 'control.threshold_crossed', 'infrastructure.changed', 'map.pocket_closed', 'map.pocket_lost', 'map.pocket_relieved', 'map.recomputed', ...FORCES_MECHANICS] as const;
 
 /** The month of a day, from the State's calendar. */
 export function monthOf(state: State, day: number): number {

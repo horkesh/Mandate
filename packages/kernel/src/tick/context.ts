@@ -6,6 +6,8 @@
  * identically on replay.
  */
 import type { ControlChange, ControlDelta, ThresholdCrossing } from '../control/control.ts';
+import type { ContestRecord, Retreat } from '../combat/contest.ts';
+import type { StoresCrossing } from '../forces/stores.ts';
 import type { InfrastructureChange, InfrastructureDelta } from '../infrastructure/infrastructure.ts';
 import type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import type { Cut } from '../supply/supply.ts';
@@ -93,6 +95,12 @@ export type MapEvent =
   | { readonly event: 'threshold_crossed'; readonly crossing: ThresholdCrossing }
   /** The network's condition changed (lane 0.5): an edge or depot damaged or repaired, an edge obstructed or cleared. */
   | { readonly event: 'network_changed'; readonly change: InfrastructureChange }
+  /** A block's stores crossed the low threshold (lane 0.5). The decision point is the garrison's report of it, not this. */
+  | { readonly event: 'stores_crossed'; readonly crossing: StoresCrossing }
+  /** A contest or occupation in a region today, with each side's men (lane 0.5). */
+  | { readonly event: 'contest'; readonly record: ContestRecord }
+  /** A side falling back from a contested region, or unable to (lane 0.5). */
+  | { readonly event: 'retreat'; readonly retreat: Retreat }
   /** A pocket closed (regions newly cut off), relieved (a path reaches them again) or lost (no longer traced: overrun or abandoned). The cut is yesterday's for a lost pocket. */
   | { readonly event: 'pocket_closed' | 'pocket_relieved' | 'pocket_lost'; readonly faction: FactionId; readonly pocket: string; readonly regions: readonly RegionId[]; readonly cut: Cut | null };
 

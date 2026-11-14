@@ -171,6 +171,32 @@ export function startLeg(ground: MarchGround, state: State, blocks: readonly For
   return { ...state, forceLocations: next };
 }
 
+/** A side's blocks falling back from a region, as the contest proposes it (`combat/contest.ts`). */
+export interface RetreatMove {
+  readonly to: RegionId | null;
+  readonly blocks: readonly ForceBlockId[];
+}
+
+/**
+ * Apply retreats: each listed block stands in its retreat region from today,
+ * off any leg. A retreat with nowhere to go moves no one. Ships and troops
+ * aboard are never listed by the contest; any listed are refused.
+ */
+export function applyRetreats(state: State, retreats: readonly RetreatMove[], day: number): State {
+  const moving = retreats.filter((r) => r.to !== null);
+  if (moving.length === 0) return state;
+  const next: Record<ForceBlockId, ForceLocation> = { ...state.forceLocations };
+  for (const r of moving) {
+    for (const id of r.blocks) {
+      const loc = state.forceLocations[id];
+      if (loc === undefined) throw new MovementError([`unknown force block ${id}`]);
+      if (loc.locAboard !== null) throw new MovementError([`${id} is aboard ${loc.locAboard} and cannot retreat on its own`]);
+      next[id] = { locRegion: r.to!, locAboard: null, locSinceDay: day, locMarch: null };
+    }
+  }
+  return { ...state, forceLocations: next };
+}
+
 /** A block reaching the end of a leg today. */
 export interface Arrival {
   readonly block: ForceBlockId;

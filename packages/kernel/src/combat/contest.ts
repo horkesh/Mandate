@@ -1,0 +1,162 @@
+/**
+ * A simple deterministic control contest, and occupation (FOUNDATION section
+ * 12, lane 0.5; decisions 0019, 0054, 0055). Pure: it reads State and proposes
+ * control deltas (to `control`) and retreats (to `movement`); it writes
+ * nothing itself. Battles with losses, breakdowns and reports are Phase 1
+ * `combat`; this is the stand-in that lets ground change hands in Phase 0.
+ *
+ * The model, stated so it can be checked:
+ * - **Who is in a region.** Each side's land blocks standing there and not on
+ *   a leg; ships, and troops aboard, hold no ground. A side's strength is its
+ *   blocks' known men (an unknown strength counts as none, and is said so).
+ * - **Occupation.** One side alone in a land region or key point that some side
+ *   already holds a share of gains `occupyPermille` a day (cause `occupation`;
+ *   the gain comes out of the others' shares). Ground nobody controls is a
+ *   neutral government's, and passing through it takes nothing (0055): taking
+ *   it is a situation's work.
+ * - **Contest.** Where two or more sides stand, the strongest (most men; a tie
+ *   changes nothing) gains `contestPermille` times its margin over the next,
+ *   `(s1 - s2) / s1`, a day (cause `combat`).
+ * - **Retreat** (0019). A side whose share there, after today's deltas, is
+ *   below the pack's retreat threshold falls back to the neighbouring land
+ *   region, across an edge land troops may use this month, where its share is
+ *   at or above that threshold: the one where it holds most, ties by region id.
+ *   With nowhere to go it stays, and that is reported.
+ */
+import { strictCompare } from '../compare.ts';
+import { applyControl, type ControlDelta } from '../control/control.ts';
+import type { EdgeId, FactionId, ForceBlockId, RegionId } from '../ids.ts';
+import { factionOfBlock, isNaval } from '../forces/forces.ts';
+import { marchBar, type MarchGround } from '../movement/march.ts';
+import type { State } from '../root-state.ts';
+import { edgeLeg } from '../supply/supply.ts';
+import { otherEnd } from '../world/index.ts';
+
+/** DESIGN PARAMETERS until the pack format carries them (listed for the lead). */
+export interface ContestRules {
+  /** Control a side alone in a held region gains a day, permille. */
+  readonly occupyPermille: number;
+  /** Control the stronger side gains a day at an overwhelming margin, permille. */
+  readonly contestPermille: number;
+}
+
+export const DEFAULT_CONTEST_RULES: ContestRules = Object.freeze({ occupyPermille: 100, contestPermille: 200 });
+
+/** One side's presence in a region (hard rule 6: the terms behind a contest). */
+export interface Presence {
+  readonly faction: FactionId;
+  readonly men: number;
+  readonly blocks: readonly ForceBlockId[];
+  /** Blocks whose strength no source gives, counted as none. */
+  readonly unknown: readonly ForceBlockId[];
+}
+
+export interface ContestRecord {
+  readonly region: RegionId;
+  readonly kind: 'occupation' | 'contest';
+  /** Every side present, strongest first (ties by faction id). */
+  readonly sides: readonly Presence[];
+  /** The side that gains, or null for a tie. */
+  readonly gainer: FactionId | null;
+  readonly deltaPermille: number;
+}
+
+export interface Retreat {
+  readonly faction: FactionId;
+  readonly from: RegionId;
+  /** Where they fall back to, or null when nowhere passes the threshold. */
+  readonly to: RegionId | null;
+  readonly edge: EdgeId | null;
+  readonly blocks: readonly ForceBlockId[];
+  /** The side's share in `from` after today's deltas, which fell below the threshold. */
+  readonly sharePermille: number;
+}
+
+export interface ContestResult {
+  readonly records: readonly ContestRecord[];
+  readonly deltas: readonly ControlDelta[];
+  readonly retreats: readonly Retreat[];
+}
+
+/** Each side's land troops standing (not marching, not aboard) in each region, by region then strength. */
+export function presenceByRegion(ground: MarchGround, state: State): Map<RegionId, Presence[]> {
+  const raw = new Map<RegionId, Map<FactionId, { men: number; blocks: ForceBlockId[]; unknown: ForceBlockId[] }>>();
+  for (const id of (Object.keys(state.forceLocations) as ForceBlockId[]).sort(strictCompare)) {
+    const loc = state.forceLocations[id]!;
+    if (loc.locMarch !== null || loc.locAboard !== null) continue;
+    const kind = ground.map.regions.get(loc.locRegion)!.kind;
+    if (kind !== 'land' && kind !== 'key_point') continue;
+    if (isNaval(ground.map, state, id)) continue;
+    const faction = factionOfBlock(ground.map, state, id);
+    if (faction === null) continue;
+    const byFaction = raw.get(loc.locRegion) ?? new Map();
+    raw.set(loc.locRegion, byFaction);
+    const p = byFaction.get(faction) ?? { men: 0, blocks: [], unknown: [] };
+    byFaction.set(faction, p);
+    const men = state.forceBlockStates[id]!.fbStrength;
+    p.blocks.push(id);
+    if (men === null) p.unknown.push(id);
+    else p.men += men;
+  }
+  const out = new Map<RegionId, Presence[]>();
+  for (const region of [...raw.keys()].sort(strictCompare)) {
+    const sides = [...raw.get(region)!].map(([faction, p]) => ({ faction, ...p })).sort((a, b) => b.men - a.men || strictCompare(a.faction, b.faction));
+    out.set(region, sides);
+  }
+  return out;
+}
+
+/** Today's contests and occupations, with the control deltas and retreats they propose. */
+export function contest(ground: MarchGround, state: State, rules: ContestRules = DEFAULT_CONTEST_RULES): ContestResult {
+  const records: ContestRecord[] = [];
+  const deltas: ControlDelta[] = [];
+  const presence = presenceByRegion(ground, state);
+  for (const [region, sides] of presence) {
+    const shares = state.regionControl[region] ?? {};
+    if (sides.length === 1) {
+      const side = sides[0]!;
+      // Neutral ground (nobody holds a share) is passed, never taken (0055).
+      if (Object.keys(shares).length === 0) continue;
+      const have = shares[side.faction] ?? 0;
+      if (have >= 1000) continue;
+      const delta = Math.min(rules.occupyPermille, 1000 - have);
+      records.push({ region, kind: 'occupation', sides, gainer: side.faction, deltaPermille: delta });
+      deltas.push({ region, faction: side.faction, deltaPermille: delta, cause: 'occupation' });
+      continue;
+    }
+    const [first, second] = [sides[0]!, sides[1]!];
+    if (first.men === second.men) {
+      records.push({ region, kind: 'contest', sides, gainer: null, deltaPermille: 0 });
+      continue;
+    }
+    const delta = Math.trunc((rules.contestPermille * (first.men - second.men)) / first.men);
+    records.push({ region, kind: 'contest', sides, gainer: first.faction, deltaPermille: delta });
+    if (delta > 0) deltas.push({ region, faction: first.faction, deltaPermille: delta, cause: 'combat' });
+  }
+  return { records, deltas, retreats: retreatsAfter(ground, state, presence, deltas) };
+}
+
+function retreatsAfter(ground: MarchGround, state: State, presence: ReadonlyMap<RegionId, readonly Presence[]>, deltas: readonly ControlDelta[]): Retreat[] {
+  const threshold = ground.map.world.rules.retreatControlPermille;
+  // Shares after today's deltas, exactly as `control` will apply them (reused, never copied: FOUNDATION 11.11).
+  const control = applyControl(ground.map, state, deltas).state.regionControl;
+  const retreats: Retreat[] = [];
+  for (const [region, sides] of presence) {
+    if (sides.length < 2) continue;
+    for (const side of sides) {
+      const share = control[region]?.[side.faction] ?? 0;
+      if (share >= threshold) continue;
+      let best: { to: RegionId; edge: EdgeId; share: number } | null = null;
+      for (const edge of ground.map.edgesAt.get(region) ?? []) {
+        const to = otherEnd(edge, region);
+        const leg = edgeLeg(ground.map, edge, region, ground.month, ground.network);
+        if (marchBar(ground, leg, side.faction, false) !== null) continue;
+        const there = state.regionControl[to]?.[side.faction] ?? 0;
+        if (there < threshold) continue;
+        if (best === null || there > best.share || (there === best.share && strictCompare(to, best.to) < 0)) best = { to, edge: edge.id, share: there };
+      }
+      retreats.push({ faction: side.faction, from: region, to: best?.to ?? null, edge: best?.edge ?? null, blocks: side.blocks, sharePermille: share });
+    }
+  }
+  return retreats;
+}
