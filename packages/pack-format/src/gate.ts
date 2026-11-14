@@ -451,20 +451,22 @@ export function checkGate(
       for (const { at, effect } of effects) {
         if (!('propose' in effect)) continue;
         if (effect.propose.side === null) err('gate-acting-side', `${at}.propose.side`, 'an effect of an atrocity-class item names no side', 'the side whose measure it moves (E7)');
-        else if (effect.propose.side === tag.actingSide && effect.propose.delta > 0) err('gate-sign-rule', at, 'atrocity-class conduct helps the side that acted', 'a non-positive sign on the acting side’s measures, whoever appointed the actor (E7)');
-        else if (tag.actingSide !== null && helpsActor(effect, tag.actingSide)) err('gate-sign-rule', at, 'atrocity-class conduct lowers the other side’s measure, which helps the side that acted', 'a non-negative sign on every other side’s measures: outrage may raise the victim’s will, nothing may lower it (E7, the lead’s ruling on N2)');
+        else if (tag.actingSide !== null) {
+          const wrong = atrocityMove(effect, tag.actingSide);
+          if (wrong !== null) err('gate-sign-rule', at, `atrocity-class conduct ${wrong}`, 'only a fall in the acting side’s own measures, whoever appointed the actor; every other side’s stay unchanged (E7, D5)');
+        }
       }
     }
 
-    // D5 (review S5): no effect conditioned on an atrocity-class item (its firing, its decision, a flag it sets) helps its acting side.
+    // D5 (review S5; the lead's ruling on gate re-check G1): an effect conditioned on an atrocity-class item (its firing, its
+    // decision, a flag it sets) may only lower the acting side's measures. No seat gains anything from an atrocity (0046).
     const referenced = new Set<string>([...phase0.conditionsOf(def).flatMap((c) => phase0.situationsIn(c.condition)), ...(def.chain?.follows ? [def.chain.follows.situation] : [])]);
     const readFlags = new Set(phase0.conditionsOf(def).flatMap((c) => phase0.flagsIn(c.condition)));
     for (const a of atrocityItems) {
       if (a.id === def.id || !(referenced.has(a.id) || a.flags.some((f) => readFlags.has(f)))) continue;
       for (const { at, effect } of effects) {
-        if (helpsActor(effect, a.actingSide)) {
-          err('gate-atrocity-benefit', at, `this effect, conditioned on atrocity-class item "${a.id}", helps the side that acted`, 'no positive effect for any seat conditioned on atrocity-class conduct (D5)');
-        }
+        const wrong = atrocityMove(effect, a.actingSide);
+        if (wrong !== null) err('gate-atrocity-benefit', at, `this effect, conditioned on atrocity-class item "${a.id}", ${wrong}`, 'no positive effect for any seat, and no fall but the acting side’s, conditioned on atrocity-class conduct (D5)');
       }
     }
 
@@ -546,15 +548,16 @@ function decidedWith(c: phase0.Condition, situation: string, option: string): bo
 }
 
 /**
- * Whether an effect helps `actingSide` (E7, D5, and the lead's ruling on standing review N2): it raises one of that
- * side's measures, or lowers another side's (its will, control, supply, loyalty or any other). Every side measure a
- * pack proposes reads higher-is-better for its own side, the convention the sign rule has always assumed.
+ * What is wrong with an atrocity-class term's effect, or null (E7, D5; the lead's ruling on gate re-check G1, which
+ * corrects his ruling on N2). It may only lower the acting side's own measures: no seat gains anything from an
+ * atrocity (0046), so a rise on any side is refused, outrage included, and a fall on any other side helps the actor.
+ * Every side measure reads higher-is-better for its own side (the published schema states it for `propose.delta`).
  */
-export function helpsActor(effect: phase0.Effect, actingSide: string): boolean {
-  if (!('propose' in effect) || effect.propose.side === null) return false;
-  return effect.propose.side === actingSide ? effect.propose.delta > 0 : effect.propose.delta < 0;
+export function atrocityMove(effect: phase0.Effect, actingSide: string): string | null {
+  if (!('propose' in effect) || effect.propose.side === null || effect.propose.delta === 0) return null;
+  if (effect.propose.delta > 0) return effect.propose.side === actingSide ? 'raises the acting side’s measure' : 'raises another side’s measure';
+  return effect.propose.side === actingSide ? null : 'lowers another side’s measure, which helps the side that acted';
 }
-
 /**
  * The ship rule (A8; section 1), a release check rather than a loader rule:
  * no held topic's window may overlap a scenario the release ships, and no

@@ -340,10 +340,13 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     fires(editJson(sit('harbour_burning'), (s) => (s.gate.actingSide = null)), 'gate-acting-side');
     // Review S5: an effect with no side cannot slip past the sign rule.
     firesAt(editJson(sit('harbour_burning'), (s) => ((s.effects[0].propose.side = null), (s.effects[0].propose.delta = 10))), 'gate-acting-side', { at: 'effects[0].propose.side' });
-    // The lead's ruling on N2 (probe G6): lowering the victim side's will helps the actor and fails; raising it (outrage) is allowed.
-    firesAt(editJson(sit('harbour_burning'), (s) => (s.effects[0].propose.side = s.effects[0].propose.subject = 'north')), 'gate-sign-rule', { at: 'effects[0]', message: 'other side' });
+    // Probe G6, the lead's ruling on N2: lowering the victim side's will helps the actor and fails.
+    firesAt(editJson(sit('harbour_burning'), (s) => (s.effects[0].propose.side = s.effects[0].propose.subject = 'north')), 'gate-sign-rule', { at: 'effects[0]', message: 'lowers another side' });
+    // Gate re-check G1: raising it fails too. Outrage would make exposing people to an atrocity a lever (0046, D5).
     const outrage = editJson(sit('harbour_burning'), (s) => ((s.effects[0].propose.side = s.effects[0].propose.subject = 'north'), (s.effects[0].propose.delta = 50)));
-    expect(issues(outrage).filter((i) => i.kind === 'gate-sign-rule')).toEqual([]);
+    firesAt(outrage, 'gate-sign-rule', { at: 'effects[0]', message: 'raises another side' });
+    // The control: the unedited item lowers only the acting side's measures.
+    expect(issues().filter((i) => i.kind === 'gate-sign-rule')).toEqual([]);
   });
 
   it('D5 (review S5): no effect conditioned on atrocity-class conduct helps the side that acted', () => {
@@ -363,7 +366,13 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
       s.event = { all: [{ fired: 'harbour_burning' }, { decided: 'fen_crossing' }] };
       s.effects.push({ propose: { owner: 'politics', field: 'national-will', subject: 'north', delta: -15, reason: 'a-harbour-burned', side: 'north' } });
     });
-    firesAt(harm, 'gate-atrocity-benefit', { file: sit('sanctuary_act'), at: 'effects[1]' });
+    firesAt(harm, 'gate-atrocity-benefit', { file: sit('sanctuary_act'), at: 'effects[1]', message: 'lowers another side' });
+    // Gate re-check G1: a gain for the victim side, conditioned the same way, is refused as well.
+    const gain = editJson(sit('sanctuary_act'), (s) => {
+      s.event = { all: [{ fired: 'harbour_burning' }, { decided: 'fen_crossing' }] };
+      s.effects.push({ propose: { owner: 'politics', field: 'national-will', subject: 'north', delta: 15, reason: 'a-harbour-burned', side: 'north' } });
+    });
+    firesAt(gain, 'gate-atrocity-benefit', { file: sit('sanctuary_act'), at: 'effects[1]', message: 'raises another side' });
   });
 
   it('C3/F6, C4/F5, F2: anachronisms, forbidden wording by scope, and the proximity rule', () => {
