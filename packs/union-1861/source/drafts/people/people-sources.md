@@ -57,6 +57,17 @@ Not reached: the Navy Official Records, the Congressional Globe, Lincoln's *Coll
 
 Each group's table lists every key its rows use, with the full reference, its public-domain status and where it was read. "corpus/" names a file in the lane's downloaded corpus; Part 1 maps the main files to their archive.org or Gutenberg identifiers.
 
+**Compact key lists.** Several rows define many keys at once ("OR-I-2-p118, -p316, -p324, -p325"). The keys below are defined that way, and are restated here one by one so that a plain search finds them:
+
+| key | where defined | what it is |
+|---|---|---|
+| OR-II-1-p755 | `union_east`, row "OR-II-1-p752, -p754, -p755, -p818" | OR Series II vol. 1, p. 755: the continuation of Cameron's reply of 30 May 1861 to Butler (PD) |
+| OR-I-2-p325 | `union_east` second-pass table, row "OR-I-2-p118, -p316, -p324, -p325" | OR Series I vol. 2, p. 325: the end of McDowell's explanation of the causes of the Bull Run defeat (PD) |
+| JCCW-1863-2-p10, JCCW-1863-2-p11 | `union_east`, row "JCCW-1863-2-p5, -p9, -p10, -p11" | JCCW report 1863, Part II, pp. 10-11: Stone's orders and the mistaken "camp" (PD) |
+| JCCW-1863-2-p18 | `union_east` second-pass table, row "JCCW-1863-2-p17, -p18" | JCCW report 1863, Part II, pp. 17-18: Committee statement on the Ball's Bluff evidence and the arrest of Stone (PD) |
+
+**Diary labels.** Dated Welles keys (`WELLES-D-<date>`) are diary entries, labelled "own diary entry, contemporary" (or "rival diary entry" when the entry is about another person); they were published in 1911. Only `WELLES-D1-p*`, the first chapter, is "own memoir, written years later".
+
 ### Union cabinet, White House and War and Navy Department bureaus (`union_executive`)
 
 | key | full reference | public-domain status | where read |
@@ -1072,7 +1083,7 @@ Flags: [own memoir], [rival memoir: <author>], [single source], [contested]. NH 
 
 #### welles_gideon: Gideon Welles
 - register facts and context (dates, posts, ranks, prewar career, notes): CHASE-D-1862-09-01, CHASE-D-1862-09-02, WELLES-D1-p15
-- competence above [contested]: Bates called him honest and faithful but "not strong or quick" (BATES-D-1862-02-02) [single contemporary diary]. Appletons credits his energy with a fleet rising from 42 to 82 vessels by 4 Jul 1861, report not read (APPLETONS-welles_gideon) [secondary, retrospective]. Lincoln told him on 15 Aug 1862 that his choice was fixed on Welles for New England from the morning after the election (WELLES-D-1862-08-15) [own memoir].
+- competence above [contested]: Bates called him honest and faithful but "not strong or quick" (BATES-D-1862-02-02) [single contemporary diary]. Appletons credits his energy with a fleet rising from 42 to 82 vessels by 4 Jul 1861, report not read (APPLETONS-welles_gideon) [secondary, retrospective]. Lincoln told him on 15 Aug 1862 that his choice was fixed on Welles for New England from the morning after the election (WELLES-D-1862-08-15) [own diary entry, contemporary].
 - nerve above: Wrote on 29 Mar 1861 for sending ships and provisions to Sumter and strengthening Pickens (NH-3-p431); says he was calm on 9 Mar 1862 and Lincoln later credited him for it (WELLES-D1-p62) [own memoir, single source].
 - experience average: Chief of the Navy's Bureau of Provisions and Clothing 1846-49; state comptroller; no seagoing or fleet experience (APPLETONS-welles_gideon).
 - reputation_1861 average: Chosen as the New England member, not a naval figure (WELLES-D-1862-08-15; APPLETONS-welles_gideon).
@@ -1185,7 +1196,7 @@ Register facts (born, died, rank dates, prewar, experience) rest on Heitman (HEI
 
 #### scott_winfield: Winfield Scott
 - competence above: Congress resolved its thanks and a gold medal for the 1847 Mexico City campaign ("valor, skill, and judicious conduct") (HEIT1-scott_winfield). Scott's 1861 advice on Sumter (relief impracticable, about 20,000 men needed) is recorded by Welles (WELLES-D1-p4-10) [own memoir: Welles, written years after] [single source]. Age 74 and infirm in 1861.
-- nerve average: [contested]. Congress honoured the 1847 advance (HEIT1); but Welles and Blair on 1862-09-12 call his Anaconda approach a defensive error and say he was reluctant to enter Virginia (WELLES-D-1862-09-12) [rival memoir: Welles/Blair, contemporary diary].
+- nerve average: [contested]. Congress honoured the 1847 advance (HEIT1); but Welles and Blair on 1862-09-12 call his Anaconda approach a defensive error and say he was reluctant to enter Virginia (WELLES-D-1862-09-12) [rival diary entry, contemporary: Welles, reporting Blair].
 - experience high: regular officer from 1808, general-in-chief from 1841 (HEIT1-scott_winfield).
 - reputation_1861 high: gold medal and thanks of Congress (1814, 1848) (HEIT1-scott_winfield).
 - infirm: General Orders 94 retires him "upon his own application" and speaks of his "personal affliction" (OR-I-5-p639); Hay saw him with the order on 1 Nov (HAY-D-1861-11-01).
@@ -1198,8 +1209,8 @@ Register facts (born, died, rank dates, prewar, experience) rest on Heitman (HEI
 - slow: Welles 1862-09-12 and 09-07; Halleck urging action 1862-08-06 (OR-I-11-1-p82).
 - organiser: Lincoln as above (WELLES-D-1862-09-12); Lincoln defended his deliberateness to the "Jacobin" visitors on 26 Oct 1861 (HAY-D-1861-10-26).
 - overestimates_enemy: Halleck writes that McClellan and his officers estimated the enemy near Richmond at 200,000 (OR-I-11-1-p82). [single source] Comparison with Confederate strength needs-source.
-- shifts_blame: 28 Jun 1862 telegram to Stanton: "You have done your best to sacrifice this army" (OR-I-11-1-p61).
-- disdains_superiors: same telegram (OR-I-11-1-p61); Hay records him going to bed while the President waited, 13 Nov 1861, calling it "unparalleled insolence" (HAY-D-1861-11-13) [single source; Hay's interpretation].
+- shifts_blame: 28 Jun 1862 telegram to Stanton (OR-I-11-1-p61). UNRESOLVED: the evidence quoted its last sentence ("You have done your best to sacrifice this army"), but that sentence is reported to have been struck by the telegraph office before Stanton saw it, and the OR print may omit it. The PR-fixes lane could not reach the page. Keep only what the cited page prints: if it lacks the sentence, drop the quote and decide whether the rest supports the tag.
+- disdains_superiors: same telegram (OR-I-11-1-p61, same unresolved question); Hay records him going to bed while the President waited, 13 Nov 1861, calling it "unparalleled insolence" (HAY-D-1861-11-13) [single source; Hay's interpretation].
 - opposes_emancipation: Harrison's Landing letter: "forcible abolition of slavery should not be contemplated for a moment" (OR-I-11-1-p74).
 - Conflict note, exact text: on McClellan-OS-p152 McClellan writes that Stanton, before taking office, "never spoke of the President in any other way than as the 'original gorilla,' and often said that Du Chaillu was a fool to wander all the way to Africa in search of what he could so easily have found at Springfield, Illinois." The words are McClellan's report of Stanton's talk [own memoir, ed. W. C. Prime 1887; rival of Stanton]. The repo note credits the phrase to McClellan in a letter to his wife of 17 Nov 1861; that letter is not in the corpus: needs-source. Both versions kept.
 
@@ -1364,9 +1375,11 @@ Page numbers for OR are the page headers of the civilwar.com transcription (not 
 
 #### grant_ulysses_s: Ulysses S. Grant
 - competence high: as district commander took Forts Henry and Donelson, 14,623 prisoners (CULLUM-1187); Halleck, who had accused him, reported 15 Mar 1862 that Grant acted from good intentions and was told to resume command (OR-I-7-p683); at Shiloh ordered the dawn attack of 7 Apr, stating the advantage of becoming the attacking party (OR-I-10-1-p109) [own report]. Memoir adds the Donelson counter-attack decision and the surrender demand (GRANT-PM-ch22) [own memoir].
-- nerve high: at Donelson, after the sortie, said whoever attacked first would win and ordered the assault at once (GRANT-PM-ch22) [own memoir, single source for the words]; Shiloh counter-attack as above (OR-I-10-1-p109).
+- nerve above (softened from high): at Donelson, after the sortie, said whoever attacked first would win and ordered the assault at once (GRANT-PM-ch22) [own memoir, single source for the words]; Shiloh counter-attack as above (OR-I-10-1-p109) [own report]. Both rest on the subject's own account.
+- Hindsight flag: the competence and nerve directions rest on events of February-April 1862. They are admissible for innate stats, but they are not an 1861 baseline.
 - experience average: West Point 1843, Mexican War quartermaster with two brevets, captain 1853, resigned 1854, clerk and merchant at Galena 1860-61, largest command a company (CULLUM-1187, HEIT1-grant_ulysses_s).
-- reputation_1861 low: a Galena merchant in March 1861 (CULLUM-1187); no contemporary notice read [single source].
+- reputation_1861 low: a Galena merchant in March 1861 (CULLUM-1187); no contemporary notice read [single source]. This is the March 1861 position; none of the 1862 events above is used for it.
+- Died: 23 July 1885 in the row; Cullum as read prints 25 July (possible OCR error); the day is unresolved against a cited public-domain source.
 - organiser: took a disorderly regiment and brought it to discipline in a few days (GRANT-PM-ch18) [own memoir].
 - drink_rumour: Halleck wired McClellan on 4 Mar 1862 a rumour that Grant had resumed his former bad habits, and placed C. F. Smith in command (OR-I-7-p682); Halleck is the spreader; Halleck's own later report did not repeat it (OR-I-7-p683).
 - insubordinate: went to Nashville after Donelson without Halleck's authority; Halleck called it mistaken zeal from good intentions (OR-I-7-p683, OR-I-7-p680 for McClellan's order to arrest). Grant says he never received Halleck's calls for returns and asked to be relieved (GRANT-PM-ch23) [own memoir]. [contested]
@@ -1861,7 +1874,7 @@ Flags: [single source], [own memoir], [rival memoir: author], [contested]. Peer 
 - First appearance as governor: OR-III-1-p922 (7 Mar 1862).
 
 #### seymour_horatio: Horatio Seymour
-- competence high: elected governor 1852; Speaker 1845; elected governor again 1862 over Wadsworth by 10,752 (APPLETONS-seymour_horatio); Welles allows him "smartness" (WELLES-D-1862-09-27 [rival memoir: Welles]).
+- competence high: elected governor 1852; Speaker 1845; elected governor again 1862 over Wadsworth by 10,752 (APPLETONS-seymour_horatio); Welles allows him "smartness" (WELLES-D-1862-09-27 [rival diary entry, contemporary: Welles]).
 - nerve above: nominated 1862 on a platform of loyalty and the right to criticise the administration (APPLETONS-seymour_horatio).
 - experience high: assembly, mayor of Utica, speaker, governor 1853-54 (APPLETONS-seymour_horatio).
 - reputation_1861 above: declined Buchanan's mission 1857; spoke at the Albany compromise convention Jan 1861 (APPLETONS-seymour_horatio).
@@ -2076,7 +2089,7 @@ Reading notes. Jones (A Rebel War Clerk's Diary, 1866) is a clerk's view with st
 - Jones 1862-11-21 reports Randolph condemned Col. Baylor's order to kill Arizona Indians (JONES-I-1862-11-21).
 
 #### seddon_james_a: James A. Seddon
-- competence above [single source]: "an able man (purely a civilian)" (JONES-I-1862-11-19), an impression on appointment.
+- competence unknown (was above): the only line is "an able man (purely a civilian)" (JONES-I-1862-11-19), an impression on appointment that is weak evidence; no performance evidence read.
 - nerve unknown: nothing read; 30 Nov 1862 instruction on captured Black soldiers (NOTE-confederate-side) needs-source.
 - experience average: Representative 1845-47 and 1849-51, peace-convention member, Provisional Congress delegate (BDAC-seddon_james_a).
 - reputation_1861 above: Jones calls him the "so-called Demosthenean Seddon" among the speakers at the Virginia convention (JONES-I-1861-04-16); BDAC shows peace-convention membership [single source].

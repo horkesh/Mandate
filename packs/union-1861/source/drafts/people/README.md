@@ -55,12 +55,12 @@ Distribution in this draft:
 
 | stat | high | above | average | below | low | unknown |
 |---|---:|---:|---:|---:|---:|---:|
-| competence | 20 | 74 | 37 | 14 | 0 | 33 |
-| nerve | 40 | 65 | 13 | 9 | 1 | 50 |
+| competence | 20 | 73 | 37 | 14 | 0 | 34 |
+| nerve | 39 | 66 | 13 | 9 | 1 | 50 |
 | experience | 51 | 55 | 33 | 23 | 9 | 7 |
 | reputation_1861 | 26 | 69 | 36 | 2 | 6 | 39 |
 
-129 of 712 stat cells are `unknown`.
+130 of 712 stat cells are `unknown`. (Seddon's competence moved from `above` to `unknown` and Grant's nerve from `high` to `above` after review.)
 
 **The directions skew upward.** `above` outnumbers `below` by about five to one for competence and six to one for nerve. Part of that is real (the roster is the people who rose), but part is the helpers anchoring on fame rather than on peers. Whoever sets the scales should re-centre within each kind before turning directions into numbers, and should treat `above` for a civilian and `above` for a general as different statements.
 
@@ -121,7 +121,7 @@ The full list is `people-sources.md` Part 1. In short:
 - **Registers of record** (public domain): Heitman's *Historical Register* (1903), Cullum's *Register* (1879, 1891), Marcus J. Wright's *General Officers of the Confederate Army* (1911), the *Biographical Directory of the American Congress* (GPO, 1928), Callahan's navy *List of Officers* (1901). These settle births, deaths, classes, ranks and prewar careers. They were read as archive.org OCR, which garbles digits; where two registers disagree, both values are kept.
 - **Official papers** (public domain): the Official Records (Army), read through the civilwar.com transcriptions and archive.org OCR; page numbers come from running heads and can drift by one page, and none were collated with the printed volumes. The Navy Official Records were **not** reached. Also the Joint Committee's 1863 report, the House report on government contracts, *Papers Relating to Foreign Affairs* (1861, 1862), the Confederate Congress's journal, Richardson's *Messages and Papers of the Confederacy*.
 - **Reference works** (public domain): *Appletons' Cyclopaedia of American Biography* (1887–89) is the most-used single source after the registers, and for some rows the only one; it is period but secondary, so every Appletons-only direction is flagged `[single source]`. The *Dictionary of National Biography* for the British.
-- **Diaries, letters and memoirs** (published before 1929, public domain, each flagged): Welles (1911; openly hostile to Seward, Chase and Stanton), Hay (1908), Chase (1903), Nicolay and Hay's *Abraham Lincoln: A History* (1890; Lincoln's secretaries, flagged as own-side), the memoirs of Grant, Sherman, McClellan, J. E. Johnston, Davis, Longstreet, Julian, Cox, Greeley, Dana, Weed and Bulloch, J. B. Jones's *Rebel War Clerk's Diary*, Mary Chesnut's 1905 *Diary from Dixie* (a revised text), *Battles and Leaders*, and admiring biographies (Riddle on Wade, Pierce on Sumner, Nason on Wilson, Foulke on Morton, Pearson on Andrew, Newton on Lyons, Jordan and Pryor on Forrest, R. E. Lee Jr. on Lee).
+- **Diaries, letters and memoirs** (published before 1929, public domain, each flagged): Welles (1911; dated entries are the contemporary diary, the first chapter is a memoir written years later; openly hostile to Seward, Chase and Stanton), Hay (1908), Chase (1903), Nicolay and Hay's *Abraham Lincoln: A History* (1890; Lincoln's secretaries, flagged as own-side), the memoirs of Grant, Sherman, McClellan, J. E. Johnston, Davis, Longstreet, Julian, Cox, Greeley, Dana, Weed and Bulloch, J. B. Jones's *Rebel War Clerk's Diary*, Mary Chesnut's 1905 *Diary from Dixie* (a revised text), *Battles and Leaders*, and admiring biographies (Riddle on Wade, Pierce on Sumner, Nason on Wilson, Foulke on Morton, Pearson on Andrew, Newton on Lyons, Jordan and Pryor on Forrest, R. E. Lee Jr. on Lee).
 - **Consulted, not cited as evidence:** Bates's diary (GPO, 1933): published after 1929 with no stated licence, so the lead removed every direction and trait that rested on it alone (Seward, Stanton, Blair, Bates and Smith traits; Hamlin's and Fox's reputation). Modern scholarship and Wikipedia were used only to find primary documents. The project's research notes appear as `NOTE-*` pointers, never as the source of a fact.
 
 ## Every needs-source
@@ -158,7 +158,7 @@ Grouped by person; each entry is a field or claim that no public-domain source s
 - `hooker_joseph`: Dates of I Corps and Grand Division commands: needs-source (Cullum clipped)
 - `hunter_david`: the Porter court-martial link: needs-source
 - `keyes_erasmus_d`: commanded IV Corps beyond Dec 1862? needs-source
-- `mcclellan_george_b`: McClellan letter itself not found in the PD corpus: needs-source; comparison with Confederate returns needs-source; party registration in 1861 needs-source; The repo note's version (McClellan to his wife, 17 Nov 1861) rests on a letter not in the corpus: needs-source
+- `mcclellan_george_b`: UNRESOLVED: whether OR-I-11-1-p61 prints the last sentence of the 28 June 1862 telegram ("You have done your best to sacrifice this army"), which is reported to have been struck by the telegraph office; `shifts_blame` rests on it alone; McClellan letter itself not found in the PD corpus: needs-source; comparison with Confederate returns needs-source; party registration in 1861 needs-source; The repo note's version (McClellan to his wife, 17 Nov 1861) rests on a letter not in the corpus: needs-source
 - `mcdowell_irvin`: March 1861 substantive rank (capt, AAG staff) and its date: needs-source (Heitman lists only the brevets); Headquarters said it knew of no charges: OR-I-12-1-p38: the court's finding was not located in the pages read: needs-source
 - `meade_george_g`: captain 1856 (civil career 1836-42 and 1840s-50s duties: needs-source)
 - `patterson_robert`: post in March 1861 is a civilian/militia status: date needs-source; Party: needs-source
@@ -179,7 +179,7 @@ Grouped by person; each entry is a field or claim that no public-domain source s
 - `buell_don_c`: Buell opposition to emancipation or confiscation, and slaveholding by his wife (Georgia widow): not read, needs-source
 - `curtis_samuel_r`: factional stance otherwise needs-source, so moderates is a default; not tagged overestimates_enemy because no Confederate return read (needs-source)
 - `fremont_john_c`: PD page for the receipt date needs-source
-- `grant_ulysses_s`: year only recorded, needs-source for the day; revocation by Lincoln/Halleck in Jan 1863 not read here (needs-source); slaveholder: needs-source (not tagged); Party before the war: needs-source
+- `grant_ulysses_s`: died 1885-07-23 in the row, but Cullum as read prints 25 July (conflict; day needs-source against a cited register); competence and nerve rest on events of 1862, hindsight for an 1861 baseline, and nerve rests on his own account alone; revocation by Lincoln/Halleck in Jan 1863 not read here (needs-source); slaveholder: needs-source (not tagged); Party before the war: needs-source
 - `halleck_henry_w`: slaveholder: none known, not searched in a slave schedule (needs-source)
 - `hurlbut_stephen_a`: own reports not read, needs-source; slaveholder: needs-source (South Carolina birth, no record read)
 - `lyon_nathaniel`: for his dispatches asking for reinforcements before 10 Aug
@@ -261,7 +261,7 @@ Grouped by person; each entry is a field or claim that no public-domain source s
 - `northrop_lucius_b`: `born` empty; birth date
 - `randolph_george_w`: Slaveholding needs-source
 - `reagan_john_h`: Competence unknown: no postal report or act read (needs-source: Postmaster General reports, Journal of Congress); Slaveholding needs-source
-- `seddon_james_a`: 1862-11-30 instruction on captured Black soldiers (NOTE-confederate-side): needs-source, no page read; Slaveholding needs-source
+- `seddon_james_a`: competence now `unknown` (one Jones line on appointment); 1862-11-30 instruction on captured Black soldiers (NOTE-confederate-side): needs-source, no page read; Slaveholding needs-source
 - `stephens_alexander_h`: Slaveholding needs-source
 - `toombs_robert_a`: his resignation date needs-source; Slaveholding needs-source
 - `walker_leroy_p`: The earlier order of 10 April (OR I vol 1) needs-source: volume not obtainable locally; Post-resignation commands needs-source; Slaveholding needs-source
@@ -362,6 +362,6 @@ Kept in the rows' notes; collected here by group.
 4. **Misattribution risk.** Welles's diary entry of 23 September 1862 concerns Commodore William D. Porter, not David D. Porter. In Welles, "Blair" usually means Montgomery Blair.
 5. **The sensitive-history gate (0021, 0026) will need these before any use.** Davis's proclamation of 23 December 1862 on captured Black soldiers and Seddon's instruction of 30 November 1862 (archive.org OCR of OR Series II vol. 5 is unreadable; a clean text is needed). Ramsey's conduct in the Dakota War (OR Series I vol. 13 and Minnesota documents not read). Pike's treaties with the Native nations and the allegations after Pea Ridge (OR Series I vol. 8). Forrest's prewar slave trading (sourced only to an admiring 1868 biography). Hunter's General Order No. 11, Butler's fugitive-slave letters and General Order No. 28 are now sourced to the OR.
 6. **Slaveholding needs its own pass.** No 1860 census slave schedule (NARA, public domain) was read, so dozens of rows carry needs-source on slaveholding. A short research lane on the schedules would settle them.
-7. **The registers make errors a second witness must catch.** Wright (1911) prints impossible death dates for Longstreet (April 1891) and Hardee (1863); Heitman's OCR drops Rosecrans's entry; Cullum's text as read gives Grant's death as 25 July 1885, which the row records as the year only until another source settles the day.
+7. **The registers make errors a second witness must catch.** Wright (1911) prints impossible death dates for Longstreet (April 1891) and Hardee (1863); Heitman's OCR drops Rosecrans's entry; Cullum's text as read gives Grant's death as 25 July 1885, which conflicts with the 23 July of the reference works the row now follows (1885-07-23); the day stays open against a cited register.
 8. **The pack validator (0026) needs a rule for what counts as a citation.** `NOTE-*` keys are pointers and must not satisfy it; whether an Appletons-only centre should pass is open question 2.
 9. **Pages with instructions:** none. No helper met a fetched page that tried to direct it; civilwar.com pages carried only navigation and advertising text.
