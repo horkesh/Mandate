@@ -393,34 +393,92 @@ export function ownedKeys(fields: readonly OwnedField[]): { key: string; writer:
 }
 
 /**
- * Problems with the classification of State records against the table:
- * unclassified properties, table entries pointing at nothing, keys owned twice.
+ * What is immutable (`ownership.ts`): records below the State root, by type
+ * name (their keys are read from the types); State's own root fields set once
+ * at setup; and keys that are never reassigned wherever they appear.
+ */
+export interface ImmutableDeclaration {
+  readonly records: readonly string[];
+  readonly rootFields: readonly string[];
+  readonly neverReassigned: readonly string[];
+}
+
+/** No immutable declarations at all, for fixtures that test one rule at a time. */
+export const NO_IMMUTABLES: ImmutableDeclaration = { records: [], rootFields: [], neverReassigned: [] };
+
+const byCode = (a: string, b: string): number => (a < b ? -1 : a > b ? 1 : 0);
+
+/**
+ * The keys the scan must never see assigned: every key of a declared immutable
+ * record, State's immutable root fields, and the never-reassigned keys; sorted,
+ * without repeats. This replaces a hand-kept list of keys.
+ */
+export function immutableKeys(records: readonly StateRecord[], declaration: ImmutableDeclaration): string[] {
+  const keys = new Set<string>([...declaration.rootFields, ...declaration.neverReassigned]);
+  // State is never an immutable record (its fields are owned); declaring it is reported by classificationProblems, not silently honoured.
+  for (const r of records) if (r.record !== 'State' && declaration.records.includes(r.record)) for (const k of r.keys) keys.add(k);
+  return [...keys].sort(byCode);
+}
+
+/**
+ * Problems with the classification of State records against the table and the
+ * immutable declaration:
+ * - a property that is neither owned, nor in an immutable record, nor an
+ *   immutable root field, nor a never-reassigned key (a new nested record not
+ *   yet declared shows up here, one line per property);
+ * - table entries and declarations pointing at nothing;
+ * - keys owned twice, or owned and immutable;
+ * - immutable keys shared by two declared records, or with an owned key: the
+ *   scan matches by name, so they must be unique.
  */
 export function classificationProblems(
   records: readonly StateRecord[],
   fields: readonly OwnedField[],
-  immutableKeys: readonly string[],
+  immutable: ImmutableDeclaration,
   legacy: readonly { readonly file: string; readonly record: string }[],
 ): string[] {
   const problems: string[] = [];
   const owned = ownedKeys(fields);
   const isLegacy = (r: StateRecord) => legacy.some((l) => l.file === r.path && l.record === r.record);
+  const declared = new Set(immutable.records);
+  const derived = immutableKeys(records, immutable);
 
   const byKey = new Map<string, string[]>();
   for (const o of owned) byKey.set(o.key, [...(byKey.get(o.key) ?? []), `${o.record} (${o.writer})`]);
-  for (const [key, claims] of [...byKey].sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))) {
+  for (const [key, claims] of [...byKey].sort(([a], [b]) => byCode(a, b))) {
     if (claims.length > 1) problems.push(`owned key "${key}" is claimed ${claims.length} times: ${claims.join(', ')}; owned keys must be unique`);
-    if (immutableKeys.includes(key)) problems.push(`key "${key}" is both owned and immutable`);
+    if (derived.includes(key)) problems.push(`key "${key}" is both owned and immutable`);
   }
 
   for (const r of records) {
     if (isLegacy(r)) continue;
     for (const key of r.keys) {
-      if (immutableKeys.includes(key)) continue;
-      if (!owned.some((o) => o.record === r.record && o.key === key)) {
-        problems.push(`${r.path}: ${r.record}.${key} has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)`);
-      }
+      if (owned.some((o) => o.record === r.record && o.key === key)) continue;
+      if (immutable.neverReassigned.includes(key)) continue;
+      if (declared.has(r.record)) continue;
+      if (r.record === 'State' && immutable.rootFields.includes(key)) continue;
+      problems.push(
+        r.record === 'State'
+          ? `${r.path}: State.${key} has no writer in OWNED_FIELDS and is not an immutable root field (packages/kernel/src/ownership.ts)`
+          : `${r.path}: ${r.record}.${key} has no writer in OWNED_FIELDS, and ${r.record} is not declared in IMMUTABLE_RECORDS; a record below the State root is an immutable value (decision 0052) (packages/kernel/src/ownership.ts)`,
+      );
     }
+  }
+
+  for (const name of immutable.records) {
+    if (name === 'State') problems.push('IMMUTABLE_RECORDS names State, whose fields are owned by their writers; list its set-once fields in IMMUTABLE_ROOT_FIELDS');
+    else if (!records.some((r) => r.record === name)) problems.push(`IMMUTABLE_RECORDS names ${name}, which no State record declares; remove the entry`);
+  }
+  for (const key of immutable.rootFields) {
+    if (!records.some((r) => r.record === 'State' && r.keys.includes(key))) problems.push(`IMMUTABLE_ROOT_FIELDS names ${key}, which State does not declare`);
+  }
+  const declaredBy = new Map<string, string[]>();
+  for (const r of records) {
+    if (!declared.has(r.record)) continue;
+    for (const k of r.keys) if (!immutable.neverReassigned.includes(k)) declaredBy.set(k, [...(declaredBy.get(k) ?? []), r.record]);
+  }
+  for (const [key, names] of [...declaredBy].sort(([a], [b]) => byCode(a, b))) {
+    if (names.length > 1) problems.push(`immutable key "${key}" is declared by ${names.join(' and ')}; immutable keys must be unique, so the scan can match them by name`);
   }
 
   for (const o of owned) {
