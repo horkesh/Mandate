@@ -1,6 +1,6 @@
 # 0038: No live AI in the Steam build until Valve clears bring-your-own-key
 
-Status: accepted (2026-11-14). The owner chose "defer, AI off on Steam" on the lead's recommendation. Amends 0022.
+Status: accepted (2026-11-14). The owner chose "defer, AI off on Steam" on the lead's recommendation. Amends 0022. Extended by 0039 (AI is never in the headline; Steam's disclosure covers pre-generated text too).
 
 ## Context
 

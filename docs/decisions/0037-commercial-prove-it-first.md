@@ -1,6 +1,6 @@
 # 0037: Commercial, but prove the hook before spending
 
-Status: accepted (2026-11-14). The owner chose "Commercial, prove it first" over "all in" and "passion project", on the lead's recommendation.
+Status: accepted (2026-11-14). The owner chose "Commercial, prove it first" over "all in" and "passion project", on the lead's recommendation. Extended by 0039 (positioning, price, go or no-go bands).
 
 ## Context
 
