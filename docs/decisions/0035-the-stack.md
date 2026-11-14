@@ -1,6 +1,6 @@
 # 0035: The stack, and a map-rendering tripwire
 
-Status: accepted (2026-11-14). The owner asked to be preemptive about tools this time (AWWV found MapLibre only after a month, and rebuilt its map four times). From the tooling survey (`docs/research/2026-11-14-tooling-survey.md`), which read every version and licence from the tools' own pages on 2026-11-14. Recommended by the lead; the owner takes recommendations by default. Confirms 0013's renderer.
+Status: accepted (2026-11-14). The owner asked to be preemptive about tools this time (AWWV found MapLibre only after a month, and rebuilt its map four times). From the tooling survey (`docs/research/2026-11-14-tooling-survey.md`), which read every version and licence from the tools' own pages on 2026-11-14. Recommended by the lead; the owner takes recommendations by default. Confirms 0013's renderer. Amended by 0043 (the tripwire's result: PixiJS stands; lazy bake; authored label hints).
 
 ## Decision
 

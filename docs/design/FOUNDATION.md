@@ -329,6 +329,8 @@ Lanes, sized from `docs/LANES.md`:
 | 0.10 | Map tripwire spike: bake the first 40 regions in tiles with PixiJS, draw one curved region name, test hit-testing; reopen MapLibre for labels if they would cost more than a week (0035) | 0.3's first 40 regions | Sonnet, high |
 
 Notes for lanes not yet started, from research:
+- **0.10** ran early on stand-in regions: PixiJS stands, with a lazy bake in 512-pixel tiles and authored label hints per region (0043). It re-runs its measurements on 0.3's first real regions (the second tripwire).
+- **0.2 and 0.3:** the world format defines optional label hints per region (anchor, spine, size class, minimum zoom), and lane 0.3 fills them where automatic placement fails (0043). Lane 0.3 must not fetch from census.gov on this machine.
 - **0.2:** the testbed pack's graph needs the features the planner spike tests: a direct road and a longer flank route, limited rail, a river, a fort, two posts around a salient, and a depot (`docs/research/2026-11-14-planner-design.md`).
 - **0.6:** a commander's overestimate of the enemy lives in belief derivation, so his dispatches and his plans inflate the enemy by the same amount; an intelligence chief's bias is a separate term on top, so the player can tell a timid general from a bad intelligence chief (planner-design note).
 - **Phase 1 calibration:** edit distance comes from the planner's scores, so planner weights change how often generals obey. Calibrate them together, one change per measured run, tracking compliance outcomes beside planner metrics (planner-design note).

@@ -38,7 +38,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0032](0032-reports-authors-routes-filters.md) | A report has an author, a route and filters; the telegraph office is a seat | accepted; amended by 0040 |
 | [0033](0033-forces-scale-and-data-sources.md) | Transfers name a force, not divisions one by one; force blocks fit the period; data comes from public-domain sources | accepted; amended by 0040 |
 | [0034](0034-one-standing-steward.md) | One standing steward lane from Phase 0 | accepted |
-| [0035](0035-the-stack.md) | The stack, and a map-rendering tripwire | accepted |
+| [0035](0035-the-stack.md) | The stack, and a map-rendering tripwire | accepted; amended by 0043 |
 | [0036](0036-the-title.md) | The game is called By Order of the President; Mandate stays the engine's codename | accepted |
 | [0037](0037-commercial-prove-it-first.md) | Commercial, but prove the hook before spending | accepted; extended by 0039 |
 | [0038](0038-no-live-ai-on-steam-until-cleared.md) | No live AI in the Steam build until Valve clears bring-your-own-key | accepted; extended by 0039 |
@@ -46,3 +46,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0040](0040-first-month-revisions.md) | Revisions from the first-month walkthrough | accepted; amended by 0041 |
 | [0041](0041-clarifications-owners-and-wording.md) | Clarifications: owners for new state, business during a visit, and neutral option wording | accepted |
 | [0042](0042-the-inaugural-is-the-premise.md) | The inaugural address is the premise, not a choice | accepted |
+| [0043](0043-map-tripwire-pixijs-stands.md) | The map tripwire: PixiJS stands, and labels get authored hints | accepted |
