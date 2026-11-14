@@ -81,7 +81,7 @@
   "situation.fen_crossing.text": "General Dale asks for instructions: the families who crossed to his lines from the salt fens ask to stay, and the men who held them demand them back.",
   "situation.fen_crossing.option.no_instruction": "Send him no instruction",
   "situation.fen_crossing.option.shelter": "Let them stay under the army's protection",
-  "situation.fen_crossing.option.send_back": "Send them back to the salt fens",
+  "situation.fen_crossing.option.send_back": "Return them to the men who held them",
   "situation.fen_crossing.inaction": "Each commander decides for himself what to do with those who reach his lines.",
   "situation.harbour_burning.title": "Gullhaven burned",
   "situation.harbour_burning.text": "Southern troops burned the harbour town of Gullhaven. Reports of the dead disagree.",
