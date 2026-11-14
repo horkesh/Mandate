@@ -31,7 +31,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0025](0025-attention-under-real-time.md) | The president's attention is a weekly budget | accepted; amended by 0040, 0041 |
 | [0026](0026-foundation-review-revisions.md) | Revisions after the foundation review | accepted; amended by 0040 |
 | [0027](0027-variable-weekly-turns.md) | Variable turns of up to a week on a daily tick | accepted; amended by 0040 |
-| [0028](0028-start-victory-navy.md) | The campaign starts at the inauguration; two national wills decide it; the navy works through people | accepted; amended by 0040 |
+| [0028](0028-start-victory-navy.md) | The campaign starts at the inauguration; two national wills decide it; the navy works through people | accepted; amended by 0040, clarified by 0042 |
 | [0029](0029-seasons-sieges-raids-confederacy.md) | Seasons through commanders, sieges as operations, raids and insurgency, and a Confederacy on the same machinery | accepted; amended by 0041 |
 | [0030](0030-foundation-commitments.md) | Foundation commitments: scenario starts, packs as the modding format, string tables, playable at every phase, a planner spike | accepted; amended by 0041 |
 | [0031](0031-map-extent-size-sources.md) | The map covers the whole war at about 250 regions, built from licence-clean sources | accepted |
