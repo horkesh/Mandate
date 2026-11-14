@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
-import { C2_MINIMUM, checkGate, errorsOf, formatIssue, gateContentHash, GATE_QUESTIONS_TESTED, IssueSink, loadPack, proximityHit, publishedSchemas, readGate, readSituations, releaseProblems, triggerMatches, type Issue } from '../src/index.ts';
+import { C2_MINIMUM, checkGate, errorsOf, formatIssue, gateContentHash, GATE_QUESTIONS_PARTIAL, GATE_QUESTIONS_TESTED, IssueSink, loadPack, proximityHit, publishedSchemas, readGate, readSituations, releaseProblems, triggerMatches, type Issue } from '../src/index.ts';
 import { editJson, readTestbed, testbedFiles, type Edits } from './support/testbed.ts';
 
 /**
@@ -80,6 +82,11 @@ describe('situations in the pack format', () => {
   it('0041: options in ascending display order, each with its own key', () => {
     fires(editJson(sit('eastwatch_stalls'), (s) => (s.options[2].displayKey = 1)), 'situation-display-order');
     fires(editJson(sit('eastwatch_stalls'), (s) => s.options.reverse()), 'situation-display-order');
+  });
+
+  it('C1: every option names its proponents, people the World holds, or inaction', () => {
+    firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.options[0].proposedBy = [])), 'shape/too_small', { at: 'options[0].proposedBy', message: 'gate C1' });
+    firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.options[0].proposedBy = ['nobody'])), 'unknown-reference', { at: 'options[0].proposedBy[0]' });
   });
 
   it('references resolve: people, posts, regions, routes, situations and options', () => {
@@ -164,7 +171,7 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     firesAt(editJson('strings/en.json', (t) => (t['reason.return-to-the-fens'] = 'a change of policy')), 'gate-stale-review', { file: sit('fen_crossing'), at: 'gateReview.contentHash' });
   });
 
-  it('A1 and B3: an effect on a protected field needs a tag, and is refused', () => {
+  it('A1, B3 and D3 in part: an effect on a protected field needs a tag, and is refused', () => {
     const edit = editJson(sit('eastwatch_stalls'), (s) => s.options[1].effects.push({ propose: { owner: 'regions', field: 'fenfolk-population', subject: null, delta: 5, reason: 'x', side: 'north' } }));
     fires(edit, 'gate-untagged');
     fires(edit, 'gate-protected-target');
@@ -214,7 +221,7 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     expect(kinds(editJson(sit('fen_crossing'), (s) => (s.gateReview.reviewer = 'gate-reviewer')))).toEqual([]);
   });
 
-  it('B4: no option carries an atrocity-class topic; refused option shapes are refused', () => {
+  it('B4 and D4: no option, for any seat, carries an atrocity-class topic; refused option shapes are refused', () => {
     fires(editJson(sit('fen_crossing'), (s) => (s.options[0].gate = { topics: ['harbour-burning'], placement: 'event', risks: [] })), 'gate-atrocity-lever');
     fires(editJson(sit('fen_crossing'), (s) => (s.options[0].id = 'burn_the_crossing')), 'gate-refused');
   });
@@ -397,8 +404,19 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     expect(graded(z.toJSONSchema(z.strictObject({ karma: z.int() })))).toEqual(['karma']);
   });
 
-  it('lists the questions it tests (the rest are the reviewer’s, or wait for their artefact type)', () => {
-    expect(GATE_QUESTIONS_TESTED).toEqual(['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4', 'B5', 'B10', 'C1', 'C2', 'C3', 'C4', 'E7', 'F2', 'F5', 'F6']);
+  it('lists the questions it tests, and each one listed is named by a test here or in the kernel (review S11)', () => {
+    expect(GATE_QUESTIONS_TESTED).toEqual(['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4', 'B5', 'B7', 'B9', 'B10', 'C1', 'C2', 'C3', 'C4', 'D4', 'D5', 'E7', 'F1', 'F2', 'F5', 'F6', 'H5']);
+    expect(GATE_QUESTIONS_PARTIAL).toEqual(['D3', 'E3']);
+    // Every test text except this one, whose own lists would name every id.
+    const self = /\n  it\('lists the questions it tests[\s\S]*?\n  \}\);\n/u;
+    const tests = ['../../pack-format/test/gate.test.ts', '../../kernel/test/situations.test.ts'].map((p) => readFileSync(fileURLToPath(new URL(p, import.meta.url)), 'utf8').replace(/\r\n/gu, '\n').replace(self, '\n')).join('\n');
+    const doc = readFileSync(fileURLToPath(new URL('../../../docs/design/SENSITIVE-HISTORY.md', import.meta.url)), 'utf8');
+    const unnamed = (ids: readonly string[]) => ids.filter((id) => !new RegExp(`\\b${id}\\b`, 'u').test(tests));
+    expect(unnamed([...GATE_QUESTIONS_TESTED, ...GATE_QUESTIONS_PARTIAL])).toEqual([]);
+    // Every id is a real question of section 2.2.
+    expect([...GATE_QUESTIONS_TESTED, ...GATE_QUESTIONS_PARTIAL].filter((id) => !doc.includes(`| ${id} |`))).toEqual([]);
+    // The control: an id no test names, or no question, is reported.
+    expect(unnamed(['Z9'])).toEqual(['Z9']);
   });
 
   it('positive control for the controls: an unedited testbed fires none of them', () => {

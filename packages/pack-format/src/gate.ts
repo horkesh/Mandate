@@ -14,10 +14,12 @@
  *     source-policy.json   sources banned as evidence, and weak ones never cited alone (A6)
  *     checklist.json       each question's id, version, kind and the item types it applies to (A7)
  *     release.json         the scenarios a release ships, with their windows (A8, the ship rule)
+ *     reviewers.json       the gate reviewers whose sign-offs a release accepts (A7, A8)
  *
  * Every check reports an `Issue` at the situation file and path. Which
  * questions are tests here, and which wait for an artefact type that does
- * not exist yet, is listed in `GATE_QUESTIONS_TESTED` and in the lane note.
+ * not exist yet, is listed in `GATE_QUESTIONS_TESTED`, `GATE_QUESTIONS_PARTIAL`
+ * and in the lane note.
  */
 import { canonicalHash, phase0 } from '@mandate/kernel';
 import { z } from 'zod';
@@ -131,8 +133,17 @@ export function readGate(files: PackFiles, sink: IssueSink): GateData | null {
   return { register, classes, triggers, forbidden, anachronisms, sourcePolicy, checklist, release, reviewers };
 }
 
-/** The questions this module tests, by id (the rest are the reviewer's, or wait for an artefact type). */
-export const GATE_QUESTIONS_TESTED = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4', 'B5', 'B10', 'C1', 'C2', 'C3', 'C4', 'E7', 'F2', 'F5', 'F6'] as const;
+/**
+ * The questions lane 0.7's tests answer in full, by id: here and in the kernel's situation tests (B7, B9,
+ * F1's delivery). The rest are the reviewer's, or wait for an artefact type (review S11).
+ */
+export const GATE_QUESTIONS_TESTED = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4', 'B5', 'B7', 'B9', 'B10', 'C1', 'C2', 'C3', 'C4', 'D4', 'D5', 'E7', 'F1', 'F2', 'F5', 'F6', 'H5'] as const;
+/**
+ * Questions tested only in part. D3: a protected field as a target is refused (B3), but feeding a spendable
+ * resource from one needs the derivation graph. E3: agency reasons on situation effects are checked, but
+ * derived terms, where E3 mostly bites, do not exist yet.
+ */
+export const GATE_QUESTIONS_PARTIAL = ['D3', 'E3'] as const;
 
 /** String tables by locale: locale, then key, then text. */
 export type LocaleStrings = ReadonlyMap<string, ReadonlyMap<string, string>>;
