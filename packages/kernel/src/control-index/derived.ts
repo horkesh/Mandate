@@ -33,14 +33,19 @@ export interface DerivedMap {
   readonly supply: SupplyResult;
 }
 
-/** A caller-held cache: the last derivation and how many times it was rebuilt. */
+/**
+ * A caller-held cache: the last derivation, the World it was made on, and how
+ * many times it was rebuilt. The signature describes State only, so an entry
+ * is reused only on the same World (review N4).
+ */
 export interface DerivedMapCache {
   entry: DerivedMap | null;
+  world: WorldIndex | null;
   recomputes: number;
 }
 
 export function createDerivedMapCache(): DerivedMapCache {
-  return { entry: null, recomputes: 0 };
+  return { entry: null, world: null, recomputes: 0 };
 }
 
 export interface MapInputs {
@@ -73,12 +78,13 @@ export function mapSignature(map: WorldIndex, inputs: MapInputs): string {
 /** The derived map for these inputs, from the cache when the signature is unchanged. */
 export function deriveMap(map: WorldIndex, inputs: MapInputs, cache?: DerivedMapCache): DerivedMap {
   const signature = mapSignature(map, inputs);
-  if (cache?.entry && cache.entry.signature === signature) return cache.entry;
+  if (cache?.entry && cache.world === map && cache.entry.signature === signature) return cache.entry;
   const index = buildControlIndex(map, inputs.control);
   const supply = deriveSupply(map, index, inputs.month, inputs.network ?? INTACT_NETWORK);
   const derived: DerivedMap = { signature, index, supply };
   if (cache) {
     cache.entry = derived;
+    cache.world = map;
     cache.recomputes += 1;
   }
   return derived;

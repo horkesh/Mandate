@@ -87,7 +87,7 @@ describe('the map phase: control changes through the writer, pockets reported', 
     const plainWorld = indexWorld(commsFixture());
     const plain = createState(plainWorld, { seed: 1 });
     const ctx: TickContext = { ...ctxFor(plain, 1), world: plainWorld };
-    ctx.controlDeltas.push({ region: R('a2'), faction: F('b'), deltaPermille: 10, cause: 'x' });
+    ctx.controlDeltas.push({ region: R('a2'), faction: F('b'), deltaPermille: 10, cause: 'combat' });
     expect(() => mapPhase(ctx, plain, createDerivedMapCache())).toThrow('no map');
   });
 

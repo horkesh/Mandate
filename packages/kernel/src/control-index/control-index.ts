@@ -4,7 +4,10 @@
  *
  * It takes any control table, so the same function gives truth's fronts from
  * State and, later, a seat's fronts from the control its reports claim (0013:
- * the staff map draws fronts from claimed control).
+ * the staff map draws fronts from claimed control). For that reuse, the staff
+ * map's lane must first move `RegionControlTable` and `ControlShares` into a
+ * module with no `State` import: the seat-api boundary refuses this module
+ * today, through `control.ts` (review N5), and that is right until then.
  *
  * Terms:
  * - a faction **traces** a region when its share reaches the pack's supply

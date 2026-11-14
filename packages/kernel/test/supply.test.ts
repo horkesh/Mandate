@@ -143,6 +143,23 @@ describe('allocation in priority order (FOUNDATION section 4: not maximum flow)'
   });
 });
 
+describe('tie-breaks beyond days and capacity are local (review N1)', () => {
+  it('keeps the label that won where the paths met, even when another origin would tie at the end', () => {
+    // oa and ob each reach m in 1 day; ob's road is wider, so ob wins at m. The
+    // narrow m-y road then makes both 2 days at capacity 1 at y, where oa (the
+    // smaller id) would win a global tie-break. ob is kept: days and capacity
+    // are exact, the rest is decided where the paths first meet.
+    const m = mapIndex({
+      regions: ['ya', 'yb', 'm', 'y'].map((r) => region(r)),
+      edges: [edge('ya', 'm', { capacity: 2 }), edge('yb', 'm', { capacity: 3 }), edge('m', 'y', { capacity: 1 })],
+      depots: [depot('oa', 'ya'), depot('ob', 'yb')],
+    });
+    const control2 = controlTable({ ya: { a: 1000 }, yb: { a: 1000 }, m: { a: 1000 }, y: { a: 1000 } });
+    const y = deriveSupply(m, buildControlIndex(m, control2), JUNE).factions.get(F('a'))!.paths.get(R('y'))!;
+    expect([y.origin, y.daysPermille, y.capacityMilli]).toEqual(['ob', 2000, 1000]);
+  });
+});
+
 describe('determinism', () => {
   it('derives the same supply twice, and refuses a month outside 1-12', () => {
     expect(JSON.stringify([...supplyOf().factions.get(F('b'))!.paths])).toBe(JSON.stringify([...supplyOf().factions.get(F('b'))!.paths]));

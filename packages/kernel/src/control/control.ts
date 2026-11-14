@@ -30,14 +30,22 @@ export type ControlShares = Readonly<Record<FactionId, number>>;
 /** Control of every region that anyone controls; a region absent here is no one's. */
 export type RegionControlTable = Readonly<Record<RegionId, ControlShares>>;
 
+/**
+ * Who may propose a control change: the proposers `OWNED_FIELDS` lists for
+ * region control. A typed reason (hard rule 6), so an unlisted proposer fails
+ * typecheck; a test keeps this list and `OWNED_FIELDS` equal.
+ */
+export const CONTROL_CAUSES = ['combat', 'occupation'] as const;
+export type ControlCause = (typeof CONTROL_CAUSES)[number];
+
 /** A change a mechanism proposes for the control writer to apply. */
 export interface ControlDelta {
   readonly region: RegionId;
   readonly faction: FactionId;
   /** Signed permille. */
   readonly deltaPermille: number;
-  /** What proposed it, for the explanation trail (`combat`, `occupation`, ...). */
-  readonly cause: string;
+  /** What proposed it, for the explanation trail. */
+  readonly cause: ControlCause;
 }
 
 /** A change applied, with the shares it took from others when the total would pass 1000. */
@@ -46,7 +54,7 @@ export interface ControlChange {
   readonly faction: FactionId;
   readonly before: number;
   readonly after: number;
-  readonly cause: string;
+  readonly cause: ControlCause;
   readonly takenFrom: readonly { readonly faction: FactionId; readonly permille: number }[];
 }
 
@@ -56,7 +64,7 @@ export interface ThresholdCrossing {
   readonly faction: FactionId;
   readonly threshold: number;
   readonly direction: 'up' | 'down';
-  readonly cause: string;
+  readonly cause: ControlCause;
 }
 
 export class ControlError extends Error {
@@ -121,7 +129,8 @@ export function initialControl(map: WorldIndex, start: ScenarioStart): RegionCon
 /**
  * Apply proposed deltas in order, the only way control changes in play.
  * Returns the new State, every change, and every threshold any faction's
- * share crossed (counting the shares taken from others).
+ * share crossed (counting the shares taken from others). A delta that changes
+ * nothing is not a change; if none changes anything, the same State returns.
  */
 export function applyControl(
   map: WorldIndex,
@@ -134,7 +143,7 @@ export function applyControl(
   const next: Record<RegionId, ControlShares> = { ...state.regionControl };
   const changes: ControlChange[] = [];
   const crossings: ThresholdCrossing[] = [];
-  const crossed = (region: RegionId, faction: FactionId, before: number, after: number, cause: string) => {
+  const crossed = (region: RegionId, faction: FactionId, before: number, after: number, cause: ControlCause) => {
     for (const t of thresholds) {
       if (before < t && after >= t) crossings.push({ region, faction, threshold: t, direction: 'up', cause });
       if (before >= t && after < t) crossings.push({ region, faction, threshold: t, direction: 'down', cause });
@@ -147,6 +156,8 @@ export function applyControl(
     const shares: Record<FactionId, number> = { ...(next[d.region] ?? {}) };
     const before = shares[d.faction] ?? 0;
     const after = Math.max(0, Math.min(1000, before + d.deltaPermille));
+    // A delta that changes nothing (clamped, or a loss from a zero share) is no change and no firing.
+    if (after === before) continue;
     shares[d.faction] = after;
     const takenFrom: { faction: FactionId; permille: number }[] = [];
     let excess = Object.values(shares).reduce((s, v) => s + v, 0) - 1000;
@@ -168,6 +179,7 @@ export function applyControl(
     changes.push({ region: d.region, faction: d.faction, before, after, cause: d.cause, takenFrom });
     crossed(d.region, d.faction, before, after, d.cause);
   }
+  if (changes.length === 0) return { state, changes, crossings };
   return { state: { ...state, regionControl: sortedTable(next) }, changes, crossings };
 }
 

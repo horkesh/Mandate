@@ -24,9 +24,13 @@
  * - **Units.** Days are permille days and capacity is permille of the pack's
  *   capacity scale, so a season's effect never rounds away (decision 0002:
  *   integers only, one truncation rule).
- * - **Choice of path.** Fewest days, then the larger capacity, then the
- *   smaller origin id, then the smaller edge id: deterministic, readable, and
- *   the order rail capacity is then allocated in (`allocateInPriorityOrder`).
+ * - **Choice of path.** Fewest days, then the larger capacity. Both are exact:
+ *   the key (days, capacity) is monotone along a path, so Dijkstra finds the
+ *   best. Ties beyond them are broken where two paths first meet, by the
+ *   smaller origin id, then the smaller edge id: deterministic, but local, so
+ *   the final path is not always the one from the globally smallest origin
+ *   (a test pins such a case). Paths are then served in the order of the
+ *   demands (`allocateInPriorityOrder`).
  *
  * Every path carries its legs and each leg its effects (hard rule 6).
  */

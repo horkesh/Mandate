@@ -3,7 +3,7 @@ import type { RegionControlTable } from '../src/control/control.ts';
 import { createDerivedMapCache, deriveMap, mapSignature, type DerivedMap } from '../src/control-index/derived.ts';
 import { controlInvariants, derivedInvariants, snapshot } from '../src/invariants/map.ts';
 import { INTACT_NETWORK } from '../src/supply/supply.ts';
-import { controlTable, E, F, lineMap, R } from './support/map-fixture.ts';
+import { controlTable, depot, E, edge, F, lineMap, mapIndex, R, region } from './support/map-fixture.ts';
 
 const map = lineMap();
 const control = controlTable({ a1: { a: 1000 }, a2: { a: 1000 }, mid: { a: 300, b: 550 }, b2: { b: 1000 }, b1: { b: 1000 } });
@@ -43,6 +43,28 @@ describe('the derived map is rebuilt only when what it reads changes (FOUNDATION
     expect(cache.recomputes).toBe(2);
     expect(before.index.contactEdges.map((c) => c.edge)).toEqual(['road:a2:mid']);
     expect(after.index.contactEdges.map((c) => c.edge)).toEqual(['road:b2:mid']);
+  });
+
+  it('reuses an entry only on the World it was made on (review N4)', () => {
+    // The same regions and control, but a slower road: equal signatures, different supply.
+    const slower = mapIndex({
+      regions: ['a1', 'a2', 'mid', 'b2', 'b1'].map((r) => region(r)).concat([region('w', 'river')]),
+      edges: [
+        edge('a1', 'a2', { type: 'rail', days: 1, capacity: 4, line: 'a_line' }),
+        edge('a2', 'mid', { days: 5, capacity: 3 }),
+        edge('mid', 'b2', { days: 2, capacity: 3 }),
+        edge('b2', 'b1', { type: 'rail', days: 1, capacity: 4, line: 'b_line' }),
+        edge('a2', 'w', { type: 'river', days: 1, capacity: 2 }),
+        edge('b2', 'w', { type: 'river', days: 1, capacity: 2 }),
+      ],
+      depots: [depot('a_src', 'a1'), depot('b_src', 'b1'), depot('a_fwd', 'a2', 'depot', 2)],
+    });
+    expect(mapSignature(slower, { control, month: 6 })).toBe(mapSignature(map, { control, month: 6 }));
+    const cache = createDerivedMapCache();
+    deriveMap(map, { control, month: 6 }, cache);
+    const onSlower = deriveMap(slower, { control, month: 6 }, cache);
+    expect(cache.recomputes).toBe(2);
+    expect(onSlower.supply.factions.get(F('a'))!.paths.get(R('mid'))!.daysPermille).toBe(5000);
   });
 
   it('a cached derivation equals a fresh one (rebuilding derived data changes nothing, AWWV M1)', () => {

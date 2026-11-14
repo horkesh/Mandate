@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { applyControl, ControlError, controlThresholds, initialControl, shareOf } from '../src/control/control.ts';
+import { applyControl, CONTROL_CAUSES, ControlError, controlThresholds, initialControl, shareOf } from '../src/control/control.ts';
+import { OWNED_FIELDS } from '../src/ownership.ts';
 import type { State } from '../src/root-state.ts';
 import { controlTable, F, lineMap, R, startWith } from './support/map-fixture.ts';
 
@@ -76,10 +77,26 @@ describe('the control writer (only `applyControl` changes control)', () => {
 
   it('refuses control on open water, unknown factions and fractional deltas (positive control)', () => {
     const s = stateWith({});
-    expect(() => applyControl(map, s, [{ region: R('w'), faction: F('a'), deltaPermille: 10, cause: 'x' }])).toThrow('carries no control');
-    expect(() => applyControl(map, s, [{ region: R('mid'), faction: F('z'), deltaPermille: 10, cause: 'x' }])).toThrow('faction z is not in the World');
-    expect(() => applyControl(map, s, [{ region: R('mid'), faction: F('a'), deltaPermille: 0.5, cause: 'x' }])).toThrow('whole permille');
-    expect(() => applyControl(map, s, [{ region: R('nowhere'), faction: F('a'), deltaPermille: 10, cause: 'x' }])).toThrow('unknown region id');
+    expect(() => applyControl(map, s, [{ region: R('w'), faction: F('a'), deltaPermille: 10, cause: 'combat' }])).toThrow('carries no control');
+    expect(() => applyControl(map, s, [{ region: R('mid'), faction: F('z'), deltaPermille: 10, cause: 'combat' }])).toThrow('faction z is not in the World');
+    expect(() => applyControl(map, s, [{ region: R('mid'), faction: F('a'), deltaPermille: 0.5, cause: 'combat' }])).toThrow('whole permille');
+    expect(() => applyControl(map, s, [{ region: R('nowhere'), faction: F('a'), deltaPermille: 10, cause: 'combat' }])).toThrow('unknown region id');
+  });
+
+  it('counts a delta that changes nothing as no change, and returns the same State (review N3)', () => {
+    const start = stateWith({ a1: { a: 1000 }, mid: { b: 300 } });
+    const out = applyControl(map, start, [
+      { region: R('a1'), faction: F('a'), deltaPermille: 200, cause: 'occupation' },
+      { region: R('mid'), faction: F('a'), deltaPermille: -50, cause: 'combat' },
+    ]);
+    expect(out.changes).toEqual([]);
+    expect(out.crossings).toEqual([]);
+    expect(out.state).toBe(start);
+  });
+
+  it('types its causes as the proposers OWNED_FIELDS lists for region control (review N2)', () => {
+    const field = OWNED_FIELDS.find((f) => f.field === 'region control')!;
+    expect([...CONTROL_CAUSES].sort()).toEqual([...field.proposedBy].sort());
   });
 
   it('reads its thresholds from the pack (0019: 50 and 250 to start)', () => {
