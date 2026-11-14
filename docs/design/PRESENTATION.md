@@ -137,7 +137,7 @@ At 16:9 [proposed]: the desk-edge margins drop and the meter moves above the ans
 - **Shows:** his stated reasons as typed terms rendered from the string table, each with its source where he cites one; the counters the kernel allows; his answer to each counter as his declared rung [canon: 0007, FOUNDATION section 6].
 - **Hides:** his actual rung, his true reasons, his hidden stats [canon: 0020, 0022].
 - **Ends:** with a short line in his voice and a paper in the file recording what was said [proposed]. There is no "success" banner; the result is whatever he later reports [proposed, from pillar 4].
-- **Portrait:** for a real person, a portrait made from his cited public-domain photograph, never an invented likeness [canon: 0048]; for a generated officer, an invented face from the generated library, or a card saying no likeness is on file (`ASSETS.md` briefs 6 and 7) [proposed].
+- **Portrait:** for a real person, his cited public-domain photograph itself, cropped and toned by ordinary processing, never an invented or AI-edited likeness [canon: 0048; ruling pending as 0051]; a photograph taken after the war carries its date in the caption; for a generated officer, an invented face from the generated library; otherwise a card saying no likeness is on file (`ASSETS.md` briefs 6 and 7) [proposed].
 
 ### 1.4 Plan review on the map
 
