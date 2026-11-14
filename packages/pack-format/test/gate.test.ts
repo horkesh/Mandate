@@ -152,6 +152,17 @@ describe('situations in the pack format', () => {
     expect(issues(known).filter((i) => i.kind === 'situation-option-truth')).toEqual([]);
   });
 
+  it('standing review S2: the knowledge trigger reads only what the principal can know, and no option reads the other side’s decisions', () => {
+    firesAt(editJson(sit('fen_crossing'), (s) => (s.knowledge = { any: [s.knowledge, { fired: 'fen_arrivals' }] })), 'situation-knowledge-truth', { at: 'knowledge', message: '"fired"' });
+    firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.knowledge = { flag: 'fen_arrivals' })), 'situation-knowledge-truth', { at: 'knowledge', message: '"flag"' });
+    // The other side's decision: make fen_crossing a southern situation and read it from a northern option.
+    const southern = merge(
+      editJson(sit('fen_crossing'), (s) => (s.faction = 'south')),
+      editJson(sit('eastwatch_stalls'), (s) => (s.options[0].expiresWhen = { decided: 'fen_crossing' })),
+    );
+    firesAt(southern, 'situation-option-truth', { file: sit('eastwatch_stalls'), at: 'options[0].expiresWhen', message: 'south' });
+  });
+
   it('a pack with situations must carry its gate', () => {
     fires({ 'gate/register.json': null }, 'missing-file', 'gate/register.json');
   });

@@ -7,7 +7,7 @@
  */
 import { strictCompare } from '../compare.ts';
 import { ORDER_ROUTES } from '../messages/latency.ts';
-import { situationsIn } from './conditions.ts';
+import { situationsIn, truthRead } from './conditions.ts';
 import type { Condition, Effect, SituationDef } from './types.ts';
 
 export interface SituationRefs {
@@ -95,7 +95,18 @@ export function situationReferenceProblems(defs: readonly SituationDef[], refs: 
     }
   }
   const all = new Set(defs.map((d) => d.id));
+  const factionOf = new Map(defs.map((d) => [d.id as string, d.faction as string]));
   for (const d of defs) {
+    // What the principal can know (standing review S2): no truth read, and no other side's decision, in his
+    // knowledge trigger or his options' conditions.
+    for (const { at: where, condition } of conditionsOf(d)) {
+      if (where === 'event') continue;
+      walk(condition, (c) => {
+        const atom = truthRead(c);
+        if (atom !== null) problems.push(`situation ${d.id}: ${where}: "${atom}" reads State, which the principal may not know`);
+        if ('decided' in c && factionOf.has(c.decided) && factionOf.get(c.decided) !== d.faction) problems.push(`situation ${d.id}: ${where}: decided ${c.decided} is another side's decision`);
+      });
+    }
     const named = [...conditionsOf(d).flatMap((c) => situationsIn(c.condition)), ...(d.chain?.follows ? [d.chain.follows.situation] : [])];
     for (const s of named) if (!all.has(s)) problems.push(`situation ${d.id}: refers to situation ${s}, which does not exist`);
   }

@@ -185,14 +185,25 @@ describe('deciding: the principal, a history default, several options, waiting, 
   });
 
   it('a waiting option defers the decision until its condition holds, then reopens without it', () => {
-    const sit = decision('wait', { options: [option('hold-until', 1, { waitsOn: { flag: 'victory' } }), option('now', 2), option('never', 3)] });
-    const victory = decision('victory', { event: { fired: S('wait') }, railroad: null, options: [option('win', 1, { effects: [{ setFlag: 'victory' }] })], historicalDefault: { options: ['win'] } });
-    const { world, state } = setup([sit, victory]);
-    const run = days(world, state, 5, { 2: [{ cmd: 'decide', situation: S('wait'), options: ['hold-until'] }], 3: [{ cmd: 'decide', situation: S('victory'), options: ['win'] }] });
+    // A wait reads what the principal can know (standing review S2): here the clock.
+    const sit = decision('wait', { options: [option('hold-until', 1, { waitsOn: { clockAtLeast: 3 } }), option('now', 2), option('never', 3)] });
+    const { world, state } = setup([sit]);
+    const run = days(world, state, 5, { 2: [{ cmd: 'decide', situation: S('wait'), options: ['hold-until'] }] });
     const rec = run.state.situationStates[S('wait')]!;
     expect(rec.sitStatus).toBe('open');
     expect(rec.sitOpenOptions).toEqual(['now', 'never']);
     expect(run.points).toContain('situation-resurfaced:wait');
+  });
+
+  it('the guard refuses a truth read, or the other side’s decision, where the principal must know (standing review S2)', () => {
+    const theirs = decision('theirs', { faction: F('b'), staffLine: { authors: [POST('b_office')], recommends: ['hold'], reasons: [], confidence: 500 }, delegableTo: [] });
+    const world = (over: Partial<SituationDef>) => () => setup([decision('mine', over), theirs]);
+    expect(world({ knowledge: { flag: 'x' } })).toThrow(/knowledge: "flag" reads State/);
+    expect(world({ options: [option('hold', 1, { waitsOn: { fired: S('theirs') } })] })).toThrow(/waitsOn: "fired" reads State/);
+    expect(world({ options: [option('hold', 1, { appearsWhen: { not: { headquartersAt: { post: POST('a_army'), region: R('a_front') } } } })] })).toThrow(/appearsWhen: "headquartersAt" reads State/);
+    expect(world({ options: [option('hold', 1, { expiresWhen: { decided: S('theirs'), options: null } })] })).toThrow(/another side's decision/);
+    // The control: the event may read the truth, and the rest may read his own side's decisions, the clock and the date.
+    expect(world({ event: { flag: 'x' }, knowledge: { all: [{ dayAtLeast: 2 }, { decided: S('mine'), options: null }] }, options: [option('hold', 1, { expiresWhen: { clockAtLeast: 3 } })] })).not.toThrow();
   });
 
   it('a chain stage fires only after the stage it follows was decided with a leading option', () => {
