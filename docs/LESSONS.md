@@ -62,6 +62,10 @@ Enforced by: the lane standing rules in `docs/LANES.md` (read files with the Rea
 After the owner had already asked why background agents replaced sessions, the lead reviewed five pull requests with subagents, judging them "read-only lookups". The owner could neither see nor steer them, and the lead also kept doing every merge itself.
 Enforced by: decision 0045 (reviews are lanes; the steward integrates) and the rule in `docs/LANES.md`.
 
+**L17. The lead acted on report previews and missed a lane's follow-up.**
+Lane reports reach the lead as a 400-character preview. The lead acted on previews, archived the gate reviewer straight after its approval, and missed its follow-up (lift the needs-source flags the research cleared, plus three nits) and a design lane's open items. It also kept findings in private scratch notes, out of the owner's sight.
+Enforced by: `docs/LANES.md` "Collecting reports": every report opens with a count of items for the lead; the lead reads every report in full and routes every item in the same turn; no lane is archived before its items are routed; the steward checks each closing lane's items have a home; a sweep runs every 20 minutes while lanes run; waiting findings live in `docs/OPEN_QUESTIONS.md`, not in private notes.
+
 **L15. A proposal card drops its starting branch.**
 The lane 0.1 reviewer was proposed as a card with a source branch; the card dropped it, and the reviewer started on main.
 Enforced by: a brief for a lane that works on another branch tells it, as its first step, to check that branch out (detached if another worktree holds it).

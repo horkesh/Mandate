@@ -62,3 +62,4 @@ The main session is the lead; work goes to lanes (separate sessions) with writte
 - Facts about the world come from a research lane, never from the lead's memory.
 - Lanes send questions to the lead by `SendMessage`, never through wrap-up, and end with "Findings outside my scope".
 - Verify a lane's claims on disk before reporting them. Every review is a lane, never a subagent. The steward merges accepted work; the lead decides and records (0045).
+- Read every lane report in full, never just its preview, and route every item in the same turn; sweep the lanes every 20 minutes while any run (L17, `docs/LANES.md` "Collecting reports").
