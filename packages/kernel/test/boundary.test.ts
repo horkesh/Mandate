@@ -36,11 +36,24 @@ const SEAT_API = '@mandate/kernel/seat-api';
 /** M2's player-facing files, which import the M2 kernel until M2 retires. The list only shrinks. */
 const LEGACY_PLAYER_FACING = ['packages/cli/src/console.ts', 'packages/cli/src/format.ts'] as const;
 
-/** Static import and re-export specifiers in a file (type-only imports included: a type is a dependency too). */
+/**
+ * Import and re-export specifiers in a file: static ones (type-only included:
+ * a type is a dependency too) and dynamic `import('...')` with a quoted literal
+ * (review F1).
+ */
 export function importsOf(source: string): string[] {
   const { withStrings } = lexSource(source);
-  const pattern = /\b(?:import|export)\s+(?:type\s+)?(?:[\w$*{}\s,]+?\s+from\s+)?(['"])([^'"\n]+)\1/g;
-  return [...withStrings.matchAll(pattern)].map((m) => m[2]!);
+  const statics = /\b(?:import|export)\s+(?:type\s+)?(?:[\w$*{}\s,]+?\s+from\s+)?(['"])([^'"\n]+)\1/g;
+  const dynamics = /\bimport\s*\(\s*(['"])([^'"\n]+)\1\s*\)/g;
+  return [...[...withStrings.matchAll(statics)], ...[...withStrings.matchAll(dynamics)]].sort((a, b) => a.index - b.index).map((m) => m[2]!);
+}
+
+/** Lines with a dynamic `import(` whose argument is not a single quoted literal: no scan can tell where it goes. */
+export function opaqueImports(source: string): number[] {
+  const lexed = lexSource(source);
+  const all = [...lexed.code.matchAll(/\bimport\s*\(/g)].map((m) => m.index);
+  const literal = new Set([...lexed.withStrings.matchAll(/\bimport\s*\(\s*(['"])[^'"\n]+\1\s*\)/g)].map((m) => m.index));
+  return all.filter((i) => !literal.has(i)).map((i) => lexed.lineOf(i));
 }
 
 /** Resolve a relative specifier from a repo-relative file to a repo-relative path. */
@@ -53,14 +66,25 @@ function resolveRelative(from: string, specifier: string): string {
   return parts.join('/');
 }
 
-/** Every file reachable by relative imports from `root`, given a reader of repo-relative paths. */
+/**
+ * Every file reachable by relative imports from `root`, given a reader of
+ * repo-relative paths. A bare specifier is not followed: it is recorded, and
+ * `forbiddenIn` refuses it, because a view-layer file importing a package by
+ * name (its own included: `@mandate/kernel` re-exports State) escapes the
+ * closure (review F2).
+ */
 export function importClosure(root: string, read: (path: string) => string): string[] {
   const seen = new Set<string>([root]);
   const queue = [root];
   while (queue.length > 0) {
     const file = queue.pop()!;
-    for (const spec of importsOf(read(file))) {
-      if (!spec.startsWith('.')) continue;
+    const source = read(file);
+    if (opaqueImports(source).length > 0) seen.add(`${file} -> import(<not a literal>)`);
+    for (const spec of importsOf(source)) {
+      if (!spec.startsWith('.')) {
+        seen.add(`${file} -> ${spec}`);
+        continue;
+      }
       const target = resolveRelative(file, spec);
       if (!seen.has(target)) {
         seen.add(target);
@@ -71,8 +95,9 @@ export function importClosure(root: string, read: (path: string) => string): str
   return [...seen].sort();
 }
 
+/** Forbidden files in a closure, and every package import or opaque import made from inside it. */
 export function forbiddenIn(closure: readonly string[]): string[] {
-  return closure.filter((f) => FORBIDDEN.some((x) => (x.endsWith('/') ? f.startsWith(x) : f === x)));
+  return closure.filter((f) => f.includes(' -> ') || FORBIDDEN.some((x) => (x.endsWith('/') ? f.startsWith(x) : f === x)));
 }
 
 /** Why a player-facing file's import is not allowed, or null. */
@@ -115,6 +140,20 @@ describe('the view layer cannot reach State or the truth layer', () => {
       'packages/kernel/src/root-state.ts',
     ]);
   });
+
+  it('catches a view-layer file importing its own package by name, or importing dynamically (review F2, positive control)', () => {
+    const files: Record<string, string> = {
+      'packages/kernel/src/seat-api.ts': "export type { SeatView } from './view/types.ts';\nexport type { Menu } from './seats/api.ts';",
+      'packages/kernel/src/view/types.ts': "import type { phase0 } from '@mandate/kernel';\nexport type Leak = phase0.State;",
+      'packages/kernel/src/seats/api.ts': "export const later = (p: string) => import(p);\nexport const kernel = () => import('../root-state.ts');",
+      'packages/kernel/src/root-state.ts': '',
+    };
+    expect(forbiddenIn(importClosure('packages/kernel/src/seat-api.ts', (p) => files[p] ?? ''))).toEqual([
+      'packages/kernel/src/root-state.ts',
+      'packages/kernel/src/seats/api.ts -> import(<not a literal>)',
+      'packages/kernel/src/view/types.ts -> @mandate/kernel',
+    ]);
+  });
 });
 
 describe('player-facing code imports the kernel only through seat-api', () => {
@@ -129,10 +168,12 @@ describe('player-facing code imports the kernel only through seat-api', () => {
       for (const abs of tsFiles(join(REPO_ROOT, root))) {
         const file = repoPath(abs);
         scanned++;
-        for (const spec of importsOf(readFileSync(abs, 'utf8'))) {
+        const source = readFileSync(abs, 'utf8');
+        for (const spec of importsOf(source)) {
           const p = playerFacingProblem(file, spec, root);
           if (p) problems.push(p);
         }
+        for (const line of opaqueImports(source)) problems.push(`${file}:${line}: a dynamic import() of something other than a quoted literal`);
       }
     }
     expect(scanned).toBeGreaterThan(1);
@@ -152,6 +193,21 @@ describe('player-facing code imports the kernel only through seat-api', () => {
     ].join('\n');
     const problems = importsOf(src).map((s) => playerFacingProblem(file, s, root));
     expect(problems.map((p) => p !== null)).toEqual([true, true, true, true, false, false]);
+  });
+
+  it('sees dynamic imports: a literal one is checked like any import, an opaque one is refused (review F1, positive control)', () => {
+    const file = 'packages/rule-seats/src/probe.ts';
+    const root = 'packages/rule-seats/src/';
+    const src = [
+      'export const view = () => 1;',
+      "export const leak = () => import('@mandate/kernel');",
+      'export const hidden = (name: string) => import(name);',
+      "export const templated = () => import(`@mandate/${'kernel'}`);",
+      '// import(name) in a comment is nothing',
+    ].join('\n');
+    expect(importsOf(src)).toEqual(['@mandate/kernel']);
+    expect(playerFacingProblem(file, '@mandate/kernel', root)).not.toBeNull();
+    expect(opaqueImports(src)).toEqual([3, 4]);
   });
 
   it('names M2’s console as the only legacy exception, and the list shrinks when it retires', () => {
