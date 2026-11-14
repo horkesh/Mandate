@@ -39,6 +39,10 @@ export interface KernelRules {
   readonly addressSupport: number;
   readonly addressRivalPenalty: number;
   readonly dismissalSupportLossPerStanding: number;
+  /** Each week a bloc closes 1/divisor of the gap between its support and its baseline. */
+  readonly blocReversionDivisor: number;
+  /** A battle's political weight is full once it involves this share (permille) of the faction's whole force; minimum a quarter. */
+  readonly majorBattleShare: number;
 
   // Verbs
   readonly honourRegard: number;
@@ -108,8 +112,10 @@ export const DEFAULT_KERNEL_RULES: KernelRules = Object.freeze({
   blocAlignedBonus: 30,
   blocRegionLostSupport: -50,
   addressSupport: 100,
-  addressRivalPenalty: -40,
+  addressRivalPenalty: -15,
   dismissalSupportLossPerStanding: 250,
+  blocReversionDivisor: 20,
+  majorBattleShare: 250,
 
   honourRegard: 150,
   honourStanding: 100,

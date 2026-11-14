@@ -2,7 +2,7 @@
 
 Mandate is a setting-agnostic engine for strategy games in which the player is the political leader of a faction at war and commands only through human proxies who can and do push back. Reference wars: Rome, the US Civil War, Russia–Ukraine. First slice: the Union, 1861–62.
 
-**Phase: M1 done (headless people kernel).** The kernel runs whole games headless: directives with latency, compliance and lies, a coarse theatre, the insubordination ladder, rivals, promises, mandate tests, and a bot principal. Next is M2, the Union 1861–62 pack in a text console. There is no UI yet. See [docs/ROADMAP.md](docs/ROADMAP.md) and [docs/design/KERNEL.md](docs/design/KERNEL.md).
+**Phase: M2 built (Audience + Union 1861–62 in a text console).** The kernel runs whole games: directives with latency, compliance and lies, the Audience with typed counters, a coarse theatre, recruitment into posts, the insubordination ladder, rivals, promises, mandate tests, and a bot principal. `npm run play -- union-1861` plays Lincoln in the terminal. Pending: the owner's playtest and calibration. Next is M3, the desk UI and the staff map. There is no UI yet beyond the console and the map prototype. See [docs/ROADMAP.md](docs/ROADMAP.md) and [docs/design/KERNEL.md](docs/design/KERNEL.md).
 
 ## Hard rules
 
@@ -38,6 +38,8 @@ npm run typecheck
 npm run check:boundary
 npm run demo             # headless demo: three proxies receive the same directive
 npm run run:testbed      # M1: a scripted 20-turn headless game on the fictional testbed pack
+npm run play -- union-1861       # M2: play Lincoln in the text console (default pack: testbed)
+npm run run:pack -- union-1861 75  # watch the generic scripted leader play a pack
 ```
 
 Hooks: `git config core.hooksPath .githooks`.

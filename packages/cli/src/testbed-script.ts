@@ -64,11 +64,15 @@ export function testbedScript(view: FactionView, rules: KernelRules): Decision[]
   // 4. On the first turn, promise the boldest unposted man a command.
   if (view.turn === 0 && candidates[0] && room()) out.push({ verb: 'promise', personId: candidates[0].id });
 
-  // 4b. On the second turn, send the reserve to the strongest field army (assets belong to posts: P1).
-  if (view.turn === 1 && room()) {
-    const office = view.posts.find((p) => p.kind === 'office' && p.force > 0);
-    const field = [...view.posts].filter((p) => p.kind === 'field').sort((a, b) => b.force - a.force || strictCompare(a.id, b.id))[0];
-    if (office && field) out.push({ verb: 'allocate', fromPostId: office.id, toPostId: field.id, amount: Math.trunc(office.force * 2 / 3) });
+  // 4b. Send accumulated levies from offices to the weakest army (assets belong to posts: P1).
+  const armies = view.posts.filter((p) => p.kind === 'field' && p.holderId !== null).sort((a, b) => a.force - b.force || strictCompare(a.id, b.id));
+  const sending = new Set(view.directives.filter((d) => d.objective.kind === 'transfer' && view.day - d.issuedDay < 28).map((d) => d.postId));
+  for (const office of view.posts) {
+    const weakest = armies[0];
+    if (!weakest || !room() || office.kind !== 'office' || office.holderId === null || sending.has(office.id)) continue;
+    if (office.force * 4 < weakest.force) continue;
+    out.push({ verb: 'allocate', fromPostId: office.id, toPostId: weakest.id, amount: office.force });
+    armies.push(armies.shift()!);
   }
 
   // 4c. Honour a commander who has just taken ground, even though fame makes him harder to control (P6).

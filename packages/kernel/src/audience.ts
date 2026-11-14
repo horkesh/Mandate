@@ -96,7 +96,8 @@ export function holdAudience(state: GameState, factionId: FactionId, draft: Audi
   const options = COUNTER_KINDS
     .filter((counter) => counter !== 'frame' || frames.length > 0)
     .map((counter) => ({ counter, answers: stated.filter(COUNTER_ANSWERS[counter]) }))
-    .filter((o) => o.answers.length > 0 || o.counter === 'threaten');
+    // Threats and appeals to his values are always available; the rest only when they answer something he said.
+    .filter((o) => o.answers.length > 0 || o.counter === 'threaten' || o.counter === 'frame');
   const answerable = (r: Reason) => COUNTER_KINDS.some((k) => COUNTER_ANSWERS[k](r));
   const unanswerable = stated.filter((r) => !answerable(r) && r.kind !== 'values_honoured' && r.kind !== 'trusts_leader');
 

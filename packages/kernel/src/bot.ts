@@ -13,19 +13,22 @@ import type { FactionView } from './view.ts';
 export interface BotPolicy {
   /** Boldness of the bot's own offensives. */
   readonly boldness: number;
-  /** Assumed enemy force in a region nobody has reported on. */
-  readonly assumedForce: number;
+  /** In a region nobody has reported on, assume the enemy holds this share (permille) of the attacking post's own force. */
+  readonly assumedShare: number;
   /** Days a directive stays "active" before the bot considers the post free again. */
   readonly patienceDays: number;
   /** Refusals after which the bot sacks a man. */
   readonly refusalsBeforeDismissal: number;
+  /** An office's levy is sent forward once it reaches this share (permille) of the weakest front-line army. */
+  readonly levyShare: number;
 }
 
 export const DEFAULT_BOT_POLICY: BotPolicy = Object.freeze({
   boldness: 700,
-  assumedForce: 300,
+  assumedShare: 500,
   patienceDays: 28,
   refusalsBeforeDismissal: 2,
+  levyShare: 250,
 });
 
 export function botDecisions(view: FactionView, rules: KernelRules, policy: BotPolicy = DEFAULT_BOT_POLICY): Decision[] {
@@ -53,7 +56,21 @@ export function botDecisions(view: FactionView, rules: KernelRules, policy: BotP
     decisions.push({ verb: 'appoint', postId: person.postId, personId: replacement.id });
   }
 
-  // 3. Order an offensive wherever its own returns and reported enemy strength justify one.
+  // 3. Send levies sitting in offices to the weakest army on a front (assets move only by order: P1).
+  const frontline = view.posts
+    .filter((p) => p.kind === 'field' && p.holderId !== null)
+    .filter((p) => view.regions.find((r) => r.id === p.regionId)?.neighbours.some((n) => view.regions.find((r) => r.id === n)?.controllerId !== view.factionId))
+    .sort((a, b) => a.force - b.force || strictCompare(a.id, b.id));
+  const reinforcing = new Set(view.directives.filter((d) => d.objective.kind === 'transfer' && view.day - d.issuedDay < policy.patienceDays).map((d) => d.postId));
+  for (const office of view.posts) {
+    if (!budget() || office.kind !== 'office' || office.holderId === null || reinforcing.has(office.id)) continue;
+    const weakest = frontline[0];
+    if (!weakest || office.force * 1000 < weakest.force * policy.levyShare) continue;
+    decisions.push({ verb: 'allocate', fromPostId: office.id, toPostId: weakest.id, amount: office.force });
+    frontline.push(frontline.shift()!);
+  }
+
+  // 4. Order an offensive wherever its own returns and reported enemy strength justify one.
   const busy = new Set(
     view.directives
       .filter((d) => view.day - d.issuedDay < policy.patienceDays && d.told?.declared !== 'refuse')
@@ -67,7 +84,7 @@ export function botDecisions(view: FactionView, rules: KernelRules, policy: BotP
     const targets = region.neighbours
       .map((id) => view.regions.find((r) => r.id === id)!)
       .filter((r) => r.controllerId !== view.factionId)
-      .map((r) => ({ id: r.id, estimate: r.lastEstimate?.force ?? policy.assumedForce }))
+      .map((r) => ({ id: r.id, estimate: r.lastEstimate?.force ?? scale(post.force, policy.assumedShare) }))
       .sort((a, b) => a.estimate - b.estimate || strictCompare(a.id, b.id));
     const target = targets[0];
     if (!target) continue;

@@ -82,7 +82,11 @@ export function tickDay(state: GameState, rules: KernelRules): void {
   settleStaleObjections(state, rules);
   resolveDueOperations(state, rules);
   deliverMessages(state, rules);
-  if (state.day % 7 === 0) weeklyPeople(state, rules);
+  if (state.day % 7 === 0) {
+    recruit(state);
+    blocDrift(state, rules);
+    weeklyPeople(state, rules);
+  }
   duePromises(state, rules);
   checkpoints(state);
   termination(state);
@@ -108,6 +112,22 @@ function deliverMessages(state: GameState, rules: KernelRules): void {
         log(state, { kind: 'transfer_arrived', factionId: to.factionId, actors: [p.fromPostId, p.toPostId], detail: { amount: p.amount } });
       }
     }
+  }
+}
+
+/** Held posts raise their weekly levy into their own force (P1: the principal must still order it moved). */
+function recruit(state: GameState): void {
+  for (const id of sortedKeys(state.posts)) {
+    const post = state.posts[id]!;
+    if (post.recruitPerWeek > 0 && post.holderId !== null) post.force += post.recruitPerWeek;
+  }
+}
+
+/** Public mood fades back toward each bloc's settled disposition. */
+function blocDrift(state: GameState, rules: KernelRules): void {
+  for (const id of sortedKeys(state.blocs)) {
+    const bloc = state.blocs[id]!;
+    bloc.support += Math.trunc((bloc.baseline - bloc.support) / rules.blocReversionDivisor);
   }
 }
 

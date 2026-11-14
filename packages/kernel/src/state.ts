@@ -81,6 +81,8 @@ export interface Post {
   force: number;
   /** Message latency in days between the principal and this post (P8). */
   readonly linkDays: number;
+  /** Force this post raises each week while held (governors, war offices). It stays in the post until transferred (P1). */
+  readonly recruitPerWeek: number;
 }
 
 export interface Region {
@@ -99,6 +101,8 @@ export interface Bloc {
   readonly weight: Permille;
   readonly values: readonly ValueId[];
   support: SignedPermille;
+  /** The bloc's settled disposition: support drifts back toward it as events fade. */
+  readonly baseline: SignedPermille;
 }
 
 export interface RecordEntry {

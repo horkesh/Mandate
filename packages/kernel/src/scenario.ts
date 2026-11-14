@@ -53,6 +53,7 @@ export interface ScenarioData {
     readonly holderId: PersonId | null;
     readonly force: number;
     readonly linkDays: number;
+    readonly recruitPerWeek?: number;
     readonly name?: string;
   }[];
   readonly regions: readonly {
@@ -110,11 +111,11 @@ export function createGame(data: ScenarioData): GameState {
     };
   }
   const posts: Record<string, Post> = {};
-  for (const { name: _name, ...p } of data.posts) posts[p.id] = { ...p };
+  for (const { name: _name, ...p } of data.posts) posts[p.id] = { ...p, recruitPerWeek: p.recruitPerWeek ?? 0 };
   const regions: Record<string, Region> = {};
   for (const { name: _name, ...r } of data.regions) regions[r.id] = { ...r, neighbours: [...r.neighbours].sort(strictCompare) };
   const blocs: Record<string, Bloc> = {};
-  for (const { name: _name, ...b } of data.blocs) blocs[b.id] = { ...b, values: [...b.values].sort(strictCompare) };
+  for (const { name: _name, ...b } of data.blocs) blocs[b.id] = { ...b, values: [...b.values].sort(strictCompare), baseline: b.support };
 
   return {
     schemaVersion: 1,
@@ -198,6 +199,9 @@ export function validateScenario(data: ScenarioData): string[] {
     }
     if (!Number.isSafeInteger(p.force) || p.force < 0) problems.push(`post ${p.id}: force must be a non-negative integer`);
     if (!Number.isSafeInteger(p.linkDays) || p.linkDays < 0) problems.push(`post ${p.id}: linkDays must be a non-negative integer`);
+    if (p.recruitPerWeek !== undefined && (!Number.isSafeInteger(p.recruitPerWeek) || p.recruitPerWeek < 0)) {
+      problems.push(`post ${p.id}: recruitPerWeek must be a non-negative integer`);
+    }
   }
   for (const r of data.regions) {
     if (!factionIds.has(r.controllerId)) problems.push(`region ${r.id}: unknown controller ${r.controllerId}`);

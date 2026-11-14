@@ -106,13 +106,14 @@ function resolveOperation(state: GameState, op: Operation, rules: KernelRules): 
       h.standing = clampPermille(h.standing + (taken ? rules.defeatStanding : Math.trunc(rules.victoryStanding / 2)));
     }
   }
-  // A failed demonstration is a smaller blow at home than a failed assault (the public can't tell, but casualty lists can).
-  const homeDelta = taken ? rules.blocVictorySupport : op.mode === 'demonstration' ? Math.trunc(rules.blocDefeatSupport / 2) : rules.blocDefeatSupport;
-  shiftBlocs(state, op.factionId, homeDelta, rules);
+  // Politics weighs a battle by its size: a skirmish is not a Bull Run. A failed demonstration is a smaller blow.
+  const magnitude = battleMagnitude(state, op.factionId, committed, rules);
+  const baseDelta = taken ? rules.blocVictorySupport : op.mode === 'demonstration' ? Math.trunc(rules.blocDefeatSupport / 2) : rules.blocDefeatSupport;
+  shiftBlocs(state, op.factionId, scale(baseDelta, magnitude), rules);
 
   if (taken) {
     target.controllerId = op.factionId;
-    shiftBlocs(state, defender, rules.blocRegionLostSupport, rules);
+    shiftBlocs(state, defender, scale(rules.blocRegionLostSupport, battleMagnitude(state, defender, defenceForce, rules)), rules);
     for (const p of defendingPosts) retreat(state, p.id);
     post.regionId = target.id;
   }
@@ -177,6 +178,18 @@ function retreat(state: GameState, postId: PostId): void {
     log(state, { kind: 'force_destroyed', factionId: post.factionId, actors: [post.id], causes: ['no line of retreat'], detail: { force: post.force } });
     post.force = 0;
   }
+}
+
+/** Permille weight of a battle at home: its force as a share of the faction's whole force, from a quarter to full. */
+function battleMagnitude(state: GameState, factionId: FactionId, force: number, rules: KernelRules): Permille {
+  let total = 0;
+  for (const id of sortedKeys(state.posts)) {
+    const post = state.posts[id]!;
+    if (post.factionId === factionId) total += post.force;
+  }
+  if (total <= 0) return 1000;
+  const share = Math.trunc((force * 1000) / total);
+  return clamp(Math.trunc((share * 1000) / rules.majorBattleShare), 250, 1000);
 }
 
 function shiftBlocs(state: GameState, factionId: FactionId, delta: number, rules: KernelRules): void {

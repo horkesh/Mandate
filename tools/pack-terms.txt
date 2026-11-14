@@ -27,6 +27,22 @@ Gettysburg
 Davis
 Republican
 Copperhead
+Buell
+Halleck
+Curtin
+Morton
+Beauregard
+Longstreet
+Bragg
+Jackson
+Johnston
+McDowell
+Kentucky
+Tennessee
+Missouri
+Shenandoah
+Manassas
+Virginia
 
 # rome-punic
 Hannibal

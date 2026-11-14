@@ -217,8 +217,10 @@ export class GameConsole {
     const draft = this.audience!;
     const o = holdAudience(this.state, this.player, draft, this.rules);
     const order = draft.objective.kind === 'attack' ? `attack ${this.name(draft.objective.targetRegionId)}` : draft.objective.kind;
+    const adjusted = draft.counters.find((c) => c.kind === 'adjust');
+    const boldness = adjusted?.kind === 'adjust' ? `${adjusted.boldness} (softened from ${draft.boldness})` : String(draft.boldness);
     const out = [
-      `Audience with ${this.name(o.personId)} about the order: ${order}, at boldness ${draft.boldness}.`,
+      `Audience with ${this.name(o.personId)} about the order: ${order}, at boldness ${boldness}.`,
       `He says: "${o.declared}"${o.counterBoldness !== null ? `, and proposes boldness ${o.counterBoldness} instead` : ''}.`,
       o.statedReasons.length ? `He gives as reasons: ${o.statedReasons.map(fmt.reason).join(', ')}.` : 'He gives no reasons.',
     ];
@@ -227,7 +229,10 @@ export class GameConsole {
     out.push('What you could offer:');
     for (const opt of o.options) {
       const how = COUNTER_SYNTAX[opt.counter];
-      out.push(`  ${how}${opt.answers.length ? `  answers ${opt.answers.map(fmt.reason).join(', ')}` : '  answers nothing; leaves a grievance'}`);
+      const effect = opt.answers.length
+        ? `answers ${opt.answers.map(fmt.reason).join(', ')}`
+        : opt.counter === 'threaten' ? 'answers nothing; leaves a grievance' : 'answers nothing he said; may still appeal to him';
+      out.push(`  ${how}  ${effect}`);
     }
     if (o.options.some((x) => x.counter === 'frame') && o.frames.length) out.push(`  (frames available: ${o.frames.join(', ')})`);
     out.push(`Offered so far: ${draft.counters.length ? draft.counters.map(fmt.counter).join(', ') : 'nothing'} (at most ${this.rules.audienceMaxCounters}).`);
