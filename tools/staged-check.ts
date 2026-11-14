@@ -70,7 +70,7 @@ export function workspacePackages(tree: string): Map<string, string> {
     } else if (!pattern.includes('*')) {
       folders.push(join(tree, pattern));
     } else {
-      throw new Error(`workspace pattern "${pattern}" is not supported by tools/staged-check.mjs`);
+      throw new Error(`workspace pattern "${pattern}" is not supported by tools/staged-check.ts`);
     }
   }
   const out = new Map<string, string>();
