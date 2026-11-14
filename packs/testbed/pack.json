@@ -41,7 +41,8 @@
       { "id": "yard", "name": "post_kind.yard", "creatable": "start_only", "temporary": false },
       { "id": "governor", "name": "post_kind.governor", "creatable": "start_only", "temporary": false },
       { "id": "rail_president", "name": "post_kind.rail_president", "creatable": "start_only", "temporary": false },
-      { "id": "expedition", "name": "post_kind.expedition", "creatable": "appoint", "temporary": true }
+      { "id": "expedition", "name": "post_kind.expedition", "creatable": "appoint", "temporary": true },
+      { "id": "wire_office", "name": "post_kind.wire_office", "creatable": "start_only", "temporary": false, "role": "filter" }
     ],
     "departmentKinds": [
       { "id": "executive", "name": "department_kind.executive" },

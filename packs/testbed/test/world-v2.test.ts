@@ -126,4 +126,20 @@ describe('testbed world v2', () => {
     expect(world.regions.some((r) => r.offMapRole === 'blockade_port')).toBe(true);
     expect(opening.posts.some((p) => p.railLine !== null && p.holder !== null)).toBe(true);
   });
+
+  it('carries 0058’s filter role: each side has an empty filter post at its capital, as the stand-in comms World did', () => {
+    const filterKinds = new Set(world.vocabularies.postKinds.filter((k) => k.role === 'filter').map((k) => k.id));
+    expect([...filterKinds]).toEqual(['wire_office']);
+    for (const s of pack!.scenarios) {
+      const filters = s.posts.filter((p) => filterKinds.has(p.kind));
+      const capitals = new Map(s.factions.map((f) => [f.faction as string, f.capital as string | null]));
+      const side = new Map(world.departments.map((d) => [d.id as string, d.faction as string | null]));
+      expect(filters.map((p) => [side.get(p.department), p.region, p.holder])).toEqual(
+        [...capitals].map(([faction, capital]) => [faction, capital, null]),
+      );
+    }
+    // No other kind carries a role the engine reads.
+    expect(world.vocabularies.postKinds.filter((k) => k.role !== null && k.role !== 'filter')).toEqual([]);
+  });
 });
+

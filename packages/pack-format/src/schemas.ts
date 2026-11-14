@@ -165,7 +165,19 @@ export const RulesSchema = z.strictObject({
 
 export const VocabulariesSchema = z.strictObject({
   terrains: z.array(z.strictObject({ id: termId, name: stringKey, roadLengthPermille: positive, water: z.boolean() })),
-  postKinds: z.array(z.strictObject({ id: termId, name: stringKey, creatable: z.enum(w.POST_CREATION), temporary: z.boolean() })),
+  postKinds: z.array(
+    z.strictObject({
+      id: termId,
+      name: stringKey,
+      creatable: z.enum(w.POST_CREATION),
+      temporary: z.boolean(),
+      role: z
+        .enum(w.POST_KIND_ROLES)
+        .nullable()
+        .default(null)
+        .describe('What the engine reads of this kind (0058): filter (holds or passes what comes in for its principal) or intelligence; null for any other kind. The engine never reads kind names.'),
+    }),
+  ),
   departmentKinds: z.array(term),
   arms: z.array(z.strictObject({ id: termId, name: stringKey, naval: z.boolean() })),
   personKinds: z.array(term),

@@ -180,16 +180,17 @@
 {"id":"magnate","name":"person_kind.magnate"}
 ],
 "postKinds": [
-{"creatable":"start_only","id":"head_of_state","name":"post_kind.head_of_state","temporary":false},
-{"creatable":"start_only","id":"minister","name":"post_kind.minister","temporary":false},
-{"creatable":"appoint","id":"army","name":"post_kind.army","temporary":false},
-{"creatable":"appoint","id":"garrison_command","name":"post_kind.garrison_command","temporary":false},
-{"creatable":"appoint","id":"fort_command","name":"post_kind.fort_command","temporary":false},
-{"creatable":"directive","id":"squadron","name":"post_kind.squadron","temporary":false},
-{"creatable":"start_only","id":"yard","name":"post_kind.yard","temporary":false},
-{"creatable":"start_only","id":"governor","name":"post_kind.governor","temporary":false},
-{"creatable":"start_only","id":"rail_president","name":"post_kind.rail_president","temporary":false},
-{"creatable":"appoint","id":"expedition","name":"post_kind.expedition","temporary":true}
+{"creatable":"start_only","id":"head_of_state","name":"post_kind.head_of_state","role":null,"temporary":false},
+{"creatable":"start_only","id":"minister","name":"post_kind.minister","role":null,"temporary":false},
+{"creatable":"appoint","id":"army","name":"post_kind.army","role":null,"temporary":false},
+{"creatable":"appoint","id":"garrison_command","name":"post_kind.garrison_command","role":null,"temporary":false},
+{"creatable":"appoint","id":"fort_command","name":"post_kind.fort_command","role":null,"temporary":false},
+{"creatable":"directive","id":"squadron","name":"post_kind.squadron","role":null,"temporary":false},
+{"creatable":"start_only","id":"yard","name":"post_kind.yard","role":null,"temporary":false},
+{"creatable":"start_only","id":"governor","name":"post_kind.governor","role":null,"temporary":false},
+{"creatable":"start_only","id":"rail_president","name":"post_kind.rail_president","role":null,"temporary":false},
+{"creatable":"appoint","id":"expedition","name":"post_kind.expedition","role":null,"temporary":true},
+{"creatable":"start_only","id":"wire_office","name":"post_kind.wire_office","role":"filter","temporary":false}
 ],
 "ranks": [
 {"id":"colonel","name":"rank.colonel","seniority":1},

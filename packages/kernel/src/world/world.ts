@@ -59,12 +59,22 @@ export interface TerrainTerm {
 export const POST_CREATION = ['start_only', 'appoint', 'directive'] as const;
 export type PostCreation = (typeof POST_CREATION)[number];
 
+/**
+ * What a post kind does in the chain that the engine reads (0058): a filter stands between the wire and its principal
+ * and may hold or pass what comes in (0032); an intelligence post gathers and assesses what is known of the enemy.
+ * The engine reads only the role, never the pack's kind names (hard rule 3).
+ */
+export const POST_KIND_ROLES = ['filter', 'intelligence'] as const;
+export type PostKindRole = (typeof POST_KIND_ROLES)[number];
+
 export interface PostKindTerm {
   readonly id: string;
   readonly name: StringKey;
   readonly creatable: PostCreation;
   /** A temporary post (an expedition command) dissolves when its operation ends (0040). */
   readonly temporary: boolean;
+  /** Its role, if the engine reads one (0058); null for every other kind. */
+  readonly role: PostKindRole | null;
 }
 
 export interface ArmTerm {

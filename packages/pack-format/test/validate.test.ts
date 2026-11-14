@@ -175,6 +175,8 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   // Every other call site of a check (the post-review mutation run)
   { name: 'a block with a parent', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_ship,Red Ship,block,,', 'red_ship,Red Ship,block,red_1,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
   { name: 'a detachment of a detachment', files: () => withFile(`${S}/force_blocks.csv`, appendRow('red_det2,Red Picket,detachment,red_1_det,r_war,red_army,alpha,,foot,10,1900-04,,5,DESIGN,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
+  // 0058: a post kind's role is one the engine reads, never a free name.
+  { name: 'a post kind with a role the engine does not read', files: () => editJson('pack.json', (m: { vocabularies: { postKinds: { role?: string }[] } }) => (m.vocabularies.postKinds[0]!.role = 'spymaster')), kind: 'shape/invalid_value', file: 'pack.json' },
   { name: 'a season reason defined twice in the rules', files: () => editJson('pack.json', (m: { rules: { seasons: unknown[] } }) => m.rules.seasons.push(m.rules.seasons[0])), kind: 'duplicate-id', file: 'pack.json' },
   { name: 'a source key defined twice', files: () => editJson('PROVENANCE.json', (m: { sources: unknown[] }) => m.sources.push(m.sources[0])), kind: 'duplicate-id', file: 'PROVENANCE.json' },
   { name: 'a standing order id twice on one post', files: () => withFile(`${S}/standing_orders.csv`, appendRow('stay,red_army,hold,red_top,1900-04-02,Hold it still.,DESIGN,')), kind: 'duplicate-id', file: `${S}/standing_orders.csv` },
