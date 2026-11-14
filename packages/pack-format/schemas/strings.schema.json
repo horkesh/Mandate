@@ -1,0 +1,12 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"additionalProperties": {
+"type": "string"
+},
+"propertyNames": {
+"pattern": "^[a-z0-9_]+(?:\\.[a-z0-9_:-]+)*$",
+"type": "string"
+},
+"title": "Mandate pack string table (strings/<locale>.json): keys to ICU messages",
+"type": "object"
+}

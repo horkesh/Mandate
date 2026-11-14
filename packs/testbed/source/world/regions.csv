@@ -1,0 +1,31 @@
+id,name,kind,terrain,flags,off_map_role,weather_zone,ref_point,counties,label_anchor,label_spine,label_size,label_min_zoom,sources,notes
+n_capital,Aldmoor,key_point,urban,capital;rail_junction,,north_zone,-1.20 52.80,,,,,,TB-DESIGN,The northern capital; a navy yard and an arsenal sit inside it under different ministries.
+n_heartland,Aldmoor Vale,land,plain,,,north_zone,-1.60 52.70,Aldshire;Penvale,,,,,TB-DESIGN,
+n_west_hills,Greywold,land,hills,,,north_zone,-2.40 52.80,Greyshire,,,,,TB-DESIGN,
+n_railhead,Brenn Junction,key_point,rolling,rail_junction,,north_zone,-2.20 52.50,,,,,,TB-DESIGN,The western branch breaks gauge here.
+n_east_plain,Eastmarch,land,plain,,,north_zone,-0.70 52.70,Eastshire,,,,,TB-DESIGN,
+n_coast,Saltings,land,tidewater,port,,north_zone,-0.20 52.80,Saltshire,,,,,TB-DESIGN,
+n_naval_base,Kestrel Haven,key_point,urban,port,,north_zone,0.00 52.90,,,,,,TB-DESIGN,The North's naval base and yard.
+n_centre_line,Thornfield,land,rolling,,,north_zone,-1.40 52.40,Thornshire,,,,,TB-DESIGN,North of the salient's tip.
+n_west_front,Westwatch,land,rolling,,,north_zone,-2.00 52.20,Westshire,,,,,TB-DESIGN,"West of the salient: the western army's ground."
+n_east_front,Eastwatch,land,plain,,,north_zone,-0.80 52.20,Eastwatch Hundred,,,,,TB-DESIGN,"East of the salient: the eastern army's ground."
+salient_tip,Harrow Bulge,land,rolling,,,south_zone,-1.40 52.10,Harrowshire,-1.40 52.10,-1.70 52.05;-1.40 52.12;-1.10 52.05,m,800,TB-DESIGN,"The tip of the South's salient, between the two northern armies."
+salient_base,Harrow Neck,land,hills,,,south_zone,-1.40 51.80,Neckshire,,,,,TB-DESIGN,
+w_valley,Wending Valley,land,valley,,,south_zone,-2.20 51.80,Wendshire,,,,,TB-DESIGN,The western flank route runs down this valley.
+e_lowlands,Fenmere,land,swamp,,,south_zone,-0.60 51.80,Fenshire,,,,,TB-DESIGN,
+mere_crossing,Corran Crossing,key_point,rolling,river_junction;rail_junction,,south_zone,-1.40 51.50,,,,,,TB-DESIGN,"The direct route crosses the Mere here, under Corran Fort."
+s_west_hills,Highcairn,land,mountains,,,south_zone,-2.40 51.40,Cairnshire,,,,,TB-DESIGN,
+s_heartland,Southvale,land,plain,,,south_zone,-1.40 51.20,Southshire;Valeshire,,,,,TB-DESIGN,
+s_capital,Merrow,key_point,urban,capital;rail_junction,,south_zone,-1.20 50.90,,,,,,TB-DESIGN,The southern capital.
+s_west_plain,Longmead,land,prairie,,,south_zone,-2.20 50.90,Meadshire,,,,,TB-DESIGN,
+s_coast,Gullhaven Shore,land,tidewater,port,,south_zone,-0.70 50.90,Gullshire,,,,,TB-DESIGN,Southern batteries cover the approach to Gull Rock.
+s_coast_east,Saltmarsh,land,swamp,,,south_zone,-0.20 51.20,Marshshire,,,,,TB-DESIGN,
+island_fort,Gull Rock,key_point,plain,,,sea_zone,-0.40 50.70,,,,,,TB-DESIGN,"A northern fort in southern waters, reached only by sea: the joint relief case."
+mere_upper,Upper Mere,river,river,,,south_zone,-1.90 51.60,,,-2.20 51.70;-1.90 51.60;-1.50 51.52,s,1500,TB-DESIGN,
+mere_lower,Lower Mere,river,river,,,south_zone,-0.90 51.30,,,,,,TB-DESIGN,
+north_sea,Northern Approaches,sea,coastal,,,sea_zone,0.30 52.70,,,,,,TB-DESIGN,
+mid_sea,The Narrow Sea,sea,open_sea,,,sea_zone,0.60 51.70,,,,,,TB-DESIGN,
+south_sea,Gull Sound,sea,coastal,,,sea_zone,-0.30 50.60,,,,,,TB-DESIGN,
+foreign_port,Port Sanctuary,off_map,,,blockade_port,,,,,,,,TB-DESIGN,A neutral port that runners use.
+overseas_power,The Overseas Power,off_map,,,foreign_power,,,,,,,,TB-DESIGN,
+far_frontier,The Far Frontier,off_map,,,distant_theatre,,,,,,,,TB-DESIGN,

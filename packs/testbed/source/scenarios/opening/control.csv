@@ -1,0 +1,23 @@
+region,shares,notes
+n_capital,north:1000,
+n_heartland,north:1000,
+n_west_hills,north:1000,
+n_railhead,north:1000,
+n_east_plain,north:1000,
+n_coast,north:1000,
+n_naval_base,north:1000,
+n_centre_line,north:900;south:50,
+n_west_front,north:850;south:100,
+n_east_front,north:850;south:100,
+salient_tip,north:150;south:750,The salient: soft control between the two northern armies.
+salient_base,south:950,
+w_valley,north:300;south:550,Contested: the flank route.
+e_lowlands,north:200;south:600,
+mere_crossing,south:1000,
+s_west_hills,south:1000,
+s_heartland,south:1000,
+s_capital,south:1000,
+s_west_plain,south:1000,
+s_coast,south:1000,
+s_coast_east,south:950,
+island_fort,north:1000,Held by the North and cut off by land.

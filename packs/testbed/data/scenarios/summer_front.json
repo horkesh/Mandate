@@ -1,0 +1,64 @@
+{
+"control": [
+{"region":"e_lowlands","shares":[{"faction":"north","permille":400},{"faction":"south","permille":450}]},
+{"region":"island_fort","shares":[]},
+{"region":"mere_crossing","shares":[{"faction":"south","permille":1000}]},
+{"region":"n_capital","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_centre_line","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_coast","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_east_front","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_east_plain","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_heartland","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_naval_base","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_railhead","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_west_front","shares":[{"faction":"north","permille":1000}]},
+{"region":"n_west_hills","shares":[{"faction":"north","permille":1000}]},
+{"region":"s_capital","shares":[{"faction":"south","permille":1000}]},
+{"region":"s_coast","shares":[{"faction":"south","permille":1000}]},
+{"region":"s_coast_east","shares":[{"faction":"south","permille":900}]},
+{"region":"s_heartland","shares":[{"faction":"south","permille":1000}]},
+{"region":"s_west_hills","shares":[{"faction":"south","permille":1000}]},
+{"region":"s_west_plain","shares":[{"faction":"south","permille":1000}]},
+{"region":"salient_base","shares":[{"faction":"north","permille":700},{"faction":"south","permille":200}]},
+{"region":"salient_tip","shares":[{"faction":"north","permille":900},{"faction":"south","permille":50}]},
+{"region":"w_valley","shares":[{"faction":"north","permille":600},{"faction":"south","permille":300}]}
+],
+"depotConditions": [],
+"edgeConditions": [],
+"factions": [
+{"capital":"n_capital","faction":"north","playable":true,"principal":"n_leader"},
+{"capital":"s_capital","faction":"south","playable":false,"principal":"s_leader"}
+],
+"forceBlocks": [
+{"aboard":null,"arm":"naval","department":"n_navy","id":"n_flotilla_boats","kind":"block","name":"force_block.n_flotilla_boats.name","nonCombatants":0,"parent":null,"post":"n_river_flotilla","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"mere_upper","storesDays":20,"strength":600,"strengthDate":"1862-05-28","unknowns":[]},
+{"aboard":null,"arm":"infantry","department":"n_war","id":"n_mere_1","kind":"block","name":"force_block.n_mere_1.name","nonCombatants":0,"parent":null,"post":"n_army_mere","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"salient_base","storesDays":10,"strength":9500,"strengthDate":"1862-05-28","unknowns":[]},
+{"aboard":null,"arm":"infantry","department":"n_war","id":"n_mere_2","kind":"block","name":"force_block.n_mere_2.name","nonCombatants":0,"parent":null,"post":"n_army_mere","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"salient_base","storesDays":10,"strength":8800,"strengthDate":"1862-05-28","unknowns":[]},
+{"aboard":null,"arm":"infantry","department":"n_war","id":"n_mere_3","kind":"block","name":"force_block.n_mere_3.name","nonCombatants":0,"parent":null,"post":"n_army_mere","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"w_valley","storesDays":8,"strength":7600,"strengthDate":"1862-05-28","unknowns":[]},
+{"aboard":null,"arm":"artillery","department":"s_war","id":"s_corran_garrison","kind":"block","name":"force_block.s_corran_garrison.name","nonCombatants":0,"parent":null,"post":"s_corran_command","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"mere_crossing","storesDays":18,"strength":1200,"strengthDate":"1862-05-25","unknowns":[]},
+{"aboard":null,"arm":"infantry","department":"s_war","id":"s_mere_1","kind":"block","name":"force_block.s_mere_1.name","nonCombatants":0,"parent":null,"post":"s_army_mere","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"s_heartland","storesDays":15,"strength":8200,"strengthDate":"1862-05-25","unknowns":[]},
+{"aboard":null,"arm":"infantry","department":"s_war","id":"s_mere_2","kind":"block","name":"force_block.s_mere_2.name","nonCombatants":0,"parent":null,"post":"s_army_mere","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"s_west_hills","storesDays":15,"strength":6100,"strengthDate":"1862-05-25","unknowns":[]}
+],
+"fortification": [
+{"levelPermille":750,"region":"mere_crossing"},
+{"levelPermille":200,"region":"salient_base"}
+],
+"id": "summer_front",
+"name": "scenario.summer_front.name",
+"obstructions": [
+{"by":"corran_fort","edge":"river:mere_crossing:mere_lower","provenance":[{"at":null,"source":"TB-DESIGN"}]},
+{"by":"corran_fort","edge":"river:mere_crossing:mere_upper","provenance":[{"at":null,"source":"TB-DESIGN"}]}
+],
+"posts": [
+{"acting":false,"department":"n_war","departmentChanges":[],"holder":"n_fighter","id":"n_army_mere","installation":null,"kind":"army","links":[],"name":"post.n_army_mere.name","parent":"n_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"salient_base","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_executive","departmentChanges":[],"holder":"n_leader","id":"n_head","installation":null,"kind":"head_of_state","links":[],"name":"post.n_head.name","parent":null,"provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_capital","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_navy","departmentChanges":[],"holder":"n_navy_secretary","id":"n_navy_office","installation":null,"kind":"minister","links":[],"name":"post.n_navy_office.name","parent":"n_head","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_capital","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_navy","departmentChanges":[],"holder":"n_commodore","id":"n_river_flotilla","installation":null,"kind":"squadron","links":[],"name":"post.n_river_flotilla.name","parent":"n_navy_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"w_valley","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_war","departmentChanges":[],"holder":"n_secretary","id":"n_war_office","installation":null,"kind":"minister","links":[],"name":"post.n_war_office.name","parent":"n_head","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_capital","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"s_war","departmentChanges":[],"holder":"s_veteran","id":"s_army_mere","installation":null,"kind":"army","links":[],"name":"post.s_army_mere.name","parent":"s_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"s_heartland","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"s_war","departmentChanges":[],"holder":"s_reserve","id":"s_corran_command","installation":"corran_fort","kind":"fort_command","links":[],"name":"post.s_corran_command.name","parent":"s_army_mere","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"mere_crossing","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"s_executive","departmentChanges":[],"holder":"s_leader","id":"s_head","installation":null,"kind":"head_of_state","links":[],"name":"post.s_head.name","parent":null,"provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"s_capital","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"s_war","departmentChanges":[],"holder":"s_minister","id":"s_war_office","installation":null,"kind":"minister","links":[],"name":"post.s_war_office.name","parent":"s_head","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"s_capital","standingOrders":[],"temporary":null,"unknowns":[]}
+],
+"seed": 1862,
+"startDate": "1862-06-01"
+}

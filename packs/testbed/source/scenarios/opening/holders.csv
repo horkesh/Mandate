@@ -1,0 +1,16 @@
+post,person,acting,from,to,sources,notes
+n_head,n_leader,no,1861-03-04,,TB-DESIGN,
+n_war_office,n_secretary,no,1861-03-05,,TB-DESIGN,
+n_navy_office,n_navy_secretary,no,1861-03-05,,TB-DESIGN,
+n_army_west,n_appointee,no,1861-03-20,,TB-DESIGN,
+n_army_east,n_organiser,no,1861-03-10,,TB-DESIGN,
+n_home_squadron,n_commodore,no,1861-03-15,,TB-DESIGN,
+n_gull_rock,n_engineer,no,1860-12-26,,TB-DESIGN,
+n_relief_army,n_fighter,yes,1861-03-30,,TB-DESIGN,Acting command of the relief troops.
+n_trunk_president,n_rail_baron,no,1855,,TB-DESIGN,
+s_head,s_leader,no,1861-02-18,,TB-DESIGN,
+s_war_office,s_minister,no,1861-02-21,,TB-DESIGN,
+s_army_salient,s_cavalier,no,1861-03-03,,TB-DESIGN,
+s_army_west,s_veteran,no,1861-03-01,,TB-DESIGN,
+s_corran_command,s_reserve,no,1861-03-10,,TB-DESIGN,
+s_lowmarch_governor,s_governor,no,1860-01-01,,TB-DESIGN,

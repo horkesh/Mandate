@@ -1,0 +1,13 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"additionalProperties": false,
+"properties": {
+"factions": {"items":{"additionalProperties":false,"properties":{"capital":{"anyOf":[{"maxLength":128,"pattern":"^[A-Za-z0-9][A-Za-z0-9_.:/-]*$","type":"string"},{"type":"null"}]},"faction":{"maxLength":128,"pattern":"^[A-Za-z0-9][A-Za-z0-9_.:/-]*$","type":"string"},"playable":{"type":"boolean"},"principal":{"anyOf":[{"maxLength":128,"pattern":"^[A-Za-z0-9][A-Za-z0-9_.:/-]*$","type":"string"},{"type":"null"}]}},"required":["faction","principal","capital","playable"],"type":"object"},"type":"array"},
+"name": {"minLength":1,"type":"string"},
+"seed": {"maximum":2147483647,"minimum":0,"type":"integer"},
+"startDate": {"type":"string"}
+},
+"required": ["name","startDate","seed","factions"],
+"title": "Mandate scenario header (source/scenarios/<id>/scenario.json)",
+"type": "object"
+}

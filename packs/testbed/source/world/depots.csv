@@ -1,0 +1,5 @@
+id,name,region,kind,capacity,sources,notes
+aldmoor_source,Aldmoor stores,n_capital,source,5,TB-DESIGN,
+kestrel_source,Kestrel Haven stores,n_naval_base,source,4,TB-DESIGN,Supplies the relief by sea.
+brenn_depot,Brenn depot,n_railhead,depot,3,TB-DESIGN,The western army's forward depot.
+merrow_source,Merrow stores,s_capital,source,5,TB-DESIGN,

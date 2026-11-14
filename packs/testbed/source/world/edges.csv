@@ -1,0 +1,52 @@
+id,from,to,type,line,length_days,length_days_back,capacity,break_of_bulk,depth_feet,seasonal,sources,notes
+,n_capital,n_heartland,road,,1,,4,,,mud,TB-DESIGN,
+,n_capital,n_east_plain,road,,1,,4,,,mud,TB-DESIGN,
+,n_heartland,n_west_hills,road,,2,,2,,,mud,TB-DESIGN,
+,n_heartland,n_west_front,road,,2,,3,,,mud,TB-DESIGN,
+,n_heartland,n_centre_line,road,,1,,3,,,mud,TB-DESIGN,
+,n_west_hills,n_railhead,road,,2,,2,,,mud,TB-DESIGN,
+,n_railhead,n_west_front,road,,1,,3,,,mud,TB-DESIGN,
+,n_east_plain,n_coast,road,,1,,3,,,mud,TB-DESIGN,
+,n_east_plain,n_east_front,road,,2,,3,,,mud,TB-DESIGN,
+,n_east_plain,n_centre_line,road,,1,,3,,,mud,TB-DESIGN,
+,n_coast,n_naval_base,road,,1,,4,,,none,TB-DESIGN,A paved road.
+,n_coast,n_east_front,road,,2,,2,,,mud,TB-DESIGN,
+,n_centre_line,salient_tip,road,,1,,3,,,mud,TB-DESIGN,
+,n_west_front,salient_tip,road,,2,,3,,,mud,TB-DESIGN,The direct route's first leg from the west.
+,n_east_front,salient_tip,road,,2,,3,,,mud,TB-DESIGN,
+,salient_tip,salient_base,road,,2,,3,,,mud,TB-DESIGN,
+,salient_base,mere_crossing,road,,2,,4,,,none,TB-DESIGN,"A paved road through the neck to the crossing: the direct route."
+,mere_crossing,s_heartland,road,,2,,4,,,none,TB-DESIGN,
+,n_west_front,w_valley,road,,3,,2,,,mud,TB-DESIGN,The flank route's first leg.
+,w_valley,s_west_hills,road,,4,,1,,,mud,TB-DESIGN,"A mountain track: the flank route, 11 days to Southvale against the direct route's 8."
+,s_west_hills,s_heartland,road,,4,,2,,,mud,TB-DESIGN,
+,salient_base,w_valley,road,,2,,2,,,mud,TB-DESIGN,
+,salient_base,e_lowlands,road,,2,,1,,,mud,TB-DESIGN,
+,n_east_front,e_lowlands,road,,2,,2,,,mud,TB-DESIGN,
+,s_west_hills,s_west_plain,road,,3,,2,,,mud,TB-DESIGN,
+,s_heartland,s_capital,road,,1,,4,,,none,TB-DESIGN,
+,s_capital,s_west_plain,road,,2,,2,,,mud,TB-DESIGN,
+,s_capital,s_coast,road,,1,,3,,,mud,TB-DESIGN,
+,s_coast,s_coast_east,road,,2,,1,,,mud,TB-DESIGN,
+,e_lowlands,s_coast_east,road,,3,,1,,,mud,TB-DESIGN,
+,n_west_hills,far_frontier,road,,20,,1,,,,TB-DESIGN,A notional overland route to a distant theatre.
+,n_capital,n_railhead,rail,north_trunk,1,,3,,,,TB-DESIGN,
+,n_railhead,n_west_front,rail,west_branch,1,,1,yes,,,TB-DESIGN,"The limited line: capacity 1, and a break of gauge at Brenn Junction."
+,n_capital,n_east_plain,rail,coast_line,1,,2,,,,TB-DESIGN,
+,n_east_plain,n_coast,rail,coast_line,1,,2,,,,TB-DESIGN,
+,mere_crossing,s_heartland,rail,south_line,1,,2,,,,TB-DESIGN,
+,s_heartland,s_capital,rail,south_line,1,,2,,,,TB-DESIGN,
+,w_valley,mere_upper,river,,1,,3,,6,low_water,TB-DESIGN,
+,mere_crossing,mere_upper,river,,2,1,3,,6,low_water:8-10:3,TB-DESIGN,"Upstream from the crossing takes two days, downstream one."
+,mere_crossing,mere_lower,river,,1,2,4,,8,low_water:8-10:4,TB-DESIGN,
+,mere_lower,s_coast,river,,1,,4,,10,low_water,TB-DESIGN,
+,e_lowlands,mere_lower,river,,1,,3,,8,flood,TB-DESIGN,
+,mere_lower,south_sea,river,,1,,4,,12,,TB-DESIGN,The river mouth: a sea zone and a reach meet by a river edge.
+,north_sea,n_coast,sea,,1,,4,,18,,TB-DESIGN,
+,north_sea,n_naval_base,sea,,1,,5,,24,,TB-DESIGN,
+,north_sea,mid_sea,sea,,2,,5,,,ice:1-2,TB-DESIGN,
+,mid_sea,south_sea,sea,,2,,5,,,,TB-DESIGN,
+,south_sea,s_coast,sea,,1,,3,,14,,TB-DESIGN,Under the southern batteries.
+,south_sea,island_fort,sea,,1,,2,,9,,TB-DESIGN,The only way to Gull Rock.
+,mid_sea,foreign_port,sea,,4,,5,,,,TB-DESIGN,
+,mid_sea,overseas_power,sea,,12,,5,,,,TB-DESIGN,

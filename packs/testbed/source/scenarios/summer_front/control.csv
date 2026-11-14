@@ -1,0 +1,23 @@
+region,shares,notes
+n_capital,north:1000,
+n_heartland,north:1000,
+n_west_hills,north:1000,
+n_railhead,north:1000,
+n_east_plain,north:1000,
+n_coast,north:1000,
+n_naval_base,north:1000,
+n_centre_line,north:1000,
+n_west_front,north:1000,
+n_east_front,north:1000,
+salient_tip,north:900;south:50,The salient is gone.
+salient_base,north:700;south:200,
+w_valley,north:600;south:300,
+e_lowlands,north:400;south:450,
+mere_crossing,south:1000,Under siege.
+s_west_hills,south:1000,
+s_heartland,south:1000,
+s_capital,south:1000,
+s_west_plain,south:1000,
+s_coast,south:1000,
+s_coast_east,south:900,
+island_fort,,"Gull Rock was evacuated in the spring: no one holds it."

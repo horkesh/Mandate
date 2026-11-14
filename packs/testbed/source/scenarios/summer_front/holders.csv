@@ -1,0 +1,10 @@
+post,person,acting,from,to,sources,notes
+n_head,n_leader,no,1861-03-04,,TB-DESIGN,
+n_war_office,n_secretary,no,1861-03-05,,TB-DESIGN,
+n_navy_office,n_navy_secretary,no,1861-03-05,,TB-DESIGN,
+n_army_mere,n_fighter,no,1862-03-01,,TB-DESIGN,The aggressive junior got his command.
+n_river_flotilla,n_commodore,no,1861-10-01,,TB-DESIGN,
+s_head,s_leader,no,1861-02-18,,TB-DESIGN,
+s_war_office,s_minister,no,1861-02-21,,TB-DESIGN,
+s_army_mere,s_veteran,no,1862-01-15,,TB-DESIGN,
+s_corran_command,s_reserve,no,1861-03-10,,TB-DESIGN,
