@@ -94,7 +94,7 @@ The plan appears as arrows. The player can:
 
 **Joint operations.** A support request to another post (the navy's squadron, a neighbouring department) is a directive to that holder, who answers with his own compliance. An encirclement is two commanders' arrows meeting, so it fails for human reasons as well as geographic ones.
 
-**Execution.** An approved plan becomes an operation with a lifecycle per axis. `movement.ts` is the only writer of a division's location; `combat.ts` resolves contacts; reports go back through the commander, shaded by who he is (0008, P4).
+**Execution.** An approved plan becomes an operation with a lifecycle per axis. `movement.ts` is the only writer of a division's location; `combat.ts` resolves contacts; reports come back through the commander, shaded by who he is (0008, P4), and through other routes (the press, governors, observers, the telegraph office), each with its own author and filters (0032).
 
 **Cost of operating.** The default path must take seconds: the commander's draft is usually good enough to approve, and the interface shows his reasons inline. Editing arrows is for when you care.
 
@@ -125,6 +125,7 @@ The plan appears as arrows. The player can:
 - **A seat** is whoever decides for a person: the rules model, an AI model, or later a human. Every seat receives a request built only from what that person may know, plus the kernel's menu of legal responses, and returns a typed response. One set of decision types serves all three kinds of seat.
 - **The rules model is always there.** An AI seat wraps a rule seat and falls back to it on timeout, invalid output, a failed consistency check or no key, logging the fallback.
 - **What an AI may decide.** A principal's choices (the opposing president's decisions, from the same legal set as the player's), and a choice among options the kernel has already judged equally consistent with a person's state, such as which of the planner's candidate plans a commander picks. Compliance itself never moves to the AI: the kernel decides what a general actually does and what he says he does. The AI writes the words from what he declared and chose to state, never from what he will actually do, so it cannot leak a lie (0022).
+- **Reports** are typed data with an author, a route, filters and bias terms (0032). Not every report comes through the commander: governors, the Navy Department, the press, observers and informal sources have their own routes, and the War Department's telegraph office is a filtering seat the president can go around at an attention cost.
 - **Knowledge per seat.** Each seat stores the reports that reached it, with latency (courier, telegraph). Beliefs are derived on read. Faded reports are pruned by a pack rule (age and supersession), so knowledge does not grow without limit. `viewFor(state, seatId)` generalises today's per-faction view (0011 is superseded by 0015).
 - **Rule seats live in their own package**, outside the kernel but inside the banned-API and pack-boundary checks, because their output enters the log.
 - **Think time is courier latency.** An AI seat's request is stamped with the in-game day its answer is due; if the model has not answered by then, the shell pauses with "awaiting dispatch". The answer applies on its stamped day whatever the wall clock did, so replays are exact.

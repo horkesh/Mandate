@@ -35,3 +35,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0029](0029-seasons-sieges-raids-confederacy.md) | Seasons through commanders, sieges as operations, raids and insurgency, and a Confederacy on the same machinery | accepted |
 | [0030](0030-foundation-commitments.md) | Foundation commitments: scenario starts, packs as the modding format, string tables, playable at every phase, a planner spike | accepted |
 | [0031](0031-map-extent-size-sources.md) | The map covers the whole war at about 250 regions, built from licence-clean sources | accepted |
+| [0032](0032-reports-authors-routes-filters.md) | A report has an author, a route and filters; the telegraph office is a seat | accepted |
