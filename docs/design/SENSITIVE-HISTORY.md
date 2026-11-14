@@ -245,7 +245,7 @@ Each entry gives the window, the placement of each facet, the refused facets, th
 - *event*: the Confederate replies it causes (`twenty-slave-law`, `captured-black-soldiers`).
 - *text*: Greeley's "Prayer of Twenty Millions" (19–20 August 1862) and Lincoln's reply [UP 2.1], [U62]; McClellan's Harrison's Landing letter (7–8 July 1862) as his advice, in his voice [U62].
 - *refused*: emancipation as an unlock that adds to a player resource; any virtue score; re-enslavement or the return of freedpeople as a peace term.
-- needs-source: emancipation in the District of Columbia (the notes say only that it "belongs to 1862" [SW 6.3]); colonization proposals (no note covers them). Neither is authored until sourced.
+- Sourced since acceptance [GCF]: emancipation in the District of Columbia (the act of April 1862, its terms and compensation) and the 1862 colonization proposals and their funding. The facet flags are lifted. They are placed like this entry's other acts: Congress's act is an *event*, and the president's choices (to sign, and his colonization proposals) are *decisions* with locked consequences, which R7 settles with the rest.
 - Reasons: these are the president's own decisions in the record, so refusing them would erase the hardest choices of 1862. R7 settles how the consequences avoid both a karma button and a cynical unlock.
 - Risks: scoring, hindsight, agency.
 
@@ -314,9 +314,9 @@ Each entry gives the window, the placement of each facet, the refused facets, th
 - *refused*: a neutral "overseer exemption" framing [CS 4.7]; a Union lever that exploits it.
 - Risks: lost-cause, resource.
 
-**`confederate-habeas`**. Window: slice (Davis's suspensions; [CS 6] gives February 1862 and February 1864 but did not read a primary source).
+**`confederate-habeas`**. Window: slice (Davis's suspensions; [CS 6] gave February 1862 and February 1864 without a primary source; [GCF] verifies the 1862 suspensions).
 - *decision* for the Confederate rule seat (interim Confederate rule: coercive policy on the symmetric machinery), with locked costs on governors' friction (Vance's repeated habeas disputes, North Carolina courts' writs that the War Secretary refused, opposition by state leaders and some mobs) [CS 3.5, 4.5].
-- needs-source: the dates and terms of the suspensions. Held until sourced.
+- Sourced since acceptance [GCF]: the dates, places and terms of every 1862 suspension, and the three acts. The whole-topic flag is lifted, so the topic leaves section 4's ship-blockers.
 - *refused*: framing the friction as "states' rights" apart from slavery [CS 3.5, 4.6].
 - Risks: lost-cause.
 
@@ -355,7 +355,7 @@ Each entry gives the window, the placement of each facet, the refused facets, th
 ### 3.5 Civil liberties and public violence
 
 **`union-habeas-and-arrests`**. Window: slice (the 1863 act is later).
-- *decision*: the habeas order of 27 April 1861 (catalogue S12); the answer to Merryman (comply, decline and defend, ask Congress; catalogue S18) [SW 6.6]; the standing arrest policy as a security order on a post, issued through its holder (which seat ran the 1861 arrests is needs-source: [U62] lists Seward's internal-security arrests as "needs research"; Stanton's order of 8 August 1862 was followed by at least 350 arrests in a month [UP 4.3]); the habeas proclamation of 24 September 1862 [UP 1.5]. Locked costs: Democrats, border-state trust, and accountability when Congress next sits (0040's chamber state). All are security orders in the sense of section 1 (0032, R8).
+- *decision*: the habeas order of 27 April 1861 (catalogue S12); the answer to Merryman (comply, decline and defend, ask Congress; catalogue S18) [SW 6.6]; the standing arrest policy as a security order on a post, issued through its holder (Seward's State Department ran the 1861 arrests [GCF]; Stanton's order of 8 August 1862 was followed by at least 350 arrests in a month [UP 4.3]); the habeas proclamation of 24 September 1862 [UP 1.5]. Locked costs: Democrats, border-state trust, and accountability when Congress next sits (0040's chamber state). All are security orders in the sense of section 1 (0032, R8).
 - *event*: Taney's rulings (28 May oral, 1 June written) [SW 6.6]; arrests made by holders under the policy, each with its own cost (Marshal Kane, 27 June 1861; the Baltimore police board, 1 July; Mayor Brown and legislators, 12–13 September 1861, 26–28 legislators best supported [SW 6.6], corrected by [GCF]); Charles Stone's arrest on 8 February 1862 (9 and 12 in other sources) and six months without trial [UP 1.3] (added).
 - *derived*: the arrest count is a calibration band for history runs (13,000 to 15,000 over the war [UP 4.3]), never a score.
 - *refused*: arrests made free by not being noticed; arrests that raise loyalty without cost; one card per arrested person (bookkeeping of the kind 0040 bans for patronage); a free-standing arrest verb.
@@ -394,13 +394,13 @@ Each entry gives the window, the placement of each facet, the refused facets, th
 - *event*: raids on civilians and reprisals by either side's commanders, from their seat conduct, with locked consequences under the sign rule: reprisals never lower guerrilla pressure or raise control for the side that commits them, whoever appointed the commander.
 - *decision*: the president's reply to a commander's martial-law order (Frémont's).
 - *refused*: goal postures or raid targets aimed at civilians (raids strike rail, river edges and depots, 0029); reprisal as a lever; appointment as a way round the sign rule.
-- Held for R6 on commanders' conduct toward civilians. needs-source: the Osceola raid's details; the terms of Frémont's martial law beyond its emancipation clause; whether reprisals raised guerrilla pressure (calibration only).
+- Held for R6 on commanders' conduct toward civilians. The terms of Frémont's martial law beyond its emancipation clause are sourced [GCF] (its shooting clause was an order). needs-source: the Osceola raid's details; whether reprisals raised guerrilla pressure (calibration only).
 - Risks: atrocity, lost-cause (romantic raiders).
 
 **`occupation-orders`** (added). Window: slice (Butler's General Order No. 28, 15 May 1862; his removal 16 December 1862) [U62], [CP].
 - *event*: a commander's order from his seat conduct, with locked consequences on foreign patience and the press (the order caused international outrage [U62]) under the sign rule; Davis's December proclamation cites Butler [CS 4.4]. The president's reply uses the ordinary relieve verb.
 - *refused*: occupation severity as a player lever.
-- needs-source: the execution of Mumford (a search summary only [CS findings 5]). Held for R6.
+- Mumford's execution is sourced [GCF] (the order, date and place): an *event* from the commander's seat conduct, under the sign rule. Held for R6.
 - Risks: atrocity, lost-cause.
 
 **`fort-pillow-and-jccw`**. Window: later for Fort Pillow (12 April 1864) and the committee's reports on it (1864) and Sand Creek (1865) [CS 4.4], [UP 1.3]; slice for the committee itself (created 9 December 1861) and Stone [UP 1.3].
@@ -410,7 +410,7 @@ Each entry gives the window, the placement of each facet, the refused facets, th
 - Risks: atrocity, agency.
 
 **`prisoners-and-exchange`** (added). Window: slice (moved from `later` after [GCF] sourced 1861–62 facets). 0021 puts prison camps in the gate. In-slice facets now sourced [GCF]: the hostages chosen by lot (Corcoran) and how that ended; local exchanges and the House resolution of December 1861; Wool–Cobb; the cartel of 22 July 1862, its terms and agents ("The President directs"); the Union-held numbers; Camp Parole; GO 54 holding Pope's officers; the halt of 28–30 December 1862.
-- Status: `record` (R4), with no interim placement until R4 exists.
+- Status: `record` (R4), with no interim placement until R4 exists. Davis's proclamation and GO 60 stay placed under `captured-black-soldiers`; tag them with that topic until R4 exists.
 - **Ship-blocker** (section 4): its window lies inside the slice.
 - The Corcoran lot, GO 60 and Davis's proclamation are threatened reprisal killings by the Confederate seat: under rule 1 and the interim Confederate rule they are events and text, never a choice.
 - R4 still needs: camp conditions and mortality on both sides in 1862; Confederate-held totals; the treatment of Black people captured in 1862 (civilians and teamsters as well as soldiers); a Union document giving the 1861 reason for refusing a cartel.
@@ -427,8 +427,8 @@ Each entry gives the window, the placement of each facet, the refused facets, th
 - R3 defines "protected" for a nation that is a seat: no pool or resource targeting, though diplomacy toward it may be legal.
 - Risks: agency, resource, lost-cause.
 
-**`dakota-war-1862`** (added as a separate entry). Window: slice (18 August 1862, the first attacks, to 26 December 1862, the executions at Mankato under Lincoln's order); Pope went to the Department of the Northwest in September 1862 [U62]. Figures are given as the attributed ranges in [GCF] sections 1–2, never as single numbers: deaths on each side, the trials (the commission's recorder gives "over four hundred" tried and 303 sentenced to death), and the executions, with each source's interest stated. This replaces the single-source figures first taken from [MX].
-- Status: `record` (R3) and needs-source, with no interim placement until a research lane sources the facts. The Department of the Northwest may exist as a post; nothing about the war is authored.
+**`dakota-war-1862`** (added as a separate entry). Window: slice (18 August 1862, the war's first day (the Acton killings were on 17 August), to 26 December 1862, the executions at Mankato under Lincoln's order); Pope went to the Department of the Northwest in September 1862 [U62]. Figures are given as the attributed ranges in [GCF] sections 1–2, never as single numbers: deaths on each side, the trials (the commission's recorder gives "over four hundred" tried and 303 sentenced to death), and the executions, with each source's interest stated. This replaces the single-source figures first taken from [MX].
+- Status: `record` (R3), with no interim placement; needs-source only for Dakota-voiced sources ([GCF] 1.8). The Department of the Northwest may exist as a post; nothing about the war is authored.
 - **Ship-blocker**: its window lies inside the slice, so under the ship rule the slice cannot ship until R3 exists and its facets are authored.
 - Reasons: 0026 names it; [SW 6.8] refuses it until its own record; [UP findings] asks for a lane and a record; the facts come from one Wikipedia article [MX]. The review of the sentences would put a choice of who is executed on the player's desk, the gravest case of "Is this a lever?".
 - Risks: atrocity, agency, scoring, hindsight.
@@ -459,7 +459,6 @@ The lead writes these; each states the question the record must answer and this 
 - **R2**, which holds `black-soldiers-pay`.
 - **R3**, which holds `dakota-war-1862` (and the Native-nation questions of `indian-territory-1861`, whose agency facets may be authored meanwhile).
 - **`union-freedpeople-camps`**, needs-source as a whole topic.
-- **`confederate-habeas`**, needs-source as a whole topic (its only facet is the decision, which waits for the suspensions' dates and terms).
 - **R4**, which holds `prisoners-and-exchange` (moved into the slice after [GCF] sourced its 1861–62 facets).
 
 The other records block only the topics they hold, and facet-level needs-source flags block nothing.
@@ -546,7 +545,7 @@ Gate placements in research notes are inputs; authors follow section 3 wherever 
 | Arrests and habeas policy | [SW 6.8] and [UP]: modelled with locked consequences | Agreed, and they are security orders in the same sense (R8) | One mechanism for all security orders |
 | Merryman | [SW 6.8]: "a fixed event"; [SW] S8 and catalogue S18: options | Taney's ruling is the event; the president's answer is the decision | The court ruled, and Lincoln chose his answer in the 4 July message [SW 6.6] |
 | Twenty-Slave Law | [CS 4.7]: a political act with costs | An event under the interim Confederate rule; costs kept | Choosing it is choosing how to control enslaved people |
-| Confederate habeas and civil liberties | [CS 4.7]: narrated with locked consequences | A decision of the Confederate rule seat under the interim rule; needs-source | Coercive policy, not an atrocity or an act on a protected population; 0009 |
+| Confederate habeas and civil liberties | [CS 4.7]: narrated with locked consequences | A decision of the Confederate rule seat under the interim rule; sourced since by [GCF] | Coercive policy, not an atrocity or an act on a protected population; 0009 |
 | Interim Confederate rule | (none; the first version made every Confederate act on a gate topic an event, contradicting its own habeas entry) | Stated once in section 1 and recorded in R1 | Consistency, and it narrows 0009 for a non-playable seat |
 | Black enlistment, 1861 | [SW 6.8]: no player recruit before the 1862 law, which it attributes to 0026 (0026 does not say it); the first version allowed `accept` | Acceptance only through `ask-congress` (S13); a direct lawful acceptance is needs-source | The legal basis rests on one line [SW 6.4]; Congress routing slows hindsight play |
 | Pratt Street and Camp Jackson | [SW 6.8]: narrated only; the first version made both outcomes drawn from a stream | Pratt Street an event fired from its cause (troops routed through a hostile Baltimore), not a date, and the cause of S12; Camp Jackson an event from the commander's seat; ranges 9–12 civilians | Each changed state; 0007 rules out dice for people's conduct |
@@ -557,5 +556,7 @@ Gate placements in research notes are inputs; authors follow section 3 wherever 
 | Checklist layout | 0021 asks for a "short" checklist; the first version had 51 questions in one list | Two layers: twelve reviewer questions; the rest as lane 0.7's test specification | No question dropped; authors read only what needs a reader |
 
 ## 7. Research needed before authoring
+
+[GCF] section 14b maps every row below to what it sourced; rows it settled are kept here for the record.
 
 Placements above that stay held until a research lane sources them: the Dakota War (causes, the 38 or 39 count, from a primary source) and Sand Creek; Indian Territory in 1862; the dates and terms of Davis's habeas suspensions; Confederate repression in East Tennessee in 1861–62; the bread riots (snippet-only); the government's response to the draft riots and the 1862 Wisconsin draft resistance; Seward's advice to wait for a victory (the staff recommendation for the proclamation); emancipation in the District of Columbia; colonization proposals; the Crittenden–Johnson resolution's wording on slavery; whether the president could lawfully accept Black volunteers under the 3 May 1861 call; Hunter's 1862 regiment; Union camps, labour and conditions for freedpeople (Camp Barker, contraband labour); Union plantation and labour policy; the Osceola raid and the terms of Frémont's martial law; whether reprisals raised guerrilla pressure; Mumford's execution; the 1862 exchange arrangements and prison camps; Black sailors' service conditions; Black soldiers' duty assignments and officer policy; which seat ran the 1861 arrests; the first date of "Copperhead".
