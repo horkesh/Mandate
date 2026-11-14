@@ -462,8 +462,10 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
   });
 
   it('lists the questions it tests, and each one listed is named by a test here or in the kernel (review S11)', () => {
-    expect(GATE_QUESTIONS_TESTED).toEqual(['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4', 'B5', 'B7', 'B9', 'B10', 'C1', 'C2', 'C3', 'C4', 'D4', 'D5', 'E7', 'F1', 'F2', 'F5', 'F6', 'H5']);
-    expect(GATE_QUESTIONS_PARTIAL).toEqual(['D3', 'E3']);
+    expect(GATE_QUESTIONS_TESTED).toEqual(['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4', 'B5', 'B7', 'B9', 'B10', 'C1', 'C2', 'C3', 'C4', 'E7', 'F2', 'F5', 'F6', 'H5']);
+    expect(GATE_QUESTIONS_PARTIAL).toEqual(['D3', 'D4', 'D5', 'E3', 'F1']);
+    // Gate re-check G2: no question is both.
+    expect(GATE_QUESTIONS_TESTED.filter((id) => (GATE_QUESTIONS_PARTIAL as readonly string[]).includes(id))).toEqual([]);
     // Every test text except this one, whose own lists would name every id.
     const self = /\n  it\('lists the questions it tests[\s\S]*?\n  \}\);\n/u;
     const tests = ['../../pack-format/test/gate.test.ts', '../../kernel/test/situations.test.ts'].map((p) => readFileSync(fileURLToPath(new URL(p, import.meta.url)), 'utf8').replace(/\r\n/gu, '\n').replace(self, '\n')).join('\n');

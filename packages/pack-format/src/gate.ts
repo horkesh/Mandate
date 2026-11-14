@@ -134,16 +134,19 @@ export function readGate(files: PackFiles, sink: IssueSink): GateData | null {
 }
 
 /**
- * The questions lane 0.7's tests answer in full, by id: here and in the kernel's situation tests (B7, B9,
- * F1's delivery). The rest are the reviewer's, or wait for an artefact type (review S11).
+ * The questions lane 0.7's tests answer in full, by id: here and in the kernel's situation tests (B7, B9).
+ * The rest are the reviewer's, or wait for an artefact type (review S11).
  */
-export const GATE_QUESTIONS_TESTED = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4', 'B5', 'B7', 'B9', 'B10', 'C1', 'C2', 'C3', 'C4', 'D4', 'D5', 'E7', 'F1', 'F2', 'F5', 'F6', 'H5'] as const;
+export const GATE_QUESTIONS_TESTED = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4', 'B5', 'B7', 'B9', 'B10', 'C1', 'C2', 'C3', 'C4', 'E7', 'F2', 'F5', 'F6', 'H5'] as const;
 /**
- * Questions tested only in part. D3: a protected field as a target is refused (B3), but feeding a spendable
- * resource from one needs the derivation graph. E3: agency reasons on situation effects are checked, but
- * derived terms, where E3 mostly bites, do not exist yet.
+ * Questions tested only in part (gate re-check G2):
+ * - D3: a protected field as a target is refused (B3); feeding a spendable resource from one needs the derivation graph.
+ * - D4: no situation or option carries an atrocity lever (B4); standing orders and seat initiatives do not exist yet.
+ * - D5: effects of and conditioned on atrocity-class situations are checked; derived terms, a [graph] question, do not exist yet.
+ * - E3: agency reasons on situation effects are checked; derived terms, where E3 mostly bites, do not exist yet.
+ * - F1: notices and staff lines have an author and a route; the briefing, the press and voice templates do not exist yet.
  */
-export const GATE_QUESTIONS_PARTIAL = ['D3', 'E3'] as const;
+export const GATE_QUESTIONS_PARTIAL = ['D3', 'D4', 'D5', 'E3', 'F1'] as const;
 
 /** String tables by locale: locale, then key, then text. */
 export type LocaleStrings = ReadonlyMap<string, ReadonlyMap<string, string>>;

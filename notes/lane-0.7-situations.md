@@ -42,7 +42,7 @@ Effects are either chain flags (applied by `situations`) or typed proposals to t
 | A8 | the ship rule, as a release check (`pack:release-check`): `release.json` and `reviewers.json` exist; every shipped scenario has a window; no held topic's window overlaps one; every sign-off is by a listed reviewer, never a fixture |
 | B1, B2 | the fields each kind needs; a cause in State, or a labelled railroad (B2 evaluates the cause over an empty State: a cause that holds on nothing is a date in disguise) |
 | B3 | no effect targets a protected field; refused signatures from the register over effect fields, option ids, option labels in every locale and issued orders |
-| B4, D4 | no option, and no decision, carries an atrocity-class topic; an option's own tag adds to the situation's |
+| B4 | no option, and no decision, carries an atrocity-class topic; an option's own tag adds to the situation's |
 | B5 | every option of a decision whose effective tag (its own, else the situation's) names a topic carries locked costs (which have no condition by construction), and nothing cancels one: not the same option, not an option that can be taken with it, not another item conditioned on the decision or on the situation firing |
 | B10 | an option the register lists as superseded expires when the principal knows of the law's situation |
 | C1 | proposers named (schema) and resolving to people |
@@ -57,7 +57,7 @@ Effects are either chain flags (applied by `situations`) or typed proposals to t
 
 **Stay with readers:** Q1–Q12 (the reviewer checklist), recorded in each sign-off's question versions.
 
-**In part** (`GATE_QUESTIONS_PARTIAL`): D3 (a protected target is refused; feeding a spendable resource from one needs the derivation graph) and E3 (agency reasons on situation effects must be listed for a named agency-class topic; derived terms come later).
+**In part** (`GATE_QUESTIONS_PARTIAL`; the rows above for D5 and F1 cover only situations): D3 (a protected target is refused; feeding a spendable resource from one needs the derivation graph), D4 (no situation or option is an atrocity lever; standing orders and initiatives do not exist yet), D5 (situations checked; derived terms do not exist yet), F1 (notices and staff lines; the briefing, the press and voice templates do not exist yet) and E3 (agency reasons on situation effects must be listed for a named agency-class topic; derived terms come later).
 
 **Wait for an artefact type that does not exist yet:** D1, D2 (levers: standing orders through a holder, seat initiatives); D6 (the lever sweep needs a victory measure and a victory-only bot, Phase 1); E1, E2, E4, E5 (derived-term declarations); F3, F4, F7 (quotations, disputed ranges, voice); G1–G5 (setup options, scenario omissions); H1–H4 (verdicts). Each becomes a test when its artefact is built; the checklist file already carries their versions.
 
