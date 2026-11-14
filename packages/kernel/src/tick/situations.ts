@@ -10,7 +10,7 @@
  *    recommendation is written by the first author post that is filled by a
  *    holder who is not a subject, and the turn may end;
  * 3. an open decision is live: options appear and expire, a clock threshold
- *    resurfaces it, and if every option has lapsed it resolves to `inaction`;
+ *    resurfaces it, and if every option has expired it resolves to `inaction`;
  * 4. a waiting decision opens again, without the waiting option, when its
  *    condition holds;
  * 5. a decision whose principal is on the rules model, and not delegated,
@@ -78,6 +78,15 @@ export function openOptionsNow(ctx: TickContext, state: State, def: SituationDef
   return def.options
     .filter((o) => !exclude.includes(o.id) && (o.appearsWhen === null || holds(o.appearsWhen, cc)) && !(o.expiresWhen !== null && holds(o.expiresWhen, cc)))
     .map((o) => o.id);
+}
+
+/**
+ * Whether nothing is left to offer: every option not excluded has expired. An option that has not appeared yet,
+ * and has not expired, may still be offered, so the decision does not lapse (standing review S3).
+ */
+function allExpired(ctx: TickContext, state: State, def: SituationDef, exclude: readonly string[]): boolean {
+  const cc = conditionContext(ctx, state, def);
+  return def.options.every((o) => exclude.includes(o.id) || (o.expiresWhen !== null && holds(o.expiresWhen, cc)));
 }
 
 /**
@@ -267,7 +276,7 @@ export function runSituations(ctx: TickContext, start: State): State {
         fire(ctx, 'situations.options_changed');
         if (surfaced && open.length > 0) point(ctx, def, 'situation-options');
       }
-      if (open.length === 0) {
+      if (open.length === 0 && allExpired(ctx, state, def, record.sitChosen)) {
         state = applyDecision(ctx, state, def, [], 'lapse');
         if (surfaced) point(ctx, def, 'situation-lapsed');
         continue;

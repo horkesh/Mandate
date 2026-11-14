@@ -153,6 +153,20 @@ describe('live situations (0040): options expire and appear, clocks resurface, a
     expect(run.state.situationFlags.clock_ignored).toBeDefined();
     expect(run.points).toEqual(['situation-surfaced:clock', 'situation-options:clock', 'situation-options:clock', 'situation-resurfaced:clock', 'situation-lapsed:clock']);
   });
+
+  it('does not lapse before an option has appeared: only once every option has expired (standing review S3)', () => {
+    const later = decision('later', { options: [option('when-ready', 1, { appearsWhen: { clockAtLeast: 2 }, expiresWhen: { clockAtLeast: 4 } })], historicalDefault: { unsourced: 'test' } });
+    const { world, state } = setup([later]);
+    const run = days(world, state, 3);
+    const rec = run.state.situationStates[S('later')]!;
+    expect(rec.sitStatus).toBe('open');
+    expect(rec.sitOpenOptions).toEqual(['when-ready']);
+    expect(run.points).toEqual(['situation-surfaced:later', 'situation-options:later']);
+    // The control: once it has expired too, the decision lapses to inaction.
+    const after = days(world, run.state, 2);
+    expect(after.state.situationStates[S('later')]!.sitStatus).toBe('lapsed');
+    expect(after.points).toEqual(['situation-lapsed:later']);
+  });
 });
 
 describe('deciding: the principal, a history default, several options, waiting, chains', () => {
