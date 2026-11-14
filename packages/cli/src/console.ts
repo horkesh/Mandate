@@ -14,6 +14,7 @@ import {
   type KernelRules,
   type Objective,
   type ScenarioData,
+  type Verb,
 } from '@mandate/kernel';
 import * as fmt from './format.ts';
 
@@ -83,7 +84,8 @@ export class GameConsole {
     const [cmd, ...args] = words as [string, ...string[]];
     try {
       if (this.audience && AUDIENCE_COMMANDS.has(cmd)) return this.audienceCommand(cmd, args);
-      switch (cmd) {
+      if (Object.prototype.hasOwnProperty.call(VERB_COMMANDS, cmd)) return this.verbCommand(VERB_COMMANDS[cmd as VerbCommand], args);
+      switch (cmd as ConsoleCommand) {
         case 'help':
           return HELP;
         case 'desk':
@@ -98,26 +100,6 @@ export class GameConsole {
           return this.showQueue();
         case 'undo':
           return this.queue.pop() ? ['Removed the last decision.', ...this.showQueue()] : ['Nothing to undo.'];
-        case 'order':
-          return this.enqueue({ verb: 'direct', postId: need(args[0], 'post'), ...this.objective(args.slice(1)) });
-        case 'audience':
-          return this.openAudience(args);
-        case 'allocate':
-          return this.enqueue({ verb: 'allocate', fromPostId: need(args[0], 'from post'), toPostId: need(args[1], 'to post'), amount: int(args[2], 'amount') });
-        case 'appoint':
-          return this.enqueue({ verb: 'appoint', postId: need(args[0], 'post'), personId: need(args[1], 'person') });
-        case 'dismiss':
-        case 'honour':
-        case 'promise':
-        case 'pressure':
-        case 'oversee':
-          return this.enqueue({ verb: cmd, personId: need(args[0], 'person') });
-        case 'address':
-          return this.enqueue({ verb: 'address', blocId: need(args[0], 'bloc') });
-        case 'insist':
-          return this.enqueue({ verb: 'insist', directiveId: need(args[0], 'directive') });
-        case 'accept':
-          return this.enqueue({ verb: 'accept_counter', directiveId: need(args[0], 'directive') });
         case 'end':
           return this.endTurn();
         default:
@@ -126,6 +108,18 @@ export class GameConsole {
     } catch (e) {
       return [(e as Error).message];
     }
+  }
+
+  /** The only way a command becomes a decision: one builder per kernel verb. */
+  private verbCommand(verb: Verb, args: string[]): string[] {
+    if (verb === 'audience') return this.openAudience(args);
+    const build = DECISION_BUILDERS[verb];
+    return this.enqueue(build(args, this));
+  }
+
+  /** @internal Used by the decision builders. */
+  objectiveOf(args: string[]): { objective: Objective; boldness: number } {
+    return this.objective(args);
   }
 
   // -------------------------------------------------------------------------
@@ -307,6 +301,51 @@ export class GameConsole {
     return out;
   }
 }
+
+/**
+ * The verb list is the interface (FOUNDATION section 11.10): each command
+ * that can change the game names exactly one kernel verb, and every verb has
+ * exactly one command. `test/verb-list.test.ts` checks this against the
+ * kernel's `VERBS`, so no command can order a division.
+ */
+export const VERB_COMMANDS = {
+  order: 'direct',
+  audience: 'audience',
+  appoint: 'appoint',
+  dismiss: 'dismiss',
+  allocate: 'allocate',
+  honour: 'honour',
+  promise: 'promise',
+  pressure: 'pressure',
+  oversee: 'oversee',
+  address: 'address',
+  insist: 'insist',
+  accept: 'accept_counter',
+} as const satisfies Record<string, Verb>;
+
+export type VerbCommand = keyof typeof VERB_COMMANDS;
+
+/** Commands that only look, or manage the queue and the clock. None of them builds a decision. */
+export const CONSOLE_COMMANDS = ['help', 'desk', 'people', 'map', 'news', 'queue', 'undo', 'end', 'quit'] as const;
+
+type ConsoleCommand = (typeof CONSOLE_COMMANDS)[number];
+
+type Builder<V extends Verb> = (args: string[], c: GameConsole) => Extract<Decision, { verb: V }>;
+
+/** One builder per verb except the audience, which is drafted first and committed as an `audience` decision. */
+const DECISION_BUILDERS: { readonly [V in Exclude<Verb, 'audience'>]: Builder<V> } = {
+  direct: (args, c) => ({ verb: 'direct', postId: need(args[0], 'post'), ...c.objectiveOf(args.slice(1)) }),
+  allocate: (args) => ({ verb: 'allocate', fromPostId: need(args[0], 'from post'), toPostId: need(args[1], 'to post'), amount: int(args[2], 'amount') }),
+  appoint: (args) => ({ verb: 'appoint', postId: need(args[0], 'post'), personId: need(args[1], 'person') }),
+  dismiss: (args) => ({ verb: 'dismiss', personId: need(args[0], 'person') }),
+  honour: (args) => ({ verb: 'honour', personId: need(args[0], 'person') }),
+  promise: (args) => ({ verb: 'promise', personId: need(args[0], 'person') }),
+  pressure: (args) => ({ verb: 'pressure', personId: need(args[0], 'person') }),
+  oversee: (args) => ({ verb: 'oversee', personId: need(args[0], 'person') }),
+  address: (args) => ({ verb: 'address', blocId: need(args[0], 'bloc') }),
+  insist: (args) => ({ verb: 'insist', directiveId: need(args[0], 'directive') }),
+  accept_counter: (args) => ({ verb: 'accept_counter', directiveId: need(args[0], 'directive') }),
+};
 
 const AUDIENCE_COMMANDS = new Set(['frame', 'adjust', 'reinforce', 'promise', 'withdraw', 'ease', 'vindicate', 'threaten', 'clear', 'commit', 'leave']);
 
