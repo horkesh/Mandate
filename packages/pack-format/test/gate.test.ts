@@ -413,6 +413,14 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     // The controls: marked watched, it passes; and with no dependence on an atrocity, no mark is needed.
     expect(issues(lever(true)).filter((i) => i.kind === 'gate-unwatched-lever')).toEqual([]);
     expect(issues(editJson(sit('fen_crossing'), (s) => (s.options[1].effects ??= []).push(lowerActor))).filter((i) => i.kind === 'gate-unwatched-lever')).toEqual([]);
+    // N12, precision: when only one option depends on the atrocity, through its own condition, only that option needs the
+    // mark. Its untainted sibling lowering the actor needs none.
+    const scoped = editJson(sit('fen_crossing'), (s) => {
+      s.options[0].appearsWhen = news;
+      for (const o of [s.options[0], s.options[1]]) ((o.watched = false), (o.effects ??= []).push(lowerActor));
+    });
+    firesAt(scoped, 'gate-unwatched-lever', { file: sit('fen_crossing'), at: 'options[0].watched', message: 'no_instruction' });
+    expect(issues(scoped).filter((i) => i.kind === 'gate-unwatched-lever' && i.at !== 'options[0].watched')).toEqual([]);
   });
 
   it('B10: an option a later law forbids expires with it', () => {
