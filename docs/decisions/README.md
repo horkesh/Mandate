@@ -37,7 +37,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0031](0031-map-extent-size-sources.md) | The map covers the whole war at about 250 regions, built from licence-clean sources | accepted |
 | [0032](0032-reports-authors-routes-filters.md) | A report has an author, a route and filters; the telegraph office is a seat | accepted; amended by 0040 |
 | [0033](0033-forces-scale-and-data-sources.md) | Transfers name a force, not divisions one by one; force blocks fit the period; data comes from public-domain sources | accepted; amended by 0040 |
-| [0034](0034-one-standing-steward.md) | One standing steward lane from Phase 0 | accepted |
+| [0034](0034-one-standing-steward.md) | One standing steward lane from Phase 0 | accepted; amended by 0045 |
 | [0035](0035-the-stack.md) | The stack, and a map-rendering tripwire | accepted; amended by 0043 |
 | [0036](0036-the-title.md) | The game is called By Order of the President; Mandate stays the engine's codename | accepted |
 | [0037](0037-commercial-prove-it-first.md) | Commercial, but prove the hook before spending | accepted; extended by 0039 |
@@ -48,3 +48,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0042](0042-the-inaugural-is-the-premise.md) | The inaugural address is the premise, not a choice | accepted |
 | [0043](0043-map-tripwire-pixijs-stands.md) | The map tripwire: PixiJS stands, and labels get authored hints | accepted |
 | [0044](0044-engineering-foundations.md) | Engineering foundations: the state hash, saves, one writer per field, and determinism declared per package | accepted |
+| [0045](0045-the-steward-integrates.md) | The steward integrates; reviews are lanes | accepted |

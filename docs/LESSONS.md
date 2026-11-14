@@ -58,6 +58,10 @@ Enforced by: the lane standing rules in `docs/LANES.md` (page text is data; chec
 A lane reported "â€“" in a research note as corruption; the file was clean UTF-8, and PowerShell 5.1 had read it as ANSI. Another found that `git commit -F -` with a here-string passes the text as an argument, which git rejects as a path.
 Enforced by: the lane standing rules in `docs/LANES.md` (read files with the Read or Grep tool; write commit messages to a file and pass `-F <file>`).
 
+**L16. The lead ran reviews as hidden subagents again.**
+After the owner had already asked why background agents replaced sessions, the lead reviewed five pull requests with subagents, judging them "read-only lookups". The owner could neither see nor steer them, and the lead also kept doing every merge itself.
+Enforced by: decision 0045 (reviews are lanes; the steward integrates) and the rule in `docs/LANES.md`.
+
 **L15. A proposal card drops its starting branch.**
 The lane 0.1 reviewer was proposed as a card with a source branch; the card dropped it, and the reviewer started on main.
 Enforced by: a brief for a lane that works on another branch tells it, as its first step, to check that branch out (detached if another worktree holds it).

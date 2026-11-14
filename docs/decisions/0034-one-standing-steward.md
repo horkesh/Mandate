@@ -1,6 +1,6 @@
 # 0034: One standing steward lane from Phase 0
 
-Status: accepted (2026-11-14). The owner asked to examine AWWV's integration steward and consider permanent lanes, including a docs steward. The steward-research lane (`docs/research/2026-11-14-awwv-steward-and-standing-lanes.md`) recommended one combined steward; the lead accepted it. Amends `docs/LANES.md`, which had deferred the steward until more than four lanes ran.
+Status: accepted (2026-11-14). The owner asked to examine AWWV's integration steward and consider permanent lanes, including a docs steward. The steward-research lane (`docs/research/2026-11-14-awwv-steward-and-standing-lanes.md`) recommended one combined steward; the lead accepted it. Amends `docs/LANES.md`, which had deferred the steward until more than four lanes ran. Amended by 0045 (the steward integrates: it verifies and merges accepted work).
 
 ## Context
 

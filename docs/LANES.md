@@ -5,15 +5,15 @@ Adapted from AWWV's orchestrator and its founding brief for this project (2026-1
 ## Roles
 
 - **The owner** makes design decisions and takes the lead's recommendation by default (see `CLAUDE.md`). Only the owner sees a lane's wrap-up box.
-- **The lead** is the main Mandate session. It frames work, opens lanes, answers their questions, collects results, verifies, merges and commits. It does not redo a lane's investigation. It does small, reversible work directly.
-- **A lane** is a separate session started from the lead, with its own brief. Work that ends in a branch, a document of its own or anything the owner may want to watch or steer is a lane. A quick read-only lookup whose result the lead needs this turn can be a subagent instead.
+- **The lead** is the main Mandate session. It frames work, opens and closes lanes, answers their questions, collects results, accepts or rejects reviewers' verdicts, and decides and records. The steward verifies and merges accepted work (0045). The lead does not redo a lane's investigation. It does small, reversible work directly and commits its own decision records and design notes.
+- **A lane** is a separate session started from the lead, with its own brief. Work that ends in a branch, a document of its own or anything the owner may want to watch or steer is a lane. **Every review is a lane** (0045, lesson L16). Only one quick lookup whose answer the lead needs this turn may be a subagent.
 - **If the app refuses to start a session** (it has done so on some turns while the owner was on Remote Control), retry on the next turn. Never assume a refusal still holds. If it keeps refusing, tell the owner and ask before running the work as a subagent instead (lesson L11).
 
 ## Standing lanes
 
 Decision 0034. A standing lane is never archived as "done"; if it ends, the lead starts a replacement at once. Standing lanes do not count toward the work-in-progress limit.
 
-- **The steward** (Sonnet, medium): after each merge batch, accepted decision, lane close or phase boundary, it brings `docs/ROADMAP.md`, `docs/OPEN_QUESTIONS.md`, the decisions index, factual pointers in `CLAUDE.md` and the tables here in line, on its own branch, for the lead to merge. It is the single writer of `docs/OPEN_QUESTIONS.md` and runs the zero-loss audit when a lane closes. It never edits decisions, `VISION.md`, `FOUNDATION.md` content or hard rules. It keeps no private state and reports in 150 words or less. Its full duties and limits are in 0034.
+- **The steward** (Sonnet, medium) is the integration steward (0045): when the lead names accepted work, it verifies it on disk (scope, clean tree, `npm run check` after rebasing on main, CI green), merges it into main, pushes, and syncs the docs in the same batch. It never merges code without a reviewer's approval or gate work without the gate reviewer's, and never resolves a conflict by choosing content. After each merge batch, accepted decision, lane close or phase boundary, it brings `docs/ROADMAP.md`, `docs/OPEN_QUESTIONS.md`, the decisions index, factual pointers in `CLAUDE.md` and the tables here in line, on its own branch, for the lead to merge. It is the single writer of `docs/OPEN_QUESTIONS.md` and runs the zero-loss audit when a lane closes. It never edits decisions, `VISION.md`, `FOUNDATION.md` content or hard rules. It keeps no private state and reports in 150 words or less. Its full duties and limits are in 0034.
 
 ## The brief
 
@@ -38,7 +38,7 @@ Every lane gets a written brief containing:
 ## Running lanes
 
 - **Facts about the world come from a lane, never from the lead's memory.** History, other games, prices, licences: if a design argument rests on it, a research lane sources it first, or the lead marks it plainly as unverified.
-- **Experiments in parallel, merges in series.** Lanes that edit code work in their own worktree or on disjoint files. The lead merges one at a time, and a lane re-checks after rebasing.
+- **Experiments in parallel, merges in series.** Lanes that edit code work in their own worktree or on disjoint files. The steward merges one at a time (0045), and a lane re-checks after rebasing.
 - **Non-trivial code gets one implementer lane and one separate reviewer lane.** The reviewer covers four lenses in one verdict: canon and decisions, determinism, history, and realism ("would a real commander or president find this absurd?"). Work touching the sensitive-history gate gets a second, separate reviewer for that gate.
 - **Work-in-progress limit:** at most four lanes at once (standing lanes excepted), and at most two that move the simulation. Lanes never grow. New findings go to `docs/OPEN_QUESTIONS.md` and are triaged within a day: act now, park, or drop with a reason.
 - **Model and effort are set per lane, never inherited by default** (owner's standing rule, 2026-11-14). Pick from this table when starting a lane and say which row in the brief; go up a row only with a stated reason.
@@ -58,7 +58,7 @@ Every lane gets a written brief containing:
 ## Closing a lane
 
 1. Ask it once more for anything it noticed outside its scope, and triage each finding.
-2. **Verify before believing.** Check its claims on disk: `git status`, `git diff --stat`, the test run with its exit status, screenshots for UI.
+2. **Verify before believing.** The steward checks its claims on disk when it merges (`git status`, `git diff --stat`, the test run with its exit status, CI); the lead looks at screenshots for UI.
 3. Zero-loss check: nothing uncommitted left in its worktree, no unique commits stranded on a branch.
 4. **Archive it** as soon as the check passes, without asking (the owner's standing instruction, 2026-11-14). Archiving is reversible.
 
