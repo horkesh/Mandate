@@ -51,3 +51,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0045](0045-the-steward-integrates.md) | The steward integrates; reviews are lanes | accepted; amended by 0047 |
 | [0046](0046-gate-checklist-and-situations-catalogue.md) | The sensitive-history checklist and the situations catalogue are accepted | accepted |
 | [0047](0047-a-standing-reviewer.md) | A standing reviewer lane | accepted |
+| [0048](0048-assets-are-made-by-codex.md) | Assets are made by Codex, through one coordination file | accepted |
