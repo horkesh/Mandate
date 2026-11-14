@@ -1,6 +1,6 @@
 # 0010: Variable tempo: the tick is a day, a turn ends when something needs you
 
-Status: accepted (2026-11-14)
+Status: superseded by 0017 (2026-11-14). Accepted 2026-11-14.
 
 ## Context
 

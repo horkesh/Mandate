@@ -1,6 +1,6 @@
 # 0001: The player is the principal: no unit control, in any mode
 
-Status: accepted (2026-11-13; owner's founding premise)
+Status: superseded by 0016 (2026-11-14). Accepted 2026-11-13 as the owner's founding premise; 0016 keeps "the player never moves a division" and lets a verb name a place only as part of an order to a person.
 
 ## Context
 

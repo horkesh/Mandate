@@ -1,6 +1,6 @@
 # 0011: Single-player, with knowledge scoped per faction
 
-Status: accepted (2026-11-14). The owner takes recommendations by default.
+Status: superseded by 0015 (2026-11-14). Accepted 2026-11-14; knowledge is now scoped per seat, and humans in generals' seats are a planned third mode.
 
 ## Context
 

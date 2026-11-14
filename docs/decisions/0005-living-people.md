@@ -1,6 +1,6 @@
 # 0005: Real historical and living people, under a sensitivity policy
 
-Status: accepted (2026-11-13). Direction chosen by the owner; the policy details below are a proposed first draft.
+Status: accepted (2026-11-13). Direction chosen by the owner; the policy details below are a proposed first draft. Amended by 0022 for AI-generated prose about real people.
 
 ## Context
 

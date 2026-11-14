@@ -36,7 +36,7 @@ Enforced by: give agents small batches and a budget, and have them write results
 
 **L9. Git Bash times out on this machine's F: drive.**
 Simple Git Bash commands in `F:\Mandate` hit the 120-second timeout, while PowerShell and the Grep tool return at once (seen by the lead and the AI-players lane, 2026-11-14).
-Enforced by: lane briefs say to use PowerShell and the Grep tool, not Git Bash.
+Enforced by: lane briefs say to use PowerShell and the Grep tool, not Git Bash. (Git Bash's `pdftotext` does work for reading manual PDFs; calling `python` from Git Bash hung.)
 
 **L10. The lead stated history from memory.**
 While brainstorming, the lead gave unsourced historical claims as fact, at least one of them wrong.

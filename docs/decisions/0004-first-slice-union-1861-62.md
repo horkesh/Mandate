@@ -1,6 +1,6 @@
 # 0004: First vertical slice: the Union, 1861–62
 
-Status: accepted (2026-11-13)
+Status: superseded by 0018 (2026-11-14). Accepted 2026-11-13.
 
 ## Context
 

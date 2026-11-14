@@ -27,7 +27,7 @@ Date: 2026-11-13. Status: research note (not canon). Items marked (gk) come from
 - **Twilight Struggle** (gk): using a card carrying the opponent's event fires the event anyway. Steal: **resources that come with someone else's agenda**.
 - **Here I Stand**: mandatory events push history whether you like it or not.
 - **Churchill (Herman)**: conference issues debated with staff cards; your staff limits which issues you can win.
-- **For the People / A House Divided / Lincoln (Wallace)**: Strategic Will; "Room at the Top" forced leader replacement; Lincoln's deck destruction simulates pressure, not re-enactment.
+- **For the People / A House Divided / Lincoln (Wallace)**: Strategic Will; "Room at the Top" forced leader replacement (an A House Divided card, not For the People: see the 2026-11-14 games survey); Lincoln's deck destruction simulates pressure, not re-enactment.
 - **Defiance: 2nd Russo-Ukrainian War (GMT)**: four political tracks (Zelenskyy, NATO, Lukashenko, Putin) feed Russian Strategic Morale. An end-of-turn Unity/In-Fighting roll can add **Mutiny / Inaction / Infighting HQ chits** to the activation cup, so political rot becomes command dysfunction. The game was criticised for leaving out Ukrainian internal friction.
 - **Matrix games (Engle)**: argument + counter-argument + umpire odds. Weakness: inconsistent adjudication. **Free Kriegsspiel**: umpire judgement replaces tables.
 - **Pol-mil seminar games**: Blue/Red/Green teams with a White control cell.

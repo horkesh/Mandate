@@ -1,6 +1,6 @@
 # 0009: Opponents run on the same machinery
 
-Status: accepted (2026-11-14)
+Status: accepted (2026-11-14); widened by 0015 (a non-player principal may be an AI seat with a rule fallback).
 
 ## Context
 

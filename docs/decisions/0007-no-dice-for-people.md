@@ -1,6 +1,6 @@
 # 0007: No dice for people
 
-Status: accepted (2026-11-14)
+Status: accepted (2026-11-14); clarified by 0015 (seat responses) and 0020 (stats drawn at setup). Erratum: the context below counts Grand Tactician's feuds as obedience rolls; the games survey found its manual derives feuds from fame and initiative gaps, with no dice, in battles only.
 
 ## Context
 
