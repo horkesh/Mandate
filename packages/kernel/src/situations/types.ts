@@ -174,6 +174,18 @@ export interface StaffLine {
   readonly confidence: number;
 }
 
+/**
+ * How a notice reaches the principal: a report through the ordinary path, so
+ * it has an author, a route and a delay (gate F1, review S10). The first
+ * author post that is filled by a holder who is not a subject writes it.
+ */
+export interface NoticeReport {
+  readonly authors: readonly PostId[];
+  readonly reportType: ReportType;
+  /** Required for the report types that take one (an informal source's kind). */
+  readonly subtype: string | null;
+}
+
 export interface SituationChain {
   readonly id: string;
   readonly stage: number;
@@ -209,6 +221,8 @@ export interface SituationDef {
   readonly resurfaceOn: readonly number[];
   /** A notice's effects, applied when it fires. Empty for a decision. */
   readonly effects: readonly Effect[];
+  /** Required for a notice: the report that tells the principal. Null for a decision (its staff line is its report). */
+  readonly report: NoticeReport | null;
   readonly gate: GateTag;
   readonly gateReview: GateReview | null;
   readonly citations: readonly SituationCitation[];

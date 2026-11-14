@@ -129,6 +129,22 @@ describe('situations in the pack format', () => {
     firesAt(editJson('gate/register.json', (r) => (r.topics[0].supersededOptions[0].option = 'nope')), 'unknown-reference', { at: 'options', file: sit('fen_crossing') });
   });
 
+  it('review S10: a notice reaches the principal as a report with an author and a route (F1)', () => {
+    firesAt(editJson(sit('fen_arrivals'), (s) => delete s.report), 'situation-missing', { at: 'report' });
+    firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.report = { authors: ['n_war_office'], reportType: 'wire-dispatch' })), 'situation-decision-report', { at: 'report' });
+    firesAt(editJson(sit('fen_arrivals'), (s) => (s.report.reportType = 'informal')), 'situation-report', { at: 'report' });
+    firesAt(editJson(sit('fen_arrivals'), (s) => (s.report.authors = ['no_post'])), 'unknown-reference', { at: 'report.authors[0]' });
+  });
+
+  it('the lead’s ruling on S10: option conditions follow what the principal knows, never State', () => {
+    for (const atom of [{ flag: 'fen_arrivals' }, { fired: 'fen_arrivals' }, { goal: { post: 'n_army_east', kind: 'hold' } }, { headquartersAt: { post: 'n_army_east', region: 'n_capital' } }]) {
+      firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.options[0].appearsWhen = { not: atom })), 'situation-option-truth', { at: 'options[0].appearsWhen' });
+    }
+    firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.options[2].waitsOn = { flag: 'fen_arrivals' })), 'situation-option-truth', { at: 'options[2].waitsOn' });
+    const known = editJson(sit('eastwatch_stalls'), (s) => (s.options[0].expiresWhen = { any: [{ knows: { subjectKind: 'situation', subjectId: 'fen_arrivals' } }, { decided: 'fen_crossing' }, { clockAtLeast: 9 }, { dayAtLeast: 300 }] }));
+    expect(issues(known).filter((i) => i.kind === 'situation-option-truth')).toEqual([]);
+  });
+
   it('a pack with situations must carry its gate', () => {
     fires({ 'gate/register.json': null }, 'missing-file', 'gate/register.json');
   });

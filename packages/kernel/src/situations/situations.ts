@@ -40,7 +40,7 @@ export interface SituationRecord {
   readonly sitDelegate: PersonId | null;
   /** The waiting option taken, while the situation waits on its condition. */
   readonly sitWaitingOn: string | null;
-  /** Who wrote the staff recommendation; null if every author post was vacant or held by a subject. */
+  /** Who wrote the staff recommendation (a decision) or the report (a notice); null if every author post was vacant or held by a subject. */
   readonly sitStaffAuthor: PersonId | null;
 }
 
@@ -79,6 +79,11 @@ export function fireSituation(state: State, id: SituationId, day: number, kind: 
 /** News reached the deciding seat today. */
 export function surfaceSituation(state: State, id: SituationId, day: number, staffAuthor: PersonId | null): State {
   return put(state, id, { ...existing(state, id), sitSurfacedDay: day, sitStaffAuthor: staffAuthor });
+}
+
+/** Who wrote a notice's report, recorded when it fires (null: no author was available, so nobody told him). */
+export function recordAuthor(state: State, id: SituationId, author: PersonId | null): State {
+  return put(state, id, { ...existing(state, id), sitStaffAuthor: author });
 }
 
 export function setOpenOptions(state: State, id: SituationId, openOptions: readonly string[]): State {

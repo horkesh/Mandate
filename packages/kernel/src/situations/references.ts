@@ -67,6 +67,9 @@ export function situationReferenceProblems(defs: readonly SituationDef[], refs: 
     } else if (d.options.length > 0 || d.inaction !== null || d.historicalDefault !== null || d.staffLine !== null) {
       at('kind', 'a notice carries no options, inaction, historical default or staff line (0046)');
     }
+    if (d.kind === 'notice' && (d.report === null || d.report.authors.length === 0)) at('report', 'a notice needs a report with at least one author post (gate F1)');
+    if (d.kind === 'decision' && d.report !== null) at('report', 'a decision is told through its staff line, not a notice report');
+    for (const p of d.report?.authors ?? []) if (!refs.posts.has(p)) at('report.authors', `${p} is not a post`);
     for (const p of [...(d.staffLine?.authors ?? []), ...d.delegableTo]) if (!refs.posts.has(p)) at('posts', `${p} is not a post`);
     for (const p of d.subjects) if (!refs.persons.has(p)) at('subjects', `${p} is not a person`);
     for (const r of d.staffLine?.recommends ?? []) if (!optionIds.has(r)) at('staffLine.recommends', `${r} is not an option`);

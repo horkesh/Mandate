@@ -59,6 +59,7 @@ function decision(id: string, over: Partial<SituationDef> = {}): SituationDef {
     delegableTo: [POST('a_office')],
     resurfaceOn: [],
     effects: [],
+    report: null,
     gate: { none: 'test fixture' },
     gateReview: null,
     citations: [],
@@ -250,11 +251,16 @@ describe('notices, effects and proposals', () => {
       historicalDefault: null,
       staffLine: null,
       delegableTo: [],
+      report: { authors: [POST('a_office')], reportType: 'informal', subtype: 'cabinet-word' },
       effects: [{ setFlag: 'told' }, { propose: { owner: 'politics', field: 'bloc-support', subject: 'hawks', delta: -40, reason: 'news', side: F('a') } }],
     };
     const { world, state } = setup([notice]);
     const run = days(world, state, 2);
     expect(run.state.situationStates[S('told')]!.sitStatus).toBe('noticed');
+    // Gate F1 (review S10): the notice goes as a report from its author, and surfaces when that report arrives.
+    expect(run.state.situationStates[S('told')]!.sitStaffAuthor).toBe(P('a_sec'));
+    expect(run.state.situationStates[S('told')]!.sitSurfacedDay).toBe(2);
+    expect(knowledgeOf(run.state, lead).knownReports.some((r) => r.knownBody.reportSubjectId === 'told' && r.knownBody.reportSubtype === 'cabinet-word')).toBe(true);
     expect(run.state.situationFlags.told).toBe(1);
     expect(run.results[0]!.proposals).toEqual([{ proposal: 'effect', owner: 'politics', field: 'bloc-support', subject: 'hawks', delta: -40, reason: 'news', side: F('a'), situation: S('told'), option: null }]);
     expect(run.points).toEqual([]);

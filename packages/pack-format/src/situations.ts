@@ -149,6 +149,14 @@ export const SituationSchema = z.strictObject({
   delegableTo: z.array(idOf('post')).default([]),
   resurfaceOn: z.array(positive).default([]),
   effects: z.array(EffectSchema).default([]),
+  report: z
+    .strictObject({
+      authors: z.array(idOf('post')).min(1, 'an ordered list of author posts (gate F1)'),
+      reportType: z.enum(phase0.REPORT_TYPES),
+      subtype: z.string().min(1).nullable().default(null),
+    })
+    .nullable()
+    .default(null),
   gate: GateTagSchema,
   gateReview: GateReviewSchema.nullable().default(null),
   citations: z.array(z.strictObject({ source: z.string().min(1), at: z.string().min(1).nullable().default(null) })).default([]),
@@ -258,6 +266,15 @@ export function validateSituations(items: readonly { readonly file: string; read
       }
     }
     if (def.kind === 'decision' && def.effects.length > 0) err('situation-decision-effects', 'effects', 'a decision has effects of its own', "effects on its options, its locked costs or its inaction outcome");
+    // F1 (review S10): a notice reaches the principal as a report with an author and a route.
+    if (def.kind === 'notice' && def.report === null) err('situation-missing', 'report', 'a notice has no report', 'a report with author posts and a report type, so the notice has an author and a route (gate F1)');
+    if (def.kind === 'decision' && def.report !== null) err('situation-decision-report', 'report', 'a decision has a notice report', 'none: a decision is told through its staff line');
+    if (def.report !== null) {
+      def.report.authors.forEach((p, i) => ref(posts, 'post in any scenario', p, `report.authors[${i}]`));
+      const probe = { reportType: def.report.reportType, reportSubtype: def.report.subtype, reportAuthor: def.faction as never, reportAuthorPost: null, reportSubjectKind: 'situation' as const, reportSubjectId: def.id, reportClaims: [], reportDay: 1, reportHour: null, reportAdvice: null, reportAnswers: null };
+      for (const problem of phase0.reportProblems(probe)) err('situation-report', 'report', problem, 'a report type and subtype the kernel can carry');
+      if (!phase0.DEFAULT_REPORT_TEMPLATES.some((x) => x.templateType === def.report!.reportType && x.templateSubtype === def.report!.subtype)) err('situation-report', 'report', `no report template for ${def.report.reportType}${def.report.subtype === null ? '' : '/' + def.report.subtype}`, 'a report type and subtype with a template');
+    }
 
     // B2: a cause in State, not a date alone, unless a labelled railroad. Evaluated, not parsed (review S6): a cause that
     // would hold with nothing in State but a far date is a date or vacuous, however it is written (a date inside `any`, a bare `not`).
@@ -310,6 +327,20 @@ export function validateSituations(items: readonly { readonly file: string; read
         });
       }
     }
+
+    // The lead's ruling on the gate review's S10: an option's appear, expire and wait conditions follow what the
+    // principal knows, never State, like the situation's own knowledge trigger (0046). A change in the options must
+    // never tell him of an event before a report does. So they read only knows, his side's decisions, the clock and the date.
+    def.options.forEach((o, i) => {
+      for (const key of ['appearsWhen', 'expiresWhen', 'waitsOn'] as const) {
+        const c = o[key];
+        if (c === null) continue;
+        walk(c, (x) => {
+          const atom = 'flag' in x ? 'flag' : 'fired' in x ? 'fired' : 'goal' in x ? 'goal' : 'headquartersAt' in x ? 'headquartersAt' : null;
+          if (atom !== null) err('situation-option-truth', `options[${i}].${key}`, `"${atom}" reads State, which the principal may not know yet`, 'knows, decided, clockAtLeast or dayAtLeast: what the principal can know');
+        });
+      }
+    });
 
     // Conditions.
     for (const { at, condition } of phase0.conditionsOf(def)) {

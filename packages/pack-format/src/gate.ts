@@ -57,8 +57,8 @@ export const TopicSchema = z.strictObject({
   /** Terms naming a protected group, for the proximity rule (F2). */
   protectedGroups: z.array(z.string().min(1)).default([]),
   agencyReasons: z.array(termId).default([]),
-  /** Options a later law forbids: each must expire when the law's flag is set (B10). */
-  supersededOptions: z.array(z.strictObject({ situation: termId, option: termId, flag: termId })).default([]),
+  /** Options a later law forbids: each must expire when the principal learns of the law, the situation that enacts it (B10). */
+  supersededOptions: z.array(z.strictObject({ situation: termId, option: termId, law: termId })).default([]),
   /** Refused facets as machine signatures: an effect field matching `fieldPattern` (or an option id matching `optionPattern`) is refused. */
   refused: z.array(z.strictObject({ fieldPattern: regex.nullable().default(null), optionPattern: regex.nullable().default(null), reason: z.string().min(1) })).default([]),
 });
@@ -369,8 +369,8 @@ export function checkGate(
         if (s.situation !== def.id) continue;
         const i = def.options.findIndex((o) => o.id === s.option);
         if (i === -1) err('unknown-reference', 'options', `the register lists option "${s.option}" as superseded, but this situation has none`);
-        else if (def.options[i]!.expiresWhen === null || !phase0.flagsIn(def.options[i]!.expiresWhen!).includes(s.flag)) {
-          err('gate-no-expiry', `options[${i}].expiresWhen`, `option "${s.option}" does not expire when flag "${s.flag}" is set`, 'expiresWhen keyed to the superseding law (B10)');
+        else if (def.options[i]!.expiresWhen === null || !knowsSubjects(def.options[i]!.expiresWhen!).includes(s.law)) {
+          err('gate-no-expiry', `options[${i}].expiresWhen`, `option "${s.option}" does not expire when the principal learns of law "${s.law}"`, 'expiresWhen: knows the situation that enacts the superseding law (B10)');
         }
       }
     }
@@ -454,6 +454,14 @@ export function checkGate(
 
 /** The fewest gated decisions of three or more options before C2 counts positions. */
 export const C2_MINIMUM = 3;
+
+/** The situations whose reports a condition waits for (knows with subject kind situation). */
+function knowsSubjects(c: phase0.Condition): string[] {
+  if ('all' in c) return c.all.flatMap(knowsSubjects);
+  if ('any' in c) return c.any.flatMap(knowsSubjects);
+  if ('not' in c) return knowsSubjects(c.not);
+  return 'knows' in c && c.knows.subjectKind === 'situation' && c.knows.subjectId !== null ? [c.knows.subjectId] : [];
+}
 
 function decidedWith(c: phase0.Condition, situation: string, option: string): boolean {
   if ('all' in c) return c.all.some((x) => decidedWith(x, situation, option));

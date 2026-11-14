@@ -9,7 +9,7 @@
       "protectedFields": ["fenfolk-labour"],
       "protectedGroups": ["fen folk", "fenfolk"],
       "agencyReasons": ["agency:fen-flight"],
-      "supersededOptions": [{ "situation": "fen_crossing", "option": "send_back", "flag": "sanctuary_act" }],
+      "supersededOptions": [{ "situation": "fen_crossing", "option": "send_back", "law": "sanctuary_act" }],
       "refused": [{ "fieldPattern": "^fenfolk-", "reason": "the fen folk are never a quantity either side counts, spends or moves" }]
     },
     {

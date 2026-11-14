@@ -28,12 +28,13 @@ import { knowledgeOf } from '../knowledge/knowledge.ts';
 import type { DecideCommand, DelegateCommand } from '../log/commands.ts';
 import type { State } from '../root-state.ts';
 import { seatIdFor } from '../seats/seats.ts';
-import { holds, isFinal, type ConditionContext } from '../situations/conditions.ts';
+import { holds, isFinal, knowsMatch, type ConditionContext } from '../situations/conditions.ts';
 import {
   applyFlags,
   delegateSituation,
   fireSituation,
   markResurfaced,
+  recordAuthor,
   recordDecision,
   reopenSituation,
   setOpenOptions,
@@ -51,6 +52,7 @@ export const SITUATION_MECHANICS = [
   'situations.delegated',
   'situations.fired',
   'situations.lapsed',
+  'situations.notice_reports',
   'situations.noticed',
   'situations.options_changed',
   'situations.orders',
@@ -159,17 +161,22 @@ export function delegateCommand(ctx: TickContext, state: State, seat: SeatId, cm
   return { state: delegateSituation(state, def.id, holder), reason: null };
 }
 
-/** Write the staff recommendation from the first author post filled by a holder who is not a subject (0046). */
-function writeStaffLine(ctx: TickContext, state: State, def: SituationDef): PersonId | null {
+/**
+ * Write a situation's report from the first author post filled by a holder who
+ * is not a subject (0046): a decision's staff recommendation, or a notice's
+ * report (gate F1). Returns the author, or null if none was available.
+ */
+function writeReport(ctx: TickContext, state: State, def: SituationDef): PersonId | null {
   const line = def.staffLine;
-  if (line === null) return null;
-  for (const post of line.authors) {
+  const notice = def.report;
+  const authors = line?.authors ?? notice?.authors ?? [];
+  for (const post of authors) {
     const holder = ctx.world.post(post).holder;
     if (holder === null || def.subjects.includes(holder)) continue;
     sendReport(ctx, state, {
       body: {
-        reportType: 'advice',
-        reportSubtype: 'requested',
+        reportType: line !== null ? 'advice' : notice!.reportType,
+        reportSubtype: line !== null ? 'requested' : notice!.subtype,
         reportAuthor: holder,
         reportAuthorPost: post,
         reportSubjectKind: 'situation',
@@ -177,21 +184,37 @@ function writeStaffLine(ctx: TickContext, state: State, def: SituationDef): Pers
         reportClaims: [],
         reportDay: ctx.day,
         reportHour: null,
-        reportAdvice: {
-          adviceRecommends: line.recommends.join('+'),
-          adviceReasons: line.reasons.map((r) => ({ reasonKind: r.kind, reasonWeight: r.weight })),
-          adviceConfidence: line.confidence,
-        },
+        reportAdvice:
+          line === null
+            ? null
+            : {
+                adviceRecommends: line.recommends.join('+'),
+                adviceReasons: line.reasons.map((r) => ({ reasonKind: r.kind, reasonWeight: r.weight })),
+                adviceConfidence: line.confidence,
+              },
         reportAnswers: null,
       },
       truth: { truthTerms: [], truthTrimmed: [] },
       to: principalOf(ctx, def),
-      tag: `staff.${def.id}`,
+      tag: `${line !== null ? 'staff' : 'notice'}.${def.id}`,
     });
-    fire(ctx, 'situations.staff_lines');
+    fire(ctx, line !== null ? 'situations.staff_lines' : 'situations.notice_reports');
     return holder;
   }
   return null;
+}
+
+/** A notice surfaces when its own report reaches the principal, unless it names a knowledge condition of its own. */
+function noticeArrived(ctx: TickContext, state: State, def: SituationDef): boolean {
+  if (def.report === null) return true;
+  return knowsMatch(knowledgeOf(state, seatIdFor(principalOf(ctx, def))), {
+    reportType: def.report.reportType,
+    subtype: def.report.subtype,
+    subjectKind: 'situation',
+    subjectId: def.id,
+    claimKind: null,
+    token: null,
+  });
 }
 
 function point(ctx: TickContext, def: SituationDef, kind: 'situation-lapsed' | 'situation-options' | 'situation-resurfaced' | 'situation-surfaced'): void {
@@ -217,14 +240,17 @@ export function runSituations(ctx: TickContext, start: State): State {
       if (def.kind === 'decision') state = setOpenOptions(state, def.id, openOptionsNow(ctx, state, def));
       else {
         state = applyEffects(ctx, state, def, def.effects, null);
+        // The notice's report goes out now; the notice surfaces when it arrives (gate F1, review S10).
+        state = recordAuthor(state, def.id, writeReport(ctx, state, def));
         fire(ctx, 'situations.noticed');
       }
       fire(ctx, 'situations.fired');
     }
     // 2. Surface.
     let record = state.situationStates[def.id]!;
-    if (record.sitSurfacedDay === null && (def.knowledge === null || holds(def.knowledge, conditionContext(ctx, state, def)))) {
-      const author = def.kind === 'decision' && record.sitStatus === 'open' ? writeStaffLine(ctx, state, def) : null;
+    const news = def.knowledge !== null ? holds(def.knowledge, conditionContext(ctx, state, def)) : def.kind === 'notice' ? noticeArrived(ctx, state, def) : true;
+    if (record.sitSurfacedDay === null && news) {
+      const author = def.kind === 'decision' && record.sitStatus === 'open' ? writeReport(ctx, state, def) : record.sitStaffAuthor;
       state = surfaceSituation(state, def.id, ctx.day, author);
       fire(ctx, 'situations.surfaced');
       if (def.kind === 'decision' && record.sitStatus === 'open') point(ctx, def, 'situation-surfaced');
