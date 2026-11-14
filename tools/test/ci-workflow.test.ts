@@ -31,14 +31,15 @@ describe('the CI workflow', () => {
     }
   });
 
-  it('runs on Linux and Windows', () => {
-    expect(all.check).toMatch(/os: \[ubuntu-latest, windows-latest\]/);
+  it('runs on pinned Linux and Windows images, never a moving -latest label', () => {
+    expect(all.check).toMatch(/os: \[ubuntu-24\.04, windows-2025\]/);
+    expect(workflow).not.toMatch(/-latest\b/);
   });
 
   it('compares both machines’ determinism summaries', () => {
     expect(all.check).toMatch(/run: npm run run:headless -- testbed/);
     expect(all.determinism).toMatch(/needs: check/);
-    expect(all.determinism).toMatch(/compare-runs\.ts ci-results\/determinism-ubuntu-latest ci-results\/determinism-windows-latest/);
+    expect(all.determinism).toMatch(/compare-runs\.ts ci-results\/determinism-ubuntu-24\.04 ci-results\/determinism-windows-2025/);
   });
 
   it('reports the outcome of every step that has an id (honest CI)', () => {

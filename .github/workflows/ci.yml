@@ -5,7 +5,8 @@
 # two machines' state hashes. Every job ends by printing which steps actually
 # ran and how each ended (honest CI): a skipped step says "skipped", never
 # passes silently. `tools/test/ci-workflow.test.ts` keeps this file in step
-# with the `check` script.
+# with the `check` script. Runner images are pinned (decision 0035: upgrades are
+# deliberate); move to a new image in a commit of its own.
 
 name: CI
 
@@ -27,7 +28,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-24.04, windows-2025]
     runs-on: ${{ matrix.os }}
     steps:
       - id: checkout
@@ -124,7 +125,7 @@ jobs:
     name: determinism (Linux vs Windows hashes)
     needs: check
     if: ${{ !cancelled() }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - id: checkout
         name: Checkout
@@ -150,7 +151,7 @@ jobs:
 
       - id: compare
         name: Compare state hashes across machines
-        run: npx tsx tools/compare-runs.ts ci-results/determinism-ubuntu-latest ci-results/determinism-windows-latest
+        run: npx tsx tools/compare-runs.ts ci-results/determinism-ubuntu-24.04 ci-results/determinism-windows-2025
 
       - name: Steps that ran
         if: ${{ always() }}
