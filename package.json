@@ -17,6 +17,7 @@
     "demo": "tsx packages/kernel/demo/directive-demo.ts",
     "run:testbed": "tsx packages/cli/src/run-testbed.ts",
     "run:pack": "tsx packages/cli/src/run-pack.ts",
+    "run:headless": "tsx packages/cli/src/run-headless.ts",
     "play": "tsx packages/cli/src/play.ts"
   },
   "devDependencies": {
