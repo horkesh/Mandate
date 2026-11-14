@@ -346,6 +346,33 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     firesAt(onFiring, 'gate-cancelled-cost', { file: sit('sanctuary_act') });
   });
 
+  it('gate G4: D5 follows news of an atrocity and any chain of items to a fixed point', () => {
+    const raise = { propose: { owner: 'politics', field: 'national-will', subject: 'north', delta: 15, reason: 'a-harbour-burned', side: 'north' } };
+    const news = { knows: { subjectKind: 'situation', subjectId: 'harbour_burning' } };
+    const d5 = (edits: Edits, file: string) => issues(edits).filter((i) => i.file === file && (i.kind === 'gate-atrocity-benefit' || (i.kind === 'gate-acting-side' && i.message.includes('conditioned'))));
+    // News, in a knowledge trigger: the whole item depends on the atrocity.
+    const trigger = editJson(sit('sanctuary_act'), (s) => ((s.knowledge = news), s.effects.push(raise)));
+    firesAt(trigger, 'gate-atrocity-benefit', { file: sit('sanctuary_act'), at: 'effects[1]', message: 'raises another side' });
+    // News, in one option's appear condition: only that option's effects depend on it.
+    const appear = editJson(sit('fen_crossing'), (s) => ((s.options[1].appearsWhen = news), (s.options[1].effects ??= []).push(raise)));
+    firesAt(appear, 'gate-atrocity-benefit', { file: sit('fen_crossing'), message: 'option "shelter" depends on it' });
+    expect(d5(appear, sit('fen_crossing')).filter((i) => !i.at.startsWith('options[1].'))).toEqual([]);
+    // One hop: a middle item that only sets a flag passes the dependence on.
+    const middle = editJson(sit('sanctuary_act'), (s) => (s.event = { fired: 'harbour_burning' }));
+    const hop = merge(middle, editJson(sit('eastwatch_followup'), (s) => ((s.event = { flag: 'sanctuary_act' }), (s.chain = null))));
+    firesAt(hop, 'gate-atrocity-benefit', { file: sit('eastwatch_followup'), at: 'options[0].effects[0]', message: 'through "sanctuary_act"' });
+    // Two hops: atrocity, then sanctuary_act's flag, then fen_arrivals' flag.
+    const twoHops = merge(
+      middle,
+      editJson(sit('fen_arrivals'), (s) => (s.event = { flag: 'sanctuary_act' })),
+      editJson(sit('eastwatch_followup'), (s) => ((s.event = { flag: 'fen_arrivals' }), (s.chain = null))),
+    );
+    firesAt(twoHops, 'gate-atrocity-benefit', { file: sit('eastwatch_followup'), at: 'options[0].effects[0]', message: 'through "sanctuary_act" then "fen_arrivals"' });
+    // The controls: the unedited testbed has nothing depending on the atrocity, and a chain that never reaches it is no D5 matter.
+    expect(issues().filter((i) => i.kind === 'gate-atrocity-benefit')).toEqual([]);
+    expect(d5(editJson(sit('eastwatch_followup'), (s) => ((s.event = { flag: 'fen_arrivals' }), (s.chain = null))), sit('eastwatch_followup'))).toEqual([]);
+  });
+
   it('B10: an option a later law forbids expires with it', () => {
     fires(editJson(sit('fen_crossing'), (s) => (s.options[2].expiresWhen = null)), 'gate-no-expiry');
   });
@@ -375,7 +402,9 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
       s.event = { all: [{ fired: 'harbour_burning' }, { decided: 'fen_crossing' }] };
       s.effects.push({ propose: { owner: 'politics', field: 'national-will', subject: 'south', delta: -15, reason: 'a-harbour-burned', side: 'south' } });
     });
-    expect(issues(cost).filter((i) => i.kind === 'gate-atrocity-benefit')).toEqual([]);
+    expect(issues(cost).filter((i) => i.kind === 'gate-atrocity-benefit' && i.file === sit('sanctuary_act'))).toEqual([]);
+    // Gate G4: fen_crossing's send_back expires on news of sanctuary_act, which now depends on the atrocity, so its costs do too.
+    firesAt(cost, 'gate-atrocity-benefit', { file: sit('fen_crossing'), at: 'options[2].lockedCosts[0]', message: 'through "sanctuary_act" (option "send_back" depends on it)' });
     // The lead's ruling on N2: lowering the victim's measure, conditioned the same way, helps the actor too.
     const harm = editJson(sit('sanctuary_act'), (s) => {
       s.event = { all: [{ fired: 'harbour_burning' }, { decided: 'fen_crossing' }] };

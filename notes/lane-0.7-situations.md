@@ -99,6 +99,12 @@ The standing reviewer approved after fixes, each landing as its own commit with 
 
 Both approved. Folded in, one commit each with a control: G1 (atrocity terms lower only the acting side), G2 (D4, D5, F1 partly tested), N6 (the clock runs from surfacing), N7 (the sign convention in the published schema), N9 (wording notes keyed by language), the standing reviewer's control for the wait's news bound, and a missing `situations/` or `gate/` folder read as none through any adapter (`listOptional`; lane 0.3's trial merge needed it). N8 is left: changing `sanctuary_act`'s text would void its sign-off.
 
+## Gates G3 and G4 (after merge)
+
+- **G3:** an effect that names no side, in an item depending on an atrocity, is rejected (`gate-acting-side`), as in the atrocity item itself (E7).
+- **G4:** D5 follows every route to a fixed point (`atrocityTaint`). A scope depends on a tainted item when it fires on it, reads its decision, waits for news of it (`knows` with that item as subject), follows it in a chain, or reads a flag it sets. An item's trigger (event, knowledge condition, chain) makes all its effects depend; one option's appear, expire or wait condition makes only that option's. An option-level dependence passes on only through that option's flags or a decision naming it. The fixed point is the default; the gate reviewer narrows it case by case if the real pack needs that.
+- **For the reviewer (Q7):** a `knows` pattern with no subject, matching an atrocity's report only by type, subtype or token, is beyond the mechanical check.
+
 ## For later lanes
 
 - **0.5:** an option's orders go through `issueOrder`; corps commanders ordering subordinates stays deferred (0052). The conditions `goal` and `headquartersAt` read the stand-ins and must move with them.
