@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staff Map Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=IBM+Plex+Sans+Condensed:wght@400;600&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Kalam:wght@300;400&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+/* Prototype for decision 0013: the map is the staff's drawing, not ground truth.
+   One dataset, three era skins. Skins change only these tokens and a few glyph choices. */
+:root {
+  --desk: #2f3b32; --desk-edge: #24302a;
+  --paper: #e5e8e1; --grain: 0.30;
+  --ink: #2a2620; --pencil: #5e5c56;
+  --own: #27467f; --enemy: #8e3a2a; --correction: #b0231b;
+  --water: #5d7d95; --wash-own: #a9bcd6; --wash-enemy: #d9b1a3; --wood: #6e7a5a;
+  --label: 'IM Fell English SC', Georgia, serif;
+  --title: 'IM Fell English', Georgia, serif;
+  --note: 'Kalam', 'Comic Sans MS', cursive;
+  --note-weight: 400;
+  --chrome-ink: #e8ece4; --chrome-dim: #a9b3a8;
+}
+body[data-skin="rome"] {
+  --desk: #3b2a1f; --desk-edge: #2c1f16;
+  --paper: #d9c59c; --grain: 0.42;
+  --ink: #2b1d12; --pencil: #5a4532;
+  --own: #8b1e1e; --enemy: #3f3566; --correction: #1d6150;
+  --water: #4c6c70; --wash-own: #d49a86; --wash-enemy: #a99cbf; --wood: #6b6a3c;
+  --label: 'Cinzel', Georgia, serif;
+  --title: 'Cinzel', Georgia, serif;
+  --note: 'IM Fell English', Georgia, serif;
+  --chrome-ink: #f1e6d2; --chrome-dim: #c2ab8f;
+}
+body[data-skin="acetate"] {
+  --desk: #2d3135; --desk-edge: #222528;
+  --paper: #f3f4ef; --grain: 0.12;
+  --ink: #3b3e3a; --pencil: #3f4650;
+  --own: #1d5ed0; --enemy: #d42a3c; --correction: #e07f00;
+  --water: #7db0d4; --wash-own: #c3d6f3; --wash-enemy: #f3c6ca; --wood: #b9d3a6;
+  --label: 'IBM Plex Sans Condensed', Arial Narrow, sans-serif;
+  --title: 'IBM Plex Sans Condensed', Arial Narrow, sans-serif;
+  --note: 'Permanent Marker', 'Comic Sans MS', cursive;
+  --chrome-ink: #eef1f4; --chrome-dim: #a7b0b9;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% 40%, var(--desk) 0%, var(--desk-edge) 100%);
+  color: var(--chrome-ink);
+  font-family: var(--title);
+  transition: background 400ms ease;
+}
+
+.strip {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 28px;
+  padding: 18px 24px 8px; max-width: 1480px; margin: 0 auto;
+}
+.strip h1 { font-family: var(--title); font-weight: 400; font-size: 26px; margin: 0; letter-spacing: 0.01em; }
+.strip p { margin: 0; color: var(--chrome-dim); font-size: 15px; flex: 1 1 320px; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+.skins { display: inline-flex; border: 1px solid color-mix(in srgb, var(--chrome-ink) 35%, transparent); border-radius: 3px; overflow: hidden; }
+.skins button {
+  font: 14px var(--title); color: var(--chrome-dim); background: transparent; border: 0;
+  padding: 7px 12px; cursor: pointer;
+}
+.skins button + button { border-left: 1px solid color-mix(in srgb, var(--chrome-ink) 25%, transparent); }
+.skins button[aria-pressed="true"] { color: var(--desk-edge); background: var(--chrome-ink); }
+.skins button:focus-visible, .truth-toggle input:focus-visible { outline: 2px solid var(--chrome-ink); outline-offset: 2px; }
+.truth-toggle { font-size: 14px; color: var(--chrome-dim); display: inline-flex; gap: 8px; align-items: center; cursor: pointer; }
+
+.desk { max-width: 1480px; margin: 0 auto; padding: 10px 24px 40px; position: relative; }
+.sheet {
+  position: relative; transform: rotate(-0.35deg);
+  box-shadow: 0 1px 0 rgba(0,0,0,.25), 0 18px 40px -12px rgba(0,0,0,.65), 0 2px 6px rgba(0,0,0,.35);
+  background: var(--paper);
+}
+svg.map { display: block; width: 100%; height: auto; }
+
+.slip {
+  position: absolute; right: -14px; bottom: -26px; width: 232px; transform: rotate(1.6deg);
+  background: color-mix(in srgb, var(--paper) 90%, white); color: var(--ink);
+  padding: 12px 14px 10px; box-shadow: 0 10px 22px -10px rgba(0,0,0,.6), 0 1px 2px rgba(0,0,0,.25);
+  font: 14px/1.3 var(--title);
+}
+.slip h2 { font: 400 16px var(--title); margin: 0 0 8px; }
+.slip ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.slip li { display: grid; grid-template-columns: 46px 1fr; gap: 8px; align-items: center; }
+.slip svg { width: 46px; height: 16px; overflow: visible; }
+
+/* Layers that only exist in one mode or skin */
+.truth-only { display: none; }
+body.truth .truth-only { display: inline; }
+body.truth .claim-only { display: none; }
+.skin-linen, .skin-rome, .skin-acetate { display: none; }
+body[data-skin="linen"] .skin-linen,
+body[data-skin="rome"] .skin-rome,
+body[data-skin="acetate"] .skin-acetate,
+body[data-skin="rome"] .skin-rome-lines { display: inline; }
+
+/* Map text */
+.lbl { font-family: var(--label); fill: var(--ink); }
+.lbl-region { font-size: 30px; letter-spacing: 0.18em; opacity: 0.55; }
+.lbl-town { font-size: 19px; }
+.lbl-cap { font-size: 23px; }
+.lbl-water { font-family: var(--title); font-style: italic; fill: var(--water); font-size: 20px; letter-spacing: 0.08em; }
+body[data-skin="rome"] .lbl-water { font-style: normal; font-family: var(--label); }
+.note { font-family: var(--note); font-weight: var(--note-weight); font-size: 19px; }
+body[data-skin="acetate"] .note { font-size: 17px; }
+.note-pencil { fill: var(--pencil); }
+.note-ink { fill: var(--ink); }
+.note-own { fill: var(--own); }
+.note-correction { fill: var(--correction); }
+.note-truth { fill: #6b2fb3; font-family: 'IBM Plex Sans Condensed', sans-serif; font-size: 16px; font-weight: 600; }
+.title-cartouche { font-family: var(--title); fill: var(--ink); }
+
+@media (max-width: 1100px) {
+  .slip { position: static; transform: none; width: auto; margin: 16px 0 0; }
+}
+@media (max-width: 760px) {
+  .strip h1 { font-size: 22px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body data-skin="linen">
+
+<header class="strip">
+  <h1>The Two Rivers</h1>
+  <p>Staff map on day 51, drawn at the War Office from the reports on your desk.</p>
+  <div class="controls">
+    <div class="skins" role="group" aria-label="Era style">
+      <button type="button" data-skin="linen" aria-pressed="true">Ink on linen, 1862</button>
+      <button type="button" data-skin="rome" aria-pressed="false">Parchment, Rome</button>
+      <button type="button" data-skin="acetate" aria-pressed="false">Acetate overlay, 2022</button>
+    </div>
+    <label class="truth-toggle"><input type="checkbox" id="truth"> Show ground truth (developer view)</label>
+  </div>
+</header>
+
+<main class="desk">
+  <div class="sheet">
+    <svg class="map" id="map" viewBox="0 0 1600 1000" role="img" aria-label="Hand-drawn staff map of the Two Rivers front">
+      <defs>
+        <filter id="ink" x="-5%" y="-5%" width="110%" height="110%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="n"/>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+        <filter id="pencil" x="-5%" y="-5%" width="110%" height="110%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="4.5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+          <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="1" seed="2" result="grain"/>
+          <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.2 1.55" result="mask"/>
+          <feComposite in="d" in2="mask" operator="in"/>
+        </filter>
+        <filter id="wash" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="12" result="n"/>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="22" xChannelSelector="R" yChannelSelector="G" result="d"/>
+          <feGaussianBlur in="d" stdDeviation="2.2" result="b"/>
+          <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="5" result="blot"/>
+          <feColorMatrix in="blot" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -0.9 1.25" result="blotMask"/>
+          <feComposite in="b" in2="blotMask" operator="in"/>
+        </filter>
+        <filter id="paper" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="21" result="fine"/>
+          <feTurbulence type="fractalNoise" baseFrequency="0.006" numOctaves="2" seed="3" result="blotch"/>
+          <feBlend in="fine" in2="blotch" mode="multiply" result="t"/>
+          <feColorMatrix in="t" type="matrix" values="0 0 0 0 0.25  0 0 0 0 0.2  0 0 0 0 0.12  0 0 0 -1.1 0.75"/>
+        </filter>
+        <pattern id="hatch-own" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(38)">
+          <line x1="0" y1="0" x2="0" y2="7" style="stroke: var(--own); stroke-width: 1.6; opacity: .8"/>
+        </pattern>
+        <pattern id="hatch-enemy" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(-40)">
+          <line x1="0" y1="0" x2="0" y2="8" style="stroke: var(--enemy); stroke-width: 1.2; opacity: .55"/>
+        </pattern>
+        <pattern id="grid" patternUnits="userSpaceOnUse" width="100" height="100">
+          <path d="M100 0H0V100" fill="none" style="stroke: var(--water); stroke-width: .7; opacity: .35"/>
+        </pattern>
+      </defs>
+      <rect width="1600" height="1000" style="fill: var(--paper)"/>
+      <rect width="1600" height="1000" filter="url(#paper)" style="opacity: var(--grain)"/>
+      <g id="layers"></g>
+    </svg>
+
+    <aside class="slip" aria-label="How to read this map">
+      <h2>How to read this map</h2>
+      <ul>
+        <li><svg viewBox="0 0 46 16"><path d="M2 9 Q12 6 23 8 T44 7" fill="none" style="stroke: var(--own); stroke-width: 3.4"/></svg>Confirmed by two sources</li>
+        <li><svg viewBox="0 0 46 16"><path d="M2 9 Q12 6 23 8 T44 7" fill="none" style="stroke: var(--pencil); stroke-width: 2.5; stroke-dasharray: 7 5"/></svg>One report, unconfirmed</li>
+        <li><svg viewBox="0 0 46 16"><path d="M2 12 L44 4" style="stroke: var(--correction); stroke-width: 2.5"/></svg>Inspector's correction</li>
+        <li><svg viewBox="0 0 46 16"><path d="M2 8 H34 M30 3 L42 8 L30 13" fill="none" style="stroke: var(--own); stroke-width: 2.5"/></svg>Your orders</li>
+        <li><svg viewBox="0 0 46 16"><path d="M2 9 Q12 6 23 8 T44 7" fill="none" style="stroke: var(--pencil); stroke-width: 2.5; opacity: .4"/></svg>News older than two weeks</li>
+      </ul>
+    </aside>
+  </div>
+</main>
+
+<script>
+// ---------------------------------------------------------------------------
+// Data. In the game this comes from the faction's view (claims), never from state.
+const TODAY = 51;
+const MAP = {
+  regions: [
+    { id: 'n_capital', side: 'own', name: 'Harrowmark', label: [690, 175], pts: [[380,40],[1000,40],[960,240],[700,270],[430,230]] },
+    { id: 'n_west', side: 'own', name: 'Wendland', label: [250, 300], pts: [[40,40],[380,40],[430,230],[700,270],[640,498],[420,528],[200,505],[40,515]] },
+    { id: 'n_east', side: 'own', name: 'Ostry', label: [1080, 330], pts: [[1000,40],[1330,40],[1360,180],[1320,330],[1300,468],[1050,488],[850,468],[640,498],[700,270],[960,240]] },
+    { id: 's_west', side: 'enemy', name: 'Meregate', label: [250, 745], pts: [[40,515],[200,505],[420,528],[640,498],[690,760],[420,800],[40,790]] },
+    { id: 's_east', side: 'enemy', name: 'Tollan', label: [880, 725], pts: [[640,498],[850,468],[1050,488],[1300,468],[1295,620],[1265,760],[900,785],[690,760]] },
+    { id: 's_capital', side: 'enemy', name: 'Caldermoor', label: [700, 885], pts: [[40,790],[420,800],[690,760],[900,785],[1265,760],[1245,960],[40,960]] },
+  ],
+  coast: [[1330,40],[1360,180],[1320,330],[1300,468],[1295,620],[1265,760],[1245,960]],
+  borderRiver: { name: 'River Sarn', pts: [[40,515],[200,505],[420,528],[640,498],[850,468],[1050,488],[1300,468]], label: [470, 560] },
+  rivers: [
+    { name: 'Vell', pts: [[780,40],[760,140],[800,250],[790,360],[850,468]], label: [812, 330], angle: -80 },
+    { name: '', pts: [[300,800],[360,700],[330,620],[420,528]] },
+  ],
+  hills: [
+    { ridge: [[1030, 140], [1090, 118], [1150, 135], [1215, 120], [1265, 150]] },
+    { ridge: [[150, 650], [205, 625], [265, 648], [320, 630], [370, 662]] },
+    { ridge: [[1110, 735], [1160, 712], [1215, 734]] },
+  ],
+  woods: [ { c: [210, 230], n: 26, r: 70 }, { c: [470, 850], n: 18, r: 45 }, { c: [1180, 410], n: 12, r: 40 } ],
+  towns: [
+    { name: 'Harrow', at: [690, 105], capital: true },
+    { name: 'Wend', at: [170, 405] },
+    { name: 'Ostry Ford', at: [1010, 380] },
+    { name: 'Mere', at: [250, 585] },
+    { name: 'Tollan', at: [985, 600] },
+    { name: 'Calder', at: [640, 905], capital: true },
+  ],
+  // Front segments as the staff believes them, with their source.
+  front: [
+    { from: 0, to: 3, status: 'single', note: ['Per Gen. Pell, day 51,', 'unconfirmed'], noteAt: [52, 566] },
+    { from: 3, to: 6, status: 'confirmed', note: ['By telegraph, day 50'], noteAt: [690, 530] },
+  ],
+  own: [
+    { name: 'Army of the West', strength: '469', at: [300, 410], day: 50 },
+    { name: 'Army of the East', strength: '1,100', at: [960, 395], day: 50 },
+    { name: 'War Office reserve', strength: '100', at: [520, 125], day: 50 },
+  ],
+  enemy: [
+    { at: [400, 640], claimed: '736', author: 'Gen. Pell', day: 51, correction: { value: '460', author: "Insp. Daw's count" }, truth: '424' },
+    { at: [1000, 640], claimed: '713', author: 'Gen. Varrow', day: 38, truth: '652' },
+  ],
+  orders: [
+    { from: [335, 462], ctrl: [352, 530], to: [385, 608], note: ['Your order, day 29:', 'take Mere, boldness 600'], noteAt: [420, 410], told: 'Pell says "complying", day 41' },
+    { from: [995, 448], ctrl: [1005, 528], to: [990, 604], note: ['Your order, day 29:', 'take Tollan, boldness 800'], noteAt: [1080, 410], result: 'Repulsed, day 38' },
+  ],
+  truth: [
+    { kind: 'stub', from: [312, 462], to: [322, 500] },
+    { kind: 'text', at: [460, 735], text: 'Truly: a demonstration at 250, not an assault' },
+    { kind: 'text', at: [56, 345], text: 'Pell is truly "reserved" toward you, never reported' },
+  ],
+  scale: { at: [70, 925], length: 240 },
+};
+
+// ---------------------------------------------------------------------------
+// Renderer: data in, hand-drawn SVG out. Skins are CSS only.
+const NS = 'http://www.w3.org/2000/svg';
+const root = document.getElementById('layers');
+function el(tag, attrs = {}, parent = root, text) {
+  const node = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(attrs)) node.setAttribute(k, v);
+  if (text !== undefined) node.textContent = text;
+  parent.appendChild(node);
+  return node;
+}
+function group(cls, filter) { const g = el('g', { class: cls || '' }); if (filter) g.setAttribute('filter', `url(#${filter})`); return g; }
+
+// Deterministic jitter so redraws are stable (the same seeded idea as the kernel).
+let seed = 1861;
+function rand() { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; }
+
+function smooth(pts, closed = false) {
+  const n = pts.length;
+  const at = (i) => closed ? pts[(i + n) % n] : pts[Math.max(0, Math.min(n - 1, i))];
+  let d = `M${pts[0][0]} ${pts[0][1]}`;
+  const last = closed ? n : n - 1;
+  for (let i = 0; i < last; i++) {
+    const p0 = at(i - 1), p1 = at(i), p2 = at(i + 1), p3 = at(i + 2);
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    d += ` C${c1[0].toFixed(1)} ${c1[1].toFixed(1)} ${c2[0].toFixed(1)} ${c2[1].toFixed(1)} ${p2[0]} ${p2[1]}`;
+  }
+  return closed ? d + 'Z' : d;
+}
+const poly = (pts) => 'M' + pts.map((p) => p.join(' ')).join(' L') + 'Z';
+const ageOpacity = (day) => Math.max(0.42, 1 - (TODAY - day) / 30);
+
+// Sketch a line twice with a small offset, as a draughtsman going over it.
+function sketch(d, style, parent, filter = 'ink') {
+  el('path', { d, fill: 'none', style, filter: `url(#${filter})` }, parent);
+  el('path', { d, fill: 'none', style: style + ';opacity:.35', transform: `translate(${(rand() * 2 - 1).toFixed(2)} ${(rand() * 2 - 1).toFixed(2)})`, filter: `url(#${filter})` }, parent);
+}
+
+function note(text, at, cls, angle = 0, parent = root, opacity = 1) {
+  const lines = Array.isArray(text) ? text : [text];
+  const t = el('text', { x: at[0], y: at[1], class: `note ${cls}`, transform: `rotate(${angle} ${at[0]} ${at[1]})`, style: `opacity:${opacity}` }, parent);
+  lines.forEach((line, i) => el('tspan', { x: at[0], dy: i === 0 ? 0 : '1.15em' }, t, line));
+  return t;
+}
+
+function draw() {
+  root.replaceChildren();
+  seed = 1861;
+
+  // 2022 skin: printed grid under everything.
+  const grid = group('skin-acetate');
+  el('rect', { x: 40, y: 40, width: 1520, height: 920, fill: 'url(#grid)' }, grid);
+
+  // Territory washes, as the staff coloured them: a thin body wash with pigment pooled at the edges.
+  const washes = group('', 'wash');
+  for (const r of MAP.regions) {
+    el('path', { d: poly(r.pts), style: `fill: var(--wash-${r.side}); opacity: .4` }, washes);
+  }
+  // Pooled pigment along each side's outer edge only (where the front is), as a painter would darken it.
+  const pool = group('', 'wash');
+  for (const r of MAP.regions) {
+    el('path', { d: poly(r.pts), style: `fill: none; stroke: var(--wash-${r.side}); stroke-width: 18; opacity: .45` }, pool);
+  }
+  // Sea, with the old engraver's water lines following the shore.
+  const sea = group('', 'wash');
+  el('path', { d: smooth(MAP.coast) + ' L1560 960 L1560 40 Z', style: 'fill: var(--water); opacity: .22' }, sea);
+  const waterLines = group('skin-linen skin-rome-lines', 'ink');
+  for (let k = 1; k <= 5; k++) {
+    el('path', { d: smooth(MAP.coast.map(([x, y]) => [x + k * 9 + k * k, y])), fill: 'none', style: `stroke: var(--water); stroke-width: 1; opacity: ${0.75 - k * 0.12}` }, waterLines);
+  }
+
+  // Relief from ridge lines: hachures (1862), mountain glyphs (Rome), contours (2022).
+  const hach = group('skin-linen', 'ink');
+  const glyph = group('skin-rome', 'ink');
+  const cont = group('skin-acetate', 'ink');
+  for (const h of MAP.hills) {
+    const ridgePath = el('path', { d: smooth(h.ridge), fill: 'none' }, hach);
+    const L = ridgePath.getTotalLength();
+    for (let s = 0; s <= L; s += 4.5) {
+      const p = ridgePath.getPointAtLength(s), q = ridgePath.getPointAtLength(Math.min(L, s + 1));
+      let dx = q.x - p.x, dy = q.y - p.y; const m = Math.hypot(dx, dy) || 1; dx /= m; dy /= m;
+      const taper = Math.sin(Math.PI * (s / L)) ** 0.6;
+      for (const side of [1, -1]) {
+        const len = (14 + rand() * 16) * taper, start = 3;
+        const nx = -dy * side, ny = dx * side;
+        const shade = side === 1 ? 0.75 : 0.4; // light from the north-west: south-east slopes darker
+        el('path', {
+          d: `M${(p.x + nx * start).toFixed(1)} ${(p.y + ny * start).toFixed(1)} L${(p.x + nx * (start + len)).toFixed(1)} ${(p.y + ny * (start + len)).toFixed(1)}`,
+          style: `stroke: var(--ink); stroke-width: ${side === 1 ? 1.25 : 0.9}; opacity: ${shade}`,
+        }, hach);
+      }
+    }
+    for (let i = 0; i < h.ridge.length; i++) {
+      const [x, y] = h.ridge[i];
+      const s = 18 + rand() * 9;
+      el('path', { d: `M${x - s} ${y + s * 0.65} L${x} ${y - s * 0.7} L${x + s} ${y + s * 0.65}`, fill: 'none', style: 'stroke: var(--ink); stroke-width: 1.7; opacity: .7' }, glyph);
+      el('path', { d: `M${x} ${y - s * 0.7} L${x + s * 0.55} ${y + s * 0.65} L${x + s} ${y + s * 0.65}`, style: 'fill: var(--ink); opacity: .14' }, glyph);
+    }
+    const cx = h.ridge.reduce((a, p) => a + p[0], 0) / h.ridge.length;
+    const cy = h.ridge.reduce((a, p) => a + p[1], 0) / h.ridge.length;
+    const span = Math.hypot(h.ridge.at(-1)[0] - h.ridge[0][0], h.ridge.at(-1)[1] - h.ridge[0][1]) / 2;
+    for (let k = 1; k <= 5; k++) {
+      const pts = [];
+      for (let a = 0; a < Math.PI * 2; a += 0.45) {
+        const rr = (k / 5) * (0.85 + rand() * 0.3);
+        pts.push([cx + Math.cos(a) * (span + 20) * rr, cy + Math.sin(a) * 42 * rr]);
+      }
+      el('path', { d: smooth(pts, true), fill: 'none', style: `stroke: #a9824f; stroke-width: ${k === 5 ? 1.6 : 1}; opacity: .75` }, cont);
+    }
+  }
+
+  // Woods.
+  const woods = group('', 'ink');
+  for (const w of MAP.woods) {
+    for (let i = 0; i < w.n; i++) {
+      const a = rand() * Math.PI * 2, rr = Math.sqrt(rand()) * w.r;
+      const x = w.c[0] + Math.cos(a) * rr * 1.4, y = w.c[1] + Math.sin(a) * rr * 0.8;
+      el('circle', { cx: x.toFixed(1), cy: y.toFixed(1), r: 5 + rand() * 2.5, style: 'fill: var(--wood); opacity: .35; stroke: var(--ink); stroke-width: .8; stroke-opacity: .5' }, woods);
+      el('path', { d: `M${x.toFixed(1)} ${(y + 5).toFixed(1)} v6`, style: 'stroke: var(--ink); stroke-width: .9; opacity: .5' }, woods);
+    }
+  }
+
+  // Coast and province boundaries.
+  const lines = group('');
+  sketch(smooth(MAP.coast), 'stroke: var(--ink); stroke-width: 2.2', lines);
+  for (const r of MAP.regions) {
+    el('path', { d: poly(r.pts), fill: 'none', style: 'stroke: var(--ink); stroke-width: 1.1; stroke-dasharray: 10 4 2 4; opacity: .45', filter: 'url(#ink)' }, lines);
+  }
+
+  // Rivers.
+  const rivers = group('');
+  for (const r of [...MAP.rivers, MAP.borderRiver]) {
+    sketch(smooth(r.pts), `stroke: var(--water); stroke-width: ${r === MAP.borderRiver ? 4 : 2.4}; stroke-linecap: round`, rivers);
+    if (r.name && r.label) {
+      el('text', { x: r.label[0], y: r.label[1], class: 'lbl-water', transform: `rotate(${r.angle || -3} ${r.label[0]} ${r.label[1]})` }, rivers, r.name);
+    }
+  }
+
+  // Region names, then towns.
+  for (const r of MAP.regions) el('text', { x: r.label[0], y: r.label[1], class: 'lbl lbl-region', 'text-anchor': 'middle' }, root, r.name);
+  const towns = group('');
+  for (const t of MAP.towns) {
+    const g = el('g', { filter: 'url(#ink)' }, towns);
+    if (t.capital) {
+      el('circle', { cx: t.at[0], cy: t.at[1], r: 9, style: 'fill: var(--paper); stroke: var(--ink); stroke-width: 2' }, g);
+      el('circle', { cx: t.at[0], cy: t.at[1], r: 4, style: 'fill: var(--ink)' }, g);
+    } else {
+      el('circle', { cx: t.at[0], cy: t.at[1], r: 5, style: 'fill: var(--ink)' }, g);
+    }
+    el('text', { x: t.at[0] + 14, y: t.at[1] - 8, class: `lbl ${t.capital ? 'lbl-cap' : 'lbl-town'}` }, towns, t.name);
+  }
+
+  drawFront();
+  drawOrders();
+  drawUnits();
+  drawTruth();
+  drawFrame();
+}
+
+// HoI4-style front: a heavy line with teeth toward the enemy, drawn per segment by its source.
+function drawFront() {
+  const pts = MAP.borderRiver.pts.map(([x, y]) => [x, y - 14]);
+  for (const seg of MAP.front) {
+    const confirmed = seg.status === 'confirmed';
+    const segPts = pts.slice(seg.from, seg.to + 1);
+    const g = group(confirmed ? '' : 'claim-only', confirmed ? 'ink' : 'pencil');
+    const color = confirmed ? 'var(--own)' : 'var(--pencil)';
+    const d = smooth(segPts);
+    const path = el('path', { d, fill: 'none', style: `stroke: ${color}; stroke-width: ${confirmed ? 5 : 3.5}; stroke-linecap: round; ${confirmed ? '' : 'stroke-dasharray: 14 7'}` }, g);
+    teeth(path, g, color, confirmed ? 1 : 0.7);
+    note(seg.note, seg.noteAt, confirmed ? 'note-ink' : 'note-pencil', -2);
+    if (!confirmed) {
+      // In the developer view the true front is inked where the staff only had pencil.
+      const t = group('truth-only', 'ink');
+      const tp = el('path', { d, fill: 'none', style: 'stroke: var(--own); stroke-width: 5; stroke-linecap: round' }, t);
+      teeth(tp, t, 'var(--own)', 1);
+    }
+  }
+}
+
+function teeth(path, parent, color, opacity) {
+  const L = path.getTotalLength();
+  for (let s = 10; s < L - 6; s += 17) {
+    const p = path.getPointAtLength(s), q = path.getPointAtLength(s + 1);
+    let dx = q.x - p.x, dy = q.y - p.y; const m = Math.hypot(dx, dy) || 1; dx /= m; dy /= m;
+    const nx = -dy, ny = dx; // points toward the enemy (south) for a west-to-east line
+    const a = [p.x - dx * 5, p.y - dy * 5], b = [p.x + dx * 5, p.y + dy * 5], c = [p.x + nx * 10, p.y + ny * 10];
+    el('path', { d: `M${a.join(' ')} L${c.join(' ')} L${b.join(' ')} Z`, style: `fill: ${color}; opacity: ${opacity}` }, parent);
+  }
+}
+
+// Broad tapered arrow in blue pencil, like a HoI4 battle plan, but hatched by hand.
+function broadArrow(from, ctrl, to, width, parent, fill, stroke) {
+  const B = (t) => [(1 - t) ** 2 * from[0] + 2 * (1 - t) * t * ctrl[0] + t * t * to[0], (1 - t) ** 2 * from[1] + 2 * (1 - t) * t * ctrl[1] + t * t * to[1]];
+  const D = (t) => [2 * (1 - t) * (ctrl[0] - from[0]) + 2 * t * (to[0] - ctrl[0]), 2 * (1 - t) * (ctrl[1] - from[1]) + 2 * t * (to[1] - ctrl[1])];
+  const left = [], right = [], N = 24, stop = 0.72;
+  for (let i = 0; i <= N; i++) {
+    const t = (i / N) * stop, p = B(t), d = D(t), m = Math.hypot(d[0], d[1]);
+    const w = width * (1 - 0.3 * t) / 2, nx = -d[1] / m, ny = d[0] / m;
+    left.push([p[0] + nx * w, p[1] + ny * w]); right.push([p[0] - nx * w, p[1] - ny * w]);
+  }
+  const p = B(stop), d = D(stop), m = Math.hypot(d[0], d[1]), nx = -d[1] / m, ny = d[0] / m, hw = width * 1.05;
+  const outline = [...left, [p[0] + nx * hw, p[1] + ny * hw], to, [p[0] - nx * hw, p[1] - ny * hw], ...right.reverse()];
+  const dPath = 'M' + outline.map((q) => q.map((v) => v.toFixed(1)).join(' ')).join(' L') + 'Z';
+  el('path', { d: dPath, style: `fill: ${fill}` }, parent);
+  el('path', { d: dPath, fill: 'none', style: `stroke: ${stroke}; stroke-width: 2.2; stroke-linejoin: round` }, parent);
+}
+
+function drawOrders() {
+  for (const o of MAP.orders) {
+    const g = group('', 'pencil');
+    broadArrow(o.from, o.ctrl, o.to, 30, g, 'url(#hatch-own)', 'var(--own)');
+    note(o.note, o.noteAt, 'note-own', -3);
+    if (o.told) note(o.told, [o.noteAt[0] + 6, o.noteAt[1] + 24 * o.note.length + 4], 'note-pencil', -3, root, 0.9);
+    if (o.result) {
+      const x = o.to[0] - 34, y = o.to[1] - 18;
+      const r = group('', 'ink');
+      el('path', { d: `M${x - 9} ${y - 9} L${x + 9} ${y + 9} M${x + 9} ${y - 9} L${x - 9} ${y + 9}`, style: 'stroke: var(--ink); stroke-width: 3' }, r);
+      note(o.result, [x - 150, y + 6], 'note-pencil', -2, root, ageOpacity(38));
+    }
+  }
+}
+
+// Unit counters: own in ink (returns), enemy in pencil (estimates), with authors and dates.
+function counter(at, side, parent) {
+  const [x, y] = at, w = 58, h = 36;
+  const style = side === 'own'
+    ? 'fill: var(--paper); stroke: var(--own); stroke-width: 2.4'
+    : 'fill: url(#hatch-enemy); stroke: var(--enemy); stroke-width: 2; stroke-dasharray: 6 4';
+  el('rect', { x: x - w / 2, y: y - h / 2, width: w, height: h, rx: 2, style }, parent);
+  el('path', { d: `M${x - w / 2} ${y - h / 2} L${x + w / 2} ${y + h / 2} M${x + w / 2} ${y - h / 2} L${x - w / 2} ${y + h / 2}`, style: `stroke: var(--${side}); stroke-width: 1.6; opacity: .9` }, parent);
+}
+
+function drawUnits() {
+  for (const u of MAP.own) {
+    const g = group('', 'ink');
+    counter(u.at, 'own', g);
+    el('text', { x: u.at[0], y: u.at[1] + 40, class: 'lbl', 'text-anchor': 'middle', style: 'font-size: 16px; fill: var(--own)' }, root, `${u.name}, ${u.strength}`);
+  }
+  for (const e of MAP.enemy) {
+    const g = group('', 'pencil');
+    g.setAttribute('style', `opacity: ${ageOpacity(e.day)}`);
+    counter(e.at, 'enemy', g);
+    const nx = e.at[0] + 44, ny = e.at[1] - 4;
+    const claim = note(`${e.claimed}?  ${e.author}, day ${e.day}`, [nx, ny], 'note-pencil', -2, root, ageOpacity(e.day));
+    if (e.correction) {
+      const bb = claim.getBBox();
+      const strike = group('', 'ink');
+      el('path', { d: `M${bb.x - 2} ${bb.y + bb.height * 0.62} L${bb.x + 46} ${bb.y + bb.height * 0.42}`, style: 'stroke: var(--correction); stroke-width: 2.6' }, strike);
+      note(`${e.correction.value}  ${e.correction.author}, day ${e.day}`, [nx + 6, ny + 28], 'note-correction', -1);
+    }
+    note(`True strength ${e.truth}`, [nx, ny + (e.correction ? 56 : 28)], 'note-truth truth-only', 0);
+  }
+}
+
+function drawTruth() {
+  const g = group('truth-only');
+  for (const t of MAP.truth) {
+    if (t.kind === 'stub') {
+      el('path', { d: `M${t.from.join(' ')} L${t.to.join(' ')}`, style: 'stroke: #6b2fb3; stroke-width: 3; stroke-dasharray: 3 5; marker-end: none' }, g);
+      el('circle', { cx: t.to[0], cy: t.to[1], r: 4, style: 'fill: #6b2fb3' }, g);
+    } else {
+      note(t.text, t.at, 'note-truth', 0, g);
+    }
+  }
+}
+
+function drawFrame() {
+  const g = group('', 'ink');
+  el('rect', { x: 22, y: 22, width: 1556, height: 956, fill: 'none', style: 'stroke: var(--ink); stroke-width: 2.4' }, g);
+  el('rect', { x: 30, y: 30, width: 1540, height: 940, fill: 'none', style: 'stroke: var(--ink); stroke-width: .8' }, g);
+  // Scale bar: the same length, measured in each era's units.
+  const [sx, sy] = MAP.scale.at, sl = MAP.scale.length;
+  const sb = group('', 'ink');
+  for (let i = 0; i < 4; i++) {
+    el('rect', { x: sx + (i * sl) / 4, y: sy, width: sl / 4, height: 7, style: `fill: ${i % 2 ? 'var(--paper)' : 'var(--ink)'}; stroke: var(--ink); stroke-width: 1` }, sb);
+  }
+  const unit = (cls, text) => el('text', { x: sx + sl / 2, y: sy + 28, class: `lbl ${cls}`, 'text-anchor': 'middle', style: 'font-size: 15px' }, root, text);
+  unit('skin-linen', 'Twenty miles');
+  unit('skin-rome', 'XX milia passuum');
+  unit('skin-acetate', '30 km');
+
+  // Title cartouche in the sea.
+  const cx = 1445, cy = 470;
+  el('text', { x: cx, y: cy, class: 'title-cartouche', 'text-anchor': 'middle', style: 'font-size: 24px' }, root, 'The Two Rivers');
+  el('text', { x: cx, y: cy + 26, class: 'title-cartouche', 'text-anchor': 'middle', style: 'font-size: 14px; opacity: .75' }, root, 'Compiled at the War Office');
+  el('text', { x: cx, y: cy + 46, class: 'title-cartouche', 'text-anchor': 'middle', style: 'font-size: 14px; opacity: .75' }, root, 'from reports to day 51');
+  // Compass, one per era.
+  const c = group('', 'ink');
+  const [x, y] = [1450, 140];
+  el('path', { d: `M${x} ${y - 44} L${x + 9} ${y} L${x} ${y + 44} L${x - 9} ${y} Z`, style: 'fill: var(--ink); opacity: .75' }, c);
+  el('path', { d: `M${x - 44} ${y} L${x} ${y - 7} L${x + 44} ${y} L${x} ${y + 7} Z`, style: 'fill: none; stroke: var(--ink); stroke-width: 1.4' }, c);
+  el('text', { x, y: y - 52, class: 'lbl', 'text-anchor': 'middle', style: 'font-size: 18px' }, root, 'N');
+}
+
+// ---------------------------------------------------------------------------
+const buttons = document.querySelectorAll('.skins button');
+buttons.forEach((b) => b.addEventListener('click', () => {
+  document.body.dataset.skin = b.dataset.skin;
+  buttons.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+  try { localStorage.setItem('mandate-map-skin', b.dataset.skin); } catch {}
+  // Lettering widths differ per era; redraw so corrections line up with the new hand.
+  (document.fonts?.ready ?? Promise.resolve()).then(draw);
+}));
+document.getElementById('truth').addEventListener('change', (e) => document.body.classList.toggle('truth', e.target.checked));
+try {
+  const saved = localStorage.getItem('mandate-map-skin');
+  if (saved) document.querySelector(`.skins button[data-skin="${saved}"]`)?.click();
+} catch {}
+
+(document.fonts?.ready ?? Promise.resolve()).then(draw);
+</script>
+</body>
+</html>

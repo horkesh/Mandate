@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "map-prototype",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["tools/serve-static.mjs", "prototypes/map-style", "4173"],
+      "port": 4173
+    }
+  ]
+}

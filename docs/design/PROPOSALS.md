@@ -180,6 +180,8 @@ This is carried over from Starfleet Career decisions 0001 and 0028. Proxy dialog
 
 ### P17. A headless people sim first, the map last
 
+> The map ordering is superseded by decision 0013: the hand-drawn staff map is built with the desk UI (M3). The headless-first part stands.
+
 The map is the most expensive thing to build and the least central to the premise. AWWV rebuilt its map UI four times. Build order:
 1. Kernel and the people sim, run headless with a text console. Prove the Audience is fun in text.
 2. A desk UI: dispatches, audiences, the org chart.
