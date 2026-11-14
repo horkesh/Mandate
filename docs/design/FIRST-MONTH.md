@@ -4,6 +4,16 @@ Status: design lane output (2026-11-14), a proposal like everything in `docs/des
 
 History comes only from the research notes: `docs/research/2026-11-14-secession-winter-1861.md` (cited as **[SW]**), `2026-11-14-union-information-flows.md` (**[IF]**), `2026-11-14-union-command-and-promotion.md` (**[CP]**) and `2026-11-14-war-scale.md` (**[WS]**). Anything the walkthrough needs that those notes lack is marked **[unsourced: needs research]**. Game-side guesses (what the kernel would compute, what a seat would choose) are marked **[game]**.
 
+**Corrections since writing** (from `docs/research/2026-11-14-march-1861-facts.md`, which sourced most of the **[unsourced]** items; read it before authoring the March 1861 situations):
+- Fox's report is dated about 25 March, not 23; it arrives with Hurlbut's (27 March) in the 28 March turn.
+- The Pickens order took 19 days (the *Crusader* sailed 15 March after Army delays); the refusal came back in 5 (overland); the landing was the night of 12 April, not 11.
+- Anderson's mail took 2–3 days via Fort Johnson and the Charleston post office, inspected from 29 March and cut on 8 April.
+- Lamon was not yet marshal (Senate consent 26 July). A new candidate situation: Governor Pickens's complaint about Lamon (29 March) and Seward's disavowal (31 March).
+- The cabinet met as needed, not weekly. The Senate sat 4–28 March, then adjourned.
+- The 10–13 March evacuation leaks caused a real backlash in the press.
+- Scott ignored a verbal order and a written request on Pickens for a week.
+- Still open: how Lincoln first learned of the Confederate commissioners, how he heard of the Campbell "faith" note, and when Northern papers printed key news.
+
 ## How to read this
 
 The walkthrough is a played game. Each **stop** is a moment the game waits for the player: the opening, then the end of each turn. For each stop it gives the days that passed, the reports that arrived (type, author, route, delay, per 0032), the situations that fired (with historical default and staff recommendation, per 0023), what the player sees, what this Lincoln does and what it costs (0025), what the people do with it, and an **engine check**: what the kernel must know, and whether FOUNDATION and the records already provide it. Gap numbers (G1, G2, …) point to the Gaps section.
