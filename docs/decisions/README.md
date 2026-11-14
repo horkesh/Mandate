@@ -40,3 +40,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0034](0034-one-standing-steward.md) | One standing steward lane from Phase 0 | accepted |
 | [0035](0035-the-stack.md) | The stack, and a map-rendering tripwire | accepted |
 | [0036](0036-the-title.md) | The game is called By Order of the President; Mandate stays the engine's codename | accepted |
+| [0037](0037-commercial-prove-it-first.md) | Commercial, but prove the hook before spending | accepted |
