@@ -86,6 +86,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - Phase 0's day tick must hash each day with `canonicalHash` (lane 0.5 or 0.8); M2 hashes per turn.
 - From lane 0.4: its performance test has about 1.8x headroom on Windows CI (8.2 ms against a 15 ms bound). If it flakes, raise the bound; do not skip the test (lane 0.8 and CI).
 - The liveness gate is a skeleton (12 M2 mechanics at minFires 0); lane 0.8 sets the Phase 0 bands.
+- From lane 0.9's planner spike: the liveness gate counts scoring terms over plan edits as well as drafts, or `haste` reads as dead.
 - The testbed reference run never fires audience, honour or pressure verbs, rivals or broken promises, so the M2 people core is barely exercised headless; it needs a script or rule seat that does (also for Phase 1's people recast).
 
 **Any lane that adds phases to the tick**
@@ -98,6 +99,10 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - Validator: no warning flags a record that cites only research notes, though 0050 says they are pointers, never enough alone; control rows also have no sources column (reviewer, `review-lane-0.3.md`).
 
 **Phase 1**
+- From lane 0.9's planner spike (`notes/lane-0.9-planner.md`), compliance recast: read a plan's boldness relative to the general's own best plan, not on an absolute scale, or a bold general objects to his own favourite plan. Responses also need conditions, such as "move when reinforced" or "if the navy supports".
+- From lane 0.9, trait table: add an assault margin. The stand-in demand of parity (1000‰) makes a pincer win only when intelligence overstates the enemy. Re-run the spike's pincer case once the margin is in.
+- From lane 0.9, navy stores: ships are treated as carrying their own stores. A rule is needed before long voyages or blockade stations matter.
+- From lane 0.9, pincer partners: score a partner's willingness by the partner holder's regard and values, rather than taking the first adjacent post by id.
 - The gate and side measures (reviewer, `review-lane-0.7.md`): before a situation proposes any side measure where higher is not better for its side (foreign pressure clocks, the Congress accountability ledger, grievances), packs must declare each side measure's direction in the register, and the sign rule (E7, D5) must read the declaration and refuse undeclared fields. Build it with the first owner that adds such a measure.
 - The people model: a staff line's recommendation is fixed data, so a fall-through puts the same advice under another name; 0040 wants it to carry the author's bias (reviewer, `review-lane-0.7.md` N4).
 - Combat (combat note and model proposal): one battle per day per region; men in contact are the lesser of those engaged, capped by frontage; five battle types with base loss rates; additive typed terms; one named stream per battle-day with fixed draws; commanders decide commit, stand or pursue without dice; missing go to stragglers; rout by morale does not kill; destruction only when cut off; a four-phase template drives hour-stamped dispatches. Generals killed or wounded need their own named stream with fixed draws per day, and generated colonels need a stream keyed by report, so reading a report cannot shift later draws. Livermore's public-domain tables become a calibration fixture for a CI harness of named set-ups; the ODC-BY acw-battle-data CSV is a cross-check only. Cite Livermore, not Kirkpatrick's ambiguous abstract.
@@ -107,6 +112,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - March 1861 facts note: Lincoln's health was strained on 28 March and 1 April (attention modifiers, 0025); the Pickens expedition was paid from the State Department's secret-service fund (a lever). Next verification pass: the Senate Executive Journal, the Navy Official Records vol. 4 (Fox's account), Northern papers via HathiTrust (also in the parked verification item).
 
 **Phase 2 (desk and map)**
+- From lane 0.9, plan review: preview an edited route and its distance before it is sent. A distant waypoint can produce a route the player did not mean.
 - Tripwire measurements cover only the RX 7800 XT; integrated GPUs, the Steam Deck and Electron's Chromium are untested, and WebGPU and an OffscreenCanvas worker bake are untried. The prototype points Playwright 1.65 at the installed chromium-1234 (`CHROMIUM_PATH` overrides); adopting Playwright for screenshots means `npx playwright install`, a browser download that is the owner's call.
 
 **Pack format and Phase 2 (images and assets; from the image-sources note)**
