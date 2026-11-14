@@ -79,7 +79,8 @@ describe('Union 1861 world v2', () => {
 
   it('writes what no source gives as unknown, never as a value', () => {
     const unknownHolders = start.posts.filter((p) => p.unknowns.includes('holder')).map((p) => p.id as string);
-    expect(unknownHolders).toContain('us_dept_texas');
+    expect(unknownHolders).toContain('cs_navy_yard_pensacola'); // three candidates, none certain
+    expect(unknownHolders).not.toContain('us_dept_texas'); // the draft's own rows order Twiggs and Waite (round 3)
     expect(start.posts.filter((p) => p.holder === null).every((p) => p.unknowns.includes('holder'))).toBe(true);
     expect(start.forceBlocks.filter((b) => b.strength === null).every((b) => b.unknowns.includes('strength'))).toBe(true);
     expect(world.people.filter((p) => p.born === null).every((p) => p.unknowns.includes('born'))).toBe(true);
@@ -122,6 +123,24 @@ describe('Union 1861 world v2', () => {
   it('holds Fort Pickens by Slemmer, who commanded the garrison; Vogdes stayed aboard (0055, ruling S2)', () => {
     expect(start.posts.find((p) => p.id === 'us_fort_pickens')!.holder).toBe('slemmer_adam_j');
     expect(world.people.some((p) => p.id === 'vogdes_israel')).toBe(true);
+  });
+
+  it('holds the Department of Texas by Waite, whom the oob draft puts in command from 19 February; Twiggs keeps a record (round 3)', () => {
+    expect(start.posts.find((p) => p.id === 'us_dept_texas')!.holder).toBe('waite_carlos_a');
+    expect(world.people.some((p) => p.id === 'twiggs_david_e')).toBe(true);
+  });
+
+  it('audits every man with no post against the starting-side rule: eight no-faction states give no side (round 3)', () => {
+    const person = (id: string) => world.people.find((p) => p.id === id)!;
+    for (const id of ['blair_francis_p', 'clay_cassius_m', 'crittenden_john_j', 'holt_joseph', 'johnson_andrew', 'sherman_william_t']) expect(person(id).faction, id).toBeNull();
+    for (const id of ['grant_ulysses_s', 'farragut_david_g', 'thomas_george_h', 'nelson_william', 'seward_william_h']) expect(person(id).faction, id).toBe('union');
+    for (const id of ['burnside_ambrose_e', 'fremont_john_c', 'hooker_joseph', 'mcclellan_george_b']) expect(person(id).unknowns, id).toContain('faction');
+    // 133 men with no post were ruled by name (the importer's tables); each is a roster man, so the count of roster men with no post and a Union
+    // or Confederate side is exactly those the tables decided, with the unknowns and no-faction men set apart.
+    const holders = new Set(start.posts.map((p) => p.holder).filter((h) => h !== null));
+    const noPost = world.people.filter((p) => !holders.has(p.id));
+    const count = (f: (p: (typeof noPost)[number]) => boolean) => noPost.filter(f).length;
+    expect([count((p) => p.faction === 'union'), count((p) => p.faction === 'confederate')]).toEqual([87 + 1, 12]); // + Vogdes, kept by ruling
   });
 
   it('has supply sources for both sides, each in a region that side holds, and depots at the navy yards (0055)', () => {

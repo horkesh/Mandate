@@ -1,11 +1,19 @@
-// One-time import of the three Union 1861 drafts into world format v2 (lane 0.3).
+// ONE-TIME CONVERSION RECORD. DO NOT RE-RUN OVER THE PACK.
 //
-//   npx tsx packs/union-1861/source/import/import-drafts.mjs
+// This importer converted the three Union 1861 drafts into world format v2 (lane 0.3).
+// It is kept as the record of how that conversion was made, not as a build step.
+// From the merge on, the pack's source CSVs (packs/union-1861/source/world and
+// source/scenarios/march_1861), PROVENANCE.json, pack.json and strings/en.json are the
+// source of truth, edited by hand and checked by `npm run pack:validate`. Re-running
+// this file overwrites every hand edit made since. It refuses to run unless
+// UNION1861_REPRODUCE_IMPORT=1 is set, which is for reproducing the conversion in a
+// scratch copy only.
+//
+//   UNION1861_REPRODUCE_IMPORT=1 npx tsx packs/union-1861/source/import/import-drafts.mjs
 //
 // Reads packs/union-1861/source/drafts/{map,oob,people} and writes the v2 source
 // tables (source/world, source/scenarios/march_1861), PROVENANCE.json, pack.json
-// and strings/en.json. After this import those files are the data of record:
-// re-running overwrites hand edits, so run it only to reproduce the import.
+// and strings/en.json.
 //
 // No fact comes from outside the drafts and docs/research (decision 0033). Every
 // judgement the importer makes (a rule, a mapping, a design parameter) is in
@@ -13,6 +21,10 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+
+if (process.env.UNION1861_REPRODUCE_IMPORT !== '1') {
+  throw new Error('This importer is a one-time conversion record: the pack source CSVs are now the source of truth and re-running it overwrites hand edits. Set UNION1861_REPRODUCE_IMPORT=1 only to reproduce the conversion in a scratch copy.');
+}
 
 const here = dirname(fileURLToPath(import.meta.url));
 const repo = join(here, '..', '..', '..', '..');

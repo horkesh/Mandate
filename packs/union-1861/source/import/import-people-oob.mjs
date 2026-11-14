@@ -1,3 +1,6 @@
+// ONE-TIME CONVERSION RECORD. DO NOT RE-RUN OVER THE PACK (see the header of import-drafts.mjs:
+// the pack's source CSVs are the source of truth from the merge on, and this file's output would overwrite hand edits).
+//
 // Stage 2 of the Union 1861 import: departments, posts, tenures, people, force
 // blocks, control, standing agreements, the scenario header and the pack's
 // manifest, sources and strings. Stage 1 (import-drafts.mjs) did the map.
@@ -80,6 +83,8 @@ for (const r of tenureRows) {
 }
 const HOLDER_RULING = {
   us_fort_pickens: { person: 'slemmer_adam_j', why: "Slemmer commanded the garrison from 10 January; Vogdes was senior on the station from 6 February but stayed afloat in Brooklyn (the draft's own rows); Vogdes's company is aboard Brooklyn" },
+  // Lead ruling (round 3): the oob draft's own rows order the two tenures, though neither carries a date cell: Twiggs "relinquished command 19 Feb 1861 ... not a holder in the window" and Waite "assumed command 19 Feb 1861 (General Orders No. 7, Department of Texas)" (OR I-1 pp.502-503, 521, 591).
+  us_dept_texas: { person: 'waite_carlos_a', why: "the oob draft's own rows: Twiggs relinquished command on 19 February 1861 (before the window; OR I-1 p.591) and Waite assumed it that day under General Orders No. 7, so Waite held the department on 5 March" },
 };
 /** Men who hold no post at the start but whose record is kept (they command forces afloat or are named by a ruling). */
 const ALSO_RECORD = ['vogdes_israel'];
@@ -239,6 +244,102 @@ const START_SIDE = {
   wigfall_louis_t: ['confederate', 'a Texas man; US Senator for Texas until 28 March 1861, delegate to the Provisional Congress from 16 March'],
   yancey_william_l: ['confederate', 'an Alabama lawyer and editor who reported the Alabama ordinance of secession'],
 };
+// The Union-coded men with no post on 5 March, audited the same way (lead ruling, round 3): a man from one of the eight no-faction states has
+// no side unless his 5 March post gives him one. Home state or employer is read from the draft's own `prewar` and `posts_1861_62` cells; a US
+// commission on 5 March is the Union; where the draft names no residence at all the side is `unknown`, not guessed.
+// [inferred] marks a home state taken from a state office he held later because the draft's prewar cell is needs-source.
+const START_SIDE_UNION_CODED = {
+  adams_charles_f: ['union', 'a Boston lawyer; US Representative for Massachusetts from 4 March 1861'],
+  banks_nathaniel_p: ['union', 'Governor of Massachusetts to January 1861, then vice-president of the Illinois Central Railroad (Chicago)'],
+  bennett_james_g: ['union', 'proprietor and editor of the New York Herald'],
+  blair_francis_p: ['none', 'a St Louis lawyer, US Representative for Missouri from 4 March 1861; Missouri is a no-faction state'],
+  buell_don_c: ['union', 'US Army assistant adjutant general on special service in the War Department until 20 March 1861'],
+  burnside_ambrose_e: ['unknown', 'a civilian since 1853; the draft names no residence for 5 March (his first post is the 1st Rhode Island, from 2 May)'],
+  butler_benjamin_f: ['union', 'a Lowell (Massachusetts) lawyer and Democratic politician'],
+  chandler_zachariah: ['union', 'US Senator for Michigan'],
+  clay_cassius_m: ['none', 'a Kentucky man (legislator, editor of the True American); Minister to Russia only from 28 March; Kentucky is a no-faction state'],
+  covode_john: ['union', 'US Representative for Pennsylvania'],
+  crittenden_john_j: ['none', 'a Kentucky lawyer and Senator; US Representative for Kentucky from 4 March 1861'],
+  curtis_samuel_r: ['union', 'US Representative for Iowa'],
+  dahlgren_john_a_b: ['union', 'US Navy commander on ordnance duty at the Washington Navy Yard'],
+  dana_charles_a: ['union', 'managing editor of the New York Tribune'],
+  davis_charles_h: ['union', 'US Navy commander, Superintendent of the Nautical Almanac Office (inferred in the draft)'],
+  dayton_william_l: ['union', 'Attorney General of New Jersey from 4 March 1861'],
+  dix_john_a: ['union', 'a New York man (assistant treasurer and postmaster of New York); his Treasury office ended on 4 March 1861'],
+  eckert_thomas_t: ['union', 'an Ohio man [inferred: the draft prewar cell reads "Ohio; prewar career not found"]'],
+  farragut_david_g: ['union', 'US Navy captain awaiting orders at Norfolk; he kept his commission and left Norfolk on 18 April (the draft)'],
+  fessenden_william_p: ['union', 'US Senator for Maine'],
+  foote_andrew_h: ['union', 'US Navy commander stationed at the New York Navy Yard'],
+  fox_gustavus_v: ['union', 'a woollen-mill agent at Lawrence, Massachusetts (the draft)'],
+  franklin_william_b: ['union', 'captain, Topographical Engineers, US Army'],
+  fremont_john_c: ['unknown', 'a private citizen in March 1861; the draft names no residence'],
+  gamble_hamilton_r: ['none', 'a Missouri man [inferred: chosen Provisional Governor of Missouri by the State convention on 31 July; the draft prewar cell is needs-source]'],
+  gooch_daniel_w: ['union', 'US Representative for Massachusetts'],
+  grant_ulysses_s: ['union', 'a leather merchant at Galena, Illinois'],
+  greeley_horace: ['union', 'editor of the New York Tribune'],
+  halleck_henry_w: ['union', 'a San Francisco lawyer and mine director (California)'],
+  hamlin_hannibal: ['union', 'a Maine man; Vice-President of the United States from 4 March 1861'],
+  hay_john_m: ['union', 'assistant private secretary to the President, from March 1861; Illinois bar'],
+  heintzelman_samuel_p: ['union', 'major, 1st Infantry, US Army, until 14 May 1861'],
+  hitchcock_ethan_a: ['unknown', 'retired and a civilian since 1855; the draft names no residence'],
+  holt_joseph: ['none', 'a Kentucky lawyer; his Secretary of War tenure ended on 5 March 1861, leaving no post; Kentucky is a no-faction state'],
+  hooker_joseph: ['unknown', 'a civilian since 1853; the draft names no residence'],
+  hunter_david: ['union', 'US Army paymaster (major) until 14 May 1861'],
+  hurlbut_stephen_a: ['union', 'a lawyer and state representative at Belvidere, Illinois (born Charleston; the draft)'],
+  johnson_andrew: ['none', 'US Senator for Tennessee; Tennessee is a no-faction state'],
+  julian_george_w: ['union', 'US Representative for Indiana'],
+  keyes_erasmus_d: ['union', 'lieutenant colonel and military secretary to Scott, US Army'],
+  lane_james_h: ['union', 'Senator for Kansas from 4 April 1861 (Kansas a state from 29 January 1861 in the map draft); no sourced residence is named for 5 March [inferred from the Senate seat]'],
+  lyon_nathaniel: ['union', 'captain, 2nd Infantry, US Army (his St Louis command begins on 13 March)'],
+  marble_manton_m: ['union', 'editor of the New York World'],
+  mcclellan_george_b: ['unknown', 'a civilian, president of the St. Louis and Cincinnati Railroad; the draft names no residence (his earlier railroad was the Illinois Central)'],
+  mcclernand_john_a: ['union', 'US Representative for Illinois'],
+  mcdowell_irvin: ['union', 'assistant adjutant general, Adjutant General\'s Department, US Army'],
+  meade_george_g: ['union', 'captain, Topographical Engineers, US Army'],
+  meigs_montgomery_c: ['union', 'captain, US Army (engineer)'],
+  mitchel_ormsby_m: ['union', 'director of the Dudley Observatory at Albany, New York'],
+  nelson_william: ['union', 'lieutenant, US Navy (Kentucky-born; the commission gives the side)'],
+  nicolay_john_g: ['union', 'private secretary to the President from 4 March 1861; an Illinois newspaper proprietor'],
+  odell_moses_f: ['union', 'US Representative for New York'],
+  patterson_robert: ['union', 'a Philadelphia merchant, major general of Pennsylvania militia'],
+  pendleton_george_h: ['union', 'US Representative for Ohio'],
+  pierpont_francis_h: ['none', 'a Virginia man [inferred: Governor of the Restored Government of Virginia from June 1861; the draft prewar cell is needs-source]; Virginia is a no-faction state'],
+  pope_john: ['union', 'captain, Topographical Engineers, US Army'],
+  porter_david_d: ['union', 'US Navy lieutenant awaiting orders at Washington'],
+  porter_fitz_john: ['union', 'captain and assistant adjutant general, US Army'],
+  raymond_henry_j: ['union', 'editor of the New York Times'],
+  reynolds_john_f: ['union', 'captain, 3rd Artillery, US Army'],
+  ripley_james_w: ['union', 'lieutenant colonel, Ordnance, US Army (colonel from 3 April)'],
+  rodgers_john: ['union', 'US Navy commander on special duty at Washington'],
+  rosecrans_william_s: ['union', 'a kerosene-oil manufacturer at Cincinnati, Ohio'],
+  schofield_john_m: ['union', 'first lieutenant, 1st Artillery, US Army, on leave as a professor in St Louis'],
+  schurz_carl: ['union', 'a Wisconsin lawyer and Republican orator (the draft)'],
+  scott_thomas_a: ['union', 'vice-president of the Pennsylvania Railroad'],
+  seymour_horatio: ['union', 'a New York man (Utica; former Governor)'],
+  sherman_william_t: ['none', 'president of the Fifth Street Railroad at St Louis from January 1861, after leaving Louisiana; Missouri is a no-faction state'],
+  sickles_daniel_e: ['union', 'US Representative for New York until 3 March 1861'],
+  sigel_franz: ['unknown', 'a civilian in St Louis at a date the draft leaves unknown (occupation needs-source)'],
+  smith_charles_f: ['union', 'lieutenant colonel, US Army; command of the Department of Utah ended on 28 February 1861'],
+  stanton_edwin_m: ['union', 'Buchanan\'s Attorney General until 4 March 1861; a Washington practice; an Ohio lawyer'],
+  stevens_thaddeus: ['union', 'US Representative for Pennsylvania'],
+  stringham_silas_h: ['union', 'US Navy captain, Chief of the Bureau of Detail'],
+  sumner_charles: ['union', 'US Senator for Massachusetts'],
+  sumner_edwin_v: ['union', 'colonel, 1st Cavalry, US Army, until 16 March 1861'],
+  thomas_george_h: ['union', 'major, 2nd Cavalry, US Army, on leave (a Virginian by birth; the commission gives the side)'],
+  thomas_lorenzo: ['union', 'lieutenant colonel in the Adjutant General\'s Office, US Army; Adjutant General from 7 March 1861'],
+  tod_david: ['union', 'an Ohio man [inferred: Governor of Ohio from January 1862; the draft prewar cell is needs-source]'],
+  trumbull_lyman: ['union', 'US Senator for Illinois'],
+  vallandigham_clement_l: ['union', 'US Representative for Ohio'],
+  wade_benjamin_f: ['union', 'US Senator for Ohio'],
+  wadsworth_james_s: ['union', 'a Geneseo (New York) landowner; delegate to the Peace Conference'],
+  wallace_lewis: ['union', 'an Indiana lawyer [inferred: colonel of the 11th Indiana Infantry from 25 April; the draft prewar cell gives no residence]'],
+  washburne_elihu_b: ['union', 'US Representative for Illinois'],
+  weed_thurlow: ['union', 'editor of the Albany Evening Journal'],
+  wilkes_charles: ['union', 'US Navy captain on special duty at Washington'],
+  wilson_henry: ['union', 'US Senator for Massachusetts'],
+  wood_benjamin: ['union', 'US Representative for New York; owner of the New York Daily News'],
+};
+Object.assign(START_SIDE, START_SIDE_UNION_CODED);
 const people = [];
 const factionNotes = [];
 const sideCount = {};
@@ -253,7 +354,7 @@ for (const r of rosterRows) {
     faction = side === 'none' ? '' : side;
     sideNote = `[start side ${side === 'none' ? 'none (no-faction home state)' : side}: ${why}; his eventual side in the draft is ${draftSide || 'none'}]`;
     sideCount[side] = (sideCount[side] ?? 0) + 1;
-  } else if (sf === undefined && draftSide === 'confederate') say(`CONFEDERATE-CODED MAN WITH NO START SIDE RULING: ${id}`);
+  } else if (sf === undefined && (draftSide === 'confederate' || draftSide === 'union')) say(`MAN WITH NO POST AND NO START SIDE RULING: ${id} (${draftSide})`);
   if (sf !== undefined && sf !== draftSide) factionNotes.push(`${id}: ${sf || 'no faction'} at the start (post), ${draftSide || 'none'} in the draft`);
   const born = r.get('born'), died = r.get('died');
   const notes = [sideNote, r.get('notes'), r.get('posts_1861_62') && `[posts 1861-62: ${r.get('posts_1861_62')}]`, r.get('west_point_class') && `[West Point class ${r.get('west_point_class')}]`, r.get('prewar') && `[prewar: ${r.get('prewar')}]`].filter(Boolean).join(' ');
