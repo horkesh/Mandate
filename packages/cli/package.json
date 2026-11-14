@@ -1,0 +1,10 @@
+{
+  "name": "@mandate/cli",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Headless runners for Mandate packs. Reads pack files; the kernel itself does no I/O.",
+  "dependencies": {
+    "@mandate/kernel": "*"
+  }
+}

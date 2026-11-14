@@ -2,7 +2,7 @@
 
 Mandate is a setting-agnostic engine for strategy games in which the player is the political leader of a faction at war and commands only through human proxies who can and do push back. Reference wars: Rome, the US Civil War, Russia–Ukraine. First slice: the Union, 1861–62.
 
-**Phase: foundations.** Kernel primitives and the first people-sim mechanism exist. There is no UI yet. See [docs/ROADMAP.md](docs/ROADMAP.md).
+**Phase: M1 done (headless people kernel).** The kernel runs whole games headless: directives with latency, compliance and lies, a coarse theatre, the insubordination ladder, rivals, promises, mandate tests, and a bot principal. Next is M2, the Union 1861–62 pack in a text console. There is no UI yet. See [docs/ROADMAP.md](docs/ROADMAP.md) and [docs/design/KERNEL.md](docs/design/KERNEL.md).
 
 ## Hard rules
 
@@ -23,7 +23,8 @@ Mandate is a setting-agnostic engine for strategy games in which the player is t
 
 ## Where things live
 
-- `packages/kernel/`: the pure deterministic sim core
+- `packages/kernel/`: the pure deterministic sim core (module map in `docs/design/KERNEL.md`)
+- `packages/cli/`: headless runners that read packs from disk
 - `packs/`: setting data (one folder per pack)
 - `docs/decisions/`, `docs/design/`, `docs/research/` (dated, sourced), `docs/LESSONS.md`, `docs/OPEN_QUESTIONS.md`
 - `tools/`: validators
@@ -36,6 +37,7 @@ npm test                 # vitest
 npm run typecheck
 npm run check:boundary
 npm run demo             # headless demo: three proxies receive the same directive
+npm run run:testbed      # M1: a scripted 20-turn headless game on the fictional testbed pack
 ```
 
 Hooks: `git config core.hooksPath .githooks`.

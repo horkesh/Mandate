@@ -1,0 +1,57 @@
+{
+  "id": "testbed-two-rivers",
+  "seed": 1861,
+  "minTurnDays": 7,
+  "maxTurnDays": 21,
+  "endDay": 240,
+  "objectiveValues": {
+    "attack": { "honours": ["duty", "glory"], "offends": ["caution"] },
+    "hold": { "honours": ["caution", "order"], "offends": ["glory"] },
+    "transfer": { "honours": ["order"], "offends": ["reputation"] }
+  },
+  "factions": [
+    { "id": "north", "principalId": "n_leader", "capitalRegionId": "n_capital", "isPlayer": true, "attentionPerTurn": 3, "baseOversight": 700, "oversightLossPerLinkDay": 60 },
+    { "id": "south", "principalId": "s_leader", "capitalRegionId": "s_capital", "isPlayer": false, "attentionPerTurn": 3, "baseOversight": 700, "oversightLossPerLinkDay": 60 }
+  ],
+  "persons": [
+    { "id": "n_leader", "factionId": "north", "values": ["duty", "order"], "boldness": 600, "candour": 700, "competence": 600, "standing": 600, "regard": 1000 },
+    { "id": "n_organiser", "factionId": "north", "values": ["caution", "reputation"], "boldness": 200, "candour": 650, "competence": 700, "standing": 700, "regard": -200 },
+    { "id": "n_appointee", "factionId": "north", "values": ["career", "party"], "boldness": 450, "candour": 200, "competence": 350, "standing": 450, "regard": 0 },
+    { "id": "n_fighter", "factionId": "north", "values": ["duty", "glory"], "boldness": 800, "candour": 800, "competence": 650, "standing": 150, "regard": 500 },
+    { "id": "n_secretary", "factionId": "north", "values": ["duty", "order"], "boldness": 400, "candour": 800, "competence": 600, "standing": 300, "regard": 300 },
+    { "id": "n_engineer", "factionId": "north", "values": ["caution", "order"], "boldness": 300, "candour": 700, "competence": 550, "standing": 350, "regard": 100 },
+
+    { "id": "s_leader", "factionId": "south", "values": ["order", "reputation"], "boldness": 650, "candour": 500, "competence": 600, "standing": 650, "regard": 1000 },
+    { "id": "s_cavalier", "factionId": "south", "values": ["glory", "reputation"], "boldness": 850, "candour": 400, "competence": 700, "standing": 650, "regard": 200 },
+    { "id": "s_veteran", "factionId": "south", "values": ["caution", "duty"], "boldness": 400, "candour": 700, "competence": 600, "standing": 400, "regard": 300 },
+    { "id": "s_minister", "factionId": "south", "values": ["order", "party"], "boldness": 300, "candour": 600, "competence": 500, "standing": 450, "regard": 400 },
+    { "id": "s_reserve", "factionId": "south", "values": ["duty", "glory"], "boldness": 600, "candour": 650, "competence": 500, "standing": 200, "regard": 300 }
+  ],
+  "posts": [
+    { "id": "n_army_east", "factionId": "north", "kind": "field", "regionId": "n_east", "holderId": "n_organiser", "force": 900, "linkDays": 1 },
+    { "id": "n_army_west", "factionId": "north", "kind": "field", "regionId": "n_west", "holderId": "n_appointee", "force": 500, "linkDays": 6 },
+    { "id": "n_war_office", "factionId": "north", "kind": "office", "regionId": "n_capital", "holderId": "n_secretary", "force": 300, "linkDays": 0 },
+
+    { "id": "s_army_east", "factionId": "south", "kind": "field", "regionId": "s_east", "holderId": "s_cavalier", "force": 700, "linkDays": 1 },
+    { "id": "s_army_west", "factionId": "south", "kind": "field", "regionId": "s_west", "holderId": "s_veteran", "force": 400, "linkDays": 2 },
+    { "id": "s_guard", "factionId": "south", "kind": "office", "regionId": "s_capital", "holderId": "s_minister", "force": 300, "linkDays": 0 }
+  ],
+  "regions": [
+    { "id": "n_capital", "controllerId": "north", "neighbours": ["n_east", "n_west"], "garrison": 200 },
+    { "id": "n_east", "controllerId": "north", "neighbours": ["n_capital", "s_east"], "garrison": 100 },
+    { "id": "n_west", "controllerId": "north", "neighbours": ["n_capital", "s_west"], "garrison": 100 },
+    { "id": "s_east", "controllerId": "south", "neighbours": ["n_east", "s_capital"], "garrison": 100 },
+    { "id": "s_west", "controllerId": "south", "neighbours": ["n_west", "s_capital"], "garrison": 100 },
+    { "id": "s_capital", "controllerId": "south", "neighbours": ["s_east", "s_west"], "garrison": 200 }
+  ],
+  "blocs": [
+    { "id": "n_hawks", "factionId": "north", "weight": 400, "values": ["duty", "glory"], "support": 250 },
+    { "id": "n_moderates", "factionId": "north", "weight": 350, "values": ["caution", "order"], "support": 300 },
+    { "id": "n_machine", "factionId": "north", "weight": 250, "values": ["career", "party"], "support": 350 },
+    { "id": "s_planters", "factionId": "south", "weight": 500, "values": ["order", "reputation"], "support": 400 },
+    { "id": "s_firebrands", "factionId": "south", "weight": 500, "values": ["duty", "glory"], "support": 400 }
+  ],
+  "checkpoints": [
+    { "day": 120, "factionId": "north", "kind": "mandate_test", "threshold": 150, "label": "midterm vote" }
+  ]
+}

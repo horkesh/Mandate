@@ -28,6 +28,8 @@ export interface CommandContext {
   readonly oversight: Permille;
   /** 0..1000: how credible the leader's sanctions are, derived from their record (P7). */
   readonly leaderCredibility: Permille;
+  /** Signed willingness adjustment from the proxy's insubordination-ladder rung (P5). Default 0. */
+  readonly disposition?: number;
 }
 
 /**
@@ -63,7 +65,7 @@ export type ReasonKind = Reason['kind'];
 
 /** One term of the willingness sum, kept so every number is explainable (CLAUDE.md rule 6). */
 export interface Contribution {
-  readonly term: 'values' | 'temperament' | 'regard' | 'deterrence' | 'capacity';
+  readonly term: 'values' | 'temperament' | 'regard' | 'deterrence' | 'capacity' | 'disposition';
   readonly amount: number;
 }
 
@@ -81,6 +83,9 @@ export interface DirectiveResponse {
   /** Signed sum of contributions. Positive means willing. */
   readonly willingness: number;
   readonly contributions: readonly Contribution[];
+  /** The true reasons. Ground truth: never shown to a principal. */
   readonly reasons: readonly Reason[];
+  /** The reasons the proxy chooses to give. Candid proxies give all of them. */
+  readonly statedReasons: readonly Reason[];
   readonly counterProposal: CounterProposal | null;
 }

@@ -154,14 +154,17 @@ export function resolveDirective(
   const capacity = -scale(shortfall, rules.shortfallWeight);
   if (shortfall > 0) reasons.push({ kind: 'lacks_resources', shortfall });
 
+  const disposition = context.disposition ?? 0;
+
   const contributions: Contribution[] = [
     { term: 'values', amount: values },
     { term: 'temperament', amount: temperament },
     { term: 'regard', amount: regard },
     { term: 'deterrence', amount: deterrence },
     { term: 'capacity', amount: capacity },
+    { term: 'disposition', amount: disposition },
   ];
-  const willingness = values + temperament + regard + deterrence + capacity;
+  const willingness = values + temperament + regard + deterrence + capacity + disposition;
 
   const honoursAHeldValue = reasons.some((r) => r.kind === 'values_honoured');
   const isProtected =
@@ -186,7 +189,28 @@ export function resolveDirective(
       ? { boldness: proxy.boldness, required: Math.min(terms.required, context.available) }
       : null;
 
-  return { actual, declared, willingness, contributions, reasons, counterProposal };
+  const statedReasons = isCandid ? reasons : statedByUncandid(reasons, declared);
+
+  return { actual, declared, willingness, contributions, reasons, statedReasons, counterProposal };
+}
+
+/** Reasons nobody volunteers to their superior unless they are candid. */
+const PRIVATE_REASONS: ReadonlySet<Reason['kind']> = new Set([
+  'distrusts_leader',
+  'fears_sanction',
+  'shielded_by_standing',
+]);
+const FLATTERING_REASONS: ReadonlySet<Reason['kind']> = new Set(['values_honoured', 'trusts_leader']);
+
+/**
+ * An uncandid proxy who declares compliance gives only flattering reasons.
+ * Otherwise he keeps his private motives to himself.
+ */
+function statedByUncandid(reasons: readonly Reason[], declared: ComplianceRung): Reason[] {
+  if (declared === 'comply' || declared === 'exceed') {
+    return reasons.filter((r) => FLATTERING_REASONS.has(r.kind));
+  }
+  return reasons.filter((r) => !PRIVATE_REASONS.has(r.kind));
 }
 
 function validate(proxy: ProxyProfile, terms: DirectiveTerms, context: CommandContext): void {
@@ -199,4 +223,7 @@ function validate(proxy: ProxyProfile, terms: DirectiveTerms, context: CommandCo
   assertPermille(context.available, 'context.available');
   assertPermille(context.oversight, 'context.oversight');
   assertPermille(context.leaderCredibility, 'context.leaderCredibility');
+  if (context.disposition !== undefined && !Number.isSafeInteger(context.disposition)) {
+    throw new RangeError(`context.disposition must be an integer, got ${context.disposition}`);
+  }
 }
