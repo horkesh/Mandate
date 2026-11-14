@@ -240,6 +240,22 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
   it('E7: atrocity-class conduct never helps the side that acted, and names that side', () => {
     fires(editJson(sit('harbour_burning'), (s) => (s.effects[0].propose.delta = 10)), 'gate-sign-rule');
     fires(editJson(sit('harbour_burning'), (s) => (s.gate.actingSide = null)), 'gate-acting-side');
+    // Review S5: an effect with no side cannot slip past the sign rule.
+    firesAt(editJson(sit('harbour_burning'), (s) => ((s.effects[0].propose.side = null), (s.effects[0].propose.delta = 10))), 'gate-acting-side', { at: 'effects[0].propose.side' });
+  });
+
+  it('D5 (review S5): no effect conditioned on atrocity-class conduct helps the side that acted', () => {
+    const benefit = editJson(sit('sanctuary_act'), (s) => {
+      s.event = { all: [{ fired: 'harbour_burning' }, { decided: 'fen_crossing' }] };
+      s.effects.push({ propose: { owner: 'politics', field: 'national-will', subject: 'south', delta: 15, reason: 'a-harbour-burned', side: 'south' } });
+    });
+    firesAt(benefit, 'gate-atrocity-benefit', { file: sit('sanctuary_act'), at: 'effects[1]' });
+    // A cost to the acting side, conditioned the same way, is allowed.
+    const cost = editJson(sit('sanctuary_act'), (s) => {
+      s.event = { all: [{ fired: 'harbour_burning' }, { decided: 'fen_crossing' }] };
+      s.effects.push({ propose: { owner: 'politics', field: 'national-will', subject: 'south', delta: -15, reason: 'a-harbour-burned', side: 'south' } });
+    });
+    expect(issues(cost).filter((i) => i.kind === 'gate-atrocity-benefit')).toEqual([]);
   });
 
   it('C3/F6, C4/F5, F2: anachronisms, forbidden wording by scope, and the proximity rule', () => {

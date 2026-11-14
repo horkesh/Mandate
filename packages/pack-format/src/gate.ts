@@ -196,6 +196,14 @@ export function checkGate(items: readonly { readonly file: string; readonly def:
     if (t.interim !== null && !held(t)) sink.warn('gate-register', gateFile('register.json'), `topics[${i}].interim`, 'an interim placement on a topic that is not held does nothing');
   });
 
+  // D5's inputs: every atrocity-class item, its acting side and the flags it sets.
+  const atrocityItems = items.flatMap(({ def }) => {
+    const t = def.gate;
+    if ('none' in t || !t.topics.some(atrocity) || t.actingSide === null) return [];
+    const flags = phase0.effectsOf(def).flatMap(({ effect }) => ('setFlag' in effect ? [effect.setFlag] : []));
+    return [{ id: def.id as string, actingSide: t.actingSide as string, flags }];
+  });
+
   // C2's pack-wide count: the display position of the default in gated decisions of three or more options.
   const positions: number[] = [];
 
@@ -350,12 +358,24 @@ export function checkGate(items: readonly { readonly file: string; readonly def:
       }
     }
 
-    // E7: the sign rule.
+    // E7: the sign rule. Every effect of an atrocity-class item names its side, so `side: null` cannot escape (review S5).
     if (!('none' in tag) && named.some(atrocity)) {
       if (tag.actingSide === null) err('gate-acting-side', 'gate.actingSide', 'an atrocity-class item does not name the acting side', 'the side whose conduct it is (E7)');
-      else {
-        for (const { at, effect } of effects) {
-          if ('propose' in effect && effect.propose.side === tag.actingSide && effect.propose.delta > 0) err('gate-sign-rule', at, 'atrocity-class conduct helps the side that acted', 'a non-positive sign on the acting side’s measures, whoever appointed the actor (E7)');
+      for (const { at, effect } of effects) {
+        if (!('propose' in effect)) continue;
+        if (effect.propose.side === null) err('gate-acting-side', `${at}.propose.side`, 'an effect of an atrocity-class item names no side', 'the side whose measure it moves (E7)');
+        else if (effect.propose.side === tag.actingSide && effect.propose.delta > 0) err('gate-sign-rule', at, 'atrocity-class conduct helps the side that acted', 'a non-positive sign on the acting side’s measures, whoever appointed the actor (E7)');
+      }
+    }
+
+    // D5 (review S5): no effect conditioned on an atrocity-class item (its firing, its decision, a flag it sets) helps its acting side.
+    const referenced = new Set<string>([...phase0.conditionsOf(def).flatMap((c) => phase0.situationsIn(c.condition)), ...(def.chain?.follows ? [def.chain.follows.situation] : [])]);
+    const readFlags = new Set(phase0.conditionsOf(def).flatMap((c) => phase0.flagsIn(c.condition)));
+    for (const a of atrocityItems) {
+      if (a.id === def.id || !(referenced.has(a.id) || a.flags.some((f) => readFlags.has(f)))) continue;
+      for (const { at, effect } of effects) {
+        if ('propose' in effect && effect.propose.side === a.actingSide && effect.propose.delta > 0) {
+          err('gate-atrocity-benefit', at, `this effect, conditioned on atrocity-class item "${a.id}", helps the side that acted`, 'no positive effect for any seat conditioned on atrocity-class conduct (D5)');
         }
       }
     }
