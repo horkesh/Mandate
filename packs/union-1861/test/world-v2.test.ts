@@ -135,12 +135,14 @@ describe('Union 1861 world v2', () => {
     for (const id of ['blair_francis_p', 'clay_cassius_m', 'crittenden_john_j', 'holt_joseph', 'johnson_andrew', 'sherman_william_t']) expect(person(id).faction, id).toBeNull();
     for (const id of ['grant_ulysses_s', 'farragut_david_g', 'thomas_george_h', 'nelson_william', 'seward_william_h']) expect(person(id).faction, id).toBe('union');
     for (const id of ['burnside_ambrose_e', 'fremont_john_c', 'hooker_joseph', 'mcclellan_george_b']) expect(person(id).unknowns, id).toContain('faction');
+    // A home state read off a later office is hindsight: those men are unknown too (lead ruling, round 4).
+    for (const id of ['gamble_hamilton_r', 'pierpont_francis_h', 'tod_david', 'eckert_thomas_t', 'wallace_lewis', 'lane_james_h']) expect(person(id).unknowns, id).toContain('faction');
     // 133 men with no post were ruled by name (the importer's tables); each is a roster man, so the count of roster men with no post and a Union
     // or Confederate side is exactly those the tables decided, with the unknowns and no-faction men set apart.
     const holders = new Set(start.posts.map((p) => p.holder).filter((h) => h !== null));
     const noPost = world.people.filter((p) => !holders.has(p.id));
     const count = (f: (p: (typeof noPost)[number]) => boolean) => noPost.filter(f).length;
-    expect([count((p) => p.faction === 'union'), count((p) => p.faction === 'confederate')]).toEqual([87 + 1, 12]); // + Vogdes, kept by ruling
+    expect([count((p) => p.faction === 'union'), count((p) => p.faction === 'confederate')]).toEqual([83 + 1, 12]); // + Vogdes, kept by ruling
   });
 
   it('has supply sources for both sides, each in a region that side holds, and depots at the navy yards (0055)', () => {

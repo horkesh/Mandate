@@ -247,7 +247,8 @@ const START_SIDE = {
 // The Union-coded men with no post on 5 March, audited the same way (lead ruling, round 3): a man from one of the eight no-faction states has
 // no side unless his 5 March post gives him one. Home state or employer is read from the draft's own `prewar` and `posts_1861_62` cells; a US
 // commission on 5 March is the Union; where the draft names no residence at all the side is `unknown`, not guessed.
-// [inferred] marks a home state taken from a state office he held later because the draft's prewar cell is needs-source.
+// A home state read off an office he held later is hindsight, not a source: such men are `unknown` with the later office kept in the note
+// (lead ruling, round 4: Gamble, Pierpont, Tod, Eckert, Wallace, Lane).
 const START_SIDE_UNION_CODED = {
   adams_charles_f: ['union', 'a Boston lawyer; US Representative for Massachusetts from 4 March 1861'],
   banks_nathaniel_p: ['union', 'Governor of Massachusetts to January 1861, then vice-president of the Illinois Central Railroad (Chicago)'],
@@ -266,14 +267,14 @@ const START_SIDE_UNION_CODED = {
   davis_charles_h: ['union', 'US Navy commander, Superintendent of the Nautical Almanac Office (inferred in the draft)'],
   dayton_william_l: ['union', 'Attorney General of New Jersey from 4 March 1861'],
   dix_john_a: ['union', 'a New York man (assistant treasurer and postmaster of New York); his Treasury office ended on 4 March 1861'],
-  eckert_thomas_t: ['union', 'an Ohio man [inferred: the draft prewar cell reads "Ohio; prewar career not found"]'],
+  eckert_thomas_t: ['unknown', 'the draft prewar cell reads only "Ohio; prewar career not found" and names no residence on 5 March; a hindsight reading would say Ohio (lead ruling, round 4: unknown until sourced)'],
   farragut_david_g: ['union', 'US Navy captain awaiting orders at Norfolk; he kept his commission and left Norfolk on 18 April (the draft)'],
   fessenden_william_p: ['union', 'US Senator for Maine'],
   foote_andrew_h: ['union', 'US Navy commander stationed at the New York Navy Yard'],
   fox_gustavus_v: ['union', 'a woollen-mill agent at Lawrence, Massachusetts (the draft)'],
   franklin_william_b: ['union', 'captain, Topographical Engineers, US Army'],
   fremont_john_c: ['unknown', 'a private citizen in March 1861; the draft names no residence'],
-  gamble_hamilton_r: ['none', 'a Missouri man [inferred: chosen Provisional Governor of Missouri by the State convention on 31 July; the draft prewar cell is needs-source]'],
+  gamble_hamilton_r: ['unknown', 'the draft prewar cell is needs-source; his later office (Provisional Governor of Missouri, chosen by the State convention on 31 July) would suggest Missouri, which is hindsight (lead ruling, round 4: unknown until sourced)'],
   gooch_daniel_w: ['union', 'US Representative for Massachusetts'],
   grant_ulysses_s: ['union', 'a leather merchant at Galena, Illinois'],
   greeley_horace: ['union', 'editor of the New York Tribune'],
@@ -289,7 +290,7 @@ const START_SIDE_UNION_CODED = {
   johnson_andrew: ['none', 'US Senator for Tennessee; Tennessee is a no-faction state'],
   julian_george_w: ['union', 'US Representative for Indiana'],
   keyes_erasmus_d: ['union', 'lieutenant colonel and military secretary to Scott, US Army'],
-  lane_james_h: ['union', 'Senator for Kansas from 4 April 1861 (Kansas a state from 29 January 1861 in the map draft); no sourced residence is named for 5 March [inferred from the Senate seat]'],
+  lane_james_h: ['unknown', 'the draft names no residence for 5 March; his later office (Senator for Kansas from 4 April 1861; Kansas a state from 29 January in the map draft) would suggest Kansas, which is hindsight (lead ruling, round 4: unknown until sourced)'],
   lyon_nathaniel: ['union', 'captain, 2nd Infantry, US Army (his St Louis command begins on 13 March)'],
   marble_manton_m: ['union', 'editor of the New York World'],
   mcclellan_george_b: ['unknown', 'a civilian, president of the St. Louis and Cincinnati Railroad; the draft names no residence (his earlier railroad was the Illinois Central)'],
@@ -303,7 +304,7 @@ const START_SIDE_UNION_CODED = {
   odell_moses_f: ['union', 'US Representative for New York'],
   patterson_robert: ['union', 'a Philadelphia merchant, major general of Pennsylvania militia'],
   pendleton_george_h: ['union', 'US Representative for Ohio'],
-  pierpont_francis_h: ['none', 'a Virginia man [inferred: Governor of the Restored Government of Virginia from June 1861; the draft prewar cell is needs-source]; Virginia is a no-faction state'],
+  pierpont_francis_h: ['unknown', 'the draft prewar cell is needs-source; his later office (Governor of the Restored Government of Virginia from June 1861) would suggest Virginia, which is hindsight (lead ruling, round 4: unknown until sourced)'],
   pope_john: ['union', 'captain, Topographical Engineers, US Army'],
   porter_david_d: ['union', 'US Navy lieutenant awaiting orders at Washington'],
   porter_fitz_john: ['union', 'captain and assistant adjutant general, US Army'],
@@ -327,12 +328,12 @@ const START_SIDE_UNION_CODED = {
   sumner_edwin_v: ['union', 'colonel, 1st Cavalry, US Army, until 16 March 1861'],
   thomas_george_h: ['union', 'major, 2nd Cavalry, US Army, on leave (a Virginian by birth; the commission gives the side)'],
   thomas_lorenzo: ['union', 'lieutenant colonel in the Adjutant General\'s Office, US Army; Adjutant General from 7 March 1861'],
-  tod_david: ['union', 'an Ohio man [inferred: Governor of Ohio from January 1862; the draft prewar cell is needs-source]'],
+  tod_david: ['unknown', 'the draft prewar cell is needs-source; his later office (Governor of Ohio from January 1862) would suggest Ohio, which is hindsight (lead ruling, round 4: unknown until sourced)'],
   trumbull_lyman: ['union', 'US Senator for Illinois'],
   vallandigham_clement_l: ['union', 'US Representative for Ohio'],
   wade_benjamin_f: ['union', 'US Senator for Ohio'],
   wadsworth_james_s: ['union', 'a Geneseo (New York) landowner; delegate to the Peace Conference'],
-  wallace_lewis: ['union', 'an Indiana lawyer [inferred: colonel of the 11th Indiana Infantry from 25 April; the draft prewar cell gives no residence]'],
+  wallace_lewis: ['unknown', 'the draft prewar cell gives no residence; his later command (colonel of the 11th Indiana Infantry from 25 April) would suggest Indiana, which is hindsight (lead ruling, round 4: unknown until sourced)'],
   washburne_elihu_b: ['union', 'US Representative for Illinois'],
   weed_thurlow: ['union', 'editor of the Albany Evening Journal'],
   wilkes_charles: ['union', 'US Navy captain on special duty at Washington'],
