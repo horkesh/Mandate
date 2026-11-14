@@ -102,5 +102,5 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - The store-page AI disclosure wording is drafted in the repo before submission, alongside 0038's question to Valve.
 - Re-check OpenAI's terms (see `docs/research/2026-11-14-codex-output-terms.md`, merged) before Codex's first delivery and again before Steam submission (they changed on 2026-11-13; new usage policies take effect on 2026-11-20).
 - One short lawyer consultation, covering real-person likeness references, scripted tool use and PolyForm: the owner's spending call (0037).
-- After the two image research notes merge, `docs/design/ASSETS.md` should cite them by their main paths, not as branches under review (presentation lane, item 4).
+- Both image research notes are now on main (`docs/research/2026-11-14-codex-output-terms.md` and `docs/research/2026-11-14-portrait-and-image-sources.md`). `docs/design/ASSETS.md` (not yet on main) should cite them by those paths, not as branches under review (presentation lane, item 4).
 - The handwriting typeface the presentation design proposes needs a licence check, and 0035's typeface list needs amending if it is adopted (reviewer's presentation review).
