@@ -56,3 +56,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0050](0050-world-format-v2.md) | World format v2: the pack format, its validator and generator, and what becomes State at scenario start | accepted |
 | [0051](0051-codex-output-rules.md) | Rules for Codex output: no AI likenesses of real people, game-resolution assets only, and full provenance | accepted |
 | [0052](0052-seats-knowledge-and-the-command-log.md) | Seats, knowledge and the command log: copy-on-write State, the player-visible boundary, and who may order | accepted |
+| [0053](0053-presentation-and-asset-briefs.md) | The presentation design and the asset briefs are accepted | accepted |
