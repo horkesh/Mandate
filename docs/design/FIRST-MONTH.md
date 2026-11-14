@@ -2,7 +2,7 @@
 
 Status: design lane output (2026-11-14), a proposal like everything in `docs/design/`. It plays the opening of the March 1861 scenario (0028) against FOUNDATION and decisions 0015–0038 as written, to find missing verbs, missing state and pacing problems before Phase 0 builds the kernel. Nothing here is accepted until a decision record accepts it.
 
-History comes only from the research notes: `docs/research/2026-11-14-secession-winter-1861.md` (cited as **[SW]**), `2026-11-14-union-information-flows.md` (**[IF]**), `2026-11-14-union-command-and-promotion.md` (**[CP]**) and `2026-11-14-war-scale.md` (**[WS]**). Anything the walkthrough needs that those notes lack is marked **[unsourced: needs research]**. Game-side guesses (what the kernel would compute, what a seat would choose) are marked **[game]**.
+History comes only from the research notes: `docs/research/2026-11-14-secession-winter-1861.md` (cited as **[SW]**), `2026-11-14-union-information-flows.md` (**[IF]**), `2026-11-14-union-command-and-promotion.md` (**[CP]**), `2026-11-14-war-scale.md` (**[WS]**) and, for rows corrected after writing, `2026-11-14-march-1861-facts.md` (**[MF]**, by section). Anything the walkthrough needs that those notes lack is marked **[unsourced: needs research]**. Game-side guesses (what the kernel would compute, what a seat would choose) are marked **[game]**.
 
 **Corrections since writing** (from `docs/research/2026-11-14-march-1861-facts.md`, which sourced most of the **[unsourced]** items; read it before authoring the March 1861 situations):
 - Fox's report is dated about 25 March, not 23; it arrives with Hurlbut's (27 March) in the 28 March turn.
@@ -12,7 +12,7 @@ History comes only from the research notes: `docs/research/2026-11-14-secession-
 - The cabinet met as needed, not weekly. The Senate sat 4–28 March, then adjourned.
 - The 10–13 March evacuation leaks caused a real backlash in the press.
 - Scott ignored a verbal order and a written request on Pickens for a week.
-- Still open: how Lincoln first learned of the Confederate commissioners, how he heard of the Campbell "faith" note, and when Northern papers printed key news.
+- Still open: how Lincoln first learned of the Confederate commissioners and how he heard of the Campbell "faith" note. When Northern papers printed key news is answered for the constitution and the Cornerstone speech (rows corrected in stops 3 and 6) and still open for the Missouri vote.
 
 ## How to read this
 
@@ -75,7 +75,7 @@ Where the design has no verb for something Lincoln plainly needs, I use the near
 **Reports that arrived:**
 | Report | Type (0032) | Author | Route and delay | Says |
 |---|---|---|---|---|
-| Anderson's letter | strength return plus garrison status | Anderson | dated 28 February, arrived 4–5 March, about 5 days; mail through Charleston **[unsourced: needs research: the route]** | Provisions for 4 to 6 weeks; relief would need about 20,000 men [SW 1] |
+| Anderson's letter | strength return plus garrison status | Anderson | dated 28 February; reached the War Department before noon on 4 March with his letter of 2 March, and Holt sent both to Lincoln on 5 March. Route: the fort's boat to Fort Johnson, a sealed packet to the Charleston postmaster, then the ordinary mail [MF 2] | Provisions for 4 to 6 weeks [SW 1]; relief would need "twenty thousand good and well-disciplined men", the figure the cabinet was given on 15 March (OR I,1 p. 197); a 70,000 in one transcription is wrong [MF, outside-scope finding 9] |
 | Scott's endorsement | none fits: it is advice (G3) | Scott | in person, same day | "no alternative but a surrender, in some weeks" [SW 1] |
 | The Confederate commissioners are in Washington | informal source | press and callers **[unsourced: needs research: how Lincoln learned it]** | same day | Forsyth and Crawford arrived 5 March [SW 2.4] |
 | Scott's plan for Pickens | plan ready for review | Scott | in person | Land Vodges's company from the ships; asks the Navy for the landing (a support request to Welles) **[game]** |
@@ -116,7 +116,7 @@ Where the design has no verb for something Lincoln plainly needs, I use the near
 | 5 | Cameron takes office | informal | narrated | [SW 1] |
 | 7–8 | The Adjutant General resigns; a list names his successor | promotion list (0026) | the War Department (Cameron), in person | Cooper resigned 7 March [SW 1]; the list proposes Lorenzo Thomas, whom the note names for the vacated post [SW, starting posts] **[unsourced: needs research: the date Thomas took it]** |
 | 9 | Cabinet meeting: Scott's estimate | advice (G3) | Scott, in person | Relieving Sumter needs 25,000 troops and six months or more [SW 1] |
-| 11–13 | The Confederate constitution | press report | Southern and Northern papers **[unsourced: needs research: delay]** | Adopted 11 March, with its slavery clauses [SW 1, 6.1]. Narrated, the clauses quoted: gate, locked consequences |
+| 12 | The Confederate constitution | press report | Montgomery dispatch by wire: the *New York Times* of 12 March reports the adoption on the 11th and says the text "has been kept secret", with a few provisions leaked; Southern papers printed the text from 13 March; the first Northern printing of the full text is unverified [MF 16] | Adopted 11 March, with its slavery clauses [SW 1, 6.1]. Narrated, gate, locked consequences: the first report gives the adoption only; the clauses are quoted once the text is out **[game]** |
 | 12 | Scott's formal letter | advice, with claims | Scott, in person | Relief impracticable; evacuate. Under 100 men against about 3,500; provisions for 26–48 days depending on the ration; a relief fleet takes four months, 5,000 regulars and 20,000 volunteers [SW 2.1] |
 | weekly | The front page | press | the pack's papers | The notes have only that evacuation rumours in March drew mixed reaction, some calling it "unfortunate but unavoidable" [SW 5] **[unsourced: needs research: what the March papers said]** |
 
@@ -179,7 +179,6 @@ The note records a tally conflict (five to two, or five to one with Chase as no)
 | Day | Report | Type | Author, route | Says |
 |---|---|---|---|---|
 | 19–20 | The Missouri convention votes against secession | informal and press | Missouri papers, congressmen **[unsourced: needs research: delay]** | 89–1 or 98–1, unresolved [SW 1]. The map shifts Missouri's loyalty a little toward the Union **[game]** |
-| 21–23 | Stephens's "Cornerstone" speech | press | Savannah, then Northern papers | Slavery as the "immediate cause" [SW 6.1]. Narrated, gate |
 | ~23 | Fox's report | observer's letter | Fox, in person **[unsourced: needs research: date]** | Relief by sea is possible with tugs at night **[unsourced: needs research: Fox's plan in his own words; the notes give only Blair's summary]** |
 
 Meanwhile, out of the player's sight: Scott's Pickens order is at sea. In history it took about 19–20 days (delivered to Scott 11–12 March, arrived 31 March) [SW 2.3], so the kernel would land it at Pensacola about 24 March **[game]**.
@@ -204,6 +203,7 @@ Meanwhile, out of the player's sight: Scott's Pickens order is at sea. In histor
 |---|---|---|---|---|
 | ~27–28 | Hurlbut's report | observer's letter | Hurlbut, in person **[unsourced: needs research: date he returned]** | Charleston has "no attachment to the Union" and would resist even an unarmed supply ship [SW 1] |
 | ~27–28 | Lamon's account | observer's letter | Lamon | Says nothing of what he told Charleston. In the record he implied Sumter would be abandoned [SW 1]: an agent who went past his errand. The player does not learn it yet **[game]** |
+| 27 | Stephens's "Cornerstone" speech (given in Savannah 21 March) | press | Savannah *Republican*, then the *New York Times*, which printed the text on 27 March, six days after delivery [MF 16] | Slavery as the "immediate cause"; the government's "corner-stone rests, upon the great truth that the negro is not equal to the white man" [SW 6.1; MF 16]. Narrated, gate |
 | 28 | Scott's memorandum to Cameron | advice; under the design, an **objection** to his own standing goal | Scott, through Cameron | Evacuate both Sumter and Pickens [SW 1]. The note says the cabinet was amazed and read it as political advice, which weakened Scott [SW 2.1] |
 | 28 | A War Department list: Lee to be colonel of the 1st Cavalry | promotion list | Cameron | [SW 1] |
 
