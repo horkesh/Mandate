@@ -36,14 +36,14 @@ Every lane gets a written brief containing:
 
   | Kind of lane | Model | Effort |
   |---|---|---|
-  | Mechanical: renames, formatting, file moves, running a specified check, log extraction | Haiku | low |
-  | Routine docs, copy, data entry from a given source | Sonnet | medium |
+  | Engine and simulation logic, calibration, determinism, sensitive history, the reviewer of simulation changes | Opus | high |
+  | Architecture and design docs, planning across several systems | Opus | medium |
   | Research and source verification, game and history surveys | Sonnet | high |
-  | Ordinary implementation and independent review | Sonnet | high |
-  | Engine architecture, simulation mechanics, calibration diagnosis, sensitive history, design-heavy work | Opus | high |
-  | A hard problem a high-effort Opus lane has already failed on | Opus | xhigh |
+  | UI and layout, tests, tooling, ordinary implementation, entering data from sources | Sonnet | high |
+  | Docs sync, copy edits, mechanical cleanup | Sonnet | medium |
+  | Read-only audits, inventories, simple lookups | Haiku or Sonnet | low |
 
-  `max` effort is not used for lanes. The lead's own model and effort are the owner's choice in the app.
+  Upgrade a lane only if it struggles, and say why. Never default everything to the top model: it burns budget without improving routine work. `max` effort is not used for lanes. The lead's own model and effort are the owner's choice in the app. (Table merged from the owner's rule and AWWV's sizing guide, 2026-11-14.)
 - **Calibration lanes get a budget of measured runs (default eight)**, then a continue-or-park ruling. One change per measured run.
 
 ## Closing a lane

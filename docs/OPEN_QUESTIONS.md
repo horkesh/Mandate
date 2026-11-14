@@ -16,4 +16,12 @@ Answered and moved to decisions:
 ## Triage of lane findings (open)
 
 - **The player-visible boundary isn't built.** True reasons in `DirectiveResponse` are kept from the player only by a code comment, and any AI text layer would be a second way to leak them. Goes into the foundation design as a Phase 0 item, with an architecture test that also covers the code calling the AI. (AI-players lane, 2026-11-14.)
+- **From the AWWV-architecture lane (2026-11-14), all going into the foundation design:**
+  - the redesign collides with accepted decisions 0001, 0004, 0007, 0010 and 0011, so each needs a superseding record;
+  - an architecture test that the app's commands match the kernel's verb list exactly (AWWV's desktop shell let unit orders back in);
+  - run outputs live outside folders agents search;
+  - export and reuse functions, never copy them (a copied function is a second owner);
+  - a provenance and licence file for every geographic source;
+  - calibration targets as counts of named things; event caps defer rather than drop;
+  - LLM seats' typed observations as a health check, built with the first LLM seat.
 - **AI cabinets agree too much.** Studies of simulated team debates find "farcical harmony", so disagreement must come from the kernel's typed reasons and the AI only voices it. Goes into the foundation design's voice layer. (AI-players lane, 2026-11-14.)

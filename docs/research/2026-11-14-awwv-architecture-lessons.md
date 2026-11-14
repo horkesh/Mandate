@@ -336,3 +336,19 @@ Ranked, most important first.
 10. **Grep proves a line exists, not that control reaches it.**
     - AWWV re-violated this twice: once with a guard that could never be reached, once with a dead module written up as a fatal blocker (`architecture.md:471-489`).
     - Pair every "this blocks X" claim with a positive control: break the code and see what breaks.
+
+11. **The shell is where unit control leaks back in.**
+    - AWWV's desktop process exposes brigade-level verbs: `stage-attack-order`, `stage-move-order` and `assign-brigade-to-sector` (`src/desktop/electron-main.cjs:2580`, `:2620`, `:2647`). The canon premise said the player is the president.
+    - Mandate should add a test that the shell's command set is exactly the kernel's verb list, so that no UI path can command a division directly (0001, L1).
+
+12. **Search speed is an agent-tooling cost.**
+    - In this session:
+      - Glob/ripgrep timed out at 20 s on the AWWV repo.
+      - Git Bash calls exceeded 120 s even for `ls` on drive F:.
+      - PowerShell and targeted paths worked.
+    - AWWV keeps 620 run directories, `node_modules`, `dist*` and `.worktrees` inside its tree (counted).
+    - Mandate should write run outputs outside the repo or to ignored folders that agents never search, and tell research agents to prefer PowerShell on this host.
+
+13. **Logic copied because it was not exported becomes a second owner.**
+    - `belief.ts:62-66` duplicates `strengthCategoryToEstimate` "because that function is not exported" from `decide.ts`.
+    - Export the function and reuse it. Do not copy it.
