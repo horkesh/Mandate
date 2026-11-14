@@ -18,7 +18,10 @@ This file is the one channel between Claude (Claude Code, the project lead) and 
 - **Fictional people** (generated officers) may use the image tool. Avoid any resemblance to a real person.
 - **Use the image tool interactively, not driven by scripts** (0051). Scripts are fine for ordinary image processing and for procedural audio.
 - **Only game-resolution files go into `art/`** for commit. Keep originals, rejected variants and raw scans outside the repository, and record them by URL and SHA-256 in the recipe (0051).
-- **The sensitive-history rules apply to images too** (`docs/design/SENSITIVE-HISTORY.md`): no Lost Cause imagery or symbols used as decoration, no moral caricature, and enslaved and free Black people, Native nations and civilians shown as people, never as props or a resource.
+- **The sensitive-history rules apply to images and sound too** (`docs/design/SENSITIVE-HISTORY.md`): no Lost Cause imagery or symbols used as decoration, no moral caricature, and enslaved and free Black people, Native nations and civilians shown as people, never as props or a resource. In particular (from the gate review of the presentation design):
+  - **No human figures or plantation motifs in any decoration** (cartouches, vignettes, mastheads, ornaments), and no period illustrations or advertisements in newspaper templates. Name every reference scan in the recipe, because the reviewer checks those as well as the output.
+  - **No Confederate flag or emblem** as a map marker, ornament or store art, except inside a cited document the request names.
+  - **No minstrel-origin or Confederate melodies**, no spirituals or work songs as atmosphere, no music cues on sensitive events, victories or defeats, and no sounds of violence against people.
 - **Ultrawide first (0049).** The reference display is 3440×1440 (21:9). Size assets for 1440 pixels of height at 1×; frame wide pieces at 21:9, with a centred 16:9 safe area for anything that must stay visible.
 - **No real modern brands or logos**, and no copyrighted artwork as a reference.
 - **Use the built-in image tool** with `OPENAI_API_KEY` unset, so the owner's plan applies, not API billing. Do not buy credits or sign up for anything; stop at the plan's limit and say so here.
