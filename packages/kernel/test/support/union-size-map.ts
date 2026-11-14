@@ -1,11 +1,12 @@
 /**
- * A synthetic map the size of the Union map (FOUNDATION section 4, 0031:
- * about 250 regions and 900 edges), for the performance test. Setting-free.
+ * A synthetic map at least the size of the Union map, for the performance
+ * test. Setting-free. The Union draft (lane 0.3) has 263 regions and 931
+ * edges; this has 270 and 971.
  *
- * A 25 x 10 grid with diagonals (897 edges): roads everywhere, a rail line
+ * A 27 x 10 grid with diagonals: roads everywhere, a rail line
  * along every other row, a river down column 6, mud and low-water seasons on
- * a third of the edges. Faction `a` holds columns 0-11, `b` columns 13-24,
- * column 12 is contested, so there are fronts the whole height of the map.
+ * a third of the edges. Faction `a` holds columns 0-12, `b` columns 14-26,
+ * column 13 is contested, so there are fronts the whole height of the map.
  * Sources sit in the outer columns, forward depots two columns behind each
  * front, and a few pockets are cut out behind the lines.
  */
@@ -15,7 +16,7 @@ import type { WorldIndex } from '../../src/world/index.ts';
 import type { RegionControlTable } from '../../src/control/control.ts';
 import { controlTable, depot, edge, mapIndex, region } from './map-fixture.ts';
 
-export const COLS = 25;
+export const COLS = 27;
 export const ROWS = 10;
 
 const id = (c: number, r: number) => `g${String(c).padStart(2, '0')}_${r}`;
@@ -47,7 +48,7 @@ export function unionSizeMap(): WorldIndex {
   const depots = [];
   for (let r = 0; r < ROWS; r += 3) {
     depots.push(depot(`src_a_${r}`, id(0, r), 'source', 5), depot(`src_b_${r}`, id(COLS - 1, r), 'source', 5));
-    depots.push(depot(`fwd_a_${r}`, id(10, r), 'depot', 3), depot(`fwd_b_${r}`, id(14, r), 'depot', 3));
+    depots.push(depot(`fwd_a_${r}`, id(11, r), 'depot', 3), depot(`fwd_b_${r}`, id(15, r), 'depot', 3));
   }
   return mapIndex({ regions, edges: edges.sort((x, y) => strictCompare(x.id, y.id)), depots });
 }
@@ -55,7 +56,7 @@ export function unionSizeMap(): WorldIndex {
 /** Control for the synthetic map. `shift` moves the contested column, to force a recompute. */
 export function unionSizeControl(shift = 0): RegionControlTable {
   const spec: Record<string, Record<string, number>> = {};
-  const front = 12 + shift;
+  const front = 13 + shift;
   for (let c = 0; c < COLS; c++) {
     for (let r = 0; r < ROWS; r++) {
       if (c < front) spec[id(c, r)] = { a: 1000 };

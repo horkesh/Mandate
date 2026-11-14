@@ -9,21 +9,25 @@ import { unionSizeControl, unionSizeMap } from './support/union-size-map.ts';
 /**
  * The tick budget (FOUNDATION section 9): a headless 1,460-day campaign under
  * a minute, so a whole day tick costs under about 40 ms. The map's share of
- * that budget, stated here and checked on a graph the size of the Union map:
+ * that budget, stated here and checked on a graph at least the size of the
+ * Union draft:
  *
  * - a full rebuild of the derived map (control index and supply for both
  *   sides), which happens only when a holder, a threshold band, the month or
- *   the network changes: under 15 ms;
+ *   the network changes: under 25 ms, so a rebuild day still fits the 40 ms
+ *   tick with room for the rest of it;
  * - a day with nothing to rebuild (signature, cache hit, control invariants):
  *   under 2 ms;
  * - a year of days with control still and the month turning: under 1.5 s in all.
  *
- * Bounds are medians and are set several times above the reference machine's
- * figures (printed below), so a slow CI runner does not flake; a regression of
- * an order of magnitude still fails.
+ * The bounds come from the design budget, not from any one machine. They are
+ * medians, measured while Vitest runs the other test files in parallel.
+ * Measured at review (lane 0.4, 2026-11-14, on the 250-region graph before it
+ * grew to 270): rebuild 2.6 ms on the reference machine, 5.3 ms on CI Linux,
+ * 8.2 ms on CI Windows (3x under the bound); quiet day 0.29, 0.39 and 0.74 ms;
+ * year 110, 191 and 328 ms. A tenfold regression still fails.
  */
-// Measured on the reference machine (lane 0.4, 2026-11-14): rebuild 2.6 ms, quiet day 0.29 ms, year 110 ms.
-const BUDGET = { rebuildMs: 15, quietDayMs: 2, yearMs: 1500 };
+const BUDGET = { rebuildMs: 25, quietDayMs: 2, yearMs: 1500 };
 
 function median(samples: number[]): number {
   const s = [...samples].sort((a, b) => a - b);
@@ -41,13 +45,13 @@ function time(f: () => unknown, runs: number): number {
   return median(samples);
 }
 
-describe('the map inside its tick budget (Union-map size: 250 regions, about 900 edges)', () => {
+describe('the map inside its tick budget (at least the Union draft: 263 regions, 931 edges)', () => {
   const map = unionSizeMap();
   const control = unionSizeControl();
 
-  it('is the size of the Union map, with fronts, contested regions and a pocket', () => {
-    expect(map.regions.size).toBe(250);
-    expect(map.edges.size).toBeGreaterThanOrEqual(880);
+  it('is at least the size of the Union draft, with fronts, contested regions and a pocket', () => {
+    expect(map.regions.size).toBeGreaterThanOrEqual(263);
+    expect(map.edges.size).toBeGreaterThanOrEqual(931);
     const derived = deriveMap(map, { control, month: 1 });
     expect(derived.index.contested.length).toBe(10);
     expect(derived.index.fronts.get(F('a'))!.length).toBeGreaterThan(0);
