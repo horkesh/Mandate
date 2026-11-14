@@ -1,6 +1,6 @@
 # 0050: World format v2: the pack format, its validator and generator, and what becomes State at scenario start
 
-Status: accepted (2026-11-14). From Phase 0 lane 0.2 (`notes/lane-0.2-world-format.md`, which lists every choice with what it rejected) and the standing reviewer's two passes (approved after fixes). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 4, 10 and 11, and decisions 0019, 0029, 0030, 0031, 0033, 0040, 0043 and 0044. Amended by 0055 (starting sides come from the post held on the start date; supply sources and depots are scenario data).
+Status: accepted (2026-11-14). From Phase 0 lane 0.2 (`notes/lane-0.2-world-format.md`, which lists every choice with what it rejected) and the standing reviewer's two passes (approved after fixes). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 4, 10 and 11, and decisions 0019, 0029, 0030, 0031, 0033, 0040, 0043 and 0044. Amended by 0055 (starting sides come from the post held on the start date; supply sources and depots are scenario data) and 0058 (a post kind's role, a post's intelligence chief, and each region's civil government at the start).
 
 ## Decision
 

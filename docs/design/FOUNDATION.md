@@ -236,6 +236,7 @@ Module map, adapted from the AWWV-architecture note:
 | edge condition | `infrastructure` | combat, raids, repair orders |
 | water-edge obstructions; depot condition | `infrastructure` | combat, raids, operations (0050; set at scenario start) |
 | a post's department, and scheduled department changes | `command` | the scenario start's scheduled changes, situations (0050) |
+| a region's civil government, and which no-faction governments are closed | `command` | the scenario start, situations (0058) |
 | a person's rank and its date | `people` | promotion lists (0050) |
 | today's weather per weather zone | `weather` | its own seeded draw (0029, 0050; reserved) |
 | division location | `movement` | operations |

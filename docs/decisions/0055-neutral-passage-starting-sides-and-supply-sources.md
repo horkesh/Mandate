@@ -1,6 +1,6 @@
 # 0055: Passage through neutral states, starting sides, and supply sources
 
-Status: accepted (2026-11-14). From the standing reviewer's review of lane 0.3 (the Union 1861 data), which found that the data and lane 0.4's rules together cut Washington off from the North by land, put every traced region in a pocket on day one, and gave men their eventual side at the start. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0050 and 0054.
+Status: accepted (2026-11-14). From the standing reviewer's review of lane 0.3 (the Union 1861 data), which found that the data and lane 0.4's rules together cut Washington off from the North by land, put every traced region in a pocket on day one, and gave men their eventual side at the start. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0050 and 0054. Amended by 0058 (which regions a government holds, and what an unknown government means for passage).
 
 ## Decision
 
