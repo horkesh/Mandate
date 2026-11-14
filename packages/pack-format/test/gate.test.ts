@@ -384,8 +384,14 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     // Review S8: a review-severity hit needs the reviewer's note in the sign-off.
     const reviewEdit = editJson('strings/en.json', (t) => (t['situation.fen_crossing.text'] = 'Their masters want them back.'));
     firesAt(reviewEdit, 'gate-review-note-missing', { at: 'text', file: sit('fen_crossing') });
-    const noted = merge(reviewEdit, editJson(sit('fen_crossing'), (s) => (s.gateReview.notes = { 'situation.fen_crossing.text|\\bmasters?\\b': 'Spoken of the holders as the fen folk name them; kept.' })));
+    const note = { 'en|situation.fen_crossing.text|\\bmasters?\\b': 'Spoken of the holders as the fen folk name them; kept.' };
+    const noted = merge(reviewEdit, editJson(sit('fen_crossing'), (s) => (s.gateReview.notes = note)));
     expect(issues(noted).filter((i) => i.kind === 'gate-review-note-missing')).toEqual([]);
+    // Gate re-check N9: notes are keyed by language, so the English note does not cover the same hit in a translation.
+    const en = JSON.parse(readTestbed('strings/en.json')) as Record<string, string>;
+    const translated = merge(noted, editJson('pack.json', (m) => (m.locales = ['en', 'xx'])), { 'strings/xx.json': JSON.stringify({ ...en, 'situation.fen_crossing.text': 'Their masters want them back.' }) });
+    firesAt(translated, 'gate-review-note-missing', { file: sit('fen_crossing'), at: 'text', message: '(xx)' });
+    expect(issues(translated).filter((i) => i.kind === 'gate-review-note-missing' && i.message.includes('(en)'))).toEqual([]);
     expect(proximityHit('the fen folk were counted as stock', ['stock'], ['fen folk'], 5)).toBe('"stock" near "fen folk"');
     // Review S9: phrases and inflections match, and every string in the table is checked, not only situations'.
     expect(proximityHit('the fen folk as a labour force', ['labour force'], ['fen folk'], 5)).toBe('"labour force" near "fen folk"');

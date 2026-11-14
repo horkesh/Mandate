@@ -117,7 +117,8 @@ export interface GateReview {
   readonly contentHash: string;
   /**
    * The reviewer's notes on wording the pack marks for review (section 5: a
-   * `review` hit forces a note), keyed `<string key>|<pattern>`.
+   * `review` hit forces a note), keyed `<locale>|<string key>|<pattern>`: a
+   * note on one language never covers a translation (gate re-check N9).
    */
   readonly notes: Readonly<Record<string, string>>;
 }

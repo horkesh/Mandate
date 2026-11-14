@@ -274,7 +274,7 @@ export function checkGate(
   for (const { file, def } of items) {
     const err = (kind: string, at: string, message: string, expected?: string) => sink.error(kind, file, at, message, expected);
     const locales = [...strings.keys()].sort();
-    const texts = locales.flatMap((locale) => Object.entries(resolvedStrings(def, strings.get(locale)!)));
+    const texts = locales.flatMap((locale) => Object.entries(resolvedStrings(def, strings.get(locale)!)).map(([key, text]) => [locale, key, text] as const));
     const effects = phase0.effectsOf(def);
     const tag = def.gate;
     const named = topicsOf(tag);
@@ -282,7 +282,7 @@ export function checkGate(
     const gated = named.length > 0 || def.options.some((o) => topicsOf(o.gate).length > 0);
 
     // A1: a trigger match, or an effect on a protected field, needs a tag (or `none` with a reason and a sign-off).
-    const hits = texts.flatMap(([key, text]) => triggerMatches(text, gate.triggers).map((m) => `"${m}" in ${key}`));
+    const hits = texts.flatMap(([, key, text]) => triggerMatches(text, gate.triggers).map((m) => `"${m}" in ${key}`));
     const touchesProtected = effects.filter(({ effect }) => 'propose' in effect && protectedFields.has(effect.propose.field));
     if ((hits.length > 0 || touchesProtected.length > 0) && !gated && def.gateReview === null) {
       err('gate-untagged', 'gate', `the item matches the gate (${[...hits, ...touchesProtected.map((e) => `a protected field at ${e.at}`)].join('; ')}) but carries no topic`, 'a gate tag naming its topics and placement, or gate.none with a reason and a reviewer sign-off (A1)');
@@ -474,7 +474,7 @@ export function checkGate(
     }
 
     // C3/F6 anachronisms, C4/F5 forbidden patterns, F2 proximity.
-    for (const [key, text] of texts) {
+    for (const [locale, key, text] of texts) {
       const scope = def.options.some((o) => o.label === key) ? 'label' : 'narrator';
       const at = stringKeysOf(def).find((k) => k.key === key)!.at;
       for (const a of gate.anachronisms.terms) {
@@ -485,9 +485,10 @@ export function checkGate(
         const m = new RegExp(p.pattern, 'iu').exec(text);
         if (m === null) continue;
         if (p.severity === 'fail') err('gate-forbidden-wording', at, `"${m[0]}": ${p.reason}`, 'wording free of the pack’s forbidden patterns (C4, F2, F5)');
-        else if (def.gateReview?.notes[`${key}|${p.pattern}`] === undefined) {
-          // Section 5: a review hit forces a reviewer note, recorded in the sign-off (review S8).
-          err('gate-review-note-missing', at, `"${m[0]}": ${p.reason}`, `a reviewer's note in gateReview.notes["${key}|${p.pattern}"]`);
+        else if (def.gateReview?.notes[`${locale}|${key}|${p.pattern}`] === undefined) {
+          // Section 5: a review hit forces a reviewer note, recorded in the sign-off (review S8), for each language it is
+          // in: a note on the English text does not cover a translation (gate re-check N9).
+          err('gate-review-note-missing', at, `"${m[0]}" (${locale}): ${p.reason}`, `a reviewer's note in gateReview.notes["${locale}|${key}|${p.pattern}"]`);
         }
       }
       const near = proximityHit(text, gate.forbidden.resourceWords, groups, gate.forbidden.proximityTokens);
