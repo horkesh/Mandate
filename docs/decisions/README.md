@@ -5,7 +5,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | # | Title | Status |
 |---|---|---|
 | [0001](0001-player-is-the-principal.md) | The player is the principal: no unit control, in any mode | superseded by 0016 |
-| [0002](0002-typescript-deterministic-kernel.md) | TypeScript kernel, pure and deterministic | accepted |
+| [0002](0002-typescript-deterministic-kernel.md) | TypeScript kernel, pure and deterministic | accepted; clarified by 0044 |
 | [0003](0003-engine-pack-boundary.md) | Settings are packs; engine code names no setting | accepted; test amended by 0024 |
 | [0004](0004-first-slice-union-1861-62.md) | First vertical slice: the Union, 1861–62 | superseded by 0018 |
 | [0005](0005-living-people.md) | Real historical and living people, under a sensitivity policy | accepted (policy details open); amended by 0022 |
@@ -47,3 +47,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0041](0041-clarifications-owners-and-wording.md) | Clarifications: owners for new state, business during a visit, and neutral option wording | accepted |
 | [0042](0042-the-inaugural-is-the-premise.md) | The inaugural address is the premise, not a choice | accepted |
 | [0043](0043-map-tripwire-pixijs-stands.md) | The map tripwire: PixiJS stands, and labels get authored hints | accepted |
+| [0044](0044-engineering-foundations.md) | Engineering foundations: the state hash, saves, one writer per field, and determinism declared per package | accepted |

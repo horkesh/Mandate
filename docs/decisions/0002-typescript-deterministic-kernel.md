@@ -1,6 +1,6 @@
 # 0002: TypeScript kernel, pure and deterministic
 
-Status: accepted (2026-11-13; owner chose TypeScript over C#/.NET + Godot)
+Status: accepted (2026-11-13; owner chose TypeScript over C#/.NET + Godot). Clarified by 0044 (determinism declared per package; import and Math allow-lists).
 
 ## Context
 
