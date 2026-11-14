@@ -213,7 +213,8 @@ Module map, adapted from the AWWV-architecture note:
 | `movement` | writer | the only writer of location |
 | `combat` | writer | battle resolution with breakdowns and named seeded streams |
 | `people`, `compliance`, `reading`, `audience`, `proxy`, `ladder` | State writers | the M1/M2 people core, recast for goals and plans |
-| `knowledge` | State | per-seat reports with latency |
+| `knowledge` | State | per-seat reports with latency; the truth behind each report in a separate map the view layer cannot import (0052) |
+| `messages` | State | messages in transit, with latency owned by the kernel (0052) |
 | `view` | Derived | `viewFor(state, seatId)` |
 | `seats` | State | who drives each person; command validation (drivers live outside the kernel) |
 | `economy` | State | money, men, munitions, rail capacity at their holders |
@@ -222,7 +223,7 @@ Module map, adapted from the AWWV-architecture note:
 | `planner` | pure function | drafts candidate plans for a goal on request; the drafts are saved as State by `plans` on the request day, because a later call would see a changed map (planner-design note) |
 | `infrastructure` | State | edge condition (damage and repair), water-edge obstructions, depot condition (0050) |
 | `weather` | State | today's weather per weather zone, a seeded draw (reserved, 0029, 0050) |
-| `tick` | — | the fixed day order and the decision-point signal |
+| `tick` | writer | the fixed day order and the decision-point signal; the only writer of the current day (0052) |
 | `log`, `serialize` | — | command log, snapshots, replay, canonical JSON, state hash |
 | `invariants` | — | post-tick assertions with typed failures |
 
@@ -238,6 +239,11 @@ Module map, adapted from the AWWV-architecture note:
 | a person's rank and its date | `people` | promotion lists (0050) |
 | today's weather per weather zone | `weather` | its own seeded draw (0029, 0050; reserved) |
 | division location | `movement` | operations |
+| the current day | `tick` | the day tick (0052) |
+| a post's headquarters region (stand-in until force blocks, lane 0.5) | `movement` | standing-goal steps (0052) |
+| messages in transit | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules (0052) |
+| knowledge: reports per seat, and the truth behind them | `knowledge` | message delivery, pruning (0052) |
+| seat assignments | `seats` | setup, the player's settings (0052) |
 | division strength, morale, experience, equipment | `forces` | combat, attrition, economy, recruitment |
 | a force block's stores on hand | `forces` | supply (daily), operations (a sea delivery) |
 | detachments below the force block (garrisons, landings) | `forces` | `command`, `operations` (0041) |
