@@ -220,7 +220,8 @@ Module map, adapted from the AWWV-architecture note:
 | `situations` | State | cause predicates, offers, live situations and their clocks, decisions |
 | `politics` | State + Derived | blocs, mandate, elections, verdict, chambers of Congress, the war's framing |
 | `planner` | pure function | drafts candidate plans for a goal on request; the drafts are saved as State by `plans` on the request day, because a later call would see a changed map (planner-design note) |
-| `infrastructure` | State | edge condition (damage and repair) |
+| `infrastructure` | State | edge condition (damage and repair), water-edge obstructions, depot condition (0050) |
+| `weather` | State | today's weather per weather zone, a seeded draw (reserved, 0029, 0050) |
 | `tick` | — | the fixed day order and the decision-point signal |
 | `log`, `serialize` | — | command log, snapshots, replay, canonical JSON, state hash |
 | `invariants` | — | post-tick assertions with typed failures |
@@ -232,6 +233,10 @@ Module map, adapted from the AWWV-architecture note:
 | region control | `control` | combat, occupation |
 | region population, loyalty, supply value | `regions` | economy, situations, occupation |
 | edge condition | `infrastructure` | combat, raids, repair orders |
+| water-edge obstructions; depot condition | `infrastructure` | combat, raids, operations (0050; set at scenario start) |
+| a post's department, and scheduled department changes | `command` | the scenario start's scheduled changes, situations (0050) |
+| a person's rank and its date | `people` | promotion lists (0050) |
+| today's weather per weather zone | `weather` | its own seeded draw (0029, 0050; reserved) |
 | division location | `movement` | operations |
 | division strength, morale, experience, equipment | `forces` | combat, attrition, economy, recruitment |
 | a force block's stores on hand | `forces` | supply (daily), operations (a sea delivery) |
@@ -333,6 +338,8 @@ Lanes, sized from `docs/LANES.md`:
 
 Notes for lanes not yet started, from research:
 - **0.10** ran early on stand-in regions: PixiJS stands, with a lazy bake in 512-pixel tiles and authored label hints per region (0043). It re-runs its measurements on 0.3's first real regions (the second tripwire).
+- **0.2 is done** (0050). **0.3** imports the Union drafts into its format, starting from the fit test in `notes/lane-0.2-world-format.md`.
+- **0.7's sensitive-history checklist was drafted early** by a separate gate lane (`docs/design/SENSITIVE-HISTORY.md`, 0046); lane 0.7 builds the schema and the tests from it.
 - **0.2 and 0.3:** the world format defines optional label hints per region (anchor, spine, size class, minimum zoom), and lane 0.3 fills them where automatic placement fails (0043). Lane 0.3 must not fetch from census.gov on this machine.
 - **0.2:** the testbed pack's graph needs the features the planner spike tests: a direct road and a longer flank route, limited rail, a river, a fort, two posts around a salient, and a depot (`docs/research/2026-11-14-planner-design.md`).
 - **0.6:** a commander's overestimate of the enemy lives in belief derivation, so his dispatches and his plans inflate the enemy by the same amount; an intelligence chief's bias is a separate term on top, so the player can tell a timid general from a bad intelligence chief (planner-design note).

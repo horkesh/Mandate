@@ -53,3 +53,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0047](0047-a-standing-reviewer.md) | A standing reviewer lane | accepted |
 | [0048](0048-assets-are-made-by-codex.md) | Assets are made by Codex, through one coordination file | accepted |
 | [0049](0049-ultrawide-first.md) | The game is designed for ultrawide displays first (3440×1440 reference) | accepted |
+| [0050](0050-world-format-v2.md) | World format v2: the pack format, its validator and generator, and what becomes State at scenario start | accepted |
