@@ -76,7 +76,7 @@ The games survey compared hexes, AGEoD-style regions, point-to-point graphs and 
 - **Control** is a permille per faction per region, not a flag, so fronts are soft. Thresholds start from AGEoD's tested values: a faction needs at least 250‰ control of a region to trace supply or rail through it, and an army cannot retreat into a region where it holds under 50‰. Both are pack-tunable.
 - **Fronts** are derived, never saved: a front is the set of contact edges between regions where opposing control meets. **Pockets** are derived too: a friendly component with no supply path to a source. Divisions belong to commanders, never to fronts (AWWV's costliest mistake was saving front sectors).
 - **Supply** is a path with capacity from a source, traced along friendly edges, readable by the player as "the line to Nashville is open / cut at X". Rail capacity is allocated in priority order, not by maximum flow.
-- **Stores on hand.** A force block carries its days of supply (State, written by `forces`, proposed by supply each day): they fall while the block is in a pocket and refill when a supply path or a sea delivery reaches it. A pocket's stores crossing a pack-set threshold is a decision point, like a pocket closing. The player never sees true stores, only the garrison's reports and the staff's range (0040).
+- **Stores on hand.** A force block carries its days of supply (State, written by `forces`, proposed by supply each day): they fall while the block is in a pocket and refill when a supply path or a sea delivery reaches it. A report that a garrison's stores have crossed a pack-set threshold is a decision point, like a report that a pocket has closed: the decision point belongs to the report, never to the truth (0054). The player never sees true stores, only the garrison's reports and the staff's range (0040).
 - **Provenance.** Every geographic source carries a provenance and licence entry in its pack. Third-party data is committed only when its licence allows it (0014).
 
 The staff map (0013) draws regions, fronts and arrows from the player's knowledge, never from truth.
@@ -176,7 +176,7 @@ The plan appears as arrows. The player can:
 ## 9. Time
 
 - The kernel ticks one day at a time and never sees the wall clock. Turns are the shell's business (0027): a turn runs up to seven days (a pack setting) and ends early on the kernel's decision-point signal.
-- The day tick returns a decision-point signal (an objection arrived, a battle report, a pocket closed, a pocket's stores crossed their threshold, a situation fired, a live situation's option expired or appeared or its clock crossed a threshold, a plan is ready for review); the shell ends the turn on it according to the player's settings, shows the turn's days passing as their dispatches arrive, and waits for the player.
+- The day tick returns a decision-point signal (an objection arrived, a battle report, a report that a pocket closed or that a pocket's stores crossed their threshold, a situation fired, a live situation's option expired or appeared or its clock crossed a threshold, a plan is ready for review); the shell ends the turn on it according to the player's settings, shows the turn's days passing as their dispatches arrive, and waits for the player.
 - **Stop rules** (0040):
   - a goal marked "approve as drafted unless he objects" executes its plan without a stop; an objection or a large departure from the goal still stops;
   - lists, promotions and routine returns go to the inbox and never end a turn;
@@ -194,7 +194,7 @@ The plan appears as arrows. The player can:
 Three layers:
 - **World**: static pack data (region terrain and starting values, edges with lengths and capacities, people's historical records with citations, situations). Immutable, hashed, never saved; a save references it by hash.
 - **State**: mutable truth, including everything that changes during play (control, region population and loyalty, edge condition, divisions, people, plans, knowledge). Saved.
-- **Derived**: pure functions of World and State. Their caches are keyed by a version counter that the owning writer bumps (for example a control version bumped when a threshold is crossed), and live outside State, so no "dirty" flag or cache can be saved.
+- **Derived**: pure functions of World and State. Their caches are keyed by a signature computed from the State they read (for example each faction's band and holder per region, the month and the network) and tied to their World; they live outside State, so no "dirty" flag or cache can be saved, and a signature cannot drift from the data it describes (0054).
 
 The **command log** sits beside State and is the truth about what happened: replay and resume run from it, and resuming from a save must equal the continuous run (AWWV's resumed games drifted by 616 differences).
 
@@ -204,8 +204,8 @@ Module map, adapted from the AWWV-architecture note:
 |---|---|---|
 | `world/graph` | World | regions, typed edges, capacities, depots, terrain |
 | `control` | State | the control map; the only writer of control changes |
-| `control-index` | Derived | contact edges, fronts, pockets, components |
-| `supply` | Derived | supply paths with capacity from sources |
+| `control-index` | Derived | holders, contact edges, fronts, components, wire owners; a function of any control table, so the staff map can feed it claimed control (0054) |
+| `supply` | Derived | supply paths with capacity from sources and forward depots; pockets with their cut; allocation in priority order (0054) |
 | `forces` | State | force blocks and detachments, with stores on hand; location written only by `movement` |
 | `command` | State | posts (including temporary posts) and the people in them; division-to-commander assignment; standing agreements and prior orders |
 | `plans` | State | goals, drafts, approvals, edits as counter-orders |
