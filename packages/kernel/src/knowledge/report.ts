@@ -43,7 +43,7 @@ export type InformalSubtype = (typeof INFORMAL_SUBTYPES)[number];
 export const ADVICE_SUBTYPES = ['memorandum', 'requested'] as const;
 export type AdviceSubtype = (typeof ADVICE_SUBTYPES)[number];
 
-export const SUBJECT_KINDS = ['enemy', 'order', 'person', 'post', 'region'] as const;
+export const SUBJECT_KINDS = ['enemy', 'order', 'person', 'post', 'region', 'situation'] as const;
 export type SubjectKind = (typeof SUBJECT_KINDS)[number];
 
 /** What a claim is about. Values are integers in the claim's own unit (men, days, or 0/1 flags). */

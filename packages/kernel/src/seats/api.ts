@@ -12,8 +12,8 @@
  * Seats answer at turn boundaries (decision 0027). Their answers go into the
  * command log; replay and resume read the log and never ask a seat again.
  */
-import type { FactionId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
-import type { OrderCommand } from '../log/commands.ts';
+import type { FactionId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
+import type { SeatCommand } from '../log/commands.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { GoalView, SeatView } from '../view/types.ts';
 
@@ -57,16 +57,39 @@ export interface CommandablePost {
   readonly routes: readonly RouteOption[];
 }
 
-/** A principal deciding what to order today. */
+/** An option of an open situation as a seat may weigh it (never the historical default). */
+export interface SituationOptionChoice {
+  readonly optionId: string;
+  readonly group: string | null;
+  /** For a delegate: how far the option honours his values, permille (0040: he decides by his values). 0 for a principal. */
+  readonly score: number;
+}
+
+/** An open situation the seat may decide (the view carries its text and proposers). */
+export interface SituationChoice {
+  readonly situation: SituationId;
+  readonly options: readonly SituationOptionChoice[];
+  /** Posts the principal may hand the choice to; empty for a delegate. */
+  readonly delegableTo: readonly PostId[];
+}
+
+/** A principal deciding what to order today, and which open situations to decide or hand on. */
 export interface PrincipalMenu {
   readonly menuKind: 'principal';
   readonly faction: FactionId;
   /** The objective pack data names for his side, if any (public, like the map). */
   readonly objective: RegionId | null;
   readonly commandable: readonly CommandablePost[];
+  readonly situations: readonly SituationChoice[];
 }
 
-export type Menu = PrincipalMenu | StandingMenu;
+/** A holder deciding a situation handed to him: the same options as the principal (0040, gate B7). */
+export interface DelegatedMenu {
+  readonly menuKind: 'delegated-situation';
+  readonly choice: SituationChoice;
+}
+
+export type Menu = PrincipalMenu | StandingMenu | DelegatedMenu;
 
 export interface SeatRequest {
   /** The day the answer applies to (the morning of it). */
@@ -80,7 +103,7 @@ export interface SeatRequest {
 
 export type SeatAnswer =
   | { readonly answerKind: 'choose'; readonly option: string }
-  | { readonly answerKind: 'commands'; readonly commands: readonly OrderCommand[] };
+  | { readonly answerKind: 'commands'; readonly commands: readonly SeatCommand[] };
 
 /** Whoever decides for a person. Rule seats live in their own package (FOUNDATION section 8). */
 export interface Seat {

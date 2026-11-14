@@ -11,7 +11,7 @@
  * `test/boundary.test.ts` proves its import closure never reaches State or
  * the truth layer.
  */
-import type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
+import type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import type { ClaimKind, ReportType, SubjectKind } from '../knowledge/report.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { GoalKind } from '../plans/goal.ts';
@@ -64,6 +64,33 @@ export interface GoalView {
   readonly setDay: number;
 }
 
+/** An option as the seat sees it: its label key and who argued for it, in display order. */
+export interface SituationOptionView {
+  readonly id: string;
+  readonly label: string;
+  readonly proposedBy: readonly PersonId[] | 'inaction';
+  readonly group: string | null;
+}
+
+/**
+ * A situation as the seat sees it, once news of it has reached him: its text
+ * keys, the options open now, who wrote the staff line (the advice itself is a
+ * report in his knowledge), and whether it waits or was handed on. Never its
+ * historical default (0040, gate B9).
+ */
+export interface SituationView {
+  readonly id: SituationId;
+  readonly kind: 'decision' | 'notice';
+  readonly title: string;
+  readonly text: string;
+  readonly status: 'decided' | 'lapsed' | 'noticed' | 'open' | 'waiting';
+  readonly surfacedDay: number;
+  readonly options: readonly SituationOptionView[];
+  readonly chosen: readonly string[];
+  readonly delegatedTo: PersonId | null;
+  readonly staffAuthor: PersonId | null;
+}
+
 export interface SeatView {
   /** The last completed day: the view is the morning after it. */
   readonly day: number;
@@ -77,4 +104,6 @@ export interface SeatView {
   /** In (received day, id) order. */
   readonly reports: readonly ReportView[];
   readonly enemyBeliefs: Readonly<Record<RegionId, BeliefView>>;
+  /** Situations that have reached him (as principal, or as the holder one was handed to), in id order. */
+  readonly situations: readonly SituationView[];
 }

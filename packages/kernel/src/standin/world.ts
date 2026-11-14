@@ -17,9 +17,11 @@
  * World data is immutable, hashed and never saved (FOUNDATION section 10).
  */
 import { strictCompare } from '../compare.ts';
-import type { FactionId, PersonId, PostId, RegionId } from '../ids.ts';
+import type { FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import { DEFAULT_REPORT_TEMPLATES, templateProblems, type ReportTemplate } from '../knowledge/templates.ts';
 import { DEFAULT_LATENCY_RULES, latencyProblems, type LatencyRules } from '../messages/latency.ts';
+import { situationReferenceProblems } from '../situations/references.ts';
+import type { SituationDef } from '../situations/types.ts';
 import { DEFAULT_TRAIT_RULES, type TraitRules } from './traits.ts';
 import type { WorldIndex } from '../world/index.ts';
 
@@ -100,6 +102,8 @@ export interface CommsWorld {
   readonly posts: readonly CommsPost[];
   readonly persons: readonly CommsPerson[];
   readonly rules: CommsRules;
+  /** Situations (lane 0.7), validated by the pack format; absent means none. */
+  readonly situations?: readonly SituationDef[];
 }
 
 export class CommsWorldError extends Error {
@@ -141,6 +145,10 @@ export interface IndexedWorld {
   nextSteps(from: RegionId, to: RegionId): readonly RegionId[];
   /** The chain of posts from below `top` down to `target`, inclusive of `target`: the relays an order passes. */
   chainBelow(top: PostId | null, target: PostId): readonly PostId[];
+  /** Situations in id order. */
+  readonly situations: readonly SituationDef[];
+  /** A situation by id. Throws for an unknown id. */
+  situation(id: SituationId): SituationDef;
 }
 
 /** Every problem with a World, so a pack author sees them all at once. Empty when sound. */
@@ -208,6 +216,7 @@ export function commsWorldProblems(world: CommsWorld): string[] {
     if (!Number.isSafeInteger(p.intelligenceBias) || p.intelligenceBias < 250 || p.intelligenceBias > 4000) problems.push(`person ${p.id}: intelligence bias must be 250..4000 permille`);
   }
   problems.push(...templateProblems(world.rules.templates), ...latencyProblems(world.rules.latency));
+  problems.push(...situationReferenceProblems(world.situations ?? [], { factions: factions, posts: posts, persons: persons, regions: regions }));
   if (!Number.isSafeInteger(world.rules.marchDays) || world.rules.marchDays < 1) problems.push('marchDays must be a whole number of days, at least 1');
   return problems;
 }
@@ -239,9 +248,13 @@ export function indexWorld(world: CommsWorld, map: WorldIndex | null = null): In
     if (d === undefined) throw new RangeError(`no path from ${from} to ${to}`);
     return d;
   };
+  const situations = [...(world.situations ?? [])].sort((a, b) => strictCompare(a.id, b.id));
+  const situationById = new Map(situations.map((s) => [s.id, s]));
   return Object.freeze({
     world,
     map,
+    situations,
+    situation: (id: SituationId) => get(situationById, 'situation', id),
     rules: world.rules,
     regionIds,
     postIds: [...posts.keys()].sort(strictCompare),

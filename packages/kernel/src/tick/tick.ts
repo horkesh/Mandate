@@ -32,6 +32,7 @@ import { createFreezeLedger, deepFreeze, type FreezeLedger } from './freeze.ts';
 import { generateReports } from './generate.ts';
 import { mapBarrier, mapPhase } from './map.ts';
 import { issueOrder } from './orders.ts';
+import { decideCommand, delegateCommand, runSituations, SITUATION_MECHANICS } from './situations.ts';
 import { applyStanding } from './standing.ts';
 
 /** Every mechanic the seats layer counts (FOUNDATION section 11.5). */
@@ -56,6 +57,9 @@ export const SEATS_MECHANICS = [
   'standin.advance',
   'standin.goal_reached',
 ] as const;
+
+/** Every mechanic the tick counts: the seats layer's and the situations phase's. Runners declare these. */
+export const TICK_MECHANICS: readonly string[] = Object.freeze([...SEATS_MECHANICS, ...SITUATION_MECHANICS]);
 
 export interface TickOptions {
   readonly telemetry?: Telemetry;
@@ -127,6 +131,12 @@ export function tick(world: IndexedWorld, start: State, entries: readonly LogEnt
       if (reason !== null) reject(reason);
       return;
     }
+    if (c.cmd === 'decide' || c.cmd === 'delegate') {
+      const result = c.cmd === 'decide' ? decideCommand(ctx, state, entry.seat, c) : delegateCommand(ctx, state, entry.seat, c);
+      state = result.state;
+      if (result.reason !== null) reject(result.reason);
+      return;
+    }
     const post = world.postOf(state.seatAssignments[entry.seat]!.seatPerson)?.id;
     if (post === undefined || c.request !== standingKey(post, day) || !menus.has(post)) return reject('no_such_request');
     if (choices.has(post)) return reject('duplicate_choice');
@@ -145,6 +155,10 @@ export function tick(world: IndexedWorld, start: State, entries: readonly LogEnt
   // 4. Control changes and the derived map.
   const mapped = mapPhase(ctx, state, options.mapCache ?? createDerivedMapCache());
   state = freeze(mapped.state);
+
+  // 4b. Situations, after the map so a cause sees today's control: fire on their causes, surface on what the seat
+  // knows, stay live, take history defaults (lane 0.7).
+  state = freeze(runSituations(ctx, state));
 
   // 5. Reports on their cycles. A commander whose only option was to hold is awaiting strength.
   const awaiting = new Set([...menus].filter(([, o]) => o.length === 1 && o[0]!.kind === 'hold').map(([p]) => p));

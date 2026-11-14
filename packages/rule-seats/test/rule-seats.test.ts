@@ -10,6 +10,7 @@ const option = (id: string, score: number): OptionView => ({ optionId: id, kind:
 const standing = (options: OptionView[]): StandingMenu => ({ menuKind: 'standing-goal', post: post('p1'), goal: { kind: 'advance', region: region('r9'), issuer: null, viaChain: true, setDay: 1 }, options });
 const menu: PrincipalMenu = {
   menuKind: 'principal',
+  situations: [],
   faction: ids.toId('faction', 'a'),
   objective: region('r9'),
   commandable: [

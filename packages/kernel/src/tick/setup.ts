@@ -38,5 +38,7 @@ export function createState(world: IndexedWorld, options: SetupOptions): State {
     reportTruth: {},
     standingGoals: initialGoals(world),
     headquarters: initialHeadquarters(world),
+    situationStates: {},
+    situationFlags: {},
   };
 }

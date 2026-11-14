@@ -52,11 +52,11 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
   const world = ctx.world;
   if (world.faction(world.person(msg.msgTo).faction).principal === msg.msgTo) {
     if (report.reportType === 'advice' && report.reportSubtype === 'memorandum' && report.reportAnswers !== null) {
-      ctx.decisionPoints.push({ point: 'objection', seat, report: msg.msgOrigin });
+      ctx.decisionPoints.push({ point: 'objection', seat, report: msg.msgOrigin, situation: null });
     }
-    if (report.reportClaims.some((c) => c.claimKind === 'arrived')) ctx.decisionPoints.push({ point: 'objective-reached', seat, report: msg.msgOrigin });
+    if (report.reportClaims.some((c) => c.claimKind === 'arrived')) ctx.decisionPoints.push({ point: 'objective-reached', seat, report: msg.msgOrigin, situation: null });
     if (report.reportClaims.some((c) => c.claimKind === 'order-obeyed' && c.claimToken !== null && c.claimToken.startsWith('conflict'))) {
-      ctx.decisionPoints.push({ point: 'order-conflict', seat, report: msg.msgOrigin });
+      ctx.decisionPoints.push({ point: 'order-conflict', seat, report: msg.msgOrigin, situation: null });
     }
   }
   return next;

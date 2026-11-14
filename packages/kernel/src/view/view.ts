@@ -11,7 +11,7 @@
  * re-rendering them. Every view object is frozen: a seat cannot edit what it
  * was shown.
  */
-import type { PostId, RegionId, SeatId } from '../ids.ts';
+import type { PersonId, PostId, RegionId, SeatId } from '../ids.ts';
 import { latestEnemyClaims, perceived } from '../knowledge/beliefs.ts';
 import { knowledgeOf, type KnownReport, type SeatKnowledge } from '../knowledge/knowledge.ts';
 import { headquartersOf } from '../movement/headquarters.ts';
@@ -20,7 +20,7 @@ import type { State } from '../root-state.ts';
 import { seatOf } from '../seats/seats.ts';
 import { perceptionBias } from '../standin/traits.ts';
 import type { IndexedWorld } from '../standin/world.ts';
-import type { BeliefView, GoalView, ReportView, SeatView } from './types.ts';
+import type { BeliefView, GoalView, ReportView, SeatView, SituationView } from './types.ts';
 
 export interface ViewCache {
   readonly reports: WeakMap<KnownReport, ReportView>;
@@ -29,10 +29,11 @@ export interface ViewCache {
   readonly beliefs: Map<SeatId, { readonly knowledge: SeatKnowledge; readonly perception: number; readonly beliefs: Readonly<Record<RegionId, BeliefView>> }>;
   readonly goals: WeakMap<StandingGoal, GoalView>;
   readonly views: Map<SeatId, SeatView>;
+  readonly situations: Map<SeatId, { readonly states: State['situationStates']; readonly views: readonly SituationView[] }>;
 }
 
 export function createViewCache(): ViewCache {
-  return { reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), goals: new WeakMap(), views: new Map() };
+  return { reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), goals: new WeakMap(), views: new Map(), situations: new Map() };
 }
 
 function freeze<T extends object>(o: T): T {
@@ -126,6 +127,7 @@ export function viewFor(world: IndexedWorld, state: State, seat: SeatId, cache: 
   }
 
   const region = post === null ? world.faction(person.faction).seatRegion : headquartersOf(state, post.id as PostId);
+  const situations = situationViews(world, state, seat, person.id, cache);
   const previous = cache.views.get(seat);
   if (
     previous !== undefined &&
@@ -133,6 +135,7 @@ export function viewFor(world: IndexedWorld, state: State, seat: SeatId, cache: 
     previous.region === region &&
     previous.goal === goal &&
     previous.enemyBeliefs === beliefs.beliefs &&
+    previous.situations === situations &&
     same(previous.reports, reports)
   ) {
     return previous;
@@ -147,7 +150,45 @@ export function viewFor(world: IndexedWorld, state: State, seat: SeatId, cache: 
     goal,
     reports,
     enemyBeliefs: beliefs.beliefs,
+    situations,
   });
   cache.views.set(seat, view);
   return view;
+}
+
+/**
+ * The situations that have reached this seat: those of his faction once
+ * surfaced, if he is its principal, and any handed to him. Built from the
+ * situation's record and its text keys; the historical default is never read.
+ */
+function situationViews(world: IndexedWorld, state: State, seat: SeatId, person: PersonId, cache: ViewCache): readonly SituationView[] {
+  const cached = cache.situations.get(seat);
+  if (cached !== undefined && cached.states === state.situationStates) return cached.views;
+  const out: SituationView[] = [];
+  for (const def of world.situations) {
+    const r = state.situationStates[def.id];
+    if (r === undefined || r.sitSurfacedDay === null) continue;
+    if (world.faction(def.faction).principal !== person && r.sitDelegate !== person) continue;
+    out.push(
+      freeze({
+        id: def.id,
+        kind: def.kind,
+        title: def.title,
+        text: def.text,
+        status: r.sitStatus,
+        surfacedDay: r.sitSurfacedDay,
+        options: freeze(
+          def.options
+            .filter((o) => r.sitOpenOptions.includes(o.id))
+            .map((o) => freeze({ id: o.id, label: o.label, proposedBy: o.proposedBy === 'inaction' ? 'inaction' : freeze([...o.proposedBy]), group: o.group })),
+        ),
+        chosen: freeze([...r.sitChosen]),
+        delegatedTo: r.sitDelegate,
+        staffAuthor: r.sitStaffAuthor,
+      }),
+    );
+  }
+  const views = freeze(out);
+  cache.situations.set(seat, { states: state.situationStates, views });
+  return views;
 }

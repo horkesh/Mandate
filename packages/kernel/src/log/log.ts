@@ -50,7 +50,8 @@ export function entryProblems(raw: unknown, i: number): string[] {
   if (typeof e.seat !== 'string' || !isWellFormedId(e.seat)) problems.push(`${at}: seat must be a seat id`);
   const c = e.command as Partial<Record<string, unknown>> | undefined;
   if (typeof c !== 'object' || c === null || !(COMMAND_KINDS as readonly unknown[]).includes(c.cmd)) return [...problems, `${at}: unknown command`];
-  const fields = c.cmd === 'order' ? ['bypass', 'cmd', 'goal', 'region', 'route', 'to'] : ['cmd', 'option', 'request'];
+  const FIELDS: Readonly<Record<string, readonly string[]>> = { order: ['bypass', 'cmd', 'goal', 'region', 'route', 'to'], choose: ['cmd', 'option', 'request'], decide: ['cmd', 'options', 'situation'], delegate: ['cmd', 'situation', 'to'] };
+  const fields = FIELDS[c.cmd as string]!;
   const keys = Object.keys(c).sort(strictCompare);
   if (keys.join() !== fields.join()) return [...problems, `${at}: ${String(c.cmd)} has fields [${keys.join(', ')}], expected [${fields.join(', ')}]`];
   const id = (v: unknown) => typeof v === 'string' && isWellFormedId(v);
@@ -60,6 +61,14 @@ export function entryProblems(raw: unknown, i: number): string[] {
     if (c.region !== null && !id(c.region)) problems.push(`${at}: order.region must be a region id or null`);
     if (!(ROUTE_KINDS as readonly unknown[]).includes(c.route)) problems.push(`${at}: order.route must be one of ${ROUTE_KINDS.join(', ')}`);
     if (typeof c.bypass !== 'boolean') problems.push(`${at}: order.bypass must be true or false`);
+  } else if (c.cmd === 'decide') {
+    if (!id(c.situation)) problems.push(`${at}: decide.situation must be a situation id`);
+    if (!Array.isArray(c.options) || !c.options.every((o) => typeof o === 'string' && o.length > 0) || new Set(c.options).size !== c.options.length) {
+      problems.push(`${at}: decide.options must be distinct option ids (none: ignore it)`);
+    }
+  } else if (c.cmd === 'delegate') {
+    if (!id(c.situation)) problems.push(`${at}: delegate.situation must be a situation id`);
+    if (!id(c.to)) problems.push(`${at}: delegate.to must be a post id`);
   } else {
     if (typeof c.request !== 'string' || c.request.length === 0) problems.push(`${at}: choose.request must be a request key`);
     if (typeof c.option !== 'string' || c.option.length === 0) problems.push(`${at}: choose.option must be an option id`);

@@ -1,0 +1,204 @@
+/**
+ * Situations as pack data (World; FOUNDATION section 7; decisions 0023, 0040,
+ * 0041 and 0046). The kernel owns these types; `@mandate/pack-format` holds
+ * the Zod schema whose output is exactly them, and the validator and gate
+ * checks (lane 0.7).
+ *
+ * A situation is a historical pressure that arrives when its cause holds in
+ * State, not on a date. It has two triggers (0046): an **event** condition
+ * over the truth (when the thing happens, which starts its clock) and a
+ * **knowledge** condition over what the deciding seat holds (when news of it
+ * reaches him). It is a **decision** (options, a costed `inaction` outcome, a
+ * historical default and an authored staff recommendation) or a **notice**
+ * (effects and text, no options).
+ *
+ * Nothing here is setting-specific: conditions, effects and the gate tag are
+ * a closed engine vocabulary, and every word a player reads is a string-table
+ * key (0030). The historical default is World data the kernel reads only for
+ * a rule-driven principal (a history run); the view layer never carries it
+ * (0040; checked by `test/boundary.test.ts`).
+ */
+import type { FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
+import type { ClaimKind, ReportType, SubjectKind } from '../knowledge/report.ts';
+import type { RouteKind } from '../messages/latency.ts';
+import type { GoalKind } from '../plans/goal.ts';
+
+export const SITUATION_KINDS = ['decision', 'notice'] as const;
+export type SituationKind = (typeof SITUATION_KINDS)[number];
+
+/** The gate's placements (SENSITIVE-HISTORY section 1): what a facet of a sensitive topic may be. */
+export const PLACEMENTS = ['decision', 'derived', 'event', 'refused', 'text'] as const;
+export type Placement = (typeof PLACEMENTS)[number];
+
+/** A report pattern for a knowledge condition: every non-null field must match one report the seat holds. */
+export interface KnowsPattern {
+  readonly reportType: ReportType | null;
+  readonly subtype: string | null;
+  readonly subjectKind: SubjectKind | null;
+  readonly subjectId: string | null;
+  /** A claim of this kind must be in the report (and carry `token`, if given). */
+  readonly claimKind: ClaimKind | null;
+  readonly token: string | null;
+}
+
+/**
+ * A condition over State (event conditions) or over a seat's knowledge
+ * (`knows`). Closed: a pack cannot invent a predicate the kernel does not
+ * evaluate. `dayAtLeast` alone is a date, allowed only for a labelled
+ * railroad (0028, 0040; gate question B2).
+ */
+export type Condition =
+  | { readonly all: readonly Condition[] }
+  | { readonly any: readonly Condition[] }
+  | { readonly not: Condition }
+  | { readonly dayAtLeast: number }
+  /** A situation flag is set (flags are situation chain state, set and cleared by effects). */
+  | { readonly flag: string }
+  | { readonly fired: SituationId }
+  /** The situation was decided, with one of `options` among its choices (null: any decision). */
+  | { readonly decided: SituationId; readonly options: readonly string[] | null }
+  | { readonly knows: KnowsPattern }
+  /** A post's standing goal is of this kind (stand-in until lane 0.9's plans). */
+  | { readonly goal: { readonly post: PostId; readonly kind: GoalKind } }
+  /** A post's headquarters stands in a region (stand-in until lane 0.5's forces). */
+  | { readonly headquartersAt: { readonly post: PostId; readonly region: RegionId } }
+  /** Days since this situation fired (its clock): for `expiresWhen`, `appearsWhen` and `waitsOn`. */
+  | { readonly clockAtLeast: number };
+
+/**
+ * An effect. Flags are the situations module's own chain state. Everything
+ * else is a typed **proposal** to the module that owns the field (hard rule 5;
+ * catalogue pressure P13): the owner applies it, so a pack can never invent a
+ * writer. Until an owner is built, its proposals are reported, not applied.
+ */
+export type Effect =
+  | { readonly setFlag: string }
+  | { readonly clearFlag: string }
+  | {
+      readonly propose: {
+        /** The kernel module that owns the field (`politics`, `regions`, ...). */
+        readonly owner: string;
+        /** The pack's field id (a bloc's support, a region's loyalty, a foreign clock). */
+        readonly field: string;
+        /** Which record (a bloc id, a region id), or null for a field with one value. */
+        readonly subject: string | null;
+        /** Signed permille. */
+        readonly delta: number;
+        /** A typed reason id, for explanations (hard rule 6). */
+        readonly reason: string;
+        /** The side whose measure this is, for the gate's sign rule (E7); null if no side's. */
+        readonly side: FactionId | null;
+      };
+    };
+
+/** An order an option issues: always in the principal's name, through the validated command path (0052). */
+export interface OptionOrder {
+  readonly to: PostId;
+  readonly goal: GoalKind;
+  readonly region: RegionId | null;
+  readonly route: RouteKind;
+}
+
+/** The gate tag on an item (SENSITIVE-HISTORY section 5), or an explicit "not gated" with its reason. */
+export type GateTag = { readonly topics: readonly string[]; readonly placement: Placement; readonly risks: readonly string[] } | { readonly none: string };
+
+/** A gate sign-off (A7): a reviewer who is not the author, the question versions read, and the item's content hash. */
+export interface GateReview {
+  readonly author: string;
+  readonly reviewer: string;
+  readonly date: string;
+  readonly questionVersions: Readonly<Record<string, number>>;
+  readonly contentHash: string;
+}
+
+export interface SituationCitation {
+  readonly source: string;
+  readonly at: string | null;
+}
+
+export interface OptionDef {
+  readonly id: string;
+  readonly label: string;
+  /** The neutral display order: the order advisers raised them, unrelated to the historical default (0041). */
+  readonly displayKey: number;
+  /** Who argued for it, in their own terms (C1): person ids, or `inaction`. */
+  readonly proposedBy: readonly PersonId[] | 'inaction';
+  /** Options in different groups may be taken together; an option with no group is taken alone (catalogue P3). */
+  readonly group: string | null;
+  readonly appearsWhen: Condition | null;
+  readonly expiresWhen: Condition | null;
+  /** A waiting option ("hold it until ..."): choosing it defers the decision until this holds (0046). */
+  readonly waitsOn: Condition | null;
+  readonly effects: readonly Effect[];
+  /** Costs that apply on every use, whatever follows (gate B5): no condition, no chance. */
+  readonly lockedCosts: readonly Effect[];
+  readonly orders: readonly OptionOrder[];
+  /** Values the option honours, which a delegate weighs when he decides by his values (0040). */
+  readonly honours: readonly string[];
+  /** The gate reviewer's mark for the lever sweep (D6): the historically worst conduct. */
+  readonly watched: boolean;
+  /** A tag of the option's own, when it differs from the situation's. */
+  readonly gate: GateTag | null;
+}
+
+/** What ignoring a situation, or letting every option lapse, resolves to (0040): costed like an option (gate Q2). */
+export interface Outcome {
+  readonly text: string;
+  readonly effects: readonly Effect[];
+}
+
+/** The historical default (0040): options taken, a delegation, or not yet sourced. Never shown to the player. */
+export type HistoricalDefault =
+  | { readonly options: readonly string[] }
+  | { readonly delegate: PostId }
+  | { readonly unsourced: string };
+
+/** The staff recommendation, an `advice` report of the `requested` subtype (0040, 0046). */
+export interface StaffLine {
+  /** Ordered: the first post that is filled, by a holder who is not a subject, writes it. */
+  readonly authors: readonly PostId[];
+  readonly recommends: readonly string[];
+  readonly reasons: readonly { readonly kind: string; readonly weight: number }[];
+  /** Permille. */
+  readonly confidence: number;
+}
+
+export interface SituationChain {
+  readonly id: string;
+  readonly stage: number;
+  /** The earlier stage this one follows, and the options there that lead here (null: any). */
+  readonly follows: { readonly situation: SituationId; readonly options: readonly string[] | null } | null;
+}
+
+export interface SituationDef {
+  readonly id: SituationId;
+  readonly kind: SituationKind;
+  /** The faction whose principal decides (or is told). */
+  readonly faction: FactionId;
+  readonly title: string;
+  readonly text: string;
+  /** The earliest in-game date it can concern (gate A4, C3, F6). */
+  readonly earliest: string;
+  readonly event: Condition;
+  /** Null: it surfaces the day it fires. */
+  readonly knowledge: Condition | null;
+  /** A label, when the cause is a date alone: the one kind of railroad the design admits (0028, 0040). */
+  readonly railroad: string | null;
+  readonly chain: SituationChain | null;
+  /** People the situation is about: none of them writes its staff line (0046). */
+  readonly subjects: readonly PersonId[];
+  /** In display order. Empty for a notice. */
+  readonly options: readonly OptionDef[];
+  /** Required for a decision; null for a notice. */
+  readonly inaction: Outcome | null;
+  readonly historicalDefault: HistoricalDefault | null;
+  readonly staffLine: StaffLine | null;
+  readonly delegableTo: readonly PostId[];
+  /** Clock days at which an open decision comes back to the seat and ends the turn (0040). */
+  readonly resurfaceOn: readonly number[];
+  /** A notice's effects, applied when it fires. Empty for a decision. */
+  readonly effects: readonly Effect[];
+  readonly gate: GateTag;
+  readonly gateReview: GateReview | null;
+  readonly citations: readonly SituationCitation[];
+}
