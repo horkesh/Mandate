@@ -6,10 +6,27 @@
  *   npm run pack:generate -- <pack> --report   validate only and print issue counts by kind
  *   npm run pack:validate -- <pack>            validate the committed files (no sources needed)
  *   npm run pack:schemas [-- --check]          write (or check) the published JSON Schemas
+ *   npm run pack:gate-hash -- <pack>           print each situation's gate content hash, for a sign-off (lane 0.7)
+ *   npm run pack:release-check -- <pack>       the ship rule (gate A8): fail if a release would ship a held topic or a fixture sign-off
  */
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { countByKind, errorsOf, formatIssue, generatePack, type Issue, loadPack, publishedSchemas, PUBLISHED_SCHEMAS_DIR, staleFiles } from '@mandate/pack-format';
+import {
+  countByKind,
+  errorsOf,
+  formatIssue,
+  gateContentHash,
+  generatePack,
+  type Issue,
+  IssueSink,
+  loadPack,
+  localeStrings,
+  publishedSchemas,
+  PUBLISHED_SCHEMAS_DIR,
+  readSituations,
+  releaseProblems,
+  staleFiles,
+} from '@mandate/pack-format';
 import { writeGenerated } from './io/packs.ts';
 import { filesUnder, packFilesAt, packRoot } from './pack-files.ts';
 
@@ -69,13 +86,43 @@ function schemas(check: boolean): number {
   return 0;
 }
 
+/** Each situation's gate content hash, whatever else is wrong with it: what a reviewer records in a sign-off. */
+function gateHash(packId: string): number {
+  const files = packFilesAt(packRoot(packId));
+  const { pack } = generatePack(files);
+  if (pack === null) {
+    console.error(`packs/${packId}: the World does not validate; run npm run pack:generate -- ${packId} --report`);
+    return 1;
+  }
+  const strings = localeStrings(pack.strings);
+  for (const { file, def } of readSituations(files, new IssueSink())) console.log(`${gateContentHash(def, strings, pack.provenance)}  ${file}`);
+  return 0;
+}
+
+/** The ship rule as a release check (gate A8). */
+function releaseCheck(packId: string): number {
+  const files = packFilesAt(packRoot(packId));
+  const { pack, issues } = generatePack(files);
+  if (pack === null || errorsOf(issues).length > 0 || !pack.gate) {
+    printIssues(errorsOf(issues));
+    console.error(`packs/${packId}: fix the pack's errors (and give it a gate/ folder) before a release check`);
+    return 1;
+  }
+  const problems = releaseProblems(readSituations(files, new IssueSink()), pack.gate, pack.manifest.scenarios);
+  for (const p of problems) console.log(`ship-blocker: ${p}`);
+  console.log(problems.length === 0 ? `packs/${packId}: no ship-blockers for ${pack.manifest.scenarios.join(', ')}.` : `packs/${packId}: ${problems.length} ship-blockers.`);
+  return problems.length === 0 ? 0 : 1;
+}
+
 function main(argv: readonly string[]): number {
   const [command, ...rest] = argv;
   const flags = new Set(rest.filter((a) => a.startsWith('--')));
   const [packId] = rest.filter((a) => !a.startsWith('--'));
   if (command === 'schemas') return schemas(flags.has('--check'));
+  if (packId && command === 'gate-hash') return gateHash(packId);
+  if (packId && command === 'release-check') return releaseCheck(packId);
   if (!packId || (command !== 'generate' && command !== 'validate')) {
-    console.error('usage: pack.ts generate <pack> [--check | --report] | validate <pack> | schemas [--check]');
+    console.error('usage: pack.ts generate <pack> [--check | --report] | validate <pack> | schemas [--check] | gate-hash <pack> | release-check <pack>');
     return 2;
   }
   if (command === 'validate') return validate(packId);

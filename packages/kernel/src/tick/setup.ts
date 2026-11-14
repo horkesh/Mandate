@@ -23,6 +23,27 @@ export interface SetupOptions {
   readonly start?: ScenarioStart;
 }
 
+/**
+ * A State with nothing in it, for asking whether a condition could hold before
+ * anything has happened (the gate's B2 check). Never a game's start.
+ */
+export function emptyState(): State {
+  return {
+    gameSeed: 0,
+    calendarStart: null,
+    stateDay: 0,
+    regionControl: {},
+    seatAssignments: {},
+    messagesInTransit: [],
+    knowledgeBySeat: {},
+    reportTruth: {},
+    standingGoals: {},
+    headquarters: {},
+    situationStates: {},
+    situationFlags: {},
+  };
+}
+
 export function createState(world: IndexedWorld, options: SetupOptions): State {
   if (!Number.isSafeInteger(options.seed) || options.seed < 0 || options.seed > 0xffffffff) throw new RangeError('seed must be a 32-bit unsigned integer');
   if ((world.map === null) !== (options.start === undefined)) throw new RangeError('a scenario start is given exactly when the World has a map');
@@ -38,5 +59,7 @@ export function createState(world: IndexedWorld, options: SetupOptions): State {
     reportTruth: {},
     standingGoals: initialGoals(world),
     headquarters: initialHeadquarters(world),
+    situationStates: {},
+    situationFlags: {},
   };
 }

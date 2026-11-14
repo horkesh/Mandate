@@ -54,15 +54,30 @@ import {
   StringTableSchema,
   WorldSchema,
 } from './schemas.ts';
+import { readSituationLayer } from './situation-layer.ts';
 import { locateInData, type Locate, type PackData, validatePack, walkStrings, type Where } from './validate.ts';
 
-/** Read access to one pack's files, by pack-relative path with forward slashes. */
+/** Read access to one pack's files, by pack-relative path with forward slashes. A missing folder lists nothing. */
 export interface PackFiles {
   read(path: string): string | undefined;
-  /** Immediate subfolder names of a folder (for scenario sources). */
+  /** Immediate subfolder names of a folder (for scenario sources); none for a missing folder. */
   folders(path: string): string[];
-  /** Immediate file names in a folder, so a misnamed table is reported rather than ignored. */
+  /** Immediate file names in a folder, so a misnamed table is reported rather than ignored; none for a missing folder. */
   files(path: string): string[];
+}
+
+/**
+ * The names in a folder a pack may not have (`situations/`, `gate/`): none when it is missing, even through an adapter
+ * that throws ENOENT for a missing path rather than listing nothing (standing re-check, from lane 0.3's trial merge).
+ * Any other error is not a missing folder, and is thrown.
+ */
+export function listOptional(list: (path: string) => string[], path: string): string[] {
+  try {
+    return list(path);
+  } catch (e) {
+    if ((e as { code?: unknown }).code === 'ENOENT') return [];
+    throw e;
+  }
 }
 
 /** Edit distance, for "did you mean" on a misnamed table. */
@@ -841,8 +856,13 @@ export function generatePack(files: PackFiles): GenerateResult {
   const defaults = strings.get(manifest.defaultLocale) ?? [];
   strings.set(manifest.defaultLocale, [...defaults, { file: generatedStringsFile(manifest.defaultLocale), table: generatedNames }]);
 
-  const pack: PackData = { manifest, provenance, world, scenarios, strings, quarantined };
-  sink.add(validatePack(pack, locate));
+  const worldPack: PackData = { manifest, provenance, world, scenarios, strings, quarantined };
+  sink.add(validatePack(worldPack, locate));
+  if (errorsOf(sink.issues).length > 0) return { outputs: new Map(), issues: sink.issues, pack: worldPack };
+  // Situations and the gate (lane 0.7): hand-written, committed as they are, checked here and at load.
+  const layer = readSituationLayer(files, worldPack);
+  sink.add(layer.issues);
+  const pack: PackData = { ...worldPack, situations: layer.situations, gate: layer.gate };
   if (errorsOf(sink.issues).length > 0) return { outputs: new Map(), issues: sink.issues, pack };
 
   // The schemas admit only integers and plain data, so canonical JSON cannot

@@ -1,0 +1,10 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"additionalProperties": false,
+"properties": {
+"terms": {"items":{"additionalProperties":false,"properties":{"earliest":{"type":"string"},"source":{"minLength":1,"type":"string"},"term":{"minLength":1,"type":"string"}},"required":["term","earliest","source"],"type":"object"},"type":"array"}
+},
+"required": ["terms"],
+"title": "Mandate gate anachronisms (gate/anachronisms.json)",
+"type": "object"
+}

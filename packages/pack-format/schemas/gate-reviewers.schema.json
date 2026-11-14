@@ -1,0 +1,10 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"additionalProperties": false,
+"properties": {
+"reviewers": {"items":{"minLength":1,"type":"string"},"type":"array"}
+},
+"required": ["reviewers"],
+"title": "Mandate gate reviewers a release accepts (gate/reviewers.json)",
+"type": "object"
+}

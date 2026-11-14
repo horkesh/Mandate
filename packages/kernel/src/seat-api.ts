@@ -12,11 +12,12 @@
 export type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId } from './ids.ts';
 export type { ClaimKind, ReportType, SubjectKind } from './knowledge/report.ts';
 export { ADVICE_SUBTYPES, CLAIM_KINDS, INFORMAL_SUBTYPES, REPORT_TYPES } from './knowledge/report.ts';
-export type { ChooseCommand, Command, OrderCommand } from './log/commands.ts';
+export type { ChooseCommand, Command, DecideCommand, DelegateCommand, OrderCommand, SeatCommand } from './log/commands.ts';
 export type { RouteKind } from './messages/latency.ts';
 export type { GoalKind } from './plans/goal.ts';
 export type {
   CommandablePost,
+  DelegatedMenu,
   Menu,
   OptionView,
   PrincipalMenu,
@@ -25,6 +26,9 @@ export type {
   SeatAnswer,
   SeatDriver,
   SeatRequest,
+  SituationChoice,
+  SituationOptionChoice,
   StandingMenu,
 } from './seats/api.ts';
-export type { AdviceView, BeliefView, ClaimView, GoalView, ReportView, SeatView } from './view/types.ts';
+export type { AdviceView, BeliefView, ClaimView, GoalView, ReportView, SeatView, SituationOptionView, SituationView } from './view/types.ts';
+export type { SituationId } from './ids.ts';

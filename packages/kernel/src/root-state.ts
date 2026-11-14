@@ -19,7 +19,8 @@
  * The command log sits beside State, not in it (`log/log.ts`).
  */
 import type { RegionControlTable } from './control/control.ts';
-import type { MessageId, PostId, SeatId } from './ids.ts';
+import type { MessageId, PostId, SeatId, SituationId } from './ids.ts';
+import type { SituationRecord } from './situations/situations.ts';
 import type { SeatKnowledge } from './knowledge/knowledge.ts';
 import type { ReportTruth } from './knowledge/truth.ts';
 import type { TransitMessage } from './messages/transit.ts';
@@ -48,4 +49,8 @@ export interface State {
   readonly standingGoals: Readonly<Record<PostId, StandingGoal>>;
   /** STAND-IN headquarters region per post until lane 0.5's forces and movement. Writer: `movement`. */
   readonly headquarters: Readonly<Record<PostId, Headquarters>>;
+  /** Situations that have fired: status, clock, open options, decisions. Writer: `situations`. */
+  readonly situationStates: Readonly<Record<SituationId, SituationRecord>>;
+  /** Situation chain state: flags set by effects, with the day each was set. Writer: `situations`. */
+  readonly situationFlags: Readonly<Record<string, number>>;
 }

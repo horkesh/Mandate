@@ -6,7 +6,7 @@
  * identically on replay.
  */
 import type { ControlChange, ControlDelta, ThresholdCrossing } from '../control/control.ts';
-import type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
+import type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import type { Cut } from '../supply/supply.ts';
 import type { ReportBody } from '../knowledge/report.ts';
 import { templateFor } from '../knowledge/templates.ts';
@@ -19,12 +19,17 @@ import type { IndexedWorld } from '../standin/world.ts';
 
 export type RejectionReason =
   | 'bad_goal'
+  | 'bad_selection'
+  | 'not_delegable'
+  | 'not_the_decider'
+  | 'situation_not_open'
   | 'duplicate_choice'
   | 'malformed'
   | 'no_such_request'
   | 'not_a_principal'
   | 'not_an_option'
   | 'not_field_post'
+  | 'other_side'
   | 'route_unavailable'
   | 'unknown_post'
   | 'unknown_seat'
@@ -34,7 +39,7 @@ export type RejectionReason =
 export interface Rejection {
   readonly day: number;
   readonly seat: SeatId;
-  /** Index of the command among the day's log entries. */
+  /** Index of the command among the day's log entries; -1 for an order a situation option issued. */
   readonly entry: number;
   readonly reason: RejectionReason;
 }
@@ -49,13 +54,21 @@ export interface TickEvent {
   readonly terms: readonly BiasTerm[];
 }
 
-/** A typed delta for an owner that Phase 0 does not build yet (the people core, Phase 1). Counted, not applied. */
-export interface Proposal {
-  readonly proposal: 'grievance';
-  readonly person: PersonId;
-  readonly cause: 'bypassed';
-  readonly order: MessageId;
-}
+/** A typed delta for an owner that Phase 0 does not build yet (the people core, politics, regions). Counted, not applied. */
+export type Proposal =
+  | { readonly proposal: 'grievance'; readonly person: PersonId; readonly cause: 'bypassed'; readonly order: MessageId }
+  | {
+      readonly proposal: 'effect';
+      readonly owner: string;
+      readonly field: string;
+      readonly subject: string | null;
+      readonly delta: number;
+      readonly reason: string;
+      readonly side: FactionId | null;
+      /** The situation, and the option (null: its inaction or a notice), it comes from. */
+      readonly situation: SituationId;
+      readonly option: string | null;
+    };
 
 export interface Price {
   readonly seat: SeatId;
@@ -65,9 +78,12 @@ export interface Price {
 
 /** Something the shell may end a turn on (FOUNDATION section 9). */
 export interface DecisionPoint {
-  readonly point: 'objection' | 'objective-reached' | 'order-conflict';
+  readonly point: 'objection' | 'objective-reached' | 'order-conflict' | 'situation-lapsed' | 'situation-options' | 'situation-resurfaced' | 'situation-surfaced';
   readonly seat: SeatId;
-  readonly report: MessageId;
+  /** The report it rests on, if any. */
+  readonly report: MessageId | null;
+  /** The situation it concerns, if any. */
+  readonly situation: SituationId | null;
 }
 
 /** What the map phases changed or found (lane 0.4). Truth, for the run report and tests; the player learns of it only through reports. */

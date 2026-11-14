@@ -16,3 +16,7 @@ export * from './published.ts';
 export * from './schemas.ts';
 export * from './strings.ts';
 export * from './validate.ts';
+// Lane 0.7: situations and the sensitive-history gate.
+export * from './situations.ts';
+export * from './gate.ts';
+export * from './situation-layer.ts';

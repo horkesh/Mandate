@@ -319,6 +319,8 @@ describe('ownership of the new State (0044)', () => {
       'regionControl:control',
       'reportTruth:knowledge',
       'seatAssignments:seats',
+      'situationFlags:situations',
+      'situationStates:situations',
       'standingGoals:plans',
       'stateDay:tick',
     ]);

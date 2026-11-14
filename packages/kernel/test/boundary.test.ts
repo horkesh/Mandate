@@ -27,6 +27,8 @@ const FORBIDDEN = [
   'packages/kernel/src/standin/',
   'packages/kernel/src/tick/',
   'packages/kernel/src/view/view.ts',
+  // Situation definitions carry the historical default, which no seat may see (0040, gate B9).
+  'packages/kernel/src/situations/',
   'packages/kernel/src/state.ts',
 ] as const;
 

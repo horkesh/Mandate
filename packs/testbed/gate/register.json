@@ -1,0 +1,39 @@
+{
+  "topics": [
+    {
+      "id": "fen-flight",
+      "class": "fenfolk-freedom",
+      "window": { "from": "1861-03-04", "to": null },
+      "placements": ["decision", "derived", "event", "text"],
+      "status": "open",
+      "protectedFields": ["fenfolk-population"],
+      "protectedGroups": ["fen folk", "fenfolk"],
+      "agencyReasons": ["agency:fen-flight"],
+      "supersededOptions": [{ "situation": "fen_crossing", "option": "send_back", "law": "sanctuary_act" }],
+      "refused": [{ "fieldPattern": "^fenfolk-", "reason": "the fen folk are never a quantity either side counts, spends or moves" }, { "labelPattern": "\\b(hunt|round up)\\b", "reason": "no seat hunts the fen folk down" }]
+    },
+    {
+      "id": "harbour-burning",
+      "class": "atrocities",
+      "window": { "from": "1861-03-04", "to": null },
+      "placements": ["event", "text"],
+      "status": "open",
+      "refused": [{ "optionPattern": "burn", "labelPattern": "\\bburn", "reason": "burning a harbour town is never a choice for any seat" }]
+    },
+    {
+      "id": "press-closures",
+      "class": "civil-liberties",
+      "window": { "from": "1861-03-04", "to": null },
+      "placements": ["decision", "event", "text"],
+      "status": "open"
+    },
+    {
+      "id": "old-oath",
+      "class": "aims",
+      "window": { "from": "1861-03-04", "to": "1861-12-31" },
+      "placements": ["text"],
+      "interim": "text",
+      "status": "record"
+    }
+  ]
+}

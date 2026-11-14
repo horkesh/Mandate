@@ -108,7 +108,7 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('knowledge (reports per seat)', 'knowledge', ['message delivery', 'pruning'], [at('State', 'knowledgeBySeat'), at('State', 'reportTruth')]),
   field('messages in transit', 'messages', ['commands', 'reports', 'relay links forwarding an order', "the kernel's latency rules"], [at('State', 'messagesInTransit')]),
   field('economy stocks', 'economy', ['weekly step', 'verbs']),
-  field('situations fired, live (open options, clocks) and decided', 'situations', ['cause evaluation', 'decisions', "delegated seats' choices"]),
+  field('situations fired, live (open options, clocks) and decided', 'situations', ['cause evaluation', 'decisions', "delegated seats' choices"], [at('State', 'situationStates')]),
   field('blocs, mandate, election results', 'politics', ['weekly step', 'battles', 'the press', 'checkpoints']),
   field("each chamber of Congress's state (sitting, adjourned, special session called)", 'politics', ['situations', 'the weekly step']),
   field('the framing term (who the public believes began the war)', 'politics', ["the war's opening situations", 'the press']),
@@ -126,6 +126,8 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   // Lane 0.6: the day counter, and a stand-in that lane 0.5's forces and movement replace.
   field('the current day', 'tick', ['the day tick'], [at('State', 'stateDay')]),
   field("a post's headquarters region (stand-in until force blocks)", 'movement', ['standing-goal steps (stand-in operations)'], [at('State', 'headquarters')]),
+  // Lane 0.7 (0046): situation chain and wait state. The wait itself is a status on the situation's record above.
+  field('situation chain and wait state', 'situations', ['situation effects (flags set and cleared)'], [at('State', 'situationFlags')]),
 ];
 
 /**
@@ -212,6 +214,18 @@ export const IMMUTABLE_STATE_KEYS: readonly string[] = [
   // Headquarters (stand-in)
   'hqRegion',
   'hqSinceDay',
+  // Lane 0.7: SituationRecord (replaced whole by `situations`)
+  'sitStatus',
+  'sitFiredDay',
+  'sitSurfacedDay',
+  'sitOpenOptions',
+  'sitResurfaced',
+  'sitDecidedDay',
+  'sitChosen',
+  'sitDecidedBy',
+  'sitDelegate',
+  'sitWaitingOn',
+  'sitStaffAuthor',
 ];
 
 /**

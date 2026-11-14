@@ -19,7 +19,8 @@ import { demandRatio, perceptionBias } from '../standin/traits.ts';
 import type { IndexedWorld } from '../standin/world.ts';
 import { deepFreeze } from '../tick/freeze.ts';
 import { createViewCache, viewFor, type ViewCache } from '../view/view.ts';
-import type { CommandablePost, OptionView, PrincipalMenu, RouteOption, SeatRequest, StandingMenu } from './api.ts';
+import type { SituationDef } from '../situations/types.ts';
+import type { CommandablePost, DelegatedMenu, OptionView, PrincipalMenu, RouteOption, SeatRequest, SituationChoice, StandingMenu } from './api.ts';
 import { seatIdFor } from './seats.ts';
 
 /** A score cap so an empty region does not dwarf every other term. */
@@ -73,7 +74,32 @@ export function principalMenu(world: IndexedWorld, state: State, faction: Factio
     }
     commandable.push({ post: id, holder: p.holder, relays: world.chainBelow(null, id).slice(0, -1), routes });
   }
-  return { menuKind: 'principal', faction, objective: f.objective, commandable };
+  const situations: SituationChoice[] = [];
+  for (const def of world.situations) {
+    const r = state.situationStates[def.id];
+    if (def.faction !== faction || r === undefined || r.sitStatus !== 'open' || r.sitSurfacedDay === null || r.sitDelegate !== null) continue;
+    situations.push(situationChoice(def, r.sitOpenOptions, def.delegableTo, null));
+  }
+  return { menuKind: 'principal', faction, objective: f.objective, commandable, situations };
+}
+
+/**
+ * A situation's open options as a menu. For a delegate, each carries how far
+ * it honours his values (0040: he decides by his values); the set is the
+ * principal's set exactly (gate B7).
+ */
+export function situationChoice(def: SituationDef, open: readonly string[], delegableTo: readonly PostId[], values: readonly string[] | null): SituationChoice {
+  return {
+    situation: def.id,
+    options: def.options
+      .filter((o) => open.includes(o.id))
+      .map((o) => ({
+        optionId: o.id,
+        group: o.group,
+        score: values === null || o.honours.length === 0 ? 0 : Math.trunc((1000 * o.honours.filter((h) => values.includes(h)).length) / o.honours.length),
+      })),
+    delegableTo,
+  };
 }
 
 /**
@@ -86,6 +112,13 @@ export function pendingRequests(world: IndexedWorld, state: State, cache: ViewCa
   for (const faction of world.factionIds) {
     const seat = seatIdFor(world.faction(faction).principal);
     out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `principal:${faction}:${day}`, view: viewFor(world, state, seat, cache), menu: principalMenu(world, state, faction) }));
+  }
+  for (const def of world.situations) {
+    const r = state.situationStates[def.id];
+    if (r === undefined || r.sitStatus !== 'open' || r.sitDelegate === null) continue;
+    const seat = seatIdFor(r.sitDelegate);
+    const menu: DelegatedMenu = { menuKind: 'delegated-situation', choice: situationChoice(def, r.sitOpenOptions, [], world.person(r.sitDelegate).values) };
+    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `delegated:${def.id}:${day}`, view: viewFor(world, state, seat, cache), menu }));
   }
   for (const post of world.postIds) {
     const options = standingOptions(world, state, post, day);

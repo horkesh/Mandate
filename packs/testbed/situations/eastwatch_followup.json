@@ -1,0 +1,41 @@
+{
+  "id": "eastwatch_followup",
+  "kind": "decision",
+  "faction": "north",
+  "title": "situation.eastwatch_followup.title",
+  "text": "situation.eastwatch_followup.text",
+  "earliest": "1861-04-01",
+  "event": { "decided": "eastwatch_stalls", "options": ["press_on"] },
+  "chain": { "id": "eastwatch", "stage": 2, "follows": { "situation": "eastwatch_stalls", "options": ["press_on"] } },
+  "options": [
+    {
+      "id": "reinforce",
+      "label": "situation.eastwatch_followup.option.reinforce",
+      "displayKey": 1,
+      "proposedBy": ["n_secretary"],
+      "group": "men",
+      "effects": [{ "propose": { "owner": "forces", "field": "reinforcement-request", "subject": "n_army_east", "delta": 100, "reason": "the-advance-asks-for-men", "side": "north" } }]
+    },
+    {
+      "id": "praise_publicly",
+      "label": "situation.eastwatch_followup.option.praise_publicly",
+      "displayKey": 2,
+      "proposedBy": ["n_leader"],
+      "group": "press",
+      "effects": [{ "propose": { "owner": "politics", "field": "bloc-support", "subject": "n_moderates", "delta": 10, "reason": "public-praise", "side": "north" } }]
+    },
+    {
+      "id": "recall",
+      "label": "situation.eastwatch_followup.option.recall",
+      "displayKey": 3,
+      "proposedBy": ["n_organiser"],
+      "orders": [{ "to": "n_army_east", "goal": "hold", "route": "wire" }]
+    }
+  ],
+  "inaction": { "text": "situation.eastwatch_followup.inaction" },
+  "historicalDefault": { "options": ["reinforce", "praise_publicly"] },
+  "staffLine": { "authors": ["n_war_office"], "recommends": ["reinforce"], "confidence": 500 },
+  "delegableTo": ["n_war_office"],
+  "gate": { "none": "an ordinary command question; no gate topic" },
+  "citations": [{ "source": "TB-DESIGN", "at": "testbed situations" }]
+}

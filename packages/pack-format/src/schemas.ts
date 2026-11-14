@@ -14,7 +14,7 @@ import { z } from 'zod';
 type IdKind = ids.IdKind;
 
 /** A well-formed id of one kind, branded as the kernel's typed id (FOUNDATION 11.3). */
-function idOf<K extends IdKind>(kind: K) {
+export function idOf<K extends IdKind>(kind: K) {
   return z
     .string()
     .max(ids.ID_MAX_LENGTH, `a ${kind} id of at most ${ids.ID_MAX_LENGTH} characters`)
@@ -23,11 +23,11 @@ function idOf<K extends IdKind>(kind: K) {
 }
 
 /** An id from a pack vocabulary (terrain, post kind, arm...): same grammar, no brand. */
-const termId = z.string().max(ids.ID_MAX_LENGTH).regex(ids.ID_PATTERN, 'a vocabulary id: a letter or digit, then letters, digits and _ . : / -');
+export const termId = z.string().max(ids.ID_MAX_LENGTH).regex(ids.ID_PATTERN, 'a vocabulary id: a letter or digit, then letters, digits and _ . : / -');
 
 /** A string-table key: lowercase dotted segments (`region.capital_north.name`). */
 export const STRING_KEY_PATTERN = /^[a-z0-9_]+(?:\.[a-z0-9_:-]+)*$/;
-const stringKey = z.string().regex(STRING_KEY_PATTERN, 'a string-table key: lowercase segments of a-z, 0-9 and _ joined by dots');
+export const stringKey = z.string().regex(STRING_KEY_PATTERN, 'a string-table key: lowercase segments of a-z, 0-9 and _ joined by dots');
 
 const int = z.int('a whole number');
 const nonNegative = int.min(0, 'zero or more');

@@ -44,11 +44,13 @@ export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
   const answer = seat.respond(request);
   const day = request.requestDay;
   if (answer.answerKind === 'choose') return [{ day, seat: request.requestSeat, command: { cmd: 'choose', request: request.requestKey, option: answer.option } }];
-  return answer.commands.map((c) => ({
-    day,
-    seat: request.requestSeat,
-    command: { cmd: 'order', to: c.to, goal: c.goal, region: c.region, route: c.route, bypass: c.bypass },
-  }));
+  // Copied field by field, so a seat can smuggle nothing extra into the log.
+  return answer.commands.map((c): LogEntry => {
+    const seat = request.requestSeat;
+    if (c.cmd === 'decide') return { day, seat, command: { cmd: 'decide', situation: c.situation, options: [...c.options] } };
+    if (c.cmd === 'delegate') return { day, seat, command: { cmd: 'delegate', situation: c.situation, to: c.to } };
+    return { day, seat, command: { cmd: 'order', to: c.to, goal: c.goal, region: c.region, route: c.route, bypass: c.bypass } };
+  });
 }
 
 /** Play `days` days from `start`, asking seats each morning. Returns the end State, the new log entries and a hash per day. */

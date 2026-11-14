@@ -12,10 +12,14 @@
  * - a commander with a standing goal (hold, or advance to a region) picks his
  *   next step from the options the kernel judged consistent with him;
  * - a principal sends his side's opening advance on the objective, and goes
- *   around a relaying office that objects, by special messenger.
+ *   around a relaying office that objects, by special messenger;
+ * - a holder handed a situation decides it by his values: the option the
+ *   kernel scored as honouring them most (lane 0.7). A rule-driven principal's
+ *   own situations take their historical default inside the kernel (a history
+ *   run, 0040), so no rule seat ever sees that default.
  * AI seats (Phase 1) wrap a rule seat and fall back to it.
  */
-import type { OptionView, OrderCommand, PrincipalMenu, ReportView, RouteOption, Seat, SeatAnswer, SeatRequest, StandingMenu } from '@mandate/kernel/seat-api';
+import type { DelegatedMenu, OptionView, OrderCommand, PrincipalMenu, ReportView, RouteOption, Seat, SeatAnswer, SeatRequest, StandingMenu } from '@mandate/kernel/seat-api';
 
 export interface RuleSeatPolicy {
   /** The day a principal orders his opening advance on the objective. */
@@ -35,6 +39,16 @@ export function chooseStep(menu: StandingMenu): OptionView {
   const best = [...menu.options].sort((a, b) => b.score - a.score || compareText(a.optionId, b.optionId))[0];
   if (best === undefined) throw new RangeError(`standing menu for ${menu.post} offers no option`);
   return best;
+}
+
+/** A delegate's choice: the option that honours his values most, ties to the earlier in display order. */
+export function chooseDelegated(menu: DelegatedMenu): string[] {
+  const options = menu.choice.options;
+  let best = -1;
+  options.forEach((o, i) => {
+    if (best === -1 || o.score > options[best]!.score) best = i;
+  });
+  return best === -1 ? [] : [options[best]!.optionId];
 }
 
 /** The quickest route that costs nothing, else the quickest at all; ties to the route's name. */
@@ -77,6 +91,7 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
 export function respond(request: SeatRequest, policy: RuleSeatPolicy = DEFAULT_RULE_SEAT_POLICY): SeatAnswer {
   const menu = request.menu;
   if (menu.menuKind === 'standing-goal') return { answerKind: 'choose', option: chooseStep(menu).optionId };
+  if (menu.menuKind === 'delegated-situation') return { answerKind: 'commands', commands: [{ cmd: 'decide', situation: menu.choice.situation, options: chooseDelegated(menu) }] };
   return { answerKind: 'commands', commands: principalOrders(menu, request.view.reports, request.requestDay, policy) };
 }
 

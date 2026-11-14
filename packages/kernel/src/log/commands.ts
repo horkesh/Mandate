@@ -7,7 +7,7 @@
  * - `choose`: a seat's answer to a menu the kernel offered it.
  * The Phase 1 verbs join this union; the verb-list test then lists them.
  */
-import type { PostId, RegionId } from '../ids.ts';
+import type { PostId, RegionId, SituationId } from '../ids.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { GoalKind } from '../plans/goal.ts';
 
@@ -29,6 +29,27 @@ export interface ChooseCommand {
   readonly option: string;
 }
 
-export type Command = OrderCommand | ChooseCommand;
+/**
+ * A decision on an open situation (lane 0.7): the options taken, at most one
+ * per group, or none to ignore it, which resolves to its `inaction` outcome
+ * (0040). The principal sends it, or the holder it was delegated to.
+ */
+export interface DecideCommand {
+  readonly cmd: 'decide';
+  readonly situation: SituationId;
+  readonly options: readonly string[];
+}
 
-export const COMMAND_KINDS = ['choose', 'order'] as const;
+/** Hand a situation's choice to a named holder (0040). The choice moves; the authority to order stays the principal's (0052). */
+export interface DelegateCommand {
+  readonly cmd: 'delegate';
+  readonly situation: SituationId;
+  readonly to: PostId;
+}
+
+/** What a seat may send in a `commands` answer. */
+export type SeatCommand = OrderCommand | DecideCommand | DelegateCommand;
+
+export type Command = OrderCommand | ChooseCommand | DecideCommand | DelegateCommand;
+
+export const COMMAND_KINDS = ['choose', 'decide', 'delegate', 'order'] as const;

@@ -1,0 +1,10 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"additionalProperties": false,
+"properties": {
+"classes": {"items":{"additionalProperties":false,"properties":{"atrocity":{"type":"boolean"},"id":{"maxLength":128,"pattern":"^[A-Za-z0-9][A-Za-z0-9_.:/-]*$","type":"string"},"requiresAgencyReason":{"type":"boolean"}},"required":["id","atrocity","requiresAgencyReason"],"type":"object"},"type":"array"}
+},
+"required": ["classes"],
+"title": "Mandate gate topic classes (gate/classes.json)",
+"type": "object"
+}
