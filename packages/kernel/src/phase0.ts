@@ -53,4 +53,5 @@ export * from './movement/march.ts';
 export * from './forces/stores.ts';
 export * from './infrastructure/infrastructure.ts';
 export * from './tick/forces.ts';
+export * from './tick/passage.ts';
 export * from './combat/contest.ts';

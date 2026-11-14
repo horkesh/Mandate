@@ -101,6 +101,10 @@ export type MapEvent =
   | { readonly event: 'contest'; readonly record: ContestRecord }
   /** A side falling back from a contested region, or unable to (lane 0.5). */
   | { readonly event: 'retreat'; readonly retreat: Retreat }
+  /** A neutral government closed or reopened its territory (0055, 0058), by a situation's proposal. */
+  | { readonly event: 'government_changed'; readonly department: string; readonly change: 'closed' | 'reopened' | 'unchanged' }
+  /** A proposal its owner refused, with the reason (a situation naming what cannot be). */
+  | { readonly event: 'proposal_refused'; readonly owner: string; readonly why: string }
   /** A pocket closed (regions newly cut off), relieved (a path reaches them again) or lost (no longer traced: overrun or abandoned). The cut is yesterday's for a lost pocket. */
   | { readonly event: 'pocket_closed' | 'pocket_relieved' | 'pocket_lost'; readonly faction: FactionId; readonly pocket: string; readonly regions: readonly RegionId[]; readonly cut: Cut | null };
 

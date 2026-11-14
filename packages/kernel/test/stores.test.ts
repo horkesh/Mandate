@@ -39,7 +39,7 @@ const BLOCKS = [
   block('ship', { department: 'a_war', region: 'w', arm: 'naval', strength: 400, storesDays: 20 }),
   block('ghost', { department: 'a_war', region: 'a2', strength: null, storesDays: 10 }),
   block('unknown_stores', { department: 'a_war', region: 'a2', strength: 500, storesDays: null }),
-  block('neutral', { department: 'n_gov', region: 'a2', strength: 500, storesDays: 10 }),
+  block('neutral', { department: 'neutral_gov', region: 'a2', strength: 500, storesDays: 10 }),
 ];
 const WORLD = indexComms(commsFixture(), MAP);
 const START = forcesStart(CONTROL, [], BLOCKS);

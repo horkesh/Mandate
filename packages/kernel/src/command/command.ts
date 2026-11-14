@@ -385,3 +385,98 @@ export function applyScheduledChanges(state: State, isoDate: string): { readonly
   }
   return posts === null ? { state, changed } : { state: { ...state, postStates: posts }, changed };
 }
+
+/**
+ * Neutral ground (0055 as amended by 0058): each region whose civil government
+ * is a department of no faction, and whether that government has closed its
+ * territory. A region whose government is a side's, or `unknown`, is not
+ * neutral ground. The supply derivation and movement read this beside the
+ * network (`NetworkConditions.neutralGround`).
+ */
+export function neutralGroundOf(map: WorldIndex, state: State): Readonly<Record<RegionId, 'open' | 'closed'>> {
+  const neutral = new Set(map.world.departments.filter((d) => d.faction === null).map((d) => d.id));
+  const out: Record<RegionId, 'open' | 'closed'> = {};
+  for (const region of (Object.keys(state.regionGovernments) as RegionId[]).sort(strictCompare)) {
+    const dept = state.regionGovernments[region]!;
+    if (dept === 'unknown' || !neutral.has(dept)) continue;
+    out[region] = Object.prototype.hasOwnProperty.call(state.closedGovernments, dept) ? 'closed' : 'open';
+  }
+  return out;
+}
+
+/** The field id a situation names to close (delta above 0) or reopen (below 0) a neutral government (0055, 0058). */
+export const GOVERNMENT_CLOSED_FIELD = 'government_closed';
+
+/** A government that may close its territory: a department of no faction whose kind the pack marks a government. */
+function closableGovernment(map: WorldIndex, department: DepartmentId): string | null {
+  const d = map.world.departments.find((x) => x.id === department);
+  if (d === undefined) return `department ${department} is not in the World`;
+  if (d.faction !== null) return `department ${department} belongs to a side; only a neutral government closes its territory`;
+  if (map.world.vocabularies.departmentKinds.find((k) => k.id === d.kind)?.government !== true) return `department ${department} is not a government`;
+  return null;
+}
+
+/** A neutral government closes its territory to every side's movement and supply (0055), from `day`. */
+export function closeGovernment(map: WorldIndex, state: State, department: DepartmentId, day: number): State {
+  const problem = closableGovernment(map, department);
+  if (problem !== null) throw new CommandError([problem]);
+  if (Object.prototype.hasOwnProperty.call(state.closedGovernments, department)) return state;
+  return { ...state, closedGovernments: { ...state.closedGovernments, [department]: day } };
+}
+
+/** A neutral government reopens its territory. */
+export function reopenGovernment(state: State, department: DepartmentId): State {
+  if (!Object.prototype.hasOwnProperty.call(state.closedGovernments, department)) return state;
+  const next: Record<DepartmentId, number> = { ...state.closedGovernments };
+  delete next[department];
+  return { ...state, closedGovernments: next };
+}
+
+/** A situation's typed proposal, as the tick reports it. */
+export interface CommandProposal {
+  readonly owner: string;
+  readonly field: string;
+  readonly subject: string | null;
+  readonly delta: number;
+}
+
+export interface AppliedProposal {
+  readonly field: string;
+  readonly subject: string;
+  readonly change: 'closed' | 'reopened' | 'unchanged';
+}
+
+/**
+ * Apply the proposals `command` owns (owner `command`), in order; others are
+ * left for their owners. Today one field: `government_closed`. A proposal
+ * naming a field `command` does not own, or a department that cannot close,
+ * is refused with a reason (the situation's author made an error the pack
+ * validator could not see, since it names State).
+ */
+export function applyCommandProposals(
+  map: WorldIndex,
+  start: State,
+  proposals: readonly CommandProposal[],
+  day: number,
+): { readonly state: State; readonly applied: readonly AppliedProposal[]; readonly refused: readonly string[] } {
+  let state = start;
+  const applied: AppliedProposal[] = [];
+  const refused: string[] = [];
+  for (const p of proposals) {
+    if (p.owner !== 'command') continue;
+    if (p.field !== GOVERNMENT_CLOSED_FIELD || p.subject === null) {
+      refused.push(`command owns no field "${p.field}" with subject ${p.subject ?? 'none'}`);
+      continue;
+    }
+    const department = p.subject as DepartmentId;
+    const problem = closableGovernment(map, department);
+    if (problem !== null) {
+      refused.push(problem);
+      continue;
+    }
+    const before = state;
+    state = p.delta > 0 ? closeGovernment(map, state, department, day) : p.delta < 0 ? reopenGovernment(state, department) : state;
+    applied.push({ field: p.field, subject: department, change: state === before ? 'unchanged' : p.delta > 0 ? 'closed' : 'reopened' });
+  }
+  return { state, applied, refused };
+}

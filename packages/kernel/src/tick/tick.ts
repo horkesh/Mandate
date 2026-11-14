@@ -30,7 +30,7 @@ import { fire, type DecisionPoint, type MapEvent, type Price, type Proposal, typ
 import { deliverDue } from './deliver.ts';
 import { createFreezeLedger, deepFreeze, type FreezeLedger } from './freeze.ts';
 import { generateReports } from './generate.ts';
-import { contestPhase, storesPhase } from './forces.ts';
+import { commandProposalsPhase, contestPhase, storesPhase } from './forces.ts';
 import { mapBarrier, mapPhase } from './map.ts';
 import { issueOrder } from './orders.ts';
 import { decideCommand, delegateCommand, runSituations, SITUATION_MECHANICS } from './situations.ts';
@@ -167,6 +167,9 @@ export function tick(world: IndexedWorld, start: State, entries: readonly LogEnt
   // 4b. Situations, after the map so a cause sees today's control: fire on their causes, surface on what the seat
   // knows, stay live, take history defaults (lane 0.7).
   state = freeze(runSituations(ctx, state));
+
+  // 4c. The proposals `command` owns: a neutral government closing or reopening (0055, 0058).
+  state = freeze(commandProposalsPhase(ctx, state));
 
   // 5. Reports on their cycles. A commander whose only option was to hold is awaiting strength.
   const awaiting = new Set([...menus].filter(([, o]) => o.length === 1 && o[0]!.kind === 'hold').map(([p]) => p));

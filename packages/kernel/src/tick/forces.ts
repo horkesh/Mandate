@@ -7,9 +7,10 @@
  *   pocket closed today starves its garrison today.
  */
 import { contest, type ContestRecord, type Retreat } from '../combat/contest.ts';
+import { applyCommandProposals } from '../command/command.ts';
 import { buildControlIndex } from '../control-index/control-index.ts';
-import type { DerivedMap } from '../control-index/derived.ts';
-import { networkOf } from '../infrastructure/infrastructure.ts';
+import { deriveMap, type DerivedMap } from '../control-index/derived.ts';
+import { passageOf, reportPocketChanges } from './passage.ts';
 import { applyRetreats } from '../movement/march.ts';
 import { storesStep } from '../forces/stores.ts';
 import type { State } from '../root-state.ts';
@@ -17,7 +18,48 @@ import { fire, type TickContext } from './context.ts';
 import { dateOfDay } from '../world/calendar.ts';
 
 /** Every mechanic the forces phases count (FOUNDATION section 11.5). Declared with the map's. */
-export const FORCES_MECHANICS = ['combat.contest', 'combat.occupation', 'combat.retreat', 'combat.retreat_blocked', 'forces.stores_fell', 'forces.stores_low', 'forces.stores_refilled'] as const;
+export const FORCES_MECHANICS = [
+  'combat.contest',
+  'combat.occupation',
+  'combat.retreat',
+  'combat.retreat_blocked',
+  'command.government_closed',
+  'command.government_reopened',
+  'command.proposal_refused',
+  'forces.stores_fell',
+  'forces.stores_low',
+  'forces.stores_refilled',
+] as const;
+
+/**
+ * Situations' proposals that `command` owns (a neutral government closing or reopening its
+ * territory: 0055, 0058), applied right after the situations phase that made them. The map
+ * phase has already run today, so the closing bars movement and supply from tomorrow.
+ */
+export function commandProposalsPhase(ctx: TickContext, state: State): State {
+  const map = ctx.world.map;
+  if (map === null) return state;
+  const mine = ctx.proposals.flatMap((p) => (p.proposal === 'effect' && p.owner === 'command' ? [p] : []));
+  if (mine.length === 0) return state;
+  const result = applyCommandProposals(map, state, mine, ctx.day);
+  // A government closing or reopening changes passage: report the pockets that makes, today.
+  if (result.state.closedGovernments !== state.closedGovernments) {
+    const month = dateOfDay(state.calendarStart!, ctx.day).month;
+    const before = deriveMap(map, { control: state.regionControl, month, network: passageOf(map, state) });
+    const after = deriveMap(map, { control: result.state.regionControl, month, network: passageOf(map, result.state) });
+    reportPocketChanges(ctx, before, after);
+  }
+  for (const a of result.applied) {
+    ctx.mapEvents.push({ event: 'government_changed', department: a.subject, change: a.change });
+    if (a.change === 'closed') fire(ctx, 'command.government_closed');
+    if (a.change === 'reopened') fire(ctx, 'command.government_reopened');
+  }
+  for (const why of result.refused) {
+    ctx.mapEvents.push({ event: 'proposal_refused', owner: 'command', why });
+    fire(ctx, 'command.proposal_refused');
+  }
+  return result.state;
+}
 
 /**
  * The contest and occupation: control deltas go to `ctx.controlDeltas` for the map
@@ -29,7 +71,7 @@ export function contestPhase(ctx: TickContext, state: State): { readonly state: 
   if (map === null) return { state, records: [], retreats: [] };
   if (state.calendarStart === null) throw new RangeError('this game has no calendar (no map)');
   const month = dateOfDay(state.calendarStart, ctx.day).month;
-  const network = networkOf(state);
+  const network = passageOf(map, state);
   // The control index alone (no supply), built fresh: the derived map's cache stays the map phase's.
   const result = contest({ map, index: buildControlIndex(map, state.regionControl), network, month }, state);
   for (const r of result.records) {
