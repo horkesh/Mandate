@@ -21,6 +21,7 @@ import type { FactionId, PersonId, PostId, RegionId } from '../ids.ts';
 import { DEFAULT_REPORT_TEMPLATES, templateProblems, type ReportTemplate } from '../knowledge/templates.ts';
 import { DEFAULT_LATENCY_RULES, latencyProblems, type LatencyRules } from '../messages/latency.ts';
 import { DEFAULT_TRAIT_RULES, type TraitRules } from './traits.ts';
+import type { WorldIndex } from '../world/index.ts';
 
 export interface CommsLink {
   readonly to: RegionId;
@@ -114,6 +115,13 @@ export class CommsWorldError extends Error {
  */
 export interface IndexedWorld {
   readonly world: CommsWorld;
+  /**
+   * Lane 0.2's World (regions over typed edges), indexed, when the game has one:
+   * control, the control index and supply run on it (lane 0.4). STAND-IN SEAM:
+   * the seats layer still routes messages over the comms map above, so the two
+   * maps sit side by side until lane 0.5 replaces the comms World with this one.
+   */
+  readonly map: WorldIndex | null;
   readonly rules: CommsRules;
   readonly regionIds: readonly RegionId[];
   readonly postIds: readonly PostId[];
@@ -204,8 +212,8 @@ export function commsWorldProblems(world: CommsWorld): string[] {
   return problems;
 }
 
-/** Validate and index a World. Throws `CommsWorldError` listing every problem. */
-export function indexWorld(world: CommsWorld): IndexedWorld {
+/** Validate and index a World, with lane 0.2's map when the game has one. Throws `CommsWorldError` listing every problem. */
+export function indexWorld(world: CommsWorld, map: WorldIndex | null = null): IndexedWorld {
   const problems = commsWorldProblems(world);
   if (problems.length > 0) throw new CommsWorldError(problems);
   const regions = new Map(world.regions.map((r) => [r.id, r]));
@@ -233,6 +241,7 @@ export function indexWorld(world: CommsWorld): IndexedWorld {
   };
   return Object.freeze({
     world,
+    map,
     rules: world.rules,
     regionIds,
     postIds: [...posts.keys()].sort(strictCompare),

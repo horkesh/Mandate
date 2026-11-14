@@ -62,9 +62,9 @@ const lines = [
 ];
 if (args.show !== undefined) {
   // What one person may read at the end of the run: his view, never State.
-  const { world, seed } = seatsWorld(args.pack);
+  const { world, setup } = seatsWorld(args.pack);
   const seat = createRuleSeat();
-  const end = phase0.playDays(world, phase0.createState(world, { seed }), () => seat, args.days).state;
+  const end = phase0.playDays(world, phase0.createState(world, setup), () => seat, args.days).state;
   const view = phase0.viewFor(world, end, phase0.seatIdFor(world.person(ids.toId('person', args.show)).id));
   lines.push('', `${args.show}'s dispatches:`, ...dispatchLog(view).map((l) => `  ${l}`), '', `${args.show}'s picture of the enemy:`, ...enemyPicture(view).map((l) => `  ${l}`));
 }

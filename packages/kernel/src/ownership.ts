@@ -83,7 +83,8 @@ const field = (f: string, writer: string, proposedBy: readonly string[], code: r
 const at = (record: string, key: string): FieldLocation => ({ record, key });
 
 export const OWNED_FIELDS: readonly OwnedField[] = [
-  field('region control', 'control', ['combat', 'occupation']),
+  // Lane 0.4: control, set from the scenario start (0050) and changed only through `applyControl`.
+  field('region control', 'control', ['combat', 'occupation'], [at('State', 'regionControl')]),
   field('region population, loyalty, supply value', 'regions', ['economy', 'situations', 'occupation']),
   field('edge condition', 'infrastructure', ['combat', 'raids', 'repair orders']),
   field('division location', 'movement', ['operations']),
@@ -136,6 +137,8 @@ export const IMMUTABLE_STATE_KEYS: readonly string[] = [
   // Lane 0.6. State is copy-on-write: below the root, records are immutable values,
   // replaced whole by the writer of the root field that holds them.
   'gameSeed',
+  // Lane 0.4: the calendar's day 0, from the scenario start.
+  'calendarStart',
   // SeatAssignment
   'seatPerson',
   'seatDriver',

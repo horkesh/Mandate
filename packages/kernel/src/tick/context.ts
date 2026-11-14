@@ -5,7 +5,9 @@
  * None of this is State; it is the tick's report (hard rule 6), rebuilt
  * identically on replay.
  */
-import type { MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
+import type { ControlChange, ControlDelta, ThresholdCrossing } from '../control/control.ts';
+import type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
+import type { Cut } from '../supply/supply.ts';
 import type { ReportBody } from '../knowledge/report.ts';
 import { templateFor } from '../knowledge/templates.ts';
 import type { BiasTerm, ReportTruth } from '../knowledge/truth.ts';
@@ -68,6 +70,13 @@ export interface DecisionPoint {
   readonly report: MessageId;
 }
 
+/** What the map phases changed or found (lane 0.4). Truth, for the run report and tests; the player learns of it only through reports. */
+export type MapEvent =
+  | { readonly event: 'control_changed'; readonly change: ControlChange }
+  | { readonly event: 'threshold_crossed'; readonly crossing: ThresholdCrossing }
+  /** A pocket closed (regions newly cut off), relieved (a path reaches them again) or lost (no longer traced: overrun or abandoned). The cut is yesterday's for a lost pocket. */
+  | { readonly event: 'pocket_closed' | 'pocket_relieved' | 'pocket_lost'; readonly faction: FactionId; readonly pocket: string; readonly regions: readonly RegionId[]; readonly cut: Cut | null };
+
 export interface TickContext {
   readonly world: IndexedWorld;
   readonly day: number;
@@ -80,6 +89,9 @@ export interface TickContext {
   readonly proposals: Proposal[];
   readonly prices: Price[];
   readonly decisionPoints: DecisionPoint[];
+  /** Control changes proposed today, for `control` to apply (combat, occupation: lane 0.5). */
+  readonly controlDeltas: ControlDelta[];
+  readonly mapEvents: MapEvent[];
 }
 
 export function fire(ctx: TickContext, mechanic: string, change = 1): void {

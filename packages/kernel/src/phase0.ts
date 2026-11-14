@@ -32,3 +32,10 @@ export * from './tick/context.ts';
 export * from './tick/freeze.ts';
 export * from './tick/setup.ts';
 export * from './tick/tick.ts';
+export * from './tick/map.ts';
+// Lane 0.4: control, the control index, supply and the invariant barrier.
+export * from './control/control.ts';
+export * from './control-index/control-index.ts';
+export * from './control-index/derived.ts';
+export * from './supply/supply.ts';
+export * from './invariants/map.ts';
