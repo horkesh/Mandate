@@ -286,9 +286,13 @@ export function checkGate(items: readonly { readonly file: string; readonly def:
       }
     }
 
-    // B4: no option, and no decision, carries an atrocity-class topic.
+    // B4: no option, and no decision, carries an atrocity-class topic. An option's own tag adds to the
+    // situation's and never replaces it (review S3).
+    if (def.kind === 'decision') {
+      for (const id of named) if (atrocity(id)) err('gate-atrocity-lever', 'gate', `a decision carries atrocity-class topic "${id}"`, 'atrocities are events and text only, never a choice for any seat (B4, D4; rule 1)');
+    }
     def.options.forEach((o, i) => {
-      const own = o.gate === null ? named : topicsOf(o.gate);
+      const own = [...new Set([...named, ...topicsOf(o.gate)])];
       for (const id of own) if (atrocity(id)) err('gate-atrocity-lever', `options[${i}]`, `an option carries atrocity-class topic "${id}"`, 'atrocities are events and text only, never a choice for any seat (B4, D4; rule 1)');
     });
 
@@ -296,6 +300,27 @@ export function checkGate(items: readonly { readonly file: string; readonly def:
     if (gated && def.kind === 'decision') {
       def.options.forEach((o, i) => {
         if (o.lockedCosts.length === 0) err('gate-no-locked-cost', `options[${i}].lockedCosts`, `option "${o.id}" has no locked costs`, 'at least one locked cost on every option of a gated decision (B5)');
+      });
+      const opposes = (e: phase0.Effect, cost: Extract<phase0.Effect, { propose: unknown }>): boolean =>
+        'propose' in e &&
+        e.propose.owner === cost.propose.owner &&
+        e.propose.field === cost.propose.field &&
+        e.propose.subject === cost.propose.subject &&
+        Math.sign(e.propose.delta) === -Math.sign(cost.propose.delta);
+      def.options.forEach((o, i) => {
+        for (const cost of o.lockedCosts) {
+          if (!('propose' in cost)) continue;
+          // Inside the item (review S4): the option's own effects, and options that can be taken with it.
+          o.effects.forEach((e, j) => {
+            if (opposes(e, cost)) err('gate-cancelled-cost', `options[${i}].effects[${j}]`, `this effect cancels a locked cost of option "${o.id}"`, 'locked costs that nothing cancels (B5)');
+          });
+          def.options.forEach((o2, i2) => {
+            if (o2 === o || o.group === null || o2.group === null || o2.group === o.group) return;
+            [...o2.effects, ...o2.lockedCosts].forEach((e) => {
+              if (opposes(e, cost)) err('gate-cancelled-cost', `options[${i2}]`, `option "${o2.id}", which can be taken with "${o.id}", cancels one of its locked costs`, 'locked costs that nothing cancels (B5)');
+            });
+          });
+        }
       });
       for (const o of def.options) {
         for (const cost of o.lockedCosts) {
@@ -376,6 +401,8 @@ function decidedWith(c: phase0.Condition, situation: string, option: string): bo
   if ('all' in c) return c.all.some((x) => decidedWith(x, situation, option));
   if ('any' in c) return c.any.some((x) => decidedWith(x, situation, option));
   if ('not' in c) return decidedWith(c.not, situation, option);
+  // `fired` of the situation applies whatever is chosen, so it offsets every option's costs (review S4).
+  if ('fired' in c) return c.fired === situation;
   return 'decided' in c && c.decided === situation && (c.options === null || c.options.includes(option));
 }
 

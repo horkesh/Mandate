@@ -205,6 +205,34 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     fires(cancel, 'gate-cancelled-cost', sit('sanctuary_act'));
   });
 
+  it('review S3: an option’s tag adds to the situation’s, and a decision itself carries no atrocity topic', () => {
+    const edit = editJson(sit('fen_crossing'), (s) => {
+      s.gate.topics = ['fen-flight', 'harbour-burning'];
+      for (const o of s.options) o.gate = { topics: ['press-closures'], placement: 'decision' };
+    });
+    firesAt(edit, 'gate-atrocity-lever', { at: 'gate' });
+    firesAt(edit, 'gate-atrocity-lever', { at: 'options[0]' });
+  });
+
+  it('review S4: B5 catches a locked cost cancelled inside the item, or by an effect on the situation firing', () => {
+    firesAt(
+      editJson(sit('fen_crossing'), (s) => (s.options[1].effects ??= []).push({ propose: { owner: 'politics', field: 'bloc-support', subject: 'n_machine', delta: 30, reason: 'return-to-the-fens', side: 'north' } })),
+      'gate-cancelled-cost',
+      { at: 'options[1].effects[0]' },
+    );
+    const together = editJson(sit('fen_crossing'), (s) => {
+      s.options[1].group = 'a';
+      s.options[0].group = 'b';
+      s.options[0].effects = [{ propose: { owner: 'politics', field: 'bloc-support', subject: 'n_machine', delta: 30, reason: 'return-to-the-fens', side: 'north' } }];
+    });
+    firesAt(together, 'gate-cancelled-cost', { at: 'options[0]' });
+    const onFiring = editJson(sit('sanctuary_act'), (s) => {
+      s.event = { fired: 'fen_crossing' };
+      s.effects.push({ propose: { owner: 'politics', field: 'foreign-patience', subject: null, delta: 20, reason: 'return-to-the-fens', side: 'north' } });
+    });
+    firesAt(onFiring, 'gate-cancelled-cost', { file: sit('sanctuary_act') });
+  });
+
   it('B10: an option a later law forbids expires with it', () => {
     fires(editJson(sit('fen_crossing'), (s) => (s.options[2].expiresWhen = null)), 'gate-no-expiry');
   });
