@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { repoPath, stripComments, stripCommentsAndStrings, tsFiles, workspacePackages, type PackageInfo } from './support/source.ts';
+import { lexSource, LexerError, repoPath, tsFiles, workspacePackages, type PackageInfo } from './support/source.ts';
 
 /**
  * Decision 0002, enforced: deterministic packages are pure, deterministic and
@@ -58,15 +58,19 @@ const BANNED: readonly Ban[] = [
 
 /** Violations in one file's source text, as `path:line: why`. */
 export function bannedApiViolations(path: string, source: string): string[] {
-  const views = { code: stripCommentsAndStrings(source), strings: stripComments(source) };
+  let lexed;
+  try {
+    lexed = lexSource(source);
+  } catch (e) {
+    if (e instanceof LexerError) return [`${path}:${e.line}: ${e.message}`];
+    throw e;
+  }
+  const views = { code: lexed.code, strings: lexed.withStrings };
   const violations: string[] = [];
   for (const { pattern, why, scope } of BANNED) {
     const text = views[scope];
     const global = new RegExp(pattern.source, pattern.flags.includes('g') ? pattern.flags : `${pattern.flags}g`);
-    for (const m of text.matchAll(global)) {
-      const line = text.slice(0, m.index).split('\n').length;
-      violations.push(`${path}:${line}: ${why}`);
-    }
+    for (const m of text.matchAll(global)) violations.push(`${path}:${lexed.lineOf(m.index)}: ${why}`);
   }
   return violations;
 }
@@ -134,6 +138,31 @@ describe('banned APIs in deterministic packages (decision 0002)', () => {
     for (const why of ['node: imports', 'Node built-in', 'module-level let', 'module-level mutable collection', 'Math.random', 'transcendental', 'Date', 'reflective writes', 'localeCompare']) {
       expect(found.some((v) => v.includes(why)), why).toBe(true);
     }
+  });
+
+  it('sees past regex literals that look like strings, comments or templates (the reviewer probes)', () => {
+    const probes = [
+      "export const a = /'/.test('x') || Math.random();",
+      "export const b = 'a/b'.split(/\\//).length + Math.random();",
+      "export const c = /[/*]/.test('x');",
+      'export const d = Math.random();',
+      "export const e = /`/.test('x');",
+      'export const f = Date.now();',
+    ].join('\n');
+    const found = bannedApiViolations('fixture.ts', probes);
+    expect(found).toEqual([
+      'fixture.ts:1: Math.random: use a named RNG stream',
+      'fixture.ts:2: Math.random: use a named RNG stream',
+      'fixture.ts:4: Math.random: use a named RNG stream',
+      'fixture.ts:6: Date: the kernel has no clock',
+    ]);
+  });
+
+  it('fails closed when the lexer loses sync', () => {
+    expect(bannedApiViolations('fixture.ts', "const s = 'unterminated\nMath.random();")).toEqual([
+      'fixture.ts:1: lexer lost sync at line 1: a quoted string meets a newline',
+    ]);
+    expect(bannedApiViolations('fixture.ts', 'const t = `open\n/* Math.random() */')[0]).toContain('lexer lost sync');
   });
 
   it('ignores comments and string contents, and allows readonly module constants', () => {

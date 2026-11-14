@@ -129,6 +129,25 @@ describe('the scanner catches violations (positive control)', () => {
     ]);
   });
 
+  it('sees writes after regex literals that look like strings, comments or templates (the reviewer probes)', () => {
+    const probes: SourceFile = {
+      path: 'packages/kernel/src/supply.ts',
+      code: [
+        "const a = /'/.test('x'); r.controller = f;",
+        "const b = 'a/b'.split(/\\//); r.controller = f;",
+        "const c = /[/*]/.test('x');",
+        'r.controller = f;',
+        "const e = /`/.test('x');",
+        'r.id = other;',
+      ].join('\n'),
+    };
+    expect(writeViolations([probes], owned, ['id']).map((v) => `${v.line} ${v.key}`)).toEqual(['1 controller', '2 controller', '4 controller', '6 id']);
+  });
+
+  it('fails closed when the lexer loses sync', () => {
+    expect(() => writeSites({ path: 'x.ts', code: "const s = 'open\nr.controller = f;" }, 'controller')).toThrow('lexer lost sync at line 1');
+  });
+
   it('counts increments as writes', () => {
     expect(writeSites({ path: 'x.ts', code: 'r.controller++; --r.controller;' }, 'controller').map((s) => s.form)).toEqual(['increment', 'increment']);
   });
