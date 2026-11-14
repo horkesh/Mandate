@@ -282,7 +282,8 @@ Lanes, sized from `docs/LANES.md`:
 
 Notes for lanes not yet started, from research:
 - **0.2:** the testbed pack's graph needs the features the planner spike tests: a direct road and a longer flank route, limited rail, a river, a fort, two posts around a salient, and a depot (`docs/research/2026-11-14-planner-design.md`).
-- **0.6:** a commander's overestimate of the enemy lives in belief derivation, so his dispatches and his plans inflate the enemy by the same amount (planner-design note).
+- **0.6:** a commander's overestimate of the enemy lives in belief derivation, so his dispatches and his plans inflate the enemy by the same amount; an intelligence chief's bias is a separate term on top, so the player can tell a timid general from a bad intelligence chief (planner-design note).
+- **Phase 1 calibration:** edit distance comes from the planner's scores, so planner weights change how often generals obey. Calibrate them together, one change per measured run, tracking compliance outcomes beside planner metrics (planner-design note).
 - **0.9:** builds on `docs/research/2026-11-14-planner-design.md` and its spike plan and success criteria.
 
 Lane 0.1 starts by upgrading to Vitest 5 and TypeScript 7 and adds a dependency-licence check (0035). Lane 0.2 also covers several scenario starts per pack, published schemas with readable validation errors, and string tables for all player text (0030). The Union data in lane 0.3 starts at the March 1861 inauguration (0028), and the world format reserves state fields and owners for weather, fortification and raids (0029).
