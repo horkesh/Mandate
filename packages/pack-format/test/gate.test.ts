@@ -267,6 +267,20 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     firesAt(second((t) => (t['situation.fen_crossing.option.send_back'] = 'Hunt them down')), 'gate-refused', { file: sit('fen_crossing'), at: 'options[2].label' });
   });
 
+  it('standing review S5: an option’s own tag gates the item (A5, A7, B5), and an atrocity tag on a decision fails whatever its options carry', () => {
+    // Probe G3: the situation stays `none`, one option is tagged, and the citations go.
+    const optionOnly = editJson(sit('eastwatch_followup'), (s) => ((s.options[2].gate = { topics: ['fen-flight'], placement: 'decision' }), (s.citations = [])));
+    firesAt(optionOnly, 'gate-citation', { file: sit('eastwatch_followup'), at: 'citations' });
+    firesAt(optionOnly, 'gate-unsigned', { file: sit('eastwatch_followup'), at: 'gateReview' });
+    firesAt(optionOnly, 'gate-no-locked-cost', { file: sit('eastwatch_followup'), at: 'options[0].lockedCosts' });
+    // Probe G4: an atrocity-class decision whose options carry their own tags.
+    const atrocity = editJson(sit('fen_crossing'), (s) => {
+      s.gate = { topics: ['harbour-burning'], placement: 'event', risks: [], actingSide: 'south' };
+      for (const o of s.options) o.gate = { topics: ['fen-flight'], placement: 'decision' };
+    });
+    firesAt(atrocity, 'gate-atrocity-lever', { file: sit('fen_crossing'), at: 'gate' });
+  });
+
   it('B5: every option of a gated decision carries locked costs, and nothing cancels them', () => {
     fires(editJson(sit('fen_crossing'), (s) => (s.options[2].lockedCosts = [])), 'gate-no-locked-cost');
     const cancel = editJson(sit('sanctuary_act'), (s) => {

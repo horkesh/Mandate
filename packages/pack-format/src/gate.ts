@@ -275,7 +275,8 @@ export function checkGate(
     const effects = phase0.effectsOf(def);
     const tag = def.gate;
     const named = topicsOf(tag);
-    const gated = named.length > 0;
+    // Standing review S5: an option's own tag gates the item too, so A5, A7 and B5 cannot be escaped by tagging only options.
+    const gated = named.length > 0 || def.options.some((o) => topicsOf(o.gate).length > 0);
 
     // A1: a trigger match, or an effect on a protected field, needs a tag (or `none` with a reason and a sign-off).
     const hits = texts.flatMap(([key, text]) => triggerMatches(text, gate.triggers).map((m) => `"${m}" in ${key}`));
