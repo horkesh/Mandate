@@ -2,7 +2,7 @@
 
 Status: design lane output (2026-11-14), revised after the gate review of the same day; a proposal like everything in `docs/design/`. It is the gate checklist that 0021 places "with the situations schema" and that FOUNDATION section 12 assigns to lane 0.7. It works under 0021 as amended by 0026 (wider scope, the placement rule, Black regiments), and under 0009, 0016, 0022, 0023, 0028, 0029, 0032, 0040, 0041 and 0042. Nothing here is accepted until a decision record accepts it.
 
-History comes only from the research notes, cited as **[CS]** `docs/research/2026-11-14-confederate-side.md`, **[UP]** `2026-11-14-union-politics.md`, **[UE]** `2026-11-14-union-war-economy.md`, **[UN]** `2026-11-14-union-navy.md`, **[SW]** `2026-11-14-secession-winter-1861.md`, **[U62]** `2026-11-14-union-1861-62.md`, and three notes outside the brief's list that I read for one or two facts each: **[MX]** `2026-11-14-map-extent-size-sources.md` (the Dakota War, the slice's end date), **[MF]** `2026-11-14-march-1861-facts.md` (the inaugural's reception) and **[CP]** `2026-11-14-union-command-and-promotion.md` (Butler's removal). Situation and option ids (S13, `return`, `ask-congress`) are those of the situations catalogue, `docs/design/SITUATIONS-1861-62.md` on its own branch. A placement that rests on a fact the notes do not source is marked **needs-source**; its authoring is blocked until a research lane sources it. **(added)** marks a topic the brief did not list.
+History comes only from the research notes, cited as **[CS]** `docs/research/2026-11-14-confederate-side.md`, **[UP]** `2026-11-14-union-politics.md`, **[UE]** `2026-11-14-union-war-economy.md`, **[UN]** `2026-11-14-union-navy.md`, **[SW]** `2026-11-14-secession-winter-1861.md`, **[U62]** `2026-11-14-union-1861-62.md`, and three notes outside the brief's list that I read for one or two facts each: **[MX]** `2026-11-14-map-extent-size-sources.md` (the Dakota War, the slice's end date), **[MF]** `2026-11-14-march-1861-facts.md` (the inaugural's reception) and **[CP]** `2026-11-14-union-command-and-promotion.md` (Butler's removal). **[GCF]** is `2026-11-14-gate-and-catalogue-facts.md`, the research that sourced the gate's needs-source topics after this document was accepted (0046). Situation and option ids (S13, `return`, `ask-congress`) are those of the situations catalogue, `docs/design/SITUATIONS-1861-62.md` on its own branch. A placement that rests on a fact the notes do not source is marked **needs-source**; its authoring is blocked until a research lane sources it. **(added)** marks a topic the brief did not list.
 
 The first slice runs from the inauguration (4 March 1861) to 31 December 1862 [MX]. A topic dated later is placed provisionally and ruled again before it is authored.
 
@@ -356,7 +356,7 @@ Each entry gives the window, the placement of each facet, the refused facets, th
 
 **`union-habeas-and-arrests`**. Window: slice (the 1863 act is later).
 - *decision*: the habeas order of 27 April 1861 (catalogue S12); the answer to Merryman (comply, decline and defend, ask Congress; catalogue S18) [SW 6.6]; the standing arrest policy as a security order on a post, issued through its holder (which seat ran the 1861 arrests is needs-source: [U62] lists Seward's internal-security arrests as "needs research"; Stanton's order of 8 August 1862 was followed by at least 350 arrests in a month [UP 4.3]); the habeas proclamation of 24 September 1862 [UP 1.5]. Locked costs: Democrats, border-state trust, and accountability when Congress next sits (0040's chamber state). All are security orders in the sense of section 1 (0032, R8).
-- *event*: Taney's rulings (28 May oral, 1 June written) [SW 6.6]; arrests made by holders under the policy, each with its own cost (Marshal Kane, 27 June 1861; the Baltimore police board, 1 July; Mayor Brown and 31–33 legislators, 11–12 September 1861 [SW 6.6]); Charles Stone's arrest on 8 February 1862 (9 and 12 in other sources) and six months without trial [UP 1.3] (added).
+- *event*: Taney's rulings (28 May oral, 1 June written) [SW 6.6]; arrests made by holders under the policy, each with its own cost (Marshal Kane, 27 June 1861; the Baltimore police board, 1 July; Mayor Brown and legislators, 12–13 September 1861, 26–28 legislators best supported [SW 6.6], corrected by [GCF]); Charles Stone's arrest on 8 February 1862 (9 and 12 in other sources) and six months without trial [UP 1.3] (added).
 - *derived*: the arrest count is a calibration band for history runs (13,000 to 15,000 over the war [UP 4.3]), never a score.
 - *refused*: arrests made free by not being noticed; arrests that raise loyalty without cost; one card per arrested person (bookkeeping of the kind 0040 bans for patronage); a free-standing arrest verb.
 - Risks: scoring, hindsight (the 1863 indemnity act must not be implied in 1861 text).
@@ -409,22 +409,25 @@ Each entry gives the window, the placement of each facet, the refused facets, th
 - The Sand Creek massacre itself is not in the notes: needs-source, and it falls under R3. Retaliation falls under R4.
 - Risks: atrocity, agency.
 
-**`prisoners-and-exchange`** (added). Window: `later` until research places any 1861–62 facet. 0021 puts prison camps in the gate; the notes cover only the 1863 exchange talks and Lee's 1864 offer [CS 4.4]. The 1862 exchange arrangements are not in any note.
-- Status: `record` (R4) and needs-source.
+**`prisoners-and-exchange`** (added). Window: slice (moved from `later` after [GCF] sourced 1861–62 facets). 0021 puts prison camps in the gate. In-slice facets now sourced [GCF]: the hostages chosen by lot (Corcoran) and how that ended; local exchanges and the House resolution of December 1861; Wool–Cobb; the cartel of 22 July 1862, its terms and agents ("The President directs"); the Union-held numbers; Camp Parole; GO 54 holding Pope's officers; the halt of 28–30 December 1862.
+- Status: `record` (R4), with no interim placement until R4 exists.
+- **Ship-blocker** (section 4): its window lies inside the slice.
+- The Corcoran lot, GO 60 and Davis's proclamation are threatened reprisal killings by the Confederate seat: under rule 1 and the interim Confederate rule they are events and text, never a choice.
+- R4 still needs: camp conditions and mortality on both sides in 1862; Confederate-held totals; the treatment of Black people captured in 1862 (civilians and teamsters as well as soldiers); a Union document giving the 1861 reason for refusing a cartel.
 - Risks: atrocity, agency.
 
 ### 3.7 Native nations
 
 **`indian-territory-1861`**. Window: slice.
 - *event*: the Union abandons its posts (Fort Washita mid-April, Arbuckle 3 May, Cobb about 9 May 1861); Pike's treaties with the Creek (10 July), Choctaw and Chickasaw (12 July), Seminole (1 August) and Cherokee (7 October, outside [SW]'s window, signed by Ross after much negotiation) [SW 6.5], [CS 4.5], as Confederate acts under the interim rule.
-- *derived* and *event* (agency, added in review): the nations' and Native men's own choices: Ross's neutrality; Stand Watie's commission as colonel (July 1861, snippet); Opothleyahola's loyalists (with Black Creeks and enslaved people) moving toward Kansas, with the fights of 19 November, 9 December and 26 December 1861 [SW 6.5]. Enlistment by Native men, on either side, is their choice, shown like `black-enlistment`: derived from conditions and policy, never a pool.
-- *text*: more than 7,000 enslaved people in Indian Territory, about 14 percent [SW 6.2]; the text does not erase slavery there either.
+- *derived* and *event* (agency, added in review): the nations' and Native men's own choices: Ross's neutrality; Stand Watie a colonel by 1 September 1861 (July unconfirmed) [GCF]; Opothleyahola's loyalists (with Black Creeks and enslaved people) moving toward Kansas, with the fights of 19 November, 9 December and 26 December 1861 [SW 6.5]. Enlistment by Native men, on either side, is their choice, shown like `black-enlistment`: derived from conditions and policy, never a pool.
+- *text*: 7,369 enslaved people in the four nations, about 12.5 percent (the 1860 census; [GCF], correcting [SW 6.2]'s "more than 7,000 ... about 14 percent"); the text does not erase slavery there either.
 - No Union decision in 1861 [SW 6.8].
 - *refused*: any verb for either principal to recruit Native nations or Native men, or to treat them as a manpower pool.
 - R3 defines "protected" for a nation that is a seat: no pool or resource targeting, though diplomacy toward it may be legal.
 - Risks: agency, resource, lost-cause.
 
-**`dakota-war-1862`** (added as a separate entry). Window: slice (18 August to 26 September 1862; 358 settlers and about 113 soldiers and militia killed; a commission sentenced 303 Dakota men to death; Lincoln reviewed the cases personally and 38 were hanged at Mankato on 26 December 1862; the source also gives 39) [MX]; Pope went to the Department of the Northwest in September 1862 [U62].
+**`dakota-war-1862`** (added as a separate entry). Window: slice (18 August 1862, the first attacks, to 26 December 1862, the executions at Mankato under Lincoln's order); Pope went to the Department of the Northwest in September 1862 [U62]. Figures are given as the attributed ranges in [GCF] sections 1–2, never as single numbers: deaths on each side, the trials (the commission's recorder gives "over four hundred" tried and 303 sentenced to death), and the executions, with each source's interest stated. This replaces the single-source figures first taken from [MX].
 - Status: `record` (R3) and needs-source, with no interim placement until a research lane sources the facts. The Department of the Northwest may exist as a post; nothing about the war is authored.
 - **Ship-blocker**: its window lies inside the slice, so under the ship rule the slice cannot ship until R3 exists and its facets are authored.
 - Reasons: 0026 names it; [SW 6.8] refuses it until its own record; [UP findings] asks for a lane and a record; the facts come from one Wikipedia article [MX]. The review of the sentences would put a choice of who is executed on the player's desk, the gravest case of "Is this a lever?".
@@ -457,8 +460,9 @@ The lead writes these; each states the question the record must answer and this 
 - **R3**, which holds `dakota-war-1862` (and the Native-nation questions of `indian-territory-1861`, whose agency facets may be authored meanwhile).
 - **`union-freedpeople-camps`**, needs-source as a whole topic.
 - **`confederate-habeas`**, needs-source as a whole topic (its only facet is the decision, which waits for the suspensions' dates and terms).
+- **R4**, which holds `prisoners-and-exchange` (moved into the slice after [GCF] sourced its 1861–62 facets).
 
-`prisoners-and-exchange` (R4) is placed in the `later` window; if research finds 1861–62 facets, they join this list. The other records block only the topics they hold, and facet-level needs-source flags block nothing.
+The other records block only the topics they hold, and facet-level needs-source flags block nothing.
 
 | # | Record | Question it must answer | Recommendation |
 |---|---|---|---|
