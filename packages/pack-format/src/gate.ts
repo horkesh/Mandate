@@ -397,6 +397,10 @@ export function checkGate(
       def.options.forEach((o, i) => {
         if (!costed.has(o.id)) return;
         if (o.lockedCosts.length === 0) err('gate-no-locked-cost', `options[${i}].lockedCosts`, `option "${o.id}" has no locked costs`, 'at least one locked cost on every option of a gated decision (B5)');
+        // 0060 (gate G5): a real cost is a fall on the deciding side's own measures; lowering the enemy is never a price.
+        else if (!o.lockedCosts.some((c) => 'propose' in c && c.propose.side === def.faction && c.propose.delta < 0)) {
+          err('gate-cost-not-own', `options[${i}].lockedCosts`, `option "${o.id}" has no locked cost that falls on ${def.faction}'s own measures`, 'at least one locked cost lowering the deciding side’s own measure; a fall on the enemy is never a cost (B5, 0060)');
+        }
       });
       const opposes = (e: phase0.Effect, cost: Extract<phase0.Effect, { propose: unknown }>): boolean =>
         'propose' in e &&
@@ -478,8 +482,10 @@ export function checkGate(
           err('gate-acting-side', `${at}.propose.side`, `an effect conditioned on ${route} names no side`, 'the side whose measure it moves, so D5 can check that no seat gains (D5)');
           continue;
         }
-        const wrong = atrocityMove(effect, t.actingSide);
-        if (wrong !== null) err('gate-atrocity-benefit', at, `this effect, conditioned on ${route}, ${wrong}`, 'no positive effect for any seat, and no fall but the acting side’s, conditioned on atrocity-class conduct (D5)');
+        const wrong = atrocityMove(effect, t.actingSide, def.kind === 'decision' ? def.faction : null);
+        if (wrong !== null) {
+          err('gate-atrocity-benefit', at, `this effect, conditioned on ${route}, ${wrong}`, def.kind === 'decision' ? 'no rise for any side; a fall only on the acting side’s measures, or the deciding side’s own as the cost of its choice (D5, 0060)' : 'no positive effect for any seat, and no fall but the acting side’s, conditioned on atrocity-class conduct (D5)');
+        }
       }
     }
     // C3/F6 anachronisms, C4/F5 forbidden patterns, F2 proximity.
@@ -558,8 +564,9 @@ export interface AtrocityTaint {
  * knowledge condition and the stage it follows; or one option's appear, expire and wait conditions) depends on a
  * tainted item when it fires on it, reads its decision, waits for news of it (a `knows` pattern whose subject is that
  * item), or reads a flag it sets. An option-level taint passes on only through that option's flags or a decision
- * naming that option: a decision read with no options named holds whatever was chosen. A `knows` pattern with no subject, matching an atrocity's report only by type, subtype or token,
- * is beyond this check: the gate reviewer reads for it (Q7).
+ * naming that option: a decision read with no options named holds whatever was chosen. A `knows` pattern with no
+ * subject that could match a tainted notice's own declared report counts too (0060, gate G6). Reports about it from
+ * other modules (the press, later) are beyond this check; the gate reviewer reads for them (Q7).
  */
 export function atrocityTaint(
   items: readonly { readonly def: SituationDef }[],
@@ -577,7 +584,7 @@ export function atrocityTaint(
     if (flagsSet(on, onOption).some((f) => reads.has(f))) return true;
     if (onOption === null) {
       if (scope.follows?.situation === on.id) return true;
-      return scope.conditions.some((c) => phase0.situationsIn(c).includes(on.id) || knowsSubjects(c).includes(on.id));
+      return scope.conditions.some((c) => phase0.situationsIn(c).includes(on.id) || knowsSubjects(c).includes(on.id) || knowsPatterns(c).some((p) => couldMatchReport(p, on)));
     }
     const followsIt = scope.follows?.situation === on.id && scope.follows.options !== null && scope.follows.options.includes(onOption);
     return followsIt || scope.conditions.some((c) => decidedNaming(c, on.id, onOption));
@@ -619,6 +626,32 @@ function decidedNaming(c: phase0.Condition, situation: string, option: string): 
   return 'decided' in c && c.decided === situation && c.options !== null && c.options.includes(option);
 }
 
+/** Every `knows` pattern in a condition. */
+function knowsPatterns(c: phase0.Condition): phase0.KnowsPattern[] {
+  if ('all' in c) return c.all.flatMap(knowsPatterns);
+  if ('any' in c) return c.any.flatMap(knowsPatterns);
+  if ('not' in c) return knowsPatterns(c.not);
+  return 'knows' in c ? [c.knows] : [];
+}
+
+/**
+ * Whether a `knows` pattern could match a notice's own report (0060, gate G6). The report is declared in the item: its
+ * type and subtype, its subject the item itself, and no claims. So a pattern matches it when every field it names agrees,
+ * and it names no claim. A decision's staff line is not matched by type alone: every decision has one of the same type.
+ */
+function couldMatchReport(p: phase0.KnowsPattern, def: SituationDef): boolean {
+  const r = def.report;
+  if (r === null) return false;
+  return (
+    (p.subjectKind === null || p.subjectKind === 'situation') &&
+    (p.subjectId === null || p.subjectId === def.id) &&
+    (p.reportType === null || p.reportType === r.reportType) &&
+    (p.subtype === null || p.subtype === r.subtype) &&
+    p.claimKind === null &&
+    p.token === null
+  );
+}
+
 /** The situations whose reports a condition waits for (knows with subject kind situation). */
 function knowsSubjects(c: phase0.Condition): string[] {
   if ('all' in c) return c.all.flatMap(knowsSubjects);
@@ -640,12 +673,17 @@ function decidedWith(c: phase0.Condition, situation: string, option: string): bo
  * What is wrong with an atrocity-class term's effect, or null (E7, D5; the lead's ruling on gate re-check G1, which
  * corrects his ruling on N2). It may only lower the acting side's own measures: no seat gains anything from an
  * atrocity (0046), so a rise on any side is refused, outrage included, and a fall on any other side helps the actor.
+ * `decider` is the deciding side of a decision that depends on an atrocity: its own falls are the price of its choice (0060).
  * Every side measure reads higher-is-better for its own side (the published schema states it for `propose.delta`).
  */
-export function atrocityMove(effect: phase0.Effect, actingSide: string): string | null {
+export function atrocityMove(effect: phase0.Effect, actingSide: string, decider: string | null = null): string | null {
   if (!('propose' in effect) || effect.propose.side === null || effect.propose.delta === 0) return null;
   if (effect.propose.delta > 0) return effect.propose.side === actingSide ? 'raises the acting side’s measure' : 'raises another side’s measure';
-  return effect.propose.side === actingSide ? null : 'lowers another side’s measure, which helps the side that acted';
+  if (effect.propose.side === actingSide) return null;
+  // 0060 (gate G5): in a decision that depends on an atrocity, a fall on the deciding side's own measures is the cost
+  // of the choice, not a gain from the atrocity. Notices have no decider, so only the actor's measures may fall.
+  if (decider !== null && effect.propose.side === decider) return null;
+  return 'lowers another side’s measure, which helps the side that acted';
 }
 /**
  * The ship rule (A8; section 1), a release check rather than a loader rule:
