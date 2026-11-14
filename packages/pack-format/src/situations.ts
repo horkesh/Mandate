@@ -183,7 +183,14 @@ export function readSituations(files: PackFiles, sink: IssueSink): { readonly fi
   return out;
 }
 
-/** Every string key a situation shows, with its JSON path. */
+/** The string key a reason id renders through, in explanations and the staff report (hard rule 6). */
+export const reasonKey = (reason: string) => `reason.${reason}`;
+
+/**
+ * Every string key a situation shows, with its JSON path: its title, text,
+ * labels and inaction text, and every reason it shows (effect reasons and the
+ * staff line's stated reasons), which are player-facing too (gate review S2).
+ */
 export function stringKeysOf(def: SituationDef): { readonly key: string; readonly at: string }[] {
   const keys = [
     { key: def.title, at: 'title' },
@@ -191,6 +198,8 @@ export function stringKeysOf(def: SituationDef): { readonly key: string; readonl
   ];
   def.options.forEach((o, i) => keys.push({ key: o.label, at: `options[${i}].label` }));
   if (def.inaction !== null) keys.push({ key: def.inaction.text, at: 'inaction.text' });
+  for (const { at, effect } of phase0.effectsOf(def)) if ('propose' in effect) keys.push({ key: reasonKey(effect.propose.reason), at: `${at}.propose.reason` });
+  def.staffLine?.reasons.forEach((r, i) => keys.push({ key: reasonKey(r.kind), at: `staffLine.reasons[${i}].kind` }));
   return keys;
 }
 

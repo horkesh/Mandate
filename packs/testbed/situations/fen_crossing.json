@@ -20,7 +20,7 @@
       "displayKey": 2,
       "proposedBy": ["n_secretary"],
       "honours": ["duty"],
-      "lockedCosts": [{ "propose": { "owner": "politics", "field": "bloc-support", "subject": "n_machine", "delta": -30, "reason": "the-fen-masters-protest", "side": "north" } }]
+      "lockedCosts": [{ "propose": { "owner": "politics", "field": "bloc-support", "subject": "n_machine", "delta": -30, "reason": "the-fen-holders-protest", "side": "north" } }]
     },
     {
       "id": "send_back",
@@ -40,9 +40,9 @@
     "effects": [{ "propose": { "owner": "politics", "field": "bloc-support", "subject": "n_hawks", "delta": -10, "reason": "each-commander-decides", "side": "north" } }]
   },
   "historicalDefault": { "options": ["shelter"] },
-  "staffLine": { "authors": ["n_war_office"], "recommends": ["shelter"], "reasons": [{ "kind": "denies-the-enemy-labour", "weight": 700 }], "confidence": 700 },
+  "staffLine": { "authors": ["n_war_office"], "recommends": ["shelter"], "reasons": [{ "kind": "keeps-them-from-the-enemy", "weight": 700 }], "confidence": 700 },
   "delegableTo": ["n_war_office"],
   "gate": { "topics": ["fen-flight"], "placement": "decision", "risks": ["agency", "resource"] },
-  "gateReview": { "author": "lane-0.7", "reviewer": "fixture-signoff", "date": "2026-11-14", "questionVersions": { "A1": 1, "A2": 1, "A3": 1, "A4": 1, "A5": 1, "A6": 1, "A7": 1, "B1": 1, "B2": 1, "B3": 1, "B4": 1, "B5": 1, "B7": 1, "B9": 1, "B10": 1, "C1": 1, "C2": 1, "C3": 1, "C4": 1, "D6": 1, "E7": 1, "F2": 1, "F5": 1, "F6": 1, "Q1": 1, "Q2": 1, "Q3": 1, "Q4": 1, "Q5": 1, "Q6": 1, "Q7": 1, "Q8": 1 }, "contentHash": "c5ebb524f3d6556dcdb3ad7abf4e9938f1b543d3a01103f220087de832d5bb40" },
+  "gateReview": { "author": "lane-0.7", "reviewer": "fixture-signoff", "date": "2026-11-14", "questionVersions": { "A1": 1, "A2": 1, "A3": 1, "A4": 1, "A5": 1, "A6": 1, "A7": 1, "B1": 1, "B2": 1, "B3": 1, "B4": 1, "B5": 1, "B7": 1, "B9": 1, "B10": 1, "C1": 1, "C2": 1, "C3": 1, "C4": 1, "D6": 1, "E7": 1, "F2": 1, "F5": 1, "F6": 1, "Q1": 1, "Q2": 1, "Q3": 1, "Q4": 1, "Q5": 1, "Q6": 1, "Q7": 1, "Q8": 1 }, "contentHash": "8443de1c81c8791bb24805408bcca13cc6873b6de979351ef477d470faf2a3a6" },
   "citations": [{ "source": "TB-DESIGN", "at": "testbed gate register" }]
 }

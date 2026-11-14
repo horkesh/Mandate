@@ -86,5 +86,16 @@
   "situation.harbour_burning.title": "Gullhaven burned",
   "situation.harbour_burning.text": "Southern troops burned the harbour town of Gullhaven. Reports of the dead disagree.",
   "situation.sanctuary_act.title": "The Sanctuary Act",
-  "situation.sanctuary_act.text": "The Assembly has passed the Sanctuary Act: no officer of the North may send fen folk back to the salt fens."
+  "situation.sanctuary_act.text": "The Assembly has passed the Sanctuary Act: no officer of the North may send fen folk back to the salt fens.",
+  "reason.a-fighter-sent": "a fighting colonel sent to the front",
+  "reason.the-army-sits": "the army sits idle",
+  "reason.supply": "the army is short of supplies",
+  "reason.the-advance-asks-for-men": "the advance asks for men",
+  "reason.public-praise": "praise in the papers",
+  "reason.no-word-from-the-capital": "no word from the capital",
+  "reason.the-fen-holders-protest": "the men who held them protest",
+  "reason.return-to-the-fens": "people returned to those who held them",
+  "reason.each-commander-decides": "each commander decides alone",
+  "reason.keeps-them-from-the-enemy": "it keeps them out of the enemy’s hands",
+  "reason.a-harbour-burned": "a harbour town burned"
 }

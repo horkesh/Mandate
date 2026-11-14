@@ -136,6 +136,13 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     expect(triggerMatches('People burned the mill', loadPack(testbedFiles()).pack!.gate!.triggers)).toEqual(['burned']);
   });
 
+  it('review S2: reason text is player-facing, so it is required, scanned, wording-checked and hashed', () => {
+    firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.inaction.effects[0].propose.reason = 'unwritten')), 'missing-string', { at: 'inaction.effects[0].propose.reason' });
+    firesAt(editJson('strings/en.json', (t) => (t['reason.the-army-sits'] = 'the salt fens empty')), 'gate-untagged', { file: sit('eastwatch_stalls') });
+    firesAt(editJson('strings/en.json', (t) => (t['reason.supply'] = 'a quota of fen folk')), 'gate-forbidden-wording', { at: 'staffLine.reasons[0].kind' });
+    firesAt(editJson('strings/en.json', (t) => (t['reason.return-to-the-fens'] = 'a change of policy')), 'gate-stale-review', { file: sit('fen_crossing'), at: 'gateReview.contentHash' });
+  });
+
   it('A1 and B3: an effect on a protected field needs a tag, and is refused', () => {
     const edit = editJson(sit('eastwatch_stalls'), (s) => s.options[1].effects.push({ propose: { owner: 'regions', field: 'fenfolk-labour', subject: null, delta: 5, reason: 'x', side: 'north' } }));
     fires(edit, 'gate-untagged');
