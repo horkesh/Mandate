@@ -34,21 +34,15 @@ export const FORCES_MECHANICS = [
 /**
  * Situations' proposals that `command` owns (a neutral government closing or reopening its
  * territory: 0055, 0058), applied right after the situations phase that made them. The map
- * phase has already run today, so the closing bars movement and supply from tomorrow.
+ * phase has already run today, so this phase reports the pockets a closing makes itself, and
+ * hands back the day's map as it now is: the barrier and the tick's result never carry a map
+ * State has moved past. Movement and the contest see the closing from tomorrow morning.
  */
-export function commandProposalsPhase(ctx: TickContext, state: State): State {
+export function commandProposalsPhase(ctx: TickContext, state: State): { readonly state: State; readonly derived: DerivedMap | null } {
   const map = ctx.world.map;
-  if (map === null) return state;
   const mine = ctx.proposals.flatMap((p) => (p.proposal === 'effect' && p.owner === 'command' ? [p] : []));
-  if (mine.length === 0) return state;
+  if (mine.length === 0) return { state, derived: null };
   const result = applyCommandProposals(map, state, mine, ctx.day);
-  // A government closing or reopening changes passage: report the pockets that makes, today.
-  if (result.state.closedGovernments !== state.closedGovernments) {
-    const month = dateOfDay(state.calendarStart!, ctx.day).month;
-    const before = deriveMap(map, { control: state.regionControl, month, network: passageOf(map, state) });
-    const after = deriveMap(map, { control: result.state.regionControl, month, network: passageOf(map, result.state) });
-    reportPocketChanges(ctx, before, after);
-  }
   for (const a of result.applied) {
     ctx.mapEvents.push({ event: 'government_changed', department: a.subject, change: a.change });
     if (a.change === 'closed') fire(ctx, 'command.government_closed');
@@ -58,7 +52,15 @@ export function commandProposalsPhase(ctx: TickContext, state: State): State {
     ctx.mapEvents.push({ event: 'proposal_refused', owner: 'command', why });
     fire(ctx, 'command.proposal_refused');
   }
-  return result.state;
+  // The cause first, then what it did: the pockets the closing or reopening makes, today.
+  let derived: DerivedMap | null = null;
+  if (result.state.closedGovernments !== state.closedGovernments) {
+    const month = dateOfDay(state.calendarStart!, ctx.day).month;
+    const before = deriveMap(map, { control: state.regionControl, month, network: passageOf(map, state) });
+    derived = deriveMap(map, { control: result.state.regionControl, month, network: passageOf(map, result.state) });
+    reportPocketChanges(ctx, before, derived);
+  }
+  return { state: result.state, derived };
 }
 
 /**

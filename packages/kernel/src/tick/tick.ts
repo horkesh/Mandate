@@ -178,7 +178,9 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   state = freeze(runSituations(ctx, state));
 
   // 4c. The proposals `command` owns: a neutral government closing or reopening (0055, 0058).
-  state = freeze(commandProposalsPhase(ctx, state));
+  const proposed = commandProposalsPhase(ctx, state);
+  state = freeze(proposed.state);
+  const dayMap = proposed.derived ?? mapped.derived;
 
   // 5. Reports on their cycles. A commander whose only option was to hold is awaiting strength.
   const awaiting = new Set([...menus].filter(([, o]) => o.length === 1 && o[0]!.kind === 'hold').map(([p]) => p));
@@ -194,9 +196,9 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   state = freeze(advanceDay(pruned.state, day));
 
   // 8. The invariant barrier.
-  mapBarrier(ctx, state, mapped.derived, options.deepChecks === true);
+  mapBarrier(ctx, state, dayMap, options.deepChecks === true);
 
-  return { state, day, rejections: ctx.rejections, events: ctx.events, proposals: ctx.proposals, prices: ctx.prices, decisionPoints: ctx.decisionPoints, mapEvents: ctx.mapEvents, map: mapped.derived };
+  return { state, day, rejections: ctx.rejections, events: ctx.events, proposals: ctx.proposals, prices: ctx.prices, decisionPoints: ctx.decisionPoints, mapEvents: ctx.mapEvents, map: dayMap };
 }
 
 /** The only writer of the day counter. */

@@ -1,3 +1,7 @@
+import { toId } from '../src/ids.ts';
+import { indexSeatsWorld } from '../src/seats/world.ts';
+import type { SituationDef } from '../src/situations/types.ts';
+import { tick } from '../src/tick/tick.ts';
 import { describe, expect, it } from 'vitest';
 import { applyCommandProposals, closeGovernment, GOVERNMENT_CLOSED_FIELD, neutralGroundOf, reopenGovernment } from '../src/command/command.ts';
 import { createDerivedMapCache } from '../src/control-index/derived.ts';
@@ -11,7 +15,7 @@ import { MAP_MECHANICS, mapPhase } from '../src/tick/map.ts';
 import { passageOf } from '../src/tick/passage.ts';
 import { createState } from '../src/tick/setup.ts';
 import { ctxFor as ctxIn, worldOf } from './support/tick-context.ts';
-import { DEP, forcesIndex, forcesStart } from './support/forces-fixture.ts';
+import { DEP, forcesIndex, forcesStart, P, PER, post } from './support/forces-fixture.ts';
 import { depot, edge, F, R, region } from './support/map-fixture.ts';
 
 /**
@@ -69,6 +73,72 @@ describe('neutral ground from governments (0055 as amended by 0058)', () => {
   });
 });
 
+describe('a situation closing neutral passage, end to end through the tick (0055: "a situation closes it")', () => {
+  it('a principal on the rules model takes the default "close" on day 2; the tick applies it and the region beyond is cut off', () => {
+    const close: SituationDef = {
+      id: toId('situation', 'proclamation'),
+      kind: 'decision',
+      faction: F('a'),
+      title: 'situation.proclamation.title',
+      text: 'situation.proclamation.text',
+      earliest: '1900-06-01',
+      event: { dayAtLeast: 2 },
+      knowledge: null,
+      railroad: 'test fixture',
+      chain: null,
+      subjects: [],
+      options: [
+        {
+          id: 'close',
+          label: 'situation.proclamation.option.close',
+          displayKey: 1,
+          proposedBy: [PER('a_gen')],
+          group: null,
+          appearsWhen: null,
+          expiresWhen: null,
+          waitsOn: null,
+          effects: [{ propose: { owner: 'command', field: GOVERNMENT_CLOSED_FIELD, subject: 'neutral_gov', delta: 1, reason: 'proclamation', side: null } }],
+          lockedCosts: [],
+          orders: [],
+          honours: [],
+          watched: false,
+          gate: null,
+        },
+      ],
+      inaction: { text: 'situation.proclamation.inaction', effects: [] },
+      historicalDefault: { options: ['close'] },
+      staffLine: { authors: [P('a_office')], recommends: ['close'], reasons: [], confidence: 600 },
+      delegableTo: [],
+      resurfaceOn: [],
+      effects: [],
+      report: null,
+      gate: { none: 'test fixture' },
+      gateReview: null,
+      citations: [],
+    };
+    const start = { ...START, factions: [{ faction: F('a'), principal: PER('a_lead'), capital: R('a1'), playable: true }], posts: [post('a_office', { kind: 'office', department: 'a_war', holder: PER('a_gen'), region: R('a1') })] };
+    const world = indexSeatsWorld(MAP, start, { situations: [close] });
+    let state = createState(world, { seed: 1 });
+    const events: string[] = [];
+    for (let i = 0; i < 3; i++) {
+      const r = tick(world, state, [], { freeze: true, deepChecks: true });
+      for (const e of r.mapEvents) {
+        if (e.event === 'government_changed') events.push(`${r.day}:${e.department}:${e.change}`);
+        if (e.event === 'pocket_closed') events.push(`${r.day}:pocket:${e.regions.join(',')}`);
+      }
+      state = r.state;
+    }
+    expect(state.situationStates[close.id]).toMatchObject({ sitStatus: 'decided', sitChosen: ['close'], sitDecidedBy: 'history-default' });
+    expect(state.closedGovernments).toEqual({ neutral_gov: 2 });
+    expect(events).toEqual(['2:neutral_gov:closed', '2:pocket:a3']);
+    // The control: with no situation, nothing closes.
+    const plain = indexSeatsWorld(MAP, start);
+    let s2 = createState(plain, { seed: 1 });
+    for (let i = 0; i < 3; i++) s2 = tick(plain, s2, []).state;
+    expect(s2.closedGovernments).toEqual({});
+  });
+});
+
 describe('a situation closing neutral passage, through the tick\'s phases', () => {
   it('open: a3 is supplied across n1. Closed by a proposal: a3 is a pocket, reported once. Reopened: relieved', () => {
     const cache = createDerivedMapCache();
@@ -82,7 +152,7 @@ describe('a situation closing neutral passage, through the tick\'s phases', () =
     expect(mapped.derived!.supply.factions.get(F('a'))!.pockets.map((p) => p.regions)).toEqual([['a4']]);
     // ... and the situation's effect proposes the closing, applied after the situations phase.
     d1.proposals.push(proposal(1));
-    state = commandProposalsPhase(d1, mapped.state);
+    state = commandProposalsPhase(d1, mapped.state).state;
     expect(d1.mapEvents.filter((e) => e.event === 'government_changed')).toEqual([{ event: 'government_changed', department: 'neutral_gov', change: 'closed' }]);
     expect(d1.telemetry!.mechanics['command.government_closed']!.fires).toBe(1);
 
@@ -95,7 +165,7 @@ describe('a situation closing neutral passage, through the tick\'s phases', () =
 
     // Day 2 too: a later situation reopens, and the pocket is relieved at once.
     d2.proposals.push(proposal(-1));
-    state = commandProposalsPhase(d2, mapped.state);
+    state = commandProposalsPhase(d2, mapped.state).state;
     expect(pockets(d2)).toEqual(['pocket_relieved:a3']);
     const d3 = ctxFor(state, 3);
     mapPhase(d3, state, cache);
