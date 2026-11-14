@@ -44,6 +44,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - Tripwire close-out (0043): `npm run measure` in `prototypes/map-tripwire/` needs the regions as lon/lat GeoJSON with `properties.kind` (land, river, or a region), `properties.name`, optional `id` and `controlA`, and a `projection` member (else it fits its own conic). Keep `glsync=1`, or bake timings read about 100 times low. Expect per-tile cost to rise with real vertex counts.
 - Provenance: Natural Earth is the only geometry source confirmed public domain (terms read 2026-11-14); the Census licence stays unconfirmed. census.gov blocks this machine's IP (Cloudflare 403), so the local pipeline must not fetch from it; do not brief the Wayback route (the permission system refused it as routing around the block).
 - From lane 0.2's close-out: the first commit with `packs/union-1861/pack.json` must generate clean (or build the pack up on a branch), because `npm test` checks every pack with a manifest; settle region ids before writing forts' `commands_edges`, `obstructions.csv` and `edge_conditions.csv` (edge ids derive from their ends), or give those edges explicit ids; author lane 0.3's own vocabularies (ranks with seniority above all) and source registry, not the fit test's scaffold; the people roster has no priority column (image-sources note).
+- From lane 0.4's report: the World has no telegraph data, so every held land region counts as wired. Whether wires follow the railways needs a format flag and data (lane 0.3 or the format).
 - Person ids use the convention surname_firstgiven_initials (`lee_robert_e`).
 - Navy data (navy note): pre-Sumter navy holders for March 1861 are not yet covered; the Western Flotilla belongs to the Army until 1 October 1862, then the Navy (a post changing department); the Strategy Board is a temporary post; squadrons are created by directive during play, not all at start.
 - Anderson's 28 February 1861 strength figure differs between his letter as printed (70,000) and Holt's covering letter (20,000): carry the figure Lincoln read once known (March facts note).
@@ -51,6 +52,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 
 **Lanes 0.4 and 0.5 (derived indexes; forces and movement)**
 - The M2 names (RegionId and similar) are not retired: lane 0.2 kept the `ids` namespace, since retiring it touches M2's aliases; it goes when lanes 0.4 and 0.5 replace M2 (0050).
+- From lane 0.4's report, seams for lane 0.5: the tick still treats the network as intact; no mechanism proposes control changes yet; the seats layer's latency should read `wireOwnerOf`; nothing calls supply allocation yet; control changes currently run after the stand-in standing-goal step and must run after movement and combat once lane 0.5 lands them (FOUNDATION section 10's order).
 - Every new State field needs an `OWNED_FIELDS` entry in `packages/kernel/src/ownership.ts`; owned keys must be unique across State records (lane 0.1 hand-over, `notes/lane-0.1-foundations.md`).
 - Edges and regions (navy note): river and sea edges need depth by season and an obstruction state; fort regions need a passage-versus-reduction flag; naval bases are key points; blockade-running ports are off-map boxes. A support request needs three terms: the commander's compliance, his department's consent, and physical limits (depth, season, passage).
 - From lane 0.6: two World models exist (lane 0.2's `world` and lane 0.6's stand-in); unify them when M2 is replaced.
@@ -72,6 +74,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 **Lane 0.8 (headless runner)**
 - From lane 0.6: `playDays` and `replay` hash every day with no switch, so add a checkpoints-only option for Monte Carlo runs (0044); normal play leaves the `freeze` option off; `compare-runs` matches on pack and `kernel`, so a Phase 0 runner needs its own `kernel` value or must replace the `run:seats` step.
 - Phase 0's day tick must hash each day with `canonicalHash` (lane 0.5 or 0.8); M2 hashes per turn.
+- From lane 0.4: its performance test has about 1.8x headroom on Windows CI (8.2 ms against a 15 ms bound). If it flakes, raise the bound; do not skip the test (lane 0.8 and CI).
 - The liveness gate is a skeleton (12 M2 mechanics at minFires 0); lane 0.8 sets the Phase 0 bands.
 - The testbed reference run never fires audience, honour or pressure verbs, rivals or broken promises, so the M2 people core is barely exercised headless; it needs a script or rule seat that does (also for Phase 1's people recast).
 
