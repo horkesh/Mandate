@@ -11,14 +11,14 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0005](0005-living-people.md) | Real historical and living people, under a sensitivity policy | accepted (policy details open); amended by 0022 |
 | [0006](0006-single-or-collective-principal.md) | The principal can be one person or a collective | accepted |
 | [0007](0007-no-dice-for-people.md) | No dice for people | accepted; clarified by 0015, 0020 |
-| [0008](0008-declared-telegraphing.md) | The player sees what proxies say, not what they will do | accepted |
+| [0008](0008-declared-telegraphing.md) | The player sees what proxies say, not what they will do | accepted; refined by 0032 |
 | [0009](0009-symmetric-opponents.md) | Opponents run on the same machinery | accepted; widened by 0015 |
 | [0010](0010-variable-tempo.md) | Variable tempo: the tick is a day | superseded by 0017 |
 | [0011](0011-single-player-faction-scoped-knowledge.md) | Single-player, with knowledge scoped per faction | superseded by 0015 |
 | [0012](0012-port-ideas-not-code.md) | Port ideas from AWWV, not code | accepted |
 | [0013](0013-the-staff-map.md) | The map is the staff's map: hand-drawn, procedural, drawn from claims | accepted; extended by 0019, confirmed by 0035 |
 | [0014](0014-licence.md) | Source-available under the PolyForm Noncommercial licence | accepted |
-| [0015](0015-seats.md) | Every person is a seat; rules first; the command log is the truth | accepted |
+| [0015](0015-seats.md) | Every person is a seat; rules first; the command log is the truth | accepted; refined by 0032 |
 | [0016](0016-goals-plans-and-arrows.md) | Goals, plans and arrow edits: places are targeted only through a person | accepted; amended by 0026, 0033, 0040 |
 | [0017](0017-real-time-with-pause.md) | Real time with pause on a daily tick | superseded by 0027; amended by 0026 |
 | [0018](0018-civil-war-scope.md) | The American Civil War, 1861–65; the engine's promise is wars with fronts | accepted; amended by 0028 |

@@ -32,7 +32,33 @@ describe('reading the index and the Status line', () => {
     expect(relationsOf('accepted. Amends 0016 and 0017. It was amended by the lead, then by hand.')).toEqual([]);
   });
 
-  it('reads what a record says it does to others, only in the sentence-initial form', () => {
+  it('reads claims in any case and anywhere in a sentence, and not a possessive (review S2)', () => {
+    // The real 0015 and 0046 wordings.
+    expect(forwardRelationsOf('accepted. Supersedes 0011. Clarifies 0007 and widens 0009. Design: x.')).toEqual([
+      { relation: 'superseded', target: '0011' },
+      { relation: 'clarified', target: '0007' },
+      { relation: 'widened', target: '0009' },
+    ]);
+    expect(forwardRelationsOf('accepted. Applies 0021 and 0026; amends 0032 and 0040. Design: x.')).toEqual([
+      { relation: 'amended', target: '0032' },
+      { relation: 'amended', target: '0040' },
+    ]);
+    // Possessives are prose about a rule of a record (0033, 0040, 0044), with either apostrophe, and end a list.
+    expect(forwardRelationsOf("accepted. Amends 0016; extends 0031's sourcing rule to all pack data; supersedes 0028’s lever.")).toEqual([{ relation: 'amended', target: '0016' }]);
+    expect(forwardRelationsOf("accepted. Amends 0016 and 0028's lever.")).toEqual([{ relation: 'amended', target: '0016' }]);
+    // Verbs without a number straight after them are prose ("amends how 0022 and 0038 present AI").
+    expect(forwardRelationsOf('accepted. Extends 0037 and amends how 0022 and 0038 present AI.')).toEqual([{ relation: 'extended', target: '0037' }]);
+  });
+
+  it('reads Refines as a relation, and its mirror "refined by"', () => {
+    expect(forwardRelationsOf('accepted. Refines 0008, 0015 and FOUNDATION sections 5 and 8.')).toEqual([
+      { relation: 'refined', target: '0008' },
+      { relation: 'refined', target: '0015' },
+    ]);
+    expect(relationsOf('accepted; refined by 0032')).toEqual(['refined by 0032']);
+  });
+
+  it('reads what a record says it does to others, in lists with notes', () => {
     expect(forwardRelationsOf('accepted. Amends 0016, 0017, 0020 and 0023. Amended by 0040 (walkthrough).')).toEqual([
       { relation: 'amended', target: '0016' },
       { relation: 'amended', target: '0017' },
@@ -122,6 +148,31 @@ describe('the index against the records (each rule has a broken case)', () => {
     ]);
   });
 
+  it('flags a lower-case claim inside a sentence that the target does not say back: the 0015 and 0046 cases (review S2)', () => {
+    const quiet = [files[0]!, record('0002-second.md', 'accepted. Supersedes 0001.'), record('0003-third.md', 'accepted. Clarifies 0001 and widens 0002.')];
+    expect(indexProblems(index(rows[0]!, ['0002', '0002-second.md', 'accepted'], ['0003', '0003-third.md', 'accepted']), quiet)).toEqual([
+      '0003: its Status says it widens 0002, but 0002\'s Status lacks "widened by 0003"',
+      '0003: its Status says it clarifies 0001, but 0001\'s Status lacks "clarified by 0003"',
+    ].sort());
+    const later = [files[0]!, record('0002-second.md', 'accepted. Supersedes 0001.'), record('0003-third.md', 'accepted. Applies 0001; amends 0001 and 0002.')];
+    expect(indexProblems(index(rows[0]!, ['0002', '0002-second.md', 'accepted'], ['0003', '0003-third.md', 'accepted']), later)).toEqual([
+      '0003: its Status says it amends 0001, but 0001\'s Status lacks "amended by 0003"',
+      '0003: its Status says it amends 0002, but 0002\'s Status lacks "amended by 0003"',
+    ]);
+  });
+
+  it('flags a refinement the target does not say back, and accepts one it does (review S2)', () => {
+    const one = [record('0001-first.md', 'accepted.'), record('0002-second.md', 'accepted. Refines 0001.')];
+    expect(indexProblems(index(['0001', '0001-first.md', 'accepted'], ['0002', '0002-second.md', 'accepted']), one)).toEqual(['0002: its Status says it refines 0001, but 0001\'s Status lacks "refined by 0002"']);
+    const both = [record('0001-first.md', 'accepted. Refined by 0002.'), record('0002-second.md', 'accepted. Refines 0001.')];
+    expect(indexProblems(index(['0001', '0001-first.md', 'accepted; refined by 0002'], ['0002', '0002-second.md', 'accepted']), both)).toEqual([]);
+  });
+
+  it('ignores a possessive: prose about a rule of another record is not a claim about it', () => {
+    const prose = [record('0001-first.md', 'accepted.'), record('0002-second.md', "accepted. Extends 0001's sourcing rule to all pack data.")];
+    expect(indexProblems(index(['0001', '0001-first.md', 'accepted'], ['0002', '0002-second.md', 'accepted']), prose)).toEqual([]);
+  });
+
   it('flags a forward reference to a record that does not exist', () => {
     const ghost = [files[0]!, files[1]!, record('0003-third.md', 'accepted. Amends 0002 and 0008.')];
     expect(indexProblems(index(...rows), ghost)).toEqual(['0003: its Status says it amends 0008, which is not a record']);
@@ -147,5 +198,30 @@ describe('the real decisions', () => {
 
   it('lists every record, and every row says what its record says', () => {
     expect(indexProblems(readFileSync(join(dir, 'README.md'), 'utf8'), records)).toEqual([]);
+  });
+
+  describe('losing a claim from both sides is still caught (the reviewer’s mutations of the real files)', () => {
+    const readme = readFileSync(join(dir, 'README.md'), 'utf8');
+    /** Replace `from` with `to` in one record's text and in the index, requiring both to be there. */
+    const without = (number: string, status: string, index: [string, string]) => {
+      const edited = records.map((r) => {
+        if (!r.name.startsWith(number)) return r;
+        if (!r.text.includes(status)) throw new Error(`${r.name} no longer says "${status}"; update this test`);
+        return { ...r, text: r.text.replace(status, '') };
+      });
+      if (!readme.includes(index[0])) throw new Error(`the index row no longer says "${index[0]}"; update this test`);
+      return indexProblems(readme.replace(index[0], index[1]), edited);
+    };
+
+    it('0009 loses "widened by 0015" from its record and its row: 0015 still says it widens 0009', () => {
+      expect(without('0009', 'widened by 0015 (a non-player principal may be an AI seat with a rule fallback)', ['accepted; widened by 0015 |', 'accepted |'])).toEqual([
+        '0015: its Status says it widens 0009, but 0009\'s Status lacks "widened by 0015"',
+      ]);
+    });
+
+    it('0032 loses "and 0046" from its record and its row: 0046 still says it amends 0032', () => {
+      const problems = without('0032', ' and 0046 (security orders go through a holder or a situation option, never a free-standing verb)', ['accepted; amended by 0040, 0046 |', 'accepted; amended by 0040 |']);
+      expect(problems).toEqual(['0046: its Status says it amends 0032, but 0032\'s Status lacks "amended by 0046"']);
+    });
   });
 });

@@ -11,19 +11,22 @@
  * - the row's amendment notes match the record's: the same relations to the
  *   same records, in either direction of drift. A relation is one of
  *   `amended by`, `clarified by`, `extended by`, `widened by`, `confirmed by`,
- *   `superseded by` or `replaced by`, followed by record numbers (a number may
- *   carry a parenthetical, and a list joins with commas and `and`);
+ *   `refined by`, `superseded by` or `replaced by`, followed by record numbers
+ *   (a number may carry a parenthetical, and a list joins with commas and `and`);
  * - every record number a relation names is a record;
- * - a record that says it "Amends 0016" (or Clarifies, Extends, Widens, Confirms,
- *   Supersedes, Replaces: the sentence-initial forms) is named back by the
- *   target's own Status ("amended by" that record; a target that says
- *   "replaced by" counts as amended).
+ * - a record that says it "amends 0016" (or clarifies, extends, widens,
+ *   confirms, refines, supersedes, replaces), in any case and anywhere in a
+ *   sentence ("Clarifies 0007 and widens 0009"; "; amends 0032 and 0040"), is
+ *   named back by the target's own Status ("amended by" that record; a target
+ *   that says "replaced by" counts as amended). A number followed by 's is
+ *   prose about one of that record's rules ("extends 0031's sourcing rule"),
+ *   not a claim about the record, and is not a claim.
  *
  * Pure functions over text, so the test can run them on the real files and on
  * deliberately broken ones.
  */
 
-export const RELATIONS = ['amended', 'clarified', 'extended', 'widened', 'confirmed', 'superseded', 'replaced'] as const;
+export const RELATIONS = ['amended', 'clarified', 'extended', 'widened', 'confirmed', 'refined', 'superseded', 'replaced'] as const;
 export type Relation = (typeof RELATIONS)[number];
 
 export interface IndexRow {
@@ -65,7 +68,8 @@ export function statusHead(status: string): string {
   return /^[A-Za-z]+/.exec(status.trim())?.[0]?.toLowerCase() ?? '';
 }
 
-const NUMBER_WITH_NOTE = String.raw`\d{4}(?:\s*\([^()]*\))?`;
+// A number followed by 's is a possessive ("0031's sourcing rule"): prose about a rule of that record, not a relation to it.
+const NUMBER_WITH_NOTE = String.raw`\d{4}(?!['’]s)(?:\s*\([^()]*\))?`;
 const RELATION = new RegExp(
   String.raw`\b(${RELATIONS.join('|')}) by (${NUMBER_WITH_NOTE}(?:(?:,\s*(?:and\s+)?|\s+and\s+)${NUMBER_WITH_NOTE})*)`,
   'gi',
@@ -87,30 +91,32 @@ export function relationsOf(status: string): string[] {
 }
 
 const FORWARD: Readonly<Record<string, Relation>> = Object.freeze({
-  Amends: 'amended',
-  Clarifies: 'clarified',
-  Extends: 'extended',
-  Widens: 'widened',
-  Confirms: 'confirmed',
-  Supersedes: 'superseded',
-  Replaces: 'replaced',
+  amends: 'amended',
+  clarifies: 'clarified',
+  extends: 'extended',
+  widens: 'widened',
+  confirms: 'confirmed',
+  refines: 'refined',
+  supersedes: 'superseded',
+  replaces: 'replaced',
 });
 const FORWARD_RELATION = new RegExp(
   String.raw`\b(${Object.keys(FORWARD).join('|')}) (${NUMBER_WITH_NOTE}(?:(?:,\s*(?:and\s+)?|\s+and\s+)${NUMBER_WITH_NOTE})*)`,
-  'g',
+  'gi',
 );
 
 /**
  * What a record says it does to others ("Amends 0016, 0017 and 0023"), as
  * `{ relation, target }` pairs in the passive: `amended` means the target
- * should say "amended by <this record>". Only the sentence-initial capitalised
- * forms count: prose such as "extends 0031's sourcing rule" is not a claim
- * about the target's Status.
+ * should say "amended by <this record>". The verbs are read in any case and
+ * anywhere in a sentence ("Clarifies 0007 and widens 0009"; "; amends 0032 and
+ * 0040"); a possessive ("extends 0031's sourcing rule") is not a claim about
+ * the target's Status.
  */
 export function forwardRelationsOf(status: string): { relation: Relation; target: string }[] {
   const out: { relation: Relation; target: string }[] = [];
   for (const m of status.matchAll(FORWARD_RELATION)) {
-    for (const n of m[2]!.replace(/\([^()]*\)/g, ' ').matchAll(/\d{4}/g)) out.push({ relation: FORWARD[m[1]!]!, target: n[0] });
+    for (const n of m[2]!.replace(/\([^()]*\)/g, ' ').matchAll(/\d{4}/g)) out.push({ relation: FORWARD[m[1]!.toLowerCase()]!, target: n[0] });
   }
   return out;
 }

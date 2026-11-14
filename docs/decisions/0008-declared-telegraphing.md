@@ -1,6 +1,6 @@
 # 0008: The player sees what proxies say, not what they will do
 
-Status: accepted (2026-11-14)
+Status: accepted (2026-11-14). Refined by 0032 (reports have authors, routes and filters).
 
 ## Context
 
