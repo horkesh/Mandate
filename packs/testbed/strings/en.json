@@ -24,6 +24,7 @@
   "post_kind.governor": "governor",
   "post_kind.rail_president": "railway president",
   "post_kind.expedition": "expedition command",
+  "post_kind.wire_office": "wire office",
   "department_kind.executive": "executive",
   "department_kind.war_ministry": "war ministry",
   "department_kind.navy_ministry": "navy ministry",

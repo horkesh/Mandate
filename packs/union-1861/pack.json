@@ -287,7 +287,8 @@
       },
       {
         "id": "state_government",
-        "name": "department_kind.state_government"
+        "name": "department_kind.state_government",
+        "government": true
       }
     ],
     "arms": [

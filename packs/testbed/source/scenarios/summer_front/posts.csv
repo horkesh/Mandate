@@ -2,9 +2,11 @@ id,name,kind,department,parent,region,temporary_operation,installation,rail_line
 n_head,First Minister of the North,head_of_state,n_executive,,n_capital,,,,TB-DESIGN,
 n_war_office,Minister of War,minister,n_war,n_head,n_capital,,,,TB-DESIGN,
 n_navy_office,First Lord of the Admiralty,minister,n_navy,n_head,n_capital,,,,TB-DESIGN,
+n_wire_office,Wire Office of the First Minister,wire_office,n_executive,n_head,n_capital,,,,TB-DESIGN,"Stands between the wire and the First Minister (a filter, 0058); empty at the start, as the stand-in comms World had it."
 n_army_mere,Army of the Mere,army,n_war,n_war_office,salient_base,,,,TB-DESIGN,The two armies merged after the salient fell.
 n_river_flotilla,Mere River Flotilla,squadron,n_navy,n_navy_office,w_valley,,,,TB-DESIGN,"Already with the Admiralty in this start."
 s_head,President of the Southern Council,head_of_state,s_executive,,s_capital,,,,TB-DESIGN,
 s_war_office,Southern Secretary of War,minister,s_war,s_head,s_capital,,,,TB-DESIGN,
+s_wire_office,Council Wire Office,wire_office,s_executive,s_head,s_capital,,,,TB-DESIGN,"The South's filter post; empty at the start."
 s_army_mere,Army of the Mere Line,army,s_war,s_war_office,s_heartland,,,,TB-DESIGN,
 s_corran_command,Corran Fort,fort_command,s_war,s_army_mere,mere_crossing,,corran_fort,,TB-DESIGN,

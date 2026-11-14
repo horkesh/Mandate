@@ -165,8 +165,29 @@ export const RulesSchema = z.strictObject({
 
 export const VocabulariesSchema = z.strictObject({
   terrains: z.array(z.strictObject({ id: termId, name: stringKey, roadLengthPermille: positive, water: z.boolean() })),
-  postKinds: z.array(z.strictObject({ id: termId, name: stringKey, creatable: z.enum(w.POST_CREATION), temporary: z.boolean() })),
-  departmentKinds: z.array(term),
+  postKinds: z.array(
+    z.strictObject({
+      id: termId,
+      name: stringKey,
+      creatable: z.enum(w.POST_CREATION),
+      temporary: z.boolean(),
+      role: z
+        .enum(w.POST_KIND_ROLES)
+        .nullable()
+        .default(null)
+        .describe('What the engine reads of this kind (0058): filter (holds or passes what comes in for its principal) or intelligence; null for any other kind. The engine never reads kind names.'),
+    }),
+  ),
+  departmentKinds: z.array(
+    z.strictObject({
+      id: termId,
+      name: stringKey,
+      government: z
+        .boolean()
+        .default(false)
+        .describe('A civil government that can hold a region’s jurisdiction (0058): only such a department may be named in a scenario’s governments. The engine reads this, never kind names.'),
+    }),
+  ),
   arms: z.array(z.strictObject({ id: termId, name: stringKey, naval: z.boolean() })),
   personKinds: z.array(term),
   traits: z.array(z.strictObject({ id: termId, name: stringKey, gate: z.boolean() })),
@@ -219,6 +240,7 @@ export const PostSchema = z.strictObject({
   parent: idOf('post').nullable(),
   holder: idOf('person').nullable(),
   acting: z.boolean(),
+  intelligenceChief: idOf('person').nullable().describe('The person who runs this post’s intelligence (0058), on the post’s side; null for none.'),
   region: idOf('region').nullable(),
   temporary: z.strictObject({ operation: termId }).nullable(),
   installation: idOf('installation').nullable(),
@@ -263,6 +285,13 @@ export const ScenarioSchema = z.strictObject({
   depotConditions: z.array(z.strictObject({ depot: idOf('depot'), conditionPermille: permille })),
   posts: z.array(PostSchema),
   forceBlocks: z.array(ForceBlockSchema),
+  governments: z.array(
+    z.strictObject({
+      region: idOf('region'),
+      department: z.union([z.literal(w.UNKNOWN_GOVERNMENT), idOf('department')]).describe('The department that governs the region on the start date, or unknown (0058).'),
+      provenance,
+    }),
+  ),
 });
 
 /** The pack manifest, `pack.json` (hand-written). */

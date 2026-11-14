@@ -32,7 +32,7 @@ const manifest = {
       { id: 'squadron', name: 'post_kind.squadron', creatable: 'directive', temporary: false },
       { id: 'expedition', name: 'post_kind.expedition', creatable: 'appoint', temporary: true },
     ],
-    departmentKinds: [{ id: 'ministry', name: 'department_kind.ministry' }],
+    departmentKinds: [{ id: 'ministry', name: 'department_kind.ministry' }, { id: 'province', name: 'department_kind.province', government: true }],
     arms: [
       { id: 'foot', name: 'arm.foot', naval: false },
       { id: 'ships', name: 'arm.ships', naval: true },
@@ -72,6 +72,7 @@ const strings: Record<string, string> = {
   'post_kind.squadron': 'squadron',
   'post_kind.expedition': 'expedition',
   'department_kind.ministry': 'ministry',
+  'department_kind.province': 'province',
   'arm.foot': 'foot',
   'arm.ships': 'ships',
   'person_kind.officer': 'officer',
@@ -88,7 +89,7 @@ export const FIXTURE: Readonly<Record<string, string>> = {
   'pack.json': JSON.stringify(manifest, null, 2),
   'PROVENANCE.json': JSON.stringify(provenance, null, 2),
   'strings/en.json': JSON.stringify(strings, null, 2),
-  'source/world/departments.csv': ['id,name,faction,kind,sources,notes', 'r_war,Red Ministry,red,ministry,DESIGN,', 'r_sea,Red Admiralty,red,ministry,DESIGN,', 'b_war,Blue Ministry,blue,ministry,DESIGN,'].join('\n'),
+  'source/world/departments.csv': ['id,name,faction,kind,sources,notes', 'r_war,Red Ministry,red,ministry,DESIGN,', 'r_sea,Red Admiralty,red,ministry,DESIGN,', 'b_war,Blue Ministry,blue,ministry,DESIGN,', 'r_prov,Red Province,red,province,DESIGN,'].join('\n'),
   'source/world/regions.csv': [
     'id,name,kind,terrain,flags,off_map_role,weather_zone,ref_point,counties,label_anchor,label_spine,label_size,label_min_zoom,sources,notes',
     'alpha,Alpha,land,plain,capital;port,,,10.5 50.25,,,,,,DESIGN,',
@@ -130,6 +131,7 @@ export const FIXTURE: Readonly<Record<string, string>> = {
     ],
   }),
   'source/scenarios/start/control.csv': ['region,shares,notes', 'alpha,red:1000,', 'beta,red:600;blue:300,', 'port,blue:1000,'].join('\n'),
+  'source/scenarios/start/governments.csv': ['region,department,sources,notes', 'alpha,r_prov,DESIGN,', 'beta,r_prov,DESIGN,', 'port,unknown,DESIGN,No civil government is known for the port.'].join('\n'),
   'source/scenarios/start/posts.csv': [
     'id,name,kind,department,parent,region,temporary_operation,installation,rail_line,sources,notes',
     'red_top,Red Chief,chief,r_war,,alpha,,,,DESIGN,',

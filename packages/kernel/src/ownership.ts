@@ -35,7 +35,7 @@ export const KERNEL_MODULES: readonly KernelModule[] = [
   { name: 'supply', layer: 'Derived', owns: 'supply paths with capacity from sources' },
   { name: 'regions', layer: 'State', owns: 'region population, loyalty, supply value, fortification' },
   { name: 'forces', layer: 'State', owns: 'force blocks and detachments, with stores on hand' },
-  { name: 'command', layer: 'State', owns: 'posts and the people in them; assignments; standing agreements and prior orders' },
+  { name: 'command', layer: 'State', owns: 'posts and the people in them; assignments; standing agreements and prior orders; each region’s civil government and closed governments (0058)' },
   { name: 'plans', layer: 'State', owns: 'goals, drafts, approvals, edits as counter-orders' },
   { name: 'operations', layer: 'State', owns: 'approved plans in execution, per-axis lifecycles' },
   { name: 'movement', layer: 'writer', owns: 'the only writer of location' },
@@ -85,6 +85,9 @@ const at = (record: string, key: string): FieldLocation => ({ record, key });
 export const OWNED_FIELDS: readonly OwnedField[] = [
   // Lane 0.4: control, set from the scenario start (0050) and changed only through `applyControl`.
   field('region control', 'control', ['combat', 'occupation'], [at('State', 'regionControl')]),
+  // 0058: jurisdiction beside control. Lane 0.5 writes the passage rule that reads them.
+  field("each land region's civil government (a department, or unknown)", 'command', ['situations'], [at('State', 'regionGovernments')]),
+  field('neutral governments closed to passage, with the day each closed', 'command', ['situations'], [at('State', 'closedGovernments')]),
   field('region population, loyalty, supply value', 'regions', ['economy', 'situations', 'occupation']),
   field('edge condition', 'infrastructure', ['combat', 'raids', 'repair orders']),
   field('division location', 'movement', ['operations']),

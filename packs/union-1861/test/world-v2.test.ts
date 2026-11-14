@@ -170,4 +170,29 @@ describe('Union 1861 world v2', () => {
     const b = start.forceBlocks.find((x) => x.id === 'fb_us_sumter_garrison')!;
     expect([b.strength, b.nonCombatants, b.storesDays]).toEqual([85, 55, 7]);
   });
+
+  it('gives each land region its state’s government from the map draft’s county lists, and leaves the rest unknown with a reason (0058)', () => {
+    const land = world.regions.filter((r) => r.kind === 'land' || r.kind === 'key_point').map((r) => r.id as string).sort();
+    expect(start.governments.map((g) => g.region as string).sort()).toEqual(land);
+    // Every named government is a state government, and is the one state its counties lie in.
+    const column = (path: string, key: string, value: string) => {
+      const t = parseCsv(read(path)!);
+      const [k, v] = [t.header.indexOf(key), t.header.indexOf(value)];
+      return new Map(t.rows.map((r) => [r.cells[k]!, r.cells[v] ?? '']));
+    };
+    const counties = column('source/drafts/map/regions.csv', 'id', 'counties_1861');
+    const states = (region: string) => [...new Set(counties.get(region)!.split(';').filter(Boolean).map((c) => c.split(':')[0]!.trim()))];
+    const dept = new Map(world.departments.map((d) => [d.id as string, d]));
+    for (const g of start.governments.filter((x) => x.department !== 'unknown')) {
+      expect(dept.get(g.department)!.kind).toBe('state_government');
+      expect(states(g.region)).toHaveLength(1);
+      expect(`st_${states(g.region)[0]!.toLowerCase().replace(/[^a-z]+/g, '_')}`).toBe(g.department);
+    }
+    // The unknowns: the Indian Territory nations, the territories and the District (no department in the pack), and three regions across state lines.
+    const unknown = start.governments.filter((g) => g.department === 'unknown').map((g) => g.region as string).sort();
+    expect(unknown).toEqual(['arizona', 'colorado', 'dakota', 'eastern_shore', 'it_cherokee_creek', 'it_choctaw_chickasaw', 'michigan_wisconsin', 'nebraska', 'new_england', 'new_mexico', 'washington']);
+    const notes = column('source/scenarios/march_1861/governments.csv', 'region', 'notes');
+    for (const r of unknown) expect(notes.get(r), r).not.toBe('');
+    expect(notes.get('it_cherokee_creek')).toContain('research lane');
+  });
 });
