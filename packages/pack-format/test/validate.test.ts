@@ -180,6 +180,7 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'a detachment of a detachment', files: () => withFile(`${S}/force_blocks.csv`, appendRow('red_det2,Red Picket,detachment,red_1_det,r_war,red_army,alpha,,foot,10,1900-04,,5,DESIGN,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
   // 0058: every land region and key point has one government row: a government department, or unknown.
   { name: 'a land region with no government row', files: () => withFile(`${S}/governments.csv`, replaceOnce('beta,r_prov,DESIGN,\n', '')), kind: 'government-missing', file: `${S}/governments.csv` },
+  { name: 'a government row for a region not in the World', files: () => withFile(`${S}/governments.csv`, appendRow('nowhere,unknown,DESIGN,')), kind: 'unknown-reference', file: `${S}/governments.csv` },
   { name: 'a region with two government rows', files: () => withFile(`${S}/governments.csv`, appendRow('beta,unknown,DESIGN,')), kind: 'duplicate-entry', file: `${S}/governments.csv` },
   { name: 'a government row for a sea region', files: () => withFile(`${S}/governments.csv`, appendRow('bay,r_prov,DESIGN,')), kind: 'government-on-water', file: `${S}/governments.csv` },
   { name: 'a government row for an off-map box', files: () => withFile(`${S}/governments.csv`, appendRow('abroad,unknown,DESIGN,')), kind: 'government-on-water', file: `${S}/governments.csv` },
