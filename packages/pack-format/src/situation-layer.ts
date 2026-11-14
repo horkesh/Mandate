@@ -5,7 +5,7 @@
  * as they are, so there is nothing to generate and nothing to go stale.
  */
 import type { phase0 } from '@mandate/kernel';
-import { checkGate, GATE_DIR, readGate, type GateData } from './gate.ts';
+import { checkGate, GATE_DIR, localeStrings, readGate, type GateData } from './gate.ts';
 import type { PackFiles } from './generate.ts';
 import { errorsOf, type Issue, IssueSink } from './issues.ts';
 import { readSituations, SITUATIONS_DIR, validateSituations } from './situations.ts';
@@ -27,9 +27,7 @@ export function readSituationLayer(files: PackFiles, pack: PackData): SituationL
   const gate = readGate(files, sink);
   sink.add(validateSituations(items, pack));
   if (gate !== null) {
-    const strings = new Map<string, string>();
-    for (const { table } of pack.strings.get(pack.manifest.defaultLocale) ?? []) for (const [k, v] of Object.entries(table)) strings.set(k, v);
-    sink.add(checkGate(items, gate, strings, pack.provenance, pack.manifest.defaultLocale));
+    sink.add(checkGate(items, gate, localeStrings(pack.strings), pack.provenance));
   }
   const ok = errorsOf(sink.issues).length === 0;
   return { situations: ok ? items.map((i) => i.def) : [], gate, issues: sink.issues };

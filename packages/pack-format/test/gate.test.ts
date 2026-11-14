@@ -165,7 +165,7 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
   });
 
   it('A1 and B3: an effect on a protected field needs a tag, and is refused', () => {
-    const edit = editJson(sit('eastwatch_stalls'), (s) => s.options[1].effects.push({ propose: { owner: 'regions', field: 'fenfolk-labour', subject: null, delta: 5, reason: 'x', side: 'north' } }));
+    const edit = editJson(sit('eastwatch_stalls'), (s) => s.options[1].effects.push({ propose: { owner: 'regions', field: 'fenfolk-population', subject: null, delta: 5, reason: 'x', side: 'north' } }));
     fires(edit, 'gate-untagged');
     fires(edit, 'gate-protected-target');
     fires(edit, 'gate-refused');
@@ -217,6 +217,36 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
   it('B4: no option carries an atrocity-class topic; refused option shapes are refused', () => {
     fires(editJson(sit('fen_crossing'), (s) => (s.options[0].gate = { topics: ['harbour-burning'], placement: 'event', risks: [] })), 'gate-atrocity-lever');
     fires(editJson(sit('fen_crossing'), (s) => (s.options[0].id = 'burn_the_crossing')), 'gate-refused');
+  });
+
+  it('review N1: a refused shape is refused by its label in every locale and by the orders it issues, not only its id', () => {
+    // Renamed past the id pattern, the option still says what it does.
+    firesAt(editJson('strings/en.json', (t) => (t['situation.fen_crossing.option.send_back'] = 'Hunt them down in the reeds')), 'gate-refused', { file: sit('fen_crossing'), at: 'options[2].label' });
+    firesAt(editJson('strings/en.json', (t) => (t['situation.fen_crossing.option.shelter'] = 'Burn the crossing behind them')), 'gate-refused', { file: sit('fen_crossing'), at: 'options[1].label' });
+    const refuseOrder = editJson('gate/register.json', (r) => r.topics[1].refused.push({ orderPattern: '^advance:n_army_east:s_capital$', reason: 'a test signature' }));
+    firesAt(refuseOrder, 'gate-refused', { file: sit('eastwatch_stalls'), at: 'options[0].orders[0]' });
+  });
+
+  it('review N3, E3 in part: an agency reason is one the register lists for an agency-class topic the item names', () => {
+    const reason = (r: string) => editJson(sit('fen_crossing'), (s) => (s.options[1].effects = [{ propose: { owner: 'politics', field: 'bloc-support', subject: 'n_moderates', delta: 10, reason: r, side: 'north' } }]));
+    firesAt(reason('agency:invented'), 'gate-agency-reason', { file: sit('fen_crossing'), at: 'options[1].effects[0].propose.reason' });
+    // The listed reason passes E3 (its string is missing, and the sign-off is stale, but no agency issue fires).
+    expect(kinds(reason('agency:fen-flight')).filter((k) => k.includes('gate-agency-reason'))).toEqual([]);
+    // Listed, but on an item whose topics carry no agency class.
+    firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.inaction.effects[0].propose.reason = 'agency:fen-flight')), 'gate-agency-reason', { file: sit('eastwatch_stalls'), at: 'inaction.effects[0].propose.reason' });
+  });
+
+  it('review N4: every locale is scanned and hashed, not only the default', () => {
+    const en = JSON.parse(readTestbed('strings/en.json')) as Record<string, string>;
+    const second = (edit: (t: Record<string, string>) => void) => {
+      const xx = { ...en };
+      edit(xx);
+      return merge(editJson('pack.json', (m) => (m.locales = ['en', 'xx'])), { 'strings/xx.json': JSON.stringify(xx) });
+    };
+    // A faithful second table voids every gated sign-off: the hash covers each locale's text.
+    firesAt(second(() => {}), 'gate-stale-review', { file: sit('fen_crossing'), at: 'gateReview.contentHash' });
+    firesAt(second((t) => (t['terrain.swamp'] = 'the fen folk counted in the swamps')), 'gate-forbidden-wording', { file: 'strings/xx.json', at: 'terrain.swamp' });
+    firesAt(second((t) => (t['situation.fen_crossing.option.send_back'] = 'Hunt them down')), 'gate-refused', { file: sit('fen_crossing'), at: 'options[2].label' });
   });
 
   it('B5: every option of a gated decision carries locked costs, and nothing cancels them', () => {
@@ -305,7 +335,7 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
   it('C2: no display position holds the default in more than half of the gated decisions with three or more options', () => {
     const files = testbedFiles();
     const pack = loadPack(files).pack!;
-    const strings = new Map<string, string>(Object.entries(JSON.parse(readTestbed('strings/en.json')) as Record<string, string>));
+    const strings = new Map([['en', new Map<string, string>(Object.entries(JSON.parse(readTestbed('strings/en.json')) as Record<string, string>))]]);
     const gate = readGate(files, new IssueSink())!;
     const base = readSituations(files, new IssueSink()).find((x) => x.def.id === 'fen_crossing')!;
     const copies = (positions: number[]) =>
@@ -313,7 +343,7 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
         const def = { ...base.def, id: `copy_${i}` as never, historicalDefault: { options: [base.def.options[p]!.id] } };
         return { file: `situations/copy_${i}.json`, def: { ...def, gateReview: { ...base.def.gateReview!, contentHash: gateContentHash(def, strings, pack.provenance) } } };
       });
-    const c2 = (positions: number[]) => checkGate(copies(positions), gate, strings, pack.provenance, 'en').filter((i) => i.kind === 'gate-default-position');
+    const c2 = (positions: number[]) => checkGate(copies(positions), gate, strings, pack.provenance).filter((i) => i.kind === 'gate-default-position');
     expect(c2([1, 1, 1])).toHaveLength(1);
     expect(c2([0, 1, 2])).toEqual([]);
     expect(c2([1, 1])).toEqual([]);
@@ -336,6 +366,10 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     const later = { ...gate, release: { scenarios: [gate.release!.scenarios[1]!] } };
     const signed = items.map((x) => ({ ...x, def: { ...x.def, gateReview: x.def.gateReview === null ? null : { ...x.def.gateReview, reviewer: 'gate-reviewer' } } }));
     expect(releaseProblems(signed, later, ['summer_front'])).toEqual([]);
+    // Review N2: a reviewer the pack does not list, or no list at all, blocks the release.
+    const stranger = signed.map((x) => (x.def.gateReview === null ? x : { ...x, def: { ...x.def, gateReview: { ...x.def.gateReview, reviewer: 'someone-else' } } }));
+    expect(releaseProblems(stranger, later, ['summer_front'])).toContain('situations/fen_crossing.json: signed off by someone-else, who is not in gate/reviewers.json');
+    expect(releaseProblems(signed, { ...later, reviewers: null }, ['summer_front'])).toEqual(['gate/reviewers.json is missing: list the gate reviewers whose sign-offs a release accepts']);
     // Review S7: a missing release.json, or a shipped scenario with no window, blocks the release.
     expect(releaseProblems(signed, { ...later, release: null }, ['summer_front'])).toEqual([
       'gate/release.json is missing: list every scenario the pack ships, with its window',

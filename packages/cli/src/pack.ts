@@ -20,6 +20,7 @@ import {
   type Issue,
   IssueSink,
   loadPack,
+  localeStrings,
   publishedSchemas,
   PUBLISHED_SCHEMAS_DIR,
   readSituations,
@@ -93,8 +94,7 @@ function gateHash(packId: string): number {
     console.error(`packs/${packId}: the World does not validate; run npm run pack:generate -- ${packId} --report`);
     return 1;
   }
-  const strings = new Map<string, string>();
-  for (const { table } of pack.strings.get(pack.manifest.defaultLocale) ?? []) for (const [k, v] of Object.entries(table)) strings.set(k, v);
+  const strings = localeStrings(pack.strings);
   for (const { file, def } of readSituations(files, new IssueSink())) console.log(`${gateContentHash(def, strings, pack.provenance)}  ${file}`);
   return 0;
 }

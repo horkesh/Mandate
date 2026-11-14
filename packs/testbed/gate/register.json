@@ -6,11 +6,11 @@
       "window": { "from": "1861-03-04", "to": null },
       "placements": ["decision", "derived", "event", "text"],
       "status": "open",
-      "protectedFields": ["fenfolk-labour"],
+      "protectedFields": ["fenfolk-population"],
       "protectedGroups": ["fen folk", "fenfolk"],
       "agencyReasons": ["agency:fen-flight"],
       "supersededOptions": [{ "situation": "fen_crossing", "option": "send_back", "law": "sanctuary_act" }],
-      "refused": [{ "fieldPattern": "^fenfolk-", "reason": "the fen folk are never a quantity either side counts, spends or moves" }]
+      "refused": [{ "fieldPattern": "^fenfolk-", "reason": "the fen folk are never a quantity either side counts, spends or moves" }, { "labelPattern": "\\b(hunt|round up)\\b", "reason": "no seat hunts the fen folk down" }]
     },
     {
       "id": "harbour-burning",
@@ -18,7 +18,7 @@
       "window": { "from": "1861-03-04", "to": null },
       "placements": ["event", "text"],
       "status": "open",
-      "refused": [{ "optionPattern": "burn", "reason": "burning a harbour town is never a choice for any seat" }]
+      "refused": [{ "optionPattern": "burn", "labelPattern": "\\bburn", "reason": "burning a harbour town is never a choice for any seat" }]
     },
     {
       "id": "press-closures",

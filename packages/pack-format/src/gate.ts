@@ -59,8 +59,20 @@ export const TopicSchema = z.strictObject({
   agencyReasons: z.array(termId).default([]),
   /** Options a later law forbids: each must expire when the principal learns of the law, the situation that enacts it (B10). */
   supersededOptions: z.array(z.strictObject({ situation: termId, option: termId, law: termId })).default([]),
-  /** Refused facets as machine signatures: an effect field matching `fieldPattern` (or an option id matching `optionPattern`) is refused. */
-  refused: z.array(z.strictObject({ fieldPattern: regex.nullable().default(null), optionPattern: regex.nullable().default(null), reason: z.string().min(1) })).default([]),
+  /** Refused facets as machine signatures: an effect field, option id, option label (any locale) or issued order matching a pattern is refused. */
+  refused: z
+    .array(
+      z.strictObject({
+        fieldPattern: regex.nullable().default(null),
+        optionPattern: regex.nullable().default(null),
+        /** Matched against an option's label text in every locale (review N1: renaming an id is no way round). */
+        labelPattern: regex.nullable().default(null),
+        /** Matched against each order an option issues, written goal:post:region. */
+        orderPattern: regex.nullable().default(null),
+        reason: z.string().min(1),
+      }),
+    )
+    .default([]),
 });
 export const RegisterSchema = z.strictObject({ topics: z.array(TopicSchema) });
 export const ClassesSchema = z.strictObject({ classes: z.array(z.strictObject({ id: termId, atrocity: z.boolean(), requiresAgencyReason: z.boolean() })) });
@@ -87,6 +99,8 @@ export const ChecklistSchema = z.strictObject({
   ),
 });
 export const ReleaseSchema = z.strictObject({ scenarios: z.array(z.strictObject({ scenario: termId, from: date, to: date })) });
+/** The gate reviewers whose sign-offs a release accepts (review N2: reviewer and author differing is not enough). */
+export const ReviewersSchema = z.strictObject({ reviewers: z.array(z.string().min(1)) });
 
 export interface GateData {
   readonly register: z.output<typeof RegisterSchema>;
@@ -98,6 +112,8 @@ export interface GateData {
   readonly checklist: z.output<typeof ChecklistSchema>;
   /** Null when `gate/release.json` is missing, which the release check refuses (review S7). */
   readonly release: z.output<typeof ReleaseSchema> | null;
+  /** Null when gate/reviewers.json is missing, which the release check refuses (review N2). */
+  readonly reviewers: z.output<typeof ReviewersSchema> | null;
 }
 
 /** Read `gate/`. The first five files are required once a pack has situations; the rest default to empty. */
@@ -110,14 +126,29 @@ export function readGate(files: PackFiles, sink: IssueSink): GateData | null {
   const anachronisms = readJson(files, gateFile('anachronisms.json'), AnachronismsSchema, sink, false) ?? { terms: [] };
   const sourcePolicy = readJson(files, gateFile('source-policy.json'), SourcePolicySchema, sink, false) ?? { banned: [], weak: [] };
   const release = readJson(files, gateFile('release.json'), ReleaseSchema, sink, false);
+  const reviewers = readJson(files, gateFile('reviewers.json'), ReviewersSchema, sink, false);
   if (!register || !classes || !triggers || !forbidden || !checklist) return null;
-  return { register, classes, triggers, forbidden, anachronisms, sourcePolicy, checklist, release };
+  return { register, classes, triggers, forbidden, anachronisms, sourcePolicy, checklist, release, reviewers };
 }
 
 /** The questions this module tests, by id (the rest are the reviewer's, or wait for an artefact type). */
 export const GATE_QUESTIONS_TESTED = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4', 'B5', 'B10', 'C1', 'C2', 'C3', 'C4', 'E7', 'F2', 'F5', 'F6'] as const;
 
-/** Resolved text of every string a situation shows, by key (the default locale). */
+/** String tables by locale: locale, then key, then text. */
+export type LocaleStrings = ReadonlyMap<string, ReadonlyMap<string, string>>;
+
+/** A pack's string tables merged per locale (hand-written and generated). */
+export function localeStrings(tables: ReadonlyMap<string, readonly { readonly table: Readonly<Record<string, string>> }[]>): LocaleStrings {
+  const out = new Map<string, Map<string, string>>();
+  for (const [locale, files] of tables) {
+    const m = new Map<string, string>();
+    for (const { table } of files) for (const [k, v] of Object.entries(table)) m.set(k, v);
+    out.set(locale, m);
+  }
+  return out;
+}
+
+/** Resolved text of every string a situation shows, by key, in one locale. */
 export function resolvedStrings(def: SituationDef, strings: ReadonlyMap<string, string>): Record<string, string> {
   const out: Record<string, string> = {};
   for (const { key } of stringKeysOf(def)) {
@@ -129,14 +160,17 @@ export function resolvedStrings(def: SituationDef, strings: ReadonlyMap<string, 
 
 /**
  * The content hash a sign-off records (A7; section 5): the item in canonical
- * JSON without its `gateReview`, with the text of every string it shows and
- * every source row it cites. Any edit to any of them voids the sign-off.
+ * JSON without its `gateReview`, with the text of every string it shows, in
+ * every locale (review N4: a translation is part of what was signed), and every
+ * source row it cites. Any edit to any of them voids the sign-off.
  */
-export function gateContentHash(def: SituationDef, strings: ReadonlyMap<string, string>, provenance: ProvenanceFile): string {
+export function gateContentHash(def: SituationDef, strings: LocaleStrings, provenance: ProvenanceFile): string {
   const { gateReview: _review, ...item } = def;
   const cited = new Set(def.citations.map((c) => c.source));
   const sources = provenance.sources.filter((s) => cited.has(s.key)).sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0));
-  return canonicalHash({ item, strings: resolvedStrings(def, strings), sources });
+  const byLocale: Record<string, Record<string, string>> = {};
+  for (const locale of [...strings.keys()].sort()) byLocale[locale] = resolvedStrings(def, strings.get(locale)!);
+  return canonicalHash({ item, strings: byLocale, sources });
 }
 
 /** Trigger matches in a text (whole words, case rules, proper nouns on the allowlist removed). */
@@ -188,15 +222,15 @@ type Tag = phase0.GateTag;
 const topicsOf = (tag: Tag | null): readonly string[] => (tag === null || 'none' in tag ? [] : tag.topics);
 
 /**
- * The gate's checks over a pack's situations. `strings` is the default
- * locale's table; `provenance` the pack's sources.
+ * The gate's checks over a pack's situations. `strings` holds every locale's
+ * table (review N4: translations are checked and hashed too); `provenance` the
+ * pack's sources.
  */
 export function checkGate(
   items: readonly { readonly file: string; readonly def: SituationDef }[],
   gate: GateData,
-  strings: ReadonlyMap<string, string>,
+  strings: LocaleStrings,
   provenance: ProvenanceFile,
-  defaultLocale: string,
 ): Issue[] {
   const sink = new IssueSink();
   const topics = new Map(gate.register.topics.map((t) => [t.id, t]));
@@ -225,7 +259,8 @@ export function checkGate(
 
   for (const { file, def } of items) {
     const err = (kind: string, at: string, message: string, expected?: string) => sink.error(kind, file, at, message, expected);
-    const texts = Object.entries(resolvedStrings(def, strings));
+    const locales = [...strings.keys()].sort();
+    const texts = locales.flatMap((locale) => Object.entries(resolvedStrings(def, strings.get(locale)!)));
     const effects = phase0.effectsOf(def);
     const tag = def.gate;
     const named = topicsOf(tag);
@@ -304,11 +339,29 @@ export function checkGate(
       for (const r of topic.refused) {
         const field = r.fieldPattern === null ? null : new RegExp(r.fieldPattern, 'u');
         const option = r.optionPattern === null ? null : new RegExp(r.optionPattern, 'u');
-        for (const { at, effect } of effects) if (field !== null && 'propose' in effect && field.test(effect.propose.field)) err('gate-refused', at, `refused under topic "${topic.id}": ${r.reason}`);
+        const label = r.labelPattern === null ? null : new RegExp(r.labelPattern, 'iu');
+        const order = r.orderPattern === null ? null : new RegExp(r.orderPattern, 'u');
+        const refuse = (at: string) => err('gate-refused', at, `refused under topic "${topic.id}": ${r.reason}`);
+        for (const { at, effect } of effects) if (field !== null && 'propose' in effect && field.test(effect.propose.field)) refuse(at);
         def.options.forEach((o, i) => {
-          if (option !== null && option.test(o.id)) err('gate-refused', `options[${i}].id`, `refused under topic "${topic.id}": ${r.reason}`);
+          if (option !== null && option.test(o.id)) refuse(`options[${i}].id`);
+          // Review N1: an option renamed past the id pattern is still refused by what it says and what it orders.
+          if (label !== null) for (const locale of locales) if (label.test(strings.get(locale)!.get(o.label) ?? '')) refuse(`options[${i}].label`);
+          if (order !== null) o.orders.forEach((x, j) => order.test(`${x.goal}:${x.to}:${x.region ?? '-'}`) && refuse(`options[${i}].orders[${j}]`));
         });
       }
+    }
+
+    // E3, the part that reads situations (review N3): a reason in the agency namespace is one the register
+    // lists for a topic the item names whose class requires agency reasons. Derived terms come with lane 0.9.
+    for (const { at, effect } of effects) {
+      if (!('propose' in effect) || !effect.propose.reason.startsWith('agency:')) continue;
+      const own = [...named, ...def.options.flatMap((o) => topicsOf(o.gate))];
+      const listed = own.some((id) => {
+        const topic = topics.get(id);
+        return topic !== undefined && classes.get(topic.class)?.requiresAgencyReason === true && topic.agencyReasons.includes(effect.propose.reason);
+      });
+      if (!listed) err('gate-agency-reason', `${at}.propose.reason`, `agency reason "${effect.propose.reason}" is not listed for any agency-class topic the item names`, 'a reason from a named topic’s agencyReasons, whose class requires them (E3)');
     }
 
     // B4: no option, and no decision, carries an atrocity-class topic. An option's own tag adds to the
@@ -426,8 +479,9 @@ export function checkGate(
   // checked against the patterns that apply anywhere and to narrator text, and the proximity rule. Review hits
   // here have no sign-off to hold a note, so they stay warnings; anachronisms need a date, which only items have.
   const shown = new Set(items.flatMap(({ def }) => stringKeysOf(def).map((k) => k.key)));
-  const table = `strings/${defaultLocale}.json`;
-  for (const [key, text] of [...strings].sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))) {
+  for (const [locale, localeTable] of [...strings].sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))) {
+  const table = `strings/${locale}.json`;
+  for (const [key, text] of [...localeTable].sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))) {
     if (shown.has(key)) continue;
     for (const p of gate.forbidden.patterns) {
       if (p.scope === 'label') continue;
@@ -438,6 +492,7 @@ export function checkGate(
     }
     const near = proximityHit(text, gate.forbidden.resourceWords, groups, gate.forbidden.proximityTokens);
     if (near !== null) sink.error('gate-forbidden-wording', table, key, `resource wording ${near}`, 'people of a protected group are never a resource (F2; 0021)');
+  }
   }
 
   // C2: no display position holds the default in more than half of the gated decisions with three or more options.
@@ -490,6 +545,14 @@ export function releaseProblems(items: readonly { readonly file: string; readonl
       if (overlaps) problems.push(`scenario ${s.scenario} (${s.from} to ${s.to}) overlaps held topic ${t.id} (${t.status === 'record' ? 'awaiting its record' : 'needs-source'}, ${t.window.from} to ${t.window.to ?? 'open'})`);
     }
   }
-  for (const { file, def } of items) if (def.gateReview?.reviewer.startsWith('fixture') === true) problems.push(`${file}: signed off by a fixture (${def.gateReview.reviewer}), not a gate reviewer`);
+  // Review N2: a sign-off counts only from a reviewer the pack lists; differing from the author is not enough.
+  if (gate.reviewers === null) problems.push('gate/reviewers.json is missing: list the gate reviewers whose sign-offs a release accepts');
+  const accepted = new Set(gate.reviewers?.reviewers ?? []);
+  for (const { file, def } of items) {
+    const reviewer = def.gateReview?.reviewer;
+    if (reviewer === undefined) continue;
+    if (reviewer.startsWith('fixture')) problems.push(`${file}: signed off by a fixture (${reviewer}), not a gate reviewer`);
+    else if (gate.reviewers !== null && !accepted.has(reviewer)) problems.push(`${file}: signed off by ${reviewer}, who is not in gate/reviewers.json`);
+  }
   return problems;
 }
