@@ -32,6 +32,19 @@ describe('the derived map is rebuilt only when what it reads changes (FOUNDATION
     expect(cache.recomputes).toBe(5);
   });
 
+  it('rebuilds when only the holder changes: 300/550 to 550/300 crosses no threshold (review S1)', () => {
+    const cache = createDerivedMapCache();
+    const before = deriveMap(map, { control, month: 6 }, cache);
+    const swapped = controlTable({ a1: { a: 1000 }, a2: { a: 1000 }, mid: { a: 550, b: 300 }, b2: { b: 1000 }, b1: { b: 1000 } });
+    // Every faction's band in mid is the same before and after (both at or above 250): only the holder moved.
+    const midTerm = (c: typeof control) => mapSignature(map, { control: c, month: 6 }).split('|').find((p) => p.startsWith('mid:'));
+    expect([midTerm(control), midTerm(swapped)]).toEqual(['mid:22:b', 'mid:22:a']);
+    const after = deriveMap(map, { control: swapped, month: 6 }, cache);
+    expect(cache.recomputes).toBe(2);
+    expect(before.index.contactEdges.map((c) => c.edge)).toEqual(['road:a2:mid']);
+    expect(after.index.contactEdges.map((c) => c.edge)).toEqual(['road:b2:mid']);
+  });
+
   it('a cached derivation equals a fresh one (rebuilding derived data changes nothing, AWWV M1)', () => {
     const cache = createDerivedMapCache();
     deriveMap(map, { control, month: 6 }, cache);
@@ -80,7 +93,11 @@ describe('invariants (FOUNDATION 10, phase 10), each with a broken case', () => 
     const stale = deriveMap(map, { control: controlTable({ a1: { a: 1000 } }), month: 6 });
     expect(derivedInvariants(map, control, 6, INTACT_NETWORK, stale).map((f) => f.kind)).toContain('derived_stale');
 
-    const oneSided: DerivedMap = { ...good, index: { ...good.index, fronts: new Map([[F('a'), good.index.fronts.get(F('a'))!], [F('b'), []]]) } };
+    const comp = good.index.components.get(F('a'))![0]!;
+    const overlapping: DerivedMap = { ...good, index: { ...good.index, components: new Map(good.index.components).set(F('a'), [comp, { ...comp, id: 'component:a:copy' }]) } };
+    expect(derivedInvariants(map, control, 6, INTACT_NETWORK, overlapping).map((f) => f.kind)).toContain('component_overlap');
+
+    const oneSided: DerivedMap ={ ...good, index: { ...good.index, fronts: new Map([[F('a'), good.index.fronts.get(F('a'))!], [F('b'), []]]) } };
     expect(derivedInvariants(map, control, 6, INTACT_NETWORK, oneSided).map((f) => f.kind)).toContain('front_not_mirrored');
 
     const b = good.supply.factions.get(F('b'))!;
