@@ -4,7 +4,7 @@ Status: design lane output (2026-11-14), a proposal like everything in `docs/des
 
 **How elements are marked.** **[canon: NNNN]** means an accepted record already fixes the element and this document only lays it out. **[proposed]** means this document introduces it. **[game]** in the storyboard marks what a seat or the kernel would compute. Facts about the world come only from the research notes and the catalogue (`SITUATIONS-1861-62.md`, cited by situation number), never from this lane's memory (L10). Where a period convention is needed and no note sources it, it is marked **needs-source** and listed for a research lane in section 9.
 
-**The starting hypothesis and what changed.** The lead's candidate was one desk seen from above, the staff map in the middle, a tray of papers, a ledger, an org board, the calendar and the attention meter always visible, almost no modals, the audience as the one scene change, battles as dispatches, and a week that runs read, ask, set goals, review arrows, audiences, run. It survives in outline. It changes in nine places, each with its reason:
+**The starting hypothesis and what changed.** The lead's candidate was one desk seen from above, the staff map in the middle, a tray of papers, a ledger, an org board, the calendar and the attention meter always visible, almost no modals, the audience as the one scene change, battles as dispatches, and a week that runs read, ask, set goals, review arrows, audiences, run. It survives in outline. It changes in ten places, each with its reason:
 
 | # | Change | Reason |
 |---|---|---|
@@ -17,6 +17,7 @@ Status: design lane output (2026-11-14), a proposal like everything in `docs/des
 | 7 | **Signed orders wait in an out-tray** and can be recalled free until the days run. | Seats answer at turn boundaries (0027), so nothing has left the building yet; recall makes mistakes cheap without an undo stack. Needs lane 0.6 to confirm (section 10). |
 | 8 | In plan review, **the same blue-pencil marks can be sent two ways**: as notes (send back, free) or as orders (edits, each a counter-order that costs attention). The interface never predicts the commander's reaction. | 0025 and 0040 make sending back free and editing costly; one set of marks makes the difference a choice, not a mode. A compliance preview would leak hidden stats (0020, 0022). |
 | 9 | **A week does not run read, ask, goals, review in one sitting.** Plans come back at a later stop, because seats answer at turn boundaries (0027); Inquire and Consult go first because their answers take days and can end the turn early (0040). | The walkthrough's stops 2–4 and 6–7 have exactly this rhythm. |
+| 10 | **Every screen is drawn at 3440×1440 first**, with side areas collapsing into drawers at 16:9 and the docket under the map rather than across the screen. | 0049 (owner's directive, added after the first draft). |
 
 ---
 
@@ -24,26 +25,47 @@ Status: design lane output (2026-11-14), a proposal like everything in `docs/des
 
 There is **one main screen, the desk** [proposed, from the hypothesis], plus one scene (the audience), two screens outside the turn (the reckoning and the verdict) and the setup screen. Everything else is a state of the desk. The desk is flat 2D, seen from above, not a room to walk around [proposed].
 
+### 1.0 The display: ultrawide first
+
+[canon: 0049] Every screen below is drawn first at the reference resolution, **3440×1440 (21:9)**, the owner's monitor. **16:9 (2560×1440 and 1920×1080)** is the secondary target and stays fully usable: the side areas collapse into drawers; the map never shrinks to make room. The extra width of 21:9 goes to the desk, not to stretched panels: the map holds the centre, the in-tray anchors to the left edge, the org board and ledger to the right, and **no single panel spans the full width** (so the calendar, the meter and the run button are separate objects, and the docket sits under the map only). **Papers, reports and dialogue keep a maximum line length** of about 70 characters (proposed figure); extra width goes to margins, portraits and the map. The desk runs at 144 Hz on the owner's hardware with a 60 Hz floor, and the map's lazy bake (0043) is measured at 3440×1440 [canon: 0049]. 16:10 down to 1280×800 is checked before release, not designed for [canon: 0049].
+
+**Columns at 3440×1440** [proposed]: left edge 560 px (calendar, meter, in-tray, out-tray); reading column 760 px, present only while a paper is open (otherwise the map takes it); the map at least 1,460 px; right edge 660 px (org board, ledger, file, daybook, run button). At 16:9 the left and right edges become drawers with visible tabs and counts (the in-tray's unread count, the docket's nearest clock), and the reading column opens over the map's left part while the map pans to keep the lit place in view.
+
 ### 1.1 The desk at rest
 
-The base layout at 1920×1080 logical pixels [proposed]; section 5 covers scaling.
+At 3440×1440 [proposed]:
 
 ```
-+--------------------------------------------------------------------------------------------+
-| Sat 8 Mar 1862  turn: up to 7 days | ATTENTION  ■ ■ ■ ■ □ □  4 of 6, refills Tue 11 Mar | LET THE DAYS RUN ▸ |
-+-------------+------------------------------------------------------------+-----------------+
-| IN-TRAY  (7)|                                                            | ORG BOARD       |
-|  ▣ wire     |                                                            |  posts, holders |
-|  ▣ letter   |                     THE STAFF MAP                          |  (pinned cards) |
-|  ▣ return   |        (fronts, washes, flags, pencil, arrows)             |-----------------|
-|  ▢ front pg |                                                            | LEDGER          |
-|             |                                                            |  (closed book)  |
-| OUT-TRAY (2)|                                                            |-----------------|
-|  signed,    |                                                            | FILE  DAYBOOK   |
-|  not sent   |                                                            |                 |
-+-------------+------------------------------------------------------------+-----------------+
-| DOCKET  [Hampton Roads ◷ 1–2 days] [War orders ◷ open] [Covering the capital ◷ until he sails] |
-+--------------------------------------------------------------------------------------------+
++--------------+---------------------------------------------------------------------+-----------------+
+| Sat 8 Mar    |                                                                     | ORG BOARD       |
+| 1862         |                                                                     |  posts, holders |
+| up to 7 days |                                                                     |  (pinned cards) |
+| ATTENTION    |                                                                     |                 |
+| ■■■■□□ 4/6   |                         THE STAFF MAP                               |-----------------|
+| refills      |            (fronts, washes, flags, pencil, arrows)                  | LEDGER          |
+| Tue 11 Mar   |                                                                     |  (closed book)  |
+|--------------|                                                                     |-----------------|
+| IN-TRAY  (7) |                                                                     | FILE   DAYBOOK  |
+|  ▣ wire      |                                                                     |                 |
+|  ▣ letter    |                                                                     |                 |
+|  ▣ return    |---------------------------------------------------------------------|                 |
+|  ▢ front pg  | DOCKET [Hampton Roads ◷ 1–2 d] [War orders ◷ open] [Capital ◷ ...]  |                 |
+| OUT-TRAY (2) |                                                                     | LET THE DAYS    |
+|  signed      |                                                                     |      RUN ▸      |
++--------------+---------------------------------------------------------------------+-----------------+
+   560 px                 map, at least 1,460 px (+760 when no paper is open)               660 px
+```
+
+At 16:9 (2560×1440, 1920×1080) [proposed]: the left and right edges become drawer tabs ("In-tray 7", "Board", "Ledger", "File"); the calendar, meter and run button stay pinned in the corners over the map; the docket stays under the map.
+
+```
++--+-------------------------------------------------------------------------+--+
+|In| Sat 8 Mar 1862   ■■■■□□ 4/6 refills Tue 11 Mar            LET THE DAYS RUN▸|Bd|
+|7 |                                                                         |Lg|
+|  |                          THE STAFF MAP (full width)                     |Fi|
+|  |-------------------------------------------------------------------------|  |
+|  | DOCKET [Hampton Roads ◷] [War orders ◷] [Capital ◷]                     |  |
++--+-------------------------------------------------------------------------+--+
 ```
 
 - **Shows:** the calendar, the attention meter, the in-tray and out-tray, the staff map, the org board, the ledger (closed), the file and daybook (closed), and the docket of live situations.
@@ -63,18 +85,25 @@ The base layout at 1920×1080 logical pixels [proposed]; section 5 covers scalin
 
 Clicking a paper, or pressing Space for the next unread one, slides it forward into the **reading column**, between the tray and the map. The map stays visible and dims slightly; the places the paper names are outlined on it in blue pencil and their names underlined in the paper; hovering one does the same in reverse [proposed].
 
+At 3440×1440 [proposed]:
+
 ```
-+-------------+------------------------------+-----------------------------+-----------------+
-| IN-TRAY  (6)|  U.S. MILITARY TELEGRAPH      |                             | ORG BOARD       |
-|             |  Fortress Monroe  8 Mar  9 pm |     STAFF MAP (dimmed)      |                 |
-|             |  To Hon. E. M. Stanton        |     Hampton Roads outlined  |                 |
-|             |  ...........................  |     in blue pencil          |                 |
-|             |  [route: wire, via ...]       |                             |                 |
-|             |  [author card]  [subject ▸]   |                             |                 |
-|             |  --------------------------   |                             |                 |
-|             |  Refer to ▸   Ask him ▸   File|                             |                 |
-+-------------+------------------------------+-----------------------------+-----------------+
++--------------+-------------------------------+---------------------------------------+-----------------+
+| calendar     |  [telegraph form header]       |                                       | ORG BOARD       |
+| meter        |  place · date · hour           |       STAFF MAP (dimmed)              |                 |
+|--------------|  To: ...                       |       the places the paper names      |                 |
+| IN-TRAY  (6) |  ............................  |       outlined in blue pencil         |-----------------|
+|              |  (at most ~70 characters a     |                                       | LEDGER          |
+|              |   line; the column widens its  |                                       |                 |
+|              |   margins, never its lines)    |                                       |-----------------|
+|              |  [route: wire, via ...]        |                                       | FILE   DAYBOOK  |
+|              |  [author card]  [subject ▸]    |---------------------------------------|                 |
+|              |  Refer to ▸  Ask him ▸  File   | DOCKET [...] [...]                    | RUN ▸           |
++--------------+-------------------------------+---------------------------------------+-----------------+
+      560                 760                              map 1,460                         660
 ```
+
+At 16:9 [proposed]: the reading column opens as a drawer over the left of the map at the same width; the map pans so the lit places stay visible beside it.
 
 (The header text is placeholder layout; real forms come from the document templates in `ASSETS.md`, built on period conventions a research lane sources.)
 
@@ -87,47 +116,53 @@ Clicking a paper, or pressing Space for the next unread one, slides it forward i
 
 The one scene change [proposed, from the hypothesis]. The desk slides back and the visitor sits across it: his portrait, large, on the far side; his case on the left as numbered reasons; the president's counters on the right; his standing and the staff's assessment as a small card under the portrait [canon: the audience and typed counters, FOUNDATION section 5 and M2; proposed layout].
 
+At 3440×1440 [proposed]: the visitor's portrait holds the centre at about 720 px tall; his case and the president's answers sit either side at reading width; the outer margins show the desk's edge, not stretched text.
+
 ```
-+--------------------------------------------------------------------------------------------+
-|  AUDIENCE   Maj. Gen. G. B. McClellan, Army of the Potomac      cost: 1 (spent)  ■ ■ ■ □ □ □ |
-+--------------------------------+-------------------------------+---------------------------+
-|  HIS CASE                      |                               |  YOUR ANSWER              |
-|  1. "The capital is safe ..."  |         [ PORTRAIT ]          |  ▸ The order stands       |
-|     reason: enemy estimate,    |                               |  ▸ I will give you ...    |
-|     from his intelligence chief|   staff assessment: (band)    |  ▸ Put it in writing      |
-|  2. "..."                      |   standing: (words)           |  ▸ We will speak again    |
-|                                |   stances on record (2)       |                           |
-+--------------------------------+-------------------------------+---------------------------+
-|  What he said is entered in the file. What he will do, you will learn from what he reports. |
-+--------------------------------------------------------------------------------------------+
++--------------+------------------------------+-------------------------------+------------------------------+-----------+
+| (desk edge,  |  HIS CASE                    |                               |  YOUR ANSWER                 | meter     |
+|  calendar)   |  1. "The capital is safe..." |         [ PORTRAIT ]          |  ▸ The order stands          | ■■■□□□    |
+|              |     reason: enemy estimate,  |          ~720 px tall         |  ▸ I will give you ...       | cost 1    |
+|              |     from his intelligence    |                               |  ▸ Put it in writing         | (spent)   |
+|              |     chief                    |   Maj. Gen. ..., Army of ...  |  ▸ We will speak again       |           |
+|              |  2. "..."                    |   staff assessment: (band)    |                              |           |
+|              |                              |   standing · stances (2)      |                              |           |
+|              |------------------------------+-------------------------------+------------------------------|           |
+|              |  What he said is entered in the file. What he will do, you will learn from what he reports.    |           |
++--------------+------------------------------------------------------------------------------------------------+-----------+
 ```
+
+At 16:9 [proposed]: the desk-edge margins drop and the meter moves above the answers; the case and answer columns keep their reading width, and the portrait shrinks to about 560 px tall at 1920×1080.
 
 - **Shows:** his stated reasons as typed terms rendered from the string table, each with its source where he cites one; the counters the kernel allows; his answer to each counter as his declared rung [canon: 0007, FOUNDATION section 6].
 - **Hides:** his actual rung, his true reasons, his hidden stats [canon: 0020, 0022].
 - **Ends:** with a short line in his voice and a paper in the file recording what was said [proposed]. There is no "success" banner; the result is whatever he later reports [proposed, from pillar 4].
-- **Portrait:** a public-domain likeness for a real person; for a generated officer, a card saying no likeness is on file (`ASSETS.md`) [proposed].
+- **Portrait:** for a real person, a portrait made from his cited public-domain photograph, never an invented likeness [canon: 0048]; for a generated officer, an invented face from the generated library, or a card saying no likeness is on file (`ASSETS.md` briefs 6 and 7) [proposed].
 
 ### 1.4 Plan review on the map
 
 When a plan is ready for review (a decision point, 0027), its paper arrives in the tray with a docket mark, and opening it brings the **map forward**: the reading column holds the plan sheet, the map shows the plan's arrows at full strength, and everything else on the map dims [proposed].
 
+At 3440×1440 [proposed]: the plan sheet takes the reading column; the in-tray stays at the left edge; the right edge shows the commander's card and the supporting holders' cards instead of the board, so the people behind the arrows stay in view.
+
 ```
-+------------------------------+-------------------------------------------------------------+
-| PLAN  Army of the Potomac     |                                                             |
-| for: [the goal you set]       |      ===hatched arrow (axis 1)===>  objective               |
-| drafted by his staff, 11 Mar  |              \                                              |
-| axes:                         |               \==axis 2==> (support request: Navy)          |
-|  1. ... divisions (his choice)|                                                             |
-|  2. ...                       |      blue pencil: your marks, numbered (1) (2)              |
-| phases: [timeline strip]      |                                                             |
-| his reasons (inline)          |                                                             |
-| support requested: ...        |                                                             |
-|-------------------------------|                                                             |
-| Approve (free)                |                                                             |
-| Send back with notes (free)   |                                                             |
-| Order these changes (2 edits = 2) |                                                         |
-+------------------------------+-------------------------------------------------------------+
++--------------+-------------------------------+------------------------------------------------------+---------------+
+| IN-TRAY      | PLAN  Army of the Potomac     |                                                      | HIS CARD      |
+| (dimmed)     | for: [the goal you set]       |     ===hatched arrow (axis 1)===>  objective         | portrait,     |
+|              | drafted by his staff, 11 Mar  |              \                                       | assessment    |
+| meter        | axes:                         |               \==axis 2==> (support request: Navy)   |---------------|
+| ■■■■□□       |  1. ... divisions (his choice)|                                                      | SUPPORT ASKED |
+| marks: 2 = 2 |  2. ...                       |     blue pencil: your marks, numbered (1) (2)        | Navy: [card]  |
+|              | phases: [timeline strip]      |                                                      |  "agreed"     |
+|              | his reasons (inline)          |                                                      |               |
+|              |-------------------------------|                                                      |               |
+|              | Approve (free)                |                                                      |               |
+|              | Send back with notes (free)   |                                                      |               |
+|              | Order these changes (2 = 2)   |                                                      |               |
++--------------+-------------------------------+------------------------------------------------------+---------------+
 ```
+
+At 16:9 [proposed]: the side columns become drawers; the plan sheet stays open over the map's left; the map keeps full height.
 
 - **Shows:** the commander's draft as broad hatched arrows, one per axis, with his inline reasons [canon: 0013 item 2, 0016, FOUNDATION section 5 "reasons shown inline"]; the divisions he assigned to each axis as a list on the sheet, never as draggable pieces [canon: 0016, 0026]; phases with timings as a strip [canon: 0016]; support requests to other posts as dotted arrows labelled with the post asked [canon: 0016 joint operations; proposed style].
 - **The president's marks** are blue pencil [canon: 0013]: drag an arrowhead to another region (an axis's objective), drag a route handle to a waypoint region, nudge a phase on the strip (timing), strike an axis or draw a new one to an objective, or ask for a force size in the margin [canon: the edit grammar, 0026]. A route between waypoints is drawn only when the kernel has validated it; the shell never routes [canon: 0026, kernel owns movement; proposed display].
@@ -138,6 +173,8 @@ When a plan is ready for review (a decision point, 0027), its paper arrives in t
 ### 1.5 The org board
 
 A cork board of posts, nested as the pack nests them (military divisions above departments, departments above armies and corps, an army and its department often one post) [canon: 0033 posts nest; proposed board]. Each post shows its holder's card; a vacant post shows an empty pin and the words "vacant since …" [proposed, from SITUATIONS P5].
+
+The board lives at the right edge at rest; opened, it widens leftward over the map to about 1,400 px at 3440×1440 (a board, not a full-width panel), and at 16:9 it opens as a drawer of the same width [proposed].
 
 ```
 +----------------------------------------------------------------------------+
@@ -162,7 +199,7 @@ A cork board of posts, nested as the pack nests them (military divisions above d
 
 ### 1.6 The ledger
 
-A bound book that opens forward over the map [proposed]. Each page is a table of the staff's figures, each row signed and dated. Pages:
+A bound book that opens forward over the map as a two-page spread about 1,500 px wide at 3440×1440, each page at reading width, with the map visible either side; at 16:9 the spread covers the map's centre and closes with Esc [proposed]. Each page is a table of the staff's figures, each row signed and dated. Pages:
 
 | Page | Contents | Status |
 |---|---|---|
@@ -204,18 +241,21 @@ A bound book that opens forward over the map [proposed]. Each page is a table of
 
 A desk state, not a cutscene [canon: 0027, FOUNDATION section 9]. The map closes in on the battle's region; the daybook opens beside it as the dispatch log; the calendar shows the hour.
 
+At 3440×1440 [proposed]: the dispatch log takes the reading column; the left edge shows the hour on the calendar; the right edge holds the cards of the commanders engaged, each with his last dispatch's time, so silence from one man is visible at a glance.
+
 ```
-+------------------------------+-------------------------------------------------------------+
-| DISPATCH LOG  (battle day 1)  |                                                             |
-|  7:40 am  wire, Gen. ...      |     STAFF MAP, battle region                                |
-|   "Engaged at ... all well"   |     pencil marks appear as each dispatch is read;           |
-|  10:15 am wire, ...           |     contradictory reports both drawn, each signed           |
-|   "..."                       |                                                             |
-|  noon     — nothing on the wire —                                                           |
-|  3:05 pm  press, reporter ... |                                                             |
-| [▶ play] [next] [to morning]  |   Wire an order ▸  (arrives for a later day)                |
-+------------------------------+-------------------------------------------------------------+
++--------------+-------------------------------+------------------------------------------------------+---------------+
+| CALENDAR     | DISPATCH LOG  (battle day 1)  |                                                      | ENGAGED       |
+| 9 Mar        |  7:40 am  wire, Gen. ...      |     STAFF MAP, battle region                         | Gen. A [card] |
+| 3:05 pm      |   "Engaged at ... all well"   |     pencil marks appear as each dispatch is read;    |  last: 10:15  |
+|              |  10:15 am wire, ...           |     contradictory reports both drawn, each signed    | Gen. B [card] |
+| IN-TRAY      |  noon  — nothing on the wire —|                                                      |  last: 7:40   |
+| (held until  |  3:05 pm  press, reporter ... |                                                      |               |
+|  morning)    | [▶ play] [next] [to morning]  |   Wire an order ▸  (arrives for a later day)         |               |
++--------------+-------------------------------+------------------------------------------------------+---------------+
 ```
+
+At 16:9 [proposed]: the engaged commanders become a row of small cards along the top of the map.
 
 - **Shows:** each dispatch at its hour stamp, in the order it reached Washington; silence as empty hours [canon: "fragments, contradictions, silence", VISION and 0027; proposed rendering]; the map's pencil from those dispatches only.
 - **Orders** wired during it are ordinary commands that arrive for a later day of the battle or after it, and the form says so [canon: 0026, 0027].
@@ -223,13 +263,15 @@ A desk state, not a cutscene [canon: 0027, FOUNDATION section 9]. The map closes
 
 ### 1.10 The reckoning
 
-A screen outside the turn, offered after each major battle (optional) and at campaign end [canon: FOUNDATION section 6]: two columns, "what you were told" (the reports, signed and dated) and "what happened" (this game's truth, and the retrospective statements), with the map shown twice, staff map against truth [proposed layout]. It is the only place truth is ever drawn in a shipped game [proposed, from 0013 item 5 and FOUNDATION section 6].
+A screen outside the turn, offered after each major battle (optional) and at campaign end [canon: FOUNDATION section 6]: two columns, "what you were told" (the reports, signed and dated) and "what happened" (this game's truth, and the retrospective statements), with the map shown twice, staff map against truth [proposed layout]. This is the one screen that uses 21:9 for two maps side by side (each about 1,600 px); at 16:9 the two maps share one frame with a slider between them [proposed]. It is the only place truth is ever drawn in a shipped game [proposed, from 0013 item 5 and FOUNDATION section 6].
 
 ### 1.11 The verdict
 
 The end screen: which will broke and why, as typed terms, with the gate's required clauses [canon: 0026, 0028, gate H1–H3; R5 pending]. Text only, set like a printed proclamation page; no score, no grade [canon: gate H5, Q5].
 
 ### 1.12 Setup and the history modes
+
+At 3440×1440 the setup form is a single sheet of reading width (about 900 px) centred on the desk, with the scenario's opening map plate to its right and the cast's portraits to its left; at 16:9 the plate and portraits drop below the sheet [proposed].
 
 ```
 +--------------------------------------------------------------------------+
@@ -436,7 +478,7 @@ The map is the staff's map on the president's desk, drawn only from what the fac
 All of it is presentation and so cannot change a seeded run's state hash [canon: gate G4].
 
 - **Colour-blind-safe map** [proposed]: every meaning carried by colour also has a shape or texture. Own and enemy washes differ by hatching direction as well as hue; a front's teeth face the enemy; corrections are struck through and initialled, not only red; the president's marks are numbered and have a distinct stroke. An alternative palette for each colour-vision type is a skin variant, chosen in options. The prototype's enemy (`#8e3a2a`) and correction (`#b0231b`) colours are too close for anyone and must separate in production (section 10).
-- **Type scaling** [proposed]: papers and chrome scale from 80% to 200%; reading text is at least 16 logical pixels at 100%; map labels scale on their own slider. A **plain reading** option sets papers in Libre Caslon at a larger size in place of the more ornamental faces; handwriting forms gain a typeset transcription under the hand.
+- **Type scaling** [proposed]: papers and chrome scale from 80% to 200%; reading text is at least 18 px at 100% on a 1440-pixel-high display (about 14 px at 1080), and larger type widens the reading column before it lengthens lines; map labels scale on their own slider. A **plain reading** option sets papers in Libre Caslon at a larger size in place of the more ornamental faces; handwriting forms gain a typeset transcription under the hand.
 - **Contrast** [proposed]: paper ink meets WCAG 2.1 AA (4.5:1) for body text in every skin; faded map marks may drop below it, so their content is always available as text in the "what we know" note. A high-contrast skin raises washes and pencil to full contrast and drops paper grain.
 - **Low glare** [proposed]: an evening-lamp option dims paper and warms the desk. There is no separate dark theme for papers; paper stays paper.
 - **Reduced motion** [proposed]: respects the system setting; papers appear without sliding, the calendar changes without turning pages, and the days run in one step to the stop.
@@ -459,7 +501,7 @@ Playable at every phase [canon: 0030 item 4]. Phase 1 ends console-playable: pla
 | 3 | Phase 2 | The staff map, read-only: base bake, washes, fronts, flags, pencil, fading, labels | PixiJS | proposed (renderer canon 0035, 0043) |
 | 4 | Phase 2 | Plan review on the map: arrows, blue-pencil edits, send back or order | PixiJS | proposed |
 | 5 | Phase 2 | The audience scene with portraits; the night of the battle | — | proposed |
-| 6 | Phase 2 | The Electron build, the demo scenario, the store screenshots (Playwright) | — | proposed (tools canon 0035) |
+| 6 | Phase 2 | The Electron build, the demo scenario, the store screenshots (Playwright at 3440×1440 and 1920×1080) | — | proposed (tools canon 0035; sizes canon 0049) |
 
 Each step keeps the previous one playable; the console stays as the headless and accessibility path and as the test harness for the presenter [proposed].
 
@@ -502,7 +544,7 @@ The president **asks for the exact numbers** (Inquire, free) and **asks Halleck 
 - **The attention table's amounts** (pack data, Phase 1).
 - **Whether delegate and ignore are always free** (section 2.1).
 - **The presenter's name and package** (section 6), for the Phase 2 desk lane.
-- **Minimum hardware and the Steam Deck**: the tripwire ran on one discrete GPU only.
+- **Minimum hardware and 16:10**: the tripwire ran on one discrete GPU only; 0049 asks for a 16:10 check down to 1280×800 before release, which needs a test machine or an emulated viewport plus a slower GPU.
 
 ## 9. Research needed before templates are built
 
