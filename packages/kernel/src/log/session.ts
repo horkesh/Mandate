@@ -16,6 +16,7 @@ import { pendingRequests } from '../seats/requests.ts';
 import { canonicalHash } from '../serialize/hash.ts';
 import type { IndexedWorld } from '../standin/world.ts';
 import type { Telemetry } from '../telemetry.ts';
+import { createDerivedMapCache } from '../control-index/derived.ts';
 import { createFreezeLedger, deepFreeze } from '../tick/freeze.ts';
 import { tick, type TickResult } from '../tick/tick.ts';
 import { createViewCache } from '../view/view.ts';
@@ -29,6 +30,8 @@ export interface DayHash {
 export interface PlayOptions {
   readonly telemetry?: Telemetry;
   readonly freeze?: boolean;
+  /** Compare the derived map with a fresh derivation every day (tests and determinism runs). */
+  readonly deepChecks?: boolean;
   /** Called after each day with the tick's result (for reports and decision points). */
   readonly onDay?: (result: TickResult) => void;
 }
@@ -57,13 +60,14 @@ export function playDays(
   options: PlayOptions = {},
 ): { readonly state: State; readonly log: LogEntry[]; readonly hashes: DayHash[] } {
   const ledger = createFreezeLedger();
+  const mapCache = createDerivedMapCache();
   let state = options.freeze === true ? deepFreeze(start, ledger) : start;
   const log: LogEntry[] = [];
   const hashes: DayHash[] = [];
   const cache = createViewCache();
   for (let i = 0; i < days; i++) {
     const entries = pendingRequests(world, state, cache).flatMap((r) => answerEntries(r, seats(r.requestSeat)));
-    const result = tick(world, state, entries, { ...(options.telemetry ? { telemetry: options.telemetry } : {}), ...(options.freeze ? { freeze: true, freezeLedger: ledger } : {}) });
+    const result = tick(world, state, entries, { mapCache, ...(options.telemetry ? { telemetry: options.telemetry } : {}), ...(options.freeze ? { freeze: true, freezeLedger: ledger } : {}), ...(options.deepChecks ? { deepChecks: true } : {}) });
     options.onDay?.(result);
     state = result.state;
     log.push(...entries);
@@ -86,10 +90,11 @@ export function replay(
 ): { readonly state: State; readonly hashes: DayHash[] } {
   const log = checkedLog(rawLog);
   const ledger = createFreezeLedger();
+  const mapCache = createDerivedMapCache();
   let state = options.freeze === true ? deepFreeze(start, ledger) : start;
   const hashes: DayHash[] = [];
   while (state.stateDay < throughDay) {
-    const result = tick(world, state, entriesForDay(log, state.stateDay + 1), { ...(options.telemetry ? { telemetry: options.telemetry } : {}), ...(options.freeze ? { freeze: true, freezeLedger: ledger } : {}) });
+    const result = tick(world, state, entriesForDay(log, state.stateDay + 1), { mapCache, ...(options.telemetry ? { telemetry: options.telemetry } : {}), ...(options.freeze ? { freeze: true, freezeLedger: ledger } : {}), ...(options.deepChecks ? { deepChecks: true } : {}) });
     options.onDay?.(result);
     state = result.state;
     hashes.push({ day: state.stateDay, hash: canonicalHash(state) });

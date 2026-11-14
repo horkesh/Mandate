@@ -35,7 +35,7 @@ describe('the seats layer on the testbed, every seat on the rules model', () => 
 
 describe('the real mid-run save fixture (testbed, day 40)', () => {
   const text = readFileSync(new URL('./fixtures/saves/testbed-seats-day40.json', import.meta.url), 'utf8');
-  const { world, worldHash, seed } = seatsWorld('testbed');
+  const { world, worldHash, setup } = seatsWorld('testbed');
   const seat = createRuleSeat();
 
   it('loads against the current testbed World, with its log and both hashes', () => {
@@ -46,13 +46,13 @@ describe('the real mid-run save fixture (testbed, day 40)', () => {
 
   it('its log, replayed from the start, reproduces its State (the log is the truth)', () => {
     const save = decodeSave(text, { expectedWorldHash: worldHash });
-    const replayed = phase0.replay(world, phase0.createState(world, { seed }), save.log as unknown as phase0.CommandLog, 40, { freeze: true });
+    const replayed = phase0.replay(world, phase0.createState(world, setup), save.log as unknown as phase0.CommandLog, 40, { freeze: true });
     expect(canonicalHash(replayed.state), REGENERATE).toBe(save.stateHash);
   });
 
   it('resuming from it reaches the continuous run’s final hash', () => {
     const save = decodeSave(text, { expectedWorldHash: worldHash });
-    const continuous = phase0.playDays(world, phase0.createState(world, { seed }), () => seat, 120, { freeze: true });
+    const continuous = phase0.playDays(world, phase0.createState(world, setup), () => seat, 120, { freeze: true });
     const resumed = phase0.playDays(world, save.state as unknown as phase0.State, () => seat, 80, { freeze: true });
     expect(canonicalHash(resumed.state), REGENERATE).toBe(canonicalHash(continuous.state));
     expect(resumed.hashes, REGENERATE).toEqual(continuous.hashes.slice(40));
@@ -61,9 +61,9 @@ describe('the real mid-run save fixture (testbed, day 40)', () => {
 
 describe('the desk reads a view, never State', () => {
   it('lists the principal’s dispatches from his view', () => {
-    const { world, seed } = seatsWorld('testbed');
+    const { world, setup } = seatsWorld('testbed');
     const seat = createRuleSeat();
-    const end = phase0.playDays(world, phase0.createState(world, { seed }), () => seat, 20).state;
+    const end = phase0.playDays(world, phase0.createState(world, setup), () => seat, 20).state;
     const principal = world.faction(world.factionIds[0]!).principal;
     const lines = dispatchLog(phase0.viewFor(world, end, phase0.seatIdFor(principal)));
     expect(lines.length).toBeGreaterThan(0);

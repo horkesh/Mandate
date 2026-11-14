@@ -7,10 +7,17 @@
  * - resume: play resumed from the save (seats asked again) ends on the
  *   continuous run's final hash.
  *
- * On the testbed this runs through the stand-in World built from the M2
- * scenario file, until lane 0.2's World format exists.
+ * On the testbed this runs through the stand-in comms World built from the M2
+ * scenario file, with lane 0.2's World beside it when the pack has one: its
+ * first scenario start sets control, and the map phases (control, fronts,
+ * pockets, supply, the invariant barrier) run every day (lane 0.4). Lane 0.5
+ * replaces the comms World with lane 0.2's.
  */
-import { canonicalHash, createTelemetry, decodeSave, encodeSave, HASH_SCHEME, livenessReport, phase0, type LivenessRow } from '@mandate/kernel';
+import { canonicalHash, createTelemetry, decodeSave, encodeSave, HASH_SCHEME, livenessReport, phase0, world as w, type LivenessRow } from '@mandate/kernel';
+import { errorsOf, formatIssue, loadPack } from '@mandate/pack-format';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+import { packFilesAt, packRoot } from './pack-files.ts';
 import { createRuleSeat } from '@mandate/rule-seats';
 import { loadScenario } from './load.ts';
 
@@ -44,10 +51,41 @@ export interface SeatsRunOptions {
   readonly onSave?: (text: string, day: number) => void;
 }
 
-export function seatsWorld(pack: string): { readonly world: phase0.IndexedWorld; readonly worldHash: string; readonly seed: number } {
+export interface SeatsWorld {
+  readonly world: phase0.IndexedWorld;
+  readonly worldHash: string;
+  readonly seed: number;
+  /** What `createState` takes: the seed, and the map's scenario start when the pack has one. */
+  readonly setup: phase0.SetupOptions;
+}
+
+/** Lane 0.2's World and the first scenario start of a v2 pack, or null for a pack without a manifest. */
+export function v2Map(pack: string): { readonly world: w.World; readonly start: w.ScenarioStart } | null {
+  const root = packRoot(pack);
+  if (!existsSync(join(root, 'pack.json'))) return null;
+  const { pack: data, issues } = loadPack(packFilesAt(root));
+  if (data === null) throw new Error(`pack ${pack} does not load:\n${errorsOf(issues).map(formatIssue).join('\n')}`);
+  const start = data.scenarios[0];
+  if (start === undefined) throw new Error(`pack ${pack} has no scenario start`);
+  return { world: data.world, start };
+}
+
+export function seatsWorld(pack: string): SeatsWorld {
   const scenario = loadScenario(pack);
   const comms = phase0.commsWorldFromScenario(scenario);
-  return { world: phase0.indexWorld(comms), worldHash: canonicalHash(comms), seed: scenario.seed };
+  const map = v2Map(pack);
+  if (map === null) return { world: phase0.indexWorld(comms), worldHash: canonicalHash(comms), seed: scenario.seed, setup: { seed: scenario.seed } };
+  return {
+    world: phase0.indexWorld(comms, w.indexWorld(map.world)),
+    worldHash: canonicalHash({ comms: canonicalHash(comms), map: w.worldHash(map.world), start: w.scenarioHash(map.start) }),
+    seed: scenario.seed,
+    setup: { seed: scenario.seed, start: map.start },
+  };
+}
+
+/** Every mechanic a seats run counts: the seats layer's, and the map's when the pack has a map. */
+export function seatsMechanics(world: phase0.IndexedWorld): readonly string[] {
+  return world.map === null ? phase0.SEATS_MECHANICS : [...phase0.SEATS_MECHANICS, ...phase0.MAP_MECHANICS];
 }
 
 /**
@@ -56,23 +94,24 @@ export function seatsWorld(pack: string): { readonly world: phase0.IndexedWorld;
  * `packages/cli/test/fixtures/saves/` is one of these (`tools/make-save-fixture.ts`).
  */
 export function seatsSave(pack: string, day: number): string {
-  const { world, worldHash, seed } = seatsWorld(pack);
+  const { world, worldHash, setup } = seatsWorld(pack);
   const seat = createRuleSeat();
-  const run = phase0.playDays(world, phase0.createState(world, { seed }), () => seat, day, { freeze: true });
+  const run = phase0.playDays(world, phase0.createState(world, setup), () => seat, day, { freeze: true, deepChecks: true });
   return encodeSave({ worldHash, state: run.state, log: run.log });
 }
 
 export function seatsRun(options: SeatsRunOptions): SeatsSummary {
-  const { world, worldHash, seed } = seatsWorld(options.pack);
+  const { world, worldHash, setup } = seatsWorld(options.pack);
   const seat = createRuleSeat();
   const seats = () => seat;
-  const initial = phase0.createState(world, { seed });
-  const telemetry = createTelemetry(phase0.SEATS_MECHANICS);
+  const initial = phase0.createState(world, setup);
+  const telemetry = createTelemetry(seatsMechanics(world));
   let rejections = 0;
   let decisionPoints = 0;
   const run = phase0.playDays(world, initial, seats, options.days, {
     telemetry,
     freeze: true,
+    deepChecks: true,
     onDay: (r) => {
       rejections += r.rejections.length;
       decisionPoints += r.decisionPoints.length;
@@ -80,7 +119,7 @@ export function seatsRun(options: SeatsRunOptions): SeatsSummary {
   });
   const finalHash = canonicalHash(run.state);
 
-  const replayed = phase0.replay(world, initial, run.log, options.days, { freeze: true }).hashes;
+  const replayed = phase0.replay(world, initial, run.log, options.days, { freeze: true, deepChecks: true }).hashes;
   const firstDifferent = replayed.findIndex((h, i) => h.hash !== run.hashes[i]?.hash);
 
   let resume: SeatsSummary['resume'] = null;
@@ -95,7 +134,7 @@ export function seatsRun(options: SeatsRunOptions): SeatsSummary {
     // The saved log is the truth: refuse a malformed one before replaying or resuming (review F5).
     const savedLog = phase0.checkedLog(loaded.log);
     const savedLogReplays = canonicalHash(phase0.replay(world, initial, savedLog, at).state) === loaded.stateHash;
-    const resumed = phase0.playDays(world, loaded.state as unknown as phase0.State, seats, options.days - at, { freeze: true });
+    const resumed = phase0.playDays(world, loaded.state as unknown as phase0.State, seats, options.days - at, { freeze: true, deepChecks: true });
     const resumedHash = canonicalHash(resumed.state);
     resume = { atTurn: at, finalHash: resumedHash, matches: resumedHash === finalHash, savedLogReplays };
   }

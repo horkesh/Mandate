@@ -7,14 +7,16 @@
  *     (the kernel computes their arrival). Rejections are reported.
  *  2. Deliver messages due today: relays, filters, arrivals, knowledge.
  *  3. STAND-IN operations and movement: standing-goal steps.
- *  4. Reports written on a cycle.
- *  5. Knowledge pruning.
- *  6. The day counter.
+ *  4. Control changes and the derived map (lane 0.4; only with a map).
+ *  5. Reports written on a cycle.
+ *  6. Knowledge pruning.
+ *  7. The day counter.
+ *  8. The invariant barrier (lane 0.4).
  *
- * Lanes 0.4, 0.5 and 0.7 insert movement, combat, control and situations
- * between 2 and 4. The tick is a pure function of (World, State, the day's
+ * Lanes 0.5 and 0.7 insert movement, combat and situations between 2 and 4. The tick is a pure function of (World, State, the day's
  * log entries); telemetry is passed in, never held.
  */
+import { createDerivedMapCache, type DerivedMap, type DerivedMapCache } from '../control-index/derived.ts';
 import type { PostId } from '../ids.ts';
 import { pruneKnowledge } from '../knowledge/knowledge.ts';
 import { entryProblems, type LogEntry } from '../log/log.ts';
@@ -24,10 +26,11 @@ import type { OptionView } from '../seats/api.ts';
 import { standingKey, standingOptions } from '../seats/requests.ts';
 import type { IndexedWorld } from '../standin/world.ts';
 import type { Telemetry } from '../telemetry.ts';
-import { fire, type DecisionPoint, type Price, type Proposal, type Rejection, type TickContext, type TickEvent } from './context.ts';
+import { fire, type DecisionPoint, type MapEvent, type Price, type Proposal, type Rejection, type TickContext, type TickEvent } from './context.ts';
 import { deliverDue } from './deliver.ts';
 import { createFreezeLedger, deepFreeze, type FreezeLedger } from './freeze.ts';
 import { generateReports } from './generate.ts';
+import { mapBarrier, mapPhase } from './map.ts';
 import { issueOrder } from './orders.ts';
 import { applyStanding } from './standing.ts';
 
@@ -60,6 +63,10 @@ export interface TickOptions {
   readonly freeze?: boolean;
   /** Objects already frozen all the way down, kept by the caller across days so unchanged State is not walked again. */
   readonly freezeLedger?: FreezeLedger;
+  /** The derived map's cache, kept by the caller across days so it is rebuilt only when something it reads changes. */
+  readonly mapCache?: DerivedMapCache;
+  /** Also compare the derived map with a fresh derivation at the invariant barrier (tests and determinism runs). */
+  readonly deepChecks?: boolean;
 }
 
 export interface TickResult {
@@ -70,6 +77,9 @@ export interface TickResult {
   readonly proposals: readonly Proposal[];
   readonly prices: readonly Price[];
   readonly decisionPoints: readonly DecisionPoint[];
+  readonly mapEvents: readonly MapEvent[];
+  /** The day's derived map (fronts, pockets, supply), or null without a map. Derived, never saved. */
+  readonly map: DerivedMap | null;
 }
 
 export function tick(world: IndexedWorld, start: State, entries: readonly LogEntry[], options: TickOptions = {}): TickResult {
@@ -89,6 +99,8 @@ export function tick(world: IndexedWorld, start: State, entries: readonly LogEnt
     proposals: [],
     prices: [],
     decisionPoints: [],
+    controlDeltas: [],
+    mapEvents: [],
   };
 
   // 0. The morning's menus, exactly as `pendingRequests` built them for the seats.
@@ -130,20 +142,27 @@ export function tick(world: IndexedWorld, start: State, entries: readonly LogEnt
   // 3. STAND-IN standing goals.
   state = freeze(applyStanding(ctx, state, menus, choices));
 
-  // 4. Reports on their cycles. A commander whose only option was to hold is awaiting strength.
+  // 4. Control changes and the derived map.
+  const mapped = mapPhase(ctx, state, options.mapCache ?? createDerivedMapCache());
+  state = freeze(mapped.state);
+
+  // 5. Reports on their cycles. A commander whose only option was to hold is awaiting strength.
   const awaiting = new Set([...menus].filter(([, o]) => o.length === 1 && o[0]!.kind === 'hold').map(([p]) => p));
   generateReports(ctx, state, awaiting);
   state = freeze(sendMessages(state, ctx.outbox.splice(0)));
 
-  // 5. Pruning.
+  // 6. Pruning.
   const pruned = pruneKnowledge(state, world.rules.templates, day);
   if (pruned.counts.byAge > 0) fire(ctx, 'knowledge.pruned_age', pruned.counts.byAge);
   if (pruned.counts.bySupersession > 0) fire(ctx, 'knowledge.pruned_superseded', pruned.counts.bySupersession);
 
-  // 6. The day.
+  // 7. The day.
   state = freeze(advanceDay(pruned.state, day));
 
-  return { state, day, rejections: ctx.rejections, events: ctx.events, proposals: ctx.proposals, prices: ctx.prices, decisionPoints: ctx.decisionPoints };
+  // 8. The invariant barrier.
+  mapBarrier(ctx, state, mapped.derived, options.deepChecks === true);
+
+  return { state, day, rejections: ctx.rejections, events: ctx.events, proposals: ctx.proposals, prices: ctx.prices, decisionPoints: ctx.decisionPoints, mapEvents: ctx.mapEvents, map: mapped.derived };
 }
 
 /** The only writer of the day counter. */
