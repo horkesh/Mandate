@@ -1,6 +1,6 @@
 # 0032: A report has an author, a route and filters; the telegraph office is a seat
 
-Status: accepted (2026-11-14). From the information-flows lane (`docs/research/2026-11-14-union-information-flows.md`), which found that not every report reached Lincoln through the commander, and that the War Department filtered the wire. Recommended by the lead; the owner takes recommendations by default. Refines 0008, 0015 and FOUNDATION sections 5 and 8.
+Status: accepted (2026-11-14). From the information-flows lane (`docs/research/2026-11-14-union-information-flows.md`), which found that not every report reached Lincoln through the commander, and that the War Department filtered the wire. Recommended by the lead; the owner takes recommendations by default. Refines 0008, 0015 and FOUNDATION sections 5 and 8. Amended by 0040 (first-month walkthrough revisions).
 
 ## Context
 

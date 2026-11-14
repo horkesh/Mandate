@@ -1,6 +1,6 @@
 # 0026: Revisions after the foundation review
 
-Status: accepted (2026-11-14). From the independent review of `docs/design/FOUNDATION.md` and 0015–0023 (verdict: ready after fixes). The lead accepted these fixes; the owner can overturn any of them. Amends 0016, 0017, 0020, 0021 and 0023.
+Status: accepted (2026-11-14). From the independent review of `docs/design/FOUNDATION.md` and 0015–0023 (verdict: ready after fixes). The lead accepted these fixes; the owner can overturn any of them. Amends 0016, 0017, 0020, 0021 and 0023. Amended by 0040 (first-month walkthrough revisions).
 
 ## Decision
 

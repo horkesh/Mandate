@@ -1,6 +1,6 @@
 # 0027: Variable turns of up to a week on a daily tick
 
-Status: accepted (2026-11-14). The owner, asked about pacing under real time: "Are we talking about real time game here? I think turn based would fit it better?" The lead agreed and recommended variable turns capped at a week; the owner can overturn the variant. Supersedes 0017.
+Status: accepted (2026-11-14). The owner, asked about pacing under real time: "Are we talking about real time game here? I think turn based would fit it better?" The lead agreed and recommended variable turns capped at a week; the owner can overturn the variant. Supersedes 0017. Amended by 0040 (first-month walkthrough revisions).
 
 ## Context
 

@@ -1,6 +1,6 @@
 # 0028: The campaign starts at the inauguration; two national wills decide it; the navy works through people
 
-Status: accepted (2026-11-14). The owner chose a March 1861 start (over the lead's recommendation of April 1861), "two wills" for victory, and the navy "through people". Amends 0018 and 0023.
+Status: accepted (2026-11-14). The owner chose a March 1861 start (over the lead's recommendation of April 1861), "two wills" for victory, and the navy "through people". Amends 0018 and 0023. Amended by 0040 (first-month walkthrough revisions).
 
 ## Context
 

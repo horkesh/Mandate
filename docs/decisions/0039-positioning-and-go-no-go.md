@@ -1,6 +1,6 @@
 # 0039: Positioning, price and the go or no-go bands
 
-Status: accepted (2026-11-14) as the working basis for the owner's spending decisions, which remain the owner's (0037). From the market-research lane (`docs/research/2026-11-14-market.md`); all sales figures there are estimates from review multipliers and trackers. Extends 0037 and amends how 0022 and 0038 present AI.
+Status: accepted (2026-11-14) as the working basis for the owner's spending decisions, which remain the owner's (0037). From the market-research lane (`docs/research/2026-11-14-market.md`); all sales figures there are estimates from review multipliers and trackers. Extends 0037 and amends how 0022 and 0038 present AI. Amended by 0040 (first-month walkthrough revisions).
 
 ## Context
 
