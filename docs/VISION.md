@@ -34,7 +34,7 @@ Mandate is an engine for **wars with fronts**: wars fought by a political leader
 
 **The map** is a few hundred irregular regions joined by typed links: road, rail, river and sea. Control of a region is a matter of degree, and fronts and pockets are derived from it, never saved (0019). Cut the railway at the junction and the army beyond it may find itself in a pocket. You see all this on the staff's map: hand-drawn, built from reports, ink where confirmed and pencil where not (0013).
 
-**Time** runs in real time with pause on a daily tick (0017). The game pauses itself when something needs you: an objection, a battle report, a closed pocket. During a great battle it slows to hours, and the dispatches arrive one by one: fragments, contradictions, silence. A full campaign takes about 15 to 25 hours.
+**Time** moves in turns of up to a week on a daily tick (0027). A turn ends early when something needs you: an objection, a battle report, a closed pocket. Between turns you act; during a turn you watch the days pass as the dispatches arrive. A great battle plays back hour by hour from its dispatches: fragments, contradictions, silence. A full campaign takes about 15 to 25 hours.
 
 **Attention** is Lincoln's scarcest resource: a budget that refills weekly (0025). Setting goals, editing arrows, transferring divisions, audiences, appointments and observers cost attention. Approving a good draft, reading and pausing cost nothing, so the default path stays quick. Decisions that reach you can be decided, delegated or ignored.
 

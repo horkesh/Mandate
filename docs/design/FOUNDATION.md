@@ -42,7 +42,7 @@ The two warnings from the closest precedents bind the design:
 | People | Stats and traits that change with battle; you see your staff's assessment, not the truth; true stats drawn per game around the record ("history's shadow"); an officer pool of real and invented men. | 0020 |
 | Seats | Every person is a seat filled by the rules model, an AI model, or later a human. Rules first; fully playable offline. Lincoln's seat first, "play a general" second, multiplayer third. | 0015 |
 | AI | The engine decides, the model voices. AI text is never state. | 0022 |
-| Time | Real time with pause on a daily tick; the game pauses itself when something needs you. About 15–25 hours for a full campaign. | 0017 |
+| Time | Variable turns of up to a week on a daily tick; a turn ends early when something needs you. About 15–25 hours for a full campaign. | 0027 (superseding 0017) |
 | Map | Irregular regions in the hundreds, over a graph of typed road, rail, river and sea links; fronts and pockets derived from control. | 0019 |
 | Home front | A light war economy run through people; elections; history as situations triggered by causes; losing 1864 ends the game. | 0023 |
 | Sensitive history | A written gate; no Lost Cause framing; enslaved people as agents of their own freedom. | 0021 |
@@ -50,6 +50,13 @@ The two warnings from the closest precedents bind the design:
 | Engine test | A mechanism is engine code if it makes sense in any war with fronts and works on the testbed pack. | 0024 |
 | Attention | Lincoln's attention is a weekly budget; approving a good draft is free. | 0025 |
 | Review fixes | Kernel-drafted plans, a limited edit grammar, corps as posts, promotion lists, kernel-owned latency, visits that aren't truth, gate scope. | 0026 |
+| Start, victory, navy | The campaign starts at the March 1861 inauguration; two national wills decide it; the navy works through people. | 0028 |
+| Seasons, sieges, raids | Weather through commanders; sieges as operations; raids and insurgency under the gate; a Confederacy on the same machinery. | 0029 |
+| Commitments | Scenario starts, packs as the modding format, string tables, playable at every phase, a planner spike. | 0030 |
+| Map extent and sources | The whole war at about 250 regions; Newberry boundaries, traced rail, Natural Earth and USGS; provenance per pack. | 0031 |
+| Reports | Typed reports with authors, routes and filters; the telegraph office as a seat. | 0032 |
+| Forces and data | Transfers name a force; force blocks fit 1861; public-domain data only. | 0033 |
+| Stack | PixiJS for the map with a tripwire spike; React, Electron, Zod, ICU strings, fast-check. | 0035 |
 
 Accepted features from the brainstorm: finding your Grant (0020); the night of the battle (section 9); going to see for yourself (section 6); the reckoning (section 6); leaks (section 7); joint army–navy operations (section 5). The general who runs against you in 1864 was proposed and not objected to (section 7).
 
@@ -128,15 +135,15 @@ The plan appears as arrows. The player can:
 - **Reports** are typed data with an author, a route, filters and bias terms (0032). Not every report comes through the commander: governors, the Navy Department, the press, observers and informal sources have their own routes, and the War Department's telegraph office is a filtering seat the president can go around at an attention cost.
 - **Knowledge per seat.** Each seat stores the reports that reached it, with latency (courier, telegraph). Beliefs are derived on read. Faded reports are pruned by a pack rule (age and supersession), so knowledge does not grow without limit. `viewFor(state, seatId)` generalises today's per-faction view (0011 is superseded by 0015).
 - **Rule seats live in their own package**, outside the kernel but inside the banned-API and pack-boundary checks, because their output enters the log.
-- **Think time is courier latency.** An AI seat's request is stamped with the in-game day its answer is due; if the model has not answered by then, the shell pauses with "awaiting dispatch". The answer applies on its stamped day whatever the wall clock did, so replays are exact.
+- **Seats answer at turn boundaries** (0027). An AI seat has until the player ends the turn; if it has not answered, the shell waits ("awaiting dispatch") or falls back to the rule seat. The command log records every answer, so replays are exact.
 - **The player-visible boundary is built in Phase 0**, before any generated text exists. True reasons in a response are reachable only through the truth layer, and an architecture test proves the view layer and the AI caller cannot import it.
 
 ## 9. Time
 
-- The kernel ticks one day at a time and never sees the wall clock. Speed, pause and the auto-pause rules live in the shell.
-- The day tick returns a decision-point signal (an objection arrived, a battle report, a pocket closed, a situation fired, a seat is awaiting dispatch); the shell pauses on it according to the player's settings.
+- The kernel ticks one day at a time and never sees the wall clock. Turns are the shell's business (0027): a turn runs up to seven days (a pack setting) and ends early on the kernel's decision-point signal.
+- The day tick returns a decision-point signal (an objection arrived, a battle report, a pocket closed, a situation fired, a plan is ready for review); the shell ends the turn on it according to the player's settings, shows the turn's days passing as their dispatches arrive, and waits for the player.
 - **The kernel owns all latency** (0026). A command applies on the day it is issued and creates a message (an order, a telegram, a courier) that travels along the graph; the recipient's seat acts when it arrives. The shell never computes arrival times.
-- **The night of the battle.** Battles may last several days; each day of battle is resolved in the day tick, and also emits that day's dispatches stamped by hour. The shell slows time and releases them hour by hour: fragments, contradictions, silence. Orders the player wires meanwhile are ordinary commands: they cannot change a day already resolved, and arrive for a later day of the battle or after it. The kernel stays daily.
+- **The night of the battle.** Battles may last several days; each day of battle is resolved in the day tick, and also emits that day's dispatches stamped by hour. The shell plays them back hour by hour as a dispatch log: fragments, contradictions, silence. Orders the player wires meanwhile are ordinary commands: they cannot change a day already resolved, and arrive for a later day of the battle or after it. The kernel stays daily.
 - **Performance budget.** A headless full campaign (about 1,460 days) must run in under a minute on the reference machine (the owner's Windows development PC until CI hardware is named), so a day tick costs under about 40 ms. AWWV's weekly turn took about 1.6 s. Rules that keep it there:
   - derived indexes (fronts, pockets, supply) are recomputed only when a region's control crosses a threshold (50‰, 250‰), not on every change;
   - plans are drafted on request, never scanned every tick;
