@@ -340,6 +340,10 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     fires(editJson(sit('harbour_burning'), (s) => (s.gate.actingSide = null)), 'gate-acting-side');
     // Review S5: an effect with no side cannot slip past the sign rule.
     firesAt(editJson(sit('harbour_burning'), (s) => ((s.effects[0].propose.side = null), (s.effects[0].propose.delta = 10))), 'gate-acting-side', { at: 'effects[0].propose.side' });
+    // The lead's ruling on N2 (probe G6): lowering the victim side's will helps the actor and fails; raising it (outrage) is allowed.
+    firesAt(editJson(sit('harbour_burning'), (s) => (s.effects[0].propose.side = s.effects[0].propose.subject = 'north')), 'gate-sign-rule', { at: 'effects[0]', message: 'other side' });
+    const outrage = editJson(sit('harbour_burning'), (s) => ((s.effects[0].propose.side = s.effects[0].propose.subject = 'north'), (s.effects[0].propose.delta = 50)));
+    expect(issues(outrage).filter((i) => i.kind === 'gate-sign-rule')).toEqual([]);
   });
 
   it('D5 (review S5): no effect conditioned on atrocity-class conduct helps the side that acted', () => {
@@ -354,6 +358,12 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
       s.effects.push({ propose: { owner: 'politics', field: 'national-will', subject: 'south', delta: -15, reason: 'a-harbour-burned', side: 'south' } });
     });
     expect(issues(cost).filter((i) => i.kind === 'gate-atrocity-benefit')).toEqual([]);
+    // The lead's ruling on N2: lowering the victim's measure, conditioned the same way, helps the actor too.
+    const harm = editJson(sit('sanctuary_act'), (s) => {
+      s.event = { all: [{ fired: 'harbour_burning' }, { decided: 'fen_crossing' }] };
+      s.effects.push({ propose: { owner: 'politics', field: 'national-will', subject: 'north', delta: -15, reason: 'a-harbour-burned', side: 'north' } });
+    });
+    firesAt(harm, 'gate-atrocity-benefit', { file: sit('sanctuary_act'), at: 'effects[1]' });
   });
 
   it('C3/F6, C4/F5, F2: anachronisms, forbidden wording by scope, and the proximity rule', () => {

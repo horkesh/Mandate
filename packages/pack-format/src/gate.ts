@@ -452,6 +452,7 @@ export function checkGate(
         if (!('propose' in effect)) continue;
         if (effect.propose.side === null) err('gate-acting-side', `${at}.propose.side`, 'an effect of an atrocity-class item names no side', 'the side whose measure it moves (E7)');
         else if (effect.propose.side === tag.actingSide && effect.propose.delta > 0) err('gate-sign-rule', at, 'atrocity-class conduct helps the side that acted', 'a non-positive sign on the acting side’s measures, whoever appointed the actor (E7)');
+        else if (tag.actingSide !== null && helpsActor(effect, tag.actingSide)) err('gate-sign-rule', at, 'atrocity-class conduct lowers the other side’s measure, which helps the side that acted', 'a non-negative sign on every other side’s measures: outrage may raise the victim’s will, nothing may lower it (E7, the lead’s ruling on N2)');
       }
     }
 
@@ -461,7 +462,7 @@ export function checkGate(
     for (const a of atrocityItems) {
       if (a.id === def.id || !(referenced.has(a.id) || a.flags.some((f) => readFlags.has(f)))) continue;
       for (const { at, effect } of effects) {
-        if ('propose' in effect && effect.propose.side === a.actingSide && effect.propose.delta > 0) {
+        if (helpsActor(effect, a.actingSide)) {
           err('gate-atrocity-benefit', at, `this effect, conditioned on atrocity-class item "${a.id}", helps the side that acted`, 'no positive effect for any seat conditioned on atrocity-class conduct (D5)');
         }
       }
@@ -542,6 +543,16 @@ function decidedWith(c: phase0.Condition, situation: string, option: string): bo
   // `fired` of the situation applies whatever is chosen, so it offsets every option's costs (review S4).
   if ('fired' in c) return c.fired === situation;
   return 'decided' in c && c.decided === situation && (c.options === null || c.options.includes(option));
+}
+
+/**
+ * Whether an effect helps `actingSide` (E7, D5, and the lead's ruling on standing review N2): it raises one of that
+ * side's measures, or lowers another side's (its will, control, supply, loyalty or any other). Every side measure a
+ * pack proposes reads higher-is-better for its own side, the convention the sign rule has always assumed.
+ */
+export function helpsActor(effect: phase0.Effect, actingSide: string): boolean {
+  if (!('propose' in effect) || effect.propose.side === null) return false;
+  return effect.propose.side === actingSide ? effect.propose.delta > 0 : effect.propose.delta < 0;
 }
 
 /**
