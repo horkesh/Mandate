@@ -1,6 +1,6 @@
 # 0057: The situations engine, and the gate as tests
 
-Status: accepted (2026-11-14). From lane 0.7, which built the situations schema, the situations phase of the day tick and the sensitive-history gate's mechanical checks (merged as 87407ae). The gate reviewer and the standing reviewer each approved it after two rounds. The lane's hand-over, `notes/lane-0.7-situations.md`, maps each gate question to its test. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Builds on 0040, 0046 and 0052.
+Status: accepted (2026-11-14). From lane 0.7, which built the situations schema, the situations phase of the day tick and the sensitive-history gate's mechanical checks (merged as 87407ae). The gate reviewer and the standing reviewer each approved it after two rounds. The lane's hand-over, `notes/lane-0.7-situations.md`, maps each gate question to its test. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Builds on 0040, 0046 and 0052. Amended by 0060 (every route to an atrocity; a response decision's own costs).
 
 ## Decision
 
