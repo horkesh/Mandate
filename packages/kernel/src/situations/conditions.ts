@@ -61,17 +61,43 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
   return r !== undefined && ctx.day - r.sitFiredDay >= c.clockAtLeast;
 }
 
-/**
- * The predicate in `c` itself that reads the truth in State rather than what
- * the deciding seat can know, or null. A situation's knowledge trigger and its
- * options' conditions may not use one (the lead's ruling on gate review S10;
- * standing review S2): the truth fires a situation, but never tells the
- * president of it. `decided` and `dayAtLeast` are his own decisions and the date.
- */
-export function truthRead(c: Condition): 'flag' | 'fired' | 'goal' | 'headquartersAt' | null {
-  return 'flag' in c ? 'flag' : 'fired' in c ? 'fired' : 'goal' in c ? 'goal' : 'headquartersAt' in c ? 'headquartersAt' : null;
+/** The predicate at the top of a condition. */
+export function predicateOf(c: Condition): string {
+  for (const k of ['all', 'any', 'not', 'dayAtLeast', 'flag', 'fired', 'decided', 'knows', 'goal', 'headquartersAt', 'clockAtLeast'] as const) if (k in c) return k;
+  return 'unknown';
 }
 
+/** The places a condition must follow what the principal knows, rather than the truth. */
+export type KnowablePlace = 'knowledge' | 'waitsOn' | 'appearsWhen' | 'expiresWhen';
+
+/**
+ * What each such place may read, beside `all`, `any` and `not` (the lead's
+ * rulings on gate review S10 and standing review S2): `knows`, and the public
+ * facts the president always knows, on an explicit allow-list. The truth fires a
+ * situation; it never surfaces one, ends a wait or changes an option, since an
+ * option change must never reveal an event. A chamber's sitting state joins the
+ * list for options once it exists.
+ */
+export const KNOWABLE: Readonly<Record<KnowablePlace, readonly string[]>> = Object.freeze({
+  knowledge: ['knows'],
+  waitsOn: ['knows', 'clockAtLeast'],
+  appearsWhen: ['knows', 'clockAtLeast', 'dayAtLeast'],
+  expiresWhen: ['knows', 'clockAtLeast', 'dayAtLeast'],
+});
+
+/** The first predicate in `c` that its place may not read, or null. */
+export function unknowableRead(c: Condition, place: KnowablePlace): string | null {
+  const p = predicateOf(c);
+  if (p === 'all' || p === 'any') {
+    for (const x of 'all' in c ? c.all : 'any' in c ? c.any : []) {
+      const bad = unknowableRead(x, place);
+      if (bad !== null) return bad;
+    }
+    return null;
+  }
+  if (p === 'not' && 'not' in c) return unknowableRead(c.not, place);
+  return KNOWABLE[place].includes(p) ? null : p;
+}
 /** Whether a situation is settled: decided or lapsed, not open and not waiting on a deferral. */
 export function isFinal(r: SituationRecord): boolean {
   return r.sitStatus === 'decided' || r.sitStatus === 'lapsed';

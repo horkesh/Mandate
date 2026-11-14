@@ -341,23 +341,19 @@ export function validateSituations(items: readonly { readonly file: string; read
 
     // The lead's ruling on the gate review's S10: an option's appear, expire and wait conditions follow what the
     // principal knows, never State, like the situation's own knowledge trigger (0046). A change in the options must
-    // never tell him of an event before a report does. So they read only knows, his side's decisions, the clock and the date.
-    // Standing review S2: the situation's own knowledge trigger likewise, and in both no other side's decision.
-    const knowable = (c: Condition, at: string, kind: string) =>
-      walk(c, (x) => {
-        const atom = phase0.truthRead(x);
-        if (atom !== null) err(kind, at, `"${atom}" reads State, which the principal may not know yet`, 'knows, decided, clockAtLeast or dayAtLeast: what the principal can know');
-        const other = 'decided' in x ? byId.get(x.decided) : undefined;
-        if (other !== undefined && other.faction !== def.faction) err(kind, at, `"${other.id}" is ${other.faction}'s decision, which the principal does not see`, 'a decision of his own side');
-      });
-    if (def.knowledge !== null) knowable(def.knowledge, 'knowledge', 'situation-knowledge-truth');
+    // never tell him of an event before a report does. Standing review S2, as the lead ruled: the knowledge trigger and
+    // the waits likewise, each place from its own allow-list (knows; the clock in waits and options; dates in options).
+    const knowable = (c: Condition, at: string, place: phase0.KnowablePlace, kind: string) => {
+      const bad = phase0.unknowableRead(c, place);
+      if (bad !== null) err(kind, at, `"${bad}" is not something the principal can know here`, `only ${phase0.KNOWABLE[place].join(', ')}, under all, any and not`);
+    };
+    if (def.knowledge !== null) knowable(def.knowledge, 'knowledge', 'knowledge', 'situation-knowledge-truth');
     def.options.forEach((o, i) => {
       for (const key of ['appearsWhen', 'expiresWhen', 'waitsOn'] as const) {
         const c = o[key];
-        if (c !== null) knowable(c, `options[${i}].${key}`, 'situation-option-truth');
+        if (c !== null) knowable(c, `options[${i}].${key}`, key, 'situation-option-truth');
       }
     });
-
     // Conditions.
     for (const { at, condition } of phase0.conditionsOf(def)) {
       walk(condition, (c) => {

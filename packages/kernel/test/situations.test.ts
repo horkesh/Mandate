@@ -209,15 +209,24 @@ describe('deciding: the principal, a history default, several options, waiting, 
     expect(run.points).toContain('situation-resurfaced:wait');
   });
 
-  it('the guard refuses a truth read, or the other side’s decision, where the principal must know (standing review S2)', () => {
+  it('the guard holds each condition the principal must know to its allow-list (the lead’s rulings on S2 and S10)', () => {
     const theirs = decision('theirs', { faction: F('b'), staffLine: { authors: [POST('b_office')], recommends: ['hold'], reasons: [], confidence: 500 }, delegableTo: [] });
     const world = (over: Partial<SituationDef>) => () => setup([decision('mine', over), theirs]);
-    expect(world({ knowledge: { flag: 'x' } })).toThrow(/knowledge: "flag" reads State/);
-    expect(world({ options: [option('hold', 1, { waitsOn: { fired: S('theirs') } })] })).toThrow(/waitsOn: "fired" reads State/);
-    expect(world({ options: [option('hold', 1, { appearsWhen: { not: { headquartersAt: { post: POST('a_army'), region: R('a_front') } } } })] })).toThrow(/appearsWhen: "headquartersAt" reads State/);
-    expect(world({ options: [option('hold', 1, { expiresWhen: { decided: S('theirs'), options: null } })] })).toThrow(/another side's decision/);
-    // The control: the event may read the truth, and the rest may read his own side's decisions, the clock and the date.
-    expect(world({ event: { flag: 'x' }, knowledge: { all: [{ dayAtLeast: 2 }, { decided: S('mine'), options: null }] }, options: [option('hold', 1, { expiresWhen: { clockAtLeast: 3 } })] })).not.toThrow();
+    const knows = { knows: { reportType: 'wire-dispatch', subtype: null, subjectKind: 'post', subjectId: 'a_army', claimKind: null, token: null } } as const;
+    expect(world({ knowledge: { flag: 'x' } })).toThrow(/knowledge: "flag" is not something the principal can know/);
+    expect(world({ knowledge: { all: [knows, { dayAtLeast: 2 }] } })).toThrow(/knowledge: "dayAtLeast"/);
+    expect(world({ options: [option('hold', 1, { waitsOn: { fired: S('theirs') } })] })).toThrow(/waitsOn: "fired"/);
+    expect(world({ options: [option('hold', 1, { waitsOn: { dayAtLeast: 9 } })] })).toThrow(/waitsOn: "dayAtLeast"/);
+    expect(world({ options: [option('hold', 1, { appearsWhen: { not: { headquartersAt: { post: POST('a_army'), region: R('a_front') } } } })] })).toThrow(/appearsWhen: "headquartersAt"/);
+    expect(world({ options: [option('hold', 1, { expiresWhen: { decided: S('theirs'), options: null } })] })).toThrow(/expiresWhen: "decided"/);
+    // The control: the event may read the truth, and each other place its allow-list.
+    expect(
+      world({
+        event: { flag: 'x' },
+        knowledge: { all: [knows, { not: knows }] },
+        options: [option('hold', 1, { appearsWhen: { dayAtLeast: 2 }, expiresWhen: { any: [knows, { clockAtLeast: 3 }] }, waitsOn: { all: [knows, { clockAtLeast: 1 }] } })],
+      }),
+    ).not.toThrow();
   });
 
   it('reopens without every option already taken, not only the waiting one, and shows no spurious change the next day (standing review N3)', () => {

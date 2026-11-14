@@ -154,24 +154,24 @@ describe('situations in the pack format', () => {
     firesAt(editJson(sit('fen_arrivals'), (s) => (s.report.authors = ['no_post'])), 'unknown-reference', { at: 'report.authors[0]' });
   });
 
-  it('the lead’s ruling on S10: option conditions follow what the principal knows, never State', () => {
-    for (const atom of [{ flag: 'fen_arrivals' }, { fired: 'fen_arrivals' }, { goal: { post: 'n_army_east', kind: 'hold' } }, { headquartersAt: { post: 'n_army_east', region: 'n_capital' } }]) {
-      firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.options[0].appearsWhen = { not: atom })), 'situation-option-truth', { at: 'options[0].appearsWhen' });
+  it('the lead’s rulings on S10 and S2: each condition the principal must know reads only its allow-list', () => {
+    // Options: knows, the clock and dates. Any truth read, or a decision (even his own side's), is refused.
+    for (const atom of [{ flag: 'fen_arrivals' }, { fired: 'fen_arrivals' }, { decided: 'fen_crossing' }, { goal: { post: 'n_army_east', kind: 'hold' } }, { headquartersAt: { post: 'n_army_east', region: 'n_capital' } }]) {
+      firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.options[0].appearsWhen = { not: atom })), 'situation-option-truth', { at: 'options[0].appearsWhen', message: Object.keys(atom)[0] });
     }
+    // Waits: knows and the clock, not dates.
     firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.options[2].waitsOn = { flag: 'fen_arrivals' })), 'situation-option-truth', { at: 'options[2].waitsOn' });
-    const known = editJson(sit('eastwatch_stalls'), (s) => (s.options[0].expiresWhen = { any: [{ knows: { subjectKind: 'situation', subjectId: 'fen_arrivals' } }, { decided: 'fen_crossing' }, { clockAtLeast: 9 }, { dayAtLeast: 300 }] }));
-    expect(issues(known).filter((i) => i.kind === 'situation-option-truth')).toEqual([]);
-  });
-
-  it('standing review S2: the knowledge trigger reads only what the principal can know, and no option reads the other side’s decisions', () => {
+    firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.options[2].waitsOn = { any: [{ clockAtLeast: 5 }, { dayAtLeast: 90 }] })), 'situation-option-truth', { at: 'options[2].waitsOn', message: 'dayAtLeast' });
+    // The knowledge trigger: knows alone, under all, any and not.
     firesAt(editJson(sit('fen_crossing'), (s) => (s.knowledge = { any: [s.knowledge, { fired: 'fen_arrivals' }] })), 'situation-knowledge-truth', { at: 'knowledge', message: '"fired"' });
     firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.knowledge = { flag: 'fen_arrivals' })), 'situation-knowledge-truth', { at: 'knowledge', message: '"flag"' });
-    // The other side's decision: make fen_crossing a southern situation and read it from a northern option.
-    const southern = merge(
-      editJson(sit('fen_crossing'), (s) => (s.faction = 'south')),
-      editJson(sit('eastwatch_stalls'), (s) => (s.options[0].expiresWhen = { decided: 'fen_crossing' })),
+    firesAt(editJson(sit('fen_crossing'), (s) => (s.knowledge = { all: [s.knowledge, { dayAtLeast: 90 }] })), 'situation-knowledge-truth', { at: 'knowledge', message: '"dayAtLeast"' });
+    // The controls: each place's allow-list passes.
+    const known = merge(
+      editJson(sit('eastwatch_stalls'), (s) => ((s.options[0].expiresWhen = { any: [{ knows: { subjectKind: 'situation', subjectId: 'fen_arrivals' } }, { clockAtLeast: 9 }, { not: { dayAtLeast: 300 } }] }), (s.options[2].waitsOn = { all: [{ clockAtLeast: 5 }, { knows: { reportType: 'wire-dispatch' } }] }))),
+      editJson(sit('fen_crossing'), (s) => (s.knowledge = { all: [s.knowledge, { not: { knows: { subjectKind: 'situation', subjectId: 'sanctuary_act' } } }] })),
     );
-    firesAt(southern, 'situation-option-truth', { file: sit('eastwatch_stalls'), at: 'options[0].expiresWhen', message: 'south' });
+    expect(issues(known).filter((i) => i.kind === 'situation-option-truth' || i.kind === 'situation-knowledge-truth').map(formatIssue)).toEqual([]);
   });
 
   it('a pack with situations must carry its gate', () => {
