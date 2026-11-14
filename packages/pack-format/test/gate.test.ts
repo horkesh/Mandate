@@ -388,6 +388,15 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
       s.effects.push({ propose: { owner: 'politics', field: 'national-will', subject: 'north', delta: 15, reason: 'a-harbour-burned', side: 'north' } });
     });
     firesAt(gain, 'gate-atrocity-benefit', { file: sit('sanctuary_act'), at: 'effects[1]', message: 'raises another side' });
+    // Gate G3: a sideless raise, conditioned the same way, cannot slip past D5: it is rejected for naming no side.
+    const sideless = editJson(sit('sanctuary_act'), (s) => {
+      s.event = { all: [{ fired: 'harbour_burning' }, { decided: 'fen_crossing' }] };
+      s.effects.push({ propose: { owner: 'politics', field: 'foreign-patience', subject: null, delta: 15, reason: 'a-harbour-burned', side: null } });
+    });
+    firesAt(sideless, 'gate-acting-side', { file: sit('sanctuary_act'), at: 'effects[1].propose.side', message: 'harbour_burning' });
+    // The control: the same sideless effect with no atrocity in its conditions is no D5 matter.
+    const unconditioned = editJson(sit('sanctuary_act'), (s) => s.effects.push({ propose: { owner: 'politics', field: 'foreign-patience', subject: null, delta: 15, reason: 'a-harbour-burned', side: null } }));
+    expect(issues(unconditioned).filter((i) => i.kind === 'gate-acting-side' || i.kind === 'gate-atrocity-benefit')).toEqual([]);
   });
 
   it('C3/F6, C4/F5, F2: anachronisms, forbidden wording by scope, and the proximity rule', () => {

@@ -468,6 +468,12 @@ export function checkGate(
     for (const a of atrocityItems) {
       if (a.id === def.id || !(referenced.has(a.id) || a.flags.some((f) => readFlags.has(f)))) continue;
       for (const { at, effect } of effects) {
+        // Gate G3: a measure no side is named for cannot be checked, so a follow-up of an atrocity names the side of every
+        // measure it moves, as the atrocity item itself must (E7, review S5). Rejected rather than read as the actor's.
+        if ('propose' in effect && effect.propose.side === null) {
+          err('gate-acting-side', `${at}.propose.side`, `an effect conditioned on atrocity-class item "${a.id}" names no side`, 'the side whose measure it moves, so D5 can check that no seat gains (D5)');
+          continue;
+        }
         const wrong = atrocityMove(effect, a.actingSide);
         if (wrong !== null) err('gate-atrocity-benefit', at, `this effect, conditioned on atrocity-class item "${a.id}", ${wrong}`, 'no positive effect for any seat, and no fall but the acting side’s, conditioned on atrocity-class conduct (D5)');
       }
