@@ -7,6 +7,7 @@ Adapted from AWWV's orchestrator and its founding brief for this project (2026-1
 - **The owner** makes design decisions and takes the lead's recommendation by default (see `CLAUDE.md`). Only the owner sees a lane's wrap-up box.
 - **The lead** is the main Mandate session. It frames work, opens and closes lanes, answers their questions, collects results, accepts or rejects reviewers' verdicts, and decides and records. The steward verifies and merges accepted work (0045). The lead does not redo a lane's investigation. It does small, reversible work directly and commits its own decision records and design notes.
 - **A lane** is a separate session started from the lead, with its own brief. Work that ends in a branch, a document of its own or anything the owner may want to watch or steer is a lane. **Every review is a lane** (0045, lesson L16). Only one quick lookup whose answer the lead needs this turn may be a subagent.
+- **Over Remote Control the app can't start sessions.** Restoring an archived session and briefing it with new work does work; check its folder first, and if it is the main checkout, have it add its own worktree before anything else (lesson L18).
 - **If the app refuses to start a session** (it has done so on some turns while the owner was on Remote Control), retry on the next turn. Never assume a refusal still holds. If it keeps refusing, tell the owner and ask before running the work as a subagent instead (lesson L11).
 
 ## Standing lanes

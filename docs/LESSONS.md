@@ -66,6 +66,10 @@ Enforced by: decision 0045 (reviews are lanes; the steward integrates) and the r
 Lane reports reach the lead as a 400-character preview. The lead acted on previews, archived the gate reviewer straight after its approval, and missed its follow-up (lift the needs-source flags the research cleared, plus three nits) and a design lane's open items. It also kept findings in private scratch notes, out of the owner's sight.
 Enforced by: `docs/LANES.md` "Collecting reports": every report opens with a count of items for the lead; the lead reads every report in full and routes every item in the same turn; no lane is archived before its items are routed; the steward checks each closing lane's items have a home; a sweep runs every 20 minutes while lanes run; waiting findings live in `docs/OPEN_QUESTIONS.md`, not in private notes.
 
+**L18. A restored session can come back in the main checkout.**
+Over Remote Control the app can't start sessions, so the lead restored archived lanes and briefed them with new work. One came back with the main checkout as its working folder instead of a worktree, and began creating a branch there; the lead stopped it before it switched branches.
+Enforced by: `docs/LANES.md`: after restoring a session, check its folder (`list_sessions`) before briefing it; a lane in the main checkout first adds its own worktree and works only there.
+
 **L15. A proposal card drops its starting branch.**
 The lane 0.1 reviewer was proposed as a card with a source branch; the card dropped it, and the reviewer started on main.
 Enforced by: a brief for a lane that works on another branch tells it, as its first step, to check that branch out (detached if another worktree holds it).
