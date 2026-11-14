@@ -15,13 +15,12 @@ import type { ReportBody } from '../knowledge/report.ts';
 import type { OrderCommand } from '../log/commands.ts';
 import type { Hop, TransitMessage } from '../messages/transit.ts';
 import { mintMessageId } from '../messages/transit.ts';
+import { ORDER_ROUTES } from '../messages/latency.ts';
 import { GOAL_KINDS } from '../plans/goal.ts';
 import { receiveOrder } from '../plans/standing.ts';
 import type { State } from '../root-state.ts';
 import { relayDecision } from '../standin/traits.ts';
 import { fire, hop, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
-
-const ORDER_ROUTES_ALLOWED = ['courier', 'in-person', 'mail', 'special-messenger', 'wire'] as const;
 
 /**
  * Validate and send an order. Returns the reason for a rejection, or null when it is on its way.
@@ -43,7 +42,8 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   if (target.holder === null) return 'vacant_post';
   if (!(GOAL_KINDS as readonly string[]).includes(cmd.goal)) return 'bad_goal';
   if (cmd.goal === 'advance' ? cmd.region === null || !world.regionIds.includes(cmd.region) : cmd.region !== null) return 'bad_goal';
-  if (!(ORDER_ROUTES_ALLOWED as readonly string[]).includes(cmd.route)) return 'route_unavailable';
+  // Only the routes the principal's menu offers (review N1): an order "in person" would be a visit, a verb of its own.
+  if (!ORDER_ROUTES.includes(cmd.route)) return 'route_unavailable';
   // The whole chain of posts above the target relays a principal's order.
   const chain = world.chainBelow(null, target.id);
   // Vacant relay posts cannot relay: the order skips them.

@@ -13,16 +13,14 @@
 import type { FactionId, PostId } from '../ids.ts';
 import { latestEnemyClaims, perceived } from '../knowledge/beliefs.ts';
 import { knowledgeOf } from '../knowledge/knowledge.ts';
-import { routeLatency, type RouteKind } from '../messages/latency.ts';
+import { ORDER_ROUTES, routeLatency } from '../messages/latency.ts';
 import type { State } from '../root-state.ts';
 import { demandRatio, perceptionBias } from '../standin/traits.ts';
 import type { IndexedWorld } from '../standin/world.ts';
+import { deepFreeze } from '../tick/freeze.ts';
 import { createViewCache, viewFor, type ViewCache } from '../view/view.ts';
 import type { CommandablePost, OptionView, PrincipalMenu, RouteOption, SeatRequest, StandingMenu } from './api.ts';
 import { seatIdFor } from './seats.ts';
-
-/** Routes a principal is offered for an order (rail and ship wait for lane 0.2's typed edges). */
-export const ORDER_ROUTES: readonly RouteKind[] = Object.freeze(['courier', 'special-messenger', 'wire']);
 
 /** A score cap so an empty region does not dwarf every other term. */
 const SCORE_CAP = 4000;
@@ -105,11 +103,7 @@ export function standingKey(post: PostId, day: number): string {
   return `standing:${post}:${day}`;
 }
 
-/** Requests are handed to code outside the kernel: freeze them so no seat can edit what it was given. */
+/** Requests are handed to code outside the kernel: freeze them all the way down so no seat can edit what it was given. */
 function freezeDeep<T>(value: T): T {
-  if (typeof value === 'object' && value !== null && !Object.isFrozen(value)) {
-    for (const v of Object.values(value)) freezeDeep(v);
-    Object.freeze(value);
-  }
-  return value;
+  return deepFreeze(value);
 }

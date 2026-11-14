@@ -57,7 +57,14 @@ export function templateFor(templates: readonly ReportTemplate[], type: ReportTy
   return found;
 }
 
-/** Problems with a template table: duplicates, negative or zero ages. Empty when sound. */
+/**
+ * The longest a template may keep a report, in days: a whole campaign (about
+ * 1,460 days) with a margin. Without a ceiling a pack typo (100000) would make
+ * knowledge effectively unbounded (review N4).
+ */
+export const MAX_REPORT_AGE_DAYS = 1500;
+
+/** Problems with a template table: duplicates, negative or zero ages, ages past the ceiling. Empty when sound. */
 export function templateProblems(templates: readonly ReportTemplate[]): string[] {
   const problems: string[] = [];
   const seen = new Set<string>();
@@ -69,6 +76,8 @@ export function templateProblems(templates: readonly ReportTemplate[]): string[]
       if (!Number.isSafeInteger(v) || v < 0) problems.push(`template ${key}: ${name} must be a whole number of days`);
     }
     if (x.maxAgeDays < 1) problems.push(`template ${key}: maxAgeDays must be at least 1, or knowledge would hold nothing`);
+    if (x.maxAgeDays > MAX_REPORT_AGE_DAYS) problems.push(`template ${key}: maxAgeDays must be at most ${MAX_REPORT_AGE_DAYS}, or knowledge would never fade`);
+    if (x.keepSupersededDays > x.maxAgeDays) problems.push(`template ${key}: keepSupersededDays must not exceed maxAgeDays`);
   }
   return problems;
 }

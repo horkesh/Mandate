@@ -16,7 +16,7 @@ import { pendingRequests } from '../seats/requests.ts';
 import { canonicalHash } from '../serialize/hash.ts';
 import type { IndexedWorld } from '../standin/world.ts';
 import type { Telemetry } from '../telemetry.ts';
-import { deepFreeze } from '../tick/freeze.ts';
+import { createFreezeLedger, deepFreeze } from '../tick/freeze.ts';
 import { tick, type TickResult } from '../tick/tick.ts';
 import { createViewCache } from '../view/view.ts';
 import { checkedLog, entriesForDay, type LogEntry } from './log.ts';
@@ -56,13 +56,14 @@ export function playDays(
   days: number,
   options: PlayOptions = {},
 ): { readonly state: State; readonly log: LogEntry[]; readonly hashes: DayHash[] } {
-  let state = options.freeze === true ? deepFreeze(start) : start;
+  const ledger = createFreezeLedger();
+  let state = options.freeze === true ? deepFreeze(start, ledger) : start;
   const log: LogEntry[] = [];
   const hashes: DayHash[] = [];
   const cache = createViewCache();
   for (let i = 0; i < days; i++) {
     const entries = pendingRequests(world, state, cache).flatMap((r) => answerEntries(r, seats(r.requestSeat)));
-    const result = tick(world, state, entries, { ...(options.telemetry ? { telemetry: options.telemetry } : {}), ...(options.freeze ? { freeze: true } : {}) });
+    const result = tick(world, state, entries, { ...(options.telemetry ? { telemetry: options.telemetry } : {}), ...(options.freeze ? { freeze: true, freezeLedger: ledger } : {}) });
     options.onDay?.(result);
     state = result.state;
     log.push(...entries);
@@ -84,10 +85,11 @@ export function replay(
   options: PlayOptions = {},
 ): { readonly state: State; readonly hashes: DayHash[] } {
   const log = checkedLog(rawLog);
-  let state = options.freeze === true ? deepFreeze(start) : start;
+  const ledger = createFreezeLedger();
+  let state = options.freeze === true ? deepFreeze(start, ledger) : start;
   const hashes: DayHash[] = [];
   while (state.stateDay < throughDay) {
-    const result = tick(world, state, entriesForDay(log, state.stateDay + 1), { ...(options.telemetry ? { telemetry: options.telemetry } : {}), ...(options.freeze ? { freeze: true } : {}) });
+    const result = tick(world, state, entriesForDay(log, state.stateDay + 1), { ...(options.telemetry ? { telemetry: options.telemetry } : {}), ...(options.freeze ? { freeze: true, freezeLedger: ledger } : {}) });
     options.onDay?.(result);
     state = result.state;
     hashes.push({ day: state.stateDay, hash: canonicalHash(state) });

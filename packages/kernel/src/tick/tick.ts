@@ -26,7 +26,7 @@ import type { IndexedWorld } from '../standin/world.ts';
 import type { Telemetry } from '../telemetry.ts';
 import { fire, type DecisionPoint, type Price, type Proposal, type Rejection, type TickContext, type TickEvent } from './context.ts';
 import { deliverDue } from './deliver.ts';
-import { deepFreeze } from './freeze.ts';
+import { createFreezeLedger, deepFreeze, type FreezeLedger } from './freeze.ts';
 import { generateReports } from './generate.ts';
 import { issueOrder } from './orders.ts';
 import { applyStanding } from './standing.ts';
@@ -58,6 +58,8 @@ export interface TickOptions {
   readonly telemetry?: Telemetry;
   /** Deep-freeze State after every phase (tests and determinism runs): any in-place write then throws. */
   readonly freeze?: boolean;
+  /** Objects already frozen all the way down, kept by the caller across days so unchanged State is not walked again. */
+  readonly freezeLedger?: FreezeLedger;
 }
 
 export interface TickResult {
@@ -71,7 +73,8 @@ export interface TickResult {
 }
 
 export function tick(world: IndexedWorld, start: State, entries: readonly LogEntry[], options: TickOptions = {}): TickResult {
-  const freeze = options.freeze === true ? deepFreeze : <T>(s: T): T => s;
+  const ledger = options.freezeLedger ?? createFreezeLedger();
+  const freeze = options.freeze === true ? <T>(s: T): T => deepFreeze(s, ledger) : <T>(s: T): T => s;
   const day = start.stateDay + 1;
   let state = freeze(start);
   const ctx: TickContext = {

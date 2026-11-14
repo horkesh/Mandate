@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { INFORMAL_SUBTYPES, reportProblems, type ReportBody } from '../src/knowledge/report.ts';
-import { DEFAULT_REPORT_TEMPLATES, templateFor } from '../src/knowledge/templates.ts';
+import { DEFAULT_REPORT_TEMPLATES, MAX_REPORT_AGE_DAYS, templateFor, templateProblems } from '../src/knowledge/templates.ts';
+import { ORDER_ROUTES } from '../src/messages/latency.ts';
+import { createIdMint, mintMessageId } from '../src/messages/transit.ts';
+import { principalMenu } from '../src/seats/requests.ts';
+import { createFreezeLedger } from '../src/tick/freeze.ts';
 import { logProblems, type LogEntry } from '../src/log/log.ts';
 import { answerEntries, playDays, replay } from '../src/log/session.ts';
 import { IMMUTABLE_STATE_KEYS, OWNED_FIELDS } from '../src/ownership.ts';
@@ -14,7 +18,7 @@ import { deepFreeze } from '../src/tick/freeze.ts';
 import { createState } from '../src/tick/setup.ts';
 import { SEATS_MECHANICS, tick } from '../src/tick/tick.ts';
 import { createViewCache, viewFor } from '../src/view/view.ts';
-import { indexedFixture, P, R } from './support/comms-fixture.ts';
+import { F, indexedFixture, P, R } from './support/comms-fixture.ts';
 import { order, scriptedSeats } from './support/test-seats.ts';
 
 const lead = seatIdFor(P('a_lead'));
@@ -41,7 +45,7 @@ function game(days: number, opts: { freeze?: boolean; worldOver?: Parameters<typ
 }
 
 describe('the command log is the truth (0015)', () => {
-  it('replays a log from the start to every dayâ€™s hash, without asking a seat', () => {
+  it('replays a log from the start to every dayÃ¢â‚¬â„¢s hash, without asking a seat', () => {
     const { world, start, log, hashes } = game(80);
     expect(log.length).toBeGreaterThan(3);
     expect(replay(world, start, log, 80).hashes).toEqual(hashes);
@@ -56,7 +60,7 @@ describe('the command log is the truth (0015)', () => {
     expect(again[39]!.hash).not.toBe(hashes[39]!.hash);
   });
 
-  it('saves State and the log, with both hashes, and resumes to the continuous runâ€™s hash', () => {
+  it('saves State and the log, with both hashes, and resumes to the continuous runÃ¢â‚¬â„¢s hash', () => {
     const { world, start, log, hashes, state } = game(60);
     const mid = replay(world, start, log, 25);
     const text = encodeSave({ worldHash: canonicalHash(world.world), state: mid.state, log: log.filter((e) => e.day <= 25) });
@@ -144,7 +148,7 @@ describe('the view (decision 0035: stable references; FOUNDATION section 8: no t
     expect(Object.isFrozen(v2) && Object.isFrozen(v2.reports) && Object.isFrozen(v2.reports[0])).toBe(true);
   });
 
-  it('rebuilds a cached belief when the readerâ€™s perception changes, though his knowledge did not (review F4, positive control)', () => {
+  it('rebuilds a cached belief when the readerÃ¢â‚¬â„¢s perception changes, though his knowledge did not (review F4, positive control)', () => {
     const timid = indexedFixture();
     const steadier = indexedFixture({ persons: { a_gen: { boldness: 500, values: ['duty'] } } });
     const state = playDays(timid, createState(timid, { seed: 4 }), scriptedSeats(), 3).state;
@@ -186,8 +190,8 @@ describe('the view (decision 0035: stable references; FOUNDATION section 8: no t
   });
 });
 
-describe('separate streams (0041): one messageâ€™s weather never shifts anotherâ€™s', () => {
-  it('an extra report leaves every other messageâ€™s arrival unchanged', () => {
+describe('separate streams (0041): one messageÃ¢â‚¬â„¢s weather never shifts anotherÃ¢â‚¬â„¢s', () => {
+  it('an extra report leaves every other messageÃ¢â‚¬â„¢s arrival unchanged', () => {
     const world = indexedFixture();
     const base = createState(world, { seed: 7 });
     const a = playDays(world, base, scriptedSeats({ a: { 1: [order('a_army', 'hold', null, 'courier', true)] } }), 12, { freeze: true });
@@ -205,7 +209,7 @@ describe('separate streams (0041): one messageâ€™s weather never shifts ano
   });
 });
 
-describe('the deep-freeze backstop (0044â€™s candidate)', () => {
+describe('the deep-freeze backstop (0044Ã¢â‚¬â„¢s candidate)', () => {
   it('a whole game runs with State frozen after every phase', () => {
     expect(() => game(90, { freeze: true })).not.toThrow();
   });
@@ -223,6 +227,52 @@ describe('the deep-freeze backstop (0044â€™s candidate)', () => {
     (loose.messagesInTransit as unknown as unknown[]).push({});
     expect(loose.messagesInTransit.length).toBeGreaterThan(0);
     expect(Object.isFrozen(deepFreeze({ a: { b: [1] } }).a.b)).toBe(true);
+  });
+});
+
+describe('review nits, each with a positive control', () => {
+  it('N1: an order may take only a route the menu offers', () => {
+    const world = indexedFixture();
+    const start = createState(world, { seed: 1 });
+    const r = tick(world, start, [
+      { day: 1, seat: lead, command: order('a_army', 'hold', null, 'in-person') },
+      { day: 1, seat: lead, command: order('a_army', 'hold', null, 'mail') },
+      { day: 1, seat: lead, command: order('a_army', 'hold', null, 'courier') },
+    ]);
+    expect(r.rejections.map((x) => [x.entry, x.reason])).toEqual([
+      [0, 'route_unavailable'],
+      [1, 'route_unavailable'],
+    ]);
+    const offered = principalMenu(world, start, F('a')).commandable.flatMap((c) => c.routes.map((x) => x.route));
+    expect([...new Set(offered)].sort()).toEqual([...ORDER_ROUTES].sort());
+  });
+
+  it('N2: deepFreeze walks into a shallow-frozen record and freezes its mutable child', () => {
+    const value = deepFreeze({ a: Object.freeze({ inner: [1] }) });
+    expect(Object.isFrozen(value.a.inner)).toBe(true);
+    expect(() => (value.a.inner as number[]).push(2)).toThrow(TypeError);
+    // A ledger skips only what it froze all the way down.
+    const ledger = createFreezeLedger();
+    const shared = { list: [1] };
+    deepFreeze({ shared }, ledger);
+    expect(ledger.has(shared.list)).toBe(true);
+  });
+
+  it('N3: a shortened message id keeps 64 bits of hash, so same-day keys do not collide', () => {
+    const long = P(`p${'x'.repeat(100)}`);
+    const mint = createIdMint(createState(indexedFixture(), { seed: 1 }));
+    const a = mintMessageId(mint, 3, long, long, 'order.a');
+    const b = mintMessageId(mint, 3, long, long, 'order.b');
+    expect(a).toMatch(/^m\.3\.[0-9a-f]{16}$/);
+    expect(b).toMatch(/^m\.3\.[0-9a-f]{16}$/);
+    expect(a).not.toBe(b);
+  });
+
+  it('N4: a template cannot keep reports past a campaign', () => {
+    const typo = { ...DEFAULT_REPORT_TEMPLATES[0]!, maxAgeDays: 100_000 };
+    expect(templateProblems([typo])).toEqual([`template wire-dispatch: maxAgeDays must be at most ${MAX_REPORT_AGE_DAYS}, or knowledge would never fade`]);
+    expect(templateProblems([{ ...typo, maxAgeDays: 20, keepSupersededDays: 30 }])).toEqual(['template wire-dispatch: keepSupersededDays must not exceed maxAgeDays']);
+    expect(templateProblems(DEFAULT_REPORT_TEMPLATES)).toEqual([]);
   });
 });
 

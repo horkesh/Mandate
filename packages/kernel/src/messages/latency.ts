@@ -18,6 +18,14 @@ import { createStream, nextInt } from '../rng.ts';
 export const ROUTE_KINDS = ['courier', 'in-person', 'mail', 'rail', 'ship', 'special-messenger', 'wire'] as const;
 export type RouteKind = (typeof ROUTE_KINDS)[number];
 
+/**
+ * The routes an order may take, which are exactly the routes a principal's
+ * menu offers: the kernel accepts no route it did not offer (review N1). In
+ * person would be a visit (its own verb); mail is for returns, not orders;
+ * rail and ship wait for lane 0.2's typed edges.
+ */
+export const ORDER_ROUTES: readonly RouteKind[] = Object.freeze(['courier', 'special-messenger', 'wire']);
+
 export interface LatencyRules {
   /** Days for a message on the wire between two wired regions. */
   readonly wireDays: number;

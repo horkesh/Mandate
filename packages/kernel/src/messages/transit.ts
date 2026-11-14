@@ -17,7 +17,7 @@ import type { ReportBody } from '../knowledge/report.ts';
 import type { ReportTruth } from '../knowledge/truth.ts';
 import type { GoalSpec } from '../plans/goal.ts';
 import type { State } from '../root-state.ts';
-import { fnv1a32 } from '../rng.ts';
+import { sha256OfText } from '../serialize/sha256.ts';
 import type { RouteKind } from './latency.ts';
 
 /** One more person a message must pass after its current recipient. */
@@ -70,12 +70,13 @@ export function createIdMint(state: State): IdMint {
 
 /**
  * A content-keyed message id: `m.<day>.<from>.<to>.<tag>`, with `.2`, `.3` ...
- * if the same key was already used this day. Long keys are shortened with a
- * hash so ids stay within the id grammar's length.
+ * if the same key was already used this day. Long keys are shortened to the
+ * day and 64 bits of their SHA-256 (review N3: 32 bits made a same-day
+ * collision, and so a minting-order-dependent suffix, merely unlikely).
  */
 export function mintMessageId(mint: IdMint, day: number, from: PersonId, to: PersonId, tag: string): MessageId {
   let base = `m.${day}.${from}.${to}.${tag}`;
-  if (base.length > 110) base = `m.${day}.${(fnv1a32(base) >>> 0).toString(16)}`;
+  if (base.length > 110) base = `m.${day}.${sha256OfText(base).slice(0, 16)}`;
   let id = base;
   for (let n = 2; mint.has(id); n++) id = `${base}.${n}`;
   mint.add(id);
