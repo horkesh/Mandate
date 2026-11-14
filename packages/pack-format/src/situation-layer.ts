@@ -29,7 +29,7 @@ export function readSituationLayer(files: PackFiles, pack: PackData): SituationL
   if (gate !== null) {
     const strings = new Map<string, string>();
     for (const { table } of pack.strings.get(pack.manifest.defaultLocale) ?? []) for (const [k, v] of Object.entries(table)) strings.set(k, v);
-    sink.add(checkGate(items, gate, strings, pack.provenance));
+    sink.add(checkGate(items, gate, strings, pack.provenance, pack.manifest.defaultLocale));
   }
   const ok = errorsOf(sink.issues).length === 0;
   return { situations: ok ? items.map((i) => i.def) : [], gate, issues: sink.issues };

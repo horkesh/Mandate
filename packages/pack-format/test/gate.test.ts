@@ -277,6 +277,12 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     const noted = merge(reviewEdit, editJson(sit('fen_crossing'), (s) => (s.gateReview.notes = { 'situation.fen_crossing.text|\\bmasters?\\b': 'Spoken of the holders as the fen folk name them; kept.' })));
     expect(issues(noted).filter((i) => i.kind === 'gate-review-note-missing')).toEqual([]);
     expect(proximityHit('the fen folk were counted as stock', ['stock'], ['fen folk'], 5)).toBe('"stock" near "fen folk"');
+    // Review S9: phrases and inflections match, and every string in the table is checked, not only situations'.
+    expect(proximityHit('the fen folk as a labour force', ['labour force'], ['fen folk'], 5)).toBe('"labour force" near "fen folk"');
+    expect(proximityHit('the fen folk were counted', ['count(?:s|ed|ing)?'], ['fen folk'], 5)).toBe('"counted" near "fen folk"');
+    firesAt(editJson('strings/en.json', (t) => (t['terrain.swamp'] = 'swamp of the loyal fen folk')), 'gate-forbidden-wording', { file: 'strings/en.json', at: 'terrain.swamp' });
+    firesAt(editJson('strings/en.json', (t) => (t['terrain.swamp'] = 'the fen folk counted in the swamps')), 'gate-forbidden-wording', { file: 'strings/en.json', at: 'terrain.swamp', message: 'resource wording' });
+    firesAt(editJson('strings/en.json', (t) => (t['terrain.swamp'] = 'the masters of the swamp')), 'gate-review-wording', { file: 'strings/en.json', at: 'terrain.swamp', severity: 'warning' });
     expect(proximityHit('fen folk crossed the river and the mill kept its old stock of grain', ['stock'], ['fen folk'], 5)).toBeNull();
   });
 
@@ -291,7 +297,7 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
         const def = { ...base.def, id: `copy_${i}` as never, historicalDefault: { options: [base.def.options[p]!.id] } };
         return { file: `situations/copy_${i}.json`, def: { ...def, gateReview: { ...base.def.gateReview!, contentHash: gateContentHash(def, strings, pack.provenance) } } };
       });
-    const c2 = (positions: number[]) => checkGate(copies(positions), gate, strings, pack.provenance).filter((i) => i.kind === 'gate-default-position');
+    const c2 = (positions: number[]) => checkGate(copies(positions), gate, strings, pack.provenance, 'en').filter((i) => i.kind === 'gate-default-position');
     expect(c2([1, 1, 1])).toHaveLength(1);
     expect(c2([0, 1, 2])).toEqual([]);
     expect(c2([1, 1])).toEqual([]);

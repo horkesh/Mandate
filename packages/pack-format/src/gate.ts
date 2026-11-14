@@ -139,13 +139,6 @@ export function gateContentHash(def: SituationDef, strings: ReadonlyMap<string, 
   return canonicalHash({ item, strings: resolvedStrings(def, strings), sources });
 }
 
-function words(text: string): string[] {
-  return text
-    .toLowerCase()
-    .split(/[^\p{L}\p{N}'-]+/u)
-    .filter((w) => w.length > 0);
-}
-
 /** Trigger matches in a text (whole words, case rules, proper nouns on the allowlist removed). */
 export function triggerMatches(text: string, triggers: GateData['triggers']): string[] {
   let scrubbed = text;
@@ -159,16 +152,32 @@ export function triggerMatches(text: string, triggers: GateData['triggers']): st
   return out;
 }
 
-/** Whether a resource word stands within `n` words of a protected-group term (F2's proximity rule). */
-export function proximityHit(text: string, resourceWords: readonly string[], groups: readonly string[], n: number): string | null {
-  const ws = words(text);
-  const groupWords = groups.map((g) => words(g));
-  const resource = new Set(resourceWords.map((r) => r.toLowerCase()));
-  for (let i = 0; i < ws.length; i++) {
-    for (const g of groupWords) {
-      if (g.length === 0 || ws.slice(i, i + g.length).join(' ') !== g.join(' ')) continue;
-      for (let j = Math.max(0, i - n); j <= Math.min(ws.length - 1, i + g.length - 1 + n); j++) {
-        if (resource.has(ws[j]!)) return `"${ws[j]}" near "${g.join(' ')}"`;
+/** Whole-word matches of a pattern in a text, as token ranges (review S9: phrases and inflections, not single tokens). */
+function tokenMatches(text: string, pattern: string, starts: readonly number[]): { readonly from: number; readonly to: number; readonly text: string }[] {
+  const re = new RegExp(`(?<![\\p{L}\\p{N}])(?:${pattern})(?![\\p{L}\\p{N}])`, 'giu');
+  const tokenAt = (offset: number) => starts.filter((s) => s <= offset).length - 1;
+  return [...text.matchAll(re)].map((m) => ({ from: tokenAt(m.index), to: tokenAt(m.index + m[0].length - 1), text: m[0] }));
+}
+
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * Whether a resource term stands within `n` words of a protected-group term
+ * (F2's proximity rule). Resource terms are patterns, so a pack can match a
+ * phrase ("labour force") and inflections ("count(?:s|ed|ing)?"); group terms
+ * are literal phrases.
+ */
+export function proximityHit(text: string, resourceTerms: readonly string[], groups: readonly string[], n: number): string | null {
+  const starts = [...text.matchAll(/[\p{L}\p{N}'-]+/gu)].map((m) => m.index);
+  for (const g of groups) {
+    for (const gm of tokenMatches(text, escapeRegExp(g), starts)) {
+      for (const r of resourceTerms) {
+        for (const rm of tokenMatches(text, r, starts)) {
+          const gap = rm.from > gm.to ? rm.from - gm.to : gm.from > rm.to ? gm.from - rm.to : 0;
+          if (gap <= n) return `"${rm.text}" near "${gm.text}"`;
+        }
       }
     }
   }
@@ -182,7 +191,13 @@ const topicsOf = (tag: Tag | null): readonly string[] => (tag === null || 'none'
  * The gate's checks over a pack's situations. `strings` is the default
  * locale's table; `provenance` the pack's sources.
  */
-export function checkGate(items: readonly { readonly file: string; readonly def: SituationDef }[], gate: GateData, strings: ReadonlyMap<string, string>, provenance: ProvenanceFile): Issue[] {
+export function checkGate(
+  items: readonly { readonly file: string; readonly def: SituationDef }[],
+  gate: GateData,
+  strings: ReadonlyMap<string, string>,
+  provenance: ProvenanceFile,
+  defaultLocale: string,
+): Issue[] {
   const sink = new IssueSink();
   const topics = new Map(gate.register.topics.map((t) => [t.id, t]));
   const classes = new Map(gate.classes.classes.map((c) => [c.id, c]));
@@ -405,6 +420,24 @@ export function checkGate(items: readonly { readonly file: string; readonly def:
 
     const hd = def.historicalDefault;
     if (gated && def.kind === 'decision' && def.options.length >= 3 && hd !== null && 'options' in hd && hd.options.length === 1) positions.push(def.options.findIndex((o) => o.id === hd.options[0]));
+  }
+
+  // F2 and F5 over the whole string table (review S9), not only situation strings: every other message is
+  // checked against the patterns that apply anywhere and to narrator text, and the proximity rule. Review hits
+  // here have no sign-off to hold a note, so they stay warnings; anachronisms need a date, which only items have.
+  const shown = new Set(items.flatMap(({ def }) => stringKeysOf(def).map((k) => k.key)));
+  const table = `strings/${defaultLocale}.json`;
+  for (const [key, text] of [...strings].sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))) {
+    if (shown.has(key)) continue;
+    for (const p of gate.forbidden.patterns) {
+      if (p.scope === 'label') continue;
+      const m = new RegExp(p.pattern, 'iu').exec(text);
+      if (m === null) continue;
+      if (p.severity === 'fail') sink.error('gate-forbidden-wording', table, key, `"${m[0]}": ${p.reason}`, 'wording free of the pack’s forbidden patterns (F2, F5)');
+      else sink.warn('gate-review-wording', table, key, `"${m[0]}": ${p.reason}; the reviewer must note it`);
+    }
+    const near = proximityHit(text, gate.forbidden.resourceWords, groups, gate.forbidden.proximityTokens);
+    if (near !== null) sink.error('gate-forbidden-wording', table, key, `resource wording ${near}`, 'people of a protected group are never a resource (F2; 0021)');
   }
 
   // C2: no display position holds the default in more than half of the gated decisions with three or more options.

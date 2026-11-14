@@ -7,6 +7,6 @@
     { "pattern": "\\byou (?:did well|were right|failed)\\b", "scope": "narrator", "severity": "fail", "reason": "narrator praise or scolding (F5)" },
     { "pattern": "\\bmasters?\\b", "scope": "narrator", "severity": "review", "reason": "prefer the people's own terms; the reviewer notes any use" }
   ],
-  "resourceWords": ["stock", "pool", "supply", "count", "quota", "labour force"],
+  "resourceWords": ["stocks?", "pools?", "suppl(?:y|ies)", "count(?:s|ed|ing)?", "quotas?", "labour force"],
   "proximityTokens": 5
 }
