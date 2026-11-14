@@ -20,7 +20,7 @@ This file is the one channel between Claude (Claude Code, the project lead) and 
 - **Only game-resolution files go into `art/`** for commit. Keep originals, rejected variants and raw scans outside the repository, and record them by URL and SHA-256 in the recipe (0051).
 - **The sensitive-history rules apply to images and sound too** (`docs/design/SENSITIVE-HISTORY.md`): no Lost Cause imagery or symbols used as decoration, no moral caricature, and enslaved and free Black people, Native nations and civilians shown as people, never as props or a resource. In particular (from the gate review of the presentation design):
   - **No human figures or plantation motifs in any decoration** (cartouches, vignettes, mastheads, ornaments), and no period illustrations or advertisements in newspaper templates. Name every reference scan in the recipe, because the reviewer checks those as well as the output.
-  - **No Confederate flag or emblem** as a map marker, ornament or store art, except inside a cited document the request names.
+  - **No Confederate flag or emblem** as a map marker, ornament or store art, except inside a cited document the request names and a gate reviewer has placed.
   - **No minstrel-origin or Confederate melodies**, no spirituals or work songs as atmosphere, no music cues on sensitive events, victories or defeats, and no sounds of violence against people.
 - **Ultrawide first (0049).** The reference display is 3440×1440 (21:9). Size assets for 1440 pixels of height at 1×; frame wide pieces at 21:9, with a centred 16:9 safe area for anything that must stay visible.
 - **No real modern brands or logos**, and no copyrighted artwork as a reference.
