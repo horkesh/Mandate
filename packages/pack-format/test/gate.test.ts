@@ -404,6 +404,25 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     expect(d5(asking({ reportType: 'informal', subtype: 'cabinet-word', claimKind: 'goal-status' }))).toEqual([]);
   });
 
+  it('gate G7 (N10): in a decision depending on an atrocity, an option lowering the actor is watched, so the lever sweep reads it', () => {
+    const news = { knows: { subjectKind: 'situation', subjectId: 'harbour_burning' } };
+    const lowerActor = { propose: { owner: 'politics', field: 'national-will', subject: 'south', delta: -10, reason: 'a-harbour-burned', side: 'south' } };
+    const lever = (watched: boolean) =>
+      editJson(sit('fen_crossing'), (s) => ((s.knowledge = { all: [s.knowledge, news] }), (s.options[1].effects ??= []).push(lowerActor), (s.options[1].watched = watched)));
+    firesAt(lever(false), 'gate-unwatched-lever', { file: sit('fen_crossing'), at: 'options[1].watched', message: 'shelter' });
+    // The controls: marked watched, it passes; and with no dependence on an atrocity, no mark is needed.
+    expect(issues(lever(true)).filter((i) => i.kind === 'gate-unwatched-lever')).toEqual([]);
+    expect(issues(editJson(sit('fen_crossing'), (s) => (s.options[1].effects ??= []).push(lowerActor))).filter((i) => i.kind === 'gate-unwatched-lever')).toEqual([]);
+    // N12, precision: when only one option depends on the atrocity, through its own condition, only that option needs the
+    // mark. Its untainted sibling lowering the actor needs none.
+    const scoped = editJson(sit('fen_crossing'), (s) => {
+      s.options[0].appearsWhen = news;
+      for (const o of [s.options[0], s.options[1]]) ((o.watched = false), (o.effects ??= []).push(lowerActor));
+    });
+    firesAt(scoped, 'gate-unwatched-lever', { file: sit('fen_crossing'), at: 'options[0].watched', message: 'no_instruction' });
+    expect(issues(scoped).filter((i) => i.kind === 'gate-unwatched-lever' && i.at !== 'options[0].watched')).toEqual([]);
+  });
+
   it('B10: an option a later law forbids expires with it', () => {
     fires(editJson(sit('fen_crossing'), (s) => (s.options[2].expiresWhen = null)), 'gate-no-expiry');
   });

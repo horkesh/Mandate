@@ -470,6 +470,22 @@ export function checkGate(
     // acting side's measures. No seat gains anything from an atrocity (0046). An option's own appear, expire or wait
     // condition makes only that option's effects depend on it; the item's trigger makes all of them depend on it.
     const tainted = taint.get(def.id) ?? [];
+    // Gate G7 (N10): in a decision that depends on an atrocity, an option that lowers the actor's measures is a possible
+    // lever, so it is marked watched and the lever sweep (D6) always reads it.
+    if (def.kind === 'decision') {
+      const unwatched = new Set<number>();
+      for (const t of tainted) {
+        if (t.atrocity === def.id) continue;
+        def.options.forEach((o, i) => {
+          if (o.watched || (t.option !== null && o.id !== t.option)) return;
+          const lowersActor = [...o.effects, ...o.lockedCosts].some((e) => 'propose' in e && e.propose.side === t.actingSide && e.propose.delta < 0);
+          if (lowersActor) unwatched.add(i);
+        });
+      }
+      for (const i of [...unwatched].sort((a, b) => a - b)) {
+        err('gate-unwatched-lever', `options[${i}].watched`, `option "${def.options[i]!.id}" lowers the acting side’s measures in a decision that depends on an atrocity, and is not watched`, 'watched: true, so the lever sweep always reads it (D6, gate G7)');
+      }
+    }
     for (const t of tainted) {
       if (t.atrocity === def.id) continue;
       if (t.option !== null && tainted.some((w) => w.option === null && w.atrocity === t.atrocity)) continue;
