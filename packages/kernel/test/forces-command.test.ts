@@ -70,7 +70,7 @@ describe('setup: forces, locations and command copied once from the start (0050)
   });
 
   it('copies locations, with troops aboard a ship on the water', () => {
-    expect(S.forceLocations[B('a_marines')]).toEqual({ locRegion: 'w', locAboard: 'a_ship', locSinceDay: 0 });
+    expect(S.forceLocations[B('a_marines')]).toEqual({ locRegion: 'w', locAboard: 'a_ship', locSinceDay: 0, locMarch: null });
     expect(blocksIn(S, R('a2'))).toEqual(['a_1', 'a_2', 'a_3', 'a_c1']);
   });
 

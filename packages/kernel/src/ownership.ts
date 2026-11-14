@@ -187,6 +187,7 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'StandingOrderState',
   'PostLinkState',
   'ObstructionState',
+  'MarchLeg',
 ];
 
 /** State's own root fields that are set once at setup and never written after (the game's seed, the calendar's day 0). */

@@ -8,6 +8,7 @@
  */
 import { strictCompare } from '../compare.ts';
 import type { ForceBlockId, RegionId } from '../ids.ts';
+import type { MarchLeg } from './march.ts';
 import type { State } from '../root-state.ts';
 import type { WorldIndex } from '../world/index.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
@@ -20,6 +21,8 @@ export interface ForceLocation {
   readonly locAboard: ForceBlockId | null;
   /** The day it reached this region (0 at setup). */
   readonly locSinceDay: number;
+  /** The leg it is on, or null when it stands still (`march.ts`). */
+  readonly locMarch: MarchLeg | null;
 }
 
 export type LocationTable = Readonly<Record<ForceBlockId, ForceLocation>>;
@@ -59,7 +62,7 @@ export function initialLocations(map: WorldIndex, start: ScenarioStart): Locatio
     } else if ((region.kind === 'river' || region.kind === 'sea') && !naval.has(b.arm)) {
       problems.push(`force block ${b.id}: troops stand in ${b.region} (${region.kind}) only aboard a ship`);
     }
-    out[b.id] = { locRegion: b.region, locAboard: b.aboard, locSinceDay: 0 };
+    out[b.id] = { locRegion: b.region, locAboard: b.aboard, locSinceDay: 0, locMarch: null };
   }
   if (problems.length > 0) throw new MovementError(problems);
   return out;

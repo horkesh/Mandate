@@ -49,3 +49,4 @@ export * from './tick/situations.ts';
 export * from './forces/forces.ts';
 export * from './command/command.ts';
 export * from './movement/movement.ts';
+export * from './movement/march.ts';

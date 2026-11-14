@@ -49,6 +49,11 @@ export interface NetworkConditions {
   readonly depotCondition: Readonly<Record<DepotId, number>>;
   /** Water edges obstructed, by an installation's works or by works not modelled (`by: null`). */
   readonly obstructions: readonly { readonly edge: EdgeId; readonly by: InstallationId | null }[];
+  /**
+   * Regions nobody controls whose government has closed its territory (0055), in id order.
+   * Absent or empty: every such region is open to every side's movement and supply.
+   */
+  readonly closedNeutral?: readonly RegionId[];
 }
 
 export const INTACT_NETWORK: NetworkConditions = Object.freeze({ edgeCondition: Object.freeze({}), depotCondition: Object.freeze({}), obstructions: Object.freeze([]) });
@@ -239,12 +244,22 @@ function legOf(ctx: Ctx, edge: EdgeRecord, from: RegionId): EdgeLeg {
   return leg;
 }
 
+/**
+ * Neutral passage (0055): a land region or key point nobody controls is open to
+ * every side, as open water is, unless its government has closed it.
+ */
+export function neutralOpen(holding: { readonly region: RegionId; readonly reason: string }, network: NetworkConditions): boolean {
+  return holding.reason === 'no_control' && !(network.closedNeutral ?? []).includes(holding.region);
+}
+
 /** Why a faction cannot pass a region, or null if it can. */
 function regionBar(ctx: Ctx, region: RegionId, faction: FactionId): CutReason | null {
   const kind = ctx.map.regions.get(region)!.kind;
   if (kind === 'river' || kind === 'sea') return null;
   if (kind === 'off_map') return 'off_map';
-  return ctx.index.holdings.get(region)!.tracedBy.includes(faction) ? null : 'not_traced';
+  const holding = ctx.index.holdings.get(region)!;
+  if (holding.tracedBy.includes(faction)) return null;
+  return neutralOpen(holding, ctx.network) ? null : 'not_traced';
 }
 
 /** Why a faction cannot use a leg, or null if it can. */
@@ -305,7 +320,8 @@ export function deriveSupply(map: WorldIndex, index: ControlIndex, month: number
   const depots = [...map.world.depots].sort((a, b) => strictCompare(a.id, b.id));
   const factions = new Map<FactionId, FactionSupply>();
   for (const faction of index.factions) {
-    const tracedHere = (region: RegionId) => regionBar(ctx, region, faction) === null && ctx.map.regions.get(region)!.kind !== 'river' && ctx.map.regions.get(region)!.kind !== 'sea';
+    // An origin supplies only a side that traces its region: passing through a neutral region (0055) draws nothing from it.
+    const tracedHere = (region: RegionId) => ctx.index.holdings.get(region)!.tracedBy.includes(faction);
     const originOf = (d: (typeof depots)[number]) => {
       const condition = network.depotCondition[d.id] ?? 1000;
       const terms: OriginTerm[] = [{ kind: 'base', capacityMilli: d.capacity * 1000 }];
