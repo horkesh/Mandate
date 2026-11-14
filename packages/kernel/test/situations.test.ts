@@ -128,6 +128,24 @@ describe('situations fire on their causes and surface on what the seat knows (00
     expect(held(rec.sitSurfacedDay!).some((r) => r.knownReceivedDay === rec.sitSurfacedDay)).toBe(true);
     expect(held(rec.sitSurfacedDay! - 1).every((r) => r.knownReceivedDay < 21)).toBe(true);
   });
+  it('ends a wait only on news received since he chose to wait, never on a report he already held (standing re-check N6)', () => {
+    const pattern = { reportType: 'wire-dispatch', subtype: null, subjectKind: 'post', subjectId: 'a_army', claimKind: 'goal-status', token: null } as const;
+    const sit = decision('patient', { options: [option('until-word', 1, { waitsOn: { knows: pattern } }), option('now', 2)] });
+    const { world, state } = setup([sit]);
+    // He chooses to wait on day 25, after the army's dispatch of day 20 has reached him.
+    const run = days(world, state, 45, { 25: [{ cmd: 'decide', situation: S('patient'), options: ['until-word'] }] });
+    const held = (day: number) =>
+      knowledgeOf(run.results[day - 1]!.state, lead).knownReports.filter((r) => r.knownBody.reportType === 'wire-dispatch' && r.knownBody.reportSubjectId === 'a_army' && r.knownBody.reportClaims.some((c) => c.claimKind === 'goal-status'));
+    // The control: on the day he chose to wait he already held a matching dispatch.
+    expect(held(25).some((r) => r.knownReceivedDay < 25)).toBe(true);
+    expect(run.results[24]!.state.situationStates[S('patient')]!.sitStatus).toBe('waiting');
+    // The wait ends only on the day a dispatch received since then arrives.
+    const reopened = run.results.findIndex((r) => r.decisionPoints.some((p) => p.point === 'situation-resurfaced' && p.situation === S('patient'))) + 1;
+    expect(reopened).toBeGreaterThan(25);
+    expect(held(reopened).some((r) => r.knownReceivedDay >= 25)).toBe(true);
+    expect(held(reopened - 1).every((r) => r.knownReceivedDay < 25)).toBe(true);
+  });
+
   it('runs an option’s clock from when the principal is told, not from the event (gate re-check N6)', () => {
     const pattern = { reportType: 'wire-dispatch', subtype: null, subjectKind: 'post', subjectId: 'a_army', claimKind: 'goal-status', token: null } as const;
     // Fires on day 21; surfaces when the next army dispatch arrives, a day or more later.
