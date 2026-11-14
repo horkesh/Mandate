@@ -54,7 +54,8 @@ export const KERNEL_MODULES: readonly KernelModule[] = [
   { name: 'situations', layer: 'State', owns: 'cause predicates, offers, live situations and clocks, decisions' },
   { name: 'politics', layer: 'State', owns: 'blocs, mandate, elections, verdict, chambers of Congress, framing' },
   { name: 'planner', layer: 'pure', owns: 'candidate plans for a goal, on request' },
-  { name: 'infrastructure', layer: 'State', owns: 'edge condition (damage and repair)' },
+  { name: 'infrastructure', layer: 'State', owns: 'edge condition (damage and repair), water obstructions, depot condition' },
+  { name: 'weather', layer: 'State', owns: "today's weather per zone, drawn from a named seeded stream (0029)" },
   { name: 'tick', layer: 'infrastructure', owns: 'the fixed day order and the decision-point signal' },
   { name: 'log', layer: 'infrastructure', owns: 'command log, snapshots, replay' },
   { name: 'serialize', layer: 'infrastructure', owns: 'canonical JSON, state hash, versioned saves' },
@@ -109,6 +110,14 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field("each chamber of Congress's state (sitting, adjourned, special session called)", 'politics', ['situations', 'the weekly step']),
   field('the framing term (who the public believes began the war)', 'politics', ["the war's opening situations", 'the press']),
   field('seat assignments', 'seats', ['setup', "the player's settings"]),
+  // Reserved by world format v2 (lane 0.2): State that starts from a scenario
+  // start or a World rule, with its owner named before the mechanic is built.
+  field('water edge obstructions (works or batteries in hostile hands; cleared)', 'infrastructure', ['combat', 'operations (a siege, a clearing)', 'situations']),
+  field('depot condition (struck by raids, repaired)', 'infrastructure', ['raids', 'combat', 'repair orders']),
+  field("a post's department (changed on a scheduled date or by a situation)", 'command', ['scheduled department changes in the scenario start', 'situations']),
+  field("a person's rank and its date (seniority)", 'people', ['promotion lists', 'appoint']),
+  field("today's weather per weather zone", 'weather', ['the day tick, from its named seeded stream (0029)']),
+  field("guerrilla pressure on a region's loyalty and supply", 'regions', ['operations (raids)', 'occupation', 'situations']),
 ];
 
 /**

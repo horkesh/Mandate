@@ -18,14 +18,20 @@ import { strictCompare } from './compare.ts';
  */
 export const ID_KINDS = [
   'bloc',
+  'department',
+  'depot',
   'edge',
   'faction',
   'forceBlock',
+  'installation',
   'person',
   'post',
+  'railLine',
   'region',
+  'scenario',
   'seat',
   'situation',
+  'weatherZone',
 ] as const;
 
 export type IdKind = (typeof ID_KINDS)[number];
@@ -36,20 +42,26 @@ declare const idKind: unique symbol;
 export type Id<K extends IdKind> = string & { readonly [idKind]: K };
 
 export type BlocId = Id<'bloc'>;
+export type DepartmentId = Id<'department'>;
+export type DepotId = Id<'depot'>;
 export type EdgeId = Id<'edge'>;
 export type FactionId = Id<'faction'>;
 export type ForceBlockId = Id<'forceBlock'>;
+export type InstallationId = Id<'installation'>;
 export type PersonId = Id<'person'>;
 export type PostId = Id<'post'>;
+export type RailLineId = Id<'railLine'>;
 export type RegionId = Id<'region'>;
+export type ScenarioId = Id<'scenario'>;
 export type SeatId = Id<'seat'>;
 export type SituationId = Id<'situation'>;
+export type WeatherZoneId = Id<'weatherZone'>;
 
 /**
  * The id grammar: starts with a letter or digit, then letters, digits and
  * `_ . : / -`. No whitespace, so ids survive logs, command lines and file names.
  */
-const ID_PATTERN = /^[A-Za-z0-9][A-Za-z0-9_.:/-]*$/;
+export const ID_PATTERN = /^[A-Za-z0-9][A-Za-z0-9_.:/-]*$/;
 
 export const ID_MAX_LENGTH = 128;
 
