@@ -65,7 +65,7 @@ On the `opening` start in April. The four seatings are the testbed's appointee (
 
 **Cost per draft.** Testbed (30 regions, 51 edges): 0.10–0.21 ms median, p95 at most 0.53 ms, 4–7 route searches, 2–5 candidates. Union-size synthetic grid (270 regions, 971 edges, from the kernel's performance fixture): 3.3–4.7 ms median, p95 at most 5.8 ms, 8–10 searches. The note's budget was 10 ms per request at p95 on the testbed and 25 ms at Union size; both pass with room.
 
-**Projection to the Union map at corps level.** About 30 commands draft (20–24 corps and 7–8 armies, war-scale note). Drafts are made on request (a goal, a send-back, a redraft, a stall), never daily. At a redraft per command per week that is about 4.3 drafts a day, about 20 ms at p95; with the note's queue cap of 4 drafts a day, at most about 23 ms on the worst day. That fits the 40 ms tick beside a map rebuild (measured 3–8 ms) but leaves little room, so **cap drafting at 3 a day at Union scale, or run drafting at the turn boundary when the player sets goals** (the usual case, where 5 ms is instant at 3440×1440). Cheap savings if needed: reuse the direct route across methods (already done), cache the reverse distance tree per objective, and stop each search at the objective (already done).
+**Projection to the Union map at corps level.** About 30 commands draft (20–24 corps and 7–8 armies, war-scale note). Drafts are made on request (a goal, a send-back, a redraft, a stall), never daily. At a redraft per command per week that is about 4.3 drafts a day, about 20 ms at p95; with the note's queue cap of 4 drafts a day, at most about 23 ms on the worst day. That fits the 40 ms tick beside a map rebuild (measured 3–8 ms) but leaves little room, so **cap drafting at about 3 a day at Union scale (a pack rule; lane 0.8 sets it from the real graph), or run drafting at the turn boundary when the player sets goals** (the usual case, where 5 ms is instant at 3440×1440). Cheap savings if needed: reuse the direct route across methods (already done), cache the reverse distance tree per objective, and stop each search at the objective (already done).
 
 **How often the pick changes.**
 - Boldness 0 to 1000 in steps of 50 (competence 650): the pincer case changes once (hold, then direct, at 350); the supply case three times (hold, supply line at 350, direct at 600, flank at 950); the naval case once (clear first, then run in at 700).
@@ -94,6 +94,10 @@ An edit that reproduces one of his own routes has distance 0, and farther waypoi
 5. **A waypoint far from the axis yields a wild route.** "Via Fenmere" routes through the capital, because the constrained route minimises his priced cost. That is correct, but the plan-review screen must preview an edited route and its distance before the player sends it.
 6. **Garrison detachments marched with the army** until the default commitment excluded detachments (0040's detachment below its brigade). Lane 0.5's goal default should do the same.
 7. **Two scoring-weight iterations were used**, as the note's stopping rule allows: the early-arrival bonus scaled up for bold men, and the haste term added. The weights are design parameters, not calibrated.
+8. **A tiny shortfall stops even a bold man** (review). The fighter (boldness 800) carries "move when reinforced" for 200 men against 8,200 perceived, because any shortfall at all adds the condition. The condition should apply only past a shortfall share scaled by caution (a bold man moves when 5% short, a cautious one waits at 1%), as a pack rule.
+9. **Enemy-held ground is crossed with no assault or reduction phase** (review). A route through an enemy-held region, including Corran Crossing under its fort, marches straight through; only the objective gets an assault, and only works on water edges get a reduce, clear or run-past phase. Phase 1 needs a phase for every enemy-held region on a route (assault where held, reduce where fortified), priced in time as works on water are now.
+10. **A seating artifact in the pincer case** (review). When the organiser is seated in the Army of the Westwatch for comparison, the pincer's `cooperating_axis` request goes to the Army of the Eastwatch's holder, who in the start is the organiser himself. The testbed swaps the holder of one post without vacating his other, so one man holds both. It does not arise in the start as written; a real seating would refuse a man two army posts, or the planner should draft a single two-axis plan when both posts share a holder.
+11. **The spike reads truth for its inputs** (review). The enemy blocks behind his beliefs (before his bias and the source's), the boom, and fortification all come from the start, not from his seat's knowledge. **The Phase 1 boundary:** every input that describes the enemy or the ground comes from the commander's view, works and obstructions included. A commander learns of a boom, a battery or a fort's strength by report, and plans on what he believes; a plan that meets an unreported boom is an operations event, not a planner input.
 
 ## Choices, with what was rejected
 
@@ -127,7 +131,12 @@ An edit that reproduces one of his own routes has distance 0, and farther waypoi
 | `compliance` | pure | maps an edited plan to `DirectiveTerms` with boldness relative to his best (finding 2) and decides the rung |
 | shared | — | the binary heap moves out of `supply` so `planner` imports it rather than copying it (FOUNDATION section 11, rule 11) |
 
-The planner's inputs are then all owned elsewhere: World, the derived map, `forces`, `command`, `regions` (fortification), `infrastructure` (obstructions), and the commander's beliefs from `knowledge`.
+The planner's inputs are then all owned elsewhere: World, the derived map, `forces`, `command`, and the commander's beliefs from `knowledge`, including what he believes of fortification and obstructions (finding 11). `regions` and `infrastructure` hold the truth the operations meet.
+
+Three further points from the review:
+- **Passage comes from lane 0.5's `marchBar` and `marchSteps`** (`movement/march.ts`). The spike's own movement passability in `route.ts` (`regionPasses`, `edgePasses`) is a stand-in and retires when the planner moves into the kernel.
+- **Open neutral ground needs the goal's permission**, as rail, river and sea do. Marching through a neutral government's region (0055, 0058) is a political act, so a route may use it only if the goal permits it, and the plan names where it does.
+- **The daily drafting cap is a pack rule**, not a constant. The cap of 3 a day above is a projection from a synthetic grid; lane 0.8 measures the worst day on the real Union graph and sets it.
 
 ## Findings outside my scope
 
