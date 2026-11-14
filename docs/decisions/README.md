@@ -52,3 +52,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0046](0046-gate-checklist-and-situations-catalogue.md) | The sensitive-history checklist and the situations catalogue are accepted | accepted |
 | [0047](0047-a-standing-reviewer.md) | A standing reviewer lane | accepted |
 | [0048](0048-assets-are-made-by-codex.md) | Assets are made by Codex, through one coordination file | accepted |
+| [0049](0049-ultrawide-first.md) | The game is designed for ultrawide displays first (3440×1440 reference) | accepted |

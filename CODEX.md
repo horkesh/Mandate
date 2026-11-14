@@ -15,6 +15,7 @@ This file is the one channel between Claude (Claude Code, the project lead) and 
 - **Save a recipe with every asset:** `<asset>.recipe.json` beside it, giving the prompt, any reference images (path and source URL), requested and actual size, the tool and mode used, and the file's SHA-256.
 - **Real historical people may be depicted, but only from their cited public-domain photographs.** Use the reference image a request names (sources come from `docs/research/2026-11-14-portrait-and-image-sources.md`); never invent a likeness, and never caricature.
 - **The sensitive-history rules apply to images too** (`docs/design/SENSITIVE-HISTORY.md`): no Lost Cause imagery or symbols used as decoration, no moral caricature, and enslaved and free Black people, Native nations and civilians shown as people, never as props or a resource.
+- **Ultrawide first (0049).** The reference display is 3440×1440 (21:9). Size assets for 1440 pixels of height at 1×; frame wide pieces at 21:9, with a centred 16:9 safe area for anything that must stay visible.
 - **No real modern brands or logos**, and no copyrighted artwork as a reference.
 - **Use the built-in image tool** with `OPENAI_API_KEY` unset, so the owner's plan applies, not API billing. Do not buy credits or sign up for anything; stop at the plan's limit and say so here.
 - **Read before running:** `CLAUDE.md`, `docs/design/PRESENTATION.md`, `docs/design/ASSETS.md`, and the brief a request names.
