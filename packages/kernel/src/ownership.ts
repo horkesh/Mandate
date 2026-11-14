@@ -117,7 +117,9 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field("a post's department (changed on a scheduled date or by a situation)", 'command', ['scheduled department changes in the scenario start', 'situations']),
   field("a person's rank and its date (seniority)", 'people', ['promotion lists', 'appoint']),
   field("today's weather per weather zone", 'weather', ['the day tick, from its named seeded stream (0029)']),
-  field("guerrilla pressure on a region's loyalty and supply", 'regions', ['operations (raids)', 'occupation', 'situations']),
+  // Guerrilla pressure (0029) is not here on purpose: the gate register
+  // (SENSITIVE-HISTORY section 3.6, accepted by 0046) places it as derived,
+  // computed with typed reasons and never stored, and no option may target it.
 ];
 
 /**

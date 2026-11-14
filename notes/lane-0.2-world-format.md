@@ -91,7 +91,7 @@ World stays World: regions, edges, installations, rail lines, depots, weather zo
 | a person's rank at the start date | `people` |
 | weather (reserved; nothing at a start) | `weather` |
 
-New `OWNED_FIELDS` entries (reserved, no code yet, so lanes 0.4 to 0.7 fill in their record and key): water edge obstructions and depot condition (`infrastructure`); a post's department (`command`); a person's rank and its date (`people`); today's weather per zone (`weather`, a new State module); guerrilla pressure on a region (`regions`, for raids, 0029). Fortification and edge condition were already there. **FOUNDATION section 10's tables need these rows and the `weather` module**; that is the lead's to record.
+New `OWNED_FIELDS` entries (reserved, no code yet, so lanes 0.4 to 0.7 fill in their record and key): water edge obstructions and depot condition (`infrastructure`); a post's department (`command`); a person's rank and its date (`people`); today's weather per zone (`weather`, a new State module). Fortification and edge condition were already there. **Guerrilla pressure is deliberately not State** (review F1): the gate register (SENSITIVE-HISTORY section 3.6, accepted by 0046) places it as derived, computed with typed reasons, never stored, and never the target of an option; raids reach State only through edge and depot condition. **FOUNDATION section 10's tables need these rows and the `weather` module**; that is the lead's to record.
 
 ## Fit test over the three drafts
 
