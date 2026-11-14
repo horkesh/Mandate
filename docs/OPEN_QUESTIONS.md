@@ -90,10 +90,8 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 
 **Tooling, small, after lane 0.1 (lead queued them)**
 - An `npm run check` check that every decision file is in the index and the index's amendment notes match each record's Status line (hard rule 7; my own repeat duty).
-- The pre-commit hook checks the working tree, not the staged tree, so intermediate commits beside unstaged edits are never checked alone: check the staged tree, or rely on CI per commit.
+- Any test that shells out to git cannot run inside the hook's snapshot (no `.git`): the hook's executable-bit test skips there and runs in place and in CI, and a future such test needs the same skip (tooling batch hand-over).
 - App-created worktrees set `core.hooksPath` to the main checkout's absolute `.githooks`, so a lane's own hook changes do not run in its worktree until merged. Low impact (CI covers); a candidate LESSONS entry; it is app-managed config.
-- From lane 0.6 (finding 3): replace the growing `IMMUTABLE_STATE_KEYS` list (68 keys) with a per-record "immutable record" declaration in `ownership.ts`, a change to the one-writer scanner.
-- The one-writer scan misses a write through a parenthesised cast, and a `delete` (reviewer, `review-lane-0.4.md`); extend it with the immutable-record change above.
 - Validator: no warning flags a record that cites only research notes, though 0050 says they are pointers, never enough alone; control rows also have no sources column (reviewer, `review-lane-0.3.md`).
 
 **Phase 1**
