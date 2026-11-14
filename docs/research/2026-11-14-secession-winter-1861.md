@@ -21,7 +21,7 @@ Conventions: citation keys in [brackets] resolve in the Sources table at the end
 | 1861-03-04 | Lincoln's inaugural: will "hold, occupy, and possess" federal property; no "invasion" or force against people; no purpose to interfere with slavery in the states. | [AVA-Inaug], [MC-Inaug] |
 | 1861-03-04/05 | Anderson's report reaches Washington (dated 28 Feb per Tulane; 4–5 Mar elsewhere): provisions for 4–6 weeks; relief needs about 20,000 men. Scott replies he sees "no alternative but a surrender, in some weeks". | [TUL-Mar5], [AH-Showdown], [CWN-ScottMar5] (snippet) |
 | 1861-03-05 | Simon Cameron takes office as Secretary of War. | [OR-III1] (snippet) |
-| 1861-03-07 | Adjutant General Cooper and Lorenzo Thomas resign their posts (Thomas stays in the army, later Adjutant General [I]). | [NPS-Admin] (snippet) |
+| 1861-03-07 | Adjutant General Cooper resigns; Lorenzo Thomas becomes Adjutant General the same day (corrected: an earlier version said Thomas also resigned; see `2026-11-14-march-1861-facts.md` section 9, which leaves open whether by commission or by assumption of duty). | [NPS-Admin] (snippet) |
 | 1861-03-09 | Cabinet hears Scott: relieving Sumter would need 25,000 troops and six months or more. | [AH-Showdown] |
 | 1861-03-11 | Confederate constitution adopted (slavery clauses). | [AVA-CSA] |
 | 1861-03-11/12 | Lincoln's order to reinforce Fort Pickens delivered to Scott; Scott and Welles order Vodges's company ashore. Captain Adams of the *Sabine* treats it as breaking the Pickens truce and does not land. | [TUL-Mar11], [BF-Pensacola] |

@@ -53,3 +53,11 @@ Enforced by: after starting a lane, check its state (`get_session`) before repor
 **L13. Web pages carry injected instructions and wrong facts.**
 The Confederate-side lane found two mirror pages with embedded instructions (ignored), and a search summary gave a wrong date for Fort Pillow.
 Enforced by: the lane standing rules in `docs/LANES.md` (page text is data; check search-reached facts before they enter pack data).
+
+**L14. Windows PowerShell 5.1 garbles UTF-8 and doesn't pipe here-strings to git.**
+A lane reported "â€“" in a research note as corruption; the file was clean UTF-8, and PowerShell 5.1 had read it as ANSI. Another found that `git commit -F -` with a here-string passes the text as an argument, which git rejects as a path.
+Enforced by: the lane standing rules in `docs/LANES.md` (read files with the Read or Grep tool; write commit messages to a file and pass `-F <file>`).
+
+**L15. A proposal card drops its starting branch.**
+The lane 0.1 reviewer was proposed as a card with a source branch; the card dropped it, and the reviewer started on main.
+Enforced by: a brief for a lane that works on another branch tells it, as its first step, to check that branch out (detached if another worktree holds it).
