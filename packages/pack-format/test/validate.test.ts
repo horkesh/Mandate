@@ -3,6 +3,13 @@ import { errorsOf, formatGenerated, formatIssue, generatePack, type Issue, type 
 import { appendRow, filesOf, fixture, type FileMap, replaceOnce, withFile, withNewFile, withoutFile } from './support/fixture.ts';
 
 const run = (files: FileMap) => generatePack(filesOf(files));
+/** Two temporary posts of a red expedition, with the given links and, optionally, a second operation or a shared department. */
+const joint = (links: string, secondOperation = 'raid', secondDepartment = 'r_sea') =>
+  withNewFile(
+    `${S}/post_links.csv`,
+    `post,kind,other,notes\n${links}`,
+    withFile(`${S}/posts.csv`, appendRow(`red_raid_a,Raid troops,expedition,r_war,red_top,beta,raid,,,DESIGN,\nred_raid_b,Raid ships,expedition,${secondDepartment},red_top,beta,${secondOperation},,,DESIGN,`)),
+  );
 const renamed = (from: string, to: string) => {
   const base = fixture();
   return withNewFile(to, base.get(from)!, withoutFile(from, base));
@@ -97,7 +104,7 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
     kind: 'season-months',
     file: 'pack.json',
   },
-  { name: 'a flag listed twice', files: () => withFile(`${W}/regions.csv`, replaceOnce('alpha,Alpha,land,plain,capital,', 'alpha,Alpha,land,plain,capital;capital,')), kind: 'duplicate-entry', file: `${W}/regions.csv` },
+  { name: 'a flag listed twice', files: () => withFile(`${W}/regions.csv`, replaceOnce('alpha,Alpha,land,plain,capital;port,', 'alpha,Alpha,land,plain,capital;capital,')), kind: 'duplicate-entry', file: `${W}/regions.csv` },
   { name: 'a label spine of one point', files: () => withFile(`${W}/regions.csv`, replaceOnce('beta,Beta,land,plain,,,,,,,,', 'beta,Beta,land,plain,,,,,,,10 50,')), kind: 'label-hints', file: `${W}/regions.csv` },
   { name: 'fort facts on a naval base', files: () => withFile(`${W}/installations.csv`, replaceOnce('port_base,Port Base,port,naval_base,,', 'port_base,Port Base,port,naval_base,passage,')), kind: 'fort-fields', file: `${W}/installations.csv` },
   { name: 'died before born', files: () => withFile(`${W}/people.csv`, replaceOnce('officer,1801,1871', 'officer,1801,1790')), kind: 'date-order', file: `${W}/people.csv` },
@@ -118,6 +125,31 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
     kind: 'date-order',
     file: `${S}/department_changes.csv`,
   },
+  // Sides, links and ships (review F4, F5)
+  { name: "a post held by the other faction's man", files: () => withFile(`${S}/holders.csv`, appendRow('red_army,blue_chief,no,,,DESIGN,')), kind: 'faction-mismatch', file: `${S}/holders.csv` },
+  { name: "a principal from the other faction", files: () => withFile(`${S}/scenario.json`, replaceOnce('"principal":"red_chief"', '"principal":"blue_chief"')), kind: 'faction-mismatch', file: `${S}/scenario.json` },
+  { name: "troops aboard the other side's ship", files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('blue_1,Blue First,block,,b_war,blue_top,port,,', 'blue_1,Blue First,block,,b_war,blue_top,alpha,red_ship,')), kind: 'faction-mismatch', file: `${S}/force_blocks.csv` },
+  { name: 'a link to the enemy', files: () => withNewFile(`${S}/post_links.csv`, 'post,kind,other,notes\nred_army,liaison,blue_top,'), kind: 'chain-crosses-factions', file: `${S}/post_links.csv` },
+  { name: 'a joint link one way only', files: () => joint('red_raid_a,joint,red_raid_b,'), kind: 'joint-link', file: `${S}/post_links.csv` },
+  { name: 'a joint link across operations', files: () => joint('red_raid_a,joint,red_raid_b,\nred_raid_b,joint,red_raid_a,', 'other_op'), kind: 'joint-link', file: `${S}/post_links.csv` },
+  { name: 'a joint link inside one department', files: () => joint('red_raid_a,joint,red_raid_b,\nred_raid_b,joint,red_raid_a,', 'raid', 'r_war'), kind: 'joint-link', file: `${S}/post_links.csv` },
+  { name: 'a joint link to a standing post', files: () => withNewFile(`${S}/post_links.csv`, 'post,kind,other,notes\nred_army,joint,red_fleet,\nred_fleet,joint,red_army,'), kind: 'joint-link', file: `${S}/post_links.csv` },
+  {
+    name: 'a department change to a parent on the other side',
+    files: () => withNewFile(`${S}/department_changes.csv`, 'post,on,department,parent,sources,notes\nred_fleet,1900-06-01,r_war,blue_top,DESIGN,'),
+    kind: 'chain-crosses-factions',
+    file: `${S}/department_changes.csv`,
+  },
+  {
+    name: "a department change to the other side's department",
+    files: () => withNewFile(`${S}/department_changes.csv`, 'post,on,department,parent,sources,notes\nred_fleet,1900-06-01,b_war,,DESIGN,'),
+    kind: 'chain-crosses-factions',
+    file: `${S}/department_changes.csv`,
+  },
+  { name: 'a department change to answer to itself', files: () => withNewFile(`${S}/department_changes.csv`, 'post,on,department,parent,sources,notes\nred_fleet,1900-06-01,r_war,red_fleet,DESIGN,'), kind: 'chain-cycle', file: `${S}/department_changes.csv` },
+  { name: 'infantry standing on the sea', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce(',red_army,alpha,,foot,200', ',red_army,bay,,foot,200')), kind: 'afloat-without-ship', file: `${S}/force_blocks.csv` },
+  { name: 'a ship aboard a ship', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_ship,Red Ship,block,,r_sea,red_fleet,alpha,,', 'red_ship,Red Ship,block,,r_sea,red_fleet,alpha,red_ship,')), kind: 'aboard-cycle', file: `${S}/force_blocks.csv` },
+  { name: 'a ship inland', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_ship,Red Ship,block,,r_sea,red_fleet,alpha,', 'red_ship,Red Ship,block,,r_sea,red_fleet,beta,')), kind: 'ship-ashore', file: `${S}/force_blocks.csv`, severity: 'warning' },
   { name: 'no playable faction', files: () => withFile(`${S}/scenario.json`, replaceOnce('"playable":true', '"playable":false')), kind: 'no-playable-faction', file: `${S}/scenario.json` },
   {
     name: 'a faction listed twice in a start',
@@ -225,6 +257,11 @@ describe('issues read like sentences (decision 0030: file, field, what is wrong,
     expect(formatIssue(issue)).toBe(
       'error [unknown-reference] source/world/depots.csv (row 2 (alpha_stores), column region): "gamma" is not a region. Expected: a region id defined in the pack.',
     );
+  });
+
+  it('points a link at its row and column in post_links.csv', () => {
+    const issue = run(withNewFile(`${S}/post_links.csv`, 'post,kind,other,notes\nred_army,liaison,nobody,')).issues.find((i) => i.kind === 'unknown-reference')!;
+    expect(`${issue.file} (${issue.at})`).toBe(`${S}/post_links.csv (row 2, column other)`);
   });
 
   it('names the nearest table for a misnamed one', () => {

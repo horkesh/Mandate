@@ -621,7 +621,10 @@ export function generatePack(files: PackFiles): GenerateResult {
     for (const r of st('postLinks').rows) {
       const target = attach(r, 'post');
       const link = { kind: r.text('kind'), post: r.id_('other') };
-      if (target) target.rec.links.push(link);
+      if (target) {
+        target.rec.links.push(link);
+        target.origin.nested.set(`links[${target.rec.links.length - 1}]`, r.origin());
+      }
     }
     for (const r of st('departmentChanges').rows) {
       const target = attach(r, 'post');
@@ -736,6 +739,8 @@ export function generatePack(files: PackFiles): GenerateResult {
         if (field === nestedKey || field.startsWith(`${nestedKey}.`) || field.startsWith(`${nestedKey}[`)) {
           origin = nestedOrigin;
           field = field.slice(nestedKey.length).replace(/^\./, '');
+          // In post_links.csv the linked post is the `other` column; `post` is the owner.
+          if (nestedKey.startsWith('links[') && field === 'post') field = 'other';
           break;
         }
       }

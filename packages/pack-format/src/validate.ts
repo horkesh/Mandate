@@ -148,6 +148,9 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   world.factions.forEach((f, i) => useKey(f.name, W('factions', i, 'name')));
   const departments = idSet('departments', world.departments);
   const deptFaction = new Map(world.departments.map((d) => [d.id as string, d.faction as string]));
+  /** Which side a department is on: its faction. Unknown departments give undefined, already reported. */
+  const allegiance = (dept: string): string | undefined => (deptFaction.has(dept) ? (deptFaction.get(dept) ?? `neutral:${dept}`) : undefined);
+  const personFaction = new Map(world.people.map((p) => [p.id as string, p.faction as string | null]));
   world.departments.forEach((d, i) => {
     refCheck(factions, 'faction', d.faction, W('departments', i, 'faction'));
     term('departmentKinds', d.kind, W('departments', i, 'kind'));
@@ -349,6 +352,8 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       refCheck(factions, 'faction', f.faction, S('factions', i, 'faction'));
       refCheck(people, 'person', f.principal, S('factions', i, 'principal'));
       refCheck(regions, 'region', f.capital, S('factions', i, 'capital'));
+      const pf = f.principal === null ? null : (personFaction.get(f.principal) ?? null);
+      if (pf !== null && pf !== f.faction) err('faction-mismatch', S('factions', i, 'principal'), `the principal "${f.principal}" serves faction "${pf}", not "${f.faction}"`, 'a principal of the same faction');
       if (startFactions.has(f.faction)) err('duplicate-entry', S('factions', i, 'faction'), `faction "${f.faction}" is listed twice`);
       startFactions.add(f.faction);
     });
@@ -401,25 +406,46 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       if (kind && kind.temporary !== (p.temporary !== null)) {
         err('temporary-post', at('temporary'), kind.temporary ? `post kind "${p.kind}" is temporary: name the operation it dissolves with` : `post kind "${p.kind}" is not temporary`, kind.temporary ? 'an operation id' : 'empty');
       }
+      const side = allegiance(p.department);
       const parent = p.parent === null ? undefined : postById.get(p.parent);
       if (parent) {
-        const pf = deptFaction.get(parent.department);
-        const f = deptFaction.get(p.department);
-        if (pf !== undefined && f !== undefined && pf !== f) err('chain-crosses-factions', at('parent'), `the post answers to "${parent.id}" of another faction`, 'a parent in the same faction (use a link for cooperation)');
+        const pf = allegiance(parent.department);
+        if (pf !== undefined && side !== undefined && pf !== side) err('chain-crosses-factions', at('parent'), `the post answers to "${parent.id}" of another side`, 'a parent on the same side (use a link for cooperation)');
       }
+      const hf = p.holder === null ? null : (personFaction.get(p.holder) ?? null);
+      if (hf !== null && side !== undefined && hf !== side) err('faction-mismatch', at('holder'), `the holder "${p.holder}" serves faction "${hf}", but the post belongs to "${side}"`, 'a holder of the same faction');
       p.links.forEach((l, j) => {
-        refCheck(posts, 'post', l.post, at(`links[${j}].post`));
-        if (l.post === p.id) err('edge-self-loop', at(`links[${j}]`), 'a post links to itself');
+        const lat = at(`links[${j}]`);
+        refCheck(posts, 'post', l.post, { ...lat, field: `${lat.field}.post` });
+        if (l.post === p.id) return err('edge-self-loop', lat, 'a post links to itself');
+        const other = postById.get(l.post);
+        if (!other) return;
+        const of = allegiance(other.department);
+        // Links are for cooperation inside a side; dealings with the enemy (a truce) are standing agreements or situations.
+        if (of !== undefined && side !== undefined && of !== side) err('chain-crosses-factions', lat, `a ${l.kind} link to "${other.id}", which is on another side`, 'links within one side; a truce with the enemy is a standing agreement');
+        if (l.kind === 'joint') {
+          const problems: string[] = [];
+          if (p.temporary === null || other.temporary === null) problems.push('both posts must be temporary');
+          else if (p.temporary.operation !== other.temporary.operation) problems.push(`the operations differ ("${p.temporary.operation}" and "${other.temporary.operation}")`);
+          if (p.department === other.department) problems.push('both posts are in the same department, so one post would do');
+          if (!other.links.some((x) => x.kind === 'joint' && x.post === p.id)) problems.push(`"${other.id}" does not link back`);
+          for (const pr of problems) err('joint-link', lat, `joint link to "${other.id}": ${pr}`, 'two temporary posts of one operation, in different departments, linked both ways');
+        }
       });
       let previous = s.startDate;
       p.departmentChanges.forEach((c, j) => {
         refCheck(departments, 'department', c.department, at(`departmentChanges[${j}].department`));
         refCheck(posts, 'post', c.parent, at(`departmentChanges[${j}].parent`));
+        const newParent = c.parent === null ? undefined : postById.get(c.parent);
+        if (c.parent === p.id) err('chain-cycle', at(`departmentChanges[${j}].parent`), 'a post cannot answer to itself');
+        else if (newParent && allegiance(newParent.department) !== undefined && allegiance(newParent.department) !== allegiance(c.department)) {
+          err('chain-crosses-factions', at(`departmentChanges[${j}].parent`), `the new parent "${newParent.id}" is on another side from the new department`, 'a parent on the same side');
+        }
         citeCheck(c.provenance, at(`departmentChanges[${j}]`), true, 'this department change');
         if (c.on <= previous) err('date-order', at(`departmentChanges[${j}].on`), `department changes must fall after the start (${s.startDate}) and each other`, `a date after ${previous}`);
         previous = c.on;
-        if (deptFaction.get(c.department) !== undefined && deptFaction.get(c.department) !== deptFaction.get(p.department)) {
-          err('chain-crosses-factions', at(`departmentChanges[${j}].department`), 'a department change cannot move a post to another faction');
+        if (allegiance(c.department) !== undefined && side !== undefined && allegiance(c.department) !== side) {
+          err('chain-crosses-factions', at(`departmentChanges[${j}].department`), 'a scheduled department change cannot move a post to another side; changing sides is for situations');
         }
       });
       const orderIds = new Set<string>();
@@ -465,16 +491,27 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       if (b.kind === 'block' && b.parent !== null) err('detachment-parent', at('parent'), 'a block has no parent; make it a detachment', 'empty, or kind detachment');
       const parent = b.parent === null ? undefined : blockById.get(b.parent);
       if (parent && parent.kind !== 'block') err('detachment-parent', at('parent'), `"${parent.id}" is itself a detachment`, 'detachments sit directly below a block');
+      const side = allegiance(b.department);
+      const naval = arms.get(b.arm)?.naval === true;
       const carrier = b.aboard === null ? undefined : blockById.get(b.aboard);
       if (carrier) {
         if (!arms.get(carrier.arm)?.naval) err('aboard-not-naval', at('aboard'), `"${carrier.id}" is not a naval block`, 'a block whose arm is naval');
         if (carrier.region !== b.region) err('aboard-elsewhere', at('region'), `the block is in "${b.region}" but its carrier "${carrier.id}" is in "${carrier.region}"`, 'the same region as its carrier');
+        if (carrier.aboard !== null) err('aboard-cycle', at('aboard'), `the carrier "${carrier.id}" is itself aboard "${carrier.aboard}"`, 'a carrier that is not aboard anything');
+        const cf = allegiance(carrier.department);
+        if (cf !== undefined && side !== undefined && cf !== side) err('faction-mismatch', at('aboard'), `the carrier "${carrier.id}" is on another side`, 'a carrier of the same side');
+      }
+      const kind = regionKind.get(b.region);
+      if ((kind === 'river' || kind === 'sea') && !naval && b.aboard === null) {
+        err('afloat-without-ship', at('aboard'), `a ${b.arm} block stands in "${b.region}", a ${kind} region, without a ship`, 'troops on water are aboard a naval block');
+      }
+      if (naval && kind === 'land' && !world.regions.find((r) => r.id === b.region)?.flags.includes('port')) {
+        warn('ship-ashore', at('region'), `a naval block is in "${b.region}", a land region with no port`, 'a water region, a key point or a port');
       }
       const post = b.post === null ? undefined : postById.get(b.post);
       if (post) {
-        const pf = deptFaction.get(post.department);
-        const f = deptFaction.get(b.department);
-        if (pf !== undefined && f !== undefined && pf !== f) err('chain-crosses-factions', at('post'), `the block's department is of faction "${f}" but its commander's post is of "${pf}"`, 'a commanding post of the same faction');
+        const pf = allegiance(post.department);
+        if (pf !== undefined && side !== undefined && pf !== side) err('chain-crosses-factions', at('post'), `the block's department is on side "${side}" but its commander's post is on "${pf}"`, 'a commanding post on the same side');
       }
       unknownsCheck('forceBlocks', b as unknown as Record<string, unknown>, b.unknowns, (f) => at(f));
     });

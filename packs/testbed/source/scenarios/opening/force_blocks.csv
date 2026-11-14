@@ -10,7 +10,7 @@ n_gull_garrison,Gull Rock garrison,block,,n_war,n_gull_rock,island_fort,,artille
 n_ship_resolute,Resolute,block,,n_navy,n_home_squadron,n_naval_base,,naval,420,1861-03-31,,40,TB-DESIGN,
 n_ship_vigil,Vigil,block,,n_navy,n_home_squadron,n_naval_base,,naval,260,1861-03-31,,40,TB-DESIGN,
 n_relief_troops,Gull Rock relief companies,block,,n_war,n_relief_army,n_naval_base,n_ship_resolute,infantry,200,1861-03-31,,60,TB-DESIGN,Troops afloat aboard Resolute: the landing force.
-n_flotilla_boats,Westwatch gunboats,block,,n_war,n_river_flotilla,n_west_front,,naval,180,1861-03-28,,20,TB-DESIGN,
+n_flotilla_boats,Westwatch gunboats,block,,n_war,n_river_flotilla,mere_upper,,naval,180,1861-03-28,,20,TB-DESIGN,On the Upper Mere.
 s_harrow_1,First Harrow Brigade,block,,s_war,s_army_salient,salient_tip,,infantry,4600,1861-03-29,,10,TB-DESIGN,
 s_harrow_2,Second Harrow Brigade,block,,s_war,s_army_salient,salient_base,,infantry,4400,1861-03-29,,10,TB-DESIGN,
 s_lowmarch_militia,Lowmarch provincial militia,block,,s_province,s_army_salient,salient_tip,,infantry,2500,1861-03-29,,8,TB-DESIGN,"Provincial troops (authority: the province) under a Southern War Office general (command): the format keeps the two apart."

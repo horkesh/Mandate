@@ -91,7 +91,7 @@ export const FIXTURE: Readonly<Record<string, string>> = {
   'source/world/departments.csv': ['id,name,faction,kind,sources,notes', 'r_war,Red Ministry,red,ministry,DESIGN,', 'r_sea,Red Admiralty,red,ministry,DESIGN,', 'b_war,Blue Ministry,blue,ministry,DESIGN,'].join('\n'),
   'source/world/regions.csv': [
     'id,name,kind,terrain,flags,off_map_role,weather_zone,ref_point,counties,label_anchor,label_spine,label_size,label_min_zoom,sources,notes',
-    'alpha,Alpha,land,plain,capital,,,10.5 50.25,,,,,,DESIGN,',
+    'alpha,Alpha,land,plain,capital;port,,,10.5 50.25,,,,,,DESIGN,',
     'beta,Beta,land,plain,,,,,,,,,,DESIGN,',
     'port,Port,key_point,plain,port,,,,,,,,,DESIGN,',
     'bay,The Bay,sea,coastal,,,,,,,,,,DESIGN,',

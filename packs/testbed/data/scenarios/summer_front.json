@@ -30,7 +30,7 @@
 {"capital":"s_capital","faction":"south","playable":false,"principal":"s_leader"}
 ],
 "forceBlocks": [
-{"aboard":null,"arm":"naval","department":"n_navy","id":"n_flotilla_boats","kind":"block","name":"force_block.n_flotilla_boats.name","nonCombatants":0,"parent":null,"post":"n_river_flotilla","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"w_valley","storesDays":20,"strength":600,"strengthDate":"1862-05-28","unknowns":[]},
+{"aboard":null,"arm":"naval","department":"n_navy","id":"n_flotilla_boats","kind":"block","name":"force_block.n_flotilla_boats.name","nonCombatants":0,"parent":null,"post":"n_river_flotilla","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"mere_upper","storesDays":20,"strength":600,"strengthDate":"1862-05-28","unknowns":[]},
 {"aboard":null,"arm":"infantry","department":"n_war","id":"n_mere_1","kind":"block","name":"force_block.n_mere_1.name","nonCombatants":0,"parent":null,"post":"n_army_mere","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"salient_base","storesDays":10,"strength":9500,"strengthDate":"1862-05-28","unknowns":[]},
 {"aboard":null,"arm":"infantry","department":"n_war","id":"n_mere_2","kind":"block","name":"force_block.n_mere_2.name","nonCombatants":0,"parent":null,"post":"n_army_mere","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"salient_base","storesDays":10,"strength":8800,"strengthDate":"1862-05-28","unknowns":[]},
 {"aboard":null,"arm":"infantry","department":"n_war","id":"n_mere_3","kind":"block","name":"force_block.n_mere_3.name","nonCombatants":0,"parent":null,"post":"n_army_mere","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"w_valley","storesDays":8,"strength":7600,"strengthDate":"1862-05-28","unknowns":[]},
