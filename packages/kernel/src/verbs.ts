@@ -29,6 +29,32 @@ export type Decision =
 
 export type Verb = Decision['verb'];
 
+/**
+ * The verb list is the interface (FOUNDATION section 11.10). Every command an
+ * app offers must map onto exactly these verbs, and every verb must be
+ * reachable; `packages/cli/test/verb-list.test.ts` checks the console against
+ * it, so no screen can order a division.
+ */
+export const VERBS = [
+  'direct',
+  'audience',
+  'appoint',
+  'dismiss',
+  'allocate',
+  'honour',
+  'promise',
+  'pressure',
+  'oversee',
+  'address',
+  'insist',
+  'accept_counter',
+] as const satisfies readonly Verb[];
+
+// Compile-time: VERBS lists every member of the Decision union, and nothing else.
+type MissingVerbs = Exclude<Verb, (typeof VERBS)[number]>;
+const everyVerbListed: [MissingVerbs] extends [never] ? true : MissingVerbs = true;
+void everyVerbListed;
+
 export interface Rejection {
   readonly decision: Decision;
   readonly reason: string;
