@@ -9,7 +9,7 @@ Status: accepted (2026-11-14). From the standing reviewer's review of lane 0.3 (
 **Starting sides (amends 0050).** A person's side at a scenario start comes from the post he holds on the start date. With no post, it comes from his home state's government, and a man from a state whose government has no faction has no side. No one gets the side he took later: Lee and Stuart hold United States commissions on 5 March 1861 and start on the Union side, and situations or events move them.
 
 **Supply sources and depots.** Every pack's scenario start names its supply sources and depots; without them every traced region is a pocket. In the Union pack:
-- the Union's sources are the coarse northern regions and the off-map boxes that stand for the North's railways and industry, labelled as design parameters;
+- the Union's sources are the coarse northern regions that stand for the North's railways and industry, labelled as design parameters (off-map boxes are never passed under 0054, so a source there would supply nothing);
 - the Confederacy's are its capital and the arsenals the seceded states had seized, labelled the same way;
 - depots are added where the drafts or research notes source them (the Washington depots, the navy yards).
 Each source and depot carries its sources or a design-parameter label.
