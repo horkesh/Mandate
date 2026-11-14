@@ -1,6 +1,6 @@
 # Assets: one brief per asset family
 
-Status: design lane output (2026-11-14), revised the same day for decisions 0048 (assets are made by Codex through `CODEX.md`) and 0049 (ultrawide first), and again for the lead's rulings of the same day (to be recorded as 0051) after the image-sources note (`docs/research/2026-11-14-portrait-and-image-sources.md`, branch `claude/research-images-8509c1`, commit 0ae2893, under review) and the Codex-terms note (`docs/research/2026-11-14-codex-output-terms.md`, branch `claude/research-codex-terms-529042`). Rulings marked **[ruling: 0051]** are the lead's, pending that record. A proposal like everything in `docs/design/`: nothing here is accepted until a decision record accepts it. It briefs every asset the desk and the staff map in `PRESENTATION.md` need, so that **a Codex request in `CODEX.md` can point to a brief and add only the request's specifics**.
+Status: design lane output (2026-11-14), revised the same day for decisions 0048 (assets are made by Codex through `CODEX.md`) and 0049 (ultrawide first), and again for decision 0051 (real people without AI; recipes; binaries), which followed the image-sources note (`docs/research/2026-11-14-portrait-and-image-sources.md`, branch `claude/research-images-8509c1`, commit 0ae2893) and the Codex-terms note (`docs/research/2026-11-14-codex-output-terms.md`, branch `claude/research-codex-terms-529042`); then for the standing reviewer's review (`review-presentation.md`). A proposal like everything in `docs/design/`: nothing here is accepted until a decision record accepts it. It briefs every asset the desk and the staff map in `PRESENTATION.md` need, so that **a Codex request in `CODEX.md` can point to a brief and add only the request's specifics**.
 
 **Marks.** **[canon: NNNN]** means an accepted record fixes it; **[proposed]** means this document introduces it. Every count is an estimate unless it cites a record.
 
@@ -13,7 +13,7 @@ Status: design lane output (2026-11-14), revised the same day for decisions 0048
 | Route | Used for | Who | Status |
 |---|---|---|---|
 | **Codex via `CODEX.md`, image tool** | raster art (textures, desk objects, ornaments, document decoration, generated officers' faces, store art) and non-speech audio where it has a tool for it | Codex, on the owner's plan; the lead writes the request; the standing reviewer checks the delivery; the lead looks, commits and replies | canon: 0048 |
-| **Ordinary image processing, by script** | portraits of real people: the public-domain photograph itself, cropped and toned; no AI generation or AI editing | Codex running a script (not its image tool), or the Phase 2 desk lane's pipeline | ruling: 0051 |
+| **Ordinary image processing, by script** | portraits of real people: the public-domain photograph itself, cropped and toned; no AI generation or AI editing | Codex running a script (not its image tool), or the Phase 2 desk lane's pipeline | canon: 0051 |
 | **Procedural** | everything the game draws from data: the map's base and dynamic layers, the icon set, labels, document layouts, chrome layout and states, portrait derivatives and toning | the Phase 2 desk lane (Sonnet, high) | canon: 0013 for the map; proposed for the rest |
 | **Sourced** | typefaces (OFL, chosen in 0035) and the public-domain photographs portraits are | a research lane; the image-sources lane for portraits; a person with a browser for the masters (LOC refuses automated requests, per the image-sources note) | canon: 0035, 0037 |
 | **Paid human commission** | only if the owner decides, case by case | the owner | canon: 0048 (rejected as the default), 0037 |
@@ -29,6 +29,7 @@ There is no art-direction lane: the briefs, the lead and the reviewer cover dire
 - shipped raster is WebP (lossy for photographic and painted art, lossless for line art), derived by the build from the delivered PNG; vector is SVG;
 - art with transparency is PNG with an alpha channel, no matte, trimmed to its content plus a 4-pixel margin;
 - colour is sRGB; no embedded profiles other than sRGB;
+- **when the image tool cannot reach a stated size** (for example 3440×1440 or a 1,500-pixel spread) [proposed, from the review's N3]: deliver the largest size it can, and reach the stated size by tiling a seamless piece, composing from parts (the desk surface from `desk-wood-tile.png` plus a vignette), or the procedural fallback; never upscale with a learned model, and never upscale a portrait at all (brief 6). R1 records which sizes the tool reaches, and the recipe records what was done;
 - every colour the game applies at runtime (ink, pencil, washes, toning) is a token in the era skin, so art is delivered **neutral** where the brief says so and the skin tones it (this keeps the high-contrast and colour-vision skins working without new files).
 
 ### 0.3 Licence and provenance
@@ -37,12 +38,12 @@ There is no art-direction lane: the briefs, the lead and the reviewer cover dire
 - **Allowed inputs** [proposed]: public domain and CC0 references, our own work, Codex outputs under 0048, OFL fonts. **Not allowed** as an input or a reference: share-alike, non-commercial or no-derivatives material, anything without a stated licence [canon for pack data: 0033; proposed extension to art], copyrighted artwork, and real modern brands or logos [canon: `CODEX.md` working rules].
 - **Every asset has a recipe** beside it (section 0.5) [canon: 0048], which is its provenance. Reference images are cited by path and source URL, and the source's licence statement is the one the research lane recorded, never one stated from memory (L10).
 - **AI disclosure**: Codex outputs are AI-generated, so the Steam page's AI-content disclosure covers them as pre-generated content [canon: 0048, 0039; the Codex-terms note section 3]. AI is still never in the store headline, the trailer or the demo's pitch [canon: 0039], and no asset is ever described as hand-made (the Codex-terms note, section 1).
-- **Real people: no AI generation or AI editing** until a lawyer answers whether OpenAI's likeness terms reach public-domain photographs of the dead [ruling: 0051; the Codex-terms note sections 1 and 6]. A portrait is the photograph itself, processed only with ordinary, non-machine-learned tools (brief 6).
-- **Provenance marks are never stripped** [ruling: 0051]: C2PA Content Credentials and SynthID stay in every Codex file. Converting a file (resize, PNG to WebP) may drop the C2PA metadata, so the recipe is the record (the Codex-terms note, section 4).
+- **Real people: no AI generation or AI editing** until a lawyer answers whether OpenAI's likeness terms reach public-domain photographs of the dead [canon: 0051; the Codex-terms note sections 1 and 6]. A portrait is the photograph itself, processed only with ordinary, non-machine-learned tools (brief 6).
+- **Provenance marks are never stripped** [canon: 0051]: C2PA Content Credentials and SynthID stay in every Codex file. Converting a file (resize, PNG to WebP) may drop the C2PA metadata, so the recipe is the record (the Codex-terms note, section 4). **What the reviewer can check** [proposed, from the review's S5]: a C2PA manifest present in the delivered PNG, checked with `c2patool`; SynthID only as the recipe records it, **not checked**, since only its owner's detector reads it.
 - **Look-alikes**: no Codex asset may resemble a recognisable existing artwork, brand or character; this is part of every brief's acceptance [proposed, from the Codex-terms note's recommendation 6].
 - **A licence note beside `art/`** says the files are AI-assisted, the owner claims whatever rights exist, and the PolyForm licence (0014) applies only to the extent those rights exist [proposed, from the Codex-terms note's recommendation 8].
 - **Credit lines** for portraits (LOC's and NARA's requested forms, the image-sources note section 4) go on a credits screen in the game's about section, never on the desk [proposed, following that note].
-- **The sensitive-history rules apply to images and sound** [canon: 0046, `CODEX.md`]: no Lost Cause imagery or symbols as decoration; no moral caricature; enslaved and free Black people, Native nations and civilians shown as people, never as props or a resource; no period racist imagery outside a cited document a gate reviewer has placed. The gate reviewer sees any delivery that depicts people other than the named sitters, or that uses flags, seals or emblems of either side [proposed].
+- **The sensitive-history rules apply to images and sound** [canon: 0046, `CODEX.md`]: no Lost Cause imagery or symbols as decoration; no moral caricature; enslaved and free Black people, Native nations and civilians shown as people, never as props or a resource; no period racist imagery outside a cited document a gate reviewer has placed. The gate reviewer sees any delivery that depicts people other than the named sitters, and **any rendering of either side's flags, seals or emblems, whether a Codex delivery or a procedural one** (the map's headquarters flags, the era skin's ornaments and seals) [proposed; the procedural half from the review's N2].
 
 ### 0.4 Where deliveries go
 
@@ -62,7 +63,7 @@ art/
 
 ### 0.5 The recipe
 
-Beside every asset, `<asset>.recipe.json`. Fields from `CODEX.md` and 0048 [canon]; fields from the lead's rulings [ruling: 0051]; the rest [proposed]:
+Beside every asset, `<asset>.recipe.json`. Fields from `CODEX.md` and 0048 [canon]; fields from 0051 [canon: 0051]; the rest [proposed]:
 
 ```json
 {
@@ -84,14 +85,14 @@ Beside every asset, `<asset>.recipe.json`. Fields from `CODEX.md` and 0048 [cano
   "variantsMade": 4, "variantChosen": 2,
   "humanEdits": ["cropped by the lead", "colour balance"],
   "postProcess": ["trimmed", "made tileable by offset-and-heal"],
-  "provenanceMarks": "C2PA and SynthID present in the delivered file",
+  "provenanceMarks": "C2PA manifest present (c2patool); SynthID as reported by the tool, not checked",
   "sha256": "…",
   "notes": "…"
 }
 ```
 
 - **Canon** (`CODEX.md`): prompt, references with their source URLs, requested and actual size, tool and mode, SHA-256.
-- **Ruling 0051:** `plan`, `client` (with version), `model`, `date`, `humanEdits` (every edit a person made: cropping, compositing, repainting, arrangement), which the Copyright Office counts as human authorship (the Codex-terms note, section 2).
+- **0051:** `plan`, `client` (with version), `model`, `date`, `humanEdits` (every edit a person made: cropping, compositing, repainting, arrangement), which the Copyright Office counts as human authorship (the Codex-terms note, section 2).
 - **Proposed:** `request`, `brief`, `apiKeyUnset`, `variantsMade`, `variantChosen`, `postProcess`, `provenanceMarks`, and a SHA-256 per reference, so a reference kept outside the repository (section 0.7) can be checked.
 - **For a portrait of a real person** (brief 6), `tool` names the script and its version, `prompt` is absent, and `postProcess` lists every operation with its parameters, so the processing can be re-run from the master.
 
@@ -101,7 +102,7 @@ A request names [proposed, extending `CODEX.md`'s "Requests point to briefs"]: t
 
 ### 0.7 Storing binaries
 
-**Only game-resolution assets go in the repository, behind Git LFS (pending the owner's check of the account's allowance); originals, rejected variants and raw scans stay outside, referenced by URL and SHA-256 in the recipe** [ruling: 0051; `docs/LANES.md` already names Git LFS as the trigger at "the first map art or image asset"].
+**Only game-resolution assets go in the repository, behind Git LFS (pending the owner's check of the account's allowance); originals, rejected variants and raw scans stay outside, referenced by URL and SHA-256 in the recipe** [canon: 0051; `docs/LANES.md` already names Git LFS as the trigger at "the first map art or image asset"].
 
 - **In the repository, through Git LFS:** the accepted files at the sizes the game ships: 1× and, where the game uses it, 2×; audio at its shipped encoding. The recipes (`*.recipe.json`) and the licence note are ordinary text in git.
 - **Outside the repository:** source masters (LOC and NARA TIFFs or JPEGs), larger-than-shipped originals (such as store key art at full size), Codex's rejected variants and working files. They live in a folder the owner backs up, named in a note; each recipe cites them by source URL (or folder path) and SHA-256.
@@ -227,17 +228,18 @@ A request names [proposed, extending `CODEX.md`'s "Requests point to briefs"]: t
 ## 6. Portraits of real people
 
 - **Purpose:** the audience's large portrait, person cards, author thumbnails (`PRESENTATION.md` sections 1.3, 1.5).
-- **Route:** **the public-domain photograph itself, processed by ordinary image processing** [ruling: 0051]. No AI generation and no AI editing of a real person's likeness until a lawyer answers (the Codex-terms note, sections 1 and 6, item 2). Codex may run the processing as a script, but **must not use its image tool** on a real person; the Phase 2 desk lane may run the same script. Sources and rights: `docs/research/2026-11-14-portrait-and-image-sources.md`, section 2 (the per-person table) and section 4 (treatment and credit).
+- **Route:** **the public-domain photograph itself, processed by ordinary image processing** [canon: 0051]. No AI generation and no AI editing of a real person's likeness until a lawyer answers (the Codex-terms note, sections 1 and 6, item 2). Codex may run the processing as a script, but **must not use its image tool** on a real person; the Phase 2 desk lane may run the same script. Sources and rights: `docs/research/2026-11-14-portrait-and-image-sources.md`, section 2 (the per-person table) and section 4 (treatment and credit).
 - **Count:** about 150–180 named people in 1861–62 and about 450 over the war [canon: 0033]. The demo's first cast is the table below (24 people).
-- **The treatment rule** [ruling: 0051 for the principle; proposed details]:
+- **The treatment rule** [canon: 0051 for the principle; proposed details]:
   - **Allowed, with non-machine-learned tools only:** crop to head and shoulders at 4:5; rotate to level; adjust levels, curves and contrast to the set's standard; convert to greyscale; remove dust and scratches by hand or with classical filters (clone, median, non-learned inpainting) where no facial feature is touched; resize down with a standard resampling filter.
   - **Not allowed:** any machine-learned upscaling, denoising, restoration, inpainting, face enhancement or style filter; changing the face, expression, age, hair, beard, pose or build; adding or altering insignia, medals or rank marks; colourising; extending the image beyond its frame; combining two photographs; caricature; inventing a likeness for anyone without a cited photograph (such a person gets "no likeness on file", brief 7).
-  - **One version only:** the processed photograph. The engraving-like finish of the earlier draft is dropped [ruling: 0051]; the era skin's runtime toning, vignette and paper border are the only styling, and they are presentation, applied equally to every portrait.
+  - **One version only:** the processed photograph. The engraving-like finish of the earlier draft is dropped [canon: 0051]; the era skin's runtime toning, vignette and paper border are the only styling, and they are presentation, applied equally to every portrait.
   - **Resolution:** never upscale. Deliver at 1152×1440 where the master allows, otherwise at the master's own resolution down to a floor of 576×720; below the floor, the reviewer decides between using it and "no likeness on file".
-- **Faces photographed after the war** [proposed; the lead asked this lane to decide]. The note marks nine people whose only located photograph is later than 1861–62 (Banks, Goldsborough, Wilkes, Julian, Andrew Johnson, Morton, Magoffin, Reagan, Lee). Age-adjustment is AI editing and is not allowed [ruling: 0051]. The rule:
+- **Photographs later than the scenario's start** [proposed; the lead asked this lane to decide; 0051 allows the later photograph, "no likeness on file" or a silhouette]. Age-adjustment is AI editing and is not allowed [canon: 0051], and insignia may not be altered, so **any photograph whose evidence (its date range, or a rank in its title the sitter did not yet hold) places it after the scenario's start date carries its date on the card** [proposed, from the review's S2]. In the demo (early March 1862) that includes Lincoln's ca. 1863 NARA picture and the "Maj. Gen." poses of Sumner (from mid-1862), Heintzelman (from May 1862) and Franklin (from September 1862), so the audience portrait never contradicts the org board without saying why. An earlier pose replaces it wherever the browser pass finds one (Lincoln has the LOC February 1861 item, pending that pass).
+- **Faces photographed after the war.** The note marks nine people whose only located photograph is later than 1861–62 (Banks, Goldsborough, Wilkes, Julian, Andrew Johnson, Morton, Magoffin, Reagan, Lee). The rule:
   - **use the later photograph, with its date on the card**, when the photograph's recorded date range begins in 1866 or earlier: Banks (c. 1860–75), Wilkes (c. 1866), Julian (1865–80), Andrew Johnson (probably 1865 or later), Magoffin (1865–80), Reagan (1865–80), Lee (1865). The person card and the audience caption print the date range as the note records it ("photograph, 1865–80"), so the player is never told it is an 1862 likeness;
   - **"no likeness on file"** when the range begins after 1866: Goldsborough (1870–80, "an old man") and Morton (1870–80, after his 1865 stroke). These faces are no longer the man the player deals with in 1862;
-  - **a silhouette is rejected**: it is an image that shows nothing, needs its own asset, and says less than the diegetic "no likeness on file" card;
+  - **a silhouette is rejected** (0051 allows it; this is the proposed pick within 0051's options): it is an image that shows nothing, needs its own asset, and says less than the diegetic "no likeness on file" card;
   - every one of the nine stays on the browser-pass list below, and a period pose replaces the later photograph whenever one is found.
   Reason: faces are what the demo sells (0039), and a dated later photograph is honest in the game's own terms (every figure has an author and a date, `PRESENTATION.md` section 1.1), while a face aged by a decade or more misleads more than it helps.
 - **Output folder:** `art/union-1861/portraits/real/<person-id>/`.
@@ -255,7 +257,7 @@ A request names [proposed, extending `CODEX.md`'s "Requests point to briefs"]: t
 
 | Person id | Use | Alternatives in the note | Rights | Note's dating | Status here |
 |---|---|---|---|---|---|
-| `lincoln_abraham` | NARA [527823](https://catalog.archives.gov/id/527823) (Brady, ca. 1863) | LOC [ppmsca.12544](https://hdl.loc.gov/loc.pnp/ppmsca.12544) (Antietam, Oct 1862); LOC [LCCN 2013648766](https://www.loc.gov/pictures/item/2013648766/) (24 Feb 1861) | NARA / item? | ca. 1863; the LOC items' series statement unread | ready for the browser pass; NARA picked because its rights statement was read |
+| `lincoln_abraham` | NARA [527823](https://catalog.archives.gov/id/527823) (Brady, ca. 1863) | LOC [ppmsca.12544](https://hdl.loc.gov/loc.pnp/ppmsca.12544) (Antietam, Oct 1862); LOC [LCCN 2013648766](https://www.loc.gov/pictures/item/2013648766/) (24 Feb 1861) | NARA / item? | ca. 1863; the LOC items' series statement unread | later photograph, dated on the card; NARA picked because its rights statement was read; switch to the LOC 1861 item if the browser pass clears it |
 | `seward_william_h` | LOC [cwpb.04948](https://hdl.loc.gov/loc.pnp/cwpb.04948) | NARA [528347](https://catalog.archives.gov/id/528347) | CWP / NARA | title "Secretary of State" | ready |
 | `chase_salmon_p` | LOC [cwpb.05620](https://hdl.loc.gov/loc.pnp/cwpb.05620) | NARA [528414](https://catalog.archives.gov/id/528414) | CWP / NARA | 1860–65 | ready |
 | `stanton_edwin_m` | LOC [cwpb.06437](https://hdl.loc.gov/loc.pnp/cwpb.06437) | NARA [528682](https://catalog.archives.gov/id/528682); avoid BH cwpbh.04318 (1865–80) | CWP / NARA | title "Secretary of War" | ready |
@@ -268,11 +270,11 @@ A request names [proposed, extending `CODEX.md`'s "Requests point to briefs"]: t
 | `halleck_henry_w` | LOC [cwpb.06956](https://hdl.loc.gov/loc.pnp/cwpb.06956) | NARA [526731](https://catalog.archives.gov/id/526731) | CWP / NARA | "Maj. Gen." | ready |
 | `grant_ulysses_s` | LOC [cwpb.06941](https://hdl.loc.gov/loc.pnp/cwpb.06941) | avoid NARA 558720 ("Lt. Gen.", 1864 on) and BH cwpbh.05120 (1865–80) | CWP | "Maj. Gen." (from Feb 1862) | ready |
 | C. F. Smith | — | — | — | — | **not in the note** (outside its 60 and its 45 by-products); "no likeness on file" until searched; person id from the roster |
-| `mcdowell_irvin` | LOC [cwpb.05377](https://hdl.loc.gov/loc.pnp/cwpb.05377) | BH [cwpbh.01150](https://hdl.loc.gov/loc.pnp/cwpbh.01150); NARA [527993](https://catalog.archives.gov/id/527993) | CWP / BH / NARA | "Maj. Gen." (from Mar 1862) | ready |
-| `sumner_edwin_v` | LOC [cwpb.04626](https://hdl.loc.gov/loc.pnp/cwpb.04626) | — | CWP | "Maj. Gen." (from mid-1862) | ready |
-| `heintzelman_samuel_p` | LOC [cwpb.04857](https://hdl.loc.gov/loc.pnp/cwpb.04857) | — | CWP | "Maj. Gen." (from May 1862) | ready |
+| `mcdowell_irvin` | LOC [cwpb.05377](https://hdl.loc.gov/loc.pnp/cwpb.05377) | BH [cwpbh.01150](https://hdl.loc.gov/loc.pnp/cwpbh.01150); NARA [527993](https://catalog.archives.gov/id/527993) | CWP / BH / NARA | "Maj. Gen." (from Mar 1862) | ready; the browser pass checks whether the pose is after 8 March, and if so it is dated on the card |
+| `sumner_edwin_v` | LOC [cwpb.04626](https://hdl.loc.gov/loc.pnp/cwpb.04626) | — | CWP | "Maj. Gen." (from mid-1862) | later photograph, dated on the card (no earlier pose in the note) |
+| `heintzelman_samuel_p` | LOC [cwpb.04857](https://hdl.loc.gov/loc.pnp/cwpb.04857) | — | CWP | "Maj. Gen." (from May 1862) | later photograph, dated on the card (no earlier pose in the note) |
 | `keyes_erasmus_d` | LOC [cwpb.04476](https://hdl.loc.gov/loc.pnp/cwpb.04476) ([item page](https://www.loc.gov/pictures/item/cwp2003001398/)) | BH [cwpbh.03189](https://hdl.loc.gov/loc.pnp/cwpbh.03189) | CWP / BH | good date fit | ready |
-| `franklin_william_b` | LOC [cwpb.06688](https://hdl.loc.gov/loc.pnp/cwpb.06688) | — | CWP | "Maj. Gen." (from Sept 1862) | ready |
+| `franklin_william_b` | LOC [cwpb.06688](https://hdl.loc.gov/loc.pnp/cwpb.06688) | — | CWP | "Maj. Gen." (from Sept 1862) | later photograph, dated on the card (no earlier pose in the note) |
 | `fremont_john_c` | BH [cwpbh.00792](https://hdl.loc.gov/loc.pnp/cwpbh.00792) | — | BH | 1855–65 | ready |
 | `banks_nathaniel_p` | BH [cwpbh.00064](https://hdl.loc.gov/loc.pnp/cwpbh.00064) | BH [cwpbh.05011](https://hdl.loc.gov/loc.pnp/cwpbh.05011) (1865–80) | BH | c. 1860–75; no 1861–62 pose confirmed | later photograph, dated on the card |
 | `burnside_ambrose_e` | LOC [cwpb.05368](https://hdl.loc.gov/loc.pnp/cwpb.05368) | NARA [527863](https://catalog.archives.gov/id/527863); avoid BH cwpbh.04980 (1865–80) | CWP / NARA | — | ready |
@@ -280,12 +282,12 @@ A request names [proposed, extending `CODEX.md`'s "Requests point to briefs"]: t
 | `goldsborough_louis_m` | — | BH [cwpbh.03629](https://hdl.loc.gov/loc.pnp/cwpbh.03629) (1870–80) | BH | 1870–80 | "no likeness on file" (post-war rule); keep searching |
 | `wilkes_charles` | LOC [cwpb.04830](https://hdl.loc.gov/loc.pnp/cwpb.04830) | — | CWP | c. 1866 | later photograph, dated on the card |
 
-Tally: 17 ready for the browser pass, 2 later photographs dated on the card, 5 "no likeness on file" for now (Blair, Caleb Smith, C. F. Smith, Wool, Goldsborough). Person ids are the note's roster ids; C. F. Smith's comes from the roster when he is added.
+Tally: 13 ready for the browser pass (McDowell's date to check), 6 later photographs dated on the card (Lincoln, Sumner, Heintzelman, Franklin, Banks, Wilkes), 5 "no likeness on file" for now (Blair, Caleb Smith, C. F. Smith, Wool, Goldsborough). Person ids are the note's roster ids; C. F. Smith's comes from the roster when he is added.
 
-- **Licence:** public domain or "no known restrictions" per the collection statements the note read (BH, CWP, NARA); each item confirmed at item level by the browser pass; the processed file is a derivative of a public-domain photograph (the note, section 4). Credit lines on the credits screen.
+- **Licence:** the collection statements the note read: Brady-Handy "considered to be in the public domain" (LOC); Civil War Photographs "no known restrictions" (LOC), which LOC says does not itself mean public domain, so for `cwpb` items public domain is the note's reading by age, not LOC's statement; NARA's select list "public domain" with no use restrictions. Each item is confirmed at item level by the browser pass; the processed file is a derivative of the photograph, under the note's section 4 [proposed wording, from the review's N5]. Credit lines on the credits screen.
 - **Priority:** demo-critical for the cast above; full game for the rest.
 - **Dependencies:** the image-sources note (under review; cite it once merged); the browser pass; the processing script; the pack's person ids (lane 0.3); Git LFS (section 0.7).
-- **Acceptance (reviewer):** the recipe cites the item URL, the item's Rights Advisory and reproduction number as recorded by the browser pass, the master's SHA-256, the script and its parameters, and no image tool; side by side at the same scale, the processed portrait and the master differ only by crop, rotation, tone and dust removal (the reviewer checks eyes, nose, mouth, ears, hairline, beard line and insignia); no colour; no upscaling (the delivered size is at most the master's); a post-war photograph carries its date range in the person data for the card; the portrait reads at 96×120; the sitter's identity matches the note's row and the pack person id.
+- **Acceptance (reviewer):** the recipe cites the item URL, the item's Rights Advisory and reproduction number as recorded by the browser pass, the master's SHA-256, the script and its parameters, and no image tool; side by side at the same scale, the processed portrait and the master differ only by crop, rotation, tone and dust removal (the reviewer checks eyes, nose, mouth, ears, hairline, beard line and insignia); no colour; no upscaling (the delivered size is at most the master's); any photograph later than the scenario's start carries its date range in the person data for the card; the portrait reads at 96×120; the sitter's identity matches the note's row and the pack person id.
 - **Who:** the image-sources lane (references); a person with a browser (item checks and masters; the owner or a lane with a human); Codex by script or the Phase 2 desk lane (processing); the reviewer.
 
 ## 7. Portraits for generated officers and the "hidden gems"
@@ -294,12 +296,12 @@ Tally: 17 ready for the browser pass, 2 later photographs dated on the card, 5 "
 - **Count:** open-ended; officers are generated only when relevant [canon: 0033]. A starting library of about 40 faces covers the demo and early play [proposed].
 - **Route** [proposed]: two layers.
   1. **"No likeness on file"** (procedural): a plain period card with the officer's name and home in a clerk's hand. Used for any officer without an assigned face, and for real people with no usable photograph (brief 6).
-  2. **A Codex library of invented faces**, made with Codex's image tool from text prompts only (rank, age range, hair and beard, build), **with no photograph of any real person as a reference** [ruling: 0051: fictional people may use the image tool]. They match the real set's look (a greyscale head-and-shoulders period portrait at 4:5) so they do not stand out on the board, and the credits screen and the recipes record that they are invented. A seeded rule assigns a face from the library when an officer becomes notable (a hidden gem rises); the assignment is presentation, never state.
+  2. **A Codex library of invented faces**, made with Codex's image tool, **used interactively, never scripted** [canon: 0051's tools rule], from text prompts only (rank, age range, hair and beard, build), **with no photograph of any real person as a reference** [canon: 0051: fictional people may use the image tool]. They match the real set's look (a greyscale head-and-shoulders period portrait at 4:5) so they do not stand out on the board, and the credits screen and the recipes record that they are invented. A seeded rule assigns a face from the library when an officer becomes notable (a hidden gem rises); the assignment is presentation, never state.
 - **Output folder:** `art/union-1861/portraits/generated/`, files `face-001.png` … at brief 6's sizes; card and thumbnail derived by the build.
 - **Licence:** Codex output under 0048, disclosed as AI-generated.
 - **Priority:** layer 1 demo-critical (trivial); layer 2 demo-useful (a battle report may name a junior officer), full set full game.
 - **Dependencies:** the officer generator (Phase 1); the real-portrait set (for the look-alike check below).
-- **Acceptance (reviewer):** the recipe shows no photographic reference and carries the 0051 fields; **look-alike check**: no face resembles any portrait in the real set (the reviewer compares each new face against a contact sheet of the real set) or any recognisable existing artwork or person; no duplicates within the library; uniforms and ranks plausible for the period per the research notes; C2PA and SynthID present; each reads at 96×120.
+- **Acceptance (reviewer):** the recipe shows no photographic reference and carries the 0051 fields; **look-alike check**: no face resembles any portrait in the real set (the reviewer compares each new face against a contact sheet of the real set) or any recognisable existing artwork or person; no duplicates within the library; uniforms and ranks plausible for the period per the research notes; a C2PA manifest present (checked with `c2patool`; SynthID as recorded, not checked); each reads at 96×120.
 
 ## 8. Sound
 
@@ -307,7 +309,7 @@ Tally: 17 ready for the browser pass, 2 later photographs dated on the card, 5 "
 - **Route:** **Codex** [canon: 0048, non-speech audio], but the Codex-terms note found **no documented sound-effects model in Codex**: audio produced by code Codex writes is code output (which may carry third-party licences), and audio from an OpenAI audio model carries a SynthID watermark. So each sound's recipe names the tool that made it, ChatGPT or Codex voice output is never used (its terms say "non-commercial use only"), and the owner's own recordings are the fallback for any effect Codex cannot make convincingly [proposed, from that note's recommendation 5].
 - **Count:** about 20 effects, two or three variants each [proposed].
 - **Output folder:** `art/app/sound/`.
-- **Files:** `<name>-v<n>.wav`, 48 kHz, 24-bit, mono unless stated; effects under 2 seconds; `room-tone.wav` a seamless loop of 60 seconds, stereo. The build encodes Ogg Vorbis or Opus.
+- **Files:** `<name>-v<n>.wav`, 48 kHz, 24-bit, mono unless stated; effects under 2 seconds; the build encodes Ogg Vorbis or Opus. **The eight core effects** [proposed, from the review's N3], two variants each: `paper-draw-v1.wav`, `paper-draw-v2.wav`; `stamp-v1.wav`, `stamp-v2.wav`; `pen-sign-v1.wav`, `pen-sign-v2.wav`; `sounder-wire-v1.wav`, `sounder-wire-v2.wav` (a telegraph sounder's clicks for an incoming wire); `calendar-page-v1.wav`, `calendar-page-v2.wav`; `door-audience-v1.wav`, `door-audience-v2.wav` (door and steps); `clock-day-v1.wav`, `clock-day-v2.wav` (one tick or chime per day as the days run); and `room-tone.wav`, a seamless 60-second stereo loop. The rest follow the same pattern: `paper-down`, `ledger-open`, `drawer`, `pin`, `chair`, `paper-clip`.
 - **Style references:** the real objects (a telegraph sounder, period paper, a wooden desk); no copyrighted recordings as references [canon: `CODEX.md`].
 - **Licence:** Codex output or own recording.
 - **Priority:** demo-critical for 8 core effects (paper, stamp, pen, sounder, calendar, door, clock, room tone).
@@ -331,7 +333,7 @@ Tally: 17 ready for the browser pass, 2 later photographs dated on the card, 5 "
 - **Route:** **screenshots and trailer captured from the build** (Playwright at 3440×1440 and 1920×1080 [canon: 0035, 0049]); **capsules and key art by Codex**, composed from the game's own assets and portraits [canon: 0048].
 - **Positioning** [canon: 0039]: the desk, the letters and the faces before the arrows; no mention of AI; "You can't move a division. One of your generals may run against you."
 - **Output folder:** `art/union-1861/store/`.
-- **Files:** the capsule set Steam requires, at the sizes read from Steamworks' documentation when the page is built (not from memory); `key-art.png` at 3440×1440 in the repository, **21:9 with the centred 16:9 safe area** holding the title and the faces [canon: 0049]; a larger original stays outside the repository (section 0.7). Faces of real people in store art are their processed photographs from brief 6, composited by ordinary means, never redrawn by the image tool [ruling: 0051].
+- **Files:** the capsule set Steam requires, at the sizes read from Steamworks' documentation when the page is built (not from memory); `key-art.png` at 3440×1440 in the repository, **21:9 with the centred 16:9 safe area** holding the title and the faces [canon: 0049]; a larger original stays outside the repository (section 0.7). Faces of real people in store art are their processed photographs from brief 6, composited by ordinary means, never redrawn by the image tool [canon: 0051].
 - **Licence:** Codex output, the game's assets, cleared portraits; the AI disclosure covers it [canon: 0048].
 - **Priority:** in-house screenshots and a first capsule are demo-critical (the page goes up with or before the demo); key art can follow.
 - **Dependencies:** a playable desk (`PRESENTATION.md` section 6, steps 3–5); portraits (brief 6); 0039's disclosure question settled first.
@@ -365,8 +367,8 @@ Each is a `CODEX.md` request pointing to its brief; the lead sends the next only
 2. **R2, the remaining textures.** Brief 2: every other file in its table, into `art/app/textures/`.
 3. **R3, desk chrome.** Brief 3: the whole table, into `art/app/chrome/`.
 4. **R4, map ornaments.** Brief 1: cartouche frame, compass rose, scale-bar frame and corner flourish, into `art/union-1861/ornaments/`, with the public-domain atlas references the research lane names.
-5. **R5, portrait processing pilot.** Brief 6: McClellan (NARA 528744) and Stanton (LOC cwpb.06437), one in uniform and one civilian, into `art/_pilot/`, **by script, with no image tool** [ruling: 0051]. Settles the crop, tone standard, script and recipe. Blocked until the browser pass has recorded both items and saved their masters outside the repository.
-6. **R6, the demo cast.** Brief 6: the remaining 15 "ready" and 2 "later photograph" sitters of the cast table, in batches of about eight, into `art/union-1861/portraits/real/<person-id>/`, after their browser pass.
+5. **R5, portrait processing pilot.** Brief 6: McClellan (NARA 528744) and Stanton (LOC cwpb.06437), one in uniform and one civilian, into `art/_pilot/`, **by script, with no image tool** [canon: 0051]. Settles the crop, tone standard, script and recipe. Blocked until the browser pass has recorded both items and saved their masters outside the repository.
+6. **R6, the demo cast.** Brief 6: the remaining 11 "ready" and 6 "later photograph" sitters of the cast table, in batches of about eight, into `art/union-1861/portraits/real/<person-id>/`, after their browser pass.
 7. **R7, core sounds.** Brief 8: the 8 core effects with two variants each, into `art/app/sound/`.
 8. **R8, document decoration.** Brief 4: the demo genres' decoration, into `art/union-1861/documents/`. Blocked until the period-conventions research names its scans.
 9. **R9, generated officers.** Brief 7: the first 12 faces, into `art/union-1861/portraits/generated/`, after R6 so the resemblance check has the real set to compare against.

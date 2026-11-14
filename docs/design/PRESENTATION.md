@@ -1,6 +1,6 @@
 # Presentation: the desk, the staff map and how a week plays on screen
 
-Status: design lane output (2026-11-14), a proposal like everything in `docs/design/`. Nothing here is accepted until a decision record accepts it. It turns the parts the canon already fixes (the inbox, the audience, the org chart, the ledger and the staff map: 0013, FOUNDATION section 12's Phase 2; positioning in 0039) into screens, states, an interaction model and a storyboard. Its asset briefs are in `ASSETS.md`.
+Status: design lane output (2026-11-14), revised for 0049 and 0051 and for the standing reviewer's review (`review-presentation.md`); a proposal like everything in `docs/design/`. Nothing here is accepted until a decision record accepts it. It turns the parts the canon already fixes (the inbox, the audience, the org chart, the ledger and the staff map: 0013, FOUNDATION section 12's Phase 2; positioning in 0039) into screens, states, an interaction model and a storyboard. Its asset briefs are in `ASSETS.md`.
 
 **How elements are marked.** **[canon: NNNN]** means an accepted record already fixes the element and this document only lays it out. **[proposed]** means this document introduces it. **[game]** in the storyboard marks what a seat or the kernel would compute. Facts about the world come only from the research notes and the catalogue (`SITUATIONS-1861-62.md`, cited by situation number), never from this lane's memory (L10). Where a period convention is needed and no note sources it, it is marked **needs-source** and listed for a research lane in section 9.
 
@@ -137,7 +137,7 @@ At 16:9 [proposed]: the desk-edge margins drop and the meter moves above the ans
 - **Shows:** his stated reasons as typed terms rendered from the string table, each with its source where he cites one; the counters the kernel allows; his answer to each counter as his declared rung [canon: 0007, FOUNDATION section 6].
 - **Hides:** his actual rung, his true reasons, his hidden stats [canon: 0020, 0022].
 - **Ends:** with a short line in his voice and a paper in the file recording what was said [proposed]. There is no "success" banner; the result is whatever he later reports [proposed, from pillar 4].
-- **Portrait:** for a real person, his cited public-domain photograph itself, cropped and toned by ordinary processing, never an invented or AI-edited likeness [canon: 0048; ruling pending as 0051]; a photograph taken after the war carries its date in the caption; for a generated officer, an invented face from the generated library; otherwise a card saying no likeness is on file (`ASSETS.md` briefs 6 and 7) [proposed].
+- **Portrait:** for a real person, his cited public-domain photograph itself, cropped and toned by ordinary processing, never an invented or AI-edited likeness [canon: 0048, 0051]; a photograph taken after the scenario's start date carries its date in the caption; for a generated officer, an invented face from the generated library; otherwise a card saying no likeness is on file (`ASSETS.md` briefs 6 and 7) [proposed].
 
 ### 1.4 Plan review on the map
 
@@ -234,7 +234,7 @@ A bound book that opens forward over the map as a two-page spread about 1,500 px
 - **Never a stop:** lists, promotions, routine returns [canon: 0040]; a plan whose goal says "approve as drafted unless he objects", unless he objects or departs far from the goal [canon: 0040].
 - **Stop settings** live on the setup screen and in options: which events end a turn, within the pack's maximum turn length [canon: 0027].
 - **Before the days run** [proposed]: if a non-live situation has no answer, the button asks once: "These will take their course: …" and lists them. A live situation is not ignored by waiting; it stays on the docket until its clock runs out, then its `inaction` outcome applies [canon: inaction, 0040; the end-of-turn rule is proposed and needs lane 0.7, section 10].
-- **The out-tray** [proposed]: signed orders wait there until the days run and can be recalled free; once the days run, they are gone. Audiences and Consult are not orders in transit and happen when held.
+- **The out-tray** [proposed; confirmed workable by lane 0.6's seat API, where a command enters the log only when the shell hands the day's entries to the tick]: the shell holds signed orders there until the days run, and they can be recalled free; once the days run, they are gone. Audiences and Consult are not orders in transit and happen when held.
 - **Away on a visit** [canon: 0025, 0041; proposed state]: the desk shows a field-desk banner ("At Fort Monroe since 6 May; business goes to Mr …"), papers that would have reached Washington go to the named delegate or, with none, take their course, and the visit's first-hand reports arrive as observers' letters from the army's officers [canon: 0026: better than dispatches, not the truth].
 
 ### 1.9 The night of the battle
@@ -327,13 +327,13 @@ A verb may name a place only as part of an order to a person [canon: 0016]. The 
 - **The map has no verbs of its own.** Clicking a region outside an order opens a "what we know" note: its claimed control with sources, the last reports about it, and an "Ask about this ▸" button (Inquire names a place only as a subject) [canon: Inquire, 0040].
 - **A goal is a form on a person.** It opens from his card (board, map flag or paper). The objective field accepts a region, a force or a line picked on the map while the form is open; posture, risk, deadline, permissions (rail, river, sea), the divisions committed (as a force size), "approve as drafted unless he objects" and "prepare, await my word" are fields on the form [canon: 0016, 0040; proposed form].
 - **Signing** an order puts it in the out-tray and spends its attention [proposed].
-- **Orders down a chain** show their route on the form ("through the Secretary of the Navy and the flag officer"), with "send direct to …" as an alternative that warns of the bypassed man's grievance; a special messenger or fast ship is a route with a price [canon: 0040; proposed form]. Expected arrival is shown only as an estimate the kernel's view provides; the shell computes none [canon: 0026; section 10].
+- **Orders down a chain** show their route on the form ("through the Secretary of the Navy and the flag officer"), with "send direct to …" as an alternative that warns of the bypassed man's grievance; a special messenger or fast ship is a route with a price [canon: 0040; proposed form]. Before signing, the form shows each route's **typical days** (without weather) and **price** from the principal's menu (`RouteOption.typicalDays`, `price`) [canon: lane 0.6's seat API]; after signing, nothing tracks the message, because the view has no transit fields; the shell computes no arrival [canon: 0026].
 
 ### 2.3 Live clocks and expiring options
 
 - **A clock is a range, not a countdown** [proposed, from FIRST-MONTH stops 2–3]: drawn on the docket card as a short calendar strip with each source's estimate as a signed tick ("Anderson: 28 Mar–11 Apr", "Scott: 7–29 Apr"), the overlap shaded. As reports arrive the range moves. When its threshold is crossed, the turn stops [canon: `resurfaceOn`, 0040].
 - **Options on a live card** are listed in their pack display order [canon: gate C2, 0041], each in its advisers' own words with the advisers named [canon: 0041, gate C1].
-- **An option that may lapse** carries a small mark and, where an adviser has said when, his estimate ("Totten: not possible after about 1 April"). The true expiry condition is never shown [proposed; `expiresWhen` is canon in 0040]. When it lapses, the turn stops and the option is struck through with the reason as a paper [canon: 0040].
+- **An option that may lapse** carries a small mark and, where an adviser has said when, his estimate (for example a garrison commander's "about a week longer", as Anderson wrote of his rations on 1 April 1861 in the secession-winter note). The true expiry condition is never shown [proposed; `expiresWhen` is canon in 0040]. When it lapses, the turn stops and the option is struck through with the reason as a paper [canon: 0040].
 - **An option that appears** is written in a different hand at the bottom of the card, dated [proposed].
 - **The staff line** sits under the options: "Staff: Mr Stanton (Secretary of War) advises …", with his reasons. If the post is vacant or its holder is the subject, the next post in the ordered list writes it; if none can, the card says "No staff line: the post is vacant", which is information [canon: authored recommendation, 0040; ordered list, 0046; wording proposed].
 - **The historical default is never on screen** and the presenter cannot read it [canon: 0040, gate B9].
@@ -390,14 +390,14 @@ The map is the staff's map on the president's desk, drawn only from what the fac
 | Regions | irregular, roughened borders from seeded noise | canon (0019, 0035, 0043) |
 | Claimed control | washes in the faction's and the enemy's colours, strength of wash from claimed permille, hatched where contested | canon (0013 derived from claimed control); wash rules proposed |
 | Fronts | a heavy line with teeth toward the enemy, segment by segment: ink where confirmed by more than one source, pencil where it rests on one report | canon (0013 items 1–2) |
-| Pockets | a friendly area ringed in pencil with "no supply path (staff)" | canon (derived, 0019); style proposed |
-| Supply | "the line to X is open / cut at Y" drawn on the rail and road lines, with a cut mark and its source | canon (FOUNDATION section 4); style proposed |
-| Own forces | a headquarters flag per post, labelled with the holder's name, the last reported strength and its date and author; a corps under its army's flag | canon (posts, 0016); flags proposed |
-| Enemy | pencilled estimates: a shaded area or a figure range, each signed by its author and dated ("Pinkerton: 80–150,000") | canon (pencil for single reports, 0013); style proposed |
+| Pockets | the staff's own reading: a friendly area ringed in pencil with "no supply path (staff)", derived from **claimed** control and from reports with an author, never from the kernel's pocket index over true control | canon (the staff map draws from claims, 0013 item 2); derivation from claims and style proposed |
+| Supply | "the line to X is open / cut at Y" as the staff reads it from claimed control and from signed reports, drawn on the rail and road lines with a cut mark and its source; never the kernel's true supply path | canon (0013 item 2; FOUNDATION section 4 for what supply is); derivation from claims and style proposed |
+| Own forces | a headquarters flag per post at its **last reported position**, labelled with the holder's name, the last reported strength, and the report's date and author; it fades like any pencil as the report ages; a corps under its army's flag. The true position exists only in the developer truth layer | canon (posts, 0016; truth layer, 0013 item 5); flags proposed |
+| Enemy | pencilled estimates: a shaded area or a figure range, each signed by its author and dated ("Pinkerton: 100,000–120,000", his Yorktown figure in the information-flows note) | canon (pencil for single reports, 0013); style proposed |
 | Plans | broad hatched arrows per axis; a draft outlined, an approved plan filled, an operation under way solid | canon (0013 item 2, 0016); draft/approved distinction proposed |
 | The president's marks | blue pencil: edits, notes, orders | canon (0013 item 1) |
 | Corrections | red strike-through over the original, initialled by the correcting source (an observer, an inspector) | canon (0013 item 1) |
-| Messages in transit | a small slip on the route with "sent 8 Mar" and an estimate only where the view gives one | canon (kernel latency, 0026); style proposed |
+| Orders sent | **not drawn on the map.** The president's view carries no transit fields (lane 0.6's boundary test), so he cannot know where a courier is. Sent orders appear in the out-tray's record and the daybook ("sent 8 Mar by courier; typically 3 days"), from the shell's own record and the menu's `typicalDays`, and an acknowledgement appears when its report arrives | canon (kernel latency, 0026; the seat API's view); display proposed |
 | Notes | pencilled marginal notes with author and date beside each single-source claim | canon (0013 item 1) |
 | Ornaments | cartouche, compass, scale bar, seals per pack | canon (0013 item 3) |
 
@@ -408,7 +408,9 @@ The map is the staff's map on the president's desk, drawn only from what the fac
 - a figure without an author and a date [proposed, from pillar 4];
 - a transfer as an arrow (transfers live on the org board) [proposed];
 - a hex, a grid or a zone of control [proposed, from 0019];
-- a compliance prediction or an edit-distance score [proposed];
+- a compliance prediction or an edit-distance score [proposed; the seat API's principal menu carries no such field];
+- a pocket, a cut or open line, or a position derived from truth rather than from claims and signed reports [canon: 0013];
+- a message's position on its route [canon: the seat API's view has no transit fields];
 - a derived term the gate protects, as a layer or heat map [canon: gate E4].
 
 ### 3.3 Uncertainty and staleness
@@ -492,7 +494,7 @@ All of it is presentation and so cannot change a seeded run's state hash [canon:
 
 Playable at every phase [canon: 0030 item 4]. Phase 1 ends console-playable: plan review, arrow edits, audiences and dispatches [canon: 0030, FOUNDATION section 12]. Phase 2 is the desk and the staff map, and yields the public demo [canon: FOUNDATION section 12, 0037, 0039].
 
-**One presenter, two renderers** [proposed]. A presenter module sits between `viewFor` and every screen. It builds the desk model (tray, docket, board, ledger, map layers, prices) from the player's view and the string tables, and turns the player's acts into the kernel's commands. The console and the React desk both render the same desk model. The presenter cannot import the truth layer or read the historical default, which the planned architecture test enforces [canon: FOUNDATION section 8, gate B9]. Today's M2 console already works this way in small (`packages/cli/src/console.ts` takes one command line and returns lines, reading only the player's view).
+**One presenter, two renderers** [proposed]. A presenter module sits between `viewFor` and every screen. It builds the desk model (tray, docket, board, ledger, map layers, prices) from the player's view and the string tables, and turns the player's acts into the kernel's commands. The console and the React desk both render the same desk model. The presenter imports only `@mandate/kernel/seat-api` and declares `"playerFacing": true`, so lane 0.6's boundary test (`boundary.test.ts`) keeps the truth layer and the historical default out of its reach [canon: FOUNDATION section 8, gate B9; the test is lane 0.6's, merged]. Today's M2 console already works this way in small (`packages/cli/src/console.ts` takes one command line and returns lines, reading only the player's view).
 
 | Step | Phase | What is playable | Map | Status |
 |---|---|---|---|---|
@@ -531,7 +533,7 @@ The president **asks for the exact numbers** (Inquire, free) and **asks Halleck 
 
 **Stop 4. Saturday 15 March (three days): the count comes back.** McClellan's count of what stays behind arrives, shaded by him [game]; Halleck's answer arrives too [game]. The president decides S36: **keep one corps to cover the capital**. On the org board he opens a transfer from McClellan's card to a new department's post and names a corps; on the map he strikes the corps' place in the plan's axis in blue pencil and chooses "Order these changes" [catalogue S36: a transfer and an edit]. Under 0040 the decision includes its orders; whether it overrules the staff line depends on Stanton's seat [game]: 0 or 1 attention. McClellan's objection returns as a paper the same day [game], and the president grants him an **audience** (1). Across the desk: McClellan's case as numbered reasons, his enemy estimate signed by its source; the president answers "the order stands" [game]. The turn ends.
 
-*On screen at the end of the week:* the map with the Army of the Potomac's sea arrow approved and filled, one corps flag left near Washington under a new department, a red-initialled correction where an observer's letter contradicts a flag's strength [game]; the daybook showing the week; 4 or 5 of 6 attention spent across the week, more than the first month's slack weeks, as the walkthrough said the war would make it bite [FIRST-MONTH, pacing verdict 3].
+*On screen at the end of the week:* the map with the Army of the Potomac's sea arrow approved and filled, one corps flag left near Washington under a new department, a red-initialled correction where an observer's letter contradicts a flag's strength [game]; the daybook showing the week. Attention: 1 or 2 before Tuesday's refill, then 1 or 2 of the refilled 6, so 2–4 across 8–15 March [game]. That is no tighter than the first month's slack weeks, so this week does not yet show attention biting; the walkthrough expected the war to make it bite (FIRST-MONTH, pacing verdict 3), and that is for Phase 1's tuning to show.
 
 **Gate exposure in this week.** S33 (compensated emancipation) sits inside these dates and is gate-flagged with placement pending [catalogue S33]. If the gate has placed it when the demo ships, it appears as a docket card; if not, the demo may not omit the topic's derived and text facets, so the briefing and the press carry them [canon: the ship rule and G5, 0046]. This storyboard does not depend on either.
 
@@ -559,7 +561,7 @@ A research lane (Sonnet, high) sources from public-domain scans, citing each:
 
 ## 10. Questions for other lanes
 
-- **Lane 0.6 (seats and messages):** can signed orders wait in the shell until the days run and be recalled (section 1.8)? Does the view expose an estimated arrival for a message in transit, or none (section 2.2)?
+- **Lane 0.6 (seats and messages): answered** by its merged seat API (the standing reviewer's review): an out-tray held by the shell until the days run fits, because a command enters the log only when the shell hands it to the tick (section 1.8); the view carries no transit fields, so the order form shows the menu's `typicalDays` and `price` before signing and nothing after (section 2.2); the principal's menu carries no compliance or edit-distance field (section 1.4).
 - **Lane 0.7 (situations):** what happens at end of turn to a non-live situation with no answer (section 1.8)? The catalogue orders options alphabetically by id; the gate's C2 calls for a display key "in the order advisers raised them". One rule is needed.
-- **Lane 0.9 (planner) and 0.6:** the interface shows no edit-distance or compliance preview (section 1.4). If a planner score is needed for the attention price of an edit, it must not reveal the commander's hidden stats.
+- **Lane 0.9 (planner):** the interface shows no edit-distance or compliance preview (section 1.4), and the seat API gives the principal none. If a planner score is ever needed for the attention price of an edit, it must not reveal the commander's hidden stats.
 - **The Phase 2 desk lane:** separate the enemy and correction colours (section 5); self-host every face (0035); add a handwriting face, which 0035's list lacks (`ASSETS.md`).
