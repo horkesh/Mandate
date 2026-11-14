@@ -10,6 +10,7 @@ import type { EdgeRecord, RegionRecord } from './graph.ts';
 import type { ScenarioStart } from './scenario.ts';
 import type { World } from './world.ts';
 
+export * from './calendar.ts';
 export * from './graph.ts';
 export * from './people.ts';
 export * from './scenario.ts';
