@@ -21,7 +21,9 @@ Interim data for lane 0.3, drafted before lane 0.2 fixes the pack format. Three 
 - In `people_in_posts.csv`, an empty `from` means the person held the post before 4 March 1861, and an empty `to` means he still held it on 15 April 1861.
 - In `posts.csv`, `established` and `abolished` are filled only when the event falls inside the window, or when it bounds a post that matters to it (the Department of the Pacific, formed 15 January 1861).
 
-**`needs-source`** marks any value no public-domain source in hand gives. It is never a guess.
+**`needs-source`** marks any value no public-domain source in hand gives. It is never a guess. It never appears in a date or numeric cell (`established`, `abolished`, `strength`, `strength_date`, `stores_days`, `from`, `to`, `acting`): that cell is left empty and the row's `notes` ends with a flag such as `[strength: needs-source]`. An empty `from` or `to` with such a flag means unknown, not "before the window" or "still in office"; lane 0.3 should turn the flags into an explicit unknown marker. `location`, `units` and `sources` may still hold the word.
+
+**Cabinet start dates.** For every Lincoln cabinet member, `from` is the Senate confirmation date, 5 March 1861 (House Divided, secondary; the Senate Executive Journal could not be reached, so this stays unresolved against a primary source). Oath dates are not used. Cameron's 5 March also matches the OR III-1 p.964 roster. Callahan p.1 prints 7 March 1861 for Welles's appointment; the Welles row keeps it in `notes` as a conflict, and Toucey's `to` is 5 March to match. The five Navy bureaus' 1842 `established` dates (Act of 31 August 1842) are creation dates, outside the window; they are kept as each post's origin.
 
 **Vocabularies.**
 
@@ -68,6 +70,8 @@ All sources were read as OCR text from scans on the Internet Archive. Row citati
 - Lincoln's cabinet start dates (House Divided, a secondary source);
 - the Washington garrison and District militia figures (National Park Service, *Civil War Defenses of Washington*, a federal and so public-domain work, but reached here only through the note);
 - the Sumter expedition's sailing dates.
+
+Rows resting on a research note alone carry "[source: research note only; primary source not reached, unresolved]" in `notes`. They are: posts `us_attorney_general`, `us_dc_militia`, `us_harpers_ferry_armory`, `us_postmaster_general`, `us_secretary_state`, `us_secretary_treasury`; force block `fb_us_dc_militia`; and the tenures of `bates_edward`, `stone_charles_p`, `blair_montgomery`, `buchanan_james`, `smith_caleb_b`, `seward_william_h`, `chase_salmon_p`. The PR-fixes lane tried and could not reach a primary text for any of them (the Senate Executive Journal for 5 March 1861, OR III-1 p.964 covers only the Secretary of War); the candidates are the Senate Executive Journal, Heitman (Stone) and Callahan.
 
 They need a verification pass before the pack treats them as of record. Wikipedia, Nafziger, Eicher and Warner were not used. Cullum's Register and the September 1861 Army Register were fetched but not needed.
 
