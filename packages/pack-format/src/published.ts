@@ -8,7 +8,9 @@
  */
 import { z } from 'zod';
 import { formatGenerated } from './format.ts';
+import { AnachronismsSchema, ChecklistSchema, ClassesSchema, ForbiddenSchema, RegisterSchema, ReleaseSchema, SourcePolicySchema, TriggersSchema } from './gate.ts';
 import { ManifestSchema, ProvenanceFileSchema, ScenarioHeaderSchema, ScenarioSchema, StringTableSchema, WorldSchema } from './schemas.ts';
+import { SituationSchema } from './situations.ts';
 
 export const PUBLISHED_SCHEMAS_DIR = 'packages/pack-format/schemas';
 
@@ -19,6 +21,16 @@ const SCHEMAS: readonly { readonly file: string; readonly title: string; readonl
   { file: 'scenario-header.schema.json', title: 'Mandate scenario header (source/scenarios/<id>/scenario.json)', schema: ScenarioHeaderSchema },
   { file: 'world.schema.json', title: 'Mandate generated World (data/world.json), format 2', schema: WorldSchema },
   { file: 'scenario.schema.json', title: 'Mandate generated scenario start (data/scenarios/<id>.json), format 2', schema: ScenarioSchema },
+  // Lane 0.7: situations and the sensitive-history gate.
+  { file: 'situation.schema.json', title: 'Mandate situation (situations/<id>.json)', schema: SituationSchema },
+  { file: 'gate-register.schema.json', title: 'Mandate gate topic register (gate/register.json)', schema: RegisterSchema },
+  { file: 'gate-classes.schema.json', title: 'Mandate gate topic classes (gate/classes.json)', schema: ClassesSchema },
+  { file: 'gate-triggers.schema.json', title: 'Mandate gate trigger terms (gate/triggers.json)', schema: TriggersSchema },
+  { file: 'gate-forbidden.schema.json', title: 'Mandate gate forbidden wording (gate/forbidden.json)', schema: ForbiddenSchema },
+  { file: 'gate-anachronisms.schema.json', title: 'Mandate gate anachronisms (gate/anachronisms.json)', schema: AnachronismsSchema },
+  { file: 'gate-source-policy.schema.json', title: 'Mandate gate source policy (gate/source-policy.json)', schema: SourcePolicySchema },
+  { file: 'gate-checklist.schema.json', title: 'Mandate gate checklist versions (gate/checklist.json)', schema: ChecklistSchema },
+  { file: 'gate-release.schema.json', title: 'Mandate gate release windows (gate/release.json)', schema: ReleaseSchema },
 ];
 
 /** File name to JSON text, in a stable order. */

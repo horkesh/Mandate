@@ -1,0 +1,6 @@
+{
+  "scenarios": [
+    { "scenario": "opening", "from": "1861-04-01", "to": "1862-12-31" },
+    { "scenario": "summer_front", "from": "1862-06-01", "to": "1862-12-31" }
+  ]
+}

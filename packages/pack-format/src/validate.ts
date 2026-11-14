@@ -9,7 +9,8 @@
  * into a file and place, so the generator can point at the source CSV row and
  * the committed-pack check can point at the generated JSON.
  */
-import { world as w } from '@mandate/kernel';
+import { type phase0, world as w } from '@mandate/kernel';
+import type { GateData } from './gate.ts';
 import { IntlMessageFormat } from 'intl-messageformat';
 import { type Issue, IssueSink } from './issues.ts';
 import { licenceVerdict, needsLicencePage, PUBLIC_DOMAIN_BASES } from './licences.ts';
@@ -27,6 +28,10 @@ export interface PackData {
    * `scope|table`. References to them are not reported again as unknown.
    */
   readonly quarantined?: ReadonlyMap<string, ReadonlySet<string>>;
+  /** Situations (lane 0.7), once they and the gate have validated. */
+  readonly situations?: readonly phase0.SituationDef[];
+  /** The pack's gate files (lane 0.7), if it has any. */
+  readonly gate?: GateData | null;
 }
 
 /** A record's address: `world` or `scenario:<id>`, a table, an index, and optionally a field path inside the record. */

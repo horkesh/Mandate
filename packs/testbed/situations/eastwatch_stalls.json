@@ -1,0 +1,48 @@
+{
+  "id": "eastwatch_stalls",
+  "kind": "decision",
+  "faction": "north",
+  "title": "situation.eastwatch_stalls.title",
+  "text": "situation.eastwatch_stalls.text",
+  "earliest": "1861-04-01",
+  "event": { "goal": { "post": "n_army_east", "kind": "advance" } },
+  "knowledge": { "knows": { "reportType": "wire-dispatch", "subjectKind": "post", "subjectId": "n_army_east", "claimKind": "goal-status" } },
+  "chain": { "id": "eastwatch", "stage": 1 },
+  "subjects": ["n_organiser"],
+  "options": [
+    {
+      "id": "press_on",
+      "label": "situation.eastwatch_stalls.option.press_on",
+      "displayKey": 1,
+      "proposedBy": ["n_secretary"],
+      "honours": ["duty", "order"],
+      "orders": [{ "to": "n_army_east", "goal": "advance", "region": "s_capital", "route": "special-messenger" }]
+    },
+    {
+      "id": "send_the_fighter",
+      "label": "situation.eastwatch_stalls.option.send_the_fighter",
+      "displayKey": 2,
+      "proposedBy": ["n_fighter"],
+      "honours": ["glory"],
+      "effects": [{ "propose": { "owner": "politics", "field": "bloc-support", "subject": "n_hawks", "delta": 20, "reason": "a-fighter-sent", "side": "north" } }]
+    },
+    {
+      "id": "wait_for_strength",
+      "label": "situation.eastwatch_stalls.option.wait_for_strength",
+      "displayKey": 3,
+      "proposedBy": ["n_organiser"],
+      "honours": ["caution"],
+      "waitsOn": { "clockAtLeast": 10 }
+    }
+  ],
+  "inaction": {
+    "text": "situation.eastwatch_stalls.inaction",
+    "effects": [{ "propose": { "owner": "politics", "field": "bloc-support", "subject": "n_hawks", "delta": -20, "reason": "the-army-sits", "side": "north" } }]
+  },
+  "historicalDefault": { "delegate": "n_war_office" },
+  "staffLine": { "authors": ["n_war_office"], "recommends": ["wait_for_strength"], "reasons": [{ "kind": "supply", "weight": 600 }], "confidence": 600 },
+  "delegableTo": ["n_war_office"],
+  "resurfaceOn": [7],
+  "gate": { "none": "an ordinary command question about one army's pace; no gate topic" },
+  "citations": [{ "source": "TB-DESIGN", "at": "testbed situations" }]
+}

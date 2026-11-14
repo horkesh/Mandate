@@ -54,6 +54,7 @@ import {
   StringTableSchema,
   WorldSchema,
 } from './schemas.ts';
+import { readSituationLayer } from './situation-layer.ts';
 import { locateInData, type Locate, type PackData, validatePack, walkStrings, type Where } from './validate.ts';
 
 /** Read access to one pack's files, by pack-relative path with forward slashes. */
@@ -841,8 +842,13 @@ export function generatePack(files: PackFiles): GenerateResult {
   const defaults = strings.get(manifest.defaultLocale) ?? [];
   strings.set(manifest.defaultLocale, [...defaults, { file: generatedStringsFile(manifest.defaultLocale), table: generatedNames }]);
 
-  const pack: PackData = { manifest, provenance, world, scenarios, strings, quarantined };
-  sink.add(validatePack(pack, locate));
+  const worldPack: PackData = { manifest, provenance, world, scenarios, strings, quarantined };
+  sink.add(validatePack(worldPack, locate));
+  if (errorsOf(sink.issues).length > 0) return { outputs: new Map(), issues: sink.issues, pack: worldPack };
+  // Situations and the gate (lane 0.7): hand-written, committed as they are, checked here and at load.
+  const layer = readSituationLayer(files, worldPack);
+  sink.add(layer.issues);
+  const pack: PackData = { ...worldPack, situations: layer.situations, gate: layer.gate };
   if (errorsOf(sink.issues).length > 0) return { outputs: new Map(), issues: sink.issues, pack };
 
   // The schemas admit only integers and plain data, so canonical JSON cannot

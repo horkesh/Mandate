@@ -99,8 +99,14 @@ export interface OptionOrder {
   readonly route: RouteKind;
 }
 
-/** The gate tag on an item (SENSITIVE-HISTORY section 5), or an explicit "not gated" with its reason. */
-export type GateTag = { readonly topics: readonly string[]; readonly placement: Placement; readonly risks: readonly string[] } | { readonly none: string };
+/**
+ * The gate tag on an item (SENSITIVE-HISTORY section 5), or an explicit "not
+ * gated" with its reason. `actingSide` is whose conduct the item is, which the
+ * sign rule reads (E7: atrocity-class conduct never helps the side that acts).
+ */
+export type GateTag =
+  | { readonly topics: readonly string[]; readonly placement: Placement; readonly risks: readonly string[]; readonly actingSide: FactionId | null }
+  | { readonly none: string };
 
 /** A gate sign-off (A7): a reviewer who is not the author, the question versions read, and the item's content hash. */
 export interface GateReview {

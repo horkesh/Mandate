@@ -1,0 +1,11 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"additionalProperties": false,
+"properties": {
+"allow": {"default":[],"items":{"minLength":1,"type":"string"},"type":"array"},
+"terms": {"items":{"additionalProperties":false,"properties":{"caseSensitive":{"default":false,"type":"boolean"},"term":{"type":"string"}},"required":["term"],"type":"object"},"type":"array"}
+},
+"required": ["terms"],
+"title": "Mandate gate trigger terms (gate/triggers.json)",
+"type": "object"
+}

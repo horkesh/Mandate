@@ -1,0 +1,48 @@
+{
+  "id": "fen_crossing",
+  "kind": "decision",
+  "faction": "north",
+  "title": "situation.fen_crossing.title",
+  "text": "situation.fen_crossing.text",
+  "earliest": "1861-05-24",
+  "event": { "flag": "fen_arrivals" },
+  "options": [
+    {
+      "id": "no_instruction",
+      "label": "situation.fen_crossing.option.no_instruction",
+      "displayKey": 1,
+      "proposedBy": ["n_appointee"],
+      "lockedCosts": [{ "propose": { "owner": "politics", "field": "bloc-support", "subject": "n_hawks", "delta": -10, "reason": "no-word-from-the-capital", "side": "north" } }]
+    },
+    {
+      "id": "shelter",
+      "label": "situation.fen_crossing.option.shelter",
+      "displayKey": 2,
+      "proposedBy": ["n_secretary"],
+      "honours": ["duty"],
+      "lockedCosts": [{ "propose": { "owner": "politics", "field": "bloc-support", "subject": "n_machine", "delta": -30, "reason": "the-fen-masters-protest", "side": "north" } }]
+    },
+    {
+      "id": "send_back",
+      "label": "situation.fen_crossing.option.send_back",
+      "displayKey": 3,
+      "proposedBy": ["n_appointee"],
+      "watched": true,
+      "expiresWhen": { "flag": "sanctuary_act" },
+      "lockedCosts": [
+        { "propose": { "owner": "politics", "field": "bloc-support", "subject": "n_hawks", "delta": -40, "reason": "return-to-the-fens", "side": "north" } },
+        { "propose": { "owner": "politics", "field": "foreign-patience", "delta": -20, "reason": "return-to-the-fens", "side": "north" } }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.fen_crossing.inaction",
+    "effects": [{ "propose": { "owner": "politics", "field": "bloc-support", "subject": "n_hawks", "delta": -10, "reason": "each-commander-decides", "side": "north" } }]
+  },
+  "historicalDefault": { "options": ["shelter"] },
+  "staffLine": { "authors": ["n_war_office"], "recommends": ["shelter"], "reasons": [{ "kind": "denies-the-enemy-labour", "weight": 700 }], "confidence": 700 },
+  "delegableTo": ["n_war_office"],
+  "gate": { "topics": ["fen-flight"], "placement": "decision", "risks": ["agency", "resource"] },
+  "gateReview": { "author": "lane-0.7", "reviewer": "fixture-signoff", "date": "2026-11-14", "questionVersions": { "A1": 1, "A2": 1, "A3": 1, "A4": 1, "A5": 1, "A6": 1, "A7": 1, "B1": 1, "B2": 1, "B3": 1, "B4": 1, "B5": 1, "B7": 1, "B9": 1, "B10": 1, "C1": 1, "C2": 1, "C3": 1, "C4": 1, "D6": 1, "E7": 1, "F2": 1, "F5": 1, "F6": 1, "Q1": 1, "Q2": 1, "Q3": 1, "Q4": 1, "Q5": 1, "Q6": 1, "Q7": 1, "Q8": 1 }, "contentHash": "c5ebb524f3d6556dcdb3ad7abf4e9938f1b543d3a01103f220087de832d5bb40" },
+  "citations": [{ "source": "TB-DESIGN", "at": "testbed gate register" }]
+}

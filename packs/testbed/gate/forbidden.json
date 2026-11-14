@@ -1,0 +1,12 @@
+{
+  "patterns": [
+    { "pattern": "loyal fen ?folk", "scope": "any", "severity": "fail", "reason": "the testbed's stand-in for a framing the gate refuses" },
+    { "pattern": "the fens' way of life", "scope": "any", "severity": "fail", "reason": "the testbed's stand-in for a euphemism the gate refuses" },
+    { "pattern": "\\b(?:historically|in hindsight|would later|turning point)\\b", "scope": "label", "severity": "fail", "reason": "hindsight in an option label (0041)" },
+    { "pattern": "\\b(?:the right thing|humane|shameful|noble|righteous|heroic)\\b", "scope": "label", "severity": "fail", "reason": "a moral verdict in an option label (C4)" },
+    { "pattern": "\\byou (?:did well|were right|failed)\\b", "scope": "narrator", "severity": "fail", "reason": "narrator praise or scolding (F5)" },
+    { "pattern": "\\bmasters?\\b", "scope": "narrator", "severity": "review", "reason": "prefer the people's own terms; the reviewer notes any use" }
+  ],
+  "resourceWords": ["stock", "pool", "supply", "count", "quota", "labour force"],
+  "proximityTokens": 5
+}

@@ -1,0 +1,10 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"additionalProperties": false,
+"properties": {
+"questions": {"items":{"additionalProperties":false,"properties":{"appliesTo":{"items":{"enum":["situation","option","string","derived","lever","setup","verdict"],"type":"string"},"minItems":1,"type":"array"},"id":{"pattern":"^[A-HQ][0-9]+$","type":"string"},"kind":{"enum":["field","tag","pattern","graph","arch","hash","run","reader"],"type":"string"},"version":{"maximum":9007199254740991,"minimum":1,"type":"integer"}},"required":["id","version","kind","appliesTo"],"type":"object"},"type":"array"}
+},
+"required": ["questions"],
+"title": "Mandate gate checklist versions (gate/checklist.json)",
+"type": "object"
+}

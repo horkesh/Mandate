@@ -15,11 +15,11 @@
  */
 import { canonicalHash, createTelemetry, decodeSave, encodeSave, HASH_SCHEME, livenessReport, phase0, world as w, type LivenessRow } from '@mandate/kernel';
 import { errorsOf, formatIssue, loadPack } from '@mandate/pack-format';
+import { createRuleSeat } from '@mandate/rule-seats';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { packFilesAt, packRoot } from './pack-files.ts';
-import { createRuleSeat } from '@mandate/rule-seats';
 import { loadScenario } from './load.ts';
+import { packFilesAt, packRoot, v2Packs } from './pack-files.ts';
 
 export const SEATS_KERNEL = 'phase0-seats';
 
@@ -72,7 +72,7 @@ export function v2Map(pack: string): { readonly world: w.World; readonly start: 
 
 export function seatsWorld(pack: string): SeatsWorld {
   const scenario = loadScenario(pack);
-  const comms = phase0.commsWorldFromScenario(scenario);
+  const comms = { ...phase0.commsWorldFromScenario(scenario), situations: packSituations(pack) };
   const map = v2Map(pack);
   if (map === null) return { world: phase0.indexWorld(comms), worldHash: canonicalHash(comms), seed: scenario.seed, setup: { seed: scenario.seed } };
   return {
@@ -83,9 +83,21 @@ export function seatsWorld(pack: string): SeatsWorld {
   };
 }
 
-/** Every mechanic a seats run counts: the seats layer's, and the map's when the pack has a map. */
+/** Every mechanic a seats run counts: the tick's (the seats layer's and the situations phase's), and the map's when the pack has a map. */
 export function seatsMechanics(world: phase0.IndexedWorld): readonly string[] {
-  return world.map === null ? phase0.SEATS_MECHANICS : [...phase0.SEATS_MECHANICS, ...phase0.MAP_MECHANICS];
+  return world.map === null ? phase0.TICK_MECHANICS : [...phase0.TICK_MECHANICS, ...phase0.MAP_MECHANICS];
+}
+
+/**
+ * The pack's situations (lane 0.7), loaded and gate-checked through the pack
+ * format when the pack has a v2 manifest; none otherwise. A pack whose
+ * situations or gate fail validation does not run.
+ */
+function packSituations(pack: string): readonly phase0.SituationDef[] {
+  if (!v2Packs().includes(pack)) return [];
+  const { pack: loaded, issues } = loadPack(packFilesAt(packRoot(pack)));
+  if (loaded === null) throw new Error(`packs/${pack} does not validate:\n${errorsOf(issues).map(formatIssue).join('\n')}`);
+  return loaded.situations ?? [];
 }
 
 /**

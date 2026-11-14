@@ -1,0 +1,274 @@
+import { describe, expect, it } from 'vitest';
+import { z } from 'zod';
+import { C2_MINIMUM, checkGate, errorsOf, formatIssue, gateContentHash, GATE_QUESTIONS_TESTED, IssueSink, loadPack, proximityHit, publishedSchemas, readGate, readSituations, releaseProblems, triggerMatches, type Issue } from '../src/index.ts';
+import { editJson, readTestbed, testbedFiles, type Edits } from './support/testbed.ts';
+
+/**
+ * Lane 0.7: situations in the pack format, and the sensitive-history gate's
+ * mechanical questions (SENSITIVE-HISTORY section 2.2, mapped by section 5).
+ * Every check has a positive control: one edit to the fictional testbed, and
+ * the one check that fires.
+ */
+
+function issues(edits: Edits = {}): Issue[] {
+  return [...loadPack(testbedFiles(edits)).issues];
+}
+function kinds(edits: Edits): string[] {
+  return issues(edits).map((i) => `${i.severity} ${i.kind} ${i.file}`);
+}
+function fires(edits: Edits, kind: string, file?: string): void {
+  const found = issues(edits).filter((i) => i.kind === kind && (file === undefined || i.file === file));
+  expect(found.length, `${kind} in ${file ?? 'any file'}; got:\n${issues(edits).map(formatIssue).join('\n')}`).toBeGreaterThan(0);
+}
+/** The check fires at exactly this place (or with this message): each control pins one check site. */
+function firesAt(edits: Edits, kind: string, where: { at?: string; message?: string; file?: string; severity?: 'error' | 'warning' }): void {
+  const all = issues(edits);
+  const found = all.filter(
+    (i) =>
+      i.kind === kind &&
+      (where.at === undefined || i.at === where.at) &&
+      (where.message === undefined || i.message.includes(where.message)) &&
+      (where.file === undefined || i.file === where.file) &&
+      (where.severity === undefined || i.severity === where.severity),
+  );
+  expect(found.length, `${kind} at ${JSON.stringify(where)}; got:\n${all.map(formatIssue).join('\n')}`).toBeGreaterThan(0);
+}
+const sit = (id: string) => `situations/${id}.json`;
+const merge = (...edits: Edits[]): Edits => Object.assign({}, ...edits);
+
+describe('the testbed’s situations and gate', () => {
+  it('load clean, with every situation and the gate', () => {
+    const loaded = loadPack(testbedFiles());
+    expect(errorsOf(loaded.issues).map(formatIssue)).toEqual([]);
+    expect(loaded.pack!.situations!.map((s) => s.id)).toEqual(['eastwatch_followup', 'eastwatch_stalls', 'fen_arrivals', 'fen_crossing', 'harbour_burning', 'sanctuary_act']);
+    expect(loaded.pack!.gate!.register.topics.map((t) => t.id)).toEqual(['fen-flight', 'harbour-burning', 'press-closures', 'old-oath']);
+  });
+
+  it('cover the register section 5 asks for: one topic per placement, a held topic with an interim placement, an atrocity class, an agency class', () => {
+    const gate = loadPack(testbedFiles()).pack!.gate!;
+    const placements = new Set(gate.register.topics.flatMap((t) => t.placements));
+    expect([...placements].sort()).toEqual(['decision', 'derived', 'event', 'text']);
+    expect(gate.register.topics.some((t) => t.refused.length > 0)).toBe(true);
+    expect(gate.register.topics.find((t) => t.status === 'record')?.interim).toBe('text');
+    expect(gate.classes.classes.some((c) => c.atrocity)).toBe(true);
+    expect(gate.classes.classes.some((c) => c.requiresAgencyReason)).toBe(true);
+  });
+});
+
+describe('situations in the pack format', () => {
+  it('B1: a decision needs options, inaction, a historical default and a staff line', () => {
+    fires(editJson(sit('eastwatch_stalls'), (s) => delete s.inaction), 'situation-missing', sit('eastwatch_stalls'));
+    fires(editJson(sit('eastwatch_stalls'), (s) => delete s.historicalDefault), 'situation-missing');
+    fires(editJson(sit('eastwatch_stalls'), (s) => delete s.staffLine), 'situation-missing');
+  });
+
+  it('a notice carries no options; a decision no effects of its own', () => {
+    fires(editJson(sit('sanctuary_act'), (s) => (s.inaction = { text: 'situation.sanctuary_act.text' })), 'situation-notice-field');
+    fires(editJson(sit('eastwatch_stalls'), (s) => (s.effects = [{ setFlag: 'x' }])), 'situation-decision-effects');
+  });
+
+  it('B2: a cause in State, or a labelled railroad', () => {
+    fires(editJson(sit('eastwatch_stalls'), (s) => (s.event = { dayAtLeast: 30 })), 'situation-date-cause');
+    expect(kinds(editJson(sit('eastwatch_stalls'), (s) => ((s.event = { dayAtLeast: 30 }), (s.railroad = 'the testbed opening'))))).not.toContainEqual(expect.stringContaining('situation-date-cause'));
+  });
+
+  it('0041: options in ascending display order, each with its own key', () => {
+    fires(editJson(sit('eastwatch_stalls'), (s) => (s.options[2].displayKey = 1)), 'situation-display-order');
+    fires(editJson(sit('eastwatch_stalls'), (s) => s.options.reverse()), 'situation-display-order');
+  });
+
+  it('references resolve: people, posts, regions, routes, situations and options', () => {
+    fires(editJson(sit('eastwatch_stalls'), (s) => (s.options[0].proposedBy = ['nobody'])), 'unknown-reference');
+    fires(editJson(sit('eastwatch_stalls'), (s) => (s.options[0].orders[0].to = 'no_post')), 'unknown-reference');
+    fires(editJson(sit('eastwatch_stalls'), (s) => (s.options[0].orders[0].route = 'mail')), 'situation-route');
+    fires(editJson(sit('eastwatch_stalls'), (s) => (s.historicalDefault = { options: ['nope'] })), 'unknown-reference');
+    fires(editJson(sit('eastwatch_followup'), (s) => (s.event = { decided: 'eastwatch_stalls', options: ['nope'] })), 'unknown-reference');
+  });
+
+  it('chains follow an earlier stage of the same chain; the clock is not read before it starts', () => {
+    fires(editJson(sit('eastwatch_followup'), (s) => (s.chain.stage = 1)), 'situation-chain');
+    fires(editJson(sit('eastwatch_stalls'), (s) => (s.knowledge = { clockAtLeast: 2 })), 'situation-clock');
+  });
+
+  it('every string a situation shows has text in the default locale', () => {
+    fires(editJson(sit('eastwatch_stalls'), (s) => (s.title = 'situation.nowhere.title')), 'missing-string');
+  });
+
+  it('a file is named for its situation; strays are reported; drafts are never loaded', () => {
+    fires({ 'situations/wrong_name.json': readTestbed(sit('eastwatch_stalls')) }, 'situation-file-name');
+    fires({ 'situations/notes.txt': 'x' }, 'unknown-table');
+    fires({ 'situations/old/x.json': '{}' }, 'unknown-table');
+    expect(errorsOf(issues({ 'situations/drafts/broken.json': '{ not json' }))).toEqual([]);
+  });
+
+  it('each semantic check fires at its own place (one control per check site)', () => {
+    const decision = sit('eastwatch_stalls');
+    firesAt({ 'situations/copy.json': readTestbed(decision) }, 'duplicate-id', { at: 'id', message: 'defined more than once' });
+    firesAt(editJson(decision, (s) => ((s.options = []), (s.historicalDefault = { unsourced: 'x' }), (s.staffLine = null))), 'situation-missing', { at: 'options' });
+    firesAt(editJson(decision, (s) => (s.options[2].displayKey = 2)), 'situation-display-order', { message: 'share a display key' });
+    firesAt(editJson(decision, (s) => (s.options[2].id = 'press_on')), 'duplicate-id', { at: 'options' });
+    firesAt(editJson(decision, (s) => (s.historicalDefault = { options: ['press_on', 'send_the_fighter'] })), 'situation-selection', { at: 'historicalDefault.options' });
+    firesAt(editJson(decision, (s) => (s.historicalDefault = { delegate: 'n_army_west' })), 'unknown-reference', { at: 'historicalDefault.delegate' });
+    firesAt(editJson(decision, (s) => (s.staffLine.recommends = ['nope'])), 'unknown-reference', { at: 'staffLine.recommends[0]' });
+    firesAt(editJson(decision, (s) => (s.options[0].orders[0].region = null)), 'situation-order', { at: 'options[0].orders[0]' });
+    firesAt(editJson(sit('eastwatch_followup'), (s) => (s.chain.follows.situation = 'nowhere')), 'unknown-reference', { at: 'chain.follows.situation' });
+    firesAt(editJson(sit('eastwatch_followup'), (s) => (s.chain.follows.options = ['nope'])), 'unknown-reference', { at: 'chain.follows.options[0]' });
+    firesAt(editJson(sit('fen_arrivals'), (s) => (s.event = { fired: 'nowhere' })), 'unknown-reference', { at: 'event', message: 'is not a situation' });
+    firesAt(editJson(decision, (s) => (s.knowledge = { flag: 'never_set' })), 'situation-flag-unset', { at: 'knowledge', severity: 'warning' });
+  });
+
+  it('each gate register check fires at its own place', () => {
+    firesAt(editJson('gate/register.json', (r) => (r.topics[2].class = 'nope')), 'gate-register', { at: 'topics[2].class', file: 'gate/register.json' });
+    firesAt(editJson('gate/register.json', (r) => (r.topics[2].interim = 'text')), 'gate-register', { at: 'topics[2].interim', severity: 'warning' });
+    firesAt(editJson(sit('fen_arrivals'), (s) => (s.gate.topics = ['nope'])), 'gate-unknown-topic', { at: 'gate' });
+    firesAt(editJson('gate/register.json', (r) => (r.topics[0].supersededOptions[0].option = 'nope')), 'unknown-reference', { at: 'options', file: sit('fen_crossing') });
+  });
+
+  it('a pack with situations must carry its gate', () => {
+    fires({ 'gate/register.json': null }, 'missing-file', 'gate/register.json');
+  });
+});
+
+describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
+  it('A1: a trigger match needs a tag, after the allowlist', () => {
+    fires(editJson('strings/en.json', (t) => (t['situation.eastwatch_stalls.text'] = 'The salt fens are quiet.')), 'gate-untagged', sit('eastwatch_stalls'));
+    expect(kinds(editJson('strings/en.json', (t) => (t['situation.eastwatch_stalls.text'] = 'He waits below the Burning Hills.')))).not.toContainEqual(expect.stringContaining('gate-untagged'));
+    expect(triggerMatches('People burned the mill', loadPack(testbedFiles()).pack!.gate!.triggers)).toEqual(['burned']);
+  });
+
+  it('A1 and B3: an effect on a protected field needs a tag, and is refused', () => {
+    const edit = editJson(sit('eastwatch_stalls'), (s) => s.options[1].effects.push({ propose: { owner: 'regions', field: 'fenfolk-labour', subject: null, delta: 5, reason: 'x', side: 'north' } }));
+    fires(edit, 'gate-untagged');
+    fires(edit, 'gate-protected-target');
+    fires(edit, 'gate-refused');
+  });
+
+  it('A2: the placement is one the register allows', () => {
+    fires(editJson(sit('harbour_burning'), (s) => (s.gate.placement = 'decision')), 'gate-placement');
+  });
+
+  it('A3: a held topic admits only a cited, text-only item', () => {
+    fires(editJson(sit('fen_arrivals'), (s) => (s.gate.topics = ['old-oath'])), 'gate-held-topic');
+    const textOnly = editJson(sit('fen_arrivals'), (s) => ((s.gate = { topics: ['old-oath'], placement: 'text', risks: [] }), (s.effects = []), (s.earliest = '1861-06-01')));
+    expect(kinds(textOnly).filter((k) => k.includes('gate-held-topic'))).toEqual([]);
+  });
+
+  it('A4: the item falls inside its topic’s window', () => {
+    fires(editJson(sit('fen_arrivals'), (s) => (s.earliest = '1861-01-01')), 'gate-window');
+  });
+
+  it('A5 and A6: citations resolve, and none is banned or all weak', () => {
+    fires(editJson(sit('fen_arrivals'), (s) => (s.citations = [])), 'gate-citation');
+    fires(editJson(sit('fen_arrivals'), (s) => (s.citations = [{ source: 'NOWHERE', at: null }])), 'unknown-reference');
+    fires(editJson('gate/source-policy.json', (p) => (p.banned = ['TB-DESIGN'])), 'gate-banned-source');
+    fires(editJson('gate/source-policy.json', (p) => (p.weak = ['TB-DESIGN'])), 'gate-weak-sources');
+  });
+
+  it('A7: a sign-off by someone else, against current question versions and the current content', () => {
+    fires(editJson(sit('fen_crossing'), (s) => (s.gateReview.reviewer = s.gateReview.author)), 'gate-self-signed');
+    fires(editJson(sit('fen_crossing'), (s) => (s.gateReview = null)), 'gate-unsigned');
+    fires(editJson('gate/checklist.json', (c) => (c.questions.find((q: { id: string }) => q.id === 'B5').version = 2)), 'gate-stale-review', sit('fen_crossing'));
+    // Editing a string the item shows voids its sign-off: the hash covers resolved text.
+    fires(editJson('strings/en.json', (t) => (t['situation.fen_crossing.option.shelter'] = 'Let them stay')), 'gate-stale-review', sit('fen_crossing'));
+    // Changing only the review (here its reviewer) does not: the hash excludes the sign-off itself.
+    expect(kinds(editJson(sit('fen_crossing'), (s) => (s.gateReview.reviewer = 'gate-reviewer')))).toEqual([]);
+  });
+
+  it('B4: no option carries an atrocity-class topic; refused option shapes are refused', () => {
+    fires(editJson(sit('fen_crossing'), (s) => (s.options[0].gate = { topics: ['harbour-burning'], placement: 'event', risks: [] })), 'gate-atrocity-lever');
+    fires(editJson(sit('fen_crossing'), (s) => (s.options[0].id = 'burn_the_crossing')), 'gate-refused');
+  });
+
+  it('B5: every option of a gated decision carries locked costs, and nothing cancels them', () => {
+    fires(editJson(sit('fen_crossing'), (s) => (s.options[2].lockedCosts = [])), 'gate-no-locked-cost');
+    const cancel = editJson(sit('sanctuary_act'), (s) => {
+      s.event = { all: [{ decided: 'fen_crossing', options: ['send_back'] }, { dayAtLeast: 40 }] };
+      s.effects.push({ propose: { owner: 'politics', field: 'foreign-patience', subject: null, delta: 20, reason: 'forgiven', side: 'north' } });
+    });
+    fires(cancel, 'gate-cancelled-cost', sit('sanctuary_act'));
+  });
+
+  it('B10: an option a later law forbids expires with it', () => {
+    fires(editJson(sit('fen_crossing'), (s) => (s.options[2].expiresWhen = null)), 'gate-no-expiry');
+  });
+
+  it('E7: atrocity-class conduct never helps the side that acted, and names that side', () => {
+    fires(editJson(sit('harbour_burning'), (s) => (s.effects[0].propose.delta = 10)), 'gate-sign-rule');
+    fires(editJson(sit('harbour_burning'), (s) => (s.gate.actingSide = null)), 'gate-acting-side');
+  });
+
+  it('C3/F6, C4/F5, F2: anachronisms, forbidden wording by scope, and the proximity rule', () => {
+    fires(editJson('strings/en.json', (t) => (t['situation.fen_crossing.text'] = 'The Sanctuary Act is debated.')), 'gate-anachronism');
+    fires(editJson('strings/en.json', (t) => (t['situation.fen_crossing.option.shelter'] = 'Do the right thing')), 'gate-forbidden-wording');
+    // A label-only pattern does not apply to narrator text.
+    expect(kinds(editJson('strings/en.json', (t) => (t['situation.eastwatch_stalls.text'] = 'He thinks it noble to wait.')))).not.toContainEqual(expect.stringContaining('gate-forbidden-wording'));
+    fires(editJson('strings/en.json', (t) => (t['situation.fen_arrivals.text'] = 'A quota of fen folk was taken.')), 'gate-forbidden-wording');
+    const review = issues(editJson('strings/en.json', (t) => (t['situation.fen_crossing.text'] = 'Their masters want them back.')));
+    expect(review.filter((i) => i.kind === 'gate-review-wording').map((i) => i.severity)).toEqual(['warning']);
+    expect(proximityHit('the fen folk were counted as stock', ['stock'], ['fen folk'], 5)).toBe('"stock" near "fen folk"');
+    expect(proximityHit('fen folk crossed the river and the mill kept its old stock of grain', ['stock'], ['fen folk'], 5)).toBeNull();
+  });
+
+  it('C2: no display position holds the default in more than half of the gated decisions with three or more options', () => {
+    const files = testbedFiles();
+    const pack = loadPack(files).pack!;
+    const strings = new Map<string, string>(Object.entries(JSON.parse(readTestbed('strings/en.json')) as Record<string, string>));
+    const gate = readGate(files, new IssueSink())!;
+    const base = readSituations(files, new IssueSink()).find((x) => x.def.id === 'fen_crossing')!;
+    const copies = (positions: number[]) =>
+      positions.map((p, i) => {
+        const def = { ...base.def, id: `copy_${i}` as never, historicalDefault: { options: [base.def.options[p]!.id] } };
+        return { file: `situations/copy_${i}.json`, def: { ...def, gateReview: { ...base.def.gateReview!, contentHash: gateContentHash(def, strings, pack.provenance) } } };
+      });
+    const c2 = (positions: number[]) => checkGate(copies(positions), gate, strings, pack.provenance).filter((i) => i.kind === 'gate-default-position');
+    expect(c2([1, 1, 1])).toHaveLength(1);
+    expect(c2([0, 1, 2])).toEqual([]);
+    expect(c2([1, 1])).toEqual([]);
+    expect(C2_MINIMUM).toBe(3);
+  });
+
+  it('A8, the ship rule: a held topic overlapping a shipped scenario, or a fixture sign-off, blocks a release', () => {
+    const files = testbedFiles();
+    const gate = readGate(files, new IssueSink())!;
+    const items = readSituations(files, new IssueSink());
+    expect(releaseProblems(items, gate)).toEqual([
+      'scenario opening (1861-04-01 to 1862-12-31) overlaps held topic old-oath (awaiting its record, 1861-03-04 to 1861-12-31)',
+      'situations/fen_arrivals.json: signed off by a fixture (fixture-signoff), not a gate reviewer',
+      'situations/fen_crossing.json: signed off by a fixture (fixture-signoff), not a gate reviewer',
+      'situations/harbour_burning.json: signed off by a fixture (fixture-signoff), not a gate reviewer',
+      'situations/sanctuary_act.json: signed off by a fixture (fixture-signoff), not a gate reviewer',
+    ]);
+    // Shipping only the later scenario, with real reviewers' sign-offs, passes.
+    const later = { ...gate, release: { scenarios: [gate.release.scenarios[1]!] } };
+    const signed = items.map((x) => ({ ...x, def: { ...x.def, gateReview: x.def.gateReview === null ? null : { ...x.def.gateReview, reviewer: 'gate-reviewer' } } }));
+    expect(releaseProblems(signed, later)).toEqual([]);
+  });
+
+  it('H5: the situation schema has no virtue, morality or karma field to grade the player with', () => {
+    const graded = (schema: unknown): string[] => {
+      const out: string[] = [];
+      const walk = (v: unknown) => {
+        if (Array.isArray(v)) v.forEach(walk);
+        else if (v !== null && typeof v === 'object') {
+          for (const [k, x] of Object.entries(v)) {
+            if (k === 'properties' && x !== null && typeof x === 'object') out.push(...Object.keys(x).filter((p) => /virtue|moral|karma|righteous|honou?r ?score/i.test(p)));
+            walk(x);
+          }
+        }
+      };
+      walk(schema);
+      return out;
+    };
+    expect(graded(JSON.parse(publishedSchemas().get('situation.schema.json')!))).toEqual([]);
+    expect(graded(z.toJSONSchema(z.strictObject({ karma: z.int() })))).toEqual(['karma']);
+  });
+
+  it('lists the questions it tests (the rest are the reviewer’s, or wait for their artefact type)', () => {
+    expect(GATE_QUESTIONS_TESTED).toEqual(['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4', 'B5', 'B10', 'C1', 'C2', 'C3', 'C4', 'E7', 'F2', 'F5', 'F6']);
+  });
+
+  it('positive control for the controls: an unedited testbed fires none of them', () => {
+    expect(merge({}, {})).toEqual({});
+    expect(kinds({})).toEqual([]);
+  });
+});

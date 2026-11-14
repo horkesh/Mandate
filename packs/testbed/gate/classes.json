@@ -1,0 +1,8 @@
+{
+  "classes": [
+    { "id": "aims", "atrocity": false, "requiresAgencyReason": false },
+    { "id": "fenfolk-freedom", "atrocity": false, "requiresAgencyReason": true },
+    { "id": "atrocities", "atrocity": true, "requiresAgencyReason": false },
+    { "id": "civil-liberties", "atrocity": false, "requiresAgencyReason": false }
+  ]
+}

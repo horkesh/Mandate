@@ -1,0 +1,10 @@
+{
+  "terms": [
+    { "term": "fen ?folk" },
+    { "term": "salt fens?" },
+    { "term": "burn(?:ed|ing|s)?" },
+    { "term": "massacre" },
+    { "term": "clos(?:e|ed|ing|ure) the press" }
+  ],
+  "allow": ["Burning Hills"]
+}

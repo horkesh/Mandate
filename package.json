@@ -23,7 +23,9 @@
     "play": "tsx packages/cli/src/play.ts",
     "pack:generate": "tsx packages/cli/src/pack.ts generate",
     "pack:validate": "tsx packages/cli/src/pack.ts validate",
-    "pack:schemas": "tsx packages/cli/src/pack.ts schemas"
+    "pack:schemas": "tsx packages/cli/src/pack.ts schemas",
+    "pack:gate-hash": "tsx packages/cli/src/pack.ts gate-hash",
+    "pack:release-check": "tsx packages/cli/src/pack.ts release-check"
   },
   "devDependencies": {
     "@types/node": "22.20.5",

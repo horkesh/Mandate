@@ -8,6 +8,7 @@ import { readJson, type PackFiles } from './generate.ts';
 import { errorsOf, type Issue, IssueSink } from './issues.ts';
 import { generatedStringsFile, MANIFEST_FILE, PROVENANCE_FILE, scenarioFile, stringsFile, WORLD_FILE } from './layout.ts';
 import { ManifestSchema, ProvenanceFileSchema, ScenarioSchema, type StringTable, StringTableSchema, WorldSchema } from './schemas.ts';
+import { readSituationLayer } from './situation-layer.ts';
 import { type PackData, validatePack } from './validate.ts';
 
 export interface LoadResult {
@@ -36,7 +37,11 @@ export function loadPack(files: PackFiles): LoadResult {
     if (tables.length > 0) strings.set(locale, tables);
   }
   if (errorsOf(sink.issues).length > 0) return { pack: null, issues: sink.issues };
-  const pack: PackData = { manifest, provenance, world, scenarios, strings };
-  sink.add(validatePack(pack));
+  const worldPack: PackData = { manifest, provenance, world, scenarios, strings };
+  sink.add(validatePack(worldPack));
+  if (errorsOf(sink.issues).length > 0) return { pack: null, issues: sink.issues };
+  const layer = readSituationLayer(files, worldPack);
+  sink.add(layer.issues);
+  const pack: PackData = { ...worldPack, situations: layer.situations, gate: layer.gate };
   return { pack: errorsOf(sink.issues).length > 0 ? null : pack, issues: sink.issues };
 }

@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { ids, phase0, type ScenarioData } from '@mandate/kernel';
 import type { OptionView, PrincipalMenu, ReportView, SeatRequest, SeatView, StandingMenu } from '@mandate/kernel/seat-api';
 import { describe, expect, it } from 'vitest';
-import { chooseStep, createRuleSeat, principalOrders } from '../src/index.ts';
+import { chooseDelegated, chooseStep, createRuleSeat, principalOrders } from '../src/index.ts';
 
 const post = (s: string) => ids.toId('post', s);
 const region = (s: string) => ids.toId('region', s);
@@ -42,6 +42,18 @@ describe('a commander with a standing goal', () => {
     expect(chooseStep(standing([option('hold', 1250), option('advance:r2', 1250)])).optionId).toBe('advance:r2');
     expect(chooseStep(standing([option('advance:r3', 2000), option('advance:r2', 2000)])).optionId).toBe('advance:r2');
     expect(() => chooseStep(standing([]))).toThrow('offers no option');
+  });
+});
+
+describe('a holder handed a situation (lane 0.7)', () => {
+  it('takes the option that honours his values most, ties to the earlier in display order', () => {
+    const choice = (scores: number[]) => ({
+      menuKind: 'delegated-situation' as const,
+      choice: { situation: ids.toId('situation', 's'), delegableTo: [], options: scores.map((score, i) => ({ optionId: `o${i}`, group: null, score })) },
+    });
+    expect(chooseDelegated(choice([0, 1000, 500]))).toEqual(['o1']);
+    expect(chooseDelegated(choice([500, 500]))).toEqual(['o0']);
+    expect(chooseDelegated(choice([]))).toEqual([]);
   });
 });
 

@@ -1,0 +1,10 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"additionalProperties": false,
+"properties": {
+"scenarios": {"items":{"additionalProperties":false,"properties":{"from":{"type":"string"},"scenario":{"maxLength":128,"pattern":"^[A-Za-z0-9][A-Za-z0-9_.:/-]*$","type":"string"},"to":{"type":"string"}},"required":["scenario","from","to"],"type":"object"},"type":"array"}
+},
+"required": ["scenarios"],
+"title": "Mandate gate release windows (gate/release.json)",
+"type": "object"
+}
