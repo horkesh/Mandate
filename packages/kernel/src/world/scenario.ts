@@ -119,6 +119,8 @@ export interface PostStart {
   readonly parent: PostId | null;
   readonly holder: PersonId | null;
   readonly acting: boolean;
+  /** The person who runs the post's intelligence (0058), on the post's side; null when it has none, or none is sourced. */
+  readonly intelligenceChief: PersonId | null;
   /** Where its headquarters sits, if anywhere. */
   readonly region: RegionId | null;
   /** Set for a temporary post (an expedition command), which dissolves with its operation. */

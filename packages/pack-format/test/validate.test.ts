@@ -18,6 +18,9 @@ const neutral = (post = 'grey_top,Grey Governor,chief,g_gov,,beta,,,,DESIGN,', b
   files = withFile(`${S}/holders.csv`, appendRow('grey_top,grey_chief,no,,,DESIGN,'), files);
   return withFile(`${S}/force_blocks.csv`, appendRow(block), files);
 };
+/** posts.csv with an intelligence_chief column (0058), naming `chief` on `post` and no one elsewhere. */
+const withChief = (post: string, chief: string, base?: FileMap) =>
+  withFile(`${S}/posts.csv`, (t) => t.split('\n').map((line, i) => { const cells = line.split(','); cells.splice(9, 0, i === 0 ? 'intelligence_chief' : cells[0] === post ? chief : ''); return cells.join(','); }).join('\n'), base);
 /** An invented officer whose centres and trait cite nothing; his record cites the design. */
 const INVENTED = 'pool_officer,Pool Officer,yes,red,officer,1830,1890,above,average,low,low,bold,,,DESIGN,';
 const allowInvented = () =>
@@ -175,6 +178,10 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   // Every other call site of a check (the post-review mutation run)
   { name: 'a block with a parent', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_ship,Red Ship,block,,', 'red_ship,Red Ship,block,red_1,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
   { name: 'a detachment of a detachment', files: () => withFile(`${S}/force_blocks.csv`, appendRow('red_det2,Red Picket,detachment,red_1_det,r_war,red_army,alpha,,foot,10,1900-04,,5,DESIGN,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
+  // 0058: an intelligence chief is a person, on the post's side.
+  { name: 'an intelligence chief who is not a person', files: () => withChief('red_army', 'nobody'), kind: 'unknown-reference', file: `${S}/posts.csv` },
+  { name: 'an intelligence chief of the other side', files: () => withChief('red_army', 'blue_chief'), kind: 'faction-mismatch', file: `${S}/posts.csv` },
+  { name: 'a faction’s man as a neutral government’s intelligence chief', files: () => withChief('grey_top', 'red_captain', neutral()), kind: 'faction-mismatch', file: `${S}/posts.csv` },
   // 0058: a post kind's role is one the engine reads, never a free name.
   { name: 'a post kind with a role the engine does not read', files: () => editJson('pack.json', (m: { vocabularies: { postKinds: { role?: string }[] } }) => (m.vocabularies.postKinds[0]!.role = 'spymaster')), kind: 'shape/invalid_value', file: 'pack.json' },
   { name: 'a season reason defined twice in the rules', files: () => editJson('pack.json', (m: { rules: { seasons: unknown[] } }) => m.rules.seasons.push(m.rules.seasons[0])), kind: 'duplicate-id', file: 'pack.json' },
@@ -311,6 +318,20 @@ describe('harbour channels (lane 0.3)', () => {
   it('but not a key point and an ordinary land region (positive control)', () => {
     const result = run(harbour('sea', 'harbour,Harbour,land,plain,,,,,,,,,,DESIGN,'));
     expect(result.issues.filter((i) => i.kind === 'edge-end-kind').map((i) => i.severity)).toEqual(['error']);
+  });
+});
+
+describe('an intelligence chief (0058)', () => {
+  it('on the post’s side loads, and is carried on the post (positive control)', () => {
+    const result = run(withChief('red_army', 'red_captain'));
+    expect(errorsOf(result.issues).map(formatIssue)).toEqual([]);
+    expect(result.pack!.scenarios[0]!.posts.find((p) => p.id === 'red_army')!.intelligenceChief).toBe('red_captain');
+    expect(errorsOf(run(withChief('grey_top', 'grey_chief', neutral())).issues).map(formatIssue)).toEqual([]);
+  });
+
+  it('points a mismatch at its row and column', () => {
+    const issue = run(withChief('red_army', 'blue_chief')).issues.find((i) => i.kind === 'faction-mismatch')!;
+    expect([issue.file, issue.at]).toEqual([`${S}/posts.csv`, 'row 3 (red_army), column intelligence_chief']);
   });
 });
 

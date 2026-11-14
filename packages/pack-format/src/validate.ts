@@ -425,6 +425,11 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
         const pf = allegiance(parent.department);
         if (pf !== undefined && side !== undefined && pf !== side) err('chain-crosses-factions', at('parent'), `the post answers to "${parent.id}" of another side`, 'a parent on the same side (use a link for cooperation)');
       }
+      // 0058: the intelligence chief exists and is on the post's side (a neutral government's chief serves no faction).
+      refCheck(people, 'person', p.intelligenceChief, at('intelligenceChief'));
+      if (p.intelligenceChief !== null && personFaction.has(p.intelligenceChief) && deptFaction.has(p.department) && personFaction.get(p.intelligenceChief) !== deptFaction.get(p.department)) {
+        err('faction-mismatch', at('intelligenceChief'), `the intelligence chief "${p.intelligenceChief}" serves ${personFaction.get(p.intelligenceChief) ?? 'no faction'}, but the post belongs to ${deptFaction.get(p.department) ?? 'a neutral government'}`, 'a chief on the post’s side');
+      }
       const hf = p.holder === null ? null : (personFaction.get(p.holder) ?? null);
       if (hf !== null && side !== undefined && hf !== side) err('faction-mismatch', at('holder'), `the holder "${p.holder}" serves faction "${hf}", but the post belongs to "${side}"`, 'a holder of the same faction');
       p.links.forEach((l, j) => {

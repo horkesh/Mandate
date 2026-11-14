@@ -576,6 +576,7 @@ export function generatePack(files: PackFiles): GenerateResult {
       parent: string | null;
       holder: string | null;
       acting: boolean;
+      intelligenceChief: string | null;
       region: string | null;
       temporary: { operation: string } | null;
       installation: string | null;
@@ -596,6 +597,7 @@ export function generatePack(files: PackFiles): GenerateResult {
         parent: r.optionalId('parent', 'parent'),
         holder: null,
         acting: false,
+        intelligenceChief: r.optionalId('intelligence_chief', 'intelligenceChief'),
         region: r.optionalId('region', 'region'),
         temporary: op === null ? null : { operation: op },
         installation: r.optionalId('installation'),

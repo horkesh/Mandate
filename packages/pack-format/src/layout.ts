@@ -128,6 +128,7 @@ export const SCENARIO_TABLES = {
       c('temporary_operation'),
       c('installation'),
       c('rail_line'),
+      c('intelligence_chief'),
       c('sources', true),
       c('notes'),
     ],

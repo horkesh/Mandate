@@ -231,6 +231,7 @@ export const PostSchema = z.strictObject({
   parent: idOf('post').nullable(),
   holder: idOf('person').nullable(),
   acting: z.boolean(),
+  intelligenceChief: idOf('person').nullable().describe('The person who runs this post’s intelligence (0058), on the post’s side; null for none.'),
   region: idOf('region').nullable(),
   temporary: z.strictObject({ operation: termId }).nullable(),
   installation: idOf('installation').nullable(),
