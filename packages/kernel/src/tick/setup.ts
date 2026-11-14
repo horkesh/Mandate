@@ -30,7 +30,9 @@ export interface SetupOptions {
 export function emptyState(): State {
   return {
     gameSeed: 0,
+    calendarStart: null,
     stateDay: 0,
+    regionControl: {},
     seatAssignments: {},
     messagesInTransit: [],
     knowledgeBySeat: {},
