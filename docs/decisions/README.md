@@ -6,7 +6,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 |---|---|---|
 | [0001](0001-player-is-the-principal.md) | The player is the principal: no unit control, in any mode | superseded by 0016 |
 | [0002](0002-typescript-deterministic-kernel.md) | TypeScript kernel, pure and deterministic | accepted; clarified by 0044 |
-| [0003](0003-engine-pack-boundary.md) | Settings are packs; engine code names no setting | accepted; test amended by 0024 |
+| [0003](0003-engine-pack-boundary.md) | Settings are packs; engine code names no setting | accepted; test replaced by 0024 |
 | [0004](0004-first-slice-union-1861-62.md) | First vertical slice: the Union, 1861–62 | superseded by 0018 |
 | [0005](0005-living-people.md) | Real historical and living people, under a sensitivity policy | accepted (policy details open); amended by 0022 |
 | [0006](0006-single-or-collective-principal.md) | The principal can be one person or a collective | accepted |
@@ -20,7 +20,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0014](0014-licence.md) | Source-available under the PolyForm Noncommercial licence | accepted |
 | [0015](0015-seats.md) | Every person is a seat; rules first; the command log is the truth | accepted |
 | [0016](0016-goals-plans-and-arrows.md) | Goals, plans and arrow edits: places are targeted only through a person | accepted; amended by 0026, 0033, 0040 |
-| [0017](0017-real-time-with-pause.md) | Real time with pause on a daily tick | superseded by 0027 |
+| [0017](0017-real-time-with-pause.md) | Real time with pause on a daily tick | superseded by 0027; amended by 0026 |
 | [0018](0018-civil-war-scope.md) | The American Civil War, 1861–65; the engine's promise is wars with fronts | accepted; amended by 0028 |
 | [0019](0019-regions-over-a-typed-graph.md) | The map is regions over a typed graph; fronts and pockets are derived | accepted; extended by 0031 |
 | [0020](0020-people-hidden-stats-and-assessment.md) | Generals have hidden stats that battle changes; the player sees an assessment | accepted; amended by 0026, 0040 |
@@ -29,7 +29,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0023](0023-the-home-front.md) | The home front: a light economy through people, elections, and history as situations | accepted; amended by 0026, 0028, 0040 |
 | [0024](0024-the-wars-with-fronts-test.md) | The engine test is "wars with fronts", not three settings | accepted |
 | [0025](0025-attention-under-real-time.md) | The president's attention is a weekly budget | accepted; amended by 0040, 0041 |
-| [0026](0026-foundation-review-revisions.md) | Revisions after the foundation review | accepted; amended by 0040 |
+| [0026](0026-foundation-review-revisions.md) | Revisions after the foundation review | accepted; amended by 0033, 0040 |
 | [0027](0027-variable-weekly-turns.md) | Variable turns of up to a week on a daily tick | accepted; amended by 0040 |
 | [0028](0028-start-victory-navy.md) | The campaign starts at the inauguration; two national wills decide it; the navy works through people | accepted; amended by 0040, clarified by 0042 |
 | [0029](0029-seasons-sieges-raids-confederacy.md) | Seasons through commanders, sieges as operations, raids and insurgency, and a Confederacy on the same machinery | accepted; amended by 0041 |
