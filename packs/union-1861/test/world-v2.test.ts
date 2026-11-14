@@ -31,16 +31,16 @@ const draftIds = (file: string, column: string): string[] => {
 const controlOf = (region: string) => start.control.find((c) => c.region === region)?.shares ?? [];
 
 describe('Union 1861 world v2', () => {
-  it('loads with no errors, as a draft pack, with one start on 4 March 1861', () => {
+  it('loads with no errors, as a draft pack, with one start on 5 March 1861', () => {
     expect(errorsOf(issues)).toEqual([]);
     expect(pack!.manifest.status).toBe('draft');
-    expect(pack!.scenarios.map((s) => [s.id, s.startDate])).toEqual([['march_1861', '1861-03-04']]);
+    expect(pack!.scenarios.map((s) => [s.id, s.startDate])).toEqual([['march_1861', '1861-03-05']]);
   });
 
   it('loses nothing from the map and people drafts', () => {
     const regionIds = new Set(world.regions.map((r) => r.id as string));
     expect(draftIds('map/regions.csv', 'id').filter((id) => !regionIds.has(id))).toEqual([]);
-    expect(world.edges.length).toBe(draftIds('map/edges.csv', 'from').length);
+    expect(world.edges.length).toBe(draftIds('map/edges.csv', 'from').length + 1); // the Mediterranean leg added after review
     const people = new Set(world.people.map((p) => p.id as string));
     expect(draftIds('people/people.csv', 'id').filter((id) => !people.has(id))).toEqual([]);
   });
@@ -64,7 +64,8 @@ describe('Union 1861 world v2', () => {
     for (const r of ['fort_sumter', 'fort_pickens', 'key_west', 'fort_monroe']) expect(controlOf(r)).toEqual([{ faction: 'union', permille: 1000 }]);
     expect(controlOf('charleston')).toEqual([{ faction: 'confederate', permille: 1000 }]);
     for (const r of ['richmond', 'nashville', 'raleigh', 'little_rock']) expect(controlOf(r)).toEqual([]);
-    expect(controlOf('baltimore')).toEqual([{ faction: 'confederate', permille: 400 }, { faction: 'union', permille: 150 }]);
+    // Loyalty never stands in for control: the border states' proposals are not in the table (they wait for a loyalty field).
+    for (const r of ['baltimore', 'delaware', 'bluegrass', 'st_louis', 'frederick_md']) expect(controlOf(r)).toEqual([]);
     const neutral = world.departments.filter((d) => d.faction === null).map((d) => d.id as string).sort();
     expect(neutral).toEqual(['st_arkansas', 'st_delaware', 'st_kentucky', 'st_maryland', 'st_missouri', 'st_north_carolina', 'st_tennessee', 'st_virginia']);
   });
@@ -82,6 +83,25 @@ describe('Union 1861 world v2', () => {
     expect(start.posts.filter((p) => p.holder === null).every((p) => p.unknowns.includes('holder'))).toBe(true);
     expect(start.forceBlocks.filter((b) => b.strength === null).every((b) => b.unknowns.includes('strength'))).toBe(true);
     expect(world.people.filter((p) => p.born === null).every((p) => p.unknowns.includes('born'))).toBe(true);
+  });
+
+  it('holds the cabinet Lincoln has on 5 March, and leaves the Confederate commands formed later to the rule seat', () => {
+    const holder = (id: string) => start.posts.find((p) => p.id === id)?.holder;
+    expect(['us_secretary_state', 'us_secretary_war', 'us_secretary_treasury', 'us_secretary_navy', 'us_secretary_interior', 'us_attorney_general', 'us_postmaster_general'].map(holder)).toEqual([
+      'seward_william_h', 'cameron_simon', 'chase_salmon_p', 'welles_gideon', 'smith_caleb_b', 'bates_edward', 'blair_montgomery',
+    ]);
+    expect(start.posts.some((p) => p.id === 'cs_cmd_pensacola' || p.id === 'cs_cmd_texas')).toBe(false);
+    const creatable = (k: string) => world.vocabularies.postKinds.find((x) => x.id === k)?.creatable;
+    expect([creatable('harbour_command'), creatable('temporary_command'), creatable('navy_squadron')]).toEqual(['directive', 'directive', 'directive']);
+  });
+
+  it('has a Mediterranean box for the squadron there, with one leg to the North Atlantic', () => {
+    const box = world.regions.find((r) => r.id === 'mediterranean')!;
+    expect([box.kind, box.offMapRole]).toEqual(['off_map', 'distant_theatre']);
+    expect(world.edges.filter((e) => e.a === 'mediterranean' || e.b === 'mediterranean').map((e) => [e.id, e.lengthDays, e.capacity])).toEqual([['sea:mediterranean:north_atlantic', 15, 5]]);
+    const ships = start.forceBlocks.filter((b) => b.post === 'us_navy_mediterranean_squadron').map((b) => b.region);
+    expect(ships.length).toBeGreaterThan(0);
+    expect(ships.every((r) => r === 'mediterranean')).toBe(true);
   });
 
   it('records the Sumter labourers beside its garrison', () => {

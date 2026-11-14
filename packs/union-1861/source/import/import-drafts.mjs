@@ -24,7 +24,7 @@ const { makeCitations, citeText } = await import('./registry.mjs');
 const V = await import('./vocab.mjs');
 const { makeResolver } = await import('./places.mjs');
 
-const START = '1861-03-04';
+const START = '1861-03-05';
 const SCENARIO = 'march_1861';
 const cites = makeCitations(repo);
 const report = []; // lines for the hand-over note's tallies
@@ -73,7 +73,7 @@ const keep = (v) => (v === undefined ? '' : v);
 const regionRows = rows('map/regions.csv');
 const ROLE = {
   pacific_coast: 'distant_theatre', panama: 'distant_theatre', britain_canada: 'foreign_power', france_mexico: 'foreign_power',
-  nassau: 'blockade_port', bermuda: 'blockade_port', havana: 'blockade_port', matamoros: 'blockade_port',
+  nassau: 'blockade_port', bermuda: 'blockade_port', havana: 'blockade_port', matamoros: 'blockade_port', mediterranean: 'distant_theatre',
   north_atlantic: 'raider_zone', south_atlantic: 'raider_zone', eastern_seas: 'raider_zone',
 };
 const regions = [];
@@ -93,6 +93,12 @@ for (const r of regionRows) {
     sources: convertSources(r.get('sources'), 'MAP-LANE'),
   });
 }
+// The Mediterranean box (lead ruling after review: the draft has no box for the Mediterranean squadron). Added by this lane.
+regions.push({
+  id: 'mediterranean', name: 'Mediterranean Sea', kind: 'off_map', terrain: '', draftFlags: [], flags: [], role: ROLE.mediterranean, refPoint: '', counties: [], fortMode: '',
+  notes: "Box added by lane 0.3 for the Mediterranean squadron (no such box in the map draft). No reference point: it is a notional box like the draft's other off-map boxes.",
+  sources: convertSources('LANE-0.3 off-map box added after review', 'LANE-0.3'),
+});
 say(`regions: ${regions.length}; off-map boxes without a role: ${regions.filter((r) => r.kind === 'off_map' && r.role === '').map((r) => r.id).join(', ') || 'none'}`);
 write('source/world/regions.csv',
   ['id', 'name', 'kind', 'terrain', 'flags', 'off_map_role', 'weather_zone', 'ref_point', 'counties', 'label_anchor', 'label_spine', 'label_size', 'label_min_zoom', 'sources', 'notes'],
@@ -280,6 +286,12 @@ for (const r of edgeRows) {
     sources: convertSources(srcCell, 'MAP-LANE'), notes: [notes, ...extra].join(' '), obstruction: r.get('obstruction_1861'),
   });
 }
+// The Mediterranean box's one leg: a DESIGN PARAMETER, 15 days at capacity 5, equal to the draft's transatlantic legs from north_atlantic (to britain_canada and france_mexico). No source gives the route.
+edges.push({
+  from: 'mediterranean', to: 'north_atlantic', type: 'sea', line: '', length: '15', capacity: '5', bulk: false, seasonal: '',
+  sources: convertSources('LANE-0.3 off-map leg added after review', 'LANE-0.3'),
+  notes: "Leg added by lane 0.3: a design parameter equal to the draft's transatlantic legs (15 days, capacity 5); no source gives the route to the Mediterranean.", obstruction: '',
+});
 say(`edges: ${edges.length}; rail lines: ${lines.size}; rail edges that name more than one line (first line used): ${multiLine.length}`);
 const ldef = [...lines].sort(([a], [b]) => cmp(a, b));
 write('source/world/rail_lines.csv', ['id', 'name', 'sources', 'notes'],
@@ -303,7 +315,7 @@ const instRows = INSTALLATIONS.map((i) => {
 });
 write('source/world/installations.csv', ['id', 'name', 'region', 'kind', 'fort_water', 'commands_edges', 'sources', 'notes'], instRows);
 
-// Obstructions (scenario): which installation obstructs which water edge on 4 March.
+// Obstructions (scenario): which installation obstructs which water edge at the start.
 const OBS_BY = {
   'pensacola_coast>mobile_bay': 'forts_morgan_gaines',
   'mobile_bay>mississippi_sound': 'forts_morgan_gaines',

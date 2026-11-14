@@ -236,7 +236,7 @@
       {
         "id": "harbour_command",
         "name": "post_kind.harbour_command",
-        "creatable": "appoint",
+        "creatable": "directive",
         "temporary": false
       },
       {
@@ -248,7 +248,7 @@
       {
         "id": "temporary_command",
         "name": "post_kind.temporary_command",
-        "creatable": "appoint",
+        "creatable": "directive",
         "temporary": true
       }
     ],

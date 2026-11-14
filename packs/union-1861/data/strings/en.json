@@ -419,7 +419,6 @@
 "person.tod_david.name": "David Tod",
 "person.toombs_robert_a.name": "Robert Toombs",
 "person.totten_joseph_g.name": "Joseph G. Totten",
-"person.toucey_isaac.name": "Isaac Toucey",
 "person.trumbull_lyman.name": "Lyman Trumbull",
 "person.twiggs_david_e.name": "David E. Twiggs",
 "person.vallandigham_clement_l.name": "Clement L. Vallandigham",
@@ -799,6 +798,7 @@
 "region.macon.name": "Macon and Milledgeville",
 "region.manassas.name": "Manassas Junction",
 "region.matamoros.name": "Matamoros",
+"region.mediterranean.name": "Mediterranean Sea",
 "region.memphis.name": "Memphis",
 "region.michigan_wisconsin.name": "Michigan and Wisconsin",
 "region.mid_atlantic_coast.name": "Mid-Atlantic coast",
@@ -931,5 +931,5 @@
 "region.wv_south.name": "Lewisburg and Gauley",
 "region.yazoo_delta.name": "Yazoo Delta",
 "region.york_adams.name": "York and Gettysburg",
-"scenario.march_1861.name": "March 1861: the inauguration"
+"scenario.march_1861.name": "March 1861: the cabinet confirmed"
 }

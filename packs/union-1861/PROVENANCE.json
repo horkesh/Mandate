@@ -292,6 +292,16 @@
       "licenceReadOn": null
     },
     {
+      "key": "LANE-0.3",
+      "title": "Lane 0.3 import (this lane): design parameters and modelling rules, named as such in notes/lane-0.3-union-data.md",
+      "kind": "own-work",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "notes/lane-0.3-union-data.md (this repository)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
       "key": "LEE-1904",
       "title": "R. E. Lee Jr., Recollections and Letters of General Robert E. Lee (1904)",
       "kind": "secondary",

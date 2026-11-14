@@ -2,7 +2,7 @@
 
 ## Two formats, side by side
 
-- **World format v2 (lane 0.3):** `pack.json`, `PROVENANCE.json`, `strings/en.json`, `source/world/` and `source/scenarios/march_1861/` are the data of record; `data/` is generated from them (`npm run pack:generate -- union-1861`; `npm test` fails when it is stale). One start, 4 March 1861; the pack is a `draft`, so values no source gives are `unknown`. `source/drafts/` holds the three interim drafts the import started from, kept as the archive (columns the format has no field for, such as the people's prewar careers, stay there). `source/import/` is the one-time importer; re-running it overwrites hand edits. Read `notes/lane-0.3-union-data.md` for every rule and judgement.
+- **World format v2 (lane 0.3):** `pack.json`, `PROVENANCE.json`, `strings/en.json`, `source/world/` and `source/scenarios/march_1861/` are the data of record; `data/` is generated from them (`npm run pack:generate -- union-1861`; `npm test` fails when it is stale). One start, 5 March 1861; the pack is a `draft`, so values no source gives are `unknown`. `source/drafts/` holds the three interim drafts the import started from, kept as the archive (columns the format has no field for, such as the people's prewar careers, stay there). `source/import/` is the one-time importer; re-running it overwrites hand edits. Read `notes/lane-0.3-union-data.md` for every rule and judgement.
 - **The M2 pack below** (`scenario.json`, `source/generate.mjs`, `test/union-pack.test.ts`) is what today's kernel plays, from 1 August 1861. It stays until lanes 0.4 and 0.5 replace the M2 theatre.
 
 ## The M2 pack

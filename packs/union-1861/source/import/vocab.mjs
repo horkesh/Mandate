@@ -19,7 +19,10 @@ export const TERRAINS = [
 /**
  * Post kinds are the oob draft README's vocabulary. `creatable` is a design
  * parameter: squadrons by directive (the navy note: squadrons are created
- * during play), departments by directive, expeditions and local commands by
+ * during play), departments by directive, harbour and temporary commands by
+ * directive (the Confederate rule seat creates Pensacola- and Texas-style
+ * commands in play, and a history run reproduces them through the historical
+ * default: lead ruling after review), ships' commands and fort commands by
  * appointment, and everything that exists by law or by a standing structure
  * only at a start.
  */
@@ -37,9 +40,9 @@ const KINDS = [
   ['ship_command', 'appoint'],
   ['marine_corps', 'start_only'],
   ['governor', 'start_only'],
-  ['harbour_command', 'appoint'],
+  ['harbour_command', 'directive'],
   ['state_military', 'start_only'],
-  ['temporary_command', 'appoint'],
+  ['temporary_command', 'directive'],
 ];
 export const POST_KINDS = KINDS.map(([id, creatable]) => ({ id, name: `post_kind.${id}`, creatable, temporary: id === 'temporary_command' }));
 

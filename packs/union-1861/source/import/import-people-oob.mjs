@@ -42,7 +42,7 @@ for (const r of postRows) {
 }
 const postById = new Map(posts.map((p) => [p.id, p]));
 for (const p of posts) {
-  if (p.parent && !postById.has(p.parent)) { p.notes += ` [parent ${p.parent} is not part of the 4 March start]`; p.parent = ''; }
+  if (p.parent && !postById.has(p.parent)) { p.notes += ` [parent ${p.parent} is not part of the 5 March start]`; p.parent = ''; }
   if (!p.region && !/utah|lost/i.test(p.loc) && !['us_navy_african_squadron'].includes(p.id)) say(`POST WITHOUT REGION: ${p.id}: ${p.loc.slice(0, 70)}`);
 }
 say(`posts at the start: ${posts.length} of ${postRows.length}; left out: ${excludedPosts.join('; ')}`);
@@ -58,7 +58,7 @@ for (const s of stateNames) departments.push({ id: V.stateId(s), name: `${s} sta
 const deptFaction = new Map(departments.map((d) => [d.id, d.faction]));
 for (const id of deptUsed) if (!deptFaction.has(id)) say(`DEPARTMENT NOT DEFINED: ${id}`);
 write('source/world/departments.csv', ['id', 'name', 'faction', 'kind', 'sources', 'notes'],
-  departments.map((d) => [d.id, d.name, d.faction, d.kind, 'OOB-LANE department structure of the oob draft', d.kind === 'state_government' && d.faction === '' ? 'uncommitted on 4 March 1861: no faction (modelling rule, lane 0.3 note)' : '']));
+  departments.map((d) => [d.id, d.name, d.faction, d.kind, 'OOB-LANE department structure of the oob draft', d.kind === 'state_government' && d.faction === '' ? 'uncommitted on 5 March 1861: no faction (modelling rule, lane 0.3 note)' : '']));
 
 // ---- tenures -------------------------------------------------------------------
 const ALIAS = { beauregard_peter_g_t: 'beauregard_pierre_g_t', toombs_robert: 'toombs_robert_a', morton_oliver_p: 'morton_oliver_h_p_t' };
@@ -293,7 +293,8 @@ write(scen('standing_orders'), ['id', 'post', 'kind', 'from', 'issued_on', 'summ
 
 // ---- control -------------------------------------------------------------------
 const stateOf = (r) => [...new Set(r.counties.map((c) => c.split(':')[0]))];
-const PROPOSAL = { Maryland: [350, 250], Delaware: [650, 80], Kentucky: [330, 250], Missouri: [450, 200] };
+// Loyalty (union / confederate / neutral-contested) proposals from the research note secession-winter, border states. Lead ruling after review: loyalty never stands in for control, so these are NOT control; they wait for a loyalty field and are kept here and in the rows' notes.
+const LOYALTY = { Maryland: [350, 250, 400], Delaware: [650, 80, 270], Kentucky: [330, 250, 420], Missouri: [450, 200, 350] };
 const control = [];
 const ruleCount = {};
 for (const r of regions.filter((x) => x.kind === 'land' || x.kind === 'key_point')) {
@@ -302,12 +303,12 @@ for (const r of regions.filter((x) => x.kind === 'land' || x.kind === 'key_point
   const st = states.length === 1 ? states[0] : undefined;
   if (['fort_sumter', 'fort_pickens', 'key_west'].includes(r.id)) { shares = 'union:1000'; note = 'Union-held fort in a seceded state (oob draft posts us_fort_sumter, us_fort_pickens, us_fort_taylor)'; ruleCount.fort = (ruleCount.fort ?? 0) + 1; }
   else if (r.id === 'fort_monroe') { shares = 'union:1000'; note = 'Union-held throughout (map draft notes)'; ruleCount.fort = (ruleCount.fort ?? 0) + 1; }
-  else if (r.id === 'baltimore') { shares = 'union:150;confederate:400'; note = '[I] proposal 150/400/450 for Baltimore (research note secession-winter, border states); the neutral-contested 450 is no one\'s'; ruleCount.proposal = (ruleCount.proposal ?? 0) + 1; }
-  else if (st && PROPOSAL[st]) { shares = `union:${PROPOSAL[st][0]};confederate:${PROPOSAL[st][1]}`; note = `[I] proposal for ${st} (research note secession-winter, border states); the neutral-contested remainder is no one's`; ruleCount.proposal = (ruleCount.proposal ?? 0) + 1; }
-  else if (st && V.SECEDED.includes(st)) { shares = 'confederate:1000'; note = `${st} had seceded by 4 March 1861 (research notes: "the seven states")`; ruleCount.seceded = (ruleCount.seceded ?? 0) + 1; }
-  else if (st && V.UNCOMMITTED.includes(st)) { shares = ''; note = `${st}: slave state still in the Union on 4 March and uncommitted; no sourced start control, so no one's (the research note's Virginia proposals name the Blue Ridge and the draft's regions do not)`; ruleCount.uncommitted = (ruleCount.uncommitted ?? 0) + 1; }
+  else if (r.id === 'baltimore') { shares = ''; note = 'Maryland: control is the state government\'s (no faction). [I] loyalty proposal for Baltimore, not control: union 150, confederate 400, neutral-contested 450 (research note secession-winter, border states); it waits for a loyalty field'; ruleCount.stateGovernment = (ruleCount.stateGovernment ?? 0) + 1; }
+  else if (st && LOYALTY[st]) { shares = ''; note = `${st}: control is the state government's (no faction). [I] loyalty proposal, not control: union ${LOYALTY[st][0]}, confederate ${LOYALTY[st][1]}, neutral-contested ${LOYALTY[st][2]} (research note secession-winter, border states); it waits for a loyalty field`; ruleCount.stateGovernment = (ruleCount.stateGovernment ?? 0) + 1; }
+  else if (st && V.SECEDED.includes(st)) { shares = 'confederate:1000'; note = `${st} had seceded by 5 March 1861 (research notes: "the seven states")`; ruleCount.seceded = (ruleCount.seceded ?? 0) + 1; }
+  else if (st && V.UNCOMMITTED.includes(st)) { shares = ''; note = `${st}: slave state still in the Union on 5 March and uncommitted; no sourced start control, so no one's (the research note's Virginia proposals name the Blue Ridge and the draft's regions do not)`; ruleCount.uncommitted = (ruleCount.uncommitted ?? 0) + 1; }
   else if (r.id.startsWith('it_')) { shares = ''; note = 'Indian Territory nations: no sourced start control (the Choctaw Nation declared for the South on 7 February 1861, region notes); no one\'s'; ruleCount.uncommitted = (ruleCount.uncommitted ?? 0) + 1; }
-  else if (st || states.every((s) => s.endsWith('Territory') || !V.SECEDED.includes(s))) { shares = 'union:1000'; note = 'a free state or territory, or the District, in the Union on 4 March 1861'; ruleCount.union = (ruleCount.union ?? 0) + 1; }
+  else if (st || states.every((s) => s.endsWith('Territory') || !V.SECEDED.includes(s))) { shares = 'union:1000'; note = 'a free state or territory, or the District, in the Union on 5 March 1861'; ruleCount.union = (ruleCount.union ?? 0) + 1; }
   else { say(`CONTROL NOT DECIDED: ${r.id} (${states.join(', ')})`); continue; }
   control.push([r.id, shares, note]);
 }
@@ -316,7 +317,7 @@ write(scen('control'), ['region', 'shares', 'notes'], control);
 
 // ---- scenario header, manifest, sources, strings ---------------------------------
 writeJson(`source/scenarios/${SCENARIO}/scenario.json`, {
-  name: 'March 1861: the inauguration',
+  name: 'March 1861: the cabinet confirmed',
   startDate: START,
   seed: 1861,
   factions: [

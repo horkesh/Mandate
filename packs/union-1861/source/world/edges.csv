@@ -930,3 +930,4 @@ id,from,to,type,line,length_days,length_days_back,capacity,break_of_bulk,depth_f
 ,ga_southwest,ga_chattahoochee,river,,2,,2,,,,MAP-LANE,The Chattahoochee by Eufaula to Columbus. [river ≈104 mi; straight line 69 mi between reference points] [seasonal: needs-source] [seasonal: needs-source]
 ,savannah,augusta,river,,3,,2,,,,MAP-LANE,The Savannah to Augusta. [river ≈163 mi; straight line 109 mi between reference points] [seasonal: needs-source] [seasonal: needs-source]
 ,wilmington,cape_fear,river,,2,,2,,,,MAP-LANE,The Cape Fear to Fayetteville. [river ≈117 mi; straight line 78 mi between reference points] [seasonal: needs-source] [seasonal: needs-source]
+,mediterranean,north_atlantic,sea,,15,,5,,,,LANE-0.3 off-map leg added after review,"Leg added by lane 0.3: a design parameter equal to the draft's transatlantic legs (15 days, capacity 5); no source gives the route to the Mediterranean."

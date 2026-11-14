@@ -20,7 +20,7 @@ const STATION_RULES = [
   [/hong kong|shanghai|canton, china/i, 'eastern_seas'],
   [/cape town/i, 'south_atlantic'],
   [/congo|gulf of guinea|montevideo|buenos aires|west coast of africa|coast of brazil/i, 'south_atlantic'],
-  [/messina|naples|malta|mediterranean/i, 'north_atlantic'],
+  [/messina|naples|malta|mediterranean/i, 'mediterranean'],
   [/panama/i, 'panama'],
   [/callao|valparaiso|western mexico|mare island|san francisco|sacramento|salem, oregon|california, oregon/i, 'pacific_coast'],
   [/erie, pennsylvania/i, 'pennsylvania_north'],
