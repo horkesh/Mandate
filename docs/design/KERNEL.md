@@ -1,6 +1,6 @@
-# Kernel (M1)
+# Kernel (M2)
 
-This is how `packages/kernel` is put together after M1. The code is the authority; this page is a map of it.
+This is how `packages/kernel` is put together after M2. It describes the engine before the redesign agreed on 2026-11-14 (fronts, plans, seats); it will be replaced by the foundation design. The code is the authority; this page is a map of it.
 
 ## Modules
 

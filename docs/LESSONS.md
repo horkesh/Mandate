@@ -31,3 +31,13 @@ Enforced by: the CLAUDE.md "Phase" line is updated in the same change that moves
 
 **L8. Background agents can hang silently.**
 Enforced by: give agents small batches and a budget, and have them write results to disk as they go.
+
+## Learned in Mandate
+
+**L9. Git Bash times out on this machine's F: drive.**
+Simple Git Bash commands in `F:\Mandate` hit the 120-second timeout, while PowerShell and the Grep tool return at once (seen by the lead and the AI-players lane, 2026-11-14).
+Enforced by: lane briefs say to use PowerShell and the Grep tool, not Git Bash.
+
+**L10. The lead stated history from memory.**
+While brainstorming, the lead gave unsourced historical claims as fact, at least one of them wrong.
+Enforced by: `docs/LANES.md`: facts about the world come from a research lane, or are marked unverified.

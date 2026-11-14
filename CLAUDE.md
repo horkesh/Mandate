@@ -51,3 +51,11 @@ Hooks: `git config core.hooksPath .githooks`.
 - Git history is the ledger. Don't write changelogs into canon docs.
 - Edit an existing doc rather than creating a new process document.
 - Related repos: `F:\A-War-Without-Victory` (AWWV, the ancestor premise) and `F:\Star Trek` (Starfleet Career, the source of the pack and process patterns). Mine them; don't copy their process weight.
+
+## How work is run
+
+The main session is the lead; work goes to lanes (separate sessions) with written briefs. Read [docs/LANES.md](docs/LANES.md) before opening or closing a lane. The rules that bite most often:
+
+- Facts about the world come from a research lane, never from the lead's memory.
+- Lanes send questions to the lead by `SendMessage`, never through wrap-up, and end with "Findings outside my scope".
+- Verify a lane's claims on disk before reporting them. The lead merges and commits.
