@@ -24,4 +24,12 @@ Answered and moved to decisions:
   - a provenance and licence file for every geographic source;
   - calibration targets as counts of named things; event caps defer rather than drop;
   - LLM seats' typed observations as a health check, built with the first LLM seat.
+- **From the history lane (2026-11-14), all going into the people design:**
+  - victory doesn't reliably make generals bolder, nor defeat more cautious; the cases cut both ways, so keep reputation and nerve as separate stats and let traits decide how a result moves a man (Hooker's "lost confidence" line is a later legend);
+  - the record itself moved (Porter cleared in 1879/1886, Warren in 1882), which history's shadow already settles: the hidden truth is the per-game draw, not the historians' verdict;
+  - observers report to whoever sent them (Dana answered to Stanton, not Lincoln) and can be wrong (his Chickamauga wire), so an observer is an office-holder with bias, not a window on the truth;
+  - Lincoln almost always softened a relief (a quiet department, "at his own request"), so dismissal needs modes with different costs;
+  - Senate failure was usually a nomination lapsing at the session's end, not a rejection vote;
+  - generals' memoirs (Grant's included) are self-serving on promotions and rivals, so they are weak evidence when setting hidden stats.
+  - Checked and closed: no pack data encodes the two premises the lane found unsupported (Pope blaming McDowell; a single date for Butler's 1865 relief).
 - **AI cabinets agree too much.** Studies of simulated team debates find "farcical harmony", so disagreement must come from the kernel's typed reasons and the AI only voices it. Goes into the foundation design's voice layer. (AI-players lane, 2026-11-14.)
