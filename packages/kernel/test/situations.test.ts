@@ -292,6 +292,22 @@ describe('orders an option issues, and delegation (0052)', () => {
     expect(world({ delegableTo: [POST('a_army')], historicalDefault: { delegate: POST('a_army') } })).not.toThrow();
   });
 
+  it('never hands a situation to the other side’s holder, by command or by default, even in a World that skipped validation (S6, the lead’s ruling)', () => {
+    // An adapter World whose own-side office is held by the other side's man: the guard would refuse it, so bypass it.
+    const turned = (base: ReturnType<typeof indexWorld>) => ({ ...base, post: (id: Parameters<typeof base.post>[0]) => (id === POST('a_office') ? { ...base.post(id), holder: P('b_min') } : base.post(id)) });
+    const { world, state } = setup([decision('d')]);
+    const morning = days(world, state, 1).state;
+    const r = tick(turned(world), morning, [{ day: 2, seat: lead, command: { cmd: 'delegate', situation: S('d'), to: POST('a_office') } }]);
+    expect(r.rejections.map((x) => x.reason)).toEqual(['other_side']);
+    expect(r.state.situationStates[S('d')]!.sitDelegate).toBeNull();
+    // By default: a history run takes inaction rather than hand it over.
+    const ruled = setup([decision('h', { historicalDefault: { delegate: POST('a_office') } })], { a_lead: 'rules' });
+    const after = tick(turned(ruled.world), ruled.state, []).state.situationStates[S('h')]!;
+    expect([after.sitDelegate, after.sitDecidedBy]).toEqual([null, 'inaction']);
+    // The control: the unturned World delegates as before.
+    expect(tick(ruled.world, ruled.state, []).state.situationStates[S('h')]!.sitDelegate).toBe(P('a_sec'));
+  });
+
   it('lets the principal delegate by command, only to a listed post', () => {
     const { world, state } = setup([decision('d')]);
     const morning = days(world, state, 1).state;

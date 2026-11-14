@@ -167,6 +167,8 @@ export function delegateCommand(ctx: TickContext, state: State, seat: SeatId, cm
   if (!def.delegableTo.includes(cmd.to)) return { state, reason: 'not_delegable' };
   const holder = ctx.world.post(cmd.to).holder;
   if (holder === null) return { state, reason: 'vacant_post' };
+  // The lead's ruling on standing review S6: never the other side's holder, even in a World that skipped validation.
+  if (ctx.world.person(holder).faction !== def.faction) return { state, reason: 'other_side' };
   fire(ctx, 'situations.delegated');
   return { state: delegateSituation(state, def.id, holder), reason: null };
 }
@@ -315,7 +317,7 @@ function historyDefault(ctx: TickContext, state: State, def: SituationDef, recor
   if (hd === null || 'unsourced' in hd) return applyDecision(ctx, state, def, [], 'inaction');
   if ('delegate' in hd) {
     const holder = ctx.world.post(hd.delegate).holder;
-    if (holder === null) return applyDecision(ctx, state, def, [], 'inaction');
+    if (holder === null || ctx.world.person(holder).faction !== def.faction) return applyDecision(ctx, state, def, [], 'inaction');
     fire(ctx, 'situations.delegated');
     return delegateSituation(state, def.id, holder);
   }
