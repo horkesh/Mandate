@@ -487,7 +487,12 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   const defined = new Map<string, string>();
   for (const { file, table } of defaultTables) {
     for (const key of Object.keys(table)) {
-      if (defined.has(key)) sink.error('duplicate-string', file, key, `key "${key}" is also defined in ${defined.get(key)}`, 'each key in one file');
+      const first = defined.get(key);
+      if (first !== undefined) {
+        // Point at the hand-written file: the generated one is never edited.
+        const [here, other] = file.startsWith('data/') ? [first, file] : [file, first];
+        sink.error('duplicate-string', here, key, `key "${key}" is also defined in ${other}`, 'each key in one file');
+      }
       defined.set(key, file);
     }
   }

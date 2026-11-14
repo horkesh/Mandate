@@ -795,16 +795,13 @@ export function generatePack(files: PackFiles): GenerateResult {
   sink.add(validatePack(pack, locate));
   if (errorsOf(sink.issues).length > 0) return { outputs: new Map(), issues: sink.issues, pack };
 
+  // The schemas admit only integers and plain data, so canonical JSON cannot
+  // fail here; if it ever did, `canonicalJson` throws naming the path.
   const outputs = new Map<string, string>();
-  try {
-    outputs.set(WORLD_FILE, formatGenerated(world));
-    for (const s of scenarios) outputs.set(scenarioFile(s.id), formatGenerated(s));
-    outputs.set(generatedStringsFile(manifest.defaultLocale), formatGenerated(generatedNames));
-    outputs.set(GENERATED_NOTE, generatedNote(manifest, [...outputs.keys()]));
-  } catch (e) {
-    sink.error('not-canonical', WORLD_FILE, '', `generated data is not canonical JSON: ${(e as Error).message}`);
-    return { outputs: new Map(), issues: sink.issues, pack };
-  }
+  outputs.set(WORLD_FILE, formatGenerated(world));
+  for (const s of scenarios) outputs.set(scenarioFile(s.id), formatGenerated(s));
+  outputs.set(generatedStringsFile(manifest.defaultLocale), formatGenerated(generatedNames));
+  outputs.set(GENERATED_NOTE, generatedNote(manifest, [...outputs.keys()]));
   return { outputs, issues: sink.issues, pack };
 }
 

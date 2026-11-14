@@ -175,6 +175,19 @@ export function withFile(path: string, change: (text: string) => string, base: F
   return next;
 }
 
+/** A copy of the fixture without one file. */
+export function withoutFile(path: string, base: FileMap = fixture()): FileMap {
+  const next = new Map(base);
+  if (!next.delete(path)) throw new Error(`fixture has no ${path}`);
+  return next;
+}
+
+/** A copy of the fixture with a file it does not have yet. */
+export function withNewFile(path: string, text: string, base: FileMap = fixture()): FileMap {
+  if (base.has(path)) throw new Error(`fixture already has ${path}`);
+  return new Map([...base, [path, text]]);
+}
+
 /** Replace exactly one occurrence, so a test fails loudly if the fixture changes under it. */
 export function replaceOnce(from: string, to: string): (text: string) => string {
   return (text) => {

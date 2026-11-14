@@ -21,7 +21,7 @@ Status: done on branch `claude/phase0-world-format-c95350`, for the reviewer (00
 
 Dependencies added, pinned exactly: `zod` 4.6.7 (MIT), `intl-messageformat` 12.1.5 (BSD-3-Clause; its two `@formatjs` dependencies are MIT). The licence check passes.
 
-Positive controls: 55 cases in `validate.test.ts` each break the fixture pack one way and assert the check that fires and the file it points at; the CSV reader, the staleness check, the licence allow-list and the schema-to-kernel equality each have their own control.
+Positive controls: 78 cases in `validate.test.ts` each break the fixture pack one way and assert the check that fires and the file it points at, and 8 more break the generated data directly for the checks only committed data can trip (an edge's ends out of order, a fort with no fort facts). The CSV reader, the staleness check, the licence allow-list and the schema-to-kernel equality (whole-key and nested drift) each have their own control. After review I disabled every check site in turn, as the reviewer did, and confirmed a test fails for each (F2).
 
 M2 is untouched: the testbed keeps `scenario.json` for `npm run run:testbed`, and every M2 test passes. The `ids` namespace stays: retiring it means touching M2's plain-string aliases across the old kernel, which is not free.
 

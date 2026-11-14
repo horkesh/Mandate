@@ -1,8 +1,8 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import type { world as w } from '@mandate/kernel';
 import { describe, expect, it } from 'vitest';
-import type { z } from 'zod';
-import { licenceVerdict, publishedSchemas, SCHEMAS_MATCH_KERNEL, staleFiles, WorldSchema } from '../src/index.ts';
+import { z } from 'zod';
+import { licenceVerdict, publishedSchemas, RegionSchema, SCHEMAS_MATCH_KERNEL, staleFiles, WorldSchema } from '../src/index.ts';
 
 const schemasDir = new URL('../schemas/', import.meta.url);
 
@@ -28,6 +28,16 @@ describe("the schemas' output is the kernel's World", () => {
     type Same<A, B> = (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B ? 1 : 2 ? true : false;
     const Drifted = WorldSchema.omit({ people: true });
     // @ts-expect-error a World schema without people is not the kernel's World
+    const drift: Same<DeepReadonly<z.output<typeof Drifted>>, DeepReadonly<w.World>> = true;
+    expect(drift).toBe(true);
+  });
+
+  it('a drift deep inside a record does not match either (positive control, nested)', () => {
+    type DeepReadonly<T> = T extends string | number | boolean | null | undefined ? T : T extends readonly (infer U)[] ? readonly DeepReadonly<U>[] : { readonly [K in keyof T]: DeepReadonly<T[K]> };
+    type Same<A, B> = (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B ? 1 : 2 ? true : false;
+    const looseCitation = z.strictObject({ source: z.string(), at: z.string().nullish() });
+    const Drifted = WorldSchema.extend({ regions: z.array(RegionSchema.extend({ provenance: z.array(looseCitation) })) });
+    // @ts-expect-error a citation whose place may be undefined is not the kernel's Citation
     const drift: Same<DeepReadonly<z.output<typeof Drifted>>, DeepReadonly<w.World>> = true;
     expect(drift).toBe(true);
   });

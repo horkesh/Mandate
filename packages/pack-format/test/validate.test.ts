@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { errorsOf, formatIssue, generatePack, type Issue } from '../src/index.ts';
-import { appendRow, filesOf, fixture, type FileMap, replaceOnce, withFile } from './support/fixture.ts';
+import { errorsOf, formatGenerated, formatIssue, generatePack, type Issue, type PackData, validatePack } from '../src/index.ts';
+import { appendRow, filesOf, fixture, type FileMap, replaceOnce, withFile, withNewFile, withoutFile } from './support/fixture.ts';
 
 const run = (files: FileMap) => generatePack(filesOf(files));
 const kinds = (issues: readonly Issue[]) => [...new Set(issues.map((i) => `${i.severity} ${i.kind}`))].sort();
@@ -25,8 +25,11 @@ describe('the fixture pack', () => {
 const W = 'source/world';
 const S = 'source/scenarios/start';
 const cases: { name: string; files: () => FileMap; kind: string; file: string; severity?: 'error' | 'warning' }[] = [
-  // CSV and cells
-  { name: 'an unknown column', files: () => withFile(`${W}/rail_lines.csv`, replaceOnce('id,name,sources,notes', 'id,name,sources,notes,colour')), kind: 'csv-syntax', file: `${W}/rail_lines.csv` },
+  // Files, CSV and cells
+  { name: 'a header wider than its rows', files: () => withFile(`${W}/rail_lines.csv`, replaceOnce('id,name,sources,notes', 'id,name,sources,notes,colour')), kind: 'csv-syntax', file: `${W}/rail_lines.csv` },
+  { name: 'a JSON file that does not parse', files: () => withFile('pack.json', (t) => t.slice(0, -2)), kind: 'json-syntax', file: 'pack.json' },
+  { name: 'a required table that is missing', files: () => withoutFile(`${W}/edges.csv`), kind: 'missing-file', file: `${W}/edges.csv` },
+  { name: 'a column named twice', files: () => withFile(`${W}/rail_lines.csv`, () => 'id,name,sources,sources\nmain_line,Main Line,DESIGN,DESIGN'), kind: 'duplicate-column', file: `${W}/rail_lines.csv` },
   { name: 'an unknown column (well-formed rows)', files: () => withFile(`${W}/depots.csv`, (t) => t.replace('notes', 'notes,colour').replace(/DESIGN,$/m, 'DESIGN,,red')), kind: 'unknown-column', file: `${W}/depots.csv` },
   { name: 'a missing required column', files: () => withFile(`${W}/rail_lines.csv`, () => 'id,name,notes\nmain_line,Main Line,'), kind: 'missing-column', file: `${W}/rail_lines.csv` },
   { name: 'an unclosed quote', files: () => withFile(`${W}/rail_lines.csv`, appendRow('x,"open,DESIGN,')), kind: 'csv-syntax', file: `${W}/rail_lines.csv` },
@@ -71,6 +74,25 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'a depth on a road', files: () => withFile(`${W}/edges.csv`, replaceOnce(',alpha,beta,road,,2,,3,,,mud', ',alpha,beta,road,,2,,3,,4,mud')), kind: 'water-field', file: `${W}/edges.csv` },
   { name: 'low water on a road', files: () => withFile(`${W}/edges.csv`, replaceOnce(',alpha,beta,road,,2,,3,,,mud', ',alpha,beta,road,,2,,3,,,low_water')), kind: 'season-reason', file: `${W}/edges.csv` },
   { name: 'an unreachable region', files: () => withFile(`${W}/regions.csv`, appendRow('island,Island,land,plain,,,,,,,,,,DESIGN,')), kind: 'unreachable-region', file: `${W}/regions.csv` },
+  { name: 'two roads between one pair under different ids', files: () => withFile(`${W}/edges.csv`, appendRow('second_road,alpha,beta,road,,2,,3,,,,DESIGN,')), kind: 'duplicate-edge', file: `${W}/edges.csv` },
+  { name: 'a return length equal to the length', files: () => withFile(`${W}/edges.csv`, replaceOnce(',beta,stream,river,,1,2,', ',beta,stream,river,,1,1,')), kind: 'redundant-value', file: `${W}/edges.csv`, severity: 'warning' },
+  { name: 'a season reason twice on one edge', files: () => withFile(`${W}/edges.csv`, replaceOnce(',alpha,beta,road,,2,,3,,,mud', ',alpha,beta,road,,2,,3,,,mud;mud')), kind: 'duplicate-entry', file: `${W}/edges.csv` },
+  {
+    name: 'default months out of order',
+    files: () =>
+      withFile('pack.json', (t) => {
+        const m = JSON.parse(t) as { rules: { seasons: { defaultMonths: number[] }[] } };
+        m.rules.seasons[0]!.defaultMonths = [12, 1, 2];
+        return JSON.stringify(m);
+      }),
+    kind: 'season-months',
+    file: 'pack.json',
+  },
+  { name: 'a flag listed twice', files: () => withFile(`${W}/regions.csv`, replaceOnce('alpha,Alpha,land,plain,capital,', 'alpha,Alpha,land,plain,capital;capital,')), kind: 'duplicate-entry', file: `${W}/regions.csv` },
+  { name: 'a label spine of one point', files: () => withFile(`${W}/regions.csv`, replaceOnce('beta,Beta,land,plain,,,,,,,,', 'beta,Beta,land,plain,,,,,,,10 50,')), kind: 'label-hints', file: `${W}/regions.csv` },
+  { name: 'fort facts on a naval base', files: () => withFile(`${W}/installations.csv`, replaceOnce('port_base,Port Base,port,naval_base,,', 'port_base,Port Base,port,naval_base,passage,')), kind: 'fort-fields', file: `${W}/installations.csv` },
+  { name: 'died before born', files: () => withFile(`${W}/people.csv`, replaceOnce('officer,1801,1871', 'officer,1801,1790')), kind: 'date-order', file: `${W}/people.csv` },
+  { name: 'a rank junior to the one before', files: () => withFile(`${W}/people.csv`, replaceOnce('junior:1840;senior:1850-05', 'senior:1840;junior:1850-05')), kind: 'rank-demotion', file: `${W}/people.csv`, severity: 'warning' },
   // scenario starts
   { name: 'control over 1000', files: () => withFile(`${S}/control.csv`, replaceOnce('red:600;blue:300', 'red:600;blue:500')), kind: 'control-sum', file: `${S}/control.csv` },
   { name: 'a land region without control', files: () => withFile(`${S}/control.csv`, replaceOnce('port,blue:1000,', '')), kind: 'control-missing', file: 'data/scenarios/start.json' },
@@ -81,6 +103,23 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'troops aboard a land block', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce(',red_army,alpha,,foot,200', ',red_army,beta,red_1,foot,200')), kind: 'aboard-not-naval', file: `${S}/force_blocks.csv` },
   { name: "a block under the other side's post", files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_1,Red First,block,,r_war,red_army,', 'red_1,Red First,block,,r_war,blue_top,')), kind: 'chain-crosses-factions', file: `${S}/force_blocks.csv` },
   { name: 'a standing order issued after the start', files: () => withFile(`${S}/standing_orders.csv`, replaceOnce('1900-04-01', '1900-06-01')), kind: 'date-order', file: `${S}/standing_orders.csv` },
+  {
+    name: 'a department change before the start',
+    files: () => withNewFile(`${S}/department_changes.csv`, 'post,on,department,parent,sources,notes\nred_fleet,1900-04-01,r_war,red_top,DESIGN,'),
+    kind: 'date-order',
+    file: `${S}/department_changes.csv`,
+  },
+  { name: 'no playable faction', files: () => withFile(`${S}/scenario.json`, replaceOnce('"playable":true', '"playable":false')), kind: 'no-playable-faction', file: `${S}/scenario.json` },
+  {
+    name: 'a faction listed twice in a start',
+    files: () => withFile(`${S}/scenario.json`, replaceOnce('{"faction":"blue",', '{"faction":"red","principal":null,"capital":null,"playable":false},{"faction":"blue",')),
+    kind: 'duplicate-entry',
+    file: `${S}/scenario.json`,
+  },
+  { name: 'two control rows for one region', files: () => withFile(`${S}/control.csv`, appendRow('alpha,red:900,')), kind: 'duplicate-entry', file: `${S}/control.csv` },
+  { name: 'two shares for one faction', files: () => withFile(`${S}/control.csv`, replaceOnce('red:600;blue:300', 'red:600;red:300')), kind: 'duplicate-entry', file: `${S}/control.csv` },
+  { name: 'an obstructed road', files: () => withNewFile(`${S}/obstructions.csv`, 'edge,by,sources,notes\nroad:alpha:beta,,DESIGN,'), kind: 'obstruction-on-land', file: `${S}/obstructions.csv` },
+  { name: 'troops aboard a ship in another region', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_1,Red First,block,,r_war,red_army,beta,,', 'red_1,Red First,block,,r_war,red_army,beta,red_ship,')), kind: 'aboard-elsewhere', file: `${S}/force_blocks.csv` },
   { name: 'two holders for one post', files: () => withFile(`${S}/holders.csv`, appendRow('red_top,red_captain,no,,,DESIGN,')), kind: 'duplicate-holder', file: `${S}/holders.csv` },
   { name: 'a tenure ending before the start', files: () => withFile(`${S}/holders.csv`, appendRow('red_army,red_captain,no,1890,1899-12-31,DESIGN,')), kind: 'tenure-outside-start', file: `${S}/holders.csv`, severity: 'warning' },
   { name: 'a listed scenario with no data', files: () => withFile('pack.json', replaceOnce('"scenarios": [\n    "start"\n  ]', '"scenarios": ["start", "later"]')), kind: 'scenario-missing', file: 'pack.json' },
@@ -88,7 +127,67 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'a vocabulary name with no text', files: () => withFile('strings/en.json', replaceOnce('"trait.bold": "bold",', '')), kind: 'missing-string', file: 'pack.json' },
   { name: 'a broken ICU message', files: () => withFile('strings/en.json', replaceOnce('"trait.bold": "bold"', '"trait.bold": "{n, plural, one {bold"')), kind: 'icu-syntax', file: 'strings/en.json' },
   { name: 'text not in NFC', files: () => withFile(`${W}/rail_lines.csv`, replaceOnce('Main Line', 'Main Line Café')), kind: 'not-nfc', file: 'data/strings/en.json' },
+  { name: 'no hand-written table for the default locale', files: () => withoutFile('strings/en.json'), kind: 'missing-file', file: 'strings/en.json' },
+  { name: 'a listed locale with no table', files: () => withFile('pack.json', replaceOnce('"locales": [\n    "en"\n  ]', '"locales": ["en", "fr"]')), kind: 'missing-string-table', file: 'pack.json', severity: 'warning' },
+  { name: 'a key defined twice', files: () => withFile('strings/en.json', replaceOnce('"pack.name": "Fixture",', '"pack.name": "Fixture", "rail_line.main_line.name": "Again",')), kind: 'duplicate-string', file: 'strings/en.json' },
+  {
+    name: 'a translation of a key the default locale lacks',
+    files: () => withNewFile('strings/fr.json', '{"no.such.key": "rien"}', withFile('pack.json', replaceOnce('"locales": [\n    "en"\n  ]', '"locales": ["en", "fr"]'))),
+    kind: 'stray-string',
+    file: 'strings/fr.json',
+    severity: 'warning',
+  },
 ];
+
+/**
+ * Checks the generator never trips, because it builds those fields itself,
+ * but which guard committed data loaded without sources (`loadPack`): each
+ * breaks the generated fixture pack directly and runs the validator.
+ */
+const direct: { name: string; change: (p: Mutable<PackData>) => void; kind: string; severity?: 'error' | 'warning' }[] = [
+  { name: 'edge ends out of order', change: (p) => swapEnds(p.world.edges[0]!), kind: 'edge-order' },
+  { name: 'a fort without its fort facts', change: (p) => (p.world.installations.find((i) => i.kind === 'fort')!.fort = null), kind: 'fort-fields' },
+  { name: 'edge months out of order', change: (p) => (p.world.edges.find((e) => e.seasons.length > 0)!.seasons[0]!.months = [9, 8]), kind: 'season-months' },
+  { name: 'a field that cannot be unknown', change: (p) => (p.world.people[0]!.unknowns = ['kind']), kind: 'unknowns-field' },
+  { name: 'a field declared unknown that has a value', change: (p) => (p.world.people[0]!.unknowns = ['born']), kind: 'unknowns-field' },
+  {
+    name: 'an unknown centre with citations',
+    change: (p) => (p.world.people.find((x) => x.id === 'red_chief')!.centres.experience = { direction: null, cites: [{ source: 'DESIGN', at: null }] }),
+    kind: 'redundant-value',
+    severity: 'warning',
+  },
+  { name: 'no string table at all for the default locale', change: (p) => p.strings.delete('en'), kind: 'missing-string-table' },
+  { name: 'a string table for a locale the manifest does not list', change: (p) => p.strings.set('de', [{ file: 'strings/de.json', table: {} }]), kind: 'missing-string-table' },
+];
+
+type Mutable<T> = T extends string | number | boolean | null
+  ? T
+  : T extends ReadonlyMap<infer A, infer B>
+    ? Map<A, B>
+    : T extends readonly (infer U)[]
+      ? Mutable<U>[]
+      : { -readonly [K in keyof T]: Mutable<T[K]> };
+
+function swapEnds(e: { a: unknown; b: unknown }) {
+  [e.a, e.b] = [e.b, e.a];
+}
+
+describe('checks that guard committed data (positive controls)', () => {
+  const base = run(fixture()).pack!;
+  for (const c of direct) {
+    it(c.name, () => {
+      const pack = structuredClone(base) as unknown as Mutable<PackData>;
+      expect(validatePack(base).filter((i) => i.kind === c.kind && i.severity === (c.severity ?? 'error'))).toEqual([]);
+      c.change(pack);
+      const hit = validatePack(pack as unknown as PackData).filter((i) => i.kind === c.kind && i.severity === (c.severity ?? 'error'));
+      expect(hit.length).toBeGreaterThan(0);
+    });
+  }
+
+  it('the canonical writer refuses a float rather than writing it', () => {
+    expect(() => formatGenerated({ regions: [{ lengthDays: 1.5 }] })).toThrow();
+  });
+});
 
 describe('every check fires on the fault it is for (positive controls)', () => {
   for (const c of cases) {
