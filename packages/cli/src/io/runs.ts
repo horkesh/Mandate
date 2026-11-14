@@ -33,10 +33,21 @@ export function createRunDir(label: string, now: Date = new Date()): string {
   return dir;
 }
 
-/** Write `name` inside a run folder, atomically. Refuses anything outside `runs/`. */
+/** Whether `path` lies strictly inside `dir`. */
+function isInside(dir: string, path: string): boolean {
+  const rel = relative(resolve(dir), resolve(path));
+  return rel.length > 0 && !rel.startsWith('..') && !isAbsolute(rel);
+}
+
+/**
+ * Write `name` inside a run folder, atomically. Refuses a run folder outside
+ * `runs/`, and any name that leaves its run folder (so one run can never
+ * write into another's).
+ */
 export function writeRunFile(runDir: string, name: string, data: string): string {
+  if (!isInsideRuns(runDir)) throw new Error(`refusing to write outside runs/: ${resolve(runDir)}`);
   const path = resolve(runDir, name);
-  if (!isInsideRuns(path)) throw new Error(`refusing to write outside runs/: ${path}`);
+  if (!isInside(runDir, path)) throw new Error(`refusing to write outside the run folder ${resolve(runDir)}: ${path}`);
   writeFileAtomic(path, data);
   return path;
 }

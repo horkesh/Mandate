@@ -25,7 +25,9 @@ const H0: readonly number[] = [
 
 /** UTF-8 bytes of a JS string. Lone surrogates become U+FFFD, as `TextEncoder` does. */
 export function utf8Bytes(text: string): Uint8Array {
-  const bytes: number[] = [];
+  // At most three bytes per UTF-16 code unit (a surrogate pair is two units, four bytes).
+  const out = new Uint8Array(text.length * 3);
+  let n = 0;
   for (let i = 0; i < text.length; i++) {
     let code = text.charCodeAt(i);
     if (code >= 0xd800 && code <= 0xdbff) {
@@ -40,21 +42,22 @@ export function utf8Bytes(text: string): Uint8Array {
       code = 0xfffd;
     }
     if (code < 0x80) {
-      bytes.push(code);
+      out[n++] = code;
     } else if (code < 0x800) {
-      bytes.push(0xc0 | (code >>> 6), 0x80 | (code & 0x3f));
+      out[n++] = 0xc0 | (code >>> 6);
+      out[n++] = 0x80 | (code & 0x3f);
     } else if (code < 0x10000) {
-      bytes.push(0xe0 | (code >>> 12), 0x80 | ((code >>> 6) & 0x3f), 0x80 | (code & 0x3f));
+      out[n++] = 0xe0 | (code >>> 12);
+      out[n++] = 0x80 | ((code >>> 6) & 0x3f);
+      out[n++] = 0x80 | (code & 0x3f);
     } else {
-      bytes.push(
-        0xf0 | (code >>> 18),
-        0x80 | ((code >>> 12) & 0x3f),
-        0x80 | ((code >>> 6) & 0x3f),
-        0x80 | (code & 0x3f),
-      );
+      out[n++] = 0xf0 | (code >>> 18);
+      out[n++] = 0x80 | ((code >>> 12) & 0x3f);
+      out[n++] = 0x80 | ((code >>> 6) & 0x3f);
+      out[n++] = 0x80 | (code & 0x3f);
     }
   }
-  return Uint8Array.from(bytes);
+  return out.subarray(0, n);
 }
 
 /** SHA-256 digest of `bytes` as 64 lowercase hex characters. */

@@ -44,7 +44,10 @@ describe('runs/ (FOUNDATION 11.8)', () => {
     expect(a).not.toBe(b);
     expect(isInsideRuns(a)).toBe(true);
     expect(existsSync(writeRunFile(a, 'x.txt', 'ok'))).toBe(true);
-    expect(() => writeRunFile(a, '../../../package.json', 'no')).toThrow('outside runs/');
+    expect(() => writeRunFile(a, '../../../package.json', 'no')).toThrow('outside the run folder');
+    expect(() => writeRunFile(a, `../${b.split(/[\\/]/).at(-1)}/x.txt`, 'no')).toThrow('outside the run folder');
+    expect(existsSync(join(b, 'x.txt'))).toBe(false);
+    expect(() => writeRunFile(a, '.', 'no')).toThrow('outside the run folder');
     expect(() => writeRunFile(join(REPO_ROOT, 'packages'), 'x.txt', 'no')).toThrow('outside runs/');
     expect(isInsideRuns(RUNS_ROOT)).toBe(false);
     expect(() => createRunDir('../escape')).toThrow('simple name');

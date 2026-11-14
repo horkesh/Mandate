@@ -56,6 +56,33 @@ describe('canonical JSON', () => {
     }
   });
 
+  it('rejects hidden or computed properties instead of dropping or invoking them (review)', () => {
+    let calls = 0;
+    const getter = { get x() {
+      calls++;
+      return 1;
+    } };
+    const hidden = { a: 1 };
+    Object.defineProperty(hidden, 'b', { value: 2, enumerable: false });
+    const tagged = [1, 2] as number[] & { note?: string };
+    tagged.note = 'x';
+    for (const [value, path, problem] of [
+      [{ g: getter }, '$.g.x', 'accessor property'],
+      [{ h: hidden }, '$.h.b', 'non-enumerable property'],
+      [{ t: tagged }, '$.t', 'non-index property "note"'],
+    ] as const) {
+      try {
+        canonicalJson(value);
+        expect.unreachable(path);
+      } catch (e) {
+        expect(e).toBeInstanceOf(CanonicalError);
+        expect((e as CanonicalError).path).toBe(path);
+        expect((e as CanonicalError).problem).toContain(problem);
+      }
+    }
+    expect(calls).toBe(0);
+  });
+
   it('rejects cycles but accepts shared references', () => {
     const shared = { x: 1 };
     expect(canonicalJson({ a: shared, b: shared })).toBe('{"a":{"x":1},"b":{"x":1}}');

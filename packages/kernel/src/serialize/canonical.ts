@@ -95,11 +95,26 @@ function write(value: unknown, path: string, out: string[], ancestors: object[])
   if (ancestors.includes(obj)) throw new CanonicalError(path, 'cycle');
   ancestors.push(obj);
 
+  if (Object.getOwnPropertySymbols(obj).length > 0) throw new CanonicalError(path, 'symbol keys');
+  // Every own property is written, so nothing may be hidden from the text:
+  // no non-enumerable properties, no extra array properties, and no getters
+  // or setters on objects (which would run code, or silently drop a value).
+  const names = Object.getOwnPropertyNames(obj);
+
   if (Array.isArray(obj)) {
+    // An intact array's own names are its indices plus `length`. Anything
+    // else is a hole or a non-index property. (An accessor on an index needs
+    // Object.defineProperty, which deterministic packages may not call.)
+    if (names.length !== obj.length + 1) {
+      for (let i = 0; i < obj.length; i++) {
+        if (!Object.prototype.hasOwnProperty.call(obj, i)) throw new CanonicalError(`${path}[${i}]`, 'hole in array');
+      }
+      const extra = names.find((n) => n !== 'length' && !/^(0|[1-9]\d*)$/.test(n));
+      throw new CanonicalError(path, `array has a non-index property "${extra ?? '?'}"`);
+    }
     out.push('[');
     for (let i = 0; i < obj.length; i++) {
       if (i > 0) out.push(',');
-      if (!Object.prototype.hasOwnProperty.call(obj, i)) throw new CanonicalError(`${path}[${i}]`, 'hole in array');
       write(obj[i], `${path}[${i}]`, out, ancestors);
     }
     out.push(']');
@@ -109,15 +124,22 @@ function write(value: unknown, path: string, out: string[], ancestors: object[])
       const name = (obj as { constructor?: { name?: string } }).constructor?.name ?? 'unknown';
       throw new CanonicalError(path, `${name} is not a plain object`);
     }
-    if (Object.getOwnPropertySymbols(obj).length > 0) throw new CanonicalError(path, 'symbol keys');
     const record = obj as Record<string, unknown>;
-    const keys = Object.keys(record).sort(strictCompare);
+    const keys = Object.keys(record);
+    if (keys.length !== names.length) {
+      const hidden = names.find((n) => !Object.prototype.propertyIsEnumerable.call(record, n));
+      throw new CanonicalError(`${path}.${hidden ?? '?'}`, 'non-enumerable property');
+    }
+    keys.sort(strictCompare);
     out.push('{');
-    keys.forEach((key, i) => {
+    for (let i = 0; i < keys.length; i++) {
+      const key = keys[i]!;
+      const d = Object.getOwnPropertyDescriptor(record, key)!;
+      if (d.get || d.set) throw new CanonicalError(`${path}.${key}`, 'accessor property');
       if (i > 0) out.push(',');
       out.push(JSON.stringify(key), ':');
-      write(record[key], `${path}.${key}`, out, ancestors);
-    });
+      write(d.value, `${path}.${key}`, out, ancestors);
+    }
     out.push('}');
   }
 

@@ -3,7 +3,7 @@
  * same folder, flush it to disk, then rename it over the target. A reader
  * sees the old file or the new one, never half of one, even if the process
  * dies mid-write. This is the only module in the CLI that writes files; a
- * test enforces that (`test/io-boundary.test.ts`).
+ * test enforces that (`test/io.test.ts`).
  */
 import { randomBytes } from 'node:crypto';
 import { closeSync, fsyncSync, mkdirSync, openSync, renameSync, rmSync, writeSync } from 'node:fs';
