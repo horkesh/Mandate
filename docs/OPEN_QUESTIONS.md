@@ -74,6 +74,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - From lane 0.6: options that issue orders need a kernel path, since the kernel takes orders only from a principal, by courier, special messenger or wire. The ruling goes into decision 0052 (the lead is writing it).
 - Event caps defer rather than drop (AWWV lane; also listed above).
 - Authors follow `SENSITIVE-HISTORY.md` over the older gate tables in the secession (6.8), union-politics and confederate-side (4.7) notes (0046).
+- FOUNDATION section 10 should gain the `situationFlags` row (chain and wait state) beside `situationStates`, and the tick's phase 3b (lane 0.7's finding 2; FOUNDATION content, so the lead's or the standing reviewer's edit, not the steward's).
 - Test fixtures under `packages/` use the fictional testbed register, never Civil War terms (`check:boundary` flags them).
 - 0042 parks an optional "draft the address with advisers" prologue until the March situations exist.
 - Scenario setup: whether S33, compensated emancipation (proposed 6 March 1862), is already resolved at the demo's 8 March start is a call for the demo scenario's author (gate review of the presentation design).
@@ -87,6 +88,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - Phase 0's day tick must hash each day with `canonicalHash` (lane 0.5 or 0.8); M2 hashes per turn.
 - From lane 0.4: its performance test has about 1.8x headroom on Windows CI (8.2 ms against a 15 ms bound). If it flakes, raise the bound; do not skip the test (lane 0.8 and CI).
 - The liveness gate is a skeleton (12 M2 mechanics at minFires 0); lane 0.8 sets the Phase 0 bands.
+- From lane 0.7: the runner declares `TICK_MECHANICS` (the seats layer's and the situations phase's). In the 120-day testbed run six situations fire, one is delegated and decided by its holder, and one option issues an order; waiting, lapse, resurfacing and changing options fire only in the kernel tests, since the rule-driven principal takes defaults at once. Lane 0.8 sets their bands for a run that exercises them.
 - From lane 0.9's planner spike: the liveness gate counts scoring terms over plan edits as well as drafts, or `haste` reads as dead.
 - The testbed reference run never fires audience, honour or pressure verbs, rivals or broken promises, so the M2 people core is barely exercised headless; it needs a script or rule seat that does (also for Phase 1's people recast).
 
