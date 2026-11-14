@@ -25,7 +25,8 @@ import type { BeliefView, GoalView, ReportView, SeatView } from './types.ts';
 export interface ViewCache {
   readonly reports: WeakMap<KnownReport, ReportView>;
   readonly lists: WeakMap<SeatKnowledge, readonly ReportView[]>;
-  readonly beliefs: Map<SeatId, { readonly knowledge: SeatKnowledge; readonly beliefs: Readonly<Record<RegionId, BeliefView>> }>;
+  /** Beliefs depend on what he holds and on how he reads it, so both are in the key (review F4). */
+  readonly beliefs: Map<SeatId, { readonly knowledge: SeatKnowledge; readonly perception: number; readonly beliefs: Readonly<Record<RegionId, BeliefView>> }>;
   readonly goals: WeakMap<StandingGoal, GoalView>;
   readonly views: Map<SeatId, SeatView>;
 }
@@ -104,13 +105,13 @@ export function viewFor(world: IndexedWorld, state: State, seat: SeatId, cache: 
   }
 
   let beliefs = cache.beliefs.get(seat);
-  if (beliefs === undefined || beliefs.knowledge !== knowledge) {
-    const bias = perceptionBias(world.rules.traits, person).permille;
+  const bias = perceptionBias(world.rules.traits, person).permille;
+  if (beliefs === undefined || beliefs.knowledge !== knowledge || beliefs.perception !== bias) {
     const out: Record<RegionId, BeliefView> = {};
     for (const [region, { report, value }] of latestEnemyClaims(knowledge)) {
       out[region] = freeze({ value: perceived(value, bias), asOfDay: report.knownBody.reportDay, source: report.id });
     }
-    beliefs = { knowledge, beliefs: freeze(out) };
+    beliefs = { knowledge, perception: bias, beliefs: freeze(out) };
     cache.beliefs.set(seat, beliefs);
   }
 

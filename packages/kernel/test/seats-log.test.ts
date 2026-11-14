@@ -14,7 +14,7 @@ import { deepFreeze } from '../src/tick/freeze.ts';
 import { createState } from '../src/tick/setup.ts';
 import { SEATS_MECHANICS, tick } from '../src/tick/tick.ts';
 import { createViewCache, viewFor } from '../src/view/view.ts';
-import { indexedFixture, P } from './support/comms-fixture.ts';
+import { indexedFixture, P, R } from './support/comms-fixture.ts';
 import { order, scriptedSeats } from './support/test-seats.ts';
 
 const lead = seatIdFor(P('a_lead'));
@@ -41,7 +41,7 @@ function game(days: number, opts: { freeze?: boolean; worldOver?: Parameters<typ
 }
 
 describe('the command log is the truth (0015)', () => {
-  it('replays a log from the start to every day’s hash, without asking a seat', () => {
+  it('replays a log from the start to every dayâ€™s hash, without asking a seat', () => {
     const { world, start, log, hashes } = game(80);
     expect(log.length).toBeGreaterThan(3);
     expect(replay(world, start, log, 80).hashes).toEqual(hashes);
@@ -56,7 +56,7 @@ describe('the command log is the truth (0015)', () => {
     expect(again[39]!.hash).not.toBe(hashes[39]!.hash);
   });
 
-  it('saves State and the log, with both hashes, and resumes to the continuous run’s hash', () => {
+  it('saves State and the log, with both hashes, and resumes to the continuous runâ€™s hash', () => {
     const { world, start, log, hashes, state } = game(60);
     const mid = replay(world, start, log, 25);
     const text = encodeSave({ worldHash: canonicalHash(world.world), state: mid.state, log: log.filter((e) => e.day <= 25) });
@@ -128,6 +128,23 @@ describe('the view (decision 0035: stable references; FOUNDATION section 8: no t
     expect(Object.isFrozen(v2) && Object.isFrozen(v2.reports) && Object.isFrozen(v2.reports[0])).toBe(true);
   });
 
+  it('rebuilds a cached belief when the readerâ€™s perception changes, though his knowledge did not (review F4, positive control)', () => {
+    const timid = indexedFixture();
+    const steadier = indexedFixture({ persons: { a_gen: { boldness: 500, values: ['duty'] } } });
+    const state = playDays(timid, createState(timid, { seed: 4 }), scriptedSeats(), 3).state;
+    const gen = seatIdFor(P('a_gen'));
+    const bf = R('b_front');
+    const cache = createViewCache();
+    const before = viewFor(timid, state, gen, cache).enemyBeliefs;
+    const after = viewFor(steadier, state, gen, cache).enemyBeliefs;
+    const fresh = viewFor(steadier, state, gen).enemyBeliefs;
+    expect(before[bf]!.value).toBe(3840);
+    expect(after[bf]!.value).toBe(fresh[bf]!.value);
+    expect(after[bf]!.value).toBe(1600);
+    // Unchanged perception and knowledge: still the very same object.
+    expect(viewFor(steadier, state, gen, cache).enemyBeliefs).toBe(after);
+  });
+
   it('never shows a truth term, a trait or a message in transit', () => {
     const { world, state } = game(30);
     for (const seat of Object.keys(state.seatAssignments) as (keyof State['seatAssignments'])[]) {
@@ -153,8 +170,8 @@ describe('the view (decision 0035: stable references; FOUNDATION section 8: no t
   });
 });
 
-describe('separate streams (0041): one message’s weather never shifts another’s', () => {
-  it('an extra report leaves every other message’s arrival unchanged', () => {
+describe('separate streams (0041): one messageâ€™s weather never shifts anotherâ€™s', () => {
+  it('an extra report leaves every other messageâ€™s arrival unchanged', () => {
     const world = indexedFixture();
     const base = createState(world, { seed: 7 });
     const a = playDays(world, base, scriptedSeats({ a: { 1: [order('a_army', 'hold', null, 'courier', true)] } }), 12, { freeze: true });
@@ -172,7 +189,7 @@ describe('separate streams (0041): one message’s weather never shifts another�
   });
 });
 
-describe('the deep-freeze backstop (0044’s candidate)', () => {
+describe('the deep-freeze backstop (0044â€™s candidate)', () => {
   it('a whole game runs with State frozen after every phase', () => {
     expect(() => game(90, { freeze: true })).not.toThrow();
   });
