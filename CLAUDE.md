@@ -41,6 +41,7 @@ npm run check:licences  # dependency-licence check over every lockfile
 npm run demo             # headless demo: three proxies receive the same directive
 npm run run:testbed      # M1: a scripted 20-turn headless game on the fictional testbed pack
 npm run run:headless       # Phase 0 headless runner on the new kernel
+npm run run:seats          # Phase 0 seats runner (rule seats, knowledge, command log)
 npm run pack:generate -- <pack>   # (also pack:validate, pack:schemas) world format v2: generate, validate and publish schemas for a pack
 npm run play -- union-1861       # M2: play Lincoln in the text console (default pack: testbed)
 npm run run:pack -- union-1861 75  # watch the generic scripted leader play a pack
