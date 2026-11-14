@@ -80,10 +80,3 @@ export function flagsIn(c: Condition): string[] {
   return [];
 }
 
-/** Whether a condition is a date and nothing else (gate B2: allowed only for a labelled railroad). */
-export function isDateOnly(c: Condition): boolean {
-  if ('all' in c) return c.all.length > 0 && c.all.every(isDateOnly);
-  if ('any' in c) return c.any.length > 0 && c.any.every(isDateOnly);
-  if ('not' in c) return isDateOnly(c.not);
-  return 'dayAtLeast' in c;
-}

@@ -203,6 +203,11 @@ export function stringKeysOf(def: SituationDef): { readonly key: string; readonl
   return keys;
 }
 
+/** Whether a condition holds on an empty State and an empty knowledge, on the last day there is (gate B2). */
+export function holdsOnNothing(c: Condition): boolean {
+  return phase0.holds(c, { state: phase0.emptyState(), day: Number.MAX_SAFE_INTEGER, situation: null, knowledge: { knownReports: [] } });
+}
+
 function walk(c: Condition, visit: (c: Condition) => void): void {
   visit(c);
   if ('all' in c) c.all.forEach((x) => walk(x, visit));
@@ -253,8 +258,9 @@ export function validateSituations(items: readonly { readonly file: string; read
     }
     if (def.kind === 'decision' && def.effects.length > 0) err('situation-decision-effects', 'effects', 'a decision has effects of its own', "effects on its options, its locked costs or its inaction outcome");
 
-    // B2: a cause in state, not a date alone, unless a labelled railroad.
-    if (phase0.isDateOnly(def.event) && def.railroad === null) err('situation-date-cause', 'event', 'the cause is a date alone', 'a cause in State, or a labelled railroad (0028, 0040; gate B2)');
+    // B2: a cause in State, not a date alone, unless a labelled railroad. Evaluated, not parsed (review S6): a cause that
+    // would hold with nothing in State but a far date is a date or vacuous, however it is written (a date inside `any`, a bare `not`).
+    if (holdsOnNothing(def.event) && def.railroad === null) err('situation-date-cause', 'event', 'the cause holds with nothing in State but the date', 'a cause in State, or a labelled railroad (0028, 0040; gate B2)');
 
     // 0041: options in a fixed display order, by a neutral key.
     const keys = def.options.map((o) => o.displayKey);

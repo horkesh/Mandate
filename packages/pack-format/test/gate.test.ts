@@ -70,6 +70,11 @@ describe('situations in the pack format', () => {
   it('B2: a cause in State, or a labelled railroad', () => {
     fires(editJson(sit('eastwatch_stalls'), (s) => (s.event = { dayAtLeast: 30 })), 'situation-date-cause');
     expect(kinds(editJson(sit('eastwatch_stalls'), (s) => ((s.event = { dayAtLeast: 30 }), (s.railroad = 'the testbed opening'))))).not.toContainEqual(expect.stringContaining('situation-date-cause'));
+    // Review S6: a date hidden inside `any`, and a cause true from the first day, are caught too.
+    fires(editJson(sit('eastwatch_stalls'), (s) => (s.event = { any: [{ dayAtLeast: 40 }, { flag: 'fen_arrivals' }] })), 'situation-date-cause');
+    fires(editJson(sit('eastwatch_stalls'), (s) => (s.event = { not: { flag: 'fen_arrivals' } })), 'situation-date-cause');
+    // A date joined to a real cause by `all` is fine.
+    expect(kinds(editJson(sit('eastwatch_stalls'), (s) => (s.event = { all: [{ dayAtLeast: 40 }, { flag: 'fen_arrivals' }] })))).not.toContainEqual(expect.stringContaining('situation-date-cause'));
   });
 
   it('0041: options in ascending display order, each with its own key', () => {
