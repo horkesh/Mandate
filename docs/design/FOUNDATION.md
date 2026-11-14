@@ -57,6 +57,7 @@ Accepted features from the brainstorm: finding your Grant (0020); the night of t
 
 The games survey compared hexes, AGEoD-style regions, point-to-point graphs and free movement, and recommends regions on top of a typed graph. AWWV's polygon-derived adjacency produced phantom fronts and dropped real links, so the graph is authored, not derived from geometry.
 
+- **Extent, size and sources** are set by 0031: the whole war at full resolution from southern Pennsylvania to the Gulf and the Atlantic to eastern Texas, coarse regions at the western and northern edges, off-map boxes beyond; about 250 regions including 25–40 key points; boundaries from the Newberry atlas, rail traced from public-domain Library of Congress maps, rivers and terrain from Natural Earth and USGS, with a provenance file per pack.
 - **Regions.** Irregular, drawn to real terrain, numbering in the hundreds (AGEoD's 3,000+ is the commonest complaint). Navigable rivers and sea lanes can be their own regions. A region's terrain and starting values are World data; its population, loyalty and supply value change during play and are State (section 10).
 - **Edges.** Typed links between regions: road, rail, river, sea. Each has a length in days for a division and a capacity (World). Railways are edges, not region attributes, so "cut the line at the junction" is a real thing: an edge's **condition** (damaged, repaired) is State with one writer.
 - **Depots and sources.** Supply sources (states' rail hubs, ports) and depots sit on regions.
@@ -268,6 +269,9 @@ Lanes, sized from `docs/LANES.md`:
 | 0.6 | Seats, knowledge per seat with pruning, messages in transit (kernel-owned latency), the player-visible boundary, the command log and replay; the rule-seat package with standing-goal seats | 0.1 | Opus, high |
 | 0.7 | Situations schema with historical default and staff recommendation enforced by test, and the sensitive-history placement checklist | 0.1 | Opus, high |
 | 0.8 | Headless runner with liveness, hashes and resume check; the Phase 0 done check | 0.3–0.7 | Sonnet, high |
+| 0.9 | Planner spike: design and prototype candidate-plan drafting (including a two-commander pincer and a supply-aware route) on the testbed graph; report what works (0030) | 0.4 | Opus, high |
+
+Lane 0.2 also covers several scenario starts per pack, published schemas with readable validation errors, and string tables for all player text (0030). The Union data in lane 0.3 starts at the March 1861 inauguration (0028), and the world format reserves state fields and owners for weather, fortification and raids (0029).
 
 Sequence within the limit of four lanes, two of them moving the simulation (reviewer lanes count, and run after their implementer):
 1. 0.1, then its reviewer.
@@ -275,7 +279,7 @@ Sequence within the limit of four lanes, two of them moving the simulation (revi
 3. 0.4, then 0.5 (simulation), with 0.3's data entry alongside.
 4. 0.8.
 
-**Phase 1, the war machine** (planned after Phase 0 lands): the kernel planner and plan selection; operations; combat with breakdowns and shaded reports; the people core recast for goals, plans and edits; stats, assessment and the officer pool; politics, the press and the 1862 midterms; the economy; attention. Phase 1 is done when a headless history run of 1861–62 reaches the midterms with checkpoints in plausible bands. **Phase 2** is the desk and the staff map. Its done check is set when Phase 1 lands; the working version is that the owner plays Lincoln through 1861–62 at the desk, on the staff map, and finds plan review and the audience worth playing.
+**Phase 1, the war machine** (planned after Phase 0 lands): the kernel planner and plan selection; operations; combat with breakdowns and shaded reports; the people core recast for goals, plans and edits; stats, assessment and the officer pool; politics, the press and the 1862 midterms; the economy; attention. Phase 1 is done when a headless history run from March 1861 reaches the 1862 midterms with checkpoints in plausible bands, **and** the owner can play the core loop in a text console: plan review, arrow edits, audiences and dispatches (0030). **Phase 2** is the desk and the staff map. Its done check is set when Phase 1 lands; the working version is that the owner plays Lincoln through 1861–62 at the desk, on the staff map, and finds plan review and the audience worth playing.
 
 ## 13. Open after this design
 

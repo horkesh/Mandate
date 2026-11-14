@@ -41,3 +41,7 @@ Enforced by: lane briefs say to use PowerShell and the Grep tool, not Git Bash. 
 **L10. The lead stated history from memory.**
 While brainstorming, the lead gave unsourced historical claims as fact, at least one of them wrong.
 Enforced by: `docs/LANES.md`: facts about the world come from a research lane, or are marked unverified.
+
+**L11. The lead assumed a refusal still held.**
+After the app refused once to start a session over Remote Control, the lead silently ran the next research lanes as subagents without retrying. The next attempt succeeded.
+Enforced by: `docs/LANES.md`: retry on the next turn, and ask the owner before substituting a subagent.

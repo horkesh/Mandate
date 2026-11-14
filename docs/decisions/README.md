@@ -20,13 +20,18 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0014](0014-licence.md) | Source-available under the PolyForm Noncommercial licence | accepted |
 | [0015](0015-seats.md) | Every person is a seat; rules first; the command log is the truth | accepted |
 | [0016](0016-goals-plans-and-arrows.md) | Goals, plans and arrow edits: places are targeted only through a person | accepted; amended by 0026 |
-| [0017](0017-real-time-with-pause.md) | Real time with pause on a daily tick | accepted; amended by 0026 |
-| [0018](0018-civil-war-scope.md) | The American Civil War, 1861–65; the engine's promise is wars with fronts | accepted |
-| [0019](0019-regions-over-a-typed-graph.md) | The map is regions over a typed graph; fronts and pockets are derived | accepted |
+| [0017](0017-real-time-with-pause.md) | Real time with pause on a daily tick | superseded by 0027 |
+| [0018](0018-civil-war-scope.md) | The American Civil War, 1861–65; the engine's promise is wars with fronts | accepted; amended by 0028 |
+| [0019](0019-regions-over-a-typed-graph.md) | The map is regions over a typed graph; fronts and pockets are derived | accepted; extended by 0031 |
 | [0020](0020-people-hidden-stats-and-assessment.md) | Generals have hidden stats that battle changes; the player sees an assessment | accepted; amended by 0026 |
 | [0021](0021-sensitive-history-gate.md) | A sensitive-history gate; no Lost Cause framing; enslaved people as agents | accepted; amended by 0026 |
 | [0022](0022-voice-is-never-state.md) | AI text is voice, never state | accepted |
-| [0023](0023-the-home-front.md) | The home front: a light economy through people, elections, and history as situations | accepted; amended by 0026 |
+| [0023](0023-the-home-front.md) | The home front: a light economy through people, elections, and history as situations | accepted; amended by 0026, 0028 |
 | [0024](0024-the-wars-with-fronts-test.md) | The engine test is "wars with fronts", not three settings | accepted |
 | [0025](0025-attention-under-real-time.md) | The president's attention is a weekly budget | accepted |
 | [0026](0026-foundation-review-revisions.md) | Revisions after the foundation review | accepted |
+| [0027](0027-variable-weekly-turns.md) | Variable turns of up to a week on a daily tick | accepted |
+| [0028](0028-start-victory-navy.md) | The campaign starts at the inauguration; two national wills decide it; the navy works through people | accepted |
+| [0029](0029-seasons-sieges-raids-confederacy.md) | Seasons through commanders, sieges as operations, raids and insurgency, and a Confederacy on the same machinery | accepted |
+| [0030](0030-foundation-commitments.md) | Foundation commitments: scenario starts, packs as the modding format, string tables, playable at every phase, a planner spike | accepted |
+| [0031](0031-map-extent-size-sources.md) | The map covers the whole war at about 250 regions, built from licence-clean sources | accepted |

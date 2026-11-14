@@ -1,6 +1,6 @@
 # 0018: The American Civil War, 1861–65; the engine's promise is wars with fronts
 
-Status: accepted (2026-11-14). The owner: "OK civil war it is", playing Lincoln, Union first. Supersedes 0004. Design: `docs/design/FOUNDATION.md` section 3.
+Status: accepted (2026-11-14). The owner: "OK civil war it is", playing Lincoln, Union first. Supersedes 0004. Amended by 0028 (the campaign starts at the March 1861 inauguration). Design: `docs/design/FOUNDATION.md` section 3.
 
 ## Context
 

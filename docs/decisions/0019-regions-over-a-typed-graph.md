@@ -1,6 +1,6 @@
 # 0019: The map is regions over a typed graph; fronts and pockets are derived
 
-Status: accepted (2026-11-14). The owner asked "Hexes? Something like AGEoD?"; the games survey and the AWWV-architecture note both recommend this model. Extends 0013 (how the map is drawn) with what the map is. Design: `docs/design/FOUNDATION.md` section 4.
+Status: accepted (2026-11-14). The owner asked "Hexes? Something like AGEoD?"; the games survey and the AWWV-architecture note both recommend this model. Extends 0013 (how the map is drawn) with what the map is. Extended by 0031 (extent, size, sources). Design: `docs/design/FOUNDATION.md` section 4.
 
 ## Context
 

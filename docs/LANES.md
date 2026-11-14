@@ -7,6 +7,7 @@ Adapted from AWWV's orchestrator and its founding brief for this project (2026-1
 - **The owner** makes design decisions and takes the lead's recommendation by default (see `CLAUDE.md`). Only the owner sees a lane's wrap-up box.
 - **The lead** is the main Mandate session. It frames work, opens lanes, answers their questions, collects results, verifies, merges and commits. It does not redo a lane's investigation. It does small, reversible work directly.
 - **A lane** is a separate session started from the lead, with its own brief. Work that ends in a branch, a document of its own or anything the owner may want to watch or steer is a lane. A quick read-only lookup whose result the lead needs this turn can be a subagent instead.
+- **If the app refuses to start a session** (it has done so on some turns while the owner was on Remote Control), retry on the next turn. Never assume a refusal still holds. If it keeps refusing, tell the owner and ask before running the work as a subagent instead (lesson L11).
 
 ## The brief
 
@@ -50,7 +51,8 @@ Every lane gets a written brief containing:
 
 1. Ask it once more for anything it noticed outside its scope, and triage each finding.
 2. **Verify before believing.** Check its claims on disk: `git status`, `git diff --stat`, the test run with its exit status, screenshots for UI.
-3. Zero-loss check: nothing uncommitted left in its worktree, no unique commits stranded on a branch, then archive it.
+3. Zero-loss check: nothing uncommitted left in its worktree, no unique commits stranded on a branch.
+4. **Archive it** as soon as the check passes, without asking (the owner's standing instruction, 2026-11-14). Archiving is reversible.
 
 ## Zero work loss
 
