@@ -1,0 +1,11 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"additionalProperties": false,
+"properties": {
+"formatVersion": {"const":2,"type":"number"},
+"sources": {"items":{"additionalProperties":false,"properties":{"basis":{"type":["string","null"]},"copyUsed":{"minLength":1,"type":"string"},"key":{"pattern":"^[A-Za-z0-9][A-Za-z0-9 ._:/()-]*$","type":"string"},"kind":{"enum":["primary","secondary","pointer","own-work"],"type":"string"},"licence":{"minLength":1,"type":"string"},"licencePage":{"type":["string","null"]},"licenceReadOn":{"type":["string","null"]},"title":{"minLength":1,"type":"string"}},"required":["key","title","kind","licence","basis","copyUsed","licencePage","licenceReadOn"],"type":"object"},"type":"array"}
+},
+"required": ["formatVersion","sources"],
+"title": "Mandate pack sources and licences (PROVENANCE.json), format 2",
+"type": "object"
+}
