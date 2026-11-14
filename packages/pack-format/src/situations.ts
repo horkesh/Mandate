@@ -14,7 +14,7 @@
  */
 import { phase0 } from '@mandate/kernel';
 import { z } from 'zod';
-import { readJson, type PackFiles } from './generate.ts';
+import { listOptional, readJson, type PackFiles } from './generate.ts';
 import { type Issue, IssueSink } from './issues.ts';
 import { historicalDate, idOf, stringKey, termId } from './schemas.ts';
 import type { PackData } from './validate.ts';
@@ -180,7 +180,7 @@ export const SITUATION_SCHEMA_MATCHES_KERNEL: { situation: Same<DeepReadonly<z.o
 /** Read every situation in `situations/` (not `drafts/`), shape-checked. */
 export function readSituations(files: PackFiles, sink: IssueSink): { readonly file: string; readonly def: SituationDef }[] {
   const out: { file: string; def: SituationDef }[] = [];
-  for (const name of [...files.files(SITUATIONS_DIR)].sort()) {
+  for (const name of [...listOptional((p) => files.files(p), SITUATIONS_DIR)].sort()) {
     const file = `${SITUATIONS_DIR}/${name}`;
     if (!name.endsWith('.json')) {
       sink.error('unknown-table', file, '', `"${name}" is not a situation file, so it would be ignored`, 'a <situation-id>.json file');
@@ -191,7 +191,7 @@ export function readSituations(files: PackFiles, sink: IssueSink): { readonly fi
     if (name !== `${def.id}.json`) sink.error('situation-file-name', file, 'id', `the file holds situation "${def.id}"`, `the file named ${def.id}.json`);
     out.push({ file, def });
   }
-  for (const folder of [...files.folders(SITUATIONS_DIR)].sort()) {
+  for (const folder of [...listOptional((p) => files.folders(p), SITUATIONS_DIR)].sort()) {
     if (folder !== 'drafts') sink.error('unknown-table', `${SITUATIONS_DIR}/${folder}`, '', `"${folder}/" is a folder the loader does not read`, 'situation files, and drafts/ for drafts the loader never reads');
   }
   return out;

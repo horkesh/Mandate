@@ -6,7 +6,7 @@
  */
 import type { phase0 } from '@mandate/kernel';
 import { checkGate, GATE_DIR, localeStrings, readGate, type GateData } from './gate.ts';
-import type { PackFiles } from './generate.ts';
+import { listOptional, type PackFiles } from './generate.ts';
 import { errorsOf, type Issue, IssueSink } from './issues.ts';
 import { readSituations, SITUATIONS_DIR, validateSituations } from './situations.ts';
 import type { PackData } from './validate.ts';
@@ -21,8 +21,8 @@ export interface SituationLayer {
 export function readSituationLayer(files: PackFiles, pack: PackData): SituationLayer {
   const sink = new IssueSink();
   const items = readSituations(files, sink);
-  const hasGate = files.files(GATE_DIR).length > 0;
-  if (items.length === 0 && !hasGate && files.folders(SITUATIONS_DIR).length === 0) return { situations: [], gate: null, issues: sink.issues };
+  const hasGate = listOptional((p) => files.files(p), GATE_DIR).length > 0;
+  if (items.length === 0 && !hasGate && listOptional((p) => files.folders(p), SITUATIONS_DIR).length === 0) return { situations: [], gate: null, issues: sink.issues };
   // A pack with situations must carry its gate: without it, A1 cannot tell what needs a tag.
   const gate = readGate(files, sink);
   sink.add(validateSituations(items, pack));

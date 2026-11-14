@@ -174,6 +174,21 @@ describe('situations in the pack format', () => {
     expect(issues(known).filter((i) => i.kind === 'situation-option-truth' || i.kind === 'situation-knowledge-truth').map(formatIssue)).toEqual([]);
   });
 
+  it('a pack with no situations/ or gate/ folder loads, even through an adapter that throws for a missing folder (standing re-check)', () => {
+    const base = testbedFiles();
+    const missing = (dir: string) => (p: string) => {
+      if (p === 'situations' || p === 'gate' || p.startsWith('situations/') || p.startsWith('gate/')) throw Object.assign(new Error(`ENOENT: no such file or directory, scandir '${p}'`), { code: 'ENOENT' });
+      return dir === 'files' ? base.files(p) : base.folders(p);
+    };
+    const throwing = { read: (p: string) => (p.startsWith('situations/') || p.startsWith('gate/') ? undefined : base.read(p)), files: missing('files'), folders: missing('folders') };
+    const loaded = loadPack(throwing);
+    expect(errorsOf(loaded.issues).map(formatIssue)).toEqual([]);
+    expect([loaded.pack!.situations, loaded.pack!.gate]).toEqual([[], null]);
+    // The control: an error that is not a missing folder is not swallowed.
+    const broken = { ...throwing, files: (p: string) => (p === 'situations' ? (() => { throw Object.assign(new Error('EACCES'), { code: 'EACCES' }); })() : base.files(p)) };
+    expect(() => loadPack(broken)).toThrow(/EACCES/);
+  });
+
   it('a pack with situations must carry its gate', () => {
     fires({ 'gate/register.json': null }, 'missing-file', 'gate/register.json');
   });
