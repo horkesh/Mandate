@@ -46,6 +46,24 @@ Branch `claude/phase0-seats-914b30` (worktree `.claude/worktrees/lucid-zhukovsky
 11. **The wire belongs to a side** (`wireOwner` per region). Rejected: a neutral wire (a commander off the wire rode into the enemy's capital to file his dispatch; found on the testbed).
 12. **Save schema stays 1.** The envelope already carried the log (lane 0.1), and no save has been released. M2 and Phase 0 saves share schema 1 with opaque State, told apart by the world hash. Rejected: a schema 2 with a meaningless migration from M2's State.
 
+## Fixes after review (`review-lane-0.6.md`, verdict "approve after fixes" on 294788a)
+
+One commit per finding or group, each with a positive control that fails without the fix:
+
+| Finding | Fix |
+|---|---|
+| F1: a dynamic `import()` got past the player-facing check | literal `import('...')` is checked like any import; an `import()` of anything else is refused |
+| F2: a view-layer file could import its own package by name | the closure records every bare specifier and opaque `import()` and refuses them |
+| F3: any seat in a chain could order | only a principal orders (`not_a_principal`); conflicts are now chain against bypass, not two issuers (choice 13) |
+| F4: the belief cache ignored the reader's perception | the cache entry records the perception it was built with |
+| F5: the log was never validated in play, and value types not at all | `entryProblems` checks types and closed vocabularies; the tick refuses `malformed`; `replay` and the runner's load throw `LogError` |
+| F6: a non-owner could build a whole new State literal | the one-writer scan flags any literal carrying an owned key outside its writer; `STATE_CONSTRUCTORS` (`tick/setup`) is the one exception |
+| N1–N4 | only offered routes; `deepFreeze` walks shallow-frozen records (with a caller-held ledger); 64-bit id hashes; a 1,500-day age ceiling |
+| F7 | the FOUNDATION rows and the copy-on-write decision record are the lead's (findings 1 and 2 below) |
+
+13. **Only principals give orders; conflicts are chain against bypass** (F3). With one issuer per side, two orders conflict when they differ, the held one is under seven days old, and one came down the chain while the other went around it (relays holding orders make them arrive out of the order written). The chain's order stands against a later bypass; a slow chain order supersedes a quicker bypass; either way he reports which he obeyed. Rejected: letting commanders order through `commands` answers (a decision outside the kernel's judged options, and the general's seat); conflicts between issuers (impossible once only principals order).
+14. **Literals carrying an owned key are writes** (F6). Under copy-on-write, building a new State is the way to write, so the scan treats it like a spread update; owned key names were already reserved everywhere. Rejected: a runtime check (covers only exercised paths, as 0044 found for proxies).
+
 ## Stand-ins, all labelled in code
 
 | Stand-in | Replaced by |
@@ -82,3 +100,5 @@ Branch `claude/phase0-seats-914b30` (worktree `.claude/worktrees/lucid-zhukovsky
 2. The copy-on-write and immutable-record convention (choice 1) binds lanes 0.4 and 0.5; it belongs in the decision record with 0044's naming rule.
 3. `IMMUTABLE_STATE_KEYS` grows by every nested key (68 now, 67 of them this lane's). A per-record "immutable record" declaration in `ownership.ts` would be lighter; a candidate change to the one-writer scanner.
 4. The union-1861 M2 pack also runs on the seats layer through the adapter (replay and resume match over 120 days); not added to CI, since lane 0.3 rebuilds that pack.
+5. (From the review.) Lane 0.2's `world` namespace and this lane's `standin/world.ts` are two World models: 0.2 has no per-region wire owner, courier days, filter posts or intelligence chiefs. Someone (the lead, lane 0.2's fix lane, or lane 0.5) needs to choose an adapter or a format addition before `standin/` is deleted.
+6. If commanders should give orders to their own subordinates (corps under armies, lane 0.5), that needs a ruling and a kernel-built menu; F3 now refuses it.
