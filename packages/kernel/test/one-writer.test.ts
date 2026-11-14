@@ -281,6 +281,21 @@ describe('the scanner catches violations (positive control)', () => {
     ]);
   });
 
+  it('catches a for loop that assigns the key on every pass, and not one that only reads it (review N1)', () => {
+    const loops: SourceFile = {
+      path: 'packages/kernel/src/supply.ts',
+      code: [
+        'for (s.controller of items) {}',
+        'for (s.controller in table) {}',
+        "for (s['controller'] of items) {}",
+        'for (const x of s.controller) {}',
+        'for (const k in s.controller) {}',
+        'for (let i = 0; i < s.controller.length; i++) {}',
+      ].join('\n'),
+    };
+    expect(writeViolations([loops], owned, []).map((v) => `${v.line} ${v.form}`)).toEqual(['1 loop target', '2 loop target', '3 bracket loop target']);
+  });
+
   it('catches a reflective write that names the key as a string (review of the tooling batch)', () => {
     const writes: SourceFile = {
       path: 'packages/cli/src/shell.ts',

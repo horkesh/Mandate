@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, 
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { afterAll, describe, expect, it } from 'vitest';
-import { removeSnapshot, SNAPSHOT_PREFIX, stagedCheck, treeEqualsIndex, workspacePackages } from '../staged-check.ts';
+import { linksUnder, removeSnapshot, SNAPSHOT_PREFIX, stagedCheck, treeEqualsIndex, workspacePackages } from '../staged-check.ts';
 
 /**
  * The pre-commit check runs on exactly what is being committed. Each case
@@ -191,6 +191,39 @@ describe('cleaning up is safe', () => {
     removeSnapshot(dest, repo.tmp);
     expect(existsSync(dest)).toBe(false);
     expect(readFileSync(join(repo.root, 'node_modules', 'dep', 'SENTINEL.txt'), 'utf8')).toBe('still here\n');
+  });
+});
+
+describe('cleanup unlinks links at any depth (review N2)', () => {
+  const kind = process.platform === 'win32' ? 'junction' : 'dir';
+
+  it('lists links anywhere in a tree and never enters one', () => {
+    const repo = makeRepo();
+    const dest = join(repo.tmp, `${SNAPSHOT_PREFIX}deep`);
+    const target = join(repo.root, 'node_modules', 'dep');
+    mkdirSync(join(dest, 'node_modules', '@s', 'p'), { recursive: true });
+    mkdirSync(join(dest, 'packages', 'k'), { recursive: true });
+    symlinkSync(target, join(dest, 'node_modules', 'top'), kind);
+    symlinkSync(target, join(dest, 'node_modules', '@s', 'p', 'inner'), kind);
+    symlinkSync(target, join(dest, 'packages', 'k', 'link'), kind);
+    const found = linksUnder(dest).map((p) => p.slice(dest.length + 1).split(/[\\/]/).join('/')).sort();
+    expect(found).toEqual(['node_modules/@s/p/inner', 'node_modules/top', 'packages/k/link']);
+  });
+
+  it('removes a snapshot with links at depth 0, 2 and outside node_modules, and leaves every target intact', () => {
+    const repo = makeRepo();
+    const dest = join(repo.tmp, `${SNAPSHOT_PREFIX}deep2`);
+    const target = join(repo.root, 'node_modules', 'dep');
+    mkdirSync(join(dest, 'node_modules', '@s', 'p'), { recursive: true });
+    mkdirSync(join(dest, 'packages', 'k'), { recursive: true });
+    writeFileSync(join(dest, 'packages', 'k', 'own.txt'), 'mine\n');
+    symlinkSync(target, join(dest, 'node_modules', 'top'), kind);
+    symlinkSync(target, join(dest, 'node_modules', '@s', 'p', 'inner'), kind);
+    symlinkSync(target, join(dest, 'packages', 'k', 'link'), kind);
+    removeSnapshot(dest, repo.tmp);
+    expect(existsSync(dest)).toBe(false);
+    expect(readFileSync(join(target, 'SENTINEL.txt'), 'utf8')).toBe('still here\n');
+    expect(readFileSync(join(target, 'index.js'), 'utf8')).toBe("module.exports = 'dep-ok';\n");
   });
 });
 

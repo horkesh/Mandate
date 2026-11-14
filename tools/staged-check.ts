@@ -20,7 +20,7 @@
  * snapshot's own copies; otherwise tests would import the working tree's
  * unstaged packages and test the wrong code. Links are junctions on Windows
  * (no privilege needed) and symlinks elsewhere. Cleanup unlinks every link
- * before deleting anything and refuses to delete a folder that still holds
+ * anywhere in the snapshot before deleting anything and refuses to delete a folder that still holds
  * one, so a failure can leave a temp folder behind but never delete
  * node_modules (a junction once wiped AWWV's main checkout; docs/LANES.md).
  *
@@ -117,44 +117,46 @@ export function linkNodeModules(root: string, dest: string): string[] {
   return links;
 }
 
-/** Remove the snapshot: unlink every link first, and delete nothing if one remains. Throws if it cannot. */
+/**
+ * Every link (symlink or junction) anywhere under `dir`, at any depth. It lists
+ * a link and never enters it, so it cannot walk into a real node_modules.
+ */
+export function linksUnder(dir: string): string[] {
+  const found: string[] = [];
+  const walk = (folder: string): void => {
+    for (const entry of readdirSync(folder)) {
+      const path = join(folder, entry);
+      const info = lstatSync(path);
+      if (info.isSymbolicLink()) found.push(path);
+      else if (info.isDirectory()) walk(path);
+    }
+  };
+  if (existsSync(dir)) walk(dir);
+  return found;
+}
+
+/**
+ * Remove the snapshot: unlink every link anywhere in it first, and delete
+ * nothing if one remains. Throws if it cannot. (A junction placed deeper than
+ * the hook itself puts one is unlinked too, so cleanup never relies on how a
+ * given Node's `rmSync` treats junctions.)
+ */
 export function removeSnapshot(dest: string, tmp: string = tmpdir()): void {
   const inside = relative(resolve(tmp), resolve(dest));
   if (inside === '' || inside.startsWith('..') || basename(dest).indexOf(SNAPSHOT_PREFIX) !== 0 || dirname(resolve(dest)) !== resolve(tmp)) {
     throw new Error(`refusing to delete ${dest}: it is not a snapshot folder directly inside ${tmp}`);
   }
-  const modules = join(dest, 'node_modules');
-  const found: string[] = [];
-  const walk = (dir: string, depth: number): void => {
-    if (!existsSync(dir)) return;
-    for (const entry of readdirSync(dir)) {
-      const path = join(dir, entry);
-      if (lstatSync(path).isSymbolicLink()) found.push(path);
-      else if (depth < 1 && lstatSync(path).isDirectory()) walk(path, depth + 1);
-    }
-  };
-  walk(modules, 0);
-  for (const path of found) {
+  for (const path of linksUnder(dest)) {
     try {
       unlinkSync(path);
     } catch {
       rmdirSync(path);
     }
   }
-  const left: string[] = [];
-  const check = (dir: string, depth: number): void => {
-    if (!existsSync(dir)) return;
-    for (const entry of readdirSync(dir)) {
-      const path = join(dir, entry);
-      if (lstatSync(path).isSymbolicLink()) left.push(path);
-      else if (depth < 1 && lstatSync(path).isDirectory()) check(path, depth + 1);
-    }
-  };
-  check(modules, 0);
+  const left = linksUnder(dest);
   if (left.length > 0) throw new Error(`not deleting ${dest}: links remain (${left.join(', ')})`);
   rmSync(dest, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
 }
-
 /** The environment for the check: the caller's, without any GIT_* variable (the snapshot is not a repository). */
 function cleanEnv(extra: Readonly<Record<string, string>>): NodeJS.ProcessEnv {
   const env: NodeJS.ProcessEnv = {};

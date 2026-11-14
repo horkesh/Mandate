@@ -21,7 +21,8 @@
  * - a write through a parenthesised target that mentions the key: a cast
  *   (`(x.key as T)['k'] = v`), a comma expression (`(0, x.key).push(v)`), a
  *   conditional (`(c ? x.key : y).push(v)`);
- * - a destructuring assignment target (`[x.key] = ...`, `({ a: x.key } = ...)`);
+ * - a destructuring assignment target (`[x.key] = ...`, `({ a: x.key } = ...)`)
+ *   and a `for` loop's target (`for (x.key of items)`, `for (x.key in obj)`);
  * - a spread update (`{ ...x, key: v }` or `{ ...x, key }`).
  * Not recognised: writes through an alias (`const c = x.key; c.push(v)`); the
  * deep freeze in tests (`tick/freeze.ts`) is the backstop for those.
@@ -114,6 +115,8 @@ function patternsFor(key: string): KeyPatterns {
   both('increment', 'bracket increment', (ref) => String.raw`(?<![\w$)\]]\s*)(?:\+\+|--)\s*${PATH_CHARS}${ref}`);
   both('delete', 'bracket delete', (ref) => String.raw`\bdelete\b[^;{}\n]*?${ref}`);
   both('mutating call', 'bracket mutating call', (ref) => String.raw`${ref}${TAIL}\s*\??\.\s*(?:${MUTATORS})\s*\(`);
+  // `for (x.key of items)` and `for (x.key in obj)` assign the key on every pass.
+  both('loop target', 'bracket loop target', (ref) => String.raw`\bfor\s*(?:await\s*)?\(\s*[\w$.\[\]!?]*?${ref}${TAIL}\s+(?:of|in)\b`);
   // `Array.prototype.push.call(x.key, v)`, `[].splice.apply(x.key, args)`: a mutator borrowed for the key.
   both('borrowed mutator', 'bracket borrowed mutator', (ref) => String.raw`\.\s*(?:${MUTATORS})\s*\.\s*(?:call|apply|bind)\s*\(\s*${PATH_CHARS}${ref}`);
   // `Object.assign(x.key, ...)`, `Reflect.set(x.key, ...)`: the key's value is the first argument.
