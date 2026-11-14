@@ -110,6 +110,24 @@ describe('situations fire on their causes and surface on what the seat knows (00
     expect(run.points).toContain('situation-surfaced:news');
   });
 
+  it('surfaces only on news received since the event, never on a report the seat already held (review S1)', () => {
+    const pattern = { reportType: 'wire-dispatch', subtype: null, subjectKind: 'post', subjectId: 'a_army', claimKind: 'goal-status', token: null } as const;
+    // The army's first dispatch reaches the president on day 20; the event comes on day 21.
+    const sit = decision('late', { event: { dayAtLeast: 21 }, knowledge: { knows: pattern } });
+    const { world, state } = setup([sit]);
+    const run = days(world, state, 45);
+    const rec = run.state.situationStates[S('late')]!;
+    expect(rec.sitFiredDay).toBe(21);
+    // Knowledge is pruned as reports are superseded, so read it on the days that matter.
+    const held = (day: number) =>
+      knowledgeOf(run.results[day - 1]!.state, lead).knownReports.filter((r) => r.knownBody.reportType === 'wire-dispatch' && r.knownBody.reportSubjectId === 'a_army' && r.knownBody.reportClaims.some((c) => c.claimKind === 'goal-status'));
+    // The control: on the event's day the president already held a matching dispatch, received before it.
+    expect(held(21).some((r) => r.knownReceivedDay < 21)).toBe(true);
+    // He is asked only once a dispatch received since the event reaches him.
+    expect(rec.sitSurfacedDay).toBeGreaterThan(21);
+    expect(held(rec.sitSurfacedDay!).some((r) => r.knownReceivedDay === rec.sitSurfacedDay)).toBe(true);
+    expect(held(rec.sitSurfacedDay! - 1).every((r) => r.knownReceivedDay < 21)).toBe(true);
+  });
   it('passes the staff line to the next author when the first is a subject, and records none when no author is available', () => {
     const fallsThrough = decision('subject', { subjects: [P('a_sec')], staffLine: { authors: [POST('a_office'), POST('a_filter')], recommends: ['hold'], reasons: [], confidence: 500 } });
     const nobody = decision('nobody', { subjects: [P('a_sec')], staffLine: { authors: [POST('a_office')], recommends: ['hold'], reasons: [], confidence: 500 } });

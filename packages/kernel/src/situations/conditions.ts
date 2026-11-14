@@ -4,7 +4,9 @@
  * Event conditions read the truth in State. A `knows` condition reads only
  * what one seat holds (decision 0052: a knowledge condition is evaluated from
  * what the seat knows), so a situation can wait for news to reach the
- * president however long ago the thing happened.
+ * president however long ago the thing happened. A situation's own knowledge
+ * trigger counts only news received since its clock started (`since`), so a
+ * report the seat held before the event never surfaces it (review S1).
  */
 import type { SituationId } from '../ids.ts';
 import type { SeatKnowledge } from '../knowledge/knowledge.ts';
@@ -20,11 +22,14 @@ export interface ConditionContext {
   readonly situation: SituationId | null;
   /** The deciding seat's knowledge, for `knows`. */
   readonly knowledge: SeatKnowledge;
+  /** `knows` counts only reports received on or after this day; null counts every report the seat holds. */
+  readonly since: number | null;
 }
 
-/** Whether a report the seat holds matches the pattern. */
-export function knowsMatch(knowledge: SeatKnowledge, p: KnowsPattern): boolean {
+/** Whether a report the seat holds (received on or after `since`, if given) matches the pattern. */
+export function knowsMatch(knowledge: SeatKnowledge, p: KnowsPattern, since: number | null = null): boolean {
   return knowledge.knownReports.some((r) => {
+    if (since !== null && r.knownReceivedDay < since) return false;
     const b = r.knownBody;
     if (p.reportType !== null && b.reportType !== p.reportType) return false;
     if (p.subtype !== null && b.reportSubtype !== p.subtype) return false;
@@ -47,7 +52,7 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
     if (r === undefined || !isFinal(r)) return false;
     return c.options === null || r.sitChosen.some((o) => c.options!.includes(o));
   }
-  if ('knows' in c) return knowsMatch(ctx.knowledge, c.knows);
+  if ('knows' in c) return knowsMatch(ctx.knowledge, c.knows, ctx.since);
   if ('goal' in c) return ctx.state.standingGoals[c.goal.post]?.standingSpec.goalSpecKind === c.goal.kind;
   if ('headquartersAt' in c) return ctx.state.headquarters[c.headquartersAt.post]?.hqRegion === c.headquartersAt.region;
   // clockAtLeast

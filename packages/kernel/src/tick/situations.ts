@@ -67,8 +67,9 @@ function principalOf(ctx: TickContext, def: SituationDef): PersonId {
   return ctx.world.faction(def.faction).principal;
 }
 
-function conditionContext(ctx: TickContext, state: State, def: SituationDef): ConditionContext {
-  return { state, day: ctx.day, situation: def.id, knowledge: knowledgeOf(state, seatIdFor(principalOf(ctx, def))) };
+/** `since`: for a trigger that waits for news, the day its wait began, so older reports never satisfy it (review S1). */
+function conditionContext(ctx: TickContext, state: State, def: SituationDef, since: number | null = null): ConditionContext {
+  return { state, day: ctx.day, situation: def.id, knowledge: knowledgeOf(state, seatIdFor(principalOf(ctx, def))), since };
 }
 
 /** The options open today, in display order: appeared (or always there) and not expired, less any excluded. */
@@ -248,7 +249,7 @@ export function runSituations(ctx: TickContext, start: State): State {
     }
     // 2. Surface.
     let record = state.situationStates[def.id]!;
-    const news = def.knowledge !== null ? holds(def.knowledge, conditionContext(ctx, state, def)) : def.kind === 'notice' ? noticeArrived(ctx, state, def) : true;
+    const news = def.knowledge !== null ? holds(def.knowledge, conditionContext(ctx, state, def, record.sitFiredDay)) : def.kind === 'notice' ? noticeArrived(ctx, state, def) : true;
     if (record.sitSurfacedDay === null && news) {
       const author = def.kind === 'decision' && record.sitStatus === 'open' ? writeReport(ctx, state, def) : record.sitStaffAuthor;
       state = surfaceSituation(state, def.id, ctx.day, author);
@@ -288,7 +289,8 @@ export function runSituations(ctx: TickContext, start: State): State {
     // 4. Reopen a waiting decision.
     if (record.sitStatus === 'waiting' && record.sitWaitingOn !== null) {
       const waitsOn = def.options.find((o) => o.id === record.sitWaitingOn)!.waitsOn!;
-      if (holds(waitsOn, conditionContext(ctx, state, def))) {
+      // News the principal had before he chose to wait does not end the wait.
+      if (holds(waitsOn, conditionContext(ctx, state, def, record.sitDecidedDay ?? record.sitFiredDay))) {
         state = reopenSituation(state, def.id, ctx.day, openOptionsNow(ctx, state, def, [record.sitWaitingOn]));
         fire(ctx, 'situations.resurfaced');
         point(ctx, def, 'situation-resurfaced');

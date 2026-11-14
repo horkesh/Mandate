@@ -214,7 +214,7 @@ export function stringKeysOf(def: SituationDef): { readonly key: string; readonl
 
 /** Whether a condition holds on an empty State and an empty knowledge, on the last day there is (gate B2). */
 export function holdsOnNothing(c: Condition): boolean {
-  return phase0.holds(c, { state: phase0.emptyState(), day: Number.MAX_SAFE_INTEGER, situation: null, knowledge: { knownReports: [] } });
+  return phase0.holds(c, { state: phase0.emptyState(), day: Number.MAX_SAFE_INTEGER, situation: null, knowledge: { knownReports: [] }, since: null });
 }
 
 function walk(c: Condition, visit: (c: Condition) => void): void {
