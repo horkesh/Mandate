@@ -42,3 +42,5 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0036](0036-the-title.md) | The game is called By Order of the President; Mandate stays the engine's codename | accepted |
 | [0037](0037-commercial-prove-it-first.md) | Commercial, but prove the hook before spending | accepted |
 | [0038](0038-no-live-ai-on-steam-until-cleared.md) | No live AI in the Steam build until Valve clears bring-your-own-key | accepted |
+| [0039](0039-positioning-and-go-no-go.md) | Positioning, price and the go or no-go bands | accepted |
+| [0040](0040-first-month-revisions.md) | Revisions from the first-month walkthrough | accepted |

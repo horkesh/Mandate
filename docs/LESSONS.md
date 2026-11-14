@@ -45,3 +45,7 @@ Enforced by: `docs/LANES.md`: facts about the world come from a research lane, o
 **L11. The lead assumed a refusal still held.**
 After the app refused once to start a session over Remote Control, the lead silently ran the next research lanes as subagents without retrying. The next attempt succeeded.
 Enforced by: `docs/LANES.md`: retry on the next turn, and ask the owner before substituting a subagent.
+
+**L12. A started session is not a running session.**
+The lead reported lane 0.1 and the steward as running; neither had started, because their worktrees needed the owner to trust the repository in Claude Desktop first.
+Enforced by: after starting a lane, check its state (`get_session`) before reporting it as running; worktree lanes in a newly moved folder need the owner's trust first.
