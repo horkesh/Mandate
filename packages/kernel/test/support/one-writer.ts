@@ -9,12 +9,23 @@
  * these on `x.key`, including through `!` and through index or member chains
  * below it (`x.key[id] = v`, `x.key![i].y += v`):
  * - assignment and every compound assignment; `x['key'] = v`;
- * - `++` / `--`, prefix or postfix; `delete`;
- * - a mutating call (`.push(`, `.set(`, `.splice(` ...);
- * - a destructuring assignment target (`[x.key] = ...`, `({ a: x.key } = ...)`);
+ * - `++` / `--`, prefix or postfix; `delete`, including `delete (x as T).key`
+ *   and `delete x['key']`;
+ * - a mutating call (`.push(`, `.set(`, `.splice(` ...), also by optional
+ *   chaining (`x.key?.push(v)`);
+ * - a mutator borrowed for the key (`Array.prototype.push.call(x.key, v)`) and
+ *   a reflective write with the key as its target (`Object.assign(x.key, ...)`,
+ *   `Reflect.set(x.key, ...)`) or named as a string argument
+ *   (`Reflect.set(x, 'key', v)`, `Object.defineProperty(x, 'key', d)`,
+ *   `Reflect.deleteProperty(x, 'key')`);
+ * - a write through a parenthesised target that mentions the key: a cast
+ *   (`(x.key as T)['k'] = v`), a comma expression (`(0, x.key).push(v)`), a
+ *   conditional (`(c ? x.key : y).push(v)`);
+ * - a destructuring assignment target (`[x.key] = ...`, `({ a: x.key } = ...)`)
+ *   and a `for` loop's target (`for (x.key of items)`, `for (x.key in obj)`);
  * - a spread update (`{ ...x, key: v }` or `{ ...x, key }`).
- * Not recognised: writes through an alias (`const c = x.key; c.push(v)`) and
- * `Object.assign`, which the banned-API test forbids instead.
+ * Not recognised: writes through an alias (`const c = x.key; c.push(v)`); the
+ * deep freeze in tests (`tick/freeze.ts`) is the backstop for those.
  *
  * Each file is lexed once (`lexSource`); a file the lexer cannot read is
  * reported, never skipped.
@@ -63,8 +74,15 @@ const ASSIGN_OP = String.raw`(?:\*\*|<<|>>>|>>|&&|\|\||\?\?|[-+*/%&|^])?=(?![=>]
 const MUTATORS = 'push|pop|shift|unshift|splice|sort|reverse|fill|copyWithin|set|delete|clear|add';
 /** One index, allowing one level of nested brackets: `[id]`, `[ids[0]]`. */
 const INDEX = String.raw`\[(?:[^\[\]]|\[[^\[\]]*\])*\]`;
-/** What may follow the key and still be inside the owned field: `!`, an index, a member. */
-const TAIL = String.raw`(?:\s*!|\s*${INDEX}|\s*\.\s*[\w$]+)*`;
+/** What may follow the key and still be inside the owned field: `!`, an index, a member, each optionally chained with `?.`. */
+const TAIL = String.raw`(?:\s*!|\s*(?:\?\.)?${INDEX}|\s*\??\.\s*[\w$]+)*`;
+/** The characters a receiver or argument path may use between an operator and the key: names, members, indexes, `!`, `?`, parentheses and quotes. */
+const PATH_CHARS = String.raw`[\w$.\[\]!?\s()'"\x60]*?`;
+/** The functions that mutate their first argument, or whatever `this` they are called with. */
+const REFLECTIVE = String.raw`(?:Object\s*\.\s*(?:assign|defineProperty|defineProperties|setPrototypeOf)|Reflect\s*\.\s*(?:set|defineProperty|deleteProperty|setPrototypeOf|apply))`;
+
+/** The reflective writes that take the target's key as a string: `Reflect.set(x, 'key', v)`, `Object.defineProperty(x, 'key', d)`. */
+const KEYED_REFLECTIVE = String.raw`(?:Reflect\s*\.\s*(?:set|defineProperty|deleteProperty)|Object\s*\.\s*defineProperty)`;
 
 function escape(text: string): string {
   return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -74,25 +92,47 @@ interface KeyPatterns {
   readonly key: string;
   readonly forms: readonly { readonly pattern: RegExp; readonly form: string; readonly view: 'code' | 'withStrings' }[];
   readonly target: RegExp;
+  /** `x['key']`, tested against text with strings kept. */
+  readonly bracket: RegExp;
   readonly property: RegExp;
 }
 
 /** Compile a key's patterns once, for every file. */
 function patternsFor(key: string): KeyPatterns {
   const k = escape(key);
-  const at = String.raw`\.\s*${k}(?![\w$])`;
-  const path = `${at}${TAIL}`;
+  // The two ways to name a key: `x.key` (found in the code view, where string contents are blanked) and `x['key']`
+  // (found with strings kept). Every write form is built for both.
+  const dot = String.raw`\.\s*${k}(?![\w$])`;
+  const brk = String.raw`\[\s*(?:'${k}'|"${k}"|\x60${k}\x60)\s*\]`;
+  const forms: { pattern: RegExp; form: string; view: 'code' | 'withStrings' }[] = [];
+  const both = (dotted: string, bracketed: string, build: (ref: string) => string) => {
+    forms.push({ pattern: new RegExp(build(dot), 'g'), form: dotted, view: 'code' });
+    forms.push({ pattern: new RegExp(build(brk), 'g'), form: bracketed, view: 'withStrings' });
+  };
+  both('assignment', 'bracket assignment', (ref) => String.raw`${ref}${TAIL}\s*${ASSIGN_OP}`);
+  both('increment', 'bracket increment', (ref) => String.raw`${ref}${TAIL}\s*(?:\+\+|--)`);
+  // A prefix `++` or `--` sits where no operand ends before it; `n-- ) x.key` is not one.
+  both('increment', 'bracket increment', (ref) => String.raw`(?<![\w$)\]]\s*)(?:\+\+|--)\s*${PATH_CHARS}${ref}`);
+  both('delete', 'bracket delete', (ref) => String.raw`\bdelete\b[^;{}\n]*?${ref}`);
+  both('mutating call', 'bracket mutating call', (ref) => String.raw`${ref}${TAIL}\s*\??\.\s*(?:${MUTATORS})\s*\(`);
+  // `for (x.key of items)` and `for (x.key in obj)` assign the key on every pass.
+  both('loop target', 'bracket loop target', (ref) => String.raw`\bfor\s*(?:await\s*)?\(\s*[\w$.\[\]!?]*?${ref}${TAIL}\s+(?:of|in)\b`);
+  // `Array.prototype.push.call(x.key, v)`, `[].splice.apply(x.key, args)`: a mutator borrowed for the key.
+  both('borrowed mutator', 'bracket borrowed mutator', (ref) => String.raw`\.\s*(?:${MUTATORS})\s*\.\s*(?:call|apply|bind)\s*\(\s*${PATH_CHARS}${ref}`);
+  // `Object.assign(x.key, ...)`, `Reflect.set(x.key, ...)`: the key's value is the first argument.
+  both('reflective write', 'bracket reflective write', (ref) => String.raw`\b${REFLECTIVE}\s*\(\s*${PATH_CHARS}${ref}`);
+  // `Reflect.set(x, 'key', v)`, `Object.defineProperty(x, 'key', d)`, `Reflect.deleteProperty(x, 'key')`: the key as a
+  // string argument (the natural spelling of a reflective write). Needs the strings, so only the withStrings view.
+  forms.push({
+    pattern: new RegExp(String.raw`\b${KEYED_REFLECTIVE}\s*\([^;]*?,\s*(?:'${k}'|"${k}"|\x60${k}\x60)\s*[,)]`, 'g'),
+    form: 'reflective write by name',
+    view: 'withStrings',
+  });
   return {
     key,
-    forms: [
-      { pattern: new RegExp(String.raw`${path}\s*${ASSIGN_OP}`, 'g'), form: 'assignment', view: 'code' },
-      { pattern: new RegExp(String.raw`\[\s*(['"\x60])${k}\1\s*\]${TAIL}\s*${ASSIGN_OP}`, 'g'), form: 'bracket assignment', view: 'withStrings' },
-      { pattern: new RegExp(String.raw`${path}\s*(?:\+\+|--)`, 'g'), form: 'increment', view: 'code' },
-      { pattern: new RegExp(String.raw`(?:\+\+|--)\s*[\w$.\[\]!]*${at}`, 'g'), form: 'increment', view: 'code' },
-      { pattern: new RegExp(String.raw`\bdelete\s+[\w$.\[\]?!]*${at}`, 'g'), form: 'delete', view: 'code' },
-      { pattern: new RegExp(String.raw`${path}\s*\.\s*(?:${MUTATORS})\s*\(`, 'g'), form: 'mutating call', view: 'code' },
-    ],
-    target: new RegExp(at),
+    forms,
+    target: new RegExp(dot),
+    bracket: new RegExp(brk),
     property: new RegExp(String.raw`(?:^|[{,])\s*${k}\s*(?::|,|\}|$)`),
   };
 }
@@ -107,6 +147,15 @@ interface FileIndex {
   readonly spreads: readonly { readonly offset: number; readonly text: string }[];
   /** Brace groups (at their own nesting level) with no spread that are not destructuring targets: literals built whole. */
   readonly literals: readonly { readonly offset: number; readonly text: string }[];
+  /** Grouping parentheses that something is written through: `(x.key as T).push(v)`, `delete (x.key)`. */
+  readonly writeParens: readonly ParenGroup[];
+}
+
+interface ParenGroup {
+  readonly offset: number;
+  /** The group in the code view (strings blanked) and with strings kept. */
+  readonly code: string;
+  readonly strings: string;
 }
 
 function indexFile(path: string, lexed: LexedSource): FileIndex {
@@ -114,6 +163,7 @@ function indexFile(path: string, lexed: LexedSource): FileIndex {
   return {
     path,
     lexed,
+    writeParens: writeParenGroups(lexed),
     patterns: destructuringPatterns(lexed.code),
     spreads: groups.filter((g) => g.text.includes('...')),
     literals: groups.filter((g) => !g.text.includes('...') && !/^\s*=(?![=>])/.test(lexed.code.slice(g.offset + g.length))),
@@ -129,6 +179,7 @@ function sitesIn(file: FileIndex, p: KeyPatterns): WriteSite[] {
   for (const { pattern, form, view } of p.forms) {
     for (const m of lexed[view].matchAll(pattern)) sites.push({ path, line: lexed.lineOf(m.index), key: p.key, form });
   }
+  for (const g of file.writeParens) if (p.target.test(g.code) || p.bracket.test(g.strings)) sites.push({ path, line: lexed.lineOf(g.offset), key: p.key, form: 'write through a parenthesised target' });
   for (const g of file.patterns) if (p.target.test(g.text)) sites.push({ path, line: lexed.lineOf(g.offset), key: p.key, form: 'destructuring assignment' });
   for (const g of file.spreads) if (p.property.test(g.text)) sites.push({ path, line: lexed.lineOf(g.offset), key: p.key, form: 'spread update' });
   for (const g of file.literals) if (p.property.test(g.text)) sites.push({ path, line: lexed.lineOf(g.offset), key: p.key, form: 'object literal' });
@@ -138,6 +189,68 @@ function sitesIn(file: FileIndex, p: KeyPatterns): WriteSite[] {
 /** Every place in `file` that writes property `key`. Throws `LexerError` if the file cannot be lexed. */
 export function writeSites(file: SourceFile, key: string): WriteSite[] {
   return sitesIn(indexFile(file.path, lexSource(file.code)), patternsFor(key));
+}
+
+/** Words after which a parenthesis groups an expression (rather than calling something or heading a control statement). */
+const GROUPING_KEYWORDS: ReadonlySet<string> = new Set(['delete', 'typeof', 'void', 'await', 'return', 'throw', 'yield', 'in', 'of', 'case', 'else', 'do', 'instanceof']);
+/** Control statements whose head is parenthesised: a parenthesis right after one is the next statement's own. */
+const CONTROL_HEADS: ReadonlySet<string> = new Set(['if', 'while', 'for', 'switch', 'with', 'catch']);
+
+/** The word that ends just before `index` (skipping blanks), or '' if what precedes is not a word. */
+function wordBefore(code: string, index: number): string {
+  let j = index - 1;
+  while (j >= 0 && /\s/.test(code[j]!)) j--;
+  let s = j;
+  while (s >= 0 && /[\w$]/.test(code[s]!)) s--;
+  return code.slice(s + 1, j + 1);
+}
+
+/**
+ * Parentheses that group an expression, as opposed to calls and control heads,
+ * which something is written through: the group is followed by a write
+ * (`) = v`, `)[i] = v`, `).x += v`, `)++`, `).push(v)`) or preceded by
+ * `delete` or a prefix `++`/`--`. A cast (`(x.key as T)`), a comma expression
+ * (`(0, x.key)`), a conditional and `??` all sit in such a group, so the
+ * scanner asks only whether the group mentions the key: one pass, no parsing
+ * of types. A group that mentions the key and is written through is flagged
+ * even when the write lands on something beside the key; that is the price of
+ * not parsing, and it is paid by renaming a local.
+ */
+function writeParenGroups(lexed: LexedSource): ParenGroup[] {
+  const code = lexed.code;
+  const out: ParenGroup[] = [];
+  const open: number[] = [];
+  const openOf = new Map<number, number>();
+  const after = new RegExp(String.raw`${TAIL}\s*(?:${ASSIGN_OP}|\+\+|--|\??\.\s*(?:${MUTATORS})\s*\()`, 'y');
+  for (let i = 0; i < code.length; i++) {
+    if (code[i] === '(') {
+      open.push(i);
+    } else if (code[i] === ')') {
+      const start = open.pop();
+      if (start === undefined) continue;
+      openOf.set(i, start);
+      let j = start - 1;
+      while (j >= 0 && /\s/.test(code[j]!)) j--;
+      const before = j < 0 ? '' : code[j]!;
+      let grouping: boolean;
+      if (before === ')') {
+        // `if (c) (x.key as T).push(v)`: a group after a control head is a group.
+        const head = openOf.get(j);
+        grouping = head !== undefined && CONTROL_HEADS.has(wordBefore(code, head));
+      } else if (before === ']') {
+        grouping = false;
+      } else if (/[\w$]/.test(before)) {
+        grouping = GROUPING_KEYWORDS.has(wordBefore(code, start));
+      } else {
+        grouping = true;
+      }
+      if (!grouping) continue;
+      after.lastIndex = i + 1;
+      const prefixWrite = wordBefore(code, start) === 'delete' || /(?:\+\+|--)\s*$/.test(code.slice(Math.max(0, start - 40), start));
+      if (prefixWrite || after.test(code)) out.push({ offset: start, code: code.slice(start, i + 1), strings: lexed.withStrings.slice(start, i + 1) });
+    }
+  }
+  return out;
 }
 
 /** `[ ... ]` or `{ ... }` groups that are assigned to (`] =`, `} =`): destructuring patterns. */
@@ -295,34 +408,92 @@ export function ownedKeys(fields: readonly OwnedField[]): { key: string; writer:
 }
 
 /**
- * Problems with the classification of State records against the table:
- * unclassified properties, table entries pointing at nothing, keys owned twice.
+ * What is immutable (`ownership.ts`): records below the State root, by type
+ * name (their keys are read from the types); State's own root fields set once
+ * at setup; and keys that are never reassigned wherever they appear.
+ */
+export interface ImmutableDeclaration {
+  readonly records: readonly string[];
+  readonly rootFields: readonly string[];
+  readonly neverReassigned: readonly string[];
+}
+
+/** No immutable declarations at all, for fixtures that test one rule at a time. */
+export const NO_IMMUTABLES: ImmutableDeclaration = { records: [], rootFields: [], neverReassigned: [] };
+
+const byCode = (a: string, b: string): number => (a < b ? -1 : a > b ? 1 : 0);
+
+/**
+ * The keys the scan must never see assigned: every key of a declared immutable
+ * record, State's immutable root fields, and the never-reassigned keys; sorted,
+ * without repeats. This replaces a hand-kept list of keys.
+ */
+export function immutableKeys(records: readonly StateRecord[], declaration: ImmutableDeclaration): string[] {
+  const keys = new Set<string>([...declaration.rootFields, ...declaration.neverReassigned]);
+  // State is never an immutable record (its fields are owned); declaring it is reported by classificationProblems, not silently honoured.
+  for (const r of records) if (r.record !== 'State' && declaration.records.includes(r.record)) for (const k of r.keys) keys.add(k);
+  return [...keys].sort(byCode);
+}
+
+/**
+ * Problems with the classification of State records against the table and the
+ * immutable declaration:
+ * - a property that is neither owned, nor in an immutable record, nor an
+ *   immutable root field, nor a never-reassigned key (a new nested record not
+ *   yet declared shows up here, one line per property);
+ * - table entries and declarations pointing at nothing;
+ * - keys owned twice, or owned and immutable;
+ * - immutable keys shared by two declared records, or with an owned key: the
+ *   scan matches by name, so they must be unique.
  */
 export function classificationProblems(
   records: readonly StateRecord[],
   fields: readonly OwnedField[],
-  immutableKeys: readonly string[],
+  immutable: ImmutableDeclaration,
   legacy: readonly { readonly file: string; readonly record: string }[],
 ): string[] {
   const problems: string[] = [];
   const owned = ownedKeys(fields);
   const isLegacy = (r: StateRecord) => legacy.some((l) => l.file === r.path && l.record === r.record);
+  const declared = new Set(immutable.records);
+  const derived = immutableKeys(records, immutable);
 
   const byKey = new Map<string, string[]>();
   for (const o of owned) byKey.set(o.key, [...(byKey.get(o.key) ?? []), `${o.record} (${o.writer})`]);
-  for (const [key, claims] of [...byKey].sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))) {
+  for (const [key, claims] of [...byKey].sort(([a], [b]) => byCode(a, b))) {
     if (claims.length > 1) problems.push(`owned key "${key}" is claimed ${claims.length} times: ${claims.join(', ')}; owned keys must be unique`);
-    if (immutableKeys.includes(key)) problems.push(`key "${key}" is both owned and immutable`);
+    if (derived.includes(key)) problems.push(`key "${key}" is both owned and immutable`);
   }
 
   for (const r of records) {
     if (isLegacy(r)) continue;
     for (const key of r.keys) {
-      if (immutableKeys.includes(key)) continue;
-      if (!owned.some((o) => o.record === r.record && o.key === key)) {
-        problems.push(`${r.path}: ${r.record}.${key} has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)`);
-      }
+      if (owned.some((o) => o.record === r.record && o.key === key)) continue;
+      if (immutable.neverReassigned.includes(key)) continue;
+      if (declared.has(r.record)) continue;
+      if (r.record === 'State' && immutable.rootFields.includes(key)) continue;
+      problems.push(
+        r.record === 'State'
+          ? `${r.path}: State.${key} has no writer in OWNED_FIELDS and is not an immutable root field (packages/kernel/src/ownership.ts)`
+          : `${r.path}: ${r.record}.${key} has no writer in OWNED_FIELDS, and ${r.record} is not declared in IMMUTABLE_RECORDS; a record below the State root is an immutable value (decision 0052) (packages/kernel/src/ownership.ts)`,
+      );
     }
+  }
+
+  for (const name of immutable.records) {
+    if (name === 'State') problems.push('IMMUTABLE_RECORDS names State, whose fields are owned by their writers; list its set-once fields in IMMUTABLE_ROOT_FIELDS');
+    else if (!records.some((r) => r.record === name)) problems.push(`IMMUTABLE_RECORDS names ${name}, which no State record declares; remove the entry`);
+  }
+  for (const key of immutable.rootFields) {
+    if (!records.some((r) => r.record === 'State' && r.keys.includes(key))) problems.push(`IMMUTABLE_ROOT_FIELDS names ${key}, which State does not declare`);
+  }
+  const declaredBy = new Map<string, string[]>();
+  for (const r of records) {
+    if (!declared.has(r.record)) continue;
+    for (const k of r.keys) if (!immutable.neverReassigned.includes(k)) declaredBy.set(k, [...(declaredBy.get(k) ?? []), r.record]);
+  }
+  for (const [key, names] of [...declaredBy].sort(([a], [b]) => byCode(a, b))) {
+    if (names.length > 1) problems.push(`immutable key "${key}" is declared by ${names.join(' and ')}; immutable keys must be unique, so the scan can match them by name`);
   }
 
   for (const o of owned) {

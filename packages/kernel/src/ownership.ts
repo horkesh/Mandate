@@ -131,102 +131,55 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
 ];
 
 /**
- * Keys a State record may carry that are set once, when the record is
- * created, and never written after: any assignment to them anywhere fails.
+ * Immutable records (decision 0052). State is copy-on-write: every record below
+ * the root is an immutable value, replaced whole by the writer of the root
+ * field that holds it, so no key of such a record is ever assigned after the
+ * record is built. A record is declared here by its type name, and the
+ * one-writer scan reads its keys from the type itself: a new nested record is
+ * one line here, not one line per key. Every record reachable from `State`
+ * must be declared (or own its keys in `OWNED_FIELDS`), which the
+ * classification test enforces.
+ *
+ * The scan matches a key by name, so the keys of declared records must be
+ * unique across them and distinct from every owned key (the classification test
+ * checks both); that is why they carry a prefix (`msgOrigin`, `hopRole`, ...),
+ * as decision 0044 asks. Rename a local rather than reuse such a key.
  */
-export const IMMUTABLE_STATE_KEYS: readonly string[] = [
-  'id',
-  // Lane 0.6. State is copy-on-write: below the root, records are immutable values,
-  // replaced whole by the writer of the root field that holds them.
-  'gameSeed',
-  // Lane 0.4: the calendar's day 0, from the scenario start.
-  'calendarStart',
-  // SeatAssignment
-  'seatPerson',
-  'seatDriver',
-  // TransitMessage, Hop, OrderBody
-  'msgOrigin',
-  'msgFrom',
-  'msgTo',
-  'msgToPost',
-  'msgRole',
-  'msgRoute',
-  'msgSentDay',
-  'msgArriveDay',
-  'msgVia',
-  'msgPending',
-  'msgOrder',
-  'msgReport',
-  'msgTruth',
-  'hopPerson',
-  'hopPost',
-  'hopRole',
-  'orderIssuer',
-  'orderTarget',
-  'orderGoal',
-  'orderBypass',
-  'orderIssuedDay',
-  // GoalSpec, StandingGoal
-  'goalSpecKind',
-  'goalSpecRegion',
-  'standingSpec',
-  'standingIssuer',
-  'standingViaChain',
-  'standingSetDay',
-  'standingOrder',
-  // ReportBody, ReportClaim, AdviceBody, StatedReason
-  'reportType',
-  'reportSubtype',
-  'reportAuthor',
-  'reportAuthorPost',
-  'reportSubjectKind',
-  'reportSubjectId',
-  'reportClaims',
-  'reportDay',
-  'reportHour',
-  'reportAdvice',
-  'reportAnswers',
-  'claimKind',
-  'claimRegion',
-  'claimValue',
-  'claimToken',
-  'claimConfidence',
-  'adviceRecommends',
-  'adviceReasons',
-  'adviceConfidence',
-  'reasonKind',
-  'reasonWeight',
-  // ReportTruth, BiasTerm
-  'truthTerms',
-  'truthTrimmed',
-  'termKind',
-  'termPerson',
-  'termPost',
-  'termRegion',
-  'termValue',
-  'termRule',
-  // SeatKnowledge, KnownReport
-  'knownReports',
-  'knownReceivedDay',
-  'knownRoute',
-  'knownVia',
-  'knownBody',
-  // Headquarters (stand-in)
-  'hqRegion',
-  'hqSinceDay',
-  // Lane 0.7: SituationRecord (replaced whole by `situations`)
-  'sitStatus',
-  'sitFiredDay',
-  'sitSurfacedDay',
-  'sitOpenOptions',
-  'sitResurfaced',
-  'sitDecidedDay',
-  'sitChosen',
-  'sitDecidedBy',
-  'sitDelegate',
-  'sitWaitingOn',
-  'sitStaffAuthor',
+export const IMMUTABLE_RECORDS: readonly string[] = [
+  // Seats
+  'SeatAssignment',
+  // Messages in transit
+  'TransitMessage',
+  'Hop',
+  'OrderBody',
+  // Plans (stand-in standing goals)
+  'GoalSpec',
+  'StandingGoal',
+  // Reports and knowledge
+  'ReportBody',
+  'ReportClaim',
+  'AdviceBody',
+  'StatedReason',
+  'ReportTruth',
+  'BiasTerm',
+  'KnownReport',
+  'SeatKnowledge',
+  // Movement (stand-in headquarters)
+  'Headquarters',
+  // Situations (lane 0.7: the live record of one situation, replaced whole by `situations`)
+  'SituationRecord',
 ];
+
+/** State's own root fields that are set once at setup and never written after (the game's seed, the calendar's day 0). */
+export const IMMUTABLE_ROOT_FIELDS: readonly string[] = ['gameSeed', 'calendarStart'];
+
+/**
+ * Keys that are never assigned after a record is built, wherever they appear,
+ * because the thing they name is minted once (decision 0044; AWWV lesson M10:
+ * unstable identity). They are exempt from the uniqueness check above, since
+ * every record with an identity has one.
+ */
+export const NEVER_REASSIGNED_KEYS: readonly string[] = ['id'];
 
 /**
  * State records the classification check skips, because the M2 kernel that

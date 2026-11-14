@@ -66,6 +66,11 @@ jobs:
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: npm run check:licences
 
+      - id: decisions
+        name: npm run check:decisions
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npm run check:decisions
+
       - id: determinism_testbed
         name: Determinism run (testbed, resume from turn 10)
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
@@ -101,6 +106,7 @@ jobs:
           TEST: ${{ steps.test.outcome }}
           BOUNDARY: ${{ steps.boundary.outcome }}
           LICENCES: ${{ steps.licences.outcome }}
+          DECISIONS: ${{ steps.decisions.outcome }}
           DET_TESTBED: ${{ steps.determinism_testbed.outcome }}
           DET_UNION: ${{ steps.determinism_union.outcome }}
           DET_SEATS: ${{ steps.determinism_seats.outcome }}
@@ -122,6 +128,7 @@ jobs:
             echo "| npm run test | $TEST ($tests) |"
             echo "| npm run check:boundary | $BOUNDARY |"
             echo "| npm run check:licences | $LICENCES |"
+            echo "| npm run check:decisions | $DECISIONS |"
             echo "| determinism run: testbed | $DET_TESTBED |"
             echo "| determinism run: union-1861 | $DET_UNION |"
             echo "| determinism run: seats layer (testbed) | $DET_SEATS |"

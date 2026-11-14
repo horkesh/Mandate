@@ -1,6 +1,6 @@
 # 0015: Every person is a seat; rules first; the command log is the truth
 
-Status: accepted (2026-11-14). The owner chose "rules first, AI as an upgrade" and accepted the seat plan: one set of decision types for rules, AI and humans; Lincoln's seat first, "play a general" second, multiplayer third. Supersedes 0011. Clarifies 0007 and widens 0009. Design: `docs/design/FOUNDATION.md` section 8.
+Status: accepted (2026-11-14). The owner chose "rules first, AI as an upgrade" and accepted the seat plan: one set of decision types for rules, AI and humans; Lincoln's seat first, "play a general" second, multiplayer third. Supersedes 0011. Clarifies 0007 and widens 0009. Refined by 0032 (reports have authors, routes and filters). Design: `docs/design/FOUNDATION.md` section 8.
 
 ## Context
 

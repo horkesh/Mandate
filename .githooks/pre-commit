@@ -1,4 +1,7 @@
 #!/bin/sh
-# Mandate pre-commit: typecheck, tests, pack boundary.
+# Mandate pre-commit: run `npm run check` on exactly what is being committed.
+# tools/staged-check.ts checks the working tree in place when it equals the index,
+# and otherwise a private snapshot of the index, so unstaged edits and untracked
+# files can neither hide a failure nor cause one. The working tree is never touched.
 set -e
-npm run --silent check
+exec node --import tsx tools/staged-check.ts

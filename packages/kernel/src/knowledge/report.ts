@@ -8,8 +8,8 @@
  * it. Why it says it (the author's and each filter's bias terms, and what a
  * filter trimmed) lives in `truth.ts`, which the view layer never imports.
  *
- * Every record here is immutable once created: its keys are listed in
- * `IMMUTABLE_STATE_KEYS` (`ownership.ts`), and they are prefixed so they stay
+ * Every record here is immutable once created: each is declared in
+ * `IMMUTABLE_RECORDS` (`ownership.ts`), and its keys are prefixed so they stay
  * unique across all State records (decision 0044).
  */
 import type { MessageId, PersonId, PostId, RegionId } from '../ids.ts';

@@ -7,7 +7,7 @@ import { principalMenu } from '../src/seats/requests.ts';
 import { createFreezeLedger } from '../src/tick/freeze.ts';
 import { logProblems, type LogEntry } from '../src/log/log.ts';
 import { answerEntries, playDays, replay } from '../src/log/session.ts';
-import { IMMUTABLE_STATE_KEYS, OWNED_FIELDS } from '../src/ownership.ts';
+import { IMMUTABLE_ROOT_FIELDS, OWNED_FIELDS } from '../src/ownership.ts';
 import type { State } from '../src/root-state.ts';
 import { pendingRequests } from '../src/seats/requests.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
@@ -324,8 +324,8 @@ describe('ownership of the new State (0044)', () => {
       'standingGoals:plans',
       'stateDay:tick',
     ]);
-    expect(IMMUTABLE_STATE_KEYS).toContain('gameSeed');
-    expect(IMMUTABLE_STATE_KEYS).toContain('calendarStart');
+    expect(IMMUTABLE_ROOT_FIELDS).toContain('gameSeed');
+    expect(IMMUTABLE_ROOT_FIELDS).toContain('calendarStart');
   });
 
   it('declares every seats mechanic once, and a reference game fires most of them', () => {

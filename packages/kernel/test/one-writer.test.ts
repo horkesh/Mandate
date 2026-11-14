@@ -1,14 +1,26 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { IMMUTABLE_STATE_KEYS, KERNEL_MODULES, LEGACY_STATE_RECORDS, OWNED_FIELDS, STATE_CONSTRUCTORS, type OwnedField } from '../src/ownership.ts';
+import {
+  IMMUTABLE_RECORDS,
+  IMMUTABLE_ROOT_FIELDS,
+  KERNEL_MODULES,
+  LEGACY_STATE_RECORDS,
+  NEVER_REASSIGNED_KEYS,
+  OWNED_FIELDS,
+  STATE_CONSTRUCTORS,
+  type OwnedField,
+} from '../src/ownership.ts';
 import {
   classificationProblems,
+  immutableKeys,
   isInModule,
+  NO_IMMUTABLES,
   ownedKeys,
   stateRecords,
   writeSites,
   writeViolations,
+  type ImmutableDeclaration,
   type SourceFile,
 } from './support/one-writer.ts';
 import { repoPath, tsFiles, workspacePackages } from './support/source.ts';
@@ -20,6 +32,29 @@ import { repoPath, tsFiles, workspacePackages } from './support/source.ts';
  * kernel's: an app or a seat package writing State is as wrong as a kernel
  * module that isn't the owner.
  */
+
+/** The 69 keys that `IMMUTABLE_STATE_KEYS` listed by hand before records were declared (f18b073), pinned once: the derived keys must never lose one. */
+const IMMUTABLE_KEYS_OF_THE_OLD_LIST: readonly string[] = [
+    'adviceConfidence', 'adviceReasons', 'adviceRecommends', 'calendarStart', 'claimConfidence', 'claimKind',
+    'claimRegion', 'claimToken', 'claimValue', 'gameSeed', 'goalSpecKind', 'goalSpecRegion',
+    'hopPerson', 'hopPost', 'hopRole', 'hqRegion', 'hqSinceDay', 'id',
+    'knownBody', 'knownReceivedDay', 'knownReports', 'knownRoute', 'knownVia', 'msgArriveDay',
+    'msgFrom', 'msgOrder', 'msgOrigin', 'msgPending', 'msgReport', 'msgRole',
+    'msgRoute', 'msgSentDay', 'msgTo', 'msgToPost', 'msgTruth', 'msgVia',
+    'orderBypass', 'orderGoal', 'orderIssuedDay', 'orderIssuer', 'orderTarget', 'reasonKind',
+    'reasonWeight', 'reportAdvice', 'reportAnswers', 'reportAuthor', 'reportAuthorPost', 'reportClaims',
+    'reportDay', 'reportHour', 'reportSubjectId', 'reportSubjectKind', 'reportSubtype', 'reportType',
+    'seatDriver', 'seatPerson', 'standingIssuer', 'standingOrder', 'standingSetDay', 'standingSpec',
+    'standingViaChain', 'termKind', 'termPerson', 'termPost', 'termRegion', 'termRule',
+    'termValue', 'truthTerms', 'truthTrimmed',
+];
+
+/** What is immutable, as `ownership.ts` declares it: records by name, State's set-once root fields, and ids. */
+const IMMUTABLE: ImmutableDeclaration = { records: IMMUTABLE_RECORDS, rootFields: IMMUTABLE_ROOT_FIELDS, neverReassigned: NEVER_REASSIGNED_KEYS };
+/** Fixtures that need only the id rule. */
+const ID_ONLY: ImmutableDeclaration = { ...NO_IMMUTABLES, neverReassigned: ['id'] };
+/** The tail of the message for a record below the root that nothing declares. */
+const NOT_DECLARED = (record: string): string => `, and ${record} is not declared in IMMUTABLE_RECORDS; a record below the State root is an immutable value (decision 0052)`;
 
 const sources: SourceFile[] = workspacePackages().flatMap((p) =>
   tsFiles(join(p.root, 'src')).map((file) => ({ path: repoPath(file), code: readFileSync(file, 'utf8') })),
@@ -54,11 +89,11 @@ describe('one writer per field, over every package', () => {
 
   it('classifies every property of every State record, and no key is owned twice', () => {
     const records = stateRecords(sources);
-    expect(classificationProblems(records, OWNED_FIELDS, IMMUTABLE_STATE_KEYS, LEGACY_STATE_RECORDS)).toEqual([]);
+    expect(classificationProblems(records, OWNED_FIELDS, IMMUTABLE, LEGACY_STATE_RECORDS)).toEqual([]);
   });
 
   it('writes each owned field only from its writer, and never writes an immutable key', () => {
-    const violations = writeViolations(sources, ownedKeys(OWNED_FIELDS), IMMUTABLE_STATE_KEYS, STATE_CONSTRUCTORS).map(
+    const violations = writeViolations(sources, ownedKeys(OWNED_FIELDS), immutableKeys(stateRecords(sources), IMMUTABLE), STATE_CONSTRUCTORS).map(
       (v) => `${v.path}:${v.line}: ${v.form} of "${v.key}" (only ${v.writer} may write it)`,
     );
     expect(violations).toEqual([]);
@@ -185,6 +220,144 @@ describe('the scanner catches violations (positive control)', () => {
     ]);
   });
 
+  it('catches writes through a cast and delete through a cast, and their siblings (review of lane 0.4)', () => {
+    const writes: SourceFile = {
+      path: 'packages/kernel/src/supply.ts',
+      code: [
+        // The reviewer's two probes.
+        "(s.controller as Record<string, unknown>)['x'] = {};",
+        'delete (s as any).controller;',
+        // Siblings: casts, a comma expression, a conditional, `??`, an angle assertion, a group after a control head.
+        '(s.controller as T[]).push(f);',
+        '(0, s.controller).push(f);',
+        '(cond ? s.controller : t).push(f);',
+        '(s.controller ?? []).push(f);',
+        '(<T[]>s.controller).push(f);',
+        'if (c) (s.controller as T[]).push(f);',
+        '(s.controller) = f;',
+        '(s.controller as T).length = 0;',
+        "delete (s.controller as any)['x'];",
+        '++(s.controller as any).n;',
+        // Siblings: optional chaining, bracket forms, a prefix write through a receiver cast.
+        's.controller?.push(f);',
+        's?.controller.push(f);',
+        "delete s['controller'];",
+        "s['controller']++;",
+        "++s['controller'];",
+        '++(s as any).controller;',
+        // Siblings: a borrowed mutator and reflective writes with the key as the target.
+        'Array.prototype.push.call(s.controller, f);',
+        '[].splice.apply(s.controller, [0, 1]);',
+        "Object.assign(s.controller, { a: 1 });",
+        "Reflect.set(s.controller, 'a', 1);",
+      ].join('\n'),
+    };
+    const found = writeViolations([writes], owned, []).map((v) => `${v.line} ${v.form}`);
+    expect(found).toEqual([
+      '1 write through a parenthesised target',
+      '2 delete',
+      '3 write through a parenthesised target',
+      '4 write through a parenthesised target',
+      '5 write through a parenthesised target',
+      '6 write through a parenthesised target',
+      '7 write through a parenthesised target',
+      '8 write through a parenthesised target',
+      '9 write through a parenthesised target',
+      '10 write through a parenthesised target',
+      '11 delete',
+      '11 write through a parenthesised target',
+      '12 increment',
+      '12 write through a parenthesised target',
+      '13 mutating call',
+      '14 mutating call',
+      '15 bracket delete',
+      '16 bracket increment',
+      '17 bracket increment',
+      '18 increment',
+      '19 borrowed mutator',
+      '20 borrowed mutator',
+      '21 reflective write',
+      '22 reflective write',
+    ]);
+  });
+
+  it('catches a for loop that assigns the key on every pass, and not one that only reads it (review N1)', () => {
+    const loops: SourceFile = {
+      path: 'packages/kernel/src/supply.ts',
+      code: [
+        'for (s.controller of items) {}',
+        'for (s.controller in table) {}',
+        "for (s['controller'] of items) {}",
+        'for (const x of s.controller) {}',
+        'for (const k in s.controller) {}',
+        'for (let i = 0; i < s.controller.length; i++) {}',
+      ].join('\n'),
+    };
+    expect(writeViolations([loops], owned, []).map((v) => `${v.line} ${v.form}`)).toEqual(['1 loop target', '2 loop target', '3 bracket loop target']);
+  });
+
+  it('catches a reflective write that names the key as a string (review of the tooling batch)', () => {
+    const writes: SourceFile = {
+      path: 'packages/cli/src/shell.ts',
+      code: [
+        // The reviewer's three probes.
+        "Reflect.set(s, 'controller', v);",
+        "Object.defineProperty(s, 'controller', { value: v });",
+        "Reflect.deleteProperty(s, 'controller');",
+        // Siblings: the other quote styles, a cast target, a multi-line call, defineProperties with the key in its map.
+        'Reflect.set(s, "controller", v);',
+        'Reflect.set(s, `controller`, v);',
+        "Reflect.defineProperty((s as any), 'controller', d);",
+        "Reflect.set(\n  getState(a, b),\n  'controller',\n  v,\n);",
+        'Object.defineProperties(s, { controller: { value: v } });',
+      ].join('\n'),
+    };
+    expect(writeViolations([writes], owned, []).map((v) => `${v.line} ${v.form}`)).toEqual([
+      '1 reflective write by name',
+      '2 reflective write by name',
+      '3 reflective write by name',
+      '4 reflective write by name',
+      '5 reflective write by name',
+      '6 reflective write by name',
+      '7 reflective write by name',
+      '12 object literal',
+    ]);
+  });
+
+  it('does not flag a reflective read, another key, or a key that only starts like it (negative controls)', () => {
+    const reads: SourceFile = {
+      path: 'packages/cli/src/shell.ts',
+      code: [
+        "Reflect.get(s, 'controller');",
+        "Reflect.has(s, 'controller');",
+        "Reflect.set(s, 'other', v);",
+        "Reflect.set(s, 'controllerAlso', v);",
+        "Object.defineProperty(s, 'other', d);",
+        "log('controller');",
+      ].join('\n'),
+    };
+    expect(writeViolations([reads], owned, []).map((v) => `${v.line} ${v.form}`)).toEqual([]);
+  });
+
+  it('does not flag reads, or the key passed as a source rather than a target (negative controls)', () => {
+    const reads: SourceFile = {
+      path: 'packages/kernel/src/supply.ts',
+      code: [
+        'Object.assign(other, s.controller);',
+        'Array.prototype.push.call(other, s.controller);',
+        'const n = (s.controller as T[]).length;',
+        'const m = (s.controller as T[]).map((x) => x);',
+        'if (s.controller) y = 1;',
+        'foo(s.controller, f);',
+        'foo(s.controller as T).bar = 1;',
+        'const k = (s.controller as T) === f;',
+        'while (n--) keep(s.controller);',
+        'for (let i = 0; i < n; i--) other = s.controller;',
+      ].join('\n'),
+    };
+    expect(writeViolations([reads], owned, []).map((v) => `${v.line} ${v.form}`)).toEqual([]);
+  });
+
   it('treats a record named exactly State, and every record reachable from it, as State (reviewer probes)', () => {
     const root: SourceFile = {
       path: 'packages/kernel/src/state.ts',
@@ -199,13 +372,13 @@ describe('the scanner catches violations (positive control)', () => {
     const records = stateRecords([root]);
     expect(records.map((r) => r.record).sort()).toEqual(['ForceBlock', 'Region', 'State', 'SupplyRow']);
     const regionFields: OwnedField[] = [{ field: 'region control', writer: 'control', proposedBy: [], code: [{ record: 'Region', key: 'controller' }] }];
-    expect(classificationProblems(records, regionFields, ['id'], [])).toEqual([
-      'packages/kernel/src/state.ts: State.day has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
-      'packages/kernel/src/state.ts: State.regions has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
-      'packages/kernel/src/state.ts: State.forces has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
-      'packages/kernel/src/state.ts: Region.supply has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
-      'packages/kernel/src/state.ts: ForceBlock.strength has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
-      'packages/kernel/src/state.ts: SupplyRow.level has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
+    expect(classificationProblems(records, regionFields, ID_ONLY, [])).toEqual([
+      'packages/kernel/src/state.ts: State.day has no writer in OWNED_FIELDS and is not an immutable root field (packages/kernel/src/ownership.ts)',
+      'packages/kernel/src/state.ts: State.regions has no writer in OWNED_FIELDS and is not an immutable root field (packages/kernel/src/ownership.ts)',
+      'packages/kernel/src/state.ts: State.forces has no writer in OWNED_FIELDS and is not an immutable root field (packages/kernel/src/ownership.ts)',
+      `packages/kernel/src/state.ts: Region.supply has no writer in OWNED_FIELDS${NOT_DECLARED('Region')} (packages/kernel/src/ownership.ts)`,
+      `packages/kernel/src/state.ts: ForceBlock.strength has no writer in OWNED_FIELDS${NOT_DECLARED('ForceBlock')} (packages/kernel/src/ownership.ts)`,
+      `packages/kernel/src/state.ts: SupplyRow.level has no writer in OWNED_FIELDS${NOT_DECLARED('SupplyRow')} (packages/kernel/src/ownership.ts)`,
     ]);
   });
 
@@ -245,16 +418,91 @@ describe('the scanner catches violations (positive control)', () => {
     const stale: OwnedField = { field: 'ghost', writer: 'forces', proposedBy: [], code: [{ record: 'GhostState', key: 'ghost' }] };
     const records = stateRecords([control, unclassified]);
     expect(records.find((r) => r.record === 'ForceBlockState')?.keys).toEqual(['id', 'strength', 'location']);
-    expect(classificationProblems(records, [...fixtureFields, stale], ['id'], [])).toEqual([
-      'packages/kernel/src/forces.ts: ForceBlockState.strength has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
-      'packages/kernel/src/forces.ts: ForceBlockState.location has no writer in OWNED_FIELDS (packages/kernel/src/ownership.ts)',
+    expect(classificationProblems(records, [...fixtureFields, stale], ID_ONLY, [])).toEqual([
+      `packages/kernel/src/forces.ts: ForceBlockState.strength has no writer in OWNED_FIELDS${NOT_DECLARED('ForceBlockState')} (packages/kernel/src/ownership.ts)`,
+      `packages/kernel/src/forces.ts: ForceBlockState.location has no writer in OWNED_FIELDS${NOT_DECLARED('ForceBlockState')} (packages/kernel/src/ownership.ts)`,
       'OWNED_FIELDS "ghost" points at GhostState.ghost, which no State record declares',
     ]);
   });
 
+  describe('the immutable declaration (tooling item 4: per record, not per key)', () => {
+    const nested: SourceFile = {
+      path: 'packages/kernel/src/state.ts',
+      code: [
+        'export interface State { readonly gameSeed: number; readonly calendarStart: string | null; messages: readonly Message[]; stateDay: number }',
+        'export interface Message { readonly id: MessageId; readonly msgFrom: PersonId; readonly msgBody: Body }',
+        'export interface Body { readonly bodyText: string }',
+        'export interface Scratch { readonly scratchNote: string }',
+      ].join('\n'),
+    };
+    const records = stateRecords([nested]);
+    const decl: ImmutableDeclaration = { records: ['Message', 'Body'], rootFields: ['gameSeed', 'calendarStart'], neverReassigned: ['id'] };
+    const fields: OwnedField[] = [{ field: 'the day', writer: 'tick', proposedBy: [], code: [{ record: 'State', key: 'stateDay' }, { record: 'State', key: 'messages' }] }];
+
+    it('derives the immutable keys from the declared records, with the root fields and ids', () => {
+      expect(immutableKeys(records, decl)).toEqual(['bodyText', 'calendarStart', 'gameSeed', 'id', 'msgBody', 'msgFrom']);
+      // One line declares a record, whatever its keys: a new key on Message is covered at once.
+      const grown = stateRecords([{ ...nested, code: nested.code.replace('readonly msgBody: Body', 'readonly msgBody: Body; readonly msgLate: number') }]);
+      expect(immutableKeys(grown, decl)).toContain('msgLate');
+      expect(classificationProblems(records, fields, decl, [])).toEqual([]);
+    });
+
+    it('flags an assignment to any key of a declared record, and allows building one whole', () => {
+      const writer: SourceFile = {
+        path: 'packages/kernel/src/messages.ts',
+        code: ['m.msgFrom = other;', 'delete m.msgBody;', 'const next = { ...m, msgFrom: p };', 'const fresh = { id, msgFrom: p, msgBody: b };', 'm.scratchNote = x;'].join('\n'),
+      };
+      const found = writeViolations([writer], [], immutableKeys(records, decl)).map((v) => `${v.line} ${v.form} ${v.key}`).sort();
+      expect(found).toEqual(['1 assignment msgFrom', '2 delete msgBody']);
+    });
+
+    it('flags a record below the root that nothing declares, one line per key (positive control)', () => {
+      const problems = classificationProblems(records, fields, { ...decl, records: ['Message'] }, []);
+      expect(problems).toEqual([
+        `packages/kernel/src/state.ts: Body.bodyText has no writer in OWNED_FIELDS${NOT_DECLARED('Body')} (packages/kernel/src/ownership.ts)`,
+      ]);
+    });
+
+    it('flags a State field that is neither owned nor an immutable root field', () => {
+      expect(classificationProblems(records, fields.slice(0, 1).map((f) => ({ ...f, code: [{ record: 'State', key: 'stateDay' }] })), decl, [])).toEqual([
+        'packages/kernel/src/state.ts: State.messages has no writer in OWNED_FIELDS and is not an immutable root field (packages/kernel/src/ownership.ts)',
+      ]);
+    });
+
+    it('flags declarations that point at nothing, and State declared as an immutable record', () => {
+      expect(classificationProblems(records, fields, { ...decl, records: ['Message', 'Body', 'Gone', 'State'], rootFields: ['gameSeed', 'calendarStart', 'ghostField'] }, [])).toEqual([
+        'IMMUTABLE_RECORDS names Gone, which no State record declares; remove the entry',
+        'IMMUTABLE_RECORDS names State, whose fields are owned by their writers; list its set-once fields in IMMUTABLE_ROOT_FIELDS',
+        'IMMUTABLE_ROOT_FIELDS names ghostField, which State does not declare',
+      ]);
+    });
+
+    it('flags an immutable key shared by two declared records, or with an owned key, since the scan matches by name', () => {
+      const clash = stateRecords([{ ...nested, code: nested.code.replace('readonly bodyText: string', 'readonly msgFrom: string') }]);
+      expect(classificationProblems(clash, fields, decl, [])).toEqual([
+        'immutable key "msgFrom" is declared by Message and Body; immutable keys must be unique, so the scan can match them by name',
+      ]);
+      const owns = [...fields, { field: 'a stray', writer: 'tick', proposedBy: [], code: [{ record: 'Scratch', key: 'scratchNote' }, { record: 'State', key: 'msgFromOwned' }] }];
+      const shadow = stateRecords([{ ...nested, code: nested.code.replace('readonly scratchNote: string', 'readonly bodyText: string') }]);
+      expect(classificationProblems(shadow, [...fields, { field: 'a stray', writer: 'tick', proposedBy: [], code: [{ record: 'Scratch', key: 'bodyText' }] }], decl, [])).toContain('key "bodyText" is both owned and immutable');
+      expect(owns.length).toBe(2);
+    });
+
+    it('is the real declaration: every nested State record is declared, and the derived keys include the ones the old list named', () => {
+      const real = stateRecords(sources);
+      const keys = immutableKeys(real, IMMUTABLE);
+      // The ratchet: every key the old hand-kept list named (69) is still derived. New records add keys freely;
+      // a key leaves only by a deliberate edit to the pinned list above.
+      expect(keys).toEqual(expect.arrayContaining([...IMMUTABLE_KEYS_OF_THE_OLD_LIST]));
+      expect(IMMUTABLE_KEYS_OF_THE_OLD_LIST).toHaveLength(69);
+      const nestedNames = real.filter((r) => r.record !== 'State' && !LEGACY_STATE_RECORDS.some((l) => l.record === r.record)).map((r) => r.record).sort();
+      expect(nestedNames).toEqual([...IMMUTABLE_RECORDS].sort());
+    });
+  });
+
   it('flags a key owned twice', () => {
     const twice: OwnedField = { field: 'other', writer: 'combat', proposedBy: [], code: [{ record: 'RegionState', key: 'controller' }] };
-    const problems = classificationProblems(stateRecords([control]), [...fixtureFields, twice], ['id'], []);
+    const problems = classificationProblems(stateRecords([control]), [...fixtureFields, twice], ID_ONLY, []);
     expect(problems[0]).toContain('owned key "controller" is claimed 2 times');
   });
 });

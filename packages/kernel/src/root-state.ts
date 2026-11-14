@@ -12,8 +12,8 @@
  *   unchanged record, never edits one in place. That is what lets `viewFor`
  *   return stable references for unchanged data (0035), and lets tests
  *   deep-freeze State so any write outside a writer throws (`tick/freeze.ts`);
- * - records below the root are immutable values (their keys are in
- *   `IMMUTABLE_STATE_KEYS`), so a change always goes through a root field and
+ * - records below the root are immutable values (each is declared in
+ *   `IMMUTABLE_RECORDS`), so a change always goes through a root field and
  *   therefore through its writer.
  *
  * The command log sits beside State, not in it (`log/log.ts`).
