@@ -19,3 +19,13 @@ export * from './ladder.ts';
 export * from './view.ts';
 export * from './bot.ts';
 export * from './turn.ts';
+
+// Phase 0 foundations. Typed ids are a namespace because the M2 modules above
+// still export plain-string aliases with the same names (RegionId, PostId, ...).
+export * as ids from './ids.ts';
+export * from './serialize/canonical.ts';
+export * from './serialize/sha256.ts';
+export * from './serialize/hash.ts';
+export * from './serialize/save.ts';
+export * from './telemetry.ts';
+export * from './ownership.ts';
