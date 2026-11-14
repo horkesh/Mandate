@@ -95,19 +95,19 @@ export function whereIs(ctx: TickContext, state: State, person: PersonId): Regio
 }
 
 /** The route a message by `route` really takes (a wire sent off the wire goes by courier). No dice drawn. */
-export function takenRoute(ctx: TickContext, route: RouteKind, from: RegionId, to: RegionId): RouteKind {
+export function takenRoute(ctx: TickContext, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId): RouteKind {
   if (route !== 'wire' || from === to) return route;
-  const l = routeLatency(ctx.world, ctx.world.rules.latency, route, from, to, null);
+  const l = routeLatency(ctx.world, ctx.world.rules.latency, route, from, to, ctx.world.person(sender).faction, null);
   return l.ok && l.latency.parts.some((p) => p.part === 'wire') ? 'wire' : 'courier';
 }
 
-/** Arrival of one hop by `route`, and the route actually taken (a wire sent off the wire goes by courier). */
-export function hop(ctx: TickContext, route: RouteKind, from: RegionId, to: RegionId, id: MessageId, extraDays = 0): { readonly arrive: number; readonly route: RouteKind } {
-  const l = routeLatency(ctx.world, ctx.world.rules.latency, route, from, to, { seed: ctx.seed, message: id });
+/** Arrival of one hop by `route`, sent by `sender`, and the route actually taken (a wire sent off his side's wire goes by courier). */
+export function hop(ctx: TickContext, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId, id: MessageId, extraDays = 0): { readonly arrive: number; readonly route: RouteKind } {
+  const l = routeLatency(ctx.world, ctx.world.rules.latency, route, from, to, ctx.world.person(sender).faction, { seed: ctx.seed, message: id });
   if (!l.ok) throw new RangeError(`route ${route} is not available from ${from} to ${to}`);
   const weather = l.latency.parts.find((p) => p.part === 'weather');
   if (weather) fire(ctx, 'messages.courier_delay', weather.days);
-  return { arrive: ctx.day + l.latency.days + extraDays, route: takenRoute(ctx, route, from, to) };
+  return { arrive: ctx.day + l.latency.days + extraDays, route: takenRoute(ctx, route, sender, from, to) };
 }
 
 /**
@@ -137,10 +137,10 @@ export function sendReport(
   const toPost = world.postOf(report.to)?.id ?? null;
   const addressee: Hop = { hopPerson: report.to, hopPost: toPost, hopRole: 'addressee' };
   // Only a report that really goes by wire meets the filter; one sent off the wire rides past it.
-  const throughFilter = filter !== undefined && report.to === faction.principal && takenRoute(ctx, route, fromRegion, whereIs(ctx, state, report.to)) === 'wire';
+  const throughFilter = filter !== undefined && report.to === faction.principal && takenRoute(ctx, route, from, fromRegion, whereIs(ctx, state, report.to)) === 'wire';
   const first: Hop = throughFilter ? { hopPerson: filter.holder!, hopPost: filter.id, hopRole: 'filter' } : addressee;
   const id = mintMessageId(ctx.mint, ctx.day, from, first.hopPerson, report.tag);
-  const leg = hop(ctx, route, fromRegion, whereIs(ctx, state, first.hopPerson), id);
+  const leg = hop(ctx, route, from, fromRegion, whereIs(ctx, state, first.hopPerson), id);
   ctx.outbox.push({
     id,
     msgOrigin: id,

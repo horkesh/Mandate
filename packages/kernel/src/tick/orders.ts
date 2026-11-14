@@ -49,7 +49,7 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   }));
   const first = hops[0]!;
   const id = mintMessageId(ctx.mint, ctx.day, issuer.id, first.hopPerson, `order.${target.id}`);
-  const leg = hop(ctx, cmd.route, whereIs(ctx, state, issuer.id), whereIs(ctx, state, first.hopPerson), id);
+  const leg = hop(ctx, cmd.route, issuer.id, whereIs(ctx, state, issuer.id), whereIs(ctx, state, first.hopPerson), id);
   ctx.outbox.push({
     id,
     msgOrigin: id,
@@ -80,14 +80,20 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   return null;
 }
 
-function reportBody(author: PersonId, authorPost: PostId | null, day: number, partial: Pick<ReportBody, 'reportType' | 'reportSubtype' | 'reportClaims' | 'reportAdvice'> & { readonly answers: MessageId }): ReportBody {
+/** A report answering an order: its subject is the post the order was for, and it names the order it answers. */
+function reportBody(
+  author: PersonId,
+  authorPost: PostId | null,
+  day: number,
+  partial: Pick<ReportBody, 'reportType' | 'reportSubtype' | 'reportClaims' | 'reportAdvice'> & { readonly answers: MessageId; readonly about: PostId },
+): ReportBody {
   return {
     reportType: partial.reportType,
     reportSubtype: partial.reportSubtype,
     reportAuthor: author,
     reportAuthorPost: authorPost,
-    reportSubjectKind: 'order',
-    reportSubjectId: partial.answers,
+    reportSubjectKind: 'post',
+    reportSubjectId: partial.about,
     reportClaims: partial.reportClaims,
     reportDay: day,
     reportHour: null,
@@ -113,6 +119,7 @@ export function relayOrder(ctx: TickContext, state: State, msg: TransitMessage):
         reportClaims: [{ claimKind: 'order-objected', claimRegion: order.orderGoal.goalSpecRegion, claimValue: 1, claimToken: 'withheld', claimConfidence: 1000 }],
         reportAdvice: { adviceRecommends: 'withdraw-order', adviceReasons: decision.stated, adviceConfidence: 800 },
         answers: msg.msgOrigin,
+        about: order.orderTarget,
       }),
       truth: { truthTerms: decision.terms, truthTrimmed: [] },
       to: order.orderIssuer,
@@ -122,7 +129,7 @@ export function relayOrder(ctx: TickContext, state: State, msg: TransitMessage):
   }
   const next = msg.msgPending[0]!;
   const id = mintMessageId(ctx.mint, ctx.day, relayer.id, next.hopPerson, `order.${order.orderTarget}`);
-  const leg = hop(ctx, msg.msgRoute, whereIs(ctx, state, relayer.id), whereIs(ctx, state, next.hopPerson), id, decision.holdDays);
+  const leg = hop(ctx, msg.msgRoute, relayer.id, whereIs(ctx, state, relayer.id), whereIs(ctx, state, next.hopPerson), id, decision.holdDays);
   fire(ctx, 'orders.relayed');
   if (decision.holdDays > 0) fire(ctx, 'orders.relay_held', decision.holdDays);
   ctx.events.push({ event: 'relayed', person: relayer.id, post, message: msg.msgOrigin, terms: decision.terms });
@@ -161,6 +168,7 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
       ],
       reportAdvice: null,
       answers: msg.msgOrigin,
+      about: post,
     }),
     truth: { truthTerms: [], truthTrimmed: [] },
     to: order.orderIssuer,

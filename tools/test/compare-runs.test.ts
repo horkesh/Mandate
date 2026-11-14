@@ -32,4 +32,11 @@ describe('cross-machine run comparison', () => {
       'second run: resume did not match the continuous run',
     ]);
   });
+
+  it('flags runs from different kernels and a failed replay (the seats runner)', () => {
+    expect(compareSummaries(run(['a'], { kernel: 'phase0-seats' }), run(['a'], { kernel: 'other', replay: { matches: false } }))).toEqual([
+      'kernel differs: phase0-seats vs other',
+      'second run: replaying the log did not reproduce the run',
+    ]);
+  });
 });

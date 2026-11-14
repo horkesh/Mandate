@@ -14,7 +14,7 @@ import { sendReport, type TickContext } from '../src/tick/context.ts';
 import { createState } from '../src/tick/setup.ts';
 import { tick, type TickResult } from '../src/tick/tick.ts';
 import { viewFor } from '../src/view/view.ts';
-import { indexedFixture, P, POST, R } from './support/comms-fixture.ts';
+import { F, indexedFixture, P, POST, R } from './support/comms-fixture.ts';
 import { order, scriptedSeats } from './support/test-seats.ts';
 
 const lead = seatIdFor(P('a_lead'));
@@ -29,12 +29,14 @@ function run(world: ReturnType<typeof indexedFixture>, days: number, script: Par
 describe('latency is the kernel’s (0026)', () => {
   const world = indexedFixture();
   const L = (route: Parameters<typeof routeLatency>[2], from: string, to: string, noise: { seed: number; message: MessageId } | null = null) =>
-    routeLatency(world, DEFAULT_LATENCY_RULES, route, R(from), R(to), noise);
+    routeLatency(world, DEFAULT_LATENCY_RULES, route, R(from), R(to), F('a'), noise);
   const days = (r: ReturnType<typeof L>) => (r.ok ? r.latency.days : -1);
 
   it('computes courier, wire, special messenger and mail from the map', () => {
     expect(days(L('courier', 'a_cap', 'a_front'))).toBe(3);
-    expect(days(L('wire', 'a_cap', 'b_cap'))).toBe(0);
+    expect(days(L('wire', 'a_cap', 'a_mid'))).toBe(0);
+    // The wire is a side's own: nobody of side a files a message at side b's office in b_cap.
+    expect(L('wire', 'a_cap', 'b_cap')).toEqual({ ok: true, latency: { days: 5, parts: [{ part: 'wire', days: 0 }, { part: 'from the wire', days: 5 }] } });
     // Off the wire at one end: ride two days to the office at a_mid, then wire.
     expect(L('wire', 'a_front', 'a_cap')).toEqual({ ok: true, latency: { days: 2, parts: [{ part: 'to the wire', days: 2 }, { part: 'wire', days: 0 }] } });
     expect(days(L('special-messenger', 'a_cap', 'a_front'))).toBe(1);

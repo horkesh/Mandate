@@ -34,7 +34,8 @@ export function commsWorldFromScenario(data: ScenarioData, rules: CommsRules = D
   const regions = data.regions.map((r) => ({
     id: toId('region', r.id),
     neighbours: [...r.neighbours].sort(strictCompare).map((n): CommsLink => ({ to: toId('region', n), days: linkDays(r.id, n) })),
-    wired: capitals.has(r.id) || data.posts.some((p) => p.regionId === r.id && p.linkDays <= 1),
+    // The wire belongs to the side that holds the region at the start (M2's controller).
+    wireOwner: capitals.has(r.id) || data.posts.some((p) => p.regionId === r.id && p.linkDays <= 1) ? toId('faction', r.controllerId) : null,
   }));
   const officeOf = new Map<string, PostId>();
   for (const p of [...data.posts].sort((a, b) => strictCompare(a.id, b.id))) {

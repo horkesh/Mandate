@@ -15,18 +15,22 @@ import { pathToFileURL } from 'node:url';
 
 export interface Summary {
   readonly pack: string;
+  /** Which kernel produced the hashes (absent for the M2 runner); runs match on pack and kernel. */
+  readonly kernel?: string;
   readonly hashScheme: string;
   readonly worldHash: string;
   readonly initialHash: string;
   readonly turns: readonly { readonly turn: number; readonly hash: string }[];
   readonly finalHash: string;
   readonly resume: { readonly matches: boolean } | null;
+  /** The seats runner also replays its whole log; absent for the M2 runner. */
+  readonly replay?: { readonly matches: boolean };
 }
 
 /** Differences between two runs of the same scenario. Empty when they agree on every hash. */
 export function compareSummaries(a: Summary, b: Summary): string[] {
   const problems: string[] = [];
-  for (const field of ['pack', 'hashScheme', 'worldHash', 'initialHash'] as const) {
+  for (const field of ['pack', 'kernel', 'hashScheme', 'worldHash', 'initialHash'] as const) {
     if (a[field] !== b[field]) problems.push(`${field} differs: ${a[field]} vs ${b[field]}`);
   }
   if (a.turns.length !== b.turns.length) problems.push(`turn count differs: ${a.turns.length} vs ${b.turns.length}`);
@@ -35,6 +39,7 @@ export function compareSummaries(a: Summary, b: Summary): string[] {
   if (a.finalHash !== b.finalHash) problems.push(`final hash differs: ${a.finalHash} vs ${b.finalHash}`);
   for (const [side, s] of [['first', a], ['second', b]] as const) {
     if (s.resume && !s.resume.matches) problems.push(`${side} run: resume did not match the continuous run`);
+    if (s.replay && !s.replay.matches) problems.push(`${side} run: replaying the log did not reproduce the run`);
   }
   return problems;
 }
@@ -61,11 +66,12 @@ function main(argv: readonly string[]): number {
     console.error(`nothing to compare: ${left.length} summaries in ${argv[0]}, ${right.length} in ${argv[1]}`);
     return 2;
   }
-  const packs = [...new Set([...left, ...right].map((s) => s.pack))].sort();
+  const runKey = (s: Summary) => (s.kernel === undefined ? s.pack : `${s.pack} (${s.kernel})`);
+  const packs = [...new Set([...left, ...right].map(runKey))].sort();
   let failed = false;
   for (const pack of packs) {
-    const a = left.filter((s) => s.pack === pack);
-    const b = right.filter((s) => s.pack === pack);
+    const a = left.filter((s) => runKey(s) === pack);
+    const b = right.filter((s) => runKey(s) === pack);
     if (a.length !== 1 || b.length !== 1) {
       console.error(`${pack}: expected one summary per side, found ${a.length} and ${b.length}`);
       failed = true;

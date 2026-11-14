@@ -70,7 +70,7 @@ export function principalMenu(world: IndexedWorld, state: State, faction: Factio
     const to = p.region;
     const routes: RouteOption[] = [];
     for (const route of ORDER_ROUTES) {
-      const l = routeLatency(world, world.rules.latency, route, f.seatRegion, to, null);
+      const l = routeLatency(world, world.rules.latency, route, f.seatRegion, to, faction, null);
       if (l.ok) routes.push({ route, typicalDays: l.latency.days, price: route === 'special-messenger' ? world.rules.latency.specialMessengerPrice : 0 });
     }
     commandable.push({ post: id, holder: p.holder, relays: world.chainBelow(null, id).slice(0, -1), routes });

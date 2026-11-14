@@ -50,9 +50,14 @@ export function deliverReport(state: State, seat: SeatId, report: KnownReport, t
   };
 }
 
-/** The supersession key: a newer report with the same template, author and subject replaces an older one. */
+/**
+ * The supersession key: a newer report with the same template, author and
+ * subject replaces an older one. A report answering an order is about that
+ * order, so it is superseded only by a later answer to the same order, never
+ * by the author's routine reports.
+ */
 export function supersessionKey(body: ReportBody): string {
-  return `${templateKey(body.reportType, body.reportSubtype)}|${body.reportAuthor}|${body.reportSubjectKind}:${body.reportSubjectId}`;
+  return `${templateKey(body.reportType, body.reportSubtype)}|${body.reportAuthor}|${body.reportSubjectKind}:${body.reportSubjectId}|${body.reportAnswers ?? ''}`;
 }
 
 export interface PruneCounts {

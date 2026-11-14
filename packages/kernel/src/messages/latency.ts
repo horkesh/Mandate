@@ -12,7 +12,7 @@
  * the message's own id (decision 0041's pattern), so no other message, report
  * or reading can shift it.
  */
-import type { MessageId, RegionId } from '../ids.ts';
+import type { FactionId, MessageId, RegionId } from '../ids.ts';
 import { createStream, nextInt } from '../rng.ts';
 
 export const ROUTE_KINDS = ['courier', 'in-person', 'mail', 'rail', 'ship', 'special-messenger', 'wire'] as const;
@@ -51,8 +51,8 @@ export function latencyProblems(rules: LatencyRules): string[] {
 /** The map facts latency needs (the stand-in `IndexedWorld` provides them; lane 0.2's graph will too). */
 export interface LatencyMap {
   courierDays(from: RegionId, to: RegionId): number;
-  daysToWire(from: RegionId): number | null;
-  region(id: RegionId): { readonly wired: boolean };
+  daysToWire(from: RegionId, faction: FactionId): number | null;
+  region(id: RegionId): { readonly wireOwner: FactionId | null };
 }
 
 export interface Latency {
@@ -65,8 +65,9 @@ export interface Latency {
 export type LatencyResult = { readonly ok: true; readonly latency: Latency } | { readonly ok: false; readonly reason: 'route_unavailable' };
 
 /**
- * Days for a message from `from` to `to` by `route`. `noise` names the game
- * seed and message id for the courier's stream; pass null to get the typical
+ * Days for a message from `from` to `to` by `route`, sent by someone of
+ * `faction` (the wire is his side's wire). `noise` names the game seed and
+ * message id for the courier's stream; pass null to get the typical
  * (noise-free) figure that a seat may be shown in advance.
  */
 export function routeLatency(
@@ -75,6 +76,7 @@ export function routeLatency(
   route: RouteKind,
   from: RegionId,
   to: RegionId,
+  faction: FactionId,
   noise: { readonly seed: number; readonly message: MessageId } | null,
 ): LatencyResult {
   const courier = map.courierDays(from, to);
@@ -103,8 +105,8 @@ export function routeLatency(
       parts.push({ part: 'messenger', days: Math.trunc((courier * rules.specialMessengerPermille) / 1000) });
       return done();
     case 'wire': {
-      const a = map.region(from).wired ? 0 : map.daysToWire(from);
-      const b = map.region(to).wired ? 0 : map.daysToWire(to);
+      const a = map.region(from).wireOwner === faction ? 0 : map.daysToWire(from, faction);
+      const b = map.region(to).wireOwner === faction ? 0 : map.daysToWire(to, faction);
       // Off the wire at either end, the message rides to the nearest office first; if that is no
       // quicker than a courier, it goes by courier.
       if (a === null || b === null || a + b + rules.wireDays >= courier) {

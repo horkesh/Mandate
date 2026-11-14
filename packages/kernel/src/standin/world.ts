@@ -31,8 +31,12 @@ export interface CommsLink {
 export interface CommsRegion {
   readonly id: RegionId;
   readonly neighbours: readonly CommsLink[];
-  /** Whether the wire reaches the region (a telegraph office, a signal station: setting-free). */
-  readonly wired: boolean;
+  /**
+   * The faction whose wire reaches the region (an office or a signal station),
+   * or null. Nobody files a message at the enemy's office. Fixed here; lane
+   * 0.4's control will make it follow who holds the region.
+   */
+  readonly wireOwner: FactionId | null;
 }
 
 export interface CommsFaction {
@@ -123,8 +127,8 @@ export interface IndexedWorld {
   postOf(person: PersonId): CommsPost | null;
   /** Courier days between two regions along the quickest path. Throws if unreachable. */
   courierDays(from: RegionId, to: RegionId): number;
-  /** Courier days from a region to the nearest wired region; null if no region is wired. */
-  daysToWire(from: RegionId): number | null;
+  /** Courier days from a region to the nearest region on `faction`'s wire; null if it has none. */
+  daysToWire(from: RegionId, faction: FactionId): number | null;
   /** Neighbours of `from` on a quickest path to `to`, in id order (empty if `from` is `to`). */
   nextSteps(from: RegionId, to: RegionId): readonly RegionId[];
   /** The chain of posts from below `top` down to `target`, inclusive of `target`: the relays an order passes. */
@@ -156,6 +160,7 @@ export function commsWorldProblems(world: CommsWorld): string[] {
       else if (!other.neighbours.some((l) => l.to === r.id && l.days === link.days)) problems.push(`region ${r.id}: link to ${link.to} is not mirrored with the same days`);
       if (!Number.isSafeInteger(link.days) || link.days < 1) problems.push(`region ${r.id}: link to ${link.to} must take a whole number of days, at least 1`);
     }
+    if (r.wireOwner !== null && !factions.has(r.wireOwner)) problems.push(`region ${r.id}: wire owner ${r.wireOwner} is not a faction`);
   }
   for (const f of world.factions) {
     if (persons.get(f.principal)?.faction !== f.id) problems.push(`faction ${f.id}: principal ${f.principal} is not one of its people`);
@@ -211,10 +216,11 @@ export function indexWorld(world: CommsWorld): IndexedWorld {
   for (const p of world.posts) if (p.holder !== null) holderPost.set(p.holder, p);
   const regionIds = [...regions.keys()].sort(strictCompare);
   const dist = allPairs(world.regions, regionIds);
-  const wired = regionIds.filter((r) => regions.get(r)!.wired);
-  const toWire = new Map<RegionId, number | null>(
-    regionIds.map((r) => [r, wired.length === 0 ? null : Math.min(...wired.map((w) => dist.get(key(r, w)) ?? Number.MAX_SAFE_INTEGER))]),
-  );
+  const toWire = new Map<string, number | null>();
+  for (const f of factions.keys()) {
+    const wired = regionIds.filter((r) => regions.get(r)!.wireOwner === f);
+    for (const r of regionIds) toWire.set(key(r, f), wired.length === 0 ? null : Math.min(...wired.map((w) => dist.get(key(r, w)) ?? Number.MAX_SAFE_INTEGER)));
+  }
   const get = <K, V>(map: ReadonlyMap<K, V>, kind: string, id: K): V => {
     const v = map.get(id);
     if (v === undefined) throw new RangeError(`unknown ${kind} id "${String(id)}"`);
@@ -238,9 +244,9 @@ export function indexWorld(world: CommsWorld): IndexedWorld {
     faction: (id: FactionId) => get(factions, 'faction', id),
     postOf: (person: PersonId) => holderPost.get(person) ?? null,
     courierDays,
-    daysToWire: (from: RegionId) => {
-      const d = toWire.get(from);
-      if (d === undefined) throw new RangeError(`unknown region id "${from}"`);
+    daysToWire: (from: RegionId, faction: FactionId) => {
+      const d = toWire.get(key(from, faction));
+      if (d === undefined) throw new RangeError(`unknown region or faction: "${from}", "${faction}"`);
       return d;
     },
     nextSteps: (from: RegionId, to: RegionId) => {

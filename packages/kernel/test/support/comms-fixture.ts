@@ -10,12 +10,13 @@
  * chief a_spy) and a second at a_mid (a_bold, bold, no chief). Side b mirrors
  * it more plainly.
  */
-import { toId, type PersonId, type PostId, type RegionId } from '../../src/ids.ts';
+import { toId, type FactionId, type PersonId, type PostId, type RegionId } from '../../src/ids.ts';
 import { DEFAULT_COMMS_RULES, indexWorld, type CommsPerson, type CommsPost, type CommsWorld, type IndexedWorld } from '../../src/standin/world.ts';
 
 export const R = (id: string): RegionId => toId('region', id);
 export const P = (id: string): PersonId => toId('person', id);
 export const POST = (id: string): PostId => toId('post', id);
+export const F = (id: string): FactionId => toId('faction', id);
 
 type Over<T> = { -readonly [K in keyof T]?: T[K] };
 
@@ -44,12 +45,12 @@ export function commsFixture(over: { persons?: Record<string, Over<CommsPerson>>
   });
   return {
     regions: [
-      { id: R('a_cap'), neighbours: [link('a_mid')], wired: true },
-      { id: R('a_mid'), neighbours: [link('a_cap'), link('a_front', 2)], wired: true },
-      { id: R('a_front'), neighbours: [link('a_mid', 2), link('b_front')], wired: false },
-      { id: R('b_front'), neighbours: [link('a_front'), link('b_mid')], wired: false },
-      { id: R('b_mid'), neighbours: [link('b_front'), link('b_cap')], wired: false },
-      { id: R('b_cap'), neighbours: [link('b_mid')], wired: true },
+      { id: R('a_cap'), neighbours: [link('a_mid')], wireOwner: F('a') },
+      { id: R('a_mid'), neighbours: [link('a_cap'), link('a_front', 2)], wireOwner: F('a') },
+      { id: R('a_front'), neighbours: [link('a_mid', 2), link('b_front')], wireOwner: null },
+      { id: R('b_front'), neighbours: [link('a_front'), link('b_mid')], wireOwner: null },
+      { id: R('b_mid'), neighbours: [link('b_front'), link('b_cap')], wireOwner: null },
+      { id: R('b_cap'), neighbours: [link('b_mid')], wireOwner: F('b') },
     ],
     factions: [
       { id: toId('faction', 'a'), principal: P('a_lead'), seatRegion: R('a_cap'), objective: R('b_cap') },

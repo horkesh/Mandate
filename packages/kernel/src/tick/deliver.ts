@@ -77,7 +77,7 @@ function filterReport(ctx: TickContext, state: State, msg: TransitMessage): void
   ctx.events.push({ event: 'filtered', person: holder.id, post, message: msg.msgOrigin, terms });
   const next = msg.msgPending[0]!;
   const id = mintMessageId(ctx.mint, ctx.day, holder.id, next.hopPerson, `fwd.${msg.msgOrigin.length > 40 ? msg.msgOrigin.slice(-40) : msg.msgOrigin}`);
-  const leg = hop(ctx, 'in-person', whereIs(ctx, state, holder.id), whereIs(ctx, state, next.hopPerson), id, decision.holdDays);
+  const leg = hop(ctx, 'in-person', holder.id, whereIs(ctx, state, holder.id), whereIs(ctx, state, next.hopPerson), id, decision.holdDays);
   ctx.outbox.push({
     ...msg,
     id,
