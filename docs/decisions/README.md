@@ -55,10 +55,11 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0049](0049-ultrawide-first.md) | The game is designed for ultrawide displays first (3440×1440 reference) | accepted |
 | [0050](0050-world-format-v2.md) | World format v2: the pack format, its validator and generator, and what becomes State at scenario start | accepted; amended by 0055, 0058 |
 | [0051](0051-codex-output-rules.md) | Rules for Codex output: no AI likenesses of real people, game-resolution assets only, and full provenance | accepted |
-| [0052](0052-seats-knowledge-and-the-command-log.md) | Seats, knowledge and the command log: copy-on-write State, the player-visible boundary, and who may order | accepted |
+| [0052](0052-seats-knowledge-and-the-command-log.md) | Seats, knowledge and the command log: copy-on-write State, the player-visible boundary, and who may order | accepted; amended by 0059 |
 | [0053](0053-presentation-and-asset-briefs.md) | The presentation design and the asset briefs are accepted | accepted |
 | [0054](0054-control-fronts-pockets-and-supply.md) | Control, fronts, pockets and supply | accepted; amended by 0055 |
 | [0055](0055-neutral-passage-starting-sides-and-supply-sources.md) | Passage through neutral states, starting sides, and supply sources | accepted; amended by 0058 |
 | [0056](0056-union-1861-start-data.md) | The Union 1861 start as data | accepted |
 | [0057](0057-situations-engine-and-gate-tests.md) | The situations engine, and the gate as tests | accepted |
 | [0058](0058-lane-0.5-format-gaps.md) | The format gaps lane 0.5 found: trait stand-ins, filters and intelligence chiefs, and each region's civil government | accepted |
+| [0059](0059-tooling-scanner-index-hook-records.md) | Tooling: the one-writer scan's gaps, the decisions-index check, a hook that checks the staged tree, and immutable records by type | accepted |

@@ -1,6 +1,6 @@
 # 0052: Seats, knowledge and the command log: copy-on-write State, the player-visible boundary, and who may order
 
-Status: accepted (2026-11-14). From Phase 0 lane 0.6 (`notes/lane-0.6-seats.md`, which lists each choice with what it rejected) and the standing reviewer's two passes (approved after fixes). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 5, 8, 9 and 10, and decisions 0011, 0015, 0032, 0035, 0040, 0041 and 0044.
+Status: accepted (2026-11-14). From Phase 0 lane 0.6 (`notes/lane-0.6-seats.md`, which lists each choice with what it rejected) and the standing reviewer's two passes (approved after fixes). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 5, 8, 9 and 10, and decisions 0011, 0015, 0032, 0035, 0040, 0041 and 0044. Amended by 0059 (immutable records are declared by type in `IMMUTABLE_RECORDS`).
 
 ## Decision
 
