@@ -59,3 +59,5 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0053](0053-presentation-and-asset-briefs.md) | The presentation design and the asset briefs are accepted | accepted |
 | [0054](0054-control-fronts-pockets-and-supply.md) | Control, fronts, pockets and supply | accepted; amended by 0055 |
 | [0055](0055-neutral-passage-starting-sides-and-supply-sources.md) | Passage through neutral states, starting sides, and supply sources | accepted |
+| [0056](0056-union-1861-start-data.md) | The Union 1861 start as data | accepted |
+| [0057](0057-situations-engine-and-gate-tests.md) | The situations engine, and the gate as tests | accepted |

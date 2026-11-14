@@ -280,7 +280,7 @@ The day tick, each phase declaring what it reads and writes:
 5. Control changes; bump the control version when a threshold is crossed.
 6. Operations advance; stores on hand fall or refill from the supply trace.
 7. Weekly: economy, recruitment, people's politics and seat initiatives, bloc drift, attention refill.
-8. Situations evaluate their causes; live situations re-evaluate theirs and check option expiry and clocks.
+8. Situations fire on their causes over today's State, after every phase that changes the truth, and surface on the deciding seat's knowledge; live situations check option appearance and expiry over what the principal knows, and their clocks (0057; phase 4b in Phase 0 code, after control).
 9. Checkpoints and the verdict.
 10. The invariant barrier.
 11. Decision-point detection.
