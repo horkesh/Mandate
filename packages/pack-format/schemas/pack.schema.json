@@ -2,6 +2,7 @@
 "$schema": "https://json-schema.org/draft/2020-12/schema",
 "additionalProperties": false,
 "properties": {
+"allowsInventedPeople": {"default":false,"type":"boolean"},
 "defaultLocale": {"pattern":"^[a-z]{2,3}(?:-[A-Z]{2})?$","type":"string"},
 "factions": {"items":{"additionalProperties":false,"properties":{"id":{"maxLength":128,"pattern":"^[A-Za-z0-9][A-Za-z0-9_.:/-]*$","type":"string"},"name":{"pattern":"^[a-z0-9_]+(?:\\.[a-z0-9_:-]+)*$","type":"string"}},"required":["id","name"],"type":"object"},"minItems":1,"type":"array"},
 "formatVersion": {"const":2,"type":"number"},

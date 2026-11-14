@@ -271,6 +271,8 @@ export const ManifestSchema = z.strictObject({
   id: termId,
   /** A draft may carry unknown values; a release may not. */
   status: z.enum(['draft', 'release']),
+  /** Whether people may be marked invented (exempt from citing their centres and traits); off for a historical pack (review F7). */
+  allowsInventedPeople: z.boolean().default(false),
   name: stringKey,
   defaultLocale: z.string().regex(/^[a-z]{2,3}(?:-[A-Z]{2})?$/, 'a locale such as en or en-GB'),
   locales: z.array(z.string().regex(/^[a-z]{2,3}(?:-[A-Z]{2})?$/)).min(1),

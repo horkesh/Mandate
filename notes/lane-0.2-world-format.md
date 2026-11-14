@@ -129,7 +129,7 @@ Records that fail their shape are set aside, so more reference errors will surfa
 - No State records are built: lanes 0.4 to 0.7 build them on the reserved owners.
 - Weather zones and raids: owners and fields reserved, no mechanics.
 - Tenure history beyond the start, and rank changes in play: the start takes only tenures covering its date.
-- `invented` people: kept for fictional packs; 0033's officer pool is generated in play, never stored.
+- `invented` people: allowed only where `pack.json` sets `allowsInventedPeople` (off by default, so a historical pack cannot carry an uncited "invented" real person), and even then the record's own provenance must cite a real, admissible source; only its centres and traits are exempt (review F7). 0033's officer pool is generated in play, never stored.
 - Only English string tables; locale fallback works and is tested.
 - `CLAUDE.md`'s command list should gain `pack:generate`, `pack:validate` and `pack:schemas` (the steward's sync).
 

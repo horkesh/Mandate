@@ -18,6 +18,10 @@ const neutral = (post = 'grey_top,Grey Governor,chief,g_gov,,beta,,,,DESIGN,', b
   files = withFile(`${S}/holders.csv`, appendRow('grey_top,grey_chief,no,,,DESIGN,'), files);
   return withFile(`${S}/force_blocks.csv`, appendRow(block), files);
 };
+/** An invented officer whose centres and trait cite nothing; his record cites the design. */
+const INVENTED = 'pool_officer,Pool Officer,yes,red,officer,1830,1890,above,average,low,low,bold,,,DESIGN,';
+const allowInvented = () =>
+  withFile('pack.json', (t) => JSON.stringify({ ...(JSON.parse(t) as object), allowsInventedPeople: true }));
 const renamed = (from: string, to: string) => {
   const base = fixture();
   return withNewFile(to, base.get(from)!, withoutFile(from, base));
@@ -79,6 +83,9 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'a centre without a citation', files: () => withFile(`${W}/people.csv`, replaceOnce('above:REG A p.3', 'above')), kind: 'centre-without-citation', file: `${W}/people.csv` },
   { name: 'a centre citing only a pointer', files: () => withFile(`${W}/people.csv`, replaceOnce('above:REG A p.3', 'above:NOTE-x')), kind: 'centre-without-citation', file: `${W}/people.csv` },
   { name: 'a trait without a citation', files: () => withFile(`${W}/people.csv`, replaceOnce('bold:REG A p.9', 'bold')), kind: 'trait-without-citation', file: `${W}/people.csv` },
+  { name: 'an invented person in a pack that allows none (review F7)', files: () => withFile(`${W}/people.csv`, appendRow(INVENTED)), kind: 'invented-not-allowed', file: `${W}/people.csv` },
+  { name: "an invented person's record citing an unknown source", files: () => withFile(`${W}/people.csv`, appendRow(INVENTED.replace(/,DESIGN,$/, ',NOPE p.1,')), allowInvented()), kind: 'unknown-source', file: `${W}/people.csv` },
+  { name: "an invented person's record citing only a pointer", files: () => withFile(`${W}/people.csv`, appendRow(INVENTED.replace(/,DESIGN,$/, ',NOTE-x,')), allowInvented()), kind: 'pointer-only', file: `${W}/people.csv` },
   { name: 'ranks out of order', files: () => withFile(`${W}/people.csv`, replaceOnce('junior:1840;senior:1850-05', 'junior:1860;senior:1850-05')), kind: 'ranks-out-of-order', file: `${W}/people.csv` },
   { name: 'an empty date not declared unknown', files: () => withFile(`${W}/people.csv`, replaceOnce('officer,1801,1871', 'officer,,1871')), kind: 'unlisted-null', file: `${W}/people.csv` },
   { name: 'an unknown value in a release pack', files: () => withFile('pack.json', replaceOnce('"status": "draft"', '"status": "release"')), kind: 'unknown-value', file: `${S}/force_blocks.csv` },
@@ -240,6 +247,13 @@ describe('checks that guard committed data (positive controls)', () => {
 
   it('the canonical writer refuses a float rather than writing it', () => {
     expect(() => formatGenerated({ regions: [{ lengthDays: 1.5 }] })).toThrow();
+  });
+});
+
+describe('invented people (review F7)', () => {
+  it('need no citations for their centres and traits where the pack allows them', () => {
+    const result = run(withFile(`${W}/people.csv`, appendRow(INVENTED), allowInvented()));
+    expect(errorsOf(result.issues).map(formatIssue)).toEqual([]);
   });
 });
 

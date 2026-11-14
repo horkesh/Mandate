@@ -290,7 +290,11 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     refCheck(factions, 'faction', p.faction, at('faction'));
     term('personKinds', p.kind, at('kind'));
     term('blocs', p.bloc, at('bloc'));
-    if (!p.invented) citeCheck(p.provenance, at(), true, 'this person');
+    // Every record cites a real source, invented or not (review F7); only the centres and traits of an invented person need none.
+    citeCheck(p.provenance, at(), true, 'this person');
+    if (p.invented && !manifest.allowsInventedPeople) {
+      err('invented-not-allowed', at('invented'), 'this pack does not allow invented people', 'allowsInventedPeople: true in pack.json, for a pack with fictional people; a historical person is never invented');
+    }
     for (const stat of w.CENTRE_STATS) {
       const c = p.centres[stat];
       citeCheck(c.cites, at(`centres.${stat}.cites`), false, `the ${stat} centre`);
