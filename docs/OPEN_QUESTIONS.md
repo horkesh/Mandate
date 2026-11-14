@@ -31,3 +31,52 @@ Answered and moved to decisions:
 - **Situation design notes** (secession-winter lane): the decision to fire on Sumter was already taken in Richmond, so the player's levers are evacuate or relieve, notice and timing, and the firing is the labelled railroad (0028); the call for 75,000 volunteers, not Sumter alone, moved Virginia, North Carolina, Tennessee and Arkansas, so it needs its own situation; the note proposes starting control and loyalty for each border state; Congress did not sit from 4 March to 4 July 1861, so the calls for troops, the blockade and the habeas order were executive acts ratified later, and the politics model needs a "Congress not sitting" state that changes which actions are legal and what Lincoln must answer for when it returns.
 - **Event caps defer rather than drop** (AWWV-architecture lane): for the situations engine (Phase 0, lane 0.7).
 - **Situations catalogue gaps** (docs/design/SITUATIONS-1861-62.md, proposal): its research gaps, the facts that block situation authoring, are with a cloud research lane. The catalogue recommends an early-March-1862 scenario for the public demo.
+
+### Routed from the lead's private notes (L17), by lane or phase
+
+Source names: the lane notes are in the lead's shared notes folder (`lead-routing-notes.md`, `lead-queued-lanes.md`) and the research notes under `docs/research/`. Dropped as done: lane 0.1's work, the tripwire, the gate checklist and its Confederate, navy, politics and economy placements (all in `docs/design/SENSITIVE-HISTORY.md`), the catalogue, neutral option wording and the 0040 live-state items (FOUNDATION), the Confederate-will note (PR 2) and the `run:headless`, `check:licences` and `pack:*` commands.
+
+**Lane 0.3 (Union data) and the map and posts data lanes**
+- Tripwire close-out (0043): `npm run measure` in `prototypes/map-tripwire/` needs the regions as lon/lat GeoJSON with `properties.kind` (land, river, or a region), `properties.name`, optional `id` and `controlA`, and a `projection` member (else it fits its own conic). Keep `glsync=1`, or bake timings read about 100 times low. Expect per-tile cost to rise with real vertex counts.
+- Provenance: Natural Earth is the only geometry source confirmed public domain (terms read 2026-11-14); the Census licence stays unconfirmed. census.gov blocks this machine's IP (Cloudflare 403), so the local pipeline must not fetch from it; do not brief the Wayback route (the permission system refused it as routing around the block).
+- Person ids use the convention surname_firstgiven_initials (`lee_robert_e`).
+- Navy data (navy note): pre-Sumter navy holders for March 1861 are not yet covered; the Western Flotilla belongs to the Army until 1 October 1862, then the Navy (a post changing department); the Strategy Board is a temporary post; squadrons are created by directive during play, not all at start.
+- Anderson's 28 February 1861 strength figure differs between his letter as printed (70,000) and Holt's covering letter (20,000): carry the figure Lincoln read once known (March facts note).
+- Source fixes: the Union dossier's Johnston seniority episode cites a 2026 blog, so replace it with Encyclopedia Virginia and the Official Records; the Confederate-side note's command-friction episodes rest on secondary pages, so pull the Official Records dispatches before pack data cites them. The status of the first fix is unclear; it may have been covered by the verification pass (PR 1).
+
+**Lanes 0.4 and 0.5 (derived indexes; forces and movement)**
+- Every new State field needs an `OWNED_FIELDS` entry in `packages/kernel/src/ownership.ts`; owned keys must be unique across State records (lane 0.1 hand-over, `notes/lane-0.1-foundations.md`).
+- Edges and regions (navy note): river and sea edges need depth by season and an obstruction state; fort regions need a passage-versus-reduction flag; naval bases are key points; blockade-running ports are off-map boxes. A support request needs three terms: the commander's compliance, his department's consent, and physical limits (depth, season, passage).
+- Forces need a stragglers and absent field (rejoin over days); writer-table rows are needed for battle records (owner `combat`) and for fortification, which 0029 does not give a writer (combat note).
+
+**Lane 0.6 (seats)**
+- Split the "informal source" route into sub-types: 44 of the catalogue's 60 situations use it (`SITUATIONS-1861-62.md`; whether FOUNDATION 5 or 8 already does so is unclear).
+- Cross-service orders are a refusal path: compliance must weigh which department an order comes from (Captain Adams refused Scott's order partly for that reason); Seward as shadow executive is a case for seat initiative (0040) (March facts note).
+
+**Lane 0.7 (situations)**
+- Event caps defer rather than drop (AWWV lane; also listed above).
+- Authors follow `SENSITIVE-HISTORY.md` over the older gate tables in the secession (6.8), union-politics and confederate-side (4.7) notes (0046).
+- Test fixtures under `packages/` use the fictional testbed register, never Civil War terms (`check:boundary` flags them).
+- 0042 parks an optional "draft the address with advisers" prologue until the March situations exist.
+- Unclear: the FIRST-MONTH document may still date the Pickens situation 4 March, where the catalogue says otherwise; a check is not done.
+
+**Lane 0.8 (headless runner)**
+- Phase 0's day tick must hash each day with `canonicalHash` (lane 0.5 or 0.8); M2 hashes per turn.
+- The liveness gate is a skeleton (12 M2 mechanics at minFires 0); lane 0.8 sets the Phase 0 bands.
+- The testbed reference run never fires audience, honour or pressure verbs, rivals or broken promises, so the M2 people core is barely exercised headless; it needs a script or rule seat that does (also for Phase 1's people recast).
+
+**Tooling, small, after lane 0.1 (lead queued them)**
+- An `npm run check` check that every decision file is in the index and the index's amendment notes match each record's Status line (hard rule 7; my own repeat duty).
+- The pre-commit hook checks the working tree, not the staged tree, so intermediate commits beside unstaged edits are never checked alone: check the staged tree, or rely on CI per commit.
+- App-created worktrees set `core.hooksPath` to the main checkout's absolute `.githooks`, so a lane's own hook changes do not run in its worktree until merged. Low impact (CI covers); a candidate LESSONS entry; it is app-managed config.
+- Lane 0.1 finding 7: the source-scan lexer now handles regex literals (b1c4445); unclear whether any rule banning such regexes in `src` remains owed.
+- Lane 0.2 was to retire the M2 names (RegionId and similar) behind the `ids` namespace; unclear whether it did.
+
+**Phase 1**
+- Combat (combat note and model proposal): one battle per day per region; men in contact are the lesser of those engaged, capped by frontage; five battle types with base loss rates; additive typed terms; one named stream per battle-day with fixed draws; commanders decide commit, stand or pursue without dice; missing go to stragglers; rout by morale does not kill; destruction only when cut off; a four-phase template drives hour-stamped dispatches. Generals killed or wounded need their own named stream with fixed draws per day, and generated colonels need a stream keyed by report, so reading a report cannot shift later draws. Livermore's public-domain tables become a calibration fixture for a CI harness of named set-ups; the ODC-BY acw-battle-data CSV is a cross-check only. Cite Livermore, not Kirkpatrick's ambiguous abstract.
+- Politics (politics note): seven blocs proposed (Radicals with abolitionists 18, Moderates 25, War Democrats 20, Peace Democrats 12, Border Unionists 13, the army 12), with the Democratic total held at 28–36; Congress as a session calendar; the Joint Committee as an investigating seat that leaks; papers as typed authors; suppression as a lever with a locked cost; governors and state legislatures as election-rule seats with a "state electoral law" field before the election mechanic (soldier voting depended on state law). Verify vote totals and the draft table against the Congressional Globe and the Official Records.
+- Economy (economy note): money has two holders (Treasury: bonds and notes; Congress: taxes and the greenback limit), with the gold premium as the confidence meter; new regiments belong to governors, refills to the War Department and, from 1863, the Provost Marshal General; munitions run through Ripley and Meigs; rail is capacity per named line, owned by railroad presidents; Britain's 1861–62 saltpeter ban and Stanton's January 1862 voiding of foreign arms contracts tie the foreign clock to munitions; the commissary is a possible fifth supply line not named in 0023; governors held money and arms in 1861 (state loans, arms purchases competing with Ordnance); "act now, ratify later" (the 3 May 1861 call) is a candidate verb that costs legitimacy rather than a vote, to weigh against 0016, 0023 and 0040. Navy: prize money and cotton tie naval conduct to the Treasury seat and trade permits.
+- March 1861 facts note: Lincoln's health was strained on 28 March and 1 April (attention modifiers, 0025); the Pickens expedition was paid from the State Department's secret-service fund (a lever). Next verification pass: the Senate Executive Journal, the Navy Official Records vol. 4 (Fox's account), Northern papers via HathiTrust (also in the parked verification item).
+
+**Phase 2 (desk and map)**
+- Tripwire measurements cover only the RX 7800 XT; integrated GPUs, the Steam Deck and Electron's Chromium are untested, and WebGPU and an OffscreenCanvas worker bake are untried. The prototype points Playwright 1.65 at the installed chromium-1234 (`CHROMIUM_PATH` overrides); adopting Playwright for screenshots means `npx playwright install`, a browser download that is the owner's call.
