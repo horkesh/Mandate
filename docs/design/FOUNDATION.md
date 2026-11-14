@@ -210,7 +210,7 @@ Module map, adapted from the AWWV-architecture note:
 | `command` | State | posts (including temporary posts) and the people in them; division-to-commander assignment; standing agreements and prior orders |
 | `plans` | State | goals, drafts, approvals, edits as counter-orders |
 | `operations` | State | approved plans in execution, per-axis lifecycles |
-| `movement` | writer | the only writer of location |
+| `movement` | writer | the only writer of location; owns and exports the movement passage rule, which `planner` imports (0062) |
 | `combat` | writer | battle resolution with breakdowns and named seeded streams |
 | `people`, `compliance`, `reading`, `audience`, `proxy`, `ladder` | State writers | the M1/M2 people core, recast for goals and plans |
 | `knowledge` | State | per-seat reports with latency; the truth behind each report in a separate map the view layer cannot import (0052) |
@@ -220,7 +220,7 @@ Module map, adapted from the AWWV-architecture note:
 | `economy` | State | money, men, munitions, rail capacity at their holders |
 | `situations` | State | cause predicates, offers, live situations and their clocks, decisions |
 | `politics` | State + Derived | blocs, mandate, elections, verdict, chambers of Congress, the war's framing |
-| `planner` | pure function | drafts candidate plans for a goal on request; the drafts are saved as State by `plans` on the request day, because a later call would see a changed map (planner-design note) |
+| `planner` | pure function | drafts candidate plans for a goal on request; the drafts are saved as State by `plans` on the request day, because a later call would see a changed map (planner-design note). Generate, filter and score with one level of methods; reads beliefs from the commander's view, never truth (0062) |
 | `infrastructure` | State | edge condition (damage and repair), water-edge obstructions, depot condition (0050) |
 | `weather` | State | today's weather per weather zone, a seeded draw (reserved, 0029, 0050) |
 | `tick` | writer | the fixed day order and the decision-point signal; the only writer of the current day (0052) |
