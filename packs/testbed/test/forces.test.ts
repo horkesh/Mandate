@@ -26,6 +26,7 @@ const opening = pack!.scenarios.find((s) => s.id === 'opening')!;
 const command = phase0.initialCommand(map, opening);
 const state: phase0.State = {
   ...phase0.emptyState(),
+  departmentFactions: phase0.initialDepartmentSides(map),
   forceBlockStates: phase0.initialForces(map, opening),
   forceLocations: phase0.initialLocations(map, opening),
   postStates: command.posts,

@@ -299,6 +299,7 @@ export const ForceBlockSchema = z.strictObject({
   strengthDate: historicalDate.nullable(),
   nonCombatants: nonNegative,
   storesDays: nonNegative.nullable(),
+  storesDate: historicalDate.nullable().describe('The date the stores figure is as of (0065), as strengthDate is for strength: informational in Phase 0. Required when storesDays is given.'),
   unknowns: z.array(z.string()),
   provenance,
 });

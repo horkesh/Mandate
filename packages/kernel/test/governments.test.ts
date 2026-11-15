@@ -66,7 +66,7 @@ describe('neutral ground from governments (0055 as amended by 0058)', () => {
   });
 
   it('applies the proposals command owns, refuses what it cannot be, and leaves other owners alone', () => {
-    const r = applyCommandProposals(MAP, s0, [proposal(1), { owner: 'politics', field: 'support', subject: 'x', delta: 5 }, { owner: 'command', field: 'loyalty', subject: 'n1', delta: 1 }, proposal(1, 'a_war')], 2);
+    const r = applyCommandProposals(MAP, s0, [proposal(1), { owner: 'politics', field: 'support', subject: 'x', delta: 5, side: null }, { owner: 'command', field: 'loyalty', subject: 'n1', delta: 1, side: null }, proposal(1, 'a_war')], 2);
     expect(r.state.closedGovernments).toEqual({ neutral_gov: 2 });
     expect(r.applied).toEqual([{ field: GOVERNMENT_CLOSED_FIELD, subject: 'neutral_gov', change: 'closed' }]);
     expect(r.refused).toEqual(['command owns no field "loyalty" with subject n1', 'department a_war belongs to a side; only a neutral government closes its territory']);

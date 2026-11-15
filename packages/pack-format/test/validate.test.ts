@@ -11,7 +11,7 @@ const joint = (links: string, secondOperation = 'raid', secondDepartment = 'r_se
     withFile(`${S}/posts.csv`, appendRow(`red_raid_a,Raid troops,expedition,r_war,red_top,beta,raid,,,DESIGN,\nred_raid_b,Raid ships,expedition,${secondDepartment},red_top,beta,${secondOperation},,,DESIGN,`)),
   );
 /** A neutral government (review F6): a department with no faction, its governor, and its guard in beta. */
-const neutral = (post = 'grey_top,Grey Governor,chief,g_gov,,beta,,,,DESIGN,', block = 'grey_guard,Grey Guard,block,,g_gov,grey_top,beta,,foot,800,1900-04,,20,DESIGN,') => {
+const neutral = (post = 'grey_top,Grey Governor,chief,g_gov,,beta,,,,DESIGN,', block = 'grey_guard,Grey Guard,block,,g_gov,grey_top,beta,,foot,800,1900-04,,20,1900-04,DESIGN,') => {
   let files = withFile(`${W}/departments.csv`, appendRow('g_gov,Grey Government,,ministry,DESIGN,'));
   files = withFile(`${W}/people.csv`, appendRow('grey_chief,Grey Chief,,,officer,1805,1875,average:DESIGN,average:DESIGN,average:DESIGN,average:DESIGN,,,,DESIGN,'), files);
   files = withFile(`${S}/posts.csv`, appendRow(post), files);
@@ -177,7 +177,11 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'a ship inland', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_ship,Red Ship,block,,r_sea,red_fleet,alpha,', 'red_ship,Red Ship,block,,r_sea,red_fleet,beta,')), kind: 'ship-ashore', file: `${S}/force_blocks.csv`, severity: 'warning' },
   // Every other call site of a check (the post-review mutation run)
   { name: 'a block with a parent', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_ship,Red Ship,block,,', 'red_ship,Red Ship,block,red_1,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
-  { name: 'a detachment of a detachment', files: () => withFile(`${S}/force_blocks.csv`, appendRow('red_det2,Red Picket,detachment,red_1_det,r_war,red_army,alpha,,foot,10,1900-04,,5,DESIGN,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
+  { name: 'a detachment of a detachment', files: () => withFile(`${S}/force_blocks.csv`, appendRow('red_det2,Red Picket,detachment,red_1_det,r_war,red_army,alpha,,foot,10,1900-04,,5,1900-04,DESIGN,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
+  // 0065: stores carry their date, as strengths do.
+  { name: 'stores without the date of the figure', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('beta,,foot,5000,1900-04,,10,1900-04,', 'beta,,foot,5000,1900-04,,10,,')), kind: 'missing-value', file: `${S}/force_blocks.csv` },
+  { name: 'a stores date with no stores', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce(',unknown,,,12,1900-03,', ',unknown,,,unknown,1900-03,')), kind: 'missing-value', file: `${S}/force_blocks.csv` },
+  { name: 'a stores date that is not a date', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('beta,,foot,5000,1900-04,,10,1900-04,', 'beta,,foot,5000,1900-04,,10,early April,')), kind: 'shape/custom', file: `${S}/force_blocks.csv` },
   // 0058: every land region and key point has one government row: a government department, or unknown.
   { name: 'a land region with no government row', files: () => withFile(`${S}/governments.csv`, replaceOnce('beta,r_prov,DESIGN,\n', '')), kind: 'government-missing', file: `${S}/governments.csv` },
   { name: 'a government row for a region not in the World', files: () => withFile(`${S}/governments.csv`, appendRow('nowhere,unknown,DESIGN,')), kind: 'unknown-reference', file: `${S}/governments.csv` },
@@ -247,8 +251,8 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'unknown as a tenure date', files: () => withFile(`${S}/holders.csv`, replaceOnce('red_top,red_chief,no,1890,', 'red_top,red_chief,no,unknown,')), kind: 'unknown-not-allowed', file: `${S}/holders.csv` },
   { name: 'a tenure of a post that does not exist', files: () => withFile(`${S}/holders.csv`, appendRow('nobody_post,red_captain,no,,,DESIGN,')), kind: 'unknown-reference', file: `${S}/holders.csv` },
   // A neutral government (review F6)
-  { name: "a neutral government's guard under a faction's general", files: () => neutral(undefined, 'grey_guard,Grey Guard,block,,g_gov,red_army,beta,,foot,800,1900-04,,20,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/force_blocks.csv` },
-  { name: "a faction's troops under a neutral governor", files: () => neutral(undefined, 'grey_guard,Grey Guard,block,,r_war,grey_top,beta,,foot,800,1900-04,,20,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/force_blocks.csv` },
+  { name: "a neutral government's guard under a faction's general", files: () => neutral(undefined, 'grey_guard,Grey Guard,block,,g_gov,red_army,beta,,foot,800,1900-04,,20,1900-04,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/force_blocks.csv` },
+  { name: "a faction's troops under a neutral governor", files: () => neutral(undefined, 'grey_guard,Grey Guard,block,,r_war,grey_top,beta,,foot,800,1900-04,,20,1900-04,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/force_blocks.csv` },
   { name: "a neutral government's post answering to a faction", files: () => neutral('grey_top,Grey Governor,chief,g_gov,red_top,beta,,,,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/posts.csv` },
   { name: "a faction's man holding a neutral post", files: () => withFile(`${S}/holders.csv`, replaceOnce('grey_top,grey_chief,', 'grey_top,red_captain,'), neutral()), kind: 'faction-mismatch', file: `${S}/holders.csv` },
   { name: 'no playable faction', files: () => withFile(`${S}/scenario.json`, replaceOnce('"playable":true', '"playable":false')), kind: 'no-playable-faction', file: `${S}/scenario.json` },

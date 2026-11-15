@@ -146,11 +146,11 @@ export const FIXTURE: Readonly<Record<string, string>> = {
   'source/scenarios/start/holders.csv': ['post,person,acting,from,to,sources,notes', 'red_top,red_chief,no,1890,,DESIGN,', 'blue_top,blue_chief,no,,,DESIGN,'].join('\n'),
   'source/scenarios/start/standing_orders.csv': ['id,post,kind,from,issued_on,summary,sources,notes', 'stay,red_army,hold,red_top,1900-04-01,Hold the line.,DESIGN,'].join('\n'),
   'source/scenarios/start/force_blocks.csv': [
-    'id,name,kind,parent,department,post,region,aboard,arm,strength,strength_date,non_combatants,stores_days,sources,notes',
-    'red_1,Red First,block,,r_war,red_army,beta,,foot,5000,1900-04,,10,DESIGN,',
-    'red_1_det,Red First guard,detachment,red_1,r_war,red_army,alpha,,foot,200,1900-04,,10,DESIGN,',
-    'red_ship,Red Ship,block,,r_sea,red_fleet,alpha,,ships,300,1900-04,,30,DESIGN,',
-    'blue_1,Blue First,block,,b_war,blue_top,port,,foot,unknown,,,12,DESIGN,',
+    'id,name,kind,parent,department,post,region,aboard,arm,strength,strength_date,non_combatants,stores_days,stores_date,sources,notes',
+    'red_1,Red First,block,,r_war,red_army,beta,,foot,5000,1900-04,,10,1900-04,DESIGN,',
+    'red_1_det,Red First guard,detachment,red_1,r_war,red_army,alpha,,foot,200,1900-04,,10,1900-04,DESIGN,',
+    'red_ship,Red Ship,block,,r_sea,red_fleet,alpha,,ships,300,1900-04,,30,1900-04,DESIGN,',
+    'blue_1,Blue First,block,,b_war,blue_top,port,,foot,unknown,,,12,1900-03,DESIGN,',
   ].join('\n'),
 };
 

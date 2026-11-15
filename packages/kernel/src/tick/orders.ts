@@ -10,6 +10,7 @@
  *   Phase 1), and the order may conflict with one that came down the chain.
  * - A special messenger is a route with a price.
  */
+import { sideOfPerson } from '../command/command.ts';
 import type { MessageId, PersonId, PostId, SeatId } from '../ids.ts';
 import type { ReportBody } from '../knowledge/report.ts';
 import type { OrderCommand } from '../log/commands.ts';
@@ -36,10 +37,11 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   const assignment = state.seatAssignments[seat];
   if (assignment === undefined) return 'unknown_seat';
   const issuer = world.person(assignment.seatPerson);
-  if (issuer.faction === null || !world.factionIds.includes(issuer.faction) || world.faction(issuer.faction).principal !== issuer.id) return 'not_a_principal';
+  const side = sideOfPerson(world.map, state, issuer.id);
+  if (side === null || !world.factionIds.includes(side) || world.faction(side).principal !== issuer.id) return 'not_a_principal';
   if (state.postStates[cmd.to] === undefined) return 'unknown_post';
   const target = state.postStates[cmd.to]!;
-  if (!isFieldPost(state, cmd.to) || postFaction(world, state, cmd.to) !== issuer.faction) return 'not_field_post';
+  if (!isFieldPost(state, cmd.to) || postFaction(world, state, cmd.to) !== side) return 'not_field_post';
   if (target.postHolder === null) return 'vacant_post';
   if (!(GOAL_KINDS as readonly string[]).includes(cmd.goal)) return 'bad_goal';
   if (cmd.goal === 'advance' ? cmd.region === null || !world.regionIds.includes(cmd.region) : cmd.region !== null) return 'bad_goal';
@@ -56,7 +58,7 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   }));
   const first = hops[0]!;
   const id = mintMessageId(ctx.mint, ctx.day, issuer.id, first.hopPerson, `order.${cmd.to}`);
-  const leg = hop(ctx, cmd.route, issuer.id, whereIs(ctx, state, issuer.id), whereIs(ctx, state, first.hopPerson), id);
+  const leg = hop(ctx, state, cmd.route, issuer.id, whereIs(ctx, state, issuer.id), whereIs(ctx, state, first.hopPerson), id);
   ctx.outbox.push({
     id,
     msgOrigin: id,
@@ -136,7 +138,7 @@ export function relayOrder(ctx: TickContext, state: State, msg: TransitMessage):
   }
   const next = msg.msgPending[0]!;
   const id = mintMessageId(ctx.mint, ctx.day, relayer.id, next.hopPerson, `order.${order.orderTarget}`);
-  const leg = hop(ctx, msg.msgRoute, relayer.id, whereIs(ctx, state, relayer.id), whereIs(ctx, state, next.hopPerson), id, decision.holdDays);
+  const leg = hop(ctx, state, msg.msgRoute, relayer.id, whereIs(ctx, state, relayer.id), whereIs(ctx, state, next.hopPerson), id, decision.holdDays);
   fire(ctx, 'orders.relayed');
   if (decision.holdDays > 0) fire(ctx, 'orders.relay_held', decision.holdDays);
   ctx.events.push({ event: 'relayed', person: relayer.id, post, message: msg.msgOrigin, terms: decision.terms });
