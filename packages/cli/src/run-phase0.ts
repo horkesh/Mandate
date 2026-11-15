@@ -2,10 +2,12 @@
  * The Phase 0 headless runner (lane 0.8), written to a fresh folder in runs/.
  *
  *   npm run run:phase0 -- <pack> [days] [--mode short|full] [--hash daily|checkpoints]
- *       [--checkpoint-every <days>] [--resume-at <day>] [--timings] [--label <name>]
+ *       [--checkpoint-every <days>] [--resume-at <day>] [--timings] [--at-war] [--label <name>]
  *
  * `short` is 75 days with a checkpoint every 15; `full` is a 1,460-day campaign with one every
- * 30; an explicit `days` replaces the mode's length. Prints the world hash, the final state hash,
+ * 30; an explicit `days` replaces the mode's length. `--at-war` is the labelled mechanics-run option
+ * (0064): every faction starts at war, so a pack whose war has no opening situation yet still moves
+ * forces. Without it a pack keeps its own peace. Prints the world hash, the final state hash,
  * the replay and resume checks, the checkpoint scores, the liveness table (against the reference
  * bands when the run is one of them) and, with `--timings`, the tick's cost per day. Exits 1 if
  * replay or resume does not match, or a reference run leaves its liveness bands. CI runs this on
@@ -18,7 +20,7 @@ import { phase0Run, RUN_MODES, type Phase0Summary, type RunMode } from './phase0
 function parse(argv: readonly string[]) {
   const positional: string[] = [];
   const flags: Record<string, string> = {};
-  const switches = new Set(['timings']);
+  const switches = new Set(['timings', 'at-war']);
   for (let i = 0; i < argv.length; i++) {
     const arg = argv[i]!;
     if (!arg.startsWith('--')) {
@@ -49,12 +51,13 @@ function parse(argv: readonly string[]) {
     checkpointEvery: whole('--checkpoint-every', flags['checkpoint-every'], RUN_MODES[mode].checkpointEvery)!,
     resumeAt: whole('--resume-at', flags['resume-at'], undefined),
     timings: flags.timings === 'true',
+    atWar: flags['at-war'] === 'true',
     label: flags.label ?? 'phase0',
   } as const;
 }
 
 function gateLines(summary: Phase0Summary, days: number): { readonly lines: string[]; readonly failed: boolean } {
-  const reference = referenceRunFor(summary.pack, days);
+  const reference = referenceRunFor(summary.pack, days, summary.atWar);
   if (reference === undefined) return { lines: ['gate        no reference bands for this pack and length (liveness not gated)'], failed: false };
   const failures = gateFailures(reference, summary.liveness);
   if (failures.length === 0) return { lines: [`gate        every mechanic inside its band (${reference.name})`], failed: false };
@@ -67,7 +70,7 @@ function gateLines(summary: Phase0Summary, days: number): { readonly lines: stri
 function report(summary: Phase0Summary, path: string, gate: readonly string[]): string {
   const width = Math.max(...summary.liveness.map((r) => r.mechanic.length));
   const lines = [
-    `pack        ${summary.pack} (kernel ${summary.kernel})`,
+    `pack        ${summary.pack} (kernel ${summary.kernel}${summary.atWar ? ', started at war by --at-war' : ''})`,
     `hash scheme ${summary.hashScheme}`,
     `world hash  ${summary.worldHash}`,
     `days        ${summary.finalDay} (log ${summary.logEntries} entries, ${summary.rejections} rejected, ${summary.decisionPoints} decision points; hashes ${summary.hashMode === 'daily' ? 'every day' : `every ${summary.checkpointEvery} days`})`,
@@ -96,6 +99,7 @@ const summary = phase0Run({
   hash: args.hash,
   checkpointEvery: args.checkpointEvery,
   timings: args.timings,
+  atWar: args.atWar,
   ...(args.resumeAt === undefined ? {} : { resumeAtDay: args.resumeAt }),
   onSave: (text, day) => writeRunFile(dir, `save-day-${day}.json`, `${text}\n`),
 });

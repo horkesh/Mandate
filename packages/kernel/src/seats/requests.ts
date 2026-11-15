@@ -109,6 +109,18 @@ export function standingOptions(world: SeatsWorld, state: State, post: PostId, g
   return advances;
 }
 
+/**
+ * The day a faction went to war (0064), or null at peace. The pack names, per faction, the situation chain flag that
+ * puts it at war (its value is the day it was set), or none for war from day 1 (0). Public knowledge, like the map:
+ * a faction's war is never a secret from its own seat.
+ */
+export function warSince(world: SeatsWorld, state: State, faction: FactionId): number | null {
+  const row = world.map.world.rules.ruleSeats.warFlags.find((r) => r.faction === faction);
+  if (row === undefined) throw new RangeError(`the pack states no war flag for faction ${faction} (rules.ruleSeats.warFlags)`);
+  if (row.flag === null) return 0;
+  return state.situationFlags[row.flag] ?? null;
+}
+
 export function principalMenu(world: SeatsWorld, state: State, faction: FactionId, ground: MorningGround): PrincipalMenu {
   const f = world.faction(faction);
   const commandable: CommandablePost[] = [];
@@ -130,7 +142,7 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     if (def.faction !== faction || r === undefined || r.sitStatus !== 'open' || r.sitSurfacedDay === null || r.sitDelegate !== null) continue;
     situations.push(situationChoice(def, r.sitOpenOptions, def.delegableTo, null));
   }
-  return { menuKind: 'principal', faction, objective: f.objective, commandable, situations };
+  return { menuKind: 'principal', faction, objective: f.objective, atWarSince: warSince(world, state, faction), commandable, situations };
 }
 
 /**

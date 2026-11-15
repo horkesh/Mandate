@@ -36,6 +36,11 @@ export interface Phase0Options {
   /** `daily`: a hash every day. `checkpoints`: every `checkpointEvery` days and the last. Default `checkpoints`. */
   readonly hash?: 'daily' | 'checkpoints';
   readonly checkpointEvery?: number;
+  /**
+   * The labelled mechanics-run option (0064): start every faction at war (the pack's war flags set on day 0), so
+   * a pack whose war has no opening situation yet still moves forces and contests ground. The summary says so.
+   */
+  readonly atWar?: boolean;
   /** Save after this day, load the save, play on, and compare the final hash. */
   readonly resumeAtDay?: number;
   /** Replay the log and compare every hash taken. Default on; a gate run that only reads liveness skips it. */
@@ -80,6 +85,8 @@ export interface Phase0Summary {
   readonly pack: string;
   /** Which kernel produced the hashes, so a cross-machine comparison never mixes kernels. */
   readonly kernel: typeof PHASE0_KERNEL;
+  /** Whether the run started at war by the labelled option; false is the pack's own peace and war. */
+  readonly atWar: boolean;
   readonly hashScheme: string;
   readonly worldHash: string;
   readonly initialHash: string;
@@ -127,7 +134,7 @@ export function phase0Run(options: Phase0Options): Phase0Summary {
   const cadence = hashMode === 'daily' ? {} : { hashEvery: every };
   const checked = { freeze: true, deepChecks: true, ...cadence };
 
-  const initial = phase0.createState(world, setup);
+  const initial = phase0.createState(world, { ...setup, ...(options.atWar === true ? { atWar: true } : {}) });
   const telemetry = createTelemetry(seatsMechanics());
   const daily: DaySummary[] = [];
   const checkpoints = new Map<number, CheckpointScores>();
@@ -185,6 +192,7 @@ export function phase0Run(options: Phase0Options): Phase0Summary {
   return {
     pack: options.pack,
     kernel: PHASE0_KERNEL,
+    atWar: options.atWar === true,
     hashScheme: HASH_SCHEME,
     worldHash,
     initialHash: canonicalHash(initial),
