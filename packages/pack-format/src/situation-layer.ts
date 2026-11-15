@@ -118,7 +118,8 @@ export function nationActs(items: readonly { readonly file: string; readonly def
       const key = `route|state:headquartersAt:${h.post}:${h.region}`;
       if ((def.gateReview?.notes[key] ?? '').trim().length === 0) err('self-governing-route-note', 'gateReview.notes', `"${def.id}" moves ${moves[0]!.subject} and reads where "${h.post}" has its headquarters (${h.region}), a consequence of orders: the sign-off carries no reviewer's note on that route`, `gateReview.notes["${key}"]: the reviewer's note that the nation answers where the army stands, not a choice (0070)`);
     }
-    const chosen = taint.get(def.id) ?? [];
+    // A direct read of a standing goal is reported above, as its own error; what is left is a choice reached through another item.
+    const chosen = (taint.get(def.id) ?? []).filter((t) => !(t.atrocity.startsWith('goal:') && t.via.length === 0));
     for (const t of chosen) {
       err('self-governing-choice', 'event', `"${def.id}" moves ${moves[0]!.subject} but depends on the principal's decision "${t.atrocity}"${t.via.length === 0 ? '' : `, through ${t.via.map((v) => `"${v}"`).join(' then ')}`}`, 'no choice of a principal moves a nation by any route: reading the decision, a flag an option sets, or a chain; a nation answers events and news, never a choice (0070)');
     }

@@ -158,6 +158,20 @@ describe('every route a choice can take (gate re-check R1, R2, N4)', () => {
     expect(raised([nationNotice('council', { knowledge: { not: goal } })])).toEqual(['error self-governing-goal council']);
   });
 
+  it('a goal read laundered through a middle notice is still the principal’s order (gate re-check R3)', () => {
+    const goal = { goal: { post: 'army_x', kind: 'advance' } };
+    const middle = item('a_middle', { event: goal, effects: [setFlag('ordered')] });
+    const nation = nationNotice('b_council', { event: { flag: 'ordered' } });
+    expect(raised([middle, nation])).toEqual(['error self-governing-choice b_council']);
+    // With a note on the route through the middle notice it is still refused: 0070 refuses choices outright, notes cover only news.
+    expect(raised([middle, { ...nation, def: { ...(nation.def as object), gateReview: { notes: { 'route|a_middle': 'The nation answers it.' } } } as never }])).toEqual(['error self-governing-choice b_council']);
+    // Positive control: a middle notice reading no goal is only an event route, needing its note.
+    expect(raised([item('a_middle', { event: { dayAtLeast: 1 }, effects: [setFlag('ordered')] }), nation])).toEqual(['error self-governing-route-note b_council']);
+    // A headquarters through a middle item stays news: a note covers it.
+    const hq = item('a_middle', { event: { headquartersAt: { post: 'army_x', region: 'n1' } }, effects: [setFlag('ordered')] });
+    expect(raised([hq, { ...nation, def: { ...(nation.def as object), gateReview: { notes: { 'route|a_middle': 'The nation answers the army standing on its land.' } } } as never }])).toEqual([]);
+  });
+
   it('a headquarters is a consequence: it needs a route note naming the post and the region', () => {
     const at = { headquartersAt: { post: 'army_x', region: 'n1' } };
     expect(raised([nationNotice('council', { event: at })])).toEqual(['error self-governing-route-note council']);

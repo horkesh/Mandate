@@ -669,15 +669,29 @@ function readsDecided(c: phase0.Condition, situation: string): boolean {
   return 'decided' in c && c.decided === situation;
 }
 
+/** The posts whose standing goals a condition reads: a standing goal is the principal's own order. */
+function goalPosts(c: phase0.Condition): string[] {
+  if ('all' in c) return c.all.flatMap(goalPosts);
+  if ('any' in c) return c.any.flatMap(goalPosts);
+  if ('not' in c) return goalPosts(c.not);
+  return 'goal' in c ? [c.goal.post] : [];
+}
+
 /**
  * The first step of a principal's choice reaching another item (0070): an item whose trigger or option reads that a
- * decision was decided, reads a flag one of its options (or its inaction) sets, or follows it in a chain. News of a
- * decision, or its firing, is an event and not a choice, and is allowed with a reviewer's note; it is not seeded here.
- * Each seed is `choiceTaint`'s start: the dependent item, with the decision as its origin.
+ * decision was decided, reads a flag one of its options (or its inaction) sets, or follows it in a chain; or reads a
+ * standing goal, which is the principal's own order (gate re-check R3: a goal read laundered through a middle notice).
+ * News of a decision, or its firing, is an event and not a choice, and is allowed with a reviewer's note; it is not
+ * seeded here. Each seed is `choiceTaint`'s start: the dependent item, with the decision (or `goal:<post>`) as its origin.
  */
 export function choiceSeeds(items: readonly { readonly def: SituationDef }[]): (AtrocityTaint & { readonly id: string })[] {
   const defs = items.map((x) => x.def).sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   const seeds: (AtrocityTaint & { readonly id: string })[] = [];
+  for (const x of defs) {
+    for (const scope of dependenceScopes(x)) {
+      for (const post of [...new Set(scope.conditions.flatMap(goalPosts))].sort()) seeds.push({ id: x.id, option: scope.option, atrocity: `goal:${post}`, actingSide: '', via: [] });
+    }
+  }
   for (const decision of defs.filter((d) => d.kind === 'decision')) {
     const flags = new Set(flagsSetBy(decision, null));
     for (const x of defs) {

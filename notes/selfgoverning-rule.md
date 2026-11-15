@@ -47,3 +47,7 @@ Tests: `pack-format/test/nation-acts.test.ts` (both reviewers' probes, the flag 
 - **R2, State predicates.** A nation-moving notice that reads a standing goal is refused (`self-governing-goal`: the goal is the principal's own order); one that reads a headquarters needs a route note keyed `route|state:headquartersAt:<post>:<region>`.
 - **N4:** a two-hop choice control, with ids ordered so a one-pass fixed point would miss it.
 - **N5:** the cross-start polity check also refuses a region one polity holds in one start and a department of no polity holds in another (a department of no polity counts as none; an `unknown` government is not a department and is left alone).
+
+## Gate re-check at a841041 (approve; R3 closed)
+
+- **R3, a goal read laundered through a middle notice.** `choiceSeeds` also seeds any item whose trigger or option reads a standing goal (origin `goal:<post>`), so the principal's order is tainted to a fixed point like any other choice: a notice that reads a goal and sets a flag, and a nation notice that reads the flag, is `self-governing-choice` even with a `route|...` note. A direct read stays its own error (`self-governing-goal`), so it is not reported twice. A headquarters through a middle item stays news, covered by a note. Controls in `nation-acts.test.ts`.
