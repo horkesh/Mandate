@@ -305,3 +305,16 @@ Hand-traced layers use `"licence": "own-work"` and name the public-domain maps t
 - [ABPP] https://vcris.dhr.virginia.gov/arcgis/rest/services/Static_Datasets/ABPP_Layers/MapServer (a Virginia mirror; NPS's own page not read) (snippet)
 - [OHM] https://www.openhistoricalmap.org/copyright
 - [COMMONS-PDART] https://commons.wikimedia.org/wiki/Commons:When_to_use_the_PD-Art_tag
+
+## Update, 2026-11-15: Atack's permission
+
+Jeremy Atack replied on 15 November 2026 to the owner's request of 14 November. He approved both uses the request named:
+- checking our own tracing against his 1861 layer;
+- including a simplified, derived version of the rail lines in the game and in the source repository.
+
+The condition is that "credit is clearly given as described in the on-line documentation". He also asked for a copy of the game when it is done. The email is in the owner's Gmail.
+
+What this changes:
+- The 1861 layer (from Taylor & Neu's April 1861 map) can now be the source of the game's rail lines, licensed by written permission, so tracing every line ourselves is no longer needed.
+- The credit must follow the suggested citation on Atack's download page [ATACK-DL], word for word. Whoever first uses the layer records that wording in the pack's `PROVENANCE.json` and in the game's credits.
+- Still open: the Newberry (county boundaries) sent only an automatic reply, and UNL's railroad project (cdrh@unl.edu) has not replied. Region geometry, and so lane 0.10's re-measure, still waits on the Newberry.
