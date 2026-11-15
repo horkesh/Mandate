@@ -56,7 +56,8 @@ export function warFlagsUnset(items: readonly { readonly def: phase0.SituationDe
  * only after it has surfaced on its principal's knowledge, so a principal is never at war before he knows. A notice
  * applies its effects when it fires, before the news reaches anyone, so a flag it set would tell every principal of a war
  * he has not heard of; another faction's situation would put a government at war by someone else's choice; and an
- * inaction outcome or a locked cost is not a choice of war. Each is an error.
+ * inaction outcome or a locked cost is not a choice of war; and going to war is the principal's own act, so a situation
+ * he can delegate to another post may not set one. Each is an error.
  */
 export function warFlagSources(items: readonly { readonly file: string; readonly def: phase0.SituationDef }[], pack: PackData, sink: IssueSink): void {
   const owner = new Map<string, string>();
@@ -68,6 +69,7 @@ export function warFlagSources(items: readonly { readonly file: string; readonly
       const err = (message: string, expected: string) => sink.error('war-flag-source', file, at, message, expected);
       if (def.faction !== faction) err(`"${def.id}" is ${def.faction}'s situation but sets ${faction}'s war flag "${effect.setFlag}"`, `only ${faction}'s own decision sets it (0066)`);
       else if (def.kind !== 'decision') err(`"${def.id}" is a notice and sets the war flag "${effect.setFlag}": it applies before any principal has the news`, 'a decision option of the faction itself (0066)');
+      else if (def.delegableTo.length > 0) err(`"${def.id}" can be delegated (to ${def.delegableTo.join(', ')}) and its option sets the war flag "${effect.setFlag}": a delegate's choice would put the war in the president's menu before the delegate's report reached him`, 'no delegable situation sets a war flag: going to war is an act of the principal himself (0066)');
       else if (!/^options\[\d+\]\.effects\[\d+\]$/.test(at)) err(`"${def.id}" sets the war flag "${effect.setFlag}" from ${at}, which is not a chosen option's effect`, 'an effect of a decision option (0066)');
     }
   }

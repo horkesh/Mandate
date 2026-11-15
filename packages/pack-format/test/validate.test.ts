@@ -459,14 +459,19 @@ describe('who may set a war flag (0066)', () => {
   const pack = { ...base.pack!, world: { ...base.pack!.world, rules: { ...base.pack!.world.rules, ruleSeats: { warFlags: [{ faction: 'red' as never, flag: 'war_red' }, { faction: 'blue' as never, flag: 'war_blue' }] } } } };
   const set = (flag: string) => [{ setFlag: flag }];
   /** A situation shaped as far as the check reads: its side and kind, and where each effect sits. */
-  const sit = (over: { faction: string; kind: 'decision' | 'notice'; optionEffects?: unknown[]; lockedCosts?: unknown[]; inaction?: unknown[]; effects?: unknown[] }) => ({
+  const sit = (over: { faction: string; kind: 'decision' | 'notice'; delegableTo?: string[]; optionEffects?: unknown[]; lockedCosts?: unknown[]; inaction?: unknown[]; effects?: unknown[] }) => ({
     file: 'situations/x.json',
-    def: { id: 'x', faction: over.faction, kind: over.kind, options: [{ id: 'go', effects: over.optionEffects ?? [], lockedCosts: over.lockedCosts ?? [] }], inaction: { effects: over.inaction ?? [] }, effects: over.effects ?? [] } as never,
+    def: { id: 'x', faction: over.faction, kind: over.kind, delegableTo: over.delegableTo ?? [], options: [{ id: 'go', effects: over.optionEffects ?? [], lockedCosts: over.lockedCosts ?? [] }], inaction: { effects: over.inaction ?? [] }, effects: over.effects ?? [] } as never,
   });
   const problems = (item: ReturnType<typeof sit>) => {
     const sink = new IssueSink();
     warFlagSources([item], pack, sink);
     return sink.issues.map((i) => `${i.severity} ${i.kind} ${i.at}`);
+  };
+  const messages = (item: ReturnType<typeof sit>) => {
+    const sink = new IssueSink();
+    warFlagSources([item], pack, sink);
+    return sink.issues.map((i) => i.message);
   };
 
   it('accepts a faction’s own decision option setting its own flag', () => {
@@ -474,7 +479,19 @@ describe('who may set a war flag (0066)', () => {
   });
 
   it('refuses a notice that sets it, since it applies before any principal has the news (positive control)', () => {
-    expect(problems(sit({ faction: 'red', kind: 'notice', effects: set('war_red') }))).toEqual(['error war-flag-source effects[0]']);
+    const notice = sit({ faction: 'red', kind: 'notice', effects: set('war_red') });
+    expect(problems(notice)).toEqual(['error war-flag-source effects[0]']);
+    // The message says why, in the notice's own terms (the reviewer's nit): it applies before any principal has the news.
+    expect(messages(notice)).toEqual(['"x" is a notice and sets the war flag "war_red": it applies before any principal has the news']);
+  });
+
+  it('refuses a delegable decision setting it: going to war is the principal’s own act, never a delegate’s (positive control: the same decision, not delegable, passes)', () => {
+    const delegable = sit({ faction: 'red', kind: 'decision', delegableTo: ['red_office'], optionEffects: set('war_red') });
+    expect(problems(delegable)).toEqual(['error war-flag-source options[0].effects[0]']);
+    expect(messages(delegable)[0]).toContain("a delegate's choice would put the war in the president's menu before the delegate's report reached him");
+    expect(problems(sit({ faction: 'red', kind: 'decision', delegableTo: [], optionEffects: set('war_red') }))).toEqual([]);
+    // A delegable decision that sets some other flag is no concern of this check.
+    expect(problems(sit({ faction: 'red', kind: 'decision', delegableTo: ['red_office'], optionEffects: set('other_flag') }))).toEqual([]);
   });
 
   it('refuses another faction’s situation setting it', () => {
