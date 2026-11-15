@@ -1,7 +1,8 @@
 import { loadPack, type GateData, type PackData } from '@mandate/pack-format';
 import { describe, expect, it } from 'vitest';
 import { packFilesAt, packRoot, v2Packs } from '../src/pack-files.ts';
-import { kernelFieldIds, MANPOWER_PROBES, selfGoverningSubjects, uncoveredProbes } from '../src/register-coverage.ts';
+import { fileURLToPath } from 'node:url';
+import { kernelFieldIds, MANPOWER_PROBES, scanFieldIds, selfGoverningSubjects, uncoveredProbes } from '../src/register-coverage.ts';
 
 /**
  * The gate register covers a nation's land (0070; the gate review of the register tripwire). A pack with self-governing
@@ -88,8 +89,17 @@ describe('positive controls: the probe finds what a register leaves open', () =>
     expect(open.map((o) => o.field)).toEqual(Array(4).fill('grant_recruitment_quota'));
     expect(new Set(open.map((o) => o.stem))).toEqual(new Set(['recruit', 'quota']));
     expect(uncoveredProbes(pack([refused('^grant_recruitment_quota$', '^(nation_x|r1)$'), refused(ALL, '^(nation_x|r1)$')]), planted)).toEqual([]);
-    // Today the kernel exports no such id; the scan reads real sources and finds none carrying a stem.
+    // Today the kernel exports no such id carrying a stem; the scan reads real sources and finds none.
     expect(kernelFieldIds()).toEqual([]);
+  });
+
+  it('the scanner reads every declaration form, and the real scan finds the kernel’s own ids (the standing reviewer’s T3)', () => {
+    const fixtures = fileURLToPath(new URL('./fixtures/field-declarations/', import.meta.url));
+    // One file per form: single quoted, double quoted, typed, `as const`, a literal type; comments and other names are not declarations.
+    expect(scanFieldIds(fixtures)).toEqual(['const_id', 'double_id', 'plain_id', 'recruitment_id', 'typed_id']);
+    expect(kernelFieldIds(fixtures)).toEqual(['recruitment_id']);
+    // A broken scanner would find nothing in the real sources and pass: the real, unfiltered scan finds what the kernel declares.
+    expect(scanFieldIds()).toEqual(expect.arrayContaining(['department_side', 'government_closed']));
   });
 
   it('a second region the nation governs in another start must be covered too', () => {

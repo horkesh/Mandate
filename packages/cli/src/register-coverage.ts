@@ -32,11 +32,19 @@ export const MANPOWER_PROBES: readonly { readonly stem: string; readonly field: 
 
 const KERNEL_SRC = fileURLToPath(new URL('../../kernel/src/', import.meta.url));
 
-/** Every proposal field id the kernel's modules export (`export const X_FIELD = '<id>'`) that carries one of the stems: probed as the kernel spells it. */
-export function kernelFieldIds(dir: string = KERNEL_SRC): string[] {
+/**
+ * Every proposal field id the modules in `dir` export: `export const X_FIELD = '<id>'` in any form (typed, single or double
+ * quoted, `as const`). Comments and constants not named `*_FIELD` are not declarations.
+ */
+export function scanFieldIds(dir: string = KERNEL_SRC): string[] {
   const texts = (d: string): string[] => readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? texts(join(d, e.name)) : e.name.endsWith('.ts') ? [readFileSync(join(d, e.name), 'utf8')] : []));
-  const ids = texts(dir).flatMap((t) => [...t.matchAll(/export const \w+_FIELD\s*=\s*'([^']+)'/g)].map((m) => m[1]!));
-  return [...new Set(ids)].filter((id) => FIELD_IDS.some((p) => id.includes(p.stem))).sort();
+  const ids = texts(dir).flatMap((t) => [...t.replace(/^\s*\/\/.*$/gm, '').matchAll(/export const \w+_FIELD\b[^=]*=\s*['"]([^'"]+)['"]/g)].map((m) => m[1]!));
+  return [...new Set(ids)].sort();
+}
+
+/** The kernel's proposal field ids that carry one of the stems: probed as the kernel spells it. */
+export function kernelFieldIds(dir: string = KERNEL_SRC): string[] {
+  return scanFieldIds(dir).filter((id) => FIELD_IDS.some((p) => id.includes(p.stem)));
 }
 
 /** The pack's self-governing departments, and the regions one of them governs in any scenario start. */
