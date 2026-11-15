@@ -1,6 +1,6 @@
 # 0060: D5 sees every route to an atrocity, and a response to one can be decided honestly
 
-Status: accepted (2026-11-14). From the gate reviewer's re-checks of lane 0.7 (G3, G4, G5 and G6 in `review-gate-lane-0.7.md`) and lane 0.7's fixes. G3 merged as 789df5a, G4 is approved at 77b7e30, and G5 and G6 are ruled on here. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0057.
+Status: accepted (2026-11-14). From the gate reviewer's re-checks of lane 0.7 (G3, G4, G5 and G6 in `review-gate-lane-0.7.md`) and lane 0.7's fixes. G3 merged as 789df5a, G4 is approved at 77b7e30, and G5 and G6 are ruled on here. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0057. Amended by 0063 (an option that lowers the actor is watched).
 
 ## Decision
 
