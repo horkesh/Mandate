@@ -37,6 +37,8 @@ export interface ReferenceRun {
   readonly kind: 'full' | 'exercise';
   readonly pack: string;
   readonly days: number;
+  /** Started at war by the labelled mechanics-run option (0064). */
+  readonly atWar: boolean;
   readonly seats: SeatsName;
   readonly bands: Readonly<Record<string, GateBand>>;
 }
@@ -104,6 +106,9 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'situations.resurfaced': { why: 'a resurfacing follows a wait or expiry the rule-driven principal does not choose (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'expires an option, resurfaces on its clock' },
   'situations.waiting': { why: 'waiting is an option a human takes; the rule-driven principal takes the historical default (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'waits for news to reach the principal' },
 };
+
+/** What a pack at peace never does: no order is given, so no force marches, no ground is contested. */
+const PEACE_QUIET: readonly string[] = ['orders.relayed', 'orders.obeyed', 'plans.goal_reached', 'movement.leg_started', 'movement.arrived', 'combat.contest', 'combat.occupation', 'control.changed'];
 
 /** The union-1861 reference run: 75 days from 5 March 1861, at war (the war gate's labelled option, 0064). */
 const UNION_BANDS: Record<string, GateBand> = {
@@ -189,14 +194,23 @@ function withQuiet(bands: Record<string, GateBand>): Record<string, GateBand> {
 }
 
 export const REFERENCE_RUNS: readonly ReferenceRun[] = [
-  { name: 'union-1861 at war, 75 days', kind: 'full', pack: 'union-1861', days: 75, seats: 'rules', bands: withQuiet(UNION_BANDS) },
-  { name: 'testbed, 120 days', kind: 'full', pack: 'testbed', days: 120, seats: 'rules', bands: withQuiet(TESTBED_BANDS) },
-  { name: 'testbed, commanders silent, 120 days', kind: 'exercise', pack: 'testbed', days: 120, seats: 'silent-commanders', bands: { 'seats.defaulted': around(1) } },
+  { name: 'union-1861 at war, 75 days', kind: 'full', pack: 'union-1861', days: 75, atWar: true, seats: 'rules', bands: withQuiet(UNION_BANDS) },
+  { name: 'testbed, 120 days', kind: 'full', pack: 'testbed', days: 120, atWar: false, seats: 'rules', bands: withQuiet(TESTBED_BANDS) },
+  { name: 'testbed, commanders silent, 120 days', kind: 'exercise', pack: 'testbed', days: 120, atWar: false, seats: 'silent-commanders', bands: { 'seats.defaulted': around(1) } },
+  {
+    name: 'union-1861 at peace, 75 days (the war gate, 0064)',
+    kind: 'exercise',
+    pack: 'union-1861',
+    days: 75,
+    atWar: false,
+    seats: 'rules',
+    bands: Object.fromEntries(PEACE_QUIET.map((m) => [m, quiet(`union-1861 keeps the peace until the war's opening situation, which is not authored yet (0064): the rule-seat principal orders nothing`)])),
+  },
 ];
 
 /** The full reference run a runner's options name, if any. */
-export function referenceRunFor(pack: string, days: number): ReferenceRun | undefined {
-  return REFERENCE_RUNS.find((r) => r.kind === 'full' && r.pack === pack && r.days === days);
+export function referenceRunFor(pack: string, days: number, atWar: boolean): ReferenceRun | undefined {
+  return REFERENCE_RUNS.find((r) => r.kind === 'full' && r.pack === pack && r.days === days && r.atWar === atWar);
 }
 
 /** The mechanics a run declares: the tick's and the map's. */

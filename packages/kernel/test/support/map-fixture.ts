@@ -111,6 +111,8 @@ export function mapWorld(parts: WorldParts): World {
       retreatControlPermille: parts.retreatControlPermille ?? 50,
       seasons: SEASONS,
       ...FIXTURE_RULES,
+      // Every fixture faction is at war from day 1 (0064): the fixtures test the war, not the peace before it.
+      ruleSeats: { warFlags: (parts.factions ?? ['a', 'b']).map((f) => ({ faction: F(f), flag: null })) },
     },
     vocabularies: { terrains: [], postKinds: [], departmentKinds: [], arms: [], personKinds: [], traits: [], ranks: [], blocs: [], standingOrderKinds: [] },
     factions: (parts.factions ?? ['a', 'b']).map((f) => ({ id: F(f), name: `faction.${f}.name` })),

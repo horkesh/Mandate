@@ -14,7 +14,7 @@ const REPO = fileURLToPath(new URL('../../../', import.meta.url));
 const NOTHING: phase0.SeatTable = () => ({ driver: 'rules' as const, respond: () => ({ answerKind: 'commands' as const, commands: [] }) });
 
 function liveness(run: ReferenceRun, seats?: phase0.SeatTable): readonly LivenessRow[] {
-  return phase0Run({ pack: run.pack, days: run.days, seats: seats ?? seatsNamed(run.seats), checks: false, replay: false, hash: 'checkpoints', checkpointEvery: run.days }).liveness;
+  return phase0Run({ pack: run.pack, days: run.days, atWar: run.atWar, seats: seats ?? seatsNamed(run.seats), checks: false, replay: false, hash: 'checkpoints', checkpointEvery: run.days }).liveness;
 }
 
 describe('the band table', () => {

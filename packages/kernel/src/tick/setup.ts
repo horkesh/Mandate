@@ -25,6 +25,19 @@ export interface SetupOptions {
   readonly seed: number;
   /** Seat drivers by person id; everyone else is on the rules model. */
   readonly drivers?: Readonly<Record<string, SeatDriver>>;
+  /**
+   * A labelled option for mechanics runs (0064): every faction's war flag starts set, as if the war's opening
+   * situation had already fired, so the generic rule-seat principals move forces and contest ground from day 1.
+   * Never a history run's setting: the flag is State, so the run hashes differently, and a runner says it did this.
+   */
+  readonly atWar?: boolean;
+}
+
+/** The chain flags the pack names as putting a faction at war, each set on day 0 (null rows, war from day 1, set nothing). */
+export function warFlagsAtStart(world: SeatsWorld): Record<string, number> {
+  const flags: Record<string, number> = {};
+  for (const row of world.map.world.rules.ruleSeats.warFlags) if (row.flag !== null) flags[row.flag] = 0;
+  return flags;
 }
 
 /**
@@ -110,7 +123,7 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
     // Standing goals read the posts and assignments just copied: every held field post holds where it stands.
     standingGoals: initialGoals(map, command.posts, command.assignments),
     situationStates: {},
-    situationFlags: {},
+    situationFlags: options.atWar === true ? warFlagsAtStart(world) : {},
     forceBlockStates: initialForces(map, start),
     forceLocations: initialLocations(map, start),
     postStates: command.posts,

@@ -17,13 +17,14 @@ const SECOND_OPENING: phase0.SeatTable = (() => {
 })();
 
 describe('resume = continuous', () => {
-  for (const [pack, days, at] of [
-    ['testbed', 120, 40],
-    ['union-1861', 75, 30],
+  // The Union run starts at war by the labelled option (0064), or nothing would move to resume.
+  for (const [pack, days, at, atWar] of [
+    ['testbed', 120, 40, false],
+    ['union-1861', 75, 30, true],
   ] as const) {
     it(`${pack}: a save at day ${at}, loaded, plays on to the continuous run's final hash`, { timeout: 120_000 }, () => {
       const saves: string[] = [];
-      const s = phase0Run({ pack, days, resumeAtDay: at, hash: 'checkpoints', onSave: (text) => saves.push(text) });
+      const s = phase0Run({ pack, days, atWar, resumeAtDay: at, hash: 'checkpoints', onSave: (text) => saves.push(text) });
       expect(s.resume).toEqual({ atTurn: at, finalHash: s.finalHash, matches: true, savedLogReplays: true });
       expect(saves).toHaveLength(1);
       // The save really is a mid-run save: it carries the day and the log up to it, and loads on this World.
