@@ -72,12 +72,12 @@ jobs:
         run: npm run check:decisions
 
       - id: determinism_testbed
-        name: Determinism run (testbed, resume from turn 10)
+        name: Determinism run (M2 kernel, testbed, resume from turn 10)
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: npm run run:headless -- testbed 40 --resume-at 10 --label ci-determinism
 
       - id: determinism_union
-        name: Determinism run (union-1861, resume from turn 20)
+        name: Determinism run (M2 kernel, union-1861, resume from turn 20)
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: npm run run:headless -- union-1861 75 --resume-at 20 --label ci-determinism
 
