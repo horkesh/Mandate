@@ -37,12 +37,14 @@ The lane 0072 names: the exit review's items 1–6 (`review-phase0-exit.md`, sec
 | Mechanic | Before | After | Why |
 |---|---|---|---|
 | `combat.contest` | `around(62)` | `around(7)` (3 to 14) | The live contest at Washington, days 14 to 20. From day 20 the attacker holds all of it, and the 56 later firings were a frozen stand-off. |
-| `combat.retreat_blocked` | `around(57)` | `notHere`, and in `QUIET` with its driving kernel test (`contest.test.ts`, "stays put with nowhere to go") | Every firing is the 600 regulars left at 0‰ in Washington from day 19, with Maryland's neutral ground behind them. It is not a live mechanic. |
+| `combat.retreat_blocked` | `around(57)` | `stalled(57)`: a floor of 0 and a ceiling of 114, the ceiling `around(57)` gives, with its reason and its driving kernel test (`contest.test.ts`, "stays put with nowhere to go") | Every firing is the 600 regulars left at 0‰ in Washington from day 19, with Maryland's neutral ground behind them. It is not a live mechanic. |
 
-Why `retreat_blocked` is not banded:
+Why `retreat_blocked` has a ceiling and no floor (the reviewer's S1, which the lead took over my first version):
 - `around(57)` would pin the deadlock.
 - `minFires: 1` would fail the day a better principal keeps Washington, the same backwards failure the review named.
-- No reference run exercises it live, so the gate's rule for such mechanics applies: a quiet reason and a named kernel test. `QUIET`'s comment now says one of its entries fires only from a stand-off.
+- My first version was `notHere` plus an entry in `QUIET`. That threw away the flood guard, and `QUIET` is for mechanics that fire in no run.
+- A stalled band keeps both guards that matter: 0 passes, a flood fails. `bandProblems` accepts a stalled band's own driving test in place of a `QUIET` entry, and refuses one without a ceiling.
+- Controls (`liveness-gate.test.ts`): 0 and 57 pass and 115 fails as `too_frequent`; a stalled band with no ceiling is refused; the named test exists and contains its needle.
 
 The testbed's bands are unchanged: its 14 contests include no stalemate. Its `retreat_blocked` reason no longer says "the Union run fires it". The war-gate exercise run still bands `combat.contest` quiet.
 
@@ -71,7 +73,8 @@ The testbed's bands are unchanged: its 14 contests include no stalemate. Its `re
 **Controls:**
 - eleven validator cases;
 - kernel tests showing that each rule changes the outcome: special messenger and mail days, the conflict window (a two-day window turns the conflict into a plain obey), the score cap, a template's route;
-- a World missing a template is refused at indexing.
+- a World missing a template is refused at indexing;
+- a World with a conflict window under a day, or a score cap under 1000, is refused at indexing (the reviewer's N1).
 
 **Rejected:**
 - Keeping a `rules` override on the seats World: it would be a second source beside the World.

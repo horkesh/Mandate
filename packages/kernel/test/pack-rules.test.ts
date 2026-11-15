@@ -131,6 +131,18 @@ describe('movement reads the pack\'s rules', () => {
   });
 });
 
+describe('the kernel checks the standing rules of any World it is handed (0072; close-out review N1)', () => {
+  const withStanding = (standing: WorldRules['standing']) => {
+    const map = mapWith();
+    return indexWorld({ ...map.world, rules: { ...map.world.rules, standing } });
+  };
+  it('refuses a conflict window under a day and a score cap under exactly enough; the pack\'s values index', () => {
+    expect(() => indexSeatsWorld(withStanding({ conflictWindowDays: 0, scoreCap: 4000 }), forcesStart(CONTROL, [], []))).toThrow('standing rule conflictWindowDays must be a whole number of days, at least 1');
+    expect(() => indexSeatsWorld(withStanding({ conflictWindowDays: 7, scoreCap: 999 }), forcesStart(CONTROL, [], []))).toThrow('standing rule scoreCap must be a whole permille, at least 1000');
+    expect(() => indexSeatsWorld(withStanding({ conflictWindowDays: 1, scoreCap: 1000 }), forcesStart(CONTROL, [], []))).not.toThrow();
+  });
+});
+
 describe('latency and the report templates read the pack\'s rules (0072)', () => {
   const seats = (over: RulesOver = {}) => indexSeatsWorld(mapWith(over), forcesStart(CONTROL, [], []));
   const days = (world: ReturnType<typeof seats>, route: Parameters<typeof routeLatency>[2]) => {

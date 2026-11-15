@@ -25,6 +25,8 @@ import { seatsMechanics } from './seats-world.ts';
 export interface GateBand extends LivenessBand {
   /** Required when `minFires` is 0: why this mechanic is quiet in this run. */
   readonly why?: string;
+  /** For a `stalled` band: the kernel test that drives the mechanic live, since this run does not. */
+  readonly driver?: { readonly test: string; readonly needle: string };
 }
 
 /**
@@ -77,6 +79,14 @@ function quiet(why: string): GateBand {
   return { minFires: 0, maxFires: 0, why };
 }
 
+/**
+ * A mechanic that fires in this run only from a frozen stand-off (0072): no floor, so a run that ends the stand-off
+ * still passes, and the ceiling of `around(n)`, so a flood still fails. The kernel test named drives it live.
+ */
+function stalled(n: number, why: string, driver: { readonly test: string; readonly needle: string }): GateBand {
+  return { minFires: 0, maxFires: around(n).maxFires, why, driver };
+}
+
 /** A mechanic that could fire in this run but does not here; it may start to without a band moving. */
 function notHere(why: string): GateBand {
   return { minFires: 0, why };
@@ -86,14 +96,10 @@ const SITUATIONS_UNAUTHORED = 'union-1861 has no situations authored until the M
 const VALUES_EMPTY = 'quiet by design on v2 packs until Phase 1 gives people values and regard (0058); the kernel test drives it through explicit trait inputs';
 const NO_PROPOSER = 'nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it';
 const TRAPPED_AT_WASHINGTON =
-  'in the Union run it fires only for the 600 regulars left at 0 permille in Washington from day 19, with Maryland\'s neutral ground behind them, every day to the end: a frozen stand-off, not a live mechanic (exit review S2c), so its count is not banded; the kernel test drives it';
+  'in the Union run it fires only for the 600 regulars left at 0 permille in Washington from day 19, with Maryland\'s neutral ground behind them, every day to the end: a frozen stand-off, not a live mechanic (exit review S2c), so it has a ceiling and no floor; packages/kernel/test/contest.test.ts drives it';
 
-/**
- * Mechanics that no reference run exercises live: the reason, and the kernel test that proves the mechanic is alive.
- * Most fire in no run; one (`combat.retreat_blocked`) fires only from a frozen stand-off, which a band must not pin.
- */
+/** Mechanics that fire in neither reference run: the reason, and the kernel test that proves the mechanic is alive. */
 export const QUIET: Readonly<Record<string, QuietReason>> = {
-  'combat.retreat_blocked': { why: TRAPPED_AT_WASHINGTON, test: 'packages/kernel/test/contest.test.ts', needle: 'stays put with nowhere to go' },
   'command.government_closed': { why: 'no pack situation closes a neutral government yet (the closing of a neutral government waits for authored situations)', test: 'packages/kernel/test/governments.test.ts', needle: 'takes the default "close" on day 2' },
   'command.government_reopened': { why: 'no pack situation reopens one yet', test: 'packages/kernel/test/governments.test.ts', needle: 'reopening and repeats are plain' },
   'command.side_changed': { why: 'a neutral government changes side only by a situation, and none is authored yet (0065, 0067)', test: 'packages/kernel/test/department-sides.test.ts', needle: 'end to end through the tick: on day 2 its land stops being neutral ground' },
@@ -124,7 +130,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'combat.contest': around(7),
   'combat.occupation': around(29),
   'combat.retreat': notHere('no side is pressed below the retreat threshold in 75 days; the testbed run fires it'),
-  'combat.retreat_blocked': notHere(TRAPPED_AT_WASHINGTON),
+  'combat.retreat_blocked': stalled(57, TRAPPED_AT_WASHINGTON, { test: 'packages/kernel/test/contest.test.ts', needle: 'stays put with nowhere to go' }),
   'control.changed': around(36),
   'control.threshold_crossed': around(6),
   'forces.stores_fell': around(7),
@@ -252,8 +258,15 @@ export function bandProblems(runs: readonly ReferenceRun[] = REFERENCE_RUNS): st
   }
   for (const m of declared) {
     const alive = runs.some((r) => (r.bands[m]?.minFires ?? 0) >= 1);
-    if (!alive && !(m in QUIET)) problems.push(`${m} fires in no reference run and has no quiet reason with a driving kernel test`);
-    if (alive && m in QUIET) problems.push(`${m} fires in a reference run but is also listed as quiet`);
+    // A stalled band (fires only from a stand-off) carries its own driving kernel test, as QUIET does.
+    const driven = runs.some((r) => r.bands[m]?.driver !== undefined);
+    if (!alive && !driven && !(m in QUIET)) problems.push(`${m} fires in no reference run and has no quiet reason with a driving kernel test`);
+    if ((alive || driven) && m in QUIET) problems.push(`${m} fires in a reference run but is also listed as quiet`);
+  }
+  for (const run of runs) {
+    for (const [m, band] of Object.entries(run.bands)) {
+      if (band.driver !== undefined && band.maxFires === undefined) problems.push(`${run.name}: ${m} is stalled with no ceiling`);
+    }
   }
   for (const m of Object.keys(QUIET)) if (!declared.has(m)) problems.push(`QUIET names ${m}, which nothing declares`);
   return problems;

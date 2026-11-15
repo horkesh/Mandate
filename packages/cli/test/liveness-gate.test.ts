@@ -31,6 +31,30 @@ describe('the band table', () => {
     }
   });
 
+  it('a stalled band names a kernel test that exists and says so, and has a ceiling', () => {
+    const stalled = REFERENCE_RUNS.flatMap((r) => Object.entries(r.bands).filter(([, b]) => b.driver !== undefined).map(([m, b]) => ({ m, b })));
+    expect(stalled.map((s) => s.m)).toEqual(['combat.retreat_blocked']);
+    for (const { m, b } of stalled) {
+      expect(readFileSync(`${REPO}${b.driver!.test}`, 'utf8'), `${m}: ${b.driver!.test} contains "${b.driver!.needle}"`).toContain(b.driver!.needle);
+      expect(b.maxFires, m).toBeGreaterThan(0);
+    }
+    expect('combat.retreat_blocked' in QUIET).toBe(false);
+    // The control: a stalled band without a ceiling is refused.
+    const union = REFERENCE_RUNS.find((r) => r.kind === 'full' && r.pack === 'union-1861')!;
+    const open = { ...union.bands, 'combat.retreat_blocked': { ...union.bands['combat.retreat_blocked']!, maxFires: undefined } };
+    expect(bandProblems([{ ...union, bands: open }, ...REFERENCE_RUNS.filter((r) => r !== union)])).toContain(`${union.name}: combat.retreat_blocked is stalled with no ceiling`);
+  });
+
+  it('the stand-off band lets a run that ends the stand-off pass and fails a flood (review S1 of the close-out)', () => {
+    const union = REFERENCE_RUNS.find((r) => r.kind === 'full' && r.pack === 'union-1861')!;
+    const rows = (fires: number): LivenessRow[] => declaredMechanics().map((mechanic) => ({ mechanic, fires: mechanic === 'combat.retreat_blocked' ? fires : (union.bands[mechanic]?.minFires ?? 0), magnitude: 0 }));
+    const blocked = (fires: number) => gateFailures(union, rows(fires)).filter((f) => f.mechanic === 'combat.retreat_blocked');
+    expect(union.bands['combat.retreat_blocked']).toMatchObject({ minFires: 0, maxFires: 114 });
+    expect(blocked(0)).toEqual([]);
+    expect(blocked(57)).toEqual([]);
+    expect(blocked(115).map((f) => f.problem)).toEqual(['too_frequent']);
+  });
+
   it('the checks can fail: a missing band, a zero band with no reason, a mechanic firing nowhere, an undeclared band', () => {
     const full = REFERENCE_RUNS.find((r) => r.kind === 'full')!;
     const without = Object.fromEntries(Object.entries(full.bands).filter(([m]) => m !== 'messages.sent'));
