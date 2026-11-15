@@ -250,6 +250,26 @@ export function validateSituations(items: readonly { readonly file: string; read
     if (byId.has(def.id)) sink.error('duplicate-id', file, 'id', `situation "${def.id}" is defined more than once`);
     byId.set(def.id, def);
   }
+  // The proposals `command` owns (0058, 0065), checked here as the kernel would refuse them in play.
+  const governmentKinds = new Set(pack.world.vocabularies.departmentKinds.filter((k) => k.government).map((k) => k.id as string));
+  const departmentKind = new Map(pack.world.departments.map((d) => [d.id as string, d.kind as string]));
+  type Err = (kind: string, at: string, message: string, expected?: string) => void;
+  const commandProposal = (p: { readonly field: string; readonly subject: string | null; readonly delta: number; readonly side: string | null }, at: string, err: Err) => {
+    const closing = p.field === phase0.GOVERNMENT_CLOSED_FIELD;
+    if (!closing && p.field !== phase0.DEPARTMENT_SIDE_FIELD) {
+      err('situation-command-proposal', `${at}.field`, `command owns no field "${p.field}"`, `"${phase0.GOVERNMENT_CLOSED_FIELD}" (a neutral government closes or reopens) or "${phase0.DEPARTMENT_SIDE_FIELD}" (a government joins a side)`);
+      return;
+    }
+    if (p.subject === null) err('situation-command-proposal', `${at}.subject`, `a "${p.field}" proposal names no department`, 'a government department id');
+    else if (!departmentKind.has(p.subject)) err('unknown-reference', `${at}.subject`, `"${p.subject}" is not a department`, 'a government department id');
+    else if (!governmentKinds.has(departmentKind.get(p.subject)!)) err('not-a-government', `${at}.subject`, `department "${p.subject}" is not a government; only a government ${closing ? 'closes its territory' : 'changes side'}`, 'a department whose kind the pack marks a government');
+    if (closing) {
+      if (p.delta !== 1 && p.delta !== -1) err('situation-command-proposal', `${at}.delta`, `a closing's delta is ${p.delta}`, '+1 to close, -1 to reopen');
+    } else {
+      if (p.side === null) err('situation-command-proposal', `${at}.side`, 'a change of side names no side to join', 'the faction the government joins');
+      if (p.delta !== 1) err('situation-command-proposal', `${at}.delta`, `a change of side's delta is ${p.delta}`, '+1: it joins the side it names; no proposal takes a side away');
+    }
+  };
 
   for (const { file, def } of items) {
     const err = (kind: string, at: string, message: string, expected?: string) => sink.error(kind, file, at, message, expected);
@@ -379,6 +399,7 @@ export function validateSituations(items: readonly { readonly file: string; read
     }
     for (const { at, effect } of phase0.effectsOf(def)) {
       if ('propose' in effect && effect.propose.side !== null) ref(factions, 'faction', effect.propose.side, `${at}.propose.side`);
+      if ('propose' in effect && effect.propose.owner === 'command') commandProposal(effect.propose, `${at}.propose`, err);
     }
 
     // String keys, in the default locale. (Every message in the table is parsed as ICU by the World validator.)

@@ -53,3 +53,18 @@ The pack is uncalibrated. With the generic scripted leader, 75 turns end on day 
 
 - **Newberry Atlas of Historical County Boundaries:** the current download page permits reuse "for any lawful purpose, commercial or non-commercial", but the bundled files still carry CC BY-NC-SA 2.5. Confirm with the Newberry before any commercial release.
 - **NHGIS:** no redistribution without permission. Do not bundle.
+
+## Design parameters in `pack.json`'s rules (0064)
+
+These rules are design parameters, chosen for play and not sourced facts. Every pack states them, and the kernel has no default for any of them. The values here are the ones lane 0.5 tuned.
+
+| Rule | Value | What it does |
+|---|---|---|
+| `stores.menPerCapacityUnit` | 20000 | Men, and non-combatants, that one unit of the capacity scale feeds for a day |
+| `stores.capDays` | 30 | The most days of stores a block refills to |
+| `stores.lowDays` | 7 | Stores below this many days are low: a truth event a report may tell |
+| `contest.occupyPermille` | 100 | Control a side alone in held ground gains a day, at full strength |
+| `contest.occupyFullMen` | 5000 | The men at which occupation reaches full rate; fewer gain in proportion |
+| `contest.contestPermille` | 200 | Control the stronger side gains a day, times its margin over the next |
+| `movement.marchMinCapacityPermille` | 1000 | The least capacity an edge needs this month to carry a march: one whole unit |
+| `movement.courierPermille` | 333 | A courier's days on an edge, as a share of a division's: about a third, rounded up |

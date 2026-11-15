@@ -1,8 +1,8 @@
-id,name,kind,parent,department,post,region,aboard,arm,strength,strength_date,non_combatants,stores_days,sources,notes
-n_mere_1,First Division of the Mere,block,,n_war,n_army_mere,salient_base,,infantry,9500,1862-05-28,,10,TB-DESIGN,
-n_mere_2,Second Division of the Mere,block,,n_war,n_army_mere,salient_base,,infantry,8800,1862-05-28,,10,TB-DESIGN,
-n_mere_3,Third Division of the Mere,block,,n_war,n_army_mere,w_valley,,infantry,7600,1862-05-28,,8,TB-DESIGN,On the flank route.
-n_flotilla_boats,Mere gunboats,block,,n_navy,n_river_flotilla,mere_upper,,naval,600,1862-05-28,,20,TB-DESIGN,
-s_mere_1,First Mere Line Division,block,,s_war,s_army_mere,s_heartland,,infantry,8200,1862-05-25,,15,TB-DESIGN,
-s_mere_2,Second Mere Line Division,block,,s_war,s_army_mere,s_west_hills,,infantry,6100,1862-05-25,,15,TB-DESIGN,
-s_corran_garrison,Corran Fort garrison,block,,s_war,s_corran_command,mere_crossing,,artillery,1200,1862-05-25,,18,TB-DESIGN,Under siege: its stores are falling.
+id,name,kind,parent,department,post,region,aboard,arm,strength,strength_date,non_combatants,stores_days,stores_date,sources,notes
+n_mere_1,First Division of the Mere,block,,n_war,n_army_mere,salient_base,,infantry,9500,1862-05-28,,10,1862-05-28,TB-DESIGN,
+n_mere_2,Second Division of the Mere,block,,n_war,n_army_mere,salient_base,,infantry,8800,1862-05-28,,10,1862-05-28,TB-DESIGN,
+n_mere_3,Third Division of the Mere,block,,n_war,n_army_mere,w_valley,,infantry,7600,1862-05-28,,8,1862-05-28,TB-DESIGN,On the flank route.
+n_flotilla_boats,Mere gunboats,block,,n_navy,n_river_flotilla,mere_upper,,naval,600,1862-05-28,,20,1862-05-28,TB-DESIGN,
+s_mere_1,First Mere Line Division,block,,s_war,s_army_mere,s_heartland,,infantry,8200,1862-05-25,,15,1862-05-25,TB-DESIGN,
+s_mere_2,Second Mere Line Division,block,,s_war,s_army_mere,s_west_hills,,infantry,6100,1862-05-25,,15,1862-05-25,TB-DESIGN,
+s_corran_garrison,Corran Fort garrison,block,,s_war,s_corran_command,mere_crossing,,artillery,1200,1862-05-25,,18,1862-05-25,TB-DESIGN,Under siege: its stores are falling.

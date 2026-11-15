@@ -114,12 +114,11 @@ export function blockIds(state: State): ForceBlockId[] {
   return (Object.keys(state.forceBlockStates) as ForceBlockId[]).sort(strictCompare);
 }
 
-/** The faction whose forces a block is, through its department; null for a neutral government's (0050). */
-export function factionOfBlock(map: WorldIndex, state: State, id: ForceBlockId): FactionId | null {
+/** The faction whose forces a block is, through its department's side today (0050, 0065); null for a neutral government's. */
+export function factionOfBlock(_map: WorldIndex, state: State, id: ForceBlockId): FactionId | null {
   const dept = blockOf(state, id).fbDepartment;
-  const d = map.world.departments.find((x) => x.id === dept);
-  if (d === undefined) throw new ForcesError([`force block ${id}: department ${dept} is not in the World`]);
-  return d.faction;
+  if (!Object.prototype.hasOwnProperty.call(state.departmentFactions, dept)) throw new ForcesError([`force block ${id}: department ${dept} is not in the World`]);
+  return state.departmentFactions[dept]!;
 }
 
 /** Whether a block is naval (its arm says so in the pack's vocabulary): naval blocks carry others aboard. */

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { errorsOf, formatGenerated, formatIssue, generatePack, type Issue, type PackData, validatePack } from '../src/index.ts';
+import { errorsOf, formatGenerated, formatIssue, generatePack, IssueSink, type Issue, type PackData, validatePack, warFlagsUnset } from '../src/index.ts';
 import { appendRow, filesOf, fixture, type FileMap, replaceOnce, withFile, withNewFile, withoutFile } from './support/fixture.ts';
 
 const run = (files: FileMap) => generatePack(filesOf(files));
@@ -11,7 +11,7 @@ const joint = (links: string, secondOperation = 'raid', secondDepartment = 'r_se
     withFile(`${S}/posts.csv`, appendRow(`red_raid_a,Raid troops,expedition,r_war,red_top,beta,raid,,,DESIGN,\nred_raid_b,Raid ships,expedition,${secondDepartment},red_top,beta,${secondOperation},,,DESIGN,`)),
   );
 /** A neutral government (review F6): a department with no faction, its governor, and its guard in beta. */
-const neutral = (post = 'grey_top,Grey Governor,chief,g_gov,,beta,,,,DESIGN,', block = 'grey_guard,Grey Guard,block,,g_gov,grey_top,beta,,foot,800,1900-04,,20,DESIGN,') => {
+const neutral = (post = 'grey_top,Grey Governor,chief,g_gov,,beta,,,,DESIGN,', block = 'grey_guard,Grey Guard,block,,g_gov,grey_top,beta,,foot,800,1900-04,,20,1900-04,DESIGN,') => {
   let files = withFile(`${W}/departments.csv`, appendRow('g_gov,Grey Government,,ministry,DESIGN,'));
   files = withFile(`${W}/people.csv`, appendRow('grey_chief,Grey Chief,,,officer,1805,1875,average:DESIGN,average:DESIGN,average:DESIGN,average:DESIGN,,,,DESIGN,'), files);
   files = withFile(`${S}/posts.csv`, appendRow(post), files);
@@ -177,7 +177,11 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'a ship inland', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_ship,Red Ship,block,,r_sea,red_fleet,alpha,', 'red_ship,Red Ship,block,,r_sea,red_fleet,beta,')), kind: 'ship-ashore', file: `${S}/force_blocks.csv`, severity: 'warning' },
   // Every other call site of a check (the post-review mutation run)
   { name: 'a block with a parent', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('red_ship,Red Ship,block,,', 'red_ship,Red Ship,block,red_1,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
-  { name: 'a detachment of a detachment', files: () => withFile(`${S}/force_blocks.csv`, appendRow('red_det2,Red Picket,detachment,red_1_det,r_war,red_army,alpha,,foot,10,1900-04,,5,DESIGN,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
+  { name: 'a detachment of a detachment', files: () => withFile(`${S}/force_blocks.csv`, appendRow('red_det2,Red Picket,detachment,red_1_det,r_war,red_army,alpha,,foot,10,1900-04,,5,1900-04,DESIGN,')), kind: 'detachment-parent', file: `${S}/force_blocks.csv` },
+  // 0065: stores carry their date, as strengths do.
+  { name: 'stores without the date of the figure', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('beta,,foot,5000,1900-04,,10,1900-04,', 'beta,,foot,5000,1900-04,,10,,')), kind: 'missing-value', file: `${S}/force_blocks.csv` },
+  { name: 'a stores date with no stores', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce(',unknown,,,12,1900-03,', ',unknown,,,unknown,1900-03,')), kind: 'missing-value', file: `${S}/force_blocks.csv` },
+  { name: 'a stores date that is not a date', files: () => withFile(`${S}/force_blocks.csv`, replaceOnce('beta,,foot,5000,1900-04,,10,1900-04,', 'beta,,foot,5000,1900-04,,10,early April,')), kind: 'shape/custom', file: `${S}/force_blocks.csv` },
   // 0058: every land region and key point has one government row: a government department, or unknown.
   { name: 'a land region with no government row', files: () => withFile(`${S}/governments.csv`, replaceOnce('beta,r_prov,DESIGN,\n', '')), kind: 'government-missing', file: `${S}/governments.csv` },
   { name: 'a government row for a region not in the World', files: () => withFile(`${S}/governments.csv`, appendRow('nowhere,unknown,DESIGN,')), kind: 'unknown-reference', file: `${S}/governments.csv` },
@@ -208,6 +212,25 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'an off-map box with a terrain', files: () => withFile(`${W}/regions.csv`, replaceOnce('abroad,Abroad,off_map,,', 'abroad,Abroad,off_map,plain,')), kind: 'region-terrain', file: `${W}/regions.csv` },
   { name: 'a land region without a terrain', files: () => withFile(`${W}/regions.csv`, replaceOnce('beta,Beta,land,plain,', 'beta,Beta,land,,')), kind: 'region-terrain', file: `${W}/regions.csv` },
   { name: 'a retreat threshold above the supply threshold', files: () => editJson('pack.json', (m: { rules: { retreatControlPermille: number } }) => (m.rules.retreatControlPermille = 300)), kind: 'rules-order', file: 'pack.json', severity: 'warning' },
+  // Lane 0.5's design parameters (0064): every pack states them; there is no kernel default.
+  { name: 'no stores rules (every pack states them)', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.stores), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'no contest rules', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.contest), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'no movement rules', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.movement), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'a stores rule missing a field', files: () => editJson('pack.json', (m: { rules: { stores: Record<string, unknown> } }) => delete m.rules.stores.capDays), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'feeding men with a zero capacity unit', files: () => editJson('pack.json', (m: { rules: { stores: { menPerCapacityUnit: number } } }) => (m.rules.stores.menPerCapacityUnit = 0)), kind: 'shape/too_small', file: 'pack.json' },
+  { name: 'an occupation rate above 1000 permille', files: () => editJson('pack.json', (m: { rules: { contest: { occupyPermille: number } } }) => (m.rules.contest.occupyPermille = 1200)), kind: 'shape/too_big', file: 'pack.json' },
+  { name: 'a courier slower than a division', files: () => editJson('pack.json', (m: { rules: { movement: { courierPermille: number } } }) => (m.rules.movement.courierPermille = 1500)), kind: 'shape/too_big', file: 'pack.json' },
+  { name: 'a courier who takes no time', files: () => editJson('pack.json', (m: { rules: { movement: { courierPermille: number } } }) => (m.rules.movement.courierPermille = 0)), kind: 'shape/too_small', file: 'pack.json' },
+  { name: 'a fractional stores cap', files: () => editJson('pack.json', (m: { rules: { stores: { capDays: number } } }) => (m.rules.stores.capDays = 7.5)), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'a low-stores threshold above the cap', files: () => editJson('pack.json', (m: { rules: { stores: { lowDays: number } } }) => (m.rules.stores.lowDays = 40)), kind: 'rules-range', file: 'pack.json' },
+  // The rule-seat war setting (0064): one row per faction, a flag a situation sets or null.
+  { name: 'a war flag for a faction the pack lacks', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: unknown[] } } }) => m.rules.ruleSeats.warFlags.push({ faction: 'green', flag: null })), kind: 'unknown-reference', file: 'pack.json' },
+  { name: 'two war flags for one faction', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: unknown[] } } }) => m.rules.ruleSeats.warFlags.push({ faction: 'red', flag: null })), kind: 'duplicate-id', file: 'pack.json' },
+  { name: 'a faction with no war flag row', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: unknown[] } } }) => m.rules.ruleSeats.warFlags.pop()), kind: 'missing-value', file: 'pack.json' },
+  { name: 'a war flag that is not an id', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: { flag: string | null }[] } } }) => (m.rules.ruleSeats.warFlags[0]!.flag = 'war begun')), kind: 'shape/invalid_format', file: 'pack.json' },
+  { name: 'no rule-seat settings at all', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.ruleSeats), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'a war flag no situation sets', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: { flag: string | null }[] } } }) => (m.rules.ruleSeats.warFlags[0]!.flag = 'war_begun')), kind: 'war-flag-unset', file: 'pack.json', severity: 'warning' },
+  { name: 'a least capacity to march above the top of the scale', files: () => editJson('pack.json', (m: { rules: { movement: { marchMinCapacityPermille: number } } }) => (m.rules.movement.marchMinCapacityPermille = 6000)), kind: 'rules-range', file: 'pack.json' },
   {
     name: 'a scenario folder the manifest does not list',
     files: () => {
@@ -228,8 +251,8 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'unknown as a tenure date', files: () => withFile(`${S}/holders.csv`, replaceOnce('red_top,red_chief,no,1890,', 'red_top,red_chief,no,unknown,')), kind: 'unknown-not-allowed', file: `${S}/holders.csv` },
   { name: 'a tenure of a post that does not exist', files: () => withFile(`${S}/holders.csv`, appendRow('nobody_post,red_captain,no,,,DESIGN,')), kind: 'unknown-reference', file: `${S}/holders.csv` },
   // A neutral government (review F6)
-  { name: "a neutral government's guard under a faction's general", files: () => neutral(undefined, 'grey_guard,Grey Guard,block,,g_gov,red_army,beta,,foot,800,1900-04,,20,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/force_blocks.csv` },
-  { name: "a faction's troops under a neutral governor", files: () => neutral(undefined, 'grey_guard,Grey Guard,block,,r_war,grey_top,beta,,foot,800,1900-04,,20,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/force_blocks.csv` },
+  { name: "a neutral government's guard under a faction's general", files: () => neutral(undefined, 'grey_guard,Grey Guard,block,,g_gov,red_army,beta,,foot,800,1900-04,,20,1900-04,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/force_blocks.csv` },
+  { name: "a faction's troops under a neutral governor", files: () => neutral(undefined, 'grey_guard,Grey Guard,block,,r_war,grey_top,beta,,foot,800,1900-04,,20,1900-04,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/force_blocks.csv` },
   { name: "a neutral government's post answering to a faction", files: () => neutral('grey_top,Grey Governor,chief,g_gov,red_top,beta,,,,DESIGN,'), kind: 'chain-crosses-factions', file: `${S}/posts.csv` },
   { name: "a faction's man holding a neutral post", files: () => withFile(`${S}/holders.csv`, replaceOnce('grey_top,grey_chief,', 'grey_top,red_captain,'), neutral()), kind: 'faction-mismatch', file: `${S}/holders.csv` },
   { name: 'no playable faction', files: () => withFile(`${S}/scenario.json`, replaceOnce('"playable":true', '"playable":false')), kind: 'no-playable-faction', file: `${S}/scenario.json` },
@@ -413,5 +436,19 @@ describe('issues read like sentences (decision 0030: file, field, what is wrong,
     const bad = run(withFile(`${S}/standing_orders.csv`, replaceOnce(',hold,red_top,', ',hold,nobody,')));
     const issue = bad.issues.find((i) => i.kind === 'unknown-reference')!;
     expect(`${issue.file} (${issue.at})`).toBe(`${S}/standing_orders.csv (row 2 (stay), column from)`);
+  });
+});
+
+describe('the rule-seat war setting (0064)', () => {
+  it('warns for a war flag no situation sets, and not once a situation sets it (positive control)', () => {
+    const base = run(fixture());
+    const pack = { ...base.pack!, world: { ...base.pack!.world, rules: { ...base.pack!.world.rules, ruleSeats: { warFlags: [{ faction: 'red' as never, flag: 'war_begun' }, { faction: 'blue' as never, flag: null }] } } } };
+    const opening = { def: { effects: [{ setFlag: 'war_begun' }], options: [], inaction: null } as never };
+    const unset = new IssueSink();
+    warFlagsUnset([], pack, unset);
+    expect(unset.issues.map((i) => `${i.kind} ${i.at}`)).toEqual(['war-flag-unset rules.ruleSeats.warFlags[0].flag']);
+    const set = new IssueSink();
+    warFlagsUnset([opening], pack, set);
+    expect(set.issues).toEqual([]);
   });
 });

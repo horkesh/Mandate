@@ -23,6 +23,7 @@
  * orders, by the route the option names; a delegated choice hands over the
  * choice, not the authority to order (0052).
  */
+import { sideOfPerson } from '../command/command.ts';
 import { headquartersOf } from '../seats/posts.ts';
 import type { PersonId, SeatId, SituationId } from '../ids.ts';
 import { knowledgeOf } from '../knowledge/knowledge.ts';
@@ -176,7 +177,7 @@ export function delegateCommand(ctx: TickContext, state: State, seat: SeatId, cm
   const holder = state.postStates[cmd.to]?.postHolder ?? null;
   if (holder === null) return { state, reason: 'vacant_post' };
   // The lead's ruling on standing review S6: never the other side's holder, even in a World that skipped validation.
-  if (ctx.world.person(holder).faction !== def.faction) return { state, reason: 'other_side' };
+  if (sideOfPerson(ctx.world.map, state, holder) !== def.faction) return { state, reason: 'other_side' };
   fire(ctx, 'situations.delegated');
   return { state: delegateSituation(state, def.id, holder), reason: null };
 }
@@ -326,7 +327,7 @@ function historyDefault(ctx: TickContext, state: State, def: SituationDef, recor
   if (hd === null || 'unsourced' in hd) return applyDecision(ctx, state, def, [], 'inaction');
   if ('delegate' in hd) {
     const holder = state.postStates[hd.delegate]?.postHolder ?? null;
-    if (holder === null || ctx.world.person(holder).faction !== def.faction) return applyDecision(ctx, state, def, [], 'inaction');
+    if (holder === null || sideOfPerson(ctx.world.map, state, holder) !== def.faction) return applyDecision(ctx, state, def, [], 'inaction');
     fire(ctx, 'situations.delegated');
     return delegateSituation(state, def.id, holder);
   }

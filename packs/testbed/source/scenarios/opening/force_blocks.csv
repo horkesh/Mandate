@@ -1,20 +1,20 @@
-id,name,kind,parent,department,post,region,aboard,arm,strength,strength_date,non_combatants,stores_days,sources,notes
-n_west_1,First Westwatch Brigade,block,,n_war,n_army_west,n_west_front,,infantry,4200,1861-03-28,,12,TB-DESIGN,
-n_west_2,Second Westwatch Brigade,block,,n_war,n_army_west,n_west_front,,infantry,3800,1861-03-28,,12,TB-DESIGN,
-n_west_1_railguard,Brenn Junction guard,detachment,n_west_1,n_war,n_army_west,n_railhead,,infantry,300,1861-03-28,,20,TB-DESIGN,A detachment below its brigade: a garrison at the depot.
-n_east_1,First Eastwatch Brigade,block,,n_war,n_army_east,n_east_front,,infantry,5100,1861-03-25,,14,TB-DESIGN,
-n_east_2,Second Eastwatch Brigade,block,,n_war,n_army_east,n_east_front,,infantry,4900,1861-03-25,,14,TB-DESIGN,
-n_east_horse,Eastwatch Horse,block,,n_war,n_army_east,n_east_front,,cavalry,900,1861-03-25,,10,TB-DESIGN,
-n_capital_guard,Aldmoor garrison,block,,n_war,n_capital_defences,n_capital,,artillery,2200,1861-03-30,,30,TB-DESIGN,
-n_gull_garrison,Gull Rock garrison,block,,n_war,n_gull_rock,island_fort,,artillery,90,1861-03-31,45,9,TB-DESIGN,Forty-five labourers eat the garrison's rations.
-n_ship_resolute,Resolute,block,,n_navy,n_home_squadron,n_naval_base,,naval,420,1861-03-31,,40,TB-DESIGN,
-n_ship_vigil,Vigil,block,,n_navy,n_home_squadron,n_naval_base,,naval,260,1861-03-31,,40,TB-DESIGN,
-n_relief_troops,Gull Rock relief companies,block,,n_war,n_relief_army,n_naval_base,n_ship_resolute,infantry,200,1861-03-31,,60,TB-DESIGN,Troops afloat aboard Resolute: the landing force.
-n_flotilla_boats,Westwatch gunboats,block,,n_war,n_river_flotilla,mere_upper,,naval,180,1861-03-28,,20,TB-DESIGN,On the Upper Mere.
-s_harrow_1,First Harrow Brigade,block,,s_war,s_army_salient,salient_tip,,infantry,4600,1861-03-29,,10,TB-DESIGN,
-s_harrow_2,Second Harrow Brigade,block,,s_war,s_army_salient,salient_base,,infantry,4400,1861-03-29,,10,TB-DESIGN,
-s_lowmarch_militia,Lowmarch provincial militia,block,,s_province,s_army_salient,salient_tip,,infantry,2500,1861-03-29,,8,TB-DESIGN,"Provincial troops (authority: the province) under a Southern War Office general (command): the format keeps the two apart."
-s_highcairn_1,Highcairn Brigade,block,,s_war,s_army_west,s_west_hills,,mixed,3900,1861-03-27,,12,TB-DESIGN,
-s_corran_garrison,Corran Fort garrison,block,,s_war,s_corran_command,mere_crossing,,artillery,700,1861-03-27,,40,TB-DESIGN,
-s_gullhaven_gunners,Gullhaven gunners,block,,s_war,s_coast_command,s_coast,,artillery,1100,1861-03-27,,30,TB-DESIGN,
-s_merrow_guard,Merrow guard,block,,s_war,s_war_office,s_capital,,infantry,1500,1861-03-27,,30,TB-DESIGN,
+id,name,kind,parent,department,post,region,aboard,arm,strength,strength_date,non_combatants,stores_days,stores_date,sources,notes
+n_west_1,First Westwatch Brigade,block,,n_war,n_army_west,n_west_front,,infantry,4200,1861-03-28,,12,1861-03-28,TB-DESIGN,
+n_west_2,Second Westwatch Brigade,block,,n_war,n_army_west,n_west_front,,infantry,3800,1861-03-28,,12,1861-03-28,TB-DESIGN,
+n_west_1_railguard,Brenn Junction guard,detachment,n_west_1,n_war,n_army_west,n_railhead,,infantry,300,1861-03-28,,20,1861-03-28,TB-DESIGN,A detachment below its brigade: a garrison at the depot.
+n_east_1,First Eastwatch Brigade,block,,n_war,n_army_east,n_east_front,,infantry,5100,1861-03-25,,14,1861-03-25,TB-DESIGN,
+n_east_2,Second Eastwatch Brigade,block,,n_war,n_army_east,n_east_front,,infantry,4900,1861-03-25,,14,1861-03-25,TB-DESIGN,
+n_east_horse,Eastwatch Horse,block,,n_war,n_army_east,n_east_front,,cavalry,900,1861-03-25,,10,1861-03-25,TB-DESIGN,
+n_capital_guard,Aldmoor garrison,block,,n_war,n_capital_defences,n_capital,,artillery,2200,1861-03-30,,30,1861-03-30,TB-DESIGN,
+n_gull_garrison,Gull Rock garrison,block,,n_war,n_gull_rock,island_fort,,artillery,90,1861-03-31,45,9,1861-03-31,TB-DESIGN,Forty-five labourers eat the garrison's rations.
+n_ship_resolute,Resolute,block,,n_navy,n_home_squadron,n_naval_base,,naval,420,1861-03-31,,40,1861-03-31,TB-DESIGN,
+n_ship_vigil,Vigil,block,,n_navy,n_home_squadron,n_naval_base,,naval,260,1861-03-31,,40,1861-03-31,TB-DESIGN,
+n_relief_troops,Gull Rock relief companies,block,,n_war,n_relief_army,n_naval_base,n_ship_resolute,infantry,200,1861-03-31,,60,1861-03-31,TB-DESIGN,Troops afloat aboard Resolute: the landing force.
+n_flotilla_boats,Westwatch gunboats,block,,n_war,n_river_flotilla,mere_upper,,naval,180,1861-03-28,,20,1861-03-28,TB-DESIGN,On the Upper Mere.
+s_harrow_1,First Harrow Brigade,block,,s_war,s_army_salient,salient_tip,,infantry,4600,1861-03-29,,10,1861-03-29,TB-DESIGN,
+s_harrow_2,Second Harrow Brigade,block,,s_war,s_army_salient,salient_base,,infantry,4400,1861-03-29,,10,1861-03-29,TB-DESIGN,
+s_lowmarch_militia,Lowmarch provincial militia,block,,s_province,s_army_salient,salient_tip,,infantry,2500,1861-03-29,,8,1861-03-29,TB-DESIGN,"Provincial troops (authority: the province) under a Southern War Office general (command): the format keeps the two apart."
+s_highcairn_1,Highcairn Brigade,block,,s_war,s_army_west,s_west_hills,,mixed,3900,1861-03-27,,12,1861-03-27,TB-DESIGN,
+s_corran_garrison,Corran Fort garrison,block,,s_war,s_corran_command,mere_crossing,,artillery,700,1861-03-27,,40,1861-03-27,TB-DESIGN,
+s_gullhaven_gunners,Gullhaven gunners,block,,s_war,s_coast_command,s_coast,,artillery,1100,1861-03-27,,30,1861-03-27,TB-DESIGN,
+s_merrow_guard,Merrow guard,block,,s_war,s_war_office,s_capital,,infantry,1500,1861-03-27,,30,1861-03-27,TB-DESIGN,

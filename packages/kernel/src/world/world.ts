@@ -35,6 +35,48 @@ export interface SeasonEffect {
   readonly capacityPermille: number;
 }
 
+/**
+ * Stores on hand (0040, 0064): what a block eats and carries. DESIGN PARAMETERS
+ * the pack states, never sourced facts and never kernel defaults (hard rule 3).
+ */
+export interface StoresRules {
+  /** Men (and non-combatants) one unit of the capacity scale feeds for a day. */
+  readonly menPerCapacityUnit: number;
+  /** The most days of stores a block refills to. */
+  readonly capDays: number;
+  /** Stores below this many days are low: crossing it is a truth event a report may tell. */
+  readonly lowDays: number;
+}
+
+/** The simple control contest and occupation (0064). DESIGN PARAMETERS the pack states. */
+export interface ContestRules {
+  /** Control a side alone in held ground gains a day at full strength, permille. */
+  readonly occupyPermille: number;
+  /** The men at which occupation reaches its full rate; fewer gain in proportion. */
+  readonly occupyFullMen: number;
+  /** Control the stronger side gains a day at an overwhelming margin, permille (times its margin). */
+  readonly contestPermille: number;
+}
+
+/** Movement and messages over the graph (0064). DESIGN PARAMETERS the pack states. */
+export interface MovementRules {
+  /** The least capacity an edge needs this month to carry a march, permille of one unit of the capacity scale. */
+  readonly marchMinCapacityPermille: number;
+  /** A courier's days on an edge, permille of a division's (rounded up, at least one day). */
+  readonly courierPermille: number;
+}
+
+/**
+ * The generic rule-seat principal's settings (0064). Its standing goals stay at
+ * hold until its faction is at war; "at war" is a situation chain flag the pack
+ * names per faction, so a history run keeps the peace until the war's opening
+ * situation sets it. Lane 0.8's gate reads this; nothing else does.
+ */
+export interface RuleSeatRules {
+  /** One row per faction: the chain flag that puts it at war, or null for war from day 1. */
+  readonly warFlags: readonly { readonly faction: FactionId; readonly flag: string | null }[];
+}
+
 /** Pack-tunable rules the map needs (0019: thresholds start from AGEoD's tested values). */
 export interface WorldRules {
   /** The top of the pack's capacity scale for edges and depots. */
@@ -44,6 +86,10 @@ export interface WorldRules {
   /** Below this control an army cannot retreat into a region. */
   readonly retreatControlPermille: number;
   readonly seasons: readonly SeasonEffect[];
+  readonly stores: StoresRules;
+  readonly contest: ContestRules;
+  readonly movement: MovementRules;
+  readonly ruleSeats: RuleSeatRules;
 }
 
 export interface TerrainTerm {

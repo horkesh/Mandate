@@ -5,7 +5,7 @@
  * indexed with (`SeatsWorld.start`): each part of the start is copied once into the field its owner writes from then on
  * (0050), and the start's date becomes the calendar's day 0.
  */
-import { initialCommand } from '../command/command.ts';
+import { initialCommand, initialDepartmentSides } from '../command/command.ts';
 import { strictCompare } from '../compare.ts';
 import { initialControl } from '../control/control.ts';
 import { initialForces } from '../forces/forces.ts';
@@ -39,6 +39,7 @@ export function emptyState(): State {
     regionControl: {},
     regionGovernments: {},
     closedGovernments: {},
+    departmentFactions: {},
     seatAssignments: {},
     messagesInTransit: [],
     knowledgeBySeat: {},
@@ -103,6 +104,7 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
     regionControl: initialControl(map, start),
     regionGovernments: initialGovernments(map, start),
     closedGovernments: {},
+    departmentFactions: initialDepartmentSides(map),
     seatAssignments: initialSeats(world, options.drivers),
     messagesInTransit: [],
     knowledgeBySeat: {},
