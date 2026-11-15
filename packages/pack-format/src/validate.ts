@@ -181,7 +181,10 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   vocab.departmentKinds.forEach((k, i) => {
     if (k.selfGoverning && !k.government) err('self-governing-not-government', W('vocabularies.departmentKinds', i, 'selfGoverning'), `department kind "${k.id}" is self-governing but not a government`, 'government: true, or selfGoverning: false');
   });
+  const selfGoverningKinds = new Set(vocab.departmentKinds.filter((k) => k.selfGoverning).map((k) => k.id));
   world.departments.forEach((d, i) => {
+    // 0070: a self-governing department names the people whose government it is, so its land cannot pass to another people's.
+    if (selfGoverningKinds.has(d.kind) && d.polity === undefined) err('self-governing-no-polity', W('departments', i, 'polity'), `department "${d.id}" governs itself but names no polity`, 'a polity id shared by the rival governments of one nation (0070)');
     // `unknown` is the governments table's word for no known government (0058), so no department may take it as an id.
     if (d.id === w.UNKNOWN_GOVERNMENT) err('reserved-id', W('departments', i, 'id'), `"${w.UNKNOWN_GOVERNMENT}" is reserved for a region whose government is not known`, 'another department id');
     refCheck(factions, 'faction', d.faction, W('departments', i, 'faction'));
@@ -377,6 +380,9 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   manifest.scenarios.forEach((id, i) => {
     if (!scenarioIds.has(id)) sink.error('scenario-missing', 'pack.json', `scenarios[${i}]`, `scenario "${id}" is listed but has no data`, `source/scenarios/${id}/`);
   });
+  // 0070: a region's land stays with its own people, in every scenario start: two polities never govern one region.
+  const polityOf = new Map(world.departments.flatMap((d) => (d.polity === undefined ? [] : [[d.id as string, d.polity] as const])));
+  const regionPolity = new Map<string, { readonly polity: string; readonly department: string }>();
   for (const s of scenarios) {
     if (!manifest.scenarios.includes(s.id)) sink.error('scenario-missing', 'pack.json', 'scenarios', `scenario "${s.id}" has data but is not listed`, 'every scenario listed in pack.json');
     validateScenario(s);
@@ -437,6 +443,12 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       governed.add(g.region);
       const rk = regionKind.get(g.region);
       if (rk !== undefined && rk !== 'land' && rk !== 'key_point') err('government-on-water', S('governments', i, 'region'), `"${g.region}" is a ${rk} region, which has no civil government`, 'rows for land regions and key points only');
+      const polity = polityOf.get(g.department);
+      if (polity !== undefined) {
+        const seen = regionPolity.get(g.region);
+        if (seen !== undefined && seen.polity !== polity) err('polity-shared-region', S('governments', i, 'department'), `region "${g.region}" is governed by "${g.department}" (polity ${polity}) here and by "${seen.department}" (polity ${seen.polity}) in another start: two peoples never share a region's government`, 'one polity per region across every start (0070)');
+        else if (seen === undefined) regionPolity.set(g.region, { polity, department: g.department });
+      }
       if (g.department !== w.UNKNOWN_GOVERNMENT) {
         refCheck(departments, 'department', g.department, S('governments', i, 'department'));
         const dk = deptKind.get(g.department);

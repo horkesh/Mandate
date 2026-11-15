@@ -194,6 +194,12 @@ export interface DepartmentRecord {
   readonly id: DepartmentId;
   readonly faction: FactionId | null;
   readonly kind: string;
+  /**
+   * A generic id for the people whose government this is (0070): rival governments of one nation share it. Required
+   * of a self-governing department, whose land passes only to a department of the same kind and the same polity.
+   * Absent for every other department.
+   */
+  readonly polity?: string;
   readonly name: StringKey;
   readonly provenance: Provenance;
 }

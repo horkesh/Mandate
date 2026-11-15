@@ -383,6 +383,11 @@ export function generatePack(files: PackFiles): GenerateResult {
   for (const name of files.files('source/scenarios')) sink.error('unknown-table', `source/scenarios/${name}`, '', 'scenario tables live in a folder per scenario', 'source/scenarios/<id>/');
 
   // ---- World tables
+  /** A department's polity (0070), present only when its cell is: absent keeps every other department's record, and so the World's hash, as it was. */
+  const optionalPolity = (r: { optionalId(column: string): string | null }): { polity?: string } => {
+    const polity = r.optionalId('polity');
+    return polity === null ? {} : { polity };
+  };
   const departments = place(
     'world',
     'departments',
@@ -392,6 +397,7 @@ export function generatePack(files: PackFiles): GenerateResult {
         id: r.id_('id'),
         faction: r.optionalId('faction'),
         kind: r.text('kind'),
+        ...optionalPolity(r),
         name: names.add(`department.${r.id}.name`, r.text('name')),
         provenance: cites(r),
       },

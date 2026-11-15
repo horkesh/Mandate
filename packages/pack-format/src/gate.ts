@@ -588,23 +588,46 @@ export function atrocityTaint(
   items: readonly { readonly def: SituationDef }[],
   atrocities: readonly { readonly id: string; readonly actingSide: string }[],
 ): Map<string, AtrocityTaint[]> {
-  const defs = items.map((x) => x.def).sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
-  const flagsSet = (def: SituationDef, option: string | null) =>
-    phase0.effectsOf(def).flatMap(({ effect, option: o }) => ('setFlag' in effect && (option === null || o === option) ? [effect.setFlag] : []));
-  const scopesOf = (def: SituationDef) => [
+  return dependenceTaint(
+    items,
+    atrocities.map((a) => ({ id: a.id, option: null, atrocity: a.id, actingSide: a.actingSide, via: [] })),
+  );
+}
+
+/** The flags an item sets: all of them, or only those of one option (an inaction outcome and a notice's effects count in the first case). */
+function flagsSetBy(def: SituationDef, option: string | null): string[] {
+  return phase0.effectsOf(def).flatMap(({ effect, option: o }) => ('setFlag' in effect && (option === null || o === option) ? [effect.setFlag] : []));
+}
+
+/** The scopes of an item that can depend on another: its trigger (its event, knowledge condition and the stage it follows), and each option's own conditions. */
+function dependenceScopes(def: SituationDef) {
+  return [
     { option: null as string | null, conditions: [def.event, ...(def.knowledge === null ? [] : [def.knowledge])], follows: def.chain?.follows ?? null },
     ...def.options.map((o) => ({ option: o.id as string | null, conditions: [o.appearsWhen, o.expiresWhen, o.waitsOn].filter((c): c is phase0.Condition => c !== null), follows: null })),
   ];
-  const dependsOn = (scope: ReturnType<typeof scopesOf>[number], on: SituationDef, onOption: string | null): boolean => {
-    const reads = new Set(scope.conditions.flatMap((c) => phase0.flagsIn(c)));
-    if (flagsSet(on, onOption).some((f) => reads.has(f))) return true;
-    if (onOption === null) {
-      if (scope.follows?.situation === on.id) return true;
-      return scope.conditions.some((c) => phase0.situationsIn(c).includes(on.id) || knowsSubjects(c).includes(on.id) || knowsPatterns(c).some((p) => couldMatchReport(p, on)));
-    }
-    const followsIt = scope.follows?.situation === on.id && scope.follows.options !== null && scope.follows.options.includes(onOption);
-    return followsIt || scope.conditions.some((c) => decidedNaming(c, on.id, onOption));
-  };
+}
+
+type DependenceScope = ReturnType<typeof dependenceScopes>[number];
+
+/** Whether a scope depends on `on` (or one option of it) by any route: its firing or decision, a flag it sets, news of it, or a chain stage after it. */
+function scopeDependsOn(scope: DependenceScope, on: SituationDef, onOption: string | null): boolean {
+  const reads = new Set(scope.conditions.flatMap((c) => phase0.flagsIn(c)));
+  if (flagsSetBy(on, onOption).some((f) => reads.has(f))) return true;
+  if (onOption === null) {
+    if (scope.follows?.situation === on.id) return true;
+    return scope.conditions.some((c) => phase0.situationsIn(c).includes(on.id) || knowsSubjects(c).includes(on.id) || knowsPatterns(c).some((p) => couldMatchReport(p, on)));
+  }
+  const followsIt = scope.follows?.situation === on.id && scope.follows.options !== null && scope.follows.options.includes(onOption);
+  return followsIt || scope.conditions.some((c) => decidedNaming(c, on.id, onOption));
+}
+
+/**
+ * The fixed point of dependence (0060, gate G4), from any seeds: what depends on a seeded item, by any route and through
+ * any chain of items. `atrocityTaint` seeds it with atrocity-class items, and `choiceTaint` (0070) with what reads a
+ * principal's decision.
+ */
+export function dependenceTaint(items: readonly { readonly def: SituationDef }[], seeds: readonly (AtrocityTaint & { readonly id: string })[]): Map<string, AtrocityTaint[]> {
+  const defs = items.map((x) => x.def).sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   const taint = new Map<string, AtrocityTaint[]>();
   const add = (id: string, t: AtrocityTaint): boolean => {
     const list = taint.get(id) ?? [];
@@ -612,15 +635,15 @@ export function atrocityTaint(
     taint.set(id, [...list, t]);
     return true;
   };
-  for (const a of atrocities) add(a.id, { option: null, atrocity: a.id, actingSide: a.actingSide, via: [] });
+  for (const seed of seeds) add(seed.id, { option: seed.option, atrocity: seed.atrocity, actingSide: seed.actingSide, via: seed.via });
   for (let changed = true; changed; ) {
     changed = false;
     for (const x of defs) {
-      for (const scope of scopesOf(x)) {
+      for (const scope of dependenceScopes(x)) {
         for (const on of defs) {
           if (on.id === x.id) continue;
           for (const src of taint.get(on.id) ?? []) {
-            if (!dependsOn(scope, on, src.option)) continue;
+            if (!scopeDependsOn(scope, on, src.option)) continue;
             const via = on.id === src.atrocity ? src.via : [...src.via, on.id as string];
             if (add(x.id, { option: scope.option, atrocity: src.atrocity, actingSide: src.actingSide, via })) changed = true;
           }
@@ -629,6 +652,51 @@ export function atrocityTaint(
     }
   }
   return taint;
+}
+
+/** Whether a condition reads that a decision of `situation` was decided, whichever option was taken. */
+function readsDecided(c: phase0.Condition, situation: string): boolean {
+  if ('all' in c) return c.all.some((x) => readsDecided(x, situation));
+  if ('any' in c) return c.any.some((x) => readsDecided(x, situation));
+  if ('not' in c) return readsDecided(c.not, situation);
+  return 'decided' in c && c.decided === situation;
+}
+
+/**
+ * The first step of a principal's choice reaching another item (0070): an item whose trigger or option reads that a
+ * decision was decided, reads a flag one of its options (or its inaction) sets, or follows it in a chain. News of a
+ * decision, or its firing, is an event and not a choice, and is allowed with a reviewer's note; it is not seeded here.
+ * Each seed is `choiceTaint`'s start: the dependent item, with the decision as its origin.
+ */
+export function choiceSeeds(items: readonly { readonly def: SituationDef }[]): (AtrocityTaint & { readonly id: string })[] {
+  const defs = items.map((x) => x.def).sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+  const seeds: (AtrocityTaint & { readonly id: string })[] = [];
+  for (const decision of defs.filter((d) => d.kind === 'decision')) {
+    const flags = new Set(flagsSetBy(decision, null));
+    for (const x of defs) {
+      if (x.id === decision.id) continue;
+      for (const scope of dependenceScopes(x)) {
+        const reads = new Set(scope.conditions.flatMap((c) => phase0.flagsIn(c)));
+        const direct = scope.follows?.situation === decision.id || [...flags].some((f) => reads.has(f)) || scope.conditions.some((c) => readsDecided(c, decision.id));
+        if (direct) seeds.push({ id: x.id, option: scope.option, atrocity: decision.id, actingSide: '', via: [] });
+      }
+    }
+  }
+  return seeds;
+}
+
+/** What depends on a principal's decision, by any route and chain (0070), to a fixed point, by 0060's machinery. Keyed by item; `atrocity` names the decision. */
+export function choiceTaint(items: readonly { readonly def: SituationDef }[]): Map<string, AtrocityTaint[]> {
+  return dependenceTaint(items, choiceSeeds(items));
+}
+
+/**
+ * The items an item's trigger depends on directly, by any route (a firing, a flag, news, a chain stage), for the
+ * route notes a sign-off carries (0070). Excludes itself.
+ */
+export function triggerDependencies(def: SituationDef, items: readonly { readonly def: SituationDef }[]): string[] {
+  const scope = dependenceScopes(def)[0]!;
+  return items.map((x) => x.def).filter((on) => on.id !== def.id && scopeDependsOn(scope, on, null)).map((on) => on.id as string).sort();
 }
 
 /**

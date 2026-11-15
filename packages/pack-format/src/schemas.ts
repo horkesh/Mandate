@@ -240,6 +240,8 @@ export const DepartmentSchema = z.strictObject({
   /** Null for a neutral government (review F6). */
   faction: idOf('faction').nullable(),
   kind: termId,
+  /** For a self-governing department (0070): the people whose government it is; rival governments of one nation share it. */
+  polity: termId.optional(),
   name: stringKey,
   provenance,
 });

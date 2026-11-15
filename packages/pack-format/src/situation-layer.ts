@@ -5,7 +5,7 @@
  * as they are, so there is nothing to generate and nothing to go stale.
  */
 import { phase0 } from '@mandate/kernel';
-import { checkGate, GATE_DIR, localeStrings, readGate, type GateData } from './gate.ts';
+import { checkGate, choiceTaint, GATE_DIR, localeStrings, readGate, triggerDependencies, type GateData } from './gate.ts';
 import { listOptional, type PackFiles } from './generate.ts';
 import { errorsOf, type Issue, IssueSink } from './issues.ts';
 import { readSituations, SITUATIONS_DIR, validateSituations } from './situations.ts';
@@ -23,6 +23,7 @@ export function readSituationLayer(files: PackFiles, pack: PackData): SituationL
   const items = readSituations(files, sink);
   warFlagsUnset(items, pack, sink);
   warFlagSources(items, pack, sink);
+  nationActs(items, pack, sink);
   const hasGate = listOptional((p) => files.files(p), GATE_DIR).length > 0;
   if (items.length === 0 && !hasGate && listOptional((p) => files.folders(p), SITUATIONS_DIR).length === 0) return { situations: [], gate: null, issues: sink.issues };
   // A pack with situations must carry its gate: without it, A1 cannot tell what needs a tag.
@@ -71,6 +72,53 @@ export function warFlagSources(items: readonly { readonly file: string; readonly
       else if (def.kind !== 'decision') err(`"${def.id}" is a notice and sets the war flag "${effect.setFlag}": it applies before any principal has the news`, 'a decision option of the faction itself (0066)');
       else if (def.delegableTo.length > 0) err(`"${def.id}" can be delegated (to ${def.delegableTo.join(', ')}) and its option sets the war flag "${effect.setFlag}": a delegate's choice would put the war in the president's menu before the delegate's report reached him`, 'no delegable situation sets a war flag: going to war is an act of the principal himself (0066)');
       else if (!/^options\[\d+\]\.effects\[\d+\]$/.test(at)) err(`"${def.id}" sets the war flag "${effect.setFlag}" from ${at}, which is not a chosen option's effect`, 'an effect of a decision option (0066)');
+    }
+  }
+}
+
+/**
+ * A nation's act is its own (0070). A notice that moves a self-governing department (its side, closing or reopening):
+ * - names whose act it is (`actingGovernment`), which must be the proposal's subject, so a side's act authored as a
+ *   notice cannot move a nation;
+ * - carries a gate topic tag and a reviewer's sign-off, so the gate reviewer reads every one;
+ * - does not depend on a principal's decision by any route (reading it, a flag an option or its inaction sets, a chain
+ *   stage after it), through any chain of items, found to a fixed point with 0060's machinery (`choiceTaint`): no
+ *   principal's choice moves a nation, however many notices it passes through;
+ * - and for the events and news it does depend on (a firing, a report, a flag a notice sets), the sign-off carries the
+ *   reviewer's note on that route, keyed `route|<situation id>` (the notes' own place, as for review-severity wording).
+ * A decision that moves one is refused by `commandProposal` (0069); it is skipped here.
+ */
+export function nationActs(items: readonly { readonly file: string; readonly def: phase0.SituationDef }[], pack: PackData, sink: IssueSink): void {
+  const selfGoverning = new Set(pack.world.vocabularies.departmentKinds.filter((k) => k.selfGoverning).map((k) => k.id as string));
+  const nations = new Set(pack.world.departments.filter((d) => selfGoverning.has(d.kind)).map((d) => d.id as string));
+  if (nations.size === 0) return;
+  const taint = choiceTaint(items);
+  for (const { file, def } of items) {
+    if (def.kind !== 'notice') continue;
+    const moves = phase0.effectsOf(def).flatMap(({ at, effect }) => {
+      if (!('propose' in effect) || effect.propose.owner !== 'command' || effect.propose.subject === null) return [];
+      if (effect.propose.field !== phase0.DEPARTMENT_SIDE_FIELD && effect.propose.field !== phase0.GOVERNMENT_CLOSED_FIELD) return [];
+      return nations.has(effect.propose.subject) ? [{ at, subject: effect.propose.subject }] : [];
+    });
+    if (moves.length === 0) continue;
+    const err = (kind: string, at: string, message: string, expected: string) => sink.error(kind, file, at, message, expected);
+    if (def.actingGovernment === undefined) err('acting-government-missing', 'actingGovernment', `"${def.id}" moves ${moves[0]!.subject}, which governs itself, but names no acting government`, `actingGovernment: ${moves[0]!.subject}, the nation whose act it is (0070)`);
+    for (const m of moves) {
+      if (def.actingGovernment !== undefined && def.actingGovernment !== m.subject) {
+        err('acting-government-mismatch', m.at, `"${def.id}" is the act of ${def.actingGovernment}, but moves ${m.subject}, which governs itself`, `only the nation's own act moves it: actingGovernment must be ${m.subject} (0070)`);
+      }
+    }
+    if ('none' in def.gate || def.gate.topics.length === 0) err('self-governing-gate', 'gate', `"${def.id}" moves a self-governing department but carries no gate topic`, 'a gate tag naming its topics, so the gate reviewer reads it (0070)');
+    if (def.gateReview === null) err('self-governing-gate', 'gateReview', `"${def.id}" moves a self-governing department but has no sign-off`, 'a sign-off by a gate reviewer who is not the author (0070)');
+    const chosen = taint.get(def.id) ?? [];
+    for (const t of chosen) {
+      err('self-governing-choice', 'event', `"${def.id}" moves ${moves[0]!.subject} but depends on the principal's decision "${t.atrocity}"${t.via.length === 0 ? '' : `, through ${t.via.map((v) => `"${v}"`).join(' then ')}`}`, 'no choice of a principal moves a nation by any route: reading the decision, a flag an option sets, or a chain; a nation answers events and news, never a choice (0070)');
+    }
+    if (chosen.length > 0) continue;
+    for (const dep of triggerDependencies(def, items)) {
+      if ((def.gateReview?.notes[`route|${dep}`] ?? '').trim().length === 0) {
+        err('self-governing-route-note', 'gateReview.notes', `"${def.id}" moves ${moves[0]!.subject} and depends on "${dep}" (an event or news): the sign-off carries no reviewer's note on that route`, `gateReview.notes["route|${dep}"]: the reviewer's note that the nation answers what happened, not a choice (0070)`);
+      }
     }
   }
 }

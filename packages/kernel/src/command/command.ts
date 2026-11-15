@@ -627,16 +627,23 @@ function selfGoverningProblem(map: WorldIndex, department: DepartmentId, origin:
 }
 
 /**
- * Why a region held by `from` may not pass to `to` (0069), or null. A region held by a self-governing government moves
- * only to another department of the same kind, which allows a nation's own rival governments and never annexation to a
- * state, a territory or a military department. Nothing proposes a region's government yet (Phase 0); whatever writes it
- * must ask here first. `to` is `unknown` for a region whose government is no longer known.
+ * Why a region held by `from` may not pass to `to` (0069, 0070), or null. A region held by a self-governing government
+ * moves only to another department of the same kind and the same polity, which allows a nation's own rival
+ * governments (the Cherokee in 1862 and 1863) and never annexation to a state, a territory or a military department,
+ * nor one nation's land passing to another nation's government. Nothing proposes a region's government yet (Phase 0);
+ * whatever writes it must ask here first, and a test fails if `command` writes the field without it. `to` is `unknown`
+ * for a region whose government is no longer known. The reserved refusal reason is `self_governing_region`.
  */
 export function regionMoveProblem(map: WorldIndex, from: DepartmentId | 'unknown', to: DepartmentId | 'unknown'): string | null {
   if (from === 'unknown' || !isSelfGoverning(map, from)) return null;
-  const kind = (d: DepartmentId) => map.world.departments.find((x) => x.id === d)?.kind;
-  if (to !== 'unknown' && kind(to) === kind(from)) return null;
-  return `a region held by ${from}, which governs itself, passes only to another department of its kind, not to ${to}`;
+  const record = (d: DepartmentId) => map.world.departments.find((x) => x.id === d);
+  const own = record(from);
+  const other = to === 'unknown' ? undefined : record(to);
+  if (other !== undefined && other.kind === own?.kind) {
+    if (own?.polity !== undefined && other.polity === own.polity) return null;
+    return `a region held by ${from}, which governs itself, passes only to a government of its own people (polity ${own?.polity ?? 'none'}), not to ${to} (polity ${other.polity ?? 'none'})`;
+  }
+  return `a region held by ${from}, which governs itself, passes only to another department of its kind and polity, not to ${to}`;
 }
 
 export type AppliedProposal =

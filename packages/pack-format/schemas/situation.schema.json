@@ -5,6 +5,7 @@
 "$schema": "https://json-schema.org/draft/2020-12/schema",
 "additionalProperties": false,
 "properties": {
+"actingGovernment": {"maxLength":128,"pattern":"^[A-Za-z0-9][A-Za-z0-9_.:/-]*$","type":"string"},
 "chain": {"anyOf":[{"additionalProperties":false,"properties":{"follows":{"anyOf":[{"additionalProperties":false,"properties":{"options":{"anyOf":[{"items":{"maxLength":128,"pattern":"^[A-Za-z0-9][A-Za-z0-9_.:/-]*$","type":"string"},"minItems":1,"type":"array"},{"type":"null"}],"default":null},"situation":{"maxLength":128,"pattern":"^[A-Za-z0-9][A-Za-z0-9_.:/-]*$","type":"string"}},"required":["situation"],"type":"object"},{"type":"null"}]},"id":{"maxLength":128,"pattern":"^[A-Za-z0-9][A-Za-z0-9_.:/-]*$","type":"string"},"stage":{"maximum":9007199254740991,"minimum":1,"type":"integer"}},"required":["id","stage"],"type":"object"},{"type":"null"}]},
 "citations": {"default":[],"items":{"additionalProperties":false,"properties":{"at":{"anyOf":[{"minLength":1,"type":"string"},{"type":"null"}],"default":null},"source":{"minLength":1,"type":"string"}},"required":["source"],"type":"object"},"type":"array"},
 "delegableTo": {"items":{"maxLength":128,"pattern":"^[A-Za-z0-9][A-Za-z0-9_.:/-]*$","type":"string"},"type":"array"},

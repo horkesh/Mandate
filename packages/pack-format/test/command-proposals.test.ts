@@ -64,7 +64,12 @@ describe('proposals to command in situation files (0058, 0065)', () => {
  */
 describe('a self-governing government is moved only by a notice (0069)', () => {
   const NOTICE = 'situations/fen_arrivals.json';
-  const markProvince = () => editJson('data/world.json', (m) => void (m.vocabularies.departmentKinds.find((k: { id: string }) => k.id === 'province').selfGoverning = true));
+  const markProvince = () =>
+    editJson('data/world.json', (m) => {
+      m.vocabularies.departmentKinds.find((k: { id: string }) => k.id === 'province').selfGoverning = true;
+      // A self-governing department names its polity (0070), or the World itself is refused before any situation is read.
+      for (const d of m.departments.filter((x: { kind: string }) => x.kind === 'province')) d.polity = 'provincials';
+    });
   const selfGoverning = (file: string, put: (s: Record<string, any>, effect: unknown) => void, propose: { field: string; delta?: number; side?: string | null }): string[] => {
     const effect = { propose: { owner: 'command', reason: 'x', subject: 's_province', delta: 1, side: propose.field === 'department_side' ? 'north' : null, ...propose } };
     const edits = { ...markProvince(), ...editJson(file, (s) => put(s, effect)) };

@@ -162,6 +162,7 @@ export const SituationSchema = z.strictObject({
     })
     .nullable()
     .default(null),
+  actingGovernment: idOf('department').optional(),
   gate: GateTagSchema,
   gateReview: GateReviewSchema.nullable().default(null),
   citations: z.array(z.strictObject({ source: z.string().min(1), at: z.string().min(1).nullable().default(null) })).default([]),

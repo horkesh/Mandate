@@ -24,19 +24,21 @@ import { depot, edge, F, R, region } from './support/map-fixture.ts';
  *
  *   a1 (a's source) --road-- a2 --road-- n1 (nation_x's land) --road-- n2 (nation_y's land) --road-- b1
  *
- * nation_x and nation_y are of kind `nation` (self-governing); neutral_gov is an ordinary government of no side.
+ * nation_x, its rival government nation_x2 (same polity) and nation_y (another polity) are of kind `nation`
+ * (self-governing); neutral_gov is an ordinary government of no side.
  */
 const WORLD = (() => {
   const base = forcesWorld({
     regions: ['a1', 'a2', 'n1', 'n2', 'b1', 'g1'].map((r) => region(r)),
     edges: [edge('a1', 'a2'), edge('a2', 'n1'), edge('n1', 'n2'), edge('n2', 'b1'), edge('a2', 'g1')],
     depots: [depot('a_src', 'a1')],
-    departments: ['a_war', 'b_war', 'neutral_gov', 'neutral_nation_x', 'neutral_nation_y'],
+    departments: ['a_war', 'b_war', 'neutral_gov', 'neutral_nation_x', 'neutral_nation_x2', 'neutral_nation_y'],
     people: [...['a_lead', 'a_gen'].map((p) => person(p, 'a')), ...['b_lead'].map((p) => person(p, 'b'))],
   });
-  return indexWorld({ ...base, departments: base.departments.map((d) => (d.id.includes('nation_') ? { ...d, kind: 'nation' } : d)) });
+  return indexWorld({ ...base, departments: base.departments.map((d) => (d.id.includes('nation_') ? { ...d, kind: 'nation', polity: d.id.includes('nation_x') ? 'xfolk' : 'yfolk' } : d)) });
 })();
 const X: DepartmentId = DEP('neutral_nation_x');
+const X2: DepartmentId = DEP('neutral_nation_x2');
 const Y: DepartmentId = DEP('neutral_nation_y');
 const GOV: DepartmentId = DEP('neutral_gov');
 const START = {
@@ -93,11 +95,15 @@ describe('the kernel guard: a self-governing government is moved only by a notic
     expect(r.state.closedGovernments[Y]).toBe(3);
   });
 
-  it('a region held by a self-governing government passes only to another department of its kind', () => {
-    expect(regionMoveProblem(WORLD, X, Y)).toBeNull();
-    expect(regionMoveProblem(WORLD, X, DEP('a_war'))).toContain('governs itself');
-    expect(regionMoveProblem(WORLD, X, GOV)).toContain('passes only to another department of its kind');
-    expect(regionMoveProblem(WORLD, X, 'unknown')).toContain('governs itself');
+  it('a region held by a self-governing government passes only to another department of its kind and its polity', () => {
+    // A nation's own rival government (same kind, same polity) may hold the region.
+    expect(regionMoveProblem(WORLD, X, X2)).toBeNull();
+    // Another nation's government (same kind, another polity) may not: one people's land never passes to another's.
+    expect(regionMoveProblem(WORLD, X, Y)).toContain('passes only to a government of its own people (polity xfolk), not to neutral_nation_y (polity yfolk)');
+    // Nor a side's government, an ordinary government, or no known government.
+    expect(regionMoveProblem(WORLD, X, DEP('a_war'))).toContain('passes only to another department of its kind and polity');
+    expect(regionMoveProblem(WORLD, X, GOV)).toContain('passes only to another department of its kind and polity');
+    expect(regionMoveProblem(WORLD, X, 'unknown')).toContain('passes only to another department of its kind and polity');
     // An ordinary government's regions, and a region of unknown government, are not this rule's.
     expect(regionMoveProblem(WORLD, GOV, DEP('a_war'))).toBeNull();
     expect(regionMoveProblem(WORLD, 'unknown', X)).toBeNull();
