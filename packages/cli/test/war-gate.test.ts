@@ -23,7 +23,7 @@ describe('the war gate on union-1861', () => {
     expect(world.situations.length).toBe(0);
   });
 
-  it('at peace: no order is given, no force marches, no ground changes hands (positive control: it does at war)', { timeout: 120_000 }, () => {
+  it('at peace: no order is given, no force marches, no ground changes hands (positive control: it does at war)', () => {
     const peace = phase0.createState(world, setup);
     const run = phase0.playDays(world, peace, seats, 40, { freeze: true });
     expect(orders(run.log)).toEqual([]);
@@ -47,7 +47,7 @@ describe('the war gate on union-1861', () => {
     expect(canonicalHash(war)).not.toBe(canonicalHash(peace));
   });
 
-  it('a war that begins mid-run opens his campaign the next morning, once', { timeout: 120_000 }, () => {
+  it('a war that begins mid-run opens his campaign the next morning, once', () => {
     const peace = phase0.createState(world, setup);
     const early = phase0.playDays(world, peace, seats, 10, { freeze: true });
     expect(orders(early.log)).toEqual([]);
