@@ -72,6 +72,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - Edges and regions (navy note): river and sea edges need depth by season and an obstruction state; fort regions need a passage-versus-reduction flag; naval bases are key points; blockade-running ports are off-map boxes. A support request needs three terms: the commander's compliance, his department's consent, and physical limits (depth, season, passage).
 - From lane 0.6: two World models exist (lane 0.2's `world` and lane 0.6's stand-in); unify them when M2 is replaced.
 - From lane 0.6: the testbed save fixture (`packages/cli/test/fixtures/saves/testbed-seats-day40.json`) fails its resume test on any new State field. Before a public build, regenerate it with `npx tsx tools/make-save-fixture.ts` and say so in the commit; after one, it needs a schema bump and a migration.
+- Phase 0 saves have no schema migration yet, since no save has shipped: migrations begin with the first public build (0044).
 - Research and data (`notes/lane-0.5-forces.md`, finding 3): many Union force blocks have unknown stores (`storesDays` null), so the stores rule does little on `union-1861`; the Union pack's blocks need researched stores.
 - Forces need a stragglers and absent field (rejoin over days); writer-table rows are needed for battle records (owner `combat`) and for fortification, which 0029 does not give a writer (combat note).
 
@@ -112,6 +113,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - The standing-goal menus are built first, from the morning's State (lane 0.6; also in 0052).
 
 **Tooling, small, after lane 0.1 (lead queued them)**
+- Should-fix before Phase 1 adds its State owners (close-out lane, `notes/phase0-close-out.md` on `phase0-close-out`): the one-writer scanner does not follow type aliases. A record reachable from `State` only through something like `type X = Readonly<Record<K, R>>` is not scanned unless its name ends in `State`; the lane's own alias hid `PersonRank`, and it worked round this by typing the root field inline. This sits beside the existing alias gap (`const c = state.x; c.push(v)`), which is backed only by the test-time freeze.
 - An `npm run check` check that every decision file is in the index and the index's amendment notes match each record's Status line (hard rule 7; my own repeat duty).
 - Any test that shells out to git cannot run inside the hook's snapshot (no `.git`): the hook's executable-bit test skips there and runs in place and in CI, and a future such test needs the same skip (tooling batch hand-over).
 - App-created worktrees set `core.hooksPath` to the main checkout's absolute `.githooks`, so a lane's own hook changes do not run in its worktree until merged. Low impact (CI covers); a candidate LESSONS entry; it is app-managed config.
