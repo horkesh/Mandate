@@ -20,6 +20,8 @@ export interface FactionScore {
   readonly traced: number;
   /** Sum of its control shares over every region, in permille. */
   readonly controlPermille: number;
+  /** Land regions it traces that have a supply path from a source or depot. */
+  readonly supplied: number;
   readonly frontLines: number;
   readonly frontSegments: number;
   readonly pockets: number;
@@ -61,6 +63,7 @@ export function checkpointScores(world: phase0.SeatsWorld, result: phase0.TickRe
       held,
       traced: map?.index.traced.get(faction)?.length ?? 0,
       controlPermille,
+      supplied: map?.supply.factions.get(faction)?.paths.size ?? 0,
       frontLines: fronts.length,
       frontSegments: fronts.reduce((n, f) => n + f.segments.length, 0),
       pockets: pockets.length,

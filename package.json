@@ -22,6 +22,7 @@
     "run:headless": "tsx packages/cli/src/run-headless.ts",
     "run:seats": "tsx packages/cli/src/run-seats.ts",
     "run:phase0": "tsx packages/cli/src/run-phase0.ts",
+    "run:done-check": "tsx packages/cli/src/run-done-check.ts",
     "play": "tsx packages/cli/src/play.ts",
     "pack:generate": "tsx packages/cli/src/pack.ts generate",
     "pack:validate": "tsx packages/cli/src/pack.ts validate",
