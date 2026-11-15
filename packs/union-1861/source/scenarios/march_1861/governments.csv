@@ -1,5 +1,5 @@
 region,department,sources,notes
-washington,unknown,MAP-LANE (map draft regions.csv counties_1861),"The District of Columbia: governed under Congress, with no department for it in the pack."
+washington,us_district_columbia,USCONST art. I sec. 8 cl. 17; STAT 2 Stat. 103 ch. 15; NOTE-governments-stores-1861 s.2,The District of Columbia under Congress's exclusive legislation.
 northern_virginia,st_virginia,MAP-LANE (map draft regions.csv counties_1861); OOB-LANE (department structure),
 manassas,st_virginia,MAP-LANE (map draft regions.csv counties_1861); OOB-LANE (department structure),
 loudoun_fauquier,st_virginia,MAP-LANE (map draft regions.csv counties_1861); OOB-LANE (department structure),
@@ -205,12 +205,12 @@ brownsville,st_texas,MAP-LANE (map draft regions.csv counties_1861); OOB-LANE (d
 tx_west,st_texas,MAP-LANE (map draft regions.csv counties_1861); OOB-LANE (department structure),
 kansas_east,st_kansas,MAP-LANE (map draft regions.csv counties_1861); OOB-LANE (department structure),
 kansas_west,st_kansas,MAP-LANE (map draft regions.csv counties_1861); OOB-LANE (department structure),
-nebraska,unknown,MAP-LANE (map draft regions.csv counties_1861),Nebraska Territory: the pack has no department for a territorial government; unknown until one is sourced and added.
-dakota,unknown,MAP-LANE (map draft regions.csv counties_1861),Dakota Territory: the pack has no department for a territorial government; unknown until one is sourced and added.
+nebraska,tr_nebraska,STAT 10 Stat. 277 secs 2 and 12; NOTE-governments-stores-1861 s.2,"Nebraska Territory. Governor Black had resigned on 24 February 1861 (secondary source); the Secretary of the Territory acts in a vacancy (the same clause as in the Colorado and Dakota acts)."
+dakota,tr_dakota,STAT 12 Stat. 239 secs 2 3 11; NOTE-governments-stores-1861 s.2,"Dakota Territory, organised on 2 March 1861 with its governor not yet in place."
 minnesota,st_minnesota,MAP-LANE (map draft regions.csv counties_1861); OOB-LANE (department structure),
 iowa,st_iowa,MAP-LANE (map draft regions.csv counties_1861); OOB-LANE (department structure),
-colorado,unknown,MAP-LANE (map draft regions.csv counties_1861),Colorado Territory: the pack has no department for a territorial government; unknown until one is sourced and added.
-new_mexico,unknown,MAP-LANE (map draft regions.csv counties_1861),New Mexico Territory: the pack has no department for a territorial government; unknown until one is sourced and added.
-arizona,unknown,MAP-LANE (map draft regions.csv counties_1861),New Mexico Territory: the pack has no department for a territorial government; unknown until one is sourced and added.
+colorado,tr_colorado,STAT 12 Stat. 172 secs 2 3 11; NOTE-governments-stores-1861 s.2,"Colorado Territory, organised on 28 February 1861 with its governor not yet in place."
+new_mexico,tr_new_mexico,STAT 9 Stat. 446 secs 3 and 12; NOTE-governments-stores-1861 s.2,New Mexico Territory.
+arizona,tr_new_mexico,STAT 9 Stat. 446 secs 3 and 12; NOTE-governments-stores-1861 s.2,"New Mexico Territory: Arizona was part of it until the Act of 24 February 1863 (secondary source), and the Mesilla convention of March 1861 and the Confederate 'Arizona' come after the start."
 it_cherokee_creek,unknown,MAP-LANE (map draft regions.csv counties_1861),"The Indian Territory nations: their governments in 1861, and whether each declared neutrality, await a research lane (0058)."
 it_choctaw_chickasaw,unknown,MAP-LANE (map draft regions.csv counties_1861),"The Indian Territory nations: their governments in 1861, and whether each declared neutrality, await a research lane (0058)."

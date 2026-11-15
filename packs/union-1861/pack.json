@@ -289,6 +289,16 @@
         "id": "state_government",
         "name": "department_kind.state_government",
         "government": true
+      },
+      {
+        "id": "territorial_government",
+        "name": "department_kind.territorial_government",
+        "government": true
+      },
+      {
+        "id": "federal_district",
+        "name": "department_kind.federal_district",
+        "government": true
       }
     ],
     "arms": [

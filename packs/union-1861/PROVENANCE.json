@@ -412,6 +412,16 @@
       "licenceReadOn": null
     },
     {
+      "key": "NOTE-governments-stores-1861",
+      "title": "Project research note docs/research/2026-11-15-governments-and-stores-1861.md (a pointer to primary documents, never the source of a fact)",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "docs/research/2026-11-15-governments-and-stores-1861.md",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
       "key": "NOTE-map-extent-size-sources",
       "title": "Project research note docs/research/2026-11-14-map-extent-size-sources.md (a pointer to primary documents, never the source of a fact)",
       "kind": "pointer",
@@ -602,6 +612,16 @@
       "licenceReadOn": null
     },
     {
+      "key": "STAT",
+      "title": "United States Statutes at Large: vol. 2 (1801), vol. 9 (1850), vol. 10 (1854), vol. 12 (1863), the acts organising the District of Columbia and the Territories of New Mexico, Nebraska, Colorado and Dakota",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "govinfo.gov statute page scans and dheller.org scans of the same pages, read as extracted text; a page's text layer can be garbled, so each act is cited by section",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
       "key": "STEPHENS",
       "title": "A. H. Stephens, speech at Savannah, 21 March 1861 (the \"Cornerstone\" speech), newspaper report",
       "kind": "primary",
@@ -628,6 +648,16 @@
       "licence": "public-domain",
       "basis": "government-work",
       "copyUsed": "archive.org scan, OCR (oob draft README)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "USCONST",
+      "title": "Constitution of the United States (1787), Article I, Section 8, clause 17",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "the National Archives transcription (archives.gov), read for the District clause",
       "licencePage": null,
       "licenceReadOn": null
     },
