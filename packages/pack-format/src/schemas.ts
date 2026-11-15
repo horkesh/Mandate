@@ -182,6 +182,18 @@ export const RulesSchema = z.strictObject({
       courierPermille: int.min(1, 'a permille from 1').max(1000, 'a permille up to 1000').describe('A courier’s days on an edge, permille of a division’s, rounded up, at least one day. A design parameter.'),
     })
     .describe('Movement and messages over the graph (0064): design parameters the pack states, not sourced facts.'),
+  ruleSeats: z
+    .strictObject({
+      warFlags: z
+        .array(
+          z.strictObject({
+            faction: idOf('faction'),
+            flag: termId.nullable().describe('The situation chain flag that puts this faction at war; null for war from day 1.'),
+          }),
+        )
+        .describe('One row per faction in the manifest.'),
+    })
+    .describe('The generic rule-seat principal (0064): its standing goals stay at hold until its faction is at war, which a situation flag the pack names marks.'),
 });
 
 export const VocabulariesSchema = z.strictObject({

@@ -30,6 +30,7 @@ export const FIXTURE_RULES = {
   stores: { menPerCapacityUnit: 20000, capDays: 30, lowDays: 7 },
   contest: { occupyPermille: 100, occupyFullMen: 5000, contestPermille: 200 },
   movement: { marchMinCapacityPermille: 1000, courierPermille: 333 },
+  ruleSeats: { warFlags: [] },
 } as const;
 
 export function region(id: string, kind: RegionKind = 'land'): RegionRecord {

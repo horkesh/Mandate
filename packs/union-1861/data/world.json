@@ -1694,6 +1694,7 @@
 "contest": {"contestPermille":200,"occupyFullMen":5000,"occupyPermille":100},
 "movement": {"courierPermille":333,"marchMinCapacityPermille":1000},
 "retreatControlPermille": 50,
+"ruleSeats": {"warFlags":[{"faction":"union","flag":"war_begun"},{"faction":"confederate","flag":"war_begun"}]},
 "seasons": [
 {"capacityPermille":600,"defaultMonths":[1,2,3,12],"lengthPermille":1500,"reason":"mud"},
 {"capacityPermille":500,"defaultMonths":[8,9,10],"lengthPermille":1300,"reason":"low_water"},

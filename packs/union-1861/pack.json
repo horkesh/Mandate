@@ -14,6 +14,7 @@
     "stores": { "menPerCapacityUnit": 20000, "capDays": 30, "lowDays": 7 },
     "contest": { "occupyPermille": 100, "occupyFullMen": 5000, "contestPermille": 200 },
     "movement": { "marchMinCapacityPermille": 1000, "courierPermille": 333 },
+    "ruleSeats": { "warFlags": [{ "faction": "union", "flag": "war_begun" }, { "faction": "confederate", "flag": "war_begun" }] },
     "seasons": [
       {
         "reason": "mud",

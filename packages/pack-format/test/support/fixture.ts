@@ -18,6 +18,7 @@ const manifest = {
     stores: { menPerCapacityUnit: 20000, capDays: 30, lowDays: 7 },
     contest: { occupyPermille: 100, occupyFullMen: 5000, contestPermille: 200 },
     movement: { marchMinCapacityPermille: 1000, courierPermille: 333 },
+    ruleSeats: { warFlags: [{ faction: 'red', flag: null }, { faction: 'blue', flag: null }] },
     seasons: [
       { reason: 'mud', defaultMonths: [1, 2, 12], lengthPermille: 1500, capacityPermille: 600 },
       { reason: 'low_water', defaultMonths: [8, 9], lengthPermille: 1300, capacityPermille: 500 },

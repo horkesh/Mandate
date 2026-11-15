@@ -77,3 +77,20 @@ The save fixture was regenerated after every change of State's shape (`npx tsx t
 2. (Done on `phase0-pack-rules`: these are now `WorldRules` every pack states.) Three design parameters the pack format did not carry, then kernel defaults: stores (men per capacity unit 20,000; cap 30 days; low threshold 7 days), the contest (occupation 100‰ a day at 5,000 men; contest 200‰ at full margin), and movement (one whole unit of capacity to march; courier a third of a division's days). If packs should tune them, `WorldRules` needs fields (a lane 0.2 change).
 3. Many Union blocks have unknown stores (`storesDays` null), so stores do little on union-1861; a research or data item for lane 0.3.
 4. FOUNDATION section 10 should gain the rows for `forceBlockStates`, `forceLocations`, `postStates`, `forceAssignments` and the three infrastructure fields, the tick's phases 3b, 4a and 4c, and `combat` as a proposer-only module in Phase 0.
+
+## Follow-up: the design numbers and the war setting are pack rules (branch `phase0-pack-rules`)
+
+The lead's rulings after review (0064, hard rule 3). `WorldRules` gains four groups. Every pack states them, and the kernel has no default:
+
+| Group | Fields | Who reads it |
+|---|---|---|
+| `stores` | `menPerCapacityUnit`, `capDays`, `lowDays` | `storesStep` |
+| `contest` | `occupyPermille`, `occupyFullMen`, `contestPermille` | `contest` |
+| `movement` | `marchMinCapacityPermille`, `courierPermille` | `marchBar`, the courier table |
+| `ruleSeats` | `warFlags: { faction, flag \| null }[]` | lane 0.8's gate on the generic rule-seat principal (nothing yet) |
+
+- **The war setting** (0064) has one row per faction. Its flag is a situation chain flag, and that faction is at war from the day `state.situationFlags[flag]` is set; `null` means war from day 1. The testbed has `null` for both factions. union-1861 has `war_begun` for both, and since no situation sets it yet, a 1861 history run keeps the peace. The shape was sent to lane 0.8 on the day it was settled.
+- **Checks.** The schema requires each group and field, as whole numbers in range, and war flags in the flag id grammar. The validator adds: `lowDays` at most `capDays`; the least capacity to march at most `capacityMax x 1000`; every war-flag faction known, listed once, and none missing; and a warning, `war-flag-unset`, when no situation sets a named flag. union-1861 shows two such warnings until its opening situation is authored.
+- **Controls.** `validate.test.ts` has seventeen refusal or warning cases, plus a direct control that a set flag silences the warning. `kernel/test/pack-rules.test.ts` changes each of the eight numbers and shows the outcome changes with it.
+- **Byte-identical.** Against ab1ffc7, the testbed seats run (180 days) and union-1861 (75 days) give the same hash every day, with the same initial and final hashes and liveness. The world hash differs because the World gained the rules, and so does the save fixture's `worldHash`; its State, log and both their hashes are identical.
+- Each pack's README lists the eight numbers as design parameters.

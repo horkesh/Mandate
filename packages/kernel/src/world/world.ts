@@ -66,6 +66,17 @@ export interface MovementRules {
   readonly courierPermille: number;
 }
 
+/**
+ * The generic rule-seat principal's settings (0064). Its standing goals stay at
+ * hold until its faction is at war; "at war" is a situation chain flag the pack
+ * names per faction, so a history run keeps the peace until the war's opening
+ * situation sets it. Lane 0.8's gate reads this; nothing else does.
+ */
+export interface RuleSeatRules {
+  /** One row per faction: the chain flag that puts it at war, or null for war from day 1. */
+  readonly warFlags: readonly { readonly faction: FactionId; readonly flag: string | null }[];
+}
+
 /** Pack-tunable rules the map needs (0019: thresholds start from AGEoD's tested values). */
 export interface WorldRules {
   /** The top of the pack's capacity scale for edges and depots. */
@@ -78,6 +89,7 @@ export interface WorldRules {
   readonly stores: StoresRules;
   readonly contest: ContestRules;
   readonly movement: MovementRules;
+  readonly ruleSeats: RuleSeatRules;
 }
 
 export interface TerrainTerm {
