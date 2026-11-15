@@ -139,7 +139,7 @@ One rule beyond 0065's text, to keep standing review S6 true: a holder follows h
 - It is informational: nothing in `forces` reads it until Phase 1's attrition.
 - The testbed rows take each block's strength date (design data).
 - The union-1861 rows that give stores take the date their own note gives: USS Brooklyn 1861-03-16 (Looker, p.96), USS Sabine 1861-03-22 (Adams, p.100), Fort Sumter 1861-04-01 (Anderson), and Vogdes's company 1861-01-23 (embarked with three months).
-- Key West (120 days) and Fort Pickens (150) arrive with the research branch `claude/research-governments-stores-bde02c`. From its note they would be 1861-01-15 and 1861-01; the research lane has been told, and whichever branch merges second fills them.
+- Key West's 120 days arrive with the research branch `claude/research-governments-stores-bde02c`, with `stores_date` 1861-01-15. The research lane has been told, and whichever branch merges second fills the date; until it does, validation fails on that row, so the gap cannot be missed. Fort Pickens' stores stay unknown, with no date: the lead's ruling after the standing reviewer showed that the January figure contradicts the late-March letters ("getting low").
 
 **Controls** in `kernel/test/department-sides.test.ts` (11 tests):
 
@@ -152,6 +152,16 @@ One rule beyond 0065's text, to keep standing review S6 true: a holder follows h
 - every refusal, each with its control.
 
 `validate.test.ts` gains three `stores_date` cases.
+
+**The pack validator checks proposals to `command` in situation files** (the lead's ruling), as the kernel would refuse them in play:
+- the subject is a government department: `not-a-government`, or `unknown-reference` for no such department;
+- `department_side` names a real side (`unknown-reference`), with delta +1;
+- `government_closed` has delta +1 or -1;
+- `command` owns no other field.
+
+Anything else is `situation-command-proposal`. The validator is stricter than the kernel, which takes any positive delta. `pack-format/test/command-proposals.test.ts` has 6 tests: every refusal, with valid proposals of each kind as controls.
+
+The lead accepted the holder's-side rule, and the call-site edits to `tick/situations.ts` stay.
 
 **Byte-identical** for runs where no situation moves a government:
 
