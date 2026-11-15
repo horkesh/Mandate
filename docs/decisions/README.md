@@ -67,5 +67,6 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0061](0061-how-the-0058-fields-were-built.md) | How the 0058 format fields were built | accepted; amended by 0064 |
 | [0062](0062-the-planner-shape.md) | The planner's shape: generate, filter and score, with one level of methods | accepted |
 | [0063](0063-atrocity-levers-are-watched.md) | An option that hurts the enemy in response to an atrocity is watched | accepted |
-| [0064](0064-forces-command-movement-and-the-contest.md) | Forces, command, movement, infrastructure and the control contest | accepted |
+| [0064](0064-forces-command-movement-and-the-contest.md) | Forces, command, movement, infrastructure and the control contest | accepted; amended by 0066 |
 | [0065](0065-a-governments-side-is-state.md) | A government's side can change in play, and stores carry their date | accepted |
+| [0066](0066-the-war-begins-by-each-governments-decision.md) | The war begins for each side by its own government's decision | accepted |
