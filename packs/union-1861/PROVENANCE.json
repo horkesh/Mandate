@@ -670,6 +670,86 @@
       "copyUsed": "archive.org generalofficers00wrigrich, OCR",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "SEJ-XI",
+      "title": "Journal of the Executive Proceedings of the Senate of the United States of America, vol. XI (6 Dec 1858 to 6 Aug 1861), including the special session of March 1861; cited by page of the printed volume",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org journal-of-the-executive-proceedings-of-the-senate-of-the-united-states-of-... (a Google scan of vol. XI uploaded to the Internet Archive in 2024; read as OCR text 2026-11-15; page numbers are the volume's own)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NYT-1861-03-08",
+      "title": "The New York Times, 8 March 1861: the Washington dispatch of 7 March (\"all callers have first to see Nicolay, the Secretary\")",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org sim_new-york-times_the-new-york-times_1861-03-08_10_2952, OCR read 2026-11-15",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "MO-CONV-1861",
+      "title": "Journal and Proceedings of the Missouri State Convention, held at Jefferson City and St. Louis, March 1861 (Missouri Democrat, 1861)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org journalandproce00goog (Google scan), OCR read 2026-11-15: the roll of members and the sitting of 5 March",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "LEWWALLACE-AUTO",
+      "title": "Lew Wallace: An Autobiography, vol. 1 (Harper, 1906)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org lewwallaceautobiv1wall, OCR read 2026-11-15; his own account, a single source",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "FFP-1899",
+      "title": "Obituary of Francis H. Pierpont, Fairmont Free Press, March 1899, as reprinted by the West Virginia Archives and History",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.wvculture.org/History/statehood/pierpont01.html, read 2026-11-15 (the newspaper text of 1899; the hosting page is a state archive's)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NPS-HAFE",
+      "title": "National Park Service, Harpers Ferry National Historical Park: \"Burning of the U.S. Armory\"",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "nps.gov/hafe/learn/historyculture/burning-of-the-us-armory.htm, read 2026-11-15",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "FISHEL-CIA",
+      "title": "Edwin C. Fishel, \"Military Intelligence 1861-63\", Parts I and II (Studies in Intelligence, CIA)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "cia.gov/resources/csi/static/Military-Intelligence-1861-63-I.pdf and -II.pdf, read as text 2026-11-15",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NOTE-people-posts-1861",
+      "title": "Project research note docs/research/2026-11-15-people-and-posts-1861.md (a pointer to primary documents, never the source of a fact)",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "docs/research/2026-11-15-people-and-posts-1861.md",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }
