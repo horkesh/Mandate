@@ -7,7 +7,8 @@
  * - **Posts, holders, chains and strengths are State** (`command`, `forces`):
  *   read them through `seats/posts.ts`, never from here.
  * - **Courier days derive from the typed edges** (0052): a courier crosses an
- *   edge in `courierPermille` of a division's days, rounded up, at least one.
+ *   edge in the pack's courier fraction of a division's days (`WorldRules.movement.courierPermille`),
+ *   rounded up, at least one.
  * - **A region's wire owner is its holder** (0052), so wire latency reads the
  *   day's control index (`latencyMapFor`), not a fixed table.
  * - **People's trait inputs** come from a LABELLED STAND-IN (0058) until the
@@ -35,15 +36,12 @@ export interface SeatsRules {
   readonly latency: LatencyRules;
   readonly traits: TraitRules;
   readonly templates: readonly ReportTemplate[];
-  /** A courier's days on an edge, permille of a division's (DESIGN PARAMETER: about three times as fast). */
-  readonly courierPermille: number;
 }
 
 export const DEFAULT_SEATS_RULES: SeatsRules = Object.freeze({
   latency: DEFAULT_LATENCY_RULES,
   traits: DEFAULT_TRAIT_RULES,
   templates: DEFAULT_REPORT_TEMPLATES,
-  courierPermille: 333,
 });
 
 /** A person as the seats layer reads him: his side, and the stand-in trait inputs (0058). */
@@ -115,7 +113,6 @@ export const UNKNOWN_NERVE_BOLDNESS = 500;
 export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: SeatsWorldOptions = {}): SeatsWorld {
   const rules = options.rules ?? DEFAULT_SEATS_RULES;
   const problems: string[] = [...templateProblems(rules.templates), ...latencyProblems(rules.latency)];
-  if (!Number.isSafeInteger(rules.courierPermille) || rules.courierPermille < 1 || rules.courierPermille > 1000) problems.push('courierPermille must be 1..1000');
 
   const people = new Map<PersonId, SeatPerson>();
   for (const p of map.world.people) {
@@ -157,7 +154,7 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
   if (problems.length > 0) throw new SeatsWorldError(problems);
 
   const regionIds = [...map.regions.keys()].sort(strictCompare);
-  const courier = courierTable(map, regionIds, rules.courierPermille);
+  const courier = courierTable(map, regionIds, map.world.rules.movement.courierPermille);
   const roles = new Map(map.world.vocabularies.postKinds.map((k) => [k.id, k.role]));
   const situationById = new Map(situations.map((s) => [s.id, s]));
   const get = <K, V>(m: ReadonlyMap<K, V>, kind: string, id: K): V => {

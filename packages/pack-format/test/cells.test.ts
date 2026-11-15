@@ -39,7 +39,15 @@ describe('cell grammars', () => {
   });
 
   it('fills a season without months from the pack defaults, and refuses free text', () => {
-    const rules = { capacityMax: 5, supplyControlPermille: 250, retreatControlPermille: 50, seasons: [{ reason: 'mud' as const, defaultMonths: [1, 2], lengthPermille: 1500, capacityPermille: 600 }] };
+    const rules = {
+      capacityMax: 5,
+      supplyControlPermille: 250,
+      retreatControlPermille: 50,
+      seasons: [{ reason: 'mud' as const, defaultMonths: [1, 2], lengthPermille: 1500, capacityPermille: 600 }],
+      stores: { menPerCapacityUnit: 20000, capDays: 30, lowDays: 7 },
+      contest: { occupyPermille: 100, occupyFullMen: 5000, contestPermille: 200 },
+      movement: { marchMinCapacityPermille: 1000, courierPermille: 333 },
+    };
     expect(parseSeasons('mud', rules)).toEqual({ ok: true, value: [{ reason: 'mud', months: [1, 2], depthFeet: null }] });
     expect(parseSeasons('low_water:8-10:3', rules)).toEqual({ ok: true, value: [{ reason: 'low_water', months: [8, 9, 10], depthFeet: 3 }] });
     expect(parseSeasons('none', rules)).toEqual({ ok: true, value: [] });

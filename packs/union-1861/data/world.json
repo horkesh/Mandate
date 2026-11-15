@@ -1691,6 +1691,8 @@
 ],
 "rules": {
 "capacityMax": 5,
+"contest": {"contestPermille":200,"occupyFullMen":5000,"occupyPermille":100},
+"movement": {"courierPermille":333,"marchMinCapacityPermille":1000},
 "retreatControlPermille": 50,
 "seasons": [
 {"capacityPermille":600,"defaultMonths":[1,2,3,12],"lengthPermille":1500,"reason":"mud"},
@@ -1698,6 +1700,7 @@
 {"capacityPermille":800,"defaultMonths":[3,4,5],"lengthPermille":1200,"reason":"flood"},
 {"capacityPermille":300,"defaultMonths":[1,2,12],"lengthPermille":2000,"reason":"ice"}
 ],
+"stores": {"capDays":30,"lowDays":7,"menPerCapacityUnit":20000},
 "supplyControlPermille": 250
 },
 "vocabularies": {

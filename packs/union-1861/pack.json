@@ -11,6 +11,9 @@
     "capacityMax": 5,
     "supplyControlPermille": 250,
     "retreatControlPermille": 50,
+    "stores": { "menPerCapacityUnit": 20000, "capDays": 30, "lowDays": 7 },
+    "contest": { "occupyPermille": 100, "occupyFullMen": 5000, "contestPermille": 200 },
+    "movement": { "marchMinCapacityPermille": 1000, "courierPermille": 333 },
     "seasons": [
       {
         "reason": "mud",

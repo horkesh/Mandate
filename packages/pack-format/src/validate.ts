@@ -118,6 +118,13 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   if (world.rules.retreatControlPermille > world.rules.supplyControlPermille) {
     warn('rules-order', W('rules', 0, 'retreatControlPermille'), 'the retreat threshold is above the supply threshold', 'retreat at or below supply (0019: 50 and 250)');
   }
+  // Lane 0.5's design parameters (0064): ranges the schema cannot state alone, because they depend on another rule.
+  if (world.rules.stores.lowDays > world.rules.stores.capDays) {
+    err('rules-range', W('rules.stores', 0, 'lowDays'), `the low-stores threshold (${world.rules.stores.lowDays} days) is above the cap (${world.rules.stores.capDays} days), so a full block would read low`, 'lowDays at most capDays');
+  }
+  if (world.rules.movement.marchMinCapacityPermille > world.rules.capacityMax * 1000) {
+    err('rules-range', W('rules.movement', 0, 'marchMinCapacityPermille'), `no edge can carry a march: the least capacity to march (${world.rules.movement.marchMinCapacityPermille}) is above the scale's top (capacityMax ${world.rules.capacityMax} = ${world.rules.capacityMax * 1000})`, `at most ${world.rules.capacityMax * 1000}`);
+  }
 
   // ---- provenance: sources and licences
   const sources = new Map<string, ProvenanceFile['sources'][number]>();
