@@ -110,6 +110,14 @@ export function nationActs(items: readonly { readonly file: string; readonly def
     }
     if ('none' in def.gate || def.gate.topics.length === 0) err('self-governing-gate', 'gate', `"${def.id}" moves a self-governing department but carries no gate topic`, 'a gate tag naming its topics, so the gate reviewer reads it (0070)');
     if (def.gateReview === null) err('self-governing-gate', 'gateReview', `"${def.id}" moves a self-governing department but has no sign-off`, 'a sign-off by a gate reviewer who is not the author (0070)');
+    // State predicates carry no route through another item, so they are read here (gate re-check R2): a standing goal is the
+    // principal's own order, so a nation's act may not wait on it; a headquarters is a consequence, so it needs a route note.
+    const states = statePredicates([def.event, ...(def.knowledge === null ? [] : [def.knowledge])]);
+    for (const g of states.goals) err('self-governing-goal', 'event', `"${def.id}" moves ${moves[0]!.subject} and reads the standing goal of post "${g.post}": a standing goal is the principal's own order`, 'no order of a principal moves a nation: read events and news, never a goal (0070)');
+    for (const h of states.headquarters) {
+      const key = `route|state:headquartersAt:${h.post}:${h.region}`;
+      if ((def.gateReview?.notes[key] ?? '').trim().length === 0) err('self-governing-route-note', 'gateReview.notes', `"${def.id}" moves ${moves[0]!.subject} and reads where "${h.post}" has its headquarters (${h.region}), a consequence of orders: the sign-off carries no reviewer's note on that route`, `gateReview.notes["${key}"]: the reviewer's note that the nation answers where the army stands, not a choice (0070)`);
+    }
     const chosen = taint.get(def.id) ?? [];
     for (const t of chosen) {
       err('self-governing-choice', 'event', `"${def.id}" moves ${moves[0]!.subject} but depends on the principal's decision "${t.atrocity}"${t.via.length === 0 ? '' : `, through ${t.via.map((v) => `"${v}"`).join(' then ')}`}`, 'no choice of a principal moves a nation by any route: reading the decision, a flag an option sets, or a chain; a nation answers events and news, never a choice (0070)');
@@ -121,4 +129,19 @@ export function nationActs(items: readonly { readonly file: string; readonly def
       }
     }
   }
+}
+
+/** The State predicates in conditions: standing goals and headquarters, which no other item sets, so they carry no route (gate re-check R2). */
+function statePredicates(conditions: readonly phase0.Condition[]): { readonly goals: { readonly post: string; readonly kind: string }[]; readonly headquarters: { readonly post: string; readonly region: string }[] } {
+  const goals: { post: string; kind: string }[] = [];
+  const headquarters: { post: string; region: string }[] = [];
+  const walk = (c: phase0.Condition): void => {
+    if ('all' in c) c.all.forEach(walk);
+    else if ('any' in c) c.any.forEach(walk);
+    else if ('not' in c) walk(c.not);
+    else if ('goal' in c) goals.push({ post: c.goal.post, kind: c.goal.kind });
+    else if ('headquartersAt' in c) headquarters.push({ post: c.headquartersAt.post, region: c.headquartersAt.region });
+  };
+  conditions.forEach(walk);
+  return { goals, headquarters };
 }

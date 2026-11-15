@@ -382,7 +382,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   });
   // 0070: a region's land stays with its own people, in every scenario start: two polities never govern one region.
   const polityOf = new Map(world.departments.flatMap((d) => (d.polity === undefined ? [] : [[d.id as string, d.polity] as const])));
-  const regionPolity = new Map<string, { readonly polity: string; readonly department: string }>();
+  const regionPolity = new Map<string, { readonly polity: string | null; readonly department: string }>();
   for (const s of scenarios) {
     if (!manifest.scenarios.includes(s.id)) sink.error('scenario-missing', 'pack.json', 'scenarios', `scenario "${s.id}" has data but is not listed`, 'every scenario listed in pack.json');
     validateScenario(s);
@@ -443,11 +443,13 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       governed.add(g.region);
       const rk = regionKind.get(g.region);
       if (rk !== undefined && rk !== 'land' && rk !== 'key_point') err('government-on-water', S('governments', i, 'region'), `"${g.region}" is a ${rk} region, which has no civil government`, 'rows for land regions and key points only');
-      const polity = polityOf.get(g.department);
-      if (polity !== undefined) {
+      if (g.department !== w.UNKNOWN_GOVERNMENT) {
+        // A department with no polity counts as none: a region one people's government holds in one start must not pass to a
+        // department of no people (a state, a territory) in another (gate re-check N5), nor to another people's.
+        const polity = polityOf.get(g.department) ?? null;
         const seen = regionPolity.get(g.region);
-        if (seen !== undefined && seen.polity !== polity) err('polity-shared-region', S('governments', i, 'department'), `region "${g.region}" is governed by "${g.department}" (polity ${polity}) here and by "${seen.department}" (polity ${seen.polity}) in another start: two peoples never share a region's government`, 'one polity per region across every start (0070)');
-        else if (seen === undefined) regionPolity.set(g.region, { polity, department: g.department });
+        if (seen === undefined) regionPolity.set(g.region, { polity, department: g.department });
+        else if (seen.polity !== polity) err('polity-shared-region', S('governments', i, 'department'), `region "${g.region}" is governed by "${g.department}" (${polity === null ? 'no polity' : `polity ${polity}`}) here and by "${seen.department}" (${seen.polity === null ? 'no polity' : `polity ${seen.polity}`}) in another start: a people's land stays with its own people`, 'one polity per region across every start (0070)');
       }
       if (g.department !== w.UNKNOWN_GOVERNMENT) {
         refCheck(departments, 'department', g.department, S('governments', i, 'department'));

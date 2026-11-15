@@ -594,9 +594,16 @@ export function atrocityTaint(
   );
 }
 
-/** The flags an item sets: all of them, or only those of one option (an inaction outcome and a notice's effects count in the first case). */
+/**
+ * The flags an item writes, set or cleared: all of them, or only those of one option (an inaction outcome and a notice's
+ * effects count in the first case). Clearing a flag is a route too: a condition that reads `not flag` follows it (gate
+ * re-check R1), so a clear carries dependence as a set does.
+ */
 function flagsSetBy(def: SituationDef, option: string | null): string[] {
-  return phase0.effectsOf(def).flatMap(({ effect, option: o }) => ('setFlag' in effect && (option === null || o === option) ? [effect.setFlag] : []));
+  return phase0.effectsOf(def).flatMap(({ effect, option: o }) => {
+    if (option !== null && o !== option) return [];
+    return 'setFlag' in effect ? [effect.setFlag] : 'clearFlag' in effect ? [effect.clearFlag] : [];
+  });
 }
 
 /** The scopes of an item that can depend on another: its trigger (its event, knowledge condition and the stage it follows), and each option's own conditions. */

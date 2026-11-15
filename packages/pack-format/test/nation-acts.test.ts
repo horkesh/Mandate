@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { IssueSink, loadPack, nationActs, type PackData } from '../src/index.ts';
+import { atrocityTaint, IssueSink, loadPack, nationActs, type PackData } from '../src/index.ts';
 import { editJson, testbedFiles } from './support/testbed.ts';
 
 /**
@@ -24,6 +24,7 @@ const PACK = {
 type Effect = Record<string, unknown>;
 const move = (subject: string, field = 'department_side'): Effect => ({ propose: { owner: 'command', field, subject, delta: 1, reason: 'x', side: field === 'department_side' ? 'north' : null } });
 const setFlag = (flag: string): Effect => ({ setFlag: flag });
+const clearFlag = (flag: string): Effect => ({ clearFlag: flag });
 
 interface Over {
   readonly kind?: 'decision' | 'notice';
@@ -130,6 +131,55 @@ describe('no principal’s choice moves a nation, by any route (0070)', () => {
   });
 });
 
+describe('every route a choice can take (gate re-check R1, R2, N4)', () => {
+  it('clearing a flag is a route: an option clears F, and a notice reads that F is not set', () => {
+    const clears = item('treaty_choice', { kind: 'decision', options: [{ id: 'sign', effects: [clearFlag('forts_held')] }, { id: 'refuse' }] });
+    const nation = nationNotice('council', { event: { not: { flag: 'forts_held' } } });
+    expect(raised([clears, nation])).toEqual(['error self-governing-choice council']);
+    // Positive control: a flag nothing writes carries no choice.
+    expect(raised([clears, nationNotice('council', { event: { not: { flag: 'other_flag' } } })])).toEqual([]);
+    // A flag cleared by a notice carries the taint on, as a set one does.
+    const wash = item('wash', { event: { flag: 'signed' }, effects: [clearFlag('quiet')] });
+    expect(raised([decision('signed'), wash, nationNotice('council', { event: { not: { flag: 'quiet' } } })])).toEqual(['error self-governing-choice council']);
+  });
+
+  it('clearing a flag is a route in 0060’s atrocity taint too', () => {
+    const atrocity = item('burning', { effects: [clearFlag('order_held')] }).def;
+    const later = item('later', { event: { not: { flag: 'order_held' } } }).def;
+    const unrelated = item('elsewhere', { event: { not: { flag: 'something_else' } } }).def;
+    const taint = atrocityTaint([{ def: atrocity }, { def: later }, { def: unrelated }], [{ id: 'burning', actingSide: 'north' }]);
+    expect(taint.get('later')).toEqual([{ option: null, atrocity: 'burning', actingSide: 'north', via: [] }]);
+    expect(taint.get('elsewhere')).toBeUndefined();
+  });
+
+  it('refuses a nation notice that reads a standing goal, the principal’s own order', () => {
+    const goal = { goal: { post: 'army_x', kind: 'advance' } };
+    expect(raised([nationNotice('council', { event: { all: [{ dayAtLeast: 1 }, goal] } })])).toEqual(['error self-governing-goal council']);
+    expect(raised([nationNotice('council', { knowledge: { not: goal } })])).toEqual(['error self-governing-goal council']);
+  });
+
+  it('a headquarters is a consequence: it needs a route note naming the post and the region', () => {
+    const at = { headquartersAt: { post: 'army_x', region: 'n1' } };
+    expect(raised([nationNotice('council', { event: at })])).toEqual(['error self-governing-route-note council']);
+    expect(raised([nationNotice('council', { event: at, review: { notes: { 'route|state:headquartersAt:army_x:n1': 'The nation answers the army standing on its land.' } } })])).toEqual([]);
+    // A note on another post or region does not cover it.
+    expect(raised([nationNotice('council', { event: at, review: { notes: { 'route|state:headquartersAt:army_x:n2': 'x' } } })])).toEqual(['error self-governing-route-note council']);
+  });
+
+  it('follows a choice through two notices, whatever order the items are read in (a one-pass fixed point would miss it)', () => {
+    // The ids sort so that the nation notice is read first and the washes after it, in the order that defeats one pass.
+    const first = item('c_wash', { event: { flag: 'signed' }, effects: [setFlag('g')] });
+    const second = item('b_wash', { event: { flag: 'g' }, effects: [setFlag('h')] });
+    const nation = nationNotice('a_council', { event: { flag: 'h' } });
+    expect(raised([decision('signed'), first, second, nation])).toEqual(['error self-governing-choice a_council']);
+    const sink = new IssueSink();
+    nationActs([decision('signed'), first, second, nation], PACK, sink);
+    expect(sink.issues[0]!.message).toContain('through "c_wash" then "b_wash"');
+    // Positive control: break the middle link and it is no longer a choice, only an event (a flag a notice sets) that needs its route note.
+    expect(raised([decision('signed'), first, item('b_wash', { event: { flag: 'unrelated' }, effects: [setFlag('h')] }), nation])).toEqual(['error self-governing-route-note a_council']);
+  });
+});
+
 describe('events and news are allowed, with the reviewer’s note on the route (0070)', () => {
   const event = { fired: 'treaty_choice' };
   const news = { knows: { subjectKind: 'situation', subjectId: 'fort_taken', reportType: null, subtype: null, claimKind: null, token: null } };
@@ -172,6 +222,22 @@ describe('polity keeps a nation’s land with its own people (0070)', () => {
       for (const d of m.departments.filter((x: { kind: string }) => x.kind === 'province')) d.polity = 'provincials';
     });
     expect(kinds(withPolity, 'self-governing-no-polity')).toEqual([]);
+  });
+
+  it('refuses a region held by a polity in one start and by a department of no polity in another', () => {
+    const split = {
+      ...edit((m) => {
+        markProvince(m);
+        for (const d of m.departments.filter((x: { kind: string }) => x.kind === 'province')) d.polity = 'provincials';
+      }),
+      ...editJson('data/scenarios/summer_front.json', (sc) => {
+        // s_coast_east passes, in the second start, to a department that names no polity (an ordinary government).
+        for (const g of sc.governments) if (g.department === 's_province') g.department = 'n_executive';
+      }),
+    };
+    const found = kinds(split, 'polity-shared-region');
+    expect(found.length).toBeGreaterThan(0);
+    expect(found.every((f) => f.startsWith('error'))).toBe(true);
   });
 
   it('refuses two polities governing one region in different starts', () => {
