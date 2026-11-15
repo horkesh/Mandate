@@ -81,3 +81,7 @@ Enforced by: a test that fails when `@mandate/*` resolves outside the repo root 
 **L20. A lane rebased a branch it had already pushed, and couldn't publish it.**
 Lane 0.8 rebased `phase0-done-check` onto main after pushing it. The permission check refused the force-push, so its finished work sat unpublished until it pushed under a new branch name.
 Enforced by: `docs/LANES.md` "Running lanes": a pushed branch is updated by merging main into it, never by rebasing; a rebased pushed branch is pushed under a new name.
+
+**L21. The lead's push published the steward's merge before its checks finished.**
+The steward merged `selfgoverning-rule` on `main` in the shared main checkout. The lead then committed decision 0071 there, on top of the merge, and pushed, which put the merge on GitHub before the steward's post-merge checks had run. The checks passed, but only by luck.
+Enforced by: `docs/LANES.md` "Running lanes": the steward merges in its own worktree from a detached `origin/main` and pushes `HEAD:main`; the lead commits only after `pull --ff-only`.
