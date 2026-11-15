@@ -24,8 +24,9 @@
 import { strictCompare } from '../compare.ts';
 import { wireOwnerOf, type ControlIndex } from '../control-index/control-index.ts';
 import type { FactionId, PersonId, RegionId, SituationId } from '../ids.ts';
-import { DEFAULT_REPORT_TEMPLATES, templateProblems, type ReportTemplate } from '../knowledge/templates.ts';
-import { DEFAULT_LATENCY_RULES, latencyProblems, type LatencyMap, type LatencyRules } from '../messages/latency.ts';
+import { templateProblems, type ReportTemplate } from '../knowledge/templates.ts';
+import { latencyProblems, type LatencyMap, type LatencyRules } from '../messages/latency.ts';
+import type { StandingRules } from '../world/world.ts';
 import { situationReferenceProblems } from '../situations/references.ts';
 import type { SituationDef } from '../situations/types.ts';
 import { DEFAULT_TRAIT_RULES, type TraitHolder, type TraitRules } from '../standin/traits.ts';
@@ -34,17 +35,16 @@ import { otherEnd, type WorldIndex } from '../world/index.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
 import type { PostKindRole } from '../world/world.ts';
 
+/**
+ * The rules the seats layer reads. The latency rules and report templates are the pack's (`WorldRules`, 0072), read
+ * from the World it was indexed with, never a kernel default; the trait rules stay a LABELLED STAND-IN (0058) until
+ * the Phase 1 people recast.
+ */
 export interface SeatsRules {
   readonly latency: LatencyRules;
   readonly traits: TraitRules;
   readonly templates: readonly ReportTemplate[];
 }
-
-export const DEFAULT_SEATS_RULES: SeatsRules = Object.freeze({
-  latency: DEFAULT_LATENCY_RULES,
-  traits: DEFAULT_TRAIT_RULES,
-  templates: DEFAULT_REPORT_TEMPLATES,
-});
 
 /** A person as the seats layer reads him: his side, and the stand-in trait inputs (0058). */
 export interface SeatPerson extends TraitHolder {
@@ -94,7 +94,8 @@ export interface SeatsWorld {
 }
 
 export interface SeatsWorldOptions {
-  readonly rules?: SeatsRules;
+  /** The stand-in trait rules (0058); the kernel's labelled stand-in values when absent. */
+  readonly traitRules?: TraitRules;
   readonly situations?: readonly SituationDef[];
   /** Explicit trait inputs by person id, in place of the stand-in adapter (0058). */
   readonly traits?: Readonly<Record<string, TraitInputs>>;
@@ -113,8 +114,10 @@ export const UNKNOWN_NERVE_BOLDNESS = 500;
 
 /** Index a v2 World and its start for the seats layer. Throws `SeatsWorldError` listing every problem. */
 export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: SeatsWorldOptions = {}): SeatsWorld {
-  const rules = options.rules ?? DEFAULT_SEATS_RULES;
-  const problems: string[] = [...templateProblems(rules.templates), ...latencyProblems(rules.latency)];
+  const pack = map.world.rules;
+  const rules: SeatsRules = Object.freeze({ latency: pack.latency, templates: pack.reportTemplates, traits: options.traitRules ?? DEFAULT_TRAIT_RULES });
+  // The kernel takes any World it is handed (a fixture, an adapter), so it checks the pack's rules as the validator does.
+  const problems: string[] = [...templateProblems(rules.templates), ...latencyProblems(rules.latency), ...standingProblems(pack.standing)];
 
   const people = new Map<PersonId, SeatPerson>();
   for (const p of map.world.people) {
@@ -183,6 +186,14 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
     situations,
     situation: (id: SituationId) => get(situationById, 'situation', id),
   });
+}
+
+/** Problems with the stand-in standing goals' rules (0072): a conflict window of at least a day, a score cap above 1000 (exactly enough). */
+export function standingProblems(rules: StandingRules): string[] {
+  const problems: string[] = [];
+  if (!Number.isSafeInteger(rules.conflictWindowDays) || rules.conflictWindowDays < 1) problems.push('standing rule conflictWindowDays must be a whole number of days, at least 1');
+  if (!Number.isSafeInteger(rules.scoreCap) || rules.scoreCap < 1000) problems.push('standing rule scoreCap must be a whole permille, at least 1000, or no advance could be offered');
+  return problems;
 }
 
 /** A courier's whole days across one edge: `courierPermille` of a division's, rounded up, at least one. */

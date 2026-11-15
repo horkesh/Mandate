@@ -9,7 +9,7 @@
  * into a file and place, so the generator can point at the source CSV row and
  * the committed-pack check can point at the generated JSON.
  */
-import { type phase0, world as w } from '@mandate/kernel';
+import { phase0, world as w } from '@mandate/kernel';
 import type { GateData } from './gate.ts';
 import { IntlMessageFormat } from 'intl-messageformat';
 import { type Issue, IssueSink } from './issues.ts';
@@ -136,6 +136,11 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   }
   if (world.rules.movement.marchMinCapacityPermille > world.rules.capacityMax * 1000) {
     err('rules-range', W('rules.movement', 0, 'marchMinCapacityPermille'), `no edge can carry a march: the least capacity to march (${world.rules.movement.marchMinCapacityPermille}) is above the scale's top (capacityMax ${world.rules.capacityMax} = ${world.rules.capacityMax * 1000})`, `at most ${world.rules.capacityMax * 1000}`);
+  }
+  // 0072: the report templates, by the kernel's own rule (the kernel checks the same when it indexes a World): one for
+  // each report type and subtype it writes, none for a kind it does not, and a superseded report kept no longer than any.
+  for (const problem of phase0.templateProblems(world.rules.reportTemplates)) {
+    err('rules-templates', W('rules', 0, 'reportTemplates'), problem, 'one template for each report type and subtype the kernel writes, keepSupersededDays at most maxAgeDays');
   }
 
   // ---- provenance: sources and licences

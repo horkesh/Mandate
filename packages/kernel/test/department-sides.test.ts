@@ -189,7 +189,7 @@ describe('a situation moves a government of no side to a side (0065)', () => {
 
   it('an order reaching a post with no goal reads it as holding since day 0: obeyed, never a throw (exit review S1)', () => {
     const sent = { id: toId('message', 'm.test'), issuer: PER('a_lead'), goal: { goalSpecKind: 'advance' as const, goalSpecRegion: R('a2') }, viaChain: true };
-    const r = receiveOrder(S0, P('n_guard'), sent, 3);
+    const r = receiveOrder(S0, P('n_guard'), sent, 3, MAP.world.rules.standing.conflictWindowDays);
     expect(r.outcome).toEqual({ obeyed: 'new', conflict: false });
     expect(r.state.standingGoals[P('n_guard')]).toMatchObject({ standingSpec: sent.goal, standingSetDay: 3, standingOrder: 'm.test' });
     // The positive control for the builder: a post that already has a goal keeps it, and the State is unchanged.

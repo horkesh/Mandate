@@ -4,6 +4,39 @@
  */
 import type { PackFiles } from '../../src/index.ts';
 
+const tpl = (templateType: string, templateSubtype: string | null, templateRoute: string, cadenceDays: number, maxAgeDays: number, keepSupersededDays: number) => ({
+  templateType,
+  templateSubtype,
+  templateRoute,
+  cadenceDays,
+  maxAgeDays,
+  keepSupersededDays,
+});
+
+/** The rules 0072 moved out of the kernel, at the testbed's and Union's values: latency, report templates, standing goals. */
+export const MESSAGE_RULES = {
+  latency: { wireDays: 0, mailPermille: 2000, specialMessengerPermille: 500, courierNoiseMaxDays: 1, specialMessengerPrice: 1 },
+  reportTemplates: [
+    tpl('wire-dispatch', null, 'wire', 2, 30, 3),
+    tpl('strength-return', null, 'mail', 10, 60, 10),
+    tpl('effective-strength', null, 'wire', 0, 30, 3),
+    tpl('casualty-return', null, 'courier', 0, 90, 30),
+    tpl('enemy-estimate', null, 'in-person', 1, 14, 0),
+    tpl('press', null, 'mail', 0, 21, 3),
+    tpl('informal', 'cabinet-word', 'in-person', 7, 21, 7),
+    tpl('informal', 'caller', 'in-person', 0, 21, 7),
+    tpl('informal', 'governor-wire', 'wire', 0, 21, 7),
+    tpl('informal', 'legislator', 'in-person', 0, 21, 7),
+    tpl('informal', 'navy-channel', 'wire', 0, 21, 7),
+    tpl('informal', 'railroad-man', 'wire', 0, 21, 7),
+    tpl('observer-letter', null, 'courier', 0, 60, 14),
+    tpl('retrospective', null, 'mail', 0, 400, 400),
+    tpl('advice', 'requested', 'in-person', 0, 60, 30),
+    tpl('advice', 'memorandum', 'courier', 0, 60, 30),
+  ],
+  standing: { conflictWindowDays: 7, scoreCap: 4000 },
+};
+
 const manifest = {
   formatVersion: 2,
   id: 'fixture',
@@ -19,6 +52,7 @@ const manifest = {
     contest: { occupyPermille: 100, occupyFullMen: 5000, contestPermille: 200 },
     movement: { marchMinCapacityPermille: 1000, courierPermille: 333 },
     ruleSeats: { warFlags: [{ faction: 'red', flag: null }, { faction: 'blue', flag: null }] },
+    ...MESSAGE_RULES,
     seasons: [
       { reason: 'mud', defaultMonths: [1, 2, 12], lengthPermille: 1500, capacityPermille: 600 },
       { reason: 'low_water', defaultMonths: [8, 9], lengthPermille: 1300, capacityPermille: 500 },

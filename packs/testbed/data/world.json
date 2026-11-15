@@ -141,7 +141,26 @@
 "rules": {
 "capacityMax": 5,
 "contest": {"contestPermille":200,"occupyFullMen":5000,"occupyPermille":100},
+"latency": {"courierNoiseMaxDays":1,"mailPermille":2000,"specialMessengerPermille":500,"specialMessengerPrice":1,"wireDays":0},
 "movement": {"courierPermille":333,"marchMinCapacityPermille":1000},
+"reportTemplates": [
+{"cadenceDays":2,"keepSupersededDays":3,"maxAgeDays":30,"templateRoute":"wire","templateSubtype":null,"templateType":"wire-dispatch"},
+{"cadenceDays":10,"keepSupersededDays":10,"maxAgeDays":60,"templateRoute":"mail","templateSubtype":null,"templateType":"strength-return"},
+{"cadenceDays":0,"keepSupersededDays":3,"maxAgeDays":30,"templateRoute":"wire","templateSubtype":null,"templateType":"effective-strength"},
+{"cadenceDays":0,"keepSupersededDays":30,"maxAgeDays":90,"templateRoute":"courier","templateSubtype":null,"templateType":"casualty-return"},
+{"cadenceDays":1,"keepSupersededDays":0,"maxAgeDays":14,"templateRoute":"in-person","templateSubtype":null,"templateType":"enemy-estimate"},
+{"cadenceDays":0,"keepSupersededDays":3,"maxAgeDays":21,"templateRoute":"mail","templateSubtype":null,"templateType":"press"},
+{"cadenceDays":7,"keepSupersededDays":7,"maxAgeDays":21,"templateRoute":"in-person","templateSubtype":"cabinet-word","templateType":"informal"},
+{"cadenceDays":0,"keepSupersededDays":7,"maxAgeDays":21,"templateRoute":"in-person","templateSubtype":"caller","templateType":"informal"},
+{"cadenceDays":0,"keepSupersededDays":7,"maxAgeDays":21,"templateRoute":"wire","templateSubtype":"governor-wire","templateType":"informal"},
+{"cadenceDays":0,"keepSupersededDays":7,"maxAgeDays":21,"templateRoute":"in-person","templateSubtype":"legislator","templateType":"informal"},
+{"cadenceDays":0,"keepSupersededDays":7,"maxAgeDays":21,"templateRoute":"wire","templateSubtype":"navy-channel","templateType":"informal"},
+{"cadenceDays":0,"keepSupersededDays":7,"maxAgeDays":21,"templateRoute":"wire","templateSubtype":"railroad-man","templateType":"informal"},
+{"cadenceDays":0,"keepSupersededDays":14,"maxAgeDays":60,"templateRoute":"courier","templateSubtype":null,"templateType":"observer-letter"},
+{"cadenceDays":0,"keepSupersededDays":400,"maxAgeDays":400,"templateRoute":"mail","templateSubtype":null,"templateType":"retrospective"},
+{"cadenceDays":0,"keepSupersededDays":30,"maxAgeDays":60,"templateRoute":"in-person","templateSubtype":"requested","templateType":"advice"},
+{"cadenceDays":0,"keepSupersededDays":30,"maxAgeDays":60,"templateRoute":"courier","templateSubtype":"memorandum","templateType":"advice"}
+],
 "retreatControlPermille": 50,
 "ruleSeats": {"warFlags":[{"faction":"north","flag":null},{"faction":"south","flag":null}]},
 "seasons": [
@@ -150,6 +169,7 @@
 {"capacityPermille":800,"defaultMonths":[4,5],"lengthPermille":1200,"reason":"flood"},
 {"capacityPermille":300,"defaultMonths":[1,2],"lengthPermille":2000,"reason":"ice"}
 ],
+"standing": {"conflictWindowDays":7,"scoreCap":4000},
 "stores": {"capDays":30,"lowDays":7,"menPerCapacityUnit":20000},
 "supplyControlPermille": 250
 },

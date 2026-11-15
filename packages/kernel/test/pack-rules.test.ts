@@ -6,13 +6,15 @@ import { dailyNeedMilli, storesStep } from '../src/forces/stores.ts';
 import { networkOf } from '../src/infrastructure/infrastructure.ts';
 import { marchBar, type MarchGround } from '../src/movement/march.ts';
 import type { State } from '../src/root-state.ts';
-import { indexSeatsWorld } from '../src/seats/world.ts';
+import { indexSeatsWorld, latencyMapFor } from '../src/seats/world.ts';
+import { templateFor } from '../src/knowledge/templates.ts';
+import { routeLatency } from '../src/messages/latency.ts';
 import { edgeLeg, INTACT_NETWORK } from '../src/supply/supply.ts';
 import { createState } from '../src/tick/setup.ts';
 import { indexWorld, type WorldIndex } from '../src/world/index.ts';
 import type { WorldRules } from '../src/world/world.ts';
 import { B, block, forcesStart, forcesWorld } from './support/forces-fixture.ts';
-import { depot, E, edge, F, FIXTURE_RULES, R, region } from './support/map-fixture.ts';
+import { controlTable, depot, E, edge, F, FIXTURE_RULES, R, region } from './support/map-fixture.ts';
 
 /**
  * The design parameters are the pack's (0064, the lead's ruling; hard rule 3):
@@ -21,7 +23,13 @@ import { depot, E, edge, F, FIXTURE_RULES, R, region } from './support/map-fixtu
  *
  *   a1 (a's source) ==rail== a2 --road (6 days)-- mid ~~river, capacity 1, low water in August~~ b1
  */
-type RulesOver = { readonly stores?: Partial<WorldRules['stores']>; readonly contest?: Partial<WorldRules['contest']>; readonly movement?: Partial<WorldRules['movement']> };
+type RulesOver = {
+  readonly stores?: Partial<WorldRules['stores']>;
+  readonly contest?: Partial<WorldRules['contest']>;
+  readonly movement?: Partial<WorldRules['movement']>;
+  readonly latency?: Partial<WorldRules['latency']>;
+  readonly reportTemplates?: WorldRules['reportTemplates'];
+};
 
 function mapWith(over: RulesOver = {}): WorldIndex {
   const base = forcesWorld({
@@ -36,6 +44,8 @@ function mapWith(over: RulesOver = {}): WorldIndex {
       stores: { ...FIXTURE_RULES.stores, ...over.stores },
       contest: { ...FIXTURE_RULES.contest, ...over.contest },
       movement: { ...FIXTURE_RULES.movement, ...over.movement },
+      latency: { ...FIXTURE_RULES.latency, ...over.latency },
+      reportTemplates: over.reportTemplates ?? FIXTURE_RULES.reportTemplates,
     },
   });
 }
@@ -118,5 +128,30 @@ describe('movement reads the pack\'s rules', () => {
     const asSlow = indexSeatsWorld(mapWith({ movement: { courierPermille: 1000 } }), forcesStart(CONTROL, [], []));
     expect(third.courierDays(R('a2'), R('mid'))).toBe(2);
     expect(asSlow.courierDays(R('a2'), R('mid'))).toBe(6);
+  });
+});
+
+describe('latency and the report templates read the pack\'s rules (0072)', () => {
+  const seats = (over: RulesOver = {}) => indexSeatsWorld(mapWith(over), forcesStart(CONTROL, [], []));
+  const days = (world: ReturnType<typeof seats>, route: Parameters<typeof routeLatency>[2]) => {
+    const r = routeLatency(latencyMapFor(world, buildControlIndex(world.map, controlTable(CONTROL))), world.rules.latency, route, R('a2'), R('mid'), F('a'), null);
+    return r.ok ? r.latency.days : -1;
+  };
+
+  it('specialMessengerPermille and mailPermille: a route against a courier', () => {
+    // Two courier days from a2 to mid.
+    expect([days(seats(), 'courier'), days(seats(), 'special-messenger'), days(seats(), 'mail')]).toEqual([2, 1, 4]);
+    expect(days(seats({ latency: { specialMessengerPermille: 1000 } }), 'special-messenger')).toBe(2);
+    expect(days(seats({ latency: { mailPermille: 3000 } }), 'mail')).toBe(6);
+  });
+
+  it('the seats layer reads the World\'s latency and templates, and no other', () => {
+    const world = seats({ latency: { specialMessengerPrice: 3 } });
+    expect(world.rules.latency).toBe(world.map.world.rules.latency);
+    expect(world.rules.latency.specialMessengerPrice).toBe(3);
+    const byMail = FIXTURE_RULES.reportTemplates.map((x) => (x.templateType === 'wire-dispatch' ? { ...x, templateRoute: 'mail' as const } : x));
+    const mailed = seats({ reportTemplates: byMail });
+    expect(templateFor(mailed.rules.templates, 'wire-dispatch', null).templateRoute).toBe('mail');
+    expect(templateFor(seats().rules.templates, 'wire-dispatch', null).templateRoute).toBe('wire');
   });
 });

@@ -10,6 +10,9 @@ import type { DepotRecord, EdgeRecord, EdgeType, InstallationRecord, RegionKind,
 import { indexWorld, type WorldIndex } from '../../src/world/index.ts';
 import type { ScenarioStart } from '../../src/world/scenario.ts';
 import type { SeasonEffect, World } from '../../src/world/world.ts';
+import type { ReportType } from '../../src/knowledge/report.ts';
+import type { ReportTemplate } from '../../src/knowledge/templates.ts';
+import type { RouteKind } from '../../src/messages/latency.ts';
 
 export const R = (id: string): RegionId => toId('region', id);
 export const F = (id: string): FactionId => toId('faction', id);
@@ -25,12 +28,44 @@ export const SEASONS: readonly SeasonEffect[] = [
   { reason: 'ice', defaultMonths: [1, 2], lengthPermille: 2000, capacityPermille: 300 },
 ];
 
-/** The fixtures' design parameters for stores, the contest and movement (the testbed's and Union's values, 0064). */
+const t = (type: ReportType, subtype: string | null, route: RouteKind, cadenceDays: number, maxAgeDays: number, keepSupersededDays: number): ReportTemplate => ({
+  templateType: type,
+  templateSubtype: subtype,
+  templateRoute: route,
+  cadenceDays,
+  maxAgeDays,
+  keepSupersededDays,
+});
+
+/** The fixtures' report templates: the testbed's and Union's values (0072), from the Union information-flows note's table. */
+export const FIXTURE_TEMPLATES: readonly ReportTemplate[] = [
+  t('wire-dispatch', null, 'wire', 2, 30, 3),
+  t('strength-return', null, 'mail', 10, 60, 10),
+  t('effective-strength', null, 'wire', 0, 30, 3),
+  t('casualty-return', null, 'courier', 0, 90, 30),
+  t('enemy-estimate', null, 'in-person', 1, 14, 0),
+  t('press', null, 'mail', 0, 21, 3),
+  t('informal', 'cabinet-word', 'in-person', 7, 21, 7),
+  t('informal', 'caller', 'in-person', 0, 21, 7),
+  t('informal', 'governor-wire', 'wire', 0, 21, 7),
+  t('informal', 'legislator', 'in-person', 0, 21, 7),
+  t('informal', 'navy-channel', 'wire', 0, 21, 7),
+  t('informal', 'railroad-man', 'wire', 0, 21, 7),
+  t('observer-letter', null, 'courier', 0, 60, 14),
+  t('retrospective', null, 'mail', 0, 400, 400),
+  t('advice', 'requested', 'in-person', 0, 60, 30),
+  t('advice', 'memorandum', 'courier', 0, 60, 30),
+];
+
+/** The fixtures' design parameters (the testbed's and Union's values: 0064, 0072). */
 export const FIXTURE_RULES = {
   stores: { menPerCapacityUnit: 20000, capDays: 30, lowDays: 7 },
   contest: { occupyPermille: 100, occupyFullMen: 5000, contestPermille: 200 },
   movement: { marchMinCapacityPermille: 1000, courierPermille: 333 },
   ruleSeats: { warFlags: [] },
+  latency: { wireDays: 0, mailPermille: 2000, specialMessengerPermille: 500, courierNoiseMaxDays: 1, specialMessengerPrice: 1 },
+  reportTemplates: FIXTURE_TEMPLATES,
+  standing: { conflictWindowDays: 7, scoreCap: 4000 },
 } as const;
 
 export function region(id: string, kind: RegionKind = 'land'): RegionRecord {

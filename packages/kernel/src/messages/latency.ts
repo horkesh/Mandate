@@ -27,6 +27,7 @@ export type RouteKind = (typeof ROUTE_KINDS)[number];
  */
 export const ORDER_ROUTES: readonly RouteKind[] = Object.freeze(['courier', 'special-messenger', 'wire']);
 
+/** How long each route takes beside the map's courier days. Every pack states them (`WorldRules.latency`); the kernel has no default (0072). */
 export interface LatencyRules {
   /** Days for a message on the wire between two wired regions. */
   readonly wireDays: number;
@@ -40,18 +41,13 @@ export interface LatencyRules {
   readonly specialMessengerPrice: number;
 }
 
-export const DEFAULT_LATENCY_RULES: LatencyRules = Object.freeze({
-  wireDays: 0,
-  mailPermille: 2000,
-  specialMessengerPermille: 500,
-  courierNoiseMaxDays: 1,
-  specialMessengerPrice: 1,
-});
+const LATENCY_RULE_NAMES = ['wireDays', 'mailPermille', 'specialMessengerPermille', 'courierNoiseMaxDays', 'specialMessengerPrice'] as const;
 
 export function latencyProblems(rules: LatencyRules): string[] {
   const problems: string[] = [];
-  for (const [name, v] of Object.entries(rules)) {
-    if (!Number.isSafeInteger(v) || (v as number) < 0) problems.push(`latency rule ${name} must be a whole number, not negative`);
+  for (const name of LATENCY_RULE_NAMES) {
+    const v = rules[name];
+    if (!Number.isSafeInteger(v) || v < 0) problems.push(`latency rule ${name} must be a whole number, not negative`);
   }
   if (rules.specialMessengerPermille > 1000) problems.push('a special messenger must not be slower than a courier');
   return problems;

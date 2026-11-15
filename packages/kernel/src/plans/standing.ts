@@ -9,9 +9,6 @@ import type { AssignmentTable, PostTable } from '../command/command.ts';
 import type { WorldIndex } from '../world/index.ts';
 import type { GoalSpec, StandingGoal } from './goal.ts';
 
-/** Days within which a chain order stands against a newer order that went around the chain (0040: conflicting orders). */
-export const CONFLICT_WINDOW_DAYS = 7;
-
 /**
  * The goals the scenario starts with: every held field post on a side (one that commands a force block)
  * holds where it stands. Read from the post and assignment tables `command` was just given at setup.
@@ -62,7 +59,8 @@ function sameGoal(a: GoalSpec, b: GoalSpec): boolean {
 
 /**
  * An order reaches the holder of `post`. Two orders conflict (0040) when they
- * differ, the one he holds is less than `CONFLICT_WINDOW_DAYS` old, and one
+ * differ, the one he holds is less than the pack's conflict window old
+ * (`WorldRules.standing.conflictWindowDays`, `windowDays` here), and one
  * came down his chain while the other went around it: with relays holding
  * orders, they arrive out of the order they were written. He resolves it by
  * his department (stand-in for resolving by his compliance): the chain's order
@@ -78,10 +76,11 @@ export function receiveOrder(
   post: PostId,
   order: { readonly id: MessageId; readonly issuer: PersonId; readonly goal: GoalSpec; readonly viaChain: boolean },
   day: number,
+  windowDays: number,
 ): { readonly state: State; readonly outcome: OrderOutcome } {
   const current = state.standingGoals[post] ?? holdWhereHeStands(0);
   const differs = !sameGoal(current.standingSpec, order.goal);
-  const recent = current.standingOrder !== null && day - current.standingSetDay < CONFLICT_WINDOW_DAYS;
+  const recent = current.standingOrder !== null && day - current.standingSetDay < windowDays;
   const conflict = differs && recent && current.standingViaChain !== order.viaChain;
   if (conflict && !order.viaChain) return { state, outcome: { obeyed: 'kept', conflict: true } };
   const next: StandingGoal = { standingSpec: order.goal, standingIssuer: order.issuer, standingViaChain: order.viaChain, standingSetDay: day, standingOrder: order.id };

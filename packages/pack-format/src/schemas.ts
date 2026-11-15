@@ -8,7 +8,7 @@
  * kernel's `World` and `ScenarioStart` (checked at the bottom of this file at
  * compile time), so the kernel's types and the published schemas cannot drift.
  */
-import { ids, world as w } from '@mandate/kernel';
+import { ids, phase0, world as w } from '@mandate/kernel';
 import { z } from 'zod';
 
 type IdKind = ids.IdKind;
@@ -194,6 +194,34 @@ export const RulesSchema = z.strictObject({
         .describe('One row per faction in the manifest.'),
     })
     .describe('The generic rule-seat principal (0064): its standing goals stay at hold until its faction is at war, which a situation flag the pack names marks.'),
+  // Moved out of the kernel by 0072 (the exit review's S3), as 0064 moved lane 0.5's: every pack states them, there is no default.
+  latency: z
+    .strictObject({
+      wireDays: nonNegative.describe('Days for a message on the wire between two wired regions. A design parameter.'),
+      mailPermille: nonNegative.describe('The mail against a courier, permille (slower: above 1000). A design parameter.'),
+      specialMessengerPermille: permille.describe('A special messenger against a courier, permille (faster: at most 1000). A design parameter.'),
+      courierNoiseMaxDays: nonNegative.describe('The most extra days a courier or the mail can lose to roads and weather. A design parameter.'),
+      specialMessengerPrice: nonNegative.describe('The attention a special messenger costs its sender. A design parameter.'),
+    })
+    .describe('How long each route takes beside the map’s courier days (0026, 0032): design parameters the pack states, not sourced facts.'),
+  reportTemplates: z
+    .array(
+      z.strictObject({
+        templateType: z.enum(phase0.REPORT_TYPES),
+        templateSubtype: termId.nullable().describe('The subtype for the informal and advice families; null for every other type.'),
+        templateRoute: z.enum(phase0.ROUTE_KINDS).describe('The usual route; an author off the wire falls back to courier.'),
+        cadenceDays: nonNegative.describe('Every this many days, for a report written on a cycle; 0 for one written on an event. A design parameter.'),
+        maxAgeDays: positive.max(phase0.MAX_REPORT_AGE_DAYS, `at most ${phase0.MAX_REPORT_AGE_DAYS} days`).describe('A held report older than this is pruned. A design parameter.'),
+        keepSupersededDays: nonNegative.describe('A report superseded by a newer one with the same template, author and subject is pruned once this old; at most maxAgeDays. A design parameter.'),
+      }),
+    )
+    .describe('One template for every report type and subtype the kernel writes (0032: each a pack-tunable template), with the pruning rule for knowledge (FOUNDATION section 8): design parameters the pack states.'),
+  standing: z
+    .strictObject({
+      conflictWindowDays: positive.describe('Days within which a chain order stands against a newer order that went around the chain (0040). A design parameter.'),
+      scoreCap: int.min(1000, 'at least 1000, or no advance could be offered').describe('The highest score a standing-goal menu gives an advance, permille of his demand, so an empty region does not dwarf every other term. A design parameter.'),
+    })
+    .describe('The stand-in standing goals (0040, 0072): design parameters the pack states, not sourced facts.'),
 });
 
 export const VocabulariesSchema = z.strictObject({
