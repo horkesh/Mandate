@@ -32,8 +32,24 @@ export interface PlayOptions {
   readonly freeze?: boolean;
   /** Compare the derived map with a fresh derivation every day (tests and determinism runs). */
   readonly deepChecks?: boolean;
+  /** Called before each day, with the day about to run (a runner's clock lives outside the kernel). */
+  readonly beforeDay?: (day: number) => void;
   /** Called after each day with the tick's result (for reports and decision points). */
   readonly onDay?: (result: TickResult) => void;
+  /**
+   * The hash cadence (0044: normal play does not hash daily). Omitted, every day is hashed (tests and
+   * determinism runs). A whole number `n` hashes only on days divisible by `n` and on the last day: the
+   * checkpoints. State itself never depends on this; only the list of `hashes` does.
+   */
+  readonly hashEvery?: number;
+}
+
+/** Whether the day's hash is wanted: always without a cadence, else on a checkpoint or the last day. */
+function hashDue(options: PlayOptions, day: number, last: boolean): boolean {
+  const every = options.hashEvery;
+  if (every === undefined) return true;
+  if (!Number.isSafeInteger(every) || every < 1) throw new RangeError(`hashEvery must be a positive whole number, got ${every}`);
+  return last || day % every === 0;
 }
 
 /** Whoever sits in each seat. Throws for a seat with nobody in it. */
@@ -68,12 +84,13 @@ export function playDays(
   const hashes: DayHash[] = [];
   const cache = createViewCache();
   for (let i = 0; i < days; i++) {
+    options.beforeDay?.(state.stateDay + 1);
     const entries = pendingRequests(world, state, cache).flatMap((r) => answerEntries(r, seats(r.requestSeat)));
     const result = tick(world, state, entries, { mapCache, ...(options.telemetry ? { telemetry: options.telemetry } : {}), ...(options.freeze ? { freeze: true, freezeLedger: ledger } : {}), ...(options.deepChecks ? { deepChecks: true } : {}) });
     options.onDay?.(result);
     state = result.state;
     log.push(...entries);
-    hashes.push({ day: state.stateDay, hash: canonicalHash(state) });
+    if (hashDue(options, state.stateDay, i === days - 1)) hashes.push({ day: state.stateDay, hash: canonicalHash(state) });
   }
   return { state, log, hashes };
 }
@@ -96,10 +113,11 @@ export function replay(
   let state = options.freeze === true ? deepFreeze(start, ledger) : start;
   const hashes: DayHash[] = [];
   while (state.stateDay < throughDay) {
+    options.beforeDay?.(state.stateDay + 1);
     const result = tick(world, state, entriesForDay(log, state.stateDay + 1), { mapCache, ...(options.telemetry ? { telemetry: options.telemetry } : {}), ...(options.freeze ? { freeze: true, freezeLedger: ledger } : {}), ...(options.deepChecks ? { deepChecks: true } : {}) });
     options.onDay?.(result);
     state = result.state;
-    hashes.push({ day: state.stateDay, hash: canonicalHash(state) });
+    if (hashDue(options, state.stateDay, state.stateDay === throughDay)) hashes.push({ day: state.stateDay, hash: canonicalHash(state) });
   }
   return { state, hashes };
 }
