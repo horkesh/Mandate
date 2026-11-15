@@ -12,7 +12,8 @@ import type { Condition, Effect, SituationDef } from './types.ts';
 
 export interface SituationRefs {
   readonly factions: ReadonlyMap<string, unknown>;
-  readonly posts: ReadonlyMap<string, { readonly faction: string }>;
+  /** Each post's side at the start; null for a neutral government's post. */
+  readonly posts: ReadonlyMap<string, { readonly faction: string | null }>;
   readonly persons: ReadonlyMap<string, unknown>;
   readonly regions: ReadonlyMap<string, unknown>;
 }
@@ -76,7 +77,7 @@ export function situationReferenceProblems(defs: readonly SituationDef[], refs: 
     const named = [...(d.report?.authors ?? []), ...(d.staffLine?.authors ?? []), ...d.delegableTo, ...d.options.flatMap((o) => o.orders.map((x) => x.to))];
     for (const p of named) {
       const side = refs.posts.get(p)?.faction;
-      if (side !== undefined && side !== d.faction) at('posts', `${p} is ${side}'s post, not ${d.faction}'s`);
+      if (side !== undefined && side !== d.faction) at('posts', side === null ? `${p} is a neutral government's post, not ${d.faction}'s` : `${p} is ${side}'s post, not ${d.faction}'s`);
     }
     for (const p of d.subjects) if (!refs.persons.has(p)) at('subjects', `${p} is not a person`);
     for (const r of d.staffLine?.recommends ?? []) if (!optionIds.has(r)) at('staffLine.recommends', `${r} is not an option`);

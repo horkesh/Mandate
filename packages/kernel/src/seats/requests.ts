@@ -126,8 +126,9 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   for (const id of fieldPosts(world, state)) {
     if (postFaction(world, state, id) !== faction) continue;
     const p = state.postStates[id]!;
-    // Typical days to the post's seat in pack data, or where it stood at the start of play: the principal is not told where it is today.
-    const to = p.postSeat ?? headquartersOf(world, state, id);
+    // Typical days to the post's seat in pack data, or where it stood at the start of play, or else his own side's capital:
+    // the principal is not told where it is today (exit review P2).
+    const to = p.postSeat ?? world.startHeadquarters(id) ?? f.seatRegion;
     const routes: RouteOption[] = [];
     for (const route of ORDER_ROUTES) {
       const l = routeLatency(ground.latency, world.rules.latency, route, f.seatRegion, to, faction, null);

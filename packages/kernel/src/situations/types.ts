@@ -60,7 +60,7 @@ export type Condition =
   | { readonly knows: KnowsPattern }
   /** A post's standing goal is of this kind (stand-in until lane 0.9's plans). */
   | { readonly goal: { readonly post: PostId; readonly kind: GoalKind } }
-  /** A post's headquarters stands in a region (stand-in until lane 0.5's forces). */
+  /** A post's headquarters stands in a region: derived from where its strongest block stands, never stored (0064, `seats/posts.ts`). */
   | { readonly headquartersAt: { readonly post: PostId; readonly region: RegionId } }
   /** Days since this situation surfaced to the principal (its clock; gate re-check N6): for `expiresWhen`, `appearsWhen` and `waitsOn`. */
   | { readonly clockAtLeast: number };

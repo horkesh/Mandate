@@ -23,7 +23,7 @@
  */
 import { strictCompare } from '../compare.ts';
 import { wireOwnerOf, type ControlIndex } from '../control-index/control-index.ts';
-import type { FactionId, PersonId, RegionId, SituationId } from '../ids.ts';
+import type { FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import { templateProblems, type ReportTemplate } from '../knowledge/templates.ts';
 import { latencyProblems, type LatencyMap, type LatencyRules } from '../messages/latency.ts';
 import type { StandingRules } from '../world/world.ts';
@@ -89,6 +89,12 @@ export interface SeatsWorld {
   courierDays(from: RegionId, to: RegionId): number;
   /** Regions a commander watches: where he stands and every neighbour across an edge, in id order. */
   watched(region: RegionId): readonly RegionId[];
+  /**
+   * Where a post's headquarters stood at the start of play: its strongest directly commanded block in the start (by
+   * known men, ties by block id, as `headquartersOf` reads State), or null when the start gave it no block. Pack data,
+   * so a principal may be told it; where the post's headquarters is today he may not (exit review P2).
+   */
+  startHeadquarters(post: PostId): RegionId | null;
   readonly situations: readonly SituationDef[];
   situation(id: SituationId): SituationDef;
 }
@@ -148,10 +154,18 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
   }
 
   const situations = [...(options.situations ?? [])].sort((a, b) => strictCompare(a.id, b.id));
+  // Each start post's side at the start, through its department: null for a neutral government's post. A department not
+  // in the World is a problem, never a side of '' (exit review P4; FOUNDATION 11.3: an unknown lookup throws).
+  const postSides = new Map<string, { readonly faction: FactionId | null }>();
+  for (const p of start.posts) {
+    const d = map.world.departments.find((x) => x.id === p.department);
+    if (d === undefined) problems.push(`post ${p.id}: department ${p.department} is not in the World`);
+    else postSides.set(p.id, { faction: d.faction });
+  }
   problems.push(
     ...situationReferenceProblems(situations, {
       factions,
-      posts: new Map(start.posts.map((p) => [p.id, { faction: map.world.departments.find((d) => d.id === p.department)?.faction ?? '' }])),
+      posts: postSides,
       persons: people,
       regions: map.regions,
     }),
@@ -162,6 +176,13 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
   const courier = courierTable(map, regionIds, map.world.rules.movement.courierPermille);
   const roles = new Map(map.world.vocabularies.postKinds.map((k) => [k.id, k.role]));
   const situationById = new Map(situations.map((s) => [s.id, s]));
+  const startBody = new Map<PostId, { readonly region: RegionId; readonly men: number }>();
+  for (const b of [...start.forceBlocks].sort((x, y) => strictCompare(x.id, y.id))) {
+    if (b.post === null) continue;
+    const men = b.strength ?? 0;
+    const best = startBody.get(b.post);
+    if (best === undefined || men > best.men) startBody.set(b.post, { region: b.region, men });
+  }
   const get = <K, V>(m: ReadonlyMap<K, V>, kind: string, id: K): V => {
     const v = m.get(id);
     if (v === undefined) throw new RangeError(`unknown ${kind} id "${String(id)}"`);
@@ -183,6 +204,7 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
       return d;
     },
     watched: (region: RegionId) => [region, ...(map.edgesAt.get(region) ?? []).map((e) => otherEnd(e, region))].filter((r, i, all) => all.indexOf(r) === i).sort(strictCompare),
+    startHeadquarters: (post: PostId) => startBody.get(post)?.region ?? null,
     situations,
     situation: (id: SituationId) => get(situationById, 'situation', id),
   });
