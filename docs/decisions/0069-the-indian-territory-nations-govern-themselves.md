@@ -1,6 +1,6 @@
 # 0069: The Indian Territory nations govern themselves, and only their own acts move them
 
-Status: accepted (2026-11-15). Refines 0046. Places part of record R3 ahead of R3 itself. From the gate review of the governments research (`review-gate-indian-territory.md`, approve after fixes) and the research note `docs/research/2026-11-15-governments-and-stores-1861.md`. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. R3 adopts or supersedes this when it is written.
+Status: accepted (2026-11-15). Refines 0046. Amended by 0070 (a nation's act names itself, depends on no principal's choice, and stays with its own polity; "much of", not "most"). Places part of record R3 ahead of R3 itself. From the gate review of the governments research (`review-gate-indian-territory.md`, approve after fixes) and the research note `docs/research/2026-11-15-governments-and-stores-1861.md`. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. R3 adopts or supersedes this when it is written.
 
 ## Decision
 

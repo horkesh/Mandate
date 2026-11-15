@@ -419,10 +419,15 @@ Each entry gives the window, the placement of each facet, the refused facets, th
 ### 3.7 Native nations
 
 **`indian-territory-1861`**. Window: slice.
-- *event*: the Union abandons its posts (Fort Washita mid-April, Arbuckle 3 May, Cobb about 9 May 1861); Pike's treaties with the Creek (10 July), Choctaw and Chickasaw (12 July), Seminole (1 August) and Cherokee (7 October, outside [SW]'s window, signed by Ross after much negotiation) [SW 6.5], [CS 4.5]. Each treaty is the nation's own government's act, a change of side with the Confederacy as the other party (0069), never an act of the Confederate rule seat. The interim rule covers only the Confederacy's own acts toward the nations.
+- *event*: the Union abandons its posts (Washita left about 15–16 April; Arbuckle's troops left on 3 May; Cobb's troops were gone before 9 May 1861, the day Emory found the column); Pike's treaties with the Creek (10 July), Choctaw and Chickasaw (12 July), Seminole (1 August) and Cherokee (7 October, outside [SW]'s window, signed by Ross after much negotiation) [SW 6.5], [CS 4.5]. Each treaty is the nation's own government's act, a change of side with the Confederacy as the other party (0069), never an act of the Confederate rule seat. The interim rule covers only the Confederacy's own acts toward the nations.
 - *derived* and *event* (agency, added in review): the nations' and Native men's own choices: Ross's neutrality; Stand Watie a colonel by 1 September 1861 (July unconfirmed) [GCF]; Opothleyahola's loyalists (with Black Creeks and enslaved people) moving toward Kansas, with the fights of 19 November, 9 December and 26 December 1861 [SW 6.5]. Enlistment by Native men, on either side, is their choice, shown like `black-enlistment`: derived from conditions and policy, never a pool.
 - *text*: 7,369 enslaved people in the four nations, about 12.5 percent (the 1860 census; [GCF], correcting [SW 6.2]'s "more than 7,000 ... about 14 percent"); the text does not erase slavery there either.
 - No Union decision in 1861 [SW 6.8].
+- For authors (0070):
+  - Emory's "unworthy conduct of the governor of the Chickasaw Nation" is a hostile officer's attributed view (Q10), never the narrator's.
+  - The 12 August 1861 treaty with the Leased District's peoples is contested, so a research lane sources the dispute before it is authored, and the item shows the conflict (Q1).
+  - The Reserve peoples' treaty of peace with Texas (14 May) is their own act.
+  - No words are given as Opothleyahola's until read in a primary copy.
 - *refused*: any verb for either principal to recruit Native nations or Native men, or to treat them as a manpower pool.
 - R3 defines "protected" for a nation that is a seat: no pool or resource targeting, though diplomacy toward it may be legal.
 - Risks: agency, resource, lost-cause.

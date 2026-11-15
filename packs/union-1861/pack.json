@@ -178,6 +178,12 @@
         "temporary": false
       },
       {
+        "id": "private_secretary",
+        "name": "post_kind.private_secretary",
+        "creatable": "start_only",
+        "temporary": false
+      },
+      {
         "id": "bureau",
         "name": "post_kind.bureau",
         "creatable": "start_only",
