@@ -1,7 +1,7 @@
 import { loadPack, type GateData, type PackData } from '@mandate/pack-format';
 import { describe, expect, it } from 'vitest';
 import { packFilesAt, packRoot, v2Packs } from '../src/pack-files.ts';
-import { MANPOWER_PROBES, selfGoverningSubjects, uncoveredProbes } from '../src/register-coverage.ts';
+import { kernelFieldIds, MANPOWER_PROBES, selfGoverningSubjects, uncoveredProbes } from '../src/register-coverage.ts';
 
 /**
  * The gate register covers a nation's land (0070; the gate review of the register tripwire). A pack with self-governing
@@ -25,7 +25,7 @@ function pack(signatures: ReturnType<typeof refused>[], over: { nationKind?: boo
     gate: { register: { topics: [{ refused: signatures }] } },
   } as unknown as Pick<PackData, 'world' | 'scenarios' | 'gate'>;
 }
-const ALL = '^(region-)?(recruit|manpower|levy|draft|quota|enlist|population)';
+const ALL = '^(region[-_])?(recruit|manpower|levy|draft|quota|enlist|population)';
 
 describe('every pack that has self-governing governments covers them', () => {
   for (const id of v2Packs()) {
@@ -57,7 +57,7 @@ describe('positive controls: the probe finds what a register leaves open', () =>
   });
 
   it('a signature for some stems only, or aimed at other subjects, leaves the rest open', () => {
-    const some = uncoveredProbes(pack([refused('^(region-)?recruit', '^(nation_x|r1)$')]));
+    const some = uncoveredProbes(pack([refused('^(region[-_])?recruit', '^(nation_x|r1)$')]));
     expect(new Set(some.map((o) => o.stem))).toEqual(new Set(MANPOWER_PROBES.map((p) => p.stem).filter((s) => s !== 'recruit')));
     const elsewhere = uncoveredProbes(pack([refused(ALL, '^other_')]));
     expect(elsewhere).toHaveLength(MANPOWER_PROBES.length * 2);
@@ -67,8 +67,29 @@ describe('positive controls: the probe finds what a register leaves open', () =>
 
   it('one spelling is not enough: an anchored ^recruit covers recruitment and misses region-recruitment (the gate review)', () => {
     const open = uncoveredProbes(pack([refused('^(recruit|manpower|levy|draft|quota|enlist|population)', '^(nation_x|r1)$')]));
-    expect(new Set(open.map((o) => o.field))).toEqual(new Set(MANPOWER_PROBES.filter((p) => p.field.startsWith('region-')).map((p) => p.field)));
-    expect(MANPOWER_PROBES.map((p) => p.field)).toEqual(expect.arrayContaining(['recruitment', 'region-recruitment', 'population', 'region-population']));
+    expect(new Set(open.map((o) => o.field))).toEqual(new Set(MANPOWER_PROBES.filter((p) => p.field.startsWith('region')).map((p) => p.field)));
+    expect(MANPOWER_PROBES.map((p) => p.field)).toEqual(expect.arrayContaining(['recruitment', 'region-recruitment', 'region_recruitment', 'population', 'region_population']));
+  });
+
+  it('the kernel snake_case spelling is probed: a register written to the hyphenated spellings misses region_recruitment (the standing reviewer’s T2)', () => {
+    const hyphenOnly = refused('^(region-)?(recruit|manpower|levy|draft|quota|enlist|population)', '^(nation_x|r1)$');
+    const open = uncoveredProbes(pack([hyphenOnly]));
+    expect(open.length).toBeGreaterThan(0);
+    expect(open.every((o) => o.field.startsWith('region_'))).toBe(true);
+    expect(open.map((o) => o.field)).toContain('region_recruitment');
+    // Covered by a pattern that takes both separators.
+    expect(uncoveredProbes(pack([refused(ALL, '^(nation_x|r1)$')]))).toEqual([]);
+  });
+
+  it('a kernel proposal field id carrying a stem is probed as the kernel spells it, and a register that does not refuse it fails', () => {
+    // A planted `*_FIELD` of an owner not built yet: the register must refuse it aimed at the nation, or the test fails.
+    const planted = ['grant_recruitment_quota'];
+    const open = uncoveredProbes(pack([refused(ALL, '^(nation_x|r1)$')]), planted);
+    expect(open.map((o) => o.field)).toEqual(Array(4).fill('grant_recruitment_quota'));
+    expect(new Set(open.map((o) => o.stem))).toEqual(new Set(['recruit', 'quota']));
+    expect(uncoveredProbes(pack([refused('^grant_recruitment_quota$', '^(nation_x|r1)$'), refused(ALL, '^(nation_x|r1)$')]), planted)).toEqual([]);
+    // Today the kernel exports no such id; the scan reads real sources and finds none carrying a stem.
+    expect(kernelFieldIds()).toEqual([]);
   });
 
   it('a second region the nation governs in another start must be covered too', () => {

@@ -6,6 +6,9 @@
  * that pack's own refused signatures. Another pack's signatures never count, and a pack with no self-governing department
  * has nothing to cover.
  */
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { signatureRefuses } from '@mandate/pack-format';
 import type { PackData } from '@mandate/pack-format';
 
@@ -21,10 +24,20 @@ const FIELD_IDS: readonly { readonly stem: string; readonly field: string }[] = 
 ];
 
 /**
- * A probe field id for each stem, in two spellings: bare (`recruitment`) and aimed at a region (`region-recruitment`), since
- * an anchored `^recruit` passes the first and misses the second (the gate review).
+ * A probe field id for each stem, in the spellings a field can take: bare (`recruitment`), aimed at a region with a hyphen
+ * (`region-recruitment`) and in the kernel's snake_case (`region_recruitment`), since an anchored `^recruit` passes the
+ * first and misses the others (the gate review; the standing reviewer's T2).
  */
-export const MANPOWER_PROBES: readonly { readonly stem: string; readonly field: string }[] = FIELD_IDS.flatMap((p) => [p, { stem: p.stem, field: `region-${p.field}` }]);
+export const MANPOWER_PROBES: readonly { readonly stem: string; readonly field: string }[] = FIELD_IDS.flatMap((p) => [p, { stem: p.stem, field: `region-${p.field}` }, { stem: p.stem, field: `region_${p.field}` }]);
+
+const KERNEL_SRC = fileURLToPath(new URL('../../kernel/src/', import.meta.url));
+
+/** Every proposal field id the kernel's modules export (`export const X_FIELD = '<id>'`) that carries one of the stems: probed as the kernel spells it. */
+export function kernelFieldIds(dir: string = KERNEL_SRC): string[] {
+  const texts = (d: string): string[] => readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? texts(join(d, e.name)) : e.name.endsWith('.ts') ? [readFileSync(join(d, e.name), 'utf8')] : []));
+  const ids = texts(dir).flatMap((t) => [...t.matchAll(/export const \w+_FIELD\s*=\s*'([^']+)'/g)].map((m) => m[1]!));
+  return [...new Set(ids)].filter((id) => FIELD_IDS.some((p) => id.includes(p.stem))).sort();
+}
 
 /** The pack's self-governing departments, and the regions one of them governs in any scenario start. */
 export function selfGoverningSubjects(pack: Pick<PackData, 'world' | 'scenarios'>): { readonly departments: string[]; readonly regions: string[] } {
@@ -42,10 +55,11 @@ export interface UncoveredProbe {
 }
 
 /** The probes (stem, field, subject) no refused signature of the pack's own register refuses. Empty when covered, or when there is nothing to cover. */
-export function uncoveredProbes(pack: Pick<PackData, 'world' | 'scenarios' | 'gate'>): UncoveredProbe[] {
+export function uncoveredProbes(pack: Pick<PackData, 'world' | 'scenarios' | 'gate'>, kernelFields: readonly string[] = kernelFieldIds()): UncoveredProbe[] {
   const subjects = selfGoverningSubjects(pack);
+  const probes = [...MANPOWER_PROBES, ...kernelFields.flatMap((field) => FIELD_IDS.filter((p) => field.includes(p.stem)).map((p) => ({ stem: p.stem, field })))];
   const signatures = (pack.gate?.register.topics ?? []).flatMap((t) => t.refused);
   return [...subjects.departments, ...subjects.regions].flatMap((subject) =>
-    MANPOWER_PROBES.filter((p) => !signatures.some((sig) => signatureRefuses(sig, p.field, subject))).map((p) => ({ stem: p.stem, field: p.field, subject })),
+    probes.filter((p) => !signatures.some((sig) => signatureRefuses(sig, p.field, subject))).map((p) => ({ stem: p.stem, field: p.field, subject })),
   );
 }
