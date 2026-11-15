@@ -72,4 +72,5 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0066](0066-the-war-begins-by-each-governments-decision.md) | The war begins for each side by its own government's decision | accepted; amended by 0068 |
 | [0067](0067-government-sides-as-built.md) | Government sides as built, and Fort Pickens' stores unknown | accepted |
 | [0068](0068-the-runner-and-the-done-check.md) | The headless runner, the liveness gate and the Phase 0 done check | accepted |
-| [0069](0069-the-indian-territory-nations-govern-themselves.md) | The Indian Territory nations govern themselves, and only their own acts move them | accepted |
+| [0069](0069-the-indian-territory-nations-govern-themselves.md) | The Indian Territory nations govern themselves, and only their own acts move them | accepted; amended by 0070 |
+| [0070](0070-a-nations-act-is-its-own.md) | A nation's act must be its own, and must stay with its own people | accepted |
