@@ -358,19 +358,11 @@ export function checkGate(
     for (const { at, effect } of touchesProtected) err('gate-protected-target', at, `the effect targets protected field "${'propose' in effect ? effect.propose.field : ''}"`, 'no option, notice or effect targets a protected field; only derivations read it (B3, D3, E2)');
     for (const topic of gate.register.topics) {
       for (const r of topic.refused) {
-        const field = r.fieldPattern === null ? null : new RegExp(r.fieldPattern, 'u');
-        const subject = r.subjectPattern === null ? null : new RegExp(r.subjectPattern, 'u');
         const option = r.optionPattern === null ? null : new RegExp(r.optionPattern, 'u');
         const label = r.labelPattern === null ? null : new RegExp(r.labelPattern, 'iu');
         const order = r.orderPattern === null ? null : new RegExp(r.orderPattern, 'u');
         const refuse = (at: string) => err('gate-refused', at, `refused under topic "${topic.id}": ${r.reason}`);
-        // A proposal is refused when every pattern the signature gives over it (field, subject) matches; one given alone is enough.
-        for (const { at, effect } of effects) {
-          if (!('propose' in effect) || (field === null && subject === null)) continue;
-          if (field !== null && !field.test(effect.propose.field)) continue;
-          if (subject !== null && (effect.propose.subject === null || !subject.test(effect.propose.subject))) continue;
-          refuse(at);
-        }
+        for (const { at, effect } of effects) if ('propose' in effect && signatureRefuses(r, effect.propose.field, effect.propose.subject)) refuse(at);
         def.options.forEach((o, i) => {
           if (option !== null && option.test(o.id)) refuse(`options[${i}].id`);
           // Review N1: an option renamed past the id pattern is still refused by what it says and what it orders.
@@ -573,6 +565,19 @@ export function checkGate(
     }
   }
   return sink.issues;
+}
+
+/**
+ * Whether a refused signature refuses a proposal to `field`, aimed at `subject` (null: at no one). It does when every
+ * pattern the signature gives over a proposal (field, subject) matches; one given alone is enough; a signature that gives
+ * neither refuses no proposal (it may refuse an option, a label or an order instead). Exported so a pack's coverage can be
+ * tested by probing, not by reading its text (the gate review of 0070).
+ */
+export function signatureRefuses(sig: { readonly fieldPattern: string | null; readonly subjectPattern: string | null }, field: string, subject: string | null): boolean {
+  if (sig.fieldPattern === null && sig.subjectPattern === null) return false;
+  if (sig.fieldPattern !== null && !new RegExp(sig.fieldPattern, 'u').test(field)) return false;
+  if (sig.subjectPattern !== null && (subject === null || !new RegExp(sig.subjectPattern, 'u').test(subject))) return false;
+  return true;
 }
 
 /** The fewest gated decisions of three or more options before C2 counts positions. */
