@@ -43,8 +43,8 @@ describe('Union 1861 world v2', () => {
     const split = new Set(['it_cherokee_creek', 'it_choctaw_chickasaw']);
     expect(draftIds('map/regions.csv', 'id').filter((id) => !regionIds.has(id) && !split.has(id))).toEqual([]);
     for (const id of ['it_cherokee', 'it_muscogee', 'it_seminole', 'it_choctaw', 'it_chickasaw', 'it_leased_district']) expect(regionIds.has(id), id).toBe(true);
-    // The Mediterranean leg was added after review; the split replaced the box-to-box road with nine adjacencies (a net eight more edges).
-    expect(world.edges.length).toBe(draftIds('map/edges.csv', 'from').length + 1 + 8);
+    // The Mediterranean leg was added after review; the split replaced the box-to-box road with ten adjacencies (a net nine more edges).
+    expect(world.edges.length).toBe(draftIds('map/edges.csv', 'from').length + 1 + 9);
     const people = new Set(world.people.map((p) => p.id as string));
     expect(draftIds('people/people.csv', 'id').filter((id) => !people.has(id))).toEqual([]);
   });
