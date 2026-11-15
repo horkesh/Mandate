@@ -1,0 +1,36 @@
+{
+  "topics": [
+    {
+      "id": "indian-territory-1861",
+      "class": "native-nations",
+      "window": { "from": "1861-03-04", "to": "1862-12-31" },
+      "placements": ["derived", "event", "text"],
+      "status": "open",
+      "protectedFields": ["nation-population", "native-population", "nation-enslaved-population"],
+      "protectedGroups": [
+        "Cherokee", "Cherokees", "Muscogee", "Creek Nation", "Creek people", "Upper Creeks", "Lower Creeks",
+        "Seminole", "Seminoles", "Choctaw", "Choctaws", "Chickasaw", "Chickasaws",
+        "Wichita", "Wichitas", "Caddo", "Caddos", "Waco", "Tonkawa", "Anadarko", "Kichai", "Penateka", "Comanche", "Comanches",
+        "Great Osage", "Osage people", "Osages", "Quapaw", "Quapaws", "Senecas", "Seneca people", "Shawnees", "Delawares",
+        "Indian Territory", "Indian nations", "Indians", "Native nations", "Native men", "Native people", "Native peoples"
+      ],
+      "agencyReasons": ["agency:nation-council", "agency:nation-neutrality", "agency:nation-treaty", "agency:native-enlistment", "agency:loyalist-flight"],
+      "refused": [
+        {
+          "fieldPattern": "(?:^|[-_.:/])(?:nation|native|indian|tribal|tribe)s?[-_.:/](?:population|people|men|manpower|labou?r|warriors?|recruits?|recruitment|enlistments?|levy|levies|draft|quotas?|pool)(?:$|[-_.:/])|(?:^|[-_.:/])(?:manpower|recruits?|recruitment|enlistments?|levy|levies|draft|quotas?)[-_.:/](?:nation|native|indian|tribal|tribe)s?(?:$|[-_.:/])",
+          "reason": "no seat recruits Native nations or Native men, or counts them as manpower: a nation's people are never a pool either side draws on (SENSITIVE-HISTORY 3.7, refused; 0021)"
+        },
+        {
+          "optionPattern": "(?:recruit|levy|raise|draft|conscript|enlist|muster|call_out|call_up)[a-z_]*(?:nation|native|indian|tribe|tribal|warrior|brave|cherokee|muscogee|creek|seminole|choctaw|chickasaw|wichita|caddo|comanche|osage|quapaw|seneca|shawnee|delaware)",
+          "labelPattern": "\\b(?:recruit|levy|raise|draft|conscript|muster|call (?:out|up))\\w*\\b.{0,40}\\b(?:Cherokees?|Muscogee|Creeks?|Seminoles?|Choctaws?|Chickasaws?|Wichitas?|Caddos?|Comanches?|Osages?|Quapaws?|Senecas?|Shawnees?|Delawares|Indians?|Native|warriors?|braves?|tribes?)\\b",
+          "reason": "no principal has a verb to recruit Native nations or Native men: their enlistment, on either side, is their own choice, derived from conditions and policy (SENSITIVE-HISTORY 3.7, refused; rule 5)"
+        },
+        {
+          "optionPattern": "(?:annex|seize|possess|claim)[a-z_]*(?:nation|native|indian|tribe|tribal|cherokee|muscogee|creek|seminole|choctaw|chickasaw|wichita|caddo|comanche|osage|quapaw|seneca|shawnee|delaware|territory)",
+          "labelPattern": "\\b(?:annex|take possession of|claim)\\w*\\b.{0,40}\\b(?:Cherokees?|Muscogee|Creeks?|Seminoles?|Choctaws?|Chickasaws?|Wichitas?|Caddos?|Comanches?|Osages?|Quapaws?|Senecas?|Shawnees?|Delawares|Indians?|Indian Territory|Native|nations?|tribes?)\\b",
+          "reason": "a nation is never either side's possession: only its own act changes its side or closes its land (0069, 0070)"
+        }
+      ]
+    }
+  ]
+}

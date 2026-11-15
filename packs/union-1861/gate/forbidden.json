@@ -1,0 +1,15 @@
+{
+  "patterns": [
+    { "pattern": "\\b(?:redskins?|squaws?|half-?breeds?)\\b", "scope": "label", "severity": "fail", "reason": "a slur: never in an option label (F2)" },
+    { "pattern": "\\b(?:redskins?|squaws?|half-?breeds?|savages)\\b", "scope": "narrator", "severity": "review", "reason": "a period slur: only inside a cited, attributed quotation, with the reviewer's note (Q9, F2)" },
+    { "pattern": "\\b(?:no[- ]one[’']s|unclaimed|empty|vacant) (?:land|lands|country|ground|territory)\\b", "scope": "any", "severity": "fail", "reason": "a nation's land is never no one's: it was the nations' own, under their own governments (0069)" },
+    { "pattern": "\\bFive Civilized Tribes\\b", "scope": "narrator", "severity": "review", "reason": "a later outsiders' label: name each nation by its own name (0069)" },
+    { "pattern": "\\bwild (?:Indians|tribes)\\b", "scope": "narrator", "severity": "review", "reason": "an outsiders' period label: name the people, or quote it attributed (Q9, Q10)" },
+    { "pattern": "\\bhostiles\\b", "scope": "narrator", "severity": "review", "reason": "the Army's word for a people at war with it: attribute it, or name the people (Q10)" }
+  ],
+  "resourceWords": [
+    "manpower", "recruits", "levy", "levies", "pools?", "stocks?", "quotas?", "auxiliar(?:y|ies)",
+    "corridors?", "no[- ]one[’']s", "unclaimed", "empty", "open (?:ground|country|land)", "wilderness"
+  ],
+  "proximityTokens": 5
+}
