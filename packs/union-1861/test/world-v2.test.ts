@@ -75,6 +75,8 @@ describe('Union 1861 world v2', () => {
     // The nations' governments hold no side either: each is its own nation's, with its own polity (0069, 0070).
     const nations = world.departments.filter((d) => d.faction === null && d.kind === 'nation_government').map((d) => d.id as string).sort();
     expect(nations).toEqual(['nation_cherokee', 'nation_chickasaw', 'nation_choctaw', 'nation_muscogee', 'nation_seminole']);
+    // The two lists are every department that holds no side: a faction-null department of a third kind would fail here.
+    expect(world.departments.filter((d) => d.faction === null).map((d) => d.id as string).sort()).toEqual([...neutral, ...nations].sort());
   });
 
   it('keeps the licence-unclear and unlicensed sources out of the registry', () => {
