@@ -177,8 +177,7 @@
         "id": "private_secretary",
         "name": "post_kind.private_secretary",
         "creatable": "start_only",
-        "temporary": false,
-        "role": "filter"
+        "temporary": false
       },
       {
         "id": "bureau",

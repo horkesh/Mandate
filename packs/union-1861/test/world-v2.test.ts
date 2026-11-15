@@ -106,10 +106,10 @@ describe('Union 1861 world v2', () => {
     }
   });
 
-  it('has a private-secretary filter post, held by Nicolay, from the Executive Journal and the Times (0058, verification lane)', () => {
-    expect(world.vocabularies.postKinds.find((k) => k.id === 'private_secretary')?.role).toBe('filter');
-    const filters = world.vocabularies.postKinds.filter((k) => k.role !== null).map((k) => [k.id, k.role]);
-    expect(filters).toEqual([['private_secretary', 'filter']]); // no intelligence kind: no Union post had an intelligence chief on 5 March
+  it('has a private-secretary post held by Nicolay, with no engine role, from the Executive Journal and the Times (verification lane; lead ruling 2026-11-15)', () => {
+    // role is null on purpose: a role-filter post sits on the wire (0040 leaves the March telegraph filter empty); caller-screening is a Phase 1 item.
+    expect(world.vocabularies.postKinds.find((k) => k.id === 'private_secretary')?.role ?? null).toBeNull();
+    expect(world.vocabularies.postKinds.filter((k) => k.role !== null)).toEqual([]); // no filter and no intelligence kind: no Union post had an intelligence chief on 5 March
     const post = start.posts.find((p) => p.id === 'us_president_secretary')!;
     expect(post.holder).toBe('nicolay_john_g');
     expect(post.intelligenceChief ?? null).toBeNull();

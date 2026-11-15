@@ -18,7 +18,7 @@ Conventions. **(snippet)** means a fact seen only in a search summary, never rea
 | 1c | Rows marked `needs-source` | Cleared: the five cabinet posts, the Harpers Ferry post (and its superintendent, Barbour, named for the first time), Stone and the DC militia post. Still open: the Revenue Marine's head, Fauntleroy's command | High / open |
 | 1d | McClellan's telegram of 28 June 1862; Fox in ORN I,4 | Both read: OR I-11-1 p. 61 prints the "sacrifice this army" sentence; Fox's account at ORN I,4 p. 247 matches [MF] | High |
 | 2 | Residence of the fifteen | All fifteen sourced, none from a later office. Union: 8 (Bulloch is a judgement call). Confederate: 2. No faction: 5. **Eckert lived in North Carolina, not Ohio** | High for 11; medium for Hooker, Tod, Bulloch (marked) |
-| 3 | Filters and intelligence chiefs | One sourced filter seat: the President's private secretary (Nicolay), for callers. Scott's headquarters is an [I] candidate, not set. No Union intelligence chief existed on 5 March 1861 | Medium; the chief's absence is by absence |
+| 3 | Filters and intelligence chiefs | One sourced caller-screening seat: the President's private secretary (Nicolay), added as a post with role null. Scott's headquarters is an [I] candidate, not set. No Union intelligence chief existed on 5 March 1861 | Medium; the chief's absence is by absence |
 
 ## 1. Verification of the March 1861 cabinet and its citations
 
@@ -94,7 +94,7 @@ Notes on the three that matter most.
 
 ## 3. Filter posts and intelligence chiefs on the Union side, from March 1861
 
-0058's `role: filter` is a *post kind* property ("holds or passes what comes in for its principal"), and `intelligenceChief` is a person on one post. 0032 defines a filter by what its holders "can hold, trim or delay". The questions: who screened what reached the president and the chief commanders in March 1861, and when.
+0058's `role` is a *post kind* property ("holds or passes what comes in for its principal"), and `intelligenceChief` is a person on one post. 0032 defines a filter by what its holders "can hold, trim or delay". The questions: who screened what reached the president and the chief commanders in March 1861, and when.
 
 **Sourced.**
 - **The President's private secretary, Nicolay, for callers.** The Executive Journal records him on 5 March 1861 as "his secretary", bringing the President's messages to the Senate (p. 289). The *Times*' Washington dispatch of 7 March (printed 8 March) reports that Lincoln "has adopted a systematic routine, and all callers have first to see Nicolay, the Secretary, who now bears the brunt of the labor." Burlingame (secondary; citing Stoddard, Howells and the *Times* of 8 March) says Nicolay screened each caller, was called "the bulldog in the ante-room", and in late March got business hours cut to 10 a.m.-3 p.m., then shorter (vol. 2 ch. 21; [MF] q.14). This is a filter in 0058's sense on what reached Lincoln from visitors, which included governors and congressmen (0032's "informal sources"). Date: from the inauguration at the latest.
@@ -111,9 +111,9 @@ Notes on the three that matter most.
 **Not known.** Who, if anyone, screened reports to Scott's headquarters in New York and Washington (the Army's chief clerk or Scott's military secretary; I did not look the office up); whether Pinkerton or any detective served the Union government before the war began.
 
 **What the pack now says (all marked as such in the rows).**
-- A new post kind `private_secretary` with `role: filter`; a new post `us_president_secretary` (department `us_executive`, parent `us_president`, region `washington`), held by `nicolay_john_g` (the tenure start left empty: the Journal puts him in office on 5 March).
+- A new post kind `private_secretary` with role null (see the lead's second ruling below); a new post `us_president_secretary` (department `us_executive`, parent `us_president`, region `washington`), held by `nicolay_john_g` (the tenure start left empty: the Journal puts him in office on 5 March).
 - No kind has `role: intelligence`; every `intelligenceChief` stays null; Scott's row records why.
-- **Lead's ruling (2026-11-15):** the secretary post stays, with `role: filter` and Nicolay as holder. It does not conflict with 0040, whose empty March filter is the telegraph office (0032's seat); the secretary is a different channel, the President's door. The ruling reads that channel as callers and mail. The sources I read cover callers only; that he also screened mail is not sourced (see Open, item 5).
+- **Lead's rulings (2026-11-15).** The secretary post and Nicolay as holder stay, but **the kind's `role` is null.** In the kernel a post with `role: filter` sits on the wire and every telegraph report to its principal passes it as the first hop; the sources show Nicolay screening callers, not the telegraph, and 0040 keeps the March 1861 telegraph filter (0032's seat) empty. Screening callers and mail is a Phase 1 item: a filter on informal routes. The sources I read cover callers only; that he also screened mail is not sourced (see Open, item 5). Earlier in the day the lead had ruled `role: filter`; the reviewer's finding S1 withdrew that.
 
 ## Pack changes made
 
@@ -121,7 +121,7 @@ Hand edits to `packs/union-1861/source/` (the importer was not run), then `npm r
 
 - `people.csv`: the fifteen `faction` cells and notes; McClellan's unresolved telegram note; Fauntleroy; a new row for Barbour.
 - `posts.csv` / `holders.csv`: the five cabinet posts and holders; Cameron and Welles (SEJ added); the DC militia post and Stone; the Harpers Ferry post and holder; the Revenue Marine note; Fauntleroy's holder note; Scott's note; the new secretary post and holder.
-- `pack.json` and `strings/en.json`: the `private_secretary` kind with `role: filter`.
+- `pack.json` and `strings/en.json`: the `private_secretary` kind, role null.
 - `test/world-v2.test.ts`: the old expectations (fifteen unknown sides, Hardee unknown, the Confederate no-post list, the 83/12 counts) now say what the sources decided, plus tests for the secretary post, the Harpers Ferry holder and the cabinet's primary citation.
 
 ## Open
@@ -156,6 +156,6 @@ Hand edits to `packs/union-1861/source/` (the importer was not run), then `npm r
 
 1. **The people drafts' `HAY-D L1908 intro` and `WP1848` cases are not mine, but a row-level check found more such pointers**: `nicolay_john_g` cites `WELLES-D 1 p16` and `HAY-D L1908 intro` for the note "private secretary from 4 March 1861"; the Journal shows him acting as secretary on 5 March only, so the 4 March date is the inauguration, not a commission.
 2. **`us_general_in_chief`'s "Headquarters of the Army ... New York" row is correct and now also supported by Loring's own report (OR I-1 p. 599)**, but Thomas, the addressee, is styled "Asst. Adjt. General" there while [MF] q.9 gives his rank as Adjutant General from 7 March. The conflict is the one [MF] already records.
-3. **0040 and this note's one filter:** settled by the lead (see section 3): 0040's empty March filter is the telegraph office, and the secretary is a separate channel. The engine reads `role` from the kind, so a kind with one Union post will show up in any liveness band that counts filters.
+3. **0040 and the secretary post:** settled (section 3): the post has role null, so the empty March telegraph filter stands; caller-screening is Phase 1.
 4. **Executive Journal volume XI is now readable**, so any research lane that needs a March 1861 confirmation (the Army's Sumner, Thomas, the foreign ministers) can read it directly (vol. XI pp. 291-366), without a search.
 5. **The Revenue Marine post** may be a mis-modelled bureau: see 1c. **Lead's ruling:** keep the post, marked `needs-source`; a snippet may not remove a post (L13) any more than add one. The row records the unconfirmed 1849 dissolution. Fauntleroy likewise stays the holder, marked `needs-source`, with the Loring finding in the row's note.
