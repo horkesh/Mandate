@@ -12,6 +12,7 @@
  * Linux and Windows and compares the hashes.
  */
 import { createRunDir, writeRunFile } from './io/runs.ts';
+import { gateFailures, referenceRunFor } from './liveness-gate.ts';
 import { phase0Run, RUN_MODES, type Phase0Summary, type RunMode } from './phase0-run.ts';
 
 function parse(argv: readonly string[]) {
@@ -52,7 +53,18 @@ function parse(argv: readonly string[]) {
   } as const;
 }
 
-function report(summary: Phase0Summary, path: string): string {
+function gateLines(summary: Phase0Summary, days: number): { readonly lines: string[]; readonly failed: boolean } {
+  const reference = referenceRunFor(summary.pack, days);
+  if (reference === undefined) return { lines: ['gate        no reference bands for this pack and length (liveness not gated)'], failed: false };
+  const failures = gateFailures(reference, summary.liveness);
+  if (failures.length === 0) return { lines: [`gate        every mechanic inside its band (${reference.name})`], failed: false };
+  return {
+    lines: [`gate        FAILED (${reference.name}):`, ...failures.map((f) => `  ${f.mechanic}: ${f.problem} (${f.fires} fires${f.band ? `, band ${f.band.minFires}..${f.band.maxFires ?? 'any'}` : ''})`)],
+    failed: true,
+  };
+}
+
+function report(summary: Phase0Summary, path: string, gate: readonly string[]): string {
   const width = Math.max(...summary.liveness.map((r) => r.mechanic.length));
   const lines = [
     `pack        ${summary.pack} (kernel ${summary.kernel})`,
@@ -60,10 +72,11 @@ function report(summary: Phase0Summary, path: string): string {
     `world hash  ${summary.worldHash}`,
     `days        ${summary.finalDay} (log ${summary.logEntries} entries, ${summary.rejections} rejected, ${summary.decisionPoints} decision points; hashes ${summary.hashMode === 'daily' ? 'every day' : `every ${summary.checkpointEvery} days`})`,
     `final hash  ${summary.finalHash}`,
-    `replay      ${summary.replay.matches ? 'MATCHES every hash' : `DIFFERS from day ${summary.replay.firstDifferentDay}`}`,
+    `replay      ${summary.replay === null ? 'not checked' : summary.replay.matches ? 'MATCHES every hash' : `DIFFERS from day ${summary.replay.firstDifferentDay}`}`,
     summary.resume
       ? `resume      from day ${summary.resume.atTurn}: ${summary.resume.matches ? 'MATCHES' : 'DIFFERS'} (${summary.resume.finalHash}); saved log ${summary.resume.savedLogReplays ? 'replays to the saved state' : 'DOES NOT replay to the saved state'}`
       : 'resume      not checked',
+    ...gate,
   ];
   if (summary.timing) lines.push(`tick        median ${summary.timing.median.toFixed(2)} ms, p95 ${summary.timing.p95.toFixed(2)} ms, max ${summary.timing.max.toFixed(2)} ms over ${summary.timing.days} days (no hashing)`);
   lines.push('', 'checkpoints (day: held / traced / front segments / pockets / men known, per faction; contested; marching):');
@@ -87,5 +100,6 @@ const summary = phase0Run({
   onSave: (text, day) => writeRunFile(dir, `save-day-${day}.json`, `${text}\n`),
 });
 const summaryPath = writeRunFile(dir, 'summary.json', `${JSON.stringify(summary, null, 2)}\n`);
-console.log(report(summary, summaryPath));
-if (!summary.replay.matches || (summary.resume && (!summary.resume.matches || !summary.resume.savedLogReplays))) process.exit(1);
+const gate = gateLines(summary, args.days);
+console.log(report(summary, summaryPath, gate.lines));
+if (gate.failed || (summary.replay && !summary.replay.matches) || (summary.resume && (!summary.resume.matches || !summary.resume.savedLogReplays))) process.exit(1);
