@@ -116,7 +116,8 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('responses to orders (declared and actual rungs, reasons)', 'proxy', ['message arrival']),
   field('audience state', 'audience', ['the audience verb']),
   // Lane 0.6 builds only the stand-in standing goals (hold, or advance to a region).
-  field('goals, plans, approvals, edits', 'plans', ['verbs', 'seat selections', 'order arrival'], [at('State', 'standingGoals')]),
+  // A post that becomes a field post on a side during play (its government joins one, 0065) is given a hold goal (exit review S1).
+  field('goals, plans, approvals, edits', 'plans', ['verbs', 'seat selections', 'order arrival', 'a government joining a side'], [at('State', 'standingGoals')]),
   field('operations and their lifecycles', 'operations', ['plan approval', 'movement and combat outcomes']),
   field('knowledge (reports per seat)', 'knowledge', ['message delivery', 'pruning'], [at('State', 'knowledgeBySeat'), at('State', 'reportTruth')]),
   field('messages in transit', 'messages', ['commands', 'reports', 'relay links forwarding an order', "the kernel's latency rules"], [at('State', 'messagesInTransit')]),
