@@ -49,7 +49,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0043](0043-map-tripwire-pixijs-stands.md) | The map tripwire: PixiJS stands, and labels get authored hints | accepted |
 | [0044](0044-engineering-foundations.md) | Engineering foundations: the state hash, saves, one writer per field, and determinism declared per package | accepted |
 | [0045](0045-the-steward-integrates.md) | The steward integrates; reviews are lanes | accepted; amended by 0047 |
-| [0046](0046-gate-checklist-and-situations-catalogue.md) | The sensitive-history checklist and the situations catalogue are accepted | accepted |
+| [0046](0046-gate-checklist-and-situations-catalogue.md) | The sensitive-history checklist and the situations catalogue are accepted | accepted; refined by 0069 |
 | [0047](0047-a-standing-reviewer.md) | A standing reviewer lane | accepted |
 | [0048](0048-assets-are-made-by-codex.md) | Assets are made by Codex, through one coordination file | accepted; amended by 0051 |
 | [0049](0049-ultrawide-first.md) | The game is designed for ultrawide displays first (3440×1440 reference) | accepted |
@@ -69,5 +69,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0063](0063-atrocity-levers-are-watched.md) | An option that hurts the enemy in response to an atrocity is watched | accepted |
 | [0064](0064-forces-command-movement-and-the-contest.md) | Forces, command, movement, infrastructure and the control contest | accepted; amended by 0066 |
 | [0065](0065-a-governments-side-is-state.md) | A government's side can change in play, and stores carry their date | accepted; amended by 0067 |
-| [0066](0066-the-war-begins-by-each-governments-decision.md) | The war begins for each side by its own government's decision | accepted |
+| [0066](0066-the-war-begins-by-each-governments-decision.md) | The war begins for each side by its own government's decision | accepted; amended by 0068 |
 | [0067](0067-government-sides-as-built.md) | Government sides as built, and Fort Pickens' stores unknown | accepted |
+| [0068](0068-the-runner-and-the-done-check.md) | The headless runner, the liveness gate and the Phase 0 done check | accepted |
+| [0069](0069-the-indian-territory-nations-govern-themselves.md) | The Indian Territory nations govern themselves, and only their own acts move them | accepted |

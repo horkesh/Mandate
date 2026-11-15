@@ -1,6 +1,6 @@
 # 0046: The sensitive-history checklist and the situations catalogue are accepted
 
-Status: accepted (2026-11-14). From two design lanes: `docs/design/SENSITIVE-HISTORY.md` (approved by a separate gate reviewer after two rounds of fixes) and `docs/design/SITUATIONS-1861-62.md` (60 situations, March 1861 to December 1862). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Applies 0021 and 0026; amends 0032 and 0040.
+Status: accepted (2026-11-14). From two design lanes: `docs/design/SENSITIVE-HISTORY.md` (approved by a separate gate reviewer after two rounds of fixes) and `docs/design/SITUATIONS-1861-62.md` (60 situations, March 1861 to December 1862). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Applies 0021 and 0026; amends 0032 and 0040. Refined by 0069 (the Indian Territory nations' representation, ahead of R3).
 
 ## Decision
 

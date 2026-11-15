@@ -1,6 +1,6 @@
 # 0066: The war begins for each side by its own government's decision
 
-Status: accepted (2026-11-15). Amends 0064. From the standing reviewer's review of lane 0.8 (S1 in `review-lane-0.8.md`). The war gate read the war flag straight from State. A notice applies its effects when it fires, but surfaces only when its report arrives, so a notice that set the flag would tell every principal the war had begun before news of it reached him. That is the hindsight 0046's two triggers exist to stop. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.
+Status: accepted (2026-11-15). Amends 0064. Amended by 0068 (war decisions cannot be delegated). From the standing reviewer's review of lane 0.8 (S1 in `review-lane-0.8.md`). The war gate read the war flag straight from State. A notice applies its effects when it fires, but surfaces only when its report arrives, so a notice that set the flag would tell every principal the war had begun before news of it reached him. That is the hindsight 0046's two triggers exist to stop. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.
 
 ## Decision
 
