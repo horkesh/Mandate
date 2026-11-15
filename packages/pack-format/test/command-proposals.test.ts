@@ -56,3 +56,54 @@ describe('proposals to command in situation files (0058, 0065)', () => {
     expect(hit[0]!.at).toMatch(/^options\[1\]\.effects\[\d+\]\.propose\.subject$/);
   });
 });
+
+/**
+ * A self-governing government (0069) is moved only by a notice, its own act. The testbed has no such kind (no pack
+ * data changes with this rule), so each control marks its `province` kind self-governing in memory, then adds one
+ * proposal where a decision's option, inaction or locked cost, or a notice's effects, would put it.
+ */
+describe('a self-governing government is moved only by a notice (0069)', () => {
+  const NOTICE = 'situations/fen_arrivals.json';
+  const markProvince = () =>
+    editJson('data/world.json', (m) => {
+      m.vocabularies.departmentKinds.find((k: { id: string }) => k.id === 'province').selfGoverning = true;
+      // A self-governing department names its polity (0070), or the World itself is refused before any situation is read.
+      for (const d of m.departments.filter((x: { kind: string }) => x.kind === 'province')) d.polity = 'provincials';
+    });
+  const selfGoverning = (file: string, put: (s: Record<string, any>, effect: unknown) => void, propose: { field: string; delta?: number; side?: string | null }): string[] => {
+    const effect = { propose: { owner: 'command', reason: 'x', subject: 's_province', delta: 1, side: propose.field === 'department_side' ? 'north' : null, ...propose } };
+    const edits = { ...markProvince(), ...editJson(file, (s) => put(s, effect)) };
+    return loadPack(testbedFiles(edits)).issues.filter((i) => i.kind === 'self-governing-decision').map((i) => `${i.severity} ${i.file} ${i.at}`);
+  };
+  const inOption = (s: Record<string, any>, e: unknown) => void s.options[1].effects.push(e);
+  const inInaction = (s: Record<string, any>, e: unknown) => void s.inaction.effects.push(e);
+  const inLockedCost = (s: Record<string, any>, e: unknown) => void (s.options[1].lockedCosts = [e]);
+  const inNotice = (s: Record<string, any>, e: unknown) => void (s.effects = [...(s.effects ?? []), e]);
+
+  it('refuses a change of side and a closing from a decision option, inaction and a locked cost', () => {
+    for (const field of ['department_side', 'government_closed']) {
+      expect(selfGoverning(FILE, inOption, { field })).toEqual([`error ${FILE} options[1].effects[1].propose.subject`]);
+      expect(selfGoverning(FILE, inInaction, { field })).toEqual([`error ${FILE} inaction.effects[1].propose.subject`]);
+      expect(selfGoverning(FILE, inLockedCost, { field })).toEqual([`error ${FILE} options[1].lockedCosts[0].propose.subject`]);
+    }
+    expect(selfGoverning(FILE, inOption, { field: 'government_closed', delta: -1 })).toHaveLength(1);
+  });
+
+  it('passes the same proposals from a notice, the nation’s own act (positive control)', () => {
+    expect(selfGoverning(NOTICE, inNotice, { field: 'department_side' })).toEqual([]);
+    expect(selfGoverning(NOTICE, inNotice, { field: 'government_closed' })).toEqual([]);
+    expect(selfGoverning(NOTICE, inNotice, { field: 'government_closed', delta: -1 })).toEqual([]);
+  });
+
+  it('leaves an ordinary government to a decision: without the flag nothing fires', () => {
+    const effect = { propose: { owner: 'command', reason: 'x', subject: 's_province', delta: 1, side: 'north', field: 'department_side' } };
+    const edits = editJson(FILE, (s) => inOption(s, effect));
+    expect(loadPack(testbedFiles(edits)).issues.filter((i) => i.kind === 'self-governing-decision')).toEqual([]);
+  });
+
+  it('only a government can govern itself', () => {
+    const edits = editJson('data/world.json', (m) => void (m.vocabularies.departmentKinds.find((k: { id: string }) => k.id === 'war_ministry').selfGoverning = true));
+    const found = loadPack(testbedFiles(edits)).issues.filter((i) => i.kind === 'self-governing-not-government');
+    expect(found.map((i) => [i.severity, i.message])).toEqual([['error', 'department kind "war_ministry" is self-governing but not a government']]);
+  });
+});

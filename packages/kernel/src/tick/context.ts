@@ -73,6 +73,8 @@ export type Proposal =
       /** The situation, and the option (null: its inaction or a notice), it comes from. */
       readonly situation: SituationId;
       readonly option: string | null;
+      /** A notice's effects, or a decision's option, inaction or locked cost (0069: a self-governing government is moved only by a notice). */
+      readonly origin: 'notice' | 'decision';
     };
 
 export interface Price {
@@ -108,7 +110,7 @@ export type MapEvent =
   /** A government joined a side (0065), by a situation's proposal, with what that cut loose. Never a closing. */
   | { readonly event: 'side_changed'; readonly change: SideChange }
   /** A proposal its owner refused, with the reason (a situation naming what cannot be). */
-  | { readonly event: 'proposal_refused'; readonly owner: string; readonly why: string }
+  | { readonly event: 'proposal_refused'; readonly owner: string; readonly reason: string; readonly why: string }
   /** A pocket closed (regions newly cut off), relieved (a path reaches them again) or lost (no longer traced: overrun or abandoned). The cut is yesterday's for a lost pocket. */
   | { readonly event: 'pocket_closed' | 'pocket_relieved' | 'pocket_lost'; readonly faction: FactionId; readonly pocket: string; readonly regions: readonly RegionId[]; readonly cut: Cut | null };
 

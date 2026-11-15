@@ -18,7 +18,7 @@
  * a rule-driven principal (a history run); the view layer never carries it
  * (0040; checked by `test/boundary.test.ts`).
  */
-import type { FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
+import type { DepartmentId, FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import type { ClaimKind, ReportType, SubjectKind } from '../knowledge/report.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { GoalKind } from '../plans/goal.ts';
@@ -217,6 +217,11 @@ export interface SituationDef {
   readonly inaction: Outcome | null;
   readonly historicalDefault: HistoricalDefault | null;
   readonly staffLine: StaffLine | null;
+  /**
+   * For a notice that moves a self-governing department (0070): whose act it is. It must be the proposal's subject, so
+   * a nation's act is the nation's own and never a side's. Absent for every other item.
+   */
+  readonly actingGovernment?: DepartmentId;
   readonly delegableTo: readonly PostId[];
   /** Clock days (since it surfaced) at which an open decision comes back to the seat and ends the turn (0040). */
   readonly resurfaceOn: readonly number[];

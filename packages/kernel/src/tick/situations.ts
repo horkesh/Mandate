@@ -121,7 +121,7 @@ function applyEffects(ctx: TickContext, state: State, def: SituationDef, effects
     else if ('clearFlag' in e) clear.push(e.clearFlag);
     else {
       fire(ctx, 'situations.proposals', e.propose.delta);
-      ctx.proposals.push({ proposal: 'effect', ...e.propose, situation: def.id, option });
+      ctx.proposals.push({ proposal: 'effect', ...e.propose, situation: def.id, option, origin: def.kind === 'notice' ? 'notice' : 'decision' });
     }
   }
   return applyFlags(state, set, clear, ctx.day);

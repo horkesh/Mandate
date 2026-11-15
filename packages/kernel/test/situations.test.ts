@@ -386,7 +386,7 @@ describe('notices, effects and proposals', () => {
     expect(run.state.situationStates[S('told')]!.sitSurfacedDay).toBe(2);
     expect(knowledgeOf(run.state, lead).knownReports.some((r) => r.knownBody.reportSubjectId === 'told' && r.knownBody.reportSubtype === 'cabinet-word')).toBe(true);
     expect(run.state.situationFlags.told).toBe(1);
-    expect(run.results[0]!.proposals).toEqual([{ proposal: 'effect', owner: 'politics', field: 'bloc-support', subject: 'hawks', delta: -40, reason: 'news', side: F('a'), situation: S('told'), option: null }]);
+    expect(run.results[0]!.proposals).toEqual([{ proposal: 'effect', owner: 'politics', field: 'bloc-support', subject: 'hawks', delta: -40, reason: 'news', side: F('a'), situation: S('told'), option: null, origin: 'notice' }]);
     expect(run.points).toEqual([]);
   });
 });

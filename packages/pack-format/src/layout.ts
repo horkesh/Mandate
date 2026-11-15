@@ -39,7 +39,7 @@ const c = (name: string, required = false): ColumnSpec => ({ name, required });
 
 /** The World's source tables, under `source/world/`. */
 export const WORLD_TABLES = {
-  departments: { file: 'departments.csv', required: true, columns: [c('id', true), c('name', true), c('faction', true), c('kind', true), c('sources', true), c('notes')] },
+  departments: { file: 'departments.csv', required: true, columns: [c('id', true), c('name', true), c('faction', true), c('kind', true), c('polity'), c('sources', true), c('notes')] },
   regions: {
     file: 'regions.csv',
     required: true,
