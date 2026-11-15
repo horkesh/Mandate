@@ -341,7 +341,7 @@
 {"department":"st_virginia","provenance":[{"at":"(map draft regions.csv counties_1861)","source":"MAP-LANE"},{"at":"(department structure)","source":"OOB-LANE"}],"region":"chesterfield"},
 {"department":"st_ohio","provenance":[{"at":"(map draft regions.csv counties_1861)","source":"MAP-LANE"},{"at":"(department structure)","source":"OOB-LANE"}],"region":"cincinnati"},
 {"department":"st_tennessee","provenance":[{"at":"(map draft regions.csv counties_1861)","source":"MAP-LANE"},{"at":"(department structure)","source":"OOB-LANE"}],"region":"clarksville"},
-{"department":"tr_colorado","provenance":[{"at":"12 Stat. 172 secs 2 3 11","source":"STAT"},{"at":"s.2","source":"NOTE-governments-stores-1861"}],"region":"colorado"},
+{"department":"tr_colorado","provenance":[{"at":"12 Stat. 172 secs 2 3 11","source":"STAT"},{"at":"12 Stat. 1163","source":"KAPPLER"},{"at":"s.2","source":"NOTE-governments-stores-1861"}],"region":"colorado"},
 {"department":"st_south_carolina","provenance":[{"at":"(map draft regions.csv counties_1861)","source":"MAP-LANE"},{"at":"(department structure)","source":"OOB-LANE"}],"region":"columbia_sc"},
 {"department":"st_tennessee","provenance":[{"at":"(map draft regions.csv counties_1861)","source":"MAP-LANE"},{"at":"(department structure)","source":"OOB-LANE"}],"region":"columbia_tn"},
 {"department":"st_kentucky","provenance":[{"at":"(map draft regions.csv counties_1861)","source":"MAP-LANE"},{"at":"(department structure)","source":"OOB-LANE"}],"region":"columbus_ky"},

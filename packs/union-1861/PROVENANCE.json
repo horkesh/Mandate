@@ -292,6 +292,16 @@
       "licenceReadOn": null
     },
     {
+      "key": "KAPPLER",
+      "title": "C. J. Kappler, Indian Affairs: Laws and Treaties, vol. 2, Treaties (GPO, 1904), citing 12 Stat. 1163, the treaty of Fort Wise with the Arapaho and Cheyenne, 18 February 1861",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "the Oklahoma State University Tribal Treaties Database text of the treaty (treaties.okstate.edu), read for its date, parties and ratification line",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
       "key": "LANE-0.3",
       "title": "Lane 0.3 import (this lane): design parameters and modelling rules, named as such in notes/lane-0.3-union-data.md",
       "kind": "own-work",

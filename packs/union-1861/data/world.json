@@ -41,7 +41,7 @@
 {"faction":"union","id":"st_vermont","kind":"state_government","name":"department.st_vermont.name","provenance":[{"at":"department structure of the oob draft","source":"OOB-LANE"}]},
 {"faction":null,"id":"st_virginia","kind":"state_government","name":"department.st_virginia.name","provenance":[{"at":"department structure of the oob draft","source":"OOB-LANE"}]},
 {"faction":"union","id":"st_wisconsin","kind":"state_government","name":"department.st_wisconsin.name","provenance":[{"at":"department structure of the oob draft","source":"OOB-LANE"}]},
-{"faction":"union","id":"tr_colorado","kind":"territorial_government","name":"department.tr_colorado.name","provenance":[{"at":"12 Stat. 172 secs 2 3 11","source":"STAT"},{"at":"s.2","source":"NOTE-governments-stores-1861"}]},
+{"faction":"union","id":"tr_colorado","kind":"territorial_government","name":"department.tr_colorado.name","provenance":[{"at":"12 Stat. 172 secs 2 3 11","source":"STAT"},{"at":"12 Stat. 1163","source":"KAPPLER"},{"at":"s.2","source":"NOTE-governments-stores-1861"}]},
 {"faction":"union","id":"tr_dakota","kind":"territorial_government","name":"department.tr_dakota.name","provenance":[{"at":"12 Stat. 239 secs 2 3 11","source":"STAT"},{"at":"s.2","source":"NOTE-governments-stores-1861"}]},
 {"faction":"union","id":"tr_nebraska","kind":"territorial_government","name":"department.tr_nebraska.name","provenance":[{"at":"10 Stat. 277 secs 2 and 12","source":"STAT"},{"at":"s.2","source":"NOTE-governments-stores-1861"}]},
 {"faction":"union","id":"tr_new_mexico","kind":"territorial_government","name":"department.tr_new_mexico.name","provenance":[{"at":"9 Stat. 446 secs 3 and 12","source":"STAT"},{"at":"s.2","source":"NOTE-governments-stores-1861"}]},
