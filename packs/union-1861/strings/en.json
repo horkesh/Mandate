@@ -23,6 +23,7 @@
   "department_kind.state_government": "State government",
   "department_kind.territorial_government": "Territorial government",
   "department_kind.federal_district": "Federal district",
+  "department_kind.nation_government": "Nation government",
   "department_kind.treasury": "Treasury",
   "department_kind.war": "War",
   "faction.confederate": "the Confederate States",

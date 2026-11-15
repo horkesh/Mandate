@@ -309,6 +309,12 @@
         "id": "federal_district",
         "name": "department_kind.federal_district",
         "government": true
+      },
+      {
+        "id": "nation_government",
+        "name": "department_kind.nation_government",
+        "government": true,
+        "selfGoverning": true
       }
     ],
     "arms": [

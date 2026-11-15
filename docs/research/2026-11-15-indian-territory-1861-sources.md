@@ -116,6 +116,14 @@ From Emory's report of 19 May 1861 and the documents beside it (OR I-1 pp. 648�
 
 **New internal edges** (adjacency from the bounds above): Cherokee–Muscogee (the Creek north line is the Cherokee south line), Muscogee–Seminole (the Seminole tract is cut from the Creek country), Seminole–Cherokee (the Seminole north line), Muscogee–Choctaw (the Canadian), Seminole–Chickasaw (the Canadian), Choctaw–Chickasaw (the Island Bayou line), Chickasaw–Leased District (the 98th meridian), Seminole–Leased District (across the Canadian, 98°–100°). **No road or river is sourced for any of them**; the old `it_cherokee_creek`–`it_choctaw_chickasaw` road (13 days) is the map draft's own estimate. The Osage, Quapaw and Seneca-Shawnee homes (the north-east corner and Kansas) are **not placed**: no source read here fixes their lands, and three small peoples do not need regions until a situation needs them.
 
+### 5.2a As applied (branch `research-it-split`)
+
+The patch was applied by hand to the source CSVs after `selfgoverning-rule` landed (decisions 0070 and 0071), and `data/` was regenerated. Where the patch left a choice open:
+- **The three unsourced re-attachments keep the draft's anchor** (the old box's reference point) and are marked `[needs-source]` in each edge's notes: `tx_northeast` and `tx_west` go to `it_choctaw` (the old anchor, Boggy Depot, is the Choctaw region's, so their lengths are unchanged); `kansas_west` goes to `it_cherokee` (its old anchor lay by Tahlequah).
+- **Road lengths** are derived by the map draft's own method (`ceil(1.25 × straight line × terrain / 12)` for roads, `ceil(1.5 × straight line / 80)` for the river), checked first against all ten old Indian Territory edges, which it reproduces exactly. Only edges whose anchor moved changed: `mo_southwest`–`it_cherokee` 16 to 14 days, `ar_northwest`–`it_cherokee` road 11 to 8 and river 2 to 1, `kansas_west`–`it_cherokee` 24 to 26. The Arkansas and Texas roads to the Choctaw are unchanged (20, 33, 19, 9 and 41 days). The nine new internal adjacencies are derived from the new reference points and carry `[needs-source]` for the road itself.
+- **Reference points are design parameters** (anchors named in 5.2; approximate coordinates), not sourced.
+- **The done check** passes all six criteria; see the report for what moved (the Union run's final hash, from `109dd2c1e306a0f6` to `a652d5129f954a54`, because the World changed; the testbed's is unchanged; the run's arrivals, contests, control changes, supply and pocket counts and the mechanic bands are identical).
+
 ### 5.3 What the split does not fix
 
 - The Choctaw government's election date for Hudson, and the Chickasaw governor in March 1861, stay inferred (GS 1.1).

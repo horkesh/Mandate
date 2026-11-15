@@ -39,8 +39,12 @@ describe('Union 1861 world v2', () => {
 
   it('loses nothing from the map and people drafts', () => {
     const regionIds = new Set(world.regions.map((r) => r.id as string));
-    expect(draftIds('map/regions.csv', 'id').filter((id) => !regionIds.has(id))).toEqual([]);
-    expect(world.edges.length).toBe(draftIds('map/edges.csv', 'from').length + 1); // the Mediterranean leg added after review
+    // The two Indian Territory boxes of the draft are split into one region per nation and the Leased District (0069, 0070).
+    const split = new Set(['it_cherokee_creek', 'it_choctaw_chickasaw']);
+    expect(draftIds('map/regions.csv', 'id').filter((id) => !regionIds.has(id) && !split.has(id))).toEqual([]);
+    for (const id of ['it_cherokee', 'it_muscogee', 'it_seminole', 'it_choctaw', 'it_chickasaw', 'it_leased_district']) expect(regionIds.has(id), id).toBe(true);
+    // The Mediterranean leg was added after review; the split replaced the box-to-box road with nine adjacencies (a net eight more edges).
+    expect(world.edges.length).toBe(draftIds('map/edges.csv', 'from').length + 1 + 8);
     const people = new Set(world.people.map((p) => p.id as string));
     expect(draftIds('people/people.csv', 'id').filter((id) => !people.has(id))).toEqual([]);
   });
@@ -66,8 +70,11 @@ describe('Union 1861 world v2', () => {
     for (const r of ['richmond', 'nashville', 'raleigh', 'little_rock']) expect(controlOf(r)).toEqual([]);
     // Loyalty never stands in for control: the border states' proposals are not in the table (they wait for a loyalty field).
     for (const r of ['baltimore', 'delaware', 'bluegrass', 'st_louis', 'frederick_md']) expect(controlOf(r)).toEqual([]);
-    const neutral = world.departments.filter((d) => d.faction === null).map((d) => d.id as string).sort();
+    const neutral = world.departments.filter((d) => d.faction === null && d.kind === 'state_government').map((d) => d.id as string).sort();
     expect(neutral).toEqual(['st_arkansas', 'st_delaware', 'st_kentucky', 'st_maryland', 'st_missouri', 'st_north_carolina', 'st_tennessee', 'st_virginia']);
+    // The nations' governments hold no side either: each is its own nation's, with its own polity (0069, 0070).
+    const nations = world.departments.filter((d) => d.faction === null && d.kind === 'nation_government').map((d) => d.id as string).sort();
+    expect(nations).toEqual(['nation_cherokee', 'nation_chickasaw', 'nation_choctaw', 'nation_muscogee', 'nation_seminole']);
   });
 
   it('keeps the licence-unclear and unlicensed sources out of the registry', () => {
@@ -196,6 +203,8 @@ describe('Union 1861 world v2', () => {
     expect(start.governments.map((g) => g.region as string).sort()).toEqual(land);
     // Every named government is either a state government, the one state its counties lie in, or a territorial or district government named in the statutes (research note 2026-11-15, section 2).
     const federal = new Map([['washington', 'us_district_columbia'], ['nebraska', 'tr_nebraska'], ['dakota', 'tr_dakota'], ['colorado', 'tr_colorado'], ['new_mexico', 'tr_new_mexico'], ['arizona', 'tr_new_mexico']]);
+    // The Indian Territory nations: each region its own nation's government, a self-governing department with its own polity (0069, 0070).
+    const nations = new Map([['it_cherokee', 'nation_cherokee'], ['it_muscogee', 'nation_muscogee'], ['it_seminole', 'nation_seminole'], ['it_choctaw', 'nation_choctaw'], ['it_chickasaw', 'nation_chickasaw']]);
     const column = (path: string, key: string, value: string) => {
       const t = parseCsv(read(path)!);
       const [k, v] = [t.header.indexOf(key), t.header.indexOf(value)];
@@ -211,15 +220,27 @@ describe('Union 1861 world v2', () => {
         expect(dept.get(g.department)!.faction).toBe('union');
         continue;
       }
+      if (nations.has(g.region as string)) {
+        const d = dept.get(g.department)!;
+        expect(g.department).toBe(nations.get(g.region as string));
+        expect(d.kind).toBe('nation_government');
+        expect(d.faction).toBeNull();
+        expect(d.polity, g.department).toBe(String(g.department).replace('nation_', ''));
+        continue;
+      }
       expect(dept.get(g.department)!.kind).toBe('state_government');
       expect(states(g.region)).toHaveLength(1);
       expect(`st_${states(g.region)[0]!.toLowerCase().replace(/[^a-z]+/g, '_')}`).toBe(g.department);
     }
-    // The unknowns: the Indian Territory nations (until the gate reviews the proposed patch) and three regions across state lines.
+    // The unknowns: the Leased District (its peoples spoke through their own chiefs, 0069) and three regions across state lines.
     const unknown = start.governments.filter((g) => g.department === 'unknown').map((g) => g.region as string).sort();
-    expect(unknown).toEqual(['eastern_shore', 'it_cherokee_creek', 'it_choctaw_chickasaw', 'michigan_wisconsin', 'new_england']);
+    expect(unknown).toEqual(['eastern_shore', 'it_leased_district', 'michigan_wisconsin', 'new_england']);
     const notes = column('source/scenarios/march_1861/governments.csv', 'region', 'notes');
     for (const r of unknown) expect(notes.get(r), r).not.toBe('');
-    expect(notes.get('it_cherokee_creek')).toContain('research lane');
+    expect(notes.get('it_leased_district')).toContain('No single government is sourced');
+    // The peoples the split gives no region are named on the rows that would otherwise govern them (0070).
+    expect(notes.get('it_cherokee')).toContain('Quapaw');
+    expect(notes.get('kansas_east')).toContain('Osage');
+    expect(notes.get('kansas_west')).toContain('Osage');
   });
 });
