@@ -88,6 +88,8 @@ export function contestPhase(ctx: TickContext, state: State): { readonly state: 
   const result = contest({ map, index: buildControlIndex(map, state.regionControl), network, month }, state);
   for (const r of result.records) {
     ctx.mapEvents.push({ event: 'contest', record: r });
+    // A stalemate (the stronger side already holds it all) is a record, not a live contest: it fires nothing (exit review S2c).
+    if (r.kind === 'stalemate') continue;
     if (r.gainer !== null) fire(ctx, r.kind === 'occupation' ? 'combat.occupation' : 'combat.contest', r.deltaPermille);
     else fire(ctx, 'combat.contest', 0);
   }

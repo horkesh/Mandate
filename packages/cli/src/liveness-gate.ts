@@ -85,9 +85,15 @@ function notHere(why: string): GateBand {
 const SITUATIONS_UNAUTHORED = 'union-1861 has no situations authored until the March 1861 authoring lane (0042, 0046); the testbed run exercises them';
 const VALUES_EMPTY = 'quiet by design on v2 packs until Phase 1 gives people values and regard (0058); the kernel test drives it through explicit trait inputs';
 const NO_PROPOSER = 'nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it';
+const TRAPPED_AT_WASHINGTON =
+  'in the Union run it fires only for the 600 regulars left at 0 permille in Washington from day 19, with Maryland\'s neutral ground behind them, every day to the end: a frozen stand-off, not a live mechanic (exit review S2c), so its count is not banded; the kernel test drives it';
 
-/** Mechanics that fire in neither reference run: the reason, and the kernel test that proves the mechanic is alive. */
+/**
+ * Mechanics that no reference run exercises live: the reason, and the kernel test that proves the mechanic is alive.
+ * Most fire in no run; one (`combat.retreat_blocked`) fires only from a frozen stand-off, which a band must not pin.
+ */
 export const QUIET: Readonly<Record<string, QuietReason>> = {
+  'combat.retreat_blocked': { why: TRAPPED_AT_WASHINGTON, test: 'packages/kernel/test/contest.test.ts', needle: 'stays put with nowhere to go' },
   'command.government_closed': { why: 'no pack situation closes a neutral government yet (the closing of a neutral government waits for authored situations)', test: 'packages/kernel/test/governments.test.ts', needle: 'takes the default "close" on day 2' },
   'command.government_reopened': { why: 'no pack situation reopens one yet', test: 'packages/kernel/test/governments.test.ts', needle: 'reopening and repeats are plain' },
   'command.side_changed': { why: 'a neutral government changes side only by a situation, and none is authored yet (0065, 0067)', test: 'packages/kernel/test/department-sides.test.ts', needle: 'end to end through the tick: on day 2 its land stops being neutral ground' },
@@ -113,10 +119,12 @@ const PEACE_QUIET: readonly string[] = ['orders.relayed', 'orders.obeyed', 'plan
 
 /** The union-1861 reference run: 75 days from 5 March 1861, at war (the war gate's labelled option, 0064). */
 const UNION_BANDS: Record<string, GateBand> = {
-  'combat.contest': around(62),
+  // The live contest at Washington, days 14 to 20 (exit review S2c). From day 20 the attacker holds all of it, and
+  // each later day is a stalemate, which records no gain and fires nothing: the band is no longer set from a stand-off.
+  'combat.contest': around(7),
   'combat.occupation': around(29),
   'combat.retreat': notHere('no side is pressed below the retreat threshold in 75 days; the testbed run fires it'),
-  'combat.retreat_blocked': around(57),
+  'combat.retreat_blocked': notHere(TRAPPED_AT_WASHINGTON),
   'control.changed': around(36),
   'control.threshold_crossed': around(6),
   'forces.stores_fell': around(7),
@@ -153,7 +161,7 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'combat.contest': around(14),
   'combat.occupation': around(6),
   'combat.retreat': around(2),
-  'combat.retreat_blocked': notHere('retreats are blocked only where a contested side has nowhere to go; the Union run fires it'),
+  'combat.retreat_blocked': notHere('retreats are blocked only where a contested side has nowhere to go, which no testbed contest leaves; the kernel test drives it'),
   'control.changed': around(20),
   'control.threshold_crossed': around(12),
   'forces.stores_fell': around(176),
