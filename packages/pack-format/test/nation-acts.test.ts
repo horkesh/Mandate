@@ -163,6 +163,11 @@ describe('every route a choice can take (gate re-check R1, R2, N4)', () => {
     const middle = item('a_middle', { event: goal, effects: [setFlag('ordered')] });
     const nation = nationNotice('b_council', { event: { flag: 'ordered' } });
     expect(raised([middle, nation])).toEqual(['error self-governing-choice b_council']);
+    // The message names what it depends on: the standing goal of the post, not a decision (the standing reviewer's N6).
+    const sink = new IssueSink();
+    nationActs([middle, nation], PACK, sink);
+    expect(sink.issues[0]!.message).toContain('depends on the standing goal of post "army_x", through "a_middle"');
+    expect(sink.issues[0]!.message).not.toContain('decision');
     // With a note on the route through the middle notice it is still refused: 0070 refuses choices outright, notes cover only news.
     expect(raised([middle, { ...nation, def: { ...(nation.def as object), gateReview: { notes: { 'route|a_middle': 'The nation answers it.' } } } as never }])).toEqual(['error self-governing-choice b_council']);
     // Positive control: a middle notice reading no goal is only an event route, needing its note.

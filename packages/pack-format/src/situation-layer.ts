@@ -121,7 +121,7 @@ export function nationActs(items: readonly { readonly file: string; readonly def
     // A direct read of a standing goal is reported above, as its own error; what is left is a choice reached through another item.
     const chosen = (taint.get(def.id) ?? []).filter((t) => !(t.atrocity.startsWith('goal:') && t.via.length === 0));
     for (const t of chosen) {
-      err('self-governing-choice', 'event', `"${def.id}" moves ${moves[0]!.subject} but depends on the principal's decision "${t.atrocity}"${t.via.length === 0 ? '' : `, through ${t.via.map((v) => `"${v}"`).join(' then ')}`}`, 'no choice of a principal moves a nation by any route: reading the decision, a flag an option sets, or a chain; a nation answers events and news, never a choice (0070)');
+      err('self-governing-choice', 'event', `"${def.id}" moves ${moves[0]!.subject} but depends on ${t.atrocity.startsWith('goal:') ? `the standing goal of post "${t.atrocity.slice('goal:'.length)}"` : `the principal's decision "${t.atrocity}"`}${t.via.length === 0 ? '' : `, through ${t.via.map((v) => `"${v}"`).join(' then ')}`}`, 'no choice of a principal moves a nation by any route: reading the decision, a flag an option sets, or a chain; a nation answers events and news, never a choice (0070)');
     }
     if (chosen.length > 0) continue;
     for (const dep of triggerDependencies(def, items)) {
