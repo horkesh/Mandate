@@ -174,7 +174,8 @@ describe('Union 1861 world v2', () => {
   it('gives each land region its state’s government from the map draft’s county lists, and leaves the rest unknown with a reason (0058)', () => {
     const land = world.regions.filter((r) => r.kind === 'land' || r.kind === 'key_point').map((r) => r.id as string).sort();
     expect(start.governments.map((g) => g.region as string).sort()).toEqual(land);
-    // Every named government is a state government, and is the one state its counties lie in.
+    // Every named government is either a state government, the one state its counties lie in, or a territorial or district government named in the statutes (research note 2026-11-15, section 2).
+    const federal = new Map([['washington', 'us_district_columbia'], ['nebraska', 'tr_nebraska'], ['dakota', 'tr_dakota'], ['colorado', 'tr_colorado'], ['new_mexico', 'tr_new_mexico'], ['arizona', 'tr_new_mexico']]);
     const column = (path: string, key: string, value: string) => {
       const t = parseCsv(read(path)!);
       const [k, v] = [t.header.indexOf(key), t.header.indexOf(value)];
@@ -184,13 +185,19 @@ describe('Union 1861 world v2', () => {
     const states = (region: string) => [...new Set(counties.get(region)!.split(';').filter(Boolean).map((c) => c.split(':')[0]!.trim()))];
     const dept = new Map(world.departments.map((d) => [d.id as string, d]));
     for (const g of start.governments.filter((x) => x.department !== 'unknown')) {
+      if (federal.has(g.region as string)) {
+        expect(g.department).toBe(federal.get(g.region as string));
+        expect(['territorial_government', 'federal_district']).toContain(dept.get(g.department)!.kind);
+        expect(dept.get(g.department)!.faction).toBe('union');
+        continue;
+      }
       expect(dept.get(g.department)!.kind).toBe('state_government');
       expect(states(g.region)).toHaveLength(1);
       expect(`st_${states(g.region)[0]!.toLowerCase().replace(/[^a-z]+/g, '_')}`).toBe(g.department);
     }
-    // The unknowns: the Indian Territory nations, the territories and the District (no department in the pack), and three regions across state lines.
+    // The unknowns: the Indian Territory nations (until the gate reviews the proposed patch) and three regions across state lines.
     const unknown = start.governments.filter((g) => g.department === 'unknown').map((g) => g.region as string).sort();
-    expect(unknown).toEqual(['arizona', 'colorado', 'dakota', 'eastern_shore', 'it_cherokee_creek', 'it_choctaw_chickasaw', 'michigan_wisconsin', 'nebraska', 'new_england', 'new_mexico', 'washington']);
+    expect(unknown).toEqual(['eastern_shore', 'it_cherokee_creek', 'it_choctaw_chickasaw', 'michigan_wisconsin', 'new_england']);
     const notes = column('source/scenarios/march_1861/governments.csv', 'region', 'notes');
     for (const r of unknown) expect(notes.get(r), r).not.toBe('');
     expect(notes.get('it_cherokee_creek')).toContain('research lane');
