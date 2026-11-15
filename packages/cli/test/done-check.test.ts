@@ -9,6 +9,7 @@ import {
   evaluateDoneCheck,
   hashProblems,
   livenessProblems,
+  MECHANICS_RUN,
   resumeProblems,
   runDoneCheck,
   SECTION_TEN_TESTS,
@@ -49,6 +50,13 @@ describe('the done check on union-1861 at war and the testbed', () => {
     expect(s.finalDay).toBe(75);
     expect(s.logEntries).toBeGreaterThan(0);
     expect(s.rejections).toBe(0);
+  });
+
+  it('says the Union run is a mechanics run whose outcome is not a war; the testbed line says nothing of the kind (0072)', () => {
+    const behaviour = result.criteria.find((c) => c.id === 'behaviour')!;
+    expect(behaviour.evidence.find((e) => e.startsWith(union().name))).toContain(MECHANICS_RUN);
+    expect(MECHANICS_RUN).toContain('its outcome is not a war');
+    expect(behaviour.evidence.find((e) => e.startsWith(testbed().name))).not.toContain(MECHANICS_RUN);
   });
 
   it('hashes every day in the checked run, and the timed run hashes none but the last', () => {

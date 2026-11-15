@@ -17,7 +17,9 @@
  *   empty, no intelligence bias. A caller may hand explicit inputs instead
  *   (`SeatsWorldOptions.traits`); the kernel tests of objections, filter holds
  *   and an intelligence chief's bias do, since v2 people carry none (0058).
- * - **A faction's objective** is the other faction's capital in Phase 0 (0058).
+ * - **A faction's objective** is a LABELLED STAND-IN (0058): the other
+ *   faction's capital, when there are exactly two. Its replacement is the
+ *   goals of Phase 1's principals (0058, 0072).
  */
 import { strictCompare } from '../compare.ts';
 import { wireOwnerOf, type ControlIndex } from '../control-index/control-index.ts';
@@ -66,7 +68,7 @@ export interface SeatFaction {
   readonly principal: PersonId;
   /** Where the principal sits: orders start and his reports end here (the start's capital). */
   readonly seatRegion: RegionId;
-  /** The other faction's capital, when there are exactly two (0058); null otherwise. */
+  /** STAND-IN (0058): the other faction's capital, when there are exactly two; null otherwise. */
   readonly objective: RegionId | null;
 }
 

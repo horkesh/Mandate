@@ -51,6 +51,12 @@ export interface Criterion {
   readonly evidence: readonly string[];
 }
 
+/**
+ * What a run started at war by the labelled option is (0072): the stand-in generic principals march their own
+ * capitals' garrisons on each other's capitals, so it proves the machinery and its outcome is not a war.
+ */
+export const MECHANICS_RUN = ' (a mechanics run on stand-in principals: its outcome is not a war, 0072)';
+
 const fires = (s: Phase0Summary, mechanic: string): number => s.liveness.find((r) => r.mechanic === mechanic)?.fires ?? 0;
 
 /** Criterion 1, for one run: forces move, ground changes hands through the contest, and the map phases derive. */
@@ -160,7 +166,7 @@ export function evaluateDoneCheck(input: DoneCheckInput): Criterion[] {
       id: 'behaviour',
       text: 'rule seats holding standing goals move divisions, change control through the simple contest, and derive fronts, pockets and supply',
       problems: runs.flatMap((r) => behaviourProblems(r.checked)),
-      evidence: runs.map((r) => `${r.name}: ${fires(r.checked, 'movement.arrived')} arrivals, ${fires(r.checked, 'combat.contest')} contests, ${fires(r.checked, 'control.changed')} control changes, ${r.checked.checkpoints.at(-1)?.scores.factions.map((f) => `${f.faction} ${f.frontSegments} front segments ${f.supplied} supplied ${f.pockets} pockets`).join('; ') ?? 'no checkpoint'}`),
+      evidence: runs.map((r) => `${r.name}${r.checked.atWar ? MECHANICS_RUN : ''}: ${fires(r.checked, 'movement.arrived')} arrivals, ${fires(r.checked, 'combat.contest')} contests, ${fires(r.checked, 'control.changed')} control changes, ${r.checked.checkpoints.at(-1)?.scores.factions.map((f) => `${f.faction} ${f.frontSegments} front segments ${f.supplied} supplied ${f.pockets} pockets`).join('; ') ?? 'no checkpoint'}`),
     },
     {
       id: 'hash',
