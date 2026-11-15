@@ -67,11 +67,12 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0061](0061-how-the-0058-fields-were-built.md) | How the 0058 format fields were built | accepted; amended by 0064 |
 | [0062](0062-the-planner-shape.md) | The planner's shape: generate, filter and score, with one level of methods | accepted |
 | [0063](0063-atrocity-levers-are-watched.md) | An option that hurts the enemy in response to an atrocity is watched | accepted |
-| [0064](0064-forces-command-movement-and-the-contest.md) | Forces, command, movement, infrastructure and the control contest | accepted; amended by 0066 |
+| [0064](0064-forces-command-movement-and-the-contest.md) | Forces, command, movement, infrastructure and the control contest | accepted; amended by 0066, 0072 |
 | [0065](0065-a-governments-side-is-state.md) | A government's side can change in play, and stores carry their date | accepted; amended by 0067 |
 | [0066](0066-the-war-begins-by-each-governments-decision.md) | The war begins for each side by its own government's decision | accepted; amended by 0068 |
 | [0067](0067-government-sides-as-built.md) | Government sides as built, and Fort Pickens' stores unknown | accepted |
-| [0068](0068-the-runner-and-the-done-check.md) | The headless runner, the liveness gate and the Phase 0 done check | accepted |
+| [0068](0068-the-runner-and-the-done-check.md) | The headless runner, the liveness gate and the Phase 0 done check | accepted; amended by 0072 |
 | [0069](0069-the-indian-territory-nations-govern-themselves.md) | The Indian Territory nations govern themselves, and only their own acts move them | accepted; amended by 0070 |
 | [0070](0070-a-nations-act-is-its-own.md) | A nation's act must be its own, and must stay with its own people | accepted; amended by 0071 |
 | [0071](0071-cleared-flags-and-goals-are-routes.md) | A cleared flag is a route, and a standing goal is a choice | accepted |
+| [0072](0072-phase-0-closes-with-a-close-out.md) | Phase 0 closes after one close-out lane | accepted |
