@@ -25,7 +25,7 @@ function pack(signatures: ReturnType<typeof refused>[], over: { nationKind?: boo
     gate: { register: { topics: [{ refused: signatures }] } },
   } as unknown as Pick<PackData, 'world' | 'scenarios' | 'gate'>;
 }
-const ALL = '^(recruit|manpower|levy|draft|quota|enlist|region-population)';
+const ALL = '^(region-)?(recruit|manpower|levy|draft|quota|enlist|population)';
 
 describe('every pack that has self-governing governments covers them', () => {
   for (const id of v2Packs()) {
@@ -57,12 +57,18 @@ describe('positive controls: the probe finds what a register leaves open', () =>
   });
 
   it('a signature for some stems only, or aimed at other subjects, leaves the rest open', () => {
-    const some = uncoveredProbes(pack([refused('^recruit', '^(nation_x|r1)$')]));
+    const some = uncoveredProbes(pack([refused('^(region-)?recruit', '^(nation_x|r1)$')]));
     expect(new Set(some.map((o) => o.stem))).toEqual(new Set(MANPOWER_PROBES.map((p) => p.stem).filter((s) => s !== 'recruit')));
     const elsewhere = uncoveredProbes(pack([refused(ALL, '^other_')]));
     expect(elsewhere).toHaveLength(MANPOWER_PROBES.length * 2);
     // A signature on the field alone is the old gap, covered here only because it refuses regardless of subject.
     expect(uncoveredProbes(pack([refused(ALL, null)]))).toEqual([]);
+  });
+
+  it('one spelling is not enough: an anchored ^recruit covers recruitment and misses region-recruitment (the gate review)', () => {
+    const open = uncoveredProbes(pack([refused('^(recruit|manpower|levy|draft|quota|enlist|population)', '^(nation_x|r1)$')]));
+    expect(new Set(open.map((o) => o.field))).toEqual(new Set(MANPOWER_PROBES.filter((p) => p.field.startsWith('region-')).map((p) => p.field)));
+    expect(MANPOWER_PROBES.map((p) => p.field)).toEqual(expect.arrayContaining(['recruitment', 'region-recruitment', 'population', 'region-population']));
   });
 
   it('a second region the nation governs in another start must be covered too', () => {

@@ -9,16 +9,22 @@
 import { signatureRefuses } from '@mandate/pack-format';
 import type { PackData } from '@mandate/pack-format';
 
-/** A probe field id for each stem of the words a nation's land must never be drawn on: recruitment, recruits, manpower, levy, draft, quota, enlistment, population. */
-export const MANPOWER_PROBES: readonly { readonly stem: string; readonly field: string }[] = [
+/** The words a nation's land must never be drawn on, each as a field id: recruitment, recruits, manpower, levy, draft, quota, enlistment, population. */
+const FIELD_IDS: readonly { readonly stem: string; readonly field: string }[] = [
   { stem: 'recruit', field: 'recruitment' },
   { stem: 'manpower', field: 'manpower' },
   { stem: 'levy', field: 'levy' },
   { stem: 'draft', field: 'draft' },
   { stem: 'quota', field: 'quota' },
   { stem: 'enlist', field: 'enlistment' },
-  { stem: 'population', field: 'region-population' },
+  { stem: 'population', field: 'population' },
 ];
+
+/**
+ * A probe field id for each stem, in two spellings: bare (`recruitment`) and aimed at a region (`region-recruitment`), since
+ * an anchored `^recruit` passes the first and misses the second (the gate review).
+ */
+export const MANPOWER_PROBES: readonly { readonly stem: string; readonly field: string }[] = FIELD_IDS.flatMap((p) => [p, { stem: p.stem, field: `region-${p.field}` }]);
 
 /** The pack's self-governing departments, and the regions one of them governs in any scenario start. */
 export function selfGoverningSubjects(pack: Pick<PackData, 'world' | 'scenarios'>): { readonly departments: string[]; readonly regions: string[] } {

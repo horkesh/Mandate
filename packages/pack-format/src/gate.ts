@@ -71,7 +71,12 @@ export const TopicSchema = z.strictObject({
          * is aimed at a nation). With `fieldPattern`, both must match; alone, it refuses any proposal aimed at the subject.
          * A proposal with no subject never matches it.
          */
-        subjectPattern: regex.nullable().default(null),
+        subjectPattern: regex
+          .nullable()
+          .default(null)
+          .describe(
+            'A regex over the subject a proposal is aimed at. With fieldPattern both must match. Alone it refuses EVERY field aimed at that subject, a nation’s own change of side included: give it a fieldPattern unless that is what you mean. A proposal with no subject never matches it.',
+          ),
         optionPattern: regex.nullable().default(null),
         /** Matched against an option's label text in every locale (review N1: renaming an id is no way round). */
         labelPattern: regex.nullable().default(null),

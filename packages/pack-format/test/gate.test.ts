@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
-import { C2_MINIMUM, checkGate, errorsOf, formatIssue, gateContentHash, GATE_QUESTIONS_PARTIAL, GATE_QUESTIONS_TESTED, IssueSink, loadPack, proximityHit, publishedSchemas, readGate, readSituations, releaseProblems, triggerMatches, type Issue } from '../src/index.ts';
+import { C2_MINIMUM, checkGate, errorsOf, formatIssue, gateContentHash, GATE_QUESTIONS_PARTIAL, GATE_QUESTIONS_TESTED, IssueSink, loadPack, proximityHit, publishedSchemas, readGate, readSituations, releaseProblems, signatureRefuses, triggerMatches, type Issue } from '../src/index.ts';
 import { editJson, readTestbed, testbedFiles, type Edits } from './support/testbed.ts';
 
 /**
@@ -235,6 +235,17 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     const subjectOnly = refuse({ subjectPattern: '^s_province$' });
     firesAt(merge(other, subjectOnly), 'gate-refused', { file: sit('eastwatch_stalls'), at: 'options[1].effects[1]' });
     expect(issues(merge(recruit('n_war'), subjectOnly)).filter((i) => i.kind === 'gate-refused')).toEqual([]);
+  });
+
+  it('a refused signature’s patterns are compiled exactly as written, never lower-cased, so escapes keep their meaning (0070 review N2)', () => {
+    // `\D` is "not a digit": lower-cased it would be `\d`, "a digit", and refuse the opposite set.
+    const sig = { fieldPattern: String.raw`^\D+$`, subjectPattern: String.raw`^\W*Nation\W*$` };
+    expect(signatureRefuses(sig, 'levy', 'Nation')).toBe(true);
+    expect(signatureRefuses(sig, 'levy2', 'Nation')).toBe(false);
+    // The subject pattern is case-sensitive as written: `Nation` is not `nation`.
+    expect(signatureRefuses(sig, 'levy', 'nation')).toBe(false);
+    expect(signatureRefuses({ fieldPattern: null, subjectPattern: String.raw`^\D$` }, 'any', '7')).toBe(false);
+    expect(signatureRefuses({ fieldPattern: null, subjectPattern: String.raw`^\D$` }, 'any', 'x')).toBe(true);
   });
 
   it('A2: the placement is one the register allows', () => {
