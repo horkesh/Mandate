@@ -1,6 +1,6 @@
 # 0065: A government's side can change in play, and stores carry their date
 
-Status: accepted (2026-11-15). Amends 0050 and 0055. From the research lane on governments and stores (`docs/research/2026-11-15-governments-and-stores-1861.md`), which found that a department's faction is World data and cannot change in play. Phase 0 could close a neutral government's land, but no situation could take Virginia out of the Union in April 1861, or move a nation into a treaty. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.
+Status: accepted (2026-11-15). Amends 0050 and 0055. Amended by 0067 (Fort Pickens' stores are unknown; the holder's-side rule as built). From the research lane on governments and stores (`docs/research/2026-11-15-governments-and-stores-1861.md`), which found that a department's faction is World data and cannot change in play. Phase 0 could close a neutral government's land, but no situation could take Virginia out of the Union in April 1861, or move a nation into a treaty. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.
 
 ## Decision
 
