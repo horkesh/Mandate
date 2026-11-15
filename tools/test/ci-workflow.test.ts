@@ -40,6 +40,8 @@ describe('the CI workflow', () => {
     expect(all.check).toMatch(/run: npm run run:headless -- testbed/);
     // The seats layer's run hashes every day, replays its log and resumes from a save (lane 0.6).
     expect(all.check).toMatch(/run: npm run run:seats -- testbed \d+ --resume-at \d+ --label ci-determinism/);
+    // The Phase 0 done check (lane 0.8) hashes every day on both packs and writes the summaries the comparison reads.
+    expect(all.check).toMatch(/run: npm run run:done-check -- --label ci-determinism/);
     expect(all.determinism).toMatch(/needs: check/);
     expect(all.determinism).toMatch(/compare-runs\.ts ci-results\/determinism-ubuntu-24\.04 ci-results\/determinism-windows-2025/);
   });

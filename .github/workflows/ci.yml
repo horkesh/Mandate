@@ -1,4 +1,4 @@
-# Mandate CI (FOUNDATION section 11.1 and 11.9).
+# Mandate CI (FOUNDATION section 11.1 and 11.9; the Phase 0 done check, section 12).
 #
 # On Linux and Windows: install, run every part of `npm run check` as its own
 # step, then a headless determinism run on each pack. A final job compares the
@@ -91,6 +91,11 @@ jobs:
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: npm run run:seats -- union-1861 75 --resume-at 30 --label ci-determinism
 
+      - id: done_check
+        name: Phase 0 done check (union-1861 at war for 75 days and the testbed for 120; a hash every day, replay, resume, liveness gate, tick budget)
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npm run run:done-check -- --label ci-determinism
+
       - id: upload
         name: Upload determinism summaries
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
@@ -116,6 +121,7 @@ jobs:
           DET_UNION: ${{ steps.determinism_union.outcome }}
           DET_SEATS: ${{ steps.determinism_seats.outcome }}
           DET_SEATS_UNION: ${{ steps.determinism_seats_union.outcome }}
+          DONE_CHECK: ${{ steps.done_check.outcome }}
           UPLOAD: ${{ steps.upload.outcome }}
         run: |
           tests="not run"
@@ -139,6 +145,7 @@ jobs:
             echo "| determinism run: union-1861 | $DET_UNION |"
             echo "| determinism run: seats layer (testbed) | $DET_SEATS |"
             echo "| determinism run: seats layer (union-1861) | $DET_SEATS_UNION |"
+            echo "| Phase 0 done check (union-1861 at war, testbed) | $DONE_CHECK |"
             echo "| upload summaries | $UPLOAD |"
           } | tee -a "$GITHUB_STEP_SUMMARY"
 

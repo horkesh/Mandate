@@ -11,8 +11,9 @@
  * Two jobs in Phase 0:
  * - a commander with a standing goal (hold, or advance to a region) picks his
  *   next step from the options the kernel judged consistent with him;
- * - a principal sends his side's opening advance on the objective, and goes
- *   around a relaying office that objects, by special messenger;
+ * - a principal sends his side's opening advance on the objective the first morning his side is
+ *   at war (the pack's war flag, 0064), and goes around a relaying office that
+ *   objects, by special messenger;
  * - a holder handed a situation decides it by his values: the option the
  *   kernel scored as honouring them most (lane 0.7). A rule-driven principal's
  *   own situations take their historical default inside the kernel (a history
@@ -64,9 +65,11 @@ function freshObjections(reports: readonly ReportView[], day: number): ReportVie
 
 /** A principal's orders for the day. */
 export function principalOrders(menu: PrincipalMenu, reports: readonly ReportView[], day: number, policy: RuleSeatPolicy = DEFAULT_RULE_SEAT_POLICY): OrderCommand[] {
-  if (menu.objective === null) return [];
+  // 0064: the generic principal keeps the peace, every standing goal at hold, until his side is at war, and
+  // opens his campaign the first morning after it begins (or on the policy's opening day, if that is later).
+  if (menu.objective === null || menu.atWarSince === null) return [];
   const orders: OrderCommand[] = [];
-  if (day === policy.openingDay) {
+  if (day === Math.max(policy.openingDay, menu.atWarSince + 1)) {
     // The army that can be reached soonest opens the campaign; the rest hold where they stand.
     const ranked = menu.commandable
       .map((c) => ({ c, route: quickest(c.routes) }))

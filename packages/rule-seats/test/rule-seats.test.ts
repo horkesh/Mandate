@@ -13,6 +13,7 @@ const menu: PrincipalMenu = {
   situations: [],
   faction: ids.toId('faction', 'a'),
   objective: region('r9'),
+  atWarSince: 0,
   commandable: [
     { post: post('far'), holder: ids.toId('person', 'x'), relays: [post('office')], routes: [{ route: 'courier', typicalDays: 6, price: 0 }, { route: 'special-messenger', typicalDays: 3, price: 1 }] },
     { post: post('near'), holder: ids.toId('person', 'y'), relays: [post('office')], routes: [{ route: 'courier', typicalDays: 2, price: 0 }, { route: 'wire', typicalDays: 0, price: 0 }] },
@@ -67,6 +68,16 @@ describe('a principal', () => {
     expect(principalOrders(menu, [memo(4, 'far')], 5)).toEqual([{ cmd: 'order', to: post('far'), goal: 'advance', region: region('r5'), route: 'special-messenger', bypass: true }]);
     expect(principalOrders(menu, [memo(4, 'far')], 6)).toEqual([]);
     expect(principalOrders(menu, [memo(4, 'far')], 5, { openingDay: 1, goAroundObjections: false })).toEqual([]);
+  });
+
+  it('keeps the peace until his side is at war: no order at peace, the opening advance the day it is war (0064)', () => {
+    expect(principalOrders({ ...menu, atWarSince: null }, [], 1)).toEqual([]);
+    expect(principalOrders({ ...menu, atWarSince: null }, [memo(0, 'far')], 1)).toEqual([]);
+    expect(principalOrders({ ...menu, atWarSince: 0 }, [], 1)).toHaveLength(1);
+    // The war begins on day 40: he opens on day 41, not before and not again.
+    expect(principalOrders({ ...menu, atWarSince: 40 }, [], 40)).toEqual([]);
+    expect(principalOrders({ ...menu, atWarSince: 40 }, [], 41)).toHaveLength(1);
+    expect(principalOrders({ ...menu, atWarSince: 40 }, [], 42)).toEqual([]);
   });
 
   it('orders nothing without an objective', () => {

@@ -128,6 +128,8 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   warRows.forEach((row, i) => {
     if (!factionIds.has(row.faction)) err('unknown-reference', W('rules.ruleSeats.warFlags', i, 'faction'), `"${row.faction}" is not a faction in this pack`, `one of: ${[...factionIds].join(', ')}`);
     if (warRows.findIndex((x) => x.faction === row.faction) !== i) err('duplicate-id', W('rules.ruleSeats.warFlags', i, 'faction'), `faction "${row.faction}" has more than one war flag`);
+    // 0066: each faction's war is its own government's decision, so a flag is one faction's, never shared.
+    if (row.flag !== null && warRows.findIndex((x) => x.flag === row.flag) !== i) err('duplicate-id', W('rules.ruleSeats.warFlags', i, 'flag'), `war flag "${row.flag}" is named by more than one faction, so one side's decision would put the other at war before its president knew`, 'one flag per faction');
   });
   for (const f of [...factionIds].sort()) {
     if (!warRows.some((r) => r.faction === f)) err('missing-value', W('rules.ruleSeats', 0, 'warFlags'), `faction "${f}" has no war flag row`, 'one row per faction: a situation flag, or null for war from day 1');

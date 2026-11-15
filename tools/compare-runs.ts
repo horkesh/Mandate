@@ -23,8 +23,8 @@ export interface Summary {
   readonly turns: readonly { readonly turn: number; readonly hash: string }[];
   readonly finalHash: string;
   readonly resume: { readonly matches: boolean } | null;
-  /** The seats runner also replays its whole log; absent for the M2 runner. */
-  readonly replay?: { readonly matches: boolean };
+  /** The seats runner also replays its whole log; absent for the M2 runner, null when the run skipped it. */
+  readonly replay?: { readonly matches: boolean } | null;
 }
 
 /** Differences between two runs of the same scenario. Empty when they agree on every hash. */

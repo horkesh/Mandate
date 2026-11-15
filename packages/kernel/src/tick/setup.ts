@@ -25,6 +25,45 @@ export interface SetupOptions {
   readonly seed: number;
   /** Seat drivers by person id; everyone else is on the rules model. */
   readonly drivers?: Readonly<Record<string, SeatDriver>>;
+  /**
+   * A labelled option for mechanics runs (0064): every faction's war flag starts set, as if the war's opening
+   * situation had already fired, so the generic rule-seat principals move forces and contest ground from day 1.
+   * Never a history run's setting: the flag is State, so the run hashes differently, and a runner says it did this.
+   */
+  readonly atWar?: boolean;
+}
+
+export class WarFlagError extends Error {
+  constructor(readonly problems: readonly string[]) {
+    super(`Invalid war flags:\n- ${problems.join('\n- ')}`);
+    this.name = 'WarFlagError';
+  }
+}
+
+/**
+ * Problems with the pack's rule-seat war flags (0064), checked at setup as control and governments are (0061): the pack
+ * validator says the same at a source cell, but the kernel takes any World it is handed (a fixture, an adapter). A row
+ * for a faction the World lacks, a faction listed twice, and a faction with no row (a principal's war would be undefined).
+ */
+export function warFlagProblems(map: WorldIndex): string[] {
+  const factions = map.world.factions.map((f) => f.id);
+  const rows = map.world.rules.ruleSeats.warFlags;
+  const problems: string[] = [];
+  const seen = new Set<string>();
+  for (const row of rows) {
+    if (!factions.includes(row.faction)) problems.push(`war flag row for ${row.faction}, which is not a faction in the World`);
+    if (seen.has(row.faction)) problems.push(`faction ${row.faction} has more than one war flag row`);
+    seen.add(row.faction);
+  }
+  for (const f of factions) if (!seen.has(f)) problems.push(`faction ${f} has no war flag row`);
+  return problems;
+}
+
+/** The chain flags the pack names as putting a faction at war, each set on day 0 (null rows, war from day 1, set nothing). */
+export function warFlagsAtStart(world: SeatsWorld): Record<string, number> {
+  const flags: Record<string, number> = {};
+  for (const row of world.map.world.rules.ruleSeats.warFlags) if (row.flag !== null) flags[row.flag] = 0;
+  return flags;
 }
 
 /**
@@ -94,6 +133,8 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
   const { start } = world;
   parseIsoDate(start.startDate);
   const map = world.map;
+  const flagProblems = warFlagProblems(map);
+  if (flagProblems.length > 0) throw new WarFlagError(flagProblems);
   // Each part of the start is copied once into the field its owner writes from then on (0050).
   const command = initialCommand(map, start);
   const network = initialInfrastructure(map, start);
@@ -112,7 +153,7 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
     // Standing goals read the posts and assignments just copied: every held field post holds where it stands.
     standingGoals: initialGoals(map, command.posts, command.assignments),
     situationStates: {},
-    situationFlags: {},
+    situationFlags: options.atWar === true ? warFlagsAtStart(world) : {},
     forceBlockStates: initialForces(map, start),
     forceLocations: initialLocations(map, start),
     postStates: command.posts,

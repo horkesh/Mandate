@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { errorsOf, formatGenerated, formatIssue, generatePack, IssueSink, type Issue, type PackData, validatePack, warFlagsUnset } from '../src/index.ts';
+import { errorsOf, formatGenerated, formatIssue, generatePack, IssueSink, type Issue, type PackData, validatePack, warFlagSources, warFlagsUnset } from '../src/index.ts';
 import { appendRow, filesOf, fixture, type FileMap, replaceOnce, withFile, withNewFile, withoutFile } from './support/fixture.ts';
 
 const run = (files: FileMap) => generatePack(filesOf(files));
@@ -227,6 +227,7 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'a war flag for a faction the pack lacks', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: unknown[] } } }) => m.rules.ruleSeats.warFlags.push({ faction: 'green', flag: null })), kind: 'unknown-reference', file: 'pack.json' },
   { name: 'two war flags for one faction', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: unknown[] } } }) => m.rules.ruleSeats.warFlags.push({ faction: 'red', flag: null })), kind: 'duplicate-id', file: 'pack.json' },
   { name: 'a faction with no war flag row', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: unknown[] } } }) => m.rules.ruleSeats.warFlags.pop()), kind: 'missing-value', file: 'pack.json' },
+  { name: 'one war flag named by both factions (0066)', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: { flag: string | null }[] } } }) => m.rules.ruleSeats.warFlags.forEach((r) => (r.flag = 'war_begun'))), kind: 'duplicate-id', file: 'pack.json' },
   { name: 'a war flag that is not an id', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: { flag: string | null }[] } } }) => (m.rules.ruleSeats.warFlags[0]!.flag = 'war begun')), kind: 'shape/invalid_format', file: 'pack.json' },
   { name: 'no rule-seat settings at all', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.ruleSeats), kind: 'shape/invalid_type', file: 'pack.json' },
   { name: 'a war flag no situation sets', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: { flag: string | null }[] } } }) => (m.rules.ruleSeats.warFlags[0]!.flag = 'war_begun')), kind: 'war-flag-unset', file: 'pack.json', severity: 'warning' },
@@ -450,5 +451,59 @@ describe('the rule-seat war setting (0064)', () => {
     const set = new IssueSink();
     warFlagsUnset([opening], pack, set);
     expect(set.issues).toEqual([]);
+  });
+});
+
+describe('who may set a war flag (0066)', () => {
+  const base = run(fixture());
+  const pack = { ...base.pack!, world: { ...base.pack!.world, rules: { ...base.pack!.world.rules, ruleSeats: { warFlags: [{ faction: 'red' as never, flag: 'war_red' }, { faction: 'blue' as never, flag: 'war_blue' }] } } } };
+  const set = (flag: string) => [{ setFlag: flag }];
+  /** A situation shaped as far as the check reads: its side and kind, and where each effect sits. */
+  const sit = (over: { faction: string; kind: 'decision' | 'notice'; delegableTo?: string[]; optionEffects?: unknown[]; lockedCosts?: unknown[]; inaction?: unknown[]; effects?: unknown[] }) => ({
+    file: 'situations/x.json',
+    def: { id: 'x', faction: over.faction, kind: over.kind, delegableTo: over.delegableTo ?? [], options: [{ id: 'go', effects: over.optionEffects ?? [], lockedCosts: over.lockedCosts ?? [] }], inaction: { effects: over.inaction ?? [] }, effects: over.effects ?? [] } as never,
+  });
+  const problems = (item: ReturnType<typeof sit>) => {
+    const sink = new IssueSink();
+    warFlagSources([item], pack, sink);
+    return sink.issues.map((i) => `${i.severity} ${i.kind} ${i.at}`);
+  };
+  const messages = (item: ReturnType<typeof sit>) => {
+    const sink = new IssueSink();
+    warFlagSources([item], pack, sink);
+    return sink.issues.map((i) => i.message);
+  };
+
+  it('accepts a faction’s own decision option setting its own flag', () => {
+    expect(problems(sit({ faction: 'red', kind: 'decision', optionEffects: set('war_red') }))).toEqual([]);
+  });
+
+  it('refuses a notice that sets it, since it applies before any principal has the news (positive control)', () => {
+    const notice = sit({ faction: 'red', kind: 'notice', effects: set('war_red') });
+    expect(problems(notice)).toEqual(['error war-flag-source effects[0]']);
+    // The message says why, in the notice's own terms (the reviewer's nit): it applies before any principal has the news.
+    expect(messages(notice)).toEqual(['"x" is a notice and sets the war flag "war_red": it applies before any principal has the news']);
+  });
+
+  it('refuses a delegable decision setting it: going to war is the principal’s own act, never a delegate’s (positive control: the same decision, not delegable, passes)', () => {
+    const delegable = sit({ faction: 'red', kind: 'decision', delegableTo: ['red_office'], optionEffects: set('war_red') });
+    expect(problems(delegable)).toEqual(['error war-flag-source options[0].effects[0]']);
+    expect(messages(delegable)[0]).toContain("a delegate's choice would put the war in the president's menu before the delegate's report reached him");
+    expect(problems(sit({ faction: 'red', kind: 'decision', delegableTo: [], optionEffects: set('war_red') }))).toEqual([]);
+    // A delegable decision that sets some other flag is no concern of this check.
+    expect(problems(sit({ faction: 'red', kind: 'decision', delegableTo: ['red_office'], optionEffects: set('other_flag') }))).toEqual([]);
+  });
+
+  it('refuses another faction’s situation setting it', () => {
+    expect(problems(sit({ faction: 'blue', kind: 'decision', optionEffects: set('war_red') }))).toEqual(['error war-flag-source options[0].effects[0]']);
+  });
+
+  it('refuses an inaction outcome or a locked cost setting it: neither is a choice of war', () => {
+    expect(problems(sit({ faction: 'red', kind: 'decision', inaction: set('war_red') }))).toEqual(['error war-flag-source inaction.effects[0]']);
+    expect(problems(sit({ faction: 'red', kind: 'decision', lockedCosts: set('war_red') }))).toEqual(['error war-flag-source options[0].lockedCosts[0]']);
+  });
+
+  it('leaves every other flag alone', () => {
+    expect(problems(sit({ faction: 'blue', kind: 'notice', effects: set('some_other_flag') }))).toEqual([]);
   });
 });

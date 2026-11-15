@@ -79,6 +79,12 @@ export interface PrincipalMenu {
   readonly faction: FactionId;
   /** The objective pack data names for his side, if any (public, like the map). */
   readonly objective: RegionId | null;
+  /**
+   * The day his side went to war (0064): the day the pack's war flag for it was set, 0 when it names none (war from
+   * day 1) or the run started at war, null at peace. The generic rule-seat principal opens his campaign the first
+   * morning at war and orders no advance before; a human or model seat may order at peace.
+   */
+  readonly atWarSince: number | null;
   readonly commandable: readonly CommandablePost[];
   readonly situations: readonly SituationChoice[];
 }
