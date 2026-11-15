@@ -50,7 +50,8 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
     msg.msgTruth ?? { truthTerms: [], truthTrimmed: [] },
   );
   const world = ctx.world;
-  if (world.faction(world.person(msg.msgTo).faction).principal === msg.msgTo) {
+  const side = world.person(msg.msgTo).faction;
+  if (side !== null && world.factionIds.includes(side) && world.faction(side).principal === msg.msgTo) {
     if (report.reportType === 'advice' && report.reportSubtype === 'memorandum' && report.reportAnswers !== null) {
       ctx.decisionPoints.push({ point: 'objection', seat, report: msg.msgOrigin, situation: null });
     }

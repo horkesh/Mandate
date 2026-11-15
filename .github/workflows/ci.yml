@@ -86,6 +86,11 @@ jobs:
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: npm run run:seats -- testbed 180 --resume-at 60 --label ci-determinism
 
+      - id: determinism_seats_union
+        name: Determinism run (seats layer, union-1861 from 5 March 1861, 75 days, replay and resume from day 30)
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npm run run:seats -- union-1861 75 --resume-at 30 --label ci-determinism
+
       - id: upload
         name: Upload determinism summaries
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
@@ -110,6 +115,7 @@ jobs:
           DET_TESTBED: ${{ steps.determinism_testbed.outcome }}
           DET_UNION: ${{ steps.determinism_union.outcome }}
           DET_SEATS: ${{ steps.determinism_seats.outcome }}
+          DET_SEATS_UNION: ${{ steps.determinism_seats_union.outcome }}
           UPLOAD: ${{ steps.upload.outcome }}
         run: |
           tests="not run"
@@ -132,6 +138,7 @@ jobs:
             echo "| determinism run: testbed | $DET_TESTBED |"
             echo "| determinism run: union-1861 | $DET_UNION |"
             echo "| determinism run: seats layer (testbed) | $DET_SEATS |"
+            echo "| determinism run: seats layer (union-1861) | $DET_SEATS_UNION |"
             echo "| upload summaries | $UPLOAD |"
           } | tee -a "$GITHUB_STEP_SUMMARY"
 

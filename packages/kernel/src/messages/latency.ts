@@ -4,8 +4,9 @@
  * it arrives. The shell never computes an arrival, and a seat never sets one.
  *
  * Routes (0032, 0040): in person, wire, courier, a special messenger (a route
- * with a price), mail, rail and ship. Rail and ship need the map's typed edges
- * (lane 0.2), so the stand-in map refuses them with a reason.
+ * with a price), mail, rail and ship. Rail and ship routes for messages are not
+ * built yet (the typed edges exist since lane 0.5; the routes wait for Phase 1),
+ * so they are refused with a reason.
  *
  * Courier and mail carry exogenous noise (roads, weather: decision 0007 allows
  * dice for these, never for people). The draw comes from a stream keyed by
@@ -22,7 +23,7 @@ export type RouteKind = (typeof ROUTE_KINDS)[number];
  * The routes an order may take, which are exactly the routes a principal's
  * menu offers: the kernel accepts no route it did not offer (review N1). In
  * person would be a visit (its own verb); mail is for returns, not orders;
- * rail and ship wait for lane 0.2's typed edges.
+ * rail and ship wait for Phase 1.
  */
 export const ORDER_ROUTES: readonly RouteKind[] = Object.freeze(['courier', 'special-messenger', 'wire']);
 
@@ -56,7 +57,7 @@ export function latencyProblems(rules: LatencyRules): string[] {
   return problems;
 }
 
-/** The map facts latency needs (the stand-in `IndexedWorld` provides them; lane 0.2's graph will too). */
+/** The map facts latency needs: courier days from the typed edges and the day's wire owners (`seats/world.ts`, `latencyMapFor`). */
 export interface LatencyMap {
   courierDays(from: RegionId, to: RegionId): number;
   daysToWire(from: RegionId, faction: FactionId): number | null;

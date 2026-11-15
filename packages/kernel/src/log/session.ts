@@ -14,7 +14,7 @@ import type { State } from '../root-state.ts';
 import type { Seat, SeatRequest } from '../seats/api.ts';
 import { pendingRequests } from '../seats/requests.ts';
 import { canonicalHash } from '../serialize/hash.ts';
-import type { IndexedWorld } from '../standin/world.ts';
+import type { SeatsWorld } from '../seats/world.ts';
 import type { Telemetry } from '../telemetry.ts';
 import { createDerivedMapCache } from '../control-index/derived.ts';
 import { createFreezeLedger, deepFreeze } from '../tick/freeze.ts';
@@ -55,7 +55,7 @@ export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
 
 /** Play `days` days from `start`, asking seats each morning. Returns the end State, the new log entries and a hash per day. */
 export function playDays(
-  world: IndexedWorld,
+  world: SeatsWorld,
   start: State,
   seats: SeatTable,
   days: number,
@@ -84,7 +84,7 @@ export function playDays(
  * is the truth, so it must be well formed (review F5).
  */
 export function replay(
-  world: IndexedWorld,
+  world: SeatsWorld,
   start: State,
   rawLog: readonly unknown[],
   throughDay: number,

@@ -7,9 +7,7 @@
  * only `@mandate/kernel/seat-api`.
  */
 export type { State } from './root-state.ts';
-export * from './standin/world.ts';
 export * from './standin/traits.ts';
-export * from './standin/from-scenario.ts';
 export * from './knowledge/report.ts';
 export * from './knowledge/templates.ts';
 export * from './knowledge/truth.ts';
@@ -19,7 +17,8 @@ export * from './messages/latency.ts';
 export * from './messages/transit.ts';
 export * from './plans/goal.ts';
 export * from './plans/standing.ts';
-export * from './movement/headquarters.ts';
+export * from './seats/world.ts';
+export * from './seats/posts.ts';
 export * from './seats/api.ts';
 export * from './seats/seats.ts';
 export * from './seats/requests.ts';
@@ -45,3 +44,13 @@ export * from './situations/conditions.ts';
 export * from './situations/references.ts';
 export * from './situations/situations.ts';
 export * from './tick/situations.ts';
+// Lane 0.5: forces, command and movement.
+export * from './forces/forces.ts';
+export * from './command/command.ts';
+export * from './movement/movement.ts';
+export * from './movement/march.ts';
+export * from './forces/stores.ts';
+export * from './infrastructure/infrastructure.ts';
+export * from './tick/forces.ts';
+export * from './tick/passage.ts';
+export * from './combat/contest.ts';

@@ -20,6 +20,7 @@ import { GOAL_KINDS } from '../plans/goal.ts';
 import { receiveOrder } from '../plans/standing.ts';
 import type { State } from '../root-state.ts';
 import { relayDecision } from '../standin/traits.ts';
+import { isFieldPost, postFaction, relayChain } from '../seats/posts.ts';
 import { fire, hop, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
 
 /**
@@ -35,26 +36,26 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   const assignment = state.seatAssignments[seat];
   if (assignment === undefined) return 'unknown_seat';
   const issuer = world.person(assignment.seatPerson);
-  if (world.faction(issuer.faction).principal !== issuer.id) return 'not_a_principal';
-  if (!world.postIds.includes(cmd.to)) return 'unknown_post';
-  const target = world.post(cmd.to);
-  if (target.kind !== 'field' || target.faction !== issuer.faction) return 'not_field_post';
-  if (target.holder === null) return 'vacant_post';
+  if (issuer.faction === null || !world.factionIds.includes(issuer.faction) || world.faction(issuer.faction).principal !== issuer.id) return 'not_a_principal';
+  if (state.postStates[cmd.to] === undefined) return 'unknown_post';
+  const target = state.postStates[cmd.to]!;
+  if (!isFieldPost(state, cmd.to) || postFaction(world, state, cmd.to) !== issuer.faction) return 'not_field_post';
+  if (target.postHolder === null) return 'vacant_post';
   if (!(GOAL_KINDS as readonly string[]).includes(cmd.goal)) return 'bad_goal';
   if (cmd.goal === 'advance' ? cmd.region === null || !world.regionIds.includes(cmd.region) : cmd.region !== null) return 'bad_goal';
   // Only the routes the principal's menu offers (review N1): an order "in person" would be a visit, a verb of its own.
   if (!ORDER_ROUTES.includes(cmd.route)) return 'route_unavailable';
-  // The whole chain of posts above the target relays a principal's order.
-  const chain = world.chainBelow(null, target.id);
+  // The whole chain of posts between the principal's own post and the target relays his order.
+  const chain = relayChain(state, issuer.id, cmd.to);
   // Vacant relay posts cannot relay: the order skips them.
-  const relays = chain.slice(0, -1).filter((p) => world.post(p).holder !== null);
-  const hops: Hop[] = [...(cmd.bypass ? [] : relays), target.id].map((p, i, all) => ({
-    hopPerson: world.post(p).holder!,
+  const relays = chain.slice(0, -1).filter((p) => state.postStates[p]!.postHolder !== null);
+  const hops: Hop[] = [...(cmd.bypass ? [] : relays), cmd.to].map((p, i, all) => ({
+    hopPerson: state.postStates[p]!.postHolder!,
     hopPost: p,
     hopRole: i === all.length - 1 ? 'addressee' : 'relay',
   }));
   const first = hops[0]!;
-  const id = mintMessageId(ctx.mint, ctx.day, issuer.id, first.hopPerson, `order.${target.id}`);
+  const id = mintMessageId(ctx.mint, ctx.day, issuer.id, first.hopPerson, `order.${cmd.to}`);
   const leg = hop(ctx, cmd.route, issuer.id, whereIs(ctx, state, issuer.id), whereIs(ctx, state, first.hopPerson), id);
   ctx.outbox.push({
     id,
@@ -68,7 +69,7 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
     msgArriveDay: leg.arrive,
     msgVia: [],
     msgPending: hops.slice(1),
-    msgOrder: { orderIssuer: issuer.id, orderTarget: target.id, orderGoal: { goalSpecKind: cmd.goal, goalSpecRegion: cmd.region }, orderBypass: cmd.bypass, orderIssuedDay: ctx.day },
+    msgOrder: { orderIssuer: issuer.id, orderTarget: cmd.to, orderGoal: { goalSpecKind: cmd.goal, goalSpecRegion: cmd.region }, orderBypass: cmd.bypass, orderIssuedDay: ctx.day },
     msgReport: null,
     msgTruth: null,
   });
@@ -80,7 +81,7 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   if (cmd.bypass && relays.length > 0) {
     for (const p of relays) {
       fire(ctx, 'orders.bypassed');
-      ctx.proposals.push({ proposal: 'grievance', person: world.post(p).holder!, cause: 'bypassed', order: id });
+      ctx.proposals.push({ proposal: 'grievance', person: state.postStates[p]!.postHolder!, cause: 'bypassed', order: id });
     }
   }
   return null;

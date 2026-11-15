@@ -89,16 +89,24 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field("each land region's civil government (a department, or unknown)", 'command', ['situations'], [at('State', 'regionGovernments')]),
   field('neutral governments closed to passage, with the day each closed', 'command', ['situations'], [at('State', 'closedGovernments')]),
   field('region population, loyalty, supply value', 'regions', ['economy', 'situations', 'occupation']),
-  field('edge condition', 'infrastructure', ['combat', 'raids', 'repair orders']),
-  field('division location', 'movement', ['operations']),
-  field('division strength, morale, experience, equipment', 'forces', ['combat', 'attrition', 'economy', 'recruitment']),
+  // Lane 0.5: from the start (0050), changed only through `applyInfrastructure`.
+  field('edge condition', 'infrastructure', ['combat', 'raids', 'repair orders'], [at('State', 'infraEdgeCondition')]),
+  // Lane 0.5: a block's region (or the ship it is aboard), from the start (0050).
+  field('division location', 'movement', ['operations'], [at('State', 'forceLocations')]),
+  // Lane 0.5: one record per block or detachment carries strength, stores and
+  // non-combatants (`forces/forces.ts`), so the three `forces` rows below share it.
+  field('division strength, morale, experience, equipment', 'forces', ['combat', 'attrition', 'economy', 'recruitment'], [at('State', 'forceBlockStates')]),
   field("a force block's stores on hand", 'forces', ['supply (daily)', 'operations (a sea delivery)']),
   field('detachments below the force block (garrisons, landings)', 'forces', ['command', 'operations']),
   field('stragglers: men absent from a force block who rejoin over days', 'forces', ['combat', 'attrition']),
   field('battle records', 'combat', []),
   field('fortification and entrenchment', 'regions', ['operations', 'combat']),
-  field('division-to-post assignment', 'command', ['transfers', "the army commander's assignments"]),
-  field('people in posts; temporary posts', 'command', ['appoint', 'relieve', 'promotion lists', "an operation's end"]),
+  // Lane 0.5: which post commands each block; transfers name a force (0033).
+  field('division-to-post assignment', 'command', ['transfers', "the army commander's assignments"], [at('State', 'forceAssignments')]),
+  // Lane 0.5: one record per post carries its holder, chain, department, temporary operation,
+  // links, scheduled changes and standing orders (`command/command.ts`), so the `command`
+  // rows for standing orders and a post's department below share it.
+  field('people in posts; temporary posts', 'command', ['appoint', 'relieve', 'promotion lists', "an operation's end"], [at('State', 'postStates')]),
   field('standing agreements and prior orders on a post', 'command', ['verbs', 'situations', "orders from the holder's own department"]),
   field("a person's stats, traits, standing, grievances, regard", 'people', ['combat results', 'the press', 'verbs', 'ladder']),
   field("a person's stances on record (from Consult)", 'people', ['Consult answers']),
@@ -118,17 +126,16 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('seat assignments', 'seats', ['setup', "the player's settings"], [at('State', 'seatAssignments')]),
   // Reserved by world format v2 (lane 0.2): State that starts from a scenario
   // start or a World rule, with its owner named before the mechanic is built.
-  field('water edge obstructions (works or batteries in hostile hands; cleared)', 'infrastructure', ['combat', 'operations (a siege, a clearing)', 'situations']),
-  field('depot condition (struck by raids, repaired)', 'infrastructure', ['raids', 'combat', 'repair orders']),
+  field('water edge obstructions (works or batteries in hostile hands; cleared)', 'infrastructure', ['combat', 'operations (a siege, a clearing)', 'situations'], [at('State', 'infraObstructions')]),
+  field('depot condition (struck by raids, repaired)', 'infrastructure', ['raids', 'combat', 'repair orders'], [at('State', 'infraDepotCondition')]),
   field("a post's department (changed on a scheduled date or by a situation)", 'command', ['scheduled department changes in the scenario start', 'situations']),
   field("a person's rank and its date (seniority)", 'people', ['promotion lists', 'appoint']),
   field("today's weather per weather zone", 'weather', ['the day tick, from its named seeded stream (0029)']),
   // Guerrilla pressure (0029) is not here on purpose: the gate register
   // (SENSITIVE-HISTORY section 3.6, accepted by 0046) places it as derived,
   // computed with typed reasons and never stored, and no option may target it.
-  // Lane 0.6: the day counter, and a stand-in that lane 0.5's forces and movement replace.
+  // Lane 0.6: the day counter.
   field('the current day', 'tick', ['the day tick'], [at('State', 'stateDay')]),
-  field("a post's headquarters region (stand-in until force blocks)", 'movement', ['standing-goal steps (stand-in operations)'], [at('State', 'headquarters')]),
   // Lane 0.7 (0046): situation chain and wait state. The wait itself is a status on the situation's record above.
   field('situation chain and wait state', 'situations', ['situation effects (flags set and cleared)'], [at('State', 'situationFlags')]),
 ];
@@ -167,10 +174,17 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'BiasTerm',
   'KnownReport',
   'SeatKnowledge',
-  // Movement (stand-in headquarters)
-  'Headquarters',
   // Situations (lane 0.7: the live record of one situation, replaced whole by `situations`)
   'SituationRecord',
+  // Lane 0.5: forces, movement and command (each replaced whole by its writer)
+  'ForceBlockState',
+  'ForceLocation',
+  'PostState',
+  'ScheduledChangeState',
+  'StandingOrderState',
+  'PostLinkState',
+  'ObstructionState',
+  'MarchLeg',
 ];
 
 /** State's own root fields that are set once at setup and never written after (the game's seed, the calendar's day 0). */

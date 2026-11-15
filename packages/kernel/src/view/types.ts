@@ -96,7 +96,8 @@ export interface SeatView {
   readonly day: number;
   readonly seat: SeatId;
   readonly person: PersonId;
-  readonly faction: FactionId;
+  /** His side; null for a man of no side (a neutral state's officer, a foreigner). */
+  readonly faction: FactionId | null;
   readonly post: PostId | null;
   /** Where he is. */
   readonly region: RegionId;

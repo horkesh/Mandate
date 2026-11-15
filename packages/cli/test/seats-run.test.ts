@@ -27,7 +27,7 @@ describe('the seats layer on the testbed, every seat on the rules model', () => 
 
   it('fires the seats layer’s core mechanics on the testbed', () => {
     const fires = Object.fromEntries(summary.liveness.map((r) => [r.mechanic, r.fires]));
-    for (const m of ['messages.sent', 'messages.delivered', 'messages.courier_delay', 'orders.relayed', 'orders.obeyed', 'knowledge.pruned_superseded', 'standin.advance']) {
+    for (const m of ['messages.sent', 'messages.delivered', 'messages.courier_delay', 'orders.relayed', 'orders.obeyed', 'knowledge.pruned_superseded', 'movement.leg_started', 'movement.arrived']) {
       expect(fires[m], m).toBeGreaterThan(0);
     }
   });

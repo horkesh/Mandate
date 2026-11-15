@@ -8,7 +8,7 @@
  * trigger counts only news received since its clock started (`since`), so a
  * report the seat held before the event never surfaces it (review S1).
  */
-import type { SituationId } from '../ids.ts';
+import type { PostId, RegionId, SituationId } from '../ids.ts';
 import type { SeatKnowledge } from '../knowledge/knowledge.ts';
 import type { State } from '../root-state.ts';
 import type { SituationRecord } from './situations.ts';
@@ -24,6 +24,8 @@ export interface ConditionContext {
   readonly knowledge: SeatKnowledge;
   /** `knows` counts only reports received on or after this day; null counts every report the seat holds. */
   readonly since: number | null;
+  /** Where a post's headquarters is today (lane 0.5: derived from its force blocks); absent, nothing stands anywhere. */
+  readonly headquartersOf?: (post: PostId) => RegionId | null;
 }
 
 /** Whether a report the seat holds (received on or after `since`, if given) matches the pattern. */
@@ -54,7 +56,7 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
   }
   if ('knows' in c) return knowsMatch(ctx.knowledge, c.knows, ctx.since);
   if ('goal' in c) return ctx.state.standingGoals[c.goal.post]?.standingSpec.goalSpecKind === c.goal.kind;
-  if ('headquartersAt' in c) return ctx.state.headquarters[c.headquartersAt.post]?.hqRegion === c.headquartersAt.region;
+  if ('headquartersAt' in c) return ctx.headquartersOf !== undefined && ctx.headquartersOf(c.headquartersAt.post) === c.headquartersAt.region;
   // clockAtLeast
   if (ctx.situation === null) return false;
   const r = ctx.state.situationStates[ctx.situation];
