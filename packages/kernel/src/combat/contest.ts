@@ -9,11 +9,20 @@
  * - **Who is in a region.** Each side's land blocks standing there and not on
  *   a leg; ships, and troops aboard, hold no ground. A side's strength is its
  *   blocks' known men (an unknown strength counts as none, and is said so).
- * - **Occupation.** One side alone in a land region or key point that some side
- *   already holds a share of gains `occupyPermille` a day (cause `occupation`;
- *   the gain comes out of the others' shares). Ground nobody controls is a
- *   neutral government's, and passing through it takes nothing (0055): taking
- *   it is a situation's work.
+ * - **Who presses.** Only blocks that marched into a region in play press for
+ *   it (their `locSinceDay` is after the start). Troops standing where the start
+ *   put them hold their ground but take nothing: a garrison left behind under a
+ *   truce, before the fighting starts, is not an invasion. A region where nobody
+ *   presses changes nothing.
+ * - **Neutral ground is passed, never taken by arms** (0055; review S1). A
+ *   region of a neutral government's (open or closed, `neutralGround`) where no
+ *   side holds any share changes no control, whoever stands there and however a
+ *   clash goes: a situation decides that ground. Ground of unknown government is
+ *   not neutral and is taken as usual.
+ * - **Occupation.** One side alone, pressing, gains `occupyPermille` a day at
+ *   `occupyFullMen` or more, and in proportion below it (cause `occupation`; the
+ *   gain comes out of the others' shares): a few hundred men pass through a
+ *   county, they do not take it.
  * - **Contest.** Where two or more sides stand and one of them presses, the strongest (most men; a tie
  *   changes nothing) gains `contestPermille` times its margin over the next,
  *   `(s1 - s2) / s1`, a day (cause `combat`).
@@ -121,10 +130,10 @@ export function contest(ground: MarchGround, state: State, rules: ContestRules =
     // Nobody marched in: garrisons and armies where the start put them take nothing.
     if (!sides.some((s) => s.pressing.length > 0)) continue;
     const shares = state.regionControl[region] ?? {};
+    // A neutral government's ground nobody holds a share of is passed, never taken by arms (0055; review S1).
+    if (Object.keys(shares).length === 0 && ground.network.neutralGround?.[region] !== undefined) continue;
     if (sides.length === 1) {
       const side = sides[0]!;
-      // Neutral ground (nobody holds a share) is passed, never taken (0055).
-      if (Object.keys(shares).length === 0) continue;
       const have = shares[side.faction] ?? 0;
       if (have >= 1000) continue;
       const rate = Math.trunc((rules.occupyPermille * Math.min(side.men, rules.occupyFullMen)) / rules.occupyFullMen);

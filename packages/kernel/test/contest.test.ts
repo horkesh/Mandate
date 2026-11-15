@@ -15,29 +15,36 @@ import { MAP_MECHANICS, mapPhase } from '../src/tick/map.ts';
 import { createState } from '../src/tick/setup.ts';
 import type { ForceBlockStart } from '../src/world/scenario.ts';
 import { ctxFor as ctxIn, worldOf } from './support/tick-context.ts';
-import { B, block, forcesIndex, forcesStart } from './support/forces-fixture.ts';
+import { B, block, DEP, forcesIndex, forcesStart } from './support/forces-fixture.ts';
+import { passageOf } from '../src/tick/passage.ts';
 import { depot, edge, F, R, region } from './support/map-fixture.ts';
 
 /**
  *   a1 (a's source) ==rail== a2 --road-- mid --road-- b2 ==rail== b1 (b's source)
- *                                         |
- *                                         n (neutral: nobody controls it)
+ *                                         |      \
+ *                                         n       u
+ *   n: a neutral government's ground, nobody's control; u: ground of unknown government, nobody's control.
  */
 const MAP = forcesIndex({
-  regions: ['a1', 'a2', 'mid', 'b2', 'b1', 'n'].map((r) => region(r)),
-  edges: [edge('a1', 'a2', { type: 'rail', line: 'a_line' }), edge('a2', 'mid'), edge('mid', 'b2'), edge('b2', 'b1', { type: 'rail', line: 'b_line' }), edge('mid', 'n')],
+  regions: ['a1', 'a2', 'mid', 'b2', 'b1', 'n', 'u'].map((r) => region(r)),
+  edges: [edge('a1', 'a2', { type: 'rail', line: 'a_line' }), edge('a2', 'mid'), edge('mid', 'b2'), edge('b2', 'b1', { type: 'rail', line: 'b_line' }), edge('mid', 'n'), edge('mid', 'u')],
   depots: [depot('a_src', 'a1'), depot('b_src', 'b1')],
 });
 
+const GOVERNMENTS = [
+  { region: R('n'), department: DEP('neutral_gov'), provenance: [] },
+  { region: R('u'), department: 'unknown' as const, provenance: [] },
+];
+
 /** A start, with the named blocks having marched in on day 1 (so they press for their region). */
 function stateWith(control: Readonly<Record<string, Readonly<Record<string, number>>>>, blocks: readonly ForceBlockStart[], marchedIn: readonly string[] = blocks.map((b) => b.id)): State {
-  const s = createState(worldOf(MAP, forcesStart(control, [], blocks)), { seed: 1 });
+  const s = createState(worldOf(MAP, forcesStart(control, [], blocks, { governments: GOVERNMENTS })), { seed: 1 });
   const locations = { ...s.forceLocations };
   for (const id of marchedIn) locations[B(id)] = { ...locations[B(id)]!, locSinceDay: 1 };
   return { ...s, forceLocations: locations };
 }
 
-const ground = (s: State): MarchGround => ({ map: MAP, index: buildControlIndex(MAP, s.regionControl), network: INTACT_NETWORK, month: 6 });
+const ground = (s: State): MarchGround => ({ map: MAP, index: buildControlIndex(MAP, s.regionControl), network: passageOf(MAP, s), month: 6 });
 
 function ctxFor(state: State, day: number): TickContext {
   return ctxIn(worldOf(MAP, forcesStart(BASE, [], [])), state, day, MAP_MECHANICS);
@@ -76,6 +83,26 @@ describe('occupation: a side alone in held ground gains it day by day', () => {
     const s = stateWith(BASE, [block('a_1', { department: 'a_war', region: 'mid', strength: null }), block('b_1', { department: 'b_war', region: 'mid', strength: 10 })]);
     const sides = presenceByRegion(ground(s), s).get(R('mid'))!;
     expect(sides.map((p) => `${p.faction}:${p.men}:${p.unknown.join(',')}`)).toEqual(['b:10:', 'a:0:a_1']);
+  });
+});
+
+describe('neutral ground is passed, never taken by arms (0055; review S1)', () => {
+  const clash = (where: string) => [block('a_1', { department: 'a_war', region: where, strength: 5000 }), block('b_1', { department: 'b_war', region: where, strength: 1000 })];
+
+  it('two sides clashing on a neutral government\'s ground nobody holds gain nothing, and nobody is driven out', () => {
+    const s = stateWith(BASE, clash('n'));
+    expect(passageOf(MAP, s).neutralGround).toEqual({ n: 'open' });
+    expect(contest(ground(s), s)).toEqual({ records: [], deltas: [], retreats: [] });
+  });
+
+  it('the same clash on ground of unknown government still contests (positive control)', () => {
+    const s = stateWith(BASE, clash('u'));
+    expect(contest(ground(s), s).deltas).toEqual([{ region: R('u'), faction: F('a'), deltaPermille: 160, cause: 'combat' }]);
+  });
+
+  it('a side alone on ground of unknown government nobody holds occupies it as usual', () => {
+    const s = stateWith(BASE, [block('a_1', { department: 'a_war', region: 'u', strength: 5000 })]);
+    expect(contest(ground(s), s).deltas).toEqual([{ region: R('u'), faction: F('a'), deltaPermille: 100, cause: 'occupation' }]);
   });
 });
 
