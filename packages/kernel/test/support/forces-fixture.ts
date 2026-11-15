@@ -103,6 +103,7 @@ export function block(id: string, o: Partial<Omit<ForceBlockStart, 'id' | 'depar
     strengthDate: null,
     nonCombatants: o.nonCombatants ?? 0,
     storesDays: o.storesDays === undefined ? 10 : o.storesDays,
+    storesDate: o.storesDate === undefined ? null : o.storesDate,
     unknowns: [],
     provenance: [],
   };

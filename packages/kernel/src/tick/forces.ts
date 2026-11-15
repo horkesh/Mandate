@@ -7,7 +7,7 @@
  *   pocket closed today starves its garrison today.
  */
 import { contest, type ContestRecord, type Retreat } from '../combat/contest.ts';
-import { applyCommandProposals } from '../command/command.ts';
+import { applyCommandProposals, DEPARTMENT_SIDE_FIELD } from '../command/command.ts';
 import { buildControlIndex } from '../control-index/control-index.ts';
 import { deriveMap, type DerivedMap } from '../control-index/derived.ts';
 import { passageOf, reportPocketChanges } from './passage.ts';
@@ -26,6 +26,7 @@ export const FORCES_MECHANICS = [
   'command.government_closed',
   'command.government_reopened',
   'command.proposal_refused',
+  'command.side_changed',
   'forces.stores_fell',
   'forces.stores_low',
   'forces.stores_refilled',
@@ -33,7 +34,8 @@ export const FORCES_MECHANICS = [
 
 /**
  * Situations' proposals that `command` owns (a neutral government closing or reopening its
- * territory: 0055, 0058), applied right after the situations phase that made them. The map
+ * territory: 0055, 0058; a government joining a side: 0065), applied right after the situations
+ * phase that made them. The map
  * phase has already run today, so this phase reports the pockets a closing makes itself, and
  * hands back the day's map as it now is: the barrier and the tick's result never carry a map
  * State has moved past. Movement and the contest see the closing from tomorrow morning.
@@ -44,6 +46,14 @@ export function commandProposalsPhase(ctx: TickContext, state: State): { readonl
   if (mine.length === 0) return { state, derived: null };
   const result = applyCommandProposals(map, state, mine, ctx.day);
   for (const a of result.applied) {
+    if (a.field === DEPARTMENT_SIDE_FIELD) {
+      // A change of side is its own event, never a closing (0065).
+      if (a.side !== null) {
+        ctx.mapEvents.push({ event: 'side_changed', change: a.side });
+        fire(ctx, 'command.side_changed');
+      }
+      continue;
+    }
     ctx.mapEvents.push({ event: 'government_changed', department: a.subject, change: a.change });
     if (a.change === 'closed') fire(ctx, 'command.government_closed');
     if (a.change === 'reopened') fire(ctx, 'command.government_reopened');
@@ -52,9 +62,9 @@ export function commandProposalsPhase(ctx: TickContext, state: State): { readonl
     ctx.mapEvents.push({ event: 'proposal_refused', owner: 'command', why });
     fire(ctx, 'command.proposal_refused');
   }
-  // The cause first, then what it did: the pockets the closing or reopening makes, today.
+  // The cause first, then what it did: the pockets the closing, reopening or change of side makes, today.
   let derived: DerivedMap | null = null;
-  if (result.state.closedGovernments !== state.closedGovernments) {
+  if (result.state.closedGovernments !== state.closedGovernments || result.state.departmentFactions !== state.departmentFactions) {
     const month = dateOfDay(state.calendarStart!, ctx.day).month;
     const before = deriveMap(map, { control: state.regionControl, month, network: passageOf(map, state) });
     derived = deriveMap(map, { control: result.state.regionControl, month, network: passageOf(map, result.state) });

@@ -4,6 +4,7 @@
  * addressee's knowledge. A message sent today with no delay is delivered
  * today too, so the phase repeats until nothing more is due.
  */
+import { sideOfPerson } from '../command/command.ts';
 import { deliverReport } from '../knowledge/knowledge.ts';
 import { term } from '../knowledge/truth.ts';
 import { mintMessageId, sendMessages, takeDue, type TransitMessage } from '../messages/transit.ts';
@@ -50,7 +51,7 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
     msg.msgTruth ?? { truthTerms: [], truthTrimmed: [] },
   );
   const world = ctx.world;
-  const side = world.person(msg.msgTo).faction;
+  const side = sideOfPerson(world.map, next, msg.msgTo);
   if (side !== null && world.factionIds.includes(side) && world.faction(side).principal === msg.msgTo) {
     if (report.reportType === 'advice' && report.reportSubtype === 'memorandum' && report.reportAnswers !== null) {
       ctx.decisionPoints.push({ point: 'objection', seat, report: msg.msgOrigin, situation: null });
@@ -78,7 +79,7 @@ function filterReport(ctx: TickContext, state: State, msg: TransitMessage): void
   ctx.events.push({ event: 'filtered', person: holder.id, post, message: msg.msgOrigin, terms });
   const next = msg.msgPending[0]!;
   const id = mintMessageId(ctx.mint, ctx.day, holder.id, next.hopPerson, `fwd.${msg.msgOrigin.length > 40 ? msg.msgOrigin.slice(-40) : msg.msgOrigin}`);
-  const leg = hop(ctx, 'in-person', holder.id, whereIs(ctx, state, holder.id), whereIs(ctx, state, next.hopPerson), id, decision.holdDays);
+  const leg = hop(ctx, state, 'in-person', holder.id, whereIs(ctx, state, holder.id), whereIs(ctx, state, next.hopPerson), id, decision.holdDays);
   ctx.outbox.push({
     ...msg,
     id,

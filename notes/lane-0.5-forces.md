@@ -68,7 +68,7 @@ The save fixture was regenerated after every change of State's shape (`npx tsx t
   2. *Movement owns passage and exports it* as one pure function, `marchBar(ground, leg, side, naval)` in `movement/march.ts`, with `legsFrom` and `marchSteps` (quickest first legs toward a goal) on the same `MarchGround` (map, control index, `passageOf` network, month). Land troops pass any land region or key point, enemy ground and open neutral ground (0058) included, but not a closed neutral government's; rail needs both ends traced by the side or open neutral; water edges carry only ships, and a ship is barred by works held against it; off-map is never passable; an edge below one whole unit of capacity this month carries no march. Supply passage stays lane 0.4's (`supply.ts`). The spike's own copy retires.
   3. *Clearing works no fort holds.* `applyInfrastructure`'s `clear` change removes any obstruction, a boom or hulks (`by: null`) included, with cause `operations` (deliberately) or `combat` (by force). Tested in `march.test.ts`: the boom bars both sides' ships; cleared, the edge opens.
 - **0.9, also:** supply paths carry legs per region, for a supply-aware route.
-- **Situation authors:** close or reopen a neutral government with a proposal to `command`, field `government_closed`, subject the department, delta +1 or -1.
+- **Situation authors:** close or reopen a neutral government with a proposal to `command`, field `government_closed`, subject the department, delta +1 or -1. Move a government to a side (0065) with a proposal to `command`, field `department_side`, subject the department, `side` the faction it joins, delta +1.
 - **Phase 1:** reports of a pocket closing or stores crossing the low threshold are the decision points (0054); the truth events are `pocket_closed` and `stores_crossed`. Message routes by rail and ship can now use the typed edges.
 
 ## Findings outside my scope
@@ -94,3 +94,76 @@ The lead's rulings after review (0064, hard rule 3). `WorldRules` gains four gro
 - **Controls.** `validate.test.ts` has seventeen refusal or warning cases, plus a direct control that a set flag silences the warning. `kernel/test/pack-rules.test.ts` changes each of the eight numbers and shows the outcome changes with it.
 - **Byte-identical.** Against ab1ffc7, the testbed seats run (180 days) and union-1861 (75 days) give the same hash every day, with the same initial and final hashes and liveness. The world hash differs because the World gained the rules, and so does the save fixture's `worldHash`; its State, log and both their hashes are identical.
 - Each pack's README lists the eight numbers as design parameters.
+
+## Follow-up: a government's side is State, and stores carry their date (0065, branch `phase0-department-sides`)
+
+**`departmentFactions`** (State, writer `command`) holds each department's side: a faction, or null for a neutral government. `initialDepartmentSides` copies it from the World at setup. It refuses a department listed twice, or a faction not in the World. Every reader of a department's side now reads State:
+
+- the side of a post (`factionOfPost`) and of a block (`factionOfBlock`);
+- neutral ground and the closing check;
+- temporary posts and scheduled changes.
+
+The World's `departments[].faction` is read only at setup: by the setup checks, the standing goals, and the situation reference check.
+
+**A change of side** is a situation's proposal to `command`: field `department_side` (`DEPARTMENT_SIDE_FIELD`), subject the department, `side` the faction it joins, delta above 0.
+
+- It is kept apart from a closing (`government_closed`). It has its own map event, `side_changed`, and its own mechanic, `command.side_changed`, and it never emits `government_changed`.
+- `changeDepartmentSide` applies it. Its land stops being neutral ground (`neutralGroundOf` reads State). Its posts and blocks serve the new side, and control does not move.
+- Command's rule is that nothing it holds crosses sides. So that rule keeps holding, the change also cuts loose:
+  - each post whose parent is now on another side (it heads its own chain);
+  - each block commanded by a post on another side (it has no post);
+  - each intelligence chief now on another side (the post has none).
+- If the government had closed its territory, the closing is lifted. A closing proposal for a government on a side is refused, and so is a reopening.
+- The result, `SideChange`, lists each of these: `postsCut`, `blocksUnassigned`, `chiefsCleared`, `closingLifted`.
+- Refused, with a reason:
+  - a department that is not a government;
+  - no side to join, or a side not in the World;
+  - a delta not above 0 (no proposal takes a side away; I chose this, rejecting a negative delta meaning "back to neutral", because no model case needs it);
+  - no subject.
+- A government may change from one side to another, not only from none to a side. 0065's Virginia case is none to a side, since Virginia's government has no side on 5 March.
+- `applyScheduledChanges` drops a due change to a department now on another side (0050: a scheduled change is never a change of side) and reports it in `dropped`. Nothing in the tick calls it yet.
+
+**The holder's side.** `sideOfPerson(map, state, person)` gives the side of the post he holds, while he holds it, and otherwise his own side in the World. Every reader of a man's side in the seats layer now calls it:
+
+- `sideOf`, `hop` and `takenRoute`, which now take State;
+- the principal check in `issueOrder`;
+- the principal check when a report arrives;
+- the delegation guards in `tick/situations.ts`;
+- the seat view's `faction`, which is part of the view's cache key.
+
+One rule beyond 0065's text, to keep standing review S6 true: a holder follows his post only if `command` could have put him there. That means his own side is either the post's today or its department's at the start. The other side's man, placed in one of our posts past `command`'s guard, keeps his own side, so the delegation guards still refuse him. A Virginian officer of no side who held his post when Virginia joined a side follows it, because his side (none) is Virginia's at the start. The rejected alternative was that every holder serves his post. It would have made S6's guard unable to see an enemy in one of our posts.
+
+**`stores_date`** is a new column in scenario `force_blocks.csv`, after `stores_days`, mapped to `storesDate` on the kernel's `ForceBlockStart`. It is a historical date (ISO, year-month or year), as `strength_date` is.
+
+- The validator raises `missing-value` when stores are given without a date, or a date without stores. A malformed date fails the shape check.
+- It is informational: nothing in `forces` reads it until Phase 1's attrition.
+- The testbed rows take each block's strength date (design data).
+- The union-1861 rows that give stores take the date their own note gives: USS Brooklyn 1861-03-16 (Looker, p.96), USS Sabine 1861-03-22 (Adams, p.100), Fort Sumter 1861-04-01 (Anderson), and Vogdes's company 1861-01-23 (embarked with three months).
+- Key West's 120 days arrive with the research branch `claude/research-governments-stores-bde02c`, with `stores_date` 1861-01-15. The research lane has been told, and whichever branch merges second fills the date; until it does, validation fails on that row, so the gap cannot be missed. Fort Pickens' stores stay unknown, with no date: the lead's ruling after the standing reviewer showed that the January figure contradicts the late-March letters ("getting low").
+
+**Controls** in `kernel/test/department-sides.test.ts` (11 tests):
+
+- setup copies the sides, and refuses a bad row;
+- end to end through the tick: a situation moves a no-faction government to a side on day 2; its land stops being neutral; its posts and guard serve that side; control and region governments don't move; and with no situation, nothing changes;
+- the holder's side follows his post, and appointments follow it too;
+- S6: the other side's man past the guard keeps his own side;
+- a side-to-side change cuts loose a post, a block and a chief, and drops a scheduled change;
+- a closing and a change of side stay distinct;
+- every refusal, each with its control.
+
+`validate.test.ts` gains three `stores_date` cases.
+
+**The pack validator checks proposals to `command` in situation files** (the lead's ruling), as the kernel would refuse them in play:
+- the subject is a government department: `not-a-government`, or `unknown-reference` for no such department;
+- `department_side` names a real side (`unknown-reference`), with delta +1;
+- `government_closed` has delta +1 or -1;
+- `command` owns no other field.
+
+Anything else is `situation-command-proposal`. The validator is stricter than the kernel, which takes any positive delta. `pack-format/test/command-proposals.test.ts` has 6 tests: every refusal, with valid proposals of each kind as controls.
+
+The lead accepted the holder's-side rule, and the call-site edits to `tick/situations.ts` stay.
+
+**Byte-identical** for runs where no situation moves a government:
+
+- Seats runs: the testbed (180 days) and union-1861 (75 days) against the base give the same hash every day for State without `departmentFactions`, with the same initial and final hashes, liveness, rejections, decision points and log length. Sides never change in either run.
+- The save fixture: its State is identical apart from the added `departmentFactions`, and its log and `logHash` are unchanged. `stateHash` differs because State gained the field, and `worldHash` because the scenario gained `storesDate`. The save schema stays 1, as it did for 0058's State fields; an older save is refused by its world hash anyway.

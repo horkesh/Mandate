@@ -10,6 +10,7 @@ import {
   factionOfPost,
   heldPost,
   initialCommand,
+  initialDepartmentSides,
   relieveHolder,
   transferForce,
 } from '../src/command/command.ts';
@@ -54,7 +55,7 @@ const START = forcesStart(CONTROL, POSTS, BLOCKS);
 
 function stateFrom(map: WorldIndex, start: ScenarioStart): State {
   const command = initialCommand(map, start);
-  return { ...emptyState(), forceBlockStates: initialForces(map, start), forceLocations: initialLocations(map, start), postStates: command.posts, forceAssignments: command.assignments };
+  return { ...emptyState(), departmentFactions: initialDepartmentSides(map), forceBlockStates: initialForces(map, start), forceLocations: initialLocations(map, start), postStates: command.posts, forceAssignments: command.assignments };
 }
 
 const S = stateFrom(MAP, START);

@@ -577,6 +577,9 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
         if (pf !== undefined && side !== undefined && pf !== side) err('chain-crosses-factions', at('post'), `the block's department is on side "${side}" but its commander's post is on "${pf}"`, 'a commanding post on the same side');
       }
       unknownsCheck('forceBlocks', b as unknown as Record<string, unknown>, b.unknowns, (f) => at(f));
+      // Stores carry their date as strengths do (0065, 0056): informational in Phase 0, required when stores are given.
+      if (b.storesDays !== null && b.storesDate === null) err('missing-value', at('storesDate'), `stores of ${b.storesDays} days are given without the date of the figure`, 'the date the stores figure is as of: ISO, year-month or year');
+      if (b.storesDays === null && b.storesDate !== null) err('missing-value', at('storesDays'), `a stores date (${b.storesDate}) is given without stores`, 'the days of stores the date belongs to, or no date');
     });
   }
 

@@ -180,6 +180,12 @@ export interface ForceBlockStart {
   readonly nonCombatants: number;
   /** Days of supply on hand (0040); null when unknown. */
   readonly storesDays: number | null;
+  /**
+   * The date the stores figure is as of (0065): ISO, year-month or year, as `strengthDate` is for strength. Given
+   * whenever stores are. Informational in Phase 0: no rule brings a figure forward to the start until Phase 1's
+   * attrition, so `forces` does not read it.
+   */
+  readonly storesDate: string | null;
   readonly unknowns: readonly string[];
   readonly provenance: Provenance;
 }
