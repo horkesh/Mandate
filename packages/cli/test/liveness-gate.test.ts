@@ -53,7 +53,7 @@ describe('the band table', () => {
 
 describe('the reference runs', () => {
   for (const run of REFERENCE_RUNS) {
-    it(`${run.name}: every mechanic fires within its band`, { timeout: 120_000 }, () => {
+    it(`${run.name}: every mechanic fires within its band`, () => {
       expect(gateFailures(run, liveness(run))).toEqual([]);
     });
   }
@@ -63,7 +63,7 @@ describe('the gate can fail (positive controls)', () => {
   const union = REFERENCE_RUNS.find((r) => r.pack === 'union-1861')!;
   const testbed = REFERENCE_RUNS.find((r) => r.pack === 'testbed' && r.kind === 'full')!;
 
-  it('a run in which no seat orders anything leaves the movement and contest mechanics dead', { timeout: 120_000 }, () => {
+  it('a run in which no seat orders anything leaves the movement and contest mechanics dead', () => {
     const failures = gateFailures(union, liveness(union, NOTHING));
     const dead = failures.filter((f) => f.problem === 'dead').map((f) => f.mechanic);
     expect(dead).toEqual(expect.arrayContaining(['movement.leg_started', 'movement.arrived', 'combat.contest', 'control.changed', 'orders.obeyed']));

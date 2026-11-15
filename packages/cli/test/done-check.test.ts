@@ -31,7 +31,7 @@ import { phase0Run, type Phase0Summary } from '../src/phase0-run.ts';
 let result: DoneCheckResult;
 beforeAll(() => {
   result = runDoneCheck();
-}, 300_000);
+});
 
 const union = () => result.runs.find((r) => r.checked.pack === 'union-1861')!;
 const testbed = () => result.runs.find((r) => r.checked.pack === 'testbed')!;
@@ -68,7 +68,7 @@ describe('the done check on union-1861 at war and the testbed', () => {
     expect(compareSummaries(a, otherClock)).toEqual([]);
   });
 
-  it('measures what a day of plan drafting costs on the Union graph, with sound drafts', { timeout: 120_000 }, () => {
+  it('measures what a day of plan drafting costs on the Union graph, with sound drafts', () => {
     const d = measureDrafting('union-1861', { days: 3, reps: 2 });
     expect(d.sound).toBe(true);
     expect(d.posts).toBeGreaterThanOrEqual(25);
@@ -78,7 +78,7 @@ describe('the done check on union-1861 at war and the testbed', () => {
 });
 
 describe('each criterion can fail (positive controls)', () => {
-  it('behaviour: the Union pack at peace moves nothing and contests nothing', { timeout: 120_000 }, () => {
+  it('behaviour: the Union pack at peace moves nothing and contests nothing', () => {
     const peace = phase0Run({ pack: 'union-1861', days: 30, atWar: false, checks: false, replay: false, hash: 'checkpoints', checkpointEvery: 15 });
     const problems = behaviourProblems(peace);
     expect(problems.join('\n')).toContain('no division moved (movement.leg_started is 0)');

@@ -22,7 +22,7 @@ describe('resume = continuous', () => {
     ['testbed', 120, 40, false],
     ['union-1861', 75, 30, true],
   ] as const) {
-    it(`${pack}: a save at day ${at}, loaded, plays on to the continuous run's final hash`, { timeout: 120_000 }, () => {
+    it(`${pack}: a save at day ${at}, loaded, plays on to the continuous run's final hash`, () => {
       const saves: string[] = [];
       const s = phase0Run({ pack, days, atWar, resumeAtDay: at, hash: 'checkpoints', onSave: (text) => saves.push(text) });
       expect(s.resume).toEqual({ atTurn: at, finalHash: s.finalHash, matches: true, savedLogReplays: true });
@@ -34,7 +34,7 @@ describe('resume = continuous', () => {
     });
   }
 
-  it('the check can fail: a resumed leg whose seats act differently ends on another hash', { timeout: 60_000 }, () => {
+  it('the check can fail: a resumed leg whose seats act differently ends on another hash', () => {
     // Positive control for the resume check. Resuming at day 2 leaves the whole war ahead of the resumed leg.
     const s = phase0Run({ pack: 'testbed', days: 60, resumeAtDay: 2, resumeSeats: SECOND_OPENING });
     expect(s.resume!.matches, 'a different leg must not match').toBe(false);
@@ -43,7 +43,7 @@ describe('resume = continuous', () => {
     expect(s.resume!.savedLogReplays).toBe(true);
   });
 
-  it('the check can fail: a save whose State is not what its log makes is reported', { timeout: 60_000 }, () => {
+  it('the check can fail: a save whose State is not what its log makes is reported', () => {
     // Positive control for the save check: the day-30 log saved beside a State that its replay never reaches.
     const s = phase0Run({
       pack: 'testbed',
@@ -61,7 +61,7 @@ describe('resume = continuous', () => {
     expect(s.resume!.matches, 'play from a State the log does not make ends elsewhere').toBe(false);
   });
 
-  it('a tampered save does not load', { timeout: 60_000 }, () => {
+  it('a tampered save does not load', () => {
     const { worldHash } = seatsWorld('testbed');
     let text = '';
     phase0Run({ pack: 'testbed', days: 12, resumeAtDay: 6, onSave: (t) => (text = t) });

@@ -41,6 +41,9 @@ Branch `phase0-done-check` (worktree `.claude/worktrees/presentation-design-8c8c
 11. **The Union reference run is at war; a peace run pins the gate.** With the gate, a plain Union run keeps the peace from the opening and every mechanic of movement is quiet, which would hide the Phase 0 mechanics. *Rejected:* waiting for the war's opening situation (not authored, and a history run is Phase 1's).
 12. **Kernel test fixtures state war from day 1** for their factions (they test the war), so every existing kernel test is unchanged.
 13. **Drafting is measured by a script, not asserted.** `measureDrafting` runs the spike's `draft` for every post that commands a force block at the Union start (27, of which 19 have a land force), each asked to take the other side's capital. The done check asserts only that the drafts are sound.
+14. **War flag rows are checked at setup** (the lead's review note on 0064): `createState` refuses a row for a faction the World lacks, a faction listed twice and a faction with no row, naming every problem together (`WarFlagError`, as `GovernmentError` does for governments, 0061), with a control for each in `war-flags.test.ts`. The pack validator says the same at a source cell; the kernel takes any World it is handed.
+15. **One timeout, in one place.** `vitest.config.ts` sets `testTimeout` 120 s and `hookTimeout` 300 s, with the reason in a comment; no test names its own. The 5 s default failed `npm run check` on `staged-check.test.ts` and on seats-run tests that pass alone (the lead's report, and once in my own run). A hung test still fails. `npm run check` three times in a row, all green: 70.1 s, 57.5 s and 49.7 s wall (vitest 59.0, 47.8 and 40.8 s) for 809 tests in 65 files, with the done check's test inside the suite. *Rejected:* a longer timeout per slow test (scattered, and each new test would need to know); running the suite serially (slows it).
+
 
 ## Liveness bands
 
@@ -114,4 +117,4 @@ Machine: the owner's Windows development PC, with other lanes' sessions running 
 4. **`CLAUDE.md` commands** gain `npm run run:phase0` and `npm run run:done-check`; the steward syncs factual pointers.
 5. **`run:seats` on union-1861 is now a peace run** under the war gate (it plays 75 quiet days). CI still runs it; the done check is the war run. Remove the Union `run:seats` step if it is not wanted.
 6. **A static Union map after day 120** (see Phase 1): informational.
-7. `tools/test/staged-check.test.ts` timed out once under load (5 s default) while other lanes' sessions were running; it passes alone and on rerun. A candidate for a longer timeout.
+7. `tools/test/staged-check.test.ts` timed out at the 5 s default under load: fixed by the global timeout (choice 15).
