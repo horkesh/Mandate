@@ -44,6 +44,8 @@ Branch `phase0-done-check` (worktree `.claude/worktrees/presentation-design-8c8c
 14. **War flag rows are checked at setup** (the lead's review note on 0064): `createState` refuses a row for a faction the World lacks, a faction listed twice and a faction with no row, naming every problem together (`WarFlagError`, as `GovernmentError` does for governments, 0061), with a control for each in `war-flags.test.ts`. The pack validator says the same at a source cell; the kernel takes any World it is handed.
 15. **One timeout, in one place.** `vitest.config.ts` sets `testTimeout` 120 s and `hookTimeout` 300 s, with the reason in a comment; no test names its own. The 5 s default failed `npm run check` on `staged-check.test.ts` and on seats-run tests that pass alone (the lead's report, and once in my own run). A hung test still fails. `npm run check` three times in a row, all green: 70.1 s, 57.5 s and 49.7 s wall (vitest 59.0, 47.8 and 40.8 s) for 809 tests in 65 files, with the done check's test inside the suite. *Rejected:* a longer timeout per slow test (scattered, and each new test would need to know); running the suite serially (slows it).
 
+16. **A war flag is one faction's, set only by its own decision (0066, the reviewer's S1).** The validator (`warFlagSources`, `situation-layer.ts`) refuses a war flag set by a notice's effects, by another faction's situation, or by an inaction outcome or locked cost; a flag named by two factions is refused in the World check. `union-1861` names one flag per faction. Controls: five direct cases in `validate.test.ts`, and the shared-flag case in the refusal table. The reviewer's N3 is `war-flags.test.ts`: a decision option sets the flag and `atWarSince` appears only after the decision (a rule-driven principal on the day the situation surfaces; a human principal only on the day he decides, and never if he chooses peace), the other side staying at peace. *Rejected:* reading the war from the day a flag-setting notice surfaced (it still lets a notice decide war for a government).
+
 
 ## Liveness bands
 
@@ -79,7 +81,7 @@ Fires in a reference run (union-1861 at war, 75 days / testbed, 120 days); a ban
 
 ## Measurements
 
-Machine: the owner's Windows development PC, with other lanes' sessions running (so every figure is an upper-ish bound; CI hardware is unmeasured). No daily hashing.
+Machine: the owner's Windows development PC, with other lanes' sessions running, so **every timing figure here is an upper bound from a busy machine**; CI Linux gives a median of 6.6 ms for the Union day (the reviewer's N2). No daily hashing.
 
 | What | Result |
 |---|---|
@@ -102,7 +104,7 @@ Machine: the owner's Windows development PC, with other lanes' sessions running 
 ## For Phase 1
 
 - **Values arrive: move four bands.** Relay objections and holds, filter holds and trims are banded at exactly zero. The gate fails the day the people recast gives them values, which is the point; move the bands then, with the numbers the Union run shows.
-- **The March 1861 situations must set the war flag.** The pack names `war_begun` for both factions; a situation's effects set it, and the gate opens the principal's campaign the next morning. `pack:validate` warns `war-flag-unset` until one does. When it does, the Union reference run no longer needs `--at-war`; keep the labelled option for mechanics runs.
+- **The March and April 1861 situations must set each side's war flag, by decision (0066).** The pack names `war_begun_union` and `war_begun_confederate`; only a decision option of that faction's own situation may set its flag (the validator refuses a notice, another faction's situation, an inaction outcome and a locked cost), so a principal is never at war before he knows. Until they exist `pack:validate` warns `war-flag-unset` twice and the Union reference run uses the labelled `--at-war` option.
 - **A history run's checkpoint scores** (section 11) replace Phase 0's counts of named things.
 - **The planner's terms over edits** (above), and the drafting cap as a pack rule with the value below.
 - **Calibrate the tick budget on CI hardware.** The budget bound (median 40 ms, p95 160 ms) is wide for noise; if a CI run flakes on it, raise the p95 factor; do not skip the criterion.
