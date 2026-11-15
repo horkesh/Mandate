@@ -53,12 +53,12 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0047](0047-a-standing-reviewer.md) | A standing reviewer lane | accepted |
 | [0048](0048-assets-are-made-by-codex.md) | Assets are made by Codex, through one coordination file | accepted; amended by 0051 |
 | [0049](0049-ultrawide-first.md) | The game is designed for ultrawide displays first (3440×1440 reference) | accepted |
-| [0050](0050-world-format-v2.md) | World format v2: the pack format, its validator and generator, and what becomes State at scenario start | accepted; amended by 0055, 0058 |
+| [0050](0050-world-format-v2.md) | World format v2: the pack format, its validator and generator, and what becomes State at scenario start | accepted; amended by 0055, 0058, 0065 |
 | [0051](0051-codex-output-rules.md) | Rules for Codex output: no AI likenesses of real people, game-resolution assets only, and full provenance | accepted |
 | [0052](0052-seats-knowledge-and-the-command-log.md) | Seats, knowledge and the command log: copy-on-write State, the player-visible boundary, and who may order | accepted; amended by 0059 |
 | [0053](0053-presentation-and-asset-briefs.md) | The presentation design and the asset briefs are accepted | accepted |
 | [0054](0054-control-fronts-pockets-and-supply.md) | Control, fronts, pockets and supply | accepted; amended by 0055 |
-| [0055](0055-neutral-passage-starting-sides-and-supply-sources.md) | Passage through neutral states, starting sides, and supply sources | accepted; amended by 0058 |
+| [0055](0055-neutral-passage-starting-sides-and-supply-sources.md) | Passage through neutral states, starting sides, and supply sources | accepted; amended by 0058, 0065 |
 | [0056](0056-union-1861-start-data.md) | The Union 1861 start as data | accepted |
 | [0057](0057-situations-engine-and-gate-tests.md) | The situations engine, and the gate as tests | accepted; amended by 0060 |
 | [0058](0058-lane-0.5-format-gaps.md) | The format gaps lane 0.5 found: trait stand-ins, filters and intelligence chiefs, and each region's civil government | accepted; amended by 0061 |
@@ -68,3 +68,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0062](0062-the-planner-shape.md) | The planner's shape: generate, filter and score, with one level of methods | accepted |
 | [0063](0063-atrocity-levers-are-watched.md) | An option that hurts the enemy in response to an atrocity is watched | accepted |
 | [0064](0064-forces-command-movement-and-the-contest.md) | Forces, command, movement, infrastructure and the control contest | accepted |
+| [0065](0065-a-governments-side-is-state.md) | A government's side can change in play, and stores carry their date | accepted |
