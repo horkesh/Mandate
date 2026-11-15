@@ -1,0 +1,26 @@
+{
+  "terms": [
+    { "term": "Cherokees?", "caseSensitive": true },
+    { "term": "Muscogee", "caseSensitive": true },
+    { "term": "Creek (?:Nation|people|chiefs?|council)", "caseSensitive": true },
+    { "term": "(?:Upper|Lower) Creeks", "caseSensitive": true },
+    { "term": "Seminoles?", "caseSensitive": true },
+    { "term": "Choctaws?", "caseSensitive": true },
+    { "term": "Chickasaws?", "caseSensitive": true },
+    { "term": "Wichitas?", "caseSensitive": true },
+    { "term": "Caddos?", "caseSensitive": true },
+    { "term": "Comanches?", "caseSensitive": true },
+    { "term": "Osages?", "caseSensitive": true },
+    { "term": "Quapaws?", "caseSensitive": true },
+    { "term": "Senecas?", "caseSensitive": true },
+    { "term": "Shawnees?", "caseSensitive": true },
+    { "term": "Delawares", "caseSensitive": true },
+    { "term": "Opothleyahola", "caseSensitive": true },
+    { "term": "Watie", "caseSensitive": true },
+    { "term": "Indian Territory", "caseSensitive": true },
+    { "term": "Indians?", "caseSensitive": true },
+    { "term": "Native (?:nations?|men|people|peoples|Americans?)" },
+    { "term": "tribes?" }
+  ],
+  "allow": ["Osage River", "Seneca Falls", "Indian River", "Indian Ocean", "Choctaw Bluff"]
+}
