@@ -63,7 +63,7 @@ export function seatsRun(options: SeatsRunOptions): SeatsSummary {
     rejections: s.rejections,
     decisionPoints: s.decisionPoints,
     liveness: s.liveness,
-    replay: s.replay,
+    replay: s.replay!,
     resume: s.resume,
   };
 }

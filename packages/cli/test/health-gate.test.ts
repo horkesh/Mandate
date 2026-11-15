@@ -8,11 +8,11 @@ import { M2_MECHANICS } from '../src/m2-liveness.ts';
  * mechanic fires within a plausible band. A dead mechanic is a bug even when
  * the scores look good.
  *
- * This is the skeleton. The reference run today is the M2 kernel on the
- * testbed, 20 turns, with the generic scripted leader. Mechanics that leader
- * never exercises carry `minFires: 0` and say so; they retire with M2. Lane
- * 0.8 replaces the reference run with the Phase 0 headless run, and every
- * Phase 0 mechanic gets a band with `minFires >= 1` (the todos below).
+ * This file is the M2 kernel's gate and retires with M2. The reference run is
+ * the M2 kernel on the testbed, 20 turns, with the generic scripted leader.
+ * Mechanics that leader never exercises carry `minFires: 0` and say so. The
+ * Phase 0 kernel's gate is `liveness-gate.test.ts` (lane 0.8): bands for every
+ * mechanic of the tick and the map, in the Union 1861 and testbed reference runs.
  */
 
 const NOT_EXERCISED: LivenessBand = { minFires: 0 };
@@ -60,7 +60,4 @@ describe('health gate: mechanic liveness in the reference run', () => {
   it('every mechanic fires within its band', () => {
     expect(checkLiveness(summary.liveness, M2_TESTBED_BANDS)).toEqual([]);
   });
-
-  it.todo('Phase 0: movement, control contest, control index, supply, infrastructure and messages each fire (lane 0.8)');
-  it.todo('Phase 0: the reference run is the Union 1861 headless run with rule seats (lane 0.8)');
 });

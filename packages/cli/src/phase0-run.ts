@@ -38,6 +38,8 @@ export interface Phase0Options {
   readonly checkpointEvery?: number;
   /** Save after this day, load the save, play on, and compare the final hash. */
   readonly resumeAtDay?: number;
+  /** Replay the log and compare every hash taken. Default on; a gate run that only reads liveness skips it. */
+  readonly replay?: boolean;
   /** Measure the tick's cost per day. The continuous run then has no freeze or deep checks. */
   readonly timings?: boolean;
   /** Freeze State after every phase and compare the derived map with a fresh derivation. Default on unless `timings`. */
@@ -94,7 +96,8 @@ export interface Phase0Summary {
   readonly rejections: number;
   readonly decisionPoints: number;
   readonly liveness: readonly LivenessRow[];
-  readonly replay: { readonly matches: boolean; readonly firstDifferentDay: number | null };
+  /** The log replayed to every hash taken; null when the run was asked to skip it. */
+  readonly replay: { readonly matches: boolean; readonly firstDifferentDay: number | null } | null;
   readonly resume: { readonly atTurn: number; readonly finalHash: string; readonly matches: boolean; readonly savedLogReplays: boolean } | null;
   /** Wall-clock cost, so it is not part of what two machines compare. Null unless asked for. */
   readonly timing: TickTiming | null;
@@ -154,8 +157,12 @@ export function phase0Run(options: Phase0Options): Phase0Summary {
   const finalHash = canonicalHash(run.state);
 
   // The log is the truth: replaying it, with no seat asked, gives every hash the run took.
-  const replayed = phase0.replay(world, initial, run.log, options.days, checked).hashes;
-  const firstDifferent = replayed.findIndex((h, i) => h.hash !== run.hashes[i]?.hash || h.day !== run.hashes[i]?.day);
+  let replayCheck: Phase0Summary['replay'] = null;
+  if (options.replay !== false) {
+    const replayed = phase0.replay(world, initial, run.log, options.days, checked).hashes;
+    const firstDifferent = replayed.findIndex((h, i) => h.hash !== run.hashes[i]?.hash || h.day !== run.hashes[i]?.day);
+    replayCheck = { matches: firstDifferent === -1 && replayed.length === run.hashes.length, firstDifferentDay: firstDifferent === -1 ? null : (replayed[firstDifferent]?.day ?? run.hashes[firstDifferent]!.day) };
+  }
 
   let resume: Phase0Summary['resume'] = null;
   if (options.resumeAtDay !== undefined) {
@@ -193,7 +200,7 @@ export function phase0Run(options: Phase0Options): Phase0Summary {
     rejections,
     decisionPoints,
     liveness: livenessReport(telemetry),
-    replay: { matches: firstDifferent === -1 && replayed.length === run.hashes.length, firstDifferentDay: firstDifferent === -1 ? null : (replayed[firstDifferent]?.day ?? run.hashes[firstDifferent]!.day) },
+    replay: replayCheck,
     resume,
     timing: options.timings ? tickTiming(samples) : null,
   };
