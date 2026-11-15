@@ -18,7 +18,7 @@
  *   ground is contested), except a neutral government's closed territory
  *   (0055); they never stand on open water.
  * - **Closed edges.** An edge carries a march only while its capacity this
- *   month is at least one whole unit of the pack's scale (`MARCH_MIN_CAPACITY_MILLI`):
+ *   month is at least the pack's least capacity to march (`WorldRules.movement.marchMinCapacityPermille`, one whole unit in both packs):
  *   a season that narrows a small river below that (low water, ice) closes it,
  *   and damage that cuts an edge to nothing closes it to everyone. A water edge
  *   obstructed against the side is closed to its ships (`obstructionFor`).
@@ -46,9 +46,6 @@ export interface MarchLeg {
   readonly marchDoneMilli: number;
   readonly marchStartDay: number;
 }
-
-/** The least capacity, permille of the pack's scale, at which an edge carries a march: one whole unit. */
-export const MARCH_MIN_CAPACITY_MILLI = 1000;
 
 /** Why a side's blocks cannot take a leg (hard rule 6). */
 export type MarchBar = 'off_map' | 'needs_ship' | 'not_water' | 'closed_neutral' | 'open_water' | 'rail_not_traced' | 'edge_closed' | 'obstructed';
@@ -83,7 +80,7 @@ export function marchBar(ground: MarchGround, leg: EdgeLeg, faction: FactionId, 
     if (neutralClosed(holding, ground.network)) return 'closed_neutral';
     if (leg.type === 'rail' && (!railPasses(ground, leg.from, faction) || !railPasses(ground, leg.to, faction))) return 'rail_not_traced';
   }
-  if (leg.capacityMilli < MARCH_MIN_CAPACITY_MILLI) return 'edge_closed';
+  if (leg.capacityMilli < ground.map.world.rules.movement.marchMinCapacityPermille) return 'edge_closed';
   if (water && obstructionFor(ground.map, ground.index, ground.network, leg.edge, faction) !== null) return 'obstructed';
   return null;
 }

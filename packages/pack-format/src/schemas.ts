@@ -161,6 +161,39 @@ export const RulesSchema = z.strictObject({
       capacityPermille: nonNegative,
     }),
   ),
+  // Lane 0.5's numbers, moved out of the kernel (0064, the lead's ruling): every pack states them, there is no default.
+  stores: z
+    .strictObject({
+      menPerCapacityUnit: positive.describe('Men (and non-combatants) one unit of the capacity scale feeds for a day. A design parameter.'),
+      capDays: positive.describe('The most days of stores a block refills to. A design parameter.'),
+      lowDays: nonNegative.describe('Stores below this many days are low, a truth event a report may tell; at most capDays. A design parameter.'),
+    })
+    .describe('Stores on hand (0040, 0064): design parameters the pack states, not sourced facts.'),
+  contest: z
+    .strictObject({
+      occupyPermille: permille.describe('Control a side alone in held ground gains a day at full strength, permille. A design parameter.'),
+      occupyFullMen: positive.describe('The men at which occupation reaches its full rate; fewer gain in proportion. A design parameter.'),
+      contestPermille: permille.describe('Control the stronger side gains a day at an overwhelming margin, permille, times its margin. A design parameter.'),
+    })
+    .describe('The simple control contest and occupation (0064): design parameters the pack states, not sourced facts.'),
+  movement: z
+    .strictObject({
+      marchMinCapacityPermille: positive.describe('The least capacity an edge needs this month to carry a march, permille of one unit of the capacity scale; at most capacityMax x 1000. A design parameter.'),
+      courierPermille: int.min(1, 'a permille from 1').max(1000, 'a permille up to 1000').describe('A courier’s days on an edge, permille of a division’s, rounded up, at least one day. A design parameter.'),
+    })
+    .describe('Movement and messages over the graph (0064): design parameters the pack states, not sourced facts.'),
+  ruleSeats: z
+    .strictObject({
+      warFlags: z
+        .array(
+          z.strictObject({
+            faction: idOf('faction'),
+            flag: termId.nullable().describe('The situation chain flag that puts this faction at war; null for war from day 1.'),
+          }),
+        )
+        .describe('One row per faction in the manifest.'),
+    })
+    .describe('The generic rule-seat principal (0064): its standing goals stay at hold until its faction is at war, which a situation flag the pack names marks.'),
 });
 
 export const VocabulariesSchema = z.strictObject({

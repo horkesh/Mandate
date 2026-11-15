@@ -25,6 +25,14 @@ export const SEASONS: readonly SeasonEffect[] = [
   { reason: 'ice', defaultMonths: [1, 2], lengthPermille: 2000, capacityPermille: 300 },
 ];
 
+/** The fixtures' design parameters for stores, the contest and movement (the testbed's and Union's values, 0064). */
+export const FIXTURE_RULES = {
+  stores: { menPerCapacityUnit: 20000, capDays: 30, lowDays: 7 },
+  contest: { occupyPermille: 100, occupyFullMen: 5000, contestPermille: 200 },
+  movement: { marchMinCapacityPermille: 1000, courierPermille: 333 },
+  ruleSeats: { warFlags: [] },
+} as const;
+
 export function region(id: string, kind: RegionKind = 'land'): RegionRecord {
   return {
     id: R(id),
@@ -102,6 +110,7 @@ export function mapWorld(parts: WorldParts): World {
       supplyControlPermille: parts.supplyControlPermille ?? 250,
       retreatControlPermille: parts.retreatControlPermille ?? 50,
       seasons: SEASONS,
+      ...FIXTURE_RULES,
     },
     vocabularies: { terrains: [], postKinds: [], departmentKinds: [], arms: [], personKinds: [], traits: [], ranks: [], blocs: [], standingOrderKinds: [] },
     factions: (parts.factions ?? ['a', 'b']).map((f) => ({ id: F(f), name: `faction.${f}.name` })),

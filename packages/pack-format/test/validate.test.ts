@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { errorsOf, formatGenerated, formatIssue, generatePack, type Issue, type PackData, validatePack } from '../src/index.ts';
+import { errorsOf, formatGenerated, formatIssue, generatePack, IssueSink, type Issue, type PackData, validatePack, warFlagsUnset } from '../src/index.ts';
 import { appendRow, filesOf, fixture, type FileMap, replaceOnce, withFile, withNewFile, withoutFile } from './support/fixture.ts';
 
 const run = (files: FileMap) => generatePack(filesOf(files));
@@ -208,6 +208,25 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'an off-map box with a terrain', files: () => withFile(`${W}/regions.csv`, replaceOnce('abroad,Abroad,off_map,,', 'abroad,Abroad,off_map,plain,')), kind: 'region-terrain', file: `${W}/regions.csv` },
   { name: 'a land region without a terrain', files: () => withFile(`${W}/regions.csv`, replaceOnce('beta,Beta,land,plain,', 'beta,Beta,land,,')), kind: 'region-terrain', file: `${W}/regions.csv` },
   { name: 'a retreat threshold above the supply threshold', files: () => editJson('pack.json', (m: { rules: { retreatControlPermille: number } }) => (m.rules.retreatControlPermille = 300)), kind: 'rules-order', file: 'pack.json', severity: 'warning' },
+  // Lane 0.5's design parameters (0064): every pack states them; there is no kernel default.
+  { name: 'no stores rules (every pack states them)', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.stores), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'no contest rules', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.contest), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'no movement rules', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.movement), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'a stores rule missing a field', files: () => editJson('pack.json', (m: { rules: { stores: Record<string, unknown> } }) => delete m.rules.stores.capDays), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'feeding men with a zero capacity unit', files: () => editJson('pack.json', (m: { rules: { stores: { menPerCapacityUnit: number } } }) => (m.rules.stores.menPerCapacityUnit = 0)), kind: 'shape/too_small', file: 'pack.json' },
+  { name: 'an occupation rate above 1000 permille', files: () => editJson('pack.json', (m: { rules: { contest: { occupyPermille: number } } }) => (m.rules.contest.occupyPermille = 1200)), kind: 'shape/too_big', file: 'pack.json' },
+  { name: 'a courier slower than a division', files: () => editJson('pack.json', (m: { rules: { movement: { courierPermille: number } } }) => (m.rules.movement.courierPermille = 1500)), kind: 'shape/too_big', file: 'pack.json' },
+  { name: 'a courier who takes no time', files: () => editJson('pack.json', (m: { rules: { movement: { courierPermille: number } } }) => (m.rules.movement.courierPermille = 0)), kind: 'shape/too_small', file: 'pack.json' },
+  { name: 'a fractional stores cap', files: () => editJson('pack.json', (m: { rules: { stores: { capDays: number } } }) => (m.rules.stores.capDays = 7.5)), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'a low-stores threshold above the cap', files: () => editJson('pack.json', (m: { rules: { stores: { lowDays: number } } }) => (m.rules.stores.lowDays = 40)), kind: 'rules-range', file: 'pack.json' },
+  // The rule-seat war setting (0064): one row per faction, a flag a situation sets or null.
+  { name: 'a war flag for a faction the pack lacks', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: unknown[] } } }) => m.rules.ruleSeats.warFlags.push({ faction: 'green', flag: null })), kind: 'unknown-reference', file: 'pack.json' },
+  { name: 'two war flags for one faction', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: unknown[] } } }) => m.rules.ruleSeats.warFlags.push({ faction: 'red', flag: null })), kind: 'duplicate-id', file: 'pack.json' },
+  { name: 'a faction with no war flag row', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: unknown[] } } }) => m.rules.ruleSeats.warFlags.pop()), kind: 'missing-value', file: 'pack.json' },
+  { name: 'a war flag that is not an id', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: { flag: string | null }[] } } }) => (m.rules.ruleSeats.warFlags[0]!.flag = 'war begun')), kind: 'shape/invalid_format', file: 'pack.json' },
+  { name: 'no rule-seat settings at all', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.ruleSeats), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'a war flag no situation sets', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: { flag: string | null }[] } } }) => (m.rules.ruleSeats.warFlags[0]!.flag = 'war_begun')), kind: 'war-flag-unset', file: 'pack.json', severity: 'warning' },
+  { name: 'a least capacity to march above the top of the scale', files: () => editJson('pack.json', (m: { rules: { movement: { marchMinCapacityPermille: number } } }) => (m.rules.movement.marchMinCapacityPermille = 6000)), kind: 'rules-range', file: 'pack.json' },
   {
     name: 'a scenario folder the manifest does not list',
     files: () => {
@@ -413,5 +432,19 @@ describe('issues read like sentences (decision 0030: file, field, what is wrong,
     const bad = run(withFile(`${S}/standing_orders.csv`, replaceOnce(',hold,red_top,', ',hold,nobody,')));
     const issue = bad.issues.find((i) => i.kind === 'unknown-reference')!;
     expect(`${issue.file} (${issue.at})`).toBe(`${S}/standing_orders.csv (row 2 (stay), column from)`);
+  });
+});
+
+describe('the rule-seat war setting (0064)', () => {
+  it('warns for a war flag no situation sets, and not once a situation sets it (positive control)', () => {
+    const base = run(fixture());
+    const pack = { ...base.pack!, world: { ...base.pack!.world, rules: { ...base.pack!.world.rules, ruleSeats: { warFlags: [{ faction: 'red' as never, flag: 'war_begun' }, { faction: 'blue' as never, flag: null }] } } } };
+    const opening = { def: { effects: [{ setFlag: 'war_begun' }], options: [], inaction: null } as never };
+    const unset = new IssueSink();
+    warFlagsUnset([], pack, unset);
+    expect(unset.issues.map((i) => `${i.kind} ${i.at}`)).toEqual(['war-flag-unset rules.ruleSeats.warFlags[0].flag']);
+    const set = new IssueSink();
+    warFlagsUnset([opening], pack, set);
+    expect(set.issues).toEqual([]);
   });
 });
