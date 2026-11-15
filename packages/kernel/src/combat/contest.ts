@@ -41,18 +41,6 @@ import type { State } from '../root-state.ts';
 import { edgeLeg } from '../supply/supply.ts';
 import { otherEnd } from '../world/index.ts';
 
-/** DESIGN PARAMETERS until the pack format carries them (listed for the lead). */
-export interface ContestRules {
-  /** Control a side alone in a held region gains a day at full strength, permille. */
-  readonly occupyPermille: number;
-  /** The men at which occupation reaches its full rate; fewer gain in proportion. */
-  readonly occupyFullMen: number;
-  /** Control the stronger side gains a day at an overwhelming margin, permille. */
-  readonly contestPermille: number;
-}
-
-export const DEFAULT_CONTEST_RULES: ContestRules = Object.freeze({ occupyPermille: 100, occupyFullMen: 5000, contestPermille: 200 });
-
 /** One side's presence in a region (hard rule 6: the terms behind a contest). */
 export interface Presence {
   readonly faction: FactionId;
@@ -122,7 +110,9 @@ export function presenceByRegion(ground: MarchGround, state: State): Map<RegionI
 }
 
 /** Today's contests and occupations, with the control deltas and retreats they propose. */
-export function contest(ground: MarchGround, state: State, rules: ContestRules = DEFAULT_CONTEST_RULES): ContestResult {
+export function contest(ground: MarchGround, state: State): ContestResult {
+  // The rates are the pack's design parameters (`WorldRules.contest`), never kernel defaults.
+  const rules = ground.map.world.rules.contest;
   const records: ContestRecord[] = [];
   const deltas: ControlDelta[] = [];
   const presence = presenceByRegion(ground, state);

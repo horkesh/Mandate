@@ -118,6 +118,25 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   if (world.rules.retreatControlPermille > world.rules.supplyControlPermille) {
     warn('rules-order', W('rules', 0, 'retreatControlPermille'), 'the retreat threshold is above the supply threshold', 'retreat at or below supply (0019: 50 and 250)');
   }
+  // Lane 0.5's design parameters (0064): ranges the schema cannot state alone, because they depend on another rule.
+  if (world.rules.stores.lowDays > world.rules.stores.capDays) {
+    err('rules-range', W('rules.stores', 0, 'lowDays'), `the low-stores threshold (${world.rules.stores.lowDays} days) is above the cap (${world.rules.stores.capDays} days), so a full block would read low`, 'lowDays at most capDays');
+  }
+  // The rule-seat war setting (0064): one row per faction, naming a faction the pack has.
+  const factionIds = new Set(world.factions.map((f) => f.id as string));
+  const warRows = world.rules.ruleSeats.warFlags;
+  warRows.forEach((row, i) => {
+    if (!factionIds.has(row.faction)) err('unknown-reference', W('rules.ruleSeats.warFlags', i, 'faction'), `"${row.faction}" is not a faction in this pack`, `one of: ${[...factionIds].join(', ')}`);
+    if (warRows.findIndex((x) => x.faction === row.faction) !== i) err('duplicate-id', W('rules.ruleSeats.warFlags', i, 'faction'), `faction "${row.faction}" has more than one war flag`);
+    // 0066: each faction's war is its own government's decision, so a flag is one faction's, never shared.
+    if (row.flag !== null && warRows.findIndex((x) => x.flag === row.flag) !== i) err('duplicate-id', W('rules.ruleSeats.warFlags', i, 'flag'), `war flag "${row.flag}" is named by more than one faction, so one side's decision would put the other at war before its president knew`, 'one flag per faction');
+  });
+  for (const f of [...factionIds].sort()) {
+    if (!warRows.some((r) => r.faction === f)) err('missing-value', W('rules.ruleSeats', 0, 'warFlags'), `faction "${f}" has no war flag row`, 'one row per faction: a situation flag, or null for war from day 1');
+  }
+  if (world.rules.movement.marchMinCapacityPermille > world.rules.capacityMax * 1000) {
+    err('rules-range', W('rules.movement', 0, 'marchMinCapacityPermille'), `no edge can carry a march: the least capacity to march (${world.rules.movement.marchMinCapacityPermille}) is above the scale's top (capacityMax ${world.rules.capacityMax} = ${world.rules.capacityMax * 1000})`, `at most ${world.rules.capacityMax * 1000}`);
+  }
 
   // ---- provenance: sources and licences
   const sources = new Map<string, ProvenanceFile['sources'][number]>();
@@ -560,6 +579,9 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
         if (pf !== undefined && side !== undefined && pf !== side) err('chain-crosses-factions', at('post'), `the block's department is on side "${side}" but its commander's post is on "${pf}"`, 'a commanding post on the same side');
       }
       unknownsCheck('forceBlocks', b as unknown as Record<string, unknown>, b.unknowns, (f) => at(f));
+      // Stores carry their date as strengths do (0065, 0056): informational in Phase 0, required when stores are given.
+      if (b.storesDays !== null && b.storesDate === null) err('missing-value', at('storesDate'), `stores of ${b.storesDays} days are given without the date of the figure`, 'the date the stores figure is as of: ISO, year-month or year');
+      if (b.storesDays === null && b.storesDate !== null) err('missing-value', at('storesDays'), `a stores date (${b.storesDate}) is given without stores`, 'the days of stores the date belongs to, or no date');
     });
   }
 

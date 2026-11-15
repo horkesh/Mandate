@@ -29,20 +29,8 @@ import type { FactionId, ForceBlockId, RegionId } from '../ids.ts';
 import type { State } from '../root-state.ts';
 import { allocateInPriorityOrder, type SupplyAllocation, type SupplyDemand, type SupplyResult } from '../supply/supply.ts';
 import type { WorldIndex } from '../world/index.ts';
+import type { StoresRules } from '../world/world.ts';
 import { applyForces, factionOfBlock, STORES_MILLI, type ForceChange, type ForceDelta } from './forces.ts';
-
-/**
- * DESIGN PARAMETERS, not sourced facts, until the pack format carries them
- * (a lane 0.2 change, listed for the lead): men one unit of the capacity scale
- * feeds for a day, the most days a block carries, and the low-stores threshold.
- */
-export interface StoresRules {
-  readonly menPerCapacityUnit: number;
-  readonly storesCapDays: number;
-  readonly storesLowDays: number;
-}
-
-export const DEFAULT_STORES_RULES: StoresRules = Object.freeze({ menPerCapacityUnit: 20000, storesCapDays: 30, storesLowDays: 7 });
 
 /** A block's stores crossing the low threshold, either way (truth, for reports to tell). */
 export interface StoresCrossing {
@@ -69,9 +57,11 @@ export function dailyNeedMilli(rules: StoresRules, state: State, block: ForceBlo
 }
 
 /** One day of eating and refilling for every block with a side, standing on land, with known strength and stores. */
-export function storesStep(map: WorldIndex, state: State, supply: SupplyResult, rules: StoresRules = DEFAULT_STORES_RULES): StoresResult {
-  const cap = rules.storesCapDays * STORES_MILLI;
-  const low = rules.storesLowDays * STORES_MILLI;
+export function storesStep(map: WorldIndex, state: State, supply: SupplyResult): StoresResult {
+  // The pack's design parameters (`WorldRules.stores`), never kernel defaults.
+  const rules = map.world.rules.stores;
+  const cap = rules.capDays * STORES_MILLI;
+  const low = rules.lowDays * STORES_MILLI;
   type Eater = { block: ForceBlockId; faction: FactionId; region: RegionId; need: number; stores: number };
   const eaters: Eater[] = [];
   for (const block of (Object.keys(state.forceBlockStates) as ForceBlockId[]).sort(strictCompare)) {

@@ -18,7 +18,7 @@ import type { StandingGoal } from '../plans/goal.ts';
 import type { State } from '../root-state.ts';
 import { seatOf } from '../seats/seats.ts';
 import { perceptionBias } from '../standin/traits.ts';
-import { heldPost } from '../command/command.ts';
+import { heldPost, sideOfPerson } from '../command/command.ts';
 import { whereIsPerson } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import type { BeliefView, GoalView, ReportView, SeatView, SituationView } from './types.ts';
@@ -129,10 +129,13 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
 
   const region = whereIsPerson(world, state, person.id);
   const situations = situationViews(world, state, seat, person.id, cache);
+  // His side today: his post's while he holds one (0065), so it can change in play.
+  const faction = sideOfPerson(world.map, state, person.id);
   const previous = cache.views.get(seat);
   if (
     previous !== undefined &&
     previous.day === state.stateDay &&
+    previous.faction === faction &&
     previous.region === region &&
     previous.goal === goal &&
     previous.enemyBeliefs === beliefs.beliefs &&
@@ -145,7 +148,7 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     day: state.stateDay,
     seat,
     person: person.id,
-    faction: person.faction,
+    faction,
     post,
     region,
     goal,

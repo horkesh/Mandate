@@ -715,6 +715,7 @@ export function generatePack(files: PackFiles): GenerateResult {
           strengthDate: r.optionalDate('strength_date', 'strengthDate'),
           nonCombatants: r.optionalInt('non_combatants') ?? 0,
           storesDays: r.optionalInt('stores_days', 'storesDays'),
+          storesDate: r.optionalDate('stores_date', 'storesDate'),
           unknowns: [] as string[],
           provenance: cites(r),
         };

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { createDerivedMapCache, deriveMap } from '../src/control-index/derived.ts';
-import { dailyNeedMilli, DEFAULT_STORES_RULES, storesStep } from '../src/forces/stores.ts';
+import { dailyNeedMilli, storesStep } from '../src/forces/stores.ts';
 import { networkOf } from '../src/infrastructure/infrastructure.ts';
 import { createIdMint } from '../src/messages/transit.ts';
 import type { State } from '../src/root-state.ts';
@@ -53,8 +53,8 @@ describe('stores on hand: eaten daily, refilled by supply (FOUNDATION section 4)
   const s0 = createState(worldOf(MAP, START), { seed: 1 });
 
   it('needs men over the capacity unit, a day at a time', () => {
-    expect(dailyNeedMilli(DEFAULT_STORES_RULES, s0, B('line'))).toBe(500);
-    expect(dailyNeedMilli(DEFAULT_STORES_RULES, s0, B('ghost'))).toBe(0);
+    expect(dailyNeedMilli(MAP.world.rules.stores, s0, B('line'))).toBe(500);
+    expect(dailyNeedMilli(MAP.world.rules.stores, s0, B('ghost'))).toBe(0);
   });
 
   it('a block on a line refills a day a day toward the cap', () => {

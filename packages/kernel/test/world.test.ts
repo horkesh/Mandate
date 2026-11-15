@@ -1,3 +1,4 @@
+import { FIXTURE_RULES } from './support/map-fixture.ts';
 import { describe, expect, it } from 'vitest';
 import { IdError, toId } from '../src/ids.ts';
 import { KERNEL_MODULES, OWNED_FIELDS, type KernelModule, type OwnedField } from '../src/ownership.ts';
@@ -34,7 +35,7 @@ const region = (id: string) => ({
 const world = (edges: EdgeRecord[]): World => ({
   formatVersion: 2,
   pack: 'fixture',
-  rules: { capacityMax: 5, supplyControlPermille: 250, retreatControlPermille: 50, seasons: [] },
+  rules: { capacityMax: 5, supplyControlPermille: 250, retreatControlPermille: 50, seasons: [], ...FIXTURE_RULES },
   vocabularies: { terrains: [], postKinds: [], departmentKinds: [], arms: [], personKinds: [], traits: [], ranks: [], blocs: [], standingOrderKinds: [] },
   factions: [],
   departments: [],

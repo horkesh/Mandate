@@ -11,6 +11,10 @@
     "capacityMax": 5,
     "supplyControlPermille": 250,
     "retreatControlPermille": 50,
+    "stores": { "menPerCapacityUnit": 20000, "capDays": 30, "lowDays": 7 },
+    "contest": { "occupyPermille": 100, "occupyFullMen": 5000, "contestPermille": 200 },
+    "movement": { "marchMinCapacityPermille": 1000, "courierPermille": 333 },
+    "ruleSeats": { "warFlags": [{ "faction": "union", "flag": "war_begun_union" }, { "faction": "confederate", "flag": "war_begun_confederate" }] },
     "seasons": [
       {
         "reason": "mud",
@@ -294,6 +298,16 @@
       {
         "id": "state_government",
         "name": "department_kind.state_government",
+        "government": true
+      },
+      {
+        "id": "territorial_government",
+        "name": "department_kind.territorial_government",
+        "government": true
+      },
+      {
+        "id": "federal_district",
+        "name": "department_kind.federal_district",
         "government": true
       }
     ],

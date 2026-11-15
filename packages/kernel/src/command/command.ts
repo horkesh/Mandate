@@ -20,6 +20,13 @@
  * A post's department, and through it its faction, decide its side. A block's
  * department is whose forces they are (`forces`), its post who commands them
  * (here); the two may differ, but never across sides.
+ *
+ * **A department's side is State** (0065): copied from the World at the start
+ * and changed only by a situation's typed proposal (`department_side`), apart
+ * from a neutral government's closing (`government_closed`, 0058). When a
+ * government joins a side its land stops being neutral ground, its posts and
+ * blocks serve that side, and a man holding one of its posts serves it while he
+ * holds the post. Control is `control`'s and does not move.
  */
 import { strictCompare } from '../compare.ts';
 import type { DepartmentId, FactionId, ForceBlockId, InstallationId, PersonId, PostId, RegionId } from '../ids.ts';
@@ -73,6 +80,8 @@ export interface PostState {
 }
 
 export type PostTable = Readonly<Record<PostId, PostState>>;
+/** Each department's side (0065): a faction, or null for a neutral government. */
+export type DepartmentSides = Readonly<Record<DepartmentId, FactionId | null>>;
 /** Which post commands each block (null: none). */
 export type AssignmentTable = Readonly<Record<ForceBlockId, PostId | null>>;
 
@@ -152,6 +161,30 @@ export function initialCommand(map: WorldIndex, start: ScenarioStart): { readonl
   return { posts, assignments };
 }
 
+/**
+ * Each department's side at the start, copied once from the World into State (0065). Every problem is reported
+ * together: a department listed twice, or a faction not in the World. The pack validator says the same at a source
+ * cell; this keeps any World the kernel is handed (a fixture, an adapter) from setting up with a bad row.
+ */
+export function initialDepartmentSides(map: WorldIndex): DepartmentSides {
+  const factions = new Set(map.world.factions.map((f) => f.id));
+  const problems: string[] = [];
+  const out: Record<DepartmentId, FactionId | null> = {};
+  for (const d of [...map.world.departments].sort((a, b) => strictCompare(a.id, b.id))) {
+    if (Object.prototype.hasOwnProperty.call(out, d.id)) problems.push(`department ${d.id} is listed twice`);
+    if (d.faction !== null && !factions.has(d.faction)) problems.push(`department ${d.id}: faction ${d.faction} is not in the World`);
+    out[d.id] = d.faction;
+  }
+  if (problems.length > 0) throw new CommandError(problems);
+  return out;
+}
+
+/** A department's side today (0065): a faction, or null for a neutral government. Throws on a department not in State. */
+export function departmentSide(state: State, department: DepartmentId): FactionId | null {
+  if (!Object.prototype.hasOwnProperty.call(state.departmentFactions, department)) throw new CommandError([`department ${department} is not in the World`]);
+  return state.departmentFactions[department]!;
+}
+
 /** Loops in the chain, and a parent on another side. */
 function chainProblems(posts: Readonly<Record<PostId, PostState>>, departments: ReadonlyMap<DepartmentId, { readonly faction: FactionId | null }>): string[] {
   const problems: string[] = [];
@@ -191,12 +224,30 @@ export function heldPost(state: State, person: PersonId): PostId | null {
   return null;
 }
 
-/** The faction a post serves, through its department; null for a neutral government's post. */
-export function factionOfPost(map: WorldIndex, state: State, id: PostId): FactionId | null {
+/** The faction a post serves, through its department's side today (0065); null for a neutral government's post. */
+export function factionOfPost(_map: WorldIndex, state: State, id: PostId): FactionId | null {
   const dept = postStateOf(state, id).postDepartment;
-  const d = map.world.departments.find((x) => x.id === dept);
-  if (d === undefined) throw new CommandError([`post ${id}: department ${dept} is not in the World`]);
-  return d.faction;
+  if (!Object.prototype.hasOwnProperty.call(state.departmentFactions, dept)) throw new CommandError([`post ${id}: department ${dept} is not in the World`]);
+  return state.departmentFactions[dept]!;
+}
+
+/**
+ * A person's side (0065, 0055): the side of the post he holds, while he holds it; otherwise his own in the World.
+ * A man with no post changes side only through situations or events (the people module, Phase 1).
+ *
+ * A holder follows his post only where `command` could have put him there: his own side is the post's today (he
+ * was appointed to it) or its department's at the start (he held it when the government changed side, as a
+ * neutral state's officer of no side follows his state into a side). A man in a post past `command`'s guard, the other side's man in
+ * one of ours, keeps his own side, so no guard that reads this hands anything to the other side (standing review S6).
+ */
+export function sideOfPerson(map: WorldIndex, state: State, person: PersonId): FactionId | null {
+  const record = map.world.people.find((x) => x.id === person);
+  if (record === undefined) throw new CommandError([`${person} is not a person in the World`]);
+  const post = heldPost(state, person);
+  if (post === null) return record.faction;
+  const side = factionOfPost(map, state, post);
+  const startSide = map.world.departments.find((d) => d.id === postStateOf(state, post).postDepartment)?.faction ?? null;
+  return record.faction === side || record.faction === startSide ? side : record.faction;
 }
 
 /** The posts an order passes from below `top` down to `target`, inclusive of `target` (the relays). */
@@ -223,15 +274,14 @@ function withPost(state: State, id: PostId, post: PostState): State {
 
 /**
  * Put a person in a post (proposed by verbs, situations and promotion lists).
- * He may hold only one post, and only on his own side: his faction in the World
- * must be the post's (a neutral government's post takes a man of no faction).
- * Changing a man's side is a situation's work for the people module (Phase 1).
+ * He may hold only one post, and only on his own side (`sideOfPerson`): a man
+ * with no post brings his faction in the World, which must be the post's (a
+ * neutral government's post takes a man of no faction). Changing a man's side
+ * is a situation's work for the people module (Phase 1).
  */
 export function appointHolder(map: WorldIndex, state: State, post: PostId, person: PersonId, acting = false): State {
   const p = postStateOf(state, post);
-  const record = map.world.people.find((x) => x.id === person);
-  if (record === undefined) throw new CommandError([`${person} is not a person in the World`]);
-  if (record.faction !== factionOfPost(map, state, post)) throw new CommandError([`${person} is not on ${post}'s side`]);
+  if (sideOfPerson(map, state, person) !== factionOfPost(map, state, post)) throw new CommandError([`${person} is not on ${post}'s side`]);
   const held = heldPost(state, person);
   if (held !== null && held !== post) throw new CommandError([`${person} already holds ${held}`]);
   if (p.postHolder !== null && p.postHolder !== person) throw new CommandError([`post ${post} is held by ${p.postHolder}; relieve him first`]);
@@ -329,7 +379,7 @@ export function createTemporaryPost(map: WorldIndex, state: State, spec: Tempora
   if (state.postStates[spec.id] !== undefined) problems.push(`post ${spec.id} already exists`);
   const dept = map.world.departments.find((d) => d.id === spec.department);
   if (dept === undefined) problems.push(`department ${spec.department} is not in the World`);
-  if (spec.parent !== null && dept !== undefined && factionOfPost(map, state, spec.parent) !== dept.faction) problems.push(`parent ${spec.parent} is on another side`);
+  if (spec.parent !== null && dept !== undefined && factionOfPost(map, state, spec.parent) !== departmentSide(state, dept.id)) problems.push(`parent ${spec.parent} is on another side`);
   if (spec.holder !== null && heldPost(state, spec.holder) !== null) problems.push(`${spec.holder} already holds ${heldPost(state, spec.holder)}`);
   if (problems.length > 0) throw new CommandError(problems);
   return withPost(state, spec.id, {
@@ -379,35 +429,44 @@ export function dissolveOperation(state: State, operation: string): { readonly s
   return { state: { ...state, postStates: posts, forceAssignments: assignments }, dissolved };
 }
 
-/** Apply every scheduled department change due on or before `isoDate`. Returns the posts changed. */
-export function applyScheduledChanges(state: State, isoDate: string): { readonly state: State; readonly changed: readonly PostId[] } {
+/**
+ * Apply every scheduled department change due on or before `isoDate`. Returns the posts changed, and the changes
+ * dropped: a scheduled change is an administrative line, never a change of side (0050), so one whose department is
+ * now on another side than the post's (a government changed side since the start, 0065) is dropped, not applied.
+ */
+export function applyScheduledChanges(state: State, isoDate: string): { readonly state: State; readonly changed: readonly PostId[]; readonly dropped: readonly { readonly post: PostId; readonly department: DepartmentId }[] } {
   const changed: PostId[] = [];
+  const dropped: { post: PostId; department: DepartmentId }[] = [];
   let posts: Record<PostId, PostState> | null = null;
   for (const id of postIdsOf(state)) {
     const p = state.postStates[id]!;
     const due = p.postScheduled.filter((c) => c.schedOn <= isoDate);
     if (due.length === 0) continue;
-    const last = due[due.length - 1]!;
+    const side = departmentSide(state, p.postDepartment);
+    const kept = due.filter((c) => departmentSide(state, c.schedDepartment) === side);
+    for (const c of due) if (!kept.includes(c)) dropped.push({ post: id, department: c.schedDepartment });
+    const rest = p.postScheduled.filter((c) => c.schedOn > isoDate);
+    const last = kept[kept.length - 1];
     posts ??= { ...state.postStates };
-    posts[id] = { ...p, postDepartment: last.schedDepartment, postParent: last.schedParent, postScheduled: p.postScheduled.filter((c) => c.schedOn > isoDate) };
-    changed.push(id);
+    posts[id] = last === undefined ? { ...p, postScheduled: rest } : { ...p, postDepartment: last.schedDepartment, postParent: last.schedParent, postScheduled: rest };
+    if (last !== undefined) changed.push(id);
   }
-  return posts === null ? { state, changed } : { state: { ...state, postStates: posts }, changed };
+  return posts === null ? { state, changed, dropped } : { state: { ...state, postStates: posts }, changed, dropped };
 }
 
 /**
- * Neutral ground (0055 as amended by 0058): each region whose civil government
- * is a department of no faction, and whether that government has closed its
- * territory. A region whose government is a side's, or `unknown`, is not
- * neutral ground. The supply derivation and movement read this beside the
- * network (`NetworkConditions.neutralGround`).
+ * Neutral ground (0055 as amended by 0058 and 0065): each region whose civil
+ * government is a department of no side today, and whether that government
+ * has closed its territory. A region whose government is a side's, or
+ * `unknown`, is not neutral ground; a government that joins a side stops being
+ * neutral ground that day. The supply derivation and movement read this beside
+ * the network (`NetworkConditions.neutralGround`).
  */
-export function neutralGroundOf(map: WorldIndex, state: State): Readonly<Record<RegionId, 'open' | 'closed'>> {
-  const neutral = new Set(map.world.departments.filter((d) => d.faction === null).map((d) => d.id));
+export function neutralGroundOf(_map: WorldIndex, state: State): Readonly<Record<RegionId, 'open' | 'closed'>> {
   const out: Record<RegionId, 'open' | 'closed'> = {};
   for (const region of (Object.keys(state.regionGovernments) as RegionId[]).sort(strictCompare)) {
     const dept = state.regionGovernments[region]!;
-    if (dept === 'unknown' || !neutral.has(dept)) continue;
+    if (dept === 'unknown' || state.departmentFactions[dept] !== null) continue;
     out[region] = Object.prototype.hasOwnProperty.call(state.closedGovernments, dept) ? 'closed' : 'open';
   }
   return out;
@@ -416,18 +475,31 @@ export function neutralGroundOf(map: WorldIndex, state: State): Readonly<Record<
 /** The field id a situation names to close (delta above 0) or reopen (below 0) a neutral government (0055, 0058). */
 export const GOVERNMENT_CLOSED_FIELD = 'government_closed';
 
-/** A government that may close its territory: a department of no faction whose kind the pack marks a government. */
-function closableGovernment(map: WorldIndex, department: DepartmentId): string | null {
+/**
+ * The field id a situation names to move a government to a side (0065): the subject is the department, the
+ * proposal's `side` the faction it joins, and the delta above 0. A change of side, never a closing.
+ */
+export const DEPARTMENT_SIDE_FIELD = 'department_side';
+
+/** Why a department is not a government, or null: the pack's department kinds mark governments (0058). */
+function notAGovernment(map: WorldIndex, department: DepartmentId): string | null {
   const d = map.world.departments.find((x) => x.id === department);
   if (d === undefined) return `department ${department} is not in the World`;
-  if (d.faction !== null) return `department ${department} belongs to a side; only a neutral government closes its territory`;
   if (map.world.vocabularies.departmentKinds.find((k) => k.id === d.kind)?.government !== true) return `department ${department} is not a government`;
   return null;
 }
 
+/** A government that may close its territory: a government of no side today. */
+function closableGovernment(map: WorldIndex, state: State, department: DepartmentId): string | null {
+  const d = map.world.departments.find((x) => x.id === department);
+  if (d === undefined) return `department ${department} is not in the World`;
+  if (departmentSide(state, department) !== null) return `department ${department} belongs to a side; only a neutral government closes its territory`;
+  return notAGovernment(map, department);
+}
+
 /** A neutral government closes its territory to every side's movement and supply (0055), from `day`. */
 export function closeGovernment(map: WorldIndex, state: State, department: DepartmentId, day: number): State {
-  const problem = closableGovernment(map, department);
+  const problem = closableGovernment(map, state, department);
   if (problem !== null) throw new CommandError([problem]);
   if (Object.prototype.hasOwnProperty.call(state.closedGovernments, department)) return state;
   return { ...state, closedGovernments: { ...state.closedGovernments, [department]: day } };
@@ -441,26 +513,102 @@ export function reopenGovernment(state: State, department: DepartmentId): State 
   return { ...state, closedGovernments: next };
 }
 
+/**
+ * What a change of side did (hard rule 6). Besides the side itself, each consequence keeps command's rule that
+ * nothing it holds crosses sides: a post's parent, a block's commanding post and a post's intelligence chief.
+ */
+export interface SideChange {
+  readonly department: DepartmentId;
+  readonly from: FactionId | null;
+  readonly to: FactionId;
+  /** The day it had closed its territory, if it had: a government on a side no longer closes (0058), so it is open again. */
+  readonly closingLifted: number | null;
+  /** Posts whose parent is now on another side: each heads its own chain from today. */
+  readonly postsCut: readonly PostId[];
+  /** Blocks whose commanding post is now on another side: each has no post from today. */
+  readonly blocksUnassigned: readonly ForceBlockId[];
+  /** Posts whose intelligence chief is now on another side: each has none from today. */
+  readonly chiefsCleared: readonly PostId[];
+}
+
+/** Why a government cannot join `side`, or null. */
+function sideChangeProblem(map: WorldIndex, department: DepartmentId, side: FactionId | null): string | null {
+  const problem = notAGovernment(map, department);
+  if (problem !== null) return `${problem}; only a government changes side`;
+  if (side === null) return `a change of side for ${department} names no side to join`;
+  if (!map.world.factions.some((f) => f.id === side)) return `faction ${side} is not in the World`;
+  return null;
+}
+
+/**
+ * A government joins a side (0065): a state's secession, a legislature's choice, a nation's treaty. Its land stops
+ * being neutral ground, its posts and blocks serve `side`, and a man holding one of its posts serves `side` while he
+ * holds it (`sideOfPerson`). Control does not move: it is `control`'s (0054). Returns the change, or null when the
+ * government is already on `side`. Throws `CommandError` for a department that is not a government, or a side not in
+ * the World.
+ */
+export function changeDepartmentSide(map: WorldIndex, start: State, department: DepartmentId, side: FactionId): { readonly state: State; readonly change: SideChange | null } {
+  const problem = sideChangeProblem(map, department, side);
+  if (problem !== null) throw new CommandError([problem]);
+  const from = departmentSide(start, department);
+  if (from === side) return { state: start, change: null };
+  let state: State = { ...start, departmentFactions: { ...start.departmentFactions, [department]: side } };
+  const closingLifted = Object.prototype.hasOwnProperty.call(state.closedGovernments, department) ? state.closedGovernments[department]! : null;
+  state = reopenGovernment(state, department);
+
+  const postsCut: PostId[] = [];
+  const chiefsCleared: PostId[] = [];
+  let posts: Record<PostId, PostState> | null = null;
+  for (const id of postIdsOf(state)) {
+    const p = state.postStates[id]!;
+    const mine = factionOfPost(map, state, id);
+    const cut = p.postParent !== null && factionOfPost(map, state, p.postParent) !== mine;
+    const cleared = p.postIntelChief !== null && sideOfPerson(map, state, p.postIntelChief) !== mine;
+    if (!cut && !cleared) continue;
+    if (cut) postsCut.push(id);
+    if (cleared) chiefsCleared.push(id);
+    posts ??= { ...state.postStates };
+    posts[id] = { ...p, postParent: cut ? null : p.postParent, postIntelChief: cleared ? null : p.postIntelChief };
+  }
+  if (posts !== null) state = { ...state, postStates: posts };
+
+  const blocksUnassigned: ForceBlockId[] = [];
+  let assignments: Record<ForceBlockId, PostId | null> | null = null;
+  for (const b of (Object.keys(state.forceAssignments) as ForceBlockId[]).sort(strictCompare)) {
+    const post = state.forceAssignments[b]!;
+    const block = state.forceBlockStates[b];
+    if (post === null || block === undefined || departmentSide(state, block.fbDepartment) === factionOfPost(map, state, post)) continue;
+    blocksUnassigned.push(b);
+    assignments ??= { ...state.forceAssignments };
+    assignments[b] = null;
+  }
+  if (assignments !== null) state = { ...state, forceAssignments: assignments };
+  return { state, change: { department, from, to: side, closingLifted, postsCut, blocksUnassigned, chiefsCleared } };
+}
+
 /** A situation's typed proposal, as the tick reports it. */
 export interface CommandProposal {
   readonly owner: string;
   readonly field: string;
   readonly subject: string | null;
   readonly delta: number;
+  /** For a change of side, the side the government joins; a closing names none. */
+  readonly side: FactionId | null;
 }
 
-export interface AppliedProposal {
-  readonly field: string;
-  readonly subject: string;
-  readonly change: 'closed' | 'reopened' | 'unchanged';
-}
+export type AppliedProposal =
+  | { readonly field: typeof GOVERNMENT_CLOSED_FIELD; readonly subject: DepartmentId; readonly change: 'closed' | 'reopened' | 'unchanged' }
+  | { readonly field: typeof DEPARTMENT_SIDE_FIELD; readonly subject: DepartmentId; readonly change: 'joined' | 'unchanged'; readonly side: SideChange | null };
 
 /**
  * Apply the proposals `command` owns (owner `command`), in order; others are
- * left for their owners. Today one field: `government_closed`. A proposal
- * naming a field `command` does not own, or a department that cannot close,
- * is refused with a reason (the situation's author made an error the pack
- * validator could not see, since it names State).
+ * left for their owners. Two fields, kept apart: `government_closed` (a neutral
+ * government closes or reopens its territory, 0058) and `department_side` (a
+ * government joins a side, 0065). A proposal naming a field `command` does not
+ * own, a department that cannot close or change side, or a change of side with
+ * no side to join or a delta not above 0, is refused with a reason (the
+ * situation's author made an error the pack validator could not see, since it
+ * names State).
  */
 export function applyCommandProposals(
   map: WorldIndex,
@@ -473,19 +621,31 @@ export function applyCommandProposals(
   const refused: string[] = [];
   for (const p of proposals) {
     if (p.owner !== 'command') continue;
-    if (p.field !== GOVERNMENT_CLOSED_FIELD || p.subject === null) {
+    if ((p.field !== GOVERNMENT_CLOSED_FIELD && p.field !== DEPARTMENT_SIDE_FIELD) || p.subject === null) {
       refused.push(`command owns no field "${p.field}" with subject ${p.subject ?? 'none'}`);
       continue;
     }
     const department = p.subject as DepartmentId;
-    const problem = closableGovernment(map, department);
+    if (p.field === DEPARTMENT_SIDE_FIELD) {
+      const problem = sideChangeProblem(map, department, p.side) ?? (p.delta > 0 ? null : `a change of side for ${department} joins the side it names, with a delta above 0; no proposal takes a side away`);
+      if (problem !== null) {
+        refused.push(problem);
+        continue;
+      }
+      const r = changeDepartmentSide(map, state, department, p.side!);
+      state = r.state;
+      applied.push({ field: DEPARTMENT_SIDE_FIELD, subject: department, change: r.change === null ? 'unchanged' : 'joined', side: r.change });
+      continue;
+    }
+    const problem = closableGovernment(map, state, department);
     if (problem !== null) {
       refused.push(problem);
       continue;
     }
     const before = state;
     state = p.delta > 0 ? closeGovernment(map, state, department, day) : p.delta < 0 ? reopenGovernment(state, department) : state;
-    applied.push({ field: p.field, subject: department, change: state === before ? 'unchanged' : p.delta > 0 ? 'closed' : 'reopened' });
+    applied.push({ field: GOVERNMENT_CLOSED_FIELD, subject: department, change: state === before ? 'unchanged' : p.delta > 0 ? 'closed' : 'reopened' });
   }
   return { state, applied, refused };
 }
+

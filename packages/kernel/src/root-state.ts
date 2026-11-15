@@ -19,7 +19,7 @@
  *
  * The command log sits beside State, not in it (`log/log.ts`).
  */
-import type { AssignmentTable, PostTable } from './command/command.ts';
+import type { AssignmentTable, DepartmentSides, PostTable } from './command/command.ts';
 import type { RegionControlTable } from './control/control.ts';
 import type { ForceTable } from './forces/forces.ts';
 import type { ConditionTable, ObstructionState } from './infrastructure/infrastructure.ts';
@@ -48,6 +48,11 @@ export interface State {
   readonly regionGovernments: Readonly<Record<RegionId, DepartmentId | 'unknown'>>;
   /** Neutral governments closed to passage, with the day each closed (0055 as amended by 0058). Empty at the start. Writer: `command`. */
   readonly closedGovernments: Readonly<Record<DepartmentId, number>>;
+  /**
+   * Each department's side (0065): a faction, or null for a neutral government. Copied from the World's departments
+   * at the start; a situation's `department_side` proposal moves a government to a side. Writer: `command`.
+   */
+  readonly departmentFactions: DepartmentSides;
   /** Who drives each person. Writer: `seats`. */
   readonly seatAssignments: Readonly<Record<SeatId, SeatAssignment>>;
   /** Orders and reports on their way, in (arrival day, id) order. Writer: `messages`. */
