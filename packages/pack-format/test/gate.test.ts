@@ -215,6 +215,28 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     fires(edit, 'gate-refused');
   });
 
+  it('a refused signature can see what a proposal is aimed at: subjectPattern (0070, the register review S1)', () => {
+    const recruit = (subject: string | null) =>
+      editJson(sit('eastwatch_stalls'), (s) => s.options[1].effects.push({ propose: { owner: 'regions', field: 'recruitment', subject, delta: 5, reason: 'x', side: 'north' } }));
+    const refuse = (signature: Record<string, string>) => editJson('gate/register.json', (r) => r.topics[1].refused.push({ ...signature, reason: 'a test signature' }));
+    // The field alone cannot tell a nation from a department: there is no way to refuse recruitment aimed at one and not the other.
+    const fieldOnly = refuse({ fieldPattern: '^recruitment$' });
+    firesAt(merge(recruit('s_province'), fieldOnly), 'gate-refused', { file: sit('eastwatch_stalls'), at: 'options[1].effects[1]' });
+    firesAt(merge(recruit('n_war'), fieldOnly), 'gate-refused', { file: sit('eastwatch_stalls'), at: 'options[1].effects[1]' });
+    // With a subject pattern, ANDed with the field: the field aimed at the nation is refused, aimed at an ordinary department it passes.
+    const both = refuse({ fieldPattern: '^recruitment$', subjectPattern: '^s_province$' });
+    firesAt(merge(recruit('s_province'), both), 'gate-refused', { file: sit('eastwatch_stalls'), at: 'options[1].effects[1]' });
+    expect(issues(merge(recruit('n_war'), both)).filter((i) => i.kind === 'gate-refused')).toEqual([]);
+    // A proposal aimed at no one never matches a subject pattern, and a different field aimed at the nation passes the AND.
+    expect(issues(merge(recruit(null), both)).filter((i) => i.kind === 'gate-refused')).toEqual([]);
+    const other = editJson(sit('eastwatch_stalls'), (s) => s.options[1].effects.push({ propose: { owner: 'regions', field: 'loyalty', subject: 's_province', delta: 5, reason: 'x', side: 'north' } }));
+    expect(issues(merge(other, both)).filter((i) => i.kind === 'gate-refused')).toEqual([]);
+    // A subject pattern alone refuses any proposal aimed at the subject, whatever the field.
+    const subjectOnly = refuse({ subjectPattern: '^s_province$' });
+    firesAt(merge(other, subjectOnly), 'gate-refused', { file: sit('eastwatch_stalls'), at: 'options[1].effects[1]' });
+    expect(issues(merge(recruit('n_war'), subjectOnly)).filter((i) => i.kind === 'gate-refused')).toEqual([]);
+  });
+
   it('A2: the placement is one the register allows', () => {
     fires(editJson(sit('harbour_burning'), (s) => (s.gate.placement = 'decision')), 'gate-placement');
   });
