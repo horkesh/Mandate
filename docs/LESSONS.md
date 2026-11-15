@@ -77,3 +77,7 @@ Enforced by: a brief for a lane that works on another branch tells it, as its fi
 **L19. A worktree's local check can test the main checkout's packages.**
 Lane 0.8 found that a worktree without its own `@mandate` links in `node_modules` resolves `@mandate/*` to the main checkout's packages. So a lane's local `npm run check` could run its `cli`, `rule-seats` and `pack-format` tests against main's kernel rather than its own branch. CI was unaffected, because it installs fresh.
 Enforced by: a test that fails when `@mandate/*` resolves outside the repo root under test (lane 0.8), and `docs/LANES.md`: a worktree's `node_modules` resolves the workspace packages to that worktree.
+
+**L20. A lane rebased a branch it had already pushed, and couldn't publish it.**
+Lane 0.8 rebased `phase0-done-check` onto main after pushing it. The permission check refused the force-push, so its finished work sat unpublished until it pushed under a new branch name.
+Enforced by: `docs/LANES.md` "Running lanes": a pushed branch is updated by merging main into it, never by rebasing; a rebased pushed branch is pushed under a new name.
