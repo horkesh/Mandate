@@ -46,6 +46,8 @@ export interface Phase0Options {
   readonly seats?: phase0.SeatTable;
   /** Who sits in each seat after the resume; `seats` by default. A test hook: a seat that differs plants a divergence. */
   readonly resumeSeats?: phase0.SeatTable;
+  /** A test hook: rewrites the save's text before it is written and loaded (a planted divergence in the save). */
+  readonly saveTransform?: (text: string) => string;
   /** Called with the mid-run save's text, so the caller can write it under runs/. */
   readonly onSave?: (text: string, day: number) => void;
 }
@@ -161,7 +163,8 @@ export function phase0Run(options: Phase0Options): Phase0Summary {
     if (!Number.isSafeInteger(at) || at < 1 || at >= options.days) throw new RangeError(`resume day must be between 1 and ${options.days - 1}`);
     const log = phase0.logThrough(run.log, at);
     const mid = phase0.replay(world, initial, log, at);
-    const text = encodeSave({ worldHash, state: mid.state, log });
+    const saved = encodeSave({ worldHash, state: mid.state, log });
+    const text = options.saveTransform?.(saved) ?? saved;
     options.onSave?.(text, at);
     const loaded = decodeSave(text, { expectedWorldHash: worldHash });
     // The saved log is the truth: refuse a malformed one before replaying or resuming (review F5).
