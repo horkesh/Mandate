@@ -61,6 +61,8 @@ fort_leavenworth_arsenal,Fort Leavenworth Arsenal,kansas_east,arsenal,,,CEN1860-
 fort_snelling,Fort Snelling,minnesota,fort,,,CEN1860-POP,
 forts_union_craig,Fort Union and Fort Craig,new_mexico,fort,,,CEN1860-POP,
 fort_fillmore,Fort Fillmore,arizona,fort,,,CEN1860-POP,
-fort_gibson,Fort Gibson,it_cherokee_creek,fort,,,MAP-LANE needs-source (primary source not reached),
-forts_washita_arbuckle_cobb,"Forts Washita, Arbuckle and Cobb",it_choctaw_chickasaw,fort,,,OR I-1 (ch. VIII summary),
+fort_gibson,Fort Gibson,it_cherokee,fort,,,MAP-LANE needs-source (primary source not reached),
+fort_washita,Fort Washita,it_chickasaw,fort,,,"OR I-1 pp.648, 650, 653","Emory left about 15-16 April 1861 and Texans held it by 16-17 April (OR I-1 p.648); a regular officer reported there on 30 April (Sturgis, p.650), which is unreconciled. Benning (p.653) puts Washita 'in Chickasaw Nation'."
+fort_arbuckle,Fort Arbuckle,it_chickasaw,fort,,,"OR I-1 pp.648, 652, 653","The troops left on 3 May 1861 (Emory) and Texans held it by 5 May (Campbell, p.652); its property was turned over to the Chickasaws (Benning, p.653)."
+fort_cobb,Fort Cobb,it_leased_district,fort,,,"OR I-1 pp.648, 653, 660","Cobb's troops were gone before 9 May 1861, when Emory found the column 35 miles north-east of the post (p.648); no occupation is recorded. Which land it stood on is stated unevenly: 'Chickasaw Nation' (Benning, p.653), 'a portion of the Choctaw country, leased as a reserve' (Townsend, 27 March, p.660)."
 mare_island_navy_yard,Mare Island Navy Yard,pacific_coast,navy_yard,,,MAP-LANE needs-source (primary source not reached),

@@ -92,6 +92,16 @@
       "licenceReadOn": null
     },
     {
+      "key": "CSA-STAT",
+      "title": "Statutes at Large of the Confederate States of America, Indian Treaties: the treaties with the Creek Nation (10 July 1861), the Seminole Nation (1 August), the Choctaws and Chickasaws (12 July), the Comanches and other tribes and bands (12 August), the Osages (2 October), the Quapaws and the Senecas and Shawnees (4 October) and the Cherokees (7 October)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "the Internet Archive scan of the Confederate Statutes at Large, page images on dheller.org (Timeline-files/US-Statutes/CSA/cp/Indian-Treaties), read as extracted text; the OCR is garbled in places, so each name is the one that reads clearly",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
       "key": "COX-3DEC",
       "title": "S. S. Cox, Union-Disunion-Reunion (1885)",
       "kind": "primary",
@@ -293,11 +303,11 @@
     },
     {
       "key": "KAPPLER",
-      "title": "C. J. Kappler, Indian Affairs: Laws and Treaties, vol. 2, Treaties (GPO, 1904), citing 12 Stat. 1163, the treaty of Fort Wise with the Arapaho and Cheyenne, 18 February 1861",
+      "title": "C. J. Kappler, Indian Affairs: Laws and Treaties, vol. 2, Treaties (GPO, 1904): the treaty of Fort Wise with the Arapaho and Cheyenne, 18 February 1861 (12 Stat. 1163); the treaty with the Choctaw and Chickasaw, 22 June 1855 (11 Stat. 611); the treaty with the Creeks, etc., 7 August 1856 (11 Stat. 699)",
       "kind": "primary",
       "licence": "public-domain",
       "basis": "government-work",
-      "copyUsed": "the Oklahoma State University Tribal Treaties Database text of the treaty (treaties.okstate.edu), read for its date, parties and ratification line",
+      "copyUsed": "the Oklahoma State University Tribal Treaties Database text of each treaty (treaties.okstate.edu), read for dates, parties and boundary articles",
       "licencePage": null,
       "licenceReadOn": null
     },
@@ -418,6 +428,16 @@
       "licence": "own-work",
       "basis": null,
       "copyUsed": "docs/research/2026-11-14-confederate-side.md",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NOTE-indian-territory-1861-sources",
+      "title": "Project research note docs/research/2026-11-15-indian-territory-1861-sources.md (a pointer to primary documents, never the source of a fact)",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "docs/research/2026-11-15-indian-territory-1861-sources.md",
       "licencePage": null,
       "licenceReadOn": null
     },
