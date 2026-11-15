@@ -594,6 +594,49 @@ export interface CommandProposal {
   readonly delta: number;
   /** For a change of side, the side the government joins; a closing names none. */
   readonly side: FactionId | null;
+  /**
+   * What the proposal came from (0069): a `notice`'s effects, or a `decision`'s option, inaction or locked cost. A
+   * self-governing government is moved only by a notice, its own act, never by a principal's choice.
+   */
+  readonly origin: ProposalOrigin;
+}
+
+export type ProposalOrigin = 'notice' | 'decision';
+
+/** Why `command` refused a proposal: a typed reason (hard rule 6), with the sentence that says it. */
+export const REFUSAL_REASONS = ['invalid', 'self_governing_decision', 'self_governing_region'] as const;
+export type RefusalReason = (typeof REFUSAL_REASONS)[number];
+export interface Refusal {
+  readonly reason: RefusalReason;
+  readonly why: string;
+}
+
+/** Whether a department is of a self-governing kind (0069). The engine reads the flag, never kind names. */
+export function isSelfGoverning(map: WorldIndex, department: DepartmentId): boolean {
+  const d = map.world.departments.find((x) => x.id === department);
+  return d !== undefined && map.world.vocabularies.departmentKinds.find((k) => k.id === d.kind)?.selfGoverning === true;
+}
+
+/**
+ * Why a proposal may not move a self-governing government (0069), or null: only a notice, the nation's own act,
+ * changes its side or closes or reopens it.
+ */
+function selfGoverningProblem(map: WorldIndex, department: DepartmentId, origin: ProposalOrigin): string | null {
+  if (origin === 'notice' || !isSelfGoverning(map, department)) return null;
+  return `department ${department} governs itself: only a notice, its own act, moves it, never a decision option, inaction or a locked cost`;
+}
+
+/**
+ * Why a region held by `from` may not pass to `to` (0069), or null. A region held by a self-governing government moves
+ * only to another department of the same kind, which allows a nation's own rival governments and never annexation to a
+ * state, a territory or a military department. Nothing proposes a region's government yet (Phase 0); whatever writes it
+ * must ask here first. `to` is `unknown` for a region whose government is no longer known.
+ */
+export function regionMoveProblem(map: WorldIndex, from: DepartmentId | 'unknown', to: DepartmentId | 'unknown'): string | null {
+  if (from === 'unknown' || !isSelfGoverning(map, from)) return null;
+  const kind = (d: DepartmentId) => map.world.departments.find((x) => x.id === d)?.kind;
+  if (to !== 'unknown' && kind(to) === kind(from)) return null;
+  return `a region held by ${from}, which governs itself, passes only to another department of its kind, not to ${to}`;
 }
 
 export type AppliedProposal =
@@ -615,21 +658,27 @@ export function applyCommandProposals(
   start: State,
   proposals: readonly CommandProposal[],
   day: number,
-): { readonly state: State; readonly applied: readonly AppliedProposal[]; readonly refused: readonly string[] } {
+): { readonly state: State; readonly applied: readonly AppliedProposal[]; readonly refused: readonly Refusal[] } {
   let state = start;
   const applied: AppliedProposal[] = [];
-  const refused: string[] = [];
+  const refused: Refusal[] = [];
+  const refuse = (reason: RefusalReason, why: string) => refused.push({ reason, why });
   for (const p of proposals) {
     if (p.owner !== 'command') continue;
     if ((p.field !== GOVERNMENT_CLOSED_FIELD && p.field !== DEPARTMENT_SIDE_FIELD) || p.subject === null) {
-      refused.push(`command owns no field "${p.field}" with subject ${p.subject ?? 'none'}`);
+      refuse('invalid', `command owns no field "${p.field}" with subject ${p.subject ?? 'none'}`);
       continue;
     }
     const department = p.subject as DepartmentId;
+    const own = selfGoverningProblem(map, department, p.origin);
+    if (own !== null) {
+      refuse('self_governing_decision', own);
+      continue;
+    }
     if (p.field === DEPARTMENT_SIDE_FIELD) {
       const problem = sideChangeProblem(map, department, p.side) ?? (p.delta > 0 ? null : `a change of side for ${department} joins the side it names, with a delta above 0; no proposal takes a side away`);
       if (problem !== null) {
-        refused.push(problem);
+        refuse('invalid', problem);
         continue;
       }
       const r = changeDepartmentSide(map, state, department, p.side!);
@@ -639,7 +688,7 @@ export function applyCommandProposals(
     }
     const problem = closableGovernment(map, state, department);
     if (problem !== null) {
-      refused.push(problem);
+      refuse('invalid', problem);
       continue;
     }
     const before = state;

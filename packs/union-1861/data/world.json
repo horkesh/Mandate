@@ -1730,17 +1730,17 @@
 {"id":"peace_democrats","name":"bloc.peace_democrats"}
 ],
 "departmentKinds": [
-{"government":false,"id":"executive","name":"department_kind.executive"},
-{"government":false,"id":"war","name":"department_kind.war"},
-{"government":false,"id":"navy","name":"department_kind.navy"},
-{"government":false,"id":"treasury","name":"department_kind.treasury"},
-{"government":false,"id":"diplomatic","name":"department_kind.diplomatic"},
-{"government":false,"id":"justice","name":"department_kind.justice"},
-{"government":false,"id":"interior","name":"department_kind.interior"},
-{"government":false,"id":"post_office","name":"department_kind.post_office"},
-{"government":true,"id":"state_government","name":"department_kind.state_government"},
-{"government":true,"id":"territorial_government","name":"department_kind.territorial_government"},
-{"government":true,"id":"federal_district","name":"department_kind.federal_district"}
+{"government":false,"id":"executive","name":"department_kind.executive","selfGoverning":false},
+{"government":false,"id":"war","name":"department_kind.war","selfGoverning":false},
+{"government":false,"id":"navy","name":"department_kind.navy","selfGoverning":false},
+{"government":false,"id":"treasury","name":"department_kind.treasury","selfGoverning":false},
+{"government":false,"id":"diplomatic","name":"department_kind.diplomatic","selfGoverning":false},
+{"government":false,"id":"justice","name":"department_kind.justice","selfGoverning":false},
+{"government":false,"id":"interior","name":"department_kind.interior","selfGoverning":false},
+{"government":false,"id":"post_office","name":"department_kind.post_office","selfGoverning":false},
+{"government":true,"id":"state_government","name":"department_kind.state_government","selfGoverning":false},
+{"government":true,"id":"territorial_government","name":"department_kind.territorial_government","selfGoverning":false},
+{"government":true,"id":"federal_district","name":"department_kind.federal_district","selfGoverning":false}
 ],
 "personKinds": [
 {"id":"general","name":"person_kind.general"},

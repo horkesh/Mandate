@@ -177,6 +177,10 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   const personFaction = new Map(world.people.map((p) => [p.id as string, p.faction as string | null]));
   const deptKind = new Map(world.departments.map((d) => [d.id as string, d.kind]));
   const governmentKinds = new Set(vocab.departmentKinds.filter((k) => k.government).map((k) => k.id));
+  // 0069: only a government can govern itself, so a self-governing kind is a government kind.
+  vocab.departmentKinds.forEach((k, i) => {
+    if (k.selfGoverning && !k.government) err('self-governing-not-government', W('vocabularies.departmentKinds', i, 'selfGoverning'), `department kind "${k.id}" is self-governing but not a government`, 'government: true, or selfGoverning: false');
+  });
   world.departments.forEach((d, i) => {
     // `unknown` is the governments table's word for no known government (0058), so no department may take it as an id.
     if (d.id === w.UNKNOWN_GOVERNMENT) err('reserved-id', W('departments', i, 'id'), `"${w.UNKNOWN_GOVERNMENT}" is reserved for a region whose government is not known`, 'another department id');

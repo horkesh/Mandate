@@ -219,6 +219,10 @@ export const VocabulariesSchema = z.strictObject({
         .boolean()
         .default(false)
         .describe('A civil government that can hold a region’s jurisdiction (0058): only such a department may be named in a scenario’s governments. The engine reads this, never kind names.'),
+      selfGoverning: z
+        .boolean()
+        .default(false)
+        .describe('A government of a people who govern themselves (0069): only its own act, a notice, may change its side, close or reopen it, or move its regions, never a principal’s decision. Only a government may be self-governing.'),
     }),
   ),
   arms: z.array(z.strictObject({ id: termId, name: stringKey, naval: z.boolean() })),

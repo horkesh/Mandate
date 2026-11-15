@@ -169,11 +169,11 @@
 {"id":"s_firebrands","name":"bloc.s_firebrands"}
 ],
 "departmentKinds": [
-{"government":true,"id":"executive","name":"department_kind.executive"},
-{"government":false,"id":"war_ministry","name":"department_kind.war_ministry"},
-{"government":false,"id":"navy_ministry","name":"department_kind.navy_ministry"},
-{"government":true,"id":"province","name":"department_kind.province"},
-{"government":false,"id":"private","name":"department_kind.private"}
+{"government":true,"id":"executive","name":"department_kind.executive","selfGoverning":false},
+{"government":false,"id":"war_ministry","name":"department_kind.war_ministry","selfGoverning":false},
+{"government":false,"id":"navy_ministry","name":"department_kind.navy_ministry","selfGoverning":false},
+{"government":true,"id":"province","name":"department_kind.province","selfGoverning":false},
+{"government":false,"id":"private","name":"department_kind.private","selfGoverning":false}
 ],
 "personKinds": [
 {"id":"leader","name":"person_kind.leader"},
