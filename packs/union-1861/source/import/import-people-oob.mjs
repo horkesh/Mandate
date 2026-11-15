@@ -1,5 +1,6 @@
 // ONE-TIME CONVERSION RECORD. DO NOT RE-RUN OVER THE PACK (see the header of import-drafts.mjs:
 // the pack's source CSVs are the source of truth from the merge on, and this file's output would overwrite hand edits).
+// If re-run it would regress the reviewed Indian Territory and territorial wording (the Choctaw "declared for the South" and "no one's" sentences; decisions 0056, 0069, 0070).
 //
 // Stage 2 of the Union 1861 import: departments, posts, tenures, people, force
 // blocks, control, standing agreements, the scenario header and the pack's
