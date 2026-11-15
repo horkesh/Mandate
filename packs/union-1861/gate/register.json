@@ -21,6 +21,11 @@
           "reason": "no seat recruits Native nations or Native men, or counts them as manpower: a nation's people are never a pool either side draws on (SENSITIVE-HISTORY 3.7, refused; 0021)"
         },
         {
+          "fieldPattern": "(?:^|[-_.:/])(?:manpower|recruit(?:s|ment|ments|ing)?|enlist(?:s|ment|ments|ing)?|levy|levies|draft(?:s|ing)?|conscript(?:s|ion)?|quotas?|volunteers?|labou?r|warriors?|population)(?:$|[-_.:/])",
+          "subjectPattern": "^(?:nation_|it_)",
+          "reason": "recruitment, manpower or population aimed at a nation's government or its land (the nations' departments, their regions and the Leased District) treats its people as a pool, which no seat may draw on (SENSITIVE-HISTORY 3.7, refused; 0070)"
+        },
+        {
           "optionPattern": "(?:recruit|levy|raise|draft|conscript|enlist|muster|call_out|call_up)[a-z_]*(?:nation|native|indian|tribe|tribal|warrior|brave|cherokee|muscogee|creek|seminole|choctaw|chickasaw|wichita|caddo|comanche|osage|quapaw|seneca|shawnee|delaware)",
           "labelPattern": "\\b(?:recruit|levy|raise|draft|conscript|muster|call (?:out|up))\\w*\\b.{0,40}\\b(?:Cherokees?|Muscogee|Creeks?|Seminoles?|Choctaws?|Chickasaws?|Wichitas?|Caddos?|Comanches?|Osages?|Quapaws?|Senecas?|Shawnees?|Delawares|Indians?|Native|warriors?|braves?|tribes?)\\b",
           "reason": "no principal has a verb to recruit Native nations or Native men: their enlistment, on either side, is their own choice, derived from conditions and policy (SENSITIVE-HISTORY 3.7, refused; rule 5)"
