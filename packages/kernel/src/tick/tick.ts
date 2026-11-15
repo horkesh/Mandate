@@ -12,7 +12,9 @@
  *  4. Control and network changes, and the derived map (lane 0.4).
  *  4a. Stores on hand fall or refill from today's supply trace (lane 0.5).
  *  4b. Situations fire, surface, stay live, take history defaults (lane 0.7).
- *  4c. Proposals `command` owns: a neutral government closing or reopening (0058).
+ *  4c. Proposals `command` owns: a neutral government closing or reopening (0058),
+ *      or a government joining a side (0065).
+ *  4d. Goals for posts that became field posts on a side (`plans`; exit review S1).
  *  5. Reports written on a cycle.
  *  6. Knowledge pruning.
  *  7. The day counter.
@@ -28,6 +30,7 @@ import { entryProblems, type LogEntry } from '../log/log.ts';
 import { createIdMint, sendMessages } from '../messages/transit.ts';
 import type { State } from '../root-state.ts';
 import type { OptionView } from '../seats/api.ts';
+import { holdGoalsForNewFieldPosts } from '../plans/standing.ts';
 import { morningGround, standingKey, standingOptions } from '../seats/requests.ts';
 import { heldPost } from '../command/command.ts';
 import { fieldPosts } from '../seats/posts.ts';
@@ -181,6 +184,9 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   const proposed = commandProposalsPhase(ctx, state);
   state = freeze(proposed.state);
   const dayMap = proposed.derived ?? mapped.derived;
+
+  // 4d. A post that became a field post on a side today (its government joined one) holds where it stands (`plans`).
+  state = freeze(holdGoalsForNewFieldPosts(state, fieldPosts(world, state), day));
 
   // 5. Reports on their cycles. A commander whose only option was to hold is awaiting strength.
   const awaiting = new Set([...menus].filter(([, o]) => o.length === 1 && o[0]!.kind === 'hold').map(([p]) => p));

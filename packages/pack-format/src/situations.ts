@@ -315,7 +315,8 @@ export function validateSituations(items: readonly { readonly file: string; read
       def.report.authors.forEach((p, i) => ref(posts, 'post in any scenario', p, `report.authors[${i}]`));
       const probe = { reportType: def.report.reportType, reportSubtype: def.report.subtype, reportAuthor: def.faction as never, reportAuthorPost: null, reportSubjectKind: 'situation' as const, reportSubjectId: def.id, reportClaims: [], reportDay: 1, reportHour: null, reportAdvice: null, reportAnswers: null };
       for (const problem of phase0.reportProblems(probe)) err('situation-report', 'report', problem, 'a report type and subtype the kernel can carry');
-      if (!phase0.DEFAULT_REPORT_TEMPLATES.some((x) => x.templateType === def.report!.reportType && x.templateSubtype === def.report!.subtype)) err('situation-report', 'report', `no report template for ${def.report.reportType}${def.report.subtype === null ? '' : '/' + def.report.subtype}`, 'a report type and subtype with a template');
+      // The pack's own templates (0072), never a kernel default.
+      if (!pack.world.rules.reportTemplates.some((x) => x.templateType === def.report!.reportType && x.templateSubtype === def.report!.subtype)) err('situation-report', 'report', `no report template for ${def.report.reportType}${def.report.subtype === null ? '' : '/' + def.report.subtype}`, 'a report type and subtype with a template in the pack’s rules.reportTemplates');
     }
 
     // B2: a cause in State, not a date alone, unless a labelled railroad. Evaluated, not parsed (review S6): a cause that

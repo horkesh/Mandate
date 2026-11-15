@@ -19,6 +19,13 @@
  *   own situations take their historical default inside the kernel (a history
  *   run, 0040), so no rule seat ever sees that default.
  * AI seats (Phase 1) wrap a rule seat and fall back to it.
+ *
+ * STAND-IN (0072): the generic rule-seat principal. It opens with the army that
+ * can be reached soonest, which is always his own capital's garrison, marches it
+ * on the other side's capital, and goes around any office that objects. It
+ * proves the machinery; it is not a war (on the Union pack at war, Washington
+ * falls on day 20). Its replacement is Phase 1's rule-seat principals, who must
+ * do their historical jobs for the Phase 1 history run (FOUNDATION section 11).
  */
 import type { DelegatedMenu, OptionView, OrderCommand, PrincipalMenu, ReportView, RouteOption, Seat, SeatAnswer, SeatRequest, StandingMenu } from '@mandate/kernel/seat-api';
 
@@ -70,7 +77,7 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   if (menu.objective === null || menu.atWarSince === null) return [];
   const orders: OrderCommand[] = [];
   if (day === Math.max(policy.openingDay, menu.atWarSince + 1)) {
-    // The army that can be reached soonest opens the campaign; the rest hold where they stand.
+    // STAND-IN (0072): the army that can be reached soonest opens the campaign; the rest hold where they stand.
     const ranked = menu.commandable
       .map((c) => ({ c, route: quickest(c.routes) }))
       .filter((x): x is { c: (typeof menu.commandable)[number]; route: RouteOption } => x.route !== undefined)

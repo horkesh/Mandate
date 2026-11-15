@@ -5,11 +5,13 @@
  * reports are pruned by age and supersession, so knowledge cannot grow
  * without limit).
  *
- * The values are defaults a pack overrides; delays come from the route and
- * the map (`messages/latency.ts`), never from the template.
+ * Every pack states its templates (`WorldRules.reportTemplates`), one for
+ * each report type and subtype the kernel writes, and the kernel has no
+ * default (0064's rule, applied by 0072). Delays come from the route and the
+ * map (`messages/latency.ts`), never from the template.
  */
-import type { RouteKind } from '../messages/latency.ts';
-import { templateKey, type ReportType } from './report.ts';
+import { ROUTE_KINDS, type RouteKind } from '../messages/latency.ts';
+import { ADVICE_SUBTYPES, INFORMAL_SUBTYPES, REPORT_TYPES, templateKey, type ReportType } from './report.ts';
 
 export interface ReportTemplate {
   readonly templateType: ReportType;
@@ -27,28 +29,13 @@ export interface ReportTemplate {
   readonly keepSupersededDays: number;
 }
 
-const t = (type: ReportType, subtype: string | null, route: RouteKind, cadenceDays: number, maxAgeDays: number, keepSupersededDays: number): ReportTemplate =>
-  Object.freeze({ templateType: type, templateSubtype: subtype, templateRoute: route, cadenceDays, maxAgeDays, keepSupersededDays });
+/** The subtypes a report type has: informal and advice are families (`report.ts`); every other type has none (null). */
+const SUBTYPES: Readonly<Partial<Record<ReportType, readonly string[]>>> = { informal: INFORMAL_SUBTYPES, advice: ADVICE_SUBTYPES };
 
-/** Defaults, from the information-flows note's table (docs/research/2026-11-14-union-information-flows.md, Design implications). */
-export const DEFAULT_REPORT_TEMPLATES: readonly ReportTemplate[] = Object.freeze([
-  t('wire-dispatch', null, 'wire', 2, 30, 3),
-  t('strength-return', null, 'mail', 10, 60, 10),
-  t('effective-strength', null, 'wire', 0, 30, 3),
-  t('casualty-return', null, 'courier', 0, 90, 30),
-  t('enemy-estimate', null, 'in-person', 1, 14, 0),
-  t('press', null, 'mail', 0, 21, 3),
-  t('informal', 'cabinet-word', 'in-person', 7, 21, 7),
-  t('informal', 'caller', 'in-person', 0, 21, 7),
-  t('informal', 'governor-wire', 'wire', 0, 21, 7),
-  t('informal', 'legislator', 'in-person', 0, 21, 7),
-  t('informal', 'navy-channel', 'wire', 0, 21, 7),
-  t('informal', 'railroad-man', 'wire', 0, 21, 7),
-  t('observer-letter', null, 'courier', 0, 60, 14),
-  t('retrospective', null, 'mail', 0, 400, 400),
-  t('advice', 'requested', 'in-person', 0, 60, 30),
-  t('advice', 'memorandum', 'courier', 0, 60, 30),
-]);
+/** Every report type and subtype the kernel writes, each of which needs one template, in key order. */
+export const REPORT_KINDS: readonly { readonly type: ReportType; readonly subtype: string | null }[] = Object.freeze(
+  REPORT_TYPES.flatMap((type) => (SUBTYPES[type] ?? [null]).map((subtype) => ({ type, subtype }))).sort((a, b) => (templateKey(a.type, a.subtype) < templateKey(b.type, b.subtype) ? -1 : 1)),
+);
 
 /** The template for a report type and subtype. Throws if the pack has none: a report never falls back to a default silently. */
 export function templateFor(templates: readonly ReportTemplate[], type: ReportType, subtype: string | null): ReportTemplate {
@@ -64,14 +51,20 @@ export function templateFor(templates: readonly ReportTemplate[], type: ReportTy
  */
 export const MAX_REPORT_AGE_DAYS = 1500;
 
-/** Problems with a template table: duplicates, negative or zero ages, ages past the ceiling. Empty when sound. */
+/**
+ * Problems with a template table: a report kind with no template, a template for a kind the kernel does not write,
+ * an unknown route, duplicates, negative or zero ages, ages past the ceiling. Empty when sound.
+ */
 export function templateProblems(templates: readonly ReportTemplate[]): string[] {
   const problems: string[] = [];
   const seen = new Set<string>();
+  const kinds = new Set(REPORT_KINDS.map((k) => templateKey(k.type, k.subtype)));
   for (const x of templates) {
     const key = templateKey(x.templateType, x.templateSubtype);
     if (seen.has(key)) problems.push(`template ${key} appears twice`);
     seen.add(key);
+    if (!kinds.has(key)) problems.push(`template ${key} is for no report type and subtype the kernel writes`);
+    if (!(ROUTE_KINDS as readonly string[]).includes(x.templateRoute)) problems.push(`template ${key}: route ${x.templateRoute} is not a route`);
     for (const [name, v] of [['cadenceDays', x.cadenceDays], ['maxAgeDays', x.maxAgeDays], ['keepSupersededDays', x.keepSupersededDays]] as const) {
       if (!Number.isSafeInteger(v) || v < 0) problems.push(`template ${key}: ${name} must be a whole number of days`);
     }
@@ -79,5 +72,6 @@ export function templateProblems(templates: readonly ReportTemplate[]): string[]
     if (x.maxAgeDays > MAX_REPORT_AGE_DAYS) problems.push(`template ${key}: maxAgeDays must be at most ${MAX_REPORT_AGE_DAYS}, or knowledge would never fade`);
     if (x.keepSupersededDays > x.maxAgeDays) problems.push(`template ${key}: keepSupersededDays must not exceed maxAgeDays`);
   }
+  for (const key of kinds) if (!seen.has(key)) problems.push(`report ${key} has no template: the pack states one for every report type and subtype`);
   return problems;
 }

@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { INFORMAL_SUBTYPES, reportProblems, type ReportBody } from '../src/knowledge/report.ts';
-import { DEFAULT_REPORT_TEMPLATES, MAX_REPORT_AGE_DAYS, templateFor, templateProblems } from '../src/knowledge/templates.ts';
+import { MAX_REPORT_AGE_DAYS, REPORT_KINDS, templateFor, templateProblems } from '../src/knowledge/templates.ts';
+import type { RouteKind } from '../src/messages/latency.ts';
+import { indexSeatsWorld } from '../src/seats/world.ts';
+import { FIXTURE_TEMPLATES } from './support/map-fixture.ts';
 import { ORDER_ROUTES } from '../src/messages/latency.ts';
 import { createIdMint, mintMessageId } from '../src/messages/transit.ts';
 import { morningGround, principalMenu } from '../src/seats/requests.ts';
@@ -270,10 +273,24 @@ describe('review nits, each with a positive control', () => {
   });
 
   it('N4: a template cannot keep reports past a campaign', () => {
-    const typo = { ...DEFAULT_REPORT_TEMPLATES[0]!, maxAgeDays: 100_000 };
-    expect(templateProblems([typo])).toEqual([`template wire-dispatch: maxAgeDays must be at most ${MAX_REPORT_AGE_DAYS}, or knowledge would never fade`]);
-    expect(templateProblems([{ ...typo, maxAgeDays: 20, keepSupersededDays: 30 }])).toEqual(['template wire-dispatch: keepSupersededDays must not exceed maxAgeDays']);
-    expect(templateProblems(DEFAULT_REPORT_TEMPLATES)).toEqual([]);
+    const typo = { ...FIXTURE_TEMPLATES[0]!, maxAgeDays: 100_000 };
+    const withFirst = (x: (typeof FIXTURE_TEMPLATES)[number]) => [x, ...FIXTURE_TEMPLATES.slice(1)];
+    expect(templateProblems(withFirst(typo))).toEqual([`template wire-dispatch: maxAgeDays must be at most ${MAX_REPORT_AGE_DAYS}, or knowledge would never fade`]);
+    expect(templateProblems(withFirst({ ...typo, maxAgeDays: 20, keepSupersededDays: 30 }))).toEqual(['template wire-dispatch: keepSupersededDays must not exceed maxAgeDays']);
+    expect(templateProblems(FIXTURE_TEMPLATES)).toEqual([]);
+  });
+
+  it('a pack states a template for every report type and subtype, and none for a kind the kernel does not write (0072)', () => {
+    const withFirstRoute = (route: string) => [{ ...FIXTURE_TEMPLATES[0]!, templateRoute: route as RouteKind }, ...FIXTURE_TEMPLATES.slice(1)];
+    expect(REPORT_KINDS).toHaveLength(FIXTURE_TEMPLATES.length);
+    expect(templateProblems(FIXTURE_TEMPLATES.slice(1))).toEqual(['report wire-dispatch has no template: the pack states one for every report type and subtype']);
+    expect(templateProblems([...FIXTURE_TEMPLATES, { ...FIXTURE_TEMPLATES[0]!, templateSubtype: 'gossip' }])).toEqual(['template wire-dispatch/gossip is for no report type and subtype the kernel writes']);
+    expect(templateProblems(withFirstRoute('semaphore'))).toEqual(['template wire-dispatch: route semaphore is not a route']);
+    // The kernel reads the pack's table, never a default: a World whose table lacks one is refused at indexing.
+    const world = indexedFixture();
+    const lacking = { ...world.map, world: { ...world.map.world, rules: { ...world.map.world.rules, reportTemplates: FIXTURE_TEMPLATES.slice(1) } } };
+    expect(() => indexSeatsWorld(lacking, world.start)).toThrow('report wire-dispatch has no template');
+    expect(() => indexSeatsWorld(world.map, world.start)).not.toThrow();
   });
 });
 
@@ -295,7 +312,7 @@ describe('reports are typed (0032, 0040)', () => {
 
   it('splits the informal route into sub-types, each with its own template', () => {
     expect(INFORMAL_SUBTYPES.length).toBeGreaterThanOrEqual(4);
-    for (const s of INFORMAL_SUBTYPES) expect(templateFor(DEFAULT_REPORT_TEMPLATES, 'informal', s).templateSubtype).toBe(s);
+    for (const s of INFORMAL_SUBTYPES) expect(templateFor(FIXTURE_TEMPLATES, 'informal', s).templateSubtype).toBe(s);
     expect(reportProblems(body({}))).toEqual([]);
     expect(reportProblems(body({ reportSubtype: null }))[0]).toContain('informal report needs a subtype');
     expect(reportProblems(body({ reportSubtype: 'gossip' }))[0]).toContain('informal report needs a subtype');
@@ -324,8 +341,10 @@ describe('ownership of the new State (0044)', () => {
       'infraObstructions:infrastructure',
       'knowledgeBySeat:knowledge',
       'messagesInTransit:messages',
+      'personRanks:people',
       'postStates:command',
       'regionControl:control',
+      'regionFortification:regions',
       'regionGovernments:command',
       'reportTruth:knowledge',
       'seatAssignments:seats',

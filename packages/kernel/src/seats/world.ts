@@ -17,13 +17,16 @@
  *   empty, no intelligence bias. A caller may hand explicit inputs instead
  *   (`SeatsWorldOptions.traits`); the kernel tests of objections, filter holds
  *   and an intelligence chief's bias do, since v2 people carry none (0058).
- * - **A faction's objective** is the other faction's capital in Phase 0 (0058).
+ * - **A faction's objective** is a LABELLED STAND-IN (0058): the other
+ *   faction's capital, when there are exactly two. Its replacement is the
+ *   goals of Phase 1's principals (0058, 0072).
  */
 import { strictCompare } from '../compare.ts';
 import { wireOwnerOf, type ControlIndex } from '../control-index/control-index.ts';
-import type { FactionId, PersonId, RegionId, SituationId } from '../ids.ts';
-import { DEFAULT_REPORT_TEMPLATES, templateProblems, type ReportTemplate } from '../knowledge/templates.ts';
-import { DEFAULT_LATENCY_RULES, latencyProblems, type LatencyMap, type LatencyRules } from '../messages/latency.ts';
+import type { FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
+import { templateProblems, type ReportTemplate } from '../knowledge/templates.ts';
+import { latencyProblems, type LatencyMap, type LatencyRules } from '../messages/latency.ts';
+import type { StandingRules } from '../world/world.ts';
 import { situationReferenceProblems } from '../situations/references.ts';
 import type { SituationDef } from '../situations/types.ts';
 import { DEFAULT_TRAIT_RULES, type TraitHolder, type TraitRules } from '../standin/traits.ts';
@@ -32,17 +35,16 @@ import { otherEnd, type WorldIndex } from '../world/index.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
 import type { PostKindRole } from '../world/world.ts';
 
+/**
+ * The rules the seats layer reads. The latency rules and report templates are the pack's (`WorldRules`, 0072), read
+ * from the World it was indexed with, never a kernel default; the trait rules stay a LABELLED STAND-IN (0058) until
+ * the Phase 1 people recast.
+ */
 export interface SeatsRules {
   readonly latency: LatencyRules;
   readonly traits: TraitRules;
   readonly templates: readonly ReportTemplate[];
 }
-
-export const DEFAULT_SEATS_RULES: SeatsRules = Object.freeze({
-  latency: DEFAULT_LATENCY_RULES,
-  traits: DEFAULT_TRAIT_RULES,
-  templates: DEFAULT_REPORT_TEMPLATES,
-});
 
 /** A person as the seats layer reads him: his side, and the stand-in trait inputs (0058). */
 export interface SeatPerson extends TraitHolder {
@@ -66,7 +68,7 @@ export interface SeatFaction {
   readonly principal: PersonId;
   /** Where the principal sits: orders start and his reports end here (the start's capital). */
   readonly seatRegion: RegionId;
-  /** The other faction's capital, when there are exactly two (0058); null otherwise. */
+  /** STAND-IN (0058): the other faction's capital, when there are exactly two; null otherwise. */
   readonly objective: RegionId | null;
 }
 
@@ -87,12 +89,19 @@ export interface SeatsWorld {
   courierDays(from: RegionId, to: RegionId): number;
   /** Regions a commander watches: where he stands and every neighbour across an edge, in id order. */
   watched(region: RegionId): readonly RegionId[];
+  /**
+   * Where a post's headquarters stood at the start of play: its strongest directly commanded block in the start (by
+   * known men, ties by block id, as `headquartersOf` reads State), or null when the start gave it no block. Pack data,
+   * so a principal may be told it; where the post's headquarters is today he may not (exit review P2).
+   */
+  startHeadquarters(post: PostId): RegionId | null;
   readonly situations: readonly SituationDef[];
   situation(id: SituationId): SituationDef;
 }
 
 export interface SeatsWorldOptions {
-  readonly rules?: SeatsRules;
+  /** The stand-in trait rules (0058); the kernel's labelled stand-in values when absent. */
+  readonly traitRules?: TraitRules;
   readonly situations?: readonly SituationDef[];
   /** Explicit trait inputs by person id, in place of the stand-in adapter (0058). */
   readonly traits?: Readonly<Record<string, TraitInputs>>;
@@ -111,8 +120,10 @@ export const UNKNOWN_NERVE_BOLDNESS = 500;
 
 /** Index a v2 World and its start for the seats layer. Throws `SeatsWorldError` listing every problem. */
 export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: SeatsWorldOptions = {}): SeatsWorld {
-  const rules = options.rules ?? DEFAULT_SEATS_RULES;
-  const problems: string[] = [...templateProblems(rules.templates), ...latencyProblems(rules.latency)];
+  const pack = map.world.rules;
+  const rules: SeatsRules = Object.freeze({ latency: pack.latency, templates: pack.reportTemplates, traits: options.traitRules ?? DEFAULT_TRAIT_RULES });
+  // The kernel takes any World it is handed (a fixture, an adapter), so it checks the pack's rules as the validator does.
+  const problems: string[] = [...templateProblems(rules.templates), ...latencyProblems(rules.latency), ...standingProblems(pack.standing)];
 
   const people = new Map<PersonId, SeatPerson>();
   for (const p of map.world.people) {
@@ -143,10 +154,18 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
   }
 
   const situations = [...(options.situations ?? [])].sort((a, b) => strictCompare(a.id, b.id));
+  // Each start post's side at the start, through its department: null for a neutral government's post. A department not
+  // in the World is a problem, never a side of '' (exit review P4; FOUNDATION 11.3: an unknown lookup throws).
+  const postSides = new Map<string, { readonly faction: FactionId | null }>();
+  for (const p of start.posts) {
+    const d = map.world.departments.find((x) => x.id === p.department);
+    if (d === undefined) problems.push(`post ${p.id}: department ${p.department} is not in the World`);
+    else postSides.set(p.id, { faction: d.faction });
+  }
   problems.push(
     ...situationReferenceProblems(situations, {
       factions,
-      posts: new Map(start.posts.map((p) => [p.id, { faction: map.world.departments.find((d) => d.id === p.department)?.faction ?? '' }])),
+      posts: postSides,
       persons: people,
       regions: map.regions,
     }),
@@ -157,6 +176,13 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
   const courier = courierTable(map, regionIds, map.world.rules.movement.courierPermille);
   const roles = new Map(map.world.vocabularies.postKinds.map((k) => [k.id, k.role]));
   const situationById = new Map(situations.map((s) => [s.id, s]));
+  const startBody = new Map<PostId, { readonly region: RegionId; readonly men: number }>();
+  for (const b of [...start.forceBlocks].sort((x, y) => strictCompare(x.id, y.id))) {
+    if (b.post === null) continue;
+    const men = b.strength ?? 0;
+    const best = startBody.get(b.post);
+    if (best === undefined || men > best.men) startBody.set(b.post, { region: b.region, men });
+  }
   const get = <K, V>(m: ReadonlyMap<K, V>, kind: string, id: K): V => {
     const v = m.get(id);
     if (v === undefined) throw new RangeError(`unknown ${kind} id "${String(id)}"`);
@@ -178,9 +204,18 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
       return d;
     },
     watched: (region: RegionId) => [region, ...(map.edgesAt.get(region) ?? []).map((e) => otherEnd(e, region))].filter((r, i, all) => all.indexOf(r) === i).sort(strictCompare),
+    startHeadquarters: (post: PostId) => startBody.get(post)?.region ?? null,
     situations,
     situation: (id: SituationId) => get(situationById, 'situation', id),
   });
+}
+
+/** Problems with the stand-in standing goals' rules (0072): a conflict window of at least a day, a score cap above 1000 (exactly enough). */
+export function standingProblems(rules: StandingRules): string[] {
+  const problems: string[] = [];
+  if (!Number.isSafeInteger(rules.conflictWindowDays) || rules.conflictWindowDays < 1) problems.push('standing rule conflictWindowDays must be a whole number of days, at least 1');
+  if (!Number.isSafeInteger(rules.scoreCap) || rules.scoreCap < 1000) problems.push('standing rule scoreCap must be a whole permille, at least 1000, or no advance could be offered');
+  return problems;
 }
 
 /** A courier's whole days across one edge: `courierPermille` of a division's, rounded up, at least one. */

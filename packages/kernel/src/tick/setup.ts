@@ -12,7 +12,9 @@ import { initialForces } from '../forces/forces.ts';
 import type { DepartmentId, RegionId } from '../ids.ts';
 import { initialInfrastructure } from '../infrastructure/infrastructure.ts';
 import { initialLocations } from '../movement/movement.ts';
+import { initialRanks } from '../people/ranks.ts';
 import { initialGoals } from '../plans/standing.ts';
+import { initialFortification } from '../regions/regions.ts';
 import type { State } from '../root-state.ts';
 import type { SeatDriver } from '../seats/api.ts';
 import { initialSeats } from '../seats/seats.ts';
@@ -93,6 +95,8 @@ export function emptyState(): State {
     infraEdgeCondition: {},
     infraDepotCondition: {},
     infraObstructions: [],
+    regionFortification: {},
+    personRanks: {},
   };
 }
 
@@ -161,5 +165,7 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
     infraEdgeCondition: network.edges,
     infraDepotCondition: network.depots,
     infraObstructions: network.obstructions,
+    regionFortification: initialFortification(map, start),
+    personRanks: initialRanks(map, start.startDate),
   };
 }

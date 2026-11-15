@@ -25,6 +25,8 @@ import { seatsMechanics } from './seats-world.ts';
 export interface GateBand extends LivenessBand {
   /** Required when `minFires` is 0: why this mechanic is quiet in this run. */
   readonly why?: string;
+  /** For a `stalled` band: the kernel test that drives the mechanic live, since this run does not. */
+  readonly driver?: { readonly test: string; readonly needle: string };
 }
 
 /**
@@ -77,6 +79,14 @@ function quiet(why: string): GateBand {
   return { minFires: 0, maxFires: 0, why };
 }
 
+/**
+ * A mechanic that fires in this run only from a frozen stand-off (0072): no floor, so a run that ends the stand-off
+ * still passes, and the ceiling of `around(n)`, so a flood still fails. The kernel test named drives it live.
+ */
+function stalled(n: number, why: string, driver: { readonly test: string; readonly needle: string }): GateBand {
+  return { minFires: 0, maxFires: around(n).maxFires, why, driver };
+}
+
 /** A mechanic that could fire in this run but does not here; it may start to without a band moving. */
 function notHere(why: string): GateBand {
   return { minFires: 0, why };
@@ -85,6 +95,8 @@ function notHere(why: string): GateBand {
 const SITUATIONS_UNAUTHORED = 'union-1861 has no situations authored until the March 1861 authoring lane (0042, 0046); the testbed run exercises them';
 const VALUES_EMPTY = 'quiet by design on v2 packs until Phase 1 gives people values and regard (0058); the kernel test drives it through explicit trait inputs';
 const NO_PROPOSER = 'nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it';
+const TRAPPED_AT_WASHINGTON =
+  'in the Union run it fires only for the 600 regulars left at 0 permille in Washington from day 19, with Maryland\'s neutral ground behind them, every day to the end: a frozen stand-off, not a live mechanic (exit review S2c), so it has a ceiling and no floor; packages/kernel/test/contest.test.ts drives it';
 
 /** Mechanics that fire in neither reference run: the reason, and the kernel test that proves the mechanic is alive. */
 export const QUIET: Readonly<Record<string, QuietReason>> = {
@@ -113,10 +125,12 @@ const PEACE_QUIET: readonly string[] = ['orders.relayed', 'orders.obeyed', 'plan
 
 /** The union-1861 reference run: 75 days from 5 March 1861, at war (the war gate's labelled option, 0064). */
 const UNION_BANDS: Record<string, GateBand> = {
-  'combat.contest': around(62),
+  // The live contest at Washington, days 14 to 20 (exit review S2c). From day 20 the attacker holds all of it, and
+  // each later day is a stalemate, which records no gain and fires nothing: the band is no longer set from a stand-off.
+  'combat.contest': around(7),
   'combat.occupation': around(29),
   'combat.retreat': notHere('no side is pressed below the retreat threshold in 75 days; the testbed run fires it'),
-  'combat.retreat_blocked': around(57),
+  'combat.retreat_blocked': stalled(57, TRAPPED_AT_WASHINGTON, { test: 'packages/kernel/test/contest.test.ts', needle: 'stays put with nowhere to go' }),
   'control.changed': around(36),
   'control.threshold_crossed': around(6),
   'forces.stores_fell': around(7),
@@ -153,7 +167,7 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'combat.contest': around(14),
   'combat.occupation': around(6),
   'combat.retreat': around(2),
-  'combat.retreat_blocked': notHere('retreats are blocked only where a contested side has nowhere to go; the Union run fires it'),
+  'combat.retreat_blocked': notHere('retreats are blocked only where a contested side has nowhere to go, which no testbed contest leaves; the kernel test drives it'),
   'control.changed': around(20),
   'control.threshold_crossed': around(12),
   'forces.stores_fell': around(176),
@@ -244,8 +258,15 @@ export function bandProblems(runs: readonly ReferenceRun[] = REFERENCE_RUNS): st
   }
   for (const m of declared) {
     const alive = runs.some((r) => (r.bands[m]?.minFires ?? 0) >= 1);
-    if (!alive && !(m in QUIET)) problems.push(`${m} fires in no reference run and has no quiet reason with a driving kernel test`);
-    if (alive && m in QUIET) problems.push(`${m} fires in a reference run but is also listed as quiet`);
+    // A stalled band (fires only from a stand-off) carries its own driving kernel test, as QUIET does.
+    const driven = runs.some((r) => r.bands[m]?.driver !== undefined);
+    if (!alive && !driven && !(m in QUIET)) problems.push(`${m} fires in no reference run and has no quiet reason with a driving kernel test`);
+    if ((alive || driven) && m in QUIET) problems.push(`${m} fires in a reference run but is also listed as quiet`);
+  }
+  for (const run of runs) {
+    for (const [m, band] of Object.entries(run.bands)) {
+      if (band.driver !== undefined && band.maxFires === undefined) problems.push(`${run.name}: ${m} is stalled with no ceiling`);
+    }
   }
   for (const m of Object.keys(QUIET)) if (!declared.has(m)) problems.push(`QUIET names ${m}, which nothing declares`);
   return problems;

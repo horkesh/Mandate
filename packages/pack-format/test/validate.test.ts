@@ -232,6 +232,18 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'no rule-seat settings at all', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.ruleSeats), kind: 'shape/invalid_type', file: 'pack.json' },
   { name: 'a war flag no situation sets', files: () => editJson('pack.json', (m: { rules: { ruleSeats: { warFlags: { flag: string | null }[] } } }) => (m.rules.ruleSeats.warFlags[0]!.flag = 'war_begun')), kind: 'war-flag-unset', file: 'pack.json', severity: 'warning' },
   { name: 'a least capacity to march above the top of the scale', files: () => editJson('pack.json', (m: { rules: { movement: { marchMinCapacityPermille: number } } }) => (m.rules.movement.marchMinCapacityPermille = 6000)), kind: 'rules-range', file: 'pack.json' },
+  // The latency rules, report templates and standing-goal numbers (0072): every pack states them; there is no kernel default.
+  { name: 'no latency rules', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.latency), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'no report templates', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.reportTemplates), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'no standing-goal rules', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.standing), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'a special messenger slower than a courier', files: () => editJson('pack.json', (m: { rules: { latency: { specialMessengerPermille: number } } }) => (m.rules.latency.specialMessengerPermille = 1200)), kind: 'shape/too_big', file: 'pack.json' },
+  { name: 'a report type with no template', files: () => editJson('pack.json', (m: { rules: { reportTemplates: unknown[] } }) => m.rules.reportTemplates.shift()), kind: 'rules-templates', file: 'pack.json' },
+  { name: 'a template for a subtype the kernel does not write', files: () => editJson('pack.json', (m: { rules: { reportTemplates: { templateSubtype: string | null }[] } }) => m.rules.reportTemplates.push({ ...m.rules.reportTemplates[0]!, templateSubtype: 'gossip' })), kind: 'rules-templates', file: 'pack.json' },
+  { name: 'a superseded report kept longer than any', files: () => editJson('pack.json', (m: { rules: { reportTemplates: { keepSupersededDays: number }[] } }) => (m.rules.reportTemplates[0]!.keepSupersededDays = 400)), kind: 'rules-templates', file: 'pack.json' },
+  { name: 'a template that keeps reports past a campaign', files: () => editJson('pack.json', (m: { rules: { reportTemplates: { maxAgeDays: number }[] } }) => (m.rules.reportTemplates[0]!.maxAgeDays = 100000)), kind: 'shape/too_big', file: 'pack.json' },
+  { name: 'a template on a route that does not exist', files: () => editJson('pack.json', (m: { rules: { reportTemplates: { templateRoute: string }[] } }) => (m.rules.reportTemplates[0]!.templateRoute = 'semaphore')), kind: 'shape/invalid_value', file: 'pack.json' },
+  { name: 'a conflict window of no days', files: () => editJson('pack.json', (m: { rules: { standing: { conflictWindowDays: number } } }) => (m.rules.standing.conflictWindowDays = 0)), kind: 'shape/too_small', file: 'pack.json' },
+  { name: 'a score cap below exactly enough', files: () => editJson('pack.json', (m: { rules: { standing: { scoreCap: number } } }) => (m.rules.standing.scoreCap = 999)), kind: 'shape/too_small', file: 'pack.json' },
   {
     name: 'a scenario folder the manifest does not list',
     files: () => {

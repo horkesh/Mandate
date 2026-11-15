@@ -31,8 +31,8 @@ export interface KernelModule {
 export const KERNEL_MODULES: readonly KernelModule[] = [
   { name: 'world/graph', layer: 'World', owns: 'regions, typed edges, capacities, depots, terrain' },
   { name: 'control', layer: 'State', owns: 'the control map; the only writer of control changes' },
-  { name: 'control-index', layer: 'Derived', owns: 'contact edges, fronts, pockets, components' },
-  { name: 'supply', layer: 'Derived', owns: 'supply paths with capacity from sources' },
+  { name: 'control-index', layer: 'Derived', owns: 'holders, contact edges, fronts, components, wire owners (0054)' },
+  { name: 'supply', layer: 'Derived', owns: 'supply paths with capacity from sources and forward depots; pockets with their cut; allocation in priority order (0054)' },
   { name: 'regions', layer: 'State', owns: 'region population, loyalty, supply value, fortification' },
   { name: 'forces', layer: 'State', owns: 'force blocks and detachments, with stores on hand' },
   { name: 'command', layer: 'State', owns: 'posts and the people in them; assignments; standing agreements and prior orders; each region’s civil government and closed governments (0058); each department’s side (0065)' },
@@ -102,7 +102,8 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('detachments below the force block (garrisons, landings)', 'forces', ['command', 'operations']),
   field('stragglers: men absent from a force block who rejoin over days', 'forces', ['combat', 'attrition']),
   field('battle records', 'combat', []),
-  field('fortification and entrenchment', 'regions', ['operations', 'combat']),
+  // Close-out (0072): copied from the scenario start at setup (0050); nothing changes it in Phase 0.
+  field('fortification and entrenchment', 'regions', ['operations', 'combat'], [at('State', 'regionFortification')]),
   // Lane 0.5: which post commands each block; transfers name a force (0033).
   field('division-to-post assignment', 'command', ['transfers', "the army commander's assignments"], [at('State', 'forceAssignments')]),
   // Lane 0.5: one record per post carries its holder, chain, department, temporary operation,
@@ -116,7 +117,8 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('responses to orders (declared and actual rungs, reasons)', 'proxy', ['message arrival']),
   field('audience state', 'audience', ['the audience verb']),
   // Lane 0.6 builds only the stand-in standing goals (hold, or advance to a region).
-  field('goals, plans, approvals, edits', 'plans', ['verbs', 'seat selections', 'order arrival'], [at('State', 'standingGoals')]),
+  // A post that becomes a field post on a side during play (its government joins one, 0065) is given a hold goal (exit review S1).
+  field('goals, plans, approvals, edits', 'plans', ['verbs', 'seat selections', 'order arrival', 'a government joining a side'], [at('State', 'standingGoals')]),
   field('operations and their lifecycles', 'operations', ['plan approval', 'movement and combat outcomes']),
   field('knowledge (reports per seat)', 'knowledge', ['message delivery', 'pruning'], [at('State', 'knowledgeBySeat'), at('State', 'reportTruth')]),
   field('messages in transit', 'messages', ['commands', 'reports', 'relay links forwarding an order', "the kernel's latency rules"], [at('State', 'messagesInTransit')]),
@@ -125,13 +127,17 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('blocs, mandate, election results', 'politics', ['weekly step', 'battles', 'the press', 'checkpoints']),
   field("each chamber of Congress's state (sitting, adjourned, special session called)", 'politics', ['situations', 'the weekly step']),
   field('the framing term (who the public believes began the war)', 'politics', ["the war's opening situations", 'the press']),
+  // Reserved by section 10 (0046), with no writer yet (close-out, 0072): named so whatever builds them writes only here.
+  field('the Congress accountability ledger: acts taken while Congress was away', 'politics', []),
+  field('people who have reached Union lines', 'regions', ['the derived self-emancipation term (0046); never a lever']),
   field('seat assignments', 'seats', ['setup', "the player's settings"], [at('State', 'seatAssignments')]),
   // Reserved by world format v2 (lane 0.2): State that starts from a scenario
   // start or a World rule, with its owner named before the mechanic is built.
   field('water edge obstructions (works or batteries in hostile hands; cleared)', 'infrastructure', ['combat', 'operations (a siege, a clearing)', 'situations'], [at('State', 'infraObstructions')]),
   field('depot condition (struck by raids, repaired)', 'infrastructure', ['raids', 'combat', 'repair orders'], [at('State', 'infraDepotCondition')]),
   field("a post's department (changed on a scheduled date or by a situation)", 'command', ['scheduled department changes in the scenario start', 'situations']),
-  field("a person's rank and its date (seniority)", 'people', ['promotion lists', 'appoint']),
+  // Close-out (0072): the rank at the start date, copied at setup (0050); nothing changes it in Phase 0.
+  field("a person's rank and its date (seniority)", 'people', ['promotion lists', 'appoint'], [at('State', 'personRanks')]),
   field("today's weather per weather zone", 'weather', ['the day tick, from its named seeded stream (0029)']),
   // Guerrilla pressure (0029) is not here on purpose: the gate register
   // (SENSITIVE-HISTORY section 3.6, accepted by 0046) places it as derived,
@@ -187,6 +193,8 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'PostLinkState',
   'ObstructionState',
   'MarchLeg',
+  // Close-out (0072): a person's rank at the start, replaced whole by `people`
+  'PersonRank',
 ];
 
 /** State's own root fields that are set once at setup and never written after (the game's seed, the calendar's day 0). */

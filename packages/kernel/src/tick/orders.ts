@@ -162,7 +162,7 @@ export function relayOrder(ctx: TickContext, state: State, msg: TransitMessage):
 export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage): State {
   const order = msg.msgOrder!;
   const post = msg.msgToPost!;
-  const { state: next, outcome } = receiveOrder(state, post, { id: msg.msgOrigin, issuer: order.orderIssuer, goal: order.orderGoal, viaChain: !order.orderBypass }, ctx.day);
+  const { state: next, outcome } = receiveOrder(state, post, { id: msg.msgOrigin, issuer: order.orderIssuer, goal: order.orderGoal, viaChain: !order.orderBypass }, ctx.day, ctx.world.map.world.rules.standing.conflictWindowDays);
   fire(ctx, 'orders.obeyed', outcome.obeyed === 'new' ? 1 : 0);
   if (outcome.conflict) {
     fire(ctx, 'orders.conflict');

@@ -25,7 +25,9 @@
  *   county, they do not take it.
  * - **Contest.** Where two or more sides stand and one of them presses, the strongest (most men; a tie
  *   changes nothing) gains `contestPermille` times its margin over the next,
- *   `(s1 - s2) / s1`, a day (cause `combat`).
+ *   `(s1 - s2) / s1`, a day (cause `combat`), never more than it has left to
+ *   take. Where it already holds all of the region the record is a
+ *   `stalemate`: nothing is gained, and the record says so.
  * - **Retreat** (0019). A side whose share there, after today's deltas, is
  *   below the pack's retreat threshold falls back to the neighbouring land
  *   region, across an edge land troops may use this month, where its share is
@@ -54,11 +56,16 @@ export interface Presence {
 
 export interface ContestRecord {
   readonly region: RegionId;
-  readonly kind: 'occupation' | 'contest';
+  /**
+   * `occupation`: one side alone; `contest`: two or more sides, the strongest gains (none on a tie);
+   * `stalemate`: the strongest, `sides[0]`, already holds all of the region, so nothing is gained.
+   */
+  readonly kind: 'occupation' | 'contest' | 'stalemate';
   /** Every side present, strongest first (ties by faction id). */
   readonly sides: readonly Presence[];
-  /** The side that gains, or null for a tie. */
+  /** The side that gains, or null for a tie or a stalemate. */
   readonly gainer: FactionId | null;
+  /** What it gains, never more than was left to take. */
   readonly deltaPermille: number;
 }
 
@@ -138,11 +145,19 @@ export function contest(ground: MarchGround, state: State): ContestResult {
       records.push({ region, kind: 'contest', sides, gainer: null, deltaPermille: 0 });
       continue;
     }
-    const delta = Math.trunc((rules.contestPermille * (first.men - second.men)) / first.men);
+    // The stronger side already holds all of it: nothing is gained, and no gain is recorded (exit review S2c).
+    const have = shares[first.faction] ?? 0;
+    if (have >= 1000) {
+      records.push({ region, kind: 'stalemate', sides, gainer: null, deltaPermille: 0 });
+      continue;
+    }
+    // Never more than is left to take, so the record states what is gained.
+    const delta = Math.min(Math.trunc((rules.contestPermille * (first.men - second.men)) / first.men), 1000 - have);
     records.push({ region, kind: 'contest', sides, gainer: first.faction, deltaPermille: delta });
     if (delta > 0) deltas.push({ region, faction: first.faction, deltaPermille: delta, cause: 'combat' });
   }
-  const contested = new Set(records.filter((r) => r.kind === 'contest').map((r) => r.region));
+  // A stalemate still drives out a weaker side below the threshold, where it has somewhere to go.
+  const contested = new Set(records.filter((r) => r.kind !== 'occupation').map((r) => r.region));
   return { records, deltas, retreats: retreatsAfter(ground, state, presence, deltas, contested) };
 }
 

@@ -22,6 +22,8 @@ import type {
   WeatherZoneRecord,
 } from './graph.ts';
 import type { PersonRecord } from './people.ts';
+import type { ReportTemplate } from '../knowledge/templates.ts';
+import type { LatencyRules } from '../messages/latency.ts';
 
 export const WORLD_FORMAT_VERSION = 2;
 
@@ -77,6 +79,16 @@ export interface RuleSeatRules {
   readonly warFlags: readonly { readonly faction: FactionId; readonly flag: string | null }[];
 }
 
+/**
+ * The stand-in standing goals' numbers (0040, 0072). DESIGN PARAMETERS the pack states, never kernel defaults.
+ */
+export interface StandingRules {
+  /** Days within which a chain order stands against a newer order that went around the chain (0040: conflicting orders). */
+  readonly conflictWindowDays: number;
+  /** The highest score a standing-goal menu gives an advance, so an empty region does not dwarf every other term (permille of his demand). */
+  readonly scoreCap: number;
+}
+
 /** Pack-tunable rules the map needs (0019: thresholds start from AGEoD's tested values). */
 export interface WorldRules {
   /** The top of the pack's capacity scale for edges and depots. */
@@ -90,6 +102,14 @@ export interface WorldRules {
   readonly contest: ContestRules;
   readonly movement: MovementRules;
   readonly ruleSeats: RuleSeatRules;
+  /** How long each route takes beside the map's courier days (0026, 0032). DESIGN PARAMETERS the pack states (0072). */
+  readonly latency: LatencyRules;
+  /**
+   * One template per report type and subtype the kernel writes (0032: "each a pack-tunable template"): its usual
+   * route, its cadence, and the pruning rule for knowledge (FOUNDATION section 8). DESIGN PARAMETERS the pack states (0072).
+   */
+  readonly reportTemplates: readonly ReportTemplate[];
+  readonly standing: StandingRules;
 }
 
 export interface TerrainTerm {

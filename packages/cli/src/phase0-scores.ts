@@ -42,7 +42,6 @@ export interface CheckpointScores {
 /** The checkpoint's scores from the day's tick result and the World. */
 export function checkpointScores(world: phase0.SeatsWorld, result: phase0.TickResult): CheckpointScores {
   const { state, map } = result;
-  const factionOfBlock = (department: string): string | null => world.map.world.departments.find((d) => d.id === department)?.faction ?? null;
   const factions = world.map.world.factions.map((f) => f.id).sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
   const rows: FactionScore[] = factions.map((faction) => {
     let controlPermille = 0;
@@ -50,7 +49,8 @@ export function checkpointScores(world: phase0.SeatsWorld, result: phase0.TickRe
     let menKnown = 0;
     let unknown = 0;
     for (const block of Object.values(state.forceBlockStates)) {
-      if (factionOfBlock(block.fbDepartment) !== faction) continue;
+      // A block's side is its department's side today, which is State (0065): a government that changed side counts on its new one.
+      if (phase0.departmentSide(state, block.fbDepartment) !== faction) continue;
       if (block.fbStrength === null) unknown += 1;
       else menKnown += block.fbStrength;
     }

@@ -45,3 +45,19 @@ These rules are design parameters, chosen for play and not sourced facts. Every 
 | `contest.contestPermille` | 200 | Control the stronger side gains a day, times its margin over the next |
 | `movement.marchMinCapacityPermille` | 1000 | The least capacity an edge needs this month to carry a march: one whole unit |
 | `movement.courierPermille` | 333 | A courier's days on an edge, as a share of a division's: about a third, rounded up |
+
+### Messages, reports and standing goals (0072)
+
+Moved out of the kernel by 0072, with the same rule: design parameters every pack states, with no kernel default.
+
+| Rule | Value | What it does |
+|---|---|---|
+| `latency.wireDays` | 0 | Days for a message on the wire between two wired regions |
+| `latency.mailPermille` | 2000 | The mail against a courier: twice as long |
+| `latency.specialMessengerPermille` | 500 | A special messenger against a courier: half as long, and no weather |
+| `latency.courierNoiseMaxDays` | 1 | The most extra days a courier or the mail loses to roads and weather |
+| `latency.specialMessengerPrice` | 1 | The attention a special messenger costs its sender |
+| `standing.conflictWindowDays` | 7 | Days within which a chain order stands against a newer one sent around the chain (0040) |
+| `standing.scoreCap` | 4000 | The highest score a commander's menu gives an advance, so an empty region does not dwarf every other term |
+| `reportTemplates` | 16 rows | One per report type and subtype: its usual route, its cadence, and when knowledge of it is pruned (by age, and once superseded) |
+The testbed states the Union pack's values. Its report templates are the table in the Union information-flows note (`docs/research/2026-11-14-union-information-flows.md`, "Design implications"), stated here as design parameters.

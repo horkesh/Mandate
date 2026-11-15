@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
+import type { world as w } from '@mandate/kernel';
 import { CsvError, parseCentre, parseCitation, parseCitations, parseCsv, parseDegrees, parseMonths, parseSeasons, writeCsv } from '../src/index.ts';
+import { MESSAGE_RULES } from './support/fixture.ts';
 
 describe('the CSV reader (RFC 4180)', () => {
   it('reads quotes, doubled quotes, embedded newlines, CRLF, a BOM and blank lines', () => {
@@ -48,6 +50,7 @@ describe('cell grammars', () => {
       contest: { occupyPermille: 100, occupyFullMen: 5000, contestPermille: 200 },
       movement: { marchMinCapacityPermille: 1000, courierPermille: 333 },
       ruleSeats: { warFlags: [] },
+      ...(MESSAGE_RULES as unknown as Pick<w.WorldRules, 'latency' | 'reportTemplates' | 'standing'>),
     };
     expect(parseSeasons('mud', rules)).toEqual({ ok: true, value: [{ reason: 'mud', months: [1, 2], depthFeet: null }] });
     expect(parseSeasons('low_water:8-10:3', rules)).toEqual({ ok: true, value: [{ reason: 'low_water', months: [8, 9, 10], depthFeet: 3 }] });

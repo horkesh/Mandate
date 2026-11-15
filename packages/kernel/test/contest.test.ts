@@ -116,6 +116,34 @@ describe('the contest: the stronger side gains in proportion to its margin', () 
     expect(t.records[0]).toMatchObject({ kind: 'contest', gainer: null, deltaPermille: 0 });
   });
 
+  it('a side already holding all of it records a stalemate, never a gain; a gain is never more than was left (exit review S2c)', () => {
+    const blocks = [block('a_1', { department: 'a_war', region: 'mid', strength: 10000 }), block('b_1', { department: 'b_war', region: 'mid', strength: 5000 })];
+    const held = stateWith({ ...BASE, mid: { a: 1000 } }, blocks);
+    const r = contest(ground(held), held);
+    expect(r.records.map(({ kind, gainer, deltaPermille }) => ({ kind, gainer, deltaPermille }))).toEqual([{ kind: 'stalemate', gainer: null, deltaPermille: 0 }]);
+    expect(r.deltas).toEqual([]);
+    // Nearly all of it: the gain is the 40 left to take, not the 100 the margin would give.
+    const nearly = stateWith({ ...BASE, mid: { a: 960, b: 40 } }, blocks);
+    expect(contest(ground(nearly), nearly).records.map(({ kind, gainer, deltaPermille }) => ({ kind, gainer, deltaPermille }))).toEqual([{ kind: 'contest', gainer: 'a', deltaPermille: 40 }]);
+    // The positive control: the same margin with ground to take gains the full 100.
+    const open = stateWith({ ...BASE, mid: { a: 500, b: 500 } }, blocks);
+    expect(contest(ground(open), open).records[0]).toMatchObject({ kind: 'contest', gainer: 'a', deltaPermille: 100 });
+    // The tick counts no contest for a stalemate; it is still a map event.
+    const ctx = ctxFor(held, 1);
+    contestPhase(ctx, held);
+    expect(ctx.telemetry!.mechanics['combat.contest']?.fires ?? 0).toBe(0);
+    expect(ctx.mapEvents.map((e) => e.event)).toContain('contest');
+    const live = ctxFor(open, 1);
+    contestPhase(live, open);
+    expect(live.telemetry!.mechanics['combat.contest']!.fires).toBe(1);
+  });
+
+  it('a stalemate still drives a weaker side under the threshold out, where it can go (0019)', () => {
+    const blocks = [block('a_1', { department: 'a_war', region: 'mid', strength: 10000 }), block('b_1', { department: 'b_war', region: 'mid', strength: 5000 })];
+    const held = stateWith({ ...BASE, mid: { a: 1000 } }, blocks);
+    expect(contest(ground(held), held).retreats).toEqual([{ faction: 'b', from: 'mid', to: 'b2', edge: 'road:b2:mid', blocks: ['b_1'], sharePermille: 0 }]);
+  });
+
   it('every proposer is a listed control cause', () => {
     expect([...CONTROL_CAUSES].sort()).toEqual(['combat', 'occupation']);
   });

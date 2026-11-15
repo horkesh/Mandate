@@ -36,9 +36,6 @@ import { fieldPosts, headquartersOf, postFaction, relayChain } from './posts.ts'
 import { seatIdFor } from './seats.ts';
 import { latencyMapFor, type SeatsWorld } from './world.ts';
 
-/** A score cap so an empty region does not dwarf every other term. */
-const SCORE_CAP = 4000;
-
 /** What a day's menus are judged on: the march ground and the latency of the morning's map. */
 export interface MorningGround {
   readonly march: MarchGround;
@@ -89,6 +86,8 @@ export function standingOptions(world: SeatsWorld, state: State, post: PostId, g
   const claims = latestEnemyClaims(knowledgeOf(state, seatIdFor(person.id)));
   const bias = perceptionBias(world.rules.traits, person).permille;
   const demand = demandRatio(world.rules.traits, person);
+  // A score cap so an empty region does not dwarf every other term: the pack's (`WorldRules.standing.scoreCap`).
+  const cap = world.map.world.rules.standing.scoreCap;
   const advances: OptionView[] = [];
   const seen = new Set<RegionId>();
   for (const step of marchSteps(ground.march, group.from, target, side, group.naval)) {
@@ -98,7 +97,7 @@ export function standingOptions(world: SeatsWorld, state: State, post: PostId, g
     const claim = claims.get(region);
     const enemy = claim === undefined ? 0 : perceived(claim.value, bias);
     // His margin over what he demands, permille: 1000 means exactly enough.
-    const margin = enemy === 0 ? SCORE_CAP : Math.min(SCORE_CAP, Math.trunc((men * 1_000_000) / (enemy * demand)));
+    const margin = enemy === 0 ? cap : Math.min(cap, Math.trunc((men * 1_000_000) / (enemy * demand)));
     if (margin >= 1000) advances.push({ optionId: `advance:${region}`, kind: 'advance', region, score: margin, perceivedEnemy: enemy, ownStrength: men });
   }
   const holdScore = Math.trunc((1000 + world.rules.traits.holdBand) / 2);
@@ -127,8 +126,9 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   for (const id of fieldPosts(world, state)) {
     if (postFaction(world, state, id) !== faction) continue;
     const p = state.postStates[id]!;
-    // Typical days to the post's seat in pack data, or where it stood at the start of play: the principal is not told where it is today.
-    const to = p.postSeat ?? headquartersOf(world, state, id);
+    // Typical days to the post's seat in pack data, or where it stood at the start of play, or else his own side's capital:
+    // the principal is not told where it is today (exit review P2).
+    const to = p.postSeat ?? world.startHeadquarters(id) ?? f.seatRegion;
     const routes: RouteOption[] = [];
     for (const route of ORDER_ROUTES) {
       const l = routeLatency(ground.latency, world.rules.latency, route, f.seatRegion, to, faction, null);

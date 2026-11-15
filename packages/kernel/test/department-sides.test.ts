@@ -21,8 +21,13 @@ import type { State } from '../src/root-state.ts';
 import { indexSeatsWorld } from '../src/seats/world.ts';
 import type { SituationDef } from '../src/situations/types.ts';
 import { createState } from '../src/tick/setup.ts';
-import { tick } from '../src/tick/tick.ts';
+import { tick, type TickResult } from '../src/tick/tick.ts';
 import { indexWorld } from '../src/world/index.ts';
+import { playDays } from '../src/log/session.ts';
+import { holdGoalsForNewFieldPosts, receiveOrder } from '../src/plans/standing.ts';
+import { pendingRequests } from '../src/seats/requests.ts';
+import { seatIdFor } from '../src/seats/seats.ts';
+import { order, scriptedSeats } from './support/test-seats.ts';
 import { block, DEP, forcesIndex, forcesStart, forcesWorld, P, PER, person, post } from './support/forces-fixture.ts';
 import { depot, edge, F, R, region } from './support/map-fixture.ts';
 
@@ -155,6 +160,41 @@ describe('a situation moves a government of no side to a side (0065)', () => {
     for (let i = 0; i < 4; i++) plain = tick(WORLD, plain, []).state;
     expect(plain.departmentFactions).toEqual(S0.departmentFactions);
     expect(neutralGroundOf(MAP, plain)).toEqual({ n1: 'open' });
+  });
+
+  it('its guard post becomes commandable with a hold goal, and an order to it is carried out, not crashed on (exit review S1)', () => {
+    const world = indexSeatsWorld(MAP, START, { situations: [close] });
+    const lead = seatIdFor(PER('a_lead'));
+    const days: TickResult[] = [];
+    const out = playDays(world, createState(world, { seed: 1 }), scriptedSeats({ a: { 4: [order('n_guard', 'advance', 'a2', 'courier')] } }), 12, { freeze: true, onDay: (r) => days.push(r) });
+    // Day 1: neutral, no goal and not commandable. Day 2: it joins a and holds where it stands, from day 2.
+    expect(days[0]!.state.standingGoals[P('n_guard')]).toBeUndefined();
+    expect(days[1]!.state.standingGoals[P('n_guard')]).toEqual({ standingSpec: { goalSpecKind: 'hold', goalSpecRegion: null }, standingIssuer: null, standingViaChain: true, standingSetDay: 2, standingOrder: null });
+    const menu = pendingRequests(world, days[2]!.state).find((r) => r.requestSeat === lead)!.menu;
+    expect(menu.menuKind === 'principal' && menu.commandable.map((c) => c.post)).toContain('n_guard');
+    // The order sent on day 4 arrives and is obeyed; the guard marches on a2 and, there, holds it.
+    expect(days.flatMap((r) => r.rejections)).toEqual([]);
+    const advancing = days.map((r) => r.state.standingGoals[P('n_guard')]).find((g) => g?.standingSpec.goalSpecKind === 'advance');
+    expect(advancing).toMatchObject({ standingSpec: { goalSpecKind: 'advance', goalSpecRegion: R('a2') }, standingIssuer: 'a_lead' });
+    const goal = out.state.standingGoals[P('n_guard')]!;
+    expect(goal.standingSpec).toEqual({ goalSpecKind: 'hold', goalSpecRegion: R('a2') });
+    expect(goal.standingIssuer).toBe('a_lead');
+    expect(days.flatMap((r) => r.events).filter((e) => e.event === 'objected')).toEqual([]);
+    expect(out.state.forceLocations[toId('forceBlock', 'n_guard_1')]!.locRegion).toBe('a2');
+    // The control: without the change of side the guard is never a field post on a side, so it gets no goal.
+    let plain = createState(WORLD, { seed: 1 });
+    for (let i = 0; i < 4; i++) plain = tick(WORLD, plain, []).state;
+    expect(plain.standingGoals[P('n_guard')]).toBeUndefined();
+  });
+
+  it('an order reaching a post with no goal reads it as holding since day 0: obeyed, never a throw (exit review S1)', () => {
+    const sent = { id: toId('message', 'm.test'), issuer: PER('a_lead'), goal: { goalSpecKind: 'advance' as const, goalSpecRegion: R('a2') }, viaChain: true };
+    const r = receiveOrder(S0, P('n_guard'), sent, 3, MAP.world.rules.standing.conflictWindowDays);
+    expect(r.outcome).toEqual({ obeyed: 'new', conflict: false });
+    expect(r.state.standingGoals[P('n_guard')]).toMatchObject({ standingSpec: sent.goal, standingSetDay: 3, standingOrder: 'm.test' });
+    // The positive control for the builder: a post that already has a goal keeps it, and the State is unchanged.
+    expect(holdGoalsForNewFieldPosts(S0, [P('a_state_militia')], 3)).toBe(S0);
+    expect(holdGoalsForNewFieldPosts(S0, [P('n_guard')], 3).standingGoals[P('n_guard')]).toMatchObject({ standingSetDay: 3 });
   });
 
   it('reports the change and what it cut loose; a government already on that side is unchanged', () => {

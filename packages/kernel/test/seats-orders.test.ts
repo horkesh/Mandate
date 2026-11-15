@@ -5,13 +5,15 @@ import { knowledgeOf } from '../src/knowledge/knowledge.ts';
 import { NO_TRUTH } from '../src/knowledge/truth.ts';
 import type { LogEntry } from '../src/log/log.ts';
 import { playDays } from '../src/log/session.ts';
-import { DEFAULT_LATENCY_RULES, routeLatency } from '../src/messages/latency.ts';
+import { routeLatency } from '../src/messages/latency.ts';
 import { createIdMint, sendMessages } from '../src/messages/transit.ts';
 import type { State } from '../src/root-state.ts';
 import { buildControlIndex } from '../src/control-index/control-index.ts';
 import { headquartersOf } from '../src/seats/posts.ts';
 import { morningGround, standingOptions } from '../src/seats/requests.ts';
-import { latencyMapFor } from '../src/seats/world.ts';
+import { latencyMapFor, type SeatsWorld } from '../src/seats/world.ts';
+import { indexWorld } from '../src/world/index.ts';
+import type { WorldRules } from '../src/world/world.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
 import { sendReport, type TickContext } from '../src/tick/context.ts';
 import { createState } from '../src/tick/setup.ts';
@@ -21,6 +23,11 @@ import { F, indexedFixture, P, POST, R } from './support/seats-fixture.ts';
 import { order, scriptedSeats } from './support/test-seats.ts';
 
 const lead = seatIdFor(P('a_lead'));
+
+/** The same seats World on a World whose rules differ (the person lookups and the start are kept). */
+function withRules(world: SeatsWorld, over: Partial<WorldRules>): SeatsWorld {
+  return { ...world, map: indexWorld({ ...world.map.world, rules: { ...world.map.world.rules, ...over } }) };
+}
 
 /** Run days with the scripted seats, collecting every tick result. */
 function run(world: ReturnType<typeof indexedFixture>, days: number, script: Parameters<typeof scriptedSeats>[0] = {}, start?: State) {
@@ -34,7 +41,7 @@ describe('latency is the kernel’s (0026)', () => {
   // Latency on the start's map: the wire is the holder's (0052).
   const latency = latencyMapFor(world, buildControlIndex(world.map, createState(world, { seed: 1 }).regionControl));
   const L = (route: Parameters<typeof routeLatency>[2], from: string, to: string, noise: { seed: number; message: MessageId } | null = null) =>
-    routeLatency(latency, DEFAULT_LATENCY_RULES, route, R(from), R(to), F('a'), noise);
+    routeLatency(latency, world.map.world.rules.latency, route, R(from), R(to), F('a'), noise);
   const days = (r: ReturnType<typeof L>) => (r.ok ? r.latency.days : -1);
 
   it('computes courier, wire, special messenger and mail from the map', () => {
@@ -105,11 +112,11 @@ describe('orders through chains (0040)', () => {
 
   describe('conflicting orders: one down the chain, one around it (the office holds what it relays)', () => {
     const world = indexedFixture({ persons: { a_sec: { values: ['duty'], regard: -500 } } });
-    function play(script: Record<number, LogEntry['command']>, days: number) {
-      let state = createState(world, { seed: 5 });
+    function play(script: Record<number, LogEntry['command']>, days: number, on: SeatsWorld = world) {
+      let state = createState(on, { seed: 5 });
       const results: TickResult[] = [];
       for (let d = 1; d <= days; d++) {
-        const r = tick(world, state, script[d] ? [{ day: d, seat: lead, command: script[d]! }] : [], { freeze: true });
+        const r = tick(on, state, script[d] ? [{ day: d, seat: lead, command: script[d]! }] : [], { freeze: true });
         results.push(r);
         state = r.state;
       }
@@ -131,6 +138,15 @@ describe('orders through chains (0040)', () => {
       const { state, tokens } = play({ 1: order('a_army', 'advance', 'b_front'), 2: order('a_army', 'hold', null, 'special-messenger', true) }, 12);
       expect(state.standingGoals[POST('a_army')]!.standingSpec).toEqual({ goalSpecKind: 'advance', goalSpecRegion: R('b_front') });
       expect(tokens).toEqual(['new', 'conflict-new']);
+    });
+
+    it('reads the conflict window from the pack (0072): with two days, the bypass two days after the chain order is simply obeyed', () => {
+      const script = { 1: order('a_army', 'advance', 'b_front'), 6: order('a_army', 'hold', null, 'special-messenger', true) };
+      const narrow = play(script, 12, withRules(world, { standing: { conflictWindowDays: 2, scoreCap: 4000 } }));
+      expect(narrow.state.standingGoals[POST('a_army')]!.standingSpec.goalSpecKind).toBe('hold');
+      expect(narrow.results.flatMap((r) => r.events).filter((e) => e.event === 'conflict')).toEqual([]);
+      // The control: the pack's seven days make it a conflict, as above.
+      expect(play(script, 12).results.flatMap((r) => r.events).filter((e) => e.event === 'conflict')).toHaveLength(1);
     });
   });
 
@@ -222,6 +238,11 @@ describe('belief: perception in belief derivation, the intelligence chief a sepa
     expect(belief.terms.map((t) => `${t.termKind}:${t.termValue}`)).toEqual(['observed:800', 'intelligence_bias:2000', 'reported:1600', 'perception_bias:2400']);
     const options = standingOptions(world, state, POST('a_army'), morningGround(world, state, state.stateDay + 1))!;
     expect(options.find((o) => o.region === R('b_front'))!.perceivedEnemy).toBe(3840);
+    // The score cap is the pack's (0072): a lower cap lowers every capped score, and the margin below it is unchanged.
+    const capped = withRules(world, { standing: { conflictWindowDays: 7, scoreCap: 1500 } });
+    const low = standingOptions(capped, state, POST('a_army'), morningGround(capped, state, state.stateDay + 1))!;
+    expect(options.map((o) => Math.min(o.score, 1500))).toEqual(low.map((o) => o.score));
+    expect(options.some((o) => o.score > 1500)).toBe(true);
     expect(viewFor(world, state, seatIdFor(gen.id)).enemyBeliefs[R('b_front')]!.value).toBe(3840);
     // The next dispatch he writes carries the same figure to the principal.
     const later = run(world, 6, {}, state).state;
