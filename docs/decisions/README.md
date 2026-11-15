@@ -63,7 +63,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0057](0057-situations-engine-and-gate-tests.md) | The situations engine, and the gate as tests | accepted; amended by 0060 |
 | [0058](0058-lane-0.5-format-gaps.md) | The format gaps lane 0.5 found: trait stand-ins, filters and intelligence chiefs, and each region's civil government | accepted; amended by 0061 |
 | [0059](0059-tooling-scanner-index-hook-records.md) | Tooling: the one-writer scan's gaps, the decisions-index check, a hook that checks the staged tree, and immutable records by type | accepted |
-| [0060](0060-every-route-to-an-atrocity.md) | D5 sees every route to an atrocity, and a response to one can be decided honestly | accepted; amended by 0063 |
+| [0060](0060-every-route-to-an-atrocity.md) | D5 sees every route to an atrocity, and a response to one can be decided honestly | accepted; amended by 0063, 0071 |
 | [0061](0061-how-the-0058-fields-were-built.md) | How the 0058 format fields were built | accepted; amended by 0064 |
 | [0062](0062-the-planner-shape.md) | The planner's shape: generate, filter and score, with one level of methods | accepted |
 | [0063](0063-atrocity-levers-are-watched.md) | An option that hurts the enemy in response to an atrocity is watched | accepted |
@@ -73,4 +73,5 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0067](0067-government-sides-as-built.md) | Government sides as built, and Fort Pickens' stores unknown | accepted |
 | [0068](0068-the-runner-and-the-done-check.md) | The headless runner, the liveness gate and the Phase 0 done check | accepted |
 | [0069](0069-the-indian-territory-nations-govern-themselves.md) | The Indian Territory nations govern themselves, and only their own acts move them | accepted; amended by 0070 |
-| [0070](0070-a-nations-act-is-its-own.md) | A nation's act must be its own, and must stay with its own people | accepted |
+| [0070](0070-a-nations-act-is-its-own.md) | A nation's act must be its own, and must stay with its own people | accepted; amended by 0071 |
+| [0071](0071-cleared-flags-and-goals-are-routes.md) | A cleared flag is a route, and a standing goal is a choice | accepted |

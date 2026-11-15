@@ -66,8 +66,8 @@ const WORLD = indexSeatsWorld(MAP, START);
 const S0 = createState(WORLD, { seed: 1 });
 
 /** The proposal a situation's effect pushes: a government joining `side` (+), or closing (+) / reopening (-). */
-const joins = (side: FactionId | null, subject: string = NEUTRAL, delta = 1): CommandProposal => ({ owner: 'command', field: DEPARTMENT_SIDE_FIELD, subject, delta, side });
-const closes = (delta = 1, subject: string = NEUTRAL): CommandProposal => ({ owner: 'command', field: GOVERNMENT_CLOSED_FIELD, subject, delta, side: null });
+const joins = (side: FactionId | null, subject: string = NEUTRAL, delta = 1): CommandProposal => ({ owner: 'command', field: DEPARTMENT_SIDE_FIELD, subject, delta, side, origin: 'notice' });
+const closes = (delta = 1, subject: string = NEUTRAL): CommandProposal => ({ owner: 'command', field: GOVERNMENT_CLOSED_FIELD, subject, delta, side: null, origin: 'notice' });
 
 describe('a department\'s side is State, copied from the World at the start (0065)', () => {
   it('copies every department\'s side, in id order', () => {
@@ -159,7 +159,7 @@ describe('a situation moves a government of no side to a side (0065)', () => {
 
   it('reports the change and what it cut loose; a government already on that side is unchanged', () => {
     const r = applyCommandProposals(MAP, S0, [joins(F('a')), joins(F('a'))], 3);
-    expect(r.refused).toEqual([]);
+    expect(r.refused.map((x) => x.why)).toEqual([]);
     expect(r.applied).toEqual([
       { field: DEPARTMENT_SIDE_FIELD, subject: 'neutral_gov', change: 'joined', side: { department: 'neutral_gov', from: null, to: 'a', closingLifted: null, postsCut: [], blocksUnassigned: [], chiefsCleared: [] } },
       { field: DEPARTMENT_SIDE_FIELD, subject: 'neutral_gov', change: 'unchanged', side: null },
@@ -234,15 +234,15 @@ describe('a closing and a change of side stay distinct (0058, 0065)', () => {
     // Once on a side it is no longer neutral: a closing is refused, and so is a reopening.
     const after = applyCommandProposals(MAP, joined.state, [closes(1), closes(-1)], 6);
     expect(after.applied).toEqual([]);
-    expect(after.refused).toEqual(['department neutral_gov belongs to a side; only a neutral government closes its territory', 'department neutral_gov belongs to a side; only a neutral government closes its territory']);
+    expect(after.refused.map((x) => x.why)).toEqual(['department neutral_gov belongs to a side; only a neutral government closes its territory', 'department neutral_gov belongs to a side; only a neutral government closes its territory']);
   });
 
   it('refuses a change of side naming no side, a side not in the World, a delta not above 0, or a department that is not a government (positive controls)', () => {
-    const notGov = indexWorld({ ...MAP.world, vocabularies: { ...MAP.world.vocabularies, departmentKinds: [{ id: 'government', name: 'kind.government', government: false }] } });
+    const notGov = indexWorld({ ...MAP.world, vocabularies: { ...MAP.world.vocabularies, departmentKinds: [{ id: 'government', name: 'kind.government', government: false, selfGoverning: false }] } });
     const r = applyCommandProposals(MAP, S0, [joins(null), joins(F('c')), joins(F('a'), NEUTRAL, 0), joins(F('a'), NEUTRAL, -1), joins(F('a'), 'ghost'), { ...joins(F('a')), subject: null }], 1);
     expect(r.applied).toEqual([]);
     expect(r.state).toBe(S0);
-    expect(r.refused).toEqual([
+    expect(r.refused.map((x) => x.why)).toEqual([
       'a change of side for neutral_gov names no side to join',
       'faction c is not in the World',
       'a change of side for neutral_gov joins the side it names, with a delta above 0; no proposal takes a side away',
@@ -250,7 +250,7 @@ describe('a closing and a change of side stay distinct (0058, 0065)', () => {
       'department ghost is not in the World; only a government changes side',
       'command owns no field "department_side" with subject none',
     ]);
-    expect(applyCommandProposals(notGov, S0, [joins(F('a'))], 1).refused).toEqual(['department neutral_gov is not a government; only a government changes side']);
+    expect(applyCommandProposals(notGov, S0, [joins(F('a'))], 1).refused.map((x) => x.why)).toEqual(['department neutral_gov is not a government; only a government changes side']);
     expect(() => changeDepartmentSide(notGov, S0, NEUTRAL, F('a'))).toThrow('is not a government');
     // The control: the same proposal on a government applies.
     expect(applyCommandProposals(MAP, S0, [joins(F('a'))], 1).applied).toHaveLength(1);

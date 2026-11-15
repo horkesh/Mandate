@@ -46,7 +46,7 @@ export function forcesWorld(parts: ForcesParts): World {
     ...base,
     vocabularies: {
       ...base.vocabularies,
-      departmentKinds: [{ id: 'government', name: 'kind.government', government: true }],
+      departmentKinds: [{ id: 'government', name: 'kind.government', government: true, selfGoverning: false }, { id: 'nation', name: 'kind.nation', government: true, selfGoverning: true }],
       postKinds: [
         { id: 'office', name: 'kind.office', creatable: 'start_only', temporary: false, role: null },
         { id: 'army', name: 'kind.army', creatable: 'start_only', temporary: false, role: null },

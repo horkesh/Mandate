@@ -41,7 +41,7 @@
 {"faction":"union","id":"st_vermont","kind":"state_government","name":"department.st_vermont.name","provenance":[{"at":"department structure of the oob draft","source":"OOB-LANE"}]},
 {"faction":null,"id":"st_virginia","kind":"state_government","name":"department.st_virginia.name","provenance":[{"at":"department structure of the oob draft","source":"OOB-LANE"}]},
 {"faction":"union","id":"st_wisconsin","kind":"state_government","name":"department.st_wisconsin.name","provenance":[{"at":"department structure of the oob draft","source":"OOB-LANE"}]},
-{"faction":"union","id":"tr_colorado","kind":"territorial_government","name":"department.tr_colorado.name","provenance":[{"at":"12 Stat. 172 secs 2 3 11","source":"STAT"},{"at":"s.2","source":"NOTE-governments-stores-1861"}]},
+{"faction":"union","id":"tr_colorado","kind":"territorial_government","name":"department.tr_colorado.name","provenance":[{"at":"12 Stat. 172 secs 2 3 11","source":"STAT"},{"at":"12 Stat. 1163","source":"KAPPLER"},{"at":"s.2","source":"NOTE-governments-stores-1861"}]},
 {"faction":"union","id":"tr_dakota","kind":"territorial_government","name":"department.tr_dakota.name","provenance":[{"at":"12 Stat. 239 secs 2 3 11","source":"STAT"},{"at":"s.2","source":"NOTE-governments-stores-1861"}]},
 {"faction":"union","id":"tr_nebraska","kind":"territorial_government","name":"department.tr_nebraska.name","provenance":[{"at":"10 Stat. 277 secs 2 and 12","source":"STAT"},{"at":"s.2","source":"NOTE-governments-stores-1861"}]},
 {"faction":"union","id":"tr_new_mexico","kind":"territorial_government","name":"department.tr_new_mexico.name","provenance":[{"at":"9 Stat. 446 secs 3 and 12","source":"STAT"},{"at":"s.2","source":"NOTE-governments-stores-1861"}]},
@@ -1731,17 +1731,17 @@
 {"id":"peace_democrats","name":"bloc.peace_democrats"}
 ],
 "departmentKinds": [
-{"government":false,"id":"executive","name":"department_kind.executive"},
-{"government":false,"id":"war","name":"department_kind.war"},
-{"government":false,"id":"navy","name":"department_kind.navy"},
-{"government":false,"id":"treasury","name":"department_kind.treasury"},
-{"government":false,"id":"diplomatic","name":"department_kind.diplomatic"},
-{"government":false,"id":"justice","name":"department_kind.justice"},
-{"government":false,"id":"interior","name":"department_kind.interior"},
-{"government":false,"id":"post_office","name":"department_kind.post_office"},
-{"government":true,"id":"state_government","name":"department_kind.state_government"},
-{"government":true,"id":"territorial_government","name":"department_kind.territorial_government"},
-{"government":true,"id":"federal_district","name":"department_kind.federal_district"}
+{"government":false,"id":"executive","name":"department_kind.executive","selfGoverning":false},
+{"government":false,"id":"war","name":"department_kind.war","selfGoverning":false},
+{"government":false,"id":"navy","name":"department_kind.navy","selfGoverning":false},
+{"government":false,"id":"treasury","name":"department_kind.treasury","selfGoverning":false},
+{"government":false,"id":"diplomatic","name":"department_kind.diplomatic","selfGoverning":false},
+{"government":false,"id":"justice","name":"department_kind.justice","selfGoverning":false},
+{"government":false,"id":"interior","name":"department_kind.interior","selfGoverning":false},
+{"government":false,"id":"post_office","name":"department_kind.post_office","selfGoverning":false},
+{"government":true,"id":"state_government","name":"department_kind.state_government","selfGoverning":false},
+{"government":true,"id":"territorial_government","name":"department_kind.territorial_government","selfGoverning":false},
+{"government":true,"id":"federal_district","name":"department_kind.federal_district","selfGoverning":false}
 ],
 "personKinds": [
 {"id":"general","name":"person_kind.general"},

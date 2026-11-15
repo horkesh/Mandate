@@ -154,6 +154,12 @@ export interface DepartmentKindTerm {
   readonly id: string;
   readonly name: StringKey;
   readonly government: boolean;
+  /**
+   * A government of a people who govern themselves (0069). Only its own act, a situation's notice, may change its
+   * side, close or reopen it, or move its regions; never a principal's decision (an option, inaction or a locked
+   * cost). A region it holds moves only to another department of the same kind. The engine reads this, never kind names.
+   */
+  readonly selfGoverning: boolean;
 }
 
 export interface Vocabularies {
@@ -188,6 +194,12 @@ export interface DepartmentRecord {
   readonly id: DepartmentId;
   readonly faction: FactionId | null;
   readonly kind: string;
+  /**
+   * A generic id for the people whose government this is (0070): rival governments of one nation share it. Required
+   * of a self-governing department, whose land passes only to a department of the same kind and the same polity.
+   * Absent for every other department.
+   */
+  readonly polity?: string;
   readonly name: StringKey;
   readonly provenance: Provenance;
 }

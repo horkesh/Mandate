@@ -1,6 +1,6 @@
 # 0070: A nation's act must be its own, and must stay with its own people
 
-Status: accepted (2026-11-15). Amends 0069. From the standing reviewer's and the gate reviewer's reviews of the `selfGoverning` rule (`review-selfgoverning.md`, `review-gate-selfgoverning.md`) and the gate reviewer's review of the Indian Territory split (`review-gate-indian-territory.md`, Part 2). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.
+Status: accepted (2026-11-15). Amends 0069. Amended by 0071 (a cleared flag is a route; a standing goal is a choice). From the standing reviewer's and the gate reviewer's reviews of the `selfGoverning` rule (`review-selfgoverning.md`, `review-gate-selfgoverning.md`) and the gate reviewer's review of the Indian Territory split (`review-gate-indian-territory.md`, Part 2). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.
 
 ## Context
 

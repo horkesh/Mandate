@@ -58,8 +58,8 @@ export function commandProposalsPhase(ctx: TickContext, state: State): { readonl
     if (a.change === 'closed') fire(ctx, 'command.government_closed');
     if (a.change === 'reopened') fire(ctx, 'command.government_reopened');
   }
-  for (const why of result.refused) {
-    ctx.mapEvents.push({ event: 'proposal_refused', owner: 'command', why });
+  for (const { reason, why } of result.refused) {
+    ctx.mapEvents.push({ event: 'proposal_refused', owner: 'command', reason, why });
     fire(ctx, 'command.proposal_refused');
   }
   // The cause first, then what it did: the pockets the closing, reopening or change of side makes, today.

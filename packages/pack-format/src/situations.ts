@@ -162,6 +162,7 @@ export const SituationSchema = z.strictObject({
     })
     .nullable()
     .default(null),
+  actingGovernment: idOf('department').optional(),
   gate: GateTagSchema,
   gateReview: GateReviewSchema.nullable().default(null),
   citations: z.array(z.strictObject({ source: z.string().min(1), at: z.string().min(1).nullable().default(null) })).default([]),
@@ -253,8 +254,9 @@ export function validateSituations(items: readonly { readonly file: string; read
   // The proposals `command` owns (0058, 0065), checked here as the kernel would refuse them in play.
   const governmentKinds = new Set(pack.world.vocabularies.departmentKinds.filter((k) => k.government).map((k) => k.id as string));
   const departmentKind = new Map(pack.world.departments.map((d) => [d.id as string, d.kind as string]));
+  const selfGoverningKinds = new Set(pack.world.vocabularies.departmentKinds.filter((k) => k.selfGoverning).map((k) => k.id as string));
   type Err = (kind: string, at: string, message: string, expected?: string) => void;
-  const commandProposal = (p: { readonly field: string; readonly subject: string | null; readonly delta: number; readonly side: string | null }, at: string, err: Err) => {
+  const commandProposal = (p: { readonly field: string; readonly subject: string | null; readonly delta: number; readonly side: string | null }, at: string, err: Err, fromNotice: boolean) => {
     const closing = p.field === phase0.GOVERNMENT_CLOSED_FIELD;
     if (!closing && p.field !== phase0.DEPARTMENT_SIDE_FIELD) {
       err('situation-command-proposal', `${at}.field`, `command owns no field "${p.field}"`, `"${phase0.GOVERNMENT_CLOSED_FIELD}" (a neutral government closes or reopens) or "${phase0.DEPARTMENT_SIDE_FIELD}" (a government joins a side)`);
@@ -263,6 +265,10 @@ export function validateSituations(items: readonly { readonly file: string; read
     if (p.subject === null) err('situation-command-proposal', `${at}.subject`, `a "${p.field}" proposal names no department`, 'a government department id');
     else if (!departmentKind.has(p.subject)) err('unknown-reference', `${at}.subject`, `"${p.subject}" is not a department`, 'a government department id');
     else if (!governmentKinds.has(departmentKind.get(p.subject)!)) err('not-a-government', `${at}.subject`, `department "${p.subject}" is not a government; only a government ${closing ? 'closes its territory' : 'changes side'}`, 'a department whose kind the pack marks a government');
+    // 0069: a people who govern themselves are moved only by their own act, a notice, never by a principal's choice.
+    if (p.subject !== null && !fromNotice && selfGoverningKinds.has(departmentKind.get(p.subject) ?? '')) {
+      err('self-governing-decision', `${at}.subject`, `"${p.subject}" governs itself, and a ${closing ? 'closing' : 'change of side'} proposed from a decision option, inaction or a locked cost would let a principal move it by choice`, 'the effects of a notice only: the nation itself acts (0069)');
+    }
     if (closing) {
       if (p.delta !== 1 && p.delta !== -1) err('situation-command-proposal', `${at}.delta`, `a closing's delta is ${p.delta}`, '+1 to close, -1 to reopen');
     } else {
@@ -399,7 +405,7 @@ export function validateSituations(items: readonly { readonly file: string; read
     }
     for (const { at, effect } of phase0.effectsOf(def)) {
       if ('propose' in effect && effect.propose.side !== null) ref(factions, 'faction', effect.propose.side, `${at}.propose.side`);
-      if ('propose' in effect && effect.propose.owner === 'command') commandProposal(effect.propose, `${at}.propose`, err);
+      if ('propose' in effect && effect.propose.owner === 'command') commandProposal(effect.propose, `${at}.propose`, err, def.kind === 'notice');
     }
 
     // String keys, in the default locale. (Every message in the table is parsed as ICU by the World validator.)
