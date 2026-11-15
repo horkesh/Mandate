@@ -54,3 +54,6 @@ export * from './infrastructure/infrastructure.ts';
 export * from './tick/forces.ts';
 export * from './tick/passage.ts';
 export * from './combat/contest.ts';
+// Close-out (0072): the start's fortification (`regions`) and ranks (`people`).
+export * from './regions/regions.ts';
+export * from './people/ranks.ts';

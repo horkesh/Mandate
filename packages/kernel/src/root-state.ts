@@ -24,13 +24,15 @@ import type { RegionControlTable } from './control/control.ts';
 import type { ForceTable } from './forces/forces.ts';
 import type { ConditionTable, ObstructionState } from './infrastructure/infrastructure.ts';
 import type { ForceLocation } from './movement/movement.ts';
-import type { DepartmentId, DepotId, EdgeId, ForceBlockId, MessageId, PostId, RegionId, SeatId, SituationId } from './ids.ts';
+import type { DepartmentId, DepotId, EdgeId, ForceBlockId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from './ids.ts';
 import type { SituationRecord } from './situations/situations.ts';
 import type { SeatKnowledge } from './knowledge/knowledge.ts';
 import type { ReportTruth } from './knowledge/truth.ts';
 import type { TransitMessage } from './messages/transit.ts';
 import type { StandingGoal } from './plans/goal.ts';
 import type { SeatAssignment } from './seats/seats.ts';
+import type { PersonRank } from './people/ranks.ts';
+import type { FortificationTable } from './regions/regions.ts';
 
 export interface State {
   /** The game's seed, set at setup; every named stream derives from it. Immutable. */
@@ -81,4 +83,11 @@ export interface State {
   readonly infraDepotCondition: ConditionTable<DepotId>;
   /** Water edges obstructed by works or batteries, in edge order. Writer: `infrastructure`. */
   readonly infraObstructions: readonly ObstructionState[];
+  /**
+   * Fortification and entrenchment per region, permille, from the scenario start (0050); a region absent has none.
+   * Nothing changes it in Phase 0; the siege method (0062) reads it. Writer: `regions`.
+   */
+  readonly regionFortification: FortificationTable;
+  /** Each person's rank and the date he holds it from (seniority), at the start date (0050); absent for none. Writer: `people`. */
+  readonly personRanks: Readonly<Record<PersonId, PersonRank>>;
 }
