@@ -1,6 +1,6 @@
 # 0061: How the 0058 format fields were built
 
-Status: accepted (2026-11-14). From lane 0.7's session, which built 0058's three format fields on `format-0058` (merged as 7e221dc; hand-over in `notes/format-0058.md`), and the standing reviewer's approval with four nits, two of them fixed before merge. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0058.
+Status: accepted (2026-11-14). Amended by 0064 (an unknown government closes neutral passage and supply, not movement). From lane 0.7's session, which built 0058's three format fields on `format-0058` (merged as 7e221dc; hand-over in `notes/format-0058.md`), and the standing reviewer's approval with four nits, two of them fixed before merge. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0058.
 
 ## Decision
 

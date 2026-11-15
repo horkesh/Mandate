@@ -64,6 +64,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0058](0058-lane-0.5-format-gaps.md) | The format gaps lane 0.5 found: trait stand-ins, filters and intelligence chiefs, and each region's civil government | accepted; amended by 0061 |
 | [0059](0059-tooling-scanner-index-hook-records.md) | Tooling: the one-writer scan's gaps, the decisions-index check, a hook that checks the staged tree, and immutable records by type | accepted |
 | [0060](0060-every-route-to-an-atrocity.md) | D5 sees every route to an atrocity, and a response to one can be decided honestly | accepted; amended by 0063 |
-| [0061](0061-how-the-0058-fields-were-built.md) | How the 0058 format fields were built | accepted |
+| [0061](0061-how-the-0058-fields-were-built.md) | How the 0058 format fields were built | accepted; amended by 0064 |
 | [0062](0062-the-planner-shape.md) | The planner's shape: generate, filter and score, with one level of methods | accepted |
 | [0063](0063-atrocity-levers-are-watched.md) | An option that hurts the enemy in response to an atrocity is watched | accepted |
+| [0064](0064-forces-command-movement-and-the-contest.md) | Forces, command, movement, infrastructure and the control contest | accepted |

@@ -211,7 +211,7 @@ Module map, adapted from the AWWV-architecture note:
 | `plans` | State | goals, drafts, approvals, edits as counter-orders |
 | `operations` | State | approved plans in execution, per-axis lifecycles |
 | `movement` | writer | the only writer of location; owns and exports the movement passage rule, which `planner` imports (0062) |
-| `combat` | writer | battle resolution with breakdowns and named seeded streams |
+| `combat` | writer | battle resolution with breakdowns and named seeded streams (in Phase 0 a proposer only: the simple contest and occupation, 0064) |
 | `people`, `compliance`, `reading`, `audience`, `proxy`, `ladder` | State writers | the M1/M2 people core, recast for goals and plans |
 | `knowledge` | State | per-seat reports with latency; the truth behind each report in a separate map the view layer cannot import (0052) |
 | `messages` | State | messages in transit, with latency owned by the kernel (0052) |
@@ -233,19 +233,18 @@ Module map, adapted from the AWWV-architecture note:
 |---|---|---|
 | region control | `control` | combat, occupation |
 | region population, loyalty, supply value | `regions` | economy, situations, occupation |
-| edge condition | `infrastructure` | combat, raids, repair orders |
-| water-edge obstructions; depot condition | `infrastructure` | combat, raids, operations (0050; set at scenario start) |
+| edge condition (`infraEdgeCondition`) | `infrastructure` | combat, raids, repair orders |
+| water-edge obstructions (`infraObstructions`); depot condition (`infraDepotCondition`) | `infrastructure` | combat, raids, operations, including clearing works no fort holds (0050, 0064; set at scenario start) |
 | a post's department, and scheduled department changes | `command` | the scenario start's scheduled changes, situations (0050) |
 | a region's civil government, and which no-faction governments are closed | `command` | the scenario start, situations (0058) |
 | a person's rank and its date | `people` | promotion lists (0050) |
 | today's weather per weather zone | `weather` | its own seeded draw (0029, 0050; reserved) |
-| division location | `movement` | operations |
+| a force block's region or ship, and the leg it is on (`forceLocations`) | `movement` | operations, standing goals, retreats (0064) |
 | the current day | `tick` | the day tick (0052) |
-| a post's headquarters region (stand-in until force blocks, lane 0.5) | `movement` | standing-goal steps (0052) |
 | messages in transit | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules (0052) |
 | knowledge: reports per seat, and the truth behind them | `knowledge` | message delivery, pruning (0052) |
 | seat assignments | `seats` | setup, the player's settings (0052) |
-| division strength, morale, experience, equipment | `forces` | combat, attrition, economy, recruitment |
+| a force block's strength, non-combatants, arm and department (`forceBlockStates`); morale, experience and equipment from Phase 1 | `forces` | combat, attrition, economy, recruitment, transfers (0064) |
 | a force block's stores on hand | `forces` | supply (daily), operations (a sea delivery) |
 | detachments below the force block (garrisons, landings) | `forces` | `command`, `operations` (0041) |
 | stragglers: men absent from a force block who rejoin over days | `forces` | combat, attrition (0041) |
@@ -254,8 +253,8 @@ Module map, adapted from the AWWV-architecture note:
 | the Congress accountability ledger: acts taken while Congress was away | `politics` | (0046) |
 | people who have reached Union lines | `regions` | the derived self-emancipation term (0046); never a lever |
 | fortification and entrenchment | `regions` | operations, combat (0029, 0041) |
-| division-to-post assignment | `command` | transfers, the army commander's assignments |
-| people in posts; temporary posts | `command` | appoint, relieve, promotion lists, an operation's end |
+| a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments (0033, 0064) |
+| people in posts; temporary posts (`postStates`) | `command` | appoint, relieve, promotion lists, an operation's end |
 | standing agreements and prior orders on a post | `command` | verbs, situations, orders from the holder's own department |
 | a person's stats, traits, standing, grievances, regard | `people` | combat results, the press, verbs, ladder |
 | a person's stances on record (from Consult) | `people` | Consult answers (0040, 0041); adviser credibility is derived from the president's knowledge, never stored |
@@ -285,6 +284,8 @@ The day tick, each phase declaring what it reads and writes:
 9. Checkpoints and the verdict.
 10. The invariant barrier.
 11. Decision-point detection.
+
+In Phase 0 code the phases run as: commands (1), deliveries (2), movement (3), the control contest and occupation (3b), control and the derived map (4), stores on hand (4a), situations (4b), `command`'s proposals such as a government closing (4c), cyclic reports, pruning, the day, and the barrier (0057, 0064). A post's headquarters is derived from where its strongest block stands, never stored.
 
 **What happens to today's kernel:**
 - **Survive as they are:** `permille`, `rng`, `compare`, `rules`, scenario validation.
