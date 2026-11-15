@@ -120,9 +120,13 @@ Liveness counts are unchanged except `combat.contest` on the Union run (62 to 7,
 - `npm run check`: 77 files, 929 tests, green.
 - The done check passes all six criteria.
 
+## The save schema
+
+The lead's ruling: the new State fields go in without a save-schema bump. `CURRENT_SAVE_SCHEMA` stays 1, as it did for 0058's and 0064's fields, because no save has shipped. **Migrations start with the first public build:** from then on, every new State field bumps the schema and adds a migration, and the old fixture is kept.
+
 ## Findings outside my scope
 
 - **The one-writer scanner doesn't follow non-object type aliases.** A record reachable from `State` only through `type X = Readonly<Record<K, R>>` is not found unless its name ends in `State`: my `RankTable` alias hid `PersonRank`. I typed the root field inline, as `seatAssignments` is, rather than change the scanner. This may be the review's "alias gap".
-- **No save schema bump.** The new State fields go in without one, as earlier Phase 0 lanes did, since no save has shipped. A save from before this branch decodes without the two fields. It's the lead's call whether that needs a migration rule before Phase 1.
+- **The one-writer alias gap** goes to the steward for `OPEN_QUESTIONS` (the lead's routing), as a fix before Phase 1 adds its owners.
 - The Union README's research pointer and the testbed's both point at the Union note. The testbed is fictional and only borrows the values.
 - The 744 `pack:validate` warnings on union-1861 were there before this branch (unknown values).
