@@ -82,6 +82,7 @@ Lesson L17. The app shows the lead only the first 400 characters of a lane's rep
 - Never switch branches with uncommitted results. Commit often.
 - Never delete a branch with unique commits. Classify squash-merged work with `git cherry`, not `--no-merged`.
 - Never commit in another running session's worktree.
+- A worktree's `node_modules` must resolve `@mandate/*` to that worktree's own packages, not to the main checkout's; otherwise local checks test main's kernel (lesson L19). Run `npm install` in a new worktree, or link the workspace packages to it.
 - On Windows, never `rm -rf` a folder that may contain a junction (a worktree's `node_modules` junction once wiped AWWV's main checkout). Check for reparse points, and unlink junctions with `cmd /c rmdir`.
 - Two long runs never share an output folder. Runs write only to the ignored `runs/` folder, never into tracked files.
 

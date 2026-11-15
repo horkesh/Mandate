@@ -73,3 +73,7 @@ Enforced by: `docs/LANES.md`: a restored session's first step is to add a fresh 
 **L15. A proposal card drops its starting branch.**
 The lane 0.1 reviewer was proposed as a card with a source branch; the card dropped it, and the reviewer started on main.
 Enforced by: a brief for a lane that works on another branch tells it, as its first step, to check that branch out (detached if another worktree holds it).
+
+**L19. A worktree's local check can test the main checkout's packages.**
+Lane 0.8 found that a worktree without its own `@mandate` links in `node_modules` resolves `@mandate/*` to the main checkout's packages. So a lane's local `npm run check` could run its `cli`, `rule-seats` and `pack-format` tests against main's kernel rather than its own branch. CI was unaffected, because it installs fresh.
+Enforced by: a test that fails when `@mandate/*` resolves outside the repo root under test (lane 0.8), and `docs/LANES.md`: a worktree's `node_modules` resolves the workspace packages to that worktree.
