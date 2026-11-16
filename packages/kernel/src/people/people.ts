@@ -79,6 +79,15 @@ export interface PeopleStart {
   readonly personStances: Readonly<Record<PersonId, readonly Stance[]>>;
   readonly personStatus: Readonly<Record<PersonId, PersonStatus>>;
   readonly personRanks: Readonly<Record<PersonId, Readonly<Record<string, PersonRank>>>>;
+  readonly personPromises: Readonly<Record<PersonId, readonly PersonPromise[]>>;
+  readonly personInquiries: Readonly<Record<PersonId, readonly number[]>>;
+}
+
+/** A promise the principal made to a person (lane 1.5; M2's promise of advancement): kept by the appointment it names before it falls due. */
+export interface PersonPromise {
+  readonly promiseKind: string;
+  readonly promiseDay: number;
+  readonly promiseDue: number;
 }
 
 /**
@@ -127,12 +136,17 @@ export function initialPeople(map: WorldIndex, start: ScenarioStart, seed: numbe
     const principal = p.faction === null ? undefined : principals.get(p.faction);
     const regard = mode === 'unknown-men' ? rules.regardUnknown : regardAtStart(rules, p.regard);
     // Regard is stored only where it differs from the pack's regard for the unknown, which every reader falls back to.
-    if (principal !== undefined && principal !== p.id && regard !== rules.regardUnknown) personRegard[p.id] = { [principal]: regard };
+    const row: Record<PersonId, number> = {};
+    if (principal !== undefined && principal !== p.id && regard !== rules.regardUnknown) row[principal] = regard;
+    // Lane 1.5: his cited regard for others (rivals, partners), by the same rule; none in unknown-men.
+    if (mode !== 'unknown-men') for (const o of p.regardOthers) if (o.toward !== p.id) row[o.toward] = clampSignedPermille(rules.regardPermille[o.direction]);
+    for (const k of Object.keys(row) as PersonId[]) if (row[k] === rules.regardUnknown) delete row[k];
+    if (Object.keys(row).length > 0) personRegard[p.id] = sortedRecord(row);
     personStatus[p.id] = { statusKind: 'serving', statusDay: 0 };
     const ranks = ranksOn(map, p.ranks, start.startDate);
     if (Object.keys(ranks).length > 0) personRanks[p.id] = ranks;
   }
-  return { personTrue, personTraits, personStanding, personGrievances: {}, personRegard, personStances: {}, personStatus, personRanks };
+  return { personTrue, personTraits, personStanding, personGrievances: {}, personRegard, personStances: {}, personStatus, personRanks, personPromises: {}, personInquiries: {} };
 }
 
 /** A typed change another mechanism proposes for `people` to apply (hard rule 5: one writer). */
@@ -142,7 +156,14 @@ export type PeopleChange =
   | { readonly change: 'grievance'; readonly person: PersonId; readonly kind: string; readonly weight: number; readonly against: PersonId | null; readonly cause: string | null }
   | { readonly change: 'status'; readonly person: PersonId; readonly status: PersonStatusKind }
   | { readonly change: 'stance'; readonly person: PersonId; readonly subject: string; readonly recommends: string; readonly confidence: number }
-  | { readonly change: 'rank'; readonly person: PersonId; readonly kind: string; readonly rank: string; readonly since: string };
+  | { readonly change: 'rank'; readonly person: PersonId; readonly kind: string; readonly rank: string; readonly since: string }
+  // Lane 1.5.
+  | { readonly change: 'clear_grievances'; readonly person: PersonId; readonly kinds: readonly string[] }
+  | { readonly change: 'halve_grievances'; readonly person: PersonId; readonly kinds: readonly string[] }
+  | { readonly change: 'decay_grievances'; readonly person: PersonId; readonly divisor: number }
+  | { readonly change: 'promise'; readonly person: PersonId; readonly kind: string; readonly due: number }
+  | { readonly change: 'promise_settled'; readonly person: PersonId; readonly kind: string }
+  | { readonly change: 'inquiry'; readonly person: PersonId; readonly keepDays: number };
 
 function known(state: State, person: PersonId): void {
   if (state.personTrue[person] === undefined) throw new RangeError(`unknown person id "${person}"`);
@@ -153,7 +174,7 @@ function known(state: State, person: PersonId): void {
  * regard to -1000..1000; a regard change starts from the pack's regard for the unknown when none is recorded, and a regard
  * that returns to it is removed, so the table stays sparse. Returns the State unchanged when there are no changes.
  */
-export function applyPeopleChanges(state: State, changes: readonly PeopleChange[], day: number, rules: PeopleRules): State {
+export function applyPeopleChanges(state: State, changes: readonly PeopleChange[], day: number, rules: PeopleRules, rankTerms: readonly { readonly id: string; readonly kind: string }[]): State {
   let next = state;
   for (const c of changes) {
     known(next, c.person);
@@ -188,12 +209,58 @@ export function applyPeopleChanges(state: State, changes: readonly PeopleChange[
         next = { ...next, personStances: { ...next.personStances, [c.person]: [...(next.personStances[c.person] ?? []), s] } };
         break;
       }
-      case 'rank':
+      case 'rank': {
+        // FOUNDATION 11.3 (lane 1.5): a proposed rank must be in the vocabulary, of the kind it is filed under.
+        const term = rankTerms.find((r) => r.id === c.rank);
+        if (term === undefined) throw new RangeError(`rank \"${c.rank}\" is not in the pack's rank vocabulary`);
+        if (term.kind !== c.kind) throw new RangeError(`rank \"${c.rank}\" is a ${term.kind} rank, not ${c.kind}`);
         next = { ...next, personRanks: { ...next.personRanks, [c.person]: sortedRecord({ ...(next.personRanks[c.person] ?? {}), [c.kind]: { rankTerm: c.rank, rankSince: c.since } }) } };
         break;
+      }
+      case 'clear_grievances':
+      case 'halve_grievances': {
+        const held = next.personGrievances[c.person] ?? [];
+        const kept = c.change === 'clear_grievances'
+          ? held.filter((g) => !c.kinds.includes(g.grievanceKind))
+          : held.map((g) => (c.kinds.includes(g.grievanceKind) ? { ...g, grievanceWeight: Math.trunc(g.grievanceWeight / 2) } : g)).filter((g) => g.grievanceWeight > 0);
+        next = withList(next, 'grievances', c.person, kept);
+        break;
+      }
+      case 'decay_grievances': {
+        const held = next.personGrievances[c.person] ?? [];
+        const kept = held.map((g) => ({ ...g, grievanceWeight: g.grievanceWeight - Math.max(1, Math.trunc(g.grievanceWeight / Math.max(1, c.divisor))) })).filter((g) => g.grievanceWeight > 0);
+        next = withList(next, 'grievances', c.person, kept);
+        break;
+      }
+      case 'promise': {
+        const p: PersonPromise = { promiseKind: c.kind, promiseDay: day, promiseDue: c.due };
+        next = { ...next, personPromises: { ...next.personPromises, [c.person]: [...(next.personPromises[c.person] ?? []), p] } };
+        break;
+      }
+      case 'promise_settled': {
+        const left = (next.personPromises[c.person] ?? []).filter((p) => p.promiseKind !== c.kind);
+        const table: Record<PersonId, readonly PersonPromise[]> = { ...next.personPromises };
+        if (left.length === 0) delete table[c.person];
+        else table[c.person] = left;
+        next = { ...next, personPromises: table };
+        break;
+      }
+      case 'inquiry': {
+        const days = [...(next.personInquiries[c.person] ?? []).filter((d) => day - d < c.keepDays), day];
+        next = { ...next, personInquiries: { ...next.personInquiries, [c.person]: days } };
+        break;
+      }
     }
   }
   return next;
+}
+
+/** Replace a person's grievance list (removing the entry when it empties, so the table stays sparse). */
+function withList(state: State, which: 'grievances', person: PersonId, list: readonly PersonGrievance[]): State {
+  const table: Record<PersonId, readonly PersonGrievance[]> = { ...state.personGrievances };
+  if (list.length === 0) delete table[person];
+  else table[person] = list;
+  return which === 'grievances' ? { ...state, personGrievances: table } : state;
 }
 
 function sortedRecord<V>(r: Readonly<Record<string, V>>): Record<string, V> {

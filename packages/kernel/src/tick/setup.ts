@@ -16,7 +16,8 @@ import { initialPeople, SHADOW_MODES, type ShadowMode } from '../people/people.t
 import { initialFortification } from '../regions/regions.ts';
 import type { State } from '../root-state.ts';
 import type { SeatDriver } from '../seats/api.ts';
-import { initialSeats } from '../seats/seats.ts';
+import { initialAttention } from '../seats/attention.ts';
+import { initialSeats, seatIdFor } from '../seats/seats.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import { parseIsoDate } from '../world/calendar.ts';
 import type { WorldIndex } from '../world/index.ts';
@@ -110,6 +111,14 @@ export function emptyState(): State {
     personStances: {},
     personStatus: {},
     orderResponses: {},
+    personPromises: {},
+    personInquiries: {},
+    seatAttention: {},
+    seatInitiatives: {},
+    personRungs: {},
+    personRivals: {},
+    audienceHeld: {},
+    observerPostings: {},
   };
 }
 
@@ -193,5 +202,14 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
     personStances: people.personStances,
     personStatus: people.personStatus,
     orderResponses: {},
+    personPromises: people.personPromises,
+    personInquiries: people.personInquiries,
+    // Lane 1.5: every principal's seat starts with a full week's attention; nothing else has begun.
+    seatAttention: initialAttention(map.world.rules.people.attention, start.factions.flatMap((f) => (f.principal === null ? [] : [seatIdFor(f.principal)]))),
+    seatInitiatives: {},
+    personRungs: {},
+    personRivals: {},
+    audienceHeld: {},
+    observerPostings: {},
   };
 }

@@ -340,6 +340,7 @@ describe('ownership of the new State (0044)', () => {
   it('registers every root field with one writer, and the stand-ins are labelled', () => {
     const roots = OWNED_FIELDS.flatMap((f) => f.code.filter((c) => c.record === 'State').map((c) => `${c.key}:${f.writer}`)).sort();
     expect(roots).toEqual([
+      'audienceHeld:audience',
       'closedGovernments:command',
       'departmentFactions:command',
       'forceAssignments:command',
@@ -350,10 +351,15 @@ describe('ownership of the new State (0044)', () => {
       'infraObstructions:infrastructure',
       'knowledgeBySeat:knowledge',
       'messagesInTransit:messages',
+      'observerPostings:command',
       'orderResponses:proxy',
       'personGrievances:people',
+      'personInquiries:people',
+      'personPromises:people',
       'personRanks:people',
       'personRegard:people',
+      'personRivals:ladder',
+      'personRungs:ladder',
       'personStances:people',
       'personStanding:people',
       'personStatus:people',
@@ -366,6 +372,8 @@ describe('ownership of the new State (0044)', () => {
       'regionGovernments:command',
       'reportTruth:knowledge',
       'seatAssignments:seats',
+      'seatAttention:seats',
+      'seatInitiatives:seats',
       'situationFlags:situations',
       'situationStates:situations',
       'standingGoals:plans',
@@ -387,7 +395,9 @@ describe('ownership of the new State (0044)', () => {
     // principal orders); and a filter cuts only a losses claim, which no cyclic report carries
     // until lane 0.5's casualty returns. Here the one relaying man (a_sec, uncandid) holds what he dislikes rather than
     // objecting (lane 1.1: an objection needs a candid man), so objections are driven in seats-orders.test.ts.
-    expect(dead).toEqual(['commands.rejected', 'orders.conflict', 'orders.relay_objected', 'reports.trimmed', 'seats.defaulted']);
+    // Lane 1.5: the scripted seats send no people verbs and never run out of attention; promises, rivals and initiatives
+    // need verbs or a rung this game does not reach. Each has its own kernel test (people-verbs.test.ts).
+    expect(dead).toEqual(['commands.rejected', 'orders.conflict', 'orders.relay_objected', 'reports.trimmed', 'seats.defaulted', 'seats.attention_refused', 'verbs.answered', 'verbs.audience', 'verbs.consulted', 'verbs.declined', 'verbs.in_washington', 'people.promise_kept', 'reports.observer_letter', 'ladder.rival', 'people.promise_broken', 'seats.initiative']);
     // The plan cycle's mechanics have their own tests (`plans.test.ts`); this game goals, drafts and picks plans.
     const fired = SEATS_MECHANICS.filter((m) => plan(m) && telemetry.mechanics[m]!.fires > 0);
     expect(fired).toEqual(expect.arrayContaining(['planner.candidates', 'planner.searches', 'plans.chosen', 'plans.drafted', 'plans.goal_set']));

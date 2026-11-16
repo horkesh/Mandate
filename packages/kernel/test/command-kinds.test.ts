@@ -9,6 +9,7 @@ import { entryProblems } from '../src/log/log.ts';
  * S4, 0072): a new command changes this list on purpose, and the Phase 1 console's own verb-list test will map its
  * commands onto it. None moves a division: a place is named only inside an order to the holder of a post, a goal or an
  * edit of his plan's arrows within 0026's grammar (hard rule 1). Lane 1.2 adds `review` (approve, send back, edit) and `go`.
+ * Lane 1.5 adds the people verbs: each an order to a person; a transfer names two posts and an amount, never a block.
  */
 
 /** Compile time: the logged command union and the list name the same kinds. */
@@ -29,12 +30,23 @@ const WELL_FORMED: Readonly<Record<(typeof COMMAND_KINDS)[number], unknown>> = {
     bypass: false,
   },
   review: { cmd: 'review', to: 'a_army', action: 'edit', edit: { kind: 'waypoints', axis: 'main', region: null, via: ['a_mid'], concentration: null }, route: 'wire', bypass: false },
+  // Lane 1.5: the people verbs.
+  appoint: { cmd: 'appoint', post: 'a_army', person: 'a_bold', rank: null, route: 'wire' },
+  relieve: { cmd: 'relieve', post: 'a_army', mode: 'quiet_department', to: 'a_reserve', route: 'wire' },
+  transfer: { cmd: 'transfer', from: 'a_reserve', to: 'a_army', force: 'men', amount: 300, route: 'wire' },
+  inquire: { cmd: 'inquire', to: 'a_army', subject: 'b_front', route: 'wire' },
+  consult: { cmd: 'consult', situation: 'ordinance', posts: ['a_office'] },
+  audience: { cmd: 'audience', to: 'a_army', counters: [{ kind: 'vindicate', value: null, boldness: null, from: null, men: null }] },
+  observer: { cmd: 'observer', person: 'a_spy', to: 'a_army', route: 'courier' },
+  promise: { cmd: 'promise', person: 'a_bold' },
+  pressure: { cmd: 'pressure', person: 'a_gen' },
+  address: { cmd: 'address', bloc: 'greens' },
 };
 
 describe("the new kernel's command list (the verb-list test, 0072; lane 1.2)", () => {
-  it('is exactly choose, decide, delegate, go, order and review', () => {
+  it('is exactly the plan commands and lane 1.5’s people verbs', () => {
     expect(KINDS_MATCH).toBe(true);
-    expect([...COMMAND_KINDS]).toEqual(['choose', 'decide', 'delegate', 'go', 'order', 'review']);
+    expect([...COMMAND_KINDS]).toEqual(['address', 'appoint', 'audience', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer']);
   });
 
   it('the log accepts each, well formed', () => {
@@ -50,6 +62,13 @@ describe("the new kernel's command list (the verb-list test, 0072; lane 1.2)", (
     // An edit is within the grammar or refused: no edit kind names a division, and a goal carries only blocks the post commands.
     const moveEdit = { ...(WELL_FORMED.review as object), edit: { kind: 'move_division', axis: 'main', region: 'b_cap', via: [], concentration: null } };
     expect(entryProblems(entry(moveEdit), 0)).toEqual(['entry 0: review.edit kind must be one of add_axis, objective, remove_axis, timing, waypoints']);
+  });
+
+  it('a transfer names posts and an amount, never a division; a verb that names a place does so only as an inquiry’s subject (hard rule 1)', () => {
+    const withBlock = { ...(WELL_FORMED.transfer as object), blocks: ['a_army_1'] };
+    expect(entryProblems(entry(withBlock), 0)).toEqual(['entry 0: transfer has fields [amount, blocks, cmd, force, from, route, to], expected [amount, cmd, force, from, route, to]']);
+    expect(entryProblems(entry({ ...(WELL_FORMED.relieve as object), mode: 'shot' }), 0)).toEqual(['entry 0: relieve.mode must be one of own_request, outright, quiet_department', 'entry 0: relieve.to names the quiet post for quiet_department, and only for it']);
+    expect(entryProblems(entry({ ...(WELL_FORMED.audience as object), counters: [{ kind: 'bribe', value: null, boldness: null, from: null, men: null }] }), 0)[0]).toContain('audience.counters must be counters');
   });
 
   it('the tick handles every kind and no other', () => {

@@ -147,6 +147,10 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     err('rules-templates', W('rules', 0, 'reportTemplates'), problem, 'one template for each report type and subtype the kernel writes, keepSupersededDays at most maxAgeDays');
   }
   // Lane 1.1: the people rules, by the kernel's own rule (it checks the same when it indexes a World): every value they name is in the vocabulary.
+  // Lane 1.5: attention, the order-to-value map, the verbs, ladder, audience and initiatives.
+  for (const problem of phase0.verbRulesProblems(world.rules.people.attention, world.rules.people.verbs, vocab.values.map((v) => v.id), vocab.personKinds.map((k) => k.id))) {
+    err('rules-people', W('rules', 0, 'people'), problem, 'the pack’s attention and verb rules, whole and in range, naming values and person kinds from its vocabularies');
+  }
   for (const problem of phase0.peopleRulesProblems(world.rules.people, vocab.values.map((v) => v.id))) {
     err('rules-people', W('rules', 0, 'people'), problem, 'whole permille for each people rule, and values from the pack’s values vocabulary');
   }
@@ -372,6 +376,14 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
         err('centre-without-citation', at(field), `the ${field} centre "${c.direction}" has no admissible citation`, 'a citation of a primary or secondary source (pointers do not count; FOUNDATION section 6)');
       }
     }
+    // Lane 1.5: regard for others names people of the World, each cited.
+    p.regardOthers.forEach((o, j) => {
+      refCheck(people, 'person', o.toward, at(`regardOthers[${j}].toward`));
+      citeCheck(o.cites, at(`regardOthers[${j}].cites`), false, `regard toward ${o.toward}`);
+      if (!p.invented && o.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer').length === 0) {
+        err('centre-without-citation', at(`regardOthers[${j}]`), `regard toward ${o.toward} has no admissible citation`, 'a citation of a primary or secondary source');
+      }
+    });
     p.values.forEach((v, j) => {
       term('values', v.value, at(`values[${j}].value`));
       citeCheck(v.cites, at(`values[${j}].cites`), false, `value "${v.value}"`);

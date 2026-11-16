@@ -197,6 +197,18 @@ export function parseValues(raw: string, sourceKeys: readonly string[]): Cell<w.
   return ok(out);
 }
 
+/** Regard for others (lane 1.5): `person:direction:citation+citation` items. */
+export function parseRegardOthers(raw: string, sourceKeys: readonly string[]): Cell<w.PersonRecord['regardOthers'][number][]> {
+  const out: w.PersonRecord['regardOthers'][number][] = [];
+  for (const item of list(raw)) {
+    const m = /^([^:\s]+)\s*:\s*([a-z]+)(?:\s*:(.*))?$/.exec(item);
+    if (m === null || !ids.isWellFormedId(m[1]!)) return bad(`"${item}" is not a regard entry`, 'person:direction:citation+citation');
+    if (!(w.STAT_DIRECTIONS as readonly string[]).includes(m[2]!)) return bad(`"${m[2]}" is not a direction`, w.STAT_DIRECTIONS.join(', '));
+    out.push({ toward: m[1]! as never, direction: m[2]! as w.StatDirection, cites: m[3] === undefined ? [] : parseCitations(m[3], sourceKeys, '+') });
+  }
+  return ok(out);
+}
+
 /** Ranks: `rank:date` items, in date order. */
 export function parseRanks(raw: string): Cell<w.RankHeld[]> {
   const out: w.RankHeld[] = [];

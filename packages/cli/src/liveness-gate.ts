@@ -120,6 +120,8 @@ function notHere(why: string): GateBand {
 const SITUATIONS_UNAUTHORED = 'union-1861 has no situations authored until the March 1861 authoring lane (0042, 0046); the testbed run exercises them';
 const FILTER_EMPTY = 'both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post';
 const NO_CANDID_RELAY = 'the testbed’s one relaying office (the war ministry) holds what it dislikes rather than objecting: its holder is not candid (lane 1.1); union-1861 fires it, and the kernel test drives it';
+const VERBS_UNUSED = 'no rule seat uses the people verbs yet (lane 1.5 builds them; the generic principal orders, reviews and decides only); the kernel test drives it';
+const PV = 'packages/kernel/test/people-verbs.test.ts';
 const NO_PROPOSER = 'nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it';
 const TRAPPED_AT_WASHINGTON =
   'in the Union run it fires only for the 600 regulars left at 0 permille in Washington from day 19, with Maryland\'s neutral ground behind them, every day to the end: a frozen stand-off, not a live mechanic (exit review S2c), so it has a ceiling and no floor; packages/kernel/test/contest.test.ts drives it';
@@ -153,6 +155,16 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'situations.options_changed': { why: 'an option changes only for a situation left open past an appearance or expiry; the rule-driven principal does not leave one open (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'a waiting option defers the decision until its condition holds' },
   'situations.resurfaced': { why: 'a resurfacing follows a wait or expiry the rule-driven principal does not choose (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'expires an option, resurfaces on its clock' },
   'situations.waiting': { why: 'waiting is an option a human takes; the rule-driven principal takes the historical default (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'waits for news to reach the principal' },
+  // Lane 1.5: the people verbs, which no rule seat uses yet, each driven by its own kernel test.
+  'verbs.answered': { why: VERBS_UNUSED, test: PV, needle: 'relieve outright, then appoint: each answered through his compliance' },
+  'verbs.declined': { why: VERBS_UNUSED, test: PV, needle: 'or declines and says why' },
+  'verbs.consulted': { why: VERBS_UNUSED, test: PV, needle: 'his answer becomes a stance on record' },
+  'verbs.audience': { why: VERBS_UNUSED, test: PV, needle: 'during: held about an approved plan' },
+  'verbs.in_washington': { why: VERBS_UNUSED, test: PV, needle: 'promise, pressure and address act in Washington' },
+  'people.promise_kept': { why: VERBS_UNUSED, test: PV, needle: 'with a promise of advancement kept by it' },
+  'people.promise_broken': { why: VERBS_UNUSED, test: PV, needle: 'a promise falls due and breaks' },
+  'reports.observer_letter': { why: VERBS_UNUSED, test: PV, needle: 'send an observer: he watches' },
+  'seats.attention_refused': { why: 'the generic principal spends a few points a week of a budget of twelve, so nothing is refused for want of attention; the kernel test drives it', test: PV, needle: 'refuses what it cannot pay' },
 };
 
 /** What a pack at peace never does: no order is given, so no force marches, no ground is contested. */
@@ -226,6 +238,14 @@ const UNION_BANDS: Record<string, GateBand> = {
   'situations.proposals': quiet(SITUATIONS_UNAUTHORED),
   'situations.staff_lines': quiet(SITUATIONS_UNAUTHORED),
   'situations.surfaced': quiet(SITUATIONS_UNAUTHORED),
+  // Lane 1.5: grievances from overruled and bypassed men climb the ladder and fade week by week; attention is spent on
+  // the opening orders and refilled each week. The Union pack authors no seat initiative and no man here is famous enough to be a rival.
+  'ladder.moved': around(4),
+  'ladder.rival': notHere('nobody on a Union ladder rung of lobbying or above has the standing of a rival in 75 days; the testbed run fires it'),
+  'people.grievances_faded': around(20),
+  'seats.attention_refilled': around(10),
+  'seats.attention_spent': around(4),
+  'seats.initiative': quiet('the Union pack authors no seat initiative yet (lane 1.5 builds the mechanism; the cast’s initiatives are 1B data); the testbed run fires it'),
 };
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
@@ -269,6 +289,13 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'situations.proposals': around(5),
   'situations.staff_lines': around(3),
   'situations.surfaced': around(6),
+  // Lane 1.5: men cool toward their leader climb the ladder on regard alone, and a famous one becomes a rival; the generals write to the press on their cooldown.
+  'ladder.moved': around(6),
+  'ladder.rival': around(1),
+  'people.grievances_faded': notHere('no testbed man holds a grievance at any week’s end in this run (nobody is overruled, and its office holds rather than objects, so it is never bypassed); its ladder moves come from cool regard alone; union-1861 fires it'),
+  'seats.attention_refilled': around(17),
+  'seats.attention_spent': around(2),
+  'seats.initiative': around(15),
 };
 
 /** Mechanics that only a mechanic-specific run can fire: each band is the same in every run that does not. */

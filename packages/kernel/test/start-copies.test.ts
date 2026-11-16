@@ -53,6 +53,7 @@ describe('ranks are State, owned by people: the rank of each kind each holds at 
     temperament: { boldness: { direction: null, cites: [] }, candour: { direction: null, cites: [] } },
     values: [],
     regard: { direction: null, cites: [] },
+    regardOthers: [],
     traits: [],
     bloc: null,
     ranks,

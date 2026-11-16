@@ -8,8 +8,9 @@
  *   with its commander when its parent changes.
  * - **Transfers name a force** (0033): a number of blocks, a strength in men,
  *   or a corps; never blocks one by one. The sending commander picks which
- *   blocks go. STAND-IN until Phase 1's compliance: he sends his weakest first
- *   ("his worst if he can"), by known strength, unknown strengths last, then id.
+ *   blocks go, by his own compliance (lane 1.5, `tick/verbs.ts`): a willing man
+ *   sends from his strongest, one who drags his feet his weakest first ("his
+ *   worst if he can"), by known strength, unknown strengths last, then id.
  * - **Temporary posts** (0040): an expedition command, made by appointment or
  *   directive when its kind allows, dissolves with its operation. Its blocks
  *   go back to its parent post, and posts under it move up to that parent.
@@ -295,6 +296,9 @@ export function relieveHolder(state: State, post: PostId): State {
   return withPost(state, post, { ...p, postHolder: null, postActing: false });
 }
 
+/** How the sending commander picks the blocks (lane 1.5): from his strongest, or his weakest first. */
+export type TransferPick = 'strongest_first' | 'weakest_first';
+
 /** What a transfer names (0033): a number of blocks, a strength in men, or a corps (a post that moves as a bundle). */
 export type TransferForce =
   | { readonly force: 'blocks'; readonly count: number }
@@ -308,14 +312,14 @@ export interface TransferResult {
   /** Men asked for and sent, when the transfer named men. */
   readonly menSent: number;
   /** Why these blocks: the sender's rule (hard rule 6). */
-  readonly rule: 'weakest_first' | 'corps_as_bundle';
+  readonly rule: TransferPick | 'corps_as_bundle';
 }
 
 /**
  * Transfer a force from one post to another (0033). Both posts must be on the
  * same side. Detachments commanded by the sender go with their parent block.
  */
-export function transferForce(map: WorldIndex, state: State, from: PostId, to: PostId, force: TransferForce): TransferResult {
+export function transferForce(map: WorldIndex, state: State, from: PostId, to: PostId, force: TransferForce, pick: TransferPick): TransferResult {
   if (from === to) throw new CommandError(['a transfer needs two different posts']);
   if (factionOfPost(map, state, from) !== factionOfPost(map, state, to)) throw new CommandError([`${from} and ${to} are on different sides`]);
   if (force.force === 'corps') {
@@ -331,7 +335,7 @@ export function transferForce(map: WorldIndex, state: State, from: PostId, to: P
       const sa = state.forceBlockStates[a]!.fbStrength;
       const sb = state.forceBlockStates[b]!.fbStrength;
       if (sa === null || sb === null) return sa === sb ? strictCompare(a, b) : sa === null ? 1 : -1;
-      return sa - sb || strictCompare(a, b);
+      return (pick === 'weakest_first' ? sa - sb : sb - sa) || strictCompare(a, b);
     });
   const chosen: ForceBlockId[] = [];
   let menSent = 0;
@@ -349,10 +353,10 @@ export function transferForce(map: WorldIndex, state: State, from: PostId, to: P
   const going = new Set(chosen);
   for (const id of own) if (state.forceBlockStates[id]!.fbKind === 'detachment' && going.has(state.forceBlockStates[id]!.fbParent!)) going.add(id);
   const moved = [...going].sort(strictCompare);
-  if (moved.length === 0) return { state, moved, menSent, rule: 'weakest_first' };
+  if (moved.length === 0) return { state, moved, menSent, rule: pick };
   const next: Record<ForceBlockId, PostId | null> = { ...state.forceAssignments };
   for (const id of moved) next[id] = to;
-  return { state: { ...state, forceAssignments: next }, moved, menSent, rule: 'weakest_first' };
+  return { state: { ...state, forceAssignments: next }, moved, menSent, rule: pick };
 }
 
 /** A temporary post to create (0040): an expedition command for one department in one operation. */

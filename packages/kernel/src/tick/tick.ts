@@ -49,6 +49,10 @@ import { mapBarrier, mapPhase } from './map.ts';
 import { issueOrder } from './orders.ts';
 import { decideCommand, delegateCommand, runSituations, SITUATION_MECHANICS } from './situations.ts';
 import { applyStanding, MOVEMENT_MECHANICS } from './standing.ts';
+import { applyVerb, observerLetters, VERB_MECHANICS } from './verbs.ts';
+import { isPeopleWeek, peopleWeek, WEEK_MECHANICS } from './people-week.ts';
+import { attentionLeft, refillAttention, spendAttention } from '../seats/attention.ts';
+import { attentionPrice } from './attention.ts';
 
 /** Every mechanic the seats layer counts (FOUNDATION section 11.5). */
 export const SEATS_MECHANICS = [
@@ -69,6 +73,12 @@ export const SEATS_MECHANICS = [
   'reports.trimmed',
   'seats.choices',
   'seats.defaulted',
+  // Lane 1.5: attention, the people verbs, the weekly people step.
+  'seats.attention_refilled',
+  'seats.attention_refused',
+  'seats.attention_spent',
+  ...VERB_MECHANICS,
+  ...WEEK_MECHANICS,
   ...MOVEMENT_MECHANICS,
   ...PLANS_MECHANICS,
 ] as const;
@@ -135,7 +145,13 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     if (options !== null && options.length > 1) menus.set(post, options);
   }
 
-  // 1. Today's commands, in log order.
+  // 0b. Attention refills weekly to its cap, with no carry-over (lane 1.5; 0025, 0040).
+  const refill = refillAttention(state, world.rules.people.attention, day);
+  state = freeze(refill.state);
+  if (refill.refilled.length > 0) fire(ctx, 'seats.attention_refilled', refill.refilled.length);
+
+  // 1. Today's commands, in log order. A principal's command is priced from the pack's table and refused if his week's
+  // attention cannot pay for it (lane 1.5).
   const choices = new Map<PostId, string>();
   entries.forEach((entry, index) => {
     const reject = (reason: Rejection['reason']) => {
@@ -147,15 +163,36 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     if (entry.day !== day) return reject('wrong_day');
     if (state.seatAssignments[entry.seat] === undefined) return reject('unknown_seat');
     const c = entry.command;
+    const cost = attentionPrice(world, state, c);
+    const left = attentionLeft(state, entry.seat);
+    if (cost > 0 && left !== null && left < cost) {
+      fire(ctx, 'seats.attention_refused');
+      return reject('no_attention');
+    }
+    const pay = () => {
+      if (cost > 0 && left !== null) {
+        state = spendAttention(state, entry.seat, cost);
+        fire(ctx, 'seats.attention_spent', cost);
+      }
+    };
     if (c.cmd === 'order' || c.cmd === 'review' || c.cmd === 'go') {
       const reason = issueOrder(ctx, state, entry.seat, c);
       if (reason !== null) reject(reason);
+      else pay();
+      return;
+    }
+    if (c.cmd === 'appoint' || c.cmd === 'relieve' || c.cmd === 'transfer' || c.cmd === 'inquire' || c.cmd === 'consult' || c.cmd === 'audience' || c.cmd === 'observer' || c.cmd === 'promise' || c.cmd === 'pressure' || c.cmd === 'address') {
+      const result = applyVerb(ctx, state, entry.seat, c);
+      state = result.state;
+      if (result.reason !== null) reject(result.reason);
+      else pay();
       return;
     }
     if (c.cmd === 'decide' || c.cmd === 'delegate') {
       const result = c.cmd === 'decide' ? decideCommand(ctx, state, entry.seat, c) : delegateCommand(ctx, state, entry.seat, c);
       state = result.state;
       if (result.reason !== null) reject(result.reason);
+      else pay();
       return;
     }
     const post = heldPost(state, state.seatAssignments[entry.seat]!.seatPerson);
@@ -174,7 +211,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   state = freeze(deliverDue(ctx, state));
 
   // 2b. People apply the changes proposed to them so far today (lane 1.1): a bypassed relay holds a grievance.
-  state = freeze(applyPeopleChanges(state, peopleChangesFrom(world, state, ctx.proposals), day, world.rules.people));
+  state = freeze(applyPeopleChanges(state, peopleChangesFrom(world, state, ctx.proposals), day, world.rules.people, world.map.world.vocabularies.ranks));
 
   // 2c. Plans: edits that arrived are answered, then goals awaiting a plan are drafted within the daily cap (lane 1.2).
   state = freeze(plansPhase(ctx, state, options.viewCache ?? createViewCache()));
@@ -202,8 +239,16 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   state = freeze(proposed.state);
   const dayMap = proposed.derived ?? mapped.derived;
 
+  // 4d. The weekly people step (lane 1.5): grievances fade, promises due break, the ladder and rivals, seat initiatives.
+  if (isPeopleWeek(ctx)) {
+    state = freeze(peopleWeek(ctx, state));
+    state = freeze(sendMessages(state, ctx.outbox.splice(0)));
+  }
+
   // 5. Reports on their cycles.
   generateReports(ctx, state);
+  // Observer letters on their cadence (lane 1.5).
+  state = freeze(observerLetters(ctx, state));
   state = freeze(sendMessages(state, ctx.outbox.splice(0)));
 
   // 6. Pruning.

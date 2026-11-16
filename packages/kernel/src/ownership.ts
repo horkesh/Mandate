@@ -121,10 +121,16 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   ]),
   field("a person's stances on record (from Consult)", 'people', ['Consult answers'], [at('State', 'personStances')]),
   field("a person's status (serving, wounded, killed, captured) and its date", 'people', ['combat'], [at('State', 'personStatus')]),
-  field("a person's ladder rung and rivals", 'ladder', ['weekly people step']),
+  // Lane 1.5: the ladder and rivals, the audience, promises, inquiries, observers, attention and initiatives.
+  field("a person's ladder rung and rivals", 'ladder', ['weekly people step'], [at('State', 'personRungs'), at('State', 'personRivals')]),
+  field('promises made to a person (kind, day made, day due)', 'people', ['promise', 'audience'], [at('State', 'personPromises')]),
+  field('inquiries a person received this week (his patience)', 'people', ['inquire'], [at('State', 'personInquiries')]),
+  field('observers: a person at a commander\'s headquarters reporting to his sender', 'command', ['the observer verb', 'audience (recall)'], [at('State', 'observerPostings')]),
+  field("the president's attention this week", 'seats', ['command validation (spending)', 'the weekly refill'], [at('State', 'seatAttention')]),
+  field('seat initiative state (each initiative\'s last firing day)', 'seats', ['the weekly people step'], [at('State', 'seatInitiatives')]),
   // Lane 1.1: a man's answer to an order that reached him, as a relay or its addressee; plans holds only its key (0073).
   field('responses to orders (declared and actual rungs, reasons)', 'proxy', ['message arrival'], [at('State', 'orderResponses')]),
-  field('audience state', 'audience', ['the audience verb']),
+  field('audience state', 'audience', ['the audience verb'], [at('State', 'audienceHeld')]),
   // Lane 1.2: each post's goal and plan record (`plans/plans.ts`): its draft set, saved on the request day, the seat's
   // pick, approval or send-back, and edits as counter-orders. `standingGoals` is the STAND-IN execution adapter an
   // approved plan writes (`plans/execute.ts`), owned by lane 1.4 to retire; no order's content reaches it.
@@ -180,6 +186,7 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'TransitMessage',
   'Hop',
   'OrderBody',
+  'VerbBody',
   // Plans (lane 1.2): goals, edits, plan records and the draft sets saved in them, each replaced whole by `plans`
   'PlanGoal',
   'EditSpec',
@@ -227,6 +234,11 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'PersonGrievance',
   'Stance',
   'PersonStatus',
+  // Lane 1.5
+  'PersonPromise',
+  'AttentionState',
+  'AudienceRecord',
+  'ObserverPosting',
   'OrderResponse',
   'ResponseTerm',
 ];
