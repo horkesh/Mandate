@@ -1,0 +1,41 @@
+{
+  "id": "nelson_arrest_power",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.nelson_arrest_power.title",
+  "text": "situation.nelson_arrest_power.text",
+  "earliest": "1861-05-08",
+  "event": {
+    "all": [
+      {
+        "flag": "baltimore_route_closed"
+      },
+      {
+        "dayAtLeast": 64
+      }
+    ]
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_general_in_chief"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "union-habeas-and-arrests"
+    ],
+    "placement": "event",
+    "risks": [],
+    "actingSide": null
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 p. 630 (Judge Nelson to the commander at Relay House, 8 May 1861)"
+    }
+  ],
+  "namedOnly": "Judge M. Nelson of the Frederick County court, quoted in his own telegram; not William Nelson of the Navy, who is in the people table"
+}

@@ -108,10 +108,9 @@ export function policyRows(items: readonly { readonly file: string; readonly def
         if (o.proposedBy.basis === 'principal-initiative') {
           // The lead's S12 ruling: the side's principal's own document, dated no later than the gated topic's window closes.
           const principal = pack.scenarios.flatMap((s) => s.factions).find((f) => f.faction === def.faction)?.principal ?? null;
-          const closes = (gate?.register.topics ?? []).filter((t) => topics.includes(t.id as string)).flatMap((t) => (t.window.to === null ? [] : [t.window.to as string])).sort()[0] ?? null;
-          if (!gated) err('proposal-basis', `options[${i}].proposedBy`, `option "${o.id}" rests on the principal's initiative but is not gated`, 'a gated option (the exception is recorded per topic)');
+          if (!gated || def.kind !== 'decision') err('proposal-basis', `options[${i}].proposedBy`, `option "${o.id}" rests on the principal's initiative but is not an option of a gated decision`, 'an option of a gated decision (the exception is recorded per topic)');
           if (o.proposedBy.author !== principal) err('proposal-basis', `options[${i}].proposedBy.author`, `"${o.proposedBy.author}" is not the side's principal`, `the principal of ${def.faction}: only his own consideration counts`);
-          if (closes !== null && o.proposedBy.dated > closes) err('proposal-basis', `options[${i}].proposedBy.dated`, `the document is dated ${o.proposedBy.dated}, after the topic's window closes (${closes})`, 'a document on record before the decision');
+          if (o.proposedBy.dated > def.earliest) err('proposal-basis', `options[${i}].proposedBy.dated`, `the document is dated ${o.proposedBy.dated}, after the situation's earliest date (${def.earliest})`, 'a document on record before the decision: dated on or before the situation\'s earliest date');
         } else if (!gated || !(superseded.has(`${def.id}/${o.id}`) || o.watched)) {
           err('proposal-basis', `options[${i}].proposedBy`, `option "${o.id}" names a basis in law and practice instead of a person, but the gate does not keep it`, 'the persons who argued for it (C1); a basis is allowed only on a gated option the register supersedes or marks watched');
         }

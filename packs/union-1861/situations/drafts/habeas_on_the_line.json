@@ -73,6 +73,16 @@
             "reason": "writ-suspended",
             "side": "union"
           }
+        },
+        {
+          "propose": {
+            "owner": "politics",
+            "field": "bloc-support",
+            "subject": "war_democrats",
+            "delta": -10,
+            "reason": "writ-suspended",
+            "side": "union"
+          }
         }
       ]
     }

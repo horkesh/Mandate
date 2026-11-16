@@ -325,5 +325,11 @@
   "situation.habeas_on_the_line.inaction": "The writ runs on the line, and the army's prisoners go before the courts.",
   "situation.merryman_writ.title": "A writ for John Merryman",
   "situation.merryman_writ.text": "In Baltimore the Chief Justice has issued a writ of habeas corpus for John Merryman, held by the army at Fort McHenry. The commander there has declined to produce him, citing the president's authority to suspend the writ.",
-  "reason.writ-suspended": "the writ of habeas corpus suspended on the military line"
+  "reason.writ-suspended": "the writ of habeas corpus suspended on the military line",
+  "situation.patterson_martial_law.title": "General Patterson asks for martial law",
+  "situation.patterson_martial_law.text": "From Philadelphia, General Patterson writes to the Adjutant-General: “it is expedient to declare or put the entire line, and ten, twenty, or thirty miles on each side, or the entire department under my command, under martial law; and if the General concurs, I ask his approval, or rather that he will give the order.”",
+  "situation.thomson_martial_law.title": "A railroad president on Baltimore",
+  "situation.thomson_martial_law.text": "J. Edgar Thomson of the Pennsylvania Railroad writes to the Secretary of War: “As soon as the capital is safe from attack, it seems to me that the Government should at once turn on Baltimore and place it under martial law, and require that it should pay all damages”.",
+  "situation.nelson_arrest_power.title": "A Maryland judge asks for troops",
+  "situation.nelson_arrest_power.text": "Judge Nelson of the Frederick County court telegraphs the commander at Relay House: “Send us five hundred men by first train, with power to arrest and disarm.”"
 }

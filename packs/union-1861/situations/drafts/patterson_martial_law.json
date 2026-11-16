@@ -1,0 +1,46 @@
+{
+  "id": "patterson_martial_law",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.patterson_martial_law.title",
+  "text": "situation.patterson_martial_law.text",
+  "earliest": "1861-04-21",
+  "event": {
+    "all": [
+      {
+        "flag": "baltimore_route_closed"
+      },
+      {
+        "dayAtLeast": 47
+      }
+    ]
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_general_in_chief"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "speakers": [
+    {
+      "post": null,
+      "person": "patterson_robert"
+    }
+  ],
+  "gate": {
+    "topics": [
+      "union-habeas-and-arrests"
+    ],
+    "placement": "event",
+    "risks": [],
+    "actingSide": null
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 p. 586 (Patterson to Thomas, Philadelphia, 21 April 1861)"
+    }
+  ]
+}

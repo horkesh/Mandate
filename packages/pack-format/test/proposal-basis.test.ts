@@ -31,12 +31,10 @@ describe('a proposal grounded in law and practice (the lead’s S17 ruling)', ()
         extra(s);
       });
     expect(basisIssues(initiative('n_leader', '1861-03-01'))).toEqual([]);
-    // Refused: another man's document; and a document dated after the topic's window closes.
+    // Refused: another man's document.
     expect(basisIssues(initiative('n_secretary', '1861-03-01')).map((i) => i.at)).toEqual(['options[1].proposedBy.author']);
-    const lateOath = initiative('n_leader', '1862-01-05', (s) => {
-      s.options.find((x: { id: string }) => x.id === 'shelter').gate = { topics: ['old-oath'], placement: 'decision', risks: [], actingSide: null };
-    });
-    expect(basisIssues(lateOath).map((i) => i.at)).toContain('options[1].proposedBy.dated');
+    // A document dated after the situation's earliest date was not on record before the decision.
+    expect(basisIssues(initiative('n_leader', '1899-01-01')).map((i) => i.at)).toEqual(['options[1].proposedBy.dated']);
   });
 
   it('refuses the principal’s initiative on an ungated option', () => {
