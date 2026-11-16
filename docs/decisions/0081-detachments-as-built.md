@@ -1,6 +1,6 @@
 # 0081: Detachments in play, as built
 
-Status: accepted (2026-11-16). From Phase 1 lane 1.4b (`notes/lane-1.4b-detachments.md`) and the standing reviewer's review (`review-lane-1.4b.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out 0080's consequence for lane 1.4b, on lane 1.7's block creation (0078).
+Status: accepted (2026-11-16). From Phase 1 lane 1.4b (`notes/lane-1.4b-detachments.md`) and the standing reviewer's review (`review-lane-1.4b.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out 0080's consequence for lane 1.4b, on lane 1.7's block creation (0078). Amended by 0083 (a detachment can't rejoin on the day it was made, so no id is re-minted).
 
 ## Context
 

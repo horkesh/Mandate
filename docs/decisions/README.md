@@ -84,5 +84,6 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0078](0078-men-and-regions-as-built.md) | Men and regions, as built, and enslaved people in Union-held slave states | accepted |
 | [0079](0079-the-people-verbs-as-built.md) | The people's verbs, the audience and attention, as built | accepted |
 | [0080](0080-operations-as-built.md) | Operations, reports and dispatches, as built | accepted |
-| [0081](0081-detachments-as-built.md) | Detachments in play, as built | accepted |
+| [0081](0081-detachments-as-built.md) | Detachments in play, as built | accepted; amended by 0083 |
 | [0082](0082-the-value-map-in-play.md) | The map from orders to values, in play | accepted |
+| [0083](0083-no-rejoin-on-the-day-made.md) | A detachment can't rejoin on the day it was made | accepted |
