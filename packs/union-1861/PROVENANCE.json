@@ -613,7 +613,7 @@
     },
     {
       "key": "RICH",
-      "title": "J. D. Richardson, ed., A Compendium of the Messages and Papers of the Confederacy (1905), vol. 2",
+      "title": "J. D. Richardson, ed., A Compendium of the Messages and Papers of the Confederacy, vols 1 and 2 (1905)",
       "kind": "primary",
       "licence": "public-domain",
       "basis": "expired-copyright",
@@ -808,6 +808,96 @@
       "licence": "own-work",
       "basis": null,
       "copyUsed": "docs/research/2026-11-15-people-and-posts-1861.md",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "WELLES-D1-RETRO",
+      "title": "Diary of Gideon Welles (1911), vol. 1, pp. 3 to 60: the retrospective chapters (\"Lincoln and Seward\" and the Sumter and Norfolk narratives), written years after 1861; dated entries begin in 1862",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org diaryofgideonwel0001unse_i9v3 and the University of Illinois scan; WEAK: a memoir (0074); never cited as 1861 evidence alone; hostile to Seward",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "MEADE-PAULDING",
+      "title": "Mrs. Meade, Life of Hiram Paulding, Rear-Admiral, U.S.N. (1910): a daughter's compilation of his private letters",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org lifehirampaul00meadrich; WEAK: a family compilation (0074)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NH-CW",
+      "title": "J. G. Nicolay and J. Hay, eds., Complete Works of Abraham Lincoln (1894), vol. 6 (the cabinet opinions of 15 and 29 March 1861, pp. 192 to 231)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "read as reproduced on the Tulane University Fort Sumter site (www2.tulane.edu/~sumter), which names the volume and pages; re-read in print before release",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "FOX-CC",
+      "title": "G. V. Fox, Confidential Correspondence of Gustavus Vasa Fox, vol. 1 (Naval History Society, 1918)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org confidentialcorr01foxg full text; page marks are OCR bracket marks and drift by a few pages",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "SCHUCKERS",
+      "title": "J. W. Schuckers, The Life and Public Services of Salmon Portland Chase (1874)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org lifepublicservic00schu, OCR; a friendly biography that prints Chase's letters",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NEVINS-FREMONT",
+      "title": "A. Nevins, Fremont: Pathmarker of the West (1928)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org frmontpathmarker02nevi, OCR, published 1928 (public domain in the United States from 2024); scholarly secondary, page numbers approximate",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NPS",
+      "title": "National Park Service pages (nps.gov): Arlington House and the people pages",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "nps.gov pages, a federal agency's work; read 2026-11-16",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "DOC-1861",
+      "title": "Dated letters, reports, speeches and proclamations of 1860 and 1861, cited by author and date in the locator: as printed in the Official Records, Lincoln's Collected Works, Nicolay and Hay, Richardson, a convention or legislative journal or a period newspaper",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "read through transcriptions (civilwar.com and spirit61.info OR pages, jfepperson.org and Dickinson House Divided transcriptions of the Lincoln Papers, civilwarcauses.org, archive.org); each locator names the document and the transcription; re-read in print before release",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "AAC",
+      "title": "Appletons' Annual Cyclopaedia and Register of Important Events of the Year 1861 (New York, 1862)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "read as page text through a fetch tool, 2026-11-16; page numbers as printed (Delaware, p.256); a period secondary, never a primary journal: re-read in print",
       "licencePage": null,
       "licenceReadOn": null
     }

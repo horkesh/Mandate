@@ -1,0 +1,3 @@
+# The Union calls of 1861: a draft
+
+Status: **data draft** (2026-11-16, lane 1.11a, from lane 1.10), not world data. The 15 April 1861 requisition's quota table (OR III-1 p. 69; the printed total is 94 regiments and 73,391 men) and the 3 May call, for the situation that carries the call (S09, lane 1.11) and the recruitment data lane 1.7 reads. Two cells were repaired by arithmetic where the OCR failed (New York and Pennsylvania): each says so in `notes`. The table total, and the quota table's cell values, were read through OCR that the standing reviewer could not read: **re-read OR III-1 p. 69 in print before release**. No quota table for the 3 May call was found.
