@@ -82,3 +82,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0076](0076-the-battle-model-as-built.md) | The battle model, as built | accepted |
 | [0077](0077-portraits-get-a-procedural-engraving.md) | Portraits of real people get a procedural engraving finish | accepted |
 | [0078](0078-men-and-regions-as-built.md) | Men and regions, as built, and enslaved people in Union-held slave states | accepted |
+| [0079](0079-the-people-verbs-as-built.md) | The people's verbs, the audience and attention, as built | accepted |
