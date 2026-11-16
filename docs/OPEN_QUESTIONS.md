@@ -154,7 +154,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **1B, tooling:** the gate register schema has no `sources` field, so sources sit in each signature's reason. Add the field, resolved against `PROVENANCE.json`.
 - From lane 1.1's report (`notes/lane-1.1-people.md`, on `claude/phase1-people-bf3c25` until merged), by lane:
   - **Lane 1.14 (done check and calibration):** goal boldness is set at hold 400 and advance 600, as pack rules. At 200 and 700, an average man with no values objected to an ordinary advance. A calibration starting point, not a finding.
-  - **Lane 1.6 (politics):** `context.oversight` and `context.leaderCredibility` are plain pack values until 1.6 derives credibility (FOUNDATION section 8).
+  - **Lane 1.6 (politics):** lane 1.6 (merged 982714c) derives credibility (FOUNDATION section 8); check that `context.leaderCredibility` no longer reads a plain pack value, and that `context.oversight` stays a stand-in owned by lane 1.4.
   - **Lane 1.5 (people's verbs):** regard between people has no format column yet (the lead's ruling), and its default is the pack rule `regardUnknown` (0 in both packs). `applyPeopleChanges` also does not check a proposed rank against the vocabulary; the reviewer may make that a should-fix for 1.1 instead.
 - From lane 1.5's deferrals (people's verbs):
   - **1B:** the consistency cost of reversing a stance on record (FOUNDATION section 5, Consult). Lane 1.5 records stances but does not price their reversal.
@@ -172,6 +172,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Ranks:** Breckinridge's and Pike's `state` rank kinds are unchecked; Heitman Part II was unreachable.
   - **Census rows:** none entered, and no region was mapped to a county count. The self-emancipation term has no Union input until a research lane sources the 1860 census by region, under the gate (a protected input).
   - **Loyalty:** only Delaware, Maryland, Kentucky and Missouri carry it, as a labelled proxy from the 1860 presidential vote. The upper South has none.
+  - **Lane 1.11b, two cite nits from lane 1.6's review (it edits pack data anyway):** add "[I]" to the army bloc's cite for its starting value (this edits a signed bloc, so the gate reviewer re-signs its hash); and point the `congress_37_1_at_once` session's cite at `docs/research/2026-11-16-1861-gaps.md`, Part F, which lands with lane 1.11r's merge.
 - From lane 1.5's report (`notes/lane-1.5-people-verbs.md`, merged 01993a8), by lane:
   - **Lane 1.12 (rule seats):** no rule seat uses any people verb (appoint, relieve, transfer, inquire, consult, observer, promise, pressure, address), so they are QUIET in the reference runs. The principals need a policy for them before the verbs can fire in a history run.
   - **Lane 1.11 (data entry):** the Union fugitive-policy rows of the map from orders to values. The mechanism is built (`gateTopics`, the `notCheaperThan` floor); the rows need the gate reviewer's sign-off.
@@ -247,6 +248,12 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.14:** McClellan's plan-versus-action gap. Drafting and execution already read his boldness separately; add a second term only if calibration shows the gap too narrow.
   - **1B:** freelancing (a seat initiative that sets a man's own goal); troops embarked and carried by sea; Navy-channel battle news (combat ignores ships); an axis standing off from an enemy its commander will not attack (the siege method).
   - **Lane 1.12:** rule seats must reappoint a post the battle model leaves vacant, using lane 1.5's appoint verb.
+- From lane 1.6's report (`notes/lane-1.6-politics.md`, merged 982714c), by lane:
+  - **The next lane to touch the press:** a test for a battle of two or more days where one day's full return has come and another's has not. The captured must not print apart. Removing the guard fails 0 tests today.
+  - **Lane 1.11 (situations):** lane 1.6 supplies the vocabulary: S09's `militia-call` option is a `session-call` of `congress_37_1` plus a `ledger-act` for the call; `larger-longer` is a `ledger-act`; S20 fires on `{chamber: {id: house, state: sitting}}`, its options read `{ledger: …, status: before}` and ratification is a `ledger-answer`; the war's opening uses `framing` effects; "Summon Congress at once" needs a callable session with `afterCallDays`, and how many days Congress took to assemble needs a source.
+  - **Lane 1.14:** the press nearly doubles the Union run's messages, all by mail; the lead ruled to count the mail apart and leave a reader-kinds rule until 1.14 measures a full campaign. The Union politics numbers are [I] and the M2 rests: calibrate them against the note's calibration points (the 1862 midterm band, the two lows).
+  - **1B:** the enemy reading the papers (0032's leaks; front pages go only to their own side); relief costing bloc support (M2 costed the blocs sharing the man's values in proportion to his standing); papers with a slant (every paper prints the same battles); national will (0028's two wills), elections and the verdict; and the border Unionists' `slavery_noninterference` (their values omit their stake in slavery; add it when blocs read policy, R7's consequences).
+  - **For whoever first needs it:** the Confederate Congress's sessions (no chambers on the Confederate side), starting from `docs/research/2026-11-16-numbers-and-facts-1861.md` (21 May, adjourned to 20 July in Richmond).
 - From lane 1.4b's report (`notes/lane-1.4b-detachments.md`, merged 1cf40d5), by lane:
   - **1B (the planner):** no operation leaves a garrison, because the planner drafts no garrison step. Add one if the history run needs it.
   - **Lane 1.4 or 1B, cleanup:** after a landing, the parent blocks stay aboard as 0-strength shells until a rejoin or a disbanding. Lane 1.4c (merged a810532) made sure an emptied shell can no longer be handed over in a transfer.
