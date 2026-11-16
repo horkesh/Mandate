@@ -159,6 +159,13 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - From lane 1.5's deferrals (people's verbs):
   - **1B:** the consistency cost of reversing a stance on record (FOUNDATION section 5, Consult). Lane 1.5 records stances but does not price their reversal.
   - **Lane 1.4, or 1B if 1.4 cannot take it:** freelancing, M2's ladder action of a general acting on his own. It needs operations, so lane 1.5 does not port it; a high rung produces an initiative instead.
+- From lane 1.5's report (`notes/lane-1.5-people-verbs.md`, on `phase1-people-verbs` while under review), by lane:
+  - **Lane 1.12 (rule seats):** no rule seat uses any people verb (appoint, relieve, transfer, inquire, consult, observer, promise, pressure, address), so they are QUIET in the reference runs. The principals need a policy for them before the verbs can fire in a history run.
+  - **Lane 1.11 (data entry):** the Union fugitive-policy rows of the map from orders to values. The mechanism is built (`gateTopics`, the `notCheaperThan` floor); the rows need the gate reviewer's sign-off.
+  - **Lane 1.11 or 1B:** the "practice clash" term (a commander's own fugitive practice clashing with an order) is deferred for want of data.
+  - **Lane 1.14 (calibration):** discontent is grievances minus half of regard. In the testbed, men cooling toward their leader climb to lobbying with no grievance, and one becomes a rival. These are design parameters to calibrate.
+  - **Lane 1.13 (console and M2's retirement):** M2's `audience.test.ts` still sits beside the new State until M2 retires. Lane 1.5 moved its nine cases one for one.
+  - Consult travels by courier only for now.
 - From the reviews of the 1861 gate register, lane 1.1 and the scanner aliases (`review-gate-register-1861.md`, `review-lane-1.1.md`, `review-scanner-aliases.md`):
   - **Stand-ins (Phase 1):** `context.oversight` is a constant 500, owned by lane 1.4 (it should vary with distance and the telegraph); `context.leaderCredibility` is owned by lane 1.6. Lane 1.1 labels both STAND-IN.
   - **Lane 1.14 (calibration), the reviewer's tabulation on the Union rules at hold 400 and advance 600:** nobody without values or regard reaches plain compliance (the highest willingness is 55, against a threshold of 150); every order lands on reservations or an objection, flipping at a boldness gap of about 100; with boldness drawn at 500 ± 200, about 40% of men object to an advance and 40% to a hold. Calibrate against a pushback band.
