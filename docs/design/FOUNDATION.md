@@ -264,7 +264,8 @@ Module map, adapted from the AWWV-architecture note:
 | a person's ladder rung and rivals | `ladder` | weekly people step |
 | responses to orders (declared and actual rungs, reasons) | `proxy` | message arrival; computed by `compliance` and `reading`, which are pure and write nothing |
 | audience state | `audience` | the audience verb |
-| goals, plans, approvals, edits | `plans` | verbs, seat selections |
+| each post's goal and plan record (`planRecords`): the goal, its draft set saved on the request day, the seat's pick, approval or send-back, edits as counter-orders, and a reference to his response (`proxy` writes the response itself) | `plans` | verbs (order, review, go), seat selections, order arrival, the planner's draft sets on request (0062, 0073) |
+| STAND-IN: what an approved plan has the movement path do, hold or advance to its objective (`standingGoals`; no order's content reaches it) | `plans` | plan approval; lane 1.4's operations retire it (0073) |
 | operations and their lifecycles | `operations` | plan approval, movement and combat outcomes |
 | knowledge (reports per seat) | `knowledge` | message delivery, pruning |
 | messages in transit | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules |
