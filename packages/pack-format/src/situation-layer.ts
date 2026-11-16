@@ -81,7 +81,8 @@ export function policyRows(items: readonly { readonly file: string; readonly def
   });
   const mapTopics = new Set(rows.flatMap((r) => r.gateTopics));
   const superseded = new Set((gate?.register.topics ?? []).flatMap((t) => t.supersededOptions.map((s) => `${s.situation}/${s.option}`)));
-  const posts = new Set(pack.scenarios.flatMap((s) => s.posts.map((p) => p.id as string)));
+  // Lane 1.11: a declared temporary post (opened in play by an effect, 0040) may carry a policy too (lane 1.11: a command opened in play carries S17's rows).
+  const posts = new Set(pack.scenarios.flatMap((s) => [...s.posts.map((p) => p.id as string), ...(s.temporaryPosts ?? []).map((p) => p.id as string)]));
   for (const { file, def } of items) {
     const err = (kind: string, at: string, message: string, expected: string) => sink.error(kind, file, at, message, expected);
     // G-1.5g: in a decision the map gates, inaction is a policy too ("each commander decides"), so it cannot escape the map.
