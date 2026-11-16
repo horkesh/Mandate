@@ -1,0 +1,13 @@
+region_id,enslaved_1860,counties_included,kennedy_pages,mapping_note,status
+washington,3185,District of Columbia (whole district),"District of Columbia Table 2, 'Total in District' line (archive.org populationofusin00kennrich OCR; printed page not yet located)","Region = the whole District; table gives slave M 1,212 + F 1,973 = 3,185; white 60,764 + free colored 11,131 + slave 3,185 = 75,080 (arithmetic checked on the OCR)",ocr-only-page-image-not-viewed
+delaware,1798,New Castle; Kent; Sussex (whole state),"State summary table (printed page to confirm); Delaware Table 2","Region = whole state; state total slaves 1,798; county split not read",state-total-only
+new_jersey,18,whole state,"State summary table (printed page to confirm)","Region = whole state; state total slaves 18; county split not read",state-total-only
+new_york,0,whole state,"State summary table","No slave entry in the slave column for New York; county tables not read",state-total-only-unverified-zero
+new_england,0,six states (CT RI MA VT NH ME),"State summary table","No slave entry for any of the six states; county tables not read",state-total-only-unverified-zero
+harrisburg,0,Pennsylvania:Dauphin,"State summary table","Pennsylvania reports no slaves in 1860; county table not read",state-total-only-unverified-zero
+york_adams,0,Pennsylvania:York; Adams,"State summary table","As harrisburg",state-total-only-unverified-zero
+cumberland_valley_pa,0,Pennsylvania:Franklin; Fulton; Cumberland; Perry,"State summary table","As harrisburg",state-total-only-unverified-zero
+philadelphia,0,Pennsylvania:Philadelphia,"State summary table","As harrisburg",state-total-only-unverified-zero
+southeast_pa,0,Pennsylvania: ten counties,"State summary table","As harrisburg",state-total-only-unverified-zero
+pittsburgh,0,Pennsylvania:Allegheny; Westmoreland; Washington; Fayette; Greene,"State summary table","As harrisburg",state-total-only-unverified-zero
+pennsylvania_north,0,Pennsylvania:* (remainder),"State summary table","As harrisburg",state-total-only-unverified-zero

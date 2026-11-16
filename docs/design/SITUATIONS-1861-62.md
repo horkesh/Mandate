@@ -16,6 +16,7 @@ Status: design lane output (2026-11-14), a proposal like everything in `docs/des
 | [CP] | `docs/research/2026-11-14-union-command-and-promotion.md` |
 | [IF] | `docs/research/2026-11-14-union-information-flows.md` |
 | [FM] | `docs/design/FIRST-MONTH.md` (a design walkthrough, cited for game-side play, never for facts) |
+| [GAPS] | `docs/research/2026-11-16-1861-gaps.md` (lane 1.11r: primary sources read in print for S04, S05, S08, S13, S16, S19, S21; its corrections to the notes above are marked where made) |
 
 Anything those notes do not source is marked **needs-source**. Where a note itself flags a fact (verify, snippet, conflict), the flag travels with it. **[game]** marks what a seat or the kernel would compute; **[I]** marks this lane's reading.
 
@@ -108,25 +109,25 @@ Sixty situations: 30 in 1861 (S01–S30) and 30 in 1862 (S31–S60), in order of
 - **Reports**: press, informal
 - **Systems**: press, politics, people
 - **Gate**: none
-- **Sources**: [MF 10, 12, des. 15]
+- **Sources**: [MF 10, 12, des. 15]; [GAPS S04]: *New York Times*, 12–15 March 1861 (the rumour wave, including the Baltimore American dispatch "Mr. Seward has triumphed", 13 March); Nicolay and Hay, *Abraham Lincoln: A History*, vol. 3 pp. 385–388 (the cabinet's written opinions of 15–16 March). No adviser is on record for `deny`, `find-source` or `say-nothing`, and Blair's resignation and Wade's caucus have no public-domain primary (Crawford 1887 is a memoir): those options stay [game].
 
 ### S05 `lamon-promise`: Lamon's promise in Charleston
 
-- **Window**: fires only if the player sent an agent to Charleston who exceeded his errand. Historically Lamon told Governor Pickens and Anderson the garrison would soon be withdrawn (25 March); on 29 March the commissioners showed Campbell Pickens's telegram complaining that Lamon had not come back as promised [MF 6, des. 4]. The president learns it only by this informal route, since Lamon wrote to Seward, not to Lincoln [MF des. 3].
+- **Window**: fires only if the player sent an agent to Charleston who exceeded his errand. Historically Lamon told Governor Pickens the garrison would soon be withdrawn (25 March; Beauregard to Walker, 26 March, "Mr. Lamon left here last night, saying that Major Anderson and command would soon be withdrawn from Fort Sumter in a satisfactory manner", OR I-1 p. 282; Anderson's reports show he believed it, OR I-1 pp. 230, 231, 294) [GAPS S05]. Pickens's telegram inquiring about Lamon reached the commissioners on **30 March**, not 29 (Campbell's letter of 13 April 1861, OR I-53 pp. 162–163; the earlier date came from a secondary account) [GAPS S05; MF 6, des. 4]. The president learns it only by this informal route, since Lamon wrote to Seward, not to Lincoln [MF des. 3].
 - **Live**: no; one stop.
 - **Staff recommendation**: Secretary of State (Seward): disavow [MF 6].
 - **Options**:
-  - `disavow` "Say he went under no commission or authority" (Seward to Campbell, 31 March [MF 6]). A notice through the Secretary of State's channel.
+  - `disavow` "Say he went under no commission or authority" (Seward to Campbell, 31 March [MF 6]). **Retrospective**: those words rest on Campbell's later memorandum, read only through Burlingame. The 1861 record shows Seward's note of 1 April, "I am satisfied the Government will not undertake to supply Fort Sumter without giving notice to Governor Pickens" (OR I-53 p. 163), which does not mention Lamon [GAPS S05]. A notice through the Secretary of State's channel.
   - `let-stand` "Let it stand as a sign of intent". Raises the South's expectation of evacuation [game].
   - `say-nothing` "Say nothing".
 - **Inaction**: the promise stays on Charleston's record and costs the president credit there [MF des. 4].
-- **Historical default (hidden: history runs and rule seats only)**: `disavow` (31 March); Lincoln later denied Lamon had authority [MF 6].
+- **Historical default (hidden: history runs and rule seats only)**: `disavow` (31 March); Lincoln later denied Lamon had authority [MF 6]. **Retrospective only**: the sourced 1861 fact is a Seward reply to Campbell on 1 April about Pickens's telegram; whether it disavowed Lamon is sourced only to Campbell's memoir, and no primary shows Lincoln denying it [GAPS S05].
 - **Pushback**: an agent without a post who goes past his errand (0040's agents without posts) [MF 6].
 - **Verbs**: observer, delegate
 - **Reports**: informal, observer-letter
 - **Systems**: diplomacy, people
 - **Gate**: none
-- **Sources**: [MF 6, des. 3, 4]
+- **Sources**: [MF 6, des. 3, 4]; [GAPS S05]: OR I-1 pp. 218, 221, 222, 281–283, 294; OR I-53 pp. 162–163
 
 ### S06 `pickens-refused`: the Pickens order is not carried out (follows S02)
 
@@ -167,21 +168,21 @@ Sixty situations: 30 in 1861 (S01–S30) and 30 in 1862 (S31–S60), in order of
 
 ### S08 `virginia-unionists`: a Unionist from the Virginia convention
 
-- **Window**: fires when a channel to the convention's Unionists opens. Historically Seward wired Summers on 1 April 1861, a messenger went on 3 April, and Baldwin met Lincoln on the evening of 4 April [MF 13]. Expires when the convention votes (4 April: 89–45 or 90–45 against secession [MF 13]) or adjourns.
+- **Window**: fires when a channel to the convention's Unionists opens. Historically Seward wired Summers on 1 April 1861, a messenger went on 3 April, and Baldwin met Lincoln on the evening of 4 April [MF 13]. Expires when the convention votes or adjourns. The vote of 4 April was 45 yeas to 89 nays on Harvie's substitute (a vote to put an ordinance of secession to the people), taken in Committee of the Whole, and not a final secession vote (Virginia Convention Journal p. 31; *New York Times*, 5 April 1861). The "90–45" form appears only in Botts's report of Lincoln's words (Joint Committee on Reconstruction, Part II, p. 114) [GAPS S08; MF 13].
 - **Live**: yes, four days.
 - **Staff recommendation**: Secretary of State (Seward), who opened the channel [MF 13]: meet.
 - **Options**:
-  - `hear-only` "Hear him out and promise nothing" (Baldwin's 1866 account [MF 13]). An audience.
-  - `no-meeting` "Do not meet".
-  - `offer-fort` "Offer to withdraw from Sumter if the convention adjourns *sine die*" (the version Botts, Fox, Hay and Lincoln himself later gave [MF 13]). A promise.
+  - `hear-only` "Hear him out and promise nothing" (Baldwin's 1866 account [MF 13]; sworn, Joint Committee on Reconstruction Part II pp. 102–105: "No pledge; no undertaking; no offer; no promise of any sort"; the letters of Magruder, Summers, Janney, Stuart and Price of 1866 say Baldwin reported no offer on his return) [GAPS S08]. Retrospective-official, not contemporary. An audience.
+  - `no-meeting` "Do not meet". No adviser is on record: nobody urged Lincoln not to meet; Summers pleaded the Convention's business [GAPS S08].
+  - `offer-fort` "Offer to withdraw from Sumter if the convention adjourns *sine die*" (the version Botts, Fox, Hay and Lincoln himself later gave [MF 13]). Sworn: Botts, JCR Part II pp. 114–116, who reports Lincoln's words; J. F. Lewis, JCR p. 71, who says Botts told him of it on 16 April 1861. The one document of the time is Fox's own memorandum of April 1861 (*Confidential Correspondence of G. V. Fox*, vol. 1, p. 38): "The last card was to send for a Union man from the Virginia Convention and say to him that Sumpter would be evacuated at once if the Union people ... would adjourn it" (hearsay as to content) [GAPS S08]. A promise.
 - **Inaction**: no meeting; the vote proceeds [MF 13].
 - **Historical default (hidden: history runs and rule seats only)**: a meeting on 4 April; whether the offer was made is disputed, and Burlingame concludes it probably was [MF 13]. The offer's terms should be a hidden fact the player cannot verify [MF des. 16].
-- **Pushback**: Summers suspected a plot and sent a substitute [MF 13].
+- **Pushback**: Summers sent a substitute [MF 13]; the public-domain sources give his reason as the Convention's business (Baldwin pamphlet p. 24; Magruder, *Atlantic Monthly*, April 1875, p. 440), and "suspected a plot" rests on Burlingame alone [GAPS S08].
 - **Verbs**: audience, promise
 - **Reports**: informal
 - **Systems**: politics, people
 - **Gate**: none
-- **Sources**: [MF 13, des. 16]; [SW 3.6]
+- **Sources**: [MF 13, des. 16]; [SW 3.6]; [GAPS S08]: Virginia Convention Journal p. 31; JCR Part II pp. 71, 102–105, 114–116; Baldwin pamphlet (1866) pp. 22–28; Fox correspondence vol. 1 p. 38
 
 ### S09 `call-for-troops`: the call for troops
 
@@ -262,19 +263,19 @@ Sixty situations: 30 in 1861 (S01–S30) and 30 in 1862 (S31–S60), in order of
 
 - **Window**: fires when offers arrive: a Boston mass meeting, two regiments organised in Philadelphia, a Providence company, Jacob Dodson's offer of 300 free Black men (letter of about 23 April 1861) [SW 6.4].
 - **Live**: recurs as offers arrive [game]; `ask-congress` appears when Congress sits (4 July).
-- **Staff recommendation**: Secretary of War (Cameron): decline (the offer was refused; his reply's wording was not found) [SW 6.4].
+- **Staff recommendation**: Secretary of War (Cameron): decline. His reply of 29 April 1861: "this Department has no intention at present to call into the service of the Government any colored soldiers" (OR III-1 p. 133; Dodson's letter of 23 April, "some 300 reliable colored free citizens of this city", p. 107). No statute is cited: it was policy [GAPS S13; SW 6.4].
 - **Options** (placement pending; [SW 6.8] proposes "modelled with locked consequences" with no player "recruit" before the 1862 law):
-  - `ask-congress` (appears 4 July) "Ask Congress for authority".
+  - `ask-congress` (appears 4 July) "Ask Congress for authority". **No 1861 adviser on record**: 22 issues of the Congressional Globe for 8 July–7 August 1861 contain no bill, amendment or resolution on Black volunteers and no speaker asking for authority (six issues are not on archive.org; Lovejoy, 23 July, p. 231, and Browning, 25 July, p. 264, say only that Black men might be armed); a game option, flagged "no adviser's own words" [GAPS S13].
   - `decline` "Decline under the militia law" (the 1792 act's "free able-bodied white male", though the exclusion rested more on policy than statute [SW 6.4]).
   - `refer-governors` "Leave it to the governors" (Ohio's governor and the Massachusetts legislature refused [SW 6.4]).
 - **Inaction**: the offers go unanswered; the record keeps the men's offer [game].
 - **Historical default (hidden: history runs and rule seats only)**: `decline` [SW design S13]. Nothing shows a Lincoln decision on the 1861 offers [SW 6.4].
-- **Pushback**: Lincoln's worry that enlistment would push Kentucky and Missouri out [SW 6.4].
+- **Pushback**: Lincoln's worry that enlistment would push Kentucky and Missouri out [SW 6.4]. **Not sourced as written**: his one primary on the border states, the letter to Browning of 22 September 1861 ("to lose Kentucky is nearly the same as to lose the whole game", Nicolay and Hay, *Complete Works*, vol. 2 p. 81), concerns Frémont's emancipation proclamation, not enlistment; no 1861 letter of his ties Black enlistment to the border states [GAPS S13].
 - **Verbs**: delegate
 - **Reports**: informal, press
 - **Systems**: politics, people, economy
 - **Gate**: Black soldiers
-- **Sources**: [SW 6.4, 6.8, design S13]
+- **Sources**: [SW 6.4, 6.8, design S13]; [GAPS S13]: OR III-1 pp. 77–78, 107, 133, 348, 523–524; Congressional Globe, 37th Cong., 1st sess.; Statutes at Large vol. 1 p. 271
 
 ### S14 `missouri-arsenal`: Missouri, the arsenal and the department commander
 
@@ -314,16 +315,16 @@ Sixty situations: 30 in 1861 (S01–S30) and 30 in 1862 (S31–S60), in order of
 
 ### S16 `kentucky-neutrality`: Kentucky's neutrality (a chain in two stages)
 
-- **Window**: stage A fires on the neutrality resolution and proclamation (16 and 20 May 1861); stage B on Governor Magoffin's protest at Camp Dick Robinson (19 August) [SW 1, 3.4]. Ends when either side breaks neutrality (Polk at Columbus, 3–4 September [SW 1; U62 1]).
+- **Window**: stage A fires on the neutrality resolution and proclamation (16 and 20 May 1861); stage B on Governor Magoffin's protest at Camp Dick Robinson (19 August) [SW 1, 3.4]. **Corrections** [GAPS S16]: only the Kentucky House adopted the 16 May resolutions (69–26, with 89–4 approving Magoffin's refusal of troops; Kentucky House Journal pp. 91–94), the Senate only received the text; Magoffin's proclamation is 20 May (*Rebellion Record* vol. 1 Doc. 181); Anderson's Department of Kentucky was created on 28 May (G.O. 27, OR I-52/1 p. 147). Ends when either side breaks neutrality (Polk at Columbus, 3–4 September [SW 1; U62 1]).
 - **Live**: yes, across both stages; Kentucky's June and August elections move loyalty while it is open [SW 3.4].
 - **Staff recommendation**: needs-source for any secretary's position; [game] seat-derived. Joshua Speed is Lincoln's private channel [SW 3.4].
 - **Options, stage A**:
-  - `arm-quietly` "Respect neutrality and ship arms quietly to the Unionists" (the "Lincoln guns", through Speed [SW 3.4]).
-  - `move-in` "Send troops in".
-  - `wait` "Leave Kentucky alone".
+  - `arm-quietly` "Respect neutrality and ship arms quietly to the Unionists" (the "Lincoln guns", through Speed [SW 3.4]). Advisers on record: Garrett Davis to Cameron, 3 May (OR I-52/1 pp. 137–138); Lincoln's 7 May commission to Anderson (pp. 140–141); Ripley, 17,000 stands ordered since 4 May (p. 188) [GAPS S16].
+  - `move-in` "Send troops in". On record: Governors Dennison, Yates and Morton, memorial of 24 May: "the United States should at an early day take possession of prominent points in Kentucky, such as Louisville, Covington, Newport, Columbus" (OR I-52/1 pp. 146–147); Morton again 29 Aug and 2 Sept (OR I-4 pp. 255–256) [GAPS S16].
+  - `wait` "Leave Kentucky alone". On record: Scott, 29 May ("thrusting protection upon their people is likely to do far more harm than good", OR I-52/1 p. 147); McClellan, 4 June (p. 156); Lincoln's 10 July memorandum to Buckner (Nicolay and Hay, *Complete Works*, vol. 2 p. 66) [GAPS S16].
 - **Options, stage B**:
   - `close-camp` "Close the camp as the governor asks".
-  - `keep-camp` "Decline to remove it" (Lincoln's reply, 24 or 26 August [SW 3.4]).
+  - `keep-camp` "Decline to remove it" (Lincoln's reply of **24 August**: "I do not believe it is the popular wish of Kentucky that this force shall be removed beyond her limits; and, with this impression, I must respectfully decline to so remove it", Nicolay and Hay, *Complete Works*, vol. 2 pp. 76–77; *Rebellion Record* vol. 3 Doc. 13) [GAPS S16; SW 3.4]. `close-camp` has one adviser on record, Magoffin's letter of 19 August.
 - **Inaction**: the neutral block holds until a side moves [game].
 - **Historical default (hidden: history runs and rule seats only)**: A `arm-quietly`; B `keep-camp`; the Confederates broke neutrality first [SW 2.5, 3.4].
 - **Pushback**: Magoffin let recruits slip south [SW 3.4]; the Military Board took arming power from him [SW 3.4]; Lincoln: "to lose Kentucky is nearly the same as to lose the whole game" [SW 3.4].
@@ -331,7 +332,7 @@ Sixty situations: 30 in 1861 (S01–S30) and 30 in 1862 (S31–S60), in order of
 - **Reports**: informal
 - **Systems**: politics, forces, people
 - **Gate**: none
-- **Sources**: [SW 1, 2.5, 3.4, design S9]; [U62 1]
+- **Sources**: [SW 1, 2.5, 3.4, design S9]; [U62 1]; [GAPS S16]: OR I-52/1 pp. 137–188; OR I-4 pp. 179–187, 251–258; Kentucky House Journal May 1861; *Rebellion Record* vols. 1, 3; Nicolay and Hay, *Complete Works*, vol. 2
 
 ### S17 `fort-monroe-arrivals`: people escaping to Fort Monroe
 
@@ -371,23 +372,23 @@ Sixty situations: 30 in 1861 (S01–S30) and 30 in 1862 (S31–S60), in order of
 
 ### S19 `blockade-board`: the blockade's planning board and squadrons
 
-- **Window**: fires when the blockade exists and the coast has no bases. Historically Welles ordered the board on 25 June 1861 at Chase's urging; it met July to September; the Atlantic squadron split on 29 October [UN 2, 4].
-- **Live**: yes; each of the board's reports (seven or ten, 5 July–19 September) adds or changes options [UN 2].
-- **Staff recommendation**: Secretary of the Navy (Welles): [game] seat-derived; the Assistant Secretary (Fox, from 1 August) pushes hardest for Charleston [UN 1].
+- **Window**: fires when the blockade exists and the coast has no bases. Historically Welles ordered the board on 25 June 1861 (attested only second-hand, in the board's first report, ORN I-12 p. 195; "at Chase's urging" has no direct evidence, only Chase's forwarding of a Fernandina tip, ORN I-5 p. 720); the board made **three** reports (5, 16 and 26 July, ORN I-12 pp. 195–206); Welles ordered the Atlantic squadron divided on 18 September at the North/South Carolina line, and the named squadrons date from 29 October (ORN I-12 p. 208; ORN I-6 pp. 233–234) [GAPS S19; UN 2, 4].
+- **Live**: yes; each of the board's three reports (5, 16 and 26 July) adds or changes options [GAPS S19; UN 2].
+- **Staff recommendation**: Secretary of the Navy (Welles): [game] seat-derived; the Assistant Secretary (Fox, from 1 August) pushes hardest for Charleston [UN 1]; the only 1861 text tying Fox to Charleston is Bache's 4 September note, "I think well of Fox's idea of closing up that entrance" (ORN I-12 p. 207), and Fox's own Charleston letters are 1862 [GAPS S19].
 - **Options**:
-  - `adopt-board` "Adopt the board's plan: Fernandina, a South Carolina sound, the squadron split at Cape Romain" [UN 2].
-  - `leave-to-squadrons` "Leave it to the squadron commanders".
-  - `port-royal` "Take Port Royal" (the administration's choice over the board's St. Helena Sound [UN 2]).
-  - `take-hatteras` "Take Hatteras Inlet and hold it" (Stringham and Butler, against the board's advice to block it [UN 2]).
+  - `adopt-board` "Adopt the board's plan: Fernandina, a South Carolina sound, the squadron split at Cape Romain" [UN 2]. The board itself, report of 5 July: Fernandina "the most desirable point for a place of deposit", 3,000 men to take and hold it (ORN I-12 pp. 196–198); it proposed the split at Cape Romain (p. 198), but the Department divided at the North/South Carolina line [GAPS S19].
+  - `leave-to-squadrons` "Leave it to the squadron commanders". Welles to Stringham, 5 June: "Any information or suggestions from you ... will at all times be acceptable" (ORN I-5 p. 703) [GAPS S19].
+  - `port-royal` "Take Port Royal". **Decided in the field**: Welles's order of 12 October said the Government had decided to take at least two of Bull's Bay, St. Helena, Port Royal and Fernandina, and "Which of the two shall be thus occupied will be committed to your discretion" (ORN I-12 pp. 214–215); Du Pont and General Sherman chose Port Royal (Du Pont to Fox, 24 October, Fox correspondence vol. 1). The board's own preference between St. Helena and Port Royal is not printed in ORN I-12 [GAPS S19; UN 2].
+  - `take-hatteras` "Take Hatteras Inlet and hold it". The board had advised "the final obstruction of the inner bar" (ORN I-12 p. 200); Stringham thought sunken hulks of little use (6 Aug, ORN I-6 p. 64) and on 2 September urged retaining the forts ("the key to all the ports south of Hatteras", ORN I-6 p. 124); Butler, 30 August (OR I-4 p. 585) [GAPS S19].
   The board is a temporary post (0040) [UN des. 1].
 - **Inaction**: the squadrons follow standing orders [game].
-- **Historical default (hidden: history runs and rule seats only)**: the board convened; its Atlantic plans mostly adopted, Fernandina postponed, Port Royal chosen, Hatteras taken and held [UN 2, 6].
-- **Pushback**: Stringham and Butler sought credit after Hatteras and Stringham asked to be relieved (18 September) [UN 4, 6].
+- **Historical default (hidden: history runs and rule seats only)**: the board convened; its Atlantic plans mostly adopted, Fernandina postponed, Port Royal chosen in the field under the 12 October discretion order, Hatteras taken and held [GAPS S19; UN 2, 6].
+- **Pushback**: Stringham and Butler sought credit after Hatteras (supported only by Stellwagen's hearsay of 12 September, ORN I-6 p. 198) and Stringham asked to be relieved on 16 September (ORN I-6 pp. 216–217; Welles's order of 18 September mentions it, p. 234) [GAPS S19; UN 4, 6].
 - **Verbs**: appoint, consult
 - **Reports**: advice, wire
 - **Systems**: navy, economy
 - **Gate**: none
-- **Sources**: [UN 2, 4, 6, des. 1, 2]
+- **Sources**: [UN 2, 4, 6, des. 1, 2]; [GAPS S19]: ORN I-5 pp. 702–720; ORN I-6 pp. 64, 124, 198, 216–217, 233–234; ORN I-12 pp. 195–216; OR I-4 pp. 579–585
 
 ### S20 `special-session`: Congress meets in special session
 
@@ -412,19 +413,19 @@ Sixty situations: 30 in 1861 (S01–S30) and 30 in 1862 (S31–S60), in order of
 
 - **Window**: fires when the three-month regiments' terms near their end and the press presses ("On to Richmond", *Tribune*, June 1861) [SW 2.5; UP 4.1]. Historically McDowell marched on 16 July [SW 1].
 - **Live**: yes; `drill-first` loses value as regiments' terms expire (two units went home the morning of the battle) [SW 2.5].
-- **Staff recommendation**: general-in-chief (Scott): needs-source. Who pressed the advance is UNVERIFIED [SW 2.5].
+- **Staff recommendation**: general-in-chief (Scott): in his own words, "though opposed to the movement at first, we had all become animated and sanguine of success" (statement to the Joint Committee on the Conduct of the War, 31 March 1862, Report 1863 Part 2 p. 242); at the council of 29 June he said he "was never in favor of going over into Virginia" (McDowell's testimony, same Part 2 p. 37) [GAPS S21]. Who pressed the advance: no cabinet member, Lincoln, Seward or congressman is on record in July 1861 urging the date in his own words. On record: Patterson, 28 June, "if we do not meet the enemy with them, we will be in no condition to do so for three months to come" (OR I-2 p. 730; about the Valley); Thurlow Weed's letter of 26 July blaming the *Tribune*, the Postmaster General, F. P. Blair and members of Congress (*Rebellion Record* vol. 2 pp. 384–386), and Blair's reply in the House, 1 August (Globe pp. 386–387); McDowell, sworn: he "begged of the Secretary of War and the Secretary of the Treasury" for time (JCCW 1863 Part 2 pp. 37–38). The *Tribune*'s "Forward to Richmond" was read only through Nicolay and Hay (the original page was not reached) [GAPS S21].
 - **Options**:
   - `advance-now` "Advance now". Goal to McDowell (objective the Manassas region); support request to Patterson.
-  - `drill-first` "Wait and drill".
-  - `wait-for-patterson` "Wait until Patterson's force is in hand".
+  - `drill-first` "Wait and drill". McDowell, sworn: "I wanted very much a little time; all of us wanted it. We did not have a bit of it. The answer was: 'You are green, it is true; but they are green, also; you are all green alike.'" (JCCW 1863 Part 2 p. 38). The speaker of the reply is **not named**; do not give it to Lincoln [GAPS S21].
+  - `wait-for-patterson` "Wait until Patterson's force is in hand". Gen. Sandford at the 29 June council: no movement "until it was ascertained that General Patterson was in such a position as to prevent the junction" (JCCW 1863 Part 2 pp. 55, 62); Scott's assurance, "if Johnson joins Beauregard he shall have Patterson on his heels" (McDowell, p. 37) [GAPS S21].
 - **Inaction**: the regiments' terms run out and the army shrinks [game].
 - **Historical default (hidden: history runs and rule seats only)**: `advance-now`; defeat on 21 July [SW 1].
-- **Pushback**: McDowell warned that enlistments would expire [SW 2.5]; Patterson's 14,000–18,000 did not engage [SW 4.6].
+- **Pushback**: McDowell warned that enlistments would expire [SW 2.5] (to Townsend, 20 July, OR I-2 p. 308: "In a few days I shall lose many thousands of the best of this force"); Patterson's force did not engage [SW 4.6]: its size is 10,000 (his own count, 28 June), 22,000 (Sandford, JCCW2 p. 56) or "about 23,000" (the Committee, p. 5), not one figure [GAPS S21]. The plan McDowell wrote is undated in OR I-2 pp. 719–721 ("about June 24" is an editor's bracket); the start date was fixed for 8 July (OR I-2 p. 324) or 9 July (Committee) [GAPS S21].
 - **Verbs**: goal, review
 - **Reports**: wire, casualty-return, press
 - **Systems**: forces, press, politics
 - **Gate**: none
-- **Sources**: [SW 1, 2.5, 4.6, design S15]; [UP 4.1]; [IF 2.4, 3]
+- **Sources**: [SW 1, 2.5, 4.6, design S15]; [UP 4.1]; [IF 2.4, 3]; [GAPS S21]: Report of the Joint Committee on the Conduct of the War (1863) Part 2 pp. 3–5, 36–38, 55–62, 241–242; OR I-2 pp. 166, 303–308, 324–325, 718–721, 729–730; *Rebellion Record* vol. 2 pp. 384–386; Congressional Globe pp. 218, 246, 386–388
 
 ### S22 `fremont-proclamation`: Frémont's proclamation in Missouri
 
