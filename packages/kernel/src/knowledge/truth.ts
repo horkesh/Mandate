@@ -42,6 +42,10 @@ export const BIAS_TERM_KINDS = [
   'return_understated',
   /** An enemy loss a commander claims above the truth, by his own perception (lane 1.4; the information-flows note's 1x-3x). */
   'claim_inflated',
+  // Lane 1.7: a governor's answer to a call (his rung and willingness), and his region's loyalty scaling what he raised.
+  'call_rung',
+  'call_loyalty',
+  'levy_lapsed',
 ] as const;
 export type BiasTermKind = (typeof BIAS_TERM_KINDS)[number];
 

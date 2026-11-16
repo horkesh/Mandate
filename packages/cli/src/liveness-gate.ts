@@ -120,6 +120,8 @@ function notHere(why: string): GateBand {
 const SITUATIONS_UNAUTHORED = 'union-1861 has no situations authored until the March 1861 authoring lane (0042, 0046); the testbed run exercises them';
 const FILTER_EMPTY = 'both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post';
 const NO_CANDID_RELAY = 'the testbed’s one relaying office (the war ministry) holds what it dislikes rather than objecting: its holder is not candid (lane 1.1); union-1861 fires it, and the kernel test drives it';
+const VERBS_UNUSED = 'no rule seat uses the people verbs yet (lane 1.5 builds them; the generic principal orders, reviews and decides only); the kernel test drives it';
+const PV = 'packages/kernel/test/people-verbs.test.ts';
 const NO_PROPOSER = 'nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it';
 const FEW_BATTLE_DAYS = 'the reference runs fight only a few battle-days (one in the Union run, two in the testbed run; lane 1.3)';
 
@@ -145,7 +147,16 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'reports.filtered': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
   'reports.trimmed': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
   'situations.lapsed': { why: 'a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'expires an option, resurfaces on its clock, and lapses' },
-  // Lane 1.2: the plan cycle's paths that no rule seat takes, each driven by its own kernel test.
+  // Lane 1.7: no rule seat calls for regiments yet (lane 1.12's rule-seat principals will), so recruitment fires in no reference run.
+  'recruitment.called': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'the northern governor answers the call' },
+  'recruitment.answered': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'the northern governor answers the call' },
+  'recruitment.slow_walked': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'slow-walks the call' },
+  'recruitment.refused': { why: 'no rule seat calls for regiments until lane 1.12; a governor who raises nothing is driven by the kernel rule that a rung not listed raises none', test: 'packages/cli/test/men-regions.test.ts', needle: "regimentsRaised(rules, 10, 'refuse', 900)" },
+  'recruitment.mustered': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'musters the levy into a new block' },
+  'recruitment.men': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'musters the levy into a new block' },
+  'recruitment.muster_blocked': { why: 'no rule seat calls for regiments until lane 1.12, so no levy waits on a region in enemy hands', test: 'packages/cli/test/men-regions.test.ts', needle: 'a levy due in an enemy-held region waits' },
+  'recruitment.lapsed': { why: 'no rule seat calls for regiments until lane 1.12, so no levy lapses', test: 'packages/cli/test/men-regions.test.ts', needle: 'lapses past the pack’s days' },
+  'recruitment.disbanded': { why: 'no rule seat calls for regiments until lane 1.12, so no enlistment runs out', test: 'packages/cli/test/men-regions.test.ts', needle: 'then disbands it when its ninety days end' },  // Lane 1.2: the plan cycle's paths that no rule seat takes, each driven by its own kernel test.
   'plans.sent_back': { why: 'no rule seat sends a plan back: the generic principal approves, the editing exercise edits', test: 'packages/kernel/test/plans.test.ts', needle: 'sends the plan back, and he drafts it again' },
   'plans.draft_deferred': { why: 'no reference run asks for more plans in a day than the pack’s cap of three (0062)', test: 'packages/kernel/test/plans.test.ts', needle: 'defers drafts past the day’s cap' },
   'plans.edit_invalid': { why: 'the editing exercise edits only a moving axis’s timing, which can always be made', test: 'packages/kernel/test/plans.test.ts', needle: 'refuses an edit no route can make' },
@@ -160,6 +171,16 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'situations.options_changed': { why: 'an option changes only for a situation left open past an appearance or expiry; the rule-driven principal does not leave one open (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'a waiting option defers the decision until its condition holds' },
   'situations.resurfaced': { why: 'a resurfacing follows a wait or expiry the rule-driven principal does not choose (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'expires an option, resurfaces on its clock' },
   'situations.waiting': { why: 'waiting is an option a human takes; the rule-driven principal takes the historical default (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'waits for news to reach the principal' },
+  // Lane 1.5: the people verbs, which no rule seat uses yet, each driven by its own kernel test.
+  'verbs.answered': { why: VERBS_UNUSED, test: PV, needle: 'relieve outright, then appoint: each answered through his compliance' },
+  'verbs.declined': { why: VERBS_UNUSED, test: PV, needle: 'or declines and says why' },
+  'verbs.consulted': { why: VERBS_UNUSED, test: PV, needle: 'his answer becomes a stance on record' },
+  'verbs.audience': { why: VERBS_UNUSED, test: PV, needle: 'during: held about an approved plan' },
+  'verbs.in_washington': { why: VERBS_UNUSED, test: PV, needle: 'promise, pressure and address act in Washington' },
+  'people.promise_kept': { why: VERBS_UNUSED, test: PV, needle: 'with a promise of advancement kept by it' },
+  'people.promise_broken': { why: VERBS_UNUSED, test: PV, needle: 'a promise falls due and breaks' },
+  'reports.observer_letter': { why: VERBS_UNUSED, test: PV, needle: 'send an observer: he watches' },
+  'seats.attention_refused': { why: 'the generic principal spends a few points a week of a budget of twelve, so nothing is refused for want of attention; the kernel test drives it', test: PV, needle: 'refuses what it cannot pay' },
 };
 
 /** What a pack at peace never does: no order is given, so no force marches, no ground is contested. */
@@ -244,6 +265,8 @@ const UNION_BANDS: Record<string, GateBand> = {
   'orders.relay_objected': around(1),
   'orders.relayed': around(3),
   'plans.goal_reached': around(1),
+  'regions.self_emancipation': notHere('the Union pack has no census rows until lane 1.10 sources them, so the term has nowhere to run; the testbed run fires it'),
+  'regions.reached_lines': notHere('the Union pack has no census rows until lane 1.10 sources them; the testbed run fires it'),
   'seats.choices': around(2),
   // The two opening goals: the Charleston command's plan goes ahead; the Washington garrison's holds, so it is reviewed and approved.
   ...planBands({ drafts: 2, reviewed: 1, wentAhead: 1, goalFit: 0, supply: 2 }),
@@ -257,6 +280,14 @@ const UNION_BANDS: Record<string, GateBand> = {
   'situations.proposals': quiet(SITUATIONS_UNAUTHORED),
   'situations.staff_lines': quiet(SITUATIONS_UNAUTHORED),
   'situations.surfaced': quiet(SITUATIONS_UNAUTHORED),
+  // Lane 1.5: grievances from overruled and bypassed men climb the ladder and fade week by week; attention is spent on
+  // the opening orders and refilled each week. The Union pack authors no seat initiative and no man here is famous enough to be a rival.
+  'ladder.moved': around(4),
+  'ladder.rival': notHere('nobody on a Union ladder rung of lobbying or above has the standing of a rival in 75 days; the testbed run fires it'),
+  'people.grievances_faded': around(20),
+  'seats.attention_refilled': around(10),
+  'seats.attention_spent': around(4),
+  'seats.initiative': quiet('the Union pack authors no seat initiative yet (lane 1.5 builds the mechanism; the cast’s initiatives are 1B data); the testbed run fires it'),
 };
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
@@ -311,6 +342,9 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'orders.relay_objected': notHere(NO_CANDID_RELAY),
   'orders.relayed': around(3),
   'plans.goal_reached': around(2),
+  // Lane 1.7: the fen folk's own act, every week from day 1, in each census region the North's protection flag does not cover (G-1.7a), the North's own western front among them.
+  'regions.self_emancipation': around(72),
+  'regions.reached_lines': around(36),
   'seats.choices': around(3),
   'seats.defaulted': notHere('every request is answered in this run; the silent-seats exercise run fires it'),
   // Three goals (each side's opening, and the situation's order to press on): every plan moves and goes ahead as drafted.
@@ -324,6 +358,13 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'situations.proposals': around(5),
   'situations.staff_lines': around(3),
   'situations.surfaced': around(6),
+  // Lane 1.5: men cool toward their leader climb the ladder on regard alone, and a famous one becomes a rival; the generals write to the press on their cooldown.
+  'ladder.moved': around(6),
+  'ladder.rival': around(1),
+  'people.grievances_faded': notHere('no testbed man holds a grievance at any week’s end in this run (nobody is overruled, and its office holds rather than objects, so it is never bypassed); its ladder moves come from cool regard alone; union-1861 fires it'),
+  'seats.attention_refilled': around(17),
+  'seats.attention_spent': around(2),
+  'seats.initiative': around(15),
 };
 
 /** Mechanics that only a mechanic-specific run can fire: each band is the same in every run that does not. */

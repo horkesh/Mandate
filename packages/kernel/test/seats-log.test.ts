@@ -341,34 +341,46 @@ describe('ownership of the new State (0044)', () => {
   it('registers every root field with one writer, and the stand-ins are labelled', () => {
     const roots = OWNED_FIELDS.flatMap((f) => f.code.filter((c) => c.record === 'State').map((c) => `${c.key}:${f.writer}`)).sort();
     expect(roots).toEqual([
+      'audienceHeld:audience',
       'battleRecords:combat',
       'closedGovernments:command',
       'departmentFactions:command',
       'forceAssignments:command',
       'forceBlockStates:forces',
+      'forceEnlistments:forces',
       'forceLocations:movement',
       'infraDepotCondition:infrastructure',
       'infraEdgeCondition:infrastructure',
       'infraObstructions:infrastructure',
       'knowledgeBySeat:knowledge',
       'messagesInTransit:messages',
+      'observerPostings:command',
       'operationRecords:operations',
       'orderResponses:proxy',
       'personGrievances:people',
+      'personInquiries:people',
+      'personPromises:people',
       'personRanks:people',
       'personRegard:people',
+      'personRivals:ladder',
+      'personRungs:ladder',
       'personStances:people',
       'personStanding:people',
       'personStatus:people',
       'personTraits:people',
       'personTrue:people',
       'planRecords:plans',
+      'postLevies:command',
       'postStates:command',
       'regionControl:control',
       'regionFortification:regions',
       'regionGovernments:command',
+      'regionLoyalty:regions',
+      'regionReachedUnionLines:regions',
       'reportTruth:knowledge',
       'seatAssignments:seats',
+      'seatAttention:seats',
+      'seatInitiatives:seats',
       'situationFlags:situations',
       'situationStates:situations',
       'stateDay:tick',
@@ -382,17 +394,20 @@ describe('ownership of the new State (0044)', () => {
     const world = indexedFixture(REFERENCE);
     const telemetry = createTelemetry([...SEATS_MECHANICS, ...MAP_MECHANICS]);
     playDays(world, createState(world, { seed: 99 }), scriptedSeats(SCRIPT), 60, { telemetry });
-    const plan = (m: string) => m.startsWith('plans.') || m.startsWith('planner.');
+    // Lane 1.7: recruitment and the regions term have their own tests (`men-regions.test.ts`); this game makes no call and its fixture no census.
+    const plan = (m: string) => m.startsWith('plans.') || m.startsWith('planner.') || m.startsWith('recruitment.') || m.startsWith('regions.');
     const dead = SEATS_MECHANICS.filter((m) => !plan(m) && telemetry.mechanics[m]!.fires === 0);
     // Each of these has its own test above. Rejections need a bad command and defaults an
     // unanswered request, which this game has not; a conflict needs two issuers (here only the
     // principal orders); and a filter cuts only a losses claim, which no cyclic report carries
     // until lane 0.5's casualty returns. Here the one relaying man (a_sec, uncandid) holds what he dislikes rather than
     // objecting (lane 1.1: an objection needs a candid man), so objections are driven in seats-orders.test.ts.
+    // Lane 1.5: the scripted seats send no people verbs and never run out of attention; promises, rivals and initiatives
+    // need verbs or a rung this game does not reach. Each has its own kernel test (people-verbs.test.ts).
     // Lane 1.4: no plan here asks another holder for support, and nothing is old enough to prune in 60 days; both have their own tests.
     // A scripted order now meets a post the battle model left vacant and is rejected, so `commands.rejected` is live here;
     // no state's ground sees a battle (no governor's wire) and no headquarters is cut off (no pocket report).
-    expect([...dead].sort()).toEqual(['operations.support_answered', 'operations.support_refused', 'operations.support_sent', 'orders.conflict', 'orders.relay_objected', 'orders.responses_pruned', 'reports.governor_wire', 'reports.pocket', 'reports.trimmed', 'seats.defaulted']);
+    expect([...dead].sort()).toEqual(['ladder.rival', 'operations.support_answered', 'operations.support_refused', 'operations.support_sent', 'orders.conflict', 'orders.relay_objected', 'orders.responses_pruned', 'people.promise_broken', 'people.promise_kept', 'reports.governor_wire', 'reports.observer_letter', 'reports.pocket', 'reports.trimmed', 'seats.attention_refused', 'seats.defaulted', 'seats.initiative', 'verbs.answered', 'verbs.audience', 'verbs.consulted', 'verbs.declined', 'verbs.in_washington']);
     // The plan cycle's mechanics have their own tests (`plans.test.ts`); this game goals, drafts and picks plans.
     const fired = SEATS_MECHANICS.filter((m) => plan(m) && telemetry.mechanics[m]!.fires > 0);
     expect(fired).toEqual(expect.arrayContaining(['planner.candidates', 'planner.searches', 'plans.chosen', 'plans.drafted', 'plans.goal_set']));

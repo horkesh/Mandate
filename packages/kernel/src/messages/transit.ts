@@ -36,8 +36,14 @@ export interface Hop {
  * section 5: a support request is a directive to that holder, who answers with his own compliance). It carries the goal
  * the axis serves.
  */
-export const ORDER_KINDS = ['approve', 'edit', 'go', 'goal', 'send_back', 'support'] as const;
+export const ORDER_KINDS = ['approve', 'call', 'edit', 'go', 'goal', 'send_back', 'support'] as const;
 export type OrderKind = (typeof ORDER_KINDS)[number];
+
+/** A call for regiments, as an order carries it (lane 1.7). */
+export interface CallSpec {
+  readonly callRegiments: number;
+  readonly callTermDays: number;
+}
 
 export interface OrderBody {
   readonly orderKind: OrderKind;
@@ -47,9 +53,35 @@ export interface OrderBody {
   readonly orderGoal: PlanGoal | null;
   /** The arrow edit, for an `edit` order; null otherwise. */
   readonly orderEdit: EditSpec | null;
+  /** The call, for a `call` order (lane 1.7); null otherwise. */
+  readonly orderCall: CallSpec | null;
   /** Whether it was sent around the chain of posts that should relay it (0040). */
   readonly orderBypass: boolean;
   readonly orderIssuedDay: number;
+}
+
+/**
+ * What a person verb carries (lane 1.5): a letter or telegram from the principal to one person, answered on arrival through
+ * his compliance (the pack's order-to-value map). Never relayed: it goes straight to him. Fields a verb does not use are null.
+ */
+export const VERB_KINDS = ['appoint', 'consult', 'inquire', 'observer', 'relieve', 'transfer'] as const;
+export type VerbKind = (typeof VERB_KINDS)[number];
+
+export interface VerbBody {
+  readonly verbKind: VerbKind;
+  readonly verbIssuer: PersonId;
+  /** The post it concerns: the post to fill, to relieve, to send from, to report on, to watch. */
+  readonly verbPost: PostId | null;
+  /** A second post: a transfer's destination, a relieved man's quiet department. */
+  readonly verbTo: PostId | null;
+  /** A relief's mode; a transfer's force kind (blocks or men). */
+  readonly verbMode: string | null;
+  readonly verbAmount: number | null;
+  /** A rank an appointment confers, from the pack's vocabulary. */
+  readonly verbRank: string | null;
+  /** The situation a consultation asks about; the region an inquiry asks about. */
+  readonly verbSubject: string | null;
+  readonly verbIssuedDay: number;
 }
 
 export interface TransitMessage {
@@ -70,6 +102,8 @@ export interface TransitMessage {
   /** Who it still must reach after the recipient. */
   readonly msgPending: readonly Hop[];
   readonly msgOrder: OrderBody | null;
+  /** A person verb (lane 1.5); null for an order or a report. */
+  readonly msgVerb: VerbBody | null;
   readonly msgReport: ReportBody | null;
   /** The truth behind the report it carries (null for orders). Never shown to a seat. */
   readonly msgTruth: ReportTruth | null;
@@ -106,7 +140,7 @@ export function sendMessages(state: State, messages: readonly TransitMessage[]):
   if (messages.length === 0) return state;
   for (const m of messages) {
     if (m.msgArriveDay < m.msgSentDay) throw new RangeError(`message ${m.id} arrives before it is sent`);
-    if ((m.msgOrder === null) === (m.msgReport === null)) throw new RangeError(`message ${m.id} must carry exactly one of an order and a report`);
+    if ([m.msgOrder, m.msgVerb, m.msgReport].filter((x) => x !== null).length !== 1) throw new RangeError(`message ${m.id} must carry exactly one of an order, a verb and a report`);
   }
   return { ...state, messagesInTransit: [...state.messagesInTransit, ...messages].sort(byArrival) };
 }

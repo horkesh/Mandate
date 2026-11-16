@@ -132,26 +132,26 @@ describe('forces: the only writer of strength and stores', () => {
 describe('command: transfers name a force, never blocks one by one (0033)', () => {
   it('a number of blocks: the sender gives his weakest first, unknown strengths last; a detachment goes with its block', () => {
     // Known strengths ascending: the marines (150), the ship (300), a_2 (3000), a_1 (5000); a_3 (unknown) last.
-    const two = transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'blocks', count: 2 });
+    const two = transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'blocks', count: 2 }, 'weakest_first');
     expect(two.rule).toBe('weakest_first');
     expect(two.moved).toEqual(['a_marines', 'a_ship']);
     expect(two.state.postStates).toBe(S.postStates);
-    const three = transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'blocks', count: 3 });
+    const three = transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'blocks', count: 3 }, 'weakest_first');
     expect(three.moved).toEqual(['a_2', 'a_2_guard', 'a_marines', 'a_ship']);
     expect(commandedBlocks(three.state, P('a_army2'))).toEqual(['a_2', 'a_2_guard', 'a_marines', 'a_ship']);
-    const all = transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'blocks', count: 9 });
+    const all = transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'blocks', count: 9 }, 'weakest_first');
     expect(all.moved.at(-1)).toBe('a_ship');
     expect(commandedBlocks(all.state, P('a_army'))).toEqual([]);
   });
 
   it('a strength in men: whole blocks, weakest first, until the men are reached', () => {
-    const r = transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'men', men: 3000 });
+    const r = transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'men', men: 3000 }, 'weakest_first');
     expect(r.moved).toEqual(['a_2', 'a_2_guard', 'a_marines', 'a_ship']);
     expect(r.menSent).toBe(3450);
   });
 
   it('a corps moves as a bundle with its commander; its blocks stay under it', () => {
-    const r = transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'corps', corps: P('a_corps') });
+    const r = transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'corps', corps: P('a_corps') }, 'weakest_first');
     expect(r.rule).toBe('corps_as_bundle');
     expect(r.state.postStates[P('a_corps')]!.postParent).toBe('a_army2');
     expect(r.state.postStates[P('a_corps')]!.postHolder).toBe('a_corps');
@@ -160,10 +160,10 @@ describe('command: transfers name a force, never blocks one by one (0033)', () =
   });
 
   it('refuses another side, a corps not under the sender, a loop, and empty counts (positive controls)', () => {
-    expect(() => transferForce(MAP, S, P('a_army'), P('b_army'), { force: 'blocks', count: 1 })).toThrow('different sides');
-    expect(() => transferForce(MAP, S, P('a_army2'), P('a_army'), { force: 'corps', corps: P('a_corps') })).toThrow('not under a_army2');
-    expect(() => transferForce(MAP, S, P('a_office'), P('a_corps'), { force: 'corps', corps: P('a_army') })).toThrow('would loop');
-    expect(() => transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'blocks', count: 0 })).toThrow('at least one');
+    expect(() => transferForce(MAP, S, P('a_army'), P('b_army'), { force: 'blocks', count: 1 }, 'weakest_first')).toThrow('different sides');
+    expect(() => transferForce(MAP, S, P('a_army2'), P('a_army'), { force: 'corps', corps: P('a_corps') }, 'weakest_first')).toThrow('not under a_army2');
+    expect(() => transferForce(MAP, S, P('a_office'), P('a_corps'), { force: 'corps', corps: P('a_army') }, 'weakest_first')).toThrow('would loop');
+    expect(() => transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'blocks', count: 0 }, 'weakest_first')).toThrow('at least one');
   });
 });
 
@@ -181,8 +181,8 @@ describe('command: holders, temporary posts and scheduled changes (0040)', () =>
 
   it('a temporary post dissolves with its operation: its blocks go to its parent, posts under it move up', () => {
     let s = createTemporaryPost(MAP, S, { id: P('a_exp'), name: 'post.a_exp.name', kind: 'expedition', department: DEP('a_war'), parent: P('a_army'), holder: null, seat: R('a2'), operation: 'op1' });
-    s = transferForce(MAP, s, P('a_army'), P('a_exp'), { force: 'blocks', count: 1 }).state;
-    s = transferForce(MAP, s, P('a_army'), P('a_exp'), { force: 'corps', corps: P('a_corps') }).state;
+    s = transferForce(MAP, s, P('a_army'), P('a_exp'), { force: 'blocks', count: 1 }, 'weakest_first').state;
+    s = transferForce(MAP, s, P('a_army'), P('a_exp'), { force: 'corps', corps: P('a_corps') }, 'weakest_first').state;
     expect(commandedBlocks(s, P('a_exp'))).toEqual(['a_marines']);
     const { state, dissolved } = dissolveOperation(s, 'op1');
     expect(dissolved).toEqual(['a_exp']);

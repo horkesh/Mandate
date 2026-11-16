@@ -96,6 +96,34 @@ export const FIXTURE_PEOPLE_RULES: PeopleRules = {
     paperPermille: 1400,
   },
   grievances: { bypassedWeight: 150 },
+  attention: {
+    cap: 12,
+    refillDays: 7,
+    costs: { order: 1, review_edit: 1, review_approve: 0, review_send_back: 0, go: 0, decide_staff: 0, decide_overrule: 1, delegate: 0, appoint: 1, relieve: 1, transfer: 1, inquire: 0, consult: 1, audience: 1, observer: 1, promise: 1, pressure: 1, address: 1 },
+  },
+  verbs: {
+    weekDays: 7,
+    orderValues: [
+      { order: 'verb:appoint', boldness: null, honours: ['career', 'reputation'], offends: [], gateTopics: [], notCheaperThan: null },
+      { order: 'verb:consult', boldness: null, honours: ['duty'], offends: [], gateTopics: [], notCheaperThan: null },
+      { order: 'verb:inquire', boldness: null, honours: ['duty'], offends: [], gateTopics: [], notCheaperThan: null },
+      { order: 'verb:observer', boldness: null, honours: ['duty'], offends: [], gateTopics: [], notCheaperThan: null },
+      { order: 'verb:relieve', boldness: null, honours: [], offends: ['career', 'reputation'], gateTopics: [], notCheaperThan: null },
+      { order: 'verb:transfer', boldness: null, honours: ['duty'], offends: ['reputation'], gateTopics: [], notCheaperThan: null },
+    ],
+    relief: [
+      { mode: 'quiet_department', grievanceWeight: 100, regardDelta: -100, standingDelta: 0 },
+      { mode: 'own_request', grievanceWeight: 50, regardDelta: 0, standingDelta: 0 },
+      { mode: 'outright', grievanceWeight: 250, regardDelta: -250, standingDelta: -100 },
+    ],
+    inquiry: { freePerWeek: 2, pesteredWeight: 60 },
+    promise: { dueDays: 30, brokenWeight: 200, brokenRegard: -150 },
+    pressure: { weight: 150, oversight: 200, days: 14 },
+    observer: { oversight: 150, monitoredWeight: 100, letterEveryDays: 7 },
+    audience: { maxCounters: 3, cooldownDays: 7, vindicateRegard: 150, vindicateStanding: 50 },
+    ladder: { thresholds: [100, 200, 300, 400, 500, 650, 800], dispositionPerRung: 60, publicStanding: 600, rivalStanding: 700, decayDivisor: 4 },
+    initiatives: [],
+  },
 };
 
 /**
@@ -147,6 +175,8 @@ export const FIXTURE_COMBAT_RULES: CombatRules = {
   standing: { conflictWindowDays: 7 },
   planner: {"hopShare":250,"menPerDay":1000,"flankOverlapMax":600,"flankLengthMax":1600,"flankPenalty":2000,"retrogradeSlack":0,"dedupeOverlap":800,"dedupeArrival":1500,"topN":4,"maxSearches":64,"reducePerLevel":10,"clearDays":4000,"forceDays":1000,"forcingThreat":4000,"assaultDays":1000,"pincerWindow":2000,"dependenceCost":120,"partnerWillingnessWeight":300, "partnerRegardWeight": 1000, "partnerStandingWeight": 1000, "partnerStandingPivot": 500,"dailyDraftCap":3,"weights":{"riskBase":200,"supplyBase":1100,"concentrationPerTimid":250,"pausePerTimid":400,"twoAxesAt":500,"threeAxesAt":800,"goalFit":400,"ratioBonusMax":300,"ratioBonusDivisor":10,"ratioPenaltyMax":600,"latePenaltyMax":600,"latePerDay":40,"earlyBonusMax":300,"earlyDivisor":25000,"holdingTime":-300,"traitBase":1100,"hasteDivisor":10000,"supplyDivisor":10000,"outrunDivisor":4,"exposureDivisor":20,"coordinationDivisor":10000,"perExtraAxis":50,"gloryDivisor":5,"cautionDivisor":2}},
   plans: {"goalDefaults":{"risk":500,"deadlineDays":20,"rail":true,"river":false,"sea":false,"neutral":false,"awaitWord":false,"approveAsDrafted":true},"holdingRisk":-400},
+  recruitment: {"callTerms":{"boldness":500,"honours":["duty"],"offends":[]},"raisingPostKinds":[],"menPerRegiment":1000,"arm":"infantry","storesDays":10,"musterDays":5,"rungs":[{"rung":"exceed","sharePermille":1200,"delayDays":0},{"rung":"comply","sharePermille":1000,"delayDays":0},{"rung":"comply_with_reservations","sharePermille":1000,"delayDays":3},{"rung":"slow_walk","sharePermille":1000,"delayDays":10},{"rung":"reinterpret","sharePermille":600,"delayDays":5}],"loyaltyFull":800,"loyaltyWeight":500,"maxTermDays":1095,"musterBlockedDays":14},
+  selfEmancipation: {"linesFaction":null,"agencyReasons":{"resistanceWithin":"agency:fixture","resistanceElsewhere":"agency:fixture","flightToLines":"agency:fixture"},"protectedFlags":[],"cadenceDays":7,"resistancePerMillion":200,"pressureFlags":[],"flightPerMillion":1000,"reachWithForce":1000,"reachLinesOnly":400,"holdShare":600,"policyBase":500,"policyFlags":[]},
   people: FIXTURE_PEOPLE_RULES,
 } as const;
 
@@ -231,7 +261,7 @@ export function mapWorld(parts: WorldParts): World {
       // Every fixture faction is at war from day 1 (0064): the fixtures test the war, not the peace before it.
       ruleSeats: { warFlags: (parts.factions ?? ['a', 'b']).map((f) => ({ faction: F(f), flag: null })) },
     },
-    vocabularies: { terrains: [], postKinds: [], departmentKinds: [], arms: [], personKinds: [], traits: [], ranks: [], rankKinds: [], values: FIXTURE_VALUES.map((v) => ({ id: v, name: `value.${v}` })), blocs: [], standingOrderKinds: [] },
+    vocabularies: { terrains: [], postKinds: [], departmentKinds: [], arms: [], personKinds: [], traits: [], ranks: [], rankKinds: [], values: FIXTURE_VALUES.map((v) => ({ id: v, name: `value.${v}`, costOnly: false })), blocs: [], standingOrderKinds: [] },
     factions: (parts.factions ?? ['a', 'b']).map((f) => ({ id: F(f), name: `faction.${f}.name` })),
     departments: (parts.departments ?? []).map((d) => ({ id: toId('department', d), faction: d.startsWith('neutral_') ? null : F(d.split('_')[0]!), kind: 'government', name: `department.${d}.name`, provenance: [] })),
     regions: parts.regions,
@@ -241,6 +271,7 @@ export function mapWorld(parts: WorldParts): World {
     depots: parts.depots ?? [],
     weatherZones: [],
     people: [],
+    census: [],
   };
 }
 
@@ -273,6 +304,7 @@ export function startWith(
     factions: [],
     control: Object.keys(control).map((r) => ({ region: R(r), shares: Object.keys(control[r]!).map((f) => ({ faction: F(f), permille: control[r]![f]! })) })),
     fortification: [],
+    loyalty: [],
     edgeConditions: [],
     obstructions: [],
     depotConditions: [],

@@ -9,10 +9,12 @@
  *  2. Deliver messages due today: relays, filters, arrivals, knowledge.
  *  2b. People apply what was proposed to them today: a bypassed relay's grievance (lane 1.1).
  *  2c. Plans: edits answered, goals drafted within the daily cap (lane 1.2).
+ *  2d. Recruitment: levies muster into new blocks; enlistments that end disband (lane 1.7).
  *  3. Operations: approved plans executed axis by axis, support requests sent; then every march a day further (lane 1.4).
  *  3b. Combat: battles and occupation; losses, retreats, generals hit, control deltas (lane 1.3).
  *  4. Control and network changes, and the derived map (lane 0.4).
  *  4a. Stragglers rejoin, and stores on hand fall or refill, from today's supply trace (lanes 0.5, 1.3).
+ *  4a'. Regions: the derived self-emancipation term proposes arrivals at the lines (lane 1.7).
  *  4b. Situations fire, surface, stay live, take history defaults (lane 0.7).
  *  4c. Proposals `command` owns: a neutral government closing or reopening (0058),
  *      or a government joining a side (0065). A post that joins a side this way has
@@ -52,6 +54,12 @@ import { operationsPhase, OPERATIONS_MECHANICS } from './operations.ts';
 import { pruneOperations } from '../operations/operations.ts';
 import { pruneBattles } from '../combat/records.ts';
 import { pruneResponses } from '../proxy/responses.ts';
+import { applyVerb, observerLetters, VERB_MECHANICS } from './verbs.ts';
+import { isPeopleWeek, peopleWeek, WEEK_MECHANICS } from './people-week.ts';
+import { attentionLeft, refillAttention, spendAttention } from '../seats/attention.ts';
+import { attentionPrice } from './attention.ts';
+import { issueCall, recruitmentPhase, RECRUITMENT_MECHANICS } from './recruitment.ts';
+import { regionsPhase, REGIONS_MECHANICS } from './regions.ts';
 
 /** Every mechanic the seats layer counts (FOUNDATION section 11.5). */
 export const SEATS_MECHANICS = [
@@ -73,9 +81,17 @@ export const SEATS_MECHANICS = [
   'reports.trimmed',
   'seats.choices',
   'seats.defaulted',
+  // Lane 1.5: attention, the people verbs, the weekly people step.
+  'seats.attention_refilled',
+  'seats.attention_refused',
+  'seats.attention_spent',
+  ...VERB_MECHANICS,
+  ...WEEK_MECHANICS,
   ...OPERATIONS_MECHANICS,
   ...BATTLE_REPORT_MECHANICS,
   ...PLANS_MECHANICS,
+  ...RECRUITMENT_MECHANICS,
+  ...REGIONS_MECHANICS,
 ] as const;
 
 /** Every mechanic the tick counts: the seats layer's and the situations phase's. Runners declare these. */
@@ -140,7 +156,13 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     if (options !== null && options.length > 1) menus.set(post, options);
   }
 
-  // 1. Today's commands, in log order.
+  // 0b. Attention refills weekly to its cap, with no carry-over (lane 1.5; 0025, 0040).
+  const refill = refillAttention(state, world.rules.people.attention, day);
+  state = freeze(refill.state);
+  if (refill.refilled.length > 0) fire(ctx, 'seats.attention_refilled', refill.refilled.length);
+
+  // 1. Today's commands, in log order. A principal's command is priced from the pack's table and refused if his week's
+  // attention cannot pay for it (lane 1.5).
   const choices = new Map<PostId, string>();
   entries.forEach((entry, index) => {
     const reject = (reason: Rejection['reason']) => {
@@ -152,15 +174,42 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     if (entry.day !== day) return reject('wrong_day');
     if (state.seatAssignments[entry.seat] === undefined) return reject('unknown_seat');
     const c = entry.command;
+    const cost = attentionPrice(world, state, c);
+    const left = attentionLeft(state, entry.seat);
+    if (cost > 0 && left !== null && left < cost) {
+      fire(ctx, 'seats.attention_refused');
+      return reject('no_attention');
+    }
+    const pay = () => {
+      if (cost > 0 && left !== null) {
+        state = spendAttention(state, entry.seat, cost);
+        fire(ctx, 'seats.attention_spent', cost);
+      }
+    };
+    if (c.cmd === 'call') {
+      const reason = issueCall(ctx, state, entry.seat, c);
+      if (reason !== null) reject(reason);
+      else pay();
+      return;
+    }
     if (c.cmd === 'order' || c.cmd === 'review' || c.cmd === 'go') {
       const reason = issueOrder(ctx, state, entry.seat, c);
       if (reason !== null) reject(reason);
+      else pay();
+      return;
+    }
+    if (c.cmd === 'appoint' || c.cmd === 'relieve' || c.cmd === 'transfer' || c.cmd === 'inquire' || c.cmd === 'consult' || c.cmd === 'audience' || c.cmd === 'observer' || c.cmd === 'promise' || c.cmd === 'pressure' || c.cmd === 'address') {
+      const result = applyVerb(ctx, state, entry.seat, c);
+      state = result.state;
+      if (result.reason !== null) reject(result.reason);
+      else pay();
       return;
     }
     if (c.cmd === 'decide' || c.cmd === 'delegate') {
       const result = c.cmd === 'decide' ? decideCommand(ctx, state, entry.seat, c) : delegateCommand(ctx, state, entry.seat, c);
       state = result.state;
       if (result.reason !== null) reject(result.reason);
+      else pay();
       return;
     }
     const post = heldPost(state, state.seatAssignments[entry.seat]!.seatPerson);
@@ -179,11 +228,14 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   state = freeze(deliverDue(ctx, state));
 
   // 2b. People apply the changes proposed to them so far today (lane 1.1): a bypassed relay holds a grievance.
-  state = freeze(applyPeopleChanges(state, peopleChangesFrom(world, state, ctx.proposals), day, world.rules.people));
+  state = freeze(applyPeopleChanges(state, peopleChangesFrom(world, state, ctx.proposals), day, world.rules.people, world.map.world.vocabularies.ranks));
 
   // 2c. Plans: edits that arrived are answered, then goals awaiting a plan are drafted within the daily cap (lane 1.2).
   state = freeze(plansPhase(ctx, state, options.viewCache ?? createViewCache()));
   state = freeze(sendMessages(state, ctx.outbox.splice(0)));
+
+  // 2d. Recruitment (lane 1.7): levies due muster into new blocks, enlistments that end disband; one proposal per block.
+  state = freeze(recruitmentPhase(ctx, state));
 
   // 3. Operations: approved plans executed axis by axis (lane 1.4), then every march a day further.
   state = freeze(operationsPhase(ctx, state));
@@ -199,6 +251,9 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   // 4a. Stragglers rejoin, then stores on hand fall or refill, from today's supply trace (lanes 0.5, 1.3; only with a map).
   state = freeze(storesPhase(ctx, state, mapped.derived, new Set(fought.result?.inBattle ?? [])));
 
+  // 4a'. Regions (lane 1.7): the derived self-emancipation term, on its cadence, proposes who reached the lines.
+  state = freeze(regionsPhase(ctx, state));
+
   // 4b. Situations, after the map so a cause sees today's control: fire on their causes, surface on what the seat
   // knows, stay live, take history defaults (lane 0.7).
   state = freeze(runSituations(ctx, state));
@@ -208,9 +263,17 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   state = freeze(proposed.state);
   const dayMap = proposed.derived ?? mapped.derived;
 
+  // 4d. The weekly people step (lane 1.5): grievances fade, promises due break, the ladder and rivals, seat initiatives.
+  if (isPeopleWeek(ctx)) {
+    state = freeze(peopleWeek(ctx, state));
+    state = freeze(sendMessages(state, ctx.outbox.splice(0)));
+  }
+
   // 5. Reports on their cycles.
   battleReports(ctx, state);
   generateReports(ctx, state);
+  // Observer letters on their cadence (lane 1.5).
+  state = freeze(observerLetters(ctx, state));
   state = freeze(sendMessages(state, ctx.outbox.splice(0)));
 
   // 6. Pruning.

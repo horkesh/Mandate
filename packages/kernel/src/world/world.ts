@@ -11,6 +11,7 @@
  */
 import type { DepartmentId, FactionId, PostId } from '../ids.ts';
 import type {
+  CensusRecord,
   DepotRecord,
   EdgeRecord,
   InstallationRecord,
@@ -24,6 +25,7 @@ import type {
 import type { PersonRecord } from './people.ts';
 import type { ReportTemplate } from '../knowledge/templates.ts';
 import type { LatencyRules } from '../messages/latency.ts';
+import type { RecruitmentRules, SelfEmancipationRules } from '../recruitment/rules.ts';
 import type { PeopleRules } from '../people/rules.ts';
 import type { CombatRules } from '../combat/rules.ts';
 import type { OperationsRules, PruningRules } from '../operations/rules.ts';
@@ -261,6 +263,10 @@ export interface WorldRules {
   readonly planner: PlannerRules;
   /** Goals and plans (lane 1.2): the goal terms an option's order carries, and how an edit's riskiness is read. */
   readonly plans: PlansRules;
+  /** Governors raising regiments on a call (lane 1.7). */
+  readonly recruitment: RecruitmentRules;
+  /** The derived self-emancipation term (lane 1.7; 0046). */
+  readonly selfEmancipation: SelfEmancipationRules;
 }
 
 export interface TerrainTerm {
@@ -319,6 +325,17 @@ export interface RankTerm {
   readonly kind: string;
 }
 
+/**
+ * A value people hold (lane 1.1). `costOnly` (0074): honouring it never raises its holder's willingness, regard or
+ * standing, never relieves a grievance and never adds a positive term to his compliance; offending it still brings
+ * pushback. A generic flag: the engine never names the value.
+ */
+export interface ValueTerm {
+  readonly id: string;
+  readonly name: StringKey;
+  readonly costOnly: boolean;
+}
+
 export interface Term {
   readonly id: string;
   readonly name: StringKey;
@@ -348,7 +365,7 @@ export interface Vocabularies {
   /** Kinds of rank held side by side (0073). */
   readonly rankKinds: readonly Term[];
   /** Values people hold (lane 1.1, 0005): the engine reads only the pack's rules that name them. */
-  readonly values: readonly Term[];
+  readonly values: readonly ValueTerm[];
   readonly blocs: readonly Term[];
   readonly standingOrderKinds: readonly Term[];
 }
@@ -398,4 +415,6 @@ export interface World {
   readonly depots: readonly DepotRecord[];
   readonly weatherZones: readonly WeatherZoneRecord[];
   readonly people: readonly PersonRecord[];
+  /** Protected census input for the derived self-emancipation term (lane 1.7); empty until a source gives it. */
+  readonly census: readonly CensusRecord[];
 }

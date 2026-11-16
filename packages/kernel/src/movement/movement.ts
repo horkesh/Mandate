@@ -79,3 +79,36 @@ export function locationOf(state: State, id: ForceBlockId): ForceLocation {
 export function blocksIn(state: State, region: RegionId): ForceBlockId[] {
   return (Object.keys(state.forceLocations) as ForceBlockId[]).filter((id) => state.forceLocations[id]!.locRegion === region).sort(strictCompare);
 }
+
+/** Where recruitment proposes a new block stand: its muster region, from the day it musters (lane 1.7). */
+export interface MusterPlacement {
+  readonly block: ForceBlockId;
+  readonly region: RegionId;
+  readonly day: number;
+}
+
+/**
+ * Place new blocks and take disbanded ones off the map (lane 1.7): recruitment's one proposal, `movement`'s part of it.
+ * A placed block must be new here, standing still on land; a removed block must be here. Blocks aboard a removed ship
+ * stay where it was, no longer aboard.
+ */
+export function placeAndRemove(map: WorldIndex, state: State, placements: readonly MusterPlacement[], removals: readonly ForceBlockId[]): State {
+  if (placements.length === 0 && removals.length === 0) return state;
+  const next: Record<ForceBlockId, ForceLocation> = { ...state.forceLocations };
+  const problems: string[] = [];
+  for (const p of placements) {
+    const region = map.regions.get(p.region);
+    if (Object.prototype.hasOwnProperty.call(next, p.block)) problems.push(`force block ${p.block} is already placed`);
+    else if (region === undefined || (region.kind !== 'land' && region.kind !== 'key_point')) problems.push(`force block ${p.block}: muster region ${p.region} is not land`);
+    else next[p.block] = { locRegion: p.region, locAboard: null, locSinceDay: p.day, locMarch: null };
+  }
+  for (const id of [...removals].sort(strictCompare)) {
+    if (!Object.prototype.hasOwnProperty.call(next, id)) problems.push(`force block ${id} is not placed`);
+    delete next[id];
+    for (const other of (Object.keys(next) as ForceBlockId[]).sort(strictCompare)) {
+      if (next[other]!.locAboard === id) next[other] = { ...next[other]!, locAboard: null };
+    }
+  }
+  if (problems.length > 0) throw new MovementError(problems);
+  return { ...state, forceLocations: next };
+}

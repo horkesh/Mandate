@@ -22,3 +22,4 @@ s_army_west,Army of Highcairn,army,s_war,s_war_office,s_west_hills,,,,TB-DESIGN,
 s_corran_command,Corran Fort,fort_command,s_war,s_war_office,mere_crossing,,corran_fort,,TB-DESIGN,
 s_coast_command,Gullhaven Batteries,fort_command,s_war,s_war_office,s_coast,,southern_batteries,,TB-DESIGN,
 s_lowmarch_governor,Governor of Lowmarch,governor,s_province,,s_coast_east,,,,TB-DESIGN,"Answers the Southern War Office by requisition, not by command."
+n_brenmark_governor,Governor of Brenmark,governor,n_province,,n_heartland,,,,TB-DESIGN,"Answers the First Minister's calls for regiments by his own compliance (lane 1.7)."

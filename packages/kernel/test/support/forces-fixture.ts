@@ -40,6 +40,7 @@ export function person(id: string, faction: string | null, temper: PersonTemper 
     temperament: { boldness: cited(temper.boldness), candour: cited(temper.candour) },
     values: (temper.values ?? []).map((v) => ({ value: v, cites: [{ source: 'FIXTURE', at: null }] })),
     regard: cited(temper.regard),
+    regardOthers: [],
     traits: [],
     bloc: null,
     ranks: [],

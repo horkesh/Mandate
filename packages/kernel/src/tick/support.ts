@@ -37,9 +37,10 @@ export function sendSupportRequest(ctx: TickContext, state: State, from: PersonI
     msgArriveDay: leg.arrive,
     msgVia: [],
     msgPending: [],
-    msgOrder: { orderKind: 'support', orderIssuer: from, orderTarget: toPost, orderGoal: goal, orderEdit: null, orderBypass: false, orderIssuedDay: ctx.day },
+    msgOrder: { orderKind: 'support', orderIssuer: from, orderTarget: toPost, orderGoal: goal, orderEdit: null, orderCall: null, orderBypass: false, orderIssuedDay: ctx.day },
     msgReport: null,
     msgTruth: null,
+    msgVerb: null,
   };
   ctx.outbox.push(msg);
   fire(ctx, 'messages.sent');

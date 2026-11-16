@@ -10,7 +10,8 @@
  * - `decide`, `delegate`: a situation's decision, or handing it to a holder (lane 0.7).
  * The Phase 1 verbs join this union; the verb-list test then lists them.
  */
-import type { ForceBlockId, PostId, RegionId, SituationId } from '../ids.ts';
+import type { ForceBlockId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
+import type { CounterTerms } from '../audience/counters.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { EditKind, Posture } from '../plans/goal.ts';
 
@@ -71,6 +72,22 @@ export interface GoCommand {
   readonly bypass: boolean;
 }
 
+/**
+ * A call for regiments to a governor's post (lane 1.7): an order through people. He answers by his own compliance with
+ * the pack's call terms; his answer sets how many regiments he raises and when they muster (`tick/recruitment.ts`).
+ */
+export interface CallCommand {
+  readonly cmd: 'call';
+  /** The governor's post. */
+  readonly to: PostId;
+  /** Regiments asked of him. */
+  readonly regiments: number;
+  /** Days the men are enlisted for, from the muster. */
+  readonly termDays: number;
+  readonly route: RouteKind;
+  readonly bypass: boolean;
+}
+
 export interface ChooseCommand {
   readonly cmd: 'choose';
   /** The request this answers (`SeatRequest.requestKey`). */
@@ -96,9 +113,95 @@ export interface DelegateCommand {
   readonly to: PostId;
 }
 
+/**
+ * Lane 1.5: the people verbs. Each is an order to a person, answered through his compliance (FOUNDATION section 5).
+ * None moves a division or names a place outside an order to a person (hard rule 1): a transfer names two posts and an
+ * amount, and the sending commander picks the blocks (0033); an inquiry may name a region only as its subject (0040).
+ */
+export const RELIEF_MODES = ['own_request', 'outright', 'quiet_department'] as const;
+export type ReliefMode = (typeof RELIEF_MODES)[number];
+
+/** Appoint a person to a post (a vacant one: relieve its holder first), optionally conferring a rank (a volunteer general). */
+export interface AppointCommand {
+  readonly cmd: 'appoint';
+  readonly post: PostId;
+  readonly person: PersonId;
+  readonly rank: string | null;
+  readonly route: RouteKind;
+}
+
+/** Relieve a post's holder, by mode: to a quiet department (`to`, a vacant post), at his own request, or outright. */
+export interface RelieveCommand {
+  readonly cmd: 'relieve';
+  readonly post: PostId;
+  readonly mode: ReliefMode;
+  readonly to: PostId | null;
+  readonly route: RouteKind;
+}
+
+/** Transfer a force between two posts (0033): a number of blocks or a strength in men; the sending commander picks. */
+export interface TransferCommand {
+  readonly cmd: 'transfer';
+  readonly from: PostId;
+  readonly to: PostId;
+  readonly force: 'blocks' | 'men';
+  readonly amount: number;
+  readonly route: RouteKind;
+}
+
+/** Ask a post's holder for a report: on his own command, or on a region as its subject (0040). */
+export interface InquireCommand {
+  readonly cmd: 'inquire';
+  readonly to: PostId;
+  readonly subject: RegionId | null;
+  readonly route: RouteKind;
+}
+
+/** Ask the holders of these posts for written advice on an open situation; each answer is a stance on record (0040). */
+export interface ConsultCommand {
+  readonly cmd: 'consult';
+  readonly situation: SituationId;
+  readonly posts: readonly PostId[];
+}
+
+/** Hear a commander out about his plan, before or during, with counters (P3). */
+export interface AudienceCommand {
+  readonly cmd: 'audience';
+  readonly to: PostId;
+  readonly counters: readonly CounterTerms[];
+}
+
+/** Send a rostered person to a commander's headquarters as an observer, reporting to the sender (0040). */
+export interface ObserverCommand {
+  readonly cmd: 'observer';
+  readonly person: PersonId;
+  readonly to: PostId;
+  readonly route: RouteKind;
+}
+
+/** Promise a person advancement (M2's promise): kept by an appointment before it falls due. */
+export interface PromiseCommand {
+  readonly cmd: 'promise';
+  readonly person: PersonId;
+}
+
+/** Press a person: oversight rises for a while, and he holds a grievance. */
+export interface PressureCommand {
+  readonly cmd: 'pressure';
+  readonly person: PersonId;
+}
+
+/** Address a bloc: a typed proposal for `politics`, which lane 1.6 applies. */
+export interface AddressCommand {
+  readonly cmd: 'address';
+  readonly bloc: string;
+}
+
+export type VerbCommand = AppointCommand | RelieveCommand | TransferCommand | InquireCommand | ConsultCommand | AudienceCommand | ObserverCommand | PromiseCommand | PressureCommand | AddressCommand;
+
 /** What a seat may send in a `commands` answer. */
-export type SeatCommand = OrderCommand | ReviewCommand | GoCommand | DecideCommand | DelegateCommand;
+export type SeatCommand = OrderCommand | ReviewCommand | GoCommand | CallCommand | DecideCommand | DelegateCommand | VerbCommand;
 
-export type Command = OrderCommand | ReviewCommand | GoCommand | ChooseCommand | DecideCommand | DelegateCommand;
+export type Command = OrderCommand | ReviewCommand | GoCommand | CallCommand | ChooseCommand | DecideCommand | DelegateCommand | VerbCommand;
 
-export const COMMAND_KINDS = ['choose', 'decide', 'delegate', 'go', 'order', 'review'] as const;
+export const COMMAND_KINDS = ['address', 'appoint', 'audience', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer'] as const;

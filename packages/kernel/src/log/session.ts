@@ -66,10 +66,34 @@ export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
     if (c.cmd === 'decide') return { day, seat, command: { cmd: 'decide', situation: c.situation, options: [...c.options] } };
     if (c.cmd === 'delegate') return { day, seat, command: { cmd: 'delegate', situation: c.situation, to: c.to } };
     if (c.cmd === 'go') return { day, seat, command: { cmd: 'go', to: c.to, route: c.route, bypass: c.bypass } };
+    if (c.cmd === 'call') return { day, seat, command: { cmd: 'call', to: c.to, regiments: c.regiments, termDays: c.termDays, route: c.route, bypass: c.bypass } };
     if (c.cmd === 'review') {
       const e = c.edit;
       const edit = e === null ? null : { kind: e.kind, axis: e.axis, region: e.region, via: [...e.via], concentration: e.concentration };
       return { day, seat, command: { cmd: 'review', to: c.to, action: c.action, edit, route: c.route, bypass: c.bypass } };
+    }
+    // Lane 1.5: the people verbs, copied field by field like the rest.
+    switch (c.cmd) {
+      case 'appoint':
+        return { day, seat, command: { cmd: 'appoint', post: c.post, person: c.person, rank: c.rank, route: c.route } };
+      case 'relieve':
+        return { day, seat, command: { cmd: 'relieve', post: c.post, mode: c.mode, to: c.to, route: c.route } };
+      case 'transfer':
+        return { day, seat, command: { cmd: 'transfer', from: c.from, to: c.to, force: c.force, amount: c.amount, route: c.route } };
+      case 'inquire':
+        return { day, seat, command: { cmd: 'inquire', to: c.to, subject: c.subject, route: c.route } };
+      case 'consult':
+        return { day, seat, command: { cmd: 'consult', situation: c.situation, posts: [...c.posts] } };
+      case 'audience':
+        return { day, seat, command: { cmd: 'audience', to: c.to, counters: c.counters.map((k) => ({ kind: k.kind, value: k.value, boldness: k.boldness, from: k.from, men: k.men })) } };
+      case 'observer':
+        return { day, seat, command: { cmd: 'observer', person: c.person, to: c.to, route: c.route } };
+      case 'promise':
+        return { day, seat, command: { cmd: 'promise', person: c.person } };
+      case 'pressure':
+        return { day, seat, command: { cmd: 'pressure', person: c.person } };
+      case 'address':
+        return { day, seat, command: { cmd: 'address', bloc: c.bloc } };
     }
     const g = c.goal;
     const goal = {

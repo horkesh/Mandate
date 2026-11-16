@@ -10,6 +10,7 @@
  */
 import { ids, phase0, world as w } from '@mandate/kernel';
 import { z } from 'zod';
+import { COMPLIANCE_RUNGS } from '@mandate/kernel';
 
 type IdKind = ids.IdKind;
 
@@ -144,6 +145,9 @@ export const PersonSchema = z.strictObject({
   temperament: z.strictObject({ boldness: statCentre, candour: statCentre }).describe('Boldness and candour (lane 1.1): cited centres history’s shadow draws around at setup.'),
   values: z.array(z.strictObject({ value: termId, cites: z.array(citation) })).describe('The values he holds, from the pack’s values vocabulary, each cited (lane 1.1); empty when none is known.'),
   regard: statCentre.describe('His regard for his own faction’s principal at the pack’s first start, a cited centre (lane 1.1).'),
+  regardOthers: z
+    .array(z.strictObject({ toward: idOf('person'), direction: z.enum(w.STAT_DIRECTIONS), cites: z.array(citation) }))
+    .describe('His regard for other people at the pack’s first start (lane 1.5: rivals, partners), each a cited direction.'),
   traits: z.array(z.strictObject({ trait: termId, cites: z.array(citation) })),
   bloc: termId.nullable(),
   ranks: z.array(z.strictObject({ rank: termId, from: historicalDate })),
@@ -344,6 +348,45 @@ export const RulesSchema = z.strictObject({
       holdingRisk: int.describe('A holding action’s riskiness, for reading an edit’s boldness against his own best plan (0062).'),
     })
     .describe('Goals and plans (0040, 0062): design parameters the pack states.'),
+  recruitment: z
+    .strictObject({
+      callTerms: z
+        .strictObject({ boldness: permille, honours: z.array(termId), offends: z.array(termId) })
+        .describe('How a governor reads a call for regiments: its boldness and the values it honours and offends (pack data; 0074).'),
+      raisingPostKinds: z.array(termId).describe('Post kinds whose holders answer a call (a governor’s). A post of a self-governing department never does.'),
+      menPerRegiment: positive.describe('Men in a regiment.'),
+      arm: termId.describe('The arm new blocks are.'),
+      storesDays: nonNegative.describe('Days of stores a new block is issued at muster.'),
+      musterDays: nonNegative.describe('Days from a call’s arrival to muster, for a governor who complies at once.'),
+      rungs: z
+        .array(z.strictObject({ rung: z.enum(COMPLIANCE_RUNGS), sharePermille: nonNegative, delayDays: nonNegative }))
+        .describe('The compliance rungs that raise men: permille of the quota raised and days added to the muster. A rung not listed raises none and sends a memorandum back.'),
+      loyaltyFull: permille.describe('The loyalty to his side at which a governor’s region gives its full share.'),
+      loyaltyWeight: permille.describe('How far loyalty below that scales the share down (0: loyalty is not read).'),
+      maxTermDays: positive.describe('The longest enlistment a call may name, in days.'),
+      musterBlockedDays: nonNegative.describe('Days a levy due to muster waits while its region is enemy-held; past them it lapses, reported to the caller.'),
+    })
+    .describe('Governors raising regiments on a call (lane 1.7): design parameters the pack states. No men stock in 1A: a regiment goes straight into a block.'),
+  selfEmancipation: z
+    .strictObject({
+      linesFaction: idOf('faction').nullable().describe('The faction whose lines people reach (pack data); null: the pack has no such term.'),
+      agencyReasons: z
+        .strictObject({ resistanceWithin: z.string().regex(/^agency:[a-z0-9-]+$/), resistanceElsewhere: z.string().regex(/^agency:[a-z0-9-]+$/), flightToLines: z.string().regex(/^agency:[a-z0-9-]+$/) })
+        .describe('The reason type each cause carries, one of the gate register’s agency types (SENSITIVE-HISTORY E3): cause 1 in the enslaving side’s own regions, and elsewhere (a neutral government’s, or the lines’ side’s own); cause 2.'),
+      protectedFlags: z
+        .array(z.strictObject({ flag: termId, regions: z.array(idOf('region')) }))
+        .describe('Where slavery has ended, in law or in fact (G-1.7b; the District of Columbia act of April 1862 is the model): while a flag is set, the term skips its regions. A policy protecting people who reach the lines is a policy flag, which never skips a region; holding a region protects no one by itself.'),
+      cadenceDays: positive.describe('The term is recomputed every this many days.'),
+      resistancePerMillion: int.min(0).max(1000000).describe('Cause 1, resistance and flight within, keyed to no one’s reach: per million of the census per cadence.'),
+      pressureFlags: z.array(z.strictObject({ flag: termId, permille: nonNegative, agency: z.string().regex(/^agency:[a-z0-9-]+$/) })).describe('Situation flags whose pressure (impressment, say) raises both causes, permille of each, each with its own agency type (N9).'),
+      flightPerMillion: int.min(0).max(1000000).describe('Cause 2, flight to the lines, per million of the census per cadence at full reach and policy.'),
+      reachWithForce: permille.describe('Reach when the lines’ side holds the region or a neighbour with its force there.'),
+      reachLinesOnly: permille.describe('Reach when it holds one with no force there.'),
+      holdShare: permille.describe('The control share at which the lines’ side holds a region.'),
+      policyBase: permille.describe('Known policy, permille: the base.'),
+      policyFlags: z.array(z.strictObject({ flag: termId, permille: int.min(-1000).max(1000) })).describe('Situation flags that raise or lower known policy, signed permille.'),
+    })
+    .describe('The derived self-emancipation term (0046; SENSITIVE-HISTORY 3.2): never a lever. Its rates wait on sources; a pack with no census has no arrivals.'),
   people: z
     .strictObject({
       shadow: z
@@ -391,6 +434,40 @@ export const RulesSchema = z.strictObject({
         })
         .describe('How temperament and values shade what a man sees and asks (lane 0.6’s stand-in rules, now the pack’s, 0058).'),
       grievances: z.strictObject({ bypassedWeight: nonNegative }).describe('Weights of grievances the people core applies.'),
+      attention: z
+        .strictObject({
+          cap: nonNegative,
+          refillDays: positive,
+          costs: z.strictObject(Object.fromEntries(phase0.ATTENTION_KEYS.map((k) => [k, nonNegative])) as Record<(typeof phase0.ATTENTION_KEYS)[number], typeof nonNegative>),
+        })
+        .describe('The president’s attention (0025, 0040): a weekly cap, its refill, and the cost table (FOUNDATION section 5). Design parameters.'),
+      verbs: z
+        .strictObject({
+          weekDays: positive,
+          orderValues: z
+            .array(z.strictObject({ order: z.string().min(1), boldness: permille.nullable(), honours: z.array(termId), offends: z.array(termId), gateTopics: z.array(termId), notCheaperThan: z.string().min(1).nullable() }))
+            .describe('The map from orders to values (0074): gate content; a row tagged with gate topics needs the gate reviewer’s sign-off.'),
+          relief: z.array(z.strictObject({ mode: z.enum(['quiet_department', 'own_request', 'outright']), grievanceWeight: nonNegative, regardDelta: signedPermille, standingDelta: signedPermille })),
+          inquiry: z.strictObject({ freePerWeek: nonNegative, pesteredWeight: nonNegative }),
+          promise: z.strictObject({ dueDays: nonNegative, brokenWeight: nonNegative, brokenRegard: signedPermille }),
+          pressure: z.strictObject({ weight: nonNegative, oversight: nonNegative, days: nonNegative }),
+          observer: z.strictObject({ oversight: nonNegative, monitoredWeight: nonNegative, letterEveryDays: positive }),
+          audience: z.strictObject({ maxCounters: nonNegative, cooldownDays: nonNegative, vindicateRegard: signedPermille, vindicateStanding: signedPermille }),
+          ladder: z.strictObject({ thresholds: z.array(int), dispositionPerRung: nonNegative, publicStanding: nonNegative, rivalStanding: nonNegative, decayDivisor: positive }),
+          initiatives: z.array(
+            z.strictObject({
+              id: termId,
+              kinds: z.array(termId),
+              boldness: permille,
+              honours: z.array(termId),
+              offends: z.array(termId),
+              fromRung: z.enum(phase0.LADDER_RUNGS),
+              cooldownDays: positive,
+              recommends: termId,
+            }),
+          ),
+        })
+        .describe('The people verbs, the ladder, the audience and seat initiatives (lane 1.5). Design parameters.'),
     })
     .describe('The people core (lane 1.1): history’s shadow, compliance, reading orders and reports, traits. Design parameters the pack states (0072), not sourced facts.'),
 });
@@ -429,7 +506,9 @@ export const VocabulariesSchema = z.strictObject({
   traits: z.array(z.strictObject({ id: termId, name: stringKey, gate: z.boolean() })),
   ranks: z.array(z.strictObject({ id: termId, name: stringKey, seniority: nonNegative, kind: termId.describe('Its kind from rankKinds: a person holds one rank of each kind at once (0073).') })),
   rankKinds: z.array(term).describe('Kinds of rank held side by side (0073), such as regular, volunteer and brevet.'),
-  values: z.array(term).describe('Values people hold (lane 1.1); the engine reads only the people rules that name them.'),
+  values: z
+    .array(z.strictObject({ id: termId, name: stringKey, costOnly: z.boolean().default(false).describe('0074: honouring it never helps its holder; offending it still costs.') }))
+    .describe('Values people hold (lane 1.1); the engine reads only the people rules that name them.'),
   blocs: z.array(term),
   standingOrderKinds: z.array(term),
 });
@@ -461,6 +540,9 @@ export const WorldSchema = z.strictObject({
   depots: z.array(DepotSchema),
   weatherZones: z.array(WeatherZoneSchema),
   people: z.array(PersonSchema),
+  census: z
+    .array(z.strictObject({ region: idOf('region'), enslavedPopulation: nonNegative, provenance }))
+    .describe('Protected census input (the gate’s region_enslaved_population): read only by the derived self-emancipation term, never written, counted or spent by any seat. Rows only where a source gives it.'),
 });
 
 const standingOrder = z.strictObject({
@@ -521,6 +603,7 @@ export const ScenarioSchema = z.strictObject({
   ),
   control: z.array(z.strictObject({ region: idOf('region'), shares: z.array(z.strictObject({ faction: idOf('faction'), permille })) })),
   fortification: z.array(z.strictObject({ region: idOf('region'), levelPermille: permille })),
+  loyalty: z.array(z.strictObject({ region: idOf('region'), shares: z.array(z.strictObject({ faction: idOf('faction'), permille })) })).describe('Region loyalty at the start (lane 1.7): each faction’s share, summing to at most 1000. Never a stand-in for control.'),
   edgeConditions: z.array(z.strictObject({ edge: idOf('edge'), conditionPermille: permille })),
   obstructions: z.array(z.strictObject({ edge: idOf('edge'), by: idOf('installation').nullable(), provenance })),
   depotConditions: z.array(z.strictObject({ depot: idOf('depot'), conditionPermille: permille })),

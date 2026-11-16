@@ -63,6 +63,8 @@
     "standing": { "conflictWindowDays": 7 },
     "planner": {"hopShare":250,"menPerDay":1000,"flankOverlapMax":600,"flankLengthMax":1600,"flankPenalty":2000,"retrogradeSlack":0,"dedupeOverlap":800,"dedupeArrival":1500,"topN":4,"maxSearches":64,"reducePerLevel":10,"clearDays":4000,"forceDays":1000,"forcingThreat":4000,"assaultDays":1000,"pincerWindow":2000,"dependenceCost":120,"partnerWillingnessWeight":300, "partnerRegardWeight": 1000, "partnerStandingWeight": 1000, "partnerStandingPivot": 500,"dailyDraftCap":3,"weights":{"riskBase":200,"supplyBase":1100,"concentrationPerTimid":250,"pausePerTimid":400,"twoAxesAt":500,"threeAxesAt":800,"goalFit":400,"ratioBonusMax":300,"ratioBonusDivisor":10,"ratioPenaltyMax":600,"latePenaltyMax":600,"latePerDay":40,"earlyBonusMax":300,"earlyDivisor":25000,"holdingTime":-300,"traitBase":1100,"hasteDivisor":10000,"supplyDivisor":10000,"outrunDivisor":4,"exposureDivisor":20,"coordinationDivisor":10000,"perExtraAxis":50,"gloryDivisor":5,"cautionDivisor":2}},
     "plans": {"goalDefaults":{"risk":500,"deadlineDays":20,"rail":true,"river":false,"sea":false,"neutral":false,"awaitWord":false,"approveAsDrafted":true},"holdingRisk":-400},
+    "recruitment": {"callTerms":{"boldness":500,"honours":["duty"],"offends":["home_rule"]},"raisingPostKinds":["governor"],"menPerRegiment":1000,"arm":"infantry","storesDays":10,"musterDays":5,"rungs":[{"rung":"exceed","sharePermille":1200,"delayDays":0},{"rung":"comply","sharePermille":1000,"delayDays":0},{"rung":"comply_with_reservations","sharePermille":1000,"delayDays":3},{"rung":"slow_walk","sharePermille":1000,"delayDays":10},{"rung":"reinterpret","sharePermille":600,"delayDays":5}],"loyaltyFull":800,"loyaltyWeight":500,"maxTermDays":1095,"musterBlockedDays":14},
+    "selfEmancipation": {"linesFaction":"north","agencyReasons":{"resistanceWithin":"agency:fen-flight","resistanceElsewhere":"agency:fen-flight","flightToLines":"agency:fen-flight"},"protectedFlags":[{"flag":"fen_bondage_ended","regions":["n_west_front","n_east_front"]}],"cadenceDays":7,"resistancePerMillion":200,"pressureFlags":[],"flightPerMillion":1000,"reachWithForce":1000,"reachLinesOnly":400,"holdShare":600,"policyBase":500,"policyFlags":[{"flag":"sanctuary_act","permille":400}]},
     "people": {
       "shadow": { "centrePermille": { "high": 800, "above": 650, "average": 500, "below": 350, "low": 200 }, "unknownCentre": 500, "spread": 100, "unknownSpread": 200, "regardPermille": { "high": 600, "above": 300, "average": 0, "below": -300, "low": -600 }, "regardUnknown": 0 },
       "compliance": { "valueWeight": 200, "temperamentWeight": 400, "regardWeight": 300, "deterrenceWeight": 250, "standingShield": 600, "shortfallWeight": 500, "exceedAt": 450, "complyAt": 150, "reservationsAt": 0, "severeBelow": -450, "slowWalkAbove": -200, "candidAt": 500, "protectedStandingAt": 600, "protectedDeterrenceAt": 200, "grievanceWeight": 300, "grievanceReasonAt": 100, "temperamentReasonAt": 300, "regardReasonAt": 300, "fearReasonAt": 500, "departureWeight": 500, "departureReasonAt": 200, "reinforceShareTimid": 10, "reinforceShareBold": 50, "conflictChainWeight": 200, "conflictNewerWeight": 100 },
@@ -71,7 +73,9 @@
       "relay": { "reservationsHoldDays": 0, "slowWalkHoldDays": 2, "reinterpretHoldDays": 4 },
       "filter": { "holdFor": [{ "value": "order", "days": 1 }], "trimFor": [{ "value": "reputation", "claimKinds": ["own-losses"] }], "candidAt": 500 },
       "traits": { "perceptionPivot": 500, "perceptionPerPoint": 3, "perceptionValues": [{ "value": "caution", "permille": 500 }], "perceptionMax": 4000, "demandBase": 1000, "demandPerPoint": 2, "assaultMargin": 1500, "holdBand": 1500, "wantsMenPermille": 800, "paperPermille": 1400 },
-      "grievances": { "bypassedWeight": 150 }
+      "grievances": { "bypassedWeight": 150 },
+      "attention": { "cap": 12, "refillDays": 7, "costs": { "order": 1, "review_edit": 1, "review_approve": 0, "review_send_back": 0, "go": 0, "decide_staff": 0, "decide_overrule": 1, "delegate": 0, "appoint": 1, "relieve": 1, "transfer": 1, "inquire": 0, "consult": 1, "audience": 1, "observer": 1, "promise": 1, "pressure": 1, "address": 1 } },
+      "verbs": { "weekDays": 7, "orderValues": [{ "order": "verb:appoint", "boldness": null, "honours": ["career", "reputation"], "offends": [], "gateTopics": [], "notCheaperThan":null }, { "order": "verb:consult", "boldness": null, "honours": ["duty"], "offends": [], "gateTopics": [], "notCheaperThan":null }, { "order": "verb:inquire", "boldness": null, "honours": ["duty"], "offends": [], "gateTopics": [], "notCheaperThan":null }, { "order": "verb:observer", "boldness": null, "honours": ["duty"], "offends": [], "gateTopics": [], "notCheaperThan":null }, { "order": "verb:relieve", "boldness": null, "honours": [], "offends": ["career", "reputation"], "gateTopics": [], "notCheaperThan":null }, { "order": "verb:transfer", "boldness": null, "honours": ["duty"], "offends": ["reputation"], "gateTopics": [], "notCheaperThan":null }], "relief": [{ "mode": "quiet_department", "grievanceWeight": 100, "regardDelta": -100, "standingDelta": 0 }, { "mode": "own_request", "grievanceWeight": 50, "regardDelta": 0, "standingDelta": 0 }, { "mode": "outright", "grievanceWeight": 250, "regardDelta": -250, "standingDelta": -100 }], "inquiry": { "freePerWeek": 2, "pesteredWeight": 60 }, "promise": { "dueDays": 30, "brokenWeight": 200, "brokenRegard": -150 }, "pressure": { "weight": 150, "oversight": 200, "days": 14 }, "observer": { "oversight": 150, "monitoredWeight": 100, "letterEveryDays": 7 }, "audience": { "maxCounters": 3, "cooldownDays": 7, "vindicateRegard": 150, "vindicateStanding": 50 }, "ladder": { "thresholds": [100, 200, 300, 400, 500, 650, 800], "dispositionPerRung": 60, "publicStanding": 600, "rivalStanding": 700, "decayDivisor": 4 }, "initiatives": [{ "id": "write_to_the_press", "kinds": ["general"], "boldness": 600, "honours": ["reputation", "glory"], "offends": [], "fromRung": "loyal", "cooldownDays": 28, "recommends": "publish-in-the-press" }] }
     },
     "seasons": [
       { "reason": "mud", "defaultMonths": [1, 2, 3, 12], "lengthPermille": 1500, "capacityPermille": 600 },
@@ -112,7 +116,7 @@
       { "id": "executive", "name": "department_kind.executive", "government": true },
       { "id": "war_ministry", "name": "department_kind.war_ministry" },
       { "id": "navy_ministry", "name": "department_kind.navy_ministry" },
-      { "id": "province", "name": "department_kind.province", "government": true },
+      { "id": "province", "name": "department_kind.province", "government": true }, { "id": "shire", "name": "department_kind.shire", "government": true },
       { "id": "private", "name": "department_kind.private" }
     ],
     "arms": [
@@ -155,7 +159,8 @@
       { "id": "career", "name": "value.career" },
       { "id": "caution", "name": "value.caution" },
       { "id": "abolition", "name": "value.abolition" },
-      { "id": "glory", "name": "value.glory" }
+      { "id": "glory", "name": "value.glory" },
+      { "id": "home_rule", "name": "value.home_rule" }
     ],
     "ranks": [
       { "id": "colonel", "name": "rank.colonel", "seniority": 1, "kind": "regular" },

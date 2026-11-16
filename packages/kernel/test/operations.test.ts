@@ -433,6 +433,9 @@ describe('works, pursuit, oversight, assumed stores and pruning (lane 1.4\'s fil
     // The same old response, named by a plan, survives however old it is.
     const named = { ...withOld, planRecords: { ...withOld.planRecords, [P('a_army')]: { ...withOld.planRecords[P('a_army')]!, planResponse: 'old|a_partner' } } };
     expect(Object.keys(pruneResponses(named, 400, 60).state.orderResponses)).toContain('old|a_partner');
+    // And named by a levy (lane 1.7: the governor's answer to the call that raised it).
+    const levied = { ...withOld, postLevies: { 'levy:x': { levyResponse: 'old|a_partner' } as unknown as State['postLevies'][string] } };
+    expect(Object.keys(pruneResponses(levied, 400, 60).state.orderResponses)).toContain('old|a_partner');
     const { operationsRulesProblems } = await import('../src/operations/rules.ts');
     const r = g.world.map.world.rules;
     expect(operationsRulesProblems(r.operations, r.pruning)).toEqual([]);

@@ -1,6 +1,6 @@
 region,department,sources,notes
 n_capital,n_executive,TB-DESIGN,The North is governed from Aldmoor; the First Minister's office is its civil government.
-n_heartland,n_executive,TB-DESIGN,
+n_heartland,n_province,TB-DESIGN,The Shire of Brenmark: its governor sits here.
 n_west_hills,n_executive,TB-DESIGN,
 n_railhead,n_executive,TB-DESIGN,
 n_east_plain,n_executive,TB-DESIGN,

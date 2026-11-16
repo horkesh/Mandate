@@ -32,10 +32,16 @@ import type { TransitMessage } from './messages/transit.ts';
 import type { OperationTable } from './operations/operations.ts';
 import type { PlanRecord } from './plans/plans.ts';
 import type { SeatAssignment } from './seats/seats.ts';
-import type { PersonGrievance, PersonStatus, PersonTrue, Stance } from './people/people.ts';
+import type { PersonGrievance, PersonPromise, PersonStatus, PersonTrue, Stance } from './people/people.ts';
+import type { AttentionState } from './seats/attention.ts';
+import type { LadderRung } from './people/verb-rules.ts';
+import type { AudienceRecord } from './audience/audience.ts';
+import type { ObserverPosting } from './command/observers.ts';
 import type { PersonRank } from './people/ranks.ts';
 import type { OrderResponse } from './proxy/responses.ts';
-import type { FortificationTable } from './regions/regions.ts';
+import type { ArrivalTable, FortificationTable, LoyaltyTable } from './regions/regions.ts';
+import type { EnlistmentTable } from './forces/enlistment.ts';
+import type { LevyTable } from './command/levies.ts';
 import type { BattleTable } from './combat/records.ts';
 
 export interface State {
@@ -83,6 +89,10 @@ export interface State {
   readonly postStates: PostTable;
   /** Which post commands each block (division-to-post assignment). Writer: `command`. */
   readonly forceAssignments: AssignmentTable;
+  /** Each raised block's enlistment: who raised it on whose call, and the day its men's term ends (lane 1.7). Writer: `forces`. */
+  readonly forceEnlistments: EnlistmentTable;
+  /** Calls a governor answered and has not yet mustered, by the call's id: a prior order on his post (lane 1.7). Writer: `command`. */
+  readonly postLevies: LevyTable;
   /** Edge condition, permille, for edges not intact (an intact edge is absent). Writer: `infrastructure`. */
   readonly infraEdgeCondition: ConditionTable<EdgeId>;
   /** Depot condition, permille, for depots not intact. Writer: `infrastructure`. */
@@ -94,6 +104,10 @@ export interface State {
    * Nothing changes it in Phase 0; the siege method (0062) reads it. Writer: `regions`.
    */
   readonly regionFortification: FortificationTable;
+  /** Loyalty per region, each faction's share permille, from the start (lane 1.7); never a stand-in for control. Writer: `regions`. */
+  readonly regionLoyalty: LoyaltyTable;
+  /** People who have reached the lines, by the region where they reached them (0046; the gate's `region_reached_union_lines`). Writer: `regions`, proposed only by the derived self-emancipation term; never a lever. */
+  readonly regionReachedUnionLines: ArrivalTable;
   /**
    * Each person's ranks, one per kind (regular, volunteer, brevet) held at once, each with the date he holds it from
    * (seniority); from the start date (0050, 0073). A person absent holds none; a kind absent, none of that kind. Writer: `people`.
@@ -115,6 +129,22 @@ export interface State {
   readonly personStatus: Readonly<Record<PersonId, PersonStatus>>;
   /** Each man's response to each order that reached him, keyed `order|person` (`proxy/responses.ts`). Writer: `proxy`. */
   readonly orderResponses: Readonly<Record<string, OrderResponse>>;
+  /** Promises the principal made to each person (lane 1.5): kind, day made, day due. Writer: `people`. */
+  readonly personPromises: Readonly<Record<PersonId, readonly PersonPromise[]>>;
+  /** The days each person was inquired of in the last week (his patience, 0040). Writer: `people`. */
+  readonly personInquiries: Readonly<Record<PersonId, readonly number[]>>;
+  /** Each principal seat's attention: what is left this week and the day of its last refill (0025, 0040). Writer: `seats`. */
+  readonly seatAttention: Readonly<Record<SeatId, AttentionState>>;
+  /** Each seat's initiatives, each with the day it last fired, for its cooldown (0040). Writer: `seats`. */
+  readonly seatInitiatives: Readonly<Record<SeatId, Readonly<Record<string, number>>>>;
+  /** Each person's rung on the insubordination ladder; absent is loyal (P5). Writer: `ladder`. */
+  readonly personRungs: Readonly<Record<PersonId, LadderRung>>;
+  /** Rivals (P6), each with the day he became one. Writer: `ladder`. */
+  readonly personRivals: Readonly<Record<PersonId, number>>;
+  /** The last audience held with each person (P3). Writer: `audience`. */
+  readonly audienceHeld: Readonly<Record<PersonId, AudienceRecord>>;
+  /** Observers posted at commanders' headquarters, keyed by the observer (0040). Writer: `command`. */
+  readonly observerPostings: Readonly<Record<PersonId, ObserverPosting>>;
   /** Every battle fought, open or closed, with each day's breakdowns (lane 1.3; `combat/records.ts`). Writer: `combat`. */
   readonly battleRecords: BattleTable;
 }

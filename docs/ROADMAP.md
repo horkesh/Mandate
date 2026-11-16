@@ -1,6 +1,6 @@
 # Roadmap
 
-The game and engine were redesigned on 2026-11-14 (decision records from 0015 on, listed in [decisions/README.md](decisions/README.md); design in [design/FOUNDATION.md](design/FOUNDATION.md)). The phases below come from FOUNDATION section 12, which holds the lane table and sequence. Last commit synced: `8ac975b` (2026-11-16).
+The game and engine were redesigned on 2026-11-14 (decision records from 0015 on, listed in [decisions/README.md](decisions/README.md); design in [design/FOUNDATION.md](design/FOUNDATION.md)). The phases below come from FOUNDATION section 12, which holds the lane table and sequence. Last commit synced: `01993a8` (2026-11-16).
 
 ## Done
 

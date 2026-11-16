@@ -21,6 +21,7 @@ import { editProblems, goalKindOf, goalProblems, sameGoal, type EditSpec, type G
 import { approve, planOf, receiveCounter, release, sendBack, setGoal, type PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import { answerOrder, goalTerms, relayAction, resolveOrderConflict } from '../reading/orders.ts';
+import { callTerms } from '../recruitment/rules.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
 import { isFieldPost, postFaction, relayChain } from '../seats/posts.ts';
 import { fire, hop, oversightOf, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
@@ -84,33 +85,45 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   // Only the routes the principal's menu offers (review N1): an order "in person" would be a visit, a verb of its own.
   if (!ORDER_ROUTES.includes(cmd.route)) return 'route_unavailable';
 
-  let body: Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit'>;
+  let body: Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall'>;
   if (cmd.cmd === 'order') {
     const goal = goalOf(cmd.goal);
     if (goalProblems(goal).length > 0) return 'bad_goal';
     if (goal.goalObjective !== null && !world.regionIds.includes(goal.goalObjective)) return 'bad_goal';
     const commands = commandedBlocks(state, cmd.to);
     if (!goal.goalCommitted.every((b) => commands.includes(b))) return 'bad_goal';
-    body = { orderKind: 'goal', orderGoal: goal, orderEdit: null };
+    body = { orderKind: 'goal', orderGoal: goal, orderEdit: null, orderCall: null };
   } else {
     const plan = planOf(state, cmd.to);
     if (plan === undefined || plan.planIssuer !== issuer.id) return 'no_plan';
     if (cmd.cmd === 'go') {
       if (plan.planStatus !== 'ready') return 'no_plan';
-      body = { orderKind: 'go', orderGoal: null, orderEdit: null };
+      body = { orderKind: 'go', orderGoal: null, orderEdit: null, orderCall: null };
     } else if (cmd.action === 'edit') {
       if (plan.planStatus !== 'review' && plan.planStatus !== 'approved' && plan.planStatus !== 'ready') return 'no_plan';
       if (plan.planApproved === null && plan.planChosen === null) return 'no_plan';
       const edit = editOf(cmd.edit!);
       if (editProblems(edit).length > 0) return 'bad_review';
       if ([edit.editRegion, ...edit.editVia].some((r) => r !== null && !world.regionIds.includes(r))) return 'bad_review';
-      body = { orderKind: 'edit', orderGoal: null, orderEdit: edit };
+      body = { orderKind: 'edit', orderGoal: null, orderEdit: edit, orderCall: null };
     } else {
       if (plan.planStatus !== 'review') return 'no_plan';
-      body = { orderKind: cmd.action, orderGoal: null, orderEdit: null };
+      body = { orderKind: cmd.action, orderGoal: null, orderEdit: null, orderCall: null };
     }
   }
 
+  dispatchOrder(ctx, state, seat, issuer.id, cmd.to, cmd.route, cmd.bypass, body);
+  return null;
+}
+
+/**
+ * Send a validated order down the chain (or around it): the hops, the first leg, a special messenger's price and each
+ * bypassed relay's grievance. Shared by goals, reviews, the word to go and calls (lane 1.7).
+ */
+export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issuerId: PersonId, to: PostId, route: OrderCommand['route'], bypass: boolean, body: Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall'>): MessageId {
+  const { world } = ctx;
+  const cmd = { to, route, bypass };
+  const issuer = { id: issuerId };
   // The whole chain of posts between the principal's own post and the target relays his order.
   const chain = relayChain(state, issuer.id, cmd.to);
   // Vacant relay posts cannot relay: the order skips them.
@@ -137,6 +150,7 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
     msgVia: [],
     msgPending: hops.slice(1),
     msgOrder: { ...body, orderIssuer: issuer.id, orderTarget: cmd.to, orderBypass: cmd.bypass, orderIssuedDay: ctx.day },
+    msgVerb: null,
     msgReport: null,
     msgTruth: null,
   });
@@ -151,7 +165,7 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
       ctx.proposals.push({ proposal: 'grievance', person: state.postStates[p]!.postHolder!, cause: 'bypassed', order: id });
     }
   }
-  return null;
+  return id;
 }
 
 /** A report answering an order: its subject is the post the order was for, and it names the order it answers. */
@@ -187,7 +201,10 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
   const relayer = world.person(msg.msgTo);
   const post = msg.msgToPost!;
   const rules = world.rules.people;
-  const answer = answerOrder(world, start, relayer.id, order.orderIssuer, goalTerms(rules, relayKindOf(start, order)), { oversight: oversightOf(ctx, start, relayer.id, order.orderIssuer).value });
+  // A call is read on the pack's call terms (lane 1.7); a goal, an answer to a plan and the word to go on its goal's. He reads it
+  // watched from where he stands (lane 1.4's oversight).
+  const terms = order.orderKind === 'call' ? callTerms(world.map.world.rules.recruitment) : goalTerms(rules, relayKindOf(start, order));
+  const answer = answerOrder(world, start, relayer.id, order.orderIssuer, terms, { oversight: oversightOf(ctx, start, relayer.id, order.orderIssuer).value });
   const state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: relayer.id, post, role: 'relay', day: ctx.day }));
   const decision = relayAction(rules, answer, relayer.id, post);
   if (decision.action === 'object') {

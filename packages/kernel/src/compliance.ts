@@ -12,6 +12,7 @@ import type {
 import type { ProxyProfile } from './people.ts';
 import {
   assertPermille,
+  clampPermille,
   assertSignedPermille,
   PERMILLE_MAX,
   scale,
@@ -144,8 +145,10 @@ export function resolveDirective(
 
   // Values honoured or offended, in strict order for stable reason lists.
   let values = 0;
+  const costOnly = new Set(context.costOnly ?? []);
   for (const value of [...new Set(terms.honours)].sort(strictCompare)) {
-    if (held.has(value)) {
+    // 0074: honouring a cost-only value never helps.
+    if (held.has(value) && !costOnly.has(value)) {
       values += rules.valueWeight;
       reasons.push({ kind: 'values_honoured', value });
     }
@@ -183,7 +186,13 @@ export function resolveDirective(
   // Deterrence: the expected cost of shirking, discounted by the proxy's own standing.
   const shield = scale(proxy.standing, rules.standingShield);
   const effectiveCredibility = scale(context.leaderCredibility, PERMILLE_MAX - shield);
-  const deterrenceLevel = scale(context.oversight, effectiveCredibility);
+  // Oversight beyond the base, each its own term and reason (lane 1.5).
+  let oversight = context.oversight;
+  for (const t of context.oversightTerms ?? []) {
+    oversight += t.amount;
+    reasons.push({ kind: 'watched', source: t.source, amount: t.amount });
+  }
+  const deterrenceLevel = scale(clampPermille(oversight), effectiveCredibility);
   const deterrence = scale(deterrenceLevel, rules.deterrenceWeight);
   if (deterrenceLevel >= rules.fearReasonAt) reasons.push({ kind: 'fears_sanction' });
   if (proxy.standing >= rules.protectedStandingAt) reasons.push({ kind: 'shielded_by_standing' });

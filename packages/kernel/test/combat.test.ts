@@ -320,14 +320,14 @@ describe('generals hit on their own stream: status to people, the vacancy to com
   it('nothing moves a person out of captured (or killed): the people writer refuses it', () => {
     const g = game(BASE, [], []);
     const rules = g.world.rules.people;
-    const taken = applyPeopleChanges(g.state, [{ change: 'status', person: PER('b_gen'), status: 'captured' }], 3, rules);
+    const taken = applyPeopleChanges(g.state, [{ change: 'status', person: PER('b_gen'), status: 'captured' }], 3, rules, g.world.map.world.vocabularies.ranks);
     for (const status of ['serving', 'wounded', 'killed'] as const) {
-      expect(() => applyPeopleChanges(taken, [{ change: 'status', person: PER('b_gen'), status }], 4, rules)).toThrow('nothing moves a person out of captured');
+      expect(() => applyPeopleChanges(taken, [{ change: 'status', person: PER('b_gen'), status }], 4, rules, g.world.map.world.vocabularies.ranks)).toThrow('nothing moves a person out of captured');
     }
     // Captured again is no change, and keeps its day.
-    expect(applyPeopleChanges(taken, [{ change: 'status', person: PER('b_gen'), status: 'captured' }], 9, rules).personStatus[PER('b_gen')]).toEqual({ statusKind: 'captured', statusDay: 3 });
-    const dead = applyPeopleChanges(g.state, [{ change: 'status', person: PER('b_gen'), status: 'killed' }], 3, rules);
-    expect(() => applyPeopleChanges(dead, [{ change: 'status', person: PER('b_gen'), status: 'serving' }], 4, rules)).toThrow('nothing moves a person out of killed');
+    expect(applyPeopleChanges(taken, [{ change: 'status', person: PER('b_gen'), status: 'captured' }], 9, rules, g.world.map.world.vocabularies.ranks).personStatus[PER('b_gen')]).toEqual({ statusKind: 'captured', statusDay: 3 });
+    const dead = applyPeopleChanges(g.state, [{ change: 'status', person: PER('b_gen'), status: 'killed' }], 3, rules, g.world.map.world.vocabularies.ranks);
+    expect(() => applyPeopleChanges(dead, [{ change: 'status', person: PER('b_gen'), status: 'serving' }], 4, rules, g.world.map.world.vocabularies.ranks)).toThrow('nothing moves a person out of killed');
   });
 });
 

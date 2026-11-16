@@ -8,6 +8,7 @@
  */
 import type { ComplianceRules } from '../compliance.ts';
 import type { StatDirection } from '../world/people.ts';
+import type { AttentionRules, VerbRules } from './verb-rules.ts';
 
 /** How history's shadow draws a true stat at setup (FOUNDATION section 6; 0005, 0026). */
 export interface ShadowRules {
@@ -120,6 +121,10 @@ export interface PeopleRules {
   readonly filter: FilterRules;
   readonly traits: TraitRules;
   readonly grievances: GrievanceRules;
+  /** Lane 1.5: the president's attention (0025, 0040). */
+  readonly attention: AttentionRules;
+  /** Lane 1.5: the order-to-value map and the people verbs, ladder, audience and initiatives. */
+  readonly verbs: VerbRules;
 }
 
 const DIRECTIONS: readonly StatDirection[] = ['high', 'above', 'average', 'below', 'low'];

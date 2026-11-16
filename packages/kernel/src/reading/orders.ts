@@ -24,6 +24,9 @@ import { regardOf } from '../people/people.ts';
 import type { PeopleRules } from '../people/rules.ts';
 import { traitsOf, type PersonTraits, type PrincipalLookup } from '../people/traits.ts';
 import type { State } from '../root-state.ts';
+import { heldPost, sideOfPerson } from '../command/command.ts';
+import { observersAt } from '../command/observers.ts';
+import { dispositionOf } from '../ladder/ladder.ts';
 
 /** The seats layer's World as reading needs it: the map, its rules, and each faction's principal. */
 export type ReadingWorld = PrincipalLookup;
@@ -62,7 +65,72 @@ export function contextFor(world: ReadingWorld, state: State, person: PersonId, 
     leaderCredibility: rules.context.leaderCredibility,
     grievances: (state.personGrievances[person] ?? []).map((g) => ({ kind: g.grievanceKind, weight: g.grievanceWeight })),
     ...(means.supportPromised === undefined ? {} : { supportPromised: means.supportPromised }),
+    ...extraContext(world, state, person),
   };
+}
+
+/**
+ * Lane 1.5's terms of the context, each present only when it bites: his ladder rung (`disposition`), the pack's
+ * cost-only values (0074), and oversight beyond the base stand-in from an observer at his headquarters or recent
+ * pressure, each its own typed term (the lead's condition: a replacement of the base keeps them).
+ */
+function extraContext(world: ReadingWorld, state: State, person: PersonId): Pick<CommandContext, 'disposition' | 'costOnly' | 'oversightTerms'> {
+  const rules = peopleRules(world);
+  const out: { disposition?: number; costOnly?: readonly string[]; oversightTerms?: readonly { readonly source: string; readonly amount: number }[] } = {};
+  const disposition = dispositionOf(rules, state, person);
+  if (disposition !== 0) out.disposition = disposition;
+  const costOnly = world.map.world.vocabularies.values.filter((v) => v.costOnly).map((v) => v.id);
+  if (costOnly.length > 0) out.costOnly = costOnly;
+  const terms: { source: string; amount: number }[] = [];
+  const post = heldPost(state, person);
+  if (post !== null && observersAt(state, post).length > 0) terms.push({ source: 'observer', amount: rules.verbs.observer.oversight });
+  const today = state.stateDay;
+  if ((state.personGrievances[person] ?? []).some((g) => g.grievanceKind === 'pressured' && today - g.grievanceDay < rules.verbs.pressure.days)) terms.push({ source: 'pressure', amount: rules.verbs.pressure.oversight });
+  if (terms.length > 0) out.oversightTerms = terms;
+  return out;
+}
+
+/** The terms of an order in the pack's order-to-value map (0074): `goal:<kind>`, `verb:<verb>` or `policy:<option>`. */
+export function orderTerms(rules: PeopleRules, order: string): DirectiveTerms {
+  const row = rules.verbs.orderValues.find((r) => r.order === order);
+  if (row === undefined) throw new RangeError(`the pack's order-to-value map has no row for "${order}" (rules.people.verbs.orderValues)`);
+  // A row with no boldness asks nothing of his temperament: the order is read against itself, so the gap is none.
+  if (row.boldness === null) return { boldness: 500, ownBest: 500, honours: row.honours, offends: row.offends, required: 0 };
+  return { boldness: row.boldness, honours: row.honours, offends: row.offends, required: 0 };
+}
+
+/** One stakeholder's pushback against an order (hard rule 6: each a typed term). */
+export interface PushbackTerm {
+  readonly person: PersonId;
+  /** `values`: he holds a value the order offends; `recipient`: the man who must carry it out is unwilling. */
+  readonly source: 'values' | 'recipient';
+  readonly amount: number;
+}
+
+/**
+ * Pushback against an order of the map (0074): from every person on the recipient's side who holds a value it offends
+ * (every seat with a stake, not only the man who receives it), and from the recipient's own unwillingness. A row with
+ * `notCheaperThan` is, by construction, never cheaper than the row it names: its pushback is the larger of the two.
+ */
+export function pushbackOf(world: ReadingWorld, state: State, order: string, recipient: PersonId, issuer: PersonId): { readonly total: number; readonly terms: readonly PushbackTerm[]; readonly floor: string | null } {
+  const rules = peopleRules(world);
+  const row = rules.verbs.orderValues.find((r) => r.order === order);
+  if (row === undefined) throw new RangeError(`the pack's order-to-value map has no row for "${order}"`);
+  const side = sideOfPerson(world.map, state, recipient);
+  const terms: PushbackTerm[] = [];
+  for (const p of [...world.map.world.people].sort((a, b) => strictCompare(a.id, b.id))) {
+    if (p.id === issuer || sideOfPerson(world.map, state, p.id) !== side) continue;
+    const offended = row.offends.filter((v) => p.values.some((h) => h.value === v)).length;
+    if (offended > 0) terms.push({ person: p.id, source: 'values', amount: offended * rules.compliance.valueWeight });
+  }
+  const answer = answerOrder(world, state, recipient, issuer, orderTerms(rules, order));
+  if (answer.willingness < 0) terms.push({ person: recipient, source: 'recipient', amount: 0 - answer.willingness });
+  const total = terms.reduce((s, t) => s + t.amount, 0);
+  if (row.notCheaperThan !== null) {
+    const floor = pushbackOf(world, state, row.notCheaperThan, recipient, issuer);
+    if (floor.total > total) return { total: floor.total, terms, floor: row.notCheaperThan };
+  }
+  return { total, terms, floor: null };
 }
 
 /**

@@ -142,7 +142,7 @@ export function combatPhase(ctx: TickContext, state: State): { readonly state: S
   let next = applyForces(state, result.forces).state;
   next = applyBattleRecords(next, result.records);
   next = applyRetreats(next, result.retreats, ctx.day);
-  next = applyPeopleChanges(next, result.people, ctx.day, ctx.world.rules.people);
+  next = applyPeopleChanges(next, result.people, ctx.day, ctx.world.rules.people, ctx.world.map.world.vocabularies.ranks);
   next = applyCombatCommand(next, result.command);
   const stormed = applyFortification(next, result.fortification);
   for (const c of stormed.changes) fire(ctx, 'combat.works_stormed', c.before - c.after);

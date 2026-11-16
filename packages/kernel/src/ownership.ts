@@ -90,11 +90,11 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('neutral governments closed to passage, with the day each closed', 'command', ['situations'], [at('State', 'closedGovernments')]),
   // 0065: a department's side, copied from the World at the start; a situation moves a government to a side.
   field("each department's side (a faction, or none for a neutral government)", 'command', ['situations'], [at('State', 'departmentFactions')]),
-  field('region population, loyalty, supply value', 'regions', ['economy', 'situations', 'occupation']),
+  field('region population, loyalty, supply value', 'regions', ['economy', 'situations', 'occupation'], [at('State', 'regionLoyalty')]),
   // Lane 0.5: from the start (0050), changed only through `applyInfrastructure`.
   field('edge condition', 'infrastructure', ['combat', 'raids', 'repair orders'], [at('State', 'infraEdgeCondition')]),
   // Lane 0.5: a block's region (or the ship it is aboard), from the start (0050).
-  field('division location', 'movement', ['operations'], [at('State', 'forceLocations')]),
+  field('division location', 'movement', ['operations', 'recruitment (a new block placed, a disbanded one removed)'], [at('State', 'forceLocations')]),
   // Lane 0.5: one record per block or detachment carries strength, stores and
   // non-combatants (`forces/forces.ts`), so the three `forces` rows below share it.
   // Lane 1.3: morale, experience, equipment, stragglers, and the days a block routed or surrendered join the same record.
@@ -108,12 +108,12 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   // Close-out (0072): copied from the scenario start at setup (0050); nothing changes it in Phase 0.
   field('fortification and entrenchment', 'regions', ['operations', 'combat'], [at('State', 'regionFortification')]),
   // Lane 0.5: which post commands each block; transfers name a force (0033).
-  field('division-to-post assignment', 'command', ['transfers', "the army commander's assignments", 'combat (a surrendered block is released, lane 1.3)'], [at('State', 'forceAssignments')]),
+  field('division-to-post assignment', 'command', ['transfers', "the army commander's assignments", 'combat (a surrendered block is released, lane 1.3)', 'recruitment (a new block to its governor, a disbanded one away)'], [at('State', 'forceAssignments')]),
   // Lane 0.5: one record per post carries its holder, chain, department, temporary operation,
   // links, scheduled changes and standing orders (`command/command.ts`), so the `command`
   // rows for standing orders and a post's department below share it.
   field('people in posts; temporary posts', 'command', ['appoint', 'relieve', 'promotion lists', "an operation's end", 'combat (a commander killed, wounded or captured leaves his post vacant, lane 1.3)'], [at('State', 'postStates')]),
-  field('standing agreements and prior orders on a post', 'command', ['verbs', 'situations', "orders from the holder's own department"]),
+  field('standing agreements and prior orders on a post', 'command', ['verbs', 'situations', "orders from the holder's own department", "a call a governor answered (his levy in hand)"], [at('State', 'postLevies')]),
   // Lane 1.1: people as State. True stats and temperament are drawn at setup by history's shadow; the rest start from the World.
   field("a person's stats, traits, standing, grievances, regard", 'people', ['combat results', 'the press', 'verbs', 'ladder', 'a bypassed relay'], [
     at('State', 'personTrue'),
@@ -124,10 +124,16 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   ]),
   field("a person's stances on record (from Consult)", 'people', ['Consult answers'], [at('State', 'personStances')]),
   field("a person's status (serving, wounded, killed, captured) and its date", 'people', ['combat'], [at('State', 'personStatus')]),
-  field("a person's ladder rung and rivals", 'ladder', ['weekly people step']),
+  // Lane 1.5: the ladder and rivals, the audience, promises, inquiries, observers, attention and initiatives.
+  field("a person's ladder rung and rivals", 'ladder', ['weekly people step'], [at('State', 'personRungs'), at('State', 'personRivals')]),
+  field('promises made to a person (kind, day made, day due)', 'people', ['promise', 'audience'], [at('State', 'personPromises')]),
+  field('inquiries a person received this week (his patience)', 'people', ['inquire'], [at('State', 'personInquiries')]),
+  field('observers: a person at a commander\'s headquarters reporting to his sender', 'command', ['the observer verb', 'audience (recall)'], [at('State', 'observerPostings')]),
+  field("the president's attention this week", 'seats', ['command validation (spending)', 'the weekly refill'], [at('State', 'seatAttention')]),
+  field('seat initiative state (each initiative\'s last firing day)', 'seats', ['the weekly people step'], [at('State', 'seatInitiatives')]),
   // Lane 1.1: a man's answer to an order that reached him, as a relay or its addressee; plans holds only its key (0073).
   field('responses to orders (declared and actual rungs, reasons)', 'proxy', ['message arrival'], [at('State', 'orderResponses')]),
-  field('audience state', 'audience', ['the audience verb']),
+  field('audience state', 'audience', ['the audience verb'], [at('State', 'audienceHeld')]),
   // Lane 1.2: each post's goal and plan record (`plans/plans.ts`): its draft set, saved on the request day, the seat's
   // pick, approval or send-back, and edits as counter-orders. Lane 1.4 retired the standing-goal execution adapter.
   field('goals, plans, approvals, edits', 'plans', ['verbs', 'seat selections', 'order arrival', 'the planner (draft sets, on request)'], [at('State', 'planRecords')]),
@@ -142,7 +148,8 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('the framing term (who the public believes began the war)', 'politics', ["the war's opening situations", 'the press']),
   // Reserved by section 10 (0046), with no writer yet (close-out, 0072): named so whatever builds them writes only here.
   field('the Congress accountability ledger: acts taken while Congress was away', 'politics', []),
-  field('people who have reached Union lines', 'regions', ['the derived self-emancipation term (0046); never a lever']),
+  field('people who have reached Union lines', 'regions', ['the derived self-emancipation term (0046); never a lever'], [at('State', 'regionReachedUnionLines')]),
+  field("a raised block's enlistment: who raised it on whose call, and when its men's term ends", 'forces', ['recruitment'], [at('State', 'forceEnlistments')]),
   field('seat assignments', 'seats', ['setup', "the player's settings"], [at('State', 'seatAssignments')]),
   // Reserved by world format v2 (lane 0.2): State that starts from a scenario
   // start or a World rule, with its owner named before the mechanic is built.
@@ -183,10 +190,14 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'TransitMessage',
   'Hop',
   'OrderBody',
+  'VerbBody',
   // Plans (lane 1.2): goals, edits, plan records and the draft sets saved in them, each replaced whole by `plans`
   'PlanGoal',
   'EditSpec',
   'PlanRecord',
+  'Enlistment',
+  'Levy',
+  'CallSpec',
   'PlanCounter',
   'CounterDrop',
   'PendingCounter',
@@ -232,6 +243,11 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'PersonGrievance',
   'Stance',
   'PersonStatus',
+  // Lane 1.5
+  'PersonPromise',
+  'AttentionState',
+  'AudienceRecord',
+  'ObserverPosting',
   'OrderResponse',
   'ResponseTerm',
   // Lane 1.3: battle records (each replaced whole by `combat`)
