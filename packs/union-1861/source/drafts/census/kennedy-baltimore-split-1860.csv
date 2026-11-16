@@ -1,0 +1,3 @@
+state,county,total_free,total_slave,aggregate,page,leaf,basis
+Maryland,Baltimore (city: Table 3 Total Baltimore),210200,2218,212418,214,333,"Table 3 (Population of cities, towns) 'Total Baltimore' line on p. 214 (the twenty wards): free 210,200 + slave 2,218 (M 677 + F 1,541) = aggregate 212,418. Read from the page image."
+Maryland,Baltimore (remainder of county),50953,3182,54135,214,333,"Derived: Table 2 row 'Baltimore' (free 261,153; slave 5,400; aggregate 266,553; the row includes the city, since Table 2 prints no separate city row and its rows sum to the state total) minus the Table 3 city line. Not a printed figure."

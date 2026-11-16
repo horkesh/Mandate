@@ -1,7 +1,7 @@
 regions: 268
-county rows read: 1262
+county rows read: 1264
 county rows claimed by no region (accounted for by a wildcard region only if its state has one): 162
-  north carolina|lillington
+  maryland|baltimore
   texas|banderah
   texas|baylor
   texas|blanco
@@ -163,8 +163,6 @@ county rows claimed by no region (accounted for by a wildcard region only if its
   new jersey|sussex
   new jersey|union
   new jersey|warren
-  counted 2x: maryland|baltimore (enslaved 5400)
-  counted 0x: north carolina|lillington (enslaved 3228)
   counted 0x: utah|beaver (enslaved 0)
   counted 0x: utah|box elder (enslaved 0)
   counted 0x: utah|cache (enslaved 0)

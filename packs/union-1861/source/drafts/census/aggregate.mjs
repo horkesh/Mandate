@@ -1,4 +1,4 @@
-﻿// Sums Kennedy's county figures (kennedy-county-1860.csv) into the pack's regions.
+// Sums Kennedy's county figures (kennedy-county-1860.csv) into the pack's regions.
 // Usage: node aggregate.mjs   (run from this folder; reads ../../world/regions.csv)
 // Writes enslaved-1860-by-region.csv and aggregate-report.txt. Draft only: nothing here enters the pack.
 // Inputs: kennedy-county-1860.csv (county tables), kennedy-state-summary-1860.csv (the Recapitulation,
@@ -47,8 +47,13 @@ const ALIASES = {
   'Missouri:St. Francois': 'St. FranÃ§ois', 'Missouri:DeKalb': 'De Kalb', 'Texas:DeWitt': 'De Witt', 'Kansas:Wyandotte': 'Wyandott',
   'New Mexico Territory:Santa Fe': 'Santa FÃ©', 'New Mexico Territory:Dona Ana': 'DoÃ±a Anna', 'New Mexico Territory:Rio Arriba': 'Ri Ariba', 'New Mexico Territory:Arizona': 'Arizonia',
   'New Mexico Territory:Santa Ana': 'Santa Ana', 'New Mexico Territory:San Miguel': 'San Miguel',
+  'Maryland:Baltimore City': 'Baltimore (city: Table 3 Total Baltimore)', 'Maryland:Baltimore': 'Baltimore (remainder of county)',
 };
 // Counties the pack lists that were created after the 1860 enumeration: their people sit in parent counties in Kennedy.
+// Table 2 prints one 'Baltimore' row that holds the city and the county; Table 3 gives the city, and the county remainder is derived (kennedy-baltimore-split-1860.csv).
+const SPLIT_PARENT = new Set(['maryland|baltimore']);
+// The printed row 'Lillington' is the part of New Hanover that an 1859 act proposed as a county (never created: Newberry Atlas); its figures belong to New Hanover.
+const MULTI = { 'North Carolina:New Hanover': ['New Hanover', 'Lillington'] };
 const POST1860 = new Set(['North Carolina:Transylvania', 'North Carolina:Clay', 'North Carolina:Mitchell', 'Florida:Polk', 'Missouri:Worth', 'Texas:Wilson', 'Kentucky:Wolfe']);
 // District of Columbia is printed as three lines.
 const DC_ROWS = ['Georgetown', 'Washington', 'Remainder of District'];
@@ -70,6 +75,13 @@ for (const r of cty.slice(1)) {
   if (!byKey.has(key)) byKey.set(key, []);
   byKey.get(key).push(r);
 }
+// Baltimore split rows (city from Table 3; county remainder derived)
+for (const r of parse(fs.readFileSync('kennedy-baltimore-split-1860.csv', 'utf8')).slice(1)) {
+  const row = ch.map(() => '');
+  row[col('state')] = r[0]; row[col('county')] = r[1]; row[col('total_free')] = r[2]; row[col('total_slave')] = r[3]; row[col('aggregate')] = r[4]; row[col('page')] = r[5]; row[col('leaf')] = r[6];
+  const key = k(r[0], r[1]);
+  byKey.set(key, [row]);
+}
 const sum = parse(fs.readFileSync('kennedy-state-summary-1860.csv', 'utf8'));
 const sh = sum[0];
 const summary = new Map();
@@ -77,6 +89,7 @@ for (const r of sum.slice(1)) summary.set(norm(r[0]), r);
 
 function keysFor(st, co) {
   if (st === 'District of Columbia') return DC_ROWS.map((n) => k(st, n));
+  if (MULTI[st + ':' + co]) return MULTI[st + ':' + co].map((n) => k(st, n));
   const a = ALIASES[st + ':' + co];
   return [k(st, a || co)];
 }
@@ -100,7 +113,13 @@ for (const r of reg.slice(1)) {
 const header = ['region_id', 'enslaved_1860', 'free_1860', 'aggregate_1860', 'counties_included', 'kennedy_citation', 'mapping_note', 'status'];
 const out = [header.join(',')];
 const used = new Set();
-const cite = (h) => h[col('state')] + ' Table 2 p.' + h[col('page')] + ' leaf n' + h[col('leaf')];
+const cite = (h) => {
+  const c = h[col('county')];
+  const where = ' p.' + h[col('page')] + ' leaf n' + h[col('leaf')];
+  if (c.startsWith('Baltimore (city')) return 'Maryland Table 3, Total Baltimore line,' + where;
+  if (c.startsWith('Baltimore (remainder')) return "Maryland Table 2 'Baltimore' row minus the Table 3 city line (derived)," + where;
+  return h[col('state')] + ' Table 2' + where;
+};
 for (const r of reg.slice(1)) {
   const id = r[idI];
   const items = r[coI].split(';').map((s) => s.trim()).filter(Boolean);
@@ -158,6 +177,9 @@ for (const r of reg.slice(1)) {
       incomplete = true; issues.push('no-county-table:' + st + ':' + co); continue;
     }
     const keys = keysFor(st, co);
+    if (MULTI[st + ':' + co]) notes.push(co + " includes the printed 'Lillington' row (the part of New Hanover an 1859 act proposed as a county; never created), counted here with New Hanover");
+    if (st + ':' + co === 'Maryland:Baltimore City') notes.push("city figure from Table 3 (Total Baltimore); Table 2 prints one 'Baltimore' row holding city and county");
+    if (st + ':' + co === 'Maryland:Baltimore') notes.push("county remainder = Table 2 'Baltimore' row minus the Table 3 city line (derived, not printed)");
     for (const key of keys) {
       used.add(key);
       const hit = byKey.get(key);
@@ -197,7 +219,7 @@ rep.push('county rows read: ' + [...byKey.values()].reduce((a, v) => a + v.lengt
 rep.push('county rows claimed by no region (accounted for by a wildcard region only if its state has one): ' + unclaimed.length);
 rep.push(...unclaimed.map((x) => '  ' + x));
 // accounting: how many times each county row is counted across regions
-for (const [key, rows] of byKey) { const st = key.split('|')[0]; const times = (claimed.get(key) || []).length || (wildcardStates.has(st) ? 1 : 0); if (times !== 1) rep.push('  counted ' + times + 'x: ' + key + ' (enslaved ' + rows.map((h) => h[col('total_slave')]).join('/') + ')'); }
+for (const [key, rows] of byKey) { const st = key.split('|')[0]; const times = SPLIT_PARENT.has(key) ? 1 : (claimed.get(key) || []).length || (wildcardStates.has(st) ? 1 : 0); if (times !== 1) rep.push('  counted ' + times + 'x: ' + key + ' (enslaved ' + rows.map((h) => h[col('total_slave')]).join('/') + ')'); }
 fs.writeFileSync('aggregate-report.txt', rep.join('\n') + '\n');
 console.log(rep.slice(0, 3).join('\n'));
 
