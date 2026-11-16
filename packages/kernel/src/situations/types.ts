@@ -163,6 +163,21 @@ export interface GateReview {
   readonly notes: Readonly<Record<string, string>>;
 }
 
+/**
+ * A proposal grounded in law and practice rather than a person (the lead's ruling on S17, a recorded exception): only an
+ * option the gate keeps (the register lists it in `supersededOptions`, or marks it `watched`) may carry it, so no adviser
+ * is invented for a policy the record shows was practised but nobody on the staff urged. The validator refuses it anywhere else.
+ */
+export interface ProposalBasis {
+  readonly basis: 'law-and-practice';
+  readonly cites: readonly SituationCitation[];
+}
+
+/** True for a proposal's basis in law and practice (not a list of persons, nor inaction). */
+export function isProposalBasis(p: unknown): p is ProposalBasis {
+  return typeof p === 'object' && p !== null && !Array.isArray(p) && (p as { basis?: unknown }).basis === 'law-and-practice';
+}
+
 export interface SituationCitation {
   readonly source: string;
   readonly at: string | null;
@@ -180,7 +195,7 @@ export interface OptionDef {
   /** The neutral display order: the order advisers raised them, unrelated to the historical default (0041). */
   readonly displayKey: number;
   /** Who argued for it, in their own terms (C1): person ids, or `inaction`. */
-  readonly proposedBy: readonly PersonId[] | 'inaction';
+  readonly proposedBy: readonly PersonId[] | 'inaction' | ProposalBasis;
   /** Options in different groups may be taken together; an option with no group is taken alone (catalogue P3). */
   readonly group: string | null;
   readonly appearsWhen: Condition | null;

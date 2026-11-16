@@ -100,6 +100,13 @@ export function policyRows(items: readonly { readonly file: string; readonly def
       }
     }
     def.options.forEach((o, i) => {
+      // The lead's S17 ruling (a): a proposal grounded in law and practice only on an option the gate keeps.
+      if (phase0.isProposalBasis(o.proposedBy)) {
+        const gated = [...topicsOf(def.gate), ...topicsOf(o.gate)].length > 0;
+        if (!gated || !(superseded.has(`${def.id}/${o.id}`) || o.watched)) {
+          err('proposal-basis', `options[${i}].proposedBy`, `option "${o.id}" names a basis in law and practice instead of a person, but the gate does not keep it`, 'the persons who argued for it (C1); a basis is allowed only on a gated option the register supersedes or marks watched');
+        }
+      }
       const gatedBy = [...new Set([...topicsOf(def.gate), ...topicsOf(o.gate)])].filter((t) => mapTopics.has(t)).sort();
       if (o.policy === null) {
         if (gatedBy.length > 0) err('policy-missing', `options[${i}].policy`, `option "${o.id}" is tagged ${gatedBy.join(', ')}, which the map from orders to values gates, but names no policy row`, 'policy: { row, carriedBy }, naming a policy: row tagged with that topic (G-1.5a)');

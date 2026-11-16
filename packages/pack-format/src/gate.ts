@@ -373,6 +373,13 @@ export function checkGate(
       if (!sources.has(c.source)) err('unknown-reference', `citations[${i}].source`, `"${c.source}" is not a source in PROVENANCE.json`, 'a source key (A5)');
       if (gate.sourcePolicy.banned.includes(c.source)) err('gate-banned-source', `citations[${i}].source`, `"${c.source}" is banned as evidence by the pack's source policy`, 'another source (A6)');
     });
+    // The lead's S17 ruling: a proposal's basis in law and practice resolves its cites too.
+    def.options.forEach((o, i) => {
+      if (!phase0.isProposalBasis(o.proposedBy)) return;
+      o.proposedBy.cites.forEach((c, j) => {
+        if (!sources.has(c.source)) err('unknown-reference', `options[${i}].proposedBy.cites[${j}].source`, `\"${c.source}\" is not a source in PROVENANCE.json`, 'a source key (A5)');
+      });
+    });
     if (def.citations.length > 0 && def.citations.every((c) => gate.sourcePolicy.weak.includes(c.source))) err('gate-weak-sources', 'citations', 'every citation is a weak source', 'at least one source the policy does not mark weak (A6)');
 
     // A7: the sign-off.

@@ -125,7 +125,13 @@ export const OptionSchema = z.strictObject({
   id: lowerId,
   label: stringKey,
   displayKey: positive,
-  proposedBy: z.union([z.array(idOf('person')).min(1, 'the holders who argued for it (gate C1)'), z.literal('inaction')]),
+  proposedBy: z.union([
+    z.array(idOf('person')).min(1, 'the holders who argued for it (gate C1)'),
+    z.literal('inaction'),
+    z
+      .strictObject({ basis: z.literal('law-and-practice'), cites: z.array(z.strictObject({ source: z.string().min(1), at: z.string().min(1).nullable().default(null) })).min(1, 'the law and the practice, cited') })
+      .describe('A recorded exception (the lead’s ruling on S17): the law and practice a gate-kept option rests on, where no adviser is on record. Only an option the register supersedes or marks watched may carry it.'),
+  ]),
   group: termId.nullable().default(null),
   appearsWhen: conditionOrNull,
   expiresWhen: conditionOrNull,
@@ -436,7 +442,7 @@ export function validateSituations(items: readonly { readonly file: string; read
     });
 
     def.options.forEach((o, i) => {
-      if (o.proposedBy !== 'inaction') o.proposedBy.forEach((p, j) => ref(people, 'person', p, `options[${i}].proposedBy[${j}]`));
+      if (Array.isArray(o.proposedBy)) (o.proposedBy as readonly string[]).forEach((p, j) => ref(people, 'person', p, `options[${i}].proposedBy[${j}]`));
       o.orders.forEach((order, j) => {
         const at = `options[${i}].orders[${j}]`;
         ref(posts, 'post in any scenario', order.to, `${at}.to`);

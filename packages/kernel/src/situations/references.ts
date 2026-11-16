@@ -9,6 +9,7 @@ import { strictCompare } from '../compare.ts';
 import { ORDER_ROUTES } from '../messages/latency.ts';
 import { situationsIn, unknowableRead, type KnowablePlace } from './conditions.ts';
 import type { Condition, Effect, SituationDef } from './types.ts';
+import type { PersonId } from '../ids.ts';
 
 export interface SituationRefs {
   readonly factions: ReadonlyMap<string, unknown>;
@@ -85,7 +86,7 @@ export function situationReferenceProblems(defs: readonly SituationDef[], refs: 
     if (hd !== null && 'options' in hd) for (const o of hd.options) if (!optionIds.has(o)) at('historicalDefault', `${o} is not an option`);
     if (hd !== null && 'delegate' in hd && !d.delegableTo.includes(hd.delegate)) at('historicalDefault', `${hd.delegate} is not among delegableTo`);
     d.options.forEach((o) => {
-      if (o.proposedBy !== 'inaction') for (const p of o.proposedBy) if (!refs.persons.has(p)) at(`option ${o.id}`, `proposer ${p} is not a person`);
+      if (Array.isArray(o.proposedBy)) for (const p of o.proposedBy as readonly PersonId[]) if (!refs.persons.has(p)) at(`option ${o.id}`, `proposer ${p} is not a person`);
       for (const order of o.orders) {
         if (!refs.posts.has(order.to)) at(`option ${o.id}`, `order to ${order.to}, not a post`);
         if (order.objective !== null && !refs.regions.has(order.objective)) at(`option ${o.id}`, `order names ${order.objective}, not a region`);
