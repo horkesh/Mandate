@@ -113,6 +113,8 @@ describe('case 1: a two-commander pincer round the salient', () => {
     expect(pick(set).candMethod).toBe('direct');
     expect(pick(set).candConditions.map((g) => g.gateKind)).toContain('move_when_reinforced');
     expect(pick(withPartner(input, 400)).candMethod).toBe('pincer');
+    // The assault margin is explained in the force_ratio term's reason, with its permille (hard rule 6).
+    expect(pick(set).candTerms.find((t) => t.contribTerm === 'force_ratio')!.contribWhy).toContain('the assault margin, 1500‰, on his open-field demand 1000');
   });
 
   it('has the timid man hold and ask the principal for men rather than attack', () => {

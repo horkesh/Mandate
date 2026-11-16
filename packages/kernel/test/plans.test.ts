@@ -1,12 +1,14 @@
 import { describe, expect, it } from 'vitest';
-import type { PostId } from '../src/ids.ts';
+import type { MessageId, PostId } from '../src/ids.ts';
+import type { ReportClaim } from '../src/knowledge/report.ts';
+import type { TransitMessage } from '../src/messages/transit.ts';
 import { knowledgeOf } from '../src/knowledge/knowledge.ts';
 import type { LogEntry } from '../src/log/log.ts';
 import type { Command, EditTerms, GoalTerms, OrderCommand, ReviewCommand } from '../src/log/commands.ts';
 import { playDays } from '../src/log/session.ts';
 import { setGoal } from '../src/plans/plans.ts';
 import type { State } from '../src/root-state.ts';
-import { pendingRequests } from '../src/seats/requests.ts';
+import { pendingRequests, reviewsFor } from '../src/seats/requests.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
 import type { SeatsWorld } from '../src/seats/world.ts';
 import { createTelemetry, type Telemetry } from '../src/telemetry.ts';
@@ -79,6 +81,52 @@ describe('a goal is drafted on request, and the commander picks (lane 1.2)', () 
     expect(days.flatMap((r) => knowledgeOf(r.state, lead).knownReports).find((k) => k.id === submitted)!.knownBody.reportClaims[0]).toMatchObject({ claimKind: 'plan-submitted', claimRegion: R('b_mid') });
     expect([fired(telemetry, 'plans.submitted'), fired(telemetry, 'plans.approved'), fired(telemetry, 'plans.released'), fired(telemetry, 'plans.went_ahead')]).toEqual([1, 1, 1, 0]);
     expect(out.state.planRecords[RESERVE]!.planStatus).toBe('approved');
+  });
+
+  it('keeps a plan off his menu while an office’s objection to his answer is on its way back to him (0040: he believes it went on)', () => {
+    // A plan before him for review, as the day ends.
+    const { results } = play(strong(), 12, (d) => (d === 1 ? [take({ approveAsDrafted: false })] : []));
+    const listed = results.find((r) => reviewsFor(r.state, P('a_lead')).length > 0)?.state;
+    expect(listed, 'a review is before him').toBeDefined();
+    expect(reviewsFor(listed!, P('a_lead')).map((r) => r.post)).toEqual([RESERVE]);
+    // An office withheld his answer: its memorandum objecting, about this post, is on its way to him.
+    const memo = (over: { to?: string; pending?: boolean; subject?: string; claim?: string } = {}): TransitMessage => ({
+      id: 'm.test.memo' as MessageId,
+      msgOrigin: 'm.test.memo' as MessageId,
+      msgFrom: P('a_sec'),
+      msgTo: P(over.to ?? 'a_lead'),
+      msgToPost: null,
+      msgRole: over.to === undefined ? 'addressee' : 'filter',
+      msgRoute: 'courier',
+      msgSentDay: listed!.stateDay,
+      msgArriveDay: listed!.stateDay + 2,
+      msgVia: [],
+      msgPending: over.pending === true ? [{ hopPerson: P('a_lead'), hopPost: null, hopRole: 'addressee' }] : [],
+      msgOrder: null,
+      msgReport: {
+        reportType: 'advice',
+        reportSubtype: 'memorandum',
+        reportAuthor: P('a_sec'),
+        reportAuthorPost: null,
+        reportSubjectKind: 'post',
+        reportSubjectId: over.subject ?? RESERVE,
+        reportClaims: [{ claimKind: (over.claim ?? 'order-objected') as ReportClaim['claimKind'], claimRegion: R('b_mid'), claimValue: 1, claimToken: 'withheld', claimConfidence: 1000 }],
+        reportDay: listed!.stateDay,
+        reportHour: null,
+        reportAdvice: null,
+        reportAnswers: 'm.test.approve' as MessageId,
+      },
+      msgTruth: null,
+    });
+    const withMemo = (m: TransitMessage): State => ({ ...listed!, messagesInTransit: [...listed!.messagesInTransit, m] });
+    expect(reviewsFor(withMemo(memo()), P('a_lead'))).toEqual([]);
+    // Still on its way through a filter, with him further down the line: still in play.
+    expect(reviewsFor(withMemo(memo({ to: 'a_sec', pending: true })), P('a_lead'))).toEqual([]);
+    // Positive controls: a memorandum about another post, or one that objects to nothing, leaves the plan before him.
+    expect(reviewsFor(withMemo(memo({ subject: 'a_army' })), P('a_lead')).map((r) => r.post)).toEqual([RESERVE]);
+    expect(reviewsFor(withMemo(memo({ claim: 'plan-answer' })), P('a_lead')).map((r) => r.post)).toEqual([RESERVE]);
+    // Once it has reached him (out of transit), the plan is before him again, to answer around the office.
+    expect(reviewsFor(listed!, P('a_lead')).map((r) => r.post)).toEqual([RESERVE]);
   });
 
   it('sends the plan back, and he drafts it again on the map as it is when he gets it', () => {

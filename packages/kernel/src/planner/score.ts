@@ -67,11 +67,13 @@ export function scoreAxes(ctx: Ctx, method: Method, axes: readonly PlanAxis[], r
     return { terms: c, score: sum(c), perceived: enemy, ratio, shortfall, waits };
   }
 
+  // The assault margin, when it applies, is named with its permille and the demand it scales (hard rule 6).
+  const margin = demand === profile.demand ? '' : ` (the assault margin, ${ctx.input.assaultMargin}‰, on his open-field demand ${profile.demand})`;
   term(c, 'goal_fit', w.goalFit, `reaches ${goal.goalObjective}`);
   if (ratio >= demand) {
-    term(c, 'force_ratio', Math.min(w.ratioBonusMax, Math.trunc((ratio - demand) / w.ratioBonusDivisor)), `ratio ${ratio} over his demand ${demand}${demand === profile.demand ? '' : ` (the assault margin on ${profile.demand})`}`);
+    term(c, 'force_ratio', Math.min(w.ratioBonusMax, Math.trunc((ratio - demand) / w.ratioBonusDivisor)), `ratio ${ratio} over his demand ${demand}${margin}`);
   } else {
-    term(c, 'force_ratio', -Math.min(w.ratioPenaltyMax, Math.trunc(((demand - ratio) * w.ratioPenaltyMax) / demand)), `ratio ${ratio} under his demand ${demand}${demand === profile.demand ? '' : ` (the assault margin on ${profile.demand})`}; short ${shortfall} men`);
+    term(c, 'force_ratio', -Math.min(w.ratioPenaltyMax, Math.trunc(((demand - ratio) * w.ratioPenaltyMax) / demand)), `ratio ${ratio} under his demand ${demand}${margin}; short ${shortfall} men`);
   }
 
   const arrival = Math.max(...axes.map((a) => a.axisArrival));

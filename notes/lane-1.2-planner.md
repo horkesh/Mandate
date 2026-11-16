@@ -71,7 +71,7 @@ What changed, and why:
 9. **Edits are answered by `answerOrder`** on the goal's pack terms, with `ownBest` (his own plan's boldness), `departure` (the edit's distance) and `support` (its requests). This replaces the hand-raised boldness and the `overruled` grievance.
 10. **Conflicting orders are resolved by `resolveOrderConflict`** at `arriveOrder`. A conflict needs a plan, a different goal, a different chain status, and an earlier goal set inside the window. Each goal is read with its kind's pack terms and its `issuedDay`.
 11. **Relay compliance applies to approvals and the word to go** (0040: they are orders through the chain), with the plan's goal kind. The principal goes around an office that withheld one with the same answer, by special messenger. *Rejected:* exempting them from relay compliance; letting the rule seat answer an objection with a fresh goal (which restarts the plan, and looped the Union run 25 times).
-12. **The assault margin is pack data** (`people.traits.assaultMargin`, at least 1000), applied by the planner's `demandFor`, with `demandRatio` untouched. It is named in the `force_ratio` term's reason, not given a term of its own (see "For the lead").
+12. **The assault margin is pack data** (`people.traits.assaultMargin`, at least 1000), applied by the planner's `demandFor`, with `demandRatio` untouched. It is named in the `force_ratio` term's reason, with its permille and the demand it scales, not given a term of its own (the lead accepted this, provided the permille is carried; tested). `kernel/test/plans.test.ts` drives the menu's "objection on its way back" filter directly, with positive controls.
 13. **The situations `goal` condition keeps its key**, now `{ post, posture }` read from `plans`. 0071's refusal stays pointed at it, with "goal" in its wording for "standing goal". *Rejected:* dropping the condition and the refusal (a goal is still the principal's order, 0071).
 14. **Option orders name a posture and an objective**; the rest of the goal is `plans.goalDefaults`. The gate's `orderPattern` string becomes `posture:post:objective`.
 15. **No goal at the start, and none when a government joins a side** (0072's hold goal is retired). A post with no goal holds where it stands, and an order to it is answered by compliance.
@@ -106,7 +106,6 @@ What changed, and why:
 - CI on Linux and Windows: pushed; see the report for its state.
 - There is no decision point for "a plan is ready for review": 1.4's row names it.
 - The principal's review sees the plan's arrows from the kernel's menu once the dispatch has arrived. A console preview of an edited route is 1.13's.
-- No kernel unit test drives the "objection on its way back" filter in `reviewsFor` directly. The Union reference run's bands (one submission, one approval, four bypassed relays) catch its regression.
 
 ## Findings outside my scope
 
