@@ -27,6 +27,11 @@ describe('the opening of 1861 (lane 1.11)', () => {
     expect(run.state.situationStates[S('maryland_legislature')]!.sitFiredDay).toBe(arrived('st_gov_maryland') + 14);
     expect(run.state.situationStates[S('kentucky_neutrality_proclaimed')]!.sitFiredDay).toBe(arrived('st_gov_kentucky') + 35);
     expect(run.state.departmentFactions['st_maryland' as never]).toBe('union');
+    // The upper South's acts: each a delay after the call reaches its government, each proposing its government's side.
+    for (const [sit, post, delay, dept] of [['virginia_secedes', 'st_gov_virginia', 2, 'st_virginia'], ['tennessee_secedes', 'st_gov_tennessee', 21, 'st_tennessee']] as const) {
+      expect(run.state.situationStates[S(sit)]!.sitFiredDay).toBe(arrived(post) + delay);
+      expect(run.state.departmentFactions[dept as never]).toBe('confederate');
+    }
   });
 
   it('closes the route through the border city on its cause, and the capital-cut-off decision reads the closure in State (0074)', () => {
