@@ -1,0 +1,93 @@
+{
+  "id": "mcdowell_advance",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.mcdowell_advance.title",
+  "text": "situation.mcdowell_advance.text",
+  "earliest": "1861-06-24",
+  "event": {
+    "callReceived": {
+      "post": "st_gov_new_york",
+      "days": 75
+    }
+  },
+  "options": [
+    {
+      "id": "advance_now",
+      "label": "situation.mcdowell_advance.option.advance_now",
+      "displayKey": 1,
+      "proposedBy": [
+        "blair_montgomery",
+        "blair_francis_p"
+      ],
+      "honours": [
+        "union",
+        "glory"
+      ],
+      "effects": [
+        {
+          "setFlag": "manassas_advance_ordered"
+        }
+      ]
+    },
+    {
+      "id": "drill_first",
+      "label": "situation.mcdowell_advance.option.drill_first",
+      "displayKey": 2,
+      "proposedBy": [
+        "mcdowell_irvin"
+      ],
+      "honours": [
+        "caution"
+      ],
+      "effects": [
+        {
+          "setFlag": "advance_put_off"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.mcdowell_advance.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "advance_now"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_general_in_chief"
+    ],
+    "recommends": [
+      "advance_now"
+    ],
+    "reasons": [
+      {
+        "kind": "union",
+        "weight": 500
+      }
+    ],
+    "confidence": 500
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "a date for the army's advance; no gate topic"
+  },
+  "citations": [
+    {
+      "source": "JCCW",
+      "at": "1863 pt 2 pp. 37 to 38 (McDowell: he \"begged of the Secretary of War and the Secretary of the Treasury\" for time), p. 55 (the council of 29 June), p. 242 (Scott, 31 March 1862)"
+    },
+    {
+      "source": "OR",
+      "at": "I-2 pp. 719 to 721 (McDowell's plan, undated) and p. 730 (Patterson, 28 June)"
+    },
+    {
+      "source": "RR",
+      "at": "vol. 2 pp. 384 to 386 (Weed's letter of 26 July, naming the advance's advocates after the battle: retrospective)"
+    }
+  ]
+}

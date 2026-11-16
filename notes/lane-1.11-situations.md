@@ -16,21 +16,24 @@ Each state's act fires a pack-set delay after the call reaches its governor (`ca
 | Catalogue | File | Status |
 |---|---|---|
 | S01 | `sumter_garrison` | live |
-| S02 | `pickens_reinforcement` | live; the landing itself is a labelled gap until lane 1.4b's `landing` effect is on main (the lead's ruling) |
+| S02 | `pickens_reinforcement` | live; its landing rides on S06's Navy Department order (below), the one Captain Adams obeyed |
 | S03 | `confederate_commissioners` | live |
-| S06 | `pickens_refused` | live; on its labelled date, a STAND-IN owned by 1B (sea carriage) |
-| S07 | `seward_memorandum` | live; raised by the Secretary of State's initiative (lane 1.5), so it does not arise until his values are entered (lane 1.11a) |
-| S09 | `call_for_troops` | live; calls at the OR III-1 p. 69 quotas |
+| S06 | `pickens_refused` | live; on its labelled date, a STAND-IN owned by 1B (sea carriage). The courier and department orders land Vogdes's company (90 men) from the Brooklyn at Fort Pickens through the `landing` effect (lane 1.4b's detachment path), on the decision day rather than 12 April, and set `pickens_landed` |
+| S07 | `seward_memorandum` | live; raised by the Secretary of State's initiative (lane 1.5), which he takes in the reference run now that lane 1.11a entered his values |
+| S09 | `call_for_troops` | live; calls at the OR III-1 p. 69 quotas; enters the call on lane 1.6's ledger, and the militia call summons `congress_37_1` |
 | S10 | `blockade_or_closure` | live |
 | S12 | `washington_cut_off` | live; reads the closure flag set by `baltimore_route_closed` |
-| S13 | `drafts/black_volunteer_offers` | the decision is held until `ask_congress` has a sourced advocate (the lead's ruling; it blocks nothing in 1A, a labelled gap); the men's offers are a notice (event, no options or effects), awaiting sign-off |
+| S13 | `black_volunteer_offers` | signed; the lead's final 1A placement: a notice with no options or effects, Dodson's offer (OR III-1 p. 107) and Cameron's reply (p. 133) quoted; the decision goes to 1B with R2 |
 | S14 | `missouri_arsenal` | live; `back_harney` and `back_lyon` |
 | S15 | `western_virginia` | live; `cross_river` and `recognise`, in separate groups |
-| S20 | `special_session` | live; `ask_war_footing` only |
+| S20 | `special_session` | live; fires when the House sits (lane 1.6's chamber condition); `ask_war_footing` appears while the spring's acts are before Congress and answers them on the ledger |
 | S11 | `gosport_yard` | live; raised by Virginia's secession notice; `defend` and `remove` (Welles's orders of 10 to 16 April). The order to hold the yard is a flag only: a navy yard is not a field post, so the goal path refuses it (`not_field_post`) until installations have holders who take orders (1B). `destroy_rest` has no advocate: the commandant burned the yard on his own (the inaction). |
 | S17 | none | waits on lane 1.5b's merge: options and inaction each carry a `policy` row (`fugitive-policy`), signed in `gated-rows.test.ts` |
 | S18 | none | waits on an advocate for S12's suspension |
-| S04, S05, S08, S16, S19, S21 | none | held for the research pass after lane 1.11a's data entry (the lead's ruling) |
+| S16 | `kentucky_neutrality` | live, stage A only (stage B, Magoffin's protest of 19 August, falls after the window); `arm_quietly` (Cameron's department), `move_in` (Dennison, Yates), `wait` (Scott, McClellan) |
+| S21 | `mcdowell_advance` | live; `advance_now` (the Blairs, as Weed's letter of 26 July names them: retrospective) and `drill_first` (McDowell); flags only, since McDowell and Patterson hold no posts in the March start |
+| S04, S05, S08 | none | sourced by lane 1.11r, but their advocates (Lamon, Baldwin, Botts, Summers) are not in the people table; S04's options have no adviser at all |
+| S19 | none | mostly August to October, after the window; the board's convening has no advocate in his own words |
 
 Notices:
 - **Live:**

@@ -930,6 +930,16 @@
       "copyUsed": "encyclopediavirginia.org/primary-documents/virginia-ordinance-of-secession-april-17-1861/, read 2026-11-14",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "RR",
+      "title": "F. Moore, ed., The Rebellion Record, vols. 1 to 3 (1861 to 1862): documents, letters and proclamations printed at the time",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org scans, OCR, read by lane 1.11r (docs/research/2026-11-16-1861-gaps.md, parts B and C)",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

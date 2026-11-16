@@ -289,5 +289,16 @@
   "reason.act-while-away": "an act taken while Congress was away",
   "reason.session-called": "Congress summoned in special session",
   "reason.ratification": "Congress asked to ratify the acts taken while it was away",
-  "reason.fired-on-first": "the public believes the other side fired first"
+  "reason.fired-on-first": "the public believes the other side fired first",
+  "situation.kentucky_neutrality.title": "Kentucky's neutrality",
+  "situation.kentucky_neutrality.text": "Kentucky's House has resolved that the state take no part in the war except as mediator, and its governor forbids any movement on Kentucky soil. Kentucky Unionists ask for arms; the governors of Ohio and Illinois urge that the United States occupy Louisville, Covington and Columbus; General Scott answers that \"thrusting protection upon their people is likely to do far more harm than good\".",
+  "situation.kentucky_neutrality.option.arm_quietly": "Send arms quietly to Kentucky's Unionists",
+  "situation.kentucky_neutrality.option.move_in": "Send troops into Kentucky",
+  "situation.kentucky_neutrality.option.wait": "Send no troops into Kentucky",
+  "situation.kentucky_neutrality.inaction": "Kentucky stays closed to both sides until one of them moves.",
+  "situation.mcdowell_advance.title": "An advance before the three-month men go home",
+  "situation.mcdowell_advance.text": "The three-month regiments' terms run out in July. General McDowell's plan for an advance against the Confederate force at Manassas is before the president and the cabinet. McDowell asks for time to train his regiments; others press for a move before the terms expire.",
+  "situation.mcdowell_advance.option.advance_now": "Advance now, before the terms run out",
+  "situation.mcdowell_advance.option.drill_first": "Wait and train the regiments first",
+  "situation.mcdowell_advance.inaction": "No date is set, and the regiments' terms run out."
 }

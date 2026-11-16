@@ -51,6 +51,11 @@ describe('the opening of 1861 (lane 1.11)', () => {
 
   it('takes the spring’s other decisions in a history run: the arsenal, the western counties (both groups), the special session', () => {
     expect(run.state.situationStates[S('missouri_arsenal')]!.sitChosen).toEqual(['back_lyon']);
+    // The border state's neutrality decision follows its proclamation; arms go quietly and no troops go in (two groups, taken together).
+    const ky = run.state.situationStates[S('kentucky_neutrality')]!;
+    expect(ky.sitFiredDay).toBeGreaterThanOrEqual(run.state.situationStates[S('kentucky_neutrality_proclaimed')]!.sitFiredDay!);
+    expect([...ky.sitChosen].sort()).toEqual(['arm_quietly', 'wait']);
+    expect(run.state.situationStates[S('mcdowell_advance')]!.sitChosen).toEqual(['advance_now']);
     // The navy yard arises from the state's secession notice, never on a date; the order to hold it goes down the chain.
     const yard = run.state.situationStates[S('gosport_yard')]!;
     expect(yard.sitFiredDay).toBeGreaterThanOrEqual(run.state.situationStates[S('virginia_secedes')]!.sitFiredDay!);
