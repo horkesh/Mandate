@@ -1,6 +1,6 @@
 # 0051: Rules for Codex output: no AI likenesses of real people, game-resolution assets only, and full provenance
 
-Status: accepted (2026-11-14). From the research note on Codex's terms (`docs/research/2026-11-14-codex-output-terms.md`) and the note on image sources (`docs/research/2026-11-14-portrait-and-image-sources.md`), both under review. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0048.
+Status: accepted (2026-11-14). From the research note on Codex's terms (`docs/research/2026-11-14-codex-output-terms.md`) and the note on image sources (`docs/research/2026-11-14-portrait-and-image-sources.md`), both under review. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0048. Amended by 0077 (a procedural, non-machine-learned engraving finish is allowed processing for real people's portraits).
 
 ## Context
 
