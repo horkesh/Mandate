@@ -119,6 +119,11 @@ export interface CombatRules {
   readonly maxBattleDays: number;
   /** Control the side holding the field gains the day the other leaves it, permille (P9). */
   readonly fieldControlPermille: number;
+  /**
+   * Pursuit's captures (P8; lane 1.4): on a rearguard day, the pursued side's stragglers taken, permille, by the pursuer's
+   * choice (`follow` or `press`), with more when the pursuer has cavalry there (an arm the pack flags `cavalry`).
+   */
+  readonly pursuit: { readonly followPermille: number; readonly pressPermille: number; readonly cavalryPermille: number };
   /** Stragglers who rejoin a day, permille of the pool, while in supply and out of battle (P8). */
   readonly straggleReturnPermille: number;
   /** A commander hit on a battle-day (0..999 draw on his own stream): killed below the first, wounded, captured (only if his side routs). */
@@ -193,6 +198,9 @@ export function combatRulesProblems(rules: CombatRules | undefined, terrains: re
   if (!Number.isSafeInteger(rules.maxBattleDays) || rules.maxBattleDays < 1) problems.push('combat rule maxBattleDays must be a whole number from 1');
   whole(rules.fieldControlPermille, 'fieldControlPermille', 1000);
   whole(rules.straggleReturnPermille, 'straggleReturnPermille', 1000);
+  whole(rules.pursuit?.followPermille, 'pursuit.followPermille', 1000);
+  whole(rules.pursuit?.pressPermille, 'pursuit.pressPermille', 1000);
+  whole(rules.pursuit?.cavalryPermille, 'pursuit.cavalryPermille', 1000);
   whole(rules.leaders.killedPermille, 'leaders.killedPermille', 1000);
   whole(rules.leaders.woundedPermille, 'leaders.woundedPermille', 1000);
   whole(rules.leaders.capturedPermille, 'leaders.capturedPermille', 1000);

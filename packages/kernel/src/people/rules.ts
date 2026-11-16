@@ -39,15 +39,19 @@ export interface GoalTermsRule {
 }
 
 /**
- * The circumstances of an order read in the chain. Both values are LABELLED STAND-INS: one constant per pack in place of
- * a derived term, so lane 1.14's stand-in criterion finds them.
+ * The circumstances of an order read in the chain. Oversight varies with distance and the wire (lane 1.4). The principal's
+ * credibility is a LABELLED STAND-IN: one constant per pack in place of a derived term, so lane 1.14's stand-in criterion finds it.
  */
 export interface ReadingContextRules {
   /**
-   * STAND-IN (lane 1.1; owner lane 1.4): how closely the principal watches a man who relays or receives his order,
-   * permille. It should vary with distance and the telegraph (who can be reached, how fast), not be one constant.
+   * How closely the principal watches a man who relays or receives his order, permille, before distance (lane 1.4): his
+   * base. The tick takes `oversightPerCourierDay` off for each courier day between them, adds `oversightWired` when the
+   * wire reaches him, and keeps it at least `oversightMin` (`tick/context.ts`'s `oversightOf`).
    */
   readonly oversight: number;
+  readonly oversightPerCourierDay: number;
+  readonly oversightWired: number;
+  readonly oversightMin: number;
   /**
    * STAND-IN (lane 1.1; owner lane 1.6): the principal's sanction credibility, permille. Politics derives it from his
    * record (P7), as M2's `derive` did; until then one constant.
@@ -163,6 +167,9 @@ export function peopleRulesProblems(rules: PeopleRules | undefined, values: read
     for (const v of [...g.honours, ...g.offends]) value(v, `goalTerms.${g.goal}`);
   }
   permille(rules.context.oversight, 'context.oversight');
+  permille(rules.context.oversightPerCourierDay, 'context.oversightPerCourierDay');
+  permille(rules.context.oversightWired, 'context.oversightWired');
+  permille(rules.context.oversightMin, 'context.oversightMin');
   permille(rules.context.leaderCredibility, 'context.leaderCredibility');
   whole(rules.relay.reservationsHoldDays, 'relay.reservationsHoldDays');
   whole(rules.relay.slowWalkHoldDays, 'relay.slowWalkHoldDays');

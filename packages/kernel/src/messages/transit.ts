@@ -32,8 +32,11 @@ export interface Hop {
 /**
  * What an order carries (lane 1.2): a goal for the holder of a post, or the principal's answer to the plan he
  * submitted (approve it, send it back, edit its arrows), or his word to go. Each is a directive the holder receives.
+ * Lane 1.4 adds support: a commander's request to another holder to put an axis of his plan in motion (FOUNDATION
+ * section 5: a support request is a directive to that holder, who answers with his own compliance). It carries the goal
+ * the axis serves.
  */
-export const ORDER_KINDS = ['approve', 'call', 'edit', 'go', 'goal', 'send_back'] as const;
+export const ORDER_KINDS = ['approve', 'call', 'edit', 'go', 'goal', 'send_back', 'support'] as const;
 export type OrderKind = (typeof ORDER_KINDS)[number];
 
 /** A call for regiments, as an order carries it (lane 1.7). */
@@ -46,7 +49,7 @@ export interface OrderBody {
   readonly orderKind: OrderKind;
   readonly orderIssuer: PersonId;
   readonly orderTarget: PostId;
-  /** The goal, for a `goal` order; null otherwise. */
+  /** The goal, for a `goal` order, and the goal an axis serves for a `support` request; null otherwise. */
   readonly orderGoal: PlanGoal | null;
   /** The arrow edit, for an `edit` order; null otherwise. */
   readonly orderEdit: EditSpec | null;

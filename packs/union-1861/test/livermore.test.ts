@@ -75,6 +75,7 @@ function run(row: Row, seed: number): Readonly<Record<'union' | 'confederate', n
       retreatTo: ids.toId('region', `${f}_rear`),
       breakingOut: false,
       surprised: row.surprised === f,
+      pursuedPermille: 0,
     });
     const input: phase0.DayInput = {
       day: d,

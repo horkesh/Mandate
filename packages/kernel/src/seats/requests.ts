@@ -41,24 +41,6 @@ export function morningGround(world: SeatsWorld, state: State, day: number): Mor
 }
 
 /**
- * A post's marching group: its blocks (not detachments) standing at its
- * headquarters, not aboard a ship. Ships march as a naval group when every
- * such block is a ship; otherwise the land blocks march. `marching` when any
- * of them is on a leg.
- */
-export function marchingGroup(world: SeatsWorld, state: State, post: PostId): { readonly from: RegionId; readonly blocks: readonly ForceBlockId[]; readonly naval: boolean; readonly marching: boolean } {
-  const from = headquartersOf(world, state, post);
-  const here = commandedBlocks(state, post).filter((b) => {
-    const loc = state.forceLocations[b]!;
-    return state.forceBlockStates[b]!.fbKind === 'block' && loc.locRegion === from && loc.locAboard === null;
-  });
-  const marching = commandedBlocks(state, post).some((b) => state.forceLocations[b]!.locMarch !== null);
-  const naval = here.length > 0 && here.every((b) => isNaval(world.map, state, b));
-  const blocks = naval ? here : here.filter((b) => !isNaval(world.map, state, b));
-  return { from, blocks: [...blocks].sort(strictCompare), naval, marching };
-}
-
-/**
  * The plans submitted to a principal that wait for his review: his commanders' dispatches that have reached him, for
  * plans still under review, in post order (FOUNDATION section 5: approve, send back, or edit the arrows).
  */

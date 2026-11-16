@@ -33,6 +33,8 @@ export interface ForceBlockState {
   readonly fbNonCombatants: number;
   /** Stores on hand in milli-days (1000 = one day); null when unknown. */
   readonly fbStoresMilli: number | null;
+  /** The stores are a pack norm's (practice, lane 1.10), not a source's figure for this block (lane 1.4): every reader says so. */
+  readonly fbStoresAssumed: boolean;
   /** Morale, permille (lane 1.3): falls with losses and a broken flank; below the pack's rout line a side routs. */
   readonly fbMorale: number;
   /** Experience, permille: both sides gain it in battle. */
@@ -131,6 +133,7 @@ export function initialForces(map: WorldIndex, start: ScenarioStart): ForceTable
   const problems: string[] = [];
   const out: Record<ForceBlockId, ForceBlockState> = {};
   const condition = startingCondition(map);
+  const postKinds = new Map(start.posts.map((p) => [p.id, p.kind]));
   for (const b of [...start.forceBlocks].sort((x, y) => strictCompare(x.id, y.id))) {
     if (Object.prototype.hasOwnProperty.call(out, b.id)) problems.push(`force block ${b.id} is listed twice`);
     if (!departments.has(b.department)) problems.push(`force block ${b.id}: department ${b.department} is not in the World`);
@@ -140,6 +143,10 @@ export function initialForces(map: WorldIndex, start: ScenarioStart): ForceTable
     if (b.strength !== null && (!Number.isSafeInteger(b.strength) || b.strength < 0)) problems.push(`force block ${b.id}: strength must be a whole number of men`);
     if (!Number.isSafeInteger(b.nonCombatants) || b.nonCombatants < 0) problems.push(`force block ${b.id}: non-combatants must be a whole number`);
     if (b.storesDays !== null && (!Number.isSafeInteger(b.storesDays) || b.storesDays < 0)) problems.push(`force block ${b.id}: stores must be whole days`);
+    // Stores no source gives take the first norm that covers the block (lane 1.4), flagged assumed; none: unknown.
+    const side = map.world.departments.find((d) => d.id === b.department)?.faction ?? null;
+    const kind = b.post === null ? null : (postKinds.get(b.post) ?? null);
+    const norm = b.storesDays !== null ? null : (map.world.rules.stores.norms.find((n) => (n.post === null || n.post === b.post) && (n.postKind === null || n.postKind === kind) && (n.arm === null || n.arm === b.arm) && (n.faction === null || n.faction === side)) ?? null);
     out[b.id] = {
       fbName: b.name,
       fbKind: b.kind,
@@ -148,7 +155,8 @@ export function initialForces(map: WorldIndex, start: ScenarioStart): ForceTable
       fbArm: b.arm,
       fbStrength: b.strength,
       fbNonCombatants: b.nonCombatants,
-      fbStoresMilli: b.storesDays === null ? null : b.storesDays * STORES_MILLI,
+      fbStoresMilli: b.storesDays !== null ? b.storesDays * STORES_MILLI : norm === null ? null : norm.days * STORES_MILLI,
+      fbStoresAssumed: b.storesDays === null && norm !== null,
       fbMorale: condition.morale,
       fbExperience: condition.experience,
       fbEquipment: condition.equipment,

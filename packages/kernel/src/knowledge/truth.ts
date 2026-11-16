@@ -36,6 +36,12 @@ export const BIAS_TERM_KINDS = [
   'relay_term',
   /** How far an arrow edit departs from his own best plan, permille (his scorer: lane 1.2). */
   'edit_distance',
+  /** One term of a holder's willingness to a support request (its rule names the term), lane 1.4. */
+  'support_term',
+  /** A casualty figure a report gives below the truth: the share a first return leaves out, or the captured it counts as missing (lane 1.4). */
+  'return_understated',
+  /** An enemy loss a commander claims above the truth, by his own perception (lane 1.4; the information-flows note's 1x-3x). */
+  'claim_inflated',
   // Lane 1.7: a governor's answer to a call (his rung and willingness), and his region's loyalty scaling what he raised.
   'call_rung',
   'call_loyalty',
