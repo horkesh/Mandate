@@ -13,7 +13,8 @@
  *   sees them, inflated by his perception. A later return, the pack's days after, gives the full figures, the captured
  *   apart. A force destroyed in a failed breakout is never reported as killed: its men are captured, and so reported.
  * - **The governor's wire.** A battle in a state's ground reaches the principal by its governor's wire too: what he
- *   hears, that a battle was fought and who held the field, with no figures.
+ *   hears, that a battle was fought and who held the field, with no figures. Never from a self-governing nation's head
+ *   (0069, 0070), who is no side's governor.
  * - **A pocket closed.** A commander whose headquarters a closing pocket takes wires that he is cut off.
  *
  * The author of a side's reports is the holder of its post today (the commander, or whoever took the post after he was
@@ -26,6 +27,7 @@ import type { BattleDay, BattleSide } from '../combat/records.ts';
 import type { FactionId, PersonId, PostId, RegionId } from '../ids.ts';
 import type { ReportBody, ReportClaim } from '../knowledge/report.ts';
 import { term, type BiasTerm } from '../knowledge/truth.ts';
+import { isSelfGoverning } from '../command/command.ts';
 import { perceptionBias, traitsOf } from '../people/traits.ts';
 import type { State } from '../root-state.ts';
 import { headquartersOf, fieldPosts, postFaction } from '../seats/posts.ts';
@@ -94,7 +96,7 @@ function dispatches(ctx: TickContext, state: State, region: RegionId, bday: Batt
     const seen = Math.trunc((enemy.bsidePresent * bias.permille) / 1000);
     for (const phase of shape.phases) {
       const mine = phase.sides[i]!;
-      const well = mine.flankBreaks || mine.leaves || mine.surrenders ? 0 : 1;
+      const well = mine.flankBreaks || mine.leaves || mine.surrenders || mine.destroyed ? 0 : 1;
       sendReport(ctx, state, {
         body: body(author.person, author.post, ctx.day, phase.toHour, 'wire-dispatch', null, region, [claim('battle-phase', region, well, phase.phase, 600), claim('enemy-strength', region, seen, null, 500)]),
         truth: { truthTerms: [term('observed', enemy.bsidePresent, { region }), ...bias.terms, term('observed', mine.killedWounded, { region, rule: `${phase.phase}:killed_wounded_unsaid` })], truthTrimmed: [] },
@@ -152,6 +154,8 @@ function fullReturns(ctx: TickContext, state: State, region: RegionId, bday: Bat
 function governorWire(ctx: TickContext, state: State, region: RegionId, bday: BattleDay, field: FactionId | null): void {
   const government = state.regionGovernments[region];
   if (government === undefined || government === 'unknown') return;
+  // A self-governing nation's head is never a side's subordinate governor (0069, 0070; gate review G-1.4a), as lane 1.7's recruitment skips him.
+  if (isSelfGoverning(ctx.world.map, government)) return;
   for (const post of Object.keys(state.postStates).sort(strictCompare) as PostId[]) {
     const p = state.postStates[post]!;
     if (p.postDepartment !== government || p.postHolder === null || p.postParent !== null) continue;

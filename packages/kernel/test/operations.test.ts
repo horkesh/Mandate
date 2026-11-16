@@ -47,10 +47,13 @@ function mapOf(cast: Cast): WorldIndex {
       person('b_lead', 'b'),
       person('b_min', 'b'),
       person('b_gen', 'b'),
+      person('a_chief', 'a'),
     ],
   });
+  // A state government and a self-governing nation on a's side (0069), for the governor's wire.
+  const departments = [...base.departments, { id: toId('department', 'a_state'), faction: F('a'), kind: 'government', name: 'department.a_state.name', provenance: [] }, { id: toId('department', 'a_nation'), faction: F('a'), kind: 'nation', polity: 'nation_x', name: 'department.a_nation.name', provenance: [] }];
   // No commander is hit in these tests (the combat suite tests hits): a vacant post would send no reports.
-  return indexWorld({ ...base, rules: { ...base.rules, combat: { ...base.rules.combat, leaders: { killedPermille: 0, woundedPermille: 0, capturedPermille: 0 } } } });
+  return indexWorld({ ...base, departments, rules: { ...base.rules, combat: { ...base.rules.combat, leaders: { killedPermille: 0, woundedPermille: 0, capturedPermille: 0 } } } });
 }
 
 const CONTROL = { a_cap: { a: 1000 }, a2: { a: 1000 }, flank: { a: 1000 }, mid: { b: 1000 }, b2: { b: 1000 }, b_cap: { b: 1000 } };
@@ -61,8 +64,10 @@ const POSTS: readonly PostStart[] = [
   post('b_army', { department: 'b_war', parent: P('b_office'), holder: PER('b_gen'), region: R('mid') }),
 ];
 
-function game(cast: Cast, blocks: readonly ForceBlockStart[], o: { readonly control?: typeof CONTROL; readonly fortification?: number } = {}) {
-  const start = forcesStart(o.control ?? CONTROL, POSTS, blocks, {
+function game(cast: Cast, blocks: readonly ForceBlockStart[], o: { readonly control?: typeof CONTROL; readonly fortification?: number; readonly midGovernment?: 'a_state' | 'a_nation' } = {}) {
+  const head = o.midGovernment === undefined ? [] : [post('a_head', { kind: 'office', department: o.midGovernment, holder: PER('a_chief'), region: R('a_cap') })];
+  const start = forcesStart(o.control ?? CONTROL, [...POSTS, ...head], blocks, {
+    governments: o.midGovernment === undefined ? [] : [{ region: R('mid'), department: toId('department', o.midGovernment), provenance: [] }],
     factions: [
       { faction: F('a'), principal: PER('a_lead'), capital: R('a_cap'), playable: true },
       { faction: F('b'), principal: PER('b_lead'), capital: R('b_cap'), playable: true },
@@ -217,8 +222,8 @@ describe('battle reports: the night of the battle, hour by hour, and the returns
   const DIRECT = plan('direct:a2-mid', 'direct', [axis('main', 'a_army', ['a_1'], [leg('a2', 'mid', 'road:a2:mid')])]);
   // b's garrison is trapped: b2 is a's, so b in mid has nowhere to go, and surrenders.
   const TRAPPED = { ...CONTROL, b2: { a: 1000 }, mid: { a: 600, b: 400 } };
-  const fight = (boldness: StatDirection = 'high') => {
-    const g = game({ gen: { boldness } }, [block('a_1', { department: 'a_war', region: 'a2', strength: 9000, post: P('a_army') }), block('b_1', { department: 'b_war', region: 'mid', strength: 700, post: P('b_army') })], { control: TRAPPED as unknown as typeof CONTROL });
+  const fight = (boldness: StatDirection = 'high', midGovernment?: 'a_state' | 'a_nation') => {
+    const g = game({ gen: { boldness } }, [block('a_1', { department: 'a_war', region: 'a2', strength: 9000, post: P('a_army') }), block('b_1', { department: 'b_war', region: 'mid', strength: 700, post: P('b_army') })], { control: TRAPPED as unknown as typeof CONTROL, ...(midGovernment === undefined ? {} : { midGovernment }) });
     const results = play(g.world, approved(g.state, 'a_army', DIRECT), 16);
     const battle = Object.values(results.at(-1)!.state.battleRecords)[0]!;
     // Everything each principal was told, day by day (knowledge prunes superseded dispatches after a few days).
@@ -268,6 +273,14 @@ describe('battle reports: the night of the battle, hour by hour, and the returns
     expect(full.knownBody.reportDay).toBe(day.bdayDay + 7);
     // The first return is a decision point for each principal.
     expect(results.flatMap((r) => r.decisionPoints).filter((d) => d.point === 'battle-report').length).toBeGreaterThanOrEqual(1);
+  });
+
+  it('a governor whose state saw the battle wires his principal; a self-governing nation\'s head never does (0069, 0070; gate review G-1.4a)', () => {
+    const wires = (government: 'a_state' | 'a_nation') => fight('high', government).told('a_lead').filter((r) => r.knownBody.reportSubtype === 'governor-wire');
+    const state = wires('a_state');
+    expect(state.length).toBeGreaterThanOrEqual(1);
+    expect(state[0]!.knownBody.reportAuthor).toBe('a_chief');
+    expect(wires('a_nation')).toEqual([]);
   });
 
   it('a commander claims the enemy\'s losses as he sees them: a bold one as they were, a timid one inflated by his perception', () => {
