@@ -84,7 +84,9 @@ export function goalStatus(state: State, post: PostId): { readonly token: string
   const region = r.planGoal.goalObjective;
   if (r.planStatus !== 'approved') return { token: 'planning', region };
   const plan = r.planApproved;
-  const reached = state.standingGoals[post]?.standingSpec.goalSpecKind === 'hold';
+  // Reached: his operation's main axis holds its objective, or the operation ended with it held (lane 1.4).
+  const ops = Object.values(state.operationRecords).filter((o) => o.opPost === post && o.opOrder === r.planOrder);
+  const reached = ops.some((o) => o.opOutcome === 'objective_reached' || o.opAxes.some((a) => a.oaxPost === post && a.oaxArrived !== null));
   if (r.planGoal.goalPosture === 'hold' && (plan === null || plan.candMethod === 'holding' || reached)) return { token: 'holding', region };
   if (plan === null || plan.candMethod === 'holding' || plan.candConditions.some((g) => g.gateKind === 'move_when_reinforced')) return { token: 'awaiting-strength', region };
   return { token: reached ? 'holding' : 'advancing', region };

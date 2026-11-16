@@ -58,11 +58,12 @@ describe('a goal is drafted on request, and the commander picks (lane 1.2)', () 
     expect(record.planDraft!.draftDay).toBe(record.planSetDay);
     expect(record.planDraft!.draftCandidates.length).toBeGreaterThanOrEqual(2);
     expect(record.planGoal).toMatchObject({ goalObjective: R('b_mid'), goalPosture: 'take', goalApproveAsDrafted: true });
-    // His pick (unanswered here, so the best, by default) goes ahead the morning after: the stand-in path marches it.
+    // His pick (unanswered here, so the best, by default) goes ahead the morning after: an operation opens to execute it (lane 1.4).
     const approved = firstDay(results, (s) => s.planRecords[RESERVE]?.planStatus === 'approved')!;
     expect(approved).toBe(record.planSetDay + 1);
     expect(record.planChosen).toBe(record.planDraft!.draftCandidates[0]!.id);
-    expect(results[approved - 1]!.state.standingGoals[RESERVE]).toMatchObject({ standingSpec: { goalSpecKind: 'advance', goalSpecRegion: R('b_mid') }, standingSetDay: approved, standingIssuer: 'a_lead' });
+    const op = Object.values(results[approved - 1]!.state.operationRecords).find((o) => o.opPost === RESERVE)!;
+    expect(op).toMatchObject({ opObjective: R('b_mid'), opStartDay: approved, opPlan: record.planChosen, opOrder: record.planOrder });
     expect([fired(telemetry, 'plans.goal_set'), fired(telemetry, 'plans.drafted'), fired(telemetry, 'plans.chosen'), fired(telemetry, 'plans.went_ahead')]).toEqual([1, 1, 1, 1]);
     expect(fired(telemetry, 'seats.defaulted')).toBe(1);
   });

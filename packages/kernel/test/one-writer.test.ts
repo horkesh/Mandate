@@ -40,7 +40,7 @@ import { repoPath, tsFiles, workspacePackages } from './support/source.ts';
  */
 const IMMUTABLE_KEYS_OF_THE_OLD_LIST: readonly string[] = [
     'adviceConfidence', 'adviceReasons', 'adviceRecommends', 'calendarStart', 'claimConfidence', 'claimKind',
-    'claimRegion', 'claimToken', 'claimValue', 'gameSeed', 'goalSpecKind', 'goalSpecRegion',
+    'claimRegion', 'claimToken', 'claimValue', 'gameSeed',
     'hopPerson', 'hopPost', 'hopRole', 'id',
     'knownBody', 'knownReceivedDay', 'knownReports', 'knownRoute', 'knownVia', 'msgArriveDay',
     'msgFrom', 'msgOrder', 'msgOrigin', 'msgPending', 'msgReport', 'msgRole',
@@ -48,8 +48,7 @@ const IMMUTABLE_KEYS_OF_THE_OLD_LIST: readonly string[] = [
     'orderBypass', 'orderGoal', 'orderIssuedDay', 'orderIssuer', 'orderTarget', 'reasonKind',
     'reasonWeight', 'reportAdvice', 'reportAnswers', 'reportAuthor', 'reportAuthorPost', 'reportClaims',
     'reportDay', 'reportHour', 'reportSubjectId', 'reportSubjectKind', 'reportSubtype', 'reportType',
-    'seatDriver', 'seatPerson', 'standingIssuer', 'standingOrder', 'standingSetDay', 'standingSpec',
-    'standingViaChain', 'termKind', 'termPerson', 'termPost', 'termRegion', 'termRule',
+    'seatDriver', 'seatPerson', 'termKind', 'termPerson', 'termPost', 'termRegion', 'termRule',
     'termValue', 'truthTerms', 'truthTrimmed',
 ];
 
@@ -612,7 +611,8 @@ describe('the scanner catches violations (positive control)', () => {
       // The ratchet: every key the old hand-kept list named (67 since lane 0.5) is still derived. New records add keys freely;
       // a key leaves only by a deliberate edit to the pinned list above.
       expect(keys).toEqual(expect.arrayContaining([...IMMUTABLE_KEYS_OF_THE_OLD_LIST]));
-      expect(IMMUTABLE_KEYS_OF_THE_OLD_LIST).toHaveLength(67);
+      // Lane 1.4 retired the standing goal: its seven keys (`goalSpec*`, `standing*`) left the list on purpose.
+      expect(IMMUTABLE_KEYS_OF_THE_OLD_LIST).toHaveLength(60);
       const nestedNames = real.filter((r) => r.record !== 'State' && !LEGACY_STATE_RECORDS.some((l) => l.record === r.record)).map((r) => r.record).sort();
       expect(nestedNames).toEqual([...IMMUTABLE_RECORDS].sort());
     });

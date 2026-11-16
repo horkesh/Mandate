@@ -32,7 +32,7 @@ import { callTerms, type RecruitmentRules } from '../recruitment/rules.ts';
 import { loyaltyOf } from '../regions/regions.ts';
 import type { State } from '../root-state.ts';
 import { postFaction } from '../seats/posts.ts';
-import { fire, sendReport, type RejectionReason, type TickContext } from './context.ts';
+import { fire, oversightOf, sendReport, type RejectionReason, type TickContext } from './context.ts';
 import { answerBody, dispatchOrder } from './orders.ts';
 
 /** Every mechanic recruitment counts (FOUNDATION section 11.5). */
@@ -91,7 +91,8 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
   const post = msg.msgToPost!;
   const governor = msg.msgTo;
   const rules = world.map.world.rules.recruitment;
-  const answer = answerOrder(world, start, governor, order.orderIssuer, callTerms(rules));
+  // He answers watched from where he stands (lane 1.4's oversight: his courier days from the caller, and the wire).
+  const answer = answerOrder(world, start, governor, order.orderIssuer, callTerms(rules), { oversight: oversightOf(ctx, start, governor, order.orderIssuer).value });
   let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: governor, post, role: 'addressee', day, kind: 'call' }));
   const side = postFaction(world, state, post);
   const region = state.postStates[post]!.postSeat;

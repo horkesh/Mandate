@@ -175,3 +175,15 @@ export function applyBattleRecords(state: State, changes: readonly BattleRecordC
 export function lastDay(record: BattleRecord): BattleDay | null {
   return record.battleDays.length === 0 ? null : record.battleDays[record.battleDays.length - 1]!;
 }
+
+/** Prune battles closed more than `keepDays` ago (lane 1.4; the pack's `pruning.battleDays`): records grow with every battle-day. */
+export function pruneBattles(state: State, day: number, keepDays: number): { readonly state: State; readonly pruned: number } {
+  const drop = Object.keys(state.battleRecords).filter((id) => {
+    const end = state.battleRecords[id]!.battleEndDay;
+    return end !== null && day - end > keepDays;
+  });
+  if (drop.length === 0) return { state, pruned: 0 };
+  const next: Record<BattleId, BattleRecord> = { ...state.battleRecords };
+  for (const id of drop) delete next[id];
+  return { state: { ...state, battleRecords: next }, pruned: drop.length };
+}

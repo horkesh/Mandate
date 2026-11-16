@@ -69,3 +69,35 @@ export function responseOf(
 export function recordResponse(state: State, response: OrderResponse): State {
   return { ...state, orderResponses: { ...state.orderResponses, [responseKey(response.respOrder, response.respPerson)]: response } };
 }
+
+/**
+ * Prune responses older than `keepDays` (lane 1.4; the pack's `pruning.responseDays`), as knowledge prunes: `orderResponses`
+ * grows with every hop of every order. A response a plan, an operation or a levy still names is kept, whatever its age,
+ * and so is each post holder's first answer to a call (lane 1.11).
+ */
+export function pruneResponses(state: State, day: number, keepDays: number): { readonly state: State; readonly pruned: number } {
+  const named = new Set<string>();
+  for (const r of Object.values(state.planRecords)) {
+    named.add(r.planResponse);
+    for (const c of r.planCounters) if (c.counterResponse !== null) named.add(c.counterResponse);
+  }
+  for (const o of Object.values(state.operationRecords)) for (const q of o.opRequests) if (q.oreqResponse !== null) named.add(q.oreqResponse);
+  // Lane 1.7: a levy names the governor's answer to the call that raised it.
+  for (const l of Object.values(state.postLevies)) named.add(l.levyResponse);
+  // Lane 1.11: a post holder's first answer to a call is kept, since the `callReceived` condition dates a government's
+  // act from the call's arrival (at most one per post).
+  const firstCall: Record<string, string> = {};
+  for (const k of Object.keys(state.orderResponses)) {
+    const r = state.orderResponses[k]!;
+    if (r.respKind !== 'call' || r.respRole !== 'addressee' || r.respPost === null) continue;
+    const held = firstCall[r.respPost];
+    const prior = held === undefined ? undefined : state.orderResponses[held]!;
+    if (prior === undefined || r.respDay < prior.respDay || (r.respDay === prior.respDay && k < held!)) firstCall[r.respPost] = k;
+  }
+  for (const k of Object.values(firstCall)) named.add(k);
+  const drop = Object.keys(state.orderResponses).filter((k) => day - state.orderResponses[k]!.respDay > keepDays && !named.has(k));
+  if (drop.length === 0) return { state, pruned: 0 };
+  const next: Record<string, OrderResponse> = { ...state.orderResponses };
+  for (const k of drop) delete next[k];
+  return { state: { ...state, orderResponses: next }, pruned: drop.length };
+}

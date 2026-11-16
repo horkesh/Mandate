@@ -71,6 +71,8 @@ export interface PlanAxis {
   readonly axisOutOfSupply: number;
   /** The fewest days of stores among the axis's blocks. */
   readonly axisStoresDays: number;
+  /** Some of those stores are a pack norm's, not a source's (lane 1.4): the plan rests on an assumption, and says so. */
+  readonly axisStoresAssumed: boolean;
 }
 
 export const REQUEST_KINDS = ['cooperating_axis', 'naval_support', 'reinforcement'] as const;
@@ -185,6 +187,8 @@ export interface PlannerForce {
   readonly strength: number;
   /** Whole days of stores; unknown counts as none. */
   readonly storesDays: number;
+  /** Its stores are a pack norm's (lane 1.4). */
+  readonly storesAssumed: boolean;
   /** The naval block carrying it, for troops afloat. */
   readonly aboard: ForceBlockId | null;
 }

@@ -32,7 +32,7 @@ describe('the band table', () => {
   });
 
   it('a stalled band names a kernel test that exists and says so, and has a ceiling', () => {
-    // Lane 1.3: the one stalled band, Phase 0's trapped garrison at Washington, is gone: the battle model makes it surrender.
+    // Lane 1.3: the one stalled band, Phase 0's trapped garrison at Washington, is gone: the battle model ends the stand-off\n    // (lane 1.11's war by decision: its loser withdraws, so the control plants on the withdrawal; cut-off and surrender are QUIET).
     const stalledBands = REFERENCE_RUNS.flatMap((r) => Object.entries(r.bands).filter(([, b]) => b.driver !== undefined).map(([m, b]) => ({ m, b })));
     expect(stalledBands.map((s) => s.m)).toEqual([]);
     // The control: a stalled band without a ceiling is refused, and one with its driver is sound.
@@ -41,8 +41,8 @@ describe('the band table', () => {
     const band = stalled(1, 'planted: a stand-off band for the control', driver);
     expect(readFileSync(`${REPO}${driver.test}`, 'utf8')).toContain(driver.needle);
     const others = REFERENCE_RUNS.filter((r) => r !== union);
-    expect(bandProblems([{ ...union, bands: { ...union.bands, 'combat.cut_off': band } }, ...others])).toEqual([]);
-    expect(bandProblems([{ ...union, bands: { ...union.bands, 'combat.cut_off': { ...band, maxFires: undefined } } }, ...others])).toContain(`${union.name}: combat.cut_off is stalled with no ceiling`);
+    expect(bandProblems([{ ...union, bands: { ...union.bands, 'combat.withdrew': band } }, ...others])).toEqual([]);
+    expect(bandProblems([{ ...union, bands: { ...union.bands, 'combat.withdrew': { ...band, maxFires: undefined } } }, ...others])).toContain(`${union.name}: combat.withdrew is stalled with no ceiling`);
   });
 
   it('a stand-off band lets a run that ends the stand-off pass and fails a flood (review S1 of the close-out)', () => {

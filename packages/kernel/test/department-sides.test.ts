@@ -170,7 +170,7 @@ describe('a situation moves a government of no side to a side (0065)', () => {
     const out = playDays(world, createState(world, { seed: 1 }), scriptedSeats({ a: { 4: [order('n_guard', 'advance', 'a2', 'courier')] } }), 14, { freeze: true, onDay: (r) => days.push(r) });
     // Day 1: neutral, not commandable. Day 2: it joins a, with no goal (0072's hold goal is retired): nothing moves it.
     expect(days[1]!.state.planRecords[P('n_guard')]).toBeUndefined();
-    expect(days[1]!.state.standingGoals[P('n_guard')]).toBeUndefined();
+    expect(Object.values(days[1]!.state.operationRecords).filter((o) => o.opPost === P('n_guard'))).toEqual([]);
     const menu = pendingRequests(world, days[2]!.state).find((r) => r.requestSeat === lead)!.menu;
     expect(menu.menuKind === 'principal' && menu.commandable.map((c) => c.post)).toContain('n_guard');
     // The order sent on day 4 arrives and is obeyed; its plan is drafted, goes ahead as drafted, marches on a2 and, there, holds it.
@@ -178,9 +178,11 @@ describe('a situation moves a government of no side to a side (0065)', () => {
     const record = out.state.planRecords[P('n_guard')]!;
     expect(record).toMatchObject({ planIssuer: 'a_lead', planStatus: 'approved' });
     expect(record.planGoal).toMatchObject({ goalObjective: R('a2'), goalPosture: 'take' });
-    const advancing = days.map((r) => r.state.standingGoals[P('n_guard')]).find((g) => g?.standingSpec.goalSpecKind === 'advance');
-    expect(advancing).toMatchObject({ standingSpec: { goalSpecKind: 'advance', goalSpecRegion: R('a2') }, standingIssuer: 'a_lead' });
-    expect(out.state.standingGoals[P('n_guard')]!.standingSpec).toEqual({ goalSpecKind: 'hold', goalSpecRegion: R('a2') });
+    // Lane 1.4: an operation executes the plan; its main axis reaches a2 and holds it.
+    const op = Object.values(out.state.operationRecords).find((o) => o.opPost === P('n_guard'))!;
+    expect(op).toMatchObject({ opObjective: R('a2'), opPosture: 'take' });
+    expect(op.opAxes[0]!.oaxArrived).not.toBeNull();
+    expect(op.opAxes[0]!.oaxLog.map((e) => e.axevStage)).toEqual(expect.arrayContaining(['assemble', 'march', 'works']));
     expect(days.flatMap((r) => r.events).filter((e) => e.event === 'objected')).toEqual([]);
     expect(out.state.forceLocations[toId('forceBlock', 'n_guard_1')]!.locRegion).toBe('a2');
   });

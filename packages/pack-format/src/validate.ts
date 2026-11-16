@@ -159,6 +159,16 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   for (const problem of phase0.combatRulesProblems(world.rules.combat, vocab.terrains.map((t) => t.id))) {
     err('rules-combat', W('rules', 0, 'combat'), problem, 'whole numbers in range for each combat rule, terrains from the pack’s vocabulary, phase shares summing to 1000');
   }
+  // Lane 1.4: each stores norm names a post kind, an arm and a side the pack has.
+  world.rules.stores.norms.forEach((n, i) => {
+    if (n.postKind !== null) term('postKinds', n.postKind, W('rules.stores.norms', i, 'postKind'));
+    if (n.arm !== null) term('arms', n.arm, W('rules.stores.norms', i, 'arm'));
+    if (n.faction !== null && !factionIds.has(n.faction)) err('unknown-reference', W('rules.stores.norms', i, 'faction'), `faction "${n.faction}" is not in the manifest`, 'a faction from the manifest, or null');
+  });
+  // Lane 1.4: operations and pruning, by the kernel's own rule.
+  for (const problem of phase0.operationsRulesProblems(world.rules.operations, world.rules.pruning)) {
+    err('rules-operations', W('rules', 0, 'operations'), problem, 'whole numbers in range for each operations and pruning rule');
+  }
   // Lane 1.7: the recruitment and self-emancipation rules and what they name, by the kernel's own rules (it checks the same when it indexes a World).
   for (const problem of [...phase0.recruitmentRuleProblems(world.rules.recruitment), ...phase0.selfEmancipationRuleProblems(world.rules.selfEmancipation), ...phase0.menAndRegionsReferenceProblems(world)]) {
     err('rules-men-regions', W('rules', 0, 'recruitment'), problem, 'whole numbers in range, and an arm, post kinds, values and a faction the pack has');

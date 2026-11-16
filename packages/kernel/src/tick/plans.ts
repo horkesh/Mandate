@@ -8,8 +8,7 @@
  *   his scorer and answered through compliance; then goals awaiting a plan are drafted, oldest first, within the pack's
  *   daily drafting cap per side (0062). Plans are drafted on request, never every tick (FOUNDATION section 9).
  *
- * Whatever a plan record becomes, the STAND-IN execution adapter (`plans/execute.ts`, lane 1.4's) tells the movement
- * path what to do.
+ * An approved plan (or one awaiting the word) is executed by the day's operations phase (`tick/operations.ts`, lane 1.4).
  */
 import { strictCompare } from '../compare.ts';
 import { deriveMap, type DerivedMap } from '../control-index/derived.ts';
@@ -21,7 +20,6 @@ import { liveTerms, draft } from '../planner/draft.ts';
 import { applyEdit, concretePlan, editDirective } from '../planner/edits.ts';
 import { plannerInputFor } from '../planner/input.ts';
 import type { PlanCandidate, TermKind } from '../planner/types.ts';
-import { execute } from '../plans/execute.ts';
 import { goalKindOf } from '../plans/goal.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
 import { answerOrder, goalTerms } from '../reading/orders.ts';
@@ -32,7 +30,7 @@ import { postFaction } from '../seats/posts.ts';
 import { seatIdFor } from '../seats/seats.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import { viewFor, type ViewCache } from '../view/view.ts';
-import { fire, sendReport, type TickContext } from './context.ts';
+import { fire, sendReport, type TickContext, oversightOf } from './context.ts';
 import { monthOf } from './map.ts';
 import { answerBody } from './orders.ts';
 import { passageOf } from './passage.ts';
@@ -144,7 +142,6 @@ export function applyPlanChoices(ctx: TickContext, start: State, menus: Readonly
     } else {
       fire(ctx, 'plans.went_ahead');
     }
-    state = execute(state, post, ctx.day);
   }
   return state;
 }
@@ -196,7 +193,7 @@ export function plansPhase(ctx: TickContext, start: State, cache: ViewCache): St
     fire(ctx, 'planner.candidates', set.draftCandidates.length);
     fire(ctx, 'planner.searches', set.draftSearches);
     for (const t of liveTerms(set)) fire(ctx, `planner.term.${t}`);
-    state = execute(saveDraft(state, post, set), post, day);
+    state = saveDraft(state, post, set);
   }
   return state;
 }
@@ -228,7 +225,7 @@ function answerEdit(ctx: TickContext, start: State, post: PostId, derived: Deriv
     return invalid(result.reason, start);
   }
   const terms = editDirective(input, record.planDraft, result.edited, result.distance, world.map.world.rules.plans.holdingRisk, goalTerms(world.rules.people, goalKindOf(record.planGoal)));
-  const response = answerOrder(world, start, holder, record.planIssuer, terms);
+  const response = answerOrder(world, start, holder, record.planIssuer, terms, { oversight: oversightOf(ctx, start, holder, record.planIssuer).value });
   const state = recordResponse(start, responseOf(response, { order: pending.pendingOrder, person: holder, post, role: 'addressee', day, kind: 'edit' }));
   const executes = concretePlan(input, record.planDraft, chosen, result.edited, response.actual);
   for (const f of result.fell) fire(ctx, `planner.term.${f.term}`);
@@ -253,5 +250,5 @@ function answerEdit(ctx: TickContext, start: State, post: PostId, derived: Deriv
     counterInvalid: null,
     counterResponse: responseKey(pending.pendingOrder, holder),
   };
-  return execute(settleCounter(state, post, counter, objects ? null : executes), post, day);
+  return settleCounter(state, post, counter, objects ? null : executes);
 }

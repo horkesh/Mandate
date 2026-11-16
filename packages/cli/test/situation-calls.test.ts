@@ -90,12 +90,12 @@ describe('a situation option issues a call (lane 1.11)', () => {
 });
 
 describe('a government’s act a pack-set delay after the call reaches it (lane 1.11, the lead’s ruling)', () => {
-  it('fires the notice once the call has reached the governor the condition names, that many days before, never earlier', () => {
+  const actAfter = (delay: number, days: number) => {
     const notice: phase0.SituationDef = {
       ...callSituation('n_brenmark_governor', 90),
       id: ids.toId('situation', 'shire_act'),
       kind: 'notice',
-      event: { callReceived: { post: POST('n_brenmark_governor'), days: 3 } },
+      event: { callReceived: { post: POST('n_brenmark_governor'), days: delay } },
       railroad: null,
       options: [],
       inaction: null,
@@ -107,9 +107,20 @@ describe('a government’s act a pack-set delay after the call reaches it (lane 
     const map = v2Map('testbed')!;
     const world = phase0.indexSeatsWorld(w.indexWorld(map.world), map.start, { situations: [callSituation('n_brenmark_governor', 90), notice] });
     let state = phase0.createState(world, { seed: map.start.seed, people: 'as-history' });
-    for (let d = 1; d <= 12; d++) state = phase0.tick(world, state, [], { freeze: true }).state;
-    const arrived = Object.values(state.orderResponses).find((r) => r.respKind === 'call' && r.respPost === POST('n_brenmark_governor'))!;
+    for (let d = 1; d <= days; d++) state = phase0.tick(world, state, [], { freeze: true }).state;
+    return { world, state, arrived: Object.values(state.orderResponses).find((r) => r.respKind === 'call' && r.respPost === POST('n_brenmark_governor')) };
+  };
+
+  it('fires the notice once the call has reached the governor the condition names, that many days before, never earlier', () => {
+    const { state, arrived } = actAfter(3, 12);
     expect(arrived).toBeDefined();
-    expect(state.situationFlags['shire_acted']).toBe(arrived.respDay + 3);
+    expect(state.situationFlags['shire_acted']).toBe(arrived!.respDay + 3);
+  });
+
+  it('keeps the governor’s first answer to a call past the pack’s pruning, so a delay longer than it still fires', () => {
+    const { world, state, arrived } = actAfter(70, 85);
+    expect(70).toBeGreaterThan(world.map.world.rules.pruning.responseDays);
+    expect(arrived).toBeDefined();
+    expect(state.situationFlags['shire_acted']).toBe(arrived!.respDay + 70);
   });
 });

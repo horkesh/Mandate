@@ -10,8 +10,7 @@
  *  2b. People apply what was proposed to them today: a bypassed relay's grievance (lane 1.1).
  *  2c. Plans: edits answered, goals drafted within the daily cap (lane 1.2).
  *  2d. Recruitment: levies muster into new blocks; enlistments that end disband (lane 1.7).
- *  3. Movement: approved plans through the stand-in standing-goal path (lane 1.4
- *     retires it), every march a day further (lane 0.5).
+ *  3. Operations: approved plans executed axis by axis, support requests sent; then every march a day further (lane 1.4).
  *  3b. Combat: battles and occupation; losses, retreats, generals hit, control deltas (lane 1.3).
  *  4. Control and network changes, and the derived map (lane 0.4).
  *  4a. Stragglers rejoin, and stores on hand fall or refill, from today's supply trace (lanes 0.5, 1.3).
@@ -46,11 +45,15 @@ import { fire, type DecisionPoint, type MapEvent, type Price, type Proposal, typ
 import { deliverDue } from './deliver.ts';
 import { createFreezeLedger, deepFreeze, type FreezeLedger } from './freeze.ts';
 import { generateReports } from './generate.ts';
+import { battleReports, BATTLE_REPORT_MECHANICS } from './battle-reports.ts';
 import { combatPhase, commandProposalsPhase, storesPhase } from './forces.ts';
 import { mapBarrier, mapPhase } from './map.ts';
 import { issueOrder } from './orders.ts';
 import { decideCommand, delegateCommand, runSituations, SITUATION_MECHANICS } from './situations.ts';
-import { applyStanding, MOVEMENT_MECHANICS } from './standing.ts';
+import { operationsPhase, OPERATIONS_MECHANICS } from './operations.ts';
+import { pruneOperations } from '../operations/operations.ts';
+import { pruneBattles } from '../combat/records.ts';
+import { pruneResponses } from '../proxy/responses.ts';
 import { applyVerb, observerLetters, VERB_MECHANICS } from './verbs.ts';
 import { isPeopleWeek, peopleWeek, WEEK_MECHANICS } from './people-week.ts';
 import { attentionLeft, refillAttention, spendAttention } from '../seats/attention.ts';
@@ -67,6 +70,7 @@ export const SEATS_MECHANICS = [
   'messages.delivered',
   'messages.sent',
   'messages.special_messenger',
+  'orders.responses_pruned',
   'orders.bypassed',
   'orders.conflict',
   'orders.obeyed',
@@ -83,7 +87,8 @@ export const SEATS_MECHANICS = [
   'seats.attention_spent',
   ...VERB_MECHANICS,
   ...WEEK_MECHANICS,
-  ...MOVEMENT_MECHANICS,
+  ...OPERATIONS_MECHANICS,
+  ...BATTLE_REPORT_MECHANICS,
   ...PLANS_MECHANICS,
   ...RECRUITMENT_MECHANICS,
   ...REGIONS_MECHANICS,
@@ -232,8 +237,8 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   // 2d. Recruitment (lane 1.7): levies due muster into new blocks, enlistments that end disband; one proposal per block.
   state = freeze(recruitmentPhase(ctx, state));
 
-  // 3. Movement: approved plans march through the stand-in path (lane 1.4 retires it), every march a day further.
-  state = freeze(applyStanding(ctx, state));
+  // 3. Operations: approved plans executed axis by axis (lane 1.4), then every march a day further.
+  state = freeze(operationsPhase(ctx, state));
 
   // 3b. Combat (lane 1.3; only with a map): battles and occupation. Each owner applies its proposals now; control deltas wait for 4.
   const fought = combatPhase(ctx, state);
@@ -265,6 +270,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   }
 
   // 5. Reports on their cycles.
+  battleReports(ctx, state);
   generateReports(ctx, state);
   // Observer letters on their cadence (lane 1.5).
   state = freeze(observerLetters(ctx, state));
@@ -274,9 +280,17 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   const pruned = pruneKnowledge(state, world.rules.templates, day);
   if (pruned.counts.byAge > 0) fire(ctx, 'knowledge.pruned_age', pruned.counts.byAge);
   if (pruned.counts.bySupersession > 0) fire(ctx, 'knowledge.pruned_superseded', pruned.counts.bySupersession);
+  // Lane 1.4: ended operations, closed battles and answered orders are kept the pack's days, as knowledge is.
+  const keep = world.map.world.rules.pruning;
+  let kept = pruneOperations(pruned.state, day, keep.operationDays);
+  const battles = pruneBattles(kept, day, keep.battleDays);
+  if (battles.pruned > 0) fire(ctx, 'combat.records_pruned', battles.pruned);
+  const responses = pruneResponses(battles.state, day, keep.responseDays);
+  if (responses.pruned > 0) fire(ctx, 'orders.responses_pruned', responses.pruned);
+  kept = responses.state;
 
   // 7. The day.
-  state = freeze(advanceDay(pruned.state, day));
+  state = freeze(advanceDay(kept, day));
 
   // 8. The invariant barrier.
   mapBarrier(ctx, state, dayMap, options.deepChecks === true);
