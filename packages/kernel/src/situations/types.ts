@@ -107,6 +107,17 @@ export interface OptionOrder {
 }
 
 /**
+ * A call for regiments an option issues (lane 1.11): in the principal's name, through the validated call path, as a
+ * goal goes through the order path (`dispatchOrder`). Each governor answers by his own compliance (lane 1.7).
+ */
+export interface OptionCall {
+  readonly to: PostId;
+  readonly regiments: number;
+  readonly termDays: number;
+  readonly route: RouteKind;
+}
+
+/**
  * The gate tag on an item (SENSITIVE-HISTORY section 5), or an explicit "not
  * gated" with its reason. `actingSide` is whose conduct the item is, which the
  * sign rule reads (E7: atrocity-class conduct never helps the side that acts).
@@ -152,6 +163,8 @@ export interface OptionDef {
   /** Costs that apply on every use, whatever follows (gate B5): no condition, no chance. */
   readonly lockedCosts: readonly Effect[];
   readonly orders: readonly OptionOrder[];
+  /** Calls for regiments to governors' posts (lane 1.11). */
+  readonly calls: readonly OptionCall[];
   /** Values the option honours, which a delegate weighs when he decides by his values (0040). */
   readonly honours: readonly string[];
   /** The gate reviewer's mark for the lever sweep (D6): the historically worst conduct. */

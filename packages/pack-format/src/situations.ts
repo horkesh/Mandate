@@ -126,6 +126,17 @@ export const OptionSchema = z.strictObject({
       }),
     )
     .default([]),
+  calls: z
+    .array(
+      z.strictObject({
+        to: idOf('post'),
+        regiments: int.min(1).describe('Regiments asked of the governor.'),
+        termDays: int.min(1).describe('Days the men are enlisted for, from the muster.'),
+        route: z.enum(phase0.ROUTE_KINDS),
+      }),
+    )
+    .default([])
+    .describe('Calls for regiments to governors’ posts (lane 1.11), through the validated call path: each governor answers by his own compliance (lane 1.7).'),
   honours: z.array(termId).default([]),
   watched: z.boolean().default(false),
   gate: GateTagSchema.nullable().default(null),
@@ -305,6 +316,7 @@ export function validateSituations(items: readonly { readonly file: string; read
     def.staffLine?.authors.forEach((p, i) => ownSide(p, `staffLine.authors[${i}]`));
     def.report?.authors.forEach((p, i) => ownSide(p, `report.authors[${i}]`));
     def.options.forEach((o, i) => o.orders.forEach((order, j) => ownSide(order.to, `options[${i}].orders[${j}].to`)));
+    def.options.forEach((o, i) => o.calls.forEach((call, j) => ownSide(call.to, `options[${i}].calls[${j}].to`)));
     def.subjects.forEach((p, i) => ref(people, 'person', p, `subjects[${i}]`));
     def.delegableTo.forEach((p, i) => ref(posts, 'post in any scenario', p, `delegableTo[${i}]`));
     const optionIds = def.options.map((o) => o.id);
@@ -368,6 +380,12 @@ export function validateSituations(items: readonly { readonly file: string; read
         if (order.objective !== null) ref(regions, 'region', order.objective, `${at}.objective`);
         if (!phase0.ORDER_ROUTES.includes(order.route)) err('situation-route', `${at}.route`, `"${order.route}" is not a route a principal orders by`, `one of ${phase0.ORDER_ROUTES.join(', ')} (0052)`);
         if (order.posture !== 'hold' && order.objective === null) err('situation-order', at, `a ${order.posture} order names no objective`, 'only a hold may name none: it holds where he stands');
+      });
+      o.calls.forEach((call, j) => {
+        const at = `options[${i}].calls[${j}]`;
+        ref(posts, 'post in any scenario', call.to, `${at}.to`);
+        if (!phase0.ORDER_ROUTES.includes(call.route)) err('situation-route', `${at}.route`, `\"${call.route}\" is not a route a principal orders by`, `one of ${phase0.ORDER_ROUTES.join(', ')} (0052)`);
+        if (call.termDays > pack.world.rules.recruitment.maxTermDays) err('situation-call', `${at}.termDays`, `a term of ${call.termDays} days is longer than the pack allows`, `at most ${pack.world.rules.recruitment.maxTermDays} days (rules.recruitment.maxTermDays)`);
       });
     });
 

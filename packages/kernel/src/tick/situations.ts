@@ -47,6 +47,7 @@ import {
 import type { Effect, SituationDef } from '../situations/types.ts';
 import { fire, sendReport, type RejectionReason, type TickContext } from './context.ts';
 import { issueOrder } from './orders.ts';
+import { issueCall } from './recruitment.ts';
 
 /** Every mechanic the situations phase counts (FOUNDATION section 11.5). */
 export const SITUATION_MECHANICS = [
@@ -143,6 +144,12 @@ function applyDecision(ctx: TickContext, start: State, def: SituationDef, chosen
       // beyond posture and objective are the pack's (lane 1.2).
       const goal = { objective: order.objective, posture: order.posture, risk: d.risk, deadlineDays: d.deadlineDays, rail: d.rail, river: d.river, sea: d.sea, neutral: d.neutral, committed: [], awaitWord: d.awaitWord, approveAsDrafted: d.approveAsDrafted };
       const reason = issueOrder(ctx, state, principal, { cmd: 'order', to: order.to, goal, route: order.route, bypass: false });
+      if (reason === null) fire(ctx, 'situations.orders');
+      else ctx.rejections.push({ day: ctx.day, seat: principal, entry: -1, reason });
+    }
+    // Calls for regiments, through the validated call path (lane 1.11): each governor answers by his own compliance.
+    for (const call of o.calls) {
+      const reason = issueCall(ctx, state, principal, { cmd: 'call', to: call.to, regiments: call.regiments, termDays: call.termDays, route: call.route, bypass: false });
       if (reason === null) fire(ctx, 'situations.orders');
       else ctx.rejections.push({ day: ctx.day, seat: principal, entry: -1, reason });
     }

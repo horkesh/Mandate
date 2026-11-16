@@ -99,7 +99,7 @@ describe('a situation closing neutral passage, end to end through the tick (0055
           waitsOn: null,
           effects: [{ propose: { owner: 'command', field: GOVERNMENT_CLOSED_FIELD, subject: 'neutral_gov', delta: 1, reason: 'proclamation', side: null } }],
           lockedCosts: [],
-          orders: [],
+          orders: [], calls: [],
           honours: [],
           watched: false,
           gate: null,

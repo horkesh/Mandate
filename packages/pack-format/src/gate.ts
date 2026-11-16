@@ -187,10 +187,12 @@ export function resolvedStrings(def: SituationDef, strings: ReadonlyMap<string, 
  * The content hash a sign-off records (A7; section 5): the item in canonical
  * JSON without its `gateReview`, with the text of every string it shows, in
  * every locale (review N4: a translation is part of what was signed), and every
- * source row it cites. Any edit to any of them voids the sign-off.
+ * source row it cites. Any edit to any of them voids the sign-off. A field the schema added later hashes as absent while
+ * it is empty (an option's `calls`, lane 1.11), so adding a field never voids a sign-off that did not use it.
  */
 export function gateContentHash(def: SituationDef, strings: LocaleStrings, provenance: ProvenanceFile): string {
-  const { gateReview: _review, ...item } = def;
+  const { gateReview: _review, ...whole } = def;
+  const item = { ...whole, options: whole.options.map(({ calls, ...o }) => (calls.length === 0 ? o : { ...o, calls })) };
   const cited = new Set(def.citations.map((c) => c.source));
   const sources = provenance.sources.filter((s) => cited.has(s.key)).sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0));
   const byLocale: Record<string, Record<string, string>> = {};

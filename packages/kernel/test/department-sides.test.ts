@@ -116,7 +116,7 @@ describe('a situation moves a government of no side to a side (0065)', () => {
         waitsOn: null,
         effects: [{ propose: { owner: 'command', field: DEPARTMENT_SIDE_FIELD, subject: 'neutral_gov', delta: 1, reason: 'ordinance', side: F('a') } }],
         lockedCosts: [],
-        orders: [],
+        orders: [], calls: [],
         honours: [],
         watched: false,
         gate: null,
