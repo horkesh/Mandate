@@ -74,7 +74,7 @@ export type SubjectKind = (typeof SUBJECT_KINDS)[number];
  *
  * Lane 1.6 adds the front page's claims (`politics/press.ts`):
  * - `battle-result`: a battle its side closed, as its public hears it: `claimToken` `won`, `lost` or `drawn`,
- *   `claimRegion` the battle's region, `claimValue` the side's killed, wounded and missing;
+ *   `claimRegion` the battle's region, `claimValue` the side's killed, wounded and missing, the captured among them;
  * - `framing`: who its public believes began the war, signed permille (positive: the other side).
  */
 export const CLAIM_KINDS = [

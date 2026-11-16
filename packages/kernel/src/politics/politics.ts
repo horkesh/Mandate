@@ -255,7 +255,7 @@ export function applyPolitics(rules: PoliticsRules, start: State, changes: reado
 export function driftChanges(rules: PoliticsRules, state: State): PoliticsChange[] {
   const out: PoliticsChange[] = [];
   for (const b of [...rules.blocs].sort((x, y) => strictCompare(x.id, y.id))) {
-    const delta = Math.trunc((b.rest - supportOf(rules, state, b.id)) / rules.driftDivisor);
+    const delta = Math.trunc((b.rest - supportOf(rules, state, b.id)) / rules.drift.divisor);
     if (delta !== 0) out.push({ change: 'support', bloc: b.id, delta, reason: 'drift' });
   }
   return out;

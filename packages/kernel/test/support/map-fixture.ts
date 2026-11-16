@@ -74,14 +74,14 @@ export const FIXTURE_VALUES: readonly string[] = ['abolition', 'caution', 'conci
  */
 export const FIXTURE_POLITICS_RULES: PoliticsRules = {
   blocs: [],
-  driftDivisor: 20,
-  address: { support: 100, othersPenalty: -15 },
-  ladder: { lobbyingPerRung: -10, publicDefiance: -20, rival: -10 },
+  drift: { divisor: 20, cite: 'FIXTURE' },
+  address: { support: 100, othersPenalty: -15, cite: 'FIXTURE' },
+  ladder: { lobbyingPerRung: -10, publicDefiance: -20, rival: -10, cite: 'FIXTURE' },
   chambers: [],
   sessions: [],
-  credibility: { base: 500, mandatePermille: 0, perRelief: 0, min: 0, max: 1000 },
-  framing: { mandatePermille: 0 },
-  press: { cadenceDays: 7, papers: [], standing: { victory: 60, defeat: -60 } },
+  credibility: { base: 500, mandatePermille: 0, perRelief: 0, min: 0, max: 1000, cite: 'FIXTURE' },
+  framing: { mandatePermille: 0, cite: 'FIXTURE' },
+  press: { cadenceDays: 7, papers: [], standing: { victory: 60, defeat: -60, cite: 'FIXTURE' } },
 };
 
 export const FIXTURE_PEOPLE_RULES: PeopleRules = {

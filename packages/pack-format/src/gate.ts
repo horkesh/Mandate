@@ -645,6 +645,34 @@ export function gatedRowProblems(rows: readonly phase0.OrderValueRow[], signed: 
   return problems;
 }
 
+/**
+ * The sign-off of a pack's blocs (lane 1.6; the gate review of lane 1.6, item 4). `checkBlocs` refuses a bloc named for
+ * a protected group, but a neutral name may hide one as its members; only a reader of its citation can tell. So every
+ * bloc is gated content: a pack pins, in a test, each bloc's content hash (its rule and its name in the default locale)
+ * and its reviewer. A new or edited bloc fails until the gate reviewer signs its hash.
+ */
+export function blocHash(bloc: phase0.BlocRule, name: string): string {
+  return canonicalHash({ bloc, name });
+}
+
+/** What is wrong with the pinned sign-offs of a pack's blocs. `names`: each bloc's name in the default locale. */
+export function blocSignOffProblems(blocs: readonly phase0.BlocRule[], names: Readonly<Record<string, string>>, signed: Readonly<Record<string, RowSignOff>>, reviewers: readonly string[] | null): string[] {
+  const problems: string[] = [];
+  for (const b of blocs) {
+    const hash = blocHash(b, names[b.id] ?? '');
+    const s = signed[b.id];
+    if (s === undefined) {
+      problems.push(`bloc ${b.id} has no sign-off: the gate reviewer reads its composition from its cite, then signs ${hash}`);
+      continue;
+    }
+    if (s.hash !== hash) problems.push(`bloc ${b.id} changed after its sign-off by ${s.reviewer}: re-review, then sign ${hash}`);
+    if (s.reviewer.trim().length === 0 || s.reviewer.startsWith('fixture')) problems.push(`bloc ${b.id} is signed off by "${s.reviewer}", not a gate reviewer`);
+    else if (reviewers !== null && !reviewers.includes(s.reviewer)) problems.push(`bloc ${b.id} is signed off by ${s.reviewer}, who is not in gate/reviewers.json`);
+  }
+  for (const id of Object.keys(signed).sort()) if (!blocs.some((b) => b.id === id)) problems.push(`a sign-off names bloc ${id}, which the pack no longer has`);
+  return problems;
+}
+
 /** The fewest gated decisions of three or more options before C2 counts positions. */
 export const C2_MINIMUM = 3;
 

@@ -37,18 +37,18 @@ const POLITICS: PoliticsRules = {
     { id: 'a_hawks', faction: F('a'), voice: 600, rest: 300, values: ['glory'], victory: 50, defeat: -50, cite: 'FIXTURE' },
     { id: 'b_all', faction: F('b'), voice: 1000, rest: 400, values: ['duty'], victory: 30, defeat: -30, cite: 'FIXTURE' },
   ],
-  driftDivisor: 20,
-  address: { support: 100, othersPenalty: -15 },
-  ladder: { lobbyingPerRung: -15, publicDefiance: -20, rival: -10 },
+  drift: { divisor: 20, cite: 'FIXTURE' },
+  address: { support: 100, othersPenalty: -15, cite: 'FIXTURE' },
+  ladder: { lobbyingPerRung: -15, publicDefiance: -20, rival: -10, cite: 'FIXTURE' },
   chambers: [{ id: 'a_house', faction: F('a'), name: 'chamber.a_house.name', cite: 'FIXTURE' }],
   sessions: [
     // Day 0 is 1900-06-01: the regular session sits days 4 to 9.
     { id: 'a_regular', chambers: ['a_house'], callable: false, opens: '1900-06-05', closes: '1900-06-10', afterCallDays: null, sitsDays: null, cite: 'FIXTURE' },
     { id: 'a_special', chambers: ['a_house'], callable: true, opens: null, closes: null, afterCallDays: 3, sitsDays: 4, cite: 'FIXTURE' },
   ],
-  credibility: { base: 400, mandatePermille: 500, perRelief: 100, min: 100, max: 900 },
-  framing: { mandatePermille: 500 },
-  press: { cadenceDays: 7, papers: [{ id: 'a_paper', faction: F('a'), editor: P('a_editor'), region: R('a_cap'), reachPermille: 500, cite: 'FIXTURE' }], standing: { victory: 100, defeat: -100 } },
+  credibility: { base: 400, mandatePermille: 500, perRelief: 100, min: 100, max: 900, cite: 'FIXTURE' },
+  framing: { mandatePermille: 500, cite: 'FIXTURE' },
+  press: { cadenceDays: 7, papers: [{ id: 'a_paper', faction: F('a'), editor: P('a_editor'), region: R('a_cap'), reachPermille: 500, cite: 'FIXTURE' }], standing: { victory: 100, defeat: -100, cite: 'FIXTURE' } },
 };
 
 function politicsWorld(): SeatsWorld {
@@ -79,7 +79,7 @@ const at = (state: State, day: number): Parameters<typeof holds>[1] => ({ state,
 
 /** A battle at a_front closed on `end`, which side b left: side a's commander a_gen won it. */
 function battle(end: number): BattleRecord {
-  const side = (faction: string, result: string, commander: string, killed: number, wounded: number, missing: number) => ({ bsideFaction: F(faction), bsideResult: result, bsideCommander: P(commander), bsideKilled: killed, bsideWounded: wounded, bsideMissing: missing });
+  const side = (faction: string, result: string, commander: string, killed: number, wounded: number, missing: number) => ({ bsideFaction: F(faction), bsideResult: result, bsideCommander: P(commander), bsideKilled: killed, bsideWounded: wounded, bsideMissing: missing, bsideCaptured: 0, bsideCutOff: null });
   return {
     battleRegion: R('a_front'),
     battleStartDay: end - 1,
@@ -110,7 +110,10 @@ describe('blocs, the mandate and credibility (lane 1.6)', () => {
     expect(credibilityOf(POLITICS, relieved, F('a'), P('a_lead')).value).toBe(550);
     expect(contextFor(world, relieved, P('a_gen')).leaderCredibility).toBe(550);
     // The framing term counts in the mandate at the pack's permille.
-    const framed = applyPolitics(POLITICS, s, [{ change: 'framing', faction: F('a'), delta: 200, reason: 'test' }], 0).state;
+    const framing = applyPolitics(POLITICS, s, [{ change: 'framing', faction: F('a'), delta: 200, reason: 'test' }], 0);
+    // The event the tick fires as `politics.framing` (its QUIET needle).
+    expect(framing.events).toEqual([{ polEvent: 'framing', polSubject: F('a'), polValue: 200, polWhy: 'test' }]);
+    const framed = framing.state;
     expect(mandateOf(POLITICS, framed, F('a')).value).toBe(200);
     expect(mandateOf(POLITICS, framed, F('a')).terms.at(-1)).toEqual({ polKind: 'framing', polSubject: F('a'), polValue: 100 });
   });
@@ -153,6 +156,8 @@ describe('the legislature: chambers, calls and the ledger (0040, 0046)', () => {
   it('calls a special session, which sits after its notice for its days, and refuses a call while one stands', () => {
     const s = createState(politicsWorld(), { seed: 1 });
     const called = applyPolitics(POLITICS, s, [{ change: 'call', session: 'a_special' }], 12);
+    // The event the tick fires as `politics.called` (its QUIET needle).
+    expect(called.events).toEqual([{ polEvent: 'called', polSubject: 'a_special', polValue: 15, polWhy: 'called' }]);
     expect(called.state.chamberStates['a_house']).toEqual({ chamState: 'called', chamSession: 'a_special', chamOpens: 15, chamCloses: 18, chamCalled: true, chamSince: 12 });
     expect(chambersOn(POLITICS, s.calendarStart, called.state.chamberStates, 15)['a_house']!.chamState).toBe('sitting');
     expect(chambersOn(POLITICS, s.calendarStart, called.state.chamberStates, 19)['a_house']!.chamState).toBe('adjourned');
@@ -165,7 +170,10 @@ describe('the legislature: chambers, calls and the ledger (0040, 0046)', () => {
     const s = createState(politicsWorld(), { seed: 1 });
     const act: PoliticsChange = { change: 'act', act: 'spring_acts', side: F('a'), situation: null, option: null };
     const status = (state: State, day: number, st: 'away' | 'before' | 'answered') => holds({ ledger: { side: F('a'), act: 'spring_acts', status: st } } as Condition, at(state, day));
-    const taken = applyPolitics(POLITICS, s, [act], 1).state;
+    const took = applyPolitics(POLITICS, s, [act], 1);
+    // The events the tick fires as `politics.act`, `politics.met` and `politics.answered` (their QUIET needles).
+    expect(took.events).toEqual([{ polEvent: 'act', polSubject: 'spring_acts', polValue: 0, polWhy: 'taken_while_away' }]);
+    const taken = took.state;
     expect([status(taken, 1, 'away'), status(taken, 1, 'before')]).toEqual([true, false]);
     expect(holds({ chamber: { id: 'a_house', state: 'adjourned' } }, at(taken, 1))).toBe(true);
     // Day 4: the regular session opens, and the act is before it.
@@ -176,6 +184,7 @@ describe('the legislature: chambers, calls and the ledger (0040, 0046)', () => {
     expect(holds({ chamber: { id: 'a_house', state: 'sitting' } }, at(met.state, 4))).toBe(true);
     // An answer (S20's ratification) closes it; with nothing before the legislature, an answer is refused.
     const answered = applyPolitics(POLITICS, met.state, [{ change: 'answer', act: null, side: F('a') }], 5);
+    expect(answered.events).toEqual([{ polEvent: 'answered', polSubject: 'spring_acts', polValue: 4, polWhy: 'answered' }]);
     expect(answered.state.congressLedger[0]!.ledgerAnsweredDay).toBe(5);
     expect(status(answered.state, 5, 'answered')).toBe(true);
     expect(applyPolitics(POLITICS, answered.state, [{ change: 'answer', act: null, side: F('a') }], 6).events.map((e) => e.polEvent)).toEqual(['refused']);
@@ -190,6 +199,21 @@ describe('the press as a report route (FOUNDATION section 7)', () => {
     expect([battleResultFor(b, F('a')), battleResultFor(b, F('b'))]).toEqual(['won', 'lost']);
     const drawn = { ...b, battleDays: [{ ...b.battleDays[0]!, bdaySides: b.battleDays[0]!.bdaySides.map((x) => ({ ...x, bsideResult: 'held' })) }] } as unknown as BattleRecord;
     expect(battleResultFor(drawn, F('a'))).toBe('drawn');
+  });
+
+  it('a cut-off force that surrendered or was destroyed has lost, though it never withdrew (G-1.6b)', () => {
+    const b = battle(5);
+    for (const cut of ['surrender', 'destroyed']) {
+      const pocket = { ...b, battleDays: [{ ...b.battleDays[0]!, bdaySides: b.battleDays[0]!.bdaySides.map((x) => (x.bsideFaction === F('b') ? { ...x, bsideResult: 'held', bsideCutOff: cut } : x)) }] } as unknown as BattleRecord;
+      expect([battleResultFor(pocket, F('a')), battleResultFor(pocket, F('b'))]).toEqual(['won', 'lost']);
+    }
+  });
+
+  it('counts the captured among a side’s losses on the front page (G-1.6a)', () => {
+    const b = battle(5);
+    const taken = { ...b, battleDays: [{ ...b.battleDays[0]!, bdaySides: b.battleDays[0]!.bdaySides.map((x) => ({ ...x, bsideCaptured: x.bsideFaction === F('a') ? 70 : 900 })) }] } as unknown as BattleRecord;
+    const s = { ...createState(politicsWorld(), { seed: 1 }), battleRecords: { 'battle:a_front:4': taken } };
+    expect(frontPage(POLITICS, s, POLITICS.press.papers[0]!, 7).claims[0]!.claimValue).toBe(100 + 300 + 50 + 70);
   });
 
   it('prints the week’s battles, moves the blocs and the commander’s standing at its reach, and reaches the readers', () => {

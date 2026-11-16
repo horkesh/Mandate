@@ -154,8 +154,10 @@ session, and a new fictional editor (`n_editor`, person kind `editor`) for the n
 
 | Run | `courier_delay` | `mail_delay` |
 |---|---|---|
-| Union | 66 | 1235 |
+| Union (merged with main at d4943e5) | 70 | 1247 |
 | Testbed | 35 | 107 |
+
+The other Union bands from the merged run: `front_page` 30, `support` 23, `adjourned` 1, `pruned_age` 29, `messages.sent` 5,288 and `messages.delivered` 4,810.
 
 The pre-press band of 197 also counted the mail's weather days: other reports already went by mail before the press.
 
@@ -197,6 +199,38 @@ The pre-press band of 197 also counted the mail's weather days: other reports al
 6. **The pushback map.** Nothing in 1.6 consumes the order-to-value map. `address` carries no content yet. Whatever reads its pushback later reads the floored `pushbackOf` (lane 1.5b).
 7. **Calibration.** The Union numbers are [I] and the M2 rests. Lane 1.14 calibrates them against the note's calibration points (the 1862 midterm band, the two lows).
 
+## The gate review's fixes (lane 1.6 at 95b88b5)
+
+- **G-1.6a.** The front page counts the captured among a side's losses, as 0074 and 0076 have the public count them among the missing.
+- **G-1.6b.** A cut-off force that surrendered or was destroyed has lost, though it never withdrew. Pegram's surrender at Rich Mountain prints as lost, not drawn.
+- **G-1.6c.** The Confederate bloc holds `slavery_defence`, cited to the Confederate constitution of 11 March 1861 (`docs/research/2026-11-14-confederate-side.md` [AVA-CSA]). R1 decides the Confederacy's real blocs.
+- **Item 4: the bloc table is pinned.**
+  - `blocSignOffProblems` and `blocHash` sit in `pack-format/src/gate.ts`, as G-1.5e pins gated rows. The hash covers each bloc's rule and its English name.
+  - `packs/union-1861/test/gated-blocs.test.ts` holds each Union bloc's hash, signed by `gate-reviewer`.
+  - A new or edited bloc, or a renamed one, fails until it is re-signed.
+  - The testbed's fictional blocs are not pinned.
+
+## The standing review's fixes (lane 1.6 at 95b88b5 and e0661a1)
+
+- **Item 5, the [I] labels.**
+  - Each Union bloc's cite now labels its rest and reactions: "[I]", or, for the Peace Democrats, "the reactions' direction is sourced, their sizes [I]".
+  - `drift` (it was `driftDivisor`), `address`, `ladder`, `credibility`, `framing` and `press.standing` each carry a `cite` stating "[I]" or "M2's". Lane 1.14's stand-in criterion finds them in the pack.
+  - Credibility's cite says it replaces 0079's STAND-IN.
+- **Item 4, the QUIET events asserted.** The needle tests assert the `framing`, `act`, `answered` and `called` events that the tick fires, each through `applyPolitics`.
+- **The lag from a call to a sitting Congress** (the lead's ruling on lane 1.11r's answer, `docs/research/_parts/F-congress-lag.md`):
+  - A second callable session, `congress_37_1_at_once`, sits 30 days after its call, for 34 days. It is marked [I], with the 1861 lag (80 days) and the comparisons (17, 75 and 38 days) in its cite; lane 1.14 calibrates it.
+  - The historical call keeps its own session, `congress_37_1`, for 4 July.
+  - Lane 1.11's "Summon Congress at once" option calls `congress_37_1_at_once`.
+- **Item 7, the merge.** Main is merged at d4943e5, the generated files are regenerated, and every Union band this lane set is re-banded from the merged run. The done check's final hashes against both parents:
+
+  | | lane at e0661a1 | main at d4943e5 | merged |
+  |---|---|---|---|
+  | Union, at war, 75 days | 6a9290a3878bfd34 | 08ecc54e6076400a | aa060c05ee33b77a |
+  | Testbed, 120 days | 42bc7f0e15af1099 | 0dc77944e8d96091 | 42bc7f0e15af1099 |
+
+  - **Union:** the merged run differs from both parents, as it should, since main's lane 1.11a people data and this lane's politics both change it.
+  - **Testbed:** the merged run equals the lane's, so nothing main merged since 1637a1f changes the testbed run. Main's differs only by this lane's politics: the press, the editor and credibility.
+
 ## Findings outside my scope
 
 - The enemy reads the papers (0032: Lee followed McClellan in the Inquirer). Front pages go only to their own side, so the enemy route is 1B.
@@ -204,4 +238,6 @@ The pre-press band of 197 also counted the mail's weather days: other reports al
 - National will (0028's two wills), elections and the verdict remain 1B. The mandate feeds only credibility so far.
 - The Confederate side has no chambers: no source in the notes covers its Congress's sessions.
 - A paper's own slant (its alignment, and editors' leaks) is not modelled. Every paper prints the same battles.
+- **For 1B (the gate review's item 7):** the border Unionists' values ("conciliation, union") omit their stake in slavery, which was the core of the border problem. Add `slavery_noninterference` when blocs read policy (R7's consequences). Today nothing reads bloc values but the address penalty.
+- The press reads the battle record's truth, not the casualty returns. That is a knowledge question for the standing reviewer.
 - M2's `derive.ts` stays until M2 retires.

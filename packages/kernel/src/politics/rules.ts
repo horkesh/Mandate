@@ -83,7 +83,7 @@ export function politicsRulesProblems(world: World): string[] {
     voices.set(b.faction, (voices.get(b.faction) ?? 0) + b.voice);
   }
   for (const [f, sum] of [...voices].sort((x, y) => (x[0] < y[0] ? -1 : x[0] > y[0] ? 1 : 0))) if (sum !== 1000) problems.push(`politics: faction ${f}'s blocs' voices sum to ${sum}, not 1000`);
-  if (!Number.isSafeInteger(rules.driftDivisor) || rules.driftDivisor < 1) problems.push('politics driftDivisor must be a whole number from 1');
+  if (!Number.isSafeInteger(rules.drift.divisor) || rules.drift.divisor < 1) problems.push('politics drift.divisor must be a whole number from 1');
   const chambers = new Set<string>();
   for (const c of rules.chambers) {
     if (chambers.has(c.id)) problems.push(`politics chamber ${c.id} is stated twice`);
@@ -120,30 +120,34 @@ export function politicsRulesProblems(world: World): string[] {
   return problems;
 }
 
+/**
+ * Every group of numbers below carries a `cite`: its source, or "[I]" for a design judgement or "M2's" for a value
+ * carried from M2, so lane 1.14's stand-in criterion finds each one in the pack (the standing review of lane 1.6, item 5).
+ */
 export interface PoliticsRules {
   readonly blocs: readonly BlocRule[];
   /** Each week a bloc's support closes 1/divisor of the gap to its rest (M2's `blocReversionDivisor`). */
-  readonly driftDivisor: number;
+  readonly drift: { readonly divisor: number; readonly cite: string };
   /** An address (M2's): the bloc addressed gains `support`; the side's blocs that share none of its values gain `othersPenalty` (negative). */
-  readonly address: { readonly support: number; readonly othersPenalty: number };
+  readonly address: { readonly support: number; readonly othersPenalty: number; readonly cite: string };
   /**
    * A man's ladder rung, weekly (M2's `ladder.ts`): from lobbying up, his own bloc loses `lobbyingPerRung` for each rung
    * from lobbying (negative numbers); from public defiance, every bloc of his side gets `publicDefiance`; a rival's bloc gets `rival`.
    */
-  readonly ladder: { readonly lobbyingPerRung: number; readonly publicDefiance: number; readonly rival: number };
+  readonly ladder: { readonly lobbyingPerRung: number; readonly publicDefiance: number; readonly rival: number; readonly cite: string };
   readonly chambers: readonly ChamberRule[];
   readonly sessions: readonly SessionRule[];
   /**
    * The principal's sanction credibility (P7; replaces 0079's stand-in): `base`, plus `mandatePermille` of his mandate,
    * plus `perRelief` for each man who holds a relief against him (a fading record that he does relieve), within `min`..`max`.
    */
-  readonly credibility: { readonly base: number; readonly mandatePermille: number; readonly perRelief: number; readonly min: number; readonly max: number };
+  readonly credibility: { readonly base: number; readonly mandatePermille: number; readonly perRelief: number; readonly min: number; readonly max: number; readonly cite: string };
   /** The framing term (0028, 0040) counts in the mandate at this permille. */
-  readonly framing: { readonly mandatePermille: number };
+  readonly framing: { readonly mandatePermille: number; readonly cite: string };
   /**
    * The press: every `cadenceDays` days each paper prints a front page of the battles its side closed since the last,
    * as its public hears them. A battle's commander's standing moves by `standing.victory` or `standing.defeat` at the
    * paper's reach (proposed to `people`); each bloc of the side by its own `victory` or `defeat` (applied by `politics`).
    */
-  readonly press: { readonly cadenceDays: number; readonly papers: readonly PaperRule[]; readonly standing: { readonly victory: number; readonly defeat: number } };
+  readonly press: { readonly cadenceDays: number; readonly papers: readonly PaperRule[]; readonly standing: { readonly victory: number; readonly defeat: number; readonly cite: string } };
 }

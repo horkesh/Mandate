@@ -406,10 +406,10 @@ export const RulesSchema = z.strictObject({
           }),
         )
         .describe('Blocs with weights and support (FOUNDATION section 7; M2’s blocs recast). A bloc is never a protected group (the gate refuses one).'),
-      driftDivisor: positive.describe('Each week a bloc closes 1/divisor of the gap between its support and its rest.'),
-      address: z.strictObject({ support: signedPermille, othersPenalty: signedPermille }).describe('An address: the bloc addressed gains support; the side’s blocs sharing none of its values gain othersPenalty.'),
+      drift: z.strictObject({ divisor: positive, cite: z.string().min(1) }).describe('Each week a bloc closes 1/divisor of the gap between its support and its rest. Cite: a source, “[I]” or “M2’s”.'),
+      address: z.strictObject({ support: signedPermille, othersPenalty: signedPermille, cite: z.string().min(1) }).describe('An address: the bloc addressed gains support; the side’s blocs sharing none of its values gain othersPenalty. Cite: a source, “[I]” or “M2’s”.'),
       ladder: z
-        .strictObject({ lobbyingPerRung: signedPermille, publicDefiance: signedPermille, rival: signedPermille })
+        .strictObject({ lobbyingPerRung: signedPermille, publicDefiance: signedPermille, rival: signedPermille, cite: z.string().min(1) })
         .describe('A man’s rung, weekly: from lobbying up, his bloc gets lobbyingPerRung per rung; from public defiance, every bloc of his side gets publicDefiance; a rival’s bloc gets rival.'),
       chambers: z.array(z.strictObject({ id: termId, faction: idOf('faction'), name: stringKey, cite: z.string().min(1) })).describe('The chambers of the legislature (0040).'),
       sessions: z
@@ -427,9 +427,9 @@ export const RulesSchema = z.strictObject({
         )
         .describe('The session calendar (0040): regular sessions by their dates, and the special sessions a call may summon.'),
       credibility: z
-        .strictObject({ base: permille, mandatePermille: permille, perRelief: signedPermille, min: permille, max: permille })
+        .strictObject({ base: permille, mandatePermille: permille, perRelief: signedPermille, min: permille, max: permille, cite: z.string().min(1) })
         .describe('The principal’s sanction credibility (P7), derived: base, a share of his mandate, and each man holding a relief against him, within min..max.'),
-      framing: z.strictObject({ mandatePermille: permille }).describe('How much the framing term (0028, 0040) counts in the mandate.'),
+      framing: z.strictObject({ mandatePermille: permille, cite: z.string().min(1) }).describe('How much the framing term (0028, 0040) counts in the mandate.'),
       press: z
         .strictObject({
           cadenceDays: nonNegative.describe('Days between front pages; 0 prints none.'),
@@ -443,7 +443,7 @@ export const RulesSchema = z.strictObject({
               cite: z.string().min(1),
             }),
           ),
-          standing: z.strictObject({ victory: signedPermille, defeat: signedPermille }).describe('A battle’s commander’s standing moved by a front page reporting it won or lost, at full reach.'),
+          standing: z.strictObject({ victory: signedPermille, defeat: signedPermille, cite: z.string().min(1) }).describe('A battle’s commander’s standing moved by a front page reporting it won or lost, at full reach.'),
         })
         .describe('The press as a report route (FOUNDATION section 7): a weekly front page each paper’s editor writes.'),
     })

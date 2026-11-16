@@ -267,15 +267,16 @@ const UNION_BANDS: Record<string, GateBand> = {
   'reports.pocket': notHere('no headquarters is cut off in 75 days; the testbed run fires it'),
   'map.pocket_closed': notHere('no pocket closes in the first 75 days of the merged Union run; the testbed run fires it'),
   // Lane 1.6: front pages are kept the press template's 21 days, so more reports age out of knowledge.
-  'knowledge.pruned_age': around(28),
+  'knowledge.pruned_age': around(29),
   'knowledge.pruned_superseded': around(73),
   'map.recomputed': around(10),
   // Lane 1.6: a weather day on the mail is counted apart (`messages.mail_delay`), so this watches orders and reports by
-  // courier only: 66 here (the pre-press 197 counted the mail's weather days too). The mail is the press's bulk.
-  'messages.courier_delay': around(66),
-  'messages.mail_delay': around(1235),
-  'messages.delivered': around(2681),
-  'messages.sent': around(2820),
+  // courier only (the pre-press 197 counted the mail's weather days too). The mail is the press's bulk: about 2,500 front
+  // pages, by mail from New York, nearly double the run's messages. Re-banded from the run merged with main at d4943e5.
+  'messages.courier_delay': around(70),
+  'messages.mail_delay': around(1247),
+  'messages.delivered': around(4810),
+  'messages.sent': around(5288),
   // The War Department withholds the principal's approval of the Washington garrison's plan; he sends it around.
   'messages.special_messenger': around(2),
   'orders.bypassed': around(4),

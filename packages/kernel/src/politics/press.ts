@@ -25,17 +25,20 @@ export interface PressBattle {
   readonly region: RegionId;
   readonly result: BattleResult;
   readonly commander: PersonId | null;
-  /** The side's killed, wounded and missing over the battle, men. */
+  /** The side's killed, wounded, missing and captured over the battle, men (the captured counted among the missing). */
   readonly casualties: number;
 }
 
-/** The result of a closed battle for `faction`: who left the field on its last day. */
+/**
+ * The result of a closed battle for `faction`: who left the field on its last day. A side leaves it by withdrawing or
+ * routing, or as prisoners: a cut-off force that surrendered or was destroyed has lost (the gate review's G-1.6b).
+ */
 export function battleResultFor(record: BattleRecord, faction: FactionId): BattleResult {
   const last = record.battleDays[record.battleDays.length - 1];
   if (last === undefined) return 'drawn';
-  const left = (r: string) => r === 'withdrew' || r === 'routed';
-  if (last.bdaySides.some((s) => s.bsideFaction === faction && left(s.bsideResult))) return 'lost';
-  if (last.bdaySides.some((s) => s.bsideFaction !== faction && left(s.bsideResult))) return 'won';
+  const left = (s: (typeof last.bdaySides)[number]) => s.bsideResult === 'withdrew' || s.bsideResult === 'routed' || s.bsideCutOff === 'surrender' || s.bsideCutOff === 'destroyed';
+  if (last.bdaySides.some((s) => s.bsideFaction === faction && left(s))) return 'lost';
+  if (last.bdaySides.some((s) => s.bsideFaction !== faction && left(s))) return 'won';
   return 'drawn';
 }
 
@@ -51,7 +54,8 @@ export function closedBattles(state: State, faction: FactionId, after: number, u
     for (const day of r.battleDays) {
       for (const s of day.bdaySides) {
         if (s.bsideFaction !== faction) continue;
-        casualties += s.bsideKilled + s.bsideWounded + s.bsideMissing;
+        // The public's figure counts the captured among the missing (0074, 0076; the gate review's G-1.6a).
+        casualties += s.bsideKilled + s.bsideWounded + s.bsideMissing + s.bsideCaptured;
         if (s.bsideCommander !== null) commander = s.bsideCommander;
       }
     }
