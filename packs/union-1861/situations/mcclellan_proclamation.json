@@ -105,9 +105,15 @@
       "Q11": 1,
       "Q12": 1
     },
-    "contentHash": "a7eecd1e2425c7d8454ba1fd4b20dcec5767c1207c6c6da4bbdb37bf44521d4b",
+    "contentHash": "9815a413dcfc3b517306e3dfa29490451d12f72c9a538d740bb9204074f2b751",
     "notes": {
-      "item": "McClellan's own wording (OR I-2 pp. 48–49), quoted and attributed, with 'on their part' kept and glossed, so the narrator does not soften whom it aimed at (Q10, trap 8). Text only, no effects. No lever reads it."
+      "item": "McClellan's own wording (OR I-2 pp. 48–49), quoted and attributed, with 'on their part' kept and glossed, so the narrator does not soften whom it aimed at (Q10, trap 8). Text only, no effects. No lever reads it. McClellan is declared in speakers while serving."
     }
-  }
+  },
+  "speakers": [
+    {
+      "post": null,
+      "person": "mcclellan_george_b"
+    }
+  ]
 }

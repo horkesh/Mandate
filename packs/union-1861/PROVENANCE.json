@@ -940,6 +940,16 @@
       "copyUsed": "archive.org scans, OCR, read by lane 1.11r (docs/research/2026-11-16-1861-gaps.md, parts B and C)",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "NPS-FOMR",
+      "title": "National Park Service, Fort Monroe National Monument pages: \"Building #1, Quarters No. 1\", \"Fort Monroe Main Gate\" and \"Freedom's Fortress\"",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "nps.gov/places/building-1-quarters-no-1.htm, nps.gov/places/fort-monroe-main-gate.htm, nps.gov/articles/featured_stories_fomr.htm, read 2026-11-16",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

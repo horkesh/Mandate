@@ -29,6 +29,18 @@ describe('the opening of 1861 (lane 1.11)', () => {
     expect(landed[0]![1].locAboard).toBeNull();
   });
 
+  it('S17: the Fort Monroe command opens before the question, its holder carries both rows, and the history run holds the men', () => {
+    const fortCommand = run.state.postStates['us_dept_virginia' as never] as { postHolder: string | null } | undefined;
+    expect(fortCommand?.postHolder).toBe('butler_benjamin_f');
+    const opened = run.state.situationStates[S('butler_at_fort_monroe')]!.sitFiredDay!;
+    const question = run.state.situationStates[S('fort_monroe_arrivals')]!;
+    expect(opened).toBeLessThan(question.sitFiredDay!);
+    // His practice is to hold them, so the escape notice that prints his refusal is the one that fires.
+    expect(run.state.situationStates[S('fort_monroe_escape')]).toBeDefined();
+    expect(run.state.situationStates[S('fort_monroe_escape_asked')]).toBeUndefined();
+    expect(question.sitChosen).toEqual(['approve_holding']);
+  });
+
   it('fires each government’s act its delay after the call reaches the governor, never before the call', () => {
     const arrived = (post: string) => Object.values(run.state.orderResponses).find((r) => r.respKind === 'call' && r.respPost === post)!.respDay;
     expect(run.state.situationStates[S('maryland_legislature')]!.sitFiredDay).toBe(arrived('st_gov_maryland') + 14);

@@ -74,6 +74,10 @@ export type Condition =
    * a run where the call comes late moves the act with it.
    */
   | { readonly callReceived: { readonly post: PostId; readonly days: number } }
+  /** The post's holder today is this person (lane 1.11: the post-holder check). */
+  | { readonly holds: { readonly post: PostId; readonly person: PersonId } }
+  /** The post's holder today carries this practice (lane 1.5b's cited practices): text that depends on his own conduct. */
+  | { readonly holderPractice: { readonly post: PostId; readonly practice: string } }
   /** A chamber of the legislature is in this state today (lane 1.6, 0040): which options are legal. A public fact. */
   | { readonly chamber: { readonly id: string; readonly state: ChamberStateKind } }
   /**
@@ -176,6 +180,12 @@ export interface ProposalBasis {
 /** True for a proposal's basis in law and practice (not a list of persons, nor inaction). */
 export function isProposalBasis(p: unknown): p is ProposalBasis {
   return typeof p === 'object' && p !== null && !Array.isArray(p) && (p as { basis?: unknown }).basis === 'law-and-practice';
+}
+
+/** A named man whose words or acts an item gives, and the post he must hold for it to fire (null: serving anywhere). */
+export interface Speaker {
+  readonly post: PostId | null;
+  readonly person: PersonId;
 }
 
 export interface SituationCitation {
@@ -306,6 +316,14 @@ export interface SituationDef {
   readonly effects: readonly Effect[];
   /** Required for a notice: the report that tells the principal. Null for a decision (its staff line is its report). */
   readonly report: NoticeReport | null;
+  /**
+   * The post-holder check (lane 1.11, the lead's rule): the named men whose words or acts the text gives, each in the post
+   * he must hold that day (null: serving, in whatever post). The kernel fires the item only while every one of them
+   * does, so it never quotes a man the player has removed. Absent or empty: the text gives no named man's words or acts.
+   */
+  readonly speakers?: readonly Speaker[];
+  /** Why the text names a man without giving his words or acts (a treaty's signers, an appointment as the record states it). */
+  readonly namedOnly?: string;
   readonly gate: GateTag;
   readonly gateReview: GateReview | null;
   readonly citations: readonly SituationCitation[];

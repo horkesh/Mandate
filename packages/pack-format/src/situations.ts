@@ -61,6 +61,8 @@ export const ConditionSchema: z.ZodType<Condition> = z.lazy(() =>
     z.strictObject({ goal: z.strictObject({ post: idOf('post'), posture: z.enum(phase0.POSTURES) }).describe('The post holds a goal of this posture, ordered by its principal (lane 1.2: a goal in plans, no longer a standing goal).') }),
     z.strictObject({ headquartersAt: z.strictObject({ post: idOf('post'), region: idOf('region') }) }),
     z.strictObject({ callReceived: z.strictObject({ post: idOf('post'), days: int.min(0) }) }).describe('A call for regiments reached the holder of a post at least this many days ago (lane 1.11): a state’s act a pack-set delay after the call arrives. STAND-IN until conventions are modelled (1B).'),
+    z.strictObject({ holds: z.strictObject({ post: idOf('post'), person: idOf('person') }) }).describe('The post is held today by this person (lane 1.11).'),
+    z.strictObject({ holderPractice: z.strictObject({ post: idOf('post'), practice: termId }) }).describe('The post’s holder today carries this cited practice (lane 1.11, on lane 1.5b’s practices).'),
     z.strictObject({ clockAtLeast: nonNegative }),
     z.strictObject({ chamber: z.strictObject({ id: termId, state: z.enum(phase0.CHAMBER_STATES) }).describe('A chamber of the legislature is in this state today (lane 1.6): a public fact.') }),
     z.strictObject({
@@ -217,6 +219,11 @@ export const SituationSchema = z.strictObject({
     })
     .nullable()
     .default(null),
+  speakers: z
+    .array(z.strictObject({ post: idOf('post').nullable(), person: idOf('person') }))
+    .optional()
+    .describe('The post-holder check (lane 1.11): the named men whose words or acts the text gives, each in the post he must hold that day (null: serving). The item fires only while every one does.'),
+  namedOnly: z.string().min(1).optional().describe('Why the text names a man without giving his words or acts (lane 1.11: the post-holder check).'),
   actingGovernment: idOf('department').optional(),
   gate: GateTagSchema,
   gateReview: GateReviewSchema.nullable().default(null),
@@ -290,6 +297,13 @@ export function validateSituations(items: readonly { readonly file: string; read
   const sink = new IssueSink();
   const factions = new Set(pack.manifest.factions.map((f) => f.id as string));
   const people = new Set(pack.world.people.map((p) => p.id as string));
+  // Each person's surname as the text would name him (the last word of his name, less a generational suffix).
+  // Read lazily: the default-locale strings resolve the names, and they are filled below.
+  const surnames = () => pack.world.people.flatMap((p) => {
+    const words = (defaultStrings.get(p.name) ?? p.name).replace(/[^A-Za-z .'-]/g, ' ').split(/\s+/).filter((w) => w !== '' && !/^(Jr|Sr|II|III)\.?$/.test(w));
+    const last = words[words.length - 1];
+    return last === undefined || last.length < 3 ? [] : [[p.id as string, last.replace(/[^A-Za-z'-]/g, '')] as const];
+  });
   const regions = new Set(pack.world.regions.map((r) => r.id as string));
   const posts = new Set(pack.scenarios.flatMap((s) => s.posts.map((p) => p.id as string)));
   const forceBlocks = new Set(pack.scenarios.flatMap((s) => s.forceBlocks.map((b) => b.id as string)));
@@ -525,6 +539,22 @@ export function validateSituations(items: readonly { readonly file: string; read
       if ('landing' in effect) {
         ref(forceBlocks, 'force block in any scenario', effect.landing.parent, `${at}.landing.parent`);
         ref(regions, 'region', effect.landing.region, `${at}.landing.region`);
+      }
+    }
+
+    // The post-holder check (lane 1.11, the lead's rule; rule 7): a notice whose text names a person of the World must
+    // say whose words or acts it gives (speakers, each in the post he must hold) or why it only names him (namedOnly).
+    (def.speakers ?? []).forEach((s, j) => {
+      ref(people, 'person', s.person, `speakers[${j}].person`);
+      if (s.post !== null && !temporaryPostIds.has(s.post)) ref(posts, 'post in any scenario', s.post, `speakers[${j}].post`);
+    });
+    if (def.kind === 'notice' && def.namedOnly === undefined) {
+      const text = defaultStrings.get(def.text) ?? '';
+      const declared = new Set((def.speakers ?? []).map((s) => s.person as string));
+      for (const [person, surname] of surnames()) {
+        // A place named for a man (a fort or a camp) names no man.
+        if (declared.has(person) || !new RegExp(`(?<!\\b(?:Fort|Camp) )\\b${surname}\\b`).test(text)) continue;
+        err('post-holder-check', 'speakers', `the text names ${surname} (${person}) but neither lists him in speakers nor says why it only names him`, 'speakers: [{ post, person }] when the text quotes him or gives an act of his as a holder of a post (it then fires only while he holds it); namedOnly: "<why>" when it names him without giving his words or acts (a treaty’s signers, an appointment as the record states it)');
       }
     }
 

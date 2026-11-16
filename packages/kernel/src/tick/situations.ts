@@ -82,6 +82,7 @@ function conditionContext(ctx: TickContext, state: State, def: SituationDef, sin
     knowledge: knowledgeOf(state, seatIdFor(principalOf(ctx, def))),
     since,
     headquartersOf: (post) => (state.postStates[post] === undefined ? null : headquartersOf(ctx.world, state, post)),
+    practicesOf: (person) => ctx.world.map.world.people.find((p) => p.id === person)?.practices.map((x) => x.practice) ?? [],
   };
 }
 
@@ -270,13 +271,18 @@ function chainAllows(state: State, def: SituationDef): boolean {
   return follows.options === null || parent.sitChosen.some((o) => follows.options!.includes(o));
 }
 
+/** The post-holder check (lane 1.11): every named man the item quotes holds his post today, or serves if it names none. */
+function speakersServe(state: State, def: SituationDef): boolean {
+  return (def.speakers ?? []).every((s) => (s.post === null ? state.personStatus[s.person]?.statusKind === 'serving' : state.postStates[s.post]?.postHolder === s.person));
+}
+
 /** The situations phase: fire, surface, keep live, reopen, and take history defaults. */
 export function runSituations(ctx: TickContext, start: State): State {
   let state = start;
   for (const def of ctx.world.situations) {
     // 1. Fire.
     if (state.situationStates[def.id] === undefined) {
-      if (!chainAllows(state, def) || !holds(def.event, conditionContext(ctx, state, def))) continue;
+      if (!chainAllows(state, def) || !speakersServe(state, def) || !holds(def.event, conditionContext(ctx, state, def))) continue;
       state = fireSituation(state, def.id, ctx.day, def.kind, []);
       if (def.kind === 'decision') state = setOpenOptions(state, def.id, openOptionsNow(ctx, state, def));
       else {

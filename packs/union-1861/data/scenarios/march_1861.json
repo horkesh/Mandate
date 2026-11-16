@@ -729,6 +729,7 @@
 "seed": 1861,
 "startDate": "1861-03-05",
 "temporaryPosts": [
+{"department":"us_war","holder":"butler_benjamin_f","id":"us_dept_virginia","kind":"temporary_command","name":"post.us_dept_virginia.name","operation":"fort_monroe_command","parent":"us_general_in_chief","region":"fort_monroe"},
 {"department":"us_war","holder":"fox_gustavus_v","id":"us_sumter_relief_expedition","kind":"temporary_command","name":"post.us_sumter_relief_expedition.name","operation":"sumter_relief","parent":"us_secretary_war","region":"new_york"}
 ]
 }

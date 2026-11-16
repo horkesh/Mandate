@@ -28,7 +28,7 @@ Each state's act fires a pack-set delay after the call reaches its governor (`ca
 | S15 | `western_virginia` | live; `cross_river` and `recognise`, in separate groups |
 | S20 | `special_session` | live; fires when the House sits (lane 1.6's chamber condition); `ask_war_footing` appears while the spring's acts are before Congress and answers them on the ledger |
 | S11 | `gosport_yard` | live; raised by Virginia's secession notice; `defend` and `remove` (Welles's orders of 10 to 16 April). The order to hold the yard is a flag only: a navy yard is not a field post, so the goal path refuses it (`not_field_post`) until installations have holders who take orders (1B). `destroy_rest` has no advocate: the commandant burned the yard on his own (the inaction). |
-| S17 | none | waits on lane 1.5b's merge: options and inaction each carry a `policy` row (`fugitive-policy`), signed in `gated-rows.test.ts` |
+| S17 | `fort_monroe_arrivals` | signed and live, with its three `fugitive-policy` rows (signed in `gated-rows.test.ts`). `approve_holding` (Cameron) and `return` (labelled plainly; proposed on a basis in the 1850 law and Major Cary's demand, the recorded exception; watched; floored; expires with the confiscation act); inaction is `commanders_decide`, floored. The men's escape is two notices from one cause: Butler's refusal prints only while the Fort Monroe command's holder carries `holds_fugitives`. Butler's command (`us_dept_virginia`) opens on 22 May by a STAND-IN notice. Townsend's (OR II-1 p. 760) and Bates's (p. 761) letters are standalone dated reports in July; a recurrence of S17 goes to 1B (the First Confiscation Act). The NPS caution that the three names rest on later attribution goes to lane 1.10's list. |
 | S18 | none | waits on an advocate for S12's suspension |
 | S16 | `kentucky_neutrality` | live, stage A only (stage B, Magoffin's protest of 19 August, falls after the window); `arm_quietly` (Cameron's department), `move_in` (Dennison, Yates), `wait` (Scott, McClellan) |
 | S21 | `mcdowell_advance` | live; `advance_now` (the Blairs, as Weed's letter of 26 July names them: retrospective) and `drill_first` (McDowell); flags only, since McDowell and Patterson hold no posts in the March start |
@@ -66,6 +66,10 @@ Notices:
 - Temporary posts proposed by effect (`temporary_posts.csv`).
 - The `callReceived` condition. Responses now carry the order kind.
 - The pruner keeps each post holder's first answer to a call, since lane 1.4's pruning would otherwise drop it before the longest delay.
+
+## The post-holder check (the lead's rule 7)
+
+A notice that quotes a named man, or gives an act of his as holder of a post, declares him in `speakers` (the post he must hold, or null for serving); the kernel fires it only while every speaker holds. One that only names a man says why in `namedOnly`. The validator refuses a notice naming a World person with neither, skipping places named for men. `packages/cli/test/post-holder-check.test.ts` tests both ways.
 
 ## Calls go only to a state government (the lead's ruling)
 

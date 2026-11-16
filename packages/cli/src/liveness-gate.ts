@@ -176,7 +176,6 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'people.promise_broken': { why: VERBS_UNUSED, test: PV, needle: 'a promise falls due and breaks' },
   'reports.observer_letter': { why: VERBS_UNUSED, test: PV, needle: 'send an observer: he watches' },
   // Lane 1.5b: a policy option applies its row's pushback; no pack option names a policy row yet (lane 1.11's S17 will).
-  'situations.policy': { why: 'no situation option names a policy row of the map yet (lane 1.11 authors the first, S17); the kernel test drives it', test: 'packages/kernel/test/gate-wiring.test.ts', needle: 'a chosen policy applies its pushback through the owners' },
   // Lane 1.5b: a floor cost the principal's standing cannot pay, recorded and never dropped. The gate reviewer's condition:
   // it never happens in a reference run (banded at zero in both), and the kernel test drives it.
   'situations.policy_unpaid': { why: 'a floor cost falls on the principal only when the floored row has no stakeholder or carrier of its own, and no reference run chooses a policy at all; the gate reviewer requires it never to fire in one', test: 'packages/kernel/test/gate-wiring.test.ts', needle: 'with standing at 0 and no stakeholders, the whole floor cost is recorded unpaid' },
@@ -332,6 +331,8 @@ const UNION_BANDS: Record<string, GateBand> = {
   'politics.called': around(1),
   'politics.framing': around(1),
   'politics.met': around(1),
+  // Lane 1.11: S17's chosen policy applies its row's pushback (lane 1.5b), once, in the history run.
+  'situations.policy': around(1),
 };
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
@@ -438,6 +439,7 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'politics.called': notHere('no testbed situation acts on the legislature or frames the war; the Union run fires it'),
   'politics.framing': notHere('no testbed situation acts on the legislature or frames the war; the Union run fires it'),
   'politics.met': notHere('no testbed situation acts on the legislature or frames the war; the Union run fires it'),
+  'situations.policy': notHere('no testbed decision names a policy row in this run; the Union run fires it'),
 };
 
 /** Mechanics that only a mechanic-specific run can fire: each band is the same in every run that does not. */

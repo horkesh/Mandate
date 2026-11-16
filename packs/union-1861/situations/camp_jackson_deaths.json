@@ -108,9 +108,15 @@
       "Q11": 1,
       "Q12": 1
     },
-    "contentHash": "63fe1db1a4958fbd3102ffc71fa969434fc80801b80f67bf73f82671da804631",
+    "contentHash": "ccee8c155ae83eb83e143c199b500844c1fe565458ac23870b44c7ee10a994ba",
     "notes": {
-      "item": "actingSide union: the troops fired into the crowd. The militia's capture is capture-in-battle with no terms stated (0074). No effects. S14 never reads this notice. The deaths are stated in the words of Frost's protest (OR I-3 p. 7), attributed; the civilian count waits on a read source (MO-TIMELINE, on lane 1.10's list) and returns with it."
+      "item": "actingSide union: the troops fired into the crowd. The militia's capture is capture-in-battle with no terms stated (0074). No effects. S14 never reads this notice. The deaths are stated in the words of Frost's protest (OR I-3 p. 7), attributed; the civilian count waits on a read source (MO-TIMELINE, on lane 1.10's list). Lyon is declared in speakers while serving."
     }
-  }
+  },
+  "speakers": [
+    {
+      "post": null,
+      "person": "lyon_nathaniel"
+    }
+  ]
 }
