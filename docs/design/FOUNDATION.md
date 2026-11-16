@@ -211,7 +211,7 @@ Module map, adapted from the AWWV-architecture note:
 | `plans` | State | goals, drafts, approvals, edits as counter-orders |
 | `operations` | State | approved plans in execution, per-axis lifecycles |
 | `movement` | writer | the only writer of location; owns and exports the movement passage rule, which `planner` imports (0062) |
-| `combat` | writer | battle resolution with breakdowns and named seeded streams (in Phase 0 a proposer only: the simple contest and occupation, 0064) |
+| `combat` | writer | battle resolution with breakdowns and named seeded streams, and occupation (0076; Phase 0's simple contest, 0064, is retired) |
 | `people`, `compliance`, `reading`, `audience`, `proxy`, `ladder` | State writers | the M1/M2 people core, recast for goals and plans |
 | `knowledge` | State | per-seat reports with latency; the truth behind each report in a separate map the view layer cannot import (0052) |
 | `messages` | State | messages in transit, with latency owned by the kernel (0052) |
@@ -256,8 +256,8 @@ Module map, adapted from the AWWV-architecture note:
 | the Congress accountability ledger: acts taken while Congress was away | `politics` | (0046) |
 | people who have reached Union lines | `regions` | the derived self-emancipation term (0046); never a lever |
 | fortification and entrenchment | `regions` | operations, combat (0029, 0041) |
-| a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments (0033, 0064) |
-| people in posts; temporary posts (`postStates`) | `command` | appoint, relieve, promotion lists, an operation's end |
+| a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments, combat releasing a surrendered block (0033, 0064, 0076) |
+| people in posts; temporary posts (`postStates`) | `command` | appoint, relieve, promotion lists, an operation's end, combat vacating a hit commander's post (0076) |
 | standing agreements and prior orders on a post | `command` | verbs, situations, orders from the holder's own department |
 | a person's stats, traits, standing, grievances, regard | `people` | combat results, the press, verbs, ladder |
 | a person's stances on record (from Consult) | `people` | Consult answers (0040, 0041); adviser credibility is derived from the president's knowledge, never stored |
@@ -289,7 +289,7 @@ The day tick, each phase declaring what it reads and writes:
 10. The invariant barrier.
 11. Decision-point detection.
 
-In Phase 0 code the phases run as: commands (1), deliveries (2), movement (3), the control contest and occupation (3b), control and the derived map (4), stores on hand (4a), situations (4b), `command`'s proposals such as a government closing (4c), cyclic reports, pruning, the day, and the barrier (0057, 0064). A post's headquarters is derived from where its strongest block stands, never stored.
+In the code the phases run as: commands (1), deliveries (2), movement (3), battles and occupation (3b; the control contest until 0076), control and the derived map (4), stores on hand and stragglers rejoining (4a), situations (4b), `command`'s proposals such as a government closing (4c), cyclic reports, pruning, the day, and the barrier (0057, 0064). A post's headquarters is derived from where its strongest block stands, never stored.
 
 **What happens to today's kernel:**
 - **Survive as they are:** `permille`, `rng`, `compare`, `rules`, scenario validation.
