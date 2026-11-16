@@ -230,11 +230,15 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'a retreat threshold above the supply threshold', files: () => editJson('pack.json', (m: { rules: { retreatControlPermille: number } }) => (m.rules.retreatControlPermille = 300)), kind: 'rules-order', file: 'pack.json', severity: 'warning' },
   // Lane 0.5's design parameters (0064): every pack states them; there is no kernel default.
   { name: 'no stores rules (every pack states them)', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.stores), kind: 'shape/invalid_type', file: 'pack.json' },
-  { name: 'no contest rules', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.contest), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'no occupation rules', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.occupation), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'no combat rules', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.combat), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'a combat frontage row for a terrain not in the vocabulary', files: () => editJson('pack.json', (m: { rules: { combat: { terrain: { terrain: string }[] } } }) => { m.rules.combat.terrain[0]!.terrain = 'moon'; }), kind: 'rules-combat', file: 'pack.json' },
+  { name: 'a battle type’s phase shares not summing to 1000', files: () => editJson('pack.json', (m: { rules: { combat: { phases: { lossShares: { meeting: number[] } } } } }) => { m.rules.combat.phases.lossShares.meeting = [100, 300, 450, 100]; }), kind: 'rules-combat', file: 'pack.json' },
+  { name: 'a commander hit more often than every battle-day', files: () => editJson('pack.json', (m: { rules: { combat: { leaders: { killedPermille: number; woundedPermille: number } } } }) => { m.rules.combat.leaders.killedPermille = 600; m.rules.combat.leaders.woundedPermille = 600; }), kind: 'rules-combat', file: 'pack.json' },
   { name: 'no movement rules', files: () => editJson('pack.json', (m: { rules: Record<string, unknown> }) => delete m.rules.movement), kind: 'shape/invalid_type', file: 'pack.json' },
   { name: 'a stores rule missing a field', files: () => editJson('pack.json', (m: { rules: { stores: Record<string, unknown> } }) => delete m.rules.stores.capDays), kind: 'shape/invalid_type', file: 'pack.json' },
   { name: 'feeding men with a zero capacity unit', files: () => editJson('pack.json', (m: { rules: { stores: { menPerCapacityUnit: number } } }) => (m.rules.stores.menPerCapacityUnit = 0)), kind: 'shape/too_small', file: 'pack.json' },
-  { name: 'an occupation rate above 1000 permille', files: () => editJson('pack.json', (m: { rules: { contest: { occupyPermille: number } } }) => (m.rules.contest.occupyPermille = 1200)), kind: 'shape/too_big', file: 'pack.json' },
+  { name: 'an occupation rate above 1000 permille', files: () => editJson('pack.json', (m: { rules: { occupation: { occupyPermille: number } } }) => (m.rules.occupation.occupyPermille = 1200)), kind: 'shape/too_big', file: 'pack.json' },
   { name: 'a courier slower than a division', files: () => editJson('pack.json', (m: { rules: { movement: { courierPermille: number } } }) => (m.rules.movement.courierPermille = 1500)), kind: 'shape/too_big', file: 'pack.json' },
   { name: 'a courier who takes no time', files: () => editJson('pack.json', (m: { rules: { movement: { courierPermille: number } } }) => (m.rules.movement.courierPermille = 0)), kind: 'shape/too_small', file: 'pack.json' },
   { name: 'a fractional stores cap', files: () => editJson('pack.json', (m: { rules: { stores: { capDays: number } } }) => (m.rules.stores.capDays = 7.5)), kind: 'shape/invalid_type', file: 'pack.json' },
@@ -396,6 +400,23 @@ describe('an intelligence chief (0058)', () => {
   it('points a mismatch at its row and column', () => {
     const issue = run(withChief('red_army', 'blue_chief')).issues.find((i) => i.kind === 'faction-mismatch')!;
     expect([issue.file, issue.at]).toEqual([`${S}/posts.csv`, 'row 3 (red_army), column intelligence_chief']);
+  });
+});
+
+describe('a banned source in any citation (lane 1.8b; A6 beyond situations)', () => {
+  const banned = (keys: string[], base?: FileMap) => withNewFile('gate/source-policy.json', JSON.stringify({ banned: keys, weak: [] }), base);
+  const hits = (files: FileMap) => run(files).issues.filter((i) => i.kind === 'banned-source-cited');
+  it('warns once per record, at its source cell, naming each banned citation; a person’s centres included', () => {
+    const found = hits(banned(['REG A']));
+    expect(found.length).toBeGreaterThan(0);
+    expect(found.every((i) => i.severity === 'warning')).toBe(true);
+    const chief = found.find((i) => i.file === 'source/world/people.csv' && i.at.includes('red_chief'))!;
+    expect(chief.message).toContain('"REG A" at centres.competence.cites[0]');
+    expect(new Set(found.map((i) => `${i.file}|${i.at}`)).size).toBe(found.length);
+  });
+  it('passes a pack whose policy bans a source nobody cites, and one with no policy', () => {
+    expect(hits(banned(['NOBODY-CITES-THIS']))).toEqual([]);
+    expect(hits(fixture())).toEqual([]);
   });
 });
 

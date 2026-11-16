@@ -1,0 +1,15 @@
+battle,date,days,type,attacker,terrain,union_commit,confederate_commit,union_engaged,union_kw,confederate_engaged,confederate_kw,approx,source,at,surprised
+bull_run,1861-07-21,1,meeting,both,rolling,main,main,28452,1492,32232,1969,,LIV,battle table pp. 77-140,
+wilsons_creek,1861-08-10,1,attack_open,union,rolling,all_out,defend,5400,944,11600,1157,,LIV,battle table pp. 77-140,
+shiloh,1862-04-06,2,meeting,both,forest,defend,all_out,62682,10162,40335,9735,,LIV,battle table pp. 77-140,union
+fair_oaks,1862-05-31,2,attack_open,confederate,swamp,defend,main,41797,4384,41816,5729,,LIV,battle table pp. 77-140,
+antietam,1862-09-17,1,attack_open,union,rolling,main,defend,75316,11657,51844,11724,,LIV,battle table pp. 77-140,
+perryville,1862-10-08,1,meeting,both,hills,main,all_out,36940,3696,16000,3145,confederate_engaged,LIV,battle table pp. 77-140,
+fredericksburg,1862-12-13,1,assault_works,union,rolling,main,defend,106007,10884,72497,4656,,LIV,battle table pp. 77-140,
+chickasaw_bayou,1862-12-29,1,assault_works,union,swamp,main,defend,30720,1213,13792,197,,LIV,battle table pp. 77-140,
+stones_river,1862-12-31,2,attack_open,confederate,plain,defend,all_out,41400,9220,34732,9239,,LIV,battle table pp. 77-140,
+gettysburg,1863-07-01,3,attack_open,confederate,rolling,defend,main,83289,17684,75000,22638,confederate_engaged,LIV,battle table pp. 77-140,
+fort_wagner,1863-07-18,1,assault_works,union,tidewater,all_out,defend,5264,1126,1785,169,confederate_engaged,LIV,battle table pp. 77-140,
+chickamauga,1863-09-19,2,attack_open,confederate,forest,defend,all_out,58222,11413,66326,16986,,LIV,battle table pp. 77-140,
+wilderness,1864-05-05,3,meeting,both,forest,main,main,101895,14283,61025,7750,confederate_kw,LIV,battle table pp. 77-140,
+franklin,1864-11-30,1,assault_works,confederate,plain,defend,all_out,27939,1222,26897,5550,,LIV,battle table pp. 77-140,

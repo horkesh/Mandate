@@ -54,7 +54,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0048](0048-assets-are-made-by-codex.md) | Assets are made by Codex, through one coordination file | accepted; amended by 0051 |
 | [0049](0049-ultrawide-first.md) | The game is designed for ultrawide displays first (3440×1440 reference) | accepted |
 | [0050](0050-world-format-v2.md) | World format v2: the pack format, its validator and generator, and what becomes State at scenario start | accepted; amended by 0055, 0058, 0065 |
-| [0051](0051-codex-output-rules.md) | Rules for Codex output: no AI likenesses of real people, game-resolution assets only, and full provenance | accepted |
+| [0051](0051-codex-output-rules.md) | Rules for Codex output: no AI likenesses of real people, game-resolution assets only, and full provenance | accepted; amended by 0077 |
 | [0052](0052-seats-knowledge-and-the-command-log.md) | Seats, knowledge and the command log: copy-on-write State, the player-visible boundary, and who may order | accepted; amended by 0059 |
 | [0053](0053-presentation-and-asset-briefs.md) | The presentation design and the asset briefs are accepted | accepted |
 | [0054](0054-control-fronts-pockets-and-supply.md) | Control, fronts, pockets and supply | accepted; amended by 0055 |
@@ -67,7 +67,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0061](0061-how-the-0058-fields-were-built.md) | How the 0058 format fields were built | accepted; amended by 0064 |
 | [0062](0062-the-planner-shape.md) | The planner's shape: generate, filter and score, with one level of methods | accepted |
 | [0063](0063-atrocity-levers-are-watched.md) | An option that hurts the enemy in response to an atrocity is watched | accepted; amended by 0074 |
-| [0064](0064-forces-command-movement-and-the-contest.md) | Forces, command, movement, infrastructure and the control contest | accepted; amended by 0066, 0072 |
+| [0064](0064-forces-command-movement-and-the-contest.md) | Forces, command, movement, infrastructure and the control contest | accepted; amended by 0066, 0072, 0076 |
 | [0065](0065-a-governments-side-is-state.md) | A government's side can change in play, and stores carry their date | accepted; amended by 0067 |
 | [0066](0066-the-war-begins-by-each-governments-decision.md) | The war begins for each side by its own government's decision | accepted; amended by 0068 |
 | [0067](0067-government-sides-as-built.md) | Government sides as built, and Fort Pickens' stores unknown | accepted |
@@ -79,3 +79,5 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0073](0073-phase-1-plan.md) | The Phase 1 plan: two milestones, starting with the road to Bull Run | accepted |
 | [0074](0074-the-gate-for-1a.md) | The gate for 1A: capture in battle, the values that touch slavery, and the leaders' own words | accepted |
 | [0075](0075-the-planner-as-built.md) | The planner in the kernel, as built | accepted |
+| [0076](0076-the-battle-model-as-built.md) | The battle model, as built | accepted |
+| [0077](0077-portraits-get-a-procedural-engraving.md) | Portraits of real people get a procedural engraving finish | accepted |

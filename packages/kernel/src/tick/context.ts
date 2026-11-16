@@ -6,7 +6,7 @@
  * identically on replay.
  */
 import type { ControlChange, ControlDelta, ThresholdCrossing } from '../control/control.ts';
-import type { ContestRecord, Retreat } from '../combat/contest.ts';
+import type { FoughtDay, OccupationRecord, RetreatRecord } from '../combat/battle.ts';
 import type { StoresCrossing } from '../forces/stores.ts';
 import type { InfrastructureChange, InfrastructureDelta } from '../infrastructure/infrastructure.ts';
 import type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
@@ -105,10 +105,14 @@ export type MapEvent =
   | { readonly event: 'network_changed'; readonly change: InfrastructureChange }
   /** A block's stores crossed the low threshold (lane 0.5). The decision point is the garrison's report of it, not this. */
   | { readonly event: 'stores_crossed'; readonly crossing: StoresCrossing }
-  /** A contest or occupation in a region today, with each side's men (lane 0.5). */
-  | { readonly event: 'contest'; readonly record: ContestRecord }
-  /** A side falling back from a contested region, or unable to (lane 0.5). */
-  | { readonly event: 'retreat'; readonly retreat: Retreat }
+  /** A side alone occupying ground it marched into, with its men (0064). */
+  | { readonly event: 'occupation'; readonly record: OccupationRecord }
+  /** A battle-day fought in a region today, with its whole record (lane 1.3). */
+  | { readonly event: 'battle'; readonly fought: FoughtDay }
+  /** A battle closed with no fighting today: nobody attacked, a side was gone, or its days ran out. */
+  | { readonly event: 'battle_closed'; readonly battle: string; readonly lastDay: number }
+  /** A side leaving a battle tonight for its retreat region (lane 1.3; 0019). */
+  | { readonly event: 'retreat'; readonly retreat: RetreatRecord }
   /** A neutral government closed or reopened its territory (0055, 0058), by a situation's proposal. */
   | { readonly event: 'government_changed'; readonly department: string; readonly change: 'closed' | 'reopened' | 'unchanged' }
   /** A government joined a side (0065), by a situation's proposal, with what that cut loose. Never a closing. */

@@ -36,6 +36,286 @@
           "reason": "a nation is never either side's possession: only its own act changes its side or closes its land (0069, 0070)"
         }
       ]
+    },
+    {
+      "id": "cause-of-secession",
+      "class": "cause-and-aims",
+      "window": { "from": "1861-03-04", "to": "1862-12-31" },
+      "placements": ["event", "text"],
+      "status": "open",
+      "refused": [
+        {
+          "optionPattern": "states[-_]?rights|northern[-_]aggression|between[-_]the[-_]states",
+          "labelPattern": "\\bstates[’']?\\s*rights\\b|\\bWar of Northern Aggression\\b|\\bWar Between the States\\b",
+          "reason": "no option names \"states' rights\" as the cause, or relitigates it: the seceded states' declarations, the Confederate constitution's slavery clauses and Stephens's Cornerstone speech name slavery (SENSITIVE-HISTORY 3.1, refused; [SW 6.1], [CS 4.1]; 0021)"
+        }
+      ]
+    },
+    {
+      "id": "inaugural-slavery-passage",
+      "class": "cause-and-aims",
+      "window": { "from": "1861-03-04", "to": "1862-12-31" },
+      "placements": ["event", "text"],
+      "status": "open",
+      "refused": [
+        {
+          "optionPattern": "(?:inaugural|inauguration)[a-z_-]*(?:tone|wording|passage|version|text|draft|revise|rewrite|soften|harden)|(?:tone|wording|revise|rewrite|soften|harden)[a-z_-]*(?:inaugural|inauguration)",
+          "labelPattern": "\\b(?:revise|rewrite|soften|harden|change|reword|amend)\\w*\\b.{0,30}\\binaugural\\b",
+          "reason": "the inaugural, and its passage disclaiming any purpose to interfere with slavery in the states, is a fixed premise: no tone option and no live situation on 4 March, because varying it would score the player or leak hindsight (SENSITIVE-HISTORY 3.1, refused; 0042; [SW 6.3], [MF] row 12)"
+        }
+      ]
+    },
+    {
+      "id": "corwin-amendment",
+      "class": "cause-and-aims",
+      "window": { "from": "1861-03-04", "to": "1862-12-31" },
+      "placements": ["text"],
+      "status": "open",
+      "refused": [
+        {
+          "optionPattern": "corwin",
+          "labelPattern": "\\bCorwin\\b",
+          "reason": "the Corwin amendment (passed 2 March 1861) is text only: no option offers it as a bargaining chip or a peace term, which would make slavery a cost-free chip (SENSITIVE-HISTORY 3.1, refused; [SW 6.3, 6.8])"
+        }
+      ]
+    },
+    {
+      "id": "war-aims-1861",
+      "class": "cause-and-aims",
+      "window": { "from": "1861-07-04", "to": "1861-08-06" },
+      "placements": ["decision", "text"],
+      "status": "open"
+    },
+    {
+      "id": "lost-cause-traps",
+      "class": "cause-and-aims",
+      "window": { "from": "1861-03-04", "to": "1862-12-31" },
+      "placements": ["refused"],
+      "status": "open",
+      "refused": [
+        {
+          "fieldPattern": "(?:^|[-_.:/])(?:black|colou?red|negro(?:es)?|african|enslaved|slaves?|servants?)[-_.:/](?:soldiers?|troops?|regiments?|companies|battalions?|units?|infantry|cavalry|artillery|volunteers?|strength)(?:$|[-_.:/])|(?:^|[-_.:/])(?:soldiers?|troops?|regiments?|companies|battalions?|units?|strength)[-_.:/](?:black|colou?red|negro(?:es)?|african|enslaved|slaves?|servants?)(?:$|[-_.:/])",
+          "reason": "no force field names race: no Black soldiers in Confederate force data (trap 3, \"Black Confederates\": they appear only as coerced labourers and body servants, [CS 4.2, 4.6]), and no goal or transfer field selects either side's forces by race (SENSITIVE-HISTORY 3.3, black-enlistment, refused)"
+        },
+        {
+          "fieldPattern": "(?:^|[-_.:/])(?:enslaved|slaves?|servants?|freedpeople|freedmen|black|colou?red|negro(?:es)?)[-_.:/](?:[a-z]+[-_.:/])?(?:loyalty|loyal|fidelity|faithfulness|contentment|docility|obedience)(?:$|[-_.:/])",
+          "optionPattern": "(?:loyal|faithful|happy|contented|devoted)[a-z_-]*(?:slaves?|servants?|enslaved)",
+          "labelPattern": "\\b(?:loyal|faithful|happy|contented|devoted)\\s+(?:slaves?|servants?|negro(?:es)?|enslaved)\\b",
+          "reason": "no loyalty value for any protected population, and no \"loyal slaves\" (trap 4, SENSITIVE-HISTORY 3.4; [CS 4.6])"
+        }
+      ]
+    },
+    {
+      "id": "self-emancipation",
+      "class": "slavery-and-emancipation",
+      "window": { "from": "1861-05-23", "to": "1862-12-31" },
+      "placements": ["derived", "event"],
+      "status": "open",
+      "protectedFields": ["enslaved_population", "region_enslaved_population", "reached_union_lines", "region_reached_union_lines"],
+      "protectedGroups": [
+        "enslaved people", "enslaved men", "enslaved women", "enslaved children", "the enslaved", "slaves",
+        "freedpeople", "freedmen", "freedwomen", "refugees from slavery", "fugitives", "contrabands"
+      ],
+      "agencyReasons": ["agency:self-emancipation", "agency:flight-to-union-lines", "agency:resistance-within-confederacy", "agency:escape-from-impressment"],
+      "refused": [
+        {
+          "fieldPattern": "(?:^|[-_.:/])(?:enslaved|slaves?|slavery|freedpeople|freedmen|freedwomen|fugitives?|contrabands?|black|colou?red|negro(?:es)?|african)[-_.:/](?:[a-z]+[-_.:/])?(?:population|people|persons|men|women|count|counts|number|numbers|total|labou?r|labou?rers|workers?|hands|stock|pool|manpower|recruits?|recruitment|enlistments?|levy|levies|draft|quotas?|arrivals?|property|chattels?)(?:$|[-_.:/])|(?:^|[-_.:/])(?:population|people|persons|men|women|count|counts|number|numbers|total|labou?r|labou?rers|workers?|hands|stock|pool|manpower|recruits?|recruitment|enlistments?|levy|levies|draft|quotas?|arrivals?|property|chattels?)[-_.:/](?:[a-z]+[-_.:/])?(?:enslaved|slaves?|slavery|freedpeople|freedmen|freedwomen|fugitives?|contrabands?|black|colou?red|negro(?:es)?|african)(?:$|[-_.:/])",
+          "reason": "no seat counts, stocks, spends or moves enslaved people, freedpeople, fugitives or Black men as a quantity, labour or manpower: the census population is protected input read only by derivations, and people who reach Union lines are State written by regions from the derived term (SENSITIVE-HISTORY 3.2, refused, and rule 3; 0046; [SW 6.2])"
+        },
+        {
+          "optionPattern": "(?:entice|encourage|incite|induce|prevent|halt|block|recapture|round_up|round-up|hunt|track|seize|count|tally|spend|sell|trade)[a-z_-]*(?:slaves?|enslaved|fugitives?|runaways?|contrabands?|freedpeople|freedmen|negro(?:es)?|escapes?|escapees)",
+          "labelPattern": "\\b(?:entic|encourag|incit|induc|recaptur|round(?:ing)? up|hunt|track(?:ing)? down|seiz|tally|spend|sell)\\w*\\b.{0,40}\\b(?:slaves?|enslaved|fugitives?|runaways?|contrabands?|freedpeople|freedmen|negro(?:es)?)\\b|\\bcount(?:s|ed|ing)?\\b.{0,40}\\b(?:slaves?|enslaved|fugitives?|runaways?|contrabands?|freedpeople|freedmen)\\b|\\b(?:prevent|halt|block)\\w*\\b.{0,25}\\b(?:escapes?|flight|running away)\\b",
+          "reason": "no verb, option or initiative for either side to encourage, entice, prevent, recapture, count or spend self-emancipation: it is the people's own act, derived, never a lever (SENSITIVE-HISTORY 3.2, refused; [CS 4.3]; 0046)"
+        },
+        {
+          "optionPattern": "(?:servile|slave|negro)[a-z_-]*(?:insurrection|revolt|rising|uprising|rebellion)",
+          "labelPattern": "\\b(?:servile|slave|negro)\\s+(?:insurrections?|revolts?|risings?|uprisings?|rebellions?)\\b",
+          "reason": "no \"suppress insurrection\" action for any seat; servile war appears only as an attributed contemporary view (SENSITIVE-HISTORY 3.2, refused, and trap 8; [SW 6.8], [CS 3.1])"
+        }
+      ]
+    },
+    {
+      "id": "fugitive-policy",
+      "class": "slavery-and-emancipation",
+      "window": { "from": "1861-05-23", "to": "1862-07-17" },
+      "placements": ["decision", "event", "text"],
+      "status": "open",
+      "protectedGroups": ["fugitives from slavery", "people who reached Union lines"],
+      "agencyReasons": ["agency:flight-to-union-lines"],
+      "supersededOptions": [{ "situation": "fort_monroe_arrivals", "option": "return", "law": "confiscation_and_militia_acts" }],
+      "refused": [
+        {
+          "labelPattern": "^(?!.*\\bslavery\\b)(?!.*\\b(?:not|never|no|refuses?|declines?|forbids?)\\s+(?:to\\s+)?(?:return|deliver|surrender|send|give|hand|restor)).*\\b(?:return|deliver|send(?:ing)? back|surrender|give up|hand over|restor)\\w*\\b.{0,40}\\b(?:fugitives?|refugees|runaways?|escaped|arrivals|enslaved|slaves?|contrabands?)\\b|^(?!.*\\bslavery\\b)(?!.*\\b(?:not|never|no|refuses?|declines?|forbids?)\\s+(?:to\\s+)?return).*\\breturn\\w*\\b.{0,40}\\b(?:1850|fugitive (?:slave )?(?:act|law))\\b|^(?=.*\\b(?:fugitives?|runaways?|escaped|arrivals|enslaved|slaves?|contrabands?|men|women|people|them)\\b).*\\brestor\\w*\\b.{0,30}\\bproperty\\b|^(?=.*\\b(?:fugitives?|runaways?|escaped|arrivals|enslaved|slaves?|contrabands?|men|women|people|them)\\b).*\\b(?:return|deliver|surrender|restor)\\w*\\b.{0,40}\\bto (?:their|the|its) (?:owners?|masters?|claimants?)\\b|^(?!.*\\bslavery\\b)(?!.*\\b(?:not|never|no|refuses?|declines?|forbids?)\\s+(?:to\\s+)?(?:send|turn|drive|expel|exclude)).*\\b(?:send\\w*|turn\\w*|drive\\w*)\\b.{0,30}\\b(?:fugitives?|refugees from slavery|runaways?|escaped (?:men|people|slaves)|arrivals|enslaved|slaves?)\\b.{0,20}\\b(?:back|away|out)\\b|^(?!.*\\bslavery\\b)(?!.*\\b(?:not|never|no)\\b).*\\b(?:expel\\w*|exclud\\w*|turn(?:s|ed|ing)? away|keep\\w* out)\\b.{0,30}\\b(?:fugitives?|runaways?|arrivals|enslaved|slaves?)\\b",
+          "optionPattern": "(?:restore|return|deliver|surrender)[a-z_-]*(?:property|owners?|masters?|claimants?)",
+          "reason": "an option that returns people to slavery says so plainly, \"return them to slavery\": \"restore property\", \"to their owners\" or \"under the 1850 law\" alone is euphemism, and so is sending, turning or driving them back, away or out, or excluding them from the lines (Q6 covers keeping them from freedom as well as return); \"property\" and \"owners\" are read only where the label names people, so a railroad restored to its owners passes (SENSITIVE-HISTORY 3.2, the ruling on return, term 4, and Q6; 0046)"
+        }
+      ]
+    },
+    {
+      "id": "union-freedpeople-camps",
+      "class": "slavery-and-emancipation",
+      "window": { "from": "1861-05-23", "to": "1862-12-31" },
+      "placements": ["event", "text"],
+      "status": "open",
+      "needsSource": true,
+      "agencyReasons": ["agency:flight-to-union-lines"],
+      "refused": [
+        {
+          "optionPattern": "(?:assign|lease|hire_out|hire-out|contract_out|contract-out|put_to_work|put-to-work|set_to_work|set-to-work|work_gang|work-gang)[a-z_-]*(?:freedpeople|freedmen|freedwomen|contrabands?|refugees|fugitives?)",
+          "labelPattern": "\\b(?:assign|lease|hire out|contract out)\\w*\\b.{0,40}\\b(?:freedpeople|freedmen|freedwomen|contrabands?|refugees|fugitives?)\\b|\\b(?:put|set)\\b.{0,30}\\b(?:freedpeople|freedmen|freedwomen|contrabands?|refugees|fugitives?)\\b.{0,20}\\bto (?:work|labou?r)\\b",
+          "reason": "no Union labour stock or resource fed by freedpeople, and no lever that assigns their labour; the topic is needs-source as a whole, so nothing about Union camps is authored until a research lane sources it (SENSITIVE-HISTORY 3.2, refused; [SW 6.3])"
+        }
+      ]
+    },
+    {
+      "id": "confederate-enslaved-labour",
+      "class": "slavery-and-emancipation",
+      "window": { "from": "1861-03-04", "to": "1862-12-31" },
+      "placements": ["text"],
+      "status": "open",
+      "agencyReasons": ["agency:escape-from-impressment"],
+      "refused": [
+        {
+          "optionPattern": "(?:impress|requisition|hire_out|hire-out|lease|levy|conscript|draft|commandeer)[a-z_-]*(?:slaves?|enslaved|negro(?:es)?|black|colou?red)",
+          "labelPattern": "\\b(?:impress|requisition|hire out|lease|levy|conscript|draft|commandeer)\\w*\\b.{0,40}\\b(?:slaves?|enslaved|negro(?:es)?|Black (?:men|workers|labou?rers))\\b",
+          "reason": "no verb for either side to impress or requisition enslaved labour, and no field counting it as a resource; in the slice it is text from Confederate payrolls and Butler's stated reason (SENSITIVE-HISTORY 3.2, refused; [SW 6.3], [CS 4.2])"
+        }
+      ]
+    },
+    {
+      "id": "slavery-as-wealth",
+      "class": "slavery-and-emancipation",
+      "window": { "from": "1861-03-04", "to": "1862-12-31" },
+      "placements": ["text"],
+      "status": "open",
+      "refused": [
+        {
+          "fieldPattern": "(?:^|[-_.:/])(?:slaves?|enslaved|slavery)[-_.:/](?:[a-z]+[-_.:/])?(?:value|values|valuation|worth|wealth|price|prices|capital|collateral|assets?)(?:$|[-_.:/])|(?:^|[-_.:/])(?:value|values|valuation|worth|wealth|price|prices|capital|collateral|assets?)[-_.:/](?:[a-z]+[-_.:/])?(?:slaves?|enslaved|slavery)(?:$|[-_.:/])",
+          "reason": "no finance term values enslaved people; the economists' account of Confederate wealth appears only attributed (SENSITIVE-HISTORY 3.2, refused; [CS 3.3])"
+        }
+      ]
+    },
+    {
+      "id": "black-enlistment-1861-offers",
+      "class": "black-military-service",
+      "window": { "from": "1861-04-15", "to": "1862-12-31" },
+      "placements": ["decision", "event"],
+      "status": "open",
+      "protectedGroups": [
+        "free Black men", "free Black women", "Black men", "Black women", "Black people", "Black Northerners",
+        "Black volunteers", "Black soldiers", "Black sailors", "Black regiments", "colored men"
+      ],
+      "agencyReasons": ["agency:black-volunteer-offer"],
+      "refused": [
+        {
+          "optionPattern": "(?:recruit|raise|enlist|levy|draft|conscript|muster|enrol)[a-z_-]*(?:black|colou?red|negro(?:es)?|african)",
+          "labelPattern": "^(?!.*\\b(?:ask|request|seek)\\w*\\b.{0,40}\\b(?:Congress|authority|law)\\b)(?!.*\\b(?:decline|refuse|not|no)\\b).*\\b(?:recruit|raise|enlist|levy|draft|conscript|muster|enrol|arm)\\w*\\b.{0,40}\\b(?:Black|colou?red|negro(?:es)?|African)\\b",
+          "reason": "no recruit verb: the offers are the men's own acts, and acceptance runs through Congress (S13's ask-congress), never through a player draw on a pool (SENSITIVE-HISTORY 3.3, refused; [SW 6.4]; 0026)"
+        },
+        {
+          "optionPattern": "^accept[a-z_-]*(?:black|colou?red|negro|african)",
+          "labelPattern": "^(?!.*\\b(?:ask|request|seek)\\w*\\b.{0,40}\\b(?:Congress|authority|law)\\b)(?!.*\\b(?:decline|refuse|not|no)\\b).*\\b(?:accept|receive)\\w*\\b.{0,40}\\b(?:Black|colou?red|negro(?:es)?|African)\\b",
+          "reason": "held, not refused: a direct acceptance by the president under the 3 May 1861 call is needs-source (the only basis in the notes is that the exclusion \"rested more on policy than statute\", [SW 6.4]); when a research lane sources a lawful path, this signature is lifted and an accept option may be added (SENSITIVE-HISTORY 3.3)"
+        }
+      ]
+    },
+    {
+      "id": "union-habeas-and-arrests",
+      "class": "civil-liberties",
+      "window": { "from": "1861-04-27", "to": "1862-12-31" },
+      "placements": ["decision", "event", "derived"],
+      "status": "open",
+      "refused": [
+        {
+          "fieldPattern": "(?:^|[-_.:/])arrest(?:s|ed|ees)?[-_.:/](?:count|total|score|tally)(?:$|[-_.:/])",
+          "reason": "no arrest count as a score or tally, and no card per arrested person: arrests are events and decisions with their own costs, never a number any seat is scored on (SENSITIVE-HISTORY 3.5, refused)"
+        }
+      ]
+    },
+    {
+      "id": "press-suppression",
+      "class": "civil-liberties",
+      "window": { "from": "1861-04-12", "to": "1862-12-31" },
+      "placements": ["decision", "event"],
+      "status": "open",
+      "refused": [
+        {
+          "optionPattern": "(?:incite|rouse|stir_up|stir-up|unleash|encourage|let_loose|let-loose)[a-z_-]*(?:mobs?|crowds?|rioters?)",
+          "labelPattern": "\\b(?:incit|rous|stir(?:ring)? up|unleash|encourag|let loose|egg on)\\w*\\b.{0,30}\\b(?:mobs?|crowds?|rioters?)\\b",
+          "reason": "mob attacks on papers are events no seat causes or uses: mobs are never an instrument of any seat (SENSITIVE-HISTORY 3.5, refused; [UP 4.3], [SW 6.6])"
+        }
+      ]
+    },
+    {
+      "id": "civilian-deaths-1861",
+      "class": "atrocities",
+      "window": { "from": "1861-04-19", "to": "1861-12-31" },
+      "placements": ["event", "text"],
+      "status": "open",
+      "refused": [
+        {
+          "optionPattern": "(?:fire|shoot|volley|open_fire|open-fire)[a-z_-]*(?:crowds?|mobs?|civilians|rioters?|townspeople)",
+          "labelPattern": "\\b(?:fire|shoot|open fire)\\w*\\b.{0,25}\\b(?:crowds?|mobs?|civilians|rioters?|townspeople)\\b",
+          "reason": "no option to fire on a crowd; the Pratt Street and Camp Jackson dead are events from their causes and the commander's seat, and no term from them helps the acting side (SENSITIVE-HISTORY 3.6, refused, and E7; [SW 6.7])"
+        }
+      ]
+    },
+    {
+      "id": "guerrilla-war-west",
+      "class": "guerrilla-war",
+      "window": { "from": "1861-07-01", "to": "1862-12-31" },
+      "placements": ["derived", "event", "decision"],
+      "status": "record",
+      "refused": [
+        {
+          "optionPattern": "(?:reprisal|retaliat|burn|lay_waste|lay-waste|devastate|punish)[a-z_-]*(?:towns?|villages?|civilians|count(?:y|ies)|homes|farms|population|inhabitants|families)",
+          "labelPattern": "\\b(?:reprisals?|retaliat\\w*|burn|lay waste|devastat\\w*|punish\\w*)\\b.{0,40}\\b(?:towns?|villages?|civilians|count(?:y|ies)|homes|farms|population|inhabitants|families)\\b",
+          "reason": "refused for ever (rule 1; 0029); not lifted by R6: reprisal against civilians is never a lever for any seat, and raids strike rail, river edges and depots, never civilians; R6 decides only commanders' conduct toward civilians as events (SENSITIVE-HISTORY 3.6, refused; [SW 6.7], [U62]; 0046)"
+        },
+        {
+          "optionPattern": "(?:hang|shoot|execute|kill|lynch)[a-z_-]*(?:bushwhacker|guerrilla|jayhawker|partisan|bridge_?burner|raider|marauder|irregular|hostage|parole_?breaker|spy|spies)",
+          "labelPattern": "\\b(?:hang|hangs|hanged|hung|shoot|shot|execut\\w*|kill\\w*|lynch\\w*)\\b.{0,30}\\b(?:bushwhackers?|guerrillas?|jayhawkers?|partisans?|bridge[- ]burners?|raiders?|marauders?|irregulars?|hostages?|parole[- ]breakers?|spies)\\b",
+          "reason": "refused for ever (rule 1): no seat hangs, shoots, executes, lynches or kills irregulars, hostages, spies or men who broke parole, with a trial or without one; Halleck's GO 2 (\"hung as robbers and murderers\") and GO 32 (\"immediately shot\") are events, never an option ([GCF 10]); on this topic until R6's split moves it to executions-and-reprisals, and not lifted by R6 (SENSITIVE-HISTORY rule 1, 3.6)"
+        }
+      ]
+    },
+    {
+      "id": "capture-in-battle",
+      "class": "prisoners",
+      "window": { "from": "1861-03-04", "to": "1862-12-31" },
+      "placements": ["event", "text"],
+      "status": "open",
+      "refused": [
+        {
+          "fieldPattern": "(?:^|[-_.:/])(?:captured|seized|confiscated|taken)[-_.:/](?:slaves?|enslaved|negro(?:es)?|contrabands?|servants?|property)(?:$|[-_.:/])|(?:^|[-_.:/])(?:slaves?|enslaved|negro(?:es)?|contrabands?|servants?)[-_.:/](?:captured|seized|confiscated|taken)(?:$|[-_.:/])",
+          "optionPattern": "(?:capture|seize|confiscate|take)[a-z_-]*(?:slaves?|enslaved|negro(?:es)?|contrabands?|servants?)",
+          "labelPattern": "\\b(?:captur(?:e|es|ed|ing)|seiz(?:e|es|ed|ing)|confiscat(?:e|es|ed|ing))\\b.{0,40}\\b(?:slaves?|enslaved|negro(?:es)?|contrabands?|servants?)\\b",
+          "reason": "only soldiers of a force block are captured: no person is taken as property, and people who reach or are found by Union forces are self-emancipation and fugitive policy, never a capture (R4 battle ruling, draft in notes/lane-1.8-gate.md, point 4)"
+        },
+        {
+          "optionPattern": "no[_-]quarter|take[_-]no[_-]prisoners|(?:execute|shoot|kill|hang)[a-z_-]*(?:prisoners?|captives?|captured|surrendered)",
+          "labelPattern": "\\bno quarter\\b|\\btake no prisoners\\b|\\b(?:execut|shoot|shot|kill|hang)\\w*\\b.{0,30}\\b(?:prisoners?|captives?|the captured|surrendered)\\b",
+          "reason": "killing the captured is atrocity-class and never a choice for any seat (SENSITIVE-HISTORY rule 1; R4 battle ruling, draft, point 5)"
+        }
+      ]
+    },
+    {
+      "id": "prisoners-and-exchange",
+      "class": "prisoners",
+      "window": { "from": "1861-03-04", "to": "1862-12-31" },
+      "placements": ["decision", "event", "text"],
+      "status": "record",
+      "refused": [
+        {
+          "fieldPattern": "(?:^|[-_.:/])(?:prisoners?|captives?|pows?|hostages?|parolees?|paroled)(?:$|[-_.:/])|(?:^|[-_.:/])(?:captured|taken|surrendered)[-_.:/](?:men|soldiers|troops|officers|count|counts|total|number|numbers|held)(?:$|[-_.:/])",
+          "reason": "held until R4, not refused for ever: no prisoner stock, pool or count that any seat holds, spends, trades, exchanges or paroles, and no field counting the captured on the captor's side (a captured count is the loser's loss, never the captor's holding); the captured leave play as a typed loss in the battle record (R4 battle ruling, draft, points 2 and 6; SENSITIVE-HISTORY 3.6; [GCF 5])"
+        },
+        {
+          "optionPattern": "exchange[a-z_-]*prisoners?|prisoners?[a-z_-]*(?:exchange|swap|trade|parole)|cartel|parol(?:e|ed|es|ing)|hostages?|draw[_-]lots?|by[_-]lot|retaliat|reprisal",
+          "labelPattern": "\\b(?:exchang|swap|trad|parol)\\w*\\b.{0,30}\\bprisoners?\\b|\\bprisoners?\\b.{0,30}\\b(?:exchang|swap|trad|parol)\\w*\\b|\\bcartel\\b|\\bparol(?:e|ed|es|ing)\\b|\\bhostages?\\b|\\bby lot\\b|\\bretaliat\\w*\\b|\\breprisals?\\b|\\bon (?:their|his|its) (?:word|honou?r|oath|pledge|parole)\\b|\\b(?:releas\\w*|free|freeing|let\\w*\\b.{0,20}\\bgo|send\\w*\\b.{0,20}\\bhome)\\b.{0,40}\\b(?:captured|captives?|prisoners?|surrendered)\\b|\\b(?:captured|captives?|prisoners?|surrendered)\\b.{0,40}\\b(?:go home|released|set free|let go|sent home)\\b|\\bsend\\w*\\b.{0,30}\\b(?:captured|captives?|prisoners?|surrendered)\\b.{0,30}\\bhome\\b",
+          "reason": "held until R4, not refused for ever: exchange, parole, hostages, the Corcoran lot and retaliation are R4 proper's; no option names a captured man's fate until then (R4 battle ruling, draft, point 6; SENSITIVE-HISTORY 3.6 and 4, R4; [GCF 5.1, 5.2])"
+        }
+      ]
     }
   ]
 }

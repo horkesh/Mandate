@@ -79,6 +79,17 @@ describe('situations in the pack format', () => {
     expect(kinds(editJson(sit('eastwatch_stalls'), (s) => (s.event = { all: [{ dayAtLeast: 40 }, { flag: 'fen_arrivals' }] })))).not.toContainEqual(expect.stringContaining('situation-date-cause'));
   });
 
+  it('a proposed field and an option id are lowercase, so the gate’s signatures see every word (standing review of lane 1.8, S1)', () => {
+    // camelCase passes every field and option signature, because they find words by their separators.
+    firesAt(editJson(sit('eastwatch_stalls'), (s) => s.options[1].effects.push({ propose: { owner: 'regions', field: 'blackSoldiers', subject: null, delta: 5, reason: 'a-probe', side: 'north' } })), 'shape/invalid_format', { at: 'options[1].effects[1].propose.field', message: 'no camelCase' });
+    firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.options[1].lockedCosts ??= []).push({ propose: { owner: 'regions', field: 'PrisonersHeld', subject: null, delta: -5, reason: 'a-probe', side: 'north' } })), 'shape/invalid_format', { at: 'options[1].lockedCosts[0].propose.field', message: 'no camelCase' });
+    firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.options[1].id = 'exchangePrisoners')), 'shape/invalid_format', { at: 'options[1].id', message: 'no camelCase' });
+    // The controls: the same ids in lowercase raise no shape error.
+    const shapes = (edits: Edits) => issues(edits).filter((i) => i.kind.startsWith('shape/') && i.file === sit('eastwatch_stalls'));
+    expect(shapes(editJson(sit('eastwatch_stalls'), (s) => s.options[1].effects.push({ propose: { owner: 'regions', field: 'black_soldiers', subject: null, delta: 5, reason: 'a-probe', side: 'north' } })))).toEqual([]);
+    expect(shapes(editJson(sit('eastwatch_stalls'), (s) => (s.options[1].id = 'exchange_prisoners')))).toEqual([]);
+  });
+
   it('0041: options in ascending display order, each with its own key', () => {
     fires(editJson(sit('eastwatch_stalls'), (s) => (s.options[2].displayKey = 1)), 'situation-display-order');
     fires(editJson(sit('eastwatch_stalls'), (s) => s.options.reverse()), 'situation-display-order');

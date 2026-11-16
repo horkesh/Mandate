@@ -4,6 +4,7 @@
  * tables. Pure over file text: the CLI (`packages/cli/src/pack.ts`) does the
  * reading and writing.
  */
+export * from './banned-sources.ts';
 export * from './cells.ts';
 export * from './csv.ts';
 export * from './format.ts';

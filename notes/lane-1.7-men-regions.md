@@ -1,6 +1,6 @@
 # Lane 1.7 hand-over: men and regions
 
-Branch `phase1-men-regions`, from `main` at 2e4655b. Built to FOUNDATION section 12 row 1.7 (0073) and the lead's brief. For the standing reviewer and, for the gated parts, the gate reviewer; then the steward. **The gated parts (the self-emancipation term, arrivals State, the census input) wait on lane 1.8b's register fixes before merging.**
+Branch `phase1-men-regions`, from `main` at 2e4655b, with main merged in after lanes 1.3 and 1.8b landed (no rebase). Built to FOUNDATION section 12 row 1.7 (0073) and the lead's brief. The standing reviewer approved it (`review-lane-1.7.md`); its re-check covers the merge and the fixes below. The gate reviewer reads the gated parts (the self-emancipation term, arrivals State, the census input) against lane 1.8b's merged register.
 
 ## The answer
 
@@ -11,7 +11,21 @@ Block creation is one proposal applied in one phase, with no second owner. The r
 
 Disbanding is the same proposal in reverse. The one-writer scanner passes.
 
-`npm run check` passes (993 tests), `npm run run:done-check` gives six PASS, and the liveness gate is re-banded.
+`npm run check` passes (1100 tests, after the merge), `npm run run:done-check` gives six PASS, and the liveness gate is re-banded.
+
+## After lane 1.3, and the review's fixes
+
+- **New blocks take lane 1.3's fields:** morale, experience and equipment at the pack's start values (`startingCondition`), no stragglers, never routed or surrendered (`applyMusters` now takes the map).
+- **A block whose term ends while a battle it fought in is still open in its region keeps its men** until the battle closes (`inOpenBattle`). A battle in progress never loses a participant. Closed records are history; nothing reads their blocks back from State.
+- **`linesForceIn`** counts only blocks with men present that have not surrendered.
+- **A levy due in an enemy-held region** (another faction's share there above its side's) does not muster. It waits, re-checked each day (`recruitment.muster_blocked`). Past the pack's `recruitment.musterBlockedDays` it lapses (`recruitment.lapsed`), and the governor reports it to the man who called it: a `levy-lapsed` claim with the token `region_enemy_held`, and a `levy_lapsed` truth term. Both paths are tested.
+- **Agency reasons per cause** (pack rules `selfEmancipation.agencyReasons`). Union: `agency:resistance-within-confederacy` (cause 1), `agency:flight-to-union-lines` (cause 2) and `agency:escape-from-impressment`, carried by a third reason when the pack's pressure flags drive the term. Pressure now raises both causes. The testbed uses `agency:fen-flight` for all three, its register's one type. The situation layer refuses an agency reason the gate register does not list.
+- **Controls:**
+  - the self-governing refusal (S1);
+  - the `call_loyalty` label;
+  - a census region the lines' side already holds (`n_west_front` in the testbed gets no term);
+  - a source scan that only `tick/regions.ts` calls `applyArrivals` and only the term proposes the protected field (`kernel/test/men-regions-scan.test.ts`).
+- **The protected ids** match lane 1.8b's merged register exactly: `region_reached_union_lines` and `region_enslaved_population`.
 
 ## What is built
 
@@ -49,7 +63,6 @@ Disbanding is the same proposal in reverse. The one-writer scanner passes.
 - No rule seat calls for regiments; lane 1.12's rule-seat principals will. Recruitment's mechanics are QUIET in the reference runs, each with its driving test.
 - The president's call as a situation (S09) is lane 1.11's. A situation option cannot yet issue a call; it would go through `dispatchOrder` like a goal.
 - The term's effect on the holding side's regional capacity and supply waits for an economy (1B). Today the term is derived and its arrivals are State.
-- Merging lane 1.3: `blockState` in `forces/enlistment.ts` must take 1.3's new `ForceBlockState` fields (morale, experience, equipment from `startingCondition`, stragglers 0, routed and surrendered null).
 
 ## For the gate reviewer
 

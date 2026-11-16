@@ -34,6 +34,8 @@ export interface RecruitmentRules {
   readonly loyaltyWeight: number;
   /** The longest enlistment a call may name, in days. */
   readonly maxTermDays: number;
+  /** Days a levy due to muster waits while its region is enemy-held; past them it lapses, reported to the caller (the lead's ruling). */
+  readonly musterBlockedDays: number;
 }
 
 /** A pack's situation flag and what it adds, for the self-emancipation term. */
@@ -49,13 +51,16 @@ export interface FlagTerm {
 export interface SelfEmancipationRules {
   /** The faction whose lines people reach (pack data); null: the pack has no such term. */
   readonly linesFaction: FactionId | null;
-  /** The reason type every number in the term carries: one of the pack's gate register agency types (SENSITIVE-HISTORY E3). */
-  readonly agencyReason: string;
+  /**
+   * The reason type each cause carries: one of the pack's gate register agency types (SENSITIVE-HISTORY E3), per cause:
+   * resistance and flight within; flight to the lines; and escape where the pack's pressure flags drive it (impressment).
+   */
+  readonly agencyReasons: { readonly resistanceWithin: string; readonly flightToLines: string; readonly escapeFromPressure: string };
   /** The term is recomputed every this many days. */
   readonly cadenceDays: number;
   /** Cause (1), resistance and flight within the side that holds the census region, not keyed to anyone's reach: per million per cadence. */
   readonly resistancePerMillion: number;
-  /** What the pack's situation flags add to cause (1), permille of it (pressure such as impressment). */
+  /** What the pack's situation flags add to both causes, permille of each (pressure within the side, such as impressment). */
   readonly pressureFlags: readonly FlagTerm[];
   /** Cause (2), flight to the lines, per million per cadence at full reach and full policy. */
   readonly flightPerMillion: number;
@@ -80,7 +85,7 @@ export function recruitmentRuleProblems(r: RecruitmentRules): string[] {
   const problems: string[] = [];
   whole(problems, 'recruitment rule callTerms.boldness', r.callTerms.boldness, 0, 1000);
   for (const k of ['menPerRegiment', 'maxTermDays'] as const) whole(problems, `recruitment rule ${k}`, r[k], 1);
-  for (const k of ['storesDays', 'musterDays'] as const) whole(problems, `recruitment rule ${k}`, r[k], 0);
+  for (const k of ['storesDays', 'musterDays', 'musterBlockedDays'] as const) whole(problems, `recruitment rule ${k}`, r[k], 0);
   for (const k of ['loyaltyFull', 'loyaltyWeight'] as const) whole(problems, `recruitment rule ${k}`, r[k], 0, 1000);
   if (r.loyaltyWeight > 0 && r.loyaltyFull === 0) problems.push('recruitment rule loyaltyFull must be above 0 when loyalty is read');
   const seen = new Set<string>();

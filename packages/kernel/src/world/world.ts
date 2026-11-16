@@ -27,6 +27,7 @@ import type { ReportTemplate } from '../knowledge/templates.ts';
 import type { LatencyRules } from '../messages/latency.ts';
 import type { RecruitmentRules, SelfEmancipationRules } from '../recruitment/rules.ts';
 import type { PeopleRules } from '../people/rules.ts';
+import type { CombatRules } from '../combat/rules.ts';
 
 export const WORLD_FORMAT_VERSION = 2;
 
@@ -53,14 +54,12 @@ export interface StoresRules {
   readonly lowDays: number;
 }
 
-/** The simple control contest and occupation (0064). DESIGN PARAMETERS the pack states. */
-export interface ContestRules {
+/** Occupation (0064): a side alone that marched in takes ground by its men. DESIGN PARAMETERS the pack states. */
+export interface OccupationRules {
   /** Control a side alone in held ground gains a day at full strength, permille. */
   readonly occupyPermille: number;
   /** The men at which occupation reaches its full rate; fewer gain in proportion. */
   readonly occupyFullMen: number;
-  /** Control the stronger side gains a day at an overwhelming margin, permille (times its margin). */
-  readonly contestPermille: number;
 }
 
 /** Movement and messages over the graph (0064). DESIGN PARAMETERS the pack states. */
@@ -223,7 +222,9 @@ export interface WorldRules {
   readonly retreatControlPermille: number;
   readonly seasons: readonly SeasonEffect[];
   readonly stores: StoresRules;
-  readonly contest: ContestRules;
+  readonly occupation: OccupationRules;
+  /** The battle model (lane 1.3, the combat note): base rates, terms, frontage, morale, decisions, stragglers, the day shape. DESIGN PARAMETERS the pack states (0072). */
+  readonly combat: CombatRules;
   readonly movement: MovementRules;
   readonly ruleSeats: RuleSeatRules;
   /** How long each route takes beside the map's courier days (0026, 0032). DESIGN PARAMETERS the pack states (0072). */

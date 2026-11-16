@@ -38,6 +38,7 @@ import type { OrderResponse } from './proxy/responses.ts';
 import type { ArrivalTable, FortificationTable, LoyaltyTable } from './regions/regions.ts';
 import type { EnlistmentTable } from './forces/enlistment.ts';
 import type { LevyTable } from './command/levies.ts';
+import type { BattleTable } from './combat/records.ts';
 
 export interface State {
   /** The game's seed, set at setup; every named stream derives from it. Immutable. */
@@ -127,4 +128,6 @@ export interface State {
   readonly personStatus: Readonly<Record<PersonId, PersonStatus>>;
   /** Each man's response to each order that reached him, keyed `order|person` (`proxy/responses.ts`). Writer: `proxy`. */
   readonly orderResponses: Readonly<Record<string, OrderResponse>>;
+  /** Every battle fought, open or closed, with each day's breakdowns (lane 1.3; `combat/records.ts`). Writer: `combat`. */
+  readonly battleRecords: BattleTable;
 }

@@ -12,9 +12,9 @@
  *  2d. Recruitment: levies muster into new blocks; enlistments that end disband (lane 1.7).
  *  3. Movement: approved plans through the stand-in standing-goal path (lane 1.4
  *     retires it), every march a day further (lane 0.5).
- *  3b. The simple control contest and occupation: control deltas, retreats (lane 0.5).
+ *  3b. Combat: battles and occupation; losses, retreats, generals hit, control deltas (lane 1.3).
  *  4. Control and network changes, and the derived map (lane 0.4).
- *  4a. Stores on hand fall or refill from today's supply trace (lane 0.5).
+ *  4a. Stragglers rejoin, and stores on hand fall or refill, from today's supply trace (lanes 0.5, 1.3).
  *  4a'. Regions: the derived self-emancipation term proposes arrivals at the lines (lane 1.7).
  *  4b. Situations fire, surface, stay live, take history defaults (lane 0.7).
  *  4c. Proposals `command` owns: a neutral government closing or reopening (0058),
@@ -46,7 +46,7 @@ import { fire, type DecisionPoint, type MapEvent, type Price, type Proposal, typ
 import { deliverDue } from './deliver.ts';
 import { createFreezeLedger, deepFreeze, type FreezeLedger } from './freeze.ts';
 import { generateReports } from './generate.ts';
-import { commandProposalsPhase, contestPhase, storesPhase } from './forces.ts';
+import { combatPhase, commandProposalsPhase, storesPhase } from './forces.ts';
 import { mapBarrier, mapPhase } from './map.ts';
 import { issueOrder } from './orders.ts';
 import { decideCommand, delegateCommand, runSituations, SITUATION_MECHANICS } from './situations.ts';
@@ -197,15 +197,16 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   // 3. Movement: approved plans march through the stand-in path (lane 1.4 retires it), every march a day further.
   state = freeze(applyStanding(ctx, state));
 
-  // 3b. The simple control contest and occupation (lane 0.5; only with a map): deltas for control, retreats now.
-  state = freeze(contestPhase(ctx, state).state);
+  // 3b. Combat (lane 1.3; only with a map): battles and occupation. Each owner applies its proposals now; control deltas wait for 4.
+  const fought = combatPhase(ctx, state);
+  state = freeze(fought.state);
 
   // 4. Control changes and the derived map.
   const mapped = mapPhase(ctx, state, options.mapCache ?? createDerivedMapCache());
   state = freeze(mapped.state);
 
-  // 4a. Stores on hand fall or refill from today's supply trace (lane 0.5; only with a map).
-  state = freeze(storesPhase(ctx, state, mapped.derived));
+  // 4a. Stragglers rejoin, then stores on hand fall or refill, from today's supply trace (lanes 0.5, 1.3; only with a map).
+  state = freeze(storesPhase(ctx, state, mapped.derived, new Set(fought.result?.inBattle ?? [])));
 
   // 4a'. Regions (lane 1.7): the derived self-emancipation term, on its cadence, proposes who reached the lines.
   state = freeze(regionsPhase(ctx, state));

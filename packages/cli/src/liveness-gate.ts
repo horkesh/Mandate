@@ -108,7 +108,7 @@ function quiet(why: string): GateBand {
  * A mechanic that fires in this run only from a frozen stand-off (0072): no floor, so a run that ends the stand-off
  * still passes, and the ceiling of `around(n)`, so a flood still fails. The kernel test named drives it live.
  */
-function stalled(n: number, why: string, driver: { readonly test: string; readonly needle: string }): GateBand {
+export function stalled(n: number, why: string, driver: { readonly test: string; readonly needle: string }): GateBand {
   return { minFires: 0, maxFires: around(n).maxFires, why, driver };
 }
 
@@ -121,8 +121,7 @@ const SITUATIONS_UNAUTHORED = 'union-1861 has no situations authored until the M
 const FILTER_EMPTY = 'both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post';
 const NO_CANDID_RELAY = 'the testbed’s one relaying office (the war ministry) holds what it dislikes rather than objecting: its holder is not candid (lane 1.1); union-1861 fires it, and the kernel test drives it';
 const NO_PROPOSER = 'nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it';
-const TRAPPED_AT_WASHINGTON =
-  'in the Union run it fires only for the 600 regulars left at 0 permille in Washington from day 19, with Maryland\'s neutral ground behind them, every day to the end: a frozen stand-off, not a live mechanic (exit review S2c), so it has a ceiling and no floor; packages/kernel/test/contest.test.ts drives it';
+const FEW_BATTLE_DAYS = 'the reference runs fight only a few battle-days (one in the Union run, two in the testbed run; lane 1.3)';
 
 /** Mechanics that fire in neither reference run: the reason, and the kernel test that proves the mechanic is alive. */
 export const QUIET: Readonly<Record<string, QuietReason>> = {
@@ -132,7 +131,11 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'command.proposal_refused': { why: 'a refusal needs a proposal that cannot be applied; honest situations propose none', test: 'packages/kernel/test/governments.test.ts', needle: 'refuses what it cannot be' },
   'commands.rejected': { why: 'rule seats send only commands the menu offers; a bad command is a seat bug', test: 'packages/kernel/test/seats-orders.test.ts', needle: 'rejects commands the kernel cannot carry' },
   'infrastructure.changed': { why: NO_PROPOSER, test: 'packages/kernel/test/infrastructure.test.ts', needle: 'damages and repairs edges and depots' },
-  'map.pocket_lost': { why: 'a pocket is overrun only when a contest takes its ground; the reference runs close none that stays closed', test: 'packages/kernel/test/map-tick.test.ts', needle: 'reports an overrun pocket as lost' },
+  'map.pocket_lost': { why: 'a pocket is overrun only when a battle or an occupation takes its ground; the reference runs close none', test: 'packages/kernel/test/map-tick.test.ts', needle: 'reports an overrun pocket as lost' },
+  'combat.breakout': { why: `a cut-off force breaks out only when its commander believes it can fight free; ${FEW_BATTLE_DAYS}, and the one force cut off (the Union run's trapped garrison) is too weak, so it surrenders`, test: 'packages/kernel/test/combat.test.ts', needle: 'a cut-off force strong enough to fight breaks out' },
+  'combat.destroyed': { why: `a force is destroyed only when the breakout its commander chose fails; ${FEW_BATTLE_DAYS}, and no force breaks out`, test: 'packages/kernel/test/combat.test.ts', needle: 'its breakout failed, and the force is destroyed' },
+  'combat.flank_broken': { why: `a flank breaks on a low draw against the pack's threshold (5 per cent and up a side a day); ${FEW_BATTLE_DAYS}, and none draws one`, test: 'packages/kernel/test/combat.test.ts', needle: 'a flank breaks on a low draw' },
+  'combat.routed': { why: `a side routs when a day's losses break its morale; ${FEW_BATTLE_DAYS}, and each loser withdraws or surrenders first`, test: 'packages/kernel/test/combat.test.ts', needle: 'routs from morale, leaves for its own ground' },
   'map.pocket_relieved': { why: 'a pocket is relieved when a repair or a closing reverses; nothing reverses one in these runs', test: 'packages/kernel/test/map-tick.test.ts', needle: 'then its opening' },
   'orders.conflict': { why: 'a conflict needs two issuers, a chain order and one sent around it; here only the principal orders', test: 'packages/kernel/test/seats-orders.test.ts', needle: 'conflicting orders: one down the chain, one around it' },
   'reports.filtered': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
@@ -145,6 +148,8 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'recruitment.refused': { why: 'no rule seat calls for regiments until lane 1.12; a governor who raises nothing is driven by the kernel rule that a rung not listed raises none', test: 'packages/cli/test/men-regions.test.ts', needle: "regimentsRaised(rules, 10, 'refuse', 900)" },
   'recruitment.mustered': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'musters the levy into a new block' },
   'recruitment.men': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'musters the levy into a new block' },
+  'recruitment.muster_blocked': { why: 'no rule seat calls for regiments until lane 1.12, so no levy waits on a region in enemy hands', test: 'packages/cli/test/men-regions.test.ts', needle: 'a levy due in an enemy-held region waits' },
+  'recruitment.lapsed': { why: 'no rule seat calls for regiments until lane 1.12, so no levy lapses', test: 'packages/cli/test/men-regions.test.ts', needle: 'lapses past the pack’s days' },
   'recruitment.disbanded': { why: 'no rule seat calls for regiments until lane 1.12, so no enlistment runs out', test: 'packages/cli/test/men-regions.test.ts', needle: 'then disbands it when its ninety days end' },  // Lane 1.2: the plan cycle's paths that no rule seat takes, each driven by its own kernel test.
   'plans.sent_back': { why: 'no rule seat sends a plan back: the generic principal approves, the editing exercise edits', test: 'packages/kernel/test/plans.test.ts', needle: 'sends the plan back, and he drafts it again' },
   'plans.draft_deferred': { why: 'no reference run asks for more plans in a day than the pack’s cap of three (0062)', test: 'packages/kernel/test/plans.test.ts', needle: 'defers drafts past the day’s cap' },
@@ -163,7 +168,7 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
 };
 
 /** What a pack at peace never does: no order is given, so no force marches, no ground is contested. */
-const PEACE_QUIET: readonly string[] = ['orders.relayed', 'orders.obeyed', 'plans.goal_reached', 'movement.leg_started', 'movement.arrived', 'combat.contest', 'combat.occupation', 'control.changed'];
+const PEACE_QUIET: readonly string[] = ['orders.relayed', 'orders.obeyed', 'plans.goal_reached', 'movement.leg_started', 'movement.arrived', 'combat.battle_day', 'combat.occupation', 'control.changed'];
 
 /** What only the editing exercise run does (lane 1.2): edits and their answers, the word to go, and `haste`, an edit-only term. */
 const EDITS_ONLY = 'only the editing exercise run reviews and edits plans; the generic principal approves them as drafted';
@@ -192,20 +197,29 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
 
 /** The union-1861 reference run: 75 days from 5 March 1861, at war (the war gate's labelled option, 0064). */
 const UNION_BANDS: Record<string, GateBand> = {
-  // Lane 1.2: the Charleston command's plan marches on Washington, which its garrison now holds (Phase 0's principal
-  // marched the garrison away). The contest runs from day 15 to day 23; from then each day is a stalemate, recording no gain.
-  'combat.contest': around(9),
-  'combat.occupation': notHere('the Washington garrison holds since lane 1.2, so the capital is taken by contest, and no army marches through ground that occupation can take (neutral ground is never taken by arms, 0055); the testbed run fires it'),
-  'combat.retreat': notHere('no side is pressed below the retreat threshold in 75 days; the testbed run fires it'),
-  'combat.retreat_blocked': stalled(57, TRAPPED_AT_WASHINGTON, { test: 'packages/kernel/test/contest.test.ts', needle: 'stays put with nowhere to go' }),
-  'control.changed': around(9),
+  // Lanes 1.2 and 1.3: the Charleston command's plan marches on Washington, whose garrison now holds (lane 1.2), and the
+  // battle model fights it out (lane 1.3). Re-banded from the merged run.
+  'combat.battle_closed': around(1),
+  'combat.battle_day': around(1),
+  'combat.battle_opened': around(1),
+  'combat.captured': around(1),
+  'combat.cut_off': around(1),
+  'combat.general_hit': around(1),
+  'combat.killed_wounded': around(2),
+  'combat.missing': around(1),
+  'combat.occupation': around(14),
+  'combat.pursuit_chosen': notHere('the winner chooses a pursuit only after the other side withdraws or routs; the Union run\'s one loser surrenders; the testbed run fires it'),
+  'combat.surrendered': around(1),
+  'combat.withdrew': around(1),
+  'control.changed': around(15),
   'control.threshold_crossed': around(6),
   'forces.stores_fell': around(7),
   'forces.stores_low': around(1),
   'forces.stores_refilled': notHere('most Union blocks have unknown stores (lane 0.3 data, lane 0.5 finding 3), so the few that fall do not refill in 75 days; the testbed run fires it'),
-  'knowledge.pruned_age': around(2),
+  'forces.stragglers_returned': around(10),
+  'map.pocket_closed': notHere('no pocket closes in the first 75 days of the merged Union run; the testbed run fires it'),
+  'knowledge.pruned_age': around(6),
   'knowledge.pruned_superseded': around(73),
-  'map.pocket_closed': notHere('no pocket closes in the first 75 days of the Union run; the testbed run fires it'),
   'map.recomputed': around(10),
   'messages.courier_delay': around(197),
   'messages.delivered': around(2681),
@@ -239,18 +253,29 @@ const UNION_BANDS: Record<string, GateBand> = {
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
 const TESTBED_BANDS: Record<string, GateBand> = {
-  'combat.contest': around(14),
-  'combat.occupation': around(6),
-  'combat.retreat': around(2),
-  'combat.retreat_blocked': notHere('retreats are blocked only where a contested side has nowhere to go, which no testbed contest leaves; the kernel test drives it'),
-  'control.changed': around(20),
-  'control.threshold_crossed': around(12),
-  'forces.stores_fell': around(176),
-  'forces.stores_low': around(7),
-  'forces.stores_refilled': around(185),
+  // Lane 1.3, merged with lane 1.2's plans: three battles, each one day: the defender withdraws, and the winner chooses
+  // whether to pursue.
+  'combat.battle_closed': around(3),
+  'combat.battle_day': around(3),
+  'combat.battle_opened': around(3),
+  'combat.captured': around(3),
+  'combat.cut_off': notHere('a side is cut off only with no legal retreat (0019); every testbed loser has a way back; the Union run fires it'),
+  'combat.general_hit': notHere('a commander is hit on a low draw on his own stream; none of the testbed run\'s three battle-days draws one; the Union run fires it'),
+  'combat.killed_wounded': around(6),
+  'combat.missing': around(6),
+  'combat.occupation': around(20),
+  'combat.pursuit_chosen': around(1),
+  'combat.surrendered': notHere('only a cut-off force surrenders, and no testbed force is cut off; the Union run fires it'),
+  'combat.withdrew': around(3),
+  'control.changed': around(23),
+  'control.threshold_crossed': around(11),
+  'forces.stores_fell': around(183),
+  'forces.stores_low': around(6),
+  'forces.stores_refilled': around(193),
+  'forces.stragglers_returned': around(87),
+  'map.pocket_closed': around(1),
   'knowledge.pruned_age': around(7),
   'knowledge.pruned_superseded': around(118),
-  'map.pocket_closed': around(1),
   'map.recomputed': around(14),
   'messages.courier_delay': around(85),
   'messages.delivered': around(1812),

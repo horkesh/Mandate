@@ -31,6 +31,14 @@ export function readSituationLayer(files: PackFiles, pack: PackData): SituationL
   sink.add(validateSituations(items, pack));
   if (gate !== null) {
     sink.add(checkGate(items, gate, localeStrings(pack.strings), pack.provenance));
+    // Lane 1.7 (SENSITIVE-HISTORY E3): every agency reason the derived self-emancipation term carries is one of the register's agency types.
+    const listed = new Set(gate.register.topics.flatMap((t) => t.agencyReasons));
+    const term = pack.world.rules.selfEmancipation;
+    if (term.linesFaction !== null) {
+      for (const [cause, reason] of Object.entries(term.agencyReasons)) {
+        if (!listed.has(reason)) sink.error('gate-agency-reason', 'pack.json', `rules.selfEmancipation.agencyReasons.${cause}`, `agency reason "${reason}" is not one of the gate register's agency types`, 'an agency type a register topic lists');
+      }
+    }
   }
   const ok = errorsOf(sink.issues).length === 0;
   return { situations: ok ? items.map((i) => i.def) : [], gate, issues: sink.issues };

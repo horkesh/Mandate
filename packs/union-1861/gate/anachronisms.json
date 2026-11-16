@@ -1,0 +1,20 @@
+{
+  "terms": [
+    { "term": "Cornerstone", "earliest": "1861-03-21", "source": "SENSITIVE-HISTORY 5; [SW 6.1]" },
+    { "term": "contrabands", "earliest": "1861-05-24", "source": "SENSITIVE-HISTORY 5; [CS 4.3]" },
+    { "term": "Crittenden–Johnson", "earliest": "1861-07-22", "source": "SENSITIVE-HISTORY 3.1; [SW 5]" },
+    { "term": "Crittenden-Johnson", "earliest": "1861-07-22", "source": "SENSITIVE-HISTORY 3.1; [SW 5]" },
+    { "term": "Confiscation Act", "earliest": "1861-08-06", "source": "SENSITIVE-HISTORY 5; [UP 1.4]" },
+    { "term": "Joint Committee on the Conduct of the War", "earliest": "1861-12-09", "source": "SENSITIVE-HISTORY 5; [UP 1.3]" },
+    { "term": "Second Confiscation Act", "earliest": "1862-07-17", "source": "SENSITIVE-HISTORY 5; [UP 1.4]" },
+    { "term": "Militia Act of 1862", "earliest": "1862-07-17", "source": "SENSITIVE-HISTORY 5; [UE 2.1]" },
+    { "term": "cartel", "earliest": "1862-07-22", "source": "[GCF 5.2]" },
+    { "term": "Dakota War", "earliest": "1862-08-18", "source": "SENSITIVE-HISTORY 5; [MX], [GCF 1]" },
+    { "term": "Emancipation Proclamation", "earliest": "1862-09-22", "source": "SENSITIVE-HISTORY 5; [CS 4.3] (the preliminary; the proclamation itself is 1 January 1863)" },
+    { "term": "Twenty-Slave Law", "earliest": "1862-10-11", "source": "SENSITIVE-HISTORY 5; [CS 3.4]" },
+    { "term": "Twenty Negro Law", "earliest": "1862-10-11", "source": "SENSITIVE-HISTORY 5; [CS 3.4]" },
+    { "term": "Enrollment Act", "earliest": "1863-03-03", "source": "SENSITIVE-HISTORY 5; [UP 1.4]" },
+    { "term": "draft riots", "earliest": "1863-07-13", "source": "SENSITIVE-HISTORY 5; [UP]" },
+    { "term": "Fort Pillow massacre", "earliest": "1864-04-12", "source": "SENSITIVE-HISTORY 5; [CS 4.4]" }
+  ]
+}

@@ -65,6 +65,7 @@ export const CLAIM_KINDS = [
   'effective-strength',
   'enemy-strength',
   'goal-status',
+  'levy-lapsed',
   'obstruction',
   'order-objected',
   'order-obeyed',

@@ -11,7 +11,8 @@
 import { strictCompare } from '../compare.ts';
 import type { DepartmentId, ForceBlockId, MessageId, PersonId, PostId } from '../ids.ts';
 import type { State } from '../root-state.ts';
-import { ForcesError, STORES_MILLI, type ForceBlockState } from './forces.ts';
+import type { WorldIndex } from '../world/index.ts';
+import { ForcesError, startingCondition, STORES_MILLI, type BlockCondition, type ForceBlockState } from './forces.ts';
 
 /** A block's enlistment: who raised it, on whose call, and when its men's term ends. Immutable: `forces` replaces it whole. */
 export interface Enlistment {
@@ -46,9 +47,27 @@ export interface NewBlock {
 /** `create` and `disband`: the changes recruitment proposes for `forces` (the proposer `OWNED_FIELDS` lists). */
 export type MusterDelta = { readonly change: 'create'; readonly create: NewBlock; readonly cause: 'recruitment' } | { readonly change: 'disband'; readonly block: ForceBlockId; readonly cause: 'recruitment' };
 
-/** A new block's State: whole, with nothing unknown (its strength and stores are what the governor raised and issued). */
-function blockState(b: NewBlock): ForceBlockState {
-  return { fbName: b.name, fbKind: 'block', fbParent: null, fbDepartment: b.department, fbArm: b.arm, fbStrength: b.strength, fbNonCombatants: 0, fbStoresMilli: b.storesDays * STORES_MILLI };
+/**
+ * A new block's State: whole, with nothing unknown (its strength and stores are what the governor raised and issued), in
+ * the pack's starting condition (lane 1.3: morale, experience, equipment), with no stragglers, never routed or surrendered.
+ */
+function blockState(b: NewBlock, condition: BlockCondition): ForceBlockState {
+  return {
+    fbName: b.name,
+    fbKind: 'block',
+    fbParent: null,
+    fbDepartment: b.department,
+    fbArm: b.arm,
+    fbStrength: b.strength,
+    fbNonCombatants: 0,
+    fbStoresMilli: b.storesDays * STORES_MILLI,
+    fbMorale: condition.morale,
+    fbExperience: condition.experience,
+    fbEquipment: condition.equipment,
+    fbStragglers: 0,
+    fbRoutedDay: null,
+    fbSurrenderedDay: null,
+  };
 }
 
 /**
@@ -56,7 +75,7 @@ function blockState(b: NewBlock): ForceBlockState {
  * created must be new; a block disbanded must exist, and its detachments go with it. Returns the blocks created and
  * disbanded (detachments included), in id order.
  */
-export function applyMusters(state: State, deltas: readonly MusterDelta[]): { readonly state: State; readonly created: readonly ForceBlockId[]; readonly disbanded: readonly ForceBlockId[] } {
+export function applyMusters(map: WorldIndex, state: State, deltas: readonly MusterDelta[]): { readonly state: State; readonly created: readonly ForceBlockId[]; readonly disbanded: readonly ForceBlockId[] } {
   if (deltas.length === 0) return { state, created: [], disbanded: [] };
   const blocks: Record<ForceBlockId, ForceBlockState> = { ...state.forceBlockStates };
   const enlistments: Record<ForceBlockId, Enlistment> = { ...state.forceEnlistments };
@@ -67,7 +86,7 @@ export function applyMusters(state: State, deltas: readonly MusterDelta[]): { re
       const b = d.create;
       if (Object.prototype.hasOwnProperty.call(blocks, b.block)) throw new ForcesError([`force block ${b.block} already exists`]);
       if (!Number.isSafeInteger(b.strength) || b.strength < 0 || !Number.isSafeInteger(b.storesDays) || b.storesDays < 0) throw new ForcesError([`force block ${b.block}: strength and stores must be whole and not negative`]);
-      blocks[b.block] = blockState(b);
+      blocks[b.block] = blockState(b, startingCondition(map));
       enlistments[b.block] = b.enlistment;
       created.push(b.block);
       continue;

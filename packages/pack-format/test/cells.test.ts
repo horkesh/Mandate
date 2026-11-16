@@ -47,10 +47,10 @@ describe('cell grammars', () => {
       retreatControlPermille: 50,
       seasons: [{ reason: 'mud' as const, defaultMonths: [1, 2], lengthPermille: 1500, capacityPermille: 600 }],
       stores: { menPerCapacityUnit: 20000, capDays: 30, lowDays: 7 },
-      contest: { occupyPermille: 100, occupyFullMen: 5000, contestPermille: 200 },
+      occupation: { occupyPermille: 100, occupyFullMen: 5000 },
       movement: { marchMinCapacityPermille: 1000, courierPermille: 333 },
       ruleSeats: { warFlags: [] },
-      ...(MESSAGE_RULES as unknown as Pick<w.WorldRules, 'latency' | 'reportTemplates' | 'standing' | 'people' | 'planner' | 'plans' | 'recruitment' | 'selfEmancipation'>),
+      ...(MESSAGE_RULES as unknown as Pick<w.WorldRules, 'latency' | 'reportTemplates' | 'standing' | 'people' | 'planner' | 'plans' | 'combat' | 'recruitment' | 'selfEmancipation'>),
     };
     expect(parseSeasons('mud', rules)).toEqual({ ok: true, value: [{ reason: 'mud', months: [1, 2], depthFeet: null }] });
     expect(parseSeasons('low_water:8-10:3', rules)).toEqual({ ok: true, value: [{ reason: 'low_water', months: [8, 9, 10], depthFeet: 3 }] });

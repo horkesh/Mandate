@@ -20,10 +20,15 @@ import type { State } from '../root-state.ts';
 import { edgesOf, otherEnd, type WorldIndex } from '../world/index.ts';
 import { REACHED_UNION_LINES_FIELD, type ArrivalProposal } from './regions.ts';
 
-/** Why a number in the term is what it is: always the people's own act, with the pack's agency reason type (`agency:self-emancipation` in the Union pack's register). */
+/**
+ * Why a number in the term is what it is: always the people's own act, each with the pack's agency type for its cause (the
+ * Union pack's register: `agency:resistance-within-confederacy`, `agency:flight-to-union-lines`, and
+ * `agency:escape-from-impressment` where its pressure flags drive the flight).
+ */
 export type SelfEmancipationReason =
   | { readonly kind: 'agency'; readonly agency: string; readonly cause: 'resistance-within'; readonly perMillion: number; readonly pressure: readonly string[] }
-  | { readonly kind: 'agency'; readonly agency: string; readonly cause: 'flight-to-lines'; readonly reach: 'lines-with-force' | 'lines' | 'none'; readonly reachPermille: number; readonly policyPermille: number; readonly policyFlags: readonly string[] };
+  | { readonly kind: 'agency'; readonly agency: string; readonly cause: 'flight-to-lines'; readonly reach: 'lines-with-force' | 'lines' | 'none'; readonly reachPermille: number; readonly policyPermille: number; readonly policyFlags: readonly string[] }
+  | { readonly kind: 'agency'; readonly agency: string; readonly cause: 'escape-from-pressure'; readonly pressurePermille: number; readonly pressure: readonly string[] };
 
 /** The term in one census region, for one cadence. */
 export interface SelfEmancipationTerm {
@@ -45,12 +50,13 @@ function flagSum(state: State, flags: readonly { readonly flag: string; readonly
   return { sum: set.reduce((s, f) => s + f.permille, 0), set: set.map((f) => f.flag) };
 }
 
-/** Whether the lines' side has a force block standing in `region`. */
+/** Whether the lines' side has a force standing in `region`: a block with men present, not surrendered (lane 1.3 keeps surrendered blocks in State). */
 function linesForceIn(state: State, region: RegionId, lines: FactionId): boolean {
   return (Object.keys(state.forceLocations) as (keyof typeof state.forceLocations)[]).some((b) => {
     if (state.forceLocations[b]!.locRegion !== region) return false;
-    const dept = state.forceBlockStates[b]?.fbDepartment;
-    return dept !== undefined && state.departmentFactions[dept] === lines;
+    const block = state.forceBlockStates[b];
+    if (block === undefined || block.fbSurrenderedDay !== null || (block.fbStrength ?? 0) <= 0) return false;
+    return state.departmentFactions[block.fbDepartment] === lines;
   });
 }
 
@@ -86,7 +92,8 @@ export function selfEmancipationTerms(map: WorldIndex, state: State, rules: Self
       .sort((a, b) => Number(b.force) - Number(a.force) || shareOf(map, state.regionControl, b.region, lines) - shareOf(map, state.regionControl, a.region, lines) || strictCompare(a.region, b.region));
     const best = near[0] ?? null;
     const reach = best === null ? 0 : best.force ? rules.reachWithForce : rules.reachLinesOnly;
-    let toLines = Math.trunc((c.enslavedPopulation * rules.flightPerMillion) / 1000000);
+    // Pressure within (impressment, say) drives flight as well as resistance: the escape it causes is its own reason.
+    let toLines = Math.trunc((c.enslavedPopulation * Math.trunc((rules.flightPerMillion * (1000 + pressure.sum)) / 1000)) / 1000000);
     toLines = Math.trunc((toLines * reach) / 1000);
     toLines = Math.trunc((toLines * policy) / 1000);
     out.push({
@@ -96,8 +103,9 @@ export function selfEmancipationTerms(map: WorldIndex, state: State, rules: Self
       destination: best?.region ?? null,
       toLines,
       reasons: [
-        { kind: 'agency', agency: rules.agencyReason, cause: 'resistance-within', perMillion: withinPerMillion, pressure: pressure.set },
-        { kind: 'agency', agency: rules.agencyReason, cause: 'flight-to-lines', reach: best === null ? 'none' : best.force ? 'lines-with-force' : 'lines', reachPermille: reach, policyPermille: policy, policyFlags: policyFlags.set },
+        { kind: 'agency', agency: rules.agencyReasons.resistanceWithin, cause: 'resistance-within', perMillion: withinPerMillion, pressure: pressure.set },
+        { kind: 'agency', agency: rules.agencyReasons.flightToLines, cause: 'flight-to-lines', reach: best === null ? 'none' : best.force ? 'lines-with-force' : 'lines', reachPermille: reach, policyPermille: policy, policyFlags: policyFlags.set },
+        ...(pressure.sum > 0 ? [{ kind: 'agency' as const, agency: rules.agencyReasons.escapeFromPressure, cause: 'escape-from-pressure' as const, pressurePermille: pressure.sum, pressure: pressure.set }] : []),
       ],
     });
   }
