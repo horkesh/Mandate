@@ -124,7 +124,6 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - Also unfollowed: `?? makeEmpty()` and `|| {}` (from the same review's re-check).
 
 **Phase 1**
-- From the standing reviewer's review of the close-out lane (`review-phase0-close-out.md`), Phase 1 combat: a trapped garrison at 0‰ with nowhere to retreat stays forever, as with the 600 regulars inside an enemy-held Washington. It needs a surrender or capture rule. **Lane 1.3** (a trapped garrison surrenders).
 - From the same review, the people recast: a rank record cannot tell a brevet or volunteer rank from a regular one, so an officer who held both gets whichever is listed last. That matters for seniority. **Lane 1.1** (a rank per kind, held at once).
 - From the Phase 0 exit review (`review-phase0-exit.md`, P1): unknown strength fights as none. In the Union start 14 of 24 Confederate blocks and 9 of 60 Union blocks have unknown strength (24 of 24 and 55 of 60 have unknown stores); the contest counts an unknown as zero men (`combat/contest.ts`), as 0064 allows, and lists it. Data gaps therefore decide outcomes until researched strengths and stores and Phase 1's battle model replace it. **Lanes 1.10** (researched strengths and stores) **and 1.3** (the battle model), checked by 1.14's unknown-strength criterion.
 - From the exit review (P3): the tick budget and the campaign are measured on a static war. Re-measure with the planner, people and situations running (the CI-hardware calibration is filed above). **Lane 1.14** (the re-measured tick budget).
@@ -191,12 +190,14 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **1B, R7:** drop `fund-a-scheme`.
   - **Lane 1.12:** `crossNeutral` is a stand-in, owned by lane 1.12.
   - **1B raids:** edge damage reaches the planner through the derived map, not by report. From lane 1.2's review (`review-lane-1.2.md`): the side's supply reach also reaches the planner through the derived map, computed with the obstructions truly there. That is acceptable in 1A and needs a report-based path once unseen damage or a boom matters.
-- From lane 1.3's report (
-otes/lane-1.3-combat.md, on claude/phase1-combat-3ba74b while in review), by lane; the trapped-garrison item above stays open until the branch merges:
+- From lane 1.3's report (`notes/lane-1.3-combat.md`, merged 8c804a5), by lane:
   - **Lane 1.14 (calibration):** the Livermore harness's worst fit is Fort Wagner: the model gives 62 attackers hit per 1000 against Livermore's 213, because contact capped at the smaller side understates an assault on a small garrison.
   - **Lane 1.4 (operations):** fortification is read but never written: building works overnight, and losing them when stormed, have no code yet. Battle records grow with every battle-day and need a pruning rule, beside `orderResponses`. The arms vocabulary has no cavalry flag, so pursuit cannot ask for cavalry.
   - **Lane 1.12 (rule seats):** commanders' battle choices (commit, stand, break out, surrender, pursue) are rule functions, not seat requests, so an AI seat cannot make them yet. `seats.choices` has no kernel unit test; only the gate's runs fire it.
   - **1B:** combat has no weather term (0029) and no supply term.
+  - **Lane 1.11 (gate nits on lane 1.8b's patterns, not holding the merge):** `arm\w*` also refuses "army" and "arms" ("Order the army to guard the colored churches" is refused); `receive` refuses "Receive a delegation of Black ministers"; `raiders` also catches killing in combat. Fix them when authoring hits them, with probes.
+  - **Lane 1.11:** cited surrender terms belong only in capture notices for the historical cases, each fired only when that case happens in play. Otherwise a notice says only that the men were taken. The battle record carries no terms field.
+  - **Lane 1.4 (reports):** a casualty return reports the day's captured as missing first, and reveals the captured figure later (0074). The record keeps the two apart, but the player's first report must not. Owner: the reporting path, not combat. A `destroyed` breakout must never read as "killed"; the men in it were taken.
 - From lane 1.8b's report (`notes/lane-1.8-gate.md`, "Fixes after both reviews", merged 8a4738f), **lane 1.11:** the merge that re-sources the banned-memoir rows must turn the `banned-source-cited` warning into an error in the same merge. The ten new triggers send every "surrender" and "captured" string to a reviewer, Sumter's surrender included; strings using those words in another sense take `gate: none`, with a reason.
 - From the register review (`review-gate-register-1861.md`) and lane 1.10's review (`review-research-numbers-1861.md`), by lane:
   - **Gate, lane 1.11 and the gate reviewer:** the `retaliat` narrator rule refuses ordinary narration such as "the Confederates retaliated by shelling the camp". Narrow it to retaliation against prisoners or hostages when authoring hits it.
