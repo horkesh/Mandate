@@ -223,7 +223,8 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lanes 1.12 and 1.14, from lane 1.5b's report:** the lever sweep itself must implement 0074's rule: in a decision about an atrocity-class order or sentence, it reads the inaction outcome as if it were a watched option, and reports it when it is the bot's best choice in more than a quarter of seeds. Lane 1.5b built the move list (`cli/lever-moves.ts`, which resolves a delegation to the delegate's pick), but not the sweep's run.
 - From the gate reviewer's lane 1.5b verdict (`review-gate-1861.md`, the end), by lane:
   - **Lanes 1.12 and 1.14 (the lever sweep):** the sweep (D6) treats any `floor_unpaid:<row>` event in a seed as a breach of the watched option's floor, and reports it under Q7. The gate accepts the unpaid record, with no second sink, on that condition. If the sweep ever reports one, add a sink by record.
-  - **Lane 1.11 (S17):** once lane 1.5b merges, S17's rows go to the gate reviewer with each row's hash (from `gated-rows.test.ts`), Butler's practice cited, `return`'s floor tagged `fugitive-policy`, and S17's inaction policy named.
+  - **Lane 1.11 (S17):** now that lane 1.5b has merged, S17's rows go to the gate reviewer with each row's hash (from `gated-rows.test.ts`), Butler's practice cited, `return`'s floor tagged `fugitive-policy`, and S17's inaction policy named.
+  - **Gate reviewer (A7), from the lane 1.5b review (item 7):** the row hash covers a policy row's id, not its content. No pack reaches it today.
   - **Lane 1.11:** loyalty data must never come from the census; narrator text says whose loyalty it means (in a slave state, the free and voting population's); no border-state census rows are entered until lane 1.7's G-1.7a fix is merged (superseded by 0078, G-1.7b: a protection flag skips a region only where slavery has ended there in law or in fact; a policy protecting arrivals is a policy flag that raises flight and never skips).
   - From the same review, **lanes 1.4 and 1.14:** McClellan bold on paper (27 April, 80,000 men) and cautious in action (Rich Mountain, 11 July). A single boldness cannot hold both. Watch whether drafting and execution need separate terms when operations land, and in calibration.
 **Phase 2 (desk and map)**
@@ -234,19 +235,18 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **1B (economy):** the term's effect on the holding side's regional capacity and supply waits for an economy. Today the term is derived and its arrivals are State.
 
 - From lane 1.4's report (`notes/lane-1.4-operations.md`, merged 4a64082), by lane:
-  - **Lane 1.4b (a small follow-up after lane 1.7):** detachments in play (garrisons and landings below the force block), which need lane 1.7's block creation.
   - **Lane 1.14:** McClellan's plan-versus-action gap. Drafting and execution already read his boldness separately; add a second term only if calibration shows the gap too narrow.
   - **1B:** freelancing (a seat initiative that sets a man's own goal); troops embarked and carried by sea; Navy-channel battle news (combat ignores ships); an axis standing off from an enemy its commander will not attack (the siege method).
   - **Lane 1.12:** rule seats must reappoint a post the battle model leaves vacant, using lane 1.5's appoint verb.
-- From lane 1.4b's report (`notes/lane-1.4b-detachments.md`, on `phase1-detachments` while in review), by lane:
+- From lane 1.4b's report (`notes/lane-1.4b-detachments.md`, merged 1cf40d5), by lane:
   - **1B (the planner):** no operation leaves a garrison, because the planner drafts no garrison step. Add one if the history run needs it.
   - **Lane 1.4 or 1B, cleanup:** after a landing, the parent blocks stay aboard as 0-strength shells until a rejoin or a disbanding.
-  - **1B:** embarkation is not built, so a by-water axis needs its troops to start aboard (beside the sea-carriage item).
-  - **Lane 1.11:** S02's landing takes a new effect field, `landing` (parent, men, region), applied in phase 4c through `applyDetachmentProposals`, once lane 1.4b merges.
+  - **1B:** embarkation is not built, so a by-water axis needs its troops to start aboard (beside the sea-carriage item). From the lane 1.4b review (item 6, second point): the two-carrier axis, owned by 1B (embarkation).
+  - **Lane 1.11:** S02's landing takes a new effect field, `landing` (parent, men, region), applied in phase 4c through `applyDetachmentProposals` (lane 1.4b has merged).
 - From the gate reviewer's lane 1.5 verdict (`review-gate-1861.md`, the end), by lane:
-  - **Lane 1.5b, which must land before any `fugitive-policy` row:** G-1.5a to G-1.5e, the practice-clash term, and the lever sweep treating a delegated gated decision as the delegate's choice.
+  - **Lane 1.5b** (merged 190ebf6): G-1.5a to G-1.5e, the practice-clash term and the lever sweep's delegation handling are built. Not done in it: options taken together (groups) are offered one at a time, and a practice does not change in play because it is static pack data.
   - **Lane 1.6:** the validator refuses a bloc made up of a protected group, so `address` can never reach one.
-  - **Lane 1.11:** enter no `fugitive-policy` rows until lane 1.5b merges.
+  - **Lane 1.11:** lane 1.5b has merged, so `fugitive-policy` rows may now be entered, each going to the gate reviewer (S17 item above).
 - From the gate reviewer's lane 1.4 verdict (`review-gate-1861.md`, the end), **lane 1.11:**
   - Report templates for captured, missing, pocket and surrender claims are tagged `capture-in-battle` and signed off. They say "taken prisoner", never a fate, and never "destroyed" alone of men.
   - Nit N13: a pocket never renders as "surrendered" before the commander chooses.
