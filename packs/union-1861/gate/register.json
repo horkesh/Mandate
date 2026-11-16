@@ -222,7 +222,7 @@
     {
       "id": "union-habeas-and-arrests",
       "class": "civil-liberties",
-      "window": { "from": "1861-04-27", "to": "1862-12-31" },
+      "window": { "from": "1861-03-04", "to": "1862-12-31" },
       "placements": ["decision", "event", "derived"],
       "status": "open",
       "refused": [
