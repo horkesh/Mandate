@@ -45,7 +45,7 @@ if (!argv.includes('--no-drafting')) {
   lines.push(
     '',
     `plan drafting on the Union graph (${d.posts} commands, ${d.posts - d.noLandForce} with a land force; the kernel planner's draft, each asked to take the other side's capital, neutral ground permitted):`,
-    `  one day of all ${d.posts} drafts back to back: median ${d.day.median.toFixed(1)} ms, p95 ${d.day.p95.toFixed(1)} ms, worst ${d.day.worst.toFixed(1)} ms over ${d.day.days} days; slowest single draft ${d.slowestDraftMs.toFixed(1)} ms; a capped day (the pack's ${d.cappedDay.cap} slowest drafts together) at worst ${d.cappedDay.worst.toFixed(1)} ms${d.sound ? '' : '; UNSOUND (a land command got no candidate, or a score is not the sum of its terms)'}`,
+    `  one day of all ${d.posts} drafts back to back: median ${d.day.median.toFixed(1)} ms, p95 ${d.day.p95.toFixed(1)} ms, worst ${d.day.worst.toFixed(1)} ms over ${d.day.days} days; slowest single draft ${d.slowestDraftMs.toFixed(1)} ms; a capped day (the pack's ${d.cappedDay.cap} slowest drafts for each of ${d.cappedDay.sides} sides, together) at worst ${d.cappedDay.worst.toFixed(1)} ms${d.sound ? '' : '; UNSOUND (a land command got no candidate, or a score is not the sum of its terms)'}`,
   );
   const dir = createRunDir(`${label}-drafting`);
   writeRunFile(dir, 'drafting.json', `${JSON.stringify(d, null, 2)}\n`);

@@ -90,7 +90,7 @@ describe('a goal is drafted on request, and the commander picks (lane 1.2)', () 
     expect(listed, 'a review is before him').toBeDefined();
     expect(reviewsFor(listed!, P('a_lead')).map((r) => r.post)).toEqual([RESERVE]);
     // An office withheld his answer: its memorandum objecting, about this post, is on its way to him.
-    const memo = (over: { to?: string; pending?: boolean; subject?: string; claim?: string } = {}): TransitMessage => ({
+    const memo = (over: { to?: string; pending?: boolean; subject?: string; claim?: string; withheld?: string } = {}): TransitMessage => ({
       id: 'm.test.memo' as MessageId,
       msgOrigin: 'm.test.memo' as MessageId,
       msgFrom: P('a_sec'),
@@ -110,7 +110,7 @@ describe('a goal is drafted on request, and the commander picks (lane 1.2)', () 
         reportAuthorPost: null,
         reportSubjectKind: 'post',
         reportSubjectId: over.subject ?? RESERVE,
-        reportClaims: [{ claimKind: (over.claim ?? 'order-objected') as ReportClaim['claimKind'], claimRegion: R('b_mid'), claimValue: 1, claimToken: 'withheld', claimConfidence: 1000 }],
+        reportClaims: [{ claimKind: (over.claim ?? 'order-objected') as ReportClaim['claimKind'], claimRegion: R('b_mid'), claimValue: 1, claimToken: over.withheld ?? 'approve', claimConfidence: 1000 }],
         reportDay: listed!.stateDay,
         reportHour: null,
         reportAdvice: null,
@@ -125,6 +125,9 @@ describe('a goal is drafted on request, and the commander picks (lane 1.2)', () 
     // Positive controls: a memorandum about another post, or one that objects to nothing, leaves the plan before him.
     expect(reviewsFor(withMemo(memo({ subject: 'a_army' })), P('a_lead')).map((r) => r.post)).toEqual([RESERVE]);
     expect(reviewsFor(withMemo(memo({ claim: 'plan-answer' })), P('a_lead')).map((r) => r.post)).toEqual([RESERVE]);
+    // An objection to an earlier goal of his, still travelling, never hides the answer he owes (review N2).
+    expect(reviewsFor(withMemo(memo({ withheld: 'goal' })), P('a_lead')).map((r) => r.post)).toEqual([RESERVE]);
+    for (const kind of ['edit', 'send_back']) expect(reviewsFor(withMemo(memo({ withheld: kind })), P('a_lead')), kind).toEqual([]);
     // Once it has reached him (out of transit), the plan is before him again, to answer around the office.
     expect(reviewsFor(listed!, P('a_lead')).map((r) => r.post)).toEqual([RESERVE]);
   });
@@ -158,6 +161,22 @@ describe('a goal is drafted on request, and the commander picks (lane 1.2)', () 
     expect(results[0]!.state.planRecords[POST('a_army')]!.planStatus).toBe('choosing');
     expect(results[0]!.state.planRecords[RESERVE]!.planStatus).toBe('drafting');
     expect(results[1]!.state.planRecords[RESERVE]!.planDraft!.draftDay).toBe(2);
+    expect([fired(telemetry, 'plans.drafted'), fired(telemetry, 'plans.draft_deferred')]).toEqual([2, 1]);
+  });
+
+  it('counts the cap per side: one side’s requests never defer the other’s (the lead’s ruling on review S1)', () => {
+    const base = strong();
+    const world: SeatsWorld = { ...base, map: indexWorld({ ...base.map.world, rules: { ...base.map.world.rules, planner: { ...base.map.world.rules.planner, dailyDraftCap: 1 } } }) };
+    let state = createState(world, { seed: 7 });
+    // Side a asks for two plans; side b for one, as old but last by post id. Shared, b's would wait behind a's two.
+    state = setGoal(state, POST('a_army'), { id: 'm.0.army' as never, issuer: P('a_lead'), goal: goalOf(goalTerms('take', 'b_front')), viaChain: true, issuedDay: 0, response: 'm.0.army|a_gen' }, 0);
+    state = setGoal(state, RESERVE, { id: 'm.0.reserve' as never, issuer: P('a_lead'), goal: goalOf(goalTerms('take', 'b_mid')), viaChain: true, issuedDay: 0, response: 'm.0.reserve|a_bold' }, 0);
+    state = setGoal(state, POST('b_army'), { id: 'm.0.b' as never, issuer: P('b_lead'), goal: goalOf(goalTerms('take', 'a_front')), viaChain: true, issuedDay: 0, response: 'm.0.b|b_gen' }, 0);
+    const { results, telemetry } = play(world, 1, () => [], state);
+    // Day 1: side b drafts its one plan however many side a asked for; side a drafts one and defers the other.
+    expect(results[0]!.state.planRecords[POST('b_army')]!.planStatus).not.toBe('drafting');
+    expect(results[0]!.state.planRecords[POST('a_army')]!.planStatus).not.toBe('drafting');
+    expect(results[0]!.state.planRecords[RESERVE]!.planStatus).toBe('drafting');
     expect([fired(telemetry, 'plans.drafted'), fired(telemetry, 'plans.draft_deferred')]).toEqual([2, 1]);
   });
 });

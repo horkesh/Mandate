@@ -189,7 +189,7 @@ export interface PlannerForce {
   readonly aboard: ForceBlockId | null;
 }
 
-/** A post of his side as the planner reads it, with its holder's willingness to cooperate (lane 0.9 finding 7). */
+/** A post of his side as the planner reads it, with the cooperation he expects of its holder (lane 0.9 finding 7). */
 export interface PlannerPost {
   readonly id: PostId;
   readonly holder: PersonId | null;
@@ -197,8 +197,9 @@ export interface PlannerPost {
   /** Where its headquarters is (derived from its strongest block), or null for a post that commands nothing. */
   readonly region: RegionId | null;
   /**
-   * His willingness to an advance from his principal: compliance's answer (`answerOrder`, lane 1.1) to the pack's advance
-   * terms, so his regard and values decide it through the people rules. 0 for a vacant post or the principal himself.
+   * The cooperation the drafting commander expects of this holder, signed permille, from what he can know: his regard for
+   * him and the holder's public standing (`expectedCooperation`; never the holder's hidden temperament). 0 for a vacant post
+   * or the drafter's own.
    */
   readonly holderWillingness: number;
 }

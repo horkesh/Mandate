@@ -7,7 +7,7 @@
  *   over his open-field demand;
  * - the shortfall threshold (finding 8): he asks the principal for men and waits for them only past a shortfall
  *   share scaled by his caution, never for any shortfall at all;
- * - a support request costs `dependence` less its holder's willingness (finding 7: regard and values).
+ * - a support request costs `dependence` less the cooperation he expects of its holder (finding 7: his regard, the holder's standing).
  */
 import { enemyHeld, willingness, type Ctx } from './context.ts';
 import type { PlanAxis, PlanCandidate, PlanTerm, PlanGate, Method, PlanRequest, TermKind } from './types.ts';

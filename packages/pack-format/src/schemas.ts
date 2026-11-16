@@ -245,8 +245,11 @@ export const RulesSchema = z.strictObject({
       assaultDays: nonNegative.describe('Permille days an assault on a garrisoned region takes, on the route as at the objective.'),
       pincerWindow: nonNegative.describe('A pincer’s partner may arrive up to this many permille days before the main axis.'),
       dependenceCost: nonNegative.describe('What one support request to another holder costs in the score.'),
-      partnerWillingnessWeight: nonNegative.describe('Permille of a partner holder’s willingness counted against dependenceCost: his willingness is his compliance’s answer to an advance from his principal, under the people rules.'),
-      dailyDraftCap: positive.describe('Plans drafted in one day; the rest wait for the next, oldest request first (0062; lane 0.8 measured the worst day on the Union graph).'),
+      partnerWillingnessWeight: nonNegative.describe('Permille of the cooperation a drafter expects of a partner holder counted against dependenceCost. He expects it from what he can know: his regard for the holder and the holder’s public standing (0062: beliefs, never truth).'),
+      partnerRegardWeight: nonNegative.describe('Permille of the drafter’s regard for the partner’s holder (signed; regardUnknown with no history) in the cooperation he expects.'),
+      partnerStandingWeight: nonNegative.describe('Permille of the partner holder’s public standing, above or below partnerStandingPivot, in the cooperation expected of him.'),
+      partnerStandingPivot: int.min(0).max(1000).describe('The public standing, permille, at which a holder’s reputation neither raises nor lowers what is expected of him.'),
+      dailyDraftCap: positive.describe('Plans drafted in one day by each side’s commanders; the rest wait for the next, oldest request first. Counted per side: one side’s requests never defer the other’s (0062; lane 0.8 measured the worst day on the Union graph).'),
       weights: z
         .strictObject({
           riskBase: nonNegative,

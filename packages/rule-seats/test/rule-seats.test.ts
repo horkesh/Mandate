@@ -50,7 +50,7 @@ const memo = (receivedDay: number, about: string): ReportView => ({
   authorPost: post('office'),
   subjectKind: 'post',
   subjectId: about,
-  claims: [{ kind: 'order-objected', region: region('r5'), value: 1, token: 'withheld', confidence: 1000 }],
+  claims: [{ kind: 'order-objected', region: region('r5'), value: 1, token: 'goal', confidence: 1000 }],
   day: receivedDay,
   hour: null,
   advice: { recommends: 'withdraw-order', reasons: [{ kind: 'too_rash', weight: 800 }], confidence: 800 },

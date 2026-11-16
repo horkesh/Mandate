@@ -9,28 +9,32 @@
  *   network the derivation read (edge condition, neutral ground); the obstructions in it are dropped, so the planner
  *   cannot plan on a boom he has not been told of.
  * - **From his own side's State**: its force blocks (`forces`, `movement`, `command`) and its posts.
- * - **From people State** (lane 1.1): his traits through `traitsOf` and his drawn competence; a partner holder's
- *   willingness through `answerOrder`. **From the World**: the map and the pack's rules.
+ * - **From people State** (lane 1.1): his own traits through `traitsOf` and his drawn competence (his own nature drives his
+ *   planning); of a partner holder, only what he can know: his regard for him and the holder's public standing (the
+ *   lead's ruling on review S2). **From the World**: the map and the pack's rules.
  */
 import { commandedBlocks, postIdsOf } from '../command/command.ts';
 import { strictCompare } from '../compare.ts';
 import type { DerivedMap } from '../control-index/derived.ts';
 import { blockIds, factionOfBlock, isNaval } from '../forces/forces.ts';
-import type { EdgeId, FactionId, ForceBlockId, PostId, RegionId } from '../ids.ts';
+import type { EdgeId, FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
 import type { PlanGoal } from '../plans/goal.ts';
 import type { State } from '../root-state.ts';
 import { headquartersOf, postFaction } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import type { NetworkConditions } from '../supply/supply.ts';
-import { trueOf } from '../people/people.ts';
+import { regardOf, trueOf } from '../people/people.ts';
 import { traitsOf } from '../people/traits.ts';
-import { answerOrder, goalTerms } from '../reading/orders.ts';
 import type { SeatView } from '../view/types.ts';
 import type { PlannerInput } from './context.ts';
 import { profileOf } from './profile.ts';
 import type { PlannerForce, PlannerPost } from './types.ts';
 
-/** The network as the planner may read it: the derived map's, with no obstructions (those come from his view). */
+/**
+ * The network as the planner may read it: the derived map's, with no obstructions (those come from his view). A second
+ * line of defence only: the route never reads `network.obstructions` (it uses `passageBar` and the view's obstructions),
+ * so nothing should rely on this strip to keep a boom he was not told of out of his plans (review N3).
+ */
 export function plannerNetwork(network: NetworkConditions): NetworkConditions {
   return network.obstructions.length === 0 ? network : { ...network, obstructions: [] };
 }
@@ -59,19 +63,27 @@ export function sideForces(world: SeatsWorld, state: State, faction: FactionId):
 }
 
 /**
- * His side's posts, in id order, with each holder's willingness to cooperate (lane 0.9 finding 7): his compliance's
- * answer to an advance from his principal, with the pack's advance terms (`answerOrder`, lane 1.1). The planner never
- * names a value; the people rules weigh them.
+ * The cooperation `drafter` expects of `holder` (lane 0.9 finding 7), signed permille, from what he can know (0062:
+ * beliefs, never truth; FOUNDATION section 6: temperament is hidden): his own regard for the holder (`regardUnknown`
+ * with no history) and the holder's public standing about the pack's pivot, each weighted by a pack rule. The holder's
+ * real answer is his own compliance's, when the `cooperating_axis` request reaches him.
  */
-export function sidePosts(world: SeatsWorld, state: State, faction: FactionId): PlannerPost[] {
-  const principal = world.factionIds.includes(faction) ? world.faction(faction).principal : null;
-  const advance = goalTerms(world.rules.people, 'advance');
+export function expectedCooperation(world: SeatsWorld, state: State, drafter: PersonId, holder: PersonId): number {
+  const rules = world.map.world.rules.planner;
+  const regard = regardOf(world.rules.people, state, drafter, holder);
+  const standing = state.personStanding[holder] ?? rules.partnerStandingPivot;
+  const expected = Math.trunc((regard * rules.partnerRegardWeight) / 1000) + Math.trunc(((standing - rules.partnerStandingPivot) * rules.partnerStandingWeight) / 1000);
+  return Math.max(-1000, Math.min(1000, expected)) + 0;
+}
+
+/** His side's posts, in id order, with the cooperation `drafter` expects of each holder (0 for a vacant post or his own). */
+export function sidePosts(world: SeatsWorld, state: State, faction: FactionId, drafter: PersonId): PlannerPost[] {
   return postIdsOf(state)
     .filter((id) => postFaction(world, state, id) === faction)
     .map((id) => {
       const p = state.postStates[id]!;
       const holder = p.postHolder;
-      const willing = holder === null || principal === null || holder === principal ? 0 : answerOrder(world, state, holder, principal, advance).willingness;
+      const willing = holder === null || holder === drafter ? 0 : expectedCooperation(world, state, drafter, holder);
       return {
         id,
         holder,
@@ -115,7 +127,7 @@ export function plannerInputFor(world: SeatsWorld, state: State, derived: Derive
     works,
     obstructions,
     forces: sideForces(world, state, faction),
-    posts: sidePosts(world, state, faction),
+    posts: sidePosts(world, state, faction, holder),
     post,
     profile: profileOf({ ...person, competence: trueOf(state, holder).trueCompetence }, people.traits, world.map.world.rules.planner.weights),
     goal,

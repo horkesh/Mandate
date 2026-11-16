@@ -202,7 +202,8 @@ export function plannerRuleProblems(planner: PlannerRules, plans: PlansRules): s
     if (!Number.isSafeInteger(v) || v < min) problems.push(`planner rule ${name} must be a whole number, at least ${min}`);
   };
   for (const k of ['hopShare', 'menPerDay', 'flankOverlapMax', 'flankLengthMax', 'flankPenalty', 'dedupeOverlap', 'topN', 'maxSearches', 'dailyDraftCap'] as const) whole(k, planner[k], 1);
-  for (const k of ['retrogradeSlack', 'dedupeArrival', 'reducePerLevel', 'clearDays', 'forceDays', 'forcingThreat', 'assaultDays', 'pincerWindow', 'dependenceCost', 'partnerWillingnessWeight'] as const) whole(k, planner[k], 0);
+  for (const k of ['retrogradeSlack', 'dedupeArrival', 'reducePerLevel', 'clearDays', 'forceDays', 'forcingThreat', 'assaultDays', 'pincerWindow', 'dependenceCost', 'partnerWillingnessWeight', 'partnerRegardWeight', 'partnerStandingWeight', 'partnerStandingPivot'] as const) whole(k, planner[k], 0);
+  if (Number.isSafeInteger(planner.partnerStandingPivot) && planner.partnerStandingPivot > 1000) problems.push('planner rule partnerStandingPivot must be a permille');
   const w = planner.weights;
   for (const k of ['concentrationPerTimid', 'pausePerTimid', 'ratioBonusDivisor', 'earlyDivisor', 'hasteDivisor', 'supplyDivisor', 'outrunDivisor', 'exposureDivisor', 'coordinationDivisor', 'gloryDivisor', 'cautionDivisor'] as const) whole(`weights.${k}`, w[k], 1);
   for (const k of ['ratioPenaltyMax'] as const) whole(`weights.${k}`, w[k], 1);

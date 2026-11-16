@@ -9,8 +9,8 @@ import { measureDrafting } from '../src/drafting-measure.ts';
  * (`planner-cases.ts`). What changed against the spike, and why, is said where it changed:
  * - the assault margin (lane 0.9 finding 1) makes one army too few against the Harrow Bulge at true strength, so the
  *   fighter now picks the pincer, as lane 0.9 expected once the margin was in, given a partner of neutral will; the
- *   testbed's actual partner, the cautious organiser, is unwilling to advance under lane 1.1's compliance, so with him
- *   the fighter attacks alone on condition of men;
+ *   cooperation he expects of the testbed's actual partner, the organiser, comes from what he can know (his regard, the
+ *   organiser's public standing), which invites the pincer; a drafter who distrusts him attacks alone on condition of men;
  * - a phase for enemy-held ground on the way (finding 9) prices the fortified Neck, so the direct march on Southvale now
  *   takes the Highcairn road, the spike's flank, and no distinct flank is left (every alternative doubles back).
  */
@@ -105,14 +105,24 @@ describe('case 1: a two-commander pincer round the salient', () => {
     expect(top(seat('steady'), { sourceBias: 2500 })).toBe('direct');
   });
 
-  it('weighs the partner as the testbed seats him: the cautious organiser, unwilling to advance, leaves the fighter to attack alone on condition of men', () => {
-    // Lane 1.1's compliance answers an advance from the principal for the organiser at well below nothing (his caution
-    // is offended), so the request to him costs more than the pincer gains; a willing partner restores it.
-    const { input, set } = drafted(PINCER, seat('fighter'));
-    expect(input.posts.find((p) => p.id === 'n_army_east')!.holderWillingness).toBeLessThan(0);
-    expect(pick(set).candMethod).toBe('direct');
-    expect(pick(set).candConditions.map((g) => g.gateKind)).toContain('move_when_reinforced');
-    expect(pick(withPartner(input, 400)).candMethod).toBe('pincer');
+  it('weighs the partner by what the drafter can know (the lead’s ruling on review S2): the organiser’s standing invites the pincer; distrust of him leaves the fighter to attack alone', () => {
+    // He has no history with the organiser (regard unknown, 0) and the organiser's public standing is high (800 over the
+    // pack's pivot of 500), so he expects cooperation, +300, and picks the pincer.
+    const { world, state, input } = caseInput(PINCER, seat('fighter'));
+    const set = planner.draft(input);
+    const [drafter, partner] = [ids.toId('person', 'n_appointee'), ids.toId('person', 'n_organiser')];
+    expect(input.posts.find((p) => p.id === 'n_army_east')!.holderWillingness).toBe(300);
+    expect(planner.expectedCooperation(world, state, drafter, partner)).toBe(300);
+    expect(pick(set).candMethod).toBe('pincer');
+    // A drafter who distrusts him (regard -1000) expects -700, and attacks alone on condition of men.
+    const distrust = { ...state, personRegard: { ...state.personRegard, [drafter]: { ...(state.personRegard[drafter] ?? {}), [partner]: -1000 } } };
+    const doubted = planner.expectedCooperation(world, distrust, drafter, partner);
+    expect(doubted).toBe(-700);
+    expect(pick(withPartner(input, doubted)).candMethod).toBe('direct');
+    expect(pick(withPartner(input, doubted)).candConditions.map((g) => g.gateKind)).toContain('move_when_reinforced');
+    // The partner's hidden nature never enters what is expected of him (0062: beliefs, never truth; FOUNDATION section 6).
+    const hidden = { ...state, personTrue: { ...state.personTrue, [partner]: { ...state.personTrue[partner]!, trueCompetence: 1000 } }, personTraits: { ...state.personTraits, [partner]: [] } };
+    expect(planner.expectedCooperation(world, hidden, drafter, partner)).toBe(300);
     // The assault margin is explained in the force_ratio term's reason, with its permille (hard rule 6).
     expect(pick(set).candTerms.find((t) => t.contribTerm === 'force_ratio')!.contribWhy).toContain('the assault margin, 1500‰, on his open-field demand 1000');
   });
@@ -315,6 +325,8 @@ describe('liveness of the scoring terms, over drafts and edits (0062; lane 0.9)'
         for (const bias of [1000, 1500, 2500]) {
           const { input, set } = drafted(spec, s, { sourceBias: bias });
           for (const t of planner.liveTerms(set)) live.add(t);
+          // And with a partner he distrusts (the expectation a regard of -1000 gives the organiser: -700), so `dependence` can decide.
+          if (spec === PINCER) for (const t of planner.liveTerms(withPartner(input, -700))) live.add(t);
           // Edits exercise terms drafts never do (`haste`): "move now" on his best moving plan.
           const moving = set.draftCandidates.find((c) => c.candMethod !== 'holding');
           const name = moving?.candAxes[0]?.axisName ?? null;

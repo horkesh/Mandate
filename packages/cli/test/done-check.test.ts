@@ -24,7 +24,7 @@ import { phase0Run, type Phase0Summary } from '../src/phase0-run.ts';
 
 /**
  * The Phase 0 done check (FOUNDATION section 12; lane 0.8, step 5): a headless run on the new kernel, on
- * the Union 1861 map and order of battle, with rule seats holding standing goals, moves divisions, changes
+ * the Union 1861 map and order of battle, with rule seats giving goals and commanders drafting plans, moves divisions, changes
  * control through the simple contest and derives fronts, pockets and supply; its hash does not depend on how
  * it is run; it resumes to the same final hash; every mechanic is alive or quiet for a reason; the section 10
  * tests stand; and the tick stays inside its budget. Each criterion has a positive control below.

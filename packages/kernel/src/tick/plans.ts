@@ -175,19 +175,21 @@ export function plansPhase(ctx: TickContext, start: State, cache: ViewCache): St
 
   for (const post of pending) state = answerEdit(ctx, state, post, derived, network, month, cache);
 
-  // Drafts, oldest goal first, within the day's cap (0062; lane 0.8 measured it as a day's whole cost); the rest wait.
+  // Drafts, oldest goal first, within the day's cap for each side (0062; lane 0.8 measured it as a day's whole cost); the rest wait.
+  // Counted per faction: one side's requests never defer the other's (the player would see the enemy's activity in a delay).
   const cap = world.map.world.rules.planner.dailyDraftCap;
-  let used = 0;
+  const used: Record<string, number> = {};
   const order = [...drafting].sort((a, b) => state.planRecords[a]!.planSetDay - state.planRecords[b]!.planSetDay || strictCompare(a, b));
   for (const post of order) {
     const record = state.planRecords[post]!;
     const holder = state.postStates[post]?.postHolder ?? null;
-    if (holder === null || postFaction(world, state, post) === null) continue;
-    if (used >= cap) {
+    const faction = postFaction(world, state, post);
+    if (holder === null || faction === null) continue;
+    if ((used[faction] ?? 0) >= cap) {
       fire(ctx, 'plans.draft_deferred');
       continue;
     }
-    used += 1;
+    used[faction] = (used[faction] ?? 0) + 1;
     const view = viewFor(world, state, seatIdFor(holder), cache);
     const set = draft(plannerInputFor(world, state, derived, network, month, view, post, record.planGoal, day));
     fire(ctx, 'plans.drafted');

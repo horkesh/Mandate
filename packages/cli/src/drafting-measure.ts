@@ -29,8 +29,8 @@ export interface DraftingReport {
   readonly drafts: readonly DraftSample[];
   /** Milliseconds for one day's drafts (every post once, back to back), over `days` such days. */
   readonly day: { readonly days: number; readonly median: number; readonly p95: number; readonly worst: number };
-  /** Milliseconds for a day capped at the pack's daily drafting cap (the slowest such posts drafting together). */
-  readonly cappedDay: { readonly cap: number; readonly worst: number };
+  /** Milliseconds for a day capped at the pack's daily drafting cap for each side (each side's slowest such posts, all drafting together). */
+  readonly cappedDay: { readonly cap: number; readonly sides: number; readonly worst: number };
   readonly slowestDraftMs: number;
   /** Posts with no land force (squadrons and yards), which can draft nothing toward an inland objective. */
   readonly noLandForce: number;
@@ -140,9 +140,11 @@ export function measureDrafting(pack: string, options: { readonly days?: number;
     dayCosts.push(performance.now() - t);
   }
   const sorted = [...dayCosts].sort((a, b) => a - b);
-  // A capped day: the pack's cap of drafts, the slowest posts by median, together.
+  // A capped day: the pack's cap of drafts for each side (the cap is counted per side), each side's slowest posts by median, together.
   const cap = inputs[0]?.rules.dailyDraftCap ?? 0;
-  const slowest = [...drafts].map((d, i) => ({ d, i })).sort((a, b) => b.d.medianMs - a.d.medianMs || (a.d.post < b.d.post ? -1 : 1)).slice(0, cap).map((x) => inputs[x.i]!);
+  const ranked = [...drafts].map((d, i) => ({ d, i })).sort((a, b) => b.d.medianMs - a.d.medianMs || (a.d.post < b.d.post ? -1 : 1));
+  const sides = [...new Set(drafts.map((d) => d.faction))].sort();
+  const slowest = sides.flatMap((side) => ranked.filter((x) => x.d.faction === side).slice(0, cap)).map((x) => inputs[x.i]!);
   let cappedWorst = 0;
   for (let d = 0; d < days; d++) {
     const t = performance.now();
@@ -154,7 +156,7 @@ export function measureDrafting(pack: string, options: { readonly days?: number;
     posts: inputs.length,
     drafts,
     day: { days, median: percentile(sorted, 50), p95: percentile(sorted, 95), worst: sorted[sorted.length - 1]! },
-    cappedDay: { cap, worst: cappedWorst },
+    cappedDay: { cap, sides: sides.length, worst: cappedWorst },
     slowestDraftMs: Math.max(...drafts.map((d) => d.maxMs)),
     noLandForce,
     sound,

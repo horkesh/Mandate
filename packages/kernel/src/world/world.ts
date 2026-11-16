@@ -177,11 +177,18 @@ export interface PlannerRules {
   /** `dependence`: what one support request to another holder costs. */
   readonly dependenceCost: number;
   /**
-   * A partner holder's willingness (lane 0.9 finding 7), permille of it counted against `dependenceCost`: his willingness
-   * is compliance's answer to an advance from his principal (`answerOrder` with the pack's advance terms), so his
-   * regard and values decide it through the people rules, never by value names in the kernel.
+   * The cooperation a drafter expects of a partner holder (lane 0.9 finding 7), permille of it counted against
+   * `dependenceCost`. He expects it from what he can know (0062: beliefs, never truth; FOUNDATION section 6: temperament is
+   * hidden): his own regard for the holder and the holder's public standing, weighted below. The partner's real answer is
+   * his own compliance's, when the request reaches him.
    */
   readonly partnerWillingnessWeight: number;
+  /** Permille of the drafter's regard for the partner's holder (signed; the pack's `regardUnknown` with no history) in the expectation. */
+  readonly partnerRegardWeight: number;
+  /** Permille of the partner holder's public standing, above or below `partnerStandingPivot`, in the expectation. */
+  readonly partnerStandingWeight: number;
+  /** The public standing, permille, at which a holder's reputation neither raises nor lowers what is expected of him. */
+  readonly partnerStandingPivot: number;
   /** Drafts a side's commanders make in one day; the rest wait for the next (0062; lane 0.8 measured the worst day). */
   readonly dailyDraftCap: number;
   readonly weights: PlannerWeights;

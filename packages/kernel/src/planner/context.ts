@@ -100,8 +100,8 @@ export function answeringPost(input: PlannerInput, post: PostId): { readonly pos
 }
 
 /**
- * How willing a post's holder is to answer a support request (lane 0.9 finding 7): his compliance's willingness to an
- * advance from his principal, read through the people rules (`PlannerPost.holderWillingness`), weighted by the pack.
+ * How willing he expects a post's holder to be to answer a support request (lane 0.9 finding 7): the cooperation he
+ * expects of him from his regard and the holder's public standing (`PlannerPost.holderWillingness`), weighted by the pack.
  */
 export function willingness(input: PlannerInput, post: PlannerPost): number {
   return Math.trunc((post.holderWillingness * input.rules.partnerWillingnessWeight) / 1000);

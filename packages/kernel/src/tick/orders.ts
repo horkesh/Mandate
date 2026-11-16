@@ -197,7 +197,8 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
       body: answerBody(relayer.id, post, ctx.day, {
         reportType: 'advice',
         reportSubtype: 'memorandum',
-        reportClaims: [{ claimKind: 'order-objected', claimRegion: objectiveOf(state, order), claimValue: 1, claimToken: 'withheld', claimConfidence: 1000 }],
+        // The token names the kind of order withheld (a goal, or an answer to a plan): he knows what he sent.
+        reportClaims: [{ claimKind: 'order-objected', claimRegion: objectiveOf(state, order), claimValue: 1, claimToken: order.orderKind, claimConfidence: 1000 }],
         reportAdvice: { adviceRecommends: 'withdraw-order', adviceReasons: decision.stated, adviceConfidence: 800 },
         answers: msg.msgOrigin,
         about: order.orderTarget,

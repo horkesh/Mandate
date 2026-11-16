@@ -103,7 +103,7 @@ export function supplyLine(ctx: Ctx): Outcome {
 
 /**
  * The partner for a pincer: a friendly post with land forces at its headquarters, beside the objective by road, whose
- * holder answers him. Ranked by that holder's willingness (his regard and values, lane 0.9 finding 7), then post id;
+ * holder answers him. Ranked by the cooperation he expects of that holder (lane 0.9 finding 7), then post id;
  * never a post whose answering holder is the commander himself (lane 0.9 finding 10).
  */
 function partnersFor(ctx: Ctx, route: PlanRoute | null): { readonly all: readonly PlannerPost[]; readonly beside: readonly { readonly post: PlannerPost; readonly answer: { readonly post: PlannerPost; readonly vacant: boolean } }[] } {

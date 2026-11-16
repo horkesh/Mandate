@@ -80,14 +80,20 @@ export function reviewsFor(state: State, principal: PersonId): PlanReview[] {
 
 /**
  * Whether his answer to `post` is still in play: an order of these kinds from `principal` to `post` on its way (his own
- * orders, which he knows he sent), or an office's objection to an order of his about `post` on its way back to him
- * (0040: he learns it was withheld only when the memorandum reaches him; until then he believes it went on).
+ * orders, which he knows he sent), or an office's objection to such an order of his on its way back to him (0040: he
+ * learns it was withheld only when the memorandum reaches him; until then he believes it went on). The memorandum's
+ * claim names the kind of order withheld, so an objection to an earlier goal never hides an answer he still owes.
  */
 function answerInTransit(state: State, principal: PersonId, post: PostId, kinds: readonly string[]): boolean {
   return state.messagesInTransit.some(
     (m) =>
       (m.msgOrder !== null && m.msgOrder.orderIssuer === principal && m.msgOrder.orderTarget === post && kinds.includes(m.msgOrder.orderKind)) ||
-      (m.msgReport !== null && (m.msgTo === principal || m.msgPending.some((h) => h.hopPerson === principal)) && m.msgReport.reportSubjectKind === 'post' && m.msgReport.reportSubjectId === post && m.msgReport.reportClaims.some((c) => c.claimKind === 'order-objected')),
+      (m.msgReport !== null &&
+        m.msgReport.reportAnswers !== null &&
+        (m.msgTo === principal || m.msgPending.some((h) => h.hopPerson === principal)) &&
+        m.msgReport.reportSubjectKind === 'post' &&
+        m.msgReport.reportSubjectId === post &&
+        m.msgReport.reportClaims.some((c) => c.claimKind === 'order-objected' && c.claimToken !== null && kinds.includes(c.claimToken))),
   );
 }
 
