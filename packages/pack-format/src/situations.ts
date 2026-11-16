@@ -316,7 +316,12 @@ export function validateSituations(items: readonly { readonly file: string; read
     def.staffLine?.authors.forEach((p, i) => ownSide(p, `staffLine.authors[${i}]`));
     def.report?.authors.forEach((p, i) => ownSide(p, `report.authors[${i}]`));
     def.options.forEach((o, i) => o.orders.forEach((order, j) => ownSide(order.to, `options[${i}].orders[${j}].to`)));
-    def.options.forEach((o, i) => o.calls.forEach((call, j) => ownSide(call.to, `options[${i}].calls[${j}].to`)));
+    // A call may go to a neutral government's governor too (a requisition he answers by his own compliance), never the other side's.
+    def.options.forEach((o, i) =>
+      o.calls.forEach((call, j) => {
+        if (postSide.has(call.to) && postSide.get(call.to) !== null && postSide.get(call.to) !== def.faction) err('situation-side', `options[${i}].calls[${j}].to`, `\"${call.to}\" is ${postSide.get(call.to)}'s post, not ${def.faction}'s`, 'a governor of the calling side or of a neutral government');
+      }),
+    );
     def.subjects.forEach((p, i) => ref(people, 'person', p, `subjects[${i}]`));
     def.delegableTo.forEach((p, i) => ref(posts, 'post in any scenario', p, `delegableTo[${i}]`));
     const optionIds = def.options.map((o) => o.id);

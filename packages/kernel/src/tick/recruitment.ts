@@ -56,7 +56,10 @@ export function issueCall(ctx: TickContext, state: State, seat: SeatId, cmd: Cal
   const side = sideOfPerson(world.map, state, issuer.id);
   if (side === null || !world.factionIds.includes(side) || world.faction(side).principal !== issuer.id) return 'not_a_principal';
   if (state.postStates[cmd.to] === undefined) return 'unknown_post';
-  if (postFaction(world, state, cmd.to) !== side) return 'other_side';
+  // A call is a requisition, answered by the governor's own compliance (0065: a government's side is State): it may go to
+  // a governor of the calling side or of a neutral government (the April 1861 call went to every state), never the other side's.
+  const targetSide = postFaction(world, state, cmd.to);
+  if (targetSide !== side && targetSide !== null) return 'other_side';
   if (!raisingPost(ctx, state, cmd.to)) return 'not_raising_post';
   if (state.postStates[cmd.to]!.postHolder === null) return 'vacant_post';
   if (!ORDER_ROUTES.includes(cmd.route)) return 'route_unavailable';
@@ -187,7 +190,8 @@ export function recruitmentPhase(ctx: TickContext, start: State): State {
   const blocked = (key: string) => {
     const levy = start.postLevies[key]!;
     const side = postFaction(world, start, levy.levyPost);
-    return side === null || enemyHeld(world.map, start, start.postStates[levy.levyPost]!.postSeat!, side);
+    // A neutral government's levy musters in its own region (its block serves no side until the government joins one).
+    return side !== null && enemyHeld(world.map, start, start.postStates[levy.levyPost]!.postSeat!, side);
   };
   const dueAll = leviesDue(start, day);
   const due = dueAll.filter((k) => !blocked(k));

@@ -141,16 +141,9 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'reports.filtered': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
   'reports.trimmed': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
   'situations.lapsed': { why: 'a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'expires an option, resurfaces on its clock, and lapses' },
-  // Lane 1.7: no rule seat calls for regiments yet (lane 1.12's rule-seat principals will), so recruitment fires in no reference run.
-  'recruitment.called': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'the northern governor answers the call' },
-  'recruitment.answered': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'the northern governor answers the call' },
-  'recruitment.slow_walked': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'slow-walks the call' },
-  'recruitment.refused': { why: 'no rule seat calls for regiments until lane 1.12; a governor who raises nothing is driven by the kernel rule that a rung not listed raises none', test: 'packages/cli/test/men-regions.test.ts', needle: "regimentsRaised(rules, 10, 'refuse', 900)" },
-  'recruitment.mustered': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'musters the levy into a new block' },
-  'recruitment.men': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'musters the levy into a new block' },
+  // Lane 1.7: a levy blocked by enemy-held ground, and one that lapses, fire in no reference run.
   'recruitment.muster_blocked': { why: 'no rule seat calls for regiments until lane 1.12, so no levy waits on a region in enemy hands', test: 'packages/cli/test/men-regions.test.ts', needle: 'a levy due in an enemy-held region waits' },
-  'recruitment.lapsed': { why: 'no rule seat calls for regiments until lane 1.12, so no levy lapses', test: 'packages/cli/test/men-regions.test.ts', needle: 'lapses past the pack’s days' },
-  'recruitment.disbanded': { why: 'no rule seat calls for regiments until lane 1.12, so no enlistment runs out', test: 'packages/cli/test/men-regions.test.ts', needle: 'then disbands it when its ninety days end' },  // Lane 1.2: the plan cycle's paths that no rule seat takes, each driven by its own kernel test.
+  'recruitment.lapsed': { why: 'no rule seat calls for regiments until lane 1.12, so no levy lapses', test: 'packages/cli/test/men-regions.test.ts', needle: 'lapses past the pack’s days' },  // Lane 1.2: the plan cycle's paths that no rule seat takes, each driven by its own kernel test.
   'plans.sent_back': { why: 'no rule seat sends a plan back: the generic principal approves, the editing exercise edits', test: 'packages/kernel/test/plans.test.ts', needle: 'sends the plan back, and he drafts it again' },
   'plans.draft_deferred': { why: 'no reference run asks for more plans in a day than the pack’s cap of three (0062)', test: 'packages/kernel/test/plans.test.ts', needle: 'defers drafts past the day’s cap' },
   'plans.edit_invalid': { why: 'the editing exercise edits only a moving axis’s timing, which can always be made', test: 'packages/kernel/test/plans.test.ts', needle: 'refuses an edit no route can make' },
@@ -162,13 +155,9 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'planner.term.force_ratio': { why: 'the reference runs’ drafts are decided by supply and goal fit, never by the ratio alone', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
   'planner.term.glory': { why: 'few drafts in the reference runs, and none where dropping glory alone changes the pick', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
   'planner.term.time': { why: 'few drafts in the reference runs, and none where dropping time alone changes the pick', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
-  'situations.options_changed': { why: 'an option changes only for a situation left open past an appearance or expiry; the rule-driven principal does not leave one open (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'a waiting option defers the decision until its condition holds' },
-  'situations.resurfaced': { why: 'a resurfacing follows a wait or expiry the rule-driven principal does not choose (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'expires an option, resurfaces on its clock' },
   'situations.waiting': { why: 'waiting is an option a human takes; the rule-driven principal takes the historical default (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'waits for news to reach the principal' },
 };
 
-/** What a pack at peace never does: no order is given, so no force marches, no ground is contested. */
-const PEACE_QUIET: readonly string[] = ['orders.relayed', 'orders.obeyed', 'plans.goal_reached', 'movement.leg_started', 'movement.arrived', 'combat.battle_day', 'combat.occupation', 'control.changed'];
 
 /** What only the editing exercise run does (lane 1.2): edits and their answers, the word to go, and `haste`, an edit-only term. */
 const EDITS_ONLY = 'only the editing exercise run reviews and edits plans; the generic principal approves them as drafted';
@@ -195,7 +184,7 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
   };
 }
 
-/** The union-1861 reference run: 75 days from 5 March 1861, at war (the war gate's labelled option, 0064). */
+/** The union-1861 reference run: 5 March to 31 July 1861 (148 days), the war opened by each side's own decision (lane 1.11; 0066), with no labelled option. */
 const UNION_BANDS: Record<string, GateBand> = {
   // Lanes 1.2 and 1.3: the Charleston command's plan marches on Washington, whose garrison now holds (lane 1.2), and the
   // battle model fights it out (lane 1.3). Re-banded from the merged run.
@@ -218,12 +207,12 @@ const UNION_BANDS: Record<string, GateBand> = {
   'forces.stores_refilled': notHere('most Union blocks have unknown stores (lane 0.3 data, lane 0.5 finding 3), so the few that fall do not refill in 75 days; the testbed run fires it'),
   'forces.stragglers_returned': around(10),
   'map.pocket_closed': notHere('no pocket closes in the first 75 days of the merged Union run; the testbed run fires it'),
-  'knowledge.pruned_age': around(6),
+  'knowledge.pruned_age': around(23),
   'knowledge.pruned_superseded': around(73),
   'map.recomputed': around(10),
   'messages.courier_delay': around(197),
-  'messages.delivered': around(2681),
-  'messages.sent': around(2820),
+  'messages.delivered': around(6795),
+  'messages.sent': around(6914),
   // The War Department withholds the principal's approval of the Washington garrison's plan; he sends it around.
   'messages.special_messenger': around(2),
   'orders.bypassed': around(4),
@@ -240,19 +229,40 @@ const UNION_BANDS: Record<string, GateBand> = {
   // The two opening goals: the Charleston command's plan goes ahead; the Washington garrison's holds, so it is reviewed and approved.
   ...planBands({ drafts: 2, reviewed: 1, wentAhead: 1, goalFit: 0, supply: 2 }),
   'seats.defaulted': notHere('every request is answered in this run; the silent-seats exercise run fires it'),
-  'situations.decided': quiet(SITUATIONS_UNAUTHORED),
-  'situations.delegated': quiet(SITUATIONS_UNAUTHORED),
-  'situations.fired': quiet(SITUATIONS_UNAUTHORED),
-  'situations.notice_reports': quiet(SITUATIONS_UNAUTHORED),
-  'situations.noticed': quiet(SITUATIONS_UNAUTHORED),
-  'situations.orders': quiet(SITUATIONS_UNAUTHORED),
-  'situations.proposals': quiet(SITUATIONS_UNAUTHORED),
-  'situations.staff_lines': quiet(SITUATIONS_UNAUTHORED),
-  'situations.surfaced': quiet(SITUATIONS_UNAUTHORED),
+  // Lane 1.11: the opening of the war by each side's decision (S01, the other side's opening, the notice of the first shot, S09's call).
+  'situations.decided': around(3),
+  'situations.delegated': notHere('no authored Union situation in this window names a delegate as its historical default; the testbed run fires it'),
+  'situations.fired': around(4),
+  'situations.notice_reports': around(1),
+  'situations.noticed': around(1),
+  'situations.options_changed': around(3),
+  'situations.orders': around(24),
+  'situations.proposals': notHere('the authored opening situations propose no change of side yet; the testbed run fires it'),
+  'situations.resurfaced': around(2),
+  'situations.staff_lines': around(3),
+  'situations.surfaced': around(4),
+  // S09's call: every governor called; the free and loyal states' governors answer, five refuse, and the ninety-day men go home.
+  'recruitment.called': around(24),
+  'recruitment.answered': around(19),
+  'recruitment.slow_walked': around(19),
+  'recruitment.refused': around(5),
+  'recruitment.mustered': around(19),
+  'recruitment.men': around(19),
+  'recruitment.disbanded': around(19),
 };
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
 const TESTBED_BANDS: Record<string, GateBand> = {
+  // Lane 1.11: the testbed's rule-seat principal makes no call, and its situations neither resurface nor change their options in this run; union-1861 fires them.
+  'recruitment.called': notHere('the testbed\'s principal makes no call for regiments; union-1861\'s S09 call fires it'),
+  'recruitment.answered': notHere('the testbed\'s principal makes no call for regiments; union-1861\'s S09 call fires it'),
+  'recruitment.slow_walked': notHere('the testbed\'s principal makes no call for regiments; union-1861\'s S09 call fires it'),
+  'recruitment.refused': notHere('the testbed\'s principal makes no call for regiments; union-1861\'s S09 call fires it'),
+  'recruitment.mustered': notHere('the testbed\'s principal makes no call for regiments; union-1861\'s S09 call fires it'),
+  'recruitment.men': notHere('the testbed\'s principal makes no call for regiments; union-1861\'s S09 call fires it'),
+  'recruitment.disbanded': notHere('the testbed\'s principal makes no call for regiments; union-1861\'s S09 call fires it'),
+  'situations.options_changed': notHere('no testbed situation in this run has an option that appears or expires while it is open; union-1861 fires it'),
+  'situations.resurfaced': notHere('no testbed situation in this run stays open to a resurface day; union-1861 fires it'),
   // Lane 1.3, merged with lane 1.2's plans: three battles, each one day: the defender withdraws, and the winner chooses
   // whether to pursue.
   'combat.battle_closed': around(3),
@@ -318,7 +328,7 @@ function withQuiet(bands: Record<string, GateBand>): Record<string, GateBand> {
 }
 
 export const REFERENCE_RUNS: readonly ReferenceRun[] = [
-  { name: 'union-1861 at war, 75 days', kind: 'full', pack: 'union-1861', days: 75, atWar: true, seats: 'rules', bands: withQuiet(UNION_BANDS) },
+  { name: 'union-1861, war by decision, 148 days', kind: 'full', pack: 'union-1861', days: 148, atWar: false, seats: 'rules', bands: withQuiet(UNION_BANDS) },
   { name: 'testbed, 120 days', kind: 'full', pack: 'testbed', days: 120, atWar: false, seats: 'rules', bands: withQuiet(TESTBED_BANDS) },
   { name: 'testbed, commanders silent, 120 days', kind: 'exercise', pack: 'testbed', days: 120, atWar: false, seats: 'silent-commanders', bands: { 'seats.defaulted': around(1) } },
   {
@@ -339,15 +349,6 @@ export const REFERENCE_RUNS: readonly ReferenceRun[] = [
       'plans.released': around(1),
       'planner.term.haste': around(2),
     },
-  },
-  {
-    name: 'union-1861 at peace, 75 days (the war gate, 0064)',
-    kind: 'exercise',
-    pack: 'union-1861',
-    days: 75,
-    atWar: false,
-    seats: 'rules',
-    bands: Object.fromEntries(PEACE_QUIET.map((m) => [m, quiet(`union-1861 keeps the peace until the war's opening situation, which is not authored yet (0064): the rule-seat principal orders nothing`)])),
   },
 ];
 

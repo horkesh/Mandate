@@ -44,26 +44,26 @@ describe('the done check on union-1861 at war and the testbed', () => {
     expect(result.passed).toBe(true);
   });
 
-  it('runs about 75 days of the Union pack at war, with rule seats giving orders', () => {
+  it('runs the Union pack from 5 March to 31 July 1861, its war opened by decision with no labelled option, with rule seats giving orders', () => {
     const s = union().checked;
-    expect(s.atWar).toBe(true);
-    expect(s.finalDay).toBe(75);
+    expect(s.atWar).toBe(false);
+    expect(s.finalDay).toBe(148);
     expect(s.logEntries).toBeGreaterThan(0);
     expect(s.rejections).toBe(0);
   });
 
-  it('says the Union run is a mechanics run whose outcome is not a war; the testbed line says nothing of the kind (0072)', () => {
+  it('no longer calls the Union run a mechanics run: its war opens by decision (lane 1.11); neither line carries the label (0072)', () => {
     const behaviour = result.criteria.find((c) => c.id === 'behaviour')!;
-    expect(behaviour.evidence.find((e) => e.startsWith(union().name))).toContain(MECHANICS_RUN);
+    expect(behaviour.evidence.find((e) => e.startsWith(union().name))).not.toContain(MECHANICS_RUN);
     expect(MECHANICS_RUN).toContain('its outcome is not a war');
     expect(behaviour.evidence.find((e) => e.startsWith(testbed().name))).not.toContain(MECHANICS_RUN);
   });
 
   it('hashes every day in the checked run, and the timed run hashes none but the last', () => {
-    expect(union().checked.turns).toHaveLength(75);
+    expect(union().checked.turns).toHaveLength(148);
     expect(testbed().checked.turns).toHaveLength(120);
-    expect(union().timed.turns.map((t) => t.turn)).toEqual([75]);
-    expect(union().timed.timing!.days).toBe(75);
+    expect(union().timed.turns.map((t) => t.turn)).toEqual([148]);
+    expect(union().timed.timing!.days).toBe(148);
   });
 
   it('writes summaries two machines can compare, and a planted divergence is the first thing it names', () => {
@@ -116,7 +116,7 @@ describe('each criterion can fail (positive controls)', () => {
     const run = union();
     expect(resumeProblems(run)).toEqual([]);
     const r = run.checked.resume!;
-    expect(resumeProblems({ ...run, checked: { ...run.checked, resume: { ...r, matches: false, finalHash: 'f'.repeat(64) } } }).join('\n')).toContain('resumed from day 30');
+    expect(resumeProblems({ ...run, checked: { ...run.checked, resume: { ...r, matches: false, finalHash: 'f'.repeat(64) } } }).join('\n')).toContain('resumed from day 60');
     expect(resumeProblems({ ...run, checked: { ...run.checked, resume: { ...r, savedLogReplays: false } } }).join('\n')).toContain('does not replay to the saved State');
     expect(resumeProblems({ ...run, checked: { ...run.checked, replay: { matches: false, firstDifferentDay: 12 } } }).join('\n')).toContain('from day 12');
     expect(resumeProblems({ ...run, checked: { ...run.checked, resume: null } })).toEqual([`${run.name}: no mid-run save was resumed`]);
@@ -124,7 +124,7 @@ describe('each criterion can fail (positive controls)', () => {
 
   it('liveness: a planted dead mechanic in a reference run fails the check', () => {
     const run = union();
-    const reference = REFERENCE_RUNS.find((x) => x.name === 'union-1861 at war, 75 days')!;
+    const reference = REFERENCE_RUNS.find((x) => x.name === 'union-1861, war by decision, 148 days')!;
     expect(livenessProblems(reference, run.checked.liveness)).toEqual([]);
     const planted = run.checked.liveness.map((row) => (row.mechanic === 'movement.arrived' ? { ...row, fires: 0, magnitude: 0 } : row));
     expect(livenessProblems(reference, planted)).toEqual([expect.stringContaining('movement.arrived is dead (0 fires')]);

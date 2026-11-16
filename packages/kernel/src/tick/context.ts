@@ -159,20 +159,30 @@ export function sideOf(ctx: TickContext, state: State, person: PersonId): Factio
   return f;
 }
 
+/**
+ * The side a message travels on: its sender's, or, for a sender on no side (a neutral government's officer answering a
+ * requisition, lane 1.11), its recipient's, since he sends it toward that side's lines.
+ */
+function travelSide(ctx: TickContext, state: State, sender: PersonId, recipient: PersonId | null): FactionId {
+  const own = sideOfPerson(ctx.world.map, state, sender);
+  if (own !== null || recipient === null) return own ?? sideOf(ctx, state, sender);
+  return sideOf(ctx, state, recipient);
+}
+
 /** The route a message by `route` really takes (a wire sent off the wire goes by courier). No dice drawn. */
-export function takenRoute(ctx: TickContext, state: State, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId): RouteKind {
+export function takenRoute(ctx: TickContext, state: State, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId, recipient: PersonId | null = null): RouteKind {
   if (route !== 'wire' || from === to) return route;
-  const l = routeLatency(ctx.latency, ctx.world.rules.latency, route, from, to, sideOf(ctx, state, sender), null);
+  const l = routeLatency(ctx.latency, ctx.world.rules.latency, route, from, to, travelSide(ctx, state, sender, recipient), null);
   return l.ok && l.latency.parts.some((p) => p.part === 'wire') ? 'wire' : 'courier';
 }
 
 /** Arrival of one hop by `route`, sent by `sender`, and the route actually taken (a wire sent off his side's wire goes by courier). */
-export function hop(ctx: TickContext, state: State, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId, id: MessageId, extraDays = 0): { readonly arrive: number; readonly route: RouteKind } {
-  const l = routeLatency(ctx.latency, ctx.world.rules.latency, route, from, to, sideOf(ctx, state, sender), { seed: ctx.seed, message: id });
+export function hop(ctx: TickContext, state: State, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId, id: MessageId, extraDays = 0, recipient: PersonId | null = null): { readonly arrive: number; readonly route: RouteKind } {
+  const l = routeLatency(ctx.latency, ctx.world.rules.latency, route, from, to, travelSide(ctx, state, sender, recipient), { seed: ctx.seed, message: id });
   if (!l.ok) throw new RangeError(`route ${route} is not available from ${from} to ${to}`);
   const weather = l.latency.parts.find((p) => p.part === 'weather');
   if (weather) fire(ctx, 'messages.courier_delay', weather.days);
-  return { arrive: ctx.day + l.latency.days + extraDays, route: takenRoute(ctx, state, route, sender, from, to) };
+  return { arrive: ctx.day + l.latency.days + extraDays, route: takenRoute(ctx, state, route, sender, from, to, recipient) };
 }
 
 /**
@@ -204,10 +214,10 @@ export function sendReport(
   const toPost = heldPost(state, report.to);
   const addressee: Hop = { hopPerson: report.to, hopPost: toPost, hopRole: 'addressee' };
   // Only a report that really goes by wire meets the filter; one sent off the wire rides past it.
-  const throughFilter = filter !== undefined && report.to === faction.principal && takenRoute(ctx, state, route, from, fromRegion, whereIs(ctx, state, report.to)) === 'wire';
+  const throughFilter = filter !== undefined && report.to === faction.principal && takenRoute(ctx, state, route, from, fromRegion, whereIs(ctx, state, report.to), report.to) === 'wire';
   const first: Hop = throughFilter ? { hopPerson: filter.holder, hopPost: filter.id, hopRole: 'filter' } : addressee;
   const id = mintMessageId(ctx.mint, ctx.day, from, first.hopPerson, report.tag);
-  const leg = hop(ctx, state, route, from, fromRegion, whereIs(ctx, state, first.hopPerson), id);
+  const leg = hop(ctx, state, route, from, fromRegion, whereIs(ctx, state, first.hopPerson), id, 0, report.to);
   ctx.outbox.push({
     id,
     msgOrigin: id,

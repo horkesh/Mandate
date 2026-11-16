@@ -3,7 +3,7 @@
  *
  *   npm run run:done-check [-- --label <name>] [--no-drafting]
  *
- * Runs the Union pack at war for 75 days (the labelled option, 0064) and the testbed for 120, each with a
+ * Runs the Union pack for 148 days, 5 March to 31 July 1861, its war opened by each side's own decision (lane 1.11), and the testbed for 120, each with a
  * hash every day, a replay, a mid-run save resumed, a repeat run and a timed run, then judges the six
  * criteria (`done-check.ts`). Each checked run's summary goes to its own folder under `runs/<label>/`, so CI
  * can compare Linux and Windows hashes with `tools/compare-runs.ts`. Also reports what a day of plan drafting
