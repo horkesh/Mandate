@@ -20,6 +20,8 @@ export interface PhaseSide {
   /** In the evening phase: it leaves tonight (withdrew or routed), surrenders, or breaks out tomorrow. */
   readonly leaves: boolean;
   readonly surrenders: boolean;
+  /** In the evening phase: its failed breakout destroys it (never his surrender, 0074). */
+  readonly destroyed: boolean;
 }
 
 export interface DayPhaseShape {
@@ -46,7 +48,7 @@ export function dayShape(rules: CombatRules, day: BattleDay): DayShape {
   const split = day.bdaySides.map((s) => ({
     kw: apportion(s.bsideKw, shares),
     missing: apportion(s.bsideMissing, shares),
-    // A surrender comes at the day's end: the captured in it fall in the evening.
+    // A force taken (surrendered or destroyed) is taken at the day's end: the captured in it fall in the evening.
     field: apportion(s.bsideCaptured - surrenderedOf(s.bsideCapturedParts), shares),
     surrender: surrenderedOf(s.bsideCapturedParts),
     flankPhase: s.bsideFlankBroken && s.bsideFlankThreshold > 0 ? Math.min(DAY_PHASES.length - 1, Math.trunc((s.bsideFlankDraw * DAY_PHASES.length) / s.bsideFlankThreshold)) : -1,
@@ -64,13 +66,17 @@ export function dayShape(rules: CombatRules, day: BattleDay): DayShape {
       flankBreaks: split[i]!.flankPhase === p,
       leaves: p === evening && s.bsideRetreatTo !== null,
       surrenders: p === evening && s.bsideCutOff === 'surrender',
+      destroyed: p === evening && s.bsideCutOff === 'destroyed',
     })),
   }));
   return { day: day.bdayDay, phases, pursuits: day.bdaySides.map((s) => ({ faction: s.bsideFaction, pursue: s.bsidePursue })) };
 }
 
+/** The captured parts of a force taken in a pocket, all at the day's end. */
+const POCKET_PARTS: readonly string[] = ['missing_in_pocket', 'surrender', 'destroyed', 'stragglers_in_pocket'];
+
 function surrenderedOf(parts: readonly { readonly btermKind: string; readonly btermValue: number }[]): number {
-  return parts.filter((p) => p.btermKind === 'surrender' || p.btermKind === 'stragglers_in_pocket').reduce((a, p) => a + p.btermValue, 0);
+  return parts.filter((p) => POCKET_PARTS.includes(p.btermKind)).reduce((a, p) => a + p.btermValue, 0);
 }
 
 export interface SideTotals {
@@ -108,7 +114,7 @@ export function battleVerdict(record: BattleRecord): BattleVerdict {
   });
   let field: FactionId | null = null;
   if (last !== undefined) {
-    const gone = last.bdaySides.map((s) => s.bsideRetreatTo !== null || s.bsideCutOff === 'surrender');
+    const gone = last.bdaySides.map((s) => s.bsideRetreatTo !== null || s.bsideCutOff === 'surrender' || s.bsideCutOff === 'destroyed');
     if (gone[0] !== gone[1]) field = last.bdaySides[gone[0] ? 1 : 0]!.bsideFaction;
   }
   return { field, days: record.battleDays.length, sides };

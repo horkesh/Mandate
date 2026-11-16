@@ -29,7 +29,7 @@ export interface SetupOptions {
   readonly drivers?: Readonly<Record<string, SeatDriver>>;
   /**
    * A labelled option for mechanics runs (0064): every faction's war flag starts set, as if the war's opening
-   * situation had already fired, so the generic rule-seat principals move forces and contest ground from day 1.
+   * situation had already fired, so the generic rule-seat principals move forces and fight for ground from day 1.
    * Never a history run's setting: the flag is State, so the run hashes differently, and a runner says it did this.
    */
   readonly atWar?: boolean;

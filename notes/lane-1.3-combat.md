@@ -69,7 +69,8 @@ that every number equals the sum of its typed parts.
 6. **An unknown strength fights as none** (0064). A side of only unknown blocks has no contact, sees odds of nought,
    and withdraws, or surrenders if cut off. *Rejected:* a default strength.
 7. **The missing split two ways**: a pack share by result is captured on the field; the rest straggle and rejoin. A
-   surrender captures the men left and the stragglers in the pocket. The record keeps killed, wounded, missing and captured
+   force taken in a pocket (surrendered, or destroyed in a failed breakout) has all its men captured: those left, the
+   day's missing, and the stragglers in the pocket. The record keeps killed, wounded, missing and captured
    apart (0074). *Rejected:* captured only in pursuit (lane 1.4's), which would leave a rout capturing no one.
 8. **A surrendered block stays in State, spent**: strength 0, `fbSurrenderedDay` set, released from its post, never present
    again. *Rejected:* deleting it across three owners from combat (lane 1.7's `disband` delta is the place).
@@ -77,7 +78,8 @@ that every number equals the sum of its typed parts.
    leaves; none while both stand. Occupation is kept unchanged. *Rejected:* control by margin while both stand (that is
    the contest).
 10. **Breakout** is fought the next day at the assault rates, all-out; if the force still wants out and cannot get out,
-    it is destroyed. **A routed force in a pocket still has its commander's choice** (0074: surrender is his own act).
+    it is destroyed, recorded as `cutOff: 'destroyed'` with its own counter (`combat.destroyed`), never as his surrender.
+    **A routed force in a pocket still has its commander's choice** (0074: surrender is his own act).
 11. **Commanders hit**: one draw per side per battle-day; killed, wounded, or captured only if his side routed; captured
     if his force surrendered. Each vacates his post. `people` refuses any status change out of `captured` or `killed`.
     Wounded men do not return to duty yet.
@@ -103,10 +105,18 @@ From the new reference runs (mechanics that change something):
 - **Testbed, 120 days:** two one-day battles, each defender withdrawing: `battle_*` around(2), `killed_wounded` and
   `missing` around(4), `pursuit_chosen` and `general_hit` around(1), `occupation` around(20), `stores_fell` around(24),
   `stragglers_returned` around(102).
-- **Quiet, each with a driving kernel test:** `combat.breakout`, `combat.flank_broken`, `combat.routed` (too few
+- **Quiet, each with a driving kernel test:** `combat.breakout`, `combat.destroyed`, `combat.flank_broken`, `combat.routed` (too few
   battle-days in either run), and `map.pocket_closed` (with no contest, neither run cuts a line).
 - The kernel's 60-day seats reference game no longer fires `seats.choices`: its one battle ends with both sides holding,
   so no menu changes. Both gate runs fire it.
+
+## After the standing review (`review-lane-1.3.md`)
+
+- **S1:** a rout's drop to the floor is a `rout_floor` term, so routed morale sums like any other; the test's exemption is gone.
+- **S2:** a test routs a force in a pocket whose commander believes he can fight free, and asserts `break_out`; its control, outnumbered six to one, surrenders by his choice.
+- **S3:** a failed breakout is `destroyed`, with its captured part named so, its own evening flag in the day shape, and the `combat.destroyed` counter (quiet in both runs, driven by the breakout test).
+- **N1:** a control that the leaders' stream draws two values with no commander on either side. **N2:** a set-up that reaches the multiplier's clamp and morale's. **N3:** Bull Run is in target 2's set; its sides are not all in contact, so the band does not apply to them. **N4:** a force taken captures the day's missing with the rest; a control that `stragglersStep` skips a surrendered block.
+- Cleanups: the three stale contest comments, and the source scans match either quote style.
 
 ## Findings for later lanes
 

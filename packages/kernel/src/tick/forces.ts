@@ -30,6 +30,7 @@ export const FORCES_MECHANICS = [
   'combat.breakout',
   'combat.captured',
   'combat.cut_off',
+  'combat.destroyed',
   'combat.flank_broken',
   'combat.general_hit',
   'combat.killed_wounded',
@@ -55,7 +56,7 @@ export const FORCES_MECHANICS = [
  * phase that made them. The map
  * phase has already run today, so this phase reports the pockets a closing makes itself, and
  * hands back the day's map as it now is: the barrier and the tick's result never carry a map
- * State has moved past. Movement and the contest see the closing from tomorrow morning.
+ * State has moved past. Movement and combat see the closing from tomorrow morning.
  */
 export function commandProposalsPhase(ctx: TickContext, state: State): { readonly state: State; readonly derived: DerivedMap | null } {
   const map = ctx.world.map;
@@ -127,6 +128,7 @@ export function combatPhase(ctx: TickContext, state: State): { readonly state: S
       else if (s.bsideResult === 'withdrew') fire(ctx, 'combat.withdrew');
       if (s.bsideCutOff !== null) fire(ctx, 'combat.cut_off');
       if (s.bsideCutOff === 'surrender') fire(ctx, 'combat.surrendered');
+      if (s.bsideCutOff === 'destroyed') fire(ctx, 'combat.destroyed');
       if (s.bsideCutOff === 'break_out') fire(ctx, 'combat.breakout');
       if (s.bsideHit !== null) fire(ctx, 'combat.general_hit');
       if (s.bsidePursue !== null && s.bsidePursue !== 'none') fire(ctx, 'combat.pursuit_chosen');

@@ -14,8 +14,8 @@
  *   experience. Below the pack's rout line the side routs: mechanical, never chosen, and it kills no one.
  * - **Night** (P6): a side that did not rout stays or withdraws by its commander's believed odds. A side that leaves with
  *   no legal retreat (0019) is cut off: its commander breaks out (tomorrow, at the assault rates) or surrenders, by his
- *   own traits even when it routed (0074: surrender is his own act); one whose breakout failed is destroyed. Only then is a
- *   force destroyed: its men are captured.
+ *   own traits even when it routed (0074: surrender is his own act); one whose breakout failed is destroyed, recorded as
+ *   such and never as his surrender. Only then is a force taken: its men, the day's missing among them, are captured.
  * - **Missing** (P4, P8): a share of kw by the side's result, more when its flank broke, capped at the men left. Of the
  *   missing, a share by result is captured on the field; the rest straggle and rejoin over days. Captured men leave a
  *   block's strength, a typed loss in the record (R4's battle ruling).
@@ -26,7 +26,7 @@ import type { FactionId, ForceBlockId, PostId, RegionId } from '../ids.ts';
 import { clamp } from '../permille.ts';
 import { nextInt, type RngStream } from '../rng.ts';
 import { commitAtDawn, cutOffChoice, pursuitChoice, standAtNight, type CommanderView } from './decide.ts';
-import type { BattleDay, BattleSide, BattleTerm, BlockLoss, CutOffChoice, LeaderHit, Pursuit } from './records.ts';
+import type { BattleDay, BattleSide, BattleTerm, BlockLoss, CutOff, LeaderHit, Pursuit } from './records.ts';
 import type { BattleType, CombatRules, Commit, DayResult } from './rules.ts';
 
 /** Values drawn from a battle-day's stream, always (P7). */
@@ -93,6 +93,7 @@ export interface SideOutcome {
   readonly faction: FactionId;
   /** Where its blocks go tonight (withdrew or routed with a way out), or null when they stay. */
   readonly retreatTo: RegionId | null;
+  /** Taken: it surrendered, or a failed breakout destroyed it; its men are captured either way. */
   readonly surrendered: boolean;
   readonly breakingOut: boolean;
   readonly routed: boolean;
@@ -221,7 +222,11 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
     const raw = me.morale + sum(terms);
     const after = clamp(raw, 0, 1000);
     if (after !== raw) terms.push(term('clamp', after - raw));
-    return { before: me.morale, after, terms, routed: after < m.routAt };
+    if (after >= m.routAt) return { before: me.morale, after, terms, routed: false };
+    // A rout drops the side to the pack's floor: a term of its own, so the record still sums (hard rule 6).
+    const floor = Math.min(0, m.routFloor - after);
+    if (floor !== 0) terms.push(term('rout_floor', floor));
+    return { before: me.morale, after: after + floor, terms, routed: true };
   });
 
   // Night: who stays, who leaves, and who is cut off.
@@ -233,11 +238,12 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
   });
   const verdict = input.sides.map((side, i) => {
     const decisions: BattleTerm[] = [...side.commitTerms, ...night[i]!.terms];
-    let cutOff: CutOffChoice | null = null;
+    let cutOff: CutOff | null = null;
     if (night[i]!.leaves && side.retreatTo === null) {
       if (side.breakingOut) {
-        // A breakout that failed: the force he chose to fight out with is destroyed (P8). Never a second breakout.
-        cutOff = 'surrender';
+        // A breakout that failed: the force he chose to fight out with is destroyed (P8), which is not his surrender
+        // (0074: surrender is his own act). Never a second breakout.
+        cutOff = 'destroyed';
         decisions.push(term('breakout_failed', 0, side.commander.person));
       } else {
         // Surrender is the cut-off commander's own act, from his traits, routed or not (0074).
@@ -263,7 +269,8 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
     const me = basics[i]!;
     const L = loss[i]!;
     const r = result(i);
-    const surrendered = verdict[i]!.cutOff === 'surrender';
+    // Taken: it surrendered, or its failed breakout destroyed it. Either way its men are captured (R4's battle ruling).
+    const surrendered = verdict[i]!.cutOff === 'surrender' || verdict[i]!.cutOff === 'destroyed';
     const killed = Math.trunc((L.kw * rules.killedPermille) / 1000);
     // Missing: by result, more with a broken flank, never more than the men left after the day's hits.
     const missingTerms = [term(`result_${r}`, Math.trunc((L.kw * rules.missingPermille[r]) / 1000), r)];
@@ -294,14 +301,17 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
       const taken = surrendered ? b.stragglers : 0;
       surrenderedMen += rest;
       stragglersTaken += taken;
-      if (kw + ms + rest + taken > 0) losses.push({ blossBlock: b.id, blossKilled: kd, blossWounded: kw - kd, blossMissing: ms - cp, blossCaptured: cp + rest, blossStragglersCaptured: taken });
+      // In a pocket taken, the day's missing are inside it too: captured with the rest, none left to straggle back.
+      const straggle = surrendered ? 0 : ms - cp;
+      const captured = surrendered ? ms + rest : cp;
+      if (kw + ms + rest + taken > 0) losses.push({ blossBlock: b.id, blossKilled: kd, blossWounded: kw - kd, blossMissing: straggle, blossCaptured: captured, blossStragglersCaptured: taken });
       const routed = morale[i]!.routed;
       blocks.push({
         block: b.id,
         killed: kd,
         wounded: kw - kd,
-        missing: ms - cp,
-        captured: cp + rest,
+        missing: straggle,
+        captured,
         stragglersCaptured: taken,
         moraleDelta: routed ? Math.min(0, rules.morale.routFloor - b.morale) : clamp(b.morale + dMorale, 0, 1000) - b.morale,
         experienceDelta: clamp(b.experience + gain, 0, 1000) - b.experience,
@@ -310,13 +320,15 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
         surrendered,
       });
     }
+    const inPocket = surrendered ? missTotal - capturedField : 0;
     const missingParts = [...missingTerms];
     if (capturedField > 0) missingParts.push(term('captured_on_field', -capturedField));
-    const capturedParts = [term('captured_on_field', capturedField), term('surrender', surrenderedMen), term('stragglers_in_pocket', stragglersTaken)].filter((x) => x.btermValue !== 0);
+    if (inPocket > 0) missingParts.push(term('missing_in_pocket', -inPocket));
+    const capturedParts = [term('captured_on_field', capturedField), term('missing_in_pocket', inPocket), term(verdict[i]!.cutOff === 'destroyed' ? 'destroyed' : 'surrender', surrenderedMen), term('stragglers_in_pocket', stragglersTaken)].filter((x) => x.btermValue !== 0);
     const stays = !leaving(i);
     let pursue: Pursuit | null = null;
     const decisions = [...verdict[i]!.decisions];
-    if (stays && !morale[i]!.routed && !night[i]!.leaves && leaving(1 - i) && verdict[1 - i]!.cutOff !== 'surrender') {
+    if (stays && !morale[i]!.routed && !night[i]!.leaves && leaving(1 - i) && verdict[1 - i]!.cutOff !== 'surrender' && verdict[1 - i]!.cutOff !== 'destroyed') {
       const p = pursuitChoice(rules, side.commander, left[i]!, left[1 - i]!);
       pursue = p.choice;
       decisions.push(...p.terms);
@@ -338,16 +350,16 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
       bsideKwParts: L.parts,
       bsideKilled: killed,
       bsideWounded: L.kw - killed,
-      bsideMissing: missTotal - capturedField,
+      bsideMissing: missTotal - capturedField - inPocket,
       bsideMissingParts: missingParts,
-      bsideCaptured: capturedField + surrenderedMen + stragglersTaken,
+      bsideCaptured: capturedField + inPocket + surrenderedMen + stragglersTaken,
       bsideCapturedParts: capturedParts,
       bsideFlankDraw: flank[i]!.draw,
       bsideFlankThreshold: flank[i]!.threshold,
       bsideFlankTerms: flank[i]!.terms,
       bsideFlankBroken: flank[i]!.broken,
       bsideMoraleBefore: morale[i]!.before,
-      bsideMoraleAfter: morale[i]!.routed ? Math.min(morale[i]!.after, rules.morale.routFloor) : morale[i]!.after,
+      bsideMoraleAfter: morale[i]!.after,
       bsideMoraleTerms: morale[i]!.terms,
       bsideDecisions: decisions,
       bsideResult: r,
@@ -376,7 +388,8 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
 /**
  * The commanders hit today, on the leaders' own stream (`combat/<battle>/<day>/leaders`; combat note finding 5): one
  * draw per side whatever happens, so whether anyone is hit never shifts another draw. Below the pack's killed share he
- * is killed, then wounded, then captured if his side routed. A man whose force surrendered is captured if not hit.
+ * is killed, then wounded, then captured if his side routed. A man whose force was taken (surrendered, or destroyed in a
+ * failed breakout) is captured if not hit.
  */
 export function leaderHits(rules: CombatRules, day: BattleDay, outcomes: readonly SideOutcome[], stream: RngStream): BattleDay {
   const l = rules.leaders;

@@ -5,7 +5,7 @@ import { describe, expect, it } from 'vitest';
 import { combatDay, type CombatResult } from '../src/combat/battle.ts';
 import { believedRatio, commitAtDawn } from '../src/combat/decide.ts';
 import type { BattleDay, BattleSide, BattleTerm } from '../src/combat/records.ts';
-import { apportion, DRAWS_PER_DAY, LEADER_DRAWS_PER_DAY, resolveDay, type DayInput, type SideInput } from '../src/combat/resolve.ts';
+import { apportion, DRAWS_PER_DAY, LEADER_DRAWS_PER_DAY, leaderHits, resolveDay, type DayInput, type SideInput } from '../src/combat/resolve.ts';
 import { combatRulesProblems, type CombatRules } from '../src/combat/rules.ts';
 import { battleVerdict, dayShape } from '../src/combat/shape.ts';
 import { buildControlIndex } from '../src/control-index/control-index.ts';
@@ -96,7 +96,7 @@ function expectBreakdownsSum(bday: BattleDay, rules: CombatRules = FIXTURE_COMBA
     expect(sum(s.bsideCapturedParts)).toBe(s.bsideCaptured);
     expect(1000 + sum(s.bsideTerms)).toBe(s.bsideMultiplier);
     expect(sum(s.bsideFlankTerms)).toBe(s.bsideFlankThreshold);
-    if (s.bsideResult !== 'routed') expect(s.bsideMoraleBefore + sum(s.bsideMoraleTerms)).toBe(s.bsideMoraleAfter);
+    expect(s.bsideMoraleBefore + sum(s.bsideMoraleTerms)).toBe(s.bsideMoraleAfter);
     const total = (k: 'blossKilled' | 'blossWounded' | 'blossMissing') => s.bsideLosses.reduce((a, l) => a + l[k], 0);
     expect([total('blossKilled'), total('blossWounded'), total('blossMissing')]).toEqual([s.bsideKilled, s.bsideWounded, s.bsideMissing]);
     expect(s.bsideLosses.reduce((a, l) => a + l.blossCaptured + l.blossStragglersCaptured, 0)).toBe(s.bsideCaptured);
@@ -206,8 +206,10 @@ describe('a rout by morale kills no one; the missing straggle and rejoin (P5, P8
     const supply = deriveMap(MAP, { control: s.regionControl, month: 6, network: networkOf(s) }).supply;
     const once = stragglersStep(MAP, s, supply, new Set());
     expect(once.state.forceBlockStates[B('b_1')]).toMatchObject({ fbStrength: 5095 + 90, fbStragglers: 815 });
-    // Not while in battle today.
+    // Not while in battle today, and never to a surrendered block (its men are gone: R4's battle ruling).
     expect(stragglersStep(MAP, s, supply, new Set([B('b_1')])).changes).toEqual([]);
+    const taken = { ...s, forceBlockStates: { ...s.forceBlockStates, [B('b_1')]: { ...s.forceBlockStates[B('b_1')]!, fbSurrenderedDay: 2 } } };
+    expect(stragglersStep(MAP, taken, supply, new Set()).changes).toEqual([]);
   });
 });
 
@@ -223,11 +225,13 @@ describe('destruction only when cut off: surrender, capture, and the trapped gar
     const b = sideOf(bday, 'b');
     expect(b.bsideCutOff).toBe('surrender');
     expect(b.bsideRetreatTo).toBeNull();
-    expect(b.bsideCaptured).toBe(600 - b.bsideKw - b.bsideMissing);
+    // Everyone not hit is captured, the day's missing among them (they are in the pocket too): none straggles home.
+    expect(b.bsideMissing).toBe(0);
+    expect(b.bsideCaptured).toBe(600 - b.bsideKw);
     expect(b.bsideCapturedParts.map((t) => t.btermKind)).toContain('surrender');
     expectBreakdownsSum(bday);
     // forces: no men left, marked surrendered; command: released from its post; people: its commander captured, his post vacant.
-    expect(after.forceBlockStates[B('b_gar')]).toMatchObject({ fbStrength: 0, fbStragglers: b.bsideMissing, fbSurrenderedDay: 2 });
+    expect(after.forceBlockStates[B('b_gar')]).toMatchObject({ fbStrength: 0, fbStragglers: 0, fbSurrenderedDay: 2 });
     expect(after.forceAssignments[B('b_gar')]).toBeNull();
     expect(after.personStatus[PER('b_gen')]).toEqual({ statusKind: 'captured', statusDay: 2 });
     expect(after.postStates[P('b_army')]!.postHolder).toBeNull();
@@ -246,10 +250,10 @@ describe('destruction only when cut off: surrender, capture, and the trapped gar
     expect([b.bsideCutOff, b.bsideRetreatTo]).toEqual([null, 'b2']);
   });
 
-  it('a cut-off force strong enough to fight breaks out, and a second failure surrenders it', () => {
+  it('a cut-off force strong enough to fight breaks out, and a second failure destroys it, which is not his surrender (0074)', () => {
     // b believes it can fight its way out (above its breakout share, below its hold share): it breaks out.
     const start = game(TRAPPED, [aBlock('a_1', 'mid', 9000), bBlock('b_1', 'mid', 5000)], ['a_1']);
-    // Steady men, so neither day ends in a rout (a routed force in a pocket surrenders at once).
+    // Steady men, so neither day ends in a rout: the test is about the breakout, not about morale.
     const g = { ...start, state: { ...start.state, forceBlockStates: { ...start.state.forceBlockStates, [B('b_1')]: { ...start.state.forceBlockStates[B('b_1')]!, fbMorale: 1000 } } } };
     const first = day(g);
     const b1 = sideOf(first.fought[0]!.day, 'b');
@@ -260,9 +264,30 @@ describe('destruction only when cut off: surrender, capture, and the trapped gar
     const day2 = second.fought[0]!.day;
     // The breakout is fought at the assault rates, with b attacking all-out.
     expect([day2.bdayType, day2.bdayAttacker, sideOf(day2, 'b').bsideCommit]).toEqual(['assault_works', 'b', 'all_out']);
-    expect(sideOf(day2, 'b').bsideCutOff).toBe('surrender');
     // It wants out again and cannot get out: its breakout failed, and the force is destroyed, never breaking out twice.
-    expect(sideOf(day2, 'b').bsideDecisions.map((t) => t.btermKind)).toContain('breakout_failed');
+    // The record says destroyed, never surrender: surrender is his own act (0074). Its men are captured all the same.
+    const b2 = sideOf(day2, 'b');
+    expect(b2.bsideCutOff).toBe('destroyed');
+    expect(b2.bsideDecisions.map((t) => t.btermKind)).toContain('breakout_failed');
+    expect(b2.bsideCapturedParts.map((t) => t.btermKind)).toContain('destroyed');
+    expect(b2.bsideCapturedParts.map((t) => t.btermKind)).not.toContain('surrender');
+    expect(dayShape(FIXTURE_COMBAT_RULES, day2).phases[3]!.sides[1]).toMatchObject({ destroyed: true, surrenders: false });
+    expectBreakdownsSum(day2);
+    // The tick counts it as destroyed, never as surrendered.
+    const ctx = ctxFor(g.world, s, 3, MAP_MECHANICS);
+    combatPhase(ctx, s);
+    expect([ctx.telemetry!.mechanics['combat.destroyed']!.fires, ctx.telemetry!.mechanics['combat.surrendered']!.fires]).toEqual([1, 0]);
+  });
+
+  it('a force that routs in a pocket still has its commander\'s choice: he breaks out if he believes he can fight free (0074)', () => {
+    const shaken = (g: Game): Game => ({ ...g, state: { ...g.state, forceBlockStates: { ...g.state.forceBlockStates, [B('b_1')]: { ...g.state.forceBlockStates[B('b_1')]!, fbMorale: 280 } } } });
+    const hopeful = sideOf(day(shaken(game(TRAPPED, [aBlock('a_1', 'mid', 9000), bBlock('b_1', 'mid', 7000)], ['a_1']))).fought[0]!.day, 'b');
+    expect([hopeful.bsideResult, hopeful.bsideCutOff]).toEqual(['routed', 'break_out']);
+    expect(hopeful.bsideDecisions.map((t) => t.btermKind)).toContain('cut_off_believed_ratio');
+    // The control: the same rout, outnumbered six to one, and he surrenders, by his own choice too.
+    const hopeless = sideOf(day(shaken(game(TRAPPED, [aBlock('a_1', 'mid', 9000), bBlock('b_1', 'mid', 1500)], ['a_1']))).fought[0]!.day, 'b');
+    expect([hopeless.bsideResult, hopeless.bsideCutOff]).toEqual(['routed', 'surrender']);
+    expect(hopeless.bsideDecisions.map((t) => t.btermKind)).toContain('cut_off_believed_ratio');
   });
 
   it('a rout that captures men on the field: a typed loss, kept apart from the missing (R4\'s battle ruling)', () => {
@@ -323,13 +348,13 @@ describe('only the battle model captures men (R4\'s battle ruling; lane 1.8\'s n
   });
 
   it('only combat proposes a battle loss, the one change that captures men, and only forces applies it', () => {
-    const proposers = sources.filter((f) => /change:\s*'battle_losses'/.test(readFileSync(f, 'utf8'))).map((f) => relative(root, f).split('\\').join('/'));
+    const proposers = sources.filter((f) => /change:\s*['`"]battle_losses['`"]/.test(readFileSync(f, 'utf8'))).map((f) => relative(root, f).split('\\').join('/'));
     expect(proposers).toEqual(['packages/kernel/src/combat/battle.ts', 'packages/kernel/src/forces/forces.ts']);
     expect(readFileSync(join(root, 'packages/kernel/src/forces/forces.ts'), 'utf8')).toContain("readonly cause: 'combat';");
   });
 
   it('only people writes a person\'s status, and only combat proposes one', () => {
-    const writers = sources.filter((f) => /change:\s*'status'/.test(readFileSync(f, 'utf8'))).map((f) => relative(root, f).split('\\').join('/'));
+    const writers = sources.filter((f) => /change:\s*['`"]status['`"]/.test(readFileSync(f, 'utf8'))).map((f) => relative(root, f).split('\\').join('/'));
     expect(writers).toEqual(['packages/kernel/src/combat/battle.ts', 'packages/kernel/src/people/people.ts']);
   });
 });
@@ -384,6 +409,34 @@ describe('streams: a fixed number of draws per battle-day, whatever happens (P7)
     expectBreakdownsSum(broken, always);
   });
 
+  it('the leaders\' stream draws two values a battle-day, one per side, even when neither side has a commander', () => {
+    const r = resolveDay(FIXTURE_COMBAT_RULES, input(side('a', 9000, 'main', 'a2'), side('b', 4000, 'defend', 'b2')), createStream(7, 'combat/x/5'));
+    expect(r.day.bdaySides.map((s) => s.bsideCommander)).toEqual([null, null]);
+    const drawn = createStream(7, 'combat/x/5/leaders');
+    const hit = leaderHits(FIXTURE_COMBAT_RULES, r.day, r.sides, drawn);
+    const fixedTwo = createStream(7, 'combat/x/5/leaders');
+    nextInt(fixedTwo, 1000);
+    nextInt(fixedTwo, 1000);
+    expect(drawn.state).toBe(fixedTwo.state);
+    // Each side's draw is in its record, and nobody is hit with no one to hit.
+    expect(hit.bdaySides.map((s) => [s.bsideHitDraw >= 0, s.bsideHit])).toEqual([[true, null], [true, null]]);
+  });
+
+  it('a clamp is a term of its own: the multiplier at the pack\'s ceiling, morale at full', () => {
+    const tight = { ...FIXTURE_COMBAT_RULES, multiplier: { min: 250, max: 1000 } };
+    const veterans = (faction: string, men: number, commit: SideInput['commit']): SideInput => {
+      const s = side(faction, men, commit, `${faction}2`);
+      return { ...s, blocks: [{ ...s.blocks[0]!, morale: 1000, experience: 1000 }] };
+    };
+    // All-out on both sides raises both multipliers past the ceiling; a tiny enemy leaves the veterans' morale rising past 1000.
+    const r = resolveDay(tight, input(veterans('a', 9000, 'all_out'), side('b', 60, 'all_out', 'b2')), createStream(7, 'combat/x/5'));
+    const a = r.day.bdaySides[0]!;
+    expect(a.bsideMultiplier).toBe(1000);
+    expect(a.bsideTerms.find((t) => t.btermKind === 'clamp')!.btermValue).toBeLessThan(0);
+    expect(a.bsideMoraleAfter).toBe(1000);
+    expect(a.bsideMoraleTerms.find((t) => t.btermKind === 'clamp')!.btermValue).toBeLessThan(0);
+    expectBreakdownsSum(r.day, tight);
+  });
   it('an unknown strength fights as none and is listed in the record (0064; 1A\'s done check)', () => {
     const r = resolveDay(FIXTURE_COMBAT_RULES, input(side('a', 9000, 'main', 'a2'), side('b', null, 'defend', 'b2')), createStream(7, 'combat/x/5'));
     const b = r.day.bdaySides[1]!;

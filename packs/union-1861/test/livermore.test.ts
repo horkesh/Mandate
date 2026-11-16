@@ -126,7 +126,8 @@ describe('Livermore\'s tables as a harness of named set-ups (the combat note\'s 
   });
 
   it('target 2: a side fully engaged for a single day of open battle loses 90–240 per 1000 (the note: Antietam, Perryville)', () => {
-    const days = RESULTS.filter((x) => x.row.days === 1 && (x.row.type === 'attack_open' || x.row.type === 'meeting') && x.row.battle !== 'bull_run');
+    // Every single-day open battle, Bull Run included; the band applies to each side all of whose men were in contact.
+    const days = RESULTS.filter((x) => x.row.days === 1 && (x.row.type === 'attack_open' || x.row.type === 'meeting'));
     const sides = days.flatMap((x) => SIDES.filter((f) => x.runs.every((r) => r.full[f])).map((f) => ({ battle: x.row.battle, f, rate: x.model[f] })));
     // Antietam's and Perryville's defenders, and the smaller Union force that attacked at Wilson's Creek, were all in contact.
     expect(sides.map((s) => `${s.battle}:${s.f}`)).toEqual(expect.arrayContaining(['antietam:confederate', 'perryville:confederate']));

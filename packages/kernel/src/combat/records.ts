@@ -43,6 +43,8 @@ export type LeaderHit = (typeof LEADER_HITS)[number];
 
 /** The commander's choice with no way out (P8): break out, or surrender the force. */
 export type CutOffChoice = 'break_out' | 'surrender';
+/** What became of a side cut off: his choice, or destroyed when the breakout he chose failed (never his surrender, 0074). */
+export type CutOff = CutOffChoice | 'destroyed';
 
 /** The winner's choice the morning after a withdrawal or rout (P6.3). Lane 1.4 runs the pursuit; combat only emits it. */
 export const PURSUITS = ['none', 'follow', 'press'] as const;
@@ -76,7 +78,7 @@ export interface BattleSide {
   /** Missing who straggle, and their breakdown (by result, flank break, and the cap at the men present). */
   readonly bsideMissing: number;
   readonly bsideMissingParts: readonly BattleTerm[];
-  /** Captured, kept apart from the missing (R4's battle ruling): on the field, in a surrender, and stragglers taken in the pocket. */
+  /** Captured, kept apart from the missing (R4's battle ruling): on the field, and in a force taken (surrendered or destroyed) with the day's missing and the stragglers in the pocket. */
   readonly bsideCaptured: number;
   readonly bsideCapturedParts: readonly BattleTerm[];
   readonly bsideFlankDraw: number;
@@ -89,8 +91,8 @@ export interface BattleSide {
   /** What his decisions read today (dawn, night, cut off, pursuit): believed ratios and the shares of his demand. */
   readonly bsideDecisions: readonly BattleTerm[];
   readonly bsideResult: DayResult;
-  /** With no legal retreat (0019): break out or surrender; null when it stayed or had a way out. */
-  readonly bsideCutOff: CutOffChoice | null;
+  /** With no legal retreat (0019): break out or surrender, his choice; destroyed when that breakout failed; null when it stayed or had a way out. */
+  readonly bsideCutOff: CutOff | null;
   readonly bsideRetreatTo: RegionId | null;
   /** The pursuit its commander chooses after the other side withdrew or routed; null when there is none to choose. */
   readonly bsidePursue: Pursuit | null;
