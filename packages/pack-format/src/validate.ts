@@ -352,6 +352,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
 
   // ---- people
   const people = idSet('people', world.people);
+  const clashable = new Set(world.rules.people.verbs.orderValues.flatMap((r) => r.clashes));
   world.people.forEach((p, i) => {
     const at = (f?: string) => W('people', i, f);
     useKey(p.name, at('name'));
@@ -392,6 +393,15 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       citeCheck(o.cites, at(`regardOthers[${j}].cites`), false, `regard toward ${o.toward}`);
       if (!p.invented && o.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer').length === 0) {
         err('centre-without-citation', at(`regardOthers[${j}]`), `regard toward ${o.toward} has no admissible citation`, 'a citation of a primary or secondary source');
+      }
+    });
+    // Lane 1.5b: a practice is one some row of the map clashes with (else it could never bite), each cited, never twice.
+    p.practices.forEach((pr, j) => {
+      if (!clashable.has(pr.practice)) err('unknown-reference', at(`practices[${j}].practice`), `practice "${pr.practice}" is not one any order of the map clashes with`, 'a practice named in some rules.people.verbs.orderValues row’s clashes');
+      if (p.practices.findIndex((x) => x.practice === pr.practice) !== j) err('duplicate-id', at(`practices[${j}]`), `practice "${pr.practice}" is listed twice`);
+      citeCheck(pr.cites, at(`practices[${j}].cites`), false, `practice "${pr.practice}"`);
+      if (!p.invented && pr.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer').length === 0) {
+        err('value-without-citation', at(`practices[${j}]`), `practice "${pr.practice}" has no admissible citation`, 'a citation of a primary or secondary source');
       }
     });
     p.values.forEach((v, j) => {

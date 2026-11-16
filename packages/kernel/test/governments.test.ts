@@ -101,7 +101,7 @@ describe('a situation closing neutral passage, end to end through the tick (0055
           lockedCosts: [],
           orders: [],
           honours: [],
-          watched: false,
+          watched: false, policy: null,
           gate: null,
         },
       ],

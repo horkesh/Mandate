@@ -25,10 +25,14 @@ export function readSituationLayer(files: PackFiles, pack: PackData): SituationL
   warFlagSources(items, pack, sink);
   nationActs(items, pack, sink);
   const hasGate = listOptional((p) => files.files(p), GATE_DIR).length > 0;
-  if (items.length === 0 && !hasGate && listOptional((p) => files.folders(p), SITUATIONS_DIR).length === 0) return { situations: [], gate: null, issues: sink.issues };
+  if (items.length === 0 && !hasGate && listOptional((p) => files.folders(p), SITUATIONS_DIR).length === 0) {
+    policyRows(items, pack, null, sink);
+    return { situations: [], gate: null, issues: sink.issues };
+  }
   // A pack with situations must carry its gate: without it, A1 cannot tell what needs a tag.
   const gate = readGate(files, sink);
   sink.add(validateSituations(items, pack));
+  policyRows(items, pack, gate, sink);
   if (gate !== null) {
     sink.add(checkGate(items, gate, localeStrings(pack.strings), pack.provenance));
     // Lane 1.7 (SENSITIVE-HISTORY E3): every agency reason the derived self-emancipation term carries is one of the register's agency types.
@@ -43,6 +47,68 @@ export function readSituationLayer(files: PackFiles, pack: PackData): SituationL
   }
   const ok = errorsOf(sink.issues).length === 0;
   return { situations: ok ? items.map((i) => i.def) : [], gate, issues: sink.issues };
+}
+
+const topicsOf = (tag: phase0.GateTag | null): readonly string[] => (tag === null || 'none' in tag ? [] : tag.topics);
+const sameSet = (a: readonly string[], b: readonly string[]) => {
+  const x = [...new Set(a)].sort();
+  const y = [...new Set(b)].sort();
+  return x.length === y.length && x.every((v, i) => v === y[i]);
+};
+
+/**
+ * The map from orders to values, as gate content (0074; the gate review's G-1.5a and G-1.5c):
+ * - every gate topic a row names is a topic of the pack's register;
+ * - an option tagged with a topic the map gates (one any row names) names its `policy:` row, and that row carries the
+ *   topic, so the gate reviewer's sign-off on the rows covers every such option;
+ * - an option that names a row honours exactly the row's values, so the map and a delegate's choice cannot diverge;
+ * - an option the register supersedes, or marks watched, whose row is gated, names a `notCheaperThan` floor, and the
+ *   floor carries the same topics, so the floor itself is signed off;
+ * - the posts an option says carry the policy exist.
+ */
+export function policyRows(items: readonly { readonly file: string; readonly def: phase0.SituationDef }[], pack: PackData, gate: GateData | null, sink: IssueSink): void {
+  const rows = pack.world.rules.people.verbs.orderValues;
+  const byOrder = new Map(rows.map((r) => [r.order, r] as const));
+  const register = gate === null ? null : new Set(gate.register.topics.map((t) => t.id as string));
+  rows.forEach((r, i) => {
+    r.gateTopics.forEach((t, j) => {
+      const at = `rules.people.verbs.orderValues[${i}].gateTopics[${j}]`;
+      if (register === null) sink.error('gate-unknown-topic', 'pack.json', at, `row ${r.order} names gate topic "${t}", but the pack has no gate register`, 'a topic id from gate/register.json (G-1.5c)');
+      else if (!register.has(t)) sink.error('gate-unknown-topic', 'pack.json', at, `"${t}" is not a register topic`, 'a topic id from gate/register.json (G-1.5c)');
+    });
+  });
+  const mapTopics = new Set(rows.flatMap((r) => r.gateTopics));
+  const superseded = new Set((gate?.register.topics ?? []).flatMap((t) => t.supersededOptions.map((s) => `${s.situation}/${s.option}`)));
+  const posts = new Set(pack.scenarios.flatMap((s) => s.posts.map((p) => p.id as string)));
+  for (const { file, def } of items) {
+    const err = (kind: string, at: string, message: string, expected: string) => sink.error(kind, file, at, message, expected);
+    def.options.forEach((o, i) => {
+      const gatedBy = [...new Set([...topicsOf(def.gate), ...topicsOf(o.gate)])].filter((t) => mapTopics.has(t)).sort();
+      if (o.policy === null) {
+        if (gatedBy.length > 0) err('policy-missing', `options[${i}].policy`, `option "${o.id}" is tagged ${gatedBy.join(', ')}, which the map from orders to values gates, but names no policy row`, 'policy: { row, carriedBy }, naming a policy: row tagged with that topic (G-1.5a)');
+        return;
+      }
+      o.policy.carriedBy.forEach((p, j) => {
+        if (!posts.has(p)) err('unknown-reference', `options[${i}].policy.carriedBy[${j}]`, `"${p}" is not a post`, 'a post id');
+      });
+      const row = byOrder.get(o.policy.row);
+      if (row === undefined) {
+        err('unknown-reference', `options[${i}].policy.row`, `"${o.policy.row}" is not a row of the map from orders to values`, 'a policy: row of rules.people.verbs.orderValues');
+        return;
+      }
+      if (!sameSet(o.honours, row.honours)) err('policy-honours', `options[${i}].honours`, `option "${o.id}" honours [${[...o.honours].sort().join(', ')}], but its row ${row.order} honours [${[...row.honours].sort().join(', ')}]`, 'exactly the row’s honours, so the map and a delegate’s choice agree (G-1.5a)');
+      for (const t of gatedBy) if (!row.gateTopics.includes(t)) err('policy-row-ungated', `options[${i}].policy.row`, `row ${row.order} is not tagged "${t}", which option "${o.id}" is`, 'a row tagged with the option’s topic, so the gate reviewer signs it off (G-1.5a)');
+      const marked = o.watched || superseded.has(`${def.id}/${o.id}`);
+      if (marked && row.gateTopics.length > 0) {
+        if (row.notCheaperThan === null) err('policy-floor-missing', `options[${i}].policy.row`, `option "${o.id}" is ${o.watched ? 'watched' : 'superseded by a later law'}, and its gated row ${row.order} names no notCheaperThan`, 'a notCheaperThan floor, so the row is never cheaper in pushback than the policy it replaces (0074; G-1.5c)');
+        else {
+          const floor = byOrder.get(row.notCheaperThan);
+          const missing = row.gateTopics.filter((t) => floor !== undefined && !floor.gateTopics.includes(t));
+          if (missing.length > 0) err('policy-floor-ungated', `options[${i}].policy.row`, `row ${row.order}'s floor ${row.notCheaperThan} is not tagged ${missing.join(', ')}`, 'a floor carrying the same gate topics, so the gate reviewer signs it off too (G-1.5c)');
+        }
+      }
+    });
+  }
 }
 
 /**

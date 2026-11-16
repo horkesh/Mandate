@@ -176,6 +176,8 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'people.promise_kept': { why: VERBS_UNUSED, test: PV, needle: 'with a promise of advancement kept by it' },
   'people.promise_broken': { why: VERBS_UNUSED, test: PV, needle: 'a promise falls due and breaks' },
   'reports.observer_letter': { why: VERBS_UNUSED, test: PV, needle: 'send an observer: he watches' },
+  // Lane 1.5b: a policy option applies its row's pushback; no pack option names a policy row yet (lane 1.11's S17 will).
+  'situations.policy': { why: 'no situation option names a policy row of the map yet (lane 1.11 authors the first, S17); the kernel test drives it', test: 'packages/kernel/test/gate-wiring.test.ts', needle: 'a chosen policy applies its pushback through the owners' },
   'seats.attention_refused': { why: 'the generic principal spends a few points a week of a budget of twelve, so nothing is refused for want of attention; the kernel test drives it', test: PV, needle: 'refuses what it cannot pay' },
 };
 

@@ -32,7 +32,7 @@ function option(id: string, displayKey: number, over: Partial<OptionDef> = {}): 
     lockedCosts: [],
     orders: [],
     honours: [],
-    watched: false,
+    watched: false, policy: null,
     gate: null,
     ...over,
   };

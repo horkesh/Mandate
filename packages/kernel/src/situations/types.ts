@@ -135,6 +135,12 @@ export interface SituationCitation {
   readonly at: string | null;
 }
 
+/** An option's policy row and who carries it out (lane 1.5b). */
+export interface OptionPolicy {
+  readonly row: string;
+  readonly carriedBy: readonly PostId[];
+}
+
 export interface OptionDef {
   readonly id: string;
   readonly label: string;
@@ -152,8 +158,17 @@ export interface OptionDef {
   /** Costs that apply on every use, whatever follows (gate B5): no condition, no chance. */
   readonly lockedCosts: readonly Effect[];
   readonly orders: readonly OptionOrder[];
-  /** Values the option honours, which a delegate weighs when he decides by his values (0040). */
+  /**
+   * Values the option honours, which a delegate weighs when he decides by his values (0040). An option that names a
+   * policy row honours exactly that row's values (the validator checks it), so the map and a delegate's choice agree.
+   */
   readonly honours: readonly string[];
+  /**
+   * The policy this option is (lane 1.5b; 0074): a `policy:` row of the pack's order-to-value map, and the posts whose
+   * holders carry it out (none: a policy no one post carries). Choosing it applies the row's pushback through its owners:
+   * a grievance for every stakeholder, and each carrier's own answer through compliance. Null: not a policy.
+   */
+  readonly policy: OptionPolicy | null;
   /** The gate reviewer's mark for the lever sweep (D6): the historically worst conduct. */
   readonly watched: boolean;
   /** A tag of the option's own, when it differs from the situation's. */

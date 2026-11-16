@@ -28,6 +28,7 @@ import {
   parseTraits,
   parseValues,
   parseRegardOthers,
+  parsePractices,
   type Cell,
 } from './cells.ts';
 import { CsvError, parseCsv, type CsvTable } from './csv.ts';
@@ -544,6 +545,7 @@ export function generatePack(files: PackFiles): GenerateResult {
         values: r.cell('values', parseValues(r.raw('values'), sourceKeys), []),
         regard: centre('regard'),
         regardOthers: r.cell('regard_others', parseRegardOthers(r.raw('regard_others'), sourceKeys), []),
+        practices: r.cell('practices', parsePractices(r.raw('practices'), sourceKeys), []),
         traits: r.cell('traits', parseTraits(r.raw('traits'), sourceKeys), []),
         bloc: r.optionalId('bloc', 'bloc'),
         ranks: r.cell('ranks', parseRanks(r.raw('ranks')), []),

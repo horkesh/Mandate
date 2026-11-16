@@ -217,6 +217,13 @@ export function resolveDirective(
   }
   const grievances = 0 - scale(grievanceTotal, rules.grievanceWeight);
 
+  // A clash with a practice of his own (lane 1.5b): each its own reason; the term appears only when one bites.
+  let practice = 0;
+  for (const p of [...(context.practiceClashes ?? [])].sort((a, b) => strictCompare(a.practice, b.practice))) {
+    practice -= p.weight;
+    reasons.push({ kind: 'practice_clash', practice: p.practice, weight: p.weight });
+  }
+
   const contributions: Contribution[] = [
     { term: 'values', amount: values },
     { term: 'temperament', amount: temperament },
@@ -227,8 +234,9 @@ export function resolveDirective(
     { term: 'grievances', amount: grievances },
     // Only an edit has a judgement term; a plain directive's contributions are unchanged.
     ...(terms.departure === undefined ? [] : [{ term: 'judgement' as const, amount: judgement }]),
+    ...((context.practiceClashes ?? []).length === 0 ? [] : [{ term: 'practice' as const, amount: practice }]),
   ];
-  const willingness = values + temperament + regard + deterrence + capacity + disposition + grievances + judgement;
+  const willingness = values + temperament + regard + deterrence + capacity + disposition + grievances + judgement + practice;
 
   const honoursAHeldValue = reasons.some((r) => r.kind === 'values_honoured');
   const isProtected =
@@ -367,6 +375,7 @@ function validate(proxy: ProxyProfile, terms: DirectiveTerms, context: CommandCo
   assertPermille(context.available, 'context.available');
   assertPermille(context.oversight, 'context.oversight');
   assertPermille(context.leaderCredibility, 'context.leaderCredibility');
+  for (const p of context.practiceClashes ?? []) if (!Number.isSafeInteger(p.weight) || p.weight < 0) throw new RangeError(`context.practiceClashes: weight must be a whole number, at least 0, got ${p.weight}`);
   if (context.disposition !== undefined && !Number.isSafeInteger(context.disposition)) {
     throw new RangeError(`context.disposition must be an integer, got ${context.disposition}`);
   }

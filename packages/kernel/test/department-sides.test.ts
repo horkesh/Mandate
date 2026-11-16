@@ -118,7 +118,7 @@ describe('a situation moves a government of no side to a side (0065)', () => {
         lockedCosts: [],
         orders: [],
         honours: [],
-        watched: false,
+        watched: false, policy: null,
         gate: null,
       },
     ],

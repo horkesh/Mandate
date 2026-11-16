@@ -128,6 +128,11 @@ export const OptionSchema = z.strictObject({
     .default([]),
   honours: z.array(termId).default([]),
   watched: z.boolean().default(false),
+  policy: z
+    .strictObject({ row: z.string().regex(/^policy:[a-z0-9_-]+$/), carriedBy: z.array(idOf('post')).default([]) })
+    .nullable()
+    .default(null)
+    .describe('The policy this option is (lane 1.5b; 0074): a policy: row of the map, and the posts whose holders carry it out. Its honours must equal the row’s.'),
   gate: GateTagSchema.nullable().default(null),
 });
 

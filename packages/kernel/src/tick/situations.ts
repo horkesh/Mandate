@@ -47,6 +47,7 @@ import {
 import type { Effect, SituationDef } from '../situations/types.ts';
 import { fire, sendReport, type RejectionReason, type TickContext } from './context.ts';
 import { issueOrder } from './orders.ts';
+import { applyPolicy } from './policy.ts';
 
 /** Every mechanic the situations phase counts (FOUNDATION section 11.5). */
 export const SITUATION_MECHANICS = [
@@ -58,6 +59,7 @@ export const SITUATION_MECHANICS = [
   'situations.noticed',
   'situations.options_changed',
   'situations.orders',
+  'situations.policy',
   'situations.proposals',
   'situations.resurfaced',
   'situations.staff_lines',
@@ -136,6 +138,8 @@ function applyDecision(ctx: TickContext, start: State, def: SituationDef, chosen
   }
   for (const o of options) {
     state = applyEffects(ctx, state, def, [...o.effects, ...o.lockedCosts], o.id);
+    // Lane 1.5b (G-1.5a): a policy option applies its row's pushback through its owners.
+    state = applyPolicy(ctx, state, def, o, principalOf(ctx, def));
     const principal = seatIdFor(principalOf(ctx, def));
     const d = ctx.world.map.world.rules.plans.goalDefaults;
     for (const order of o.orders) {

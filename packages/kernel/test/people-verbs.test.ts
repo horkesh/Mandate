@@ -476,15 +476,15 @@ describe('the map from orders to values (0074)', () => {
     const world = withPeople(base, {
       orderValues: [
         ...rules.verbs.orderValues,
-        { order: 'policy:shelter', boldness: 400, honours: [], offends: ['caution', 'order'], gateTopics: ['fen-flight'], notCheaperThan: null },
-        { order: 'policy:send_back', boldness: 400, honours: [], offends: ['glory'], gateTopics: ['fen-flight'], notCheaperThan: 'policy:shelter' },
+        { order: 'policy:shelter', boldness: 400, honours: [], offends: ['caution', 'order'], gateTopics: ['fen-flight'], notCheaperThan: null, clashes: [] },
+        { order: 'policy:send_back', boldness: 400, honours: [], offends: ['glory'], gateTopics: ['fen-flight'], notCheaperThan: 'policy:shelter', clashes: [] },
       ],
     });
     const s = createState(world, { seed: 1 });
-    const shelter = pushbackOf(world, s, 'policy:shelter', P('a_gen'), P('a_lead'));
+    const shelter = pushbackOf(world, s, 'policy:shelter', [P('a_gen')], P('a_lead'));
     // a_sec and a_gen (caution) and a_clerk (order) are on the side and hold what sheltering offends.
     expect(shelter.terms.filter((t) => t.source === 'values').map((t) => t.person).sort()).toEqual(['a_clerk', 'a_gen', 'a_sec', 'a_spy']);
-    const sendBack = pushbackOf(world, s, 'policy:send_back', P('a_gen'), P('a_lead'));
+    const sendBack = pushbackOf(world, s, 'policy:send_back', [P('a_gen')], P('a_lead'));
     // Only a_bold holds glory, so sending back would be cheaper; by construction it is not.
     expect(sendBack.total).toBe(shelter.total);
     expect(sendBack.floor).toBe('policy:shelter');
@@ -495,7 +495,7 @@ describe('the map from orders to values (0074)', () => {
     const rules = base.map.world.rules.people;
     const values = base.map.world.vocabularies.values.map((v) => v.id);
     const kinds = base.map.world.vocabularies.personKinds.map((k) => k.id);
-    const row = (order: string, floor: string | null) => ({ order, boldness: 400, honours: [], offends: [], gateTopics: [], notCheaperThan: floor });
+    const row = (order: string, floor: string | null) => ({ order, boldness: 400, honours: [], offends: [], gateTopics: [], notCheaperThan: floor, clashes: [] });
     const check = (extra: ReturnType<typeof row>[]) => verbRulesProblems(rules.attention, { ...rules.verbs, orderValues: [...rules.verbs.orderValues, ...extra] }, values, kinds);
     expect(check([row('policy:a', null), row('policy:b', 'policy:a')])).toEqual([]);
     expect(check([row('policy:self', 'policy:self')])).toEqual(['people rule orderValues.policy:self.notCheaperThan loops back to itself: policy:self -> policy:self']);
@@ -520,7 +520,7 @@ describe('regard between people (lane 1.5’s column)', () => {
 });
 
 function option(id: string, displayKey: number, over: Partial<OptionDef> = {}): OptionDef {
-  return { id, label: `situation.x.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [], lockedCosts: [], orders: [], honours: [], watched: false, gate: null, ...over };
+  return { id, label: `situation.x.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [], lockedCosts: [], orders: [], honours: [], watched: false, policy: null, gate: null, ...over };
 }
 
 function decision(id: string, over: Partial<SituationDef> = {}): SituationDef {

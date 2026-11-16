@@ -80,6 +80,11 @@ export interface PersonRecord {
    * the same pack rule as regard for the principal. Anyone not listed starts at the pack's regard for the unknown.
    */
   readonly regardOthers: readonly { readonly toward: PersonId; readonly direction: StatDirection; readonly cites: readonly Citation[] }[];
+  /**
+   * His own standing practices (lane 1.5b), each cited: conduct of his own that an order of the map can run against (a
+   * row's `clashes`), such as a commander's practice toward fugitives (SENSITIVE-HISTORY 3.2). Gate content.
+   */
+  readonly practices: readonly { readonly practice: string; readonly cites: readonly Citation[] }[];
   readonly traits: readonly TraitEvidence[];
   /** A bloc from the pack's vocabulary, or null. */
   readonly bloc: string | null;

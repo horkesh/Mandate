@@ -53,7 +53,7 @@ describe('war flags at setup', () => {
 /** The reviewer's N3 (0066): a decision option sets the faction's own flag, and `atWarSince` appears only after the decision. */
 describe('the war begins by the faction’s own decision', () => {
   const option = (id: string, displayKey: number, effects: OptionDef['effects'] = []): OptionDef => ({
-    id, label: `situation.opening.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects, lockedCosts: [], orders: [], honours: [], watched: false, gate: null,
+    id, label: `situation.opening.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects, lockedCosts: [], orders: [], honours: [], watched: false, policy: null, gate: null,
   });
   const opening: SituationDef = {
     id: toId('situation', 'opening'),

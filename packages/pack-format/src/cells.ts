@@ -197,6 +197,18 @@ export function parseValues(raw: string, sourceKeys: readonly string[]): Cell<w.
   return ok(out);
 }
 
+/** His own practices (lane 1.5b): `practice:citation+citation` items. */
+export function parsePractices(raw: string, sourceKeys: readonly string[]): Cell<w.PersonRecord['practices'][number][]> {
+  const out: w.PersonRecord['practices'][number][] = [];
+  for (const item of list(raw)) {
+    const colon = item.indexOf(':');
+    const practice = (colon === -1 ? item : item.slice(0, colon)).trim();
+    if (!ids.isWellFormedId(practice)) return bad(`"${practice}" is not a practice id`, 'practice:citation+citation');
+    out.push({ practice, cites: colon === -1 ? [] : parseCitations(item.slice(colon + 1), sourceKeys, '+') });
+  }
+  return ok(out);
+}
+
 /** Regard for others (lane 1.5): `person:direction:citation+citation` items. */
 export function parseRegardOthers(raw: string, sourceKeys: readonly string[]): Cell<w.PersonRecord['regardOthers'][number][]> {
   const out: w.PersonRecord['regardOthers'][number][] = [];

@@ -85,51 +85,80 @@ function extraContext(world: ReadingWorld, state: State, person: PersonId): Pick
 export function orderTerms(rules: PeopleRules, order: string): DirectiveTerms {
   const row = rules.verbs.orderValues.find((r) => r.order === order);
   if (row === undefined) throw new RangeError(`the pack's order-to-value map has no row for "${order}" (rules.people.verbs.orderValues)`);
+  const clashes = row.clashes.length === 0 ? {} : { clashes: row.clashes };
   // A row with no boldness asks nothing of his temperament: the order is read against itself, so the gap is none.
-  if (row.boldness === null) return { boldness: 500, ownBest: 500, honours: row.honours, offends: row.offends, required: 0 };
-  return { boldness: row.boldness, honours: row.honours, offends: row.offends, required: 0 };
-}
-
-/** One stakeholder's pushback against an order (hard rule 6: each a typed term). */
-export interface PushbackTerm {
-  readonly person: PersonId;
-  /** `values`: he holds a value the order offends; `recipient`: the man who must carry it out is unwilling. */
-  readonly source: 'values' | 'recipient';
-  readonly amount: number;
+  if (row.boldness === null) return { boldness: 500, ownBest: 500, honours: row.honours, offends: row.offends, required: 0, ...clashes };
+  return { boldness: row.boldness, honours: row.honours, offends: row.offends, required: 0, ...clashes };
 }
 
 /**
- * Pushback against an order of the map (0074): from every person on the recipient's side who holds a value it offends
- * (every seat with a stake, not only the man who receives it), and from the recipient's own unwillingness. A row with
- * `notCheaperThan` is, by construction, never cheaper than the row it names: its pushback is the larger of the two.
+ * One term of the pushback against an order (hard rule 6: each typed, and the terms sum to the total):
+ * - `values`: a person on the side holds a value the order offends;
+ * - `recipient`: a man who must carry it out is unwilling, apart from any clash with his practice;
+ * - `practice`: the order runs against a practice of his own (lane 1.5b);
+ * - `floor`: the row is never cheaper than the row it names (0074), and this is the difference (gate review G-1.5b).
  */
-export function pushbackOf(world: ReadingWorld, state: State, order: string, recipient: PersonId, issuer: PersonId): { readonly total: number; readonly terms: readonly PushbackTerm[]; readonly floor: string | null } {
+export type PushbackTerm =
+  | { readonly source: 'values'; readonly person: PersonId; readonly amount: number }
+  | { readonly source: 'recipient'; readonly person: PersonId; readonly amount: number }
+  | { readonly source: 'practice'; readonly person: PersonId; readonly practice: string; readonly amount: number }
+  | { readonly source: 'floor'; readonly order: string; readonly amount: number };
+
+export interface Pushback {
+  readonly total: number;
+  readonly terms: readonly PushbackTerm[];
+  /** The row whose pushback set the total, when the floor applied; else null. */
+  readonly floor: string | null;
+}
+
+/**
+ * Pushback against an order of the map (0074): from every person on the side who holds a value it offends (every seat
+ * with a stake, not only the men who carry it out), and from each of `recipients`: his unwillingness, and any clash
+ * with a practice of his own (lane 1.5b). With no recipient (a policy no post carries), the side is the issuer's. A row
+ * with `notCheaperThan` is, by construction, never cheaper than the row it names: the difference is its own term.
+ */
+export function pushbackOf(world: ReadingWorld, state: State, order: string, recipients: readonly PersonId[], issuer: PersonId): Pushback {
   const rules = peopleRules(world);
   const row = rules.verbs.orderValues.find((r) => r.order === order);
   if (row === undefined) throw new RangeError(`the pack's order-to-value map has no row for "${order}"`);
-  const side = sideOfPerson(world.map, state, recipient);
+  const carriers = [...new Set(recipients)].sort(strictCompare);
+  const side = sideOfPerson(world.map, state, carriers[0] ?? issuer);
   const terms: PushbackTerm[] = [];
   for (const p of [...world.map.world.people].sort((a, b) => strictCompare(a.id, b.id))) {
     if (p.id === issuer || sideOfPerson(world.map, state, p.id) !== side) continue;
     const offended = row.offends.filter((v) => p.values.some((h) => h.value === v)).length;
-    if (offended > 0) terms.push({ person: p.id, source: 'values', amount: offended * rules.compliance.valueWeight });
+    if (offended > 0) terms.push({ source: 'values', person: p.id, amount: offended * rules.compliance.valueWeight });
   }
-  const answer = answerOrder(world, state, recipient, issuer, orderTerms(rules, order));
-  if (answer.willingness < 0) terms.push({ person: recipient, source: 'recipient', amount: 0 - answer.willingness });
-  const total = terms.reduce((s, t) => s + t.amount, 0);
+  for (const recipient of carriers) {
+    const answer = answerOrder(world, state, recipient, issuer, orderTerms(rules, order));
+    let clashing = 0;
+    for (const r of answer.reasons) {
+      if (r.kind !== 'practice_clash') continue;
+      terms.push({ source: 'practice', person: recipient, practice: r.practice, amount: r.weight });
+      clashing += r.weight;
+    }
+    // His unwillingness apart from the clash, which is its own term above: nothing is counted twice.
+    const apart = answer.willingness + clashing;
+    if (apart < 0) terms.push({ source: 'recipient', person: recipient, amount: 0 - apart });
+  }
+  const own = terms.reduce((s, t) => s + t.amount, 0);
   if (row.notCheaperThan !== null) {
-    const floor = pushbackOf(world, state, row.notCheaperThan, recipient, issuer);
-    if (floor.total > total) return { total: floor.total, terms, floor: row.notCheaperThan };
+    const floor = pushbackOf(world, state, row.notCheaperThan, carriers, issuer);
+    if (floor.total > own) return { total: floor.total, terms: [...terms, { source: 'floor', order: row.notCheaperThan, amount: floor.total - own }], floor: row.notCheaperThan };
   }
-  return { total, terms, floor: null };
+  return { total: own, terms, floor: null };
 }
-
 /**
  * How `person` answers an order from `issuer` with these terms: compliance on the new State, with the pack's weights.
  * Pure. Lane 1.2 calls it at an order's arrival with a goal's, a plan's or an edit's terms.
  */
 export function answerOrder(world: ReadingWorld, state: State, person: PersonId, issuer: PersonId, terms: DirectiveTerms, means: { readonly available?: number; readonly supportPromised?: readonly string[] } = {}): DirectiveResponse {
-  return resolveDirective(profileOf(world, state, person, issuer), terms, contextFor(world, state, person, means), peopleRules(world).compliance);
+  const rules = peopleRules(world);
+  // Lane 1.5b: an order that runs against a practice of his own (the map's `clashes` against his cited practices).
+  const own = world.map.world.people.find((p) => p.id === person)?.practices.map((p) => p.practice) ?? [];
+  const practiceClashes = [...new Set(terms.clashes ?? [])].filter((c) => own.includes(c)).sort(strictCompare).map((practice) => ({ practice, weight: rules.verbs.practiceWeight }));
+  const context = contextFor(world, state, person, means);
+  return resolveDirective(profileOf(world, state, person, issuer), terms, practiceClashes.length === 0 ? context : { ...context, practiceClashes }, rules.compliance);
 }
 
 /**

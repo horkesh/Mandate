@@ -74,8 +74,8 @@ export interface PlanReading {
   readonly strength: number;
 }
 
-/** What the post holds for its plan, on `editDirective`'s scale for `required` (its men needed * 500 / the men committed). */
-export const PLAN_HOLDS = 500;
+export { PLAN_HOLDS } from '../planner/edits.ts';
+import { PLAN_HOLDS } from '../planner/edits.ts';
 
 /**
  * The audience's subject: the chosen plan's terms when it is read (`planned`), before approval or during execution;
