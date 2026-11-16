@@ -100,6 +100,8 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   // Lane 1.3: morale, experience, equipment, stragglers, and the days a block routed or surrendered join the same record.
   field('division strength, morale, experience, equipment', 'forces', ['combat', 'attrition', 'economy', 'recruitment'], [at('State', 'forceBlockStates')]),
   field("a force block's stores on hand", 'forces', ['supply (daily)', 'operations (a sea delivery)']),
+  // Lane 1.4b: a detachment is a `forceBlockStates` record of kind `detachment` (its row shares that record); one proposal
+  // makes, rejoins or frees it across `forces`, `movement` and `command` (`tick/detachments.ts`).
   field('detachments below the force block (garrisons, landings)', 'forces', ['command', 'operations']),
   // Lane 1.3: on the block's own record (`fbStragglers`, beside `forceBlockStates` above).
   field('stragglers: men absent from a force block who rejoin over days', 'forces', ['combat', 'attrition']),
