@@ -187,7 +187,7 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
   const relayer = world.person(msg.msgTo);
   const post = msg.msgToPost!;
   const rules = world.rules.people;
-  const answer = answerOrder(world, start, relayer.id, order.orderIssuer, goalTerms(rules, relayKindOf(start, order)), { oversight: oversightOf(ctx, start, relayer.id, order.orderIssuer) });
+  const answer = answerOrder(world, start, relayer.id, order.orderIssuer, goalTerms(rules, relayKindOf(start, order)), { oversight: oversightOf(ctx, start, relayer.id, order.orderIssuer).value });
   const state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: relayer.id, post, role: 'relay', day: ctx.day }));
   const decision = relayAction(rules, answer, relayer.id, post);
   if (decision.action === 'object') {
@@ -293,7 +293,7 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
   if (order.orderKind === 'goal') {
     const goal = order.orderGoal!;
     const outcome = conflictOf(ctx, state, msg, plan);
-    const answer = answerOrder(ctx.world, state, msg.msgTo, order.orderIssuer, goalTerms(ctx.world.rules.people, goalKindOf(goal)), { oversight: oversightOf(ctx, state, msg.msgTo, order.orderIssuer) });
+    const answer = answerOrder(ctx.world, state, msg.msgTo, order.orderIssuer, goalTerms(ctx.world.rules.people, goalKindOf(goal)), { oversight: oversightOf(ctx, state, msg.msgTo, order.orderIssuer).value });
     let next = recordResponse(state, responseOf(answer, { order: msg.msgOrigin, person: msg.msgTo, post, role: 'addressee', day: ctx.day }));
     if (outcome.obeyed === 'new') {
       const set = { id: msg.msgOrigin, issuer: order.orderIssuer, goal, viaChain: !order.orderBypass, issuedDay: order.orderIssuedDay, response: responseKey(msg.msgOrigin, msg.msgTo) };

@@ -225,7 +225,7 @@ function answerEdit(ctx: TickContext, start: State, post: PostId, derived: Deriv
     return invalid(result.reason, start);
   }
   const terms = editDirective(input, record.planDraft, result.edited, result.distance, world.map.world.rules.plans.holdingRisk, goalTerms(world.rules.people, goalKindOf(record.planGoal)));
-  const response = answerOrder(world, start, holder, record.planIssuer, terms, { oversight: oversightOf(ctx, start, holder, record.planIssuer) });
+  const response = answerOrder(world, start, holder, record.planIssuer, terms, { oversight: oversightOf(ctx, start, holder, record.planIssuer).value });
   const state = recordResponse(start, responseOf(response, { order: pending.pendingOrder, person: holder, post, role: 'addressee', day }));
   const executes = concretePlan(input, record.planDraft, chosen, result.edited, response.actual);
   for (const f of result.fell) fire(ctx, `planner.term.${f.term}`);

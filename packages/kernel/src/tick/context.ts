@@ -157,26 +157,39 @@ export function sideOf(ctx: TickContext, state: State, person: PersonId): Factio
   return f;
 }
 
+/** One typed term of a man's oversight (hard rule 6): the pack's base, his distance, the wire, and the clamp. */
+export interface OversightTerm {
+  readonly ovKind: 'base' | 'distance' | 'wire' | 'floor' | 'ceiling';
+  readonly ovValue: number;
+}
+
 /**
- * How closely the issuer watches `person` (lane 1.4, replacing lane 1.1's constant): the pack's base, less
- * `oversightPerCourierDay` for each courier day between them, plus `oversightWired` when the wire joins them (the
- * telegraph office at his elbow), never below `oversightMin` nor above 1000. A man the issuer cannot reach by courier is
- * watched at the floor. Pure: no dice, the morning's latency.
+ * How closely the issuer watches `person` (lane 1.4, replacing lane 1.1's constant), with its terms, which sum to it: the
+ * pack's base, less `oversightPerCourierDay` for each courier day between them (`distance`), plus `oversightWired` when
+ * a message between them goes by telegraph, quicker than a courier (`wire`), clamped to `oversightMin`..1000 (`floor`, `ceiling`). A man the
+ * issuer cannot reach by courier is watched at the floor. Pure: no dice, the morning's latency. Lane 1.5's observer adds
+ * its own term on top, at its own call site.
  */
-export function oversightOf(ctx: TickContext, state: State, person: PersonId, issuer: PersonId): number {
+export function oversightOf(ctx: TickContext, state: State, person: PersonId, issuer: PersonId): { readonly value: number; readonly terms: readonly OversightTerm[] } {
   const rules = ctx.world.rules.people.context;
+  const base: OversightTerm = { ovKind: 'base', ovValue: rules.oversight };
   const side = sideOfPerson(ctx.world.map, state, issuer);
-  if (side === null || person === issuer) return rules.oversight;
+  if (side === null || person === issuer) return { value: rules.oversight, terms: [base] };
   const from = whereIs(ctx, state, person);
   const to = whereIs(ctx, state, issuer);
   const courier = routeLatency(ctx.latency, ctx.world.rules.latency, 'courier', from, to, side, null);
-  if (!courier.ok) return rules.oversightMin;
+  if (!courier.ok) return { value: rules.oversightMin, terms: [base, { ovKind: 'floor', ovValue: rules.oversightMin - rules.oversight }] };
+  // On the wire: a message between them goes by telegraph, quicker than a courier (the wire route, 0026).
   const wire = routeLatency(ctx.latency, ctx.world.rules.latency, 'wire', from, to, side, null);
   const wired = wire.ok && wire.latency.parts.some((p) => p.part === 'wire');
-  const value = rules.oversight - courier.latency.days * rules.oversightPerCourierDay + (wired ? rules.oversightWired : 0);
-  return Math.max(rules.oversightMin, Math.min(1000, value));
+  const terms: OversightTerm[] = [base, { ovKind: 'distance', ovValue: -courier.latency.days * rules.oversightPerCourierDay }];
+  if (wired) terms.push({ ovKind: 'wire', ovValue: rules.oversightWired });
+  const raw = terms.reduce((a, x) => a + x.ovValue, 0);
+  const value = Math.max(rules.oversightMin, Math.min(1000, raw));
+  if (value > raw) terms.push({ ovKind: 'floor', ovValue: value - raw });
+  if (value < raw) terms.push({ ovKind: 'ceiling', ovValue: value - raw });
+  return { value, terms };
 }
-
 /** The route a message by `route` really takes (a wire sent off the wire goes by courier). No dice drawn. */
 export function takenRoute(ctx: TickContext, state: State, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId): RouteKind {
   if (route !== 'wire' || from === to) return route;

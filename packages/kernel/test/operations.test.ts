@@ -222,8 +222,9 @@ describe('battle reports: the night of the battle, hour by hour, and the returns
   const DIRECT = plan('direct:a2-mid', 'direct', [axis('main', 'a_army', ['a_1'], [leg('a2', 'mid', 'road:a2:mid')])]);
   // b's garrison is trapped: b2 is a's, so b in mid has nowhere to go, and surrenders.
   const TRAPPED = { ...CONTROL, b2: { a: 1000 }, mid: { a: 600, b: 400 } };
+  let g0: ReturnType<typeof game>;
   const fight = (boldness: StatDirection = 'high', midGovernment?: 'a_state' | 'a_nation') => {
-    const g = game({ gen: { boldness } }, [block('a_1', { department: 'a_war', region: 'a2', strength: 9000, post: P('a_army') }), block('b_1', { department: 'b_war', region: 'mid', strength: 700, post: P('b_army') })], { control: TRAPPED as unknown as typeof CONTROL, ...(midGovernment === undefined ? {} : { midGovernment }) });
+    const g = (g0 = game({ gen: { boldness } }, [block('a_1', { department: 'a_war', region: 'a2', strength: 9000, post: P('a_army') }), block('b_1', { department: 'b_war', region: 'mid', strength: 700, post: P('b_army') })], { control: TRAPPED as unknown as typeof CONTROL, ...(midGovernment === undefined ? {} : { midGovernment }) }));
     const results = play(g.world, approved(g.state, 'a_army', DIRECT), 16);
     const battle = Object.values(results.at(-1)!.state.battleRecords)[0]!;
     // Everything each principal was told, day by day (knowledge prunes superseded dispatches after a few days).
@@ -250,6 +251,27 @@ describe('battle reports: the night of the battle, hour by hour, and the returns
     expect(truth(a[2]!.id).truthTerms.some((t) => t.termRule === 'afternoon:killed_wounded_unsaid')).toBe(true);
   });
 
+  it('on the evening a breakout fails, the post above the taken commander does not wire that the phase went well (N12)', async () => {
+    const { battleReports } = await import('../src/tick/battle-reports.ts');
+    const { ctxFor } = await import('./support/tick-context.ts');
+    const tickModule = await import('../src/tick/tick.ts');
+    const mapModule = await import('../src/tick/map.ts');
+    const { results, battle, day } = fight();
+    const before = results[day.bdayDay - 1]!.state;
+    // The same battle-day, its b side recorded as destroyed in a failed breakout (and, as a control, as not cut off at all).
+    const as = (cutOff: 'destroyed' | null) => {
+      const sides = day.bdaySides.map((s) => (s.bsideFaction === 'b' ? { ...s, bsideCutOff: cutOff, bsideFlankBroken: false, bsideRetreatTo: null } : s));
+      const id = Object.keys(before.battleRecords).find((k) => before.battleRecords[k]!.battleRegion === battle.battleRegion)!;
+      const state = { ...before, battleRecords: { ...before.battleRecords, [id]: { ...battle, battleDays: [{ ...day, bdaySides: sides }] } } };
+      const { SEATS_MECHANICS } = tickModule;
+      const { MAP_MECHANICS } = mapModule;
+      const ctx = ctxFor(g0.world, state, day.bdayDay, [...SEATS_MECHANICS, ...MAP_MECHANICS]);
+      battleReports(ctx, state);
+      return ctx.outbox.filter((m) => m.msgTo === PER('b_lead') && m.msgReport!.reportClaims.some((c) => c.claimKind === 'battle-phase' && c.claimToken === 'evening')).map((m) => m.msgReport!.reportClaims[0]!.claimValue);
+    };
+    expect(as('destroyed')).toEqual([0]);
+    expect(as(null)).toEqual([1]);
+  });
   it('the first return runs low and counts the captured as missing; the full return, days later, sets the captured apart', () => {
     const { told, truth, day, results } = fight();
     const b = day.bdaySides.find((s) => s.bsideFaction === 'b')!;
@@ -331,19 +353,58 @@ describe('works, pursuit, oversight, assumed stores and pruning (lane 1.4\'s fil
     expect(pressed.bsideLosses[0]!.blossStragglersCaptured).toBe(450);
   });
 
-  it('oversight falls with courier days from the principal and rises on the wire (no longer one constant)', async () => {
+  it('a pursuer with cavalry there takes more of the pursued side\'s stragglers than one without (combat.pursuit.cavalryPermille)', async () => {
+    const { combatDay } = await import('../src/combat/battle.ts');
+    const { buildControlIndex } = await import('../src/control-index/control-index.ts');
+    const { passageOf } = await import('../src/tick/passage.ts');
+    const { applyForces } = await import('../src/forces/forces.ts');
+    const { applyBattleRecords } = await import('../src/combat/records.ts');
+    const { applyRetreats } = await import('../src/movement/march.ts');
+    const taken = (arm: 'infantry' | 'cavalry') => {
+      const g = game({ gen: { boldness: 'high' } }, [block('a_1', { department: 'a_war', region: 'mid', strength: 12000, arm, post: P('a_army') }), block('b_1', { department: 'b_war', region: 'mid', strength: 3000, post: P('b_army') })]);
+      let s = { ...g.state, forceLocations: { ...g.state.forceLocations, [B('a_1')]: { ...g.state.forceLocations[B('a_1')]!, locSinceDay: 1 } } };
+      const ground = (st: State) => ({ map: g.world.map, index: buildControlIndex(g.world.map, st.regionControl), network: passageOf(g.world.map, st), month: 6 });
+      // Day 2: b is driven from mid to b2; a's commander chooses to pursue.
+      const first = combatDay(g.world, ground(s), s, 2);
+      const fled = first.fought[0]!.day.bdaySides.find((x) => x.bsideFaction === 'b')!;
+      const chose = first.fought[0]!.day.bdaySides.find((x) => x.bsideFaction === 'a')!;
+      expect([fled.bsideRetreatTo, chose.bsidePursue === 'follow' || chose.bsidePursue === 'press']).toEqual([R('b2'), true]);
+      s = applyRetreats(applyBattleRecords(applyForces(s, first.forces).state, first.records), first.retreats, 2);
+      // Day 3: a has followed into b2; the rearguard fight takes stragglers.
+      s = { ...s, forceLocations: { ...s.forceLocations, [B('a_1')]: { locRegion: R('b2'), locAboard: null, locSinceDay: 3, locMarch: null } } };
+      const second = combatDay(g.world, ground(s), s, 3).fought[0]!.day;
+      expect(second.bdayType).toBe('rearguard');
+      return second.bdaySides.find((x) => x.bsideFaction === 'b')!.bsideCapturedParts.find((p) => p.btermKind === 'in_pursuit')?.btermValue ?? 0;
+    };
+    const foot = taken('infantry');
+    const horse = taken('cavalry');
+    expect(foot).toBeGreaterThan(0);
+    expect(horse).toBeGreaterThan(foot);
+  });
+  it('oversight falls with courier days from the principal and rises on the wire, each a typed term (no longer one constant)', async () => {
     const { oversightOf } = await import('../src/tick/context.ts');
     const { ctxFor } = await import('./support/tick-context.ts');
-    const g = game({}, [block('a_1', { department: 'a_war', region: 'a2', strength: 1000, post: P('a_army') }), block('f_1', { department: 'a_war', region: 'mid', strength: 1000, post: P('a_flank') })], { control: { ...CONTROL, mid: { a: 1000 } } as unknown as typeof CONTROL });
-    const ctx = ctxFor(g.world, g.state, 1);
-    const near = oversightOf(ctx, g.state, PER('a_gen'), PER('a_lead'));
-    const far = oversightOf(ctx, g.state, PER('a_partner'), PER('a_lead'));
-    const rules = g.world.rules.people.context;
-    expect(near).toBeGreaterThanOrEqual(rules.oversightMin);
-    expect(far).toBeLessThanOrEqual(near);
-    expect(oversightOf(ctx, g.state, PER('a_lead'), PER('a_lead'))).toBe(rules.oversight);
+    const blocks = [block('a_1', { department: 'a_war', region: 'a2', strength: 1000, post: P('a_army') }), block('f_1', { department: 'a_war', region: 'mid', strength: 1000, post: P('a_flank') })];
+    const at = (mid: Record<string, number>, more: Record<string, Record<string, number>> = {}) => {
+      const g = game({}, blocks, { control: { ...CONTROL, mid, ...more } as unknown as typeof CONTROL });
+      const ctx = ctxFor(g.world, g.state, 1);
+      return { g, near: oversightOf(ctx, g.state, PER('a_gen'), PER('a_lead')), far: oversightOf(ctx, g.state, PER('a_partner'), PER('a_lead')) };
+    };
+    const wired = at({ a: 1000 });
+    const rules = wired.g.world.rules.people.context;
+    // One courier day from the capital against two: the farther man is watched less, by the pack's term per day.
+    expect(wired.far.value).toBeLessThan(wired.near.value);
+    expect(wired.near.value - wired.far.value).toBe(rules.oversightPerCourierDay);
+    // The same man at the same distance, with his side's wire no nearer than the capital: a wire is no quicker than a
+    // courier, so it goes by road, and he is watched less by the wire's term.
+    const unwired = at({ b: 1000 }, { a2: { b: 1000 }, flank: { b: 1000 } });
+    expect(unwired.far.value).toBe(wired.far.value - rules.oversightWired);
+    expect(wired.far.terms.map((x) => x.ovKind)).toEqual(['base', 'distance', 'wire']);
+    expect(unwired.far.terms.map((x) => x.ovKind)).toEqual(['base', 'distance']);
+    // The terms sum to the value (hard rule 6), and the principal watching himself is the base.
+    for (const o of [wired.near, wired.far, unwired.far]) expect(o.terms.reduce((a, x) => a + x.ovValue, 0)).toBe(o.value);
+    expect(oversightOf(ctxFor(wired.g.world, wired.g.state, 1), wired.g.state, PER('a_lead'), PER('a_lead')).value).toBe(rules.oversight);
   });
-
   it('a block whose stores no source gives takes the pack\'s norm, flagged assumed; a block no norm covers stays unknown', () => {
     const base = mapOf({});
     const normed = indexWorld({ ...base.world, rules: { ...base.world.rules, stores: { ...base.world.rules.stores, norms: [{ post: null, postKind: null, arm: 'cavalry', faction: null, days: 4, cite: 'FIXTURE p. 1' }] } } });
@@ -369,6 +430,13 @@ describe('works, pursuit, oversight, assumed stores and pruning (lane 1.4\'s fil
     expect(Object.keys(pruneOperations(s, 400, 60).operationRecords)).toEqual(Object.keys(s.operationRecords));
     const withOld = { ...s, orderResponses: { ...s.orderResponses, 'old|a_partner': { ...Object.values(s.orderResponses)[0]!, respDay: 1, respOrder: 'old' as MessageId, respPerson: PER('a_partner') } } };
     expect(Object.keys(pruneResponses(withOld, 400, 60).state.orderResponses)).not.toContain('old|a_partner');
+    // The same old response, named by a plan, survives however old it is.
+    const named = { ...withOld, planRecords: { ...withOld.planRecords, [P('a_army')]: { ...withOld.planRecords[P('a_army')]!, planResponse: 'old|a_partner' } } };
+    expect(Object.keys(pruneResponses(named, 400, 60).state.orderResponses)).toContain('old|a_partner');
+    const { operationsRulesProblems } = await import('../src/operations/rules.ts');
+    const r = g.world.map.world.rules;
+    expect(operationsRulesProblems(r.operations, r.pruning)).toEqual([]);
+    expect(operationsRulesProblems(r.operations, { ...r.pruning, battleDays: r.operations.returns.revealDays - 1 })).toEqual(['pruning rule battleDays must be at least operations rule returns.revealDays, or a battle is pruned before its full return']);
   });
 });
 

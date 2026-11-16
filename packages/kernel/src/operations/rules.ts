@@ -51,5 +51,7 @@ export function operationsRulesProblems(rules: OperationsRules | undefined, prun
   whole(pruning!.operationDays, 'pruning rule operationDays', 1);
   whole(pruning!.battleDays, 'pruning rule battleDays', 1);
   whole(pruning!.responseDays, 'pruning rule responseDays', 1);
+  // A battle must outlive its full casualty return, which reads the record `returns.revealDays` after the battle-day.
+  if (pruning!.battleDays < rules!.returns.revealDays) problems.push('pruning rule battleDays must be at least operations rule returns.revealDays, or a battle is pruned before its full return');
   return problems;
 }
