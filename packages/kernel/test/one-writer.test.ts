@@ -386,6 +386,120 @@ describe('the scanner catches violations (positive control)', () => {
     ]);
   });
 
+  it('follows non-object type aliases to the records behind them, and catches a write to one (the alias gap, phase 0 close-out)', () => {
+    const root: SourceFile = {
+      path: 'packages/kernel/src/state.ts',
+      code: [
+        'export interface State { roster: RosterTable; ledger: LedgerList; readonly day: number }',
+        // The close-out's case: a record reachable only through `Readonly<Record<K, R>>`.
+        'export type RosterTable = Readonly<Record<PersonId, RosterRow>>;',
+        'export interface RosterRow { readonly id: PersonId; rosterRank: number }',
+        // An alias of an alias, over two lines, through a union.
+        'export type LedgerList = readonly LedgerEntry[]',
+        '  | Readonly<Record<string, TrimRow>> |',
+        '  CutList;',
+        // A union broken after its operator (review N2).
+        'export type CutList = readonly CutRow[];',
+        'export interface CutRow { readonly cutAmount: number }',
+        'export type LedgerEntry = Readonly<{ entryDay: number }> & EntryNote;',
+        'export interface EntryNote { readonly noteText: string }',
+        'export interface TrimRow { readonly trimAmount: number }',
+        'export type Unreached = Readonly<Record<string, Loose>>;',
+        'export interface Loose { looseKey: number }',
+      ].join('\n'),
+    };
+    const records = stateRecords([root]);
+    expect(records.map((r) => r.record).sort()).toEqual(['CutRow', 'EntryNote', 'RosterRow', 'State', 'TrimRow']);
+    const fields: OwnedField[] = [{ field: 'roster', writer: 'people', proposedBy: [], code: [{ record: 'State', key: 'roster' }, { record: 'State', key: 'ledger' }] }];
+    const decl: ImmutableDeclaration = { records: ['CutRow', 'EntryNote', 'TrimRow'], rootFields: ['day'], neverReassigned: ['id'] };
+    // The alias-hidden record is classified: its unowned field is reported, where before the scan never saw it.
+    expect(classificationProblems(records, fields, decl, [])).toEqual([
+      `packages/kernel/src/state.ts: RosterRow.rosterRank has no writer in OWNED_FIELDS${NOT_DECLARED('RosterRow')} (packages/kernel/src/ownership.ts)`,
+    ]);
+    // Declared immutable, its keys are protected: a write from anywhere is caught.
+    const keys = immutableKeys(records, { ...decl, records: [...decl.records, 'RosterRow'] });
+    expect(keys).toEqual(expect.arrayContaining(['noteText', 'rosterRank', 'trimAmount']));
+    expect(keys).not.toContain('looseKey');
+    const writer: SourceFile = { path: 'packages/kernel/src/supply.ts', code: 'row.rosterRank = 2;\nnote.noteText = "x";\nloose.looseKey = 1;' };
+    expect(writeViolations([writer], [], keys).map((v) => `${v.line} ${v.key}`).sort()).toEqual(['1 rosterRank', '2 noteText']);
+  });
+
+  it('catches writes through a local bound to the key, and not through a copy (the alias gap)', () => {
+    const local: SourceFile = {
+      path: 'packages/kernel/src/supply.ts',
+      code: [
+        'const c = state.controller;',
+        'c.push(f);',
+        'c[id] = f;',
+        'c.holder += 1;',
+        'delete c[id];',
+        'Object.assign(c, { a: 1 });',
+        'c![i]++;',
+        "const b = state['controller'][id];",
+        'b.holder = f;',
+        'const copy = [...state.controller];',
+        'copy.push(f);',
+        'const sliced = state.controller.slice();',
+        'sliced.push(f);',
+        'const n = state.controller.length;',
+        'let again = state.controller;',
+        'again = other;',
+        'const seen = c[id] === f;',
+        // A cast at the declaration (review N1), and a cast at the write (review S1): State is readonly, so real code casts.
+        'const cast = state.controller as unknown as X[];',
+        'cast.push(f);',
+        'const plain = state.controller;',
+        '(plain as X[]).push(f);',
+        'const row = state.controller[id];',
+        '(row as Record<string, number>)[k] = 1;',
+        // Declarations in parentheses, with a default, or as one arm of a conditional.
+        'const wrapped = (state.controller);',
+        'wrapped.push(f);',
+        'const orNone = state.controller[id] ?? {};',
+        'orNone.holder = f;',
+        'const either = ok ? state.controller : other;',
+        'either.push(f);',
+        // Reads through the same shapes stay clear.
+        'const n2 = (plain as X[]).length;',
+        'const ok2 = either.includes(f);',
+        // A call around the key makes a copy: its result is not the key (the real tree's `Object.keys(state.x)`).
+        'const keys = Object.keys(state.controller) as Id[];',
+        'keys.sort(cmp);',
+        // A receiver with its own balanced groups (re-check S3), and a cast around a default.
+        'const recv = (state as Mutable<State>).controller;',
+        'recv.push(f);',
+        'const castDefault = (state.controller[id] ?? {}) as Record<string, number>;',
+        'castDefault[k] = 1;',
+        'const picked = states[pick(i)].controller;',
+        'picked.push(f);',
+        // The conditional's else arm (re-check N4).
+        'const elseArm = ok ? other : state.controller;',
+        'elseArm.push(f);',
+      ].join('\n'),
+    };
+    expect(writeViolations([local], owned, []).map((v) => `${v.line} ${v.form}`)).toEqual([
+      '2 write through a local alias',
+      '3 write through a local alias',
+      '4 write through a local alias',
+      '5 write through a local alias',
+      '6 write through a local alias',
+      '7 write through a local alias',
+      '9 write through a local alias',
+      '19 write through a local alias',
+      '21 write through a local alias',
+      '23 write through a local alias',
+      '25 write through a local alias',
+      '27 write through a local alias',
+      '29 write through a local alias',
+      '35 write through a local alias',
+      '37 write through a local alias',
+      '39 write through a local alias',
+      '41 write through a local alias',
+    ]);
+    // In the writer module the same code is allowed.
+    expect(writeViolations([{ ...local, path: 'packages/kernel/src/control.ts' }], owned, [])).toEqual([]);
+  });
+
   it('catches a whole new State literal built outside the writer, except in a named constructor (review F6)', () => {
     const fields: OwnedField[] = [
       { field: 'the current day', writer: 'tick', proposedBy: [], code: [{ record: 'State', key: 'stateDay' }] },
