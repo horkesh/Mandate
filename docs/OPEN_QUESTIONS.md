@@ -241,8 +241,9 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.12:** rule seats must reappoint a post the battle model leaves vacant, using lane 1.5's appoint verb.
 - From lane 1.4b's report (`notes/lane-1.4b-detachments.md`, merged 1cf40d5), by lane:
   - **1B (the planner):** no operation leaves a garrison, because the planner drafts no garrison step. Add one if the history run needs it.
-  - **Lane 1.4 or 1B, cleanup:** after a landing, the parent blocks stay aboard as 0-strength shells until a rejoin or a disbanding.
+  - **Lane 1.4 or 1B, cleanup:** after a landing, the parent blocks stay aboard as 0-strength shells until a rejoin or a disbanding. Lane 1.4c (merged a810532) made sure an emptied shell can no longer be handed over in a transfer.
   - **1B:** embarkation is not built, so a by-water axis needs its troops to start aboard (beside the sea-carriage item). From the lane 1.4b review (item 6, second point): the two-carrier axis, owned by 1B (embarkation).
+  - **1B (whoever next touches detachments), from lane 1.4c's review:** two test gaps. The same-day check also covers ids with a counter (`.det.3.2`), but weakening it to the plain id fails 0 tests. And in a transfer of men, a detachment that goes along counts toward the number asked, which is untested.
   - **Lane 1.11:** S02's landing takes a new effect field, `landing` (parent, men, region), applied in phase 4c through `applyDetachmentProposals` (lane 1.4b has merged).
 - From the gate reviewer's lane 1.5 verdict (`review-gate-1861.md`, the end), by lane:
   - **Lane 1.5b** (merged 190ebf6): G-1.5a to G-1.5e, the practice-clash term and the lever sweep's delegation handling are built. Not done in it, both owned by 1B (no 1A situation needs either; decision 0082 lists them as open questions): options taken together (groups) are offered one at a time, and a practice does not change in play because it is static pack data.
