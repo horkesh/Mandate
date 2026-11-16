@@ -11,7 +11,7 @@
  * its source file, row and column; it returns no outputs while any error
  * stands, so committed data is always valid.
  */
-import { readBannedSources } from './banned-sources.ts';
+import { readBannedSources, readWeakSources } from './banned-sources.ts';
 import { strictCompare, world as w } from '@mandate/kernel';
 import { type z } from 'zod';
 import {
@@ -28,6 +28,7 @@ import {
   parseTraits,
   parseValues,
   parseRegardOthers,
+  parsePractices,
   type Cell,
 } from './cells.ts';
 import { CsvError, parseCsv, type CsvTable } from './csv.ts';
@@ -544,6 +545,7 @@ export function generatePack(files: PackFiles): GenerateResult {
         values: r.cell('values', parseValues(r.raw('values'), sourceKeys), []),
         regard: centre('regard'),
         regardOthers: r.cell('regard_others', parseRegardOthers(r.raw('regard_others'), sourceKeys), []),
+        practices: r.cell('practices', parsePractices(r.raw('practices'), sourceKeys), []),
         traits: r.cell('traits', parseTraits(r.raw('traits'), sourceKeys), []),
         bloc: r.optionalId('bloc', 'bloc'),
         ranks: r.cell('ranks', parseRanks(r.raw('ranks')), []),
@@ -890,7 +892,7 @@ export function generatePack(files: PackFiles): GenerateResult {
   const defaults = strings.get(manifest.defaultLocale) ?? [];
   strings.set(manifest.defaultLocale, [...defaults, { file: generatedStringsFile(manifest.defaultLocale), table: generatedNames }]);
 
-  const worldPack: PackData = { manifest, provenance, world, scenarios, strings, quarantined, bannedSources: readBannedSources(files) };
+  const worldPack: PackData = { manifest, provenance, world, scenarios, strings, quarantined, bannedSources: readBannedSources(files), weakSources: readWeakSources(files) };
   sink.add(validatePack(worldPack, locate));
   if (errorsOf(sink.issues).length > 0) return { outputs: new Map(), issues: sink.issues, pack: worldPack };
   // Situations and the gate (lane 0.7): hand-written, committed as they are, checked here and at load.

@@ -121,12 +121,12 @@ export const FIXTURE_PEOPLE_RULES: PeopleRules = {
   verbs: {
     weekDays: 7,
     orderValues: [
-      { order: 'verb:appoint', boldness: null, honours: ['career', 'reputation'], offends: [], gateTopics: [], notCheaperThan: null },
-      { order: 'verb:consult', boldness: null, honours: ['duty'], offends: [], gateTopics: [], notCheaperThan: null },
-      { order: 'verb:inquire', boldness: null, honours: ['duty'], offends: [], gateTopics: [], notCheaperThan: null },
-      { order: 'verb:observer', boldness: null, honours: ['duty'], offends: [], gateTopics: [], notCheaperThan: null },
-      { order: 'verb:relieve', boldness: null, honours: [], offends: ['career', 'reputation'], gateTopics: [], notCheaperThan: null },
-      { order: 'verb:transfer', boldness: null, honours: ['duty'], offends: ['reputation'], gateTopics: [], notCheaperThan: null },
+      { order: 'verb:appoint', boldness: null, honours: ['career', 'reputation'], offends: [], gateTopics: [], notCheaperThan: null, clashes: [] },
+      { order: 'verb:consult', boldness: null, honours: ['duty'], offends: [], gateTopics: [], notCheaperThan: null, clashes: [] },
+      { order: 'verb:inquire', boldness: null, honours: ['duty'], offends: [], gateTopics: [], notCheaperThan: null, clashes: [] },
+      { order: 'verb:observer', boldness: null, honours: ['duty'], offends: [], gateTopics: [], notCheaperThan: null, clashes: [] },
+      { order: 'verb:relieve', boldness: null, honours: [], offends: ['career', 'reputation'], gateTopics: [], notCheaperThan: null, clashes: [] },
+      { order: 'verb:transfer', boldness: null, honours: ['duty'], offends: ['reputation'], gateTopics: [], notCheaperThan: null, clashes: [] },
     ],
     relief: [
       { mode: 'quiet_department', grievanceWeight: 100, regardDelta: -100, standingDelta: 0 },
@@ -140,6 +140,7 @@ export const FIXTURE_PEOPLE_RULES: PeopleRules = {
     audience: { maxCounters: 3, cooldownDays: 7, vindicateRegard: 150, vindicateStanding: 50 },
     ladder: { thresholds: [100, 200, 300, 400, 500, 650, 800], dispositionPerRung: 60, publicStanding: 600, rivalStanding: 700, decayDivisor: 4 },
     initiatives: [],
+    practiceWeight: 200,
   },
 };
 

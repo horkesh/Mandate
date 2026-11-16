@@ -27,6 +27,8 @@ import { advanceMarches, marchBar, marchSteps, startLeg, type MarchGround } from
 import { enter, openOperationOf, openOperations, operationId, putOperations, type OpAxis, type OperationRecord, type OpRequest, type StageReason } from '../operations/operations.ts';
 import type { PlanCandidate } from '../planner/types.ts';
 import { applyFortification, type FortificationDelta } from '../regions/regions.ts';
+import { otherEnd } from '../world/index.ts';
+import { applyDetachmentProposals, type DetachmentProposal } from './detachments.ts';
 import type { State } from '../root-state.ts';
 import { postFaction } from '../seats/posts.ts';
 import { morningGround } from '../seats/requests.ts';
@@ -39,6 +41,7 @@ export const OPERATIONS_MECHANICS = [
   'movement.arrived',
   'movement.leg_started',
   'operations.ended',
+  'operations.landed',
   'operations.opened',
   'operations.repulsed',
   'operations.stage',
@@ -187,7 +190,7 @@ export function operationsPhase(ctx: TickContext, start: State): State {
       const holder = state.postStates[post]?.postHolder ?? null;
       let op = opened(post, holder, r, plan!, day);
       const requests: OpRequest[] = plan!.candRequests.map((q) => {
-        const axis = q.reqKind === 'cooperating_axis' ? (plan!.candAxes.find((a) => a.axisPost === q.reqPost && a.axisPost !== post)?.axisName ?? null) : null;
+        const axis = q.reqKind === 'cooperating_axis' ? (plan!.candAxes.find((a) => a.axisPost === q.reqPost && a.axisPost !== post)?.axisName ?? null) : q.reqKind === 'naval_support' ? (plan!.candAxes.find((a) => a.axisMode !== 'land')?.axisName ?? null) : null;
         const base: OpRequest = { oreqKind: q.reqKind, oreqPost: q.reqPost, oreqHolder: q.reqHolder, oreqAxis: axis, oreqMessage: null, oreqSentDay: day, oreqAnswer: 'pending', oreqRung: null, oreqResponse: null, oreqAnswerDay: null, oreqFrom: null };
         if (q.reqKind === 'reinforcement') return { ...base, oreqAnswer: 'to_principal' };
         const target = q.reqPost === null ? null : (state.postStates[q.reqPost]?.postHolder ?? null);
@@ -282,6 +285,34 @@ function stepAxis(ctx: TickContext, start: State, ground: MarchGround, op: Opera
     return { state: next, axis: logged };
   };
 
+  // At sea (lane 1.4b): an axis whose troops are all aboard sails its carrier along the plan's water legs; beside its
+  // objective, they go ashore as a landing, a detachment of each block's men, and the axis goes on as a land axis.
+  const aboard = blocks.filter((b) => state.forceLocations[b]!.locAboard !== null);
+  if (axis.oaxStage === 'march' && aboard.length > 0 && aboard.length === blocks.length) {
+    const carrier = state.forceLocations[aboard[0]!]!.locAboard!;
+    const cloc = state.forceLocations[carrier];
+    if (cloc === undefined || cloc.locMarch !== null) return { state, axis };
+    const at = cloc.locRegion;
+    const objective = world.map.regions.get(axis.oaxObjective);
+    const beside = (world.map.edgesAt.get(at) ?? []).some((e) => otherEnd(e, at) === axis.oaxObjective);
+    if (beside && objective !== undefined && (objective.kind === 'land' || objective.kind === 'key_point')) {
+      const proposals: DetachmentProposal[] = aboard
+        .filter((b) => (state.forceBlockStates[b]!.fbStrength ?? 0) > 0)
+        .map((b) => ({ kind: 'landing', parent: b, men: state.forceBlockStates[b]!.fbStrength!, region: axis.oaxObjective, post: axis.oaxPost, cause: 'operations' }));
+      const landed = applyDetachmentProposals(world.map, state, proposals, day);
+      for (const r of landed.refused) ctx.mapEvents.push({ event: 'proposal_refused', owner: 'forces', reason: r.reason, why: r.why });
+      if (landed.made.length === 0) return { state, axis: move(axis, 'end', 'no_forces', at) };
+      fire(ctx, 'operations.landed', landed.made.length);
+      return { state: landed.state, axis: move({ ...axis, oaxBlocks: landed.made }, 'march', 'landed', axis.oaxObjective) };
+    }
+    const planned = axis.oaxRoute.routeLegs.find((l) => l.legFrom === at);
+    const edge = planned === undefined ? undefined : world.map.edges.get(planned.legEdge);
+    const leg = edge === undefined ? null : edgeLeg(world.map, edge, at, ground.month, ground.network);
+    if (leg === null || marchBar(ground, leg, side, true) !== null) return { state, axis: axis.oaxLog.at(-1)?.axevReason === 'no_route' ? axis : move(axis, 'march', 'no_route', at) };
+    fire(ctx, 'movement.leg_started');
+    return { state: startLeg(ground, state, [carrier], leg, side, true, day), axis };
+  }
+
   // Driven back yesterday (the battle model withdrew or routed it): withdraw, then pause, or fail.
   const battle = yesterdaysBattle(state, blocks, side, day);
   if (battle !== null && battle.mine.bsideRetreatTo !== null && axis.oaxStage !== 'withdraw' && axis.oaxStage !== 'pause') {
@@ -298,8 +329,10 @@ function stepAxis(ctx: TickContext, start: State, ground: MarchGround, op: Opera
   switch (axis.oaxStage) {
     case 'assemble': {
       if (awaitingWord) return { state, axis: axis.oaxLog[axis.oaxLog.length - 1]?.axevReason === 'awaiting_word' ? axis : move(axis, 'assemble', 'awaiting_word', here, axis.oaxUntil) };
-      if (axis.oaxPost !== op.opPost) {
-        const req = op.opRequests.find((r) => r.oreqAxis === axis.oaxName);
+      // A partner's axis, or one carried by another post's ship (lane 1.4b), moves only on its holder's answer.
+      const asked = op.opRequests.find((r) => r.oreqAxis === axis.oaxName);
+      if (axis.oaxPost !== op.opPost || asked !== undefined) {
+        const req = asked;
         if (req === undefined || req.oreqAnswer === 'refused' || req.oreqAnswer === 'vacant') return { state, axis: move(axis, 'end', 'support_refused', here) };
         if (req.oreqAnswer === 'pending') return { state, axis: axis.oaxLog[axis.oaxLog.length - 1]?.axevReason === 'awaiting_support' ? axis : move(axis, 'assemble', 'awaiting_support', here, axis.oaxUntil) };
         if (req.oreqAnswer === 'delayed' && req.oreqFrom !== null && day < req.oreqFrom) return { state, axis: axis.oaxLog[axis.oaxLog.length - 1]?.axevReason === 'support_delayed' ? axis : move(axis, 'assemble', 'support_delayed', here, req.oreqFrom) };

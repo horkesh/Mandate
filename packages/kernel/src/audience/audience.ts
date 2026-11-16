@@ -74,8 +74,8 @@ export interface PlanReading {
   readonly strength: number;
 }
 
-/** What the post holds for its plan, on `editDirective`'s scale for `required` (its men needed * 500 / the men committed). */
-export const PLAN_HOLDS = 500;
+export { PLAN_HOLDS } from '../planner/edits.ts';
+import { PLAN_HOLDS } from '../planner/edits.ts';
 
 /**
  * The audience's subject: the chosen plan's terms when it is read (`planned`), before approval or during execution;
@@ -105,6 +105,8 @@ export function previewAudience(
   day: number,
   prospective: 'hold' | 'advance' | null = null,
   planned: PlanReading | null = null,
+  /** Lane 1.4's oversight where he stands (`tick/context.ts`'s `oversightOf`); null: the pack's base, for a caller that cannot place him. */
+  oversight: number | null = null,
 ): AudienceOutcome | string {
   const holder = state.postStates[post]?.postHolder ?? null;
   if (holder === null) return `${post} is not held`;
@@ -183,7 +185,7 @@ export function previewAudience(
   // believed (M2's case 7): its men on the plan's scale, scaled by his credibility.
   const believed = reinforce === null || planned === null || planned.strength === 0 ? 0 : Math.trunc((Math.trunc((reinforce.men * PLAN_HOLDS) / planned.strength) * principalCredibility(world, state, holder)) / 1000);
   const available = planned === null ? undefined : Math.min(1000, PLAN_HOLDS + believed);
-  const means = { ...(available === undefined ? {} : { available }), ...(reinforce === null ? {} : { supportPromised: ['reinforcement'] }) };
+  const means = { ...(available === undefined ? {} : { available }), ...(reinforce === null ? {} : { supportPromised: ['reinforcement'] }), ...(oversight === null ? {} : { oversight }) };
   const response = answerOrder(world, scratch, holder, principal, terms, means);
   const stated = response.statedReasons;
   const options = COUNTER_KINDS.map((counter) => ({ counter, answers: stated.filter(COUNTER_ANSWERS[counter]) })).filter(

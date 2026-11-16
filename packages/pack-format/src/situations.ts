@@ -111,6 +111,12 @@ export const GateReviewSchema = z.strictObject({
 
 const conditionOrNull = ConditionSchema.nullable().default(null);
 
+/** A policy row of the map and the posts that carry it (lane 1.5b): on an option, or on a decision's inaction. */
+const PolicySchema = z
+  .strictObject({ row: z.string().regex(/^policy:[a-z0-9_-]+$/), carriedBy: z.array(idOf('post')).default([]) })
+  .nullable()
+  .default(null);
+
 export const OptionSchema = z.strictObject({
   id: lowerId,
   label: stringKey,
@@ -134,6 +140,7 @@ export const OptionSchema = z.strictObject({
     .default([]),
   honours: z.array(termId).default([]),
   watched: z.boolean().default(false),
+  policy: PolicySchema.describe('The policy this option is (lane 1.5b; 0074): a policy: row of the map, and the posts whose holders carry it out. Its honours must equal the row’s.'),
   gate: GateTagSchema.nullable().default(null),
 });
 
@@ -157,7 +164,14 @@ export const SituationSchema = z.strictObject({
     .default(null),
   subjects: z.array(idOf('person')).default([]),
   options: z.array(OptionSchema).default([]),
-  inaction: z.strictObject({ text: stringKey, effects: z.array(EffectSchema).default([]) }).nullable().default(null),
+  inaction: z
+    .strictObject({
+      text: stringKey,
+      effects: z.array(EffectSchema).default([]),
+      policy: PolicySchema.describe('The policy inaction is (lane 1.5b; G-1.5g): required in a situation the map from orders to values gates.'),
+    })
+    .nullable()
+    .default(null),
   historicalDefault: z
     .union([z.strictObject({ options: z.array(termId).min(1) }), z.strictObject({ delegate: idOf('post') }), z.strictObject({ unsourced: z.string().min(1) })])
     .nullable()

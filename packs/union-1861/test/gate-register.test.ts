@@ -388,7 +388,9 @@ describe('the source policy: the two memoirs are banned as evidence, the researc
   it('bans exactly Rise and Fall and the Narrative, and every key it names is a pack source', () => {
     expect([...policy.banned].sort()).toEqual(['DAVIS-RF', 'JOHNSTON-1874']);
     for (const key of [...policy.banned, ...policy.weak]) expect(provenance.has(key), key).toBe(true);
-    expect(policy.weak.every((k) => k.startsWith('NOTE-')), 'only the research-note pointers are weak').toBe(true);
+    // 0074: every other memoir key is weak too, with the retrospective chapters of Welles's diary under a key of their own (lane 1.11a).
+    const memoirs = policy.weak.filter((k) => !k.startsWith('NOTE-')).sort();
+    expect(memoirs).toEqual(['BL', 'BULLOCH', 'CHESNUT', 'COX-3DEC', 'DANA-RCW', 'GRANT-PM', 'GREELEY-RBL', 'JULIAN-PR', 'LEE-1904', 'LEWWALLACE-AUTO', 'LONGSTREET-1896', 'MCCLELLAN-OS', 'MEADE-PAULDING', 'SHERMAN-M', 'WEED-MEM', 'WELLES-D1-RETRO']);
     expect(policy.weak.some((k) => policy.banned.includes(k))).toBe(false);
   });
 
@@ -398,18 +400,16 @@ describe('the source policy: the two memoirs are banned as evidence, the researc
     }
   });
 
-  it('a banned memoir cited anywhere in the pack is reported, people included: the six Union rows lane 1.11 re-sources (a warning until then)', () => {
-    const hits = loaded.issues.filter((i) => i.kind === 'banned-source-cited');
-    // A WARNING for now: this test pins the rows, and the check becomes an error in the merge where lane 1.11 re-sources them.
-    expect(hits.every((i) => i.severity === 'warning')).toBe(true);
-    const people = loaded.pack!.world.people;
-    const rows = hits.map((i) => {
-      const m = /^people\[(\d+)\]/.exec(i.at);
-      return m === null ? `${i.file} ${i.at}` : people[Number(m[1])]!.id;
-    });
-    // The lead's brief named davis_jefferson; on disk his row cites neither memoir, and Lee's cites Johnston's Narrative.
-    expect(rows.sort()).toEqual(['benjamin_judah_p', 'johnston_joseph_e', 'lee_robert_e', 'mallory_stephen_r', 'memminger_christopher_g', 'reagan_john_h']);
-    for (const h of hits) expect(h.message).toMatch(/"(?:DAVIS-RF|JOHNSTON-1874)"/);
+  it('no row cites a banned memoir: lane 1.11a re-sourced the six Union rows, and the check is an error from that merge', () => {
+    expect(loaded.issues.filter((i) => i.kind === 'banned-source-cited')).toEqual([]);
+    expect(loaded.issues.filter((i) => i.kind === 'weak-citations-only')).toEqual([]);
+  });
+
+  it('a banned memoir cited in a person’s centre is an error, naming the key', () => {
+    const edited = loadPack(testbedFiles({ ...overlay(), 'gate/source-policy.json': JSON.stringify({ banned: ['TB-DESIGN'], weak: [] }) }));
+    const hits = edited.issues.filter((i) => i.kind === 'banned-source-cited');
+    expect(hits.length).toBeGreaterThan(0);
+    expect(hits.every((i) => i.severity === 'error' && i.message.includes('"TB-DESIGN"'))).toBe(true);
   });
 
   it('a research-note pointer alone is refused as weak, and passes beside a primary source', () => {

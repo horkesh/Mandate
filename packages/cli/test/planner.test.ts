@@ -365,7 +365,7 @@ describe('determinism (decision 0002)', () => {
 });
 
 describe('cost', () => {
-  it('drafts on the testbed in well under 10 ms, and on the Union graph under 25 ms (median)', () => {
+  it('drafts on the testbed in well under 10 ms, and on the Union graph under 40 ms (median)', () => {
     const time = (f: () => unknown) => {
       f();
       const xs: number[] = [];
@@ -382,6 +382,8 @@ describe('cost', () => {
     }
     const union = measureDrafting('union-1861', { days: 1, reps: 3 });
     expect(union.sound).toBe(true);
-    expect(Math.max(...union.drafts.map((d) => d.medianMs))).toBeLessThan(25);
+    // Raised from 25 ms (lane 0.8's rule: a timing bound that flakes on CI is raised, never skipped): the Windows runner
+    // drafted in 27.96 ms on lane 1.5b's 7b4177f, and passed on a re-run.
+    expect(Math.max(...union.drafts.map((d) => d.medianMs))).toBeLessThan(40);
   });
 });

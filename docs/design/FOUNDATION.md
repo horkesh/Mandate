@@ -240,7 +240,7 @@ Module map, adapted from the AWWV-architecture note:
 | a person's ranks, one per kind (regular, volunteer, brevet) held at once, each with its date | `people` | appointments, promotion lists (0050, 0073) |
 | a person's status (serving, wounded, killed, captured) and its date | `people` | combat (0073) |
 | today's weather per weather zone | `weather` | its own seeded draw (0029, 0050; reserved) |
-| a force block's region or ship, and the leg it is on (`forceLocations`) | `movement` | operations, standing goals, retreats, recruitment (a raised block placed at its muster region; a disbanded one removed) (0064, 0073) |
+| a force block's region or ship, and the leg it is on (`forceLocations`) | `movement` | operations, retreats, recruitment (a raised block placed at its muster region; a disbanded one removed), detachments (a garrison placed where its parent stands, a landing ashore) (0064, 0073, 0081) |
 | a raised block's enlistment (`forceEnlistments`): who raised it, on whose call, and when its men's term ends | `forces` | recruitment (0073) |
 | the current day | `tick` | the day tick (0052) |
 | messages in transit | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules (0052) |
@@ -250,26 +250,25 @@ Module map, adapted from the AWWV-architecture note:
 | seat initiative state (`seatInitiatives`: each initiative's last firing day, for its cooldown) | `seats` | the weekly people step (0040, 0073) |
 | a force block's strength, non-combatants, arm and department (`forceBlockStates`); morale, experience and equipment from Phase 1 | `forces` | combat, attrition, economy, recruitment, transfers (0064) |
 | a force block's stores on hand | `forces` | supply (daily), operations (a sea delivery) |
-| detachments below the force block (garrisons, landings) | `forces` | `command`, `operations` (0041) |
+| detachments below the force block (garrisons, landings): a `forceBlockStates` record of kind `detachment` naming its parent; detach, rejoin and stand alone, with men conserved | `forces` | operations (a landing by water), a proposal naming a count of men and a region, such as a situation's `landing` effect; placed by `movement` and assigned by `command` in the same proposal (0041, 0081) |
 | stragglers: men absent from a force block who rejoin over days | `forces` | combat, attrition (0041) |
 | battle records | `combat` | (0041) |
 | situation chain and wait state | `situations` | (0046) |
 | the Congress accountability ledger: acts taken while Congress was away | `politics` | (0046) |
 | people who have reached Union lines (`regionReachedUnionLines`) | `regions` | the derived self-emancipation term only (0046, 0074); never a lever |
 | fortification and entrenchment | `regions` | operations (works dug by an axis holding its objective), combat (works lost when stormed) (0029, 0041, 0080) |
-| a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments, combat releasing a surrendered block, recruitment (a raised block assigned to its governor's post; a disbanded one removed) (0033, 0064, 0073, 0076) |
+| a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments, combat releasing a surrendered block, recruitment (a raised block assigned to its governor's post; a disbanded one removed), detachments (a new detachment assigned to its parent's post) (0033, 0064, 0073, 0076, 0081) |
 | people in posts; temporary posts (`postStates`) | `command` | appoint, relieve, promotion lists, an operation's end, combat vacating a hit commander's post (0076) |
 | observers in post (`observerPostings`): the observer, the post he watches, who sent him and the day he arrived | `command` | the observer verb and his recall (0040, 0073) |
 | standing agreements and prior orders on a post, including a governor's answered call not yet mustered (`postLevies`) | `command` | verbs, situations, orders from the holder's own department, a call a governor answered (0073) |
-| a person's stats, traits, standing, grievances, regard | `people` | combat results, the press, verbs, ladder |
+| a person's stats, traits, standing, grievances, regard | `people` | combat results, the press, verbs, ladder, a chosen policy's pushback (typed grievances, and the floor's cost to the principal's standing) (0082) |
 | a person's stances on record (from Consult) | `people` | Consult answers (0040, 0041); adviser credibility is derived from the president's knowledge, never stored |
 | promises made to a person (`personPromises`: the kind, the day made and the day due); one that falls due unkept becomes a grievance | `people` | the promise verb, the audience (0073) |
 | inquiries a person received this week (`personInquiries`); past the pack's patience they become a grievance | `people` | the inquire verb (0040, 0073) |
 | a person's ladder rung and rivals (`personRungs`, `personRivals`) | `ladder` | weekly people step |
-| responses to orders (declared and actual rungs, reasons) | `proxy` | message arrival; computed by `compliance` and `reading`, which are pure and write nothing |
+| responses to orders (declared and actual rungs, reasons) | `proxy` | message arrival, a policy's carriers answering it (0082); computed by `compliance` and `reading`, which are pure and write nothing |
 | audience state (`audienceHeld`: the last audience's day and the counters used) | `audience` | the audience verb |
 | each post's goal and plan record (`planRecords`): the goal, its draft set saved on the request day, the seat's pick, approval or send-back, edits as counter-orders, and a reference to his response (`proxy` writes the response itself) | `plans` | verbs (order, review, go), seat selections, order arrival, the planner's draft sets on request (0062, 0073) |
-| STAND-IN: what an approved plan has the movement path do, hold or advance to its objective (`standingGoals`; no order's content reaches it) | `plans` | plan approval; lane 1.4's operations retire it (0073) |
 | operations and their lifecycles (`operationRecords`: one per goal and plan, axes copied from the plan, each stage with a typed reason) | `operations` | plan approval, movement and combat outcomes, support answers (0080) |
 | knowledge (reports per seat) | `knowledge` | message delivery, pruning |
 | messages in transit | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules |

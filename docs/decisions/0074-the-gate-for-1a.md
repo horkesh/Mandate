@@ -1,6 +1,6 @@
 # 0074: The gate for 1A: capture in battle, the values that touch slavery, and the leaders' own words
 
-Status: accepted (2026-11-16). Amends 0063. From:
+Status: accepted (2026-11-16). Amends 0063. Amended by 0082 (a chosen policy applies its row's pushback through the owners: who carries the floor's difference, an unpaid floor recorded, and inaction's own policy). From:
 - lane 1.8's draft R4 ruling (`notes/lane-1.8-gate.md` section A);
 - lane 1.9's cast research (`docs/research/2026-11-16-cast-1861.md`);
 - the separate gate review (`review-gate-1861.md`);

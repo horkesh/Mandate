@@ -136,6 +136,7 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'infrastructure.changed': { why: NO_PROPOSER, test: 'packages/kernel/test/infrastructure.test.ts', needle: 'damages and repairs edges and depots' },
   // Lane 1.4: operations and their reports.
   'combat.records_pruned': { why: 'a closed battle is pruned after the pack\'s battleDays (120), longer than either reference run', test: 'packages/kernel/test/operations.test.ts', needle: 'prunes ended operations, closed battles and old responses' },
+  'operations.landed': { why: 'no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)', test: 'packages/kernel/test/detachments.test.ts', needle: 'lands its troops at the objective' },
   'operations.repulsed': { why: 'no operation in either reference run is driven back by a battle: each attacker carries its objective or holds', test: 'packages/kernel/test/operations.test.ts', needle: 'driven back, an axis withdraws, pauses and tries again' },
   'operations.support_answered': { why: 'no plan the reference runs draft asks another holder for an axis (no pincer is drafted)', test: 'packages/kernel/test/operations.test.ts', needle: 'a willing holder complies, his axis marches' },
   'operations.support_refused': { why: 'no plan the reference runs draft asks another holder for an axis (no pincer is drafted)', test: 'packages/kernel/test/operations.test.ts', needle: 'a holder who will not move refuses the request' },
@@ -181,6 +182,11 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'people.promise_kept': { why: VERBS_UNUSED, test: PV, needle: 'with a promise of advancement kept by it' },
   'people.promise_broken': { why: VERBS_UNUSED, test: PV, needle: 'a promise falls due and breaks' },
   'reports.observer_letter': { why: VERBS_UNUSED, test: PV, needle: 'send an observer: he watches' },
+  // Lane 1.5b: a policy option applies its row's pushback; no pack option names a policy row yet (lane 1.11's S17 will).
+  'situations.policy': { why: 'no situation option names a policy row of the map yet (lane 1.11 authors the first, S17); the kernel test drives it', test: 'packages/kernel/test/gate-wiring.test.ts', needle: 'a chosen policy applies its pushback through the owners' },
+  // Lane 1.5b: a floor cost the principal's standing cannot pay, recorded and never dropped. The gate reviewer's condition:
+  // it never happens in a reference run (banded at zero in both), and the kernel test drives it.
+  'situations.policy_unpaid': { why: 'a floor cost falls on the principal only when the floored row has no stakeholder or carrier of its own, and no reference run chooses a policy at all; the gate reviewer requires it never to fire in one', test: 'packages/kernel/test/gate-wiring.test.ts', needle: 'with standing at 0 and no stakeholders, the whole floor cost is recorded unpaid' },
   'seats.attention_refused': { why: 'the generic principal spends a few points a week of a budget of twelve, so nothing is refused for want of attention; the kernel test drives it', test: PV, needle: 'refuses what it cannot pay' },
   // Lane 1.6: politics' paths that wait for authored situations (lane 1.11: S09's call, S20's ratification, the war's opening).
   'politics.act': { why: 'no situation enters an act on the ledger until lane 1.11 authors S09 and S20', test: POL, needle: 'enters an act taken while away, meets it when a chamber sits, and answers it' },
@@ -242,10 +248,12 @@ const UNION_BANDS: Record<string, GateBand> = {
   'forces.stores_fell': around(37),
   'forces.stores_low': around(1),
   'forces.stores_refilled': notHere('most Union blocks have unknown stores (lane 0.3 data, lane 0.5 finding 3), so the few that fall do not refill in 75 days; the testbed run fires it'),
-  'forces.stragglers_returned': around(10),
+  // Lane 1.11a: with the people data entered (the cast's temperament, values and regard), the merged run's one battle-day leaves more stragglers, who return: 32 fires (it was 10 before). Re-banded from the merged run; flank_broken, routed and withdrew stay inside lane 1.4's bands.
+  'forces.stragglers_returned': around(32),
   // Lane 1.4: the Charleston command's operation on Washington: one opened, its stages, works dug after it holds; the
   // battle's dispatches by the hour and both sides' returns, first and full.
-  'combat.flank_broken': notHere('the one battle-day draws no break; the testbed run fires it'),
+  // Lane 1.11a (the reviewer's note): the merged Union run breaks a flank once, so the mechanic is banded, as retreat_blocked is.
+  'combat.flank_broken': around(1),
   'combat.routed': notHere('the garrison surrenders before it routs; the testbed run fires it'),
   'combat.works_stormed': notHere('the one battle is in ground with no works; the testbed run fires it'),
   'operations.ended': around(1),
