@@ -19,6 +19,34 @@ export function readBannedSources(files: PackFiles): string[] {
   }
 }
 
+/**
+ * The gate's weak sources (A6): memoirs, self-reports and pointers that may support a claim only beside a stronger source.
+ * Read the same way as the banned list. People's cells are checked against it (lane 1.11a, hard rule 7): a cell whose every
+ * admissible citation is weak is refused.
+ */
+export function readWeakSources(files: PackFiles): string[] {
+  const text = files.read(SOURCE_POLICY_FILE);
+  if (text === undefined) return [];
+  try {
+    const parsed = JSON.parse(text.replace(/^﻿/, '')) as { weak?: unknown };
+    return Array.isArray(parsed.weak) ? parsed.weak.filter((s): s is string => typeof s === 'string') : [];
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * A citation's place may carry a marker that makes that one citation weak, whatever its source: `snippet` (seen only in
+ * a search summary), `self-report` (the person's own later account) or `after-start` (evidence dated after the start
+ * date the cell is for). Matched at the start of the locator, case-insensitively, as a whole word.
+ */
+export const WEAK_LOCATOR_MARKERS = ['snippet', 'self-report', 'after-start'] as const;
+export function hasWeakMarker(at: string | null): boolean {
+  if (at === null) return false;
+  const head = at.trim().toLowerCase();
+  return WEAK_LOCATOR_MARKERS.some((m) => head === m || head.startsWith(`${m} `) || head.startsWith(`${m}:`) || head.startsWith(`${m},`) || head.startsWith(`[${m}`));
+}
+
 /** Every citation (an object with a string `source`) inside a record, with its field path. */
 export function citationsIn(value: unknown, path = ''): { readonly path: string; readonly source: string }[] {
   if (Array.isArray(value)) return value.flatMap((v, i) => citationsIn(v, `${path}[${i}]`));

@@ -235,10 +235,12 @@ const UNION_BANDS: Record<string, GateBand> = {
   'forces.stores_fell': around(37),
   'forces.stores_low': around(1),
   'forces.stores_refilled': notHere('most Union blocks have unknown stores (lane 0.3 data, lane 0.5 finding 3), so the few that fall do not refill in 75 days; the testbed run fires it'),
-  'forces.stragglers_returned': around(10),
+  // Lane 1.11a: with the people data entered (the cast's temperament, values and regard), the merged run's one battle-day leaves more stragglers, who return: 32 fires (it was 10 before). Re-banded from the merged run; flank_broken, routed and withdrew stay inside lane 1.4's bands.
+  'forces.stragglers_returned': around(32),
   // Lane 1.4: the Charleston command's operation on Washington: one opened, its stages, works dug after it holds; the
   // battle's dispatches by the hour and both sides' returns, first and full.
-  'combat.flank_broken': notHere('the one battle-day draws no break; the testbed run fires it'),
+  // Lane 1.11a (the reviewer's note): the merged Union run breaks a flank once, so the mechanic is banded, as retreat_blocked is.
+  'combat.flank_broken': around(1),
   'combat.routed': notHere('the garrison surrenders before it routs; the testbed run fires it'),
   'combat.works_stormed': notHere('the one battle is in ground with no works; the testbed run fires it'),
   'operations.ended': around(1),
