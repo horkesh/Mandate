@@ -31,6 +31,11 @@ describe('the CI workflow', () => {
     }
   });
 
+  it('runs the wall-clock budget tests on the Linux job (lane 1.0t: the pre-commit hook leaves them off)', () => {
+    expect(all.check).toMatch(/MANDATE_TIMING: \$\{\{ matrix\.os == 'ubuntu-24\.04' && '1' \|\| '' \}\}/);
+    expect(all.check).toContain('wall-clock budget tests');
+  });
+
   it('runs on pinned Linux and Windows images, never a moving -latest label', () => {
     expect(all.check).toMatch(/os: \[ubuntu-24\.04, windows-2025\]/);
     expect(workflow).not.toMatch(/-latest\b/);
