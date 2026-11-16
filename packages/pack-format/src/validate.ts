@@ -490,6 +490,12 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
         if (!evidence.factTraits.includes(t.trait)) judged(`traits[${j}]`, `trait "${t.trait}"`, t.cites, classOf('trait', t.trait));
       });
     }
+    // 0087: a bloc is a start-class judgment: it needs a contemporary leg dated before the start (a warning until the cast is re-sourced).
+    const blocCites = p.blocCites ?? [];
+    citeCheck(blocCites, at('blocCites'), false, 'his bloc');
+    if (!p.invented && evidence !== null && p.bloc !== null && !hasContemporaryLeg(blocCites, classOf('other'))) {
+      warn('no-contemporary-leg', at('bloc'), `bloc "${p.bloc}" rests on no contemporary leg`, noLegExpected);
+    }
     p.ranks.forEach((r, j) => {
       term('ranks', r.rank, at(`ranks[${j}].rank`));
       if (j > 0 && r.from < p.ranks[j - 1]!.from) err('ranks-out-of-order', at(`ranks[${j}]`), 'ranks must be in date order');

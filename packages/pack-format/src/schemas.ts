@@ -153,6 +153,7 @@ export const PersonSchema = z.strictObject({
     .describe('His own standing practices (lane 1.5b), each cited: conduct an order of the map can run against (a row’s clashes), such as a commander’s practice toward fugitives. Gate content.'),
   traits: z.array(z.strictObject({ trait: termId, cites: z.array(citation) })),
   bloc: termId.nullable(),
+  blocCites: z.array(citation).optional().describe('The citations for his bloc (0087: a bloc is a judgment true at the start, so it needs a contemporary leg dated before the pack’s first start); absent when none is given.'),
   ranks: z.array(z.strictObject({ rank: termId, from: historicalDate })),
   unknowns: z.array(z.string()),
   provenance,

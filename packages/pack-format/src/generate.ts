@@ -548,6 +548,7 @@ export function generatePack(files: PackFiles): GenerateResult {
         practices: r.cell('practices', parsePractices(r.raw('practices'), sourceKeys), []),
         traits: r.cell('traits', parseTraits(r.raw('traits'), sourceKeys), []),
         bloc: r.optionalId('bloc', 'bloc'),
+        ...(r.raw('bloc_cites').trim() === '' ? {} : { blocCites: cites(r, 'bloc_cites') }),
         ranks: r.cell('ranks', parseRanks(r.raw('ranks')), []),
         unknowns: [] as string[],
         provenance: cites(r),

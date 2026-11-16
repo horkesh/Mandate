@@ -528,6 +528,16 @@ describe('a judgment needs a contemporary leg (lane 1.11r3; 0087)', () => {
     expect(noLeg(trait('DESIGN', ['bold']), 'traits')).toEqual([]);
     expect(noLeg(trait('REG A p.9', []), 'traits')).toEqual([]);
   });
+  it('warns on a bloc with no citation or no contemporary leg, and not on one dated before the start', () => {
+    const bloc = (cell: string, base: FileMap) =>
+      withFile(`${W}/people.csv`, (t) => t.split('\n').map((line, i) => (i === 0 ? `${line},bloc_cites` : line === '' ? line : `${line},${line.split(',')[0] === 'red_chief' ? cell : ''}`)).join('\n'), base);
+    expect(noLeg(bloc('', policy([])), 'bloc').length).toBe(1);
+    expect(noLeg(bloc('REG A p.9', policy([])), 'bloc')).toEqual([]);
+    expect(noLeg(bloc('REG A p.9 dated 1861-03-04', policy([])), 'bloc')).toEqual([]);
+    expect(noLeg(bloc('REG A p.9 dated 1861-03-05', policy([])), 'bloc').length).toBe(1);
+    expect(noLeg(bloc('DESIGN', policy([])), 'bloc').length).toBe(1);
+    expect(noLeg(bloc('', fixture()), 'bloc')).toEqual([]);
+  });
   it('is a warning, not an error, and a pack without an evidence policy is not checked', () => {
     const found = run(withTemper({ red_chief: { boldness: 'above:DESIGN p.4' } }, policy([]))).issues.filter((i) => i.kind === 'no-contemporary-leg');
     expect(found.length).toBeGreaterThan(0);
