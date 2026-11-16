@@ -16,19 +16,19 @@ Each state's act fires a pack-set delay after the call reaches its governor (`ca
 | Catalogue | File | Status |
 |---|---|---|
 | S01 | `sumter_garrison` | live |
-| S02 | `pickens_reinforcement` | live |
+| S02 | `pickens_reinforcement` | live; the landing itself is a labelled gap until lane 1.4b's `landing` effect is on main (the lead's ruling) |
 | S03 | `confederate_commissioners` | live |
 | S06 | `pickens_refused` | live; on its labelled date, a STAND-IN owned by 1B (sea carriage) |
 | S07 | `seward_memorandum` | live; raised by the Secretary of State's initiative (lane 1.5), so it does not arise until his values are entered (lane 1.11a) |
 | S09 | `call_for_troops` | live; calls at the OR III-1 p. 69 quotas |
 | S10 | `blockade_or_closure` | live |
 | S12 | `washington_cut_off` | live; reads the closure flag set by `baltimore_route_closed` |
-| S13 | `drafts/black_volunteer_offers` | awaiting gate sign-off; `decline` only |
+| S13 | `drafts/black_volunteer_offers` | the decision is held until `ask_congress` has a sourced advocate (the lead's ruling; it blocks nothing in 1A, a labelled gap); the men's offers are a notice (event, no options or effects), awaiting sign-off |
 | S14 | `missouri_arsenal` | live; `back_harney` and `back_lyon` |
 | S15 | `western_virginia` | live; `cross_river` and `recognise`, in separate groups |
 | S20 | `special_session` | live; `ask_war_footing` only |
 | S11 | none | waits on Virginia's secession notice being signed |
-| S17 | none | waits on lane 1.5b's merge |
+| S17 | none | waits on lane 1.5b's merge: options and inaction each carry a `policy` row (`fugitive-policy`), signed in `gated-rows.test.ts` |
 | S18 | none | waits on an advocate for S12's suspension |
 | S04, S05, S08, S16, S19, S21 | none | held for the research pass after lane 1.11a's data entry (the lead's ruling) |
 
@@ -42,7 +42,7 @@ Notices:
   - `baltimore_route_closed` (4 days after the call reaches Massachusetts).
 - **Drafts awaiting the gate reviewer:**
   - the four secessions (Virginia, Arkansas, Tennessee and North Carolina; `cause-of-secession`);
-  - the Indian Territory acts: posts given up, the Confederate protection act as a hook, the Creek, Choctaw and Chickasaw treaties, and the Cherokee neutrality;
+  - the Indian Territory acts: posts given up, the Confederate act of 21 May as a hook, and the Creek treaty (the Choctaw and Chickasaw treaties and the Cherokee neutrality are signed and live);
   - `pratt_street_deaths` and `camp_jackson_deaths` (`civilian-deaths-1861`, each naming its acting side);
   - `mcclellan_proclamation` (`fugitive-policy`, text).
 
@@ -62,9 +62,13 @@ Notices:
 - The `callReceived` condition. Responses now carry the order kind.
 - The pruner keeps each post holder's first answer to a call, since lane 1.4's pruning would otherwise drop it before the longest delay.
 
+## Calls go only to a state government (the lead's ruling)
+
+A call may go to a governor of the calling side or of a neutral state government, never to the other side's, and never to a people who govern themselves (0069, 0070). The validator refuses it (`self-governing-call`), and the kernel's call path refuses it as `not_raising_post`; `packs/union-1861/test/nation-calls.test.ts` is the control.
+
 ## Effects reported, not applied (owners not built)
 
-S13's locked cost on the radicals bloc goes to `politics` (1.6).
+None at present: S13's decision, which carried a locked cost on the radicals bloc, is held.
 
 ## STAND-INs to retire
 

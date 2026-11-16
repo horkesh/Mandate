@@ -830,6 +830,16 @@
       "copyUsed": "nps.gov pages cited [NPS-Pratt] and [NPS-Riot] in the note, read 2026-11-14",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "EV-ORDINANCE",
+      "title": "Virginia's Ordinance of Secession, 17 April 1861, as transcribed by Encyclopedia Virginia (primary documents), read by research note secession-winter-1861 (6.1, cited [EV-Ordinance])",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "encyclopediavirginia.org/primary-documents/virginia-ordinance-of-secession-april-17-1861/, read 2026-11-14",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

@@ -281,6 +281,12 @@ export function validateSituations(items: readonly { readonly file: string; read
   const governmentKinds = new Set(pack.world.vocabularies.departmentKinds.filter((k) => k.government).map((k) => k.id as string));
   const departmentKind = new Map(pack.world.departments.map((d) => [d.id as string, d.kind as string]));
   const selfGoverningKinds = new Set(pack.world.vocabularies.departmentKinds.filter((k) => k.selfGoverning).map((k) => k.id as string));
+  const raisingKinds = new Set<string>(pack.world.rules.recruitment.raisingPostKinds);
+  const postRaising = new Map(
+    pack.scenarios.flatMap((s) =>
+      s.posts.map((p) => [p.id as string, selfGoverningKinds.has(departmentKind.get(p.department) ?? '') ? 'self-governing' : raisingKinds.has(p.kind) ? 'raising' : 'not-raising'] as const),
+    ),
+  );
   const temporaryPostIds = new Set(pack.scenarios.flatMap((s) => s.temporaryPosts.map((p) => p.id as string)));
   type Err = (kind: string, at: string, message: string, expected?: string) => void;
   const commandProposal = (p: { readonly field: string; readonly subject: string | null; readonly delta: number; readonly side: string | null }, at: string, err: Err, fromNotice: boolean) => {
@@ -397,6 +403,12 @@ export function validateSituations(items: readonly { readonly file: string; read
       o.calls.forEach((call, j) => {
         const at = `options[${i}].calls[${j}]`;
         ref(posts, 'post in any scenario', call.to, `${at}.to`);
+        // The lead's ruling: a call goes to a state government's raising post, of the calling side or neutral, never to a
+        // people who govern themselves (0069, 0070; SENSITIVE-HISTORY 3.7: no seat recruits a nation). The kernel refuses it
+        // as `not_raising_post`; the pack refuses it here first.
+        const raising = postRaising.get(call.to);
+        if (raising === 'self-governing') err('self-governing-call', `${at}.to`, `"${call.to}" belongs to a people who govern themselves; no principal calls on a nation for regiments`, 'a state governor’s post (0069, 0070)');
+        else if (raising === 'not-raising') err('situation-call', `${at}.to`, `"${call.to}" is not a post that raises regiments`, `a post of a kind in rules.recruitment.raisingPostKinds`);
         if (!phase0.ORDER_ROUTES.includes(call.route)) err('situation-route', `${at}.route`, `\"${call.route}\" is not a route a principal orders by`, `one of ${phase0.ORDER_ROUTES.join(', ')} (0052)`);
         if (call.termDays > pack.world.rules.recruitment.maxTermDays) err('situation-call', `${at}.termDays`, `a term of ${call.termDays} days is longer than the pack allows`, `at most ${pack.world.rules.recruitment.maxTermDays} days (rules.recruitment.maxTermDays)`);
       });

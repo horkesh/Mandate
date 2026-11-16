@@ -25,7 +25,9 @@
       "civilian-deaths-1861"
     ],
     "placement": "event",
-    "risks": [],
+    "risks": [
+      "atrocity"
+    ],
     "actingSide": "union"
   },
   "citations": [

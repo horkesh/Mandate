@@ -1,6 +1,6 @@
 {
   "id": "black_volunteer_offers",
-  "kind": "decision",
+  "kind": "notice",
   "faction": "union",
   "title": "situation.black_volunteer_offers.title",
   "text": "situation.black_volunteer_offers.text",
@@ -11,67 +11,20 @@
       "days": 8
     }
   },
-  "options": [
-    {
-      "id": "decline",
-      "label": "situation.black_volunteer_offers.option.decline",
-      "displayKey": 1,
-      "proposedBy": [
-        "cameron_simon"
-      ],
-      "honours": [
-        "order"
-      ],
-      "effects": [
-        {
-          "setFlag": "black_volunteers_declined"
-        }
-      ],
-      "lockedCosts": [
-        {
-          "propose": {
-            "owner": "politics",
-            "field": "bloc-support",
-            "subject": "radicals",
-            "delta": -20,
-            "reason": "black-volunteers-declined",
-            "side": "union"
-          }
-        }
-      ]
-    }
-  ],
-  "inaction": {
-    "text": "situation.black_volunteer_offers.inaction",
-    "effects": []
-  },
-  "historicalDefault": {
-    "options": [
-      "decline"
-    ]
-  },
-  "staffLine": {
+  "effects": [],
+  "report": {
     "authors": [
-      "us_secretary_war"
+      "us_secretary_war",
+      "us_general_in_chief"
     ],
-    "recommends": [
-      "decline"
-    ],
-    "reasons": [
-      {
-        "kind": "order",
-        "weight": 600
-      }
-    ],
-    "confidence": 600
+    "reportType": "informal",
+    "subtype": "cabinet-word"
   },
-  "delegableTo": [],
-  "resurfaceOn": [],
   "gate": {
     "topics": [
       "black-enlistment-1861-offers"
     ],
-    "placement": "decision",
+    "placement": "event",
     "risks": [
       "agency",
       "hindsight"
@@ -81,11 +34,11 @@
   "citations": [
     {
       "source": "OR",
-      "at": "III-1 p. 107 (the offers and their refusal; read as a snippet by the note)"
+      "at": "III-1 p. 107 (Jacob Dodson to Cameron, Washington, 23 April 1861: \"some 300 reliable colored free citizens of this city who desire to enter the service for the defense of the city\")"
     },
     {
       "source": "NOTE-secession-winter-1861",
-      "at": "6.4, 6.8"
+      "at": "6.4, 6.8 (the Boston meeting, the Philadelphia regiments, the Providence company, and the refusals by Ohio's governor and the Massachusetts legislature)"
     }
   ]
 }
