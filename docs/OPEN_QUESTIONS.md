@@ -157,6 +157,9 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.6 (politics):** `context.oversight` and `context.leaderCredibility` are plain pack values until 1.6 derives credibility (FOUNDATION section 8).
   - **Lane 1.4 (operations and reports):** `orderResponses` grows with every relay hop and needs pruning, like knowledge.
   - **Lane 1.5 (people's verbs):** regard between people has no format column yet (the lead's ruling), and its default is the pack rule `regardUnknown` (0 in both packs). `applyPeopleChanges` also does not check a proposed rank against the vocabulary; the reviewer may make that a should-fix for 1.1 instead.
+- From lane 1.5's deferrals (people's verbs):
+  - **1B:** the consistency cost of reversing a stance on record (FOUNDATION section 5, Consult). Lane 1.5 records stances but does not price their reversal.
+  - **Lane 1.4, or 1B if 1.4 cannot take it:** freelancing, M2's ladder action of a general acting on his own. It needs operations, so lane 1.5 does not port it; a high rung produces an initiative instead.
 - From the reviews of the 1861 gate register, lane 1.1 and the scanner aliases (`review-gate-register-1861.md`, `review-lane-1.1.md`, `review-scanner-aliases.md`):
   - **Stand-ins (Phase 1):** `context.oversight` is a constant 500, owned by lane 1.4 (it should vary with distance and the telegraph); `context.leaderCredibility` is owned by lane 1.6. Lane 1.1 labels both STAND-IN.
   - **Lane 1.14 (calibration), the reviewer's tabulation on the Union rules at hold 400 and advance 600:** nobody without values or regard reaches plain compliance (the highest willingness is 55, against a threshold of 150); every order lands on reservations or an objection, flipping at a boldness gap of about 100; with boldness drawn at 500 ± 200, about 40% of men object to an advance and 40% to a hold. Calibrate against a pushback band.
