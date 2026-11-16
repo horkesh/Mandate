@@ -70,6 +70,9 @@ describe('the opening of 1861 (lane 1.11)', () => {
 
   it('takes the spring’s other decisions in a history run: the arsenal, the western counties (both groups), the special session', () => {
     expect(run.state.situationStates[S('missouri_arsenal')]!.sitChosen).toEqual(['back_lyon']);
+    // March and April's back channels: the assurance of notice (S05) and the offer to the convention's Unionist (S08).
+    expect(run.state.situationStates[S('lamon_promise')]!.sitChosen).toEqual(['assure_notice']);
+    expect(run.state.situationStates[S('virginia_unionists')]!.sitChosen).toEqual(['offer_fort']);
     // The border state's neutrality decision follows its proclamation; arms go quietly and no troops go in (two groups, taken together).
     const ky = run.state.situationStates[S('kentucky_neutrality')]!;
     expect(ky.sitFiredDay).toBeGreaterThanOrEqual(run.state.situationStates[S('kentucky_neutrality_proclaimed')]!.sitFiredDay!);

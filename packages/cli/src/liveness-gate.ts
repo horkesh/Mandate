@@ -303,7 +303,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   // S01's relief opens the expedition command it declares (0040).
   'command.temporary_post_opened': around(1),
   'situations.resurfaced': around(2),
-  'situations.staff_lines': around(8),
+  'situations.staff_lines': around(18),
   'situations.surfaced': around(28),
   // S09's call: every governor called; the free and loyal states' governors answer, five refuse, and the ninety-day men go home.
   'recruitment.called': around(24),

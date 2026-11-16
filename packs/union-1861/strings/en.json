@@ -331,5 +331,13 @@
   "situation.thomson_martial_law.title": "A railroad president on Baltimore",
   "situation.thomson_martial_law.text": "J. Edgar Thomson of the Pennsylvania Railroad writes to the Secretary of War: “As soon as the capital is safe from attack, it seems to me that the Government should at once turn on Baltimore and place it under martial law, and require that it should pay all damages”.",
   "situation.nelson_arrest_power.title": "A Maryland judge asks for troops",
-  "situation.nelson_arrest_power.text": "Judge Nelson of the Frederick County court telegraphs the commander at Relay House: “Send us five hundred men by first train, with power to arrest and disarm.”"
+  "situation.nelson_arrest_power.text": "Judge Nelson of the Frederick County court telegraphs the commander at Relay House: “Send us five hundred men by first train, with power to arrest and disarm.”",
+  "situation.lamon_promise.title": "Colonel Lamon's word in Charleston",
+  "situation.lamon_promise.text": "Governor Pickens telegraphs that Colonel Lamon, the president's friend, told Charleston that Major Anderson's command would soon be withdrawn, and asks whether Lamon spoke for the government.",
+  "situation.lamon_promise.option.assure_notice": "Answer that the government will not try to supply Fort Sumter without giving the governor notice",
+  "situation.lamon_promise.inaction": "No answer goes to Charleston.",
+  "situation.virginia_unionists.title": "A Unionist from the Virginia convention",
+  "situation.virginia_unionists.text": "The Virginia convention, which voted 89 to 45 against a secession substitute on 4 April, is still sitting. At the Secretary of State's request, John B. Baldwin, a Unionist delegate, has come to Washington in place of George W. Summers.",
+  "situation.virginia_unionists.option.offer_fort": "Offer to give up Fort Sumter if the convention adjourns without seceding",
+  "situation.virginia_unionists.inaction": "The president hears him and makes no offer."
 }
