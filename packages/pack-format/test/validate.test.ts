@@ -470,6 +470,44 @@ describe('a people cell resting only on weak citations (lane 1.11a; hard rule 7,
   });
 });
 
+describe('evidence dates by cell class (lane 1.11b; 0085)', () => {
+  const policy = (innateTraits: string[], base: FileMap = fixture()) =>
+    withNewFile('gate/source-policy.json', JSON.stringify({ banned: [], weak: [], evidence: { innateThrough: '1861-07-31', startBefore: '1861-03-05', innateStats: ['competence', 'nerve'], innateTraits } }), base);
+  const weakAt = (files: FileMap, field: string) => run(files).issues.filter((i) => i.kind === 'weak-citations-only' && i.at.includes('red_chief') && i.at.includes(field));
+  const withTrait = (cite: string, base: FileMap) => withFile(`${W}/people.csv`, replaceOnce('bold:REG A p.9', `bold:${cite}`), base);
+  it('makes a start-class cell on 1 April evidence weak, and lets evidence before the start stand', () => {
+    expect(weakAt(withTemper({ red_chief: { boldness: 'above:DESIGN p.4 dated 1861-04-01' } }, policy([])), 'boldness').length).toBe(1);
+    expect(weakAt(withTemper({ red_chief: { boldness: 'above:DESIGN p.4 dated 1861-03-04' } }, policy([])), 'boldness')).toEqual([]);
+    expect(weakAt(withTemper({ red_chief: { boldness: 'above:DESIGN p.4 dated 1861-03-05' } }, policy([])), 'boldness').length).toBe(1);
+  });
+  it('lets an innate trait stand on 1 April evidence, and refuses it after 31 July', () => {
+    expect(weakAt(withTrait('DESIGN dated 1861-04-01', policy(['bold'])), 'traits')).toEqual([]);
+    expect(weakAt(withTrait('DESIGN dated 1861-07-31', policy(['bold'])), 'traits')).toEqual([]);
+    expect(weakAt(withTrait('DESIGN dated 1861-08-01', policy(['bold'])), 'traits').length).toBe(1);
+  });
+  it('treats the same trait as start-class when the pack does not list it as innate', () => {
+    expect(weakAt(withTrait('DESIGN dated 1861-04-01', policy([])), 'traits').length).toBe(1);
+  });
+  it('applies the innate boundary to the stats the pack names, and the start boundary to the others', () => {
+    const competence = (cite: string) => withFile(`${W}/people.csv`, replaceOnce('above:REG A p.3', `above:${cite}`), policy([]));
+    expect(weakAt(competence('DESIGN dated 1861-05-01'), 'competence')).toEqual([]);
+    expect(weakAt(competence('DESIGN dated 1861-08-01'), 'competence').length).toBe(1);
+    // reputation is a cell true at the start: 1 May is already too late
+    expect(weakAt(withFile(`${W}/people.csv`, replaceOnce('high:REG A+DESIGN', 'high:DESIGN dated 1861-05-01'), policy([])), 'reputation').length).toBe(1);
+  });
+  it('leaves an undated citation to the other weak tests, and a pack with no evidence block has no date rule', () => {
+    expect(weakAt(withTemper({ red_chief: { boldness: 'above:DESIGN p.4' } }, policy([])), 'boldness')).toEqual([]);
+    expect(weakAt(withTemper({ red_chief: { boldness: 'above:DESIGN p.4 dated 1861-04-01' } }), 'boldness')).toEqual([]);
+  });
+  it('refuses a regard toward another person, a value and a practice on evidence after the start', () => {
+    const regardOthers = (cell: string, base: FileMap) =>
+      withFile(`${W}/people.csv`, (t) => t.split('\n').map((line, i) => (i === 0 ? `${line},regard_others` : line === '' ? line : `${line},${line.split(',')[0] === 'red_chief' ? cell : ''}`)).join('\n'), base);
+    expect(weakAt(regardOthers('blue_chief:below:DESIGN dated 1861-05-01', policy([])), 'regard_others').length).toBe(1);
+    expect(weakAt(regardOthers('blue_chief:below:DESIGN dated 1861-03-04', policy([])), 'regard_others')).toEqual([]);
+    expect(weakAt(withTemper({ red_chief: { values: 'caution:DESIGN dated 1861-06-01' } }, policy([])), 'values').length).toBe(1);
+  });
+});
+
 describe('invented people (review F7)', () => {
   it('need no citations for their centres and traits where the pack allows them', () => {
     const result = run(withFile(`${W}/people.csv`, appendRow(INVENTED), allowInvented()));
