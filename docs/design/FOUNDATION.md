@@ -232,7 +232,7 @@ Module map, adapted from the AWWV-architecture note:
 | State field | Only writer | Proposed by |
 |---|---|---|
 | region control | `control` | combat, occupation |
-| region population, loyalty, supply value | `regions` | economy, situations, occupation |
+| region population, loyalty (`regionLoyalty`, from sourced start values; never a stand-in for control), supply value | `regions` | economy, situations, occupation |
 | edge condition (`infraEdgeCondition`) | `infrastructure` | combat, raids, repair orders |
 | water-edge obstructions (`infraObstructions`); depot condition (`infraDepotCondition`) | `infrastructure` | combat, raids, operations, including clearing works no fort holds (0050, 0064; set at scenario start) |
 | a post's department, and scheduled department changes | `command` | the scenario start's scheduled changes, situations (0050) |
@@ -240,7 +240,8 @@ Module map, adapted from the AWWV-architecture note:
 | a person's ranks, one per kind (regular, volunteer, brevet) held at once, each with its date | `people` | appointments, promotion lists (0050, 0073) |
 | a person's status (serving, wounded, killed, captured) and its date | `people` | combat (0073) |
 | today's weather per weather zone | `weather` | its own seeded draw (0029, 0050; reserved) |
-| a force block's region or ship, and the leg it is on (`forceLocations`) | `movement` | operations, standing goals, retreats (0064) |
+| a force block's region or ship, and the leg it is on (`forceLocations`) | `movement` | operations, standing goals, retreats, recruitment (a raised block placed at its muster region; a disbanded one removed) (0064, 0073) |
+| a raised block's enlistment (`forceEnlistments`): who raised it, on whose call, and when its men's term ends | `forces` | recruitment (0073) |
 | the current day | `tick` | the day tick (0052) |
 | messages in transit | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules (0052) |
 | knowledge: reports per seat, and the truth behind them | `knowledge` | message delivery, pruning (0052) |
@@ -254,11 +255,11 @@ Module map, adapted from the AWWV-architecture note:
 | battle records | `combat` | (0041) |
 | situation chain and wait state | `situations` | (0046) |
 | the Congress accountability ledger: acts taken while Congress was away | `politics` | (0046) |
-| people who have reached Union lines | `regions` | the derived self-emancipation term (0046); never a lever |
+| people who have reached Union lines (`regionReachedUnionLines`) | `regions` | the derived self-emancipation term only (0046, 0074); never a lever |
 | fortification and entrenchment | `regions` | operations, combat (0029, 0041) |
-| a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments, combat releasing a surrendered block (0033, 0064, 0076) |
+| a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments, combat releasing a surrendered block, recruitment (a raised block assigned to its governor's post; a disbanded one removed) (0033, 0064, 0073, 0076) |
 | people in posts; temporary posts (`postStates`) | `command` | appoint, relieve, promotion lists, an operation's end, combat vacating a hit commander's post (0076) |
-| standing agreements and prior orders on a post | `command` | verbs, situations, orders from the holder's own department |
+| standing agreements and prior orders on a post, including a governor's answered call not yet mustered (`postLevies`) | `command` | verbs, situations, orders from the holder's own department, a call a governor answered (0073) |
 | a person's stats, traits, standing, grievances, regard | `people` | combat results, the press, verbs, ladder |
 | a person's stances on record (from Consult) | `people` | Consult answers (0040, 0041); adviser credibility is derived from the president's knowledge, never stored |
 | a person's ladder rung and rivals | `ladder` | weekly people step |
