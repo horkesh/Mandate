@@ -94,6 +94,7 @@ export function applyPolicy(ctx: TickContext, start: State, def: SituationDef, p
     state = recordResponse(state, responseOf(answerOrder(world, start, carrier, principal, orderTerms(rules, row), readAt(carrier)), { order: key, person: carrier, post, role: 'addressee', day }));
   }
   ctx.events.push({ event: 'policy', person: principal, post: null, message: key, terms: trail });
+  if (unpaid !== null) fire(ctx, 'situations.policy_unpaid', unpaid.amount);
   if (unpaid !== null) ctx.events.push({ event: 'policy_unpaid', person: principal, post: null, message: key, terms: [term('relay_term', unpaid.amount, { person: principal, rule: `floor_unpaid:${unpaid.order}` })] });
   fire(ctx, 'situations.policy', push.total);
   return state;

@@ -60,6 +60,7 @@ export const SITUATION_MECHANICS = [
   'situations.options_changed',
   'situations.orders',
   'situations.policy',
+  'situations.policy_unpaid',
   'situations.proposals',
   'situations.resurfaced',
   'situations.staff_lines',

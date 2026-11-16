@@ -182,6 +182,9 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'reports.observer_letter': { why: VERBS_UNUSED, test: PV, needle: 'send an observer: he watches' },
   // Lane 1.5b: a policy option applies its row's pushback; no pack option names a policy row yet (lane 1.11's S17 will).
   'situations.policy': { why: 'no situation option names a policy row of the map yet (lane 1.11 authors the first, S17); the kernel test drives it', test: 'packages/kernel/test/gate-wiring.test.ts', needle: 'a chosen policy applies its pushback through the owners' },
+  // Lane 1.5b: a floor cost the principal's standing cannot pay, recorded and never dropped. The gate reviewer's condition:
+  // it never happens in a reference run (banded at zero in both), and the kernel test drives it.
+  'situations.policy_unpaid': { why: 'a floor cost falls on the principal only when the floored row has no stakeholder or carrier of its own, and no reference run chooses a policy at all; the gate reviewer requires it never to fire in one', test: 'packages/kernel/test/gate-wiring.test.ts', needle: 'with standing at 0 and no stakeholders, the whole floor cost is recorded unpaid' },
   'seats.attention_refused': { why: 'the generic principal spends a few points a week of a budget of twelve, so nothing is refused for want of attention; the kernel test drives it', test: PV, needle: 'refuses what it cannot pay' },
 };
 

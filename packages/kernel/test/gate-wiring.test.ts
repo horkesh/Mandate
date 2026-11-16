@@ -202,6 +202,22 @@ describe('the map from orders to values in play (gate review G-1.5a, G-1.5b)', (
     expect(unpaid.terms.map((t) => [t.termRule, t.termValue])).toEqual([['floor_unpaid:policy:shelter', cost - had]]);
   });
 
+  it('with standing at 0 and no stakeholders, the whole floor cost is recorded unpaid, never dropped', () => {
+    const rows = [ROWS[0]!, row('policy:send_back', [], { notCheaperThan: 'policy:shelter' })];
+    const lone = { ...CROSSERS, options: CROSSERS.options.map((o) => (o.policy === null ? o : { ...o, policy: { ...o.policy, carriedBy: [] } })) };
+    const wd = world(false, rows, lone);
+    // The principal's standing spent to 0.
+    const start = applyPeopleChanges(createState(wd, { seed: 1, drivers: { a_lead: 'human' } }), [{ change: 'standing', person: P('a_lead'), delta: -1000 }], 0, wd.map.world.rules.people, []);
+    const decided = run(wd, start, 2, { 2: [{ cmd: 'decide', situation: S('crossers'), options: ['send_back'] }] });
+    const morning = decided.results[0]!.state;
+    expect(morning.personStanding[P('a_lead')] ?? 0).toBe(0);
+    const cost = pushbackOf(wd, morning, 'policy:send_back', [], P('a_lead')).total;
+    expect(cost).toBeGreaterThan(0);
+    expect(decided.state.personStanding[P('a_lead')] ?? 0).toBe(0);
+    const unpaid = decided.results[1]!.events.find((e) => e.event === 'policy_unpaid')!;
+    expect(unpaid.terms.map((t) => [t.termRule, t.termValue])).toEqual([['floor_unpaid:policy:shelter', cost]]);
+    expect(decided.fires('situations.policy_unpaid')).toBe(1);
+  });
   it('inaction can be a policy too, applied through the map like an option (G-1.5g)', () => {
     const left = { ...CROSSERS, inaction: { text: 'situation.crossers.inaction', effects: [], policy: { row: 'policy:send_back', carriedBy: [POST('a_army')] } } };
     const wd = world(true, ROWS, left);
