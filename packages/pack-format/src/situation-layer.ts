@@ -82,6 +82,21 @@ export function policyRows(items: readonly { readonly file: string; readonly def
   const posts = new Set(pack.scenarios.flatMap((s) => s.posts.map((p) => p.id as string)));
   for (const { file, def } of items) {
     const err = (kind: string, at: string, message: string, expected: string) => sink.error(kind, file, at, message, expected);
+    // G-1.5g: in a decision the map gates, inaction is a policy too ("each commander decides"), so it cannot escape the map.
+    const situationGated = topicsOf(def.gate).filter((t) => mapTopics.has(t)).sort();
+    const inaction = def.inaction;
+    if (def.kind === 'decision' && inaction !== null) {
+      if (inaction.policy === null) {
+        if (situationGated.length > 0) err('policy-missing', 'inaction.policy', `the inaction outcome of a decision tagged ${situationGated.join(', ')} names no policy row`, 'policy: { row, carriedBy }: leaving the matter to others is a policy too (G-1.5g)');
+      } else {
+        inaction.policy.carriedBy.forEach((p, j) => {
+          if (!posts.has(p)) err('unknown-reference', `inaction.policy.carriedBy[${j}]`, `"${p}" is not a post`, 'a post id');
+        });
+        const row = byOrder.get(inaction.policy.row);
+        if (row === undefined) err('unknown-reference', 'inaction.policy.row', `"${inaction.policy.row}" is not a row of the map from orders to values`, 'a policy: row of rules.people.verbs.orderValues');
+        else for (const t of situationGated) if (!row.gateTopics.includes(t)) err('policy-row-ungated', 'inaction.policy.row', `row ${row.order} is not tagged "${t}", which the decision is`, 'a row tagged with the decision’s topic, so the gate reviewer signs it off (G-1.5g)');
+      }
+    }
     def.options.forEach((o, i) => {
       const gatedBy = [...new Set([...topicsOf(def.gate), ...topicsOf(o.gate)])].filter((t) => mapTopics.has(t)).sort();
       if (o.policy === null) {

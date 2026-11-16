@@ -4,6 +4,7 @@ import type { Command } from '../src/log/commands.ts';
 import type { LogEntry } from '../src/log/log.ts';
 import type { OrderValueRow } from '../src/people/verb-rules.ts';
 import { candidateOf } from '../src/plans/plans.ts';
+import { applyPeopleChanges } from '../src/people/people.ts';
 import { answerOrder, orderTerms, pushbackOf } from '../src/reading/orders.ts';
 import type { State } from '../src/root-state.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
@@ -56,7 +57,7 @@ const CROSSERS: SituationDef = {
     option('shelter', 1, { policy: { row: 'policy:shelter', carriedBy: [POST('a_army')] } }),
     option('send_back', 2, { watched: true, policy: { row: 'policy:send_back', carriedBy: [POST('a_army')] } }),
   ],
-  inaction: { text: 'situation.crossers.inaction', effects: [] },
+  inaction: { text: 'situation.crossers.inaction', effects: [], policy: null },
   historicalDefault: { options: ['shelter'] },
   staffLine: { authors: [POST('a_office')], recommends: ['shelter'], reasons: [{ kind: 'momentum', weight: 600 }], confidence: 700 },
   delegableTo: [],
@@ -69,11 +70,11 @@ const CROSSERS: SituationDef = {
 };
 
 /** The fixture with the two policy rows, a_gen keeping the practice of sheltering them, and the crossers decision. */
-function world(practice = true): SeatsWorld {
-  const base = indexedFixture({}, [CROSSERS]);
+function world(practice = true, rows: readonly OrderValueRow[] = ROWS, situation: SituationDef = CROSSERS): SeatsWorld {
+  const base = indexedFixture({}, [situation]);
   const w = base.map.world;
   const people = w.people.map((p) => (p.id === P('a_gen') && practice ? { ...p, practices: [{ practice: PRACTICE, cites: [] }] } : p));
-  const verbs = { ...w.rules.people.verbs, orderValues: [...w.rules.people.verbs.orderValues, ...ROWS] };
+  const verbs = { ...w.rules.people.verbs, orderValues: [...w.rules.people.verbs.orderValues, ...rows] };
   return indexSeatsWorld(indexWorld({ ...w, people, rules: { ...w.rules, people: { ...w.rules.people, verbs } } }), base.start, { situations: base.situations });
 }
 
@@ -122,17 +123,53 @@ describe('the map from orders to values in play (gate review G-1.5a, G-1.5b)', (
     const got = policyGrievances(decided.state);
     // Each stakeholder who holds an offended value (here a_bold, glory) holds a grievance of his term's weight.
     expect(got.filter((g) => g.cause === 'policy:send_back')).toEqual(push.terms.flatMap((t) => (t.source === 'values' ? [{ person: t.person, weight: t.amount, cause: 'policy:send_back' }] : [])));
-    // The floor's difference falls on the floor row's own stakeholders, every point of it, each naming the floor.
+    // G-1.5f: the floor's difference falls on this row's own stakeholders and carriers (a_bold, whom sending back offends;
+    // a_gen, whose practice it runs against), every point of it, each naming the floor. Never on those who favoured the
+    // floor's policy and are not this row's stakeholders (a_sec, a_clerk, a_spy): that would give them a stance.
     const shared = got.filter((g) => g.cause === 'floor:policy:shelter');
     expect(shared.reduce((n, g) => n + g.weight, 0)).toBe(floor.source === 'floor' ? floor.amount : -1);
-    const floorPeople = new Set(pushbackOf(wd, morning, 'policy:shelter', [P('a_gen')], P('a_lead')).terms.flatMap((t) => (t.source === 'floor' ? [] : [t.person as string])));
-    expect(shared.every((g) => floorPeople.has(g.person))).toBe(true);
+    const ownPeople = new Set(push.terms.flatMap((t) => (t.source === 'floor' ? [] : [t.person as string])));
+    expect(shared.every((g) => ownPeople.has(g.person))).toBe(true);
+    expect(shared.map((g) => g.person).sort()).toEqual(['a_bold', 'a_gen']);
+    for (const bystander of ['a_sec', 'a_clerk', 'a_spy']) expect(shared.some((g) => g.person === bystander), bystander).toBe(false);
     // Everyone holds it against the principal who chose it.
     expect(Object.values(decided.state.personGrievances).flat().filter((g) => g.grievanceKind === POLICY_GRIEVANCE).every((g) => g.grievanceAgainst === P('a_lead'))).toBe(true);
     // The carrier answered through his compliance, practice clash included, and proxy recorded it.
     const response = decided.state.orderResponses[`m.2.policy.crossers.send_back|${P('a_gen')}`]!;
     expect(response.respRole).toBe('addressee');
     expect(response.respReasons).toContainEqual({ kind: 'practice_clash', practice: PRACTICE, weight: 200 });
+    expect(decided.fires('situations.policy')).toBe(1);
+  });
+
+  it('a floor with nobody to bear it falls on the principal’s own standing, a typed floor cost (G-1.5f)', () => {
+    // Sending back that offends no one, carried by no post: the floor's difference has no stakeholder of its own.
+    const rows = [ROWS[0]!, row('policy:send_back', [], { notCheaperThan: 'policy:shelter' })];
+    const lone = { ...CROSSERS, options: CROSSERS.options.map((o) => (o.policy === null ? o : { ...o, policy: { ...o.policy, carriedBy: [] } })) };
+    const wd = world(false, rows, lone);
+    // A principal with standing to lose (standing is a permille, clamped at 0).
+    const start = applyPeopleChanges(createState(wd, { seed: 1, drivers: { a_lead: 'human' } }), [{ change: 'standing', person: P('a_lead'), delta: 800 }], 0, wd.map.world.rules.people, []);
+    const decided = run(wd, start, 2, { 2: [{ cmd: 'decide', situation: S('crossers'), options: ['send_back'] }] });
+    const morning = decided.results[0]!.state;
+    const push = pushbackOf(wd, morning, 'policy:send_back', [], P('a_lead'));
+    expect(push.terms.map((t) => t.source)).toEqual(['floor']);
+    const cost = push.terms[0]!.amount;
+    expect(cost).toBeGreaterThan(0);
+    expect(policyGrievances(decided.state)).toEqual([]);
+    expect(decided.state.personStanding[P('a_lead')]).toBe(Math.max(0, morning.personStanding[P('a_lead')]! - cost));
+    expect(decided.state.personStanding[P('a_lead')]).toBeLessThan(morning.personStanding[P('a_lead')]!);
+    const event = decided.results[1]!.events.find((e) => e.event === 'policy')!;
+    expect(event.terms.map((t) => [t.termRule, t.termValue])).toEqual([['floor:policy:shelter', cost], ['floor_cost:policy:shelter', -cost]]);
+  });
+
+  it('inaction can be a policy too, applied through the map like an option (G-1.5g)', () => {
+    const left = { ...CROSSERS, inaction: { text: 'situation.crossers.inaction', effects: [], policy: { row: 'policy:send_back', carriedBy: [POST('a_army')] } } };
+    const wd = world(true, ROWS, left);
+    const decided = run(wd, createState(wd, { seed: 1, drivers: { a_lead: 'human' } }), 2, { 2: [{ cmd: 'decide', situation: S('crossers'), options: [] }] });
+    expect(decided.results.flatMap((r) => r.rejections)).toEqual([]);
+    const got = policyGrievances(decided.state);
+    expect(got.some((g) => g.cause === 'policy:send_back')).toBe(true);
+    expect(got.some((g) => g.cause === 'floor:policy:shelter')).toBe(true);
+    expect(decided.state.orderResponses[`m.2.policy.crossers.inaction|${P('a_gen')}`]!.respRole).toBe('addressee');
     expect(decided.fires('situations.policy')).toBe(1);
   });
 

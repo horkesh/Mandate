@@ -122,7 +122,7 @@ describe('a situation moves a government of no side to a side (0065)', () => {
         gate: null,
       },
     ],
-    inaction: { text: 'situation.ordinance.inaction', effects: [] },
+    inaction: { text: 'situation.ordinance.inaction', effects: [], policy: null },
     historicalDefault: { options: ['join'] },
     staffLine: { authors: [P('a_office')], recommends: ['join'], reasons: [], confidence: 600 },
     delegableTo: [],

@@ -179,6 +179,11 @@ export interface OptionDef {
 export interface Outcome {
   readonly text: string;
   readonly effects: readonly Effect[];
+  /**
+   * The policy inaction is (lane 1.5b; the gate review's G-1.5g): leaving a gated matter to each commander is itself a
+   * policy, applied through the map like an option's, so it cannot come out cheaper than its floor. Null: not a policy.
+   */
+  readonly policy: OptionPolicy | null;
 }
 
 /** The historical default (0040): options taken, a delegation, or not yet sourced. Never shown to the player. */

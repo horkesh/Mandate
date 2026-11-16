@@ -105,7 +105,7 @@ describe('a situation closing neutral passage, end to end through the tick (0055
           gate: null,
         },
       ],
-      inaction: { text: 'situation.proclamation.inaction', effects: [] },
+      inaction: { text: 'situation.proclamation.inaction', effects: [], policy: null },
       historicalDefault: { options: ['close'] },
       staffLine: { authors: [P('a_office')], recommends: ['close'], reasons: [], confidence: 600 },
       delegableTo: [],

@@ -68,7 +68,7 @@ describe('the war begins by the faction’s own decision', () => {
     chain: null,
     subjects: [],
     options: [option('keep_peace', 1), option('open_war', 2, [{ setFlag: 'war_a' }])],
-    inaction: { text: 'situation.opening.inaction', effects: [] },
+    inaction: { text: 'situation.opening.inaction', effects: [], policy: null },
     historicalDefault: { options: ['open_war'] },
     staffLine: { authors: [POST('a_office')], recommends: ['open_war'], reasons: [{ kind: 'momentum', weight: 600 }], confidence: 700 },
     delegableTo: [],

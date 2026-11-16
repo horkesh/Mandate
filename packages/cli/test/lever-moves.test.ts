@@ -26,7 +26,7 @@ const CROSSERS: phase0.SituationDef = {
   chain: null,
   subjects: [],
   options: [opt('shelter', 1, ['caution']), opt('send_back', 2, ['glory'], true)],
-  inaction: { text: 'situation.crossers.inaction', effects: [] },
+  inaction: { text: 'situation.crossers.inaction', effects: [], policy: null },
   historicalDefault: { options: ['shelter'] },
   staffLine: { authors: [POST('a_office')], recommends: ['shelter'], reasons: [{ kind: 'momentum', weight: 600 }], confidence: 700 },
   delegableTo: [POST('a_office'), POST('a_reserve')],

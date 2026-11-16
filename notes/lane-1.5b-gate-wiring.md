@@ -27,7 +27,13 @@ Lane 1.5b carries out the gate reviewer's items on lane 1.5 (`review-gate-1861.m
 
 The terms always sum to the total.
 
-In play, the floor's difference is shared among the floor row's own stakeholders in proportion to their pushback, as whole numbers (the remainder goes to the first by id). Each share is a grievance whose cause is `floor:<row>`. `pushbackOf` now takes a list of recipients.
+In play (G-1.5f, the gate reviewer's should-fix), the floor's difference is shared among the floored row's own stakeholders and carriers: those it offends, those whose practice it runs against, and those unwilling to carry it. Each person's share is in proportion to his pushback, as whole numbers (the remainder goes to the first by id), and is a grievance whose cause is `floor:<row>`. It never falls on the floor row's stakeholders, who favoured the policy the floor stands for; a grievance would give them a stance no source gives them.
+
+When the row has nobody of its own to bear the difference, it falls on the principal's own standing as a typed floor cost (`floor_cost:<row>`). Every pushback term reaches the explanation trail as a `policy` event. Standing is a permille clamped at 0, so a principal with no standing left pays nothing more.
+
+`pushbackOf` now takes a list of recipients.
+
+**G-1.5g: inaction is a policy too.** A decision's inaction outcome may carry `policy: { row, carriedBy }`, and choosing nothing (or a lapse) applies it like an option's (key `m.<day>.policy.<situation>.inaction`). In a decision the map gates, the validator requires it, and its row must carry the decision's topic. A null inaction policy is left out of the content hash.
 
 **G-1.5c: validator checks** (`policyRows`):
 - every `gateTopics` id is a register topic, and a pack with gated rows but no register is refused;
@@ -71,8 +77,8 @@ Seat initiatives are not orders, so they stay at the base oversight. An edit's a
 ## Decisions taken, with the alternatives rejected
 
 1. **Policy carriers are named on the option.** Rejected: inferring them from the option's orders, because a policy option issues no orders.
-2. **The floor's difference falls on the floor row's own stakeholders.** Rejected:
-   - charging it all to the carrier, since the floor is a cost to the side, not to one man;
+2. **The floor's difference falls on the floored row's own stakeholders and carriers,** else on the principal's standing (the gate reviewer's G-1.5f). Rejected:
+   - the floor row's stakeholders, which was lane 1.5b's first choice: it gave men a grievance for a policy they favoured;
    - leaving it unapplied, since then the floor would not bite in play.
 3. **A practice is pack data on the person, validated against the rows' `clashes`.** Rejected:
    - a practice vocabulary table, because the rows already name every practice that can bite;

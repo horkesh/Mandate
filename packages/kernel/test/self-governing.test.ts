@@ -126,7 +126,7 @@ describe('end to end through the tick', () => {
       chain: null,
       subjects: [],
       options: [{ id: 'sign', label: `situation.${id}.option.sign`, displayKey: 1, proposedBy: [PER('a_gen')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [{ propose }], lockedCosts: [], orders: [], honours: [], watched: false, policy: null, gate: null }],
-      inaction: { text: `situation.${id}.inaction`, effects: [] },
+      inaction: { text: `situation.${id}.inaction`, effects: [], policy: null },
       historicalDefault: { options: ['sign'] },
       staffLine: { authors: [P('a_office')], recommends: ['sign'], reasons: [], confidence: 600 },
       delegableTo: [],

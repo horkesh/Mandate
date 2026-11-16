@@ -21,8 +21,10 @@ function gate(superseded: { situation: string; option: string }[] = []): GateDat
   return { register: { topics: [{ id: TOPIC, supersededOptions: superseded.map((s) => ({ ...s, law: 'a_law' })) }, { id: 'other', supersededOptions: [] }] } } as unknown as GateData;
 }
 type Opt = { id: string; policy?: { row: string; carriedBy: string[] } | null; honours?: string[]; watched?: boolean; gate?: unknown };
-function item(options: Opt[], tag: unknown = { topics: [TOPIC], placement: 'decision', risks: [], actingSide: null }) {
-  const def = { id: 'crossers', kind: 'decision', gate: tag, options: options.map((o) => ({ policy: null, honours: [], watched: false, gate: null, ...o })) };
+type Policy = { row: string; carriedBy: string[] } | null;
+const LEAVE: Policy = { row: 'policy:shelter', carriedBy: [] };
+function item(options: Opt[], tag: unknown = { topics: [TOPIC], placement: 'decision', risks: [], actingSide: null }, inaction: Policy = LEAVE) {
+  const def = { id: 'crossers', kind: 'decision', gate: tag, inaction: { text: 'x', effects: [], policy: inaction }, options: options.map((o) => ({ policy: null, honours: [], watched: false, gate: null, ...o })) };
   return { file: 'situations/crossers.json', def: def as never };
 }
 const shelter: Opt = { id: 'shelter', policy: { row: 'policy:shelter', carriedBy: ['p_army'] }, honours: ['duty'] };
@@ -38,12 +40,12 @@ describe('policy rows (G-1.5a, G-1.5c)', () => {
   it('a gated decision whose options name gated rows, honour them exactly, and floor the watched one raises nothing', () => {
     expect(raised([item([shelter, sendBack])])).toEqual([]);
     // An ungated decision needs no policy rows.
-    expect(raised([item([{ id: 'a' }, { id: 'b' }], { none: 'not gated' })])).toEqual([]);
+    expect(raised([item([{ id: 'a' }, { id: 'b' }], { none: 'not gated' }, null)])).toEqual([]);
   });
 
   it('an option of a gated decision that names no row is refused, even when only its own tag carries the topic', () => {
     expect(raised([item([shelter, { id: 'send_back', watched: true }])])).toEqual(['policy-missing options[1].policy']);
-    expect(raised([item([{ id: 'x', gate: { topics: [TOPIC], placement: 'decision', risks: [], actingSide: null } }], { none: 'not gated' })])).toEqual(['policy-missing options[0].policy']);
+    expect(raised([item([{ id: 'x', gate: { topics: [TOPIC], placement: 'decision', risks: [], actingSide: null } }], { none: 'not gated' }, null)])).toEqual(['policy-missing options[0].policy']);
   });
 
   it('an option must honour exactly its row’s values, so the map and a delegate’s choice cannot diverge', () => {
@@ -54,7 +56,7 @@ describe('policy rows (G-1.5a, G-1.5c)', () => {
   it('the row an option names must carry the option’s gated topic', () => {
     const rows = [row('policy:shelter', { honours: ['duty'], gateTopics: ['other'] }), ROWS[1]!];
     // Shelter's row is then also an ungated floor for the watched option: both are refused.
-    expect(raised([item([shelter, sendBack])], pack(rows))).toEqual(['policy-row-ungated options[0].policy.row', 'policy-floor-ungated options[1].policy.row']);
+    expect(raised([item([shelter, sendBack], undefined, { row: 'policy:send_back', carriedBy: [] })], pack(rows))).toEqual(['policy-row-ungated options[0].policy.row', 'policy-floor-ungated options[1].policy.row']);
   });
 
   it('a watched option’s gated row names a floor (G-1.5c), and so does one the register supersedes', () => {
@@ -75,6 +77,14 @@ describe('policy rows (G-1.5a, G-1.5c)', () => {
     const rows = [row('policy:shelter', { honours: ['duty'], gateTopics: [TOPIC, 'no-such-topic'] }), ROWS[1]!];
     expect(raised([], pack(rows))).toEqual(['gate-unknown-topic rules.people.verbs.orderValues[0].gateTopics[1]']);
     expect(raised([], pack(), null)).toEqual(['gate-unknown-topic rules.people.verbs.orderValues[0].gateTopics[0]', 'gate-unknown-topic rules.people.verbs.orderValues[1].gateTopics[0]']);
+  });
+
+  it('the inaction outcome of a gated decision names its policy row too, gated alike (G-1.5g)', () => {
+    expect(raised([item([shelter, sendBack], undefined, null)])).toEqual(['policy-missing inaction.policy']);
+    const ungatedRow = [...ROWS, row('policy:each_decides', { gateTopics: [] })];
+    expect(raised([item([shelter, sendBack], undefined, { row: 'policy:each_decides', carriedBy: [] })], pack(ungatedRow))).toEqual(['policy-row-ungated inaction.policy.row']);
+    expect(raised([item([shelter, sendBack], undefined, { row: 'policy:nowhere', carriedBy: [] })])).toEqual(['unknown-reference inaction.policy.row']);
+    expect(raised([item([shelter, sendBack], undefined, { row: 'policy:shelter', carriedBy: ['no_post'] })])).toEqual(['unknown-reference inaction.policy.carriedBy[0]']);
   });
 
   it('a row or a carrying post that does not exist is refused', () => {
