@@ -237,7 +237,8 @@ const UNION_BANDS: Record<string, GateBand> = {
   'forces.stragglers_returned': around(32),
   // Lane 1.4: the Charleston command's operation on Washington: one opened, its stages, works dug after it holds; the
   // battle's dispatches by the hour and both sides' returns, first and full.
-  'combat.flank_broken': notHere('the one battle-day draws no break; the testbed run fires it'),
+  // Lane 1.11a (the reviewer's note): the merged Union run breaks a flank once, so the mechanic is banded, as retreat_blocked is.
+  'combat.flank_broken': around(1),
   'combat.routed': notHere('the garrison surrenders before it routs; the testbed run fires it'),
   'combat.works_stormed': notHere('the one battle is in ground with no works; the testbed run fires it'),
   'operations.ended': around(1),
