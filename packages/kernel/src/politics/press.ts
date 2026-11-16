@@ -4,20 +4,34 @@
  * moves the blocs (proposed to `politics`) and a commander's standing (proposed to `people`).
  *
  * The page carries the battles its side closed since the last page, each as its public hears it: won (the other side
- * left the field), lost (its own side left the field: withdrew or routed), or drawn. The paper's reach scales what the
- * page moves. Pure: nothing here draws a die; the tick sends the page and applies the proposals.
+ * left the field), lost (its own side left the field: withdrew or routed, or surrendered or was destroyed), or drawn.
+ * Who left the field was public. The paper's reach scales what the page moves.
+ *
+ * Its losses are never the battle record's truth (0008, 0052; the lead's ruling on lane 1.6). They are what its side's
+ * principal has been told by the printing day: for each day of the battle, the latest casualty return he holds, the full
+ * return once it has come and the first (low) return before. A page printed before any return has come gives the result
+ * without a figure. Pure: nothing here draws a die; the tick sends the page and applies the proposals.
  */
 import { strictCompare } from '../compare.ts';
 import type { BattleRecord } from '../combat/records.ts';
 import type { FactionId, PersonId, RegionId } from '../ids.ts';
+import type { KnownReport } from '../knowledge/knowledge.ts';
 import type { ReportClaim } from '../knowledge/report.ts';
 import type { PeopleChange } from '../people/people.ts';
 import type { State } from '../root-state.ts';
+import { seatIdFor } from '../seats/seats.ts';
 import type { PoliticsChange } from './politics.ts';
 import type { PaperRule, PoliticsRules } from './rules.ts';
 
 export const BATTLE_RESULTS = ['drawn', 'lost', 'won'] as const;
 export type BattleResult = (typeof BATTLE_RESULTS)[number];
+
+/** How a page's figure stands: from full returns for every day, from a first (low) return for some, or none yet. */
+export const RETURNED = ['first', 'full', 'none'] as const;
+export type Returned = (typeof RETURNED)[number];
+
+/** The confidence a front page gives its figure: full returns, first returns, or none (0: the page prints no figure). */
+export const RETURNED_CONFIDENCE: Readonly<Record<Returned, number>> = Object.freeze({ full: 900, first: 500, none: 0 });
 
 /** One battle as a side's public hears it. */
 export interface PressBattle {
@@ -25,8 +39,9 @@ export interface PressBattle {
   readonly region: RegionId;
   readonly result: BattleResult;
   readonly commander: PersonId | null;
-  /** The side's killed, wounded, missing and captured over the battle, men (the captured counted among the missing). */
+  /** The side's killed, wounded and missing as its principal's returns give them (the captured among the missing); 0 with none. */
   readonly casualties: number;
+  readonly returned: Returned;
 }
 
 /**
@@ -42,24 +57,57 @@ export function battleResultFor(record: BattleRecord, faction: FactionId): Battl
   return 'drawn';
 }
 
-/** The battles `faction` fought that closed in (`after`, `upTo`], in battle id order. */
-export function closedBattles(state: State, faction: FactionId, after: number, upTo: number): PressBattle[] {
+/** A return's own losses: killed and wounded, plus the missing and (a full return's) captured. Null if it is not a return of his own. */
+function ownLosses(r: KnownReport, kind: 'first' | 'full'): number | null {
+  const own = r.knownBody.reportClaims.filter((c) => c.claimToken === kind && (c.claimKind === 'own-losses' || c.claimKind === 'missing' || c.claimKind === 'captured'));
+  return own.length === 0 ? null : own.reduce((a, c) => a + c.claimValue, 0);
+}
+
+/**
+ * The side's losses over a battle as its principal holds them (the lead's ruling on lane 1.6): for each battle day, the
+ * full return written `revealDays` after it if he holds it, else the first return written that evening. The first
+ * return counts the captured among the missing, and the full return lists them apart, so both count them (G-1.6a).
+ */
+export function returnedLosses(state: State, principal: PersonId | null, region: RegionId, battleDays: readonly number[], revealDays: number): { readonly men: number; readonly returned: Returned } {
+  if (principal === null) return { men: 0, returned: 'none' };
+  const held = (state.knowledgeBySeat[seatIdFor(principal)]?.knownReports ?? []).filter((r) => r.knownBody.reportType === 'casualty-return' && r.knownBody.reportSubjectKind === 'region' && r.knownBody.reportSubjectId === region);
+  let men = 0;
+  let full = 0;
+  let first = 0;
+  for (const d of battleDays) {
+    const fullReturn = held.find((r) => r.knownBody.reportDay === d + revealDays && ownLosses(r, 'full') !== null);
+    if (fullReturn !== undefined) {
+      men += ownLosses(fullReturn, 'full')!;
+      full += 1;
+      continue;
+    }
+    const firstReturn = held.find((r) => r.knownBody.reportDay === d && ownLosses(r, 'first') !== null);
+    if (firstReturn !== undefined) {
+      men += ownLosses(firstReturn, 'first')!;
+      first += 1;
+    }
+  }
+  return { men, returned: full + first === 0 ? 'none' : first === 0 ? 'full' : 'first' };
+}
+
+/** The battles `faction` fought that closed in (`after`, `upTo`], in battle id order, with the losses its principal holds. */
+export function closedBattles(state: State, faction: FactionId, after: number, upTo: number, principal: PersonId | null, revealDays: number): PressBattle[] {
   const out: PressBattle[] = [];
   const ids = Object.keys(state.battleRecords).sort(strictCompare);
   for (const id of ids) {
     const r = state.battleRecords[id]!;
     if (r.battleEndDay === null || r.battleEndDay <= after || r.battleEndDay > upTo || !r.battleFactions.includes(faction)) continue;
-    let casualties = 0;
     let commander: PersonId | null = null;
+    const days: number[] = [];
     for (const day of r.battleDays) {
       for (const s of day.bdaySides) {
         if (s.bsideFaction !== faction) continue;
-        // The public's figure counts the captured among the missing (0074, 0076; the gate review's G-1.6a).
-        casualties += s.bsideKilled + s.bsideWounded + s.bsideMissing + s.bsideCaptured;
+        if (!days.includes(day.bdayDay)) days.push(day.bdayDay);
         if (s.bsideCommander !== null) commander = s.bsideCommander;
       }
     }
-    out.push({ battle: id, region: r.battleRegion, result: battleResultFor(r, faction), commander, casualties });
+    const losses = returnedLosses(state, principal, r.battleRegion, days, revealDays);
+    out.push({ battle: id, region: r.battleRegion, result: battleResultFor(r, faction), commander, casualties: losses.men, returned: losses.returned });
   }
   return out;
 }
@@ -75,10 +123,14 @@ export interface FrontPage {
 
 const scale = (v: number, permille: number): number => Math.trunc((v * permille) / 1000);
 
-/** The front page `paper` prints today, from the battles its side closed in the last `cadenceDays` and its side's framing. */
-export function frontPage(rules: PoliticsRules, state: State, paper: PaperRule, day: number): FrontPage {
-  const battles = closedBattles(state, paper.faction, day - rules.press.cadenceDays, day);
-  const claims: ReportClaim[] = battles.map((b) => ({ claimKind: 'battle-result', claimRegion: b.region, claimValue: b.casualties, claimToken: b.result, claimConfidence: 1000 }));
+/**
+ * The front page `paper` prints today, from the battles its side closed in the last `cadenceDays`, with the losses its
+ * side's `principal` holds in his returns (`revealDays`: the pack's days from a battle day to its full return), and its
+ * side's framing.
+ */
+export function frontPage(rules: PoliticsRules, state: State, paper: PaperRule, day: number, principal: PersonId | null, revealDays: number): FrontPage {
+  const battles = closedBattles(state, paper.faction, day - rules.press.cadenceDays, day, principal, revealDays);
+  const claims: ReportClaim[] = battles.map((b) => ({ claimKind: 'battle-result', claimRegion: b.region, claimValue: b.casualties, claimToken: b.result, claimConfidence: RETURNED_CONFIDENCE[b.returned] }));
   const framing = state.warFraming[paper.faction] ?? 0;
   if (framing !== 0) claims.push({ claimKind: 'framing', claimRegion: null, claimValue: framing, claimToken: null, claimConfidence: 1000 });
   const politics: PoliticsChange[] = [];

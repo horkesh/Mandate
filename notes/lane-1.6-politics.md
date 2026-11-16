@@ -231,6 +231,16 @@ The pre-press band of 197 also counted the mail's weather days: other reports al
   - **Union:** the merged run differs from both parents, as it should, since main's lane 1.11a people data and this lane's politics both change it.
   - **Testbed:** the merged run equals the lane's, so nothing main merged since 1637a1f changes the testbed run. Main's differs only by this lane's politics: the press, the editor and credibility.
 
+## The press's figures from the returns (the lead's ruling, on 0ffcc56)
+
+A front page went to the principal with the battle record's exact losses, a route around 0008 and 0052. Now:
+- **The figures:** a page's `battle-result` takes its side's losses from the casualty returns its principal holds by the printing day (`returnedLosses` in `politics/press.ts`). For each battle day it takes the full return, written `revealDays` after the day, if he holds it, else the first return written that evening. The battle record is never read for figures.
+- **Confidence:** 900 from full returns for every day, 500 while a first return stands for any day, and 0 with no return yet, when the page prints the result with no figure.
+- **The captured (G-1.6a):** the first return counts them among the missing, and the full return lists them apart. Both count them, so G-1.6a holds through the returns.
+- **The result** (won, lost or drawn by who left the field) still reads the record: who left the field was public.
+- **Test:** no figure before any return; the first return's low figure; then the full figure with the captured; and the return's claim of the enemy's losses never counts as the side's own. Re-break: reading the battle record's losses fails 2 tests.
+- *Rejected:* the truth on a lag (it still leaks exact losses before the full return), and a paper's own estimate (a slant, which belongs to 1B).
+
 ## Findings outside my scope
 
 - The enemy reads the papers (0032: Lee followed McClellan in the Inquirer). Front pages go only to their own side, so the enemy route is 1B.
@@ -239,5 +249,5 @@ The pre-press band of 197 also counted the mail's weather days: other reports al
 - The Confederate side has no chambers: no source in the notes covers its Congress's sessions.
 - A paper's own slant (its alignment, and editors' leaks) is not modelled. Every paper prints the same battles.
 - **For 1B (the gate review's item 7):** the border Unionists' values ("conciliation, union") omit their stake in slavery, which was the core of the border problem. Add `slavery_noninterference` when blocs read policy (R7's consequences). Today nothing reads bloc values but the address penalty.
-- The press reads the battle record's truth, not the casualty returns. That is a knowledge question for the standing reviewer.
+- ~~The press reads the battle record's truth, not the casualty returns.~~ Fixed by the lead's ruling (see "The press's figures from the returns").
 - M2's `derive.ts` stays until M2 retires.

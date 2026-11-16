@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import type { BattleRecord } from '../src/combat/records.ts';
 import { toId, type SituationId } from '../src/ids.ts';
-import { knowledgeOf } from '../src/knowledge/knowledge.ts';
+import { deliverReport, knowledgeOf, type KnownReport } from '../src/knowledge/knowledge.ts';
+import type { ReportClaim } from '../src/knowledge/report.ts';
+import { NO_TRUTH } from '../src/knowledge/truth.ts';
 import type { Command } from '../src/log/commands.ts';
 import type { LogEntry } from '../src/log/log.ts';
 import { applyPeopleChanges } from '../src/people/people.ts';
@@ -73,6 +75,24 @@ function days(world: SeatsWorld, start: State, n: number, entries: Record<number
     state = r.state;
   }
   return { state, results, fires: (m) => telemetry.mechanics[m]?.fires ?? 0 };
+}
+
+/** `state` with a casualty return about a_front, written on `written`, held by the principal from `received`. */
+function withReturn(state: State, written: number, received: number, token: string, claims: readonly (readonly [string, number])[]): State {
+  const body = {
+    reportType: 'casualty-return' as const,
+    reportSubtype: null,
+    reportAuthor: P('a_gen'),
+    reportAuthorPost: null,
+    reportSubjectKind: 'region' as const,
+    reportSubjectId: R('a_front'),
+    reportClaims: claims.map(([kind, value]) => ({ claimKind: kind as ReportClaim['claimKind'], claimRegion: R('a_front'), claimValue: value, claimToken: token, claimConfidence: 600 })),
+    reportDay: written,
+    reportHour: null,
+    reportAdvice: null,
+    reportAnswers: null,
+  };
+  return deliverReport(state, lead, { id: `m.${written}.${token}` as KnownReport['id'], knownReceivedDay: received, knownRoute: 'courier', knownVia: [], knownBody: body }, NO_TRUTH);
 }
 
 const at = (state: State, day: number): Parameters<typeof holds>[1] => ({ state, day, situation: null, knowledge: knowledgeOf(state, lead), since: null });
@@ -209,18 +229,36 @@ describe('the press as a report route (FOUNDATION section 7)', () => {
     }
   });
 
-  it('counts the captured among a side’s losses on the front page (G-1.6a)', () => {
+  it('prints its side’s losses from the principal’s returns, low first, then full, never the battle record (the lead’s ruling)', () => {
+    const world = politicsWorld();
+    const reveal = world.map.world.rules.operations.returns.revealDays;
+    // The record says side a lost 100 killed, 300 wounded, 50 missing and 70 captured; no page may print that truth.
     const b = battle(5);
     const taken = { ...b, battleDays: [{ ...b.battleDays[0]!, bdaySides: b.battleDays[0]!.bdaySides.map((x) => ({ ...x, bsideCaptured: x.bsideFaction === F('a') ? 70 : 900 })) }] } as unknown as BattleRecord;
-    const s = { ...createState(politicsWorld(), { seed: 1 }), battleRecords: { 'battle:a_front:4': taken } };
-    expect(frontPage(POLITICS, s, POLITICS.press.papers[0]!, 7).claims[0]!.claimValue).toBe(100 + 300 + 50 + 70);
+    const s0 = { ...createState(world, { seed: 1 }), battleRecords: { 'battle:a_front:4': taken } };
+    const figure = (s: State, day: number) => {
+      const c = frontPage(POLITICS, s, POLITICS.press.papers[0]!, day, P('a_lead'), reveal).claims[0]!;
+      return [c.claimToken, c.claimValue, c.claimConfidence];
+    };
+    // Before any return: the result, with no figure.
+    expect(figure(s0, 7)).toEqual(['won', 0, 0]);
+    // The first return runs low, and counts the captured among the missing: the page prints its figure.
+    const first = withReturn(s0, 5, 6, 'first', [['own-losses', 300], ['missing', 120]]);
+    expect(figure(first, 7)).toEqual(['won', 420, 500]);
+    // After the full return (the captured apart, and counted: G-1.6a), the page prints the full figure.
+    const full = withReturn(first, 5 + reveal, 6 + reveal, 'full', [['own-losses', 400], ['missing', 50], ['captured', 70]]);
+    expect(figure(full, 7)).toEqual(['won', 520, 900]);
+    // The enemy's losses the return claims are not the side's own.
+    const enemy = withReturn(s0, 5, 6, 'enemy', [['casualties', 5000]]);
+    expect(figure(enemy, 7)).toEqual(['won', 0, 0]);
   });
 
   it('prints the week’s battles, moves the blocs and the commander’s standing at its reach, and reaches the readers', () => {
     const world = politicsWorld();
     const s0 = createState(world, { seed: 1 });
-    const page = frontPage(POLITICS, { ...s0, battleRecords: { 'battle:a_front:4': battle(5) } }, POLITICS.press.papers[0]!, 7);
-    expect(page.claims).toEqual([{ claimKind: 'battle-result', claimRegion: R('a_front'), claimValue: 450, claimToken: 'won', claimConfidence: 1000 }]);
+    const page = frontPage(POLITICS, { ...s0, battleRecords: { 'battle:a_front:4': battle(5) } }, POLITICS.press.papers[0]!, 7, P('a_lead'), world.map.world.rules.operations.returns.revealDays);
+    // No return has reached the principal in this State, so the page has the result and no figure.
+    expect(page.claims).toEqual([{ claimKind: 'battle-result', claimRegion: R('a_front'), claimValue: 0, claimToken: 'won', claimConfidence: 0 }]);
     expect(page.politics).toEqual([
       { change: 'support', bloc: 'a_doves', delta: -20, reason: 'press:a_paper:won' },
       { change: 'support', bloc: 'a_hawks', delta: 25, reason: 'press:a_paper:won' },

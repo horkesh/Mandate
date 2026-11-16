@@ -117,7 +117,9 @@ export function politicsPhase(ctx: TickContext, start: State): State {
         fire(ctx, 'politics.press_silent');
         continue;
       }
-      const page = frontPage(rules, state, paper, ctx.day);
+      // Its losses are its side's principal's returns, never the battle record (0008, 0052).
+      const principal = ctx.world.factionIds.includes(paper.faction) ? ctx.world.faction(paper.faction).principal : null;
+      const page = frontPage(rules, state, paper, ctx.day, principal, ctx.world.map.world.rules.operations.returns.revealDays);
       changes.push(...page.politics);
       people.push(...page.people);
       for (const reader of readers(ctx, state, paper.faction)) {
