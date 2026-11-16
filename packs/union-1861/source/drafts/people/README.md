@@ -424,4 +424,4 @@ A people cell is refused (`weak-citations-only`) when every admissible citation 
 
 **Existing cells.** The cells entered before this rule cite evidence with no date, so the date check cannot judge them. A pass that dates their citations would show which rest on evidence past the boundary; none is known to.
 
-**Entered from the held-back draft in lane 1.11b:** 28 cells (see `notes/lane-1.11b-data-entry.md`). The rest of the draft stays held back.
+**Entered from the held-back draft in lane 1.11b:** 19 cells (see `notes/lane-1.11b-data-entry.md`). The rest of the draft stays held back. A cell resting only on a secondary work or a government biography stands if it is a fact (rank, office, service, a date); a judgment (values, temperament, competence, nerve, regard, reputation, candour, boldness) needs a contemporary leg, or it is held back.
