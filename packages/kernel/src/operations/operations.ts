@@ -48,6 +48,7 @@ export const STAGE_REASONS = [
   'pursuing',
   'pursuit_over',
   'objective_reached',
+  'landed',
   'objective_held',
   'repulsed_too_often',
   'no_forces',

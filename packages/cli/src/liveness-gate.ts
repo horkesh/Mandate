@@ -135,6 +135,7 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'infrastructure.changed': { why: NO_PROPOSER, test: 'packages/kernel/test/infrastructure.test.ts', needle: 'damages and repairs edges and depots' },
   // Lane 1.4: operations and their reports.
   'combat.records_pruned': { why: 'a closed battle is pruned after the pack\'s battleDays (120), longer than either reference run', test: 'packages/kernel/test/operations.test.ts', needle: 'prunes ended operations, closed battles and old responses' },
+  'operations.landed': { why: 'no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)', test: 'packages/kernel/test/detachments.test.ts', needle: 'lands its troops at the objective' },
   'operations.repulsed': { why: 'no operation in either reference run is driven back by a battle: each attacker carries its objective or holds', test: 'packages/kernel/test/operations.test.ts', needle: 'driven back, an axis withdraws, pauses and tries again' },
   'operations.support_answered': { why: 'no plan the reference runs draft asks another holder for an axis (no pincer is drafted)', test: 'packages/kernel/test/operations.test.ts', needle: 'a willing holder complies, his axis marches' },
   'operations.support_refused': { why: 'no plan the reference runs draft asks another holder for an axis (no pincer is drafted)', test: 'packages/kernel/test/operations.test.ts', needle: 'a holder who will not move refuses the request' },
