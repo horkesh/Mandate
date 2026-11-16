@@ -9,11 +9,13 @@
  *  2. Deliver messages due today: relays, filters, arrivals, knowledge.
  *  2b. People apply what was proposed to them today: a bypassed relay's grievance (lane 1.1).
  *  2c. Plans: edits answered, goals drafted within the daily cap (lane 1.2).
+ *  2d. Recruitment: levies muster into new blocks; enlistments that end disband (lane 1.7).
  *  3. Movement: approved plans through the stand-in standing-goal path (lane 1.4
  *     retires it), every march a day further (lane 0.5).
  *  3b. Combat: battles and occupation; losses, retreats, generals hit, control deltas (lane 1.3).
  *  4. Control and network changes, and the derived map (lane 0.4).
  *  4a. Stragglers rejoin, and stores on hand fall or refill, from today's supply trace (lanes 0.5, 1.3).
+ *  4a'. Regions: the derived self-emancipation term proposes arrivals at the lines (lane 1.7).
  *  4b. Situations fire, surface, stay live, take history defaults (lane 0.7).
  *  4c. Proposals `command` owns: a neutral government closing or reopening (0058),
  *      or a government joining a side (0065). A post that joins a side this way has
@@ -53,6 +55,8 @@ import { applyVerb, observerLetters, VERB_MECHANICS } from './verbs.ts';
 import { isPeopleWeek, peopleWeek, WEEK_MECHANICS } from './people-week.ts';
 import { attentionLeft, refillAttention, spendAttention } from '../seats/attention.ts';
 import { attentionPrice } from './attention.ts';
+import { issueCall, recruitmentPhase, RECRUITMENT_MECHANICS } from './recruitment.ts';
+import { regionsPhase, REGIONS_MECHANICS } from './regions.ts';
 
 /** Every mechanic the seats layer counts (FOUNDATION section 11.5). */
 export const SEATS_MECHANICS = [
@@ -81,6 +85,8 @@ export const SEATS_MECHANICS = [
   ...WEEK_MECHANICS,
   ...MOVEMENT_MECHANICS,
   ...PLANS_MECHANICS,
+  ...RECRUITMENT_MECHANICS,
+  ...REGIONS_MECHANICS,
 ] as const;
 
 /** Every mechanic the tick counts: the seats layer's and the situations phase's. Runners declare these. */
@@ -175,6 +181,12 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
         fire(ctx, 'seats.attention_spent', cost);
       }
     };
+    if (c.cmd === 'call') {
+      const reason = issueCall(ctx, state, entry.seat, c);
+      if (reason !== null) reject(reason);
+      else pay();
+      return;
+    }
     if (c.cmd === 'order' || c.cmd === 'review' || c.cmd === 'go') {
       const reason = issueOrder(ctx, state, entry.seat, c);
       if (reason !== null) reject(reason);
@@ -217,6 +229,9 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   state = freeze(plansPhase(ctx, state, options.viewCache ?? createViewCache()));
   state = freeze(sendMessages(state, ctx.outbox.splice(0)));
 
+  // 2d. Recruitment (lane 1.7): levies due muster into new blocks, enlistments that end disband; one proposal per block.
+  state = freeze(recruitmentPhase(ctx, state));
+
   // 3. Movement: approved plans march through the stand-in path (lane 1.4 retires it), every march a day further.
   state = freeze(applyStanding(ctx, state));
 
@@ -230,6 +245,9 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
 
   // 4a. Stragglers rejoin, then stores on hand fall or refill, from today's supply trace (lanes 0.5, 1.3; only with a map).
   state = freeze(storesPhase(ctx, state, mapped.derived, new Set(fought.result?.inBattle ?? [])));
+
+  // 4a'. Regions (lane 1.7): the derived self-emancipation term, on its cadence, proposes who reached the lines.
+  state = freeze(regionsPhase(ctx, state));
 
   // 4b. Situations, after the map so a cause sees today's control: fire on their causes, surface on what the seat
   // knows, stay live, take history defaults (lane 0.7).

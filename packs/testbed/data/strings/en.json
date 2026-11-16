@@ -1,6 +1,7 @@
 {
 "department.n_executive.name": "Office of the First Minister",
 "department.n_navy.name": "Northern Admiralty",
+"department.n_province.name": "Shire of Brenmark",
 "department.n_railways.name": "Northern Railway Companies",
 "department.n_war.name": "Northern War Ministry",
 "department.s_executive.name": "Southern Council",
@@ -46,6 +47,7 @@
 "person.n_commodore.name": "Jasper Fenwick",
 "person.n_engineer.name": "Hollis Carrow",
 "person.n_fighter.name": "Tamsin Rook",
+"person.n_governor.name": "Hollis Brandt",
 "person.n_leader.name": "Edmund Hale",
 "person.n_navy_secretary.name": "Wilhelmina Strand",
 "person.n_organiser.name": "Aurelian Voss",
@@ -60,6 +62,7 @@
 "post.n_army_east.name": "Army of the Eastwatch",
 "post.n_army_mere.name": "Army of the Mere",
 "post.n_army_west.name": "Army of the Westwatch",
+"post.n_brenmark_governor.name": "Governor of Brenmark",
 "post.n_capital_defences.name": "Defences of Aldmoor",
 "post.n_capital_yard.name": "Aldmoor Navy Yard",
 "post.n_gull_rock.name": "Gull Rock Fort",

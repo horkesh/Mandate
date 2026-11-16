@@ -122,6 +122,8 @@ describe('attention (0025, 0040; FOUNDATION section 5)', () => {
     expect(attentionPrice(world, s, { cmd: 'inquire', to: POST('a_army'), subject: null, route: 'special-messenger' })).toBe(world.rules.latency.specialMessengerPrice);
     expect(attentionPrice(world, s, { cmd: 'consult', situation: S('x'), posts: [POST('a_office')] })).toBe(1);
     expect(attentionPrice(world, s, { cmd: 'decide', situation: S('x'), options: [] })).toBe(0);
+    // Lane 1.7's call for regiments is an order to a governor, priced as an order.
+    expect(attentionPrice(world, s, { cmd: 'call', to: POST('a_office'), regiments: 1, termDays: 90, route: 'courier', bypass: false })).toBe(world.map.world.rules.people.attention.costs.order);
   });
 });
 

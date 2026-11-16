@@ -159,6 +159,13 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - From lane 1.5's deferrals (people's verbs):
   - **1B:** the consistency cost of reversing a stance on record (FOUNDATION section 5, Consult). Lane 1.5 records stances but does not price their reversal.
   - **Lane 1.4, or 1B if 1.4 cannot take it:** freelancing, M2's ladder action of a general acting on his own. It needs operations, so lane 1.5 does not port it; a high rung produces an initiative instead.
+- From lane 1.5's report (`notes/lane-1.5-people-verbs.md`, on `phase1-people-verbs` while under review), by lane:
+  - **Lane 1.12 (rule seats):** no rule seat uses any people verb (appoint, relieve, transfer, inquire, consult, observer, promise, pressure, address), so they are QUIET in the reference runs. The principals need a policy for them before the verbs can fire in a history run.
+  - **Lane 1.11 (data entry):** the Union fugitive-policy rows of the map from orders to values. The mechanism is built (`gateTopics`, the `notCheaperThan` floor); the rows need the gate reviewer's sign-off.
+  - **Lane 1.11 or 1B:** the "practice clash" term (a commander's own fugitive practice clashing with an order) is deferred for want of data.
+  - **Lane 1.14 (calibration):** discontent is grievances minus half of regard. In the testbed, men cooling toward their leader climb to lobbying with no grievance, and one becomes a rival. These are design parameters to calibrate.
+  - **Lane 1.13 (console and M2's retirement):** M2's `audience.test.ts` still sits beside the new State until M2 retires. Lane 1.5 moved its nine cases one for one.
+  - Consult travels by courier only for now.
 - From the reviews of the 1861 gate register, lane 1.1 and the scanner aliases (`review-gate-register-1861.md`, `review-lane-1.1.md`, `review-scanner-aliases.md`):
   - **Stand-ins (Phase 1):** `context.oversight` is a constant 500, owned by lane 1.4 (it should vary with distance and the telegraph); `context.leaderCredibility` is owned by lane 1.6. Lane 1.1 labels both STAND-IN.
   - **Lane 1.14 (calibration), the reviewer's tabulation on the Union rules at hold 400 and advance 600:** nobody without values or regard reaches plain compliance (the highest willingness is 55, against a threshold of 150); every order lands on reservations or an objection, flipping at a boldness gap of about 100; with boldness drawn at 500 ± 200, about 40% of men object to an advance and 40% to a hold. Calibrate against a pushback band.
@@ -218,6 +225,24 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.11:** loyalty data must never come from the census; narrator text says whose loyalty it means (in a slave state, the free and voting population's); no border-state census rows are entered until lane 1.7's G-1.7a fix is merged (the lead's ruling: a Union-held region is skipped only where an R7 or S17 policy flag protects people who reach the lines; elsewhere the term runs, and `return` lowers it).
   - From the same review, **lanes 1.4 and 1.14:** McClellan bold on paper (27 April, 80,000 men) and cautious in action (Rich Mountain, 11 July). A single boldness cannot hold both. Watch whether drafting and execution need separate terms when operations land, and in calibration.
 **Phase 2 (desk and map)**
+
+- From lane 1.7's hand-over (`notes/lane-1.7-men-regions.md`, merged 2c97b64), by lane:
+  - **Lane 1.12 (rule seats):** no rule seat calls for regiments, so recruitment's mechanics are QUIET in the reference runs, each with its driving test. The principals need a call policy.
+  - **Lane 1.11 (situations and data):** the president's call (S09) is a situation, but a situation option cannot yet issue a call; it would go through `dispatchOrder` like a goal. Union `state_autonomy` is not in the pack's values vocabulary: data entry needs it before the call terms can offend it.
+  - **1B (economy):** the term's effect on the holding side's regional capacity and supply waits for an economy. Today the term is derived and its arrivals are State.
+
+- From lane 1.4's report (`notes/lane-1.4-operations.md`, on `phase1-operations` while under review), by lane:
+  - **Lane 1.4b (a small follow-up after lane 1.7):** detachments in play (garrisons and landings below the force block), which need lane 1.7's block creation.
+  - **Lane 1.14:** McClellan's plan-versus-action gap. Drafting and execution already read his boldness separately; add a second term only if calibration shows the gap too narrow.
+  - **1B:** freelancing (a seat initiative that sets a man's own goal); troops embarked and carried by sea; Navy-channel battle news (combat ignores ships); an axis standing off from an enemy its commander will not attack (the siege method).
+  - **Lane 1.12:** rule seats must reappoint a post the battle model leaves vacant, using lane 1.5's appoint verb.
+- From the gate reviewer's lane 1.5 verdict (`review-gate-1861.md`, the end), by lane:
+  - **Lane 1.5b, which must land before any `fugitive-policy` row:** G-1.5a to G-1.5e, the practice-clash term, and the lever sweep treating a delegated gated decision as the delegate's choice.
+  - **Lane 1.6:** the validator refuses a bloc made up of a protected group, so `address` can never reach one.
+  - **Lane 1.11:** enter no `fugitive-policy` rows until lane 1.5b merges.
+- From the gate reviewer's lane 1.4 verdict (`review-gate-1861.md`, the end), **lane 1.11:**
+  - Report templates for captured, missing, pocket and surrender claims are tagged `capture-in-battle` and signed off. They say "taken prisoner", never a fate, and never "destroyed" alone of men.
+  - Nit N13: a pocket never renders as "surrendered" before the commander chooses.
 - From lane 0.9, plan review: preview an edited route and its distance before it is sent. A distant waypoint can produce a route the player did not mean.
 - Tripwire measurements cover only the RX 7800 XT; integrated GPUs, the Steam Deck and Electron's Chromium are untested, and WebGPU and an OffscreenCanvas worker bake are untried. The prototype points Playwright 1.65 at the installed chromium-1234 (`CHROMIUM_PATH` overrides); adopting Playwright for screenshots means `npx playwright install`, a browser download that is the owner's call.
 

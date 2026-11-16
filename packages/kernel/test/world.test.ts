@@ -46,6 +46,7 @@ const world = (edges: EdgeRecord[]): World => ({
   depots: [],
   weatherZones: [],
   people: [],
+  census: [],
 });
 
 /** Every writer named for a start part is a State module or writer that owns at least one field (review N4). */
@@ -101,7 +102,7 @@ describe('the World index (world/graph)', () => {
     const reverseKeys = (v: unknown): unknown =>
       Array.isArray(v) ? v.map(reverseKeys) : v !== null && typeof v === 'object' ? Object.fromEntries(Object.entries(v).reverse().map(([k, x]) => [k, reverseKeys(x)])) : v;
     const w2 = reverseKeys(w1) as World;
-    expect(Object.keys(w2)[0]).toBe('people');
+    expect(Object.keys(w2)[0]).toBe('census');
     expect(worldHash(w1)).toMatch(/^[0-9a-f]{64}$/);
     expect(worldHash(w2)).toBe(worldHash(w1));
   });

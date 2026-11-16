@@ -18,6 +18,7 @@ const KINDS_MATCH: Same<Command['cmd'], (typeof COMMAND_KINDS)[number]> = true;
 
 const entry = (command: unknown) => ({ day: 1, seat: 'seat.a_lead', command });
 const WELL_FORMED: Readonly<Record<(typeof COMMAND_KINDS)[number], unknown>> = {
+  call: { cmd: 'call', to: 'a_army', regiments: 2, termDays: 90, route: 'wire', bypass: false },
   choose: { cmd: 'choose', request: 'plan:a_army:1', option: 'direct:least_cost:a_front>b_front' },
   decide: { cmd: 'decide', situation: 'ordinance', options: [] },
   delegate: { cmd: 'delegate', situation: 'ordinance', to: 'a_office' },
@@ -44,9 +45,9 @@ const WELL_FORMED: Readonly<Record<(typeof COMMAND_KINDS)[number], unknown>> = {
 };
 
 describe("the new kernel's command list (the verb-list test, 0072; lane 1.2)", () => {
-  it('is exactly the plan commands and lane 1.5’s people verbs', () => {
+  it('is exactly the plan commands, lane 1.7’s call and lane 1.5’s people verbs', () => {
     expect(KINDS_MATCH).toBe(true);
-    expect([...COMMAND_KINDS]).toEqual(['address', 'appoint', 'audience', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer']);
+    expect([...COMMAND_KINDS]).toEqual(['address', 'appoint', 'audience', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer']);
   });
 
   it('the log accepts each, well formed', () => {

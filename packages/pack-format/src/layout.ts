@@ -88,6 +88,8 @@ export const WORLD_TABLES = {
   railLines: { file: 'rail_lines.csv', required: false, columns: [c('id', true), c('name', true), c('sources', true), c('notes')] },
   depots: { file: 'depots.csv', required: false, columns: [c('id', true), c('name', true), c('region', true), c('kind', true), c('capacity', true), c('sources', true), c('notes')] },
   weatherZones: { file: 'weather_zones.csv', required: false, columns: [c('id', true), c('name', true), c('notes')] },
+  // Protected census input (lane 1.7; SENSITIVE-HISTORY 3.2): read only by the derived self-emancipation term.
+  census: { file: 'census.csv', required: false, columns: [c('region', true), c('enslaved_population', true), c('sources', true), c('notes')] },
   people: {
     file: 'people.csv',
     required: false,
@@ -173,6 +175,7 @@ export const SCENARIO_TABLES = {
     ],
   },
   fortification: { file: 'fortification.csv', required: false, columns: [c('region', true), c('level', true), c('notes')] },
+  loyalty: { file: 'loyalty.csv', required: false, columns: [c('region', true), c('shares', true), c('notes')] },
   edgeConditions: { file: 'edge_conditions.csv', required: false, columns: [c('edge', true), c('condition', true), c('notes')] },
   obstructions: { file: 'obstructions.csv', required: false, columns: [c('edge', true), c('by'), c('sources', true), c('notes')] },
   depotConditions: { file: 'depot_conditions.csv', required: false, columns: [c('depot', true), c('condition', true), c('notes')] },

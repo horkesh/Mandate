@@ -159,6 +159,10 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   for (const problem of phase0.combatRulesProblems(world.rules.combat, vocab.terrains.map((t) => t.id))) {
     err('rules-combat', W('rules', 0, 'combat'), problem, 'whole numbers in range for each combat rule, terrains from the pack’s vocabulary, phase shares summing to 1000');
   }
+  // Lane 1.7: the recruitment and self-emancipation rules and what they name, by the kernel's own rules (it checks the same when it indexes a World).
+  for (const problem of [...phase0.recruitmentRuleProblems(world.rules.recruitment), ...phase0.selfEmancipationRuleProblems(world.rules.selfEmancipation), ...phase0.menAndRegionsReferenceProblems(world)]) {
+    err('rules-men-regions', W('rules', 0, 'recruitment'), problem, 'whole numbers in range, and an arm, post kinds, values and a faction the pack has');
+  }
   // 0073: every rank has a kind from rankKinds, so a person can hold one of each kind at once.
   vocab.ranks.forEach((r, i) => term('rankKinds', r.kind, W('vocabularies.ranks', i, 'kind')));
 
@@ -321,6 +325,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
 
   // ---- depots
   const depots = idSet('depots', world.depots);
+  world.census.forEach((c, i) => refCheck(regions, 'region', c.region, W('census', i, 'region')));
   world.depots.forEach((d, i) => {
     refCheck(regions, 'region', d.region, W('depots', i, 'region'));
     useKey(d.name, W('depots', i, 'name'));
@@ -474,6 +479,17 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       }
     });
     s.fortification.forEach((f, i) => refCheck(regions, 'region', f.region, S('fortification', i, 'region')));
+    // Lane 1.7: loyalty, checked as control is (never a stand-in for it): known regions and factions, at most 1000 in all.
+    const loyal = new Set<string>();
+    s.loyalty.forEach((l, i) => {
+      refCheck(regions, 'region', l.region, S('loyalty', i, 'region'));
+      if (loyal.has(l.region)) err('duplicate-entry', S('loyalty', i, 'region'), `region "${l.region}" has two loyalty rows`);
+      loyal.add(l.region);
+      l.shares.forEach((sh, j) => refCheck(factions, 'faction', sh.faction, S('loyalty', i, `shares[${j}].faction`)));
+      const sum = l.shares.reduce((n, sh) => n + sh.permille, 0);
+      if (sum > 1000) err('loyalty-sum', S('loyalty', i), `loyalty shares sum to ${sum}`, 'at most 1000 permille in all');
+      if (new Set(l.shares.map((x) => x.faction)).size !== l.shares.length) err('duplicate-entry', S('loyalty', i), 'a faction has two shares');
+    });
     s.edgeConditions.forEach((c, i) => refCheck(edges, 'edge', c.edge, S('edgeConditions', i, 'edge')));
     s.depotConditions.forEach((c, i) => refCheck(depots, 'depot', c.depot, S('depotConditions', i, 'depot')));
     s.obstructions.forEach((o, i) => {

@@ -35,6 +35,9 @@ function keyOf(world: SeatsWorld, c: Command): AttentionKey | null {
       const same = staff.length === c.options.length && staff.every((o) => c.options.includes(o));
       return same ? 'decide_staff' : 'decide_overrule';
     }
+    // A call for regiments (lane 1.7) is an order to a governor: priced as an order.
+    case 'call':
+      return 'order';
     case 'choose':
       return null;
   }

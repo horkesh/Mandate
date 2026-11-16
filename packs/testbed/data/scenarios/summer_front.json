@@ -67,6 +67,7 @@
 {"department":"s_executive","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"w_valley"}
 ],
 "id": "summer_front",
+"loyalty": [],
 "name": "scenario.summer_front.name",
 "obstructions": [
 {"by":"corran_fort","edge":"river:mere_crossing:mere_lower","provenance":[{"at":null,"source":"TB-DESIGN"}]},

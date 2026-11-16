@@ -150,7 +150,8 @@ describe('testbed world v2', () => {
       expect(s.governments.map((g) => g.region as string).sort()).toEqual(land);
       const named = s.governments.filter((g) => g.department !== 'unknown');
       expect(named.every((g) => kinds.get(dept.get(g.department)!.kind) === true)).toBe(true);
-      expect(new Set(named.map((g) => g.department))).toEqual(new Set(['n_executive', 's_executive', 's_province']));
+      // Lane 1.7: the opening adds the Shire of Brenmark, whose governor raises the North's regiments.
+      expect(new Set(named.map((g) => g.department))).toEqual(new Set(['n_executive', 's_executive', 's_province', ...(s.id === 'opening' ? ['n_province'] : [])]));
       expect(s.governments.filter((g) => g.department === 'unknown').map((g) => g.region)).toEqual(['island_fort']);
     }
   });

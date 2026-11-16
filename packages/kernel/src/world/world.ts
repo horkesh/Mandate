@@ -11,6 +11,7 @@
  */
 import type { DepartmentId, FactionId } from '../ids.ts';
 import type {
+  CensusRecord,
   DepotRecord,
   EdgeRecord,
   InstallationRecord,
@@ -24,6 +25,7 @@ import type {
 import type { PersonRecord } from './people.ts';
 import type { ReportTemplate } from '../knowledge/templates.ts';
 import type { LatencyRules } from '../messages/latency.ts';
+import type { RecruitmentRules, SelfEmancipationRules } from '../recruitment/rules.ts';
 import type { PeopleRules } from '../people/rules.ts';
 import type { CombatRules } from '../combat/rules.ts';
 
@@ -239,6 +241,10 @@ export interface WorldRules {
   readonly planner: PlannerRules;
   /** Goals and plans (lane 1.2): the goal terms an option's order carries, and how an edit's riskiness is read. */
   readonly plans: PlansRules;
+  /** Governors raising regiments on a call (lane 1.7). */
+  readonly recruitment: RecruitmentRules;
+  /** The derived self-emancipation term (lane 1.7; 0046). */
+  readonly selfEmancipation: SelfEmancipationRules;
 }
 
 export interface TerrainTerm {
@@ -385,4 +391,6 @@ export interface World {
   readonly depots: readonly DepotRecord[];
   readonly weatherZones: readonly WeatherZoneRecord[];
   readonly people: readonly PersonRecord[];
+  /** Protected census input for the derived self-emancipation term (lane 1.7); empty until a source gives it. */
+  readonly census: readonly CensusRecord[];
 }

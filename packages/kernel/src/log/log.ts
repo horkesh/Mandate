@@ -55,6 +55,7 @@ export function entryProblems(raw: unknown, i: number): string[] {
     order: ['bypass', 'cmd', 'goal', 'route', 'to'],
     review: ['action', 'bypass', 'cmd', 'edit', 'route', 'to'],
     go: ['bypass', 'cmd', 'route', 'to'],
+    call: ['bypass', 'cmd', 'regiments', 'route', 'termDays', 'to'],
     choose: ['cmd', 'option', 'request'],
     decide: ['cmd', 'options', 'situation'],
     delegate: ['cmd', 'situation', 'to'],
@@ -89,6 +90,10 @@ export function entryProblems(raw: unknown, i: number): string[] {
     if (c.edit !== null) problems.push(...editTermsProblems(c.edit).map((p) => `${at}: review.edit ${p}`));
   } else if (c.cmd === 'go') {
     routed();
+  } else if (c.cmd === 'call') {
+    routed();
+    if (typeof c.regiments !== 'number' || !Number.isSafeInteger(c.regiments) || c.regiments < 1) problems.push(`${at}: call.regiments must be a whole number of regiments, at least 1`);
+    if (typeof c.termDays !== 'number' || !Number.isSafeInteger(c.termDays) || c.termDays < 1) problems.push(`${at}: call.termDays must be a whole number of days, at least 1`);
   } else if (c.cmd === 'decide') {
     if (!id(c.situation)) problems.push(`${at}: decide.situation must be a situation id`);
     if (!Array.isArray(c.options) || !c.options.every((o) => typeof o === 'string' && o.length > 0) || new Set(c.options).size !== c.options.length) {

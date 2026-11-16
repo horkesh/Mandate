@@ -29,6 +29,7 @@
   "department_kind.war_ministry": "war ministry",
   "department_kind.navy_ministry": "navy ministry",
   "department_kind.province": "provincial government",
+  "department_kind.shire": "shire",
   "department_kind.private": "private company",
   "arm.infantry": "infantry",
   "arm.artillery": "artillery",
@@ -111,5 +112,6 @@
   "value.career": "career",
   "value.caution": "caution",
   "value.abolition": "abolition",
-  "value.glory": "glory"
+  "value.glory": "glory",
+  "value.home_rule": "home rule"
 }

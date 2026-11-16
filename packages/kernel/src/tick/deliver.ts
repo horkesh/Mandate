@@ -15,6 +15,7 @@ import { filterDecision, trimValueOf } from '../reading/orders.ts';
 import { fire, hop, whereIs, type TickContext } from './context.ts';
 import { arriveOrder, relayOrder } from './orders.ts';
 import { arriveVerb } from './verbs.ts';
+import { arriveCall } from './recruitment.ts';
 
 /** A day can chain same-day hops (a relay in the same town); more rounds than this means a loop, which is a bug. */
 const MAX_ROUNDS = 64;
@@ -39,6 +40,7 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
     if (msg.msgRole === 'relay') {
       return relayOrder(ctx, state, msg);
     }
+    if (msg.msgOrder?.orderKind === 'call') return arriveCall(ctx, state, msg);
     return arriveOrder(ctx, state, msg);
   }
   if (msg.msgRole === 'filter') {

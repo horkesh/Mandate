@@ -72,6 +72,22 @@ export interface GoCommand {
   readonly bypass: boolean;
 }
 
+/**
+ * A call for regiments to a governor's post (lane 1.7): an order through people. He answers by his own compliance with
+ * the pack's call terms; his answer sets how many regiments he raises and when they muster (`tick/recruitment.ts`).
+ */
+export interface CallCommand {
+  readonly cmd: 'call';
+  /** The governor's post. */
+  readonly to: PostId;
+  /** Regiments asked of him. */
+  readonly regiments: number;
+  /** Days the men are enlisted for, from the muster. */
+  readonly termDays: number;
+  readonly route: RouteKind;
+  readonly bypass: boolean;
+}
+
 export interface ChooseCommand {
   readonly cmd: 'choose';
   /** The request this answers (`SeatRequest.requestKey`). */
@@ -184,8 +200,8 @@ export interface AddressCommand {
 export type VerbCommand = AppointCommand | RelieveCommand | TransferCommand | InquireCommand | ConsultCommand | AudienceCommand | ObserverCommand | PromiseCommand | PressureCommand | AddressCommand;
 
 /** What a seat may send in a `commands` answer. */
-export type SeatCommand = OrderCommand | ReviewCommand | GoCommand | DecideCommand | DelegateCommand | VerbCommand;
+export type SeatCommand = OrderCommand | ReviewCommand | GoCommand | CallCommand | DecideCommand | DelegateCommand | VerbCommand;
 
-export type Command = OrderCommand | ReviewCommand | GoCommand | ChooseCommand | DecideCommand | DelegateCommand | VerbCommand;
+export type Command = OrderCommand | ReviewCommand | GoCommand | CallCommand | ChooseCommand | DecideCommand | DelegateCommand | VerbCommand;
 
-export const COMMAND_KINDS = ['address', 'appoint', 'audience', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer'] as const;
+export const COMMAND_KINDS = ['address', 'appoint', 'audience', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer'] as const;

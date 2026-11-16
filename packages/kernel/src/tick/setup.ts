@@ -13,7 +13,7 @@ import type { DepartmentId, RegionId } from '../ids.ts';
 import { initialInfrastructure } from '../infrastructure/infrastructure.ts';
 import { initialLocations } from '../movement/movement.ts';
 import { initialPeople, SHADOW_MODES, type ShadowMode } from '../people/people.ts';
-import { initialFortification } from '../regions/regions.ts';
+import { initialFortification, initialLoyalty } from '../regions/regions.ts';
 import type { State } from '../root-state.ts';
 import type { SeatDriver } from '../seats/api.ts';
 import { initialAttention } from '../seats/attention.ts';
@@ -98,10 +98,14 @@ export function emptyState(): State {
     forceLocations: {},
     postStates: {},
     forceAssignments: {},
+    forceEnlistments: {},
+    postLevies: {},
     infraEdgeCondition: {},
     infraDepotCondition: {},
     infraObstructions: [],
     regionFortification: {},
+    regionLoyalty: {},
+    regionReachedUnionLines: {},
     personRanks: {},
     personTrue: {},
     personTraits: {},
@@ -190,10 +194,14 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
     forceLocations: initialLocations(map, start),
     postStates: command.posts,
     forceAssignments: command.assignments,
+    forceEnlistments: {},
+    postLevies: {},
     infraEdgeCondition: network.edges,
     infraDepotCondition: network.depots,
     infraObstructions: network.obstructions,
     regionFortification: initialFortification(map, start),
+    regionLoyalty: initialLoyalty(map, start),
+    regionReachedUnionLines: {},
     personRanks: people.personRanks,
     personTrue: people.personTrue,
     personTraits: people.personTraits,

@@ -33,8 +33,14 @@ export interface Hop {
  * What an order carries (lane 1.2): a goal for the holder of a post, or the principal's answer to the plan he
  * submitted (approve it, send it back, edit its arrows), or his word to go. Each is a directive the holder receives.
  */
-export const ORDER_KINDS = ['approve', 'edit', 'go', 'goal', 'send_back'] as const;
+export const ORDER_KINDS = ['approve', 'call', 'edit', 'go', 'goal', 'send_back'] as const;
 export type OrderKind = (typeof ORDER_KINDS)[number];
+
+/** A call for regiments, as an order carries it (lane 1.7). */
+export interface CallSpec {
+  readonly callRegiments: number;
+  readonly callTermDays: number;
+}
 
 export interface OrderBody {
   readonly orderKind: OrderKind;
@@ -44,6 +50,8 @@ export interface OrderBody {
   readonly orderGoal: PlanGoal | null;
   /** The arrow edit, for an `edit` order; null otherwise. */
   readonly orderEdit: EditSpec | null;
+  /** The call, for a `call` order (lane 1.7); null otherwise. */
+  readonly orderCall: CallSpec | null;
   /** Whether it was sent around the chain of posts that should relay it (0040). */
   readonly orderBypass: boolean;
   readonly orderIssuedDay: number;
