@@ -71,3 +71,10 @@ export * from './people/rules.ts';
 export * from './people/traits.ts';
 export * from './reading/orders.ts';
 export * from './proxy/responses.ts';
+// Lane 1.7: men and regions: enlistments, levies, recruitment's phase and rules, loyalty, the derived self-emancipation term.
+export * from './forces/enlistment.ts';
+export * from './command/levies.ts';
+export * from './recruitment/rules.ts';
+export * from './tick/recruitment.ts';
+export * from './regions/self-emancipation.ts';
+export * from './tick/regions.ts';

@@ -36,6 +36,10 @@ export const BIAS_TERM_KINDS = [
   'relay_term',
   /** How far an arrow edit departs from his own best plan, permille (his scorer: lane 1.2). */
   'edit_distance',
+  // Lane 1.7: a governor's answer to a call (his rung and willingness), and his region's loyalty scaling what he raised.
+  'call_rung',
+  'call_loyalty',
+  'levy_lapsed',
 ] as const;
 export type BiasTermKind = (typeof BIAS_TERM_KINDS)[number];
 

@@ -36,6 +36,8 @@ export type RejectionReason =
   | 'not_a_principal'
   | 'not_an_option'
   | 'not_field_post'
+  | 'not_raising_post'
+  | 'bad_call'
   | 'other_side'
   | 'route_unavailable'
   | 'unknown_post'

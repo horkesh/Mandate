@@ -1,0 +1,10 @@
+region,shares,notes
+n_capital,north:950,
+n_heartland,north:900,Brenmark: the governor's shire.
+n_west_front,north:800;south:100,
+n_east_front,north:800;south:100,
+w_valley,north:350;south:550,
+e_lowlands,north:250;south:650,
+salient_tip,north:200;south:700,
+salient_base,south:900,
+s_coast_east,south:850,Lowmarch: the southern governor's province.

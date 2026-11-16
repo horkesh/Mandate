@@ -141,7 +141,16 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'reports.filtered': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
   'reports.trimmed': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
   'situations.lapsed': { why: 'a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'expires an option, resurfaces on its clock, and lapses' },
-  // Lane 1.2: the plan cycle's paths that no rule seat takes, each driven by its own kernel test.
+  // Lane 1.7: no rule seat calls for regiments yet (lane 1.12's rule-seat principals will), so recruitment fires in no reference run.
+  'recruitment.called': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'the northern governor answers the call' },
+  'recruitment.answered': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'the northern governor answers the call' },
+  'recruitment.slow_walked': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'slow-walks the call' },
+  'recruitment.refused': { why: 'no rule seat calls for regiments until lane 1.12; a governor who raises nothing is driven by the kernel rule that a rung not listed raises none', test: 'packages/cli/test/men-regions.test.ts', needle: "regimentsRaised(rules, 10, 'refuse', 900)" },
+  'recruitment.mustered': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'musters the levy into a new block' },
+  'recruitment.men': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'musters the levy into a new block' },
+  'recruitment.muster_blocked': { why: 'no rule seat calls for regiments until lane 1.12, so no levy waits on a region in enemy hands', test: 'packages/cli/test/men-regions.test.ts', needle: 'a levy due in an enemy-held region waits' },
+  'recruitment.lapsed': { why: 'no rule seat calls for regiments until lane 1.12, so no levy lapses', test: 'packages/cli/test/men-regions.test.ts', needle: 'lapses past the pack’s days' },
+  'recruitment.disbanded': { why: 'no rule seat calls for regiments until lane 1.12, so no enlistment runs out', test: 'packages/cli/test/men-regions.test.ts', needle: 'then disbands it when its ninety days end' },  // Lane 1.2: the plan cycle's paths that no rule seat takes, each driven by its own kernel test.
   'plans.sent_back': { why: 'no rule seat sends a plan back: the generic principal approves, the editing exercise edits', test: 'packages/kernel/test/plans.test.ts', needle: 'sends the plan back, and he drafts it again' },
   'plans.draft_deferred': { why: 'no reference run asks for more plans in a day than the pack’s cap of three (0062)', test: 'packages/kernel/test/plans.test.ts', needle: 'defers drafts past the day’s cap' },
   'plans.edit_invalid': { why: 'the editing exercise edits only a moving axis’s timing, which can always be made', test: 'packages/kernel/test/plans.test.ts', needle: 'refuses an edit no route can make' },
@@ -225,6 +234,8 @@ const UNION_BANDS: Record<string, GateBand> = {
   'orders.relay_objected': around(1),
   'orders.relayed': around(3),
   'plans.goal_reached': around(1),
+  'regions.self_emancipation': notHere('the Union pack has no census rows until lane 1.10 sources them, so the term has nowhere to run; the testbed run fires it'),
+  'regions.reached_lines': notHere('the Union pack has no census rows until lane 1.10 sources them; the testbed run fires it'),
   'seats.choices': around(2),
   // The two opening goals: the Charleston command's plan goes ahead; the Washington garrison's holds, so it is reviewed and approved.
   ...planBands({ drafts: 2, reviewed: 1, wentAhead: 1, goalFit: 0, supply: 2 }),
@@ -279,6 +290,9 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'orders.relay_objected': notHere(NO_CANDID_RELAY),
   'orders.relayed': around(3),
   'plans.goal_reached': around(2),
+  // Lane 1.7: the fen folk's own act, every week from day 1, in each census region the North's protection flag does not cover (G-1.7a), the North's own western front among them.
+  'regions.self_emancipation': around(72),
+  'regions.reached_lines': around(36),
   'seats.choices': around(3),
   'seats.defaulted': notHere('every request is answered in this run; the silent-seats exercise run fires it'),
   // Three goals (each side's opening, and the situation's order to press on): every plan moves and goes ahead as drafted.

@@ -35,7 +35,9 @@ import type { SeatAssignment } from './seats/seats.ts';
 import type { PersonGrievance, PersonStatus, PersonTrue, Stance } from './people/people.ts';
 import type { PersonRank } from './people/ranks.ts';
 import type { OrderResponse } from './proxy/responses.ts';
-import type { FortificationTable } from './regions/regions.ts';
+import type { ArrivalTable, FortificationTable, LoyaltyTable } from './regions/regions.ts';
+import type { EnlistmentTable } from './forces/enlistment.ts';
+import type { LevyTable } from './command/levies.ts';
 import type { BattleTable } from './combat/records.ts';
 
 export interface State {
@@ -86,6 +88,10 @@ export interface State {
   readonly postStates: PostTable;
   /** Which post commands each block (division-to-post assignment). Writer: `command`. */
   readonly forceAssignments: AssignmentTable;
+  /** Each raised block's enlistment: who raised it on whose call, and the day its men's term ends (lane 1.7). Writer: `forces`. */
+  readonly forceEnlistments: EnlistmentTable;
+  /** Calls a governor answered and has not yet mustered, by the call's id: a prior order on his post (lane 1.7). Writer: `command`. */
+  readonly postLevies: LevyTable;
   /** Edge condition, permille, for edges not intact (an intact edge is absent). Writer: `infrastructure`. */
   readonly infraEdgeCondition: ConditionTable<EdgeId>;
   /** Depot condition, permille, for depots not intact. Writer: `infrastructure`. */
@@ -97,6 +103,10 @@ export interface State {
    * Nothing changes it in Phase 0; the siege method (0062) reads it. Writer: `regions`.
    */
   readonly regionFortification: FortificationTable;
+  /** Loyalty per region, each faction's share permille, from the start (lane 1.7); never a stand-in for control. Writer: `regions`. */
+  readonly regionLoyalty: LoyaltyTable;
+  /** People who have reached the lines, by the region where they reached them (0046; the gate's `region_reached_union_lines`). Writer: `regions`, proposed only by the derived self-emancipation term; never a lever. */
+  readonly regionReachedUnionLines: ArrivalTable;
   /**
    * Each person's ranks, one per kind (regular, volunteer, brevet) held at once, each with the date he holds it from
    * (seniority); from the start date (0050, 0073). A person absent holds none; a kind absent, none of that kind. Writer: `people`.

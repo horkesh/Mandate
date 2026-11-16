@@ -345,6 +345,7 @@ describe('ownership of the new State (0044)', () => {
       'departmentFactions:command',
       'forceAssignments:command',
       'forceBlockStates:forces',
+      'forceEnlistments:forces',
       'forceLocations:movement',
       'infraDepotCondition:infrastructure',
       'infraEdgeCondition:infrastructure',
@@ -361,10 +362,13 @@ describe('ownership of the new State (0044)', () => {
       'personTraits:people',
       'personTrue:people',
       'planRecords:plans',
+      'postLevies:command',
       'postStates:command',
       'regionControl:control',
       'regionFortification:regions',
       'regionGovernments:command',
+      'regionLoyalty:regions',
+      'regionReachedUnionLines:regions',
       'reportTruth:knowledge',
       'seatAssignments:seats',
       'situationFlags:situations',
@@ -381,7 +385,8 @@ describe('ownership of the new State (0044)', () => {
     const world = indexedFixture(REFERENCE);
     const telemetry = createTelemetry([...SEATS_MECHANICS, ...MAP_MECHANICS]);
     playDays(world, createState(world, { seed: 99 }), scriptedSeats(SCRIPT), 60, { telemetry });
-    const plan = (m: string) => m.startsWith('plans.') || m.startsWith('planner.');
+    // Lane 1.7: recruitment and the regions term have their own tests (`men-regions.test.ts`); this game makes no call and its fixture no census.
+    const plan = (m: string) => m.startsWith('plans.') || m.startsWith('planner.') || m.startsWith('recruitment.') || m.startsWith('regions.');
     const dead = SEATS_MECHANICS.filter((m) => !plan(m) && telemetry.mechanics[m]!.fires === 0);
     // Each of these has its own test above. Rejections need a bad command and defaults an
     // unanswered request, which this game has not; a conflict needs two issuers (here only the

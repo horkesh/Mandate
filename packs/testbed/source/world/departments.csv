@@ -6,3 +6,4 @@ n_railways,Northern Railway Companies,north,private,TB-DESIGN,Rail presidents ho
 s_executive,Southern Council,south,executive,TB-DESIGN,
 s_war,Southern War Office,south,war_ministry,TB-DESIGN,
 s_province,Province of Lowmarch,south,province,TB-DESIGN,"Its militia serves under a Southern War Office general while still provincial troops: authority and command differ."
+n_province,Shire of Brenmark,north,shire,TB-DESIGN,"A northern province: its governor raises volunteer regiments on the First Minister's call, by his own compliance."
