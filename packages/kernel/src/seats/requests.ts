@@ -26,7 +26,7 @@ import { ORDER_ROUTES, routeLatency, type LatencyMap } from '../messages/latency
 import { marchSteps, type MarchGround } from '../movement/march.ts';
 import type { State } from '../root-state.ts';
 import type { SituationDef } from '../situations/types.ts';
-import { demandRatio, perceptionBias } from '../standin/traits.ts';
+import { demandRatio, perceptionBias, traitsOf, valuesOf } from '../people/traits.ts';
 import { deepFreeze } from '../tick/freeze.ts';
 import { passageOf } from '../tick/passage.ts';
 import { createViewCache, viewFor, type ViewCache } from '../view/view.ts';
@@ -82,7 +82,7 @@ export function standingOptions(world: SeatsWorld, state: State, post: PostId, g
   if (group.marching || group.blocks.length === 0 || group.from === target) return null;
   let men = 0;
   for (const b of group.blocks) men += state.forceBlockStates[b]!.fbStrength ?? 0;
-  const person = world.person(holder);
+  const person = traitsOf(world, state, holder);
   const claims = latestEnemyClaims(knowledgeOf(state, seatIdFor(person.id)));
   const bias = perceptionBias(world.rules.traits, person).permille;
   const demand = demandRatio(world.rules.traits, person);
@@ -181,7 +181,7 @@ export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCach
     const r = state.situationStates[def.id];
     if (r === undefined || r.sitStatus !== 'open' || r.sitDelegate === null) continue;
     const seat = seatIdFor(r.sitDelegate);
-    const menu: DelegatedMenu = { menuKind: 'delegated-situation', choice: situationChoice(def, r.sitOpenOptions, [], world.person(r.sitDelegate).values) };
+    const menu: DelegatedMenu = { menuKind: 'delegated-situation', choice: situationChoice(def, r.sitOpenOptions, [], valuesOf(world.map, r.sitDelegate)) };
     out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `delegated:${def.id}:${day}`, view: viewFor(world, state, seat, cache), menu }));
   }
   for (const post of fieldPosts(world, state)) {

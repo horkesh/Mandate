@@ -4,10 +4,11 @@
  *
  * - Relay is message passing between posts: each relaying holder receives the
  *   order as a message, applies his own compliance and delay, and forwards it
- *   or objects (stand-in compliance: `standin/traits.ts`).
+ *   or objects, by his own compliance (lane 1.1: `reading/orders.ts`), and his response is recorded by `proxy`.
  * - Going around the chain sends the order straight to the holder: fewer hops,
- *   so faster; each bypassed man gets a grievance (proposed to the people core,
- *   Phase 1), and the order may conflict with one that came down the chain.
+ *   so faster; each bypassed man gets a grievance (proposed to `people`, which
+ *   applies it after the day's deliveries), and the order may conflict with one
+ *   that came down the chain.
  * - A special messenger is a route with a price.
  */
 import { sideOfPerson } from '../command/command.ts';
@@ -20,7 +21,8 @@ import { ORDER_ROUTES } from '../messages/latency.ts';
 import { GOAL_KINDS } from '../plans/goal.ts';
 import { receiveOrder } from '../plans/standing.ts';
 import type { State } from '../root-state.ts';
-import { relayDecision } from '../standin/traits.ts';
+import { answerOrder, goalTerms, relayAction } from '../reading/orders.ts';
+import { recordResponse, responseOf } from '../proxy/responses.ts';
 import { isFieldPost, postFaction, relayChain } from '../seats/posts.ts';
 import { fire, hop, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
 
@@ -111,13 +113,20 @@ function reportBody(
   };
 }
 
-/** An order reaches a relaying holder: he forwards it, after his own delay, or objects. */
-export function relayOrder(ctx: TickContext, state: State, msg: TransitMessage): void {
+/**
+ * An order reaches a relaying holder (0040): he reads it through his own compliance, with his regard for its issuer,
+ * and forwards it after his own delay, or objects. `proxy` records his response; the relay's terms carry his rung
+ * and each contribution (hard rule 6).
+ */
+export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage): State {
   const { world } = ctx;
   const order = msg.msgOrder!;
   const relayer = world.person(msg.msgTo);
   const post = msg.msgToPost!;
-  const decision = relayDecision(world.rules.traits, relayer, post, { advance: order.orderGoal.goalSpecKind === 'advance' });
+  const rules = world.rules.people;
+  const answer = answerOrder(world, start, relayer.id, order.orderIssuer, goalTerms(rules, order.orderGoal.goalSpecKind));
+  const state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: relayer.id, post, role: 'relay', day: ctx.day }));
+  const decision = relayAction(rules, answer, relayer.id, post);
   if (decision.action === 'object') {
     fire(ctx, 'orders.relay_objected');
     ctx.events.push({ event: 'objected', person: relayer.id, post, message: msg.msgOrigin, terms: decision.terms });
@@ -134,7 +143,7 @@ export function relayOrder(ctx: TickContext, state: State, msg: TransitMessage):
       to: order.orderIssuer,
       tag: `objection.${order.orderTarget}`,
     });
-    return;
+    return state;
   }
   const next = msg.msgPending[0]!;
   const id = mintMessageId(ctx.mint, ctx.day, relayer.id, next.hopPerson, `order.${order.orderTarget}`);
@@ -156,6 +165,7 @@ export function relayOrder(ctx: TickContext, state: State, msg: TransitMessage):
     msgPending: msg.msgPending.slice(1),
   });
   fire(ctx, 'messages.sent');
+  return state;
 }
 
 /** An order reaches its addressee: his goal changes (or, in a conflict, does not), and he reports which order he obeyed. */

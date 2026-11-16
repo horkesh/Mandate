@@ -32,6 +32,8 @@ export const BIAS_TERM_KINDS = [
   'relay_hold',
   /** A relaying holder objected to an order, and why. */
   'relay_objection',
+  /** One term of a relaying holder's willingness to an order (its rule names the term: values, temperament, regard...), lane 1.1. */
+  'relay_term',
 ] as const;
 export type BiasTermKind = (typeof BIAS_TERM_KINDS)[number];
 

@@ -40,7 +40,7 @@ const SCRIPT = {
   b: { 2: [order('b_army', 'advance', 'a_cap')] },
 };
 /** The office holds what he forwards (low regard); the reserve is strong enough that advancing and holding are both in keeping with him. */
-const REFERENCE = { persons: { a_sec: { regard: -300 } }, posts: { a_reserve: { strength: 1000 } } };
+const REFERENCE = { persons: { a_sec: { regard: 'below', candour: 'below' } }, posts: { a_reserve: { strength: 1000 } } } as const;
 
 function game(days: number, opts: { freeze?: boolean; worldOver?: Parameters<typeof indexedFixture>[0] } = {}) {
   const world = indexedFixture(opts.worldOver ?? REFERENCE);
@@ -154,7 +154,7 @@ describe('the view (decision 0035: stable references; FOUNDATION section 8: no t
 
   it('rebuilds a cached belief when the readerÃ¢â‚¬â„¢s perception changes, though his knowledge did not (review F4, positive control)', () => {
     const timid = indexedFixture();
-    const steadier = indexedFixture({ persons: { a_gen: { boldness: 500, values: ['duty'] } } });
+    const steadier = indexedFixture({ persons: { a_gen: { boldness: 'average', values: ['duty'] } } });
     const state = playDays(timid, createState(timid, { seed: 4 }), scriptedSeats(), 3).state;
     const gen = seatIdFor(P('a_gen'));
     const bf = R('b_front');
@@ -162,9 +162,11 @@ describe('the view (decision 0035: stable references; FOUNDATION section 8: no t
     const before = viewFor(timid, state, gen, cache).enemyBeliefs;
     const after = viewFor(steadier, state, gen, cache).enemyBeliefs;
     const fresh = viewFor(steadier, state, gen).enemyBeliefs;
-    expect(before[bf]!.value).toBe(3840);
+    // 800 seen, overstated by the timid, cautious chief (2400 permille) and again by the timid, cautious general (2400).
+    expect(before[bf]!.value).toBe(4608);
     expect(after[bf]!.value).toBe(fresh[bf]!.value);
-    expect(after[bf]!.value).toBe(1600);
+    // Boldness is drawn State, so the steadier World changes only his values: without caution he sees 1900 permille, not 2400.
+    expect(after[bf]!.value).toBe(3648);
     // Unchanged perception and knowledge: still the very same object.
     expect(viewFor(steadier, state, gen, cache).enemyBeliefs).toBe(after);
   });
@@ -341,7 +343,15 @@ describe('ownership of the new State (0044)', () => {
       'infraObstructions:infrastructure',
       'knowledgeBySeat:knowledge',
       'messagesInTransit:messages',
+      'orderResponses:proxy',
+      'personGrievances:people',
       'personRanks:people',
+      'personRegard:people',
+      'personStances:people',
+      'personStanding:people',
+      'personStatus:people',
+      'personTraits:people',
+      'personTrue:people',
       'postStates:command',
       'regionControl:control',
       'regionFortification:regions',
@@ -366,7 +376,8 @@ describe('ownership of the new State (0044)', () => {
     // Each of these has its own test above. Rejections need a bad command and defaults an
     // unanswered request, which this game has not; a conflict needs two issuers (here only the
     // principal orders); and a filter cuts only a losses claim, which no cyclic report carries
-    // until lane 0.5's casualty returns.
-    expect(dead).toEqual(['commands.rejected', 'orders.conflict', 'reports.trimmed', 'seats.defaulted']);
+    // until lane 0.5's casualty returns. Here the one relaying man (a_sec, uncandid) holds what he dislikes rather than
+    // objecting (lane 1.1: an objection needs a candid man), so objections are driven in seats-orders.test.ts.
+    expect(dead).toEqual(['commands.rejected', 'orders.conflict', 'orders.relay_objected', 'reports.trimmed', 'seats.defaulted']);
   });
 });

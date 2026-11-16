@@ -33,6 +33,7 @@ const int = z.int('a whole number');
 const nonNegative = int.min(0, 'zero or more');
 const positive = int.min(1, 'one or more');
 const permille = int.min(0, 'a permille from 0').max(1000, 'a permille up to 1000');
+const signedPermille = int.min(-1000, 'a signed permille from -1000').max(1000, 'a signed permille up to 1000');
 const month = int.min(1, 'a month from 1').max(12, 'a month up to 12');
 
 function isCalendarDate(y: number, m: number, d: number): boolean {
@@ -140,6 +141,9 @@ export const PersonSchema = z.strictObject({
   born: historicalDate.nullable(),
   died: historicalDate.nullable(),
   centres: z.strictObject({ competence: statCentre, nerve: statCentre, experience: statCentre, reputation: statCentre }),
+  temperament: z.strictObject({ boldness: statCentre, candour: statCentre }).describe('Boldness and candour (lane 1.1): cited centres history’s shadow draws around at setup.'),
+  values: z.array(z.strictObject({ value: termId, cites: z.array(citation) })).describe('The values he holds, from the pack’s values vocabulary, each cited (lane 1.1); empty when none is known.'),
+  regard: statCentre.describe('His regard for his own faction’s principal at the pack’s first start, a cited centre (lane 1.1).'),
   traits: z.array(z.strictObject({ trait: termId, cites: z.array(citation) })),
   bloc: termId.nullable(),
   ranks: z.array(z.strictObject({ rank: termId, from: historicalDate })),
@@ -222,6 +226,54 @@ export const RulesSchema = z.strictObject({
       scoreCap: int.min(1000, 'at least 1000, or no advance could be offered').describe('The highest score a standing-goal menu gives an advance, permille of his demand, so an empty region does not dwarf every other term. A design parameter.'),
     })
     .describe('The stand-in standing goals (0040, 0072): design parameters the pack states, not sourced facts.'),
+  people: z
+    .strictObject({
+      shadow: z
+        .strictObject({
+          centrePermille: z.strictObject({ high: permille, above: permille, average: permille, below: permille, low: permille }).describe('The permille centre of each cited direction. A design parameter.'),
+          unknownCentre: permille.describe('The centre of an unknown stat. A design parameter.'),
+          spread: permille.describe('Half-width of the uniform draw around a cited centre (0: as history). A design parameter.'),
+          unknownSpread: permille.describe('Half-width around an unknown centre. A design parameter.'),
+          regardPermille: z.strictObject({ high: signedPermille, above: signedPermille, average: signedPermille, below: signedPermille, low: signedPermille }).describe('Signed regard for each cited direction of regard for the principal. A design parameter.'),
+        })
+        .describe('History’s shadow (FOUNDATION section 6): how true stats are drawn at setup.'),
+      compliance: z
+        .strictObject({
+          valueWeight: int, temperamentWeight: int, regardWeight: int, deterrenceWeight: int, standingShield: int, shortfallWeight: int,
+          exceedAt: int, complyAt: int, reservationsAt: int, severeBelow: int, slowWalkAbove: int,
+          candidAt: int, protectedStandingAt: int, protectedDeterrenceAt: int, grievanceWeight: int, grievanceReasonAt: int,
+          temperamentReasonAt: int, regardReasonAt: int, fearReasonAt: int,
+          departureWeight: int, departureReasonAt: int, reinforceShareTimid: int, reinforceShareBold: int,
+          conflictChainWeight: int, conflictNewerWeight: int,
+        })
+        .describe('Compliance’s weights and thresholds (M1/M2’s, recast in lane 1.1). Design parameters.'),
+      goalTerms: z
+        .array(z.strictObject({ goal: termId, boldness: permille, honours: z.array(termId), offends: z.array(termId) }))
+        .describe('What a goal of each kind asks of the man who reads it: its boldness and the values it honours or offends.'),
+      context: z
+        .strictObject({ oversight: permille, leaderCredibility: permille })
+        .describe('Oversight and the principal’s sanction credibility for an order read in the chain, until politics derives credibility (lane 1.6). Design parameters.'),
+      relay: z
+        .strictObject({ reservationsHoldDays: nonNegative, slowWalkHoldDays: nonNegative, reinterpretHoldDays: nonNegative })
+        .describe('Days a relaying link holds an order for each covert rung (0040). Design parameters.'),
+      filter: z
+        .strictObject({
+          holdFor: z.array(z.strictObject({ value: termId, days: nonNegative })),
+          trimFor: z.array(z.strictObject({ value: termId, claimKinds: z.array(termId) })),
+          candidAt: permille,
+        })
+        .describe('The values that make a filter post’s holder hold a wire or cut claims (0032), and the candour at which he cuts nothing.'),
+      traits: z
+        .strictObject({
+          perceptionPivot: nonNegative, perceptionPerPoint: nonNegative,
+          perceptionValues: z.array(z.strictObject({ value: termId, permille: nonNegative })),
+          perceptionMax: nonNegative, demandBase: nonNegative, demandPerPoint: nonNegative, holdBand: nonNegative,
+          wantsMenPermille: nonNegative, paperPermille: nonNegative,
+        })
+        .describe('How temperament and values shade what a man sees and asks (lane 0.6’s stand-in rules, now the pack’s, 0058).'),
+      grievances: z.strictObject({ bypassedWeight: nonNegative }).describe('Weights of grievances the people core applies.'),
+    })
+    .describe('The people core (lane 1.1): history’s shadow, compliance, reading orders and reports, traits. Design parameters the pack states (0072), not sourced facts.'),
 });
 
 export const VocabulariesSchema = z.strictObject({
@@ -256,7 +308,9 @@ export const VocabulariesSchema = z.strictObject({
   arms: z.array(z.strictObject({ id: termId, name: stringKey, naval: z.boolean() })),
   personKinds: z.array(term),
   traits: z.array(z.strictObject({ id: termId, name: stringKey, gate: z.boolean() })),
-  ranks: z.array(z.strictObject({ id: termId, name: stringKey, seniority: nonNegative })),
+  ranks: z.array(z.strictObject({ id: termId, name: stringKey, seniority: nonNegative, kind: termId.describe('Its kind from rankKinds: a person holds one rank of each kind at once (0073).') })),
+  rankKinds: z.array(term).describe('Kinds of rank held side by side (0073), such as regular, volunteer and brevet.'),
+  values: z.array(term).describe('Values people hold (lane 1.1); the engine reads only the people rules that name them.'),
   blocs: z.array(term),
   standingOrderKinds: z.array(term),
 });

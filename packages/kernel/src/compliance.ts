@@ -7,6 +7,7 @@ import type {
   DirectiveResponse,
   DirectiveTerms,
   Reason,
+  ResponseCondition,
 } from './directive.ts';
 import type { ProxyProfile } from './people.ts';
 import {
@@ -60,6 +61,22 @@ export interface ComplianceRules {
   readonly temperamentReasonAt: Permille;
   readonly regardReasonAt: Permille;
   readonly fearReasonAt: Permille;
+
+  /** Maximum willingness lost to an edit that departs wholly from his judgement (lane 1.1). */
+  readonly departureWeight: Permille;
+  /** An edit departing at least this far is a reason he can name. */
+  readonly departureReasonAt: Permille;
+  /**
+   * "Move when reinforced" (lane 0.9 finding 8): a shortfall becomes a condition only past a share of the task, which
+   * runs from `reinforceShareTimid` (permille of `required`) for a man of boldness 0 to `reinforceShareBold` for one of
+   * boldness 1000: a bold man moves a little short, a cautious one waits for nearly all of it.
+   */
+  readonly reinforceShareTimid: Permille;
+  readonly reinforceShareBold: Permille;
+  /** Conflicting orders (0040): the weight, on the willingness scale, of an order that came down his own chain. */
+  readonly conflictChainWeight: number;
+  /** Conflicting orders: the weight of being the newer of the two (0040: a newer order from his own department supersedes). */
+  readonly conflictNewerWeight: number;
 }
 
 export const DEFAULT_COMPLIANCE_RULES: ComplianceRules = Object.freeze({
@@ -86,6 +103,13 @@ export const DEFAULT_COMPLIANCE_RULES: ComplianceRules = Object.freeze({
   temperamentReasonAt: 300,
   regardReasonAt: 300,
   fearReasonAt: 500,
+
+  departureWeight: 500,
+  departureReasonAt: 200,
+  reinforceShareTimid: 10,
+  reinforceShareBold: 50,
+  conflictChainWeight: 200,
+  conflictNewerWeight: 100,
 });
 
 const COVERT: ReadonlySet<ComplianceRung> = new Set(['slow_walk', 'reinterpret']);
@@ -133,16 +157,23 @@ export function resolveDirective(
     }
   }
 
-  // Temperament: a cautious man ordered to attack, or a bold one ordered to wait.
-  const boldnessGap = Math.abs(terms.boldness - proxy.boldness);
-  const temperament = -scale(boldnessGap, rules.temperamentWeight);
+  // Temperament: a cautious man ordered to attack, or a bold one ordered to wait. Read against his own best plan when
+  // the directive is a plan (lane 0.9 finding 2), else against his temperament.
+  const reference = terms.ownBest ?? proxy.boldness;
+  const boldnessGap = Math.abs(terms.boldness - reference);
+  const temperament = 0 - scale(boldnessGap, rules.temperamentWeight);
   if (boldnessGap >= rules.temperamentReasonAt) {
     reasons.push(
-      terms.boldness > proxy.boldness
+      terms.boldness > reference
         ? { kind: 'too_rash', gap: boldnessGap }
         : { kind: 'too_timid', gap: boldnessGap },
     );
   }
+
+  // Judgement: an edit that departs from what he would have chosen (lane 1.1).
+  const departure = terms.departure ?? 0;
+  const judgement = 0 - scale(departure, rules.departureWeight);
+  if (terms.departure !== undefined && departure >= rules.departureReasonAt) reasons.push({ kind: 'departs_from_judgement', departure });
 
   // Regard for the leader.
   const regard = scale(proxy.regard, rules.regardWeight);
@@ -159,7 +190,7 @@ export function resolveDirective(
 
   // Capacity: what the task needs against what the post holds.
   const shortfall = Math.max(0, terms.required - context.available);
-  const capacity = -scale(shortfall, rules.shortfallWeight);
+  const capacity = 0 - scale(shortfall, rules.shortfallWeight);
   if (shortfall > 0) reasons.push({ kind: 'lacks_resources', shortfall });
 
   const disposition = context.disposition ?? 0;
@@ -175,7 +206,7 @@ export function resolveDirective(
     const weight = byKind.get(kind)!;
     if (weight >= rules.grievanceReasonAt) reasons.push({ kind: 'holds_grievance', grievance: kind, weight });
   }
-  const grievances = -scale(grievanceTotal, rules.grievanceWeight);
+  const grievances = 0 - scale(grievanceTotal, rules.grievanceWeight);
 
   const contributions: Contribution[] = [
     { term: 'values', amount: values },
@@ -185,8 +216,10 @@ export function resolveDirective(
     { term: 'capacity', amount: capacity },
     { term: 'disposition', amount: disposition },
     { term: 'grievances', amount: grievances },
+    // Only an edit has a judgement term; a plain directive's contributions are unchanged.
+    ...(terms.departure === undefined ? [] : [{ term: 'judgement' as const, amount: judgement }]),
   ];
-  const willingness = values + temperament + regard + deterrence + capacity + disposition + grievances;
+  const willingness = values + temperament + regard + deterrence + capacity + disposition + grievances + judgement;
 
   const honoursAHeldValue = reasons.some((r) => r.kind === 'values_honoured');
   const isProtected =
@@ -213,7 +246,82 @@ export function resolveDirective(
 
   const statedReasons = isCandid ? reasons : statedByUncandid(reasons, declared);
 
-  return { actual, declared, willingness, contributions, reasons, statedReasons, counterProposal };
+  // Conditions on acting at all: none for a man who will not act, or who acts on his own terms.
+  const conditions: ResponseCondition[] = [];
+  if (actual !== 'refuse' && actual !== 'object') {
+    // A shortfall past the share a man of his boldness tolerates: "move when reinforced" (lane 0.9 finding 8).
+    const tolerated = rules.reinforceShareTimid + scale(proxy.boldness, Math.max(0, rules.reinforceShareBold - rules.reinforceShareTimid));
+    if (shortfall > 0 && shortfall * 1000 > tolerated * terms.required) conditions.push({ kind: 'when_reinforced', shortfall });
+    const promised = new Set(context.supportPromised ?? []);
+    const needs = [...(terms.support ?? [])].sort((a, b) => strictCompare(a.supportKind, b.supportKind) || strictCompare(a.supportFrom ?? '', b.supportFrom ?? ''));
+    for (const need of needs) if (!promised.has(need.supportKind)) conditions.push({ kind: 'if_supported', supportKind: need.supportKind, from: need.supportFrom });
+  }
+
+  return { actual, declared, willingness, contributions, reasons, statedReasons, counterProposal, conditions };
+}
+
+/** One of two orders a holder has in hand, as he reads it (0040: conflicting orders). */
+export interface OrderInHand {
+  /** The order's message id, for the report of which he obeyed. */
+  readonly order: string;
+  readonly terms: DirectiveTerms;
+  /** Whether it came down his own chain of posts (true) or went around it. */
+  readonly viaChain: boolean;
+  /** The day it was issued: the newer of two orders weighs more (0040: a newer order from his own department supersedes). */
+  readonly issuedDay: number;
+  /** His regard for this order's issuer, when the two orders have different issuers; else the profile's regard. */
+  readonly issuerRegard?: number;
+}
+
+/** A typed term of a conflict's resolution, for one order. */
+export interface ConflictTerm {
+  readonly order: 'held' | 'arriving';
+  readonly term: 'willingness' | 'chain' | 'newer';
+  readonly amount: number;
+}
+
+/** Which of two conflicting orders he obeys, and why (hard rule 6). */
+export interface ConflictResolution {
+  readonly obeyed: 'held' | 'arriving';
+  /** Each order's score: his willingness to it, plus the chain and newer terms. */
+  readonly scores: { readonly held: number; readonly arriving: number };
+  readonly terms: readonly ConflictTerm[];
+  /** His reading of each order, through his own compliance. */
+  readonly held: DirectiveResponse;
+  readonly arriving: DirectiveResponse;
+}
+
+/**
+ * Conflicting orders (0040; lane 1.1): a holder with two orders resolves them by his own compliance and reports which he
+ * obeyed. He reads each through `resolveDirective` in the same context; an order that came down his chain weighs
+ * `conflictChainWeight` more, and the newer weighs `conflictNewerWeight` more. He obeys the higher score; on a tie, the
+ * order he already holds stands (a man does not change course for an equal order). Pure and deterministic.
+ */
+export function resolveConflict(
+  proxy: ProxyProfile,
+  held: OrderInHand,
+  arriving: OrderInHand,
+  context: CommandContext,
+  rules: ComplianceRules = DEFAULT_COMPLIANCE_RULES,
+): ConflictResolution {
+  const heldResponse = resolveDirective({ ...proxy, regard: held.issuerRegard ?? proxy.regard }, held.terms, context, rules);
+  const arrivingResponse = resolveDirective({ ...proxy, regard: arriving.issuerRegard ?? proxy.regard }, arriving.terms, context, rules);
+  const terms: ConflictTerm[] = [];
+  const score = (which: 'held' | 'arriving', o: OrderInHand, r: DirectiveResponse, other: OrderInHand): number => {
+    terms.push({ order: which, term: 'willingness', amount: r.willingness });
+    let s = r.willingness;
+    if (o.viaChain) {
+      terms.push({ order: which, term: 'chain', amount: rules.conflictChainWeight });
+      s += rules.conflictChainWeight;
+    }
+    if (o.issuedDay > other.issuedDay) {
+      terms.push({ order: which, term: 'newer', amount: rules.conflictNewerWeight });
+      s += rules.conflictNewerWeight;
+    }
+    return s;
+  };
+  const scores = { held: score('held', held, heldResponse, arriving), arriving: score('arriving', arriving, arrivingResponse, held) };
+  return { obeyed: scores.arriving > scores.held ? 'arriving' : 'held', scores, terms, held: heldResponse, arriving: arrivingResponse };
 }
 
 /** Reasons nobody volunteers to their superior unless they are candid. */
@@ -244,6 +352,8 @@ function validate(proxy: ProxyProfile, terms: DirectiveTerms, context: CommandCo
   assertSignedPermille(proxy.regard, 'proxy.regard');
   assertPermille(terms.boldness, 'terms.boldness');
   assertPermille(terms.required, 'terms.required');
+  if (terms.ownBest !== undefined) assertPermille(terms.ownBest, 'terms.ownBest');
+  if (terms.departure !== undefined) assertPermille(terms.departure, 'terms.departure');
   assertPermille(context.available, 'context.available');
   assertPermille(context.oversight, 'context.oversight');
   assertPermille(context.leaderCredibility, 'context.leaderCredibility');

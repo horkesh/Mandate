@@ -4,7 +4,7 @@
  * fixture with departments, post kinds, arms, people, posts and force blocks.
  */
 import { toId, type DepartmentId, type ForceBlockId, type PersonId, type PostId } from '../../src/ids.ts';
-import type { PersonRecord } from '../../src/world/people.ts';
+import type { PersonRecord, StatDirection } from '../../src/world/people.ts';
 import type { ForceBlockStart, PostStart, ScenarioStart } from '../../src/world/scenario.ts';
 import type { World } from '../../src/world/world.ts';
 import { indexWorld, type WorldIndex } from '../../src/world/index.ts';
@@ -16,8 +16,18 @@ export const DEP = (id: string): DepartmentId => toId('department', id);
 export const PER = (id: string): PersonId => toId('person', id);
 
 const centre = { direction: null, cites: [] } as const;
+const cited = (d: StatDirection | undefined) => (d === undefined ? centre : { direction: d, cites: [{ source: 'FIXTURE', at: null }] });
 
-export function person(id: string, faction: string | null): PersonRecord {
+/** A person's temperament, values and regard for his principal (lane 1.1): directions, drawn exactly by the fixtures' shadow. */
+export interface PersonTemper {
+  readonly boldness?: StatDirection;
+  readonly candour?: StatDirection;
+  readonly regard?: StatDirection;
+  readonly reputation?: StatDirection;
+  readonly values?: readonly string[];
+}
+
+export function person(id: string, faction: string | null, temper: PersonTemper = {}): PersonRecord {
   return {
     id: PER(id),
     name: `person.${id}.name`,
@@ -26,7 +36,10 @@ export function person(id: string, faction: string | null): PersonRecord {
     kind: 'officer',
     born: null,
     died: null,
-    centres: { competence: centre, nerve: centre, experience: centre, reputation: centre },
+    centres: { competence: centre, nerve: centre, experience: centre, reputation: cited(temper.reputation) },
+    temperament: { boldness: cited(temper.boldness), candour: cited(temper.candour) },
+    values: (temper.values ?? []).map((v) => ({ value: v, cites: [{ source: 'FIXTURE', at: null }] })),
+    regard: cited(temper.regard),
     traits: [],
     bloc: null,
     ranks: [],

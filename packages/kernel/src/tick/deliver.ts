@@ -10,7 +10,8 @@ import { term } from '../knowledge/truth.ts';
 import { mintMessageId, sendMessages, takeDue, type TransitMessage } from '../messages/transit.ts';
 import type { State } from '../root-state.ts';
 import { seatIdFor } from '../seats/seats.ts';
-import { filterDecision } from '../standin/traits.ts';
+import { traitsOf } from '../people/traits.ts';
+import { filterDecision, trimValueOf } from '../reading/orders.ts';
 import { fire, hop, whereIs, type TickContext } from './context.ts';
 import { arriveOrder, relayOrder } from './orders.ts';
 
@@ -33,8 +34,7 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
   fire(ctx, 'messages.delivered');
   if (msg.msgOrder !== null) {
     if (msg.msgRole === 'relay') {
-      relayOrder(ctx, state, msg);
-      return state;
+      return relayOrder(ctx, state, msg);
     }
     return arriveOrder(ctx, state, msg);
   }
@@ -64,16 +64,16 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
   return next;
 }
 
-/** A wire reaches the filter post on its way to the principal: its holder may hold it or cut claims (decision 0032). */
+/** A wire reaches the filter post on its way to the principal: its holder may hold it or cut claims (decision 0032), as his values ask (lane 1.1). */
 function filterReport(ctx: TickContext, state: State, msg: TransitMessage): void {
-  const holder = ctx.world.person(msg.msgTo);
+  const holder = traitsOf(ctx.world, state, msg.msgTo);
   const post = msg.msgToPost!;
-  const decision = filterDecision(ctx.world.rules.traits, holder, post);
+  const decision = filterDecision(ctx.world.rules.people, holder, post);
   const body = msg.msgReport!;
   const cut = body.reportClaims.filter((c) => decision.trims.includes(c.claimKind));
   const kept = body.reportClaims.filter((c) => !decision.trims.includes(c.claimKind));
   const truth = msg.msgTruth ?? { truthTerms: [], truthTrimmed: [] };
-  const terms = [...decision.terms, ...cut.map((c) => term('filter_trim', c.claimValue, { person: holder.id, post, ...(c.claimRegion === null ? {} : { region: c.claimRegion }), rule: 'values:reputation' }))];
+  const terms = [...decision.terms, ...cut.map((c) => term('filter_trim', c.claimValue, { person: holder.id, post, ...(c.claimRegion === null ? {} : { region: c.claimRegion }), rule: `values:${trimValueOf(ctx.world.rules.people, holder, c.claimKind)}` }))];
   fire(ctx, 'reports.filtered');
   if (cut.length > 0) fire(ctx, 'reports.trimmed', cut.length);
   ctx.events.push({ event: 'filtered', person: holder.id, post, message: msg.msgOrigin, terms });
