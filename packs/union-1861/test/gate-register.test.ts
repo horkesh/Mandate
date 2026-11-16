@@ -1,7 +1,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadPack, signatureRefuses, type GateData, type Issue, type PackFiles } from '@mandate/pack-format';
+import { loadPack, signatureRefuses, triggerMatches, type GateData, type Issue, type PackFiles } from '@mandate/pack-format';
 import { describe, expect, it } from 'vitest';
 import { readTestbed, testbedFiles } from '../../../packages/pack-format/test/support/testbed.ts';
 
@@ -90,8 +90,30 @@ const PROBES: Record<string, Probe> = {
   'fugitive-policy#0': {
     option: { fires: ['restore_property', 'return_to_owners'], passes: ['return'] },
     label: {
-      fires: ['Order them returned under the 1850 law', 'Restore the fugitives to their owners', 'Deliver the escaped people to the claimants', 'Restore the property of loyal citizens'],
-      passes: ['Return them to slavery', 'Do not surrender the fugitives; employ them and keep account', 'Give no instruction'],
+      fires: [
+        'Order them returned under the 1850 law',
+        'Restore the fugitives to their owners',
+        'Deliver the escaped people to the claimants',
+        // S3: "property" and "owners" refuse only where the label names people.
+        'Restore the men as property',
+        'Return the men to their owners',
+        // S2: send, turn or drive them back, away or out, or keep them from the lines (Q6).
+        'Send the fugitives back across the river',
+        'Turn the fugitives away from the lines',
+        'Exclude fugitives from the lines',
+      ],
+      passes: [
+        'Return them to slavery',
+        'Do not surrender the fugitives; employ them and keep account',
+        'Give no instruction',
+        // S3: Butler's railroad seizures are not fugitive policy.
+        'Return the railroad to its owners',
+        'Restore the seized railroad property',
+        // S2's legal cases.
+        'Send them back to slavery under the 1850 law',
+        'Do not send the fugitives back',
+        'Send the regiments back to their states',
+      ],
     },
   },
   'union-freedpeople-camps#0': {
@@ -107,11 +129,12 @@ const PROBES: Record<string, Probe> = {
   },
   'black-enlistment-1861-offers#0': {
     option: { fires: ['recruit_black_regiments'], passes: ['ask_congress'] },
-    label: { fires: ['Raise two regiments of Black volunteers'], passes: ['Ask Congress for authority to enlist Black volunteers'] },
+    // S4: unanchored, so word order no longer bypasses it; the Congress route and a refusal pass.
+    label: { fires: ['Raise two regiments of Black volunteers', 'Tell Cameron to enlist Black volunteers'], passes: ['Ask Congress for authority to enlist Black volunteers', 'Decline the Black volunteers under the militia law'] },
   },
   'black-enlistment-1861-offers#1': {
     option: { fires: ['accept_black_companies'], passes: ['decline', 'refer_governors'] },
-    label: { fires: ['Accept the Black companies from Philadelphia'], passes: ['Decline under the militia law', 'Leave it to the governors'] },
+    label: { fires: ['Accept the Black companies from Philadelphia', 'Have the War Department accept the Black companies'], passes: ['Decline under the militia law', 'Leave it to the governors'] },
   },
   'press-suppression#0': {
     option: { fires: ['incite_mob_against_papers'], passes: ['ban_from_the_mails'] },
@@ -125,6 +148,11 @@ const PROBES: Record<string, Probe> = {
     option: { fires: ['burn_the_towns', 'reprisal_on_civilians'], passes: ['guard_the_railroad'] },
     label: { fires: ['Burn the farms of known secessionists'], passes: ['Guard the railroad bridges'] },
   },
+  // B1: killing irregulars, hostages, spies or parole-breakers, refused for ever (rule 1).
+  'guerrilla-war-west#1': {
+    option: { fires: ['hang_bushwhackers', 'shoot_hostages', 'execute_parole_breakers', 'kill_bridge_burners'], passes: ['hang_back', 'shoot_for_the_ford'] },
+    label: { fires: ['Hang the bushwhackers', 'Shoot the bridge-burners on sight', 'Execute the spies at dawn'], passes: ['Hang back and wait for Patterson', 'Shot and shell for the batteries'] },
+  },
   'capture-in-battle#0': {
     field: { fires: [{ field: 'captured_slaves', subject: null }, { field: 'enslaved-seized', subject: null }], passes: [{ field: 'region_control', subject: null }] },
     option: { fires: ['seize_the_slaves'], passes: ['seize_the_arsenal'] },
@@ -134,12 +162,24 @@ const PROBES: Record<string, Probe> = {
     option: { fires: ['no_quarter', 'shoot_the_prisoners'], passes: ['pursue'] },
     label: { fires: ['Give no quarter', 'Hang the captives as an example'], passes: ['Pursue the beaten enemy'] },
   },
+  // N2: an arrest count as a score.
+  'union-habeas-and-arrests#0': {
+    field: { fires: [{ field: 'arrests_count', subject: null }, { field: 'arrested-total', subject: null }], passes: [{ field: 'habeas_suspended', subject: null }] },
+  },
   'prisoners-and-exchange#0': {
-    field: { fires: [{ field: 'prisoners', subject: null }, { field: 'region_prisoners_held', subject: null }, { field: 'hostages', subject: null }], passes: [{ field: 'casualties', subject: null }] },
+    // S5: a captor-side count is refused; a strength effect (the surrender's own loss) passes.
+    field: {
+      fires: [{ field: 'prisoners', subject: null }, { field: 'region_prisoners_held', subject: null }, { field: 'hostages', subject: null }, { field: 'captured_men', subject: null }, { field: 'surrendered_total', subject: null }, { field: 'taken_count', subject: null }],
+      passes: [{ field: 'casualties', subject: null }, { field: 'strength', subject: null }],
+    },
   },
   'prisoners-and-exchange#1': {
     option: { fires: ['exchange_prisoners', 'propose_cartel', 'choose_hostage_by_lot', 'retaliate'], passes: ['protest_to_richmond', 'comply'] },
-    label: { fires: ['Propose an exchange of prisoners', 'Choose a hostage by lot', 'Release them on parole'], passes: ['Produce the prisoner', 'Decline the writ and defend it to Congress'] },
+    // B1: parole in paraphrase is held too.
+    label: {
+      fires: ['Propose an exchange of prisoners', 'Choose a hostage by lot', 'Release them on parole', 'Let the captured men go home on their word', 'Release the prisoners', 'Send the surrendered garrison home'],
+      passes: ['Produce the prisoner', 'Decline the writ and defend it to Congress', 'Let the ninety-day men go home'],
+    },
   },
 };
 
@@ -200,6 +240,16 @@ function overlay(): Record<string, string> {
     'gate/classes.json': JSON.stringify({ classes: [...classes.classes, ...gate.classes.classes.filter((c) => !ids.has(c.id))] }),
   };
 }
+/** The testbed's triggers with the Union's after them, so the testbed's own topics still route. */
+function overlayTriggers(): string {
+  const t = JSON.parse(readTestbed('gate/triggers.json')) as { terms: unknown[]; allow?: string[] };
+  return JSON.stringify({ terms: [...t.terms, ...gate.triggers.terms], allow: [...(t.allow ?? []), ...gate.triggers.allow] });
+}
+/** The testbed's forbidden patterns with the Union's after them. */
+function overlayForbidden(): string {
+  const f = JSON.parse(readTestbed('gate/forbidden.json')) as { patterns: unknown[] } & Record<string, unknown>;
+  return JSON.stringify({ ...f, patterns: [...f.patterns, ...gate.forbidden.patterns] });
+}
 function refusedAt(edits: Record<string, string>, at: string): Issue[] {
   return loadPack(testbedFiles({ ...overlay(), ...edits })).issues.filter((i) => i.kind === 'gate-refused' && i.file === SIT && i.at === at);
 }
@@ -239,6 +289,92 @@ describe('probes end to end through checkGate, the Union register over the testb
   });
 });
 
+describe('the triggers route every killing, reprisal and capture to a reviewer (gate review B1)', () => {
+  const hit = (text: string) => triggerMatches(text, gate.triggers);
+  it('each new trigger fires on its planted case', () => {
+    const planted: Record<string, string> = {
+      'hang|hangs|hung': 'Hang the bushwhackers',
+      'bushwhack\\w*': 'The bushwhackers came at night',
+      'jayhawk\\w*': 'Jayhawkers crossed from Kansas',
+      'partisans?': 'Partisans cut the wire',
+      'bridge[- ]burn\\w*': 'Bridge-burners on the line',
+      'reprisals?': 'A reprisal followed',
+      'retaliat\\w*': 'They threatened to retaliate',
+      'lynch\\w*': 'The crowd lynched him',
+      captured: 'Let the captured men go home on their word',
+      'surrender(?:ed|s)?': 'The garrison surrendered at dawn',
+    };
+    for (const [term, text] of Object.entries(planted)) {
+      expect(gate.triggers.terms.some((t) => t.term === term), term).toBe(true);
+      expect(hit(text).length, `${term}: "${text}"`).toBeGreaterThan(0);
+    }
+    // The two labels the gate reviewer found passing every layer now need a tag.
+    expect(hit('Let the captured men go home on their word')).toContain('captured');
+    expect(hit('Hang the bushwhackers').length).toBeGreaterThan(0);
+  });
+
+  it('passes words that only share a stem, and the allowed place names', () => {
+    for (const text of ['Wait at Hanging Rock', 'Change the partisanship of the press', 'Send Colonel Rook to stiffen him', 'Capture the ford']) expect(hit(text), text).toEqual([]);
+  });
+
+  it('end to end: an untagged option labelled with a trigger is refused for want of a tag', () => {
+    const untagged = (label: string) => ({ ...plantLabel(label), ...situation((s) => { s.gateReview = null; }) });
+    const tagless = (label: string) => loadPack(testbedFiles({ ...overlay(), 'gate/triggers.json': overlayTriggers(), ...untagged(label) })).issues.filter((i) => i.kind === 'gate-untagged' && i.file === SIT);
+    expect(tagless('Hang the bushwhackers').length).toBeGreaterThan(0);
+    expect(tagless('Let the captured men go home on their word').length).toBeGreaterThan(0);
+    expect(tagless('Send Colonel Rook to stiffen him')).toEqual([]);
+  });
+});
+
+describe('narrator rules while each hold stands (gate review S1; standing review S2)', () => {
+  const TEXT_KEY = 'situation.eastwatch_stalls.text';
+  const at = (text: string) => {
+    const table = JSON.parse(readTestbed('strings/en.json')) as Record<string, string>;
+    const edits = { ...overlay(), 'gate/forbidden.json': overlayForbidden(), 'strings/en.json': JSON.stringify({ ...table, [TEXT_KEY]: text }) };
+    return loadPack(testbedFiles(edits)).issues.filter((i) => i.file === SIT && i.at === 'text' && (i.kind === 'gate-forbidden-wording' || i.kind === 'gate-review-note-missing')).map((i) => i.kind);
+  };
+  it('every new rule names its hold first, so whoever lifts the hold drops the rule', () => {
+    const held = gate.forbidden.patterns.filter((p) => /^(?:held until R4|held until R6|needs-source)/.test(p.reason));
+    expect(held.length).toBe(11);
+    expect(held.every((p) => p.scope === 'narrator')).toBe(true);
+    // Parole is review, not fail: a capture notice may state a surrender's cited terms (0074).
+    expect(held.find((p) => p.pattern.startsWith('\\bparol'))!.severity).toBe('review');
+  });
+
+  it('refuses held content as notice text under any tag', () => {
+    for (const text of [
+      'The two commanders agreed to exchange prisoners man for man.',
+      'Richmond chose hostages by lot from the Union officers held there.',
+      'Federal troops burned the farms of known secessionists in the county in reprisal for the guerrillas.',
+      "Jennison's men burned forty-two houses.",
+      'They hanged the bushwhackers at the crossroads.',
+      'The contraband camp at Hampton grew through the summer.',
+    ]) expect(at(text), text).toContain('gate-forbidden-wording');
+  });
+
+  it('sends parole and the passive voice of camp labour to the reviewer, not to a refusal', () => {
+    for (const text of ['General Butler released the prisoners on parole.', 'The freedpeople were set to work on the forts under the quartermaster.']) {
+      const kinds = at(text);
+      expect(kinds, text).toContain('gate-review-note-missing');
+      expect(kinds, text).not.toContain('gate-forbidden-wording');
+    }
+  });
+
+  it('passes what open topics must be able to say', () => {
+    for (const text of ['Confederates burned the bridges in Baltimore County.', "Lyon's troops shot into the crowd at Camp Jackson.", 'The garrison surrendered; six hundred men were taken prisoner.']) expect(at(text), text).toEqual([]);
+  });
+});
+
+describe('the reasons say what the hold is (gate review S6, B1)', () => {
+  const reasons = (id: string) => topics.find((t) => t.id === id)!.refused.map((r) => r.reason);
+  it('a permanent refusal on a held topic says so, so R6 cannot drop it', () => {
+    const [reprisal, killing] = reasons('guerrilla-war-west');
+    expect(reprisal!.startsWith('refused for ever (rule 1; 0029); not lifted by R6')).toBe(true);
+    expect(killing!.startsWith('refused for ever (rule 1)')).toBe(true);
+    expect(killing).not.toMatch(/\bheld\b/);
+  });
+});
+
 describe('the source policy: the two memoirs are banned as evidence, the research-note pointers are weak (A6; the lead’s ruling)', () => {
   const policy = JSON.parse(files.read('gate/source-policy.json')!) as { banned: string[]; weak: string[] };
   const provenance = new Set((JSON.parse(files.read('PROVENANCE.json')!) as { sources: { key: string }[] }).sources.map((s) => s.key));
@@ -260,6 +396,20 @@ describe('the source policy: the two memoirs are banned as evidence, the researc
     for (const memoir of ['DAVIS-RF', 'JOHNSTON-1874']) {
       expect(kindsAt([memoir, 'OR']).map((i) => `${i.kind} ${i.at}`), memoir).toEqual(['gate-banned-source citations[0].source']);
     }
+  });
+
+  it('a banned memoir cited anywhere in the pack is reported, people included: the six Union rows lane 1.11 re-sources (a warning until then)', () => {
+    const hits = loaded.issues.filter((i) => i.kind === 'banned-source-cited');
+    // A WARNING for now: this test pins the rows, and the check becomes an error in the merge where lane 1.11 re-sources them.
+    expect(hits.every((i) => i.severity === 'warning')).toBe(true);
+    const people = loaded.pack!.world.people;
+    const rows = hits.map((i) => {
+      const m = /^people\[(\d+)\]/.exec(i.at);
+      return m === null ? `${i.file} ${i.at}` : people[Number(m[1])]!.id;
+    });
+    // The lead's brief named davis_jefferson; on disk his row cites neither memoir, and Lee's cites Johnston's Narrative.
+    expect(rows.sort()).toEqual(['benjamin_judah_p', 'johnston_joseph_e', 'lee_robert_e', 'mallory_stephen_r', 'memminger_christopher_g', 'reagan_john_h']);
+    for (const h of hits) expect(h.message).toMatch(/"(?:DAVIS-RF|JOHNSTON-1874)"/);
   });
 
   it('a research-note pointer alone is refused as weak, and passes beside a primary source', () => {

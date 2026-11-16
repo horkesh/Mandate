@@ -398,6 +398,23 @@ describe('an intelligence chief (0058)', () => {
   });
 });
 
+describe('a banned source in any citation (lane 1.8b; A6 beyond situations)', () => {
+  const banned = (keys: string[], base?: FileMap) => withNewFile('gate/source-policy.json', JSON.stringify({ banned: keys, weak: [] }), base);
+  const hits = (files: FileMap) => run(files).issues.filter((i) => i.kind === 'banned-source-cited');
+  it('warns once per record, at its source cell, naming each banned citation; a person’s centres included', () => {
+    const found = hits(banned(['REG A']));
+    expect(found.length).toBeGreaterThan(0);
+    expect(found.every((i) => i.severity === 'warning')).toBe(true);
+    const chief = found.find((i) => i.file === 'source/world/people.csv' && i.at.includes('red_chief'))!;
+    expect(chief.message).toContain('"REG A" at centres.competence.cites[0]');
+    expect(new Set(found.map((i) => `${i.file}|${i.at}`)).size).toBe(found.length);
+  });
+  it('passes a pack whose policy bans a source nobody cites, and one with no policy', () => {
+    expect(hits(banned(['NOBODY-CITES-THIS']))).toEqual([]);
+    expect(hits(fixture())).toEqual([]);
+  });
+});
+
 describe('temperament, regard and values (lane 1.1)', () => {
   it('a cited temperament, regard and values generate clean, into the person’s record', () => {
     const result = run(withTemper({ red_chief: { boldness: 'above:REG A p.4', candour: 'low:REG A', regard: 'below:REG A p.6', values: 'caution:REG A p.5;glory:DESIGN' } }));

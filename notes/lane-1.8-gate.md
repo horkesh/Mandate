@@ -350,3 +350,35 @@ Rejected:
 10. Missouri's sabotage and executions of July 1861 beyond [SW 6.7]'s line; the Osceola raid's details; whether reprisals raised guerrilla pressure (calibration only).
 11. East Tennessee's repression in 1861–62.
 12. Union camps, labour and conditions for freedpeople (`union-freedpeople-camps`, a whole-topic ship-blocker).
+
+## Fixes after both reviews (lane 1.8b)
+
+Two reviews read the register at `d93864a`: the gate reviewer's (`review-gate-1861.md`, Part 1) and the standing reviewer's mechanics review (`review-gate-register-1861.md`). Lane 1.8b made every fix they asked for, on `phase1-gate-1861-fixes`, which was cut from `d93864a` with main merged in. Every pattern is the gate reviewer's own, which he tested against 37 cases. Each fix has probes in `packs/union-1861/test/gate-register.test.ts`, one that fires and one that passes, run through the matchers and end to end through `checkGate` with the Union gate laid over the testbed.
+
+- **B1 (blocking).**
+  - **The killing signature, refused for ever (rule 1).** It is `guerrilla-war-west#1`, with the review's `labelPattern` and `optionPattern`. Its reason begins "refused for ever (rule 1)" and says R6's split moves it to `executions-and-reprisals` without lifting it.
+  - **`prisoners-and-exchange#1` widened** with the parole paraphrases: "on their word", release, freeing, letting go, sending home.
+  - **Ten triggers:** `hang|hangs|hung`, `bushwhack\w*`, `jayhawk\w*`, `partisans?`, `bridge[- ]burn\w*`, `reprisals?`, `retaliat\w*`, `lynch\w*`, `captured`, `surrender(?:ed|s)?`. An untagged item that uses one now needs a tag; the probes check this end to end. Sumter's "surrender" and similar strings will need `gate: none` with a reason when lane 1.11 writes them, which is what the R4 draft asks.
+- **S1 (both reviews' S2): narrator rules in `forbidden.json` while each hold stands.**
+  - Under R4: exchange of prisoners, cartel, hostages, choosing by lot, retaliation and reprisals fail. Parole and its paraphrases are `review`, not `fail`, because 0074 lets a capture notice state a surrender's cited terms.
+  - Under R6: burning towns, homes, farms or crops fails, while burned bridges pass, since S12's trigger reads the route's closure. Killing irregulars, hostages or the captured fails; civilians are left out so that Camp Jackson's text passes.
+  - Under needs-source: the camps fail, and the passive voice of camp labour is `review`.
+  - Each reason begins "held until R4", "held until R6" or "needs-source", so whoever lifts a hold drops its rules. A test pins all eleven rules.
+- **S2:** `fugitive-policy#0` has the second alternative for sending, turning or driving people back, away or out, or excluding them from the lines (Q6). Its reason says so.
+- **S3:** "property" and "owners" now refuse only where the label names people (the lookahead), so "Return the railroad to its owners" and "Restore the seized railroad property" pass.
+- **S4:** `black-enlistment-1861-offers` now has one unanchored pattern that excepts the Congress route and a refusal. The verbs are split so that recruit, raise, enlist, levy, draft, conscript, muster, enrol and arm stay refused, and accept and receive stay held.
+- **S5:** the captor-count field on `prisoners-and-exchange#0` (`captured_men`, `surrendered_total`, `taken_count`). A `strength` effect still passes.
+- **S6:** `guerrilla-war-west#0`'s reason now begins "refused for ever (rule 1; 0029); not lifted by R6".
+- **N2:** an arrest-count field signature on `union-habeas-and-arrests`.
+- **Lowercase ids** (the mechanics review's S1), outside `gate/`:
+  - `propose.field`, in effects and locked costs, and option ids are lowercase in the situation schema (`packages/pack-format/src/situations.ts`, `lowerId`). Probes are in `packages/pack-format/test/gate.test.ts`.
+  - A kernel test (`packages/kernel/test/field-ids.test.ts`) requires every exported `*_FIELD` id to be lowercase.
+  - No pack used a capital in either, so nothing existing is refused.
+- **Banned sources in every citation**, outside `gate/`:
+  - The validator now reads the gate's banned list (`banned-sources.ts`) before it validates the World. It reports every World and start record that cites a banned source, people's centres included.
+  - It is a **warning** (`banned-source-cited`), one per record, listing each banned citation. It becomes an **error** in the merge where lane 1.11 re-sources the rows.
+  - The test pins six Union rows: `benjamin_judah_p`, `johnston_joseph_e`, `lee_robert_e`, `mallory_stephen_r`, `memminger_christopher_g` and `reagan_john_h`. The brief listed `davis_jefferson`, but on disk his row cites neither memoir, and Lee's cites Johnston's *Narrative*. `people.csv` is not edited.
+
+N1, N3, N4 and N5 stay with lane 1.11, as filed.
+
+**Checks:** `pack:validate` gives 0 errors on both packs. Union has 750 warnings: the 744 from before plus the six banned-source rows. `npm run check` passes with 1044 tests.

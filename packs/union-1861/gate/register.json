@@ -145,9 +145,9 @@
       "supersededOptions": [{ "situation": "fort_monroe_arrivals", "option": "return", "law": "confiscation_and_militia_acts" }],
       "refused": [
         {
-          "labelPattern": "^(?!.*\\bslavery\\b)(?!.*\\b(?:not|never|no|refuses?|declines?|forbids?)\\s+(?:to\\s+)?(?:return|deliver|surrender|send|give|hand|restor)).*\\b(?:return|deliver|send(?:ing)? back|surrender|give up|hand over|restor)\\w*\\b.{0,40}\\b(?:fugitives?|refugees|runaways?|escaped|arrivals|enslaved|slaves?|contrabands?)\\b|^(?!.*\\bslavery\\b)(?!.*\\b(?:not|never|no|refuses?|declines?|forbids?)\\s+(?:to\\s+)?return).*\\breturn\\w*\\b.{0,40}\\b(?:1850|fugitive (?:slave )?(?:act|law))\\b|\\brestor\\w*\\b.{0,30}\\bproperty\\b|\\b(?:return|deliver|surrender|restor)\\w*\\b.{0,40}\\bto (?:their|the|its) (?:owners?|masters?|claimants?)\\b",
+          "labelPattern": "^(?!.*\\bslavery\\b)(?!.*\\b(?:not|never|no|refuses?|declines?|forbids?)\\s+(?:to\\s+)?(?:return|deliver|surrender|send|give|hand|restor)).*\\b(?:return|deliver|send(?:ing)? back|surrender|give up|hand over|restor)\\w*\\b.{0,40}\\b(?:fugitives?|refugees|runaways?|escaped|arrivals|enslaved|slaves?|contrabands?)\\b|^(?!.*\\bslavery\\b)(?!.*\\b(?:not|never|no|refuses?|declines?|forbids?)\\s+(?:to\\s+)?return).*\\breturn\\w*\\b.{0,40}\\b(?:1850|fugitive (?:slave )?(?:act|law))\\b|^(?=.*\\b(?:fugitives?|runaways?|escaped|arrivals|enslaved|slaves?|contrabands?|men|women|people|them)\\b).*\\brestor\\w*\\b.{0,30}\\bproperty\\b|^(?=.*\\b(?:fugitives?|runaways?|escaped|arrivals|enslaved|slaves?|contrabands?|men|women|people|them)\\b).*\\b(?:return|deliver|surrender|restor)\\w*\\b.{0,40}\\bto (?:their|the|its) (?:owners?|masters?|claimants?)\\b|^(?!.*\\bslavery\\b)(?!.*\\b(?:not|never|no|refuses?|declines?|forbids?)\\s+(?:to\\s+)?(?:send|turn|drive|expel|exclude)).*\\b(?:send\\w*|turn\\w*|drive\\w*)\\b.{0,30}\\b(?:fugitives?|refugees from slavery|runaways?|escaped (?:men|people|slaves)|arrivals|enslaved|slaves?)\\b.{0,20}\\b(?:back|away|out)\\b|^(?!.*\\bslavery\\b)(?!.*\\b(?:not|never|no)\\b).*\\b(?:expel\\w*|exclud\\w*|turn(?:s|ed|ing)? away|keep\\w* out)\\b.{0,30}\\b(?:fugitives?|runaways?|arrivals|enslaved|slaves?)\\b",
           "optionPattern": "(?:restore|return|deliver|surrender)[a-z_-]*(?:property|owners?|masters?|claimants?)",
-          "reason": "an option that returns people to slavery says so plainly, \"return them to slavery\": \"restore property\", \"to their owners\" or \"under the 1850 law\" alone is euphemism (SENSITIVE-HISTORY 3.2, the ruling on return, term 4, and Q6; 0046)"
+          "reason": "an option that returns people to slavery says so plainly, \"return them to slavery\": \"restore property\", \"to their owners\" or \"under the 1850 law\" alone is euphemism, and so is sending, turning or driving them back, away or out, or excluding them from the lines (Q6 covers keeping them from freedom as well as return); \"property\" and \"owners\" are read only where the label names people, so a railroad restored to its owners passes (SENSITIVE-HISTORY 3.2, the ruling on return, term 4, and Q6; 0046)"
         }
       ]
     },
@@ -209,12 +209,12 @@
       "refused": [
         {
           "optionPattern": "(?:recruit|raise|enlist|levy|draft|conscript|muster|enrol)[a-z_-]*(?:black|colou?red|negro(?:es)?|african)",
-          "labelPattern": "^\\s*(?:recruit|raise|enlist|levy|draft|conscript|muster|enrol)\\w*\\b.{0,40}\\b(?:Black|colou?red|negro(?:es)?|African)\\b",
+          "labelPattern": "^(?!.*\\b(?:ask|request|seek)\\w*\\b.{0,40}\\b(?:Congress|authority|law)\\b)(?!.*\\b(?:decline|refuse|not|no)\\b).*\\b(?:recruit|raise|enlist|levy|draft|conscript|muster|enrol|arm)\\w*\\b.{0,40}\\b(?:Black|colou?red|negro(?:es)?|African)\\b",
           "reason": "no recruit verb: the offers are the men's own acts, and acceptance runs through Congress (S13's ask-congress), never through a player draw on a pool (SENSITIVE-HISTORY 3.3, refused; [SW 6.4]; 0026)"
         },
         {
           "optionPattern": "^accept[a-z_-]*(?:black|colou?red|negro|african)",
-          "labelPattern": "^\\s*accept\\w*\\b.{0,40}\\b(?:Black|colou?red|negro(?:es)?|African)\\b",
+          "labelPattern": "^(?!.*\\b(?:ask|request|seek)\\w*\\b.{0,40}\\b(?:Congress|authority|law)\\b)(?!.*\\b(?:decline|refuse|not|no)\\b).*\\b(?:accept|receive)\\w*\\b.{0,40}\\b(?:Black|colou?red|negro(?:es)?|African)\\b",
           "reason": "held, not refused: a direct acceptance by the president under the 3 May 1861 call is needs-source (the only basis in the notes is that the exclusion \"rested more on policy than statute\", [SW 6.4]); when a research lane sources a lawful path, this signature is lifted and an accept option may be added (SENSITIVE-HISTORY 3.3)"
         }
       ]
@@ -224,7 +224,13 @@
       "class": "civil-liberties",
       "window": { "from": "1861-04-27", "to": "1862-12-31" },
       "placements": ["decision", "event", "derived"],
-      "status": "open"
+      "status": "open",
+      "refused": [
+        {
+          "fieldPattern": "(?:^|[-_.:/])arrest(?:s|ed|ees)?[-_.:/](?:count|total|score|tally)(?:$|[-_.:/])",
+          "reason": "no arrest count as a score or tally, and no card per arrested person: arrests are events and decisions with their own costs, never a number any seat is scored on (SENSITIVE-HISTORY 3.5, refused)"
+        }
+      ]
     },
     {
       "id": "press-suppression",
@@ -264,7 +270,12 @@
         {
           "optionPattern": "(?:reprisal|retaliat|burn|lay_waste|lay-waste|devastate|punish)[a-z_-]*(?:towns?|villages?|civilians|count(?:y|ies)|homes|farms|population|inhabitants|families)",
           "labelPattern": "\\b(?:reprisals?|retaliat\\w*|burn|lay waste|devastat\\w*|punish\\w*)\\b.{0,40}\\b(?:towns?|villages?|civilians|count(?:y|ies)|homes|farms|population|inhabitants|families)\\b",
-          "reason": "reprisal against civilians is never a lever for any seat, and raids strike rail, river edges and depots, never civilians (0029); held for R6 on commanders' conduct toward civilians (SENSITIVE-HISTORY 3.6, refused; [SW 6.7], [U62]; 0046)"
+          "reason": "refused for ever (rule 1; 0029); not lifted by R6: reprisal against civilians is never a lever for any seat, and raids strike rail, river edges and depots, never civilians; R6 decides only commanders' conduct toward civilians as events (SENSITIVE-HISTORY 3.6, refused; [SW 6.7], [U62]; 0046)"
+        },
+        {
+          "optionPattern": "(?:hang|shoot|execute|kill|lynch)[a-z_-]*(?:bushwhacker|guerrilla|jayhawker|partisan|bridge_?burner|raider|marauder|irregular|hostage|parole_?breaker|spy|spies)",
+          "labelPattern": "\\b(?:hang|hangs|hanged|hung|shoot|shot|execut\\w*|kill\\w*|lynch\\w*)\\b.{0,30}\\b(?:bushwhackers?|guerrillas?|jayhawkers?|partisans?|bridge[- ]burners?|raiders?|marauders?|irregulars?|hostages?|parole[- ]breakers?|spies)\\b",
+          "reason": "refused for ever (rule 1): no seat hangs, shoots, executes, lynches or kills irregulars, hostages, spies or men who broke parole, with a trial or without one; Halleck's GO 2 (\"hung as robbers and murderers\") and GO 32 (\"immediately shot\") are events, never an option ([GCF 10]); on this topic until R6's split moves it to executions-and-reprisals, and not lifted by R6 (SENSITIVE-HISTORY rule 1, 3.6)"
         }
       ]
     },
@@ -296,12 +307,12 @@
       "status": "record",
       "refused": [
         {
-          "fieldPattern": "(?:^|[-_.:/])(?:prisoners?|captives?|pows?|hostages?|parolees?|paroled)(?:$|[-_.:/])",
-          "reason": "held until R4, not refused for ever: no prisoner stock, pool or count that any seat holds, spends, trades, exchanges or paroles; the captured leave play as a typed loss in the battle record (R4 battle ruling, draft, points 2 and 6; SENSITIVE-HISTORY 3.6; [GCF 5])"
+          "fieldPattern": "(?:^|[-_.:/])(?:prisoners?|captives?|pows?|hostages?|parolees?|paroled)(?:$|[-_.:/])|(?:^|[-_.:/])(?:captured|taken|surrendered)[-_.:/](?:men|soldiers|troops|officers|count|counts|total|number|numbers|held)(?:$|[-_.:/])",
+          "reason": "held until R4, not refused for ever: no prisoner stock, pool or count that any seat holds, spends, trades, exchanges or paroles, and no field counting the captured on the captor's side (a captured count is the loser's loss, never the captor's holding); the captured leave play as a typed loss in the battle record (R4 battle ruling, draft, points 2 and 6; SENSITIVE-HISTORY 3.6; [GCF 5])"
         },
         {
           "optionPattern": "exchange[a-z_-]*prisoners?|prisoners?[a-z_-]*(?:exchange|swap|trade|parole)|cartel|parol(?:e|ed|es|ing)|hostages?|draw[_-]lots?|by[_-]lot|retaliat|reprisal",
-          "labelPattern": "\\b(?:exchang|swap|trad|parol)\\w*\\b.{0,30}\\bprisoners?\\b|\\bprisoners?\\b.{0,30}\\b(?:exchang|swap|trad|parol)\\w*\\b|\\bcartel\\b|\\bparol(?:e|ed|es|ing)\\b|\\bhostages?\\b|\\bby lot\\b|\\bretaliat\\w*\\b|\\breprisals?\\b",
+          "labelPattern": "\\b(?:exchang|swap|trad|parol)\\w*\\b.{0,30}\\bprisoners?\\b|\\bprisoners?\\b.{0,30}\\b(?:exchang|swap|trad|parol)\\w*\\b|\\bcartel\\b|\\bparol(?:e|ed|es|ing)\\b|\\bhostages?\\b|\\bby lot\\b|\\bretaliat\\w*\\b|\\breprisals?\\b|\\bon (?:their|his|its) (?:word|honou?r|oath|pledge|parole)\\b|\\b(?:releas\\w*|free|freeing|let\\w*\\b.{0,20}\\bgo|send\\w*\\b.{0,20}\\bhome)\\b.{0,40}\\b(?:captured|captives?|prisoners?|surrendered)\\b|\\b(?:captured|captives?|prisoners?|surrendered)\\b.{0,40}\\b(?:go home|released|set free|let go|sent home)\\b|\\bsend\\w*\\b.{0,30}\\b(?:captured|captives?|prisoners?|surrendered)\\b.{0,30}\\bhome\\b",
           "reason": "held until R4, not refused for ever: exchange, parole, hostages, the Corcoran lot and retaliation are R4 proper's; no option names a captured man's fate until then (R4 battle ruling, draft, point 6; SENSITIVE-HISTORY 3.6 and 4, R4; [GCF 5.1, 5.2])"
         }
       ]

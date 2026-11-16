@@ -52,7 +52,17 @@
     { "term": "mobs?" },
     { "term": "guerrillas?" },
     { "term": "insurrections?" },
-    { "term": "servile" }
+    { "term": "servile" },
+    { "term": "hang|hangs|hung" },
+    { "term": "bushwhack\\w*" },
+    { "term": "jayhawk\\w*" },
+    { "term": "partisans?" },
+    { "term": "bridge[- ]burn\\w*" },
+    { "term": "reprisals?" },
+    { "term": "retaliat\\w*" },
+    { "term": "lynch\\w*" },
+    { "term": "captured" },
+    { "term": "surrender(?:ed|s)?" }
   ],
   "allow": [
     "Osage River", "Seneca Falls", "Indian River", "Indian Ocean", "Choctaw Bluff",

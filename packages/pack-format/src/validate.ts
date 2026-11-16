@@ -10,6 +10,7 @@
  * the committed-pack check can point at the generated JSON.
  */
 import { phase0, world as w } from '@mandate/kernel';
+import { citationsIn } from './banned-sources.ts';
 import type { GateData } from './gate.ts';
 import { IntlMessageFormat } from 'intl-messageformat';
 import { type Issue, IssueSink } from './issues.ts';
@@ -32,6 +33,8 @@ export interface PackData {
   readonly situations?: readonly phase0.SituationDef[];
   /** The pack's gate files (lane 0.7), if it has any. */
   readonly gate?: GateData | null;
+  /** Sources the gate bans as evidence (`gate/source-policy.json`), checked in every citation of the World and its starts (lane 1.8b). */
+  readonly bannedSources?: readonly string[];
 }
 
 /** A record's address: `world` or `scenario:<id>`, a table, an index, and optionally a field path inside the record. */
@@ -674,10 +677,37 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     if (!locales.has(locale)) sink.warn('missing-string-table', 'pack.json', 'locales', `no string table for locale "${locale}"`);
   }
 
+  // A6 in every citation (lane 1.8b): a source the gate bans as evidence may not be cited anywhere in the pack, people's
+  // centres included, not only on situations. One warning per record, listing each banned citation in it. A WARNING until
+  // lane 1.11 re-sources the Union rows that cite the two memoirs; it becomes an error in the merge that does so.
+  const banned = new Set(pack.bannedSources ?? []);
+  if (banned.size > 0) {
+    const flag = (where: (field: string) => Where, record: unknown) => {
+      const hits = citationsIn(record).filter((c) => banned.has(c.source));
+      if (hits.length === 0) return;
+      warn(
+        'banned-source-cited',
+        where(hits[0]!.path),
+        `cites a source the gate bans as evidence (A6): ${hits.map((h) => `"${h.source}" at ${h.path}`).join(', ')}`,
+        'another source; this warning becomes an error when lane 1.11 re-sources these rows',
+      );
+    };
+    for (const table of WORLD_RECORD_TABLES) (world[table] as readonly unknown[]).forEach((record, i) => flag((field) => W(table, i, field), record));
+    for (const s of scenarios) {
+      const scope = `scenario:${s.id}`;
+      for (const [table, rows] of Object.entries(s)) {
+        if (Array.isArray(rows)) rows.forEach((record, i) => flag((field) => ({ scope, table, index: i, field }), record));
+      }
+    }
+  }
+
   // NFC (decision 0044) is checked where text is read, in `readJson` and the
   // CSV reader, so each problem points at the cell or JSON path a person edits.
   return sink.issues;
 }
+
+/** The World's tables of records, each of which may carry citations. */
+const WORLD_RECORD_TABLES = ['departments', 'regions', 'installations', 'edges', 'railLines', 'depots', 'weatherZones', 'people'] as const;
 
 function ascendingUnique(xs: readonly number[]): boolean {
   return xs.every((x, i) => i === 0 || x > xs[i - 1]!);
