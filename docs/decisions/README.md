@@ -76,3 +76,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0070](0070-a-nations-act-is-its-own.md) | A nation's act must be its own, and must stay with its own people | accepted; amended by 0071 |
 | [0071](0071-cleared-flags-and-goals-are-routes.md) | A cleared flag is a route, and a standing goal is a choice | accepted |
 | [0072](0072-phase-0-closes-with-a-close-out.md) | Phase 0 closes after one close-out lane | accepted |
+| [0073](0073-phase-1-plan.md) | The Phase 1 plan: two milestones, starting with the road to Bull Run | accepted |
