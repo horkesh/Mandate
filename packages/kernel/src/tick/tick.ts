@@ -166,7 +166,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   state = freeze(deliverDue(ctx, state));
 
   // 2b. People apply the changes proposed to them so far today (lane 1.1): a bypassed relay holds a grievance.
-  state = freeze(applyPeopleChanges(state, peopleChangesFrom(world, state, ctx.proposals), day));
+  state = freeze(applyPeopleChanges(state, peopleChangesFrom(world, state, ctx.proposals), day, world.rules.people));
 
   // 3. Movement: commanders' steps toward their goals, and every march a day further (lane 0.5).
   state = freeze(applyStanding(ctx, state, menus, choices));

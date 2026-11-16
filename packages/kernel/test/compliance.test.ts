@@ -15,7 +15,7 @@ import { indexSeatsWorld, type SeatsWorld } from '../src/seats/world.ts';
 import { createState } from '../src/tick/setup.ts';
 import { indexWorld } from '../src/world/index.ts';
 import { forcesStart, forcesWorld, person, type PersonTemper } from './support/forces-fixture.ts';
-import { edge, region } from './support/map-fixture.ts';
+import { edge, FIXTURE_PEOPLE_RULES as PEOPLE_RULES, region } from './support/map-fixture.ts';
 
 /**
  * Compliance on the new State (lane 1.1; FOUNDATION section 6). Every case M1 and M2 wrote is kept: each proxy is now a
@@ -62,7 +62,7 @@ function castWorld(cast: Readonly<Record<string, PersonTemper>> = CAST): SeatsWo
 }
 
 const WORLD = castWorld();
-const STATE: State = applyPeopleChanges(createState(WORLD, { seed: 1 }), MOVES, 0);
+const STATE: State = applyPeopleChanges(createState(WORLD, { seed: 1 }), MOVES, 0, PEOPLE_RULES);
 const proxy = (id: string): ProxyProfile => profileOf(WORLD, STATE, PR(id), LEADER);
 
 const boldOffensive: DirectiveTerms = { boldness: 900, honours: ['glory'], offends: ['caution'], required: 700 };
@@ -115,7 +115,7 @@ describe('resolveDirective on the new State', () => {
 
   it('mild covert unwillingness is a slow-walk, not a reinterpretation', () => {
     // His regard for the leader rises (a verb's work), from -400 to 200.
-    const warmer = applyPeopleChanges(STATE, [{ change: 'regard', person: PR('functionary'), toward: LEADER, delta: 600 }], 1);
+    const warmer = applyPeopleChanges(STATE, [{ change: 'regard', person: PR('functionary'), toward: LEADER, delta: 600 }], 1, PEOPLE_RULES);
     const response = resolveDirective(profileOf(WORLD, warmer, PR('functionary'), LEADER), { boldness: 600, honours: ['glory'], offends: ['caution'], required: 400 }, closeWatch);
     expect(response.willingness).toBe(-110);
     expect(response.actual).toBe('slow_walk');
@@ -124,7 +124,7 @@ describe('resolveDirective on the new State', () => {
 
   it('standing shields a proxy: the same functionary, now famous, refuses openly (P6)', () => {
     // The press makes him famous: standing from 100 to 900.
-    const famous = applyPeopleChanges(STATE, [{ change: 'standing', person: PR('functionary'), delta: 800 }], 1);
+    const famous = applyPeopleChanges(STATE, [{ change: 'standing', person: PR('functionary'), delta: 800 }], 1, PEOPLE_RULES);
     const response = resolveDirective(profileOf(WORLD, famous, PR('functionary'), LEADER), boldOffensive, closeWatch);
     expect(response.willingness).toBe(-657);
     expect(response.actual).toBe('refuse');
@@ -149,7 +149,7 @@ describe('resolveDirective on the new State', () => {
     const b = resolveDirective({ ...proxy('grandee'), values: ['reputation', 'caution'] }, { ...boldOffensive, honours: ['glory'], offends: ['caution', 'caution'] }, thinResources);
     expect(b).toEqual(a);
     // The same seed and World give the same people, so the same answer.
-    const again = applyPeopleChanges(createState(WORLD, { seed: 1 }), MOVES, 0);
+    const again = applyPeopleChanges(createState(WORLD, { seed: 1 }), MOVES, 0, PEOPLE_RULES);
     expect(resolveDirective(profileOf(WORLD, again, PR('grandee'), LEADER), boldOffensive, thinResources)).toEqual(a);
   });
 
@@ -203,7 +203,7 @@ describe('plans and edits (lane 1.1; lane 0.9 findings 1, 2 and 8)', () => {
 
   it('a mild edit draws compliance with reservations from a man who would otherwise comply, and he says nothing of it if uncandid', () => {
     const steady = castWorld({ ...CAST, steady: { boldness: 'average', candour: 'low', reputation: 'average', values: ['duty'] } });
-    const state = applyPeopleChanges(createState(steady, { seed: 1 }), [{ change: 'regard', person: PR('steady'), toward: LEADER, delta: 300 }], 0);
+    const state = applyPeopleChanges(createState(steady, { seed: 1 }), [{ change: 'regard', person: PR('steady'), toward: LEADER, delta: 300 }], 0, PEOPLE_RULES);
     const plan: DirectiveTerms = { boldness: 500, ownBest: 500, honours: ['duty'], offends: [], required: 0 };
     expect(answerOrder(steady, state, PR('steady'), LEADER, { ...plan, departure: 0 }).actual).toBe('comply');
     const edited = answerOrder(steady, state, PR('steady'), LEADER, { ...plan, departure: 500 });
@@ -267,7 +267,7 @@ describe('conflicting orders, resolved by his compliance (0040; lane 1.1, called
   it('reads each order with his regard for its own issuer, on the new State', () => {
     // A second issuer he distrusts (a rival's order): the same terms from the leader are obeyed instead.
     const rival = PR('grandee');
-    const state = applyPeopleChanges(STATE, [{ change: 'regard', person: PR('eager'), toward: rival, delta: -1000 }], 1);
+    const state = applyPeopleChanges(STATE, [{ change: 'regard', person: PR('eager'), toward: rival, delta: -1000 }], 1, PEOPLE_RULES);
     const same = { boldness: 800, honours: ['glory'], offends: [], required: 0 };
     const r = resolveOrderConflict(WORLD, state, PR('eager'), { order: 'm.1', issuer: rival, terms: same, viaChain: false, issuedDay: 3 }, { order: 'm.2', issuer: LEADER, terms: same, viaChain: false, issuedDay: 1 });
     expect(r.obeyed).toBe('arriving');

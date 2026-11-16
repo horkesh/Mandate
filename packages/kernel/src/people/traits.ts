@@ -55,7 +55,7 @@ export function traitsOf(world: PrincipalLookup, state: State, person: PersonId)
     boldness: t.trueBoldness,
     candour: t.trueCandour,
     standing: state.personStanding[person] ?? 0,
-    regard: principal === null || principal === person ? 0 : regardOf(state, person, principal),
+    regard: principal === null || principal === person ? 0 : regardOf(world.map.world.rules.people, state, person, principal),
     values: valuesOf(world.map, person),
   };
 }

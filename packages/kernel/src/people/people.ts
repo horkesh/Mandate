@@ -22,7 +22,7 @@ import type { WorldIndex } from '../world/index.ts';
 import type { StatCentre } from '../world/people.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
 import { ranksOn, type PersonRank } from './ranks.ts';
-import type { ShadowRules } from './rules.ts';
+import type { PeopleRules, ShadowRules } from './rules.ts';
 
 /** A person's hidden true stats and temperament, permille, drawn once at setup. */
 export interface PersonTrue {
@@ -93,9 +93,9 @@ export function drawStat(rules: ShadowRules, centre: StatCentre, mode: ShadowMod
   return clampPermille(mid - half + nextInt(stream, 2 * half + 1));
 }
 
-/** A person's starting regard for his principal: the pack's signed permille for its cited direction; unknown is none. */
+/** A person's starting regard for his principal: the pack's signed permille for its cited direction, or the pack's regard for the unknown. */
 export function regardAtStart(rules: ShadowRules, centre: StatCentre): number {
-  return centre.direction === null ? 0 : clampSignedPermille(rules.regardPermille[centre.direction]);
+  return clampSignedPermille(centre.direction === null ? rules.regardUnknown : rules.regardPermille[centre.direction]);
 }
 
 /**
@@ -125,8 +125,9 @@ export function initialPeople(map: WorldIndex, start: ScenarioStart, seed: numbe
     personStanding[p.id] = drawStat(rules, p.centres.reputation, mode, stream);
     personTraits[p.id] = [...new Set(p.traits.map((t) => t.trait))].sort(strictCompare);
     const principal = p.faction === null ? undefined : principals.get(p.faction);
-    const regard = mode === 'unknown-men' ? 0 : regardAtStart(rules, p.regard);
-    if (principal !== undefined && principal !== p.id && regard !== 0) personRegard[p.id] = { [principal]: regard };
+    const regard = mode === 'unknown-men' ? rules.regardUnknown : regardAtStart(rules, p.regard);
+    // Regard is stored only where it differs from the pack's regard for the unknown, which every reader falls back to.
+    if (principal !== undefined && principal !== p.id && regard !== rules.regardUnknown) personRegard[p.id] = { [principal]: regard };
     personStatus[p.id] = { statusKind: 'serving', statusDay: 0 };
     const ranks = ranksOn(map, p.ranks, start.startDate);
     if (Object.keys(ranks).length > 0) personRanks[p.id] = ranks;
@@ -149,10 +150,10 @@ function known(state: State, person: PersonId): void {
 
 /**
  * Apply changes in the order given, on `day`; the only writer of every people field. Standing clamps to 0..1000 and
- * regard to -1000..1000 (a regard that returns to 0 is removed, so the table stays sparse). Returns the State unchanged
- * when there are no changes.
+ * regard to -1000..1000; a regard change starts from the pack's regard for the unknown when none is recorded, and a regard
+ * that returns to it is removed, so the table stays sparse. Returns the State unchanged when there are no changes.
  */
-export function applyPeopleChanges(state: State, changes: readonly PeopleChange[], day: number): State {
+export function applyPeopleChanges(state: State, changes: readonly PeopleChange[], day: number, rules: PeopleRules): State {
   let next = state;
   for (const c of changes) {
     known(next, c.person);
@@ -163,8 +164,8 @@ export function applyPeopleChanges(state: State, changes: readonly PeopleChange[
       case 'regard': {
         known(next, c.toward);
         const row: Record<PersonId, number> = { ...(next.personRegard[c.person] ?? {}) };
-        const value = clampSignedPermille((row[c.toward] ?? 0) + c.delta);
-        if (value === 0) delete row[c.toward];
+        const value = clampSignedPermille((row[c.toward] ?? rules.shadow.regardUnknown) + c.delta);
+        if (value === rules.shadow.regardUnknown) delete row[c.toward];
         else row[c.toward] = value;
         const table: Record<PersonId, Readonly<Record<PersonId, number>>> = { ...next.personRegard };
         if (Object.keys(row).length === 0) delete table[c.person];
@@ -199,9 +200,9 @@ function sortedRecord<V>(r: Readonly<Record<string, V>>): Record<string, V> {
   return out;
 }
 
-/** His regard for `toward`, signed permille (0 when none is recorded). */
-export function regardOf(state: State, person: PersonId, toward: PersonId): number {
-  return state.personRegard[person]?.[toward] ?? 0;
+/** His regard for `toward`, signed permille: as recorded, else the pack's regard for the unknown (`shadow.regardUnknown`). */
+export function regardOf(rules: PeopleRules, state: State, person: PersonId, toward: PersonId): number {
+  return state.personRegard[person]?.[toward] ?? rules.shadow.regardUnknown;
 }
 
 /** His true stats. Throws for a person the State does not hold. */

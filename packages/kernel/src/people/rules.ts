@@ -19,8 +19,13 @@ export interface ShadowRules {
   readonly spread: number;
   /** The half-width around an unknown centre: wider, since nothing narrows it. */
   readonly unknownSpread: number;
-  /** Signed permille regard for each cited direction of a person's regard for his principal; unknown is 0. */
+  /** Signed permille regard for each cited direction of a person's regard for his principal. */
   readonly regardPermille: Readonly<Record<StatDirection, number>>;
+  /**
+   * The regard a man holds toward someone when nothing is known or recorded: toward his principal when his regard is
+   * unknown, and toward anyone else (rivals, partners) until play moves it. A stated pack rule, never a silent 0.
+   */
+  readonly regardUnknown: number;
 }
 
 /** What a goal of each kind asks of the man who reads it: its boldness, and the values it honours or offends. */
@@ -132,6 +137,7 @@ export function peopleRulesProblems(rules: PeopleRules | undefined, values: read
   permille(rules.shadow.unknownCentre, 'shadow.unknownCentre');
   permille(rules.shadow.spread, 'shadow.spread');
   permille(rules.shadow.unknownSpread, 'shadow.unknownSpread');
+  permille(rules.shadow.regardUnknown, 'shadow.regardUnknown', true);
   for (const k of COMPLIANCE_KEYS) if (typeof rules.compliance[k] !== 'number' || !Number.isSafeInteger(rules.compliance[k])) problems.push(`people rule compliance.${k} must be a whole number`);
   const goals = new Set<string>();
   for (const g of rules.goalTerms) {

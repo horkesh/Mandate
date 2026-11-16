@@ -40,7 +40,7 @@ export function goalTerms(rules: PeopleRules, kind: string): DirectiveTerms {
 /** A man as compliance reads him, with his regard for `toward` (the issuer of the order he reads). */
 export function profileOf(world: ReadingWorld, state: State, person: PersonId, toward: PersonId): ProxyProfile {
   const t = traitsOf(world, state, person);
-  return { id: person, values: t.values, boldness: t.boldness, candour: t.candour, standing: t.standing, regard: toward === person ? 0 : regardOf(state, person, toward) };
+  return { id: person, values: t.values, boldness: t.boldness, candour: t.candour, standing: t.standing, regard: toward === person ? 0 : regardOf(peopleRules(world), state, person, toward) };
 }
 
 /** The circumstances he reads an order in: the pack's oversight and credibility, full means unless the caller says, and his grievances. */
@@ -77,7 +77,7 @@ export function resolveOrderConflict(
   const profile = profileOf(world, state, person, arriving.issuer);
   return resolveConflict(
     profile,
-    { ...held, issuerRegard: held.issuer === person ? 0 : regardOf(state, person, held.issuer) },
+    { ...held, issuerRegard: held.issuer === person ? 0 : regardOf(peopleRules(world), state, person, held.issuer) },
     { ...arriving, issuerRegard: profile.regard },
     contextFor(world, state, person),
     peopleRules(world).compliance,

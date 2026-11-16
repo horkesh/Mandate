@@ -235,6 +235,7 @@ export const RulesSchema = z.strictObject({
           spread: permille.describe('Half-width of the uniform draw around a cited centre (0: as history). A design parameter.'),
           unknownSpread: permille.describe('Half-width around an unknown centre. A design parameter.'),
           regardPermille: z.strictObject({ high: signedPermille, above: signedPermille, average: signedPermille, below: signedPermille, low: signedPermille }).describe('Signed regard for each cited direction of regard for the principal. A design parameter.'),
+          regardUnknown: signedPermille.describe('The regard a man holds toward someone when nothing is known or recorded: toward his principal when uncited, and toward anyone else until play moves it. A design parameter, never a silent 0.'),
         })
         .describe('History’s shadow (FOUNDATION section 6): how true stats are drawn at setup.'),
       compliance: z

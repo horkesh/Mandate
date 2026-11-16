@@ -44,6 +44,7 @@ export const MESSAGE_RULES = {
       spread: 100,
       unknownSpread: 200,
       regardPermille: { high: 600, above: 300, average: 0, below: -300, low: -600 },
+      regardUnknown: 0,
     },
     compliance: { ...DEFAULT_COMPLIANCE_RULES },
     goalTerms: [

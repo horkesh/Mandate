@@ -31,6 +31,7 @@ function shadowWorld(people = ['ann', 'bob', 'cy'], rules: Partial<PeopleRules['
   const shadow = { ...FIXTURE_PEOPLE_RULES.shadow, centrePermille: { high: 800, above: 650, average: 500, below: 350, low: 200 }, spread: 100, unknownSpread: 200, ...rules };
   return { ...base, rules: { ...base.rules, people: { ...base.rules.people, shadow } } };
 }
+const PEOPLE_RULES = FIXTURE_PEOPLE_RULES;
 const START = forcesStart({ a1: { a: 1000 }, a2: { a: 1000 } }, [], []);
 
 describe("history's shadow: true stats drawn at setup from cited centres (FOUNDATION section 6; 0005, 0026)", () => {
@@ -113,6 +114,7 @@ describe('people State: setup and the one writer (FOUNDATION section 10)', () =>
         { change: 'rank', person: PR('a_gen'), kind: 'brevet', rank: 'bvt_general', since: '1900-07-04' },
       ],
       4,
+      PEOPLE_RULES,
     );
     expect(next.personStanding[PR('a_gen')]).toBe(1000);
     // Regard for his principal returned to none and was removed; regard for a rival clamped at -1000.
@@ -123,8 +125,23 @@ describe('people State: setup and the one writer (FOUNDATION section 10)', () =>
     expect(next.personRanks[PR('a_gen')]).toEqual({ brevet: { rankTerm: 'bvt_general', rankSince: '1900-07-04' } });
     // Copy-on-write: the State it was given is unchanged, and no change returns the same State.
     expect(state.personStanding[PR('a_gen')]).toBe(500);
-    expect(applyPeopleChanges(state, [], 4)).toBe(state);
-    expect(() => applyPeopleChanges(state, [{ change: 'standing', person: PR('ghost'), delta: 1 }], 4)).toThrow('unknown person id "ghost"');
+    expect(applyPeopleChanges(state, [], 4, PEOPLE_RULES)).toBe(state);
+    expect(() => applyPeopleChanges(state, [{ change: 'standing', person: PR('ghost'), delta: 1 }], 4, PEOPLE_RULES)).toThrow('unknown person id "ghost"');
+  });
+
+  it('falls back to the pack’s stated regard for the unknown, never a silent 0, and keeps only what differs from it', () => {
+    const world = indexedFixture({ persons: { a_gen: { regard: undefined } } });
+    const cool = { ...world.map.world.rules.people, shadow: { ...world.map.world.rules.people.shadow, regardUnknown: -100 } };
+    const map = indexWorld({ ...world.map.world, rules: { ...world.map.world.rules, people: cool } });
+    const seats = indexSeatsWorld(map, world.start);
+    const state = createState(seats, { seed: 1 });
+    // a_gen's regard for his principal is uncited: the stated -100, and nothing stored for it.
+    expect(state.personRegard[PR('a_gen')]).toBeUndefined();
+    expect(traitsOf(seats, state, PR('a_gen')).regard).toBe(-100);
+    // Between people: a_gen and a_bold have no recorded regard, so a change starts from -100; back at -100 it is removed.
+    const warmed = applyPeopleChanges(state, [{ change: 'regard', person: PR('a_gen'), toward: PR('a_bold'), delta: 300 }], 2, cool);
+    expect(warmed.personRegard[PR('a_gen')]).toEqual({ a_bold: 200 });
+    expect(applyPeopleChanges(warmed, [{ change: 'regard', person: PR('a_gen'), toward: PR('a_bold'), delta: -300 }], 3, cool).personRegard[PR('a_gen')]).toBeUndefined();
   });
 
   it('a bypassed relay holds a grievance against the principal who went around him, and it weighs in his next reading', () => {

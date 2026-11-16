@@ -93,12 +93,15 @@ With the original goal boldness (hold 200, advance 700), a man with no values an
 4. **A relay cannot rewrite an order.** A reinterpretation by a relay is a longer hold, and a refusal by a relay sends the order back like an objection.
 5. **An intelligence chief's estimate bias is his own perception bias.**
    - Rejected: keeping `intelligenceBias` as a free input, which was part of the adapter.
-6. **Regard toward the principal comes from a person column. Regard between people starts at none** and moves only by changes.
+6. **Regard toward the principal comes from a person column.** It is a direction, mapped to signed permille by `shadow.regardPermille`. **Regard between people has no column** (lane 1.5 gets one). When nothing is cited or recorded, every reader falls back to the stated pack rule `shadow.regardUnknown`, never a silent 0. Both packs state 0, and the table stores only values that differ from it (the lead's condition 3).
+7. **The intelligence chief stays a separate term** (the lead's condition 1; FOUNDATION section 12's note). `generate.ts` writes the chief's own perception bias as the source's `intelligence_bias` term under his name. `beliefs.ts` then applies the commander's `perception_bias` on top. The test `tells a timid general from a bad intelligence chief` shows the two apart.
+8. **`demandRatio` is this lane's.** Lane 1.2 adds the assault margin as its own `WorldRules.people` field and term (the lead's condition 2).
+9. **There is no Map or Set in State.** Every new field is a plain record.
 
 ## For the lead
 
 1. **Lane 1.2:** `DirectiveTerms` gains `ownBest`, `departure` and `support`, and `DirectiveResponse` gains `conditions`. Call `answerOrder` at arrival and `resolveOrderConflict` at `arriveOrder`. Record responses with `recordResponse(responseOf(...))` and keep `responseKey` in `plans`. Read traits with `traitsOf`, and import `perceptionBias` and `demandRatio` from `people/traits.ts`. `relayOrder` now returns State. I left `plans/standing.ts` and `arriveOrder` alone.
-2. **Format for regard between people** (rivals, pincer partners): State holds it, but there is no column yet. I recommend lane 1.5 adds it with the ladder and rivals.
+2. **Format for regard between people** (rivals, pincer partners): State holds it, but there is no column yet. Filed for lane 1.5, as the lead ruled. Until then its default is `shadow.regardUnknown`.
 3. **The Union pack's fourth rank kind, `state`** (state commissions), and the id-based assignment of kinds. FOUNDATION names three kinds. I recommend keeping four, and having lane 1.9 or 1.11 check the assignment.
 4. **Two new pack values stand in for derived terms:** `context.oversight` and `context.leaderCredibility`. Politics (lane 1.6) should derive credibility, as M2's `derive` did. Neither is labelled STAND-IN in code; both are documented as pack values until lane 1.6.
 5. **`orderResponses` grows with every hop of every order.** It needs a pruning rule, as knowledge has. This is for lane 1.4 or 1.14.

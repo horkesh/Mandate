@@ -73,6 +73,7 @@ export const FIXTURE_PEOPLE_RULES: PeopleRules = {
     spread: 0,
     unknownSpread: 0,
     regardPermille: { high: 1000, above: 300, average: 0, below: -300, low: -1000 },
+    regardUnknown: 0,
   },
   compliance: DEFAULT_COMPLIANCE_RULES,
   goalTerms: [
