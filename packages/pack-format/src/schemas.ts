@@ -176,13 +176,52 @@ export const RulesSchema = z.strictObject({
       lowDays: nonNegative.describe('Stores below this many days are low, a truth event a report may tell; at most capDays. A design parameter.'),
     })
     .describe('Stores on hand (0040, 0064): design parameters the pack states, not sourced facts.'),
-  contest: z
+  occupation: z
     .strictObject({
       occupyPermille: permille.describe('Control a side alone in held ground gains a day at full strength, permille. A design parameter.'),
       occupyFullMen: positive.describe('The men at which occupation reaches its full rate; fewer gain in proportion. A design parameter.'),
-      contestPermille: permille.describe('Control the stronger side gains a day at an overwhelming margin, permille, times its margin. A design parameter.'),
     })
-    .describe('The simple control contest and occupation (0064): design parameters the pack states, not sourced facts.'),
+    .describe('Occupation (0064): a side alone that marched in takes ground by its men. Design parameters the pack states, not sourced facts.'),
+  // Lane 1.3: the battle model (the combat note). Every pack states every number; the kernel has no default (0072).
+  combat: z
+    .strictObject({
+      baseRates: z
+        .strictObject(Object.fromEntries(phase0.BATTLE_TYPES.map((t) => [t, z.strictObject({ attacker: permille, defender: permille })])) as Record<phase0.BattleType, z.ZodObject<{ attacker: typeof permille; defender: typeof permille }, z.core.$strict>>)
+        .describe('K+W per 1000 men in contact per day, by battle type, for the side that attacks and the side that defends (P2).'),
+      works: z.strictObject({ hastyAt: permille, preparedAt: permille }).describe('Region fortification (permille) at or above which a defender is dug in or in works.'),
+      terrain: z
+        .array(z.strictObject({ terrain: termId, frontageMen: nonNegative, lossPermille: signedPermille }))
+        .describe('Per terrain the pack names: men who can be in contact per side per day (P3), and a loss term both sides take.'),
+      otherTerrain: z.strictObject({ frontageMen: nonNegative, lossPermille: signedPermille }).describe('The row for any terrain the table does not name (the pack’s statement, never a kernel default).'),
+      multiplier: z.strictObject({ min: nonNegative, max: nonNegative }).describe('The loss multiplier’s clamp, permille.'),
+      terms: z
+        .strictObject({ qualityWeight: permille, qualityMax: permille, competenceWeight: permille, competenceMax: permille, numbersMax: permille, surprisePermille: permille, successiveDayPermille: signedPermille, noiseMax: permille })
+        .describe('The additive loss terms’ weights and caps (P4).'),
+      commit: z
+        .strictObject(Object.fromEntries(phase0.COMMITS.map((c) => [c, z.strictObject({ sharePermille: permille, posturePermille: signedPermille })])) as Record<phase0.Commit, z.ZodObject<{ sharePermille: typeof permille; posturePermille: typeof signedPermille }, z.core.$strict>>)
+        .describe('Per dawn commit: the share of men committed, and the posture term both sides take.'),
+      killedPermille: permille.describe('Killed, permille of killed and wounded.'),
+      missingPermille: z.strictObject(Object.fromEntries(phase0.DAY_RESULTS.map((r) => [r, permille])) as Record<phase0.DayResult, typeof permille>).describe('Missing, permille of K+W, by the side’s result.'),
+      capturedPermille: z.strictObject(Object.fromEntries(phase0.DAY_RESULTS.map((r) => [r, permille])) as Record<phase0.DayResult, typeof permille>).describe('Of the missing, permille captured on the field, by result.'),
+      flank: z.strictObject({ basePermille: permille, numbersWeight: permille, qualityWeight: permille, maxPermille: permille, moraleLoss: permille, missingPermille: permille }).describe('The flank break (P7).'),
+      morale: z.strictObject({ start: permille, lossWeight: nonNegative, nerveWeight: permille, experienceWeight: permille, routAt: permille, routFloor: permille, recoveryDays: nonNegative }).describe('Morale and the rout (P5, P8).'),
+      experience: z.strictObject({ start: permille, gainPerDay: permille }),
+      equipment: z.strictObject({ start: permille, routLoss: permille }),
+      decisions: z
+        .strictObject({ probeShare: nonNegative, allOutBoldness: permille, holdShare: nonNegative, breakoutShare: nonNegative, followBoldness: permille, pressBoldness: permille })
+        .describe('The commanders’ rules (P6), read against his own demand ratio: shares are permille of it.'),
+      maxBattleDays: positive.describe('A battle closes after this many days (P1).'),
+      fieldControlPermille: permille.describe('Control the side left holding the field gains, permille (P9).'),
+      straggleReturnPermille: permille.describe('Stragglers who rejoin a day, permille of the pool (P8).'),
+      leaders: z.strictObject({ killedPermille: permille, woundedPermille: permille, capturedPermille: permille }).describe('A commander’s draw per battle-day on his own stream: killed, wounded, captured (only if his side routs).'),
+      phases: z
+        .strictObject({
+          hours: z.array(z.strictObject({ phase: z.enum(phase0.DAY_PHASES), fromHour: nonNegative, toHour: nonNegative })),
+          lossShares: z.strictObject(Object.fromEntries(phase0.BATTLE_TYPES.map((t) => [t, z.array(permille)])) as Record<phase0.BattleType, z.ZodArray<typeof permille>>),
+        })
+        .describe('The day shape (P10): each phase’s hours, and each battle type’s share of the day’s losses per phase.'),
+    })
+    .describe('The battle model (lane 1.3; the combat note): design parameters the pack states (0072), not sourced facts; the starting values sit inside Livermore’s and Fox’s bands.'),
   movement: z
     .strictObject({
       marchMinCapacityPermille: positive.describe('The least capacity an edge needs this month to carry a march, permille of one unit of the capacity scale; at most capacityMax x 1000. A design parameter.'),

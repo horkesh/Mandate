@@ -182,7 +182,7 @@ export function startLeg(ground: MarchGround, state: State, blocks: readonly For
   return { ...state, forceLocations: next };
 }
 
-/** A side's blocks falling back from a region, as the contest proposes it (`combat/contest.ts`). */
+/** A side's blocks falling back from a region, as a battle proposes it (`combat/battle.ts`). */
 export interface RetreatMove {
   readonly to: RegionId | null;
   readonly blocks: readonly ForceBlockId[];
@@ -191,7 +191,7 @@ export interface RetreatMove {
 /**
  * Apply retreats: each listed block stands in its retreat region from today,
  * off any leg. A retreat with nowhere to go moves no one. Ships and troops
- * aboard are never listed by the contest; any listed are refused.
+ * aboard are never listed by a battle; any listed are refused.
  */
 export function applyRetreats(state: State, retreats: readonly RetreatMove[], day: number): State {
   const moving = retreats.filter((r) => r.to !== null);

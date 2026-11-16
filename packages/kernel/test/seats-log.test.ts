@@ -341,6 +341,7 @@ describe('ownership of the new State (0044)', () => {
     const roots = OWNED_FIELDS.flatMap((f) => f.code.filter((c) => c.record === 'State').map((c) => `${c.key}:${f.writer}`)).sort();
     expect(roots).toEqual([
       'audienceHeld:audience',
+      'battleRecords:combat',
       'closedGovernments:command',
       'departmentFactions:command',
       'forceAssignments:command',

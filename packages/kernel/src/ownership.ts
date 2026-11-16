@@ -97,19 +97,22 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('division location', 'movement', ['operations'], [at('State', 'forceLocations')]),
   // Lane 0.5: one record per block or detachment carries strength, stores and
   // non-combatants (`forces/forces.ts`), so the three `forces` rows below share it.
+  // Lane 1.3: morale, experience, equipment, stragglers, and the days a block routed or surrendered join the same record.
   field('division strength, morale, experience, equipment', 'forces', ['combat', 'attrition', 'economy', 'recruitment'], [at('State', 'forceBlockStates')]),
   field("a force block's stores on hand", 'forces', ['supply (daily)', 'operations (a sea delivery)']),
   field('detachments below the force block (garrisons, landings)', 'forces', ['command', 'operations']),
+  // Lane 1.3: on the block's own record (`fbStragglers`, beside `forceBlockStates` above).
   field('stragglers: men absent from a force block who rejoin over days', 'forces', ['combat', 'attrition']),
-  field('battle records', 'combat', []),
+  // Lane 1.3: each battle with its days and breakdowns (`combat/records.ts`); written only by `combat`.
+  field('battle records', 'combat', [], [at('State', 'battleRecords')]),
   // Close-out (0072): copied from the scenario start at setup (0050); nothing changes it in Phase 0.
   field('fortification and entrenchment', 'regions', ['operations', 'combat'], [at('State', 'regionFortification')]),
   // Lane 0.5: which post commands each block; transfers name a force (0033).
-  field('division-to-post assignment', 'command', ['transfers', "the army commander's assignments"], [at('State', 'forceAssignments')]),
+  field('division-to-post assignment', 'command', ['transfers', "the army commander's assignments", 'combat (a surrendered block is released, lane 1.3)'], [at('State', 'forceAssignments')]),
   // Lane 0.5: one record per post carries its holder, chain, department, temporary operation,
   // links, scheduled changes and standing orders (`command/command.ts`), so the `command`
   // rows for standing orders and a post's department below share it.
-  field('people in posts; temporary posts', 'command', ['appoint', 'relieve', 'promotion lists', "an operation's end"], [at('State', 'postStates')]),
+  field('people in posts; temporary posts', 'command', ['appoint', 'relieve', 'promotion lists', "an operation's end", 'combat (a commander killed, wounded or captured leaves his post vacant, lane 1.3)'], [at('State', 'postStates')]),
   field('standing agreements and prior orders on a post', 'command', ['verbs', 'situations', "orders from the holder's own department"]),
   // Lane 1.1: people as State. True stats and temperament are drawn at setup by history's shadow; the rest start from the World.
   field("a person's stats, traits, standing, grievances, regard", 'people', ['combat results', 'the press', 'verbs', 'ladder', 'a bypassed relay'], [
@@ -241,6 +244,12 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'ObserverPosting',
   'OrderResponse',
   'ResponseTerm',
+  // Lane 1.3: battle records (each replaced whole by `combat`)
+  'BattleRecord',
+  'BattleDay',
+  'BattleSide',
+  'BattleTerm',
+  'BlockLoss',
 ];
 
 /** State's own root fields that are set once at setup and never written after (the game's seed, the calendar's day 0). */

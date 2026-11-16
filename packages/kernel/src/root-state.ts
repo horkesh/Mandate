@@ -40,6 +40,7 @@ import type { ObserverPosting } from './command/observers.ts';
 import type { PersonRank } from './people/ranks.ts';
 import type { OrderResponse } from './proxy/responses.ts';
 import type { FortificationTable } from './regions/regions.ts';
+import type { BattleTable } from './combat/records.ts';
 
 export interface State {
   /** The game's seed, set at setup; every named stream derives from it. Immutable. */
@@ -137,4 +138,6 @@ export interface State {
   readonly audienceHeld: Readonly<Record<PersonId, AudienceRecord>>;
   /** Observers posted at commanders' headquarters, keyed by the observer (0040). Writer: `command`. */
   readonly observerPostings: Readonly<Record<PersonId, ObserverPosting>>;
+  /** Every battle fought, open or closed, with each day's breakdowns (lane 1.3; `combat/records.ts`). Writer: `combat`. */
+  readonly battleRecords: BattleTable;
 }
