@@ -32,6 +32,8 @@ function shadowWorld(people = ['ann', 'bob', 'cy'], rules: Partial<PeopleRules['
   return { ...base, rules: { ...base.rules, people: { ...base.rules.people, shadow } } };
 }
 const PEOPLE_RULES = FIXTURE_PEOPLE_RULES;
+/** The rank vocabulary the rank change is checked against (FOUNDATION 11.3, lane 1.5). */
+const RANKS = [{ id: 'bvt_general', kind: 'brevet' }];
 const START = forcesStart({ a1: { a: 1000 }, a2: { a: 1000 } }, [], []);
 
 describe("history's shadow: true stats drawn at setup from cited centres (FOUNDATION section 6; 0005, 0026)", () => {
@@ -115,6 +117,7 @@ describe('people State: setup and the one writer (FOUNDATION section 10)', () =>
       ],
       4,
       PEOPLE_RULES,
+      RANKS,
     );
     expect(next.personStanding[PR('a_gen')]).toBe(1000);
     // Regard for his principal returned to none and was removed; regard for a rival clamped at -1000.
@@ -125,8 +128,8 @@ describe('people State: setup and the one writer (FOUNDATION section 10)', () =>
     expect(next.personRanks[PR('a_gen')]).toEqual({ brevet: { rankTerm: 'bvt_general', rankSince: '1900-07-04' } });
     // Copy-on-write: the State it was given is unchanged, and no change returns the same State.
     expect(state.personStanding[PR('a_gen')]).toBe(500);
-    expect(applyPeopleChanges(state, [], 4, PEOPLE_RULES)).toBe(state);
-    expect(() => applyPeopleChanges(state, [{ change: 'standing', person: PR('ghost'), delta: 1 }], 4, PEOPLE_RULES)).toThrow('unknown person id "ghost"');
+    expect(applyPeopleChanges(state, [], 4, PEOPLE_RULES, [])).toBe(state);
+    expect(() => applyPeopleChanges(state, [{ change: 'standing', person: PR('ghost'), delta: 1 }], 4, PEOPLE_RULES, [])).toThrow('unknown person id "ghost"');
   });
 
   it('falls back to the pack’s stated regard for the unknown, never a silent 0, and keeps only what differs from it', () => {
@@ -139,9 +142,9 @@ describe('people State: setup and the one writer (FOUNDATION section 10)', () =>
     expect(state.personRegard[PR('a_gen')]).toBeUndefined();
     expect(traitsOf(seats, state, PR('a_gen')).regard).toBe(-100);
     // Between people: a_gen and a_bold have no recorded regard, so a change starts from -100; back at -100 it is removed.
-    const warmed = applyPeopleChanges(state, [{ change: 'regard', person: PR('a_gen'), toward: PR('a_bold'), delta: 300 }], 2, cool);
+    const warmed = applyPeopleChanges(state, [{ change: 'regard', person: PR('a_gen'), toward: PR('a_bold'), delta: 300 }], 2, cool, []);
     expect(warmed.personRegard[PR('a_gen')]).toEqual({ a_bold: 200 });
-    expect(applyPeopleChanges(warmed, [{ change: 'regard', person: PR('a_gen'), toward: PR('a_bold'), delta: -300 }], 3, cool).personRegard[PR('a_gen')]).toBeUndefined();
+    expect(applyPeopleChanges(warmed, [{ change: 'regard', person: PR('a_gen'), toward: PR('a_bold'), delta: -300 }], 3, cool, []).personRegard[PR('a_gen')]).toBeUndefined();
   });
 
   it('in unknown men, regard for the principal is the pack’s regard for the unknown, whatever the World cites', () => {
@@ -161,8 +164,8 @@ describe('people State: setup and the one writer (FOUNDATION section 10)', () =>
 
   it('refuses a grievance held against a person the State does not hold (FOUNDATION section 11.3)', () => {
     const state = createState(indexedFixture(), { seed: 1 });
-    expect(() => applyPeopleChanges(state, [{ change: 'grievance', person: PR('a_gen'), kind: 'overruled', weight: 100, against: PR('ghost'), cause: null }], 2, PEOPLE_RULES)).toThrow('unknown person id "ghost"');
-    expect(applyPeopleChanges(state, [{ change: 'grievance', person: PR('a_gen'), kind: 'overruled', weight: 100, against: null, cause: null }], 2, PEOPLE_RULES).personGrievances[PR('a_gen')]).toHaveLength(1);
+    expect(() => applyPeopleChanges(state, [{ change: 'grievance', person: PR('a_gen'), kind: 'overruled', weight: 100, against: PR('ghost'), cause: null }], 2, PEOPLE_RULES, [])).toThrow('unknown person id "ghost"');
+    expect(applyPeopleChanges(state, [{ change: 'grievance', person: PR('a_gen'), kind: 'overruled', weight: 100, against: null, cause: null }], 2, PEOPLE_RULES, []).personGrievances[PR('a_gen')]).toHaveLength(1);
   });
 
   it('a filter holder holds for his values, but cuts claims only if he is not candid', () => {

@@ -150,6 +150,7 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
     msgVia: [],
     msgPending: hops.slice(1),
     msgOrder: { ...body, orderIssuer: issuer.id, orderTarget: cmd.to, orderBypass: cmd.bypass, orderIssuedDay: ctx.day },
+    msgVerb: null,
     msgReport: null,
     msgTruth: null,
   });

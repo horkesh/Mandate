@@ -32,7 +32,11 @@ import type { TransitMessage } from './messages/transit.ts';
 import type { StandingGoal } from './plans/goal.ts';
 import type { PlanRecord } from './plans/plans.ts';
 import type { SeatAssignment } from './seats/seats.ts';
-import type { PersonGrievance, PersonStatus, PersonTrue, Stance } from './people/people.ts';
+import type { PersonGrievance, PersonPromise, PersonStatus, PersonTrue, Stance } from './people/people.ts';
+import type { AttentionState } from './seats/attention.ts';
+import type { LadderRung } from './people/verb-rules.ts';
+import type { AudienceRecord } from './audience/audience.ts';
+import type { ObserverPosting } from './command/observers.ts';
 import type { PersonRank } from './people/ranks.ts';
 import type { OrderResponse } from './proxy/responses.ts';
 import type { ArrivalTable, FortificationTable, LoyaltyTable } from './regions/regions.ts';
@@ -128,6 +132,22 @@ export interface State {
   readonly personStatus: Readonly<Record<PersonId, PersonStatus>>;
   /** Each man's response to each order that reached him, keyed `order|person` (`proxy/responses.ts`). Writer: `proxy`. */
   readonly orderResponses: Readonly<Record<string, OrderResponse>>;
+  /** Promises the principal made to each person (lane 1.5): kind, day made, day due. Writer: `people`. */
+  readonly personPromises: Readonly<Record<PersonId, readonly PersonPromise[]>>;
+  /** The days each person was inquired of in the last week (his patience, 0040). Writer: `people`. */
+  readonly personInquiries: Readonly<Record<PersonId, readonly number[]>>;
+  /** Each principal seat's attention: what is left this week and the day of its last refill (0025, 0040). Writer: `seats`. */
+  readonly seatAttention: Readonly<Record<SeatId, AttentionState>>;
+  /** Each seat's initiatives, each with the day it last fired, for its cooldown (0040). Writer: `seats`. */
+  readonly seatInitiatives: Readonly<Record<SeatId, Readonly<Record<string, number>>>>;
+  /** Each person's rung on the insubordination ladder; absent is loyal (P5). Writer: `ladder`. */
+  readonly personRungs: Readonly<Record<PersonId, LadderRung>>;
+  /** Rivals (P6), each with the day he became one. Writer: `ladder`. */
+  readonly personRivals: Readonly<Record<PersonId, number>>;
+  /** The last audience held with each person (P3). Writer: `audience`. */
+  readonly audienceHeld: Readonly<Record<PersonId, AudienceRecord>>;
+  /** Observers posted at commanders' headquarters, keyed by the observer (0040). Writer: `command`. */
+  readonly observerPostings: Readonly<Record<PersonId, ObserverPosting>>;
   /** Every battle fought, open or closed, with each day's breakdowns (lane 1.3; `combat/records.ts`). Writer: `combat`. */
   readonly battleRecords: BattleTable;
 }

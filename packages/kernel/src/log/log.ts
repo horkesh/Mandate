@@ -12,7 +12,8 @@ import { strictCompare } from '../compare.ts';
 import { isWellFormedId, type SeatId } from '../ids.ts';
 import { ROUTE_KINDS } from '../messages/latency.ts';
 import { EDIT_KINDS, POSTURES } from '../plans/goal.ts';
-import { COMMAND_KINDS, REVIEW_ACTIONS, type Command } from './commands.ts';
+import { COUNTER_KINDS } from '../audience/counters.ts';
+import { COMMAND_KINDS, RELIEF_MODES, REVIEW_ACTIONS, type Command } from './commands.ts';
 
 export interface LogEntry {
   /** The day the command applies to. */
@@ -58,6 +59,17 @@ export function entryProblems(raw: unknown, i: number): string[] {
     choose: ['cmd', 'option', 'request'],
     decide: ['cmd', 'options', 'situation'],
     delegate: ['cmd', 'situation', 'to'],
+    // Lane 1.5: the people verbs.
+    appoint: ['cmd', 'person', 'post', 'rank', 'route'],
+    relieve: ['cmd', 'mode', 'post', 'route', 'to'],
+    transfer: ['amount', 'cmd', 'force', 'from', 'route', 'to'],
+    inquire: ['cmd', 'route', 'subject', 'to'],
+    consult: ['cmd', 'posts', 'situation'],
+    audience: ['cmd', 'counters', 'to'],
+    observer: ['cmd', 'person', 'route', 'to'],
+    promise: ['cmd', 'person'],
+    pressure: ['cmd', 'person'],
+    address: ['bloc', 'cmd'],
   };
   const fields = FIELDS[c.cmd as string]!;
   const keys = Object.keys(c).sort(strictCompare);
@@ -90,6 +102,8 @@ export function entryProblems(raw: unknown, i: number): string[] {
   } else if (c.cmd === 'delegate') {
     if (!id(c.situation)) problems.push(`${at}: delegate.situation must be a situation id`);
     if (!id(c.to)) problems.push(`${at}: delegate.to must be a post id`);
+  } else if (c.cmd !== 'choose') {
+    problems.push(...verbProblems(c).map((p) => `${at}: ${String(c.cmd)}.${p}`));
   } else {
     if (typeof c.request !== 'string' || c.request.length === 0) problems.push(`${at}: choose.request must be a request key`);
     if (typeof c.option !== 'string' || c.option.length === 0) problems.push(`${at}: choose.option must be an option id`);
@@ -98,6 +112,78 @@ export function entryProblems(raw: unknown, i: number): string[] {
 }
 
 const ID = (v: unknown) => typeof v === 'string' && isWellFormedId(v);
+
+/** Problems with a people verb's values (lane 1.5); its field names are already checked. */
+function verbProblems(c: Partial<Record<string, unknown>>): string[] {
+  const problems: string[] = [];
+  const route = () => {
+    if (!(ROUTE_KINDS as readonly unknown[]).includes(c.route)) problems.push(`route must be one of ${ROUTE_KINDS.join(', ')}`);
+  };
+  const need = (k: string, what: string) => {
+    if (!ID(c[k])) problems.push(`${k} must be ${what}`);
+  };
+  const maybe = (k: string, what: string) => {
+    if (c[k] !== null && !ID(c[k])) problems.push(`${k} must be ${what} or null`);
+  };
+  switch (c.cmd) {
+    case 'appoint':
+      need('post', 'a post id');
+      need('person', 'a person id');
+      maybe('rank', 'a rank id');
+      route();
+      break;
+    case 'relieve':
+      need('post', 'a post id');
+      if (!(RELIEF_MODES as readonly unknown[]).includes(c.mode)) problems.push(`mode must be one of ${RELIEF_MODES.join(', ')}`);
+      if ((c.mode === 'quiet_department') !== (c.to !== null)) problems.push('to names the quiet post for quiet_department, and only for it');
+      maybe('to', 'a post id');
+      route();
+      break;
+    case 'transfer':
+      need('from', 'a post id');
+      need('to', 'a post id');
+      if (c.force !== 'blocks' && c.force !== 'men') problems.push('force must be blocks or men');
+      if (typeof c.amount !== 'number' || !Number.isSafeInteger(c.amount) || c.amount < 1) problems.push('amount must be a whole number, at least 1');
+      route();
+      break;
+    case 'inquire':
+      need('to', 'a post id');
+      maybe('subject', 'a region id');
+      route();
+      break;
+    case 'consult':
+      need('situation', 'a situation id');
+      if (!Array.isArray(c.posts) || c.posts.length === 0 || !c.posts.every(ID) || new Set(c.posts).size !== c.posts.length) problems.push('posts must be distinct post ids, at least one');
+      break;
+    case 'audience':
+      need('to', 'a post id');
+      if (!Array.isArray(c.counters) || !c.counters.every(counterShaped)) problems.push(`counters must be counters, each with exactly kind, value, boldness, from and men (kind one of ${COUNTER_KINDS.join(', ')})`);
+      break;
+    case 'observer':
+      need('person', 'a person id');
+      need('to', 'a post id');
+      route();
+      break;
+    case 'promise':
+    case 'pressure':
+      need('person', 'a person id');
+      break;
+    case 'address':
+      need('bloc', 'a bloc id');
+      break;
+  }
+  return problems;
+}
+
+function counterShaped(raw: unknown): boolean {
+  const k = raw as Partial<Record<string, unknown>> | null;
+  if (typeof k !== 'object' || k === null || Array.isArray(k)) return false;
+  if (Object.keys(k).sort(strictCompare).join() !== 'boldness,from,kind,men,value') return false;
+  if (!(COUNTER_KINDS as readonly unknown[]).includes(k.kind)) return false;
+  const nullOr = (v: unknown, ok: (x: unknown) => boolean) => v === null || ok(v);
+  const int = (x: unknown) => typeof x === 'number' && Number.isSafeInteger(x);
+  return nullOr(k.value, ID) && nullOr(k.boldness, int) && nullOr(k.from, ID) && nullOr(k.men, int);
+}
 
 /** Problems with a goal's shape as a command carries it: exactly its fields, each of its type and vocabulary. */
 export function goalTermsProblems(raw: unknown): string[] {

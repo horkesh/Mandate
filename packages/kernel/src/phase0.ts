@@ -69,6 +69,15 @@ export * from './people/ranks.ts';
 export * from './people/people.ts';
 export * from './people/rules.ts';
 export * from './people/traits.ts';
+// Lane 1.5: the people verbs, attention, the ladder, the audience, observers, the weekly people step.
+export * from './people/verb-rules.ts';
+export * from './seats/attention.ts';
+export * from './ladder/ladder.ts';
+export * from './audience/audience.ts';
+export * from './command/observers.ts';
+export * from './tick/verbs.ts';
+export * from './tick/people-week.ts';
+export * from './tick/attention.ts';
 export * from './reading/orders.ts';
 export * from './proxy/responses.ts';
 // Lane 1.7: men and regions: enlistments, levies, recruitment's phase and rules, loyalty, the derived self-emancipation term.
