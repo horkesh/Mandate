@@ -355,7 +355,7 @@ export const RulesSchema = z.strictObject({
         .describe('The reason type each cause carries, one of the gate register’s agency types (SENSITIVE-HISTORY E3): cause 1 in the enslaving side’s own regions, and elsewhere (a neutral government’s, or the lines’ side’s own); cause 2.'),
       protectedFlags: z
         .array(z.strictObject({ flag: termId, regions: z.array(idOf('region')) }))
-        .describe('Where the lines’ side’s known policy protects people who reach its lines (G-1.7a): while a flag is set, the term skips its regions. Holding a region protects no one by itself.'),
+        .describe('Where slavery has ended, in law or in fact (G-1.7b; the District of Columbia act of April 1862 is the model): while a flag is set, the term skips its regions. A policy protecting people who reach the lines is a policy flag, which never skips a region; holding a region protects no one by itself.'),
       cadenceDays: positive.describe('The term is recomputed every this many days.'),
       resistancePerMillion: int.min(0).max(1000000).describe('Cause 1, resistance and flight within, keyed to no one’s reach: per million of the census per cadence.'),
       pressureFlags: z.array(z.strictObject({ flag: termId, permille: nonNegative, agency: z.string().regex(/^agency:[a-z0-9-]+$/) })).describe('Situation flags whose pressure (impressment, say) raises both causes, permille of each, each with its own agency type (N9).'),

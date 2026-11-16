@@ -10,8 +10,10 @@
  *    and by its known policy (the pack's base and situation flags, a policy of return lowering it).
  *
  * Holding a region protects no one by itself (the lead's ruling on G-1.7a): where slavery stayed lawful under the lines'
- * side and fugitives were returned, its people are still counted, and none is called free. The term skips a region only
- * where a pack flag says the lines' side's known policy protects people who reach its lines there.
+ * side and fugitives were returned, its people are still counted, and none is called free. A policy that protects people
+ * who reach the lines is a policy flag: it raises flight to the lines and never skips a region. The term skips a region
+ * only where a pack flag says slavery has ended there, in law or in fact (G-1.7b; the District of Columbia act of April
+ * 1862 is the model).
  *
  * It reads the census of enslaved people as protected World input and never writes it. Only cause 2 reaches the lines:
  * its arrivals are proposed to `regions`, which alone writes them (`region_reached_union_lines`). Every number carries
@@ -79,13 +81,13 @@ export function selfEmancipationDue(rules: SelfEmancipationRules, day: number): 
   return rules.linesFaction !== null && day >= 1 && (day - 1) % rules.cadenceDays === 0;
 }
 
-/** The census regions a set protection flag covers (G-1.7a): there the lines' side's known policy protects people who reach its lines. */
+/** The census regions a set flag covers where slavery has ended, in law or in fact (G-1.7b): no one there is enslaved, so the term skips them. */
 export function protectedRegions(state: State, rules: SelfEmancipationRules): ReadonlySet<RegionId> {
   return new Set(rules.protectedFlags.filter((p) => state.situationFlags[p.flag] !== undefined).flatMap((p) => p.regions));
 }
 
 /**
- * The term for every census region, in region order, but those a set protection flag covers. A region with no census
+ * The term for every census region, in region order, but those where a set flag says slavery has ended. A region with no census
  * has no term.
  */
 export function selfEmancipationTerms(map: WorldIndex, state: State, rules: SelfEmancipationRules): SelfEmancipationTerm[] {

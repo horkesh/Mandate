@@ -183,7 +183,7 @@
 {"capacityPermille":800,"defaultMonths":[4,5],"lengthPermille":1200,"reason":"flood"},
 {"capacityPermille":300,"defaultMonths":[1,2],"lengthPermille":2000,"reason":"ice"}
 ],
-"selfEmancipation": {"agencyReasons":{"flightToLines":"agency:fen-flight","resistanceElsewhere":"agency:fen-flight","resistanceWithin":"agency:fen-flight"},"cadenceDays":7,"flightPerMillion":1000,"holdShare":600,"linesFaction":"north","policyBase":500,"policyFlags":[{"flag":"sanctuary_act","permille":400}],"pressureFlags":[],"protectedFlags":[{"flag":"sanctuary_act","regions":["n_west_front","n_east_front"]}],"reachLinesOnly":400,"reachWithForce":1000,"resistancePerMillion":200},
+"selfEmancipation": {"agencyReasons":{"flightToLines":"agency:fen-flight","resistanceElsewhere":"agency:fen-flight","resistanceWithin":"agency:fen-flight"},"cadenceDays":7,"flightPerMillion":1000,"holdShare":600,"linesFaction":"north","policyBase":500,"policyFlags":[{"flag":"sanctuary_act","permille":400}],"pressureFlags":[],"protectedFlags":[{"flag":"fen_bondage_ended","regions":["n_west_front","n_east_front"]}],"reachLinesOnly":400,"reachWithForce":1000,"resistancePerMillion":200},
 "standing": {"conflictWindowDays":7},
 "stores": {"capDays":30,"lowDays":7,"menPerCapacityUnit":20000},
 "supplyControlPermille": 250

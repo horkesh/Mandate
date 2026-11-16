@@ -58,9 +58,10 @@ export interface SelfEmancipationRules {
    */
   readonly agencyReasons: { readonly resistanceWithin: string; readonly resistanceElsewhere: string; readonly flightToLines: string };
   /**
-   * Where the lines' side's known policy protects people who reach its lines (the lead's ruling on G-1.7a): while a flag is
-   * set, the term skips its regions. Holding a region protects no one by itself: elsewhere the term runs, and known policy,
-   * a policy of return included, scales it. Flags are set by the pack's decisions (R7, S17).
+   * Where slavery has ended, in law or in fact (G-1.7b; the District of Columbia act of April 1862 is the model): while a
+   * flag is set, the term skips its regions, for no one there is enslaved. Nothing else skips a region (G-1.7a): holding it
+   * protects no one by itself, and a policy that protects people who reach the lines is a policy flag (`policyFlags`),
+   * which raises flight to the lines and never skips a region. Flags are set by the pack's decisions.
    */
   readonly protectedFlags: readonly { readonly flag: string; readonly regions: readonly RegionId[] }[];
   /** The term is recomputed every this many days. */

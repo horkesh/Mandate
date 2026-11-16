@@ -98,6 +98,9 @@ describe('one recruitment proposal makes each block, applied in one phase; enlis
     const block = ids.toId('forceBlock', `raised.${NORTH_GOVERNOR}.d${levy.levyMusterDay}`);
     // Each owner wrote its own field: forces the block and its enlistment, movement its place, command its post.
     expect(s.forceBlockStates[block]).toMatchObject({ fbKind: 'block', fbDepartment: 'n_province', fbArm: world.map.world.rules.recruitment.arm, fbStrength: levy.levyMen });
+    // In the pack's starting condition (lane 1.3), with no stragglers, never routed or surrendered.
+    const combat = world.map.world.rules.combat;
+    expect(s.forceBlockStates[block]).toMatchObject({ fbMorale: combat.morale.start, fbExperience: combat.experience.start, fbEquipment: combat.equipment.start, fbStragglers: 0, fbRoutedDay: null, fbSurrenderedDay: null });
     expect(s.forceEnlistments[block]).toEqual({ enlPost: NORTH_GOVERNOR, enlRaisedBy: P('n_governor'), enlCall: levy.levyCall, enlRegiments: levy.levyRegiments, enlMusterDay: levy.levyMusterDay, enlEndsDay: levy.levyMusterDay + 90 });
     expect(s.forceLocations[block]).toMatchObject({ locRegion: R('n_heartland'), locAboard: null, locSinceDay: levy.levyMusterDay });
     expect(s.forceAssignments[block]).toBe(NORTH_GOVERNOR);
@@ -269,7 +272,18 @@ describe('the standing review of lane 1.7: refusals, a blocked muster, a battle 
     expect(pressed.within).toBeGreaterThan(unpressed.within);
   });
 
-  it('runs the term where the lines’ side holds the region, skips it only where a protection flag covers it, and a policy of return lowers it (G-1.7a)', () => {
+  it('counts as the lines’ force only blocks with men present that have not surrendered (lane 1.3 keeps surrendered blocks)', () => {
+    const { world, state } = start();
+    const rules = world.map.world.rules.selfEmancipation;
+    const valley = (s: phase0.State) => phase0.selfEmancipationTerms(world.map, s, rules).find((t) => t.region === R('w_valley'))!.reasons[1];
+    expect(valley(state)).toMatchObject({ reach: 'lines-with-force', reachPermille: rules.reachWithForce });
+    const north = (Object.keys(state.forceBlockStates) as ids.ForceBlockId[]).filter((b) => state.departmentFactions[state.forceBlockStates[b]!.fbDepartment] === 'north');
+    const each = (change: Partial<phase0.ForceBlockState>) => ({ ...state, forceBlockStates: { ...state.forceBlockStates, ...Object.fromEntries(north.map((b) => [b, { ...state.forceBlockStates[b]!, ...change }])) } });
+    expect(valley(each({ fbSurrenderedDay: 1 }))).toMatchObject({ reach: 'lines', reachPermille: rules.reachLinesOnly });
+    expect(valley(each({ fbStrength: 0 }))).toMatchObject({ reach: 'lines', reachPermille: rules.reachLinesOnly });
+  });
+
+  it('runs the term where the lines’ side holds the region, skips it only where slavery has ended there, and a policy of return lowers it (G-1.7a, G-1.7b)', () => {
     const { world, state } = start();
     const rules = world.map.world.rules.selfEmancipation;
     // The North holds its western front, and its census is still counted: holding a region protects no one by itself.
@@ -278,9 +292,12 @@ describe('the standing review of lane 1.7: refusals, a blocked muster, a battle 
     expect(held).toMatchObject({ destination: R('n_west_front') });
     expect(held.toLines).toBeGreaterThan(0);
     expect(held.reasons[1]).toMatchObject({ cause: 'flight-to-lines', reach: 'lines-here' });
-    // Where the pack's protection flag is set, its regions are skipped; elsewhere the term runs on.
-    const sanctuary = { ...state, situationFlags: { ...state.situationFlags, sanctuary_act: 1 } };
-    const covered = phase0.selfEmancipationTerms(world.map, sanctuary, rules);
+    // A policy protecting people who reach the lines (the sanctuary act) raises the flight and skips no region (G-1.7b).
+    const sanctuary = phase0.selfEmancipationTerms(world.map, { ...state, situationFlags: { ...state.situationFlags, sanctuary_act: 1 } }, rules).find((t) => t.region === R('n_west_front'))!;
+    expect(sanctuary.toLines).toBeGreaterThan(held.toLines);
+    // Where the pack's flag says slavery has ended there, its regions are skipped; elsewhere the term runs on.
+    const ended = { ...state, situationFlags: { ...state.situationFlags, fen_bondage_ended: 1 } };
+    const covered = phase0.selfEmancipationTerms(world.map, ended, rules);
     expect(covered.map((t) => t.region)).not.toContain(R('n_west_front'));
     expect(covered.map((t) => t.region)).toContain(R('w_valley'));
     // A policy of return lowers the flight where it is known.
