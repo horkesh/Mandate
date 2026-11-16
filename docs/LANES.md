@@ -44,7 +44,7 @@ Every lane gets a written brief containing:
 Lesson L17. The app shows the lead only the first 400 characters of a lane's report.
 - **Read every report in full** (`list_events`) before acting on it, and read any notes file it points to.
 - **A lane's `SendMessage` to the lead can be paused by the app** after many sends with no message from the owner, and the steward hit this twice on 2026-11-14. Its wrap-up reply is then the only report, so the sweep reads each idle lane's last turn even when no note arrived.
-- **An idle lane whose last event is a tool call, not a report, was interrupted** (a crash or restart; the standing reviewer was cut off this way on 2026-11-15). It doesn't resume by itself, so message it to pick up where it stopped and to check its worktree for half-done work.
+- **An idle lane whose last event is a tool call, not a report, was interrupted** (a crash or restart; the standing reviewer was cut off this way on 2026-11-15). It doesn't resume by itself, so message it to pick up where it stopped and to check its worktree for half-done work. One look-alike: a lane waiting on its own background agents is also idle with a tool call last (lane 1.9, 2026-11-16), so the message asks rather than assumes.
 - **Route every item in the same turn:** act on it, message the lane that has the context, decide and record it, or send it to the steward for `docs/OPEN_QUESTIONS.md`. Nothing waits in private notes.
 - **Never archive a lane before its items are routed** and its close-out question is answered.
 - **The steward checks** at every lane close that each item in the lane's final report has a home (a commit, an `OPEN_QUESTIONS.md` entry or a reply from the lead), and reports any gap.
