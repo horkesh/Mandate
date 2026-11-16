@@ -87,3 +87,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0081](0081-detachments-as-built.md) | Detachments in play, as built | accepted; amended by 0083 |
 | [0082](0082-the-value-map-in-play.md) | The map from orders to values, in play | accepted |
 | [0083](0083-no-rejoin-on-the-day-made.md) | A detachment can't rejoin on the day it was made | accepted |
+| [0084](0084-politics-first-cut-as-built.md) | Politics, first cut, as built | accepted |

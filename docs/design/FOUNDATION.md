@@ -147,6 +147,7 @@ The plan appears as arrows. The player can:
 - **Elections.** The 1862 midterms and the 1864 presidential election are checkpoints. Losing 1864 ends the game with a verdict: the electorate has rejected the war. The game makes no claim about what the winner would have done, and the months before the March 1865 inauguration are not played (0026).
 - **Generals as political actors.** Standing breeds rivals (P6). A popular general, or a sacked martyr, can court the opposition, leak, appeal to Congress, and be drawn as the opposition's 1864 candidate (0026).
 - **The press.** A weekly front page shows what the public believes. Generals leak to friendly papers (the history lane found McClellan's friends did; whether he did himself is unsourced); the player can leak too. Belief drives the blocs.
+  - **As built in 1A (0084):** each paper's editor writes a front page by mail to his side's principal and its serving post holders. A battle reads as won, lost or drawn by who left the field, and a surrender is a loss. Its figures come only from the casualty returns the principal holds, never from the battle record. The page moves the side's blocs and the commander's standing, at the paper's reach. Slant, leaks and the enemy reading the papers are 1B's.
 - **Economy.** Four resources: money, men, munitions, rail capacity. Each lever has a holder who can stall: the treasury raises money, governors raise regiments, the War Department turns munitions into equipped divisions. The player sets priorities and picks people.
 - **Situations.** Historical pressures arrive when their causes are present, not on dates (P15). Each situation is pack data: a cause predicate, options, consequences, an `inaction` outcome, a **historical default** and a **staff recommendation**. A test enforces all three (0023, 0040).
   - **Live situations** (0040). A situation can stay open while its clock runs: its cause is re-evaluated daily, options can **expire** (`expiresWhen` per option) or **appear**, and it ends a turn only when an option expires or appears or a pack-set clock threshold is crossed (`resurfaceOn` per situation). The player can wait and gather information meanwhile.
@@ -254,7 +255,7 @@ Module map, adapted from the AWWV-architecture note:
 | stragglers: men absent from a force block who rejoin over days | `forces` | combat, attrition (0041) |
 | battle records | `combat` | (0041) |
 | situation chain and wait state | `situations` | (0046) |
-| the Congress accountability ledger: acts taken while Congress was away | `politics` | (0046) |
+| the Congress accountability ledger (`congressLedger`): acts taken while Congress was away, each met when a chamber of its side sits and answered later | `politics` | situations' `ledger-act` and `ledger-answer` effects (0046, 0084) |
 | people who have reached Union lines (`regionReachedUnionLines`) | `regions` | the derived self-emancipation term only (0046, 0074); never a lever |
 | fortification and entrenchment | `regions` | operations (works dug by an axis holding its objective), combat (works lost when stormed) (0029, 0041, 0080) |
 | a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments, combat releasing a surrendered block, recruitment (a raised block assigned to its governor's post; a disbanded one removed), detachments (a new detachment assigned to its parent's post) (0033, 0064, 0073, 0076, 0081) |
@@ -274,9 +275,9 @@ Module map, adapted from the AWWV-architecture note:
 | messages in transit | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules |
 | economy stocks | `economy` | weekly step, verbs |
 | situations fired, live (open options, clocks) and decided | `situations` | cause evaluation, decisions, delegated seats' choices |
-| blocs, mandate, election results | `politics` | weekly step, battles, the press, checkpoints |
-| each chamber of Congress's state (sitting, adjourned, special session called) | `politics` | situations, the weekly step |
-| the framing term (who the public believes began the war) | `politics` | the war's opening situations, the press |
+| bloc support (`blocSupport`); the mandate and the principal's credibility are derived from it on read, never stored; election results are 1B's | `politics` | an address, the ladder's pull, the weekly drift, situations' `bloc-support` effects, the press at its reach (0084) |
+| each chamber of Congress's state (`chamberStates`: sitting, adjourned, special session called) | `politics` | the pack's session calendar (daily), situations' `session-call` effects (0084) |
+| the framing term (`warFraming`: who the public believes began the war) | `politics` | situations' `framing` effects only; the press prints it and never writes it (0084) |
 | seat assignments | `seats` | setup, the player's settings |
 
 The day tick, each phase declaring what it reads and writes:
@@ -292,7 +293,7 @@ The day tick, each phase declaring what it reads and writes:
 10. The invariant barrier.
 11. Decision-point detection.
 
-In the code the phases run as: commands (1), deliveries (2), recruitment's musters and disbandings (2d, 0078), operations, then movement (3, 0080), battles and occupation (3b; the control contest until 0076), control and the derived map (4), stores on hand and stragglers rejoining (4a), the self-emancipation term on its cadence (4a′, 0078), situations (4b), `command`'s proposals such as a government closing (4c), cyclic reports, pruning, the day, and the barrier (0057, 0064). A post's headquarters is derived from where its strongest block stands, never stored.
+In the code the phases run as: commands (1), deliveries (2), recruitment's musters and disbandings (2d, 0078), operations, then movement (3, 0080), battles and occupation (3b; the control contest until 0076), control and the derived map (4), stores on hand and stragglers rejoining (4a), the self-emancipation term on its cadence (4a′, 0078), situations (4b), `command`'s proposals such as a government closing (4c), the weekly people step (4d), politics (4e: addresses and effects, drift and the ladder's pull, the press, then the chambers and the ledger, 0084), cyclic reports, pruning, the day, and the barrier (0057, 0064). A post's headquarters is derived from where its strongest block stands, never stored.
 
 **What happens to today's kernel:**
 - **Survive as they are:** `permille`, `rng`, `compare`, `rules`, scenario validation.
