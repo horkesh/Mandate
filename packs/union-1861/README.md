@@ -51,7 +51,7 @@ The pack is uncalibrated. With the generic scripted leader, 75 turns end on day 
 
 ## Licence notes for map geometry (decision 0013, not yet used)
 
-- **Newberry Atlas of Historical County Boundaries:** the current download page permits reuse "for any lawful purpose, commercial or non-commercial", but the bundled files still carry CC BY-NC-SA 2.5. Confirm with the Newberry before any commercial release.
+- **Newberry Atlas of Historical County Boundaries:** CC0 1.0. The Newberry confirmed in writing on 16 November 2026 that commercial use and the redistribution of derived geometry are permitted, and that the CC BY-NC-SA 2.5 file in the download is superseded. Credit, appreciated but not required: "Atlas of Historical County Boundaries, The Newberry Library" (`docs/research/2026-11-14-map-extent-size-sources.md`, "Update, 2026-11-16").
 - **NHGIS:** no redistribution without permission. Do not bundle.
 
 ## Design parameters in `pack.json`'s rules (0064)
