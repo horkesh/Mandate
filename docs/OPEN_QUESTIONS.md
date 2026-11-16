@@ -240,6 +240,11 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.14:** McClellan's plan-versus-action gap. Drafting and execution already read his boldness separately; add a second term only if calibration shows the gap too narrow.
   - **1B:** freelancing (a seat initiative that sets a man's own goal); troops embarked and carried by sea; Navy-channel battle news (combat ignores ships); an axis standing off from an enemy its commander will not attack (the siege method).
   - **Lane 1.12:** rule seats must reappoint a post the battle model leaves vacant, using lane 1.5's appoint verb.
+- From lane 1.4b's report (`notes/lane-1.4b-detachments.md`, on `phase1-detachments` while in review), by lane:
+  - **1B (the planner):** no operation leaves a garrison, because the planner drafts no garrison step. Add one if the history run needs it.
+  - **Lane 1.4 or 1B, cleanup:** after a landing, the parent blocks stay aboard as 0-strength shells until a rejoin or a disbanding.
+  - **1B:** embarkation is not built, so a by-water axis needs its troops to start aboard (beside the sea-carriage item).
+  - **Lane 1.11:** S02's landing takes a new effect field, `landing` (parent, men, region), applied in phase 4c through `applyDetachmentProposals`, once lane 1.4b merges.
 - From the gate reviewer's lane 1.5 verdict (`review-gate-1861.md`, the end), by lane:
   - **Lane 1.5b, which must land before any `fugitive-policy` row:** G-1.5a to G-1.5e, the practice-clash term, and the lever sweep treating a delegated gated decision as the delegate's choice.
   - **Lane 1.6:** the validator refuses a bloc made up of a protected group, so `address` can never reach one.
