@@ -40,6 +40,8 @@ export interface StoresCrossing {
   readonly direction: 'down' | 'up';
   readonly beforeMilli: number;
   readonly afterMilli: number;
+  /** The block's stores began as a pack norm's, not a source's (lane 1.4). */
+  readonly assumed: boolean;
 }
 
 export interface StoresResult {
@@ -86,8 +88,8 @@ export function storesStep(map: WorldIndex, state: State, supply: SupplyResult):
     const deliveredDays = Math.trunc((a.deliveredMilli * STORES_MILLI) / e.need);
     const after = Math.max(0, Math.min(Math.max(cap, e.stores), e.stores + deliveredDays - STORES_MILLI));
     if (after !== e.stores) deltas.push({ change: 'stores', block: e.block, milli: after - e.stores, cause: after < e.stores ? 'consumption' : 'supply' });
-    if (e.stores >= low && after < low) crossings.push({ block: e.block, faction: e.faction, region: e.region, direction: 'down', beforeMilli: e.stores, afterMilli: after });
-    if (e.stores < low && after >= low) crossings.push({ block: e.block, faction: e.faction, region: e.region, direction: 'up', beforeMilli: e.stores, afterMilli: after });
+    if (e.stores >= low && after < low) crossings.push({ block: e.block, faction: e.faction, region: e.region, direction: 'down', beforeMilli: e.stores, afterMilli: after, assumed: state.forceBlockStates[e.block]!.fbStoresAssumed });
+    if (e.stores < low && after >= low) crossings.push({ block: e.block, faction: e.faction, region: e.region, direction: 'up', beforeMilli: e.stores, afterMilli: after, assumed: state.forceBlockStates[e.block]!.fbStoresAssumed });
   });
   deltas.sort((x, y) => strictCompare(x.block, y.block));
   crossings.sort((x, y) => strictCompare(x.block, y.block));

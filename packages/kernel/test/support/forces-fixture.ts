@@ -67,8 +67,9 @@ export function forcesWorld(parts: ForcesParts): World {
         { id: 'expedition', name: 'kind.expedition', creatable: 'directive', temporary: true, role: null },
       ],
       arms: [
-        { id: 'infantry', name: 'arm.infantry', naval: false },
-        { id: 'naval', name: 'arm.naval', naval: true },
+        { id: 'infantry', name: 'arm.infantry', naval: false, cavalry: false },
+        { id: 'cavalry', name: 'arm.cavalry', naval: false, cavalry: true },
+        { id: 'naval', name: 'arm.naval', naval: true, cavalry: false },
       ],
     },
     people: parts.people ?? ['a_lead', 'a_gen', 'a_gen2', 'a_corps', 'b_lead', 'b_gen'].map((p) => person(p, p.slice(0, 1))),

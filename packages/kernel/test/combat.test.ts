@@ -370,6 +370,7 @@ describe('streams: a fixed number of draws per battle-day, whatever happens (P7)
     retreatTo: retreatTo === null ? null : R(retreatTo),
     breakingOut: false,
     surprised: false,
+    pursuedPermille: 0,
   });
   const input = (a: SideInput, b: SideInput): DayInput => ({ day: 5, dayNumber: 1, type: 'attack_open', attacker: F('a'), terrain: 'plain', frontageMen: 60000, terrainLossPermille: 0, sides: [a, b] });
   const after = (i: DayInput) => {

@@ -26,6 +26,7 @@ import type { ReportTemplate } from '../knowledge/templates.ts';
 import type { LatencyRules } from '../messages/latency.ts';
 import type { PeopleRules } from '../people/rules.ts';
 import type { CombatRules } from '../combat/rules.ts';
+import type { OperationsRules, PruningRules } from '../operations/rules.ts';
 
 export const WORLD_FORMAT_VERSION = 2;
 
@@ -50,6 +51,21 @@ export interface StoresRules {
   readonly capDays: number;
   /** Stores below this many days are low: crossing it is a truth event a report may tell. */
   readonly lowDays: number;
+  /**
+   * Norms for blocks whose stores no source gives (lane 1.4; lane 1.10's Appendix K): practice, never regulation, so every
+   * block given one is flagged `fbStoresAssumed`. The first norm whose every named field matches the block applies: the
+   * kind of the post it starts under, its arm, its side. A block no norm matches stays unknown, visibly.
+   */
+  readonly norms: readonly StoresNorm[];
+}
+
+/** One stores norm: which blocks it covers (null: any), the days it gives, and its source (a PROVENANCE key and place). */
+export interface StoresNorm {
+  readonly postKind: string | null;
+  readonly arm: string | null;
+  readonly faction: FactionId | null;
+  readonly days: number;
+  readonly cite: string;
 }
 
 /** Occupation (0064): a side alone that marched in takes ground by its men. DESIGN PARAMETERS the pack states. */
@@ -223,6 +239,10 @@ export interface WorldRules {
   readonly occupation: OccupationRules;
   /** The battle model (lane 1.3, the combat note): base rates, terms, frontage, morale, decisions, stragglers, the day shape. DESIGN PARAMETERS the pack states (0072). */
   readonly combat: CombatRules;
+  /** Operations (lane 1.4): pauses, repulses, pursuit, holding an objective, works. DESIGN PARAMETERS the pack states (0072). */
+  readonly operations: OperationsRules;
+  /** How long ended operations, closed battles and answered orders are kept (lane 1.4; as knowledge prunes). DESIGN PARAMETERS. */
+  readonly pruning: PruningRules;
   readonly movement: MovementRules;
   readonly ruleSeats: RuleSeatRules;
   /** How long each route takes beside the map's courier days (0026, 0032). DESIGN PARAMETERS the pack states (0072). */
@@ -277,6 +297,8 @@ export interface ArmTerm {
   readonly name: StringKey;
   /** Naval blocks (ships) can carry other blocks aboard. */
   readonly naval: boolean;
+  /** Cavalry (lane 1.4): a pursuer with a block of this arm present takes more stragglers (`combat.pursuit.cavalryPermille`). */
+  readonly cavalry: boolean;
 }
 
 export interface TraitTerm {

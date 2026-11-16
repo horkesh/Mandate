@@ -29,6 +29,7 @@ import { situationReferenceProblems } from '../situations/references.ts';
 import type { SituationDef } from '../situations/types.ts';
 import { peopleRulesProblems, type PeopleRules, type TraitRules } from '../people/rules.ts';
 import { combatRulesProblems } from '../combat/rules.ts';
+import { operationsRulesProblems } from '../operations/rules.ts';
 import { otherEnd, type WorldIndex } from '../world/index.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
 import type { PostKindRole } from '../world/world.ts';
@@ -112,6 +113,7 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
     ...peopleRulesProblems(pack.people, map.world.vocabularies.values?.map((v) => v.id) ?? []),
     ...plannerRuleProblems(pack.planner, pack.plans),
     ...combatRulesProblems(pack.combat, map.world.vocabularies.terrains.map((t) => t.id)),
+    ...operationsRulesProblems(pack.operations, pack.pruning),
   ];
 
   const people = new Map<PersonId, SeatPerson>();

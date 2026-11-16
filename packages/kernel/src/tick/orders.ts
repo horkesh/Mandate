@@ -18,13 +18,13 @@ import type { Hop, OrderBody, TransitMessage } from '../messages/transit.ts';
 import { mintMessageId } from '../messages/transit.ts';
 import { ORDER_ROUTES } from '../messages/latency.ts';
 import { editProblems, goalKindOf, goalProblems, sameGoal, type EditSpec, type GoalKind, type PlanGoal } from '../plans/goal.ts';
-import { execute } from '../plans/execute.ts';
 import { approve, planOf, receiveCounter, release, sendBack, setGoal, type PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import { answerOrder, goalTerms, relayAction, resolveOrderConflict } from '../reading/orders.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
 import { isFieldPost, postFaction, relayChain } from '../seats/posts.ts';
-import { fire, hop, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
+import { fire, hop, oversightOf, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
+import { arriveSupport } from './support.ts';
 
 /** A goal as `plans` holds it, from a command's terms. */
 export function goalOf(t: GoalTerms): PlanGoal {
@@ -187,7 +187,7 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
   const relayer = world.person(msg.msgTo);
   const post = msg.msgToPost!;
   const rules = world.rules.people;
-  const answer = answerOrder(world, start, relayer.id, order.orderIssuer, goalTerms(rules, relayKindOf(start, order)));
+  const answer = answerOrder(world, start, relayer.id, order.orderIssuer, goalTerms(rules, relayKindOf(start, order)), { oversight: oversightOf(ctx, start, relayer.id, order.orderIssuer) });
   const state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: relayer.id, post, role: 'relay', day: ctx.day }));
   const decision = relayAction(rules, answer, relayer.id, post);
   if (decision.action === 'object') {
@@ -282,19 +282,22 @@ function conflictOf(ctx: TickContext, state: State, msg: TransitMessage, plan: P
  *   waits for the day's drafting, and he reports which order he obeyed.
  * - An approval, a send-back or the word to go: applied if his plan still waits for it, else reported as stale.
  * - An edit: it waits for the day's plans phase, which re-expands it on the morning's map and has him answer it.
+ * - A support request (lane 1.4): `tick/support.ts`.
  */
 export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage): State {
   const order = msg.msgOrder!;
+  // A support request between holders (lane 1.4): answered by the holder's own compliance, recorded by the operation.
+  if (order.orderKind === 'support') return arriveSupport(ctx, state, msg);
   const post = msg.msgToPost!;
   const plan = planOf(state, post);
   if (order.orderKind === 'goal') {
     const goal = order.orderGoal!;
     const outcome = conflictOf(ctx, state, msg, plan);
-    const answer = answerOrder(ctx.world, state, msg.msgTo, order.orderIssuer, goalTerms(ctx.world.rules.people, goalKindOf(goal)));
+    const answer = answerOrder(ctx.world, state, msg.msgTo, order.orderIssuer, goalTerms(ctx.world.rules.people, goalKindOf(goal)), { oversight: oversightOf(ctx, state, msg.msgTo, order.orderIssuer) });
     let next = recordResponse(state, responseOf(answer, { order: msg.msgOrigin, person: msg.msgTo, post, role: 'addressee', day: ctx.day }));
     if (outcome.obeyed === 'new') {
       const set = { id: msg.msgOrigin, issuer: order.orderIssuer, goal, viaChain: !order.orderBypass, issuedDay: order.orderIssuedDay, response: responseKey(msg.msgOrigin, msg.msgTo) };
-      next = execute(setGoal(next, post, set, ctx.day), post, ctx.day);
+      next = setGoal(next, post, set, ctx.day);
     }
     fire(ctx, 'orders.obeyed', outcome.obeyed === 'new' ? 1 : 0);
     if (outcome.obeyed === 'new') fire(ctx, 'plans.goal_set');
@@ -320,7 +323,6 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
   }
   const changed = order.orderKind === 'approve' ? approve(state, post) : order.orderKind === 'send_back' ? sendBack(state, post) : release(state, post);
   fire(ctx, order.orderKind === 'approve' ? 'plans.approved' : order.orderKind === 'send_back' ? 'plans.sent_back' : 'plans.released');
-  const next = execute(changed, post, ctx.day);
-  acknowledge(ctx, next, msg, order.orderKind, true);
-  return next;
+  acknowledge(ctx, changed, msg, order.orderKind, true);
+  return changed;
 }

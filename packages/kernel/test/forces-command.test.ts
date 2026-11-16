@@ -62,7 +62,7 @@ const S = stateFrom(MAP, START);
 
 describe('setup: forces, locations and command copied once from the start (0050)', () => {
   it('copies blocks with strength, stores in milli-days and unknowns kept unknown', () => {
-    expect(S.forceBlockStates[B('a_1')]).toEqual({ fbName: 'block.a_1.name', fbKind: 'block', fbParent: null, fbDepartment: 'a_war', fbArm: 'infantry', fbStrength: 5000, fbNonCombatants: 0, fbStoresMilli: 10000, fbMorale: 600, fbExperience: 400, fbEquipment: 600, fbStragglers: 0, fbRoutedDay: null, fbSurrenderedDay: null });
+    expect(S.forceBlockStates[B('a_1')]).toEqual({ fbName: 'block.a_1.name', fbKind: 'block', fbParent: null, fbDepartment: 'a_war', fbArm: 'infantry', fbStrength: 5000, fbNonCombatants: 0, fbStoresMilli: 10000, fbStoresAssumed: false, fbMorale: 600, fbExperience: 400, fbEquipment: 600, fbStragglers: 0, fbRoutedDay: null, fbSurrenderedDay: null });
     expect(S.forceBlockStates[B('a_3')]!.fbStrength).toBeNull();
     expect(S.forceBlockStates[B('a_marines')]!.fbStoresMilli).toBeNull();
     expect(S.forceBlockStates[B('a_2_guard')]!.fbParent).toBe('a_2');

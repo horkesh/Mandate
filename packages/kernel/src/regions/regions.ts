@@ -2,12 +2,13 @@
  * Regions' own State (FOUNDATION section 10: `regions` owns region population,
  * loyalty, supply value and fortification). Phase 0 builds one field, the
  * fortification a scenario start gives (0050: "each part of a start is copied
- * into State once at setup ... fortification by `regions`"). Nothing writes it
- * in play yet: the siege method (0062) and Phase 1's operations and combat will
- * read it, and propose changes for `regions` to apply.
+ * into State once at setup ... fortification by `regions`"). In play, operations
+ * propose works dug by an axis holding its objective, and combat proposes works lost
+ * when a defender is driven from them (lane 1.4; 0029); `applyFortification` applies both.
  */
 import { strictCompare } from '../compare.ts';
 import type { RegionId } from '../ids.ts';
+import type { State } from '../root-state.ts';
 import type { WorldIndex } from '../world/index.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
 
@@ -43,4 +44,46 @@ export function initialFortification(map: WorldIndex, start: ScenarioStart): For
   }
   if (problems.length > 0) throw new FortificationError(problems);
   return out;
+}
+
+/** Who may propose a change to fortification (FOUNDATION section 10's row: operations, combat). */
+export const FORTIFICATION_CAUSES = ['operations', 'combat'] as const;
+export type FortificationCause = (typeof FORTIFICATION_CAUSES)[number];
+
+/** A proposed change to a region's works, signed permille. */
+export interface FortificationDelta {
+  readonly region: RegionId;
+  readonly deltaPermille: number;
+  readonly cause: FortificationCause;
+}
+
+/** A change applied, with the level before and after (the explanation trail). */
+export interface FortificationChange {
+  readonly region: RegionId;
+  readonly before: number;
+  readonly after: number;
+  readonly cause: FortificationCause;
+}
+
+/**
+ * The only writer of fortification in play: apply changes in order, each level clamped to 0..1000; a region at 0 is
+ * removed, so the table stays sparse. Returns the State unchanged when nothing changes.
+ */
+export function applyFortification(state: State, deltas: readonly FortificationDelta[]): { readonly state: State; readonly changes: readonly FortificationChange[] } {
+  if (deltas.length === 0) return { state, changes: [] };
+  const next: Record<RegionId, number> = { ...state.regionFortification };
+  const changes: FortificationChange[] = [];
+  for (const d of deltas) {
+    if (!Number.isSafeInteger(d.deltaPermille)) throw new FortificationError([`fortification change for ${d.region} must be a whole permille, got ${d.deltaPermille}`]);
+    const before = next[d.region] ?? 0;
+    const after = Math.max(0, Math.min(1000, before + d.deltaPermille));
+    if (after === before) continue;
+    if (after === 0) delete next[d.region];
+    else next[d.region] = after;
+    changes.push({ region: d.region, before, after, cause: d.cause });
+  }
+  if (changes.length === 0) return { state, changes };
+  const sorted: Record<RegionId, number> = {};
+  for (const r of (Object.keys(next) as RegionId[]).sort(strictCompare)) sorted[r] = next[r]!;
+  return { state: { ...state, regionFortification: sorted }, changes };
 }

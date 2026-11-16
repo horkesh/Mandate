@@ -90,7 +90,7 @@ export function emptyState(): State {
     knowledgeBySeat: {},
     reportTruth: {},
     planRecords: {},
-    standingGoals: {},
+    operationRecords: {},
     situationStates: {},
     situationFlags: {},
     forceBlockStates: {},
@@ -174,7 +174,7 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
     reportTruth: {},
     // No goal is ordered before play (lane 1.2): a post with none holds where it stands, and nothing moves it.
     planRecords: {},
-    standingGoals: {},
+    operationRecords: {},
     situationStates: {},
     situationFlags: options.atWar === true ? warFlagsAtStart(world) : {},
     forceBlockStates: initialForces(map, start),

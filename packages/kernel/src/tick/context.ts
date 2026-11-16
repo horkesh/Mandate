@@ -87,7 +87,7 @@ export interface Price {
 
 /** Something the shell may end a turn on (FOUNDATION section 9). */
 export interface DecisionPoint {
-  readonly point: 'objection' | 'objective-reached' | 'order-conflict' | 'situation-lapsed' | 'situation-options' | 'situation-resurfaced' | 'situation-surfaced';
+  readonly point: 'battle-report' | 'objection' | 'objective-reached' | 'order-conflict' | 'plan-review' | 'pocket-closed' | 'situation-lapsed' | 'situation-options' | 'situation-resurfaced' | 'situation-surfaced';
   readonly seat: SeatId;
   /** The report it rests on, if any. */
   readonly report: MessageId | null;
@@ -155,6 +155,26 @@ export function sideOf(ctx: TickContext, state: State, person: PersonId): Factio
   const f = sideOfPerson(ctx.world.map, state, person);
   if (f === null) throw new RangeError(`${person} has no side`);
   return f;
+}
+
+/**
+ * How closely the issuer watches `person` (lane 1.4, replacing lane 1.1's constant): the pack's base, less
+ * `oversightPerCourierDay` for each courier day between them, plus `oversightWired` when the wire joins them (the
+ * telegraph office at his elbow), never below `oversightMin` nor above 1000. A man the issuer cannot reach by courier is
+ * watched at the floor. Pure: no dice, the morning's latency.
+ */
+export function oversightOf(ctx: TickContext, state: State, person: PersonId, issuer: PersonId): number {
+  const rules = ctx.world.rules.people.context;
+  const side = sideOfPerson(ctx.world.map, state, issuer);
+  if (side === null || person === issuer) return rules.oversight;
+  const from = whereIs(ctx, state, person);
+  const to = whereIs(ctx, state, issuer);
+  const courier = routeLatency(ctx.latency, ctx.world.rules.latency, 'courier', from, to, side, null);
+  if (!courier.ok) return rules.oversightMin;
+  const wire = routeLatency(ctx.latency, ctx.world.rules.latency, 'wire', from, to, side, null);
+  const wired = wire.ok && wire.latency.parts.some((p) => p.part === 'wire');
+  const value = rules.oversight - courier.latency.days * rules.oversightPerCourierDay + (wired ? rules.oversightWired : 0);
+  return Math.max(rules.oversightMin, Math.min(1000, value));
 }
 
 /** The route a message by `route` really takes (a wire sent off the wire goes by courier). No dice drawn. */

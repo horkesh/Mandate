@@ -13,6 +13,7 @@ import { applyForces } from '../forces/forces.ts';
 import { stragglersStep } from '../forces/stragglers.ts';
 import type { ForceBlockId } from '../ids.ts';
 import { applyPeopleChanges } from '../people/people.ts';
+import { applyFortification } from '../regions/regions.ts';
 import { buildControlIndex } from '../control-index/control-index.ts';
 import { deriveMap, type DerivedMap } from '../control-index/derived.ts';
 import { passageOf, reportPocketChanges } from './passage.ts';
@@ -37,8 +38,10 @@ export const FORCES_MECHANICS = [
   'combat.missing',
   'combat.occupation',
   'combat.pursuit_chosen',
+  'combat.records_pruned',
   'combat.routed',
   'combat.surrendered',
+  'combat.works_stormed',
   'combat.withdrew',
   'command.government_closed',
   'command.government_reopened',
@@ -141,6 +144,9 @@ export function combatPhase(ctx: TickContext, state: State): { readonly state: S
   next = applyRetreats(next, result.retreats, ctx.day);
   next = applyPeopleChanges(next, result.people, ctx.day, ctx.world.rules.people);
   next = applyCombatCommand(next, result.command);
+  const stormed = applyFortification(next, result.fortification);
+  for (const c of stormed.changes) fire(ctx, 'combat.works_stormed', c.before - c.after);
+  next = stormed.state;
   return { state: next, result };
 }
 /**

@@ -155,6 +155,10 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   for (const problem of phase0.combatRulesProblems(world.rules.combat, vocab.terrains.map((t) => t.id))) {
     err('rules-combat', W('rules', 0, 'combat'), problem, 'whole numbers in range for each combat rule, terrains from the pack’s vocabulary, phase shares summing to 1000');
   }
+  // Lane 1.4: operations and pruning, by the kernel's own rule.
+  for (const problem of phase0.operationsRulesProblems(world.rules.operations, world.rules.pruning)) {
+    err('rules-operations', W('rules', 0, 'operations'), problem, 'whole numbers in range for each operations and pruning rule');
+  }
   // 0073: every rank has a kind from rankKinds, so a person can hold one of each kind at once.
   vocab.ranks.forEach((r, i) => term('rankKinds', r.kind, W('vocabularies.ranks', i, 'kind')));
 
