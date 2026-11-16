@@ -41,7 +41,7 @@ In play, the floor's difference is shared among the floor row's own stakeholders
 **G-1.5e: the pinned sign-off of gated rows** (`gatedRowProblems` and `gatedRowHash` in `gate.ts`; the table is in `packs/union-1861/test/gated-rows.test.ts`).
 - Every gated row must have an entry with its content hash and its reviewer. Any edit fails until the reviewer signs the new hash.
 - An entry for a row that no longer exists, or that is no longer gated, fails.
-- A fixture's sign-off fails, and so does a reviewer missing from `gate/reviewers.json` when the pack has one.
+- A fixture's sign-off fails, and so does a reviewer missing from the pack's `gate/reviewers.json`. The Union pack now lists `gate-reviewer` there, so its sign-offs are checked against that list. Its `gate/release.json` is left to the release lane.
 - The table is empty today, because no row is gated.
 
 **The practice-clash term** (mechanism only; the data is lane 1.11's).
