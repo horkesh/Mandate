@@ -3,7 +3,8 @@
 Lane 1.1 is FOUNDATION section 12's first row for Phase 1 (decision 0073). Its two merges:
 
 1. `phase1-scanner-aliases` (8bb2474). The one-writer scanner now follows non-object type aliases (aliases of aliases and multi-line unions included). It also catches writes through a local bound to an owned key: `const c = x.key; c.push(v)`, `c[id] = v`, `delete c[id]` and `Object.assign(c, ...)`. Copies are not flagged. Destructured bindings and parameters are still not followed, so the test-time freeze stays the backstop for them. Two positive controls cover the change. The real tree shows no new records and no new violations.
-2. `phase1-people` (this branch, built on the first). People are State, `compliance`, `reading` and `proxy` run on the new State, and relays and the filter push back.
+   After the standing review (`review-scanner-aliases.md`), 0b094a2 fixes S1 (a cast at the write, `(c as X[]).push(f)`) and adds controls for N1 and N2. It also handles three of the cheap declaration forms the review listed: a declaration in parentheses, one with a `?? {}`, `?? []` or named default, and one that is an arm of a conditional. A call around the key (`Object.keys(state.x)`) is a copy and is not flagged; it has a negative control. Still not followed: `satisfies`, several declarators, a later assignment, two hops, nested values reached through a copy or a loop, a call inside the chain, and Maps or Sets. The steward has filed these.
+2. `phase1-people` (this branch, built on the first). I merged in 0b094a2 and main (d3bfd8b), so the recast passes the stricter scanner. People are State, `compliance`, `reading` and `proxy` run on the new State, and relays and the filter push back.
 
 ## What is built
 
