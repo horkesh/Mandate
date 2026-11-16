@@ -186,7 +186,7 @@ function sitesIn(file: FileIndex, p: KeyPatterns): WriteSite[] {
   for (const g of file.patterns) if (p.target.test(g.text)) sites.push({ path, line: lexed.lineOf(g.offset), key: p.key, form: 'destructuring assignment' });
   for (const g of file.spreads) if (p.property.test(g.text)) sites.push({ path, line: lexed.lineOf(g.offset), key: p.key, form: 'spread update' });
   for (const g of file.literals) if (p.property.test(g.text)) sites.push({ path, line: lexed.lineOf(g.offset), key: p.key, form: 'object literal' });
-  for (const s of localAliasWrites(lexed, p)) sites.push({ path, line: s.line, key: p.key, form: 'write through a local alias' });
+  for (const s of localAliasWrites(lexed, p, file.writeParens)) sites.push({ path, line: s.line, key: p.key, form: 'write through a local alias' });
   return sites.sort((a, b) => a.line - b.line || (a.form < b.form ? -1 : a.form > b.form ? 1 : 0));
 }
 
@@ -197,17 +197,21 @@ const TAIL_STEP = String.raw`(?:\s*!|\s*(?:\?\.)?${INDEX}|\s*\??\.\s*[\w$]+)+`;
  * Writes through a local bound to the key's value: `const c = x.key; c.push(v)`,
  * `c[id] = v`, `c.y += v`, `delete c[id]`, `Object.assign(c, ...)`. The binding
  * must be the key itself or an index or member below it (`x.key[id]`), not a
- * copy (`[...x.key]`, `x.key.slice()`): the right side ends at the key's tail.
+ * copy (`[...x.key]`, `x.key.slice()`): the right side ends at the key's tail,
+ * which may sit in parentheses (but not in a call: `Object.keys(x.key)` is a
+ * copy), carry a cast, default with `?? {}`, `?? []` or a
+ * name, or be one arm of a conditional. A write through a parenthesised group
+ * that mentions the local (`(c as T[]).push(v)`, a cast at the write) counts too.
  * A use is any later mention of the name in the file, so a shadowing local of
  * the same name is flagged too; as with parenthesised targets, that is paid by
  * renaming. Destructured bindings (`const { key } = x`) and parameters are not
  * followed; the test-time freeze (`tick/freeze.ts`) remains their backstop.
  */
-function localAliasWrites(lexed: LexedSource, p: KeyPatterns): { line: number }[] {
+function localAliasWrites(lexed: LexedSource, p: KeyPatterns, writeParens: readonly ParenGroup[]): { line: number }[] {
   const k = escape(p.key);
   const out: { line: number }[] = [];
   const decl = (ref: string) =>
-    new RegExp(String.raw`\b(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*(?::[^=;]*)?=\s*[\w$.\[\]!?()\s]*?${ref}${TAIL}\s*(?:as\s+[^;]+)?;`, 'g');
+    new RegExp(String.raw`\b(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*(?::[^=;]*)?=\s*\(*\s*[\w$.\[\]!?:\s]*?${ref}${TAIL}\s*\)*\s*(?:\?\?\s*(?:\{\s*\}|\[\s*\]|[\w$.]+)\s*)?(?::\s*[^;]+)?(?:as\s+[^;]+)?;`, 'g');
   const declarations = [
     ...[...lexed.code.matchAll(decl(String.raw`\.\s*${k}(?![\w$])`))],
     ...[...lexed.withStrings.matchAll(decl(String.raw`\[\s*(?:'${k}'|"${k}"|\x60${k}\x60)\s*\]`))],
@@ -225,6 +229,9 @@ function localAliasWrites(lexed: LexedSource, p: KeyPatterns): { line: number }[
     const from = d.index + d[0].length;
     const tail = lexed.code.slice(from);
     for (const u of uses) for (const m of tail.matchAll(u)) out.push({ line: lexed.lineOf(from + m.index) });
+    // A cast at the write: a parenthesised group that mentions the local and is written through (review S1).
+    const named = new RegExp(ref);
+    for (const g of writeParens) if (g.offset >= from && named.test(g.code)) out.push({ line: lexed.lineOf(g.offset) });
   }
   return out;
 }
