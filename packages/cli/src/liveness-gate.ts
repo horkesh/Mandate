@@ -226,17 +226,15 @@ const UNION_BANDS: Record<string, GateBand> = {
   'combat.occupation': around(14),
   'combat.pursuit_chosen': notHere('the winner chooses a pursuit only after the other side withdraws or routs; the Union run\'s one loser surrenders; the testbed run fires it'),
   'combat.surrendered': around(1),
-  // Lane 1.11a: with the cast's temperament, values and regard entered (the Union pack's people data), the run's one battle-day ends in a rout with a broken flank instead of a withdrawal.
-  'combat.flank_broken': around(1),
-  'combat.routed': around(1),
-  'combat.withdrew': notHere('the Union run’s one loser routs now (the people data of lane 1.11a moved the draw); the testbed run fires it'),
+  'combat.withdrew': around(1),
   'control.changed': around(15),
   'control.threshold_crossed': around(6),
   // Lane 1.4: the Home Squadron's ships take the pack's assumed one-month norm (lane 1.10), and eat it where no supply reaches.
   'forces.stores_fell': around(37),
   'forces.stores_low': around(1),
   'forces.stores_refilled': notHere('most Union blocks have unknown stores (lane 0.3 data, lane 0.5 finding 3), so the few that fall do not refill in 75 days; the testbed run fires it'),
-  'forces.stragglers_returned': around(10),
+  // Lane 1.11a: with the people data entered (the cast's temperament, values and regard), the merged run's one battle-day leaves more stragglers, who return: 32 fires (it was 10 before). Re-banded from the merged run; flank_broken, routed and withdrew stay inside lane 1.4's bands.
+  'forces.stragglers_returned': around(32),
   // Lane 1.4: the Charleston command's operation on Washington: one opened, its stages, works dug after it holds; the
   // battle's dispatches by the hour and both sides' returns, first and full.
   'combat.flank_broken': notHere('the one battle-day draws no break; the testbed run fires it'),
@@ -302,13 +300,11 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'combat.battle_opened': around(3),
   'combat.captured': around(3),
   'combat.cut_off': notHere('a side is cut off only with no legal retreat (0019); every testbed loser has a way back; the Union run fires it'),
-  'combat.flank_broken': notHere('a flank breaks on a low draw (5 per cent and up a side a day); none of the testbed run\'s three battle-days draws one; the Union run fires it'),
   'combat.general_hit': notHere('a commander is hit on a low draw on his own stream; none of the testbed run\'s three battle-days draws one; the Union run fires it'),
   'combat.killed_wounded': around(6),
   'combat.missing': around(6),
   'combat.occupation': around(20),
   'combat.pursuit_chosen': around(1),
-  'combat.routed': notHere('a side routs when a day\'s losses break its morale; each testbed loser withdraws first; the Union run fires it'),
   'combat.surrendered': notHere('only a cut-off force surrenders, and no testbed force is cut off; the Union run fires it'),
   'combat.withdrew': around(3),
   'control.changed': around(23),
