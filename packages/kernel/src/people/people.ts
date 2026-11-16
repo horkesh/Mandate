@@ -174,6 +174,8 @@ export function applyPeopleChanges(state: State, changes: readonly PeopleChange[
         break;
       }
       case 'grievance': {
+        // Whom he holds it against must be a person the State holds (FOUNDATION section 11.3: an unknown id throws).
+        if (c.against !== null) known(next, c.against);
         const g: PersonGrievance = { grievanceKind: c.kind, grievanceWeight: c.weight, grievanceDay: day, grievanceAgainst: c.against, grievanceCause: c.cause };
         next = { ...next, personGrievances: { ...next.personGrievances, [c.person]: [...(next.personGrievances[c.person] ?? []), g] } };
         break;

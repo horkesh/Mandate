@@ -52,7 +52,7 @@ A response gains `conditions`:
 - `when_reinforced` applies only past the shortfall his boldness tolerates (finding 8);
 - `if_supported` applies to each unpromised support need.
 
-`resolveConflict` decides between two orders by his willingness, plus a chain weight and a newer-order weight. On a tie the order he already holds stands. M2's calls and M2's results are unchanged.
+`resolveConflict` (its rules a required argument, 0072) decides between two orders by his willingness, plus a chain weight and a newer-order weight. On a tie the order he already holds stands. M2's calls and M2's results are unchanged.
 
 **Reading on the new State** (`reading/orders.ts`, pure):
 - `goalTerms`, `profileOf`, `contextFor` and `answerOrder`, which is what lane 1.2 calls at arrival;
@@ -103,13 +103,13 @@ With the original goal boldness (hold 200, advance 700), a man with no values an
 1. **Lane 1.2:** `DirectiveTerms` gains `ownBest`, `departure` and `support`, and `DirectiveResponse` gains `conditions`. Call `answerOrder` at arrival and `resolveOrderConflict` at `arriveOrder`. Record responses with `recordResponse(responseOf(...))` and keep `responseKey` in `plans`. Read traits with `traitsOf`, and import `perceptionBias` and `demandRatio` from `people/traits.ts`. `relayOrder` now returns State. I left `plans/standing.ts` and `arriveOrder` alone.
 2. **Format for regard between people** (rivals, pincer partners): State holds it, but there is no column yet. Filed for lane 1.5, as the lead ruled. Until then its default is `shadow.regardUnknown`.
 3. **The Union pack's fourth rank kind, `state`** (state commissions), and the id-based assignment of kinds. FOUNDATION names three kinds. I recommend keeping four, and having lane 1.9 or 1.11 check the assignment.
-4. **Two new pack values stand in for derived terms:** `context.oversight` and `context.leaderCredibility`. Politics (lane 1.6) should derive credibility, as M2's `derive` did. Neither is labelled STAND-IN in code; both are documented as pack values until lane 1.6.
+4. **Two LABELLED STAND-INS** (after the review): `context.oversight` (owner lane 1.4: it should vary with distance and the telegraph) and `context.leaderCredibility` (owner lane 1.6: politics derives it from the principal's record). Each is labelled STAND-IN in `people/rules.ts` so lane 1.14's stand-in criterion finds it. The steward adds the `OPEN_QUESTIONS` rows.
 5. **`orderResponses` grows with every hop of every order.** It needs a pruning rule, as knowledge has. This is for lane 1.4 or 1.14.
 6. **Docs for the steward:** in `OPEN_QUESTIONS`, the alias-gap line under Tooling is closed by merge 1, and the "values empty" lines under lanes 0.5 and 0.8 are closed by this merge. The trait-adapter row of the exit review's stand-in table is done.
 
 ## Findings outside my scope
 
 - The merge-1 commit subject begins with a UTF-8 byte-order mark, because PowerShell's `Set-Content` writes one. I did not force-push. The steward can reword it on merge.
-- `applyPeopleChanges` does not check a proposed rank against the vocabulary. The proposer, lane 1.5's promotion lists, should check it, or `people` should once it has the map.
+- `applyPeopleChanges` now refuses a grievance against a person the State does not hold (after the review). It still does not check a proposed rank against the vocabulary; that waits for lane 1.5's promotion lists.
 - The M2 kernel's `people.ts` (`ProxyProfile`, `ValueId`) is still the type compliance reads. It goes when lane 1.13 deletes M2.
 - The planner-spike prototype now carries its own copy of the old trait numbers (`PROTOTYPE_TRAIT_RULES`), so its recorded findings still reproduce.

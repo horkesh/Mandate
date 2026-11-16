@@ -3,7 +3,7 @@ import { toId, type PersonId } from '../src/ids.ts';
 import { applyPeopleChanges, drawStat, initialPeople } from '../src/people/people.ts';
 import { peopleRulesProblems, type PeopleRules } from '../src/people/rules.ts';
 import { perceptionBias, traitsOf } from '../src/people/traits.ts';
-import { answerOrder, goalTerms } from '../src/reading/orders.ts';
+import { answerOrder, filterDecision, goalTerms } from '../src/reading/orders.ts';
 import { createStream } from '../src/rng.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
 import { indexSeatsWorld } from '../src/seats/world.ts';
@@ -142,6 +142,41 @@ describe('people State: setup and the one writer (FOUNDATION section 10)', () =>
     const warmed = applyPeopleChanges(state, [{ change: 'regard', person: PR('a_gen'), toward: PR('a_bold'), delta: 300 }], 2, cool);
     expect(warmed.personRegard[PR('a_gen')]).toEqual({ a_bold: 200 });
     expect(applyPeopleChanges(warmed, [{ change: 'regard', person: PR('a_gen'), toward: PR('a_bold'), delta: -300 }], 3, cool).personRegard[PR('a_gen')]).toBeUndefined();
+  });
+
+  it('in unknown men, regard for the principal is the pack’s regard for the unknown, whatever the World cites', () => {
+    const world = indexedFixture();
+    const cited = createState(world, { seed: 1 });
+    expect(traitsOf(world, cited, PR('a_gen')).regard).toBe(300);
+    const unknown = createState(world, { seed: 1, people: 'unknown-men' });
+    expect(unknown.personRegard).toEqual({});
+    expect(traitsOf(world, unknown, PR('a_gen')).regard).toBe(0);
+    // With a stated regard for the unknown of -100, that is what an unknown man holds, and nothing is stored for it.
+    const cool = { ...world.map.world.rules.people, shadow: { ...world.map.world.rules.people.shadow, regardUnknown: -100 } };
+    const seats = indexSeatsWorld(indexWorld({ ...world.map.world, rules: { ...world.map.world.rules, people: cool } }), world.start);
+    const coolState = createState(seats, { seed: 1, people: 'unknown-men' });
+    expect(coolState.personRegard).toEqual({});
+    expect(traitsOf(seats, coolState, PR('a_gen')).regard).toBe(-100);
+  });
+
+  it('refuses a grievance held against a person the State does not hold (FOUNDATION section 11.3)', () => {
+    const state = createState(indexedFixture(), { seed: 1 });
+    expect(() => applyPeopleChanges(state, [{ change: 'grievance', person: PR('a_gen'), kind: 'overruled', weight: 100, against: PR('ghost'), cause: null }], 2, PEOPLE_RULES)).toThrow('unknown person id "ghost"');
+    expect(applyPeopleChanges(state, [{ change: 'grievance', person: PR('a_gen'), kind: 'overruled', weight: 100, against: null, cause: null }], 2, PEOPLE_RULES).personGrievances[PR('a_gen')]).toHaveLength(1);
+  });
+
+  it('a filter holder holds for his values, but cuts claims only if he is not candid', () => {
+    const rules = FIXTURE_PEOPLE_RULES;
+    const clerk = { id: PR('a_clerk'), boldness: 400, standing: 500, regard: 300, values: ['order', 'reputation'] };
+    const post = toId('post', 'a_filter');
+    const uncandid = filterDecision(rules, { ...clerk, candour: 200 }, post);
+    expect([uncandid.holdDays, uncandid.trims]).toEqual([1, ['own-losses']]);
+    // At the candour threshold (500) he cuts nothing, though his values still make him hold the wire a day.
+    const candid = filterDecision(rules, { ...clerk, candour: 500 }, post);
+    expect([candid.holdDays, candid.trims]).toEqual([1, []]);
+    expect(candid.terms.map((t) => `${t.termKind}:${t.termRule}`)).toEqual(['filter_hold:values:order']);
+    // No value that holds or cuts: nothing at all.
+    expect(filterDecision(rules, { ...clerk, candour: 200, values: ['duty'] }, post)).toEqual({ holdDays: 0, trims: [], terms: [] });
   });
 
   it('a bypassed relay holds a grievance against the principal who went around him, and it weighs in his next reading', () => {

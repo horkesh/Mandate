@@ -302,7 +302,8 @@ export function resolveConflict(
   held: OrderInHand,
   arriving: OrderInHand,
   context: CommandContext,
-  rules: ComplianceRules = DEFAULT_COMPLIANCE_RULES,
+  // Required (0072: no hidden default): the new kernel passes the pack's `WorldRules.people.compliance`.
+  rules: ComplianceRules,
 ): ConflictResolution {
   const heldResponse = resolveDirective({ ...proxy, regard: held.issuerRegard ?? proxy.regard }, held.terms, context, rules);
   const arrivingResponse = resolveDirective({ ...proxy, regard: arriving.issuerRegard ?? proxy.regard }, arriving.terms, context, rules);

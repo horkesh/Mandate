@@ -247,7 +247,7 @@ describe('conflicting orders, resolved by his compliance (0040; lane 1.1, called
   const attack: DirectiveTerms = { boldness: 900, honours: ['glory'], offends: ['caution'], required: 0 };
 
   it('obeys the order he is more willing to carry out, and says why in typed terms', () => {
-    const r = resolveConflict(proxy('grandee'), { order: 'm.1', terms: attack, viaChain: true, issuedDay: 1 }, { order: 'm.2', terms: hold, viaChain: false, issuedDay: 2 }, thinResources);
+    const r = resolveConflict(proxy('grandee'), { order: 'm.1', terms: attack, viaChain: true, issuedDay: 1 }, { order: 'm.2', terms: hold, viaChain: false, issuedDay: 2 }, thinResources, DEFAULT_COMPLIANCE_RULES);
     expect(r.obeyed).toBe('arriving');
     expect(r.terms.map((t) => `${t.order}:${t.term}`)).toEqual(['held:willingness', 'held:chain', 'arriving:willingness', 'arriving:newer']);
     expect(r.scores.arriving).toBeGreaterThan(r.scores.held);
@@ -257,11 +257,11 @@ describe('conflicting orders, resolved by his compliance (0040; lane 1.1, called
   it('weighs the chain and the newer order when he is indifferent between them', () => {
     const same = { boldness: 500, honours: [], offends: [], required: 0 };
     // The chain's order stands against an equal one sent around it (the chain weighs more than being newer).
-    expect(resolveConflict(proxy('eager'), { order: 'm.1', terms: same, viaChain: true, issuedDay: 1 }, { order: 'm.2', terms: same, viaChain: false, issuedDay: 3 }, thinResources).obeyed).toBe('held');
+    expect(resolveConflict(proxy('eager'), { order: 'm.1', terms: same, viaChain: true, issuedDay: 1 }, { order: 'm.2', terms: same, viaChain: false, issuedDay: 3 }, thinResources, DEFAULT_COMPLIANCE_RULES).obeyed).toBe('held');
     // A newer chain order supersedes one sent around it (0040: a newer order from his own department supersedes).
-    expect(resolveConflict(proxy('eager'), { order: 'm.1', terms: same, viaChain: false, issuedDay: 1 }, { order: 'm.2', terms: same, viaChain: true, issuedDay: 3 }, thinResources).obeyed).toBe('arriving');
+    expect(resolveConflict(proxy('eager'), { order: 'm.1', terms: same, viaChain: false, issuedDay: 1 }, { order: 'm.2', terms: same, viaChain: true, issuedDay: 3 }, thinResources, DEFAULT_COMPLIANCE_RULES).obeyed).toBe('arriving');
     // A tie keeps the order he holds.
-    expect(resolveConflict(proxy('eager'), { order: 'm.1', terms: same, viaChain: true, issuedDay: 2 }, { order: 'm.2', terms: same, viaChain: true, issuedDay: 2 }, thinResources).obeyed).toBe('held');
+    expect(resolveConflict(proxy('eager'), { order: 'm.1', terms: same, viaChain: true, issuedDay: 2 }, { order: 'm.2', terms: same, viaChain: true, issuedDay: 2 }, thinResources, DEFAULT_COMPLIANCE_RULES).obeyed).toBe('held');
   });
 
   it('reads each order with his regard for its own issuer, on the new State', () => {

@@ -38,13 +38,19 @@ export interface GoalTermsRule {
 }
 
 /**
- * The circumstances of an order read in the chain. Oversight and the principal's sanction credibility are pack values
- * until politics derives credibility from the principal's record (P7; lane 1.6 owns it).
+ * The circumstances of an order read in the chain. Both values are LABELLED STAND-INS: one constant per pack in place of
+ * a derived term, so lane 1.14's stand-in criterion finds them.
  */
 export interface ReadingContextRules {
-  /** How closely the principal watches a man who relays or receives his order, permille. */
+  /**
+   * STAND-IN (lane 1.1; owner lane 1.4): how closely the principal watches a man who relays or receives his order,
+   * permille. It should vary with distance and the telegraph (who can be reached, how fast), not be one constant.
+   */
   readonly oversight: number;
-  /** The principal's sanction credibility, permille (until lane 1.6 derives it). */
+  /**
+   * STAND-IN (lane 1.1; owner lane 1.6): the principal's sanction credibility, permille. Politics derives it from his
+   * record (P7), as M2's `derive` did; until then one constant.
+   */
   readonly leaderCredibility: number;
 }
 

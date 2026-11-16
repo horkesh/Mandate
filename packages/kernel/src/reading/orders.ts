@@ -6,7 +6,8 @@
  * - **The terms** of a goal come from the pack (`WorldRules.people.goalTerms`): its boldness and the values it honours
  *   or offends. A plan or an edit maps to terms in the planner (lane 1.2), with `ownBest`, `departure` and `support`.
  * - **The man** is read from people State through `traitsOf`, with his regard for whoever issued the order.
- * - **The context**: the pack's oversight and the principal's credibility (until politics derives it, lane 1.6), and
+ * - **The context**: the pack's oversight (a LABELLED STAND-IN, owner lane 1.4) and the principal's credibility (a
+ *   LABELLED STAND-IN, owner lane 1.6: see `ReadingContextRules`), and
  *   the grievances people State holds for him.
  *
  * M2's `reading.ts` beside this folder still reads M2's `GameState` until lane 1.13 deletes it.
