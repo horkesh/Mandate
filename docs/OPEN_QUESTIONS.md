@@ -240,6 +240,9 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.5b, which must land before any `fugitive-policy` row:** G-1.5a to G-1.5e, the practice-clash term, and the lever sweep treating a delegated gated decision as the delegate's choice.
   - **Lane 1.6:** the validator refuses a bloc made up of a protected group, so `address` can never reach one.
   - **Lane 1.11:** enter no `fugitive-policy` rows until lane 1.5b merges.
+- From the gate reviewer's lane 1.4 verdict (`review-gate-1861.md`, the end), **lane 1.11:**
+  - Report templates for captured, missing, pocket and surrender claims are tagged `capture-in-battle` and signed off. They say "taken prisoner", never a fate, and never "destroyed" alone of men.
+  - Nit N13: a pocket never renders as "surrendered" before the commander chooses.
 - From lane 0.9, plan review: preview an edited route and its distance before it is sent. A distant waypoint can produce a route the player did not mean.
 - Tripwire measurements cover only the RX 7800 XT; integrated GPUs, the Steam Deck and Electron's Chromium are untested, and WebGPU and an OffscreenCanvas worker bake are untried. The prototype points Playwright 1.65 at the installed chromium-1234 (`CHROMIUM_PATH` overrides); adopting Playwright for screenshots means `npx playwright install`, a browser download that is the owner's call.
 
