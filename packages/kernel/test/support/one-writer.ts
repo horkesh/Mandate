@@ -23,9 +23,12 @@
  *   conditional (`(c ? x.key : y).push(v)`);
  * - a destructuring assignment target (`[x.key] = ...`, `({ a: x.key } = ...)`)
  *   and a `for` loop's target (`for (x.key of items)`, `for (x.key in obj)`);
- * - a spread update (`{ ...x, key: v }` or `{ ...x, key }`).
- * Not recognised: writes through an alias (`const c = x.key; c.push(v)`); the
- * deep freeze in tests (`tick/freeze.ts`) is the backstop for those.
+ * - a spread update (`{ ...x, key: v }` or `{ ...x, key }`);
+ * - a write through a local bound to the key (`const c = x.key; c.push(v)`,
+ *   `c[id] = v`; see `localAliasWrites`).
+ * Not recognised: writes through a destructured binding (`const { key } = x`),
+ * a parameter or a value passed further; the deep freeze in tests
+ * (`tick/freeze.ts`) is the backstop for those.
  *
  * Each file is lexed once (`lexSource`); a file the lexer cannot read is
  * reported, never skipped.
@@ -183,7 +186,47 @@ function sitesIn(file: FileIndex, p: KeyPatterns): WriteSite[] {
   for (const g of file.patterns) if (p.target.test(g.text)) sites.push({ path, line: lexed.lineOf(g.offset), key: p.key, form: 'destructuring assignment' });
   for (const g of file.spreads) if (p.property.test(g.text)) sites.push({ path, line: lexed.lineOf(g.offset), key: p.key, form: 'spread update' });
   for (const g of file.literals) if (p.property.test(g.text)) sites.push({ path, line: lexed.lineOf(g.offset), key: p.key, form: 'object literal' });
+  for (const s of localAliasWrites(lexed, p)) sites.push({ path, line: s.line, key: p.key, form: 'write through a local alias' });
   return sites.sort((a, b) => a.line - b.line || (a.form < b.form ? -1 : a.form > b.form ? 1 : 0));
+}
+
+/** One or more index, member or `!` steps: the alias is written into, not rebound. */
+const TAIL_STEP = String.raw`(?:\s*!|\s*(?:\?\.)?${INDEX}|\s*\??\.\s*[\w$]+)+`;
+
+/**
+ * Writes through a local bound to the key's value: `const c = x.key; c.push(v)`,
+ * `c[id] = v`, `c.y += v`, `delete c[id]`, `Object.assign(c, ...)`. The binding
+ * must be the key itself or an index or member below it (`x.key[id]`), not a
+ * copy (`[...x.key]`, `x.key.slice()`): the right side ends at the key's tail.
+ * A use is any later mention of the name in the file, so a shadowing local of
+ * the same name is flagged too; as with parenthesised targets, that is paid by
+ * renaming. Destructured bindings (`const { key } = x`) and parameters are not
+ * followed; the test-time freeze (`tick/freeze.ts`) remains their backstop.
+ */
+function localAliasWrites(lexed: LexedSource, p: KeyPatterns): { line: number }[] {
+  const k = escape(p.key);
+  const out: { line: number }[] = [];
+  const decl = (ref: string) =>
+    new RegExp(String.raw`\b(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*(?::[^=;]*)?=\s*[\w$.\[\]!?()\s]*?${ref}${TAIL}\s*(?:as\s+[^;]+)?;`, 'g');
+  const declarations = [
+    ...[...lexed.code.matchAll(decl(String.raw`\.\s*${k}(?![\w$])`))],
+    ...[...lexed.withStrings.matchAll(decl(String.raw`\[\s*(?:'${k}'|"${k}"|\x60${k}\x60)\s*\]`))],
+  ];
+  for (const d of declarations) {
+    const name = escape(d[1]!);
+    const ref = String.raw`(?<![\w$.])${name}(?![\w$])`;
+    const uses = [
+      new RegExp(String.raw`${ref}${TAIL_STEP}\s*${ASSIGN_OP}`, 'g'),
+      new RegExp(String.raw`${ref}${TAIL_STEP}\s*(?:\+\+|--)`, 'g'),
+      new RegExp(String.raw`${ref}${TAIL}\s*\??\.\s*(?:${MUTATORS})\s*\(`, 'g'),
+      new RegExp(String.raw`\bdelete\s+${ref}${TAIL_STEP}`, 'g'),
+      new RegExp(String.raw`\b${REFLECTIVE}\s*\(\s*${ref}`, 'g'),
+    ];
+    const from = d.index + d[0].length;
+    const tail = lexed.code.slice(from);
+    for (const u of uses) for (const m of tail.matchAll(u)) out.push({ line: lexed.lineOf(from + m.index) });
+  }
+  return out;
 }
 
 /** Every place in `file` that writes property `key`. Throws `LexerError` if the file cannot be lexed. */
@@ -368,27 +411,69 @@ export function typeRecords(file: SourceFile): TypeRecord[] {
   return records;
 }
 
+/** A type alias that is not an object type (`type X = Readonly<Record<K, R>>`, `type Y = A | B[]`): a name to walk through, with no keys. */
+export interface TypeAlias {
+  readonly path: string;
+  readonly alias: string;
+  readonly mentions: readonly string[];
+}
+
+/** Every non-object type alias in a file, with the capitalised type names on its right side. */
+export function typeAliases(file: SourceFile): TypeAlias[] {
+  const code = lexSource(file.code).code;
+  const out: TypeAlias[] = [];
+  const head = /\btype\s+([A-Za-z_$][\w$]*)\s*(?:<[^=]*>)?\s*=(?![=>])/g;
+  for (const m of code.matchAll(head)) {
+    const start = m.index + m[0].length;
+    if (/^\s*\{/.test(code.slice(start))) continue; // an object alias: `typeRecords` reads it
+    out.push({ path: file.path, alias: m[1]!, mentions: [...new Set([...aliasBody(code, start).matchAll(/\b[A-Z][\w$]*\b/g)].map((t) => t[0]))].sort() });
+  }
+  return out;
+}
+
+/** The right side of an alias: up to the first `;` outside brackets, or a newline outside brackets that does not continue the type. */
+function aliasBody(code: string, start: number): string {
+  let depth = 0;
+  for (let i = start; i < code.length; i++) {
+    const c = code[i]!;
+    if (c === '<' || c === '(' || c === '[' || c === '{') depth++;
+    else if ((c === '>' && code[i - 1] !== '=') || c === ')' || c === ']' || c === '}') depth--;
+    else if (depth <= 0 && c === ';') return code.slice(start, i);
+    else if (depth <= 0 && c === '\n') {
+      const before = code.slice(start, i).trimEnd();
+      const after = code.slice(i).trimStart();
+      if (before !== '' && !/[|&=,<(]$/.test(before) && !/^[|&]/.test(after)) return code.slice(start, i);
+    }
+  }
+  return code.slice(start);
+}
+
 /**
  * State records: every record named `State` or `...State`, plus every record
  * reachable by name from a root record named exactly `State` (its fields are
- * State too, whatever the type is called).
+ * State too, whatever the type is called). Reachability walks through
+ * non-object type aliases: a record behind `type T = Readonly<Record<K, R>>`
+ * is as much State as one named inline.
  */
 export function stateRecords(files: readonly SourceFile[]): StateRecord[] {
   const all = files.flatMap(typeRecords);
   const byName = new Map<string, TypeRecord[]>();
   for (const r of all) byName.set(r.record, [...(byName.get(r.record) ?? []), r]);
+  const aliases = new Map<string, string[]>();
+  for (const a of files.flatMap(typeAliases)) aliases.set(a.alias, [...(aliases.get(a.alias) ?? []), ...a.mentions]);
   const chosen = new Set<TypeRecord>(all.filter((r) => /State$/.test(r.record)));
-  const queue = [...(byName.get('State') ?? [])];
+  const walked = new Set<string>();
+  const queue: string[] = [];
+  for (const root of byName.get('State') ?? []) queue.push(...root.mentions);
   while (queue.length > 0) {
-    const r = queue.pop()!;
-    for (const name of r.mentions) {
-      for (const next of byName.get(name) ?? []) {
-        if (!chosen.has(next)) {
-          chosen.add(next);
-          queue.push(next);
-        }
-      }
+    const name = queue.pop()!;
+    if (walked.has(name)) continue;
+    walked.add(name);
+    for (const next of byName.get(name) ?? []) {
+      chosen.add(next);
+      queue.push(...next.mentions);
     }
+    queue.push(...(aliases.get(name) ?? []));
   }
   return all.filter((r) => chosen.has(r));
 }
