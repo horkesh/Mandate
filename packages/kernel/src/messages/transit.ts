@@ -15,7 +15,7 @@ import { strictCompare } from '../compare.ts';
 import { toId, type MessageId, type PersonId, type PostId } from '../ids.ts';
 import type { ReportBody } from '../knowledge/report.ts';
 import type { ReportTruth } from '../knowledge/truth.ts';
-import type { GoalSpec } from '../plans/goal.ts';
+import type { EditSpec, PlanGoal } from '../plans/goal.ts';
 import type { State } from '../root-state.ts';
 import { sha256OfText } from '../serialize/sha256.ts';
 import type { RouteKind } from './latency.ts';
@@ -29,10 +29,21 @@ export interface Hop {
   readonly hopRole: 'addressee' | 'filter' | 'relay';
 }
 
+/**
+ * What an order carries (lane 1.2): a goal for the holder of a post, or the principal's answer to the plan he
+ * submitted (approve it, send it back, edit its arrows), or his word to go. Each is a directive the holder receives.
+ */
+export const ORDER_KINDS = ['approve', 'edit', 'go', 'goal', 'send_back'] as const;
+export type OrderKind = (typeof ORDER_KINDS)[number];
+
 export interface OrderBody {
+  readonly orderKind: OrderKind;
   readonly orderIssuer: PersonId;
   readonly orderTarget: PostId;
-  readonly orderGoal: GoalSpec;
+  /** The goal, for a `goal` order; null otherwise. */
+  readonly orderGoal: PlanGoal | null;
+  /** The arrow edit, for an `edit` order; null otherwise. */
+  readonly orderEdit: EditSpec | null;
   /** Whether it was sent around the chain of posts that should relay it (0040). */
   readonly orderBypass: boolean;
   readonly orderIssuedDay: number;

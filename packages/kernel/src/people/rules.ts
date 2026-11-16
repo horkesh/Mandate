@@ -88,6 +88,11 @@ export interface TraitRules {
   readonly demandBase: number;
   /** Permille added to the demand per point of boldness below the pivot. */
   readonly demandPerPoint: number;
+  /**
+   * His demand for an assault on held ground, permille of his demand in the open (lane 1.2; lane 0.9 finding 1: the
+   * assault margin). `demandRatio` is the demand in the open; the planner applies this on top, as its own term.
+   */
+  readonly assaultMargin: number;
   /** Below this margin over his demand, holding is as consistent as advancing (permille). */
   readonly holdBand: number;
   /** The share of his strength a commander quotes as "effective" when he wants men, permille. */
@@ -167,7 +172,8 @@ export function peopleRulesProblems(rules: PeopleRules | undefined, values: read
     value(p.value, 'traits.perceptionValues');
     whole(p.permille, `traits.perceptionValues.${p.value}`);
   }
-  for (const k of ['perceptionPivot', 'perceptionPerPoint', 'perceptionMax', 'demandBase', 'demandPerPoint', 'holdBand', 'wantsMenPermille', 'paperPermille'] as const) whole(rules.traits[k], `traits.${k}`);
+  for (const k of ['perceptionPivot', 'perceptionPerPoint', 'perceptionMax', 'demandBase', 'demandPerPoint', 'assaultMargin', 'holdBand', 'wantsMenPermille', 'paperPermille'] as const) whole(rules.traits[k], `traits.${k}`);
+  if (typeof rules.traits.assaultMargin === 'number' && rules.traits.assaultMargin < 1000) problems.push('people rule traits.assaultMargin must be at least 1000 (an assault never asks less than the open field)');
   whole(rules.grievances.bypassedWeight, 'grievances.bypassedWeight');
   return problems;
 }

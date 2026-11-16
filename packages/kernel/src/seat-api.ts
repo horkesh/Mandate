@@ -12,14 +12,19 @@
 export type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId } from './ids.ts';
 export type { ClaimKind, ReportType, SubjectKind } from './knowledge/report.ts';
 export { ADVICE_SUBTYPES, CLAIM_KINDS, INFORMAL_SUBTYPES, REPORT_TYPES } from './knowledge/report.ts';
-export type { ChooseCommand, Command, DecideCommand, DelegateCommand, OrderCommand, SeatCommand } from './log/commands.ts';
+export type { ChooseCommand, Command, DecideCommand, DelegateCommand, EditTerms, GoCommand, GoalTerms, OrderCommand, ReviewAction, ReviewCommand, SeatCommand } from './log/commands.ts';
+export { REVIEW_ACTIONS } from './log/commands.ts';
 export type { RouteKind } from './messages/latency.ts';
-export type { GoalKind } from './plans/goal.ts';
+export type { EditKind, PlanStatus, Posture } from './plans/goal.ts';
+export { EDIT_KINDS, PLAN_STATUSES, POSTURES } from './plans/goal.ts';
 export type {
+  AxisView,
   CommandablePost,
   DelegatedMenu,
   Menu,
   OptionView,
+  PlanMenu,
+  PlanReview,
   PrincipalMenu,
   RouteOption,
   Seat,
@@ -28,7 +33,6 @@ export type {
   SeatRequest,
   SituationChoice,
   SituationOptionChoice,
-  StandingMenu,
 } from './seats/api.ts';
-export type { AdviceView, BeliefView, ClaimView, GoalView, ReportView, SeatView, SituationOptionView, SituationView } from './view/types.ts';
+export type { AdviceView, BeliefView, ClaimView, GoalView, ObstructionView, ReportView, SeatView, SituationOptionView, SituationView, WorksView } from './view/types.ts';
 export type { SituationId } from './ids.ts';

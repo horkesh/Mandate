@@ -1,5 +1,5 @@
 import { decodeSave, encodeSave, phase0, SaveError } from '@mandate/kernel';
-import { createRuleSeat } from '@mandate/rule-seats';
+import { createRuleSeat, DEFAULT_RULE_SEAT_POLICY } from '@mandate/rule-seats';
 import { describe, expect, it } from 'vitest';
 import { phase0Run } from '../src/phase0-run.ts';
 import { seatsWorld } from '../src/seats-world.ts';
@@ -12,7 +12,7 @@ import { seatsWorld } from '../src/seats-world.ts';
 
 /** The rules model with a different opening day: on the resumed leg, the principal opens a second campaign. */
 const SECOND_OPENING: phase0.SeatTable = (() => {
-  const seat = createRuleSeat({ openingDay: 5, goAroundObjections: true });
+  const seat = createRuleSeat({ ...DEFAULT_RULE_SEAT_POLICY, openingDay: 5 });
   return () => seat;
 })();
 

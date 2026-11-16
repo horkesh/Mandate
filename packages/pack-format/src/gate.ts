@@ -80,7 +80,7 @@ export const TopicSchema = z.strictObject({
         optionPattern: regex.nullable().default(null),
         /** Matched against an option's label text in every locale (review N1: renaming an id is no way round). */
         labelPattern: regex.nullable().default(null),
-        /** Matched against each order an option issues, written goal:post:region. */
+        /** Matched against each order an option issues, written posture:post:objective (lane 1.2: a goal's posture, no longer a standing goal's kind). */
         orderPattern: regex.nullable().default(null),
         reason: z.string().min(1),
       }),
@@ -372,7 +372,7 @@ export function checkGate(
           if (option !== null && option.test(o.id)) refuse(`options[${i}].id`);
           // Review N1: an option renamed past the id pattern is still refused by what it says and what it orders.
           if (label !== null) for (const locale of locales) if (label.test(strings.get(locale)!.get(o.label) ?? '')) refuse(`options[${i}].label`);
-          if (order !== null) o.orders.forEach((x, j) => order.test(`${x.goal}:${x.to}:${x.region ?? '-'}`) && refuse(`options[${i}].orders[${j}]`));
+          if (order !== null) o.orders.forEach((x, j) => order.test(`${x.posture}:${x.to}:${x.objective ?? '-'}`) && refuse(`options[${i}].orders[${j}]`));
         });
       }
     }
@@ -692,7 +692,7 @@ function readsDecided(c: phase0.Condition, situation: string): boolean {
   return 'decided' in c && c.decided === situation;
 }
 
-/** The posts whose standing goals a condition reads: a standing goal is the principal's own order. */
+/** The posts whose goals a condition reads: a goal is the principal's own order (0071). */
 function goalPosts(c: phase0.Condition): string[] {
   if ('all' in c) return c.all.flatMap(goalPosts);
   if ('any' in c) return c.any.flatMap(goalPosts);
@@ -703,7 +703,7 @@ function goalPosts(c: phase0.Condition): string[] {
 /**
  * The first step of a principal's choice reaching another item (0070): an item whose trigger or option reads that a
  * decision was decided, reads a flag one of its options (or its inaction) sets, or follows it in a chain; or reads a
- * standing goal, which is the principal's own order (gate re-check R3: a goal read laundered through a middle notice).
+ * goal, which is the principal's own order (gate re-check R3: a goal read laundered through a middle notice).
  * News of a decision, or its firing, is an event and not a choice, and is allowed with a reviewer's note; it is not
  * seeded here. Each seed is `choiceTaint`'s start: the dependent item, with the decision (or `goal:<post>`) as its origin.
  */

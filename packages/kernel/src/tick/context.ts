@@ -24,7 +24,9 @@ import type { SeatsWorld } from '../seats/world.ts';
 
 export type RejectionReason =
   | 'bad_goal'
+  | 'bad_review'
   | 'bad_selection'
+  | 'no_plan'
   | 'not_delegable'
   | 'not_the_decider'
   | 'situation_not_open'
@@ -188,7 +190,7 @@ export function sendReport(
     /** Where it is written, if not where its author is posted (an intelligence chief writes at the headquarters he serves). */
     readonly fromRegion?: RegionId;
   },
-): void {
+): MessageId {
   const { world } = ctx;
   const from = report.body.reportAuthor;
   const fromRegion = report.fromRegion ?? whereIs(ctx, state, from);
@@ -221,4 +223,5 @@ export function sendReport(
     msgTruth: report.truth,
   });
   fire(ctx, 'messages.sent');
+  return id;
 }

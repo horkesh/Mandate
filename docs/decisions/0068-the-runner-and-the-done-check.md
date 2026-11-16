@@ -1,6 +1,6 @@
 # 0068: The headless runner, the liveness gate and the Phase 0 done check
 
-Status: accepted (2026-11-15). Amends 0066. Amended by 0072 (the at-war Union run is a mechanics run, not a war; its bands are reset). From Phase 0 lane 0.8 (`notes/lane-0.8-done-check.md`) and the standing reviewer's review and re-checks (`review-lane-0.8.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 11 and 12.
+Status: accepted (2026-11-15). Amends 0066. Amended by 0072 (the at-war Union run is a mechanics run, not a war; its bands are reset) and 0075 (the behaviour criterion accepts a contest or an occupation, with a control change). From Phase 0 lane 0.8 (`notes/lane-0.8-done-check.md`) and the standing reviewer's review and re-checks (`review-lane-0.8.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 11 and 12.
 
 ## Decision
 

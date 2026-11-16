@@ -24,7 +24,7 @@ import { phase0Run, type Phase0Summary } from '../src/phase0-run.ts';
 
 /**
  * The Phase 0 done check (FOUNDATION section 12; lane 0.8, step 5): a headless run on the new kernel, on
- * the Union 1861 map and order of battle, with rule seats holding standing goals, moves divisions, changes
+ * the Union 1861 map and order of battle, with rule seats giving goals and commanders drafting plans, moves divisions, changes
  * control through battles and occupation and derives fronts, pockets and supply; its hash does not depend on how
  * it is run; it resumes to the same final hash; every mechanic is alive or quiet for a reason; the section 10
  * tests stand; and the tick stays inside its budget. Each criterion has a positive control below.
@@ -79,7 +79,9 @@ describe('the done check on union-1861 at war and the testbed', () => {
   it('measures what a day of plan drafting costs on the Union graph, with sound drafts', () => {
     const d = measureDrafting('union-1861', { days: 3, reps: 2 });
     expect(d.sound).toBe(true);
-    expect(d.posts).toBeGreaterThanOrEqual(25);
+    // Every held post that commands a block (a vacant post has nobody to plan; lane 1.2's inputs are built from State).
+    expect(d.posts).toBeGreaterThanOrEqual(20);
+    expect(d.cappedDay.cap).toBe(3);
     expect(d.posts - d.noLandForce).toBeGreaterThanOrEqual(15);
     expect(d.day.worst).toBeGreaterThanOrEqual(d.day.median);
   });
@@ -91,7 +93,7 @@ describe('each criterion can fail (positive controls)', () => {
     const problems = behaviourProblems(peace);
     expect(problems.join('\n')).toContain('no division moved (movement.leg_started is 0)');
     expect(problems.join('\n')).toContain('control never changed through battle or occupation');
-    expect(problems.join('\n')).toContain("standing goals did nothing");
+    expect(problems.join('\n')).toContain("goals did nothing");
     // And a run whose last checkpoint shows no front, no supply and no pocket anywhere.
     const s = union().checked;
     const bare: Phase0Summary = { ...s, checkpoints: s.checkpoints.map((c) => ({ ...c, scores: { ...c.scores, factions: c.scores.factions.map((f) => ({ ...f, frontSegments: 0, supplied: 0, pockets: 0 })) } })) };

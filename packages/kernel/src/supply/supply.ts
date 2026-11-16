@@ -39,7 +39,7 @@ import { lookup, type DepotId, type EdgeId, type FactionId, type InstallationId,
 import type { EdgeRecord, EdgeType, SeasonReason } from '../world/graph.ts';
 import { edgeDays, otherEnd, type WorldIndex } from '../world/index.ts';
 import { connectedGroups, type ControlIndex } from '../control-index/control-index.ts';
-import { MinHeap } from './heap.ts';
+import { MinHeap } from '../heap.ts';
 
 /** The network's condition: State written by `infrastructure` (lane 0.5). Absent entries are intact. */
 export interface NetworkConditions {

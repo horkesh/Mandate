@@ -1,6 +1,6 @@
 # 0064: Forces, command, movement, infrastructure and the control contest
 
-Status: accepted (2026-11-15). Amends 0061. Amended by 0066 (each side's war flag is its own, set only by its own decision) and 0072 (the war gate only delays the day-1 march; the generic principal is a stand-in). From Phase 0 lane 0.5 (`notes/lane-0.5-forces.md`, merged as ce9d9d1) and the standing reviewer's review (`review-lane-0.5.md`, approved after one fix). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 4, 9 and 10, and decisions 0019, 0033, 0040, 0050, 0054, 0055, 0058 and 0061.
+Status: accepted (2026-11-15). Amends 0061. Amended by 0066 (each side's war flag is its own, set only by its own decision), 0072 (the war gate only delays the day-1 march; the generic principal is a stand-in) and 0076 (the battle model replaces the simple contest). From Phase 0 lane 0.5 (`notes/lane-0.5-forces.md`, merged as ce9d9d1) and the standing reviewer's review (`review-lane-0.5.md`, approved after one fix). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 4, 9 and 10, and decisions 0019, 0033, 0040, 0050, 0054, 0055, 0058 and 0061.
 
 ## Context
 

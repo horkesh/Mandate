@@ -29,7 +29,7 @@
       "label": "situation.eastwatch_followup.option.recall",
       "displayKey": 3,
       "proposedBy": ["n_organiser"],
-      "orders": [{ "to": "n_army_east", "goal": "hold", "route": "wire" }]
+      "orders": [{ "to": "n_army_east", "posture": "hold", "route": "wire" }]
     }
   ],
   "inaction": { "text": "situation.eastwatch_followup.inaction" },

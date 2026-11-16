@@ -211,7 +211,7 @@ Module map, adapted from the AWWV-architecture note:
 | `plans` | State | goals, drafts, approvals, edits as counter-orders |
 | `operations` | State | approved plans in execution, per-axis lifecycles |
 | `movement` | writer | the only writer of location; owns and exports the movement passage rule, which `planner` imports (0062) |
-| `combat` | writer | battle resolution with breakdowns and named seeded streams (in Phase 0 a proposer only: the simple contest and occupation, 0064) |
+| `combat` | writer | battle resolution with breakdowns and named seeded streams, and occupation (0076; Phase 0's simple contest, 0064, is retired) |
 | `people`, `compliance`, `reading`, `audience`, `proxy`, `ladder` | State writers | the M1/M2 people core, recast for goals and plans |
 | `knowledge` | State | per-seat reports with latency; the truth behind each report in a separate map the view layer cannot import (0052) |
 | `messages` | State | messages in transit, with latency owned by the kernel (0052) |
@@ -232,7 +232,7 @@ Module map, adapted from the AWWV-architecture note:
 | State field | Only writer | Proposed by |
 |---|---|---|
 | region control | `control` | combat, occupation |
-| region population, loyalty, supply value | `regions` | economy, situations, occupation |
+| region population, loyalty (`regionLoyalty`, from sourced start values; never a stand-in for control), supply value | `regions` | economy, situations, occupation |
 | edge condition (`infraEdgeCondition`) | `infrastructure` | combat, raids, repair orders |
 | water-edge obstructions (`infraObstructions`); depot condition (`infraDepotCondition`) | `infrastructure` | combat, raids, operations, including clearing works no fort holds (0050, 0064; set at scenario start) |
 | a post's department, and scheduled department changes | `command` | the scenario start's scheduled changes, situations (0050) |
@@ -240,7 +240,8 @@ Module map, adapted from the AWWV-architecture note:
 | a person's ranks, one per kind (regular, volunteer, brevet) held at once, each with its date | `people` | appointments, promotion lists (0050, 0073) |
 | a person's status (serving, wounded, killed, captured) and its date | `people` | combat (0073) |
 | today's weather per weather zone | `weather` | its own seeded draw (0029, 0050; reserved) |
-| a force block's region or ship, and the leg it is on (`forceLocations`) | `movement` | operations, standing goals, retreats (0064) |
+| a force block's region or ship, and the leg it is on (`forceLocations`) | `movement` | operations, standing goals, retreats, recruitment (a raised block placed at its muster region; a disbanded one removed) (0064, 0073) |
+| a raised block's enlistment (`forceEnlistments`): who raised it, on whose call, and when its men's term ends | `forces` | recruitment (0073) |
 | the current day | `tick` | the day tick (0052) |
 | messages in transit | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules (0052) |
 | knowledge: reports per seat, and the truth behind them | `knowledge` | message delivery, pruning (0052) |
@@ -254,11 +255,11 @@ Module map, adapted from the AWWV-architecture note:
 | battle records | `combat` | (0041) |
 | situation chain and wait state | `situations` | (0046) |
 | the Congress accountability ledger: acts taken while Congress was away | `politics` | (0046) |
-| people who have reached Union lines | `regions` | the derived self-emancipation term (0046); never a lever |
+| people who have reached Union lines (`regionReachedUnionLines`) | `regions` | the derived self-emancipation term only (0046, 0074); never a lever |
 | fortification and entrenchment | `regions` | operations, combat (0029, 0041) |
-| a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments (0033, 0064) |
-| people in posts; temporary posts (`postStates`) | `command` | appoint, relieve, promotion lists, an operation's end |
-| standing agreements and prior orders on a post | `command` | verbs, situations, orders from the holder's own department |
+| a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments, combat releasing a surrendered block, recruitment (a raised block assigned to its governor's post; a disbanded one removed) (0033, 0064, 0073, 0076) |
+| people in posts; temporary posts (`postStates`) | `command` | appoint, relieve, promotion lists, an operation's end, combat vacating a hit commander's post (0076) |
+| standing agreements and prior orders on a post, including a governor's answered call not yet mustered (`postLevies`) | `command` | verbs, situations, orders from the holder's own department, a call a governor answered (0073) |
 | a person's stats, traits, standing, grievances, regard | `people` | combat results, the press, verbs, ladder |
 | a person's stances on record (from Consult) | `people` | Consult answers (0040, 0041); adviser credibility is derived from the president's knowledge, never stored |
 | a person's ladder rung and rivals | `ladder` | weekly people step |
@@ -289,7 +290,7 @@ The day tick, each phase declaring what it reads and writes:
 10. The invariant barrier.
 11. Decision-point detection.
 
-In Phase 0 code the phases run as: commands (1), deliveries (2), movement (3), the control contest and occupation (3b), control and the derived map (4), stores on hand (4a), situations (4b), `command`'s proposals such as a government closing (4c), cyclic reports, pruning, the day, and the barrier (0057, 0064). A post's headquarters is derived from where its strongest block stands, never stored.
+In the code the phases run as: commands (1), deliveries (2), movement (3), battles and occupation (3b; the control contest until 0076), control and the derived map (4), stores on hand and stragglers rejoining (4a), situations (4b), `command`'s proposals such as a government closing (4c), cyclic reports, pruning, the day, and the barrier (0057, 0064). A post's headquarters is derived from where its strongest block stands, never stored.
 
 **What happens to today's kernel:**
 - **Survive as they are:** `permille`, `rng`, `compare`, `rules`, scenario validation.

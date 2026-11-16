@@ -21,7 +21,7 @@
 import type { DepartmentId, FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import type { ClaimKind, ReportType, SubjectKind } from '../knowledge/report.ts';
 import type { RouteKind } from '../messages/latency.ts';
-import type { GoalKind } from '../plans/goal.ts';
+import type { Posture } from '../plans/goal.ts';
 
 export const SITUATION_KINDS = ['decision', 'notice'] as const;
 export type SituationKind = (typeof SITUATION_KINDS)[number];
@@ -58,8 +58,11 @@ export type Condition =
   /** The situation was decided, with one of `options` among its choices (null: any decision). */
   | { readonly decided: SituationId; readonly options: readonly string[] | null }
   | { readonly knows: KnowsPattern }
-  /** A post's standing goal is of this kind (stand-in until lane 0.9's plans). */
-  | { readonly goal: { readonly post: PostId; readonly kind: GoalKind } }
+  /**
+   * A post holds a goal of this posture, ordered by its principal (lane 1.2: read from `plans`, no longer a standing
+   * goal). A goal is the principal's own order, so an item that moves a self-governing government may not read it (0071).
+   */
+  | { readonly goal: { readonly post: PostId; readonly posture: Posture } }
   /** A post's headquarters stands in a region: derived from where its strongest block stands, never stored (0064, `seats/posts.ts`). */
   | { readonly headquartersAt: { readonly post: PostId; readonly region: RegionId } }
   /** Days since this situation surfaced to the principal (its clock; gate re-check N6): for `expiresWhen`, `appearsWhen` and `waitsOn`. */
@@ -91,11 +94,15 @@ export type Effect =
       };
     };
 
-/** An order an option issues: always in the principal's name, through the validated command path (0052). */
+/**
+ * An order an option issues: always in the principal's name, through the validated command path (0052). It names a
+ * goal's posture and objective (null: hold where he stands); the goal's other terms are the pack's
+ * (`WorldRules.plans.goalDefaults`), and it commits every block his post commands.
+ */
 export interface OptionOrder {
   readonly to: PostId;
-  readonly goal: GoalKind;
-  readonly region: RegionId | null;
+  readonly posture: Posture;
+  readonly objective: RegionId | null;
   readonly route: RouteKind;
 }
 

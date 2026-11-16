@@ -15,8 +15,9 @@
  * band of zero is never a shrug: it carries its reason (`why`), and the gate's
  * own test checks the named kernel test exists.
  *
- * The planner's scoring terms are counted over edits as well as drafts once the
- * planner moves into the kernel (0062, Phase 1), or `haste` reads as dead.
+ * The planner's scoring terms are counted over edits as well as drafts (0062; lane 1.2): a term fires when dropping
+ * it would change a draft's top pick, and when it falls under an edit. The editing exercise run counts `haste`, an
+ * edit-only term, which drafts never exercise.
  */
 import { checkLiveness, phase0, type LivenessBand, type LivenessFailure, type LivenessRow } from '@mandate/kernel';
 import { createRuleSeat } from '@mandate/rule-seats';
@@ -45,16 +46,40 @@ export interface ReferenceRun {
   readonly bands: Readonly<Record<string, GateBand>>;
 }
 
-/** `rules`: every seat on the rules model. `silent-commanders`: commanders leave their standing-goal requests unanswered. */
-export type SeatsName = 'rules' | 'silent-commanders';
+/**
+ * `rules`: every seat on the rules model. `silent-commanders`: commanders leave their plan requests unanswered.
+ * `editing-principal` (lane 1.2): the principal gives every goal "prepare, await my word" and asks to review its plan,
+ * then edits the arrows of every plan with a moving main axis ("move now": no days to concentrate), approves the rest,
+ * and gives the word when an operation waits for it. It drives edits through compliance, so the planner's scoring
+ * terms are counted over edits as well as drafts (0062; lane 0.9: `haste` is an edit-only term).
+ */
+export type SeatsName = 'rules' | 'silent-commanders' | 'editing-principal';
 
 /** The seat table a reference run's `seats` names. */
 export function seatsNamed(name: SeatsName): phase0.SeatTable {
   const rules = createRuleSeat();
   if (name === 'rules') return () => rules;
+  if (name === 'editing-principal') {
+    const editing = Object.freeze({
+      driver: 'rules' as const,
+      respond: (request: Parameters<typeof rules.respond>[0]) => {
+        const answer = rules.respond(request);
+        const menu = request.menu;
+        if (menu.menuKind !== 'principal' || answer.answerKind !== 'commands') return answer;
+        const commands = answer.commands.map((c) => {
+          if (c.cmd === 'order') return { ...c, goal: { ...c.goal, approveAsDrafted: false, awaitWord: true } };
+          if (c.cmd !== 'review' || c.action !== 'approve') return c;
+          const main = menu.reviews.find((r) => r.post === c.to)?.plan.axes.find((a) => a.name === 'main' && a.regions.length > 1);
+          return main === undefined ? c : { ...c, action: 'edit' as const, edit: { kind: 'timing' as const, axis: 'main', region: null, via: [], concentration: 0 } };
+        });
+        return { answerKind: 'commands' as const, commands };
+      },
+    });
+    return () => editing;
+  }
   const silent = Object.freeze({
     driver: 'rules' as const,
-    respond: (request: Parameters<typeof rules.respond>[0]) => (request.menu.menuKind === 'standing-goal' ? { answerKind: 'commands' as const, commands: [] } : rules.respond(request)),
+    respond: (request: Parameters<typeof rules.respond>[0]) => (request.menu.menuKind === 'plan-selection' ? { answerKind: 'commands' as const, commands: [] } : rules.respond(request)),
   });
   return () => silent;
 }
@@ -107,8 +132,6 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'commands.rejected': { why: 'rule seats send only commands the menu offers; a bad command is a seat bug', test: 'packages/kernel/test/seats-orders.test.ts', needle: 'rejects commands the kernel cannot carry' },
   'infrastructure.changed': { why: NO_PROPOSER, test: 'packages/kernel/test/infrastructure.test.ts', needle: 'damages and repairs edges and depots' },
   'map.pocket_lost': { why: 'a pocket is overrun only when a battle or an occupation takes its ground; the reference runs close none', test: 'packages/kernel/test/map-tick.test.ts', needle: 'reports an overrun pocket as lost' },
-  // Lane 1.3: battles replaced the contest, which took ground from a weaker side still standing in it. Ground now changes hands only when a side leaves a battle or stands alone, and neither run cuts a line that way.
-  'map.pocket_closed': { why: 'a pocket closes when control is taken across a supply line; with battles in place of the contest neither reference run cuts one (lane 1.3)', test: 'packages/kernel/test/combat.test.ts', needle: 'a raid occupies b2 until b no longer traces it' },
   'combat.breakout': { why: `a cut-off force breaks out only when its commander believes it can fight free; ${FEW_BATTLE_DAYS}, and the one force cut off (the Union run's trapped garrison) is too weak, so it surrenders`, test: 'packages/kernel/test/combat.test.ts', needle: 'a cut-off force strong enough to fight breaks out' },
   'combat.destroyed': { why: `a force is destroyed only when the breakout its commander chose fails; ${FEW_BATTLE_DAYS}, and no force breaks out`, test: 'packages/kernel/test/combat.test.ts', needle: 'its breakout failed, and the force is destroyed' },
   'combat.flank_broken': { why: `a flank breaks on a low draw against the pack's threshold (5 per cent and up a side a day); ${FEW_BATTLE_DAYS}, and none draws one`, test: 'packages/kernel/test/combat.test.ts', needle: 'a flank breaks on a low draw' },
@@ -118,6 +141,18 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'reports.filtered': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
   'reports.trimmed': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
   'situations.lapsed': { why: 'a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'expires an option, resurfaces on its clock, and lapses' },
+  // Lane 1.2: the plan cycle's paths that no rule seat takes, each driven by its own kernel test.
+  'plans.sent_back': { why: 'no rule seat sends a plan back: the generic principal approves, the editing exercise edits', test: 'packages/kernel/test/plans.test.ts', needle: 'sends the plan back, and he drafts it again' },
+  'plans.draft_deferred': { why: 'no reference run asks for more plans in a day than the pack’s cap of three (0062)', test: 'packages/kernel/test/plans.test.ts', needle: 'defers drafts past the day’s cap' },
+  'plans.edit_invalid': { why: 'the editing exercise edits only a moving axis’s timing, which can always be made', test: 'packages/kernel/test/plans.test.ts', needle: 'refuses an edit no route can make' },
+  'plans.edit_shirked': { why: 'the testbed’s commanders answer the edits the exercise makes by complying or objecting, never covertly', test: 'packages/cli/test/planner.test.ts', needle: 'executes a covert rung’s concrete plan' },
+  'planner.term.caution': { why: 'few drafts in the reference runs, and none where dropping caution alone changes the pick', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
+  'planner.term.coordination': { why: 'no reference run drafts a two-axis plan close enough to the best for coordination to decide it', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
+  'planner.term.exposure': { why: 'no reference run meets a perceived enemy on the way, and the editing exercise’s “move now” changes no exposure since lane 1.1’s perception', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
+  'planner.term.dependence': { why: 'no reference run drafts a support request close enough to the best for dependence to decide it', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
+  'planner.term.force_ratio': { why: 'the reference runs’ drafts are decided by supply and goal fit, never by the ratio alone', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
+  'planner.term.glory': { why: 'few drafts in the reference runs, and none where dropping glory alone changes the pick', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
+  'planner.term.time': { why: 'few drafts in the reference runs, and none where dropping time alone changes the pick', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
   'situations.options_changed': { why: 'an option changes only for a situation left open past an appearance or expiry; the rule-driven principal does not leave one open (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'a waiting option defers the decision until its condition holds' },
   'situations.resurfaced': { why: 'a resurfacing follows a wait or expiry the rule-driven principal does not choose (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'expires an option, resurfaces on its clock' },
   'situations.waiting': { why: 'waiting is an option a human takes; the rule-driven principal takes the historical default (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'waits for news to reach the principal' },
@@ -126,11 +161,35 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
 /** What a pack at peace never does: no order is given, so no force marches, no ground is contested. */
 const PEACE_QUIET: readonly string[] = ['orders.relayed', 'orders.obeyed', 'plans.goal_reached', 'movement.leg_started', 'movement.arrived', 'combat.battle_day', 'combat.occupation', 'control.changed'];
 
+/** What only the editing exercise run does (lane 1.2): edits and their answers, the word to go, and `haste`, an edit-only term. */
+const EDITS_ONLY = 'only the editing exercise run reviews and edits plans; the generic principal approves them as drafted';
+const NO_DEPARTURE = 'every testbed commander picks a moving plan with no condition, so it goes ahead as drafted, unreviewed';
+
+/** The plan cycle's bands in a full run where the generic principal approves every plan (lane 1.2). */
+function planBands(n: { readonly drafts: number; readonly reviewed: number; readonly wentAhead: number; readonly goalFit: number; readonly supply: number }): Record<string, GateBand> {
+  return {
+    'planner.candidates': around(n.drafts),
+    'planner.searches': around(n.drafts),
+    'plans.drafted': around(n.drafts),
+    'plans.chosen': around(n.drafts),
+    'plans.goal_set': around(n.drafts),
+    'plans.went_ahead': around(n.wentAhead),
+    'plans.approved': n.reviewed > 0 ? around(n.reviewed) : notHere(NO_DEPARTURE),
+    'plans.submitted': n.reviewed > 0 ? around(n.reviewed) : notHere(NO_DEPARTURE),
+    'planner.term.goal_fit': n.goalFit > 0 ? around(n.goalFit) : notHere('both opening drafts here have one moving plan and a holding action, which goal fit alone does not separate'),
+    'planner.term.supply': around(n.supply),
+    'planner.term.haste': quiet(`an edit-only term (lane 0.9: drafts always concentrate as long as he wants): ${EDITS_ONLY}`),
+    'plans.edit_received': quiet(EDITS_ONLY),
+    'plans.edit_answered': quiet(EDITS_ONLY),
+    'plans.edit_objected': quiet(EDITS_ONLY),
+    'plans.released': quiet('no goal here says "prepare, await my word"; the editing exercise run gives the word'),
+  };
+}
+
 /** The union-1861 reference run: 75 days from 5 March 1861, at war (the war gate's labelled option, 0064). */
 const UNION_BANDS: Record<string, GateBand> = {
-  // Lane 1.3: the battle model. The one battle is at Washington: the force that marched in attacks, and the 600 regulars
-  // left at 0 permille, with Maryland's neutral ground behind them, cannot retreat (0019) and surrender. That was Phase 0's
-  // frozen stand-off (exit review S2c; OPEN_QUESTIONS); a battle now ends it, and the field's control goes to the attacker.
+  // Lanes 1.2 and 1.3: the Charleston command's plan marches on Washington, whose garrison now holds (lane 1.2), and the
+  // battle model fights it out (lane 1.3). Re-banded from the merged run.
   'combat.battle_closed': around(1),
   'combat.battle_day': around(1),
   'combat.battle_opened': around(1),
@@ -138,35 +197,37 @@ const UNION_BANDS: Record<string, GateBand> = {
   'combat.cut_off': around(1),
   'combat.general_hit': around(1),
   'combat.killed_wounded': around(2),
-  'combat.missing': around(2),
-  'combat.occupation': around(40),
+  'combat.missing': around(1),
+  'combat.occupation': around(14),
   'combat.pursuit_chosen': notHere('the winner chooses a pursuit only after the other side withdraws or routs; the Union run\'s one loser surrenders; the testbed run fires it'),
   'combat.surrendered': around(1),
   'combat.withdrew': around(1),
-  'control.changed': around(41),
+  'control.changed': around(15),
   'control.threshold_crossed': around(6),
   'forces.stores_fell': around(7),
   'forces.stores_low': around(1),
   'forces.stores_refilled': notHere('most Union blocks have unknown stores (lane 0.3 data, lane 0.5 finding 3), so the few that fall do not refill in 75 days; the testbed run fires it'),
-  'forces.stragglers_returned': around(5),
+  'forces.stragglers_returned': around(10),
+  'map.pocket_closed': notHere('no pocket closes in the first 75 days of the merged Union run; the testbed run fires it'),
   'knowledge.pruned_age': around(6),
   'knowledge.pruned_superseded': around(73),
   'map.recomputed': around(10),
   'messages.courier_delay': around(197),
   'messages.delivered': around(2681),
   'messages.sent': around(2820),
-  'messages.special_messenger': notHere('the principal goes round an office only when it objects; the testbed run fires it'),
-  'movement.arrived': around(36),
-  'movement.leg_started': around(27),
-  // Lane 1.1: relays push back by their own compliance. Union people have no values or temperament yet (lane 1.9
-  // researches them, 1.11 enters them), so these move again with the data; lane 1.14 sets their sourced bands.
-  'orders.bypassed': around(2),
+  // The War Department withholds the principal's approval of the Washington garrison's plan; he sends it around.
+  'messages.special_messenger': around(2),
+  'orders.bypassed': around(4),
+  'movement.arrived': around(19),
+  'movement.leg_started': around(10),
   'orders.obeyed': around(2),
   'orders.relay_held': around(1),
   'orders.relay_objected': around(1),
   'orders.relayed': around(3),
-  'plans.goal_reached': around(2),
-  'seats.choices': around(1),
+  'plans.goal_reached': around(1),
+  'seats.choices': around(2),
+  // The two opening goals: the Charleston command's plan goes ahead; the Washington garrison's holds, so it is reviewed and approved.
+  ...planBands({ drafts: 2, reviewed: 1, wentAhead: 1, goalFit: 0, supply: 2 }),
   'seats.defaulted': notHere('every request is answered in this run; the silent-seats exercise run fires it'),
   'situations.decided': quiet(SITUATIONS_UNAUTHORED),
   'situations.delegated': quiet(SITUATIONS_UNAUTHORED),
@@ -181,26 +242,27 @@ const UNION_BANDS: Record<string, GateBand> = {
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
 const TESTBED_BANDS: Record<string, GateBand> = {
-  // Lane 1.3: two battles, each one day: the defender withdraws, and the winner chooses whether to pursue.
-  'combat.battle_closed': around(2),
-  'combat.battle_day': around(2),
-  'combat.battle_opened': around(2),
-  'combat.captured': around(2),
+  // Lane 1.3, merged with lane 1.2's plans: three battles, each one day: the defender withdraws, and the winner chooses
+  // whether to pursue.
+  'combat.battle_closed': around(3),
+  'combat.battle_day': around(3),
+  'combat.battle_opened': around(3),
+  'combat.captured': around(3),
   'combat.cut_off': notHere('a side is cut off only with no legal retreat (0019); every testbed loser has a way back; the Union run fires it'),
-  'combat.general_hit': around(1),
-  'combat.killed_wounded': around(4),
-  'combat.missing': around(4),
+  'combat.general_hit': notHere('a commander is hit on a low draw on his own stream; none of the testbed run\'s three battle-days draws one; the Union run fires it'),
+  'combat.killed_wounded': around(6),
+  'combat.missing': around(6),
   'combat.occupation': around(20),
   'combat.pursuit_chosen': around(1),
   'combat.surrendered': notHere('only a cut-off force surrenders, and no testbed force is cut off; the Union run fires it'),
-  'combat.withdrew': around(2),
-  'control.changed': around(22),
+  'combat.withdrew': around(3),
+  'control.changed': around(23),
   'control.threshold_crossed': around(11),
-  // Battles end sooner than the contest did (the loser leaves), so fewer blocks stand unsupplied on enemy ground.
-  'forces.stores_fell': around(24),
-  'forces.stores_low': around(1),
+  'forces.stores_fell': around(183),
+  'forces.stores_low': around(6),
   'forces.stores_refilled': around(193),
-  'forces.stragglers_returned': around(102),
+  'forces.stragglers_returned': around(87),
+  'map.pocket_closed': around(1),
   'knowledge.pruned_age': around(7),
   'knowledge.pruned_superseded': around(118),
   'map.recomputed': around(14),
@@ -217,8 +279,10 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'orders.relay_objected': notHere(NO_CANDID_RELAY),
   'orders.relayed': around(3),
   'plans.goal_reached': around(2),
-  'seats.choices': around(1),
+  'seats.choices': around(3),
   'seats.defaulted': notHere('every request is answered in this run; the silent-seats exercise run fires it'),
+  // Three goals (each side's opening, and the situation's order to press on): every plan moves and goes ahead as drafted.
+  ...planBands({ drafts: 3, reviewed: 0, wentAhead: 3, goalFit: 2, supply: 2 }),
   'situations.decided': around(3),
   'situations.delegated': around(1),
   'situations.fired': around(6),
@@ -243,6 +307,25 @@ export const REFERENCE_RUNS: readonly ReferenceRun[] = [
   { name: 'union-1861 at war, 75 days', kind: 'full', pack: 'union-1861', days: 75, atWar: true, seats: 'rules', bands: withQuiet(UNION_BANDS) },
   { name: 'testbed, 120 days', kind: 'full', pack: 'testbed', days: 120, atWar: false, seats: 'rules', bands: withQuiet(TESTBED_BANDS) },
   { name: 'testbed, commanders silent, 120 days', kind: 'exercise', pack: 'testbed', days: 120, atWar: false, seats: 'silent-commanders', bands: { 'seats.defaulted': around(1) } },
+  {
+    name: 'testbed, the principal edits every plan, 120 days',
+    kind: 'exercise',
+    pack: 'testbed',
+    days: 120,
+    atWar: false,
+    seats: 'editing-principal',
+    // The principal's two goals come back for review and are edited ("move now"), each answered through compliance. Lane
+    // 1.1's compliance: one man objects twice, keeping his plan under review, so it is edited three times in all; one
+    // operation waits for his word and gets it. The situation's order goes ahead as drafted.
+    bands: {
+      'plans.submitted': around(2),
+      'plans.edit_received': around(3),
+      'plans.edit_answered': around(3),
+      'plans.edit_objected': around(2),
+      'plans.released': around(1),
+      'planner.term.haste': around(2),
+    },
+  },
   {
     name: 'union-1861 at peace, 75 days (the war gate, 0064)',
     kind: 'exercise',

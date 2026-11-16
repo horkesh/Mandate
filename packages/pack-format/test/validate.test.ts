@@ -263,7 +263,8 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'a template that keeps reports past a campaign', files: () => editJson('pack.json', (m: { rules: { reportTemplates: { maxAgeDays: number }[] } }) => (m.rules.reportTemplates[0]!.maxAgeDays = 100000)), kind: 'shape/too_big', file: 'pack.json' },
   { name: 'a template on a route that does not exist', files: () => editJson('pack.json', (m: { rules: { reportTemplates: { templateRoute: string }[] } }) => (m.rules.reportTemplates[0]!.templateRoute = 'semaphore')), kind: 'shape/invalid_value', file: 'pack.json' },
   { name: 'a conflict window of no days', files: () => editJson('pack.json', (m: { rules: { standing: { conflictWindowDays: number } } }) => (m.rules.standing.conflictWindowDays = 0)), kind: 'shape/too_small', file: 'pack.json' },
-  { name: 'a score cap below exactly enough', files: () => editJson('pack.json', (m: { rules: { standing: { scoreCap: number } } }) => (m.rules.standing.scoreCap = 999)), kind: 'shape/too_small', file: 'pack.json' },
+  { name: 'a daily drafting cap of no draft at all', files: () => editJson('pack.json', (m: { rules: { planner: { dailyDraftCap: number } } }) => (m.rules.planner.dailyDraftCap = 0)), kind: 'shape/too_small', file: 'pack.json' },
+  { name: 'an assault margin below the open field', files: () => editJson('pack.json', (m: { rules: { people: { traits: { assaultMargin: number } } } }) => (m.rules.people.traits.assaultMargin = 900)), kind: 'shape/too_small', file: 'pack.json' },
   {
     name: 'a scenario folder the manifest does not list',
     files: () => {

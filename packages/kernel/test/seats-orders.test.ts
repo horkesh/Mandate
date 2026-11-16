@@ -11,8 +11,8 @@ import { routeLatency } from '../src/messages/latency.ts';
 import { createIdMint, sendMessages } from '../src/messages/transit.ts';
 import type { State } from '../src/root-state.ts';
 import { buildControlIndex } from '../src/control-index/control-index.ts';
+import { viewGround } from '../src/planner/input.ts';
 import { headquartersOf } from '../src/seats/posts.ts';
-import { morningGround, standingOptions } from '../src/seats/requests.ts';
 import { latencyMapFor, type SeatsWorld } from '../src/seats/world.ts';
 import { indexWorld } from '../src/world/index.ts';
 import type { WorldRules } from '../src/world/world.ts';
@@ -94,7 +94,9 @@ describe('orders through chains (0040)', () => {
     expect(memo.knownBody.reportSubtype).toBe('memorandum');
     expect(memo.knownBody.reportAdvice).toEqual({ adviceRecommends: 'withdraw-order', adviceReasons: [{ reasonKind: 'values_offended', reasonWeight: 1000 }, { reasonKind: 'too_rash', reasonWeight: 400 }, { reasonKind: 'trusts_leader', reasonWeight: 1000 }], adviceConfidence: 800 });
     expect(results[0]!.decisionPoints.map((d) => d.point)).toEqual(['objection']);
-    expect(state.standingGoals[POST('a_army')]!.standingSpec.goalSpecKind).toBe('hold');
+    // He was given no goal: no plan record, and nothing moves him.
+    expect(state.planRecords[POST('a_army')]).toBeUndefined();
+    expect(state.standingGoals[POST('a_army')]).toBeUndefined();
   });
 
   it('goes around the chain by special messenger: faster, priced, and a grievance for the man bypassed', () => {
@@ -102,13 +104,14 @@ describe('orders through chains (0040)', () => {
     const { state, results } = run(world, 8, { a: { 1: [order('a_army', 'advance', 'b_cap', 'special-messenger', true)] } });
     expect(results[0]!.prices).toEqual([{ seat: lead, attention: 1, why: 'special-messenger' }]);
     expect(results[0]!.proposals).toEqual([{ proposal: 'grievance', person: P('a_sec'), cause: 'bypassed', order: expect.any(String) }]);
-    // Three courier days, halved and truncated: it lands on day 2, and the goal is set then.
-    const goal = state.standingGoals[POST('a_army')]!;
-    expect(goal.standingSpec).toEqual({ goalSpecKind: 'advance', goalSpecRegion: R('b_cap') });
-    expect(goal.standingSetDay).toBe(2);
-    expect(goal.standingViaChain).toBe(false);
-    // His acknowledgement rides to the wire and passes the filter post on its way to the principal.
-    const ack = knowledgeOf(state, lead).knownReports.find((r) => r.knownBody.reportClaims.some((c) => c.claimKind === 'order-obeyed'))!;
+    // Three courier days, halved and truncated: it lands on day 2, and the goal is set then (lane 1.2: a goal in plans).
+    const goal = state.planRecords[POST('a_army')]!;
+    expect(goal.planGoal).toMatchObject({ goalObjective: R('b_cap'), goalPosture: 'take' });
+    expect(goal.planSetDay).toBe(2);
+    expect(goal.planViaChain).toBe(false);
+    // His acknowledgement rides to the wire and passes the filter post on its way to the principal (read on the days it
+    // was held: the plan he submits later answers the same order and supersedes it).
+    const ack = results.flatMap((r) => knowledgeOf(r.state, lead).knownReports).find((r) => r.knownBody.reportClaims.some((c) => c.claimKind === 'order-obeyed'))!;
     expect(ack.knownVia).toEqual([POST('a_filter')]);
     expect(ack.knownRoute).toBe('wire');
   });
@@ -125,8 +128,8 @@ describe('orders through chains (0040)', () => {
     const response = state.orderResponses[responseKey(relayed[0]!.message!, P('a_sec'))]!;
     expect([response.respActual, response.respDeclared, response.respWillingness, response.respRole]).toEqual(['slow_walk', 'comply', -87, 'relay']);
     // Wired from the capital to the office at once, held two days, then two days to the front by wire and horse.
-    expect(state.standingGoals[POST('a_army')]!.standingSetDay).toBe(5);
-    expect(state.standingGoals[POST('a_army')]!.standingViaChain).toBe(true);
+    expect(state.planRecords[POST('a_army')]!.planSetDay).toBe(5);
+    expect(state.planRecords[POST('a_army')]!.planViaChain).toBe(true);
   });
 
   describe('conflicting orders: one down the chain, one around it (the office holds what it relays)', () => {
@@ -139,30 +142,39 @@ describe('orders through chains (0040)', () => {
         results.push(r);
         state = r.state;
       }
-      const tokens = knowledgeOf(state, lead).knownReports.flatMap((r) => r.knownBody.reportClaims.filter((c) => c.claimKind === 'order-obeyed').map((c) => c.claimToken));
+      // Every acknowledgement he received, on whichever day he held it (a later answer to the same order supersedes one).
+      const acks = new Map<string, string | null>();
+      for (const r of results) for (const k of knowledgeOf(r.state, lead).knownReports) for (const c of k.knownBody.reportClaims) if (c.claimKind === 'order-obeyed') acks.set(k.id, c.claimToken);
+      const tokens = [...acks.entries()].sort(([a], [b]) => (a < b ? -1 : 1)).map(([, t]) => t);
       return { state, results, tokens };
     }
 
-    it('keeps the chain’s order against a later one sent around it, and says so', () => {
-      // The chain order lands on day 5 (held two days by the office); the bypass on day 7.
-      const { state, results, tokens } = play({ 1: order('a_army', 'advance', 'b_front'), 6: order('a_army', 'hold', null, 'special-messenger', true) }, 12);
-      expect(state.standingGoals[POST('a_army')]!.standingSpec).toEqual({ goalSpecKind: 'advance', goalSpecRegion: R('b_front') });
-      expect(results.flatMap((r) => r.events).filter((e) => e.event === 'conflict')).toHaveLength(1);
-      expect(results.flatMap((r) => r.decisionPoints).map((d) => d.point)).toContain('order-conflict');
-      expect(tokens).toEqual(['new', 'conflict-kept']);
+    // Lane 1.2 calls lane 1.1's `resolveOrderConflict` at arrival: he resolves the two by his own compliance, each order
+    // read with the pack's terms for its kind, the chain's order and the newer one weighing more (0040).
+    it('resolves the conflict by his own compliance: the timid, cautious general obeys the hold, whichever arrives last, and says so', () => {
+      // The chain's advance lands on day 5 (held two days by the office); the hold sent around it on day 7.
+      const late = play({ 1: order('a_army', 'advance', 'b_front'), 6: order('a_army', 'hold', null, 'special-messenger', true) }, 12);
+      expect(late.state.planRecords[POST('a_army')]!.planGoal.goalPosture).toBe('hold');
+      expect(late.results.flatMap((r) => r.events).filter((e) => e.event === 'conflict')).toHaveLength(1);
+      expect(late.results.flatMap((r) => r.decisionPoints).map((d) => d.point)).toContain('order-conflict');
+      expect(late.tokens).toEqual(['new', 'conflict-new']);
+      // The hold lands first (day 3); the chain's advance, written first, on day 5: he keeps the hold.
+      const early = play({ 1: order('a_army', 'advance', 'b_front'), 2: order('a_army', 'hold', null, 'special-messenger', true) }, 12);
+      expect(early.state.planRecords[POST('a_army')]!.planGoal.goalPosture).toBe('hold');
+      expect(early.tokens).toEqual(['new', 'conflict-kept']);
     });
 
-    it('lets a slow chain order supersede a quicker one sent around it, and says so', () => {
-      // The bypass lands on day 3; the chain order, written first, on day 5.
-      const { state, tokens } = play({ 1: order('a_army', 'advance', 'b_front'), 2: order('a_army', 'hold', null, 'special-messenger', true) }, 12);
-      expect(state.standingGoals[POST('a_army')]!.standingSpec).toEqual({ goalSpecKind: 'advance', goalSpecRegion: R('b_front') });
-      expect(tokens).toEqual(['new', 'conflict-new']);
+    it('a bold general who values glory keeps the chain’s advance against a hold sent around it (positive control)', () => {
+      const bold = indexedFixture({ persons: { a_sec: { values: ['duty'], regard: 'below', boldness: 'average', candour: 'low' }, a_gen: { boldness: 'high', candour: 'average', regard: 'above', values: ['glory'] } } });
+      const { state, tokens } = play({ 1: order('a_army', 'advance', 'b_front'), 6: order('a_army', 'hold', null, 'special-messenger', true) }, 12, bold);
+      expect(state.planRecords[POST('a_army')]!.planGoal).toMatchObject({ goalObjective: R('b_front'), goalPosture: 'take' });
+      expect(tokens).toEqual(['new', 'conflict-kept']);
     });
 
     it('reads the conflict window from the pack (0072): with two days, the bypass two days after the chain order is simply obeyed', () => {
       const script = { 1: order('a_army', 'advance', 'b_front'), 6: order('a_army', 'hold', null, 'special-messenger', true) };
-      const narrow = play(script, 12, withRules(world, { standing: { conflictWindowDays: 2, scoreCap: 4000 } }));
-      expect(narrow.state.standingGoals[POST('a_army')]!.standingSpec.goalSpecKind).toBe('hold');
+      const narrow = play(script, 12, withRules(world, { standing: { conflictWindowDays: 2 } }));
+      expect(narrow.state.planRecords[POST('a_army')]!.planGoal.goalPosture).toBe('hold');
       expect(narrow.results.flatMap((r) => r.events).filter((e) => e.event === 'conflict')).toEqual([]);
       // The control: the pack's seven days make it a conflict, as above.
       expect(play(script, 12).results.flatMap((r) => r.events).filter((e) => e.event === 'conflict')).toHaveLength(1);
@@ -186,7 +198,7 @@ describe('orders through chains (0040)', () => {
       { day: 1, seat: bold, command: order('a_army', 'hold', null) },
       { day: 1, seat: lead, command: order('a_army', 'advance', null) },
       { day: 1, seat: lead, command: order('a_army', 'hold', null, 'rail') },
-      { day: 1, seat: lead, command: { cmd: 'choose', request: 'standing:a_army:1', option: 'hold' } },
+      { day: 1, seat: lead, command: { cmd: 'choose', request: 'plan:a_army:1', option: 'hold' } },
       { day: 2, seat: lead, command: order('a_army', 'hold', null) },
     ]);
     expect(r.rejections.map((x) => x.reason)).toEqual(['unknown_post', 'not_field_post', 'not_a_principal', 'bad_goal', 'route_unavailable', 'no_such_request', 'wrong_day']);
@@ -245,8 +257,8 @@ describe('filters on the wire (0032)', () => {
 });
 
 describe('belief: perception in belief derivation, the intelligence chief a separate term (planner-design findings 3 and 6)', () => {
-  it('inflates his dispatches and his menu by the same amount', () => {
-    // A strong army, so advancing stays consistent and the menu shows what he perceives.
+  it('inflates his dispatches and his plans by the same amount', () => {
+    // A strong army, so his plans move and show what he perceives.
     const world = indexedFixture({ posts: { a_army: { strength: 20_000 } } });
     // Two days: the order lands on day 2, and his first estimate has reached him; he has not moved yet.
     const { state } = run(world, 2, { a: { 1: [order('a_army', 'advance', 'b_cap', 'special-messenger', true)] } });
@@ -255,14 +267,10 @@ describe('belief: perception in belief derivation, the intelligence chief a sepa
     // 800 men seen, 2.4 times by the timid, cautious chief (his own perception bias), then 2.4 times by a timid, cautious general.
     expect(belief.value).toBe(4608);
     expect(belief.terms.map((t) => `${t.termKind}:${t.termValue}`)).toEqual(['observed:800', 'intelligence_bias:2400', 'reported:1920', 'perception_bias:2400']);
-    const options = standingOptions(world, state, POST('a_army'), morningGround(world, state, state.stateDay + 1))!;
-    expect(options.find((o) => o.region === R('b_front'))!.perceivedEnemy).toBe(4608);
-    // The score cap is the pack's (0072): a lower cap lowers every capped score, and the margin below it is unchanged.
-    const capped = withRules(world, { standing: { conflictWindowDays: 7, scoreCap: 1500 } });
-    const low = standingOptions(capped, state, POST('a_army'), morningGround(capped, state, state.stateDay + 1))!;
-    expect(options.map((o) => Math.min(o.score, 1500))).toEqual(low.map((o) => o.score));
-    expect(options.some((o) => o.score > 1500)).toBe(true);
-    expect(viewFor(world, state, seatIdFor(gen.id)).enemyBeliefs[R('b_front')]!.value).toBe(4608);
+    // The planner reads his view, never truth (0062): the same figure.
+    const view = viewFor(world, state, seatIdFor(gen.id));
+    expect(view.enemyBeliefs[R('b_front')]!.value).toBe(4608);
+    expect(viewGround(view).beliefs.get(R('b_front'))).toBe(4608);
     // The next dispatch he writes carries the same figure to the principal.
     const later = run(world, 6, {}, state).state;
     const dispatch = knowledgeOf(later, lead).knownReports.filter((r) => r.knownBody.reportAuthor === gen.id && r.knownBody.reportType === 'wire-dispatch').at(-1)!;
@@ -288,10 +296,13 @@ describe('belief: perception in belief derivation, the intelligence chief a sepa
     expect(b.terms.find((t) => t.termKind === 'perception_bias')!.termValue).toBe(1900);
   });
 
-  it('holds a timid general whose belief makes every advance inconsistent, and has him ask for men', () => {
+  it('holds a timid general whose belief makes every advance too weak, and has him ask for men once his plan is approved', () => {
     const world = indexedFixture();
-    const { state } = run(world, 8, { a: { 1: [order('a_army', 'advance', 'b_cap', 'special-messenger', true)] } });
-    expect(standingOptions(world, state, POST('a_army'), morningGround(world, state, state.stateDay + 1))!.map((o) => o.optionId)).toEqual(['hold']);
+    const { state } = run(world, 16, { a: { 1: [order('a_army', 'advance', 'b_cap', 'special-messenger', true)] } });
+    // He waits: a holding action, or an advance on condition of reinforcement; either departs from the goal, so it went for review and was approved.
+    const record = state.planRecords[POST('a_army')]!;
+    expect(record.planStatus).toBe('approved');
+    expect(record.planApproved!.candMethod === 'holding' || record.planApproved!.candConditions.some((g) => g.gateKind === 'move_when_reinforced')).toBe(true);
     expect(headquartersOf(world, state, POST('a_army'))).toBe(R('a_front'));
     const last = knowledgeOf(state, lead).knownReports.filter((r) => r.knownBody.reportAuthor === P('a_gen') && r.knownBody.reportType === 'wire-dispatch').at(-1)!;
     expect(last.knownBody.reportClaims.find((c) => c.claimKind === 'goal-status')!.claimToken).toBe('awaiting-strength');

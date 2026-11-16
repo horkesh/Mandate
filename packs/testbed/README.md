@@ -46,7 +46,7 @@ These rules are design parameters, chosen for play and not sourced facts. Every 
 | `movement.marchMinCapacityPermille` | 1000 | The least capacity an edge needs this month to carry a march: one whole unit |
 | `movement.courierPermille` | 333 | A courier's days on an edge, as a share of a division's: about a third, rounded up |
 
-### Messages, reports and standing goals (0072)
+### Messages, reports and conflicting orders (0072)
 
 Moved out of the kernel by 0072, with the same rule: design parameters every pack states, with no kernel default.
 
@@ -58,6 +58,22 @@ Moved out of the kernel by 0072, with the same rule: design parameters every pac
 | `latency.courierNoiseMaxDays` | 1 | The most extra days a courier or the mail loses to roads and weather |
 | `latency.specialMessengerPrice` | 1 | The attention a special messenger costs its sender |
 | `standing.conflictWindowDays` | 7 | Days within which a chain order stands against a newer one sent around the chain (0040) |
-| `standing.scoreCap` | 4000 | The highest score a commander's menu gives an advance, so an empty region does not dwarf every other term |
 | `reportTemplates` | 16 rows | One per report type and subtype: its usual route, its cadence, and when knowledge of it is pruned (by age, and once superseded) |
 The testbed states the Union pack's values. Its report templates are the table in the Union information-flows note (`docs/research/2026-11-14-union-information-flows.md`, "Design implications"), stated here as design parameters.
+
+### The planner and plans (lane 1.2, 0062)
+
+Design parameters, stated by every pack with no kernel default (0072). The planner's thresholds start from lane 0.9's spike; the weights are its scorer's, to be calibrated with compliance (FOUNDATION section 12).
+
+| Rule | Value | What it does |
+|---|---|---|
+| `planner.dailyDraftCap` | 3 | Plans drafted in one day, oldest request first; the rest wait (lane 0.8 measured the worst day on the Union graph) |
+| `planner.assaultMargin` | 1500 | His demand for an assault on held ground, permille of his demand in the open (lane 0.9 finding 1) |
+| `planner.shortfallTimid`, `shortfallBold` | 10, 50 | The shortfall, permille of the men he needs, past which he asks for men and waits: 1% for a man of boldness 0, 5% for one of 1000 (finding 8) |
+| `planner.assaultDays`, `reducePerLevel` | 1000, 10 | Days on enemy-held ground on a route: an assault where garrisoned, a reduction where fortified (finding 9) |
+| `planner.partnerHonours`, `partnerOffends` | `duty`; `caution` | Values a cooperating axis honours or offends in the partner asked; with `partnerRegardWeight` 300 and `partnerValueWeight` 100, his willingness (finding 7) |
+| `planner.flank*`, `dedupe*`, `topN`, `maxSearches` | as the spike | The flank's overlap (600) and length (1600) limits, deduplication, four moving candidates and a holding action, 64 searches a request (0062) |
+| `planner.weights` | 24 numbers | The profile (risk weight, supply care, concentration, axes) and the score terms' weights and divisors |
+| `plans.goalDefaults` | risk 500, 20 days, rail only, approve as drafted | The goal terms an order carries when it names only a posture and an objective (a situation's option, the generic principal) |
+| `plans.compliance*` | 800, 500, 500, 500, 500 | STAND-IN until the people recast: the candour, standing, resources, oversight and credibility compliance reads when a commander answers an edit |
+

@@ -11,8 +11,8 @@
 import { strictCompare } from '../compare.ts';
 import { isWellFormedId, type SeatId } from '../ids.ts';
 import { ROUTE_KINDS } from '../messages/latency.ts';
-import { GOAL_KINDS } from '../plans/goal.ts';
-import { COMMAND_KINDS, type Command } from './commands.ts';
+import { EDIT_KINDS, POSTURES } from '../plans/goal.ts';
+import { COMMAND_KINDS, REVIEW_ACTIONS, type Command } from './commands.ts';
 
 export interface LogEntry {
   /** The day the command applies to. */
@@ -50,17 +50,33 @@ export function entryProblems(raw: unknown, i: number): string[] {
   if (typeof e.seat !== 'string' || !isWellFormedId(e.seat)) problems.push(`${at}: seat must be a seat id`);
   const c = e.command as Partial<Record<string, unknown>> | undefined;
   if (typeof c !== 'object' || c === null || !(COMMAND_KINDS as readonly unknown[]).includes(c.cmd)) return [...problems, `${at}: unknown command`];
-  const FIELDS: Readonly<Record<string, readonly string[]>> = { order: ['bypass', 'cmd', 'goal', 'region', 'route', 'to'], choose: ['cmd', 'option', 'request'], decide: ['cmd', 'options', 'situation'], delegate: ['cmd', 'situation', 'to'] };
+  const FIELDS: Readonly<Record<string, readonly string[]>> = {
+    order: ['bypass', 'cmd', 'goal', 'route', 'to'],
+    review: ['action', 'bypass', 'cmd', 'edit', 'route', 'to'],
+    go: ['bypass', 'cmd', 'route', 'to'],
+    choose: ['cmd', 'option', 'request'],
+    decide: ['cmd', 'options', 'situation'],
+    delegate: ['cmd', 'situation', 'to'],
+  };
   const fields = FIELDS[c.cmd as string]!;
   const keys = Object.keys(c).sort(strictCompare);
   if (keys.join() !== fields.join()) return [...problems, `${at}: ${String(c.cmd)} has fields [${keys.join(', ')}], expected [${fields.join(', ')}]`];
   const id = (v: unknown) => typeof v === 'string' && isWellFormedId(v);
+  const routed = () => {
+    if (!id(c.to)) problems.push(`${at}: ${String(c.cmd)}.to must be a post id`);
+    if (!(ROUTE_KINDS as readonly unknown[]).includes(c.route)) problems.push(`${at}: ${String(c.cmd)}.route must be one of ${ROUTE_KINDS.join(', ')}`);
+    if (typeof c.bypass !== 'boolean') problems.push(`${at}: ${String(c.cmd)}.bypass must be true or false`);
+  };
   if (c.cmd === 'order') {
-    if (!id(c.to)) problems.push(`${at}: order.to must be a post id`);
-    if (!(GOAL_KINDS as readonly unknown[]).includes(c.goal)) problems.push(`${at}: order.goal must be one of ${GOAL_KINDS.join(', ')}`);
-    if (c.region !== null && !id(c.region)) problems.push(`${at}: order.region must be a region id or null`);
-    if (!(ROUTE_KINDS as readonly unknown[]).includes(c.route)) problems.push(`${at}: order.route must be one of ${ROUTE_KINDS.join(', ')}`);
-    if (typeof c.bypass !== 'boolean') problems.push(`${at}: order.bypass must be true or false`);
+    routed();
+    problems.push(...goalTermsProblems(c.goal).map((p) => `${at}: order.goal ${p}`));
+  } else if (c.cmd === 'review') {
+    routed();
+    if (!(REVIEW_ACTIONS as readonly unknown[]).includes(c.action)) problems.push(`${at}: review.action must be one of ${REVIEW_ACTIONS.join(', ')}`);
+    if ((c.action === 'edit') !== (c.edit !== null)) problems.push(`${at}: review.edit is given for an edit and only for an edit`);
+    if (c.edit !== null) problems.push(...editTermsProblems(c.edit).map((p) => `${at}: review.edit ${p}`));
+  } else if (c.cmd === 'go') {
+    routed();
   } else if (c.cmd === 'decide') {
     if (!id(c.situation)) problems.push(`${at}: decide.situation must be a situation id`);
     if (!Array.isArray(c.options) || !c.options.every((o) => typeof o === 'string' && o.length > 0) || new Set(c.options).size !== c.options.length) {
@@ -73,6 +89,40 @@ export function entryProblems(raw: unknown, i: number): string[] {
     if (typeof c.request !== 'string' || c.request.length === 0) problems.push(`${at}: choose.request must be a request key`);
     if (typeof c.option !== 'string' || c.option.length === 0) problems.push(`${at}: choose.option must be an option id`);
   }
+  return problems;
+}
+
+const ID = (v: unknown) => typeof v === 'string' && isWellFormedId(v);
+
+/** Problems with a goal's shape as a command carries it: exactly its fields, each of its type and vocabulary. */
+export function goalTermsProblems(raw: unknown): string[] {
+  const g = raw as Partial<Record<string, unknown>> | null;
+  if (typeof g !== 'object' || g === null || Array.isArray(g)) return ['must be an object'];
+  const fields = ['approveAsDrafted', 'awaitWord', 'committed', 'deadlineDays', 'neutral', 'objective', 'posture', 'rail', 'risk', 'river', 'sea'];
+  const keys = Object.keys(g).sort(strictCompare);
+  if (keys.join() !== fields.join()) return [`has fields [${keys.join(', ')}], expected [${fields.join(', ')}]`];
+  const problems: string[] = [];
+  if (g.objective !== null && !ID(g.objective)) problems.push('objective must be a region id or null');
+  if (!(POSTURES as readonly unknown[]).includes(g.posture)) problems.push(`posture must be one of ${POSTURES.join(', ')}`);
+  for (const k of ['risk', 'deadlineDays'] as const) if (typeof g[k] !== 'number' || !Number.isSafeInteger(g[k])) problems.push(`${k} must be an integer`);
+  for (const k of ['rail', 'river', 'sea', 'neutral', 'awaitWord', 'approveAsDrafted'] as const) if (typeof g[k] !== 'boolean') problems.push(`${k} must be true or false`);
+  if (!Array.isArray(g.committed) || !g.committed.every(ID)) problems.push('committed must be force block ids');
+  return problems;
+}
+
+/** Problems with an edit's shape as a command carries it. */
+export function editTermsProblems(raw: unknown): string[] {
+  const e = raw as Partial<Record<string, unknown>> | null;
+  if (typeof e !== 'object' || e === null || Array.isArray(e)) return ['must be an object'];
+  const fields = ['axis', 'concentration', 'kind', 'region', 'via'];
+  const keys = Object.keys(e).sort(strictCompare);
+  if (keys.join() !== fields.join()) return [`has fields [${keys.join(', ')}], expected [${fields.join(', ')}]`];
+  const problems: string[] = [];
+  if (!(EDIT_KINDS as readonly unknown[]).includes(e.kind)) problems.push(`kind must be one of ${EDIT_KINDS.join(', ')}`);
+  if (e.axis !== null && (typeof e.axis !== 'string' || e.axis.length === 0)) problems.push('axis must be an axis name or null');
+  if (e.region !== null && !ID(e.region)) problems.push('region must be a region id or null');
+  if (!Array.isArray(e.via) || !e.via.every(ID)) problems.push('via must be region ids');
+  if (e.concentration !== null && (typeof e.concentration !== 'number' || !Number.isSafeInteger(e.concentration))) problems.push('concentration must be an integer or null');
   return problems;
 }
 

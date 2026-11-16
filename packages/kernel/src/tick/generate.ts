@@ -15,8 +15,11 @@
  */
 import { perceptionBias, traitsOf } from '../people/traits.ts';
 import { strictCompare } from '../compare.ts';
+import { buildControlIndex } from '../control-index/control-index.ts';
 import { factionOfBlock } from '../forces/forces.ts';
-import type { FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
+import type { EdgeId, FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
+import { obstructionFor } from '../supply/supply.ts';
+import { passageOf } from './passage.ts';
 import { enemyBeliefs } from '../knowledge/beliefs.ts';
 import { knowledgeOf } from '../knowledge/knowledge.ts';
 import type { ReportBody, ReportClaim, ReportType } from '../knowledge/report.ts';
@@ -70,7 +73,24 @@ function enemyAt(ctx: TickContext, state: State, faction: FactionId): ReadonlyMa
   return out;
 }
 
-export function generateReports(ctx: TickContext, state: State, awaiting: ReadonlySet<PostId>): void {
+/**
+ * What a field commander's report says of his goal (lane 1.2): `holding` with no goal or a hold, `planning` while his
+ * plan is drafted, chosen or reviewed, `awaiting-strength` when the plan he executes holds for men (or holds at all,
+ * against a goal to take or relieve), `advancing` when it moves.
+ */
+export function goalStatus(state: State, post: PostId): { readonly token: string; readonly region: RegionId | null } {
+  const r = state.planRecords[post];
+  if (r === undefined) return { token: 'holding', region: null };
+  const region = r.planGoal.goalObjective;
+  if (r.planStatus !== 'approved') return { token: 'planning', region };
+  const plan = r.planApproved;
+  const reached = state.standingGoals[post]?.standingSpec.goalSpecKind === 'hold';
+  if (r.planGoal.goalPosture === 'hold' && (plan === null || plan.candMethod === 'holding' || reached)) return { token: 'holding', region };
+  if (plan === null || plan.candMethod === 'holding' || plan.candConditions.some((g) => g.gateKind === 'move_when_reinforced')) return { token: 'awaiting-strength', region };
+  return { token: reached ? 'holding' : 'advancing', region };
+}
+
+export function generateReports(ctx: TickContext, state: State): void {
   const { world, day } = ctx;
   const tpl = (type: ReportType, subtype: string | null = null) => templateFor(world.rules.templates, type, subtype);
   const fields = fieldPosts(world, state).filter((id) => world.factionIds.includes(postFaction(world, state, id)!));
@@ -79,6 +99,11 @@ export function generateReports(ctx: TickContext, state: State, awaiting: Readon
 
   if (onCycle(day, tpl('enemy-estimate').cadenceDays)) {
     const enemies = new Map<FactionId, ReadonlyMap<RegionId, number>>();
+    // What scouts see of the ground (lane 1.2): works standing in a region, and works or a boom closing a water edge
+    // to his side, so a commander plans on what he has been told (0062), never on truth.
+    const index = buildControlIndex(world.map, state.regionControl);
+    const network = passageOf(world.map, state);
+    const obstructed = new Set(state.infraObstructions.map((o) => o.obsEdge));
     for (const id of fields) {
       const holder = holderOf(id);
       const chief = state.postStates[id]!.postIntelChief;
@@ -91,11 +116,23 @@ export function generateReports(ctx: TickContext, state: State, awaiting: Readon
       const hq = headquartersOf(world, state, id);
       const claims: ReportClaim[] = [];
       const terms: BiasTerm[] = [];
+      const edges = new Set<EdgeId>();
       for (const region of world.watched(hq)) {
         const seen = enemy.get(region) ?? 0;
         claims.push(claim('enemy-strength', region, Math.trunc((seen * bias) / 1000), null, 700));
         terms.push(term('observed', seen, { region, post: id }));
         if (bias !== 1000) terms.push(term('intelligence_bias', bias, { person: author, region, post: id }));
+        const works = state.regionFortification[region] ?? 0;
+        if (works > 0) {
+          claims.push(claim('works', region, works, null, 700));
+          terms.push(term('observed', works, { region, post: id, rule: 'works' }));
+        }
+        for (const e of world.map.edgesAt.get(region) ?? []) if (obstructed.has(e.id)) edges.add(e.id);
+      }
+      for (const edge of [...edges].sort(strictCompare)) {
+        const o = obstructionFor(world.map, index, network, edge, side);
+        const by = o?.by === null || o?.by === undefined ? null : (world.map.world.installations.find((i) => i.id === o.by)?.region ?? null);
+        claims.push(claim('obstruction', by, o === null ? 0 : 1, edge, 700));
       }
       sendReport(ctx, state, {
         body: body(author, chief === null ? id : null, day, 'enemy-estimate', null, { kind: 'enemy', id }, claims),
@@ -111,10 +148,9 @@ export function generateReports(ctx: TickContext, state: State, awaiting: Readon
     for (const id of fields) {
       const holder = traitsOf(world, state, holderOf(id));
       const hq = headquartersOf(world, state, id);
-      const goal = state.standingGoals[id];
       const strength = commandStrength(state, id).men;
-      const status = goal === undefined || goal.standingSpec.goalSpecKind === 'hold' ? 'holding' : awaiting.has(id) ? 'awaiting-strength' : 'advancing';
-      const claims: ReportClaim[] = [claim('position', hq, 0, null, 1000), claim('goal-status', goal?.standingSpec.goalSpecRegion ?? null, 0, status, 1000)];
+      const { token: status, region: objective } = goalStatus(state, id);
+      const claims: ReportClaim[] = [claim('position', hq, 0, null, 1000), claim('goal-status', objective, 0, status, 1000)];
       const terms: BiasTerm[] = [];
       const beliefs = enemyBeliefs(state, world.rules.traits, holder, knowledgeOf(state, seatIdFor(holder.id)));
       for (const region of world.watched(hq)) {
