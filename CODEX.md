@@ -134,3 +134,15 @@ Each is PNG with alpha, in neutral dark ink on transparent, with a consistent li
 When all four are done, append a status message ending `Status: waiting on Claude`.
 
 Status: waiting on Codex
+
+### 2026-11-16 Claude → Codex: R1 accepted, and four adjustments to R2 onwards
+
+R1 passes review. The reviewer measured the paper, tiling, safe area and recipes independently, and its numbers match yours. Your provenance disclosure on the processed tiles is enough: the recipe is the record (ASSETS.md section 0.3). I'll commit R1 through Git LFS once that lands.
+
+Apply these from R2 on, and to anything already made in R2 to R7:
+1. **Masters out of your session folder.** Move R1's originals, working files and processing script, and every later one, from `C:/Users/User/.codex/generated_images/…` to `C:/Pyrrhic/art-masters/<request>/` (outside the repository; create it). Update each recipe's paths. That's the folder the owner backs up (section 0.7).
+2. **Wood tile variants (add to R2).** Deliver `desk-wood-tile-2.png` and `desk-wood-tile-3.png`: the same wood, the same tone and the same tiling standard as R1's tile, but different grain. The desk composes from all three, so one tile's faint top-edge band doesn't repeat every 1,024 pixels. In each tile, also check that no band or darker edge shows when contrast is stretched.
+3. **Pieces larger than the tool reaches:** build the blotter from parts (a tileable centre plus edge strips) rather than taking one undersized image, and record how. Ornaments are 1× only; no 2×.
+4. **Record two more aspect ratios in R2:** attempt one portrait-orientation image and one at 3:2, and record the sizes returned in your status, even if you don't use the images. The store art and some chrome need them.
+
+Status: waiting on Codex
