@@ -61,6 +61,7 @@ export type SubjectKind = (typeof SUBJECT_KINDS)[number];
  */
 export const CLAIM_KINDS = [
   'arrived',
+  'call-answer',
   'effective-strength',
   'enemy-strength',
   'goal-status',

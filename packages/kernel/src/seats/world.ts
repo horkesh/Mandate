@@ -28,9 +28,10 @@ import type { PlannerRules, PlansRules, StandingRules } from '../world/world.ts'
 import { situationReferenceProblems } from '../situations/references.ts';
 import type { SituationDef } from '../situations/types.ts';
 import { peopleRulesProblems, type PeopleRules, type TraitRules } from '../people/rules.ts';
+import { recruitmentRuleProblems, selfEmancipationRuleProblems } from '../recruitment/rules.ts';
 import { otherEnd, type WorldIndex } from '../world/index.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
-import type { PostKindRole } from '../world/world.ts';
+import type { PostKindRole, World } from '../world/world.ts';
 
 /**
  * The rules the seats layer reads, all the pack's (`WorldRules`, 0072), read from the World it was indexed with, never
@@ -110,6 +111,9 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
     ...standingProblems(pack.standing),
     ...peopleRulesProblems(pack.people, map.world.vocabularies.values?.map((v) => v.id) ?? []),
     ...plannerRuleProblems(pack.planner, pack.plans),
+    ...recruitmentRuleProblems(pack.recruitment),
+    ...selfEmancipationRuleProblems(pack.selfEmancipation),
+    ...menAndRegionsReferenceProblems(map.world),
   ];
 
   const people = new Map<PersonId, SeatPerson>();
@@ -281,3 +285,22 @@ export function kindsWithRole(world: SeatsWorld, role: PostKindRole): readonly s
   return world.map.world.vocabularies.postKinds.filter((k) => k.role === role).map((k) => k.id);
 }
 
+
+/** What the men-and-regions rules name must be in the World: the arm and the raising post kinds in its vocabularies, the call's values, the lines' faction (lane 1.7). */
+export function menAndRegionsReferenceProblems(world: World): string[] {
+  const { recruitment, selfEmancipation } = world.rules;
+  const v = world.vocabularies;
+  const problems: string[] = [];
+  // A pack where no post raises regiments names no arm that matters.
+  if (recruitment.raisingPostKinds.length > 0 && !v.arms.some((a) => a.id === recruitment.arm)) problems.push(`recruitment rule arm ${recruitment.arm} is not in the pack's arms`);
+  for (const k of recruitment.raisingPostKinds) if (!v.postKinds.some((p) => p.id === k)) problems.push(`recruitment rule raisingPostKinds: ${k} is not a post kind`);
+  const values = new Set((v.values ?? []).map((x) => x.id as string));
+  for (const value of [...recruitment.callTerms.honours, ...recruitment.callTerms.offends]) if (!values.has(value)) problems.push(`recruitment rule callTerms: value ${value} is not in the pack's values`);
+  if (selfEmancipation.linesFaction !== null && !world.factions.some((f) => f.id === selfEmancipation.linesFaction)) problems.push(`selfEmancipation rule linesFaction ${selfEmancipation.linesFaction} is not a faction`);
+  for (const c of world.census) {
+    const region = world.regions.find((r) => r.id === c.region);
+    if (region === undefined || (region.kind !== 'land' && region.kind !== 'key_point')) problems.push(`census: region ${c.region} is not a land region of the World`);
+    if (!Number.isSafeInteger(c.enslavedPopulation) || c.enslavedPopulation < 0) problems.push(`census: region ${c.region}: a whole number of people, not negative`);
+  }
+  return problems;
+}

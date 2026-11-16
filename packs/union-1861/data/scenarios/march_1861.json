@@ -535,6 +535,7 @@
 {"department":"st_pennsylvania","provenance":[{"at":"(map draft regions.csv counties_1861)","source":"MAP-LANE"},{"at":"(department structure)","source":"OOB-LANE"}],"region":"york_adams"}
 ],
 "id": "march_1861",
+"loyalty": [],
 "name": "scenario.march_1861.name",
 "obstructions": [
 {"by":"forts_jackson_st_philip","edge":"river:mississippi_lower:mississippi_passes","provenance":[{"at":"I-1 (ch. VI summary)","source":"OR"}]},

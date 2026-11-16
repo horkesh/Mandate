@@ -510,6 +510,14 @@ export function generatePack(files: PackFiles): GenerateResult {
       rec: { id: r.id_('id'), region: r.id_('region'), kind: r.text('kind'), name: names.add(`depot.${r.id}.name`, r.text('name')), capacity: r.int('capacity'), provenance: cites(r) },
     })),
   );
+  const census = place(
+    'world',
+    'census',
+    wt('census').rows.map((r) => {
+      const region = r.id_('region');
+      return { origin: { ...r.origin(), id: region }, rec: { id: region, region, enslavedPopulation: r.int('enslaved_population'), provenance: cites(r) } };
+    }),
+  ).map(({ id: _id, ...rest }) => rest);
   const weatherZones = place(
     'world',
     'weatherZones',
@@ -557,6 +565,7 @@ export function generatePack(files: PackFiles): GenerateResult {
     railLines,
     depots,
     weatherZones,
+    census,
     people,
   };
 
@@ -756,6 +765,7 @@ export function generatePack(files: PackFiles): GenerateResult {
         factions: header.factions,
         control,
         fortification: keyed('fortification', 'region', (r, id) => ({ region: id, levelPermille: r.int('level', 0) })),
+        loyalty: keyed('loyalty', 'region', (r, id) => ({ region: id, shares: [...r.cell('shares', parseShares(r.raw('shares')), [])].sort((x, y) => strictCompare(x.faction, y.faction)) })),
         edgeConditions: keyed('edgeConditions', 'edge', (r, id) => ({ edge: id, conditionPermille: r.int('condition', 1000) })),
         obstructions: keyed('obstructions', 'edge', (r, id) => ({ edge: id, by: r.optionalId('by'), provenance: cites(r) })),
         depotConditions: keyed('depotConditions', 'depot', (r, id) => ({ depot: id, conditionPermille: r.int('condition', 1000) })),
@@ -841,6 +851,7 @@ export function generatePack(files: PackFiles): GenerateResult {
     railLines: records('world', 'railLines', WS.railLines.element, rawWorld.railLines),
     depots: records('world', 'depots', WS.depots.element, rawWorld.depots),
     weatherZones: records('world', 'weatherZones', WS.weatherZones.element, rawWorld.weatherZones),
+    census: records('world', 'census', WS.census.element, rawWorld.census),
     people: records('world', 'people', WS.people.element, rawWorld.people),
   };
   const SS = ScenarioSchema.shape;
@@ -848,7 +859,7 @@ export function generatePack(files: PackFiles): GenerateResult {
   const scenarios: w.ScenarioStart[] = [];
   for (const s of rawScenarios) {
     const scope = `scenario:${s.id}`;
-    const raw = s.raw as Record<string, unknown> & Record<'control' | 'fortification' | 'edgeConditions' | 'obstructions' | 'depotConditions' | 'posts' | 'forceBlocks' | 'governments', unknown[]>;
+    const raw = s.raw as Record<string, unknown> & Record<'control' | 'fortification' | 'loyalty' | 'edgeConditions' | 'obstructions' | 'depotConditions' | 'posts' | 'forceBlocks' | 'governments', unknown[]>;
     const headRaw = { id: raw.id, name: raw.name, startDate: raw.startDate, seed: raw.seed, factions: raw.factions };
     const head = shapeCheck(Head, headRaw, (p) => ({ file: `${scenarioSourceDir(s.id)}/scenario.json`, at: zodPath(p) }), sink);
     if (!head) continue;
@@ -856,6 +867,7 @@ export function generatePack(files: PackFiles): GenerateResult {
       ...head,
       control: records(scope, 'control', SS.control.element, raw.control),
       fortification: records(scope, 'fortification', SS.fortification.element, raw.fortification),
+      loyalty: records(scope, 'loyalty', SS.loyalty.element, raw.loyalty),
       edgeConditions: records(scope, 'edgeConditions', SS.edgeConditions.element, raw.edgeConditions),
       obstructions: records(scope, 'obstructions', SS.obstructions.element, raw.obstructions),
       depotConditions: records(scope, 'depotConditions', SS.depotConditions.element, raw.depotConditions),

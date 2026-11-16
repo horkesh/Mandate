@@ -69,7 +69,7 @@
 {"department":"n_executive","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_coast"},
 {"department":"n_executive","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_east_front"},
 {"department":"n_executive","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_east_plain"},
-{"department":"n_executive","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_heartland"},
+{"department":"n_province","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_heartland"},
 {"department":"n_executive","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_naval_base"},
 {"department":"n_executive","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_railhead"},
 {"department":"n_executive","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"n_west_front"},
@@ -85,6 +85,17 @@
 {"department":"s_executive","provenance":[{"at":null,"source":"TB-DESIGN"}],"region":"w_valley"}
 ],
 "id": "opening",
+"loyalty": [
+{"region":"e_lowlands","shares":[{"faction":"north","permille":250},{"faction":"south","permille":650}]},
+{"region":"n_capital","shares":[{"faction":"north","permille":950}]},
+{"region":"n_east_front","shares":[{"faction":"north","permille":800},{"faction":"south","permille":100}]},
+{"region":"n_heartland","shares":[{"faction":"north","permille":900}]},
+{"region":"n_west_front","shares":[{"faction":"north","permille":800},{"faction":"south","permille":100}]},
+{"region":"s_coast_east","shares":[{"faction":"south","permille":850}]},
+{"region":"salient_base","shares":[{"faction":"south","permille":900}]},
+{"region":"salient_tip","shares":[{"faction":"north","permille":200},{"faction":"south","permille":700}]},
+{"region":"w_valley","shares":[{"faction":"north","permille":350},{"faction":"south","permille":550}]}
+],
 "name": "scenario.opening.name",
 "obstructions": [
 {"by":"corran_fort","edge":"river:mere_crossing:mere_lower","provenance":[{"at":null,"source":"TB-DESIGN"}]},
@@ -95,6 +106,7 @@
 "posts": [
 {"acting":false,"department":"n_war","departmentChanges":[],"holder":"n_organiser","id":"n_army_east","installation":null,"intelligenceChief":null,"kind":"army","links":[],"name":"post.n_army_east.name","parent":"n_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_east_front","standingOrders":[],"temporary":null,"unknowns":[]},
 {"acting":false,"department":"n_war","departmentChanges":[],"holder":"n_appointee","id":"n_army_west","installation":null,"intelligenceChief":null,"kind":"army","links":[],"name":"post.n_army_west.name","parent":"n_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_west_front","standingOrders":[],"temporary":null,"unknowns":[]},
+{"acting":false,"department":"n_province","departmentChanges":[],"holder":"n_governor","id":"n_brenmark_governor","installation":null,"intelligenceChief":null,"kind":"governor","links":[],"name":"post.n_brenmark_governor.name","parent":null,"provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_heartland","standingOrders":[],"temporary":null,"unknowns":[]},
 {"acting":false,"department":"n_war","departmentChanges":[],"holder":null,"id":"n_capital_defences","installation":null,"intelligenceChief":null,"kind":"garrison_command","links":[],"name":"post.n_capital_defences.name","parent":"n_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_capital","standingOrders":[],"temporary":null,"unknowns":[]},
 {"acting":false,"department":"n_navy","departmentChanges":[],"holder":null,"id":"n_capital_yard","installation":"capital_yard","intelligenceChief":null,"kind":"yard","links":[{"kind":"liaison","post":"n_capital_defences"}],"name":"post.n_capital_yard.name","parent":"n_navy_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_capital","standingOrders":[],"temporary":null,"unknowns":[]},
 {"acting":false,"department":"n_war","departmentChanges":[],"holder":"n_engineer","id":"n_gull_rock","installation":"gull_rock_fort","intelligenceChief":null,"kind":"fort_command","links":[],"name":"post.n_gull_rock.name","parent":"n_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"island_fort","standingOrders":[{"cites":[{"at":null,"source":"TB-DESIGN"}],"from":"n_war_office","id":"hold_rock","issuedOn":"1861-01-10","kind":"hold_position","summary":"post.n_gull_rock.order.hold_rock"},{"cites":[{"at":null,"source":"TB-DESIGN"}],"from":"n_war_office","id":"no_first_shot","issuedOn":"1861-01-10","kind":"do_not_provoke","summary":"post.n_gull_rock.order.no_first_shot"}],"temporary":null,"unknowns":[]},

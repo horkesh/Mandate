@@ -90,11 +90,11 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('neutral governments closed to passage, with the day each closed', 'command', ['situations'], [at('State', 'closedGovernments')]),
   // 0065: a department's side, copied from the World at the start; a situation moves a government to a side.
   field("each department's side (a faction, or none for a neutral government)", 'command', ['situations'], [at('State', 'departmentFactions')]),
-  field('region population, loyalty, supply value', 'regions', ['economy', 'situations', 'occupation']),
+  field('region population, loyalty, supply value', 'regions', ['economy', 'situations', 'occupation'], [at('State', 'regionLoyalty')]),
   // Lane 0.5: from the start (0050), changed only through `applyInfrastructure`.
   field('edge condition', 'infrastructure', ['combat', 'raids', 'repair orders'], [at('State', 'infraEdgeCondition')]),
   // Lane 0.5: a block's region (or the ship it is aboard), from the start (0050).
-  field('division location', 'movement', ['operations'], [at('State', 'forceLocations')]),
+  field('division location', 'movement', ['operations', 'recruitment (a new block placed, a disbanded one removed)'], [at('State', 'forceLocations')]),
   // Lane 0.5: one record per block or detachment carries strength, stores and
   // non-combatants (`forces/forces.ts`), so the three `forces` rows below share it.
   field('division strength, morale, experience, equipment', 'forces', ['combat', 'attrition', 'economy', 'recruitment'], [at('State', 'forceBlockStates')]),
@@ -105,12 +105,12 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   // Close-out (0072): copied from the scenario start at setup (0050); nothing changes it in Phase 0.
   field('fortification and entrenchment', 'regions', ['operations', 'combat'], [at('State', 'regionFortification')]),
   // Lane 0.5: which post commands each block; transfers name a force (0033).
-  field('division-to-post assignment', 'command', ['transfers', "the army commander's assignments"], [at('State', 'forceAssignments')]),
+  field('division-to-post assignment', 'command', ['transfers', "the army commander's assignments", 'recruitment (a new block to its governor, a disbanded one away)'], [at('State', 'forceAssignments')]),
   // Lane 0.5: one record per post carries its holder, chain, department, temporary operation,
   // links, scheduled changes and standing orders (`command/command.ts`), so the `command`
   // rows for standing orders and a post's department below share it.
   field('people in posts; temporary posts', 'command', ['appoint', 'relieve', 'promotion lists', "an operation's end"], [at('State', 'postStates')]),
-  field('standing agreements and prior orders on a post', 'command', ['verbs', 'situations', "orders from the holder's own department"]),
+  field('standing agreements and prior orders on a post', 'command', ['verbs', 'situations', "orders from the holder's own department", "a call a governor answered (his levy in hand)"], [at('State', 'postLevies')]),
   // Lane 1.1: people as State. True stats and temperament are drawn at setup by history's shadow; the rest start from the World.
   field("a person's stats, traits, standing, grievances, regard", 'people', ['combat results', 'the press', 'verbs', 'ladder', 'a bypassed relay'], [
     at('State', 'personTrue'),
@@ -139,7 +139,8 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('the framing term (who the public believes began the war)', 'politics', ["the war's opening situations", 'the press']),
   // Reserved by section 10 (0046), with no writer yet (close-out, 0072): named so whatever builds them writes only here.
   field('the Congress accountability ledger: acts taken while Congress was away', 'politics', []),
-  field('people who have reached Union lines', 'regions', ['the derived self-emancipation term (0046); never a lever']),
+  field('people who have reached Union lines', 'regions', ['the derived self-emancipation term (0046); never a lever'], [at('State', 'regionReachedUnionLines')]),
+  field("a raised block's enlistment: who raised it on whose call, and when its men's term ends", 'forces', ['recruitment'], [at('State', 'forceEnlistments')]),
   field('seat assignments', 'seats', ['setup', "the player's settings"], [at('State', 'seatAssignments')]),
   // Reserved by world format v2 (lane 0.2): State that starts from a scenario
   // start or a World rule, with its owner named before the mechanic is built.
@@ -184,6 +185,9 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'PlanGoal',
   'EditSpec',
   'PlanRecord',
+  'Enlistment',
+  'Levy',
+  'CallSpec',
   'PlanCounter',
   'CounterDrop',
   'PendingCounter',

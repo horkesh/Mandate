@@ -168,6 +168,17 @@ export interface DepotRecord {
   readonly provenance: Provenance;
 }
 
+/**
+ * A region's census of enslaved people (lane 1.7; SENSITIVE-HISTORY 3.2): protected input (the gate's`
+ * `region_enslaved_population`), read only by the derived self-emancipation term and never written, counted or spent by
+ * any seat. Rows only where a source gives it.
+ */
+export interface CensusRecord {
+  readonly region: RegionId;
+  readonly enslavedPopulation: number;
+  readonly provenance: Provenance;
+}
+
 /** Reserved for weather (0029): regions that share one day's weather draw. */
 export interface WeatherZoneRecord {
   readonly id: WeatherZoneId;

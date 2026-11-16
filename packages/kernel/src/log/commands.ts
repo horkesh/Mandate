@@ -71,6 +71,22 @@ export interface GoCommand {
   readonly bypass: boolean;
 }
 
+/**
+ * A call for regiments to a governor's post (lane 1.7): an order through people. He answers by his own compliance with
+ * the pack's call terms; his answer sets how many regiments he raises and when they muster (`tick/recruitment.ts`).
+ */
+export interface CallCommand {
+  readonly cmd: 'call';
+  /** The governor's post. */
+  readonly to: PostId;
+  /** Regiments asked of him. */
+  readonly regiments: number;
+  /** Days the men are enlisted for, from the muster. */
+  readonly termDays: number;
+  readonly route: RouteKind;
+  readonly bypass: boolean;
+}
+
 export interface ChooseCommand {
   readonly cmd: 'choose';
   /** The request this answers (`SeatRequest.requestKey`). */
@@ -97,8 +113,8 @@ export interface DelegateCommand {
 }
 
 /** What a seat may send in a `commands` answer. */
-export type SeatCommand = OrderCommand | ReviewCommand | GoCommand | DecideCommand | DelegateCommand;
+export type SeatCommand = OrderCommand | ReviewCommand | GoCommand | CallCommand | DecideCommand | DelegateCommand;
 
-export type Command = OrderCommand | ReviewCommand | GoCommand | ChooseCommand | DecideCommand | DelegateCommand;
+export type Command = OrderCommand | ReviewCommand | GoCommand | CallCommand | ChooseCommand | DecideCommand | DelegateCommand;
 
-export const COMMAND_KINDS = ['choose', 'decide', 'delegate', 'go', 'order', 'review'] as const;
+export const COMMAND_KINDS = ['call', 'choose', 'decide', 'delegate', 'go', 'order', 'review'] as const;

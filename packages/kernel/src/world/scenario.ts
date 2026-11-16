@@ -43,6 +43,12 @@ export interface RegionControlStart {
   readonly shares: readonly ControlShare[];
 }
 
+/** A region's loyalty at the start (lane 1.7): each faction's share, permille, summing to at most 1000. Never a stand-in for control. */
+export interface LoyaltyStart {
+  readonly region: RegionId;
+  readonly shares: readonly { readonly faction: FactionId; readonly permille: number }[];
+}
+
 export interface FortificationStart {
   readonly region: RegionId;
   readonly levelPermille: number;
@@ -200,6 +206,8 @@ export interface ScenarioStart {
   readonly factions: readonly FactionStart[];
   readonly control: readonly RegionControlStart[];
   readonly fortification: readonly FortificationStart[];
+  /** Region loyalty at the start (lane 1.7; `regions`). Rows only where a source gives it. */
+  readonly loyalty: readonly LoyaltyStart[];
   readonly edgeConditions: readonly EdgeConditionStart[];
   readonly obstructions: readonly ObstructionStart[];
   readonly depotConditions: readonly DepotConditionStart[];
@@ -216,6 +224,7 @@ export interface ScenarioStart {
 export const START_OWNERS: Readonly<Record<string, string>> = Object.freeze({
   control: 'control',
   fortification: 'regions',
+  loyalty: 'regions',
   edgeConditions: 'infrastructure',
   obstructions: 'infrastructure',
   depotConditions: 'infrastructure',
