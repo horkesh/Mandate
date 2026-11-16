@@ -41,7 +41,7 @@
 {"region":"cumberland_valley_pa","shares":[{"faction":"union","permille":1000}]},
 {"region":"dakota","shares":[{"faction":"union","permille":1000}]},
 {"region":"danville","shares":[]},
-{"region":"delaware","shares":[]},
+{"region":"delaware","shares":[{"faction":"union","permille":1000}]},
 {"region":"eastern_kentucky","shares":[]},
 {"region":"eastern_shore","shares":[{"faction":"union","permille":1000}]},
 {"region":"fl_peninsula_north","shares":[{"faction":"confederate","permille":1000}]},

@@ -890,6 +890,16 @@
       "copyUsed": "read through transcriptions (civilwar.com and spirit61.info OR pages, jfepperson.org and Dickinson House Divided transcriptions of the Lincoln Papers, civilwarcauses.org, archive.org); each locator names the document and the transcription; re-read in print before release",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "AAC",
+      "title": "Appletons' Annual Cyclopaedia and Register of Important Events of the Year 1861 (New York, 1862)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "read as page text through a fetch tool, 2026-11-16; page numbers as printed (Delaware, p.256); a period secondary, never a primary journal: re-read in print",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

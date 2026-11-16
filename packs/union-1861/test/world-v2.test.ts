@@ -69,9 +69,12 @@ describe('Union 1861 world v2', () => {
     expect(controlOf('charleston')).toEqual([{ faction: 'confederate', permille: 1000 }]);
     for (const r of ['richmond', 'nashville', 'raleigh', 'little_rock']) expect(controlOf(r)).toEqual([]);
     // Loyalty never stands in for control: the border states' proposals are not in the table (they wait for a loyalty field).
-    for (const r of ['baltimore', 'delaware', 'bluegrass', 'st_louis', 'frederick_md']) expect(controlOf(r)).toEqual([]);
+    for (const r of ['baltimore', 'bluegrass', 'st_louis', 'frederick_md']) expect(controlOf(r)).toEqual([]);
+    // Delaware's government is the Union's from the start (lane 1.11a): its legislature declined Mississippi's commissioner on 3 January 1861 (AAC p.256).
+    expect(controlOf('delaware')).toEqual([{ faction: 'union', permille: 1000 }]);
+    expect(world.departments.find((d) => d.id === 'st_delaware')!.faction).toBe('union');
     const neutral = world.departments.filter((d) => d.faction === null && d.kind === 'state_government').map((d) => d.id as string).sort();
-    expect(neutral).toEqual(['st_arkansas', 'st_delaware', 'st_kentucky', 'st_maryland', 'st_missouri', 'st_north_carolina', 'st_tennessee', 'st_virginia']);
+    expect(neutral).toEqual(['st_arkansas', 'st_kentucky', 'st_maryland', 'st_missouri', 'st_north_carolina', 'st_tennessee', 'st_virginia']);
     // The nations' governments hold no side either: each is its own nation's, with its own polity (0069, 0070).
     const nations = world.departments.filter((d) => d.faction === null && d.kind === 'nation_government').map((d) => d.id as string).sort();
     expect(nations).toEqual(['nation_cherokee', 'nation_chickasaw', 'nation_choctaw', 'nation_muscogee', 'nation_seminole']);
