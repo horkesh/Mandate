@@ -252,6 +252,8 @@ const UNION_BANDS: Record<string, GateBand> = {
   'situations.proposals': around(3),
   'command.side_changed': around(2),
   'command.government_closed': around(1),
+  // S01's relief opens the expedition command it declares (0040).
+  'command.temporary_post_opened': around(1),
   'situations.resurfaced': around(2),
   'situations.staff_lines': around(8),
   'situations.surfaced': around(9),
@@ -276,6 +278,7 @@ const UNION_BANDS: Record<string, GateBand> = {
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
 const TESTBED_BANDS: Record<string, GateBand> = {
+  'command.temporary_post_opened': notHere('no testbed situation declares or opens a temporary post; union-1861 fires it (the relief expedition)'),
   'command.government_closed': notHere('no testbed situation closes a neutral government in this run; union-1861 fires it (a border state’s neutrality)'),
   'command.side_changed': notHere('no testbed situation changes a government’s side in this run; union-1861 fires it'),
   // Lane 1.11: the testbed's rule-seat principal makes no call, and its situations neither resurface nor change their options in this run; union-1861 fires them.

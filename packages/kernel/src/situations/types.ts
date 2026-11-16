@@ -66,7 +66,13 @@ export type Condition =
   /** A post's headquarters stands in a region: derived from where its strongest block stands, never stored (0064, `seats/posts.ts`). */
   | { readonly headquartersAt: { readonly post: PostId; readonly region: RegionId } }
   /** Days since this situation surfaced to the principal (its clock; gate re-check N6): for `expiresWhen`, `appearsWhen` and `waitsOn`. */
-  | { readonly clockAtLeast: number };
+  | { readonly clockAtLeast: number }
+  /**
+   * A call for regiments reached the holder of a post at least `days` ago (lane 1.11, the lead's ruling): the cause of a
+   * state's act a pack-set delay after the call arrives. A STAND-IN until conventions and legislatures are modelled (1B):
+   * a run where the call comes late moves the act with it.
+   */
+  | { readonly callReceived: { readonly post: PostId; readonly days: number } };
 
 /**
  * An effect. Flags are the situations module's own chain state. Everything

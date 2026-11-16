@@ -43,6 +43,21 @@ export interface RegionControlStart {
   readonly shares: readonly ControlShare[];
 }
 
+/**
+ * A temporary post the start declares but does not open (0040; lane 1.11): an expedition command a situation's effect
+ * opens, with its holder (a man without a post may hold it, as Fox did).
+ */
+export interface TemporaryPostStart {
+  readonly id: PostId;
+  readonly name: StringKey;
+  readonly kind: string;
+  readonly department: DepartmentId;
+  readonly parent: PostId | null;
+  readonly holder: PersonId | null;
+  readonly region: RegionId | null;
+  readonly operation: string;
+}
+
 /** A region's loyalty at the start (lane 1.7): each faction's share, permille, summing to at most 1000. Never a stand-in for control. */
 export interface LoyaltyStart {
   readonly region: RegionId;
@@ -215,6 +230,8 @@ export interface ScenarioStart {
   readonly forceBlocks: readonly ForceBlockStart[];
   /** One row per land region and key point (0058); none for water or off-map regions. */
   readonly governments: readonly GovernmentStart[];
+  /** Temporary posts a situation may open (lane 1.11), none open at the start. */
+  readonly temporaryPosts: readonly TemporaryPostStart[];
 }
 
 /**
@@ -234,6 +251,7 @@ export const START_OWNERS: Readonly<Record<string, string>> = Object.freeze({
   'forceBlocks (strength, stores, detachments, non-combatants)': 'forces',
   'forceBlocks.post': 'command',
   governments: 'command',
+  'temporaryPosts (declared; opened by a situation)': 'command',
   'people ranks at the start date': 'people',
   'weather (reserved: nothing at a start yet)': 'weather',
 });

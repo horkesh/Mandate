@@ -690,5 +690,8 @@
 {"acting":false,"department":"us_war","departmentChanges":[],"holder":"abert_john_j","id":"us_war_topographical_engineers","installation":null,"intelligenceChief":null,"kind":"bureau","links":[],"name":"post.us_war_topographical_engineers.name","parent":"us_secretary_war","provenance":[{"at":"III-1 p.964","source":"OR"},{"at":"vol.1 (chiefs of bureaus)","source":"Heitman"},{"at":"vol.1","source":"Heitman"}],"railLine":null,"region":"washington","standingOrders":[],"temporary":null,"unknowns":[]}
 ],
 "seed": 1861,
-"startDate": "1861-03-05"
+"startDate": "1861-03-05",
+"temporaryPosts": [
+{"department":"us_war","holder":"fox_gustavus_v","id":"us_sumter_relief_expedition","kind":"temporary_command","name":"post.us_sumter_relief_expedition.name","operation":"sumter_relief","parent":"us_secretary_war","region":"new_york"}
+]
 }

@@ -768,6 +768,7 @@ export function generatePack(files: PackFiles): GenerateResult {
         factions: header.factions,
         control,
         fortification: keyed('fortification', 'region', (r, id) => ({ region: id, levelPermille: r.int('level', 0) })),
+        temporaryPosts: place(scope, 'temporaryPosts', st('temporaryPosts').rows.map((r) => { const id = r.id_('id'); return { origin: { ...r.origin(), id }, rec: { id, name: names.add(`post.${id}.name`, r.text('name')), kind: r.text('kind'), department: r.id_('department'), parent: r.optionalId('parent'), holder: r.optionalId('holder'), region: r.optionalId('region'), operation: r.text('operation') } }; })),
         loyalty: keyed('loyalty', 'region', (r, id) => ({ region: id, shares: [...r.cell('shares', parseShares(r.raw('shares')), [])].sort((x, y) => strictCompare(x.faction, y.faction)) })),
         edgeConditions: keyed('edgeConditions', 'edge', (r, id) => ({ edge: id, conditionPermille: r.int('condition', 1000) })),
         obstructions: keyed('obstructions', 'edge', (r, id) => ({ edge: id, by: r.optionalId('by'), provenance: cites(r) })),
@@ -862,7 +863,7 @@ export function generatePack(files: PackFiles): GenerateResult {
   const scenarios: w.ScenarioStart[] = [];
   for (const s of rawScenarios) {
     const scope = `scenario:${s.id}`;
-    const raw = s.raw as Record<string, unknown> & Record<'control' | 'fortification' | 'loyalty' | 'edgeConditions' | 'obstructions' | 'depotConditions' | 'posts' | 'forceBlocks' | 'governments', unknown[]>;
+    const raw = s.raw as Record<string, unknown> & Record<'control' | 'fortification' | 'loyalty' | 'temporaryPosts' | 'edgeConditions' | 'obstructions' | 'depotConditions' | 'posts' | 'forceBlocks' | 'governments', unknown[]>;
     const headRaw = { id: raw.id, name: raw.name, startDate: raw.startDate, seed: raw.seed, factions: raw.factions };
     const head = shapeCheck(Head, headRaw, (p) => ({ file: `${scenarioSourceDir(s.id)}/scenario.json`, at: zodPath(p) }), sink);
     if (!head) continue;
@@ -871,6 +872,7 @@ export function generatePack(files: PackFiles): GenerateResult {
       control: records(scope, 'control', SS.control.element, raw.control),
       fortification: records(scope, 'fortification', SS.fortification.element, raw.fortification),
       loyalty: records(scope, 'loyalty', SS.loyalty.element, raw.loyalty),
+      temporaryPosts: records(scope, 'temporaryPosts', SS.temporaryPosts.element, raw.temporaryPosts),
       edgeConditions: records(scope, 'edgeConditions', SS.edgeConditions.element, raw.edgeConditions),
       obstructions: records(scope, 'obstructions', SS.obstructions.element, raw.obstructions),
       depotConditions: records(scope, 'depotConditions', SS.depotConditions.element, raw.depotConditions),

@@ -6,17 +6,11 @@
   "text": "situation.kentucky_neutrality_proclaimed.text",
   "earliest": "1861-05-20",
   "event": {
-    "all": [
-      {
-        "decided": "call_for_troops",
-        "options": null
-      },
-      {
-        "dayAtLeast": 76
-      }
-    ]
+    "callReceived": {
+      "post": "st_gov_kentucky",
+      "days": 35
+    }
   },
-  "railroad": "the governor's proclamation of neutrality comes on 20 May, after the House's resolution of 16 May; a legislature is not modelled, so it comes on its date once the call is made",
   "effects": [
     {
       "propose": {

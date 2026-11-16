@@ -57,6 +57,10 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
   if ('knows' in c) return knowsMatch(ctx.knowledge, c.knows, ctx.since);
   if ('goal' in c) return ctx.state.planRecords[c.goal.post]?.planGoal.goalPosture === c.goal.posture;
   if ('headquartersAt' in c) return ctx.headquartersOf !== undefined && ctx.headquartersOf(c.headquartersAt.post) === c.headquartersAt.region;
+  if ('callReceived' in c) {
+    const { post, days } = c.callReceived;
+    return Object.values(ctx.state.orderResponses).some((r) => r.respPost === post && r.respRole === 'addressee' && r.respKind === 'call' && ctx.day - r.respDay >= days);
+  }
   // clockAtLeast
   if (ctx.situation === null) return false;
   const r = ctx.state.situationStates[ctx.situation];
@@ -67,7 +71,7 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
 
 /** The predicate at the top of a condition. */
 export function predicateOf(c: Condition): string {
-  for (const k of ['all', 'any', 'not', 'dayAtLeast', 'flag', 'fired', 'decided', 'knows', 'goal', 'headquartersAt', 'clockAtLeast'] as const) if (k in c) return k;
+  for (const k of ['all', 'any', 'not', 'dayAtLeast', 'flag', 'fired', 'decided', 'knows', 'goal', 'headquartersAt', 'callReceived', 'clockAtLeast'] as const) if (k in c) return k;
   return 'unknown';
 }
 

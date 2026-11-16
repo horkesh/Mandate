@@ -88,3 +88,28 @@ describe('a situation option issues a call (lane 1.11)', () => {
     expect(state.postLevies).toEqual({});
   });
 });
+
+describe('a government’s act a pack-set delay after the call reaches it (lane 1.11, the lead’s ruling)', () => {
+  it('fires the notice once the call has reached the governor the condition names, that many days before, never earlier', () => {
+    const notice: phase0.SituationDef = {
+      ...callSituation('n_brenmark_governor', 90),
+      id: ids.toId('situation', 'shire_act'),
+      kind: 'notice',
+      event: { callReceived: { post: POST('n_brenmark_governor'), days: 3 } },
+      railroad: null,
+      options: [],
+      inaction: null,
+      historicalDefault: null,
+      staffLine: null,
+      effects: [{ setFlag: 'shire_acted' }],
+      report: { authors: [POST('n_war_office')], reportType: 'wire-dispatch', subtype: null },
+    };
+    const map = v2Map('testbed')!;
+    const world = phase0.indexSeatsWorld(w.indexWorld(map.world), map.start, { situations: [callSituation('n_brenmark_governor', 90), notice] });
+    let state = phase0.createState(world, { seed: map.start.seed, people: 'as-history' });
+    for (let d = 1; d <= 12; d++) state = phase0.tick(world, state, [], { freeze: true }).state;
+    const arrived = Object.values(state.orderResponses).find((r) => r.respKind === 'call' && r.respPost === POST('n_brenmark_governor'))!;
+    expect(arrived).toBeDefined();
+    expect(state.situationFlags['shire_acted']).toBe(arrived.respDay + 3);
+  });
+});

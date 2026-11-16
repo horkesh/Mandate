@@ -508,6 +508,8 @@ export const GOVERNMENT_CLOSED_FIELD = 'government_closed';
  * proposal's `side` the faction it joins, and the delta above 0. A change of side, never a closing.
  */
 export const DEPARTMENT_SIDE_FIELD = 'department_side';
+/** A temporary post the scenario start declares, opened by a situation's effect (0040: an expedition command; lane 1.11). */
+export const TEMPORARY_POST_FIELD = 'temporary_post';
 
 /** Why a department is not a government, or null: the pack's department kinds mark governments (0058). */
 function notAGovernment(map: WorldIndex, department: DepartmentId): string | null {
@@ -676,7 +678,8 @@ export function regionMoveProblem(map: WorldIndex, from: DepartmentId | 'unknown
 
 export type AppliedProposal =
   | { readonly field: typeof GOVERNMENT_CLOSED_FIELD; readonly subject: DepartmentId; readonly change: 'closed' | 'reopened' | 'unchanged' }
-  | { readonly field: typeof DEPARTMENT_SIDE_FIELD; readonly subject: DepartmentId; readonly change: 'joined' | 'unchanged'; readonly side: SideChange | null };
+  | { readonly field: typeof DEPARTMENT_SIDE_FIELD; readonly subject: DepartmentId; readonly change: 'joined' | 'unchanged'; readonly side: SideChange | null }
+  | { readonly field: typeof TEMPORARY_POST_FIELD; readonly subject: PostId; readonly change: 'opened' | 'unchanged' };
 
 /**
  * Apply the proposals `command` owns (owner `command`), in order; others are
@@ -693,6 +696,7 @@ export function applyCommandProposals(
   start: State,
   proposals: readonly CommandProposal[],
   day: number,
+  temporaryPosts: readonly TemporaryPostSpec[] = [],
 ): { readonly state: State; readonly applied: readonly AppliedProposal[]; readonly refused: readonly Refusal[] } {
   let state = start;
   const applied: AppliedProposal[] = [];
@@ -700,6 +704,25 @@ export function applyCommandProposals(
   const refuse = (reason: RefusalReason, why: string) => refused.push({ reason, why });
   for (const p of proposals) {
     if (p.owner !== 'command') continue;
+    // A temporary post the start declares (0040): opened once, by a situation's effect; the post then serves as any post.
+    if (p.field === TEMPORARY_POST_FIELD) {
+      const spec = temporaryPosts.find((s) => s.id === p.subject);
+      if (spec === undefined) {
+        refuse('invalid', `no temporary post ${p.subject ?? 'none'} is declared in the start`);
+        continue;
+      }
+      if (state.postStates[spec.id] !== undefined) {
+        applied.push({ field: TEMPORARY_POST_FIELD, subject: spec.id, change: 'unchanged' });
+        continue;
+      }
+      try {
+        state = createTemporaryPost(map, state, spec);
+        applied.push({ field: TEMPORARY_POST_FIELD, subject: spec.id, change: 'opened' });
+      } catch (e) {
+        refuse('invalid', e instanceof CommandError ? e.problems.join('; ') : String(e));
+      }
+      continue;
+    }
     if ((p.field !== GOVERNMENT_CLOSED_FIELD && p.field !== DEPARTMENT_SIDE_FIELD) || p.subject === null) {
       refuse('invalid', `command owns no field "${p.field}" with subject ${p.subject ?? 'none'}`);
       continue;

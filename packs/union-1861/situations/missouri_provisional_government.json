@@ -6,17 +6,11 @@
   "text": "situation.missouri_provisional_government.text",
   "earliest": "1861-07-30",
   "event": {
-    "all": [
-      {
-        "decided": "call_for_troops",
-        "options": null
-      },
-      {
-        "dayAtLeast": 147
-      }
-    ]
+    "callReceived": {
+      "post": "st_gov_missouri",
+      "days": 106
+    }
   },
-  "railroad": "the state convention vacates the offices and installs a provisional government on 30 or 31 July; a convention is not modelled, so its act comes on its date once the call is made",
   "effects": [
     {
       "propose": {

@@ -26,6 +26,8 @@ export interface OrderResponse {
   readonly respPost: PostId | null;
   /** He relayed it (0040) or it was addressed to him. */
   readonly respRole: 'relay' | 'addressee';
+  /** What he answered: the order's kind (a goal, a call, an edit, ...) or the verb's (`verb:audience`); lane 1.11's `callReceived` reads it. */
+  readonly respKind: string;
   readonly respDay: number;
   readonly respActual: ComplianceRung;
   readonly respDeclared: ComplianceRung;
@@ -44,13 +46,14 @@ export function responseKey(order: MessageId, person: PersonId): string {
 /** A response as State, from compliance's answer. */
 export function responseOf(
   answer: DirectiveResponse,
-  at: { readonly order: MessageId; readonly person: PersonId; readonly post: PostId | null; readonly role: 'relay' | 'addressee'; readonly day: number },
+  at: { readonly order: MessageId; readonly person: PersonId; readonly post: PostId | null; readonly role: 'relay' | 'addressee'; readonly day: number; readonly kind: string },
 ): OrderResponse {
   return {
     respOrder: at.order,
     respPerson: at.person,
     respPost: at.post,
     respRole: at.role,
+    respKind: at.kind,
     respDay: at.day,
     respActual: answer.actual,
     respDeclared: answer.declared,

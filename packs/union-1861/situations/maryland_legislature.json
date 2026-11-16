@@ -6,17 +6,11 @@
   "text": "situation.maryland_legislature.text",
   "earliest": "1861-04-29",
   "event": {
-    "all": [
-      {
-        "decided": "call_for_troops",
-        "options": null
-      },
-      {
-        "dayAtLeast": 55
-      }
-    ]
+    "callReceived": {
+      "post": "st_gov_maryland",
+      "days": 14
+    }
   },
-  "railroad": "the legislature, moved by the governor to Frederick, declares on 29 April that it has no power to secede; a legislature is not modelled, so its vote comes on its date once the call is made",
   "effects": [
     {
       "propose": {

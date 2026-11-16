@@ -92,7 +92,7 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
   const governor = msg.msgTo;
   const rules = world.map.world.rules.recruitment;
   const answer = answerOrder(world, start, governor, order.orderIssuer, callTerms(rules));
-  let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: governor, post, role: 'addressee', day }));
+  let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: governor, post, role: 'addressee', day, kind: 'call' }));
   const side = postFaction(world, state, post);
   const region = state.postStates[post]!.postSeat;
   const loyalty = side === null || region === null ? null : loyaltyOf(state, region, side);

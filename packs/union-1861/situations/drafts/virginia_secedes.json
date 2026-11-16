@@ -6,17 +6,11 @@
   "text": "situation.virginia_secedes.text",
   "earliest": "1861-04-17",
   "event": {
-    "all": [
-      {
-        "decided": "call_for_troops",
-        "options": null
-      },
-      {
-        "dayAtLeast": 43
-      }
-    ]
+    "callReceived": {
+      "post": "st_gov_virginia",
+      "days": 2
+    }
   },
-  "railroad": "the convention votes the ordinance on 17 April, after the call; a convention is not modelled, so its vote comes on its date once the call is made",
   "effects": [
     {
       "propose": {

@@ -47,7 +47,7 @@ const knows = z.strictObject({
   token: z.string().min(1).nullable().default(null),
 });
 
-/** A condition: one key names the predicate (all, any, not, dayAtLeast, flag, fired, decided, knows, goal, headquartersAt, clockAtLeast). */
+/** A condition: one key names the predicate (all, any, not, dayAtLeast, flag, fired, decided, knows, goal, headquartersAt, callReceived, clockAtLeast). */
 export const ConditionSchema: z.ZodType<Condition> = z.lazy(() =>
   z.union([
     z.strictObject({ all: z.array(ConditionSchema).min(1, 'at least one condition') }),
@@ -60,6 +60,7 @@ export const ConditionSchema: z.ZodType<Condition> = z.lazy(() =>
     z.strictObject({ knows }),
     z.strictObject({ goal: z.strictObject({ post: idOf('post'), posture: z.enum(phase0.POSTURES) }).describe('The post holds a goal of this posture, ordered by its principal (lane 1.2: a goal in plans, no longer a standing goal).') }),
     z.strictObject({ headquartersAt: z.strictObject({ post: idOf('post'), region: idOf('region') }) }),
+    z.strictObject({ callReceived: z.strictObject({ post: idOf('post'), days: int.min(0) }) }).describe('A call for regiments reached the holder of a post at least this many days ago (lane 1.11): a state’s act a pack-set delay after the call arrives. STAND-IN until conventions are modelled (1B).'),
     z.strictObject({ clockAtLeast: nonNegative }),
   ]),
 );
@@ -280,11 +281,18 @@ export function validateSituations(items: readonly { readonly file: string; read
   const governmentKinds = new Set(pack.world.vocabularies.departmentKinds.filter((k) => k.government).map((k) => k.id as string));
   const departmentKind = new Map(pack.world.departments.map((d) => [d.id as string, d.kind as string]));
   const selfGoverningKinds = new Set(pack.world.vocabularies.departmentKinds.filter((k) => k.selfGoverning).map((k) => k.id as string));
+  const temporaryPostIds = new Set(pack.scenarios.flatMap((s) => s.temporaryPosts.map((p) => p.id as string)));
   type Err = (kind: string, at: string, message: string, expected?: string) => void;
   const commandProposal = (p: { readonly field: string; readonly subject: string | null; readonly delta: number; readonly side: string | null }, at: string, err: Err, fromNotice: boolean) => {
+    // Lane 1.11: a temporary post the start declares, opened by an effect (0040).
+    if (p.field === phase0.TEMPORARY_POST_FIELD) {
+      if (p.subject === null || !temporaryPostIds.has(p.subject)) err('situation-command-proposal', `${at}.subject`, `"${p.subject ?? 'none'}" is not a temporary post any start declares`, 'the id of a row in a start’s temporary_posts.csv');
+      if (p.delta !== 1) err('situation-command-proposal', `${at}.delta`, `opening a temporary post has delta ${p.delta}`, '+1: it opens the post');
+      return;
+    }
     const closing = p.field === phase0.GOVERNMENT_CLOSED_FIELD;
     if (!closing && p.field !== phase0.DEPARTMENT_SIDE_FIELD) {
-      err('situation-command-proposal', `${at}.field`, `command owns no field "${p.field}"`, `"${phase0.GOVERNMENT_CLOSED_FIELD}" (a neutral government closes or reopens) or "${phase0.DEPARTMENT_SIDE_FIELD}" (a government joins a side)`);
+      err('situation-command-proposal', `${at}.field`, `command owns no field "${p.field}"`, `"${phase0.GOVERNMENT_CLOSED_FIELD}" (a neutral government closes or reopens), "${phase0.DEPARTMENT_SIDE_FIELD}" (a government joins a side) or "${phase0.TEMPORARY_POST_FIELD}" (a declared temporary post opens)`);
       return;
     }
     if (p.subject === null) err('situation-command-proposal', `${at}.subject`, `a "${p.field}" proposal names no department`, 'a government department id');
@@ -434,6 +442,7 @@ export function validateSituations(items: readonly { readonly file: string; read
           else if ('decided' in c) for (const o of c.options ?? []) if (!other.options.some((x) => x.id === o)) err('unknown-reference', at, `"${o}" is not an option of ${id}`);
         }
         if ('goal' in c) ref(posts, 'post in any scenario', c.goal.post, at);
+        if ('callReceived' in c) ref(posts, 'post in any scenario', c.callReceived.post, at);
         if ('headquartersAt' in c) {
           ref(posts, 'post in any scenario', c.headquartersAt.post, at);
           ref(regions, 'region', c.headquartersAt.region, at);

@@ -4,11 +4,15 @@
   "faction": "union",
   "title": "situation.seward_memorandum.title",
   "text": "situation.seward_memorandum.text",
-  "earliest": "1861-04-01",
+  "earliest": "1861-03-05",
   "event": {
-    "dayAtLeast": 27
+    "knows": {
+      "reportType": "advice",
+      "subtype": "memorandum",
+      "subjectKind": "person",
+      "subjectId": "seward_william_h"
+    }
   },
-  "railroad": "the Secretary of State's own paper of 1 April, a bid for authority (0040); seat initiatives do not exist yet (gate D4), so it arrives on its date until his seat can take the initiative",
   "subjects": [
     "seward_william_h"
   ],

@@ -162,7 +162,7 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
       for (const o of outcome.recall) state = recallObserver(state, o);
       state = recordAudience(state, holder, { audDay: ctx.day, audAbout: outcome.about, audCounters: c.counters.map((k) => k.kind) });
       const key = `m.${ctx.day}.audience.${c.to}` as MessageId;
-      state = recordResponse(state, responseOf(outcome.response, { order: key, person: holder, post: c.to, role: 'addressee', day: ctx.day }));
+      state = recordResponse(state, responseOf(outcome.response, { order: key, person: holder, post: c.to, role: 'addressee', day: ctx.day, kind: 'verb:audience' }));
       // A promised reinforcement is itself an order, to another holder who may drag his feet (P1).
       if (outcome.reinforce !== null) {
         const sender = holderOf(outcome.reinforce.from);
@@ -225,7 +225,7 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
   const v = msg.msgVerb!;
   const me = msg.msgTo;
   const answer = answerOrder(world, start, me, v.verbIssuer, orderTerms(rules, `verb:${v.verbKind}`));
-  let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: me, post: msg.msgToPost, role: 'addressee', day: ctx.day }));
+  let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: me, post: msg.msgToPost, role: 'addressee', day: ctx.day, kind: `verb:${v.verbKind}` }));
   fire(ctx, 'verbs.answered');
   const changes: PeopleChange[] = [];
   let done = !DECLINES.has(answer.actual);

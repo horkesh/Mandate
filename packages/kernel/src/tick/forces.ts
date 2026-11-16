@@ -8,7 +8,7 @@
  */
 import { combatDay, type CombatResult } from '../combat/battle.ts';
 import { applyBattleRecords } from '../combat/records.ts';
-import { applyCombatCommand, applyCommandProposals, DEPARTMENT_SIDE_FIELD } from '../command/command.ts';
+import { applyCombatCommand, applyCommandProposals, DEPARTMENT_SIDE_FIELD, TEMPORARY_POST_FIELD } from '../command/command.ts';
 import { applyForces } from '../forces/forces.ts';
 import { stragglersStep } from '../forces/stragglers.ts';
 import type { ForceBlockId } from '../ids.ts';
@@ -44,6 +44,7 @@ export const FORCES_MECHANICS = [
   'command.government_reopened',
   'command.proposal_refused',
   'command.side_changed',
+  'command.temporary_post_opened',
   'forces.stores_fell',
   'forces.stores_low',
   'forces.stores_refilled',
@@ -62,8 +63,18 @@ export function commandProposalsPhase(ctx: TickContext, state: State): { readonl
   const map = ctx.world.map;
   const mine = ctx.proposals.flatMap((p) => (p.proposal === 'effect' && p.owner === 'command' ? [p] : []));
   if (mine.length === 0) return { state, derived: null };
-  const result = applyCommandProposals(map, state, mine, ctx.day);
+  const result = applyCommandProposals(
+    map,
+    state,
+    mine,
+    ctx.day,
+    ctx.world.start.temporaryPosts.map((p) => ({ id: p.id, name: p.name, kind: p.kind, department: p.department, parent: p.parent, holder: p.holder, seat: p.region, operation: p.operation })),
+  );
   for (const a of result.applied) {
+    if (a.field === TEMPORARY_POST_FIELD) {
+      if (a.change === 'opened') fire(ctx, 'command.temporary_post_opened');
+      continue;
+    }
     if (a.field === DEPARTMENT_SIDE_FIELD) {
       // A change of side is its own event, never a closing (0065).
       if (a.side !== null) {

@@ -6,17 +6,11 @@
   "text": "situation.north_carolina_secedes.text",
   "earliest": "1861-05-20",
   "event": {
-    "all": [
-      {
-        "decided": "call_for_troops",
-        "options": null
-      },
-      {
-        "dayAtLeast": 76
-      }
-    ]
+    "callReceived": {
+      "post": "st_gov_north_carolina",
+      "days": 35
+    }
   },
-  "railroad": "the convention votes on 20 May, after the call; a convention is not modelled, so its vote comes on its date once the call is made",
   "effects": [
     {
       "propose": {

@@ -6,17 +6,11 @@
   "text": "situation.arkansas_secedes.text",
   "earliest": "1861-05-06",
   "event": {
-    "all": [
-      {
-        "decided": "call_for_troops",
-        "options": null
-      },
-      {
-        "dayAtLeast": 62
-      }
-    ]
+    "callReceived": {
+      "post": "st_gov_arkansas",
+      "days": 21
+    }
   },
-  "railroad": "the convention votes on 6 May, after the call; a convention is not modelled, so its vote comes on its date once the call is made",
   "effects": [
     {
       "propose": {

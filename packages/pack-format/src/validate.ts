@@ -490,6 +490,18 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       if (sum > 1000) err('loyalty-sum', S('loyalty', i), `loyalty shares sum to ${sum}`, 'at most 1000 permille in all');
       if (new Set(l.shares.map((x) => x.faction)).size !== l.shares.length) err('duplicate-entry', S('loyalty', i), 'a faction has two shares');
     });
+    // Lane 1.11: temporary posts the start declares for a situation to open (0040): a temporary kind creatable in play,
+    // a known department, parent post, holder and region, and an id no post at the start already has.
+    const startPosts = new Set(s.posts.map((p) => p.id as string));
+    s.temporaryPosts.forEach((p, i) => {
+      const kind = vocab.postKinds.find((k) => k.id === p.kind);
+      if (kind === undefined || !kind.temporary || kind.creatable === 'start_only') err('temporary-post', S('temporaryPosts', i, 'kind'), `kind "${p.kind}" is not a temporary post kind creatable in play`, 'a post kind the vocabulary marks temporary and not start_only');
+      refCheck(departments, 'department', p.department, S('temporaryPosts', i, 'department'));
+      if (p.parent !== null && !startPosts.has(p.parent)) err('unknown-reference', S('temporaryPosts', i, 'parent'), `"${p.parent}" is not a post of this start`, 'a post of the same start');
+      if (p.holder !== null) refCheck(people, 'person', p.holder, S('temporaryPosts', i, 'holder'));
+      if (p.region !== null) refCheck(regions, 'region', p.region, S('temporaryPosts', i, 'region'));
+      if (startPosts.has(p.id)) err('duplicate-entry', S('temporaryPosts', i, 'id'), `"${p.id}" is already a post at the start`, 'an id for a post the start does not open');
+    });
     s.edgeConditions.forEach((c, i) => refCheck(edges, 'edge', c.edge, S('edgeConditions', i, 'edge')));
     s.depotConditions.forEach((c, i) => refCheck(depots, 'depot', c.depot, S('depotConditions', i, 'depot')));
     s.obstructions.forEach((o, i) => {

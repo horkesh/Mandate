@@ -6,17 +6,11 @@
   "text": "situation.tennessee_secedes.text",
   "earliest": "1861-05-06",
   "event": {
-    "all": [
-      {
-        "decided": "call_for_troops",
-        "options": null
-      },
-      {
-        "dayAtLeast": 62
-      }
-    ]
+    "callReceived": {
+      "post": "st_gov_tennessee",
+      "days": 21
+    }
   },
-  "railroad": "the legislature declares independence on 6 May, after the call, subject to the vote of 8 June; a legislature is not modelled, so its act comes on its date once the call is made",
   "effects": [
     {
       "propose": {
