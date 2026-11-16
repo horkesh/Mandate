@@ -180,6 +180,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.8's fix pass, a validator check (hard rule 7):** the source policy's banned memoirs are enforced only on gated items, so a people row citing DAVIS-RF passes `pack:validate`. Extend the ban to every pack citation, including `people.csv`.
   - **Lane 1.14:** Seward's regard and candour of `below` is the cell lane 1.9 expects to look wrong in a pushback run. Watch it in calibration.
   - From the cast note's review (`review-research-cast-1861.md`), **lane 1.11:** an import rule that refuses a people cell whose every citation is weak (a memoir, a self-report, a snippet, or evidence after the start date). It is the check behind lane 1.9's own source rules (hard rule 7).
+  - From the reviewer's re-check of lane 1.9 (`94af694`, approved), **lane 1.11:** five cells stay coded on secondary evidence the lane labelled needs-source: `free_soil` for Bates, Frémont, Dennison and Pierpont, and Dennison's `state_autonomy`. The weak-citation import rule above decides whether they enter the pack.
   - From the same review, **lanes 1.4 and 1.14:** McClellan bold on paper (27 April, 80,000 men) and cautious in action (Rich Mountain, 11 July). A single boldness cannot hold both. Watch whether drafting and execution need separate terms when operations land, and in calibration.
 **Phase 2 (desk and map)**
 - From lane 0.9, plan review: preview an edited route and its distance before it is sent. A distant waypoint can produce a route the player did not mean.
