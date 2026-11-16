@@ -82,16 +82,23 @@ describe('the command log is the truth (0015)', () => {
 
   it('finds malformed log entries: shape, and the type and vocabulary of each value (review F5)', () => {
     expect(logProblems([{ day: 2, seat: 's', command: { cmd: 'order', to: 'x' } }, { day: 1, seat: 's', command: { cmd: 'fly' } }, null])).toEqual([
-      'entry 0: order has fields [cmd, to], expected [bypass, cmd, goal, region, route, to]',
+      'entry 0: order has fields [cmd, to], expected [bypass, cmd, goal, route, to]',
       'entry 1: unknown command',
       'entry 1: day 1 comes after day 2',
       'entry 2: not an object',
     ]);
-    expect(logProblems([{ day: 1, seat: 's', command: { cmd: 'order', to: 'a_army', goal: 'charge', region: 7, route: 'balloon', bypass: 'no' } }])).toEqual([
-      'entry 0: order.goal must be one of advance, hold',
-      'entry 0: order.region must be a region id or null',
+    expect(logProblems([{ day: 1, seat: 's', command: { cmd: 'order', to: 'a_army', goal: 'charge', route: 'balloon', bypass: 'no' } }])).toEqual([
       'entry 0: order.route must be one of courier, in-person, mail, rail, ship, special-messenger, wire',
       'entry 0: order.bypass must be true or false',
+      'entry 0: order.goal must be an object',
+    ]);
+    // A goal's every term is typed (lane 1.2): its posture from the closed list, its objective a region id or null.
+    const goal = { objective: 7, posture: 'charge', risk: 'high', deadlineDays: 20, rail: true, river: false, sea: false, neutral: 'no', committed: [], awaitWord: false, approveAsDrafted: true };
+    expect(logProblems([{ day: 1, seat: 's', command: { cmd: 'order', to: 'a_army', goal, route: 'wire', bypass: false } }])).toEqual([
+      'entry 0: order.goal objective must be a region id or null',
+      'entry 0: order.goal posture must be one of hold, relieve, take',
+      'entry 0: order.goal risk must be an integer',
+      'entry 0: order.goal neutral must be true or false',
     ]);
   });
 
@@ -352,6 +359,7 @@ describe('ownership of the new State (0044)', () => {
       'personStatus:people',
       'personTraits:people',
       'personTrue:people',
+      'planRecords:plans',
       'postStates:command',
       'regionControl:control',
       'regionFortification:regions',
@@ -372,12 +380,16 @@ describe('ownership of the new State (0044)', () => {
     const world = indexedFixture(REFERENCE);
     const telemetry = createTelemetry([...SEATS_MECHANICS, ...MAP_MECHANICS]);
     playDays(world, createState(world, { seed: 99 }), scriptedSeats(SCRIPT), 60, { telemetry });
-    const dead = SEATS_MECHANICS.filter((m) => telemetry.mechanics[m]!.fires === 0);
+    const plan = (m: string) => m.startsWith('plans.') || m.startsWith('planner.');
+    const dead = SEATS_MECHANICS.filter((m) => !plan(m) && telemetry.mechanics[m]!.fires === 0);
     // Each of these has its own test above. Rejections need a bad command and defaults an
     // unanswered request, which this game has not; a conflict needs two issuers (here only the
     // principal orders); and a filter cuts only a losses claim, which no cyclic report carries
     // until lane 0.5's casualty returns. Here the one relaying man (a_sec, uncandid) holds what he dislikes rather than
     // objecting (lane 1.1: an objection needs a candid man), so objections are driven in seats-orders.test.ts.
     expect(dead).toEqual(['commands.rejected', 'orders.conflict', 'orders.relay_objected', 'reports.trimmed', 'seats.defaulted']);
+    // The plan cycle's mechanics have their own tests (`plans.test.ts`); this game goals, drafts and picks plans.
+    const fired = SEATS_MECHANICS.filter((m) => plan(m) && telemetry.mechanics[m]!.fires > 0);
+    expect(fired).toEqual(expect.arrayContaining(['planner.candidates', 'planner.searches', 'plans.chosen', 'plans.drafted', 'plans.goal_set']));
   });
 });

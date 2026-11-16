@@ -1,18 +1,15 @@
 /**
- * What a day of plan drafting costs on the real Union graph (lane 0.8; 0062's
- * daily drafting cap is "a pack rule, set from the worst day measured here").
+ * What a day of plan drafting costs on the real Union graph (lane 0.8; 0062's daily drafting cap is "a pack rule, set
+ * from the worst day measured here"). Lane 1.2 moved the planner into the kernel: this now measures the kernel's
+ * `planner.draft`, on inputs built as the plans phase builds them (`plannerInputFor`: the commander's view, the
+ * derived map, his side's forces and posts).
  *
- * The planner spike's `draft` is run for every post that commands force blocks
- * at the scenario start: each is asked to take the other side's capital, the
- * longest request the war can make. A "day" is every such post drafting once,
- * back to back; the worst day is the slowest of several. The spike is not
- * kernel code and reads no clock; the clock is read here.
+ * Every post that commands force blocks at the scenario start is asked to take the other side's capital, the longest
+ * request the war can make. His knowledge holds one intelligence estimate of every enemy block he can be told of (his
+ * side's whole picture), so the planner has an enemy to weigh. A "day" is every such post drafting once, back to back;
+ * the worst day is the slowest of several. The kernel reads no clock; the clock is read here.
  */
-import { phase0 } from '@mandate/kernel';
-import { DEFAULT_RULES, type PlannerInput } from '../../../prototypes/planner-spike/src/context.ts';
-import { draft } from '../../../prototypes/planner-spike/src/planner.ts';
-import { beliefsFor, boldnessOf, competenceOf, profileOf, traitHolder } from '../../../prototypes/planner-spike/src/profile.ts';
-import type { ForceStandIn, PostId, RegionId } from '../../../prototypes/planner-spike/src/types.ts';
+import { ids, phase0, planner } from '@mandate/kernel';
 import { percentile } from './phase0-run.ts';
 import { seatsWorld } from './seats-world.ts';
 
@@ -32,6 +29,8 @@ export interface DraftingReport {
   readonly drafts: readonly DraftSample[];
   /** Milliseconds for one day's drafts (every post once, back to back), over `days` such days. */
   readonly day: { readonly days: number; readonly median: number; readonly p95: number; readonly worst: number };
+  /** Milliseconds for a day capped at the pack's daily drafting cap for each side (each side's slowest such posts, all drafting together). */
+  readonly cappedDay: { readonly cap: number; readonly sides: number; readonly worst: number };
   readonly slowestDraftMs: number;
   /** Posts with no land force (squadrons and yards), which can draft nothing toward an inland objective. */
   readonly noLandForce: number;
@@ -40,50 +39,74 @@ export interface DraftingReport {
 }
 
 /** Inputs for every post that commands a force block at the scenario start, on the pack's real graph. */
-export function draftingInputs(pack: string, month = 4): PlannerInput[] {
-  const { world } = seatsWorld(pack);
-  const start = world.start;
+export function draftingInputs(pack: string): planner.PlannerInput[] {
+  const { world, seed } = seatsWorld(pack);
+  let state = phase0.createState(world, { seed });
   const map = world.map;
-  const control = phase0.initialControl(map, start);
-  const network = phase0.networkConditions(start);
-  const derived = phase0.deriveMap(map, { control, month, network });
-  const departmentFaction = (department: string): string | null => map.world.departments.find((d) => d.id === department)?.faction ?? null;
-  const postInfo = start.posts.map((p) => ({ id: p.id, holder: p.holder, parent: p.parent, region: p.region, kind: p.kind }));
-  const forces: (ForceStandIn & { faction: string | null })[] = start.forceBlocks.flatMap((b) =>
-    b.post === null ? [] : [{ id: b.id, post: b.post, region: b.region, kind: b.kind as 'block' | 'detachment', arm: b.arm, strength: b.strength ?? 0, storesDays: b.storesDays ?? 0, aboard: b.aboard, faction: departmentFaction(b.department) }],
-  );
-  const fortification = new Map(start.fortification.map((f) => [f.region, f.levelPermille]));
-  const posts = [...new Set(forces.filter((f) => f.kind === 'block').map((f) => f.post))].sort();
-  const inputs: PlannerInput[] = [];
+  const month = phase0.monthOf(state, 1);
+  const network = phase0.passageOf(map, state);
+  const derived = phase0.deriveMap(map, { control: state.regionControl, month, network });
+  const posts = [...new Set((Object.keys(state.forceAssignments) as ids.ForceBlockId[]).map((b) => state.forceAssignments[b]).filter((p): p is ids.PostId => p !== null && p !== undefined))].sort();
+  const inputs: planner.PlannerInput[] = [];
   for (const post of posts) {
-    const own = forces.find((f) => f.post === post)!.faction;
-    const faction = world.factionIds.find((f) => f === own);
-    if (faction === undefined) continue;
+    const holder = state.postStates[post]?.postHolder ?? null;
+    const faction = phase0.postFaction(world, state, post);
+    if (holder === null || faction === null || !world.factionIds.includes(faction)) continue;
     const objective = world.faction(faction).objective;
     if (objective === null) continue;
-    const reported = new Map<RegionId, number>();
-    for (const b of forces) if (b.faction !== own && b.faction !== null) reported.set(b.region, (reported.get(b.region) ?? 0) + b.strength);
-    const holder = postInfo.find((p) => p.id === post)?.holder ?? null;
-    const record = holder === null ? undefined : map.world.people.find((p) => p.id === holder);
-    const boldness = record === undefined ? 500 : boldnessOf(record);
-    const person = (holder ?? 'unknown_holder') as ReturnType<typeof traitHolder>['id'];
-    const { beliefs } = beliefsFor(new Map([...reported].sort(([a], [b]) => (a < b ? -1 : 1))), 1000, traitHolder(person, boldness));
-    inputs.push({
-      map,
-      month,
-      network,
-      controlIndex: derived.index,
-      supply: derived.supply.factions.get(faction)!,
-      faction,
-      fortification,
-      beliefs,
-      forces: forces.filter((f) => f.faction === own),
-      posts: postInfo,
-      post: post as PostId,
-      profile: profileOf(person, boldness, record === undefined ? 500 : competenceOf(record)),
-      goal: { objective, posture: 'take', risk: 500, deadlineDays: 60, permissions: { rail: true, river: true, sea: false }, committed: [] },
-      rules: DEFAULT_RULES,
-    });
+    // His side's whole picture of the enemy, as one estimate in his knowledge.
+    const enemy = new Map<string, number>();
+    for (const b of Object.keys(state.forceLocations).sort() as ids.ForceBlockId[]) {
+      const side = phase0.factionOfBlock(map, state, b);
+      if (side === null || side === faction) continue;
+      const region = state.forceLocations[b]!.locRegion;
+      enemy.set(region, (enemy.get(region) ?? 0) + (state.forceBlockStates[b]!.fbStrength ?? 0));
+    }
+    const seat = phase0.seatIdFor(holder);
+    const id = ids.toId('message', `measure.${post}`);
+    if (!phase0.knowledgeOf(state, seat).knownReports.some((r) => r.id === id)) {
+      state = phase0.deliverReport(
+        state,
+        seat,
+        {
+          id,
+          knownReceivedDay: 0,
+          knownRoute: 'courier',
+          knownVia: [],
+          knownBody: {
+            reportType: 'enemy-estimate',
+            reportSubtype: null,
+            reportAuthor: holder,
+            reportAuthorPost: post,
+            reportSubjectKind: 'enemy',
+            reportSubjectId: post,
+            reportClaims: [...enemy.keys()].sort().map((region) => ({ claimKind: 'enemy-strength' as const, claimRegion: region as ids.RegionId, claimValue: enemy.get(region)!, claimToken: null, claimConfidence: 700 })),
+            reportDay: 0,
+            reportHour: null,
+            reportAdvice: null,
+            reportAnswers: null,
+          },
+        },
+        { truthTerms: [], truthTrimmed: [] },
+      );
+    }
+    const view = phase0.viewFor(world, state, seat);
+    const d = map.world.rules.plans.goalDefaults;
+    const goal: phase0.PlanGoal = {
+      goalObjective: objective,
+      goalPosture: 'take',
+      goalRisk: d.risk,
+      goalDeadlineDays: 60,
+      goalRail: true,
+      goalRiver: true,
+      goalSea: false,
+      // The longest request: neutral ground permitted, as the generic principal's goals permit it, so no route ends early.
+      goalNeutral: true,
+      goalCommitted: [],
+      goalAwaitWord: false,
+      goalApproveAsDrafted: true,
+    };
+    inputs.push(planner.plannerInputFor(world, state, derived, network, month, view, post, goal, 1));
   }
   return inputs;
 }
@@ -96,32 +119,44 @@ export function measureDrafting(pack: string, options: { readonly days?: number;
   let sound = inputs.length > 0;
   let noLandForce = 0;
   const drafts: DraftSample[] = inputs.map((input) => {
-    const set = draft(input);
-    const land = input.forces.some((f) => f.post === input.post && f.kind === 'block' && f.arm !== 'naval');
+    const set = planner.draft(input);
+    const land = input.forces.some((f) => f.post === input.post && f.kind === 'block' && !f.naval);
     if (!land) noLandForce += 1;
-    if (land && set.candidates.length === 0) sound = false;
-    for (const c of set.candidates) if (c.score !== c.contributions.reduce((n, t) => n + t.amount, 0)) sound = false;
+    if (land && set.draftCandidates.length === 0) sound = false;
+    for (const c of set.draftCandidates) if (c.candScore !== c.candTerms.reduce((n, t) => n + t.contribAmount, 0)) sound = false;
     const samples: number[] = [];
     for (let i = 0; i < reps; i++) {
       const t = performance.now();
-      draft(input);
+      planner.draft(input);
       samples.push(performance.now() - t);
     }
     const sorted = [...samples].sort((a, b) => a - b);
-    return { post: input.post, faction: input.faction, candidates: set.candidates.length, searches: set.counters.searches, medianMs: percentile(sorted, 50), maxMs: sorted[sorted.length - 1]! };
+    return { post: input.post, faction: input.faction, candidates: set.draftCandidates.length, searches: set.draftSearches, medianMs: percentile(sorted, 50), maxMs: sorted[sorted.length - 1]! };
   });
   const dayCosts: number[] = [];
   for (let d = 0; d < days; d++) {
     const t = performance.now();
-    for (const input of inputs) draft(input);
+    for (const input of inputs) planner.draft(input);
     dayCosts.push(performance.now() - t);
   }
   const sorted = [...dayCosts].sort((a, b) => a - b);
+  // A capped day: the pack's cap of drafts for each side (the cap is counted per side), each side's slowest posts by median, together.
+  const cap = inputs[0]?.rules.dailyDraftCap ?? 0;
+  const ranked = [...drafts].map((d, i) => ({ d, i })).sort((a, b) => b.d.medianMs - a.d.medianMs || (a.d.post < b.d.post ? -1 : 1));
+  const sides = [...new Set(drafts.map((d) => d.faction))].sort();
+  const slowest = sides.flatMap((side) => ranked.filter((x) => x.d.faction === side).slice(0, cap)).map((x) => inputs[x.i]!);
+  let cappedWorst = 0;
+  for (let d = 0; d < days; d++) {
+    const t = performance.now();
+    for (const input of slowest) planner.draft(input);
+    cappedWorst = Math.max(cappedWorst, performance.now() - t);
+  }
   return {
     pack,
     posts: inputs.length,
     drafts,
     day: { days, median: percentile(sorted, 50), p95: percentile(sorted, 95), worst: sorted[sorted.length - 1]! },
+    cappedDay: { cap, sides: sides.length, worst: cappedWorst },
     slowestDraftMs: Math.max(...drafts.map((d) => d.maxMs)),
     noLandForce,
     sound,

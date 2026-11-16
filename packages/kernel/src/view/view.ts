@@ -11,30 +11,32 @@
  * re-rendering them. Every view object is frozen: a seat cannot edit what it
  * was shown.
  */
-import type { PersonId, RegionId, SeatId } from '../ids.ts';
-import { latestEnemyClaims, perceived } from '../knowledge/beliefs.ts';
+import type { EdgeId, PersonId, RegionId, SeatId } from '../ids.ts';
+import { latestEnemyClaims, latestObstructionClaims, latestWorksClaims, perceived } from '../knowledge/beliefs.ts';
 import { knowledgeOf, type KnownReport, type SeatKnowledge } from '../knowledge/knowledge.ts';
-import type { StandingGoal } from '../plans/goal.ts';
+import type { PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import { seatOf } from '../seats/seats.ts';
 import { perceptionBias, traitsOf } from '../people/traits.ts';
 import { heldPost, sideOfPerson } from '../command/command.ts';
 import { whereIsPerson } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
-import type { BeliefView, GoalView, ReportView, SeatView, SituationView } from './types.ts';
+import type { BeliefView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
 
 export interface ViewCache {
   readonly reports: WeakMap<KnownReport, ReportView>;
   readonly lists: WeakMap<SeatKnowledge, readonly ReportView[]>;
   /** Beliefs depend on what he holds and on how he reads it, so both are in the key (review F4). */
   readonly beliefs: Map<SeatId, { readonly knowledge: SeatKnowledge; readonly perception: number; readonly beliefs: Readonly<Record<RegionId, BeliefView>> }>;
-  readonly goals: WeakMap<StandingGoal, GoalView>;
+  /** What he has been told of works and obstructions depends only on what he holds. */
+  readonly ground: Map<SeatId, { readonly knowledge: SeatKnowledge; readonly works: Readonly<Record<RegionId, WorksView>>; readonly obstructions: Readonly<Record<EdgeId, ObstructionView>> }>;
+  readonly goals: WeakMap<PlanRecord, GoalView>;
   readonly views: Map<SeatId, SeatView>;
   readonly situations: Map<SeatId, { readonly states: State['situationStates']; readonly views: readonly SituationView[] }>;
 }
 
 export function createViewCache(): ViewCache {
-  return { reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), goals: new WeakMap(), views: new Map(), situations: new Map() };
+  return { reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), goals: new WeakMap(), views: new Map(), situations: new Map() };
 }
 
 function freeze<T extends object>(o: T): T {
@@ -71,13 +73,21 @@ function reportView(r: KnownReport): ReportView {
   });
 }
 
-function goalView(g: StandingGoal): GoalView {
+function goalView(r: PlanRecord): GoalView {
+  const g = r.planGoal;
   return freeze({
-    kind: g.standingSpec.goalSpecKind,
-    region: g.standingSpec.goalSpecRegion,
-    issuer: g.standingIssuer,
-    viaChain: g.standingViaChain,
-    setDay: g.standingSetDay,
+    posture: g.goalPosture,
+    objective: g.goalObjective,
+    risk: g.goalRisk,
+    deadlineDays: g.goalDeadlineDays,
+    permissions: freeze({ rail: g.goalRail, river: g.goalRiver, sea: g.goalSea, neutral: g.goalNeutral }),
+    committed: freeze([...g.goalCommitted]),
+    awaitWord: g.goalAwaitWord,
+    approveAsDrafted: g.goalApproveAsDrafted,
+    issuer: r.planIssuer,
+    viaChain: r.planViaChain,
+    setDay: r.planSetDay,
+    status: r.planStatus,
   });
 }
 
@@ -117,13 +127,23 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     cache.beliefs.set(seat, beliefs);
   }
 
+  let ground = cache.ground.get(seat);
+  if (ground === undefined || ground.knowledge !== knowledge) {
+    const works: Record<RegionId, WorksView> = {};
+    for (const [region, { report, value }] of latestWorksClaims(knowledge)) works[region] = freeze({ value, asOfDay: report.knownBody.reportDay, source: report.id });
+    const obstructions: Record<EdgeId, ObstructionView> = {};
+    for (const [edge, { report, closed, by }] of latestObstructionClaims(knowledge)) obstructions[edge] = freeze({ closed, by, asOfDay: report.knownBody.reportDay, source: report.id });
+    ground = { knowledge, works: freeze(works), obstructions: freeze(obstructions) };
+    cache.ground.set(seat, ground);
+  }
+
   let goal: GoalView | null = null;
-  const standing = post === null ? undefined : state.standingGoals[post];
-  if (standing !== undefined) {
-    goal = cache.goals.get(standing) ?? null;
+  const record = post === null ? undefined : state.planRecords[post];
+  if (record !== undefined) {
+    goal = cache.goals.get(record) ?? null;
     if (goal === null) {
-      goal = goalView(standing);
-      cache.goals.set(standing, goal);
+      goal = goalView(record);
+      cache.goals.set(record, goal);
     }
   }
 
@@ -139,6 +159,8 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     previous.region === region &&
     previous.goal === goal &&
     previous.enemyBeliefs === beliefs.beliefs &&
+    previous.worksBeliefs === ground.works &&
+    previous.obstructionBeliefs === ground.obstructions &&
     previous.situations === situations &&
     same(previous.reports, reports)
   ) {
@@ -154,6 +176,8 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     goal,
     reports,
     enemyBeliefs: beliefs.beliefs,
+    worksBeliefs: ground.works,
+    obstructionBeliefs: ground.obstructions,
     situations,
   });
   cache.views.set(seat, view);

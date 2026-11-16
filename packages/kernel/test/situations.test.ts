@@ -291,7 +291,7 @@ describe('deciding: the principal, a history default, several options, waiting, 
 describe('orders an option issues, and delegation (0052)', () => {
   it('issues an option’s orders in the principal’s name through the validated path, and reports a refused one', () => {
     const sit = decision('order', {
-      options: [option('advance', 1, { orders: [{ to: POST('a_reserve'), goal: 'advance', region: R('b_mid'), route: 'special-messenger' }, { to: POST('a_office'), goal: 'hold', region: null, route: 'courier' }] }), option('hold', 2)],
+      options: [option('advance', 1, { orders: [{ to: POST('a_reserve'), posture: 'take', objective: R('b_mid'), route: 'special-messenger' }, { to: POST('a_office'), posture: 'hold', objective: null, route: 'courier' }] }), option('hold', 2)],
       historicalDefault: { options: ['advance'] },
     });
     const { world, state } = setup([sit], { a_lead: 'rules' });
@@ -305,8 +305,8 @@ describe('orders an option issues, and delegation (0052)', () => {
   it('hands the choice to a holder, who decides from the same options by his values; the orders stay the principal’s', () => {
     const sit = decision('handed', {
       options: [
-        option('bold', 1, { honours: ['glory'], orders: [{ to: POST('a_reserve'), goal: 'advance', region: R('b_mid'), route: 'courier' }] }),
-        option('careful', 2, { honours: ['caution'], orders: [{ to: POST('a_reserve'), goal: 'hold', region: null, route: 'courier' }] }),
+        option('bold', 1, { honours: ['glory'], orders: [{ to: POST('a_reserve'), posture: 'take', objective: R('b_mid'), route: 'courier' }] }),
+        option('careful', 2, { honours: ['caution'], orders: [{ to: POST('a_reserve'), posture: 'hold', objective: null, route: 'courier' }] }),
       ],
       historicalDefault: { delegate: POST('a_office') },
     });
@@ -332,7 +332,7 @@ describe('orders an option issues, and delegation (0052)', () => {
     const world = (over: Partial<SituationDef>) => () => setup([decision('d', over)]);
     expect(world({ delegableTo: [POST('b_army')], historicalDefault: { delegate: POST('b_army') } })).toThrow(/b_army is b's post, not a's/);
     expect(world({ staffLine: { authors: [POST('b_office')], recommends: ['hold'], reasons: [], confidence: 500 } })).toThrow(/b_office is b's post/);
-    expect(world({ options: [option('hold', 1, { orders: [{ to: POST('b_army'), goal: 'hold', region: null, route: 'courier' }] })] })).toThrow(/b_army is b's post/);
+    expect(world({ options: [option('hold', 1, { orders: [{ to: POST('b_army'), posture: 'hold', objective: null, route: 'courier' }] })] })).toThrow(/b_army is b's post/);
     // The control: the same situation with its own side's posts runs.
     expect(world({ delegableTo: [POST('a_army')], historicalDefault: { delegate: POST('a_army') } })).not.toThrow();
   });

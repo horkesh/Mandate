@@ -13,31 +13,66 @@
  * command log; replay and resume read the log and never ask a seat again.
  */
 import type { FactionId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
-import type { SeatCommand } from '../log/commands.ts';
+import type { GoalTerms, SeatCommand } from '../log/commands.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { GoalView, SeatView } from '../view/types.ts';
 
 export const SEAT_DRIVERS = ['ai', 'human', 'rules'] as const;
 export type SeatDriver = (typeof SEAT_DRIVERS)[number];
 
-/** One option the kernel judged consistent with the person's state, with the facts it judged on (as he sees them). */
-export interface OptionView {
-  readonly optionId: string;
-  readonly kind: 'advance' | 'hold';
-  readonly region: RegionId | null;
-  /** The kernel's score for the option, permille (higher: more in keeping with him). */
-  readonly score: number;
-  /** The enemy he believes stands in the region he would enter (0 if none known). */
-  readonly perceivedEnemy: number;
-  readonly ownStrength: number;
+/** One axis of a candidate plan, as its arrows show it: whose force, how it travels, where it goes, when it arrives. */
+export interface AxisView {
+  readonly name: string;
+  readonly post: PostId;
+  readonly mode: 'land' | 'river' | 'sea';
+  /** The regions it passes, start first. */
+  readonly regions: readonly RegionId[];
+  readonly strength: number;
+  /** Its phases in order (concentrate, march, reduce, assault, ...). */
+  readonly phases: readonly string[];
+  /** Permille days from the plan's start to its arrival. */
+  readonly arrival: number;
 }
 
-/** A commander with a standing goal choosing his next step (stand-in until lane 0.9's plan selection). */
-export interface StandingMenu {
-  readonly menuKind: 'standing-goal';
+/**
+ * A candidate plan the planner drafted for him, with the facts it was scored on as he sees them (lane 1.2; 0062): its
+ * method, its axes, the support it asks of others, its conditions, and every term of its score (hard rule 6).
+ */
+export interface OptionView {
+  readonly optionId: string;
+  readonly method: string;
+  readonly variant: string;
+  readonly score: number;
+  readonly terms: readonly { readonly term: string; readonly amount: number }[];
+  readonly axes: readonly AxisView[];
+  /** Support it asks for: `cooperating_axis:<post>`, `naval_support:<post>`, `reinforcement:<men>`. */
+  readonly requests: readonly string[];
+  /** Conditions he attaches (`move_when_reinforced`, `vacant_post`). */
+  readonly conditions: readonly string[];
+  /** The enemy he believes stands at the objective, and his strength over it, permille. */
+  readonly perceivedEnemy: number;
+  readonly ratio: number;
+}
+
+/**
+ * A commander choosing among the planner's candidates for his goal (lane 1.2; FOUNDATION section 8: a choice among
+ * options the kernel has already judged, which replaces Phase 0's consistency judgement). Asked only when there are
+ * at least two; ranked best first by his own scorer.
+ */
+export interface PlanMenu {
+  readonly menuKind: 'plan-selection';
   readonly post: PostId;
   readonly goal: GoalView;
   readonly options: readonly OptionView[];
+}
+
+/** A plan submitted to the principal for review, once his commander's dispatch has reached him. */
+export interface PlanReview {
+  readonly post: PostId;
+  readonly holder: PersonId;
+  /** The dispatch that brought it. */
+  readonly report: string;
+  readonly plan: OptionView;
 }
 
 /** A route as the sender may know it in advance: typical days (no weather) and its price. */
@@ -87,6 +122,12 @@ export interface PrincipalMenu {
   readonly atWarSince: number | null;
   readonly commandable: readonly CommandablePost[];
   readonly situations: readonly SituationChoice[];
+  /** Plans his commanders submitted that have reached him and wait for his review (approve, send back, edit). */
+  readonly reviews: readonly PlanReview[];
+  /** Posts whose operation he approved under "prepare, await my word": each waits for his "go". */
+  readonly awaiting: readonly PostId[];
+  /** The goal terms the pack gives an order that names only an objective and a posture (`WorldRules.plans.goalDefaults`). */
+  readonly goalDefaults: Omit<GoalTerms, 'objective' | 'posture' | 'committed'>;
 }
 
 /** A holder deciding a situation handed to him: the same options as the principal (0040, gate B7). */
@@ -95,7 +136,7 @@ export interface DelegatedMenu {
   readonly choice: SituationChoice;
 }
 
-export type Menu = PrincipalMenu | StandingMenu | DelegatedMenu;
+export type Menu = PrincipalMenu | PlanMenu | DelegatedMenu;
 
 export interface SeatRequest {
   /** The day the answer applies to (the morning of it). */

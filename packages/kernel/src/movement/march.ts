@@ -31,7 +31,7 @@ import type { ControlIndex } from '../control-index/control-index.ts';
 import type { EdgeId, FactionId, ForceBlockId, RegionId } from '../ids.ts';
 import type { State } from '../root-state.ts';
 import { edgeLeg, neutralClosed, neutralOpen, obstructionFor, type EdgeLeg, type NetworkConditions } from '../supply/supply.ts';
-import { MinHeap } from '../supply/heap.ts';
+import { MinHeap } from '../heap.ts';
 import { otherEnd, type WorldIndex } from '../world/index.ts';
 import { MovementError, type ForceLocation } from './movement.ts';
 
@@ -66,8 +66,13 @@ function railPasses(ground: MarchGround, region: RegionId, faction: FactionId): 
   return holding.tracedBy.includes(faction) || neutralOpen(holding, ground.network);
 }
 
-/** Why `faction`'s blocks (naval or not) cannot take `leg`, or null if they can. */
-export function marchBar(ground: MarchGround, leg: EdgeLeg, faction: FactionId, naval: boolean): MarchBar | null {
+/**
+ * The movement passage rule (0062: `movement` owns it and the planner imports it): why `faction`'s blocks (naval or
+ * not) cannot take `leg` on the ground as it is, leaving out only obstructions on water. A march meets the obstructions
+ * that are there (`marchBar`); a commander plans on the ones he has been told of, from his own view (0062: a commander
+ * learns of a boom by report), so the planner adds those itself. Null if they may pass.
+ */
+export function passageBar(ground: MarchGround, leg: EdgeLeg, faction: FactionId, naval: boolean): Exclude<MarchBar, 'obstructed'> | null {
   const to = ground.map.regions.get(leg.to)!;
   if (to.kind === 'off_map') return 'off_map';
   const water = leg.type === 'river' || leg.type === 'sea';
@@ -81,6 +86,14 @@ export function marchBar(ground: MarchGround, leg: EdgeLeg, faction: FactionId, 
     if (leg.type === 'rail' && (!railPasses(ground, leg.from, faction) || !railPasses(ground, leg.to, faction))) return 'rail_not_traced';
   }
   if (leg.capacityMilli < ground.map.world.rules.movement.marchMinCapacityPermille) return 'edge_closed';
+  return null;
+}
+
+/** Why `faction`'s blocks (naval or not) cannot take `leg`, or null if they can: the passage rule, and the obstructions truly there. */
+export function marchBar(ground: MarchGround, leg: EdgeLeg, faction: FactionId, naval: boolean): MarchBar | null {
+  const bar = passageBar(ground, leg, faction, naval);
+  if (bar !== null) return bar;
+  const water = leg.type === 'river' || leg.type === 'sea';
   if (water && obstructionFor(ground.map, ground.index, ground.network, leg.edge, faction) !== null) return 'obstructed';
   return null;
 }

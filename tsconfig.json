@@ -15,5 +15,5 @@
     "allowImportingTsExtensions": true,
     "types": ["node"]
   },
-  "include": ["packages/*/src", "packages/*/test", "packages/*/demo", "packs/*/test", "prototypes/planner-spike/src", "prototypes/planner-spike/test", "tools/**/*.ts", "vitest.config.ts"]
+  "include": ["packages/*/src", "packages/*/test", "packages/*/demo", "packs/*/test", "tools/**/*.ts", "vitest.config.ts"]
 }

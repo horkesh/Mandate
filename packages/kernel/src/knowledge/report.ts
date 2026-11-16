@@ -46,18 +46,34 @@ export type AdviceSubtype = (typeof ADVICE_SUBTYPES)[number];
 export const SUBJECT_KINDS = ['enemy', 'order', 'person', 'post', 'region', 'situation'] as const;
 export type SubjectKind = (typeof SUBJECT_KINDS)[number];
 
-/** What a claim is about. Values are integers in the claim's own unit (men, days, or 0/1 flags). */
+/**
+ * What a claim is about. Values are integers in the claim's own unit (men, days, permille, or 0/1 flags).
+ *
+ * Lane 1.2 adds what a commander is told of the ground, so he plans on it (0062: every input about the enemy or the
+ * ground comes from his view, works and obstructions included), and the claims of the plan cycle:
+ * - `works`: the fortification in `claimRegion`, permille (0 reported as none);
+ * - `obstruction`: a water edge, named in `claimToken` (an edge id from the World), closed to the author's side
+ *   (`claimValue` 1) or reported clear (0); `claimRegion` is the region of the installation whose works close it, or
+ *   null for works no installation holds (a boom, hulks);
+ * - `plan-submitted`: the plan a commander chose for his goal, sent to its issuer: `claimToken` its method,
+ *   `claimRegion` the objective, `claimValue` its score;
+ * - `plan-answer`: his answer to an edit of his plan: `claimToken` the rung he declares, `claimRegion` the objective.
+ */
 export const CLAIM_KINDS = [
   'arrived',
   'effective-strength',
   'enemy-strength',
   'goal-status',
+  'obstruction',
   'order-objected',
   'order-obeyed',
   'own-losses',
+  'plan-answer',
+  'plan-submitted',
   'position',
   'present-and-absent',
   'present-for-duty',
+  'works',
 ] as const;
 export type ClaimKind = (typeof CLAIM_KINDS)[number];
 

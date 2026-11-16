@@ -88,7 +88,8 @@ export function situationReferenceProblems(defs: readonly SituationDef[], refs: 
       if (o.proposedBy !== 'inaction') for (const p of o.proposedBy) if (!refs.persons.has(p)) at(`option ${o.id}`, `proposer ${p} is not a person`);
       for (const order of o.orders) {
         if (!refs.posts.has(order.to)) at(`option ${o.id}`, `order to ${order.to}, not a post`);
-        if (order.region !== null && !refs.regions.has(order.region)) at(`option ${o.id}`, `order names ${order.region}, not a region`);
+        if (order.objective !== null && !refs.regions.has(order.objective)) at(`option ${o.id}`, `order names ${order.objective}, not a region`);
+        if (order.objective === null && order.posture !== 'hold') at(`option ${o.id}`, `a ${order.posture} order names an objective; only a hold may name none`);
         if (!ORDER_ROUTES.includes(order.route)) at(`option ${o.id}`, `route ${order.route} is not one a principal may order by (${ORDER_ROUTES.join(', ')})`);
       }
     });

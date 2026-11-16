@@ -89,7 +89,7 @@ export const FIXTURE_PEOPLE_RULES: PeopleRules = {
     perceptionValues: [{ value: 'caution', permille: 500 }],
     perceptionMax: 4000,
     demandBase: 1000,
-    demandPerPoint: 2,
+    demandPerPoint: 2, assaultMargin: 1500,
     holdBand: 1500,
     wantsMenPermille: 800,
     paperPermille: 1400,
@@ -105,7 +105,9 @@ export const FIXTURE_RULES = {
   ruleSeats: { warFlags: [] },
   latency: { wireDays: 0, mailPermille: 2000, specialMessengerPermille: 500, courierNoiseMaxDays: 1, specialMessengerPrice: 1 },
   reportTemplates: FIXTURE_TEMPLATES,
-  standing: { conflictWindowDays: 7, scoreCap: 4000 },
+  standing: { conflictWindowDays: 7 },
+  planner: {"hopShare":250,"menPerDay":1000,"flankOverlapMax":600,"flankLengthMax":1600,"flankPenalty":2000,"retrogradeSlack":0,"dedupeOverlap":800,"dedupeArrival":1500,"topN":4,"maxSearches":64,"reducePerLevel":10,"clearDays":4000,"forceDays":1000,"forcingThreat":4000,"assaultDays":1000,"pincerWindow":2000,"dependenceCost":120,"partnerWillingnessWeight":300, "partnerRegardWeight": 1000, "partnerStandingWeight": 1000, "partnerStandingPivot": 500,"dailyDraftCap":3,"weights":{"riskBase":200,"supplyBase":1100,"concentrationPerTimid":250,"pausePerTimid":400,"twoAxesAt":500,"threeAxesAt":800,"goalFit":400,"ratioBonusMax":300,"ratioBonusDivisor":10,"ratioPenaltyMax":600,"latePenaltyMax":600,"latePerDay":40,"earlyBonusMax":300,"earlyDivisor":25000,"holdingTime":-300,"traitBase":1100,"hasteDivisor":10000,"supplyDivisor":10000,"outrunDivisor":4,"exposureDivisor":20,"coordinationDivisor":10000,"perExtraAxis":50,"gloryDivisor":5,"cautionDivisor":2}},
+  plans: {"goalDefaults":{"risk":500,"deadlineDays":20,"rail":true,"river":false,"sea":false,"neutral":false,"awaitWord":false,"approveAsDrafted":true},"holdingRisk":-400},
   people: FIXTURE_PEOPLE_RULES,
 } as const;
 

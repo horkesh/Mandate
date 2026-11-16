@@ -152,21 +152,21 @@ describe('every route a choice can take (gate re-check R1, R2, N4)', () => {
     expect(taint.get('elsewhere')).toBeUndefined();
   });
 
-  it('refuses a nation notice that reads a standing goal, the principal’s own order', () => {
-    const goal = { goal: { post: 'army_x', kind: 'advance' } };
+  it('refuses a nation notice that reads a goal, the principal’s own order', () => {
+    const goal = { goal: { post: 'army_x', posture: 'take' } };
     expect(raised([nationNotice('council', { event: { all: [{ dayAtLeast: 1 }, goal] } })])).toEqual(['error self-governing-goal council']);
     expect(raised([nationNotice('council', { knowledge: { not: goal } })])).toEqual(['error self-governing-goal council']);
   });
 
   it('a goal read laundered through a middle notice is still the principal’s order (gate re-check R3)', () => {
-    const goal = { goal: { post: 'army_x', kind: 'advance' } };
+    const goal = { goal: { post: 'army_x', posture: 'take' } };
     const middle = item('a_middle', { event: goal, effects: [setFlag('ordered')] });
     const nation = nationNotice('b_council', { event: { flag: 'ordered' } });
     expect(raised([middle, nation])).toEqual(['error self-governing-choice b_council']);
-    // The message names what it depends on: the standing goal of the post, not a decision (the standing reviewer's N6).
+    // The message names what it depends on: the goal of the post, not a decision (the standing reviewer's N6).
     const sink = new IssueSink();
     nationActs([middle, nation], PACK, sink);
-    expect(sink.issues[0]!.message).toContain('depends on the standing goal of post "army_x", through "a_middle"');
+    expect(sink.issues[0]!.message).toContain('depends on the goal of post "army_x", through "a_middle"');
     expect(sink.issues[0]!.message).not.toContain('decision');
     // With a note on the route through the middle notice it is still refused: 0070 refuses choices outright, notes cover only news.
     expect(raised([middle, { ...nation, def: { ...(nation.def as object), gateReview: { notes: { 'route|a_middle': 'The nation answers it.' } } } as never }])).toEqual(['error self-governing-choice b_council']);
