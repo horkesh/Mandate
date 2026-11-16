@@ -32,6 +32,7 @@ import { verbRulesProblems } from '../people/verb-rules.ts';
 import { recruitmentRuleProblems, selfEmancipationRuleProblems } from '../recruitment/rules.ts';
 import { combatRulesProblems } from '../combat/rules.ts';
 import { operationsRulesProblems } from '../operations/rules.ts';
+import { politicsRulesProblems } from '../politics/rules.ts';
 import { otherEnd, type WorldIndex } from '../world/index.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
 import type { PostKindRole, World } from '../world/world.ts';
@@ -121,6 +122,8 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
     ...menAndRegionsReferenceProblems(map.world),
     ...combatRulesProblems(pack.combat, map.world.vocabularies.terrains.map((t) => t.id)),
     ...operationsRulesProblems(pack.operations, pack.pruning),
+    // Lane 1.6: blocs, chambers, sessions and papers.
+    ...politicsRulesProblems(map.world),
   ];
 
   const people = new Map<PersonId, SeatPerson>();

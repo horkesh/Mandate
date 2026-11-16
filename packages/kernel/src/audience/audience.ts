@@ -12,7 +12,7 @@ import { strictCompare } from '../compare.ts';
 import type { DirectiveResponse, DirectiveTerms, Reason } from '../directive.ts';
 import type { PersonId, PostId } from '../ids.ts';
 import { applyPeopleChanges, type PeopleChange } from '../people/people.ts';
-import { answerOrder, goalTerms, type ReadingWorld } from '../reading/orders.ts';
+import { answerOrder, goalTerms, principalCredibility, type ReadingWorld } from '../reading/orders.ts';
 import { goalKindOf } from '../plans/goal.ts';
 import type { State } from '../root-state.ts';
 
@@ -183,7 +183,7 @@ export function previewAudience(
   const scratch = applyPeopleChanges(state, changes, day, rules, world.map.world.vocabularies.ranks);
   // A promised reinforcement counts toward what he holds for the plan only as far as the principal's promises are
   // believed (M2's case 7): its men on the plan's scale, scaled by his credibility.
-  const believed = reinforce === null || planned === null || planned.strength === 0 ? 0 : Math.trunc((Math.trunc((reinforce.men * PLAN_HOLDS) / planned.strength) * rules.context.leaderCredibility) / 1000);
+  const believed = reinforce === null || planned === null || planned.strength === 0 ? 0 : Math.trunc((Math.trunc((reinforce.men * PLAN_HOLDS) / planned.strength) * principalCredibility(world, state, holder)) / 1000);
   const available = planned === null ? undefined : Math.min(1000, PLAN_HOLDS + believed);
   const means = { ...(available === undefined ? {} : { available }), ...(reinforce === null ? {} : { supportPromised: ['reinforcement'] }), ...(oversight === null ? {} : { oversight }) };
   const response = answerOrder(world, scratch, holder, principal, terms, means);

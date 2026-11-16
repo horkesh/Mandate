@@ -145,11 +145,11 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('messages in transit', 'messages', ['commands', 'reports', 'relay links forwarding an order', "the kernel's latency rules"], [at('State', 'messagesInTransit')]),
   field('economy stocks', 'economy', ['weekly step', 'verbs']),
   field('situations fired, live (open options, clocks) and decided', 'situations', ['cause evaluation', 'decisions', "delegated seats' choices"], [at('State', 'situationStates')]),
-  field('blocs, mandate, election results', 'politics', ['weekly step', 'battles', 'the press', 'checkpoints']),
-  field("each chamber of Congress's state (sitting, adjourned, special session called)", 'politics', ['situations', 'the weekly step']),
-  field('the framing term (who the public believes began the war)', 'politics', ["the war's opening situations", 'the press']),
-  // Reserved by section 10 (0046), with no writer yet (close-out, 0072): named so whatever builds them writes only here.
-  field('the Congress accountability ledger: acts taken while Congress was away', 'politics', []),
+  // Lane 1.6 (`politics/politics.ts`): bloc support (the mandate is derived from it, never stored; elections are 1B's).
+  field('blocs, mandate, election results', 'politics', ['the weekly step (drift, the ladder)', 'the press', 'address', 'situations'], [at('State', 'blocSupport')]),
+  field("each chamber of Congress's state (sitting, adjourned, special session called)", 'politics', ['situations (a call)', "the pack's session calendar, daily"], [at('State', 'chamberStates')]),
+  field('the framing term (who the public believes began the war)', 'politics', ["the war's opening situations", 'the press'], [at('State', 'warFraming')]),
+  field('the Congress accountability ledger: acts taken while Congress was away', 'politics', ['situations (an act owed an answer; an answer)', 'the chambers meeting'], [at('State', 'congressLedger')]),
   field('people who have reached Union lines', 'regions', ['the derived self-emancipation term (0046); never a lever'], [at('State', 'regionReachedUnionLines')]),
   field("a raised block's enlistment: who raised it on whose call, and when its men's term ends", 'forces', ['recruitment'], [at('State', 'forceEnlistments')]),
   field('seat assignments', 'seats', ['setup', "the player's settings"], [at('State', 'seatAssignments')]),
@@ -258,6 +258,9 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'BattleSide',
   'BattleTerm',
   'BlockLoss',
+  // Lane 1.6: the chambers and the ledger (each replaced whole by `politics`)
+  'ChamberState',
+  'CongressAct',
 ];
 
 /** State's own root fields that are set once at setup and never written after (the game's seed, the calendar's day 0). */

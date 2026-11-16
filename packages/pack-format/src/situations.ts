@@ -61,6 +61,12 @@ export const ConditionSchema: z.ZodType<Condition> = z.lazy(() =>
     z.strictObject({ goal: z.strictObject({ post: idOf('post'), posture: z.enum(phase0.POSTURES) }).describe('The post holds a goal of this posture, ordered by its principal (lane 1.2: a goal in plans, no longer a standing goal).') }),
     z.strictObject({ headquartersAt: z.strictObject({ post: idOf('post'), region: idOf('region') }) }),
     z.strictObject({ clockAtLeast: nonNegative }),
+    z.strictObject({ chamber: z.strictObject({ id: termId, state: z.enum(phase0.CHAMBER_STATES) }).describe('A chamber of the legislature is in this state today (lane 1.6): a public fact.') }),
+    z.strictObject({
+      ledger: z
+        .strictObject({ side: idOf('faction'), act: termId.nullable().default(null), status: z.enum(phase0.LEDGER_STATUSES) })
+        .describe('An act of the side (this one, or any) stands away (taken while the legislature was away), before it (met, not answered) or answered (lane 1.6, 0046): a public fact.'),
+    }),
   ]),
 );
 
@@ -272,9 +278,29 @@ export function validateSituations(items: readonly { readonly file: string; read
   const defaultStrings = new Map<string, string>();
   for (const { table } of pack.strings.get(pack.manifest.defaultLocale) ?? []) for (const [k, v] of Object.entries(table)) defaultStrings.set(k, v);
   const flagsSet = new Set<string>();
+  // Lane 1.6: the acts effects enter on the accountability ledger, and the politics records an effect may name.
+  const ledgerActs = new Set<string>();
   for (const { def } of items) {
-    for (const { effect } of phase0.effectsOf(def)) if ('setFlag' in effect) flagsSet.add(effect.setFlag);
+    for (const { effect } of phase0.effectsOf(def)) {
+      if ('setFlag' in effect) flagsSet.add(effect.setFlag);
+      if ('propose' in effect && effect.propose.owner === 'politics' && effect.propose.field === 'ledger-act' && effect.propose.subject !== null) ledgerActs.add(effect.propose.subject);
+    }
   }
+  const politics = pack.world.rules.politics;
+  const chambers = new Set(politics.chambers.map((c) => c.id));
+  const blocs = new Set(politics.blocs.map((b) => b.id));
+  const sessions = new Set(politics.sessions.filter((s) => s.callable).map((s) => s.id));
+  /** A proposal to `politics`, checked as the kernel would refuse it in play (`tick/politics.ts`). */
+  const politicsProposal = (p: { readonly field: string; readonly subject: string | null; readonly side: string | null }, at: string, err: (kind: string, where: string, message: string, expected?: string) => void) => {
+    const fields: readonly string[] = phase0.POLITICS_FIELDS;
+    const reserved: readonly string[] = phase0.POLITICS_RESERVED_FIELDS;
+    if (!fields.includes(p.field) && !reserved.includes(p.field)) return err('politics-field', `${at}.field`, `politics has no field "${p.field}"`, `one of ${[...fields, ...reserved].join(', ')}`);
+    if (p.field === 'bloc-support' && (p.subject === null || !blocs.has(p.subject))) err('unknown-reference', `${at}.subject`, `"${p.subject}" is not a bloc in rules.politics.blocs`);
+    if (p.field === 'session-call' && (p.subject === null || !sessions.has(p.subject))) err('unknown-reference', `${at}.subject`, `"${p.subject}" is not a callable session in rules.politics.sessions`);
+    if ((p.field === 'ledger-act' || p.field === 'ledger-answer') && p.side === null) err('politics-side', `${at}.side`, 'a ledger act or answer names no side', "the side whose legislature it answers to");
+    if (p.field === 'ledger-act' && p.subject === null) err('politics-act', `${at}.subject`, 'a ledger act names no act', 'an act id');
+    if (p.field === 'framing' && p.subject === null && p.side === null) err('politics-side', `${at}.side`, 'framing names no side', 'a subject faction or a side');
+  };
   for (const { file, def } of items) {
     if (byId.has(def.id)) sink.error('duplicate-id', file, 'id', `situation "${def.id}" is defined more than once`);
     byId.set(def.id, def);
@@ -429,12 +455,18 @@ export function validateSituations(items: readonly { readonly file: string; read
           ref(posts, 'post in any scenario', c.headquartersAt.post, at);
           ref(regions, 'region', c.headquartersAt.region, at);
         }
+        if ('chamber' in c) ref(chambers, 'chamber', c.chamber.id, at);
+        if ('ledger' in c) {
+          ref(factions, 'faction', c.ledger.side, at);
+          if (c.ledger.act !== null && !ledgerActs.has(c.ledger.act)) err('unknown-reference', at, `no effect in the pack enters act "${c.ledger.act}" on the ledger`);
+        }
         if ('flag' in c && !flagsSet.has(c.flag)) sink.warn('situation-flag-unset', file, at, `flag "${c.flag}" is read but no effect in the pack sets it`);
       });
     }
     for (const { at, effect } of phase0.effectsOf(def)) {
       if ('propose' in effect && effect.propose.side !== null) ref(factions, 'faction', effect.propose.side, `${at}.propose.side`);
       if ('propose' in effect && effect.propose.owner === 'command') commandProposal(effect.propose, `${at}.propose`, err, def.kind === 'notice');
+      if ('propose' in effect && effect.propose.owner === 'politics') politicsProposal(effect.propose, `${at}.propose`, err);
     }
 
     // String keys, in the default locale. (Every message in the table is parsed as ICU by the World validator.)

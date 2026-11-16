@@ -29,6 +29,7 @@ import type { RecruitmentRules, SelfEmancipationRules } from '../recruitment/rul
 import type { PeopleRules } from '../people/rules.ts';
 import type { CombatRules } from '../combat/rules.ts';
 import type { OperationsRules, PruningRules } from '../operations/rules.ts';
+import type { PoliticsRules } from '../politics/rules.ts';
 
 export const WORLD_FORMAT_VERSION = 2;
 
@@ -267,6 +268,8 @@ export interface WorldRules {
   readonly recruitment: RecruitmentRules;
   /** The derived self-emancipation term (lane 1.7; 0046). */
   readonly selfEmancipation: SelfEmancipationRules;
+  /** Politics (lane 1.6): blocs, the legislature's chambers and calendar, credibility, framing and the press. DESIGN PARAMETERS and sourced records the pack states (0072). */
+  readonly politics: PoliticsRules;
 }
 
 export interface TerrainTerm {

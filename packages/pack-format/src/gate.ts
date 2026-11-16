@@ -247,6 +247,28 @@ export function proximityHit(text: string, resourceTerms: readonly string[], gro
   return null;
 }
 
+/**
+ * Lane 1.6 (0021, 0026; SENSITIVE-HISTORY section 1's protected population): no bloc is made of a protected group. A
+ * bloc is a political quantity with support and a voice, which the press and the president move; a group whose people
+ * are agents of their own freedom is never one. A bloc whose id or name, in any locale, names a protected-group term from
+ * the register is refused. Exported so a pack's coverage can be tested by probing.
+ */
+export function checkBlocs(blocs: readonly { readonly id: string; readonly name: string }[], gate: GateData, strings: LocaleStrings): Issue[] {
+  const sink = new IssueSink();
+  const groups = gate.register.topics.flatMap((t) => t.protectedGroups);
+  const names = (b: { readonly id: string; readonly name: string }): string[] => [b.id.replace(/_/g, ' '), ...[...strings.values()].flatMap((table) => (table.has(b.name) ? [table.get(b.name)!] : []))];
+  blocs.forEach((b, i) => {
+    for (const text of names(b)) {
+      const hit = groups.find((g) => new RegExp(`(?<![\\p{L}\\p{N}])${escapeRegExp(g)}(?![\\p{L}\\p{N}])`, 'iu').test(text));
+      if (hit !== undefined) {
+        sink.error('gate-protected-bloc', 'pack.json', `vocabularies.blocs[${i}] (${b.id})`, `the bloc "${text}" is made of a protected group ("${hit}")`, 'no bloc of a protected group: its people are agents, never a political quantity (0021, 0026)');
+        break;
+      }
+    }
+  });
+  return sink.issues;
+}
+
 type Tag = phase0.GateTag;
 const topicsOf = (tag: Tag | null): readonly string[] => (tag === null || 'none' in tag ? [] : tag.topics);
 
@@ -620,6 +642,34 @@ export function gatedRowProblems(rows: readonly phase0.OrderValueRow[], signed: 
     else if (reviewers !== null && !reviewers.includes(s.reviewer)) problems.push(`${r.order} is signed off by ${s.reviewer}, who is not in gate/reviewers.json`);
   }
   for (const order of Object.keys(signed).sort()) if (!gated.some((r) => r.order === order)) problems.push(`a sign-off names ${order}, which is not a gated row of the map`);
+  return problems;
+}
+
+/**
+ * The sign-off of a pack's blocs (lane 1.6; the gate review of lane 1.6, item 4). `checkBlocs` refuses a bloc named for
+ * a protected group, but a neutral name may hide one as its members; only a reader of its citation can tell. So every
+ * bloc is gated content: a pack pins, in a test, each bloc's content hash (its rule and its name in the default locale)
+ * and its reviewer. A new or edited bloc fails until the gate reviewer signs its hash.
+ */
+export function blocHash(bloc: phase0.BlocRule, name: string): string {
+  return canonicalHash({ bloc, name });
+}
+
+/** What is wrong with the pinned sign-offs of a pack's blocs. `names`: each bloc's name in the default locale. */
+export function blocSignOffProblems(blocs: readonly phase0.BlocRule[], names: Readonly<Record<string, string>>, signed: Readonly<Record<string, RowSignOff>>, reviewers: readonly string[] | null): string[] {
+  const problems: string[] = [];
+  for (const b of blocs) {
+    const hash = blocHash(b, names[b.id] ?? '');
+    const s = signed[b.id];
+    if (s === undefined) {
+      problems.push(`bloc ${b.id} has no sign-off: the gate reviewer reads its composition from its cite, then signs ${hash}`);
+      continue;
+    }
+    if (s.hash !== hash) problems.push(`bloc ${b.id} changed after its sign-off by ${s.reviewer}: re-review, then sign ${hash}`);
+    if (s.reviewer.trim().length === 0 || s.reviewer.startsWith('fixture')) problems.push(`bloc ${b.id} is signed off by "${s.reviewer}", not a gate reviewer`);
+    else if (reviewers !== null && !reviewers.includes(s.reviewer)) problems.push(`bloc ${b.id} is signed off by ${s.reviewer}, who is not in gate/reviewers.json`);
+  }
+  for (const id of Object.keys(signed).sort()) if (!blocs.some((b) => b.id === id)) problems.push(`a sign-off names bloc ${id}, which the pack no longer has`);
   return problems;
 }
 

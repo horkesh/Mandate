@@ -13,6 +13,7 @@ import type { DepartmentId, RegionId } from '../ids.ts';
 import { initialInfrastructure } from '../infrastructure/infrastructure.ts';
 import { initialLocations } from '../movement/movement.ts';
 import { initialPeople, SHADOW_MODES, type ShadowMode } from '../people/people.ts';
+import { chambersOn, initialBlocSupport } from '../politics/politics.ts';
 import { initialFortification, initialLoyalty } from '../regions/regions.ts';
 import type { State } from '../root-state.ts';
 import type { SeatDriver } from '../seats/api.ts';
@@ -124,6 +125,10 @@ export function emptyState(): State {
     audienceHeld: {},
     observerPostings: {},
     battleRecords: {},
+    blocSupport: {},
+    chamberStates: {},
+    congressLedger: [],
+    warFraming: {},
   };
 }
 
@@ -221,5 +226,10 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
     audienceHeld: {},
     observerPostings: {},
     battleRecords: {},
+    // Lane 1.6: every bloc at its rest, each chamber as the calendar has it on day 0, nothing owed, no one framed yet.
+    blocSupport: initialBlocSupport(map.world.rules.politics),
+    chamberStates: chambersOn(map.world.rules.politics, start.startDate, {}, 0),
+    congressLedger: [],
+    warFraming: {},
   };
 }

@@ -42,6 +42,8 @@
   "person_kind.naval_officer": "naval officer",
   "person_kind.governor": "governor",
   "person_kind.magnate": "magnate",
+  "person_kind.editor": "editor",
+  "chamber.n_assembly.name": "the Northern Assembly",
   "trait.slow": "slow",
   "trait.organiser": "organiser",
   "trait.candid": "candid",

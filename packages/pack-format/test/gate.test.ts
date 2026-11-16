@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
-import { C2_MINIMUM, checkGate, errorsOf, formatIssue, gateContentHash, GATE_QUESTIONS_PARTIAL, GATE_QUESTIONS_TESTED, IssueSink, loadPack, proximityHit, publishedSchemas, readGate, readSituations, releaseProblems, signatureRefuses, triggerMatches, type Issue } from '../src/index.ts';
+import { C2_MINIMUM, checkBlocs, checkGate, errorsOf, formatIssue, gateContentHash, GATE_QUESTIONS_PARTIAL, GATE_QUESTIONS_TESTED, IssueSink, loadPack, proximityHit, publishedSchemas, readGate, readSituations, releaseProblems, signatureRefuses, triggerMatches, type Issue } from '../src/index.ts';
 import { editJson, readTestbed, testbedFiles, type Edits } from './support/testbed.ts';
 
 /**
@@ -548,6 +548,21 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     firesAt(editJson('strings/en.json', (t) => (t['terrain.swamp'] = 'the fen folk counted in the swamps')), 'gate-forbidden-wording', { file: 'strings/en.json', at: 'terrain.swamp', message: 'resource wording' });
     firesAt(editJson('strings/en.json', (t) => (t['terrain.swamp'] = 'the masters of the swamp')), 'gate-review-wording', { file: 'strings/en.json', at: 'terrain.swamp', severity: 'warning' });
     expect(proximityHit('fen folk crossed the river and the mill kept its old stock of grain', ['stock'], ['fen folk'], 5)).toBeNull();
+  });
+
+  it('lane 1.6: no bloc is made of a protected group, by its id or its name in any locale', () => {
+    const files = testbedFiles();
+    const gate = readGate(files, new IssueSink())!;
+    const strings = new Map([['en', new Map<string, string>([...Object.entries(JSON.parse(readTestbed('strings/en.json')) as Record<string, string>), ['bloc.fen_bloc', 'the Fen folk vote']])]]);
+    // The testbed's own blocs pass, and so does a bloc that only shares letters with a group term.
+    expect(checkBlocs([{ id: 'n_hawks', name: 'bloc.n_hawks' }, { id: 'n_fenfolkish', name: 'bloc.n_hawks' }], gate, strings)).toEqual([]);
+    const refused = checkBlocs([{ id: 'fenfolk', name: 'bloc.n_hawks' }, { id: 'n_rural', name: 'bloc.fen_bloc' }], gate, strings);
+    expect(refused.map((i) => [i.kind, i.at])).toEqual([
+      ['gate-protected-bloc', 'vocabularies.blocs[0] (fenfolk)'],
+      ['gate-protected-bloc', 'vocabularies.blocs[1] (n_rural)'],
+    ]);
+    // The loader runs it over the pack's whole bloc vocabulary beside the situations' gate (`situation-layer.ts`).
+    expect(loadPack(files).issues.filter((i) => i.kind === 'gate-protected-bloc')).toEqual([]);
   });
 
   it('C2: no display position holds the default in more than half of the gated decisions with three or more options', () => {

@@ -390,6 +390,64 @@ export const RulesSchema = z.strictObject({
       policyFlags: z.array(z.strictObject({ flag: termId, permille: int.min(-1000).max(1000) })).describe('Situation flags that raise or lower known policy, signed permille.'),
     })
     .describe('The derived self-emancipation term (0046; SENSITIVE-HISTORY 3.2): never a lever. Its rates wait on sources; a pack with no census has no arrivals.'),
+  politics: z
+    .strictObject({
+      blocs: z
+        .array(
+          z.strictObject({
+            id: termId.describe('A bloc in the pack’s bloc vocabulary.'),
+            faction: idOf('faction'),
+            voice: permille.describe('Its share of its side’s voice in Washington; a side’s blocs sum to 1000.'),
+            rest: signedPermille.describe('Its support at the start, and the settled disposition it drifts back toward.'),
+            values: z.array(termId).describe('The values it holds: an address to a bloc costs the side’s blocs that share none of them.'),
+            victory: signedPermille.describe('Support it moves when its side’s press reports a battle won, at a paper’s full reach.'),
+            defeat: signedPermille.describe('The same, for a battle reported lost.'),
+            cite: z.string().min(1).describe('Where its voice, rest and reactions come from (a source key and place, or the design note that sets them).'),
+          }),
+        )
+        .describe('Blocs with weights and support (FOUNDATION section 7; M2’s blocs recast). A bloc is never a protected group (the gate refuses one).'),
+      drift: z.strictObject({ divisor: positive, cite: z.string().min(1) }).describe('Each week a bloc closes 1/divisor of the gap between its support and its rest. Cite: a source, “[I]” or “M2’s”.'),
+      address: z.strictObject({ support: signedPermille, othersPenalty: signedPermille, cite: z.string().min(1) }).describe('An address: the bloc addressed gains support; the side’s blocs sharing none of its values gain othersPenalty. Cite: a source, “[I]” or “M2’s”.'),
+      ladder: z
+        .strictObject({ lobbyingPerRung: signedPermille, publicDefiance: signedPermille, rival: signedPermille, cite: z.string().min(1) })
+        .describe('A man’s rung, weekly: from lobbying up, his bloc gets lobbyingPerRung per rung; from public defiance, every bloc of his side gets publicDefiance; a rival’s bloc gets rival.'),
+      chambers: z.array(z.strictObject({ id: termId, faction: idOf('faction'), name: stringKey, cite: z.string().min(1) })).describe('The chambers of the legislature (0040).'),
+      sessions: z
+        .array(
+          z.strictObject({
+            id: termId,
+            chambers: z.array(termId).min(1),
+            callable: z.boolean().describe('Sits only when a proposal calls it (a special session); otherwise a regular session of the calendar.'),
+            opens: isoDate.nullable().describe('The first day it sits; for a callable session, null when it meets afterCallDays after the call.'),
+            closes: isoDate.nullable().describe('The last day it sits; for a callable session, null when it sits sitsDays.'),
+            afterCallDays: positive.nullable(),
+            sitsDays: positive.nullable(),
+            cite: z.string().min(1),
+          }),
+        )
+        .describe('The session calendar (0040): regular sessions by their dates, and the special sessions a call may summon.'),
+      credibility: z
+        .strictObject({ base: permille, mandatePermille: permille, perRelief: signedPermille, min: permille, max: permille, cite: z.string().min(1) })
+        .describe('The principal’s sanction credibility (P7), derived: base, a share of his mandate, and each man holding a relief against him, within min..max.'),
+      framing: z.strictObject({ mandatePermille: permille, cite: z.string().min(1) }).describe('How much the framing term (0028, 0040) counts in the mandate.'),
+      press: z
+        .strictObject({
+          cadenceDays: nonNegative.describe('Days between front pages; 0 prints none.'),
+          papers: z.array(
+            z.strictObject({
+              id: termId,
+              faction: idOf('faction'),
+              editor: idOf('person'),
+              region: idOf('region'),
+              reachPermille: permille.describe('The share of its side’s public it reaches; a side’s papers sum to at most 1000.'),
+              cite: z.string().min(1),
+            }),
+          ),
+          standing: z.strictObject({ victory: signedPermille, defeat: signedPermille, cite: z.string().min(1) }).describe('A battle’s commander’s standing moved by a front page reporting it won or lost, at full reach.'),
+        })
+        .describe('The press as a report route (FOUNDATION section 7): a weekly front page each paper’s editor writes.'),
+    })
+    .describe('Politics (lane 1.6): blocs, the chambers and their calendar, credibility, framing and the press. Design parameters and sourced records the pack states (0072).'),
   people: z
     .strictObject({
       shadow: z
@@ -416,8 +474,8 @@ export const RulesSchema = z.strictObject({
         .array(z.strictObject({ goal: termId, boldness: permille, honours: z.array(termId), offends: z.array(termId) }))
         .describe('What a goal of each kind asks of the man who reads it: its boldness and the values it honours or offends.'),
       context: z
-        .strictObject({ oversight: permille, oversightPerCourierDay: permille, oversightWired: permille, oversightMin: permille, leaderCredibility: permille })
-        .describe('Oversight and the principal’s sanction credibility for an order read in the chain, until politics derives credibility (lane 1.6). Design parameters.'),
+        .strictObject({ oversight: permille, oversightPerCourierDay: permille, oversightWired: permille, oversightMin: permille })
+        .describe('Oversight for an order read in the chain (the principal’s credibility is politics’ derived term, lane 1.6). Design parameters.'),
       relay: z
         .strictObject({ reservationsHoldDays: nonNegative, slowWalkHoldDays: nonNegative, reinterpretHoldDays: nonNegative })
         .describe('Days a relaying link holds an order for each covert rung (0040). Design parameters.'),

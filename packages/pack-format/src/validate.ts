@@ -175,6 +175,11 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   for (const problem of [...phase0.recruitmentRuleProblems(world.rules.recruitment), ...phase0.selfEmancipationRuleProblems(world.rules.selfEmancipation), ...phase0.menAndRegionsReferenceProblems(world)]) {
     err('rules-men-regions', W('rules', 0, 'recruitment'), problem, 'whole numbers in range, and an arm, post kinds, values and a faction the pack has');
   }
+  // Lane 1.6: the politics rules and what they name, by the kernel's own rule (it checks the same when it indexes a World).
+  for (const problem of phase0.politicsRulesProblems(world)) {
+    err('rules-politics', W('rules', 0, 'politics'), problem, 'blocs from the vocabulary with a side’s voices summing to 1000, chambers and sessions complete for their kind, papers whose editor is of their side');
+  }
+  world.rules.politics.chambers.forEach((c, i) => useKey(c.name, W('rules.politics.chambers', i, 'name')));
   // 0073: every rank has a kind from rankKinds, so a person can hold one of each kind at once.
   vocab.ranks.forEach((r, i) => term('rankKinds', r.kind, W('vocabularies.ranks', i, 'kind')));
 

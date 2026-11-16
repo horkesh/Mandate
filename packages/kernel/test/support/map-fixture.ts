@@ -15,6 +15,7 @@ import type { ReportTemplate } from '../../src/knowledge/templates.ts';
 import type { RouteKind } from '../../src/messages/latency.ts';
 import { DEFAULT_COMPLIANCE_RULES } from '../../src/compliance.ts';
 import type { PeopleRules } from '../../src/people/rules.ts';
+import type { PoliticsRules } from '../../src/politics/rules.ts';
 import type { CombatRules } from '../../src/combat/rules.ts';
 
 export const R = (id: string): RegionId => toId('region', id);
@@ -67,6 +68,22 @@ export const FIXTURE_VALUES: readonly string[] = ['abolition', 'caution', 'conci
  * The fixtures' people rules (lane 1.1): the packs' numbers, except that history's shadow draws with no spread, so a
  * fixture person's drawn stats are his centres exactly, and the direction table is one the fixtures can hit exactly.
  */
+/**
+ * The fixtures' politics (lane 1.6): no blocs, chambers or papers, and a flat credibility of 500, which was lane 1.1's
+ * stand-in, so tests that do not set up politics read orders exactly as before.
+ */
+export const FIXTURE_POLITICS_RULES: PoliticsRules = {
+  blocs: [],
+  drift: { divisor: 20, cite: 'FIXTURE' },
+  address: { support: 100, othersPenalty: -15, cite: 'FIXTURE' },
+  ladder: { lobbyingPerRung: -10, publicDefiance: -20, rival: -10, cite: 'FIXTURE' },
+  chambers: [],
+  sessions: [],
+  credibility: { base: 500, mandatePermille: 0, perRelief: 0, min: 0, max: 1000, cite: 'FIXTURE' },
+  framing: { mandatePermille: 0, cite: 'FIXTURE' },
+  press: { cadenceDays: 7, papers: [], standing: { victory: 60, defeat: -60, cite: 'FIXTURE' } },
+};
+
 export const FIXTURE_PEOPLE_RULES: PeopleRules = {
   shadow: {
     centrePermille: { high: 800, above: 600, average: 500, below: 400, low: 200 },
@@ -81,7 +98,7 @@ export const FIXTURE_PEOPLE_RULES: PeopleRules = {
     { goal: 'hold', boldness: 400, honours: ['caution'], offends: [] },
     { goal: 'advance', boldness: 600, honours: ['glory'], offends: ['caution'] },
   ],
-  context: { oversight: 500, oversightPerCourierDay: 50, oversightWired: 150, oversightMin: 100, leaderCredibility: 500 },
+  context: { oversight: 500, oversightPerCourierDay: 50, oversightWired: 150, oversightMin: 100 },
   relay: { reservationsHoldDays: 0, slowWalkHoldDays: 2, reinterpretHoldDays: 4 },
   filter: { holdFor: [{ value: 'order', days: 1 }], trimFor: [{ value: 'reputation', claimKinds: ['own-losses'] }], candidAt: 500 },
   traits: {
@@ -179,6 +196,7 @@ export const FIXTURE_COMBAT_RULES: CombatRules = {
   recruitment: {"callTerms":{"boldness":500,"honours":["duty"],"offends":[]},"raisingPostKinds":[],"menPerRegiment":1000,"arm":"infantry","storesDays":10,"musterDays":5,"rungs":[{"rung":"exceed","sharePermille":1200,"delayDays":0},{"rung":"comply","sharePermille":1000,"delayDays":0},{"rung":"comply_with_reservations","sharePermille":1000,"delayDays":3},{"rung":"slow_walk","sharePermille":1000,"delayDays":10},{"rung":"reinterpret","sharePermille":600,"delayDays":5}],"loyaltyFull":800,"loyaltyWeight":500,"maxTermDays":1095,"musterBlockedDays":14},
   selfEmancipation: {"linesFaction":null,"agencyReasons":{"resistanceWithin":"agency:fixture","resistanceElsewhere":"agency:fixture","flightToLines":"agency:fixture"},"protectedFlags":[],"cadenceDays":7,"resistancePerMillion":200,"pressureFlags":[],"flightPerMillion":1000,"reachWithForce":1000,"reachLinesOnly":400,"holdShare":600,"policyBase":500,"policyFlags":[]},
   people: FIXTURE_PEOPLE_RULES,
+  politics: FIXTURE_POLITICS_RULES,
 } as const;
 
 export function region(id: string, kind: RegionKind = 'land'): RegionRecord {
