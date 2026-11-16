@@ -681,6 +681,30 @@
       {
         "id": "glory",
         "name": "value.glory"
+      },
+      {
+        "id": "state_autonomy",
+        "name": "value.state_autonomy"
+      },
+      {
+        "id": "slavery_defence",
+        "name": "value.slavery_defence"
+      },
+      {
+        "id": "slavery_noninterference",
+        "name": "value.slavery_noninterference"
+      },
+      {
+        "id": "free_soil",
+        "name": "value.free_soil"
+      },
+      {
+        "id": "native_state",
+        "name": "value.native_state"
+      },
+      {
+        "id": "fugitive_defence",
+        "name": "value.fugitive_defence"
       }
     ],
     "ranks": [

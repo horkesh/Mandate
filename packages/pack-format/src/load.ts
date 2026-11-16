@@ -4,13 +4,16 @@
  * a game build or a mod loader takes; it needs no sources.
  */
 import type { world as w } from '@mandate/kernel';
-import { readBannedSources } from './banned-sources.ts';
+import { readBannedSources, readWeakSources } from './banned-sources.ts';
 import { readJson, type PackFiles } from './generate.ts';
 import { errorsOf, type Issue, IssueSink } from './issues.ts';
 import { generatedStringsFile, MANIFEST_FILE, PROVENANCE_FILE, scenarioFile, stringsFile, WORLD_FILE } from './layout.ts';
 import { ManifestSchema, ProvenanceFileSchema, ScenarioSchema, type StringTable, StringTableSchema, WorldSchema } from './schemas.ts';
 import { readSituationLayer } from './situation-layer.ts';
 import { type PackData, validatePack } from './validate.ts';
+
+/** Issue kinds of the citation policy (A6): errors that do not stop the gate's pass over the situations. */
+const CITATION_POLICY_KINDS: ReadonlySet<string> = new Set(['banned-source-cited', 'weak-citations-only']);
 
 export interface LoadResult {
   readonly pack: PackData | null;
@@ -38,9 +41,11 @@ export function loadPack(files: PackFiles): LoadResult {
     if (tables.length > 0) strings.set(locale, tables);
   }
   if (errorsOf(sink.issues).length > 0) return { pack: null, issues: sink.issues };
-  const worldPack: PackData = { manifest, provenance, world, scenarios, strings, bannedSources: readBannedSources(files) };
+  const worldPack: PackData = { manifest, provenance, world, scenarios, strings, bannedSources: readBannedSources(files), weakSources: readWeakSources(files) };
   sink.add(validatePack(worldPack));
-  if (errorsOf(sink.issues).length > 0) return { pack: null, issues: sink.issues };
+  // A citation-policy error (a banned or weak-only citation) leaves the World structurally sound, so the gate's own pass still
+  // runs beside it: every problem is reported, never only the first (0030).
+  if (errorsOf(sink.issues).some((i) => !CITATION_POLICY_KINDS.has(i.kind))) return { pack: null, issues: sink.issues };
   const layer = readSituationLayer(files, worldPack);
   sink.add(layer.issues);
   const pack: PackData = { ...worldPack, situations: layer.situations, gate: layer.gate };

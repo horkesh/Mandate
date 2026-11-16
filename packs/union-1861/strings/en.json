@@ -162,5 +162,11 @@
   "value.career": "career",
   "value.caution": "caution",
   "value.abolition": "abolition",
-  "value.glory": "glory"
+  "value.glory": "glory",
+  "value.state_autonomy": "state autonomy",
+  "value.slavery_defence": "slavery defence",
+  "value.slavery_noninterference": "slavery non-interference",
+  "value.free_soil": "free soil",
+  "value.native_state": "native state",
+  "value.fugitive_defence": "fugitive defence"
 }

@@ -406,10 +406,10 @@ describe('an intelligence chief (0058)', () => {
 describe('a banned source in any citation (lane 1.8b; A6 beyond situations)', () => {
   const banned = (keys: string[], base?: FileMap) => withNewFile('gate/source-policy.json', JSON.stringify({ banned: keys, weak: [] }), base);
   const hits = (files: FileMap) => run(files).issues.filter((i) => i.kind === 'banned-source-cited');
-  it('warns once per record, at its source cell, naming each banned citation; a person’s centres included', () => {
+  it('is an error once per record (it was a warning until lane 1.11a re-sourced the Union rows), at its source cell, naming each banned citation; a person’s centres included', () => {
     const found = hits(banned(['REG A']));
     expect(found.length).toBeGreaterThan(0);
-    expect(found.every((i) => i.severity === 'warning')).toBe(true);
+    expect(found.every((i) => i.severity === 'error')).toBe(true);
     const chief = found.find((i) => i.file === 'source/world/people.csv' && i.at.includes('red_chief'))!;
     expect(chief.message).toContain('"REG A" at centres.competence.cites[0]');
     expect(new Set(found.map((i) => `${i.file}|${i.at}`)).size).toBe(found.length);
@@ -431,6 +431,35 @@ describe('temperament, regard and values (lane 1.1)', () => {
     expect(chief.values).toEqual([{ value: 'caution', cites: [{ source: 'REG A', at: 'p.5' }] }, { value: 'glory', cites: [{ source: 'DESIGN', at: null }] }]);
     // A row with none of them is fine: unknown temperament and no values while research is open (lane 1.9).
     expect(world.people.find((p) => p.id === 'blue_chief')!.values).toEqual([]);
+  });
+});
+
+describe('a people cell resting only on weak citations (lane 1.11a; hard rule 7, 0074)', () => {
+  const weak = (keys: string[], base: FileMap) => withNewFile('gate/source-policy.json', JSON.stringify({ banned: [], weak: keys }), base);
+  const weakHits = (files: FileMap) => run(files).issues.filter((i) => i.kind === 'weak-citations-only');
+  it('refuses a temperament or regard cell whose every citation is on the weak list, and names the cell', () => {
+    const found = weakHits(weak(['REG A'], withTemper({ red_chief: { boldness: 'above:REG A p.4', regard: 'below:REG A p.6' } })));
+    const cells = found.filter((i) => i.at.includes('red_chief')).map((i) => i.at);
+    expect(cells.some((c) => c.includes('boldness'))).toBe(true);
+    expect(cells.some((c) => c.includes('regard'))).toBe(true);
+    expect(found.every((i) => i.severity === 'error')).toBe(true);
+  });
+  it('lets a weak citation stand beside a strong one, and an unknown cell stand', () => {
+    expect(weakHits(weak(['REG A'], withTemper({ red_chief: { boldness: 'above:REG A p.4+DESIGN', candour: '' } }))).filter((i) => i.at.includes('boldness'))).toEqual([]);
+  });
+  it('refuses a value that cites only weak sources', () => {
+    const found = weakHits(weak(['REG A'], withTemper({ red_chief: { values: 'caution:REG A p.5;glory:DESIGN' } }))).filter((i) => i.at.includes('values'));
+    expect(found.map((i) => i.message)).toEqual([expect.stringContaining('value "caution"')]);
+  });
+  it('treats a citation whose place begins snippet, self-report or after-start as weak, whatever its source', () => {
+    for (const marker of ['snippet unverified', 'self-report of 1868', 'after-start July 1861']) {
+      const found = weakHits(withTemper({ red_chief: { boldness: `above:DESIGN ${marker}` } }));
+      expect(found.some((i) => i.at.includes('red_chief') && i.at.includes('boldness')), marker).toBe(true);
+    }
+    expect(weakHits(withTemper({ red_chief: { boldness: 'above:DESIGN p.4 a snippet of text elsewhere' } }))).toEqual([]);
+  });
+  it('lets a banned source count as weak too, and an invented person need no citation', () => {
+    expect(weakHits(withFile(`${W}/people.csv`, appendRow(INVENTED), allowInvented())).filter((i) => i.at.includes('pool_officer'))).toEqual([]);
   });
 });
 
