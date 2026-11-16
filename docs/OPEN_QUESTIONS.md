@@ -225,6 +225,11 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.11:** loyalty data must never come from the census; narrator text says whose loyalty it means (in a slave state, the free and voting population's); no border-state census rows are entered until lane 1.7's G-1.7a fix is merged (the lead's ruling: a Union-held region is skipped only where an R7 or S17 policy flag protects people who reach the lines; elsewhere the term runs, and `return` lowers it).
   - From the same review, **lanes 1.4 and 1.14:** McClellan bold on paper (27 April, 80,000 men) and cautious in action (Rich Mountain, 11 July). A single boldness cannot hold both. Watch whether drafting and execution need separate terms when operations land, and in calibration.
 **Phase 2 (desk and map)**
+
+- From lane 1.7's hand-over (`notes/lane-1.7-men-regions.md`, merged 2c97b64), by lane:
+  - **Lane 1.12 (rule seats):** no rule seat calls for regiments, so recruitment's mechanics are QUIET in the reference runs, each with its driving test. The principals need a call policy.
+  - **Lane 1.11 (situations and data):** the president's call (S09) is a situation, but a situation option cannot yet issue a call; it would go through `dispatchOrder` like a goal. Union `state_autonomy` is not in the pack's values vocabulary: data entry needs it before the call terms can offend it.
+  - **1B (economy):** the term's effect on the holding side's regional capacity and supply waits for an economy. Today the term is derived and its arrivals are State.
 - From lane 0.9, plan review: preview an edited route and its distance before it is sent. A distant waypoint can produce a route the player did not mean.
 - Tripwire measurements cover only the RX 7800 XT; integrated GPUs, the Steam Deck and Electron's Chromium are untested, and WebGPU and an OffscreenCanvas worker bake are untried. The prototype points Playwright 1.65 at the installed chromium-1234 (`CHROMIUM_PATH` overrides); adopting Playwright for screenshots means `npx playwright install`, a browser download that is the owner's call.
 
