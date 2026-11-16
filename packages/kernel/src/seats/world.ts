@@ -15,9 +15,9 @@
  *   stand-in adapter, 0058): read a man through `traitsOf(world, state, id)`
  *   (`people/traits.ts`), never from here. This World keeps only a person's
  *   side at the start.
- * - **A faction's objective** is a LABELLED STAND-IN (0058): the other
- *   faction's capital, when there are exactly two. Its replacement is the
- *   goals of Phase 1's principals (0058, 0072).
+ * - **A faction's objective** (STAND-IN(capital-objective; owner: lane 1.12)):
+ *   the other faction's capital, when there are exactly two (0058). Its
+ *   replacement is the goals of Phase 1's principals (0058, 0072).
  */
 import { strictCompare } from '../compare.ts';
 import { wireOwnerOf, type ControlIndex } from '../control-index/control-index.ts';
@@ -61,7 +61,7 @@ export interface SeatFaction {
   readonly principal: PersonId;
   /** Where the principal sits: orders start and his reports end here (the start's capital). */
   readonly seatRegion: RegionId;
-  /** STAND-IN (0058): the other faction's capital, when there are exactly two; null otherwise. */
+  /** STAND-IN(capital-objective; owner: lane 1.12; 0058): the other faction's capital, when there are exactly two; null otherwise. */
   readonly objective: RegionId | null;
 }
 

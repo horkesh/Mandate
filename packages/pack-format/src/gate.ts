@@ -683,6 +683,29 @@ export function blocSignOffProblems(blocs: readonly phase0.BlocRule[], names: Re
 /** The fewest gated decisions of three or more options before C2 counts positions. */
 export const C2_MINIMUM = 3;
 
+/**
+ * The decisions about atrocity-class conduct (0074; lane 1.14): each decision whose trigger depends on an atrocity-class
+ * item, by any route, as D5 reads it. The lever sweep (D6) reads such a decision's inaction outcome as if it were a
+ * watched option, since letting the order or sentence stand is only inaction.
+ */
+export function atrocityDecisions(situations: readonly SituationDef[], gate: GateData): Set<string> {
+  const topics = new Map(gate.register.topics.map((t) => [t.id, t]));
+  const classes = new Map(gate.classes.classes.map((c) => [c.id, c]));
+  const atrocity = (topic: string) => classes.get(topics.get(topic)?.class ?? '')?.atrocity === true;
+  const seeds = situations.flatMap((def) => {
+    const t = def.gate;
+    if ('none' in t || !t.topics.some(atrocity) || t.actingSide === null) return [];
+    return [{ id: def.id as string, actingSide: t.actingSide as string }];
+  });
+  const taint = atrocityTaint(situations.map((def) => ({ def })), seeds);
+  const out = new Set<string>();
+  for (const def of situations) {
+    if (def.kind !== 'decision') continue;
+    if ((taint.get(def.id) ?? []).some((t) => t.option === null && t.atrocity !== def.id)) out.add(def.id);
+  }
+  return out;
+}
+
 /** One route by which an item, or one of its options, depends on an atrocity-class item (D5; gate G4). */
 export interface AtrocityTaint {
   /** The option whose own condition depends on it, or null when the item's trigger does (all its effects depend on it). */

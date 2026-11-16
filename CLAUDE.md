@@ -44,7 +44,7 @@ npm run demo             # headless demo: three proxies receive the same directi
 npm run run:testbed      # M1: a scripted 20-turn headless game on the fictional testbed pack
 npm run run:headless       # M2 kernel: a headless runner (not the Phase 0 kernel; see run:phase0)
 npm run run:phase0         # Phase 0 runner on the new kernel (reference runs with the liveness gate)
-npm run run:done-check     # the Phase 0 done check: six criteria, each PASS or FAIL (also run in CI)
+npm run run:done-check     # the Phase 0 done check (six criteria, the exit status) and 1A's beside it (six more, reported), each PASS or FAIL (also run in CI); --milestone 1a makes 1A's binding
 npm run run:seats          # Phase 0 seats runner (rule seats, knowledge, command log); on union-1861 it is now a peace run
 npm run pack:generate -- <pack>   # (also pack:validate, pack:schemas) world format v2: generate, validate and publish schemas for a pack
 npm run play -- union-1861       # M2: play Lincoln in the text console (default pack: testbed)

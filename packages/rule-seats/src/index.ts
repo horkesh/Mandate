@@ -20,7 +20,7 @@
  *   run, 0040), so no rule seat ever sees that default.
  * AI seats (Phase 1) wrap a rule seat and fall back to it.
  *
- * STAND-IN (0072): the generic rule-seat principal. It gives the army that can be
+ * STAND-IN(generic-principal; owner: lane 1.12; 0072): the generic rule-seat principal. It gives the army that can be
  * reached soonest, which is always his own capital's garrison, a goal to take the
  * other side's capital, approves the plan its commander submits, and goes around
  * any office that objects. It proves the machinery; it is not a war. Since lane 1.2
@@ -39,7 +39,7 @@ export interface RuleSeatPolicy {
   /** Whether a principal sends an objected order again around the office that objected. */
   readonly goAroundObjections: boolean;
   /**
-   * STAND-IN (0072, with the generic principal): whether his opening goal permits marching through a neutral
+   * STAND-IN(generic-principal; owner: lane 1.12; 0072): whether his opening goal permits marching through a neutral
    * government's open ground. Phase 0's passage let every march cross it; since lane 1.2 a goal must permit it (0062),
    * and the generic principal does, so its mechanics run still reaches the enemy. Phase 1's principals (lane 1.12)
    * decide it as a political act.
@@ -108,7 +108,7 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   // opens his campaign the first morning after it begins (or on the policy's opening day, if that is later).
   if (menu.objective === null || menu.atWarSince === null) return answers;
   const orders: SeatCommand[] = [...answers];
-  // STAND-IN (0072): the army that can be reached soonest opens the campaign; the rest hold where they stand.
+  // STAND-IN(generic-principal; owner: lane 1.12; 0072): the army that can be reached soonest opens the campaign; the rest hold where they stand.
   const ranked = menu.commandable
     .map((c) => ({ c, route: quickest(c.routes) }))
     .filter((x): x is { c: (typeof menu.commandable)[number]; route: RouteOption } => x.route !== undefined)
