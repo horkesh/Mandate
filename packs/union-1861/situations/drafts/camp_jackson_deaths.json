@@ -1,0 +1,42 @@
+{
+  "id": "camp_jackson_deaths",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.camp_jackson_deaths.title",
+  "text": "situation.camp_jackson_deaths.text",
+  "earliest": "1861-05-10",
+  "event": {
+    "callReceived": {
+      "post": "st_gov_missouri",
+      "days": 24
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war",
+      "us_general_in_chief"
+    ],
+    "reportType": "informal",
+    "subtype": "governor-wire"
+  },
+  "gate": {
+    "topics": [
+      "civilian-deaths-1861",
+      "capture-in-battle"
+    ],
+    "placement": "event",
+    "risks": [],
+    "actingSide": "union"
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-3, the reports on Camp Jackson of 10 May 1861 (from p. 4, the cast's citation for Lyon; range to be checked)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "1, 3.5, 6.7, 6.8"
+    }
+  ]
+}

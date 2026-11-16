@@ -29,6 +29,22 @@ describe('the opening of 1861 (lane 1.11)', () => {
     expect(run.state.departmentFactions['st_maryland' as never]).toBe('union');
   });
 
+  it('closes the route through the border city on its cause, and the capital-cut-off decision reads the closure in State (0074)', () => {
+    const arrived = Object.values(run.state.orderResponses).find((r) => r.respKind === 'call' && r.respPost === 'st_gov_massachusetts')!.respDay;
+    expect(run.state.situationStates[S('baltimore_route_closed')]!.sitFiredDay).toBe(arrived + 4);
+    const cutOff = run.state.situationStates[S('washington_cut_off')]!;
+    expect(cutOff.sitFiredDay).toBeGreaterThanOrEqual(arrived + 4);
+    expect(cutOff.sitChosen).toEqual(['around_baltimore']);
+  });
+
+  it('takes the spring’s other decisions in a history run: the arsenal, the western counties (both groups), the special session', () => {
+    expect(run.state.situationStates[S('missouri_arsenal')]!.sitChosen).toEqual(['back_lyon']);
+    expect([...run.state.situationStates[S('western_virginia')]!.sitChosen].sort()).toEqual(['cross_river', 'recognise']);
+    const session = run.state.situationStates[S('special_session')]!;
+    expect(session.sitFiredDay).toBeGreaterThanOrEqual(121);
+    expect(session.sitChosen).toEqual(['ask_war_footing']);
+  });
+
   it('raises S07 from the Secretary of State’s own initiative: with his researched values he takes it, and his memorandum raises the situation', () => {
     const map = v2Map('union-1861')!;
     const people = map.world.people.map((p) => (p.id === 'seward_william_h' ? { ...p, values: ['conciliation', 'union', 'reputation'].map((value) => ({ value, cites: [] })) } : p));

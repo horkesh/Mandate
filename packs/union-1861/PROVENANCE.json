@@ -820,6 +820,16 @@
       "copyUsed": "www.jfepperson.org/sumter.htm and its document pages, read 2026-11-16",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "NPS-PRATT",
+      "title": "National Park Service pages on the Baltimore riot of 19 April 1861 and the Pratt Street dead, as read by research note secession-winter-1861 (3.2: 4 or 5 soldiers and 9 to 12 civilians killed by the sources' counts; the pages give 11 and 16)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "nps.gov pages cited [NPS-Pratt] and [NPS-Riot] in the note, read 2026-11-14",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

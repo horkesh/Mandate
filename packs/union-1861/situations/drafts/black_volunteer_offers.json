@@ -1,0 +1,91 @@
+{
+  "id": "black_volunteer_offers",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.black_volunteer_offers.title",
+  "text": "situation.black_volunteer_offers.text",
+  "earliest": "1861-04-19",
+  "event": {
+    "callReceived": {
+      "post": "st_gov_massachusetts",
+      "days": 8
+    }
+  },
+  "options": [
+    {
+      "id": "decline",
+      "label": "situation.black_volunteer_offers.option.decline",
+      "displayKey": 1,
+      "proposedBy": [
+        "cameron_simon"
+      ],
+      "honours": [
+        "order"
+      ],
+      "effects": [
+        {
+          "setFlag": "black_volunteers_declined"
+        }
+      ],
+      "lockedCosts": [
+        {
+          "propose": {
+            "owner": "politics",
+            "field": "bloc-support",
+            "subject": "radicals",
+            "delta": -20,
+            "reason": "black-volunteers-declined",
+            "side": "union"
+          }
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.black_volunteer_offers.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "decline"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "recommends": [
+      "decline"
+    ],
+    "reasons": [
+      {
+        "kind": "order",
+        "weight": 600
+      }
+    ],
+    "confidence": 600
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "topics": [
+      "black-enlistment-1861-offers"
+    ],
+    "placement": "decision",
+    "risks": [
+      "agency",
+      "hindsight"
+    ],
+    "actingSide": null
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "III-1 p. 107 (the offers and their refusal; read as a snippet by the note)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "6.4, 6.8"
+    }
+  ]
+}

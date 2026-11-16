@@ -1,0 +1,95 @@
+{
+  "id": "western_virginia",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.western_virginia.title",
+  "text": "situation.western_virginia.text",
+  "earliest": "1861-05-13",
+  "event": {
+    "callReceived": {
+      "post": "st_gov_virginia",
+      "days": 28
+    }
+  },
+  "options": [
+    {
+      "id": "cross_river",
+      "label": "situation.western_virginia.option.cross_river",
+      "displayKey": 1,
+      "proposedBy": [
+        "mcclellan_george_b"
+      ],
+      "honours": [
+        "union",
+        "reputation"
+      ],
+      "effects": [
+        {
+          "setFlag": "ohio_crossed"
+        }
+      ],
+      "group": "military"
+    },
+    {
+      "id": "recognise",
+      "label": "situation.western_virginia.option.recognise",
+      "displayKey": 2,
+      "proposedBy": [
+        "pierpont_francis_h"
+      ],
+      "honours": [
+        "union",
+        "order"
+      ],
+      "appearsWhen": {
+        "clockAtLeast": 37
+      },
+      "effects": [
+        {
+          "setFlag": "wheeling_government_recognised"
+        }
+      ],
+      "group": "government"
+    }
+  ],
+  "inaction": {
+    "text": "situation.western_virginia.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "cross_river",
+      "recognise"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_general_in_chief"
+    ],
+    "recommends": [
+      "cross_river"
+    ],
+    "reasons": [
+      {
+        "kind": "union",
+        "weight": 600
+      }
+    ],
+    "confidence": 500
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "a crossing and a recognition; the department commander's proclamation on slavery and insurrection is its own notice, gated under fugitive-policy"
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 p. 713 (the Wheeling government, per the cast)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "1, 3.6"
+    }
+  ]
+}

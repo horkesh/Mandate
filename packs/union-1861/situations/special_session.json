@@ -1,0 +1,75 @@
+{
+  "id": "special_session",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.special_session.title",
+  "text": "situation.special_session.text",
+  "earliest": "1861-07-04",
+  "event": {
+    "all": [
+      {
+        "flag": "congress_summoned"
+      },
+      {
+        "dayAtLeast": 121
+      }
+    ]
+  },
+  "options": [
+    {
+      "id": "ask_war_footing",
+      "label": "situation.special_session.option.ask_war_footing",
+      "displayKey": 1,
+      "proposedBy": [
+        "chase_salmon_p"
+      ],
+      "honours": [
+        "union"
+      ],
+      "effects": [
+        {
+          "setFlag": "war_footing_asked"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.special_session.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "ask_war_footing"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_treasury"
+    ],
+    "recommends": [
+      "ask_war_footing"
+    ],
+    "reasons": [
+      {
+        "kind": "union",
+        "weight": 600
+      }
+    ],
+    "confidence": 600
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "the message's request for men and money; the spring's acts on slavery and arrests come before Congress as bills, which wait on politics (1.6), and this text names neither"
+  },
+  "citations": [
+    {
+      "source": "SecNav1861",
+      "at": "Lincoln's message of 4 July 1861 (the request for 400,000 men and $400 million)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "1, 4.5, 5"
+    }
+  ]
+}
