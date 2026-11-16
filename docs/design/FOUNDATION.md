@@ -256,7 +256,7 @@ Module map, adapted from the AWWV-architecture note:
 | situation chain and wait state | `situations` | (0046) |
 | the Congress accountability ledger: acts taken while Congress was away | `politics` | (0046) |
 | people who have reached Union lines (`regionReachedUnionLines`) | `regions` | the derived self-emancipation term only (0046, 0074); never a lever |
-| fortification and entrenchment | `regions` | operations, combat (0029, 0041) |
+| fortification and entrenchment | `regions` | operations (works dug by an axis holding its objective), combat (works lost when stormed) (0029, 0041, 0080) |
 | a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments, combat releasing a surrendered block, recruitment (a raised block assigned to its governor's post; a disbanded one removed) (0033, 0064, 0073, 0076) |
 | people in posts; temporary posts (`postStates`) | `command` | appoint, relieve, promotion lists, an operation's end, combat vacating a hit commander's post (0076) |
 | observers in post (`observerPostings`): the observer, the post he watches, who sent him and the day he arrived | `command` | the observer verb and his recall (0040, 0073) |
@@ -270,7 +270,7 @@ Module map, adapted from the AWWV-architecture note:
 | audience state (`audienceHeld`: the last audience's day and the counters used) | `audience` | the audience verb |
 | each post's goal and plan record (`planRecords`): the goal, its draft set saved on the request day, the seat's pick, approval or send-back, edits as counter-orders, and a reference to his response (`proxy` writes the response itself) | `plans` | verbs (order, review, go), seat selections, order arrival, the planner's draft sets on request (0062, 0073) |
 | STAND-IN: what an approved plan has the movement path do, hold or advance to its objective (`standingGoals`; no order's content reaches it) | `plans` | plan approval; lane 1.4's operations retire it (0073) |
-| operations and their lifecycles | `operations` | plan approval, movement and combat outcomes |
+| operations and their lifecycles (`operationRecords`: one per goal and plan, axes copied from the plan, each stage with a typed reason) | `operations` | plan approval, movement and combat outcomes, support answers (0080) |
 | knowledge (reports per seat) | `knowledge` | message delivery, pruning |
 | messages in transit | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules |
 | economy stocks | `economy` | weekly step, verbs |
@@ -293,7 +293,7 @@ The day tick, each phase declaring what it reads and writes:
 10. The invariant barrier.
 11. Decision-point detection.
 
-In the code the phases run as: commands (1), deliveries (2), recruitment's musters and disbandings (2d, 0078), movement (3), battles and occupation (3b; the control contest until 0076), control and the derived map (4), stores on hand and stragglers rejoining (4a), the self-emancipation term on its cadence (4a′, 0078), situations (4b), `command`'s proposals such as a government closing (4c), cyclic reports, pruning, the day, and the barrier (0057, 0064). A post's headquarters is derived from where its strongest block stands, never stored.
+In the code the phases run as: commands (1), deliveries (2), recruitment's musters and disbandings (2d, 0078), operations, then movement (3, 0080), battles and occupation (3b; the control contest until 0076), control and the derived map (4), stores on hand and stragglers rejoining (4a), the self-emancipation term on its cadence (4a′, 0078), situations (4b), `command`'s proposals such as a government closing (4c), cyclic reports, pruning, the day, and the barrier (0057, 0064). A post's headquarters is derived from where its strongest block stands, never stored.
 
 **What happens to today's kernel:**
 - **Survive as they are:** `permille`, `rng`, `compare`, `rules`, scenario validation.
