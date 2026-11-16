@@ -59,6 +59,12 @@ describe('the opening of 1861 (lane 1.11)', () => {
     const session = run.state.situationStates[S('special_session')]!;
     expect(session.sitFiredDay).toBeGreaterThanOrEqual(121);
     expect(session.sitChosen).toEqual(['ask_war_footing']);
+    // Lane 1.6: the call was entered on the ledger while Congress was away, met when the House sat, and answered by the message.
+    const act = run.state.congressLedger.find((e) => e.ledgerAct === 'militia_call_1861')!;
+    // Met on 4 July when the House sits; the situation reads the chamber the next morning (the situations phase runs first).
+    expect(act.ledgerMetDay).toBe(121);
+    expect(session.sitFiredDay).toBe(122);
+    expect(act.ledgerAnsweredDay).not.toBeNull();
   });
 
   it('raises S07 from the Secretary of State’s own initiative: with his researched values (lane 1.11a) he takes it, and his memorandum raises the situation', () => {

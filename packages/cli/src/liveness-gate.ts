@@ -182,11 +182,6 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'situations.policy_unpaid': { why: 'a floor cost falls on the principal only when the floored row has no stakeholder or carrier of its own, and no reference run chooses a policy at all; the gate reviewer requires it never to fire in one', test: 'packages/kernel/test/gate-wiring.test.ts', needle: 'with standing at 0 and no stakeholders, the whole floor cost is recorded unpaid' },
   'seats.attention_refused': { why: 'the generic principal spends a few points a week of a budget of twelve, so nothing is refused for want of attention; the kernel test drives it', test: PV, needle: 'refuses what it cannot pay' },
   // Lane 1.6: politics' paths that wait for authored situations (lane 1.11: S09's call, S20's ratification, the war's opening).
-  'politics.act': { why: 'no situation enters an act on the ledger until lane 1.11 authors S09 and S20', test: POL, needle: 'enters an act taken while away, meets it when a chamber sits, and answers it' },
-  'politics.met': { why: 'no act is on the ledger until lane 1.11 authors S09 and S20', test: POL, needle: 'enters an act taken while away, meets it when a chamber sits, and answers it' },
-  'politics.answered': { why: 'no act is on the ledger until lane 1.11 authors S09 and S20', test: POL, needle: 'enters an act taken while away, meets it when a chamber sits, and answers it' },
-  'politics.called': { why: 'no situation calls a special session until lane 1.11 authors S09', test: POL, needle: 'calls a special session, which sits after its notice' },
-  'politics.framing': { why: 'no situation sets the framing until lane 1.11 authors the war’s opening', test: POL, needle: 'derives the mandate and credibility with their terms' },
   'politics.refused': { why: 'a refusal needs a proposal politics cannot apply; honest situations propose none', test: POL, needle: 'refuses a call while one stands' },
   'politics.press_silent': { why: 'every paper’s editor serves on his paper’s side throughout both runs', test: POL, needle: 'a paper whose editor no longer serves prints nothing' },
 };
@@ -330,6 +325,13 @@ const UNION_BANDS: Record<string, GateBand> = {
   // Lane 1.11: S06's Navy Department order lands Vogdes's company at Fort Pickens through lane 1.4b's detachment path.
   'forces.landed_by_situation': around(1),
   'forces.landing_refused': notHere('the one situation landing is made; QUIET'),
+  // Lane 1.11 on lane 1.6: S09 summons the special session and enters the call on the ledger; the House meets it on 4 July;
+  // S20's message answers it; the fort's firing frames the war for the Union public.
+  'politics.act': around(1),
+  'politics.answered': around(1),
+  'politics.called': around(1),
+  'politics.framing': around(1),
+  'politics.met': around(1),
 };
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
@@ -431,6 +433,11 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'operations.repulsed': notHere('no testbed operation is driven back by a battle; the Union run fires it'),
   'forces.landed_by_situation': notHere('no testbed situation lands troops; the Union run fires it'),
   'forces.landing_refused': notHere('no testbed situation lands troops; QUIET'),
+  'politics.act': notHere('no testbed situation acts on the legislature or frames the war; the Union run fires it'),
+  'politics.answered': notHere('no testbed situation acts on the legislature or frames the war; the Union run fires it'),
+  'politics.called': notHere('no testbed situation acts on the legislature or frames the war; the Union run fires it'),
+  'politics.framing': notHere('no testbed situation acts on the legislature or frames the war; the Union run fires it'),
+  'politics.met': notHere('no testbed situation acts on the legislature or frames the war; the Union run fires it'),
 };
 
 /** Mechanics that only a mechanic-specific run can fire: each band is the same in every run that does not. */

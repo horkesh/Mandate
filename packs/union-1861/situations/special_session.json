@@ -6,14 +6,10 @@
   "text": "situation.special_session.text",
   "earliest": "1861-07-04",
   "event": {
-    "all": [
-      {
-        "flag": "congress_summoned"
-      },
-      {
-        "dayAtLeast": 121
-      }
-    ]
+    "chamber": {
+      "id": "house",
+      "state": "sitting"
+    }
   },
   "options": [
     {
@@ -29,8 +25,25 @@
       "effects": [
         {
           "setFlag": "war_footing_asked"
+        },
+        {
+          "propose": {
+            "owner": "politics",
+            "field": "ledger-answer",
+            "subject": null,
+            "delta": 1,
+            "reason": "ratification",
+            "side": "union"
+          }
         }
-      ]
+      ],
+      "appearsWhen": {
+        "ledger": {
+          "side": "union",
+          "act": null,
+          "status": "before"
+        }
+      }
     }
   ],
   "inaction": {
@@ -60,7 +73,7 @@
   "delegableTo": [],
   "resurfaceOn": [],
   "gate": {
-    "none": "the message's request for men and money; the spring's acts on slavery and arrests come before Congress as bills, which wait on politics (1.6), and this text names neither"
+    "none": "the message's request for men and money and for ratification of the spring's acts, answered on the ledger (lane 1.6); the acts on slavery and arrests are not named in this text"
   },
   "citations": [
     {

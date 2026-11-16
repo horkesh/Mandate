@@ -278,12 +278,16 @@
   "situation.mcclellan_proclamation.title": "McClellan's proclamation",
   "situation.mcclellan_proclamation.text": "Crossing the Ohio, General McClellan issued his own proclamation to the people of western Virginia. It promised that his troops would not interfere with slavery, and that they would “with an iron hand, crush any attempt at insurrection on their part”: a rising by the enslaved.",
   "situation.special_session.title": "Congress meets",
-  "situation.special_session.text": "Congress meets in special session on the day the proclamation set. It will judge the acts of the spring, taken while it was away, and the president's message must say what the war needs.",
+  "situation.special_session.text": "The House has met in special session. It will judge the acts of the spring, taken while Congress was away, and the president's message must say what the war needs.",
   "situation.special_session.option.ask_war_footing": "Ask for 400,000 men and $400 million, and defend the spring's acts",
   "situation.special_session.inaction": "Congress acts on its own; the spring's acts go unratified until it does.",
   "situation.gosport_yard.title": "The Norfolk navy yard",
   "situation.gosport_yard.text": "Virginia's convention has voted to secede, and the navy yard at Gosport, by Norfolk, lies inside the state with its ships, guns and dry dock. Commodore McCauley commands it, and the state's militia are gathering.",
   "situation.gosport_yard.option.defend": "Hold the yard",
   "situation.gosport_yard.option.remove": "Move the ships and guns out",
-  "situation.gosport_yard.inaction": "The commandant decides for himself what to do with the yard."
+  "situation.gosport_yard.inaction": "The commandant decides for himself what to do with the yard.",
+  "reason.act-while-away": "an act taken while Congress was away",
+  "reason.session-called": "Congress summoned in special session",
+  "reason.ratification": "Congress asked to ratify the acts taken while it was away",
+  "reason.fired-on-first": "the public believes the other side fired first"
 }
