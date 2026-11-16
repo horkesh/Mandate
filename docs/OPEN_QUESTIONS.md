@@ -194,7 +194,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **1B, R6:** the gate reviewer's boundary: orders directing killings, burnings or collective reprisals are atrocity-class and carry both topics.
   - **1B, R7:** drop `fund-a-scheme`.
   - **Lane 1.12:** `crossNeutral` is a stand-in.
-  - **1B raids:** edge damage reaches the planner through the derived map, not by report.
+  - **1B raids:** edge damage reaches the planner through the derived map, not by report. From lane 1.2's review (`review-lane-1.2.md`): the side's supply reach also reaches the planner through the derived map, computed with the obstructions truly there. That is acceptable in 1A and needs a report-based path once unseen damage or a boom matters.
   - From the same review, **lanes 1.4 and 1.14:** McClellan bold on paper (27 April, 80,000 men) and cautious in action (Rich Mountain, 11 July). A single boldness cannot hold both. Watch whether drafting and execution need separate terms when operations land, and in calibration.
 **Phase 2 (desk and map)**
 - From lane 0.9, plan review: preview an edited route and its distance before it is sent. A distant waypoint can produce a route the player did not mean.
