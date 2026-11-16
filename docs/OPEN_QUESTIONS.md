@@ -155,6 +155,13 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.3 (combat):** a kernel test that nothing moves a person out of `captured`.
   - **1B, R6:** lane 1.8 proposes splitting `guerrilla-war-west` into itself and an atrocity-class `executions-and-reprisals`, with no player option to confirm an execution; the gate reviewer rules.
   - **1B, tooling:** the gate register schema has no `sources` field, so sources sit in each signature's reason. Add the field, resolved against `PROVENANCE.json`.
+- From lane 1.1's report (`notes/lane-1.1-people.md`, on `claude/phase1-people-bf3c25` until merged), by lane:
+  - **Lane 1.14 (done check and calibration):** goal boldness is set at hold 400 and advance 600, as pack rules. At 200 and 700, an average man with no values objected to an ordinary advance. A calibration starting point, not a finding.
+  - **Lane 1.11 (situations and data entry):** the Union pack has a fourth rank kind, `state` (state commissions), and kinds are assigned from the rank ids. Check that assignment against sources at data entry.
+  - **Lane 1.6 (politics):** `context.oversight` and `context.leaderCredibility` are plain pack values until 1.6 derives credibility (FOUNDATION section 8).
+  - **Lane 1.4 (operations and reports):** `orderResponses` grows with every relay hop and needs pruning, like knowledge.
+  - **Lane 1.5 (people's verbs):** regard between people has no format column yet (the lead's ruling), and its default is the pack rule `regardUnknown` (0 in both packs). `applyPeopleChanges` also does not check a proposed rank against the vocabulary; the reviewer may make that a should-fix for 1.1 instead.
+  - **When 1.1 merges (steward):** close the "values empty" lines (lanes 0.5 and 0.8, quiet by design on v2 packs) and the trait-adapter stand-in lines.
 **Phase 2 (desk and map)**
 - From lane 0.9, plan review: preview an edited route and its distance before it is sent. A distant waypoint can produce a route the player did not mean.
 - Tripwire measurements cover only the RX 7800 XT; integrated GPUs, the Steam Deck and Electron's Chromium are untested, and WebGPU and an OffscreenCanvas worker bake are untried. The prototype points Playwright 1.65 at the installed chromium-1234 (`CHROMIUM_PATH` overrides); adopting Playwright for screenshots means `npx playwright install`, a browser download that is the owner's call.
