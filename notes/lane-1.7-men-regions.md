@@ -25,6 +25,7 @@ Disbanding is the same proposal in reverse. The one-writer scanner passes.
   - the `call_loyalty` label;
   - a census region the lines' side already holds (`n_west_front` in the testbed gets no term);
   - a source scan that only `tick/regions.ts` calls `applyArrivals` and only the term proposes the protected field (`kernel/test/men-regions-scan.test.ts`).
+- **G-1.7a (the lead's ruling on the gate review):** holding a region protects no one by itself. The term runs in a census region the lines' side holds, with that region itself as cause 2's destination (its posts and camps there), scaled by known policy, so a policy of return lowers it. It skips a region only while a pack protection flag covers it (`selfEmancipation.protectedFlags`: a flag and its regions, set by R7's and S17's decisions; the testbed's `sanctuary_act` covers its two fronts). No text calls the people counted there free. Cause 1's reason is chosen by the region's government (N10), and each pressure flag has its own agency type (N9). Tests: a held region without the flag gets the term, one with it is skipped, and a return-style flag lowers it.
 - **The protected ids** match lane 1.8b's merged register exactly: `region_reached_union_lines` and `region_enslaved_population`.
 
 ## What is built
@@ -54,7 +55,7 @@ Disbanding is the same proposal in reverse. The one-writer scanner passes.
 4. **Recruitment runs daily (phase 2d), not in the weekly step** (FOUNDATION section 9's item 7). A muster day and a term's end are particular days (the ninety-day men went home on theirs), and the phase costs nothing on a day with no levy due.
 5. **A rung sets the share and the delay; loyalty scales the share.** `refuse` and `object` raise none and send a memorandum. `reinterpret` raises 600‰. *Rejected:* reading loyalty nowhere (loyalty State with no reader), or as a stand-in for control.
 6. **A call to a post of a self-governing department is refused** (`not_raising_post`; SENSITIVE-HISTORY 3.7: no seat recruits a nation).
-7. **The term's agency reason type is a pack rule** (`agency:self-emancipation` for Union, `agency:fen-flight` for the testbed), so it is always one of the pack's own register agency types (E3).
+7. **The term's agency reason types are pack rules, per cause** (`selfEmancipation.agencyReasons`), each one of the pack's own register agency types (E3; the situation layer refuses one it does not list). Union: `agency:resistance-within-confederacy` for cause 1 in a region the enslaving side governs, `agency:self-emancipation` for cause 1 elsewhere (a neutral government's, or the lines' side's own), and `agency:flight-to-union-lines` for cause 2. Each pressure flag carries its own type (`agency:escape-from-impressment` for an impressment flag). The testbed uses `agency:fen-flight` throughout.
 8. **The census does not deplete** as people reach the lines. Calibration waits on sources (SENSITIVE-HISTORY 3.2: the figures are UNVERIFIED). The rates are design values, and the Union pack has no census, so no Union run moves.
 9. **No `men` stock in `economy`** (1B): a regiment goes straight from the governor into a block.
 

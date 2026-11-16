@@ -35,7 +35,7 @@ export function readSituationLayer(files: PackFiles, pack: PackData): SituationL
     const listed = new Set(gate.register.topics.flatMap((t) => t.agencyReasons));
     const term = pack.world.rules.selfEmancipation;
     if (term.linesFaction !== null) {
-      for (const [cause, reason] of Object.entries(term.agencyReasons)) {
+      for (const [cause, reason] of [...Object.entries(term.agencyReasons), ...term.pressureFlags.map((p) => [`pressureFlags.${p.flag}`, p.agency] as const)]) {
         if (!listed.has(reason)) sink.error('gate-agency-reason', 'pack.json', `rules.selfEmancipation.agencyReasons.${cause}`, `agency reason "${reason}" is not one of the gate register's agency types`, 'an agency type a register topic lists');
       }
     }

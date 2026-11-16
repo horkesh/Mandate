@@ -4,7 +4,7 @@
  * whose lines people reach, are pack data.
  */
 import { COMPLIANCE_RUNGS, type ComplianceRung, type DirectiveTerms } from '../directive.ts';
-import type { FactionId } from '../ids.ts';
+import type { FactionId, RegionId } from '../ids.ts';
 
 /** A rung that raises men, and how: permille of the quota, and days added to the muster. */
 export interface RaisingRung {
@@ -52,16 +52,23 @@ export interface SelfEmancipationRules {
   /** The faction whose lines people reach (pack data); null: the pack has no such term. */
   readonly linesFaction: FactionId | null;
   /**
-   * The reason type each cause carries: one of the pack's gate register agency types (SENSITIVE-HISTORY E3), per cause:
-   * resistance and flight within; flight to the lines; and escape where the pack's pressure flags drive it (impressment).
+   * The reason type each cause carries: one of the pack's gate register agency types (SENSITIVE-HISTORY E3). Cause 1 by the
+   * region's government: within the enslaving side's own regions, or elsewhere (a neutral government's, or the lines'
+   * side's own, where slavery may still be lawful: G-1.7a). Cause 2's. Pressure's are each flag's own (`pressureFlags`).
    */
-  readonly agencyReasons: { readonly resistanceWithin: string; readonly flightToLines: string; readonly escapeFromPressure: string };
+  readonly agencyReasons: { readonly resistanceWithin: string; readonly resistanceElsewhere: string; readonly flightToLines: string };
+  /**
+   * Where the lines' side's known policy protects people who reach its lines (the lead's ruling on G-1.7a): while a flag is
+   * set, the term skips its regions. Holding a region protects no one by itself: elsewhere the term runs, and known policy,
+   * a policy of return included, scales it. Flags are set by the pack's decisions (R7, S17).
+   */
+  readonly protectedFlags: readonly { readonly flag: string; readonly regions: readonly RegionId[] }[];
   /** The term is recomputed every this many days. */
   readonly cadenceDays: number;
   /** Cause (1), resistance and flight within the side that holds the census region, not keyed to anyone's reach: per million per cadence. */
   readonly resistancePerMillion: number;
-  /** What the pack's situation flags add to both causes, permille of each (pressure within the side, such as impressment). */
-  readonly pressureFlags: readonly FlagTerm[];
+  /** What the pack's situation flags add to both causes, permille of each (pressure within the side, such as impressment), each with its own agency type (N9). */
+  readonly pressureFlags: readonly (FlagTerm & { readonly agency: string })[];
   /** Cause (2), flight to the lines, per million per cadence at full reach and full policy. */
   readonly flightPerMillion: number;
   /** Reach, permille, when the lines' side holds the region or a neighbour with its force there. */

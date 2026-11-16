@@ -1752,7 +1752,7 @@
 {"capacityPermille":800,"defaultMonths":[3,4,5],"lengthPermille":1200,"reason":"flood"},
 {"capacityPermille":300,"defaultMonths":[1,2,12],"lengthPermille":2000,"reason":"ice"}
 ],
-"selfEmancipation": {"agencyReasons":{"escapeFromPressure":"agency:escape-from-impressment","flightToLines":"agency:flight-to-union-lines","resistanceWithin":"agency:resistance-within-confederacy"},"cadenceDays":7,"flightPerMillion":1000,"holdShare":600,"linesFaction":"union","policyBase":500,"policyFlags":[],"pressureFlags":[],"reachLinesOnly":400,"reachWithForce":1000,"resistancePerMillion":200},
+"selfEmancipation": {"agencyReasons":{"flightToLines":"agency:flight-to-union-lines","resistanceElsewhere":"agency:self-emancipation","resistanceWithin":"agency:resistance-within-confederacy"},"cadenceDays":7,"flightPerMillion":1000,"holdShare":600,"linesFaction":"union","policyBase":500,"policyFlags":[],"pressureFlags":[],"protectedFlags":[],"reachLinesOnly":400,"reachWithForce":1000,"resistancePerMillion":200},
 "standing": {"conflictWindowDays":7},
 "stores": {"capDays":30,"lowDays":7,"menPerCapacityUnit":20000},
 "supplyControlPermille": 250

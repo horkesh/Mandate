@@ -158,8 +158,9 @@ describe('the derived self-emancipation term proposes who reached the lines (lan
   it('rises with known policy (the pack’s flag), and the proposals name only the protected field', () => {
     const { world, state } = start();
     const rules = world.map.world.rules.selfEmancipation;
-    const base = phase0.selfEmancipationTerms(world.map, state, rules).reduce((n, t) => n + t.toLines, 0);
-    const known = phase0.selfEmancipationTerms(world.map, { ...state, situationFlags: { ...state.situationFlags, sanctuary_act: 1 } }, rules).reduce((n, t) => n + t.toLines, 0);
+    const valley = (s: phase0.State) => phase0.selfEmancipationTerms(world.map, s, rules).find((t) => t.region === R('w_valley'))!.toLines;
+    const base = valley(state);
+    const known = valley({ ...state, situationFlags: { ...state.situationFlags, sanctuary_act: 1 } });
     expect(known).toBeGreaterThan(base);
     for (const p of phase0.arrivalProposals(phase0.selfEmancipationTerms(world.map, state, rules))) expect(p).toMatchObject({ field: phase0.REACHED_UNION_LINES_FIELD, origin: 'self-emancipation' });
     expect(() => phase0.applyArrivals(state, [{ field: 'reached_union_lines' as never, region: R('n_west_front'), people: 5, origin: 'self-emancipation' }])).toThrow();
@@ -244,23 +245,48 @@ describe('the standing review of lane 1.7: refusals, a blocked muster, a battle 
     expect(gone.forceBlockStates[block]).toBeUndefined();
   });
 
-  it('gives each cause its own agency type, pressure its own escape reason, and no term to a region the lines’ side holds', () => {
+  it('gives cause 1 its type by the region’s government, cause 2 its own, and each pressure flag its own (the gate review’s N9, N10)', () => {
     const { world, state } = start();
     const rules = world.map.world.rules.selfEmancipation;
-    const terms = phase0.selfEmancipationTerms(world.map, state, rules);
-    // The census region the North holds is already within its lines.
-    expect(world.map.world.census.some((c) => c.region === R('n_west_front'))).toBe(true);
-    expect(terms.map((t) => t.region)).not.toContain(R('n_west_front'));
-    const pressed = { ...rules, pressureFlags: [{ flag: 'levy_of_fen_labour', permille: 500 }], agencyReasons: { resistanceWithin: 'agency:within', flightToLines: 'agency:to-lines', escapeFromPressure: 'agency:escape' } };
+    const typed = {
+      ...rules,
+      agencyReasons: { resistanceWithin: 'agency:within-enslaving-side', resistanceElsewhere: 'agency:elsewhere', flightToLines: 'agency:to-lines' },
+      pressureFlags: [{ flag: 'levy_of_fen_labour', permille: 500, agency: 'agency:escape-from-levy' }, { flag: 'fen_drought', permille: 200, agency: 'agency:drought' }],
+    };
     const flagged = { ...state, situationFlags: { ...state.situationFlags, levy_of_fen_labour: 1 } };
-    const valley = phase0.selfEmancipationTerms(world.map, flagged, pressed).find((t) => t.region === R('w_valley'))!;
-    expect(valley.reasons.map((r) => [r.agency, r.cause])).toEqual([
-      ['agency:within', 'resistance-within'],
+    const terms = phase0.selfEmancipationTerms(world.map, flagged, typed);
+    // The valley is governed by the South: cause 1 there is within the enslaving side. Only the flag that is set gives a reason.
+    expect(terms.find((t) => t.region === R('w_valley'))!.reasons.map((r) => [r.agency, r.cause])).toEqual([
+      ['agency:within-enslaving-side', 'resistance-within'],
       ['agency:to-lines', 'flight-to-lines'],
-      ['agency:escape', 'escape-from-pressure'],
+      ['agency:escape-from-levy', 'pressure'],
     ]);
-    const unpressed = phase0.selfEmancipationTerms(world.map, state, pressed).find((t) => t.region === R('w_valley'))!;
-    expect(valley.toLines).toBeGreaterThan(unpressed.toLines);
-    expect(valley.within).toBeGreaterThan(unpressed.within);
+    // The western front is governed by the North: cause 1 there is not "within" the other side.
+    expect(terms.find((t) => t.region === R('n_west_front'))!.reasons[0]).toMatchObject({ agency: 'agency:elsewhere', government: 'elsewhere' });
+    const unpressed = phase0.selfEmancipationTerms(world.map, state, typed).find((t) => t.region === R('w_valley'))!;
+    const pressed = terms.find((t) => t.region === R('w_valley'))!;
+    expect(pressed.toLines).toBeGreaterThan(unpressed.toLines);
+    expect(pressed.within).toBeGreaterThan(unpressed.within);
+  });
+
+  it('runs the term where the lines’ side holds the region, skips it only where a protection flag covers it, and a policy of return lowers it (G-1.7a)', () => {
+    const { world, state } = start();
+    const rules = world.map.world.rules.selfEmancipation;
+    // The North holds its western front, and its census is still counted: holding a region protects no one by itself.
+    expect(phase0.shareOf(world.map, state.regionControl, R('n_west_front'), ids.toId('faction', 'north'))).toBeGreaterThanOrEqual(rules.holdShare);
+    const held = phase0.selfEmancipationTerms(world.map, state, rules).find((t) => t.region === R('n_west_front'))!;
+    expect(held).toMatchObject({ destination: R('n_west_front') });
+    expect(held.toLines).toBeGreaterThan(0);
+    expect(held.reasons[1]).toMatchObject({ cause: 'flight-to-lines', reach: 'lines-here' });
+    // Where the pack's protection flag is set, its regions are skipped; elsewhere the term runs on.
+    const sanctuary = { ...state, situationFlags: { ...state.situationFlags, sanctuary_act: 1 } };
+    const covered = phase0.selfEmancipationTerms(world.map, sanctuary, rules);
+    expect(covered.map((t) => t.region)).not.toContain(R('n_west_front'));
+    expect(covered.map((t) => t.region)).toContain(R('w_valley'));
+    // A policy of return lowers the flight where it is known.
+    const returning = { ...rules, policyFlags: [...rules.policyFlags, { flag: 'fugitives_returned', permille: -400 }] };
+    const returned = phase0.selfEmancipationTerms(world.map, { ...state, situationFlags: { ...state.situationFlags, fugitives_returned: 1 } }, returning).find((t) => t.region === R('n_west_front'))!;
+    expect(returned.toLines).toBeLessThan(held.toLines);
+    expect(returned.reasons[1]).toMatchObject({ policyFlags: ['fugitives_returned'] });
   });
 });

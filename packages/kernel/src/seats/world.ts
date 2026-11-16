@@ -299,6 +299,7 @@ export function menAndRegionsReferenceProblems(world: World): string[] {
   const values = new Set((v.values ?? []).map((x) => x.id as string));
   for (const value of [...recruitment.callTerms.honours, ...recruitment.callTerms.offends]) if (!values.has(value)) problems.push(`recruitment rule callTerms: value ${value} is not in the pack's values`);
   if (selfEmancipation.linesFaction !== null && !world.factions.some((f) => f.id === selfEmancipation.linesFaction)) problems.push(`selfEmancipation rule linesFaction ${selfEmancipation.linesFaction} is not a faction`);
+  for (const p of selfEmancipation.protectedFlags) for (const r of p.regions) if (!world.regions.some((x) => x.id === r)) problems.push(`selfEmancipation rule protectedFlags.${p.flag}: region ${r} is not in the World`);
   for (const c of world.census) {
     const region = world.regions.find((r) => r.id === c.region);
     if (region === undefined || (region.kind !== 'land' && region.kind !== 'key_point')) problems.push(`census: region ${c.region} is not a land region of the World`);

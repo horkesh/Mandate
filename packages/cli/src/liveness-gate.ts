@@ -290,7 +290,7 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'orders.relay_objected': notHere(NO_CANDID_RELAY),
   'orders.relayed': around(3),
   'plans.goal_reached': around(2),
-  // Lane 1.7: the fen folk's own act, every week from day 1: within in all four census regions, and to the northern lines from the two beside them.
+  // Lane 1.7: the fen folk's own act, every week from day 1, in each census region the North's protection flag does not cover (G-1.7a), the North's own western front among them.
   'regions.self_emancipation': around(72),
   'regions.reached_lines': around(36),
   'seats.choices': around(3),
