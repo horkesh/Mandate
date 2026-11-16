@@ -378,7 +378,7 @@ describe('M2’s audience cases on the new State (P3)', () => {
     const men = 200;
     const reinforced = at([counter('reinforce', { from: POST('a_reserve'), men })]);
     // The promise counts at the principal's credibility: half the men, on the plan's scale.
-    const believed = Math.trunc((Math.trunc((men * 500) / reading.strength) * w.map.world.rules.people.context.leaderCredibility) / 1000);
+    const believed = Math.trunc((Math.trunc((men * 500) / reading.strength) * w.map.world.rules.politics.credibility.base) / 1000);
     expect(shortfall(reinforced)).toBe(Math.max(0, shortfall(plain) - believed));
     expect(shortfall(reinforced)).toBeLessThan(shortfall(plain));
     // Held in the tick, the audience reads the same plan: his recorded answer states the reduced shortfall, and the promise goes as a transfer order.

@@ -27,6 +27,7 @@ import type { State } from '../root-state.ts';
 import { heldPost, sideOfPerson } from '../command/command.ts';
 import { observersAt } from '../command/observers.ts';
 import { dispositionOf } from '../ladder/ladder.ts';
+import { credibilityOf } from '../politics/politics.ts';
 
 /** The seats layer's World as reading needs it: the map, its rules, and each faction's principal. */
 export type ReadingWorld = PrincipalLookup;
@@ -57,12 +58,22 @@ export interface OrderMeans {
   readonly oversight?: number;
 }
 
+/**
+ * The credibility of `person`'s principal's sanctions as he reads them (lane 1.6, replacing 0079's stand-in): derived by
+ * `politics` from the side's mandate and the principal's record of reliefs, with its terms (`credibilityOf`).
+ */
+export function principalCredibility(world: ReadingWorld, state: State, person: PersonId): number {
+  const side = sideOfPerson(world.map, state, person);
+  const principal = side !== null && world.factionIds.includes(side) ? world.faction(side).principal : null;
+  return credibilityOf(world.map.world.rules.politics, state, side, principal).value;
+}
+
 export function contextFor(world: ReadingWorld, state: State, person: PersonId, means: OrderMeans = {}): CommandContext {
   const rules = peopleRules(world);
   return {
     available: means.available ?? 1000,
     oversight: means.oversight ?? rules.context.oversight,
-    leaderCredibility: rules.context.leaderCredibility,
+    leaderCredibility: principalCredibility(world, state, person),
     grievances: (state.personGrievances[person] ?? []).map((g) => ({ kind: g.grievanceKind, weight: g.grievanceWeight })),
     ...(means.supportPromised === undefined ? {} : { supportPromised: means.supportPromised }),
     ...extraContext(world, state, person),

@@ -71,15 +71,22 @@ export type SubjectKind = (typeof SUBJECT_KINDS)[number];
  * - `captured`: a side's captured, men, which a later return reveals;
  * - `pocket`: the author's force is cut off in `claimRegion` (a closed pocket, 0054);
  * - `operation`: an operation's stage (`claimToken`: `assaulting`, `repulsed`, `withdrew`, `pursuing`, `held`).
+ *
+ * Lane 1.6 adds the front page's claims (`politics/press.ts`):
+ * - `battle-result`: a battle its side closed, as its public hears it: `claimToken` `won`, `lost` or `drawn`,
+ *   `claimRegion` the battle's region, `claimValue` the side's killed, wounded and missing;
+ * - `framing`: who its public believes began the war, signed permille (positive: the other side).
  */
 export const CLAIM_KINDS = [
   'arrived',
   'battle-phase',
+  'battle-result',
   'call-answer',
   'captured',
   'casualties',
   'effective-strength',
   'enemy-strength',
+  'framing',
   'goal-status',
   'levy-lapsed',
   'missing',

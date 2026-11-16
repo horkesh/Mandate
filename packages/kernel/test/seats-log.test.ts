@@ -21,6 +21,7 @@ import { deepFreeze } from '../src/tick/freeze.ts';
 import { createState } from '../src/tick/setup.ts';
 import { MAP_MECHANICS } from '../src/tick/map.ts';
 import { SEATS_MECHANICS, tick } from '../src/tick/tick.ts';
+import { POLITICS_MECHANICS } from '../src/tick/politics.ts';
 import { createViewCache, viewFor } from '../src/view/view.ts';
 import { F, indexedFixture, P, R } from './support/seats-fixture.ts';
 import { order, scriptedSeats } from './support/test-seats.ts';
@@ -343,7 +344,10 @@ describe('ownership of the new State (0044)', () => {
     expect(roots).toEqual([
       'audienceHeld:audience',
       'battleRecords:combat',
+      'blocSupport:politics',
+      'chamberStates:politics',
       'closedGovernments:command',
+      'congressLedger:politics',
       'departmentFactions:command',
       'forceAssignments:command',
       'forceBlockStates:forces',
@@ -384,6 +388,7 @@ describe('ownership of the new State (0044)', () => {
       'situationFlags:situations',
       'situationStates:situations',
       'stateDay:tick',
+      'warFraming:politics',
     ]);
     expect(IMMUTABLE_ROOT_FIELDS).toContain('gameSeed');
     expect(IMMUTABLE_ROOT_FIELDS).toContain('calendarStart');
@@ -407,7 +412,7 @@ describe('ownership of the new State (0044)', () => {
     // Lane 1.4: no plan here asks another holder for support, and nothing is old enough to prune in 60 days; both have their own tests.
     // A scripted order now meets a post the battle model left vacant and is rejected, so `commands.rejected` is live here;
     // no state's ground sees a battle (no governor's wire) and no headquarters is cut off (no pocket report).
-    expect([...dead].sort()).toEqual(['ladder.rival', 'operations.support_answered', 'operations.support_refused', 'operations.support_sent', 'orders.conflict', 'orders.relay_objected', 'orders.responses_pruned', 'people.promise_broken', 'people.promise_kept', 'reports.governor_wire', 'reports.observer_letter', 'reports.pocket', 'reports.trimmed', 'seats.attention_refused', 'seats.defaulted', 'seats.initiative', 'verbs.answered', 'verbs.audience', 'verbs.consulted', 'verbs.declined', 'verbs.in_washington']);
+    expect([...dead].sort()).toEqual(['ladder.rival', 'operations.support_answered', 'operations.support_refused', 'operations.support_sent', 'orders.conflict', 'orders.relay_objected', 'orders.responses_pruned', 'people.promise_broken', 'people.promise_kept', ...POLITICS_MECHANICS, 'reports.governor_wire', 'reports.observer_letter', 'reports.pocket', 'reports.trimmed', 'seats.attention_refused', 'seats.defaulted', 'seats.initiative', 'verbs.answered', 'verbs.audience', 'verbs.consulted', 'verbs.declined', 'verbs.in_washington']);
     // The plan cycle's mechanics have their own tests (`plans.test.ts`); this game goals, drafts and picks plans.
     const fired = SEATS_MECHANICS.filter((m) => plan(m) && telemetry.mechanics[m]!.fires > 0);
     expect(fired).toEqual(expect.arrayContaining(['planner.candidates', 'planner.searches', 'plans.chosen', 'plans.drafted', 'plans.goal_set']));

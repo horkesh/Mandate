@@ -22,6 +22,7 @@ import type { DepartmentId, FactionId, PersonId, PostId, RegionId, SituationId }
 import type { ClaimKind, ReportType, SubjectKind } from '../knowledge/report.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { Posture } from '../plans/goal.ts';
+import type { ChamberStateKind } from '../politics/politics.ts';
 
 export const SITUATION_KINDS = ['decision', 'notice'] as const;
 export type SituationKind = (typeof SITUATION_KINDS)[number];
@@ -66,7 +67,17 @@ export type Condition =
   /** A post's headquarters stands in a region: derived from where its strongest block stands, never stored (0064, `seats/posts.ts`). */
   | { readonly headquartersAt: { readonly post: PostId; readonly region: RegionId } }
   /** Days since this situation surfaced to the principal (its clock; gate re-check N6): for `expiresWhen`, `appearsWhen` and `waitsOn`. */
-  | { readonly clockAtLeast: number };
+  | { readonly clockAtLeast: number }
+  /** A chamber of the legislature is in this state today (lane 1.6, 0040): which options are legal. A public fact. */
+  | { readonly chamber: { readonly id: string; readonly state: ChamberStateKind } }
+  /**
+   * The accountability ledger (lane 1.6, 0046): some act of `side` (this one, or any if null) stands `away` (taken while
+   * the legislature was away, not yet met), `before` it (met, not answered) or `answered`. A public fact.
+   */
+  | { readonly ledger: { readonly side: FactionId; readonly act: string | null; readonly status: LedgerStatus } };
+
+export const LEDGER_STATUSES = ['answered', 'away', 'before'] as const;
+export type LedgerStatus = (typeof LEDGER_STATUSES)[number];
 
 /**
  * An effect. Flags are the situations module's own chain state. Everything

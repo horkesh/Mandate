@@ -122,6 +122,7 @@ const FILTER_EMPTY = 'both packs start with their filter posts (the wire offices
 const NO_CANDID_RELAY = 'the testbed’s one relaying office (the war ministry) holds what it dislikes rather than objecting: its holder is not candid (lane 1.1); union-1861 fires it, and the kernel test drives it';
 const VERBS_UNUSED = 'no rule seat uses the people verbs yet (lane 1.5 builds them; the generic principal orders, reviews and decides only); the kernel test drives it';
 const PV = 'packages/kernel/test/people-verbs.test.ts';
+const POL = 'packages/kernel/test/politics.test.ts';
 const NO_PROPOSER = 'nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it';
 const FEW_BATTLE_DAYS = 'the reference runs fight only a few battle-days (one in the Union run, two in the testbed run; lane 1.3)';
 
@@ -181,6 +182,14 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'people.promise_broken': { why: VERBS_UNUSED, test: PV, needle: 'a promise falls due and breaks' },
   'reports.observer_letter': { why: VERBS_UNUSED, test: PV, needle: 'send an observer: he watches' },
   'seats.attention_refused': { why: 'the generic principal spends a few points a week of a budget of twelve, so nothing is refused for want of attention; the kernel test drives it', test: PV, needle: 'refuses what it cannot pay' },
+  // Lane 1.6: politics' paths that wait for authored situations (lane 1.11: S09's call, S20's ratification, the war's opening).
+  'politics.act': { why: 'no situation enters an act on the ledger until lane 1.11 authors S09 and S20', test: POL, needle: 'enters an act taken while away, meets it when a chamber sits, and answers it' },
+  'politics.met': { why: 'no act is on the ledger until lane 1.11 authors S09 and S20', test: POL, needle: 'enters an act taken while away, meets it when a chamber sits, and answers it' },
+  'politics.answered': { why: 'no act is on the ledger until lane 1.11 authors S09 and S20', test: POL, needle: 'enters an act taken while away, meets it when a chamber sits, and answers it' },
+  'politics.called': { why: 'no situation calls a special session until lane 1.11 authors S09', test: POL, needle: 'calls a special session, which sits after its notice' },
+  'politics.framing': { why: 'no situation sets the framing until lane 1.11 authors the war’s opening', test: POL, needle: 'derives the mandate and credibility with their terms' },
+  'politics.refused': { why: 'a refusal needs a proposal politics cannot apply; honest situations propose none', test: POL, needle: 'refuses a call while one stands' },
+  'politics.press_silent': { why: 'every paper’s editor serves on his paper’s side throughout both runs', test: POL, needle: 'a paper whose editor no longer serves prints nothing' },
 };
 
 /** What a pack at peace never does: no order is given, so no force marches, no ground is contested. */
@@ -249,10 +258,10 @@ const UNION_BANDS: Record<string, GateBand> = {
   'reports.governor_wire': notHere('the one battle\'s ground belongs to no government whose head post is on a side that fought there; the testbed run fires it'),
   'reports.pocket': notHere('no headquarters is cut off in 75 days; the testbed run fires it'),
   'map.pocket_closed': notHere('no pocket closes in the first 75 days of the merged Union run; the testbed run fires it'),
-  'knowledge.pruned_age': around(8),
+  'knowledge.pruned_age': around(28),
   'knowledge.pruned_superseded': around(73),
   'map.recomputed': around(10),
-  'messages.courier_delay': around(197),
+  'messages.courier_delay': around(1301),
   'messages.delivered': around(2681),
   'messages.sent': around(2820),
   // The War Department withholds the principal's approval of the Washington garrison's plan; he sends it around.
@@ -265,6 +274,12 @@ const UNION_BANDS: Record<string, GateBand> = {
   'orders.relay_objected': around(1),
   'orders.relayed': around(3),
   'plans.goal_reached': around(1),
+  // Lane 1.6: three papers print weekly to every serving Union post holder, by mail, so courier messages and pruning by
+  // age grow with them (re-banded from the merged run); the Senate's special session of March 1861 adjourns on the 28th.
+  'politics.adjourned': around(1),
+  'politics.front_page': around(30),
+  'politics.support': around(23),
+  'politics.opened': notHere('the Senate sits at the start and the House waits for a call no situation makes until lane 1.11 authors S09; the testbed run fires it'),
   'regions.self_emancipation': notHere('the Union pack has no census rows until lane 1.10 sources them, so the term has nowhere to run; the testbed run fires it'),
   'regions.reached_lines': notHere('the Union pack has no census rows until lane 1.10 sources them; the testbed run fires it'),
   'seats.choices': around(2),
@@ -343,6 +358,12 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'orders.relayed': around(3),
   'plans.goal_reached': around(2),
   // Lane 1.7: the fen folk's own act, every week from day 1, in each census region the North's protection flag does not cover (G-1.7a), the North's own western front among them.
+  // Lane 1.6: the northern paper's weekly front page; the drift, the press and the ladder move the blocs; the Northern
+  // Assembly's session of May and June.
+  'politics.adjourned': around(1),
+  'politics.front_page': around(17),
+  'politics.opened': around(1),
+  'politics.support': around(61),
   'regions.self_emancipation': around(72),
   'regions.reached_lines': around(36),
   'seats.choices': around(3),

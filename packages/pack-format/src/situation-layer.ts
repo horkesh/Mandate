@@ -5,7 +5,7 @@
  * as they are, so there is nothing to generate and nothing to go stale.
  */
 import { phase0 } from '@mandate/kernel';
-import { checkGate, choiceTaint, GATE_DIR, localeStrings, readGate, triggerDependencies, type GateData } from './gate.ts';
+import { checkBlocs, checkGate, choiceTaint, GATE_DIR, localeStrings, readGate, triggerDependencies, type GateData } from './gate.ts';
 import { listOptional, type PackFiles } from './generate.ts';
 import { errorsOf, type Issue, IssueSink } from './issues.ts';
 import { readSituations, SITUATIONS_DIR, validateSituations } from './situations.ts';
@@ -31,6 +31,8 @@ export function readSituationLayer(files: PackFiles, pack: PackData): SituationL
   sink.add(validateSituations(items, pack));
   if (gate !== null) {
     sink.add(checkGate(items, gate, localeStrings(pack.strings), pack.provenance));
+    // Lane 1.6: no bloc is made of a protected group (0021, 0026): a group whose people are agents is never a political quantity.
+    sink.add(checkBlocs(pack.world.vocabularies.blocs, gate, localeStrings(pack.strings)));
     // Lane 1.7 (SENSITIVE-HISTORY E3): every agency reason the derived self-emancipation term carries is one of the register's agency types.
     const listed = new Set(gate.register.topics.flatMap((t) => t.agencyReasons));
     const term = pack.world.rules.selfEmancipation;

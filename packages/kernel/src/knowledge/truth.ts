@@ -46,6 +46,8 @@ export const BIAS_TERM_KINDS = [
   'call_rung',
   'call_loyalty',
   'levy_lapsed',
+  /** Lane 1.6: a paper's reach, permille, which scales what its front page moves. */
+  'press_reach',
 ] as const;
 export type BiasTermKind = (typeof BIAS_TERM_KINDS)[number];
 
