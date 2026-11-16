@@ -246,8 +246,8 @@ Module map, adapted from the AWWV-architecture note:
 | messages in transit | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules (0052) |
 | knowledge: reports per seat, and the truth behind them | `knowledge` | message delivery, pruning (0052) |
 | seat assignments | `seats` | setup, the player's settings (0052) |
-| the president's attention this week | `seats` | command validation (spending), the weekly step (refill) (0025, 0040, 0073) |
-| seat initiative state, such as an initiative's cooldown | `seats` | the weekly people step (0040, 0073) |
+| the president's attention this week (`seatAttention`: what is left, and the day of the last refill) | `seats` | command validation (spending, from the pack's cost table), the weekly step (refill to the cap, no carry-over) (0025, 0040, 0073) |
+| seat initiative state (`seatInitiatives`: each initiative's last firing day, for its cooldown) | `seats` | the weekly people step (0040, 0073) |
 | a force block's strength, non-combatants, arm and department (`forceBlockStates`); morale, experience and equipment from Phase 1 | `forces` | combat, attrition, economy, recruitment, transfers (0064) |
 | a force block's stores on hand | `forces` | supply (daily), operations (a sea delivery) |
 | detachments below the force block (garrisons, landings) | `forces` | `command`, `operations` (0041) |
@@ -259,12 +259,15 @@ Module map, adapted from the AWWV-architecture note:
 | fortification and entrenchment | `regions` | operations, combat (0029, 0041) |
 | a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments, combat releasing a surrendered block, recruitment (a raised block assigned to its governor's post; a disbanded one removed) (0033, 0064, 0073, 0076) |
 | people in posts; temporary posts (`postStates`) | `command` | appoint, relieve, promotion lists, an operation's end, combat vacating a hit commander's post (0076) |
+| observers in post (`observerPostings`): the observer, the post he watches, who sent him and the day he arrived | `command` | the observer verb and his recall (0040, 0073) |
 | standing agreements and prior orders on a post, including a governor's answered call not yet mustered (`postLevies`) | `command` | verbs, situations, orders from the holder's own department, a call a governor answered (0073) |
 | a person's stats, traits, standing, grievances, regard | `people` | combat results, the press, verbs, ladder |
 | a person's stances on record (from Consult) | `people` | Consult answers (0040, 0041); adviser credibility is derived from the president's knowledge, never stored |
-| a person's ladder rung and rivals | `ladder` | weekly people step |
+| promises made to a person (`personPromises`: the kind, the day made and the day due); one that falls due unkept becomes a grievance | `people` | the promise verb, the audience (0073) |
+| inquiries a person received this week (`personInquiries`); past the pack's patience they become a grievance | `people` | the inquire verb (0040, 0073) |
+| a person's ladder rung and rivals (`personRungs`, `personRivals`) | `ladder` | weekly people step |
 | responses to orders (declared and actual rungs, reasons) | `proxy` | message arrival; computed by `compliance` and `reading`, which are pure and write nothing |
-| audience state | `audience` | the audience verb |
+| audience state (`audienceHeld`: the last audience's day and the counters used) | `audience` | the audience verb |
 | each post's goal and plan record (`planRecords`): the goal, its draft set saved on the request day, the seat's pick, approval or send-back, edits as counter-orders, and a reference to his response (`proxy` writes the response itself) | `plans` | verbs (order, review, go), seat selections, order arrival, the planner's draft sets on request (0062, 0073) |
 | STAND-IN: what an approved plan has the movement path do, hold or advance to its objective (`standingGoals`; no order's content reaches it) | `plans` | plan approval; lane 1.4's operations retire it (0073) |
 | operations and their lifecycles | `operations` | plan approval, movement and combat outcomes |
