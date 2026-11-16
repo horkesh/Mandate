@@ -204,6 +204,8 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **1B, R6:** the gate reviewer's boundary: orders directing killings, burnings or collective reprisals are atrocity-class and carry both topics.
   - **1B, R7:** drop `fund-a-scheme`.
   - **1B, with R2:** the decision about accepting Black volunteers. In 1A, S13 is a notice only (`black-enlistment-1861-offers`, placed as an event), because lane 1.11r found no advocate in 1861 for asking Congress (22 Congressional Globe issues, 8 July to 7 August 1861). The decision belongs where the 1862 advocates are on record.
+  - **1B:** a decided situation reopening on a cause. Today `resurfaceOn` only brings back an open decision on its clock. S17 (Fort Monroe) is the case: in 1A it is decided once, and the July voices (Townsend for Scott, Bates) arrive as standalone dated reports. Its natural first reopening is the First Confiscation Act of August 1861.
+  - **1B:** Miles and Harvey Brown are not in the people table, so their practices on fugitives (Miles returned people, 15 July; Brown refused, 22 June) are not entered. Add them with sourced rows if a later situation needs them.
   - **Lane 1.12:** `crossNeutral` is a stand-in, owned by lane 1.12.
   - **1B raids:** edge damage reaches the planner through the derived map, not by report. From lane 1.2's review (`review-lane-1.2.md`): the side's supply reach also reaches the planner through the derived map, computed with the obstructions truly there. That is acceptable in 1A and needs a report-based path once unseen damage or a boom matters.
 - From lane 1.3's report (`notes/lane-1.3-combat.md`, merged 8c804a5), by lane:
