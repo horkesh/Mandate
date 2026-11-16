@@ -2,6 +2,7 @@
  * A tiny, valid v2 pack held in memory, with setting-free names (decision
  * 0003). Tests break one thing at a time and assert which check fires.
  */
+import { DEFAULT_COMPLIANCE_RULES } from '@mandate/kernel';
 import type { PackFiles } from '../../src/index.ts';
 
 const tpl = (templateType: string, templateSubtype: string | null, templateRoute: string, cadenceDays: number, maxAgeDays: number, keepSupersededDays: number) => ({
@@ -35,6 +36,30 @@ export const MESSAGE_RULES = {
     tpl('advice', 'memorandum', 'courier', 0, 60, 30),
   ],
   standing: { conflictWindowDays: 7, scoreCap: 4000 },
+  // Lane 1.1: the people core's rules, at the packs' values.
+  people: {
+    shadow: {
+      centrePermille: { high: 800, above: 650, average: 500, below: 350, low: 200 },
+      unknownCentre: 500,
+      spread: 100,
+      unknownSpread: 200,
+      regardPermille: { high: 600, above: 300, average: 0, below: -300, low: -600 },
+      regardUnknown: 0,
+    },
+    compliance: { ...DEFAULT_COMPLIANCE_RULES },
+    goalTerms: [
+      { goal: 'hold', boldness: 400, honours: ['caution'], offends: [] },
+      { goal: 'advance', boldness: 600, honours: ['glory'], offends: ['caution'] },
+    ],
+    context: { oversight: 500, leaderCredibility: 500 },
+    relay: { reservationsHoldDays: 0, slowWalkHoldDays: 2, reinterpretHoldDays: 4 },
+    filter: { holdFor: [{ value: 'order', days: 1 }], trimFor: [{ value: 'reputation', claimKinds: ['own-losses'] }], candidAt: 500 },
+    traits: {
+      perceptionPivot: 500, perceptionPerPoint: 3, perceptionValues: [{ value: 'caution', permille: 500 }], perceptionMax: 4000,
+      demandBase: 1000, demandPerPoint: 2, holdBand: 1500, wantsMenPermille: 800, paperPermille: 1400,
+    },
+    grievances: { bypassedWeight: 150 },
+  },
 };
 
 const manifest = {
@@ -78,9 +103,11 @@ const manifest = {
     personKinds: [{ id: 'officer', name: 'person_kind.officer' }],
     traits: [{ id: 'bold', name: 'trait.bold', gate: false }],
     ranks: [
-      { id: 'junior', name: 'rank.junior', seniority: 1 },
-      { id: 'senior', name: 'rank.senior', seniority: 2 },
+      { id: 'junior', name: 'rank.junior', seniority: 1, kind: 'regular' },
+      { id: 'senior', name: 'rank.senior', seniority: 2, kind: 'regular' },
     ],
+    rankKinds: [{ id: 'regular', name: 'rank_kind.regular' }],
+    values: ['caution', 'glory', 'order', 'reputation'].map((v) => ({ id: v, name: `value.${v}` })),
     blocs: [{ id: 'greens', name: 'bloc.greens' }],
     standingOrderKinds: [{ id: 'hold', name: 'order_kind.hold' }],
   },
@@ -102,6 +129,11 @@ const provenance = {
 
 const strings: Record<string, string> = {
   'pack.name': 'Fixture',
+  'rank_kind.regular': 'regular',
+  'value.caution': 'caution',
+  'value.glory': 'glory',
+  'value.order': 'order',
+  'value.reputation': 'reputation',
   'terrain.plain': 'plain',
   'terrain.coastal': 'coast',
   'terrain.river': 'river',

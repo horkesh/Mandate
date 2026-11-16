@@ -24,6 +24,7 @@ import type {
 import type { PersonRecord } from './people.ts';
 import type { ReportTemplate } from '../knowledge/templates.ts';
 import type { LatencyRules } from '../messages/latency.ts';
+import type { PeopleRules } from '../people/rules.ts';
 
 export const WORLD_FORMAT_VERSION = 2;
 
@@ -110,6 +111,8 @@ export interface WorldRules {
    */
   readonly reportTemplates: readonly ReportTemplate[];
   readonly standing: StandingRules;
+  /** The people core's rules (lane 1.1): history's shadow, compliance, reading orders and reports, traits. DESIGN PARAMETERS the pack states (0072). */
+  readonly people: PeopleRules;
 }
 
 export interface TerrainTerm {
@@ -162,6 +165,8 @@ export interface RankTerm {
   readonly name: StringKey;
   /** Higher is senior; promotion over a senior costs standing (FOUNDATION section 5). */
   readonly seniority: number;
+  /** Its kind from the pack's ankKinds (a regular, a volunteer or a brevet rank): a person holds one rank of each kind at once (0073). */
+  readonly kind: string;
 }
 
 export interface Term {
@@ -190,6 +195,10 @@ export interface Vocabularies {
   readonly personKinds: readonly Term[];
   readonly traits: readonly TraitTerm[];
   readonly ranks: readonly RankTerm[];
+  /** Kinds of rank held side by side (0073). */
+  readonly rankKinds: readonly Term[];
+  /** Values people hold (lane 1.1, 0005): the engine reads only the pack's rules that name them. */
+  readonly values: readonly Term[];
   readonly blocs: readonly Term[];
   readonly standingOrderKinds: readonly Term[];
 }

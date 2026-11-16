@@ -1,6 +1,6 @@
 # 0063: An option that hurts the enemy in response to an atrocity is watched
 
-Status: accepted (2026-11-15). Amends 0060. From the gate reviewer's re-check of G5 and G6 (nit N10) and lane 0.7's G7, approved at bd5d01f with a precision control added (663e962). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.
+Status: accepted (2026-11-15). Amends 0060. Amended by 0074 (D6 reads the inaction outcome of a decision about an atrocity-class order or sentence as watched). From the gate reviewer's re-check of G5 and G6 (nit N10) and lane 0.7's G7, approved at bd5d01f with a precision control added (663e962). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.
 
 ## Decision
 

@@ -11,12 +11,10 @@
  *   rounded up, at least one.
  * - **A region's wire owner is its holder** (0052), so wire latency reads the
  *   day's control index (`latencyMapFor`), not a fixed table.
- * - **People's trait inputs** come from a LABELLED STAND-IN (0058) until the
- *   Phase 1 people recast: boldness from the cited `nerve` centre (high 800,
- *   above 650, average 500, below 350, low 200, unknown 500), regard 0, values
- *   empty, no intelligence bias. A caller may hand explicit inputs instead
- *   (`SeatsWorldOptions.traits`); the kernel tests of objections, filter holds
- *   and an intelligence chief's bias do, since v2 people carry none (0058).
+ * - **People's trait inputs are people State** (lane 1.1 retired lane 0.6's
+ *   stand-in adapter, 0058): read a man through `traitsOf(world, state, id)`
+ *   (`people/traits.ts`), never from here. This World keeps only a person's
+ *   side at the start.
  * - **A faction's objective** is a LABELLED STAND-IN (0058): the other
  *   faction's capital, when there are exactly two. Its replacement is the
  *   goals of Phase 1's principals (0058, 0072).
@@ -29,38 +27,28 @@ import { latencyProblems, type LatencyMap, type LatencyRules } from '../messages
 import type { StandingRules } from '../world/world.ts';
 import { situationReferenceProblems } from '../situations/references.ts';
 import type { SituationDef } from '../situations/types.ts';
-import { DEFAULT_TRAIT_RULES, type TraitHolder, type TraitRules } from '../standin/traits.ts';
-import type { StatDirection } from '../world/people.ts';
+import { peopleRulesProblems, type PeopleRules, type TraitRules } from '../people/rules.ts';
 import { otherEnd, type WorldIndex } from '../world/index.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
 import type { PostKindRole } from '../world/world.ts';
 
 /**
- * The rules the seats layer reads. The latency rules and report templates are the pack's (`WorldRules`, 0072), read
- * from the World it was indexed with, never a kernel default; the trait rules stay a LABELLED STAND-IN (0058) until
- * the Phase 1 people recast.
+ * The rules the seats layer reads, all the pack's (`WorldRules`, 0072), read from the World it was indexed with, never
+ * a kernel default: latency, report templates, and the people rules (lane 1.1), whose trait rules (`traits`) replaced
+ * lane 0.6's labelled stand-in (0058).
  */
 export interface SeatsRules {
   readonly latency: LatencyRules;
   readonly traits: TraitRules;
+  readonly people: PeopleRules;
   readonly templates: readonly ReportTemplate[];
 }
 
-/** A person as the seats layer reads him: his side, and the stand-in trait inputs (0058). */
-export interface SeatPerson extends TraitHolder {
+/** A person as the seats layer's World knows him: his side at the start. His traits are people State (`traitsOf`). */
+export interface SeatPerson {
   readonly id: PersonId;
   /** His side at the start (0055); null for foreigners, neutrals and the unknown. */
   readonly faction: FactionId | null;
-  /** Multiplier, permille, on enemy strength in the estimates he writes as an intelligence source (1000: none). */
-  readonly intelligenceBias: number;
-}
-
-/** Explicit trait inputs for a person, in place of the stand-in adapter. */
-export interface TraitInputs {
-  readonly boldness?: number;
-  readonly regard?: number;
-  readonly values?: readonly string[];
-  readonly intelligenceBias?: number;
 }
 
 export interface SeatFaction {
@@ -100,11 +88,7 @@ export interface SeatsWorld {
 }
 
 export interface SeatsWorldOptions {
-  /** The stand-in trait rules (0058); the kernel's labelled stand-in values when absent. */
-  readonly traitRules?: TraitRules;
   readonly situations?: readonly SituationDef[];
-  /** Explicit trait inputs by person id, in place of the stand-in adapter (0058). */
-  readonly traits?: Readonly<Record<string, TraitInputs>>;
 }
 
 export class SeatsWorldError extends Error {
@@ -114,31 +98,16 @@ export class SeatsWorldError extends Error {
   }
 }
 
-/** STAND-IN (0058): boldness from the cited `nerve` direction. A design parameter, not a sourced fact. */
-export const NERVE_BOLDNESS: Readonly<Record<StatDirection, number>> = Object.freeze({ high: 800, above: 650, average: 500, below: 350, low: 200 });
-export const UNKNOWN_NERVE_BOLDNESS = 500;
 
 /** Index a v2 World and its start for the seats layer. Throws `SeatsWorldError` listing every problem. */
 export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: SeatsWorldOptions = {}): SeatsWorld {
   const pack = map.world.rules;
-  const rules: SeatsRules = Object.freeze({ latency: pack.latency, templates: pack.reportTemplates, traits: options.traitRules ?? DEFAULT_TRAIT_RULES });
+  const rules: SeatsRules = Object.freeze({ latency: pack.latency, templates: pack.reportTemplates, traits: pack.people?.traits, people: pack.people });
   // The kernel takes any World it is handed (a fixture, an adapter), so it checks the pack's rules as the validator does.
-  const problems: string[] = [...templateProblems(rules.templates), ...latencyProblems(rules.latency), ...standingProblems(pack.standing)];
+  const problems: string[] = [...templateProblems(rules.templates), ...latencyProblems(rules.latency), ...standingProblems(pack.standing), ...peopleRulesProblems(pack.people, map.world.vocabularies.values?.map((v) => v.id) ?? [])];
 
   const people = new Map<PersonId, SeatPerson>();
-  for (const p of map.world.people) {
-    const t = options.traits?.[p.id] ?? {};
-    const nerve = p.centres.nerve.direction;
-    people.set(p.id, {
-      id: p.id,
-      faction: p.faction,
-      boldness: t.boldness ?? (nerve === null ? UNKNOWN_NERVE_BOLDNESS : NERVE_BOLDNESS[nerve]),
-      regard: t.regard ?? 0,
-      values: [...(t.values ?? [])],
-      intelligenceBias: t.intelligenceBias ?? 1000,
-    });
-  }
-  for (const id of Object.keys(options.traits ?? {})) if (!people.has(id as PersonId)) problems.push(`traits given for ${id}, who is not a person in the World`);
+  for (const p of map.world.people) people.set(p.id, { id: p.id, faction: p.faction });
 
   const capitals = start.factions.filter((f) => f.capital !== null);
   const factions = new Map<FactionId, SeatFaction>();

@@ -1,7 +1,7 @@
 /**
  * The commander's planning profile (planner-design D2, D7), derived from the
- * same stand-in traits the kernel's relay, filter and belief rules read
- * (`standin/traits.ts`, decision 0058). Every number is a design parameter.
+ * trait rules the kernel's belief rules read (now `people/traits.ts` with
+ * each pack's numbers, lane 1.1; decision 0058). Every number is a design parameter.
  *
  * Boldness comes from the person's cited nerve centre by 0058's table. His
  * demand ratio is the kernel's `demandRatio`. His perception bias is NOT a
@@ -27,12 +27,28 @@ export function competenceOf(person: w.PersonRecord): number {
   return d === null ? 500 : COMPETENCE_FROM_CENTRE[d]!;
 }
 
-/** The stand-in trait holder the kernel's rules read. Values are empty and regard 0 until Phase 1 (0058). */
-export function traitHolder(person: PersonId, boldness: number): phase0.TraitHolder {
-  return { id: person, boldness, regard: 0, values: [] };
+/**
+ * The trait rules this prototype was measured with: lane 0.6's stand-in values, which the kernel now reads from each
+ * pack (`WorldRules.people.traits`, lane 1.1). Kept here so the prototype's recorded findings still reproduce.
+ */
+export const PROTOTYPE_TRAIT_RULES: phase0.TraitRules = Object.freeze({
+  perceptionPivot: 500,
+  perceptionPerPoint: 3,
+  perceptionValues: [{ value: 'caution', permille: 500 }],
+  perceptionMax: 4000,
+  demandBase: 1000,
+  demandPerPoint: 2,
+  holdBand: 1500,
+  wantsMenPermille: 800,
+  paperPermille: 1400,
+});
+
+/** The trait inputs the kernel's rules read. Values are empty, as the prototype ran (0058). */
+export function traitHolder(person: PersonId, boldness: number): phase0.PerceivingPerson {
+  return { id: person, boldness, values: [] };
 }
 
-export function profileOf(person: PersonId, boldness: number, competence: number, rules: phase0.TraitRules = phase0.DEFAULT_TRAIT_RULES): Profile {
+export function profileOf(person: PersonId, boldness: number, competence: number, rules: phase0.TraitRules = PROTOTYPE_TRAIT_RULES): Profile {
   const timid = 1000 - boldness;
   return {
     person,
@@ -58,8 +74,8 @@ export function profileOf(person: PersonId, boldness: number, competence: number
 export function beliefsFor(
   reported: ReadonlyMap<RegionId, number>,
   sourceBiasPermille: number,
-  holder: phase0.TraitHolder,
-  rules: phase0.TraitRules = phase0.DEFAULT_TRAIT_RULES,
+  holder: phase0.PerceivingPerson,
+  rules: phase0.TraitRules = PROTOTYPE_TRAIT_RULES,
 ): { readonly beliefs: ReadonlyMap<RegionId, number>; readonly perceptionPermille: number } {
   const bias = phase0.perceptionBias(rules, holder).permille;
   const out = new Map<RegionId, number>();

@@ -255,7 +255,7 @@ Sixty situations: 30 in 1861 (S01–S30) and 30 in 1862 (S31–S60), in order of
 - **Verbs**: goal
 - **Reports**: informal, wire
 - **Systems**: forces, politics, people
-- **Gate**: civil liberties (habeas suspension); civilians (the Pratt Street dead, narrated with ranges in [SW 6.8])
+- **Gate**: civil liberties (habeas suspension); civilians (the Pratt Street dead, narrated with ranges in [SW 6.8]; per 0074 the deaths are their own notice under `civilian-deaths-1861`, and S12 carries no atrocity tag)
 - **Sources**: [SW 1, 2.5, 3.2, 6.6, 6.7, 6.8, design S7, mechanics]
 
 ### S13 `black-volunteer-offers`: offers of service from Black Northerners
@@ -291,7 +291,7 @@ Sixty situations: 30 in 1861 (S01–S30) and 30 in 1862 (S31–S60), in order of
 - **Verbs**: relieve, appoint
 - **Reports**: informal, press
 - **Systems**: forces, politics, people
-- **Gate**: civilians (Camp Jackson: at least 28 civilians killed [SW 6.7])
+- **Gate**: civilians (Camp Jackson: at least 28 civilians killed [SW 6.7]; per 0074 the deaths are their own notice under `civilian-deaths-1861`, and S14 carries no atrocity tag)
 - **Sources**: [SW 1, 2.5, 3.5, 6.7, design S10]
 
 ### S15 `western-virginia`: western Virginia

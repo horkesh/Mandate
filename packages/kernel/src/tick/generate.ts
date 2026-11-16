@@ -13,6 +13,7 @@
  *   strength is the men it commands, directly and through the posts below it.
  * - Each office holder gives the principal his word, weekly, on the returns he holds.
  */
+import { perceptionBias, traitsOf } from '../people/traits.ts';
 import { strictCompare } from '../compare.ts';
 import { factionOfBlock } from '../forces/forces.ts';
 import type { FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
@@ -82,7 +83,8 @@ export function generateReports(ctx: TickContext, state: State, awaiting: Readon
       const holder = holderOf(id);
       const chief = state.postStates[id]!.postIntelChief;
       const author = chief ?? holder;
-      const bias = chief === null ? 1000 : world.person(chief).intelligenceBias;
+      // An intelligence chief's estimates carry his own perception bias (lane 1.1: no separate input; a timid or cautious chief inflates).
+      const bias = chief === null ? 1000 : perceptionBias(world.rules.traits, traitsOf(world, state, chief)).permille;
       const side = sideOf(id);
       if (!enemies.has(side)) enemies.set(side, enemyAt(ctx, state, side));
       const enemy = enemies.get(side)!;
@@ -107,7 +109,7 @@ export function generateReports(ctx: TickContext, state: State, awaiting: Readon
 
   if (onCycle(day, tpl('wire-dispatch').cadenceDays)) {
     for (const id of fields) {
-      const holder = world.person(holderOf(id));
+      const holder = traitsOf(world, state, holderOf(id));
       const hq = headquartersOf(world, state, id);
       const goal = state.standingGoals[id];
       const strength = commandStrength(state, id).men;

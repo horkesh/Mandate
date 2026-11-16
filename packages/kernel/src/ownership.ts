@@ -111,10 +111,19 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   // rows for standing orders and a post's department below share it.
   field('people in posts; temporary posts', 'command', ['appoint', 'relieve', 'promotion lists', "an operation's end"], [at('State', 'postStates')]),
   field('standing agreements and prior orders on a post', 'command', ['verbs', 'situations', "orders from the holder's own department"]),
-  field("a person's stats, traits, standing, grievances, regard", 'people', ['combat results', 'the press', 'verbs', 'ladder']),
-  field("a person's stances on record (from Consult)", 'people', ['Consult answers']),
+  // Lane 1.1: people as State. True stats and temperament are drawn at setup by history's shadow; the rest start from the World.
+  field("a person's stats, traits, standing, grievances, regard", 'people', ['combat results', 'the press', 'verbs', 'ladder', 'a bypassed relay'], [
+    at('State', 'personTrue'),
+    at('State', 'personTraits'),
+    at('State', 'personStanding'),
+    at('State', 'personGrievances'),
+    at('State', 'personRegard'),
+  ]),
+  field("a person's stances on record (from Consult)", 'people', ['Consult answers'], [at('State', 'personStances')]),
+  field("a person's status (serving, wounded, killed, captured) and its date", 'people', ['combat'], [at('State', 'personStatus')]),
   field("a person's ladder rung and rivals", 'ladder', ['weekly people step']),
-  field('responses to orders (declared and actual rungs, reasons)', 'proxy', ['message arrival']),
+  // Lane 1.1: a man's answer to an order that reached him, as a relay or its addressee; plans holds only its key (0073).
+  field('responses to orders (declared and actual rungs, reasons)', 'proxy', ['message arrival'], [at('State', 'orderResponses')]),
   field('audience state', 'audience', ['the audience verb']),
   // Lane 0.6 builds only the stand-in standing goals (hold, or advance to a region).
   // A post that becomes a field post on a side during play (its government joins one, 0065) is given a hold goal (exit review S1).
@@ -136,8 +145,8 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('water edge obstructions (works or batteries in hostile hands; cleared)', 'infrastructure', ['combat', 'operations (a siege, a clearing)', 'situations'], [at('State', 'infraObstructions')]),
   field('depot condition (struck by raids, repaired)', 'infrastructure', ['raids', 'combat', 'repair orders'], [at('State', 'infraDepotCondition')]),
   field("a post's department (changed on a scheduled date or by a situation)", 'command', ['scheduled department changes in the scenario start', 'situations']),
-  // Close-out (0072): the rank at the start date, copied at setup (0050); nothing changes it in Phase 0.
-  field("a person's rank and its date (seniority)", 'people', ['promotion lists', 'appoint'], [at('State', 'personRanks')]),
+  // Close-out (0072), lane 1.1 (0073): a rank per kind at the start date, copied at setup (0050); appointments and lists propose changes.
+  field("a person's ranks, one per kind (regular, volunteer, brevet) held at once, each with its date", 'people', ['promotion lists', 'appoint'], [at('State', 'personRanks')]),
   field("today's weather per weather zone", 'weather', ['the day tick, from its named seeded stream (0029)']),
   // Guerrilla pressure (0029) is not here on purpose: the gate register
   // (SENSITIVE-HISTORY section 3.6, accepted by 0046) places it as derived,
@@ -193,8 +202,15 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'PostLinkState',
   'ObstructionState',
   'MarchLeg',
-  // Close-out (0072): a person's rank at the start, replaced whole by `people`
+  // Close-out (0072): a person's rank, replaced whole by `people`
   'PersonRank',
+  // Lane 1.1: people (each replaced whole by `people`) and responses to orders (by `proxy`)
+  'PersonTrue',
+  'PersonGrievance',
+  'Stance',
+  'PersonStatus',
+  'OrderResponse',
+  'ResponseTerm',
 ];
 
 /** State's own root fields that are set once at setup and never written after (the game's seed, the calendar's day 0). */

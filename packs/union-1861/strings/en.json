@@ -148,5 +148,19 @@
   "trait.shifts_blame": "Shifts blame",
   "trait.slaveholder": "Slaveholder",
   "trait.slow": "Slow",
-  "trait.uses_press": "Uses press"
+  "trait.uses_press": "Uses press",
+  "rank_kind.regular": "regular",
+  "rank_kind.volunteer": "volunteer",
+  "rank_kind.brevet": "brevet",
+  "rank_kind.state": "state",
+  "value.union": "union",
+  "value.party": "party",
+  "value.duty": "duty",
+  "value.order": "order",
+  "value.conciliation": "conciliation",
+  "value.reputation": "reputation",
+  "value.career": "career",
+  "value.caution": "caution",
+  "value.abolition": "abolition",
+  "value.glory": "glory"
 }
