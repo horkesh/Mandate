@@ -508,6 +508,34 @@ describe('evidence dates by cell class (lane 1.11b; 0085)', () => {
   });
 });
 
+describe('a judgment needs a contemporary leg (lane 1.11r3; 0087)', () => {
+  const policy = (factTraits: string[], base: FileMap = fixture()) =>
+    withNewFile('gate/source-policy.json', JSON.stringify({ banned: [], weak: [], evidence: { innateThrough: '1861-07-31', startBefore: '1861-03-05', innateStats: ['competence', 'nerve'], innateTraits: ['bold'], factTraits } }), base);
+  const noLeg = (files: FileMap, field: string) => run(files).issues.filter((i) => i.kind === 'no-contemporary-leg' && i.at.includes('red_chief') && i.at.includes(field));
+  it('warns on a judgment whose only legs are not primary, and not on one with a primary leg', () => {
+    expect(noLeg(withTemper({ red_chief: { boldness: 'above:DESIGN p.4' } }, policy([])), 'boldness').length).toBe(1);
+    expect(noLeg(withTemper({ red_chief: { boldness: 'above:REG A p.4' } }, policy([])), 'boldness')).toEqual([]);
+    expect(noLeg(withTemper({ red_chief: { boldness: 'above:DESIGN p.4+REG A p.4' } }, policy([])), 'boldness')).toEqual([]);
+    expect(noLeg(withTemper({ red_chief: { values: 'caution:DESIGN' } }, policy([])), 'values').length).toBe(1);
+  });
+  it('does not count a primary citation dated past its boundary, or one marked weak, as a leg', () => {
+    expect(noLeg(withTemper({ red_chief: { boldness: 'above:REG A p.4 dated 1861-04-01' } }, policy([])), 'boldness').length).toBe(1);
+    expect(noLeg(withTemper({ red_chief: { boldness: 'above:REG A self-report' } }, policy([])), 'boldness').length).toBe(1);
+  });
+  it('warns on a trait, except one the pack lists as a fact', () => {
+    const trait = (cite: string, facts: string[]) => withFile(`${W}/people.csv`, replaceOnce('bold:REG A p.9', `bold:${cite}`), policy(facts));
+    expect(noLeg(trait('DESIGN', []), 'traits').length).toBe(1);
+    expect(noLeg(trait('DESIGN', ['bold']), 'traits')).toEqual([]);
+    expect(noLeg(trait('REG A p.9', []), 'traits')).toEqual([]);
+  });
+  it('is a warning, not an error, and a pack without an evidence policy is not checked', () => {
+    const found = run(withTemper({ red_chief: { boldness: 'above:DESIGN p.4' } }, policy([]))).issues.filter((i) => i.kind === 'no-contemporary-leg');
+    expect(found.length).toBeGreaterThan(0);
+    expect(found.every((i) => i.severity === 'warning')).toBe(true);
+    expect(noLeg(withTemper({ red_chief: { boldness: 'above:DESIGN p.4' } }), 'boldness')).toEqual([]);
+  });
+});
+
 describe('invented people (review F7)', () => {
   it('need no citations for their centres and traits where the pack allows them', () => {
     const result = run(withFile(`${W}/people.csv`, appendRow(INVENTED), allowInvented()));

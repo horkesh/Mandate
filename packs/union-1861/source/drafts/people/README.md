@@ -425,3 +425,8 @@ A people cell is refused (`weak-citations-only`) when every admissible citation 
 **Existing cells.** The cells entered before this rule cite evidence with no date, so the date check cannot judge them. A pass that dates their citations would show which rest on evidence past the boundary; none is known to.
 
 **Entered from the held-back draft in lane 1.11b:** 19 cells (see `notes/lane-1.11b-data-entry.md`). The rest of the draft stays held back. A cell resting only on a secondary work or a government biography stands if it is a fact (rank, office, service, a date); a judgment (values, temperament, competence, nerve, regard, reputation, candour, boldness) needs a contemporary leg, or it is held back.
+
+
+## The contemporary-leg warning (lane 1.11r3, 0087)
+
+`pack:validate` now warns (`no-contemporary-leg`) on each judgment cell of a person that rests on no contemporary leg, so the older cells can be re-sourced. A judgment is a reputation, competence, nerve, boldness, candour or regard centre, a regard toward another person, a value, or a trait other than a fact trait. A contemporary leg is a citation of a **primary** source (a document of the time, or one a later work prints verbatim) that is not on the weak or banned list, carries no `snippet`, `self-report` or `after-start` marker, and is not dated past its cell's boundary. Facts (a rank, an office, a service, a date) need none. The pack names its fact traits in `gate/source-policy.json` (`evidence.factTraits`: `slaveholder`, `uses_press`). A pack with no `evidence` block is not checked. Today the warning lists 181 cells; each is to be re-sourced, or held back before 1A's exit review (0087).

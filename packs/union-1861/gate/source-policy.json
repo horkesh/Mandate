@@ -50,6 +50,7 @@
       "shifts_blame",
       "self_doubting",
       "holds_grudges"
-    ]
+    ],
+    "factTraits": ["slaveholder", "uses_press"]
   }
 }

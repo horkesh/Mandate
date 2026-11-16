@@ -386,7 +386,11 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     const admissible = cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer');
     return admissible.length > 0 && admissible.every((x) => weakSet.has(x.source) || hasWeakMarker(x.at) || datedAfterBoundary(x.at, cls, evidence));
   };
-  const weakExpected = 'a citation of a source the gate does not mark weak (not a memoir, a self-report, a snippet, or evidence dated after its cell’s boundary: 5 March 1861 for a cell true at the start, 31 July 1861 for an innate stat or trait), or leave the cell unknown';
+  // A contemporary leg (0087): a citation of a primary source that is not weak, carries no weak marker, and is not dated past its boundary.
+  const hasContemporaryLeg = (cites: readonly w.Citation[], cls: EvidenceClass): boolean =>
+    cites.some((x) => sources.get(x.source)?.kind === 'primary' && !weakSet.has(x.source) && !hasWeakMarker(x.at) && !datedAfterBoundary(x.at, cls, evidence));
+  const noLegExpected = 'a citation of a primary source (a document of the time, or one printed verbatim in a later work) that is not weak and is not dated past the cell’s boundary; or hold the judgment back (0087)';
+  const weakExpected ='a citation of a source the gate does not mark weak (not a memoir, a self-report, a snippet, or evidence dated after its cell’s boundary: 5 March 1861 for a cell true at the start, 31 July 1861 for an innate stat or trait), or leave the cell unknown';
   world.people.forEach((p, i) => {
     const at = (f?: string) => W('people', i, f);
     useKey(p.name, at('name'));
@@ -466,6 +470,26 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
         err('weak-citations-only', at(`traits[${j}]`), `trait "${t.trait}" rests only on weak citations`, weakExpected);
       }
     });
+    // 0087: a judgment (reputation, competence, nerve, boldness, candour, regard, a value, a trait that is not a fact) needs a
+    // contemporary leg: a primary source, not weak, and not dated past its cell's boundary. Until the older cells are
+    // re-sourced this is a warning that lists each one; a pack without an `evidence` policy is not checked.
+    if (!p.invented && evidence !== null) {
+      const judged = (field: string, what: string, cites: readonly w.Citation[], cls: EvidenceClass) => {
+        if (cites.length > 0 && !hasContemporaryLeg(cites, cls)) warn('no-contemporary-leg', at(field), `${what} rests on no contemporary leg`, noLegExpected);
+      };
+      for (const stat of ['competence', 'nerve', 'reputation'] as const) {
+        const c = p.centres[stat];
+        if (c.direction !== null) judged(`centres.${stat}`, `the ${stat} centre "${c.direction}"`, c.cites, classOf('stat', stat));
+      }
+      for (const [field, c] of [['temperament.boldness', p.temperament.boldness], ['temperament.candour', p.temperament.candour], ['regard', p.regard]] as const) {
+        if (c.direction !== null) judged(field, `the ${field} centre "${c.direction}"`, c.cites, classOf('other'));
+      }
+      p.regardOthers.forEach((o, j) => judged(`regardOthers[${j}]`, `regard toward ${o.toward}`, o.cites, classOf('other')));
+      p.values.forEach((v, j) => judged(`values[${j}]`, `value "${v.value}"`, v.cites, classOf('other')));
+      p.traits.forEach((t, j) => {
+        if (!evidence.factTraits.includes(t.trait)) judged(`traits[${j}]`, `trait "${t.trait}"`, t.cites, classOf('trait', t.trait));
+      });
+    }
     p.ranks.forEach((r, j) => {
       term('ranks', r.rank, at(`ranks[${j}].rank`));
       if (j > 0 && r.from < p.ranks[j - 1]!.from) err('ranks-out-of-order', at(`ranks[${j}]`), 'ranks must be in date order');
