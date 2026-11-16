@@ -5,11 +5,39 @@
     { "pattern": "\\b(?:no[- ]one[’']s|unclaimed|empty|vacant) (?:land|lands|country|ground|territory)\\b", "scope": "any", "severity": "fail", "reason": "a nation's land is never no one's: it was the nations' own, under their own governments (0069)" },
     { "pattern": "\\bFive Civilized Tribes\\b", "scope": "narrator", "severity": "review", "reason": "a later outsiders' label: name each nation by its own name (0069)" },
     { "pattern": "\\bwild (?:Indians|tribes)\\b", "scope": "narrator", "severity": "review", "reason": "an outsiders' period label: name the people, or quote it attributed (Q9, Q10)" },
-    { "pattern": "\\bhostiles\\b", "scope": "narrator", "severity": "review", "reason": "the Army's word for a people at war with it: attribute it, or name the people (Q10)" }
+    { "pattern": "\\bhostiles\\b", "scope": "narrator", "severity": "review", "reason": "the Army's word for a people at war with it: attribute it, or name the people (Q10)" },
+
+    { "pattern": "\\bWar of Northern Aggression\\b|\\bSouthern way of life\\b|\\bLost Cause\\b|\\bBlack Confederates?\\b", "scope": "any", "severity": "fail", "reason": "Lost Cause framing from after the war or later: no period speaker said it, so it never appears in any in-world string, quoted or not (SENSITIVE-HISTORY 3.4 traps 2, 3 and 6, and section 5; [CS 4.6])" },
+    { "pattern": "\\bstates[’']?\\s*rights\\b|\\bWar Between the States\\b|\\bpeculiar institution\\b|\\b(?:loyal|faithful|happy|contented) (?:slaves?|servants?)\\b", "scope": "label", "severity": "fail", "reason": "Lost Cause framing: never in an option label (SENSITIVE-HISTORY 3.4 traps 2 and 4; section 5; [CS 4.6], [SW 6.1])" },
+    { "pattern": "\\bstates[’']?\\s*rights\\b|\\bWar Between the States\\b|\\bpeculiar institution\\b|\\b(?:loyal|faithful|happy|contented) (?:slaves?|servants?)\\b", "scope": "narrator", "severity": "review", "reason": "Lost Cause framing: only inside a cited, attributed quotation, which the reviewer's note confirms; never the narrator's (SENSITIVE-HISTORY section 5: fail outside quotation; traps 2 and 4)" },
+    { "pattern": "\\bcontrabands?\\b", "scope": "label", "severity": "fail", "reason": "\"contraband\" as a noun for people is the period's word, not the game's: never in an option label (SENSITIVE-HISTORY section 5)" },
+    { "pattern": "\\bcontrabands?\\b", "scope": "narrator", "severity": "review", "reason": "\"contraband\" for people only inside a cited quotation; for goods (contraband of war) the reviewer notes the sense (SENSITIVE-HISTORY section 5)" },
+    { "pattern": "\\bn[i1]gg(?:ers?|as?)\\b|\\bdarke?ys?\\b|\\bdarkies\\b|\\bpickaninn(?:y|ies)\\b|\\bsambos?\\b", "scope": "label", "severity": "fail", "reason": "a slur: never in an option label (F2)" },
+    { "pattern": "\\bn[i1]gg(?:ers?|as?)\\b|\\bdarke?ys?\\b|\\bdarkies\\b|\\bpickaninn(?:y|ies)\\b|\\bsambos?\\b", "scope": "narrator", "severity": "review", "reason": "a period slur: only inside a cited, attributed quotation, with the reviewer's note; never in a template (Q9, F2)" },
+    { "pattern": "\\bnegro(?:es)?\\b", "scope": "label", "severity": "fail", "reason": "the period's term, not the game's: never in an option label (F2, Q9)" },
+    { "pattern": "\\bnegro(?:es)?\\b", "scope": "narrator", "severity": "review", "reason": "the period's term: only inside a cited quotation or a title of the time, with the reviewer's note (Q9)" },
+    { "pattern": "\\bBlack Republicans?\\b", "scope": "narrator", "severity": "review", "reason": "a period epithet for Republicans: only attributed to its speaker, never the narrator's (Q10)" },
+
+    { "pattern": "\\b(?:historically|as history records|as Lincoln did|the historical choice|in hindsight|would later|turning point)\\b", "scope": "label", "severity": "fail", "reason": "hindsight in an option label (0041; C3)" },
+    { "pattern": "\\b(?:historically|as history records|the historical choice|in hindsight|would later)\\b", "scope": "narrator", "severity": "fail", "reason": "hindsight in in-world narrator text (SENSITIVE-HISTORY section 5)" },
+    { "pattern": "\\b(?:the right thing|humane|shameful|noble|righteous|heroic)\\b", "scope": "label", "severity": "fail", "reason": "a moral verdict in an option label (C4; 0041)" },
+    { "pattern": "\\b(?:the right thing|shameful|righteous)\\b", "scope": "narrator", "severity": "review", "reason": "a moral verdict: never the narrator's; only inside a cited quotation (C4, F5)" },
+    { "pattern": "\\byou (?:did well|did right|were right|were wrong|failed|chose wisely|chose poorly|should have)\\b", "scope": "narrator", "severity": "fail", "reason": "narrator praise or scolding of the player (F5)" },
+
+    { "pattern": "\\bheritage\\b", "scope": "narrator", "severity": "review", "reason": "Lost Cause vocabulary: the reviewer notes each use (SENSITIVE-HISTORY section 5)" },
+    { "pattern": "\\b(?:the South|Southerners)\\b", "scope": "narrator", "severity": "review", "reason": "\"the South\" meaning only the Confederacy or white Southerners erases about 3.5 million enslaved people: say \"the Confederacy\", \"Confederates\" or \"white Southerners\" (trap 9; [SW 6.2])" },
+    { "pattern": "\\bslaves\\b", "scope": "narrator", "severity": "review", "reason": "prefer \"enslaved people\" as a narrator noun; the reviewer notes each use (SENSITIVE-HISTORY section 5)" },
+    { "pattern": "\\b(?:slave ?owners?|slave ?masters?|(?:their|his|her) masters?|owners? of (?:slaves|the enslaved|enslaved people))\\b", "scope": "narrator", "severity": "review", "reason": "prefer \"enslaver\" to \"owner\" or \"master\" of people (SENSITIVE-HISTORY section 5)" },
+    { "pattern": "\\bservants?\\b", "scope": "narrator", "severity": "review", "reason": "\"servant\" for an enslaved person is a euphemism: the reviewer notes each use (SENSITIVE-HISTORY section 5)" },
+    { "pattern": "\\bproperty\\b.{0,40}\\b(?:slaves?|enslaved|negro(?:es)?|fugitives?)\\b|\\b(?:slaves?|enslaved|fugitives?)\\b.{0,40}\\bproperty\\b", "scope": "narrator", "severity": "review", "reason": "\"property\" near people held in slavery: only as a cited speaker's or a law's word (SENSITIVE-HISTORY section 5; Q6)" },
+    { "pattern": "\\bcoercion\\b", "scope": "narrator", "severity": "review", "reason": "the upper South \"leaving over coercion\" is the governors' framing, never the narrator's (trap 7; [SW 6.1])" },
+    { "pattern": "\\b(?:servile war|racial war|race war)\\b", "scope": "narrator", "severity": "review", "reason": "only as an attributed contemporary or scholarly view (trap 8; [CS 3.1, 2.1])" },
+    { "pattern": "\\b(?:lost because of|overwhelming numbers|failure of will|the feuds lost)\\b", "scope": "narrator", "severity": "review", "reason": "a disputed thesis offered as the explanation (trap 1; Q12, H4; [CS 2.4, 4.6])" }
   ],
   "resourceWords": [
     "manpower", "recruits", "levy", "levies", "pools?", "stocks?", "quotas?", "auxiliar(?:y|ies)",
-    "corridors?", "no[- ]one[’']s", "unclaimed", "empty", "open (?:ground|country|land)", "wilderness"
+    "corridors?", "no[- ]one[’']s", "unclaimed", "empty", "open (?:ground|country|land)", "wilderness",
+    "labou?r force", "chattels?", "livestock"
   ],
   "proximityTokens": 5
 }
