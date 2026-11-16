@@ -32,6 +32,8 @@ export interface DirectiveTerms {
   readonly departure?: Permille;
   /** Support the plan asks of other posts (a fleet, a neighbouring army): each becomes an "if supported" condition unless promised. */
   readonly support?: readonly SupportNeed[];
+  /** Practices this order runs against (lane 1.5b; the map's `clashes`): a holder who keeps one reads it as a clash. */
+  readonly clashes?: readonly string[];
 }
 
 /** Support a plan needs from another post (lane 0.9's `naval_support` and `cooperating_axis` requests). */
@@ -76,6 +78,12 @@ export interface CommandContext {
   readonly oversightTerms?: readonly { readonly source: string; readonly amount: Permille }[];
   /** Support already promised to him, by kind: a need of a promised kind carries no condition. */
   readonly supportPromised?: readonly string[];
+  /**
+   * His own standing practices this order clashes with (lane 1.5b: a commander's own conduct, such as his practice toward
+   * fugitives, which an order may run against). Each costs its weight as the practice term, with a practice_clash
+   * reason. Absent when nothing clashes.
+   */
+  readonly practiceClashes?: readonly { readonly practice: string; readonly weight: number }[];
 }
 
 /**
@@ -110,12 +118,14 @@ export type Reason =
   /** An edit departs from his own judgement by at least the reason threshold (lane 1.1). */
   | { readonly kind: 'departs_from_judgement'; readonly departure: Permille }
   /** He knows he is watched more closely than usual (lane 1.5): an observer at his headquarters, or pressure. */
-  | { readonly kind: 'watched'; readonly source: string; readonly amount: Permille };
+  | { readonly kind: 'watched'; readonly source: string; readonly amount: Permille }
+  /** The order runs against a practice of his own (lane 1.5b). */
+  | { readonly kind: 'practice_clash'; readonly practice: string; readonly weight: number };
 
 export type ReasonKind = Reason['kind'];
 
 /** The terms of the willingness sum. */
-export type ContributionTerm = 'values' | 'temperament' | 'regard' | 'deterrence' | 'capacity' | 'disposition' | 'grievances' | 'judgement';
+export type ContributionTerm = 'values' | 'temperament' | 'regard' | 'deterrence' | 'capacity' | 'disposition' | 'grievances' | 'judgement' | 'practice';
 
 /** One term of the willingness sum, kept so every number is explainable (CLAUDE.md rule 6). */
 export interface Contribution {

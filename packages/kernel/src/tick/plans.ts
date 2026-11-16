@@ -17,7 +17,7 @@ import type { MessageId, PostId } from '../ids.ts';
 import type { ReportClaim, StatedReason } from '../knowledge/report.ts';
 import { term } from '../knowledge/truth.ts';
 import { liveTerms, draft } from '../planner/draft.ts';
-import { applyEdit, concretePlan, editDirective } from '../planner/edits.ts';
+import { applyEdit, concretePlan, editDirective, PLAN_HOLDS } from '../planner/edits.ts';
 import { plannerInputFor } from '../planner/input.ts';
 import type { PlanCandidate, TermKind } from '../planner/types.ts';
 import { goalKindOf } from '../plans/goal.ts';
@@ -225,7 +225,9 @@ function answerEdit(ctx: TickContext, start: State, post: PostId, derived: Deriv
     return invalid(result.reason, start);
   }
   const terms = editDirective(input, record.planDraft, result.edited, result.distance, world.map.world.rules.plans.holdingRisk, goalTerms(world.rules.people, goalKindOf(record.planGoal)));
-  const response = answerOrder(world, start, holder, record.planIssuer, terms, { oversight: oversightOf(ctx, start, holder, record.planIssuer).value });
+  // Lane 1.5b: what he holds for the plan, on editDirective's scale, so an edit asking more men than it commits states the
+  // shortfall; lane 1.4: read at the oversight where he stands.
+  const response = answerOrder(world, start, holder, record.planIssuer, terms, { available: PLAN_HOLDS, oversight: oversightOf(ctx, start, holder, record.planIssuer).value });
   const state = recordResponse(start, responseOf(response, { order: pending.pendingOrder, person: holder, post, role: 'addressee', day }));
   const executes = concretePlan(input, record.planDraft, chosen, result.edited, response.actual);
   for (const f of result.fell) fire(ctx, `planner.term.${f.term}`);

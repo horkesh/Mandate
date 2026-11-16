@@ -127,6 +127,13 @@ export function riskOf(c: PlanCandidate, holdingRisk: number): number {
 }
 
 /**
+ * What a post holds for its plan, on `editDirective`'s scale for `required` (its men needed * 500 / the men the plan
+ * commits): 500 is "the men the plan commits are enough". Whoever reads a plan's terms through compliance (an edit's
+ * answer, an audience) passes it as `available`, so a plan that needs more men than it commits states the shortfall.
+ */
+export const PLAN_HOLDS = 500;
+
+/**
  * The directive an edited plan is, as compliance reads it (lane 0.9 finding 2; 0062; lane 1.1's terms): `base` is the
  * pack's terms for the goal's kind (`WorldRules.people.goalTerms`: its boldness and the values it honours or offends).
  * His own best plan reads as that boldness (`ownBest`); the edited plan moves it by the change in risk; `required`

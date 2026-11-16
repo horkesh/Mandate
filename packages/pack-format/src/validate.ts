@@ -364,6 +364,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
 
   // ---- people
   const people = idSet('people', world.people);
+  const clashable = new Set(world.rules.people.verbs.orderValues.flatMap((r) => r.clashes));
   // Lane 1.11a (hard rule 7; 0074): a cell whose every admissible citation is weak is refused. A citation is weak when its
   // source is on the gate's weak list (memoirs, self-reports, pointers) or banned, or its place carries a weak marker
   // (`snippet`, `self-report`, `after-start`). A cell with a strong citation beside weak ones stands.
@@ -419,6 +420,18 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
         err('centre-without-citation', at(`regardOthers[${j}]`), `regard toward ${o.toward} has no admissible citation`, 'a citation of a primary or secondary source');
       } else if (!p.invented && weakOnly(o.cites)) {
         err('weak-citations-only', at(`regardOthers[${j}]`), `regard toward ${o.toward} rests only on weak citations`, weakExpected);
+      }
+    });
+    // Lane 1.5b: a practice is one some row of the map clashes with (else it could never bite), each cited, never twice.
+    p.practices.forEach((pr, j) => {
+      if (!clashable.has(pr.practice)) err('unknown-reference', at(`practices[${j}].practice`), `practice "${pr.practice}" is not one any order of the map clashes with`, 'a practice named in some rules.people.verbs.orderValues row’s clashes');
+      if (p.practices.findIndex((x) => x.practice === pr.practice) !== j) err('duplicate-id', at(`practices[${j}]`), `practice "${pr.practice}" is listed twice`);
+      citeCheck(pr.cites, at(`practices[${j}].cites`), false, `practice "${pr.practice}"`);
+      if (!p.invented && pr.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer').length === 0) {
+        err('value-without-citation', at(`practices[${j}]`), `practice "${pr.practice}" has no admissible citation`, 'a citation of a primary or secondary source');
+      } else if (!p.invented && weakOnly(pr.cites)) {
+        // Lane 1.11a's rule reaches practices too: gate content resting only on weak citations is refused.
+        err('weak-citations-only', at(`practices[${j}]`), `practice "${pr.practice}" rests only on weak citations`, weakExpected);
       }
     });
     p.values.forEach((v, j) => {

@@ -148,6 +148,9 @@ export const PersonSchema = z.strictObject({
   regardOthers: z
     .array(z.strictObject({ toward: idOf('person'), direction: z.enum(w.STAT_DIRECTIONS), cites: z.array(citation) }))
     .describe('His regard for other people at the pack’s first start (lane 1.5: rivals, partners), each a cited direction.'),
+  practices: z
+    .array(z.strictObject({ practice: termId, cites: z.array(citation) }))
+    .describe('His own standing practices (lane 1.5b), each cited: conduct an order of the map can run against (a row’s clashes), such as a commander’s practice toward fugitives. Gate content.'),
   traits: z.array(z.strictObject({ trait: termId, cites: z.array(citation) })),
   bloc: termId.nullable(),
   ranks: z.array(z.strictObject({ rank: termId, from: historicalDate })),
@@ -445,7 +448,7 @@ export const RulesSchema = z.strictObject({
         .strictObject({
           weekDays: positive,
           orderValues: z
-            .array(z.strictObject({ order: z.string().min(1), boldness: permille.nullable(), honours: z.array(termId), offends: z.array(termId), gateTopics: z.array(termId), notCheaperThan: z.string().min(1).nullable() }))
+            .array(z.strictObject({ order: z.string().min(1), boldness: permille.nullable(), honours: z.array(termId), offends: z.array(termId), gateTopics: z.array(termId), notCheaperThan: z.string().min(1).nullable(), clashes: z.array(termId).default([]) }))
             .describe('The map from orders to values (0074): gate content; a row tagged with gate topics needs the gate reviewer’s sign-off.'),
           relief: z.array(z.strictObject({ mode: z.enum(['quiet_department', 'own_request', 'outright']), grievanceWeight: nonNegative, regardDelta: signedPermille, standingDelta: signedPermille })),
           inquiry: z.strictObject({ freePerWeek: nonNegative, pesteredWeight: nonNegative }),
@@ -466,6 +469,7 @@ export const RulesSchema = z.strictObject({
               recommends: termId,
             }),
           ),
+          practiceWeight: nonNegative.describe('What a clash with one of his own practices costs a recipient’s willingness, and adds to the pushback (lane 1.5b).'),
         })
         .describe('The people verbs, the ladder, the audience and seat initiatives (lane 1.5). Design parameters.'),
     })
