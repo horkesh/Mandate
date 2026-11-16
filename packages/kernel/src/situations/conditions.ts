@@ -55,7 +55,7 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
     return c.options === null || r.sitChosen.some((o) => c.options!.includes(o));
   }
   if ('knows' in c) return knowsMatch(ctx.knowledge, c.knows, ctx.since);
-  if ('goal' in c) return ctx.state.standingGoals[c.goal.post]?.standingSpec.goalSpecKind === c.goal.kind;
+  if ('goal' in c) return ctx.state.planRecords[c.goal.post]?.planGoal.goalPosture === c.goal.posture;
   if ('headquartersAt' in c) return ctx.headquartersOf !== undefined && ctx.headquartersOf(c.headquartersAt.post) === c.headquartersAt.region;
   // clockAtLeast
   if (ctx.situation === null) return false;

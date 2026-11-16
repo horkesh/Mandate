@@ -11,10 +11,10 @@
  * `test/boundary.test.ts` proves its import closure never reaches State or
  * the truth layer.
  */
-import type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
+import type { EdgeId, FactionId, ForceBlockId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import type { ClaimKind, ReportType, SubjectKind } from '../knowledge/report.ts';
 import type { RouteKind } from '../messages/latency.ts';
-import type { GoalKind } from '../plans/goal.ts';
+import type { PlanStatus, Posture } from '../plans/goal.ts';
 
 export interface ClaimView {
   readonly kind: ClaimKind;
@@ -56,12 +56,35 @@ export interface BeliefView {
   readonly source: MessageId;
 }
 
+/** What he has been told of works in one region (lane 1.2): fortification, permille, and the report it rests on. */
+export interface WorksView {
+  readonly value: number;
+  readonly asOfDay: number;
+  readonly source: MessageId;
+}
+
+/** What he has been told of one water edge (lane 1.2): closed to his side or clear, and the works' region (null: a boom). */
+export interface ObstructionView {
+  readonly closed: boolean;
+  readonly by: RegionId | null;
+  readonly asOfDay: number;
+  readonly source: MessageId;
+}
+
+/** The goal he was given (lane 1.2: the full goal, FOUNDATION section 5), and where its plan stands. */
 export interface GoalView {
-  readonly kind: GoalKind;
-  readonly region: RegionId | null;
-  readonly issuer: PersonId | null;
+  readonly posture: Posture;
+  readonly objective: RegionId | null;
+  readonly risk: number;
+  readonly deadlineDays: number;
+  readonly permissions: { readonly rail: boolean; readonly river: boolean; readonly sea: boolean; readonly neutral: boolean };
+  readonly committed: readonly ForceBlockId[];
+  readonly awaitWord: boolean;
+  readonly approveAsDrafted: boolean;
+  readonly issuer: PersonId;
   readonly viaChain: boolean;
   readonly setDay: number;
+  readonly status: PlanStatus;
 }
 
 /** An option as the seat sees it: its label key and who argued for it, in display order. */
@@ -105,6 +128,10 @@ export interface SeatView {
   /** In (received day, id) order. */
   readonly reports: readonly ReportView[];
   readonly enemyBeliefs: Readonly<Record<RegionId, BeliefView>>;
+  /** Works he has been told of, per region (the latest works claim he holds). */
+  readonly worksBeliefs: Readonly<Record<RegionId, WorksView>>;
+  /** Water edges he has been told of, closed or clear (the latest obstruction claim he holds per edge). */
+  readonly obstructionBeliefs: Readonly<Record<EdgeId, ObstructionView>>;
   /** Situations that have reached him (as principal, or as the holder one was handed to), in id order. */
   readonly situations: readonly SituationView[];
 }

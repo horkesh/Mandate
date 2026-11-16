@@ -133,7 +133,7 @@ describe('situations in the pack format', () => {
     firesAt(editJson(decision, (s) => (s.historicalDefault = { options: ['press_on', 'send_the_fighter'] })), 'situation-selection', { at: 'historicalDefault.options' });
     firesAt(editJson(decision, (s) => (s.historicalDefault = { delegate: 'n_army_west' })), 'unknown-reference', { at: 'historicalDefault.delegate' });
     firesAt(editJson(decision, (s) => (s.staffLine.recommends = ['nope'])), 'unknown-reference', { at: 'staffLine.recommends[0]' });
-    firesAt(editJson(decision, (s) => (s.options[0].orders[0].region = null)), 'situation-order', { at: 'options[0].orders[0]' });
+    firesAt(editJson(decision, (s) => (s.options[0].orders[0].objective = null)), 'situation-order', { at: 'options[0].orders[0]' });
     firesAt(editJson(sit('eastwatch_followup'), (s) => (s.chain.follows.situation = 'nowhere')), 'unknown-reference', { at: 'chain.follows.situation' });
     firesAt(editJson(sit('eastwatch_followup'), (s) => (s.chain.follows.options = ['nope'])), 'unknown-reference', { at: 'chain.follows.options[0]' });
     firesAt(editJson(sit('fen_arrivals'), (s) => (s.event = { fired: 'nowhere' })), 'unknown-reference', { at: 'event', message: 'is not a situation' });
@@ -156,7 +156,7 @@ describe('situations in the pack format', () => {
 
   it('the lead’s rulings on S10 and S2: each condition the principal must know reads only its allow-list', () => {
     // Options: knows, the clock and dates. Any truth read, or a decision (even his own side's), is refused.
-    for (const atom of [{ flag: 'fen_arrivals' }, { fired: 'fen_arrivals' }, { decided: 'fen_crossing' }, { goal: { post: 'n_army_east', kind: 'hold' } }, { headquartersAt: { post: 'n_army_east', region: 'n_capital' } }]) {
+    for (const atom of [{ flag: 'fen_arrivals' }, { fired: 'fen_arrivals' }, { decided: 'fen_crossing' }, { goal: { post: 'n_army_east', posture: 'hold' } }, { headquartersAt: { post: 'n_army_east', region: 'n_capital' } }]) {
       firesAt(editJson(sit('eastwatch_stalls'), (s) => (s.options[0].appearsWhen = { not: atom })), 'situation-option-truth', { at: 'options[0].appearsWhen', message: Object.keys(atom)[0] });
     }
     // Waits: knows and the clock, not dates.
@@ -300,7 +300,7 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     // Renamed past the id pattern, the option still says what it does.
     firesAt(editJson('strings/en.json', (t) => (t['situation.fen_crossing.option.send_back'] = 'Hunt them down in the reeds')), 'gate-refused', { file: sit('fen_crossing'), at: 'options[2].label' });
     firesAt(editJson('strings/en.json', (t) => (t['situation.fen_crossing.option.shelter'] = 'Burn the crossing behind them')), 'gate-refused', { file: sit('fen_crossing'), at: 'options[1].label' });
-    const refuseOrder = editJson('gate/register.json', (r) => r.topics[1].refused.push({ orderPattern: '^advance:n_army_east:s_capital$', reason: 'a test signature' }));
+    const refuseOrder = editJson('gate/register.json', (r) => r.topics[1].refused.push({ orderPattern: '^take:n_army_east:s_capital$', reason: 'a test signature' }));
     firesAt(refuseOrder, 'gate-refused', { file: sit('eastwatch_stalls'), at: 'options[0].orders[0]' });
   });
 

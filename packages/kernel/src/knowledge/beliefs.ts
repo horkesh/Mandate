@@ -11,10 +11,11 @@
  * and the assessment can tell a timid general from a bad intelligence chief.
  */
 import { strictCompare } from '../compare.ts';
-import type { MessageId, PersonId, RegionId } from '../ids.ts';
+import type { EdgeId, MessageId, PersonId, RegionId } from '../ids.ts';
 import type { State } from '../root-state.ts';
 import { perceptionBias, type TraitHolder, type TraitRules } from '../standin/traits.ts';
 import type { KnownReport, SeatKnowledge } from './knowledge.ts';
+import type { ClaimKind, ReportClaim } from './report.ts';
 import { term, type BiasTerm } from './truth.ts';
 
 export interface EnemyBelief {
@@ -31,15 +32,46 @@ export interface EnemyBelief {
   readonly terms: readonly BiasTerm[];
 }
 
+/** The latest claim of `kind` per key in a body of knowledge, by stamp then arrival then id. Claims with no key are skipped. */
+function latestClaims<K extends string>(knowledge: SeatKnowledge, kind: ClaimKind, keyOf: (c: ReportClaim) => K | null): Map<K, { report: KnownReport; claim: ReportClaim }> {
+  const out = new Map<K, { report: KnownReport; claim: ReportClaim }>();
+  for (const r of knowledge.knownReports) {
+    for (const c of r.knownBody.reportClaims) {
+      if (c.claimKind !== kind) continue;
+      const key = keyOf(c);
+      if (key === null) continue;
+      const prev = out.get(key);
+      if (prev === undefined || newer(r, prev.report)) out.set(key, { report: r, claim: c });
+    }
+  }
+  return out;
+}
+
 /** The latest enemy-strength claim per region in a body of knowledge, by stamp then arrival then id. */
 export function latestEnemyClaims(knowledge: SeatKnowledge): ReadonlyMap<RegionId, { readonly report: KnownReport; readonly value: number }> {
   const out = new Map<RegionId, { report: KnownReport; value: number }>();
-  for (const r of knowledge.knownReports) {
-    for (const c of r.knownBody.reportClaims) {
-      if (c.claimKind !== 'enemy-strength' || c.claimRegion === null) continue;
-      const prev = out.get(c.claimRegion);
-      if (prev === undefined || newer(r, prev.report)) out.set(c.claimRegion, { report: r, value: c.claimValue });
-    }
+  for (const [region, { report, claim }] of latestClaims(knowledge, 'enemy-strength', (c) => c.claimRegion)) out.set(region, { report, value: claim.claimValue });
+  return out;
+}
+
+/**
+ * The latest works claim per region (lane 1.2): the fortification he has been told stands there, permille. No
+ * perception bias: what he misjudges is the enemy's numbers, not the height of a parapet he has had described.
+ */
+export function latestWorksClaims(knowledge: SeatKnowledge): ReadonlyMap<RegionId, { readonly report: KnownReport; readonly value: number }> {
+  const out = new Map<RegionId, { report: KnownReport; value: number }>();
+  for (const [region, { report, claim }] of latestClaims(knowledge, 'works', (c) => c.claimRegion)) out.set(region, { report, value: claim.claimValue });
+  return out;
+}
+
+/**
+ * The latest obstruction claim per water edge (lane 1.2): whether he has been told it is closed to his side (1) or
+ * clear (0), and the region of the installation whose works close it (null: works no installation holds).
+ */
+export function latestObstructionClaims(knowledge: SeatKnowledge): ReadonlyMap<EdgeId, { readonly report: KnownReport; readonly closed: boolean; readonly by: RegionId | null }> {
+  const out = new Map<EdgeId, { report: KnownReport; closed: boolean; by: RegionId | null }>();
+  for (const [edge, { report, claim }] of latestClaims(knowledge, 'obstruction', (c) => (c.claimToken === null ? null : (c.claimToken as EdgeId)))) {
+    out.set(edge, { report, closed: claim.claimValue !== 0, by: claim.claimRegion });
   }
   return out;
 }

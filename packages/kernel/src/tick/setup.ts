@@ -13,7 +13,6 @@ import type { DepartmentId, RegionId } from '../ids.ts';
 import { initialInfrastructure } from '../infrastructure/infrastructure.ts';
 import { initialLocations } from '../movement/movement.ts';
 import { initialRanks } from '../people/ranks.ts';
-import { initialGoals } from '../plans/standing.ts';
 import { initialFortification } from '../regions/regions.ts';
 import type { State } from '../root-state.ts';
 import type { SeatDriver } from '../seats/api.ts';
@@ -85,6 +84,7 @@ export function emptyState(): State {
     messagesInTransit: [],
     knowledgeBySeat: {},
     reportTruth: {},
+    planRecords: {},
     standingGoals: {},
     situationStates: {},
     situationFlags: {},
@@ -154,8 +154,9 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
     messagesInTransit: [],
     knowledgeBySeat: {},
     reportTruth: {},
-    // Standing goals read the posts and assignments just copied: every held field post holds where it stands.
-    standingGoals: initialGoals(map, command.posts, command.assignments),
+    // No goal is ordered before play (lane 1.2): a post with none holds where it stands, and nothing moves it.
+    planRecords: {},
+    standingGoals: {},
     situationStates: {},
     situationFlags: options.atWar === true ? warFlagsAtStart(world) : {},
     forceBlockStates: initialForces(map, start),

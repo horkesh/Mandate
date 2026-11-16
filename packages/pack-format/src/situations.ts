@@ -51,7 +51,7 @@ export const ConditionSchema: z.ZodType<Condition> = z.lazy(() =>
     z.strictObject({ fired: idOf('situation') }),
     z.strictObject({ decided: idOf('situation'), options: z.array(termId).min(1).nullable().default(null) }),
     z.strictObject({ knows }),
-    z.strictObject({ goal: z.strictObject({ post: idOf('post'), kind: z.enum(phase0.GOAL_KINDS) }) }),
+    z.strictObject({ goal: z.strictObject({ post: idOf('post'), posture: z.enum(phase0.POSTURES) }).describe('The post holds a goal of this posture, ordered by its principal (lane 1.2: a goal in plans, no longer a standing goal).') }),
     z.strictObject({ headquartersAt: z.strictObject({ post: idOf('post'), region: idOf('region') }) }),
     z.strictObject({ clockAtLeast: nonNegative }),
   ]),
@@ -110,7 +110,14 @@ export const OptionSchema = z.strictObject({
   effects: z.array(EffectSchema).default([]),
   lockedCosts: z.array(EffectSchema).default([]),
   orders: z
-    .array(z.strictObject({ to: idOf('post'), goal: z.enum(phase0.GOAL_KINDS), region: idOf('region').nullable().default(null), route: z.enum(phase0.ROUTE_KINDS) }))
+    .array(
+      z.strictObject({
+        to: idOf('post'),
+        posture: z.enum(phase0.POSTURES).describe('The goal the order gives: take, relieve or hold its objective. Its other terms are the pack’s goalDefaults (rules.plans).'),
+        objective: idOf('region').nullable().default(null).describe('The goal’s objective; null only for a hold where he stands.'),
+        route: z.enum(phase0.ROUTE_KINDS),
+      }),
+    )
     .default([]),
   honours: z.array(termId).default([]),
   watched: z.boolean().default(false),
@@ -351,9 +358,9 @@ export function validateSituations(items: readonly { readonly file: string; read
       o.orders.forEach((order, j) => {
         const at = `options[${i}].orders[${j}]`;
         ref(posts, 'post in any scenario', order.to, `${at}.to`);
-        if (order.region !== null) ref(regions, 'region', order.region, `${at}.region`);
+        if (order.objective !== null) ref(regions, 'region', order.objective, `${at}.objective`);
         if (!phase0.ORDER_ROUTES.includes(order.route)) err('situation-route', `${at}.route`, `"${order.route}" is not a route a principal orders by`, `one of ${phase0.ORDER_ROUTES.join(', ')} (0052)`);
-        if ((order.goal === 'advance') !== (order.region !== null)) err('situation-order', at, 'an advance needs a region, and a hold names none');
+        if (order.posture !== 'hold' && order.objective === null) err('situation-order', at, `a ${order.posture} order names no objective`, 'only a hold may name none: it holds where he stands');
       });
     });
 

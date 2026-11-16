@@ -219,9 +219,79 @@ export const RulesSchema = z.strictObject({
   standing: z
     .strictObject({
       conflictWindowDays: positive.describe('Days within which a chain order stands against a newer order that went around the chain (0040). A design parameter.'),
-      scoreCap: int.min(1000, 'at least 1000, or no advance could be offered').describe('The highest score a standing-goal menu gives an advance, permille of his demand, so an empty region does not dwarf every other term. A design parameter.'),
     })
-    .describe('The stand-in standing goals (0040, 0072): design parameters the pack states, not sourced facts.'),
+    .describe('Conflicting orders (0040, 0072): a design parameter the pack states, not a sourced fact. A stand-in until the people recast resolves conflicts by compliance.'),
+  // Lane 1.2: the planner and plans in the kernel (0062). Every number is a design parameter the pack states (0072), none a kernel default.
+  planner: z
+    .strictObject({
+      hopShare: positive.describe('Share of a neighbouring region’s perceived enemy that adds to a region’s threat, permille.'),
+      menPerDay: positive.describe('Men of perceived enemy that weigh as one day’s march in route cost, at risk weight 1000.'),
+      flankOverlapMax: positive.describe('A flank is kept only if it shares fewer than this many permille of the direct route’s regions (0062: 600).'),
+      flankLengthMax: positive.describe('A flank may take at most this many permille of the direct route’s days (0062: 1600).'),
+      flankPenalty: positive.describe('Penalty, permille, on the direct route’s edges when looking for a flank (2000 doubles them).'),
+      retrogradeSlack: nonNegative.describe('An alternative may pass regions at most this many permille days further from the objective than its start.'),
+      dedupeOverlap: positive.describe('Candidates sharing at least this many permille of their regions, with the same shape, are duplicates.'),
+      dedupeArrival: nonNegative.describe('... and only if they arrive within this many permille days of each other.'),
+      topN: positive.describe('Moving candidates on the menu, plus a holding action (0062: four).'),
+      maxSearches: positive.describe('Route searches allowed per request; the cap is counted and reported, never silent.'),
+      reducePerLevel: nonNegative.describe('Permille days to reduce works per permille of fortification.'),
+      clearDays: nonNegative.describe('Permille days to clear works no installation holds (a boom) deliberately.'),
+      forceDays: nonNegative.describe('Permille days to force such works in a night.'),
+      forcingThreat: nonNegative.describe('Extra threat, as men, of forcing works or running past batteries.'),
+      assaultDays: nonNegative.describe('Permille days an assault on a garrisoned region takes, on the route as at the objective.'),
+      assaultMargin: positive.describe('His demand for an assault on held ground, permille of his demand in the open (the assault margin, 0062).'),
+      pincerWindow: nonNegative.describe('A pincer’s partner may arrive up to this many permille days before the main axis.'),
+      shortfallTimid: nonNegative.describe('Shortfall, permille of the men he needs, past which a man of boldness 0 asks for men and waits.'),
+      shortfallBold: nonNegative.describe('The same for a man of boldness 1000; scaled between the two by boldness (0062).'),
+      dependenceCost: nonNegative.describe('What one support request to another holder costs in the score.'),
+      partnerRegardWeight: nonNegative.describe('Permille of a partner holder’s regard counted in his willingness to cooperate.'),
+      partnerValueWeight: nonNegative.describe('Points of willingness per value a cooperating axis honours or offends in him.'),
+      partnerHonours: z.array(termId).describe('Values (pack vocabulary) a cooperating axis honours in the holder asked.'),
+      partnerOffends: z.array(termId).describe('Values a cooperating axis offends in the holder asked.'),
+      dailyDraftCap: positive.describe('Plans drafted in one day; the rest wait for the next, oldest request first (0062; lane 0.8 measured the worst day on the Union graph).'),
+      weights: z
+        .strictObject({
+          riskBase: nonNegative,
+          supplyBase: nonNegative,
+          concentrationPerTimid: positive,
+          pausePerTimid: positive,
+          twoAxesAt: nonNegative,
+          threeAxesAt: nonNegative,
+          goalFit: nonNegative,
+          ratioBonusMax: nonNegative,
+          ratioBonusDivisor: positive,
+          ratioPenaltyMax: positive,
+          latePenaltyMax: nonNegative,
+          latePerDay: nonNegative,
+          earlyBonusMax: nonNegative,
+          earlyDivisor: positive,
+          holdingTime: int,
+          traitBase: nonNegative,
+          hasteDivisor: positive,
+          supplyDivisor: positive,
+          outrunDivisor: positive,
+          exposureDivisor: positive,
+          coordinationDivisor: positive,
+          perExtraAxis: nonNegative,
+          gloryDivisor: positive,
+          cautionDivisor: positive,
+        })
+        .describe('How the planner turns a man’s traits into his profile and scores a plan: each score term a signed sum of these weights times the plan’s facts (hard rule 6). Calibrated with compliance.'),
+    })
+    .describe('The planner (0062): design parameters the pack states, not sourced facts.'),
+  plans: z
+    .strictObject({
+      goalDefaults: z
+        .strictObject({ risk: permille, deadlineDays: positive, rail: z.boolean(), river: z.boolean(), sea: z.boolean(), neutral: z.boolean(), awaitWord: z.boolean(), approveAsDrafted: z.boolean() })
+        .describe('The goal terms an order carries when it names only a posture and an objective (a situation’s option).'),
+      holdingRisk: int.describe('A holding action’s riskiness, for reading an edit’s boldness against his own best plan (0062).'),
+      complianceCandour: permille.describe('STAND-IN until the people recast: the candour compliance reads when a commander answers an edit.'),
+      complianceStanding: permille.describe('STAND-IN: his standing.'),
+      complianceAvailable: permille.describe('STAND-IN: the resources compliance reads as on hand.'),
+      complianceOversight: permille.describe('STAND-IN: how closely the principal is watching.'),
+      complianceCredibility: permille.describe('STAND-IN: the principal’s credibility.'),
+    })
+    .describe('Goals and plans (0040, 0062): design parameters the pack states.'),
 });
 
 export const VocabulariesSchema = z.strictObject({

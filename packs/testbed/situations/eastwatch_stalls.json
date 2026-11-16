@@ -5,7 +5,7 @@
   "title": "situation.eastwatch_stalls.title",
   "text": "situation.eastwatch_stalls.text",
   "earliest": "1861-04-01",
-  "event": { "goal": { "post": "n_army_east", "kind": "advance" } },
+  "event": { "goal": { "post": "n_army_east", "posture": "take" } },
   "knowledge": { "knows": { "reportType": "wire-dispatch", "subjectKind": "post", "subjectId": "n_army_east", "claimKind": "goal-status" } },
   "chain": { "id": "eastwatch", "stage": 1 },
   "subjects": ["n_organiser"],
@@ -16,7 +16,7 @@
       "displayKey": 1,
       "proposedBy": ["n_secretary"],
       "honours": ["duty", "order"],
-      "orders": [{ "to": "n_army_east", "goal": "advance", "region": "s_capital", "route": "special-messenger" }]
+      "orders": [{ "to": "n_army_east", "posture": "take", "objective": "s_capital", "route": "special-messenger" }]
     },
     {
       "id": "send_the_fighter",

@@ -137,9 +137,12 @@ function applyDecision(ctx: TickContext, start: State, def: SituationDef, chosen
   for (const o of options) {
     state = applyEffects(ctx, state, def, [...o.effects, ...o.lockedCosts], o.id);
     const principal = seatIdFor(principalOf(ctx, def));
+    const d = ctx.world.map.world.rules.plans.goalDefaults;
     for (const order of o.orders) {
-      // In the principal's name, through his validated path, by the route the option names (0052).
-      const reason = issueOrder(ctx, state, principal, { cmd: 'order', to: order.to, goal: order.goal, region: order.region, route: order.route, bypass: false });
+      // In the principal's name, through his validated path, by the route the option names (0052); the goal's terms
+      // beyond posture and objective are the pack's (lane 1.2).
+      const goal = { objective: order.objective, posture: order.posture, risk: d.risk, deadlineDays: d.deadlineDays, rail: d.rail, river: d.river, sea: d.sea, neutral: d.neutral, committed: [], awaitWord: d.awaitWord, approveAsDrafted: d.approveAsDrafted };
+      const reason = issueOrder(ctx, state, principal, { cmd: 'order', to: order.to, goal, route: order.route, bypass: false });
       if (reason === null) fire(ctx, 'situations.orders');
       else ctx.rejections.push({ day: ctx.day, seat: principal, entry: -1, reason });
     }

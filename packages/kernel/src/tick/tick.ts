@@ -2,19 +2,21 @@
  * The day tick (FOUNDATION section 10's fixed day order, as built in Phase 0):
  *
  *  0. Morning: the map and latency the seats were asked from, and the
- *     standing-goal menus they were offered.
- *  1. Apply today's log entries, validated; orders become messages in transit
- *     (the kernel computes their arrival). Rejections are reported.
+ *     plan menus they were offered.
+ *  1. Apply today's log entries, validated; orders, reviews and the word to go
+ *     become messages in transit (the kernel computes their arrival). Rejections are reported.
+ *  1b. Commanders' picks among the planner's candidates (lane 1.2).
  *  2. Deliver messages due today: relays, filters, arrivals, knowledge.
- *  3. Movement: commanders' steps toward their goals, every march a day further
- *     (lane 0.5; goals stand in for lane 0.9's plans).
+ *  2b. Plans: edits answered, goals drafted within the daily cap (lane 1.2).
+ *  3. Movement: approved plans through the stand-in standing-goal path (lane 1.4
+ *     retires it), every march a day further (lane 0.5).
  *  3b. The simple control contest and occupation: control deltas, retreats (lane 0.5).
  *  4. Control and network changes, and the derived map (lane 0.4).
  *  4a. Stores on hand fall or refill from today's supply trace (lane 0.5).
  *  4b. Situations fire, surface, stay live, take history defaults (lane 0.7).
  *  4c. Proposals `command` owns: a neutral government closing or reopening (0058),
- *      or a government joining a side (0065).
- *  4d. Goals for posts that became field posts on a side (`plans`; exit review S1).
+ *      or a government joining a side (0065). A post that joins a side this way has
+ *      no goal until one is ordered: it holds where it stands (0072's hold goal retired, lane 1.2).
  *  5. Reports written on a cycle.
  *  6. Knowledge pruning.
  *  7. The day counter.
@@ -30,12 +32,12 @@ import { entryProblems, type LogEntry } from '../log/log.ts';
 import { createIdMint, sendMessages } from '../messages/transit.ts';
 import type { State } from '../root-state.ts';
 import type { OptionView } from '../seats/api.ts';
-import { holdGoalsForNewFieldPosts } from '../plans/standing.ts';
-import { morningGround, standingKey, standingOptions } from '../seats/requests.ts';
+import { morningGround } from '../seats/requests.ts';
 import { heldPost } from '../command/command.ts';
-import { fieldPosts } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import type { Telemetry } from '../telemetry.ts';
+import { createViewCache, type ViewCache } from '../view/view.ts';
+import { applyPlanChoices, choosingPosts, planKey, planOptions, plansPhase, PLANS_MECHANICS } from './plans.ts';
 import { fire, type DecisionPoint, type MapEvent, type Price, type Proposal, type Rejection, type TickContext, type TickEvent } from './context.ts';
 import { deliverDue } from './deliver.ts';
 import { createFreezeLedger, deepFreeze, type FreezeLedger } from './freeze.ts';
@@ -66,6 +68,7 @@ export const SEATS_MECHANICS = [
   'seats.choices',
   'seats.defaulted',
   ...MOVEMENT_MECHANICS,
+  ...PLANS_MECHANICS,
 ] as const;
 
 /** Every mechanic the tick counts: the seats layer's and the situations phase's. Runners declare these. */
@@ -81,6 +84,8 @@ export interface TickOptions {
   readonly mapCache?: DerivedMapCache;
   /** Also compare the derived map with a fresh derivation at the invariant barrier (tests and determinism runs). */
   readonly deepChecks?: boolean;
+  /** A view cache kept by the caller across days, for the plans phase's views of the commanders it drafts for. */
+  readonly viewCache?: ViewCache;
 }
 
 export interface TickResult {
@@ -121,11 +126,11 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     mapEvents: [],
   };
 
-  // 0. The morning's menus, exactly as `pendingRequests` built them for the seats.
+  // 0. The morning's plan menus, exactly as `pendingRequests` built them for the seats.
   const menus = new Map<PostId, readonly OptionView[]>();
-  for (const post of fieldPosts(world, state)) {
-    const options = standingOptions(world, state, post, ground);
-    if (options !== null) menus.set(post, options);
+  for (const post of choosingPosts(state, day)) {
+    const options = planOptions(state, post, day);
+    if (options !== null && options.length > 1) menus.set(post, options);
   }
 
   // 1. Today's commands, in log order.
@@ -140,7 +145,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     if (entry.day !== day) return reject('wrong_day');
     if (state.seatAssignments[entry.seat] === undefined) return reject('unknown_seat');
     const c = entry.command;
-    if (c.cmd === 'order') {
+    if (c.cmd === 'order' || c.cmd === 'review' || c.cmd === 'go') {
       const reason = issueOrder(ctx, state, entry.seat, c);
       if (reason !== null) reject(reason);
       return;
@@ -152,19 +157,26 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
       return;
     }
     const post = heldPost(state, state.seatAssignments[entry.seat]!.seatPerson);
-    if (post === null || c.request !== standingKey(post, day) || !menus.has(post)) return reject('no_such_request');
+    if (post === null || c.request !== planKey(post, day) || !menus.has(post)) return reject('no_such_request');
     if (choices.has(post)) return reject('duplicate_choice');
     if (!menus.get(post)!.some((o) => o.optionId === c.option)) return reject('not_an_option');
     choices.set(post, c.option);
     fire(ctx, 'seats.choices');
   });
+
+  // 1b. Commanders' picks among their candidates: each goes ahead or is submitted for review (lane 1.2).
+  state = freeze(applyPlanChoices(ctx, state, menus, choices));
   state = freeze(sendMessages(state, ctx.outbox.splice(0)));
 
   // 2. Deliveries.
   state = freeze(deliverDue(ctx, state));
 
-  // 3. Movement: commanders' steps toward their goals, and every march a day further (lane 0.5).
-  state = freeze(applyStanding(ctx, state, menus, choices));
+  // 2b. Plans: edits that arrived are answered, then goals awaiting a plan are drafted within the daily cap (lane 1.2).
+  state = freeze(plansPhase(ctx, state, options.viewCache ?? createViewCache()));
+  state = freeze(sendMessages(state, ctx.outbox.splice(0)));
+
+  // 3. Movement: approved plans march through the stand-in path (lane 1.4 retires it), every march a day further.
+  state = freeze(applyStanding(ctx, state));
 
   // 3b. The simple control contest and occupation (lane 0.5; only with a map): deltas for control, retreats now.
   state = freeze(contestPhase(ctx, state).state);
@@ -185,12 +197,8 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   state = freeze(proposed.state);
   const dayMap = proposed.derived ?? mapped.derived;
 
-  // 4d. A post that became a field post on a side today (its government joined one) holds where it stands (`plans`).
-  state = freeze(holdGoalsForNewFieldPosts(state, fieldPosts(world, state), day));
-
-  // 5. Reports on their cycles. A commander whose only option was to hold is awaiting strength.
-  const awaiting = new Set([...menus].filter(([, o]) => o.length === 1 && o[0]!.kind === 'hold').map(([p]) => p));
-  generateReports(ctx, state, awaiting);
+  // 5. Reports on their cycles.
+  generateReports(ctx, state);
   state = freeze(sendMessages(state, ctx.outbox.splice(0)));
 
   // 6. Pruning.

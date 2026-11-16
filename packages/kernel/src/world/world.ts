@@ -80,13 +80,144 @@ export interface RuleSeatRules {
 }
 
 /**
- * The stand-in standing goals' numbers (0040, 0072). DESIGN PARAMETERS the pack states, never kernel defaults.
+ * Conflicting orders (0040, 0072). DESIGN PARAMETERS the pack states, never kernel defaults. STAND-IN: lane 1.1's
+ * compliance function resolves conflicting orders and retires this window.
  */
 export interface StandingRules {
   /** Days within which a chain order stands against a newer order that went around the chain (0040: conflicting orders). */
   readonly conflictWindowDays: number;
-  /** The highest score a standing-goal menu gives an advance, so an empty region does not dwarf every other term (permille of his demand). */
-  readonly scoreCap: number;
+}
+
+/**
+ * How the planner turns a man's traits into his planning profile, and how it scores a plan (0062; lane 0.9). Each
+ * score term is a signed sum of these weights times the plan's facts, so the score stays the exact sum of its terms
+ * (hard rule 6). DESIGN PARAMETERS the pack states, calibrated with compliance (FOUNDATION section 12's note).
+ */
+export interface PlannerWeights {
+  /** Risk weight is this plus his timidity (1000 minus boldness), permille. */
+  readonly riskBase: number;
+  /** Supply care is this minus his boldness, permille. */
+  readonly supplyBase: number;
+  /** One day of concentration, plus one per this many points of timidity. */
+  readonly concentrationPerTimid: number;
+  /** One day of pause at a depot step, plus one per this many points of timidity. */
+  readonly pausePerTimid: number;
+  /** Competence at or above which he runs two axes, and three. */
+  readonly twoAxesAt: number;
+  readonly threeAxesAt: number;
+  /** `goal_fit`: what reaching the objective is worth. */
+  readonly goalFit: number;
+  /** `force_ratio`: the most a surplus over his demand earns, and its divisor (permille of ratio per point). */
+  readonly ratioBonusMax: number;
+  readonly ratioBonusDivisor: number;
+  /** `force_ratio`: the most a shortfall against his demand costs. */
+  readonly ratioPenaltyMax: number;
+  /** `time`: the most lateness costs, and the points per day late. */
+  readonly latePenaltyMax: number;
+  readonly latePerDay: number;
+  /** `time`: the most an early arrival earns, and the divisor on days early times boldness. */
+  readonly earlyBonusMax: number;
+  readonly earlyDivisor: number;
+  /** `time`: what a holding action costs, the deadline passing with nothing attempted. */
+  readonly holdingTime: number;
+  /** `haste`, `supply` and `coordination`: the base the man's trait is taken from (boldness or competence), and the divisor. */
+  readonly traitBase: number;
+  readonly hasteDivisor: number;
+  readonly supplyDivisor: number;
+  /** `supply`: what outrunning his stores costs, as a divisor of his supply care. */
+  readonly outrunDivisor: number;
+  /** `exposure`: the divisor on perceived men along the route, weighted. */
+  readonly exposureDivisor: number;
+  readonly coordinationDivisor: number;
+  /** `coordination`: the cost of each axis beyond the first. */
+  readonly perExtraAxis: number;
+  /** `glory`: his boldness over this divisor. */
+  readonly gloryDivisor: number;
+  /** `caution`: his timidity over this divisor, for a holding action. */
+  readonly cautionDivisor: number;
+}
+
+/**
+ * The planner's thresholds (0062; lane 0.9's `PlannerRules`, its fixes, and lane 0.8's drafting cap). DESIGN PARAMETERS
+ * the pack states, never kernel defaults (0072).
+ */
+export interface PlannerRules {
+  /** Share of a neighbouring region's perceived enemy that adds to a region's threat, permille (one hop). */
+  readonly hopShare: number;
+  /** Men of perceived enemy that weigh as one day's march in route cost, at risk weight 1000. */
+  readonly menPerDay: number;
+  /** A flank is kept only if it shares fewer than this many permille of the direct route's regions. */
+  readonly flankOverlapMax: number;
+  /** A flank may take at most this many permille of the direct route's days. */
+  readonly flankLengthMax: number;
+  /** Penalty, permille, on the direct route's edges when looking for a flank (2000 doubles them). */
+  readonly flankPenalty: number;
+  /** An alternative may pass regions at most this many permille days further from the objective than its start. */
+  readonly retrogradeSlack: number;
+  /** Candidates sharing at least this many permille of their regions, with the same shape, are duplicates. */
+  readonly dedupeOverlap: number;
+  /** ... and only if they arrive within this many permille days of each other. */
+  readonly dedupeArrival: number;
+  /** Moving candidates on the menu, plus a holding action. */
+  readonly topN: number;
+  /** Route searches allowed per request; the cap is counted and reported, never silent. */
+  readonly maxSearches: number;
+  /** Permille days to reduce works per permille of fortification. */
+  readonly reducePerLevel: number;
+  /** Permille days to clear works no installation holds (a boom) deliberately, and to force them in a night. */
+  readonly clearDays: number;
+  readonly forceDays: number;
+  /** Extra threat, as men, of forcing works or running past batteries. */
+  readonly forcingThreat: number;
+  /** Permille days an assault on a garrisoned region takes (lane 0.9 finding 9: on the route as at the objective). */
+  readonly assaultDays: number;
+  /** His demand for an assault on held ground, permille of his demand in the open (lane 0.9 finding 1: the assault margin). */
+  readonly assaultMargin: number;
+  /** A pincer's partner may arrive up to this many permille days before the main axis. */
+  readonly pincerWindow: number;
+  /**
+   * The shortfall, permille of the men he needs, past which he asks for men and waits for them (lane 0.9 finding 8):
+   * this for a man of boldness 0, scaled toward `shortfallBold` for a man of boldness 1000.
+   */
+  readonly shortfallTimid: number;
+  readonly shortfallBold: number;
+  /** `dependence`: what one support request to another holder costs. */
+  readonly dependenceCost: number;
+  /** A partner holder's willingness (lane 0.9 finding 7): permille of his regard counted, and points per value honoured or offended. */
+  readonly partnerRegardWeight: number;
+  readonly partnerValueWeight: number;
+  /** Values a cooperating axis honours, and offends, in the holder asked (pack vocabulary). */
+  readonly partnerHonours: readonly string[];
+  readonly partnerOffends: readonly string[];
+  /** Drafts a side's commanders make in one day; the rest wait for the next (0062; lane 0.8 measured the worst day). */
+  readonly dailyDraftCap: number;
+  readonly weights: PlannerWeights;
+}
+
+/**
+ * Goals and plans (0040, 0062; lane 1.2). DESIGN PARAMETERS the pack states. The compliance numbers are a STAND-IN
+ * until lane 1.1's people State gives each man his candour and standing and a principal his credibility.
+ */
+export interface PlansRules {
+  /** The goal terms an order carries when it names only a posture and an objective (a situation's option). */
+  readonly goalDefaults: {
+    readonly risk: number;
+    readonly deadlineDays: number;
+    readonly rail: boolean;
+    readonly river: boolean;
+    readonly sea: boolean;
+    readonly neutral: boolean;
+    readonly awaitWord: boolean;
+    readonly approveAsDrafted: boolean;
+  };
+  /** A holding action's riskiness, for reading an edit's boldness against his own best plan (lane 0.9 finding 2). */
+  readonly holdingRisk: number;
+  /** STAND-IN (lane 1.1): the compliance inputs the people State does not yet carry, permille. */
+  readonly complianceCandour: number;
+  readonly complianceStanding: number;
+  readonly complianceAvailable: number;
+  readonly complianceOversight: number;
+  readonly complianceCredibility: number;
 }
 
 /** Pack-tunable rules the map needs (0019: thresholds start from AGEoD's tested values). */
@@ -110,6 +241,8 @@ export interface WorldRules {
    */
   readonly reportTemplates: readonly ReportTemplate[];
   readonly standing: StandingRules;
+  readonly planner: PlannerRules;
+  readonly plans: PlansRules;
 }
 
 export interface TerrainTerm {

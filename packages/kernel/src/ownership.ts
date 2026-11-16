@@ -116,9 +116,10 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field("a person's ladder rung and rivals", 'ladder', ['weekly people step']),
   field('responses to orders (declared and actual rungs, reasons)', 'proxy', ['message arrival']),
   field('audience state', 'audience', ['the audience verb']),
-  // Lane 0.6 builds only the stand-in standing goals (hold, or advance to a region).
-  // A post that becomes a field post on a side during play (its government joins one, 0065) is given a hold goal (exit review S1).
-  field('goals, plans, approvals, edits', 'plans', ['verbs', 'seat selections', 'order arrival', 'a government joining a side'], [at('State', 'standingGoals')]),
+  // Lane 1.2: each post's goal and plan record (`plans/plans.ts`): its draft set, saved on the request day, the seat's
+  // pick, approval or send-back, and edits as counter-orders. `standingGoals` is the STAND-IN execution adapter an
+  // approved plan writes (`plans/execute.ts`), owned by lane 1.4 to retire; no order's content reaches it.
+  field('goals, plans, approvals, edits', 'plans', ['verbs', 'seat selections', 'order arrival', 'the planner (draft sets, on request)'], [at('State', 'planRecords'), at('State', 'standingGoals')]),
   field('operations and their lifecycles', 'operations', ['plan approval', 'movement and combat outcomes']),
   field('knowledge (reports per seat)', 'knowledge', ['message delivery', 'pruning'], [at('State', 'knowledgeBySeat'), at('State', 'reportTruth')]),
   field('messages in transit', 'messages', ['commands', 'reports', 'relay links forwarding an order', "the kernel's latency rules"], [at('State', 'messagesInTransit')]),
@@ -170,7 +171,24 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'TransitMessage',
   'Hop',
   'OrderBody',
-  // Plans (stand-in standing goals)
+  // Plans (lane 1.2): goals, edits, plan records and the draft sets saved in them, each replaced whole by `plans`
+  'PlanGoal',
+  'EditSpec',
+  'PlanRecord',
+  'PlanCounter',
+  'CounterDrop',
+  'PendingCounter',
+  'DraftSet',
+  'PlanCandidate',
+  'PlanAxis',
+  'PlanRoute',
+  'PlanLeg',
+  'PlanPhase',
+  'PlanRequest',
+  'PlanGate',
+  'PlanTerm',
+  'PlanRejected',
+  // Plans: the STAND-IN execution adapter (lane 1.4)
   'GoalSpec',
   'StandingGoal',
   // Reports and knowledge

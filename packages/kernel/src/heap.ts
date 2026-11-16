@@ -1,5 +1,7 @@
 /**
- * A binary min-heap with an explicit comparator, for the supply searches.
+ * A binary min-heap with an explicit comparator, shared by every graph search
+ * in the kernel: supply, movement's quickest routes and the planner's route
+ * search (FOUNDATION section 11, rule 11: export and reuse, never copy; 0062).
  * Order is total (every comparator ends with an id tie-break), so pops are
  * deterministic (decision 0002).
  */

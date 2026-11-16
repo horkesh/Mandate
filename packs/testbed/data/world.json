@@ -143,6 +143,8 @@
 "contest": {"contestPermille":200,"occupyFullMen":5000,"occupyPermille":100},
 "latency": {"courierNoiseMaxDays":1,"mailPermille":2000,"specialMessengerPermille":500,"specialMessengerPrice":1,"wireDays":0},
 "movement": {"courierPermille":333,"marchMinCapacityPermille":1000},
+"planner": {"assaultDays":1000,"assaultMargin":1500,"clearDays":4000,"dailyDraftCap":3,"dedupeArrival":1500,"dedupeOverlap":800,"dependenceCost":120,"flankLengthMax":1600,"flankOverlapMax":600,"flankPenalty":2000,"forceDays":1000,"forcingThreat":4000,"hopShare":250,"maxSearches":64,"menPerDay":1000,"partnerHonours":["duty"],"partnerOffends":["caution"],"partnerRegardWeight":300,"partnerValueWeight":100,"pincerWindow":2000,"reducePerLevel":10,"retrogradeSlack":0,"shortfallBold":50,"shortfallTimid":10,"topN":4,"weights":{"cautionDivisor":2,"concentrationPerTimid":250,"coordinationDivisor":10000,"earlyBonusMax":300,"earlyDivisor":25000,"exposureDivisor":20,"gloryDivisor":5,"goalFit":400,"hasteDivisor":10000,"holdingTime":-300,"latePenaltyMax":600,"latePerDay":40,"outrunDivisor":4,"pausePerTimid":400,"perExtraAxis":50,"ratioBonusDivisor":10,"ratioBonusMax":300,"ratioPenaltyMax":600,"riskBase":200,"supplyBase":1100,"supplyDivisor":10000,"threeAxesAt":800,"traitBase":1100,"twoAxesAt":500}},
+"plans": {"complianceAvailable":500,"complianceCandour":800,"complianceCredibility":500,"complianceOversight":500,"complianceStanding":500,"goalDefaults":{"approveAsDrafted":true,"awaitWord":false,"deadlineDays":20,"neutral":false,"rail":true,"risk":500,"river":false,"sea":false},"holdingRisk":-400},
 "reportTemplates": [
 {"cadenceDays":2,"keepSupersededDays":3,"maxAgeDays":30,"templateRoute":"wire","templateSubtype":null,"templateType":"wire-dispatch"},
 {"cadenceDays":10,"keepSupersededDays":10,"maxAgeDays":60,"templateRoute":"mail","templateSubtype":null,"templateType":"strength-return"},
@@ -169,7 +171,7 @@
 {"capacityPermille":800,"defaultMonths":[4,5],"lengthPermille":1200,"reason":"flood"},
 {"capacityPermille":300,"defaultMonths":[1,2],"lengthPermille":2000,"reason":"ice"}
 ],
-"standing": {"conflictWindowDays":7,"scoreCap":4000},
+"standing": {"conflictWindowDays":7},
 "stores": {"capDays":30,"lowDays":7,"menPerCapacityUnit":20000},
 "supplyControlPermille": 250
 },

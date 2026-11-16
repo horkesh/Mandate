@@ -63,8 +63,12 @@ const fires = (s: Phase0Summary, mechanic: string): number => s.liveness.find((r
 export function behaviourProblems(s: Phase0Summary): string[] {
   const problems: string[] = [];
   for (const m of ['movement.leg_started', 'movement.arrived']) if (fires(s, m) === 0) problems.push(`${s.pack}: no division moved (${m} is 0)`);
-  for (const m of ['combat.contest', 'combat.occupation', 'control.changed']) if (fires(s, m) === 0) problems.push(`${s.pack}: control never changed through the contest (${m} is 0)`);
-  for (const m of ['orders.obeyed', 'plans.goal_reached']) if (fires(s, m) === 0) problems.push(`${s.pack}: the rule seats' standing goals did nothing (${m} is 0)`);
+  // Ground changes hands through the simple contest: by a contest or an occupation, and control changes (lane 1.2: the
+  // Union run's occupations came only from Phase 0's principal leaving Washington empty; its garrison now holds, so
+  // Washington is taken by contest and no ground is occupied unopposed. Each run still needs a contest and a change).
+  if (fires(s, 'combat.contest') + fires(s, 'combat.occupation') === 0) problems.push(`${s.pack}: control never changed through the contest (combat.contest and combat.occupation are 0)`);
+  if (fires(s, 'control.changed') === 0) problems.push(`${s.pack}: control never changed through the contest (control.changed is 0)`);
+  for (const m of ['orders.obeyed', 'plans.goal_reached']) if (fires(s, m) === 0) problems.push(`${s.pack}: the rule seats' goals did nothing (${m} is 0)`);
   const last = s.checkpoints.at(-1);
   if (last === undefined) return [...problems, `${s.pack}: no checkpoint scores`];
   for (const f of last.scores.factions) {

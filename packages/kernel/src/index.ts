@@ -32,3 +32,5 @@ export * from './telemetry.ts';
 export * from './ownership.ts';
 // Phase 0 lane 0.6: seats, knowledge, messages in transit, the command log and replay.
 export * as phase0 from './phase0.ts';
+// Phase 1 lane 1.2: the planner (0062).
+export * as planner from './planner/index.ts';

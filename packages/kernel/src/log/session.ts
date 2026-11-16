@@ -65,7 +65,27 @@ export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
     const seat = request.requestSeat;
     if (c.cmd === 'decide') return { day, seat, command: { cmd: 'decide', situation: c.situation, options: [...c.options] } };
     if (c.cmd === 'delegate') return { day, seat, command: { cmd: 'delegate', situation: c.situation, to: c.to } };
-    return { day, seat, command: { cmd: 'order', to: c.to, goal: c.goal, region: c.region, route: c.route, bypass: c.bypass } };
+    if (c.cmd === 'go') return { day, seat, command: { cmd: 'go', to: c.to, route: c.route, bypass: c.bypass } };
+    if (c.cmd === 'review') {
+      const e = c.edit;
+      const edit = e === null ? null : { kind: e.kind, axis: e.axis, region: e.region, via: [...e.via], concentration: e.concentration };
+      return { day, seat, command: { cmd: 'review', to: c.to, action: c.action, edit, route: c.route, bypass: c.bypass } };
+    }
+    const g = c.goal;
+    const goal = {
+      objective: g.objective,
+      posture: g.posture,
+      risk: g.risk,
+      deadlineDays: g.deadlineDays,
+      rail: g.rail,
+      river: g.river,
+      sea: g.sea,
+      neutral: g.neutral,
+      committed: [...g.committed],
+      awaitWord: g.awaitWord,
+      approveAsDrafted: g.approveAsDrafted,
+    };
+    return { day, seat, command: { cmd: 'order', to: c.to, goal, route: c.route, bypass: c.bypass } };
   });
 }
 

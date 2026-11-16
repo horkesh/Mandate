@@ -1,0 +1,162 @@
+import { describe, expect, it } from 'vitest';
+import type { PostId } from '../src/ids.ts';
+import { knowledgeOf } from '../src/knowledge/knowledge.ts';
+import type { LogEntry } from '../src/log/log.ts';
+import type { Command, EditTerms, GoalTerms, OrderCommand, ReviewCommand } from '../src/log/commands.ts';
+import { playDays } from '../src/log/session.ts';
+import { setGoal } from '../src/plans/plans.ts';
+import type { State } from '../src/root-state.ts';
+import { pendingRequests } from '../src/seats/requests.ts';
+import { seatIdFor } from '../src/seats/seats.ts';
+import type { SeatsWorld } from '../src/seats/world.ts';
+import { createTelemetry, type Telemetry } from '../src/telemetry.ts';
+import { createState } from '../src/tick/setup.ts';
+import { tick, TICK_MECHANICS, type TickResult } from '../src/tick/tick.ts';
+import { MAP_MECHANICS } from '../src/tick/map.ts';
+import { goalOf } from '../src/tick/orders.ts';
+import { indexWorld } from '../src/world/index.ts';
+import { indexedFixture, P, POST, R } from './support/seats-fixture.ts';
+import { goalTerms, scriptedSeats } from './support/test-seats.ts';
+
+/**
+ * The plan cycle (lane 1.2; FOUNDATION sections 5 and 9): a goal arrives and is drafted on its day, within the daily
+ * cap; the commander's seat picks a candidate the next morning; the pick goes ahead, or goes to the issuer for review,
+ * who approves it, sends it back or edits its arrows; an edit is answered through compliance; an operation held for
+ * the principal's word goes on his "go". Until lane 1.4, an approved plan marches through the stand-in path.
+ */
+const lead = seatIdFor(P('a_lead'));
+const RESERVE: PostId = POST('a_reserve');
+const strong = () => indexedFixture({ posts: { a_reserve: { strength: 2000 } } });
+const take = (over: Partial<GoalTerms> = {}): OrderCommand => ({ cmd: 'order', to: RESERVE, goal: goalTerms('take', 'b_mid', over), route: 'special-messenger', bypass: true });
+const review = (action: 'approve' | 'send_back' | 'edit', edit: EditTerms | null = null): ReviewCommand => ({ cmd: 'review', to: RESERVE, action, edit, route: 'special-messenger', bypass: true });
+
+/** Play day by day; `script(day, state)` gives the principal's commands for each morning. */
+function play(world: SeatsWorld, days: number, script: (day: number, state: State) => readonly Command[], start?: State): { state: State; results: TickResult[]; telemetry: Telemetry } {
+  const telemetry = createTelemetry([...TICK_MECHANICS, ...MAP_MECHANICS]);
+  let state = start ?? createState(world, { seed: 7 });
+  const results: TickResult[] = [];
+  for (let d = state.stateDay + 1; results.length < days; d++) {
+    const entries: LogEntry[] = script(d, state).map((command) => ({ day: d, seat: lead, command }));
+    const r = tick(world, state, entries, { freeze: true, telemetry });
+    expect(r.rejections, `day ${d}`).toEqual([]);
+    results.push(r);
+    state = r.state;
+  }
+  return { state, results, telemetry };
+}
+const fired = (t: Telemetry, m: string) => t.mechanics[m]!.fires;
+/** The first day a condition on the day's State holds. */
+const firstDay = (results: readonly TickResult[], f: (s: State) => boolean) => results.find((r) => f(r.state))?.day ?? null;
+
+describe('a goal is drafted on request, and the commander picks (lane 1.2)', () => {
+  it('drafts on the day the goal arrives, saves the draft set, and his pick goes ahead as drafted the next morning', () => {
+    const { state, results, telemetry } = play(strong(), 8, (d) => (d === 1 ? [take()] : []));
+    const record = state.planRecords[RESERVE]!;
+    // The draft set is saved on the request day (a later call would see a changed map), with the goal's terms.
+    expect(record.planDraft!.draftDay).toBe(record.planSetDay);
+    expect(record.planDraft!.draftCandidates.length).toBeGreaterThanOrEqual(2);
+    expect(record.planGoal).toMatchObject({ goalObjective: R('b_mid'), goalPosture: 'take', goalApproveAsDrafted: true });
+    // His pick (unanswered here, so the best, by default) goes ahead the morning after: the stand-in path marches it.
+    const approved = firstDay(results, (s) => s.planRecords[RESERVE]?.planStatus === 'approved')!;
+    expect(approved).toBe(record.planSetDay + 1);
+    expect(record.planChosen).toBe(record.planDraft!.draftCandidates[0]!.id);
+    expect(results[approved - 1]!.state.standingGoals[RESERVE]).toMatchObject({ standingSpec: { goalSpecKind: 'advance', goalSpecRegion: R('b_mid') }, standingSetDay: approved, standingIssuer: 'a_lead' });
+    expect([fired(telemetry, 'plans.goal_set'), fired(telemetry, 'plans.drafted'), fired(telemetry, 'plans.chosen'), fired(telemetry, 'plans.went_ahead')]).toEqual([1, 1, 1, 1]);
+    expect(fired(telemetry, 'seats.defaulted')).toBe(1);
+  });
+
+  it('asks to review: his pick goes to the issuer by dispatch, who approves it; it waits for his word, then goes', () => {
+    const world = strong();
+    const telemetry = createTelemetry([...TICK_MECHANICS, ...MAP_MECHANICS]);
+    const days: TickResult[] = [];
+    const out = playDays(world, createState(world, { seed: 7 }), scriptedSeats({ a: { 1: [take({ approveAsDrafted: false, awaitWord: true })] } }), 20, { freeze: true, telemetry, onDay: (r) => days.push(r) });
+    expect(days.flatMap((r) => r.rejections)).toEqual([]);
+    const statuses = [...new Set(days.map((r) => r.state.planRecords[RESERVE]?.planStatus ?? 'none'))];
+    // It arrives the day it is sent and is drafted that day, so neither `none` nor `drafting` ends a day: chosen, reviewed, approved to wait for the word, released.
+    expect(statuses).toEqual(['choosing', 'review', 'ready', 'approved']);
+    // His dispatch names the plan he chose for the order it answers.
+    const submitted = out.state.planRecords[RESERVE]!.planSubmitted!;
+    expect(days.flatMap((r) => knowledgeOf(r.state, lead).knownReports).find((k) => k.id === submitted)!.knownBody.reportClaims[0]).toMatchObject({ claimKind: 'plan-submitted', claimRegion: R('b_mid') });
+    expect([fired(telemetry, 'plans.submitted'), fired(telemetry, 'plans.approved'), fired(telemetry, 'plans.released'), fired(telemetry, 'plans.went_ahead')]).toEqual([1, 1, 1, 0]);
+    expect(out.state.planRecords[RESERVE]!.planStatus).toBe('approved');
+  });
+
+  it('sends the plan back, and he drafts it again on the map as it is when he gets it', () => {
+    let sentBack = false;
+    const { state, telemetry } = play(strong(), 20, (d, s) => {
+      const menu = pendingRequests(strong(), s).find((r) => r.requestSeat === lead)!.menu;
+      const reviews = menu.menuKind === 'principal' ? menu.reviews : [];
+      if (d === 1) return [take({ approveAsDrafted: false })];
+      if (reviews.length === 0) return [];
+      if (!sentBack) {
+        sentBack = true;
+        return [review('send_back')];
+      }
+      return [review('approve')];
+    });
+    expect([fired(telemetry, 'plans.sent_back'), fired(telemetry, 'plans.drafted'), fired(telemetry, 'plans.submitted'), fired(telemetry, 'plans.approved')]).toEqual([1, 2, 2, 1]);
+    expect(state.planRecords[RESERVE]!.planStatus).toBe('approved');
+    expect(state.planRecords[RESERVE]!.planDraft!.draftDay).toBeGreaterThan(state.planRecords[RESERVE]!.planSetDay);
+  });
+
+  it('defers drafts past the day’s cap, oldest goal first (0062: the cap is a pack rule)', () => {
+    const base = strong();
+    const world: SeatsWorld = { ...base, map: indexWorld({ ...base.map.world, rules: { ...base.map.world.rules, planner: { ...base.map.world.rules.planner, dailyDraftCap: 1 } } }) };
+    let state = createState(world, { seed: 7 });
+    state = setGoal(state, POST('a_army'), { id: 'm.0.army' as never, issuer: P('a_lead'), goal: goalOf(goalTerms('take', 'b_front')), viaChain: true }, 0);
+    state = setGoal(state, RESERVE, { id: 'm.0.reserve' as never, issuer: P('a_lead'), goal: goalOf(goalTerms('take', 'b_mid')), viaChain: true }, 0);
+    const { results, telemetry } = play(world, 2, () => [], state);
+    // Day 1: one draft (by post id, both goals being as old), the other waits; day 2: the other.
+    expect(results[0]!.state.planRecords[POST('a_army')]!.planStatus).toBe('choosing');
+    expect(results[0]!.state.planRecords[RESERVE]!.planStatus).toBe('drafting');
+    expect(results[1]!.state.planRecords[RESERVE]!.planDraft!.draftDay).toBe(2);
+    expect([fired(telemetry, 'plans.drafted'), fired(telemetry, 'plans.draft_deferred')]).toEqual([2, 1]);
+  });
+});
+
+describe('arrow edits as counter-orders (0026), answered through compliance', () => {
+  /** The reserve's plan, approved and marching by the morning of the returned State's next day. */
+  const approved = (world: SeatsWorld) => play(world, 4, (d) => (d === 1 ? [take()] : []));
+
+  it('answers an edit through compliance: a counter-order with its distance, his declared answer, and the truth behind it', () => {
+    const world = strong();
+    const start = approved(world).state;
+    const timing: EditTerms = { kind: 'timing', axis: 'main', region: null, via: [], concentration: 0 };
+    const { state, results, telemetry } = play(world, 8, (d) => (d === start.stateDay + 1 ? [review('edit', timing)] : []), start);
+    const counter = state.planRecords[RESERVE]!.planCounters[0]!;
+    expect(counter).toMatchObject({ counterSpec: { editKind: 'timing', editAxis: 'main', editConcentration: 0 }, counterInvalid: null });
+    expect(counter.counterDistance).toBeGreaterThanOrEqual(0);
+    const answer = results.flatMap((r) => knowledgeOf(r.state, lead).knownReports).find((k) => k.id === counter.counterAnswer)!;
+    expect(answer.knownBody.reportClaims[0]!.claimKind).toBe('plan-answer');
+    // What he declares is a rung; why (his willingness, the rung he takes) is truth, never shown to the principal.
+    expect(['exceed', 'comply', 'comply_with_reservations', 'slow_walk', 'reinterpret', 'object', 'refuse']).toContain(answer.knownBody.reportClaims[0]!.claimToken);
+    // (The filter post the wire passes adds its own hold to the truth after his.)
+    expect(state.reportTruth[answer.id]!.truthTerms.map((t) => t.termKind).slice(0, 2)).toEqual(['edit_distance', 'compliance']);
+    expect([fired(telemetry, 'plans.edit_received'), fired(telemetry, 'plans.edit_answered')]).toEqual([1, 1]);
+  });
+
+  it('refuses an edit no route can make: a validation failure with its reason, not a compliance outcome', () => {
+    const world = strong();
+    const start = approved(world).state;
+    const remove: EditTerms = { kind: 'remove_axis', axis: 'main', region: null, via: [], concentration: null };
+    const { state, telemetry } = play(world, 6, (d) => (d === start.stateDay + 1 ? [review('edit', remove)] : []), start);
+    expect(state.planRecords[RESERVE]!.planCounters[0]).toMatchObject({ counterInvalid: 'a plan needs one axis', counterDistance: 0 });
+    expect([fired(telemetry, 'plans.edit_invalid'), fired(telemetry, 'plans.edit_answered')]).toEqual([1, 0]);
+    // The plan he executes is unchanged.
+    expect(state.planRecords[RESERVE]!.planApproved!.id).toBe(start.planRecords[RESERVE]!.planApproved!.id);
+  });
+
+  it('refuses a review or a "go" for a plan not waiting for one, an edit outside the grammar, and a goal committing another post’s block', () => {
+    const world = strong();
+    const start = approved(world).state;
+    const day = start.stateDay + 1;
+    const r = tick(world, start, [
+      { day, seat: lead, command: review('approve') },
+      { day, seat: lead, command: { cmd: 'go', to: RESERVE, route: 'wire', bypass: false } },
+      { day, seat: lead, command: { cmd: 'review', to: POST('a_army'), action: 'approve', edit: null, route: 'wire', bypass: false } },
+      { day, seat: lead, command: review('edit', { kind: 'add_axis', axis: 'main', region: R('b_front'), via: [], concentration: null }) },
+      { day, seat: lead, command: { cmd: 'order', to: RESERVE, goal: goalTerms('take', 'b_mid', { committed: ['a_army_1' as never] }), route: 'wire', bypass: false } },
+    ]);
+    expect(r.rejections.map((x) => x.reason)).toEqual(['no_plan', 'no_plan', 'no_plan', 'bad_review', 'bad_goal']);
+  });
+});

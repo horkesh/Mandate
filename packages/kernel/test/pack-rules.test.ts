@@ -136,10 +136,23 @@ describe('the kernel checks the standing rules of any World it is handed (0072; 
     const map = mapWith();
     return indexWorld({ ...map.world, rules: { ...map.world.rules, standing } });
   };
-  it('refuses a conflict window under a day and a score cap under exactly enough; the pack\'s values index', () => {
-    expect(() => indexSeatsWorld(withStanding({ conflictWindowDays: 0, scoreCap: 4000 }), forcesStart(CONTROL, [], []))).toThrow('standing rule conflictWindowDays must be a whole number of days, at least 1');
-    expect(() => indexSeatsWorld(withStanding({ conflictWindowDays: 7, scoreCap: 999 }), forcesStart(CONTROL, [], []))).toThrow('standing rule scoreCap must be a whole permille, at least 1000');
-    expect(() => indexSeatsWorld(withStanding({ conflictWindowDays: 1, scoreCap: 1000 }), forcesStart(CONTROL, [], []))).not.toThrow();
+  it('refuses a conflict window under a day; the pack\'s values index', () => {
+    expect(() => indexSeatsWorld(withStanding({ conflictWindowDays: 0 }), forcesStart(CONTROL, [], []))).toThrow('standing rule conflictWindowDays must be a whole number of days, at least 1');
+    expect(() => indexSeatsWorld(withStanding({ conflictWindowDays: 1 }), forcesStart(CONTROL, [], []))).not.toThrow();
+  });
+});
+
+describe('the kernel checks the planner and plans rules of any World it is handed (lane 1.2; 0072: no hidden default)', () => {
+  const withPlanner = (over: Partial<WorldRules['planner']>, plans: Partial<WorldRules['plans']> = {}) => {
+    const map = mapWith();
+    return indexWorld({ ...map.world, rules: { ...map.world.rules, planner: { ...map.world.rules.planner, ...over }, plans: { ...map.world.rules.plans, ...plans } } });
+  };
+  it('refuses a drafting cap under one draft a day, a zero divisor and an out-of-range permille; the pack\'s values index', () => {
+    expect(() => indexSeatsWorld(withPlanner({ dailyDraftCap: 0 }), forcesStart(CONTROL, [], []))).toThrow('planner rule dailyDraftCap must be a whole number, at least 1');
+    const map = mapWith();
+    expect(() => indexSeatsWorld(withPlanner({ weights: { ...map.world.rules.planner.weights, exposureDivisor: 0 } }), forcesStart(CONTROL, [], []))).toThrow('planner rule weights.exposureDivisor must be a whole number, at least 1');
+    expect(() => indexSeatsWorld(withPlanner({}, { complianceCandour: 1001 }), forcesStart(CONTROL, [], []))).toThrow('plans rule complianceCandour must be a permille');
+    expect(() => indexSeatsWorld(withPlanner({}), forcesStart(CONTROL, [], []))).not.toThrow();
   });
 });
 

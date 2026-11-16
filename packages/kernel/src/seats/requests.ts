@@ -1,37 +1,27 @@
 /**
  * Which seats must answer, and the kernel's menu for each (Derived).
  *
- * A standing-goal menu offers only options the kernel judges consistent with
- * the commander's state (FOUNDATION section 8): he will not be offered an
- * advance into an enemy he believes too strong for his demand. When exactly
- * one option is consistent there is nothing to choose: no request is made and
- * the tick applies it. A principal is asked every day for orders.
- *
- * The steps offered are the first legs of every quickest route from his
- * headquarters toward his goal, over the typed edges his marching group may use
- * (lane 0.5, `movement/march.ts`). A group on a leg decides nothing until it
- * arrives.
- *
- * STAND-IN: the consistency judgement (force ratio against demand) stands in
- * for lane 0.9's planner candidates and plan selection.
+ * A commander whose goal has been drafted picks one of the planner's candidates (lane 1.2; FOUNDATION section 8: a
+ * choice among options the kernel has already judged), the morning after the draft set was saved. When there is only
+ * one candidate there is nothing to choose: no request is made and the tick applies it. A principal is asked every day
+ * for orders, and is shown the plans submitted to him that have reached him.
  */
 import { strictCompare } from '../compare.ts';
 import { commandedBlocks, heldPost } from '../command/command.ts';
 import { buildControlIndex } from '../control-index/control-index.ts';
 import { isNaval } from '../forces/forces.ts';
-import type { FactionId, ForceBlockId, PostId, RegionId } from '../ids.ts';
-import { latestEnemyClaims, perceived } from '../knowledge/beliefs.ts';
-import { knowledgeOf } from '../knowledge/knowledge.ts';
+import type { FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
 import { ORDER_ROUTES, routeLatency, type LatencyMap } from '../messages/latency.ts';
-import { marchSteps, type MarchGround } from '../movement/march.ts';
+import type { MarchGround } from '../movement/march.ts';
+import { candidateOf, postsInStatus } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import type { SituationDef } from '../situations/types.ts';
-import { demandRatio, perceptionBias } from '../standin/traits.ts';
 import { deepFreeze } from '../tick/freeze.ts';
 import { passageOf } from '../tick/passage.ts';
+import { choosingPosts, optionView, planKey, planOptions } from '../tick/plans.ts';
 import { createViewCache, viewFor, type ViewCache } from '../view/view.ts';
 import { dateOfDay } from '../world/calendar.ts';
-import type { CommandablePost, DelegatedMenu, OptionView, PrincipalMenu, RouteOption, SeatRequest, SituationChoice, StandingMenu } from './api.ts';
+import type { CommandablePost, DelegatedMenu, PlanMenu, PlanReview, PrincipalMenu, RouteOption, SeatRequest, SituationChoice } from './api.ts';
 import { fieldPosts, headquartersOf, postFaction, relayChain } from './posts.ts';
 import { seatIdFor } from './seats.ts';
 import { latencyMapFor, type SeatsWorld } from './world.ts';
@@ -68,44 +58,28 @@ export function marchingGroup(world: SeatsWorld, state: State, post: PostId): { 
 }
 
 /**
- * The options for a field post's standing goal today, or null when it has
- * nothing to decide (holding, on a leg, already there, or no way there).
+ * The plans submitted to a principal that wait for his review: his commanders' dispatches that have reached him, for
+ * plans still under review, in post order (FOUNDATION section 5: approve, send back, or edit the arrows).
  */
-export function standingOptions(world: SeatsWorld, state: State, post: PostId, ground: MorningGround): readonly OptionView[] | null {
-  const goal = state.standingGoals[post];
-  const holder = state.postStates[post]?.postHolder ?? null;
-  if (goal === undefined || holder === null || goal.standingSpec.goalSpecKind !== 'advance') return null;
-  const target = goal.standingSpec.goalSpecRegion;
-  const side = postFaction(world, state, post);
-  if (target === null || side === null) return null;
-  const group = marchingGroup(world, state, post);
-  if (group.marching || group.blocks.length === 0 || group.from === target) return null;
-  let men = 0;
-  for (const b of group.blocks) men += state.forceBlockStates[b]!.fbStrength ?? 0;
-  const person = world.person(holder);
-  const claims = latestEnemyClaims(knowledgeOf(state, seatIdFor(person.id)));
-  const bias = perceptionBias(world.rules.traits, person).permille;
-  const demand = demandRatio(world.rules.traits, person);
-  // A score cap so an empty region does not dwarf every other term: the pack's (`WorldRules.standing.scoreCap`).
-  const cap = world.map.world.rules.standing.scoreCap;
-  const advances: OptionView[] = [];
-  const seen = new Set<RegionId>();
-  for (const step of marchSteps(ground.march, group.from, target, side, group.naval)) {
-    const region = step.leg.to;
-    if (seen.has(region)) continue;
-    seen.add(region);
-    const claim = claims.get(region);
-    const enemy = claim === undefined ? 0 : perceived(claim.value, bias);
-    // His margin over what he demands, permille: 1000 means exactly enough.
-    const margin = enemy === 0 ? cap : Math.min(cap, Math.trunc((men * 1_000_000) / (enemy * demand)));
-    if (margin >= 1000) advances.push({ optionId: `advance:${region}`, kind: 'advance', region, score: margin, perceivedEnemy: enemy, ownStrength: men });
+export function reviewsFor(state: State, principal: PersonId): PlanReview[] {
+  // His commander's dispatch has reached him once it is no longer on its way (his knowledge may since have pruned it,
+  // superseded by a later answer to the same order; the plan still waits for him).
+  const travelling = new Set(state.messagesInTransit.map((m) => m.msgOrigin));
+  const out: PlanReview[] = [];
+  for (const post of postsInStatus(state, 'review')) {
+    const r = state.planRecords[post]!;
+    const holder = state.postStates[post]?.postHolder ?? null;
+    if (r.planIssuer !== principal || r.planSubmitted === null || travelling.has(r.planSubmitted) || holder === null || r.planChosen === null) continue;
+    // He knows what he has already sent: a plan he has answered, the answer still on its way, is not before him again.
+    if (answerInTransit(state, principal, post, ['approve', 'edit', 'send_back'])) continue;
+    out.push({ post, holder, report: r.planSubmitted, plan: optionView(candidateOf(r, r.planChosen)!) });
   }
-  const holdScore = Math.trunc((1000 + world.rules.traits.holdBand) / 2);
-  const hold: OptionView = { optionId: 'hold', kind: 'hold', region: null, score: holdScore, perceivedEnemy: 0, ownStrength: men };
-  if (advances.length === 0) return [hold];
-  // Within the hold band, holding is as consistent with him as moving: the seat chooses.
-  if (advances.every((a) => a.score < world.rules.traits.holdBand)) return [...advances, hold];
-  return advances;
+  return out;
+}
+
+/** Whether an order of these kinds from `principal` to `post` is still on its way (his own orders, which he knows he sent). */
+function answerInTransit(state: State, principal: PersonId, post: PostId, kinds: readonly string[]): boolean {
+  return state.messagesInTransit.some((m) => m.msgOrder !== null && m.msgOrder.orderIssuer === principal && m.msgOrder.orderTarget === post && kinds.includes(m.msgOrder.orderKind));
 }
 
 /**
@@ -142,7 +116,19 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     if (def.faction !== faction || r === undefined || r.sitStatus !== 'open' || r.sitSurfacedDay === null || r.sitDelegate !== null) continue;
     situations.push(situationChoice(def, r.sitOpenOptions, def.delegableTo, null));
   }
-  return { menuKind: 'principal', faction, objective: f.objective, atWarSince: warSince(world, state, faction), commandable, situations };
+  const awaiting = postsInStatus(state, 'ready').filter((p) => state.planRecords[p]!.planIssuer === f.principal && !answerInTransit(state, f.principal, p, ['go']));
+  const d = world.map.world.rules.plans.goalDefaults;
+  return {
+    menuKind: 'principal',
+    faction,
+    objective: f.objective,
+    atWarSince: warSince(world, state, faction),
+    commandable,
+    situations,
+    reviews: reviewsFor(state, f.principal),
+    awaiting,
+    goalDefaults: { risk: d.risk, deadlineDays: d.deadlineDays, rail: d.rail, river: d.river, sea: d.sea, neutral: d.neutral, awaitWord: d.awaitWord, approveAsDrafted: d.approveAsDrafted },
+  };
 }
 
 /**
@@ -184,20 +170,16 @@ export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCach
     const menu: DelegatedMenu = { menuKind: 'delegated-situation', choice: situationChoice(def, r.sitOpenOptions, [], world.person(r.sitDelegate).values) };
     out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `delegated:${def.id}:${day}`, view: viewFor(world, state, seat, cache), menu }));
   }
-  for (const post of fieldPosts(world, state)) {
-    const options = standingOptions(world, state, post, ground);
+  for (const post of choosingPosts(state, day)) {
+    const options = planOptions(state, post, day);
     if (options === null || options.length < 2) continue;
     const holder = state.postStates[post]!.postHolder!;
     const seat = seatIdFor(holder);
     const view = viewFor(world, state, seat, cache);
-    const menu: StandingMenu = { menuKind: 'standing-goal', post, goal: view.goal!, options };
-    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: standingKey(post, day), view, menu }));
+    const menu: PlanMenu = { menuKind: 'plan-selection', post, goal: view.goal!, options };
+    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: planKey(post, day), view, menu }));
   }
   return out.sort((a, b) => (a.requestSeat < b.requestSeat ? -1 : a.requestSeat > b.requestSeat ? 1 : a.requestKey < b.requestKey ? -1 : 1));
-}
-
-export function standingKey(post: PostId, day: number): string {
-  return `standing:${post}:${day}`;
 }
 
 /** The post a seat's person holds, if any (a request's holder). */

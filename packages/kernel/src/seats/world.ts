@@ -26,7 +26,7 @@ import { wireOwnerOf, type ControlIndex } from '../control-index/control-index.t
 import type { FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import { templateProblems, type ReportTemplate } from '../knowledge/templates.ts';
 import { latencyProblems, type LatencyMap, type LatencyRules } from '../messages/latency.ts';
-import type { StandingRules } from '../world/world.ts';
+import type { PlannerRules, PlansRules, StandingRules } from '../world/world.ts';
 import { situationReferenceProblems } from '../situations/references.ts';
 import type { SituationDef } from '../situations/types.ts';
 import { DEFAULT_TRAIT_RULES, type TraitHolder, type TraitRules } from '../standin/traits.ts';
@@ -53,6 +53,11 @@ export interface SeatPerson extends TraitHolder {
   readonly faction: FactionId | null;
   /** Multiplier, permille, on enemy strength in the estimates he writes as an intelligence source (1000: none). */
   readonly intelligenceBias: number;
+  /**
+   * Competence, permille: how many axes he can run and how well he coordinates them (the planner, 0062). STAND-IN
+   * (0058, lane 1.1 re-points it): from the cited `competence` centre by the same table as boldness.
+   */
+  readonly competence: number;
 }
 
 /** Explicit trait inputs for a person, in place of the stand-in adapter. */
@@ -61,6 +66,7 @@ export interface TraitInputs {
   readonly regard?: number;
   readonly values?: readonly string[];
   readonly intelligenceBias?: number;
+  readonly competence?: number;
 }
 
 export interface SeatFaction {
@@ -123,12 +129,13 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
   const pack = map.world.rules;
   const rules: SeatsRules = Object.freeze({ latency: pack.latency, templates: pack.reportTemplates, traits: options.traitRules ?? DEFAULT_TRAIT_RULES });
   // The kernel takes any World it is handed (a fixture, an adapter), so it checks the pack's rules as the validator does.
-  const problems: string[] = [...templateProblems(rules.templates), ...latencyProblems(rules.latency), ...standingProblems(pack.standing)];
+  const problems: string[] = [...templateProblems(rules.templates), ...latencyProblems(rules.latency), ...standingProblems(pack.standing), ...plannerRuleProblems(pack.planner, pack.plans)];
 
   const people = new Map<PersonId, SeatPerson>();
   for (const p of map.world.people) {
     const t = options.traits?.[p.id] ?? {};
     const nerve = p.centres.nerve.direction;
+    const competence = p.centres.competence.direction;
     people.set(p.id, {
       id: p.id,
       faction: p.faction,
@@ -136,6 +143,7 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
       regard: t.regard ?? 0,
       values: [...(t.values ?? [])],
       intelligenceBias: t.intelligenceBias ?? 1000,
+      competence: t.competence ?? (competence === null ? UNKNOWN_NERVE_BOLDNESS : NERVE_BOLDNESS[competence]),
     });
   }
   for (const id of Object.keys(options.traits ?? {})) if (!people.has(id as PersonId)) problems.push(`traits given for ${id}, who is not a person in the World`);
@@ -210,11 +218,36 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
   });
 }
 
-/** Problems with the stand-in standing goals' rules (0072): a conflict window of at least a day, a score cap above 1000 (exactly enough). */
+/** Problems with the conflicting-orders rule (0072): a conflict window of at least a day. */
 export function standingProblems(rules: StandingRules): string[] {
   const problems: string[] = [];
   if (!Number.isSafeInteger(rules.conflictWindowDays) || rules.conflictWindowDays < 1) problems.push('standing rule conflictWindowDays must be a whole number of days, at least 1');
-  if (!Number.isSafeInteger(rules.scoreCap) || rules.scoreCap < 1000) problems.push('standing rule scoreCap must be a whole permille, at least 1000, or no advance could be offered');
+  return problems;
+}
+
+/**
+ * Problems with the planner's and plans' rules (lane 1.2), as the validator checks them: whole numbers, divisors of
+ * at least 1 (a weight of 0 would divide by zero), permilles in range, and at least one draft a day.
+ */
+export function plannerRuleProblems(planner: PlannerRules, plans: PlansRules): string[] {
+  const problems: string[] = [];
+  const whole = (name: string, v: number, min: number) => {
+    if (!Number.isSafeInteger(v) || v < min) problems.push(`planner rule ${name} must be a whole number, at least ${min}`);
+  };
+  for (const k of ['hopShare', 'menPerDay', 'flankOverlapMax', 'flankLengthMax', 'flankPenalty', 'dedupeOverlap', 'topN', 'maxSearches', 'assaultMargin', 'dailyDraftCap'] as const) whole(k, planner[k], 1);
+  for (const k of ['retrogradeSlack', 'dedupeArrival', 'reducePerLevel', 'clearDays', 'forceDays', 'forcingThreat', 'assaultDays', 'pincerWindow', 'shortfallTimid', 'shortfallBold', 'dependenceCost', 'partnerRegardWeight', 'partnerValueWeight'] as const) whole(k, planner[k], 0);
+  const w = planner.weights;
+  for (const k of ['concentrationPerTimid', 'pausePerTimid', 'ratioBonusDivisor', 'earlyDivisor', 'hasteDivisor', 'supplyDivisor', 'outrunDivisor', 'exposureDivisor', 'coordinationDivisor', 'gloryDivisor', 'cautionDivisor'] as const) whole(`weights.${k}`, w[k], 1);
+  for (const k of ['ratioPenaltyMax'] as const) whole(`weights.${k}`, w[k], 1);
+  for (const k of ['riskBase', 'supplyBase', 'twoAxesAt', 'threeAxesAt', 'goalFit', 'ratioBonusMax', 'latePenaltyMax', 'latePerDay', 'earlyBonusMax', 'traitBase', 'perExtraAxis'] as const) whole(`weights.${k}`, w[k], 0);
+  if (!Number.isSafeInteger(w.holdingTime)) problems.push('planner rule weights.holdingTime must be a whole number');
+  const d = plans.goalDefaults;
+  if (!Number.isSafeInteger(d.risk) || d.risk < 0 || d.risk > 1000) problems.push('plans rule goalDefaults.risk must be a permille');
+  if (!Number.isSafeInteger(d.deadlineDays) || d.deadlineDays < 1) problems.push('plans rule goalDefaults.deadlineDays must be a whole number of days, at least 1');
+  if (!Number.isSafeInteger(plans.holdingRisk)) problems.push('plans rule holdingRisk must be a whole number');
+  for (const k of ['complianceCandour', 'complianceStanding', 'complianceAvailable', 'complianceOversight', 'complianceCredibility'] as const) {
+    if (!Number.isSafeInteger(plans[k]) || plans[k] < 0 || plans[k] > 1000) problems.push(`plans rule ${k} must be a permille`);
+  }
   return problems;
 }
 

@@ -1,13 +1,33 @@
 import { readFileSync } from 'node:fs';
 import { ids, phase0, world as w } from '@mandate/kernel';
-import type { OptionView, PrincipalMenu, ReportView, SeatRequest, SeatView, StandingMenu } from '@mandate/kernel/seat-api';
+import type { GoalTerms, OptionView, PlanMenu, PrincipalMenu, ReportView, SeatRequest, SeatView } from '@mandate/kernel/seat-api';
 import { describe, expect, it } from 'vitest';
-import { chooseDelegated, chooseStep, createRuleSeat, principalOrders } from '../src/index.ts';
+import { chooseDelegated, choosePlan, createRuleSeat, principalOrders } from '../src/index.ts';
 
 const post = (s: string) => ids.toId('post', s);
 const region = (s: string) => ids.toId('region', s);
-const option = (id: string, score: number): OptionView => ({ optionId: id, kind: id === 'hold' ? 'hold' : 'advance', region: id === 'hold' ? null : region(id.slice(8)), score, perceivedEnemy: 0, ownStrength: 1 });
-const standing = (options: OptionView[]): StandingMenu => ({ menuKind: 'standing-goal', post: post('p1'), goal: { kind: 'advance', region: region('r9'), issuer: null, viaChain: true, setDay: 1 }, options });
+const option = (id: string, score: number): OptionView => ({ optionId: id, method: id.split(':')[0]!, variant: 'v', score, terms: [], axes: [], requests: [], conditions: [], perceivedEnemy: 0, ratio: 10000 });
+const plans = (options: OptionView[]): PlanMenu => ({
+  menuKind: 'plan-selection',
+  post: post('p1'),
+  goal: {
+    posture: 'take',
+    objective: region('r9'),
+    risk: 500,
+    deadlineDays: 20,
+    permissions: { rail: true, river: false, sea: false, neutral: false },
+    committed: [],
+    awaitWord: false,
+    approveAsDrafted: true,
+    issuer: ids.toId('person', 'lead'),
+    viaChain: true,
+    setDay: 1,
+    status: 'choosing',
+  },
+  options,
+});
+const DEFAULTS = { risk: 500, deadlineDays: 20, rail: true, river: false, sea: false, neutral: false, awaitWord: false, approveAsDrafted: true };
+const take = (objective: string): GoalTerms => ({ ...DEFAULTS, objective: region(objective), posture: 'take', committed: [], neutral: true });
 const menu: PrincipalMenu = {
   menuKind: 'principal',
   situations: [],
@@ -18,6 +38,9 @@ const menu: PrincipalMenu = {
     { post: post('far'), holder: ids.toId('person', 'x'), relays: [post('office')], routes: [{ route: 'courier', typicalDays: 6, price: 0 }, { route: 'special-messenger', typicalDays: 3, price: 1 }] },
     { post: post('near'), holder: ids.toId('person', 'y'), relays: [post('office')], routes: [{ route: 'courier', typicalDays: 2, price: 0 }, { route: 'wire', typicalDays: 0, price: 0 }] },
   ],
+  reviews: [],
+  awaiting: [],
+  goalDefaults: DEFAULTS,
 };
 const memo = (receivedDay: number, about: string): ReportView => ({
   id: ids.toId('message', `m.${receivedDay}.memo`),
@@ -37,12 +60,11 @@ const memo = (receivedDay: number, about: string): ReportView => ({
   via: [],
 });
 
-describe('a commander with a standing goal', () => {
-  it('takes the option the kernel scored highest, ties to the lower id', () => {
-    expect(chooseStep(standing([option('hold', 1250), option('advance:r2', 1400)])).optionId).toBe('advance:r2');
-    expect(chooseStep(standing([option('hold', 1250), option('advance:r2', 1250)])).optionId).toBe('advance:r2');
-    expect(chooseStep(standing([option('advance:r3', 2000), option('advance:r2', 2000)])).optionId).toBe('advance:r2');
-    expect(() => chooseStep(standing([]))).toThrow('offers no option');
+describe('a commander choosing among the planner’s candidates (lane 1.2)', () => {
+  it('takes the candidate his scorer ranked highest, ties to the lower id', () => {
+    expect(choosePlan(plans([option('holding:hold', 100), option('direct:x', 400)])).optionId).toBe('direct:x');
+    expect(choosePlan(plans([option('pincer:x', 250), option('direct:x', 250)])).optionId).toBe('direct:x');
+    expect(() => choosePlan(plans([]))).toThrow('offers no candidate');
   });
 });
 
@@ -59,18 +81,27 @@ describe('a holder handed a situation (lane 0.7)', () => {
 });
 
 describe('a principal', () => {
-  it('opens with the army reached soonest, by the quickest free route', () => {
-    expect(principalOrders(menu, [], 1)).toEqual([{ cmd: 'order', to: post('near'), goal: 'advance', region: region('r9'), route: 'wire', bypass: false }]);
+  it('opens with the army reached soonest, by the quickest free route, with a goal to take the objective on the pack’s terms', () => {
+    expect(principalOrders(menu, [], 1)).toEqual([{ cmd: 'order', to: post('near'), goal: take('r9'), route: 'wire', bypass: false }]);
     expect(principalOrders(menu, [], 2)).toEqual([]);
   });
 
   it('goes around an office that objected yesterday, by special messenger, once', () => {
-    expect(principalOrders(menu, [memo(4, 'far')], 5)).toEqual([{ cmd: 'order', to: post('far'), goal: 'advance', region: region('r5'), route: 'special-messenger', bypass: true }]);
+    expect(principalOrders(menu, [memo(4, 'far')], 5)).toEqual([{ cmd: 'order', to: post('far'), goal: take('r5'), route: 'special-messenger', bypass: true }]);
     expect(principalOrders(menu, [memo(4, 'far')], 6)).toEqual([]);
-    expect(principalOrders(menu, [memo(4, 'far')], 5, { openingDay: 1, goAroundObjections: false })).toEqual([]);
+    expect(principalOrders(menu, [memo(4, 'far')], 5, { openingDay: 1, goAroundObjections: false, crossNeutral: true })).toEqual([]);
   });
 
-  it('keeps the peace until his side is at war: no order at peace, the opening advance the day it is war (0064)', () => {
+  it('approves every plan before him as drafted, and gives the word to every operation awaiting it, even at peace', () => {
+    const review = { post: post('far'), holder: ids.toId('person', 'x'), report: 'm.3.plan', plan: option('direct:x', 400) };
+    const before = { ...menu, atWarSince: null, reviews: [review], awaiting: [post('near')] };
+    expect(principalOrders(before, [], 9)).toEqual([
+      { cmd: 'review', to: post('far'), action: 'approve', edit: null, route: 'courier', bypass: false },
+      { cmd: 'go', to: post('near'), route: 'wire', bypass: false },
+    ]);
+  });
+
+  it('keeps the peace until his side is at war: no goal at peace, the opening goal the day it is war (0064)', () => {
     expect(principalOrders({ ...menu, atWarSince: null }, [], 1)).toEqual([]);
     expect(principalOrders({ ...menu, atWarSince: null }, [memo(0, 'far')], 1)).toEqual([]);
     expect(principalOrders({ ...menu, atWarSince: 0 }, [], 1)).toHaveLength(1);
@@ -100,14 +131,18 @@ describe('rule seats run a whole side (the testbed, every seat on the rules mode
   const world = phase0.indexSeatsWorld(w.indexWorld(read('world.json') as w.World), start);
   const seat = createRuleSeat();
 
-  it('orders each side’s opening advance, and every command it sends is accepted', () => {
+  it('orders each side’s opening goal, every command it sends is accepted, and each goal is planned and approved', () => {
     const rejected: unknown[] = [];
     const { state, log } = phase0.playDays(world, phase0.createState(world, { seed: start.seed }), () => seat, 60, { freeze: true, onDay: (r) => rejected.push(...r.rejections) });
     expect(rejected).toEqual([]);
     const opening = log.filter((e) => e.day === 1 && e.command.cmd === 'order');
     expect(opening.map((e) => e.seat).sort()).toEqual(['seat:n_leader', 'seat:s_leader']);
-    // Each side's chosen army now works to the objective, or has reached it.
-    const advancing = Object.values(state.standingGoals).filter((g) => g.standingIssuer !== null);
-    expect(advancing.length).toBe(2);
+    // Each side's chosen army has a plan drafted by the kernel's planner, chosen by its commander's seat and approved.
+    const records = Object.values(state.planRecords);
+    expect(records.length).toBe(2);
+    for (const r of records) {
+      expect(r.planStatus).toBe('approved');
+      expect(r.planDraft!.draftCandidates.length).toBeGreaterThan(0);
+    }
   });
 });

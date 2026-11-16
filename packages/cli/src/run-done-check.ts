@@ -7,8 +7,8 @@
  * hash every day, a replay, a mid-run save resumed, a repeat run and a timed run, then judges the six
  * criteria (`done-check.ts`). Each checked run's summary goes to its own folder under `runs/<label>/`, so CI
  * can compare Linux and Windows hashes with `tools/compare-runs.ts`. Also reports what a day of plan drafting
- * costs on the Union graph (the spike's `draft`, 27 commands), which is information for 0062's daily cap and
- * not a criterion. Exits 1 if any criterion has a problem.
+ * costs on the Union graph (the kernel planner's `draft` since lane 1.2, every held command with a block), which is
+ * information for 0062's daily cap (a pack rule, `planner.dailyDraftCap`) and not a criterion. Exits 1 if any criterion has a problem.
  */
 import { runDoneCheck } from './done-check.ts';
 import { measureDrafting } from './drafting-measure.ts';
@@ -44,8 +44,8 @@ if (!argv.includes('--no-drafting')) {
   const d = measureDrafting('union-1861');
   lines.push(
     '',
-    `plan drafting on the Union graph (${d.posts} commands, ${d.posts - d.noLandForce} with a land force; the spike's draft, each asked to take the other side's capital):`,
-    `  one day of all ${d.posts} drafts back to back: median ${d.day.median.toFixed(1)} ms, p95 ${d.day.p95.toFixed(1)} ms, worst ${d.day.worst.toFixed(1)} ms over ${d.day.days} days; slowest single draft ${d.slowestDraftMs.toFixed(1)} ms${d.sound ? '' : '; UNSOUND (a land command got no candidate, or a score is not the sum of its terms)'}`,
+    `plan drafting on the Union graph (${d.posts} commands, ${d.posts - d.noLandForce} with a land force; the kernel planner's draft, each asked to take the other side's capital, neutral ground permitted):`,
+    `  one day of all ${d.posts} drafts back to back: median ${d.day.median.toFixed(1)} ms, p95 ${d.day.p95.toFixed(1)} ms, worst ${d.day.worst.toFixed(1)} ms over ${d.day.days} days; slowest single draft ${d.slowestDraftMs.toFixed(1)} ms; a capped day (the pack's ${d.cappedDay.cap} slowest drafts together) at worst ${d.cappedDay.worst.toFixed(1)} ms${d.sound ? '' : '; UNSOUND (a land command got no candidate, or a score is not the sum of its terms)'}`,
   );
   const dir = createRunDir(`${label}-drafting`);
   writeRunFile(dir, 'drafting.json', `${JSON.stringify(d, null, 2)}\n`);
