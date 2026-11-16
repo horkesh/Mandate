@@ -97,11 +97,14 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('division location', 'movement', ['operations'], [at('State', 'forceLocations')]),
   // Lane 0.5: one record per block or detachment carries strength, stores and
   // non-combatants (`forces/forces.ts`), so the three `forces` rows below share it.
+  // Lane 1.3: morale, experience, equipment, stragglers, and the days a block routed or surrendered join the same record.
   field('division strength, morale, experience, equipment', 'forces', ['combat', 'attrition', 'economy', 'recruitment'], [at('State', 'forceBlockStates')]),
   field("a force block's stores on hand", 'forces', ['supply (daily)', 'operations (a sea delivery)']),
   field('detachments below the force block (garrisons, landings)', 'forces', ['command', 'operations']),
+  // Lane 1.3: on the block's own record (`fbStragglers`, beside `forceBlockStates` above).
   field('stragglers: men absent from a force block who rejoin over days', 'forces', ['combat', 'attrition']),
-  field('battle records', 'combat', []),
+  // Lane 1.3: each battle with its days and breakdowns (`combat/records.ts`); written only by `combat`.
+  field('battle records', 'combat', [], [at('State', 'battleRecords')]),
   // Close-out (0072): copied from the scenario start at setup (0050); nothing changes it in Phase 0.
   field('fortification and entrenchment', 'regions', ['operations', 'combat'], [at('State', 'regionFortification')]),
   // Lane 0.5: which post commands each block; transfers name a force (0033).
@@ -211,6 +214,12 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'PersonStatus',
   'OrderResponse',
   'ResponseTerm',
+  // Lane 1.3: battle records (each replaced whole by `combat`)
+  'BattleRecord',
+  'BattleDay',
+  'BattleSide',
+  'BattleTerm',
+  'BlockLoss',
 ];
 
 /** State's own root fields that are set once at setup and never written after (the game's seed, the calendar's day 0). */

@@ -110,6 +110,7 @@ export function emptyState(): State {
     personStances: {},
     personStatus: {},
     orderResponses: {},
+    battleRecords: {},
   };
 }
 
@@ -192,5 +193,6 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
     personStances: people.personStances,
     personStatus: people.personStatus,
     orderResponses: {},
+    battleRecords: {},
   };
 }

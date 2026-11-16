@@ -333,6 +333,7 @@ describe('ownership of the new State (0044)', () => {
   it('registers every root field with one writer, and the stand-ins are labelled', () => {
     const roots = OWNED_FIELDS.flatMap((f) => f.code.filter((c) => c.record === 'State').map((c) => `${c.key}:${f.writer}`)).sort();
     expect(roots).toEqual([
+      'battleRecords:combat',
       'closedGovernments:command',
       'departmentFactions:command',
       'forceAssignments:command',
@@ -378,6 +379,9 @@ describe('ownership of the new State (0044)', () => {
     // principal orders); and a filter cuts only a losses claim, which no cyclic report carries
     // until lane 0.5's casualty returns. Here the one relaying man (a_sec, uncandid) holds what he dislikes rather than
     // objecting (lane 1.1: an objection needs a candid man), so objections are driven in seats-orders.test.ts.
-    expect(dead).toEqual(['commands.rejected', 'orders.conflict', 'orders.relay_objected', 'reports.trimmed', 'seats.defaulted']);
+    // A standing-goal choice came from a menu that changed under a commander when Phase 0's contest drove the weaker side out;
+    // with battles (lane 1.3) this game's one battle ends with both sides holding, so no menu changes. Both reference runs
+    // of the liveness gate fire it.
+    expect(dead).toEqual(['commands.rejected', 'orders.conflict', 'orders.relay_objected', 'reports.trimmed', 'seats.choices', 'seats.defaulted']);
   });
 });

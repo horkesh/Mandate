@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { contest } from '../src/combat/contest.ts';
+import { combatDay } from '../src/combat/battle.ts';
 import { buildControlIndex } from '../src/control-index/control-index.ts';
 import { deriveMap } from '../src/control-index/derived.ts';
 import { dailyNeedMilli, storesStep } from '../src/forces/stores.ts';
@@ -25,7 +25,8 @@ import { controlTable, depot, E, edge, F, FIXTURE_RULES, R, region } from './sup
  */
 type RulesOver = {
   readonly stores?: Partial<WorldRules['stores']>;
-  readonly contest?: Partial<WorldRules['contest']>;
+  readonly occupation?: Partial<WorldRules['occupation']>;
+  readonly combat?: Partial<WorldRules['combat']>;
   readonly movement?: Partial<WorldRules['movement']>;
   readonly latency?: Partial<WorldRules['latency']>;
   readonly reportTemplates?: WorldRules['reportTemplates'];
@@ -42,7 +43,8 @@ function mapWith(over: RulesOver = {}): WorldIndex {
     rules: {
       ...base.rules,
       stores: { ...FIXTURE_RULES.stores, ...over.stores },
-      contest: { ...FIXTURE_RULES.contest, ...over.contest },
+      occupation: { ...FIXTURE_RULES.occupation, ...over.occupation },
+      combat: { ...FIXTURE_RULES.combat, ...over.combat },
       movement: { ...FIXTURE_RULES.movement, ...over.movement },
       latency: { ...FIXTURE_RULES.latency, ...over.latency },
       reportTemplates: over.reportTemplates ?? FIXTURE_RULES.reportTemplates,
@@ -61,29 +63,35 @@ function stateOn(map: WorldIndex, blocks: Parameters<typeof forcesStart>[2]): St
 
 const ground = (map: WorldIndex, s: State, month = 6): MarchGround => ({ map, index: buildControlIndex(map, s.regionControl), network: INTACT_NETWORK, month });
 
-describe('the contest reads the pack\'s rates', () => {
+describe('occupation and battle read the pack\'s rates', () => {
   const alone = [block('a_1', { department: 'a_war', region: 'mid', strength: 5000 })];
   const clash = [block('a_1', { department: 'a_war', region: 'mid', strength: 4000 }), block('b_1', { department: 'b_war', region: 'mid', strength: 2000 })];
-  const deltaOf = (map: WorldIndex, blocks: Parameters<typeof forcesStart>[2]) => {
+  const dayOf = (map: WorldIndex, blocks: Parameters<typeof forcesStart>[2]) => {
     const s = stateOn(map, blocks);
-    return contest(ground(map, s), s).deltas.map((d) => d.deltaPermille);
+    return combatDay(indexSeatsWorld(map, forcesStart(CONTROL, [], blocks)), ground(map, s), s, 1);
   };
+  const deltaOf = (map: WorldIndex, blocks: Parameters<typeof forcesStart>[2]) => dayOf(map, blocks).control.map((d) => d.deltaPermille);
 
   it('occupyPermille: the full occupation rate', () => {
     expect(deltaOf(mapWith(), alone)).toEqual([100]);
-    expect(deltaOf(mapWith({ contest: { occupyPermille: 40 } }), alone)).toEqual([40]);
+    expect(deltaOf(mapWith({ occupation: { occupyPermille: 40 } }), alone)).toEqual([40]);
   });
 
   it('occupyFullMen: the men at which occupation reaches that rate', () => {
-    expect(deltaOf(mapWith({ contest: { occupyFullMen: 10000 } }), alone)).toEqual([50]);
+    expect(deltaOf(mapWith({ occupation: { occupyFullMen: 10000 } }), alone)).toEqual([50]);
   });
 
-  it('contestPermille: the contest rate at an overwhelming margin', () => {
-    expect(deltaOf(mapWith(), clash)).toEqual([100]);
-    expect(deltaOf(mapWith({ contest: { contestPermille: 400 } }), clash)).toEqual([200]);
+  it('baseRates and killedPermille: the losses of a battle-day, and the killed among them', () => {
+    const kw = (map: WorldIndex) => dayOf(map, clash).fought[0]!.day.bdaySides.map((s) => [s.bsideKw, s.bsideKilled]);
+    const base = kw(mapWith());
+    const doubled = FIXTURE_RULES.combat.baseRates;
+    const twice = kw(mapWith({ combat: { baseRates: Object.fromEntries(Object.entries(doubled).map(([t, r]) => [t, { attacker: r.attacker * 2, defender: r.defender * 2 }])) as WorldRules['combat']['baseRates'] } }));
+    expect(base.map(([k]) => k! > 0)).toEqual([true, true]);
+    // Doubling every base rate doubles each side's killed and wounded, give or take a man of rounding.
+    twice.forEach(([k], i) => expect(Math.abs(k! - 2 * base[i]![0]!)).toBeLessThanOrEqual(1));
+    expect(kw(mapWith({ combat: { killedPermille: 0 } })).map(([, killed]) => killed)).toEqual([0, 0]);
   });
 });
-
 describe('stores read the pack\'s rules', () => {
   const blocks = [block('line', { department: 'a_war', region: 'a2', strength: 10000, storesDays: 8 })];
   const step = (map: WorldIndex) => {

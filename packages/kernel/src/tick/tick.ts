@@ -9,9 +9,9 @@
  *  2b. People apply what was proposed to them today: a bypassed relay's grievance (lane 1.1).
  *  3. Movement: commanders' steps toward their goals, every march a day further
  *     (lane 0.5; goals stand in for lane 0.9's plans).
- *  3b. The simple control contest and occupation: control deltas, retreats (lane 0.5).
+ *  3b. Combat: battles and occupation; losses, retreats, generals hit, control deltas (lane 1.3).
  *  4. Control and network changes, and the derived map (lane 0.4).
- *  4a. Stores on hand fall or refill from today's supply trace (lane 0.5).
+ *  4a. Stragglers rejoin, and stores on hand fall or refill, from today's supply trace (lanes 0.5, 1.3).
  *  4b. Situations fire, surface, stay live, take history defaults (lane 0.7).
  *  4c. Proposals `command` owns: a neutral government closing or reopening (0058),
  *      or a government joining a side (0065).
@@ -42,7 +42,7 @@ import { fire, type DecisionPoint, type MapEvent, type Price, type Proposal, typ
 import { deliverDue } from './deliver.ts';
 import { createFreezeLedger, deepFreeze, type FreezeLedger } from './freeze.ts';
 import { generateReports } from './generate.ts';
-import { commandProposalsPhase, contestPhase, storesPhase } from './forces.ts';
+import { combatPhase, commandProposalsPhase, storesPhase } from './forces.ts';
 import { mapBarrier, mapPhase } from './map.ts';
 import { issueOrder } from './orders.ts';
 import { decideCommand, delegateCommand, runSituations, SITUATION_MECHANICS } from './situations.ts';
@@ -171,15 +171,16 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   // 3. Movement: commanders' steps toward their goals, and every march a day further (lane 0.5).
   state = freeze(applyStanding(ctx, state, menus, choices));
 
-  // 3b. The simple control contest and occupation (lane 0.5; only with a map): deltas for control, retreats now.
-  state = freeze(contestPhase(ctx, state).state);
+  // 3b. Combat (lane 1.3; only with a map): battles and occupation. Each owner applies its proposals now; control deltas wait for 4.
+  const fought = combatPhase(ctx, state);
+  state = freeze(fought.state);
 
   // 4. Control changes and the derived map.
   const mapped = mapPhase(ctx, state, options.mapCache ?? createDerivedMapCache());
   state = freeze(mapped.state);
 
-  // 4a. Stores on hand fall or refill from today's supply trace (lane 0.5; only with a map).
-  state = freeze(storesPhase(ctx, state, mapped.derived));
+  // 4a. Stragglers rejoin, then stores on hand fall or refill, from today's supply trace (lanes 0.5, 1.3; only with a map).
+  state = freeze(storesPhase(ctx, state, mapped.derived, new Set(fought.result?.inBattle ?? [])));
 
   // 4b. Situations, after the map so a cause sees today's control: fire on their causes, surface on what the seat
   // knows, stay live, take history defaults (lane 0.7).

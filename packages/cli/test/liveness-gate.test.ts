@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { checkLiveness, phase0, type LivenessRow } from '@mandate/kernel';
 import { describe, expect, it } from 'vitest';
-import { bandProblems, declaredMechanics, gateFailures, QUIET, REFERENCE_RUNS, seatsNamed, type ReferenceRun } from '../src/liveness-gate.ts';
+import { bandProblems, declaredMechanics, gateFailures, QUIET, REFERENCE_RUNS, seatsNamed, stalled, type ReferenceRun } from '../src/liveness-gate.ts';
 import { phase0Run } from '../src/phase0-run.ts';
 
 /**
@@ -32,35 +32,35 @@ describe('the band table', () => {
   });
 
   it('a stalled band names a kernel test that exists and says so, and has a ceiling', () => {
-    const stalled = REFERENCE_RUNS.flatMap((r) => Object.entries(r.bands).filter(([, b]) => b.driver !== undefined).map(([m, b]) => ({ m, b })));
-    expect(stalled.map((s) => s.m)).toEqual(['combat.retreat_blocked']);
-    for (const { m, b } of stalled) {
-      expect(readFileSync(`${REPO}${b.driver!.test}`, 'utf8'), `${m}: ${b.driver!.test} contains "${b.driver!.needle}"`).toContain(b.driver!.needle);
-      expect(b.maxFires, m).toBeGreaterThan(0);
-    }
-    expect('combat.retreat_blocked' in QUIET).toBe(false);
-    // The control: a stalled band without a ceiling is refused.
+    // Lane 1.3: the one stalled band, Phase 0's trapped garrison at Washington, is gone: the battle model makes it surrender.
+    const stalledBands = REFERENCE_RUNS.flatMap((r) => Object.entries(r.bands).filter(([, b]) => b.driver !== undefined).map(([m, b]) => ({ m, b })));
+    expect(stalledBands.map((s) => s.m)).toEqual([]);
+    // The control: a stalled band without a ceiling is refused, and one with its driver is sound.
     const union = REFERENCE_RUNS.find((r) => r.kind === 'full' && r.pack === 'union-1861')!;
-    const open = { ...union.bands, 'combat.retreat_blocked': { ...union.bands['combat.retreat_blocked']!, maxFires: undefined } };
-    expect(bandProblems([{ ...union, bands: open }, ...REFERENCE_RUNS.filter((r) => r !== union)])).toContain(`${union.name}: combat.retreat_blocked is stalled with no ceiling`);
+    const driver = { test: 'packages/kernel/test/combat.test.ts', needle: 'a trapped garrison with nowhere to go surrenders' };
+    const band = stalled(1, 'planted: a stand-off band for the control', driver);
+    expect(readFileSync(`${REPO}${driver.test}`, 'utf8')).toContain(driver.needle);
+    const others = REFERENCE_RUNS.filter((r) => r !== union);
+    expect(bandProblems([{ ...union, bands: { ...union.bands, 'combat.cut_off': band } }, ...others])).toEqual([]);
+    expect(bandProblems([{ ...union, bands: { ...union.bands, 'combat.cut_off': { ...band, maxFires: undefined } } }, ...others])).toContain(`${union.name}: combat.cut_off is stalled with no ceiling`);
   });
 
-  it('the stand-off band lets a run that ends the stand-off pass and fails a flood (review S1 of the close-out)', () => {
+  it('a stand-off band lets a run that ends the stand-off pass and fails a flood (review S1 of the close-out)', () => {
     const union = REFERENCE_RUNS.find((r) => r.kind === 'full' && r.pack === 'union-1861')!;
-    const rows = (fires: number): LivenessRow[] => declaredMechanics().map((mechanic) => ({ mechanic, fires: mechanic === 'combat.retreat_blocked' ? fires : (union.bands[mechanic]?.minFires ?? 0), magnitude: 0 }));
-    const blocked = (fires: number) => gateFailures(union, rows(fires)).filter((f) => f.mechanic === 'combat.retreat_blocked');
-    expect(union.bands['combat.retreat_blocked']).toMatchObject({ minFires: 0, maxFires: 114 });
+    const run: ReferenceRun = { ...union, bands: { ...union.bands, 'combat.cut_off': stalled(57, 'planted: a stand-off band for the control', { test: 'packages/kernel/test/combat.test.ts', needle: 'surrenders' }) } };
+    const rows = (fires: number): LivenessRow[] => declaredMechanics().map((mechanic) => ({ mechanic, fires: mechanic === 'combat.cut_off' ? fires : (run.bands[mechanic]?.minFires ?? 0), magnitude: 0 }));
+    const blocked = (fires: number) => gateFailures(run, rows(fires)).filter((f) => f.mechanic === 'combat.cut_off');
+    expect(run.bands['combat.cut_off']).toMatchObject({ minFires: 0, maxFires: 114 });
     expect(blocked(0)).toEqual([]);
     expect(blocked(57)).toEqual([]);
     expect(blocked(115).map((f) => f.problem)).toEqual(['too_frequent']);
   });
-
   it('the checks can fail: a missing band, a zero band with no reason, a mechanic firing nowhere, an undeclared band', () => {
     const full = REFERENCE_RUNS.find((r) => r.kind === 'full')!;
     const without = Object.fromEntries(Object.entries(full.bands).filter(([m]) => m !== 'messages.sent'));
     expect(bandProblems([{ ...full, bands: without }, ...REFERENCE_RUNS.filter((r) => r !== full)])).toContain(`${full.name}: no band for messages.sent`);
-    const unexplained = { ...full.bands, 'combat.retreat': { minFires: 0 } };
-    expect(bandProblems([{ ...full, bands: unexplained }, ...REFERENCE_RUNS.filter((r) => r !== full)]).join('\n')).toContain('combat.retreat is banded at zero with no reason');
+    const unexplained = { ...full.bands, 'combat.withdrew': { minFires: 0 } };
+    expect(bandProblems([{ ...full, bands: unexplained }, ...REFERENCE_RUNS.filter((r) => r !== full)]).join('\n')).toContain('combat.withdrew is banded at zero with no reason');
     // A mechanic quiet in every run and absent from QUIET: here, the testbed's only live source of movement.
     const allQuiet = REFERENCE_RUNS.map((r) => ({ ...r, bands: { ...r.bands, 'movement.arrived': { minFires: 0, maxFires: 0, why: 'planted: switched off in every run' } } }));
     expect(bandProblems(allQuiet)).toContain('movement.arrived fires in no reference run and has no quiet reason with a driving kernel test');
@@ -71,7 +71,7 @@ describe('the band table', () => {
   it('declares each Phase 0 mechanic once', () => {
     const declared = declaredMechanics();
     expect(new Set(declared).size).toBe(declared.length);
-    expect(declared).toEqual(expect.arrayContaining(['movement.arrived', 'combat.contest', 'map.recomputed', 'situations.fired', 'messages.sent', 'forces.stores_fell']));
+    expect(declared).toEqual(expect.arrayContaining(['movement.arrived', 'combat.battle_day', 'map.recomputed', 'situations.fired', 'messages.sent', 'forces.stores_fell']));
   });
 });
 
@@ -87,18 +87,18 @@ describe('the gate can fail (positive controls)', () => {
   const union = REFERENCE_RUNS.find((r) => r.pack === 'union-1861')!;
   const testbed = REFERENCE_RUNS.find((r) => r.pack === 'testbed' && r.kind === 'full')!;
 
-  it('a run in which no seat orders anything leaves the movement and contest mechanics dead', () => {
+  it('a run in which no seat orders anything leaves the movement, battle and occupation mechanics dead', () => {
     const failures = gateFailures(union, liveness(union, NOTHING));
     const dead = failures.filter((f) => f.problem === 'dead').map((f) => f.mechanic);
-    expect(dead).toEqual(expect.arrayContaining(['movement.leg_started', 'movement.arrived', 'combat.contest', 'control.changed', 'orders.obeyed']));
+    expect(dead).toEqual(expect.arrayContaining(['movement.leg_started', 'movement.arrived', 'combat.battle_day', 'combat.occupation', 'control.changed', 'orders.obeyed']));
   });
 
   it('a planted dead mechanic is reported dead, and one that fires too often too frequent', () => {
     const rows = liveness(testbed);
     const planted = rows.map((r) => (r.mechanic === 'messages.sent' ? { ...r, fires: 0, magnitude: 0 } : r));
     expect(gateFailures(testbed, planted)).toEqual([{ mechanic: 'messages.sent', problem: 'dead', fires: 0, band: testbed.bands['messages.sent'] }]);
-    const flooded = rows.map((r) => (r.mechanic === 'combat.contest' ? { ...r, fires: r.fires * 10 } : r));
-    expect(gateFailures(testbed, flooded).map((f) => [f.mechanic, f.problem])).toEqual([['combat.contest', 'too_frequent']]);
+    const flooded = rows.map((r) => (r.mechanic === 'combat.occupation' ? { ...r, fires: r.fires * 10 } : r));
+    expect(gateFailures(testbed, flooded).map((f) => [f.mechanic, f.problem])).toEqual([['combat.occupation', 'too_frequent']]);
     const rare = rows.map((r) => (r.mechanic === 'messages.delivered' ? { ...r, fires: 1 } : r));
     expect(gateFailures(testbed, rare).map((f) => [f.mechanic, f.problem])).toEqual([['messages.delivered', 'too_rare']]);
   });

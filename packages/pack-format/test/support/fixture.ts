@@ -62,8 +62,39 @@ export const MESSAGE_RULES = {
   },
 };
 
-const manifest = {
-  formatVersion: 2,
+/** Lane 1.3: the combat rules every pack states (the packs' numbers; the fixture's terrains take the row for any other). */
+export const COMBAT_RULES = {
+  baseRates: { meeting: { attacker: 160, defender: 160 }, attack_open: { attacker: 170, defender: 160 }, attack_hasty: { attacker: 190, defender: 95 }, assault_works: { attacker: 180, defender: 40 }, rearguard: { attacker: 50, defender: 100 } },
+  works: { hastyAt: 200, preparedAt: 500 },
+  terrain: [{ terrain: 'plain', frontageMen: 60000, lossPermille: 0 }],
+  otherTerrain: { frontageMen: 40000, lossPermille: 0 },
+  multiplier: { min: 250, max: 3000 },
+  terms: { qualityWeight: 600, qualityMax: 300, competenceWeight: 400, competenceMax: 150, numbersMax: 150, surprisePermille: 300, successiveDayPermille: -100, noiseMax: 150 },
+  commit: { all_out: { sharePermille: 1000, posturePermille: 200 }, main: { sharePermille: 700, posturePermille: 0 }, probe: { sharePermille: 300, posturePermille: -400 }, defend: { sharePermille: 1000, posturePermille: 0 } },
+  killedPermille: 150,
+  missingPermille: { held: 100, gained_ground: 80, fell_back: 300, withdrew: 300, routed: 500 },
+  capturedPermille: { held: 0, gained_ground: 0, fell_back: 100, withdrew: 150, routed: 300 },
+  flank: { basePermille: 50, numbersWeight: 200, qualityWeight: 300, maxPermille: 400, moraleLoss: 150, missingPermille: 200 },
+  morale: { start: 600, lossWeight: 1500, nerveWeight: 200, experienceWeight: 300, routAt: 250, routFloor: 150, recoveryDays: 5 },
+  experience: { start: 400, gainPerDay: 30 },
+  equipment: { start: 600, routLoss: 100 },
+  decisions: { probeShare: 700, allOutBoldness: 700, holdShare: 600, breakoutShare: 400, followBoldness: 550, pressBoldness: 750 },
+  maxBattleDays: 7,
+  fieldControlPermille: 200,
+  straggleReturnPermille: 100,
+  leaders: { killedPermille: 15, woundedPermille: 40, capturedPermille: 20 },
+  phases: {
+    hours: [
+      { phase: 'dawn', fromHour: 5, toHour: 8 },
+      { phase: 'morning', fromHour: 8, toHour: 12 },
+      { phase: 'afternoon', fromHour: 12, toHour: 17 },
+      { phase: 'evening', fromHour: 17, toHour: 21 },
+    ],
+    lossShares: { meeting: [100, 300, 450, 150], attack_open: [100, 300, 450, 150], attack_hasty: [100, 350, 400, 150], assault_works: [150, 400, 350, 100], rearguard: [200, 400, 300, 100] },
+  },
+} as const;
+
+const manifest = {  formatVersion: 2,
   id: 'fixture',
   status: 'draft',
   name: 'pack.name',
@@ -74,7 +105,8 @@ const manifest = {
     supplyControlPermille: 250,
     retreatControlPermille: 50,
     stores: { menPerCapacityUnit: 20000, capDays: 30, lowDays: 7 },
-    contest: { occupyPermille: 100, occupyFullMen: 5000, contestPermille: 200 },
+    occupation: { occupyPermille: 100, occupyFullMen: 5000 },
+    combat: COMBAT_RULES,
     movement: { marchMinCapacityPermille: 1000, courierPermille: 333 },
     ruleSeats: { warFlags: [{ faction: 'red', flag: null }, { faction: 'blue', flag: null }] },
     ...MESSAGE_RULES,

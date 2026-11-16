@@ -28,6 +28,7 @@ import type { StandingRules } from '../world/world.ts';
 import { situationReferenceProblems } from '../situations/references.ts';
 import type { SituationDef } from '../situations/types.ts';
 import { peopleRulesProblems, type PeopleRules, type TraitRules } from '../people/rules.ts';
+import { combatRulesProblems } from '../combat/rules.ts';
 import { otherEnd, type WorldIndex } from '../world/index.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
 import type { PostKindRole } from '../world/world.ts';
@@ -104,7 +105,7 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
   const pack = map.world.rules;
   const rules: SeatsRules = Object.freeze({ latency: pack.latency, templates: pack.reportTemplates, traits: pack.people?.traits, people: pack.people });
   // The kernel takes any World it is handed (a fixture, an adapter), so it checks the pack's rules as the validator does.
-  const problems: string[] = [...templateProblems(rules.templates), ...latencyProblems(rules.latency), ...standingProblems(pack.standing), ...peopleRulesProblems(pack.people, map.world.vocabularies.values?.map((v) => v.id) ?? [])];
+  const problems: string[] = [...templateProblems(rules.templates), ...latencyProblems(rules.latency), ...standingProblems(pack.standing), ...peopleRulesProblems(pack.people, map.world.vocabularies.values?.map((v) => v.id) ?? []), ...combatRulesProblems(pack.combat, map.world.vocabularies.terrains.map((t) => t.id))];
 
   const people = new Map<PersonId, SeatPerson>();
   for (const p of map.world.people) people.set(p.id, { id: p.id, faction: p.faction });
