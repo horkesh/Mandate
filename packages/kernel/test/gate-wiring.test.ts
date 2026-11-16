@@ -190,6 +190,8 @@ describe('the map from orders to values in play (gate review G-1.5a, G-1.5b)', (
     const event = decided.results[1]!.events.find((e) => e.event === 'policy')!;
     expect(event.terms.map((t) => [t.termRule, t.termValue])).toEqual([['floor:policy:shelter', cost], ['floor_cost:policy:shelter', -cost]]);
      expect(decided.results[1]!.events.some((e) => e.event === 'policy_unpaid')).toBe(false);
+    // Paid in full, so nothing is recorded unpaid (lane 1.4c).
+    expect(decided.fires('situations.policy_unpaid')).toBe(0);
     // A principal with less standing than the cost pays what he has; the rest is recorded as unpaid, never dropped.
     const poor = applyPeopleChanges(createState(wd, { seed: 1, drivers: { a_lead: 'human' } }), [{ change: 'standing', person: P('a_lead'), delta: 100 }], 0, wd.map.world.rules.people, []);
     const short = run(wd, poor, 2, { 2: [{ cmd: 'decide', situation: S('crossers'), options: ['send_back'] }] });
