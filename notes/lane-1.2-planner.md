@@ -79,6 +79,21 @@ What changed, and why:
 - `RuleSeatPolicy.crossNeutral` with the generic principal (owner 1.12).
 - Ships carry their own stores in the planner's supply term (owner 1B's ships' stores).
 
+## Merging with lane 1.1 (whichever merges second adapts)
+
+Lane 1.1 (`claude/phase1-people-bf3c25`, d3583b1) was pushed while this lane was finishing; neither is on main, so this branch codes against main's `DirectiveTerms` and stand-ins. If 1.1 lands first, this branch adapts as below; if this lands first, 1.1 does the same from its side.
+
+1. **Conflicting orders:** replace the body of `resolveConflict` in `plans/conflict.ts` (its one call site is `arriveOrder`) with 1.1's `resolveOrderConflict`, and delete `plans/conflict.ts`. Lane 1.1's note says it leaves `plans/standing.ts` alone; this branch deleted that file, so the merge takes the deletion.
+2. **Edits:** `editDirective` (`planner/edits.ts`) should set `ownBest` (the boldness `riskOf` reads for his best plan) and `departure` (the edit's distance) instead of raising the boldness by hand and adding the `overruled` grievance; `tick/plans.ts` then stops building that grievance.
+3. **Responses:** 1.1 makes them State written by `proxy` with a `responseKey`. `PlanCounter.counterAnswer` (a report id) becomes that key, and `answerEdit` calls 1.1's `answerOrder` instead of `resolveDirective`.
+4. **Traits:** `profileOf` and `sidePosts` read `traitsOf(world, state, person)` instead of `world.person(...)`; `demandRatio` and `perceptionBias` come from `people/traits.ts`. `SeatPerson.competence` (added here) moves into whatever 1.1's trait record carries, or stays as the 0058 stand-in.
+5. **Compliance stand-ins:** `WorldRules.plans.compliance*` retire once `traitsOf` gives candour and standing and 1.1 gives the principal's credibility.
+6. **Two owners to reconcile:**
+   - *The shortfall threshold.* This branch's planner attaches `move_when_reinforced` past `planner.shortfallTimid/Bold` (the brief listed finding 8 for 1.2); 1.1's compliance now answers with a `when_reinforced` condition past its own pack rule. One rule, two writers: keep 1.1's, and have the planner read the same pack rule (or the compliance function) for its candidates' conditions.
+   - *The assault margin.* Here it is `planner.assaultMargin`, applied in `demandFor`, with `demandRatio` untouched. The lead asks for a `WorldRules.people` field with its own typed term: move it there when `people` rules exist, and give it a `force_ratio` reason of its own.
+7. **Values:** the kernel names none; the partner's honoured and offended values are pack rules (`planner.partnerHonours/Offends`; the testbed states `duty` and `caution`). 1.1's people functions should score the partner's willingness instead (`willingness` in `planner/context.ts` is the one place).
+8. **`relayOrder` returns State** on 1.1's branch; `deliverOne` and this branch's one-line `isAdvance` change in it meet there.
+
 ## Not done, or not verified
 
 - CI on Linux and Windows: pushed; see the report for its state.
