@@ -24,6 +24,28 @@ describe('a proposal grounded in law and practice (the lead’s S17 ruling)', ()
     expect(basisIssues(withBasis('shelter'))).toEqual([expect.objectContaining({ at: 'options[1].proposedBy', file: 'situations/fen_crossing.json' })]);
   });
 
+  it('accepts the principal’s own initiative, on record within the topic’s window, on a gated option (the lead’s S12 ruling)', () => {
+    const initiative = (author: string, dated: string, extra: (s: Record<string, any>) => void = () => {}): Edits =>
+      editJson('situations/fen_crossing.json', (s) => {
+        s.options.find((x: { id: string }) => x.id === 'shelter').proposedBy = { basis: 'principal-initiative', author, dated, cites: [{ source: 'TB-DESIGN', at: 'his own letter' }] };
+        extra(s);
+      });
+    expect(basisIssues(initiative('n_leader', '1861-03-01'))).toEqual([]);
+    // Refused: another man's document; and a document dated after the topic's window closes.
+    expect(basisIssues(initiative('n_secretary', '1861-03-01')).map((i) => i.at)).toEqual(['options[1].proposedBy.author']);
+    const lateOath = initiative('n_leader', '1862-01-05', (s) => {
+      s.options.find((x: { id: string }) => x.id === 'shelter').gate = { topics: ['old-oath'], placement: 'decision', risks: [], actingSide: null };
+    });
+    expect(basisIssues(lateOath).map((i) => i.at)).toContain('options[1].proposedBy.dated');
+  });
+
+  it('refuses the principal’s initiative on an ungated option', () => {
+    const ungated = editJson('situations/eastwatch_followup.json', (s) => {
+      s.options[0].proposedBy = { basis: 'principal-initiative', author: 'n_leader', dated: '1861-03-01', cites: [{ source: 'TB-DESIGN', at: null }] };
+    });
+    expect(basisIssues(ungated).map((i) => i.at)).toEqual(['options[0].proposedBy']);
+  });
+
   it('resolves its cites against PROVENANCE.json', () => {
     const bad = editJson('situations/fen_crossing.json', (s) => {
       s.options.find((x: { id: string }) => x.id === 'send_back').proposedBy = { basis: 'law-and-practice', cites: [{ source: 'NO-SUCH-SOURCE', at: null }] };

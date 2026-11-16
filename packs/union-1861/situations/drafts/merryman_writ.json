@@ -1,0 +1,48 @@
+{
+  "id": "merryman_writ",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.merryman_writ.title",
+  "text": "situation.merryman_writ.text",
+  "earliest": "1861-05-26",
+  "event": {
+    "all": [
+      {
+        "flag": "habeas_suspended_line"
+      },
+      {
+        "callReceived": {
+          "post": "st_gov_massachusetts",
+          "days": 41
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_attorney_general",
+      "us_general_in_chief"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "union-habeas-and-arrests"
+    ],
+    "placement": "event",
+    "risks": [],
+    "actingSide": null
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 p. 640 (the authority to suspend the writ passed to General Cadwalader)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "6.6 (Merryman arrested 25 May; the writ 26 May; the marshal turned away 28 May)"
+    }
+  ]
+}

@@ -92,7 +92,7 @@ export interface SituationOptionView {
   readonly id: string;
   readonly label: string;
   /** Persons, inaction, or a basis in law and practice (a gate-kept option; the view keeps its own copy of the shape). */
-  readonly proposedBy: readonly PersonId[] | 'inaction' | { readonly basis: 'law-and-practice'; readonly cites: readonly { readonly source: string; readonly at: string | null }[] };
+  readonly proposedBy: readonly PersonId[] | 'inaction' | { readonly basis: 'law-and-practice' | 'principal-initiative'; readonly cites: readonly { readonly source: string; readonly at: string | null }[] };
   readonly group: string | null;
 }
 

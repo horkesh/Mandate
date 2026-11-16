@@ -318,5 +318,12 @@
   "situation.bates_fugitive_law_opinion.title": "The Attorney General on the fugitive slave law",
   "situation.bates_fugitive_law_opinion.text": "Asked by a marshal in Kansas whether to serve in executing the fugitive slave law, Attorney General Bates answers: “It is the President's constitutional duty to 'take care that the laws be faithfully executed.' That means all the laws.”",
   "situation.fort_monroe_escape_asked.title": "Three men reach Fort Monroe",
-  "situation.fort_monroe_escape_asked.text": "On the night of 23 May, Frank Baker, Shepard Mallory and James Townsend crossed Hampton Roads from the Sewell's Point works to Fort Monroe. Major John B. Cary, for their enslaver, has demanded them back under the fugitive slave law of 1850; the commander at Fort Monroe has asked for instructions."
+  "situation.fort_monroe_escape_asked.text": "On the night of 23 May, Frank Baker, Shepard Mallory and James Townsend crossed Hampton Roads from the Sewell's Point works to Fort Monroe. Major John B. Cary, for their enslaver, has demanded them back under the fugitive slave law of 1850; the commander at Fort Monroe has asked for instructions.",
+  "situation.habeas_on_the_line.title": "The writ on the military line",
+  "situation.habeas_on_the_line.text": "Troops for Washington must cross Maryland, where the railroad bridges were burned and Baltimore is hostile. Anyone the army arrests along the line can be freed by the courts on a writ of habeas corpus.",
+  "situation.habeas_on_the_line.option.suspend_on_line": "Authorise the general-in-chief to suspend the writ of habeas corpus on the military line, where resistance makes it necessary",
+  "situation.habeas_on_the_line.inaction": "The writ runs on the line, and the army's prisoners go before the courts.",
+  "situation.merryman_writ.title": "A writ for John Merryman",
+  "situation.merryman_writ.text": "In Baltimore the Chief Justice has issued a writ of habeas corpus for John Merryman, held by the army at Fort McHenry. The commander there has declined to produce him, citing the president's authority to suspend the writ.",
+  "reason.writ-suspended": "the writ of habeas corpus suspended on the military line"
 }

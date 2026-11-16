@@ -172,14 +172,17 @@ export interface GateReview {
  * option the gate keeps (the register lists it in `supersededOptions`, or marks it `watched`) may carry it, so no adviser
  * is invented for a policy the record shows was practised but nobody on the staff urged. The validator refuses it anywhere else.
  */
-export interface ProposalBasis {
-  readonly basis: 'law-and-practice';
-  readonly cites: readonly SituationCitation[];
-}
+export type ProposalBasis =
+  | { readonly basis: 'law-and-practice'; readonly cites: readonly SituationCitation[] }
+  /**
+   * The principal's own consideration, on record before the decision (the lead's S12 ruling): the document is his own
+   * (`author`), dated (`dated`, ISO). It is provenance only: the option shows no proposer and no staff line (B9).
+   */
+  | { readonly basis: 'principal-initiative'; readonly author: PersonId; readonly dated: string; readonly cites: readonly SituationCitation[] };
 
 /** True for a proposal's basis in law and practice (not a list of persons, nor inaction). */
 export function isProposalBasis(p: unknown): p is ProposalBasis {
-  return typeof p === 'object' && p !== null && !Array.isArray(p) && (p as { basis?: unknown }).basis === 'law-and-practice';
+  return typeof p === 'object' && p !== null && !Array.isArray(p) && ['law-and-practice', 'principal-initiative'].includes((p as { basis?: unknown }).basis as string);
 }
 
 /** A named man whose words or acts an item gives, and the post he must hold for it to fire (null: serving anywhere). */

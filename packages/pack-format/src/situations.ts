@@ -133,6 +133,14 @@ export const OptionSchema = z.strictObject({
     z
       .strictObject({ basis: z.literal('law-and-practice'), cites: z.array(z.strictObject({ source: z.string().min(1), at: z.string().min(1).nullable().default(null) })).min(1, 'the law and the practice, cited') })
       .describe('A recorded exception (the lead’s ruling on S17): the law and practice a gate-kept option rests on, where no adviser is on record. Only an option the register supersedes or marks watched may carry it.'),
+    z
+      .strictObject({
+        basis: z.literal('principal-initiative'),
+        author: idOf('person'),
+        dated: historicalDate,
+        cites: z.array(z.strictObject({ source: z.string().min(1), at: z.string().min(1).nullable().default(null) })).min(1, 'the principal’s own document, cited'),
+      })
+      .describe('A recorded exception (the lead’s ruling on S12): the principal’s own consideration, on record before the decision, where no adviser is. Only on a gated option; the author must be the side’s principal, the document dated inside the topic’s window. Provenance only: the option shows no proposer (B9).'),
   ]),
   group: termId.nullable().default(null),
   appearsWhen: conditionOrNull,
@@ -409,7 +417,9 @@ export function validateSituations(items: readonly { readonly file: string; read
       if (def.options.length === 0) err('situation-missing', 'options', 'a decision has no options', 'at least one option (0040)');
       if (def.inaction === null) err('situation-missing', 'inaction', 'a decision has no inaction outcome', 'an inaction outcome, costed like the options (0040; gate Q2)');
       if (def.historicalDefault === null) err('situation-missing', 'historicalDefault', 'a decision has no historical default', 'options, a delegation, or unsourced with a reason (0040)');
-      if (def.staffLine === null) err('situation-missing', 'staffLine', 'a decision has no staff recommendation', 'an advice line by an ordered list of author posts (0040, 0046)');
+      // B9 (the lead's S12 ruling): where every option rests on the principal's own initiative, no staff line may recommend it.
+      const allInitiative = def.options.length > 0 && def.options.every((o) => phase0.isProposalBasis(o.proposedBy) && o.proposedBy.basis === 'principal-initiative');
+      if (def.staffLine === null && !allInitiative) err('situation-missing', 'staffLine', 'a decision has no staff recommendation', 'an advice line by an ordered list of author posts (0040, 0046)');
     } else {
       for (const field of ['options', 'inaction', 'historicalDefault', 'staffLine'] as const) {
         const v = def[field];
@@ -419,7 +429,11 @@ export function validateSituations(items: readonly { readonly file: string; read
     if (def.kind === 'decision' && def.effects.length > 0) err('situation-decision-effects', 'effects', 'a decision has effects of its own', "effects on its options, its locked costs or its inaction outcome");
     // F1 (review S10): a notice reaches the principal as a report with an author and a route.
     if (def.kind === 'notice' && def.report === null) err('situation-missing', 'report', 'a notice has no report', 'a report with author posts and a report type, so the notice has an author and a route (gate F1)');
-    if (def.kind === 'decision' && def.report !== null) err('situation-decision-report', 'report', 'a decision has a notice report', 'none: a decision is told through its staff line');
+    // B9 (the lead's S12 ruling): a decision whose every option rests on the principal's own initiative has no staff line, so it is told by a plain report.
+    const initiativeOnly = def.kind === 'decision' && def.options.length > 0 && def.options.every((o) => phase0.isProposalBasis(o.proposedBy) && o.proposedBy.basis === 'principal-initiative');
+    if (def.kind === 'decision' && def.report !== null && !initiativeOnly) err('situation-decision-report', 'report', 'a decision has a notice report', 'none: a decision is told through its staff line (only a decision resting wholly on the principal’s own initiative is told by a plain report)');
+    if (initiativeOnly && def.staffLine !== null) err('situation-staff-line', 'staffLine', 'a decision resting on the principal’s own initiative has a staff line', 'none (B9): no staff line recommends what the president himself considered; tell it by a plain report');
+    if (initiativeOnly && def.report === null) err('situation-missing', 'report', 'a decision resting on the principal’s own initiative has neither staff line nor report', 'a plain report (gate F1)');
     if (def.report !== null) {
       def.report.authors.forEach((p, i) => ref(posts, 'post in any scenario', p, `report.authors[${i}]`));
       const probe = { reportType: def.report.reportType, reportSubtype: def.report.subtype, reportAuthor: def.faction as never, reportAuthorPost: null, reportSubjectKind: 'situation' as const, reportSubjectId: def.id, reportClaims: [], reportDay: 1, reportHour: null, reportAdvice: null, reportAnswers: null };

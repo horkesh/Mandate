@@ -1,0 +1,122 @@
+{
+  "id": "habeas_on_the_line",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.habeas_on_the_line.title",
+  "text": "situation.habeas_on_the_line.text",
+  "earliest": "1861-04-27",
+  "event": {
+    "all": [
+      {
+        "flag": "baltimore_route_closed"
+      },
+      {
+        "callReceived": {
+          "post": "st_gov_massachusetts",
+          "days": 12
+        }
+      }
+    ]
+  },
+  "options": [
+    {
+      "id": "suspend_on_line",
+      "label": "situation.habeas_on_the_line.option.suspend_on_line",
+      "displayKey": 1,
+      "proposedBy": {
+        "basis": "principal-initiative",
+        "author": "lincoln_abraham",
+        "dated": "1861-04-25",
+        "cites": [
+          {
+            "source": "DOC-1861",
+            "at": "LINCOLN 1861-04-25 to Scott (Nicolay and Hay, Complete Works, vol. 2 p. 38): \"in the extremest necessity, the suspension of the writ of habeas corpus\"; the order of 27 April, p. 39"
+          }
+        ]
+      },
+      "honours": [
+        "union",
+        "order"
+      ],
+      "effects": [
+        {
+          "setFlag": "habeas_suspended_line"
+        },
+        {
+          "propose": {
+            "owner": "politics",
+            "field": "ledger-act",
+            "subject": "habeas_suspension_1861",
+            "delta": 1,
+            "reason": "act-while-away",
+            "side": "union"
+          }
+        }
+      ],
+      "lockedCosts": [
+        {
+          "propose": {
+            "owner": "politics",
+            "field": "bloc-support",
+            "subject": "border_unionists",
+            "delta": -20,
+            "reason": "writ-suspended",
+            "side": "union"
+          }
+        },
+        {
+          "propose": {
+            "owner": "politics",
+            "field": "bloc-support",
+            "subject": "peace_democrats",
+            "delta": -20,
+            "reason": "writ-suspended",
+            "side": "union"
+          }
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.habeas_on_the_line.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "suspend_on_line"
+    ]
+  },
+  "staffLine": null,
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "topics": [
+      "union-habeas-and-arrests"
+    ],
+    "placement": "decision",
+    "risks": [],
+    "actingSide": null
+  },
+  "citations": [
+    {
+      "source": "DOC-1861",
+      "at": "LINCOLN 1861-04-25 to Scott (Nicolay and Hay, Complete Works, vol. 2 p. 38): \"in the extremest necessity, the suspension of the writ of habeas corpus\"; the order of 27 April, p. 39"
+    },
+    {
+      "source": "OR",
+      "at": "I-2 pp. 601 to 602 (Scott relays the authority to Butler, 26 April)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "6.6"
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_general_in_chief",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  }
+}
