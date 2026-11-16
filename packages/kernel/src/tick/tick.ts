@@ -70,6 +70,7 @@ export const SEATS_MECHANICS = [
   'knowledge.pruned_age',
   'knowledge.pruned_superseded',
   'messages.courier_delay',
+  'messages.mail_delay',
   'messages.delivered',
   'messages.sent',
   'messages.special_messenger',

@@ -218,6 +218,21 @@ describe('the press as a report route (FOUNDATION section 7)', () => {
   });
 });
 
+describe('the mail counted apart from the courier', () => {
+  it('a front page that draws weather fires mail_delay and not courier_delay', () => {
+    const world = politicsWorld();
+    const s0 = createState(world, { seed: 1 });
+    // The same four weeks with the paper silent (its editor dead) are the control: the press's mail is the only difference.
+    const silent = applyPeopleChanges(s0, [{ change: 'status', person: P('a_editor'), status: 'killed' }], 0, world.rules.people, world.map.world.vocabularies.ranks);
+    const printed = days(world, s0, 28);
+    const control = days(world, silent, 28);
+    expect([printed.fires('politics.front_page'), control.fires('politics.front_page')]).toEqual([4, 0]);
+    // Readers at the front are mail days away from the capital, and some of them draw a day of weather.
+    expect(printed.fires('messages.mail_delay') - control.fires('messages.mail_delay')).toBeGreaterThan(0);
+    expect(printed.fires('messages.courier_delay')).toBe(control.fires('messages.courier_delay'));
+  });
+});
+
 describe('a silent press', () => {
   it('a paper whose editor no longer serves prints nothing, and moves nothing', () => {
     const world = politicsWorld();

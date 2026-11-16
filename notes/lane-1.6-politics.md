@@ -149,7 +149,22 @@ session, and a new fictional editor (`n_editor`, person kind `editor`) for the n
   - the gate's bloc check.
 - The liveness gate:
   - **Bands from the merged runs:** front pages, support, and the chambers opening and adjourning.
-  - **Re-banded in the Union run:** `messages.courier_delay` (197 to 1301) and `knowledge.pruned_age` (8 to 28), because three weekly papers to every Union post holder roughly triple the mail.
+  - **Mail counted apart (the lead's ruling, the second commit).** A weather day on a mail route now fires `messages.mail_delay`; the courier routes keep `messages.courier_delay`, so that count still watches orders and reports.
+  - **Re-banded:** `courier_delay` is at its measured courier-only count, `mail_delay` at its own, and `knowledge.pruned_age` (Union 8 to 28) because front pages are kept the press template's 21 days.
+
+| Run | `courier_delay` | `mail_delay` |
+|---|---|---|
+| Union | 66 | 1235 |
+| Testbed | 35 | 107 |
+
+The pre-press band of 197 also counted the mail's weather days: other reports already went by mail before the press.
+
+### Where the mail comes from (the Union run, 75 days)
+
+- **Messages sent:** about 2,820 before the press, 5,272 after. That is about 2,450 more: 30 front pages (3 papers × 10 weeks), each to about 80 readers.
+- **Only courier and mail draw weather.** The wire and special messengers never do. Before the press the run's traffic was mostly wire.
+- **Every front page goes by mail from New York.** The pack's mail takes twice the courier's days, and the weather adds 0 or 1 day (`courierNoiseMaxDays` 1), so about half the pages that travel draw a day.
+- **Totals:** messages grew about 1.9 times. Weather-exposed traffic grew several-fold, because the press is the run's first bulk mail.
   - **Quiet, each driven by its kernel test:** `act`, `met`, `answered`, `called`, `framing`, `refused` and `press_silent`, until lane 1.11 authors S09, S20 and the war's opening.
 
 ## Choices made (for the decision record)
@@ -178,7 +193,7 @@ session, and a new fictional editor (`n_editor`, person kind `editor`) for the n
    - Nothing here suppresses or leaks: suppression stays a security order (lane 1.11).
    - Framing moves only by a situation's effect.
    - The reason ids lane 1.11 writes (for example, racist opposition) pass through unchanged.
-5. **The mail load.** The press roughly triples the Union run's courier mail. If that is too heavy for the performance budget, a pack rule of reader kinds would narrow it. Recommend leaving it until lane 1.14 measures a full campaign.
+5. **The mail load.** The press nearly doubles the Union run's messages, all by mail (see "Where the mail comes from"). The lead ruled to count the mail apart and to leave a reader-kinds rule until lane 1.14 measures a full campaign.
 6. **The pushback map.** Nothing in 1.6 consumes the order-to-value map. `address` carries no content yet. Whatever reads its pushback later reads the floored `pushbackOf` (lane 1.5b).
 7. **Calibration.** The Union numbers are [I] and the M2 rests. Lane 1.14 calibrates them against the note's calibration points (the 1862 midterm band, the two lows).
 

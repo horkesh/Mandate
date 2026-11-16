@@ -217,7 +217,8 @@ export function hop(ctx: TickContext, state: State, route: RouteKind, sender: Pe
   const l = routeLatency(ctx.latency, ctx.world.rules.latency, route, from, to, sideOf(ctx, state, sender), { seed: ctx.seed, message: id });
   if (!l.ok) throw new RangeError(`route ${route} is not available from ${from} to ${to}`);
   const weather = l.latency.parts.find((p) => p.part === 'weather');
-  if (weather) fire(ctx, 'messages.courier_delay', weather.days);
+  // Lane 1.6: the mail (the press's front pages) is counted apart, so the courier count keeps watching orders and reports.
+  if (weather) fire(ctx, route === 'mail' ? 'messages.mail_delay' : 'messages.courier_delay', weather.days);
   return { arrive: ctx.day + l.latency.days + extraDays, route: takenRoute(ctx, state, route, sender, from, to) };
 }
 

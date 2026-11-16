@@ -258,10 +258,14 @@ const UNION_BANDS: Record<string, GateBand> = {
   'reports.governor_wire': notHere('the one battle\'s ground belongs to no government whose head post is on a side that fought there; the testbed run fires it'),
   'reports.pocket': notHere('no headquarters is cut off in 75 days; the testbed run fires it'),
   'map.pocket_closed': notHere('no pocket closes in the first 75 days of the merged Union run; the testbed run fires it'),
+  // Lane 1.6: front pages are kept the press template's 21 days, so more reports age out of knowledge.
   'knowledge.pruned_age': around(28),
   'knowledge.pruned_superseded': around(73),
   'map.recomputed': around(10),
-  'messages.courier_delay': around(1301),
+  // Lane 1.6: a weather day on the mail is counted apart (`messages.mail_delay`), so this watches orders and reports by
+  // courier only: 66 here (the pre-press 197 counted the mail's weather days too). The mail is the press's bulk.
+  'messages.courier_delay': around(66),
+  'messages.mail_delay': around(1235),
   'messages.delivered': around(2681),
   'messages.sent': around(2820),
   // The War Department withholds the principal's approval of the Washington garrison's plan; he sends it around.
@@ -344,7 +348,9 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'knowledge.pruned_age': around(15),
   'knowledge.pruned_superseded': around(118),
   'map.recomputed': around(14),
-  'messages.courier_delay': around(85),
+  // Lane 1.6: courier and mail counted apart (the northern gazette's front pages are the mail's bulk).
+  'messages.courier_delay': around(35),
+  'messages.mail_delay': around(107),
   'messages.delivered': around(1812),
   'messages.sent': around(1829),
   'messages.special_messenger': around(1),
