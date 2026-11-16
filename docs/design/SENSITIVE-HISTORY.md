@@ -465,6 +465,7 @@ The lead writes these; each states the question the record must answer and this 
 - **R3**, which holds `dakota-war-1862` (and the Native-nation questions of `indian-territory-1861`, whose agency facets may be authored meanwhile).
 - **`union-freedpeople-camps`**, needs-source as a whole topic.
 - **R4**, which holds `prisoners-and-exchange` (moved into the slice after [GCF] sourced its 1861–62 facets).
+- **R6**, which holds `guerrilla-war-west` (its window opens in July 1861, so the ship rule makes it a blocker; lane 1.8 registered it held, 2026-11-16).
 
 The other records block only the topics they hold, and facet-level needs-source flags block nothing.
 
