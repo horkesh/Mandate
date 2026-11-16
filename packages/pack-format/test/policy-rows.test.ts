@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { IssueSink, loadPack, policyRows, validatePack, type GateData, type PackData } from '../src/index.ts';
+import { checkGate, gateContentHash, IssueSink, loadPack, localeStrings, policyRows, validatePack, type GateData, type PackData } from '../src/index.ts';
 import { testbedFiles } from './support/testbed.ts';
 
 /**
@@ -108,5 +108,28 @@ describe('a person’s practices (lane 1.5b)', () => {
     expect(kinds(withPractice('keeps_crossers', cite, ['keeps_crossers']))).toEqual([]);
     expect(kinds(withPractice('keeps_crossers', cite, []))).toEqual(['unknown-reference']);
     expect(kinds(withPractice('keeps_crossers', [], ['keeps_crossers']))).toEqual(['value-without-citation']);
+  });
+});
+
+describe('naming a policy is signed content (lane 1.4c; the re-check of lane 1.5b)', () => {
+  const pack = loadPack(testbedFiles()).pack!;
+  const strings = localeStrings(pack.strings);
+  // A signed decision (the testbed's fen crossing), so it has options and an inaction outcome to name a policy on.
+  const signed = pack.situations!.find((s) => s.kind === 'decision' && s.gateReview !== null)!;
+  const stale = (def: typeof signed) => checkGate([{ file: 'situations/x.json', def }], pack.gate as GateData, strings, pack.provenance).filter((i) => i.kind === 'gate-stale-review' && i.at === 'gateReview.contentHash');
+  const policy = { row: 'policy:anything', carriedBy: [] };
+
+  it('a signed item with no policy keeps its hash and its sign-off', () => {
+    expect(gateContentHash(signed, strings, pack.provenance)).toBe(signed.gateReview!.contentHash);
+    expect(stale(signed)).toEqual([]);
+  });
+
+  it('naming a policy on an option, or on the inaction outcome, changes the hash and voids the sign-off', () => {
+    const onOption = { ...signed, options: signed.options.map((o, i) => (i === 0 ? { ...o, policy } : o)) };
+    expect(gateContentHash(onOption, strings, pack.provenance)).not.toBe(signed.gateReview!.contentHash);
+    expect(stale(onOption).length).toBe(1);
+    const onInaction = { ...signed, inaction: { ...signed.inaction!, policy } };
+    expect(gateContentHash(onInaction, strings, pack.provenance)).not.toBe(signed.gateReview!.contentHash);
+    expect(stale(onInaction).length).toBe(1);
   });
 });

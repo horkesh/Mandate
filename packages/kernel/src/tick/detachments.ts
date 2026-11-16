@@ -37,7 +37,12 @@ export interface DetachmentResult {
   readonly refused: readonly { readonly proposal: DetachmentProposal; readonly reason: DetachmentRefusal; readonly why: string }[];
 }
 
-/** A detachment's id: its parent's and the day, made unique among the blocks there are (content-derived, never re-minted). */
+/**
+ * A detachment's id: its parent's and the day, with a counter for a second the same day (content-derived). It is never
+ * re-minted (lane 1.4c; 0081): a later day's id differs by its day, and within a day `taken` holds every id this call
+ * has made or rejoined, so a make, a rejoin and a make again from one parent get two ids. That holds because a day's
+ * proposals are applied in one call (today the operations phase's); a second caller on the same day must share it.
+ */
 export function detachmentId(state: State, parent: ForceBlockId, day: number, taken: ReadonlySet<string>): ForceBlockId {
   for (let n = 1; ; n++) {
     const id = `${parent}.det.${day}${n === 1 ? '' : `.${n}`}` as ForceBlockId;
@@ -131,6 +136,8 @@ export function applyDetachmentProposals(map: WorldIndex, start: State, proposal
     state = applyDetachments(state, [delta]).state;
     state = placeAndRemove(map, state, [], [p.detachment]);
     state = musterAssignments(state, [], [], [p.detachment]);
+    // Its id is spent: no detachment made later today takes it again.
+    taken.add(p.detachment);
     rejoined.push(p.detachment);
   }
   return { state, made, rejoined: rejoined.sort(strictCompare), freed: freed.sort(strictCompare), refused };

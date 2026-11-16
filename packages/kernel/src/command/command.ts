@@ -333,7 +333,7 @@ export interface TransferResult {
   readonly state: State;
   /** The blocks that changed post (for a corps: none; they stay under it). */
   readonly moved: readonly ForceBlockId[];
-  /** Men asked for and sent, when the transfer named men. */
+  /** Every man actually sent, detachments that went with their parent included (lane 1.4c; 0081). Unknown strengths count 0. */
   readonly menSent: number;
   /** Why these blocks: the sender's rule (hard rule 6). */
   readonly rule: TransferPick | 'corps_as_bundle';
@@ -341,7 +341,13 @@ export interface TransferResult {
 
 /**
  * Transfer a force from one post to another (0033). Both posts must be on the
- * same side. Detachments commanded by the sender go with their parent block.
+ * same side. The sender picks among his blocks by his rule, never one whose
+ * strength is known to be 0: an emptied shell is no force to give (lane 1.4c;
+ * 0081). A detachment he commands goes with its chosen parent only if it stands
+ * in the parent's region: one that stands elsewhere (a landing ashore, a
+ * garrison left behind) is a force in the field, not the parent's to give away,
+ * so it stays where it is and under its post. The men reported sent are every
+ * man that went.
  */
 export function transferForce(map: WorldIndex, state: State, from: PostId, to: PostId, force: TransferForce, pick: TransferPick): TransferResult {
   if (from === to) throw new CommandError(['a transfer needs two different posts']);
@@ -354,29 +360,35 @@ export function transferForce(map: WorldIndex, state: State, from: PostId, to: P
   }
   const own = commandedBlocks(state, from);
   const blocks = own
-    .filter((id) => state.forceBlockStates[id]!.fbKind === 'block')
+    .filter((id) => state.forceBlockStates[id]!.fbKind === 'block' && state.forceBlockStates[id]!.fbStrength !== 0)
     .sort((a, b) => {
       const sa = state.forceBlockStates[a]!.fbStrength;
       const sb = state.forceBlockStates[b]!.fbStrength;
       if (sa === null || sb === null) return sa === sb ? strictCompare(a, b) : sa === null ? 1 : -1;
       return (pick === 'weakest_first' ? sa - sb : sb - sa) || strictCompare(a, b);
     });
-  const chosen: ForceBlockId[] = [];
-  let menSent = 0;
+  // A chosen block takes with it only the detachments standing where it stands.
+  const regionOf = (id: ForceBlockId) => state.forceLocations[id]?.locRegion ?? null;
+  const following = (parent: ForceBlockId) =>
+    own.filter((id) => state.forceBlockStates[id]!.fbKind === 'detachment' && state.forceBlockStates[id]!.fbParent === parent && regionOf(id) === regionOf(parent));
+  const menOf = (ids: readonly ForceBlockId[]) => ids.reduce((s, id) => s + (state.forceBlockStates[id]!.fbStrength ?? 0), 0);
+  const going = new Set<ForceBlockId>();
+  const take = (id: ForceBlockId) => {
+    going.add(id);
+    for (const d of following(id)) going.add(d);
+  };
   if (force.force === 'blocks') {
     if (!Number.isSafeInteger(force.count) || force.count < 1) throw new CommandError(['a transfer of blocks names at least one']);
-    for (const id of blocks.slice(0, force.count)) chosen.push(id);
+    for (const id of blocks.slice(0, force.count)) take(id);
   } else {
     if (!Number.isSafeInteger(force.men) || force.men < 1) throw new CommandError(['a transfer of men names at least one man']);
     for (const id of blocks) {
-      if (menSent >= force.men) break;
-      chosen.push(id);
-      menSent += state.forceBlockStates[id]!.fbStrength ?? 0;
+      if (menOf([...going]) >= force.men) break;
+      take(id);
     }
   }
-  const going = new Set(chosen);
-  for (const id of own) if (state.forceBlockStates[id]!.fbKind === 'detachment' && going.has(state.forceBlockStates[id]!.fbParent!)) going.add(id);
   const moved = [...going].sort(strictCompare);
+  const menSent = menOf(moved);
   if (moved.length === 0) return { state, moved, menSent, rule: pick };
   const next: Record<ForceBlockId, PostId | null> = { ...state.forceAssignments };
   for (const id of moved) next[id] = to;
