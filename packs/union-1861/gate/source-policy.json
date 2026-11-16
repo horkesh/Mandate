@@ -1,8 +1,9 @@
 {
-  "banned": [],
-  "weak": [
+  "banned": [
     "DAVIS-RF",
-    "JOHNSTON-1874",
+    "JOHNSTON-1874"
+  ],
+  "weak": [
     "NOTE-confederate-side",
     "NOTE-governments-stores-1861",
     "NOTE-indian-territory-1861-sources",

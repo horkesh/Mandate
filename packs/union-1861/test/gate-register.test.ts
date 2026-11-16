@@ -239,6 +239,36 @@ describe('probes end to end through checkGate, the Union register over the testb
   });
 });
 
+describe('the source policy: the two memoirs are banned as evidence, the research-note pointers are weak (A6; the lead’s ruling)', () => {
+  const policy = JSON.parse(files.read('gate/source-policy.json')!) as { banned: string[]; weak: string[] };
+  const provenance = new Set((JSON.parse(files.read('PROVENANCE.json')!) as { sources: { key: string }[] }).sources.map((s) => s.key));
+  const withPolicy = (citations: string[]) => ({
+    ...overlay(),
+    'gate/source-policy.json': files.read('gate/source-policy.json')!,
+    ...situation((s) => (s.citations = citations.map((source) => ({ source, at: 'a probe' })))),
+  });
+  const kindsAt = (citations: string[]) => loadPack(testbedFiles(withPolicy(citations))).issues.filter((i) => i.file === SIT && (i.kind === 'gate-banned-source' || i.kind === 'gate-weak-sources'));
+
+  it('bans exactly Rise and Fall and the Narrative, and every key it names is a pack source', () => {
+    expect([...policy.banned].sort()).toEqual(['DAVIS-RF', 'JOHNSTON-1874']);
+    for (const key of [...policy.banned, ...policy.weak]) expect(provenance.has(key), key).toBe(true);
+    expect(policy.weak.every((k) => k.startsWith('NOTE-')), 'only the research-note pointers are weak').toBe(true);
+    expect(policy.weak.some((k) => policy.banned.includes(k))).toBe(false);
+  });
+
+  it('a memoir cited as evidence is refused, even beside a primary source', () => {
+    for (const memoir of ['DAVIS-RF', 'JOHNSTON-1874']) {
+      expect(kindsAt([memoir, 'OR']).map((i) => `${i.kind} ${i.at}`), memoir).toEqual(['gate-banned-source citations[0].source']);
+    }
+  });
+
+  it('a research-note pointer alone is refused as weak, and passes beside a primary source', () => {
+    expect(kindsAt(['NOTE-secession-winter-1861']).map((i) => i.kind)).toEqual(['gate-weak-sources']);
+    expect(kindsAt(['NOTE-secession-winter-1861', 'OR'])).toEqual([]);
+    expect(kindsAt(['OR'])).toEqual([]);
+  });
+});
+
 describe('the register is consistent with the situations it names', () => {
   it('every Union situation tagged fugitive-policy that offers `return` lists it as superseded, so it expires with the Second Confiscation Act (B10)', () => {
     const superseded = new Set(topics.flatMap((t) => t.supersededOptions.map((s) => `${s.situation}/${s.option}`)));
