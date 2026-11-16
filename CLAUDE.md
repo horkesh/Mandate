@@ -53,6 +53,8 @@ npm run run:pack -- union-1861 75  # watch the generic scripted leader play a pa
 
 Hooks: `git config core.hooksPath .githooks`. The pre-commit hook checks exactly the staged tree, in a private snapshot when the working tree differs from the index.
 
+Git LFS (lane 0.7l): binaries under `art/` live in Git LFS. Install git-lfs and run `git lfs install --skip-repo` once; `.githooks` already carries LFS's hooks, and the pre-commit hook and CI refuse a binary under `art/` that is not an LFS pointer.
+
 ## Working style
 
 - The owner wants proposals and pushback, not option menus. Recommend one thing and say why.

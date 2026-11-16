@@ -51,6 +51,16 @@ describe('the CI workflow', () => {
     expect(all.determinism).toMatch(/compare-runs\.ts ci-results\/determinism-ubuntu-24\.04 ci-results\/determinism-windows-2025/);
   });
 
+  it('fetches no LFS objects on any checkout, and refuses art pushed into plain git (lane 0.7l)', () => {
+    // Every CI download of an LFS object counts against the owner's bandwidth (docs/design/ASSETS.md 0.7).
+    const checkouts = [...workflow.matchAll(/uses: actions\/checkout@\S+\n((?: {8}.*\n)*)/g)];
+    expect(checkouts.length).toBeGreaterThan(1);
+    for (const m of checkouts) expect(m[1], 'a checkout step').toMatch(/^ {8}with:\n(?: {10}#.*\n)* {10}lfs: false$/m);
+    expect(workflow).not.toMatch(/lfs: true/);
+    expect(workflow).not.toMatch(/git lfs (pull|fetch|checkout)/);
+    expect(all.check).toMatch(/run: npx tsx tools\/lfs-check\.ts --tree HEAD/);
+  });
+
   it('reports the outcome of every step that has an id (honest CI)', () => {
     for (const [name, job] of Object.entries(all)) {
       const ids = [...job.matchAll(/- id: ([a-z_]+)/g)].map((m) => m[1]!);

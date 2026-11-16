@@ -241,7 +241,8 @@ describe('the hook itself', () => {
 
   it('runs this script, and no longer the check on the working tree', () => {
     const commands = hook.split(/\r?\n/).filter((line) => line.trim() !== '' && !line.trim().startsWith('#'));
-    expect(commands).toEqual(['set -e', 'exec node --import tsx tools/staged-check.ts']);
+    // Lane 0.7l: the art check (no binary under art/ in plain git) runs first, on the index, then this script as before.
+    expect(commands).toEqual(['set -e', 'node --import tsx tools/lfs-check.ts --staged', 'exec node --import tsx tools/staged-check.ts']);
   });
 
   // A snapshot has no .git, so this one question about git's index is asked only where there is a repository: in place, and in CI.

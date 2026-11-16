@@ -34,6 +34,9 @@ jobs:
       - id: checkout
         name: Checkout
         uses: actions/checkout@v7
+        with:
+          # Lane 0.7l: no LFS objects until a build or test needs the art; every CI download counts against the owner's bandwidth.
+          lfs: false
 
       - id: node
         name: Set up Node from .nvmrc
@@ -73,6 +76,11 @@ jobs:
         name: npm run check:decisions
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: npm run check:decisions
+
+      - id: lfs_check
+        name: No binary under art/ in plain git (lane 0.7l; what was pushed, so a --no-verify commit is caught)
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npx tsx tools/lfs-check.ts --tree HEAD
 
       - id: determinism_testbed
         name: Determinism run (M2 kernel, testbed, resume from turn 10)
@@ -121,6 +129,7 @@ jobs:
           BOUNDARY: ${{ steps.boundary.outcome }}
           LICENCES: ${{ steps.licences.outcome }}
           DECISIONS: ${{ steps.decisions.outcome }}
+          LFS_CHECK: ${{ steps.lfs_check.outcome }}
           DET_TESTBED: ${{ steps.determinism_testbed.outcome }}
           DET_UNION: ${{ steps.determinism_union.outcome }}
           DET_SEATS: ${{ steps.determinism_seats.outcome }}
@@ -146,6 +155,7 @@ jobs:
             echo "| npm run check:boundary | $BOUNDARY |"
             echo "| npm run check:licences | $LICENCES |"
             echo "| npm run check:decisions | $DECISIONS |"
+            echo "| no binary under art/ in plain git | $LFS_CHECK |"
             echo "| determinism run: testbed | $DET_TESTBED |"
             echo "| determinism run: union-1861 | $DET_UNION |"
             echo "| determinism run: seats layer (testbed) | $DET_SEATS |"
@@ -163,6 +173,9 @@ jobs:
       - id: checkout
         name: Checkout
         uses: actions/checkout@v7
+        with:
+          # Lane 0.7l: no LFS objects (see the check job's checkout).
+          lfs: false
 
       - id: node
         name: Set up Node from .nvmrc
