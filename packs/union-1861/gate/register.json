@@ -316,6 +316,33 @@
           "reason": "held until R4, not refused for ever: exchange, parole, hostages, the Corcoran lot and retaliation are R4 proper's; no option names a captured man's fate until then (R4 battle ruling, draft, point 6; SENSITIVE-HISTORY 3.6 and 4, R4; [GCF 5.1, 5.2])"
         }
       ]
+    },
+    {
+      "id": "riots-and-mobs",
+      "class": "civil-liberties",
+      "window": { "from": "1861-04-19", "to": "1862-12-31" },
+      "placements": ["event", "text"],
+      "status": "open",
+      "refused": [
+        {
+          "optionPattern": "(?:incite|rouse|stir|organi[sz]e)[a-z_-]*(?:mobs?|riots?|crowds?)",
+          "labelPattern": "\\b(?:incit|rous|stir(?:ring)? up|organi[sz])\\w*\\b.{0,25}\\b(?:mobs?|riots?|crowds?)\\b",
+          "reason": "no seat raises a mob: a rally or a riot is an event from its causes, never a lever (0074; SENSITIVE-HISTORY 3.6)"
+        }
+      ]
+    },
+    {
+      "id": "northern-racism-cost",
+      "class": "slavery-and-emancipation",
+      "window": { "from": "1861-03-04", "to": "1862-12-31" },
+      "placements": ["derived", "text"],
+      "status": "open",
+      "refused": [
+        {
+          "labelPattern": "\\beconomic (?:concern|worry|worries|anxiety)\\b",
+          "reason": "the racist opposition to emancipation and Black enlistment is named as racist opposition, never framed as a neutral \"economic concern\" (SENSITIVE-HISTORY 3.2, northern-racism-cost, refused)"
+        }
+      ]
     }
   ]
 }
