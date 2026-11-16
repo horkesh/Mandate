@@ -810,6 +810,16 @@
       "copyUsed": "docs/research/2026-11-15-people-and-posts-1861.md",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "EPP-SUMTER",
+      "title": "J. F. Epperson, Fort Sumter chronology and document pages: transcriptions of the March and April 1861 papers (Scott's and Seward's memoranda, Lincoln's reply to Seward, the cabinet's answers), as read by research lane 1.10 (numbers-and-facts-1861, Appendix C)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "www.jfepperson.org/sumter.htm and its document pages, read 2026-11-16",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

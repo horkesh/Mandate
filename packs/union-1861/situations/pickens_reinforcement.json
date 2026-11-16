@@ -1,0 +1,96 @@
+{
+  "id": "pickens_reinforcement",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.pickens_reinforcement.title",
+  "text": "situation.pickens_reinforcement.text",
+  "earliest": "1861-03-05",
+  "event": {
+    "dayAtLeast": 1
+  },
+  "railroad": "the premise: the January truce, Slemmer's garrison and Captain Adams's ships offshore are present at the start, and the president gave his verbal order on 5 March (0042)",
+  "options": [
+    {
+      "id": "give_up_both",
+      "label": "situation.pickens_reinforcement.option.give_up_both",
+      "displayKey": 1,
+      "proposedBy": [
+        "scott_winfield"
+      ],
+      "honours": [
+        "conciliation",
+        "caution"
+      ],
+      "appearsWhen": {
+        "clockAtLeast": 23
+      },
+      "effects": [
+        {
+          "setFlag": "pickens_given_up"
+        }
+      ]
+    },
+    {
+      "id": "land_company",
+      "label": "situation.pickens_reinforcement.option.land_company",
+      "displayKey": 2,
+      "proposedBy": [
+        "bates_edward",
+        "seward_william_h",
+        "chase_salmon_p"
+      ],
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "effects": [
+        {
+          "setFlag": "pickens_landing_ordered"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.pickens_reinforcement.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "land_company"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_general_in_chief"
+    ],
+    "recommends": [
+      "give_up_both"
+    ],
+    "reasons": [
+      {
+        "kind": "caution",
+        "weight": 700
+      }
+    ],
+    "confidence": 600
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "a decision on a fort and a truce; no gate topic"
+  },
+  "citations": [
+    {
+      "source": "ORN",
+      "at": "I-4 pp. 109 to 110 (Adams to Welles, 1 April: he will not land the company under an Army order that breaks the truce)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "2.1, 2.3; design S2"
+    },
+    {
+      "source": "NOTE-march-1861-facts",
+      "at": "3; des. 5 to 8"
+    }
+  ]
+}

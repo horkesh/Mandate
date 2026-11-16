@@ -1,0 +1,89 @@
+{
+  "id": "seward_memorandum",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.seward_memorandum.title",
+  "text": "situation.seward_memorandum.text",
+  "earliest": "1861-04-01",
+  "event": {
+    "dayAtLeast": 27
+  },
+  "railroad": "the Secretary of State's own paper of 1 April, a bid for authority (0040); seat initiatives do not exist yet (gate D4), so it arrives on its date until his seat can take the initiative",
+  "subjects": [
+    "seward_william_h"
+  ],
+  "options": [
+    {
+      "id": "accept_direction",
+      "label": "situation.seward_memorandum.option.accept_direction",
+      "displayKey": 1,
+      "proposedBy": [
+        "seward_william_h"
+      ],
+      "honours": [
+        "conciliation"
+      ],
+      "effects": [
+        {
+          "setFlag": "seward_directs_policy"
+        }
+      ]
+    },
+    {
+      "id": "answer_in_person",
+      "label": "situation.seward_memorandum.option.answer_in_person",
+      "displayKey": 2,
+      "proposedBy": [
+        "lincoln_abraham"
+      ],
+      "honours": [
+        "duty"
+      ],
+      "effects": [
+        {
+          "setFlag": "seward_answered"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.seward_memorandum.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "answer_in_person"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_state",
+      "us_president_secretary"
+    ],
+    "recommends": [
+      "answer_in_person"
+    ],
+    "reasons": [
+      {
+        "kind": "duty",
+        "weight": 500
+      }
+    ],
+    "confidence": 300
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "a cabinet officer bids to direct policy; no gate topic"
+  },
+  "citations": [
+    {
+      "source": "EPP-SUMTER",
+      "at": "Seward's \"Some Thoughts for the President's Consideration\" and Lincoln's reply, both 1 April 1861"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "2.4"
+    }
+  ]
+}

@@ -229,18 +229,19 @@ const UNION_BANDS: Record<string, GateBand> = {
   // The two opening goals: the Charleston command's plan goes ahead; the Washington garrison's holds, so it is reviewed and approved.
   ...planBands({ drafts: 2, reviewed: 1, wentAhead: 1, goalFit: 0, supply: 2 }),
   'seats.defaulted': notHere('every request is answered in this run; the silent-seats exercise run fires it'),
-  // Lane 1.11: the opening of the war by each side's decision (S01, the other side's opening, the notice of the first shot, S09's call).
-  'situations.decided': around(3),
+  // Lane 1.11: the war's opening by each side's decision (S01, the other side's opening, the notice of the first shot, S09's call),
+  // and the spring's ungated decisions (S02, S03, S06, S07, S10).
+  'situations.decided': around(8),
   'situations.delegated': notHere('no authored Union situation in this window names a delegate as its historical default; the testbed run fires it'),
-  'situations.fired': around(4),
+  'situations.fired': around(9),
   'situations.notice_reports': around(1),
   'situations.noticed': around(1),
   'situations.options_changed': around(3),
   'situations.orders': around(24),
   'situations.proposals': notHere('the authored opening situations propose no change of side yet; the testbed run fires it'),
   'situations.resurfaced': around(2),
-  'situations.staff_lines': around(3),
-  'situations.surfaced': around(4),
+  'situations.staff_lines': around(8),
+  'situations.surfaced': around(9),
   // S09's call: every governor called; the free and loyal states' governors answer, five refuse, and the ninety-day men go home.
   'recruitment.called': around(24),
   'recruitment.answered': around(19),
