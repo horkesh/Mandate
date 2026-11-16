@@ -230,6 +230,16 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.12 (rule seats):** no rule seat calls for regiments, so recruitment's mechanics are QUIET in the reference runs, each with its driving test. The principals need a call policy.
   - **Lane 1.11 (situations and data):** the president's call (S09) is a situation, but a situation option cannot yet issue a call; it would go through `dispatchOrder` like a goal. Union `state_autonomy` is not in the pack's values vocabulary: data entry needs it before the call terms can offend it.
   - **1B (economy):** the term's effect on the holding side's regional capacity and supply waits for an economy. Today the term is derived and its arrivals are State.
+
+- From lane 1.4's report (`notes/lane-1.4-operations.md`, on `phase1-operations` while under review), by lane:
+  - **Lane 1.4b (a small follow-up after lane 1.7):** detachments in play (garrisons and landings below the force block), which need lane 1.7's block creation.
+  - **Lane 1.14:** McClellan's plan-versus-action gap. Drafting and execution already read his boldness separately; add a second term only if calibration shows the gap too narrow.
+  - **1B:** freelancing (a seat initiative that sets a man's own goal); troops embarked and carried by sea; Navy-channel battle news (combat ignores ships); an axis standing off from an enemy its commander will not attack (the siege method).
+  - **Lane 1.12:** rule seats must reappoint a post the battle model leaves vacant, using lane 1.5's appoint verb.
+- From the gate reviewer's lane 1.5 verdict (`review-gate-1861.md`, the end), by lane:
+  - **Lane 1.5b, which must land before any `fugitive-policy` row:** G-1.5a to G-1.5e, the practice-clash term, and the lever sweep treating a delegated gated decision as the delegate's choice.
+  - **Lane 1.6:** the validator refuses a bloc made up of a protected group, so `address` can never reach one.
+  - **Lane 1.11:** enter no `fugitive-policy` rows until lane 1.5b merges.
 - From lane 0.9, plan review: preview an edited route and its distance before it is sent. A distant waypoint can produce a route the player did not mean.
 - Tripwire measurements cover only the RX 7800 XT; integrated GPUs, the Steam Deck and Electron's Chromium are untested, and WebGPU and an OffscreenCanvas worker bake are untried. The prototype points Playwright 1.65 at the installed chromium-1234 (`CHROMIUM_PATH` overrides); adopting Playwright for screenshots means `npx playwright install`, a browser download that is the owner's call.
 
