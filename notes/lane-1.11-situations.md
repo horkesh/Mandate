@@ -27,7 +27,7 @@ Each state's act fires a pack-set delay after the call reaches its governor (`ca
 | S14 | `missouri_arsenal` | live; `back_harney` and `back_lyon` |
 | S15 | `western_virginia` | live; `cross_river` and `recognise`, in separate groups |
 | S20 | `special_session` | live; `ask_war_footing` only |
-| S11 | none | waits on Virginia's secession notice being signed |
+| S11 | `gosport_yard` | live; raised by Virginia's secession notice; `defend` and `remove` (Welles's orders of 10 to 16 April). The order to hold the yard is a flag only: a navy yard is not a field post, so the goal path refuses it (`not_field_post`) until installations have holders who take orders (1B). `destroy_rest` has no advocate: the commandant burned the yard on his own (the inaction). |
 | S17 | none | waits on lane 1.5b's merge: options and inaction each carry a `policy` row (`fugitive-policy`), signed in `gated-rows.test.ts` |
 | S18 | none | waits on an advocate for S12's suspension |
 | S04, S05, S08, S16, S19, S21 | none | held for the research pass after lane 1.11a's data entry (the lead's ruling) |
@@ -40,11 +40,13 @@ Notices:
   - `kentucky_neutrality_proclaimed` (35 days after);
   - `missouri_provisional_government` (106 days after);
   - `baltimore_route_closed` (4 days after the call reaches Massachusetts).
+- **Live and signed by the gate reviewer:**
+  - the four secessions (`cause-of-secession`), each a delay after the call reaches its government: Virginia 2 days, Arkansas and Tennessee 21, North Carolina 35;
+  - the Indian Territory acts: the posts given up, the Confederate act of 21 May (a hook), the Creek, Choctaw and Chickasaw treaties, and the Cherokee neutrality (0069, 0070, with the reviewer's route notes);
+  - `pratt_street_deaths` (`civilian-deaths-1861`, actingSide union) and `mcclellan_proclamation` (`fugitive-policy`, text).
 - **Drafts awaiting the gate reviewer:**
-  - the four secessions (Virginia, Arkansas, Tennessee and North Carolina; `cause-of-secession`);
-  - the Indian Territory acts: posts given up, the Confederate act of 21 May as a hook, and the Creek treaty (the Choctaw and Chickasaw treaties and the Cherokee neutrality are signed and live);
-  - `pratt_street_deaths` and `camp_jackson_deaths` (`civilian-deaths-1861`, each naming its acting side);
-  - `mcclellan_proclamation` (`fugitive-policy`, text).
+  - `camp_jackson_deaths`: attributed to Frost's protest (OR I-3 p. 7), with no count; the count and a Missouri State Archives source row go to the research list;
+  - `black_volunteer_offers`: Dodson's offer only (OR III-1 p. 107); the Boston, Philadelphia and Providence offers and the two refusals rest on an unlicensed mirror and go to the research list.
 
 ## Options dropped for want of a sourced advocate (0041; the research pass)
 

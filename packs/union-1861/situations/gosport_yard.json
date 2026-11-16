@@ -1,0 +1,95 @@
+{
+  "id": "gosport_yard",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.gosport_yard.title",
+  "text": "situation.gosport_yard.text",
+  "earliest": "1861-04-16",
+  "event": {
+    "fired": "virginia_secedes"
+  },
+  "knowledge": {
+    "knows": {
+      "subjectKind": "situation",
+      "subjectId": "virginia_secedes"
+    }
+  },
+  "options": [
+    {
+      "id": "defend",
+      "label": "situation.gosport_yard.option.defend",
+      "displayKey": 1,
+      "proposedBy": [
+        "welles_gideon"
+      ],
+      "honours": [
+        "union",
+        "order"
+      ],
+      "effects": [
+        {
+          "setFlag": "gosport_hold_ordered"
+        }
+      ]
+    },
+    {
+      "id": "remove",
+      "label": "situation.gosport_yard.option.remove",
+      "displayKey": 2,
+      "proposedBy": [
+        "welles_gideon"
+      ],
+      "honours": [
+        "caution"
+      ],
+      "effects": [
+        {
+          "setFlag": "gosport_removal_ordered"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.gosport_yard.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "defend"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_navy"
+    ],
+    "recommends": [
+      "defend"
+    ],
+    "reasons": [
+      {
+        "kind": "union",
+        "weight": 600
+      }
+    ],
+    "confidence": 600
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "a navy yard and its ships; no gate topic"
+  },
+  "citations": [
+    {
+      "source": "ORN",
+      "at": "I-4 pp. 272 to 278 (Welles's orders of 10, 11, 12 and 16 April to make the shipping movable and to prepare the Merrimack; the commandant's course)"
+    },
+    {
+      "source": "SecNav1861",
+      "at": "pp. 86 to 87 (the yard abandoned and burned on 20 April)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "3.6, 4.4"
+    }
+  ]
+}
