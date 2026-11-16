@@ -147,6 +147,13 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - Research needed for situations and document templates (presentation lane, out of scope there): returns, endorsements and forms of address in 1861–62 War and Navy Department paperwork.
 - March 1861 facts note: Lincoln's health was strained on 28 March and 1 April (attention modifiers, 0025); the Pickens expedition was paid from the State Department's secret-service fund (a lever). Verified since: the Senate Executive Journal and Fox's account (people and posts research, 60f291c). Still open: Northern papers via HathiTrust (also in the parked verification item).
 
+- From lane 1.8's closing report (`notes/lane-1.8-gate.md`, on `claude/phase1-gate-1861-9c44ea` until merged), inputs for briefs not yet written:
+  - **Lane 1.10 (research):** the 12 needs-source items at the end of that note. First come Lynde's surrender of 27 July 1861, the Camp Jackson and Sumter terms, Bull Run's captured share, and Corcoran's capture.
+  - **Lane 1.11 (situations):** S17's catalogue label "Order them returned under the 1850 law" is now refused and must say "return them to slavery". The register expects the ids `fort_monroe_arrivals` (S17) and `confiscation_and_militia_acts` (the Second Confiscation Act situation). The proximity rule is now strict for every protected group. The Pratt Street deaths are their own notice, tagged `civilian-deaths-1861` (atrocity-class), never a tag on S12's decision, whose options may move measures (the lead's ruling).
+  - **Lane 1.7 (men and regions):** four protected field ids are reserved, for the census population and for people who have reached Union lines.
+  - **Lane 1.3 (combat):** a kernel test that nothing moves a person out of `captured`.
+  - **1B, R6:** lane 1.8 proposes splitting `guerrilla-war-west` into itself and an atrocity-class `executions-and-reprisals`, with no player option to confirm an execution; the gate reviewer rules.
+  - **1B, tooling:** the gate register schema has no `sources` field, so sources sit in each signature's reason. Add the field, resolved against `PROVENANCE.json`.
 **Phase 2 (desk and map)**
 - From lane 0.9, plan review: preview an edited route and its distance before it is sent. A distant waypoint can produce a route the player did not mean.
 - Tripwire measurements cover only the RX 7800 XT; integrated GPUs, the Steam Deck and Electron's Chromium are untested, and WebGPU and an OffscreenCanvas worker bake are untried. The prototype points Playwright 1.65 at the installed chromium-1234 (`CHROMIUM_PATH` overrides); adopting Playwright for screenshots means `npx playwright install`, a browser download that is the owner's call.
