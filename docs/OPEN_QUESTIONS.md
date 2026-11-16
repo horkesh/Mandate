@@ -124,6 +124,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - Maps and Sets are unguarded: `deepFreeze` (`tick/freeze.ts`) does not freeze their contents. Lanes 1.1 and 1.2 are told to put no Map or Set in State; a check that enforces it would close this.
   - Gaps that predate the branch: an alias with a generic default is not read, and keys of an inline object type are never classified.
   - A documented limit: a shallow copy shares its nested values, so `{ ...state.ctl }[id].push(f)` writes into State unflagged.
+  - Also unfollowed: `?? makeEmpty()` and `|| {}` (from the same review's re-check).
 
 **Phase 1**
 - From the standing reviewer's review of the close-out lane (`review-phase0-close-out.md`), Phase 1 combat: a trapped garrison at 0‰ with nowhere to retreat stays forever, as with the 600 regulars inside an enemy-held Washington. It needs a surrender or capture rule. **Lane 1.3** (a trapped garrison surrenders).
@@ -147,6 +148,27 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - Research needed for situations and document templates (presentation lane, out of scope there): returns, endorsements and forms of address in 1861–62 War and Navy Department paperwork.
 - March 1861 facts note: Lincoln's health was strained on 28 March and 1 April (attention modifiers, 0025); the Pickens expedition was paid from the State Department's secret-service fund (a lever). Verified since: the Senate Executive Journal and Fox's account (people and posts research, 60f291c). Still open: Northern papers via HathiTrust (also in the parked verification item).
 
+- From lane 1.8's closing report (`notes/lane-1.8-gate.md`, on `claude/phase1-gate-1861-9c44ea` until merged), inputs for briefs not yet written:
+  - **Lane 1.10 (research):** the 12 needs-source items at the end of that note. First come Lynde's surrender of 27 July 1861, the Camp Jackson and Sumter terms, Bull Run's captured share, and Corcoran's capture.
+  - **Lane 1.11 (situations):** S17's catalogue label "Order them returned under the 1850 law" is now refused and must say "return them to slavery". The register expects the ids `fort_monroe_arrivals` (S17) and `confiscation_and_militia_acts` (the Second Confiscation Act situation). The proximity rule is now strict for every protected group. The Pratt Street deaths are their own notice, tagged `civilian-deaths-1861` (atrocity-class), never a tag on S12's decision, whose options may move measures (the lead's ruling).
+  - **Lane 1.11 (situations), from lane 1.8's notes B.2 item 2 and B.5:** D5 taint follows dependence, not tags (0060). If S12's trigger reads the Pratt Street deaths notice, S12 is tainted whatever its tag. So S12's event condition must read the route's closure in State, and the deaths notice fires from the same cause beside it.
+  - **Lane 1.7 (men and regions):** four protected field ids are reserved, for the census population and for people who have reached Union lines.
+  - **Lane 1.3 (combat):** a kernel test that nothing moves a person out of `captured`.
+  - **1B, R6:** lane 1.8 proposes splitting `guerrilla-war-west` into itself and an atrocity-class `executions-and-reprisals`, with no player option to confirm an execution; the gate reviewer rules.
+  - **1B, tooling:** the gate register schema has no `sources` field, so sources sit in each signature's reason. Add the field, resolved against `PROVENANCE.json`.
+- From lane 1.1's report (`notes/lane-1.1-people.md`, on `claude/phase1-people-bf3c25` until merged), by lane:
+  - **Lane 1.14 (done check and calibration):** goal boldness is set at hold 400 and advance 600, as pack rules. At 200 and 700, an average man with no values objected to an ordinary advance. A calibration starting point, not a finding.
+  - **Lane 1.11 (situations and data entry):** the Union pack has a fourth rank kind, `state` (state commissions), and kinds are assigned from the rank ids. Check that assignment against sources at data entry.
+  - **Lane 1.6 (politics):** `context.oversight` and `context.leaderCredibility` are plain pack values until 1.6 derives credibility (FOUNDATION section 8).
+  - **Lane 1.4 (operations and reports):** `orderResponses` grows with every relay hop and needs pruning, like knowledge.
+  - **Lane 1.5 (people's verbs):** regard between people has no format column yet (the lead's ruling), and its default is the pack rule `regardUnknown` (0 in both packs). `applyPeopleChanges` also does not check a proposed rank against the vocabulary; the reviewer may make that a should-fix for 1.1 instead.
+  - **When 1.1 merges (steward):** close the "values empty" lines (lanes 0.5 and 0.8, quiet by design on v2 packs) and the trait-adapter stand-in lines.
+- From the reviews of the 1861 gate register, lane 1.1 and the scanner aliases (`review-gate-register-1861.md`, `review-lane-1.1.md`, `review-scanner-aliases.md`):
+  - **Stand-ins (Phase 1):** `context.oversight` is a constant 500, owned by lane 1.4 (it should vary with distance and the telegraph); `context.leaderCredibility` is owned by lane 1.6. Lane 1.1 labels both STAND-IN.
+  - **Before lane 1.11's first situation merges (gate mechanics S1):** a camelCase field id passes every field signature and protected field (`enslavedPopulation`, `capturedSlaves`, `recruitment` aimed at `nationCherokee`). The fix is a lowercase rule for `propose.field`, and for option ids, in the situation schema (`packages/pack-format/src/situations.ts`), or a kernel test that every `*_FIELD` id is lowercase. Owner: lane 1.8's fix pass.
+  - **Lane 1.14 (calibration), the reviewer's tabulation on the Union rules at hold 400 and advance 600:** nobody without values or regard reaches plain compliance (the highest willingness is 55, against a threshold of 150); every order lands on reservations or an objection, flipping at a boldness gap of about 100; with boldness drawn at 500 ± 200, about 40% of men object to an advance and 40% to a hold. Calibrate against a pushback band.
+  - **Lane 1.11 (data entry):** check the `state_` rank-kind rows, assigned by id prefix. The reviewer suspects, unverified, that Price's 1847 brigadier generalcy and the Mexican War volunteer commissions are `volunteer`, not `state`.
+  - **Gate mechanics, nits for lane 1.8's fix pass:** option ids pass by word order (`swap_prisoners`), a digit (`raise_1st_colored_regiment`), camelCase, and `return_fugitives` or `send_back_fugitives`; and a sign-off hides an untagged trigger hit (`gate-untagged` fires only without a sign-off).
 **Phase 2 (desk and map)**
 - From lane 0.9, plan review: preview an edited route and its distance before it is sent. A distant waypoint can produce a route the player did not mean.
 - Tripwire measurements cover only the RX 7800 XT; integrated GPUs, the Steam Deck and Electron's Chromium are untested, and WebGPU and an OffscreenCanvas worker bake are untried. The prototype points Playwright 1.65 at the installed chromium-1234 (`CHROMIUM_PATH` overrides); adopting Playwright for screenshots means `npx playwright install`, a browser download that is the owner's call.
