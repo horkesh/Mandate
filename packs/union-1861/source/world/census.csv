@@ -1,0 +1,206 @@
+region,enslaved_population,sources,notes
+washington,3185,CEN1860-POP District of Columbia Table 2 p.588 leaf n707,
+northern_virginia,4502,CEN1860-POP Virginia Table 2 p.516 leaf n635,
+manassas,2356,CEN1860-POP Virginia Table 2 p.517 leaf n636,
+loudoun_fauquier,19476,CEN1860-POP Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.516 leaf n635,
+culpeper_orange,17183,CEN1860-POP Virginia Table 2 p.516 leaf n635 / Virginia Table 2 p.517 leaf n636,
+charlottesville,37227,CEN1860-POP Virginia Table 2 p.516 leaf n635 / Virginia Table 2 p.517 leaf n636,
+fredericksburg,14773,CEN1860-POP Virginia Table 2 p.517 leaf n636,
+virginia_necks,41957,CEN1860-POP Virginia Table 2 p.518 leaf n637 / Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.516 leaf n635,
+hanover,20155,CEN1860-POP Virginia Table 2 p.516 leaf n635,
+richmond,20041,CEN1860-POP Virginia Table 2 p.516 leaf n635,
+chesterfield,13757,CEN1860-POP Virginia Table 2 p.516 leaf n635 / Virginia Table 2 p.517 leaf n636,caveats: input-flag:Virginia:Chesterfield
+peninsula,11851,CEN1860-POP Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.516 leaf n635 / Virginia Table 2 p.518 leaf n637,caveats: input-flag:Virginia:Charles City
+fort_monroe,2417,CEN1860-POP Virginia Table 2 p.516 leaf n635,
+norfolk,12190,CEN1860-POP Virginia Table 2 p.517 leaf n636,
+southside_tidewater,28355,CEN1860-POP Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.516 leaf n635,
+petersburg,12774,CEN1860-POP Virginia Table 2 p.516 leaf n635,
+southside,70445,CEN1860-POP Virginia Table 2 p.516 leaf n635 / Virginia Table 2 p.517 leaf n636,
+danville,42676,CEN1860-POP Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.516 leaf n635,
+lynchburg,47683,CEN1860-POP Virginia Table 2 p.516 leaf n635 / Virginia Table 2 p.517 leaf n636,
+harpers_ferry,3960,CEN1860-POP Virginia Table 2 p.516 leaf n635,
+lower_valley,7378,CEN1860-POP Virginia Table 2 p.516 leaf n635 / Virginia Table 2 p.517 leaf n636,caveats: input-flag:Virginia:Frederick
+middle_valley,3178,CEN1860-POP Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.518 leaf n637,
+upper_valley,8003,CEN1860-POP Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.516 leaf n635,
+rockbridge_highlands,9512,CEN1860-POP Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.516 leaf n635,
+roanoke_new_river,10675,CEN1860-POP Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.516 leaf n635 / Virginia Table 2 p.518 leaf n637,caveats: input-flag:Virginia:Grayson
+southwest_virginia,7295,CEN1860-POP Virginia Table 2 p.518 leaf n637 / Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.516 leaf n635,caveats: input-flag:Virginia:Washington
+wheeling,177,CEN1860-POP Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.516 leaf n635 / Virginia Table 2 p.518 leaf n637,caveats: input-flag:Virginia:Marshall | input-flag:Virginia:Hancock
+grafton,1020,CEN1860-POP Virginia Table 2 p.518 leaf n637 / Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.516 leaf n635,
+parkersburg,474,CEN1860-POP Virginia Table 2 p.518 leaf n637 / Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.516 leaf n635,
+kanawha,3915,CEN1860-POP Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.516 leaf n635 / Virginia Table 2 p.518 leaf n637,
+wv_central,1004,CEN1860-POP Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.518 leaf n637 / Virginia Table 2 p.516 leaf n635,caveats: input-flag:Virginia:Webster
+wv_south,3547,CEN1860-POP Virginia Table 2 p.517 leaf n636 / Virginia Table 2 p.516 leaf n635 / Virginia Table 2 p.518 leaf n637,caveats: input-flag:Virginia:McDowell
+potomac_highlands,2530,CEN1860-POP Virginia Table 2 p.516 leaf n635 / Virginia Table 2 p.517 leaf n636,
+eastern_shore,33336,CEN1860-POP Maryland Table 2 p.214 leaf n333 / Virginia Table 2 p.516 leaf n635 / Virginia Table 2 p.517 leaf n636,
+delaware,1798,CEN1860-POP Delaware Table 2 p.46 leaf n165,
+baltimore,2218,"CEN1860-POP Maryland Table 3, Total Baltimore line, p.214 leaf n333",city figure from Table 3 (Total Baltimore); Table 2 prints one 'Baltimore' row holding city and county
+baltimore_county,8627,"CEN1860-POP Maryland Table 2 'Baltimore' row minus the Table 3 city line (derived), p.214 leaf n333 / Maryland Table 2 p.214 leaf n333","county remainder = Table 2 'Baltimore' row minus the Table 3 city line (derived, not printed) | caveats: input-flag:Maryland:Howard"
+southern_maryland,40622,CEN1860-POP Maryland Table 2 p.214 leaf n333,
+frederick_md,8664,CEN1860-POP Maryland Table 2 p.214 leaf n333,
+western_maryland,2101,CEN1860-POP Maryland Table 2 p.214 leaf n333,
+harrisburg,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,free state: the Recapitulation prints a dotted (zero) slave cell
+york_adams,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,free state: the Recapitulation prints a dotted (zero) slave cell
+cumberland_valley_pa,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,free state: the Recapitulation prints a dotted (zero) slave cell
+philadelphia,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,free state: the Recapitulation prints a dotted (zero) slave cell
+southeast_pa,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,free state: the Recapitulation prints a dotted (zero) slave cell
+pittsburgh,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,free state: the Recapitulation prints a dotted (zero) slave cell
+pennsylvania_north,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,Pennsylvania whole state from the Recapitulation (no county table read)
+new_jersey,18,CEN1860-POP New Jersey Table 2 p.314 leaf n433,remainder of New Jersey after the counties other regions claim
+new_york,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,New York whole state from the Recapitulation (no county table read)
+new_england,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,Connecticut whole state from the Recapitulation (no county table read) | Rhode Island whole state from the Recapitulation (no county table read) | Massachusetts whole state from the Recapitulation (no county table read) | Vermont whole state from the Recapitulation (no county table read) | New Hampshire whole state from the Recapitulation (no county table read) | Maine whole state from the Recapitulation (no county table read)
+albemarle_pamlico,56948,CEN1860-POP North Carolina Table 2 p.358 leaf n477 / North Carolina Table 2 p.359 leaf n478,caveats: input-flag:North Carolina:Gates | input-flag:North Carolina:Hyde
+new_bern,15070,CEN1860-POP North Carolina Table 2 p.358 leaf n477,
+wilmington,13962,CEN1860-POP North Carolina Table 2 p.358 leaf n477,"New Hanover includes the printed 'Lillington' row (the part of New Hanover an 1859 act proposed as a county; never created), counted here with New Hanover"
+cape_fear,35811,CEN1860-POP North Carolina Table 2 p.358 leaf n477 / North Carolina Table 2 p.359 leaf n478,
+nc_coastal_plain,60376,CEN1860-POP North Carolina Table 2 p.359 leaf n478 / North Carolina Table 2 p.358 leaf n477,
+raleigh,45252,CEN1860-POP North Carolina Table 2 p.359 leaf n478 / North Carolina Table 2 p.358 leaf n477,
+greensboro,29496,CEN1860-POP North Carolina Table 2 p.358 leaf n477 / North Carolina Table 2 p.359 leaf n478,
+salisbury_charlotte,23156,CEN1860-POP North Carolina Table 2 p.359 leaf n478 / North Carolina Table 2 p.358 leaf n477,
+nc_sandhills,20160,CEN1860-POP North Carolina Table 2 p.359 leaf n478 / North Carolina Table 2 p.358 leaf n477,
+nc_foothills,25319,CEN1860-POP North Carolina Table 2 p.358 leaf n477 / North Carolina Table 2 p.359 leaf n478,caveats: input-flag:North Carolina:Ashe
+nc_mountains,5509,CEN1860-POP North Carolina Table 2 p.358 leaf n477 / North Carolina Table 2 p.359 leaf n478,Transylvania was created after the 1860 enumeration: its people are inside parent counties in Kennedy | Clay was created after the 1860 enumeration: its people are inside parent counties in Kennedy | Mitchell was created after the 1860 enumeration: its people are inside parent counties in Kennedy | caveats: post-1860-county:Transylvania | post-1860-county:Clay | post-1860-county:Mitchell
+charleston,37290,CEN1860-POP South Carolina Table 2 p.452 leaf n571,
+lowcountry,64837,CEN1860-POP South Carolina Table 2 p.452 leaf n571,
+georgetown_pee_dee,63796,CEN1860-POP South Carolina Table 2 p.452 leaf n571,
+sc_midlands,67073,CEN1860-POP South Carolina Table 2 p.452 leaf n571,
+columbia_sc,70496,CEN1860-POP South Carolina Table 2 p.452 leaf n571,
+sc_upstate_west,53371,CEN1860-POP South Carolina Table 2 p.452 leaf n571,
+sc_upstate_east,45543,CEN1860-POP South Carolina Table 2 p.452 leaf n571,
+savannah,14807,CEN1860-POP Georgia Table 2 p.72 leaf n191,
+ga_coast,22850,CEN1860-POP Georgia Table 2 p.72 leaf n191 / Georgia Table 2 p.73 leaf n192,
+augusta,50904,CEN1860-POP Georgia Table 2 p.73 leaf n192 / Georgia Table 2 p.72 leaf n191,
+ga_northeast,56480,CEN1860-POP Georgia Table 2 p.73 leaf n192 / Georgia Table 2 p.72 leaf n191,
+ga_mountains,4945,CEN1860-POP Georgia Table 2 p.73 leaf n192 / Georgia Table 2 p.72 leaf n191,
+ga_dalton,7773,CEN1860-POP Georgia Table 2 p.72 leaf n191 / Georgia Table 2 p.73 leaf n192,
+ga_etowah,21177,CEN1860-POP Georgia Table 2 p.72 leaf n191 / Georgia Table 2 p.73 leaf n192,
+atlanta,2955,CEN1860-POP Georgia Table 2 p.72 leaf n191,
+ga_atlanta_east,45536,CEN1860-POP Georgia Table 2 p.72 leaf n191 / Georgia Table 2 p.73 leaf n192,
+ga_atlanta_west,58300,CEN1860-POP Georgia Table 2 p.72 leaf n191 / Georgia Table 2 p.73 leaf n192,
+ga_chattahoochee,40352,CEN1860-POP Georgia Table 2 p.73 leaf n192 / Georgia Table 2 p.72 leaf n191,
+macon,53344,CEN1860-POP Georgia Table 2 p.72 leaf n191 / Georgia Table 2 p.73 leaf n192,
+ga_southwest,64311,CEN1860-POP Georgia Table 2 p.73 leaf n192 / Georgia Table 2 p.72 leaf n191,
+ga_south,18464,CEN1860-POP Georgia Table 2 p.73 leaf n192 / Georgia Table 2 p.72 leaf n191,
+pensacola,1961,CEN1860-POP Florida Table 2 p.54 leaf n173,
+west_florida,8345,CEN1860-POP Florida Table 2 p.54 leaf n173,caveats: input-flag:Florida:Walton | input-flag:Florida:Calhoun
+tallahassee,27511,CEN1860-POP Florida Table 2 p.54 leaf n173,caveats: input-flag:Florida:Lafayette
+northeast_florida,11207,CEN1860-POP Florida Table 2 p.54 leaf n173,
+fl_peninsula_north,11430,CEN1860-POP Florida Table 2 p.54 leaf n173,caveats: input-flag:Florida:Hernando
+fl_peninsula_south,840,CEN1860-POP Florida Table 2 p.54 leaf n173,Polk was created after the 1860 enumeration: its people are inside parent counties in Kennedy | caveats: post-1860-county:Polk
+key_west,451,CEN1860-POP Florida Table 2 p.54 leaf n173,
+mobile,15090,CEN1860-POP Alabama Table 2 p.8 leaf n127,
+al_southwest,30611,CEN1860-POP Alabama Table 2 p.8 leaf n127,
+al_wiregrass,40233,CEN1860-POP Alabama Table 2 p.8 leaf n127,caveats: input-flag:Alabama:Dale
+montgomery,23710,CEN1860-POP Alabama Table 2 p.8 leaf n127,
+al_black_belt,115119,CEN1860-POP Alabama Table 2 p.8 leaf n127,
+al_west,67133,CEN1860-POP Alabama Table 2 p.8 leaf n127,
+al_east,57547,CEN1860-POP Alabama Table 2 p.8 leaf n127,
+al_hills,31179,CEN1860-POP Alabama Table 2 p.8 leaf n127,
+al_valley_west,25726,CEN1860-POP Alabama Table 2 p.8 leaf n127,
+al_valley_east,28732,CEN1860-POP Alabama Table 2 p.8 leaf n127,
+corinth,4981,CEN1860-POP Mississippi Table 2 p.270 leaf n389,
+ms_northeast,79128,CEN1860-POP Mississippi Table 2 p.270 leaf n389,
+holly_springs,47112,CEN1860-POP Mississippi Table 2 p.270 leaf n389,
+yazoo_delta,48328,CEN1860-POP Mississippi Table 2 p.270 leaf n389,caveats: input-flag:Mississippi:Sunflower | input-flag:Mississippi:Washington
+ms_central_north,81183,CEN1860-POP Mississippi Table 2 p.270 leaf n389,caveats: input-flag:Mississippi:Yalobusha
+jackson_ms,22363,CEN1860-POP Mississippi Table 2 p.270 leaf n389,
+vicksburg,13763,CEN1860-POP Mississippi Table 2 p.270 leaf n389,
+ms_southwest,72733,CEN1860-POP Mississippi Table 2 p.270 leaf n389,caveats: input-flag:Mississippi:Amite
+ms_east,45581,CEN1860-POP Mississippi Table 2 p.270 leaf n389,
+ms_south,21459,CEN1860-POP Mississippi Table 2 p.270 leaf n389,caveats: input-flag:Mississippi:Hancock
+new_orleans,21844,CEN1860-POP Louisiana Table 2 p.194 leaf n313,
+forts_jackson_st_philip,5385,CEN1860-POP Louisiana Table 2 p.194 leaf n313,
+la_river_parishes,56198,CEN1860-POP Louisiana Table 2 p.194 leaf n313,
+southwest_louisiana,38801,CEN1860-POP Louisiana Table 2 p.194 leaf n313,
+baton_rouge,13910,CEN1860-POP Louisiana Table 2 p.194 leaf n313,
+florida_parishes,28717,CEN1860-POP Louisiana Table 2 p.194 leaf n313,
+red_river_lower,35446,CEN1860-POP Louisiana Table 2 p.194 leaf n313,
+natchitoches,21008,CEN1860-POP Louisiana Table 2 p.194 leaf n313,
+shreveport,15338,CEN1860-POP Louisiana Table 2 p.194 leaf n313,
+north_louisiana,41560,CEN1860-POP Louisiana Table 2 p.194 leaf n313,
+la_river_west,53519,CEN1860-POP Louisiana Table 2 p.194 leaf n313,
+memphis,16953,CEN1860-POP Tennessee Table 2 p.467 leaf n586,
+tn_west_north,23536,CEN1860-POP Tennessee Table 2 p.467 leaf n586 / Tennessee Table 2 p.466 leaf n585,
+tn_west_central,34449,CEN1860-POP Tennessee Table 2 p.466 leaf n585,
+tn_southwest,28833,CEN1860-POP Tennessee Table 2 p.466 leaf n585 / Tennessee Table 2 p.467 leaf n586,
+fort_donelson,2415,CEN1860-POP Tennessee Table 2 p.467 leaf n586,
+clarksville,17100,CEN1860-POP Tennessee Table 2 p.466 leaf n585,
+nashville,14790,CEN1860-POP Tennessee Table 2 p.466 leaf n585,
+tn_north_middle,25682,CEN1860-POP Tennessee Table 2 p.466 leaf n585 / Tennessee Table 2 p.467 leaf n586,
+murfreesboro,20702,CEN1860-POP Tennessee Table 2 p.467 leaf n586 / Tennessee Table 2 p.466 leaf n585,
+columbia_tn,50356,CEN1860-POP Tennessee Table 2 p.467 leaf n586 / Tennessee Table 2 p.466 leaf n585,
+tn_rim_south,9473,CEN1860-POP Tennessee Table 2 p.466 leaf n585 / Tennessee Table 2 p.467 leaf n586,
+tn_plateau,5638,CEN1860-POP Tennessee Table 2 p.466 leaf n585 / Tennessee Table 2 p.467 leaf n586,
+chattanooga,1419,CEN1860-POP Tennessee Table 2 p.466 leaf n585,
+tn_cleveland,6369,CEN1860-POP Tennessee Table 2 p.466 leaf n585,caveats: input-flag:Tennessee:Bradley
+knoxville,6602,CEN1860-POP Tennessee Table 2 p.466 leaf n585 / Tennessee Table 2 p.467 leaf n586,
+tn_holston,6729,CEN1860-POP Tennessee Table 2 p.467 leaf n586 / Tennessee Table 2 p.466 leaf n585,
+cumberland_gap,743,CEN1860-POP Tennessee Table 2 p.466 leaf n585,
+tn_upper_east,3930,CEN1860-POP Tennessee Table 2 p.466 leaf n585 / Tennessee Table 2 p.467 leaf n586,
+louisville,10304,CEN1860-POP Kentucky Table 2 p.180 leaf n299,
+ky_outer_west,22400,CEN1860-POP Kentucky Table 2 p.181 leaf n300 / Kentucky Table 2 p.180 leaf n299,
+bluegrass,41556,CEN1860-POP Kentucky Table 2 p.180 leaf n299 / Kentucky Table 2 p.181 leaf n300,
+ky_north,18404,CEN1860-POP Kentucky Table 2 p.180 leaf n299 / Kentucky Table 2 p.181 leaf n300,caveats: input-flag:Kentucky:Carroll
+eastern_kentucky,8225,CEN1860-POP Kentucky Table 2 p.180 leaf n299 / Kentucky Table 2 p.181 leaf n300,Wolfe was created after the 1860 enumeration: its people are inside parent counties in Kennedy | caveats: input-flag:Kentucky:Bath | post-1860-county:Wolfe
+ky_upper_cumberland,1698,CEN1860-POP Kentucky Table 2 p.180 leaf n299 / Kentucky Table 2 p.181 leaf n300,caveats: input-flag:Kentucky:Knox
+ky_central_south,26562,CEN1860-POP Kentucky Table 2 p.181 leaf n300 / Kentucky Table 2 p.180 leaf n299,
+ky_lake_cumberland,7852,CEN1860-POP Kentucky Table 2 p.181 leaf n300 / Kentucky Table 2 p.180 leaf n299,
+ky_green_river,17768,CEN1860-POP Kentucky Table 2 p.180 leaf n299 / Kentucky Table 2 p.181 leaf n300,
+bowling_green,5318,CEN1860-POP Kentucky Table 2 p.181 leaf n300,caveats: input-flag:Kentucky:Warren
+ky_pennyrile,27339,CEN1860-POP Kentucky Table 2 p.181 leaf n300 / Kentucky Table 2 p.180 leaf n299,
+ky_west_coal,18477,CEN1860-POP Kentucky Table 2 p.180 leaf n299 / Kentucky Table 2 p.181 leaf n300,
+ky_between_rivers,9109,CEN1860-POP Kentucky Table 2 p.180 leaf n299 / Kentucky Table 2 p.181 leaf n300,
+paducah,1738,CEN1860-POP Kentucky Table 2 p.181 leaf n300,
+columbus_ky,1249,CEN1860-POP Kentucky Table 2 p.180 leaf n299,
+jackson_purchase,7484,CEN1860-POP Kentucky Table 2 p.180 leaf n299 / Kentucky Table 2 p.181 leaf n300,
+cincinnati,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,free state: the Recapitulation prints a dotted (zero) slave cell
+ohio_southwest,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,free state: the Recapitulation prints a dotted (zero) slave cell
+ohio_southeast,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,free state: the Recapitulation prints a dotted (zero) slave cell
+ohio_north,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,Ohio whole state from the Recapitulation (no county table read)
+indiana_south,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,free state: the Recapitulation prints a dotted (zero) slave cell
+indiana_north,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,Indiana whole state from the Recapitulation (no county table read)
+cairo,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,free state: the Recapitulation prints a dotted (zero) slave cell
+illinois_south,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,free state: the Recapitulation prints a dotted (zero) slave cell
+illinois_north,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,Illinois whole state from the Recapitulation (no county table read)
+michigan_wisconsin,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,Michigan whole state from the Recapitulation (no county table read) | Wisconsin whole state from the Recapitulation (no county table read)
+st_louis,4346,CEN1860-POP Missouri Table 2 p.287 leaf n406,
+mo_east_central,9379,CEN1860-POP Missouri Table 2 p.287 leaf n406 / Missouri Table 2 p.286 leaf n405,
+mo_iron_mountain,3866,CEN1860-POP Missouri Table 2 p.286 leaf n405 / Missouri Table 2 p.287 leaf n406,
+mo_southeast,5075,CEN1860-POP Missouri Table 2 p.287 leaf n406 / Missouri Table 2 p.286 leaf n405,
+new_madrid,1777,CEN1860-POP Missouri Table 2 p.287 leaf n406,
+mo_central_river,21469,CEN1860-POP Missouri Table 2 p.286 leaf n405 / Missouri Table 2 p.287 leaf n406,
+rolla,542,CEN1860-POP Missouri Table 2 p.287 leaf n406 / Missouri Table 2 p.286 leaf n405,
+mo_ozarks_south,809,CEN1860-POP Missouri Table 2 p.287 leaf n406 / Missouri Table 2 p.286 leaf n405,
+springfield_mo,1668,CEN1860-POP Missouri Table 2 p.286 leaf n405,
+mo_southwest,2904,CEN1860-POP Missouri Table 2 p.286 leaf n405 / Missouri Table 2 p.287 leaf n406,
+mo_west,9458,CEN1860-POP Missouri Table 2 p.286 leaf n405 / Missouri Table 2 p.287 leaf n406,caveats: input-flag:Missouri:Jackson
+mo_lexington_sedalia,14575,CEN1860-POP Missouri Table 2 p.286 leaf n405 / Missouri Table 2 p.287 leaf n406,
+mo_northeast,19358,CEN1860-POP Missouri Table 2 p.286 leaf n405 / Missouri Table 2 p.287 leaf n406,
+mo_northwest,19705,CEN1860-POP Missouri Table 2 p.286 leaf n405 / Missouri Table 2 p.287 leaf n406,Worth was created after the 1860 enumeration: its people are inside parent counties in Kennedy | caveats: post-1860-county:Worth
+little_rock,4254,CEN1860-POP Arkansas Table 2 p.18 leaf n137,caveats: input-flag:Arkansas:Saline
+helena,11167,CEN1860-POP Arkansas Table 2 p.18 leaf n137,caveats: input-flag:Arkansas:Phillips
+northeast_arkansas,12516,CEN1860-POP Arkansas Table 2 p.18 leaf n137,caveats: input-flag:Arkansas:Lawrence
+ar_white_arkansas,37582,CEN1860-POP Arkansas Table 2 p.18 leaf n137,
+ar_northwest,5003,CEN1860-POP Arkansas Table 2 p.18 leaf n137,
+ar_valley_ozarks,5317,CEN1860-POP Arkansas Table 2 p.18 leaf n137,
+ar_southwest,16393,CEN1860-POP Arkansas Table 2 p.18 leaf n137,
+ar_south,18883,CEN1860-POP Arkansas Table 2 p.18 leaf n137,
+tx_northeast,25832,CEN1860-POP Texas Table 2 p.484 leaf n603 / Texas Table 2 p.485 leaf n604 / Texas Table 2 p.486 leaf n605,
+tx_east,31308,CEN1860-POP Texas Table 2 p.485 leaf n604 / Texas Table 2 p.486 leaf n605 / Texas Table 2 p.484 leaf n603,caveats: input-flag:Texas:Harrison
+tx_east_central,20647,CEN1860-POP Texas Table 2 p.485 leaf n604 / Texas Table 2 p.484 leaf n603 / Texas Table 2 p.486 leaf n605,
+tx_southeast,5108,CEN1860-POP Texas Table 2 p.485 leaf n604 / Texas Table 2 p.484 leaf n603,
+galveston,1520,CEN1860-POP Texas Table 2 p.484 leaf n603,
+houston,2053,CEN1860-POP Texas Table 2 p.484 leaf n603,
+tx_brazos,42831,CEN1860-POP Texas Table 2 p.484 leaf n603 / Texas Table 2 p.485 leaf n604 / Texas Table 2 p.486 leaf n605,
+tx_north_central,19854,CEN1860-POP Texas Table 2 p.484 leaf n603 / Texas Table 2 p.485 leaf n604 / Texas Table 2 p.486 leaf n605,caveats: input-flag:Texas:Tarrant
+tx_coastal_bend,7923,CEN1860-POP Texas Table 2 p.484 leaf n603 / Texas Table 2 p.486 leaf n605 / Texas Table 2 p.485 leaf n604,
+tx_san_antonio_austin,23649,CEN1860-POP Texas Table 2 p.484 leaf n603 / Texas Table 2 p.485 leaf n604 / Texas Table 2 p.486 leaf n605,Wilson was created after the 1860 enumeration: its people are inside parent counties in Kennedy | caveats: post-1860-county:Wilson
+brownsville,7,CEN1860-POP Texas Table 2 p.484 leaf n603,
+tx_west,1834,CEN1860-POP Texas Table 2 p.484 leaf n603 / Texas Table 2 p.485 leaf n604 / Texas Table 2 p.486 leaf n605,"remainder of Texas after the counties other regions claim (18 counties print ""no return"" and are not counted)"
+kansas_east,0,CEN1860-POP Kansas Table 2 p.162 leaf n281,caveats: input-flag:Kansas:Leavenworth | input-flag:Kansas:Atchison | input-flag:Kansas:Doniphan | input-flag:Kansas:Jefferson | input-flag:Kansas:Wyandotte | input-flag:Kansas:Johnson | input-flag:Kansas:Douglas | input-flag:Kansas:Shawnee | input-flag:Kansas:Franklin | input-flag:Kansas:Lykins | input-flag:Kansas:Linn | input-flag:Kansas:Bourbon
+kansas_west,2,CEN1860-POP Kansas Table 2 p.162 leaf n281,remainder of Kansas after the counties other regions claim
+nebraska,15,CEN1860-POP Nebraska Table 2 p.558 leaf n677,remainder of Nebraska Territory after the counties other regions claim
+minnesota,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,Minnesota whole state from the Recapitulation (no county table read)
+iowa,0,CEN1860-POP state summary Recapitulation pp. 598-599 leaves n717-n718,Iowa whole state from the Recapitulation (no county table read)
+new_mexico,0,CEN1860-POP New Mexico Table 2 p.568 leaf n687,caveats: input-flag:New Mexico Territory:Santa Fe | input-flag:New Mexico Territory:San Miguel | input-flag:New Mexico Territory:Mora | input-flag:New Mexico Territory:Taos | input-flag:New Mexico Territory:Rio Arriba | input-flag:New Mexico Territory:Santa Ana | input-flag:New Mexico Territory:Bernalillo | input-flag:New Mexico Territory:Valencia | input-flag:New Mexico Territory:Socorro
+arizona,0,CEN1860-POP New Mexico Table 2 p.568 leaf n687,caveats: input-flag:New Mexico Territory:Dona Ana | input-flag:New Mexico Territory:Arizona

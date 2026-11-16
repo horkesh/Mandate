@@ -174,6 +174,33 @@ Run these by hand; each page needs a person at the keyboard.
 9. **Domains:** check the "probably free" names in section 5 at a registrar of the owner's choice. Nothing here registered or reserved any of them.
 10. **Luxembourg company register (RCS):** to confirm whether Perihelion Interactive S.a.r.l. exists, if the owner wants certainty about The Mandate (2015).
 
+
+## Update, 2026-11-16: the register searches for the title
+
+Run by the lead on the owner's go-ahead, in a browser, for *By Order of the President*. These are searches, not a clearance: the attorney's opinion is still needed.
+
+**No mark "BY ORDER OF THE PRESIDENT" was found in any register searched.**
+- **USPTO** (tmsearch, field search on the combined mark): nothing for `CM:"by order of the president"` or `CM:"order of the president"`. Controls: `CM:"executive order"` returns 11, and `CM:"the mandate"` finds serial 86561595.
+  - **Caution:** the USPTO quick search drops "by", so `CM:"by order"` returned nothing although USPTO marks beginning "BY ORDER OF THE" exist (below, found through TMview and WIPO). Use the other registers for phrases starting with "by".
+- **TMview** (EUIPO, UKIPO, USPTO and most national offices): no rows for "by order of the president" or "order of the president". Control: "peaky blinders" returns 70.
+- **WIPO Global Brand Database:** the closest marks for "by order of the" are listed below, and none adds "president".
+- **Steam** (store search API): nothing for "by order of the president", "order of the president" or "president civil war". "by order" finds only *By Strange Orders* (app 4029890).
+- **BoardGameGeek:** no items for "by order of the president".
+- **MobyGames:** not checked. Its bot check stopped the browser, and it was not bypassed. A person should run it.
+- **Domains** (DNS only; nothing registered or reserved): byorderofthepresident.com and .net, byorderofthepresidentgame.com, pyrrhicgames.com, pyrrhicstudio.com and pyrrhic.games all have no DNS records.
+
+**The one matter for the attorney: the *Peaky Blinders* "BY ORDER OF THE" family.**
+
+| Mark | Owner | Office and number | Classes | Status |
+|---|---|---|---|---|
+| BY ORDER OF THE | Garrison Drama Limited | UKIPO UK00003362841, filed 21 Dec 2018 | 3, 8, **9**, 14, 16, 18, 21, 24, 25, **28**, 29, 30, 32, 33, 34, **41**, 43, 44 | registered 12 Apr 2019 |
+| BY ORDER OF THE | Caryn Mandabach Productions Limited (WIPO) / Garrison Drama Limited (TMview) | USPTO 6156320 (serial 88482071) | 25, 32, 33 | registered 22 Sep 2020 |
+| BY ORDER OF THE SHELBY COMPANY LIMITED | Garrison Drama Limited | EUIPO 018191012; UKIPO UK00003418070; USPTO 88563707 | clothing, food, drink and similar; no class 9 or 41 | registered |
+
+- **The UK registration covers class 9** (which includes computer and video game software) and classes 28 and 41. It is built on the series' catchphrase "By order of the Peaky Blinders". Whether *By Order of the President* for a video game is confusingly similar in the UK, in the light of that phrase's reputation, is exactly the question for the trademark attorney.
+- **In the US and the EU,** the family is not registered in classes 9, 28 or 41, per these searches.
+- **Nearby but different:** "Order of the Prince" (Koei Tecmo Games, Japan 6028041, class 41).
+
 ---
 
 ## Sources

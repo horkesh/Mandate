@@ -97,4 +97,4 @@ Lesson L17. The app shows the lead only the first 400 characters of a lane's rep
 | Four separate review seats | One reviewer with four lenses is enough at this size | A merge the reviewer can't settle alone |
 | Per-PR ledger fragments | Git history is the ledger here | Never, unless commit messages stop being enough |
 | A shared orchestration board for announcements | Few lanes; briefs carry what they need | Five or more lanes at once |
-| Git LFS for binary assets | No binary assets yet | The first map art or image asset |
+| Git LFS for binary assets | No binary assets yet. A public repository still uses the owner's LFS quota: every pushed version counts as storage, and every download (clones, forks, CI) as bandwidth; GitHub Free includes 10 GiB of each a month, and a $0 budget blocks rather than bills an overage (GitHub Docs, Git LFS billing, read 2026-11-16) | The first binary asset committed (R1's textures; the map is baked at load, not committed). Turn LFS on for image, audio and font types under `art/`, alongside the repository's own hooks; keep the LFS budget at $0; keep CI's checkout from fetching LFS files until a build or test needs them |

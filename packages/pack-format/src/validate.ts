@@ -10,7 +10,7 @@
  * the committed-pack check can point at the generated JSON.
  */
 import { phase0, world as w } from '@mandate/kernel';
-import { citationsIn, hasWeakMarker } from './banned-sources.ts';
+import { citationsIn, datedAfterBoundary, type EvidenceClass, type EvidencePolicy, hasWeakMarker } from './banned-sources.ts';
 import type { GateData } from './gate.ts';
 import { IntlMessageFormat } from 'intl-messageformat';
 import { type Issue, IssueSink } from './issues.ts';
@@ -37,6 +37,8 @@ export interface PackData {
   readonly bannedSources?: readonly string[];
   /** Sources the gate marks weak (`gate/source-policy.json`): a people cell resting only on them is refused (lane 1.11a). */
   readonly weakSources?: readonly string[];
+  /** The pack's evidence-date rule (`gate/source-policy.json`, `evidence`; 0085): a dated citation past its cell's boundary is weak. */
+  readonly evidencePolicy?: EvidencePolicy | null;
 }
 
 /** A record's address: `world` or `scenario:<id>`, a table, an index, and optionally a field path inside the record. */
@@ -374,11 +376,17 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   // source is on the gate's weak list (memoirs, self-reports, pointers) or banned, or its place carries a weak marker
   // (`snippet`, `self-report`, `after-start`). A cell with a strong citation beside weak ones stands.
   const weakSet = new Set([...(pack.weakSources ?? []), ...(pack.bannedSources ?? [])]);
-  const weakOnly = (cites: readonly w.Citation[]): boolean => {
+  // 0085: a citation that states its date (`dated YYYY-MM-DD` in its place) is also weak when the date is past its cell's
+  // boundary: an innate cell (the pack's innate stats and traits) counts evidence up to the end of the window, every other
+  // cell only evidence before the start. The pack's `evidence` policy holds the boundaries and the mapping.
+  const evidence = pack.evidencePolicy ?? null;
+  const classOf = (kind: 'stat' | 'trait' | 'other', name = ''): EvidenceClass =>
+    evidence !== null && ((kind === 'stat' && evidence.innateStats.includes(name)) || (kind === 'trait' && evidence.innateTraits.includes(name))) ? 'innate' : 'start';
+  const weakOnly = (cites: readonly w.Citation[], cls: EvidenceClass): boolean => {
     const admissible = cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer');
-    return admissible.length > 0 && admissible.every((x) => weakSet.has(x.source) || hasWeakMarker(x.at));
+    return admissible.length > 0 && admissible.every((x) => weakSet.has(x.source) || hasWeakMarker(x.at) || datedAfterBoundary(x.at, cls, evidence));
   };
-  const weakExpected = 'a citation of a source the gate does not mark weak (not a memoir, a self-report, a snippet, or evidence after the start date), or leave the cell unknown';
+  const weakExpected = 'a citation of a source the gate does not mark weak (not a memoir, a self-report, a snippet, or evidence dated after its cell’s boundary: 5 March 1861 for a cell true at the start, 31 July 1861 for an innate stat or trait), or leave the cell unknown';
   world.people.forEach((p, i) => {
     const at = (f?: string) => W('people', i, f);
     useKey(p.name, at('name'));
@@ -400,7 +408,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
         const admissible = c.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer');
         if (admissible.length === 0) {
           err('centre-without-citation', at(`centres.${stat}`), `the ${stat} centre "${c.direction}" has no admissible citation`, 'a citation of a primary or secondary source (pointers do not count; FOUNDATION section 6)');
-        } else if (weakOnly(c.cites)) {
+        } else if (weakOnly(c.cites, classOf('stat', stat))) {
           err('weak-citations-only', at(`centres.${stat}`), `the ${stat} centre "${c.direction}" rests only on weak citations`, weakExpected);
         }
       }
@@ -413,7 +421,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
         if (c.cites.length > 0) warn('redundant-value', at(field), `an unknown ${field} centre carries citations`, 'a direction, or no citations');
       } else if (!p.invented && c.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer').length === 0) {
         err('centre-without-citation', at(field), `the ${field} centre "${c.direction}" has no admissible citation`, 'a citation of a primary or secondary source (pointers do not count; FOUNDATION section 6)');
-      } else if (!p.invented && c.direction !== null && weakOnly(c.cites)) {
+      } else if (!p.invented && c.direction !== null && weakOnly(c.cites, classOf('other'))) {
         err('weak-citations-only', at(field), `the ${field} centre "${c.direction}" rests only on weak citations`, weakExpected);
       }
     }
@@ -423,7 +431,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       citeCheck(o.cites, at(`regardOthers[${j}].cites`), false, `regard toward ${o.toward}`);
       if (!p.invented && o.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer').length === 0) {
         err('centre-without-citation', at(`regardOthers[${j}]`), `regard toward ${o.toward} has no admissible citation`, 'a citation of a primary or secondary source');
-      } else if (!p.invented && weakOnly(o.cites)) {
+      } else if (!p.invented && weakOnly(o.cites, classOf('other'))) {
         err('weak-citations-only', at(`regardOthers[${j}]`), `regard toward ${o.toward} rests only on weak citations`, weakExpected);
       }
     });
@@ -434,7 +442,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       citeCheck(pr.cites, at(`practices[${j}].cites`), false, `practice "${pr.practice}"`);
       if (!p.invented && pr.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer').length === 0) {
         err('value-without-citation', at(`practices[${j}]`), `practice "${pr.practice}" has no admissible citation`, 'a citation of a primary or secondary source');
-      } else if (!p.invented && weakOnly(pr.cites)) {
+      } else if (!p.invented && weakOnly(pr.cites, classOf('other'))) {
         // Lane 1.11a's rule reaches practices too: gate content resting only on weak citations is refused.
         err('weak-citations-only', at(`practices[${j}]`), `practice "${pr.practice}" rests only on weak citations`, weakExpected);
       }
@@ -445,7 +453,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       if (p.values.findIndex((x) => x.value === v.value) !== j) err('duplicate-id', at(`values[${j}]`), `value "${v.value}" is listed twice`);
       if (!p.invented && v.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer').length === 0) {
         err('value-without-citation', at(`values[${j}]`), `value "${v.value}" has no admissible citation`, 'a citation of a primary or secondary source (0005: each centre cited)');
-      } else if (!p.invented && weakOnly(v.cites)) {
+      } else if (!p.invented && weakOnly(v.cites, classOf('other'))) {
         err('weak-citations-only', at(`values[${j}]`), `value "${v.value}" rests only on weak citations`, weakExpected);
       }
     });
@@ -454,7 +462,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       citeCheck(t.cites, at(`traits[${j}].cites`), false, `trait "${t.trait}"`);
       if (!p.invented && t.cites.filter((x) => sources.get(x.source)?.kind !== 'pointer').length === 0) {
         err('trait-without-citation', at(`traits[${j}]`), `trait "${t.trait}" has no admissible citation`, 'a cited act (traits are proved by what he did)');
-      } else if (!p.invented && weakOnly(t.cites)) {
+      } else if (!p.invented && weakOnly(t.cites, classOf('trait', t.trait))) {
         err('weak-citations-only', at(`traits[${j}]`), `trait "${t.trait}" rests only on weak citations`, weakExpected);
       }
     });

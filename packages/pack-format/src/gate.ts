@@ -100,7 +100,14 @@ export const ForbiddenSchema = z.strictObject({
   proximityTokens: z.int().min(1).default(5),
 });
 export const AnachronismsSchema = z.strictObject({ terms: z.array(z.strictObject({ term: z.string().min(1), earliest: date, source: z.string().min(1) })) });
-export const SourcePolicySchema = z.strictObject({ banned: z.array(z.string().min(1)).default([]), weak: z.array(z.string().min(1)).default([]) });
+export const SourcePolicySchema = z.strictObject({
+  banned: z.array(z.string().min(1)).default([]),
+  weak: z.array(z.string().min(1)).default([]),
+  /** 0085: the evidence-date boundaries and the class of each innate stat and trait; read by the people checks (`banned-sources.ts`). */
+  evidence: z
+    .strictObject({ innateThrough: date, startBefore: date, innateStats: z.array(z.string().min(1)), innateTraits: z.array(z.string().min(1)) })
+    .optional(),
+});
 export const ChecklistSchema = z.strictObject({
   questions: z.array(
     z.strictObject({
