@@ -31,6 +31,13 @@ const positive = int.min(1, 'one or more');
 const nonNegative = int.min(0, 'zero or more');
 const permille = int.min(0).max(1000, 'a permille up to 1000');
 
+/**
+ * A field or option id in lowercase (the standing review of lane 1.8's register, S1): the gate's field and option
+ * signatures find words by their separators, so `blackSoldiers` or `exchangePrisoners` would pass every one of them.
+ * Lowercase closes that for every signature at once; no pack uses a capital in either today.
+ */
+export const lowerId = termId.regex(/^[a-z0-9][a-z0-9_.:\/-]*$/, 'lowercase letters, digits and _ . : / - only, so the gate’s signatures see every word (no camelCase)');
+
 const knows = z.strictObject({
   reportType: z.enum(phase0.REPORT_TYPES).nullable().default(null),
   subtype: z.string().min(1).nullable().default(null),
@@ -63,7 +70,7 @@ export const EffectSchema = z.union([
   z.strictObject({
     propose: z.strictObject({
       owner: termId,
-      field: termId,
+      field: lowerId,
       subject: z.string().min(1).nullable().default(null),
       delta: int.describe(
         'Signed permille. Every side measure reads higher-is-better for its own side: a rise helps that side, a fall harms it. The gate’s sign rule (E7, D5) relies on this, so a field where higher is worse for its side (war-weariness, say) must be declared the other way round.',
@@ -99,7 +106,7 @@ export const GateReviewSchema = z.strictObject({
 const conditionOrNull = ConditionSchema.nullable().default(null);
 
 export const OptionSchema = z.strictObject({
-  id: termId,
+  id: lowerId,
   label: stringKey,
   displayKey: positive,
   proposedBy: z.union([z.array(idOf('person')).min(1, 'the holders who argued for it (gate C1)'), z.literal('inaction')]),

@@ -1,5 +1,12 @@
 {
   "classes": [
-    { "id": "native-nations", "atrocity": false, "requiresAgencyReason": true }
+    { "id": "native-nations", "atrocity": false, "requiresAgencyReason": true },
+    { "id": "cause-and-aims", "atrocity": false, "requiresAgencyReason": false },
+    { "id": "slavery-and-emancipation", "atrocity": false, "requiresAgencyReason": true },
+    { "id": "black-military-service", "atrocity": false, "requiresAgencyReason": true },
+    { "id": "civil-liberties", "atrocity": false, "requiresAgencyReason": false },
+    { "id": "atrocities", "atrocity": true, "requiresAgencyReason": false },
+    { "id": "guerrilla-war", "atrocity": false, "requiresAgencyReason": false },
+    { "id": "prisoners", "atrocity": false, "requiresAgencyReason": false }
   ]
 }

@@ -4,6 +4,7 @@
  * a game build or a mod loader takes; it needs no sources.
  */
 import type { world as w } from '@mandate/kernel';
+import { readBannedSources } from './banned-sources.ts';
 import { readJson, type PackFiles } from './generate.ts';
 import { errorsOf, type Issue, IssueSink } from './issues.ts';
 import { generatedStringsFile, MANIFEST_FILE, PROVENANCE_FILE, scenarioFile, stringsFile, WORLD_FILE } from './layout.ts';
@@ -37,7 +38,7 @@ export function loadPack(files: PackFiles): LoadResult {
     if (tables.length > 0) strings.set(locale, tables);
   }
   if (errorsOf(sink.issues).length > 0) return { pack: null, issues: sink.issues };
-  const worldPack: PackData = { manifest, provenance, world, scenarios, strings };
+  const worldPack: PackData = { manifest, provenance, world, scenarios, strings, bannedSources: readBannedSources(files) };
   sink.add(validatePack(worldPack));
   if (errorsOf(sink.issues).length > 0) return { pack: null, issues: sink.issues };
   const layer = readSituationLayer(files, worldPack);
