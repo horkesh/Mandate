@@ -56,6 +56,7 @@ export function sideForces(world: SeatsWorld, state: State, faction: FactionId):
       naval: isNaval(world.map, state, id),
       strength: fb.fbStrength ?? 0,
       storesDays: Math.trunc((fb.fbStoresMilli ?? 0) / 1000),
+      storesAssumed: fb.fbStoresAssumed,
       aboard: loc.locAboard,
     });
   }

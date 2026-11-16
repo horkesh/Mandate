@@ -60,23 +60,41 @@ export type SubjectKind = (typeof SUBJECT_KINDS)[number];
  * - `plan-answer`: his answer to an edit of his plan: `claimToken` the rung he declares, `claimRegion` the objective;
  * - `verb-answered` (lane 1.5): his answer to a people verb: `claimToken` `<verb>:<declared rung>`, `claimValue` 1 if he
  *   carried it out, 0 if he declined.
+ *
+ * Lane 1.4 adds the claims of operations and battles:
+ * - `support-answer`: a holder's answer to a support request: `claimToken` the rung he declares, `claimRegion` the
+ *   objective, `claimValue` 1 if he says he will move;
+ * - `battle-phase`: a battle-day's phase as its author saw it: `claimToken` the phase (`dawn`...), `claimRegion` the
+ *   battle's region, `claimValue` 1 when he says the day goes well, 0 when not;
+ * - `casualties`: a side's killed and wounded, men (`claimToken` `own` or `enemy`);
+ * - `missing`: a side's missing, men; a first return counts the captured here too (0074, 0076);
+ * - `captured`: a side's captured, men, which a later return reveals;
+ * - `pocket`: the author's force is cut off in `claimRegion` (a closed pocket, 0054);
+ * - `operation`: an operation's stage (`claimToken`: `assaulting`, `repulsed`, `withdrew`, `pursuing`, `held`).
  */
 export const CLAIM_KINDS = [
   'arrived',
+  'battle-phase',
   'call-answer',
+  'captured',
+  'casualties',
   'effective-strength',
   'enemy-strength',
   'goal-status',
   'levy-lapsed',
+  'missing',
   'obstruction',
+  'operation',
   'order-objected',
   'order-obeyed',
   'own-losses',
   'plan-answer',
   'plan-submitted',
+  'pocket',
   'position',
   'present-and-absent',
   'present-for-duty',
+  'support-answer',
   'verb-answered',
   'works',
 ] as const;

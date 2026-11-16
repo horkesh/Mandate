@@ -9,7 +9,7 @@
  * - `review`: he submitted his pick to the goal's issuer, who approves it, sends it back with notes, or edits its
  *   arrows (unless the goal said "approve as drafted unless he objects" and he did not depart from it);
  * - `ready`: approved, assembling, awaiting the principal's word ("prepare, await my word", 0040);
- * - `approved`: executing. Until lane 1.4's operations, through the STAND-IN execution adapter (`execute.ts`).
+ * - `approved`: executing, as an operation (lane 1.4: `operations/`, `tick/operations.ts`).
  *
  * A response to a goal, a plan or an edit (rungs and reasons) belongs to `proxy` (0073, lane 1.1); a plan record holds
  * only its key (`responseKey`).

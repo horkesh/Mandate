@@ -60,6 +60,8 @@ export interface SideInput {
   readonly breakingOut: boolean;
   /** Surprised in a meeting engagement: its commander held no report of the enemy here. */
   readonly surprised: boolean;
+  /** Pursued (lane 1.4): the share of its stragglers the pursuer takes today, permille (0 when nobody pursues it). */
+  readonly pursuedPermille: number;
 }
 
 export interface DayInput {
@@ -298,7 +300,8 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
       const ms = k < 0 ? 0 : missB[k]!;
       const cp = k < 0 ? 0 : capB[k]!;
       const rest = surrendered && k >= 0 ? b.men! - kw - ms : 0;
-      const taken = surrendered ? b.stragglers : 0;
+      // A force taken loses its stragglers in the pocket; a pursued one loses the pursuer's share of them (lane 1.4).
+      const taken = surrendered ? b.stragglers : Math.trunc((b.stragglers * side.pursuedPermille) / 1000);
       surrenderedMen += rest;
       stragglersTaken += taken;
       // In a pocket taken, the day's missing are inside it too: captured with the rest, none left to straggle back.
@@ -324,7 +327,7 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
     const missingParts = [...missingTerms];
     if (capturedField > 0) missingParts.push(term('captured_on_field', -capturedField));
     if (inPocket > 0) missingParts.push(term('missing_in_pocket', -inPocket));
-    const capturedParts = [term('captured_on_field', capturedField), term('missing_in_pocket', inPocket), term(verdict[i]!.cutOff === 'destroyed' ? 'destroyed' : 'surrender', surrenderedMen), term('stragglers_in_pocket', stragglersTaken)].filter((x) => x.btermValue !== 0);
+    const capturedParts = [term('captured_on_field', capturedField), term('missing_in_pocket', inPocket), term(verdict[i]!.cutOff === 'destroyed' ? 'destroyed' : 'surrender', surrenderedMen), term(surrendered ? 'stragglers_in_pocket' : 'in_pursuit', stragglersTaken)].filter((x) => x.btermValue !== 0);
     const stays = !leaving(i);
     let pursue: Pursuit | null = null;
     const decisions = [...verdict[i]!.decisions];

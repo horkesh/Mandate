@@ -87,6 +87,7 @@ export function buildAxis(ctx: Ctx, spec: AxisSpec): PlanAxis {
     axisArrival: t,
     axisOutOfSupply: longest,
     axisStoresDays: storesDays,
+    axisStoresAssumed: spec.blocks.some((b) => b.storesAssumed),
   };
 }
 
@@ -104,6 +105,7 @@ export function holdingAxis(ctx: Ctx, post: PostId, blocks: readonly PlannerForc
     axisArrival: 0,
     axisOutOfSupply: 0,
     axisStoresDays: blocks.length === 0 ? 0 : Math.min(...blocks.map((b) => b.storesDays)),
+    axisStoresAssumed: blocks.some((b) => b.storesAssumed),
   };
 }
 

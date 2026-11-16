@@ -178,6 +178,9 @@ export const RulesSchema = z.strictObject({
       menPerCapacityUnit: positive.describe('Men (and non-combatants) one unit of the capacity scale feeds for a day. A design parameter.'),
       capDays: positive.describe('The most days of stores a block refills to. A design parameter.'),
       lowDays: nonNegative.describe('Stores below this many days are low, a truth event a report may tell; at most capDays. A design parameter.'),
+      norms: z
+        .array(z.strictObject({ post: idOf('post').nullable(), postKind: termId.nullable(), arm: termId.nullable(), faction: idOf('faction').nullable(), days: positive, cite: z.string().min(1, 'a source and place') }))
+        .describe('Norms for blocks whose stores no source gives (lane 1.4): practice, so each block given one is flagged assumed. First match by post or post kind, arm and side; no match stays unknown.'),
     })
     .describe('Stores on hand (0040, 0064): design parameters the pack states, not sourced facts.'),
   occupation: z
@@ -216,6 +219,7 @@ export const RulesSchema = z.strictObject({
         .describe('The commanders’ rules (P6), read against his own demand ratio: shares are permille of it.'),
       maxBattleDays: positive.describe('A battle closes after this many days (P1).'),
       fieldControlPermille: permille.describe('Control the side left holding the field gains, permille (P9).'),
+      pursuit: z.strictObject({ followPermille: permille, pressPermille: permille, cavalryPermille: permille }).describe('Pursuit’s captures (lane 1.4): the pursued side’s stragglers taken on a rearguard day, by the pursuer’s choice, more with cavalry.'),
       straggleReturnPermille: permille.describe('Stragglers who rejoin a day, permille of the pool (P8).'),
       leaders: z.strictObject({ killedPermille: permille, woundedPermille: permille, capturedPermille: permille }).describe('A commander’s draw per battle-day on his own stream: killed, wounded, captured (only if his side routs).'),
       phases: z
@@ -226,6 +230,19 @@ export const RulesSchema = z.strictObject({
         .describe('The day shape (P10): each phase’s hours, and each battle type’s share of the day’s losses per phase.'),
     })
     .describe('The battle model (lane 1.3; the combat note): design parameters the pack states (0072), not sourced facts; the starting values sit inside Livermore’s and Fox’s bands.'),
+  operations: z
+    .strictObject({
+      pauseDays: positive.describe('Days an axis pauses after it is driven back, before it tries again. A design parameter.'),
+      maxRepulses: positive.describe('Times an axis may be driven back before its operation fails. A design parameter.'),
+      pursuitDays: z.strictObject({ follow: positive, press: positive }).describe('Days a pursuit lasts, by the commander’s choice.'),
+      holdControlPermille: int.min(1, 'a permille from 1').max(1000, 'a permille up to 1000').describe('Control at its objective at which an axis holds it and its operation ends.'),
+      works: z.strictObject({ perNightPermille: permille, capPermille: permille, lostWhenStormedPermille: permille }).describe('Works dug each night by an axis holding its objective, their cap, and what storming takes off (0029).'),
+      returns: z.strictObject({ firstLowPermille: permille, revealDays: positive }).describe('Casualty returns (0074, 0076): how low the first runs, the captured counted among its missing, and the days until the full return.'),
+    })
+    .describe('Operations (lane 1.4): design parameters the pack states (0072), not sourced facts.'),
+  pruning: z
+    .strictObject({ operationDays: positive, battleDays: positive, responseDays: positive })
+    .describe('How long ended operations, closed battles and answered orders are kept, in days (lane 1.4; as knowledge prunes). Design parameters.'),
   movement: z
     .strictObject({
       marchMinCapacityPermille: positive.describe('The least capacity an edge needs this month to carry a march, permille of one unit of the capacity scale; at most capacityMax x 1000. A design parameter.'),
@@ -399,7 +416,7 @@ export const RulesSchema = z.strictObject({
         .array(z.strictObject({ goal: termId, boldness: permille, honours: z.array(termId), offends: z.array(termId) }))
         .describe('What a goal of each kind asks of the man who reads it: its boldness and the values it honours or offends.'),
       context: z
-        .strictObject({ oversight: permille, leaderCredibility: permille })
+        .strictObject({ oversight: permille, oversightPerCourierDay: permille, oversightWired: permille, oversightMin: permille, leaderCredibility: permille })
         .describe('Oversight and the principal’s sanction credibility for an order read in the chain, until politics derives credibility (lane 1.6). Design parameters.'),
       relay: z
         .strictObject({ reservationsHoldDays: nonNegative, slowWalkHoldDays: nonNegative, reinterpretHoldDays: nonNegative })
@@ -488,7 +505,7 @@ export const VocabulariesSchema = z.strictObject({
         .describe('A government of a people who govern themselves (0069): only its own act, a notice, may change its side, close or reopen it, or move its regions, never a principal’s decision. Only a government may be self-governing.'),
     }),
   ),
-  arms: z.array(z.strictObject({ id: termId, name: stringKey, naval: z.boolean() })),
+  arms: z.array(z.strictObject({ id: termId, name: stringKey, naval: z.boolean(), cavalry: z.boolean().describe('Cavalry (lane 1.4): a pursuer with a block of this arm present takes more stragglers.') })),
   personKinds: z.array(term),
   traits: z.array(z.strictObject({ id: termId, name: stringKey, gate: z.boolean() })),
   ranks: z.array(z.strictObject({ id: termId, name: stringKey, seniority: nonNegative, kind: termId.describe('Its kind from rankKinds: a person holds one rank of each kind at once (0073).') })),

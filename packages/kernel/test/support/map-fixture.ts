@@ -81,7 +81,7 @@ export const FIXTURE_PEOPLE_RULES: PeopleRules = {
     { goal: 'hold', boldness: 400, honours: ['caution'], offends: [] },
     { goal: 'advance', boldness: 600, honours: ['glory'], offends: ['caution'] },
   ],
-  context: { oversight: 500, leaderCredibility: 500 },
+  context: { oversight: 500, oversightPerCourierDay: 50, oversightWired: 150, oversightMin: 100, leaderCredibility: 500 },
   relay: { reservationsHoldDays: 0, slowWalkHoldDays: 2, reinterpretHoldDays: 4 },
   filter: { holdFor: [{ value: 'order', days: 1 }], trimFor: [{ value: 'reputation', claimKinds: ['own-losses'] }], candidAt: 500 },
   traits: {
@@ -149,6 +149,7 @@ export const FIXTURE_COMBAT_RULES: CombatRules = {
   decisions: { probeShare: 700, allOutBoldness: 700, holdShare: 600, breakoutShare: 400, followBoldness: 550, pressBoldness: 750 },
   maxBattleDays: 7,
   fieldControlPermille: 200,
+  pursuit: { followPermille: 100, pressPermille: 300, cavalryPermille: 150 },
   straggleReturnPermille: 100,
   leaders: { killedPermille: 15, woundedPermille: 40, capturedPermille: 20 },
   phases: {
@@ -163,9 +164,11 @@ export const FIXTURE_COMBAT_RULES: CombatRules = {
 };
 
 /** The fixtures' design parameters (the testbed's and Union's values: 0064, 0072). */export const FIXTURE_RULES = {
-  stores: { menPerCapacityUnit: 20000, capDays: 30, lowDays: 7 },
+  stores: { menPerCapacityUnit: 20000, capDays: 30, lowDays: 7, norms: [] },
   occupation: { occupyPermille: 100, occupyFullMen: 5000 },
   combat: FIXTURE_COMBAT_RULES,
+  operations: { pauseDays: 3, maxRepulses: 3, pursuitDays: { follow: 1, press: 2 }, holdControlPermille: 500, works: { perNightPermille: 50, capPermille: 300, lostWhenStormedPermille: 150 }, returns: { firstLowPermille: 200, revealDays: 7 } },
+  pruning: { operationDays: 60, battleDays: 120, responseDays: 60 },
   movement: { marchMinCapacityPermille: 1000, courierPermille: 333 },
   ruleSeats: { warFlags: [] },
   latency: { wireDays: 0, mailPermille: 2000, specialMessengerPermille: 500, courierNoiseMaxDays: 1, specialMessengerPrice: 1 },

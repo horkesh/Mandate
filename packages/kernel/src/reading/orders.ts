@@ -6,7 +6,8 @@
  * - **The terms** of a goal come from the pack (`WorldRules.people.goalTerms`): its boldness and the values it honours
  *   or offends. A plan or an edit maps to terms in the planner (lane 1.2), with `ownBest`, `departure` and `support`.
  * - **The man** is read from people State through `traitsOf`, with his regard for whoever issued the order.
- * - **The context**: the pack's oversight (a LABELLED STAND-IN, owner lane 1.4) and the principal's credibility (a
+ * - **The context**: oversight from where he stands (lane 1.4: the pack's base, less his courier days from the principal,
+ *   more on the wire; `tick/context.ts`) and the principal's credibility (a
  *   LABELLED STAND-IN, owner lane 1.6: see `ReadingContextRules`), and
  *   the grievances people State holds for him.
  *
@@ -48,11 +49,19 @@ export function profileOf(world: ReadingWorld, state: State, person: PersonId, t
 }
 
 /** The circumstances he reads an order in: the pack's oversight and credibility, full means unless the caller says, and his grievances. */
-export function contextFor(world: ReadingWorld, state: State, person: PersonId, means: { readonly available?: number; readonly supportPromised?: readonly string[] } = {}): CommandContext {
+/** What the caller knows of an order's circumstances: the means at hand, the support promised, and how closely he is watched. */
+export interface OrderMeans {
+  readonly available?: number;
+  readonly supportPromised?: readonly string[];
+  /** Oversight from where he stands (`tick/context.ts`'s `oversightOf`, lane 1.4); the pack's base where the caller cannot place him. */
+  readonly oversight?: number;
+}
+
+export function contextFor(world: ReadingWorld, state: State, person: PersonId, means: OrderMeans = {}): CommandContext {
   const rules = peopleRules(world);
   return {
     available: means.available ?? 1000,
-    oversight: rules.context.oversight,
+    oversight: means.oversight ?? rules.context.oversight,
     leaderCredibility: rules.context.leaderCredibility,
     grievances: (state.personGrievances[person] ?? []).map((g) => ({ kind: g.grievanceKind, weight: g.grievanceWeight })),
     ...(means.supportPromised === undefined ? {} : { supportPromised: means.supportPromised }),
@@ -152,7 +161,7 @@ export function pushbackOf(world: ReadingWorld, state: State, order: string, rec
  * How `person` answers an order from `issuer` with these terms: compliance on the new State, with the pack's weights.
  * Pure. Lane 1.2 calls it at an order's arrival with a goal's, a plan's or an edit's terms.
  */
-export function answerOrder(world: ReadingWorld, state: State, person: PersonId, issuer: PersonId, terms: DirectiveTerms, means: { readonly available?: number; readonly supportPromised?: readonly string[] } = {}): DirectiveResponse {
+export function answerOrder(world: ReadingWorld, state: State, person: PersonId, issuer: PersonId, terms: DirectiveTerms, means: OrderMeans = {}): DirectiveResponse {
   const rules = peopleRules(world);
   // Lane 1.5b: an order that runs against a practice of his own (the map's `clashes` against his cited practices).
   const own = world.map.world.people.find((p) => p.id === person)?.practices.map((p) => p.practice) ?? [];

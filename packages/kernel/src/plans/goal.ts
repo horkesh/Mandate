@@ -6,11 +6,9 @@
  * and await his word, and whether its plan may go ahead as drafted unless the commander objects. An order that names a
  * place does so only as part of a goal for a person (hard rule 1). `plans` holds each post's goal and its plan.
  *
- * STAND-IN (lane 1.4 retires it): the standing goal ("hold", or "advance to a region") is no longer an order's
- * content; it survives only as the execution adapter, which an approved plan writes so that today's movement path can
- * march it (`plans/execute.ts`, `tick/standing.ts`), until lane 1.4's operations take execution over.
+ * Lane 1.4 retired the standing goal: an approved plan is executed by an operation (`operations/`, `tick/operations.ts`).
  */
-import type { ForceBlockId, MessageId, PersonId, RegionId } from '../ids.ts';
+import type { ForceBlockId, RegionId } from '../ids.ts';
 
 /** What the goal asks of him: take the objective, relieve it (reach it and hold it for a garrison there), or hold it. */
 export const POSTURES = ['hold', 'relieve', 'take'] as const;
@@ -117,24 +115,6 @@ export function editProblems(e: EditSpec): string[] {
   return problems;
 }
 
-/** STAND-IN (lane 1.4): what the execution adapter tells today's movement path: hold, or advance to a region. */
+/** A goal's kind, whose directive terms the pack states (`people.goalTerms`): a hold, or an advance (take or relieve). */
 export const GOAL_KINDS = ['advance', 'hold'] as const;
 export type GoalKind = (typeof GOAL_KINDS)[number];
-
-/** STAND-IN (lane 1.4): the step the movement path works to. `goalSpecRegion` is the objective for `advance`; null for `hold`. */
-export interface GoalSpec {
-  readonly goalSpecKind: GoalKind;
-  readonly goalSpecRegion: RegionId | null;
-}
-
-/** STAND-IN (lane 1.4): what an approved plan has the movement path do, and the order behind it. */
-export interface StandingGoal {
-  readonly standingSpec: GoalSpec;
-  /** Who ordered the goal behind it. */
-  readonly standingIssuer: PersonId | null;
-  /** Whether that goal came down his own chain of command (false: it went around a relaying post). */
-  readonly standingViaChain: boolean;
-  readonly standingSetDay: number;
-  /** The order message behind it. */
-  readonly standingOrder: MessageId | null;
-}

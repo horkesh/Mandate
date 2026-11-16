@@ -61,6 +61,8 @@ function blockState(b: NewBlock, condition: BlockCondition): ForceBlockState {
     fbStrength: b.strength,
     fbNonCombatants: 0,
     fbStoresMilli: b.storesDays * STORES_MILLI,
+    // Issued with the block (lane 1.7), so a source's figure, never a pack norm's (lane 1.4).
+    fbStoresAssumed: false,
     fbMorale: condition.morale,
     fbExperience: condition.experience,
     fbEquipment: condition.equipment,
