@@ -458,6 +458,13 @@ describe('a people cell resting only on weak citations (lane 1.11a; hard rule 7,
     }
     expect(weakHits(withTemper({ red_chief: { boldness: 'above:DESIGN p.4 a snippet of text elsewhere' } }))).toEqual([]);
   });
+  it('refuses a regard toward another person that cites only weak sources, and lets a strong one stand', () => {
+    const regardOthers = (cell: string, base: FileMap) =>
+      withFile(`${W}/people.csv`, (t) => t.split('\n').map((line, i) => (i === 0 ? `${line},regard_others` : line === '' ? line : `${line},${line.split(',')[0] === 'red_chief' ? cell : ''}`)).join('\n'), base);
+    const found = weakHits(regardOthers('blue_chief:below:REG A p.2', weak(['REG A'], fixture()))).filter((i) => i.at.includes('regard_others'));
+    expect(found.map((i) => i.message)).toEqual([expect.stringContaining('regard toward blue_chief')]);
+    expect(weakHits(regardOthers('blue_chief:below:REG A p.2+DESIGN', weak(['REG A'], fixture()))).filter((i) => i.at.includes('regard_others'))).toEqual([]);
+  });
   it('lets a banned source count as weak too, and an invented person need no citation', () => {
     expect(weakHits(withFile(`${W}/people.csv`, appendRow(INVENTED), allowInvented())).filter((i) => i.at.includes('pool_officer'))).toEqual([]);
   });

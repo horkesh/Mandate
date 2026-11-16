@@ -301,6 +301,17 @@ export interface RankTerm {
   readonly kind: string;
 }
 
+/**
+ * A value people hold (lane 1.1). `costOnly` (0074): honouring it never raises its holder's willingness, regard or
+ * standing, never relieves a grievance and never adds a positive term to his compliance; offending it still brings
+ * pushback. A generic flag: the engine never names the value.
+ */
+export interface ValueTerm {
+  readonly id: string;
+  readonly name: StringKey;
+  readonly costOnly: boolean;
+}
+
 export interface Term {
   readonly id: string;
   readonly name: StringKey;
@@ -330,7 +341,7 @@ export interface Vocabularies {
   /** Kinds of rank held side by side (0073). */
   readonly rankKinds: readonly Term[];
   /** Values people hold (lane 1.1, 0005): the engine reads only the pack's rules that name them. */
-  readonly values: readonly Term[];
+  readonly values: readonly ValueTerm[];
   readonly blocs: readonly Term[];
   readonly standingOrderKinds: readonly Term[];
 }

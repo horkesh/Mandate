@@ -4,19 +4,50 @@ Branch `data-entry-1861`. Written 2026-11-16 by lane 1.11a (Sonnet, high). The s
 
 ## What is done
 
-1. **The six values (0074)** are in `pack.json` (`state_autonomy`, `slavery_defence`, `slavery_noninterference`, `free_soil`, `native_state`, `fugitive_defence`), with strings. **The `costOnly` flag is not set: lane 1.5 builds it** (`term` is a strict object, so a flag in the data would fail the schema; adding it is kernel and format work). When lane 1.5 lands it, flag `slavery_defence` and `slavery_noninterference`. Until then no cell names a gate-flagged value other than as a plain value.
+1. **The six values (0074)** are in `pack.json` (`state_autonomy`, `slavery_defence`, `slavery_noninterference`, `free_soil`, `native_state`, `fugitive_defence`), with strings. `slavery_defence` and `slavery_noninterference` carry `costOnly: true` (lane 1.5's flag, merged from main in the second batch); its kernel test runs over them and passes.
 2. **The weak-citation rule (hard rule 7).** `packages/pack-format` refuses a people cell (a centre, temperament, regard, value or trait) whose every admissible citation is weak: its source is on the gate's weak list (`gate/source-policy.json`), or banned, or its place begins `snippet`, `self-report` or `after-start`. A strong citation beside a weak one stands. Error kind `weak-citations-only`; tests in `validate.test.ts`. A citation-policy error no longer stops the gate's own pass over the situations (`load.ts`).
 3. **`banned-source-cited` is an error**, in the same commit as the re-sourcing. The six rows (`benjamin_judah_p`, `johnston_joseph_e`, `lee_robert_e`, `mallory_stephen_r`, `memminger_christopher_g`, `reagan_john_h`): the banned citations are removed from their cells and row source lists; the cells that then rest on nothing strong are held back (below).
 4. **Source keys.** The memoir keys are weak in the source policy: BL, BULLOCH, CHESNUT, COX-3DEC, DANA-RCW, GRANT-PM, GREELEY-RBL, JULIAN-PR, LEE-1904, LEWWALLACE-AUTO, LONGSTREET-1896, MCCLELLAN-OS, MEADE-PAULDING, SHERMAN-M, WEED-MEM, WELLES-D1-RETRO. **Welles's retrospective chapters (vol. 1 pp. 3 to 60) now carry `WELLES-D1-RETRO`**; every `WELLES-D 1` cite in a cell or source list at p60 or below was renamed. New public-domain keys: NH-CW (Nicolay and Hay's Complete Works vol. 6, the cabinet opinions), FOX-CC, SCHUCKERS, NEVINS-FREMONT, NPS, DOC-1861 (dated documents read through transcriptions; the locator names author, date and transcription). RICH's title now covers both volumes.
 5. **The cast** from `cast-1861.csv` into `people.csv` (boldness, candour, regard and values columns): see "What did not enter". Five people added: `mansfield_joseph_k_f`, `paulding_hiram`, `mervine_william`, `carlile_john_s`, `willey_waitman_t` (born and died unknown, needs-source; cells only where cited). Nit R1 done (McClellan's `slavery_noninterference` reads "his own wording (S15)"); nit R2 done (the cast note points to 0074).
 6. **Stat-centre disagreements, decided from sources** (each decision is also in the row's notes): changed Andrew's reputation to average (Pearson: mocked in March and April), Hicks's competence to average (N&H 4 p163), Magoffin's nerve to average (N&H 4 p230); filled Goldsborough's birth (1805-02-15, Fox) and noted that his refusal to serve under McClellan is 1862; left Welles, Cameron, Anderson, McClellan's reputation and Yates's birth year with a reason each; noted corrections for Brown (Pulaski by 5 January), Stringham (squadron styled by 3 May), Fox (Chief Clerk 8 to 9 May, Assistant Secretary 1 August), Du Pont (31 December 1860 supported) and Ellis. **Rank kinds:** Price's 1847 brigadier generalcy is U.S. Volunteers (Heitman Part I p22 lists it "(vols)"), so it is `usv_brig_gen`. **Breckinridge (state_maj:1847) and Pike (state_capt:1846) could not be checked** (Heitman Part II was unreachable): left as they are, a lead.
 7. **Strengths** (`force_blocks.csv`): six entered, each flagged in its notes. One return: the St. Louis Arsenal garrison, 490 (the midpoint of 488 to 493 on 19 and 21 February). Five inferred bands entered at their midpoint with the arithmetic in the notes: Fort Monroe 400, New Mexico 2,225, Pacific 2,900, Vogdes's company 90, the Louisiana forts 520. **Rejected** (left unknown): the two Marine blocks and the two ships (snippet-unverified: Wikipedia infoboxes and secondary summaries), every Charleston unit and Fort Morgan and the Texas blocks (no per-unit source at the start date, or formed after it: Kershaw, Hagood, Rion; Ford's regiment is May). Stores stay unknown: lane 1.4 owns the norms. `fb_us_ship_powhatan`'s date was not changed: the only evidence for a different date is one OCR read ("March 13" against 18).
-8. **Loyalty** (`loyalty.csv`, 36 regions): Delaware, Maryland (Baltimore City apart), Kentucky and Missouri, from the 1860 presidential vote as read in the Tribune Almanac (union = the non-Breckinridge share, a ceiling on unconditional Union; confederate = the Breckinridge share, a ceiling on committed Southern-rights sentiment). Delaware is corrected from 650/80 to 543/457; Missouri's Confederate share is 189, not 200. **Virginia, North Carolina, Tennessee and Arkansas have no loyalty row**: the evidence found is a vote on calling a convention, not loyalty, and Virginia's east-west split was not found. Texas has none (control is Confederate). No value comes from the census.
+8. **Loyalty** (`loyalty.csv`, 36 regions) is **a proxy, labelled so in every row's note, never a measured loyalty**: the 1860 presidential vote among the free and voting population (0078), for Delaware, Maryland (Baltimore City apart), Kentucky and Missouri as read in the Tribune Almanac (union = the non-Breckinridge share, a ceiling on unconditional Union; confederate = the Breckinridge share, a ceiling on committed Southern-rights sentiment). Delaware is corrected from 650/80 to 543/457; Missouri's Confederate share is 189, not 200. **Virginia, North Carolina, Tennessee and Arkansas have no loyalty row**: the evidence found is a vote on calling a convention, not loyalty, and Virginia's east-west split was not found. Texas has none (control is Confederate). No value comes from the census.
 9. **The calls**: a draft, `source/drafts/calls/union-calls-1861.csv`, the 15 April quota table by state (94 regiments, 73,391 men, two cells repaired by arithmetic and marked) and the 3 May call. The world format has no table for quotas (a call's quota is the situation option's, S09: lane 1.11), so it is a draft for the situation lane. **Re-read OR III-1 p69 in print**: the standing reviewer could not read the table's total.
 10. **Census rows: none entered.** The enslaved population by region would come from Kennedy's *Population of the United States in 1860* (1864), whose county tables (registered as CEN1860-POP) are on archive.org; no region was mapped to its counties and no count was read, and the census.gov pages refuse automated requests. `census.csv` stays empty; the self-emancipation term has nowhere to run until the rows are sourced and the gate reviewer signs them.
 11. **Liveness bands** (`packages/cli/src/liveness-gate.ts`): with the people data entered, the Union reference run's one battle-day ends in a rout with a broken flank instead of a withdrawal. `combat.flank_broken` and `combat.routed` are banded around(1) in the Union run and `notHere` in the testbed; `combat.withdrew` is `notHere` in the Union run. The done check passes.
 
+## regard_others (the second batch, after lane 1.5's merge)
+
+`regard_others` is entered from `cast-1861.csv` through the same weak-citation rule (now also applied to regard for others): **90 entries entered, 24 not** (no citable public-domain source, or only weak citations). The ones that did not enter:
+
+- `seward_william_h -> scott_winfield above: no citable public-domain source`
+- `cameron_simon -> blair_montgomery above: no citable public-domain source`
+- `cameron_simon -> smith_caleb_b low: no citable public-domain source`
+- `welles_gideon -> fox_gustavus_v above: only weak citations remain`
+- `bates_edward -> seward_william_h average: no citable public-domain source`
+- `bates_edward -> gamble_hamilton_r above: no citable public-domain source`
+- `blair_montgomery -> cameron_simon above: no citable public-domain source`
+- `blair_montgomery -> fox_gustavus_v high: no citable public-domain source`
+- `smith_caleb_b -> cameron_simon low: no citable public-domain source`
+- `mcdowell_irvin -> chase_salmon_p above: no citable public-domain source`
+- `harney_william_s -> lyon_nathaniel below: no citable public-domain source`
+- `lyon_nathaniel -> blair_francis_p above: no citable public-domain source`
+- `lyon_nathaniel -> harney_william_s low: no citable public-domain source`
+- `morgan_edwin_d -> weed_thurlow high: no citable public-domain source`
+- `curtin_andrew_g -> cameron_simon below: no citable public-domain source`
+- `dennison_william -> chase_salmon_p high: no citable public-domain source`
+- `carlile_john_s -> willey_waitman_t below: no citable public-domain source`
+- `willey_waitman_t -> carlile_john_s below: no citable public-domain source`
+- `gamble_hamilton_r -> bates_edward above: no citable public-domain source`
+- `paulding_hiram -> mervine_william above: only weak citations remain`
+- `paulding_hiram -> davis_charles_h high: only weak citations remain`
+- `letcher_john -> lee_robert_e above: no citable public-domain source`
+- `davis_jefferson -> lee_robert_e average: only weak citations remain`
+- `memminger_christopher_g -> pickens_francis_w above: no citable public-domain source`
+
 ## What did not enter, and why
+
+The cells below keep their old directions and citations in the row's notes (the cast cells keep theirs in `cast-1861.csv`). **A later research lane should re-source them; they are not re-entered now (the lead's ruling).**
 
 **Existing cells held back** (33 centres): each rested only on weak citations (a memoir, a self-report, a banned memoir). The old direction and citations are kept in the row's notes, so lane 1.11 or a research lane can re-source them. Many were rows the rule found by itself, beyond the six banned ones.
 
@@ -124,10 +155,8 @@ Branch `data-entry-1861`. Written 2026-11-16 by lane 1.11a (Sonnet, high). The s
 
 ## Not done, and why
 
-- **`regard_others`**: the format has no column for it (lane 1.5 builds it). The values stay in `cast-1861.csv` and the cast note.
 - **`fugitive-policy` rows**: lane 1.5b's.
 - **Situations**: lane 1.11's.
-- **The `costOnly` flag**: lane 1.5's (above).
 - **A stricter reading of "evidence after the start date"**: the rule can only see a marker in a citation's place (`after-start`); no existing cell carries one, so cells resting on evidence dated after 5 March are caught only if their source is weak. A research pass over the cells' dates would add the markers.
 - **Re-read in print** before release: every figure that came through OCR or a transcription (the OR III-1 p69 quota table, the Almanac's 1860 returns, the St. Louis Arsenal returns, the Army table's company counts).
 

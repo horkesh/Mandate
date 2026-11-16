@@ -96,6 +96,34 @@ export const FIXTURE_PEOPLE_RULES: PeopleRules = {
     paperPermille: 1400,
   },
   grievances: { bypassedWeight: 150 },
+  attention: {
+    cap: 12,
+    refillDays: 7,
+    costs: { order: 1, review_edit: 1, review_approve: 0, review_send_back: 0, go: 0, decide_staff: 0, decide_overrule: 1, delegate: 0, appoint: 1, relieve: 1, transfer: 1, inquire: 0, consult: 1, audience: 1, observer: 1, promise: 1, pressure: 1, address: 1 },
+  },
+  verbs: {
+    weekDays: 7,
+    orderValues: [
+      { order: 'verb:appoint', boldness: null, honours: ['career', 'reputation'], offends: [], gateTopics: [], notCheaperThan: null },
+      { order: 'verb:consult', boldness: null, honours: ['duty'], offends: [], gateTopics: [], notCheaperThan: null },
+      { order: 'verb:inquire', boldness: null, honours: ['duty'], offends: [], gateTopics: [], notCheaperThan: null },
+      { order: 'verb:observer', boldness: null, honours: ['duty'], offends: [], gateTopics: [], notCheaperThan: null },
+      { order: 'verb:relieve', boldness: null, honours: [], offends: ['career', 'reputation'], gateTopics: [], notCheaperThan: null },
+      { order: 'verb:transfer', boldness: null, honours: ['duty'], offends: ['reputation'], gateTopics: [], notCheaperThan: null },
+    ],
+    relief: [
+      { mode: 'quiet_department', grievanceWeight: 100, regardDelta: -100, standingDelta: 0 },
+      { mode: 'own_request', grievanceWeight: 50, regardDelta: 0, standingDelta: 0 },
+      { mode: 'outright', grievanceWeight: 250, regardDelta: -250, standingDelta: -100 },
+    ],
+    inquiry: { freePerWeek: 2, pesteredWeight: 60 },
+    promise: { dueDays: 30, brokenWeight: 200, brokenRegard: -150 },
+    pressure: { weight: 150, oversight: 200, days: 14 },
+    observer: { oversight: 150, monitoredWeight: 100, letterEveryDays: 7 },
+    audience: { maxCounters: 3, cooldownDays: 7, vindicateRegard: 150, vindicateStanding: 50 },
+    ladder: { thresholds: [100, 200, 300, 400, 500, 650, 800], dispositionPerRung: 60, publicStanding: 600, rivalStanding: 700, decayDivisor: 4 },
+    initiatives: [],
+  },
 };
 
 /**
@@ -230,7 +258,7 @@ export function mapWorld(parts: WorldParts): World {
       // Every fixture faction is at war from day 1 (0064): the fixtures test the war, not the peace before it.
       ruleSeats: { warFlags: (parts.factions ?? ['a', 'b']).map((f) => ({ faction: F(f), flag: null })) },
     },
-    vocabularies: { terrains: [], postKinds: [], departmentKinds: [], arms: [], personKinds: [], traits: [], ranks: [], rankKinds: [], values: FIXTURE_VALUES.map((v) => ({ id: v, name: `value.${v}` })), blocs: [], standingOrderKinds: [] },
+    vocabularies: { terrains: [], postKinds: [], departmentKinds: [], arms: [], personKinds: [], traits: [], ranks: [], rankKinds: [], values: FIXTURE_VALUES.map((v) => ({ id: v, name: `value.${v}`, costOnly: false })), blocs: [], standingOrderKinds: [] },
     factions: (parts.factions ?? ['a', 'b']).map((f) => ({ id: F(f), name: `faction.${f}.name` })),
     departments: (parts.departments ?? []).map((d) => ({ id: toId('department', d), faction: d.startsWith('neutral_') ? null : F(d.split('_')[0]!), kind: 'government', name: `department.${d}.name`, provenance: [] })),
     regions: parts.regions,

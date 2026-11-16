@@ -109,6 +109,7 @@ export const WORLD_TABLES = {
       c('candour'),
       c('regard'),
       c('values'),
+      c('regard_others'),
       c('traits'),
       c('bloc'),
       c('ranks'),

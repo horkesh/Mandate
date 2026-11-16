@@ -145,6 +145,9 @@ export const PersonSchema = z.strictObject({
   temperament: z.strictObject({ boldness: statCentre, candour: statCentre }).describe('Boldness and candour (lane 1.1): cited centres history’s shadow draws around at setup.'),
   values: z.array(z.strictObject({ value: termId, cites: z.array(citation) })).describe('The values he holds, from the pack’s values vocabulary, each cited (lane 1.1); empty when none is known.'),
   regard: statCentre.describe('His regard for his own faction’s principal at the pack’s first start, a cited centre (lane 1.1).'),
+  regardOthers: z
+    .array(z.strictObject({ toward: idOf('person'), direction: z.enum(w.STAT_DIRECTIONS), cites: z.array(citation) }))
+    .describe('His regard for other people at the pack’s first start (lane 1.5: rivals, partners), each a cited direction.'),
   traits: z.array(z.strictObject({ trait: termId, cites: z.array(citation) })),
   bloc: termId.nullable(),
   ranks: z.array(z.strictObject({ rank: termId, from: historicalDate })),
@@ -414,6 +417,40 @@ export const RulesSchema = z.strictObject({
         })
         .describe('How temperament and values shade what a man sees and asks (lane 0.6’s stand-in rules, now the pack’s, 0058).'),
       grievances: z.strictObject({ bypassedWeight: nonNegative }).describe('Weights of grievances the people core applies.'),
+      attention: z
+        .strictObject({
+          cap: nonNegative,
+          refillDays: positive,
+          costs: z.strictObject(Object.fromEntries(phase0.ATTENTION_KEYS.map((k) => [k, nonNegative])) as Record<(typeof phase0.ATTENTION_KEYS)[number], typeof nonNegative>),
+        })
+        .describe('The president’s attention (0025, 0040): a weekly cap, its refill, and the cost table (FOUNDATION section 5). Design parameters.'),
+      verbs: z
+        .strictObject({
+          weekDays: positive,
+          orderValues: z
+            .array(z.strictObject({ order: z.string().min(1), boldness: permille.nullable(), honours: z.array(termId), offends: z.array(termId), gateTopics: z.array(termId), notCheaperThan: z.string().min(1).nullable() }))
+            .describe('The map from orders to values (0074): gate content; a row tagged with gate topics needs the gate reviewer’s sign-off.'),
+          relief: z.array(z.strictObject({ mode: z.enum(['quiet_department', 'own_request', 'outright']), grievanceWeight: nonNegative, regardDelta: signedPermille, standingDelta: signedPermille })),
+          inquiry: z.strictObject({ freePerWeek: nonNegative, pesteredWeight: nonNegative }),
+          promise: z.strictObject({ dueDays: nonNegative, brokenWeight: nonNegative, brokenRegard: signedPermille }),
+          pressure: z.strictObject({ weight: nonNegative, oversight: nonNegative, days: nonNegative }),
+          observer: z.strictObject({ oversight: nonNegative, monitoredWeight: nonNegative, letterEveryDays: positive }),
+          audience: z.strictObject({ maxCounters: nonNegative, cooldownDays: nonNegative, vindicateRegard: signedPermille, vindicateStanding: signedPermille }),
+          ladder: z.strictObject({ thresholds: z.array(int), dispositionPerRung: nonNegative, publicStanding: nonNegative, rivalStanding: nonNegative, decayDivisor: positive }),
+          initiatives: z.array(
+            z.strictObject({
+              id: termId,
+              kinds: z.array(termId),
+              boldness: permille,
+              honours: z.array(termId),
+              offends: z.array(termId),
+              fromRung: z.enum(phase0.LADDER_RUNGS),
+              cooldownDays: positive,
+              recommends: termId,
+            }),
+          ),
+        })
+        .describe('The people verbs, the ladder, the audience and seat initiatives (lane 1.5). Design parameters.'),
     })
     .describe('The people core (lane 1.1): history’s shadow, compliance, reading orders and reports, traits. Design parameters the pack states (0072), not sourced facts.'),
 });
@@ -452,7 +489,9 @@ export const VocabulariesSchema = z.strictObject({
   traits: z.array(z.strictObject({ id: termId, name: stringKey, gate: z.boolean() })),
   ranks: z.array(z.strictObject({ id: termId, name: stringKey, seniority: nonNegative, kind: termId.describe('Its kind from rankKinds: a person holds one rank of each kind at once (0073).') })),
   rankKinds: z.array(term).describe('Kinds of rank held side by side (0073), such as regular, volunteer and brevet.'),
-  values: z.array(term).describe('Values people hold (lane 1.1); the engine reads only the people rules that name them.'),
+  values: z
+    .array(z.strictObject({ id: termId, name: stringKey, costOnly: z.boolean().default(false).describe('0074: honouring it never helps its holder; offending it still costs.') }))
+    .describe('Values people hold (lane 1.1); the engine reads only the people rules that name them.'),
   blocs: z.array(term),
   standingOrderKinds: z.array(term),
 });

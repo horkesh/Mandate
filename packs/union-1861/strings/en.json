@@ -164,9 +164,9 @@
   "value.abolition": "abolition",
   "value.glory": "glory",
   "value.state_autonomy": "state autonomy",
-  "value.slavery_defence": "slavery defence",
-  "value.slavery_noninterference": "slavery non-interference",
+  "value.slavery_defence": "defence of slavery",
+  "value.slavery_noninterference": "non-interference with slavery",
   "value.free_soil": "free soil",
-  "value.native_state": "native state",
-  "value.fugitive_defence": "fugitive defence"
+  "value.native_state": "his native state",
+  "value.fugitive_defence": "defence of fugitives"
 }

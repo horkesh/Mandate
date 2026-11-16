@@ -75,6 +75,11 @@ export interface PersonRecord {
    * the pack's rule (`WorldRules.people.regardPermille`). Regard between people starts at none and moves in play.
    */
   readonly regard: StatCentre;
+  /**
+   * His regard for other people at the pack's first start (lane 1.5: rivals, partners), each a cited direction mapped by
+   * the same pack rule as regard for the principal. Anyone not listed starts at the pack's regard for the unknown.
+   */
+  readonly regardOthers: readonly { readonly toward: PersonId; readonly direction: StatDirection; readonly cites: readonly Citation[] }[];
   readonly traits: readonly TraitEvidence[];
   /** A bloc from the pack's vocabulary, or null. */
   readonly bloc: string | null;

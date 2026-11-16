@@ -64,6 +64,16 @@ export interface CommandContext {
   readonly disposition?: number;
   /** Grievances the proxy holds against the principal (typed; each is answered by specific counters, P3). */
   readonly grievances?: readonly { readonly kind: string; readonly weight: number }[];
+  /**
+   * Values honouring which never helps (0074's cost-only values): honouring one adds nothing to willingness and gives no
+   * reason; offending one still costs. From the pack's vocabulary.
+   */
+  readonly costOnly?: readonly ValueId[];
+  /**
+   * Oversight beyond the base (lane 1.5): an observer at his headquarters, pressure. Each adds to `oversight` as its own
+   * typed term and a `watched` reason, so a replacement of the base stand-in keeps them (the lead's condition).
+   */
+  readonly oversightTerms?: readonly { readonly source: string; readonly amount: Permille }[];
   /** Support already promised to him, by kind: a need of a promised kind carries no condition. */
   readonly supportPromised?: readonly string[];
 }
@@ -98,7 +108,9 @@ export type Reason =
   | { readonly kind: 'lacks_resources'; readonly shortfall: Permille }
   | { readonly kind: 'holds_grievance'; readonly grievance: string; readonly weight: number }
   /** An edit departs from his own judgement by at least the reason threshold (lane 1.1). */
-  | { readonly kind: 'departs_from_judgement'; readonly departure: Permille };
+  | { readonly kind: 'departs_from_judgement'; readonly departure: Permille }
+  /** He knows he is watched more closely than usual (lane 1.5): an observer at his headquarters, or pressure. */
+  | { readonly kind: 'watched'; readonly source: string; readonly amount: Permille };
 
 export type ReasonKind = Reason['kind'];
 
