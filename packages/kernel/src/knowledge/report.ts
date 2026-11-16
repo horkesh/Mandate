@@ -76,7 +76,8 @@ export type SubjectKind = (typeof SUBJECT_KINDS)[number];
  * - `battle-result`: a battle its side closed, as its public hears it: `claimToken` `won`, `lost` or `drawn`,
  *   `claimRegion` the battle's region, `claimValue` the side's killed, wounded and missing (the captured among them) as
  *   its principal's casualty returns give them by the printing day, never the battle record; `claimConfidence` 900 from
- *   full returns, 500 while a first return stands for a day, and 0 with no return yet (no figure printed);
+ *   full returns, 500 while a first return stands for a day, and 0 with no return yet (no figure printed); once every
+ *   day's full return has come, a `captured` claim beside it gives the captured apart (never before: no early split);
  * - `framing`: who its public believes began the war, signed permille (positive: the other side).
  */
 export const CLAIM_KINDS = [

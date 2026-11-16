@@ -240,6 +240,9 @@ A front page went to the principal with the battle record's exact losses, a rout
 - **The result** (won, lost or drawn by who left the field) still reads the record: who left the field was public.
 - **Test:** no figure before any return; the first return's low figure; then the full figure with the captured; and the return's claim of the enemy's losses never counts as the side's own. Re-break: reading the battle record's losses fails 2 tests.
 - *Rejected:* the truth on a lag (it still leaks exact losses before the full return), and a paper's own estimate (a slant, which belongs to 1B).
+- **The gate reviewer's two conditions:**
+  - **A surrender never vanishes.** The result line always prints, from the public fact of who left the field, whether or not a return has come. A force taken whole, with its post above vacant, sends no return, yet the next page reads "lost" with no figure (a tick test). Dropping battles with no return fails 3 tests.
+  - **No early split.** The captured print apart, as a `captured` claim beside the result, only once every day's full return has come. On the first page they are among the missing, and nothing prints them apart (a test).
 
 ## Findings outside my scope
 

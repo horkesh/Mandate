@@ -25,7 +25,7 @@ import { SITUATION_MECHANICS } from '../src/tick/situations.ts';
 import { SEATS_MECHANICS, tick, type TickResult } from '../src/tick/tick.ts';
 import { indexWorld } from '../src/world/index.ts';
 import { person } from './support/forces-fixture.ts';
-import { F, fixtureMap, fixtureStart, P, R } from './support/seats-fixture.ts';
+import { F, fixtureMap, fixtureStart, P, POST, R } from './support/seats-fixture.ts';
 
 /**
  * Lane 1.6: politics on the seats fixture (setting-free, 0003). Blocs at their rest, moved by an address, the weekly
@@ -251,6 +251,33 @@ describe('the press as a report route (FOUNDATION section 7)', () => {
     // The enemy's losses the return claims are not the side's own.
     const enemy = withReturn(s0, 5, 6, 'enemy', [['casualties', 5000]]);
     expect(figure(enemy, 7)).toEqual(['won', 0, 0]);
+  });
+
+  it('splits the captured out only once the full return has come: never on the first page (the gate reviewer’s condition)', () => {
+    const world = politicsWorld();
+    const reveal = world.map.world.rules.operations.returns.revealDays;
+    const s0 = { ...createState(world, { seed: 1 }), battleRecords: { 'battle:a_front:4': battle(5) } };
+    const page = (s: State) => frontPage(POLITICS, s, POLITICS.press.papers[0]!, 7, P('a_lead'), reveal).claims.map((c) => [c.claimKind, c.claimValue]);
+    const first = withReturn(s0, 5, 6, 'first', [['own-losses', 300], ['missing', 120]]);
+    // The first page: the captured are among the missing, and nothing prints them apart.
+    expect(page(first)).toEqual([['battle-result', 420]]);
+    const full = withReturn(first, 5 + reveal, 6 + reveal, 'full', [['own-losses', 400], ['missing', 50], ['captured', 70]]);
+    expect(page(full)).toEqual([['battle-result', 520], ['captured', 70]]);
+  });
+
+  it('a force taken whole, with no one above to send a return, still prints as lost on the next page (the gate reviewer’s condition)', () => {
+    const world = politicsWorld();
+    const s0 = createState(world, { seed: 1 });
+    // Side a's army was cut off and surrendered on day 5, and its post stands vacant: no return comes from anyone.
+    const b = battle(5);
+    const taken = { ...b, battleDays: [{ ...b.battleDays[0]!, bdaySides: b.battleDays[0]!.bdaySides.map((x) => (x.bsideFaction === F('a') ? { ...x, bsideCutOff: 'surrender' } : { ...x, bsideResult: 'held' })) }] } as unknown as BattleRecord;
+    const army = s0.postStates[POST('a_army')]!;
+    const vacant = { ...s0, stateDay: 6, battleRecords: { 'battle:a_front:4': taken }, postStates: { ...s0.postStates, [POST('a_army')]: { ...army, postHolder: null } } };
+    const run = days(world, vacant, 2);
+    const held = knowledgeOf(run.state, lead).knownReports.filter((r) => r.knownBody.reportType === 'press');
+    expect(held.map((r) => r.knownBody.reportClaims.map((c) => [c.claimKind, c.claimToken, c.claimValue, c.claimConfidence]))).toEqual([[['battle-result', 'lost', 0, 0]]]);
+    // No casualty return reached the principal: the page's "lost" comes from the public fact of the surrender.
+    expect(knowledgeOf(run.state, lead).knownReports.some((r) => r.knownBody.reportType === 'casualty-return')).toBe(false);
   });
 
   it('prints the week’s battles, moves the blocs and the commander’s standing at its reach, and reaches the readers', () => {
