@@ -1,7 +1,7 @@
 /**
  * The Phase 0 done check (FOUNDATION section 12; lane 0.8). Phase 0 is done when a headless run on the new
  * kernel, on the Union 1861 map and order of battle, with rule seats giving goals and their commanders drafting plans:
- *  1. moves divisions, changes control through the simple contest, and derives fronts, pockets and supply;
+ *  1. moves divisions, changes control through battles and occupation (lane 1.3), and derives fronts, pockets and supply;
  *  2. gives the same state hash on Linux and Windows CI;
  *  3. resumes from a mid-run save to the same final hash as the continuous run;
  *  4. passes the liveness gate for every Phase 0 mechanic;
@@ -59,15 +59,16 @@ export const MECHANICS_RUN = ' (a mechanics run on stand-in principals: its outc
 
 const fires = (s: Phase0Summary, mechanic: string): number => s.liveness.find((r) => r.mechanic === mechanic)?.fires ?? 0;
 
-/** Criterion 1, for one run: forces move, ground changes hands through the contest, and the map phases derive. */
+/** Criterion 1, for one run: forces move, ground changes hands through battles and occupation, and the map phases derive. */
 export function behaviourProblems(s: Phase0Summary): string[] {
   const problems: string[] = [];
   for (const m of ['movement.leg_started', 'movement.arrived']) if (fires(s, m) === 0) problems.push(`${s.pack}: no division moved (${m} is 0)`);
-  // Ground changes hands through the simple contest: by a contest or an occupation, and control changes (lane 1.2: the
-  // Union run's occupations came only from Phase 0's principal leaving Washington empty; its garrison now holds, so
-  // Washington is taken by contest and no ground is occupied unopposed. Each run needs a contest or an occupation, and a control change).
-  if (fires(s, 'combat.contest') + fires(s, 'combat.occupation') === 0) problems.push(`${s.pack}: control never changed through the contest (combat.contest and combat.occupation are 0)`);
-  if (fires(s, 'control.changed') === 0) problems.push(`${s.pack}: control never changed through the contest (control.changed is 0)`);
+  // Ground changes hands through battles or occupation, and control changes (0075's criterion, lane 1.2; lane 1.3's battles
+  // replaced the contest). Lane 1.2: the Union run's occupations came only from Phase 0's principal leaving Washington
+  // empty; its garrison now holds, so Washington is fought for and little ground is occupied unopposed. Each run needs a
+  // battle-day or an occupation, and a control change.
+  if (fires(s, 'combat.battle_day') + fires(s, 'combat.occupation') === 0) problems.push(`${s.pack}: control never changed through battle or occupation (combat.battle_day and combat.occupation are 0)`);
+  if (fires(s, 'control.changed') === 0) problems.push(`${s.pack}: control never changed through battle or occupation (control.changed is 0)`);
   for (const m of ['orders.obeyed', 'plans.goal_reached']) if (fires(s, m) === 0) problems.push(`${s.pack}: the rule seats' goals did nothing (${m} is 0)`);
   const last = s.checkpoints.at(-1);
   if (last === undefined) return [...problems, `${s.pack}: no checkpoint scores`];
@@ -168,9 +169,9 @@ export function evaluateDoneCheck(input: DoneCheckInput): Criterion[] {
   return [
     {
       id: 'behaviour',
-      text: 'rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through the simple contest (a contest or an occupation, and a control change), and derive fronts, pockets and supply',
+      text: 'rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply',
       problems: runs.flatMap((r) => behaviourProblems(r.checked)),
-      evidence: runs.map((r) => `${r.name}${r.checked.atWar ? MECHANICS_RUN : ''}: ${fires(r.checked, 'movement.arrived')} arrivals, ${fires(r.checked, 'combat.contest')} contests, ${fires(r.checked, 'control.changed')} control changes, ${r.checked.checkpoints.at(-1)?.scores.factions.map((f) => `${f.faction} ${f.frontSegments} front segments ${f.supplied} supplied ${f.pockets} pockets`).join('; ') ?? 'no checkpoint'}`),
+      evidence: runs.map((r) => `${r.name}${r.checked.atWar ? MECHANICS_RUN : ''}: ${fires(r.checked, 'movement.arrived')} arrivals, ${fires(r.checked, 'combat.battle_day')} battle-days, ${fires(r.checked, 'control.changed')} control changes, ${r.checked.checkpoints.at(-1)?.scores.factions.map((f) => `${f.faction} ${f.frontSegments} front segments ${f.supplied} supplied ${f.pockets} pockets`).join('; ') ?? 'no checkpoint'}`),
     },
     {
       id: 'hash',

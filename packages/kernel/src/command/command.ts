@@ -295,6 +295,30 @@ export function relieveHolder(state: State, post: PostId): State {
   return withPost(state, post, { ...p, postHolder: null, postActing: false });
 }
 
+/**
+ * What a battle proposes to `command` (lane 1.3; 0073): a post left vacant because its holder was killed, wounded or
+ * captured, and a surrendered block that no post commands any more. Typed, with the battle that caused it (hard rule 6).
+ */
+export type CombatCommandChange =
+  | { readonly change: 'vacate'; readonly post: PostId; readonly person: PersonId; readonly why: 'killed' | 'wounded' | 'captured'; readonly battle: string }
+  | { readonly change: 'release'; readonly block: ForceBlockId; readonly battle: string };
+
+/**
+ * Apply a battle's proposals: a vacancy empties the post only while the hit man still holds it (anyone appointed since
+ * keeps it); a released block is commanded by no post. Returns the State unchanged when nothing changes.
+ */
+export function applyCombatCommand(state: State, changes: readonly CombatCommandChange[]): State {
+  let next = state;
+  for (const c of changes) {
+    if (c.change === 'vacate') {
+      if (postStateOf(next, c.post).postHolder === c.person) next = relieveHolder(next, c.post);
+      continue;
+    }
+    if (assignmentOf(next, c.block) !== null) next = { ...next, forceAssignments: { ...next.forceAssignments, [c.block]: null } };
+  }
+  return next;
+}
+
 /** What a transfer names (0033): a number of blocks, a strength in men, or a corps (a post that moves as a bundle). */
 export type TransferForce =
   | { readonly force: 'blocks'; readonly count: number }

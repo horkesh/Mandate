@@ -25,7 +25,7 @@ import { phase0Run, type Phase0Summary } from '../src/phase0-run.ts';
 /**
  * The Phase 0 done check (FOUNDATION section 12; lane 0.8, step 5): a headless run on the new kernel, on
  * the Union 1861 map and order of battle, with rule seats giving goals and commanders drafting plans, moves divisions, changes
- * control through the simple contest and derives fronts, pockets and supply; its hash does not depend on how
+ * control through battles and occupation and derives fronts, pockets and supply; its hash does not depend on how
  * it is run; it resumes to the same final hash; every mechanic is alive or quiet for a reason; the section 10
  * tests stand; and the tick stays inside its budget. Each criterion has a positive control below.
  */
@@ -88,11 +88,11 @@ describe('the done check on union-1861 at war and the testbed', () => {
 });
 
 describe('each criterion can fail (positive controls)', () => {
-  it('behaviour: the Union pack at peace moves nothing and contests nothing', () => {
+  it('behaviour: the Union pack at peace moves nothing and fights nothing', () => {
     const peace = phase0Run({ pack: 'union-1861', days: 30, atWar: false, checks: false, replay: false, hash: 'checkpoints', checkpointEvery: 15 });
     const problems = behaviourProblems(peace);
     expect(problems.join('\n')).toContain('no division moved (movement.leg_started is 0)');
-    expect(problems.join('\n')).toContain('control never changed through the contest');
+    expect(problems.join('\n')).toContain('control never changed through battle or occupation');
     expect(problems.join('\n')).toContain("goals did nothing");
     // And a run whose last checkpoint shows no front, no supply and no pocket anywhere.
     const s = union().checked;

@@ -58,6 +58,8 @@ export interface Stance {
 
 export const PERSON_STATUSES = ['serving', 'wounded', 'killed', 'captured'] as const;
 export type PersonStatusKind = (typeof PERSON_STATUSES)[number];
+/** Statuses no change leaves (R4's battle ruling for `captured`, accepted provisionally for 1A). */
+export const FINAL_STATUSES: readonly PersonStatusKind[] = ['killed', 'captured'];
 
 /** A person's status and the day it began (0073; combat proposes it). */
 export interface PersonStatus {
@@ -180,9 +182,15 @@ export function applyPeopleChanges(state: State, changes: readonly PeopleChange[
         next = { ...next, personGrievances: { ...next.personGrievances, [c.person]: [...(next.personGrievances[c.person] ?? []), g] } };
         break;
       }
-      case 'status':
-        next = { ...next, personStatus: { ...next.personStatus, [c.person]: { statusKind: c.status, statusDay: day } } };
+      case 'status': {
+        // A captured man stays captured for the whole of 1A (R4's battle ruling: no exchange, parole or option on his
+        // fate), and the dead stay dead: nothing moves a person out of either status.
+        const now = next.personStatus[c.person]?.statusKind;
+        if (now !== undefined && FINAL_STATUSES.includes(now) && now !== c.status) throw new RangeError(`${c.person} is ${now}; nothing moves a person out of ${now}`);
+        if (now === c.status && FINAL_STATUSES.includes(now)) break;
+        next ={ ...next, personStatus: { ...next.personStatus, [c.person]: { statusKind: c.status, statusDay: day } } };
         break;
+      }
       case 'stance': {
         const s: Stance = { stanceSubject: c.subject, stanceRecommends: c.recommends, stanceDay: day, stanceConfidence: c.confidence };
         next = { ...next, personStances: { ...next.personStances, [c.person]: [...(next.personStances[c.person] ?? []), s] } };

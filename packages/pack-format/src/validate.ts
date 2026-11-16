@@ -150,6 +150,11 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   for (const problem of phase0.peopleRulesProblems(world.rules.people, vocab.values.map((v) => v.id))) {
     err('rules-people', W('rules', 0, 'people'), problem, 'whole permille for each people rule, and values from the pack’s values vocabulary');
   }
+  // Lane 1.3: the combat rules, by the kernel's own rule (it checks the same when it indexes a World): every terrain the
+  // frontage table names is in the vocabulary, the phase shares sum to 1000, and the phases run in order.
+  for (const problem of phase0.combatRulesProblems(world.rules.combat, vocab.terrains.map((t) => t.id))) {
+    err('rules-combat', W('rules', 0, 'combat'), problem, 'whole numbers in range for each combat rule, terrains from the pack’s vocabulary, phase shares summing to 1000');
+  }
   // 0073: every rank has a kind from rankKinds, so a person can hold one of each kind at once.
   vocab.ranks.forEach((r, i) => term('rankKinds', r.kind, W('vocabularies.ranks', i, 'kind')));
 
