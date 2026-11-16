@@ -261,8 +261,8 @@ describe('destruction only when cut off: surrender, capture, and the trapped gar
     // The breakout is fought at the assault rates, with b attacking all-out.
     expect([day2.bdayType, day2.bdayAttacker, sideOf(day2, 'b').bsideCommit]).toEqual(['assault_works', 'b', 'all_out']);
     expect(sideOf(day2, 'b').bsideCutOff).toBe('surrender');
-    // It surrenders, never breaking out twice: its breakout failed, or it routed with nowhere to go.
-    expect(sideOf(day2, 'b').bsideDecisions.map((t) => t.btermKind).filter((k) => k === 'breakout_failed' || k === 'routed_in_pocket')).toHaveLength(1);
+    // It wants out again and cannot get out: its breakout failed, and the force is destroyed, never breaking out twice.
+    expect(sideOf(day2, 'b').bsideDecisions.map((t) => t.btermKind)).toContain('breakout_failed');
   });
 
   it('a rout that captures men on the field: a typed loss, kept apart from the missing (R4\'s battle ruling)', () => {

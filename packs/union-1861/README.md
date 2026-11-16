@@ -63,9 +63,9 @@ These rules are design parameters, chosen for play and not sourced facts. Every 
 | `stores.menPerCapacityUnit` | 20000 | Men, and non-combatants, that one unit of the capacity scale feeds for a day |
 | `stores.capDays` | 30 | The most days of stores a block refills to |
 | `stores.lowDays` | 7 | Stores below this many days are low: a truth event a report may tell |
-| `contest.occupyPermille` | 100 | Control a side alone in held ground gains a day, at full strength |
-| `contest.occupyFullMen` | 5000 | The men at which occupation reaches full rate; fewer gain in proportion |
-| `contest.contestPermille` | 200 | Control the stronger side gains a day, times its margin over the next |
+| `occupation.occupyPermille` | 100 | Control a side alone in held ground gains a day, at full strength |
+| `occupation.occupyFullMen` | 5000 | The men at which occupation reaches full rate; fewer gain in proportion |
+| `combat` | (a group) | The battle model (lane 1.3): base K+W rates per battle type, works thresholds, frontage and a loss term per terrain, the additive terms' weights and caps, commits, killed and missing shares, the flank break, morale and the rout, experience, equipment, the commanders' decision shares, the battle's day cap, field control, stragglers' return, commanders hit, and the day shape's phases. The combat note's starting values, inside Livermore's and Fox's bands; `packs/union-1861/test/livermore.test.ts` runs them against Livermore's tables |
 | `movement.marchMinCapacityPermille` | 1000 | The least capacity an edge needs this month to carry a march: one whole unit |
 | `movement.courierPermille` | 333 | A courier's days on an edge, as a share of a division's: about a third, rounded up |
 

@@ -13,8 +13,9 @@
  * - **Morale** (P5): falls with the day's loss share and a broken flank, moves with the commander's nerve and the side's
  *   experience. Below the pack's rout line the side routs: mechanical, never chosen, and it kills no one.
  * - **Night** (P6): a side that did not rout stays or withdraws by its commander's believed odds. A side that leaves with
- *   no legal retreat (0019) is cut off: its commander breaks out (tomorrow, at the assault rates) or surrenders; a routed
- *   side, or one whose breakout failed, surrenders. Only then is a force destroyed: its men are captured.
+ *   no legal retreat (0019) is cut off: its commander breaks out (tomorrow, at the assault rates) or surrenders, by his
+ *   own traits even when it routed (0074: surrender is his own act); one whose breakout failed is destroyed. Only then is a
+ *   force destroyed: its men are captured.
  * - **Missing** (P4, P8): a share of kw by the side's result, more when its flank broke, capped at the men left. Of the
  *   missing, a share by result is captured on the field; the rest straggle and rejoin over days. Captured men leave a
  *   block's strength, a typed loss in the record (R4's battle ruling).
@@ -234,10 +235,12 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
     const decisions: BattleTerm[] = [...side.commitTerms, ...night[i]!.terms];
     let cutOff: CutOffChoice | null = null;
     if (night[i]!.leaves && side.retreatTo === null) {
-      if (morale[i]!.routed || side.breakingOut) {
+      if (side.breakingOut) {
+        // A breakout that failed: the force he chose to fight out with is destroyed (P8). Never a second breakout.
         cutOff = 'surrender';
-        decisions.push(term(morale[i]!.routed ? 'routed_in_pocket' : 'breakout_failed', 0, side.commander.person));
+        decisions.push(term('breakout_failed', 0, side.commander.person));
       } else {
+        // Surrender is the cut-off commander's own act, from his traits, routed or not (0074).
         const c = cutOffChoice(rules, side.commander, left[i]!, left[1 - i]!);
         cutOff = c.choice;
         decisions.push(...c.terms);
