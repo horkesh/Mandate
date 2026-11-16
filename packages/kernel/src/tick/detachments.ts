@@ -7,7 +7,8 @@
  *   press for ground it already held (0064's rule, which the battle model keeps).
  * - **A landing** is detached from a block aboard a ship into a land region across an edge from the ship's region; it
  *   arrives that day, so it presses there.
- * - **Rejoin** needs the detachment and its parent standing still in the same region, neither aboard.
+ * - **Rejoin** needs the detachment and its parent standing still in the same region, neither aboard, and a day after
+ *   the detachment was made (lane 1.4c: so its id is never made again).
  * A proposal that cannot be carried out is refused with a typed reason, never applied in part.
  */
 import { strictCompare } from '../compare.ts';
@@ -25,7 +26,7 @@ export type DetachmentProposal =
   | { readonly kind: 'rejoin'; readonly detachment: ForceBlockId; readonly cause: DetachmentCause }
   | { readonly kind: 'stand_alone'; readonly detachment: ForceBlockId; readonly cause: DetachmentCause };
 
-export const DETACHMENT_REFUSALS = ['forces', 'not_standing', 'not_aboard', 'not_adjacent', 'not_land', 'apart', 'no_post'] as const;
+export const DETACHMENT_REFUSALS = ['forces', 'not_standing', 'not_aboard', 'not_adjacent', 'not_land', 'apart', 'no_post', 'same_day'] as const;
 export type DetachmentRefusal = (typeof DETACHMENT_REFUSALS)[number];
 
 export interface DetachmentResult {
@@ -38,16 +39,22 @@ export interface DetachmentResult {
 }
 
 /**
- * A detachment's id: its parent's and the day, with a counter for a second the same day (content-derived). It is never
- * re-minted (lane 1.4c; 0081): a later day's id differs by its day, and within a day `taken` holds every id this call
- * has made or rejoined, so a make, a rejoin and a make again from one parent get two ids. That holds because a day's
- * proposals are applied in one call (today the operations phase's); a second caller on the same day must share it.
+ * A detachment's id: its parent's and the day it is made, with a counter for a second the same day (content-derived).
+ * It is never re-minted (lane 1.4c; 0081), with no memory in State: a detachment cannot rejoin on the day it was made
+ * (`madeToday`, refused `same_day`), so any id a rejoin frees carries an earlier day than today's, and every id made
+ * from now on carries today's or a later one. Within a call, `taken` keeps a second detachment the same day apart.
  */
 export function detachmentId(state: State, parent: ForceBlockId, day: number, taken: ReadonlySet<string>): ForceBlockId {
   for (let n = 1; ; n++) {
     const id = `${parent}.det.${day}${n === 1 ? '' : `.${n}`}` as ForceBlockId;
     if (state.forceBlockStates[id] === undefined && !taken.has(id)) return id;
   }
+}
+
+/** Whether detachment was made from parent on day: its id carries the day it was made (detachmentId). */
+export function madeToday(detachment: ForceBlockId, parent: ForceBlockId, day: number): boolean {
+  const stem = `${parent}.det.${day}`;
+  return detachment === stem || detachment.startsWith(`${stem}.`);
 }
 
 /** Apply detachment proposals, each in full or refused. */
@@ -127,6 +134,11 @@ export function applyDetachmentProposals(map: WorldIndex, start: State, proposal
       freed.push(p.detachment);
       continue;
     }
+    // A rejoin the day it was made would free an id a later make that day could take again (lane 1.4c): it waits a day.
+    if (madeToday(p.detachment, state.forceBlockStates[p.detachment]!.fbParent!, day)) {
+      refuse('same_day', `${p.detachment} was made today: it rejoins on a later day, so its id is never made again`);
+      continue;
+    }
     const det = state.forceLocations[p.detachment];
     const parent = state.forceLocations[state.forceBlockStates[p.detachment]!.fbParent!];
     if (det === undefined || parent === undefined || det.locMarch !== null || parent.locMarch !== null || det.locAboard !== null || parent.locAboard !== null || det.locRegion !== parent.locRegion) {
@@ -137,7 +149,6 @@ export function applyDetachmentProposals(map: WorldIndex, start: State, proposal
     state = placeAndRemove(map, state, [], [p.detachment]);
     state = musterAssignments(state, [], [], [p.detachment]);
     // Its id is spent: no detachment made later today takes it again.
-    taken.add(p.detachment);
     rejoined.push(p.detachment);
   }
   return { state, made, rejoined: rejoined.sort(strictCompare), freed: freed.sort(strictCompare), refused };

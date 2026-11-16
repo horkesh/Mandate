@@ -185,23 +185,23 @@ describe('a transfer never hands over an empty shell, nor a force standing elsew
 });
 
 describe('a detachment id is never re-minted (lane 1.4c; 0081)', () => {
-  it('a make, a rejoin and a make again from one parent on one day give two ids', () => {
+  it('a make, a rejoin and a make again from one parent on one day never give the first id twice, call by call', () => {
     const g = game([block('a_1', { department: 'a_war', region: 'a2', strength: 5000, storesDays: 10, post: P('a_army') })]);
-    const r = applyDetachmentProposals(
-      MAP,
-      g.state,
-      [
-        { kind: 'garrison', parent: B('a_1'), men: 1000, post: null, cause: 'command' },
-        { kind: 'rejoin', detachment: 'a_1.det.3' as ForceBlockId, cause: 'command' },
-        { kind: 'garrison', parent: B('a_1'), men: 500, post: null, cause: 'command' },
-      ],
-      3,
-    );
-    expect(r.refused).toEqual([]);
-    expect(r.rejoined).toEqual(['a_1.det.3']);
-    expect(r.made).toEqual(['a_1.det.3', 'a_1.det.3.2']);
-    expect(r.state.forceBlockStates['a_1.det.3' as ForceBlockId]).toBeUndefined();
-    expect(r.state.forceBlockStates['a_1.det.3.2' as ForceBlockId]).toMatchObject({ fbStrength: 500 });
+    const garrison = (men: number) => ({ kind: 'garrison' as const, parent: B('a_1'), men, post: null, cause: 'command' as const });
+    const first = applyDetachmentProposals(MAP, g.state, [garrison(1000)], 3);
+    expect(first.made).toEqual(['a_1.det.3']);
+    // The same day, in a later call: the rejoin waits a day, so the first id is not freed, and changes nothing.
+    const rejoin = applyDetachmentProposals(MAP, first.state, [{ kind: 'rejoin', detachment: 'a_1.det.3' as ForceBlockId, cause: 'command' }], 3);
+    expect(rejoin.refused.map((x) => x.reason)).toEqual(['same_day']);
+    expect(rejoin.state).toBe(first.state);
+    const again = applyDetachmentProposals(MAP, rejoin.state, [garrison(500)], 3);
+    expect(again.made).toEqual(['a_1.det.3.2']);
+    // A day later the first rejoins, and what is made that day carries its own day: the first id is never made again.
+    const back = applyDetachmentProposals(MAP, again.state, [{ kind: 'rejoin', detachment: 'a_1.det.3' as ForceBlockId, cause: 'command' }], 4);
+    expect(back.rejoined).toEqual(['a_1.det.3']);
+    const later = applyDetachmentProposals(MAP, back.state, [garrison(700)], 4);
+    expect(later.made).toEqual(['a_1.det.4']);
+    expect(new Set([...first.made, ...again.made, ...later.made]).size).toBe(3);
   });
 });
 describe('a garrison: detached where its parent stands, rejoined, or left to stand alone (lane 1.4b)', () => {
