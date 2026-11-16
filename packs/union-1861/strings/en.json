@@ -324,7 +324,7 @@
   "situation.habeas_on_the_line.option.suspend_on_line": "Authorise the general-in-chief to suspend the writ of habeas corpus on the military line, where resistance makes it necessary",
   "situation.habeas_on_the_line.inaction": "The writ runs on the line, and the army's prisoners go before the courts.",
   "situation.merryman_writ.title": "A writ for John Merryman",
-  "situation.merryman_writ.text": "In Baltimore the Chief Justice has issued a writ of habeas corpus for John Merryman, held by the army at Fort McHenry. The commander there has declined to produce him, citing the president's authority to suspend the writ.",
+  "situation.merryman_writ.text": "In Baltimore the Chief Justice has issued a writ of habeas corpus for John Merryman, arrested on 25 May and held by the army at Fort McHenry. The commander there, as the Chief Justice records it, \"refuses to obey the writ of habeas corpus, upon the ground that he is duly authorized by the president to suspend it.\"",
   "reason.writ-suspended": "the writ of habeas corpus suspended on the military line",
   "situation.patterson_martial_law.title": "General Patterson asks for martial law",
   "situation.patterson_martial_law.text": "From Philadelphia, General Patterson writes to the Adjutant-General: “it is expedient to declare or put the entire line, and ten, twenty, or thirty miles on each side, or the entire department under my command, under martial law; and if the General concurs, I ask his approval, or rather that he will give the order.”",

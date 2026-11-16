@@ -950,6 +950,16 @@
       "copyUsed": "nps.gov/places/building-1-quarters-no-1.htm, nps.gov/places/fort-monroe-main-gate.htm, nps.gov/articles/featured_stories_fomr.htm, read 2026-11-16",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "TANEY-REPORTS",
+      "title": "J. M. Campbell, Reports of Cases Decided by Roger Brooke Taney in the Circuit Court of the United States for the District of Maryland (1871): Ex parte Merryman, pp. 246 to 270 (also Federal Cases vol. 17, pp. 144 to 153)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org cu31924068531247, OCR, read by lane 1.11r3 (docs/research/_leads/M1-merryman.md); two quotations confirmed in the OCR",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }
