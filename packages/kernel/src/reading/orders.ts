@@ -126,7 +126,7 @@ export interface Pushback {
  * with a practice of his own (lane 1.5b). With no recipient (a policy no post carries), the side is the issuer's. A row
  * with `notCheaperThan` is, by construction, never cheaper than the row it names: the difference is its own term.
  */
-export function pushbackOf(world: ReadingWorld, state: State, order: string, recipients: readonly PersonId[], issuer: PersonId): Pushback {
+export function pushbackOf(world: ReadingWorld, state: State, order: string, recipients: readonly PersonId[], issuer: PersonId, readAt: (person: PersonId) => OrderMeans = () => ({})): Pushback {
   const rules = peopleRules(world);
   const row = rules.verbs.orderValues.find((r) => r.order === order);
   if (row === undefined) throw new RangeError(`the pack's order-to-value map has no row for "${order}"`);
@@ -139,7 +139,8 @@ export function pushbackOf(world: ReadingWorld, state: State, order: string, rec
     if (offended > 0) terms.push({ source: 'values', person: p.id, amount: offended * rules.compliance.valueWeight });
   }
   for (const recipient of carriers) {
-    const answer = answerOrder(world, state, recipient, issuer, orderTerms(rules, order));
+    // Each carrier reads it where he stands (lane 1.4's oversight, which the tick passes as `readAt`).
+    const answer = answerOrder(world, state, recipient, issuer, orderTerms(rules, order), readAt(recipient));
     let clashing = 0;
     for (const r of answer.reasons) {
       if (r.kind !== 'practice_clash') continue;
@@ -152,7 +153,7 @@ export function pushbackOf(world: ReadingWorld, state: State, order: string, rec
   }
   const own = terms.reduce((s, t) => s + t.amount, 0);
   if (row.notCheaperThan !== null) {
-    const floor = pushbackOf(world, state, row.notCheaperThan, carriers, issuer);
+    const floor = pushbackOf(world, state, row.notCheaperThan, carriers, issuer, readAt);
     if (floor.total > own) return { total: floor.total, terms: [...terms, { source: 'floor', order: row.notCheaperThan, amount: floor.total - own }], floor: row.notCheaperThan };
   }
   return { total: own, terms, floor: null };

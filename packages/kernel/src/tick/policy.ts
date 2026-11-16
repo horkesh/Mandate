@@ -15,7 +15,7 @@ import { recordResponse, responseOf } from '../proxy/responses.ts';
 import { answerOrder, orderTerms, pushbackOf, type PushbackTerm } from '../reading/orders.ts';
 import type { State } from '../root-state.ts';
 import type { OptionDef, SituationDef } from '../situations/types.ts';
-import { fire, type TickContext } from './context.ts';
+import { fire, oversightOf, type TickContext } from './context.ts';
 
 /** The grievance a policy leaves on those it offends. */
 export const POLICY_GRIEVANCE = 'policy_offended';
@@ -43,7 +43,9 @@ export function applyPolicy(ctx: TickContext, start: State, def: SituationDef, o
   const rules = world.map.world.rules.people;
   const row = o.policy.row;
   const carriers = [...new Set(o.policy.carriedBy.map((p) => start.postStates[p]?.postHolder ?? null).filter((h): h is PersonId => h !== null))].sort(strictCompare);
-  const push = pushbackOf(world, start, row, carriers, principal);
+  // Lane 1.4: each carrier reads the policy at the oversight where he stands.
+  const readAt = (p: PersonId) => ({ oversight: oversightOf(ctx, start, p, principal).value });
+  const push = pushbackOf(world, start, row, carriers, principal, readAt);
   const changes: PeopleChange[] = [];
   for (const t of push.terms) {
     if (t.source === 'values') changes.push({ change: 'grievance', person: t.person, kind: POLICY_GRIEVANCE, weight: t.amount, against: principal, cause: row });
@@ -51,7 +53,7 @@ export function applyPolicy(ctx: TickContext, start: State, def: SituationDef, o
   const floor = push.terms.find((t) => t.source === 'floor');
   if (floor !== undefined && floor.source === 'floor') {
     // The floor's difference falls on the floor row's own stakeholders, in proportion to their share of its pushback.
-    for (const s of share(floor.amount, personal(pushbackOf(world, start, floor.order, carriers, principal).terms))) {
+    for (const s of share(floor.amount, personal(pushbackOf(world, start, floor.order, carriers, principal, readAt).terms))) {
       changes.push({ change: 'grievance', person: s.person, kind: POLICY_GRIEVANCE, weight: s.amount, against: principal, cause: `floor:${floor.order}` });
     }
   }
@@ -59,7 +61,7 @@ export function applyPolicy(ctx: TickContext, start: State, def: SituationDef, o
   const key = `m.${day}.policy.${def.id}.${o.id}` as MessageId;
   for (const carrier of carriers) {
     const post = o.policy.carriedBy.find((p) => start.postStates[p]?.postHolder === carrier)!;
-    state = recordResponse(state, responseOf(answerOrder(world, start, carrier, principal, orderTerms(rules, row)), { order: key, person: carrier, post, role: 'addressee', day }));
+    state = recordResponse(state, responseOf(answerOrder(world, start, carrier, principal, orderTerms(rules, row), readAt(carrier)), { order: key, person: carrier, post, role: 'addressee', day }));
   }
   fire(ctx, 'situations.policy', push.total);
   return state;

@@ -57,6 +57,15 @@ In play, the floor's difference is shared among the floor row's own stakeholders
 
 **The edit path** (lane 1.5's finding). `answerEdit` passes `available: PLAN_HOLDS` (500), the scale `editDirective` puts `required` on. `PLAN_HOLDS` now lives in `planner/edits.ts`, and the audience re-exports it. An edit to a plan that needs more men than it commits now states `lacks_resources`; `gate-wiring.test.ts` shows it on a real edit.
 
+**Verbs read at the oversight where he stands** (the lead's ruling, after lane 1.4 merged). A verb is an order to a person, so every place a verb is answered now passes lane 1.4's `oversightOf(...)`:
+- each couriered verb on its arrival (`arriveVerb`);
+- the audience (`previewAudience` takes it as an argument, and its callers outside the tick fall back to the base);
+- a policy's carriers, both in their recorded answer and in `pushbackOf`'s recipient terms (`readAt`).
+
+The observer's and pressure's `watched` terms still stack on top as their own terms. `gate-wiring.test.ts` shows a distant man's answer to an inquiry read at his distance-reduced oversight, not the base, with the observer's term still present.
+
+Seat initiatives are not orders, so they stay at the base oversight. An edit's answer passes both the plan's holding and the oversight.
+
 **The content hash.** `gateContentHash` leaves out an option's `policy` when it is null. Items signed before the field existed keep their hashes, and naming a row voids the sign-off.
 
 ## Decisions taken, with the alternatives rejected

@@ -18,6 +18,8 @@ import { SEATS_MECHANICS, tick, type TickResult } from '../src/tick/tick.ts';
 import { indexWorld } from '../src/world/index.ts';
 import { F, indexedFixture, P, POST } from './support/seats-fixture.ts';
 import { goalTerms } from './support/test-seats.ts';
+import { ctxFor } from './support/tick-context.ts';
+import { oversightOf } from '../src/tick/context.ts';
 
 /**
  * Lane 1.5b: the map from orders to values wired into play (the gate review's G-1.5a, G-1.5b), the practice-clash term,
@@ -189,6 +191,34 @@ describe('an edit read against what the plan holds (lane 1.5b; finding of lane 1
     expect(edited).not.toBeNull();
     // a_gen's plan against the 1152 men he believes at b_mid needs more than it commits: he says so.
     expect(JSON.parse(edited!)).toContainEqual(expect.objectContaining({ kind: 'lacks_resources' }));
+  });
+});
+
+describe('a verb is read at the oversight where he stands (lane 1.4’s oversightOf; the lead’s ruling for lane 1.5b)', () => {
+  it('a distant man answers a verb at his distance-reduced oversight, with the watched terms still stacking on top', () => {
+    // With no wire term, so the distance shows on its own (on the fixture a_gen's wire would cancel it exactly).
+    const base = indexedFixture();
+    const bw = base.map.world;
+    const wd = indexSeatsWorld(indexWorld({ ...bw, rules: { ...bw.rules, people: { ...bw.rules.people, context: { ...bw.rules.people.context, oversightWired: 0 } } } }), base.start, { situations: base.situations });
+    const start = createState(wd, { seed: 1 });
+    const rules = wd.map.world.rules.people;
+    const ov = oversightOf(ctxFor(wd, start, 1), start, P('a_gen'), P('a_lead'));
+    // a_gen commands at the front, courier days from his principal: the distance term lowers his oversight.
+    expect(ov.terms.find((t) => t.ovKind === 'distance')!.ovValue).toBeLessThan(0);
+    expect(ov.value).toBeLessThan(rules.context.oversight);
+    // An observer watches him, and an inquiry follows: the verb's answer is read at that oversight, plus the observer's term.
+    const played = run(wd, start, 16, { 1: [{ cmd: 'observer', person: P('a_spy'), to: POST('a_army'), route: 'courier' }], 6: [{ cmd: 'inquire', to: POST('a_army'), subject: null, route: 'courier' }] });
+    const response = Object.values(played.state.orderResponses).find((r) => r.respPerson === P('a_gen') && r.respOrder.includes('inquire'))!;
+    expect(response).toBeDefined();
+    const morning = played.results[response.respDay - 2]!.state;
+    const terms = orderTerms(rules, 'verb:inquire');
+    const here = oversightOf(ctxFor(wd, morning, response.respDay), morning, P('a_gen'), P('a_lead'));
+    const atDistance = answerOrder(wd, morning, P('a_gen'), P('a_lead'), terms, { oversight: here.value });
+    const atBase = answerOrder(wd, morning, P('a_gen'), P('a_lead'), terms);
+    expect(response.respWillingness).toBe(atDistance.willingness);
+    expect(response.respWillingness).not.toBe(atBase.willingness);
+    // The observer's oversight is its own typed term on top, not lost to the distance.
+    expect(response.respReasons).toContainEqual({ kind: 'watched', source: 'observer', amount: rules.verbs.observer.oversight });
   });
 });
 
