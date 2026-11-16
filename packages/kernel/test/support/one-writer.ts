@@ -199,7 +199,8 @@ const TAIL_STEP = String.raw`(?:\s*!|\s*(?:\?\.)?${INDEX}|\s*\??\.\s*[\w$]+)+`;
  * must be the key itself or an index or member below it (`x.key[id]`), not a
  * copy (`[...x.key]`, `x.key.slice()`): the right side ends at the key's tail,
  * which may sit in parentheses (but not in a call: `Object.keys(x.key)` is a
- * copy), carry a cast, default with `?? {}`, `?? []` or a
+ * copy), be reached through a receiver with its own balanced groups (`(x as T).key`,
+ * `current().key`, `xs[pick(i)].key`), carry a cast, default with `?? {}`, `?? []` or a
  * name, or be one arm of a conditional. A write through a parenthesised group
  * that mentions the local (`(c as T[]).push(v)`, a cast at the write) counts too.
  * A use is any later mention of the name in the file, so a shadowing local of
@@ -211,7 +212,7 @@ function localAliasWrites(lexed: LexedSource, p: KeyPatterns, writeParens: reado
   const k = escape(p.key);
   const out: { line: number }[] = [];
   const decl = (ref: string) =>
-    new RegExp(String.raw`\b(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*(?::[^=;]*)?=\s*\(*\s*[\w$.\[\]!?:\s]*?${ref}${TAIL}\s*\)*\s*(?:\?\?\s*(?:\{\s*\}|\[\s*\]|[\w$.]+)\s*)?(?::\s*[^;]+)?(?:as\s+[^;]+)?;`, 'g');
+    new RegExp(String.raw`\b(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*(?::[^=;]*)?=\s*\(*\s*(?:[\w$.\[\]!?:\s]|\([^()]*\))*?${ref}${TAIL}\s*\)*\s*(?:\?\?\s*(?:\{\s*\}|\[\s*\]|[\w$.]+)\s*\)*\s*)?(?::\s*[^;]+)?(?:as\s+[^;]+)?;`, 'g');
   const declarations = [
     ...[...lexed.code.matchAll(decl(String.raw`\.\s*${k}(?![\w$])`))],
     ...[...lexed.withStrings.matchAll(decl(String.raw`\[\s*(?:'${k}'|"${k}"|\x60${k}\x60)\s*\]`))],

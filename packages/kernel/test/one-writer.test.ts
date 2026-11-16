@@ -465,6 +465,16 @@ describe('the scanner catches violations (positive control)', () => {
         // A call around the key makes a copy: its result is not the key (the real tree's `Object.keys(state.x)`).
         'const keys = Object.keys(state.controller) as Id[];',
         'keys.sort(cmp);',
+        // A receiver with its own balanced groups (re-check S3), and a cast around a default.
+        'const recv = (state as Mutable<State>).controller;',
+        'recv.push(f);',
+        'const castDefault = (state.controller[id] ?? {}) as Record<string, number>;',
+        'castDefault[k] = 1;',
+        'const picked = states[pick(i)].controller;',
+        'picked.push(f);',
+        // The conditional's else arm (re-check N4).
+        'const elseArm = ok ? other : state.controller;',
+        'elseArm.push(f);',
       ].join('\n'),
     };
     expect(writeViolations([local], owned, []).map((v) => `${v.line} ${v.form}`)).toEqual([
@@ -481,6 +491,10 @@ describe('the scanner catches violations (positive control)', () => {
       '25 write through a local alias',
       '27 write through a local alias',
       '29 write through a local alias',
+      '35 write through a local alias',
+      '37 write through a local alias',
+      '39 write through a local alias',
+      '41 write through a local alias',
     ]);
     // In the writer module the same code is allowed.
     expect(writeViolations([{ ...local, path: 'packages/kernel/src/control.ts' }], owned, [])).toEqual([]);
