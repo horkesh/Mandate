@@ -35,6 +35,16 @@
       "effects": [
         {
           "setFlag": "pickens_order_by_courier"
+        },
+        {
+          "landing": {
+            "parent": "fb_us_pickens_vogdes_co_a",
+            "men": 90,
+            "region": "fort_pickens"
+          }
+        },
+        {
+          "setFlag": "pickens_landed"
         }
       ]
     },
@@ -52,6 +62,16 @@
       "effects": [
         {
           "setFlag": "pickens_order_by_ship"
+        },
+        {
+          "landing": {
+            "parent": "fb_us_pickens_vogdes_co_a",
+            "men": 90,
+            "region": "fort_pickens"
+          }
+        },
+        {
+          "setFlag": "pickens_landed"
         }
       ]
     },

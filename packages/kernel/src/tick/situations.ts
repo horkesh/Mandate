@@ -123,7 +123,10 @@ function applyEffects(ctx: TickContext, state: State, def: SituationDef, effects
   for (const e of effects) {
     if ('setFlag' in e) set.push(e.setFlag);
     else if ('clearFlag' in e) clear.push(e.clearFlag);
-    else {
+    else if ('landing' in e) {
+      fire(ctx, 'situations.proposals');
+      ctx.proposals.push({ proposal: 'landing', ...e.landing, situation: def.id, option });
+    } else {
       fire(ctx, 'situations.proposals', e.propose.delta);
       ctx.proposals.push({ proposal: 'effect', ...e.propose, situation: def.id, option, origin: def.kind === 'notice' ? 'notice' : 'decision' });
     }

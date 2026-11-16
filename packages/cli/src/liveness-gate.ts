@@ -136,6 +136,7 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'combat.cut_off': { why: 'every loser in either reference run has a legal retreat (0019)', test: 'packages/kernel/test/combat.test.ts', needle: 'a trapped garrison with nowhere to go surrenders' },
   'combat.surrendered': { why: 'only a cut-off force surrenders, and no reference run cuts one off', test: 'packages/kernel/test/combat.test.ts', needle: 'a trapped garrison with nowhere to go surrenders' },
   'combat.general_hit': { why: 'a commander is hit only on a low draw on his own stream, and neither reference run\'s battle-days draws one', test: 'packages/kernel/test/combat.test.ts', needle: 'a general wounded leaves his post vacant' },
+  'forces.landing_refused': { why: 'the one situation landing in the reference runs is made', test: 'packages/cli/test/situation-landing.test.ts', needle: 'refuses a landing from a block that is not aboard' },
   // Lane 1.4: operations and their reports.
   'combat.records_pruned': { why: 'a closed battle is pruned after the pack\'s battleDays (120), longer than either reference run', test: 'packages/kernel/test/operations.test.ts', needle: 'prunes ended operations, closed battles and old responses' },
   'operations.landed': { why: 'no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)', test: 'packages/kernel/test/detachments.test.ts', needle: 'lands its troops at the objective' },
@@ -326,6 +327,9 @@ const UNION_BANDS: Record<string, GateBand> = {
   'seats.initiative': around(6),
   // Lane 1.11: in the war-by-decision run with the upper South out, one operation is driven back by a battle.
   'operations.repulsed': around(1),
+  // Lane 1.11: S06's Navy Department order lands Vogdes's company at Fort Pickens through lane 1.4b's detachment path.
+  'forces.landed_by_situation': around(1),
+  'forces.landing_refused': notHere('the one situation landing is made; QUIET'),
 };
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
@@ -425,6 +429,8 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'seats.attention_spent': around(2),
   'seats.initiative': around(15),
   'operations.repulsed': notHere('no testbed operation is driven back by a battle; the Union run fires it'),
+  'forces.landed_by_situation': notHere('no testbed situation lands troops; the Union run fires it'),
+  'forces.landing_refused': notHere('no testbed situation lands troops; QUIET'),
 };
 
 /** Mechanics that only a mechanic-specific run can fire: each band is the same in every run that does not. */

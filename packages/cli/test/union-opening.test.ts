@@ -22,6 +22,13 @@ describe('the opening of 1861 (lane 1.11)', () => {
     expect(run.state.postStates['us_sumter_relief_expedition' as never]).toMatchObject({ postKind: 'temporary_command', postHolder: 'fox_gustavus_v', postOperation: 'sumter_relief' });
   });
 
+  it('lands the Pickens company from its ship by the Navy Department’s order (S06), through the detachment path (lane 1.4b)', () => {
+    expect(run.state.situationFlags['pickens_landed']).toBeDefined();
+    const landed = Object.entries(run.state.forceLocations).filter(([id]) => id.startsWith('fb_us_pickens_vogdes_co_a.det.'));
+    expect(landed.length).toBe(1);
+    expect(landed[0]![1].locAboard).toBeNull();
+  });
+
   it('fires each government’s act its delay after the call reaches the governor, never before the call', () => {
     const arrived = (post: string) => Object.values(run.state.orderResponses).find((r) => r.respKind === 'call' && r.respPost === post)!.respDay;
     expect(run.state.situationStates[S('maryland_legislature')]!.sitFiredDay).toBe(arrived('st_gov_maryland') + 14);

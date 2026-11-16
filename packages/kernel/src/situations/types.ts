@@ -18,7 +18,7 @@
  * a rule-driven principal (a history run); the view layer never carries it
  * (0040; checked by `test/boundary.test.ts`).
  */
-import type { DepartmentId, FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
+import type { DepartmentId, FactionId, ForceBlockId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import type { ClaimKind, ReportType, SubjectKind } from '../knowledge/report.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { Posture } from '../plans/goal.ts';
@@ -109,7 +109,12 @@ export type Effect =
         /** The side whose measure this is, for the gate's sign rule (E7); null if no side's. */
         readonly side: FactionId | null;
       };
-    };
+    }
+  /**
+   * A landing (lane 1.11, on lane 1.4b's detachment path): `men` of a block aboard ship go ashore in `region`, across an
+   * edge from the ship. `forces` applies it, or refuses it with a typed reason, in phase 4c beside `command`'s proposals.
+   */
+  | { readonly landing: { readonly parent: ForceBlockId; readonly men: number; readonly region: RegionId } };
 
 /**
  * An order an option issues: always in the principal's name, through the validated command path (0052). It names a

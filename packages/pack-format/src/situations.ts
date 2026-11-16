@@ -89,6 +89,9 @@ export const EffectSchema = z.union([
         .describe('The side whose measure this is, higher-is-better for that side (see delta); null for a measure no side owns. An atrocity-class item may only lower its acting side’s measures (E7, D5).'),
     }),
   }),
+  z
+    .strictObject({ landing: z.strictObject({ parent: idOf('forceBlock'), men: positive, region: idOf('region') }) })
+    .describe('A landing (lane 1.11, on lane 1.4b’s detachment path): this many men of a block aboard ship go ashore in the region, across an edge from the ship; forces applies or refuses it in phase 4c.'),
 ]);
 
 export const GateTagSchema = z.union([
@@ -283,6 +286,7 @@ export function validateSituations(items: readonly { readonly file: string; read
   const people = new Set(pack.world.people.map((p) => p.id as string));
   const regions = new Set(pack.world.regions.map((r) => r.id as string));
   const posts = new Set(pack.scenarios.flatMap((s) => s.posts.map((p) => p.id as string)));
+  const forceBlocks = new Set(pack.scenarios.flatMap((s) => s.forceBlocks.map((b) => b.id as string)));
   // A post's side is its department's (null for a neutral government).
   const departmentSide = new Map(pack.world.departments.map((d) => [d.id as string, d.faction as string | null]));
   const postSide = new Map(pack.scenarios.flatMap((s) => s.posts.map((p) => [p.id as string, departmentSide.get(p.department) ?? null] as const)));
@@ -511,6 +515,11 @@ export function validateSituations(items: readonly { readonly file: string; read
       if ('propose' in effect && effect.propose.side !== null) ref(factions, 'faction', effect.propose.side, `${at}.propose.side`);
       if ('propose' in effect && effect.propose.owner === 'command') commandProposal(effect.propose, `${at}.propose`, err, def.kind === 'notice');
       if ('propose' in effect && effect.propose.owner === 'politics') politicsProposal(effect.propose, `${at}.propose`, err);
+      // Lane 1.11: a landing names a start's force block and a region; forces checks the rest in play (aboard, adjacent).
+      if ('landing' in effect) {
+        ref(forceBlocks, 'force block in any scenario', effect.landing.parent, `${at}.landing.parent`);
+        ref(regions, 'region', effect.landing.region, `${at}.landing.region`);
+      }
     }
 
     // String keys, in the default locale. (Every message in the table is parsed as ICU by the World validator.)
