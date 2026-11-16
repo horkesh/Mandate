@@ -35,7 +35,7 @@ export class ConsoleSession {
   }
 
   private morningScreen(): string[] {
-    const lines = morningLines(this.request, this.seenFrom, this.t, { date: this.game.dateOf(this.request.requestDay), attention: this.game.attention() });
+    const lines = morningLines(this.request, this.seenFrom, this.t, { date: this.game.dateOf(this.request.requestDay), attention: this.request.view.attention });
     this.seenFrom = this.request.requestDay;
     return lines;
   }
@@ -109,7 +109,7 @@ export class ConsoleSession {
     lines.push(result.stopped === 'week' ? 'A week has passed.' : `The turn stops: ${result.stopped.join(', ')}.`);
     this.request = this.game.morning();
     this.seenFrom = this.request.requestDay;
-    lines.push(...morningLines(this.request, this.request.requestDay, this.t, { date: this.game.dateOf(this.request.requestDay), attention: this.game.attention() }).slice(0, 1));
+    lines.push(...morningLines(this.request, this.request.requestDay, this.t, { date: this.game.dateOf(this.request.requestDay), attention: this.request.view.attention }).slice(0, 1));
     const menu = this.request.menu as phase0.PrincipalMenu;
     const open = this.request.view.situations.filter((s) => s.status === 'open');
     if (open.length > 0) lines.push(`Before you: ${open.map((s) => s.id).join(', ')}. Type "situations".`);

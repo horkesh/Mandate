@@ -103,8 +103,15 @@ The testbed part already plays a full scripted week, with situations, a plan rev
 3. **Lane 1.11 and lane 1.12** complete the Union scripted session (see "What waits").
 4. **The steward** should sync `docs/OPEN_QUESTIONS.md` and the roadmap for the retired commands. `CLAUDE.md`'s phase paragraph and command list are updated here.
 
+## The lead's three follow-ups (second commit)
+
+1. **The budget control** in `done-check.test.ts` asserted the real run's stopwatch on its first line. It now uses given timings (`budgetProblems` over a synthetic fast run), so the hook runs only logic. The real budget stays behind `MANDATE_TIMING` (lane 1.0t's helper).
+2. **Attention is in the seat's view.** `SeatView.attention` is what is left of his week (null for a seat that keeps none), built by `viewFor` from `seats`. The driver no longer reads State for it; the desk shows it from the request.
+3. **The "missing" battle decision point was not missing.** In the testbed week the southern army attacks the northern capital on day 8. Its four hour-stamped dispatches and the first casualty return are written that evening (reports are written at the day's end, after deliveries) and reach the principal the next morning. The first return is lane 1.4's `battle-report` point (`tick/deliver.ts`), and the turn stopped on it. My first look had cut that turn's output.
+   - **What it did show:** the battle day's dispatches printed in id order (afternoon before dawn) with no hour. The desk now orders each day's reports by the day and hour written, and prints the hour ("written day 8 at 06:00"). That is FOUNDATION section 9's night of the battle, hour by hour.
+   - **Test:** the turn ends on `battle-report`, the four dispatches read dawn to evening, and the first return is there.
+
 ## Findings outside my scope
 
-- **The principal's attention** is shown from State by the driver. It is his own resource, but `SeatView` does not carry it. A view field would let the desk read it like the rest.
-- **The press's front pages reach every serving post holder**, so the Union inbox fills with dispatch traffic. Filtering the inbox by report type, or summarising each week, is a Phase 2 desk question.
-- **No decision point fires for a battle the player's side fought** at its capital in the testbed week (the front page and the return arrive, but the turn ran on). Check whether `battle-report` points reach the principal, or only the commander.
+- **The press's front pages reach every serving post holder**, so the Union inbox fills with dispatch traffic. Filtering the inbox by report type, or summarising each week, is a Phase 2 desk question (the lead files it in OPEN_QUESTIONS).
+- **A battle at the testbed's northern capital brings a "governor's wire" whose author is the principal himself** (`informal/governor-wire from n_leader`). The capital region's government head post is his, so lane 1.4's governor wire reports to him from him. It is harmless, but `battleReports` could skip a governor who is the principal.

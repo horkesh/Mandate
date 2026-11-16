@@ -49,12 +49,25 @@ function reportLine(r: ReportView): string {
   const advice = r.advice === null ? '' : ` | recommends ${r.advice.recommends} (${r.advice.reasons.map((x) => x.kind).join(', ')})`;
   // A report with no claims (a notice, a word in person) is about its subject.
   const claims = r.claims.length === 0 ? `about ${r.subjectKind} ${r.subjectId}` : r.claims.map(claimText).join('; ');
-  return `day ${r.receivedDay.toString().padStart(3)}  ${kind} from ${r.author} (written day ${r.day.toString()}, ${r.route}${via}): ${claims}${advice}`;
+  // A battle day's dispatches carry their hour (FOUNDATION section 9: the night of the battle, hour by hour).
+  const hour = r.hour === null ? '' : ` at ${r.hour.toString().padStart(2, '0')}:00`;
+  return `day ${r.receivedDay.toString().padStart(3)}  ${kind} from ${r.author} (written day ${r.day.toString()}${hour}, ${r.route}${via}): ${claims}${advice}`;
 }
 
-/** The reports a seat holds, received on or after `sinceDay`, oldest first. */
+/**
+ * The reports in reading order: by the day received, then the day and hour written, so a battle day's dispatches read
+ * dawn to evening (lane 1.13); otherwise in the order the seat holds them.
+ */
+export function readingOrder(reports: readonly ReportView[]): ReportView[] {
+  return reports
+    .map((r, i) => ({ r, i }))
+    .sort((a, b) => a.r.receivedDay - b.r.receivedDay || a.r.day - b.r.day || (a.r.hour ?? 24) - (b.r.hour ?? 24) || a.i - b.i)
+    .map((x) => x.r);
+}
+
+/** The reports a seat holds, received on or after `sinceDay`, in reading order. */
 export function dispatchLog(view: SeatView, sinceDay = 0): string[] {
-  return view.reports.filter((r) => r.receivedDay >= sinceDay).map(reportLine);
+  return readingOrder(view.reports.filter((r) => r.receivedDay >= sinceDay)).map(reportLine);
 }
 
 /** What he believes of the enemy, region by region. */

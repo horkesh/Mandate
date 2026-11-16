@@ -97,6 +97,21 @@ describe('the console plays a scripted week of the testbed, headless', () => {
   });
 });
 
+describe('a battle at his capital (the lead’s question to lane 1.13)', () => {
+  it('ends the turn on the battle report, the first return, and shows the battle day’s dispatches dawn to evening', () => {
+    // The testbed's southern army attacks the northern capital on day 8; its dispatches and first return are written that
+    // evening and reach the principal the next morning, when the first casualty return is the battle-report point.
+    const { turns } = play('testbed', ['order n_army_east take salient_tip review', 'end', 'approve n_army_east', 'end']);
+    const turn = turns[1]!;
+    expect(turn.find((l) => l.startsWith('The turn stops:'))).toContain('battle-report');
+    const battleDay = turn.filter((l) => /wire-dispatch from n_secretary \(written day \d+ at \d\d:00/.test(l));
+    expect(battleDay.length).toBe(4);
+    const hours = battleDay.map((l) => Number(/at (\d\d):00/.exec(l)![1]));
+    expect(hours).toEqual([...hours].sort((a, b) => a - b));
+    expect(turn.some((l) => /casualty-return from n_secretary .*\(first\)/.test(l))).toBe(true);
+  });
+});
+
 describe('the preview of an arrow edit (lane 0.9’s finding 5)', () => {
   it('shows the route a waypoint makes, and what it does to the time, before the edit is sent', () => {
     const { transcript } = play('testbed', ['order n_army_west take salient_tip review', 'end', 'preview n_army_west waypoints via=w_valley', 'queue']);

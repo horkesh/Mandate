@@ -80,11 +80,6 @@ export class ConsoleGame {
     return this.stateNow.calendarStart === null ? `day ${day.toString()}` : w.formatIsoDate(w.dateOfDay(this.stateNow.calendarStart, day));
   }
 
-  /** What is left of his week's attention (0025), or null if his seat keeps none. */
-  attention(): number | null {
-    return phase0.attentionLeft(this.stateNow, this.seat);
-  }
-
   /** The morning's request for his seat: the view and the menu for the next day. */
   morning(): phase0.SeatRequest {
     const request = phase0.pendingRequests(this.world, this.stateNow, this.viewCache).find((r) => r.requestSeat === this.seat);
