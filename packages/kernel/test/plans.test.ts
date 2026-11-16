@@ -103,6 +103,7 @@ describe('a goal is drafted on request, and the commander picks (lane 1.2)', () 
       msgVia: [],
       msgPending: over.pending === true ? [{ hopPerson: P('a_lead'), hopPost: null, hopRole: 'addressee' }] : [],
       msgOrder: null,
+      msgVerb: null,
       msgReport: {
         reportType: 'advice',
         reportSubtype: 'memorandum',

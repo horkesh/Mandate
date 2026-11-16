@@ -43,7 +43,18 @@ export type RejectionReason =
   | 'unknown_post'
   | 'unknown_seat'
   | 'vacant_post'
-  | 'wrong_day';
+  | 'wrong_day'
+  // Lane 1.5: the people verbs and attention.
+  | 'already_promised'
+  | 'bad_counters'
+  | 'no_attention'
+  | 'person_holds_post'
+  | 'post_held'
+  | 'too_soon'
+  | 'unknown_bloc'
+  | 'unknown_person'
+  | 'unknown_rank'
+  | 'unknown_region';
 
 export interface Rejection {
   readonly day: number;
@@ -55,7 +66,7 @@ export interface Rejection {
 
 /** Something a mechanism decided, with its terms: the explanation trail (hard rule 6). */
 export interface TickEvent {
-  readonly event: 'conflict' | 'filtered' | 'objected' | 'relayed' | 'seat_defaulted';
+  readonly event: 'audience' | 'conflict' | 'filtered' | 'initiative' | 'objected' | 'relayed' | 'seat_defaulted';
   readonly person: PersonId;
   readonly post: PostId | null;
   /** The order or report it concerns (null for a defaulted seat choice). */
@@ -65,6 +76,8 @@ export interface TickEvent {
 
 /** A typed delta for an owner that Phase 0 does not build yet (the people core, politics, regions). Counted, not applied. */
 export type Proposal =
+  /** Lane 1.5: the principal addressed a bloc; blocs are `politics`' (lane 1.6), which applies nothing until it exists. */
+  | { readonly proposal: 'address'; readonly bloc: string; readonly by: PersonId; readonly side: FactionId | null }
   | { readonly proposal: 'grievance'; readonly person: PersonId; readonly cause: 'bypassed'; readonly order: MessageId }
   | {
       readonly proposal: 'effect';
@@ -221,6 +234,7 @@ export function sendReport(
     msgVia: [],
     msgPending: throughFilter ? [addressee] : [],
     msgOrder: null,
+    msgVerb: null,
     msgReport: report.body,
     msgTruth: report.truth,
   });
