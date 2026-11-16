@@ -118,6 +118,12 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - Any test that shells out to git cannot run inside the hook's snapshot (no `.git`): the hook's executable-bit test skips there and runs in place and in CI, and a future such test needs the same skip (tooling batch hand-over).
 - App-created worktrees set `core.hooksPath` to the main checkout's absolute `.githooks`, so a lane's own hook changes do not run in its worktree until merged. Low impact (CI covers); a candidate LESSONS entry; it is app-managed config.
 - Validator: no warning flags a record that cites only research notes, though 0050 says they are pointers, never enough alone; control rows also have no sources column (reviewer, `review-lane-0.3.md`).
+- From the scanner-alias review (`review-scanner-aliases.md`, outside its scope; the test-time freeze still catches all of these, but only on paths a frozen run executes):
+  - Locals the one-writer scanner's declaration pattern does not recognise: wrapped in parentheses, `?? {}`, a ternary, `satisfies`, two hops (`const b = a[id]`), loop variables, and nested arrays reached through a copy. Lane 1.1 may fix the first three cheaply and will say which.
+  - A call inside the chain is missed: `.get(id)!.push(f)`.
+  - Maps and Sets are unguarded: `deepFreeze` (`tick/freeze.ts`) does not freeze their contents. Lanes 1.1 and 1.2 are told to put no Map or Set in State; a check that enforces it would close this.
+  - Gaps that predate the branch: an alias with a generic default is not read, and keys of an inline object type are never classified.
+  - A documented limit: a shallow copy shares its nested values, so `{ ...state.ctl }[id].push(f)` writes into State unflagged.
 
 **Phase 1**
 - From the standing reviewer's review of the close-out lane (`review-phase0-close-out.md`), Phase 1 combat: a trapped garrison at 0‰ with nowhere to retreat stays forever, as with the 600 regulars inside an enemy-held Washington. It needs a surrender or capture rule. **Lane 1.3** (a trapped garrison surrenders).
