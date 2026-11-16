@@ -98,5 +98,18 @@
   "reason.return-to-the-fens": "people returned to those who held them",
   "reason.each-commander-decides": "each commander decides alone",
   "reason.keeps-them-from-the-enemy": "it keeps them out of the enemy’s hands",
-  "reason.a-harbour-burned": "a harbour town burned"
+  "reason.a-harbour-burned": "a harbour town burned",
+  "rank_kind.regular": "regular",
+  "rank_kind.volunteer": "volunteer",
+  "rank_kind.brevet": "brevet",
+  "value.union": "union",
+  "value.party": "party",
+  "value.duty": "duty",
+  "value.order": "order",
+  "value.conciliation": "conciliation",
+  "value.reputation": "reputation",
+  "value.career": "career",
+  "value.caution": "caution",
+  "value.abolition": "abolition",
+  "value.glory": "glory"
 }

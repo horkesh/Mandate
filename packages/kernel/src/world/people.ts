@@ -22,6 +22,13 @@ export type StatDirection = (typeof STAT_DIRECTIONS)[number];
 export const CENTRE_STATS = ['competence', 'nerve', 'experience', 'reputation'] as const;
 export type CentreStat = (typeof CENTRE_STATS)[number];
 
+/**
+ * Temperament (lane 1.1): how bold a man likes action to be, and how truthfully he reports his own conduct. Each is a
+ * centre like the stats, drawn at setup by history's shadow; compliance reads the drawn values (FOUNDATION section 6).
+ */
+export const TEMPERAMENT_STATS = ['boldness', 'candour'] as const;
+export type TemperamentStat = (typeof TEMPERAMENT_STATS)[number];
+
 /** A direction with its citations, or `direction: null` (unknown: no admissible evidence) with none. */
 export interface StatCentre {
   readonly direction: StatDirection | null;
@@ -31,6 +38,12 @@ export interface StatCentre {
 /** A trait from the pack's vocabulary, proved by a cited act (people draft, trait rule). */
 export interface TraitEvidence {
   readonly trait: string;
+  readonly cites: readonly Citation[];
+}
+
+/** A value from the pack's vocabulary that a person holds (lane 1.1, 0005), with the evidence for it. */
+export interface ValueEvidence {
+  readonly value: string;
   readonly cites: readonly Citation[];
 }
 
@@ -53,6 +66,15 @@ export interface PersonRecord {
   readonly born: string | null;
   readonly died: string | null;
   readonly centres: Readonly<Record<CentreStat, StatCentre>>;
+  /** Boldness and candour, each a cited centre (lane 1.1). */
+  readonly temperament: Readonly<Record<TemperamentStat, StatCentre>>;
+  /** The values he holds, an unordered set from the pack's vocabulary, each cited (lane 1.1); empty when none is known. */
+  readonly values: readonly ValueEvidence[];
+  /**
+   * His regard for his own faction's principal at the pack's first start, a cited centre mapped to signed permille by
+   * the pack's rule (`WorldRules.people.regardPermille`). Regard between people starts at none and moves in play.
+   */
+  readonly regard: StatCentre;
   readonly traits: readonly TraitEvidence[];
   /** A bloc from the pack's vocabulary, or null. */
   readonly bloc: string | null;

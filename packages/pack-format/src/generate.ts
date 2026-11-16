@@ -25,6 +25,7 @@ import {
   parseSeasons,
   parseShares,
   parseTraits,
+  parseValues,
   type Cell,
 } from './cells.ts';
 import { CsvError, parseCsv, type CsvTable } from './csv.ts';
@@ -344,6 +345,8 @@ const COLUMN_OVERRIDES: Readonly<Record<string, string>> = Object.freeze({
   'centres.nerve': 'nerve',
   'centres.experience': 'experience',
   'centres.reputation': 'reputation',
+  'temperament.boldness': 'boldness',
+  'temperament.candour': 'candour',
   shares: 'shares',
   levelPermille: 'level',
   conditionPermille: 'condition',
@@ -527,6 +530,9 @@ export function generatePack(files: PackFiles): GenerateResult {
         born: r.optionalDate('born', 'born'),
         died: r.optionalDate('died', 'died'),
         centres: { competence: centre('competence'), nerve: centre('nerve'), experience: centre('experience'), reputation: centre('reputation') },
+        temperament: { boldness: centre('boldness'), candour: centre('candour') },
+        values: r.cell('values', parseValues(r.raw('values'), sourceKeys), []),
+        regard: centre('regard'),
         traits: r.cell('traits', parseTraits(r.raw('traits'), sourceKeys), []),
         bloc: r.optionalId('bloc', 'bloc'),
         ranks: r.cell('ranks', parseRanks(r.raw('ranks')), []),

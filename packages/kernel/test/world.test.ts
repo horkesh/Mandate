@@ -36,7 +36,7 @@ const world = (edges: EdgeRecord[]): World => ({
   formatVersion: 2,
   pack: 'fixture',
   rules: { capacityMax: 5, supplyControlPermille: 250, retreatControlPermille: 50, seasons: [], ...FIXTURE_RULES },
-  vocabularies: { terrains: [], postKinds: [], departmentKinds: [], arms: [], personKinds: [], traits: [], ranks: [], blocs: [], standingOrderKinds: [] },
+  vocabularies: { terrains: [], postKinds: [], departmentKinds: [], arms: [], personKinds: [], traits: [], ranks: [], rankKinds: [], values: [], blocs: [], standingOrderKinds: [] },
   factions: [],
   departments: [],
   regions: [region('a'), region('b'), region('c')],

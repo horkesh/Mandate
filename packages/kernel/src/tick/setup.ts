@@ -12,7 +12,7 @@ import { initialForces } from '../forces/forces.ts';
 import type { DepartmentId, RegionId } from '../ids.ts';
 import { initialInfrastructure } from '../infrastructure/infrastructure.ts';
 import { initialLocations } from '../movement/movement.ts';
-import { initialRanks } from '../people/ranks.ts';
+import { initialPeople, SHADOW_MODES, type ShadowMode } from '../people/people.ts';
 import { initialGoals } from '../plans/standing.ts';
 import { initialFortification } from '../regions/regions.ts';
 import type { State } from '../root-state.ts';
@@ -33,6 +33,11 @@ export interface SetupOptions {
    * Never a history run's setting: the flag is State, so the run hashes differently, and a runner says it did this.
    */
   readonly atWar?: boolean;
+  /**
+   * History's shadow (FOUNDATION section 6): `shadow` (the default) draws each true stat around its cited centre;
+   * `as-history` puts every stat at its centre; `unknown-men` draws every stat as unknown.
+   */
+  readonly people?: ShadowMode;
 }
 
 export class WarFlagError extends Error {
@@ -97,6 +102,14 @@ export function emptyState(): State {
     infraObstructions: [],
     regionFortification: {},
     personRanks: {},
+    personTrue: {},
+    personTraits: {},
+    personStanding: {},
+    personGrievances: {},
+    personRegard: {},
+    personStances: {},
+    personStatus: {},
+    orderResponses: {},
   };
 }
 
@@ -140,8 +153,12 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
   const flagProblems = warFlagProblems(map);
   if (flagProblems.length > 0) throw new WarFlagError(flagProblems);
   // Each part of the start is copied once into the field its owner writes from then on (0050).
+  const mode = options.people ?? 'shadow';
+  if (!SHADOW_MODES.includes(mode)) throw new RangeError(`people must be one of ${SHADOW_MODES.join(', ')}`);
   const command = initialCommand(map, start);
   const network = initialInfrastructure(map, start);
+  // People: true stats drawn by history's shadow on each person's named stream, the rest copied from the World (lane 1.1).
+  const people = initialPeople(map, start, options.seed, mode);
   return {
     gameSeed: options.seed,
     calendarStart: start.startDate,
@@ -166,6 +183,14 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
     infraDepotCondition: network.depots,
     infraObstructions: network.obstructions,
     regionFortification: initialFortification(map, start),
-    personRanks: initialRanks(map, start.startDate),
+    personRanks: people.personRanks,
+    personTrue: people.personTrue,
+    personTraits: people.personTraits,
+    personStanding: people.personStanding,
+    personGrievances: people.personGrievances,
+    personRegard: people.personRegard,
+    personStances: people.personStances,
+    personStatus: people.personStatus,
+    orderResponses: {},
   };
 }

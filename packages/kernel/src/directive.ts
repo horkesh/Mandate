@@ -18,7 +18,39 @@ export interface DirectiveTerms {
   readonly offends: readonly ValueId[];
   /** 0..1000: resources the task needs, on the same scale as `CommandContext.available`. */
   readonly required: Permille;
+  /**
+   * 0..1000: the boldness of his own best plan for this goal, on the same scale (lane 1.1; lane 0.9 finding 2). When
+   * given, the temperament term reads the directive against it, not against his temperament on an absolute scale, so a
+   * bold man never finds his own favourite plan too timid. Absent for a plain goal.
+   */
+  readonly ownBest?: Permille;
+  /**
+   * 0..1000: how far an edited plan departs from his own judgement (the planner's edit distance: his best candidate's
+   * score minus the edited plan's). Adds the `judgement` term (FOUNDATION section 5: the further an edit departs, the
+   * likelier reservations, a slow walk, a reinterpretation or an objection). Absent for an order that is not an edit.
+   */
+  readonly departure?: Permille;
+  /** Support the plan asks of other posts (a fleet, a neighbouring army): each becomes an "if supported" condition unless promised. */
+  readonly support?: readonly SupportNeed[];
 }
+
+/** Support a plan needs from another post (lane 0.9's `naval_support` and `cooperating_axis` requests). */
+export interface SupportNeed {
+  /** What kind of support (`naval`, `cooperating`): planner vocabulary, never a setting name. */
+  readonly supportKind: string;
+  /** The post asked, or null when none is named yet. */
+  readonly supportFrom: string | null;
+}
+
+/**
+ * A condition a response carries (lane 1.1; lane 0.9 finding 1): he will act, but only when it is met. A condition
+ * qualifies the rung he gives; it never improves it.
+ */
+export type ResponseCondition =
+  /** "Move when reinforced": his shortfall is past the share of the task a man of his boldness tolerates (lane 0.9 finding 8). */
+  | { readonly kind: 'when_reinforced'; readonly shortfall: Permille }
+  /** "If the navy supports": support the plan needs that has not been promised. */
+  | { readonly kind: 'if_supported'; readonly supportKind: string; readonly from: string | null };
 
 /** The circumstances the proxy is in when the directive arrives. */
 export interface CommandContext {
@@ -32,6 +64,8 @@ export interface CommandContext {
   readonly disposition?: number;
   /** Grievances the proxy holds against the principal (typed; each is answered by specific counters, P3). */
   readonly grievances?: readonly { readonly kind: string; readonly weight: number }[];
+  /** Support already promised to him, by kind: a need of a promised kind carries no condition. */
+  readonly supportPromised?: readonly string[];
 }
 
 /**
@@ -62,13 +96,18 @@ export type Reason =
   | { readonly kind: 'fears_sanction' }
   | { readonly kind: 'shielded_by_standing' }
   | { readonly kind: 'lacks_resources'; readonly shortfall: Permille }
-  | { readonly kind: 'holds_grievance'; readonly grievance: string; readonly weight: number };
+  | { readonly kind: 'holds_grievance'; readonly grievance: string; readonly weight: number }
+  /** An edit departs from his own judgement by at least the reason threshold (lane 1.1). */
+  | { readonly kind: 'departs_from_judgement'; readonly departure: Permille };
 
 export type ReasonKind = Reason['kind'];
 
+/** The terms of the willingness sum. */
+export type ContributionTerm = 'values' | 'temperament' | 'regard' | 'deterrence' | 'capacity' | 'disposition' | 'grievances' | 'judgement';
+
 /** One term of the willingness sum, kept so every number is explainable (CLAUDE.md rule 6). */
 export interface Contribution {
-  readonly term: 'values' | 'temperament' | 'regard' | 'deterrence' | 'capacity' | 'disposition' | 'grievances';
+  readonly term: ContributionTerm;
   readonly amount: number;
 }
 
@@ -91,4 +130,6 @@ export interface DirectiveResponse {
   /** The reasons the proxy chooses to give. Candid proxies give all of them. */
   readonly statedReasons: readonly Reason[];
   readonly counterProposal: CounterProposal | null;
+  /** What his action waits on ("move when reinforced", "if the navy supports"); empty when nothing (lane 1.1). */
+  readonly conditions: readonly ResponseCondition[];
 }

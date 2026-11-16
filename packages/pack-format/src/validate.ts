@@ -110,6 +110,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   const terrains = new Map(vocab.terrains.map((t) => [t.id, t]));
   const arms = new Map(vocab.arms.map((a) => [a.id, a]));
   const rankOrder = new Map(vocab.ranks.map((r) => [r.id, r.seniority]));
+  const rankKind = new Map(vocab.ranks.map((r) => [r.id, r.kind]));
   const seasonReasons = new Set(world.rules.seasons.map((s) => s.reason));
   world.rules.seasons.forEach((s, i) => {
     if (world.rules.seasons.findIndex((x) => x.reason === s.reason) !== i) err('duplicate-id', W('rules.seasons', i, 'reason'), `season reason "${s.reason}" is defined twice`);
@@ -142,6 +143,12 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   for (const problem of phase0.templateProblems(world.rules.reportTemplates)) {
     err('rules-templates', W('rules', 0, 'reportTemplates'), problem, 'one template for each report type and subtype the kernel writes, keepSupersededDays at most maxAgeDays');
   }
+  // Lane 1.1: the people rules, by the kernel's own rule (it checks the same when it indexes a World): every value they name is in the vocabulary.
+  for (const problem of phase0.peopleRulesProblems(world.rules.people, vocab.values.map((v) => v.id))) {
+    err('rules-people', W('rules', 0, 'people'), problem, 'whole permille for each people rule, and values from the pack’s values vocabulary');
+  }
+  // 0073: every rank has a kind from rankKinds, so a person can hold one of each kind at once.
+  vocab.ranks.forEach((r, i) => term('rankKinds', r.kind, W('vocabularies.ranks', i, 'kind')));
 
   // ---- provenance: sources and licences
   const sources = new Map<string, ProvenanceFile['sources'][number]>();
@@ -352,6 +359,24 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
         }
       }
     }
+    // Lane 1.1: temperament and regard are centres like the stats: a direction needs an admissible citation. An unknown one
+    // is allowed without a warning while the cast's research is open (lane 1.9).
+    for (const [field, c] of [['temperament.boldness', p.temperament.boldness], ['temperament.candour', p.temperament.candour], ['regard', p.regard]] as const) {
+      citeCheck(c.cites, at(`${field}.cites`), false, `the ${field} centre`);
+      if (c.direction === null) {
+        if (c.cites.length > 0) warn('redundant-value', at(field), `an unknown ${field} centre carries citations`, 'a direction, or no citations');
+      } else if (!p.invented && c.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer').length === 0) {
+        err('centre-without-citation', at(field), `the ${field} centre "${c.direction}" has no admissible citation`, 'a citation of a primary or secondary source (pointers do not count; FOUNDATION section 6)');
+      }
+    }
+    p.values.forEach((v, j) => {
+      term('values', v.value, at(`values[${j}].value`));
+      citeCheck(v.cites, at(`values[${j}].cites`), false, `value "${v.value}"`);
+      if (p.values.findIndex((x) => x.value === v.value) !== j) err('duplicate-id', at(`values[${j}]`), `value "${v.value}" is listed twice`);
+      if (!p.invented && v.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer').length === 0) {
+        err('value-without-citation', at(`values[${j}]`), `value "${v.value}" has no admissible citation`, 'a citation of a primary or secondary source (0005: each centre cited)');
+      }
+    });
     p.traits.forEach((t, j) => {
       term('traits', t.trait, at(`traits[${j}].trait`));
       citeCheck(t.cites, at(`traits[${j}].cites`), false, `trait "${t.trait}"`);

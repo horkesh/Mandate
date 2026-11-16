@@ -7,7 +7,6 @@
  * only `@mandate/kernel/seat-api`.
  */
 export type { State } from './root-state.ts';
-export * from './standin/traits.ts';
 export * from './knowledge/report.ts';
 export * from './knowledge/templates.ts';
 export * from './knowledge/truth.ts';
@@ -57,3 +56,9 @@ export * from './combat/contest.ts';
 // Close-out (0072): the start's fortification (`regions`) and ranks (`people`).
 export * from './regions/regions.ts';
 export * from './people/ranks.ts';
+// Lane 1.1: people as State, their trait inputs and rules; reading orders on the new State; responses (`proxy`).
+export * from './people/people.ts';
+export * from './people/rules.ts';
+export * from './people/traits.ts';
+export * from './reading/orders.ts';
+export * from './proxy/responses.ts';

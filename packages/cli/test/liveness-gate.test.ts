@@ -104,8 +104,8 @@ describe('the gate can fail (positive controls)', () => {
   });
 
   it('a mechanic that is quiet by design fails the gate the day it starts to fire, so its band is moved on purpose', () => {
-    const rows = liveness(testbed).map((r) => (r.mechanic === 'orders.relay_objected' ? { ...r, fires: 1, magnitude: 1 } : r));
-    expect(gateFailures(testbed, rows).map((f) => [f.mechanic, f.problem])).toEqual([['orders.relay_objected', 'too_frequent']]);
+    const rows = liveness(testbed).map((r) => (r.mechanic === 'reports.trimmed' ? { ...r, fires: 1, magnitude: 1 } : r));
+    expect(gateFailures(testbed, rows).map((f) => [f.mechanic, f.problem])).toEqual([['reports.trimmed', 'too_frequent']]);
   });
 
   it('a run with no band for one of its mechanics fails', () => {

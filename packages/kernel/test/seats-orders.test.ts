@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { toId, type MessageId } from '../src/ids.ts';
+import { traitsOf } from '../src/people/traits.ts';
+import { responseKey } from '../src/proxy/responses.ts';
 import { enemyBeliefs } from '../src/knowledge/beliefs.ts';
 import { knowledgeOf } from '../src/knowledge/knowledge.ts';
 import { NO_TRUTH } from '../src/knowledge/truth.ts';
@@ -75,11 +77,22 @@ describe('orders through chains (0040)', () => {
     const objected = results.flatMap((r) => r.events).filter((e) => e.event === 'objected');
     expect(objected).toHaveLength(1);
     expect(objected[0]!.person).toBe(P('a_sec'));
-    expect(objected[0]!.terms.map((t) => t.termKind)).toEqual(['relay_objection']);
+    // His objection's terms: the rung, then each term of his willingness (lane 1.1: compliance on the new State).
+    expect(objected[0]!.terms.map((t) => `${t.termKind}:${t.termRule}:${t.termValue}`)).toEqual([
+      // A candid man: an advance offends his caution and is 400 bolder than he likes; his regard and the oversight do not make up for it.
+      'relay_objection:object:-227',
+      'relay_term:values:-200',
+      'relay_term:temperament:-160',
+      'relay_term:regard:90',
+      'relay_term:deterrence:43',
+      'relay_term:capacity:0',
+      'relay_term:disposition:0',
+      'relay_term:grievances:0',
+    ]);
     // The memorandum is advice he volunteered, with stated reasons, answering the order.
     const memo = knowledgeOf(state, lead).knownReports.find((r) => r.knownBody.reportType === 'advice')!;
     expect(memo.knownBody.reportSubtype).toBe('memorandum');
-    expect(memo.knownBody.reportAdvice).toEqual({ adviceRecommends: 'withdraw-order', adviceReasons: [{ reasonKind: 'too_rash', reasonWeight: 800 }], adviceConfidence: 800 });
+    expect(memo.knownBody.reportAdvice).toEqual({ adviceRecommends: 'withdraw-order', adviceReasons: [{ reasonKind: 'values_offended', reasonWeight: 1000 }, { reasonKind: 'too_rash', reasonWeight: 400 }, { reasonKind: 'trusts_leader', reasonWeight: 1000 }], adviceConfidence: 800 });
     expect(results[0]!.decisionPoints.map((d) => d.point)).toEqual(['objection']);
     expect(state.standingGoals[POST('a_army')]!.standingSpec.goalSpecKind).toBe('hold');
   });
@@ -101,17 +114,23 @@ describe('orders through chains (0040)', () => {
   });
 
   it('relays a forwarded order with the relayer’s own delay', () => {
-    const world = indexedFixture({ persons: { a_sec: { values: ['duty'], regard: -500 } } });
+    const world = indexedFixture({ persons: { a_sec: { values: ['duty'], regard: 'below', boldness: 'average', candour: 'low' } } });
     const { state, results } = run(world, 8, { a: { 1: [order('a_army', 'advance', 'b_cap')] } });
     const relayed = results.flatMap((r) => r.events).filter((e) => e.event === 'relayed');
-    expect(relayed.map((e) => e.terms)).toEqual([[{ termKind: 'relay_hold', termPerson: P('a_sec'), termPost: POST('a_office'), termRegion: null, termValue: 2, termRule: 'regard' }]]);
+    // His compliance (lane 1.1): an advance 100 bolder than he likes, from a leader he regards below par, watched a little:
+    // mild covert unwillingness, a slow walk, which a relay turns into the pack's two days' hold.
+    expect(relayed).toHaveLength(1);
+    expect(relayed[0]!.terms[0]).toEqual({ termKind: 'relay_hold', termPerson: P('a_sec'), termPost: POST('a_office'), termRegion: null, termValue: 2, termRule: 'slow_walk' });
+    expect(relayed[0]!.terms.slice(1).map((t) => `${t.termRule}:${t.termValue}`)).toEqual(['values:0', 'temperament:-40', 'regard:-90', 'deterrence:43', 'capacity:0', 'disposition:0', 'grievances:0']);
+    const response = state.orderResponses[responseKey(relayed[0]!.message!, P('a_sec'))]!;
+    expect([response.respActual, response.respDeclared, response.respWillingness, response.respRole]).toEqual(['slow_walk', 'comply', -87, 'relay']);
     // Wired from the capital to the office at once, held two days, then two days to the front by wire and horse.
     expect(state.standingGoals[POST('a_army')]!.standingSetDay).toBe(5);
     expect(state.standingGoals[POST('a_army')]!.standingViaChain).toBe(true);
   });
 
   describe('conflicting orders: one down the chain, one around it (the office holds what it relays)', () => {
-    const world = indexedFixture({ persons: { a_sec: { values: ['duty'], regard: -500 } } });
+    const world = indexedFixture({ persons: { a_sec: { values: ['duty'], regard: 'below', boldness: 'average', candour: 'low' } } });
     function play(script: Record<number, LogEntry['command']>, days: number, on: SeatsWorld = world) {
       let state = createState(on, { seed: 5 });
       const results: TickResult[] = [];
@@ -228,34 +247,35 @@ describe('filters on the wire (0032)', () => {
 describe('belief: perception in belief derivation, the intelligence chief a separate term (planner-design findings 3 and 6)', () => {
   it('inflates his dispatches and his menu by the same amount', () => {
     // A strong army, so advancing stays consistent and the menu shows what he perceives.
-    const world = indexedFixture({ posts: { a_army: { strength: 10_000 } } });
+    const world = indexedFixture({ posts: { a_army: { strength: 20_000 } } });
     // Two days: the order lands on day 2, and his first estimate has reached him; he has not moved yet.
     const { state } = run(world, 2, { a: { 1: [order('a_army', 'advance', 'b_cap', 'special-messenger', true)] } });
-    const gen = world.person(P('a_gen'));
+    const gen = traitsOf(world, state, P('a_gen'));
     const belief = enemyBeliefs(state, world.rules.traits, gen, knowledgeOf(state, seatIdFor(gen.id))).get(R('b_front'))!;
-    // 800 men seen, doubled by the chief, then 2.4 times by a timid, cautious general.
-    expect(belief.value).toBe(3840);
-    expect(belief.terms.map((t) => `${t.termKind}:${t.termValue}`)).toEqual(['observed:800', 'intelligence_bias:2000', 'reported:1600', 'perception_bias:2400']);
+    // 800 men seen, 2.4 times by the timid, cautious chief (his own perception bias), then 2.4 times by a timid, cautious general.
+    expect(belief.value).toBe(4608);
+    expect(belief.terms.map((t) => `${t.termKind}:${t.termValue}`)).toEqual(['observed:800', 'intelligence_bias:2400', 'reported:1920', 'perception_bias:2400']);
     const options = standingOptions(world, state, POST('a_army'), morningGround(world, state, state.stateDay + 1))!;
-    expect(options.find((o) => o.region === R('b_front'))!.perceivedEnemy).toBe(3840);
+    expect(options.find((o) => o.region === R('b_front'))!.perceivedEnemy).toBe(4608);
     // The score cap is the pack's (0072): a lower cap lowers every capped score, and the margin below it is unchanged.
     const capped = withRules(world, { standing: { conflictWindowDays: 7, scoreCap: 1500 } });
     const low = standingOptions(capped, state, POST('a_army'), morningGround(capped, state, state.stateDay + 1))!;
     expect(options.map((o) => Math.min(o.score, 1500))).toEqual(low.map((o) => o.score));
     expect(options.some((o) => o.score > 1500)).toBe(true);
-    expect(viewFor(world, state, seatIdFor(gen.id)).enemyBeliefs[R('b_front')]!.value).toBe(3840);
+    expect(viewFor(world, state, seatIdFor(gen.id)).enemyBeliefs[R('b_front')]!.value).toBe(4608);
     // The next dispatch he writes carries the same figure to the principal.
     const later = run(world, 6, {}, state).state;
     const dispatch = knowledgeOf(later, lead).knownReports.filter((r) => r.knownBody.reportAuthor === gen.id && r.knownBody.reportType === 'wire-dispatch').at(-1)!;
-    expect(dispatch.knownBody.reportClaims.find((c) => c.claimKind === 'enemy-strength' && c.claimRegion === R('b_front'))!.claimValue).toBe(3840);
+    expect(dispatch.knownBody.reportClaims.find((c) => c.claimKind === 'enemy-strength' && c.claimRegion === R('b_front'))!.claimValue).toBe(4608);
   });
 
   it('tells a timid general from a bad intelligence chief by their terms, though the figure is the same', () => {
-    const badChief = indexedFixture({ persons: { a_gen: { boldness: 500, values: ['duty'] }, a_spy: { intelligenceBias: 1900 } } });
-    const timid = indexedFixture({ persons: { a_gen: { boldness: 200, values: ['duty'] }, a_spy: { intelligenceBias: 1000 } } });
+    // A chief's bias is his own perception bias (lane 1.1): a timid chief without caution reads 1900, a steady one 1000.
+    const badChief = indexedFixture({ persons: { a_gen: { boldness: 'average', values: ['duty'] }, a_spy: { boldness: 'low', values: ['duty'] } } });
+    const timid = indexedFixture({ persons: { a_gen: { boldness: 'low', values: ['duty'] }, a_spy: { boldness: 'average', values: ['duty'] } } });
     const beliefIn = (world: ReturnType<typeof indexedFixture>) => {
       const { state } = run(world, 2);
-      const gen = world.person(P('a_gen'));
+      const gen = traitsOf(world, state, P('a_gen'));
       return enemyBeliefs(state, world.rules.traits, gen, knowledgeOf(state, seatIdFor(gen.id))).get(R('b_front'))!;
     };
     const a = beliefIn(badChief);
