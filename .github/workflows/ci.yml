@@ -54,6 +54,9 @@ jobs:
       - id: test
         name: npm run test
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        env:
+          # Lane 1.0t: the wall-clock budget tests run here on the Linux job only; the pre-commit hook leaves them off.
+          MANDATE_TIMING: ${{ matrix.os == 'ubuntu-24.04' && '1' || '' }}
         run: npm run test -- --reporter=default --reporter=json --outputFile.json=runs/ci/vitest.json
 
       - id: boundary
@@ -114,6 +117,7 @@ jobs:
           INSTALL: ${{ steps.install.outcome }}
           TYPECHECK: ${{ steps.typecheck.outcome }}
           TEST: ${{ steps.test.outcome }}
+          TIMING: ${{ matrix.os == 'ubuntu-24.04' && 'on (MANDATE_TIMING=1)' || 'off' }}
           BOUNDARY: ${{ steps.boundary.outcome }}
           LICENCES: ${{ steps.licences.outcome }}
           DECISIONS: ${{ steps.decisions.outcome }}
@@ -138,6 +142,7 @@ jobs:
             echo "| npm ci | $INSTALL |"
             echo "| npm run typecheck | $TYPECHECK |"
             echo "| npm run test | $TEST ($tests) |"
+            echo "| wall-clock budget tests | $TIMING |"
             echo "| npm run check:boundary | $BOUNDARY |"
             echo "| npm run check:licences | $LICENCES |"
             echo "| npm run check:decisions | $DECISIONS |"

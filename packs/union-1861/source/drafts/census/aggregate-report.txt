@@ -1,0 +1,186 @@
+regions: 268
+county rows read: 1264
+county rows claimed by no region (accounted for by a wildcard region only if its state has one): 162
+  maryland|baltimore
+  texas|banderah
+  texas|baylor
+  texas|blanco
+  texas|brown
+  texas|buchanan
+  texas|comanche
+  texas|clay
+  texas|collehan
+  texas|coleman
+  texas|concho
+  texas|cook
+  texas|dawson
+  texas|demmit
+  texas|duval
+  texas|eastland
+  texas|edwards
+  texas|el paso
+  texas|ensinal
+  texas|erath
+  texas|frio
+  texas|gillespie
+  texas|hamilton
+  texas|hardeman
+  texas|haskell
+  texas|hidalgo
+  texas|jack
+  texas|jones
+  texas|kerr
+  texas|kimble
+  texas|kinney
+  texas|knox
+  texas|lampasas
+  texas|lasalle
+  texas|llano
+  texas|mcculloch
+  texas|mcmullen
+  texas|mason
+  texas|maveric
+  texas|menora
+  texas|montague
+  texas|palo pinto
+  texas|parker
+  texas|presidio
+  texas|runnels
+  texas|san saba
+  texas|shackleford
+  texas|starr
+  texas|taylor
+  texas|throckmorton
+  texas|uvalde
+  texas|webb
+  texas|wise
+  texas|young
+  texas|zapata
+  texas|zavola
+  kansas|allen
+  kansas|anderson
+  kansas|breckenridge
+  kansas|brown
+  kansas|butler
+  kansas|chase
+  kansas|clay
+  kansas|coffee
+  kansas|davis
+  kansas|dickinson
+  kansas|dorn
+  kansas|godfrey
+  kansas|greenwood
+  kansas|hunter
+  kansas|jackson
+  kansas|madison
+  kansas|marion
+  kansas|marshall
+  kansas|mcghee
+  kansas|morris
+  kansas|nemeha
+  kansas|osage
+  kansas|otoe
+  kansas|pottawatomie
+  kansas|riley
+  kansas|wabaunsee
+  kansas|washington
+  kansas|wilson
+  kansas|woodson
+  nebraska|buffalo
+  nebraska|burt
+  nebraska|butler
+  nebraska|calhoun
+  nebraska|cass
+  nebraska|cedar
+  nebraska|clay
+  nebraska|cuming
+  nebraska|dakota
+  nebraska|dawson
+  nebraska|dixon
+  nebraska|dodge
+  nebraska|douglas
+  nebraska|fort randall
+  nebraska|gage
+  nebraska|green
+  nebraska|hall
+  nebraska|johnson
+  nebraska|jones
+  nebraska|kearney
+  nebraska|lancaster
+  nebraska|l eau qui court
+  nebraska|merrick
+  nebraska|nemaha
+  nebraska|nuckoll
+  nebraska|otoe
+  nebraska|pawnee
+  nebraska|platte and madison bracketed as one line
+  nebraska|polk
+  nebraska|richardson
+  nebraska|saline
+  nebraska|sarpy
+  nebraska|shorter
+  nebraska|washington
+  nebraska|all that portion n of latitude 40 and w of longitude 103 and a second bounded portion see note
+  utah|beaver
+  utah|box elder
+  utah|cache
+  utah|cedar
+  utah|davis
+  utah|deseret
+  utah|greasewood
+  utah|green river
+  utah|iron
+  utah|juab
+  utah|millard
+  utah|salt lake
+  utah|san pete
+  utah|shambip
+  utah|summit
+  utah|toocle
+  utah|utah
+  utah|walade
+  utah|washington
+  utah|weber
+  utah|country east of wasatch mountains
+  new jersey|atlantic
+  new jersey|bergen
+  new jersey|burlington
+  new jersey|camden
+  new jersey|cape may
+  new jersey|cumberland
+  new jersey|essex
+  new jersey|gloucester
+  new jersey|hudson
+  new jersey|hunterdon
+  new jersey|mercer
+  new jersey|middlesex
+  new jersey|monmouth
+  new jersey|morris
+  new jersey|ocean
+  new jersey|passaic
+  new jersey|salem
+  new jersey|somerset
+  new jersey|sussex
+  new jersey|union
+  new jersey|warren
+  counted 0x: utah|beaver (enslaved 0)
+  counted 0x: utah|box elder (enslaved 0)
+  counted 0x: utah|cache (enslaved 0)
+  counted 0x: utah|cedar (enslaved 0)
+  counted 0x: utah|davis (enslaved 10)
+  counted 0x: utah|deseret (enslaved )
+  counted 0x: utah|greasewood (enslaved )
+  counted 0x: utah|green river (enslaved 0)
+  counted 0x: utah|iron (enslaved 0)
+  counted 0x: utah|juab (enslaved 0)
+  counted 0x: utah|millard (enslaved 0)
+  counted 0x: utah|salt lake (enslaved 19)
+  counted 0x: utah|san pete (enslaved 0)
+  counted 0x: utah|shambip (enslaved 0)
+  counted 0x: utah|summit (enslaved 0)
+  counted 0x: utah|toocle (enslaved 0)
+  counted 0x: utah|utah (enslaved 0)
+  counted 0x: utah|walade (enslaved )
+  counted 0x: utah|washington (enslaved 0)
+  counted 0x: utah|weber (enslaved 0)
+  counted 0x: utah|country east of wasatch mountains (enslaved )

@@ -21,6 +21,7 @@ import {
 import { measureDrafting } from '../src/drafting-measure.ts';
 import { REFERENCE_RUNS } from '../src/liveness-gate.ts';
 import { phase0Run, type Phase0Summary } from '../src/phase0-run.ts';
+import { TIMING } from '../../kernel/test/support/timing.ts';
 
 /**
  * The Phase 0 done check (FOUNDATION section 12; lane 0.8, step 5): a headless run on the new kernel, on
@@ -38,9 +39,15 @@ const union = () => result.runs.find((r) => r.checked.pack === 'union-1861')!;
 const testbed = () => result.runs.find((r) => r.checked.pack === 'testbed')!;
 
 describe('the done check on union-1861 at war and the testbed', () => {
-  it('passes every criterion', () => {
-    for (const c of result.criteria) expect(c.problems, c.id).toEqual([]);
+  it('passes every criterion but the budget, which is a stopwatch', () => {
+    for (const c of result.criteria) if (c.id !== 'budget') expect(c.problems, c.id).toEqual([]);
     expect(result.criteria.map((c) => c.id)).toEqual(['behaviour', 'hash', 'resume', 'liveness', 'section-ten', 'budget']);
+  });
+
+  // Wall clock: runs only with MANDATE_TIMING=1 (lane 1.0t; CI's Linux job sets it, the pre-commit hook does not).
+  // `npm run run:done-check` always measures the budget; its logic is tested below on given timings.
+  it.runIf(TIMING)('stays inside the tick budget on this machine, so the whole check passes (wall clock: MANDATE_TIMING=1)', () => {
+    expect(result.criteria.find((c) => c.id === 'budget')!.problems).toEqual([]);
     expect(result.passed).toBe(true);
   });
 

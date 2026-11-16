@@ -35,6 +35,7 @@
 ```bash
 npm run check            # typecheck + tests + pack boundary + licences (also the pre-commit hook)
 npm test                 # vitest
+MANDATE_TIMING=1 npm test  # also run the wall-clock budget tests (CI's Linux job does; the pre-commit hook skips them)
 npm run typecheck
 npm run check:boundary
 npm run check:licences  # dependency-licence check over every lockfile
