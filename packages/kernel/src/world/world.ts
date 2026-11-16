@@ -24,6 +24,7 @@ import type {
 import type { PersonRecord } from './people.ts';
 import type { ReportTemplate } from '../knowledge/templates.ts';
 import type { LatencyRules } from '../messages/latency.ts';
+import type { PeopleRules } from '../people/rules.ts';
 
 export const WORLD_FORMAT_VERSION = 2;
 
@@ -169,35 +170,24 @@ export interface PlannerRules {
   readonly forceDays: number;
   /** Extra threat, as men, of forcing works or running past batteries. */
   readonly forcingThreat: number;
-  /** Permille days an assault on a garrisoned region takes (lane 0.9 finding 9: on the route as at the objective). */
+  /** Permille days an assault on a garrisoned region takes (lane 0.9 finding 9: on the route as at the objective). The assault margin on his demand is a people rule (`people.traits.assaultMargin`). */
   readonly assaultDays: number;
-  /** His demand for an assault on held ground, permille of his demand in the open (lane 0.9 finding 1: the assault margin). */
-  readonly assaultMargin: number;
   /** A pincer's partner may arrive up to this many permille days before the main axis. */
   readonly pincerWindow: number;
-  /**
-   * The shortfall, permille of the men he needs, past which he asks for men and waits for them (lane 0.9 finding 8):
-   * this for a man of boldness 0, scaled toward `shortfallBold` for a man of boldness 1000.
-   */
-  readonly shortfallTimid: number;
-  readonly shortfallBold: number;
   /** `dependence`: what one support request to another holder costs. */
   readonly dependenceCost: number;
-  /** A partner holder's willingness (lane 0.9 finding 7): permille of his regard counted, and points per value honoured or offended. */
-  readonly partnerRegardWeight: number;
-  readonly partnerValueWeight: number;
-  /** Values a cooperating axis honours, and offends, in the holder asked (pack vocabulary). */
-  readonly partnerHonours: readonly string[];
-  readonly partnerOffends: readonly string[];
+  /**
+   * A partner holder's willingness (lane 0.9 finding 7), permille of it counted against `dependenceCost`: his willingness
+   * is compliance's answer to an advance from his principal (`answerOrder` with the pack's advance terms), so his
+   * regard and values decide it through the people rules, never by value names in the kernel.
+   */
+  readonly partnerWillingnessWeight: number;
   /** Drafts a side's commanders make in one day; the rest wait for the next (0062; lane 0.8 measured the worst day). */
   readonly dailyDraftCap: number;
   readonly weights: PlannerWeights;
 }
 
-/**
- * Goals and plans (0040, 0062; lane 1.2). DESIGN PARAMETERS the pack states. The compliance numbers are a STAND-IN
- * until lane 1.1's people State gives each man his candour and standing and a principal his credibility.
- */
+/** Goals and plans (0040, 0062; lane 1.2). DESIGN PARAMETERS the pack states. */
 export interface PlansRules {
   /** The goal terms an order carries when it names only a posture and an objective (a situation's option). */
   readonly goalDefaults: {
@@ -212,12 +202,6 @@ export interface PlansRules {
   };
   /** A holding action's riskiness, for reading an edit's boldness against his own best plan (lane 0.9 finding 2). */
   readonly holdingRisk: number;
-  /** STAND-IN (lane 1.1): the compliance inputs the people State does not yet carry, permille. */
-  readonly complianceCandour: number;
-  readonly complianceStanding: number;
-  readonly complianceAvailable: number;
-  readonly complianceOversight: number;
-  readonly complianceCredibility: number;
 }
 
 /** Pack-tunable rules the map needs (0019: thresholds start from AGEoD's tested values). */
@@ -241,7 +225,11 @@ export interface WorldRules {
    */
   readonly reportTemplates: readonly ReportTemplate[];
   readonly standing: StandingRules;
+  /** The people core's rules (lane 1.1): history's shadow, compliance, reading orders and reports, traits. DESIGN PARAMETERS the pack states (0072). */
+  readonly people: PeopleRules;
+  /** The planner (lane 1.2, 0062): thresholds, lane 0.9's fixes, the daily drafting cap and the scorer's weights. */
   readonly planner: PlannerRules;
+  /** Goals and plans (lane 1.2): the goal terms an option's order carries, and how an edit's riskiness is read. */
   readonly plans: PlansRules;
 }
 
@@ -295,6 +283,8 @@ export interface RankTerm {
   readonly name: StringKey;
   /** Higher is senior; promotion over a senior costs standing (FOUNDATION section 5). */
   readonly seniority: number;
+  /** Its kind from the pack's ankKinds (a regular, a volunteer or a brevet rank): a person holds one rank of each kind at once (0073). */
+  readonly kind: string;
 }
 
 export interface Term {
@@ -323,6 +313,10 @@ export interface Vocabularies {
   readonly personKinds: readonly Term[];
   readonly traits: readonly TraitTerm[];
   readonly ranks: readonly RankTerm[];
+  /** Kinds of rank held side by side (0073). */
+  readonly rankKinds: readonly Term[];
+  /** Values people hold (lane 1.1, 0005): the engine reads only the pack's rules that name them. */
+  readonly values: readonly Term[];
   readonly blocs: readonly Term[];
   readonly standingOrderKinds: readonly Term[];
 }

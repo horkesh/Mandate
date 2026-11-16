@@ -12,6 +12,9 @@ import { seatsWorld } from '../src/seats-world.ts';
 const rules = createRuleSeat();
 const seats = () => rules;
 const orders = (log: readonly { readonly day: number; readonly command: { readonly cmd: string } }[]) => log.filter((e) => e.command.cmd === 'order');
+/** The days of the orders that went down the chain: a later order sent around it answers an objection (lane 1.1: relays push back). */
+const chainOrderDays = (log: readonly { readonly day: number; readonly command: { readonly cmd: string } }[]) => orders(log).filter((e) => (e.command as { readonly bypass?: boolean }).bypass !== true).map((e) => e.day);
+const aroundEveryObjection = (log: readonly { readonly day: number; readonly command: { readonly cmd: string } }[]) => orders(log).filter((e) => (e.command as { readonly bypass?: boolean }).bypass === true).every((e) => (e.command as { readonly route?: string }).route === 'special-messenger');
 
 describe('the war gate on union-1861', () => {
   const { world, setup } = seatsWorld('union-1861');
@@ -32,8 +35,9 @@ describe('the war gate on union-1861', () => {
 
     const war = phase0.createState(world, { ...setup, atWar: true });
     const warRun = phase0.playDays(world, war, seats, 40, { freeze: true });
-    // Each side's principal opens once, on the first morning.
-    expect(orders(warRun.log).map((e) => e.day)).toEqual([1, 1]);
+    // Each side's principal opens once, on the first morning; any later order goes around a relay who objected.
+    expect(chainOrderDays(warRun.log)).toEqual([1, 1]);
+    expect(aroundEveryObjection(warRun.log)).toBe(true);
     expect(warRun.state.forceLocations).not.toEqual(war.forceLocations);
     expect(warRun.state.regionControl).not.toEqual(war.regionControl);
   });
@@ -55,7 +59,8 @@ describe('the war gate on union-1861', () => {
     const flags = Object.fromEntries(warFlags.map((r) => [r.flag, 10]));
     const declared = { ...early.state, situationFlags: flags };
     const late = phase0.playDays(world, declared, seats, 10, { freeze: true });
-    expect(orders(late.log).map((e) => e.day)).toEqual([11, 11]);
+    expect(chainOrderDays(late.log)).toEqual([11, 11]);
+    expect(aroundEveryObjection(late.log)).toBe(true);
     expect(late.state.forceLocations).not.toEqual(early.state.forceLocations);
   });
 });
@@ -69,6 +74,6 @@ describe('the war gate on the testbed', () => {
     const labelled = phase0.createState(world, { ...setup, atWar: true });
     expect(canonicalHash(labelled)).toBe(canonicalHash(plain));
     const run = phase0.playDays(world, plain, seats, 5, { freeze: true });
-    expect(orders(run.log).map((e) => e.day)).toEqual([1, 1]);
+    expect(chainOrderDays(run.log)).toEqual([1, 1]);
   });
 });

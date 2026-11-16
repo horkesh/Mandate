@@ -13,6 +13,8 @@ import type { SeasonEffect, World } from '../../src/world/world.ts';
 import type { ReportType } from '../../src/knowledge/report.ts';
 import type { ReportTemplate } from '../../src/knowledge/templates.ts';
 import type { RouteKind } from '../../src/messages/latency.ts';
+import { DEFAULT_COMPLIANCE_RULES } from '../../src/compliance.ts';
+import type { PeopleRules } from '../../src/people/rules.ts';
 
 export const R = (id: string): RegionId => toId('region', id);
 export const F = (id: string): FactionId => toId('faction', id);
@@ -57,6 +59,44 @@ export const FIXTURE_TEMPLATES: readonly ReportTemplate[] = [
   t('advice', 'memorandum', 'courier', 0, 60, 30),
 ];
 
+/** The values vocabulary the fixtures' people rules name (lane 1.1; the starting vocabulary both packs declare). */
+export const FIXTURE_VALUES: readonly string[] = ['abolition', 'caution', 'conciliation', 'career', 'duty', 'glory', 'order', 'party', 'reputation', 'union'];
+
+/**
+ * The fixtures' people rules (lane 1.1): the packs' numbers, except that history's shadow draws with no spread, so a
+ * fixture person's drawn stats are his centres exactly, and the direction table is one the fixtures can hit exactly.
+ */
+export const FIXTURE_PEOPLE_RULES: PeopleRules = {
+  shadow: {
+    centrePermille: { high: 800, above: 600, average: 500, below: 400, low: 200 },
+    unknownCentre: 500,
+    spread: 0,
+    unknownSpread: 0,
+    regardPermille: { high: 1000, above: 300, average: 0, below: -300, low: -1000 },
+    regardUnknown: 0,
+  },
+  compliance: DEFAULT_COMPLIANCE_RULES,
+  goalTerms: [
+    { goal: 'hold', boldness: 400, honours: ['caution'], offends: [] },
+    { goal: 'advance', boldness: 600, honours: ['glory'], offends: ['caution'] },
+  ],
+  context: { oversight: 500, leaderCredibility: 500 },
+  relay: { reservationsHoldDays: 0, slowWalkHoldDays: 2, reinterpretHoldDays: 4 },
+  filter: { holdFor: [{ value: 'order', days: 1 }], trimFor: [{ value: 'reputation', claimKinds: ['own-losses'] }], candidAt: 500 },
+  traits: {
+    perceptionPivot: 500,
+    perceptionPerPoint: 3,
+    perceptionValues: [{ value: 'caution', permille: 500 }],
+    perceptionMax: 4000,
+    demandBase: 1000,
+    demandPerPoint: 2, assaultMargin: 1500,
+    holdBand: 1500,
+    wantsMenPermille: 800,
+    paperPermille: 1400,
+  },
+  grievances: { bypassedWeight: 150 },
+};
+
 /** The fixtures' design parameters (the testbed's and Union's values: 0064, 0072). */
 export const FIXTURE_RULES = {
   stores: { menPerCapacityUnit: 20000, capDays: 30, lowDays: 7 },
@@ -66,8 +106,9 @@ export const FIXTURE_RULES = {
   latency: { wireDays: 0, mailPermille: 2000, specialMessengerPermille: 500, courierNoiseMaxDays: 1, specialMessengerPrice: 1 },
   reportTemplates: FIXTURE_TEMPLATES,
   standing: { conflictWindowDays: 7 },
-  planner: {"hopShare":250,"menPerDay":1000,"flankOverlapMax":600,"flankLengthMax":1600,"flankPenalty":2000,"retrogradeSlack":0,"dedupeOverlap":800,"dedupeArrival":1500,"topN":4,"maxSearches":64,"reducePerLevel":10,"clearDays":4000,"forceDays":1000,"forcingThreat":4000,"assaultDays":1000,"assaultMargin":1500,"pincerWindow":2000,"shortfallTimid":10,"shortfallBold":50,"dependenceCost":120,"partnerRegardWeight":300,"partnerValueWeight":100,"partnerHonours":[],"partnerOffends":[],"dailyDraftCap":3,"weights":{"riskBase":200,"supplyBase":1100,"concentrationPerTimid":250,"pausePerTimid":400,"twoAxesAt":500,"threeAxesAt":800,"goalFit":400,"ratioBonusMax":300,"ratioBonusDivisor":10,"ratioPenaltyMax":600,"latePenaltyMax":600,"latePerDay":40,"earlyBonusMax":300,"earlyDivisor":25000,"holdingTime":-300,"traitBase":1100,"hasteDivisor":10000,"supplyDivisor":10000,"outrunDivisor":4,"exposureDivisor":20,"coordinationDivisor":10000,"perExtraAxis":50,"gloryDivisor":5,"cautionDivisor":2}},
-  plans: {"goalDefaults":{"risk":500,"deadlineDays":20,"rail":true,"river":false,"sea":false,"neutral":false,"awaitWord":false,"approveAsDrafted":true},"holdingRisk":-400,"complianceCandour":800,"complianceStanding":500,"complianceAvailable":500,"complianceOversight":500,"complianceCredibility":500},
+  planner: {"hopShare":250,"menPerDay":1000,"flankOverlapMax":600,"flankLengthMax":1600,"flankPenalty":2000,"retrogradeSlack":0,"dedupeOverlap":800,"dedupeArrival":1500,"topN":4,"maxSearches":64,"reducePerLevel":10,"clearDays":4000,"forceDays":1000,"forcingThreat":4000,"assaultDays":1000,"pincerWindow":2000,"dependenceCost":120,"partnerWillingnessWeight":300,"dailyDraftCap":3,"weights":{"riskBase":200,"supplyBase":1100,"concentrationPerTimid":250,"pausePerTimid":400,"twoAxesAt":500,"threeAxesAt":800,"goalFit":400,"ratioBonusMax":300,"ratioBonusDivisor":10,"ratioPenaltyMax":600,"latePenaltyMax":600,"latePerDay":40,"earlyBonusMax":300,"earlyDivisor":25000,"holdingTime":-300,"traitBase":1100,"hasteDivisor":10000,"supplyDivisor":10000,"outrunDivisor":4,"exposureDivisor":20,"coordinationDivisor":10000,"perExtraAxis":50,"gloryDivisor":5,"cautionDivisor":2}},
+  plans: {"goalDefaults":{"risk":500,"deadlineDays":20,"rail":true,"river":false,"sea":false,"neutral":false,"awaitWord":false,"approveAsDrafted":true},"holdingRisk":-400},
+  people: FIXTURE_PEOPLE_RULES,
 } as const;
 
 export function region(id: string, kind: RegionKind = 'land'): RegionRecord {
@@ -151,7 +192,7 @@ export function mapWorld(parts: WorldParts): World {
       // Every fixture faction is at war from day 1 (0064): the fixtures test the war, not the peace before it.
       ruleSeats: { warFlags: (parts.factions ?? ['a', 'b']).map((f) => ({ faction: F(f), flag: null })) },
     },
-    vocabularies: { terrains: [], postKinds: [], departmentKinds: [], arms: [], personKinds: [], traits: [], ranks: [], blocs: [], standingOrderKinds: [] },
+    vocabularies: { terrains: [], postKinds: [], departmentKinds: [], arms: [], personKinds: [], traits: [], ranks: [], rankKinds: [], values: FIXTURE_VALUES.map((v) => ({ id: v, name: `value.${v}` })), blocs: [], standingOrderKinds: [] },
     factions: (parts.factions ?? ['a', 'b']).map((f) => ({ id: F(f), name: `faction.${f}.name` })),
     departments: (parts.departments ?? []).map((d) => ({ id: toId('department', d), faction: d.startsWith('neutral_') ? null : F(d.split('_')[0]!), kind: 'government', name: `department.${d}.name`, provenance: [] })),
     regions: parts.regions,

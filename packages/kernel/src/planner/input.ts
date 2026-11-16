@@ -9,8 +9,8 @@
  *   network the derivation read (edge condition, neutral ground); the obstructions in it are dropped, so the planner
  *   cannot plan on a boom he has not been told of.
  * - **From his own side's State**: its force blocks (`forces`, `movement`, `command`) and its posts.
- * - **From the World**: the map and the pack's rules; his traits through the seats layer (`seats/world.ts`, which lane
- *   1.1 re-points to the people State).
+ * - **From people State** (lane 1.1): his traits through `traitsOf` and his drawn competence; a partner holder's
+ *   willingness through `answerOrder`. **From the World**: the map and the pack's rules.
  */
 import { commandedBlocks, postIdsOf } from '../command/command.ts';
 import { strictCompare } from '../compare.ts';
@@ -22,6 +22,9 @@ import type { State } from '../root-state.ts';
 import { headquartersOf, postFaction } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import type { NetworkConditions } from '../supply/supply.ts';
+import { trueOf } from '../people/people.ts';
+import { traitsOf } from '../people/traits.ts';
+import { answerOrder, goalTerms } from '../reading/orders.ts';
 import type { SeatView } from '../view/types.ts';
 import type { PlannerInput } from './context.ts';
 import { profileOf } from './profile.ts';
@@ -55,20 +58,26 @@ export function sideForces(world: SeatsWorld, state: State, faction: FactionId):
   return out;
 }
 
-/** His side's posts, in id order, with their holders' regard and values (for a partner's willingness). */
+/**
+ * His side's posts, in id order, with each holder's willingness to cooperate (lane 0.9 finding 7): his compliance's
+ * answer to an advance from his principal, with the pack's advance terms (`answerOrder`, lane 1.1). The planner never
+ * names a value; the people rules weigh them.
+ */
 export function sidePosts(world: SeatsWorld, state: State, faction: FactionId): PlannerPost[] {
+  const principal = world.factionIds.includes(faction) ? world.faction(faction).principal : null;
+  const advance = goalTerms(world.rules.people, 'advance');
   return postIdsOf(state)
     .filter((id) => postFaction(world, state, id) === faction)
     .map((id) => {
       const p = state.postStates[id]!;
-      const holder = p.postHolder === null ? null : world.person(p.postHolder);
+      const holder = p.postHolder;
+      const willing = holder === null || principal === null || holder === principal ? 0 : answerOrder(world, state, holder, principal, advance).willingness;
       return {
         id,
-        holder: p.postHolder,
+        holder,
         parent: p.postParent,
         region: commandedBlocks(state, id).length > 0 ? headquartersOf(world, state, id) : null,
-        holderRegard: holder?.regard ?? 0,
-        holderValues: holder === null ? [] : [...holder.values],
+        holderWillingness: willing + 0,
       };
     });
 }
@@ -95,7 +104,8 @@ export function plannerInputFor(world: SeatsWorld, state: State, derived: Derive
   if (supply === undefined) throw new RangeError(`the derived map has no supply for ${faction}`);
   const holder = state.postStates[post]!.postHolder;
   if (holder === null) throw new RangeError(`post ${post} is vacant: nobody to plan`);
-  const person = world.person(holder);
+  const person = traitsOf(world, state, holder);
+  const people = world.rules.people;
   const { beliefs, works, obstructions } = viewGround(view);
   return {
     ground: { map: world.map, index: derived.index, network: plannerNetwork(network), month },
@@ -107,9 +117,11 @@ export function plannerInputFor(world: SeatsWorld, state: State, derived: Derive
     forces: sideForces(world, state, faction),
     posts: sidePosts(world, state, faction),
     post,
-    profile: profileOf(person, world.rules.traits, world.map.world.rules.planner.weights),
+    profile: profileOf({ ...person, competence: trueOf(state, holder).trueCompetence }, people.traits, world.map.world.rules.planner.weights),
     goal,
     rules: world.map.world.rules.planner,
+    assaultMargin: people.traits.assaultMargin,
+    reinforceShare: { timid: people.compliance.reinforceShareTimid, bold: people.compliance.reinforceShareBold },
     day,
   };
 }

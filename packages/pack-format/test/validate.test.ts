@@ -36,6 +36,14 @@ const renamed = (from: string, to: string) => {
   const base = fixture();
   return withNewFile(to, base.get(from)!, withoutFile(from, base));
 };
+/** people.csv with lane 1.1's temperament, regard and values columns, at the end (columns are read by name), filled for cells' people. */
+const withTemper = (cells: Readonly<Record<string, { boldness?: string; candour?: string; regard?: string; values?: string }>>, base?: FileMap) =>
+  withFile(`${W}/people.csv`, (t) => t.split('\n').map((line, i) => {
+    if (i === 0) return `${line},boldness,candour,regard,values`;
+    if (line === '') return line;
+    const c = cells[line.split(',')[0]!] ?? {};
+    return `${line},${c.boldness ?? ''},${c.candour ?? ''},${c.regard ?? ''},${c.values ?? ''}`;
+  }).join('\n'), base);
 const kinds = (issues: readonly Issue[]) => [...new Set(issues.map((i) => `${i.severity} ${i.kind}`))].sort();
 
 describe('the fixture pack', () => {
@@ -92,6 +100,14 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   // people
   { name: 'a centre without a citation', files: () => withFile(`${W}/people.csv`, replaceOnce('above:REG A p.3', 'above')), kind: 'centre-without-citation', file: `${W}/people.csv` },
   { name: 'a centre citing only a pointer', files: () => withFile(`${W}/people.csv`, replaceOnce('above:REG A p.3', 'above:NOTE-x')), kind: 'centre-without-citation', file: `${W}/people.csv` },
+  // Lane 1.1: temperament, regard and values, each centre cited (0005).
+  { name: 'a temperament centre without a citation', files: () => withTemper({ red_chief: { boldness: 'above' } }), kind: 'centre-without-citation', file: `${W}/people.csv` },
+  { name: 'a regard centre citing only a pointer', files: () => withTemper({ red_chief: { regard: 'below:NOTE-x' } }), kind: 'centre-without-citation', file: `${W}/people.csv` },
+  { name: 'a value without a citation', files: () => withTemper({ red_chief: { values: 'caution' } }), kind: 'value-without-citation', file: `${W}/people.csv` },
+  { name: 'a value not in the vocabulary', files: () => withTemper({ red_chief: { values: 'zeal:REG A p.4' } }), kind: 'unknown-term', file: `${W}/people.csv` },
+  { name: 'a value listed twice', files: () => withTemper({ red_chief: { values: 'caution:REG A;caution:REG A p.2' } }), kind: 'duplicate-id', file: `${W}/people.csv` },
+  { name: 'a rank whose kind is not a rank kind (0073)', files: () => editJson<{ vocabularies: { ranks: { kind: string }[] } }>('pack.json', (m) => { m.vocabularies.ranks[0]!.kind = 'honorary'; }), kind: 'unknown-term', file: 'pack.json' },
+  { name: 'people rules naming a value not in the vocabulary', files: () => editJson<{ rules: { people: { traits: { perceptionValues: { value: string }[] } } } }>('pack.json', (m) => { m.rules.people.traits.perceptionValues[0]!.value = 'zeal'; }), kind: 'rules-people', file: 'pack.json' },
   { name: 'a trait without a citation', files: () => withFile(`${W}/people.csv`, replaceOnce('bold:REG A p.9', 'bold')), kind: 'trait-without-citation', file: `${W}/people.csv` },
   { name: 'an invented person in a pack that allows none (review F7)', files: () => withFile(`${W}/people.csv`, appendRow(INVENTED)), kind: 'invented-not-allowed', file: `${W}/people.csv` },
   { name: "an invented person's record citing an unknown source", files: () => withFile(`${W}/people.csv`, appendRow(INVENTED.replace(/,DESIGN,$/, ',NOPE p.1,')), allowInvented()), kind: 'unknown-source', file: `${W}/people.csv` },
@@ -244,7 +260,7 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'a template on a route that does not exist', files: () => editJson('pack.json', (m: { rules: { reportTemplates: { templateRoute: string }[] } }) => (m.rules.reportTemplates[0]!.templateRoute = 'semaphore')), kind: 'shape/invalid_value', file: 'pack.json' },
   { name: 'a conflict window of no days', files: () => editJson('pack.json', (m: { rules: { standing: { conflictWindowDays: number } } }) => (m.rules.standing.conflictWindowDays = 0)), kind: 'shape/too_small', file: 'pack.json' },
   { name: 'a daily drafting cap of no draft at all', files: () => editJson('pack.json', (m: { rules: { planner: { dailyDraftCap: number } } }) => (m.rules.planner.dailyDraftCap = 0)), kind: 'shape/too_small', file: 'pack.json' },
-  { name: 'a compliance stand-in out of the permille range', files: () => editJson('pack.json', (m: { rules: { plans: { complianceCandour: number } } }) => (m.rules.plans.complianceCandour = 1200)), kind: 'shape/too_big', file: 'pack.json' },
+  { name: 'an assault margin below the open field', files: () => editJson('pack.json', (m: { rules: { people: { traits: { assaultMargin: number } } } }) => (m.rules.people.traits.assaultMargin = 900)), kind: 'shape/too_small', file: 'pack.json' },
   {
     name: 'a scenario folder the manifest does not list',
     files: () => {
@@ -380,6 +396,20 @@ describe('an intelligence chief (0058)', () => {
   it('points a mismatch at its row and column', () => {
     const issue = run(withChief('red_army', 'blue_chief')).issues.find((i) => i.kind === 'faction-mismatch')!;
     expect([issue.file, issue.at]).toEqual([`${S}/posts.csv`, 'row 3 (red_army), column intelligence_chief']);
+  });
+});
+
+describe('temperament, regard and values (lane 1.1)', () => {
+  it('a cited temperament, regard and values generate clean, into the person’s record', () => {
+    const result = run(withTemper({ red_chief: { boldness: 'above:REG A p.4', candour: 'low:REG A', regard: 'below:REG A p.6', values: 'caution:REG A p.5;glory:DESIGN' } }));
+    expect(errorsOf(result.issues).map(formatIssue)).toEqual([]);
+    const world = JSON.parse(result.outputs.get('data/world.json')!) as { people: { id: string; temperament: unknown; regard: unknown; values: unknown }[] };
+    const chief = world.people.find((p) => p.id === 'red_chief')!;
+    expect(chief.temperament).toEqual({ boldness: { direction: 'above', cites: [{ source: 'REG A', at: 'p.4' }] }, candour: { direction: 'low', cites: [{ source: 'REG A', at: null }] } });
+    expect(chief.regard).toEqual({ direction: 'below', cites: [{ source: 'REG A', at: 'p.6' }] });
+    expect(chief.values).toEqual([{ value: 'caution', cites: [{ source: 'REG A', at: 'p.5' }] }, { value: 'glory', cites: [{ source: 'DESIGN', at: null }] }]);
+    // A row with none of them is fine: unknown temperament and no values while research is open (lane 1.9).
+    expect(world.people.find((p) => p.id === 'blue_chief')!.values).toEqual([]);
   });
 });
 

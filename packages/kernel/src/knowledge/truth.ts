@@ -32,10 +32,10 @@ export const BIAS_TERM_KINDS = [
   'relay_hold',
   /** A relaying holder objected to an order, and why. */
   'relay_objection',
+  /** One term of a relaying holder's willingness to an order (its rule names the term: values, temperament, regard...), lane 1.1. */
+  'relay_term',
   /** How far an arrow edit departs from his own best plan, permille (his scorer: lane 1.2). */
   'edit_distance',
-  /** His willingness to comply, and (in `termRule`, `actual:<rung>`) what he actually does: compliance's answer to an edit. */
-  'compliance',
 ] as const;
 export type BiasTermKind = (typeof BIAS_TERM_KINDS)[number];
 

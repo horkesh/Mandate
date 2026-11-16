@@ -7,7 +7,8 @@
  *     become messages in transit (the kernel computes their arrival). Rejections are reported.
  *  1b. Commanders' picks among the planner's candidates (lane 1.2).
  *  2. Deliver messages due today: relays, filters, arrivals, knowledge.
- *  2b. Plans: edits answered, goals drafted within the daily cap (lane 1.2).
+ *  2b. People apply what was proposed to them today: a bypassed relay's grievance (lane 1.1).
+ *  2c. Plans: edits answered, goals drafted within the daily cap (lane 1.2).
  *  3. Movement: approved plans through the stand-in standing-goal path (lane 1.4
  *     retires it), every march a day further (lane 0.5).
  *  3b. The simple control contest and occupation: control deltas, retreats (lane 0.5).
@@ -32,8 +33,9 @@ import { entryProblems, type LogEntry } from '../log/log.ts';
 import { createIdMint, sendMessages } from '../messages/transit.ts';
 import type { State } from '../root-state.ts';
 import type { OptionView } from '../seats/api.ts';
+import { applyPeopleChanges, type PeopleChange } from '../people/people.ts';
 import { morningGround } from '../seats/requests.ts';
-import { heldPost } from '../command/command.ts';
+import { heldPost, sideOfPerson } from '../command/command.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import type { Telemetry } from '../telemetry.ts';
 import { createViewCache, type ViewCache } from '../view/view.ts';
@@ -171,7 +173,10 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   // 2. Deliveries.
   state = freeze(deliverDue(ctx, state));
 
-  // 2b. Plans: edits that arrived are answered, then goals awaiting a plan are drafted within the daily cap (lane 1.2).
+  // 2b. People apply the changes proposed to them so far today (lane 1.1): a bypassed relay holds a grievance.
+  state = freeze(applyPeopleChanges(state, peopleChangesFrom(world, state, ctx.proposals), day, world.rules.people));
+
+  // 2c. Plans: edits that arrived are answered, then goals awaiting a plan are drafted within the daily cap (lane 1.2).
   state = freeze(plansPhase(ctx, state, options.viewCache ?? createViewCache()));
   state = freeze(sendMessages(state, ctx.outbox.splice(0)));
 
@@ -213,6 +218,22 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   mapBarrier(ctx, state, dayMap, options.deepChecks === true);
 
   return { state, day, rejections: ctx.rejections, events: ctx.events, proposals: ctx.proposals, prices: ctx.prices, decisionPoints: ctx.decisionPoints, mapEvents: ctx.mapEvents, map: dayMap };
+}
+
+/**
+ * The people changes in today's proposals: a bypassed relay's grievance, of the pack's weight, against the order's issuer
+ * (0040). Proposals for owners not built yet (`effect`) are left for them.
+ */
+function peopleChangesFrom(world: SeatsWorld, state: State, proposals: readonly Proposal[]): PeopleChange[] {
+  const out: PeopleChange[] = [];
+  for (const p of proposals) {
+    if (p.proposal !== 'grievance') continue;
+    // Only a principal issues orders (review F3), so the man who went around him is his side's principal.
+    const side = sideOfPerson(world.map, state, p.person);
+    const issuer = side !== null && world.factionIds.includes(side) ? world.faction(side).principal : null;
+    out.push({ change: 'grievance', person: p.person, kind: p.cause, weight: world.rules.people.grievances.bypassedWeight, against: issuer, cause: p.order });
+  }
+  return out;
 }
 
 /** The only writer of the day counter. */

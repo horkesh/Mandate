@@ -89,15 +89,21 @@ function freshObjections(reports: readonly ReportView[], day: number): ReportVie
 /** A principal's orders for the day: goals, then his answers to the plans before him. */
 export function principalOrders(menu: PrincipalMenu, reports: readonly ReportView[], day: number, policy: RuleSeatPolicy = DEFAULT_RULE_SEAT_POLICY): SeatCommand[] {
   // Plans submitted to him, approved as drafted; operations awaiting his word, released (by wire, the quickest free route).
+  // An office that withheld his answer (its objection reached him yesterday) is gone around with the same answer, by the
+  // fastest messenger, at its price; never with a fresh goal, which would start the plan over (lane 1.2).
+  const withheld = new Set(policy.goAroundObjections ? freshObjections(reports, day).map((m) => m.subjectId) : []);
   const answers: SeatCommand[] = [];
   for (const r of menu.reviews) {
-    const route = quickest(menu.commandable.find((c) => c.post === r.post)?.routes ?? [])?.route ?? 'courier';
-    answers.push({ cmd: 'review', to: r.post, action: 'approve', edit: null, route, bypass: false });
+    const around = withheld.has(r.post);
+    const route = around ? 'special-messenger' : (quickest(menu.commandable.find((c) => c.post === r.post)?.routes ?? [])?.route ?? 'courier');
+    answers.push({ cmd: 'review', to: r.post, action: 'approve', edit: null, route, bypass: around });
   }
   for (const post of menu.awaiting) {
-    const route = quickest(menu.commandable.find((c) => c.post === post)?.routes ?? [])?.route ?? 'courier';
-    answers.push({ cmd: 'go', to: post, route, bypass: false });
+    const around = withheld.has(post);
+    const route = around ? 'special-messenger' : (quickest(menu.commandable.find((c) => c.post === post)?.routes ?? [])?.route ?? 'courier');
+    answers.push({ cmd: 'go', to: post, route, bypass: around });
   }
+  const answered = new Set<string>([...menu.reviews.map((r) => r.post), ...menu.awaiting]);
   // 0064: the generic principal keeps the peace, giving no goal, until his side is at war, and
   // opens his campaign the first morning after it begins (or on the policy's opening day, if that is later).
   if (menu.objective === null || menu.atWarSince === null) return answers;
@@ -114,7 +120,7 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   if (policy.goAroundObjections) {
     for (const memo of freshObjections(reports, day)) {
       const target = menu.commandable.find((c) => c.post === memo.subjectId);
-      if (target === undefined || target.relays.length === 0) continue;
+      if (target === undefined || target.relays.length === 0 || answered.has(target.post)) continue;
       const objected = memo.claims.find((c) => c.kind === 'order-objected');
       const region = objected?.region ?? menu.objective;
       // Around the man who objected, by the fastest messenger, at its price.

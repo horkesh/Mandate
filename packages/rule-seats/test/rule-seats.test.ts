@@ -101,6 +101,15 @@ describe('a principal', () => {
     ]);
   });
 
+  it('goes around an office that withheld his answer to a plan with the same answer, never a fresh goal (lane 1.2)', () => {
+    const review = { post: post('far'), holder: ids.toId('person', 'x'), report: 'm.3.plan', plan: option('direct:x', 400) };
+    const withheld = { ...menu, reviews: [review], awaiting: [post('near')] };
+    expect(principalOrders(withheld, [memo(4, 'far'), memo(4, 'near')], 5)).toEqual([
+      { cmd: 'review', to: post('far'), action: 'approve', edit: null, route: 'special-messenger', bypass: true },
+      { cmd: 'go', to: post('near'), route: 'special-messenger', bypass: true },
+    ]);
+  });
+
   it('keeps the peace until his side is at war: no goal at peace, the opening goal the day it is war (0064)', () => {
     expect(principalOrders({ ...menu, atWarSince: null }, [], 1)).toEqual([]);
     expect(principalOrders({ ...menu, atWarSince: null }, [memo(0, 'far')], 1)).toEqual([]);

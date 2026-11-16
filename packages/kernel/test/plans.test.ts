@@ -103,8 +103,8 @@ describe('a goal is drafted on request, and the commander picks (lane 1.2)', () 
     const base = strong();
     const world: SeatsWorld = { ...base, map: indexWorld({ ...base.map.world, rules: { ...base.map.world.rules, planner: { ...base.map.world.rules.planner, dailyDraftCap: 1 } } }) };
     let state = createState(world, { seed: 7 });
-    state = setGoal(state, POST('a_army'), { id: 'm.0.army' as never, issuer: P('a_lead'), goal: goalOf(goalTerms('take', 'b_front')), viaChain: true }, 0);
-    state = setGoal(state, RESERVE, { id: 'm.0.reserve' as never, issuer: P('a_lead'), goal: goalOf(goalTerms('take', 'b_mid')), viaChain: true }, 0);
+    state = setGoal(state, POST('a_army'), { id: 'm.0.army' as never, issuer: P('a_lead'), goal: goalOf(goalTerms('take', 'b_front')), viaChain: true, issuedDay: 0, response: 'm.0.army|a_gen' }, 0);
+    state = setGoal(state, RESERVE, { id: 'm.0.reserve' as never, issuer: P('a_lead'), goal: goalOf(goalTerms('take', 'b_mid')), viaChain: true, issuedDay: 0, response: 'm.0.reserve|a_bold' }, 0);
     const { results, telemetry } = play(world, 2, () => [], state);
     // Day 1: one draft (by post id, both goals being as old), the other waits; day 2: the other.
     expect(results[0]!.state.planRecords[POST('a_army')]!.planStatus).toBe('choosing');
@@ -126,12 +126,15 @@ describe('arrow edits as counter-orders (0026), answered through compliance', ()
     const counter = state.planRecords[RESERVE]!.planCounters[0]!;
     expect(counter).toMatchObject({ counterSpec: { editKind: 'timing', editAxis: 'main', editConcentration: 0 }, counterInvalid: null });
     expect(counter.counterDistance).toBeGreaterThanOrEqual(0);
-    const answer = results.flatMap((r) => knowledgeOf(r.state, lead).knownReports).find((k) => k.id === counter.counterAnswer)!;
+    // His response is `proxy`'s; the plan keeps its key. His answer reaches the principal as a report on the order.
+    expect(counter.counterResponse).toBe(`${counter.counterOrder}|a_bold`);
+    expect(state.orderResponses[counter.counterResponse!]).toMatchObject({ respOrder: counter.counterOrder, respPerson: 'a_bold', respRole: 'addressee' });
+    const answer = results.flatMap((r) => knowledgeOf(r.state, lead).knownReports).find((k) => k.knownBody.reportAnswers === counter.counterOrder && k.knownBody.reportClaims[0]?.claimKind === 'plan-answer')!;
     expect(answer.knownBody.reportClaims[0]!.claimKind).toBe('plan-answer');
     // What he declares is a rung; why (his willingness, the rung he takes) is truth, never shown to the principal.
     expect(['exceed', 'comply', 'comply_with_reservations', 'slow_walk', 'reinterpret', 'object', 'refuse']).toContain(answer.knownBody.reportClaims[0]!.claimToken);
     // (The filter post the wire passes adds its own hold to the truth after his.)
-    expect(state.reportTruth[answer.id]!.truthTerms.map((t) => t.termKind).slice(0, 2)).toEqual(['edit_distance', 'compliance']);
+    expect(state.reportTruth[answer.id]!.truthTerms[0]!.termKind).toBe('edit_distance');
     expect([fired(telemetry, 'plans.edit_received'), fired(telemetry, 'plans.edit_answered')]).toEqual([1, 1]);
   });
 

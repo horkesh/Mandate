@@ -2,6 +2,7 @@
  * A tiny, valid v2 pack held in memory, with setting-free names (decision
  * 0003). Tests break one thing at a time and assert which check fires.
  */
+import { DEFAULT_COMPLIANCE_RULES } from '@mandate/kernel';
 import type { PackFiles } from '../../src/index.ts';
 
 const tpl = (templateType: string, templateSubtype: string | null, templateRoute: string, cadenceDays: number, maxAgeDays: number, keepSupersededDays: number) => ({
@@ -35,8 +36,32 @@ export const MESSAGE_RULES = {
     tpl('advice', 'memorandum', 'courier', 0, 60, 30),
   ],
   standing: { conflictWindowDays: 7 },
-  planner: {"hopShare":250,"menPerDay":1000,"flankOverlapMax":600,"flankLengthMax":1600,"flankPenalty":2000,"retrogradeSlack":0,"dedupeOverlap":800,"dedupeArrival":1500,"topN":4,"maxSearches":64,"reducePerLevel":10,"clearDays":4000,"forceDays":1000,"forcingThreat":4000,"assaultDays":1000,"assaultMargin":1500,"pincerWindow":2000,"shortfallTimid":10,"shortfallBold":50,"dependenceCost":120,"partnerRegardWeight":300,"partnerValueWeight":100,"partnerHonours":[],"partnerOffends":[],"dailyDraftCap":3,"weights":{"riskBase":200,"supplyBase":1100,"concentrationPerTimid":250,"pausePerTimid":400,"twoAxesAt":500,"threeAxesAt":800,"goalFit":400,"ratioBonusMax":300,"ratioBonusDivisor":10,"ratioPenaltyMax":600,"latePenaltyMax":600,"latePerDay":40,"earlyBonusMax":300,"earlyDivisor":25000,"holdingTime":-300,"traitBase":1100,"hasteDivisor":10000,"supplyDivisor":10000,"outrunDivisor":4,"exposureDivisor":20,"coordinationDivisor":10000,"perExtraAxis":50,"gloryDivisor":5,"cautionDivisor":2}},
-  plans: {"goalDefaults":{"risk":500,"deadlineDays":20,"rail":true,"river":false,"sea":false,"neutral":false,"awaitWord":false,"approveAsDrafted":true},"holdingRisk":-400,"complianceCandour":800,"complianceStanding":500,"complianceAvailable":500,"complianceOversight":500,"complianceCredibility":500},
+  planner: {"hopShare":250,"menPerDay":1000,"flankOverlapMax":600,"flankLengthMax":1600,"flankPenalty":2000,"retrogradeSlack":0,"dedupeOverlap":800,"dedupeArrival":1500,"topN":4,"maxSearches":64,"reducePerLevel":10,"clearDays":4000,"forceDays":1000,"forcingThreat":4000,"assaultDays":1000,"pincerWindow":2000,"dependenceCost":120,"partnerWillingnessWeight":300,"dailyDraftCap":3,"weights":{"riskBase":200,"supplyBase":1100,"concentrationPerTimid":250,"pausePerTimid":400,"twoAxesAt":500,"threeAxesAt":800,"goalFit":400,"ratioBonusMax":300,"ratioBonusDivisor":10,"ratioPenaltyMax":600,"latePenaltyMax":600,"latePerDay":40,"earlyBonusMax":300,"earlyDivisor":25000,"holdingTime":-300,"traitBase":1100,"hasteDivisor":10000,"supplyDivisor":10000,"outrunDivisor":4,"exposureDivisor":20,"coordinationDivisor":10000,"perExtraAxis":50,"gloryDivisor":5,"cautionDivisor":2}},
+  plans: {"goalDefaults":{"risk":500,"deadlineDays":20,"rail":true,"river":false,"sea":false,"neutral":false,"awaitWord":false,"approveAsDrafted":true},"holdingRisk":-400},
+  // Lane 1.1: the people core's rules, at the packs' values.
+  people: {
+    shadow: {
+      centrePermille: { high: 800, above: 650, average: 500, below: 350, low: 200 },
+      unknownCentre: 500,
+      spread: 100,
+      unknownSpread: 200,
+      regardPermille: { high: 600, above: 300, average: 0, below: -300, low: -600 },
+      regardUnknown: 0,
+    },
+    compliance: { ...DEFAULT_COMPLIANCE_RULES },
+    goalTerms: [
+      { goal: 'hold', boldness: 400, honours: ['caution'], offends: [] },
+      { goal: 'advance', boldness: 600, honours: ['glory'], offends: ['caution'] },
+    ],
+    context: { oversight: 500, leaderCredibility: 500 },
+    relay: { reservationsHoldDays: 0, slowWalkHoldDays: 2, reinterpretHoldDays: 4 },
+    filter: { holdFor: [{ value: 'order', days: 1 }], trimFor: [{ value: 'reputation', claimKinds: ['own-losses'] }], candidAt: 500 },
+    traits: {
+      perceptionPivot: 500, perceptionPerPoint: 3, perceptionValues: [{ value: 'caution', permille: 500 }], perceptionMax: 4000,
+      demandBase: 1000, demandPerPoint: 2, assaultMargin: 1500, holdBand: 1500, wantsMenPermille: 800, paperPermille: 1400,
+    },
+    grievances: { bypassedWeight: 150 },
+  },
 };
 
 const manifest = {
@@ -80,9 +105,11 @@ const manifest = {
     personKinds: [{ id: 'officer', name: 'person_kind.officer' }],
     traits: [{ id: 'bold', name: 'trait.bold', gate: false }],
     ranks: [
-      { id: 'junior', name: 'rank.junior', seniority: 1 },
-      { id: 'senior', name: 'rank.senior', seniority: 2 },
+      { id: 'junior', name: 'rank.junior', seniority: 1, kind: 'regular' },
+      { id: 'senior', name: 'rank.senior', seniority: 2, kind: 'regular' },
     ],
+    rankKinds: [{ id: 'regular', name: 'rank_kind.regular' }],
+    values: ['caution', 'glory', 'order', 'reputation'].map((v) => ({ id: v, name: `value.${v}` })),
     blocs: [{ id: 'greens', name: 'bloc.greens' }],
     standingOrderKinds: [{ id: 'hold', name: 'order_kind.hold' }],
   },
@@ -104,6 +131,11 @@ const provenance = {
 
 const strings: Record<string, string> = {
   'pack.name': 'Fixture',
+  'rank_kind.regular': 'regular',
+  'value.caution': 'caution',
+  'value.glory': 'glory',
+  'value.order': 'order',
+  'value.reputation': 'reputation',
   'terrain.plain': 'plain',
   'terrain.coastal': 'coast',
   'terrain.river': 'river',

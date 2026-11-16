@@ -40,6 +40,13 @@ export interface PlannerInput {
   readonly profile: Profile;
   readonly goal: PlanGoal;
   readonly rules: PlannerRules;
+  /** His demand for an assault on held ground, permille of his demand in the open (`people.traits.assaultMargin`, lane 0.9 finding 1). */
+  readonly assaultMargin: number;
+  /**
+   * The shortfall share, permille of the men he needs, past which he waits for men: compliance's own rule
+   * (`people.compliance.reinforceShareTimid/Bold`, lane 1.1; lane 0.9 finding 8), so his plan and his answer agree.
+   */
+  readonly reinforceShare: { readonly timid: number; readonly bold: number };
   /** The day of the request (stamped on the draft set). */
   readonly day: number;
 }
@@ -93,12 +100,9 @@ export function answeringPost(input: PlannerInput, post: PostId): { readonly pos
 }
 
 /**
- * How willing a post's holder is to answer a support request (lane 0.9 finding 7): his regard, and the values a
- * cooperating axis honours or offends in him (pack rules). Permille-ish points, signed; 0 for a man with neither.
+ * How willing a post's holder is to answer a support request (lane 0.9 finding 7): his compliance's willingness to an
+ * advance from his principal, read through the people rules (`PlannerPost.holderWillingness`), weighted by the pack.
  */
 export function willingness(input: PlannerInput, post: PlannerPost): number {
-  const r = input.rules;
-  const honoured = post.holderValues.filter((v) => r.partnerHonours.includes(v)).length;
-  const offended = post.holderValues.filter((v) => r.partnerOffends.includes(v)).length;
-  return Math.trunc((post.holderRegard * r.partnerRegardWeight) / 1000) + (honoured - offended) * r.partnerValueWeight;
+  return Math.trunc((post.holderWillingness * input.rules.partnerWillingnessWeight) / 1000);
 }

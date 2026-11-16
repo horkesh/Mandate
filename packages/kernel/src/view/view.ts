@@ -17,7 +17,7 @@ import { knowledgeOf, type KnownReport, type SeatKnowledge } from '../knowledge/
 import type { PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import { seatOf } from '../seats/seats.ts';
-import { perceptionBias } from '../standin/traits.ts';
+import { perceptionBias, traitsOf } from '../people/traits.ts';
 import { heldPost, sideOfPerson } from '../command/command.ts';
 import { whereIsPerson } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
@@ -117,7 +117,7 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
   }
 
   let beliefs = cache.beliefs.get(seat);
-  const bias = perceptionBias(world.rules.traits, person).permille;
+  const bias = perceptionBias(world.rules.traits, traitsOf(world, state, person.id)).permille;
   if (beliefs === undefined || beliefs.knowledge !== knowledge || beliefs.perception !== bias) {
     const out: Record<RegionId, BeliefView> = {};
     for (const [region, { report, value }] of latestEnemyClaims(knowledge)) {

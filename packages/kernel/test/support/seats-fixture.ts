@@ -13,15 +13,16 @@
  * he objects to advances he relays); a filter post (a_clerk, who values order
  * and reputation, so he holds wires and cuts losses); a field army at a_front
  * (a_gen, timid, with a biased intelligence chief a_spy) and a second at a_mid
- * (a_bold, bold, no chief). Side b mirrors it more plainly. v2 people carry no
- * trait inputs (0058), so the fixture hands them explicitly.
+ * (a_bold, bold, no chief). Side b mirrors it more plainly. Each person's
+ * temperament, values and regard are World data (lane 1.1), drawn exactly by the
+ * fixtures' history's shadow (no spread), so a test reads them from people State.
  */
 import { toId, type FactionId, type PersonId, type PostId, type RegionId } from '../../src/ids.ts';
-import { indexSeatsWorld, type SeatsWorld, type TraitInputs } from '../../src/seats/world.ts';
+import { indexSeatsWorld, type SeatsWorld } from '../../src/seats/world.ts';
 import type { SituationDef } from '../../src/situations/types.ts';
 import { indexWorld, type WorldIndex } from '../../src/world/index.ts';
 import type { ScenarioStart } from '../../src/world/scenario.ts';
-import { block, forcesWorld, person, post } from './forces-fixture.ts';
+import { block, forcesWorld, person, post, type PersonTemper } from './forces-fixture.ts';
 import { depot, edge, region, startWith } from './map-fixture.ts';
 
 export const R = (id: string): RegionId => toId('region', id);
@@ -29,33 +30,38 @@ export const P = (id: string): PersonId => toId('person', id);
 export const POST = (id: string): PostId => toId('post', id);
 export const F = (id: string): FactionId => toId('faction', id);
 
-export const FIXTURE_TRAITS: Readonly<Record<string, TraitInputs>> = {
-  a_lead: { boldness: 600, regard: 1000, values: ['duty'] },
-  a_sec: { boldness: 200, regard: 300, values: ['caution'] },
-  a_clerk: { boldness: 400, regard: 300, values: ['order', 'reputation'] },
-  a_gen: { boldness: 200, regard: 300, values: ['caution'] },
-  a_spy: { boldness: 500, regard: 300, values: ['duty'], intelligenceBias: 2000 },
-  a_bold: { boldness: 800, regard: 300, values: ['glory'] },
-  b_lead: { boldness: 600, regard: 1000, values: ['duty'] },
-  b_min: { boldness: 500, regard: 300, values: ['duty'] },
-  b_gen: { boldness: 600, regard: 300, values: ['duty'] },
+/**
+ * Each fixture person's temperament, values and regard for his principal, as directions (the fixtures' shadow maps
+ * high 800, above 600, average 500, below 400, low 200; regard high 1000, above 300). a_sec is timid, cautious and
+ * candid, so he objects to an advance he relays; a_clerk values order and reputation and is not candid, so he holds
+ * wires and cuts losses; a_spy is timid and cautious, so his estimates overstate the enemy.
+ */
+export const FIXTURE_TEMPER: Readonly<Record<string, PersonTemper>> = {
+  a_lead: { boldness: 'above', candour: 'average', regard: 'high', values: ['duty'] },
+  a_sec: { boldness: 'low', candour: 'high', regard: 'above', values: ['caution'] },
+  a_clerk: { boldness: 'below', candour: 'low', regard: 'above', values: ['order', 'reputation'] },
+  a_gen: { boldness: 'low', candour: 'average', regard: 'above', values: ['caution'] },
+  a_spy: { boldness: 'low', candour: 'average', regard: 'above', values: ['caution'] },
+  a_bold: { boldness: 'high', candour: 'average', regard: 'above', values: ['glory'] },
+  b_lead: { boldness: 'above', candour: 'average', regard: 'high', values: ['duty'] },
+  b_min: { boldness: 'average', candour: 'average', regard: 'above', values: ['duty'] },
+  b_gen: { boldness: 'above', candour: 'average', regard: 'above', values: ['duty'] },
 };
-
-/** Overrides: people's trait inputs, and a field post's strength (its one block's men). */
+/** Overrides: people's temperament, values and regard, and a field post's strength (its one block's men). */
 export interface FixtureOver {
-  readonly persons?: Readonly<Record<string, TraitInputs>>;
+  readonly persons?: Readonly<Record<string, PersonTemper>>;
   readonly posts?: Readonly<Record<string, { readonly strength?: number }>>;
 }
 
 const STRENGTHS: Readonly<Record<string, number>> = { a_army: 1000, a_reserve: 600, b_army: 800 };
 
 /** The fixture's v2 map. */
-export function fixtureMap(): WorldIndex {
+export function fixtureMap(over: FixtureOver = {}): WorldIndex {
   const world = forcesWorld({
     regions: ['a_cap', 'a_mid', 'a_front', 'b_front', 'b_mid', 'b_cap'].map((r) => region(r)),
     edges: [edge('a_cap', 'a_mid', { days: 3 }), edge('a_mid', 'a_front', { days: 6 }), edge('a_front', 'b_front', { days: 3 }), edge('b_front', 'b_mid', { days: 3 }), edge('b_mid', 'b_cap', { days: 3 })],
     depots: [depot('a_src', 'a_cap'), depot('b_src', 'b_cap')],
-    people: ['a_lead', 'a_sec', 'a_clerk', 'a_gen', 'a_spy', 'a_bold', 'b_lead', 'b_min', 'b_gen'].map((p) => person(p, p.slice(0, 1))),
+    people: Object.keys(FIXTURE_TEMPER).map((p) => person(p, p.slice(0, 1), { ...FIXTURE_TEMPER[p], ...(over.persons?.[p] ?? {}) })),
   });
   return indexWorld({
     ...world,
@@ -94,7 +100,5 @@ export function fixtureStart(over: FixtureOver = {}): ScenarioStart {
 
 /** The fixture as the seats layer's World, with overrides and situations. */
 export function indexedFixture(over: FixtureOver = {}, situations: readonly SituationDef[] = []): SeatsWorld {
-  const traits: Record<string, TraitInputs> = {};
-  for (const id of Object.keys(FIXTURE_TRAITS)) traits[id] = { ...FIXTURE_TRAITS[id], ...(over.persons?.[id] ?? {}) };
-  return indexSeatsWorld(fixtureMap(), fixtureStart(over), { traits, situations });
+  return indexSeatsWorld(fixtureMap(over), fixtureStart(over), { situations });
 }

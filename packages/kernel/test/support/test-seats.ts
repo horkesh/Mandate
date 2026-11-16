@@ -8,7 +8,8 @@ import type { SeatTable } from '../../src/log/session.ts';
 
 /**
  * Picks the highest-scored option; a principal sends the orders scripted for each day (by faction), and approves
- * every plan submitted to him as drafted and gives the word to every operation that awaits it (lane 1.2), by wire.
+ * every plan submitted to him as drafted and gives the word to every operation that awaits it (lane 1.2), by wire and
+ * straight to the commander (around the offices, whose relay compliance could otherwise hold or object to them).
  */
 export function scriptedSeats(script: Readonly<Record<string, Readonly<Record<number, readonly SeatCommand[]>>>> = {}): SeatTable {
   const seat: Seat = {
@@ -16,8 +17,8 @@ export function scriptedSeats(script: Readonly<Record<string, Readonly<Record<nu
     respond(request) {
       if (request.menu.menuKind === 'principal') {
         const answers: SeatCommand[] = [
-          ...request.menu.reviews.map((r): SeatCommand => ({ cmd: 'review', to: r.post, action: 'approve', edit: null, route: 'wire', bypass: false })),
-          ...request.menu.awaiting.map((p): SeatCommand => ({ cmd: 'go', to: p, route: 'wire', bypass: false })),
+          ...request.menu.reviews.map((r): SeatCommand => ({ cmd: 'review', to: r.post, action: 'approve', edit: null, route: 'wire', bypass: true })),
+          ...request.menu.awaiting.map((p): SeatCommand => ({ cmd: 'go', to: p, route: 'wire', bypass: true })),
         ];
         return { answerKind: 'commands', commands: [...answers, ...(script[request.menu.faction]?.[request.requestDay] ?? [])] };
       }

@@ -151,7 +151,7 @@ describe('the kernel checks the planner and plans rules of any World it is hande
     expect(() => indexSeatsWorld(withPlanner({ dailyDraftCap: 0 }), forcesStart(CONTROL, [], []))).toThrow('planner rule dailyDraftCap must be a whole number, at least 1');
     const map = mapWith();
     expect(() => indexSeatsWorld(withPlanner({ weights: { ...map.world.rules.planner.weights, exposureDivisor: 0 } }), forcesStart(CONTROL, [], []))).toThrow('planner rule weights.exposureDivisor must be a whole number, at least 1');
-    expect(() => indexSeatsWorld(withPlanner({}, { complianceCandour: 1001 }), forcesStart(CONTROL, [], []))).toThrow('plans rule complianceCandour must be a permille');
+    expect(() => indexSeatsWorld(withPlanner({}, { holdingRisk: 0.5 }), forcesStart(CONTROL, [], []))).toThrow('plans rule holdingRisk must be a whole number');
     expect(() => indexSeatsWorld(withPlanner({}), forcesStart(CONTROL, [], []))).not.toThrow();
   });
 });

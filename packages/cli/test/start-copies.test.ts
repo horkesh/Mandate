@@ -16,16 +16,20 @@ describe('the start\'s fortification and ranks arrive in State (0050, 0072)', ()
     expect(Object.keys(state.regionFortification)).toEqual(['island_fort', 'mere_crossing', 'n_capital', 'salient_base']);
   });
 
-  it('every person with a rank by the start date carries it, with its date; nobody else does', () => {
+  it('every person with a rank by the start date carries it, one of each kind, with its date; nobody else does', () => {
     for (const pack of ['testbed', 'union-1861']) {
       const { world, setup } = seatsWorld(pack);
       const state = phase0.createState(world, setup);
       const expected = world.map.world.people.flatMap((p) => {
-        const held = phase0.rankOn(p.ranks, world.start.startDate);
-        return held === null ? [] : [[p.id, held] as const];
+        const held = phase0.ranksOn(world.map, p.ranks, world.start.startDate);
+        return Object.keys(held).length === 0 ? [] : [[p.id, held] as const];
       });
       expect(Object.entries(state.personRanks), pack).toEqual([...expected].sort(([a], [b]) => (a < b ? -1 : 1)));
       expect(Object.keys(state.personRanks).length, pack).toBeGreaterThan(0);
     }
+    // 0073: on the Union pack some men hold ranks of two kinds at once (a regular rank beside a volunteer or brevet one).
+    const { world, setup } = seatsWorld('union-1861');
+    const ranks = phase0.createState(world, setup).personRanks;
+    expect(Object.values(ranks).some((r) => Object.keys(r).length > 1)).toBe(true);
   });
 });

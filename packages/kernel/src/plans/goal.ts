@@ -44,6 +44,14 @@ export interface PlanGoal {
 export const PLAN_STATUSES = ['approved', 'choosing', 'drafting', 'ready', 'review'] as const;
 export type PlanStatus = (typeof PLAN_STATUSES)[number];
 
+/**
+ * The goal kind whose directive terms the pack states (`WorldRules.people.goalTerms`, lane 1.1): a goal to take or
+ * relieve an objective is an advance, a goal to hold is a hold.
+ */
+export function goalKindOf(goal: PlanGoal): GoalKind {
+  return goal.goalPosture === 'hold' ? 'hold' : 'advance';
+}
+
 /** Two goals ask the same thing. */
 export function sameGoal(a: PlanGoal, b: PlanGoal): boolean {
   return (

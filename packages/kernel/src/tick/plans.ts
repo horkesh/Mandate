@@ -12,18 +12,19 @@
  * path what to do.
  */
 import { strictCompare } from '../compare.ts';
-import { resolveDirective } from '../compliance.ts';
 import { deriveMap, type DerivedMap } from '../control-index/derived.ts';
-import type { ComplianceRung } from '../directive.ts';
+import type { ComplianceRung, Reason } from '../directive.ts';
 import type { MessageId, PostId } from '../ids.ts';
 import type { ReportClaim, StatedReason } from '../knowledge/report.ts';
 import { term } from '../knowledge/truth.ts';
-import type { ProxyProfile } from '../people.ts';
 import { liveTerms, draft } from '../planner/draft.ts';
 import { applyEdit, concretePlan, editDirective } from '../planner/edits.ts';
 import { plannerInputFor } from '../planner/input.ts';
 import type { PlanCandidate, TermKind } from '../planner/types.ts';
 import { execute } from '../plans/execute.ts';
+import { goalKindOf } from '../plans/goal.ts';
+import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
+import { answerOrder, goalTerms } from '../reading/orders.ts';
 import { candidateOf, choose, postsInStatus, saveDraft, settleCounter, submitted, type PlanCounter, type PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import type { OptionView } from '../seats/api.ts';
@@ -148,14 +149,18 @@ export function applyPlanChoices(ctx: TickContext, start: State, menus: Readonly
   return state;
 }
 
-/** STAND-IN (lane 1.1 gives each man his candour and standing): the compliance profile of a commander answering an edit. */
-function proxyProfileOf(world: SeatsWorld, person: ReturnType<SeatsWorld['person']>): ProxyProfile {
-  const r = world.map.world.rules.plans;
-  return { id: person.id, values: [...person.values] as ProxyProfile['values'], boldness: person.boldness, candour: r.complianceCandour, standing: r.complianceStanding, regard: person.regard };
-}
 
 const SHIRKS: readonly ComplianceRung[] = ['slow_walk', 'reinterpret'];
 const OBJECTS: readonly ComplianceRung[] = ['object', 'refuse'];
+
+/** A stated reason's weight, permille, for the answer he sends: its gap, departure, shortfall or grievance weight; else full. */
+function statedWeight(r: Reason): number {
+  if ('gap' in r) return r.gap;
+  if ('departure' in r) return r.departure;
+  if ('shortfall' in r) return r.shortfall;
+  if ('weight' in r) return Math.min(1000, r.weight);
+  return 1000;
+}
 
 /** The day's edits and drafts, on the morning's map (one derivation, only when there is plan work today). */
 export function plansPhase(ctx: TickContext, start: State, cache: ViewCache): State {
@@ -196,8 +201,9 @@ export function plansPhase(ctx: TickContext, start: State, cache: ViewCache): St
 
 /**
  * Answer one edit (0026; lane 0.9 finding 2): re-expand it on the morning's map, score it with his scorer, map it to
- * directive terms with boldness relative to his own best plan, and let compliance answer (`resolveDirective`). He
- * executes the concrete plan for the rung he actually takes; he declares the rung his candour lets him declare.
+ * directive terms read against his own best plan (`ownBest`, `departure`), and let his compliance answer (lane 1.1's
+ * `answerOrder`); `proxy` records his response and `plans` keeps its key. He executes the concrete plan for the rung he
+ * actually takes; he tells the issuer the rung his candour lets him declare.
  */
 function answerEdit(ctx: TickContext, start: State, post: PostId, derived: DerivedMap, network: ReturnType<typeof passageOf>, month: number, cache: ViewCache): State {
   const { world, day } = ctx;
@@ -206,42 +212,33 @@ function answerEdit(ctx: TickContext, start: State, post: PostId, derived: Deriv
   const holder = start.postStates[post]?.postHolder ?? null;
   const chosen = record.planApproved ?? (record.planChosen === null ? undefined : candidateOf(record, record.planChosen));
   const objective = record.planGoal.goalObjective;
-  if (holder === null || chosen === undefined || record.planDraft === null) {
-    const counter: PlanCounter = { counterSpec: pending.pendingSpec, counterOrder: pending.pendingOrder, counterDay: day, counterDistance: 0, counterFell: [], counterInvalid: 'no plan to edit', counterAnswer: null };
+  const invalid = (reason: string, state: State): State => {
+    const counter: PlanCounter = { counterSpec: pending.pendingSpec, counterOrder: pending.pendingOrder, counterDay: day, counterDistance: 0, counterFell: [], counterInvalid: reason, counterResponse: null };
     fire(ctx, 'plans.edit_invalid');
-    return settleCounter(start, post, counter, null);
-  }
+    return settleCounter(state, post, counter, null);
+  };
+  if (holder === null || chosen === undefined || record.planDraft === null) return invalid('no plan to edit', start);
   const view = viewFor(world, start, seatIdFor(holder), cache);
   const input = plannerInputFor(world, start, derived, network, month, view, post, record.planGoal, day);
   const result = applyEdit(input, record.planDraft, chosen, pending.pendingSpec);
   if (!result.ok) {
-    const answer = toIssuer(ctx, start, post, record, [{ claimKind: 'plan-answer', claimRegion: objective, claimValue: 0, claimToken: 'invalid', claimConfidence: 1000 }], { answers: pending.pendingOrder, tag: `answer.${post}` });
-    const counter: PlanCounter = { counterSpec: pending.pendingSpec, counterOrder: pending.pendingOrder, counterDay: day, counterDistance: 0, counterFell: [], counterInvalid: result.reason, counterAnswer: answer };
-    fire(ctx, 'plans.edit_invalid');
-    return settleCounter(start, post, counter, null);
+    toIssuer(ctx, start, post, record, [{ claimKind: 'plan-answer', claimRegion: objective, claimValue: 0, claimToken: 'invalid', claimConfidence: 1000 }], { answers: pending.pendingOrder, tag: `answer.${post}` });
+    return invalid(result.reason, start);
   }
-  const rules = world.map.world.rules.plans;
-  const person = world.person(holder);
-  const directive = editDirective(input, record.planDraft, result.edited, result.distance, rules.holdingRisk);
-  const response = resolveDirective(proxyProfileOf(world, person), directive.terms, {
-    available: rules.complianceAvailable,
-    oversight: rules.complianceOversight,
-    leaderCredibility: rules.complianceCredibility,
-    grievances: directive.grievance === null ? [] : [directive.grievance],
-  });
+  const terms = editDirective(input, record.planDraft, result.edited, result.distance, world.map.world.rules.plans.holdingRisk, goalTerms(world.rules.people, goalKindOf(record.planGoal)));
+  const response = answerOrder(world, start, holder, record.planIssuer, terms);
+  const state = recordResponse(start, responseOf(response, { order: pending.pendingOrder, person: holder, post, role: 'addressee', day }));
   const executes = concretePlan(input, record.planDraft, chosen, result.edited, response.actual);
   for (const f of result.fell) fire(ctx, `planner.term.${f.term}`);
   fire(ctx, 'plans.edit_answered');
   if (SHIRKS.includes(response.actual)) fire(ctx, 'plans.edit_shirked');
   const objects = OBJECTS.includes(response.actual);
   if (objects) fire(ctx, 'plans.edit_objected');
-  // What he says is his declared rung and his stated reasons; why he does it (willingness, the actual rung, the edit's distance) is truth.
-  const stated: StatedReason[] = response.statedReasons.map((r) => ({ reasonKind: r.kind, reasonWeight: 'gap' in r ? r.gap : 'weight' in r ? r.weight : 'shortfall' in r ? r.shortfall : 1000 }));
-  const truth = [term('edit_distance', result.distance + 0, { person: holder, post }), term('compliance', response.willingness + 0, { person: holder, post, rule: `actual:${response.actual}` })];
-  const declaredObjects = OBJECTS.includes(response.declared);
-  const answer = toIssuer(ctx, start, post, record, [{ claimKind: 'plan-answer', claimRegion: objective, claimValue: 1, claimToken: response.declared, claimConfidence: 1000 }], {
-    ...(declaredObjects ? { objection: stated } : {}),
-    truth,
+  // What he says is his declared rung and his stated reasons; why he does it is his response (`proxy`) and the edit's distance (truth).
+  const stated: StatedReason[] = response.statedReasons.map((r) => ({ reasonKind: r.kind, reasonWeight: statedWeight(r) }));
+  toIssuer(ctx, state, post, record, [{ claimKind: 'plan-answer', claimRegion: objective, claimValue: 1, claimToken: response.declared, claimConfidence: 1000 }], {
+    ...(OBJECTS.includes(response.declared) ? { objection: stated } : {}),
+    truth: [term('edit_distance', result.distance + 0, { person: holder, post })],
     answers: pending.pendingOrder,
     tag: `answer.${post}`,
   });
@@ -252,7 +249,7 @@ function answerEdit(ctx: TickContext, start: State, post: PostId, derived: Deriv
     counterDistance: result.distance,
     counterFell: result.fell.map((f) => ({ dropTerm: f.term, dropAmount: f.drop })),
     counterInvalid: null,
-    counterAnswer: answer,
+    counterResponse: responseKey(pending.pendingOrder, holder),
   };
-  return execute(settleCounter(start, post, counter, objects ? null : executes), post, day);
+  return execute(settleCounter(state, post, counter, objects ? null : executes), post, day);
 }

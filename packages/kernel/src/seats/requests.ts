@@ -16,6 +16,7 @@ import type { MarchGround } from '../movement/march.ts';
 import { candidateOf, postsInStatus } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import type { SituationDef } from '../situations/types.ts';
+import { valuesOf } from '../people/traits.ts';
 import { deepFreeze } from '../tick/freeze.ts';
 import { passageOf } from '../tick/passage.ts';
 import { choosingPosts, optionView, planKey, planOptions } from '../tick/plans.ts';
@@ -77,9 +78,17 @@ export function reviewsFor(state: State, principal: PersonId): PlanReview[] {
   return out;
 }
 
-/** Whether an order of these kinds from `principal` to `post` is still on its way (his own orders, which he knows he sent). */
+/**
+ * Whether his answer to `post` is still in play: an order of these kinds from `principal` to `post` on its way (his own
+ * orders, which he knows he sent), or an office's objection to an order of his about `post` on its way back to him
+ * (0040: he learns it was withheld only when the memorandum reaches him; until then he believes it went on).
+ */
 function answerInTransit(state: State, principal: PersonId, post: PostId, kinds: readonly string[]): boolean {
-  return state.messagesInTransit.some((m) => m.msgOrder !== null && m.msgOrder.orderIssuer === principal && m.msgOrder.orderTarget === post && kinds.includes(m.msgOrder.orderKind));
+  return state.messagesInTransit.some(
+    (m) =>
+      (m.msgOrder !== null && m.msgOrder.orderIssuer === principal && m.msgOrder.orderTarget === post && kinds.includes(m.msgOrder.orderKind)) ||
+      (m.msgReport !== null && (m.msgTo === principal || m.msgPending.some((h) => h.hopPerson === principal)) && m.msgReport.reportSubjectKind === 'post' && m.msgReport.reportSubjectId === post && m.msgReport.reportClaims.some((c) => c.claimKind === 'order-objected')),
+  );
 }
 
 /**
@@ -167,7 +176,7 @@ export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCach
     const r = state.situationStates[def.id];
     if (r === undefined || r.sitStatus !== 'open' || r.sitDelegate === null) continue;
     const seat = seatIdFor(r.sitDelegate);
-    const menu: DelegatedMenu = { menuKind: 'delegated-situation', choice: situationChoice(def, r.sitOpenOptions, [], world.person(r.sitDelegate).values) };
+    const menu: DelegatedMenu = { menuKind: 'delegated-situation', choice: situationChoice(def, r.sitOpenOptions, [], valuesOf(world.map, r.sitDelegate)) };
     out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `delegated:${def.id}:${day}`, view: viewFor(world, state, seat, cache), menu }));
   }
   for (const post of choosingPosts(state, day)) {

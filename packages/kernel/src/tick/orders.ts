@@ -4,9 +4,10 @@
  * - An order carries a goal for the holder of a post, or the principal's answer to the plan that holder submitted
  *   (approve, send back, edit its arrows), or his word to go (lane 1.2). Each travels the same way.
  * - Relay is message passing between posts: each relaying holder receives the order as a message, applies his own
- *   compliance and delay, and forwards it or objects (stand-in compliance: `standin/traits.ts`; lane 1.1's).
+ *   compliance and delay, and forwards it or objects (lane 1.1: `reading/orders.ts`); `proxy` records his response.
  * - Going around the chain sends the order straight to the holder: fewer hops, so faster; each bypassed man gets a
- *   grievance (proposed to the people core, Phase 1), and the order may conflict with one that came down the chain.
+ *   grievance (proposed to `people`), and the order may conflict with one that came down the chain: the holder resolves
+ *   the two by his own compliance (lane 1.1's `resolveOrderConflict`, called at `arriveOrder`).
  * - A special messenger is a route with a price.
  */
 import { commandedBlocks, sideOfPerson } from '../command/command.ts';
@@ -16,12 +17,12 @@ import type { EditTerms, GoCommand, GoalTerms, OrderCommand, ReviewCommand } fro
 import type { Hop, OrderBody, TransitMessage } from '../messages/transit.ts';
 import { mintMessageId } from '../messages/transit.ts';
 import { ORDER_ROUTES } from '../messages/latency.ts';
-import { resolveConflict } from '../plans/conflict.ts';
-import { editProblems, goalProblems, type EditSpec, type PlanGoal } from '../plans/goal.ts';
+import { editProblems, goalKindOf, goalProblems, sameGoal, type EditSpec, type GoalKind, type PlanGoal } from '../plans/goal.ts';
 import { execute } from '../plans/execute.ts';
-import { approve, planOf, receiveCounter, release, sendBack, setGoal } from '../plans/plans.ts';
+import { approve, planOf, receiveCounter, release, sendBack, setGoal, type PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
-import { relayDecision } from '../standin/traits.ts';
+import { answerOrder, goalTerms, relayAction, resolveOrderConflict } from '../reading/orders.ts';
+import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
 import { isFieldPost, postFaction, relayChain } from '../seats/posts.ts';
 import { fire, hop, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
 
@@ -47,9 +48,14 @@ export function editOf(t: EditTerms): EditSpec {
   return { editKind: t.kind, editAxis: t.axis, editRegion: t.region, editVia: [...t.via], editConcentration: t.concentration };
 }
 
-/** Whether an order is a goal to move (relay compliance reads it as an advance, as the stand-in did). */
-export function isAdvance(order: OrderBody): boolean {
-  return order.orderKind === 'goal' && order.orderGoal !== null && order.orderGoal.goalPosture !== 'hold';
+/**
+ * The goal kind a relaying link reads an order as (the pack's terms, `WorldRules.people.goalTerms`): a goal's own kind;
+ * an answer to a plan, or the word to go, as the kind of the goal it serves.
+ */
+export function relayKindOf(state: State, order: OrderBody): GoalKind {
+  if (order.orderGoal !== null) return goalKindOf(order.orderGoal);
+  const plan = planOf(state, order.orderTarget);
+  return plan === undefined ? 'hold' : goalKindOf(plan.planGoal);
 }
 
 /** The objective an order concerns, for the claims that answer it. */
@@ -170,13 +176,20 @@ export function answerBody(
   };
 }
 
-/** An order reaches a relaying holder: he forwards it, after his own delay, or objects. */
-export function relayOrder(ctx: TickContext, state: State, msg: TransitMessage): void {
+/**
+ * An order reaches a relaying holder (0040): he reads it through his own compliance, with his regard for its issuer,
+ * and forwards it after his own delay, or objects. `proxy` records his response; the relay's terms carry his rung
+ * and each contribution (hard rule 6).
+ */
+export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage): State {
   const { world } = ctx;
   const order = msg.msgOrder!;
   const relayer = world.person(msg.msgTo);
   const post = msg.msgToPost!;
-  const decision = relayDecision(world.rules.traits, relayer, post, { advance: isAdvance(order) });
+  const rules = world.rules.people;
+  const answer = answerOrder(world, start, relayer.id, order.orderIssuer, goalTerms(rules, relayKindOf(start, order)));
+  const state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: relayer.id, post, role: 'relay', day: ctx.day }));
+  const decision = relayAction(rules, answer, relayer.id, post);
   if (decision.action === 'object') {
     fire(ctx, 'orders.relay_objected');
     ctx.events.push({ event: 'objected', person: relayer.id, post, message: msg.msgOrigin, terms: decision.terms });
@@ -193,7 +206,7 @@ export function relayOrder(ctx: TickContext, state: State, msg: TransitMessage):
       to: order.orderIssuer,
       tag: `objection.${order.orderTarget}`,
     });
-    return;
+    return state;
   }
   const next = msg.msgPending[0]!;
   const id = mintMessageId(ctx.mint, ctx.day, relayer.id, next.hopPerson, `order.${order.orderTarget}`);
@@ -215,6 +228,7 @@ export function relayOrder(ctx: TickContext, state: State, msg: TransitMessage):
     msgPending: msg.msgPending.slice(1),
   });
   fire(ctx, 'messages.sent');
+  return state;
 }
 
 /** The acknowledgement he wires back: which order he obeyed, or that an answer to his plan found it already changed. */
@@ -237,9 +251,34 @@ function acknowledge(ctx: TickContext, state: State, msg: TransitMessage, token:
 }
 
 /**
+ * Two goals conflict (0040) when they differ, the one he holds is less than the pack's conflict window old
+ * (`WorldRules.standing.conflictWindowDays`), and one came down his chain while the other went around it (with relays
+ * holding orders, they arrive out of the order they were written). He resolves the two by his own compliance (lane
+ * 1.1's `resolveOrderConflict`): each read with the pack's terms for its goal kind, the chain's order and the newer
+ * one weighing more. A post with no goal yet simply obeys (exit review S1).
+ */
+function conflictOf(ctx: TickContext, state: State, msg: TransitMessage, plan: PlanRecord | undefined): { readonly obeyed: 'kept' | 'new'; readonly conflict: boolean } {
+  const order = msg.msgOrder!;
+  const goal = order.orderGoal!;
+  const viaChain = !order.orderBypass;
+  if (plan === undefined || sameGoal(plan.planGoal, goal) || plan.planViaChain === viaChain) return { obeyed: 'new', conflict: false };
+  if (ctx.day - plan.planSetDay >= ctx.world.map.world.rules.standing.conflictWindowDays) return { obeyed: 'new', conflict: false };
+  const rules = ctx.world.rules.people;
+  const resolution = resolveOrderConflict(
+    ctx.world,
+    state,
+    msg.msgTo,
+    { order: plan.planOrder, terms: goalTerms(rules, goalKindOf(plan.planGoal)), viaChain: plan.planViaChain, issuedDay: plan.planIssuedDay, issuer: plan.planIssuer },
+    { order: msg.msgOrigin, terms: goalTerms(rules, goalKindOf(goal)), viaChain, issuedDay: order.orderIssuedDay, issuer: order.orderIssuer },
+  );
+  return { obeyed: resolution.obeyed === 'held' ? 'kept' : 'new', conflict: true };
+}
+
+/**
  * An order reaches its addressee.
- * - A goal: conflicting orders are resolved at this call site (0040; STAND-IN until lane 1.1's compliance function,
- *   `plans/conflict.ts`); the goal he works to waits for the day's drafting, and he reports which order he obeyed.
+ * - A goal: he answers it through his compliance with the pack's terms for its kind, and `proxy` records his response
+ *   (`plans` keeps its key). Conflicting orders are resolved by his compliance (`conflictOf`); the goal he works to
+ *   waits for the day's drafting, and he reports which order he obeyed.
  * - An approval, a send-back or the word to go: applied if his plan still waits for it, else reported as stale.
  * - An edit: it waits for the day's plans phase, which re-expands it on the morning's map and has him answer it.
  */
@@ -248,8 +287,14 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
   const post = msg.msgToPost!;
   const plan = planOf(state, post);
   if (order.orderKind === 'goal') {
-    const outcome = resolveConflict(plan, { goal: order.orderGoal!, viaChain: !order.orderBypass }, ctx.day, ctx.world.map.world.rules.standing.conflictWindowDays);
-    const next = outcome.obeyed === 'new' ? execute(setGoal(state, post, { id: msg.msgOrigin, issuer: order.orderIssuer, goal: order.orderGoal!, viaChain: !order.orderBypass }, ctx.day), post, ctx.day) : state;
+    const goal = order.orderGoal!;
+    const outcome = conflictOf(ctx, state, msg, plan);
+    const answer = answerOrder(ctx.world, state, msg.msgTo, order.orderIssuer, goalTerms(ctx.world.rules.people, goalKindOf(goal)));
+    let next = recordResponse(state, responseOf(answer, { order: msg.msgOrigin, person: msg.msgTo, post, role: 'addressee', day: ctx.day }));
+    if (outcome.obeyed === 'new') {
+      const set = { id: msg.msgOrigin, issuer: order.orderIssuer, goal, viaChain: !order.orderBypass, issuedDay: order.orderIssuedDay, response: responseKey(msg.msgOrigin, msg.msgTo) };
+      next = execute(setGoal(next, post, set, ctx.day), post, ctx.day);
+    }
     fire(ctx, 'orders.obeyed', outcome.obeyed === 'new' ? 1 : 0);
     if (outcome.obeyed === 'new') fire(ctx, 'plans.goal_set');
     if (outcome.conflict) {

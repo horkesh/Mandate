@@ -24,7 +24,6 @@ import { createState } from '../src/tick/setup.ts';
 import { tick, type TickResult } from '../src/tick/tick.ts';
 import { indexWorld } from '../src/world/index.ts';
 import { playDays } from '../src/log/session.ts';
-import { resolveConflict } from '../src/plans/conflict.ts';
 import { setGoal } from '../src/plans/plans.ts';
 import { goalOf } from '../src/tick/orders.ts';
 import { pendingRequests } from '../src/seats/requests.ts';
@@ -188,8 +187,7 @@ describe('a situation moves a government of no side to a side (0065)', () => {
 
   it('an order reaching a post with no goal is obeyed, never a throw (exit review S1)', () => {
     const goal = goalOf(order('n_guard', 'advance', 'a2').goal);
-    expect(resolveConflict(undefined, { goal, viaChain: true }, 3, MAP.world.rules.standing.conflictWindowDays)).toEqual({ obeyed: 'new', conflict: false });
-    const set = setGoal(S0, P('n_guard'), { id: toId('message', 'm.test'), issuer: PER('a_lead'), goal, viaChain: true }, 3);
+    const set = setGoal(S0, P('n_guard'), { id: toId('message', 'm.test'), issuer: PER('a_lead'), goal, viaChain: true, issuedDay: 2, response: 'm.test|n_officer' }, 3);
     expect(set.planRecords[P('n_guard')]).toMatchObject({ planStatus: 'drafting', planSetDay: 3, planOrder: 'm.test' });
   });
 

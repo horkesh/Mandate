@@ -3,9 +3,10 @@
  * with an objective, removing an axis. Each edit is applied to the chosen plan, re-expanded by the same machinery, and
  * scored by HIS scorer. Its distance from his judgement is his best score minus the edited plan's.
  *
- * The edit maps to `DirectiveTerms` (`editDirective`) with boldness relative to his own best plan (lane 0.9 finding 2;
- * 0062): his best maps to his own boldness, and the edit moves it by the change in risk. Compliance answers it
- * (`resolveDirective`, called by `plans` at the edit's arrival); the seat never does (FOUNDATION section 8).
+ * The edit maps to `DirectiveTerms` (`editDirective`) read against his own best plan (lane 0.9 finding 2; 0062): his
+ * best (`ownBest`) is the pack's boldness for the goal's kind, the edit moves it by the change in risk, and its distance
+ * from his judgement is `departure` (lane 1.1). Compliance answers it (`answerOrder`, called by `plans` at the edit's
+ * arrival); the seat never does (FOUNDATION section 8).
  *
  * An edit that cannot be expanded (an unreachable waypoint) is a validation failure with a reason, not a compliance
  * outcome.
@@ -126,23 +127,28 @@ export function riskOf(c: PlanCandidate, holdingRisk: number): number {
 }
 
 /**
- * The directive an edited plan is, as compliance reads it (lane 0.9 finding 2; 0062): its boldness relative to his own
- * best plan (his best maps to his own boldness), `required` from his demand against the strength the plan commits,
- * and an "overruled" grievance as heavy as the edit's distance from his judgement.
+ * The directive an edited plan is, as compliance reads it (lane 0.9 finding 2; 0062; lane 1.1's terms): `base` is the
+ * pack's terms for the goal's kind (`WorldRules.people.goalTerms`: its boldness and the values it honours or offends).
+ * His own best plan reads as that boldness (`ownBest`); the edited plan moves it by the change in risk; `required`
+ * comes from his demand against the strength the plan commits; `departure` is the edit's distance from his judgement;
+ * and each support the plan asks of another post is a `SupportNeed` (an "if supported" condition unless promised).
  */
-export function editDirective(input: PlannerInput, set: DraftSet, edited: PlanCandidate, distance: number, holdingRisk: number): { readonly terms: DirectiveTerms; readonly grievance: { readonly kind: string; readonly weight: number } | null } {
+export function editDirective(input: PlannerInput, set: DraftSet, edited: PlanCandidate, distance: number, holdingRisk: number, base: DirectiveTerms): DirectiveTerms {
   const best = set.draftCandidates[0] ?? edited;
   const ctx = makeCtx(input);
   const strength = edited.candAxes.reduce((s, a) => s + a.axisStrength, 0);
   const needed = Math.trunc((edited.candPerceived * demandFor(ctx)) / 1000);
+  const support = edited.candRequests
+    .filter((r) => r.reqKind !== 'reinforcement')
+    .map((r) => ({ supportKind: r.reqKind === 'naval_support' ? 'naval' : 'cooperating', supportFrom: r.reqPost }));
   return {
-    terms: {
-      boldness: clampPermille(input.profile.boldness + riskOf(edited, holdingRisk) - riskOf(best, holdingRisk)),
-      honours: [],
-      offends: [],
-      required: clampPermille(strength === 0 ? 1000 : Math.trunc((needed * 500) / strength)),
-    },
-    grievance: distance > 0 ? { kind: 'overruled', weight: distance } : null,
+    boldness: clampPermille(base.boldness + riskOf(edited, holdingRisk) - riskOf(best, holdingRisk)),
+    honours: base.honours,
+    offends: base.offends,
+    required: clampPermille(strength === 0 ? 1000 : Math.trunc((needed * 500) / strength)),
+    ownBest: base.boldness,
+    departure: clampPermille(distance),
+    ...(support.length === 0 ? {} : { support }),
   };
 }
 

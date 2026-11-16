@@ -25,6 +25,10 @@ const FORBIDDEN = [
   'packages/kernel/src/knowledge/beliefs.ts',
   'packages/kernel/src/messages/transit.ts',
   'packages/kernel/src/standin/',
+  // Lane 1.1: people's hidden true stats and their responses' true rungs and reasons, and the reading that computes them.
+  'packages/kernel/src/people/',
+  'packages/kernel/src/proxy/',
+  'packages/kernel/src/reading/',
   'packages/kernel/src/tick/',
   'packages/kernel/src/view/view.ts',
   // Situation definitions carry the historical default, which no seat may see (0040, gate B9).

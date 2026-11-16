@@ -11,8 +11,8 @@
  * - `ready`: approved, assembling, awaiting the principal's word ("prepare, await my word", 0040);
  * - `approved`: executing. Until lane 1.4's operations, through the STAND-IN execution adapter (`execute.ts`).
  *
- * A response to a goal, a plan or an edit (rungs and reasons) belongs to `proxy` (0073); a plan record holds only a
- * reference to the report that carries his answer.
+ * A response to a goal, a plan or an edit (rungs and reasons) belongs to `proxy` (0073, lane 1.1); a plan record holds
+ * only its key (`responseKey`).
  */
 import type { MessageId, PersonId, PostId } from '../ids.ts';
 import type { PlanCandidate, DraftSet, TermKind } from '../planner/types.ts';
@@ -37,8 +37,8 @@ export interface PlanCounter {
   readonly counterFell: readonly CounterDrop[];
   /** Why the edit could not be made (an unreachable waypoint): a validation failure, not a compliance outcome. */
   readonly counterInvalid: string | null;
-  /** The report carrying his answer (written by `proxy` once lane 1.1 lands; a reference only). */
-  readonly counterAnswer: MessageId | null;
+  /** His response to the edit: the key of the record `proxy` writes (`responseKey`), a reference only (0073); null for an invalid edit. */
+  readonly counterResponse: string | null;
 }
 
 /** An edit that has reached him and waits for the day's plans phase, which re-expands it on the morning's map. */
@@ -54,8 +54,12 @@ export interface PlanRecord {
   /** Whether the goal came down his own chain of command (false: it went around a relaying post). */
   readonly planViaChain: boolean;
   readonly planSetDay: number;
+  /** The day the order was written (conflicting orders: the newer weighs more, 0040). */
+  readonly planIssuedDay: number;
   /** The order that set the goal. */
   readonly planOrder: MessageId;
+  /** His response to the goal: the key of the record `proxy` writes (`responseKey`), a reference only (0073). */
+  readonly planResponse: string;
   readonly planStatus: PlanStatus;
   /** The draft set, saved on its request day; null before drafting, or for a goal that needs no plan (hold where he stands). */
   readonly planDraft: DraftSet | null;
@@ -94,14 +98,21 @@ export function candidateOf(record: PlanRecord, id: string): PlanCandidate | und
  * A goal reaches the holder of `post` and is obeyed: a new record. A goal to hold where he stands (no objective) needs
  * no plan and is approved at once; any other waits for the drafting phase.
  */
-export function setGoal(state: State, post: PostId, order: { readonly id: MessageId; readonly issuer: PersonId; readonly goal: PlanGoal; readonly viaChain: boolean }, day: number): State {
+export function setGoal(
+  state: State,
+  post: PostId,
+  order: { readonly id: MessageId; readonly issuer: PersonId; readonly goal: PlanGoal; readonly viaChain: boolean; readonly issuedDay: number; readonly response: string },
+  day: number,
+): State {
   const holdHere = order.goal.goalObjective === null;
   return put(state, post, {
     planGoal: order.goal,
     planIssuer: order.issuer,
     planViaChain: order.viaChain,
     planSetDay: day,
+    planIssuedDay: order.issuedDay,
     planOrder: order.id,
+    planResponse: order.response,
     planStatus: holdHere ? 'approved' : 'drafting',
     planDraft: null,
     planChosen: null,

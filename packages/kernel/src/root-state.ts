@@ -32,7 +32,9 @@ import type { TransitMessage } from './messages/transit.ts';
 import type { StandingGoal } from './plans/goal.ts';
 import type { PlanRecord } from './plans/plans.ts';
 import type { SeatAssignment } from './seats/seats.ts';
+import type { PersonGrievance, PersonStatus, PersonTrue, Stance } from './people/people.ts';
 import type { PersonRank } from './people/ranks.ts';
+import type { OrderResponse } from './proxy/responses.ts';
 import type { FortificationTable } from './regions/regions.ts';
 
 export interface State {
@@ -94,6 +96,25 @@ export interface State {
    * Nothing changes it in Phase 0; the siege method (0062) reads it. Writer: `regions`.
    */
   readonly regionFortification: FortificationTable;
-  /** Each person's rank and the date he holds it from (seniority), at the start date (0050); absent for none. Writer: `people`. */
-  readonly personRanks: Readonly<Record<PersonId, PersonRank>>;
+  /**
+   * Each person's ranks, one per kind (regular, volunteer, brevet) held at once, each with the date he holds it from
+   * (seniority); from the start date (0050, 0073). A person absent holds none; a kind absent, none of that kind. Writer: `people`.
+   */
+  readonly personRanks: Readonly<Record<PersonId, Readonly<Record<string, PersonRank>>>>;
+  /** Each person's hidden true stats and temperament, drawn at setup by history's shadow (lane 1.1). Writer: `people`. */
+  readonly personTrue: Readonly<Record<PersonId, PersonTrue>>;
+  /** Each person's traits: innate from the World at setup, earned in play (FOUNDATION section 6). Writer: `people`. */
+  readonly personTraits: Readonly<Record<PersonId, readonly string[]>>;
+  /** Each person's public standing, permille: from his reputation at setup, moved by the press and the blocs. Writer: `people`. */
+  readonly personStanding: Readonly<Record<PersonId, number>>;
+  /** What each person holds against whom, in the order given. A person absent holds none. Writer: `people`. */
+  readonly personGrievances: Readonly<Record<PersonId, readonly PersonGrievance[]>>;
+  /** Regard, signed permille, from each person toward others (his principal, rivals, partners); sparse: absent is 0. Writer: `people`. */
+  readonly personRegard: Readonly<Record<PersonId, Readonly<Record<PersonId, number>>>>;
+  /** Stances on record from Consult (0040), in the order given. Writer: `people`. */
+  readonly personStances: Readonly<Record<PersonId, readonly Stance[]>>;
+  /** Each person's status (serving, wounded, killed, captured) and the day it began (0073). Writer: `people`. */
+  readonly personStatus: Readonly<Record<PersonId, PersonStatus>>;
+  /** Each man's response to each order that reached him, keyed `order|person` (`proxy/responses.ts`). Writer: `proxy`. */
+  readonly orderResponses: Readonly<Record<string, OrderResponse>>;
 }

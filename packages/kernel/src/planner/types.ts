@@ -189,15 +189,18 @@ export interface PlannerForce {
   readonly aboard: ForceBlockId | null;
 }
 
-/** A post of his side as the planner reads it, with what its holder's willingness rests on (regard and values). */
+/** A post of his side as the planner reads it, with its holder's willingness to cooperate (lane 0.9 finding 7). */
 export interface PlannerPost {
   readonly id: PostId;
   readonly holder: PersonId | null;
   readonly parent: PostId | null;
   /** Where its headquarters is (derived from its strongest block), or null for a post that commands nothing. */
   readonly region: RegionId | null;
-  readonly holderRegard: number;
-  readonly holderValues: readonly string[];
+  /**
+   * His willingness to an advance from his principal: compliance's answer (`answerOrder`, lane 1.1) to the pack's advance
+   * terms, so his regard and values decide it through the people rules. 0 for a vacant post or the principal himself.
+   */
+  readonly holderWillingness: number;
 }
 
 /**

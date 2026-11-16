@@ -185,6 +185,18 @@ export function parseTraits(raw: string, sourceKeys: readonly string[]): Cell<w.
   return ok(out);
 }
 
+/** Values (lane 1.1): `value:citation+citation` items, as traits are written. */
+export function parseValues(raw: string, sourceKeys: readonly string[]): Cell<w.ValueEvidence[]> {
+  const out: w.ValueEvidence[] = [];
+  for (const item of list(raw)) {
+    const colon = item.indexOf(':');
+    const value = (colon === -1 ? item : item.slice(0, colon)).trim();
+    if (!ids.isWellFormedId(value)) return bad(`"${value}" is not a value id`, 'value:citation+citation');
+    out.push({ value, cites: colon === -1 ? [] : parseCitations(item.slice(colon + 1), sourceKeys, '+') });
+  }
+  return ok(out);
+}
+
 /** Ranks: `rank:date` items, in date order. */
 export function parseRanks(raw: string): Cell<w.RankHeld[]> {
   const out: w.RankHeld[] = [];

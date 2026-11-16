@@ -7,10 +7,11 @@
  * intelligence knows of the enemy's blocks (region by region, times the source's bias), the works standing in each
  * region and the water edges closed to his side. The planner then reads only his view (`viewFor`), with his own
  * perception applied in belief derivation (0052). Seating a different man in a post gives the post's holder that
- * man's traits (boldness, competence), so the cast's other posts keep their own holders (lane 0.9 finding 10).
+ * man's cited character (lane 1.1's people: his temperament, competence and values), drawn exactly as cited
+ * (history's shadow `as-history`), so the cast's other posts keep their own holders (lane 0.9 finding 10).
  */
 import { phase0, planner, world as w, ids } from '@mandate/kernel';
-import { seatsWorld, v2Map } from './seats-world.ts';
+import { v2Map } from './seats-world.ts';
 
 export type CaseName = 'pincer' | 'supply' | 'naval';
 
@@ -44,19 +45,19 @@ export const CASES: readonly CaseSpec[] = [
 /** The men a seating puts in the post: one of the testbed's generals, or a steady-competent stand-in (labelled; not pack data). */
 export interface Seating {
   readonly label: string;
-  /** The person whose cited traits the post's holder is given. */
+  /** The person whose cited character the post's holder is given. */
   readonly person: string;
-  /** Override boldness (the sensitivity sweep, the steady stand-in). */
-  readonly boldness?: number;
-  /** Override competence (the steady-competent stand-in, which the testbed's cast lacks). */
-  readonly competence?: number;
+  /** Override his cited boldness (the steady stand-in). */
+  readonly boldness?: w.StatDirection;
+  /** Override his cited competence (the steady-competent stand-in, which the testbed's cast lacks). */
+  readonly competence?: w.StatDirection;
 }
 
 export const SEATINGS: readonly Seating[] = [
   { label: 'appointee (bold 500, comp 350)', person: 'n_appointee' },
   { label: 'organiser (bold 200, comp 650)', person: 'n_organiser' },
   { label: 'fighter (bold 800, comp 650)', person: 'n_fighter' },
-  { label: 'steady stand-in (bold 500, comp 650)', person: 'n_appointee', boldness: 500, competence: 650 },
+  { label: 'steady stand-in (bold 500, comp 650)', person: 'n_appointee', boldness: 'average', competence: 'above' },
 ];
 
 export interface CaseOptions {
@@ -64,6 +65,8 @@ export interface CaseOptions {
   readonly sourceBias?: number;
   /** Rules to draft under (a sensitivity run); the pack's otherwise. */
   readonly rules?: w.PlannerRules;
+  /** The assault margin to draft under (`people.traits.assaultMargin`); the pack's otherwise. */
+  readonly assaultMargin?: number;
 }
 
 export interface Case {
@@ -76,15 +79,29 @@ const FACTION = 'north';
 
 /** The planner input for a case with a seating: the testbed's opening start, his knowledge one intelligence estimate. */
 export function caseInput(spec: CaseSpec, seating: Seating, options: CaseOptions = {}): Case {
-  const base = seatsWorld('testbed').world;
   const map = v2Map('testbed')!;
   const startPost = map.start.posts.find((p) => p.id === spec.post);
   if (startPost === undefined || startPost.holder === null) throw new Error(`testbed post ${spec.post} has no holder`);
-  const seated = base.person(ids.toId('person', seating.person));
-  const traits = { [startPost.holder]: { boldness: seating.boldness ?? seated.boldness, competence: seating.competence ?? seated.competence } };
-  const index = options.rules === undefined ? base.map : w.indexWorld({ ...map.world, rules: { ...map.world.rules, planner: options.rules } });
-  const world = phase0.indexSeatsWorld(index, map.start, { traits });
-  let state = phase0.createState(world, { seed: map.start.seed });
+  const seated = map.world.people.find((p) => p.id === seating.person)!;
+  const direction = (d: w.StatDirection | undefined, centre: w.StatCentre): w.StatCentre => (d === undefined ? centre : { ...centre, direction: d });
+  const people = map.world.people.map((p) =>
+    p.id !== startPost.holder
+      ? p
+      : {
+          ...p,
+          temperament: { ...seated.temperament, boldness: direction(seating.boldness, seated.temperament.boldness) },
+          centres: { ...p.centres, competence: direction(seating.competence, seated.centres.competence) },
+          values: seated.values,
+        },
+  );
+  const rules = {
+    ...map.world.rules,
+    ...(options.rules === undefined ? {} : { planner: options.rules }),
+    ...(options.assaultMargin === undefined ? {} : { people: { ...map.world.rules.people, traits: { ...map.world.rules.people.traits, assaultMargin: options.assaultMargin } } }),
+  };
+  const index = w.indexWorld({ ...map.world, people, rules });
+  const world = phase0.indexSeatsWorld(index, map.start, {});
+  let state = phase0.createState(world, { seed: map.start.seed, people: 'as-history' });
   const holder = ids.toId('person', startPost.holder);
   const seat = phase0.seatIdFor(holder);
   const faction = ids.toId('faction', FACTION);

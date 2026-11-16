@@ -13,7 +13,8 @@
 import { strictCompare } from '../compare.ts';
 import type { EdgeId, MessageId, PersonId, RegionId } from '../ids.ts';
 import type { State } from '../root-state.ts';
-import { perceptionBias, type TraitHolder, type TraitRules } from '../standin/traits.ts';
+import type { TraitRules } from '../people/rules.ts';
+import { perceptionBias, type PerceivingPerson } from '../people/traits.ts';
 import type { KnownReport, SeatKnowledge } from './knowledge.ts';
 import type { ClaimKind, ReportClaim } from './report.ts';
 import { term, type BiasTerm } from './truth.ts';
@@ -91,7 +92,7 @@ export function perceived(value: number, perceptionPermille: number): number {
  * What `person` believes of the enemy, region by region, with every term.
  * `knowledge` is his seat's; `state` supplies the truth of the reports behind it.
  */
-export function enemyBeliefs(state: State, rules: TraitRules, person: TraitHolder & { readonly id: PersonId }, knowledge: SeatKnowledge): ReadonlyMap<RegionId, EnemyBelief> {
+export function enemyBeliefs(state: State, rules: TraitRules, person: PerceivingPerson, knowledge: SeatKnowledge): ReadonlyMap<RegionId, EnemyBelief> {
   const bias = perceptionBias(rules, person);
   const out = new Map<RegionId, EnemyBelief>();
   for (const [region, { report, value }] of [...latestEnemyClaims(knowledge)].sort(([a], [b]) => strictCompare(a, b))) {

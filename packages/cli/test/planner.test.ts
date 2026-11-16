@@ -1,4 +1,4 @@
-import { canonicalHash, ids, planner, resolveDirective, world as w } from '@mandate/kernel';
+import { canonicalHash, DEFAULT_COMPLIANCE_RULES, ids, planner, resolveDirective, world as w } from '@mandate/kernel';
 import { describe, expect, it } from 'vitest';
 import { CASES, caseInput, drafted, SEATINGS, type CaseSpec, type Seating } from '../src/planner-cases.ts';
 import { measureDrafting } from '../src/drafting-measure.ts';
@@ -8,7 +8,9 @@ import { measureDrafting } from '../src/drafting-measure.ts';
  * every input about the enemy and the ground reaching the commander as a report and read from his view
  * (`planner-cases.ts`). What changed against the spike, and why, is said where it changed:
  * - the assault margin (lane 0.9 finding 1) makes one army too few against the Harrow Bulge at true strength, so the
- *   fighter now picks the pincer, as lane 0.9 expected once the margin was in;
+ *   fighter now picks the pincer, as lane 0.9 expected once the margin was in, given a partner of neutral will; the
+ *   testbed's actual partner, the cautious organiser, is unwilling to advance under lane 1.1's compliance, so with him
+ *   the fighter attacks alone on condition of men;
  * - a phase for enemy-held ground on the way (finding 9) prices the fortified Neck, so the direct march on Southvale now
  *   takes the Highcairn road, the spike's flank, and no distinct flank is left (every alternative doubles back).
  */
@@ -17,6 +19,8 @@ const R = (id: string) => ids.toId('region', id);
 const seat = (label: string): Seating => SEATINGS.find((s) => s.label.startsWith(label))!;
 const all = () => CASES.flatMap((spec) => SEATINGS.flatMap((s) => [1000, 2000].map((bias) => ({ name: `${spec.name} / ${s.label} / ${bias}`, set: drafted(spec, s, { sourceBias: bias }).set }))));
 const pick = (set: planner.DraftSet) => set.draftCandidates[0]!;
+/** The pincer case redrafted with the eastern army's holder given this willingness to cooperate. */
+const withPartner = (input: planner.PlannerInput, will: number) => planner.draft({ ...input, posts: input.posts.map((p) => (p.id === 'n_army_east' ? { ...p, holderWillingness: will } : p)) });
 const edit = (kind: 'objective' | 'waypoints' | 'timing' | 'add_axis' | 'remove_axis', over: { axis?: string | null; region?: string; via?: string[]; concentration?: number } = {}) => ({
   editKind: kind,
   editAxis: over.axis === undefined ? (kind === 'add_axis' ? null : 'main') : over.axis,
@@ -87,17 +91,28 @@ describe('case 1: a two-commander pincer round the salient', () => {
     expect(set.draftRejected.find((r) => r.rejVariant === 'with_partner')!.rejGates[0]!.gateKind).toBe('max_axes');
   });
 
-  it('with the assault margin, one army is too few: the fighter picks the pincer at true strength, the steady man once intelligence overstates the enemy', () => {
-    expect(pick(drafted(PINCER, seat('fighter')).set).candMethod).toBe('pincer');
+  it('with the assault margin, one army is too few: with a partner of neutral will, the fighter picks the pincer at true strength, the steady man once intelligence overstates the enemy', () => {
+    // The partner's will to cooperate is held neutral here, so the comparison is between the two commanders alone.
+    const top = (s: Seating, options: Parameters<typeof caseInput>[2] = {}) => pick(withPartner(caseInput(PINCER, s, options).input, 0)).candMethod;
+    expect(top(seat('fighter'))).toBe('pincer');
     // The spike's fighter attacked alone at parity; without the margin he still would.
-    const tb = caseInput(PINCER, seat('fighter')).input.rules;
-    expect(pick(drafted(PINCER, seat('fighter'), { rules: { ...tb, assaultMargin: 1000 } }).set).candMethod).toBe('direct');
+    expect(top(seat('fighter'), { assaultMargin: 1000 })).toBe('direct');
     // The steady man: at true strength the pincer ties the direct assault (id order picks direct); it is his pick while
     // intelligence overstates the enemy by 1.25x to 1.75x; past that even two armies seem too few, and he attacks alone
     // on condition of reinforcement (the spike saw the same window at 1.75x to 2.5x, before the margin).
-    expect(pick(drafted(PINCER, seat('steady'), { sourceBias: 1000 }).set).candMethod).toBe('direct');
-    expect(pick(drafted(PINCER, seat('steady'), { sourceBias: 1500 }).set).candMethod).toBe('pincer');
-    expect(pick(drafted(PINCER, seat('steady'), { sourceBias: 2500 }).set).candMethod).toBe('direct');
+    expect(top(seat('steady'), { sourceBias: 1000 })).toBe('direct');
+    expect(top(seat('steady'), { sourceBias: 1500 })).toBe('pincer');
+    expect(top(seat('steady'), { sourceBias: 2500 })).toBe('direct');
+  });
+
+  it('weighs the partner as the testbed seats him: the cautious organiser, unwilling to advance, leaves the fighter to attack alone on condition of men', () => {
+    // Lane 1.1's compliance answers an advance from the principal for the organiser at well below nothing (his caution
+    // is offended), so the request to him costs more than the pincer gains; a willing partner restores it.
+    const { input, set } = drafted(PINCER, seat('fighter'));
+    expect(input.posts.find((p) => p.id === 'n_army_east')!.holderWillingness).toBeLessThan(0);
+    expect(pick(set).candMethod).toBe('direct');
+    expect(pick(set).candConditions.map((g) => g.gateKind)).toContain('move_when_reinforced');
+    expect(pick(withPartner(input, 400)).candMethod).toBe('pincer');
   });
 
   it('has the timid man hold and ask the principal for men rather than attack', () => {
@@ -108,10 +123,9 @@ describe('case 1: a two-commander pincer round the salient', () => {
     expect(attack.candConditions.map((g) => g.gateKind)).toContain('move_when_reinforced');
   });
 
-  it('asks for men only past a shortfall scaled by his caution (lane 0.9 finding 8): a bold man moves a little short', () => {
-    const rules = caseInput(PINCER, seat('fighter')).input.rules;
+  it('asks for men only past a shortfall scaled by his boldness, compliance’s own rule (lane 0.9 finding 8): a bold man moves a little short', () => {
     // At the pack's margin the fighter is far short, and waits; with a margin that leaves him 2% short, he moves.
-    const direct = (margin: number) => drafted(PINCER, seat('fighter'), { rules: { ...rules, assaultMargin: margin } }).set.draftCandidates.find((c) => c.candMethod === 'direct')!;
+    const direct = (margin: number) => drafted(PINCER, seat('fighter'), { assaultMargin: margin }).set.draftCandidates.find((c) => c.candMethod === 'direct')!;
     expect(direct(1500).candConditions.map((g) => g.gateKind)).toContain('move_when_reinforced');
     const near = direct(1000);
     expect(near.candRatio).toBeLessThan(1000);
@@ -189,12 +203,11 @@ describe('character shapes the menu', () => {
     expect(pick(drafted(PINCER, seat('organiser')).set).candPerceived).toBeGreaterThan(pick(drafted(PINCER, seat('fighter')).set).candPerceived);
   });
 
-  it('scores a pincer partner by its holder’s regard and values, not by post id (lane 0.9 finding 7)', () => {
+  it('scores a pincer partner by its holder’s willingness, read through the people rules, not by post id (lane 0.9 finding 7)', () => {
     const { input } = caseInput(PINCER, seat('fighter'));
-    const p = (posts: typeof input.posts) => planner.draft({ ...input, posts }).draftCandidates.find((c) => c.candMethod === 'pincer' && c.candVariant === 'with_partner');
-    const east = input.posts.find((x) => x.id === 'n_army_east')!;
-    const willing = p(input.posts.map((x) => (x.id === east.id ? { ...x, holderRegard: 1000, holderValues: ['duty'] } : x)))!;
-    const grudging = p(input.posts.map((x) => (x.id === east.id ? { ...x, holderRegard: -1000, holderValues: ['caution'] } : x)))!;
+    const p = (will: number) => withPartner(input, will).draftCandidates.find((c) => c.candMethod === 'pincer' && c.candVariant === 'with_partner');
+    const willing = p(600)!;
+    const grudging = p(-600)!;
     const dep = (c: planner.PlanCandidate) => c.candTerms.find((t) => t.contribTerm === 'dependence')!.contribAmount;
     expect(dep(willing)).toBeGreaterThan(dep(grudging));
     expect(willing.candScore).toBeGreaterThan(grudging.candScore);
@@ -202,11 +215,10 @@ describe('character shapes the menu', () => {
 });
 
 describe('the 0026 edit grammar', () => {
+  const ADVANCE = { boldness: 600, honours: [], offends: [], required: 0 };
   const proxy = { values: [], candour: 800, standing: 500, regard: 0 };
-  const answer = (input: planner.PlannerInput, set: planner.DraftSet, edited: planner.PlanCandidate, distance: number) => {
-    const d = planner.editDirective(input, set, edited, distance, -400);
-    return resolveDirective({ id: input.profile.person, boldness: input.profile.boldness, ...proxy }, d.terms, { available: 500, oversight: 500, leaderCredibility: 500, grievances: d.grievance === null ? [] : [d.grievance] });
-  };
+  const answer = (input: planner.PlannerInput, set: planner.DraftSet, edited: planner.PlanCandidate, distance: number) =>
+    resolveDirective({ id: input.profile.person, boldness: input.profile.boldness, ...proxy }, planner.editDirective(input, set, edited, distance, -400, ADVANCE), { available: 1000, oversight: 500, leaderCredibility: 500 }, DEFAULT_COMPLIANCE_RULES);
 
   it('re-routes an axis to a new objective and re-scores it with his scorer', () => {
     const { input, set } = drafted(PINCER, seat('fighter'));
@@ -250,14 +262,15 @@ describe('the 0026 edit grammar', () => {
       expect(r.fell.map((f) => f.term)).toContain('haste');
       const a = answer(input, set, r.edited, r.distance);
       expect(['object', 'refuse', 'slow_walk', 'reinterpret', 'comply_with_reservations']).toContain(a.actual);
-      expect(a.reasons.map((x) => x.kind)).toContain('holds_grievance');
+      expect(a.reasons.map((x) => x.kind)).toContain('departs_from_judgement');
     }
   });
 
-  it('reads an edit’s boldness against his own best plan: his own plan is no rasher than he is (lane 0.9 finding 2)', () => {
+  it('reads an edit against his own best plan: his own plan is exactly as bold as his best, and departs not at all (lane 0.9 finding 2)', () => {
     for (const s of SEATINGS) {
       const { input, set } = drafted(SUPPLY, s);
-      expect(planner.editDirective(input, set, pick(set), 0, -400).terms.boldness).toBe(input.profile.boldness);
+      const terms = planner.editDirective(input, set, pick(set), 0, -400, ADVANCE);
+      expect([terms.boldness, terms.ownBest, terms.departure]).toEqual([600, 600, 0]);
     }
   });
 

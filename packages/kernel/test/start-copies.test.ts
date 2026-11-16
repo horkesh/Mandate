@@ -40,7 +40,7 @@ describe('fortification is State, owned by regions, copied from the start (0050)
   });
 });
 
-describe('ranks are State, owned by people: the rank each holds at the start date (0050)', () => {
+describe('ranks are State, owned by people: the rank of each kind each holds at the start date (0050, 0073)', () => {
   const person = (id: string, ranks: PersonRecord['ranks']): PersonRecord => ({
     id: toId('person', id),
     name: `person.${id}.name`,
@@ -50,6 +50,9 @@ describe('ranks are State, owned by people: the rank each holds at the start dat
     born: null,
     died: null,
     centres: { competence: { direction: null, cites: [] }, nerve: { direction: null, cites: [] }, experience: { direction: null, cites: [] }, reputation: { direction: null, cites: [] } },
+    temperament: { boldness: { direction: null, cites: [] }, candour: { direction: null, cites: [] } },
+    values: [],
+    regard: { direction: null, cites: [] },
     traits: [],
     bloc: null,
     ranks,
@@ -71,13 +74,33 @@ describe('ranks are State, owned by people: the rank each holds at the start dat
     expect(rankOn(ranks, '1854-06-01')).toBeNull();
   });
 
-  it('copies each person\'s rank in id order; a person with none by then is absent', () => {
-    const world = indexWorld({ ...MAP.world, people: [person('zed', [{ rank: 'major', from: '1850-01-01' }]), person('abe', []), person('cal', [{ rank: 'captain', from: '1899' }, { rank: 'major', from: '1900-04-01' }])] });
+  const RANKS = {
+    ranks: [
+      { id: 'captain', name: 'rank.captain', seniority: 1, kind: 'regular' },
+      { id: 'major', name: 'rank.major', seniority: 2, kind: 'regular' },
+      { id: 'vol_colonel', name: 'rank.vol_colonel', seniority: 3, kind: 'volunteer' },
+      { id: 'bvt_general', name: 'rank.bvt_general', seniority: 4, kind: 'brevet' },
+    ],
+    rankKinds: [{ id: 'regular', name: 'rank_kind.regular' }, { id: 'volunteer', name: 'rank_kind.volunteer' }, { id: 'brevet', name: 'rank_kind.brevet' }],
+  };
+  const withRanks = (people: readonly PersonRecord[]) => indexWorld({ ...MAP.world, vocabularies: { ...MAP.world.vocabularies, ...RANKS }, people });
+
+  it('copies each person\'s rank of each kind in id order; a person with none by then is absent', () => {
+    const world = withRanks([person('zed', [{ rank: 'major', from: '1850-01-01' }]), person('abe', []), person('cal', [{ rank: 'captain', from: '1899' }, { rank: 'major', from: '1900-04-01' }])]);
     const ranks = initialRanks(world, '1900-03-01');
-    expect(ranks).toEqual({ cal: { rankTerm: 'captain', rankSince: '1899' }, zed: { rankTerm: 'major', rankSince: '1850-01-01' } });
+    expect(ranks).toEqual({ cal: { regular: { rankTerm: 'captain', rankSince: '1899' } }, zed: { regular: { rankTerm: 'major', rankSince: '1850-01-01' } } });
     expect(Object.keys(ranks)).toEqual(['cal', 'zed']);
     expect(createState(worldOf(world, forcesStart({ a1: { a: 1000 } }, [], [], { startDate: '1900-03-01' })), { seed: 1 }).personRanks).toEqual(ranks);
     // At a later start his majority has begun.
-    expect(createState(worldOf(world, forcesStart({ a1: { a: 1000 } }, [], [], { startDate: '1900-06-01' })), { seed: 1 }).personRanks[toId('person', 'cal')]).toEqual({ rankTerm: 'major', rankSince: '1900-04-01' });
+    expect(createState(worldOf(world, forcesStart({ a1: { a: 1000 } }, [], [], { startDate: '1900-06-01' })), { seed: 1 }).personRanks[toId('person', 'cal')]).toEqual({ regular: { rankTerm: 'major', rankSince: '1900-04-01' } });
+  });
+
+  it('holds a regular, a volunteer and a brevet rank at once, each with its own date (0073)', () => {
+    const world = withRanks([person('ida', [{ rank: 'captain', from: '1890' }, { rank: 'vol_colonel', from: '1899-05' }, { rank: 'bvt_general', from: '1899-11-02' }, { rank: 'major', from: '1900-02-01' }])]);
+    expect(initialRanks(world, '1900-03-01')).toEqual({
+      ida: { brevet: { rankTerm: 'bvt_general', rankSince: '1899-11-02' }, regular: { rankTerm: 'major', rankSince: '1900-02-01' }, volunteer: { rankTerm: 'vol_colonel', rankSince: '1899-05' } },
+    });
+    // A rank the vocabulary lacks has no kind: the kernel refuses it rather than guessing.
+    expect(() => initialRanks(withRanks([person('ghost', [{ rank: 'admiral', from: '1890' }])]), '1900-03-01')).toThrow('rank "admiral" is not in the pack\'s rank vocabulary');
   });
 });

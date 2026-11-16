@@ -118,7 +118,8 @@ function notHere(why: string): GateBand {
 }
 
 const SITUATIONS_UNAUTHORED = 'union-1861 has no situations authored until the March 1861 authoring lane (0042, 0046); the testbed run exercises them';
-const VALUES_EMPTY = 'quiet by design on v2 packs until Phase 1 gives people values and regard (0058); the kernel test drives it through explicit trait inputs';
+const FILTER_EMPTY = 'both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post';
+const NO_CANDID_RELAY = 'the testbed’s one relaying office (the war ministry) holds what it dislikes rather than objecting: its holder is not candid (lane 1.1); union-1861 fires it, and the kernel test drives it';
 const NO_PROPOSER = 'nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it';
 const TRAPPED_AT_WASHINGTON =
   'in the Union run it fires only for the 600 regulars left at 0 permille in Washington from day 19, with Maryland\'s neutral ground behind them, every day to the end: a frozen stand-off, not a live mechanic (exit review S2c), so it has a ceiling and no floor; packages/kernel/test/contest.test.ts drives it';
@@ -133,12 +134,9 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'infrastructure.changed': { why: NO_PROPOSER, test: 'packages/kernel/test/infrastructure.test.ts', needle: 'damages and repairs edges and depots' },
   'map.pocket_lost': { why: 'a pocket is overrun only when a contest takes its ground; the reference runs close none that stays closed', test: 'packages/kernel/test/map-tick.test.ts', needle: 'reports an overrun pocket as lost' },
   'map.pocket_relieved': { why: 'a pocket is relieved when a repair or a closing reverses; nothing reverses one in these runs', test: 'packages/kernel/test/map-tick.test.ts', needle: 'then its opening' },
-  'orders.bypassed': { why: 'the rule-seat principal goes around an office only when it objects, and nothing objects until values exist (0058)', test: 'packages/kernel/test/seats-orders.test.ts', needle: 'goes around the chain by special messenger' },
   'orders.conflict': { why: 'a conflict needs two issuers, a chain order and one sent around it; here only the principal orders', test: 'packages/kernel/test/seats-orders.test.ts', needle: 'conflicting orders: one down the chain, one around it' },
-  'orders.relay_held': { why: VALUES_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'relays a forwarded order with the relayer' },
-  'orders.relay_objected': { why: VALUES_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'relays through the office, whose holder objects' },
-  'reports.filtered': { why: VALUES_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
-  'reports.trimmed': { why: VALUES_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
+  'reports.filtered': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
+  'reports.trimmed': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
   'situations.lapsed': { why: 'a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'expires an option, resurfaces on its clock, and lapses' },
   // Lane 1.2: the plan cycle's paths that no rule seat takes, each driven by its own kernel test.
   'plans.sent_back': { why: 'no rule seat sends a plan back: the generic principal approves, the editing exercise edits', test: 'packages/kernel/test/plans.test.ts', needle: 'sends the plan back, and he drafts it again' },
@@ -147,6 +145,7 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'plans.edit_shirked': { why: 'the testbed’s commanders answer the edits the exercise makes by complying or objecting, never covertly', test: 'packages/cli/test/planner.test.ts', needle: 'executes a covert rung’s concrete plan' },
   'planner.term.caution': { why: 'few drafts in the reference runs, and none where dropping caution alone changes the pick', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
   'planner.term.coordination': { why: 'no reference run drafts a two-axis plan close enough to the best for coordination to decide it', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
+  'planner.term.exposure': { why: 'no reference run meets a perceived enemy on the way, and the editing exercise’s “move now” changes no exposure since lane 1.1’s perception', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
   'planner.term.dependence': { why: 'no reference run drafts a support request close enough to the best for dependence to decide it', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
   'planner.term.force_ratio': { why: 'the reference runs’ drafts are decided by supply and goal fit, never by the ratio alone', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
   'planner.term.glory': { why: 'few drafts in the reference runs, and none where dropping glory alone changes the pick', test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live in some case' },
@@ -176,7 +175,6 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
     'plans.submitted': n.reviewed > 0 ? around(n.reviewed) : notHere(NO_DEPARTURE),
     'planner.term.goal_fit': n.goalFit > 0 ? around(n.goalFit) : notHere('both opening drafts here have one moving plan and a holding action, which goal fit alone does not separate'),
     'planner.term.supply': around(n.supply),
-    'planner.term.exposure': notHere('the opening drafts meet no perceived enemy on the way; the editing exercise counts it over an edit'),
     'planner.term.haste': quiet(`an edit-only term (lane 0.9: drafts always concentrate as long as he wants): ${EDITS_ONLY}`),
     'plans.edit_received': quiet(EDITS_ONLY),
     'plans.edit_answered': quiet(EDITS_ONLY),
@@ -205,10 +203,14 @@ const UNION_BANDS: Record<string, GateBand> = {
   'messages.courier_delay': around(197),
   'messages.delivered': around(2681),
   'messages.sent': around(2820),
-  'messages.special_messenger': notHere('the principal goes round an office only when it objects; the testbed run fires it'),
+  // The War Department withholds the principal's approval of the Washington garrison's plan; he sends it around.
+  'messages.special_messenger': around(2),
+  'orders.bypassed': around(4),
   'movement.arrived': around(19),
   'movement.leg_started': around(10),
   'orders.obeyed': around(2),
+  'orders.relay_held': around(1),
+  'orders.relay_objected': around(1),
   'orders.relayed': around(3),
   'plans.goal_reached': around(1),
   'seats.choices': around(2),
@@ -247,7 +249,11 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'messages.special_messenger': around(1),
   'movement.arrived': around(18),
   'movement.leg_started': around(7),
+  'orders.bypassed': notHere('the principal goes around an office only when it objects, which the testbed’s does not (it holds instead); union-1861 fires it'),
   'orders.obeyed': around(3),
+  // Lane 1.1: the war minister, not candid and cool toward his leader, slow-walks what he relays.
+  'orders.relay_held': around(3),
+  'orders.relay_objected': notHere(NO_CANDID_RELAY),
   'orders.relayed': around(3),
   'plans.goal_reached': around(2),
   'seats.choices': around(3),
@@ -285,16 +291,16 @@ export const REFERENCE_RUNS: readonly ReferenceRun[] = [
     days: 120,
     atWar: false,
     seats: 'editing-principal',
-    // The principal's two goals come back for review and are edited ("move now"), each answered through compliance,
-    // one with an objection; one operation waits for his word and gets it. The situation's order goes ahead as drafted.
+    // The principal's two goals come back for review and are edited ("move now"), each answered through compliance. Lane
+    // 1.1's compliance: one man objects twice, keeping his plan under review, so it is edited three times in all; one
+    // operation waits for his word and gets it. The situation's order goes ahead as drafted.
     bands: {
       'plans.submitted': around(2),
-      'plans.edit_received': around(2),
-      'plans.edit_answered': around(2),
-      'plans.edit_objected': around(1),
+      'plans.edit_received': around(3),
+      'plans.edit_answered': around(3),
+      'plans.edit_objected': around(2),
       'plans.released': around(1),
-      'planner.term.haste': around(1),
-      'planner.term.exposure': around(1),
+      'planner.term.haste': around(2),
     },
   },
   {

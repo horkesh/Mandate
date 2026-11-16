@@ -31,16 +31,16 @@ export function opposition(ctx: Ctx): number {
 
 /** His demand for this goal, permille: his open-field demand, times the assault margin against a garrisoned enemy-held objective. */
 export function demandFor(ctx: Ctx): number {
-  const { profile, goal, ground, faction, rules, beliefs } = ctx.input;
+  const { profile, goal, ground, faction, beliefs, assaultMargin } = ctx.input;
   const objective = goal.goalObjective;
   const assault = objective !== null && goal.goalPosture === 'take' && enemyHeld(ground.index, objective, faction) && (beliefs.get(objective) ?? 0) > 0;
-  return assault ? Math.trunc((profile.demand * rules.assaultMargin) / 1000) : profile.demand;
+  return assault ? Math.trunc((profile.demand * assaultMargin) / 1000) : profile.demand;
 }
 
-/** The shortfall share, permille of the men he needs, past which he waits: the pack's, scaled by his boldness. */
+/** The shortfall share, permille of the men he needs, past which he waits: compliance's rule, scaled by his boldness (one rule, lane 1.1's). */
 export function shortfallShare(ctx: Ctx): number {
-  const r = ctx.input.rules;
-  return r.shortfallTimid + Math.trunc(((r.shortfallBold - r.shortfallTimid) * ctx.input.profile.boldness) / 1000);
+  const r = ctx.input.reinforceShare;
+  return r.timid + Math.trunc((Math.max(0, r.bold - r.timid) * ctx.input.profile.boldness) / 1000);
 }
 
 function term(c: PlanTerm[], kind: TermKind, amount: number, why: string): void {
@@ -69,9 +69,9 @@ export function scoreAxes(ctx: Ctx, method: Method, axes: readonly PlanAxis[], r
 
   term(c, 'goal_fit', w.goalFit, `reaches ${goal.goalObjective}`);
   if (ratio >= demand) {
-    term(c, 'force_ratio', Math.min(w.ratioBonusMax, Math.trunc((ratio - demand) / w.ratioBonusDivisor)), `ratio ${ratio} over his demand ${demand}`);
+    term(c, 'force_ratio', Math.min(w.ratioBonusMax, Math.trunc((ratio - demand) / w.ratioBonusDivisor)), `ratio ${ratio} over his demand ${demand}${demand === profile.demand ? '' : ` (the assault margin on ${profile.demand})`}`);
   } else {
-    term(c, 'force_ratio', -Math.min(w.ratioPenaltyMax, Math.trunc(((demand - ratio) * w.ratioPenaltyMax) / demand)), `ratio ${ratio} under his demand ${demand}; short ${shortfall} men`);
+    term(c, 'force_ratio', -Math.min(w.ratioPenaltyMax, Math.trunc(((demand - ratio) * w.ratioPenaltyMax) / demand)), `ratio ${ratio} under his demand ${demand}${demand === profile.demand ? '' : ` (the assault margin on ${profile.demand})`}; short ${shortfall} men`);
   }
 
   const arrival = Math.max(...axes.map((a) => a.axisArrival));
