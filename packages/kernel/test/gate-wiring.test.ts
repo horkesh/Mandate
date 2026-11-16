@@ -189,6 +189,17 @@ describe('the map from orders to values in play (gate review G-1.5a, G-1.5b)', (
     expect(decided.state.personStanding[P('a_lead')]).toBeLessThan(morning.personStanding[P('a_lead')]!);
     const event = decided.results[1]!.events.find((e) => e.event === 'policy')!;
     expect(event.terms.map((t) => [t.termRule, t.termValue])).toEqual([['floor:policy:shelter', cost], ['floor_cost:policy:shelter', -cost]]);
+     expect(decided.results[1]!.events.some((e) => e.event === 'policy_unpaid')).toBe(false);
+    // A principal with less standing than the cost pays what he has; the rest is recorded as unpaid, never dropped.
+    const poor = applyPeopleChanges(createState(wd, { seed: 1, drivers: { a_lead: 'human' } }), [{ change: 'standing', person: P('a_lead'), delta: 100 }], 0, wd.map.world.rules.people, []);
+    const short = run(wd, poor, 2, { 2: [{ cmd: 'decide', situation: S('crossers'), options: ['send_back'] }] });
+    const had = short.results[0]!.state.personStanding[P('a_lead')]!;
+    expect(had).toBeLessThan(cost);
+    expect(short.state.personStanding[P('a_lead')]).toBe(0);
+    const policy = short.results[1]!.events.find((e) => e.event === 'policy')!;
+    expect(policy.terms.find((t) => t.termRule === 'floor_cost:policy:shelter')!.termValue).toBe(-had);
+    const unpaid = short.results[1]!.events.find((e) => e.event === 'policy_unpaid')!;
+    expect(unpaid.terms.map((t) => [t.termRule, t.termValue])).toEqual([['floor_unpaid:policy:shelter', cost - had]]);
   });
 
   it('inaction can be a policy too, applied through the map like an option (G-1.5g)', () => {

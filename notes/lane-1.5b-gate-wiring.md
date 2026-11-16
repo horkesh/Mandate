@@ -36,7 +36,7 @@ In play (G-1.5f, the gate reviewer's should-fix), the floor's difference is shar
 
 Because the applied grievances equal the pushback, the floor term is exactly what raises the floored row's applied grievances to the floor row's. `gate-wiring.test.ts` checks this for the fixture's carrier and for a bold one, the standing reviewer's case.
 
-When the row has nobody of its own to bear the difference, it falls on the principal's own standing as a typed floor cost (`floor_cost:<row>`). Every pushback term reaches the explanation trail as a `policy` event. Standing is a permille clamped at 0, so a principal with no standing left pays nothing more.
+When the row has nobody of its own to bear the difference, it falls on the principal's own standing as a typed floor cost (`floor_cost:<row>`). Every pushback term reaches the explanation trail as a `policy` event. Standing is a permille clamped at 0, so what it cannot pay is recorded as its own `policy_unpaid` event (`floor_unpaid:<row>`), never dropped silently, so the lever sweep and the done check can see it. There is no second sink; the gate reviewer weighs whether one is needed.
 
 `pushbackOf` now takes a list of recipients.
 

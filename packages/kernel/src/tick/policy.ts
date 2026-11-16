@@ -5,6 +5,8 @@
  *   typed by its term: `policy_offended` for a person on the side who holds a value the row offends, `policy_unwilling`
  *   for a carrier's unwillingness, `policy_practice` for a carrier's clash with his own practice. The applied grievances
  *   are the row's pushback, term for term, so a carrier's resistance never makes a policy cheaper.
+ * - **What the floor cannot charge**: a floor cost the principal's standing cannot pay (it is clamped at 0) is recorded as
+ *   a `policy_unpaid` event (`floor_unpaid:<row>`), never dropped silently.
  * - **The floor, on what is applied**: since the applied grievances equal the pushback, the floor term (the floor row's
  *   total less this row's own) is exactly what raises this row's applied grievances to the floor row's.
  * - **The floor** (G-1.5f): when the row is floored by `notCheaperThan`, the difference falls on the floored row's own
@@ -70,15 +72,19 @@ export function applyPolicy(ctx: TickContext, start: State, def: SituationDef, p
   for (const t of push.terms) {
     if (t.source !== 'floor') changes.push({ change: 'grievance', person: t.person, kind: POLICY_GRIEVANCES[t.source], weight: t.amount, against: principal, cause: row });
   }
+  let unpaid: { readonly order: string; readonly amount: number } | null = null;
   const floor = push.terms.find((t) => t.source === 'floor');
   if (floor !== undefined && floor.source === 'floor') {
     // G-1.5f: the difference falls on this row's own stakeholders and carriers, in proportion to their pushback.
     const shares = share(floor.amount, personal(push.terms));
     for (const s of shares) changes.push({ change: 'grievance', person: s.person, kind: POLICY_GRIEVANCE, weight: s.amount, against: principal, cause: `floor:${floor.order}` });
     if (shares.length === 0) {
-      // Nobody to bear it: the principal's own standing pays, a typed floor cost.
+      // Nobody to bear it: the principal's own standing pays, a typed floor cost. Standing is a permille clamped at 0, so
+      // what it cannot pay is never dropped silently: it is recorded as its own event, for the lever sweep and the done check.
+      const paid = Math.min(floor.amount, start.personStanding[principal] ?? 0);
       changes.push({ change: 'standing', person: principal, delta: -floor.amount });
-      trail.push(term('relay_term', -floor.amount, { person: principal, rule: `floor_cost:${floor.order}` }));
+      trail.push(term('relay_term', -paid, { person: principal, rule: `floor_cost:${floor.order}` }));
+      if (paid < floor.amount) unpaid = { order: floor.order, amount: floor.amount - paid };
     }
   }
   let state = applyPeopleChanges(start, changes, day, rules, world.map.world.vocabularies.ranks);
@@ -88,6 +94,7 @@ export function applyPolicy(ctx: TickContext, start: State, def: SituationDef, p
     state = recordResponse(state, responseOf(answerOrder(world, start, carrier, principal, orderTerms(rules, row), readAt(carrier)), { order: key, person: carrier, post, role: 'addressee', day }));
   }
   ctx.events.push({ event: 'policy', person: principal, post: null, message: key, terms: trail });
+  if (unpaid !== null) ctx.events.push({ event: 'policy_unpaid', person: principal, post: null, message: key, terms: [term('relay_term', unpaid.amount, { person: principal, rule: `floor_unpaid:${unpaid.order}` })] });
   fire(ctx, 'situations.policy', push.total);
   return state;
 }
