@@ -396,7 +396,11 @@ describe('the scanner catches violations (positive control)', () => {
         'export interface RosterRow { readonly id: PersonId; rosterRank: number }',
         // An alias of an alias, over two lines, through a union.
         'export type LedgerList = readonly LedgerEntry[]',
-        '  | Readonly<Record<string, TrimRow>>;',
+        '  | Readonly<Record<string, TrimRow>> |',
+        '  CutList;',
+        // A union broken after its operator (review N2).
+        'export type CutList = readonly CutRow[];',
+        'export interface CutRow { readonly cutAmount: number }',
         'export type LedgerEntry = Readonly<{ entryDay: number }> & EntryNote;',
         'export interface EntryNote { readonly noteText: string }',
         'export interface TrimRow { readonly trimAmount: number }',
@@ -405,9 +409,9 @@ describe('the scanner catches violations (positive control)', () => {
       ].join('\n'),
     };
     const records = stateRecords([root]);
-    expect(records.map((r) => r.record).sort()).toEqual(['EntryNote', 'RosterRow', 'State', 'TrimRow']);
+    expect(records.map((r) => r.record).sort()).toEqual(['CutRow', 'EntryNote', 'RosterRow', 'State', 'TrimRow']);
     const fields: OwnedField[] = [{ field: 'roster', writer: 'people', proposedBy: [], code: [{ record: 'State', key: 'roster' }, { record: 'State', key: 'ledger' }] }];
-    const decl: ImmutableDeclaration = { records: ['EntryNote', 'TrimRow'], rootFields: ['day'], neverReassigned: ['id'] };
+    const decl: ImmutableDeclaration = { records: ['CutRow', 'EntryNote', 'TrimRow'], rootFields: ['day'], neverReassigned: ['id'] };
     // The alias-hidden record is classified: its unowned field is reported, where before the scan never saw it.
     expect(classificationProblems(records, fields, decl, [])).toEqual([
       `packages/kernel/src/state.ts: RosterRow.rosterRank has no writer in OWNED_FIELDS${NOT_DECLARED('RosterRow')} (packages/kernel/src/ownership.ts)`,
@@ -441,6 +445,26 @@ describe('the scanner catches violations (positive control)', () => {
         'let again = state.controller;',
         'again = other;',
         'const seen = c[id] === f;',
+        // A cast at the declaration (review N1), and a cast at the write (review S1): State is readonly, so real code casts.
+        'const cast = state.controller as unknown as X[];',
+        'cast.push(f);',
+        'const plain = state.controller;',
+        '(plain as X[]).push(f);',
+        'const row = state.controller[id];',
+        '(row as Record<string, number>)[k] = 1;',
+        // Declarations in parentheses, with a default, or as one arm of a conditional.
+        'const wrapped = (state.controller);',
+        'wrapped.push(f);',
+        'const orNone = state.controller[id] ?? {};',
+        'orNone.holder = f;',
+        'const either = ok ? state.controller : other;',
+        'either.push(f);',
+        // Reads through the same shapes stay clear.
+        'const n2 = (plain as X[]).length;',
+        'const ok2 = either.includes(f);',
+        // A call around the key makes a copy: its result is not the key (the real tree's `Object.keys(state.x)`).
+        'const keys = Object.keys(state.controller) as Id[];',
+        'keys.sort(cmp);',
       ].join('\n'),
     };
     expect(writeViolations([local], owned, []).map((v) => `${v.line} ${v.form}`)).toEqual([
@@ -451,6 +475,12 @@ describe('the scanner catches violations (positive control)', () => {
       '6 write through a local alias',
       '7 write through a local alias',
       '9 write through a local alias',
+      '19 write through a local alias',
+      '21 write through a local alias',
+      '23 write through a local alias',
+      '25 write through a local alias',
+      '27 write through a local alias',
+      '29 write through a local alias',
     ]);
     // In the writer module the same code is allowed.
     expect(writeViolations([{ ...local, path: 'packages/kernel/src/control.ts' }], owned, [])).toEqual([]);
