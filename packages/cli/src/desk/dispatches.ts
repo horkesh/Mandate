@@ -21,6 +21,23 @@ function claimText(c: ClaimView): string {
       return 'objects to the order';
     case 'arrived':
       return `arrived${where}`;
+    // Lane 1.13: the claims of plans, battles, returns and the press, as the console shows them.
+    case 'plan-submitted':
+      return `submits a plan (${c.token ?? 'plan'})${c.region === null ? '' : ` for ${c.region}`}`;
+    case 'plan-answer':
+      return `answers your edit: ${c.token ?? 'no answer'}`;
+    case 'verb-answered':
+      return `${(c.token ?? '').replace(':', ': ')}${c.value === 1 ? '' : ' (not done)'}`;
+    case 'battle-phase':
+      return `${c.token ?? 'battle'}${where}: ${c.value === 1 ? 'going well' : 'going badly'}`;
+    case 'battle-result':
+      return `the battle${where}: ${c.token ?? 'unknown'}${c.confidence === 0 ? ', no figures yet' : `, ${c.value.toString()} lost`}`;
+    case 'own-losses':
+      return `own killed and wounded ${c.value.toString()}${where} (${c.token ?? 'return'})`;
+    case 'casualties':
+      return `enemy losses claimed ${c.value.toString()}${where}`;
+    case 'framing':
+      return `the public holds the other side began the war (${c.value.toString()})`;
     default:
       return `${c.kind} ${c.value.toString()}${where}`;
   }
@@ -30,7 +47,8 @@ function reportLine(r: ReportView): string {
   const kind = r.subtype === null ? r.type : `${r.type}/${r.subtype}`;
   const via = r.via.length === 0 ? '' : ` via ${r.via.join(', ')}`;
   const advice = r.advice === null ? '' : ` | recommends ${r.advice.recommends} (${r.advice.reasons.map((x) => x.kind).join(', ')})`;
-  const claims = r.claims.map(claimText).join('; ');
+  // A report with no claims (a notice, a word in person) is about its subject.
+  const claims = r.claims.length === 0 ? `about ${r.subjectKind} ${r.subjectId}` : r.claims.map(claimText).join('; ');
   return `day ${r.receivedDay.toString().padStart(3)}  ${kind} from ${r.author} (written day ${r.day.toString()}, ${r.route}${via}): ${claims}${advice}`;
 }
 

@@ -95,3 +95,5 @@ export * from './politics/politics.ts';
 export * from './politics/rules.ts';
 export * from './politics/press.ts';
 export * from './tick/politics.ts';
+// Lane 1.13: the console's preview of an arrow edit before it is sent (lane 0.9's finding 5).
+export * from './tick/edit-preview.ts';

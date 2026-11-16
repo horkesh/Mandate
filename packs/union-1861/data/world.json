@@ -1763,7 +1763,8 @@
 "selfEmancipation": {"agencyReasons":{"flightToLines":"agency:flight-to-union-lines","resistanceElsewhere":"agency:self-emancipation","resistanceWithin":"agency:resistance-within-confederacy"},"cadenceDays":7,"flightPerMillion":1000,"holdShare":600,"linesFaction":"union","policyBase":500,"policyFlags":[],"pressureFlags":[],"protectedFlags":[],"reachLinesOnly":400,"reachWithForce":1000,"resistancePerMillion":200},
 "standing": {"conflictWindowDays":7},
 "stores": {"capDays":30,"lowDays":7,"menPerCapacityUnit":20000,"norms":[{"arm":"naval","cite":"ORN I-4 pp. 228-229, 234: ships of the Home Squadron ordered ready for sea with one month's stores (practice for a short expedition, not a regulation; lane 1.10, docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix K)","days":30,"faction":"union","post":"us_navy_home_squadron","postKind":null}]},
-"supplyControlPermille": 250
+"supplyControlPermille": 250,
+"turns": {"cite":"0027: a turn runs up to seven days and ends early on a decision point","maxDays":7}
 },
 "vocabularies": {
 "arms": [
