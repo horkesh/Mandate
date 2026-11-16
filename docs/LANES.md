@@ -32,6 +32,7 @@ Every lane gets a written brief containing:
    - Never set `ask`, `actions` or `blocked` in wrap-up. Questions go to the lead by `SendMessage`.
    - Within the brief, decide with the recommended option and keep going.
    - Never commit, merge or push unless the brief says so. Never touch another lane's files or worktree.
+   - Never stop a process you didn't start. Several sessions share this machine, and an unknown `node` or PowerShell process is most likely another lane's test run. To clean up, stop only the processes your own commands started. (A reader stopped two unknown PowerShell processes on 2026-11-16.)
    - End with a section "Findings outside my scope". Write "none" if there are none.
    - If the evidence contradicts the brief, stop and report. A brief's hypothesis is a candidate, not a command.
    - Use PowerShell and the Grep tool, not Git Bash, which times out on this machine (lesson L9). Read files with the Read or Grep tool, since PowerShell 5.1 shows UTF-8 as garbled text, and write commit messages to a file for `git commit -F <file>` (lesson L14). Write that file with the Write tool, not `Set-Content` or `Out-File`: in PowerShell 5.1 both add a byte-order mark, and it lands in the commit subject (lane 1.1, 2026-11-16). Never pipe the native TypeScript 7 `tsc` into `Select-Object` or another PowerShell cmdlet: it hangs with no output. Redirect its output to a file instead (lane 1.8b, 2026-11-16).
