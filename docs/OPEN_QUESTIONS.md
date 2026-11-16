@@ -194,6 +194,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Tooling:** a tag-scoped rule in `gate.ts`, so that in a situation tagged `fugitive-policy`, a return, send-back or exclusion label must contain "slavery".
   - **1B, R6:** the gate reviewer's boundary: orders directing killings, burnings or collective reprisals are atrocity-class and carry both topics.
   - **1B, R7:** drop `fund-a-scheme`.
+  - **1B, with R2:** the decision about accepting Black volunteers. In 1A, S13 is a notice only (`black-enlistment-1861-offers`, placed as an event), because lane 1.11r found no advocate in 1861 for asking Congress (22 Congressional Globe issues, 8 July to 7 August 1861). The decision belongs where the 1862 advocates are on record.
   - **Lane 1.12:** `crossNeutral` is a stand-in, owned by lane 1.12.
   - **1B raids:** edge damage reaches the planner through the derived map, not by report. From lane 1.2's review (`review-lane-1.2.md`): the side's supply reach also reaches the planner through the derived map, computed with the obstructions truly there. That is acceptable in 1A and needs a report-based path once unseen damage or a boom matters.
 - From lane 1.3's report (`notes/lane-1.3-combat.md`, merged 8c804a5), by lane:
@@ -244,7 +245,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **1B:** embarkation is not built, so a by-water axis needs its troops to start aboard (beside the sea-carriage item). From the lane 1.4b review (item 6, second point): the two-carrier axis, owned by 1B (embarkation).
   - **Lane 1.11:** S02's landing takes a new effect field, `landing` (parent, men, region), applied in phase 4c through `applyDetachmentProposals` (lane 1.4b has merged).
 - From the gate reviewer's lane 1.5 verdict (`review-gate-1861.md`, the end), by lane:
-  - **Lane 1.5b** (merged 190ebf6): G-1.5a to G-1.5e, the practice-clash term and the lever sweep's delegation handling are built. Not done in it: options taken together (groups) are offered one at a time, and a practice does not change in play because it is static pack data.
+  - **Lane 1.5b** (merged 190ebf6): G-1.5a to G-1.5e, the practice-clash term and the lever sweep's delegation handling are built. Not done in it, both owned by 1B (no 1A situation needs either; decision 0082 lists them as open questions): options taken together (groups) are offered one at a time, and a practice does not change in play because it is static pack data.
   - **Lane 1.6:** the validator refuses a bloc made up of a protected group, so `address` can never reach one.
   - **Lane 1.11:** lane 1.5b has merged, so `fugitive-policy` rows may now be entered, each going to the gate reviewer (S17 item above).
 - From the gate reviewer's lane 1.4 verdict (`review-gate-1861.md`, the end), **lane 1.11:**
