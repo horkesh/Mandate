@@ -41,6 +41,13 @@ describe('the opening of 1861 (lane 1.11)', () => {
     expect(question.sitChosen).toEqual(['approve_holding']);
   });
 
+  it('suspends the writ on the military line in the history run, entering it on the ledger for the special session to answer', () => {
+    expect(run.state.situationStates[S('habeas_on_the_line')]!.sitChosen).toEqual(['suspend_on_line']);
+    const act = run.state.congressLedger.find((e) => e.ledgerAct === 'habeas_suspension_1861')!;
+    expect(act).toBeDefined();
+    expect(act.ledgerAnsweredDay).not.toBeNull();
+  });
+
   it('fires each government’s act its delay after the call reaches the governor, never before the call', () => {
     const arrived = (post: string) => Object.values(run.state.orderResponses).find((r) => r.respKind === 'call' && r.respPost === post)!.respDay;
     expect(run.state.situationStates[S('maryland_legislature')]!.sitFiredDay).toBe(arrived('st_gov_maryland') + 14);

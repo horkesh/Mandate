@@ -276,7 +276,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   // age grow with them (re-banded from the merged run); the Senate's special session of March 1861 adjourns on the 28th.
   'politics.adjourned': around(1),
   'politics.front_page': around(63),
-  'politics.support': around(23),
+  'politics.support': around(54),
   'politics.opened': notHere('the Senate sits at the start and the House waits for a call no situation makes until lane 1.11 authors S09; the testbed run fires it'),
   'regions.self_emancipation': notHere('the Union pack has no census rows until lane 1.10 sources them, so the term has nowhere to run; the testbed run fires it'),
   'regions.reached_lines': notHere('the Union pack has no census rows until lane 1.10 sources them; the testbed run fires it'),
@@ -286,7 +286,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'seats.defaulted': notHere('every request is answered in this run; the silent-seats exercise run fires it'),
   // Lane 1.11: the war's opening by each side's decision (S01, the other side's opening, the notice of the first shot, S09's call),
   // and the spring's ungated decisions (S02, S03, S06, S07, S10).
-  'situations.decided': around(8),
+  'situations.decided': around(17),
   'situations.delegated': notHere('no authored Union situation in this window names a delegate as its historical default; the testbed run fires it'),
   'situations.fired': around(28),
   'situations.notice_reports': around(17),
