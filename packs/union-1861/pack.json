@@ -11,7 +11,7 @@
     "capacityMax": 5,
     "supplyControlPermille": 250,
     "retreatControlPermille": 50,
-    "stores": { "menPerCapacityUnit": 20000, "capDays": 30, "lowDays": 7, "norms": [] },
+    "stores": { "menPerCapacityUnit": 20000, "capDays": 30, "lowDays": 7, "norms": [{ "post": "us_navy_home_squadron", "postKind": null, "arm": "naval", "faction": "union", "days": 30, "cite": "ORN I-4 pp. 228-229, 234: ships of the Home Squadron ordered ready for sea with one month's stores (practice for a short expedition, not a regulation; lane 1.10, docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix K)" }] },
     "occupation": { "occupyPermille": 100, "occupyFullMen": 5000 },
     "operations": { "pauseDays": 3, "maxRepulses": 3, "pursuitDays": { "follow": 1, "press": 2 }, "holdControlPermille": 500, "works": { "perNightPermille": 50, "capPermille": 300, "lostWhenStormedPermille": 150 }, "returns": { "firstLowPermille": 200, "revealDays": 7 } },
     "pruning": { "operationDays": 60, "battleDays": 120, "responseDays": 60 },

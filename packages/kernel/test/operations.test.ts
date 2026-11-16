@@ -333,7 +333,7 @@ describe('works, pursuit, oversight, assumed stores and pruning (lane 1.4\'s fil
 
   it('a block whose stores no source gives takes the pack\'s norm, flagged assumed; a block no norm covers stays unknown', () => {
     const base = mapOf({});
-    const normed = indexWorld({ ...base.world, rules: { ...base.world.rules, stores: { ...base.world.rules.stores, norms: [{ postKind: null, arm: 'cavalry', faction: null, days: 4, cite: 'FIXTURE p. 1' }] } } });
+    const normed = indexWorld({ ...base.world, rules: { ...base.world.rules, stores: { ...base.world.rules.stores, norms: [{ post: null, postKind: null, arm: 'cavalry', faction: null, days: 4, cite: 'FIXTURE p. 1' }] } } });
     const start = forcesStart(CONTROL, POSTS, [block('horse', { department: 'a_war', region: 'a2', arm: 'cavalry', storesDays: null, post: P('a_army') }), block('foot', { department: 'a_war', region: 'a2', storesDays: null, post: P('a_army') }), block('sourced', { department: 'a_war', region: 'a2', arm: 'cavalry', storesDays: 9, post: P('a_army') })], {
       factions: [{ faction: F('a'), principal: PER('a_lead'), capital: R('a_cap'), playable: true }, { faction: F('b'), principal: PER('b_lead'), capital: R('b_cap'), playable: true }],
     });

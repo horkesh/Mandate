@@ -1753,7 +1753,7 @@
 {"capacityPermille":300,"defaultMonths":[1,2,12],"lengthPermille":2000,"reason":"ice"}
 ],
 "standing": {"conflictWindowDays":7},
-"stores": {"capDays":30,"lowDays":7,"menPerCapacityUnit":20000,"norms":[]},
+"stores": {"capDays":30,"lowDays":7,"menPerCapacityUnit":20000,"norms":[{"arm":"naval","cite":"ORN I-4 pp. 228-229, 234: ships of the Home Squadron ordered ready for sea with one month's stores (practice for a short expedition, not a regulation; lane 1.10, docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix K)","days":30,"faction":"union","post":"us_navy_home_squadron","postKind":null}]},
 "supplyControlPermille": 250
 },
 "vocabularies": {

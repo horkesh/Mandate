@@ -9,7 +9,7 @@
     "capacityMax": 5,
     "supplyControlPermille": 250,
     "retreatControlPermille": 50,
-    "stores": { "menPerCapacityUnit": 20000, "capDays": 30, "lowDays": 7, "norms": [] },
+    "stores": { "menPerCapacityUnit": 20000, "capDays": 30, "lowDays": 7, "norms": [{ "post": null, "postKind": "fort_command", "arm": null, "faction": null, "days": 120, "cite": "TB-DESIGN: a stocked fort, about four months" }, { "post": null, "postKind": null, "arm": "naval", "faction": null, "days": 30, "cite": "TB-DESIGN: a ship ready for sea, one month" }] },
     "occupation": { "occupyPermille": 100, "occupyFullMen": 5000 },
     "operations": { "pauseDays": 3, "maxRepulses": 3, "pursuitDays": { "follow": 1, "press": 2 }, "holdControlPermille": 500, "works": { "perNightPermille": 50, "capPermille": 300, "lostWhenStormedPermille": 150 }, "returns": { "firstLowPermille": 200, "revealDays": 7 } },
     "pruning": { "operationDays": 60, "battleDays": 120, "responseDays": 60 },

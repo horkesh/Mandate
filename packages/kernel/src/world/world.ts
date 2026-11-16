@@ -9,7 +9,7 @@
  * `scenario.ts`; every open list (terrains, post kinds, arms, ranks, traits)
  * belongs to the pack.
  */
-import type { DepartmentId, FactionId } from '../ids.ts';
+import type { DepartmentId, FactionId, PostId } from '../ids.ts';
 import type {
   DepotRecord,
   EdgeRecord,
@@ -54,13 +54,15 @@ export interface StoresRules {
   /**
    * Norms for blocks whose stores no source gives (lane 1.4; lane 1.10's Appendix K): practice, never regulation, so every
    * block given one is flagged `fbStoresAssumed`. The first norm whose every named field matches the block applies: the
-   * kind of the post it starts under, its arm, its side. A block no norm matches stays unknown, visibly.
+   * post it starts under or that post's kind, its arm, its side. A block no norm matches stays unknown, visibly.
    */
   readonly norms: readonly StoresNorm[];
 }
 
 /** One stores norm: which blocks it covers (null: any), the days it gives, and its source (a PROVENANCE key and place). */
 export interface StoresNorm {
+  /** The post it starts under (a norm sourced for one command, such as a squadron), or null. */
+  readonly post: PostId | null;
   readonly postKind: string | null;
   readonly arm: string | null;
   readonly faction: FactionId | null;

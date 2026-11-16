@@ -208,7 +208,8 @@ const UNION_BANDS: Record<string, GateBand> = {
   'combat.withdrew': around(1),
   'control.changed': around(15),
   'control.threshold_crossed': around(6),
-  'forces.stores_fell': around(7),
+  // Lane 1.4: the Home Squadron's ships take the pack's assumed one-month norm (lane 1.10), and eat it where no supply reaches.
+  'forces.stores_fell': around(37),
   'forces.stores_low': around(1),
   'forces.stores_refilled': notHere('most Union blocks have unknown stores (lane 0.3 data, lane 0.5 finding 3), so the few that fall do not refill in 75 days; the testbed run fires it'),
   'forces.stragglers_returned': around(10),

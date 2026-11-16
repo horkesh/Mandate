@@ -176,7 +176,7 @@
 {"capacityPermille":300,"defaultMonths":[1,2],"lengthPermille":2000,"reason":"ice"}
 ],
 "standing": {"conflictWindowDays":7},
-"stores": {"capDays":30,"lowDays":7,"menPerCapacityUnit":20000,"norms":[]},
+"stores": {"capDays":30,"lowDays":7,"menPerCapacityUnit":20000,"norms":[{"arm":null,"cite":"TB-DESIGN: a stocked fort, about four months","days":120,"faction":null,"post":null,"postKind":"fort_command"},{"arm":"naval","cite":"TB-DESIGN: a ship ready for sea, one month","days":30,"faction":null,"post":null,"postKind":null}]},
 "supplyControlPermille": 250
 },
 "vocabularies": {

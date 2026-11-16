@@ -84,8 +84,8 @@ The operation ends with its own main axis. Every stage entered is logged with a 
    hit commander sends none.
 9. **Oversight** is the pack's base less a term per courier day to the issuer, plus a term on the wire, with a floor; the
    tick passes it at relays, arrivals, edits and support answers. Conflict resolution keeps the base (it has no reach).
-10. **Stores norms match by the post kind a block starts under, its arm and its side.** The first match applies; no
-    match stays unknown. *Rejected:* matching by block kind (detachment or block), which cannot tell a garrison from a
+10. **Stores norms match by the post a block starts under or that post's kind, its arm and its side.** The first match
+    applies; no match stays unknown. *Rejected:* matching by block kind (detachment or block), which cannot tell a garrison from a
     field force in the Union data.
 11. **Works** are dug only by an axis holding its objective (`works` stage), not by every block standing still: the
     Phase 0 garrisons would otherwise all entrench and turn every 1861 fight into an assault on works. Storming takes
@@ -115,9 +115,13 @@ The operation ends with its own main axis. Every stage entered is logged with a 
    - `orderResponses`, battle records and operations are pruned (the pruning rules).
 3. **The pack format changed:** `WorldRules.operations`, `WorldRules.pruning`, `combat.pursuit`, `stores.norms`, three
    `people.context` oversight terms, and `vocabularies.arms[].cavalry`.
-4. **Stores norms: the Union values wait for data entry** (lane 1.11, or me if you prefer). The rule needs the Union
-   pack's post kinds for garrisons, field armies and ships, and the exclusions Appendix K names (Fort Monroe, Fort
-   Jefferson, the Texas and Pacific posts, Confederate stocks) stay unknown by having no matching norm.
+4. **Stores norms, entered (your ruling: pack rules, cited).** The Union pack has one: the Home Squadron's ships, 30
+   days, from ORN I-4 pp. 228-229 and 234 (practice for a short expedition; lane 1.10's Appendix K). Not entered, each
+   for a reason: the garrison norm (about four months) would land only on Fort Monroe and Fort Jefferson, which Appendix K
+   leaves unknown, and Fort Pickens, which your earlier ruling keeps unknown; the marching norm (three days) fits no Union
+   block at the start; the far squadrons have no sourced months-at-sailing rule; Confederate stocks are not sourced. The
+   testbed states two design norms (a fort, a ship) and has no block they change. In the Union run the Home Squadron's
+   ships now eat their assumed month where no supply reaches (`forces.stores_fell` re-banded to around(37)).
 5. **Detachments in play are not built.** Making a garrison or landing a new block needs block creation across its three
    owners, which is lane 1.7's `create` path, not merged yet. I recommend a small follow-up once 1.7 lands: an operation
    leaving a garrison at a taken objective, and a landing from a carrier.

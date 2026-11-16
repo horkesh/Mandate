@@ -172,8 +172,8 @@ export const RulesSchema = z.strictObject({
       capDays: positive.describe('The most days of stores a block refills to. A design parameter.'),
       lowDays: nonNegative.describe('Stores below this many days are low, a truth event a report may tell; at most capDays. A design parameter.'),
       norms: z
-        .array(z.strictObject({ postKind: termId.nullable(), arm: termId.nullable(), faction: idOf('faction').nullable(), days: positive, cite: z.string().min(1, 'a source and place') }))
-        .describe('Norms for blocks whose stores no source gives (lane 1.4): practice, so each block given one is flagged assumed. First match by post kind, arm and side; no match stays unknown.'),
+        .array(z.strictObject({ post: idOf('post').nullable(), postKind: termId.nullable(), arm: termId.nullable(), faction: idOf('faction').nullable(), days: positive, cite: z.string().min(1, 'a source and place') }))
+        .describe('Norms for blocks whose stores no source gives (lane 1.4): practice, so each block given one is flagged assumed. First match by post or post kind, arm and side; no match stays unknown.'),
     })
     .describe('Stores on hand (0040, 0064): design parameters the pack states, not sourced facts.'),
   occupation: z

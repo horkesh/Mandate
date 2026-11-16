@@ -146,7 +146,7 @@ export function initialForces(map: WorldIndex, start: ScenarioStart): ForceTable
     // Stores no source gives take the first norm that covers the block (lane 1.4), flagged assumed; none: unknown.
     const side = map.world.departments.find((d) => d.id === b.department)?.faction ?? null;
     const kind = b.post === null ? null : (postKinds.get(b.post) ?? null);
-    const norm = b.storesDays !== null ? null : (map.world.rules.stores.norms.find((n) => (n.postKind === null || n.postKind === kind) && (n.arm === null || n.arm === b.arm) && (n.faction === null || n.faction === side)) ?? null);
+    const norm = b.storesDays !== null ? null : (map.world.rules.stores.norms.find((n) => (n.post === null || n.post === b.post) && (n.postKind === null || n.postKind === kind) && (n.arm === null || n.arm === b.arm) && (n.faction === null || n.faction === side)) ?? null);
     out[b.id] = {
       fbName: b.name,
       fbKind: b.kind,
