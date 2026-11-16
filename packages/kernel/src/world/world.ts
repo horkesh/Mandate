@@ -270,6 +270,11 @@ export interface WorldRules {
   readonly selfEmancipation: SelfEmancipationRules;
   /** Politics (lane 1.6): blocs, the legislature's chambers and calendar, credibility, framing and the press. DESIGN PARAMETERS and sourced records the pack states (0072). */
   readonly politics: PoliticsRules;
+  /**
+   * Turns (0027): the most days a turn runs before the game waits for the player; a decision point ends one sooner.
+   * The kernel ticks a day at a time and never reads this; the shell does (lane 1.13's console).
+   */
+  readonly turns: { readonly maxDays: number; readonly cite: string };
 }
 
 export interface TerrainTerm {

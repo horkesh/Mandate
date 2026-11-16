@@ -448,6 +448,9 @@ export const RulesSchema = z.strictObject({
         .describe('The press as a report route (FOUNDATION section 7): a weekly front page each paper’s editor writes.'),
     })
     .describe('Politics (lane 1.6): blocs, the chambers and their calendar, credibility, framing and the press. Design parameters and sourced records the pack states (0072).'),
+  turns: z
+    .strictObject({ maxDays: positive.describe('The most days a turn runs before the game waits for the player; a decision point ends one sooner.'), cite: z.string().min(1) })
+    .describe('Turns (0027): read by the shell (the console), never by the kernel, which ticks a day at a time.'),
   people: z
     .strictObject({
       shadow: z

@@ -190,7 +190,8 @@
 "selfEmancipation": {"agencyReasons":{"flightToLines":"agency:fen-flight","resistanceElsewhere":"agency:fen-flight","resistanceWithin":"agency:fen-flight"},"cadenceDays":7,"flightPerMillion":1000,"holdShare":600,"linesFaction":"north","policyBase":500,"policyFlags":[{"flag":"sanctuary_act","permille":400}],"pressureFlags":[],"protectedFlags":[{"flag":"fen_bondage_ended","regions":["n_west_front","n_east_front"]}],"reachLinesOnly":400,"reachWithForce":1000,"resistancePerMillion":200},
 "standing": {"conflictWindowDays":7},
 "stores": {"capDays":30,"lowDays":7,"menPerCapacityUnit":20000,"norms":[{"arm":null,"cite":"TB-DESIGN: a stocked fort, about four months","days":120,"faction":null,"post":null,"postKind":"fort_command"},{"arm":"naval","cite":"TB-DESIGN: a ship ready for sea, one month","days":30,"faction":null,"post":null,"postKind":null}]},
-"supplyControlPermille": 250
+"supplyControlPermille": 250,
+"turns": {"cite":"0027: a turn runs up to seven days and ends early on a decision point","maxDays":7}
 },
 "vocabularies": {
 "arms": [

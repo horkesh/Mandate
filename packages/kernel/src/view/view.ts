@@ -17,6 +17,7 @@ import { knowledgeOf, type KnownReport, type SeatKnowledge } from '../knowledge/
 import type { PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import { seatOf } from '../seats/seats.ts';
+import { attentionLeft } from '../seats/attention.ts';
 import { perceptionBias, traitsOf } from '../people/traits.ts';
 import { heldPost, sideOfPerson } from '../command/command.ts';
 import { whereIsPerson } from '../seats/posts.ts';
@@ -151,10 +152,13 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
   const situations = situationViews(world, state, seat, person.id, cache);
   // His side today: his post's while he holds one (0065), so it can change in play.
   const faction = sideOfPerson(world.map, state, person.id);
+  // Lane 1.13: his own week's attention (0025), which he always knows; null for a seat that keeps none.
+  const attention = attentionLeft(state, seat);
   const previous = cache.views.get(seat);
   if (
     previous !== undefined &&
     previous.day === state.stateDay &&
+    previous.attention === attention &&
     previous.faction === faction &&
     previous.region === region &&
     previous.goal === goal &&
@@ -179,6 +183,7 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     worksBeliefs: ground.works,
     obstructionBeliefs: ground.obstructions,
     situations,
+    attention,
   });
   cache.views.set(seat, view);
   return view;
