@@ -287,13 +287,13 @@ The day tick, each phase declaring what it reads and writes:
 4. Combat.
 5. Control changes; bump the control version when a threshold is crossed.
 6. Operations advance; stores on hand fall or refill from the supply trace.
-7. Weekly: economy, recruitment, people's politics and seat initiatives, bloc drift, attention refill.
+7. Weekly: economy, people's politics and seat initiatives, bloc drift, attention refill. Recruitment runs daily instead, because musters and enlistment terms fall on particular days (0078).
 8. Situations fire on their causes over today's State, after every phase that changes the truth, and surface on the deciding seat's knowledge; live situations check option appearance and expiry over what the principal knows, and their clocks (0057; phase 4b in Phase 0 code, after control).
 9. Checkpoints and the verdict.
 10. The invariant barrier.
 11. Decision-point detection.
 
-In the code the phases run as: commands (1), deliveries (2), movement (3), battles and occupation (3b; the control contest until 0076), control and the derived map (4), stores on hand and stragglers rejoining (4a), situations (4b), `command`'s proposals such as a government closing (4c), cyclic reports, pruning, the day, and the barrier (0057, 0064). A post's headquarters is derived from where its strongest block stands, never stored.
+In the code the phases run as: commands (1), deliveries (2), recruitment's musters and disbandings (2d, 0078), movement (3), battles and occupation (3b; the control contest until 0076), control and the derived map (4), stores on hand and stragglers rejoining (4a), the self-emancipation term on its cadence (4a′, 0078), situations (4b), `command`'s proposals such as a government closing (4c), cyclic reports, pruning, the day, and the barrier (0057, 0064). A post's headquarters is derived from where its strongest block stands, never stored.
 
 **What happens to today's kernel:**
 - **Survive as they are:** `permille`, `rng`, `compare`, `rules`, scenario validation.
