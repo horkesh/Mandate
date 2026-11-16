@@ -7,6 +7,9 @@ import { knowledgeOf } from '../src/knowledge/knowledge.ts';
 import type { Command } from '../src/log/commands.ts';
 import type { LogEntry } from '../src/log/log.ts';
 import { applyPeopleChanges } from '../src/people/people.ts';
+import { verbRulesProblems } from '../src/people/verb-rules.ts';
+import { planReading } from '../src/tick/audience-plan.ts';
+import { goalTerms } from './support/test-seats.ts';
 import { answerOrder, contextFor, orderTerms, profileOf, pushbackOf } from '../src/reading/orders.ts';
 import type { State } from '../src/root-state.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
@@ -105,6 +108,10 @@ describe('attention (0025, 0040; FOUNDATION section 5)', () => {
     const week = days(world, two.state, 5);
     expect(week.state.seatAttention[lead]).toEqual({ attnLeft: 12, attnRefilledDay: 7 });
     expect(week.fires('seats.attention_refilled')).toBeGreaterThan(0);
+    // The refill control: a week that ends with points left refills to exactly the cap, not the cap plus the remainder.
+    const spare = days(world, start, 7, { 1: [press, press] });
+    expect(spare.results[5]!.state.seatAttention[lead]).toEqual({ attnLeft: 10, attnRefilledDay: 0 });
+    expect(spare.state.seatAttention[lead]).toEqual({ attnLeft: 12, attnRefilledDay: 7 });
   });
 
   it('prices by the pack’s table: approving and sending back free, an edit 1, a special messenger its own price on top', () => {
@@ -280,13 +287,22 @@ describe('M2’s audience cases on the new State (P3)', () => {
   });
 
   it('M2 case 2: answering his stated reasons moves him, and a cautious man must be met most of the way', () => {
-    const s = createState(world, { seed: 1 });
-    const plain = preview(s);
-    const halfway = preview(s, [counter('frame', { value: 'caution' }), counter('adjust', { boldness: 500 })]);
-    const met = preview(s, [counter('frame', { value: 'caution' }), counter('adjust', { boldness: 250 })]);
+    // M2's a_wary had no regard to spend; here a_gen's regard for his leader is average, so only the counters move him.
+    const cool = indexedFixture({ persons: { a_gen: { regard: 'average' } } });
+    const s = createState(cool, { seed: 1 });
+    const at = (counters: CounterTerms[]) => {
+      const o = previewAudience(cool, s, P('a_lead'), POST('a_army'), counters, 1, 'advance');
+      if (typeof o === 'string') throw new Error(o);
+      return o;
+    };
+    const plain = at([]);
+    const halfway = at([counter('frame', { value: 'caution' }), counter('adjust', { boldness: 500 })]);
+    const met = at([counter('frame', { value: 'caution' }), counter('adjust', { boldness: 250 })]);
     expect([halfway.problems, met.problems]).toEqual([[], []]);
     expect(halfway.response.willingness).toBeGreaterThan(plain.response.willingness);
     expect(met.response.willingness).toBeGreaterThan(halfway.response.willingness);
+    // The rungs, as M2 had them: met halfway he still objects; met most of the way he complies with reservations.
+    expect([plain.declared, halfway.declared, met.declared]).toEqual(['object', 'object', 'comply_with_reservations']);
     expect(met.statedReasons.map((r) => r.kind)).not.toContain('too_rash');
   });
 
@@ -330,6 +346,43 @@ describe('M2’s audience cases on the new State (P3)', () => {
     const later = days(strong, r.state, 6);
     expect(answered(later.state)).toEqual(expect.arrayContaining([expect.stringMatching(/^a_bold:transfer:/)]));
     expect(later.state.forceAssignments[toId('forceBlock', 'a_reserve_1')]).toBe(POST('a_army'));
+  });
+
+  it('M2 case 7, its second half: during a plan he reads its own terms, and a promised reinforcement shrinks the shortfall he states, as far as promises are believed', () => {
+    const w = indexedFixture();
+    const take = { cmd: 'order', to: POST('a_army'), goal: goalTerms('take', 'b_mid'), route: 'special-messenger', bypass: true } as Command;
+    const approve = { cmd: 'review', to: POST('a_army'), action: 'approve', edit: null, route: 'special-messenger', bypass: true } as Command;
+    // a_gen drafts a plan against the 1152 men he believes hold b_mid, and asks for it to be reviewed: it is approved.
+    let run = days(w, createState(w, { seed: 7 }), 2, { 1: [take] });
+    for (let i = 0; i < 6 && run.state.planRecords[POST('a_army')]?.planStatus !== 'approved'; i++) {
+      const day = run.state.stateDay + 1;
+      run = days(w, run.state, 1, run.state.planRecords[POST('a_army')]?.planStatus === 'review' ? { [day]: [approve] } : {});
+    }
+    expect(run.state.planRecords[POST('a_army')]?.planStatus).toBe('approved');
+    const day = run.state.stateDay + 1;
+    const reading = planReading(w, run.state, POST('a_army'), day)!;
+    // Before a plan the audience reads the goal's terms, which never carry a required strength; the plan's own do.
+    expect(reading.terms.required).toBeGreaterThan(0);
+    const at = (counters: CounterTerms[]) => {
+      const o = previewAudience(w, run.state, P('a_lead'), POST('a_army'), counters, day, null, reading);
+      if (typeof o === 'string') throw new Error(o);
+      return o;
+    };
+    const shortfall = (o: ReturnType<typeof at>) => o.statedReasons.flatMap((r) => (r.kind === 'lacks_resources' ? [r.shortfall] : []))[0] ?? 0;
+    const plain = at([]);
+    expect(plain.about).toBe('during');
+    expect(shortfall(plain)).toBeGreaterThan(0);
+    expect(plain.options.find((o) => o.counter === 'reinforce')?.answers.map((r) => r.kind)).toEqual(['lacks_resources']);
+    const men = 200;
+    const reinforced = at([counter('reinforce', { from: POST('a_reserve'), men })]);
+    // The promise counts at the principal's credibility: half the men, on the plan's scale.
+    const believed = Math.trunc((Math.trunc((men * 500) / reading.strength) * w.map.world.rules.people.context.leaderCredibility) / 1000);
+    expect(shortfall(reinforced)).toBe(Math.max(0, shortfall(plain) - believed));
+    expect(shortfall(reinforced)).toBeLessThan(shortfall(plain));
+    // Held in the tick, the audience reads the same plan: his recorded answer states the reduced shortfall, and the promise goes as a transfer order.
+    const held = tick(w, run.state, [{ day, seat: lead, command: { cmd: 'audience', to: POST('a_army'), counters: [counter('reinforce', { from: POST('a_reserve'), men })] } }]);
+    expect(held.rejections).toEqual([]);
+    expect(held.state.orderResponses[`m.${day}.audience.${POST('a_army')}|${P('a_gen')}`]!.respReasons).toContainEqual({ kind: 'lacks_resources', shortfall: shortfall(reinforced) });
   });
 
   it('M2 case 8: counters are limited and validated, and a refused audience changes nothing', () => {
@@ -433,6 +486,23 @@ describe('the map from orders to values (0074)', () => {
     // Only a_bold holds glory, so sending back would be cheaper; by construction it is not.
     expect(sendBack.total).toBe(shelter.total);
     expect(sendBack.floor).toBe('policy:shelter');
+  });
+
+  it('refuses a notCheaperThan chain that loops, which pushbackOf would follow without end (review S1)', () => {
+    const base = indexedFixture();
+    const rules = base.map.world.rules.people;
+    const values = base.map.world.vocabularies.values.map((v) => v.id);
+    const kinds = base.map.world.vocabularies.personKinds.map((k) => k.id);
+    const row = (order: string, floor: string | null) => ({ order, boldness: 400, honours: [], offends: [], gateTopics: [], notCheaperThan: floor });
+    const check = (extra: ReturnType<typeof row>[]) => verbRulesProblems(rules.attention, { ...rules.verbs, orderValues: [...rules.verbs.orderValues, ...extra] }, values, kinds);
+    expect(check([row('policy:a', null), row('policy:b', 'policy:a')])).toEqual([]);
+    expect(check([row('policy:self', 'policy:self')])).toEqual(['people rule orderValues.policy:self.notCheaperThan loops back to itself: policy:self -> policy:self']);
+    expect(check([row('policy:a', 'policy:b'), row('policy:b', 'policy:a'), row('policy:c', 'policy:a')])).toEqual([
+      'people rule orderValues.policy:a.notCheaperThan loops back to itself: policy:a -> policy:b -> policy:a',
+      'people rule orderValues.policy:b.notCheaperThan loops back to itself: policy:b -> policy:a -> policy:b',
+    ]);
+    // A World with a loop does not index, so no tick ever reaches pushbackOf with one.
+    expect(() => withPeople(base, { orderValues: [...rules.verbs.orderValues, row('policy:self', 'policy:self')] })).toThrow('loops back to itself');
   });
 });
 

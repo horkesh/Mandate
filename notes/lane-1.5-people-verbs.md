@@ -83,7 +83,14 @@ The counters are M2's eight, each answering only its kinds of reason:
 
 1. **The Union fugitive-policy rows are not authored.** The mechanism is built and tested: the `fugitive-policy` gate topic, the `notCheaperThan` floor (`return` never cheaper than `approve-holding`), and pushback over every side member. The rows themselves are 1.11's data and need the gate reviewer's sign-off. Both packs carry only the six `verb:` rows.
 2. **The practice-clash term is not modelled.** There is no data for it.
-3. **`lacks_resources` never arises in an audience.** `goalTerms` sets `required: 0` and the reading context offers `available: 1000`, because force ratio is the planner's (lane 1.2), not compliance's. So M2's case 7 is ported as "a promised reinforcement is an order to another holder, who answers it". Its other half, "counts only as far as promises are believed", has no shortfall to shrink until something feeds `required`.
+3. **The audience reads the chosen plan's terms during a plan** (the lead's ruling on review item 7; `tick/audience-plan.ts`). They are built as lane 1.2's `editDirective` builds them, with no edit:
+   - boldness from his own best;
+   - `required` from the candidate's men needed against what it commits;
+   - support from its requests.
+
+   What he holds reads as 500 on `editDirective`'s scale (`PLAN_HOLDS`). A promised reinforcement adds its men on that scale, at the principal's credibility. So M2's case 7 is now ported whole: the stated shortfall shrinks as far as the promise is believed.
+
+   Before a plan, the audience stays on the goal's terms, which carry no `required`. Goals are not given one, because the force-ratio number has one owner, the planner.
 4. **Stance reversal pricing waits for 1B.** Stances are recorded only, as approved.
 5. **Freelancing is not ported**, as approved.
 6. **Consult goes by courier only.**

@@ -64,14 +64,31 @@ export interface AudienceOutcome {
   readonly reinforce: { readonly from: PostId; readonly men: number } | null;
 }
 
-/** The audience's subject: his plan's terms, before or during; or a goal of `prospective` kind not yet sent ("before"). */
-function subject(world: ReadingWorld, state: State, post: PostId, prospective: 'hold' | 'advance' | null): { readonly terms: DirectiveTerms; readonly about: 'before' | 'during' } | string {
+/**
+ * A plan as its holder reads it (`tick/audience-plan.ts`): the chosen candidate's terms as lane 1.2's `editDirective`
+ * builds them, and the strength it commits. `editDirective`'s `required` is on a scale where 500 is "the men the plan
+ * commits are enough", so what he holds for it reads as 500 on the same scale (`PLAN_HOLDS`).
+ */
+export interface PlanReading {
+  readonly terms: DirectiveTerms;
+  readonly strength: number;
+}
+
+/** What the post holds for its plan, on `editDirective`'s scale for `required` (its men needed * 500 / the men committed). */
+export const PLAN_HOLDS = 500;
+
+/**
+ * The audience's subject: the chosen plan's terms when it is read (`planned`), before approval or during execution;
+ * else the goal's terms; or a goal of `prospective` kind not yet sent ("before").
+ */
+function subject(world: ReadingWorld, state: State, post: PostId, prospective: 'hold' | 'advance' | null, planned: PlanReading | null): { readonly terms: DirectiveTerms; readonly about: 'before' | 'during' } | string {
   const plan = state.planRecords[post];
   if (plan === undefined) {
     if (prospective === null) return `${post} has no plan to talk about`;
     return { terms: goalTerms(world.map.world.rules.people, prospective), about: 'before' };
   }
-  return { terms: goalTerms(world.map.world.rules.people, goalKindOf(plan.planGoal)), about: plan.planStatus === 'approved' ? 'during' : 'before' };
+  const about = plan.planStatus === 'approved' ? 'during' : 'before';
+  return { terms: planned?.terms ?? goalTerms(world.map.world.rules.people, goalKindOf(plan.planGoal)), about };
 }
 
 /**
@@ -87,10 +104,11 @@ export function previewAudience(
   counters: readonly CounterTerms[],
   day: number,
   prospective: 'hold' | 'advance' | null = null,
+  planned: PlanReading | null = null,
 ): AudienceOutcome | string {
   const holder = state.postStates[post]?.postHolder ?? null;
   if (holder === null) return `${post} is not held`;
-  const about = subject(world, state, post, prospective);
+  const about = subject(world, state, post, prospective, planned);
   if (typeof about === 'string') return about;
   const rules = world.map.world.rules.people;
   const costOnly = new Set(world.map.world.vocabularies.values.filter((v) => v.costOnly).map((v) => v.id));
@@ -161,7 +179,12 @@ export function previewAudience(
   }
   // His answer with the counters applied: what holding the audience would leave him saying.
   const scratch = applyPeopleChanges(state, changes, day, rules, world.map.world.vocabularies.ranks);
-  const response = answerOrder(world, scratch, holder, principal, terms, reinforce === null ? {} : { supportPromised: ['reinforcement'] });
+  // A promised reinforcement counts toward what he holds for the plan only as far as the principal's promises are
+  // believed (M2's case 7): its men on the plan's scale, scaled by his credibility.
+  const believed = reinforce === null || planned === null || planned.strength === 0 ? 0 : Math.trunc((Math.trunc((reinforce.men * PLAN_HOLDS) / planned.strength) * rules.context.leaderCredibility) / 1000);
+  const available = planned === null ? undefined : Math.min(1000, PLAN_HOLDS + believed);
+  const means = { ...(available === undefined ? {} : { available }), ...(reinforce === null ? {} : { supportPromised: ['reinforcement'] }) };
+  const response = answerOrder(world, scratch, holder, principal, terms, means);
   const stated = response.statedReasons;
   const options = COUNTER_KINDS.map((counter) => ({ counter, answers: stated.filter(COUNTER_ANSWERS[counter]) })).filter(
     (o) => o.answers.length > 0 || o.counter === 'threaten' || (o.counter === 'frame' && frames.length > 0),

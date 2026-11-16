@@ -26,6 +26,7 @@ import { traitsOf } from '../people/traits.ts';
 import { recordResponse, responseOf } from '../proxy/responses.ts';
 import { answerOrder, orderTerms } from '../reading/orders.ts';
 import { previewAudience, recordAudience } from '../audience/audience.ts';
+import { planReading } from './audience-plan.ts';
 import type { State } from '../root-state.ts';
 import { dateOfDay, formatIsoDate } from '../world/calendar.ts';
 import { headquartersOf, isFieldPost } from '../seats/posts.ts';
@@ -155,7 +156,7 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
       if (!postOnSide(ctx, start, c.to, principal) || holder === null) return reject('unknown_post');
       const last = start.audienceHeld[holder];
       if (last !== undefined && ctx.day - last.audDay < rules.verbs.audience.cooldownDays) return reject('too_soon');
-      const outcome = previewAudience(world, start, principal, c.to, c.counters, ctx.day);
+      const outcome = previewAudience(world, start, principal, c.to, c.counters, ctx.day, null, planReading(world, start, c.to, ctx.day));
       if (typeof outcome === 'string' || outcome.problems.length > 0) return reject('bad_counters');
       let state = applyPeopleChanges(start, outcome.changes, ctx.day, rules, world.map.world.vocabularies.ranks);
       for (const o of outcome.recall) state = recallObserver(state, o);

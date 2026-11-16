@@ -120,6 +120,18 @@ export function verbRulesProblems(attention: AttentionRules | undefined, verbs: 
   for (const r of verbs.orderValues) {
     if (r.notCheaperThan !== null && !orders.has(r.notCheaperThan)) problems.push(`people rule orderValues.${r.order}.notCheaperThan names ${r.notCheaperThan}, which is not a row`);
   }
+  // Review S1: `pushbackOf` follows `notCheaperThan`, so a chain that comes back to a row would recurse without end.
+  // Each row on a loop reports it; a row merely leading into another's loop does not.
+  const floorOf = new Map(verbs.orderValues.map((r) => [r.order, r.notCheaperThan]));
+  for (const r of verbs.orderValues) {
+    const chain = [r.order];
+    let next = r.notCheaperThan;
+    while (next !== null && floorOf.has(next) && !chain.includes(next)) {
+      chain.push(next);
+      next = floorOf.get(next) ?? null;
+    }
+    if (next === r.order) problems.push(`people rule orderValues.${r.order}.notCheaperThan loops back to itself: ${[...chain, r.order].join(' -> ')}`);
+  }
   for (const verb of ['appoint', 'relieve', 'transfer', 'inquire', 'consult', 'observer']) if (!orders.has(`verb:${verb}`)) problems.push(`people rule orderValues has no row for verb:${verb}`);
   for (const mode of ['quiet_department', 'own_request', 'outright'] as const) {
     const r = verbs.relief.find((x) => x.mode === mode);
