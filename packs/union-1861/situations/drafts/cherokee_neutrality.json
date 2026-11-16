@@ -1,0 +1,55 @@
+{
+  "id": "cherokee_neutrality",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.cherokee_neutrality.title",
+  "text": "situation.cherokee_neutrality.text",
+  "earliest": "1861-05-17",
+  "event": {
+    "dayAtLeast": 73
+  },
+  "railroad": "Principal Chief Ross's proclamation of neutrality of 17 May, the Cherokee government's own act (0070); a nation answers events and news, never a principal's choice, and its council is not modelled, so the proclamation comes on its date",
+  "actingGovernment": "nation_cherokee",
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "government_closed",
+        "subject": "nation_cherokee",
+        "delta": 1,
+        "reason": "agency:nation-neutrality",
+        "side": null
+      }
+    },
+    {
+      "setFlag": "cherokee_neutral"
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_secretary_interior"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "indian-territory-1861"
+    ],
+    "placement": "event",
+    "risks": [
+      "agency"
+    ],
+    "actingSide": null
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-13 p. 490 (Ross's proclamation of 17 May)"
+    },
+    {
+      "source": "NOTE-indian-territory-1861-sources",
+      "at": "Ross, 17 May"
+    }
+  ]
+}

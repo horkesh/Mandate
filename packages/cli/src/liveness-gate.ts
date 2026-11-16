@@ -125,9 +125,7 @@ const FEW_BATTLE_DAYS = 'the reference runs fight only a few battle-days (one in
 
 /** Mechanics that fire in neither reference run: the reason, and the kernel test that proves the mechanic is alive. */
 export const QUIET: Readonly<Record<string, QuietReason>> = {
-  'command.government_closed': { why: 'no pack situation closes a neutral government yet (the closing of a neutral government waits for authored situations)', test: 'packages/kernel/test/governments.test.ts', needle: 'takes the default "close" on day 2' },
   'command.government_reopened': { why: 'no pack situation reopens one yet', test: 'packages/kernel/test/governments.test.ts', needle: 'reopening and repeats are plain' },
-  'command.side_changed': { why: 'a neutral government changes side only by a situation, and none is authored yet (0065, 0067)', test: 'packages/kernel/test/department-sides.test.ts', needle: 'end to end through the tick: on day 2 its land stops being neutral ground' },
   'command.proposal_refused': { why: 'a refusal needs a proposal that cannot be applied; honest situations propose none', test: 'packages/kernel/test/governments.test.ts', needle: 'refuses what it cannot be' },
   'commands.rejected': { why: 'rule seats send only commands the menu offers; a bad command is a seat bug', test: 'packages/kernel/test/seats-orders.test.ts', needle: 'rejects commands the kernel cannot carry' },
   'infrastructure.changed': { why: NO_PROPOSER, test: 'packages/kernel/test/infrastructure.test.ts', needle: 'damages and repairs edges and depots' },
@@ -234,11 +232,14 @@ const UNION_BANDS: Record<string, GateBand> = {
   'situations.decided': around(8),
   'situations.delegated': notHere('no authored Union situation in this window names a delegate as its historical default; the testbed run fires it'),
   'situations.fired': around(9),
-  'situations.notice_reports': around(1),
-  'situations.noticed': around(1),
+  'situations.notice_reports': around(4),
+  'situations.noticed': around(4),
   'situations.options_changed': around(3),
   'situations.orders': around(24),
-  'situations.proposals': notHere('the authored opening situations propose no change of side yet; the testbed run fires it'),
+  // Two border governments change side (a legislature's vote, a provisional government); a third's neutrality closes its land.
+  'situations.proposals': around(3),
+  'command.side_changed': around(2),
+  'command.government_closed': around(1),
   'situations.resurfaced': around(2),
   'situations.staff_lines': around(8),
   'situations.surfaced': around(9),
@@ -254,6 +255,8 @@ const UNION_BANDS: Record<string, GateBand> = {
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
 const TESTBED_BANDS: Record<string, GateBand> = {
+  'command.government_closed': notHere('no testbed situation closes a neutral government in this run; union-1861 fires it (a border state’s neutrality)'),
+  'command.side_changed': notHere('no testbed situation changes a government’s side in this run; union-1861 fires it'),
   // Lane 1.11: the testbed's rule-seat principal makes no call, and its situations neither resurface nor change their options in this run; union-1861 fires them.
   'recruitment.called': notHere('the testbed\'s principal makes no call for regiments; union-1861\'s S09 call fires it'),
   'recruitment.answered': notHere('the testbed\'s principal makes no call for regiments; union-1861\'s S09 call fires it'),

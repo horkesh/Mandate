@@ -1,0 +1,63 @@
+{
+  "id": "virginia_secedes",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.virginia_secedes.title",
+  "text": "situation.virginia_secedes.text",
+  "earliest": "1861-04-17",
+  "event": {
+    "all": [
+      {
+        "decided": "call_for_troops",
+        "options": null
+      },
+      {
+        "dayAtLeast": 43
+      }
+    ]
+  },
+  "railroad": "the convention votes the ordinance on 17 April, after the call; a convention is not modelled, so its vote comes on its date once the call is made",
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "department_side",
+        "subject": "st_virginia",
+        "delta": 1,
+        "reason": "secession-ordinance",
+        "side": "confederate"
+      }
+    },
+    {
+      "setFlag": "virginia_seceded"
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_secretary_state",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "governor-wire"
+  },
+  "gate": {
+    "topics": [
+      "cause-of-secession"
+    ],
+    "placement": "event",
+    "risks": [
+      "lost-cause"
+    ],
+    "actingSide": null
+  },
+  "citations": [
+    {
+      "source": "APPLETONS",
+      "at": "Virginia: ordinance of 17 April, ratified 23 May"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "3.6; chronology"
+    }
+  ]
+}

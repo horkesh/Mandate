@@ -1,0 +1,63 @@
+{
+  "id": "tennessee_secedes",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.tennessee_secedes.title",
+  "text": "situation.tennessee_secedes.text",
+  "earliest": "1861-05-06",
+  "event": {
+    "all": [
+      {
+        "decided": "call_for_troops",
+        "options": null
+      },
+      {
+        "dayAtLeast": 62
+      }
+    ]
+  },
+  "railroad": "the legislature declares independence on 6 May, after the call, subject to the vote of 8 June; a legislature is not modelled, so its act comes on its date once the call is made",
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "department_side",
+        "subject": "st_tennessee",
+        "delta": 1,
+        "reason": "secession-ordinance",
+        "side": "confederate"
+      }
+    },
+    {
+      "setFlag": "tennessee_seceded"
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_secretary_state",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "governor-wire"
+  },
+  "gate": {
+    "topics": [
+      "cause-of-secession"
+    ],
+    "placement": "event",
+    "risks": [
+      "lost-cause"
+    ],
+    "actingSide": null
+  },
+  "citations": [
+    {
+      "source": "APPLETONS",
+      "at": "Tennessee: declaration of 6 May, popular vote 8 June"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "3.6; chronology"
+    }
+  ]
+}

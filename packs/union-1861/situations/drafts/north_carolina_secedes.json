@@ -1,0 +1,63 @@
+{
+  "id": "north_carolina_secedes",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.north_carolina_secedes.title",
+  "text": "situation.north_carolina_secedes.text",
+  "earliest": "1861-05-20",
+  "event": {
+    "all": [
+      {
+        "decided": "call_for_troops",
+        "options": null
+      },
+      {
+        "dayAtLeast": 76
+      }
+    ]
+  },
+  "railroad": "the convention votes on 20 May, after the call; a convention is not modelled, so its vote comes on its date once the call is made",
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "department_side",
+        "subject": "st_north_carolina",
+        "delta": 1,
+        "reason": "secession-ordinance",
+        "side": "confederate"
+      }
+    },
+    {
+      "setFlag": "north_carolina_seceded"
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_secretary_state",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "governor-wire"
+  },
+  "gate": {
+    "topics": [
+      "cause-of-secession"
+    ],
+    "placement": "event",
+    "risks": [
+      "lost-cause"
+    ],
+    "actingSide": null
+  },
+  "citations": [
+    {
+      "source": "APPLETONS",
+      "at": "North Carolina: ordinance of 20 May"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "3.6; chronology"
+    }
+  ]
+}

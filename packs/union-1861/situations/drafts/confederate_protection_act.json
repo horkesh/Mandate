@@ -1,0 +1,44 @@
+{
+  "id": "confederate_protection_act",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.confederate_protection_act.title",
+  "text": "situation.confederate_protection_act.text",
+  "earliest": "1861-05-21",
+  "event": {
+    "dayAtLeast": 77
+  },
+  "railroad": "the Confederate Congress's act of 21 May for the protection of certain Indian tribes, which precedes every treaty; its Congress is not modelled, so the act comes on its date, independent of either principal's choices",
+  "effects": [
+    {
+      "setFlag": "confederate_protection_act"
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_secretary_interior"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "indian-territory-1861"
+    ],
+    "placement": "event",
+    "risks": [
+      "agency"
+    ],
+    "actingSide": "confederate"
+  },
+  "citations": [
+    {
+      "source": "CSA-STAT",
+      "at": "the act of 21 May 1861 for the protection of certain Indian tribes"
+    },
+    {
+      "source": "NOTE-indian-territory-1861-sources",
+      "at": "the act of 21 May"
+    }
+  ]
+}

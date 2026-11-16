@@ -1,0 +1,63 @@
+{
+  "id": "arkansas_secedes",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.arkansas_secedes.title",
+  "text": "situation.arkansas_secedes.text",
+  "earliest": "1861-05-06",
+  "event": {
+    "all": [
+      {
+        "decided": "call_for_troops",
+        "options": null
+      },
+      {
+        "dayAtLeast": 62
+      }
+    ]
+  },
+  "railroad": "the convention votes on 6 May, after the call; a convention is not modelled, so its vote comes on its date once the call is made",
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "department_side",
+        "subject": "st_arkansas",
+        "delta": 1,
+        "reason": "secession-ordinance",
+        "side": "confederate"
+      }
+    },
+    {
+      "setFlag": "arkansas_seceded"
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_secretary_state",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "governor-wire"
+  },
+  "gate": {
+    "topics": [
+      "cause-of-secession"
+    ],
+    "placement": "event",
+    "risks": [
+      "lost-cause"
+    ],
+    "actingSide": null
+  },
+  "citations": [
+    {
+      "source": "APPLETONS",
+      "at": "Arkansas: ordinance of 6 May, 69 to 1"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "3.6; chronology"
+    }
+  ]
+}
