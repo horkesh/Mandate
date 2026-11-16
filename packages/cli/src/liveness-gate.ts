@@ -296,6 +296,9 @@ const UNION_BANDS: Record<string, GateBand> = {
   'regions.self_emancipation': notHere('the Union pack has no census rows until lane 1.10 sources them, so the term has nowhere to run; the testbed run fires it'),
   'regions.reached_lines': notHere('the Union pack has no census rows until lane 1.10 sources them; the testbed run fires it'),
   'seats.choices': around(2),
+  // Lane 1.12: battle orders are asked where a battle can be fought today; the Union run's one battle-day comes on an
+  // arrival whose last leg starts and ends the same day, so no morning finds an army on its way in.
+  'seats.battle_orders': notHere('the one Union battle-day falls on an arrival whose last leg starts and ends that day, so no morning menu reaches it; the testbed run fires it'),
   // The two opening goals: the Charleston command's plan goes ahead; the Washington garrison's holds, so it is reviewed and approved.
   ...planBands({ drafts: 2, reviewed: 1, wentAhead: 1, goalFit: 0, supply: 2 }),
   'seats.defaulted': notHere('every request is answered in this run; the silent-seats exercise run fires it'),
@@ -382,6 +385,8 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'regions.self_emancipation': around(72),
   'regions.reached_lines': around(36),
   'seats.choices': around(3),
+  // Lane 1.12: a commander marching on a held region is asked for his orders the morning before he arrives.
+  'seats.battle_orders': around(1),
   'seats.defaulted': notHere('every request is answered in this run; the silent-seats exercise run fires it'),
   // Three goals (each side's opening, and the situation's order to press on): every plan moves and goes ahead as drafted.
   ...planBands({ drafts: 3, reviewed: 0, wentAhead: 3, goalFit: 2, supply: 2 }),

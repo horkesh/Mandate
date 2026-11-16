@@ -31,7 +31,7 @@
  * principals, who must do their historical jobs for the Phase 1 history run
  * (FOUNDATION section 11).
  */
-import type { DelegatedMenu, GoalTerms, OptionView, PlanMenu, PrincipalMenu, ReportView, RouteOption, Seat, SeatAnswer, SeatCommand, SeatRequest } from '@mandate/kernel/seat-api';
+import type { BattleMenu, DelegatedMenu, GoalTerms, OptionView, PlanMenu, PrincipalMenu, ReportView, RouteOption, Seat, SeatAnswer, SeatCommand, SeatRequest } from '@mandate/kernel/seat-api';
 
 export interface RuleSeatPolicy {
   /** The day a principal orders his opening advance on the objective. */
@@ -73,6 +73,11 @@ export function chooseDelegated(menu: DelegatedMenu): string[] {
     if (best === -1 || o.score > options[best]!.score) best = i;
   });
   return best === -1 ? [] : [options[best]!.optionId];
+}
+
+/** A commander's battle orders: `judge` at every point, so his traits decide each on the spot. */
+export function battleOrders(menu: BattleMenu): SeatCommand {
+  return { cmd: 'battle', post: menu.post, commit: 'judge', night: 'judge', cutOff: 'judge', pursue: 'judge' };
 }
 
 /** The quickest route that costs nothing, else the quickest at all; ties to the route's name. */
@@ -133,6 +138,8 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
 export function respond(request: SeatRequest, policy: RuleSeatPolicy = DEFAULT_RULE_SEAT_POLICY): SeatAnswer {
   const menu = request.menu;
   if (menu.menuKind === 'plan-selection') return { answerKind: 'choose', option: choosePlan(menu).optionId };
+  // A commander's battle (lane 1.12): every point to his traits, so a rule seat's battles are the trait rule's own.
+  if (menu.menuKind === 'battle') return { answerKind: 'commands', commands: [battleOrders(menu)] };
   if (menu.menuKind === 'delegated-situation') return { answerKind: 'commands', commands: [{ cmd: 'decide', situation: menu.choice.situation, options: chooseDelegated(menu) }] };
   return { answerKind: 'commands', commands: principalOrders(menu, request.view.reports, request.requestDay, policy) };
 }

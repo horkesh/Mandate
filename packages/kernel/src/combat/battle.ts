@@ -25,6 +25,7 @@
  * - **Streams.** One per battle-day, `combat/<battle>/<day>`, with six draws; one for its commanders,
  *   `combat/<battle>/<day>/leaders`, with two. Nothing else draws, so reading a record never shifts a later draw.
  */
+import { ALL_JUDGE, JUDGE, notPossible, ordered, type BattleOrders } from './orders.ts';
 import { strictCompare } from '../compare.ts';
 import type { CombatCommandChange } from '../command/command.ts';
 import type { ControlDelta } from '../control/control.ts';
@@ -44,7 +45,7 @@ import { otherEnd } from '../world/index.ts';
 import { commitAtDawn, type CommanderView } from './decide.ts';
 import { battleId, lastDay, openBattleIn, type BattleDay, type BattleId, type BattleRecordChange, type BattleTerm } from './records.ts';
 import { leaderHits, resolveDay, type BlockInput, type SideInput } from './resolve.ts';
-import type { BattleType, Commit } from './rules.ts';
+import type { BattleType, CombatRules, Commit } from './rules.ts';
 
 /** One side's presence in a region. */
 export interface Presence {
@@ -137,6 +138,14 @@ export function presenceByRegion(ground: MarchGround, state: State): Map<RegionI
   return out;
 }
 
+/** Whether a side may attack today: a block of it marched in and presses (0064), and is not recovering from a rout. */
+export function mayAttackToday(rules: CombatRules, state: State, side: Presence, day: number): boolean {
+  return side.pressing.some((b) => {
+    const routed = state.forceBlockStates[b]!.fbRoutedDay;
+    return routed === null || day - routed >= rules.morale.recoveryDays;
+  });
+}
+
 /** A commander as his decisions read him: a man's own traits and stats, or the pack's unknown man for a vacant post. */
 export function commanderView(world: PrincipalLookup, state: State, person: PersonId | null): CommanderView {
   const rules = world.map.world.rules.people;
@@ -208,7 +217,7 @@ function battleTypeOf(state: State, region: RegionId, day: number, commits: read
 }
 
 /** Today's battles and occupations, with the proposals they make. */
-export function combatDay(world: PrincipalLookup, ground: MarchGround, state: State, day: number): CombatResult {
+export function combatDay(world: PrincipalLookup, ground: MarchGround, state: State, day: number, orders: ReadonlyMap<PostId, BattleOrders> = new Map()): CombatResult {
   const rules = ground.map.world.rules.combat;
   const presence = presenceByRegion(ground, state);
   const out = {
@@ -252,13 +261,16 @@ export function combatDay(world: PrincipalLookup, ground: MarchGround, state: St
     const breaking = sides.map((s) => last !== null && last.bdayDay === day - 1 && last.bdaySides.find((x) => x.bsideFaction === s.faction)?.bsideCutOff === 'break_out');
     const command = sides.map((s) => sideCommand(state, s.blocks));
     const views = command.map((c) => commanderView(world, state, c.person));
+    // His seat's orders for today (lane 1.12): a vacant post's side, or a post with no orders, is left to judgement.
+    const given = command.map((c) => (c.post === null || c.person === null ? ALL_JUDGE : (orders.get(c.post) ?? ALL_JUDGE)));
     const commits = sides.map((s, i) => {
       if (breaking[i]) return { choice: 'all_out' as Commit, terms: [{ btermKind: 'breaking_out', btermValue: 0, btermSource: command[i]!.person } as BattleTerm] };
-      const mayAttack = s.pressing.some((b) => {
-        const routed = state.forceBlockStates[b]!.fbRoutedDay;
-        return routed === null || day - routed >= rules.morale.recoveryDays;
-      });
-      return commitAtDawn(rules, views[i]!, mayAttack, s.men, sides[1 - i]!.men);
+      const mayAttack = mayAttackToday(rules, state, s, day);
+      const rule = commitAtDawn(rules, views[i]!, mayAttack, s.men, sides[1 - i]!.men);
+      const order = given[i]!.commit;
+      // A side that may not attack defends whatever it was ordered: the order is recorded as not carried out.
+      if (!mayAttack && order !== JUDGE && order !== 'defend') return { choice: rule.choice, terms: [...rule.terms, notPossible(command[i]!.person)] };
+      return ordered(rule, order, command[i]!.person);
     });
     if (commits.every((c) => c.choice === 'defend')) {
       if (record !== null) closeQuiet(open!);
@@ -302,6 +314,7 @@ export function combatDay(world: PrincipalLookup, ground: MarchGround, state: St
         breakingOut: breaking[i]!,
         surprised: !forewarned(state, command[i]!.person, region),
         pursuedPermille: type === 'rearguard' && s.faction !== attacker ? pursuitRate(ground, state, region, day, s.faction, sides.find((x) => x.faction === attacker)!) : 0,
+        orders: given[i]!,
       }),
     );
     const resolved = resolveDay(rules, { day, dayNumber, type, attacker, terrain, frontageMen: terrainRow.frontageMen, terrainLossPermille: terrainRow.lossPermille, sides: [inputs[0]!, inputs[1]!] }, createStream(state.gameSeed, `combat/${id}/${day}`));

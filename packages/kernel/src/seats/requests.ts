@@ -8,8 +8,12 @@
  */
 import { strictCompare } from '../compare.ts';
 import { commandedBlocks, heldPost } from '../command/command.ts';
+import { commanderView, mayAttackToday, presenceByRegion, sideCommand } from '../combat/battle.ts';
+import { believedRatio, commitAtDawn, cutOffChoice, pursuitChoice, standAtNight } from '../combat/decide.ts';
+import { BATTLE_ORDER_OPTIONS } from '../combat/order-kinds.ts';
+import { openBattleIn } from '../combat/records.ts';
 import { buildControlIndex } from '../control-index/control-index.ts';
-import { isNaval } from '../forces/forces.ts';
+import { factionOfBlock, isNaval } from '../forces/forces.ts';
 import type { FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
 import { ORDER_ROUTES, routeLatency, type LatencyMap } from '../messages/latency.ts';
 import type { MarchGround } from '../movement/march.ts';
@@ -22,7 +26,7 @@ import { passageOf } from '../tick/passage.ts';
 import { choosingPosts, optionView, planKey, planOptions } from '../tick/plans.ts';
 import { createViewCache, viewFor, type ViewCache } from '../view/view.ts';
 import { dateOfDay } from '../world/calendar.ts';
-import type { CommandablePost, DelegatedMenu, PlanMenu, PlanReview, PrincipalMenu, RouteOption, SeatRequest, SituationChoice } from './api.ts';
+import type { BattleMenu, CommandablePost, DelegatedMenu, PlanMenu, PlanReview, PrincipalMenu, RouteOption, SeatRequest, SituationChoice } from './api.ts';
 import { fieldPosts, headquartersOf, postFaction, relayChain } from './posts.ts';
 import { seatIdFor } from './seats.ts';
 import { latencyMapFor, type SeatsWorld } from './world.ts';
@@ -148,6 +152,74 @@ export function situationChoice(def: SituationDef, open: readonly string[], dele
 }
 
 /**
+ * The morning's battle menus (lane 1.12). A battle can be fought today where two sides' land troops stand and one is
+ * open or a side may attack, or where one side's troops stand and another's are marching in (a battle on arrival: its
+ * commander orders it before he arrives). Neutral ground nobody holds is passed, never fought over. The holder of each
+ * side's commanding post there, if he is serving, is asked for his orders; `judged` is his trait rule's choice on this
+ * morning's numbers as he sees them.
+ */
+export function battleMenus(world: SeatsWorld, state: State, ground: MarchGround, day: number): { readonly menu: BattleMenu; readonly holder: PersonId }[] {
+  const rules = world.map.world.rules.combat;
+  const out: { menu: BattleMenu; holder: PersonId }[] = [];
+  const standing = presenceByRegion(ground, state);
+  // Land troops on a leg, by the region they march to and their side: they press there when they arrive.
+  const marching = new Map<RegionId, Map<FactionId, ForceBlockId[]>>();
+  for (const id of Object.keys(state.forceLocations).sort(strictCompare) as ForceBlockId[]) {
+    const loc = state.forceLocations[id]!;
+    if (loc.locMarch === null || loc.locAboard !== null || isNaval(world.map, state, id) || state.forceBlockStates[id]!.fbSurrenderedDay !== null) continue;
+    const faction = factionOfBlock(world.map, state, id);
+    if (faction === null) continue;
+    const to = marching.get(loc.locMarch.marchTo) ?? new Map<FactionId, ForceBlockId[]>();
+    marching.set(loc.locMarch.marchTo, to);
+    to.set(faction, [...(to.get(faction) ?? []), id]);
+  }
+  for (const region of [...new Set([...standing.keys(), ...marching.keys()])].sort(strictCompare)) {
+    if (Object.keys(state.regionControl[region] ?? {}).length === 0 && ground.network.neutralGround?.[region] !== undefined) continue;
+    const here = standing.get(region) ?? [];
+    const coming = marching.get(region) ?? new Map<FactionId, ForceBlockId[]>();
+    const factions = [...new Set([...here.map((s) => s.faction), ...coming.keys()])].sort(strictCompare);
+    if (factions.length < 2 || here.length === 0) continue;
+    const sides = factions.slice(0, 2).map((faction) => {
+      const s = here.find((x) => x.faction === faction);
+      const arriving = coming.get(faction) ?? [];
+      const blocks = [...(s?.blocks ?? []), ...arriving];
+      const men = blocks.reduce((n, b) => n + (state.forceBlockStates[b]!.fbStrength ?? 0), 0);
+      return { faction, blocks, men, pressing: [...(s?.pressing ?? []), ...arriving], unknown: [] as ForceBlockId[], arriving: arriving.length > 0 };
+    });
+    // Only where a battle can be fought today: one is open, a side is marching in, or a side may attack.
+    const open = openBattleIn(state, region);
+    if (open === null && !sides.some((s) => s.arriving || mayAttackToday(rules, state, s, day))) continue;
+    sides.forEach((side, i) => {
+      const command = sideCommand(state, side.blocks);
+      if (command.post === null || command.person === null) return;
+      const view = commanderView(world, state, command.person);
+      const enemy = sides[1 - i]!.men;
+      // Troops marching in press when they arrive (0064); standing troops by the battle model's own rule.
+      const mayAttack = side.arriving || mayAttackToday(rules, state, side, day);
+      out.push({
+        holder: command.person,
+        menu: {
+          menuKind: 'battle',
+          post: command.post,
+          region,
+          battle: open,
+          believedRatio: believedRatio(view, side.men, enemy),
+          mayAttack,
+          judged: {
+            commit: commitAtDawn(rules, view, mayAttack, side.men, enemy).choice,
+            night: standAtNight(rules, view, side.men, enemy).choice,
+            cutOff: cutOffChoice(rules, view, side.men, enemy).choice,
+            pursue: pursuitChoice(rules, view, side.men, enemy).choice,
+          },
+          options: BATTLE_ORDER_OPTIONS,
+        },
+      });
+    });
+  }
+  return out;
+}
+
+/**
  * The requests for the morning of day `state.stateDay + 1`, in seat order:
  * every principal, every delegate holding a situation, and every commander
  * with more than one consistent option.
@@ -175,6 +247,10 @@ export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCach
     const view = viewFor(world, state, seat, cache);
     const menu: PlanMenu = { menuKind: 'plan-selection', post, goal: view.goal!, options };
     out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: planKey(post, day), view, menu }));
+  }
+  for (const { menu, holder } of battleMenus(world, state, ground.march, day)) {
+    const seat = seatIdFor(holder);
+    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `battle:${menu.post}:${day}`, view: viewFor(world, state, seat, cache), menu }));
   }
   return out.sort((a, b) => (a.requestSeat < b.requestSeat ? -1 : a.requestSeat > b.requestSeat ? 1 : a.requestKey < b.requestKey ? -1 : 1));
 }

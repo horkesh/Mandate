@@ -12,6 +12,8 @@
  * Seats answer at turn boundaries (decision 0027). Their answers go into the
  * command log; replay and resume read the log and never ask a seat again.
  */
+import type { BATTLE_ORDER_OPTIONS, CutOffChoice, NightChoice, Pursuit } from '../combat/order-kinds.ts';
+import type { Commit } from '../combat/rules.ts';
 import type { FactionId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import type { GoalTerms, SeatCommand } from '../log/commands.ts';
 import type { RouteKind } from '../messages/latency.ts';
@@ -136,7 +138,26 @@ export interface DelegatedMenu {
   readonly choice: SituationChoice;
 }
 
-export type Menu = PrincipalMenu | PlanMenu | DelegatedMenu;
+/**
+ * A commander whose men hold his side where the enemy's stand (lane 1.12): his orders for the day's battle, one answer
+ * at each decision point, or `judge` to leave it to his traits on the spot. `judged` is what his traits would choose on
+ * this morning's numbers as he believes them; the battle itself decides `judge` points on the evening's numbers.
+ */
+export interface BattleMenu {
+  readonly menuKind: 'battle';
+  readonly post: PostId;
+  readonly region: RegionId;
+  /** The battle open there, or null when the armies stand together and none is open yet. */
+  readonly battle: string | null;
+  /** His own men against the enemy as he sees them, permille. */
+  readonly believedRatio: number;
+  /** Whether his side may attack today (its blocks marched in and none is recovering from a rout). */
+  readonly mayAttack: boolean;
+  readonly judged: { readonly commit: Commit; readonly night: NightChoice; readonly cutOff: CutOffChoice; readonly pursue: Pursuit };
+  readonly options: typeof BATTLE_ORDER_OPTIONS;
+}
+
+export type Menu = PrincipalMenu | PlanMenu | DelegatedMenu | BattleMenu;
 
 export interface SeatRequest {
   /** The day the answer applies to (the morning of it). */
