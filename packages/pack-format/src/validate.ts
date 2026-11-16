@@ -10,7 +10,7 @@
  * the committed-pack check can point at the generated JSON.
  */
 import { phase0, world as w } from '@mandate/kernel';
-import { citationsIn } from './banned-sources.ts';
+import { citationsIn, hasWeakMarker } from './banned-sources.ts';
 import type { GateData } from './gate.ts';
 import { IntlMessageFormat } from 'intl-messageformat';
 import { type Issue, IssueSink } from './issues.ts';
@@ -35,6 +35,8 @@ export interface PackData {
   readonly gate?: GateData | null;
   /** Sources the gate bans as evidence (`gate/source-policy.json`), checked in every citation of the World and its starts (lane 1.8b). */
   readonly bannedSources?: readonly string[];
+  /** Sources the gate marks weak (`gate/source-policy.json`): a people cell resting only on them is refused (lane 1.11a). */
+  readonly weakSources?: readonly string[];
 }
 
 /** A record's address: `world` or `scenario:<id>`, a table, an index, and optionally a field path inside the record. */
@@ -173,6 +175,11 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   for (const problem of [...phase0.recruitmentRuleProblems(world.rules.recruitment), ...phase0.selfEmancipationRuleProblems(world.rules.selfEmancipation), ...phase0.menAndRegionsReferenceProblems(world)]) {
     err('rules-men-regions', W('rules', 0, 'recruitment'), problem, 'whole numbers in range, and an arm, post kinds, values and a faction the pack has');
   }
+  // Lane 1.6: the politics rules and what they name, by the kernel's own rule (it checks the same when it indexes a World).
+  for (const problem of phase0.politicsRulesProblems(world)) {
+    err('rules-politics', W('rules', 0, 'politics'), problem, 'blocs from the vocabulary with a side’s voices summing to 1000, chambers and sessions complete for their kind, papers whose editor is of their side');
+  }
+  world.rules.politics.chambers.forEach((c, i) => useKey(c.name, W('rules.politics.chambers', i, 'name')));
   // 0073: every rank has a kind from rankKinds, so a person can hold one of each kind at once.
   vocab.ranks.forEach((r, i) => term('rankKinds', r.kind, W('vocabularies.ranks', i, 'kind')));
 
@@ -362,6 +369,16 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
 
   // ---- people
   const people = idSet('people', world.people);
+  const clashable = new Set(world.rules.people.verbs.orderValues.flatMap((r) => r.clashes));
+  // Lane 1.11a (hard rule 7; 0074): a cell whose every admissible citation is weak is refused. A citation is weak when its
+  // source is on the gate's weak list (memoirs, self-reports, pointers) or banned, or its place carries a weak marker
+  // (`snippet`, `self-report`, `after-start`). A cell with a strong citation beside weak ones stands.
+  const weakSet = new Set([...(pack.weakSources ?? []), ...(pack.bannedSources ?? [])]);
+  const weakOnly = (cites: readonly w.Citation[]): boolean => {
+    const admissible = cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer');
+    return admissible.length > 0 && admissible.every((x) => weakSet.has(x.source) || hasWeakMarker(x.at));
+  };
+  const weakExpected = 'a citation of a source the gate does not mark weak (not a memoir, a self-report, a snippet, or evidence after the start date), or leave the cell unknown';
   world.people.forEach((p, i) => {
     const at = (f?: string) => W('people', i, f);
     useKey(p.name, at('name'));
@@ -383,6 +400,8 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
         const admissible = c.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer');
         if (admissible.length === 0) {
           err('centre-without-citation', at(`centres.${stat}`), `the ${stat} centre "${c.direction}" has no admissible citation`, 'a citation of a primary or secondary source (pointers do not count; FOUNDATION section 6)');
+        } else if (weakOnly(c.cites)) {
+          err('weak-citations-only', at(`centres.${stat}`), `the ${stat} centre "${c.direction}" rests only on weak citations`, weakExpected);
         }
       }
     }
@@ -394,6 +413,8 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
         if (c.cites.length > 0) warn('redundant-value', at(field), `an unknown ${field} centre carries citations`, 'a direction, or no citations');
       } else if (!p.invented && c.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer').length === 0) {
         err('centre-without-citation', at(field), `the ${field} centre "${c.direction}" has no admissible citation`, 'a citation of a primary or secondary source (pointers do not count; FOUNDATION section 6)');
+      } else if (!p.invented && c.direction !== null && weakOnly(c.cites)) {
+        err('weak-citations-only', at(field), `the ${field} centre "${c.direction}" rests only on weak citations`, weakExpected);
       }
     }
     // Lane 1.5: regard for others names people of the World, each cited.
@@ -402,6 +423,20 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       citeCheck(o.cites, at(`regardOthers[${j}].cites`), false, `regard toward ${o.toward}`);
       if (!p.invented && o.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer').length === 0) {
         err('centre-without-citation', at(`regardOthers[${j}]`), `regard toward ${o.toward} has no admissible citation`, 'a citation of a primary or secondary source');
+      } else if (!p.invented && weakOnly(o.cites)) {
+        err('weak-citations-only', at(`regardOthers[${j}]`), `regard toward ${o.toward} rests only on weak citations`, weakExpected);
+      }
+    });
+    // Lane 1.5b: a practice is one some row of the map clashes with (else it could never bite), each cited, never twice.
+    p.practices.forEach((pr, j) => {
+      if (!clashable.has(pr.practice)) err('unknown-reference', at(`practices[${j}].practice`), `practice "${pr.practice}" is not one any order of the map clashes with`, 'a practice named in some rules.people.verbs.orderValues row’s clashes');
+      if (p.practices.findIndex((x) => x.practice === pr.practice) !== j) err('duplicate-id', at(`practices[${j}]`), `practice "${pr.practice}" is listed twice`);
+      citeCheck(pr.cites, at(`practices[${j}].cites`), false, `practice "${pr.practice}"`);
+      if (!p.invented && pr.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer').length === 0) {
+        err('value-without-citation', at(`practices[${j}]`), `practice "${pr.practice}" has no admissible citation`, 'a citation of a primary or secondary source');
+      } else if (!p.invented && weakOnly(pr.cites)) {
+        // Lane 1.11a's rule reaches practices too: gate content resting only on weak citations is refused.
+        err('weak-citations-only', at(`practices[${j}]`), `practice "${pr.practice}" rests only on weak citations`, weakExpected);
       }
     });
     p.values.forEach((v, j) => {
@@ -410,6 +445,8 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       if (p.values.findIndex((x) => x.value === v.value) !== j) err('duplicate-id', at(`values[${j}]`), `value "${v.value}" is listed twice`);
       if (!p.invented && v.cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer').length === 0) {
         err('value-without-citation', at(`values[${j}]`), `value "${v.value}" has no admissible citation`, 'a citation of a primary or secondary source (0005: each centre cited)');
+      } else if (!p.invented && weakOnly(v.cites)) {
+        err('weak-citations-only', at(`values[${j}]`), `value "${v.value}" rests only on weak citations`, weakExpected);
       }
     });
     p.traits.forEach((t, j) => {
@@ -417,6 +454,8 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       citeCheck(t.cites, at(`traits[${j}].cites`), false, `trait "${t.trait}"`);
       if (!p.invented && t.cites.filter((x) => sources.get(x.source)?.kind !== 'pointer').length === 0) {
         err('trait-without-citation', at(`traits[${j}]`), `trait "${t.trait}" has no admissible citation`, 'a cited act (traits are proved by what he did)');
+      } else if (!p.invented && weakOnly(t.cites)) {
+        err('weak-citations-only', at(`traits[${j}]`), `trait "${t.trait}" rests only on weak citations`, weakExpected);
       }
     });
     p.ranks.forEach((r, j) => {
@@ -733,18 +772,18 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   }
 
   // A6 in every citation (lane 1.8b): a source the gate bans as evidence may not be cited anywhere in the pack, people's
-  // centres included, not only on situations. One warning per record, listing each banned citation in it. A WARNING until
-  // lane 1.11 re-sources the Union rows that cite the two memoirs; it becomes an error in the merge that does so.
+  // centres included, not only on situations. One error per record, listing each banned citation in it. It was a warning
+  // until lane 1.11a re-sourced the Union rows that cited the two memoirs; it is an error from that merge.
   const banned = new Set(pack.bannedSources ?? []);
   if (banned.size > 0) {
     const flag = (where: (field: string) => Where, record: unknown) => {
       const hits = citationsIn(record).filter((c) => banned.has(c.source));
       if (hits.length === 0) return;
-      warn(
+      err(
         'banned-source-cited',
         where(hits[0]!.path),
         `cites a source the gate bans as evidence (A6): ${hits.map((h) => `"${h.source}" at ${h.path}`).join(', ')}`,
-        'another source; this warning becomes an error when lane 1.11 re-sources these rows',
+        'another source: a banned memoir may be a lead to a primary document, never the citation',
       );
     };
     for (const table of WORLD_RECORD_TABLES) (world[table] as readonly unknown[]).forEach((record, i) => flag((field) => W(table, i, field), record));

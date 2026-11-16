@@ -77,10 +77,14 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0071](0071-cleared-flags-and-goals-are-routes.md) | A cleared flag is a route, and a standing goal is a choice | accepted |
 | [0072](0072-phase-0-closes-with-a-close-out.md) | Phase 0 closes after one close-out lane | accepted |
 | [0073](0073-phase-1-plan.md) | The Phase 1 plan: two milestones, starting with the road to Bull Run | accepted |
-| [0074](0074-the-gate-for-1a.md) | The gate for 1A: capture in battle, the values that touch slavery, and the leaders' own words | accepted |
+| [0074](0074-the-gate-for-1a.md) | The gate for 1A: capture in battle, the values that touch slavery, and the leaders' own words | accepted; amended by 0082 |
 | [0075](0075-the-planner-as-built.md) | The planner in the kernel, as built | accepted |
 | [0076](0076-the-battle-model-as-built.md) | The battle model, as built | accepted |
 | [0077](0077-portraits-get-a-procedural-engraving.md) | Portraits of real people get a procedural engraving finish | accepted |
 | [0078](0078-men-and-regions-as-built.md) | Men and regions, as built, and enslaved people in Union-held slave states | accepted |
 | [0079](0079-the-people-verbs-as-built.md) | The people's verbs, the audience and attention, as built | accepted |
 | [0080](0080-operations-as-built.md) | Operations, reports and dispatches, as built | accepted |
+| [0081](0081-detachments-as-built.md) | Detachments in play, as built | accepted; amended by 0083 |
+| [0082](0082-the-value-map-in-play.md) | The map from orders to values, in play | accepted |
+| [0083](0083-no-rejoin-on-the-day-made.md) | A detachment can't rejoin on the day it was made | accepted |
+| [0084](0084-politics-first-cut-as-built.md) | Politics, first cut, as built | accepted |

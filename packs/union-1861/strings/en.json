@@ -7,6 +7,8 @@
   "arm.mixed": "Mixed",
   "arm.naval": "Naval",
   "arm.ordnance": "Ordnance",
+  "chamber.house.name": "House of Representatives",
+  "chamber.senate.name": "Senate",
   "bloc.army": "Army",
   "bloc.border_unionists": "Border unionists",
   "bloc.confederate": "Confederate",

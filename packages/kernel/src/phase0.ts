@@ -90,3 +90,8 @@ export * from './recruitment/rules.ts';
 export * from './tick/recruitment.ts';
 export * from './regions/self-emancipation.ts';
 export * from './tick/regions.ts';
+// Lane 1.6: politics: blocs, the chambers and the ledger, framing, the mandate and credibility, the press, its phase.
+export * from './politics/politics.ts';
+export * from './politics/rules.ts';
+export * from './politics/press.ts';
+export * from './tick/politics.ts';

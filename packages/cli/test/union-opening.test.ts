@@ -54,15 +54,17 @@ describe('the opening of 1861 (lane 1.11)', () => {
     expect(session.sitChosen).toEqual(['ask_war_footing']);
   });
 
-  it('raises S07 from the Secretary of State’s own initiative: with his researched values he takes it, and his memorandum raises the situation', () => {
-    const map = v2Map('union-1861')!;
-    const people = map.world.people.map((p) => (p.id === 'seward_william_h' ? { ...p, values: ['conciliation', 'union', 'reputation'].map((value) => ({ value, cites: [] })) } : p));
-    const seward = phase0.indexSeatsWorld(w.indexWorld({ ...map.world, people } as w.World), map.start, { situations: world.situations });
-    const s = play(seward, setup, 60).state;
-    const took = s.seatInitiatives['seat:seward_william_h' as never]?.['bid_for_direction'];
+  it('raises S07 from the Secretary of State’s own initiative: with his researched values (lane 1.11a) he takes it, and his memorandum raises the situation', () => {
+    const took = run.state.seatInitiatives['seat:seward_william_h' as never]?.['bid_for_direction'];
+    // `took` is the day he last took it (it recurs on its cooldown); the memorandum raised the situation on his first.
     expect(took).toBeDefined();
-    expect(s.situationStates[S('seward_memorandum')]!.sitFiredDay).toBeGreaterThan(took!);
-    // Without his values entered, he takes no initiative, and the situation never arises on a date.
-    expect(run.state.situationStates[S('seward_memorandum')]).toBeUndefined();
+    expect(run.state.situationStates[S('seward_memorandum')]!.sitFiredDay).toBeGreaterThan(0);
+    // The control: with his values taken away, he takes no initiative, and the situation never arises on a date.
+    const map = v2Map('union-1861')!;
+    const people = map.world.people.map((p) => (p.id === 'seward_william_h' ? { ...p, values: [] } : p));
+    const valueless = phase0.indexSeatsWorld(w.indexWorld({ ...map.world, people } as w.World), map.start, { situations: world.situations });
+    const s = play(valueless, setup, 60).state;
+    expect(s.seatInitiatives['seat:seward_william_h' as never]?.['bid_for_direction']).toBeUndefined();
+    expect(s.situationStates[S('seward_memorandum')]).toBeUndefined();
   });
 });

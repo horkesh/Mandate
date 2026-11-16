@@ -110,6 +110,7 @@ export const WORLD_TABLES = {
       c('regard'),
       c('values'),
       c('regard_others'),
+      c('practices'),
       c('traits'),
       c('bloc'),
       c('ranks'),

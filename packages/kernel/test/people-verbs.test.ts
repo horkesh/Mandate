@@ -378,7 +378,7 @@ describe('M2’s audience cases on the new State (P3)', () => {
     const men = 200;
     const reinforced = at([counter('reinforce', { from: POST('a_reserve'), men })]);
     // The promise counts at the principal's credibility: half the men, on the plan's scale.
-    const believed = Math.trunc((Math.trunc((men * 500) / reading.strength) * w.map.world.rules.people.context.leaderCredibility) / 1000);
+    const believed = Math.trunc((Math.trunc((men * 500) / reading.strength) * w.map.world.rules.politics.credibility.base) / 1000);
     expect(shortfall(reinforced)).toBe(Math.max(0, shortfall(plain) - believed));
     expect(shortfall(reinforced)).toBeLessThan(shortfall(plain));
     // Held in the tick, the audience reads the same plan: his recorded answer states the reduced shortfall, and the promise goes as a transfer order.
@@ -476,15 +476,15 @@ describe('the map from orders to values (0074)', () => {
     const world = withPeople(base, {
       orderValues: [
         ...rules.verbs.orderValues,
-        { order: 'policy:shelter', boldness: 400, honours: [], offends: ['caution', 'order'], gateTopics: ['fen-flight'], notCheaperThan: null },
-        { order: 'policy:send_back', boldness: 400, honours: [], offends: ['glory'], gateTopics: ['fen-flight'], notCheaperThan: 'policy:shelter' },
+        { order: 'policy:shelter', boldness: 400, honours: [], offends: ['caution', 'order'], gateTopics: ['fen-flight'], notCheaperThan: null, clashes: [] },
+        { order: 'policy:send_back', boldness: 400, honours: [], offends: ['glory'], gateTopics: ['fen-flight'], notCheaperThan: 'policy:shelter', clashes: [] },
       ],
     });
     const s = createState(world, { seed: 1 });
-    const shelter = pushbackOf(world, s, 'policy:shelter', P('a_gen'), P('a_lead'));
+    const shelter = pushbackOf(world, s, 'policy:shelter', [P('a_gen')], P('a_lead'));
     // a_sec and a_gen (caution) and a_clerk (order) are on the side and hold what sheltering offends.
     expect(shelter.terms.filter((t) => t.source === 'values').map((t) => t.person).sort()).toEqual(['a_clerk', 'a_gen', 'a_sec', 'a_spy']);
-    const sendBack = pushbackOf(world, s, 'policy:send_back', P('a_gen'), P('a_lead'));
+    const sendBack = pushbackOf(world, s, 'policy:send_back', [P('a_gen')], P('a_lead'));
     // Only a_bold holds glory, so sending back would be cheaper; by construction it is not.
     expect(sendBack.total).toBe(shelter.total);
     expect(sendBack.floor).toBe('policy:shelter');
@@ -495,7 +495,7 @@ describe('the map from orders to values (0074)', () => {
     const rules = base.map.world.rules.people;
     const values = base.map.world.vocabularies.values.map((v) => v.id);
     const kinds = base.map.world.vocabularies.personKinds.map((k) => k.id);
-    const row = (order: string, floor: string | null) => ({ order, boldness: 400, honours: [], offends: [], gateTopics: [], notCheaperThan: floor });
+    const row = (order: string, floor: string | null) => ({ order, boldness: 400, honours: [], offends: [], gateTopics: [], notCheaperThan: floor, clashes: [] });
     const check = (extra: ReturnType<typeof row>[]) => verbRulesProblems(rules.attention, { ...rules.verbs, orderValues: [...rules.verbs.orderValues, ...extra] }, values, kinds);
     expect(check([row('policy:a', null), row('policy:b', 'policy:a')])).toEqual([]);
     expect(check([row('policy:self', 'policy:self')])).toEqual(['people rule orderValues.policy:self.notCheaperThan loops back to itself: policy:self -> policy:self']);
@@ -520,7 +520,7 @@ describe('regard between people (lane 1.5’s column)', () => {
 });
 
 function option(id: string, displayKey: number, over: Partial<OptionDef> = {}): OptionDef {
-  return { id, label: `situation.x.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [], lockedCosts: [], orders: [], calls: [], honours: [], watched: false, gate: null, ...over };
+  return { id, label: `situation.x.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [], lockedCosts: [], orders: [], calls: [], honours: [], watched: false, policy: null, gate: null, ...over };
 }
 
 function decision(id: string, over: Partial<SituationDef> = {}): SituationDef {
@@ -537,7 +537,7 @@ function decision(id: string, over: Partial<SituationDef> = {}): SituationDef {
     chain: null,
     subjects: [],
     options: [option('hold', 1), option('press', 2)],
-    inaction: { text: `situation.${id}.inaction`, effects: [{ setFlag: `${id}_ignored` }] },
+    inaction: { text: `situation.${id}.inaction`, effects: [{ setFlag: `${id}_ignored` }], policy: null },
     historicalDefault: { options: ['hold'] },
     staffLine: { authors: [POST('a_office')], recommends: ['hold'], reasons: [{ kind: 'momentum', weight: 600 }], confidence: 700 },
     delegableTo: [POST('a_office')],

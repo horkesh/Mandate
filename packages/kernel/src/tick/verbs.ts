@@ -32,7 +32,7 @@ import { dateOfDay, formatIsoDate } from '../world/calendar.ts';
 import { headquartersOf, isFieldPost } from '../seats/posts.ts';
 import { situationChoice } from '../seats/requests.ts';
 import { seatIdFor } from '../seats/seats.ts';
-import { fire, hop, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
+import { fire, hop, oversightOf, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
 
 /** Every mechanic the people verbs count (FOUNDATION section 11.5). */
 export const VERB_MECHANICS = ['verbs.answered', 'verbs.audience', 'verbs.consulted', 'verbs.declined', 'verbs.in_washington', 'people.promise_kept', 'reports.observer_letter'] as const;
@@ -156,7 +156,7 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
       if (!postOnSide(ctx, start, c.to, principal) || holder === null) return reject('unknown_post');
       const last = start.audienceHeld[holder];
       if (last !== undefined && ctx.day - last.audDay < rules.verbs.audience.cooldownDays) return reject('too_soon');
-      const outcome = previewAudience(world, start, principal, c.to, c.counters, ctx.day, null, planReading(world, start, c.to, ctx.day));
+      const outcome = previewAudience(world, start, principal, c.to, c.counters, ctx.day, null, planReading(world, start, c.to, ctx.day), oversightOf(ctx, start, holder, principal).value);
       if (typeof outcome === 'string' || outcome.problems.length > 0) return reject('bad_counters');
       let state = applyPeopleChanges(start, outcome.changes, ctx.day, rules, world.map.world.vocabularies.ranks);
       for (const o of outcome.recall) state = recallObserver(state, o);
@@ -224,7 +224,8 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
   const rules = world.map.world.rules.people;
   const v = msg.msgVerb!;
   const me = msg.msgTo;
-  const answer = answerOrder(world, start, me, v.verbIssuer, orderTerms(rules, `verb:${v.verbKind}`));
+  // Lane 1.4's oversight: a verb is an order to a person, read where he stands; an observer's or pressure's `watched` terms stack on top.
+  const answer = answerOrder(world, start, me, v.verbIssuer, orderTerms(rules, `verb:${v.verbKind}`), { oversight: oversightOf(ctx, start, me, v.verbIssuer).value });
   let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: me, post: msg.msgToPost, role: 'addressee', day: ctx.day, kind: `verb:${v.verbKind}` }));
   fire(ctx, 'verbs.answered');
   const changes: PeopleChange[] = [];

@@ -24,7 +24,8 @@ import type { RegionControlTable } from './control/control.ts';
 import type { ForceTable } from './forces/forces.ts';
 import type { ConditionTable, ObstructionState } from './infrastructure/infrastructure.ts';
 import type { ForceLocation } from './movement/movement.ts';
-import type { DepartmentId, DepotId, EdgeId, ForceBlockId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from './ids.ts';
+import type { DepartmentId, DepotId, EdgeId, FactionId, ForceBlockId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from './ids.ts';
+import type { ChamberState, CongressAct } from './politics/politics.ts';
 import type { SituationRecord } from './situations/situations.ts';
 import type { SeatKnowledge } from './knowledge/knowledge.ts';
 import type { ReportTruth } from './knowledge/truth.ts';
@@ -147,4 +148,12 @@ export interface State {
   readonly observerPostings: Readonly<Record<PersonId, ObserverPosting>>;
   /** Every battle fought, open or closed, with each day's breakdowns (lane 1.3; `combat/records.ts`). Writer: `combat`. */
   readonly battleRecords: BattleTable;
+  /** Each bloc's support, signed permille, from its rest at the start (lane 1.6; `politics/politics.ts`). Writer: `politics`. */
+  readonly blocSupport: Readonly<Record<string, number>>;
+  /** Each chamber of the legislature: sitting, adjourned, or a special session called (0040). Writer: `politics`. */
+  readonly chamberStates: Readonly<Record<string, ChamberState>>;
+  /** The accountability ledger (0046): acts owed an answer, the day the legislature met them, and the day answered. Writer: `politics`. */
+  readonly congressLedger: readonly CongressAct[];
+  /** The framing term per side (0028, 0040): who its public believes began the war, signed permille; absent is 0. Writer: `politics`. */
+  readonly warFraming: Readonly<Record<FactionId, number>>;
 }

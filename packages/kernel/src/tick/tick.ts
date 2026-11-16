@@ -19,6 +19,8 @@
  *  4c. Proposals `command` owns: a neutral government closing or reopening (0058),
  *      or a government joining a side (0065). A post that joins a side this way has
  *      no goal until one is ordered: it holds where it stands (0072's hold goal retired, lane 1.2).
+ *  4d. The weekly people step (lane 1.5).
+ *  4e. Politics (lane 1.6): addresses and effects, drift and the ladder's pull, the press, the chambers and the ledger.
  *  5. Reports written on a cycle.
  *  6. Knowledge pruning.
  *  7. The day counter.
@@ -60,6 +62,7 @@ import { attentionLeft, refillAttention, spendAttention } from '../seats/attenti
 import { attentionPrice } from './attention.ts';
 import { issueCall, recruitmentPhase, RECRUITMENT_MECHANICS } from './recruitment.ts';
 import { regionsPhase, REGIONS_MECHANICS } from './regions.ts';
+import { politicsPhase, POLITICS_MECHANICS } from './politics.ts';
 
 /** Every mechanic the seats layer counts (FOUNDATION section 11.5). */
 export const SEATS_MECHANICS = [
@@ -67,6 +70,7 @@ export const SEATS_MECHANICS = [
   'knowledge.pruned_age',
   'knowledge.pruned_superseded',
   'messages.courier_delay',
+  'messages.mail_delay',
   'messages.delivered',
   'messages.sent',
   'messages.special_messenger',
@@ -92,6 +96,7 @@ export const SEATS_MECHANICS = [
   ...PLANS_MECHANICS,
   ...RECRUITMENT_MECHANICS,
   ...REGIONS_MECHANICS,
+  ...POLITICS_MECHANICS,
 ] as const;
 
 /** Every mechanic the tick counts: the seats layer's and the situations phase's. Runners declare these. */
@@ -268,6 +273,11 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     state = freeze(peopleWeek(ctx, state));
     state = freeze(sendMessages(state, ctx.outbox.splice(0)));
   }
+
+  // 4e. Politics (lane 1.6): today's addresses and effects, the week's drift and the ladder's pull, the press's front
+  // pages, then the chambers by the calendar and the ledger they meet.
+  state = freeze(politicsPhase(ctx, state));
+  state = freeze(sendMessages(state, ctx.outbox.splice(0)));
 
   // 5. Reports on their cycles.
   battleReports(ctx, state);

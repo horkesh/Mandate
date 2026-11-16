@@ -32,7 +32,7 @@ function option(id: string, displayKey: number, over: Partial<OptionDef> = {}): 
     lockedCosts: [],
     orders: [], calls: [],
     honours: [],
-    watched: false,
+    watched: false, policy: null,
     gate: null,
     ...over,
   };
@@ -53,7 +53,7 @@ function decision(id: string, over: Partial<SituationDef> = {}): SituationDef {
     chain: null,
     subjects: [],
     options: [option('hold', 1), option('press', 2)],
-    inaction: { text: `situation.${id}.inaction`, effects: [{ setFlag: `${id}_ignored` }] },
+    inaction: { text: `situation.${id}.inaction`, effects: [{ setFlag: `${id}_ignored` }], policy: null },
     historicalDefault: { options: ['hold'] },
     staffLine: { authors: [POST('a_office')], recommends: ['press'], reasons: [{ kind: 'momentum', weight: 600 }], confidence: 700 },
     delegableTo: [POST('a_office')],

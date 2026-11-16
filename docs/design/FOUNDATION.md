@@ -147,6 +147,7 @@ The plan appears as arrows. The player can:
 - **Elections.** The 1862 midterms and the 1864 presidential election are checkpoints. Losing 1864 ends the game with a verdict: the electorate has rejected the war. The game makes no claim about what the winner would have done, and the months before the March 1865 inauguration are not played (0026).
 - **Generals as political actors.** Standing breeds rivals (P6). A popular general, or a sacked martyr, can court the opposition, leak, appeal to Congress, and be drawn as the opposition's 1864 candidate (0026).
 - **The press.** A weekly front page shows what the public believes. Generals leak to friendly papers (the history lane found McClellan's friends did; whether he did himself is unsourced); the player can leak too. Belief drives the blocs.
+  - **As built in 1A (0084):** each paper's editor writes a front page by mail to his side's principal and its serving post holders. A battle reads as won, lost or drawn by who left the field, and a surrender is a loss. Its figures come only from the casualty returns the principal holds, never from the battle record. The page moves the side's blocs and the commander's standing, at the paper's reach. Slant, leaks and the enemy reading the papers are 1B's.
 - **Economy.** Four resources: money, men, munitions, rail capacity. Each lever has a holder who can stall: the treasury raises money, governors raise regiments, the War Department turns munitions into equipped divisions. The player sets priorities and picks people.
 - **Situations.** Historical pressures arrive when their causes are present, not on dates (P15). Each situation is pack data: a cause predicate, options, consequences, an `inaction` outcome, a **historical default** and a **staff recommendation**. A test enforces all three (0023, 0040).
   - **Live situations** (0040). A situation can stay open while its clock runs: its cause is re-evaluated daily, options can **expire** (`expiresWhen` per option) or **appear**, and it ends a turn only when an option expires or appears or a pack-set clock threshold is crossed (`resurfaceOn` per situation). The player can wait and gather information meanwhile.
@@ -240,7 +241,7 @@ Module map, adapted from the AWWV-architecture note:
 | a person's ranks, one per kind (regular, volunteer, brevet) held at once, each with its date | `people` | appointments, promotion lists (0050, 0073) |
 | a person's status (serving, wounded, killed, captured) and its date | `people` | combat (0073) |
 | today's weather per weather zone | `weather` | its own seeded draw (0029, 0050; reserved) |
-| a force block's region or ship, and the leg it is on (`forceLocations`) | `movement` | operations, standing goals, retreats, recruitment (a raised block placed at its muster region; a disbanded one removed) (0064, 0073) |
+| a force block's region or ship, and the leg it is on (`forceLocations`) | `movement` | operations, retreats, recruitment (a raised block placed at its muster region; a disbanded one removed), detachments (a garrison placed where its parent stands, a landing ashore) (0064, 0073, 0081) |
 | a raised block's enlistment (`forceEnlistments`): who raised it, on whose call, and when its men's term ends | `forces` | recruitment (0073) |
 | the current day | `tick` | the day tick (0052) |
 | messages in transit | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules (0052) |
@@ -250,34 +251,33 @@ Module map, adapted from the AWWV-architecture note:
 | seat initiative state (`seatInitiatives`: each initiative's last firing day, for its cooldown) | `seats` | the weekly people step (0040, 0073) |
 | a force block's strength, non-combatants, arm and department (`forceBlockStates`); morale, experience and equipment from Phase 1 | `forces` | combat, attrition, economy, recruitment, transfers (0064) |
 | a force block's stores on hand | `forces` | supply (daily), operations (a sea delivery) |
-| detachments below the force block (garrisons, landings) | `forces` | `command`, `operations` (0041) |
+| detachments below the force block (garrisons, landings): a `forceBlockStates` record of kind `detachment` naming its parent; detach, rejoin and stand alone, with men conserved | `forces` | operations (a landing by water), a proposal naming a count of men and a region, such as a situation's `landing` effect; placed by `movement` and assigned by `command` in the same proposal (0041, 0081) |
 | stragglers: men absent from a force block who rejoin over days | `forces` | combat, attrition (0041) |
 | battle records | `combat` | (0041) |
 | situation chain and wait state | `situations` | (0046) |
-| the Congress accountability ledger: acts taken while Congress was away | `politics` | (0046) |
+| the Congress accountability ledger (`congressLedger`): acts taken while Congress was away, each met when a chamber of its side sits and answered later | `politics` | situations' `ledger-act` and `ledger-answer` effects (0046, 0084) |
 | people who have reached Union lines (`regionReachedUnionLines`) | `regions` | the derived self-emancipation term only (0046, 0074); never a lever |
 | fortification and entrenchment | `regions` | operations (works dug by an axis holding its objective), combat (works lost when stormed) (0029, 0041, 0080) |
-| a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments, combat releasing a surrendered block, recruitment (a raised block assigned to its governor's post; a disbanded one removed) (0033, 0064, 0073, 0076) |
+| a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments, combat releasing a surrendered block, recruitment (a raised block assigned to its governor's post; a disbanded one removed), detachments (a new detachment assigned to its parent's post) (0033, 0064, 0073, 0076, 0081) |
 | people in posts; temporary posts (`postStates`) | `command` | appoint, relieve, promotion lists, an operation's end, combat vacating a hit commander's post (0076) |
 | observers in post (`observerPostings`): the observer, the post he watches, who sent him and the day he arrived | `command` | the observer verb and his recall (0040, 0073) |
 | standing agreements and prior orders on a post, including a governor's answered call not yet mustered (`postLevies`) | `command` | verbs, situations, orders from the holder's own department, a call a governor answered (0073) |
-| a person's stats, traits, standing, grievances, regard | `people` | combat results, the press, verbs, ladder |
+| a person's stats, traits, standing, grievances, regard | `people` | combat results, the press, verbs, ladder, a chosen policy's pushback (typed grievances, and the floor's cost to the principal's standing) (0082) |
 | a person's stances on record (from Consult) | `people` | Consult answers (0040, 0041); adviser credibility is derived from the president's knowledge, never stored |
 | promises made to a person (`personPromises`: the kind, the day made and the day due); one that falls due unkept becomes a grievance | `people` | the promise verb, the audience (0073) |
 | inquiries a person received this week (`personInquiries`); past the pack's patience they become a grievance | `people` | the inquire verb (0040, 0073) |
 | a person's ladder rung and rivals (`personRungs`, `personRivals`) | `ladder` | weekly people step |
-| responses to orders (declared and actual rungs, reasons) | `proxy` | message arrival; computed by `compliance` and `reading`, which are pure and write nothing |
+| responses to orders (declared and actual rungs, reasons) | `proxy` | message arrival, a policy's carriers answering it (0082); computed by `compliance` and `reading`, which are pure and write nothing |
 | audience state (`audienceHeld`: the last audience's day and the counters used) | `audience` | the audience verb |
 | each post's goal and plan record (`planRecords`): the goal, its draft set saved on the request day, the seat's pick, approval or send-back, edits as counter-orders, and a reference to his response (`proxy` writes the response itself) | `plans` | verbs (order, review, go), seat selections, order arrival, the planner's draft sets on request (0062, 0073) |
-| STAND-IN: what an approved plan has the movement path do, hold or advance to its objective (`standingGoals`; no order's content reaches it) | `plans` | plan approval; lane 1.4's operations retire it (0073) |
 | operations and their lifecycles (`operationRecords`: one per goal and plan, axes copied from the plan, each stage with a typed reason) | `operations` | plan approval, movement and combat outcomes, support answers (0080) |
 | knowledge (reports per seat) | `knowledge` | message delivery, pruning |
 | messages in transit | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules |
 | economy stocks | `economy` | weekly step, verbs |
 | situations fired, live (open options, clocks) and decided | `situations` | cause evaluation, decisions, delegated seats' choices |
-| blocs, mandate, election results | `politics` | weekly step, battles, the press, checkpoints |
-| each chamber of Congress's state (sitting, adjourned, special session called) | `politics` | situations, the weekly step |
-| the framing term (who the public believes began the war) | `politics` | the war's opening situations, the press |
+| bloc support (`blocSupport`); the mandate and the principal's credibility are derived from it on read, never stored; election results are 1B's | `politics` | an address, the ladder's pull, the weekly drift, situations' `bloc-support` effects, the press at its reach (0084) |
+| each chamber of Congress's state (`chamberStates`: sitting, adjourned, special session called) | `politics` | the pack's session calendar (daily), situations' `session-call` effects (0084) |
+| the framing term (`warFraming`: who the public believes began the war) | `politics` | situations' `framing` effects only; the press prints it and never writes it (0084) |
 | seat assignments | `seats` | setup, the player's settings |
 
 The day tick, each phase declaring what it reads and writes:
@@ -293,7 +293,7 @@ The day tick, each phase declaring what it reads and writes:
 10. The invariant barrier.
 11. Decision-point detection.
 
-In the code the phases run as: commands (1), deliveries (2), recruitment's musters and disbandings (2d, 0078), operations, then movement (3, 0080), battles and occupation (3b; the control contest until 0076), control and the derived map (4), stores on hand and stragglers rejoining (4a), the self-emancipation term on its cadence (4a′, 0078), situations (4b), `command`'s proposals such as a government closing (4c), cyclic reports, pruning, the day, and the barrier (0057, 0064). A post's headquarters is derived from where its strongest block stands, never stored.
+In the code the phases run as: commands (1), deliveries (2), recruitment's musters and disbandings (2d, 0078), operations, then movement (3, 0080), battles and occupation (3b; the control contest until 0076), control and the derived map (4), stores on hand and stragglers rejoining (4a), the self-emancipation term on its cadence (4a′, 0078), situations (4b), `command`'s proposals such as a government closing (4c), the weekly people step (4d), politics (4e: addresses and effects, drift and the ladder's pull, the press, then the chambers and the ledger, 0084), cyclic reports, pruning, the day, and the barrier (0057, 0064). A post's headquarters is derived from where its strongest block stands, never stored.
 
 **What happens to today's kernel:**
 - **Survive as they are:** `permille`, `rng`, `compare`, `rules`, scenario validation.

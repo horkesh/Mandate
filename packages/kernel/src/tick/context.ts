@@ -66,7 +66,7 @@ export interface Rejection {
 
 /** Something a mechanism decided, with its terms: the explanation trail (hard rule 6). */
 export interface TickEvent {
-  readonly event: 'audience' | 'conflict' | 'filtered' | 'initiative' | 'objected' | 'relayed' | 'seat_defaulted';
+  readonly event: 'audience' | 'conflict' | 'filtered' | 'initiative' | 'objected' | 'policy' | 'policy_unpaid' | 'relayed' | 'seat_defaulted';
   readonly person: PersonId;
   readonly post: PostId | null;
   /** The order or report it concerns (null for a defaulted seat choice). */
@@ -228,7 +228,8 @@ export function hop(ctx: TickContext, state: State, route: RouteKind, sender: Pe
   const l = routeLatency(ctx.latency, ctx.world.rules.latency, route, from, to, travelSide(ctx, state, sender, recipient), { seed: ctx.seed, message: id });
   if (!l.ok) throw new RangeError(`route ${route} is not available from ${from} to ${to}`);
   const weather = l.latency.parts.find((p) => p.part === 'weather');
-  if (weather) fire(ctx, 'messages.courier_delay', weather.days);
+  // Lane 1.6: the mail (the press's front pages) is counted apart, so the courier count keeps watching orders and reports.
+  if (weather) fire(ctx, route === 'mail' ? 'messages.mail_delay' : 'messages.courier_delay', weather.days);
   return { arrive: ctx.day + l.latency.days + extraDays, route: takenRoute(ctx, state, route, sender, from, to, recipient) };
 }
 

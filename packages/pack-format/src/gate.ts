@@ -191,8 +191,16 @@ export function resolvedStrings(def: SituationDef, strings: ReadonlyMap<string, 
  * it is empty (an option's `calls`, lane 1.11), so adding a field never voids a sign-off that did not use it.
  */
 export function gateContentHash(def: SituationDef, strings: LocaleStrings, provenance: ProvenanceFile): string {
-  const { gateReview: _review, ...whole } = def;
-  const item = { ...whole, options: whole.options.map(({ calls, ...o }) => (calls.length === 0 ? o : { ...o, calls })) };
+  const { gateReview: _review, ...signed } = def;
+  // Lane 1.5b: an option that is no policy carries nothing new, so items signed before the field existed keep their hash;
+  // naming a policy row changes the content and voids the sign-off.
+  const inaction = signed.inaction === null ? null : (({ policy, ...rest }) => (policy === null ? rest : { ...rest, policy }))(signed.inaction);
+  const item = {
+    ...signed,
+    // Lane 1.11: so are an option's calls when it issues none.
+    options: signed.options.map(({ policy, calls, ...o }) => ({ ...o, ...(policy === null ? {} : { policy }), ...(calls.length === 0 ? {} : { calls }) })),
+    inaction,
+  };
   const cited = new Set(def.citations.map((c) => c.source));
   const sources = provenance.sources.filter((s) => cited.has(s.key)).sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0));
   const byLocale: Record<string, Record<string, string>> = {};
@@ -243,6 +251,28 @@ export function proximityHit(text: string, resourceTerms: readonly string[], gro
     }
   }
   return null;
+}
+
+/**
+ * Lane 1.6 (0021, 0026; SENSITIVE-HISTORY section 1's protected population): no bloc is made of a protected group. A
+ * bloc is a political quantity with support and a voice, which the press and the president move; a group whose people
+ * are agents of their own freedom is never one. A bloc whose id or name, in any locale, names a protected-group term from
+ * the register is refused. Exported so a pack's coverage can be tested by probing.
+ */
+export function checkBlocs(blocs: readonly { readonly id: string; readonly name: string }[], gate: GateData, strings: LocaleStrings): Issue[] {
+  const sink = new IssueSink();
+  const groups = gate.register.topics.flatMap((t) => t.protectedGroups);
+  const names = (b: { readonly id: string; readonly name: string }): string[] => [b.id.replace(/_/g, ' '), ...[...strings.values()].flatMap((table) => (table.has(b.name) ? [table.get(b.name)!] : []))];
+  blocs.forEach((b, i) => {
+    for (const text of names(b)) {
+      const hit = groups.find((g) => new RegExp(`(?<![\\p{L}\\p{N}])${escapeRegExp(g)}(?![\\p{L}\\p{N}])`, 'iu').test(text));
+      if (hit !== undefined) {
+        sink.error('gate-protected-bloc', 'pack.json', `vocabularies.blocs[${i}] (${b.id})`, `the bloc "${text}" is made of a protected group ("${hit}")`, 'no bloc of a protected group: its people are agents, never a political quantity (0021, 0026)');
+        break;
+      }
+    }
+  });
+  return sink.issues;
 }
 
 type Tag = phase0.GateTag;
@@ -585,6 +615,68 @@ export function signatureRefuses(sig: { readonly fieldPattern: string | null; re
   if (sig.fieldPattern !== null && !new RegExp(sig.fieldPattern, 'u').test(field)) return false;
   if (sig.subjectPattern !== null && (subject === null || !new RegExp(sig.subjectPattern, 'u').test(subject))) return false;
   return true;
+}
+
+/**
+ * The sign-off of the map's gated rows (lane 1.5b; the gate review's G-1.5e). A row of the map from orders to values
+ * tagged with a gate topic is a pack rule, not a gated item, so A7's content-hash sign-off does not reach it. Instead
+ * each pack pins, in a test, every gated row's content hash and its reviewer: an edit to a row fails until the reviewer
+ * signs the new hash, a gated row with no entry fails, and an entry for a row no longer gated fails.
+ */
+export interface RowSignOff {
+  readonly reviewer: string;
+  readonly hash: string;
+}
+
+/** A gated row's content hash: the whole row, canonical. */
+export function gatedRowHash(row: phase0.OrderValueRow): string {
+  return canonicalHash(row);
+}
+
+/** What is wrong with the pinned sign-offs of a pack's gated rows. `reviewers`: the pack's accepted reviewers, when it lists them. */
+export function gatedRowProblems(rows: readonly phase0.OrderValueRow[], signed: Readonly<Record<string, RowSignOff>>, reviewers: readonly string[] | null): string[] {
+  const problems: string[] = [];
+  const gated = rows.filter((r) => r.gateTopics.length > 0);
+  for (const r of gated) {
+    const s = signed[r.order];
+    if (s === undefined) {
+      problems.push(`${r.order} is tagged ${r.gateTopics.join(', ')} but has no sign-off: the gate reviewer signs ${gatedRowHash(r)}`);
+      continue;
+    }
+    if (s.hash !== gatedRowHash(r)) problems.push(`${r.order} changed after its sign-off by ${s.reviewer}: re-review, then sign ${gatedRowHash(r)}`);
+    if (s.reviewer.trim().length === 0 || s.reviewer.startsWith('fixture')) problems.push(`${r.order} is signed off by "${s.reviewer}", not a gate reviewer`);
+    else if (reviewers !== null && !reviewers.includes(s.reviewer)) problems.push(`${r.order} is signed off by ${s.reviewer}, who is not in gate/reviewers.json`);
+  }
+  for (const order of Object.keys(signed).sort()) if (!gated.some((r) => r.order === order)) problems.push(`a sign-off names ${order}, which is not a gated row of the map`);
+  return problems;
+}
+
+/**
+ * The sign-off of a pack's blocs (lane 1.6; the gate review of lane 1.6, item 4). `checkBlocs` refuses a bloc named for
+ * a protected group, but a neutral name may hide one as its members; only a reader of its citation can tell. So every
+ * bloc is gated content: a pack pins, in a test, each bloc's content hash (its rule and its name in the default locale)
+ * and its reviewer. A new or edited bloc fails until the gate reviewer signs its hash.
+ */
+export function blocHash(bloc: phase0.BlocRule, name: string): string {
+  return canonicalHash({ bloc, name });
+}
+
+/** What is wrong with the pinned sign-offs of a pack's blocs. `names`: each bloc's name in the default locale. */
+export function blocSignOffProblems(blocs: readonly phase0.BlocRule[], names: Readonly<Record<string, string>>, signed: Readonly<Record<string, RowSignOff>>, reviewers: readonly string[] | null): string[] {
+  const problems: string[] = [];
+  for (const b of blocs) {
+    const hash = blocHash(b, names[b.id] ?? '');
+    const s = signed[b.id];
+    if (s === undefined) {
+      problems.push(`bloc ${b.id} has no sign-off: the gate reviewer reads its composition from its cite, then signs ${hash}`);
+      continue;
+    }
+    if (s.hash !== hash) problems.push(`bloc ${b.id} changed after its sign-off by ${s.reviewer}: re-review, then sign ${hash}`);
+    if (s.reviewer.trim().length === 0 || s.reviewer.startsWith('fixture')) problems.push(`bloc ${b.id} is signed off by "${s.reviewer}", not a gate reviewer`);
+    else if (reviewers !== null && !reviewers.includes(s.reviewer)) problems.push(`bloc ${b.id} is signed off by ${s.reviewer}, who is not in gate/reviewers.json`);
+  }
+  for (const id of Object.keys(signed).sort()) if (!blocs.some((b) => b.id === id)) problems.push(`a sign-off names bloc ${id}, which the pack no longer has`);
+  return problems;
 }
 
 /** The fewest gated decisions of three or more options before C2 counts positions. */

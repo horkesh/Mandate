@@ -22,6 +22,7 @@ import type { DepartmentId, FactionId, PersonId, PostId, RegionId, SituationId }
 import type { ClaimKind, ReportType, SubjectKind } from '../knowledge/report.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { Posture } from '../plans/goal.ts';
+import type { ChamberStateKind } from '../politics/politics.ts';
 
 export const SITUATION_KINDS = ['decision', 'notice'] as const;
 export type SituationKind = (typeof SITUATION_KINDS)[number];
@@ -72,7 +73,17 @@ export type Condition =
    * state's act a pack-set delay after the call arrives. A STAND-IN until conventions and legislatures are modelled (1B):
    * a run where the call comes late moves the act with it.
    */
-  | { readonly callReceived: { readonly post: PostId; readonly days: number } };
+  | { readonly callReceived: { readonly post: PostId; readonly days: number } }
+  /** A chamber of the legislature is in this state today (lane 1.6, 0040): which options are legal. A public fact. */
+  | { readonly chamber: { readonly id: string; readonly state: ChamberStateKind } }
+  /**
+   * The accountability ledger (lane 1.6, 0046): some act of `side` (this one, or any if null) stands `away` (taken while
+   * the legislature was away, not yet met), `before` it (met, not answered) or `answered`. A public fact.
+   */
+  | { readonly ledger: { readonly side: FactionId; readonly act: string | null; readonly status: LedgerStatus } };
+
+export const LEDGER_STATUSES = ['answered', 'away', 'before'] as const;
+export type LedgerStatus = (typeof LEDGER_STATUSES)[number];
 
 /**
  * An effect. Flags are the situations module's own chain state. Everything
@@ -152,6 +163,12 @@ export interface SituationCitation {
   readonly at: string | null;
 }
 
+/** An option's policy row and who carries it out (lane 1.5b). */
+export interface OptionPolicy {
+  readonly row: string;
+  readonly carriedBy: readonly PostId[];
+}
+
 export interface OptionDef {
   readonly id: string;
   readonly label: string;
@@ -171,8 +188,17 @@ export interface OptionDef {
   readonly orders: readonly OptionOrder[];
   /** Calls for regiments to governors' posts (lane 1.11). */
   readonly calls: readonly OptionCall[];
-  /** Values the option honours, which a delegate weighs when he decides by his values (0040). */
+  /**
+   * Values the option honours, which a delegate weighs when he decides by his values (0040). An option that names a
+   * policy row honours exactly that row's values (the validator checks it), so the map and a delegate's choice agree.
+   */
   readonly honours: readonly string[];
+  /**
+   * The policy this option is (lane 1.5b; 0074): a `policy:` row of the pack's order-to-value map, and the posts whose
+   * holders carry it out (none: a policy no one post carries). Choosing it applies the row's pushback through its owners:
+   * a grievance for every stakeholder, and each carrier's own answer through compliance. Null: not a policy.
+   */
+  readonly policy: OptionPolicy | null;
   /** The gate reviewer's mark for the lever sweep (D6): the historically worst conduct. */
   readonly watched: boolean;
   /** A tag of the option's own, when it differs from the situation's. */
@@ -183,6 +209,11 @@ export interface OptionDef {
 export interface Outcome {
   readonly text: string;
   readonly effects: readonly Effect[];
+  /**
+   * The policy inaction is (lane 1.5b; the gate review's G-1.5g): leaving a gated matter to each commander is itself a
+   * policy, applied through the map like an option's, so it cannot come out cheaper than its floor. Null: not a policy.
+   */
+  readonly policy: OptionPolicy | null;
 }
 
 /** The historical default (0040): options taken, a delegation, or not yet sourced. Never shown to the player. */

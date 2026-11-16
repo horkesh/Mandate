@@ -40,7 +40,7 @@ export interface GoalTermsRule {
 
 /**
  * The circumstances of an order read in the chain. Oversight varies with distance and the wire (lane 1.4). The principal's
- * credibility is a LABELLED STAND-IN: one constant per pack in place of a derived term, so lane 1.14's stand-in criterion finds it.
+ * credibility is `politics`' derived term (lane 1.6, `politics/politics.ts`'s `credibilityOf`), no longer a rule here.
  */
 export interface ReadingContextRules {
   /**
@@ -52,11 +52,6 @@ export interface ReadingContextRules {
   readonly oversightPerCourierDay: number;
   readonly oversightWired: number;
   readonly oversightMin: number;
-  /**
-   * STAND-IN (lane 1.1; owner lane 1.6): the principal's sanction credibility, permille. Politics derives it from his
-   * record (P7), as M2's `derive` did; until then one constant.
-   */
-  readonly leaderCredibility: number;
 }
 
 /** How a relaying holder's rung becomes his relay (0040: each link applies his own compliance and delay). */
@@ -170,7 +165,6 @@ export function peopleRulesProblems(rules: PeopleRules | undefined, values: read
   permille(rules.context.oversightPerCourierDay, 'context.oversightPerCourierDay');
   permille(rules.context.oversightWired, 'context.oversightWired');
   permille(rules.context.oversightMin, 'context.oversightMin');
-  permille(rules.context.leaderCredibility, 'context.leaderCredibility');
   whole(rules.relay.reservationsHoldDays, 'relay.reservationsHoldDays');
   whole(rules.relay.slowWalkHoldDays, 'relay.slowWalkHoldDays');
   whole(rules.relay.reinterpretHoldDays, 'relay.reinterpretHoldDays');

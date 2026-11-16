@@ -130,23 +130,28 @@ describe('forces: the only writer of strength and stores', () => {
 });
 
 describe('command: transfers name a force, never blocks one by one (0033)', () => {
-  it('a number of blocks: the sender gives his weakest first, unknown strengths last; a detachment goes with its block', () => {
+  it('a number of blocks: the sender gives his weakest first, unknown strengths last; a detachment standing elsewhere stays (0081)', () => {
     // Known strengths ascending: the marines (150), the ship (300), a_2 (3000), a_1 (5000); a_3 (unknown) last.
     const two = transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'blocks', count: 2 }, 'weakest_first');
     expect(two.rule).toBe('weakest_first');
     expect(two.moved).toEqual(['a_marines', 'a_ship']);
     expect(two.state.postStates).toBe(S.postStates);
     const three = transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'blocks', count: 3 }, 'weakest_first');
-    expect(three.moved).toEqual(['a_2', 'a_2_guard', 'a_marines', 'a_ship']);
-    expect(commandedBlocks(three.state, P('a_army2'))).toEqual(['a_2', 'a_2_guard', 'a_marines', 'a_ship']);
+    // a_2's guard stands at a1, away from a_2 at a2: a force in the field is not its parent's to give away (lane 1.4c).
+    expect(three.moved).toEqual(['a_2', 'a_marines', 'a_ship']);
+    expect(commandedBlocks(three.state, P('a_army2'))).toEqual(['a_2', 'a_marines', 'a_ship']);
+    expect(commandedBlocks(three.state, P('a_army'))).toContain('a_2_guard');
+    expect(three.menSent).toBe(3450);
     const all = transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'blocks', count: 9 }, 'weakest_first');
     expect(all.moved.at(-1)).toBe('a_ship');
-    expect(commandedBlocks(all.state, P('a_army'))).toEqual([]);
+    // Every block goes; the guard standing apart from its parent stays with the post (0081).
+    expect(commandedBlocks(all.state, P('a_army'))).toEqual(['a_2_guard']);
   });
 
   it('a strength in men: whole blocks, weakest first, until the men are reached', () => {
     const r = transferForce(MAP, S, P('a_army'), P('a_army2'), { force: 'men', men: 3000 }, 'weakest_first');
-    expect(r.moved).toEqual(['a_2', 'a_2_guard', 'a_marines', 'a_ship']);
+    // The guard stands apart from a_2, so it stays (0081); the men sent are every man that went.
+    expect(r.moved).toEqual(['a_2', 'a_marines', 'a_ship']);
     expect(r.menSent).toBe(3450);
   });
 

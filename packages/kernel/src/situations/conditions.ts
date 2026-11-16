@@ -61,6 +61,15 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
     const { post, days } = c.callReceived;
     return Object.values(ctx.state.orderResponses).some((r) => r.respPost === post && r.respRole === 'addressee' && r.respKind === 'call' && ctx.day - r.respDay >= days);
   }
+  if ('chamber' in c) return (ctx.state.chamberStates[c.chamber.id]?.chamState ?? 'adjourned') === c.chamber.state;
+  if ('ledger' in c) {
+    const l = c.ledger;
+    return ctx.state.congressLedger.some((e) => {
+      if (e.ledgerSide !== l.side || (l.act !== null && e.ledgerAct !== l.act)) return false;
+      const status = e.ledgerAnsweredDay !== null ? 'answered' : e.ledgerMetDay !== null ? 'before' : 'away';
+      return status === l.status;
+    });
+  }
   // clockAtLeast
   if (ctx.situation === null) return false;
   const r = ctx.state.situationStates[ctx.situation];
@@ -71,7 +80,7 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
 
 /** The predicate at the top of a condition. */
 export function predicateOf(c: Condition): string {
-  for (const k of ['all', 'any', 'not', 'dayAtLeast', 'flag', 'fired', 'decided', 'knows', 'goal', 'headquartersAt', 'callReceived', 'clockAtLeast'] as const) if (k in c) return k;
+  for (const k of ['all', 'any', 'not', 'dayAtLeast', 'flag', 'fired', 'decided', 'knows', 'goal', 'headquartersAt', 'callReceived', 'clockAtLeast', 'chamber', 'ledger'] as const) if (k in c) return k;
   return 'unknown';
 }
 
@@ -83,14 +92,15 @@ export type KnowablePlace = 'knowledge' | 'waitsOn' | 'appearsWhen' | 'expiresWh
  * rulings on gate review S10 and standing review S2): `knows`, and the public
  * facts the president always knows, on an explicit allow-list. The truth fires a
  * situation; it never surfaces one, ends a wait or changes an option, since an
- * option change must never reveal an event. A chamber's sitting state joins the
- * list for options once it exists.
+ * option change must never reveal an event. A chamber's state and the
+ * accountability ledger are public facts (lane 1.6): the president knows whether
+ * the legislature sits and what he has done while it was away.
  */
 export const KNOWABLE: Readonly<Record<KnowablePlace, readonly string[]>> = Object.freeze({
   knowledge: ['knows'],
-  waitsOn: ['knows', 'clockAtLeast'],
-  appearsWhen: ['knows', 'clockAtLeast', 'dayAtLeast'],
-  expiresWhen: ['knows', 'clockAtLeast', 'dayAtLeast'],
+  waitsOn: ['knows', 'clockAtLeast', 'chamber', 'ledger'],
+  appearsWhen: ['knows', 'clockAtLeast', 'dayAtLeast', 'chamber', 'ledger'],
+  expiresWhen: ['knows', 'clockAtLeast', 'dayAtLeast', 'chamber', 'ledger'],
 });
 
 /** The first predicate in `c` that its place may not read, or null. */

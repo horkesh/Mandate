@@ -34,6 +34,8 @@ export interface OrderValueRow {
   readonly offends: readonly string[];
   readonly gateTopics: readonly string[];
   readonly notCheaperThan: string | null;
+  /** Practices this order runs against (lane 1.5b): a recipient who keeps one reads a `practice_clash` and pushes back for it. */
+  readonly clashes: readonly string[];
 }
 
 /** What a relief costs the man relieved, by its mode (FOUNDATION section 5). */
@@ -87,6 +89,8 @@ export interface VerbRules {
     readonly decayDivisor: number;
   };
   readonly initiatives: readonly InitiativeRule[];
+  /** What a clash with one of his own practices costs a recipient's willingness, and adds to the pushback (lane 1.5b). */
+  readonly practiceWeight: number;
 }
 
 /** Problems with the attention and verb rules (the kernel and the validator say the same). */
@@ -142,6 +146,8 @@ export function verbRulesProblems(attention: AttentionRules | undefined, verbs: 
       signed(r.standingDelta, `relief.${mode}.standingDelta`);
     }
   }
+  whole(verbs.practiceWeight, 'practiceWeight');
+  for (const r of verbs.orderValues) for (const p of r.clashes) if (!/^[a-z0-9_-]+$/.test(p)) problems.push(`people rule orderValues.${r.order}.clashes: "${p}" must be a practice id`);
   whole(verbs.inquiry.freePerWeek, 'inquiry.freePerWeek');
   whole(verbs.inquiry.pesteredWeight, 'inquiry.pesteredWeight');
   whole(verbs.promise.dueDays, 'promise.dueDays');

@@ -59,9 +59,10 @@ describe('no principal calls on a nation for regiments (the lead’s ruling; 006
     const { pack } = loadPack(files(false));
     const map = w.indexWorld(pack!.world);
     const def = { ...plantedSituation, id: ids.toId('situation', 'zz_nation_call'), knowledge: null, chain: null, subjects: [], effects: [], report: null, gateReview: null,
-      options: plantedSituation.options.map((o) => ({ ...o, proposedBy: [ids.toId('person', 'cameron_simon')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, lockedCosts: [], orders: [], watched: false, gate: null,
+      options: plantedSituation.options.map((o) => ({ ...o, proposedBy: [ids.toId('person', 'cameron_simon')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, lockedCosts: [], orders: [], watched: false, policy: null, gate: null,
         calls: [{ ...call, to: ids.toId('post', NATION_POST) }] })),
       staffLine: { ...plantedSituation.staffLine, authors: [ids.toId('post', 'us_secretary_war')] },
+      inaction: { ...plantedSituation.inaction, policy: null },
     } as unknown as phase0.SituationDef;
     const world = phase0.indexSeatsWorld(map, pack!.scenarios[0]!, { situations: [def] });
     let state = phase0.createState(world, { seed: 1, people: 'as-history' });

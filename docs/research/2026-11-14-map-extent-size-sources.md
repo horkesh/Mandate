@@ -318,3 +318,20 @@ What this changes:
 - The 1861 layer (from Taylor & Neu's April 1861 map) can now be the source of the game's rail lines, licensed by written permission, so tracing every line ourselves is no longer needed.
 - The credit must follow the suggested citation on Atack's download page [ATACK-DL], word for word. Whoever first uses the layer records that wording in the pack's `PROVENANCE.json` and in the game's credits.
 - Still open: the Newberry (county boundaries) sent only an automatic reply, and UNL's railroad project (cdrh@unl.edu) has not replied. Region geometry, and so lane 0.10's re-measure, still waits on the Newberry.
+
+## Update, 2026-11-16: the Newberry confirms, and Atack on track gauge
+
+**The Newberry Library** replied in writing on 16 November 2026, from its Director of Digital Initiatives and Services, to the owner's request of 14 November. The email is in the owner's Gmail.
+- **The licence:** the Atlas of Historical County Boundaries is released under the Creative Commons CC0 1.0 Universal Public Domain Dedication. The older Creative Commons licence in the download files is superseded and no longer applies.
+- **Our use is confirmed:** commercial use in the game needs no permission or fee. That covers selecting the 1861 county polygons, merging and simplifying them into regions, and redistributing the derived geometry with the game and in the public repository.
+- **Credit:** attribution isn't required under CC0, but it is appreciated. The credit we proposed, "Atlas of Historical County Boundaries, The Newberry Library", is accepted as written.
+
+What this changes:
+- Region geometry from the Atlas is cleared for commercial release, so lane 0.10's re-measure on real regions no longer waits on a licence.
+- The pack README's caution about the bundled CC BY-NC-SA 2.5 files is resolved.
+
+**Jeremy Atack** added a note on 16 November: US railroads of the period, until the late 1880s, ran on different track gauges, and the South's in particular was incompatible with much of the North and Midwest. **His 1861 layer encodes each line's gauge.** By his account, adapting rolling stock to another gauge was relatively simple, while locomotives were a much greater problem.
+- **For the map:** rail edges built from his layer should carry the line's gauge. 0050's rail edges already belong to named lines, so gauge can be a property of the line.
+- **For movement and supply:** a route that crosses a gauge break needs a transfer. Its cost is a design question, owned in `OPEN_QUESTIONS`.
+
+Still open: UNL's railroad project (cdrh@unl.edu) has not replied.
