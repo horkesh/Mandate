@@ -12,7 +12,7 @@ import { indexSeatsWorld, type SeatsWorld } from '../src/seats/world.ts';
 import type { OptionDef, SituationDef } from '../src/situations/types.ts';
 import { createTelemetry } from '../src/telemetry.ts';
 import { MAP_MECHANICS } from '../src/tick/map.ts';
-import { POLICY_GRIEVANCE } from '../src/tick/policy.ts';
+import { POLICY_GRIEVANCE, POLICY_GRIEVANCES } from '../src/tick/policy.ts';
 import { SITUATION_MECHANICS } from '../src/tick/situations.ts';
 import { createState } from '../src/tick/setup.ts';
 import { SEATS_MECHANICS, tick, type TickResult } from '../src/tick/tick.ts';
@@ -91,9 +91,9 @@ function run(wd: SeatsWorld, start: State, days: number, entries: Record<number,
   return { state, results, fires: (m) => telemetry.mechanics[m]?.fires ?? 0 };
 }
 
+const KINDS = new Set<string>(Object.values(POLICY_GRIEVANCES));
 const policyGrievances = (state: State) =>
-  Object.entries(state.personGrievances).flatMap(([person, gs]) => gs.filter((g) => g.grievanceKind === POLICY_GRIEVANCE).map((g) => ({ person, weight: g.grievanceWeight, cause: g.grievanceCause })));
-
+  Object.entries(state.personGrievances).flatMap(([person, gs]) => gs.filter((g) => KINDS.has(g.grievanceKind)).map((g) => ({ person, kind: g.grievanceKind, weight: g.grievanceWeight, cause: g.grievanceCause })));
 describe('the map from orders to values in play (gate review G-1.5a, G-1.5b)', () => {
   it('a floored row explains itself: its own terms and one floor term for the difference sum to the total', () => {
     const wd = world();
@@ -121,8 +121,12 @@ describe('the map from orders to values in play (gate review G-1.5a, G-1.5b)', (
     const push = pushbackOf(wd, morning, 'policy:send_back', [P('a_gen')], P('a_lead'));
     const floor = push.terms.find((t) => t.source === 'floor')!;
     const got = policyGrievances(decided.state);
-    // Each stakeholder who holds an offended value (here a_bold, glory) holds a grievance of his term's weight.
-    expect(got.filter((g) => g.cause === 'policy:send_back')).toEqual(push.terms.flatMap((t) => (t.source === 'values' ? [{ person: t.person, weight: t.amount, cause: 'policy:send_back' }] : [])));
+    // Every term the total counts is a grievance of its weight, typed by its term: a_bold's offended glory, and a_gen's
+    // clash with his practice and his unwillingness (the standing review of lane 1.5b).
+    expect(got.filter((g) => g.cause === 'policy:send_back').sort((a, b) => (a.person + a.kind < b.person + b.kind ? -1 : 1))).toEqual(
+      push.terms.flatMap((t) => (t.source === 'floor' ? [] : [{ person: t.person, kind: POLICY_GRIEVANCES[t.source], weight: t.amount, cause: 'policy:send_back' }])).sort((a, b) => (a.person + a.kind < b.person + b.kind ? -1 : 1)),
+    );
+    expect(got.some((g) => g.kind === 'policy_practice' && g.person === P('a_gen'))).toBe(true);
     // G-1.5f: the floor's difference falls on this row's own stakeholders and carriers (a_bold, whom sending back offends;
     // a_gen, whose practice it runs against), every point of it, each naming the floor. Never on those who favoured the
     // floor's policy and are not this row's stakeholders (a_sec, a_clerk, a_spy): that would give them a stance.
@@ -139,6 +143,32 @@ describe('the map from orders to values in play (gate review G-1.5a, G-1.5b)', (
     expect(response.respRole).toBe('addressee');
     expect(response.respReasons).toContainEqual({ kind: 'practice_clash', practice: PRACTICE, weight: 200 });
     expect(decided.fires('situations.policy')).toBe(1);
+  });
+
+  it('a floored row applies at least the floor row’s grievances, whoever carries it: the more a carrier resists, the dearer, never the cheaper', () => {
+    // The fixture's carrier (a_gen, who keeps the practice of sheltering them), and a bold one (a_bold at a_reserve), the
+    // standing review's case: before every term was applied, a bold carrier made sending back cheaper than sheltering.
+    const bold = { ...CROSSERS, options: CROSSERS.options.map((o) => (o.policy === null ? o : { ...o, policy: { ...o.policy, carriedBy: [POST('a_reserve')] } })) };
+    for (const [name, situation] of [['the fixture carrier', CROSSERS], ['a bold carrier', bold]] as const) {
+      const wd = world(true, ROWS, situation);
+      const back = (() => {
+        const start = createState(wd, { seed: 1, drivers: { a_lead: 'human' } });
+        const decided = run(wd, start, 2, { 2: [{ cmd: 'decide', situation: S('crossers'), options: ['send_back'] }] });
+        const carriers = situation.options[1]!.policy!.carriedBy.map((p) => decided.results[0]!.state.postStates[p]!.postHolder!);
+        return { sum: policyGrievances(decided.state).reduce((n, g) => n + g.weight, 0), total: pushbackOf(wd, decided.results[0]!.state, 'policy:send_back', carriers, P('a_lead'), (p) => ({ oversight: oversightOf(ctxFor(wd, decided.results[0]!.state, 2), decided.results[0]!.state, p, P('a_lead')).value })).total };
+      })();
+      const shelter = (() => {
+        const start = createState(wd, { seed: 1, drivers: { a_lead: 'human' } });
+        const decided = run(wd, start, 2, { 2: [{ cmd: 'decide', situation: S('crossers'), options: ['shelter'] }] });
+        const carriers = situation.options[0]!.policy!.carriedBy.map((p) => decided.results[0]!.state.postStates[p]!.postHolder!);
+        return { sum: policyGrievances(decided.state).reduce((n, g) => n + g.weight, 0), total: pushbackOf(wd, decided.results[0]!.state, 'policy:shelter', carriers, P('a_lead'), (p) => ({ oversight: oversightOf(ctxFor(wd, decided.results[0]!.state, 2), decided.results[0]!.state, p, P('a_lead')).value })).total };
+      })();
+      // What is applied is the pushback, term for term (each carrier read at the oversight where he stands, as the tick
+      // reads him), and the floored row's is at least its floor's.
+      expect(back.sum, `${name}: send_back applies its pushback`).toBe(back.total);
+      expect(shelter.sum, `${name}: shelter applies its pushback`).toBe(shelter.total);
+      expect(back.sum, `${name}: send_back is never cheaper than shelter`).toBeGreaterThanOrEqual(shelter.sum);
+    }
   });
 
   it('a floor with nobody to bear it falls on the principal’s own standing, a typed floor cost (G-1.5f)', () => {

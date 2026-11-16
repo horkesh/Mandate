@@ -1,8 +1,12 @@
 /**
  * A chosen policy (lane 1.5b; 0074; the gate review's G-1.5a, G-1.5f, G-1.5g): an option, or a decision's inaction, that
  * names a `policy:` row of the pack's order-to-value map applies that row's pushback through its owners.
- * - **Stakeholders** (`people`): every person on the side who holds a value the row offends holds a `policy_offended`
- *   grievance against the principal, weighted by his term.
+ * - **Stakeholders and carriers** (`people`): every term of the row's pushback is a grievance against the principal,
+ *   typed by its term: `policy_offended` for a person on the side who holds a value the row offends, `policy_unwilling`
+ *   for a carrier's unwillingness, `policy_practice` for a carrier's clash with his own practice. The applied grievances
+ *   are the row's pushback, term for term, so a carrier's resistance never makes a policy cheaper.
+ * - **The floor, on what is applied**: since the applied grievances equal the pushback, the floor term (the floor row's
+ *   total less this row's own) is exactly what raises this row's applied grievances to the floor row's.
  * - **The floor** (G-1.5f): when the row is floored by `notCheaperThan`, the difference falls on the floored row's own
  *   stakeholders and carriers (those it offends, those whose practice it runs against, those unwilling to carry it), in
  *   proportion to their share of its pushback, each a grievance whose cause names the floor. Never on the floor row's
@@ -25,6 +29,11 @@ import { fire, oversightOf, type TickContext } from './context.ts';
 
 /** The grievance a policy leaves on those it offends. */
 export const POLICY_GRIEVANCE = 'policy_offended';
+/**
+ * The grievance a policy leaves by each pushback term, typed by its term (the standing review of lane 1.5b): every term
+ * the total counts is applied, so the more a carrier resists, the more the policy costs, never the less.
+ */
+export const POLICY_GRIEVANCES = { values: POLICY_GRIEVANCE, recipient: 'policy_unwilling', practice: 'policy_practice' } as const;
 
 /** The pushback terms that fall on a person, by person (the row's own stakeholders and carriers, for the floor's share). */
 function personal(terms: readonly PushbackTerm[]): { readonly person: PersonId; readonly amount: number }[] {
@@ -56,8 +65,10 @@ export function applyPolicy(ctx: TickContext, start: State, def: SituationDef, p
   const push = pushbackOf(world, start, row, carriers, principal, readAt);
   const changes: PeopleChange[] = [];
   const trail = push.terms.map((t) => (t.source === 'floor' ? term('relay_term', t.amount, { person: principal, rule: `floor:${t.order}` }) : term('relay_term', t.amount, { person: t.person, rule: `pushback:${t.source}` })));
+  // Every term the total counts becomes a grievance, typed by its term: a stakeholder's offended values, a carrier's
+  // unwillingness and his clash with his own practice. So the applied grievances are the pushback, term for term.
   for (const t of push.terms) {
-    if (t.source === 'values') changes.push({ change: 'grievance', person: t.person, kind: POLICY_GRIEVANCE, weight: t.amount, against: principal, cause: row });
+    if (t.source !== 'floor') changes.push({ change: 'grievance', person: t.person, kind: POLICY_GRIEVANCES[t.source], weight: t.amount, against: principal, cause: row });
   }
   const floor = push.terms.find((t) => t.source === 'floor');
   if (floor !== undefined && floor.source === 'floor') {

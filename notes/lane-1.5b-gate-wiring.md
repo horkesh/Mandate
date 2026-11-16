@@ -9,7 +9,12 @@ Lane 1.5b carries out the gate reviewer's items on lane 1.5 (`review-gate-1861.m
 **G-1.5a: a chosen policy applies its row's pushback through the owners** (`tick/policy.ts`, called from `applyDecision`).
 - A situation option gains `policy: { row, carriedBy } | null`. `row` is a `policy:` row of the map; `carriedBy` lists the posts whose holders carry it out, and may be empty.
 - Choosing it reads `pushbackOf`, now the one reader of the map's pushback, so the floor and the side-wide count bite in play.
-  - **Stakeholders** (`people`): each person on the side who holds an offended value gets a `policy_offended` grievance against the principal, weighted by his term, with the row as its cause.
+  - **Stakeholders and carriers** (`people`): every term the pushback counts becomes a grievance against the principal, with the row as its cause, typed by its term:
+    - `policy_offended`: a person on the side who holds an offended value;
+    - `policy_unwilling`: a carrier's unwillingness;
+    - `policy_practice`: a carrier's clash with his own practice.
+
+    So the applied grievances are the pushback, term for term. Before the standing review, only the values terms were applied, so a resisting carrier made a policy cheaper. Now he makes it dearer.
   - **Carriers** (`proxy`): each carrier answers the row through his own compliance, practice clashes included. `proxy` records the answer under `m.<day>.policy.<situation>.<option>`.
   - The mechanic `situations.policy` is QUIET in the liveness gate, driven by `gate-wiring.test.ts`.
 - **Validator** (`policyRows` in `situation-layer.ts`):
@@ -28,6 +33,8 @@ Lane 1.5b carries out the gate reviewer's items on lane 1.5 (`review-gate-1861.m
 The terms always sum to the total.
 
 In play (G-1.5f, the gate reviewer's should-fix), the floor's difference is shared among the floored row's own stakeholders and carriers: those it offends, those whose practice it runs against, and those unwilling to carry it. Each person's share is in proportion to his pushback, as whole numbers (the remainder goes to the first by id), and is a grievance whose cause is `floor:<row>`. It never falls on the floor row's stakeholders, who favoured the policy the floor stands for; a grievance would give them a stance no source gives them.
+
+Because the applied grievances equal the pushback, the floor term is exactly what raises the floored row's applied grievances to the floor row's. `gate-wiring.test.ts` checks this for the fixture's carrier and for a bold one, the standing reviewer's case.
 
 When the row has nobody of its own to bear the difference, it falls on the principal's own standing as a typed floor cost (`floor_cost:<row>`). Every pushback term reaches the explanation trail as a `policy` event. Standing is a permille clamped at 0, so a principal with no standing left pays nothing more.
 
