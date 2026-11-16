@@ -195,6 +195,12 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **1B, R7:** drop `fund-a-scheme`.
   - **Lane 1.12:** `crossNeutral` is a stand-in.
   - **1B raids:** edge damage reaches the planner through the derived map, not by report. From lane 1.2's review (`review-lane-1.2.md`): the side's supply reach also reaches the planner through the derived map, computed with the obstructions truly there. That is acceptable in 1A and needs a report-based path once unseen damage or a boom matters.
+- From lane 1.3's report (
+otes/lane-1.3-combat.md, on claude/phase1-combat-3ba74b while in review), by lane; the trapped-garrison item above stays open until the branch merges:
+  - **Lane 1.14 (calibration):** the Livermore harness's worst fit is Fort Wagner: the model gives 62 attackers hit per 1000 against Livermore's 213, because contact capped at the smaller side understates an assault on a small garrison.
+  - **Lane 1.4 (operations):** fortification is read but never written: building works overnight, and losing them when stormed, have no code yet. Battle records grow with every battle-day and need a pruning rule, beside `orderResponses`. The arms vocabulary has no cavalry flag, so pursuit cannot ask for cavalry.
+  - **Lane 1.12 (rule seats):** commanders' battle choices (commit, stand, break out, surrender, pursue) are rule functions, not seat requests, so an AI seat cannot make them yet. `seats.choices` has no kernel unit test; only the gate's runs fire it.
+  - **1B:** combat has no weather term (0029) and no supply term.
   - From the same review, **lanes 1.4 and 1.14:** McClellan bold on paper (27 April, 80,000 men) and cautious in action (Rich Mountain, 11 July). A single boldness cannot hold both. Watch whether drafting and execution need separate terms when operations land, and in calibration.
 **Phase 2 (desk and map)**
 - From lane 0.9, plan review: preview an edited route and its distance before it is sent. A distant waypoint can produce a route the player did not mean.
