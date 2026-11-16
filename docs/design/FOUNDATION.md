@@ -318,7 +318,9 @@ Simulation discipline, kept from AWWV's lessons:
 - Calibration targets are bands and counts of named things, not single-region flips; late-war checkpoints are chaotic.
 - Check that every rule seat can do its historical job.
 
-## 12. Phase 0 plan
+## 12. Phase plans
+
+### Phase 0 (closed, 0072)
 
 The review found the first draft's done check (a full 1861–62 history run) needed combat, politics, the planner and a people pack that no lane built. Phase 0 is therefore the foundation and the world; Phase 1 is the war machine.
 
@@ -364,7 +366,106 @@ Sequence within the limit of four lanes, two of them moving the simulation (revi
 3. 0.4, then 0.5 (simulation), with 0.3's data entry alongside.
 4. 0.8.
 
-**Phase 1, the war machine** (planned after Phase 0 lands): the kernel planner and plan selection; operations; combat with breakdowns and shaded reports; the people core recast for goals, plans and edits; stats, assessment and the officer pool; politics, the press and the 1862 midterms; the economy; attention. Phase 1 is done when a headless history run from March 1861 reaches the 1862 midterms with checkpoints in plausible bands, **and** the owner can play the core loop in a text console: plan review, arrow edits, audiences and dispatches (0030). **Phase 2** is the desk and the staff map. Its done check is set when Phase 1 lands; the working version is that the owner plays Lincoln through 1861–62 at the desk, on the staff map, and finds plan review and the audience worth playing. Phase 2 also yields the public demo (0037, 0039): the desk, the audience and plan review, starting from a later scenario with armies in the field, because the March 1861 start has no armies and so no arrows (0040).
+### Phase 1: the war machine (proposal, under review)
+
+Phase 1 builds the kernel planner and plan selection; operations; combat with breakdowns and shaded reports; the people core recast for goals, plans and edits; stats, assessment and the officer pool; politics, the press and the 1862 midterms; the economy; and attention.
+
+**Phase 1 is done when** a headless history run from March 1861 reaches the 1862 midterms with checkpoints in plausible bands, **and** the owner can play the core loop in a text console: plan review, arrow edits, audiences and dispatches (0030).
+
+**Two milestones.** The Phase 0 exit review ranked what Phase 1 inherits (0072):
+1. pushback has never run on the new kernel;
+2. the history run needs rule-seat principals and the opening situations, under the gate;
+3. the planner replaces standing goals;
+4. two kernels sit side by side;
+5. data gaps decide outcomes.
+
+Built system by system, these risks would meet only at the end. So Phase 1 runs as two milestones:
+- **1A, the road to Bull Run** (5 March to 31 July 1861), is a thin slice through every system over the war's first five months, and meets all five risks before anything is built on top of it. These months hold:
+  - the opening decisions and both war flags;
+  - the call for troops and the armies it raises;
+  - the border states;
+  - Congress away, then in special session;
+  - the first plan a president reviewed and pushed: McDowell's advance before the ninety-day men went home (S21).
+- **1B, to the midterms**, builds the breadth on that slice.
+
+The slice is emergent like the rest of the game: its checkpoints are bands, and no battle is required to happen where or when it did (section 11).
+
+**1A is done when**, on the Union pack from the 5 March 1861 start:
+1. A headless history run reaches 31 July 1861, and:
+   - each side's war flag is set by its own government's decision (0066), with no `--at-war`;
+   - the 31 July checkpoints fall inside bands sourced by a research lane before the run, never fitted from it. They cover:
+     - which states have seceded;
+     - which side each border government is on;
+     - whether Washington is held;
+     - each side's men under arms;
+     - a planned operation fought by each side;
+   - at least one operation is drafted by the kernel planner, chosen by its commander's seat, approved, executed and fought with the battle model, with a breakdown;
+   - pushback fires on the new kernel, each in a band above zero, so the bands Phase 0 pinned at zero move (0068):
+     - relay objections;
+     - compliance with reservations;
+     - slow walks;
+     - an objection to a plan;
+   - every Phase 0 criterion still passes: the same hashes on Linux and Windows, resume, the liveness gate for every mechanic, and the tick budget, re-measured with the planner, people and situations running.
+2. The owner can play the same months in the text console on the new kernel:
+   - the situations;
+   - a plan review with an arrow edit;
+   - an audience;
+   - dispatches, including a battle day's hour-stamped dispatches.
+   The owner's playtest follows the milestone.
+3. M2 is retired:
+   - `GameState`, `turn`, `theatre`, M2's console, runners and CI steps are deleted;
+   - `compliance.test.ts` and the audience tests run on the new State.
+
+Lanes for 1A, sized from `docs/LANES.md`:
+
+| # | Lane | Depends on | Size |
+|---|---|---|---|
+| 1.1 | **The people recast: State and compliance.** First, the one-writer scanner follows type aliases; that fix merges before any new State owner (`OPEN_QUESTIONS`). Then: people as State owned by `people` (hidden true stats drawn at setup from cited centres, traits, standing, grievances, regard, stances on record, and ranks with their kind: regular, volunteer or brevet); values and temperament in the world format, each centre cited (0005); `compliance`, `reading` and `proxy` on the new State; compliance for goals, plans and edits through `DirectiveTerms`, reading a plan's boldness against the man's own best plan, with responses that carry conditions such as "move when reinforced" and "if the navy supports" (lane 0.9); relay compliance that reads values, so relay objections and holds come alive. It replaces three stand-ins: the trait adapter (0058), weakest-first transfers and conflict resolution by department (0064). It moves `compliance.test.ts` onto the new State | Phase 0 | Opus, high |
+| 1.2 | **The planner and plans in the kernel.** `planner` as a pure module in 0062's shape, inside lane 0.9's boundary: passage from `movement`, the heap shared from `supply`, and every input about the enemy or the ground from the commander's view. `plans` State holds full goals (objective, posture, risk, deadline, permissions, committed divisions, "prepare, await my word", "approve as drafted unless he objects"), draft sets saved on the request day, the seat's selection, approval, send-back, and arrow edits as counter-orders. It makes lane 0.9's fixes: a phase for each enemy-held region on a route, the shortfall threshold, the assault margin, neutral ground only by permission, and detachments left behind. The daily drafting cap becomes a pack rule. It replaces standing goals everywhere they are read: the situations `goal` condition, 0071's refusal, the war gate's opening order and the hold goal a post gets when its government changes side (0072) | Phase 0; the `DirectiveTerms` interface is agreed with 1.1 in its first days | Opus, high |
+| 1.3 | **Combat: the battle model.** It replaces the simple contest (0064) with the combat note's model: one battle per region per day; men in contact capped by frontage; five battle types with base loss rates; additive typed terms; one named stream per battle-day with fixed draws; commanders commit, stand or pursue by their traits, without dice; the missing go to stragglers; a rout by morale does not kill; destruction only when cut off; a trapped garrison surrenders (`OPEN_QUESTIONS`); generals are killed or wounded on their own stream. Also: battle records with breakdowns; morale, experience and equipment on force blocks; a four-phase template that drives the hour-stamped dispatches; and Livermore's tables as a CI harness of named set-ups | 1.1 | Opus, high |
+| 1.4 | **Operations, reports and dispatches.** An approved plan becomes an operation with a lifecycle per axis: assemble, march, works, assault, pause, pursue, withdraw, end. Support requests are directives to other holders, who answer with their own compliance, and an encirclement is two commanders' arrows meeting. Reports come through the commander, shaded by who he is (0008), and through the other routes: governors, the Navy Department, observers and the telegraph office. A battle day's dispatches are stamped by hour (section 9). A battle report, a closed pocket and a plan ready for review become decision points | 1.2, 1.3 | Opus, high |
+| 1.5 | **People's verbs, the audience and attention.** The verbs: appoint; relieve, with modes; promotion lists by rank and seniority; transfer through compliance; inquire; consult, with stances on record; the audience recast for plans, before and during; visit; send an observer; honour, promise, pressure and address. Also: the ladder and rivals; seat initiatives in the weekly people step (0040), with the Seward memorandum (S07) as the first case; and the attention budget, owned by `seats`, priced by a pack cost table and refilled weekly. It moves the M2 audience tests onto the new State | 1.1 | Opus, high |
+| 1.6 | **The home front, first cut.** Each chamber's state and the accountability ledger, so the acts of April to July 1861 are taken while Congress is away and answered for when it meets (S20); the framing term (0028); blocs and the mandate, recast from M2; the press as a report route with a weekly front page; region loyalty as State owned by `regions`, from sourced start values (`OPEN_QUESTIONS`). Men: governors raise regiments on a call, into new force blocks owned by `forces`, with enlistment terms that run out (the ninety-day men). The people who reach Union lines become a derived term, placed by R7 (0046) | 1.1; 1.7 for R7's placement | Opus, high |
+| 1.7 | **Gate records for 1861.** It drafts four records, each with its sources, for the lead to decide and record: R2 (Black military service, for S13), R6 (civilians, for S12 and S14), R7 (emancipation and fugitive policy, for S15, S17 and S20) and R8 (security orders, for S12, S18 and S20). It also drafts R1's interim rule for the Confederate rule seat (SENSITIVE-HISTORY section 4), which lane 1.11 needs. It then registers their topics in the Union pack's gate (SENSITIVE-HISTORY section 3), beside `indian-territory-1861`. A separate gate reviewer reviews it | — | Opus, high |
+| 1.8 | **Research: the cast.** Values, temperament, regard and stat centres, each cited, for 1A's people on both sides: Lincoln's cabinet, Scott and the department commanders, the governors who raise the regiments, the border states' leaders, and Davis, his cabinet, Beauregard, J. E. Johnston and Lee | — | Sonnet, high |
+| 1.9 | **Research: numbers and facts.** Strengths and stores for the blocks with unknowns (`OPEN_QUESTIONS`, risk 5); the regiments raised by each state against the April and May calls, with their terms; the Confederate opening's decisions (Davis's cabinet on Sumter, the upper-South conventions; `OPEN_QUESTIONS`); and the 31 July 1861 checkpoint bands, each sourced | — | Sonnet, high |
+| 1.10 | **Situations, March to July 1861.** S01 to S21 as pack data. The gated ones are authored only after their records (1.7), with the gate reviewer's sign-off. Also: the Confederate opening set, with the firing on Sumter as the one labelled railroad (0028, 0040) and each side's war-flag decision (0066); the border-state chains proposing department sides (0065); and data entry of 1.8's and 1.9's findings | 1.7 for the gated items; 1.8 and 1.9. Options that propose to owners not yet built are reported, not applied (0057), so authoring need not wait for those owners | Opus, high |
+| 1.11 | **Rule-seat principals and commander seats.** A rule-seat Lincoln (historical defaults) and Davis who do their historical jobs (section 11): keep March's peace until the opening decisions, hold the capitals, raise and concentrate armies, and set the goals behind the summer's operations. Also: commander seats that choose among the planner's candidates by their traits. It retires the generic principal (0072) and the stand-in that makes the other side's capital the objective | 1.2, 1.5, 1.10 | Opus, high |
+| 1.12 | **The console on the new kernel, and M2 retired.** A text console with turns of up to seven days that end on the kernel's decision points (0027), an inbox, dispatches, situations, plan review with arrow edits and a preview of the edited route (lane 0.9), the audience, and every Phase 1 verb. The verb-list test reads the new kernel. Then M2's `GameState`, `turn`, `theatre`, console, runners and CI steps are deleted | 1.4, 1.5 | Sonnet, high |
+| 1.13 | **The 1A done check.** It extends the runner and the done check (0068) with checkpoint scores, the pushback bands and the re-measured tick budget. It calibrates against the sourced bands with a budget of eight measured runs: one change per run, and sourced data corrections before engine knobs (section 11) | 1.1–1.12 | Opus, high |
+
+After 1.13, **1A's exit review** is a fresh lane that reviewed none of 1A's lanes, as Phase 0's was (0072). Its findings set 1B's lanes.
+
+Notes for 1A's lanes:
+- **1.1 and 1.2 meet at `DirectiveTerms`.** The planner maps a plan or an edit to terms, and compliance answers. Whichever lane merges second adapts to the first.
+- **Planner weights and compliance are calibrated together** in 1.13, one change per measured run, because edit distance comes from the planner's scores (the Phase 0 note above).
+- **Every new kernel default is a pack rule in `WorldRules`**, stated by every pack, with no hidden default (0072). Every new State field gets its `OWNED_FIELDS` entry. The reserved rows for the Congress ledger and for the people who reach Union lines get their writers in 1.6.
+- **The border-state chains are the first situations to change a department's side** (0065), so 1.10 tests that path on the real pack.
+- **Kernel tests use the testbed's fictional terms**, never the setting's (`check:boundary`).
+
+Sequence, within four lanes at once, two of them moving the simulation (standing lanes excepted; a gate reviewer counts):
+1. 1.1 and 1.2 (simulation), with 1.7 and 1.8 alongside.
+2. 1.9 and 1.7's gate review, as 1.7 and 1.8 close.
+3. 1.3 and 1.5 (simulation), as 1.1 and 1.2 merge, with 1.10 alongside.
+4. 1.4 and 1.6 (simulation).
+5. 1.11 (simulation), with 1.12 alongside.
+6. 1.13, then the exit review.
+
+The critical paths are 1.1 → 1.3 → 1.4 → 1.12 and 1.7 → 1.10 → 1.11, which meet at 1.13.
+
+**1B, to the midterms.** Its lanes are numbered from 1.14 and sized and ordered after 1A's exit review, from what 1A teaches. Its scope:
+- **The home front in full:** the press's leaks; generals as political actors (P6); Congress's sessions and the Joint Committee (S27); and the 1862 midterms state by state, with soldier voting by each state's law.
+- **The economy:** money (the Treasury and Congress, with the gold premium), munitions (Ripley and Meigs) and rail capacity per named line, each lever with a holder who can stall.
+- **People:** stats, assessment, the officer pool and the reckoning (section 6).
+- **The planner and operations, second pass:** proposals, the siege method, rivers, rail capacity, ships' stores and blockade stations (lane 0.9).
+- **The gate:** R3 (the wars against Native nations, the Dakota War among them), R4 (prisoners) and R7's 1862 decisions, each recorded and registered before its situations.
+- **Research:** strengths into 1862, the Confederate side's 1862 decisions, and the checkpoint bands to the midterms.
+- **Situations** from August 1861 to the midterms, and the principals' 1862 jobs.
+- **The Phase 1 done check** and its calibration, then the Phase 1 exit review.
+
+### Phase 2
+
+**Phase 2** is the desk and the staff map. Its done check is set when Phase 1 lands; the working version is that the owner plays Lincoln through 1861–62 at the desk, on the staff map, and finds plan review and the audience worth playing. Phase 2 also yields the public demo (0037, 0039): the desk, the audience and plan review, starting from a later scenario with armies in the field, because the March 1861 start has no armies and so no arrows (0040).
 
 ## 13. Open after this design
 
