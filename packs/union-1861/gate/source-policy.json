@@ -31,5 +31,25 @@
     "SHERMAN-M",
     "WEED-MEM",
     "WELLES-D1-RETRO"
-  ]
+  ],
+  "evidence": {
+    "innateThrough": "1861-07-31",
+    "startBefore": "1861-03-05",
+    "innateStats": ["competence", "nerve"],
+    "innateTraits": [
+      "slow",
+      "rank_proud",
+      "joint_minded",
+      "organiser",
+      "micromanages",
+      "intrigues",
+      "quarrelsome",
+      "ambitious",
+      "insubordinate",
+      "disdains_superiors",
+      "shifts_blame",
+      "self_doubting",
+      "holds_grudges"
+    ]
+  }
 }

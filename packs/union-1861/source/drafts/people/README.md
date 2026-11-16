@@ -397,3 +397,31 @@ Kept in the rows' notes; collected here by group.
 | MO-CONV-1861 | *Journal and Proceedings of the Missouri State Convention, March 1861* (St. Louis: Knapp, 1861) (`proceedings00knaprich`) |
 
 The readers' full findings, with quotations and pages, are in `docs/research/2026-11-16-1861-gaps.md` (Parts D1 to D3).
+
+
+## The evidence rules, as the validator enforces them (lane 1.11b, 0085)
+
+A people cell is refused (`weak-citations-only`) when every admissible citation is weak. A citation is weak when:
+
+- its source is on `gate/source-policy.json`'s `weak` or `banned` list (a memoir, a pointer, a banned memoir);
+- its place begins with `snippet`, `self-report` or `after-start`;
+- **its place states a date, `dated YYYY-MM-DD` anywhere in the locator (for example `JCCS I-p73 dated 1861-02-21`), and the date is past its cell's boundary** (the new rule). A citation with no date is not judged by date; give every citation whose evidence is near a boundary its date.
+
+**The boundary depends on the cell's class** (the mapping is in `gate/source-policy.json`, `evidence`, so it is the pack's data):
+
+| Class | Cells | Evidence counts if dated |
+|---|---|---|
+| Innate | the stats `competence` and `nerve`; the traits `slow`, `rank_proud`, `joint_minded`, `organiser`, `micromanages`, `intrigues`, `quarrelsome`, `ambitious`, `insubordinate`, `disdains_superiors`, `shifts_blame`, `self_doubting`, `holds_grudges` | up to 31 July 1861 (the end of 1A's window) |
+| Start | every other cell: the stats `experience` and `reputation`; `boldness`; `candour`; `regard`; regard toward another person; every value; every practice; and every other trait (`candid`, which is classed with candour, `political_patron`, `uses_press`, `slaveholder`) | before 5 March 1861 |
+
+**Whose words count** (0085). These are not a validator test; the author applies them when citing, and a reviewer checks:
+
+- A man's own words are a leg when they are themselves the conduct that shows the trait (Johnston's 29 July letter protesting his rank, for `rank_proud`).
+- A man's own words that assess his own quality (candour, competence, organising) are not a leg: such a cell needs a third party's leg. Cite the own words with `self-report` so the check sees them as weak.
+- An order assigning a man a task shows the assigner's expectation, not the man's gift. It is not a leg for the trait the task needs.
+
+**A past rank's kind follows its commissioning authority.** A rank by election in the regiment or by a governor is `state_`; one by the President is `usv_`. Mustering a regiment into federal service does not change it. Breckinridge's is `state_maj:1847` (partly sourced, Appletons only); Pike's `state_capt:1846` stays needs-source.
+
+**Existing cells.** The cells entered before this rule cite evidence with no date, so the date check cannot judge them. A pass that dates their citations would show which rest on evidence past the boundary; none is known to.
+
+**Entered from the held-back draft in lane 1.11b:** 28 cells (see `notes/lane-1.11b-data-entry.md`). The rest of the draft stays held back.

@@ -563,7 +563,7 @@
     },
     {
       "key": "ORN",
-      "title": "Official Records of the Union and Confederate Navies, Series I vols 1 and 4, Series II vol. 1 (GPO, 1894-1921)",
+      "title": "Official Records of the Union and Confederate Navies, Series I vols 1, 4, 5, 7, 12 and 22, Series II vols 1 and 2 (GPO, 1894-1921)",
       "kind": "primary",
       "licence": "public-domain",
       "basis": "government-work",
@@ -898,6 +898,86 @@
       "licence": "public-domain",
       "basis": "expired-copyright",
       "copyUsed": "read as page text through a fetch tool, 2026-11-16; page numbers as printed (Delaware, p.256); a period secondary, never a primary journal: re-read in print",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "LEWIS-HWVM",
+      "title": "V. A. Lewis, How West Virginia Was Made (Charleston: News-Mail Co., Public Printer, 1909), printing the journals of the First and Second Wheeling Conventions (May-June 1861) and speeches from the Wheeling Daily Intelligencer",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org howwestvirginiaw00lewi, OCR (lane 1.11r); the journals are 1861 documents as printed in 1909",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CHASE-1847",
+      "title": "S. P. Chase, Reclamation of Fugitives from Service: an argument for the defendant ... in Jones v. Vanzandt (Cincinnati: Donogh, 1847)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org reclamationoffug00chas, OCR (lane 1.11r)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "HOLT-1861",
+      "title": "Letter from the Hon. Joseph Holt ... Duty of Kentucky (Washington: Polkinhorn, 1861), with T. H. Dodge's prefatory letter of 24 June 1861",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org letterfromhonjos00holt, OCR (lane 1.11r)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "REBREC1",
+      "title": "Frank Moore, ed., The Rebellion Record, vol. 1 (New York: Putnam, 1861-62), Documents and Diary of Events",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org rebellrecord01moorrich (second scan rebellionrecord01moor), OCR (lane 1.11r)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "USREPORTS",
+      "title": "Kentucky v. Dennison, 65 U.S. (24 How.) 66, December term 1860 (record and opinion of the Supreme Court)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "law.cornell.edu/supremecourt/text/65/66, read as text, not a page image; the page is not checked in print (lane 1.11r)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CUSTIS-WILL",
+      "title": "Will of George Washington Parke Custis, 26 March 1855 (probated 1857)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "read in HTML at battlefields.org, a modern host of a period document; recheck against a period printing (lane 1.11r)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CHI-1860",
+      "title": "Proceedings of the Republican National Convention, Chicago, 16-18 May 1860",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org proceedingsofrep00repu, OCR (lane 1.11r)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "WOODWARD-LYON",
+      "title": "A. Woodward, Life of General Nathaniel Lyon (Hartford: Case, Lockwood, 1862), printing Lyon's letters",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org lifeofgeneralnat00woodrich, OCR: a period compilation, the weakest of the keys (lane 1.11r)",
       "licencePage": null,
       "licenceReadOn": null
     }
