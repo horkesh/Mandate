@@ -96,7 +96,7 @@ describe('orders through chains (0040)', () => {
     expect(results[0]!.decisionPoints.map((d) => d.point)).toEqual(['objection']);
     // He was given no goal: no plan record, and nothing moves him.
     expect(state.planRecords[POST('a_army')]).toBeUndefined();
-    expect(state.standingGoals[POST('a_army')]).toBeUndefined();
+    expect(Object.values(state.operationRecords).filter((o) => o.opPost === POST('a_army'))).toEqual([]);
   });
 
   it('goes around the chain by special messenger: faster, priced, and a grievance for the man bypassed', () => {
@@ -314,7 +314,10 @@ describe('belief: perception in belief derivation, the intelligence chief a sepa
     const world = indexedFixture({ posts: { a_reserve: { strength: 2000 } } });
     const { state, results } = run(world, 30, { a: { 1: [order('a_reserve', 'advance', 'b_mid', 'special-messenger', true)] } });
     expect(headquartersOf(world, state, POST('a_reserve'))).toBe(R('b_mid'));
-    expect(state.standingGoals[POST('a_reserve')]!.standingSpec).toEqual({ goalSpecKind: 'hold', goalSpecRegion: R('b_mid') });
+    // Lane 1.4: his operation's main axis reached b_mid and holds it, digging in.
+    const op = Object.values(state.operationRecords).find((o) => o.opPost === POST('a_reserve'))!;
+    expect(op.opAxes[0]!).toMatchObject({ oaxObjective: R('b_mid') });
+    expect(op.opAxes[0]!.oaxArrived).not.toBeNull();
     expect(results.flatMap((r) => r.decisionPoints).map((d) => d.point)).toContain('objective-reached');
   });
 });

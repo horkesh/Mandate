@@ -135,10 +135,10 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('responses to orders (declared and actual rungs, reasons)', 'proxy', ['message arrival'], [at('State', 'orderResponses')]),
   field('audience state', 'audience', ['the audience verb'], [at('State', 'audienceHeld')]),
   // Lane 1.2: each post's goal and plan record (`plans/plans.ts`): its draft set, saved on the request day, the seat's
-  // pick, approval or send-back, and edits as counter-orders. `standingGoals` is the STAND-IN execution adapter an
-  // approved plan writes (`plans/execute.ts`), owned by lane 1.4 to retire; no order's content reaches it.
-  field('goals, plans, approvals, edits', 'plans', ['verbs', 'seat selections', 'order arrival', 'the planner (draft sets, on request)'], [at('State', 'planRecords'), at('State', 'standingGoals')]),
-  field('operations and their lifecycles', 'operations', ['plan approval', 'movement and combat outcomes']),
+  // pick, approval or send-back, and edits as counter-orders. Lane 1.4 retired the standing-goal execution adapter.
+  field('goals, plans, approvals, edits', 'plans', ['verbs', 'seat selections', 'order arrival', 'the planner (draft sets, on request)'], [at('State', 'planRecords')]),
+  // Lane 1.4: approved plans in execution, each axis's stage, its support requests and its outcome.
+  field('operations and their lifecycles', 'operations', ['plan approval', 'movement and combat outcomes', 'a support request answered'], [at('State', 'operationRecords')]),
   field('knowledge (reports per seat)', 'knowledge', ['message delivery', 'pruning'], [at('State', 'knowledgeBySeat'), at('State', 'reportTruth')]),
   field('messages in transit', 'messages', ['commands', 'reports', 'relay links forwarding an order', "the kernel's latency rules"], [at('State', 'messagesInTransit')]),
   field('economy stocks', 'economy', ['weekly step', 'verbs']),
@@ -211,9 +211,11 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'PlanGate',
   'PlanTerm',
   'PlanRejected',
-  // Plans: the STAND-IN execution adapter (lane 1.4)
-  'GoalSpec',
-  'StandingGoal',
+  // Lane 1.4: operations (each replaced whole by `operations`)
+  'OperationRecord',
+  'OpAxis',
+  'AxisEvent',
+  'OpRequest',
   // Reports and knowledge
   'ReportBody',
   'ReportClaim',

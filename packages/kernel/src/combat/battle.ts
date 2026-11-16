@@ -28,6 +28,7 @@
 import { strictCompare } from '../compare.ts';
 import type { CombatCommandChange } from '../command/command.ts';
 import type { ControlDelta } from '../control/control.ts';
+import type { FortificationDelta } from '../regions/regions.ts';
 import { factionOfBlock, isNaval, type ForceDelta } from '../forces/forces.ts';
 import { toId, type EdgeId, type FactionId, type ForceBlockId, type PersonId, type PostId, type RegionId } from '../ids.ts';
 import { latestEnemyClaims } from '../knowledge/beliefs.ts';
@@ -97,6 +98,8 @@ export interface CombatResult {
   readonly control: readonly ControlDelta[];
   readonly people: readonly PeopleChange[];
   readonly command: readonly CombatCommandChange[];
+  /** Works lost where a defender in them was driven out (lane 1.4; 0029), for `regions` to apply. */
+  readonly fortification: readonly FortificationDelta[];
   /** Every block that fought today (it does not take stragglers back today: P8). */
   readonly inBattle: readonly ForceBlockId[];
 }
@@ -218,6 +221,7 @@ export function combatDay(world: PrincipalLookup, ground: MarchGround, state: St
     control: [] as ControlDelta[],
     people: [] as PeopleChange[],
     command: [] as CombatCommandChange[],
+    fortification: [] as FortificationDelta[],
     inBattle: [] as ForceBlockId[],
   };
   const fightingIn = new Set<RegionId>();
@@ -297,6 +301,7 @@ export function combatDay(world: PrincipalLookup, ground: MarchGround, state: St
         retreatTo: retreatTarget(ground, state, region, s.faction)?.to ?? null,
         breakingOut: breaking[i]!,
         surprised: !forewarned(state, command[i]!.person, region),
+        pursuedPermille: type === 'rearguard' && s.faction !== attacker ? pursuitRate(ground, state, region, day, s.faction, sides.find((x) => x.faction === attacker)!) : 0,
       }),
     );
     const resolved = resolveDay(rules, { day, dayNumber, type, attacker, terrain, frontageMen: terrainRow.frontageMen, terrainLossPermille: terrainRow.lossPermille, sides: [inputs[0]!, inputs[1]!] }, createStream(state.gameSeed, `combat/${id}/${day}`));
@@ -320,6 +325,11 @@ export function combatDay(world: PrincipalLookup, ground: MarchGround, state: St
       out.retreats.push({ battle: id, faction: o.faction, from: region, to: o.retreatTo, edge, blocks: sides[i]!.blocks, routed: o.routed });
     });
     const gone = resolved.sides.map((o) => o.retreatTo !== null || o.surrendered);
+    // Works stormed (lane 1.4; 0029): a defender in works driven from them loses the pack's share of them.
+    const works = state.regionFortification[region] ?? 0;
+    const defender = attacker === null ? -1 : sides.findIndex((s) => s.faction !== attacker);
+    const lost = ground.map.world.rules.operations.works.lostWhenStormedPermille;
+    if ((type === 'attack_hasty' || type === 'assault_works') && defender >= 0 && gone[defender] && works > 0 && lost > 0) out.fortification.push({ region, deltaPermille: -Math.min(works, lost), cause: 'combat' });
     if (gone[0] !== gone[1]) {
       const holder = sides[gone[0] ? 1 : 0]!.faction;
       const have = shares[holder] ?? 0;
@@ -346,6 +356,27 @@ export function combatDay(world: PrincipalLookup, ground: MarchGround, state: St
     if (r.battleEndDay === null && !presence.has(r.battleRegion) && !fightingIn.has(r.battleRegion)) closeQuiet(id);
   }
   return out;
+}
+
+/**
+ * The share of a pursued side's stragglers its pursuer takes on a rearguard day (P8; lane 1.4): by the pursuer's own
+ * choice yesterday (lane 1.3's `bsidePursue`), with more when he has cavalry there.
+ */
+function pursuitRate(ground: MarchGround, state: State, region: RegionId, day: number, pursued: FactionId, pursuer: Presence): number {
+  const p = ground.map.world.rules.combat.pursuit;
+  for (const id of Object.keys(state.battleRecords).sort(strictCompare)) {
+    const last = lastDay(state.battleRecords[id]!);
+    if (last === null || last.bdayDay !== day - 1) continue;
+    const fled = last.bdaySides.find((x) => x.bsideFaction === pursued);
+    const chose = last.bdaySides.find((x) => x.bsideFaction === pursuer.faction);
+    if (fled?.bsideRetreatTo !== region || chose === undefined) continue;
+    const base = chose.bsidePursue === 'press' ? p.pressPermille : chose.bsidePursue === 'follow' ? p.followPermille : 0;
+    if (base === 0) return 0;
+    const arms = ground.map.world.vocabularies.arms;
+    const cavalry = pursuer.blocks.some((b) => arms.find((a) => a.id === state.forceBlockStates[b]!.fbArm)?.cavalry === true);
+    return Math.min(1000, base + (cavalry ? p.cavalryPermille : 0));
+  }
+  return 0;
 }
 
 /** Occupation (0064): a side alone that marched in gains `occupation.occupyPermille` a day at `occupyFullMen`, in proportion below. */

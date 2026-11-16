@@ -123,7 +123,8 @@ describe('knowledge stays bounded (FOUNDATION section 8)', () => {
       onDay: (r) => sizes.push(Math.max(...Object.values(r.state.knowledgeBySeat).map((k) => k.knownReports.length))),
     });
     const delivered = telemetry.mechanics['messages.delivered']!.fires;
-    expect(delivered).toBeGreaterThan(1000);
+    // Lane 1.4: the battle model wounds one commander here and his post falls vacant, so fewer dispatches go (900 in 240 days).
+    expect(delivered).toBeGreaterThan(800);
     // No growth: the second half never holds more than the second quarter did.
     expect(Math.max(...sizes.slice(120))).toBeLessThanOrEqual(Math.max(...sizes.slice(60, 120)));
     expect(Math.max(...sizes)).toBeLessThan(60);
@@ -232,7 +233,7 @@ describe('the deep-freeze backstop (0044Ã¢â‚¬â„¢s candidate)', () => {
     const frozen = tick(world, createState(world, { seed: 1 }), [], { freeze: true }).state;
     const alias = frozen.messagesInTransit as unknown as unknown[];
     expect(() => alias.push({})).toThrow(TypeError);
-    const goals = frozen.standingGoals as unknown as Record<string, unknown>;
+    const goals = frozen.planRecords as unknown as Record<string, unknown>;
     expect(() => {
       goals.a_army = null;
     }).toThrow(TypeError);
@@ -354,6 +355,7 @@ describe('ownership of the new State (0044)', () => {
       'knowledgeBySeat:knowledge',
       'messagesInTransit:messages',
       'observerPostings:command',
+      'operationRecords:operations',
       'orderResponses:proxy',
       'personGrievances:people',
       'personInquiries:people',
@@ -381,7 +383,6 @@ describe('ownership of the new State (0044)', () => {
       'seatInitiatives:seats',
       'situationFlags:situations',
       'situationStates:situations',
-      'standingGoals:plans',
       'stateDay:tick',
     ]);
     expect(IMMUTABLE_ROOT_FIELDS).toContain('gameSeed');
@@ -403,7 +404,10 @@ describe('ownership of the new State (0044)', () => {
     // objecting (lane 1.1: an objection needs a candid man), so objections are driven in seats-orders.test.ts.
     // Lane 1.5: the scripted seats send no people verbs and never run out of attention; promises, rivals and initiatives
     // need verbs or a rung this game does not reach. Each has its own kernel test (people-verbs.test.ts).
-    expect(dead).toEqual(['commands.rejected', 'orders.conflict', 'orders.relay_objected', 'reports.trimmed', 'seats.defaulted', 'seats.attention_refused', 'verbs.answered', 'verbs.audience', 'verbs.consulted', 'verbs.declined', 'verbs.in_washington', 'people.promise_kept', 'reports.observer_letter', 'ladder.rival', 'people.promise_broken', 'seats.initiative']);
+    // Lane 1.4: no plan here asks another holder for support, and nothing is old enough to prune in 60 days; both have their own tests.
+    // A scripted order now meets a post the battle model left vacant and is rejected, so `commands.rejected` is live here;
+    // no state's ground sees a battle (no governor's wire) and no headquarters is cut off (no pocket report).
+    expect([...dead].sort()).toEqual(['ladder.rival', 'operations.support_answered', 'operations.support_refused', 'operations.support_sent', 'orders.conflict', 'orders.relay_objected', 'orders.responses_pruned', 'people.promise_broken', 'people.promise_kept', 'reports.governor_wire', 'reports.observer_letter', 'reports.pocket', 'reports.trimmed', 'seats.attention_refused', 'seats.defaulted', 'seats.initiative', 'verbs.answered', 'verbs.audience', 'verbs.consulted', 'verbs.declined', 'verbs.in_washington']);
     // The plan cycle's mechanics have their own tests (`plans.test.ts`); this game goals, drafts and picks plans.
     const fired = SEATS_MECHANICS.filter((m) => plan(m) && telemetry.mechanics[m]!.fires > 0);
     expect(fired).toEqual(expect.arrayContaining(['planner.candidates', 'planner.searches', 'plans.chosen', 'plans.drafted', 'plans.goal_set']));
