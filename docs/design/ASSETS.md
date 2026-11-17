@@ -387,12 +387,14 @@ Each is a `CODEX.md` request pointing to its brief; the lead sends the next only
 5. **R5, portrait processing pilot.** Brief 6: McClellan (NARA 528744) and Stanton (LOC cwpb.06437), one in uniform and one civilian, into `art/_pilot/`, **by script, with no image tool** [canon: 0051]. Settles the crop, tone standard, script and recipe. Blocked until the browser pass has recorded both items and saved their masters outside the repository.
 6. **R6, the demo cast.** Brief 6: the remaining 11 "ready" and 6 "later photograph" sitters of the cast table, in batches of about eight, into `art/union-1861/portraits/real/<person-id>/`, after their browser pass.
 7. **R7, core sounds.** Brief 8: the 8 core effects with two variants each, into `art/app/sound/`.
-8. **R8, document decoration.** Brief 4: the demo genres' decoration, into `art/union-1861/documents/`. Blocked until the period-conventions research names its scans.
+8. **R8, document decoration.** Brief 4: the demo genres' decoration, into `art/union-1861/documents/`. Its first part (the telegraph header, the General Orders head, the masthead ornament and the rules, from the scans the image-sources note names) went as R15 (0090). The letterheads and return rules wait for the period-conventions research to name their scans.
 9. **R9, generated officers.** Brief 7: the first 40 faces, into `art/union-1861/portraits/generated/`. Generated before R6 while the owner's larger Codex plan lasts (to 22 November 2026), with rank insignia kept out of frame so a face fits any rank; accepted only after R6, so the resemblance check has the real set to compare against. Faces of Black or Native officers come in a later request the gate reviewer places.
 10. **R10, store art.** Brief 10: a first capsule set from the playable desk. Last, because it needs the desk running.
 11. **R11, the remaining sounds.** Brief 8: `paper-down`, `ledger-open`, `drawer`, `pin`, `chair` and `paper-clip`, two variants each, by R7's method, held to the same listening test.
 12. **R12, generated officers 041–100.** Brief 7, as R9, with the dress, studio and light varied (R9's forty share one coat and backdrop) and checked against R9's faces too.
 13. **R13, paper variety.** Brief 2: three more edge-wear masks and second tiles of the letter, telegraph-form, newsprint and card stocks, so stacked papers differ.
+
+R14 (the desk prototype, 0089) and R17 (its keyboard and skins, 0090) are desk work, recorded in `PRESENTATION.md` section 6. R15 is R8's first part, above. **R16** (0090) drafts brief 1's map icons as authored SVG in `prototypes/map-icons/`, for the Phase 2 desk lane to adopt or replace.
 
 ## 13. Everything procedural, needing no art
 

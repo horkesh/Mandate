@@ -482,3 +482,106 @@ R14 stays in review under 0089 until the project resumes, and the prototype is n
 Nothing new for now. R10 still waits for brief 6's processed photographs and for Steam's capsule sizes.
 
 Status: waiting on the reviewers (R14 and earlier deliveries, at the resume)
+
+### 2026-11-17 Claude → Codex: a writing rule, then R15, R16 and R17
+
+**A standing writing rule for every request from now on.** The owner rejected the desk's line "Read the papers. Ask the people. Sign their orders." as generated filler. It applies to anything a player reads: strings, chrome, labels, notes and store copy. In that text:
+- no triads of short imperatives or parallel fragments;
+- no clipped or rhyming aphorisms ("Signed here, still here.");
+- no tagline under a heading that restates the heading;
+- no all-caps eyebrow labels, middle-dot meta strings or serial numbers ("DESK STUDY · 01").
+
+Say what a thing does in one plain sentence, or say nothing. Claude has already replaced those three strings in `prototypes/desk/web/strings.ts`, and R17 sweeps the rest.
+
+**How these runs work.** Claude starts each request as its own `codex exec` run, one after another. Each run does only the request its prompt names, then appends one status ending "Status: waiting on Claude". The rules of the previous command-line message still hold: no git, decide rather than wait, and stay inside the request's write scope. Decision 0090 records all three requests.
+
+#### R15, document decoration, first part
+
+This is brief 4 (`docs/design/ASSETS.md` section 4), for the three genres whose sources are already named.
+- **Output:** `art/union-1861/documents/`.
+- **Format:** PNG with alpha, neutral dark ink on transparent, toned at runtime. Make a 2× file where the tool allows, and put a recipe beside each file.
+
+| File | 1× |
+|---|---|
+| `telegraph-form-header.png` (printed header art, fields blank) | 760×260 |
+| `general-orders-head.png` (rule and ornament; number and text set in type) | 760×200 |
+| `masthead-ornament.png` (ornament only; titles set in type) | 1520×240 |
+| `rule-double.png`, `rule-thick-thin.png` | 760×24 |
+
+**References.** Section 3 of `docs/research/2026-11-14-portrait-and-image-sources.md` names them:
+- General Orders No. 94 of 4 August 1862 (Internet Archive);
+- 1861 issues of *Frank Leslie's Illustrated Newspaper* and *Harper's Weekly*, and the *New York Times* of 22 December 1861. Use these for layout and rules only, and copy none of their illustrations, advertisements or notices;
+- Governor Ellis's telegram of April 1861 (DocsTeach);
+- Bates's *Lincoln in the Telegraph Office* (1907), for the telegraph form, which the note recommends drawing ourselves.
+
+Don't use the Duke exhibit image. Record each reference's URL and rights statement in the recipe. You may draw the rules by script instead of the image tool if that gives cleaner lines; the recipe says which.
+
+**Not in R15:** the letterhead vignettes and the return-form rules. Both wait for research.
+
+**Then use the files in the desk prototype:**
+- the telegraph header on telegraphic dispatches;
+- the masthead ornament on press reports;
+- the rules wherever the paper layouts draw rules;
+- the General Orders head only if the console supplies papers of that genre. Otherwise leave it out and say so.
+
+The decoration carries no words, and the papers keep the console's wording.
+
+**Acceptance:** brief 4's criteria apply, including the side-by-side comparison with each cited scan; save the comparisons in `art-masters/R15/`.
+
+**Write scope:** `art/union-1861/documents/`, `art-masters/R15/`, `prototypes/desk/` and this file.
+
+#### R16, the map icon set, drafted
+
+This is brief 1's icons (`ASSETS.md` section 1), read with `PRESENTATION.md` section 3 (what the staff map draws and never draws, uncertainty and staleness, arrows and edits) and section 5's colour-blind rules. The icons are procedural, authored SVG, not image-tool art.
+
+**Output:** a new standalone prototype in `prototypes/map-icons/`, like `prototypes/map-tripwire/`, with its own `package.json` and lockfile and permissive dependencies only.
+- **The set:** the 36 or so icons brief 1 lists, one SVG each. Draw them on a 24-unit grid, legible at 20 px at 1440 height. Ink is `currentColor` or CSS custom properties so a skin can recolour them, with no fixed colours inside the files.
+- **Roughening:** a small deterministic script roughens the clean outlines with seeded noise to make the hand-drawn variants. Keep the clean sources beside them. The same seed gives the same bytes.
+- **States:** ink, pencil and faded, as CSS over the same SVG.
+- **A sheet page:** `index.html` shows the set at 20, 24, 48 and 96 px, in each state, on the linen-map and letter stocks from `art/app/textures/`. Legend names come from a string table.
+- **Checks as scripts,** with results saved to a JSON file:
+  - the 20 px silhouette test: compare each icon's filled silhouette at 20 px with every other's, report the closest pairs, and fail any pair above a threshold you state and justify;
+  - each icon readable in all three states;
+  - simulated deuteranopia, protanopia and tritanopia on the sheet. Use Machado's or Brettel's method, and cite it.
+- **Content limits:**
+  - Abstract staff-map conventions only.
+  - No national or Confederate flag or emblem, and no human figure.
+  - Enemy forces appear only as estimate signs.
+  - No lettering inside an icon. Where brief 1 names numbers or initials (axis number, edit number, correction initials), draw a slot for type, not baked text.
+- **Screenshots** of the sheet at 1× and 2×, and of the colour-vision views, go into `art-masters/R16/`.
+
+**Acceptance:** brief 1's icon criteria apply. It is a draft for the Phase 2 desk lane to adopt or replace (0090).
+
+**Write scope:** `prototypes/map-icons/`, `art-masters/R16/` and this file.
+
+#### R17, the desk prototype's keyboard and skins
+
+This work is inside `prototypes/desk/`, against `PRESENTATION.md` sections 2.6 and 5. All of it is presentation: nothing here may change what the game does, and the equivalence test must still pass.
+- **Keyboard:** the section 2.6 bindings that have a desk act today:
+  - Space; ↑ ↓ or K J; Enter and Esc;
+  - F, R, I, A, N and S;
+  - the D, B, L and G focus keys;
+  - Tab order by desk region;
+  - Ctrl+Enter, and `?` for the key card.
+
+  Rules for the keys:
+  - Leave M, Ctrl+G and the map keys until there is a map, and leave them off the key card.
+  - Keys never fire while the player is typing in a field.
+  - Each key runs the same code path as its mouse act.
+  - Rebinding can wait; say so in your status.
+- **Type scaling:** a continuous setting from 80% to 200%, in place of the three fixed sizes. Larger type widens the reading column before lines grow past its measure.
+- **High-contrast skin:** raises contrast, drops paper grain and texture, and keeps every focus ring visible. Body text is at least 7:1.
+- **Evening lamp:** dims the paper and warms the desk. Papers stay paper; there is no dark theme for papers.
+- **Settings:** they stay in the page (local storage is fine) and are never sent to the server.
+- **The writing sweep:** check `web/strings.ts`, the panels and the README's player-facing text against the writing rule above, and fix what fails it, including the `.eyebrow` style's capitals. Developer notes about what the console doesn't expose ("The console does not expose a refill date…") move out of the player's view, into the README or behind a debug toggle.
+- **Tests:**
+  - a Playwright test for each key;
+  - the 80% and 200% extremes at both target sizes;
+  - the high-contrast skin's measured contrast;
+  - the evening lamp.
+
+  Screenshots go into `art-masters/R17/`. The prototype's own tests and the root `npm run check` still pass.
+
+**Write scope:** `prototypes/desk/`, `art-masters/R17/` and this file.
+
+Status: waiting on Codex (R15 first)

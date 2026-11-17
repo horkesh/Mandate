@@ -1,6 +1,6 @@
 # 0089: Codex builds a desk prototype on the console's driver
 
-Status: accepted (2026-11-17). The owner asked whether Codex could build a playable desk too, pointing to the room screen of their earlier game (AWWV). Their larger Codex plan runs to 22 November 2026, and Claude's side of the project is paused to save tokens. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0048 (what Codex may write).
+Status: accepted (2026-11-17). The owner asked whether Codex could build a playable desk too, pointing to the room screen of their earlier game (AWWV). Their larger Codex plan runs to 22 November 2026, and Claude's side of the project is paused to save tokens. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0048 (what Codex may write). Amended by 0090 (Codex also drafts the map icons in `prototypes/map-icons/`).
 
 ## Context
 
