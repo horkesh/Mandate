@@ -391,6 +391,8 @@ Each is a `CODEX.md` request pointing to its brief; the lead sends the next only
 9. **R9, generated officers.** Brief 7: the first 40 faces, into `art/union-1861/portraits/generated/`. Generated before R6 while the owner's larger Codex plan lasts (to 22 November 2026), with rank insignia kept out of frame so a face fits any rank; accepted only after R6, so the resemblance check has the real set to compare against. Faces of Black or Native officers come in a later request the gate reviewer places.
 10. **R10, store art.** Brief 10: a first capsule set from the playable desk. Last, because it needs the desk running.
 11. **R11, the remaining sounds.** Brief 8: `paper-down`, `ledger-open`, `drawer`, `pin`, `chair` and `paper-clip`, two variants each, by R7's method, held to the same listening test.
+12. **R12, generated officers 041–100.** Brief 7, as R9, with the dress, studio and light varied (R9's forty share one coat and backdrop) and checked against R9's faces too.
+13. **R13, paper variety.** Brief 2: three more edge-wear masks and second tiles of the letter, telegraph-form, newsprint and card stocks, so stacked papers differ.
 
 ## 13. Everything procedural, needing no art
 
