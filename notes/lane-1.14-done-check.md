@@ -52,6 +52,21 @@ The budget is a 40 ms median and a 160 ms p95. The history run is at peace on ma
 - **G-1.14b, the recruitment chain:** a fugitive-policy decision is one where an option, or the inaction, names a policy row tagged `fugitive-policy`. Each of its moves is played on until a governor of a border government answers a call, up to 400 days; if none does, the move is reported "chain unexercised". The border governments are the pack's `government-side` checkpoints.
 - **G-1.14c, every channel measured:** `VICTORY_READS` lists the channels the measure reads: government sides; bloc support and framing, through the mandate; ledger acts and answers, through the mandate once Congress meets the act. A gated decision whose options, locked costs or inaction propose to any other channel is reported "unmeasured channel", and no D6 result counts for it. A decision that enters a ledger act is played on until Congress meets it, up to 400 days.
 
+## Since 85c3a37: G-1.14d and the standing review's should-fixes
+
+- **G-1.14d** (the gate reviewer's finding, the lead's ruling). The unmeasured-channel check now also follows:
+  - a policy row's pushback, reported as `people/grievance (policy pushback)`;
+  - every flag a gated decision sets or clears, through whatever reads it, to a fixed point. A pack rule reading it counts: the self-emancipation rule's policy, pressure and protected flags give `regions/self-emancipation`, and a war flag gives `seats/war`. So does an item whose trigger or option conditions read it, which carries that item's channels, flags and policies.
+  - The sweep's report says a decision with any such channel is **measured in part**, names each channel and how it is reached, and says that no D6 result for it counts as evidence. In 1A that will be true of S17: its people's-response cost cannot be weighed until enemy capacity exists in 1B.
+- **The recruitment chain** closes only with a new levy at a border government's post. A levy exists only for an answer to a call, and it is where loyalty scales the regiments. A transfer or a goal at a governor's post can no longer stand in for it.
+- **New tests**, so that breaking each rule fails one:
+  - the border-department filter;
+  - the fork's stopping rule (`forkDone`: the ledger wait and the chain wait) and `playOn`;
+  - the mandate's weight away from its rest, on the testbed's blocs.
+- **The Union men band's cite** carries lane 1.11r3's cross-check: Cameron's 22 June claim of 250,000 in the field. It is a public claim, not a return, and it agrees with the upper edge.
+
+**Wired but not exercised.** The Union pack has no gated decisions yet, so the sweep weighs nothing on main. G-1.14a to d are tested on fixtures only. Their first real decisions come when lane 1.11 merges, and Part B's calibration runs exercise them.
+
 ## The proposals as made
 
 **1. Pushback upper bounds.** Each is three times the record's cases of that kind, counting note-only rows and extras, and never below the lower bound plus 3.

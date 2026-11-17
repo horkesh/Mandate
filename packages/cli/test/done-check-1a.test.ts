@@ -7,7 +7,9 @@ import { describe, expect, it } from 'vitest';
 import { toId } from '../../kernel/src/ids.ts';
 import { F, indexedFixture, P, POST } from '../../kernel/test/support/seats-fixture.ts';
 import { checkpointScore, checkpointsScore, dayOfDate, historyDays, operationScore, pushbackScore, unknownStrengthScore, type Observations, type Snapshot } from '../src/history-run.ts';
-import { fugitivePolicyDecisions, runSweep, sweepScore, unmeasuredChannels, type SweepResult } from '../src/lever-sweep.ts';
+import { createRuleSeat } from '@mandate/rule-seats';
+import { borderLevied, channelsReached, forkDone, fugitivePolicyDecisions, ledgerMet, playOn, POLICY_CHANNEL, runSweep, sweepScore, unmeasuredChannels, type SweepResult } from '../src/lever-sweep.ts';
+import { seatsWorld } from '../src/seats-world.ts';
 import { labelsIn, m2CarriedValues, PHASE0_STAND_INS, standInReport } from '../src/stand-ins.ts';
 import { VICTORY_READS, victoryOf } from '../src/victory.ts';
 
@@ -239,10 +241,81 @@ describe('the victory measure and the lever sweep (D6)', () => {
   it('reports a gated decision whose options propose to a channel the measure does not read (G-1.14c, rule 7)', () => {
     const effect = (owner: string, field: string): phase0.Effect => ({ propose: { owner, field, subject: 'x', delta: -10, reason: 'test', side: F('a') } });
     const read = { ...CROSSERS, options: [{ ...CROSSERS.options[0]!, effects: [effect('politics', 'bloc-support'), effect('command', 'department-side')] }, CROSSERS.options[1]!] };
-    expect(unmeasuredChannels([read])).toEqual([]);
+    expect(unmeasuredChannels(world, [read])).toEqual([]);
     const unread = { ...CROSSERS, options: [CROSSERS.options[0]!, { ...CROSSERS.options[1]!, lockedCosts: [effect('politics', 'session-call')] }], inaction: { ...CROSSERS.inaction!, effects: [effect('foreign', 'patience')] } };
-    expect(unmeasuredChannels([unread])).toEqual([{ situation: S('crossers'), channel: 'foreign/patience' }, { situation: S('crossers'), channel: 'politics/session-call' }]);
+    expect(unmeasuredChannels(world, [unread])).toEqual([
+      { situation: S('crossers'), channel: 'foreign/patience', via: 'its own choice' },
+      { situation: S('crossers'), channel: 'politics/session-call', via: 'its own choice' },
+    ]);
     for (const c of ['politics/bloc-support', 'politics/ledger-act', 'politics/ledger-answer', 'politics/framing', 'command/department-side']) expect(VICTORY_READS.map((r) => `${r.owner}/${r.field}`)).toContain(c);
+  });
+
+  it('reports a policy row’s pushback, and every channel a decision’s flags reach, to a fixed point (G-1.14d)', () => {
+    const effect = (owner: string, field: string): phase0.Effect => ({ propose: { owner, field, subject: 'x', delta: -10, reason: 'test', side: F('a') } });
+    const reader = (id: string, flag: string, over: Partial<phase0.SituationDef>): phase0.SituationDef => ({ ...CROSSERS, id: S(id), kind: 'notice', event: { flag }, options: [], inaction: null, effects: [], ...over });
+    const rules = (flags: { policy?: string[]; war?: string[] } = {}) => ({
+      selfEmancipation: { policyFlags: (flags.policy ?? []).map((flag) => ({ flag, permille: 100 })), pressureFlags: [], protectedFlags: [] },
+      ruleSeats: { warFlags: (flags.war ?? []).map((flag) => ({ faction: 'a', flag })) },
+    });
+    const fake = (defs: phase0.SituationDef[], r = rules()) => ({ map: { world: { rules: r } }, situations: defs }) as unknown as phase0.SeatsWorld;
+    const setting = (flag: string) => ({ ...CROSSERS, options: [{ ...CROSSERS.options[0]!, effects: [{ setFlag: flag }] }, CROSSERS.options[1]!] });
+    // A policy row on an option, or on the inaction: its pushback lands as grievances on people.
+    const policy = { ...CROSSERS, options: [CROSSERS.options[0]!, { ...CROSSERS.options[1]!, policy: { row: 'policy:send_back', carriedBy: [] } }] };
+    expect(unmeasuredChannels(fake([policy]), [policy])).toEqual([{ situation: S('crossers'), channel: POLICY_CHANNEL, via: 'its own choice' }]);
+    // A flag the self-emancipation rule reads (0046's people's response), and a war flag.
+    expect(unmeasuredChannels(fake([setting('shelter_policy')], rules({ policy: ['shelter_policy'] })), [setting('shelter_policy')])).toEqual([{ situation: S('crossers'), channel: 'regions/self-emancipation', via: "flag shelter_policy, read by the pack's rules" }]);
+    expect(unmeasuredChannels(fake([setting('at_war')], rules({ war: ['at_war'] })), [setting('at_war')]).map((u) => u.channel)).toEqual(['seats/war']);
+    // A flag read by an item carries that item's channels: a measured one is reached and not reported...
+    const measured = reader('rally', 'rallied', { effects: [effect('politics', 'bloc-support')] });
+    expect(channelsReached(fake([setting('rallied'), measured]), setting('rallied'))).toEqual([{ channel: 'politics/bloc-support', via: 'flag rallied, read by rally' }]);
+    expect(unmeasuredChannels(fake([setting('rallied'), measured]), [setting('rallied')])).toEqual([]);
+    // ...and a chain two deep reaches a policy at its end.
+    const middle = reader('middle', 'first', { effects: [{ setFlag: 'second' }] });
+    const last = reader('last', 'second', { inaction: { text: 'x', effects: [], policy: { row: 'policy:each_decides', carriedBy: [] } } });
+    expect(unmeasuredChannels(fake([setting('first'), middle, last]), [setting('first')])).toEqual([{ situation: S('crossers'), channel: POLICY_CHANNEL, via: 'flag second, read by last' }]);
+    // A flag nobody reads reaches nothing.
+    expect(channelsReached(fake([setting('unread')]), setting('unread'))).toEqual([]);
+  });
+
+  it('closes the recruitment chain only with a new levy at a border government’s post (G-1.14b, the standing review)', () => {
+    const levy = (post: string) => ({ levyPost: POST(post), levyGovernor: P('gov'), levyIssuer: P('a_lead'), levyCall: 'm1', levyRegiments: 2, levyMen: 2000, levyTermDays: 90, levyMusterDay: 9, levyResponse: 'm1|gov' });
+    const result = (levies: Record<string, ReturnType<typeof levy>>) => ({ state: { postLevies: levies, postStates: { border_gov: { postDepartment: 'border_state' }, inner_gov: { postDepartment: 'loyal_state' } } } }) as unknown as phase0.TickResult;
+    const border = new Set(['border_state']);
+    expect(borderLevied(result({ l1: levy('border_gov') }), new Set(), border)).toBe(true);
+    expect(borderLevied(result({ l1: levy('inner_gov') }), new Set(), border)).toBe(false);
+    // A levy already there when the fork began is not this move's.
+    expect(borderLevied(result({ l1: levy('border_gov') }), new Set(['l1']), border)).toBe(false);
+  });
+
+  it('stops a fork only when Congress has met its ledger act and a border governor has answered (G-1.14b, G-1.14c)', () => {
+    const act = (met: number | null) => ({ ledgerAct: 'act', ledgerSide: F('a'), ledgerDay: 3, ledgerSituation: S('crossers'), ledgerOption: 'shelter', ledgerMetDay: met, ledgerAnsweredDay: null });
+    const state = (met: number | null) => ({ congressLedger: [act(met)] }) as unknown as phase0.State;
+    expect(ledgerMet(state(null), S('crossers'))).toBe(false);
+    expect(ledgerMet(state(40), S('crossers'))).toBe(true);
+    expect(forkDone(state(null), S('crossers'), { ledger: true, chain: false, answered: false })).toBe(false);
+    expect(forkDone(state(40), S('crossers'), { ledger: true, chain: false, answered: false })).toBe(true);
+    expect(forkDone(state(40), S('crossers'), { ledger: true, chain: true, answered: false })).toBe(false);
+    expect(forkDone(state(null), S('crossers'), { ledger: false, chain: true, answered: true })).toBe(true);
+    // playOn plays its horizon, then a week at a time until done, never past the cap.
+    let days = 0;
+    playOn(world, phase0.createState(world, { seed: 1 }), () => createRuleSeat(), 2, 30, () => (days += 1), (s) => s.stateDay >= 10);
+    expect(days).toBe(16);
+    days = 0;
+    playOn(world, phase0.createState(world, { seed: 1 }), () => createRuleSeat(), 2, 12, () => (days += 1), () => false);
+    expect(days).toBe(12);
+  });
+
+  it('weighs the mandate above its rest by the pack’s weight (G-1.14c, the standing review)', () => {
+    const tb = seatsWorld('testbed').world;
+    const start = phase0.createState(tb, { seed: 1 });
+    const bloc = tb.map.world.rules.politics.blocs.find((b) => b.faction === 'north')!;
+    const moved = { ...start, blocSupport: { ...start.blocSupport, [bloc.id]: bloc.rest + 200 } } as phase0.State;
+    const rise = Math.trunc(((bloc.rest + 200) * bloc.voice) / 1000) - Math.trunc((bloc.rest * bloc.voice) / 1000);
+    const term = (w: number) => victoryOf(tb, moved, null, 'north', { ...weights, mandate: w }).terms.find((t) => t.term === 'mandate')!;
+    expect(term(1).count).toBe(rise);
+    expect(rise).toBeGreaterThan(0);
+    expect(term(3).amount).toBe(3 * rise);
+    expect(victoryOf(tb, start, null, 'north', { ...weights, mandate: 3 }).terms.find((t) => t.term === 'mandate')!.amount).toBe(0);
   });
 
   it('finds the fugitive-policy decisions by their policy row’s tag (G-1.14b)', () => {
@@ -277,12 +350,12 @@ describe('the victory measure and the lever sweep (D6)', () => {
     expect(sweepScore(ok).problems).toEqual([]);
     const bad: SweepResult = {
       ...ok,
-      unmeasured: [{ situation: 'crossers', channel: 'politics/session-call' }],
+      unmeasured: [{ situation: 'crossers', channel: 'politics/session-call', via: 'its own choice' }, { situation: 'crossers', channel: 'regions/self-emancipation', via: "flag shelter_policy, read by the pack's rules" }],
       chainUnexercised: [{ situation: 'crossers', seed: 1, move: 'shelter' }, { situation: 'crossers', seed: 2, move: 'inaction' }],
       ledgerUnmet: [{ situation: 'crossers', seed: 1, move: 'send_back' }],
     };
     expect(sweepScore(bad).problems).toEqual([
-      'crossers: unmeasured channel politics/session-call: the victory measure does not read what this choice proposes, so no D6 result for it counts (G-1.14c)',
+      "crossers: measured in part: the victory measure does not read politics/session-call (its own choice); regions/self-emancipation (flag shelter_policy, read by the pack's rules). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
       "crossers: chain unexercised: no border governor answered a call inside the horizon of 2 moves weighed (seeds 1, 2), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)",
       "crossers: Congress had not met its ledger act when 1 moves were scored (seeds 1), so the act's answer is unmeasured (G-1.14c)",
     ]);

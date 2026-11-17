@@ -74,8 +74,8 @@ export interface SweepResult {
   readonly recruitmentCalls: number;
   /** Gated decisions weighed, all seeds together. */
   readonly decisionsWeighed: number;
-  /** G-1.14c: a gated decision's channels the victory measure does not read. */
-  readonly unmeasured: readonly { readonly situation: string; readonly channel: string }[];
+  /** G-1.14c and G-1.14d: a gated decision's channels the victory measure does not read, and how each is reached. */
+  readonly unmeasured: readonly { readonly situation: string; readonly channel: string; readonly via: string }[];
   /** G-1.14c: a move whose ledger act Congress had not met by the horizon's cap. */
   readonly ledgerUnmet: readonly { readonly situation: string; readonly seed: number; readonly move: string }[];
   /** G-1.14b: a fugitive-policy move in whose horizon no border governor answered a call. */
@@ -166,12 +166,12 @@ export function runSweep(world: phase0.SeatsWorld, options: SweepOptions): Sweep
         const needsLedger = ledgerActs(def);
         const needsChain = fugitive.has(def.id);
         const scored = moves.map((m) => {
-          const from = state.stateDay;
+          const before = new Set(Object.keys(state.postLevies));
           let answered = false;
           const fork = playOn(world, state, tableWith(new Map([[def.id as string, m.move]])), options.horizonDays, horizonCap, (r) => {
             for (const rule of unpaidIn(r)) unpaid.push({ seed, day: r.day, rule, where: `weighing ${def.id}` });
-            if (needsChain && borderAnswered(world, r, from, border)) answered = true;
-          }, (s) => (!needsLedger || ledgerMet(s, def.id)) && (!needsChain || answered));
+            if (needsChain && borderLevied(r, before, border)) answered = true;
+          }, (s) => forkDone(s, def.id, { ledger: needsLedger, chain: needsChain, answered }));
           if (needsLedger && !ledgerMet(fork.end?.state ?? state, def.id)) ledgerUnmet.push({ situation: def.id, seed, move: describe(m.move) });
           if (needsChain && !answered) chainUnexercised.push({ situation: def.id, seed, move: describe(m.move) });
           return { m, value: fork.end === null ? 0 : score(world, fork.end, def.faction) };
@@ -204,7 +204,7 @@ export function runSweep(world: phase0.SeatsWorld, options: SweepOptions): Sweep
   const findings = [...tally.values()].sort((a, b) => (a.situation < b.situation ? -1 : a.situation > b.situation ? 1 : a.choice < b.choice ? -1 : a.choice > b.choice ? 1 : 0));
   // More than a quarter: best * 4 > seeds, in whole numbers.
   const flagged = findings.filter((f) => f.best * 4 > options.seeds.length);
-  return { seeds: options.seeds.length, findings, flagged, unpaid, recruitmentCalls, decisionsWeighed, unmeasured: unmeasuredChannels(gated), ledgerUnmet, chainUnexercised };
+  return { seeds: options.seeds.length, findings, flagged, unpaid, recruitmentCalls, decisionsWeighed, unmeasured: unmeasuredChannels(world, gated), ledgerUnmet, chainUnexercised };
 }
 
 /** The tag a fugitive-policy row of the order-to-value map carries (0074; the gate's `fugitive-policy` rows). */
@@ -212,17 +212,72 @@ export const FUGITIVE_POLICY_TOPIC = 'fugitive-policy';
 /** How far a move may be played on, at most, to reach Congress meeting its act or a border governor answering a call. */
 export const SWEEP_HORIZON_CAP_DAYS = 400;
 
-/** Every proposal a decision's options, locked costs and inaction can make: owner and field. */
+/** Every effect an item's options, locked costs, inaction and own effects can apply. */
+function effectsOfItem(def: phase0.SituationDef): phase0.Effect[] {
+  return [...def.options.flatMap((o) => [...o.effects, ...o.lockedCosts]), ...(def.inaction?.effects ?? []), ...def.effects];
+}
+
+/** Every proposal an item can make: owner and field. */
 function channelsOf(def: phase0.SituationDef): { owner: string; field: string }[] {
-  const effects = [...def.options.flatMap((o) => [...o.effects, ...o.lockedCosts]), ...(def.inaction?.effects ?? [])];
   const seen = new Map<string, { owner: string; field: string }>();
-  for (const e of effects) if ('propose' in e) seen.set(`${e.propose.owner}/${e.propose.field}`, { owner: e.propose.owner, field: e.propose.field });
+  for (const e of effectsOfItem(def)) if ('propose' in e) seen.set(`${e.propose.owner}/${e.propose.field}`, { owner: e.propose.owner, field: e.propose.field });
   return [...seen.values()].sort((a, b) => (`${a.owner}/${a.field}` < `${b.owner}/${b.field}` ? -1 : 1));
 }
 
-/** G-1.14c (rule 7): each gated decision's channels the victory measure does not read. */
-export function unmeasuredChannels(gated: readonly phase0.SituationDef[]): { readonly situation: string; readonly channel: string }[] {
-  return gated.flatMap((def) => channelsOf(def).filter((c) => !victoryReads(c.owner, c.field)).map((c) => ({ situation: def.id as string, channel: `${c.owner}/${c.field}` })));
+/** The channel a policy row's pushback acts on (lane 1.5b's `applyPolicy`: grievances on its stakeholders and carriers). */
+export const POLICY_CHANNEL = 'people/grievance (policy pushback)';
+
+/**
+ * Every channel a decision can act on (G-1.14c and G-1.14d), with how it gets there:
+ * - each `propose` effect's owner and field;
+ * - a policy row on an option or the inaction, whose pushback lands as grievances on people (0074's floored cost);
+ * - each flag it sets or clears, followed through whatever reads it, to a fixed point: a pack rule that reads the flag
+ *   (the self-emancipation rule's policy, pressure and protected flags, 0046's people's response, as
+ *   `regions/self-emancipation`; a war flag as `seats/war`), and any item whose trigger or option conditions read it,
+ *   which carries that item's own channels, flags and policies in turn.
+ */
+export function channelsReached(world: phase0.SeatsWorld, def: phase0.SituationDef): { readonly channel: string; readonly via: string }[] {
+  const rules = world.map.world.rules;
+  const se = rules.selfEmancipation;
+  const ruleReaders = new Map<string, string>();
+  for (const f of [...se.policyFlags, ...se.pressureFlags, ...se.protectedFlags]) ruleReaders.set(f.flag, 'regions/self-emancipation');
+  for (const w of rules.ruleSeats.warFlags) if (w.flag !== null) ruleReaders.set(w.flag, 'seats/war');
+  const conditionsOf = (x: phase0.SituationDef): phase0.Condition[] => [x.event, ...(x.knowledge === null ? [] : [x.knowledge]), ...x.options.flatMap((o) => [o.appearsWhen, o.expiresWhen, o.waitsOn]).filter((c): c is phase0.Condition => c !== null)];
+  const out = new Map<string, string>();
+  const add = (channel: string, via: string) => {
+    if (!out.has(channel)) out.set(channel, via);
+  };
+  const visited = new Set<string>();
+  const queue: { readonly item: phase0.SituationDef; readonly via: string }[] = [{ item: def, via: 'its own choice' }];
+  while (queue.length > 0) {
+    const { item, via } = queue.shift()!;
+    if (visited.has(item.id)) continue;
+    visited.add(item.id);
+    for (const c of channelsOf(item)) add(`${c.owner}/${c.field}`, via);
+    if (item.options.some((o) => o.policy !== null) || (item.inaction?.policy ?? null) !== null) add(POLICY_CHANNEL, via);
+    const flags = new Set(effectsOfItem(item).flatMap((e) => ('setFlag' in e ? [e.setFlag] : 'clearFlag' in e ? [e.clearFlag] : [])));
+    for (const flag of [...flags].sort()) {
+      const rule = ruleReaders.get(flag);
+      if (rule !== undefined) add(rule, `flag ${flag}, read by the pack's rules`);
+      for (const reader of world.situations) {
+        if (reader.id === item.id || visited.has(reader.id)) continue;
+        if (conditionsOf(reader).some((c) => phase0.flagsIn(c).includes(flag))) queue.push({ item: reader, via: `flag ${flag}, read by ${reader.id}` });
+      }
+    }
+  }
+  return [...out.entries()].map(([channel, via]) => ({ channel, via })).sort((a, b) => (a.channel < b.channel ? -1 : a.channel > b.channel ? 1 : 0));
+}
+
+/** G-1.14c and G-1.14d (rule 7): each gated decision's channels the victory measure does not read, and how each is reached. */
+export function unmeasuredChannels(world: phase0.SeatsWorld, gated: readonly phase0.SituationDef[]): { readonly situation: string; readonly channel: string; readonly via: string }[] {
+  return gated.flatMap((def) =>
+    channelsReached(world, def)
+      .filter((c) => {
+        const slash = c.channel.indexOf('/');
+        return !victoryReads(c.channel.slice(0, slash), c.channel.slice(slash + 1));
+      })
+      .map((c) => ({ situation: def.id as string, channel: c.channel, via: c.via })),
+  );
 }
 
 /** Whether a decision enters an act on the ledger (lane 1.6): its horizon runs until Congress meets it. */
@@ -231,8 +286,16 @@ function ledgerActs(def: phase0.SituationDef): boolean {
 }
 
 /** Every act this situation entered on the ledger has been met by a chamber (vacuously true when none was entered). */
-function ledgerMet(state: phase0.State, situation: string): boolean {
+export function ledgerMet(state: phase0.State, situation: string): boolean {
   return state.congressLedger.filter((a) => a.ledgerSituation === situation).every((a) => a.ledgerMetDay !== null);
+}
+
+/**
+ * When a fork may stop and be scored, past its horizon: a decision with a ledger act once Congress has met every act it
+ * entered (G-1.14c), and a fugitive-policy decision once a border governor has answered a call with men (G-1.14b).
+ */
+export function forkDone(state: phase0.State, situation: string, need: { readonly ledger: boolean; readonly chain: boolean; readonly answered: boolean }): boolean {
+  return (!need.ledger || ledgerMet(state, situation)) && (!need.chain || need.answered);
 }
 
 /**
@@ -247,21 +310,22 @@ export function fugitivePolicyDecisions(world: phase0.SeatsWorld, topic: string)
 }
 
 /**
- * A governor of a border government (one whose side could change) answered a call since `from`: an addressee's answer
- * recorded at a post of a raising kind (the pack's recruitment rules) in a border department. A refusal is an answer too.
+ * A governor of a border government (one whose side could change) answered a call with men since the fork began: a levy
+ * that was not there at the start, on a post of a border department. A levy exists only for an answer to a call
+ * (`arriveCall`, keyed by the call), and it is where the region's loyalty scales the regiments, so it is the chain's
+ * last link; no other order at his post (a transfer, a goal) can stand in for it (the standing review of 85c3a37).
  */
-function borderAnswered(world: phase0.SeatsWorld, r: phase0.TickResult, from: number, border: ReadonlySet<string>): boolean {
-  const raising = world.map.world.rules.recruitment.raisingPostKinds;
-  for (const resp of Object.values(r.state.orderResponses)) {
-    if (resp.respRole !== 'addressee' || resp.respDay <= from || resp.respPost === null) continue;
-    const post = r.state.postStates[resp.respPost];
-    if (post !== undefined && border.has(post.postDepartment) && raising.includes(post.postKind)) return true;
+export function borderLevied(r: phase0.TickResult, before: ReadonlySet<string>, border: ReadonlySet<string>): boolean {
+  for (const [key, levy] of Object.entries(r.state.postLevies)) {
+    if (before.has(key)) continue;
+    const post = r.state.postStates[levy.levyPost];
+    if (post !== undefined && border.has(post.postDepartment)) return true;
   }
   return false;
 }
 
 /** Play a fork for `horizon` days, then on (a week at a time, to `cap`) until `done` holds of its State. */
-function playOn(world: phase0.SeatsWorld, start: phase0.State, table: phase0.SeatTable, horizon: number, cap: number, onDay: (r: phase0.TickResult) => void, done: (s: phase0.State) => boolean): { readonly end: phase0.TickResult | null } {
+export function playOn(world: phase0.SeatsWorld, start: phase0.State, table: phase0.SeatTable, horizon: number, cap: number, onDay: (r: phase0.TickResult) => void, done: (s: phase0.State) => boolean): { readonly end: phase0.TickResult | null } {
   let end: phase0.TickResult | null = null;
   let state = start;
   let played = 0;
@@ -284,7 +348,11 @@ export function sweepScore(result: SweepResult): { readonly problems: readonly s
   if (result.recruitmentCalls === 0) problems.push('no call for regiments was made in any seed: the sweep must run with recruitment active (0046’s border-loyalty gain from return feeds regiments)');
   for (const f of result.flagged) problems.push(`${f.situation}: ${f.choice === 'inaction' ? 'inaction (an atrocity-class decision’s, read as watched, 0074)' : `watched option ${f.choice}`} is the ${f.faction} bot’s best choice in ${f.best} of ${result.seeds} seeds, more than a quarter`);
   for (const u of result.unpaid) problems.push(`seed ${u.seed}, day ${u.day}: ${u.rule} in ${u.where}, a breach of the watched option’s floor (0082)`);
-  for (const u of result.unmeasured) problems.push(`${u.situation}: unmeasured channel ${u.channel}: the victory measure does not read what this choice proposes, so no D6 result for it counts (G-1.14c)`);
+  // G-1.14c and G-1.14d: a decision the measure reads only partly is "measured in part", said plainly, with its channels.
+  for (const s of [...new Set(result.unmeasured.map((u) => u.situation))]) {
+    const rows = result.unmeasured.filter((u) => u.situation === s);
+    problems.push(`${s}: measured in part: the victory measure does not read ${rows.map((u) => `${u.channel} (${u.via})`).join('; ')}. Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)`);
+  }
   const grouped = (rows: readonly { situation: string; seed: number; move: string }[]) => [...new Set(rows.map((r) => r.situation))].map((s) => ({ s, rows: rows.filter((r) => r.situation === s) }));
   for (const { s, rows } of grouped(result.chainUnexercised)) problems.push(`${s}: chain unexercised: no border governor answered a call inside the horizon of ${rows.length} moves weighed (seeds ${[...new Set(rows.map((r) => r.seed))].join(', ')}), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)`);
   for (const { s, rows } of grouped(result.ledgerUnmet)) problems.push(`${s}: Congress had not met its ledger act when ${rows.length} moves were scored (seeds ${[...new Set(rows.map((r) => r.seed))].join(', ')}), so the act's answer is unmeasured (G-1.14c)`);
