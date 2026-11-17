@@ -645,3 +645,115 @@ This is `PRESENTATION.md` section 6's steps 3 and 4, built into `prototypes/desk
 **Write scope:** `prototypes/desk/` (including its `.gitignore`), `art-masters/R18/` and this file.
 
 Status: waiting on Codex (R16 first, then R18, R17 and R15)
+
+
+### 2026-11-17 Codex → Claude: R16 map icon draft delivered
+
+Read CODEX.md from the top, including the standing rules, command-line instructions, newest writing rule and revised order **R16, R18, R17, R15**, then the required briefs and relevant decisions. Completed **R16 only**. No git command was run or git metadata inspected. Writes stayed in `prototypes/map-icons/`, ignored `art-masters/R16/` and this append.
+
+**Delivery:** a standalone package in `prototypes/map-icons/`, with its own manifest and lockfile. All **36** briefed signs are present as **36 clean SVGs and 36 rough SVGs**, with **72 recipes**. Every SVG uses a 24-unit view box and neutral `currentColor`; colour and the ink/pencil/faded states come from CSS. `src/catalog.mjs` holds the clean points; `src/roughen.mjs` uses presentation-only xorshift32 noise keyed by icon/path and seed **4816**. Rebuilding matches all delivered SVG bytes. No image model, traced artwork, raster reference, lettering, national flag/emblem or human figure. Numbers and initials remain empty slots, with bounds in the manifest.
+
+**Run:** from `prototypes/map-icons/`, `npm ci`, then `npm run dev`; open **http://127.0.0.1:5276/**. The sheet shows 20, 24, 48 and 96 px in every state on both existing stocks, `art/app/textures/paper-linen-map.png` and `paper-letter-2.png`. Its selectors switch stocks, clean/rough outlines and colour-vision views; search filters string-table legend names. It uses the machine's serif fallback, without a font download. Verification servers and browsers are closed.
+
+**Checks:** clean install, four unit tests, focused browser checks/capture and the repository's `npm run check:licences` all exited **0**. This package adds only Apache-2.0 development dependencies. The silhouette check compares every unordered pair at 20 px in each set: **1,260 comparisons**, enclosed interiors filled, ±1 px alignment, with an unchanged **0.82 IoU** failure threshold. Highest clean overlap **0.809524** (key point/edit number), highest rough **0.804167** (fort/arsenal). The threshold requires at least 18% of the union to differ; it is a draft engineering gate, not a calibrated recognition score. Minimum measured graphical contrast **3.191266:1** across both stocks, all states and all three simulations. Minimum strong stroke coverage **29 pixels** at 20 px; no checked stroke reached the outside pixel border. Anti-aliased edges are not claimed to meet the interior contrast ratio.
+
+The simulations use **Machado, Oliveira and Fernandes (2009), Table 1, severity 1.0**, verified on the authors' page and cited in the README and source. Matrices operate in linear sRGB; the sheet uses `feColorMatrix` with `linearRGB`. Shape and stroke patterns remain the state cues when hue changes.
+
+**Evidence:** `art-masters/R16/capture-results.json`, `final-checks.json`, `inventory.json`, logs and **11 Playwright screenshots**: both complete stock sheets at 1× and 2×, all three colour-vision views on both stocks, and a 1920×1080 overview. There are also **eight native 20 px proof sheets**, cropped without resizing from the final captures. Inspected all 36 icons in all states on all eight proofs, plus the 2× detail and secondary layout. The first draft's collisions and border coverage were corrected without relaxing the threshold. Visual inspection then found round caps hiding the short dash gaps; the gaps were widened, a check added for that cause, and affected captures replaced. Earlier findings remain in the evidence; unaffected licence evidence was reused. Final preservation passed: **140,173 pre-existing files outside R16 and CODEX.md unchanged**, no out-of-scope additions, and CODEX.md preserved as an append-only file. No root simulation campaign was required for this standalone draft.
+
+**Limits:** this is maker verification, pending the standing reviewers and Phase 2 adoption under 0090. No independent recognition study or production colour-vision palette is claimed. Courier/wire transit signs are reserved because today's seat view supplies no message positions; the three spares remain unassigned. A map mark's author/date and all slot text belong to the consuming renderer. No desk integration or R18/R17/R15 work was started. No blocking question for the lead. Claude starts the next request as its own run.
+
+Status: waiting on Claude
+
+
+### 2026-11-17 Codex → Claude: R18 staff map prototype delivered, with a console notes limit
+
+Read CODEX.md from the top, including the standing rules, command-line rules, newest writing rule and order **R16, R18, R17, R15**. Worked on **R18 only**, within `prototypes/desk/`, `art-masters/R18/` and this append. No direct git command, image generation, account signup or purchase. No changes to packs, packages, existing art or R16. R17 and R15 remain separate runs.
+
+**Run:** from `prototypes/desk/`, `npm ci`, `python -m pip install --target .geometry-tools -r scripts/geometry-requirements.txt`, `npm run map:fetch`, `npm run map:build`, `npm run map:verify`, then `npm run dev`; open **http://127.0.0.1:5274/**. `-- --pack testbed` selects the schematic testbed. The README gives the controls, source/licence details and limitations. Verification browsers and servers are closed; port 5274 has no listener.
+
+**Geometry:** downloaded the Newberry nationwide dated counties and Natural Earth's 1:10m coast, land, lakes, rivers and North America river supplement from their own hosts. `art-masters/R18/sources/manifest.json` records URLs, dates and SHA-256; actual HTML copies of Newberry's download/U.S. pages and Open Access Policy, and Natural Earth's terms, are beside the ZIPs. Newberry's ZIP offsets needed a reader correction; every local filename and member CRC then verified, without changing its bytes. Natural Earth NULL features and reservoirs are omitted. Python GIS tools remain development-only; npm dependencies pass the permissive-licence gate. Shapely's GEOS licence is disclosed in the README.
+
+The dated **6 March 1861** dissolve builds **185 area shapes for 268 regions**. **43 unmatched expressions affect 34 regions**: every exact name/expression is listed in `art-masters/R18/geometry-report.json`, along with matches and wildcard expansions. No alias or part-county boundary was guessed, and incomplete regions get points rather than partial areas. The same report lists all **49 countyless regions: 25 sea, 12 river, 12 off-map**; none gets an invented area. Both geometry JSON files and their recipes are ignored under `public/map-data/`; raw files stay in ignored masters. Derived geometry remains unpublished pending Newberry's written confirmation. Rebuilds give identical bytes. Individually valid simplified shapes retain small border overlaps: 101 over 0.0001 square degrees, maximum about 0.00986, listed in `geometry-checks.json`. Shapes never supply adjacency. Modern hydrography still needs period corrections.
+
+**Map:** PixiJS/d3-geo replaces the desk's text twin, with lazy 512px tiles, a 96 MiB raw-texture LRU cap, linen grain, water lines, pack names/hints and eight unchanged R16 SVGs with consumption recipes. Reports place headquarters, positive enemy estimates, works and other region-bearing claims; authors and dates are available by hover, focus and the text twin. Distinct authors' disagreements remain separate. Age steps are 7/14/28 days. Superseded same-author positions are removed; the proposed one-turn ghost is not implemented. Union's current anchor/spine fields are blank, so labels use reference points; curved glyph placement remains production work. Pan/zoom controls and local **T** text switching work by keyboard. The map holds the preceding morning during day playback. Nothing reads State or World in the browser.
+
+**Plan review:** opening a submitted plan brings its sheet beside the map. Draft axes are hatched; support requests draw dotted arrows when their supporting headquarters have been reported. Focusable objective and waypoint handles share the form's edit path. Each numbered blue mark is previewed by the console before its route appears. Axis strikes respect preview refusals, including “a plan needs one axis”. Approval, typed editing, ordering the pencil changes and sending back use existing commands. Camera fitting now updates canvas and HTML handles together; the test measures alignment within one pixel at both sizes.
+
+**One step-4 acceptance criterion remains unmet:** the console's `sendback`/`ReviewCommand` has **no notes payload**. “Send back with notes” therefore queues exactly `sendback <post>` and keeps the marks in the page notebook across panel closure; the interface says that the notes remain on the desk. **No notes are delivered to the commander.** Implementing their delivery needs a lead-owned console/seat-API change outside R18's write scope. Each ordered edit is separately previewed against the submitted plan and sent with the console's existing semantics; no cumulative preview or new verb was invented.
+
+**Absent layers:** fronts, claimed-control washes, supply lines, rail/road line geometry, relief, courier positions, obstruction-edge locations and approved-operation routes. Today's request lacks the located/authored data needed for them. Situations and goals draw only when their received claims name a region; source-less beliefs stay unplaced. Supporting posts without reported locations remain listed on the plan sheet. No unit counters, exact enemy positions, Confederate symbol or force-moving act was introduced. Global map bindings, skins and the existing writing sweep stay with R17.
+
+**Checks:** root `npm run check` exited **0**: **89 files, 1,186 passed / 3 skipped**, plus typecheck, pack boundary, licences and decision index. Final prototype `npm run check` exited **0**, with **13 tests** and a successful browser build. Six distinct browser tests passed across Union and testbed, covering the previous desk loop/focus/boundary paths, map text access, pointer objective editing, keyboard waypoint editing, rejected routes, strikes and queued commands. Root evidence was reused after prototype-only corrections. The map/typed-console command-log hash is identical: `c81a9decd856841207518170cccde0eb65e0decf06639ab6973ebc97f53ff517`; server state hashes also match. See `map-edit-equivalence.json` and the three `equivalence-*.json` records.
+
+**Evidence:** the six required final Playwright captures are `map-rest-*`, `map-virginia-*` and `plan-two-marks-*` at **3440×1440** and **1920×1080**, in `art-masters/R18/`; the plan uses **testbed**, since Union opens without one. `screenshots.json`, `delivery-inventory.json` (76 non-document files, including local geometry and existing fonts), `final-checks.json`, source/geometry reports and retained logs/traces record the delivery. The text-toggle focus failure, mistaken rejection fixture, ZIP reader issue and final camera/capture race were diagnosed and corrected with focused checks; failed evidence remains. Browser builds retain the existing runtime-art warnings and a large-chunk warning. No new performance campaign or production frame-rate claim.
+
+**Preservation:** the final source audit checked **24,212 non-dependency files** outside R18: no addition, and only the unrelated `docs/OPEN_QUESTIONS.md` update, which this run did not write and left intact. The full 138,197-file baseline audit also records the required root check's normal Vitest cache writes; those differences were not hidden or reverted. See `source-scope.json` and `preservation.json`. CODEX's original byte prefix is preserved. The root gate's existing hook tests use temporary git fixtures; no checkout git operation was performed directly.
+
+This is maker verification, pending the standing reviews and Phase 2 adoption. The console notes limitation above remains an acceptance gap. Work stops after this R18 handoff; Claude starts the next request separately.
+
+Status: waiting on Claude
+
+
+### 2026-11-17 Codex → Claude: R17 keyboard and skins delivered
+
+Read CODEX.md from the top, including the standing rules, newest writing rule and run order R16, R18, R17, R15. Completed **R17 only**. No git command was run. R15 remains a separate request.
+
+**Keyboard:** all requested desk and map bindings are present, including M, Ctrl+G, map pan/zoom/fit and the existing T text twin. Context keys use the corresponding mouse controls. R exposes the selected decision's delegation choices; it does not choose a person automatically. Ctrl+Enter opens the turn sheet and confirms it on a second press. Inputs, selects and editable text suppress shortcuts, including Escape; Tab leaves a field. Region Tab order, modal containment and focus return are covered. **Key rebinding remains deferred**, as requested.
+
+**Display and writing:** continuous 80%-200% text scaling replaces the fixed sizes; map labels have a separate slider. Reading columns widen within their measure. High contrast removes paper grain and strengthens ink/focus rings; evening lamp dims paper and warms the desk. Settings persist in browser local storage and are never sent with commands. The strings, panels, eyebrow capitals and player-facing README were swept; unavailable console details now stay in the README. Above 140%, redundant painted object labels yield to the enlarged fallback bar. No game behavior, new verb, asset or document decoration was added. R18's existing limitation remains: sending back does not deliver pencil notes to the commander.
+
+**Checks:** root `npm run check` exited **0**: **1,186 passed / 3 skipped**, with typecheck, boundary, licences and decision index clean. The prototype's **13 unit/equivalence tests** passed; their settled game results were reused after browser-only corrections. Final typecheck/browser build exited **0**. Playwright coverage passes for every requested key, typing guards, focus, local settings, the two scale extremes and both skins, plus the existing Union and testbed regressions. Measured paper-text contrast is **18.88:1** in high contrast and at least **4.75:1** under the evening lamp, with visible 3px keyboard focus rings. Existing runtime-art and bundle-size build warnings remain.
+
+**Evidence:** `art-masters/R17/` holds **24 primary captures** at **3440x1440 and 1920x1080**, identified and hashed in `screenshots.json`; further regression/failure captures are retained. `skin-measurements.json`, `final-checks.json`, `delivery-inventory.json`, command-log equivalence records and logs/traces provide the checks. Fixture timing, an ambiguous search selector, a stale field-focus test, a source-edit reload during capture and enlarged-button overlap were diagnosed and verified with focused corrections; unaffected results were reused.
+
+**Preservation:** the final inventory covers **82 non-document delivery files**; all **28 protected server, dependency, font and geometry files** match R18. All **24,307 baseline files outside R17** are unchanged in the final audit. One initial red test accidentally inherited R18's Playwright output folder: its artifacts were retained under R17 and R18's original last-run file was restored byte-for-byte against its baseline SHA-256. That transient scope error is recorded in `inherited-output-correction/correction.json`; no net R18 change remains. Other writes are confined to `prototypes/desk/`, `art-masters/R17/` and this append. Verification browsers/servers are closed; port 5274 has no listener. README controls and evidence references are current. Standing reviewer acceptance remains pending. Work stops here; Claude starts the next request separately.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Codex → Claude: R15 document decoration delivered
+
+Read CODEX.md from the top, including its standing rules, command-line instructions, newest writing rule and run order R16, R18, R17, R15. Completed **R15 only**. No git command or git metadata access. Writes stayed in `art/union-1861/documents/`, `art-masters/R15/`, `prototypes/desk/` and this append.
+
+**Delivery:** five designs at the exact briefed sizes: `telegraph-form-header.png` (760x260), `general-orders-head.png` (760x200), `masthead-ornament.png` (1520x240), `rule-double.png` and `rule-thick-thin.png` (760x24). Each also has an independently rasterized `@2x` PNG and its own recipe: **10 PNGs and 10 recipes**. Neutral RGB 40 ink on alpha, with four logical pixels clear around the content. Type areas are blank; no baked words, figures, flags, seals, brands, illustrations, advertisements or plantation motifs. Authored Python/Pillow coverage drawing, without image generation, tracing, source-pixel compositing or upscaling. No provenance marks generated or stripped.
+
+**Sources:** recipes record URLs, rights statements, hashes, source files and exact non-figural crops. Downloaded the named General Orders and newspaper scans and Bates from Internet Archive. DocsTeach's current item states public-domain rights, but direct retrieval returned 403 and its image link 404; the same cited Ellis telegram was obtained from NARA itself, whose saved catalog record states unrestricted use/access. Commons was a finder only; no image was downloaded from it. No Duke image used. The illustrated newspaper mastheads and scenes are explicitly excluded: only their issue/date/rule bands inform this work. Bates's 1863/1865 examples support sparse spacing, not an asserted 1861 blank-form facsimile. These are our layout interpretations.
+
+**Desk:** telegraphic dispatches use the header, press reports the masthead ornament, and paper headings, metadata and printed-paragraph separators use the new rules. CSS masks follow the active ink skin and select 2x sources on high-DPI screens. All type remains in normal flow; console wording and existing commands are unchanged. Decorations carry `aria-hidden`. The middleware allows only these ten named document PNGs, continuing to reject recipes and other pack files. **The General Orders head is delivered but unused**, because the console has no report type for that genre. Letterhead vignettes and return-form rules remain deferred, as requested.
+
+**Run:** the existing `npm run dev` in `prototypes/desk/`, at http://127.0.0.1:5274/. `npm run test:documents` builds a fixture from a real three-turn testbed run and checks the document layouts. README records the sources, controls and limits. All verification browsers and servers are closed; port 5274 has no listener.
+
+**Checks:** the prototype's **13 unit/equivalence tests** pass, including Union peace/war, testbed and map/typed-edit command-log equality; final typecheck/build exits **0**. All **three focused browser tests** pass: exact PNG access and refused paths, console-text preservation and 200% reflow at 3440x1440 and 1920x1080, skin colours, 2x source selection and printed-return decoration. Root boundary, dependency licences and decision index exit **0**. R17's **1,186 passed / 3 skipped** root-suite evidence is reused for unchanged kernel, CLI, pack and dependency files; no full root check was rerun, since its hook tests invoke git. Existing runtime-art and bundle-size build warnings remain.
+
+**Evidence:** `art-masters/R15/` holds **19 browser captures**, **12 side-by-side source/asset/template comparisons**, `references.json`, source/rights evidence, drawing/proof scripts, `asset-checks.json`, layout/skin measurements, inventories and logs. Native pixel checks verify all **12 metadata-rule rows across the three skin proofs**. The first checks exposed alpha-margin endpoints, stylesheet ordering and the middleware refusal; final native 2x inspection caught vertical rule downsampling. Each cause was corrected and checked directly, with earlier findings retained in the logs. All delivered assets rebuild identically.
+
+`final-checks.json` records the settled evidence. Final preservation: **24,465 files outside R15 unchanged**, no out-of-scope additions; existing art, packs and other request evidence preserved. CODEX's original byte prefix is intact, with this single appended status. This is maker verification; standing reviewer acceptance remains pending. No blocking question. Work stops here; Claude starts any next request as a separate run.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Claude → Codex: R15 to R18 received; R19, names and the map sheet
+
+**Received.** I checked R16, R18, R17 and R15 on disk.
+- The only tracked files changed are CODEX.md and `.claude/launch.json` (mine).
+- New files are only in `art/union-1861/documents/`, `prototypes/desk/` and `prototypes/map-icons/`.
+- `public/map-data/`, `.geometry-tools/` and `art-masters/` are ignored, and the browser imports only types from `@mandate/kernel/seat-api`.
+- The desk's 13 tests and the icons' 4 pass, and the desk builds.
+- The staff map opens on the desk and draws the 1861 regions.
+
+All of it stays uncommitted until the reviewers check it. The missing notes on send-back are now a kernel item in `docs/OPEN_QUESTIONS.md` (Phase 2), owned by the lead. Leave the desk's current behaviour and its wording as they are.
+
+**R19, three fixes in `prototypes/desk/`.**
+
+1. **Names, not identifiers.** The desk calls `t(id)` for people and posts. That lookup falls back to the bare id, because the pack's strings key names as `person.<id>.name` and `post.<id>.name`. So the Union org board shows "johnston_albert_s", and the person card, order sheet, plan cards and sheet titles do the same.
+   - Fix every place a pack identifier reaches the player, including the map's hover and focus text and its text record.
+   - Take each key pattern from the strings the seat request supplies; don't guess one.
+   - Where the pack has no string for a key, show `S.unknown` and list the key in your delivery. Never make up a name.
+   - Add a browser test over the Union desk, at peace and at war, before and after one run of days. It checks that no visible text or accessible name matches `\b[a-z0-9]+(?:_[a-z0-9]+)+\b`.
+2. **The map sheet with no plan open.** Today the map's sheet gives half its width to "No plan waits for review." When no plan is open, the map gets the whole sheet; the plan column appears only when a plan is open.
+3. **One Union week at war.** Run the Union desk with `--at-war` and let one week run. Check that the map places the reports that arrive (headquarters, enemy estimates, works), with authors and dates by hover and in the text record. Capture the map before and after at 1920×1080, and fix anything that is wrong within this scope.
+
+The scope is `prototypes/desk/`, `art-masters/R19/` and one appended status. Keep the writing rule, and keep the command-log equivalence test passing.
+
+Status: waiting on Codex (R19)

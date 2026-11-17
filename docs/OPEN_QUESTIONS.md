@@ -261,6 +261,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - From the same review, **lanes 1.4 and 1.14:** McClellan bold on paper (27 April, 80,000 men) and cautious in action (Rich Mountain, 11 July). A single boldness cannot hold both. Watch whether drafting and execution need separate terms when operations land, and in calibration.
 **Phase 2 (desk and map)**
 - **The desk, from lane 1.13:** Union inbox volume, now that the press is on. It needs filtering and weekly summaries.
+- **Send back with notes, from Codex's R18 (the desk prototype, 0091):** PRESENTATION.md §3 has two ways to send the blue-pencil marks, but the console's `sendback` (`ReviewCommand`) carries no notes. The desk therefore queues a bare `sendback <post>` and keeps the marks on the desk, and the commander never reads them. The kernel needs a notes payload that the commander reads like an order and redrafts by his own judgement. Whoever next touches plan review owns it.
 
 - From lane 1.7's hand-over (`notes/lane-1.7-men-regions.md`, merged 2c97b64), by lane:
   - **Lane 1.12 (rule seats):** no rule seat calls for regiments, so recruitment's mechanics are QUIET in the reference runs, each with its driving test. The principals need a call policy.
