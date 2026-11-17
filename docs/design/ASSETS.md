@@ -388,8 +388,9 @@ Each is a `CODEX.md` request pointing to its brief; the lead sends the next only
 6. **R6, the demo cast.** Brief 6: the remaining 11 "ready" and 6 "later photograph" sitters of the cast table, in batches of about eight, into `art/union-1861/portraits/real/<person-id>/`, after their browser pass.
 7. **R7, core sounds.** Brief 8: the 8 core effects with two variants each, into `art/app/sound/`.
 8. **R8, document decoration.** Brief 4: the demo genres' decoration, into `art/union-1861/documents/`. Blocked until the period-conventions research names its scans.
-9. **R9, generated officers.** Brief 7: the first 12 faces, into `art/union-1861/portraits/generated/`, after R6 so the resemblance check has the real set to compare against.
+9. **R9, generated officers.** Brief 7: the first 40 faces, into `art/union-1861/portraits/generated/`. Generated before R6 while the owner's larger Codex plan lasts (to 22 November 2026), with rank insignia kept out of frame so a face fits any rank; accepted only after R6, so the resemblance check has the real set to compare against. Faces of Black or Native officers come in a later request the gate reviewer places.
 10. **R10, store art.** Brief 10: a first capsule set from the playable desk. Last, because it needs the desk running.
+11. **R11, the remaining sounds.** Brief 8: `paper-down`, `ledger-open`, `drawer`, `pin`, `chair` and `paper-clip`, two variants each, by R7's method, held to the same listening test.
 
 ## 13. Everything procedural, needing no art
 
