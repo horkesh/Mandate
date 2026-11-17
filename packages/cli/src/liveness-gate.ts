@@ -344,13 +344,15 @@ const UNION_BANDS: Record<string, GateBand> = {
   'seats.defaulted': notHere('every request is answered in this run; the silent-seats exercise run fires it'),
   'situations.decided': quiet(SITUATIONS_UNAUTHORED),
   'situations.delegated': quiet(SITUATIONS_UNAUTHORED),
-  'situations.fired': quiet(SITUATIONS_UNAUTHORED),
-  'situations.notice_reports': quiet(SITUATIONS_UNAUTHORED),
-  'situations.noticed': quiet(SITUATIONS_UNAUTHORED),
+  // Lane 1.12: the pack's one signed situation, the Sumter notice (text only), fires when the principal learns of the
+  // evacuation; the rest wait for lane 1.11's situations.
+  'situations.fired': around(1),
+  'situations.notice_reports': around(1),
+  'situations.noticed': around(1),
+  'situations.surfaced': around(1),
   'situations.orders': quiet(SITUATIONS_UNAUTHORED),
   'situations.proposals': quiet(SITUATIONS_UNAUTHORED),
   'situations.staff_lines': quiet(SITUATIONS_UNAUTHORED),
-  'situations.surfaced': quiet(SITUATIONS_UNAUTHORED),
   // Lane 1.5: the bypassed office's grievance climbs the ladder and fades week by week; the doctrine's calls, transfers
   // and orders spend attention, refilled each week. The Union pack authors no seat initiative, and no man is a rival.
   'ladder.moved': around(1),

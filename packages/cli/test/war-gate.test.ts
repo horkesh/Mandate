@@ -29,7 +29,8 @@ describe('the war gate on union-1861', () => {
   it('names a war flag for every faction, and nothing sets it yet', () => {
     expect(warFlags.length).toBe(world.map.world.factions.length);
     expect(warFlags.every((r) => r.flag !== null)).toBe(true);
-    expect(world.situations.length).toBe(0);
+    // Lane 1.12: the pack's one situation is the Sumter notice, text only, which sets no flag at all.
+    expect(world.situations.every((s) => s.effects.length === 0 && s.options.length === 0)).toBe(true);
   });
 
   it('at peace: nothing of the doctrine is sent and no force marches (positive control: at war both sides call and concentrate)', () => {

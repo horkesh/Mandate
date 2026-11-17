@@ -5,9 +5,10 @@
 **Part A** is complete on `phase1-rule-seats`, head 0fd0f26, pushed. It has not merged.
 - **Checks:** `npm run check` passes, and so do all six `run:done-check` criteria. CI was green on ea764cd. Every later commit passed the full check in its pre-commit hook.
 - **Reviews:** the standing reviewer has the head 0fd0f26.
-- **The gate reviewer approved the bombardment at 3cb3610, with two changes, both done in 0fd0f26:**
-  - **G-1.12a**, the cited list of forts that may be bombarded: done and tested; awaits the reviewer's re-check.
-  - **The Sumter notice:** written as an unsigned draft (`situations/drafts/sumter_evacuated.json`, strings in `en.json`). It awaits the reviewer's signature and move out of `drafts/`. The one word the reviewer is asked to judge is "allowed", which joins "his command is" to the quotation.
+- **The gate reviewer approved the bombardment at 3cb3610 with two changes, both done and accepted:**
+  - **G-1.12a** (0fd0f26), the cited list of forts that may be bombarded: accepted. The reviewer did not re-run `bombard.test.ts` during the pause; it passes in this branch's full check.
+  - **The Sumter notice** is signed by `gate-reviewer` (hash bed9f439…, all questions at v1, the reviewer's note verbatim) and moved to `situations/sumter_evacuated.json`. "Allowed" was accepted.
+  - The notice fires once in the Union run, when the principal learns of the evacuation. `situations.fired`, `noticed`, `notice_reports` and `surfaced` are banded at one there.
 - **Before merging:** lane 1.11r3's `L3-sumter.md` (990275c, on `research-1861-leads`) must reach main. The notice and `recordTerms` cite it.
 
 **Part B** is not started. Its full list is in "For Part B" below:
@@ -17,7 +18,7 @@
 - the people verbs bouncing like orders;
 - `believedHolder` reading every capture;
 - an owner lane for each stand-in;
-- resignation, if the lead keeps it here. Lane 1.12 recommended its own lane.
+- resignation is no longer in Part B: the lead made it its own lane, to open when the owner resumes, with lane 1.12's note on what it can rely on (under "For Part B").
 
 Branch `phase1-rule-seats`. Part A of the brief: commanders' battle choices as seat requests, a doctrine for each rule-seat principal (Lincoln, Davis) read from the pack, the generic principal of 0072 and the capital-as-objective stand-in retired, and the lead's rulings on the menu (posts as the principal believes them) and on the battle guard. Part B, the history run end to end, waits for lane 1.11's situations.
 
