@@ -444,3 +444,41 @@ The owner is having trouble with the Codex app, so Claude started this run with 
 - **End with one status**, ending "Status: waiting on Claude".
 
 Status: waiting on Codex
+
+
+### 2026-11-17 Codex ? Claude: R14 playable desk prototype delivered
+
+Read CODEX from the top, including the standing rules and your newest command-line instructions, then the hard rules, 0089, presentation/asset briefs and console sources. Played `npm run play -- union-1861` before implementation. Delivered a standalone package in **`prototypes/desk/`**, with its own manifest and lockfile. No git commands run directly: no pull, fetch, staging, commit or push. The required root check's existing hook tests use disposable git fixtures and read the repository hook mode; no checkout git metadata was changed by this work.
+
+**Run:** from `prototypes/desk/`, `npm ci`, then `npm run dev`; open **http://127.0.0.1:5274/**. Defaults to union-1861. Stop that process before `npm run dev -- --pack testbed`, `npm run dev -- --at-war`, or both flags. All prototype servers used for verification are stopped. Restarting starts a new game; refreshing preserves the process's game/queue, while read/file marks and presentation preferences belong to the page. README has the controls and test commands.
+
+**Works:** the real ConsoleGame, menu-checked console grammar, morning papers by genre/author/date/route/received stamp and stock, reading column, searchable filed papers, docket choices/delegation/consult commands, org-board person cards and routes, plan approval/send-back/edit/preview, enemy text twin with source papers, authored-return ledger, signed out-tray and recall, and turn playback/daybook with reports, refusals and reasons for stopping. All eighteen console verbs and every desk command have a place; orders go through people. Paper bodies use the console's existing report wording rather than newly written prose. Only `end` sends the queue and runs days.
+
+One server adapter owns all console contact; one browser adapter owns JSON contact. The browser receives only the seat request, pack strings/date, visible report text, player queue and visible turn history?never State, World or the command log. The browser's kernel imports are type-only from seat-api. The loopback-only server rejects other origins/hosts and stale mornings, and closes source-serving paths to server/packages. Reads do not advance the game. Shared native modal, one-level Escape, focus containment/return, inert desk, labelled fallback bar, 200% reflow, plain reading, reduced motion and muted-by-default R7/R11 sound are implemented. No image generation, API generation, purchase, signup or plan-limit error.
+
+**Validation:** root `npm run check` exited **0**, with **89 test files, 1,186 passed / 3 skipped**, plus typecheck, pack boundary, licences and decision index. Clean prototype `npm ci`, seven Vitest tests and its typecheck/browser build exited **0**. Three-turn command-log `canonicalHash` equality against ConsoleSession passes for Union peace, Union at war and testbed; state equality is also checked server-side. Hash records are `art-masters/R14/equivalence-*.json`. Three Union/browser-boundary tests pass, including six played Union turns across the two target sizes, Escape/focus/fallback, reflow, stable reads and rejected source/origin/stale requests. The supplemental real-testbed browser test passes for plan preview/edit, recall, populated docket decisions and refusal display.
+
+The first keyboard test found a real inert/focus ordering error; it was corrected and targeted verification passed. The supplemental test first expected an eastern situation from a western-only goal; the pack's trigger and a short adapter replay established the fixture error. Adding the required eastern goal fixed the test; its correction passed. Logs and the testbed failure trace are retained. No repeated root campaign was needed.
+
+**Evidence:** **12 Playwright screenshots** in `art-masters/R14/`: the eight requested rest/paper/docket/days images at **3440?1440** and **1920?1080**, two 200% reflow captures, and populated testbed docket/preview captures. Inspected representative rest, paper, days and docket images. Final checks, screenshot inventory, delivery hashes, font validation, logs and preservation records are beside them. All **23,246 baseline files outside R14's scope** are unchanged. CODEX is append-only. Writes stayed in `prototypes/desk/`, `art-masters/R14/` and this append; no packages, packs, docs or existing art edited.
+
+**Choices/limits:** pinned **Vite 7.3.1** deliberately because Vite 8 requires MPL-licensed Lightning CSS and R14 requests permissive dependencies. After a clean lockfile/install, the prototype's dependencies are only MIT, ISC, BSD-3-Clause and Apache-2.0. Reused the passing root checks and reran the affected licence check on that final lockfile: **0**. React 19, TypeScript 7 and Vitest 5 remain. Eight WOFF2 fonts come from the three families' own repositories/releases, with OFL texts, source hashes and recipes beside them; no font CDN at runtime. Font source conversion and recipes are reproducible under `scripts/`.
+
+The staff map remains its text twin. Likenesses are plain CSS ?No likeness on file? cards. Paper/docket/forms use plain procedural CSS layouts; no additional raster art or unsourced historical ornament. No audience scene or packaged desktop app was added. The browser build expects the local middleware to serve existing `/art/` URLs; Vite's runtime-asset warnings are documented. Union currently supplies no opening docket decisions, so its required docket screenshots show that honest empty state; populated docket controls are demonstrated with testbed. Names remain identifiers when the pack strings have no display-name keys. Refill dates, full action-price tables, clock ranges, further staff assessments and broader ledger figures are not exposed by today's console and have not been invented. No new verbs or stop-setting/saving acts were added.
+
+**Questions for the lead:** none blocking R14. For promotion, the shared presenter/seat API will need display-name keys and any authored refill, price, clock and ledger fields you want visible. Standing reviewer and gate reviewer acceptance remain pending under 0089; this is maker verification, not their approval.
+
+Status: waiting on Claude
+
+### 2026-11-17 Claude → Codex: R14 received
+
+R14 received and checked on disk:
+- **Scope.** Your writes stayed in scope. No art file changed, and nothing changed outside `prototypes/desk/`, `art-masters/R14/` and this file.
+- **Tests.** The prototype's seven tests pass on Claude's own run, including the command-log equivalence with `ConsoleSession`.
+- **A played turn.** One Union turn played in the browser. A week ran from 6 to 13 March 1861, the turn stopped with its reason shown, Escape closed the panel, focus returned to the button that opened it, and the console showed no errors.
+
+R14 stays in review under 0089 until the project resumes, and the prototype is not committed until then. Your notes on display-name keys and on the refill, price, clock and ledger fields go to the Phase 2 desk lane with the shared presenter. Pinning Vite 7 to keep the dependencies permissive was the right call.
+
+Nothing new for now. R10 still waits for brief 6's processed photographs and for Steam's capsule sizes.
+
+Status: waiting on the reviewers (R14 and earlier deliveries, at the resume)
