@@ -40,6 +40,8 @@ export type RejectionReason =
   | 'not_raising_post'
   | 'bad_call'
   | 'other_side'
+  // Lane 1.12 (hard rule 1, 0016): a battle order from a seat the player drives. The player never moves a division.
+  | 'player_seat'
   | 'route_unavailable'
   | 'unknown_post'
   | 'unknown_seat'

@@ -77,6 +77,7 @@ export function battleReports(ctx: TickContext, state: State): void {
       if (bday.bdayDay === day) {
         dispatches(ctx, state, region, bday);
         firstReturns(ctx, state, region, bday, returns.firstLowPermille);
+        commandersLost(ctx, state, region, bday);
         governorWire(ctx, state, region, bday, battleVerdict(record).field);
       }
       if (bday.bdayDay === day - returns.revealDays) fullReturns(ctx, state, region, bday);
@@ -129,6 +130,39 @@ function firstReturns(ctx: TickContext, state: State, region: RegionId, bday: Ba
     });
     fire(ctx, 'reports.casualty_return');
   });
+}
+
+/**
+ * A post's commander lost today (lane 1.12; the lead's ruling under 0052): the principal learns of the vacancy only from
+ * this report, written by whoever now heads the chain above the post (the next holder up), or, with nobody there, sent
+ * from the field by the principal's own staff. Until it reaches him his menu still shows the post held (`seats/believed.ts`).
+ */
+function commandersLost(ctx: TickContext, state: State, region: RegionId, bday: BattleDay): void {
+  for (const side of bday.bdaySides) {
+    if (side.bsideHit === null || side.bsidePost === null || side.bsideCommander === null) continue;
+    const principal = ctx.world.faction(side.bsideFaction).principal;
+    const author = authorOf(state, side) ?? { person: principal, post: null };
+    sendReport(ctx, state, {
+      body: {
+        reportType: 'wire-dispatch',
+        reportSubtype: null,
+        reportAuthor: author.person,
+        reportAuthorPost: author.post,
+        reportSubjectKind: 'post',
+        reportSubjectId: side.bsidePost,
+        reportClaims: [claim('commander-lost', region, 0, side.bsideHit, 900)],
+        reportDay: ctx.day,
+        reportHour: null,
+        reportAdvice: null,
+        reportAnswers: null,
+      },
+      truth: { truthTerms: [term('observed', 0, { person: side.bsideCommander, post: side.bsidePost, rule: side.bsideHit })], truthTrimmed: [] },
+      to: principal,
+      tag: `commander-lost.${side.bsidePost}`,
+      fromRegion: region,
+    });
+    fire(ctx, 'reports.commander_lost');
+  }
 }
 
 /** The later return: the full figures, killed and wounded apart, the missing and the captured apart (0074). */
@@ -192,4 +226,4 @@ function pocketReports(ctx: TickContext, state: State): void {
 }
 
 /** Every mechanic battle reports count. */
-export const BATTLE_REPORT_MECHANICS = ['reports.battle_dispatch', 'reports.casualty_return', 'reports.governor_wire', 'reports.pocket'] as const;
+export const BATTLE_REPORT_MECHANICS = ['reports.battle_dispatch', 'reports.casualty_return', 'reports.commander_lost', 'reports.governor_wire', 'reports.pocket'] as const;

@@ -119,6 +119,7 @@ export const COMBAT_RULES = {
   fieldControlPermille: 200,
   pursuit: { followPermille: 100, pressPermille: 300, cavalryPermille: 150 },
   straggleReturnPermille: 100,
+  bombardment: { gunArms: ['artillery'], rangeMaxDaysPermille: 1000, moraleLossPerDay: 40, ratioCapPermille: 3000, outOfStoresMoraleLoss: 60, worksWearPerDay: 50, lossPermille: 20, surrenderMorale: 350, boldnessWeight: 500, recordTerms: [], source: 'fixture' },
   leaders: { killedPermille: 15, woundedPermille: 40, capturedPermille: 20 },
   phases: {
     hours: [
@@ -147,7 +148,10 @@ const manifest = {  formatVersion: 2,
     operations: { pauseDays: 3, maxRepulses: 3, pursuitDays: { follow: 1, press: 2 }, holdControlPermille: 500, works: { perNightPermille: 50, capPermille: 300, lostWhenStormedPermille: 150 }, returns: { firstLowPermille: 200, revealDays: 7 } },
     pruning: { operationDays: 60, battleDays: 120, responseDays: 60 },
     movement: { marchMinCapacityPermille: 1000, courierPermille: 333 },
-    ruleSeats: { warFlags: [{ faction: 'red', flag: null }, { faction: 'blue', flag: null }] },
+    ruleSeats: {
+      warFlags: [{ faction: 'red', flag: null }, { faction: 'blue', flag: null }],
+      principals: ['red', 'blue'].map((faction) => ({ faction, crossNeutral: false, concentrateAt: null, concentrateSource: null, calls: [], offensives: [], inquireEveryDays: 7, appointKinds: { land: [], naval: [] } })),
+    },
     ...MESSAGE_RULES,
     seasons: [
       { reason: 'mud', defaultMonths: [1, 2, 12], lengthPermille: 1500, capacityPermille: 600 },

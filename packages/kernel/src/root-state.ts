@@ -44,6 +44,7 @@ import type { ArrivalTable, FortificationTable, LoyaltyTable } from './regions/r
 import type { EnlistmentTable } from './forces/enlistment.ts';
 import type { LevyTable } from './command/levies.ts';
 import type { BattleTable } from './combat/records.ts';
+import type { JoinTable } from './movement/join.ts';
 
 export interface State {
   /** The game's seed, set at setup; every named stream derives from it. Immutable. */
@@ -86,6 +87,8 @@ export interface State {
   readonly forceBlockStates: ForceTable;
   /** Where each block stands, or the ship it is aboard. Writer: `movement`. */
   readonly forceLocations: Readonly<Record<ForceBlockId, ForceLocation>>;
+  /** Blocks under orders to join their post at its seat, from a transfer (lane 1.12; `movement/join.ts`). Writer: `movement`. */
+  readonly forceJoins: JoinTable;
   /** Posts: holders, chain, departments, temporary posts, standing orders. Writer: `command`. */
   readonly postStates: PostTable;
   /** Which post commands each block (division-to-post assignment). Writer: `command`. */

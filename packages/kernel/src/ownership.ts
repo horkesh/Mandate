@@ -95,6 +95,8 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('edge condition', 'infrastructure', ['combat', 'raids', 'repair orders'], [at('State', 'infraEdgeCondition')]),
   // Lane 0.5: a block's region (or the ship it is aboard), from the start (0050).
   field('division location', 'movement', ['operations', 'recruitment (a new block placed, a disbanded one removed)'], [at('State', 'forceLocations')]),
+  // Lane 1.12: a transfer orders the blocks it hands over to join the receiving post at its seat.
+  field("a block's order to join its post at the post's seat", 'movement', ['verbs (a transfer)', 'operations (the day\'s legs)'], [at('State', 'forceJoins')]),
   // Lane 0.5: one record per block or detachment carries strength, stores and
   // non-combatants (`forces/forces.ts`), so the three `forces` rows below share it.
   // Lane 1.3: morale, experience, equipment, stragglers, and the days a block routed or surrendered join the same record.
@@ -198,6 +200,8 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'EditSpec',
   'PlanRecord',
   'Enlistment',
+  // Lane 1.12: a block's order to join its post, replaced whole by `movement`.
+  'ForceJoin',
   'Levy',
   'CallSpec',
   'PlanCounter',

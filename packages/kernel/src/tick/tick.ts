@@ -82,6 +82,7 @@ export const SEATS_MECHANICS = [
   'orders.relay_held',
   'orders.relay_objected',
   'orders.relayed',
+  'orders.returned',
   'reports.filtered',
   'reports.trimmed',
   'seats.choices',
@@ -224,6 +225,9 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     }
     if (c.cmd === 'battle') {
       // A commander's battle orders (lane 1.12): only the holder of the post sends them, once a day; the battle reads them.
+      // Never from a seat the player drives (hard rule 1, 0016): the player is the principal and moves no division, even
+      // if a setting ever lets him sit in a commander's seat. A player seat is one whose driver is `human`.
+      if (state.seatAssignments[entry.seat]!.seatDriver === 'human') return reject('player_seat');
       if (heldPost(state, state.seatAssignments[entry.seat]!.seatPerson) !== c.post) return reject('not_the_decider');
       if (battleOrders.has(c.post)) return reject('duplicate_choice');
       battleOrders.set(c.post, { commit: c.commit, night: c.night, cutOff: c.cutOff, pursue: c.pursue });

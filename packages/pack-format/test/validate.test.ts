@@ -581,7 +581,7 @@ describe('issues read like sentences (decision 0030: file, field, what is wrong,
 describe('the rule-seat war setting (0064)', () => {
   it('warns for a war flag no situation sets, and not once a situation sets it (positive control)', () => {
     const base = run(fixture());
-    const pack = { ...base.pack!, world: { ...base.pack!.world, rules: { ...base.pack!.world.rules, ruleSeats: { warFlags: [{ faction: 'red' as never, flag: 'war_begun' }, { faction: 'blue' as never, flag: null }] } } } };
+    const pack = { ...base.pack!, world: { ...base.pack!.world, rules: { ...base.pack!.world.rules, ruleSeats: { ...base.pack!.world.rules.ruleSeats, warFlags: [{ faction: 'red' as never, flag: 'war_begun' }, { faction: 'blue' as never, flag: null }] } } } };
     const opening = { def: { effects: [{ setFlag: 'war_begun' }], options: [], inaction: null } as never };
     const unset = new IssueSink();
     warFlagsUnset([], pack, unset);
@@ -594,7 +594,7 @@ describe('the rule-seat war setting (0064)', () => {
 
 describe('who may set a war flag (0066)', () => {
   const base = run(fixture());
-  const pack = { ...base.pack!, world: { ...base.pack!.world, rules: { ...base.pack!.world.rules, ruleSeats: { warFlags: [{ faction: 'red' as never, flag: 'war_red' }, { faction: 'blue' as never, flag: 'war_blue' }] } } } };
+  const pack = { ...base.pack!, world: { ...base.pack!.world, rules: { ...base.pack!.world.rules, ruleSeats: { ...base.pack!.world.rules.ruleSeats, warFlags: [{ faction: 'red' as never, flag: 'war_red' }, { faction: 'blue' as never, flag: 'war_blue' }] } } } };
   const set = (flag: string) => [{ setFlag: flag }];
   /** A situation shaped as far as the check reads: its side and kind, and where each effect sits. */
   const sit = (over: { faction: string; kind: 'decision' | 'notice'; delegableTo?: string[]; optionEffects?: unknown[]; lockedCosts?: unknown[]; inaction?: unknown[]; effects?: unknown[] }) => ({

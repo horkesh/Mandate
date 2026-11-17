@@ -10,7 +10,7 @@ import { buildAxis, holdingAxis, splitBlocks } from './axes.ts';
 import { answeringPost, blocksOf, willingness, type Ctx } from './context.ts';
 import { daysTo, overlap, penaltyFor, regionsOf, retrograde, search, waterMode, type Weights } from './route.ts';
 import { makeCandidate } from './score.ts';
-import type { PlanCandidate, PlanGate, Method, PlannerForce, PlannerPost, PlanRejected, PlanRoute, PlanRequest } from './types.ts';
+import type { PlanAxis, PlanCandidate, PlanGate, Method, PlannerForce, PlannerPost, PlanRejected, PlanRoute, PlanRequest } from './types.ts';
 
 export type Outcome = { readonly ok: PlanCandidate } | { readonly rejected: PlanRejected };
 
@@ -86,6 +86,65 @@ export function flank(ctx: Ctx, route: PlanRoute | null): Outcome {
   // Re-priced at his true weights through the axis (the penalty only found it).
   const axis = buildAxis(ctx, { name: 'main', post: ctx.input.post, mode: 'land', route: alt, blocks, depotSteps: false });
   return { ok: makeCandidate(ctx, 'flank', 'penalty', [axis], []) };
+}
+
+/**
+ * Bombard (lane 1.12; `combat/bombard.ts`): a goal to take an objective that lies across a short water edge (within the
+ * pack's battery range) from ground his side holds, where his guns stand. He fires on it from there; nothing crosses.
+ * Only a fort's works or a force in it is a target (`BOMBARD_TARGET_KINDS`): an objective where he believes no enemy
+ * stands and knows of no works is refused (`no_target`), so a town is never bombarded as such. The guns are his blocks of
+ * the pack's gun arms; with several such shores he fires from the one with the most, ties by region id.
+ */
+export function bombard(ctx: Ctx): Outcome {
+  const { input } = ctx;
+  const objective = input.goal.goalObjective;
+  const gates: PlanGate[] = objectiveGate(ctx);
+  if (input.goal.goalPosture !== 'take') gates.push(gate('no_objective', 'only a goal to take is bombarded'));
+  if (gates.length > 0) return reject('bombard', 'across_water', gates);
+  const target = (input.beliefs.get(objective!) ?? 0) > 0 || (input.works.get(objective!) ?? 0) > 0;
+  if (!target) return reject('bombard', 'across_water', [gate('no_target', `no force he believes in ${objective} and no works he knows of: nothing a bombardment may fire on`)]);
+  // His land force, garrison detachments included: a shore's batteries are garrisons, and a bombardment moves nobody.
+  const blocks = input.forces.filter((b) => b.post === input.post && !b.naval && b.aboard === null);
+  if (blocks.length === 0) return reject('bombard', 'across_water', [gate('no_forces', 'no land blocks under his post')]);
+  const guns = (region: RegionId) => blocks.filter((b) => b.region === region && input.bombardment.gunArms.includes(b.arm)).reduce((s, b) => s + b.strength, 0);
+  const shores: { readonly region: RegionId; readonly guns: number }[] = [];
+  const passed: string[] = [];
+  for (const e of input.ground.map.edgesAt.get(objective!) ?? []) {
+    if (e.type !== 'river' && e.type !== 'sea') continue;
+    const shore = otherEnd(e, objective!);
+    if (input.ground.index.holdings.get(shore)?.holder !== input.faction) {
+      passed.push(`${shore}: not held`);
+      continue;
+    }
+    if (e.lengthDays * 1000 > input.bombardment.rangeMaxDaysPermille) {
+      passed.push(`${shore}: ${e.lengthDays * 1000} permille days, beyond range`);
+      continue;
+    }
+    const g = guns(shore);
+    if (g > 0) shores.push({ region: shore, guns: g });
+    else passed.push(`${shore}: no guns of his`);
+  }
+  if (shores.length === 0) return reject('bombard', 'across_water', [gate('no_guns', `no guns of his on held ground within range of ${objective} across water (${passed.join('; ') || 'no water edge'})`)]);
+  const from = [...shores].sort((a, b) => b.guns - a.guns || strictCompare(a.region, b.region))[0]!.region;
+  const here = blocks.filter((b) => b.region === from);
+  const concentrate = input.profile.concentrationDays * 1000;
+  const axis: PlanAxis = {
+    axisName: 'main',
+    axisPost: input.post,
+    axisMode: 'land',
+    axisRoute: { routeFrom: from, routeTo: objective!, routeLegs: [], routeCost: 0, routeDays: 0 },
+    axisBlocks: here.map((b) => b.id),
+    axisStrength: here.reduce((s, b) => s + b.strength, 0),
+    axisPhases: [
+      { phaseKind: 'concentrate', phaseStart: 0, phaseDays: concentrate, phaseRegion: from },
+      { phaseKind: 'bombard', phaseStart: concentrate, phaseDays: input.goal.goalDeadlineDays * 1000, phaseRegion: objective! },
+    ],
+    axisArrival: concentrate,
+    axisOutOfSupply: 0,
+    axisStoresDays: here.length === 0 ? 0 : Math.min(...here.map((b) => b.storesDays)),
+    axisStoresAssumed: here.some((b) => b.storesAssumed),
+  };
+  return { ok: makeCandidate(ctx, 'bombard', 'across_water', [axis], []) };
 }
 
 export function supplyLine(ctx: Ctx): Outcome {

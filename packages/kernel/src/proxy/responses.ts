@@ -36,6 +36,14 @@ export interface OrderResponse {
   readonly respConditions: readonly ResponseCondition[];
 }
 
+/**
+ * Whether a response is a governor's answer to a call (lane 1.12): its addressee's, to an order whose id names the call
+ * and his post (`dispatchOrder` tags a call `call.<post>`).
+ */
+export function isCallAnswer(r: OrderResponse): boolean {
+  return r.respRole === 'addressee' && r.respPost !== null && r.respOrder.endsWith(`.call.${r.respPost}`);
+}
+
 /** The key of a man's response to an order: one per order per man. */
 export function responseKey(order: MessageId, person: PersonId): string {
   return `${order}|${person}`;
@@ -80,7 +88,9 @@ export function pruneResponses(state: State, day: number, keepDays: number): { r
   for (const o of Object.values(state.operationRecords)) for (const q of o.opRequests) if (q.oreqResponse !== null) named.add(q.oreqResponse);
   // Lane 1.7: a levy names the governor's answer to the call that raised it.
   for (const l of Object.values(state.postLevies)) named.add(l.levyResponse);
-  const drop = Object.keys(state.orderResponses).filter((k) => day - state.orderResponses[k]!.respDay > keepDays && !named.has(k));
+  // Lane 1.12: a governor's answer to a call is kept for good: it is the record that he was called, which the rule-seat
+  // principal reads so as to call each governor once (one per call, so it does not grow with the hops of the war's orders).
+  const drop = Object.keys(state.orderResponses).filter((k) => day - state.orderResponses[k]!.respDay > keepDays && !named.has(k) && !isCallAnswer(state.orderResponses[k]!));
   if (drop.length === 0) return { state, pruned: 0 };
   const next: Record<string, OrderResponse> = { ...state.orderResponses };
   for (const k of drop) delete next[k];

@@ -14,6 +14,7 @@
     "operations": { "pauseDays": 3, "maxRepulses": 3, "pursuitDays": { "follow": 1, "press": 2 }, "holdControlPermille": 500, "works": { "perNightPermille": 50, "capPermille": 300, "lostWhenStormedPermille": 150 }, "returns": { "firstLowPermille": 200, "revealDays": 7 } },
     "pruning": { "operationDays": 60, "battleDays": 120, "responseDays": 60 },
     "combat": {
+      "bombardment": {"gunArms":["artillery"],"rangeMaxDaysPermille":1000,"moraleLossPerDay":40,"ratioCapPermille":3000,"outOfStoresMoraleLoss":60,"worksWearPerDay":50,"surrenderMorale":350,"boldnessWeight":500,"lossPermille":20,"recordTerms":[],"source":"TB-DESIGN"},
       "baseRates": { "meeting": { "attacker": 160, "defender": 160 }, "attack_open": { "attacker": 170, "defender": 160 }, "attack_hasty": { "attacker": 190, "defender": 95 }, "assault_works": { "attacker": 180, "defender": 40 }, "rearguard": { "attacker": 50, "defender": 100 } },
       "works": { "hastyAt": 200, "preparedAt": 500 },
       "terrain": [{ "terrain": "plain", "frontageMen": 60000, "lossPermille": 0 }, { "terrain": "rolling", "frontageMen": 60000, "lossPermille": 0 }, { "terrain": "prairie", "frontageMen": 60000, "lossPermille": 0 }, { "terrain": "valley", "frontageMen": 50000, "lossPermille": 0 }, { "terrain": "urban", "frontageMen": 30000, "lossPermille": -100 }, { "terrain": "tidewater", "frontageMen": 40000, "lossPermille": -50 }, { "terrain": "hills", "frontageMen": 40000, "lossPermille": -100 }, { "terrain": "swamp", "frontageMen": 25000, "lossPermille": -200 }, { "terrain": "mountains", "frontageMen": 15000, "lossPermille": -200 }],
@@ -40,7 +41,7 @@
       }
     },
     "movement": { "marchMinCapacityPermille": 1000, "courierPermille": 333 },
-    "ruleSeats": { "warFlags": [{ "faction": "north", "flag": null }, { "faction": "south", "flag": null }] },
+    "ruleSeats": { "warFlags": [{ "faction": "north", "flag": null }, { "faction": "south", "flag": null }], "principals": [{"faction":"north","crossNeutral":true,"concentrateAt":"n_army_east","concentrateSource":"TB-DESIGN","calls":[{"post":"n_brenmark_governor","regiments":2,"termDays":90,"fromDate":"1861-04-01","source":"TB-DESIGN"}],"offensives":[{"post":"n_army_east","objective":"s_capital","fromDate":"1861-04-01","source":"TB-DESIGN"}],"inquireEveryDays":7,"appointKinds":{"land":["general"],"naval":["naval_officer"]}},{"faction":"south","crossNeutral":true,"concentrateAt":"s_army_salient","concentrateSource":"TB-DESIGN","calls":[{"post":"s_lowmarch_governor","regiments":2,"termDays":365,"fromDate":"1861-04-01","source":"TB-DESIGN"}],"offensives":[{"post":"s_army_salient","objective":"n_capital","fromDate":"1861-04-01","source":"TB-DESIGN"}],"inquireEveryDays":7,"appointKinds":{"land":["general"],"naval":["naval_officer"]}}] },
     "latency": { "wireDays": 0, "mailPermille": 2000, "specialMessengerPermille": 500, "courierNoiseMaxDays": 1, "specialMessengerPrice": 1 },
     "reportTemplates": [
       { "templateType": "wire-dispatch", "templateSubtype": null, "templateRoute": "wire", "cadenceDays": 2, "maxAgeDays": 30, "keepSupersededDays": 3 },

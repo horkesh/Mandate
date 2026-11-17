@@ -13,7 +13,7 @@ import { seatIdFor } from '../seats/seats.ts';
 import { traitsOf } from '../people/traits.ts';
 import { filterDecision, trimValueOf } from '../reading/orders.ts';
 import { fire, hop, whereIs, type TickContext } from './context.ts';
-import { arriveOrder, relayOrder } from './orders.ts';
+import { arriveOrder, relayOrder, returnDispatch } from './orders.ts';
 import { arriveVerb } from './verbs.ts';
 import { arriveCall } from './recruitment.ts';
 
@@ -40,6 +40,9 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
     if (msg.msgRole === 'relay') {
       return relayOrder(ctx, state, msg);
     }
+    // Lane 1.12 (0052): a principal's dispatch that finds the post vacant, or in another man's hands, is not answered:
+    // it comes back to him (a support request between holders keeps lane 1.4's own handling).
+    if (msg.msgOrder.orderKind !== 'support' && msg.msgToPost !== null && state.postStates[msg.msgToPost]?.postHolder !== msg.msgTo) return returnDispatch(ctx, state, msg);
     if (msg.msgOrder?.orderKind === 'call') return arriveCall(ctx, state, msg);
     return arriveOrder(ctx, state, msg);
   }

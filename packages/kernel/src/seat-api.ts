@@ -27,7 +27,11 @@ export { EDIT_KINDS, PLAN_STATUSES, POSTURES } from './plans/goal.ts';
 export type {
   AxisView,
   BattleMenu,
+  Candidate,
   CommandablePost,
+  DoctrineView,
+  RaisingPost,
+  Vacancy,
   DelegatedMenu,
   Menu,
   OptionView,

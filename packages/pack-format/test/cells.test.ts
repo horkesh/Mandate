@@ -49,7 +49,7 @@ describe('cell grammars', () => {
       stores: { menPerCapacityUnit: 20000, capDays: 30, lowDays: 7, norms: [] },
       occupation: { occupyPermille: 100, occupyFullMen: 5000 },
       movement: { marchMinCapacityPermille: 1000, courierPermille: 333 },
-      ruleSeats: { warFlags: [] },
+      ruleSeats: { warFlags: [], principals: [] },
       ...(MESSAGE_RULES as unknown as Pick<w.WorldRules, 'latency' | 'reportTemplates' | 'standing' | 'people' | 'planner' | 'plans' | 'combat' | 'operations' | 'pruning' | 'recruitment' | 'selfEmancipation' | 'politics' | 'turns'>),
     };
     expect(parseSeasons('mud', rules)).toEqual({ ok: true, value: [{ reason: 'mud', months: [1, 2], depthFeet: null }] });

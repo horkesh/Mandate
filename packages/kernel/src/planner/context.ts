@@ -15,6 +15,7 @@ import type { PlanGoal } from '../plans/goal.ts';
 import type { FactionSupply } from '../supply/supply.ts';
 import { otherEnd } from '../world/index.ts';
 import type { PlannerRules } from '../world/world.ts';
+import type { BombardmentRules } from '../combat/rules.ts';
 import type { PlannerForce, PlannerPost, Profile } from './types.ts';
 
 export interface PlannerInput {
@@ -49,6 +50,8 @@ export interface PlannerInput {
   readonly reinforceShare: { readonly timid: number; readonly bold: number };
   /** The day of the request (stamped on the draft set). */
   readonly day: number;
+  /** The pack's bombardment rules (lane 1.12): the gun arms and the batteries' range across water. */
+  readonly bombardment: Pick<BombardmentRules, 'gunArms' | 'rangeMaxDaysPermille'>;
 }
 
 /** Per-request working state: the influence field, supply set and a search counter. Built once, discarded after. */

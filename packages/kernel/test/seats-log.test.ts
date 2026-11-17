@@ -352,6 +352,7 @@ describe('ownership of the new State (0044)', () => {
       'forceAssignments:command',
       'forceBlockStates:forces',
       'forceEnlistments:forces',
+      'forceJoins:movement',
       'forceLocations:movement',
       'infraDepotCondition:infrastructure',
       'infraEdgeCondition:infrastructure',
@@ -410,9 +411,9 @@ describe('ownership of the new State (0044)', () => {
     // Lane 1.5: the scripted seats send no people verbs and never run out of attention; promises, rivals and initiatives
     // need verbs or a rung this game does not reach. Each has its own kernel test (people-verbs.test.ts).
     // Lane 1.4: no plan here asks another holder for support, and nothing is old enough to prune in 60 days; both have their own tests.
-    // A scripted order now meets a post the battle model left vacant and is rejected, so `commands.rejected` is live here;
+    // A scripted order meets a post the battle model left vacant; lane 1.12 (0052) accepts it, since the principal has not been told, and it comes back as a returned dispatch, so `commands.rejected` is dead here and `orders.returned` live;
     // no state's ground sees a battle (no governor's wire) and no headquarters is cut off (no pocket report).
-    expect([...dead].sort()).toEqual(['ladder.rival', 'operations.landed', 'operations.support_answered', 'operations.support_refused', 'operations.support_sent', 'orders.conflict', 'orders.relay_objected', 'orders.responses_pruned', 'people.promise_broken', 'people.promise_kept', ...POLITICS_MECHANICS, 'reports.governor_wire', 'reports.observer_letter', 'reports.pocket', 'reports.trimmed', 'seats.attention_refused', 'seats.defaulted', 'seats.initiative', 'verbs.answered', 'verbs.audience', 'verbs.consulted', 'verbs.declined', 'verbs.in_washington']);
+    expect([...dead].sort()).toEqual(['combat.bombardment', 'combat.evacuated', 'commands.rejected', 'ladder.rival', 'movement.join_blocked', 'movement.joined', 'operations.landed', 'operations.support_answered', 'operations.support_refused', 'operations.support_sent', 'orders.conflict', 'orders.relay_objected', 'orders.responses_pruned', 'people.promise_broken', 'people.promise_kept', ...POLITICS_MECHANICS, 'reports.governor_wire', 'reports.observer_letter', 'reports.pocket', 'reports.trimmed', 'seats.attention_refused', 'seats.defaulted', 'seats.initiative', 'verbs.answered', 'verbs.audience', 'verbs.consulted', 'verbs.declined', 'verbs.in_washington']);
     // The plan cycle's mechanics have their own tests (`plans.test.ts`); this game goals, drafts and picks plans.
     const fired = SEATS_MECHANICS.filter((m) => plan(m) && telemetry.mechanics[m]!.fires > 0);
     expect(fired).toEqual(expect.arrayContaining(['planner.candidates', 'planner.searches', 'plans.chosen', 'plans.drafted', 'plans.goal_set']));

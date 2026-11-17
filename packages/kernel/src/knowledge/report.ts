@@ -87,8 +87,12 @@ export const CLAIM_KINDS = [
   'call-answer',
   'captured',
   'casualties',
+  // Lane 1.12: a post's commander lost in battle (token: killed, wounded or captured); the subject is the post.
+  'commander-lost',
   'effective-strength',
   'enemy-strength',
+  // Lane 1.12: a fort surrendered under bombardment (token: the record's terms, evacuated_under_terms, or captured).
+  'fort-surrendered',
   'framing',
   'goal-status',
   'levy-lapsed',
@@ -97,6 +101,8 @@ export const CLAIM_KINDS = [
   'operation',
   'order-objected',
   'order-obeyed',
+  // Lane 1.12: a dispatch returned undelivered (token: vacant_post, or holder_changed); the subject is the post.
+  'order-returned',
   'own-losses',
   'plan-answer',
   'plan-submitted',

@@ -133,13 +133,14 @@ describe('each criterion can fail (positive controls)', () => {
     const run = union();
     const reference = REFERENCE_RUNS.find((x) => x.name === 'union-1861 at war, 75 days')!;
     expect(livenessProblems(reference, run.checked.liveness)).toEqual([]);
-    const planted = run.checked.liveness.map((row) => (row.mechanic === 'movement.arrived' ? { ...row, fires: 0, magnitude: 0 } : row));
-    expect(livenessProblems(reference, planted)).toEqual([expect.stringContaining('movement.arrived is dead (0 fires')]);
+    // Lane 1.12: a mechanic the Union doctrine drives (its run has no march, so movement has no floor there).
+    const planted = run.checked.liveness.map((row) => (row.mechanic === 'recruitment.called' ? { ...row, fires: 0, magnitude: 0 } : row));
+    expect(livenessProblems(reference, planted)).toEqual([expect.stringContaining('recruitment.called is dead (0 fires')]);
     // The whole check reports it, under the liveness criterion and no other.
     const doctored: DoneRun = { ...run, checked: { ...run.checked, liveness: planted } };
     const exercises = Object.fromEntries(REFERENCE_RUNS.filter((x) => x.kind === 'exercise').map((x) => [x.name, [] as Phase0Summary['liveness']]));
     const criteria = evaluateDoneCheck({ runs: [doctored, testbed()], exercises });
-    expect(criteria.find((c) => c.id === 'liveness')!.problems.join('\n')).toContain('movement.arrived is dead');
+    expect(criteria.find((c) => c.id === 'liveness')!.problems.join('\n')).toContain('recruitment.called is dead');
   });
 
   it('section ten: a deleted test file, a skipped test and a thinned file are each named', () => {

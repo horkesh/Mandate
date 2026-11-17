@@ -142,6 +142,15 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   for (const f of [...factionIds].sort()) {
     if (!warRows.some((r) => r.faction === f)) err('missing-value', W('rules.ruleSeats', 0, 'warFlags'), `faction "${f}" has no war flag row`, 'one row per faction: a situation flag, or null for war from day 1');
   }
+  // Lane 1.12: each faction's rule-seat principal has its doctrine, stated once (the kernel reads a missing row as none).
+  const doctrineRows = world.rules.ruleSeats.principals;
+  doctrineRows.forEach((row, i) => {
+    if (!factionIds.has(row.faction)) err('unknown-reference', W('rules.ruleSeats.principals', i, 'faction'), `"${row.faction}" is not a faction in this pack`, `one of: ${[...factionIds].join(', ')}`);
+    if (doctrineRows.findIndex((x) => x.faction === row.faction) !== i) err('duplicate-id', W('rules.ruleSeats.principals', i, 'faction'), `faction "${row.faction}" has more than one doctrine row`);
+  });
+  for (const f of [...factionIds].sort()) {
+    if (!doctrineRows.some((r) => r.faction === f)) err('missing-value', W('rules.ruleSeats', 0, 'principals'), `faction "${f}" has no doctrine row`, 'one row per faction: its rule-seat principal’s doctrine (lane 1.12)');
+  }
   if (world.rules.movement.marchMinCapacityPermille > world.rules.capacityMax * 1000) {
     err('rules-range', W('rules.movement', 0, 'marchMinCapacityPermille'), `no edge can carry a march: the least capacity to march (${world.rules.movement.marchMinCapacityPermille}) is above the scale's top (capacityMax ${world.rules.capacityMax} = ${world.rules.capacityMax * 1000})`, `at most ${world.rules.capacityMax * 1000}`);
   }

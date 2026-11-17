@@ -9,7 +9,7 @@
  * `scenario.ts`; every open list (terrains, post kinds, arms, ranks, traits)
  * belongs to the pack.
  */
-import type { DepartmentId, FactionId, PostId } from '../ids.ts';
+import type { DepartmentId, FactionId, PostId, RegionId } from '../ids.ts';
 import type {
   CensusRecord,
   DepotRecord,
@@ -98,6 +98,36 @@ export interface MovementRules {
 export interface RuleSeatRules {
   /** One row per faction: the chain flag that puts it at war, or null for war from day 1. */
   readonly warFlags: readonly { readonly faction: FactionId; readonly flag: string | null }[];
+  /**
+   * One row per faction: how its rule-seat principal does his historical jobs (lane 1.12, replacing the generic
+   * principal of 0072). Pack data, so the kernel and the rule seat name nothing of any setting; the dated rows cite
+   * their sources, and the doctrine's numbers are design parameters.
+   */
+  readonly principals: readonly PrincipalDoctrine[];
+}
+
+/** A rule-seat principal's doctrine (lane 1.12). Nothing here acts before his side is at war (0064, 0066). */
+export interface PrincipalDoctrine {
+  readonly faction: FactionId;
+  /** Whether his goals may cross a neutral government's open ground: a political act, decided per side. */
+  readonly crossNeutral: boolean;
+  /** The post his raised regiments are transferred to, to concentrate; null to leave them with the governors. */
+  readonly concentrateAt: PostId | null;
+  /** Why that post: the research it rests on, the choice of post labelled [I]; null exactly when `concentrateAt` is. */
+  readonly concentrateSource: string | null;
+  /**
+   * His calls for regiments, each once, from its date (or the day after war, if later): a raising post, how many, for
+   * how long. One owner per levy (rule 5): a row is the doctrine's call; when a situation's option makes the same call
+   * (lane 1.12 Part B), the row is removed from the pack, and the kernel's record of a call (`pruneResponses` keeps a
+   * governor's answer) stops the seat calling a governor who has been called already.
+   */
+  readonly calls: readonly { readonly post: PostId; readonly regiments: number; readonly termDays: number; readonly fromDate: string; readonly source: string }[];
+  /** The offensive goals he gives, each on its day (or the day after war, if later): a post to take a region. */
+  readonly offensives: readonly { readonly post: PostId; readonly objective: RegionId; readonly fromDate: string; readonly source: string }[];
+  /** How often he asks each army where it stands and what it faces (an inquiry costs no attention), in days. */
+  readonly inquireEveryDays: number;
+  /** The person kinds he appoints to a vacant post commanding land troops, and naval ones (the pack's person kinds). */
+  readonly appointKinds: { readonly land: readonly string[]; readonly naval: readonly string[] };
 }
 
 /**

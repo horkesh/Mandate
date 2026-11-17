@@ -41,8 +41,9 @@ describe('the band table', () => {
     const band = stalled(1, 'planted: a stand-off band for the control', driver);
     expect(readFileSync(`${REPO}${driver.test}`, 'utf8')).toContain(driver.needle);
     const others = REFERENCE_RUNS.filter((r) => r !== union);
-    expect(bandProblems([{ ...union, bands: { ...union.bands, 'combat.cut_off': band } }, ...others])).toEqual([]);
-    expect(bandProblems([{ ...union, bands: { ...union.bands, 'combat.cut_off': { ...band, maxFires: undefined } } }, ...others])).toContain(`${union.name}: combat.cut_off is stalled with no ceiling`);
+    // Planted on a mechanic not in QUIET (lane 1.12 moved combat.cut_off there: no reference run cuts a force off).
+    expect(bandProblems([{ ...union, bands: { ...union.bands, 'combat.battle_day': band } }, ...others])).toEqual([]);
+    expect(bandProblems([{ ...union, bands: { ...union.bands, 'combat.battle_day': { ...band, maxFires: undefined } } }, ...others])).toContain(`${union.name}: combat.battle_day is stalled with no ceiling`);
   });
 
   it('a stand-off band lets a run that ends the stand-off pass and fails a flood (review S1 of the close-out)', () => {
@@ -87,10 +88,14 @@ describe('the gate can fail (positive controls)', () => {
   const union = REFERENCE_RUNS.find((r) => r.pack === 'union-1861')!;
   const testbed = REFERENCE_RUNS.find((r) => r.pack === 'testbed' && r.kind === 'full')!;
 
-  it('a run in which no seat orders anything leaves the movement, battle and occupation mechanics dead', () => {
-    const failures = gateFailures(union, liveness(union, NOTHING));
+  it('a run in which no seat orders anything leaves the movement, battle, occupation and recruitment mechanics dead', () => {
+    // The testbed run: lane 1.12's Union run fights no battle in 75 days, so its movement bands have no floor.
+    const failures = gateFailures(testbed, liveness(testbed, NOTHING));
     const dead = failures.filter((f) => f.problem === 'dead').map((f) => f.mechanic);
-    expect(dead).toEqual(expect.arrayContaining(['movement.leg_started', 'movement.arrived', 'combat.battle_day', 'combat.occupation', 'control.changed', 'orders.obeyed']));
+    expect(dead).toEqual(expect.arrayContaining(['movement.leg_started', 'movement.arrived', 'combat.battle_day', 'combat.occupation', 'control.changed', 'orders.obeyed', 'recruitment.called']));
+    // And the Union run's doctrine: no call, no inquiry.
+    const union0 = gateFailures(union, liveness(union, NOTHING)).filter((f) => f.problem === 'dead').map((f) => f.mechanic);
+    expect(union0).toEqual(expect.arrayContaining(['recruitment.called', 'verbs.answered', 'plans.drafted']));
   });
 
   it('a planted dead mechanic is reported dead, and one that fires too often too frequent', () => {

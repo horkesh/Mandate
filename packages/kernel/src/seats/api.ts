@@ -92,6 +92,53 @@ export interface CommandablePost {
   /** Posts an order relays through on the way; going around them is `bypass`. */
   readonly relays: readonly PostId[];
   readonly routes: readonly RouteOption[];
+  /** Known men it commands (a block of unknown strength counts none). Lane 1.12. */
+  readonly men: number;
+  /** Whether it is a post that raises regiments (a governor's): the blocks it commands are levies to concentrate. */
+  readonly raising: boolean;
+  /** The kinds of his orders and verbs to this post still on their way (`order`, `call`, `transfer`, `inquire`...). */
+  readonly inTransit: readonly string[];
+}
+
+/** A post that raises regiments on his side, held, that he may call on (lane 1.12; lane 1.7's recruitment). */
+export interface RaisingPost {
+  readonly post: PostId;
+  readonly holder: PersonId;
+  readonly routes: readonly RouteOption[];
+  /** Whether he has called on it already: a call on its way, or one it has answered. */
+  readonly called: boolean;
+}
+
+/**
+ * A post commanding troops on his side that was held when the scenario began and has nobody holding it now, as the
+ * battle model can leave one (lane 1.12). A post the scenario starts vacant is not one.
+ */
+export interface Vacancy {
+  readonly post: PostId;
+  /** Whether the troops it commands are naval or land. */
+  readonly arm: 'land' | 'naval';
+  readonly routes: readonly RouteOption[];
+  /** Whether an appointment to it is already on its way. */
+  readonly appointing: boolean;
+}
+
+/** A man on his side, serving and holding no post, whom he may appoint (lane 1.5's appoint verb). */
+export interface Candidate {
+  readonly person: PersonId;
+  readonly kind: string;
+  /** His seniority: the highest place among his ranks in the pack's rank vocabulary (junior first), -1 with none. */
+  readonly seniority: number;
+}
+
+/** His doctrine as the pack states it (lane 1.12; `rules.ruleSeats.principals`), with each offensive's date as a day. */
+export interface DoctrineView {
+  /** 0 for a side with no doctrine: he never inquires. */
+  readonly crossNeutral: boolean;
+  readonly concentrateAt: PostId | null;
+  readonly calls: readonly { readonly post: PostId; readonly regiments: number; readonly termDays: number; readonly day: number }[];
+  readonly offensives: readonly { readonly post: PostId; readonly objective: RegionId; readonly day: number }[];
+  readonly inquireEveryDays: number;
+  readonly appointKinds: { readonly land: readonly string[]; readonly naval: readonly string[] };
 }
 
 /** An option of an open situation as a seat may weigh it (never the historical default). */
@@ -114,14 +161,22 @@ export interface SituationChoice {
 export interface PrincipalMenu {
   readonly menuKind: 'principal';
   readonly faction: FactionId;
-  /** The objective pack data names for his side, if any (public, like the map). */
-  readonly objective: RegionId | null;
   /**
    * The day his side went to war (0064): the day the pack's war flag for it was set, 0 when it names none (war from
-   * day 1) or the run started at war, null at peace. The generic rule-seat principal opens his campaign the first
-   * morning at war and orders no advance before; a human or model seat may order at peace.
+   * day 1) or the run started at war, null at peace. The rule-seat principal does nothing of his doctrine before it;
+   * a human or model seat may order at peace.
    */
   readonly atWarSince: number | null;
+  /** His doctrine (lane 1.12): what the rule-seat principal does, from the pack. */
+  readonly doctrine: DoctrineView;
+  /** Posts on his side that raise regiments, held (lane 1.12). */
+  readonly raising: readonly RaisingPost[];
+  /** Posts commanding troops on his side that have lost the holder the scenario gave them (lane 1.12). */
+  readonly vacancies: readonly Vacancy[];
+  /** Men he may appoint, senior first (lane 1.12). */
+  readonly candidates: readonly Candidate[];
+  /** His attention left this week, and what each kind of command costs (the pack's table, 0025, 0040); null left: no budget. */
+  readonly attention: { readonly left: number | null; readonly costs: Readonly<Record<string, number>>; readonly specialMessenger: number };
   readonly commandable: readonly CommandablePost[];
   readonly situations: readonly SituationChoice[];
   /** Plans his commanders submitted that have reached him and wait for his review (approve, send back, edit). */

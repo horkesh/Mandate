@@ -6,7 +6,7 @@ import { combatDay, type CombatResult } from '../src/combat/battle.ts';
 import { ALL_JUDGE, type BattleOrders } from '../src/combat/orders.ts';
 import type { PostId } from '../src/ids.ts';
 import { battleMenus } from '../src/seats/requests.ts';
-import { seatIdFor } from '../src/seats/seats.ts';
+import { reassignSeat, seatIdFor } from '../src/seats/seats.ts';
 import { createTelemetry } from '../src/telemetry.ts';
 import { tick, TICK_MECHANICS } from '../src/tick/tick.ts';
 import { indexedFixture, P as SP, POST as SPOST } from './support/seats-fixture.ts';
@@ -356,13 +356,14 @@ describe('only the battle model captures men (R4\'s battle ruling; lane 1.8\'s n
 
   it('only combat proposes a battle loss, the one change that captures men, and only forces applies it', () => {
     const proposers = sources.filter((f) => /change:\s*['`"]battle_losses['`"]/.test(readFileSync(f, 'utf8'))).map((f) => relative(root, f).split('\\').join('/'));
-    expect(proposers).toEqual(['packages/kernel/src/combat/battle.ts', 'packages/kernel/src/forces/forces.ts']);
+    // Lane 1.12: the bombardment is the battle model's too (a fire-only engagement), in combat/.
+    expect(proposers).toEqual(['packages/kernel/src/combat/battle.ts', 'packages/kernel/src/combat/bombard.ts', 'packages/kernel/src/forces/forces.ts']);
     expect(readFileSync(join(root, 'packages/kernel/src/forces/forces.ts'), 'utf8')).toContain("readonly cause: 'combat';");
   });
 
   it('only people writes a person\'s status, and only combat proposes one', () => {
     const writers = sources.filter((f) => /change:\s*['`"]status['`"]/.test(readFileSync(f, 'utf8'))).map((f) => relative(root, f).split('\\').join('/'));
-    expect(writers).toEqual(['packages/kernel/src/combat/battle.ts', 'packages/kernel/src/people/people.ts']);
+    expect(writers).toEqual(['packages/kernel/src/combat/battle.ts', 'packages/kernel/src/combat/bombard.ts', 'packages/kernel/src/people/people.ts']);
   });
 });
 
@@ -604,4 +605,15 @@ describe('battle orders in the tick (lane 1.12): only the holder of the post giv
       [2, 'duplicate_choice'],
     ]);
     expect(telemetry.mechanics['seats.battle_orders']!.fires).toBe(1);
-  });});
+  });
+
+  it('never takes them from a seat the player drives, even the holder’s own (hard rule 1, 0016: the player moves no division)', () => {
+    const world = indexedFixture();
+    const state = reassignSeat(createState(world, { seed: 1 }), seatIdFor(SP('a_gen')), 'human');
+    const telemetry = createTelemetry([...TICK_MECHANICS, ...MAP_MECHANICS]);
+    const command = { cmd: 'battle' as const, post: SPOST('a_army'), commit: 'defend' as const, night: 'judge' as const, cutOff: 'judge' as const, pursue: 'judge' as const };
+    const r = tick(world, state, [{ day: 1, seat: seatIdFor(SP('a_gen')), command }], { telemetry });
+    expect(r.rejections.map((x) => [x.entry, x.reason])).toEqual([[0, 'player_seat']]);
+    expect(telemetry.mechanics['seats.battle_orders']!.fires).toBe(0);
+  });
+});
