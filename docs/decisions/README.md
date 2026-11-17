@@ -91,3 +91,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0085](0085-evidence-rules-and-the-1860-census.md) | Evidence rules for the 1861 cast, and the 1860 census by region | accepted; amended by 0087 |
 | [0086](0086-wall-clock-tests-behind-a-flag.md) | Wall-clock tests run behind a flag, not in the pre-commit hook | accepted |
 | [0087](0087-evidence-rules-as-checks.md) | The evidence rules as checks, and what a later work can source | accepted |
+| [0088](0088-the-console-and-m2-retired.md) | The console on the new kernel, and M2 retired | accepted |
