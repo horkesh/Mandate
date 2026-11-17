@@ -126,7 +126,7 @@
       "min": 100000,
       "max": null,
       "floorBinding": true,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 and Appendix B A3: whole Confederacy about 112,040 in July (Livermore p. 42, an estimate he calls probably too low), rounded outward to 100,000; above 32,232 effectives at Bull Run alone (Livermore p. 77). No sourced upper bound: the lead sets it once Walker's or Cooper's returns (OR IV-1) are read"
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 and Appendix B A3: whole Confederacy about 112,040 in July (Livermore p. 42, an estimate he calls probably too low), rounded outward to 100,000; above 32,232 effectives at Bull Run alone (Livermore p. 77). No sourced upper bound: open-topped by the lead's ruling until lane 1.11r3 reads Walker's or Cooper's returns (OR IV-1)"
     },
     {
       "id": "operations_union",
@@ -142,9 +142,9 @@
       "date": "1861-07-31",
       "kind": "operations-fought",
       "faction": "confederate",
-      "min": 0,
+      "min": 1,
       "max": 4,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 and Appendix B B2: the Confederate side planned almost nothing in the window (Sumter, Cole Camp inferred, Mesilla; Carthage disputed), so the count does not require one; at most those four"
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 and Appendix B B1-B2: at least one, the Sumter bombardment planned on Davis's government's order (Walker to Beauregard 10 April, OR I-1 p. 297), which lane 1.12's bombardment stage makes fightable; at most four (Sumter, Cole Camp inferred, Mesilla; Carthage disputed). The lead's ruling: FOUNDATION's 'a planned operation fought by each side' stands"
     }
   ],
   "pushback": [
@@ -155,7 +155,7 @@
       "through": "1861-07-31",
       "min": 0,
       "max": 6,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C counts: RELAY 2 cases, both holds (N3-11, N3-27), so no relay objection is sourced. Upper bound proposed by lane 1.14 (three times the record's relay cases), for the lead to rule"
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C counts: no relay objection is sourced; the record's RELAY cases are two holds (N3-11, N3-27). Upper bound three times those two cases (the lead's ruling)"
     },
     {
       "id": "relay_holds",
@@ -164,7 +164,7 @@
       "through": "1861-07-31",
       "min": 2,
       "max": 6,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: N3-11 (the Adjutant-General's office and the Crusader's passage) and N3-27 (Special Orders 135 held), both verified. Upper bound proposed by lane 1.14, for the lead to rule"
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-11 (the Adjutant-General's office and the Crusader's passage) and N3-27 (Special Orders 135 held), both verified; upper bound three times those two cases (the lead's ruling)"
     },
     {
       "id": "filter_holds",
@@ -173,7 +173,7 @@
       "through": "1861-07-31",
       "min": 1,
       "max": 9,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: N3-06 (Seward's memorandum held, verified primary); with N3-09 (note-only, the adversary's) and X-03 (extra), three holds in all. Upper bound proposed by lane 1.14, for the lead to rule"
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-06 (Seward's memorandum held, verified primary); upper bound three times the three holds N3-06, N3-09 (note-only, the adversary's) and X-03 (extra) (the lead's ruling)"
     },
     {
       "id": "trims",
@@ -182,7 +182,7 @@
       "through": "1861-07-31",
       "min": 1,
       "max": 4,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: N3-07 (Seward's assurances to Campbell not passed up, verified secondary). Upper bound proposed by lane 1.14 (the record's one case, plus three), for the lead to rule"
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-07 (Seward's assurances to Campbell not passed up, verified secondary), the record's only trim; upper bound that one case plus three, as three times one is below the floor of plus three (the lead's ruling)"
     },
     {
       "id": "reservations",
@@ -191,7 +191,7 @@
       "through": "1861-07-31",
       "min": 1,
       "max": 9,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: N3-26 (Harney's agreement with Price, verified primary); with N3-15 (note-only) and X-04 (extra), three in all. Upper bound proposed by lane 1.14, for the lead to rule"
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-26 (Harney's agreement with Price, verified primary); upper bound three times the three cases N3-26, N3-15 (note-only) and X-04 (extra) (the lead's ruling)"
     },
     {
       "id": "slow_walks",
@@ -200,7 +200,7 @@
       "through": "1861-07-31",
       "min": 2,
       "max": 9,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: N3-10 (Scott and the Pickens order) and N3-34 (Patterson, 17 to 18 July), verified; N3-28 note-only, three in all. Upper bound proposed by lane 1.14, for the lead to rule"
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-10 (Scott and the Pickens order) and N3-34 (Patterson, 17 to 18 July), verified; upper bound three times the three cases N3-10, N3-34 and N3-28 (note-only) (the lead's ruling)"
     },
     {
       "id": "plan_objections",
@@ -209,7 +209,7 @@
       "through": "1861-07-31",
       "min": 10,
       "max": 42,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: ten verified (N3-01, 02, 03, 05, 14, 22, 23, 25, 32, 33); fourteen with the note-only rows and X-05. Upper bound proposed by lane 1.14 (three times fourteen), for the lead to rule"
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound the ten verified N3-01, 02, 03, 05, 14, 22, 23, 25, 32 and 33; upper bound three times the fourteen with the note-only N3-04, 08 and 31 and the extra X-05 (the lead's ruling)"
     }
   ],
   "victory": {
@@ -217,6 +217,7 @@
     "government": 100,
     "menShare": 1,
     "groundShare": 1,
-    "cite": "[I] proposed by lane 1.14 (notes/lane-1.14-done-check.md), for the lead to rule: read from the checkpoint scores; a capital weighs 1000, twice the most the men share can give (500 permille above an even split, at 1 a permille); a government a tenth of a capital; men and ground 1 a permille each"
+    "mandate": 1,
+    "cite": "[I] the lead's ruling on lane 1.14's proposal (notes/lane-1.14-done-check.md), amended by G-1.14c: read from the checkpoint scores; a capital weighs 1000, twice the most the men share can give (500 permille above an even split, at 1 a permille); a government a tenth of a capital; men and ground 1 a permille each; the mandate (lane 1.6) 1 a permille above its rest"
   }
 }

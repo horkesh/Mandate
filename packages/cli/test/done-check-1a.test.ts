@@ -7,9 +7,9 @@ import { describe, expect, it } from 'vitest';
 import { toId } from '../../kernel/src/ids.ts';
 import { F, indexedFixture, P, POST } from '../../kernel/test/support/seats-fixture.ts';
 import { checkpointScore, checkpointsScore, dayOfDate, historyDays, operationScore, pushbackScore, unknownStrengthScore, type Observations, type Snapshot } from '../src/history-run.ts';
-import { runSweep, sweepScore, type SweepResult } from '../src/lever-sweep.ts';
+import { fugitivePolicyDecisions, runSweep, sweepScore, unmeasuredChannels, type SweepResult } from '../src/lever-sweep.ts';
 import { labelsIn, m2CarriedValues, PHASE0_STAND_INS, standInReport } from '../src/stand-ins.ts';
-import { victoryOf } from '../src/victory.ts';
+import { VICTORY_READS, victoryOf } from '../src/victory.ts';
 
 /**
  * 1A's done-check harness (FOUNDATION section 12; lane 1.14, Part A). Each scorer is a pure function of a run's
@@ -57,7 +57,7 @@ const observations = (over: Partial<Observations> = {}): Observations => ({
 });
 
 const cite = 'a sourced research note, its section and pages';
-const bands = (checkpoints: Checkpoint[], pushback: Checkpoints['pushback'] = []): Checkpoints => ({ checkpoints, pushback, victory: { capital: 1000, government: 100, menShare: 1, groundShare: 1, cite } });
+const bands = (checkpoints: Checkpoint[], pushback: Checkpoints['pushback'] = []): Checkpoints => ({ checkpoints, pushback, victory: { capital: 1000, government: 100, menShare: 1, groundShare: 1, mandate: 1, cite } });
 
 describe('checkpoints (1A: bands sourced before the run, scored from it)', () => {
   it('counts the run’s days from the start’s date, and plays to the last date any band reads', () => {
@@ -221,18 +221,38 @@ describe('the victory measure and the lever sweep (D6)', () => {
     citations: [],
   };
   const world = indexedFixture({}, [CROSSERS]);
-  const weights = { capital: 1000, government: 100, menShare: 1, groundShare: 1 };
+  const weights = { capital: 1000, government: 100, menShare: 1, groundShare: 1, mandate: 1 };
   /** A score that reads what was chosen, so the test decides which move is best. */
   const favouring = (option: string | null) => (_w: phase0.SeatsWorld, end: phase0.TickResult) => {
     const chosen = end.state.situationStates[S('crossers')]?.sitChosen ?? [];
     return option === null ? (chosen.length === 0 ? 1 : 0) : chosen.includes(option) ? 1 : 0;
   };
 
-  it('reads its four terms from the scores, each with its amount, and sums them', () => {
+  it('reads its five terms from the scores, each with its amount, and sums them; the mandate starts at its rest (G-1.14c)', () => {
     const state = phase0.createState(world, { seed: 1 });
     const v = victoryOf(world, state, null, 'a', weights);
-    expect(v.terms.map((t) => t.term)).toEqual(['capital', 'government', 'men', 'ground']);
+    expect(v.terms.map((t) => t.term)).toEqual(['capital', 'government', 'men', 'ground', 'mandate']);
+    expect(v.terms.find((t) => t.term === 'mandate')!.count).toBe(0);
     expect(v.value).toBe(v.terms.reduce((n, t) => n + t.amount, 0));
+  });
+
+  it('reports a gated decision whose options propose to a channel the measure does not read (G-1.14c, rule 7)', () => {
+    const effect = (owner: string, field: string): phase0.Effect => ({ propose: { owner, field, subject: 'x', delta: -10, reason: 'test', side: F('a') } });
+    const read = { ...CROSSERS, options: [{ ...CROSSERS.options[0]!, effects: [effect('politics', 'bloc-support'), effect('command', 'department-side')] }, CROSSERS.options[1]!] };
+    expect(unmeasuredChannels([read])).toEqual([]);
+    const unread = { ...CROSSERS, options: [CROSSERS.options[0]!, { ...CROSSERS.options[1]!, lockedCosts: [effect('politics', 'session-call')] }], inaction: { ...CROSSERS.inaction!, effects: [effect('foreign', 'patience')] } };
+    expect(unmeasuredChannels([unread])).toEqual([{ situation: S('crossers'), channel: 'foreign/patience' }, { situation: S('crossers'), channel: 'politics/session-call' }]);
+    for (const c of ['politics/bloc-support', 'politics/ledger-act', 'politics/ledger-answer', 'politics/framing', 'command/department-side']) expect(VICTORY_READS.map((r) => `${r.owner}/${r.field}`)).toContain(c);
+  });
+
+  it('finds the fugitive-policy decisions by their policy row’s tag (G-1.14b)', () => {
+    const row = (order: string, gateTopics: string[]) => ({ order, boldness: null, honours: [], offends: [], gateTopics, notCheaperThan: null, clashes: [] });
+    const fake = (rows: ReturnType<typeof row>[], defs: phase0.SituationDef[]) => ({ map: { world: { rules: { people: { verbs: { orderValues: rows } } } } }, situations: defs }) as unknown as phase0.SeatsWorld;
+    const policy = { ...CROSSERS, options: [CROSSERS.options[0]!, { ...CROSSERS.options[1]!, policy: { row: 'policy:send_back', carriedBy: [] } }] };
+    expect([...fugitivePolicyDecisions(fake([row('policy:send_back', ['fugitive-policy'])], [policy]), 'fugitive-policy')]).toEqual([S('crossers')]);
+    expect([...fugitivePolicyDecisions(fake([row('policy:send_back', ['press-closures'])], [policy]), 'fugitive-policy')]).toEqual([]);
+    const byInaction = { ...CROSSERS, inaction: { ...CROSSERS.inaction!, policy: { row: 'policy:each_decides', carriedBy: [] } } };
+    expect([...fugitivePolicyDecisions(fake([row('policy:each_decides', ['fugitive-policy'])], [byInaction]), 'fugitive-policy')]).toEqual([S('crossers')]);
   });
 
   it('flags a watched option the bot finds best in more than a quarter of the seeds, and leaves it when it never is', () => {
@@ -252,8 +272,34 @@ describe('the victory measure and the lever sweep (D6)', () => {
     expect(sweepScore(r).problems.join('\n')).toContain('inaction (an atrocity-class decision’s, read as watched, 0074)');
   });
 
+  it('fails an unmeasured channel, a fugitive-policy chain no border governor closed, and a ledger act Congress never met (G-1.14b, G-1.14c)', () => {
+    const ok: SweepResult = { seeds: 2, findings: [], flagged: [], unpaid: [], recruitmentCalls: 3, decisionsWeighed: 1, unmeasured: [], ledgerUnmet: [], chainUnexercised: [] };
+    expect(sweepScore(ok).problems).toEqual([]);
+    const bad: SweepResult = {
+      ...ok,
+      unmeasured: [{ situation: 'crossers', channel: 'politics/session-call' }],
+      chainUnexercised: [{ situation: 'crossers', seed: 1, move: 'shelter' }, { situation: 'crossers', seed: 2, move: 'inaction' }],
+      ledgerUnmet: [{ situation: 'crossers', seed: 1, move: 'send_back' }],
+    };
+    expect(sweepScore(bad).problems).toEqual([
+      'crossers: unmeasured channel politics/session-call: the victory measure does not read what this choice proposes, so no D6 result for it counts (G-1.14c)',
+      "crossers: chain unexercised: no border governor answered a call inside the horizon of 2 moves weighed (seeds 1, 2), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)",
+      "crossers: Congress had not met its ledger act when 1 moves were scored (seeds 1), so the act's answer is unmeasured (G-1.14c)",
+    ]);
+  });
+
+  it('plays a fugitive-policy decision’s moves on to the cap, and reports the chain unexercised where no border governor answers (G-1.14b)', () => {
+    // No governor on the fixture is called, so no move closes the chain: every move weighed is reported.
+    const r = runSweep(world, { seeds: [1], days: 3, horizonDays: 2, horizonCapDays: 9, weights, atrocity: new Set(), borderDepartments: [], chainDecisions: new Set([S('crossers')]), scoreOf: () => 0 });
+    expect(r.decisionsWeighed).toBe(1);
+    expect(r.chainUnexercised.map((c) => c.move)).toEqual(['shelter', 'send_back', `delegate to ${POST('a_office')}`, `delegate to ${POST('a_reserve')}`, 'inaction']);
+    expect(sweepScore(r).problems.join('\n')).toContain('chain unexercised');
+    // A decision with no chain to close is played to its horizon and reported for nothing.
+    expect(runSweep(world, { seeds: [1], days: 3, horizonDays: 2, weights, atrocity: new Set(), scoreOf: () => 0 }).chainUnexercised).toEqual([]);
+  });
+
   it('fails a sweep that weighed nothing, ran no recruitment, or met an unpaid floor (0082)', () => {
-    const empty: SweepResult = { seeds: 8, findings: [], flagged: [], unpaid: [], recruitmentCalls: 0, decisionsWeighed: 0 };
+    const empty: SweepResult = { seeds: 8, findings: [], flagged: [], unpaid: [], recruitmentCalls: 0, decisionsWeighed: 0, unmeasured: [], ledgerUnmet: [], chainUnexercised: [] };
     const problems = sweepScore(empty).problems.join('\n');
     expect(problems).toContain('weighed nothing');
     expect(problems).toContain('recruitment active');

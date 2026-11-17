@@ -344,7 +344,15 @@ export function historyRun(pack: string, options: { readonly sweepSeeds?: number
   const sweep =
     seeds === 0
       ? null
-      : runSweep(seatsWorld(pack).world, { seeds: Array.from({ length: seeds }, (_, i) => h.seed + i), days, horizonDays: SWEEP.horizonDays, weights: h.checkpoints.victory, atrocity: h.atrocity });
+      : runSweep(seatsWorld(pack).world, {
+          seeds: Array.from({ length: seeds }, (_, i) => h.seed + i),
+          days,
+          horizonDays: SWEEP.horizonDays,
+          weights: h.checkpoints.victory,
+          atrocity: h.atrocity,
+          // G-1.14b: the governments whose side could change; their governors close the recruitment chain.
+          borderDepartments: h.checkpoints.checkpoints.flatMap((k) => (k.kind === 'government-side' ? k.departments : [])),
+        });
   return { name: `${pack} history run, ${days} days to ${h.checkpoints.checkpoints.map((k) => k.date).sort().at(-1) ?? 'its end'}`, pack, startDate: h.startDate, checkpoints: h.checkpoints, summary, observations: observer.observations(), timed, sweep };
 }
 

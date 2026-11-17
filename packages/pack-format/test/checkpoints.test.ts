@@ -18,7 +18,7 @@ const good: Loose = {
     { id: 'ops_south', date: '1861-05-01', kind: 'operations-fought', faction: 'south', min: 0, max: null, cite },
   ],
   pushback: [{ id: 'holds', name: 'relay holds', count: { mechanic: 'orders.relay_held' }, through: '1861-05-01', min: 0, max: 4, cite }],
-  victory: { capital: 1000, government: 100, menShare: 1, groundShare: 1, cite },
+  victory: { capital: 1000, government: 100, menShare: 1, groundShare: 1, mandate: 1, cite },
 };
 const load = (value: unknown) => loadPack(testbedFiles({ [CHECKPOINTS_FILE]: JSON.stringify(value) }));
 const messages = (value: unknown) => errorsOf(load(value).issues).map((i) => `${i.at}: ${i.message}`);

@@ -92,6 +92,8 @@ export const VictoryWeightsSchema = z
     menShare: whole,
     /** Per permille of all control shares that are the side's, above an even share. */
     groundShare: whole,
+    /** Per permille of the side's mandate above its rest (lane 1.6's derived mandate; G-1.14c). */
+    mandate: whole,
     cite,
   })
   .describe('The victory measure’s weights (lane 1.14): the lever sweep scores each move by it, from the checkpoint scores.');

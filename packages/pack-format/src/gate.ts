@@ -684,26 +684,69 @@ export function blocSignOffProblems(blocs: readonly phase0.BlocRule[], names: Re
 export const C2_MINIMUM = 3;
 
 /**
- * The decisions about atrocity-class conduct (0074; lane 1.14): each decision whose trigger depends on an atrocity-class
- * item, by any route, as D5 reads it. The lever sweep (D6) reads such a decision's inaction outcome as if it were a
- * watched option, since letting the order or sentence stand is only inaction.
+ * The decisions about atrocity-class conduct (0074; lane 1.14). The lever sweep (D6) reads such a decision's inaction
+ * outcome as if it were a watched option, since letting the order or sentence stand is only inaction. Two routes:
+ * - **backward:** the decision's trigger depends on an atrocity-class item, by any route, as D5 reads it;
+ * - **forward** (G-1.14a): the decision's inaction fires an atrocity-class item, directly or through a chain of items,
+ *   such as a death sentence brought to the president that is carried out unless he acts.
  */
 export function atrocityDecisions(situations: readonly SituationDef[], gate: GateData): Set<string> {
   const topics = new Map(gate.register.topics.map((t) => [t.id, t]));
   const classes = new Map(gate.classes.classes.map((c) => [c.id, c]));
   const atrocity = (topic: string) => classes.get(topics.get(topic)?.class ?? '')?.atrocity === true;
+  const isAtrocity = (def: SituationDef) => !('none' in def.gate) && def.gate.topics.some(atrocity);
+  const items = situations.map((def) => ({ def }));
   const seeds = situations.flatMap((def) => {
     const t = def.gate;
     if ('none' in t || !t.topics.some(atrocity) || t.actingSide === null) return [];
     return [{ id: def.id as string, actingSide: t.actingSide as string }];
   });
-  const taint = atrocityTaint(situations.map((def) => ({ def })), seeds);
+  const taint = atrocityTaint(items, seeds);
   const out = new Set<string>();
   for (const def of situations) {
     if (def.kind !== 'decision') continue;
     if ((taint.get(def.id) ?? []).some((t) => t.option === null && t.atrocity !== def.id)) out.add(def.id);
   }
+  const atrocities = new Set(situations.filter(isAtrocity).map((d) => d.id as string));
+  for (const decision of situations.filter((d) => d.kind === 'decision')) {
+    const fired = inactionSeeds(decision, situations);
+    if (fired.length === 0) continue;
+    // The decision itself is resolved by its inaction, so no route runs back through one of its own options.
+    const others = items.filter((x) => x.def.id !== decision.id);
+    const reach = dependenceTaint(others, fired.map((id) => ({ id, option: null, atrocity: decision.id, actingSide: '', via: [] })));
+    if ([...reach.entries()].some(([id, ts]) => atrocities.has(id) && ts.some((t) => t.option === null))) out.add(decision.id);
+  }
   return out;
+}
+
+/**
+ * The items whose trigger a decision's inaction satisfies directly (G-1.14a): a chain stage that follows it whatever
+ * was chosen, a flag its inaction outcome sets or clears, a read that it was decided with any outcome, or a read that it
+ * was not decided with some option (which inaction leaves true).
+ */
+function inactionSeeds(decision: SituationDef, situations: readonly SituationDef[]): string[] {
+  const flags = new Set((decision.inaction?.effects ?? []).flatMap((e) => ('setFlag' in e ? [e.setFlag] : 'clearFlag' in e ? [e.clearFlag] : [])));
+  return situations
+    .filter((x) => x.id !== decision.id)
+    .filter((x) => {
+      const scope = dependenceScopes(x)[0]!;
+      if (scope.follows?.situation === decision.id && scope.follows.options === null) return true;
+      const reads = new Set(scope.conditions.flatMap((c) => phase0.flagsIn(c)));
+      if ([...flags].some((f) => reads.has(f))) return true;
+      return scope.conditions.some((c) => inactionSatisfies(c, decision.id, false));
+    })
+    .map((x) => x.id as string);
+}
+
+/** Whether a decision resolved by inaction makes this read of it true (under `negated`, false). */
+function inactionSatisfies(c: phase0.Condition, situation: string, negated: boolean): boolean {
+  if ('all' in c) return c.all.some((x) => inactionSatisfies(x, situation, negated));
+  if ('any' in c) return c.any.some((x) => inactionSatisfies(x, situation, negated));
+  if ('not' in c) return inactionSatisfies(c.not, situation, !negated);
+  if (!('decided' in c) || c.decided !== situation) return false;
+  // Inaction is a decision with no option: `decided` with any outcome holds; `decided` naming options does not.
+  const holds = c.options === null;
+  return negated ? !holds : holds;
 }
 
 /** One route by which an item, or one of its options, depends on an atrocity-class item (D5; gate G4). */

@@ -39,7 +39,20 @@ The tick budget, re-measured on this machine while other sessions were running:
 
 The budget is a 40 ms median and a 160 ms p95. The history run is at peace on main, so it drafts no plans. The Part B runs measure the war.
 
-## Proposals for the lead to rule
+## The lead's rulings and the gate review (since 159aaaa)
+
+- **Pushback upper bounds:** accepted as proposed. Each band's cite now names every record case it was counted from.
+- **Victory measure:** accepted, labelled [I], and amended by G-1.14c with a fifth term, the mandate (lane 1.6's, in permille above its rest, at 1 a permille). The weights are pack data.
+- **Confederate men:** open-topped and labelled until lane 1.11r3 reads the OR IV-1 returns.
+- **Confederate planned operations:** 1 to 4, not 0 to 4. FOUNDATION's "a planned operation fought by each side" stands, counting the Sumter bombardment on Davis's government's order, which lane 1.12's bombardment stage makes fightable.
+- **Western Virginia's government and the marines' strength:** routed to lanes 1.11 and 1.11r3.
+- **Stand-ins:** lane 1.12 retires them in Part A.
+- **`--milestone 1a`:** goes into CI's `run:done-check` step when Part B starts. Not done here.
+- **G-1.14a, atrocity inaction, the forward route:** `atrocityDecisions` also finds a decision whose inaction fires an atrocity-class item. That can happen directly (a read that the decision was decided with any outcome, or not decided with the option that stops it; a flag its inaction sets; a chain stage after it) or through items in between. Routes back through the decision's own options are excluded. Tested on the testbed's fictional register.
+- **G-1.14b, the recruitment chain:** a fugitive-policy decision is one where an option, or the inaction, names a policy row tagged `fugitive-policy`. Each of its moves is played on until a governor of a border government answers a call, up to 400 days; if none does, the move is reported "chain unexercised". The border governments are the pack's `government-side` checkpoints.
+- **G-1.14c, every channel measured:** `VICTORY_READS` lists the channels the measure reads: government sides; bloc support and framing, through the mandate; ledger acts and answers, through the mandate once Congress meets the act. A gated decision whose options, locked costs or inaction propose to any other channel is reported "unmeasured channel", and no D6 result counts for it. A decision that enters a ledger act is played on until Congress meets it, up to 400 days.
+
+## The proposals as made
 
 **1. Pushback upper bounds.** Each is three times the record's cases of that kind, counting note-only rows and extras, and never below the lower bound plus 3.
 
@@ -94,14 +107,10 @@ Why these weights:
 
 ## For the lead
 
-1. Rule on the pushback upper bounds (table above).
-2. Rule on the victory measure and its weights.
-3. The Confederate men band has no upper bound. The note says the lead sets it once Walker's or Cooper's OR IV-1 returns are read. Today's band is 100,000 (Livermore's 112,040 rounded outward) with no upper bound.
-4. The Confederate planned-operations band is 0 to 4, per the note: the count does not require a Confederate planned operation. FOUNDATION's text says "a planned operation fought by each side". The pack band follows the note; please confirm, or amend FOUNDATION.
-5. Western Virginia has no government in the pack. The checkpoint fails as a data gap until lane 1.11a enters the Restored Government. Missouri has no rival government either; its band scores the one `st_missouri`.
-6. The stand-ins criterion will pass only when lane 1.12 retires the generic principal and the capital objective, or relabels what it keeps with a 1B owner.
-7. Flip `--milestone 1a` into CI's `run:done-check` step when Part B starts.
-8. The unknown-strength criterion already names one block, `fb_us_marines_washington_barracks`, in the at-war mechanics run. That is lane 1.11a's data.
+1. Every item from the first report is ruled (above).
+2. Missouri has no rival government in the pack, so its band scores the one `st_missouri`.
+3. When Part B starts, add `--milestone 1a` to CI's `run:done-check` step.
+4. The channel list (`VICTORY_READS`) is what 1B extends when national will, foreign patience and enemy capacity get owners. Until then, a gated option that proposes to them is reported unmeasured, as G-1.14c intends.
 
 ## Findings outside my scope
 
