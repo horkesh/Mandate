@@ -1,5 +1,24 @@
 # Lane 1.12: rule-seat principals and commander seats (Part A)
 
+## Where lane 1.12 stopped (2026-11-17, paused by the owner)
+
+**Part A** is complete on `phase1-rule-seats`, head 0fd0f26, pushed. It has not merged.
+- **Checks:** `npm run check` passes, and so do all six `run:done-check` criteria. CI was green on ea764cd. Every later commit passed the full check in its pre-commit hook.
+- **Reviews:** the standing reviewer has the head 0fd0f26.
+- **The gate reviewer approved the bombardment at 3cb3610, with two changes, both done in 0fd0f26:**
+  - **G-1.12a**, the cited list of forts that may be bombarded: done and tested; awaits the reviewer's re-check.
+  - **The Sumter notice:** written as an unsigned draft (`situations/drafts/sumter_evacuated.json`, strings in `en.json`). It awaits the reviewer's signature and move out of `drafts/`. The one word the reviewer is asked to judge is "allowed", which joins "his command is" to the quotation.
+- **Before merging:** lane 1.11r3's `L3-sumter.md` (990275c, on `research-1861-leads`) must reach main. The notice and `recordTerms` cite it.
+
+**Part B** is not started. Its full list is in "For Part B" below:
+- the history run end to end, through lane 1.11's situations;
+- the Confederate capital as State;
+- Butler to Fort Monroe;
+- the people verbs bouncing like orders;
+- `believedHolder` reading every capture;
+- an owner lane for each stand-in;
+- resignation, if the lead keeps it here. Lane 1.12 recommended its own lane.
+
 Branch `phase1-rule-seats`. Part A of the brief: commanders' battle choices as seat requests, a doctrine for each rule-seat principal (Lincoln, Davis) read from the pack, the generic principal of 0072 and the capital-as-objective stand-in retired, and the lead's rulings on the menu (posts as the principal believes them) and on the battle guard. Part B, the history run end to end, waits for lane 1.11's situations.
 
 ## What changed
@@ -159,6 +178,14 @@ All six criteria pass with no amendment (the lead's ruling: the criterion was ca
 - **Lane 1.11's Sumter hook:** `reduce_sumter` sends the goal the bombardment reads (posture `take`, objective `fort_sumter`, to `cs_cmd_charleston`; c878fd9 on `phase1-situations`). After lane 1.11 merges, remove the doctrine's Sumter row and re-run `bombardment.test.ts` with the situation as the order's only source.
 - **The people verbs bounce like orders** (the lead's addition): inquire, transfer, relieve, audience and observer are accepted for a post the principal believes held, and come back undelivered on arrival, as orders do (0052).
 - **`believedHolder` reads every capture** (the lead's addition), not only battle records: a commander captured in a bombardment, or by any later route, is believed held until the report arrives.
+- **Resignation** (the lead's addition, 2026-11-17; lane 1.12 recommended its own lane, and the lead had not yet ruled):
+  - About 15 officers in US service on 5 March resign after their states secede: Lee, the Johnstons, Cooper, Ewell, Longstreet, Magruder, Stuart and others. Each resigns as his own act, by his values and traits. Thomas, Farragut and Scott stay.
+  - Once his state's government joins the other side, the weekly people step offers him resign or stay.
+  - If he resigns, he leaves his post (the vacancy rules handle it) and becomes an unposted officer of his rank for the other principal to appoint. His bloc follows his service.
+  - A history run takes the sourced date as its historical default.
+  - The 15 then take their true start in US service, and lane 1.11r3's stand-in labels go.
+  - Tests: one officer resigns, another stays, and the history run brings J. E. Johnston to Confederate service by July.
+  - The rule-seat principal's `candidates` already lists unposted serving men of his side, so a resigned officer reaches him with no change from lane 1.12.
 - **Each Part A stand-in names an owner lane** (the lead's addition):
   - lane 1.14 for the [I] bombardment parameters and the concentration posts;
   - 1B for gun counts (today, the known men of the gun arms).
