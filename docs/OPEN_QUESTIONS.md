@@ -12,6 +12,26 @@ Answered and moved to decisions:
 - **Clear the title before it is used publicly** (0036): the register searches were run on 2026-11-16 (`docs/research/2026-11-14-name-collisions.md`, "Update, 2026-11-16"): no "BY ORDER OF THE PRESIDENT" mark in USPTO, TMview or WIPO, and nothing on Steam. Still open: a trademark attorney clears *By Order of the President* before marketing or a store listing, weighing **Garrison Drama's UK "BY ORDER OF THE" registration (UK00003362841), which covers classes 9, 28 and 41** (the *Peaky Blinders* catchphrase); MobyGames by hand (a bot check stopped the browser); and Steam again on the day of decision. Studio domains: `pyrrhic.com` is parked for sale; `pyrrhicgames.com` and `pyrrhicstudio.com` had no DNS on 2026-11-14 (check only; buying is the owner's call).
 - **Before any live AI-generated text ships** (AI-players lane): Steam requires a disclosure of AI content and a description of guardrails; check the licence of any local model before bundling it; AI voice acting raises union issues (SAG-AFTRA's charge over Fortnite's AI Vader). Source: `docs/research/2026-11-14-ai-players.md`.
 - **Ask Valve about bring-your-own-key AI** (0038): once a Steamworks partner account exists. Until Valve answers, the Steam build ships template voices only.
+- **A bundled local model for the voice layer** (parked by the owner on 2026-11-17).
+  - **The question.** Should the game ship a small offline model to write its letters, audience speech and press reports, instead of an API key? 0022 already allows an optional local model, and 0038 keeps it out of the Steam build until Valve answers. What isn't decided is bundling one by default.
+  - **For it:**
+    - Turns are long enough to hide generation while the days run.
+    - A desk game leaves the graphics card mostly free.
+    - There is no key, no per-letter cost and no paid service under Steam's payment rules.
+  - **Against it:**
+    - Small models write generic prose, the kind of text the owner rejects as slop, and an 1861 voice is hard for them.
+    - They invent facts about real people, so every generated line would need checking against the gate (0021) as it is written.
+    - It adds a 1–3 GB download and is slow without a graphics card.
+    - Steam still requires a disclosure, guardrails and a report button for live-generated text.
+    - Model licences vary.
+  - **The lead's recommendation: test before deciding.** A prototype run by Codex or a lane would:
+    1. take two or three small open models whose licences a research lane has checked;
+    2. have each write the commanders' letters from the desk's reports over a few turns;
+    3. time each letter with and without the graphics card;
+    4. run the gate's checks on the output.
+
+    Then the owner reads the letters blind beside the templates. If the models win, a record bundles one, in non-Steam builds first.
+  - **Before it runs:** it downloads a few gigabytes of models to the owner's machine, so it needs the owner's yes. Source: `docs/research/2026-11-14-ai-players.md`.
 - **Open gate records R1–R7** (docs/design/SENSITIVE-HISTORY.md section 4; accepted by 0046): R1 a playable Confederacy, R2 Black military service, R3 the wars against Native nations, R4 prisoners, exchange and retaliation, R5 verdict text, R6 civilians, guerrilla war and commanders' conduct, R7 emancipation and fugitive policy. R2 and R3 block the 1861–62 slice's release, and R4 is now in the slice as a fifth ship-blocker (amendment merged 1dbb767). 0046 already settled R1's interim rule, R8 and R7's `return` ruling, and 0073 schedules R4's battle ruling in lane 1.8; R2, R3, the rest of R4, R6 and R7's later decisions fall in 1B.
 - **What the gate-and-catalogue facts note informs** (docs/research/2026-11-14-gate-and-catalogue-facts.md, merged; both reviewers approved): it meets most of the research prerequisite for R3 (the Dakota war and Indian Territory: causes, the commission, the count with each number sourced, the advisers, the 1863 acts). Still open: R3 itself must be written, with the Dakota-voiced sources it lists as unread leads; R2 is a decision record, not research, so it stays open; union-freedpeople-camps is not researched and still blocks the slice; East Tennessee repression and camp conditions are not researched. The lead decided the follow-ups: R4 (`prisoners-and-exchange`) moved into the slice, and the register text on Brown and the legislators and on Watie's figure was corrected (1dbb767).
 - **LOC item-level rights pass (owner, a person):** the Library of Congress shows a Cloudflare bot check even in a real browser, and no asset tool can automate it (reviewer, `review-research-images.md`). Before Codex's portrait pilot (McClellan and Stanton), a person records each demo portrait's Rights Advisory and reproduction number from its LOC item page. 17 of the 24 demo cast are ready for that pass (presentation lane).
