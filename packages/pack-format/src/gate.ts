@@ -380,6 +380,10 @@ export function checkGate(
       if (!sources.has(c.source)) err('unknown-reference', `citations[${i}].source`, `"${c.source}" is not a source in PROVENANCE.json`, 'a source key (A5)');
       if (gate.sourcePolicy.banned.includes(c.source)) err('gate-banned-source', `citations[${i}].source`, `"${c.source}" is banned as evidence by the pack's source policy`, 'another source (A6)');
     });
+    // The lead's S18 ruling: a declared absence of staff advice cites the research that found none.
+    (def.staffAbsence?.cites ?? []).forEach((c, j) => {
+      if (!sources.has(c.source)) err('unknown-reference', `staffAbsence.cites[${j}].source`, `"${c.source}" is not a source in PROVENANCE.json`, 'a source key (A5)');
+    });
     // The lead's S17 ruling: a proposal's basis in law and practice resolves its cites too.
     def.options.forEach((o, i) => {
       if (!phase0.isProposalBasis(o.proposedBy)) return;

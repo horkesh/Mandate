@@ -95,21 +95,7 @@
   "historicalDefault": {
     "unsourced": "the historical course is the inaction: the writ went unanswered and the suspension stood, and the president answered in the 4 July message instead"
   },
-  "staffLine": {
-    "authors": [
-      "us_attorney_general"
-    ],
-    "recommends": [
-      "comply"
-    ],
-    "reasons": [
-      {
-        "kind": "order",
-        "weight": 400
-      }
-    ],
-    "confidence": 400
-  },
+  "staffLine": null,
   "delegableTo": [],
   "resurfaceOn": [],
   "gate": {
@@ -129,5 +115,22 @@
       "source": "OR",
       "at": "I-2 p. 640"
     }
-  ]
+  ],
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "NOTE-1861-leads",
+        "at": "N1-congress-writ.md (26 May to 4 July 1861: no one on record urged the president to answer the writ, or to put it to Congress); L1-habeas.md"
+      }
+    ]
+  },
+  "report": {
+    "authors": [
+      "us_attorney_general",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  }
 }

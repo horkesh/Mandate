@@ -68,7 +68,10 @@ export function situationReferenceProblems(defs: readonly SituationDef[], refs: 
       // B9 (lane 1.11, the lead's S12 ruling): a decision resting wholly on the principal's own initiative has no staff line,
       // and is told by a plain report instead.
       const initiativeOnly = d.options.length > 0 && d.options.every((o) => isProposalBasis(o.proposedBy) && o.proposedBy.basis === 'principal-initiative');
-      if (initiativeOnly) {
+      if (d.staffAbsence !== undefined) {
+        if (d.staffLine !== null) at('staffAbsence', 'a decision with a staff line cannot also declare the staff\'s absence');
+        if (d.report === null || d.report.authors.length === 0) at('report', 'a decision with no staff line is told by a report with at least one author post (gate F1)');
+      } else if (initiativeOnly) {
         if (d.staffLine !== null) at('staffLine', 'a decision resting on the principal’s own initiative has no staff line (B9)');
         if (d.report === null || d.report.authors.length === 0) at('report', 'a decision resting on the principal’s own initiative is told by a report with at least one author post (gate F1)');
       } else if (d.staffLine === null || d.staffLine.authors.length === 0) at('staffLine', 'a decision needs a staff line with at least one author post (0040, 0046)');
@@ -77,7 +80,7 @@ export function situationReferenceProblems(defs: readonly SituationDef[], refs: 
     }
     if (d.kind === 'notice' && (d.report === null || d.report.authors.length === 0)) at('report', 'a notice needs a report with at least one author post (gate F1)');
     const toldByReport = d.kind === 'decision' && d.options.length > 0 && d.options.every((o) => isProposalBasis(o.proposedBy) && o.proposedBy.basis === 'principal-initiative');
-    if (d.kind === 'decision' && d.report !== null && !toldByReport) at('report', 'a decision is told through its staff line, not a notice report');
+    if (d.kind === 'decision' && d.report !== null && !toldByReport && d.staffAbsence === undefined) at('report', 'a decision is told through its staff line, not a notice report');
     for (const p of d.report?.authors ?? []) if (!refs.posts.has(p)) at('report.authors', `${p} is not a post`);
     for (const p of [...(d.staffLine?.authors ?? []), ...d.delegableTo]) if (!refs.posts.has(p)) at('posts', `${p} is not a post`);
     // Standing review S6: every post the situation names is its own side's, so the other side never decides,

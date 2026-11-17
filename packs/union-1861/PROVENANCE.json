@@ -1070,6 +1070,16 @@
       "copyUsed": "archive.org scan, OCR, read by lane 1.11r (docs/research/2026-11-16-1861-gaps.md, part A)",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "NOTE-1861-leads",
+      "title": "Project research notes docs/research/_leads/ (lane 1.11r3: L1-habeas.md, M1-merryman.md, N1-congress-writ.md, T1-taney.md), a pointer to primary documents, never the source of a fact",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "docs/research/_leads/ on branch research-1861-leads",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

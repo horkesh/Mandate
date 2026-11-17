@@ -207,6 +207,10 @@ export const SituationSchema = z.strictObject({
     .union([z.strictObject({ options: z.array(termId).min(1) }), z.strictObject({ delegate: idOf('post') }), z.strictObject({ unsourced: z.string().min(1) })])
     .nullable()
     .default(null),
+  staffAbsence: z
+    .strictObject({ none: z.literal('no-adviser-on-record'), cites: z.array(z.strictObject({ source: z.string().min(1), at: z.string().min(1).nullable().default(null) })).min(1, 'the research that found no adviser') })
+    .optional()
+    .describe('No staff recommendation, as a typed and cited absence (the lead’s S18 ruling): the research that found no adviser on record. The decision is then told by a plain report.'),
   staffLine: z
     .strictObject({
       authors: z.array(idOf('post')).min(1, 'an ordered list of author posts (0046)'),
@@ -428,7 +432,8 @@ export function validateSituations(items: readonly { readonly file: string; read
       if (def.historicalDefault === null) err('situation-missing', 'historicalDefault', 'a decision has no historical default', 'options, a delegation, or unsourced with a reason (0040)');
       // B9 (the lead's S12 ruling): where every option rests on the principal's own initiative, no staff line may recommend it.
       const allInitiative = def.options.length > 0 && def.options.every((o) => phase0.isProposalBasis(o.proposedBy) && o.proposedBy.basis === 'principal-initiative');
-      if (def.staffLine === null && !allInitiative) err('situation-missing', 'staffLine', 'a decision has no staff recommendation', 'an advice line by an ordered list of author posts (0040, 0046)');
+      if (def.staffLine !== null && def.staffAbsence !== undefined) err('situation-staff-line', 'staffAbsence', 'a decision has both a staff line and a declared absence of one', 'one or the other');
+      if (def.staffLine === null && !allInitiative && def.staffAbsence === undefined) err('situation-missing', 'staffLine', 'a decision has no staff recommendation', 'an advice line by an ordered list of author posts (0040, 0046)');
     } else {
       for (const field of ['options', 'inaction', 'historicalDefault', 'staffLine'] as const) {
         const v = def[field];
@@ -440,7 +445,8 @@ export function validateSituations(items: readonly { readonly file: string; read
     if (def.kind === 'notice' && def.report === null) err('situation-missing', 'report', 'a notice has no report', 'a report with author posts and a report type, so the notice has an author and a route (gate F1)');
     // B9 (the lead's S12 ruling): a decision whose every option rests on the principal's own initiative has no staff line, so it is told by a plain report.
     const initiativeOnly = def.kind === 'decision' && def.options.length > 0 && def.options.every((o) => phase0.isProposalBasis(o.proposedBy) && o.proposedBy.basis === 'principal-initiative');
-    if (def.kind === 'decision' && def.report !== null && !initiativeOnly) err('situation-decision-report', 'report', 'a decision has a notice report', 'none: a decision is told through its staff line (only a decision resting wholly on the principal’s own initiative is told by a plain report)');
+    if (def.kind === 'decision' && def.staffAbsence !== undefined && def.report === null) err('situation-missing', 'report', 'a decision with no staff line has no report', 'a plain report (gate F1)');
+    if (def.kind === 'decision' && def.report !== null && !initiativeOnly && def.staffAbsence === undefined) err('situation-decision-report', 'report', 'a decision has a notice report', 'none: a decision is told through its staff line (only a decision resting wholly on the principal’s own initiative is told by a plain report)');
     if (initiativeOnly && def.staffLine !== null) err('situation-staff-line', 'staffLine', 'a decision resting on the principal’s own initiative has a staff line', 'none (B9): no staff line recommends what the president himself considered; tell it by a plain report');
     if (initiativeOnly && def.report === null) err('situation-missing', 'report', 'a decision resting on the principal’s own initiative has neither staff line nor report', 'a plain report (gate F1)');
     if (def.report !== null) {

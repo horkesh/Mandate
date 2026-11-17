@@ -308,6 +308,11 @@ export interface SituationDef {
   readonly historicalDefault: HistoricalDefault | null;
   readonly staffLine: StaffLine | null;
   /**
+   * A decision with no staff recommendation, as a typed and cited absence (the lead's S18 ruling): the research that found
+   * no adviser on record. It is told by a plain report; the desk shows only that the staff gave no recommendation.
+   */
+  readonly staffAbsence?: { readonly none: 'no-adviser-on-record'; readonly cites: readonly SituationCitation[] };
+  /**
    * For a notice that moves a self-governing department (0070): whose act it is. It must be the proposal's subject, so
    * a nation's act is the nation's own and never a side's. Absent for every other item.
    */
