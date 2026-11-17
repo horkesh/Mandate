@@ -48,6 +48,12 @@ describe('the opening of 1861 (lane 1.11)', () => {
     expect(act.ledgerAnsweredDay).not.toBeNull();
   });
 
+  it('the opening order gives the Charleston command its goal against the fort, for lane 1.12’s bombardment stage', () => {
+    const plan = run.state.planRecords['cs_cmd_charleston' as never] as { planGoal: { goalPosture: string; goalObjective: string | null } } | undefined;
+    expect(run.state.situationStates[S('confederate_opening')]!.sitChosen).toEqual(['reduce_sumter']);
+    expect(plan?.planGoal.goalPosture).toBe('take');
+  });
+
   it('fires each government’s act its delay after the call reaches the governor, never before the call', () => {
     const arrived = (post: string) => Object.values(run.state.orderResponses).find((r) => r.respKind === 'call' && r.respPost === post)!.respDay;
     expect(run.state.situationStates[S('maryland_legislature')]!.sitFiredDay).toBe(arrived('st_gov_maryland') + 14);

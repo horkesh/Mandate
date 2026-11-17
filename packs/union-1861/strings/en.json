@@ -339,5 +339,10 @@
   "situation.virginia_unionists.title": "A Unionist from the Virginia convention",
   "situation.virginia_unionists.text": "The Virginia convention, which voted 89 to 45 against a secession substitute on 4 April, is still sitting. At the Secretary of State's request, John B. Baldwin, a Unionist delegate, has come to Washington in place of George W. Summers.",
   "situation.virginia_unionists.option.offer_fort": "Offer to give up Fort Sumter if the convention adjourns without seceding",
-  "situation.virginia_unionists.inaction": "The president hears him and makes no offer."
+  "situation.virginia_unionists.inaction": "The president hears him and makes no offer.",
+  "situation.merryman_answer.title": "The Chief Justice's opinion",
+  "situation.merryman_answer.text": "The Chief Justice has sent the president a copy of his opinion in Merryman's case. \"It will then remain for that high officer, in fulfilment of his constitutional obligation to 'take care that the laws be faithfully executed,' to determine what measures he will take to cause the civil process of the United States to be respected and enforced.\"",
+  "situation.merryman_answer.option.comply": "Have the prisoner produced, and let the court's process be enforced on the line",
+  "situation.merryman_answer.inaction": "The writ goes unanswered, and the suspension stands.",
+  "reason.process-enforced": "the army resents the court's process enforced against its officers"
 }

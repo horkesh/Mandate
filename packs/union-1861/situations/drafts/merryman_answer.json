@@ -1,0 +1,133 @@
+{
+  "id": "merryman_answer",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.merryman_answer.title",
+  "text": "situation.merryman_answer.text",
+  "earliest": "1861-06-04",
+  "event": {
+    "all": [
+      {
+        "fired": "merryman_writ"
+      },
+      {
+        "callReceived": {
+          "post": "st_gov_massachusetts",
+          "days": 50
+        }
+      }
+    ]
+  },
+  "speakers": [
+    {
+      "post": null,
+      "person": "taney_roger_b"
+    }
+  ],
+  "options": [
+    {
+      "id": "comply",
+      "label": "situation.merryman_answer.option.comply",
+      "displayKey": 1,
+      "proposedBy": [
+        "taney_roger_b"
+      ],
+      "honours": [
+        "order"
+      ],
+      "effects": [
+        {
+          "clearFlag": "habeas_suspended_line"
+        },
+        {
+          "setFlag": "merryman_process_enforced"
+        }
+      ],
+      "lockedCosts": [
+        {
+          "propose": {
+            "owner": "politics",
+            "field": "bloc-support",
+            "subject": "army",
+            "delta": -10,
+            "reason": "process-enforced",
+            "side": "union"
+          }
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.merryman_answer.inaction",
+    "effects": [
+      {
+        "propose": {
+          "owner": "politics",
+          "field": "bloc-support",
+          "subject": "border_unionists",
+          "delta": -20,
+          "reason": "writ-suspended",
+          "side": "union"
+        }
+      },
+      {
+        "propose": {
+          "owner": "politics",
+          "field": "bloc-support",
+          "subject": "peace_democrats",
+          "delta": -20,
+          "reason": "writ-suspended",
+          "side": "union"
+        }
+      },
+      {
+        "propose": {
+          "owner": "politics",
+          "field": "bloc-support",
+          "subject": "war_democrats",
+          "delta": -10,
+          "reason": "writ-suspended",
+          "side": "union"
+        }
+      }
+    ]
+  },
+  "historicalDefault": {
+    "unsourced": "the historical course is the inaction: the writ went unanswered and the suspension stood, and the president answered in the 4 July message instead"
+  },
+  "staffLine": {
+    "authors": [
+      "us_attorney_general"
+    ],
+    "recommends": [
+      "comply"
+    ],
+    "reasons": [
+      {
+        "kind": "order",
+        "weight": 400
+      }
+    ],
+    "confidence": 400
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "topics": [
+      "union-habeas-and-arrests"
+    ],
+    "placement": "decision",
+    "risks": [],
+    "actingSide": null
+  },
+  "citations": [
+    {
+      "source": "TANEY-REPORTS",
+      "at": "pp. 269 to 270 (the close of the opinion: a copy \"to the president of the United States\", for him \"to determine what measures he will take to cause the civil process of the United States to be respected and enforced\"); undated in print, published by 4 June 1861 (Rebellion Record vol. 1, Diary p. 92)"
+    },
+    {
+      "source": "OR",
+      "at": "I-2 p. 640"
+    }
+  ]
+}
