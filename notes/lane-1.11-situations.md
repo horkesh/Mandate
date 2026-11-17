@@ -91,3 +91,19 @@ None at present: S13's decision, which carried a locked cost on the radicals blo
 | S14 | 8 days after the call reaches Missouri's governor | the arsenal as an installation (1B) |
 | S15's `recognise` | the clock (37 days) | the Wheeling convention's ordinance |
 | S20 | day 121, the date the proclamation set | the proclamation's own term (1.6) |
+
+## Where it stopped (2026-11-17, the owner's pause)
+
+**Done and signed (live in the reference run):** S01, S02 (the Pickens landing through S06), S03, S05, S06, S07, S08, S09, S10, S11, S12, S13 (the offers as a notice), S14, S15, S16 stage A, S17 (with its three signed fugitive-policy rows), S20, S21; the four secessions; the Indian Territory acts; the Pratt Street and Camp Jackson deaths; McClellan's proclamation; the escape notices and the July reports for S17; habeas_on_the_line (S12's suspension); merryman_writ (S18's event); the Patterson, Thomson and Judge Nelson reports. reduce_sumter orders the Charleston command to take the fort (lane 1.12's bombardment hook).
+
+**Drafted and waiting:**
+- merryman_answer (S18's decision), in situations/drafts/: comply (Taney's words, Taney's Reports pp. 269 to 270, proposedBy taney_roger_b, speaker while serving); the inaction is the historical course, with the suspension's costs; no ask-Congress option; no staff line, a typed absence citing NOTE-1861-leads. Waits on taney_roger_b reaching main (branch phase1-taney-1861, d50e533); then move it into situations/, take 1.11r3's TANEY-REPORTS row and citation form on the merge, and send it to the gate reviewer.
+- The Restored Government of Virginia: the mechanism is built (declared_governments.csv, command's government_established, the 0070 guard, tests; command.government_established is QUIET). The pack data (the declared government, its regions, the Wheeling notice, S15's recognise giving its side through department_side) waits on research the lead is routing: the convention's dates and ordinance (11 and 19 June), Pierpont's election (20 June), the counties claimed, and the first federal act of recognition.
+- The desk's neutral rendering and its architecture test (the desk never reads proposedBy's basis; "No recommendation from the staff" for a typed absence): wait on lane 1.13's desk reaching main. No desk may show habeas_on_the_line until both are in (its signing note).
+- S04: not a situation; recommended to lane 1.6's press (no adviser on record for its options).
+
+**Rulings, as built:**
+- principal-initiative (the lead's (b) on S12, with the gate reviewer's three conditions): accepted only on an option of a gated decision, the side's principal as author, dated on or before the situation's earliest date; no staff line, told by a plain report (B9). Built, tested, signed on habeas_on_the_line.
+- The typed staff absence (the lead's (b) on S18): built and tested (staffAbsence { none, cites }). Open: whether habeas_on_the_line should also carry one, for a uniform rule; that changes its hash and needs re-signing, so it would go in S18's sign-off batch.
+
+**Waiting on other lanes:** taney_roger_b (lane 1.11r3); the Wheeling research (routed by the lead); lane 1.13's desk; lane 1.12's bombardment stage (it removes its own dated Sumter row once it reads reduce_sumter's order). Gone to 1B: S13's decision, S17's recurrence, S19, S16 stage B (August).
