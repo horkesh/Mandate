@@ -13,7 +13,8 @@
  *   even when a later commit deletes the file, since its blob would stay in public history).
  *
  * Under art/, a path that an LFS pattern in `.gitattributes` covers must be an LFS pointer; any other file must not be
- * binary (a binary of a type no pattern covers is refused too, so a new format cannot slip in as plain git).
+ * binary (a binary of a type no pattern covers is refused too, so a new format cannot slip in as plain git). Any path
+ * under art-masters/ is refused outright, in every mode: the masters never go into git at all.
  */
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
@@ -115,6 +116,27 @@ export function treeEntries(root: string, rev: string): ArtEntry[] {
 }
 
 /**
+ * The art masters' folder (main 37da2a8): the originals live in `art-masters/` at the checkout root, which `.gitignore`
+ * excludes. A `git add -f` would still stage them, so any path under it is refused, whatever it holds: the originals
+ * must never reach the public history. Paths only; a master's blob is never read.
+ */
+export const MASTERS_ROOT = 'art-masters/';
+
+export function mastersProblems(paths: readonly string[]): string[] {
+  return paths.filter((p) => p.startsWith(MASTERS_ROOT)).map((p) => `${p}: under art-masters/, which never goes into git (the originals stay on the owner's machines; .gitignore excludes the folder, and 'git add -f' must not override it: run 'git rm --cached ${p}')`);
+}
+
+/** The index's paths under art-masters/. */
+export function stagedMasters(root: string): string[] {
+  return records(git(root, ['ls-files', '-z', '--', MASTERS_ROOT]));
+}
+
+/** A commit's paths under art-masters/. */
+export function treeMasters(root: string, rev: string): string[] {
+  return records(git(root, ['ls-tree', '-r', '-z', '--name-only', rev, '--', MASTERS_ROOT]));
+}
+
+/**
  * Every commit `rev` reaches, its whole history and not only its tip (the review of lane 0.7l): what each commit's
  * tree holds under art/, each path and blob read once and named by the first commit seen to hold it. A commit made with
  * `--no-verify` and deleted by a later one still leaves its blob in public history, so CI checks all of it.
@@ -130,6 +152,9 @@ export function historyProblems(root: string, rev: string, patterns: readonly st
     const [path, sha] = key.split('\0') as [string, string];
     for (const p of artProblems([{ path, blob: git(root, ['cat-file', 'blob', sha]) }], patterns)) problems.push(`${p} (in commit ${commit.slice(0, 12)})`);
   }
+  const masters = new Map<string, string>();
+  for (const commit of commits) for (const path of treeMasters(root, commit)) if (!masters.has(path)) masters.set(path, commit);
+  for (const [path, commit] of masters) for (const p of mastersProblems([path])) problems.push(`${p} (in commit ${commit.slice(0, 12)})`);
   return problems;
 }
 
@@ -144,15 +169,17 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     const problems = historyProblems(root, rev, patterns);
     for (const p of problems) console.error(`lfs-check: ${p}`);
     if (problems.length > 0) process.exit(1);
-    console.error(`lfs-check: no commit ${rev} reaches holds a binary under art/ outside LFS.`);
+    console.error(`lfs-check: no commit ${rev} reaches holds a binary under art/ outside LFS, or anything under art-masters/.`);
     process.exit(0);
   }
-  const entries = args.includes('--staged') ? stagedEntries(root) : at >= 0 && args[at + 1] !== undefined ? treeEntries(root, args[at + 1]!) : null;
+  const staged = args.includes('--staged');
+  const rev = at >= 0 ? args[at + 1] : undefined;
+  const entries = staged ? stagedEntries(root) : rev !== undefined ? treeEntries(root, rev) : null;
   if (entries === null) {
     console.error('usage: lfs-check --staged | --tree <rev> | --history <rev>');
     process.exit(2);
   }
-  const problems = artProblems(entries, patterns);
+  const problems = [...artProblems(entries, patterns), ...mastersProblems(staged ? stagedMasters(root) : treeMasters(root, rev!))];
   for (const p of problems) console.error(`lfs-check: ${p}`);
   if (problems.length > 0) process.exit(1);
   console.error(`lfs-check: ${entries.length.toString()} file(s) under art/, every binary an LFS pointer.`);

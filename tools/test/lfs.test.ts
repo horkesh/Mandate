@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { artProblems, coveredByLfs, globToRegExp, historyProblems, isLfsPointer, lfsPatterns, LFS_POINTER_HEAD, looksBinary, treeEntries } from '../lfs-check.ts';
+import { artProblems, coveredByLfs, globToRegExp, historyProblems, isLfsPointer, lfsPatterns, LFS_POINTER_HEAD, looksBinary, mastersProblems, stagedMasters, treeEntries, treeMasters } from '../lfs-check.ts';
 
 /**
  * Git LFS for the art (lane 0.7l; docs/design/ASSETS.md 0.7). The binaries under art/ go to LFS, recipes stay text,
@@ -77,6 +77,30 @@ describe('the check (no binary under art/ in plain git)', () => {
     expect(history).toHaveLength(1);
     expect(history[0]).toContain('art/_pilot/leak.png: an LFS pattern covers it, but it would go into plain git');
     expect(history[0]).toContain(`(in commit ${leaked.slice(0, 12)})`);
+  });
+
+  it('refuses any path under art-masters/, staged by git add -f past .gitignore or in any commit (main 37da2a8)', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'mandate-lfs-masters-'));
+    const git = (...args: string[]) => execFileSync('git', ['-c', 'core.hooksPath=no-hooks', '-c', 'user.name=test', '-c', 'user.email=test@example.invalid', '-c', 'commit.gpgsign=false', ...args], { cwd: dir, encoding: 'utf8' });
+    git('init', '-q');
+    writeFileSync(join(dir, '.gitignore'), '/art-masters/\n');
+    mkdirSync(join(dir, 'art-masters', 'pilot'), { recursive: true });
+    // Text or binary, a master is refused for where it is, not what it holds.
+    writeFileSync(join(dir, 'art-masters', 'pilot', 'paper.psd'), PNG);
+    writeFileSync(join(dir, 'art-masters', 'pilot', 'notes.txt'), 'the original\n');
+    git('add', '.gitignore');
+    expect(stagedMasters(dir)).toEqual([]);
+    git('add', '-f', 'art-masters');
+    expect(mastersProblems(stagedMasters(dir)).map((p) => p.split(':')[0])).toEqual(['art-masters/pilot/notes.txt', 'art-masters/pilot/paper.psd']);
+    git('commit', '-q', '-m', 'masters forced in');
+    git('rm', '-q', '-r', '--cached', 'art-masters');
+    git('commit', '-q', '-m', 'and taken out');
+    expect(mastersProblems(treeMasters(dir, 'HEAD'))).toEqual([]);
+    const history = historyProblems(dir, 'HEAD', patterns);
+    expect(history).toHaveLength(2);
+    expect(history.every((p) => p.includes('under art-masters/, which never goes into git'))).toBe(true);
+    // A path that only begins like it is not under it.
+    expect(mastersProblems(['art-masters.md', 'art/masters/x.png'])).toEqual([]);
   });
 });
 
