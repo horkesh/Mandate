@@ -671,6 +671,9 @@ export const ScenarioSchema = z.strictObject({
   depotConditions: z.array(z.strictObject({ depot: idOf('depot'), conditionPermille: permille })),
   posts: z.array(PostSchema),
   forceBlocks: z.array(ForceBlockSchema),
+  declaredGovernments: z
+    .array(z.strictObject({ id: idOf('department'), regions: z.array(idOf('region')).min(1) }))
+    .describe('Governments the start declares but does not establish: one a situation’s effect establishes, taking its regions from whoever held them (lane 1.11).'),
   temporaryPosts: z
     .array(z.strictObject({ id: idOf('post'), name: stringKey, kind: termId, department: idOf('department'), parent: idOf('post').nullable(), holder: idOf('person').nullable(), region: idOf('region').nullable(), operation: termId }))
     .describe('Temporary posts the start declares but does not open: an expedition command a situation’s effect opens (0040; lane 1.11).'),

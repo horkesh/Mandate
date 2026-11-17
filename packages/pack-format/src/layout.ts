@@ -177,6 +177,7 @@ export const SCENARIO_TABLES = {
   },
   fortification: { file: 'fortification.csv', required: false, columns: [c('region', true), c('level', true), c('notes')] },
   loyalty: { file: 'loyalty.csv', required: false, columns: [c('region', true), c('shares', true), c('notes')] },
+  declaredGovernments: { file: 'declared_governments.csv', required: false, columns: [c('id', true), c('regions', true), c('sources', true), c('notes')] },
   temporaryPosts: { file: 'temporary_posts.csv', required: false, columns: [c('id', true), c('name', true), c('kind', true), c('department', true), c('parent'), c('holder'), c('region'), c('operation', true), c('sources', true), c('notes')] },
   edgeConditions: { file: 'edge_conditions.csv', required: false, columns: [c('edge', true), c('condition', true), c('notes')] },
   obstructions: { file: 'obstructions.csv', required: false, columns: [c('edge', true), c('by'), c('sources', true), c('notes')] },

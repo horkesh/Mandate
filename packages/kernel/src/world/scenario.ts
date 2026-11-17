@@ -58,6 +58,16 @@ export interface TemporaryPostStart {
   readonly operation: string;
 }
 
+/**
+ * A government the start declares but does not open (lane 1.11, the lead's ruling on a government formed during the war):
+ * a situation's effect establishes it, and its regions then pass to it from whatever government held them, with no side
+ * until one is proposed (0065).
+ */
+export interface DeclaredGovernmentStart {
+  readonly id: DepartmentId;
+  readonly regions: readonly RegionId[];
+}
+
 /** A region's loyalty at the start (lane 1.7): each faction's share, permille, summing to at most 1000. Never a stand-in for control. */
 export interface LoyaltyStart {
   readonly region: RegionId;
@@ -232,6 +242,8 @@ export interface ScenarioStart {
   readonly governments: readonly GovernmentStart[];
   /** Temporary posts a situation may open (lane 1.11), none open at the start. */
   readonly temporaryPosts: readonly TemporaryPostStart[];
+  /** Governments a situation may establish (lane 1.11), none governing at the start. */
+  readonly declaredGovernments: readonly DeclaredGovernmentStart[];
 }
 
 /**
@@ -252,6 +264,7 @@ export const START_OWNERS: Readonly<Record<string, string>> = Object.freeze({
   'forceBlocks.post': 'command',
   governments: 'command',
   'temporaryPosts (declared; opened by a situation)': 'command',
+  'declaredGovernments (declared; established by a situation)': 'command',
   'people ranks at the start date': 'people',
   'weather (reserved: nothing at a start yet)': 'weather',
 });

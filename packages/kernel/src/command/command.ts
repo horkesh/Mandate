@@ -514,6 +514,13 @@ export function neutralGroundOf(_map: WorldIndex, state: State): Readonly<Record
 
 /** The field id a situation names to close (delta above 0) or reopen (below 0) a neutral government (0055, 0058). */
 export const GOVERNMENT_CLOSED_FIELD = 'government_closed';
+/** Lane 1.11: a declared government is established, and its declared regions pass to it (no side until one is proposed). */
+export const GOVERNMENT_ESTABLISHED_FIELD = 'government_established';
+
+export interface DeclaredGovernmentSpec {
+  readonly id: DepartmentId;
+  readonly regions: readonly RegionId[];
+}
 
 /**
  * The field id a situation names to move a government to a side (0065): the subject is the department, the
@@ -691,7 +698,8 @@ export function regionMoveProblem(map: WorldIndex, from: DepartmentId | 'unknown
 export type AppliedProposal =
   | { readonly field: typeof GOVERNMENT_CLOSED_FIELD; readonly subject: DepartmentId; readonly change: 'closed' | 'reopened' | 'unchanged' }
   | { readonly field: typeof DEPARTMENT_SIDE_FIELD; readonly subject: DepartmentId; readonly change: 'joined' | 'unchanged'; readonly side: SideChange | null }
-  | { readonly field: typeof TEMPORARY_POST_FIELD; readonly subject: PostId; readonly change: 'opened' | 'unchanged' };
+  | { readonly field: typeof TEMPORARY_POST_FIELD; readonly subject: PostId; readonly change: 'opened' | 'unchanged' }
+  | { readonly field: typeof GOVERNMENT_ESTABLISHED_FIELD; readonly subject: DepartmentId; readonly change: 'established' | 'unchanged' };
 
 /**
  * Apply the proposals `command` owns (owner `command`), in order; others are
@@ -709,6 +717,7 @@ export function applyCommandProposals(
   proposals: readonly CommandProposal[],
   day: number,
   temporaryPosts: readonly TemporaryPostSpec[] = [],
+  declaredGovernments: readonly DeclaredGovernmentSpec[] = [],
 ): { readonly state: State; readonly applied: readonly AppliedProposal[]; readonly refused: readonly Refusal[] } {
   let state = start;
   const applied: AppliedProposal[] = [];
@@ -733,6 +742,29 @@ export function applyCommandProposals(
       } catch (e) {
         refuse('invalid', e instanceof CommandError ? e.problems.join('; ') : String(e));
       }
+      continue;
+    }
+    // Lane 1.11: a government the start declares is established once; its declared regions pass to it from whoever held them.
+    if (p.field === GOVERNMENT_ESTABLISHED_FIELD) {
+      const spec = declaredGovernments.find((g) => g.id === p.subject);
+      if (spec === undefined) {
+        refuse('invalid', `no government ${p.subject ?? 'none'} is declared in the start`);
+        continue;
+      }
+      if (spec.regions.every((r) => state.regionGovernments[r] === spec.id)) {
+        applied.push({ field: GOVERNMENT_ESTABLISHED_FIELD, subject: spec.id, change: 'unchanged' });
+        continue;
+      }
+      // 0069, 0070: a region a people governs themselves passes only to a government of its own people.
+      const moved = spec.regions.map((r) => regionMoveProblem(map, state.regionGovernments[r] ?? 'unknown', spec.id)).find((x) => x !== null) ?? null;
+      if (moved !== null) {
+        refuse('self_governing_region', moved);
+        continue;
+      }
+      const governments: Record<string, DepartmentId | 'unknown'> = { ...state.regionGovernments };
+      for (const r of spec.regions) governments[r] = spec.id;
+      state = { ...state, regionGovernments: governments as State['regionGovernments'] };
+      applied.push({ field: GOVERNMENT_ESTABLISHED_FIELD, subject: spec.id, change: 'established' });
       continue;
     }
     if ((p.field !== GOVERNMENT_CLOSED_FIELD && p.field !== DEPARTMENT_SIDE_FIELD) || p.subject === null) {

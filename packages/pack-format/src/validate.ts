@@ -550,6 +550,13 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     // Lane 1.11: temporary posts the start declares for a situation to open (0040): a temporary kind creatable in play,
     // a known department, parent post, holder and region, and an id no post at the start already has.
     const startPosts = new Set(s.posts.map((p) => p.id as string));
+    // Lane 1.11: a declared government is a government department that governs nothing at the start.
+    const governingAtStart = new Set(s.governments.map((g) => g.department as string));
+    s.declaredGovernments.forEach((g, i) => {
+      refCheck(departments, 'department', g.id, S('declaredGovernments', i, 'id'));
+      if (governingAtStart.has(g.id)) err('declared-government', S('declaredGovernments', i, 'id'), `"${g.id}" already governs a region at the start`, 'a government that governs nothing until a situation establishes it');
+      g.regions.forEach((r, j) => refCheck(regions, 'region', r, S('declaredGovernments', i, `regions[${j}]`)));
+    });
     s.temporaryPosts.forEach((p, i) => {
       const kind = vocab.postKinds.find((k) => k.id === p.kind);
       if (kind === undefined || !kind.temporary || kind.creatable === 'start_only') err('temporary-post', S('temporaryPosts', i, 'kind'), `kind "${p.kind}" is not a temporary post kind creatable in play`, 'a post kind the vocabulary marks temporary and not start_only');

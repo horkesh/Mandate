@@ -137,6 +137,7 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'combat.surrendered': { why: 'only a cut-off force surrenders, and no reference run cuts one off', test: 'packages/kernel/test/combat.test.ts', needle: 'a trapped garrison with nowhere to go surrenders' },
   'combat.general_hit': { why: 'a commander is hit only on a low draw on his own stream, and neither reference run\'s battle-days draws one', test: 'packages/kernel/test/combat.test.ts', needle: 'a general wounded leaves his post vacant' },
   'forces.landing_refused': { why: 'the one situation landing in the reference runs is made', test: 'packages/cli/test/situation-landing.test.ts', needle: 'refuses a landing from a block that is not aboard' },
+  'command.government_established': { why: 'no pack declares a government yet: the Union pack’s first declared government waits on its sourced dates (lane 1.11)', test: 'packages/cli/test/declared-government.test.ts', needle: 'takes its declared region with no side' },
   // Lane 1.4: operations and their reports.
   'combat.records_pruned': { why: 'a closed battle is pruned after the pack\'s battleDays (120), longer than either reference run', test: 'packages/kernel/test/operations.test.ts', needle: 'prunes ended operations, closed battles and old responses' },
   'operations.landed': { why: 'no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)', test: 'packages/kernel/test/detachments.test.ts', needle: 'lands its troops at the objective' },

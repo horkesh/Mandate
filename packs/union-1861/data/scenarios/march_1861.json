@@ -220,6 +220,7 @@
 {"region":"yazoo_delta","shares":[{"faction":"confederate","permille":1000}]},
 {"region":"york_adams","shares":[{"faction":"union","permille":1000}]}
 ],
+"declaredGovernments": [],
 "depotConditions": [],
 "edgeConditions": [],
 "factions": [

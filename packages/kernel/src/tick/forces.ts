@@ -8,7 +8,7 @@
  */
 import { combatDay, type CombatResult } from '../combat/battle.ts';
 import { applyBattleRecords } from '../combat/records.ts';
-import { applyCombatCommand, applyCommandProposals, DEPARTMENT_SIDE_FIELD, TEMPORARY_POST_FIELD } from '../command/command.ts';
+import { applyCombatCommand, applyCommandProposals, DEPARTMENT_SIDE_FIELD, GOVERNMENT_ESTABLISHED_FIELD, TEMPORARY_POST_FIELD } from '../command/command.ts';
 import { applyForces } from '../forces/forces.ts';
 import { stragglersStep } from '../forces/stragglers.ts';
 import type { ForceBlockId } from '../ids.ts';
@@ -45,6 +45,7 @@ export const FORCES_MECHANICS = [
   'combat.works_stormed',
   'combat.withdrew',
   'command.government_closed',
+  'command.government_established',
   'command.government_reopened',
   'command.proposal_refused',
   'command.side_changed',
@@ -93,10 +94,15 @@ export function commandProposalsPhase(ctx: TickContext, start: State): { readonl
     mine,
     ctx.day,
     ctx.world.start.temporaryPosts.map((p) => ({ id: p.id, name: p.name, kind: p.kind, department: p.department, parent: p.parent, holder: p.holder, seat: p.region, operation: p.operation })),
+    ctx.world.start.declaredGovernments ?? [],
   );
   for (const a of result.applied) {
     if (a.field === TEMPORARY_POST_FIELD) {
       if (a.change === 'opened') fire(ctx, 'command.temporary_post_opened');
+      continue;
+    }
+    if (a.field === GOVERNMENT_ESTABLISHED_FIELD) {
+      if (a.change === 'established') fire(ctx, 'command.government_established');
       continue;
     }
     if (a.field === DEPARTMENT_SIDE_FIELD) {
@@ -117,7 +123,7 @@ export function commandProposalsPhase(ctx: TickContext, start: State): { readonl
   }
   // The cause first, then what it did: the pockets the closing, reopening or change of side makes, today.
   let derived: DerivedMap | null = null;
-  if (result.state.closedGovernments !== state.closedGovernments || result.state.departmentFactions !== state.departmentFactions) {
+  if (result.state.closedGovernments !== state.closedGovernments || result.state.departmentFactions !== state.departmentFactions || result.state.regionGovernments !== state.regionGovernments) {
     const month = dateOfDay(state.calendarStart!, ctx.day).month;
     const before = deriveMap(map, { control: state.regionControl, month, network: passageOf(map, state) });
     derived = deriveMap(map, { control: result.state.regionControl, month, network: passageOf(map, result.state) });

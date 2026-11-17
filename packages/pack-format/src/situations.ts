@@ -360,8 +360,17 @@ export function validateSituations(items: readonly { readonly file: string; read
     ),
   );
   const temporaryPostIds = new Set(pack.scenarios.flatMap((s) => s.temporaryPosts.map((p) => p.id as string)));
+  const declaredGovernmentIds = new Set(pack.scenarios.flatMap((s) => (s.declaredGovernments ?? []).map((g) => g.id as string)));
   type Err = (kind: string, at: string, message: string, expected?: string) => void;
   const commandProposal = (p: { readonly field: string; readonly subject: string | null; readonly delta: number; readonly side: string | null }, at: string, err: Err, fromNotice: boolean) => {
+    // Lane 1.11: a government the start declares, established by an effect.
+    if (p.field === phase0.GOVERNMENT_ESTABLISHED_FIELD) {
+      if (p.subject === null || !declaredGovernmentIds.has(p.subject)) err('situation-command-proposal', `${at}.subject`, `"${p.subject ?? 'none'}" is not a government any start declares`, 'the id of a row in a start’s declared_governments.csv');
+      if (p.delta !== 1) err('situation-command-proposal', `${at}.delta`, `establishing a government has delta ${p.delta}`, '+1: it establishes the government');
+      // 0069, 0070: regions change government only by the act of those who form it, a notice, never a principal's choice.
+      if (!fromNotice) err('self-governing-decision', `${at}.field`, 'a government is established from a decision option, inaction or a locked cost, which would let a principal move regions by choice', 'the effects of a notice only: those who form it act');
+      return;
+    }
     // Lane 1.11: a temporary post the start declares, opened by an effect (0040).
     if (p.field === phase0.TEMPORARY_POST_FIELD) {
       if (p.subject === null || !temporaryPostIds.has(p.subject)) err('situation-command-proposal', `${at}.subject`, `"${p.subject ?? 'none'}" is not a temporary post any start declares`, 'the id of a row in a start’s temporary_posts.csv');

@@ -23,6 +23,7 @@
 {"region":"salient_tip","shares":[{"faction":"north","permille":900},{"faction":"south","permille":50}]},
 {"region":"w_valley","shares":[{"faction":"north","permille":600},{"faction":"south","permille":300}]}
 ],
+"declaredGovernments": [],
 "depotConditions": [],
 "edgeConditions": [],
 "factions": [
