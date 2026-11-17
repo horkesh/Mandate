@@ -585,3 +585,63 @@ This work is inside `prototypes/desk/`, against `PRESENTATION.md` sections 2.6 a
 **Write scope:** `prototypes/desk/`, `art-masters/R17/` and this file.
 
 Status: waiting on Codex (R15 first)
+
+### 2026-11-17 Claude → Codex: R18, the staff map, and a new order
+
+The owner asked where the map comes in. A player shouldn't play through reports alone, and the design agrees. The staff map is half the game: the war as the president's staff draws it, and the place where he reviews a commander's plan and marks it in blue pencil. Decision 0091 moves it forward.
+
+**The order of the runs is now R16, R18, R17, R15.** R17's keyboard work now also covers M, Ctrl+G and the map keys of `PRESENTATION.md` section 2.6 (W A S D and the arrows to pan, + and − to zoom, 0 to fit), since the map will exist by then. Its key card lists them.
+
+#### R18, the staff map in the desk prototype
+
+This is `PRESENTATION.md` section 6's steps 3 and 4, built into `prototypes/desk/`, where the map takes the text twin's place. Read sections 1.4, 3 and 5, decisions 0013, 0016, 0019, 0026, 0031, 0043 and 0091, and `prototypes/map-style/` and `prototypes/map-tripwire/` (their look and measurements) before starting.
+
+**Geometry, built by a script in the prototype:**
+- **Sources.** Download the Newberry Library's Atlas of Historical County Boundaries (the United States files, with dated boundaries), and Natural Earth's 1:10m coast, land, lakes and rivers with the North America supplement, each from its own site only.
+- **Where the downloads go.** Keep them in the ignored `art-masters/R18/sources/`, with the date, URL and SHA-256 of each file. Save a copy of each site's terms page beside them (the Newberry's download page and Open Access Policy; Natural Earth's terms).
+- **Building regions.** Dissolve the counties as they stood on 6 March 1861 into the pack's regions, using the `counties` column of `packs/union-1861/source/world/regions.csv` (read it; never edit `packs/`).
+  - Regions with no counties are sea or off-map. Draw them as 0031 says (off-map boxes) or leave them out, and list them.
+  - Report every listed county name the script fails to match. Don't guess a match.
+- **Output.** Simplify the shapes for the map's zoom range and write them into the prototype. **Add the derived geometry and the raw files to the prototype's `.gitignore`**: the geometry is committed only after the Newberry confirms in writing (0091). The script and its README are committed, so anyone can rebuild it.
+- **No adjacency from shapes.** Movement and adjacency stay the pack's authored graph (0019).
+
+**The read-only map (step 3):**
+- **Renderer and look.** PixiJS (0035), in the ink-on-linen look of `prototypes/map-style/`. Labels come from the pack's label hints (`label_anchor`, `label_spine`, `label_size`, `label_min_zoom`; 0043), and icons from R16's set in `prototypes/map-icons/` (copy what you use; record the source).
+- **What it draws.** Only what the player's view supplies:
+  - headquarters at their reported places;
+  - enemy estimates as estimate signs;
+  - goals and plans with their routes;
+  - situations and works;
+  - other layers the seat request carries.
+
+  Each mark shows its author and date, and fades with age as section 3.3 says. A layer section 3.1 wants but today's view doesn't supply (fronts, for example) is left out and listed in your status. Never estimate it, and never read the State or the World.
+- **Interaction.** Pan and zoom, and hover or focus to read a mark's author and date. The text twin stays one key away as the map's accessible equivalent (section 5).
+- **Section 3.2 holds.** No unit counters, no exact enemy positions, no Confederate symbol, and nothing the staff doesn't know.
+
+**Plan review on the map (step 4):**
+- **Opening a plan.** The map comes forward with the commander's draft as broad hatched arrows, one per axis, and support requests as dotted arrows labelled with the post asked. The plan sheet sits beside it, as the section 1.4 layout shows at 3440×1440 and 1920×1080.
+- **The president's marks are blue pencil and numbered:**
+  - drag an arrowhead to another region (objective);
+  - drag a route handle to a waypoint region;
+  - strike an axis.
+
+  Each mark becomes the console's existing edit command (`edit …`, the grammar of 0026). A route between waypoints is drawn only after the console's preview has validated it; the browser never routes.
+- **Sending the marks.** "Send back with notes" and "Order these changes" work as section 1.4 says, through the console's commands. There are no new verbs, and nothing on the map moves a division (hard rule 1).
+- **Keyboard.** Every mark can be made from the keyboard: arrow handles are focusable and move region by region (section 5).
+
+**Tests and evidence:**
+- **Tests:**
+  - the equivalence test still passes;
+  - a test that a plan edited on the map produces exactly the same commands, and the same command-log hash, as the same edit typed in the console;
+  - a test that the map's data comes only from the seat request and the geometry files.
+- **Playwright screenshots,** at 3440×1440 and 1920×1080, into `art-masters/R18/`:
+  - the map at rest after a few turns;
+  - a plan under review with two pencil marks;
+  - the map zoomed into Virginia.
+
+  Use `testbed` for the plan if the Union opening has none, and say so.
+- **Checks.** The prototype's own tests and the root `npm run check` still pass.
+
+**Write scope:** `prototypes/desk/` (including its `.gitignore`), `art-masters/R18/` and this file.
+
+Status: waiting on Codex (R16 first, then R18, R17 and R15)

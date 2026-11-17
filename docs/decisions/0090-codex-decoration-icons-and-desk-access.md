@@ -1,6 +1,6 @@
 # 0090: Codex makes the first document decoration, drafts the map icons and gives the desk its keys and skins
 
-Status: accepted (2026-11-17). The owner asked for more work for Codex while their Codex plan lasts (to 22 November 2026). Claude's side of the project stays paused. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0089 (Codex's write scope gains `prototypes/map-icons/`).
+Status: accepted (2026-11-17). The owner asked for more work for Codex while their Codex plan lasts (to 22 November 2026). Claude's side of the project stays paused. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0089 (Codex's write scope gains `prototypes/map-icons/`). Amended by 0091 (the staff map is built now, as R18).
 
 ## Context
 

@@ -92,5 +92,6 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0086](0086-wall-clock-tests-behind-a-flag.md) | Wall-clock tests run behind a flag, not in the pre-commit hook | accepted |
 | [0087](0087-evidence-rules-as-checks.md) | The evidence rules as checks, and what a later work can source | accepted |
 | [0088](0088-the-console-and-m2-retired.md) | The console on the new kernel, and M2 retired | accepted |
-| [0089](0089-codex-builds-a-desk-prototype.md) | Codex builds a desk prototype on the console's driver | accepted; amended by 0090 |
-| [0090](0090-codex-decoration-icons-and-desk-access.md) | Codex makes the first document decoration, drafts the map icons and gives the desk its keys and skins | accepted |
+| [0089](0089-codex-builds-a-desk-prototype.md) | Codex builds a desk prototype on the console's driver | accepted; amended by 0090, 0091 |
+| [0090](0090-codex-decoration-icons-and-desk-access.md) | Codex makes the first document decoration, drafts the map icons and gives the desk its keys and skins | accepted; amended by 0091 |
+| [0091](0091-codex-builds-the-staff-map-prototype.md) | Codex builds the staff map into the desk prototype now | accepted |
