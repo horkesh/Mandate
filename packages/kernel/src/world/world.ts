@@ -90,10 +90,10 @@ export interface MovementRules {
 }
 
 /**
- * The generic rule-seat principal's settings (0064). Its standing goals stay at
- * hold until its faction is at war; "at war" is a situation chain flag the pack
- * names per faction, so a history run keeps the peace until the war's opening
- * situation sets it. Lane 0.8's gate reads this; nothing else does.
+ * The rule-seat principals' settings (0064; lane 1.12's doctrine). A principal does
+ * nothing of his doctrine until his faction is at war; "at war" is a situation chain
+ * flag the pack names per faction, so a history run keeps the peace until the war's
+ * opening situation sets it.
  */
 export interface RuleSeatRules {
   /** One row per faction: the chain flag that puts it at war, or null for war from day 1. */

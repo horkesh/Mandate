@@ -167,7 +167,7 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'recruitment.muster_blocked': { why: 'no governor called in either run has his seat region in enemy hands when his levy falls due', test: 'packages/cli/test/men-regions.test.ts', needle: 'a levy due in an enemy-held region waits' },
   'recruitment.lapsed': { why: 'a levy lapses only after waiting on enemy ground past the pack’s days, and none waits in either run', test: 'packages/cli/test/men-regions.test.ts', needle: 'lapses past the pack’s days' },
   // Lane 1.2: the plan cycle's paths that no rule seat takes, each driven by its own kernel test.
-  'plans.sent_back': { why: 'no rule seat sends a plan back: the generic principal approves, the editing exercise edits', test: 'packages/kernel/test/plans.test.ts', needle: 'sends the plan back, and he drafts it again' },
+  'plans.sent_back': { why: 'no rule seat sends a plan back: the rule-seat principal approves, the editing exercise edits', test: 'packages/kernel/test/plans.test.ts', needle: 'sends the plan back, and he drafts it again' },
   'plans.draft_deferred': { why: 'no reference run asks for more plans in a day than the pack’s cap of three (0062)', test: 'packages/kernel/test/plans.test.ts', needle: 'defers drafts past the day’s cap' },
   'plans.edit_invalid': { why: 'the editing exercise edits only a moving axis’s timing, which can always be made', test: 'packages/kernel/test/plans.test.ts', needle: 'refuses an edit no route can make' },
   'plans.edit_shirked': { why: 'the testbed’s commanders answer the edits the exercise makes by complying or objecting, never covertly', test: 'packages/cli/test/planner.test.ts', needle: 'executes a covert rung’s concrete plan' },
@@ -209,10 +209,10 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
 const PEACE_QUIET: readonly string[] = ['orders.relayed', 'orders.obeyed', 'plans.goal_reached', 'movement.leg_started', 'movement.arrived', 'combat.battle_day', 'combat.occupation', 'control.changed', 'recruitment.called'];
 
 /** What only the editing exercise run does (lane 1.2): edits and their answers, the word to go, and `haste`, an edit-only term. */
-const EDITS_ONLY = 'only the editing exercise run reviews and edits plans; the generic principal approves them as drafted';
+const EDITS_ONLY = 'only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted';
 const NO_DEPARTURE = 'every testbed commander picks a moving plan with no condition, so it goes ahead as drafted, unreviewed';
 
-/** The plan cycle's bands in a full run where the generic principal approves every plan (lane 1.2). */
+/** The plan cycle's bands in a full run where the rule-seat principal approves every plan (lane 1.2). */
 function planBands(n: { readonly drafts: number; readonly reviewed: number; readonly wentAhead: number; readonly goalFit: number; readonly supply: number }): Record<string, GateBand> {
   return {
     'planner.candidates': around(n.drafts),

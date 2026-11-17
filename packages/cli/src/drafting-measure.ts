@@ -103,7 +103,7 @@ export function draftingInputs(pack: string): planner.PlannerInput[] {
       goalRail: true,
       goalRiver: true,
       goalSea: false,
-      // The longest request: neutral ground permitted, as the generic principal's goals permit it, so no route ends early.
+      // The longest request: neutral ground permitted (a benchmark, not a doctrine goal), so no route ends early.
       goalNeutral: true,
       goalCommitted: [],
       goalAwaitWord: false,
