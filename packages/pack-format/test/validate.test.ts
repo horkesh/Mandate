@@ -509,8 +509,8 @@ describe('evidence dates by cell class (lane 1.11b; 0085)', () => {
 });
 
 describe('a judgment needs a contemporary leg (lane 1.11r3; 0087)', () => {
-  const policy = (factTraits: string[], base: FileMap = fixture()) =>
-    withNewFile('gate/source-policy.json', JSON.stringify({ banned: [], weak: [], evidence: { innateThrough: '1861-07-31', startBefore: '1861-03-05', innateStats: ['competence', 'nerve'], innateTraits: ['bold'], factTraits } }), base);
+  const policy = (factTraits: string[], base: FileMap = fixture(), referenceWorks: string[] = []) =>
+    withNewFile('gate/source-policy.json', JSON.stringify({ banned: [], weak: [], evidence: { innateThrough: '1861-07-31', startBefore: '1861-03-05', innateStats: ['competence', 'nerve'], innateTraits: ['bold'], factTraits, referenceWorks } }), base);
   const noLeg = (files: FileMap, field: string) => run(files).issues.filter((i) => i.kind === 'no-contemporary-leg' && i.at.includes('red_chief') && i.at.includes(field));
   it('warns on a judgment whose only legs are not primary, and not on one with a primary leg', () => {
     expect(noLeg(withTemper({ red_chief: { boldness: 'above:DESIGN p.4' } }, policy([])), 'boldness').length).toBe(1);
@@ -537,6 +537,21 @@ describe('a judgment needs a contemporary leg (lane 1.11r3; 0087)', () => {
     expect(noLeg(bloc('REG A p.9 dated 1861-03-05', policy([])), 'bloc').length).toBe(1);
     expect(noLeg(bloc('DESIGN', policy([])), 'bloc').length).toBe(1);
     expect(noLeg(bloc('', fixture()), 'bloc')).toEqual([]);
+  });
+  it('never counts a later reference work as a leg for a judgment or a bloc, but lets it source a fact', () => {
+    const ref = (facts: string[] = []) => policy(facts, fixture(), ['REG A']);
+    // A judgment cited only to the reference work is warned; the control (no reference works named) is unwarned.
+    expect(noLeg(withTemper({ red_chief: { boldness: 'above:REG A p.4' } }, ref()), 'boldness').length).toBe(1);
+    expect(noLeg(withTemper({ red_chief: { boldness: 'above:REG A p.4' } }, policy([])), 'boldness')).toEqual([]);
+    // A bloc cited only to it is warned too.
+    const bloc = (cell: string, base: FileMap) =>
+      withFile(`${W}/people.csv`, (t) => t.split('\n').map((line, i) => (i === 0 ? `${line},bloc_cites` : line === '' ? line : `${line},${line.split(',')[0] === 'red_chief' ? cell : ''}`)).join('\n'), base);
+    expect(noLeg(bloc('REG A p.9', ref()), 'bloc').length).toBe(1);
+    expect(noLeg(bloc('REG A p.9', policy([])), 'bloc')).toEqual([]);
+    // A fact (a trait the pack lists as a fact: an office held, a service) may rest on the reference work alone.
+    const trait = (cite: string, facts: string[]) => withFile(`${W}/people.csv`, replaceOnce('bold:REG A p.9', `bold:${cite}`), policy(facts, fixture(), ['REG A']));
+    expect(noLeg(trait('REG A p.9', []), 'traits').length).toBe(1);
+    expect(noLeg(trait('REG A p.9', ['bold']), 'traits')).toEqual([]);
   });
   it('is a warning, not an error, and a pack without an evidence policy is not checked', () => {
     const found = run(withTemper({ red_chief: { boldness: 'above:DESIGN p.4' } }, policy([]))).issues.filter((i) => i.kind === 'no-contemporary-leg');

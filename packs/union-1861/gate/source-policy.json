@@ -51,6 +51,7 @@
       "self_doubting",
       "holds_grudges"
     ],
-    "factTraits": ["slaveholder", "uses_press"]
+    "factTraits": ["slaveholder", "uses_press"],
+    "referenceWorks": ["BDAC", "Callahan", "CongDir37", "Cullum", "Dyer", "Heitman", "NavyReg1861", "Wright"]
   }
 }

@@ -386,10 +386,12 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     const admissible = cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer');
     return admissible.length > 0 && admissible.every((x) => weakSet.has(x.source) || hasWeakMarker(x.at) || datedAfterBoundary(x.at, cls, evidence));
   };
-  // A contemporary leg (0087): a citation of a primary source that is not weak, carries no weak marker, and is not dated past its boundary.
+  // A contemporary leg (0087): a citation of a primary source that is not weak, carries no weak marker, and is not dated past its
+  // boundary. A later reference work (the policy's `referenceWorks`) states facts and is never a leg for a judgment or a bloc.
+  const referenceWorks = new Set(evidence?.referenceWorks ?? []);
   const hasContemporaryLeg = (cites: readonly w.Citation[], cls: EvidenceClass): boolean =>
-    cites.some((x) => sources.get(x.source)?.kind === 'primary' && !weakSet.has(x.source) && !hasWeakMarker(x.at) && !datedAfterBoundary(x.at, cls, evidence));
-  const noLegExpected = 'a citation of a primary source (a document of the time, or one printed verbatim in a later work) that is not weak and is not dated past the cell’s boundary; or hold the judgment back (0087)';
+    cites.some((x) => sources.get(x.source)?.kind === 'primary' && !referenceWorks.has(x.source) && !weakSet.has(x.source) && !hasWeakMarker(x.at) && !datedAfterBoundary(x.at, cls, evidence));
+  const noLegExpected = 'a citation of a primary source (a document of the time, or one printed verbatim in a later work: not a later reference work) that is not weak and is not dated past the cell’s boundary; or hold the judgment back (0087)';
   const weakExpected ='a citation of a source the gate does not mark weak (not a memoir, a self-report, a snippet, or evidence dated after its cell’s boundary: 5 March 1861 for a cell true at the start, 31 July 1861 for an innate stat or trait), or leave the cell unknown';
   world.people.forEach((p, i) => {
     const at = (f?: string) => W('people', i, f);
