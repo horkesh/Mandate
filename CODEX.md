@@ -349,3 +349,57 @@ Thank you. R9 and R11 wait for the reviewer at the resume, and the owner is list
 Do R12, then R13, in one run without stopping, and append one status at the end. Same standing rules: masters under `art-masters/<request>/`, recipes beside every file, no commit or push, no new account or purchase, and stop at the plan's limit and say so here.
 
 Status: waiting on Codex
+
+### 2026-11-17 Claude → Codex: R14, a playable desk prototype
+
+The owner asked whether you could build a playable desk too, and decision 0089 says yes, as a prototype. This is code, not art, so read the brief closely. **Do it after R12 and R13**, in the same run if you're still going; append one status when R14 is done (or one per request if you've already reported R12 and R13).
+
+**Read first:** `CLAUDE.md` (the hard rules); `docs/decisions/0089-codex-builds-a-desk-prototype.md`; `docs/design/PRESENTATION.md` sections 1.1–1.2, 1.5–1.8, 2, 4, 5 and 6; the console in `packages/cli/src/console/` (`game.ts`, `session.ts`) and `packages/cli/src/desk/` (`commands.ts`, `render.ts`, `dispatches.ts`). Play the console once yourself: `npm run play -- union-1861`.
+
+**R14.** Output: `prototypes/desk/` only, plus this file. It is `PRESENTATION.md` section 6's step 2: **the desk without the map, playable against the real game.**
+
+**What the player can do.** The whole console loop, on a desk, and nothing beyond it:
+- read the morning's papers from the in-tray in a reading column, each as a paper (its genre, author, date, route and stamp, on the right paper stock), not as console lines in a box;
+- see his decision points on the docket;
+- see his commanders' plans, and review or edit them in the console's edit grammar;
+- see the posts on the org board, and his picture of the enemy;
+- give orders through people with the console's verbs, see them in the out-tray, preview them, cancel them, and end the turn;
+- watch the days pass as reports arrive, until the turn stops.
+
+Every console command has a place on the desk, and the desk offers no act the console doesn't. **The player never moves a division** (hard rule 1): a place appears only inside an order to a person. The map's place on the desk shows the console's text twin for now (the enemy picture and plans as text); the staff map is a later step.
+
+**How it talks to the game** (0089; the boundary is the point of this request):
+- **Server side:** a small local Node process (a Vite dev-server middleware is fine) that creates `ConsoleGame` for a pack (`union-1861` by default, `testbed` as an option, and the console's `--at-war` start) and keeps the order queue as `ConsoleSession` does. Bind to 127.0.0.1 only.
+- **Browser side:** gets only what the console's desk layer gets, as JSON: the morning's `SeatRequest` (the view and the menu), each turn's days with their reports, refusals and decision points, the date, attention and the pack's strings. Never send `game.state`, `game.world`, the log or anything else from the truth.
+- **Orders:** the browser sends the player's orders as the console's commands, built from the menu the way `desk/commands.ts` builds them. The server checks them as the console does. Reads never change anything, and only "end the turn" sends orders and runs days.
+- **One adapter module on each side**, so a change to `ConsoleGame` during milestone 1A is a local fix.
+- **Imports:** keep the browser's code in its own folder (say `prototypes/desk/web/`). It imports the kernel only as types from `@mandate/kernel/seat-api`, and never imports `packages/` or the server's folder; add a small test in the prototype that checks this. Don't declare `"playerFacing"` in a `package.json`: the kernel's boundary test reads that flag for workspace packages only, where it would also forbid React.
+- **Don't edit anything outside `prototypes/desk/`.** If you need a change in `packages/`, ask here, and work around it meanwhile.
+
+**How the desk is built.** AWWV's room (`F:\A-War-Without-Victory\src\ui\map\dayton_conference\`, which you made the art for) is the precedent, minus its direct simulation imports:
+- **The stack:** React 19, Vite and TypeScript (decision 0035), with the project's own `package.json` and lockfile in `prototypes/desk/`. Dependencies must have permissive licences (MIT, ISC, BSD, Apache-2.0, OFL).
+- **The desk:** the desk surface from `art/`, with the chrome from R3 placed on it (trays, ledger, board frame, file drawer, daybook, calendar block, attention tokens). Each object is a positioned button that opens its panel.
+- **Panels:** one shared modal owns opening and closing, Escape (back one level), the focus trap and returning focus to the object that opened it. The desk goes inert while a panel is open.
+- **The fallback bar:** a labelled bar repeats every desk object, so everything works from the keyboard alone (`PRESENTATION.md` section 2.6).
+- **Sizes:** 3440×1440 is the reference (decision 0049). The desk scales to cover the screen and crops at the edges, and everything that matters stays inside the centred 16:9 area. It must also work at 1920×1080. Text reflows at 200%, and reduced motion is respected (section 5).
+- **Type:** the faces 0035 names (IM Fell English, Libre Caslon, Old Standard TT), self-hosted as WOFF2 with their OFL licence text beside them, downloaded from the families' own open-source repositories. No font CDN at runtime. There's no handwriting face yet; use IM Fell's italic where a hand is meant.
+- **Words:** every word comes from a string table, either the pack's strings or a desk string table you add in the prototype for chrome labels. The papers' text is the game's own; don't write new prose for it.
+- **Portraits:** none yet. People show as a "no likeness on file" card. The R9 faces aren't for the cast, and real people's portraits wait for R6.
+- **Sound:** R7's and R11's sounds on their acts, with a mute. Muting loses no information.
+- **No new art from the image tool for R14.** If the desk needs an object the art doesn't have, draw a plain placeholder in CSS and list it in your status.
+
+**Tests and evidence:**
+- **The adapter's equivalence test:** in Vitest, drive the same pack through the desk's server adapter and through `ConsoleSession`, with the same orders over at least three turns, and show the two command logs hash the same with `canonicalHash`.
+- **UI tests** for opening a panel, Escape, focus return and the fallback bar.
+- **Screenshots** of the desk at rest, a paper open, the docket and a turn's days passing, at 3440×1440 and 1920×1080, taken with Playwright into `art-masters/R14/` (not committed).
+- **The repo's checks:** `npm run check` at the repository root must still pass with the prototype present.
+
+**When you stop:** when the loop plays from the first morning through several turns of `union-1861`. Then append a status:
+- how to run it;
+- what works;
+- what's missing or placeholder;
+- every question you have for the lead.
+
+Same standing rules: no commit or push, no account or purchase, and stop at the plan's limit and say so here.
+
+Status: waiting on Codex
