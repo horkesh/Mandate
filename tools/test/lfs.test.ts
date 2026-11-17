@@ -1,7 +1,9 @@
 import { execFileSync } from 'node:child_process';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { artProblems, coveredByLfs, globToRegExp, isLfsPointer, lfsPatterns, LFS_POINTER_HEAD, looksBinary } from '../lfs-check.ts';
+import { artProblems, coveredByLfs, globToRegExp, historyProblems, isLfsPointer, lfsPatterns, LFS_POINTER_HEAD, looksBinary, treeEntries } from '../lfs-check.ts';
 
 /**
  * Git LFS for the art (lane 0.7l; docs/design/ASSETS.md 0.7). The binaries under art/ go to LFS, recipes stay text,
@@ -54,6 +56,27 @@ describe('the check (no binary under art/ in plain git)', () => {
     expect(problems).toHaveLength(2);
     expect(problems[0]).toContain('art/_pilot/paper.png: an LFS pattern covers it, but it would go into plain git');
     expect(problems[1]).toContain('art/_pilot/sketch.psd: a binary under art/ that no LFS pattern covers');
+  });
+
+  it('reads every commit a pushed head reaches: art committed into plain git and deleted later is still refused (the review)', () => {
+    // A scratch repository with no hooks and no LFS filter: the first commit puts a PNG under art/ as a plain blob, the
+    // second deletes it, so the tip is clean and only the history holds it.
+    const dir = mkdtempSync(join(tmpdir(), 'mandate-lfs-history-'));
+    const git = (...args: string[]) => execFileSync('git', ['-c', 'core.hooksPath=no-hooks', '-c', 'user.name=test', '-c', 'user.email=test@example.invalid', '-c', 'commit.gpgsign=false', ...args], { cwd: dir, encoding: 'utf8' });
+    git('init', '-q');
+    mkdirSync(join(dir, 'art', '_pilot'), { recursive: true });
+    writeFileSync(join(dir, 'art', '_pilot', 'leak.png'), PNG);
+    writeFileSync(join(dir, 'art', '_pilot', 'paper.recipe.json'), '{"source":"x"}\n');
+    git('add', '-A');
+    git('commit', '-q', '-m', 'a texture in plain git');
+    const leaked = git('rev-parse', 'HEAD').trim();
+    git('rm', '-q', 'art/_pilot/leak.png');
+    git('commit', '-q', '-m', 'delete it');
+    expect(artProblems(treeEntries(dir, 'HEAD'), patterns)).toEqual([]);
+    const history = historyProblems(dir, 'HEAD', patterns);
+    expect(history).toHaveLength(1);
+    expect(history[0]).toContain('art/_pilot/leak.png: an LFS pattern covers it, but it would go into plain git');
+    expect(history[0]).toContain(`(in commit ${leaked.slice(0, 12)})`);
   });
 });
 

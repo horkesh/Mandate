@@ -42,7 +42,8 @@ describe('the CI workflow', () => {
   });
 
   it('compares both machines’ determinism summaries', () => {
-    expect(all.check).toMatch(/run: npm run run:headless -- testbed/);
+    // M2's headless runner retired with M2 (lane 1.13): CI no longer runs it.
+    expect(all.check).not.toMatch(/run:headless/);
     // The seats layer's run hashes every day, replays its log and resumes from a save (lane 0.6).
     expect(all.check).toMatch(/run: npm run run:seats -- testbed \d+ --resume-at \d+ --label ci-determinism/);
     // The Phase 0 done check (lane 0.8) hashes every day on both packs and writes the summaries the comparison reads.
@@ -58,7 +59,10 @@ describe('the CI workflow', () => {
     for (const m of checkouts) expect(m[1], 'a checkout step').toMatch(/^ {8}with:\n(?: {10}#.*\n)* {10}lfs: false$/m);
     expect(workflow).not.toMatch(/lfs: true/);
     expect(workflow).not.toMatch(/git lfs (pull|fetch|checkout)/);
-    expect(all.check).toMatch(/run: npx tsx tools\/lfs-check\.ts --tree HEAD/);
+    // Every commit pushed, not only the tip (the review of lane 0.7l): a --no-verify commit later deleted still leaves its
+    // blob in public history. So the check job fetches the whole history.
+    expect(all.check).toMatch(/run: npx tsx tools\/lfs-check\.ts --history HEAD/);
+    expect(all.check).toMatch(/uses: actions\/checkout@\S+\n {8}with:\n(?: {10}.*\n)* {10}fetch-depth: 0\n/);
   });
 
   it('reports the outcome of every step that has an id (honest CI)', () => {

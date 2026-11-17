@@ -134,4 +134,6 @@ export interface SeatView {
   readonly obstructionBeliefs: Readonly<Record<EdgeId, ObstructionView>>;
   /** Situations that have reached him (as principal, or as the holder one was handed to), in id order. */
   readonly situations: readonly SituationView[];
+  /** What is left of his week's attention (0025, lane 1.13): his own budget, which he always knows; null for a seat that keeps none. */
+  readonly attention: number | null;
 }

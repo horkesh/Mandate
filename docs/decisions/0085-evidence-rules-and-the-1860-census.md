@@ -1,6 +1,6 @@
 # 0085: Evidence rules for the 1861 cast, and the 1860 census by region
 
-Status: accepted (2026-11-16). From:
+Status: accepted (2026-11-16). Amended by 0087 (the rules as checks; a later work sources facts but not judgments; a period document printed verbatim later counts as contemporary; older judgment cells meet the same rule). From:
 - Phase 1 lanes 1.11r and 1.11r2 (`docs/research/2026-11-16-1861-gaps.md`, and `packs/union-1861/source/drafts/census/README.md`);
 - the standing reviewer's review and re-checks (`review-research-1861-gaps.md`).
 

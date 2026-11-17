@@ -4,7 +4,7 @@
  * a game build or a mod loader takes; it needs no sources.
  */
 import type { world as w } from '@mandate/kernel';
-import { readBannedSources, readWeakSources } from './banned-sources.ts';
+import { readBannedSources, readEvidencePolicy, readWeakSources } from './banned-sources.ts';
 import { readJson, type PackFiles } from './generate.ts';
 import { errorsOf, type Issue, IssueSink } from './issues.ts';
 import { generatedStringsFile, MANIFEST_FILE, PROVENANCE_FILE, scenarioFile, stringsFile, WORLD_FILE } from './layout.ts';
@@ -41,7 +41,7 @@ export function loadPack(files: PackFiles): LoadResult {
     if (tables.length > 0) strings.set(locale, tables);
   }
   if (errorsOf(sink.issues).length > 0) return { pack: null, issues: sink.issues };
-  const worldPack: PackData = { manifest, provenance, world, scenarios, strings, bannedSources: readBannedSources(files), weakSources: readWeakSources(files) };
+  const worldPack: PackData = { manifest, provenance, world, scenarios, strings, bannedSources: readBannedSources(files), weakSources: readWeakSources(files), evidencePolicy: readEvidencePolicy(files) };
   sink.add(validatePack(worldPack));
   // A citation-policy error (a banned or weak-only citation) leaves the World structurally sound, so the gate's own pass still
   // runs beside it: every problem is reported, never only the first (0030).

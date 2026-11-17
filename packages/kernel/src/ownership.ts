@@ -276,12 +276,11 @@ export const NEVER_REASSIGNED_KEYS: readonly string[] = ['id'];
 
 /**
  * State records the classification check skips, because the M2 kernel that
- * declares them is being replaced in Phase 0. The test fails if an entry
- * names a file or interface that no longer exists, so this list only shrinks.
+ * declared them was being replaced. The test fails if an entry names a file or
+ * interface that no longer exists, so this list only shrinks. Empty since M2's
+ * `GameState` retired with M2 (lane 1.13).
  */
-export const LEGACY_STATE_RECORDS: readonly { readonly file: string; readonly record: string; readonly reason: string }[] = [
-  { file: 'packages/kernel/src/state.ts', record: 'GameState', reason: 'M2 state; replaced by the new State in Phase 0' },
-];
+export const LEGACY_STATE_RECORDS: readonly { readonly file: string; readonly record: string; readonly reason: string }[] = [];
 
 /**
  * Lane 0.6 (review F6). State is copy-on-write, so building a new object
