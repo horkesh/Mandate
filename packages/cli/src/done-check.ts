@@ -37,7 +37,9 @@ export const SECTION_TEN_TESTS: readonly { readonly file: string; readonly least
   { file: 'packages/kernel/test/compliance.test.ts', least: 5, why: 'compliance' },
   { file: 'packages/kernel/test/rng.test.ts', least: 3, why: 'named seeded streams' },
   { file: 'packages/kernel/test/banned-apis.test.ts', least: 3, why: 'banned APIs, extended to every kernel folder' },
-  { file: 'packages/kernel/test/audience.test.ts', least: 5, why: 'the M2 audience tests' },
+  // Lane 1.13: M2's `audience.test.ts` retired with M2; lane 1.5 recast its nine cases on the new State, one for one
+  // ("M2’s audience cases on the new State"), so the check reads them there.
+  { file: 'packages/kernel/test/people-verbs.test.ts', least: 9, why: 'the M2 audience tests, recast on the new State (lane 1.5)' },
 ];
 
 export interface DoneRun {

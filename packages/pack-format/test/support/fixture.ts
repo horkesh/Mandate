@@ -42,6 +42,7 @@ export const MESSAGE_RULES = {
   selfEmancipation: {"linesFaction":null,"agencyReasons":{"resistanceWithin":"agency:fixture","resistanceElsewhere":"agency:fixture","flightToLines":"agency:fixture"},"protectedFlags":[],"cadenceDays":7,"resistancePerMillion":200,"pressureFlags":[],"flightPerMillion":1000,"reachWithForce":1000,"reachLinesOnly":400,"holdShare":600,"policyBase":500,"policyFlags":[]},
   // Lane 1.6: no blocs, chambers or papers; a flat credibility of 500 (lane 1.1's stand-in value).
   politics: { blocs: [], drift: { divisor: 20, cite: 'FIXTURE' }, address: { support: 100, othersPenalty: -15, cite: 'FIXTURE' }, ladder: { lobbyingPerRung: -10, publicDefiance: -20, rival: -10, cite: 'FIXTURE' }, chambers: [], sessions: [], credibility: { base: 500, mandatePermille: 0, perRelief: 0, min: 0, max: 1000, cite: 'FIXTURE' }, framing: { mandatePermille: 0, cite: 'FIXTURE' }, press: { cadenceDays: 7, papers: [], standing: { victory: 60, defeat: -60, cite: 'FIXTURE' } } },
+  turns: { maxDays: 7, cite: 'FIXTURE' },
   // Lane 1.1: the people core's rules, at the packs' values.
   people: {
     shadow: {

@@ -980,6 +980,26 @@
       "copyUsed": "archive.org lifeofgeneralnat00woodrich, OCR: a period compilation, the weakest of the keys (lane 1.11r)",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "VA-CONV-1861",
+      "title": "Journal of the Acts and Proceedings of a General Convention of the State of Virginia, Assembled at Richmond, on Wednesday, the Thirteenth Day of February, 1861 (Richmond: Wyatt M. Elliott, 1861)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org journalofactspro00virg, OCR (lane 1.11r3); page numbers are the printed running heads",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "WADDELL-AUGUSTA",
+      "title": "Joseph A. Waddell, Annals of Augusta County, Virginia (1886 printing)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org annalsaugustaco00waddgoog, OCR (lane 1.11r3): a local history; its 1861-65 part is a war diary kept at Staunton",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

@@ -13,8 +13,9 @@ import { lexSource, REPO_ROOT, repoPath, tsFiles, workspacePackages } from './su
  *    so it can be handed a view and nothing else. A package joins this check
  *    by declaring `"mandate": { "playerFacing": true }`; the rule-seat package
  *    and `packages/cli/src/desk/` are on it now.
- * 3. M2's console still renders M2's own view and imports the M2 kernel; it is
- *    the one named exception, and retires with `turn` and `theatre`.
+ * 3. M2's console, the one named exception, retired with `turn` and `theatre`
+ *    (lane 1.13). The new console's desk (`packages/cli/src/desk/`) renders and
+ *    parses from the view and menu alone; its driver holds State and runs the days.
  */
 
 /** Files the view layer must never reach: State, the truth layer, traits, transit, the tick. */
@@ -39,8 +40,8 @@ const FORBIDDEN = [
 const VIEW_LAYER_ROOT = 'packages/kernel/src/seat-api.ts';
 const SEAT_API = '@mandate/kernel/seat-api';
 
-/** M2's player-facing files, which import the M2 kernel until M2 retires. The list only shrinks. */
-const LEGACY_PLAYER_FACING = ['packages/cli/src/console.ts', 'packages/cli/src/format.ts'] as const;
+/** M2's player-facing files, which imported the M2 kernel. Empty since M2 retired (lane 1.13); the list never grows. */
+const LEGACY_PLAYER_FACING: readonly string[] = [];
 
 /**
  * Import and re-export specifiers in a file: static ones (type-only included:
@@ -216,11 +217,13 @@ describe('player-facing code imports the kernel only through seat-api', () => {
     expect(opaqueImports(src)).toEqual([3, 4]);
   });
 
-  it('names M2’s console as the only legacy exception, and the list shrinks when it retires', () => {
-    for (const f of LEGACY_PLAYER_FACING) {
-      expect(existsSync(join(REPO_ROOT, f)), `${f} is gone: remove it from LEGACY_PLAYER_FACING`).toBe(true);
-      expect(importsOf(readRepo(f)).some((s) => s === '@mandate/kernel'), `${f} no longer imports the M2 kernel: remove it from the list`).toBe(true);
-    }
-    for (const root of playerFacingRoots()) for (const f of LEGACY_PLAYER_FACING) expect(f.startsWith(root)).toBe(false);
+  it('has no legacy exception left: M2’s console retired with M2 (lane 1.13)', () => {
+    expect(LEGACY_PLAYER_FACING).toEqual([]);
+    for (const f of ['packages/cli/src/console.ts', 'packages/cli/src/format.ts']) expect(existsSync(join(REPO_ROOT, f)), `${f} came back`).toBe(false);
+  });
+
+  it('puts the new console’s desk on the boundary: the player sees views, never State', () => {
+    // Lane 1.13: the desk renders and parses for the console; it is a player-facing root like the rule seats.
+    expect(playerFacingRoots()).toContain('packages/cli/src/desk/');
   });
 });

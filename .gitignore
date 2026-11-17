@@ -7,3 +7,5 @@ Thumbs.db
 .vscode/*
 !.vscode/extensions.json
 runs/
+# Art masters, originals and rejected variants: kept beside the project, never committed (ASSETS.md section 0.7)
+/art-masters/
