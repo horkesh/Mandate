@@ -138,6 +138,6 @@ export function plannerInputFor(world: SeatsWorld, state: State, derived: Derive
     assaultMargin: people.traits.assaultMargin,
     reinforceShare: { timid: people.compliance.reinforceShareTimid, bold: people.compliance.reinforceShareBold },
     day,
-    bombardment: { gunArms: world.map.world.rules.combat.bombardment.gunArms, rangeMaxDaysPermille: world.map.world.rules.combat.bombardment.rangeMaxDaysPermille },
+    bombardment: { gunArms: world.map.world.rules.combat.bombardment.gunArms, objectives: world.map.world.rules.combat.bombardment.objectives, rangeMaxDaysPermille: world.map.world.rules.combat.bombardment.rangeMaxDaysPermille },
   };
 }

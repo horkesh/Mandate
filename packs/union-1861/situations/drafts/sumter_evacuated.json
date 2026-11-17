@@ -1,0 +1,17 @@
+{
+  "id": "sumter_evacuated",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.sumter_evacuated.title",
+  "text": "situation.sumter_evacuated.text",
+  "earliest": "1861-04-13",
+  "event": { "knows": { "reportType": "wire-dispatch", "subtype": null, "subjectKind": "region", "subjectId": "fort_sumter", "claimKind": "fort-surrendered", "token": "evacuated_under_terms" } },
+  "subjects": ["anderson_robert"],
+  "effects": [],
+  "report": { "authors": ["us_secretary_war"], "reportType": "informal", "subtype": "cabinet-word" },
+  "gate": { "topics": ["capture-in-battle"], "placement": "text", "risks": [], "actingSide": null },
+  "gateReview": null,
+  "citations": [
+    { "source": "OR", "at": "I-1 p. 13 (Beauregard to Anderson, 11 April 1861: the written offer); pp. 14-15 (accepted 13 April); p. 12 (Anderson, 18 April: the terms accepted were those of the 11th). Read by lane 1.11r3, docs/research/_leads/L3-sumter.md" }
+  ]
+}

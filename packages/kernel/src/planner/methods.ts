@@ -101,6 +101,8 @@ export function bombard(ctx: Ctx): Outcome {
   const gates: PlanGate[] = objectiveGate(ctx);
   if (input.goal.goalPosture !== 'take') gates.push(gate('no_objective', 'only a goal to take is bombarded'));
   if (gates.length > 0) return reject('bombard', 'across_water', gates);
+  // G-1.12a: only a fortification the pack lets be bombarded, cited; a town is refused whatever force stands in it.
+  if (!input.bombardment.objectives.some((o) => o.region === objective)) return reject('bombard', 'across_water', [gate('no_target', `${objective} is not a fortification the rules let be bombarded (combat.bombardment.objectives)`)]);
   const target = (input.beliefs.get(objective!) ?? 0) > 0 || (input.works.get(objective!) ?? 0) > 0;
   if (!target) return reject('bombard', 'across_water', [gate('no_target', `no force he believes in ${objective} and no works he knows of: nothing a bombardment may fire on`)]);
   // His land force, garrison detachments included: a shore's batteries are garrisons, and a bombardment moves nobody.

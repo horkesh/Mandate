@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { BOMBARD_TARGET_KINDS, bombardDay, type BombardDefender } from '../src/combat/bombard.ts';
+import { BOMBARD_TARGET_KINDS, bombardDay, fortDay, type BombardDefender } from '../src/combat/bombard.ts';
 import type { BombardmentRules } from '../src/combat/rules.ts';
 import { toId, type PersonId } from '../src/ids.ts';
 import { deliverReport, knowledgeOf } from '../src/knowledge/knowledge.ts';
@@ -64,14 +64,17 @@ function game(o: { readonly boldness?: PersonTemper['boldness']; readonly record
     people: [person('a_lead', 'a'), person('a_gen', 'a'), person('b_lead', 'b'), person('b_gen', 'b', o.boldness === undefined ? {} : { boldness: o.boldness })],
   });
   const terms = o.recordTerms === true ? [{ region: R('fort'), faction: F('b'), terms: 'evacuated_under_terms' as const, source: 'fixture record' }] : [];
-  const map = indexWorld({ ...base, rules: { ...base.rules, combat: { ...FIXTURE_COMBAT_RULES, bombardment: { ...RULES, recordTerms: terms } } } });
+  // G-1.12a: only the fort may be bombarded; the town is no fortification on the list.
+  const map = indexWorld({ ...base, rules: { ...base.rules, combat: { ...FIXTURE_COMBAT_RULES, bombardment: { ...RULES, objectives: [{ region: R('fort'), source: 'fixture fort' }], recordTerms: terms } } } });
   const start = forcesStart(
     { a1: { a: 1000 }, shore: { a: 1000 }, fort: { b: 1000 }, town: { b: 1000 }, b1: { b: 1000 } },
-    [post('a_army', { department: 'a_war', holder: PER('a_gen'), region: R('shore') }), post('b_fort', { department: 'b_war', holder: PER('b_gen'), region: R('fort') })],
+    [post('a_army', { department: 'a_war', holder: PER('a_gen'), region: R('shore') }), post('b_fort', { department: 'b_war', holder: PER('b_gen'), region: R('fort') }), post('b_town', { department: 'b_war', region: R('town') })],
     [
       block('a_guns', { department: 'a_war', region: 'shore', arm: 'artillery', strength: 600, post: P('a_army') }),
       block('a_inf', { department: 'a_war', region: 'shore', strength: 2000, post: P('a_army') }),
       block('b_gar', { department: 'b_war', region: 'fort', arm: 'artillery', strength: 80, storesDays: 0, post: P('b_fort') }),
+      // b's men in the town across the water: a force a's general believes is there, which still makes no target (G-1.12a).
+      block('b_town', { department: 'b_war', region: 'town', strength: 500, post: P('b_town') }),
     ],
     { governments: [{ region: R('town'), department: DEP('b_war'), provenance: [] }] },
   );
@@ -79,7 +82,7 @@ function game(o: { readonly boldness?: PersonTemper['boldness']; readonly record
   // a's general has been told where b's garrison stands (an estimate), so he has something to fire on.
   let state = createState(world, { seed: 1 });
   const seat = seatIdFor(PER('a_gen'));
-  state = deliverReport(state, seat, { id: toId('message', 'estimate.fort'), knownReceivedDay: 0, knownRoute: 'courier', knownVia: [], knownBody: { reportType: 'enemy-estimate', reportSubtype: null, reportAuthor: PER('a_gen'), reportAuthorPost: P('a_army'), reportSubjectKind: 'enemy', reportSubjectId: 'a_army', reportClaims: [{ claimKind: 'enemy-strength', claimRegion: R('fort'), claimValue: 80, claimToken: null, claimConfidence: 900 }], reportDay: 0, reportHour: null, reportAdvice: null, reportAnswers: null } }, { truthTerms: [], truthTrimmed: [] });
+  state = deliverReport(state, seat, { id: toId('message', 'estimate.fort'), knownReceivedDay: 0, knownRoute: 'courier', knownVia: [], knownBody: { reportType: 'enemy-estimate', reportSubtype: null, reportAuthor: PER('a_gen'), reportAuthorPost: P('a_army'), reportSubjectKind: 'enemy', reportSubjectId: 'a_army', reportClaims: [{ claimKind: 'enemy-strength', claimRegion: R('fort'), claimValue: 80, claimToken: null, claimConfidence: 900 }, { claimKind: 'enemy-strength', claimRegion: R('town'), claimValue: 500, claimToken: null, claimConfidence: 900 }], reportDay: 0, reportHour: null, reportAdvice: null, reportAnswers: null } }, { truthTerms: [], truthTrimmed: [] });
   return { world, state };
 }
 
@@ -133,10 +136,23 @@ describe('a fort across water is bombarded until its commander surrenders (tick/
     expect(told?.claimToken).toBe('evacuated_under_terms');
   });
 
-  it('a town with no force and no works across the water is never bombarded: the method refuses it, no_target', () => {
-    const { state, telemetry } = play(game(), 'town', 10);
+  it('a town is never bombarded, even with a force believed in it: only a listed fortification is a target (G-1.12a), no_target', () => {
+    const g = game();
+    // a's general believes b's 500 men stand in the town, and his guns are within range of it across the water.
+    expect(knowledgeOf(g.state, seatIdFor(PER('a_gen'))).knownReports.some((r) => r.knownBody.reportClaims.some((c) => c.claimRegion === R('town') && c.claimValue > 0))).toBe(true);
+    const { state, telemetry } = play(g, 'town', 10);
     expect(telemetry.mechanics['combat.bombardment']!.fires).toBe(0);
     const rejected = state.planRecords[P('a_army')]?.planDraft?.draftRejected.find((r) => r.rejMethod === 'bombard');
     expect(rejected?.rejGates.map((g) => g.gateKind)).toEqual(['no_target']);
+    expect(rejected?.rejGates[0]!.gateDetail).toContain('not a fortification the rules let be bombarded');
+    // The town's men are untouched.
+    expect(state.forceBlockStates[toId('forceBlock', 'b_town')]!.fbStrength).toBe(500);
+  });
+
+  it('the stage itself fires on nothing the list leaves out (rule 7: a check, not only the planner’s judgement)', () => {
+    const g = game();
+    const fort = fortDay(g.world, g.state, [toId('forceBlock', 'a_guns')], R('town'), F('a'), () => 'judge', 1);
+    expect(fort).toBeNull();
+    expect(fortDay(g.world, g.state, [toId('forceBlock', 'a_guns')], R('fort'), F('a'), () => 'judge', 1)).not.toBeNull();
   });
 });

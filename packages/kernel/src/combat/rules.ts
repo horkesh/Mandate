@@ -146,6 +146,12 @@ export interface CombatRules {
 export interface BombardmentRules {
   /** The arms (the pack's arm ids) whose known men count as guns. */
   readonly gunArms: readonly string[];
+  /**
+   * The fortifications that may be bombarded, each cited (the gate reviewer's G-1.12a): any other objective is refused,
+   * so no town is ever bombarded as such, whatever force stands in it. A later fort is added, cited, when its lane needs
+   * it; a populated place needs its civilian consequences authored first, under the sign rule.
+   */
+  readonly objectives: readonly { readonly region: RegionId; readonly source: string }[];
   /** A water edge carries fire only if it is at most this long, permille days (the batteries' range). */
   readonly rangeMaxDaysPermille: number;
   /** Morale the defender loses a day at a fire ratio of 1000 (his guns equal to the attacker's). */
@@ -260,8 +266,15 @@ export function combatRulesProblems(rules: CombatRules | undefined, terrains: re
     for (const k of ['moraleLossPerDay', 'outOfStoresMoraleLoss', 'worksWearPerDay', 'lossPermille', 'surrenderMorale', 'boldnessWeight'] as const) whole(b[k], `bombardment.${k}`, 1000);
     whole(b.ratioCapPermille, 'bombardment.ratioCapPermille');
     if (typeof b.source !== 'string' || b.source.length === 0) problems.push('combat rule bombardment.source must cite where its numbers come from');
+    const permitted = new Set<string>();
+    for (const o of b.objectives) {
+      if (o.source.length === 0) problems.push(`combat rule bombardment.objectives: ${o.region} cites no source`);
+      if (permitted.has(o.region)) problems.push(`combat rule bombardment.objectives: ${o.region} twice`);
+      permitted.add(o.region);
+    }
     const cases = new Set<string>();
     for (const t of b.recordTerms) {
+      if (!permitted.has(t.region)) problems.push(`combat rule bombardment.recordTerms: ${t.region} is not a fort the rules let be bombarded (bombardment.objectives)`);
       if (!BOMBARD_TERMS.includes(t.terms)) problems.push(`combat rule bombardment.recordTerms: "${t.terms}" is not a kind of terms`);
       if (t.source.length === 0) problems.push(`combat rule bombardment.recordTerms: ${t.region} cites no source`);
       if (cases.has(`${t.region}|${t.faction}`)) problems.push(`combat rule bombardment.recordTerms: ${t.region} for ${t.faction} twice`);

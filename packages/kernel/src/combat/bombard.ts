@@ -136,6 +136,8 @@ export function fortDefenders(world: SeatsWorld, state: State, region: RegionId,
  */
 export function fortDay(world: SeatsWorld, state: State, attackers: readonly ForceBlockId[], objective: RegionId, side: FactionId, order: (post: PostId | null) => CutOffChoice | typeof JUDGE, day: number): FortDay | null {
   const rules = world.map.world.rules.combat.bombardment;
+  // G-1.12a, the stage's own check (rule 7): it fires only on a fortification the pack lets be bombarded, cited.
+  if (!rules.objectives.some((o) => o.region === objective)) return null;
   const defenders = fortDefenders(world, state, objective, side);
   if (defenders.length === 0) return null;
   const men = (blocks: readonly ForceBlockId[]) => blocks.reduce((s, b) => s + (state.forceBlockStates[b]!.fbStrength ?? 0), 0);

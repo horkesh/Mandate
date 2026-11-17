@@ -231,6 +231,9 @@ export const RulesSchema = z.strictObject({
       bombardment: z
         .strictObject({
           gunArms: z.array(termId).min(1).describe('The arms (arm ids) whose known men count as guns.'),
+          objectives: z
+            .array(z.strictObject({ region: idOf('region'), source: z.string().min(1) }))
+            .describe('The fortifications that may be bombarded, each cited (G-1.12a); any other objective is refused, so no town is bombarded as such.'),
           rangeMaxDaysPermille: nonNegative.describe('A water edge carries fire only if it is at most this long, permille days (the batteries’ range).'),
           moraleLossPerDay: permille.describe('Morale the defender loses a day at a fire ratio of 1000.'),
           ratioCapPermille: nonNegative.describe('The fire ratio (attacker’s guns over the defender’s, permille) is capped here.'),

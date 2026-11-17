@@ -155,6 +155,8 @@
   "rank_kind.volunteer": "volunteer",
   "rank_kind.brevet": "brevet",
   "rank_kind.state": "state",
+  "situation.sumter_evacuated.title": "Fort Sumter surrendered on terms",
+  "situation.sumter_evacuated.text": "Major Anderson has surrendered Fort Sumter on the terms General Beauregard offered on 11 April: his command is allowed \"the removal of yourself and command, together with company arms and property, and all private property, to any post in the United States which you may select\", and may salute its flag.",
   "value.union": "union",
   "value.party": "party",
   "value.duty": "duty",

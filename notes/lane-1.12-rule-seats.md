@@ -103,11 +103,19 @@ Branch `phase1-rule-seats`. Part A of the brief: commanders' battle choices as s
   - `bombard.test.ts`, on fictional ground: the day rule, the target check, a captured garrison with no record terms, a bolder commander holding longer, the record's terms evacuating, and a town refused `no_target`;
   - `bombardment.test.ts`: the Union run end to end.
 - **For lane 1.11's hook:** the stage reads a goal with posture `take` whose objective is the fort's region (`fort_sumter`), sent to `cs_cmd_charleston`; the planner's `bombard` method does the rest. When lane 1.11's `reduce_sumter` order sends that goal, remove the doctrine's Sumter offensive row (one owner, as with the calls).
-- **For the gate reviewer:** the surrender reaches each principal as a typed claim. No prose is printed: the token `evacuated_under_terms` and the region. If a notice text is wanted under `capture-in-battle`, this is the proposed wording, stating only the record's terms:
+- **The forts that may be bombarded** (the gate reviewer's G-1.12a, the lead's ruling): `combat.bombardment.objectives`, a pack rule listing fortification regions, each cited. In `union-1861` the list is `fort_sumter` and `fort_pickens`; in the testbed it is empty.
+  - Any other objective is refused `no_target` by the planner method, and the stage itself fires on nothing outside the list (rule 7).
+  - A record-terms row must name a listed fort.
+  - Tests: a town with a force believed in it is still refused, and the stage returns nothing for it.
+  - A later fort (Hatteras, Port Royal, Pulaski) is added, cited, when its lane needs it. A populated place needs its civilian consequences authored first, under the sign rule.
+- **The surrender notice** (the gate's text amendment): `packs/union-1861/situations/drafts/sumter_evacuated.json`, unsigned, so never loaded.
+  - It is a notice for the Union, tagged `capture-in-battle`, placed `text`, with no effects. It cites OR I-1 pp. 12-15.
+  - It fires on the principal's knowledge of the `fort-surrendered` report with token `evacuated_under_terms` about `fort_sumter`, and on nothing else.
+  - Its strings are in `strings/en.json`: the title "Fort Sumter surrendered on terms", and this text:
 
-  > "Fort Sumter has been evacuated. Major Anderson and his command were allowed to remove, with company arms and property and all private property, to a post in the United States, and to salute their flag."
+    > Major Anderson has surrendered Fort Sumter on the terms General Beauregard offered on 11 April: his command is allowed "the removal of yourself and command, together with company arms and property, and all private property, to any post in the United States which you may select", and may salute its flag.
 
-  It is not signed, and no text is shipped yet.
+  - The quoted words are OR I-1 p. 13, verbatim, as `L3-sumter.md` prints them. One word differs from the lead's template: "allowed" joins "his command is" to the quotation, because the offer's own words are about the removal, not the command. The gate reviewer signs it and moves it out of `drafts/`.
 
 ## The liveness gate
 
