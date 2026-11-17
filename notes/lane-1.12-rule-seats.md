@@ -148,11 +148,15 @@ All six criteria pass with no amendment (the lead's ruling: the criterion was ca
 - **The Confederate capital:** it becomes State with one owner, moved by an event on a sourced date (lane 1.11r2: resolution agreed 20 May, approved 21 May 1861; Davis at Richmond from 29 May; the War Department ordered to move 25 May). Propose the owner and which date counts; the lead's first guess is Davis's arrival.
 - **Butler to Fort Monroe:** the rule-seat Lincoln appoints Butler to `us_fort_monroe` on the sourced date, in the history run only. Lane 1.11's placeholder notice of 22 May is removed, in coordination with lane 1.11, which names it in its hand-over.
 - **Lane 1.14:** checks the concentration against the 31 July checkpoints (men under arms, and a planned operation by each side).
+- **Lane 1.11's Sumter hook:** `reduce_sumter` sends the goal the bombardment reads (posture `take`, objective `fort_sumter`, to `cs_cmd_charleston`; c878fd9 on `phase1-situations`). After lane 1.11 merges, remove the doctrine's Sumter row and re-run `bombardment.test.ts` with the situation as the order's only source.
+- **The people verbs bounce like orders** (the lead's addition): inquire, transfer, relieve, audience and observer are accepted for a post the principal believes held, and come back undelivered on arrival, as orders do (0052).
+- **`believedHolder` reads every capture** (the lead's addition), not only battle records: a commander captured in a bombardment, or by any later route, is believed held until the report arrives.
+- **Each Part A stand-in names an owner lane** (the lead's addition):
+  - lane 1.14 for the [I] bombardment parameters and the concentration posts;
+  - 1B for gun counts (today, the known men of the gun arms).
 
 ## Findings outside my scope
 
 - **Sumter's terms cite a research note not yet on main** (`docs/research/_leads/L3-sumter.md`, branch `research-1861-leads`).
-- **The Texas governor's post (`st_gov_texas`) has no holder** at `union-1861`'s start, so Davis's call to Texas waits. A research lane should say who held it from March 1861.
-- **The people verbs** (inquire, transfer, relieve, audience, observer) still refuse `vacant_post` at once from State. Under the 0052 ruling they should be accepted and come back undelivered, like orders.
-- **A commander captured in a bombardment** (the counterfactual case) is believed vacant at once. `believedHolder` reads only battle records for the man lost, and a bombardment writes none. A small follow-up: read the bombardment's surrender too.
+- **The Texas governor's post (`st_gov_texas`) has no holder** at `union-1861`'s start, so Davis's call to Texas waits. The lead has sent it to research.
 - **The stopwatch:** the Union day's cost reads 25 ms standalone but about 70 ms under the full suite's parallel load. 0086's flag keeps that out of the hook.
