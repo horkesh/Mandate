@@ -67,6 +67,29 @@ The budget is a 40 ms median and a 160 ms p95. The history run is at peace on ma
 
 **Wired but not exercised.** The Union pack has no gated decisions yet, so the sweep weighs nothing on main. G-1.14a to d are tested on fixtures only. Their first real decisions come when lane 1.11 merges, and Part B's calibration runs exercise them.
 
+## Where the lane stopped (the owner's pause, 2026-11-17)
+
+- **Head:** `phase1-done-check-1a` at accb12a, CI green.
+  - **G-1.14d:** done (63ca901), with the standing review's should-fixes.
+  - **Main:** already merged in (accb12a, no conflicts). No merge is owed.
+  - **Review:** the standing reviewer has queued 63ca901 and accb12a for re-check after the pause. The gate reviewer has accb12a for G-1.14d.
+- **Lane 0.7l:** `art-lfs` is at 535e3ff, CI green: main merged in, the art-masters/ refusal, and the modes test. That is past the lead's "stays at 9c69c66", because those commits were already pushed when the pause arrived. The reviewer has queued 535e3ff.
+- **Owed on resume, by the lead's ruling:**
+  - Give the Confederate men band a labelled inferred ceiling of 200,000 [I]. Cite the inference from Walker's 24 July count (OR IV-1 pp. 496-497, "190 regiments and 34 battalions" accepted), so calibration can revisit it.
+  - The Washington Marines strength and the Harris/Henderson correction go to the data lane.
+- **Part B, the calibration runs**, once lanes 1.11 and 1.12 are on main:
+  1. Merge main into this branch, then run `run:done-check` and read the six 1A criteria on the real history run, which by then has war openings, situations and principals.
+  2. Calibrate design parameters against the bands, never the bands against the run. In order:
+     - goal boldness (hold 400, advance 600);
+     - the compliance thresholds, against the pushback bands;
+     - discontent and the ladder;
+     - credibility and the M2-carried politics values;
+     - drafting against execution boldness (McClellan's gap);
+     - the Fort Wagner assault case.
+  3. Run the lever sweep with 8 seeds on the authored gated decisions (S17 first). Read any flagged option, any "chain unexercised", and the "measured in part" channels.
+  4. Re-measure the tick budget on the war run, and count the press's mail apart, as the lead ruled.
+  5. When the criteria pass, or their remaining failures are ruled, add `--milestone 1a` to CI's `run:done-check` step.
+
 ## The proposals as made
 
 **1. Pushback upper bounds.** Each is three times the record's cases of that kind, counting note-only rows and extras, and never below the lower bound plus 3.
