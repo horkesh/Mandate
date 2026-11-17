@@ -509,8 +509,8 @@ describe('evidence dates by cell class (lane 1.11b; 0085)', () => {
 });
 
 describe('a judgment needs a contemporary leg (lane 1.11r3; 0087)', () => {
-  const policy = (factTraits: string[], base: FileMap = fixture(), referenceWorks: string[] = []) =>
-    withNewFile('gate/source-policy.json', JSON.stringify({ banned: [], weak: [], evidence: { innateThrough: '1861-07-31', startBefore: '1861-03-05', innateStats: ['competence', 'nerve'], innateTraits: ['bold'], factTraits, referenceWorks } }), base);
+  const policy = (factTraits: string[], base: FileMap = fixture(), referenceWorks: string[] = [], factBlocs: string[] = []) =>
+    withNewFile('gate/source-policy.json', JSON.stringify({ banned: [], weak: [], evidence: { innateThrough: '1861-07-31', startBefore: '1861-03-05', innateStats: ['competence', 'nerve'], innateTraits: ['bold'], factTraits, referenceWorks, factBlocs } }), base);
   const noLeg = (files: FileMap, field: string) => run(files).issues.filter((i) => i.kind === 'no-contemporary-leg' && i.at.includes('red_chief') && i.at.includes(field));
   it('warns on a judgment whose only legs are not primary, and not on one with a primary leg', () => {
     expect(noLeg(withTemper({ red_chief: { boldness: 'above:DESIGN p.4' } }, policy([])), 'boldness').length).toBe(1);
@@ -537,6 +537,15 @@ describe('a judgment needs a contemporary leg (lane 1.11r3; 0087)', () => {
     expect(noLeg(bloc('REG A p.9 dated 1861-03-05', policy([])), 'bloc').length).toBe(1);
     expect(noLeg(bloc('DESIGN', policy([])), 'bloc').length).toBe(1);
     expect(noLeg(bloc('', fixture()), 'bloc')).toEqual([]);
+  });
+  it('lets a bloc the pack lists as a fact (a service held, a side joined) rest on a register or nothing, and warns on a faction', () => {
+    const bloc = (cell: string, base: FileMap) =>
+      withFile(`${W}/people.csv`, (t) => t.split('\n').map((line, i) => (i === 0 ? `${line},bloc_cites` : line === '' ? line : `${line},${line.split(',')[0] === 'red_chief' ? cell : ''}`)).join('\n'), base);
+    const facts = (cell: string) => bloc(cell, policy([], fixture(), ['REG A'], ['greens']));
+    expect(noLeg(facts('REG A p.9'), 'bloc')).toEqual([]);
+    expect(noLeg(facts(''), 'bloc')).toEqual([]);
+    // The control: the same bloc, not listed as a fact, is warned on the same citation.
+    expect(noLeg(bloc('REG A p.9', policy([], fixture(), ['REG A'], [])), 'bloc').length).toBe(1);
   });
   it('never counts a later reference work as a leg for a judgment or a bloc, but lets it source a fact', () => {
     const ref = (facts: string[] = []) => policy(facts, fixture(), ['REG A']);

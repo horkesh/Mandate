@@ -52,6 +52,7 @@
       "holds_grudges"
     ],
     "factTraits": ["slaveholder", "uses_press"],
+    "factBlocs": ["army", "confederate"],
     "referenceWorks": ["BDAC", "Callahan", "CongDir37", "Cullum", "Dyer", "Heitman", "NavyReg1861", "Wright"]
   }
 }

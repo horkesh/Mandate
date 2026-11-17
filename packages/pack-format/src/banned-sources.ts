@@ -67,6 +67,8 @@ export interface EvidencePolicy {
    * office, a service, a date) and are not a contemporary leg for any judgment or bloc (0087). A fact may still rest on them.
    */
   readonly referenceWorks: readonly string[];
+  /** Blocs that are facts (a service held, a side joined), not factions: they need no contemporary leg and may rest on a register (0087). */
+  readonly factBlocs: readonly string[];
 }
 export type EvidenceClass = 'innate' | 'start';
 
@@ -77,7 +79,7 @@ export function readEvidencePolicy(files: PackFiles): EvidencePolicy | null {
     const p = (JSON.parse(text.replace(/^﻿/, '')) as { evidence?: Partial<EvidencePolicy> }).evidence;
     if (p === undefined || typeof p.innateThrough !== 'string' || typeof p.startBefore !== 'string') return null;
     const list = (v: unknown): string[] => (Array.isArray(v) ? v.filter((s): s is string => typeof s === 'string') : []);
-    return { innateThrough: p.innateThrough, startBefore: p.startBefore, innateStats: list(p.innateStats), innateTraits: list(p.innateTraits), factTraits: list(p.factTraits), referenceWorks: list(p.referenceWorks) };
+    return { innateThrough: p.innateThrough, startBefore: p.startBefore, innateStats: list(p.innateStats), innateTraits: list(p.innateTraits), factTraits: list(p.factTraits), referenceWorks: list(p.referenceWorks), factBlocs: list(p.factBlocs) };
   } catch {
     return null;
   }

@@ -105,7 +105,7 @@ export const SourcePolicySchema = z.strictObject({
   weak: z.array(z.string().min(1)).default([]),
   /** 0085: the evidence-date boundaries and the class of each innate stat and trait; read by the people checks (`banned-sources.ts`). */
   evidence: z
-    .strictObject({ innateThrough: date, startBefore: date, innateStats: z.array(z.string().min(1)), innateTraits: z.array(z.string().min(1)), factTraits: z.array(z.string().min(1)).optional(), referenceWorks: z.array(z.string().min(1)).optional() })
+    .strictObject({ innateThrough: date, startBefore: date, innateStats: z.array(z.string().min(1)), innateTraits: z.array(z.string().min(1)), factTraits: z.array(z.string().min(1)).optional(), referenceWorks: z.array(z.string().min(1)).optional(), factBlocs: z.array(z.string().min(1)).optional() })
     .optional(),
 });
 export const ChecklistSchema = z.strictObject({
