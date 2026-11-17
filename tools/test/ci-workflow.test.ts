@@ -31,13 +31,19 @@ describe('the CI workflow', () => {
     }
   });
 
+  it('runs the wall-clock budget tests on the Linux job (lane 1.0t: the pre-commit hook leaves them off)', () => {
+    expect(all.check).toMatch(/MANDATE_TIMING: \$\{\{ matrix\.os == 'ubuntu-24\.04' && '1' \|\| '' \}\}/);
+    expect(all.check).toContain('wall-clock budget tests');
+  });
+
   it('runs on pinned Linux and Windows images, never a moving -latest label', () => {
     expect(all.check).toMatch(/os: \[ubuntu-24\.04, windows-2025\]/);
     expect(workflow).not.toMatch(/-latest\b/);
   });
 
   it('compares both machines’ determinism summaries', () => {
-    expect(all.check).toMatch(/run: npm run run:headless -- testbed/);
+    // M2's headless runner retired with M2 (lane 1.13): CI no longer runs it.
+    expect(all.check).not.toMatch(/run:headless/);
     // The seats layer's run hashes every day, replays its log and resumes from a save (lane 0.6).
     expect(all.check).toMatch(/run: npm run run:seats -- testbed \d+ --resume-at \d+ --label ci-determinism/);
     // The Phase 0 done check (lane 0.8) hashes every day on both packs and writes the summaries the comparison reads.

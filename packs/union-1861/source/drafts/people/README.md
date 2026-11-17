@@ -365,3 +365,63 @@ Kept in the rows' notes; collected here by group.
 7. **The registers make errors a second witness must catch.** Wright (1911) prints impossible death dates for Longstreet (April 1891) and Hardee (1863); Heitman's OCR drops Rosecrans's entry; Cullum's text as read gives Grant's death as 25 July 1885, which conflicts with the 23 July of the reference works the row now follows (1885-07-23); the day stays open against a cited register.
 8. **The pack validator (0026) needs a rule for what counts as a citation.** `NOTE-*` keys are pointers and must not satisfy it; whether an Appletons-only centre should pass is open question 2.
 9. **Pages with instructions:** none. No helper met a fetched page that tried to direct it; civilwar.com pages carried only navigation and advertising text.
+
+
+## Held-back cells re-sourced (lane 1.11r, 2026-11-16)
+
+`held-back-resourced-1861.csv` re-sources, from public-domain or primary texts, the cast cells, centres and traits that the data-entry lane held back (118 rows). **Nothing is entered.** Columns: person, cell, proposed_direction, citations, basis, status, prior_value, then `cell_class`, `status_before_rule` (filled only where the rule changed the status) and `rule_note`.
+
+**The rule applied (the lead's ruling after the standing review).**
+
+- *Innate stats and traits* (competence, nerve, and the dispositions slow, rank_proud, joint_minded, organiser, micromanages, intrigues, quarrelsome, ambitious, insubordinate, disdains_superiors, shifts_blame, self_doubting, holds_grudges) may be SOURCED on evidence up to 31 July 1861, the end of 1A's window. Evidence after that date stays weak.
+- *Things true at the start* (values, regard, reputation, candour, boldness, and traits that are relationships or facts at the start: political_patron, slaveholder, uses_press; `candid` is classed with candour) keep 5 March 1861. Evidence dated later is weak.
+- A man's own contemporary report cannot alone source his own candour, competence or organising gift: it counts only beside a third party's leg.
+- McClernand's political_patron is unsourced: 1862-63 orders cannot show an 1861 relationship.
+- SOURCED means a strong source inside the rule's window supports the direction. PARTLY means relevant evidence that is weak under the rule (after the window, own report alone, secondary only, or conflicting). UNSOURCED means nothing usable was found.
+
+**Counts after the rule: 12 SOURCED, 60 PARTLY, 46 UNSOURCED** (before the rule: 32, 41, 45). 22 rows fell from SOURCED, 21 of them to PARTLY and McClernand's to UNSOURCED. Two rose to SOURCED: Rodgers's nerve and Semmes's nerve (third-party official accounts of in-window acts). Boundary cases left for the lead: Gamble's committee report is dated 9 March 1861, four days after 5 March; Welles's order of 16 May 1861 as a third-party leg for Rodgers's organiser.
+
+**PROVENANCE keys the draft cites that are not yet in `PROVENANCE.json`** (left to lane 1.11b; check each against the file before entry):
+
+| Key | Work |
+|---|---|
+| NEW:LEWIS-HWVM | V. A. Lewis, *How West Virginia Was Made* (Charleston: News-Mail Co., Public Printer, 1909), prints the journals of the First and Second Wheeling Conventions and speeches of May-June 1861 (archive.org `howwestvirginiaw00lewi`) |
+| NEW:CHASE-1847 | S. P. Chase, *Reclamation of Fugitives from Service: an argument for the defendant ... Jones v. Vanzandt* (Cincinnati: Donogh, 1847) (`reclamationoffug00chas`) |
+| NEW:HOLT-1861 | *Letter from the Hon. Joseph Holt ... Duty of Kentucky* (Washington: Polkinhorn, 1861), with T. H. Dodge's prefatory letter of 24 June 1861 (`letterfromhonjos00holt`) |
+| NEW:REBREC1 (also written NEW:REBREC-1) | Frank Moore ed., *The Rebellion Record*, vol. 1 (New York: Putnam, 1861-62), Documents and Diary of Events (`rebellrecord01moorrich`) |
+| NEW:USREPORTS | *Kentucky v. Dennison*, 65 U.S. (24 How.) 66, Dec. term 1860, read in the Cornell LII text (no scan found) |
+| NEW:CUSTIS-WILL | Will of George Washington Parke Custis, 26 March 1855 (probated 1857), read in HTML from battlefields.org (a modern host): recheck against a period printing |
+| PRFA | *Papers Relating to Foreign Affairs* 1861 (37th Cong., 2d sess.) (`papersrelatingt46statgoog`) |
+| NEW:CHI-1860 | *Proceedings of the Republican National Convention, Chicago, 16-18 May 1860* (`proceedingsofrep00repu`) |
+| NEW:WOODWARD-LYON | A. Woodward, *Life of General Nathaniel Lyon* (Hartford: Case, Lockwood, 1862): a period compilation, the weakest of the new keys (`lifeofgeneralnat00woodrich`) |
+| MO-CONV-1861 | *Journal and Proceedings of the Missouri State Convention, March 1861* (St. Louis: Knapp, 1861) (`proceedings00knaprich`) |
+
+The readers' full findings, with quotations and pages, are in `docs/research/2026-11-16-1861-gaps.md` (Parts D1 to D3).
+
+
+## The evidence rules, as the validator enforces them (lane 1.11b, 0085)
+
+A people cell is refused (`weak-citations-only`) when every admissible citation is weak. A citation is weak when:
+
+- its source is on `gate/source-policy.json`'s `weak` or `banned` list (a memoir, a pointer, a banned memoir);
+- its place begins with `snippet`, `self-report` or `after-start`;
+- **its place states a date, `dated YYYY-MM-DD` anywhere in the locator (for example `JCCS I-p73 dated 1861-02-21`), and the date is past its cell's boundary** (the new rule). A citation with no date is not judged by date; give every citation whose evidence is near a boundary its date.
+
+**The boundary depends on the cell's class** (the mapping is in `gate/source-policy.json`, `evidence`, so it is the pack's data):
+
+| Class | Cells | Evidence counts if dated |
+|---|---|---|
+| Innate | the stats `competence` and `nerve`; the traits `slow`, `rank_proud`, `joint_minded`, `organiser`, `micromanages`, `intrigues`, `quarrelsome`, `ambitious`, `insubordinate`, `disdains_superiors`, `shifts_blame`, `self_doubting`, `holds_grudges` | up to 31 July 1861 (the end of 1A's window) |
+| Start | every other cell: the stats `experience` and `reputation`; `boldness`; `candour`; `regard`; regard toward another person; every value; every practice; and every other trait (`candid`, which is classed with candour, `political_patron`, `uses_press`, `slaveholder`) | before 5 March 1861 |
+
+**Whose words count** (0085). These are not a validator test; the author applies them when citing, and a reviewer checks:
+
+- A man's own words are a leg when they are themselves the conduct that shows the trait (Johnston's 29 July letter protesting his rank, for `rank_proud`).
+- A man's own words that assess his own quality (candour, competence, organising) are not a leg: such a cell needs a third party's leg. Cite the own words with `self-report` so the check sees them as weak.
+- An order assigning a man a task shows the assigner's expectation, not the man's gift. It is not a leg for the trait the task needs.
+
+**A past rank's kind follows its commissioning authority.** A rank by election in the regiment or by a governor is `state_`; one by the President is `usv_`. Mustering a regiment into federal service does not change it. Breckinridge's is `state_maj:1847` (partly sourced, Appletons only); Pike's `state_capt:1846` stays needs-source.
+
+**Existing cells.** The cells entered before this rule cite evidence with no date, so the date check cannot judge them. A pass that dates their citations would show which rest on evidence past the boundary; none is known to.
+
+**Entered from the held-back draft in lane 1.11b:** 19 cells (see `notes/lane-1.11b-data-entry.md`). The rest of the draft stays held back. A cell resting only on a secondary work or a government biography stands if it is a fact (rank, office, service, a date); a judgment (values, temperament, competence, nerve, regard, reputation, candour, boldness) needs a contemporary leg, or it is held back.

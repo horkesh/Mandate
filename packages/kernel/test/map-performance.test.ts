@@ -4,6 +4,7 @@ import { createDerivedMapCache, deriveMap, mapSignature } from '../src/control-i
 import { controlInvariants, derivedInvariants } from '../src/invariants/map.ts';
 import { deriveSupply, INTACT_NETWORK } from '../src/supply/supply.ts';
 import { F, R } from './support/map-fixture.ts';
+import { TIMING } from './support/timing.ts';
 import { unionSizeControl, unionSizeMap } from './support/union-size-map.ts';
 
 /**
@@ -21,7 +22,10 @@ import { unionSizeControl, unionSizeMap } from './support/union-size-map.ts';
  * - a year of days with control still and the month turning: under 1.5 s in all.
  *
  * The bounds come from the design budget, not from any one machine. They are
- * medians, measured while Vitest runs the other test files in parallel.
+ * medians, measured while Vitest runs the other test files in parallel. The
+ * stopwatch test runs only with MANDATE_TIMING=1 (lane 1.0t: CI's Linux job
+ * sets it; the pre-commit hook does not), so a loaded machine never fails a
+ * commit on no change to the code.
  * Measured at review (lane 0.4, 2026-11-14, on the 250-region graph before it
  * grew to 270): rebuild 2.6 ms on the reference machine, 5.3 ms on CI Linux,
  * 8.2 ms on CI Windows (3x under the bound); quiet day 0.29, 0.39 and 0.74 ms;
@@ -61,7 +65,15 @@ describe('the map inside its tick budget (at least the Union draft: 263 regions,
     expect(derivedInvariants(map, control, 1, INTACT_NETWORK, derived)).toEqual([]);
   });
 
-  it('rebuilds, idles and runs a year within budget', () => {
+  it('a year with control still rebuilds once per month turn, once for a shift and once back', () => {
+    const yearCache = createDerivedMapCache();
+    for (let day = 0; day < 365; day++) {
+      deriveMap(map, { control: day === 200 ? unionSizeControl(1) : control, month: 1 + Math.floor(day / 31) % 12 }, yearCache);
+    }
+    expect(yearCache.recomputes).toBeLessThanOrEqual(15);
+  });
+
+  it.runIf(TIMING)('rebuilds, idles and runs a year within budget (wall clock: MANDATE_TIMING=1)', () => {
     const rebuild = time(() => deriveSupply(map, buildControlIndex(map, control), 1, INTACT_NETWORK), 15);
     const index = time(() => buildControlIndex(map, control), 15);
     const cache = createDerivedMapCache();
@@ -86,7 +98,5 @@ describe('the map inside its tick budget (at least the Union draft: 263 regions,
     expect(rebuild).toBeLessThan(BUDGET.rebuildMs);
     expect(quiet).toBeLessThan(BUDGET.quietDayMs);
     expect(year).toBeLessThan(BUDGET.yearMs);
-    // A year with control still except one shift rebuilds once per month turn, once for the shift and once back.
-    expect(yearCache.recomputes).toBeLessThanOrEqual(15);
   });
 });

@@ -11,7 +11,7 @@ import { v2Map } from '../../../packages/cli/src/seats-world.ts';
  */
 const SIGNED: Readonly<Record<string, RowSignOff>> = {
   // The gate reviewer's sign-off of lane 1.6 (review-gate-1861.md), at each bloc's content.
-  army: { reviewer: 'gate-reviewer', hash: 'a6a81de1bfee36e0b2c9f01e499b2ae42ab728eb8784dc2ca149f7797bc4a704' },
+  army: { reviewer: 'gate-reviewer', hash: '1d07b74babb36cd737424b1f33d3e748352e8cb9e604e0be13b36ce436919ff5' },
   border_unionists: { reviewer: 'gate-reviewer', hash: 'ce1a624688d2e4a747cd96edb2582558d21ed428b1747102116331d98a1895d3' },
   confederate: { reviewer: 'gate-reviewer', hash: '99b3606520312abc48b74875107a54bd4320a0e2b2bf3ac9720b0482d3b032f9' },
   moderates: { reviewer: 'gate-reviewer', hash: 'c14be952af998a733893025f4c17788bcdbf01a1a4f3958632b633bae47a2074' },

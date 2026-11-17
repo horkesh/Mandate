@@ -293,8 +293,11 @@ const UNION_BANDS: Record<string, GateBand> = {
   'politics.front_page': around(30),
   'politics.support': around(23),
   'politics.opened': notHere('the Senate sits at the start and the House waits for a call no situation makes until lane 1.11 authors S09; the testbed run fires it'),
-  'regions.self_emancipation': notHere('the Union pack has no census rows until lane 1.10 sources them, so the term has nowhere to run; the testbed run fires it'),
-  'regions.reached_lines': notHere('the Union pack has no census rows until lane 1.10 sources them; the testbed run fires it'),
+  // Lane 1.11b (0085): the Union pack now carries the 1860 census by region (205 rows, Kennedy 1864), so the term runs on
+  // the Union side: 1,528 region-cadences with people resisting or fleeing within, and 132 arrivals proposed where the
+  // Union's ground and posts are reached (75 days, at war). It was notHere while the pack had no census.
+  'regions.self_emancipation': around(1528),
+  'regions.reached_lines': around(132),
   'seats.choices': around(2),
   // Lane 1.12: battle orders are asked where a battle can be fought today; the Union run's one battle-day comes on an
   // arrival whose last leg starts and ends the same day, so no morning finds an army on its way in.

@@ -54,6 +54,9 @@ jobs:
       - id: test
         name: npm run test
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        env:
+          # Lane 1.0t: the wall-clock budget tests run here on the Linux job only; the pre-commit hook leaves them off.
+          MANDATE_TIMING: ${{ matrix.os == 'ubuntu-24.04' && '1' || '' }}
         run: npm run test -- --reporter=default --reporter=json --outputFile.json=runs/ci/vitest.json
 
       - id: boundary
@@ -70,16 +73,6 @@ jobs:
         name: npm run check:decisions
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: npm run check:decisions
-
-      - id: determinism_testbed
-        name: Determinism run (M2 kernel, testbed, resume from turn 10)
-        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
-        run: npm run run:headless -- testbed 40 --resume-at 10 --label ci-determinism
-
-      - id: determinism_union
-        name: Determinism run (M2 kernel, union-1861, resume from turn 20)
-        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
-        run: npm run run:headless -- union-1861 75 --resume-at 20 --label ci-determinism
 
       - id: determinism_seats
         name: Determinism run (seats layer, testbed, a hash every day, replay and resume from day 60)
@@ -114,11 +107,10 @@ jobs:
           INSTALL: ${{ steps.install.outcome }}
           TYPECHECK: ${{ steps.typecheck.outcome }}
           TEST: ${{ steps.test.outcome }}
+          TIMING: ${{ matrix.os == 'ubuntu-24.04' && 'on (MANDATE_TIMING=1)' || 'off' }}
           BOUNDARY: ${{ steps.boundary.outcome }}
           LICENCES: ${{ steps.licences.outcome }}
           DECISIONS: ${{ steps.decisions.outcome }}
-          DET_TESTBED: ${{ steps.determinism_testbed.outcome }}
-          DET_UNION: ${{ steps.determinism_union.outcome }}
           DET_SEATS: ${{ steps.determinism_seats.outcome }}
           DET_SEATS_UNION: ${{ steps.determinism_seats_union.outcome }}
           DONE_CHECK: ${{ steps.done_check.outcome }}
@@ -138,11 +130,10 @@ jobs:
             echo "| npm ci | $INSTALL |"
             echo "| npm run typecheck | $TYPECHECK |"
             echo "| npm run test | $TEST ($tests) |"
+            echo "| wall-clock budget tests | $TIMING |"
             echo "| npm run check:boundary | $BOUNDARY |"
             echo "| npm run check:licences | $LICENCES |"
             echo "| npm run check:decisions | $DECISIONS |"
-            echo "| determinism run: testbed | $DET_TESTBED |"
-            echo "| determinism run: union-1861 | $DET_UNION |"
             echo "| determinism run: seats layer (testbed) | $DET_SEATS |"
             echo "| determinism run: seats layer (union-1861) | $DET_SEATS_UNION |"
             echo "| Phase 0 done check (union-1861 at war, testbed) | $DONE_CHECK |"

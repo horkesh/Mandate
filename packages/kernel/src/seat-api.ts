@@ -16,6 +16,11 @@ export type { BattleCommand, CallCommand, ChooseCommand, Command, DecideCommand,
 export { REVIEW_ACTIONS } from './log/commands.ts';
 export type { BattleOrders, CutOffChoice, NightChoice, Pursuit } from './combat/order-kinds.ts';
 export { ALL_JUDGE, BATTLE_ORDER_OPTIONS, JUDGE } from './combat/order-kinds.ts';
+// Lane 1.13: the people verbs as a console sends them, and the audience's counters (both plain vocabulary, no State).
+export type { AddressCommand, AppointCommand, AudienceCommand, ConsultCommand, InquireCommand, ObserverCommand, PressureCommand, PromiseCommand, ReliefMode, RelieveCommand, TransferCommand, VerbCommand } from './log/commands.ts';
+export { COMMAND_KINDS, RELIEF_MODES } from './log/commands.ts';
+export type { CounterKind, CounterTerms } from './audience/counters.ts';
+export { COUNTER_KINDS } from './audience/counters.ts';
 export type { RouteKind } from './messages/latency.ts';
 export type { EditKind, PlanStatus, Posture } from './plans/goal.ts';
 export { EDIT_KINDS, PLAN_STATUSES, POSTURES } from './plans/goal.ts';

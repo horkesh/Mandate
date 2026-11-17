@@ -2,6 +2,7 @@ import { canonicalHash, DEFAULT_COMPLIANCE_RULES, ids, planner, resolveDirective
 import { describe, expect, it } from 'vitest';
 import { CASES, caseInput, drafted, SEATINGS, type CaseSpec, type Seating } from '../src/planner-cases.ts';
 import { measureDrafting } from '../src/drafting-measure.ts';
+import { TIMING } from '../../kernel/test/support/timing.ts';
 
 /**
  * Lane 0.9's spike checks, ported to the kernel planner (lane 1.2; 0062). The three cases run on the testbed, with
@@ -365,7 +366,9 @@ describe('determinism (decision 0002)', () => {
 });
 
 describe('cost', () => {
-  it('drafts on the testbed in well under 10 ms, and on the Union graph under 40 ms (median)', () => {
+  // Wall clock: runs only with MANDATE_TIMING=1 (lane 1.0t; CI's Linux job sets it, the pre-commit hook does not). The
+  // Union drafts' soundness is asserted without a stopwatch in done-check.test.ts.
+  it.runIf(TIMING)('drafts on the testbed in well under 10 ms, and on the Union graph under 40 ms (median)', () => {
     const time = (f: () => unknown) => {
       f();
       const xs: number[] = [];
