@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { artProblems, coveredByLfs, globToRegExp, historyProblems, isLfsPointer, lfsPatterns, LFS_POINTER_HEAD, looksBinary, mastersProblems, stagedMasters, treeEntries, treeMasters } from '../lfs-check.ts';
+import { artProblems, checkProblems, coveredByLfs, globToRegExp, historyProblems, isLfsPointer, lfsPatterns, LFS_POINTER_HEAD, looksBinary, mastersProblems, stagedMasters, treeEntries, treeMasters } from '../lfs-check.ts';
 
 /**
  * Git LFS for the art (lane 0.7l; docs/design/ASSETS.md 0.7). The binaries under art/ go to LFS, recipes stay text,
@@ -101,6 +101,25 @@ describe('the check (no binary under art/ in plain git)', () => {
     expect(history.every((p) => p.includes('under art-masters/, which never goes into git'))).toBe(true);
     // A path that only begins like it is not under it.
     expect(mastersProblems(['art-masters.md', 'art/masters/x.png'])).toEqual([]);
+  });
+
+  it('refuses git add -f art-masters/x.png in the staged mode the pre-commit hook runs, and in the tree mode (the re-check)', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'mandate-lfs-modes-'));
+    const git = (...args: string[]) => execFileSync('git', ['-c', 'core.hooksPath=no-hooks', '-c', 'user.name=test', '-c', 'user.email=test@example.invalid', '-c', 'commit.gpgsign=false', ...args], { cwd: dir, encoding: 'utf8' });
+    git('init', '-q');
+    writeFileSync(join(dir, '.gitignore'), '/art-masters/\n');
+    mkdirSync(join(dir, 'art-masters'), { recursive: true });
+    writeFileSync(join(dir, 'art-masters', 'x.png'), PNG);
+    git('add', '.gitignore');
+    git('commit', '-q', '-m', 'ignore the masters');
+    expect(checkProblems(dir, { staged: true }, patterns).problems).toEqual([]);
+    git('add', '-f', 'art-masters/x.png');
+    const staged = checkProblems(dir, { staged: true }, patterns).problems;
+    expect(staged).toHaveLength(1);
+    expect(staged[0]).toContain('art-masters/x.png: under art-masters/, which never goes into git');
+    git('commit', '-q', '-m', 'forced');
+    expect(checkProblems(dir, { tree: 'HEAD' }, patterns).problems.map((p) => p.split(':')[0])).toEqual(['art-masters/x.png']);
+    expect(checkProblems(dir, { tree: 'HEAD~1' }, patterns).problems).toEqual([]);
   });
 });
 

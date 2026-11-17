@@ -136,6 +136,18 @@ export function treeMasters(root: string, rev: string): string[] {
   return records(git(root, ['ls-tree', '-r', '-z', '--name-only', rev, '--', MASTERS_ROOT]));
 }
 
+export type CheckMode = { readonly staged: true } | { readonly tree: string };
+
+/**
+ * Everything the check refuses in one mode: the index (the pre-commit hook, the last guard before a push makes a blob
+ * public) or a commit's tree. Both art/'s LFS rule and the art-masters/ refusal, as the CLI runs them.
+ */
+export function checkProblems(root: string, mode: CheckMode, patterns: readonly string[]): { readonly entries: readonly ArtEntry[]; readonly problems: readonly string[] } {
+  const entries = 'staged' in mode ? stagedEntries(root) : treeEntries(root, mode.tree);
+  const masters = 'staged' in mode ? stagedMasters(root) : treeMasters(root, mode.tree);
+  return { entries, problems: [...artProblems(entries, patterns), ...mastersProblems(masters)] };
+}
+
 /**
  * Every commit `rev` reaches, its whole history and not only its tip (the review of lane 0.7l): what each commit's
  * tree holds under art/, each path and blob read once and named by the first commit seen to hold it. A commit made with
@@ -172,14 +184,13 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     console.error(`lfs-check: no commit ${rev} reaches holds a binary under art/ outside LFS, or anything under art-masters/.`);
     process.exit(0);
   }
-  const staged = args.includes('--staged');
   const rev = at >= 0 ? args[at + 1] : undefined;
-  const entries = staged ? stagedEntries(root) : rev !== undefined ? treeEntries(root, rev) : null;
-  if (entries === null) {
+  const mode: CheckMode | null = args.includes('--staged') ? { staged: true } : rev !== undefined ? { tree: rev } : null;
+  if (mode === null) {
     console.error('usage: lfs-check --staged | --tree <rev> | --history <rev>');
     process.exit(2);
   }
-  const problems = [...artProblems(entries, patterns), ...mastersProblems(staged ? stagedMasters(root) : treeMasters(root, rev!))];
+  const { entries, problems } = checkProblems(root, mode, patterns);
   for (const p of problems) console.error(`lfs-check: ${p}`);
   if (problems.length > 0) process.exit(1);
   console.error(`lfs-check: ${entries.length.toString()} file(s) under art/, every binary an LFS pointer.`);
