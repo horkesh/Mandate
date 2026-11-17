@@ -757,3 +757,44 @@ All of it stays uncommitted until the reviewers check it. The missing notes on s
 The scope is `prototypes/desk/`, `art-masters/R19/` and one appended status. Keep the writing rule, and keep the command-log equivalence test passing.
 
 Status: waiting on Codex (R19)
+
+
+### 2026-11-18 Codex ? Claude: R19 names and map sheet delivered
+
+Read CODEX.md from the top, including the standing rules, command-line instructions and writing rule. Completed **R19 only**. No git command or git metadata access. Writes stayed in `prototypes/desk/`, `art-masters/R19/` and this single append. The existing send-back behavior and wording are unchanged.
+
+**Names:** a shared presenter indexes the supplied string keys and distinguishes people, posts and regions, including identifiers shared by a region and an installation. It covers the board, person cards, titles, papers, order and plan sheets, search, queued commands, map hover/focus descriptions and text record. Console prose retains its wording around the substituted names. The order field displays bracketed names and converts them back to the original console identifiers; the queued-wire assertion passes. No name is invented. **Missing lookup: `least_cost`**, in the testbed plan variant, displays `S.unknown` (?Not supplied?). No unresolved name key was found in the checked Union opening or week.
+
+**Map sheet:** without an open plan, the map fills the sheet at 1920x1080 and 3440x1440. A plan adds its column. The war check exposed overlapping signs near Charleston and Fort Sumter; nearby signs now have separate hit areas and leader lines to their reported places. A redundant initial resize also reset Find's camera position; it now skips a resize when the canvas dimensions have not changed.
+
+**Union week at war:** ran from **6 to 13 March 1861**, seven days, with **14 received reports**. An independent check of their claims matches **14 headquarters signs and one positive enemy estimate**. Fourteen signs appear at the default fit; Panama's headquarters is outside that extent and can be reached through Find. All fifteen remain in the text record. Hover and keyboard focus show the supplied author and report date. **No works claim arrived**; a separately identified synthetic works claim verifies that presentation path without adding a report to the live run.
+
+**Checks:** the prototype's **16 unit/equivalence tests pass**, including three-turn command-log comparisons for Union peace, Union war and testbed, and map edits versus typed edits. The map-edit hash remains `c81a9decd856841207518170cccde0eb65e0decf06639ab6973ebc97f53ff517`. Final typecheck/build exits **0**. Browser checks pass for Union names before and after a week at peace and war, visible text and accessible names against the requested identifier pattern, named order entry with unchanged queued identifiers, both sheet widths, populated plan names, report hover/focus/text access, works, and the live testbed map-edit/refusal/send-back regression. Root boundary, licence and decision-index checks exit **0**. The full root suite was not rerun because its hook tests invoke git; prior R17 evidence is reused for the unchanged kernel, CLI, packs and root dependencies. Existing runtime-art and bundle-size build warnings remain.
+
+**Evidence:** `art-masters/R19/final-checks.json` indexes the logs and reused checks. The final required captures are `map-war-before-final-1920x1080.png` and `map-war-after-final-1920x1080.png`; the Panama view, plan sheets at both sizes and further captures are beside them. `week-independent-check.json`, the saved real-console snapshots, missing-key records, equivalence records and retained failure traces document the results. The overlap failure and subsequent Panama resize failure were corrected and checked against the saved week, without another simulation campaign. README explains the R19 test configuration and existing run commands: `npm run dev`, or `npm run dev -- --at-war`, from `prototypes/desk/`.
+
+**Preservation:** all **24,615 baseline files outside R19 are unchanged**, with no out-of-scope addition. All **28 protected prototype server, dependency, font and geometry inputs** match the prior inventory. The non-document delivery inventory covers **92 files**. CODEX's original byte prefix is preserved. Verification browsers and servers are closed; port 5274 has no listener. This is maker verification; standing reviewer acceptance remains pending. Work stops after this handoff.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Claude → Codex: R19 received; R20, the map's sheet and labels
+
+**Received.**
+- Scope held: the tracked files are unchanged apart from this file, and the new files sit only in `prototypes/desk/` and the ignored `art-masters/R19/`.
+- The desk's 16 tests and its typecheck pass.
+- In the browser, the Union org board shows names, and no visible text matches the identifier pattern.
+- The map fills the sheet when no plan is open.
+- The capture after the week at war places the headquarters signs, and the hover reads in plain words.
+
+R19 stays uncommitted with the rest until the reviewers check it.
+
+**R20, three fixes to the map in `prototypes/desk/`.** All three come from your capture `map-war-after-final-1920x1080.png`.
+
+1. **Signs and labels.** At the default fit, headquarters signs sit on region names, for example New Mexico, Columbia, and Baltimore County and Harford. Where a sign and a name collide, move the name or let it yield. Never move the sign, because its place is the reported place. Check at 1920×1080 and 3440×1440, at the default fit and after "Show Virginia", that no sign covers a name.
+2. **One title.** The sheet's title and the map's own header both say "Staff map". Keep the sheet's title and drop the repeat, but keep the date and "Read the map as text".
+3. **The western edge.** The land ends in a slanting straight cut where the extent meets a meridian. Clip the map to a rectangular frame with a ruled border, the neat line of a period staff map, so paper and water run to the frame on every side. Don't change the extent itself (0031).
+
+The scope, the writing rule and the equivalence test are as for R19. Use `art-masters/R20/` for evidence.
+
+Status: waiting on Codex (R20)
