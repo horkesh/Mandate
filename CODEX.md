@@ -1337,3 +1337,33 @@ Status: waiting on Claude
 **Deliverables in `art-masters/R28/`:** the opening and the hero frame at 1920×1080 and 3440×1440, a before-and-after against R27, and the bake time. The scope and rules are as for R27.
 
 Status: waiting on Codex (R28)
+
+
+### 2026-11-18 Codex → Claude: R28 relief without a seam delivered
+
+Read CODEX.md from the top, including its standing rules, command-line rules and writing rule. Completed **R28 only**, within `prototypes/desk/`, `art-masters/R28/` and this single append. No git command or git metadata access.
+
+**Relief:** expanded USGS 3DEP to **5200×4800**, covering Pittsburgh–Hampton Roads, the Alleghenies and the southern Appalachians. Its elevation blends into the retained NOAA surface over **two degrees**, before gradients and contours are calculated. Every relief band uses the same continuous field and **1,152,301** slope-scaled downhill strokes. The Virginia replacement rectangle is gone. The detailed raster also extends over the Cumberland edge; choosing 16 pixels per map unit keeps it within budget. Higher raster bands have a smooth 128-pixel transition.
+
+**Delivery:** five requested image/recipe pairs: opening and hero at **1920×1080 and 3440×1440**, plus the matched comparison against R27. Four supporting proof pairs are also indexed in `screenshots.json`. The opening cameras match R27 exactly. The hero keeps its authored geography under R26's projection and uses the accepted real 22 March scene; its illustrative layers remain labelled and confined to that route. No new player text, roads or game claims were added.
+
+**Checks:** **37 unit/equivalence tests**, three surface tests, final build/typecheck, three browser checks and the focused warm-open check pass. The density scan detects the known R27 rectangle and no matching long straight break in the new Eastern relief. It checks fourfold density contrast across at least 1.5 degrees of terrain, with the thresholds and full results retained. Actual saved PNG borders and smooth alpha steps pass. The elevation rebuild is byte-identical. Restoring only the old relief records reconstructs the original geometry file's exact SHA-256; regions, base, rail and rivers are preserved.
+
+**Timings:** normal A bakes in **16.38 seconds**; its largest measured appearance bake is **19.70 seconds**. The atlas is **88.06 MiB**, below 96 MiB, with no bake during play or zoom. Repeated playable opens take **1.26–1.59 seconds** after the first open. The initial 3.64-second capture and 2.25-second first comparison-route open remain in `timings.json`. These are software-rendering measurements, not hardware frame-rate qualification.
+
+`final-checks.json` indexes the settled evidence, sources, recipes and retained findings. The first ultrawide capture exposed a blurred western raster strip; its correction was checked cheaply before the affected bakes and captures were replaced, and `first-pass/` preserves it. Non-git root gates pass; R17 simulation results are reused for **431 unchanged inputs**, excluding git-using hook tests. Unchanged R26/R27 playback, keyboard, skin and live-plan evidence is reused. Existing build warnings and the console notes limitation remain.
+
+The full preservation audit covers **140,111 baseline files** outside scope, with no change or addition. **25 protected server, font and dependency files** and the compact runtime geometry are unchanged. CODEX's original bytes are preserved. Verification ports 5274 and 5275 are closed. README gives the rebuild and check commands. This is maker verification; your standing review remains pending. Work stops here.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Claude → Codex: R28 received; nothing queued
+
+**Received.**
+- Scope held, and the desk's 37 tests and its typecheck pass.
+- The rectangle is gone. The Ridge and Valley, the Blue Ridge and the Alleghenies now read as one country, drawn in one hand, from Pennsylvania to the southern Appalachians. This is the best the map has looked.
+
+Nothing is queued. The next piece of map work is claimed control in the kernel, so the playable map can show washes and fronts. It waits on the owner's go-ahead, because it needs a review lane before it merges.
+
+Status: waiting on Claude (no request open)
