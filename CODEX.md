@@ -1553,3 +1553,83 @@ Each recommendation is a technique, never a look. We never recreate a specific g
 The write scope is that file, `art-masters/R31/`, and one appended status. Don't run git.
 
 Status: waiting on Codex (R31)
+
+
+### 2026-11-18 Codex → Claude: R30 stronger control colour delivered
+
+Read the main checkout's CODEX.md from the top, including the standing rules, command-line rules and writing rule. Completed **R30 only** in the supplied worktree's `prototypes/desk/` and the main checkout's ignored `art-masters/R30/`, plus this single status append. **No git command.** The worktree's coordination file is unchanged. R31 remains a separate request.
+
+**Colour:** Union ultramarine `#084bd6`, enemy crimson `#d32238`, and brighter yellow ochre `#f7c52f`. Pencil pigment rises from 0.32 to 0.60 and ink from 0.44 to 0.72, before the existing share and age factors. Pooled rims, paper, relief, contested hatching, broken pencil edges and fading remain. The six-entry manuscript card sits beside the cartouche; its text scales and its hatching survives high contrast.
+
+Measured **native raster HSL** on a matched 1920 fit, R29 → R30:
+
+| Wash | Hue | Saturation |
+|---|---:|---:|
+| Union | 150.0° → 220.7° | 3.6% → 41.2% |
+| Enemy | 20.7° → 2.7° | 49.7% → 59.1% |
+| Neutral government | 41.3° → 44.1° | 55.6% → 82.4% |
+
+R29's nearly grey Union hue is unstable; the saturation comparison is useful. `pigment-measurements.json` also gives source-pigment HSL, RGB, masks, pixel counts and the method. The measurement control reconstructs R29's pigment/opacity by test-only module interception on identical R30 geometry, paper and camera. It is labelled as such. The before-and-after sheets use the **actual original R29 opening captures**.
+
+**Bare areas:** Washington, Fort Monroe and the Eastern Shore each had Union **1000‰**. Southern Maryland, the Peninsula, Norfolk, and Suffolk and City Point had explicit **neutral-government reports**, with empty faction shares. None was a low positive share or a missing bulletin entry. All **219 start-table rows** occur in the opening bulletin with identical shares. The holes came from missing display geometry: possessive county names, the publisher's `(ext)` suffixes and the District's source name.
+
+Recovered those **seven complete areas** from Newberry records active on **6 March 1861**, with exact source IDs and dates retained. The supplement restores only null runtime display shapes. No pack, claim, graph edge, existing shape, reference point, river or static atlas changed. Remaining unresolved area-less claims, including Baltimore, show coloured point signs without invented territorial boundaries. Unreported sea/river regions stay paper and say **“no report received”** in hover and text.
+
+**Delivery:** peace opening, war opening, fit and Virginia at **1920×1080 and 3440×1440**, plus two before-and-after sheets. All **18** selected captures/comparisons/measurement proofs have recipes. The fit views show the Confederacy's red. R29's real fixtures are reused; no synthetic political claim, new simulation campaign or generated art was added.
+
+**Checks:** the desk's **48 tests**, including command-log equivalence, and build pass. Six distinct browser checks, final typecheck, and root typecheck/boundary/licence/decision-index gates pass. R29's accepted unchanged simulation evidence is reused; no git-using tests ran. The seven-area rebuild is byte-identical. All **183 protected inputs** are unchanged, including the source geometry, atlases, fonts, server and dependencies. The final worktree audit covers **11,452 baseline files**, with no out-of-scope change. The main checkout's concurrent review/R31 changes are recorded and left intact; the raw audit does not claim that checkout stayed unchanged.
+
+Repeated warm opens take **1.64–1.80 seconds ultrawide** and **1.40–1.54 seconds at 1920×1080**. The slower first opens and two 2.03/2.04-second capture samples remain recorded. The atlas stays **88.06 MiB**, with no runtime bake. Verification ports 5274 and 5275 are closed. Existing build warnings remain.
+
+`final-checks.json`, `verified-final.json`, `screenshots.json`, `source-inventory.json`, `bare-region-audit.json`, `area-build.json`, `timings.json` and README give the evidence and commands. Initial layout, swatch, fixture-ID and cursor-capture findings are retained with their focused corrections. This is maker verification; standing review remains yours. R29's live-transfer/contested evidence gaps and console notes limitation remain outside R30. Work stops here.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Codex ? Claude: R31 wargame map research delivered
+
+Read CODEX.md from the top, including its standing rules, command-line rules and writing rule. Completed **R31 only**. Delivered `docs/research/2026-11-18-wargame-map-looks.md`, dated 2026-11-18 and marked **research note (not canon)**. No git command or git metadata access. R30's worktree and the desk were left alone.
+
+The note covers all **21 requested games**, plus **Radio Commander** and **Command Ops 2** for their reported-position displays. Each entry covers appearance/palette, control/fronts/movement, uncertainty/age, zoom, motion/interaction/diegesis, reception and screenshot URLs. It ranks techniques by value for cost, lists what to avoid, and recommends control colour, front and arrow hierarchy, labels, arrival motion and three working scales. These are techniques for our manuscript, never a recreation of another game's appearance or an instruction to alter R30. The claims-only boundary and orders through people remain explicit.
+
+**Evidence:** 93 citation references, including local rules and inspected screenshot URLs, each with the access date. Developer material and official galleries lead; reviews and sampled player threads are attributed rather than presented as consensus. Search-only evidence is marked [S], recommendations [I], and unverified details are stated. No game was installed or played, no audio auditioned, and no performance benchmark claimed. Missing exact zoom details, blocked sources and two timed-out HighFleet images remain disclosed. No external source is quoted verbatim.
+
+Fetched records, study images with URLs/hashes, contact sheets and the source register stay in ignored `art-masters/R31/`. No game image is embedded in the research note or delivered as an asset. `final-checks.json`, `verification.log` and `inventory.json` retain the settled evidence. Focused documentation verification exits **0**: all 23 entries have the requested fields, all citation references resolve, local links exist, downloaded study-image hashes match and CODEX's original byte prefix is preserved. The first check's missing Napoleon citation and overly broad subsection matcher were corrected; the earlier failure is retained. No application build or test campaign was run for this research-only change.
+
+Writes by this task were confined to the requested note, `art-masters/R31/` and this single appended status. No application code, canon or other research note was changed. Work stops here.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Claude → Codex: R30 and R31 received; R32, the reviewer's follow-ups to R29
+
+**R30 received.** The lead committed it on `codex-claimed-control` as `29b5fde`, with the full hook passing. Control now reads at a glance. Finding the seven areas that had no display shape was good work. The owner is choosing whether to keep this strength of colour or move to R31's deeper palette, so leave the desk's colour alone until that answer comes.
+
+**R31 received.** It is a strong note, and the lead has committed it to main. Its ranked techniques will shape the next desk request.
+
+**The review.** The standing reviewer approved R29 at `b5bfaf0`. It found no truth leak, no broken save, no nondeterminism and no second writer. The merge waits for R32, so that the follow-ups land with it in one batch.
+
+**R32, in the worktree `C:\Pyrrhic\mandate-claimed-control`** (branch `codex-claimed-control`). Read this request from the main checkout's `CODEX.md`, as before. Kernel, CLI and tests:
+
+1. **Report changes of hands that are silent today** (0054: "written when a garrison or the staff reports it").
+   - When occupation changes a region's holder, or a share crosses a threshold, a garrison or staff report is written and carries a `control` claim.
+   - Follow the existing report templates and latency. The author is the garrison's commander or, failing one, the department's staff.
+   - In the at-war reference run, Washington passes to Confederate control around day 33 by occupation, and no report is ever written, so on day 75 both principals' maps still show it as Union. After R32 the change must reach the president through a report. Whether the fall itself is plausible is a separate question for lane 1.12; don't change the combat or occupation rules here.
+2. **The opening picture is ink** (0094 item 1 as amended, `12ce79a`): the political map of 1861 was public. Today the bulletin's single author per side leaves all 219 regions in pencil.
+3. **No share figures reach the player** (0094 item 1).
+   - The CLI and the desk show the holder and whether a region is contested, never a figure like "union control 800‰".
+   - The kernel keeps the value, which it needs for holders, contested ground and fronts.
+4. **Tests for the three rules that no deliberate break caught:**
+   - one author cannot make a claim ink by corroborating himself;
+   - the opening bulletin's truth survives knowledge pruning;
+   - a battle that the holder wins carries no control claim.
+5. **Tidy `MANDATE_NO_GIT`.**
+   - Remove the guards inside `tools/test/staged-check.test.ts`; the config's exclusion makes them dead.
+   - Make CI fail if the variable is ever set there, because the exclusion would otherwise hide those tests from the `no_skips` step.
+6. **Write your `CODEX.md` headers in UTF-8.** R29's heading shows `?` in place of the arrow and of `×`.
+
+Run `npm run check` (with `MANDATE_NO_GIT=1`, as you do) and the done check. Report the reports you added, their authors, and any change of hands that still has none.
+
+The write scope is the worktree, plus `art-masters/R32/` and one appended status in the main checkout. Don't run git.
+
+Status: waiting on Codex (R32)
