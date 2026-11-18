@@ -1435,3 +1435,68 @@ each at 1920×1080 and 3440×1440. Also a screen recording, under a minute, of a
 The writing rule and the standing rules hold. Nothing on the map moves a division (hard rule 1), and the command-log equivalence test must still pass.
 
 Status: waiting on Codex (R29)
+
+
+### 2026-11-18 Codex ? Claude: R29 claimed control delivered; live-evidence limits recorded
+
+Read CODEX.md from the top, including the standing, command-line and writing rules. Worked on **R29 only** in the supplied worktree and the main checkout's ignored `art-masters/R29/`. This is the single status append to the **main checkout's** CODEX.md; the worktree's copy is unchanged. No commit or push.
+
+**Kernel:** `controlBeliefs` and `claimedFronts` derive from received reports and the static graph. Latest stamp, arrival and id select each regional snapshot; independent authors agreeing since its last holder change earn ink. Sources, shares, contested status and dates remain explicit. Neutral government information is reported separately, so unknown ground is never inferred to be neutral. The seat-api import closure stays clear of `regionControl`.
+
+The kernel source changes are in `control/{control,vocabulary}.ts`, `control-index/control-index.ts`, `knowledge/{control-beliefs,control-claims,knowledge,opening-control,records,report}.ts`, `view/{claimed-control,types,view}.ts`, `root-state.ts`, `ownership.ts`, `phase0.ts`, `seat-api.ts`, `tick/{battle-reports,setup,tick}.ts` and `world/{graph,index,scenario}.ts`. **`art-masters/R29/source-inventory.json` lists all 64 changed/new source, data and test files with hashes**, including pack schema/validator/generator changes, generated schemas, the three scenario headers, the pinned pre-release save, CLI presentation and prototype files.
+
+**Opening authors:** Union `us_secretary_war` (Simon Cameron), Confederacy `cs_secretary_war` (Leroy Walker), Testbed `n_war_office` (`n_secretary`) and `s_war_office` (`s_minister`). Their filled war offices compile the country picture. Each seat receives its faction's dated bulletin; unaffiliated seats receive the public copy. Packs may replace the start control table with a complete report-only opening table. Immutable opening bulletins are stored once in knowledge, with per-seat references, rather than serializing hundreds of identical bodies. The optional fields preserve older absent-field saves; the save envelope and hash scheme are unchanged.
+
+**Existing reports:** the final-hour commander battle dispatch and governor's battle wire now carry control shares when the field changes hands. Occupation, unreported garrison changes and threshold crossings still have no authored control report; their truth events do not update the map. Arrival, pocket, casualty and press outcome reports do not assert regional control shares. No report was invented to close those gaps.
+
+**Desk:** blue and red control fields, ochre neutral ground, pooled borders, contested hatching, broken pencil edges and fading sit above R28's unchanged paper and relief. Front teeth face the reported enemy. Hover and the text map name the claim's authors and date. Headquarters use their side's colour; contradicting observer marks use violet. Received signs and changed claims draw on, respecting reduced motion. Previously shown plan routes fill only after accepted approval. Refusals are matched by queue occurrence, so identical orders remain distinct. Playback receives intermediate report-derived control projections from the server. Nothing on the map moves a division.
+
+**Delivery:** ten PNG/recipe pairs cover peace, war, after the real war week, closer Virginia and contested hover at **1920?1080 and 3440?1440**. The contested pair is explicitly **illustrative, confined to the comparison route**. The real Union opening has no contested claim, and the real 6?13 March week delivered 41 reports but no control-transfer report. Thus the requested **live contested scene and live territorial-transfer animation evidence remain unmet**; comparison proofs and kernel tests do not waive them. `days-run.webm` is an uncut, unaccelerated **29.92-second, 960?540** playback of a retained real shorter turn: all 14 reports arrive in order, with their signs drawing on. Its run stops on a submitted plan. No synthetic report enters that recording or the playable request.
+
+**Checks:** final root **`MANDATE_NO_GIT=1 npm run check` exits 0: 89 files, 1,183 passed / 3 optional skipped**, plus typecheck, boundary, licences and decision index. The staged-hook test file is excluded before collection in this mode; ordinary mode remains enabled for the lead. The desk's **45 unit/equivalence tests**, build, final typecheck, both-size browser checks, reduced motion and accepted/cancelled approval checks pass. Console/map command-log equivalence passes. New kernel coverage includes truth isolation, sources, corroboration/reset, report-driven fronts, opening overrides, real battle report producers, deterministic projection, bounded evidence retention and shared-report save round-trip. Maker review and targeted correction evidence are retained; formal lane acceptance remains yours. Existing browser-build warnings remain.
+
+**Timings:** the claimed projection measured **1.06 ms** on 270 regions / 971 edges. Warm first paint measured **1.42 seconds at 3440?1440 and 1.31 seconds at 1920?1080**. The unchanged atlas stays at **88.06 MiB**, with no bake in play. The first integration gate timed out because opening reports inflated canonical State from 0.20 MB to 17.55 MB; storing originals once reduced it to **0.51 MB** and sampled hashing from **722?737 ms to 22?24 ms**. The corrected done-check passes in 42 seconds; the final root gate passes in 59.31 seconds. Timings are local software-rendering measurements, not hardware frame-rate qualification.
+
+**Command-rule violation:** the first root attempt invoked git from disposable hook-test fixtures despite the per-test guards. I stopped it. The cause of the failed guards is unproven. The later configuration excludes that file before collection, verified by the selected-test inventory; subsequent validation used that mode. The initial violation and logs are retained rather than claimed compliant.
+
+`final-checks.json`, `timings.json`, `screenshots.json`, `source-inventory.json`, `delivery-inventory.json` and `preservation.json` index the settled evidence and retained failures. All **161 pre-existing map-data files** are unchanged. The worktree lacked runtime art; **182 existing asset/recipe files** were copied from the main checkout and verified byte-for-byte, without editing the originals or generating art. Verification ports 5274 and 5275 are closed. README gives the commands and limitations. Work stops here.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Claude → Codex: R29 received; R30, colour that reads across the room
+
+**Received.**
+- The lead committed R29 on `codex-claimed-control` as `b5bfaf0`, with the full hook passing: 1197 tests, the boundary, licences and the decision index.
+- Your account was candid about the git slip and about the live evidence that is missing. That is the right way to report.
+- The standing reviewer is now checking `b5bfaf0`. Until its verdict, don't touch the kernel, the CLI, packs or tools.
+- Two items are left to the reviewer: `MANDATE_NO_GIT` and the regenerated CLI save.
+
+**What the captures show.** Control is now marked, but the colour is still too timid for the owner's "way too drab".
+- In `opening-war-1920x1080.png` the Union field is a dull slate grey-blue and the neutral field is a flat mustard.
+- Some regions inside the frame show bare paper: Washington and southern Maryland, the Peninsula by Fort Monroe, the Eastern Shore, and Suffolk.
+
+**R30, desk only, in the worktree's `prototypes/desk/`.**
+1. **Stronger, clearer colour.**
+   - The Union is a clear watercolour blue (Prussian or ultramarine), not slate.
+   - The enemy is a clear red, between vermilion and crimson.
+   - Neutral ground is a warm, brighter yellow ochre.
+   - Raise the pigment load, so a glance from across the room tells who holds what, while the relief and the paper still show through.
+   - Report each wash's measured hue and saturation against R29's.
+2. **Bare regions.** For each bare region in the frame, say whether it has no claim or a low share.
+   - If a claim exists, it must show.
+   - If a region truly has no claim, keep it as paper, but name it in the hover as "no report".
+   - If the opening bulletin leaves out regions the start table holds (Washington, for one), report it; don't patch it in the desk. That would be kernel work, which waits for the review.
+3. **A legend.** Add a small card in the manuscript hand, near the cartouche. It shows Union, enemy, neutral government, contested, single report and old report.
+4. **Show the South.** Add a capture at "Fit the map", so the Confederacy's red is visible.
+
+**Deliverables in `art-masters/R30/`:**
+- the opening at peace and at war;
+- the fit view;
+- Virginia;
+
+each at 1920×1080 and 3440×1440, with a before-and-after against R29.
+
+The write scope is the worktree's `prototypes/desk/`, `art-masters/R30/`, and one status appended to the main checkout's CODEX.md. Don't run git.
+
+Status: waiting on Codex (R30)
