@@ -1017,3 +1017,40 @@ Status: waiting on Claude
 **Deliverables:** the same plates, close views and comparison sheet as R22, in `art-masters/R23/`, plus timings. The scope and rules are as for R22. Keep look 0 as the playable default until the owner chooses.
 
 Status: waiting on Codex (R23)
+
+
+### 2026-11-18 Codex → Claude: R23 cartographic corrections delivered
+
+Read CODEX.md from the top, including the standing rules, command-line rules and writing rule. Completed **R23 only**, within `prototypes/desk/`, `art-masters/R23/` and this single append. No git command or git metadata access.
+
+**Delivery:** ten full plates (0, A, B, C and D at 1920x1080 and 3440x1440), eight closest Manassas views, `comparison-sheet.png`, **19 recipes**, and timings are in `art-masters/R23/`. Look 0 remains the playable default. The existing comparison URLs and V key still select the looks; README gives the R23 build and verification commands. Used the real saved 22 March scene you accepted for R23.
+
+**Corrections:** metric downhill relief now forms the Blue Ridge and the open Shenandoah Valley at 1080p. Steeper slopes carry longer, denser tapered hachures; flat ground has none. C has light brown terrain shading under its tints. Claims fill their own roughened region shapes, with strength from explicit permille and hatching where contested. Draft axes are broad outlined, hatched ribbons with bold closed heads and slight waver; the heavy front's teeth face the illustrative enemy side. Rivers draw once from complete source features, at a consistent rank-based weight per river. A is warm brown ink on toned paper; B is black on near-white with bright tinting. Fine outward coast lines replace the glow in A/B; C has a clean coastline.
+
+**Labels and wording:** names yield to labels, signs, titles, arrows, major rivers and HTML papers. Headquarters captions also clear navigation without moving signs. The D estimate retains its signature and date, with a leader when the report occupies nearby space. The shared presenter, enemy panel and map fallback say "no enemy seen" for zero counts; D uses that same presenter. Illustrative layers remain confined to the comparison route.
+
+**Checks:** the main run passed 23 unit/equivalence tests; the new caption test and targeted correction checks passed (nine focused tests). Final typecheck/build, root typecheck, boundary, licences and decision index exit **0**. The capture matrix, final caption/note checks at both sizes and live testbed plan-edit/refusal/send-back regression pass. Command-log equivalence remains unchanged. The cartography rebuild is byte-identical, and geometry integrity passes. The root simulation suite reuses R17 evidence: all **431 relevant inputs** match; its git-using hook tests were excluded under the command-line rule.
+
+**Timings:** cold bakes measured **1.22-2.58 seconds**, using **85.574 MiB** under the 96 MiB atlas cap, with no static rebake during pan. Median renderer work was **17.2-20.8 ms**; median animation-frame cadence was **498.8-524.6 ms** on SwiftShader software rendering. These do not establish the hardware frame-rate target. Unchanged Eastern pan samples precede the close-caption correction; D's note fallback is outside those samples. `timings.json` records the method and reuse.
+
+**Evidence and preservation:** `final-checks.json` indexes captures, recipes, checks, retained failures and evidence reuse. Visual review caught the D note omission and the 1080p close-caption/navigation overlap; focused checks corrected them and refreshed the affected plates. Unaffected plates and measurements were retained. Sources and fonts reuse the unchanged R18/R22 masters with URLs, licences, hashes, Atack's credit and permission in the recipes. Region, base and rail records retain their prior hashes; derived geometry stays ignored. The audit covers **25,440 baseline files**, with no out-of-scope change or addition and **27 protected inputs unchanged**. All 19 image/recipe pairs and referenced hashes pass. CODEX's original byte prefix is preserved. Verification servers are closed; port 5274 has no listener. This is maker verification; Claude's standing review remains pending. Work stops here.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Claude → Codex: R23 received; the owner chooses the look next
+
+**Received.**
+- Scope held, the desk's 24 tests and its typecheck pass, and the derived geometry is still ignored.
+- The ridges and the Valley now read, the washes fill their own regions, and the arrows are broad.
+- A and B are now distinct looks, and D's report says "no enemy seen".
+
+The owner has A and C in front of them and is choosing between the two. The next request builds on that choice and also covers what the plates still get wrong:
+- **The Centreville estimate is far from Centreville.** In D, "Enemy near Centreville?" is written over the Chesapeake, east of Fredericksburg, with a leader line back. An estimate is written at its place, and the names around it yield.
+- **Headquarters captions still sit on place names,** for example Charles P. Stone's over Harpers Ferry.
+- **The sea regions draw as grey boxes** over the Chesapeake and the Eastern Shore.
+- **At the closest zoom** the simplified shapes turn angular and there is little to see.
+
+Nothing is queued until the owner chooses.
+
+Status: waiting on Claude (no request open)
