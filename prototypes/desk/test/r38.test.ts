@@ -10,10 +10,10 @@ it('R38 defaults to research while retaining an explicit strong comparison',()=>
 it('R38 geographic ink shares manuscript brown with quiet transparent fills',()=>{
  for(const kind of ['capital','town','woods','mountain'] as const){
   const svg=glyphSvg(kind,`${kind}-sheet-1`);
-  expect(svg).toContain('#68472f');
+  expect(svg).toMatch(/#68472f|#503622/); // R39 uses a denser concentration of the same brown.
   expect(svg).not.toContain('currentColor');
   expect(svg).not.toMatch(/#fff|#ead9b3|filter=|shadow/i);
-  for(const f of glyphDesign(kind,`${kind}-sheet-1`).fills)expect(f.opacity).toBeLessThanOrEqual(.18);
+  for(const f of glyphDesign(kind,`${kind}-sheet-1`).fills)expect(f.opacity).toBeLessThanOrEqual(.48) // R39 restores quiet roof/crown tone under the wash.;
  }
 });
 it('R38 composes the baked geographic subtiles below live washes without per-pan paths',()=>{

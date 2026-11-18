@@ -1,15 +1,15 @@
 {
   "asset": "public/map-signs/marsh-3.svg",
-  "request": "R38",
-  "brief": "Main CODEX.md R38 ranks 1-3 material trial",
+  "request": "R39",
+  "brief": "Main CODEX.md R39 legibility, hierarchy and source-relief flank hatching",
   "date": "2026-11-18",
   "plan": "Previously confirmed ChatGPT Pro 100; no image service",
   "client": "Codex; client version not exposed",
   "model": "Procedural SVG, no image model",
   "apiKeyUnset": true,
   "tool": "TypeScript glyphDesign; original deterministic pen geometry retained",
-  "mode": "Brown manuscript ink, fine outlines and transparent quiet roof/crown washes",
-  "prompt": "Unchanged R36 geographic designs in manuscript brown; transparent interiors, quiet ink fills, fine outlines. No paper-white fills, badges, shadows, figures, flags, emblems or game-art reference.",
+  "mode": "Concentrated brown manuscript ink, stronger capital outlines, translucent roof/crown tone",
+  "prompt": "R36 geographic compositions with stronger brown ink under both washes, transparent interiors and legible roof/crown tone. Source relief hachures join wide hills to existing elevation data. No paper-white fills, badges, shadows, figures, flags, emblems or game-art reference.",
   "references": [
     {
       "title": "A. Lindenkohl, Military map of south-eastern Virginia, 1864, LOC 99448891",
@@ -29,11 +29,11 @@
   "runtimeSeed": "Stable feature-id hash selects a baked composition",
   "humanEdits": [],
   "postProcess": [
-    "Material only; all path and circle coordinates verified against R36 source SVG"
+    "Material only; R36 footprint and placement geometry retained; mountain generic flank strokes replaced at bake by spatially thinned original relief hachures"
   ],
   "provenanceMarks": "No model metadata created or removed",
-  "sha256": "357052d1aeddba6619a6c970f238c7f5e6052fb513ecb028bc5781495921ace2",
-  "scriptSha256": "66b9de3099f950a32382a3c8d466961a15f4f3fb00f47a571242dcdbe83d8a79",
-  "glyphModuleSha256": "98a3870a59658009c641013b939a26a5ff56cd15dd1e3554da6cedd57124c2ef",
-  "priorSha256": "cc61776fe1d0bcf3738e55ac83e10e651eca37a60cfa24dd63efd68205ac4cff"
+  "sha256": "641eabe40b6385cbb49f09233ace5acf422bc3df986cd5b4b5f647ad72208135",
+  "scriptSha256": "36a93f8b2a30e98f86adf8f49329eecdb938260df9483c35a7cf7c61e3161480",
+  "glyphModuleSha256": "66d3aafd3782ed5b80ded4591150c8263465fd4487bdac06b4f9d8cafdade10b",
+  "priorSha256": "357052d1aeddba6619a6c970f238c7f5e6052fb513ecb028bc5781495921ace2"
 }

@@ -839,3 +839,12 @@ there; set `R38_RUN` to a fresh artifact directory for each correction run.
 Use the earlier `DESK_EVIDENCE_REQUEST` setting with R38 for unit evidence.
 The evidence README records checks, reused results and retained failures.
 This is maker verification.
+
+
+### R39 geographic legibility
+
+The baked signs retain R38's placement and composition below live claimed washes. Stronger brown strokes and roof/crown tone have bounded ink load (.62 wide/theatre, .65 close); capital outlines stay stronger than town outlines. Wide hill flanks use spaced original relief hachures within unchanged footprints. Research stays default.
+
+Main `art-masters/R39/README.md` indexes the native R36/R38/R39 comparison sheets, source/placement proofs, per-band and palette contrast measurements, texture inventory and software-rendering timings. The controlled current-ink target is sign contrast >= rails and < report/front/name references under the same wash; all 3,456 samples pass. Age fading and operational conflict priority remain unchanged.
+
+Verification: `npm test`, `npm run build`, `npx playwright test --config playwright.r39.config.ts` (outputs under main R39). `npx tsx scripts/r39-contrast.ts` runs the offline controlled proof; `R39_PROOF_BAND=close` limits it to the affected band. The retained delivery reuses passing wide/theatre proof conditions and signs-off captures. No git-using root suite was run.

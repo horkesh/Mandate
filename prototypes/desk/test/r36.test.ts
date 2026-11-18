@@ -30,7 +30,7 @@ it('R36 places a name immediately beside its own sign',()=>{
 });
 it('R36 draws fine brown open hills rather than dark filled peaks',()=>{
  const svg=glyphSvg('mountain','mountain-sheet-1');
- expect(svg).toContain('#68472f');
+ expect(svg).toMatch(/#68472f|#503622/); // R39 strengthens the brown while preserving open hills.
  expect(svg).not.toContain('fill-opacity="0.21"');
  expect(Math.max(...glyphPaths('mountain','mountain-sheet-1').flat().map(p=>Math.abs(p[1])))).toBeLessThan(14);
 });
