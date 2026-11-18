@@ -13,6 +13,8 @@ Status: accepted (2026-11-18). The owner approved the kernel work ("Go ahead") a
 1. **Claimed control is a belief, derived on read and never stored** (hard rule 5), like `enemyBeliefs`.
    - For each region it holds the shares by faction as he has been told them, the holder or "contested" by 0054's rule, the day it stands as of, and the reports it rests on (hard rule 6).
    - It is **ink** when two or more authors agree on the holder since its last change, and **pencil** when it rests on one author. Ageing is shown from its date (0013).
+   - The opening picture counts as ink, because the political map it records was public. Without this, all 219 regions draw in pencil, since the bulletin has one author per side (the reviewer's finding, `review-claimed-control.md`, before the merge).
+   - The player sees the holder, and whether a region is contested, never the share as a figure. How a commander perceives shares is an open question.
 2. **The opening picture.** At the scenario's start, each seat holds one report of the country as it stands. It is dated the start day, written from the post the pack names for the faction, and carries a control claim for each region from the scenario's start table.
    - This reads truth once, at the start, because in March 1861 the political map was public.
    - A pack whose start is not public knowledge supplies its own opening table in place of the start table.
