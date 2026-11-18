@@ -1,5 +1,11 @@
 import { defineConfig } from 'vitest/config';
 
+// CI must collect the full suite, including staged-hook tests. Even an empty
+// setting is rejected so a future change cannot silently mask those tests.
+if (process.env.CI && Object.hasOwn(process.env, 'MANDATE_NO_GIT')) {
+  throw new Error('MANDATE_NO_GIT must be unset in CI');
+}
+
 export default defineConfig({
   test: {
     // Pack tests live with their pack, since setting names may not appear under packages/ (decision 0003).

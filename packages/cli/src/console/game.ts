@@ -94,6 +94,7 @@ export class ConsoleGame {
   controlFromReports(reports:readonly phase0.ReportView[]):Pick<phase0.SeatView,'controlBeliefs'|'claimedFronts'> {
     return phase0.claimedControlView(this.world.map,reports.map((r):phase0.KnownReport=>({
       id:r.id,knownReceivedDay:r.receivedDay,knownRoute:r.route,knownVia:r.via,
+      ...(r.openingControl === true ? {knownPublicOpening:true as const} : {}),
       knownBody:{reportType:r.type,reportSubtype:r.subtype,reportAuthor:r.author,reportAuthorPost:r.authorPost,
         reportSubjectKind:r.subjectKind,reportSubjectId:r.subjectId,
         reportClaims:r.claims.map(c=>({claimKind:c.kind,claimRegion:c.region,claimValue:c.value,claimToken:c.token,claimConfidence:c.confidence})),

@@ -49,7 +49,7 @@ export function knowledgeOf(state: State, seat: SeatId, cache?: KnowledgeCache):
   const opening = openingReportOf(state, held.knownOpeningControl);
   const previous = cache?.get(held);
   if (previous?.opening === opening) return previous.knowledge;
-  const knowledge = { ...held, knownControlReports: [opening, ...(held.knownControlReports ?? [])] };
+  const knowledge = { ...held, knownControlReports: [{ ...opening, knownPublicOpening: true as const }, ...(held.knownControlReports ?? [])] };
   cache?.set(held, { opening, knowledge });
   return knowledge;
 }

@@ -24,7 +24,7 @@ export function claimedControlView(map: ControlMap, reports: readonly KnownRepor
       contested,
       neutralGovernment: government?.neutral ?? false,
       asOfDay: latest.report.knownBody.reportDay,
-      mark: corroboration === undefined ? 'pencil' : 'ink',
+      mark: latest.report.knownPublicOpening === true || corroboration !== undefined ? 'ink' : 'pencil',
       sources: Object.freeze(sources),
     }));
   }

@@ -75,6 +75,21 @@ it('R29 approves only submitted orders, forgets cancellation, and keeps sessions
 it('R29 names the faction and government in control dispatches and keeps the opening readable',()=>{
  const game=new ConsoleGame({pack:'testbed'}),view=game.morning().view;
  expect(dispatchLog(view)[0]).toContain('opening country report');expect(dispatchLog(view)[0]!.length).toBeLessThan(400);
- const source=view.reports[0]!;const paper={...source,day:1,claims:[{kind:'control',token:'north',region:'w_valley',value:650,confidence:1000},{kind:'control-government',token:'border',region:'w_valley',value:1,confidence:1000}]} as any;
- const text=dispatchLog({...view,reports:[paper]})[0]!;expect(text).toContain('north control 650‰');expect(text).toContain('neutral government border');
+ const source=view.reports[0]!;const paper={...source,openingControl:undefined,reportedControl:[{region:'w_valley',holder:'north',contested:false}],day:1,claims:[{kind:'control',token:'north',region:'w_valley',value:650,confidence:1000},{kind:'control-government',token:'border',region:'w_valley',value:1,confidence:1000}]} as any;
+ const text=dispatchLog({...view,reports:[paper]})[0]!;expect(text).not.toMatch(/650|‰/);expect(text).toContain('neutral government border');
+});
+
+it('R32 hides share figures in hover text while naming holder and contested ground',()=>{
+ const name=presenter({'faction.north':'Northern government','person.staff.name':'The staff'}).name;
+ const b={...belief('opening'),contested:true} as any;
+ const text=claimWords('The valley',b,name,d=>`day ${d}`);
+ expect(text).toContain('Northern government holds');
+ expect(text).toContain('Contested ground');
+ expect(text).not.toMatch(/800|100|‰|permille/);
+});
+
+it('R32 preserves opening ink in server playback reconstruction',()=>{
+ const game=new ConsoleGame({pack:'testbed'}),view=game.morning().view;
+ expect(Object.values(view.controlBeliefs).every(b=>b.mark==='ink')).toBe(true);
+ expect(game.controlFromReports(view.reports)).toEqual({controlBeliefs:view.controlBeliefs,claimedFronts:view.claimedFronts});
 });

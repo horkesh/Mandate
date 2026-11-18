@@ -10,4 +10,6 @@ export interface KnownReport {
   readonly knownRoute: RouteKind;
   readonly knownVia: readonly PostId[];
   readonly knownBody: ReportBody;
+  /** Derived when resolving the shared opening bulletin, never inferred from a date or author. */
+  readonly knownPublicOpening?: true;
 }

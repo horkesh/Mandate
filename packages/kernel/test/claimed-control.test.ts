@@ -43,10 +43,10 @@ describe('the seat’s claimed control', () => {
     expect(viewFor(w, s, seatIdFor(P('b_lead'))).reports[0]).toMatchObject({ author: 'b_min', authorPost: 'b_office', day: 0 });
     expect(s.regionControl[R('a_front')]).toEqual({ a: 100 });
     expect(view.controlBeliefs[R('a_front')]).toEqual({
-      shares: { b: 1000 }, holder: b, contested: false, neutralGovernment: false, asOfDay: 0, mark: 'pencil',
+      shares: { b: 1000 }, holder: b, contested: false, neutralGovernment: false, asOfDay: 0, mark: 'ink',
       sources: [{ report: view.reports[0]!.id, author: 'a_sec', authorPost: 'a_office', asOfDay: 0 }],
     });
-    expect(view.claimedFronts).toEqual(expect.arrayContaining([expect.objectContaining({ own: region, faces: R('a_front'), faction: a, enemy: b, asOfDay: 0, mark: 'pencil' })]));
+    expect(view.claimedFronts).toEqual(expect.arrayContaining([expect.objectContaining({ own: region, faces: R('a_front'), faction: a, enemy: b, asOfDay: 0, mark: 'ink' })]));
   });
 
   it('writes each opening report body once and resolves the seat’s copy after a save round-trip', () => {
@@ -116,12 +116,38 @@ describe('the seat’s claimed control', () => {
     expect(view.reports.find((r) => r.id === 'evening')?.claims.map((c) => c.kind)).toEqual(['control']);
   });
 
+  it('does not let one author corroborate himself after the holder changes', () => {
+    const w = world();
+    let state = createState(w, { seed: 1 });
+    state = tell(state, 'first-loss', 'a_sec', 2, 3, [control(region, b, 1000)]);
+    state = tell(state, 'same-author', 'a_sec', 3, 4, [control(region, b, 900)]);
+    const latest = viewFor(w, state, seat).controlBeliefs[region];
+    expect(latest).toMatchObject({ holder: b, mark: 'pencil', sources: [{ report: 'same-author' }] });
+    const aged = pruneKnowledge(state, w.rules.templates, 200, w.map.world.rules.supplyControlPermille).state;
+    expect(viewFor(w, aged, seat).controlBeliefs[region]).toEqual(latest);
+  });
+
+  it('preserves the shared opening truth when another held report expires', () => {
+    const w = world();
+    const start = createState(w, { seed: 1 });
+    const openingId = viewFor(w, start, seat).reports[0]!.id;
+    const openingTruth = start.reportTruth[openingId];
+    expect(openingTruth?.truthTerms.length).toBeGreaterThan(0);
+    const told = tell(start, 'expire-me', 'a_sec', 1, 2, [{ ...control(region, b, 2), claimKind: 'enemy-strength' }]);
+    const pruned = pruneKnowledge(told, w.rules.templates, 200, w.map.world.rules.supplyControlPermille);
+    expect(pruned.counts.byAge).toBeGreaterThan(0);
+    expect(pruned.state.reportTruth[toId('message', 'expire-me')]).toBeUndefined();
+    expect(pruned.state.reportTruth[openingId]).toEqual(openingTruth);
+    expect(viewFor(w, pruned.state, seat).controlBeliefs).toEqual(viewFor(w, start, seat).controlBeliefs);
+    expect(viewFor(w, decodeSave(encodeSave({ worldHash: '0'.repeat(64), state: pruned.state })).state as unknown as State, seat).controlBeliefs).toEqual(viewFor(w, start, seat).controlBeliefs);
+  });
+
   it('uses the explicit neutral report and shows its source alongside the control report', () => {
     const w = world();
     const start = createState(w, { seed: 1 });
     const neutral = tell(start, 'government', 'a_late', 3, 4, [{ ...control(region, 'neutral_department', 1), claimKind: 'control-government' }]);
     const view = viewFor(w, neutral, seat);
-    expect(view.controlBeliefs[region]).toMatchObject({ neutralGovernment: true, mark: 'pencil', sources: [{ author: 'a_sec' }, { report: 'government' }] });
+    expect(view.controlBeliefs[region]).toMatchObject({ neutralGovernment: true, mark: 'ink', sources: [{ author: 'a_sec' }, { report: 'government' }] });
     const aged = pruneKnowledge(neutral, w.rules.templates, 200, w.map.world.rules.supplyControlPermille).state;
     expect(viewFor(w, aged, seat).controlBeliefs[region]).toEqual(view.controlBeliefs[region]);
   });

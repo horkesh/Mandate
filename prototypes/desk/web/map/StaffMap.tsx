@@ -15,7 +15,7 @@ import type { StudyMarks } from './renderer.ts';
 import { LOOKS, LOOK_NAMES, readLook } from './skins.ts';
 import { STUDY } from './study-strings.ts';
 import { M } from './strings.ts';
-import {claimWords,controlColour,CONTROL_COLOURS} from './control.ts';
+import {claimWords,controlColour,CONTROL_COLOURS,reportControlWords} from './control.ts';
 import { isTyping, SettingsContext } from '../settings.ts';
 import { S } from '../strings.ts';
 import hq from './icons/hq-army.svg?raw';
@@ -194,7 +194,7 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
 
 function MapFallback({request,date,strings}:{request:SeatRequest;date:string;strings:Readonly<Record<string,string>>}) {
   const {name:t,text:display}=presenter(strings);
-  return <><ul>{request.view.reports.map(r=><li key={r.id}>{t(r.author,'person')}, {reportDate(request.requestDay,date,r.day)}: {r.claims.map(c=>`${c.kind==='enemy-strength'&&c.value===0?S.noEnemySeen:S.claims[c.kind]??display(c.kind)}${c.region?` at ${t(c.region,'region')}`:''}${c.value?`: ${display(String(c.value))}`:''}`).join('; ')}</li>)}</ul>{request.menu.menuKind==='principal'&&request.menu.reviews.map(r=><section key={r.post}><h3>{t(r.holder,'person')}</h3>{r.plan.axes.map(a=><p key={a.name}>{display(a.name)}: {a.regions.map(id=>t(id,'region')).join(' → ')}</p>)}</section>)}</>;
+  return <><ul>{request.view.reports.map(r=><li key={r.id}>{t(r.author,'person')}, {reportDate(request.requestDay,date,r.day)}: {[...reportControlWords(r,t),...r.claims.filter(c=>c.kind!=='control').map(c=>`${c.kind==='enemy-strength'&&c.value===0?S.noEnemySeen:S.claims[c.kind]??display(c.kind)}${c.region?` at ${t(c.region,'region')}`:''}${c.value?`: ${display(String(c.value))}`:''}`)].join('; ')}</li>)}</ul>{request.menu.menuKind==='principal'&&request.menu.reviews.map(r=><section key={r.post}><h3>{t(r.holder,'person')}</h3>{r.plan.axes.map(a=><p key={a.name}>{display(a.name)}: {a.regions.map(id=>t(id,'region')).join(' → ')}</p>)}</section>)}</>;
 }
 
 export function MapReview({destination="",data,execute,busy,textEdit,table=false,reviewOpen=true,mapProps={}}:{destination?:string;data:DeskSnapshot;execute:(line:string)=>Promise<DeskReply|undefined>;busy:boolean;textEdit?:(line:string)=>void;table?:boolean;reviewOpen?:boolean;mapProps?:TableMapProps}) {

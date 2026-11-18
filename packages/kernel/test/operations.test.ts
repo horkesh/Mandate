@@ -255,11 +255,19 @@ describe('battle reports: the night of the battle, hour by hour, and the returns
     const { told, day, results } = fight('high', 'a_state', { ...TRAPPED, mid: { a: 490, b: 510 } });
     const endShares = results[day.bdayDay - 1]!.state.regionControl[R('mid')];
     expect(endShares![F('a')]).toBeGreaterThan(endShares![F('b')] ?? 0);
-    const reports = told('a_lead').filter((r) => r.knownBody.reportClaims.some((c) => c.claimKind === 'control'));
+    const reports = told('a_lead').filter((r) => r.knownBody.reportDay === day.bdayDay && r.knownBody.reportClaims.some((c) => c.claimKind === 'control'));
     expect(reports.map(({ knownBody: body }) => [body.reportHour, body.reportSubtype])).toEqual([[null, 'governor-wire'], [21, null]]);
     for (const { knownBody: body } of reports) {
       expect(Object.fromEntries(body.reportClaims.filter((c) => c.claimKind === 'control').map((c) => [c.claimToken, c.claimValue]))).toEqual(endShares);
     }
+  });
+
+  it('carries no control claim when the existing holder wins the battle', () => {
+    const { told, results, day } = fight('high', 'a_state');
+    expect(results[day.bdayDay - 1]!.state.regionControl[R('mid')]![F('a')]).toBeGreaterThan(600);
+    const reports = told('a_lead').filter(({ knownBody: body }) => body.reportDay === day.bdayDay && (body.reportClaims.some(c => c.claimKind === 'battle-phase') || body.reportSubtype === 'governor-wire'));
+    expect(reports).toHaveLength(5);
+    expect(reports.every(({ knownBody: body }) => body.reportClaims.every(c => c.claimKind !== 'control'))).toBe(true);
   });
 
   it('on the evening a breakout fails, the post above the taken commander does not wire that the phase went well (N12)', async () => {

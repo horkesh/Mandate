@@ -40,6 +40,10 @@ export interface ReportView {
   readonly subjectKind: SubjectKind;
   readonly subjectId: string;
   readonly claims: readonly ClaimView[];
+  /** Qualitative holdings in this report, derived with the pack's threshold. */
+  readonly reportedControl?: readonly { readonly region: RegionId; readonly holder: FactionId | null; readonly contested: boolean }[];
+  /** The public opening picture; preserved by presentation playback. */
+  readonly openingControl?: true;
   readonly day: number;
   readonly hour: number | null;
   readonly advice: AdviceView | null;

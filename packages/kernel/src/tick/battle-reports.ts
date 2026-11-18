@@ -35,6 +35,7 @@ import { perceptionBias, traitsOf } from '../people/traits.ts';
 import type { State } from '../root-state.ts';
 import { headquartersOf, fieldPosts, postFaction } from '../seats/posts.ts';
 import { fire, sendReport, type TickContext } from './context.ts';
+import { controlReports } from './control-reports.ts';
 
 const claim = (kind: ReportClaim['claimKind'], region: RegionId | null, value: number, token: string | null, confidence: number): ReportClaim => ({
   claimKind: kind,
@@ -90,6 +91,7 @@ export function battleReports(ctx: TickContext, state: State, controlBefore: Reg
     }
   }
   pocketReports(ctx, state);
+  controlReports(ctx, state, controlBefore);
 }
 
 /** Each commander's wires at the end of each phase, stamped with its hour. */

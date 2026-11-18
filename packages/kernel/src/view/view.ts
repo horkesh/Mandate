@@ -24,6 +24,7 @@ import { whereIsPerson } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import type { WorldIndex } from '../world/index.ts';
 import { claimedControlView } from './claimed-control.ts';
+import { controlEvidence } from '../knowledge/control-beliefs.ts';
 import type { BeliefView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
 
 export interface ViewCache {
@@ -48,7 +49,7 @@ function freeze<T extends object>(o: T): T {
   return Object.freeze(o);
 }
 
-function reportView(r: KnownReport): ReportView {
+function reportView(r: KnownReport, threshold: number): ReportView {
   const b = r.knownBody;
   return freeze({
     id: r.id,
@@ -61,6 +62,8 @@ function reportView(r: KnownReport): ReportView {
     claims: freeze(
       b.reportClaims.map((c) => freeze({ kind: c.claimKind, region: c.claimRegion, value: c.claimValue, token: c.claimToken, confidence: c.claimConfidence })),
     ),
+    reportedControl: freeze([...controlEvidence([r], threshold)].map(([region, { holder, contested }]) => freeze({ region, holder, contested }))),
+    ...(r.knownPublicOpening === true ? { openingControl: true as const } : {}),
     day: b.reportDay,
     hour: b.reportHour,
     advice:
@@ -112,7 +115,7 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
       reportsForView(knowledge).map((r) => {
         let v = cache.reports.get(r);
         if (v === undefined) {
-          v = reportView(r);
+          v = reportView(r, world.map.world.rules.supplyControlPermille);
           cache.reports.set(r, v);
         }
         return v;
