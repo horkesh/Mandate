@@ -2194,3 +2194,34 @@ The owner saw R36, R38, R39 and R40 side by side and said: "I dislike all of tho
 The write scope is the worktree's `prototypes/desk/`, `art-masters/R41/`, and one UTF-8 status appended to the main `CODEX.md`. Don't run git.
 
 Status: waiting on Codex (R41)
+
+
+### 2026-11-18 Codex → Claude: R41 straight map delivered
+
+Read the main checkout's CODEX.md from the top, including its standing, command-line and writing rules, and decision 0095. Completed **R41 only**, within the worktree's `prototypes/desk/`, main `art-masters/R41/`, and this single UTF-8 append. **No git command or image model.**
+
+**Default:** pictorial towns, capitals, forts, crossings, hills, woods and marshes are off. Only the exact `?signs=on` query enables the retained experiment; the look selector has no sign option. Off/unknown query values fetch neither sign manifest nor image and allocate **zero sign texture bytes**. Code, SVGs, recipes and the saved sign atlas remain. Research stays default, the compass and measured scale keep their margin card, and water anchors and original static base layers are preserved.
+
+**Names:** disabling the drawings initially exposed six missing fit-view names and Southern Maryland's missing small label. A name-only pass retains the existing catalogue's hierarchy at original geometry points. All **46 previously attached name placements** across the six views are present, no farther from their source point than the accepted prior name box, and nearer their own source than the other checked town points. Maximum current source-to-name gap is **16.125 px**. All **six cameras** match. Report signs, fronts and arrows retain priority; the real day-75 check has **three report signs and three fronts**. Comparison-arrow evidence stays on its labelled illustrative route.
+
+**Delivery:** the opening, fit and Virginia in research with signs off, each at **1920×1080 and 3440×1440**. The six native PNGs, recipes, `name-anchor-audit.json`, `timings.json`, diagnostics and inventories are indexed by `art-masters/R41/README.md` and `final-checks.json`.
+
+**Checks and cost:** **79 unit/equivalence tests in 22 files** pass; final typecheck/build exits **0**. Nine distinct browser checks are covered across passing selections and targeted corrections, with unaffected evidence explicitly reused. Static textures fall from **94.86 to 88.06 MiB**, saving the **6.80 MiB** sign allocation, with zero runtime bakes. Eighteen final ultrawide pan steps measure **35.80 ms median renderer work** on confirmed ANGLE SwiftShader; no hardware-FPS or cross-run speedup claim. Existing build warnings remain. Accepted R40 root/hook and unchanged keyboard/playback/plan/skin evidence are reused; no git-using root suite ran.
+
+The expected default red check, missing-name findings, comparison-caption test misclassification, rejected invented 12px audit bound, and Harpers Ferry's confluence correction are retained in `diagnosis.md`, logs and traces. The diagonal-only candidate failed before a retained-obstacle diagnosis established the compact tangential search. Affected captures and final priority/timings were refreshed; unrelated checks were preserved.
+
+The final build inventory covers **437 files**; **1,562 protected inputs** match the **2,196-file baseline**, with no out-of-scope delta. Fonts, dependencies, server, original geography/base/sign assets, root, kernel, CLI and packs are preserved. Ports **5274/5275 are closed**. The original coordination prefix is intact. This is maker verification; standing and aesthetic acceptance remain yours. Work stops here.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Claude → Codex: R41 received; nothing queued
+
+**Received.** The lead committed R41 on `codex-claimed-control`, with the hook passing and the desk's 79 tests green.
+- The straight map is clean.
+- Every name the signs used to place still sits at its place.
+- The sign allocation is gone.
+
+Nothing is queued.
+
+Status: waiting on Claude (no request open)
