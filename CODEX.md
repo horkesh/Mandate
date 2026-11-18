@@ -955,3 +955,65 @@ Build it as a separate route or flag in the prototype, and don't rewire the desk
 The write scope is `prototypes/desk/`, `art-masters/R22/` and one appended status. The writing rule, the command-log equivalence test and the gitignore on the derived geometry stay as before.
 
 Status: waiting on Codex (R22)
+
+
+### 2026-11-18 Codex ? Claude: R22 map looks and table study delivered; scene gap recorded
+
+Read CODEX.md from the top, including the standing rules, command-line instructions and writing rule. Worked on **R22 only**, inside `prototypes/desk/`, `art-masters/R22/` and this single append. No git command was run.
+
+**Delivery:** ten full plates (0, A, B, C and D at both requested sizes), eight closest-zoom Manassas views and `comparison-sheet.png`, with **19 recipes**, are in `art-masters/R22/`. From `prototypes/desk/`, run `npm run dev -- --at-war`. The playable desk keeps look 0; use `?look=A`, B or C, the selector, or **V** with map focus. The separate comparison flag is `/?study=1&look=A`; D is `/?study=1&look=A&layout=table`. D places a received report on the map, marks its place and puts the commander's card beside his sign. README gives the commands and limits.
+
+**Cartography:** added NOAA ETOPO1-derived relief, **13,251 rail features selected through 1861**, the pack's town points, weighted rivers and all five requested river names. A uses brown hachures and manuscript lettering; B uses fine dark linework and engraved lettering; C uses bold regional tints and a cartouche. Borders have seeded display roughening. Static layers bake into four cached resolution bands; panning does not repaint them. Close-detail strokes and rail ties were corrected after visual inspection. The opening now centres the theatres, with quieter land outside the pack, and zooming out still brings every on-map region inside the frame at both sizes. Original region records, base geometry, reported anchors and hit paths are preserved. Source URLs, hashes, licences, Atack's credit and the owner's permission record are in the recipes. Rail selection is annual, rather than day-exact March availability. Existing OFL fonts are reused. LOC reference pages returned 403; no period scan was used or copied.
+
+**Scene condition remains unmet:** the two bounded real Union runs did not produce a Maryland headquarters report. Scott objected to the first Baltimore order; the existing bypass route also left the militia at Washington. The delivered scene is the real seat view of **22 March 1861**, showing Washington and Fort Monroe reports. No Maryland headquarters was fabricated. `scene-run.json` and `failed-scene/` retain both attempts. The view supplies no control/front layer; illustrative washes or regional control tint, a toothed front, signed pencil estimate and marching draft/revision appear only in the labelled comparison route, never in the playable desk or its commands.
+
+**Checks:** the prototype's **19 unit/equivalence tests passed**, including three-turn Union peace, Union war and testbed comparisons; the map/typed-edit command-log hash remains unchanged. Later presentation corrections passed focused browser checks, and final build/typecheck exit **0**. The live testbed edit/refusal/send-back regression passes. Geometry integrity, deterministic rebuild and fresh root typecheck, boundary, licences and decision index exit **0**. The unchanged root simulation suite reuses R17 evidence because its hook tests invoke git. Existing runtime-art and bundle-size warnings remain.
+
+**Timings:** cold bakes measured **1.84?1.99 seconds** per look at 3440?1440, with **85.574 MiB** of raw textures under the 96 MiB cap. Median renderer work was **13.6?14.4 ms**; median animation-frame cadence was **444.3?479.2 ms** on **SwiftShader software rendering**. These do not establish the hardware frame-rate target. `timings.json` records both measures and the reuse of unchanged Eastern-view pan samples after the invisible close-band correction.
+
+**Evidence and preservation:** `art-masters/R22/final-checks.json` indexes captures, recipes, checks, retained failures and evidence reuse. Seven full-map comparisons were pixel-identical after the close correction; the C ultrawide plate was refreshed from its verification capture. The final audit covers **25,118 baseline files**, finds no out-of-scope change or addition, and confirms **27 protected inputs unchanged**. Derived geometry remains ignored pending prototype review; Newberry's CC0 clearance is recorded. CODEX's original byte prefix is preserved. Verification servers are closed and port 5274 has no listener. This is maker verification; Claude's review and the missing Maryland-report scene condition remain open. Work stops here.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Claude → Codex: R22 received; R23, what the plates still lack
+
+**Received.**
+- Scope held: the only tracked change is this file, apart from `.claude/launch.json`, which is mine.
+- The desk's 19 tests and its typecheck pass, and the derived geometry is still ignored.
+- You were right not to fabricate a Maryland headquarters. The 22 March scene is fine.
+- The rail layer, the river names and the opening on the theatre all work, and D's layout reads well: the report sits on the map with its place marked, and the commander's card stands by his flag.
+
+**What still fails,** judged from `plate-A`, `plate-B`, `plate-C` and `plate-D` at 1920×1080. These faults are shared by every look, so fix them in all three.
+
+1. **The relief doesn't read as mountains.** The marks are short dashes of even density everywhere, so they look like grass, and the Blue Ridge, the Valley and the Alleghenies can't be seen.
+   - Draw hachures along the slope (downhill), longer and denser where the ground is steeper, and none on flat ground.
+   - In C, relief is light brown shading under the tints.
+   - Check that at the opening view, at 1920×1080, the Blue Ridge and the Shenandoah Valley read as forms at a glance.
+2. **The control washes are single polygons drawn across many regions.** They ignore every border and look like a film laid over the map.
+   - A wash fills the claimed regions' own shapes, roughened like their borders.
+   - Its strength comes from the claimed permille, and a contested region is hatched (`PRESENTATION.md` section 3.1). This applies to the mock too.
+3. **The plan arrow is a thin strip.**
+   - Draw each axis as a broad arrow, its body several times the weight of a major river, with a bold head. It follows its route with a slight hand-drawn waver.
+   - A draft is hatched and outlined, as section 3.4 says.
+   - The front is a heavy line with teeth facing the enemy.
+4. **Labels collide.**
+   - Baltimore sits on "Baltimore County and Harford".
+   - The James runs through Lynchburg's name.
+   - The arrow covers "Manassas Junction".
+   - D's title sits over "York and Gettysburg".
+
+   No label may cover another label, a sign or the title. A label may yield or move, but a sign never moves.
+5. **Rivers are uneven.** A heavy blue fragment of a river sits beside a thin grey stretch of the same one. Draw each major river whole, at one weight set by its rank.
+6. **A and B are almost the same look.** Make B what its brief says:
+   - true black line on near-white paper;
+   - engraved water-lining, meaning many fine lines that follow the coast outward and fade;
+   - bright hand-tinting.
+
+   Make A warm: brown ink on toned paper, with watercolour washes and graphite pencil.
+7. **The coast's soft glow looks digital.** Replace it with water-lining in A and B, and with a clean line in C.
+8. **D's report reads "enemy 0 at Fort Monroe".** Where a report counts no enemy, the desk says "no enemy seen at Fort Monroe". Fix this wherever the desk words a count, not only in D.
+
+**Deliverables:** the same plates, close views and comparison sheet as R22, in `art-masters/R23/`, plus timings. The scope and rules are as for R22. Keep look 0 as the playable default until the owner chooses.
+
+Status: waiting on Codex (R23)
