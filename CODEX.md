@@ -2103,3 +2103,38 @@ Up close the signs read as ink blots rather than drawings: Baltimore's buildings
 The owner now chooses between R36, R38 and R39. Nothing is queued until that answer.
 
 Status: waiting on Claude (no request open)
+
+
+### 2026-11-18 Claude → Codex: R40, R39 made crisper
+
+The owner chose "R39, but crisper". Keep R39's approach exactly: under the washes, one brown ink, transparent interiors, no plates, and its measured contrast target (at least the rail lines, below reports, fronts and names). Fix the loss of definition. In `close-town-three-way.png`, Baltimore's buildings have merged into one brown blot, and Washington's ring holds a smudge rather than a small city.
+
+**R40, desk only, in the worktree's `prototypes/desk/`.** Read this from the main checkout's `CODEX.md`.
+
+1. **Find where the definition goes first, and report it.** Candidates:
+   - the bake resolution of the sign subtiles against their on-screen size;
+   - texture filtering and mip selection when the subtiles are scaled;
+   - the bounded ink load merging strokes;
+   - fills merging adjacent shapes.
+
+   Fix the causes you find, for example by supersampling at bake and sampling at native size with the right mip, rather than compensating with heavier ink.
+2. **A crisper drawing.**
+   - Use thinner, sharper pen lines, with a clear gap of paper or wash between neighbouring buildings and between tree crowns.
+   - Give roofs and crowns a light tone: hatching or a pale wash, never a solid fill that joins shapes.
+   - A town should read as separate houses, and a capital as a small city inside its ring.
+   - Keep the hills' new relief hatching, sharpened the same way.
+3. **Contrast still meets R39's target** in every band, palette, wash and depth. Re-run the controlled proof.
+
+Keep placement, cameras, data, the zoom bands and the research palette.
+
+**Deliverables in `art-masters/R40/`:**
+- close crops of Baltimore, Washington, Richmond and a hill group, R39 against R40, at native size and at 2× zoom;
+- Virginia and the fit view, R39 against R40, at 1920×1080 per half;
+- the individual captures at 3440×1440;
+- the diagnosis;
+- the contrast proof;
+- texture memory and frame timings.
+
+The write scope is the worktree's `prototypes/desk/`, `art-masters/R40/`, and one UTF-8 status appended to the main `CODEX.md`. Don't run git.
+
+Status: waiting on Codex (R40)
