@@ -9,7 +9,7 @@ import data from './furniture-r35.json';
 import woodlands from './woodlands.json';
 import {wideTown,capitalRank} from './furniture-placement.ts';
 export type Box=[number,number,number,number];
-export type BakedSign={id:string;kind:GlyphKind;variant:number;point:Point;box:Box;factor:number;ridgeBand?:string;source:string;anchor:Point;atlasFrame?:Box;alternatives?:Point[];stateAlternatives?:Point[]};
+export type BakedSign={id:string;kind:GlyphKind;variant:number;point:Point;box:Box;factor:number;ridgeBand?:string;source:string;anchor:Point;atlasFrame?:Box;atlasTrim?:Box;texelDensity?:number;alternatives?:Point[];stateAlternatives?:Point[]};
 export type FurnitureManifest={version:1;revision:string;file:string;sha256:string;width:number;height:number;bytes:number;bakeMs:number;bands:{name:string;signs:BakedSign[];rejected:{id:string;reason:string}[]}[]};
 const overlap=(a:Box,b:Box)=>a[0]<b[2]&&a[2]>b[0]&&a[1]<b[3]&&a[3]>b[1];
 export function planFurniture(geometry:MapGeometry){

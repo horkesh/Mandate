@@ -8,7 +8,7 @@ import hq from './map/icons/hq-army.svg?raw';
 const luminance=(d:Uint8ClampedArray,i:number)=>[.2126,.7152,.0722].reduce((s,w,k)=>{let v=d[i+k]!/255;v=v<=.04045?v/12.92:((v+.055)/1.055)**2.4;return s+w*v;},0);
 const ratio=(a:number,b:number)=>(Math.max(a,b)+.05)/(Math.min(a,b)+.05);
 const q=(a:number[],p:number)=>a.sort((a,b)=>a-b)[Math.floor((a.length-1)*p)]??1;
-(window as any).contrastProof=async(onlyBand?:string)=>{
+(window as any).contrastProof=async(onlyBand?:string,sampling='nearest-min')=>{
  const font=new FontFace('Standard','url(/fonts/old-standard-regular.woff2)');await font.load();document.fonts.add(font);
  const manifest=await fetch('/public/map-data/union-1861-signs/manifest.json').then(r=>r.json());
  const image=new Image();image.src='/public/map-data/union-1861-signs/geographic.png';await image.decode();
@@ -37,7 +37,9 @@ const q=(a:number[],p:number)=>a.sort((a,b)=>a-b)[Math.floor((a.length-1)*p)]??1
    };
    const refs={rail:reference('rail'),name:reference('name'),report:reference('report'),front:reference('front')};
    const signs=band.signs.map((sign:any)=>{const c=swatch(),x=c.getContext('2d')!;x.fillStyle=PALETTES.A.paper;x.fillRect(0,0,160,100);
-    const f=sign.atlasFrame,k=sign.factor*zoom;x.drawImage(image,...f as [number,number,number,number],80-40*k,50-32*k,80*k,64*k);x.fillStyle=colour;x.globalAlpha=alpha;x.fillRect(0,0,160,100);
+    const f=sign.atlasFrame,k=sign.factor*zoom,density=sign.texelDensity??1,trim=sign.atlasTrim??[0,0,80,64];
+    x.imageSmoothingEnabled=!(sampling==='nearest-min'&&k<density);
+    x.drawImage(image,...f as [number,number,number,number],80+(trim[0]/density-40)*k,50+(trim[1]/density-32)*k,trim[2]/density*k,trim[3]/density*k);x.fillStyle=colour;x.globalAlpha=alpha;x.fillRect(0,0,160,100);
     return {id:sign.id,kind:sign.kind,canvas:c,...metric(c)};
    });
    const upper=Math.min(refs.name.coreP90,refs.report.coreP90,refs.front.coreP90),lower=refs.rail.coreP90;

@@ -1,15 +1,15 @@
 {
   "asset": "public/map-signs/bridge-7.svg",
-  "request": "R39",
-  "brief": "Main CODEX.md R39 legibility, hierarchy and source-relief flank hatching",
+  "request": "R40",
+  "brief": "Main CODEX.md R40 R39 made crisper",
   "date": "2026-11-18",
   "plan": "Previously confirmed ChatGPT Pro 100; no image service",
   "client": "Codex; client version not exposed",
   "model": "Procedural SVG, no image model",
   "apiKeyUnset": true,
-  "tool": "TypeScript glyphDesign; original deterministic pen geometry retained",
-  "mode": "Concentrated brown manuscript ink, stronger capital outlines, translucent roof/crown tone",
-  "prompt": "R36 geographic compositions with stronger brown ink under both washes, transparent interiors and legible roof/crown tone. Source relief hachures join wide hills to existing elevation data. No paper-white fills, badges, shadows, figures, flags, emblems or game-art reference.",
+  "tool": "TypeScript procedural pen geometry; browser SVG coverage rasterizer for the map",
+  "mode": "Finer pen lines, separate house/crown interiors, light brown roof wash",
+  "prompt": "R39 manuscript approach with separated houses and crowns, finer brown outlines and pale roof tone. Original map placement envelopes and source-relief hatches remain unchanged. No plates, white fill, shadows, human figures, flags or emblems.",
   "references": [
     {
       "title": "A. Lindenkohl, Military map of south-eastern Virginia, 1864, LOC 99448891",
@@ -29,11 +29,11 @@
   "runtimeSeed": "Stable feature-id hash selects a baked composition",
   "humanEdits": [],
   "postProcess": [
-    "Material only; R36 footprint and placement geometry retained; mountain generic flank strokes replaced at bake by spatially thinned original relief hachures"
+    "Drawing detail refined within unchanged legacy placement envelopes; geographic subtiles rasterized 4x and packed at 2x with source-coordinate grain; premultiplied upload, nearest minification, linear magnification, one mip"
   ],
   "provenanceMarks": "No model metadata created or removed",
-  "sha256": "a095efe4577eea8c1637bdfd680f0e584077137e5bb12b28dd3a5931337caf00",
-  "scriptSha256": "36a93f8b2a30e98f86adf8f49329eecdb938260df9483c35a7cf7c61e3161480",
-  "glyphModuleSha256": "66d3aafd3782ed5b80ded4591150c8263465fd4487bdac06b4f9d8cafdade10b",
-  "priorSha256": "2c57fc3c9a0286cc0651824424516a50f0955d065834f185b733ccfd52d75d98"
+  "sha256": "5353ef6f2d1bb7ae5c8e09a2d9597ffe84b90d3cf03dd0e46cfef3fb7d5830d8",
+  "scriptSha256": "cc6a59c19c366b4f195ded95269170f8cd6b3fbe4b992429c8deaeb4114e970d",
+  "glyphModuleSha256": "f7765e2ccadcb2cb970e7cdcf584ec89cb2276d7d81baf78fbe50e621e63006a",
+  "priorSha256": "a095efe4577eea8c1637bdfd680f0e584077137e5bb12b28dd3a5931337caf00"
 }

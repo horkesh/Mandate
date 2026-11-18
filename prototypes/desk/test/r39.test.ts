@@ -1,12 +1,14 @@
 import {expect,it} from 'vitest';
-import {glyphSvg,glyphDesign} from '../web/map/furniture.ts';
+import {glyphSvg} from '../web/map/furniture.ts';
 import {readFileSync} from 'node:fs';
-it('R39 retains legible building and crown tone with transparent interiors',()=>{
+it('R39 ink priority retains transparent interiors with R40 finer drawing weights',()=>{
  for(const kind of ['town','capital','woods'] as const){
   const svg=glyphSvg(kind,`${kind}-sheet-1`);
   const widths=[...svg.matchAll(/stroke-width="([\d.]+)"/g)].map(m=>Number(m[1]));
-  expect(Math.min(...widths)).toBeGreaterThanOrEqual(.9);
-  expect(glyphDesign(kind,`${kind}-sheet-1`).fills.some(f=>f.opacity>=.3)).toBe(true);
+  expect(Math.min(...widths)).toBeGreaterThanOrEqual(.7);
+  // R40 supersedes heavy R39 roofs; priority is established by the unchanged
+  // controlled contrast target while drawing interiors retain a pale tone.
+  expect(svg).toMatch(/fill-opacity="0.12"/);
   expect(svg).not.toMatch(/#fff|#ead9b3|filter=|shadow/i);
  }
  const widths=(kind:'capital'|'town')=>[...glyphSvg(kind,`${kind}-sheet-1`).matchAll(/stroke-width="([\d.]+)"/g)].map(m=>Number(m[1]));

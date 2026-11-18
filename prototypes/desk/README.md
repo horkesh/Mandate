@@ -777,9 +777,9 @@ the research palette; `?palette=strong` selects the comparison palette and
 `python scripts/r35-geography.py` derives the new ridge catalogue from the R28
 continuous elevation and the existing R34 features. `npx tsx scripts/r35-assets.ts`
 writes the SVG/recipe set and review sheet. `npx tsx scripts/bake-furniture.ts`
-now rasterizes the signs into an ignored 5.625 MiB shared texture and builds wide,
+now rasterizes the signs into an ignored 6.80 MiB shared texture and builds wide,
 theatre and close placement layers. The dev launcher checks this bake. The base
-atlas is unchanged; after R38, combined static textures use 93.68 MiB. The old geometry,
+atlas is unchanged; after R40, combined static textures use 94.86 MiB. The old geometry,
 Atack rail sources and absence of station points retain their earlier limits.
 
 Placement rejects water footprints and collisions; coastal building emblems may
@@ -848,3 +848,35 @@ The baked signs retain R38's placement and composition below live claimed washes
 Main `art-masters/R39/README.md` indexes the native R36/R38/R39 comparison sheets, source/placement proofs, per-band and palette contrast measurements, texture inventory and software-rendering timings. The controlled current-ink target is sign contrast >= rails and < report/front/name references under the same wash; all 3,456 samples pass. Age fading and operational conflict priority remain unchanged.
 
 Verification: `npm test`, `npm run build`, `npx playwright test --config playwright.r39.config.ts` (outputs under main R39). `npx tsx scripts/r39-contrast.ts` runs the offline controlled proof; `R39_PROOF_BAND=close` limits it to the affected band. The retained delivery reuses passing wide/theatre proof conditions and signs-off captures. No git-using root suite was run.
+
+### R40 drawing definition
+
+R40 refines the drawings inside the original placement envelopes. Houses and
+tree crowns have separate outlines, pale roof/crown tone and thinner brown pen
+lines. The legacy paths still own placement bounds; changing the drawing does
+not move a town or its name. Capitals retain their rings and rank scale. Hill
+flanks retain R39's original relief-source segments.
+
+The offline bake rasterizes at 4× and downsamples to 2× subtiles. Alpha trimming
+and height-sorted packing produce a 1024 by 1741 atlas, including two transparent
+texels around each frame. Texture `orig`/`trim` and density compensation preserve
+the same world geometry. Premultiplied upload uses nearest minification, linear
+magnification and one mip. This avoids a second smoothing of narrow pen cores;
+no runtime bake or per-pan geographic path construction is added. R39's .62/.65
+peak ink loads, grain, washes, palettes and operational priority remain.
+
+`npx tsx scripts/r40-assets.ts` updates the 96 geographic SVGs and recipes.
+`npx tsx scripts/bake-furniture.ts` builds the atlas. The dev launcher checks it.
+`npx tsx scripts/r40-contrast.ts` runs the unchanged R39 contrast references with
+the shipped sampler, writing only to main `art-masters/R40/`. All 36 conditions
+and 3,456 sign samples meet the rail lower bound and report/front/name upper
+bound. `npx playwright test --config playwright.r40.config.ts` checks the native
+views, placements, sampler, operational priority and matched pan timings.
+Set `DESK_EVIDENCE_REQUEST=../../ByOrderOfThePresident/art-masters/R40` before
+`npm test` to direct equivalence evidence there.
+
+Main `art-masters/R40/README.md` indexes the R39/R40 comparisons, four native
+close crops and their 2× pixel-inspection enlargements, diagnosis, contrast proof,
+texture memory and software-renderer timings. Source geography, cameras, zoom
+bands and research default are unchanged. Maker verification remains separate
+from the lead's aesthetic acceptance.

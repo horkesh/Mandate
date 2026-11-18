@@ -1,17 +1,26 @@
 import type {Point} from './model.ts';
 import type {GlyphKind} from './furniture.ts';
 export function glyphVariant(key:string){const match=key.match(/-sheet-(\d+)$/);if(match)return (Number(match[1])-1)%8;let n=2166136261;for(const c of key)n=Math.imul(n^c.charCodeAt(0),16777619)>>>0;return n%8;}
-type Design={paths:Point[][];fills:{points:Point[];colour:string;opacity:number}[]};
+type Design={paths:Point[][];fills:{points:Point[];colour:string;opacity:number}[];islands:Point[][]};
 /** Original procedural arrangements: varied clusters, pressure, open pen joins. */
-export function glyphDesign(kind:GlyphKind,key:string):Design{
+export function glyphDesign(kind:GlyphKind,key:string,crisp=false):Design{
  let seed=2166136261;for(const c of `${kind}:${key}`)seed=Math.imul(seed^c.charCodeAt(0),16777619)>>>0;
  const random=()=>{seed^=seed<<13;seed^=seed>>>17;seed^=seed<<5;return (seed>>>0)/4294967296;};
- const v=glyphVariant(key),paths:Point[][]=[],fills:Design['fills']=[];
+ const v=glyphVariant(key),paths:Point[][]=[],fills:Design['fills']=[],islands:Point[][]=[];
  const line=(...p:Point[])=>paths.push(p);
  const rect=(x:number,y:number,w:number,h:number)=>line([x,y+h],[x,y],[x+w,y],[x+w,y+h],[x+.6,y+h]);
  const circle=(x:number,y:number,r:number,n:number)=>line(...Array.from({length:n},(_,i)=>[x+r*Math.cos(i*Math.PI*2/(n-1)),y+r*Math.sin(i*Math.PI*2/(n-1))] as Point));
  const wash=(points:Point[],colour='#72533d',opacity=.34)=>fills.push({points,colour,opacity});
  const house=(x:number,y:number,w:number,h:number,pitch:number)=>{
+  if(crisp){
+   // Retain the cluster's centres, but open a street of paper between houses.
+   const cx=x+w/2,cy=y+(h-pitch)/2,k=.60;
+   x=cx-w*k/2;y=cy-(h-pitch)*k/2;w*=k;h*=k;pitch*=k;
+   rect(x,y,w,h);const roof:Point[]=[[x-.35,y],[x+w*.42,y-pitch],[x+w*.78,y-pitch+.35],[x+w+.35,y]];
+   line(...roof);wash(roof,'#68472f',.12);
+   line([x+w*.55,y+h],[x+w*.55,y+h-.9]);
+   islands.push([[x-.35,y-pitch],[x+w+.35,y+h]]);return;
+  }
   rect(x,y,w,h);const roof:Point[]=[[x-1,y],[x+w*.42,y-pitch],[x+w*.78,y-pitch+.7],[x+w+1,y]];
   line(...roof);wash(roof,'#654b39',.5);line([x+w*.44,y],[x+w*.44,y+h-.7]);line([x+w*.7,y+1],[x+w*.7,y+2]);
   if(w>6)line([x+1.2,y+1.2],[x+1.2,y+2.5]);
@@ -27,9 +36,10 @@ export function glyphDesign(kind:GlyphKind,key:string):Design{
    let x=(col-(columns-1)/2)*(city?8:10)+(row%2?2:-1),y=(row-(rows-1)/2)*(v<4?9:7);
    if(kind==='hamlet'){[x,y]=hamlets[v]![i]!;}
    else if(v>=4&&!city){x+=row*3;y+=(col-(columns-1)/2)*4;}
-   house(x+(random()-.5)*2-3,y+(random()-.5)*3,4.3+random()*3,3+random()*2,2.4+random()*3);
+   if(crisp&&kind!=='hamlet'){x=(col-(columns-1)/2)*10+(row%2?1:-1);y=(row-(rows-1)/2)*10;}
+   house(x+(random()-.5)*2*(crisp?.25:1)-3,y+(random()-.5)*3*(crisp?.25:1),4.3+random()*3,3+random()*2,2.4+random()*3);
   }
-  if(city){line([-19,13],[-8,11],[3,12],[20,10]);for(let i=0;i<2+v%3;i++)line([-12+i*8,-15],[-10+i*8,-9]);}
+  if(city){line([-19,13],[-8,11],[3,12],[20,10]);if(!crisp)for(let i=0;i<2+v%3;i++)line([-12+i*8,-15],[-10+i*8,-9]);}
   if(kind==='capital'){circle(0,0,24,26+v);line([-5,-17],[0,-23],[5,-17]);line([-6,-15],[6,-15]);}
   if(kind==='station'){line([-24,12],[23,11]);for(let i=0;i<5+v;i++)line([-21+i*4,9],[-20+i*4,15]);}
  }
@@ -63,9 +73,10 @@ export function glyphDesign(kind:GlyphKind,key:string):Design{
   const n=2+v%5;for(let i=0;i<n;i++){
    const treeLayouts:Point[][]=[[],[],[],[],[],[[-3,-9],[4,7]],[[-9,6],[0,-8],[10,4]],[[-11,-6],[4,-10],[-4,8],[12,6]]];
    const [x,y]=v>=5?treeLayouts[v]![i]!:[(i-(n-1)/2)*8.2,(i%2?3:-2)+(random()-.5)*4];
-   const r=5+random()*2;
+   const r=(5+random()*2)*(crisp?.43:1);
    const crown:Point[]=Array.from({length:12+v%4},(_,j)=>{const a=j*Math.PI*2/(11+v%4),rr=r*(.8+random()*.4);return [x+Math.cos(a)*rr,y-5+Math.sin(a)*rr] as Point;});
-   wash(crown,'#73836a',.43);line(...crown);line([x,y+7],[x+.7,y-4]);line([x,y+2],[x-3,y-1]);
+   wash(crown,'#73836a',crisp?.12:.43);line(...crown);line([x,y+7],[x+.7,y-4]);line([x,y+2],[x-3,y-1]);
+   if(crisp)islands.push([[Math.min(...crown.map(p=>p[0])),Math.min(...crown.map(p=>p[1]))],[Math.max(...crown.map(p=>p[0])),Math.max(...crown.map(p=>p[1]))]]);
   }
  }
  if(kind==='marsh')for(let i=0;i<3+v%4;i++){
@@ -85,17 +96,29 @@ export function glyphDesign(kind:GlyphKind,key:string):Design{
   for(const x of [-1,1])for(const y of [-1,1])line([x*24,y*20],[x*28,y*24],[x*34,y*20],[x*34,y*14]);
  }
  const waved=paths.map((p,index)=>{
-  const q:Point[]=[];p.forEach(([x,y],i)=>{if(i){const a=p[i-1]!;q.push([(a[0]+x)/2+(random()-.5)*.55,(a[1]+y)/2+(random()-.5)*.55]);}q.push([+(x+(random()-.5)*.6).toFixed(3),+(y+(random()-.5)*.6).toFixed(3)]);});
+  const jitter=crisp?.22:1;
+  const q:Point[]=[];p.forEach(([x,y],i)=>{if(i){const a=p[i-1]!;q.push([(a[0]+x)/2+(random()-.5)*.55*jitter,(a[1]+y)/2+(random()-.5)*.55*jitter]);}q.push([+(x+(random()-.5)*.6*jitter).toFixed(3),+(y+(random()-.5)*.6*jitter).toFixed(3)]);});
   if(index%5===v%5&&q.length>5)q.pop();return q;
- });return {paths:waved,fills:['compass','scale','cartouche'].includes(kind)?fills:fills.map(f=>({...f,colour:'#68472f',opacity:Math.min(.48,f.opacity*.85)}))};
+ });
+ if(crisp){
+  // A drawing may get finer inside its envelope; it may never enlarge the
+  // original geographic/collision footprint or move its map anchor.
+  const old=glyphDesign(kind,key).paths.flat(),now=waved.flat();
+  for(const axis of [0,1]){
+   const lo=Math.min(...old.map(p=>p[axis]!)),hi=Math.max(...old.map(p=>p[axis]!)),a=Math.min(...now.map(p=>p[axis]!)),b=Math.max(...now.map(p=>p[axis]!));
+   const scale=Math.min(1,(hi-lo)/(b-a)),offset=Math.max(lo-a*scale,Math.min(0,hi-b*scale));
+   for(const points of [...waved,...islands,...fills.map(f=>f.points)])for(const p of points)p[axis]=p[axis]!*scale+offset;
+  }
+ }
+ return {paths:waved,islands,fills:['compass','scale','cartouche'].includes(kind)?fills:fills.map(f=>({...f,colour:'#68472f',opacity:crisp?Math.min(.12,f.opacity):Math.min(.48,f.opacity*.85)}))};
 }
 export function glyphPaths(kind:GlyphKind,key:string){return glyphDesign(kind,key).paths;}
 export function glyphSvg(kind:GlyphKind,key:string,band='close'){
- const {paths,fills}=glyphDesign(kind,key),d=(p:Point[])=>p.map(([x,y],i)=>`${i?'L':'M'}${x} ${y}`).join(' ');
  const hills=kind==='mountain',geographic=!['compass','scale','cartouche'].includes(kind);
+ const {paths,fills}=glyphDesign(kind,key,geographic),d=(p:Point[])=>p.map(([x,y],i)=>`${i?'L':'M'}${x} ${y}`).join(' ');
  // Keep full path geometry for the unchanged placement envelope; rendered flanks use source relief.
  const renderingPaths=hills?paths.filter(p=>p.length>3):paths;
  const weight=band==='wide'?1.12:band==='theatre'?1.06:1;
- const stroke=(i:number)=>geographic?(kind==='capital'?1.95+(i%4)*.10:kind==='ferry'?2.15+(i%3)*.10:hills?1.12+(i%4)*.08:1.42+(i%5)*.10)*weight:.75+(i%5)*.22;
- return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -32 80 64" fill="none" stroke="${geographic?'#503622':'currentColor'}" stroke-linecap="round" stroke-linejoin="round">${fills.map(f=>`<path d="${d(f.points)}Z" fill="${f.colour}" fill-opacity="${f.opacity}" stroke="none"/>`).join('')}${renderingPaths.map((p,i)=>`<path d="${d(p)}" stroke-width="${stroke(i).toFixed(2)}" opacity="${geographic?.96:.78+(i%3)*.09}"/>${!hills&&i%4===0?`<circle cx="${p[0]![0]}" cy="${p[0]![1]}" r=".7" fill="${geographic?'#68472f':'currentColor'}" stroke="none"/>`:''}`).join('')}</svg>`;
+ const stroke=(i:number)=>geographic?(kind==='capital'?1.06+(i%3)*.06:kind==='ferry'?2.15+(i%3)*.10:hills?.74+(i%4)*.04:.82+(i%4)*.06)*weight:.75+(i%5)*.22;
+ return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -32 80 64" fill="none" stroke="${geographic?'#503622':'currentColor'}" stroke-linecap="round" stroke-linejoin="round">${fills.map(f=>`<path d="${d(f.points)}Z" fill="${f.colour}" fill-opacity="${f.opacity}" stroke="none"/>`).join('')}${renderingPaths.map((p,i)=>`<path d="${d(p)}" stroke-width="${stroke(i).toFixed(2)}" opacity="${geographic?.96:.78+(i%3)*.09}"/>${!geographic&&i%4===0?`<circle cx="${p[0]![0]}" cy="${p[0]![1]}" r=".7" fill="currentColor" stroke="none"/>`:''}`).join('')}</svg>`;
 }
