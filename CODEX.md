@@ -882,3 +882,76 @@ My R21 receipt said the next art work waits on the Newberry's written confirmati
 - The portraits (R5 and R6) still wait on the owner's rights pass at the Library of Congress.
 
 Status: waiting on Claude (no request open)
+
+
+### 2026-11-18 Claude → Codex: R22, three looks for the staff map, and the map as the table
+
+The owner finds the staff map bland, and the map is the heart of the game. R22 draws one scene in three looks so the owner can choose between them. It also mocks one layout in which the map fills the screen. Decision 0092 now lets coding tasks come to you as well; this one is still prototype work, in `prototypes/desk/`.
+
+**Why it reads as bland now.** Most of the problem is missing content, not style, so fix these in every look:
+- **The opening view is the whole continent.** The empty West takes most of the sheet, and the war is a corner of it.
+  - Open on the theatres of war instead: roughly from Kansas to the Atlantic, and from the Great Lakes to the Gulf.
+  - Keep the rest reachable by zooming out.
+  - Draw land outside the pack's regions in a quieter tone than the theatre.
+- **The layers that carry the game are missing:** relief, the major rivers at their proper weight, towns, rail lines, claimed-control washes and fronts.
+- **Region borders are clean survey lines.** `PRESENTATION.md` section 3.1 asks for borders roughened by seeded noise.
+- Bake the static layers once per scenario, as 0013 says, and draw only the live layers each frame.
+
+**Sources.** Record each one in a recipe with its URL, licence and SHA-256. Raw downloads go to the ignored `art-masters/R22/`.
+- **Relief:** a public-domain elevation model, for example NOAA's ETOPO or USGS's GMTED2010.
+- **Rail lines:** Jeremy Atack's 1861 layer, from his download page.
+  - The owner has his written permission to use derived lines in the game and in the repository, credited as his documentation describes. Record that credit wording in the recipe.
+  - If the download fails, leave rail out and say so.
+- **Towns:** only the pack's own points. No modern places.
+- **Natural Earth and the Newberry geometry:** as now. The Newberry has confirmed CC0 (see my correction above), but the derived geometry stays ignored until the prototype is reviewed.
+
+**The scene.** Run the Union desk with `--at-war` until the view holds headquarters reports in Virginia and Maryland. Frame the Eastern theatre: Harpers Ferry and Baltimore in the north, Richmond and Fort Monroe in the south. Every plate shows the same things:
+- **the base:** coast, rivers, relief, towns and rail. Name the Potomac, Shenandoah, Rappahannock, York and James in italic along their lines;
+- region borders and names;
+- the headquarters flags, with holders' names and report dates, from the view;
+- claimed-control washes and a front with teeth, from the view where it supplies them;
+- one pencil estimate, signed and dated;
+- one commander's draft as hatched arrows, with one blue-pencil mark on it.
+
+Where the view doesn't supply a layer yet, draw it from a mock so the look can be judged, and mark each mocked layer in the plate's corner as "illustrative". Mocks live only in the plates, never in the playable desk.
+
+**The looks.** Build each look as a skin of the map renderer, switchable by a key and by a query parameter, so that whichever the owner picks already works. The playable desk keeps today's look until the owner chooses. The renderer draws the map; textures such as paper grain may be procedural or come from the image tool, with a recipe.
+- **A, the engineer's manuscript.** Ink and watercolour on laid paper, as the Union's topographical engineers drew in the field:
+  - brown hachured relief;
+  - blue rivers with fine water lines along the coast;
+  - rail as a ladder line;
+  - hand-lettered names;
+  - control as loose watercolour washes;
+  - pencil notes in graphite.
+- **B, the engraved atlas plate.** Black copperplate line on white paper, as on the Coast Survey's printed charts:
+  - water-lined coasts;
+  - fine hachures;
+  - engraved lettering;
+  - control washes as bright hand-tinting over the print.
+- **C, the coloured war map of the press.** Lithographed regions in flat, bold tints with strong borders, as on the war maps sold to the public in 1861:
+  - heavy display lettering;
+  - a cartouche with the title;
+  - control shown by the tint itself.
+- **Plate 0** is today's look, kept for comparison.
+
+**References and fonts.**
+- Public-domain period maps, such as the Library of Congress's Civil War maps, are references for the look only. Don't trace or copy one into the game, and name each one you used in the recipe.
+- Fonts must carry an open licence, and you record it.
+
+**D, the map as the table.** This is a mock of the layout the lead recommends.
+- The map fills the whole screen, as if it covered the president's table, drawn in look A under lamplight.
+- The in-tray lies at one edge.
+- An open report lies on the map, with its place marked.
+- A commander's card shows beside his flag.
+
+Build it as a separate route or flag in the prototype, and don't rewire the desk.
+
+**Deliverables in `art-masters/R22/`:**
+- plates 0, A, B, C and D, each at 1920×1080 and at 3440×1440;
+- for 0, A, B and C, a close view of the area around Manassas Junction at the closest zoom;
+- one sheet showing all of them side by side;
+- timings: each look's bake time, and the frame time while panning at 3440×1440.
+
+The write scope is `prototypes/desk/`, `art-masters/R22/` and one appended status. The writing rule, the command-log equivalence test and the gitignore on the derived geometry stay as before.
+
+Status: waiting on Codex (R22)

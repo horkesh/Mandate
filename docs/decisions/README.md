@@ -51,7 +51,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0045](0045-the-steward-integrates.md) | The steward integrates; reviews are lanes | accepted; amended by 0047 |
 | [0046](0046-gate-checklist-and-situations-catalogue.md) | The sensitive-history checklist and the situations catalogue are accepted | accepted; refined by 0069 |
 | [0047](0047-a-standing-reviewer.md) | A standing reviewer lane | accepted |
-| [0048](0048-assets-are-made-by-codex.md) | Assets are made by Codex, through one coordination file | accepted; amended by 0051, 0089 |
+| [0048](0048-assets-are-made-by-codex.md) | Assets are made by Codex, through one coordination file | accepted; amended by 0051, 0089, 0092 |
 | [0049](0049-ultrawide-first.md) | The game is designed for ultrawide displays first (3440×1440 reference) | accepted |
 | [0050](0050-world-format-v2.md) | World format v2: the pack format, its validator and generator, and what becomes State at scenario start | accepted; amended by 0055, 0058, 0065 |
 | [0051](0051-codex-output-rules.md) | Rules for Codex output: no AI likenesses of real people, game-resolution assets only, and full provenance | accepted; amended by 0077 |
@@ -95,3 +95,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0089](0089-codex-builds-a-desk-prototype.md) | Codex builds a desk prototype on the console's driver | accepted; amended by 0090, 0091 |
 | [0090](0090-codex-decoration-icons-and-desk-access.md) | Codex makes the first document decoration, drafts the map icons and gives the desk its keys and skins | accepted; amended by 0091 |
 | [0091](0091-codex-builds-the-staff-map-prototype.md) | Codex builds the staff map into the desk prototype now | accepted |
+| [0092](0092-codex-takes-coding-tasks.md) | Codex takes coding tasks through its command line | accepted |
