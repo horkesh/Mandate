@@ -262,6 +262,14 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 **Phase 2 (desk and map)**
 - **The desk, from lane 1.13:** Union inbox volume, now that the press is on. It needs filtering and weekly summaries.
 - **Send back with notes, from Codex's R18 (the desk prototype, 0091):** PRESENTATION.md §3 has two ways to send the blue-pencil marks, but the console's `sendback` (`ReviewCommand`) carries no notes. The desk therefore queues a bare `sendback <post>` and keeps the marks on the desk, and the commander never reads them. The kernel needs a notes payload that the commander reads like an order and redrafts by his own judgement. Whoever next touches plan review owns it.
+- From the review of R29, claimed control (`review-claimed-control.md`, branch `codex-claimed-control` at `b5bfaf0`; decision 0094):
+  - **How a commander perceives control shares.** Battle reports now carry the true share at full confidence, unlike every other battle claim, which passes through the author's perception. The player sees only the holder and whether a region is contested (0094 item 1, amended 12ce79a). Whether a commander's report should state shares through his perception is open.
+  - **The two opening bulletins repeat the same claims** in their bodies and in their truth: about 0.30 MB of the 0.51 MB starting State (0.21 MB without it). Every daily hash pays for it.
+  - **Expired control excerpts stay in the player's papers.** An expired dispatch's control excerpt stays in `view.reports`, with only its control claim.
+  - **Governments are never re-reported after day 0.** `control-government` is written once, so a government that changes side (0065) or closes (Kentucky) keeps its day-0 colour. Not exercised in the reference runs.
+  - **The opening reads true governments** even when a pack overrides the start table, because the override carries control claims only. Harmless for 1861 (public) and the testbed; a pack whose start is not public would leak its governments on day 0. The override should carry governments too.
+  - **The desk prototype's older tests (R22 to R28)** cannot run in a reviewer's worktree, because they read ignored map data (`ENOENT`). Only Codex's worktree has it, so the desk's full suite has been run only there. Reviewing prototypes needs a way to get the data.
+  - **Lane 1.12 (or the research lane):** the at-war reference run loses Washington. A battle on day 27 leaves it Union 800, Confederate 200, and occupation takes it around day 33. It looks like the retired generic principal's behaviour. Check, once lane 1.12 merges, that it is gone.
 
 - From lane 1.7's hand-over (`notes/lane-1.7-men-regions.md`, merged 2c97b64), by lane:
   - **Lane 1.12 (rule seats):** no rule seat calls for regiments, so recruitment's mechanics are QUIET in the reference runs, each with its driving test. The principals need a call policy.
