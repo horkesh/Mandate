@@ -1,15 +1,15 @@
 {
   "asset": "public/map-signs/earthwork-7.svg",
-  "request": "R35",
-  "brief": "Main CODEX.md R35; eight varied manuscript compositions",
+  "request": "R38",
+  "brief": "Main CODEX.md R38 ranks 1-3 material trial",
   "date": "2026-11-18",
   "plan": "Previously confirmed ChatGPT Pro 100; no image service",
   "client": "Codex; client version not exposed",
   "model": "Procedural SVG, no image model",
   "apiKeyUnset": true,
-  "tool": "TypeScript glyphDesign",
-  "mode": "Seeded composition, pen pressure and wash polygons",
-  "prompt": "Geographic signs in manuscript ink, shaded roofs and grey-green woodland wash, open joins and pooled ends. No red, people, flags, seals or game-art references.",
+  "tool": "TypeScript glyphDesign; original deterministic pen geometry retained",
+  "mode": "Brown manuscript ink, fine outlines and transparent quiet roof/crown washes",
+  "prompt": "Unchanged R36 geographic designs in manuscript brown; transparent interiors, quiet ink fills, fine outlines. No paper-white fills, badges, shadows, figures, flags, emblems or game-art reference.",
   "references": [
     {
       "title": "A. Lindenkohl, Military map of south-eastern Virginia, 1864, LOC 99448891",
@@ -28,9 +28,12 @@
   "seedKey": "earthwork-sheet-7",
   "runtimeSeed": "Stable feature-id hash selects a baked composition",
   "humanEdits": [],
-  "postProcess": [],
+  "postProcess": [
+    "Material only; all path and circle coordinates verified against R36 source SVG"
+  ],
   "provenanceMarks": "No model metadata created or removed",
-  "sha256": "49309175315df913a8527080406b2ee751622a056ab31dd17174234ad1d26577",
-  "scriptSha256": "8940d906f523d0d01a15daff3870cefb1a9ed8fd4ebde745ae46b55d456310fc",
-  "glyphModuleSha256": "4f7318ccb6999d48393818162be1cfa29bbe2f6ef1cbd3ba45357baa0d7e881f"
+  "sha256": "0c2e2b25cc895c08b844a92835a9f7395c94d3bb87df1bec52cc2fb83dcd8a03",
+  "scriptSha256": "66b9de3099f950a32382a3c8d466961a15f4f3fb00f47a571242dcdbe83d8a79",
+  "glyphModuleSha256": "98a3870a59658009c641013b939a26a5ff56cd15dd1e3554da6cedd57124c2ef",
+  "priorSha256": "49309175315df913a8527080406b2ee751622a056ab31dd17174234ad1d26577"
 }

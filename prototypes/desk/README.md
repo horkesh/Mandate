@@ -665,8 +665,7 @@ later ultrawide samples remain recorded. No performance code was tuned.
 ## R33 palette comparison
 
 From this folder, run `npm run dev -- --at-war`. Open
-`http://127.0.0.1:5274/?palette=strong` or `/?palette=research`. Strong is the
-default. The Map look selector groups each existing look under strong or
+`http://127.0.0.1:5274/?palette=strong` or `/?palette=research`. Research is the default under R38. Strong remains available for comparison. The Map look selector groups each existing look under strong or
 research; `Manuscript (research)` selects the new pigments. V still cycles the
 map look while keeping the selected palette. Presentation choices send no game
 command.
@@ -715,8 +714,8 @@ console send-back notes limitation remain.
 
 The manuscript now draws neutral geographic furniture above its control washes.
 Use `?signs=off` for the comparison without signs; signs are on by default.
-Both `?palette=strong` and `?palette=research` remain available, with strong the
-default while the owner chooses. `public/map-signs/` contains 15 SVG designs,
+Both `?palette=strong` and `?palette=research` remain available, with research the
+default under R38. `public/map-signs/` contains 15 SVG designs,
 four seeded variants each, and their recipes. Runtime variants use the feature
 id as their seed and the same point strokes as the exported SVGs.
 
@@ -771,16 +770,16 @@ remain as described above.
 ## R35 geographic sprite layers
 
 The manuscript signs use eight seeded compositions per kind, with shaded roofs,
-grey-green foliage and varied pen strokes. `npm run dev -- --at-war` still opens
-the strong palette; `?palette=research` selects the other palette and
+transparent brown foliage and varied pen strokes after R38. `npm run dev -- --at-war` opens
+the research palette; `?palette=strong` selects the comparison palette and
 `?signs=off` provides the comparison without signs.
 
 `python scripts/r35-geography.py` derives the new ridge catalogue from the R28
 continuous elevation and the existing R34 features. `npx tsx scripts/r35-assets.ts`
 writes the SVG/recipe set and review sheet. `npx tsx scripts/bake-furniture.ts`
-rasterizes the signs into an ignored 7.5 MiB shared texture and builds wide,
+now rasterizes the signs into an ignored 5.625 MiB shared texture and builds wide,
 theatre and close placement layers. The dev launcher checks this bake. The base
-atlas is unchanged; combined static textures use 95.56 MiB. The old geometry,
+atlas is unchanged; after R38, combined static textures use 93.68 MiB. The old geometry,
 Atack rail sources and absence of station points retain their earlier limits.
 
 Placement rejects water footprints and collisions; coastal building emblems may
@@ -805,3 +804,38 @@ invalidation and bounded pan timing. For unit/equivalence evidence, set
 `npm test`, so older helpers do not write to R17. The R35 delivery README records
 the final checks, timing reuse and the research-only woodland source note.
 
+
+
+## R38 manuscript material
+
+Research is the default palette. `?palette=strong` remains a comparison choice.
+The unchanged R36 designs use fine manuscript-brown strokes, translucent brown
+roof/crown washes and transparent interiors. Source-map noise modulates the ink
+in the offline bake. Capitals retain their ring geometry and rank hierarchy;
+non-geographic ornaments retain their prior output.
+
+`npx tsx scripts/r38-assets.ts` refreshes 96 geographic SVGs and recipes, checking
+every path/circle coordinate against the prior source. The sign bake packs 288
+geographic subtiles into a 1280 by 1152 image with three placement bands. They
+share the base world's transform below live claimed washes, then operational
+arrows and labels. Texture upload explicitly premultiplies alpha. Retaining
+subtiles rather than flattening whole maps preserves R36's date-dependent
+capital scale, report avoidance and name suppression without a runtime bake.
+Reports, authors, claims and fronts never enter the static bake.
+
+Water names stay at their own anchors instead of using land-label offsets.
+Delaware Bay's name uses two lines along the bay at its existing point. Town
+names retain priority; anchored water names precede general region captions.
+Diagnostics expose water-label sources, bounds and collision classes.
+`npx tsx scripts/r38-water-proof.ts` audits delivered water names against their
+own source water points or named river lines.
+
+Evidence is in the main checkout's `art-masters/R38/`: native R36/R38 fit and
+Virginia comparisons, ultrawide captures, town/capital/hill crops, memory and
+timings, and a renderer wash attenuation proof. Selected captures retain R36's
+real snapshot and cameras. A separate diagnostic probe removes claims from
+copied fixtures, identified in their recipes. `playwright.r38.config.ts` writes
+there; set `R38_RUN` to a fresh artifact directory for each correction run.
+Use the earlier `DESK_EVIDENCE_REQUEST` setting with R38 for unit evidence.
+The evidence README records checks, reused results and retained failures.
+This is maker verification.

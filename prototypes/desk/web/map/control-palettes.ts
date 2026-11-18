@@ -1,6 +1,6 @@
 /** Live pigment only. Static paper, relief, rivers and geography are shared. */
 export type ControlPalette = 'strong' | 'research';
-export const CONTROL_PALETTE_IDS: ControlPalette[] = ['strong','research'];
+export const CONTROL_PALETTE_IDS: ControlPalette[] = ['research','strong'];
 export const CONTROL_PALETTES = {
  strong: {
   colours:{friendly:0x084bd6,enemy:0xd32238,neutral:0xf7c52f,correction:0x79438f},
@@ -12,5 +12,5 @@ export const CONTROL_PALETTES = {
  },
 } as const;
 export function readControlPalette(search:string):ControlPalette {
- return new URLSearchParams(search).get('palette')==='research'?'research':'strong';
+ return new URLSearchParams(search).get('palette')==='strong'?'strong':'research';
 }

@@ -80,7 +80,7 @@ export class StaffRenderer {
   private onCamera: () => void;
   ready = false;
   look: Look = '0';
-  private palette:ControlPalette='strong';
+  private palette:ControlPalette='research';
   setPalette(palette:ControlPalette){if(this.palette===palette)return;this.palette=palette;this.invalidate();}
   private atlas?: BakedAtlas;
   private atlasSprites: {sprite:Sprite;minZoom:number}[]=[];
@@ -166,9 +166,9 @@ export class StaffRenderer {
     this.host.append(this.app.canvas);
     this.app.canvas.setAttribute('aria-hidden','true');
     this.app.stage.addChild(this.content,this.frameMask);
-    this.content.addChild(this.world,this.furniture,this.labels);
+    this.content.addChild(this.world,this.labels);
     this.content.mask=this.frameMask;
-    this.world.addChild(this.tiles,this.washes,this.arrows);
+    this.world.addChild(this.tiles,this.furniture,this.washes,this.arrows);
     await this.installFurniture();await this.installAtlas();if(this.dead)return;this.ready=true;if(openOnPack)this.fitOpening();else this.fit();if(this.reviewPost)this.fitPlan();
     this.observer=new ResizeObserver(() => {
       const box=this.host.getBoundingClientRect();
@@ -527,18 +527,18 @@ export class StaffRenderer {
   private async installFurniture(){
     const baked=await loadFurnitureAtlas(this.geometry.pack);if(!baked||this.dead)return;
     this.furnitureManifest=baked.manifest;this.furnitureBytes=baked.manifest.bytes;
-    const texture=Texture.from(baked.image,true);
+    const texture=Texture.from({resource:baked.image,alphaMode:'premultiply-alpha-on-upload'},true);
     for(const band of baked.manifest.bands)for(const sign of band.signs){
       const row=GLYPH_KINDS.indexOf(sign.kind);
-      const part=new Texture({source:texture.source,frame:new Rectangle(sign.variant*160,row*128,160,128)});
-      const sprite=new Sprite(part);sprite.anchor.set(.5);sprite.position.set(...sign.point);sprite.scale.set(sign.factor/2);sprite.visible=false;
+      const part=new Texture({source:texture.source,frame:new Rectangle(...(sign.atlasFrame??[sign.variant*160,row*128,160,128]))});
+      const sprite=new Sprite(part);sprite.anchor.set(.5);sprite.position.set(...sign.point);sprite.scale.set(sign.factor);sprite.visible=false;
       this.furniture.addChild(sprite);this.furnitureSprites.push({sprite,sign,band:band.name});
     }
   }
   private drawFurniture(){
     this.furnitureBoxes=[];this.furnitureDrawn=[];this.furnitureHidden=[];
     const scale=furnitureScale(this.labelZoom()),[l,t,r,b]=this.frameScreen(),z=this.camera.z;
-    this.furniture.position.set(this.camera.x,this.camera.y);this.furniture.scale.set(z);
+    // Geographic subtiles share the base world transform, below every live wash.
     const reports:Box[]=placeMarks(this.model.marks,id=>this.screen(id),this.app.screen.width,this.app.screen.height).map(({point:[x,y]})=>[x-24,y-24,x+24,y+24] as Box);
     const occupied:Box[]=[...this.overlayBoxes,...this.liveObstacles];
     const screenPoint=(p:Point):Point=>[p[0]*z+this.camera.x,p[1]*z+this.camera.y];
@@ -564,7 +564,7 @@ export class StaffRenderer {
       if(!point){this.furnitureHidden.push({id:sign.id,reason:'No nearby land-safe point clear of a report, furniture or paper'});continue;}
       const box=boxAtAnchor.map((v,i)=>v+point[i%2]!-anchor[i%2]!) as Box;
       if(!town&&[...occupied,...reports].some(o=>overlaps(o,box)))continue;
-      sprite.position.set((point[0]-this.camera.x)/z,(point[1]-this.camera.y)/z);sprite.scale.set(sign.factor*multiplier/2);
+      sprite.position.set((point[0]-this.camera.x)/z,(point[1]-this.camera.y)/z);sprite.scale.set(sign.factor*multiplier);
       sprite.visible=true;sprite.tint=this.appearance.contrast?0x333333:this.appearance.lamp?0xe6cba3:0xffffff;
       occupied.push(box);this.furnitureBoxes.push(box);this.furnitureDrawn.push({id:sign.id,kind:sign.kind,box,point,anchor,rank,pointDistance:Math.hypot(point[0]-anchor[0],point[1]-anchor[1]),waterDistance:Math.hypot(screenPoint(first)[0]-anchor[0],screenPoint(first)[1]-anchor[1])});
     }
@@ -644,7 +644,7 @@ export class StaffRenderer {
     }
     // Towns are the navigation anchors of the scene. Their labels get first
     // choice among region names and may move around a report sign.
-    for(const r of [...this.regions].sort((a,b)=>(a.kind==='key_point'?0:1)-(b.kind==='key_point'?0:1)||(a.id<b.id?-1:1))) {
+    for(const r of [...this.regions].sort((a,b)=>(a.kind==='key_point'?0:a.kind==='sea'?1:2)-(b.kind==='key_point'?0:b.kind==='sea'?1:2)||(a.id<b.id?-1:1))) {
       if(namedTowns.has(r.id))continue;
       if(!r.point || ['off_map','off-map','river'].includes(r.kind))continue;
       if(!this.labelEligibility.get(r.id))continue;
@@ -672,8 +672,10 @@ export class StaffRenderer {
           text.rotation=this.regionAngles.get(r.id)!;
         }
       }
+      // Water names stay at their own source water; collisions suppress them.
+      if(r.id==='delaware_bay'){text.text=r.name.replace(' Bay and ',' Bay\nand ');text.style.fontSize=14*this.appearance.mapScale/100;text.rotation=1.05;}
       const offsets:Point[]=[[0,0]];
-      for(let ring=1;ring<=(r.kind==='key_point'?5:2);ring++)for(const [dx,dy] of [[1,0],[-1,0],[0,-1],[0,1],[1,-1],[-1,-1],[1,1],[-1,1]])offsets.push([dx!*(text.width/2+ring*28),dy!*ring*28]);
+      for(let ring=1;r.kind!=='sea'&&ring<=(r.kind==='key_point'?5:2);ring++)for(const [dx,dy] of [[1,0],[-1,0],[0,-1],[0,1],[1,-1],[-1,-1],[1,1],[-1,1]])offsets.push([dx!*(text.width/2+ring*28),dy!*ring*28]);
       for(const [dx,dy] of offsets){
         text.position.set(p[0]+dx,p[1]+dy);
         // Measure after the authored spine rotation and any display offset.
@@ -694,11 +696,12 @@ export class StaffRenderer {
       return {id:r.id,point:p,shape:shape?[shape[0]*z+x,shape[1]*z+y,shape[2]*z+x,shape[3]*z+y] as Box:null};
     });
     const coverage=this.geometry.baseCoverage?.worldBounds;
-    return {furniture:{source:'baked',bakeMs:this.furnitureManifest?.bakeMs,bytes:this.furnitureBytes,revision:this.furnitureManifest?.revision,scaleFactor:2.15,enabled:this.signsEnabled,calendar:this.calendar,scale:furnitureScale(this.labelZoom()),drawn:this.furnitureDrawn,hidden:this.furnitureHidden},control:{rebuilds:this.controlRebuilds,...this.controlCounts,beliefs:Object.keys(this.model.control).length,paint:this.controlPaint},labelZoom:this.labelZoom(),labelVisibility:this.regions.map(r=>({id:r.id,kind:r.kind,...this.labelPolicies.get(r.id),eligible:this.labelEligibility.get(r.id)??false})),look:this.look,palette:this.palette,noteAnchor:this.study?(()=>{const p=this.project(this.study.estimate.point);return [p[0]*z+x,p[1]*z+y];})():null,detail:this.geometry.atlasDetail??{sourceTolerance:this.geometry.cartography?.lod?.sourceTolerance,countyDate:this.geometry.cartography?.lod?.countyDate,counties:this.geometry.cartography?.lod?.counties.length,stations:this.geometry.cartography?.lod?.stations.length,reliefRows:this.geometry.cartography?.relief.some(r=>r.contour!==undefined)},studyControl:this.study?{mock:true,mode:this.look==='C'?'region-tint':'wash',claims:this.study.washes.map(w=>({regions:w.regions,strength:w.permille>=800?'firm':'held',contested:!!w.contested})),roughenedShapes:true}:null,bakeMs:this.atlas?.bakeMs,atlasLoadMs:this.atlas?.loadMs,atlasSource:this.atlas?.source,degreeTicks:this.degreeTicks(),maximumZoom:this.maximumZoom(),hatchScreenSpacing:18,staticBands:this.atlasSprites.length,staticBakes:this.paintCount,frameTimes:[...this.frameTimes],frameProfile:this.frameProfile,omittedLabels:this.omittedLabels,renderer:this.app.renderer?.type,tiles:this.atlasSprites.length,rawTextureBytes:this.cacheBytes,rawTextureCap:CAP,paintedTiles:this.paintCount,zoom:this.camera.z/this.camera.fit,ready:this.host.dataset.ready,
+    return {furniture:{source:'baked',composition:'static-per-band-geography-before-live-washes',alphaMode:this.furnitureSprites[0]?.sprite.texture.source.alphaMode,layerOrder:this.world.children.map(c=>c===this.tiles?'base':c===this.furniture?'geographic-signs':c===this.washes?'claims':'operations'),bakeMs:this.furnitureManifest?.bakeMs,bytes:this.furnitureBytes,revision:this.furnitureManifest?.revision,scaleFactor:2.15,enabled:this.signsEnabled,calendar:this.calendar,scale:furnitureScale(this.labelZoom()),drawn:this.furnitureDrawn,hidden:this.furnitureHidden},control:{rebuilds:this.controlRebuilds,...this.controlCounts,beliefs:Object.keys(this.model.control).length,paint:this.controlPaint},labelZoom:this.labelZoom(),labelVisibility:this.regions.map(r=>({id:r.id,kind:r.kind,...this.labelPolicies.get(r.id),eligible:this.labelEligibility.get(r.id)??false})),look:this.look,palette:this.palette,noteAnchor:this.study?(()=>{const p=this.project(this.study.estimate.point);return [p[0]*z+x,p[1]*z+y];})():null,detail:this.geometry.atlasDetail??{sourceTolerance:this.geometry.cartography?.lod?.sourceTolerance,countyDate:this.geometry.cartography?.lod?.countyDate,counties:this.geometry.cartography?.lod?.counties.length,stations:this.geometry.cartography?.lod?.stations.length,reliefRows:this.geometry.cartography?.relief.some(r=>r.contour!==undefined)},studyControl:this.study?{mock:true,mode:this.look==='C'?'region-tint':'wash',claims:this.study.washes.map(w=>({regions:w.regions,strength:w.permille>=800?'firm':'held',contested:!!w.contested})),roughenedShapes:true}:null,bakeMs:this.atlas?.bakeMs,atlasLoadMs:this.atlas?.loadMs,atlasSource:this.atlas?.source,degreeTicks:this.degreeTicks(),maximumZoom:this.maximumZoom(),hatchScreenSpacing:18,staticBands:this.atlasSprites.length,staticBakes:this.paintCount,frameTimes:[...this.frameTimes],frameProfile:this.frameProfile,omittedLabels:this.omittedLabels,renderer:this.app.renderer?.type,tiles:this.atlasSprites.length,rawTextureBytes:this.cacheBytes,rawTextureCap:CAP,paintedTiles:this.paintCount,zoom:this.camera.z/this.camera.fit,ready:this.host.dataset.ready,
     regionContainment:{points:measured.filter(r=>r.point).length,shapes:measured.filter(r=>r.shape).length,
       outside:measured.filter(r=>(r.point&&!fits([...r.point,...r.point]))||(r.shape&&!fits(r.shape))),
       excludedOffMap:this.regions.filter(r=>['off_map','off-map'].includes(r.kind)).map(r=>r.id)},
     baseCoverage:coverage?{viewport,bounds:coverage,geographicBox:this.geometry.baseCoverage!.geographicBox,inside:viewport[0]>=coverage[0]-1e-6&&viewport[1]>=coverage[1]-1e-6&&viewport[2]<=coverage[2]+1e-6&&viewport[3]<=coverage[3]+1e-6}:null,
+    waterLabelCandidates:this.regions.filter(r=>r.kind==='sea').map(r=>{const text=this.textCache.get(r.id);if(!text)return {id:r.id,source:this.screen(r.id)};const q=text.getBounds(),box:Box=[q.x-3,q.y-3,q.x+q.width+3,q.y+q.height+3];return {id:r.id,source:this.screen(r.id),position:[text.x,text.y],text:text.text,fontSize:text.style.fontSize,rotation:text.rotation,box,visible:this.labels.children.includes(text),overlayCollisions:this.overlayBoxes.filter(b=>overlaps(b,box)),liveCollisions:this.liveObstacles.filter(b=>overlaps(b,box)),labelCollisions:this.labels.children.filter(c=>{const b=c.getBounds();return overlaps([b.x-3,b.y-3,b.x+b.width+3,b.y+b.height+3],box);}).map(c=>c.label)};}),
     labelObstacles:{overlays:this.overlayBoxes,live:this.liveObstacles,rivers:this.riverObstacles},renderedLabels:this.labels.children.map(child=>{const b=child.getBounds();return {id:child.label,text:(child as Text).text,bounds:{x:b.x,y:b.y,width:b.width,height:b.height}};}),
     frame:this.frameScreen(),fitBounds:[...this.bounds],camera:{...this.camera},
     ...(this.geometry.schematic?{referencePoints:Object.fromEntries(this.regions.filter(r=>r.point).map(r=>[r.id,this.screen(r.id)]))}:{})};}

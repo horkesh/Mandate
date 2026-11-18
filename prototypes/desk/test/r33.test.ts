@@ -2,11 +2,11 @@ import {expect,it} from 'vitest';
 import {controlColour,controlOpacity} from '../web/map/control.ts';
 import {readControlPalette,CONTROL_PALETTES} from '../web/map/control-palettes.ts';
 
-it('R33 defaults to strong and selects only a named palette from the query',()=>{
- expect(readControlPalette('')).toBe('strong');
+it('R38 defaults to research and selects only a named palette from the query',()=>{
+ expect(readControlPalette('')).toBe('research');
  expect(readControlPalette('?palette=research')).toBe('research');
  expect(readControlPalette('?palette=strong')).toBe('strong');
- expect(readControlPalette('?palette=unknown')).toBe('strong');
+ expect(readControlPalette('?palette=unknown')).toBe('research');
 });
 it('R33 uses the research endpoints and preserves strong endpoints',()=>{
  expect(controlColour('us','us',false,'research')).toBe(0x1f59a8);

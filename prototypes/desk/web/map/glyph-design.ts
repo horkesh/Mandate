@@ -87,11 +87,11 @@ export function glyphDesign(kind:GlyphKind,key:string):Design{
  const waved=paths.map((p,index)=>{
   const q:Point[]=[];p.forEach(([x,y],i)=>{if(i){const a=p[i-1]!;q.push([(a[0]+x)/2+(random()-.5)*.55,(a[1]+y)/2+(random()-.5)*.55]);}q.push([+(x+(random()-.5)*.6).toFixed(3),+(y+(random()-.5)*.6).toFixed(3)]);});
   if(index%5===v%5&&q.length>5)q.pop();return q;
- });return {paths:waved,fills};
+ });return {paths:waved,fills:['compass','scale','cartouche'].includes(kind)?fills:fills.map(f=>({...f,colour:'#68472f',opacity:Math.min(.18,f.opacity*.32)}))};
 }
 export function glyphPaths(kind:GlyphKind,key:string){return glyphDesign(kind,key).paths;}
 export function glyphSvg(kind:GlyphKind,key:string){
  const {paths,fills}=glyphDesign(kind,key),d=(p:Point[])=>p.map(([x,y],i)=>`${i?'L':'M'}${x} ${y}`).join(' ');
- const hills=kind==='mountain';
- return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -32 80 64" fill="none" stroke="${hills?'#79604a':'currentColor'}" stroke-linecap="round" stroke-linejoin="round">${fills.map(f=>`<path d="${d(f.points)}Z" fill="${f.colour}" fill-opacity="${f.opacity}" stroke="none"/>`).join('')}${paths.map((p,i)=>`<path d="${d(p)}" stroke-width="${(hills?.34+(i%4)*.07:.75+(i%5)*.22).toFixed(2)}" opacity="${hills?.82:.78+(i%3)*.09}"/>${!hills&&i%4===0?`<circle cx="${p[0]![0]}" cy="${p[0]![1]}" r=".7" fill="currentColor" stroke="none"/>`:''}`).join('')}</svg>`;
+ const hills=kind==='mountain',geographic=!['compass','scale','cartouche'].includes(kind);
+ return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -32 80 64" fill="none" stroke="${geographic?'#68472f':'currentColor'}" stroke-linecap="round" stroke-linejoin="round">${fills.map(f=>`<path d="${d(f.points)}Z" fill="${f.colour}" fill-opacity="${f.opacity}" stroke="none"/>`).join('')}${paths.map((p,i)=>`<path d="${d(p)}" stroke-width="${(hills?.34+(i%4)*.07:geographic?.42+(i%5)*.07:.75+(i%5)*.22).toFixed(2)}" opacity="${hills?.82:.78+(i%3)*.09}"/>${!hills&&i%4===0?`<circle cx="${p[0]![0]}" cy="${p[0]![1]}" r=".7" fill="${geographic?'#68472f':'currentColor'}" stroke="none"/>`:''}`).join('')}</svg>`;
 }
