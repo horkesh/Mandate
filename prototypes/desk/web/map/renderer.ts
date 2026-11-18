@@ -1,5 +1,5 @@
 import {mapProjection} from './projection.ts';
-import { Application, Container, Graphics, Sprite, Text, Texture } from 'pixi.js';
+import { Application, Container, Graphics, Rectangle, Sprite, Text, Texture } from 'pixi.js';
 import { geoAlbers, geoMercator, geoPath, geoDistance } from 'd3-geo';
 import type { GeoProjection } from 'd3-geo';
 import type { GeoPermissibleObjects } from 'd3-geo';
@@ -16,10 +16,9 @@ import {OPENING_FRAMES} from './framing.ts';
 import {labelPolicy,labelVisible} from './label-visibility.ts';
 import type { Look } from './skins.ts';
 import {controlColour,controlOpacity,controlStrength,sharedFront,contactMark} from './control.ts';
-import {glyphPaths,furnitureScale} from './furniture.ts';
-import type {Furniture} from './furniture.ts';
-import furnitureData from './furniture-data.json';
-import woodlands from './woodlands.json';
+import {furnitureScale,GLYPH_KINDS} from './furniture.ts';
+import {loadFurnitureAtlas} from './furniture-atlas.ts';
+import type {BakedSign,FurnitureManifest} from './furniture-atlas.ts';
 
 import {CONTROL_PALETTES} from './control-palettes.ts';
 import type {ControlPalette} from './control-palettes.ts';
@@ -48,11 +47,13 @@ export class StaffRenderer {
   private arrows = new Graphics();
   private washes = new Graphics();
   private labels = new Container();
-  private furniture = new Graphics();
+  private furniture = new Container();
+  private furnitureSprites:{sprite:Sprite;sign:BakedSign;band:string}[]=[];
+  private furnitureManifest:FurnitureManifest|null=null;
+  private furnitureBytes=0;
   private signsEnabled = new URLSearchParams(window.location.search).get('signs')!=='off';
   private furnitureBoxes:Box[]=[];
   private furnitureDrawn:{id:string;kind:string;box:Box;point:Point}[]=[];
-  private furnitureCandidates:Furniture[]=[];
   private geometry: MapGeometry;
   private regions: MapRegion[];
   private regionPaths = new Map<string, Painted>();
@@ -79,6 +80,12 @@ export class StaffRenderer {
   private atlas?: BakedAtlas;
   private atlasSprites: {sprite:Sprite;minZoom:number}[]=[];
   private frameTimes:number[]=[];
+  private frameProfile:Record<string,number>={};
+  private controlRevision='';
+  private controlCacheKey='';
+  private controlCacheBounds:Box|null=null;
+  private controlRebuilds=0;
+  private tickCache:{key:string;ticks:ReturnType<typeof graticuleTicks>}|null=null;
   private startup:{created:number;constructorDone?:number;appReady?:number;atlasReady?:number;firstRender?:number;lastRender?:number;lastOverlay?:number;draws:number}={created:performance.now(),draws:0};
   private textCache=new Map<string,Text>();
   private regionAngles=new Map<string,number>();
@@ -108,7 +115,7 @@ export class StaffRenderer {
       const sprite=new Sprite(Texture.from(band.canvas,true));sprite.position.set(band.box[0],band.box[1]);sprite.scale.set(1/band.scale);
       this.tiles.addChild(sprite);this.atlasSprites.push({sprite,minZoom:band.minZoom});
     }
-    this.cacheBytes=this.atlas.bytes;this.paintCount=0;this.invalidate();
+    this.cacheBytes=this.atlas.bytes+this.furnitureBytes;this.paintCount=0;this.invalidate();
     this.startup.atlasReady=performance.now();
   }
   fitGeographic(box:Box){
@@ -128,14 +135,6 @@ export class StaffRenderer {
 
   constructor(private host: HTMLElement, geometry: MapGeometry, onCamera: () => void) {
     this.geometry = geometry; this.regions = geometry.regions; this.onCamera = onCamera;
-    if(geometry.pack===furnitureData.pack){
-      this.furnitureCandidates=[...furnitureData.signs] as Furniture[];
-      for(const f of woodlands.features)for(let i=0;i<7;i++){
-        // A sparse emblem inside a documented envelope, never a land-cover fill.
-        const [w,s,e,n]=f.extent as [number,number,number,number];
-        this.furnitureCandidates.push({id:`woodland:${f.id}:${i}`,name:f.name,kind:f.kind as 'woods'|'marsh',point:[w+(e-w)*(.18+(i%3)*.3),s+(n-s)*(.2+Math.floor(i/3)*.3)],source:f.sources[0]!.url,size:f.kind==='woods'?.65:.8});
-      }
-    }
     for(const region of this.regions)this.labelPolicies.set(region.id,labelPolicy(region));
     this.projection = geometry.schematic ? geoMercator().center([-1.4,52]).scale(20000).translate([0,0]) : mapProjection(false);
     const path = geoPath(this.projection);
@@ -165,7 +164,7 @@ export class StaffRenderer {
     this.content.addChild(this.world,this.furniture,this.labels);
     this.content.mask=this.frameMask;
     this.world.addChild(this.tiles,this.washes,this.arrows);
-    await this.installAtlas();if(this.dead)return;this.ready=true;if(openOnPack)this.fitOpening();else this.fit();if(this.reviewPost)this.fitPlan();
+    await this.installFurniture();await this.installAtlas();if(this.dead)return;this.ready=true;if(openOnPack)this.fitOpening();else this.fit();if(this.reviewPost)this.fitPlan();
     this.observer=new ResizeObserver(() => {
       const box=this.host.getBoundingClientRect();
       // The observer also fires once on attachment. Refitting an unchanged
@@ -210,7 +209,10 @@ export class StaffRenderer {
     return [0,0,this.app.screen.width,this.app.screen.height];
   }
   degreeTicks(){
-    return this.geometry.schematic||!this.ready?[]:graticuleTicks(this.projection,this.camera,this.app.screen.width,this.app.screen.height);
+    if(this.geometry.schematic||!this.ready)return [];
+    const {x,y,z}=this.camera,w=this.app.screen.width,h=this.app.screen.height,key=`${x}:${y}:${z}:${w}:${h}`;
+    if(this.tickCache?.key!==key)this.tickCache={key,ticks:graticuleTicks(this.projection,this.camera,w,h)};
+    return this.tickCache.ticks;
   }
   hoveredRegion(){return this.regions.find(r=>r.id===this.hovered)??null;}
   northAngle(){
@@ -262,6 +264,7 @@ export class StaffRenderer {
   setData(model: MapModel, pencil: PencilRoute[], reviewPost: string | null) {
     const changed=this.reviewPost!==reviewPost;
     for(const [id,belief] of Object.entries(model.control))if(JSON.stringify(belief)!==JSON.stringify(this.model.control[id as keyof typeof this.model.control]))this.claimChanges.set(id,performance.now());
+    this.controlRevision=JSON.stringify([model.control,model.day,model.faction]);
     this.model=model;this.pencil=pencil;this.reviewPost=reviewPost;
     if(changed&&reviewPost&&this.ready)this.fitPlan();this.invalidate();
   }
@@ -320,8 +323,9 @@ export class StaffRenderer {
     const [left,top,right,bottom]=this.frameScreen();
     this.frameMask.clear().rect(left,top,right-left,bottom-top).fill(0xffffff);
     for(const band of this.atlasSprites)band.sprite.visible=this.camera.z>=band.minZoom;
-    this.readOverlayBoxes();this.drawControl();this.drawArrows();this.drawFurniture();this.drawLabels();
-    this.app.render();this.startup.firstRender??=performance.now();this.startup.lastRender=performance.now();this.host.dataset.ready='ready';this.onCamera();
+    let tick=performance.now();const step=(name:string)=>{const now=performance.now();this.frameProfile[name]=now-tick;tick=now;};
+    this.readOverlayBoxes();step('overlays');this.drawControl();step('control');this.drawArrows();step('arrows');this.drawFurniture();step('geographicSprites');this.drawLabels();step('labels');
+    this.app.render();step('submit');this.startup.firstRender??=performance.now();this.startup.lastRender=performance.now();this.host.dataset.ready='ready';this.onCamera();step('htmlOverlayUpdate');
     this.startup.lastOverlay=performance.now();this.startup.draws++;this.host.dataset.startup=JSON.stringify(this.startup);
     this.frameTimes.push(performance.now()-started);if(this.frameTimes.length>600)this.frameTimes.shift();
     if(this.controlCounts.animating)this.invalidate();
@@ -335,8 +339,18 @@ export class StaffRenderer {
     const began=this.claimChanges.get(id);return began===undefined?1:Math.min(1,(performance.now()-began)/900);
   }
   private drawControl(){
-    const g=this.washes,z=this.camera.z,pigment=CONTROL_PALETTES[this.palette];g.clear();this.controlCounts={regions:0,fronts:0,contacts:0,animating:0};this.controlPaint=[];
-    const frame=this.frameScreen(),visible=(id:string)=>{const b=this.regionPaths.get(id)?.bbox;return !b||(b[2]*z+this.camera.x>frame[0]&&b[0]*z+this.camera.x<frame[2]&&b[3]*z+this.camera.y>frame[1]&&b[1]*z+this.camera.y<frame[3]);};
+    const g=this.washes,z=this.camera.z,pigment=CONTROL_PALETTES[this.palette],frame=this.frameScreen();
+    const viewport:Box=[-this.camera.x/z,-this.camera.y/z,(frame[2]-this.camera.x)/z,(frame[3]-this.camera.y)/z];
+    const key=`${z}:${this.palette}:${this.appearance.contrast}:${this.controlRevision}`;
+    const bounds=this.controlCacheBounds,animating=Object.keys(this.model.control).some(id=>this.progress(id)<1);
+    // Retain the live Graphics mesh while a pan remains inside its guard band.
+    // This never bakes a claim into geography or reuses it across new reports.
+    if(!animating&&this.controlCounts.animating===0&&key===this.controlCacheKey&&bounds&&viewport[0]>=bounds[0]&&viewport[1]>=bounds[1]&&viewport[2]<=bounds[2]&&viewport[3]<=bounds[3]){
+      this.controlCounts.fronts=0;this.controlCounts.contacts=0;return;
+    }
+    this.controlCacheKey=key;this.controlCacheBounds=[viewport[0]-220/z,viewport[1]-220/z,viewport[2]+220/z,viewport[3]+220/z];this.controlRebuilds++;
+    g.clear();this.controlCounts={regions:0,fronts:0,contacts:0,animating:0};this.controlPaint=[];
+    const visible=(id:string)=>{const b=this.regionPaths.get(id)?.bbox,c=this.controlCacheBounds!;return !b||(b[2]>c[0]&&b[0]<c[2]&&b[3]>c[1]&&b[1]<c[3]);};
     for(const [id,belief] of Object.entries(this.model.control)){
       if(!visible(id))continue;
       const rings=this.rings(id),progress=this.progress(id);if(progress<1)this.controlCounts.animating++;
@@ -505,34 +519,28 @@ export class StaffRenderer {
     this.liveObstacles.push(...lineBoxes(revision.map(([x,y])=>[x*z+this.camera.x,y*z+this.camera.y]),5));
     const note=this.project(study.estimate.point);g.ellipse(note[0],note[1],36/z,22/z).stroke({color:0x5b574f,width:1.2/z,alpha:.85});
   }
-  private drawFurniture(){
-    const g=this.furniture;g.clear();this.furnitureBoxes=[];this.furnitureDrawn=[];
-    if(!this.signsEnabled)return;
-    const scale=furnitureScale(this.labelZoom()),[l,t,r,b]=this.frameScreen(),z=this.camera.z;
-    const occupied:Box[]=[...this.overlayBoxes,...this.liveObstacles,...placeMarks(this.model.marks,id=>this.screen(id),this.app.screen.width,this.app.screen.height).map(({point:[x,y]})=>[x-24,y-24,x+24,y+24] as Box)];
-    const candidates=[...this.furnitureCandidates];
-    // Only a positive report establishes an additional work; no holder is used.
-    for(const mark of this.model.marks.filter(m=>m.kind==='works'&&(m.value??0)>0)){
-      const region=this.regions.find(r=>r.id===mark.region);if(!region?.point||candidates.some(c=>c.id.startsWith('work:')&&'region' in c&&c.region===mark.region))continue;
-      candidates.push({id:`reported-work:${mark.region}`,kind:'earthwork',point:region.point,source:'View names standing works',size:.85});
+  private async installFurniture(){
+    const baked=await loadFurnitureAtlas(this.geometry.pack);if(!baked||this.dead)return;
+    this.furnitureManifest=baked.manifest;this.furnitureBytes=baked.manifest.bytes;
+    const texture=Texture.from(baked.image,true);
+    for(const band of baked.manifest.bands)for(const sign of band.signs){
+      const row=GLYPH_KINDS.indexOf(sign.kind);
+      const part=new Texture({source:texture.source,frame:new Rectangle(sign.variant*160,row*128,160,128)});
+      const sprite=new Sprite(part);sprite.anchor.set(.5);sprite.position.set(...sign.point);sprite.scale.set(sign.factor/2);sprite.visible=false;
+      this.furniture.addChild(sprite);this.furnitureSprites.push({sprite,sign,band:band.name});
     }
-    for(const item of candidates){
-      const wide=['mountain','capital','woods','marsh'].includes(item.kind);
-      if(scale==='wide'&&!wide||scale!=='wide'&&item.kind==='mountain'||scale!=='close'&&['station','hamlet'].includes(item.kind))continue;
-      const p=this.project(item.point),x=p[0]*z+this.camera.x,y=p[1]*z+this.camera.y;
-      const factor=(item.size??1)*(item.kind==='capital'&&scale==='wide'?.72:1);
-      const paths=glyphPaths(item.kind,item.id),pts=paths.flat();
-      const box:Box=[x+Math.min(...pts.map(p=>p[0]))*factor-3,y+Math.min(...pts.map(p=>p[1]))*factor-3,x+Math.max(...pts.map(p=>p[0]))*factor+3,y+Math.max(...pts.map(p=>p[1]))*factor+3];
+  }
+  private drawFurniture(){
+    this.furnitureBoxes=[];this.furnitureDrawn=[];
+    const scale=furnitureScale(this.labelZoom()),[l,t,r,b]=this.frameScreen(),z=this.camera.z;
+    this.furniture.position.set(this.camera.x,this.camera.y);this.furniture.scale.set(z);
+    const occupied:Box[]=[...this.overlayBoxes,...this.liveObstacles,...placeMarks(this.model.marks,id=>this.screen(id),this.app.screen.width,this.app.screen.height).map(({point:[x,y]})=>[x-24,y-24,x+24,y+24] as Box)];
+    for(const {sprite,sign,band} of this.furnitureSprites){
+      sprite.visible=false;if(!this.signsEnabled||band!==scale)continue;
+      const box=sign.box.map((v,i)=>v*z+(i%2?this.camera.y:this.camera.x)) as Box;
       if(box[0]<l+3||box[1]<t+3||box[2]>r-3||box[3]>b-3||occupied.some(o=>overlaps(o,box)))continue;
-      occupied.push(box);this.furnitureBoxes.push(box);this.furnitureDrawn.push({id:item.id,kind:item.kind,box,point:[x,y]});
-      const ink=this.appearance.contrast?0x111111:item.kind==='marsh'||item.kind==='woods'?0x475444:0x513a29;
-      for(const path of paths){
-        const points=path.map(([u,v])=>[x+u*factor,y+v*factor] as Point);
-        // A fine paper keyline preserves drawn detail under either control field.
-        for(const [width,colour,alpha] of [[2.8,0xead9b3,.65],[1.05,ink,.9]] as const){
-          points.forEach((p,i)=>i?g.lineTo(...p):g.moveTo(...p));g.stroke({color:colour,width,alpha});
-        }
-      }
+      sprite.visible=true;sprite.tint=this.appearance.contrast?0x333333:this.appearance.lamp?0xe6cba3:0xffffff;
+      occupied.push(box);this.furnitureBoxes.push(box);this.furnitureDrawn.push({id:sign.id,kind:sign.kind,box,point:[sign.point[0]*z+this.camera.x,sign.point[1]*z+this.camera.y]});
     }
   }
   private drawLabels() {
@@ -634,7 +642,7 @@ export class StaffRenderer {
       return {id:r.id,point:p,shape:shape?[shape[0]*z+x,shape[1]*z+y,shape[2]*z+x,shape[3]*z+y] as Box:null};
     });
     const coverage=this.geometry.baseCoverage?.worldBounds;
-    return {furniture:{enabled:this.signsEnabled,scale:furnitureScale(this.labelZoom()),drawn:this.furnitureDrawn},control:{...this.controlCounts,beliefs:Object.keys(this.model.control).length,paint:this.controlPaint},labelZoom:this.labelZoom(),labelVisibility:this.regions.map(r=>({id:r.id,kind:r.kind,...this.labelPolicies.get(r.id),eligible:this.labelEligibility.get(r.id)??false})),look:this.look,palette:this.palette,noteAnchor:this.study?(()=>{const p=this.project(this.study.estimate.point);return [p[0]*z+x,p[1]*z+y];})():null,detail:this.geometry.atlasDetail??{sourceTolerance:this.geometry.cartography?.lod?.sourceTolerance,countyDate:this.geometry.cartography?.lod?.countyDate,counties:this.geometry.cartography?.lod?.counties.length,stations:this.geometry.cartography?.lod?.stations.length,reliefRows:this.geometry.cartography?.relief.some(r=>r.contour!==undefined)},studyControl:this.study?{mock:true,mode:this.look==='C'?'region-tint':'wash',claims:this.study.washes.map(w=>({regions:w.regions,strength:w.permille>=800?'firm':'held',contested:!!w.contested})),roughenedShapes:true}:null,bakeMs:this.atlas?.bakeMs,atlasLoadMs:this.atlas?.loadMs,atlasSource:this.atlas?.source,degreeTicks:this.degreeTicks(),maximumZoom:this.maximumZoom(),hatchScreenSpacing:18,staticBands:this.atlasSprites.length,staticBakes:this.paintCount,frameTimes:[...this.frameTimes],omittedLabels:this.omittedLabels,renderer:this.app.renderer?.type,tiles:this.atlasSprites.length,rawTextureBytes:this.cacheBytes,rawTextureCap:CAP,paintedTiles:this.paintCount,zoom:this.camera.z/this.camera.fit,ready:this.host.dataset.ready,
+    return {furniture:{source:'baked',bakeMs:this.furnitureManifest?.bakeMs,bytes:this.furnitureBytes,revision:this.furnitureManifest?.revision,scaleFactor:2.15,enabled:this.signsEnabled,scale:furnitureScale(this.labelZoom()),drawn:this.furnitureDrawn},control:{rebuilds:this.controlRebuilds,...this.controlCounts,beliefs:Object.keys(this.model.control).length,paint:this.controlPaint},labelZoom:this.labelZoom(),labelVisibility:this.regions.map(r=>({id:r.id,kind:r.kind,...this.labelPolicies.get(r.id),eligible:this.labelEligibility.get(r.id)??false})),look:this.look,palette:this.palette,noteAnchor:this.study?(()=>{const p=this.project(this.study.estimate.point);return [p[0]*z+x,p[1]*z+y];})():null,detail:this.geometry.atlasDetail??{sourceTolerance:this.geometry.cartography?.lod?.sourceTolerance,countyDate:this.geometry.cartography?.lod?.countyDate,counties:this.geometry.cartography?.lod?.counties.length,stations:this.geometry.cartography?.lod?.stations.length,reliefRows:this.geometry.cartography?.relief.some(r=>r.contour!==undefined)},studyControl:this.study?{mock:true,mode:this.look==='C'?'region-tint':'wash',claims:this.study.washes.map(w=>({regions:w.regions,strength:w.permille>=800?'firm':'held',contested:!!w.contested})),roughenedShapes:true}:null,bakeMs:this.atlas?.bakeMs,atlasLoadMs:this.atlas?.loadMs,atlasSource:this.atlas?.source,degreeTicks:this.degreeTicks(),maximumZoom:this.maximumZoom(),hatchScreenSpacing:18,staticBands:this.atlasSprites.length,staticBakes:this.paintCount,frameTimes:[...this.frameTimes],frameProfile:this.frameProfile,omittedLabels:this.omittedLabels,renderer:this.app.renderer?.type,tiles:this.atlasSprites.length,rawTextureBytes:this.cacheBytes,rawTextureCap:CAP,paintedTiles:this.paintCount,zoom:this.camera.z/this.camera.fit,ready:this.host.dataset.ready,
     regionContainment:{points:measured.filter(r=>r.point).length,shapes:measured.filter(r=>r.shape).length,
       outside:measured.filter(r=>(r.point&&!fits([...r.point,...r.point]))||(r.shape&&!fits(r.shape))),
       excludedOffMap:this.regions.filter(r=>['off_map','off-map'].includes(r.kind)).map(r=>r.id)},

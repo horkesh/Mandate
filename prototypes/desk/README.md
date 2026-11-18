@@ -768,3 +768,40 @@ target. It records zero static rebakes and the unchanged 88.06 MiB atlas.
 The saved atlas's earlier 16.38-second bake is inherited evidence, not a new
 R34 bake. Existing build warnings and earlier console/live-evidence limits
 remain as described above.
+## R35 geographic sprite layers
+
+The manuscript signs use eight seeded compositions per kind, with shaded roofs,
+grey-green foliage and varied pen strokes. `npm run dev -- --at-war` still opens
+the strong palette; `?palette=research` selects the other palette and
+`?signs=off` provides the comparison without signs.
+
+`python scripts/r35-geography.py` derives the new ridge catalogue from the R28
+continuous elevation and the existing R34 features. `npx tsx scripts/r35-assets.ts`
+writes the SVG/recipe set and review sheet. `npx tsx scripts/bake-furniture.ts`
+rasterizes the signs into an ignored 7.5 MiB shared texture and builds wide,
+theatre and close placement layers. The dev launcher checks this bake. The base
+atlas is unchanged; combined static textures use 95.56 MiB. The old geometry,
+Atack rail sources and absence of station points retain their earlier limits.
+
+Placement rejects water footprints and collisions; coastal building emblems may
+sit on the landward side of their unchanged source anchor. Fort Delaware's
+regional anchor has no safe land footprint, so its geographic sign is omitted.
+Bridge and ferry signs intentionally cross water. Mountain chains interleave so
+the Blue Ridge, Alleghenies and southern Appalachians all appear at fit zoom.
+Runtime draws cached sprites and hides whole signs when reports, arrows or
+papers take priority. Names yield without changing a reported position.
+
+Unchanged live control meshes survive small pans inside a guard band. A received
+view/day/faction, palette, contrast, zoom, animation or guard-band exit rebuilds
+them. This cache never puts beliefs into the static geographic bake. Geographic
+graticule intersections are shared between the SVG and diagnostics for an
+identical camera. Cold wash rebuilds still cost more than steady panning.
+
+`npx playwright test --config playwright.r35.config.ts` writes evidence only to
+the main checkout's `art-masters/R35/`. Its retained real R32 fixtures cover the
+two-size/palette matrix, collisions, live front/report priority, mesh cache
+invalidation and bounded pan timing. For unit/equivalence evidence, set
+`DESK_EVIDENCE_REQUEST=../../ByOrderOfThePresident/art-masters/R35` before
+`npm test`, so older helpers do not write to R17. The R35 delivery README records
+the final checks, timing reuse and the research-only woodland source note.
+

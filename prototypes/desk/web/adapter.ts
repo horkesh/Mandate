@@ -3,6 +3,7 @@ import type { OptionView, ReportView, SeatRequest, SeatView } from '@mandate/ker
 import type { MapGeometry } from './map/model.ts';
 import type {MapPlan} from './map/model.ts';
 import type {AtlasManifest} from './map/atlas-disk.ts';
+import type {FurnitureManifest} from './map/furniture-plan.ts';
 
 export interface DeskDay {
   day: number; date: string; reports: readonly ReportView[];
@@ -34,6 +35,10 @@ async function read<T>(response: Response): Promise<T> {
   return response.json() as Promise<T>;
 }
 export const deskApi = {
+  furnitureManifest:(pack:string)=>{
+    if(pack!=='union-1861')return Promise.reject(new Error('Unknown geographic sign pack'));
+    return fetch(`/map-data/${pack}-signs/manifest.json`,{cache:'no-cache'}).then(read<FurnitureManifest>);
+  },
   runtimeGeometry:(pack:string)=>{
     if(pack!=='union-1861'&&pack!=='testbed')return Promise.reject(new Error('Unknown map'));
     return fetch(`/map-data/${pack}-atlas/geometry.json`,{cache:'no-cache'}).then(read<MapGeometry>);
