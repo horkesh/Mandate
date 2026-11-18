@@ -21,6 +21,7 @@ import {loadFurnitureAtlas} from './furniture-atlas.ts';
 import type {BakedSign,FurnitureManifest} from './furniture-atlas.ts';
 import {capitalRank,wideTown,placeNearAnchor,namePositions,boxDistance} from './furniture-placement.ts';
 import type {CapitalRank} from './furniture-placement.ts';
+import {placeNameHints} from './place-names.ts';
 
 import {CONTROL_PALETTES} from './control-palettes.ts';
 import type {ControlPalette} from './control-palettes.ts';
@@ -53,7 +54,8 @@ export class StaffRenderer {
   private furnitureSprites:{sprite:Sprite;sign:BakedSign;band:string}[]=[];
   private furnitureManifest:FurnitureManifest|null=null;
   private furnitureBytes=0;
-  private signsEnabled = new URLSearchParams(window.location.search).get('signs')!=='off';
+  // R41 / 0095: retained experiment, reachable only by an explicit URL opt-in.
+  private signsEnabled = new URLSearchParams(window.location.search).get('signs')==='on';
   private furnitureBoxes:Box[]=[];
   private furnitureDrawn:{id:string;kind:string;box:Box;point:Point;anchor:Point;rank:CapitalRank;pointDistance:number;waterDistance:number;nameBox?:Box;nameDistance?:number;nameGap?:number}[]=[];
   private furnitureHidden:{id:string;reason:string}[]=[];
@@ -525,6 +527,7 @@ export class StaffRenderer {
     const note=this.project(study.estimate.point);g.ellipse(note[0],note[1],36/z,22/z).stroke({color:0x5b574f,width:1.2/z,alpha:.85});
   }
   private async installFurniture(){
+    if(!this.signsEnabled)return;
     const baked=await loadFurnitureAtlas(this.geometry.pack);if(!baked||this.dead)return;
     this.furnitureManifest=baked.manifest;this.furnitureBytes=baked.manifest.bytes;
     const texture=Texture.from({resource:baked.image,alphaMode:'premultiply-alpha-on-upload'},true);
@@ -606,6 +609,28 @@ export class StaffRenderer {
     // captions; neither an authored label anchor nor a large search ring may
     // detach the name from its town. Live marks and papers retain priority.
     const namedTowns=new Set<string>();
+    // The plain map keeps every former town-name candidate. A drawing's water
+    // displacement and footprint must never displace or suppress its name.
+    if(!this.signsEnabled)for(const hint of placeNameHints(this.geometry.pack,this.calendar,labelZoom)){
+      const region=this.regions.find(r=>r.id===hint.id);if(!region?.point)continue;
+      const q=this.project(region.point),point:Point=[q[0]*this.camera.z+this.camera.x,q[1]*this.camera.z+this.camera.y];
+      if(point[0]<frame[0]||point[1]<frame[1]||point[0]>frame[2]||point[1]>frame[3])continue;
+      let text=this.textCache.get(hint.id);if(!text){text=new Text({text:region.name});this.textCache.set(hint.id,text);}
+      text.text=region.name;text.rotation=0;text.anchor.set(.5);text.label=hint.id;
+      text.style={...font,fontFamily:this.look==='A'?'Standard':font.fontFamily,fontSize:(hint.rank==='national'?16:14)*this.appearance.mapScale/100,letterSpacing:.1,fontWeight:hint.rank==='national'?'bold':'normal',stroke:{color:PALETTES[this.look].paper,width:3,join:'round'}};
+      const corners:Point[]=[];
+      for(const dx of [-1,1])for(const dy of [-1,1])corners.push([point[0]+dx*(text.width/2+8),point[1]+dy*(text.height/2+8)]);
+      // Confluences need a small tangential adjustment as well as a corner.
+      // Search beside the point before the legacy general-label wide rings.
+      for(const gap of [8,12,20])for(const shift of [-12,12,-24,24])corners.push(
+        [point[0]-text.width/2-gap,point[1]+shift],[point[0]+text.width/2+gap,point[1]+shift],
+        [point[0]+shift,point[1]-text.height/2-gap],[point[0]+shift,point[1]+text.height/2+gap]);
+      for(const p of [point,...namePositions(point,[...point,...point],text.width,text.height),...corners]){
+        text.position.set(...p);const b=text.getBounds(),box:Box=[b.x-3,b.y-3,b.x+b.width+3,b.y+b.height+3];
+        if(box[0]<frame[0]+4||box[1]<frame[1]+4||box[2]>frame[2]-4||box[3]>frame[3]-4||[...occupied,...this.liveObstacles,...this.riverObstacles].some(o=>overlaps(o,box)))continue;
+        text.alpha=this.reviewPost?.55:.88;occupied.push(box);this.labels.addChild(text);namedTowns.add(hint.id);break;
+      }
+    }
     for(const sign of this.furnitureDrawn.filter(s=>s.id.startsWith('town:'))){
       const id=sign.id.slice(5),region=this.regions.find(r=>r.id===id);if(!region)continue;
       let text=this.textCache.get(id);if(!text){text=new Text({text:region.name});this.textCache.set(id,text);}

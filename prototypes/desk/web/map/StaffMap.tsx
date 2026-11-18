@@ -64,7 +64,7 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
   const [look,setLook]=useState(()=>readLook(window.location.search));
   const [palette,setPalette]=useState(()=>readControlPalette(window.location.search));
   const colours=CONTROL_PALETTES[palette].colours;
-  const signs=new URLSearchParams(window.location.search).get('signs')!=='off';
+  const signs=new URLSearchParams(window.location.search).get('signs')==='on';
   const host=useRef<HTMLDivElement>(null),engine=useRef<StaffRenderer|null>(null);
   const twin=useRef<HTMLDivElement>(null),previousText=useRef(false);
   const {name:t,text:display}=presenter(strings);
@@ -190,9 +190,9 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
       {frame&&<div className="map-neatline" aria-hidden="true" style={frameStyle}/>}
       {active&&model&&<div className="map-note" role="status">{describe(model.marks.find(m=>m.id===active)!)}</div>}
       {!active&&engine.current?.hoveredRegion()&&<div className="map-note" data-testid="control-hover" role="status">{describeControl(engine.current.hoveredRegion()!.id)}</div>}
-      <div className={`map-scale${signs?' drawn-scale':''}`} aria-hidden="true">
-        <span className="north-rose" style={{transform:`rotate(${engine.current?.ready?engine.current.northAngle():0}deg)`}}>{signs?<span dangerouslySetInnerHTML={{__html:glyphSvg('compass','map-north')}}/>:'↑'}</span>
-        {signs&&scaleBar?<><span className="decorated-bar" style={{width:scaleBar.pixels*1.6}} dangerouslySetInnerHTML={{__html:glyphSvg('scale','map-miles')}}/><b style={{width:scaleBar.pixels}}><span>0</span><span>{scaleBar.miles} {M.miles}</span></b></>:<><i/>{geometry?.schematic?'':M.miles}</>}
+      <div className="map-scale drawn-scale" aria-hidden="true">
+        <span className="north-rose" style={{transform:`rotate(${engine.current?.ready?engine.current.northAngle():0}deg)`}}><span dangerouslySetInnerHTML={{__html:glyphSvg('compass','map-north')}}/></span>
+        {scaleBar?<><span className="decorated-bar" style={{width:scaleBar.pixels*1.6}} dangerouslySetInnerHTML={{__html:glyphSvg('scale','map-miles')}}/><b style={{width:scaleBar.pixels}}><span>0</span><span>{scaleBar.miles} {M.miles}</span></b></>:<><i/>{geometry?.schematic?'':M.miles}</>}
       </div>
     </div>
     {(text||failed)&&<div ref={twin} className="map-text" data-testid="map-text-twin" tabIndex={0}>

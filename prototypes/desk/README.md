@@ -712,8 +712,10 @@ console send-back notes limitation remain.
 
 ## R34 geographic signs
 
-The manuscript now draws neutral geographic furniture above its control washes.
-Use `?signs=off` for the comparison without signs; signs are on by default.
+R41 / decision 0095 leaves pictorial geography off by default. The retained
+experiment is available only through the exact `?signs=on` URL parameter;
+the look selector has no sign option. Geographic drawings in that experiment
+sit below the live control washes.
 Both `?palette=strong` and `?palette=research` remain available, with research the
 default under R38. `public/map-signs/` contains 15 SVG designs,
 four seeded variants each, and their recipes. Runtime variants use the feature
@@ -772,7 +774,7 @@ remain as described above.
 The manuscript signs use eight seeded compositions per kind, with shaded roofs,
 transparent brown foliage and varied pen strokes after R38. `npm run dev -- --at-war` opens
 the research palette; `?palette=strong` selects the comparison palette and
-`?signs=off` provides the comparison without signs.
+`?signs=on` enables the retained experiment; the default is the straight map.
 
 `python scripts/r35-geography.py` derives the new ridge catalogue from the R28
 continuous elevation and the existing R34 features. `npx tsx scripts/r35-assets.ts`
@@ -880,3 +882,34 @@ close crops and their 2× pixel-inspection enlargements, diagnosis, contrast pro
 texture memory and software-renderer timings. Source geography, cameras, zoom
 bands and research default are unchanged. Maker verification remains separate
 from the lead's aesthetic acceptance.
+
+### R41 straight map
+
+The default Union map shows places by their names, with no pictorial towns,
+capitals, forts, crossings, hills, woods or marshes. The existing place catalogue
+supplies name-only zoom hints at the original geometry points. Nearby text
+positions clear rivers and operational marks; a compact search handles river
+confluences before the older wide label offsets. Report signs, fronts and arrows
+retain priority. Research remains the default palette, and the compass and
+measured scale remain on their margin card. Water anchors and baked static base
+layers are unchanged.
+
+The browser skips the sign manifest, image decoding and texture allocation while
+signs are off. SVGs, recipes, bake code and the ignored atlas remain available for
+`?signs=on`. Neither changing the map look nor an unrecognized `signs` value
+enables the experiment. The developer launcher still verifies the saved sign
+bake so the explicit opt-in works; it does not load that texture in the page.
+
+From this folder, run `npm run dev -- --at-war` and open
+`http://127.0.0.1:5274/`. `npx playwright test --config playwright.r41.config.ts`
+checks the default, exact opt-in, selector, names, six requested captures,
+operational priority and pan timings. For unit/equivalence evidence in the
+authorized main folder, set
+`DESK_EVIDENCE_REQUEST=../../ByOrderOfThePresident/art-masters/R41` before
+`npm test`; `npm run build` typechecks and packages the browser.
+
+Main `art-masters/R41/README.md` indexes the selected opening, fit and Virginia
+captures at 1920×1080 and 3440×1440, name-anchor audit, texture measurements,
+timings, package inventory, retained failures and reused evidence. The default
+static allocation is 88.06 MiB, with zero sign texture bytes. Rendering timings
+use ANGLE SwiftShader and do not establish hardware frame rates.
