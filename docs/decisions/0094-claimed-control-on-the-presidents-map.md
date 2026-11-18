@@ -26,6 +26,7 @@ Status: accepted (2026-11-18). The owner approved the kernel work ("Go ahead") a
    - Nothing on the seat side reads `regionControl`. A test changes truth without a report and shows that the view does not change.
 5. **How the desk draws it: real colour, used boldly.**
    - The Union is **blue** and the enemy is **red**, as Union staff maps marked the two sides. A neutral government's ground (0055) takes a third colour, a yellow ochre.
+   - For `union-1861` the colours are the research palette of `docs/research/2026-11-18-wargame-map-looks.md` section 8.1: Union `#1F59A8`, enemy `#C33830`, neutral `#D5A32F` and corrections `#76509B`. Each wash has a narrow pooled rim and a gentler middle, so the paper and relief read through it. The owner chose this over R30's stronger palette after the R33 comparison (2026-11-18).
    - Washes are full watercolour fields with outline colour at the borders. Contested ground is hatched in both sides' colours, a pencil claim is lighter with a broken edge, and an old claim fades.
    - The paper, ink and relief of 0093 stay. The colour sits on them, not instead of them.
    - The game shows through in motion and response, never in chrome:
