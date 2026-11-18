@@ -1,0 +1,56 @@
+[
+  {
+    "file": "im-fell-regular.woff2",
+    "source": "https://github.com/librefonts/imfellenglish/tree/4cc247267036e091cd401802ec99a383a403454a",
+    "sha256": "bf7f2fe6153812c63af2bc25d19af7c6f603a5161cef2ee6a25d0cf403f9f375",
+    "processing": "Reassembled upstream split TTX tables with FontTools, encoded WOFF2; no glyph changes"
+  },
+  {
+    "file": "im-fell-italic.woff2",
+    "source": "https://github.com/librefonts/imfellenglish/tree/4cc247267036e091cd401802ec99a383a403454a",
+    "sha256": "37f142a32f2cb35ff9ef47d0591d48ad8f35d553915e1906131d6f582e5d96c8",
+    "processing": "Reassembled upstream split TTX tables with FontTools, encoded WOFF2; no glyph changes"
+  },
+  {
+    "file": "libre-caslon-regular.woff2",
+    "source": "https://raw.githubusercontent.com/impallari/Libre-Caslon-Text/c31e21f7e8cf91f18d90f778ce20e66c68219c74/fonts/TTF/LibreCaslonText-Regular.ttf",
+    "sourceSha256": "9f40a9afcbe33ef1f799e41683f4fd523c3a6bfb7c648d2404005f8d31c2fdf6",
+    "sha256": "55c5a4fb0b7c4a5a73681ae4a07aa27124a0eda41eab7be0468aedff0a1c2b45",
+    "processing": "FontTools lossless WOFF2 encoding; no glyph changes"
+  },
+  {
+    "file": "libre-caslon-italic.woff2",
+    "source": "https://raw.githubusercontent.com/impallari/Libre-Caslon-Text/c31e21f7e8cf91f18d90f778ce20e66c68219c74/fonts/TTF/LibreCaslonText-Italic.ttf",
+    "sourceSha256": "17cdf0259d0d716da676b51087a5f136e2822cfa7f9bca0593d7fe44153f8c42",
+    "sha256": "f0f85fcaddc546c3134ead9d6c94717d0333d7852bf1d35838ebf4d45e6f7d2a",
+    "processing": "FontTools lossless WOFF2 encoding; no glyph changes"
+  },
+  {
+    "file": "libre-caslon-bold.woff2",
+    "source": "https://raw.githubusercontent.com/impallari/Libre-Caslon-Text/c31e21f7e8cf91f18d90f778ce20e66c68219c74/fonts/TTF/LibreCaslonText-Bold.ttf",
+    "sourceSha256": "c7f94b34f1f846777c70131394858fa320e6facbab51edf7c2f0d38b0cfced0b",
+    "sha256": "40ae10a2957d88cb4406b3d2f479f86d730921f9494d61ce9801ba3a6aa5a472",
+    "processing": "FontTools lossless WOFF2 encoding; no glyph changes"
+  },
+  {
+    "file": "old-standard-regular.woff2",
+    "source": "https://github.com/akryukov/oldstand/releases/download/v2.2/oldstandard-2.2.ttf.zip",
+    "sourceSha256": "210022e3825d1eed37bd92e81c12e2558fd4c5ae29a6b986b8c95b9d8a0cf095",
+    "sha256": "6ea2c3e0d2fc6a645181cf581f5d85cb06f5dc8836c4a73ed36d6a6ff7893e95",
+    "processing": "FontTools lossless WOFF2 encoding; no glyph changes"
+  },
+  {
+    "file": "old-standard-italic.woff2",
+    "source": "https://github.com/akryukov/oldstand/releases/download/v2.2/oldstandard-2.2.ttf.zip",
+    "sourceSha256": "522399ae31f2f7607b7ce53f10e586a036fc3e3277020a0afbfad7405f3cf0f9",
+    "sha256": "17929826e8334b82ad689bd5c2f3f111d4bec6445ef6d4a2d93786920ad98be6",
+    "processing": "FontTools lossless WOFF2 encoding; no glyph changes"
+  },
+  {
+    "file": "old-standard-bold.woff2",
+    "source": "https://github.com/akryukov/oldstand/releases/download/v2.2/oldstandard-2.2.ttf.zip",
+    "sourceSha256": "c0bb24b22b41fb2271b7a33e5b846ece3c42fe91a629b55e254989bcfa6d4853",
+    "sha256": "b10783ec8d1c56cb345ed5594f0ea816bd6e5f9bc09b780ccfc5eab9078b9f3e",
+    "processing": "FontTools lossless WOFF2 encoding; no glyph changes"
+  }
+]

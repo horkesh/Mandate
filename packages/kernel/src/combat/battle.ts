@@ -107,7 +107,7 @@ export interface CombatResult {
 const VACANT: PersonId = toId('person', 'vacant_post');
 
 /** Each side's land troops standing (not marching, not aboard, not surrendered) in each region, by region then strength. */
-export function presenceByRegion(ground: MarchGround, state: State): Map<RegionId, Presence[]> {
+export function presenceByRegion(ground: Pick<MarchGround, 'map'>, state: State): Map<RegionId, Presence[]> {
   const raw = new Map<RegionId, Map<FactionId, { men: number; blocks: ForceBlockId[]; pressing: ForceBlockId[]; unknown: ForceBlockId[] }>>();
   const ids = Object.keys(state.forceLocations) as ForceBlockId[];
   for (const id of ids.sort(strictCompare)) {

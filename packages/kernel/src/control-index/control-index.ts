@@ -2,12 +2,8 @@
  * The control index (FOUNDATION sections 4 and 10; decisions 0013, 0019): a
  * pure function of the World and a control table. Derived, never saved.
  *
- * It takes any control table, so the same function gives truth's fronts from
- * State and, later, a seat's fronts from the control its reports claim (0013:
- * the staff map draws fronts from claimed control). For that reuse, the staff
- * map's lane must first move `RegionControlTable` and `ControlShares` into a
- * module with no `State` import: the seat-api boundary refuses this module
- * today, through `control.ts` (review N5), and that is right until then.
+ * The same holding and contact rules apply to the State table and to a
+ * seat's claimed shares (0013, 0094).
  *
  * Terms:
  * - a faction **traces** a region when its share reaches the pack's supply
@@ -28,9 +24,18 @@
  */
 import { strictCompare } from '../compare.ts';
 import { lookup, type EdgeId, type FactionId, type RegionId } from '../ids.ts';
-import type { EdgeRecord } from '../world/graph.ts';
-import { otherEnd, type WorldIndex } from '../world/index.ts';
-import type { RegionControlTable } from '../control/control.ts';
+import { otherEnd, type EdgeRecord, type RegionKind } from '../world/graph.ts';
+import type { ControlShares, FrontSegment, RegionControlTable } from '../control/vocabulary.ts';
+
+export type { FrontSegment } from '../control/vocabulary.ts';
+
+/** The static map inputs the index and the seat's map need. */
+export interface ControlMap {
+  readonly world: { readonly rules: { readonly supplyControlPermille: number }; readonly factions: readonly { readonly id: FactionId }[] };
+  readonly regions: ReadonlyMap<RegionId, { readonly kind: RegionKind }>;
+  readonly edges: ReadonlyMap<EdgeId, EdgeRecord>;
+  readonly edgesAt: ReadonlyMap<RegionId, readonly EdgeRecord[]>;
+}
 
 export type HoldingReason = 'held' | 'below_threshold' | 'tied' | 'no_control' | 'open_water' | 'off_map';
 
@@ -49,7 +54,10 @@ export interface RegionHolding {
 
 /** A region's shares, largest first (ties by faction id): the terms behind its holding. */
 export function rankShares(control: RegionControlTable, region: RegionId): { readonly faction: FactionId; readonly permille: number }[] {
-  const shares = control[region] ?? {};
+  return rankedShares(Object.hasOwn(control, region) ? control[region]! : {});
+}
+
+function rankedShares(shares: ControlShares) {
   return (Object.keys(shares) as FactionId[])
     .map((faction) => ({ faction, permille: shares[faction]! }))
     .filter((s) => s.permille > 0)
@@ -62,16 +70,6 @@ export interface ContactEdge {
   readonly b: RegionId;
   readonly holderA: FactionId;
   readonly holderB: FactionId;
-}
-
-export interface FrontSegment {
-  readonly faction: FactionId;
-  readonly edge: EdgeId;
-  /** The faction's own end. */
-  readonly own: RegionId;
-  /** The enemy's end, which the segment faces. */
-  readonly faces: RegionId;
-  readonly enemy: FactionId;
 }
 
 export interface FrontLine {
@@ -110,7 +108,7 @@ export interface ControlIndex {
   readonly components: ReadonlyMap<FactionId, readonly Component[]>;
 }
 
-export function buildControlIndex(map: WorldIndex, control: RegionControlTable): ControlIndex {
+export function buildControlIndex(map: ControlMap, control: RegionControlTable): ControlIndex {
   const threshold = map.world.rules.supplyControlPermille;
   const factions = map.world.factions.map((f) => f.id).sort(strictCompare);
   const regionIds = [...map.regions.keys()].sort(strictCompare);
@@ -124,40 +122,60 @@ export function buildControlIndex(map: WorldIndex, control: RegionControlTable):
     if (h.tracedBy.length > 1) contested.push(id);
   }
 
-  const edges = [...map.edges.values()].sort((x, y) => strictCompare(x.id, y.id));
-  const contactEdges: ContactEdge[] = [];
-  for (const e of edges) {
-    const ha = holdings.get(e.a)!.holder;
-    const hb = holdings.get(e.b)!.holder;
-    if (ha !== null && hb !== null && ha !== hb) contactEdges.push({ edge: e.id, a: e.a, b: e.b, holderA: ha, holderB: hb });
-  }
-
+  const contactEdges = contactEdgesOf(map, holdings);
   const fronts = new Map<FactionId, FrontLine[]>();
   const components = new Map<FactionId, Component[]>();
   for (const f of factions) {
-    const segments: FrontSegment[] = [];
-    for (const c of contactEdges) {
-      if (c.holderA === f) segments.push({ faction: f, edge: c.edge, own: c.a, faces: c.b, enemy: c.holderB });
-      if (c.holderB === f) segments.push({ faction: f, edge: c.edge, own: c.b, faces: c.a, enemy: c.holderA });
-    }
-    fronts.set(f, frontLines(map, holdings, f, segments));
+    fronts.set(f, frontLines(map, holdings, f, frontSegmentsFor(contactEdges, f)));
     components.set(f, componentsOf(map, new Set(traced.get(f)!), f));
   }
 
   return { threshold, factions, holdings, traced, contested, contactEdges, fronts, components };
 }
 
+function contactEdgesOf(map: ControlMap, holdings: ReadonlyMap<RegionId, Pick<RegionHolding, 'holder'>>): ContactEdge[] {
+  const edges = [...map.edges.values()].sort((x, y) => strictCompare(x.id, y.id));
+  const contacts: ContactEdge[] = [];
+  for (const e of edges) {
+    const ha = holdings.get(e.a)?.holder ?? null;
+    const hb = holdings.get(e.b)?.holder ?? null;
+    if (ha !== null && hb !== null && ha !== hb) contacts.push({ edge: e.id, a: e.a, b: e.b, holderA: ha, holderB: hb });
+  }
+  return contacts;
+}
+
+function frontSegmentsFor(contacts: readonly ContactEdge[], faction: FactionId): FrontSegment[] {
+  const segments: FrontSegment[] = [];
+  for (const c of contacts) {
+    if (c.holderA === faction) segments.push({ faction, edge: c.edge, own: c.a, faces: c.b, enemy: c.holderB });
+    if (c.holderB === faction) segments.push({ faction, edge: c.edge, own: c.b, faces: c.a, enemy: c.holderA });
+  }
+  return segments;
+}
+
+/** The same oriented segments as the full index, without grouping lines or building supply components. */
+export function frontSegmentsOf(map: ControlMap, holdings: ReadonlyMap<RegionId, Pick<RegionHolding, 'holder'>>): FrontSegment[] {
+  if (holdings.size === 0) return [];
+  const contacts = contactEdgesOf(map, holdings);
+  return map.world.factions.map((f) => f.id).sort(strictCompare).flatMap((f) => frontSegmentsFor(contacts, f));
+}
+
 /** One region's holding. */
-export function holdingOf(map: WorldIndex, control: RegionControlTable, region: RegionId, threshold: number): RegionHolding {
+export function holdingOf(map: ControlMap, control: RegionControlTable, region: RegionId, threshold: number): RegionHolding {
   const record = lookup('region', map.regions, region);
   const empty = (reason: HoldingReason): RegionHolding => ({ region, holder: null, reason, tracedBy: [] });
   if (record.kind === 'river' || record.kind === 'sea') return empty('open_water');
   if (record.kind === 'off_map') return empty('off_map');
-  const ranked = rankShares(control, region);
+  return holdingFromShares(region, Object.hasOwn(control, region) ? control[region]! : {}, threshold);
+}
+
+/** A land holding from its share vector, whether reported or in State. */
+export function holdingFromShares(region: RegionId, shares: ControlShares, threshold: number): RegionHolding {
+  const ranked = rankedShares(shares);
   const top = ranked[0] ?? null;
   const runnerUp = ranked[1] ?? null;
   const tracedBy = ranked.filter((s) => s.permille >= threshold).map((s) => s.faction).sort(strictCompare);
-  if (top === null) return empty('no_control');
+  if (top === null) return { region, holder: null, reason: 'no_control', tracedBy };
   if (top.permille < threshold) return { region, holder: null, reason: 'below_threshold', tracedBy };
   if (runnerUp !== null && runnerUp.permille === top.permille) return { region, holder: null, reason: 'tied', tracedBy };
   return { region, holder: top.faction, reason: 'held', tracedBy };
@@ -181,7 +199,7 @@ export function traces(index: ControlIndex, faction: FactionId, region: RegionId
  * front around an enemy salient is one line, though the friendly regions
  * around it need not touch each other.
  */
-function frontLines(map: WorldIndex, holdings: ReadonlyMap<RegionId, RegionHolding>, faction: FactionId, segments: readonly FrontSegment[]): FrontLine[] {
+function frontLines(map: ControlMap, holdings: ReadonlyMap<RegionId, RegionHolding>, faction: FactionId, segments: readonly FrontSegment[]): FrontLine[] {
   const parent = segments.map((_, i) => i);
   const find = (i: number): number => {
     while (parent[i] !== i) i = parent[i] = parent[parent[i]!]!;
@@ -214,7 +232,7 @@ function frontLines(map: WorldIndex, holdings: ReadonlyMap<RegionId, RegionHoldi
     })
     .sort((x, y) => strictCompare(x.regions[0]!, y.regions[0]!));
 }
-function componentsOf(map: WorldIndex, traced: ReadonlySet<RegionId>, faction: FactionId): Component[] {
+function componentsOf(map: ControlMap, traced: ReadonlySet<RegionId>, faction: FactionId): Component[] {
   const regions = [...traced].sort(strictCompare);
   const groups = connectedGroups(regions, (r) => map.edgesAt.get(r)!.map((e: EdgeRecord) => otherEnd(e, r)).filter((n) => traced.has(n)));
   return groups.map((g) => ({ id: `component:${faction}:${g[0]!}`, faction, regions: g }));

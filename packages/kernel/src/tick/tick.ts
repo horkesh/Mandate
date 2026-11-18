@@ -280,14 +280,14 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   state = freeze(sendMessages(state, ctx.outbox.splice(0)));
 
   // 5. Reports on their cycles.
-  battleReports(ctx, state);
+  battleReports(ctx, state, start.regionControl);
   generateReports(ctx, state);
   // Observer letters on their cadence (lane 1.5).
   state = freeze(observerLetters(ctx, state));
   state = freeze(sendMessages(state, ctx.outbox.splice(0)));
 
   // 6. Pruning.
-  const pruned = pruneKnowledge(state, world.rules.templates, day);
+  const pruned = pruneKnowledge(state, world.rules.templates, day, world.map.world.rules.supplyControlPermille);
   if (pruned.counts.byAge > 0) fire(ctx, 'knowledge.pruned_age', pruned.counts.byAge);
   if (pruned.counts.bySupersession > 0) fire(ctx, 'knowledge.pruned_superseded', pruned.counts.bySupersession);
   // Lane 1.4: ended operations, closed battles and answered orders are kept the pack's days, as knowledge is.

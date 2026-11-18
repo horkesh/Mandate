@@ -1,0 +1,35 @@
+{
+  "asset": "prototypes/desk/public/fonts/old-standard-italic.woff2",
+  "request": "R14",
+  "brief": "CODEX.md R14; ASSETS.md section 5; decision 0035",
+  "date": "2026-11-17",
+  "tool": "FontTools + Brotli",
+  "mode": "sourced font; lossless WOFF2 encoding",
+  "model": null,
+  "plan": "not applicable; no generation",
+  "client": "Codex command line",
+  "prompt": null,
+  "requestedSize": "WOFF2; original glyph set",
+  "actualSize": 184496,
+  "references": [
+    {
+      "sourceUrl": "https://github.com/akryukov/oldstand/releases/download/v2.2/oldstandard-2.2.ttf.zip",
+      "sha256": "928255f9ca32b9f8f97123aeaa8aa728629fc96074c99f3a28fa1d6f32795ac1",
+      "extractedFontSha256": "522399ae31f2f7607b7ce53f10e586a036fc3e3277020a0afbfad7405f3cf0f9"
+    }
+  ],
+  "licence": "SIL Open Font License 1.1",
+  "licenceFile": "Old-Standard-OFL.txt",
+  "licenceSha256": "37862a01a6710b42a05875f9d6e6ecc03f2a4cf0e6ff2b0e1cb8d36ba516fdc8",
+  "postProcess": [
+    "FontTools lossless WOFF2 encoding; no glyph changes"
+  ],
+  "humanEdits": [],
+  "recipeScript": "scripts/font-recipes.py",
+  "recipeScriptSha256": "59faadc49c606ac1fb975064ced34f16f01b8e544659eeee02ee7cd34ea8f631",
+  "processingScript": "scripts/fonts.py",
+  "processingScriptSha256": "bce5646c6fcd27db4d45512e9969c1da60eeb9d7af237426e625e3cb81323347",
+  "masters": "art-masters/R14/fonts/",
+  "provenanceMarks": "No image generation; font metadata retained through FontTools encoding.",
+  "sha256": "17929826e8334b82ad689bd5c2f3f111d4bec6445ef6d4a2d93786920ad98be6"
+}

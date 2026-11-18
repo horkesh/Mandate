@@ -103,6 +103,12 @@
 {"by":null,"edge":"sea:island_fort:south_sea","provenance":[{"at":null,"source":"TB-DESIGN"}]},
 {"by":"southern_batteries","edge":"sea:s_coast:south_sea","provenance":[{"at":null,"source":"TB-DESIGN"}]}
 ],
+"openingControl": {
+"authors": [
+{"faction":"north","post":"n_war_office"},
+{"faction":"south","post":"s_war_office"}
+]
+},
 "posts": [
 {"acting":false,"department":"n_war","departmentChanges":[],"holder":"n_organiser","id":"n_army_east","installation":null,"intelligenceChief":null,"kind":"army","links":[],"name":"post.n_army_east.name","parent":"n_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_east_front","standingOrders":[],"temporary":null,"unknowns":[]},
 {"acting":false,"department":"n_war","departmentChanges":[],"holder":"n_appointee","id":"n_army_west","installation":null,"intelligenceChief":null,"kind":"army","links":[],"name":"post.n_army_west.name","parent":"n_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_west_front","standingOrders":[],"temporary":null,"unknowns":[]},

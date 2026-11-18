@@ -588,6 +588,12 @@
 {"by":"forts_barrancas_mcree","edge":"sea:pensacola:pensacola_coast","provenance":[{"at":"(zone layout)","source":"MAP-LANE"},{"at":"I-1 (ch. IV summary)","source":"OR"}]},
 {"by":"fort_pulaski","edge":"sea:savannah:sea_islands_coast","provenance":[{"at":"(zone layout)","source":"MAP-LANE"},{"at":"I-1 (ch. II summary)","source":"OR"}]}
 ],
+"openingControl": {
+"authors": [
+{"faction":"union","post":"us_secretary_war"},
+{"faction":"confederate","post":"cs_secretary_war"}
+]
+},
 "posts": [
 {"acting":false,"department":"cs_war","departmentChanges":[],"holder":null,"id":"cs_arsenal_baton_rouge","installation":"baton_rouge_arsenal","intelligenceChief":null,"kind":"arsenal","links":[],"name":"post.cs_arsenal_baton_rouge.name","parent":"cs_secretary_war","provenance":[{"at":"I-1 p.489","source":"OR"},{"at":"I-1 pp.450-451","source":"OR"}],"railLine":null,"region":"baton_rouge","standingOrders":[],"temporary":null,"unknowns":["holder"]},
 {"acting":false,"department":"cs_war","departmentChanges":[],"holder":null,"id":"cs_arsenal_mount_vernon","installation":"mount_vernon_arsenal","intelligenceChief":null,"kind":"arsenal","links":[],"name":"post.cs_arsenal_mount_vernon.name","parent":"cs_secretary_war","provenance":[{"at":"I-1 p.327","source":"OR"},{"at":"IV-1 p.192","source":"OR"},{"at":"IV-1 p.209","source":"OR"}],"railLine":null,"region":"mobile","standingOrders":[],"temporary":null,"unknowns":["holder"]},
