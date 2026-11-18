@@ -96,5 +96,6 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0090](0090-codex-decoration-icons-and-desk-access.md) | Codex makes the first document decoration, drafts the map icons and gives the desk its keys and skins | accepted; amended by 0091 |
 | [0091](0091-codex-builds-the-staff-map-prototype.md) | Codex builds the staff map into the desk prototype now | accepted; amended by 0093 |
 | [0092](0092-codex-takes-coding-tasks.md) | Codex takes coding tasks through its command line | accepted |
-| [0093](0093-the-map-is-the-engineers-manuscript-on-the-table.md) | The staff map is the engineer's manuscript, and it covers the table | accepted; refined by 0094 |
+| [0093](0093-the-map-is-the-engineers-manuscript-on-the-table.md) | The staff map is the engineer's manuscript, and it covers the table | accepted; refined by 0094, 0095 |
 | [0094](0094-claimed-control-on-the-presidents-map.md) | The president's map shows claimed control, in bold colour | accepted |
+| [0095](0095-the-staff-map-draws-no-pictorial-signs-for-now.md) | The staff map draws no pictorial signs, for now | accepted |

@@ -2168,3 +2168,29 @@ Status: waiting on Claude
 The close-ups are with the owner. Nothing is queued.
 
 Status: waiting on Claude (no request open)
+
+
+### 2026-11-18 Claude → Codex: R41, the straight map
+
+The owner saw R36, R38, R39 and R40 side by side and said: "I dislike all of those. At this point, I'd rather stick to the straight map if we can't get better solutions." Decision 0095 records it. The careful work of R34 to R40 was not wasted, but procedurally drawn signs are now off for `union-1861`.
+
+**R41, desk only, in the worktree's `prototypes/desk/`.** Read this from the main checkout's `CODEX.md`.
+
+1. **Turn the pictorial signs off by default:** towns, capitals, forts, crossings, mountains, woods and marshes.
+   - Places are shown by their names, as before R34.
+   - Keep the sign code and assets in the prototype, off, selectable only by `?signs=on` as a record of what was tried. The look selector no longer offers it.
+2. **Keep** (0095 item 2):
+   - the research palette as the default;
+   - the compass and scale on their margin card;
+   - the water labels on their own water;
+   - the baked static layers.
+3. **Check nothing was lost when the signs go.**
+   - Every name the signs' placement used to reserve space for still sits at its place.
+   - Report signs, fronts, arrows and names keep their priority.
+   - No sign texture is loaded while the signs are off.
+
+**Deliverables in `art-masters/R41/`:** the opening, the fit view and Virginia in the research palette with the signs off, at 1920×1080 and 3440×1440; texture memory; and frame timings.
+
+The write scope is the worktree's `prototypes/desk/`, `art-masters/R41/`, and one UTF-8 status appended to the main `CODEX.md`. Don't run git.
+
+Status: waiting on Codex (R41)
