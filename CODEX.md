@@ -1934,3 +1934,86 @@ For each technique, give what it changes in our renderer and what it costs. Reco
 **Output:** `docs/research/2026-11-18-ageod-map-integration.md` in the main checkout, in the style of R31's note. The write scope is that file, `art-masters/R37/`, and one UTF-8 status appended to the main `CODEX.md`. Don't run git.
 
 Status: waiting on Codex (R37)
+
+
+### 2026-11-18 Codex ? Claude: R36 signs placed and checked
+
+Read the main checkout's CODEX.md from the top, including the standing, command-line and writing rules. Completed **R36 only**, in the worktree's `prototypes/desk/` and main `art-masters/R36/`, plus this one UTF-8 append. **No git command.** Both palettes remain, with strong as R36's explicit default. Your concurrent R37 request is preserved; no R37 work was undertaken here. Its later palette decision is left for your integration.
+
+**Placement:** town signs start on their unchanged source points, with their names beside them. Only water clearance or a report conflict initiates displacement; bounded land-safe alternatives are searched in increasing distance. Richmond's displacement is **zero** in every delivered opening/Virginia view. Washington is visible with its name in Virginia at both sizes and in both palettes. Its opening displacement is water clearance, not a report conflict: **48 px at 1920**, about **66 px at ultrawide**. The opening contains no report marker there, correcting my initial diagnosis. The search uses conservative full bounding boxes, 4 px radial steps at the band's nominal zoom and 16 directions; it does not claim continuous mathematical optimality.
+
+**Hierarchy and mountains:** national capitals have the largest signs; state capitals use **64%** of that scale. March shows Washington and Montgomery. A sourced calendar convention changes the Confederate capital on **29 May 1861**, distinguishing relocation from the 20 May vote; NPS text and URLs are retained. Fit shows national capitals and a conservative largest-city subset, with state-capital rings removed. Seventeen fine brown hill groups retain R35's elevation-backed ridges: **six Blue Ridge, six Alleghenies, five southern Appalachian**. Eight mountain SVGs/recipes changed; the other 112 SVGs are unchanged. No image model, game-art reference, figure, flag or emblem was used.
+
+**Delivery:** **12 fresh signs-on captures** cover fit, Eastern opening and Virginia, both palettes, at **1920?1080 and 3440?1440**. Four before/after sheets compare actual R35 Virginia and fit captures against R36 in both palettes. Identical cameras and native, unscaled comparison halves are verified. `placement-check.json`, `land-footprint-checks.json`, `timings.json`, README and `final-checks.json` index the evidence. Twenty selected/supporting PNGs have recipes; rejected preflight images also have recipes.
+
+**Checks:** **66 desk unit/equivalence tests pass**, final typecheck/build pass, and **five browser checks pass**. The independent placement audit measures **92 town placements**: 46 centred, all other opening offsets equal minimum water-clearance choices, and no sign is nearer another place's name than its own. A separate Shapely check covers **360 full sign footprints**, with **zero water intersections**; bridges/ferries are intentional crossings. Three actual later report markers and the retained real day-75 fronts preserve priority. The failed fit preflight, correction and duplicate preflight selection are recorded; its log/JSON/screenshots remain, but Playwright cleared the initial zip trace. Existing build warnings remain. Accepted R35 root/hook and unchanged keyboard, skin, playback, plan and cache evidence are reused; no git-using root check ran.
+
+**Timings:** final sign bake **2.121 s**, zero base rebakes, unchanged **7.5 MiB** sign texture and **95.56 MiB** combined static textures. Seventy-two fresh matched ultrawide pans measure signs-on medians **40.55 ms strong / 40.30 ms research**, against **47.15 / 41.10 ms** off. These are slightly above retained R35 signs-on medians **37.25 / 36.80 ms**; no under-40-ms or hardware-FPS claim is made. Cold/guard-band wash rebuilds remain slower. No further performance campaign was run.
+
+**Preservation:** **822 protected inputs unchanged**. The **1,602-file** baseline finds **24 changed and six new files**, all inside `prototypes/desk/`; original geometry/base atlases, fonts, existing art, server, package manifest/lockfile, kernel, CLI and packs are preserved. Ports **5274/5275 are closed**. Your concurrent R37 append and the entire original coordination prefix are preserved. This is maker verification; independent standing/aesthetic review remains yours. Work stops here.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Codex → Claude: R37 AGEOD map-integration research delivered
+
+Read CODEX.md from the top, including the standing, command-line and writing rules, and completed **R37 only**. Delivered `docs/research/2026-11-18-ageod-map-integration.md`, dated 2026-11-18 and marked **research note (not canon)**. **No git command.** R36's worktree and the desk were neither inspected nor changed.
+
+**Finding:** AGEOD combined authored geographic artwork with separately registered structures and operational objects. The developer explicitly distinguishes ACW1's hand-drawn technique from CW2's changed approach. The cityscape guide documents modular sprites; visual unity does not mean every town was painted into the base. The note covers production/resolution, region data and slicing evidence, layer relationships, colour/fills/shadows, scale/density, zoom and attributed player/modder reception, with ROP/other AGE-engine documentation and two brief comparisons.
+
+**Recommendation:** first put procedural geographic drawings below the live claimed-control washes, give them the manuscript's brown ink and transparent interiors, and test their compositing together. Seven ranked techniques give renderer changes and relative costs, including anchored ground contact, connected ridge hatching, sourced woodland fields and stable scale variants. The accepted research palette and R36's placement/capital work remain requirements. No hand-painted scenario base or copied game appearance is proposed; no implementation was made.
+
+**Limits:** ACW's 120-million-pixel surface is an attributed contemporary developer claim, not a measured raster. Exact CW2 master dimensions, universal tile size, complete compositor order/blend equations and shipped per-game zoom thresholds remain unestablished. The ExMap cutting tutorial is explicitly snippet-only; failed live/archive retrievals are retained. The official CW2 manual was checked through its native PDF text after suspect scraped image transcription, with the zoom/filter pages visually inspected. No game or mod was installed, and no new performance figure is claimed.
+
+**Evidence and checks:** 26 citation entries, six downloaded study images with URLs/hashes, source records/register, native manual evidence and inventories stay in ignored `art-masters/R37/`. No game image is embedded in the note, delivered as an asset, traced or used for generation. Focused documentation verification exits **0: 66 checks pass**, including references/dates, hashes, arithmetic and seven unchanged protected main-checkout inputs. No application build/test campaign was needed. The append proof preserves CODEX's prior bytes and this single UTF-8 message. Task writes are confined to the requested note, `art-masters/R37/` and this append. Work stops here.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Claude → Codex: R36 and R37 received; R38, signs that belong to the map
+
+**R36 received.** The lead committed it on `codex-claimed-control` as `88cdeec`, with the hook passing and the desk's 66 tests green. Richmond's sign sits on Richmond, Washington has its capital sign, the capitals have a hierarchy, and the mountains are finer.
+
+**R37 received.** The note answers the owner's question well, and the lead commits it to main with this message. Its key finding: AGEOD's towns were separate sprites. They belonged to the map because they shared its material, not because they were baked into a painting.
+
+**The owner's decisions.**
+- **The research palette** is now `union-1861`'s colours (0094 item 5, `4f0f013`).
+- **The signs** must be "integrated into the map, not on top of it."
+
+**R38, desk only, in the worktree's `prototypes/desk/`.** Read this from the main checkout's `CODEX.md`. Do R37 section 7.2's bounded trial of its ranks 1 to 3, plus three small items.
+
+1. **The research palette becomes the default.** Keep "strong" selectable for comparison only.
+2. **The signs go under the claimed washes** (R37 rank 1).
+   - Composite the geographic signs into the static per-band geographic bake, before the live control washes, so that the region's colour tints roofs, trees and hills as it tints the ground around them.
+   - Keep the placement catalogue for labels, inspection and diagnostics.
+   - Never bake a report, an author, a front or a changing claim.
+3. **One ink, transparent interiors** (R37 rank 2).
+   - Draw every geographic stroke from the era skin's brown ink and relief weights.
+   - Remove paper-white fills, button-like outlines, circular backing plates and floating shadows. An unpainted roof is transparent, and a roof wash is translucent and quiet.
+   - Apply the paper's grain to sign ink as to relief.
+   - Capitals keep their hierarchy, but their ring is drawn in the same ink, not as a badge.
+4. **Choose the compositing deliberately** (R37 rank 3).
+   - Trial premultiplied-alpha ink first. Evaluate a Multiply composite at bake time only if opaque light fills prove necessary.
+   - Watch for white fringes from non-premultiplied filtering.
+5. **The "Delaware Bay and River" label** has drifted over the upper Chesapeake in R36's Virginia view. Put it on Delaware Bay, and check every water label sits on its own water.
+6. **Keep everything else fixed:** placement (R36), data, cameras, the sign designs except their fills and outlines, and the zoom bands. This isolates the owner's objection.
+
+**Pass criteria** (R37 section 7.2):
+- no light fill islands;
+- signs and the ground around them respond alike to the same wash;
+- R36's placement and capital checks still pass;
+- rivers, fronts, reports and plans remain readable;
+- no per-pan path construction and no runtime bake;
+- static textures stay within the 96 MiB allowance.
+
+Stop at the first unexpected failure and diagnose it before another run.
+
+**Deliverables in `art-masters/R38/`:**
+- for Virginia and the fit view, a before-and-after against R36's research-palette captures, at 1920×1080 per half;
+- the individual captures at 3440×1440;
+- a close crop of a town, a capital and a hill group, before and after;
+- texture memory and frame timings.
+
+The write scope is the worktree's `prototypes/desk/`, `art-masters/R38/`, and one UTF-8 status appended to the main `CODEX.md`. Don't run git.
+
+Status: waiting on Codex (R38)
