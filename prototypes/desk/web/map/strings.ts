@@ -1,5 +1,7 @@
 /** R18 out-of-world map chrome; report and place wording comes from the seat and geometry. */
 export const M = {
+  paletteNames:{strong:'strong',research:'research'},
+  lookNames:{'0':'Original',A:'Manuscript',B:'Atlas plate',C:'Press map'},
   noControlReport:'no report received.',
   controlLegend:'Control on this map',
   controlKey:{union:'Union',enemy:'Enemy',neutral:'Neutral government',contested:'Contested',single:'Single report',old:'Old report'},

@@ -15,7 +15,10 @@ import { PALETTES } from './skins.ts';
 import {OPENING_FRAMES} from './framing.ts';
 import {labelPolicy,labelVisible} from './label-visibility.ts';
 import type { Look } from './skins.ts';
-import {controlColour,controlOpacity,sharedFront,contactMark,CONTROL_COLOURS} from './control.ts';
+import {controlColour,controlOpacity,sharedFront,contactMark} from './control.ts';
+
+import {CONTROL_PALETTES} from './control-palettes.ts';
+import type {ControlPalette} from './control-palettes.ts';
 
 type Box = [number, number, number, number];
 type Painted = { path: Path2D; bbox: Box; kind: string; rank: number };
@@ -62,6 +65,8 @@ export class StaffRenderer {
   private onCamera: () => void;
   ready = false;
   look: Look = '0';
+  private palette:ControlPalette='strong';
+  setPalette(palette:ControlPalette){if(this.palette===palette)return;this.palette=palette;this.invalidate();}
   private atlas?: BakedAtlas;
   private atlasSprites: {sprite:Sprite;minZoom:number}[]=[];
   private frameTimes:number[]=[];
@@ -314,7 +319,7 @@ export class StaffRenderer {
     const began=this.claimChanges.get(id);return began===undefined?1:Math.min(1,(performance.now()-began)/900);
   }
   private drawControl(){
-    const g=this.washes,z=this.camera.z;g.clear();this.controlCounts={regions:0,fronts:0,contacts:0,animating:0};this.controlPaint=[];
+    const g=this.washes,z=this.camera.z,pigment=CONTROL_PALETTES[this.palette];g.clear();this.controlCounts={regions:0,fronts:0,contacts:0,animating:0};this.controlPaint=[];
     const frame=this.frameScreen(),visible=(id:string)=>{const b=this.regionPaths.get(id)?.bbox;return !b||(b[2]*z+this.camera.x>frame[0]&&b[0]*z+this.camera.x<frame[2]&&b[3]*z+this.camera.y>frame[1]&&b[1]*z+this.camera.y<frame[3]);};
     for(const [id,belief] of Object.entries(this.model.control)){
       if(!visible(id))continue;
@@ -322,27 +327,27 @@ export class StaffRenderer {
       if(!belief.neutralGovernment&&!Object.values(belief.shares).some(s=>s>0))continue;
       const shares=Object.entries(belief.shares).filter(([,s])=>s>0).sort((a,b)=>b[1]-a[1]||(a[0]<b[0]?-1:1));
       const neutral=belief.neutralGovernment&&!belief.holder&&!belief.contested;
-      const colour=this.appearance.contrast?0x182d4c:controlColour(belief.holder??shares[0]?.[0]??null,this.model.faction,neutral);
+      const colour=this.appearance.contrast?0x182d4c:controlColour(belief.holder??shares[0]?.[0]??null,this.model.faction,neutral,this.palette);
       const alpha=controlOpacity(belief,this.model.day)*(.3+.7*progress),strength=neutral?1:Math.max(...shares.map(([,s])=>s),0)/1000;
       if(!rings.length){
         // A point is a claim sign, never a guessed territorial boundary.
         const region=this.regions.find(r=>r.id===id);
         if(!region?.point||['sea','river','off_map'].includes(region.kind))continue;
         const [x,y]=this.project(region.point);
-        g.circle(x,y,7/z).fill({color:colour,alpha:alpha*strength}).stroke({color:colour,width:1.5/z,alpha});
-        this.controlPaint.push({id,area:false,colour,alpha,strength});continue;
+        g.circle(x,y,7/z).fill({color:colour,alpha:alpha*strength*pigment.middle}).stroke({color:colour,width:1.5/z,alpha});
+        this.controlPaint.push({id,area:false,colour,alpha:alpha*pigment.middle,strength});continue;
       }
-      this.controlCounts.regions++;this.controlPaint.push({id,area:true,colour,alpha,strength});
+      this.controlCounts.regions++;this.controlPaint.push({id,area:true,colour,alpha:alpha*pigment.middle,strength});
       for(const polygon of rings){
         const ring=polygon[0];if(!ring?.length)continue;
-        g.poly(ring.flat()).fill({color:colour,alpha:alpha*strength});for(const hole of polygon.slice(1))g.poly(hole.flat()).cut();
+        g.poly(ring.flat()).fill({color:colour,alpha:alpha*strength*pigment.middle});for(const hole of polygon.slice(1))g.poly(hole.flat()).cut();
         // Transparent, overlapping pools retain the linen and hachures below.
         // Narrow rim widths are in screen pixels; holes retain their own rim.
         for(const edge of polygon)for(let i=1;i<edge.length;i++){
           const a=edge[i-1]!,b=edge[i]!,n=grain(Math.round(a[0]*100),Math.round(a[1]*100),29);
           if(belief.mark==='pencil'&&i%5===0)continue;
           if((i/edge.length)>progress)continue;
-          for(const [width,factor] of [[9,.17],[4,.3],[1.4,.8]] as const)g.moveTo(...a).lineTo(...b).stroke({color:colour,width:width/z,alpha:alpha*factor*(.7+n*.3)});
+          for(const [width,factor] of pigment.rim)g.moveTo(...a).lineTo(...b).stroke({color:colour,width:width/z,alpha:alpha*factor*(.7+n*.3)});
         }
         const hatchSpacing=belief.contested?16:27;
         for(const [k,[a,b]] of hatchRings(polygon,hatchSpacing*Math.SQRT2/z).entries()){
@@ -355,7 +360,7 @@ export class StaffRenderer {
           }
         }
         if(belief.contested){const second=shares.find(([f])=>f!==(belief.holder??shares[0]?.[0]));
-          if(second)for(const [a,b] of hatchRings(polygon,16*Math.SQRT2/z,-1))g.moveTo(...a).lineTo(...b).stroke({color:controlColour(second[0],this.model.faction),width:.9/z,alpha:alpha*1.15*progress});
+          if(second)for(const [a,b] of hatchRings(polygon,16*Math.SQRT2/z,-1))g.moveTo(...a).lineTo(...b).stroke({color:controlColour(second[0],this.model.faction,false,this.palette),width:.9/z,alpha:alpha*1.15*progress});
         }
       }
     }
@@ -367,7 +372,7 @@ export class StaffRenderer {
       const own=this.regions.find(r=>r.id===front.own)?.point,enemy=this.regions.find(r=>r.id===front.faces)?.point;if(!own||!enemy)continue;
       const key=`${front.own}:${front.faces}`;let lines=this.frontPaths.get(key);
       if(!lines){lines=sharedFront(this.rings(front.own),this.rings(front.faces));if(!lines.length){lines=[contactMark(this.rings(front.own),this.project(own),this.project(enemy))];}this.frontPaths.set(key,lines);}
-      const colour=this.appearance.contrast?0x111111:CONTROL_COLOURS.friendly,progress=Math.min(this.progress(front.own),this.progress(front.faces)),target=this.project(enemy);
+      const colour=this.appearance.contrast?0x111111:CONTROL_PALETTES[this.palette].colours.friendly,progress=Math.min(this.progress(front.own),this.progress(front.faces)),target=this.project(enemy);
       const age=Math.max(0,this.model.day-front.asOfDay),alpha=(front.mark==='ink'?.96:.72)*(age>28?.4:age>14?.6:age>7?.8:1);
       for(const line of lines){
         if(line.length<2)continue;this.controlCounts.fronts++;
@@ -433,7 +438,7 @@ export class StaffRenderer {
     if(this.study)this.drawStudy(this.study);
     for(const review of this.model.plans) {
       const active=!this.reviewPost || review.post===this.reviewPost;
-      for(const axis of review.plan.axes) this.arrow(axis.regions,review.approved?CONTROL_COLOURS.friendly:active?0x4d5144:0x9c9b83,active?15:9,!review.approved);
+      for(const axis of review.plan.axes) this.arrow(axis.regions,review.approved?CONTROL_PALETTES[this.palette].colours.friendly:active?0x4d5144:0x9c9b83,active?15:9,!review.approved);
       for(const request of review.plan.requests) {
         const [kind,post]=request.split(':');
         if(!['cooperating_axis','naval_support'].includes(kind!)||!post)continue;
@@ -583,7 +588,7 @@ export class StaffRenderer {
       return {id:r.id,point:p,shape:shape?[shape[0]*z+x,shape[1]*z+y,shape[2]*z+x,shape[3]*z+y] as Box:null};
     });
     const coverage=this.geometry.baseCoverage?.worldBounds;
-    return {labelZoom:this.labelZoom(),labelVisibility:this.regions.map(r=>({id:r.id,kind:r.kind,...this.labelPolicies.get(r.id),eligible:this.labelEligibility.get(r.id)??false})),look:this.look,noteAnchor:this.study?(()=>{const p=this.project(this.study.estimate.point);return [p[0]*z+x,p[1]*z+y];})():null,detail:this.geometry.atlasDetail??{sourceTolerance:this.geometry.cartography?.lod?.sourceTolerance,countyDate:this.geometry.cartography?.lod?.countyDate,counties:this.geometry.cartography?.lod?.counties.length,stations:this.geometry.cartography?.lod?.stations.length,reliefRows:this.geometry.cartography?.relief.some(r=>r.contour!==undefined)},studyControl:this.study?{mock:true,mode:this.look==='C'?'region-tint':'wash',claims:this.study.washes.map(w=>({regions:w.regions,permille:w.permille,contested:!!w.contested})),roughenedShapes:true}:null,bakeMs:this.atlas?.bakeMs,atlasLoadMs:this.atlas?.loadMs,atlasSource:this.atlas?.source,degreeTicks:this.degreeTicks(),maximumZoom:this.maximumZoom(),hatchScreenSpacing:18,staticBands:this.atlasSprites.length,staticBakes:this.paintCount,frameTimes:[...this.frameTimes],omittedLabels:this.omittedLabels,renderer:this.app.renderer?.type,tiles:this.atlasSprites.length,rawTextureBytes:this.cacheBytes,rawTextureCap:CAP,paintedTiles:this.paintCount,zoom:this.camera.z/this.camera.fit,ready:this.host.dataset.ready,
+    return {labelZoom:this.labelZoom(),labelVisibility:this.regions.map(r=>({id:r.id,kind:r.kind,...this.labelPolicies.get(r.id),eligible:this.labelEligibility.get(r.id)??false})),look:this.look,palette:this.palette,noteAnchor:this.study?(()=>{const p=this.project(this.study.estimate.point);return [p[0]*z+x,p[1]*z+y];})():null,detail:this.geometry.atlasDetail??{sourceTolerance:this.geometry.cartography?.lod?.sourceTolerance,countyDate:this.geometry.cartography?.lod?.countyDate,counties:this.geometry.cartography?.lod?.counties.length,stations:this.geometry.cartography?.lod?.stations.length,reliefRows:this.geometry.cartography?.relief.some(r=>r.contour!==undefined)},studyControl:this.study?{mock:true,mode:this.look==='C'?'region-tint':'wash',claims:this.study.washes.map(w=>({regions:w.regions,permille:w.permille,contested:!!w.contested})),roughenedShapes:true}:null,bakeMs:this.atlas?.bakeMs,atlasLoadMs:this.atlas?.loadMs,atlasSource:this.atlas?.source,degreeTicks:this.degreeTicks(),maximumZoom:this.maximumZoom(),hatchScreenSpacing:18,staticBands:this.atlasSprites.length,staticBakes:this.paintCount,frameTimes:[...this.frameTimes],omittedLabels:this.omittedLabels,renderer:this.app.renderer?.type,tiles:this.atlasSprites.length,rawTextureBytes:this.cacheBytes,rawTextureCap:CAP,paintedTiles:this.paintCount,zoom:this.camera.z/this.camera.fit,ready:this.host.dataset.ready,
     regionContainment:{points:measured.filter(r=>r.point).length,shapes:measured.filter(r=>r.shape).length,
       outside:measured.filter(r=>(r.point&&!fits([...r.point,...r.point]))||(r.shape&&!fits(r.shape))),
       excludedOffMap:this.regions.filter(r=>['off_map','off-map'].includes(r.kind)).map(r=>r.id)},

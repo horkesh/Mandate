@@ -3,11 +3,13 @@ import type {ReportView,SeatRequest} from '@mandate/kernel/seat-api';
 import type {Point} from './model.ts';
 import {markState} from './model.ts';
 import {M} from './strings.ts';
+import {CONTROL_PALETTES} from './control-palettes.ts';
+import type {ControlPalette} from './control-palettes.ts';
 
-export const CONTROL_COLOURS={friendly:0x084bd6,enemy:0xd32238,neutral:0xf7c52f,correction:0x79438f};
+export const CONTROL_COLOURS=CONTROL_PALETTES.strong.colours;
 export type ControlBelief=SeatRequest['view']['controlBeliefs'][keyof SeatRequest['view']['controlBeliefs']];
-export function controlColour(faction:string|null,own:string|null,neutral=false){return neutral?CONTROL_COLOURS.neutral:faction===own?CONTROL_COLOURS.friendly:CONTROL_COLOURS.enemy;}
-export function controlOpacity(belief:ControlBelief,today:number){return markState(today,belief.asOfDay).opacity*(belief.mark==='ink'?.72:.60);}
+export function controlColour(faction:string|null,own:string|null,neutral=false,palette:ControlPalette='strong'){const c=CONTROL_PALETTES[palette].colours;return neutral?c.neutral:faction===own?c.friendly:c.enemy;}
+export function controlOpacity(belief:ControlBelief,today:number,palette:ControlPalette='strong'){return markState(today,belief.asOfDay).opacity*(belief.mark==='ink'?.72:.60)*CONTROL_PALETTES[palette].middle;}
 export function claimWords(region:string,belief:ControlBelief|undefined,name:(id:string,kind?:string)=>string,date:(day:number)=>string){
  if(!belief)return `${region}: ${M.noControlReport}`;
  const holding=belief.holder?`${name(belief.holder,'faction')} holds this ground`:belief.neutralGovernment?'Neutral government':'No holder reported';

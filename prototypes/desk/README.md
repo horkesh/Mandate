@@ -660,3 +660,53 @@ A bounded warm-open follow-up passes the existing two-second target: repeated
 opens take 1.64–1.80 seconds at 3440×1440 and 1.40–1.54 seconds at 1920×1080.
 The 2.20-second initial warm-check open and the capture run's 2.03/2.04-second
 later ultrawide samples remain recorded. No performance code was tuned.
+
+
+## R33 palette comparison
+
+From this folder, run `npm run dev -- --at-war`. Open
+`http://127.0.0.1:5274/?palette=strong` or `/?palette=research`. Strong is the
+default. The Map look selector groups each existing look under strong or
+research; `Manuscript (research)` selects the new pigments. V still cycles the
+map look while keeping the selected palette. Presentation choices send no game
+command.
+
+Research uses Union `#1F59A8`, enemy `#C33830`, neutral `#D5A32F` and correction
+`#76509B`. Its middle density is 66% of strong's; pooled rim widths are 6, 2.5
+and 1.2 screen pixels, compared with strong's 9, 4 and 1.4. Rim pressure,
+contested hatch spacing/opacity, broken pencil edges and age factors retain
+their existing behavior. Paper, relief, river blue/width and atlas are shared.
+The legend, headquarters, claimed fronts, approved arrows and correction ink
+follow the chosen palette.
+
+`art-masters/R33/` in the main checkout contains the three paired sheets,
+`summary-three-pairs.png`, twelve individual captures and measurements. Each
+comparison half is an unscaled 1920×1080 capture under a 64-pixel label row. The
+summary stacks all three full-size pairs. The separate ultrawide captures are
+3440×1440. All use the same saved real R32 at-war opening and matched cameras.
+
+| Wash | Strong H / S / L | Research H / S / L | Relief contrast, strong / research |
+|---|---|---|---|
+| Union | 220.9° / 49.3% / 55.1% | 206.7° / 13.4% / 60.6% | 33.9% / 56.2% |
+| Enemy | 359.0° / 60.6% / 60.2% | 15.8° / 51.4% / 63.7% | 33.0% / 56.9% |
+| Neutral | 44.5° / 85.3% / 65.3% | 41.5° / 62.7% / 67.5% | 32.9% / 56.0% |
+
+These are native sRGB composite measurements, not just endpoint swatches.
+Relief contrast is measured against matched no-wash references at source
+hachures that remain visible as dark local marks, excluding rail/river
+corridors, labels and furniture. The full method, masks and pixel counts are
+in `pigment-and-relief-measurements.json`. Research's blue composites to a quiet
+slate-blue on the warm paper; the owner still chooses the palette.
+
+Verification: 53 unit/equivalence tests, the desk build, final typecheck, paired
+browser matrix, palette switching without commands, default and visible selector
+text, and no-wash references pass. Strong's map raster matches the pre-change
+reference outside changed toolbar furniture/shadows. The 189 protected inputs
+are unchanged, with zero static bakes and the existing 88.06 MiB atlas.
+
+Run `npx playwright test --config playwright.r33.config.ts --grep 'smoke|matrix|reference|final selector'`
+for the browser checks. The baseline test is separately opt-in with
+`R33_BASELINE=1`; keep its original pre-change evidence. R32's accepted root
+checks and unchanged playback/keyboard/skin/plan evidence are reused. No root
+simulation campaign or map bake ran for R33. Existing build warnings and the
+console send-back notes limitation remain.
