@@ -15,6 +15,7 @@ import { PALETTES } from './skins.ts';
 import {OPENING_FRAMES} from './framing.ts';
 import {labelPolicy,labelVisible} from './label-visibility.ts';
 import type { Look } from './skins.ts';
+import {controlColour,controlOpacity,sharedFront,contactMark,CONTROL_COLOURS} from './control.ts';
 
 type Box = [number, number, number, number];
 type Painted = { path: Path2D; bbox: Box; kind: string; rank: number };
@@ -38,6 +39,7 @@ export class StaffRenderer {
   private frameMask = new Graphics();
   private tiles = new Container();
   private arrows = new Graphics();
+  private washes = new Graphics();
   private labels = new Container();
   private geometry: MapGeometry;
   private regions: MapRegion[];
@@ -45,7 +47,10 @@ export class StaffRenderer {
   private cacheBytes = 0;
   private frame = 0;
   private dead = false;
-  private model: MapModel = { marks: [], plans: [], unplaced: [], absent: [] };
+  private model: MapModel = { marks: [], plans: [], control:{}, fronts:[], faction:null,day:0,unplaced: [], absent: [] };
+  private claimChanges=new Map<string,number>();
+  private frontPaths=new Map<string,Point[][]>();
+  private controlCounts={regions:0,fronts:0,contacts:0,animating:0};
   private pencil: PencilRoute[] = [];
   private reviewPost: string | null = null;
   private bounds: Box;
@@ -136,7 +141,7 @@ export class StaffRenderer {
     this.app.stage.addChild(this.content,this.frameMask);
     this.content.addChild(this.world,this.labels);
     this.content.mask=this.frameMask;
-    this.world.addChild(this.tiles,this.arrows);
+    this.world.addChild(this.tiles,this.washes,this.arrows);
     await this.installAtlas();if(this.dead)return;this.ready=true;if(openOnPack)this.fitOpening();else this.fit();if(this.reviewPost)this.fitPlan();
     this.observer=new ResizeObserver(() => {
       const box=this.host.getBoundingClientRect();
@@ -231,7 +236,12 @@ export class StaffRenderer {
     this.camera.x=Math.max(w-right*z,Math.min(-left*z,this.camera.x));
     this.camera.y=Math.max(h-bottom*z,Math.min(-top*z,this.camera.y));
   }
-  setData(model: MapModel, pencil: PencilRoute[], reviewPost: string | null) { const changed=this.reviewPost!==reviewPost;this.model=model;this.pencil=pencil;this.reviewPost=reviewPost;if(changed&&reviewPost&&this.ready)this.fitPlan();this.invalidate(); }
+  setData(model: MapModel, pencil: PencilRoute[], reviewPost: string | null) {
+    const changed=this.reviewPost!==reviewPost;
+    for(const [id,belief] of Object.entries(model.control))if(JSON.stringify(belief)!==JSON.stringify(this.model.control[id as keyof typeof this.model.control]))this.claimChanges.set(id,performance.now());
+    this.model=model;this.pencil=pencil;this.reviewPost=reviewPost;
+    if(changed&&reviewPost&&this.ready)this.fitPlan();this.invalidate();
+  }
   fit() {
     const w=this.app.screen.width,h=this.app.screen.height,[x0,y0,x1,y1]=this.bounds;
     const z=Math.min((w-100)/(x1-x0),(h-100)/(y1-y0));
@@ -287,10 +297,88 @@ export class StaffRenderer {
     const [left,top,right,bottom]=this.frameScreen();
     this.frameMask.clear().rect(left,top,right-left,bottom-top).fill(0xffffff);
     for(const band of this.atlasSprites)band.sprite.visible=this.camera.z>=band.minZoom;
-    this.readOverlayBoxes();this.drawArrows();this.drawLabels();
+    this.readOverlayBoxes();this.drawControl();this.drawArrows();this.drawLabels();
     this.app.render();this.startup.firstRender??=performance.now();this.startup.lastRender=performance.now();this.host.dataset.ready='ready';this.onCamera();
     this.startup.lastOverlay=performance.now();this.startup.draws++;this.host.dataset.startup=JSON.stringify(this.startup);
+    this.host.dataset.control=JSON.stringify({...this.controlCounts,beliefs:Object.keys(this.model.control).length,segments:this.model.fronts.length,approvedRoutes:this.model.plans.filter(p=>p.approved).length,changed:[...this.claimChanges.keys()],points:this.regions.filter(r=>r.point).map(r=>({id:r.id,point:this.screen(r.id)})),reducedMotion:window.matchMedia('(prefers-reduced-motion: reduce)').matches});
     this.frameTimes.push(performance.now()-started);if(this.frameTimes.length>600)this.frameTimes.shift();
+    if(this.controlCounts.animating)this.invalidate();
+  }
+  private rings(id:string){
+    if(!this.regionRings.has(id)){const region=this.regions.find(r=>r.id===id);if(region?.shape&&!['sea','river','off_map'].includes(region.kind))this.regionRings.set(id,roughRings(region.shape,this.projection));}
+    return this.regionRings.get(id)??[];
+  }
+  private progress(id:string){
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return 1;
+    const began=this.claimChanges.get(id);return began===undefined?1:Math.min(1,(performance.now()-began)/900);
+  }
+  private drawControl(){
+    const g=this.washes,z=this.camera.z;g.clear();this.controlCounts={regions:0,fronts:0,contacts:0,animating:0};
+    const frame=this.frameScreen(),visible=(id:string)=>{const b=this.regionPaths.get(id)?.bbox;return !b||(b[2]*z+this.camera.x>frame[0]&&b[0]*z+this.camera.x<frame[2]&&b[3]*z+this.camera.y>frame[1]&&b[1]*z+this.camera.y<frame[3]);};
+    for(const [id,belief] of Object.entries(this.model.control)){
+      if(!visible(id))continue;
+      const rings=this.rings(id),progress=this.progress(id);if(progress<1)this.controlCounts.animating++;
+      if(!rings.length||(!belief.neutralGovernment&&!Object.values(belief.shares).some(s=>s>0)))continue;
+      this.controlCounts.regions++;
+      const shares=Object.entries(belief.shares).filter(([,s])=>s>0).sort((a,b)=>b[1]-a[1]||(a[0]<b[0]?-1:1));
+      const neutral=belief.neutralGovernment&&!belief.holder&&!belief.contested;
+      const colour=this.appearance.contrast?0x182d4c:controlColour(belief.holder??shares[0]?.[0]??null,this.model.faction,neutral);
+      const alpha=controlOpacity(belief,this.model.day)*(.3+.7*progress),strength=neutral?1:Math.max(...shares.map(([,s])=>s),0)/1000;
+      for(const polygon of rings){
+        const ring=polygon[0];if(!ring?.length)continue;
+        g.poly(ring.flat()).fill({color:colour,alpha:alpha*strength});for(const hole of polygon.slice(1))g.poly(hole.flat()).cut();
+        // Transparent, overlapping pools retain the linen and hachures below.
+        // Narrow rim widths are in screen pixels; holes retain their own rim.
+        for(const edge of polygon)for(let i=1;i<edge.length;i++){
+          const a=edge[i-1]!,b=edge[i]!,n=grain(Math.round(a[0]*100),Math.round(a[1]*100),29);
+          if(belief.mark==='pencil'&&i%5===0)continue;
+          if((i/edge.length)>progress)continue;
+          for(const [width,factor] of [[9,.17],[4,.3],[1.4,.8]] as const)g.moveTo(...a).lineTo(...b).stroke({color:colour,width:width/z,alpha:alpha*factor*(.7+n*.3)});
+        }
+        const hatchSpacing=belief.contested?16:27;
+        for(const [k,[a,b]] of hatchRings(polygon,hatchSpacing*Math.SQRT2/z).entries()){
+          const n=grain(k,Math.round(a[0]*100),29);
+          if(belief.contested){
+            g.moveTo(...a).lineTo(...b).stroke({color:colour,width:.9/z,alpha:alpha*1.15*progress});
+          }else if(n>.35){
+            const t=n*.7,dx=b[0]-a[0],dy=b[1]-a[1],fraction=Math.min(.12,10/(Math.hypot(dx,dy)*z));
+            g.moveTo(a[0]+dx*t,a[1]+dy*t).lineTo(a[0]+dx*(t+fraction),a[1]+dy*(t+fraction)).stroke({color:colour,width:(3+n*4)/z,alpha:alpha*.11});
+          }
+        }
+        if(belief.contested){const second=shares.find(([f])=>f!==(belief.holder??shares[0]?.[0]));
+          if(second)for(const [a,b] of hatchRings(polygon,16*Math.SQRT2/z,-1))g.moveTo(...a).lineTo(...b).stroke({color:controlColour(second[0],this.model.faction),width:.9/z,alpha:alpha*1.15*progress});
+        }
+      }
+    }
+  }
+  private drawFronts(){
+    const g=this.arrows,z=this.camera.z;
+    // One orientation is drawn: the president's front faces the opposing end.
+    for(const front of this.model.fronts.filter(f=>f.faction===this.model.faction)){
+      const own=this.regions.find(r=>r.id===front.own)?.point,enemy=this.regions.find(r=>r.id===front.faces)?.point;if(!own||!enemy)continue;
+      const key=`${front.own}:${front.faces}`;let lines=this.frontPaths.get(key);
+      if(!lines){lines=sharedFront(this.rings(front.own),this.rings(front.faces));if(!lines.length){lines=[contactMark(this.rings(front.own),this.project(own),this.project(enemy))];}this.frontPaths.set(key,lines);}
+      const colour=this.appearance.contrast?0x111111:CONTROL_COLOURS.friendly,progress=Math.min(this.progress(front.own),this.progress(front.faces)),target=this.project(enemy);
+      const age=Math.max(0,this.model.day-front.asOfDay),alpha=(front.mark==='ink'?.96:.72)*(age>28?.4:age>14?.6:age>7?.8:1);
+      for(const line of lines){
+        if(line.length<2)continue;this.controlCounts.fronts++;
+        const length=line.slice(1).reduce((sum,b,i)=>sum+Math.hypot(b[0]-line[i]![0],b[1]-line[i]![1]),0);let walked=0;
+        for(let i=1;i<line.length;i++){
+          const a=line[i-1]!,b=line[i]!,dx=b[0]-a[0],dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)continue;
+          const remaining=length*progress-walked;if(remaining<=0)break;const amount=Math.min(1,remaining/len),count=Math.max(1,Math.ceil(len*z/7));
+          let nx=-dy/len,ny=dx/len;if(nx*(target[0]-(a[0]+b[0])/2)+ny*(target[1]-(a[1]+b[1])/2)<0){nx=-nx;ny=-ny;}
+          for(let j=0;j<count*amount;j++){
+            if(front.mark==='pencil'&&j%4===3)continue;
+            const t=j/count,u=Math.min(amount,(j+1)/count),n=grain(i,j,29);
+            g.moveTo(a[0]+dx*t,a[1]+dy*t).lineTo(a[0]+dx*u,a[1]+dy*u).stroke({color:colour,width:(3.2+n)/z,alpha});
+          }
+          for(let t=8/z;t<len*amount;t+=22/z){const x=a[0]+dx*t/len,y=a[1]+dy*t/len,n=grain(i,Math.round(t*z));
+            g.moveTo(x-dx/len*4/z,y-dy/len*4/z).lineTo(x+nx*(8+n*4)/z,y+ny*(8+n*4)/z).lineTo(x+dx/len*4/z,y+dy/len*4/z).stroke({color:colour,width:1.7/z,alpha});
+          }walked+=len;
+        }
+        this.liveObstacles.push(...lineBoxes(line.map(([x,y])=>[x*z+this.camera.x,y*z+this.camera.y]),14));
+      }
+    }
   }
   private readOverlayBoxes(){
     const origin=this.host.getBoundingClientRect(),root=this.host.closest('.playable-table,.map-study')??this.host.parentElement!;
@@ -332,10 +420,11 @@ export class StaffRenderer {
   }
   private drawArrows() {
     this.arrows.clear();this.liveObstacles=[];
+    this.drawFronts();
     if(this.study)this.drawStudy(this.study);
     for(const review of this.model.plans) {
       const active=!this.reviewPost || review.post===this.reviewPost;
-      for(const axis of review.plan.axes) this.arrow(axis.regions,active?0x4d5144:0x9c9b83,active?15:9,true);
+      for(const axis of review.plan.axes) this.arrow(axis.regions,review.approved?CONTROL_COLOURS.friendly:active?0x4d5144:0x9c9b83,active?15:9,!review.approved);
       for(const request of review.plan.requests) {
         const [kind,post]=request.split(':');
         if(!['cooperating_axis','naval_support'].includes(kind!)||!post)continue;
@@ -351,9 +440,7 @@ export class StaffRenderer {
         this.arrows.moveTo(x-s,y-s).lineTo(x+s,y+s).moveTo(x+s,y-s).lineTo(x-s,y+s).stroke({color:0x315c83,width:2.7/this.camera.z});
       } else this.arrow(mark.regions,0x315c83,2.4,false,true);
     }
-    if(this.hovered){const path=this.regionPaths.get(this.hovered);if(path){ /* live highlight is painted as a lightweight Pixi texture-free bounding cue at the anchor */
-      const r=this.regions.find(r=>r.id===this.hovered)!;if(r.point){const [x,y]=this.project(r.point);this.arrows.circle(x,y,7/this.camera.z).stroke({color:0x315c83,width:1/this.camera.z});}
-    }}
+    if(this.hovered)for(const polygon of this.rings(this.hovered)){if(polygon[0]?.length){this.arrows.poly(polygon[0].flat()).fill({color:0xf4bd58,alpha:.14});for(const hole of polygon.slice(1))this.arrows.poly(hole.flat()).cut();}}
   }
   private drawStudy(study:StudyMarks){
     const g=this.arrows,z=this.camera.z;

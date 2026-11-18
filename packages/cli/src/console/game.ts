@@ -22,6 +22,8 @@ export interface GameOptions {
 export interface Refusal {
   readonly command: phase0.Command;
   readonly reason: phase0.RejectionReason;
+  /** Its occurrence in the submitted player queue, so identical orders remain distinct. */
+  readonly commandIndex:number;
 }
 
 /** One day of a turn as the player sees it pass. */
@@ -87,6 +89,19 @@ export class ConsoleGame {
     return request;
   }
 
+  /** Presentation playback of reports already delivered to this seat. This
+   * uses only their visible bodies and the static graph, never live control. */
+  controlFromReports(reports:readonly phase0.ReportView[]):Pick<phase0.SeatView,'controlBeliefs'|'claimedFronts'> {
+    return phase0.claimedControlView(this.world.map,reports.map((r):phase0.KnownReport=>({
+      id:r.id,knownReceivedDay:r.receivedDay,knownRoute:r.route,knownVia:r.via,
+      knownBody:{reportType:r.type,reportSubtype:r.subtype,reportAuthor:r.author,reportAuthorPost:r.authorPost,
+        reportSubjectKind:r.subjectKind,reportSubjectId:r.subjectId,
+        reportClaims:r.claims.map(c=>({claimKind:c.kind,claimRegion:c.region,claimValue:c.value,claimToken:c.token,claimConfidence:c.confidence})),
+        reportDay:r.day,reportHour:r.hour,reportAnswers:r.answers,
+        reportAdvice:r.advice?{adviceRecommends:r.advice.recommends,adviceReasons:r.advice.reasons.map(x=>({reasonKind:x.kind,reasonWeight:x.weight})),adviceConfidence:r.advice.confidence}:null},
+    })));
+  }
+
   /** The route an arrow edit would make, as of today (lane 0.9's finding 5). */
   preview(post: ids.PostId, edit: phase0.EditTerms): phase0.EditPreview {
     return phase0.previewEdit(this.world, this.stateNow, post, edit, this.stateNow.stateDay + 1);
@@ -106,7 +121,8 @@ export class ConsoleGame {
       this.logEntries.push(...entries);
       this.viewCache = phase0.createViewCache();
       const view = phase0.viewFor(this.world, this.stateNow, this.seat, this.viewCache);
-      const refused = result.rejections.filter((x) => x.seat === this.seat && x.entry >= 0).map((x) => ({ command: entries[x.entry]!.command, reason: x.reason }));
+      const ownEntries=entries.flatMap((entry,index)=>entry.seat===this.seat?[index]:[]);
+      const refused = result.rejections.filter((x) => x.seat === this.seat && x.entry >= 0).map((x) => ({ command: entries[x.entry]!.command, reason: x.reason,commandIndex:ownEntries.indexOf(x.entry) }));
       const points = result.decisionPoints.filter((p) => p.seat === this.seat).map((p) => p.point);
       days.push({ day: result.day, date: this.dateOf(result.day), reports: view.reports.filter((r) => r.receivedDay === result.day), refused, points });
       if (points.length > 0) return { days, stopped: [...new Set(points)].sort() };

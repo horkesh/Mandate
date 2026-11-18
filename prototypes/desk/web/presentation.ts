@@ -10,9 +10,12 @@ function makePresenter(strings: Readonly<Record<string, string>>) {
   for (const key of Object.keys(strings)) {
     const match = /^([^.]+)\.(.+)\.name$/.exec(key);
     if (match) names.set(match[2]!, [...(names.get(match[2]!) ?? []), key]);
+    else if(key.startsWith('faction.'))names.set(key.slice(8),[key]);
   }
   const name = (id: string, kind?: string | number): string => {
     if (Object.hasOwn(strings, id)) return strings[id]!;
+    // Factions use `faction.<id>` in the supplied catalogue, unlike people/posts.
+    if(kind==='faction'&&Object.hasOwn(strings,`faction.${id}`))return strings[`faction.${id}`]!;
     const keys = (names.get(id) ?? []).filter(key => typeof kind !== 'string' || key.startsWith(`${kind}.`));
     const values = [...new Set(keys.map(key => strings[key]!))];
     if (values.length === 1) return values[0]!;

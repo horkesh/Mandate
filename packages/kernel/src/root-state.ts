@@ -27,7 +27,7 @@ import type { ForceLocation } from './movement/movement.ts';
 import type { DepartmentId, DepotId, EdgeId, FactionId, ForceBlockId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from './ids.ts';
 import type { ChamberState, CongressAct } from './politics/politics.ts';
 import type { SituationRecord } from './situations/situations.ts';
-import type { SeatKnowledge } from './knowledge/knowledge.ts';
+import type { KnownReport, SeatKnowledge } from './knowledge/knowledge.ts';
 import type { ReportTruth } from './knowledge/truth.ts';
 import type { TransitMessage } from './messages/transit.ts';
 import type { OperationTable } from './operations/operations.ts';
@@ -72,6 +72,8 @@ export interface State {
   readonly messagesInTransit: readonly TransitMessage[];
   /** The reports each seat holds. Writer: `knowledge`. */
   readonly knowledgeBySeat: Readonly<Record<SeatId, SeatKnowledge>>;
+  /** The opening bulletins, each stored once and referred to by the seats that hold it. Writer: `knowledge`. */
+  readonly openingControlReports?: Readonly<Record<MessageId, KnownReport>>;
   /** Why each held report says what it says (the truth layer). Writer: `knowledge`. */
   readonly reportTruth: Readonly<Record<MessageId, ReportTruth>>;
   /** Each post's goal and its plan: draft set, the seat's pick, approval, edits as counter-orders (lane 1.2). Writer: `plans`. */

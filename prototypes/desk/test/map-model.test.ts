@@ -27,8 +27,8 @@ describe('the staff map reads claims and never supplies missing knowledge', () =
     const model = buildMapModel(request, geometry);
     expect(model.marks.filter(m => m.kind === 'enemy')).toEqual([]);
     expect(model.unplaced.some(m => m.source === 'missing')).toBe(true);
-    expect(model.absent).toContain('fronts');
-    expect(model.absent).toContain('claimed-control');
+    expect(model.fronts).toEqual(request.view.claimedFronts);
+    expect(model.control).toEqual(request.view.controlBeliefs);
   });
   it('ages reports in three presentation steps without reading a clock', () => {
     expect([0, 8, 15, 29].map(age => markState(40, 40 - age).stage)).toEqual(['pencil', 'aged', 'faded', 'old']);

@@ -1,6 +1,7 @@
 /** The browser's only contact with the local game. No runtime kernel imports. */
-import type { OptionView, ReportView, SeatRequest } from '@mandate/kernel/seat-api';
+import type { OptionView, ReportView, SeatRequest, SeatView } from '@mandate/kernel/seat-api';
 import type { MapGeometry } from './map/model.ts';
+import type {MapPlan} from './map/model.ts';
 import type {AtlasManifest} from './map/atlas-disk.ts';
 
 export interface DeskDay {
@@ -8,13 +9,19 @@ export interface DeskDay {
   refused: readonly { command: unknown; reason: string }[];
   points: readonly string[];
 }
-export interface DeskTurn { days: readonly DeskDay[]; stopped: 'week' | readonly string[] }
+export interface DeskTurn {
+ days: readonly DeskDay[]; stopped: 'week' | readonly string[];
+ /** Received-report projections, made by the kernel on the server. */
+ controlUpdates?:Readonly<Record<string,Pick<SeatView,'controlBeliefs'|'claimedFronts'>>>;
+}
 export interface DeskSnapshot {
   pack: string; morning: SeatRequest; date: string;
   strings: Readonly<Record<string, string>>;
   queue: readonly { line: string; text: string }[];
   history: readonly DeskTurn[]; help: readonly string[]; closed: boolean;
   paperText: Readonly<Record<string, string>>;
+  /** Previously shown routes whose approval the kernel accepted in this session. */
+  approvedPlans?:readonly MapPlan[];
 }
 export interface DeskReply {
   ok: boolean; snapshot: DeskSnapshot; message?: string;

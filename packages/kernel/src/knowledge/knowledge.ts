@@ -3,49 +3,93 @@
  *
  * Each seat stores the reports that reached it, when and by what route.
  * Beliefs are derived on read (`beliefs.ts`), never stored. Faded reports are
- * pruned by the templates' age and supersession rules, so knowledge stays
- * bounded however long the game runs. The truth behind each held report is
- * kept beside it in `State.reportTruth` and dropped when no seat holds it.
+ * pruned by the templates' age and supersession rules. The map keeps bounded
+ * excerpts of expired reports for its dated marks. The truth behind each
+ * held report is kept beside it and dropped when no seat holds it.
  */
 import { strictCompare } from '../compare.ts';
-import type { MessageId, PostId, SeatId } from '../ids.ts';
-import type { RouteKind } from '../messages/latency.ts';
+import type { MessageId, SeatId } from '../ids.ts';
 import type { State } from '../root-state.ts';
-import { templateKey, type ReportBody } from './report.ts';
+import { controlEvidence } from './control-beliefs.ts';
+import type { KnownReport } from './records.ts';
+import { templateKey, type ReportBody, type ReportClaim } from './report.ts';
 import { templateFor, type ReportTemplate } from './templates.ts';
 import type { ReportTruth } from './truth.ts';
 
-/** A report as a seat holds it: what it says, and how and when it came. */
-export interface KnownReport {
-  /** The report's id (its first message's id). */
-  readonly id: MessageId;
-  readonly knownReceivedDay: number;
-  readonly knownRoute: RouteKind;
-  readonly knownVia: readonly PostId[];
-  readonly knownBody: ReportBody;
-}
+export type { KnownReport } from './records.ts';
 
 export interface SeatKnowledge {
   /** In (received day, id) order. */
   readonly knownReports: readonly KnownReport[];
+  /** Control excerpts of expired reports still supporting the map, in the same order. */
+  readonly knownControlReports?: readonly KnownReport[];
+  /** A shared day-zero bulletin. Its body lives in the opening report table. */
+  readonly knownOpeningControl?: MessageId;
 }
 
 export const EMPTY_KNOWLEDGE: SeatKnowledge = Object.freeze({ knownReports: Object.freeze([]) });
 
-/** What a seat holds. A seat with no entry holds nothing; an unknown seat id throws. */
-export function knowledgeOf(state: State, seat: SeatId): SeatKnowledge {
+function storedKnowledgeOf(state: State, seat: SeatId): SeatKnowledge {
   if (state.seatAssignments[seat] === undefined) throw new RangeError(`unknown seat id "${seat}"`);
   return state.knowledgeBySeat[seat] ?? EMPTY_KNOWLEDGE;
 }
 
-/** Store a delivered report in a seat's knowledge, and its truth beside it. */
-export function deliverReport(state: State, seat: SeatId, report: KnownReport, truth: ReportTruth): State {
-  const held = knowledgeOf(state, seat);
-  if (held.knownReports.some((r) => r.id === report.id)) throw new RangeError(`seat ${seat} already holds report ${report.id}`);
-  const knownReports = [...held.knownReports, report].sort((a, b) => a.knownReceivedDay - b.knownReceivedDay || strictCompare(a.id, b.id));
+function openingReportOf(state: State, id: MessageId): KnownReport {
+  const report = state.openingControlReports?.[id];
+  if (report === undefined) throw new RangeError(`missing opening control report ${id}`);
+  return report;
+}
+
+export type KnowledgeCache = WeakMap<SeatKnowledge, { readonly opening: KnownReport; readonly knowledge: SeatKnowledge }>;
+
+/** What the seat holds, resolving its opening bulletin for the map without copying it into saved knowledge. */
+export function knowledgeOf(state: State, seat: SeatId, cache?: KnowledgeCache): SeatKnowledge {
+  const held = storedKnowledgeOf(state, seat);
+  if (held.knownOpeningControl === undefined) return held;
+  const opening = openingReportOf(state, held.knownOpeningControl);
+  const previous = cache?.get(held);
+  if (previous?.opening === opening) return previous.knowledge;
+  const knowledge = { ...held, knownControlReports: [opening, ...(held.knownControlReports ?? [])] };
+  cache?.set(held, { opening, knowledge });
+  return knowledge;
+}
+
+/** Give each seat its opening bulletin by reference and store each original report and its truth once. */
+export function fileOpeningReports(state: State, copies: ReadonlyMap<SeatId, KnownReport>, truth: ReportTruth): State {
+  const knowledge = new Map<SeatId, SeatKnowledge>();
+  const reports = new Map<MessageId, KnownReport>();
+  for (const [seat, report] of copies) {
+    knowledge.set(seat, { ...storedKnowledgeOf(state, seat), knownOpeningControl: report.id });
+    reports.set(report.id, report);
+  }
   return {
     ...state,
-    knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { knownReports } },
+    knowledgeBySeat: { ...state.knowledgeBySeat, ...Object.fromEntries(knowledge) },
+    openingControlReports: Object.fromEntries(reports),
+    reportTruth: { ...state.reportTruth, ...Object.fromEntries([...reports.keys()].map((id) => [id, truth])) },
+  };
+}
+
+function reportOrder(a: KnownReport, b: KnownReport): number {
+  return a.knownReceivedDay - b.knownReceivedDay || strictCompare(a.id, b.id);
+}
+
+/** Reports and map excerpts that a seat may read, in (received day, id) order. */
+export function reportsForView(knowledge: SeatKnowledge): readonly KnownReport[] {
+  const archived = knowledge.knownControlReports;
+  return archived === undefined ? knowledge.knownReports : [...knowledge.knownReports, ...archived].sort(reportOrder);
+}
+
+/** Store a delivered report in a seat's knowledge, and its truth beside it. */
+export function deliverReport(state: State, seat: SeatId, report: KnownReport, truth: ReportTruth): State {
+  const held = storedKnowledgeOf(state, seat);
+  if (held.knownOpeningControl === report.id || held.knownReports.some((r) => r.id === report.id) || held.knownControlReports?.some((r) => r.id === report.id)) {
+    throw new RangeError(`seat ${seat} already holds report ${report.id}`);
+  }
+  const knownReports = [...held.knownReports, report].sort(reportOrder);
+  return {
+    ...state,
+    knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownReports } },
     reportTruth: state.reportTruth[report.id] === undefined ? { ...state.reportTruth, [report.id]: truth } : state.reportTruth,
   };
 }
@@ -71,40 +115,84 @@ export interface PruneCounts {
  * `keepSupersededDays`. Age runs from the report's stamp, not its arrival:
  * a stale report is stale however late it came. Truth no seat holds is dropped.
  */
-export function pruneKnowledge(state: State, templates: readonly ReportTemplate[], day: number): { readonly state: State; readonly counts: PruneCounts } {
+export function pruneKnowledge(state: State, templates: readonly ReportTemplate[], day: number, controlThreshold: number): { readonly state: State; readonly counts: PruneCounts } {
   let byAge = 0;
   let bySupersession = 0;
   let changed = false;
   const next: Record<SeatId, SeatKnowledge> = {};
   for (const seat of Object.keys(state.knowledgeBySeat).sort(strictCompare) as SeatId[]) {
     const held = state.knowledgeBySeat[seat]!;
+    if (held.knownReports.length === 0) {
+      next[seat] = held;
+      continue;
+    }
     const newest = new Map<string, number>();
     for (const r of held.knownReports) {
       const k = supersessionKey(r.knownBody);
       newest.set(k, Math.max(newest.get(k) ?? -1, stampOrder(r)));
     }
+    const expiredControl: KnownReport[] = [];
     const kept = held.knownReports.filter((r) => {
       const tpl = templateFor(templates, r.knownBody.reportType, r.knownBody.reportSubtype);
       const age = day - r.knownBody.reportDay;
-      if (age > tpl.maxAgeDays) {
-        byAge++;
-        return false;
+      const aged = age > tpl.maxAgeDays;
+      const superseded = age > tpl.keepSupersededDays && stampOrder(r) < newest.get(supersessionKey(r.knownBody))!;
+      if (!aged && !superseded) return true;
+      const claims = r.knownBody.reportClaims.filter(isControlClaim);
+      if (claims.length > 0) {
+        const body = r.knownBody;
+        expiredControl.push(claims.length === body.reportClaims.length && body.reportAdvice === null
+          ? r
+          : { ...r, knownBody: { ...body, reportClaims: claims, reportAdvice: null } });
       }
-      if (stampOrder(r) < newest.get(supersessionKey(r.knownBody))! && age > tpl.keepSupersededDays) {
-        bySupersession++;
-        return false;
-      }
-      return true;
+      if (aged) byAge++;
+      else bySupersession++;
+      return false;
     });
-    if (kept.length !== held.knownReports.length) changed = true;
-    next[seat] = kept.length === held.knownReports.length ? held : { knownReports: kept };
+    if (kept.length === held.knownReports.length) {
+      next[seat] = held;
+      continue;
+    }
+    changed = true;
+    let archive = held.knownControlReports;
+    if (expiredControl.length > 0) {
+      const candidates = [...(archive ?? []), ...expiredControl];
+      const opening = held.knownOpeningControl === undefined ? [] : [openingReportOf(state, held.knownOpeningControl)];
+      const sources = retainedControlSources([...opening, ...kept, ...candidates], controlThreshold);
+      archive = candidates.filter((r) => sources.has(r.id)).sort(reportOrder);
+    }
+    next[seat] = {
+      knownReports: kept,
+      ...(archive === undefined || archive.length === 0 ? {} : { knownControlReports: archive }),
+      ...(held.knownOpeningControl === undefined ? {} : { knownOpeningControl: held.knownOpeningControl }),
+    };
   }
   if (!changed) return { state, counts: { byAge, bySupersession } };
   const live = new Set<string>();
-  for (const k of Object.values(next)) for (const r of k.knownReports) live.add(r.id);
+  for (const k of Object.values(next)) {
+    if (k.knownOpeningControl !== undefined) live.add(k.knownOpeningControl);
+    for (const r of k.knownReports) live.add(r.id);
+    for (const r of k.knownControlReports ?? []) live.add(r.id);
+  }
   const truth: Record<MessageId, ReportTruth> = {};
   for (const id of Object.keys(state.reportTruth).sort(strictCompare) as MessageId[]) if (live.has(id)) truth[id] = state.reportTruth[id]!;
   return { state: { ...state, knowledgeBySeat: next, reportTruth: truth }, counts: { byAge, bySupersession } };
+}
+
+function isControlClaim(claim: ReportClaim): boolean {
+  return claim.claimKind === 'control' || claim.claimKind === 'control-government';
+}
+
+/** Keep the map's evidence when its marks fade. At most four reports per region survive normal pruning this way. */
+function retainedControlSources(reports: readonly KnownReport[], threshold: number): ReadonlySet<MessageId> {
+  const retained = new Set<MessageId>();
+  for (const { latest, corroboration, precedingChange, government } of controlEvidence(reports, threshold).values()) {
+    retained.add(latest.report.id);
+    if (corroboration !== undefined) retained.add(corroboration.id);
+    if (precedingChange !== undefined) retained.add(precedingChange.id);
+    if (government !== undefined) retained.add(government.report.id);
+  }
+  return retained;
 }
 
 /**

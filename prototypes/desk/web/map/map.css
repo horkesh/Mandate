@@ -32,3 +32,13 @@
 .map-scale svg{width:32px;height:62px;fill:none;stroke:currentColor;stroke-width:1.4;margin-bottom:8px}.map-scale svg text{fill:currentColor;stroke:none;font:10px Standard,serif}
 .map-scale b{display:flex;width:100px;justify-content:space-between;font:10px Standard,serif;margin-top:-3px}.map-scale i{background:linear-gradient(90deg,currentColor 0 25%,transparent 25% 50%,currentColor 50% 75%,transparent 75%);border:1px solid currentColor;height:6px}
 .hq-caption{font-size:14px;line-height:24px}.hq-caption>span{height:24px}.hq-caption small{display:inline;margin-left:8px;font-size:10px;line-height:24px}
+
+/* R29 colour belongs to claims, while the president's marks remain blue lines. */
+.map-mark.headquarters,.map-mark.enemy{color:var(--side-colour,#2465b4)}
+.map-mark{animation:staff-mark-arrives .8s ease-out both;transform-origin:center}
+.map-mark.pencil svg,.staff-map[data-look=A] .map-mark.pencil svg{stroke-dasharray:3 1.4}
+.map-correction{color:#79438f;text-decoration-color:#79438f}
+.correction-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:4;stroke:#79438f;stroke-width:2;opacity:.9}
+.map-study .map-note{bottom:90px;left:40px;z-index:22}
+@keyframes staff-mark-arrives{from{clip-path:inset(0 100% 0 0);opacity:.25}to{clip-path:inset(0);opacity:1}}
+@media(prefers-reduced-motion:reduce){.map-mark{animation:none}}

@@ -55,7 +55,7 @@ describe('the desk uses the console driver and grammar', () => {
     const game = new ConsoleGame({ pack: 'testbed' });
     const desk = new DeskAdapter(game);
     const snapshot = desk.snapshot();
-    expect(Object.keys(snapshot).sort()).toEqual(['closed', 'date', 'help', 'history', 'morning', 'pack', 'paperText', 'queue', 'strings']);
+    expect(Object.keys(snapshot).sort()).toEqual(['approvedPlans', 'closed', 'date', 'help', 'history', 'morning', 'pack', 'paperText', 'queue', 'strings']);
     expect(JSON.stringify(snapshot)).not.toContain('stateNow');
     expect(JSON.stringify(snapshot)).not.toContain('worldHash');
     expect(snapshot.morning).toEqual(game.morning());

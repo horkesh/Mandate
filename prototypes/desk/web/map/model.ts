@@ -27,9 +27,15 @@ export interface MapMark {
   region: string; author: string; day: number; source: string; post: string | null;
   value: number | null; token: string | null; sources: number;
   caption?: string;
+  corrects?:string[];
 }
-export interface MapPlan { post: string; holder: string; source: string; day: number; plan: OptionView }
-export interface MapModel { marks: MapMark[]; plans: MapPlan[]; unplaced: { source: string; reason: 'no-location' | 'missing-author' | 'missing-plan-date' }[]; absent: string[] }
+export interface MapPlan { post: string; holder: string; source: string; day: number; plan: OptionView; approved?:boolean }
+export interface MapModel {
+ marks: MapMark[]; plans: MapPlan[];
+ control: SeatRequest['view']['controlBeliefs']; fronts: SeatRequest['view']['claimedFronts'];
+ faction: string|null; day:number;
+ unplaced: { source: string; reason: 'no-location' | 'missing-author' | 'missing-plan-date' }[]; absent: string[];
+}
 
 export const ABSENT_LAYERS = ['fronts', 'claimed-control', 'supply', 'rail-and-road-lines', 'relief', 'courier-positions', 'obstruction-edge-positions', 'approved-plan-routes'] as const;
 export function markState(today: number, day: number) {
@@ -38,7 +44,7 @@ export function markState(today: number, day: number) {
 }
 
 export function buildMapModel(request: SeatRequest, geometry: MapGeometry): MapModel {
-  const model: MapModel = { marks: [], plans: [], unplaced: [], absent: [...ABSENT_LAYERS] };
+  const model: MapModel = { marks: [], plans: [], control:request.view.controlBeliefs??{}, fronts:request.view.claimedFronts??[], faction:request.view.faction, day:request.requestDay, unplaced: [], absent: ABSENT_LAYERS.filter(layer=>layer!=='fronts'&&layer!=='claimed-control') };
   const regions = new Map(geometry.regions.map(r => [r.id, r]));
   const reports = [...request.view.reports].sort((a,b) => a.day - b.day || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   const byId = new Map<string, ReportView>(reports.map(r => [r.id, r]));
@@ -81,6 +87,10 @@ export function buildMapModel(request: SeatRequest, geometry: MapGeometry): MapM
     }
   }
   model.marks = [...latest.values()].filter(m => !['enemy','works'].includes(m.kind) || (m.value??0)>0).sort((a,b) => a.kind < b.kind ? -1 : a.kind > b.kind ? 1 : a.author < b.author ? -1 : a.author > b.author ? 1 : a.id < b.id ? -1 : 1);
+  for(const mark of model.marks)if(byId.get(mark.source)?.type==='observer-letter'){
+    const prior=model.marks.filter(m=>m.kind===mark.kind&&m.region===mark.region&&m.day<=mark.day&&m.author!==mark.author&&m.value!==mark.value);
+    if(prior.length)mark.corrects=prior.map(m=>m.id);
+  }
   // Independent authors agreeing on the same claim earn ink. Different estimates remain separate.
   for (const mark of model.marks) mark.sources = new Set(model.marks.filter(other => other.kind === mark.kind && other.region === mark.region && other.post === mark.post && other.value === mark.value && other.token === mark.token).map(other => other.author)).size;
   if (request.menu.menuKind === 'principal') for (const review of request.menu.reviews) {

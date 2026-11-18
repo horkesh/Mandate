@@ -39,5 +39,5 @@ export type {
   SituationChoice,
   SituationOptionChoice,
 } from './seats/api.ts';
-export type { AdviceView, BeliefView, ClaimView, GoalView, ObstructionView, ReportView, SeatView, SituationOptionView, SituationView, WorksView } from './view/types.ts';
+export type { AdviceView, BeliefView, ClaimedFrontView, ClaimView, ControlBeliefSource, ControlBeliefView, GoalView, ObstructionView, ReportView, SeatView, SituationOptionView, SituationView, WorksView } from './view/types.ts';
 export type { SituationId } from './ids.ts';

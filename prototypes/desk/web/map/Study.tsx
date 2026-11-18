@@ -9,6 +9,7 @@ import { reportDate } from './model.ts';
 import { STUDY } from './study-strings.ts';
 import './study.css';
 import {studyWashes} from './study-data.ts';
+import type {SeatRequest} from '@mandate/kernel/seat-api';
 
 const illustration:StudyMarks={
   washes:studyWashes,
@@ -20,7 +21,7 @@ const illustration:StudyMarks={
   draftLabel:{point:[-78.7,37.65],text:STUDY.draft},
 };
 export function MapStudy(){
-  const query=new URLSearchParams(window.location.search),table=query.get('layout')==='table';
+  const query=new URLSearchParams(window.location.search),table=query.get('layout')==='table',controlProof=query.get('proof')==='control';
   const [snapshot,setSnapshot]=useState<DeskSnapshot|null>(null),[error,setError]=useState('');
   const [framing,setFraming]=useState<'eastern'|'manassas'|'hero'|'theatre'>(query.get('detail')==='theatre'?'theatre':query.get('detail')==='hero'?'hero':query.get('detail')==='manassas'?'manassas':'eastern');
   const main=useRef<HTMLElement>(null);
@@ -45,9 +46,9 @@ export function MapStudy(){
   const report=[...snapshot.morning.view.reports].sort((a,b)=>b.day-a.day).find(r=>r.claims.some(c=>c.region==='fort_monroe'&&c.kind==='position')&&!r.claims.some(c=>c.kind==='verb-answered'))??snapshot.morning.view.reports[0];
   const post=report?snapshot.morning.menu.menuKind==='principal'?snapshot.morning.menu.commandable.find(p=>p.post===report.subjectId):undefined:undefined;
   return <main ref={main} className={`map-study ${table?'map-table':''}`} data-testid="map-study" data-framing={framing}>
-    <StaffMap request={snapshot.morning} pack={snapshot.pack} date={snapshot.date} strings={snapshot.strings} study={study} framing={framing}/>
+    <StaffMap request={snapshot.morning} pack={snapshot.pack} date={snapshot.date} strings={snapshot.strings} study={controlProof?undefined:study} framing={framing} comparisonControl={controlProof?(snapshot as DeskSnapshot&{controlExample?:Pick<SeatRequest['view'],'controlBeliefs'|'claimedFronts'>}).controlExample:undefined}/>
     <header className="study-cartouche"><h1>{framing==='theatre'?STUDY.theatreTitle:STUDY.title}</h1><p>{STUDY.compiled}</p><time>{snapshot.date}</time></header>
-    <div className="study-caption"><p>{STUDY.illustrative}</p><p>{STUDY.keyboard}</p></div>
+    <div className="study-caption"><p>{controlProof?'Contested claim example; not part of this game.':STUDY.illustrative}</p>{!controlProof&&<p>{STUDY.keyboard}</p>}</div>
     <nav className="study-navigation" aria-label="Map study views"><button onClick={()=>setFraming(f=>f==='eastern'?'manassas':'eastern')}>{framing==='eastern'?STUDY.junction:STUDY.eastern}</button><a href="/">{STUDY.desk}</a></nav>
     {table&&<>
       <div className="table-light" aria-hidden="true"/>

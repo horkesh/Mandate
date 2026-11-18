@@ -56,7 +56,10 @@ function makeRepo(): Repo {
     mkdirSync(dirname(join(root, path)), { recursive: true });
     writeFileSync(join(root, path), text);
   };
-  const git = (...args: string[]) => execFileSync('git', args, { cwd: root, encoding: 'utf8' });
+  const git = (...args: string[]) => {
+    if(process.env.MANDATE_NO_GIT === '1')throw Error('git is disabled for this run');
+    return execFileSync('git', args, { cwd: root, encoding: 'utf8' });
+  };
   git('init', '-q');
   write('.gitignore', 'node_modules/\n');
   write('package.json', JSON.stringify({ name: 'throwaway', private: true, workspaces: ['packages/*'] }));
@@ -74,7 +77,7 @@ function makeRepo(): Repo {
 const run = (repo: Repo) => stagedCheck({ root: repo.root, command: 'node check.js', env: { RAN_IN: repo.ranIn }, tmp: repo.tmp, log: () => {} });
 const leftovers = (repo: Repo) => readdirSync(repo.tmp);
 
-describe('the working tree and the index', () => {
+describe.skipIf(process.env.MANDATE_NO_GIT === '1')('the working tree and the index', () => {
   it('knows when they are equal, and when an unstaged edit or an untracked file makes them differ', () => {
     const repo = makeRepo();
     expect(treeEqualsIndex(repo.root)).toBe(true);
@@ -90,7 +93,7 @@ describe('the working tree and the index', () => {
   });
 });
 
-describe('the check on exactly what is being committed', () => {
+describe.skipIf(process.env.MANDATE_NO_GIT === '1')('the check on exactly what is being committed', () => {
   it('runs in place when the working tree equals the index', () => {
     const repo = makeRepo();
     const result = run(repo);
@@ -155,7 +158,7 @@ describe('the check on exactly what is being committed', () => {
 });
 
 describe('cleaning up is safe', () => {
-  it('removes the snapshot after a pass and after a fail, and leaves the real node_modules and the working tree alone', () => {
+  it.skipIf(process.env.MANDATE_NO_GIT === '1')('removes the snapshot after a pass and after a fail, and leaves the real node_modules and the working tree alone', () => {
     const repo = makeRepo();
     repo.write('value.txt', 'unstaged\n');
     expect(run(repo).status).toBe(0);
@@ -245,7 +248,7 @@ describe('the hook itself', () => {
   });
 
   // A snapshot has no .git, so this one question about git's index is asked only where there is a repository: in place, and in CI.
-  it.skipIf(!existsSync(new URL('../../.git', import.meta.url)))('is executable in git (Linux and macOS skip a hook that is not; asked only where a repository exists)', () => {
+  it.skipIf(process.env.MANDATE_NO_GIT === '1' || !existsSync(new URL('../../.git', import.meta.url)))('is executable in git (Linux and macOS skip a hook that is not; asked only where a repository exists)', () => {
     const mode = execFileSync('git', ['ls-files', '-s', '.githooks/pre-commit'], { cwd: new URL('../../', import.meta.url), encoding: 'utf8' }).split(' ')[0];
     expect(mode).toBe('100755');
   });

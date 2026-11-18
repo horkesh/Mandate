@@ -30,6 +30,7 @@ export * from './seats/seats.ts';
 export * from './seats/requests.ts';
 export * from './view/types.ts';
 export * from './view/view.ts';
+export * from './view/claimed-control.ts';
 export * from './log/commands.ts';
 export * from './log/log.ts';
 export * from './log/session.ts';

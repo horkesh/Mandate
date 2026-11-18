@@ -517,3 +517,55 @@ break in the new Eastern relief. `final-checks.json` indexes its thresholds,
 measurements, preservation checks and reused simulation, playback and keyboard
 evidence. The first captures and the raster-coverage correction are retained in
 `first-pass/`. Claude's standing review remains pending.
+
+## Claimed control (R29)
+
+The table uses the seat's `controlBeliefs` and `claimedFronts`. Blue belongs to
+the seat's faction, red to the opposing faction, and ochre to explicitly
+reported neutral government ground without a faction holder. Each wash follows
+its region, with a pooled rim, two-colour contested hatching, broken pencil
+edges and fading from the report date. The existing paper and relief atlases
+are unchanged. Front teeth face the reported opposing region. A contact without
+a common cartographic area edge uses a short staff mark rather than inventing
+a continuous surveyed boundary.
+
+Hover names the reported holder, shares, authors and date; the text map carries
+the same information. Conflicting observer corrections use violet ink. Received
+signs and changed control marks draw on unless reduced motion is enabled.
+Approved arrows retain routes that the player saw before approval. The adapter
+records them only after the kernel accepts the order; cancellation and refusal
+cannot approve an arrow. Its colour records the president's approval, without
+asserting that the commander has executed it.
+
+During playback the server projects cumulative received control reports through
+the kernel. The browser displays those projections as their papers land. It
+does not derive political control or infer adjacency from geometry.
+
+From this directory, the R29 checks and evidence fixtures are:
+
+```powershell
+$env:DESK_EVIDENCE_REQUEST='../../ByOrderOfThePresident/art-masters/R29'
+npm run check
+npx tsx scripts/r29-fixture.ts
+npx playwright test --config playwright.r29.config.ts
+npx playwright test --config playwright.r29-plan.config.ts
+```
+
+R29's capture scripts use the main checkout's ignored `art-masters/R29/`.
+The normal prototype command remains `npm run dev -- --at-war`. This worktree
+also has verified copies of the previously delivered runtime assets.
+
+At the root, `MANDATE_NO_GIT=1 npm run check` excludes the staged-hook test file
+before collection, so the Codex command-line lane can obey its no-git rule.
+Without that flag the ordinary hook tests remain enabled. The first attempted
+per-test guard did not prevent git fixture execution; that failed run is
+retained and is not evidence of compliance with the command rule.
+
+The live March opening has no contested region. The labelled comparison route
+`/?study=1&proof=control&look=A` can display the isolated synthetic control
+projection from the R29 proof fixture, outside the playable request. The real
+week and recording contain no control-transfer report, so they do not establish
+a live territorial-transfer animation. Ten capture/recipe pairs, the short
+recording, measurements, maker review, exact file inventory and retained failures
+are indexed by `art-masters/R29/final-checks.json`. Formal acceptance remains
+with Claude's review lane.

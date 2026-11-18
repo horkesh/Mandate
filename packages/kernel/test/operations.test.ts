@@ -223,8 +223,8 @@ describe('battle reports: the night of the battle, hour by hour, and the returns
   // b's garrison is trapped: b2 is a's, so b in mid has nowhere to go, and surrenders.
   const TRAPPED = { ...CONTROL, b2: { a: 1000 }, mid: { a: 600, b: 400 } };
   let g0: ReturnType<typeof game>;
-  const fight = (boldness: StatDirection = 'high', midGovernment?: 'a_state' | 'a_nation') => {
-    const g = (g0 = game({ gen: { boldness } }, [block('a_1', { department: 'a_war', region: 'a2', strength: 9000, post: P('a_army') }), block('b_1', { department: 'b_war', region: 'mid', strength: 700, post: P('b_army') })], { control: TRAPPED as unknown as typeof CONTROL, ...(midGovernment === undefined ? {} : { midGovernment }) }));
+  const fight = (boldness: StatDirection = 'high', midGovernment?: 'a_state' | 'a_nation', control = TRAPPED) => {
+    const g = (g0 = game({ gen: { boldness } }, [block('a_1', { department: 'a_war', region: 'a2', strength: 9000, post: P('a_army') }), block('b_1', { department: 'b_war', region: 'mid', strength: 700, post: P('b_army') })], { control: control as unknown as typeof CONTROL, ...(midGovernment === undefined ? {} : { midGovernment }) }));
     const results = play(g.world, approved(g.state, 'a_army', DIRECT), 16);
     const battle = Object.values(results.at(-1)!.state.battleRecords)[0]!;
     // Everything each principal was told, day by day (knowledge prunes superseded dispatches after a few days).
@@ -251,6 +251,17 @@ describe('battle reports: the night of the battle, hour by hour, and the returns
     expect(truth(a[2]!.id).truthTerms.some((t) => t.termRule === 'afternoon:killed_wounded_unsaid')).toBe(true);
   });
 
+  it('adds shares to the existing evening dispatch and governor’s wire when the battle changes hands', () => {
+    const { told, day, results } = fight('high', 'a_state', { ...TRAPPED, mid: { a: 490, b: 510 } });
+    const endShares = results[day.bdayDay - 1]!.state.regionControl[R('mid')];
+    expect(endShares![F('a')]).toBeGreaterThan(endShares![F('b')] ?? 0);
+    const reports = told('a_lead').filter((r) => r.knownBody.reportClaims.some((c) => c.claimKind === 'control'));
+    expect(reports.map(({ knownBody: body }) => [body.reportHour, body.reportSubtype])).toEqual([[null, 'governor-wire'], [21, null]]);
+    for (const { knownBody: body } of reports) {
+      expect(Object.fromEntries(body.reportClaims.filter((c) => c.claimKind === 'control').map((c) => [c.claimToken, c.claimValue]))).toEqual(endShares);
+    }
+  });
+
   it('on the evening a breakout fails, the post above the taken commander does not wire that the phase went well (N12)', async () => {
     const { battleReports } = await import('../src/tick/battle-reports.ts');
     const { ctxFor } = await import('./support/tick-context.ts');
@@ -266,7 +277,7 @@ describe('battle reports: the night of the battle, hour by hour, and the returns
       const { SEATS_MECHANICS } = tickModule;
       const { MAP_MECHANICS } = mapModule;
       const ctx = ctxFor(g0.world, state, day.bdayDay, [...SEATS_MECHANICS, ...MAP_MECHANICS]);
-      battleReports(ctx, state);
+      battleReports(ctx, state, before.regionControl);
       return ctx.outbox.filter((m) => m.msgTo === PER('b_lead') && m.msgReport!.reportClaims.some((c) => c.claimKind === 'battle-phase' && c.claimToken === 'evening')).map((m) => m.msgReport!.reportClaims[0]!.claimValue);
     };
     expect(as('destroyed')).toEqual([0]);

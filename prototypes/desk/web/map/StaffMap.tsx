@@ -8,13 +8,14 @@ import type { OptionView, SeatRequest } from '@mandate/kernel/seat-api';
 import { deskApi } from '../adapter.ts';
 import type { DeskReply, DeskSnapshot } from '../adapter.ts';
 import { buildMapModel, editLine, markState, regionStep, reportDate } from './model.ts';
-import type { MapEditKind, MapGeometry, MapMark, Point } from './model.ts';
+import type { MapEditKind, MapGeometry, MapMark, MapPlan, Point } from './model.ts';
 import { StaffRenderer } from './renderer.ts';
 import type { PencilRoute } from './renderer.ts';
 import type { StudyMarks } from './renderer.ts';
 import { LOOKS, LOOK_NAMES, readLook } from './skins.ts';
 import { STUDY } from './study-strings.ts';
 import { M } from './strings.ts';
+import {claimWords,controlColour,CONTROL_COLOURS} from './control.ts';
 import { isTyping, SettingsContext } from '../settings.ts';
 import { S } from '../strings.ts';
 import hq from './icons/hq-army.svg?raw';
@@ -42,10 +43,13 @@ export interface TableMapProps {
  focusPaper?:{id:string;region:string}; arrival?:{id:string;region:string;text:string};
  onLocate?:(point:Point|null)=>void; holderCard?:(mark:MapMark)=>ReactNode;
 }
-export function StaffMap({ request, pack, date, strings, destination="", reviewPost=null, marks=EMPTY_MARKS, onMark, handles=EMPTY_HANDLES, study, framing, focusPaper, arrival,onLocate,holderCard }: {
+export function StaffMap({ request, pack, date, strings, destination="", reviewPost=null, marks=EMPTY_MARKS, onMark, handles=EMPTY_HANDLES, study, framing, focusPaper, arrival,onLocate,holderCard,approved=[],comparisonControl }: {
   request: SeatRequest; pack: string; date: string; strings: Readonly<Record<string,string>>;
   destination?: string; reviewPost?: string | null; marks?: PencilMark[]; onMark?: (axis: string, kind: MapEditKind, region?: string) => void; handles?: Handle[];
   study?: StudyMarks; framing?: 'eastern'|'manassas'|'hero'|'theatre';
+  approved?:readonly MapPlan[];
+  /** Isolated comparison route only, never installed in a playable request. */
+  comparisonControl?:Pick<SeatRequest['view'],'controlBeliefs'|'claimedFronts'>;
 }&TableMapProps) {
   const appearance=useContext(SettingsContext);
   const [rawGeometry,setGeometry]=useState<MapGeometry|null>(null);
@@ -60,11 +64,15 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
   const twin=useRef<HTMLDivElement>(null),previousText=useRef(false);
   const {name:t,text:display}=presenter(strings);
   const dateOf=(day:number)=>reportDate(request.requestDay,date,day);
+  const describeControl=(region:string)=>claimWords(t(region,'region'),(comparisonControl?.controlBeliefs??request.view.controlBeliefs)?.[region as keyof typeof request.view.controlBeliefs],t,dateOf);
   const model=useMemo(()=>{
     if(!geometry)return null;const result=buildMapModel(request,geometry);
+    if(comparisonControl){result.control=comparisonControl.controlBeliefs;result.fronts=comparisonControl.claimedFronts;}
+    result.plans.push(...approved.filter(p=>!result.plans.some(r=>r.post===p.post)));
+    for(const plan of result.plans)if(approved.some(p=>p.post===plan.post&&p.source===plan.source))plan.approved=true;
     for(const m of result.marks)m.caption=t(m.kind==='headquarters'&&request.menu.menuKind==='principal'?request.menu.commandable.find(p=>p.post===m.post)?.holder??m.author:m.author,'person');
     return result;
-  },[request,geometry]);
+  },[request,geometry,comparisonControl,JSON.stringify(approved)]);
   useEffect(()=>{let alive=true;setGeometry(null);setFailed(false);loadGeometry(pack).then(g=>{if(alive)setGeometry(g);}).catch(()=>{if(alive)setFailed(true);});return()=>{alive=false;};},[pack]);
   useEffect(()=>{if(text)twin.current?.focus();else if(previousText.current)host.current?.focus();previousText.current=text;},[text]);
   useEffect(()=>{
@@ -149,10 +157,11 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
       {failed&&<p className="map-message" role="status">{M.missing}</p>}
       {geometry?.schematic&&<p className="schematic-note">{M.schematic}</p>}
       <div className="map-overlays" style={overlayStyle}>
+        <svg className="correction-lines" aria-hidden="true">{placed.filter(p=>p.mark.corrects?.length).flatMap(p=>p.mark.corrects!.map(id=>{const earlier=placed.find(q=>q.mark.id===id);return earlier?<line key={`${p.mark.id}:${id}`} x1={earlier.point[0]-15} y1={earlier.point[1]+8} x2={earlier.point[0]+15} y2={earlier.point[1]-8}/>:null;}))}</svg>
         <svg className="mark-leaders" aria-hidden="true">{placed.filter(p=>p.point[0]!==p.anchor[0]||p.point[1]!==p.anchor[1]).map(p=><line key={p.mark.id} x1={p.anchor[0]} y1={p.anchor[1]} x2={p.point[0]} y2={p.point[1]}/>)}</svg>
         <svg className="caption-leaders" aria-hidden="true">{groups.filter(g=>(study||g.marks.some(m=>m.id===active))&&!g.marks.some(m=>m.id===selectedHQ)).map(g=>{const b=captions.get(g.mark.id);return b?<line key={g.mark.id} x1={g.anchor[0]} y1={g.anchor[1]} x2={Math.max(b[0],Math.min(b[2],g.anchor[0]))} y2={Math.max(b[1],Math.min(b[3],g.anchor[1]))}/>:null;})}</svg>
         {groups.filter(g=>(study||g.marks.some(m=>m.id===active))&&!g.marks.some(m=>m.id===selectedHQ)).map(g=>{const b=captions.get(g.mark.id);return b?<span key={g.mark.id} className="hq-caption" data-region={g.mark.region} style={{left:b[0],top:b[1],width:b[2]-b[0],height:b[3]-b[1],textAlign:b[2]<g.anchor[0]?'right':'left'}}>{g.marks.map(m=><span key={m.id}>{m.caption}<small>{dateOf(m.day)}</small></span>)}</span>:null;})}
-        {placed.map(({mark,point:p})=>{const age=markState(request.requestDay,mark.day);return <button key={mark.id} data-report={mark.source} data-region={mark.region} className={`map-mark ${mark.sources>1?'ink':age.stage} ${mark.kind}`} style={{...position(p),'--mark-opacity':age.opacity} as CSSProperties} aria-label={describe(mark)} onClick={()=>{if(mark.kind==='headquarters'&&holderCard)setSelectedHQ(mark.id);}} onPointerDown={e=>e.stopPropagation()} onFocus={()=>setActive(mark.id)} onBlur={()=>setActive(null)} onMouseEnter={()=>setActive(mark.id)} onMouseLeave={()=>setActive(null)}>
+        {placed.map(({mark,point:p})=>{const age=markState(request.requestDay,mark.day);return <button key={mark.id} data-report={mark.source} data-region={mark.region} className={`map-mark ${mark.sources>1?'ink':age.stage} ${mark.kind}`} style={{...position(p),'--mark-opacity':age.opacity,'--side-colour':`#${(mark.corrects?.length?CONTROL_COLOURS.correction:controlColour(mark.kind==='enemy'?null:request.view.faction,request.view.faction)).toString(16).padStart(6,'0')}`} as CSSProperties} aria-label={describe(mark)} onClick={()=>{if(mark.kind==='headquarters'&&holderCard)setSelectedHQ(mark.id);}} onPointerDown={e=>e.stopPropagation()} onFocus={()=>setActive(mark.id)} onBlur={()=>setActive(null)} onMouseEnter={()=>setActive(mark.id)} onMouseLeave={()=>setActive(null)}>
           <span aria-hidden="true" dangerouslySetInnerHTML={{__html:glyphs[mark.kind]}}/>{mark.kind!=='headquarters'&&<span className="mark-caption">{mark.caption}<small>{dateOf(mark.day)}</small></span>}
         </button>;})}
         {paperPoint&&<span className="paper-place" data-testid="paper-place" style={position(paperPoint)} aria-hidden="true"/>}
@@ -165,14 +174,14 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
       </div>
       {look==='A'&&<svg className="map-degree-ticks" aria-hidden="true">{degreeTicks.map((t,i)=><g key={i}><line x1={t.x} y1={t.y} x2={t.x+(t.side==='left'?9:t.side==='right'?-9:0)} y2={t.y+(t.side==='top'?9:t.side==='bottom'?-9:0)}/><text x={t.x+(t.side==='left'?15:t.side==='right'?-15:0)} y={t.y+(t.side==='top'?23:t.side==='bottom'?-13:4)} textAnchor={t.side==='left'?'start':t.side==='right'?'end':'middle'}>{t.text}</text></g>)}</svg>}
       {look==='A'&&<><span className="map-meridian top">{MERIDIAN_LABELS.top}</span><span className="map-meridian bottom">{MERIDIAN_LABELS.bottom}</span></>}
-      {look==='A'&&!study&&<aside className="map-cartouche"><h3>{M.title}</h3><p>{STUDY.compiled}</p><time>{date}</time></aside>}
+      {look==='A'&&!study&&!comparisonControl&&<aside className="map-cartouche"><h3>{M.title}</h3><p>{STUDY.compiled}</p><time>{date}</time></aside>}
       {frame&&<div className="map-neatline" aria-hidden="true" style={frameStyle}/>}
       {active&&model&&<div className="map-note" role="status">{describe(model.marks.find(m=>m.id===active)!)}</div>}
-      {!active&&engine.current?.hoveredRegion()&&<div className="map-note" role="status">{engine.current.hoveredRegion()!.name}</div>}
+      {!active&&engine.current?.hoveredRegion()&&<div className="map-note" data-testid="control-hover" role="status">{describeControl(engine.current.hoveredRegion()!.id)}</div>}
       <div className="map-scale" aria-hidden="true"><span style={{transform:`rotate(${engine.current?.ready?engine.current.northAngle():0}deg)`}}>↑</span><i/>{geometry?.schematic?'':M.miles}</div>
     </div>
     {(text||failed)&&<div ref={twin} className="map-text" data-testid="map-text-twin" tabIndex={0}>
-      {geometry&&<section><h3>{M.regionNames}</h3><ul>{geometry.regions.map(r=><li key={r.id}>{r.name}</li>)}</ul></section>}
+      {geometry&&<section><h3>{M.regionNames}</h3><ul>{geometry.regions.map(r=><li key={r.id}>{describeControl(r.id)}</li>)}</ul></section>}
       {model ? <><ul>{model.marks.map(m=><li key={m.id}>{describe(m)} {t(m.region,'region')}</li>)}</ul>{!model.marks.length&&<p>{M.noKnowledge}</p>}{model.plans.map(p=><section key={p.post}><h3>{t(p.holder,'person')}</h3><p>{M.written}: {dateOf(p.day)}. {M.source}: {sourceLabel(p.source)}</p>{p.plan.axes.map(a=><p key={a.name}>{M.axis} {display(a.name)}: {a.regions.map(id=>t(id,'region')).join(' → ')}</p>)}</section>)}<ul>{marks.map(m=><li key={m.number}>{m.number}. {display(m.line)}. {t(m.author,'person')}, {dateOf(m.day)}</li>)}</ul>{model.unplaced.length>0&&<details><summary>{M.unplaced}</summary><ul>{model.unplaced.map((u,i)=><li key={i}>{sourceLabel(u.source)}: {M.unplacedMessages[u.reason]}</li>)}</ul></details>}</> : <MapFallback request={request} date={date} strings={strings}/>}
     </div>}
     <footer className="map-footer"><span>{M.pencilLegend}</span><span>{M.inkLegend}</span><span className="map-age">{M.asOf} {date}</span></footer>
@@ -188,6 +197,7 @@ function MapFallback({request,date,strings}:{request:SeatRequest;date:string;str
 export function MapReview({destination="",data,execute,busy,textEdit,table=false,reviewOpen=true,mapProps={}}:{destination?:string;data:DeskSnapshot;execute:(line:string)=>Promise<DeskReply|undefined>;busy:boolean;textEdit?:(line:string)=>void;table?:boolean;reviewOpen?:boolean;mapProps?:TableMapProps}) {
   const menu=data.morning.menu;
   const reviews=menu.menuKind==='principal'?menu.reviews:[];
+  const approved=data.approvedPlans??[];
   const [post,setPost]=useState(reviews[0]?.post??'');
   const [marks,setMarksState]=useState<PencilMark[]>([]),[message,setMessage]=useState(''),[checking,setChecking]=useState(false);
   const [axis,setAxis]=useState(''),[region,setRegion]=useState('');
@@ -237,6 +247,6 @@ export function MapReview({destination="",data,execute,busy,textEdit,table=false
       </>:<p>{M.noPlan}</p>}
       {message&&<p role="status" className="map-review-message">{display(message)}</p>}
     </aside>}
-    <StaffMap {...mapProps} destination={destination} request={data.morning} pack={data.pack} date={data.date} strings={data.strings} reviewPost={review?.post??null} marks={review?marks:EMPTY_MARKS} onMark={(axis,kind,region)=>void propose(axis,kind,region)} handles={handles}/>
+    <StaffMap {...mapProps} approved={approved} destination={destination} request={data.morning} pack={data.pack} date={data.date} strings={data.strings} reviewPost={review?.post??null} marks={review?marks:EMPTY_MARKS} onMark={(axis,kind,region)=>void propose(axis,kind,region)} handles={handles}/>
   </div>;
 }
