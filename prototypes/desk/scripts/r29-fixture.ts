@@ -1,7 +1,11 @@
 import {ConsoleGame} from '../../../packages/cli/src/console/game.ts';
 import {DeskAdapter} from '../server/adapter.ts';
 import {mkdirSync,writeFileSync} from 'node:fs';
-const out='C:/Pyrrhic/ByOrderOfThePresident/art-masters/R29';mkdirSync(out,{recursive:true});
+import {fileURLToPath} from 'node:url';
+import {resolve} from 'node:path';
+const repo=fileURLToPath(new URL('../../..',import.meta.url));
+const main=process.env.MANDATE_MAIN??resolve(repo,'../ByOrderOfThePresident');
+const out=resolve(main,'art-masters/R29');mkdirSync(out,{recursive:true});
 const peace=new DeskAdapter(new ConsoleGame({pack:'union-1861'})).snapshot();
 const game=new ConsoleGame({pack:'union-1861',atWar:true}),desk=new DeskAdapter(game),war=desk.snapshot();
 const commands=['inquire us_general_in_chief','inquire us_dc_militia','inquire us_fort_monroe'];

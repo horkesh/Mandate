@@ -8,6 +8,10 @@ import type {ControlPalette} from './control-palettes.ts';
 
 export const CONTROL_COLOURS=CONTROL_PALETTES.strong.colours;
 export type ControlBelief=SeatRequest['view']['controlBeliefs'][keyof SeatRequest['view']['controlBeliefs']];
+/** R34: fixed display categories; never interpolate a reported share. */
+export function controlStrength(belief:ControlBelief):'held'|'firm'{
+ return belief.neutralGovernment||Math.max(0,...Object.values(belief.shares))>=800?'firm':'held';
+}
 export function controlColour(faction:string|null,own:string|null,neutral=false,palette:ControlPalette='strong'){const c=CONTROL_PALETTES[palette].colours;return neutral?c.neutral:faction===own?c.friendly:c.enemy;}
 export function controlOpacity(belief:ControlBelief,today:number,palette:ControlPalette='strong'){return markState(today,belief.asOfDay).opacity*(belief.mark==='ink'?.72:.60)*CONTROL_PALETTES[palette].middle;}
 export function claimWords(region:string,belief:ControlBelief|undefined,name:(id:string,kind?:string)=>string,date:(day:number)=>string){

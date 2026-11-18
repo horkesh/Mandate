@@ -1,0 +1,36 @@
+{
+  "asset": "public/map-signs/town-2.svg",
+  "request": "R34",
+  "brief": "Main CODEX.md R34, geographic furniture",
+  "date": "2026-11-18",
+  "plan": "Previously confirmed ChatGPT Pro 100; no image service used",
+  "client": "Codex command-line session; client version not queried",
+  "model": "Code-assisted procedural SVG; no image model",
+  "apiKeyUnset": true,
+  "tool": "TypeScript glyphPaths",
+  "mode": "Original seeded point strokes",
+  "prompt": "Plain manuscript geographic signs using Union Coast Survey conventions, with no figures, seals, flags or game-art references",
+  "references": [
+    {
+      "title": "Military map of south-eastern Virginia, A. Lindenkohl, 1864 (LOC 99448891)",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Military-map-of-south-eastern-virginia-Lindenkohl_(99448891).png",
+      "catalogue": "https://lccn.loc.gov/99448891",
+      "path": "sources/coast-survey-1864-reference.png",
+      "sha256": "a4d94b89011fd160a9f76dbfd8506ec44bd7c3eb66d97b023d6407acf05e8b64",
+      "rights": "Public-domain United States map published in 1864; Commons PD-US-expired statement saved in source-commons-ref.json",
+      "use": "Non-figural buildings, sparse geographic symbols and restrained rulework only. No tracing, sampled pixels, roads or later military positions copied."
+    }
+  ],
+  "requestedSize": "80 x 64 SVG units",
+  "actualSize": "80 x 64 SVG viewBox",
+  "variantsMade": 4,
+  "variantChosen": 2,
+  "seedKey": "town-sheet-2",
+  "runtimeSeed": "Each geographic feature id gives a further unique deterministic variant",
+  "humanEdits": [],
+  "postProcess": [],
+  "provenanceMarks": "No raster model or embedded provenance marks created or removed",
+  "sha256": "5267a992f4d2afd7147fe693dbe2065a2e2cef87335e6e76e926c8ea64bede95",
+  "scriptSha256": "a14ada56a01a59f5b901a01806b559749cb8577c117f539d10f237a8daeb1d32",
+  "glyphModuleSha256": "d6bba6e94b987dc71ddd91b5de0b76c2d80dd4ad68f3633345d9a9e0cf562e16"
+}

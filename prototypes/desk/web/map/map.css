@@ -59,3 +59,21 @@
 .staff-map[data-palette=research] .claim-swatch.claim-single{background:color-mix(in srgb,var(--claim-blue) 30%,transparent)}
 .staff-map[data-palette=research] .claim-swatch.claim-neutral{color:var(--claim-ochre)}
 .staff-map[data-palette=research] .claim-swatch:not(.claim-contested):not(.claim-single):not(.claim-old){background:color-mix(in srgb,currentColor 48%,#ead9b3);border-color:currentColor}
+
+/* R34 geographic furniture is neutral ink; political colour remains in claims. */
+.claim-swatch.claim-held{opacity:.60}.claim-swatch.claim-firm{opacity:.84}
+.wash-meaning{font:italic 11px/1.3 Fell,serif;margin:8px 0 0}
+.drawn-cartouche{border:0;background:#ead9b3ed;padding:23px 28px}
+.cartouche-line{position:absolute;inset:-6px -14px;pointer-events:none}
+.cartouche-line svg{width:100%;height:100%;overflow:visible}
+.drawn-cartouche:before{content:"";display:block;height:15px;margin:0 auto 8px;background:currentColor;mask:url('/art/union-1861/documents/general-orders-head.png') center/contain no-repeat;width:170px}
+.map-scale.drawn-scale{gap:0}.map-scale .north-rose{display:block;height:66px}
+.map-scale .north-rose svg{width:80px;height:64px;margin:0;stroke-width:1.1}
+.map-scale .decorated-bar{display:block;height:30px}.map-scale .decorated-bar svg{display:block;width:100%;height:100%;margin:0;overflow:visible}
+.map-scale.drawn-scale b{margin-top:-6px}
+.high-contrast .drawn-cartouche{background:white;color:#111}
+
+.table-map-layout .map-cartouche.drawn-cartouche{width:300px;max-width:none;box-sizing:border-box;padding:22px 48px 25px;bottom:95px}
+.drawn-cartouche .cartouche-line{inset:0 -5px}.drawn-cartouche .cartouche-line svg{height:100%;width:100%}
+.table-map-layout .drawn-cartouche h3{font-size:18px;letter-spacing:2px}
+.table-map-layout .drawn-cartouche:before{width:150px;height:10px;margin-bottom:5px}

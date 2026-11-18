@@ -710,3 +710,61 @@ for the browser checks. The baseline test is separately opt-in with
 checks and unchanged playback/keyboard/skin/plan evidence are reused. No root
 simulation campaign or map bake ran for R33. Existing build warnings and the
 console send-back notes limitation remain.
+
+## R34 geographic signs
+
+The manuscript now draws neutral geographic furniture above its control washes.
+Use `?signs=off` for the comparison without signs; signs are on by default.
+Both `?palette=strong` and `?palette=research` remain available, with strong the
+default while the owner chooses. `public/map-signs/` contains 15 SVG designs,
+four seeded variants each, and their recipes. Runtime variants use the feature
+id as their seed and the same point strokes as the exported SVGs.
+
+At theatre fit, capitals, elevation-derived mountain signs and large named
+wetlands remain. The Eastern opening adds city blocks, towns, named forts and
+crossings. The close view adds smaller places and any supplied station points.
+Reports, fronts, arrows, papers and names have priority over these signs.
+The compass follows true north; the decorated scale uses the measured mileage.
+The cartouche reuses R15's wordless General Orders rulework.
+
+`web/map/furniture-data.json` contains 425 pack/rail/elevation display features.
+`web/map/woodlands.json` names the Wilderness of Spotsylvania, Great Dismal
+Swamp and Okefenokee, with sources, dates and extent certainty. Both files
+explicitly belong in the pack later. No modern land-cover map is used.
+The forest and marsh clumps are symbols inside approximate placement envelopes,
+not surveyed 1861 boundaries. Forts use their pack region anchors rather than
+invented footprints. Crossings use actual 1861 rail/river intersections or
+one approximate intersection for an on-map graph edge whose note names a
+bridge or ferry. Off-map graph chords are excluded. Mountain anchors select
+the highest qualifying elevation-contour endpoints in geographic cells; they
+are an overview treatment, not surveyed ridge polygons.
+
+Town classes use the pack's urban, capital and key-point hints; Baltimore also
+uses its separately transcribed 1860 city count. County aggregates are never
+treated as town populations. City blocks are emblematic street plans, not a
+new road network. There are **zero station points** in the current rail layer;
+the station glyph is supplied but no station location is invented.
+
+Control uses only held and firmly held depths, separated at a fixed internal
+800-permille threshold, with the existing ink/pencil, age and contested cues.
+Exact shares are absent from DOM attributes and diagnostics. The legend names
+both depths. The kernel's data and the console's commands are unchanged.
+The R29 fixture and R30 area scripts now resolve paths from their own files;
+`MANDATE_MAIN` optionally selects a different main checkout.
+
+Rebuild geography with `python scripts/r34-geography.py`, and the SVG library
+with `npx tsx scripts/r34-assets.ts`. They use the existing local geometry tools
+and source data. Run `npx vitest run test/r34.test.ts` for focused checks and
+`npx playwright test --config playwright.r34.config.ts` for the browser proofs.
+For the full unit suite in this worktree, set
+`DESK_EVIDENCE_REQUEST=../../ByOrderOfThePresident/art-masters/R34` first, so the
+older equivalence tests put their evidence in the current request's folder.
+
+The main checkout's `art-masters/R34/` holds six native 1920×1080 comparison
+pairs, twelve individual 3440×1440 captures, the glyph sheet, sourced list,
+recipes and logs. The four-case ultrawide pan sample records 265–297 ms median
+renderer work on software rendering; it does not qualify a hardware frame-rate
+target. It records zero static rebakes and the unchanged 88.06 MiB atlas.
+The saved atlas's earlier 16.38-second bake is inherited evidence, not a new
+R34 bake. Existing build warnings and earlier console/live-evidence limits
+remain as described above.
