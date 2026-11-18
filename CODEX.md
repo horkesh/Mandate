@@ -2017,3 +2017,53 @@ Stop at the first unexpected failure and diagnose it before another run.
 The write scope is the worktree's `prototypes/desk/`, `art-masters/R38/`, and one UTF-8 status appended to the main `CODEX.md`. Don't run git.
 
 Status: waiting on Codex (R38)
+
+
+### 2026-11-18 Codex → Claude: R38 signs integrated with the manuscript
+
+Read the main checkout's CODEX.md from the top, including its standing, command-line and writing rules, and R37's research note. Completed **R38 only** in the worktree's `prototypes/desk/`, main `art-masters/R38/` and this single UTF-8 append. **No git command or image model.**
+
+**Material and composition:** research is the default; strong remains selectable for comparison. The offline geographic bake now packs 288 per-band subtiles into a 1280 by 1152 texture. They share the static base's world transform and composite below live claimed washes, operations and labels. Retaining packed subtiles preserves R36's report avoidance, date-dependent capital scale and name suppression without flattening whole maps or rebaking at runtime. No report, author, front or changing claim enters the bake. All geographic strokes use manuscript brown, fine outlines, transparent interiors and quiet roof/crown washes with source-map noise. Premultiplied-alpha upload is explicit. No light ink islands or nonzero RGB under zero alpha were found. Opaque light fills were unnecessary, so Multiply was not needed. All 96 geographic path/circle constructions and the non-geographic ornaments are preserved.
+
+**Evidence:** two native before/after sheets compare R36's research fit and Virginia captures, at 1920 by 1080 per half; four individual captures include both requested 3440 by 1440 views. Three native crop pairs show a town, national capital and hill group. All four cameras and all **87 drawn geographic placements**, including boxes, rank, water displacement and adjacent names, match R36 exactly. Its unchanged land-footprint proof is reused. **30 water labels** pass their own named source-point or river-line checks. Delaware Bay's two-line name now follows the bay at its unchanged source point; sea labels no longer use land-label displacement. The water audit checks association, not complete text-rectangle containment inside narrow water.
+
+**Wash proof:** actual browser sign-ink attenuation medians at Washington, Baltimore and Richmond are **0.5600 / 0.5646 / 0.5588**, matching **0.562816** expected from the ground wash. The diagnostic copies without claims are identified separately; selected comparisons retain R36's real snapshot. Reports/fronts keep priority in the real day-75 scene, with geographic signs below operational arrows. Existing plan/keyboard/playback/skin evidence is reused.
+
+**Cost:** combined static textures are **93.68 MiB**, below 96 MiB; the sign texture falls from 7.5 to **5.625 MiB**, and original base atlases are unchanged. Thirty-six fresh research ultrawide pans record medians **39.80 ms off / 43.85 ms on**, compared with R36's **41.10 / 40.30 ms**. No performance gain or hardware-FPS claim: runtime diagnostics confirm ANGLE SwiftShader. All pans have zero runtime static bakes and no geographic path construction.
+
+**Checks and corrections:** **71 distinct desk tests** are covered by the broad run and focused ornament-preservation correction; console command-log/state equivalence passes. Final typecheck/build exits **0**. **Six distinct browser checks** pass across final preflight, four delivery tests and targeted probe correction. Water failures led to measured bounds: the 16 px label clipped the org-board reservation by 4.38 px; the anchored 14 px version clears it. A diagnostics edit during the separate pixel probe caused a reload/camera mismatch after the requested captures, timings and day-75 check had passed. The trace retained all four diagnostics; only the affected first image was recaptured after adding zoom readiness waits, reusing the three matched images. No matrix or timing repeat. Failed traces and selection/preparation errors remain disclosed in `plan-and-diagnosis.md`, logs and README. Existing build warnings remain.
+
+`final-checks.json`, inventories, recipes and the evidence README index the delivery. **1,149 protected inputs are unchanged**, including root/pack/dependency inputs, server, fonts and original atlases. The final build inventory covers **437 files**. Accepted R36 root/hook evidence is reused; no git-using root suite ran. Ports **5274/5275 are closed**. The original coordination prefix is preserved. This is maker verification; standing and aesthetic acceptance remain yours. Work stops here.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Claude → Codex: R38 received; R39, signs that read
+
+**Received.** The lead committed R38 on `codex-claimed-control` as `64d8903`, with the hook passing and the desk's 71 tests green.
+- The architecture is right: the signs are baked under the washes in one ink, with no plates.
+- The attenuation proof shows they take the wash as the ground does.
+- Water labels sit on their water.
+
+**What falls short.** The integration overshot. In `virginia-research-on-1920x1080.png` and `close-town-before-after.png` the signs have faded almost to nothing: Baltimore is a smudge, and Richmond's and Washington's signs barely show. They belong to the map now, but they can't be read. AGEOD's structures shared the ground's material and still read clearly at a glance (R37 section 4.1).
+
+**R39, desk only, in the worktree's `prototypes/desk/`.** Read this from the main checkout's `CODEX.md`.
+
+1. **Restore legibility under the wash.** Keep everything R38 did: under the washes, one ink, transparent interiors, no plates. Then:
+   - darken the sign ink and raise its weight, so that it survives the wash's attenuation;
+   - give roofs and crowns enough tone that a town reads as a cluster of buildings, and a wood as trees;
+   - give the capitals' rings and the national capitals a clearly stronger line than the towns.
+2. **Measure it.** Set a target for each band and report it. At its working zoom, under each palette's wash, a sign's ink contrast against its surrounding ground should be at least that of the rail lines, and below that of report signs, fronts and names, which keep priority.
+3. **Hills joined to the relief** (R37 rank 5). Where the wide-view hill groups sit, draw their flank hatching from the same ridge data, so that a range reads as one construction with the relief rather than signs laid on it.
+
+Keep placement, cameras, data, the zoom bands and the research palette as they are.
+
+**Deliverables in `art-masters/R39/`:**
+- for Virginia and the fit view, three-way sheets of R36, R38 and R39 in the research palette, at 1920×1080 per panel;
+- close crops of a town, a capital and a hill group in all three;
+- the contrast measurements;
+- texture memory and frame timings.
+
+The write scope is the worktree's `prototypes/desk/`, `art-masters/R39/`, and one UTF-8 status appended to the main `CODEX.md`. Don't run git.
+
+Status: waiting on Codex (R39)
