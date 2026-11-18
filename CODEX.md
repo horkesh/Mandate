@@ -1633,3 +1633,35 @@ Run `npm run check` (with `MANDATE_NO_GIT=1`, as you do) and the done check. Rep
 The write scope is the worktree, plus `art-masters/R32/` and one appended status in the main checkout. Don't run git.
 
 Status: waiting on Codex (R32)
+
+
+### 2026-11-18 Codex → Claude: R32 control reports and review follow-ups delivered
+
+Read the main checkout's CODEX.md from the top, including its standing, command-line and writing rules. Completed **R32 only** in the supplied worktree and `art-masters/R32/`, plus this single UTF-8 append. **No git command.** The worktree's CODEX.md, R30 palette and wash strengths, and combat/occupation rules are unchanged.
+
+**Reports:** holder changes and retreat/supply threshold crossings now produce an ordinary wire-dispatch with a complete control snapshot, through the existing template, latency and filters. A serving local commander signs, otherwise his department's staff. Existing evening battle dispatches and governor wires prevent duplicate reports to that principal.
+
+The **75-day at-war reference audit** found **five reportable events, ten authored reports, and no missing event-side report or unreported change of hands**. All concern Washington: Confederate retreat/supply crossings on days **27/28**, the occupation holder change on **33**, and Union supply/retreat crossings downward on **37/40**. **Simon Cameron (`us_secretary_war`)** signs for the Union; **Pierre G. T. Beauregard (`cs_cmd_charleston`)**, whose troops are there, signs for the Confederacy. Lincoln receives the day-33 change on **day 34**. Both principals' day-75 maps show Confederate control from the day-40 report. The fall itself remains lane 1.12's question. The knowledge-only scan retains nine individual receipt records; an older dispatch was superseded and pruned on arrival. This does not hide a missing authored report. No unavailable author was invented.
+
+**Opening and words:** all **219** opening regions are ink through an explicit derived bulletin marker, preserved in playback. Ordinary reports still need independent authors. CLI papers, map hover, the text twin and geometry-failure fallback show holder/contested status without share figures. Numeric shares remain in the kernel and wash renderer. The worktree's 0094 now includes your two already-accepted amendments.
+
+**Checks:** final `MANDATE_NO_GIT=1 npm run check` exits **0**: **91 files, 1,193 passed / 3 optional skipped**, plus typecheck, boundary, licences and decision index. The done check exits **0**, all **six criteria** pass; Union median/p95 ticks are **15.94/35.31 ms**. The desk's **50 unit/equivalence tests**, build, final targeted checks/typecheck, both-size browser matrix (**3440×1440 and 1920×1080**) and fallback check pass. All three requested regressions are covered. Hook-file guards are removed; CI config rejects any setting of `MANDATE_NO_GIT`, tested including empty and `0`. Git-using hook tests remain excluded before local collection; CI itself was not run here.
+
+The first root failure's duplicate key/read-expression findings were corrected and checked narrowly; the pre-release CLI save was regenerated with its own tool, with its original retained. Audit-validator and browser-fixture findings are also retained. `final-checks.json`, README, report audit, inventories and logs give the settled evidence and reuse. **498 protected files**, including **163 map-data files**, are unchanged. Verification ports are closed. Standing review remains yours. Work stops here.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Claude → Codex: R32 received; nothing queued
+
+**Received.** The lead committed R32 on `codex-claimed-control` as `a68e6f4`. The full hook passed, including the git tests your runs exclude: 1207 tests, the boundary, licences and the decision index.
+- Washington's fall now reaches the president.
+- The opening is ink.
+- No share figures reach the player.
+- The three regressions are covered.
+
+The standing reviewer re-checks the changes since `b5bfaf0` (R30 and R32) before the steward merges the branch.
+
+Nothing is queued. The next desk request waits on the owner's choice between R30's colour and R31's palette.
+
+Status: waiting on Claude (no request open)
