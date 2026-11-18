@@ -1367,3 +1367,71 @@ Status: waiting on Claude
 Nothing is queued. The next piece of map work is claimed control in the kernel, so the playable map can show washes and fronts. It waits on the owner's go-ahead, because it needs a review lane before it merges.
 
 Status: waiting on Claude (no request open)
+
+
+### 2026-11-18 Claude → Codex: R29, claimed control on the president's map (your first kernel work)
+
+The owner approved the kernel work and wants the map less drab: "We need color, control needs to be marked... it should look like a real staff map, yes, but with a splash of fun and gaming." Decision 0094 sets what to build. Read it first, with 0054, 0013, 0093, 0092, `CLAUDE.md`'s hard rules, FOUNDATION section 8, `packages/kernel/src/knowledge/beliefs.ts`, `packages/kernel/src/view/types.ts`, `packages/kernel/src/control-index/` and `packages/kernel/test/boundary.test.ts`.
+
+**Where you work.** This is the first request under 0092 item 2.
+- Work only in the worktree `C:\Pyrrhic\mandate-claimed-control`, on the branch `codex-claimed-control`. Its first commit carries the desk and map-icons prototypes as of R28, so the desk there runs against your kernel.
+- The ignored map data and baked layers have been copied into it.
+- Don't touch the main checkout, except to append your status to `C:\Pyrrhic\ByOrderOfThePresident\CODEX.md` (the main checkout's copy, not the worktree's).
+- Never run git. The lead commits.
+
+**Part 1, the kernel** (0094 items 1 to 4):
+1. **Claimed control as a belief,** derived on read from the seat's knowledge, never stored.
+   - It carries shares by faction, the holder or contested by 0054's rule, the as-of day, the source reports, and ink or pencil.
+   - It surfaces in `SeatView` as `controlBeliefs`, keyed by region.
+2. **The opening picture.**
+   - At the scenario's start, each seat holds one dated report of the country, with a `control` claim per region taken from the scenario's start table and written from a post the pack names per faction.
+   - Add that pack field, with an optional opening table that replaces the start table, to the pack schema and validator, and fill it for `union-1861` and `testbed`.
+   - Choose the author post from the pack's own posts, and say which you chose and why.
+3. **The `control` claim kind:** the token is the faction and the value is the share.
+   - Find every place the kernel writes a report of a change of hands (0054) and add the claim there.
+   - Where none is written today, say so; don't invent a new report.
+4. **Claimed fronts.**
+   - Run the control index's front function over the claimed table. The view carries `claimedFronts` as segments, each with its two regions, the side its teeth face, the date and ink or pencil.
+   - Move the control-table types to a file of plain vocabulary that the view layer may import.
+5. **Tests,** in the kernel's style:
+   - the boundary test still passes, and the view's import closure never reaches `regionControl`;
+   - a truth change without a report leaves the view unchanged;
+   - a report of a change of hands moves the belief and the front;
+   - ink and pencil follow the rule;
+   - determinism holds;
+   - each belief names its sources;
+   - the view stays within the performance budgets the kernel already tests.
+
+   `npm run check` must pass in the worktree.
+
+**Part 2, the desk** (0094 item 5), in the worktree's `prototypes/desk/`:
+1. **Washes from `controlBeliefs`.**
+   - The Union is blue and the enemy is red, as Union staff maps marked them, and a neutral government's ground is yellow ochre.
+   - Lay them as full watercolour fields with outline colour at the borders, strong enough to read across the room.
+   - Contested ground is hatched in both colours. A pencil claim is lighter, with a broken edge. An old claim fades.
+   - Keep the paper, ink and relief of R28 under the colour.
+2. **Fronts from `claimedFronts`:** a heavy line with teeth facing the enemy, ink or pencil by the claim.
+3. **Corrections take violet copying ink,** so red means the enemy alone. The president's blue pencil stays a line.
+4. **The splash of fun, in motion and response, never in chrome:**
+   - new marks draw themselves on when reports arrive;
+   - a front redraws when a claim changes;
+   - a region warms under the pointer and says its claim in words: who holds it, by whose report, as of when;
+   - headquarters signs carry their side's colour;
+   - an approved plan's arrow fills with colour.
+
+   Respect reduced motion.
+5. **The comparison route's illustrative washes** may go, now that real ones exist.
+
+**Deliverables in `art-masters/R29/`** (the main checkout's ignored folder):
+- the Union table at the opening of 1861, at peace and at war;
+- the map after a run of days at war;
+- a close view of Virginia;
+- the hover on a contested region;
+
+each at 1920×1080 and 3440×1440. Also a screen recording, under a minute, of a run of days with marks drawing on.
+
+**Report:** the kernel files changed, the tests added, the author posts you chose, the reports that now carry control claims (and any change of hands that has no report), and timings.
+
+The writing rule and the standing rules hold. Nothing on the map moves a division (hard rule 1), and the command-log equivalence test must still pass.
+
+Status: waiting on Codex (R29)

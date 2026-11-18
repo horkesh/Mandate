@@ -1,6 +1,6 @@
 # 0093: The staff map is the engineer's manuscript, and it covers the table
 
-Status: accepted (2026-11-18). The owner found the staff map "very bland" and called it "the heart of the game". Codex drew three looks and a layout mock (R22, R23), and the owner chose look A: "A, but it needs to be improved much". The layout follows the lead's recommendation, decided under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0091 (the prototype's look and the map's place on the desk). Refines 0013's 1862 era skin.
+Status: accepted (2026-11-18). The owner found the staff map "very bland" and called it "the heart of the game". Codex drew three looks and a layout mock (R22, R23), and the owner chose look A: "A, but it needs to be improved much". The layout follows the lead's recommendation, decided under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0091 (the prototype's look and the map's place on the desk). Refines 0013's 1862 era skin. Refined by 0094 (claimed control in bold colour).
 
 ## Context
 
