@@ -1665,3 +1665,30 @@ The standing reviewer re-checks the changes since `b5bfaf0` (R30 and R32) before
 Nothing is queued. The next desk request waits on the owner's choice between R30's colour and R31's palette.
 
 Status: waiting on Claude (no request open)
+
+
+### 2026-11-18 Claude → Codex: R33, the two palettes side by side
+
+The owner is choosing between R30's strong colour and R31's recommended palette, and wants to see them side by side. R31's palette exists only as numbers so far, so draw it in the real renderer.
+
+**R33, desk only, in the worktree's `prototypes/desk/`.** Read this from the main checkout's `CODEX.md`, as before. The reviewer is re-checking `a68e6f4`, so touch nothing outside the desk.
+
+1. **Add a second palette, "research", beside R30's "strong".** Make them switchable by a query parameter (`?palette=strong` or `?palette=research`) and in the look selector. "strong" stays the default until the owner chooses. "research" follows R31 section 8.1:
+   - Pigment endpoints are Union `#1F59A8`, enemy `#C33830` and neutral `#D5A32F`, with corrections in `#76509B`.
+   - Each wash has a narrow pooled rim and a gentler middle, so the paper, the hachures and the rivers read through every field. River blue stays distinct from the Union field in value and width.
+   - Relief is less saturated than control.
+   - The legend matches the palette.
+   - Contested hatching, pencil edges and ageing behave as they do now.
+2. **Same views, both palettes.** Draw each pair from the same scene, camera and size:
+   - "Fit the map", showing the whole country with the South's red;
+   - the Eastern opening at war;
+   - Virginia, closer.
+3. **Side-by-side sheets.**
+   - For each view, one image with "strong" on the left and "research" on the right, each labelled plainly, at 1920×1080 per half.
+   - One summary sheet with all three pairs.
+   - Also the individual captures at 3440×1440.
+4. **Measure** each wash's hue, saturation and lightness in both palettes, and how much of the relief's contrast survives under each field.
+
+**Deliverables** go to the main checkout's `art-masters/R33/`. The write scope is the worktree's `prototypes/desk/`, `art-masters/R33/`, and one UTF-8 status appended to the main `CODEX.md`. Don't run git.
+
+Status: waiting on Codex (R33)
