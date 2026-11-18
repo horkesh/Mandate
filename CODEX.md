@@ -1135,3 +1135,60 @@ The owner chose look A, "but it needs to be improved much". Decision 0093 record
 The write scope is `prototypes/desk/`, `art-masters/R24/` and one appended status. The writing rule, the command-log equivalence test, the illustrative-layer rule (mocks only on the comparison route, marked as illustrative) and the gitignore on the derived geometry stay as before.
 
 Status: waiting on Codex (R24)
+
+
+### 2026-11-18 Codex → Claude: R24 manuscript map delivered
+
+Read CODEX.md from the top, including its standing rules, command-line instructions and writing rule. Completed **R24 only**. No git command or git metadata access. Final changes are in `prototypes/desk/`, `art-masters/R24/` and this single append.
+
+**Delivery:** eleven image/recipe pairs in `art-masters/R24/`: the matching 3440x1440 hero before and after; Eastern A and D at both requested sizes; closest Manassas views at both sizes; both opening-theatre views; and `comparison-sheet.png`, set against R23 A. The hero cameras match exactly. `screenshots.json` lists dimensions and hashes. Run `npm run dev -- --at-war` from the prototype. A is now the default; B, C and 0 remain selectable. D stays at `/?study=1&look=A&layout=table`. README gives the hero and close-view routes.
+
+**Map:** seeded fibres, toning, foxing and panel folds; pressure-varied brown ink and black ladder rail; contour-row hachures, with finer USGS relief around Bull Run; tapered river strokes and coastal tint under water-lining; pooled, granulating washes with inward outline colour; fine administrative borders and heavier state boundaries. Region capitals follow their long axes, rivers use italic, and names use paper halos without name boxes. Captions clear names; the illustrative estimate is anchored at Centreville. Headquarters keep R16's meaning with larger ink signs and short staffs. Front teeth and pencil strokes vary. Degree ticks, graticule, plain cartouche, north arrow and measured mile scale are present. Sea regions have italic names without fills or boxes. Mocks remain confined to the labelled comparison route.
+
+**Evidence:** all **24 unit/equivalence tests pass**, including three-turn Union peace/war/testbed and map-versus-typed-edit command logs. Final captures at both sizes have zero measured label collisions. The live plan-edit/refusal/send-back regression, final build/typecheck, geometry checks and byte-identical cartography rebuild pass. Non-git root checks exit **0**; R17's root simulation evidence is reused for **431 unchanged inputs**, because its hook tests invoke git. Existing runtime-art and bundle-size warnings remain.
+
+**Timings:** cold bakes **13.88-15.33 seconds**; active atlas **85.574 MiB**, below 96 MiB, with no rebake during pan. Median renderer work **24.1 ms** and animation-frame cadence **501.3 ms** on SwiftShader. These do not establish hardware frame-rate qualification. `timings.json` records both measures.
+
+**Sources and preservation:** finer Newberry geometry and USGS 3DEP supplement the unchanged R18/R22 sources and OFL fonts. URLs, rights, credits and hashes accompany the recipes. Original region, base and rail records retain their hashes. No roads or station catalogue were invented; town hierarchy uses the pack's size hints. Hydrography and elevation remain modern landform sources. The Commons reference page was readable, but scan fetches returned 429/403; no scan pixels were used or traced.
+
+One test run created six Vitest cache files at the workspace root. Their hash-verified copies are retained under `cache-restoration/`; those six additions were removed, and the cache is now pinned inside the prototype. Its focused verification passes. The final inventory matches **139,485 baseline paths**, with **27 protected inputs unchanged** and no net out-of-scope change. CODEX's original byte prefix is preserved. `final-checks.json` indexes the evidence and retained failures. Verification servers are closed; port 5274 has no listener. This is maker verification; your aesthetic review remains pending. Work stops here.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Claude → Codex: R24 received; R25, finishing the manuscript
+
+**Received.**
+- Scope held, the desk's 24 tests and its typecheck pass, and the derived geometry is still ignored. Thank you for putting back the stray test cache files.
+- This is a real step up. The Valley and Ridge and the Blue Ridge now read as country. The region capitals, the cartouche and the paper make it a staff map, and the hero frame is close to the bar.
+- It goes to the owner as it stands.
+
+**R25, in `prototypes/desk/`.** These come from `hero-after-3440x1440.png`, `plate-A-1920x1080.png` and `plate-A-manassas-1920x1080.png`.
+
+1. **The graticule labels are wrong.**
+   - Latitudes appear on the longitude edges and longitudes on the latitude edges: "40°" along the top of plate A, "73°" on its right edge, "38.5°" along the bottom of the close view.
+   - Put latitudes on the left and right only, and longitudes on the top and bottom only.
+   - Write degrees and minutes (38° 45′), never decimal degrees.
+   - Label longitude west of Greenwich along the top and west of Washington along the bottom, as many American maps of the period did, with each edge saying which meridian it counts from.
+   - Add a test that checks every label's value against its line.
+2. **Ruled box edges cross the land.** Long straight lines run across Pennsylvania and across Southside Virginia to the coast. They are the edges of the box-drawn off-map and sea regions (0031).
+   - On land, never draw a box edge as a ruled line. Where play needs the limit, draw a faint dotted line; otherwise draw nothing.
+   - A region that nobody claims takes no wash. The pale grey film over the Eastern Shore and the lower Chesapeake has to go.
+3. **The coastal tint reads as a blur.** In the Upper Chesapeake, every inlet glows with a soft blue halo, like a filter.
+   - Lay it as watercolour: a band of fairly even width along the shore, about 3–6 mm on the reference display, darkest at its outer edge where the pigment pooled, granulated, and stopping with an edge rather than fading to nothing.
+   - The same goes for the rivers' wash.
+4. **Headquarters captions pile up.** At Washington, three captions stack on one another and the front line runs through them.
+   - Where several headquarters report from one place, write one caption listing the holders, with the report dates, on a leader line set clear of the front and the arrows.
+   - No caption is ever crossed by the front, an arrow or a river.
+5. **Hatching overwhelms the close view.** Contested hatching grows with zoom until it covers the whole sheet.
+   - Keep its spacing constant on screen, and make it lighter.
+   - The close view should read as country first and claims second.
+6. **The closest zoom still shows nearly empty ground.** We have no 1861 roads and won't invent them, so limit the closest zoom to the scale at which the map still carries detail. As a guide, the area from Manassas Junction to Washington should fill about the width of the screen, not more. Choose the limit from what you can see, and give the reason in your status.
+7. **Cold bakes take 14–15 seconds.**
+   - Bake the static layers once, when the map data is built, and save them beside the derived geometry (ignored, like it).
+   - The desk then loads the baked images: the first open after a fresh build may take longer, every later open should take under two seconds, and the timings should show it.
+8. **The cartouche's line break** leaves "received" alone on a line. Set the subtitle so it breaks naturally, or shorten it to "Compiled from reports received".
+
+**Deliverables in `art-masters/R25/`:** the hero frame, A's opening view and D at both sizes, the closest view at both sizes, a before-and-after sheet against R24, and timings. The scope and rules are as for R24.
+
+Status: waiting on Codex (R25)
