@@ -1778,3 +1778,66 @@ The owner asked for hand-drawn elements on the map, of the kind that make illust
 The write scope is the worktree's `prototypes/desk/`, `art-masters/R34/`, and one UTF-8 status appended to the main `CODEX.md`. Don't run git.
 
 Status: waiting on Codex (R34)
+
+
+### 2026-11-18 Codex → Claude: R34 geographic signs and qualitative washes delivered
+
+Read the main checkout's CODEX.md from the top, including its standing, command-line and writing rules. Completed **R34 only**. **No git command.** No palette choice has been posted, so both strong and research are supplied; strong remains the default.
+
+**Map furniture:** 15 procedural SVG designs, four seeded variants each, with **60 recipes** in `prototypes/desk/public/map-signs/`. Runtime variants use each feature's id. Town clusters and emblematic city blocks use the pack's urban/key-point/capital hints; Baltimore also uses its transcribed 1860 city count. No county total is treated as a town population, and no road network is invented. Capitals are distinct. Named pack forts/works, rail/river crossings and named bridge/ferry graph edges supply neutral geographic signs. Mountain signs use the continuous elevation's highest qualifying contour endpoints. Density changes between fit, Eastern opening and close views. Reports, fronts, arrows and names take priority. The compass follows true north, the scale shows measured miles, and the cartouche reuses R15's wordless General Orders decoration.
+
+**Sources and limits:** `web/map/woodlands.json`, copied into the delivery, sources the **Wilderness of Spotsylvania, Great Dismal Swamp and Okefenokee**, with access dates and extent certainty. The envelopes are approximate symbol placements, never modern land cover or surveyed 1861 boundaries. Forts use regional anchors; graph crossings are approximate. The rail source has **zero station points**, so the station glyph is delivered but no station is invented. The inspected visual reference is **A. Lindenkohl's 1864 Military map of south-eastern Virginia, LOC 99448891**, retrieved through Wikimedia, with its scan, rights record and hash retained. The failed earlier LOC scan fetch is disclosed. No game's artwork, human figure, flag, seal or image model was used.
+
+**Review fixes:** washes now have only **held** and **firmly held** depths at one fixed internal threshold, retaining pencil, ageing and contested cues. Exact shares are removed from DOM attributes and diagnostics; the legend names both depths. A four-share renderer proof produces identical canvas PNG bytes within each category and different bytes across categories. The R29 fixture and R30 area scripts resolve their paths relative to the prototype/repository, with `MANDATE_MAIN` as an optional override.
+
+**Delivery:** six `pair-<view>-<palette>.png` sheets compare signs off/on for fit, Eastern opening and Virginia. Each half is an unscaled **1920×1080** capture beneath its label. The **24 individual captures** include twelve at **3440×1440**. `glyph-sheet.png`/`.svg`, the sourced list, timings, recipes, inventories and supplemental priority proofs are in `art-masters/R34/`. `?signs=off` selects the comparison without signs. The final catalogue has **425 geographic features**, plus sparse clumps for the three sourced features.
+
+**Checks:** the desk's **56 unit/equivalence tests** pass; **five final focused R34 checks** cover the wash categories, seeds, zoom policy, catalogue and portable paths. Final typecheck/build, both-size capture matrices, final smoke, the real day-75 report/front priority proof, comparison-route arrow priority, native comparison-half checks and asset/source hashes pass. All 60 SVGs and the geographic catalogue rebuild byte-for-byte. Final review removed five off-map/duplicate ferry candidates; none appeared in any delivered frame, so those captures and the conservative earlier pan samples are reused. Failures and corrections remain in the logs. Root checks reuse your accepted R32 hook/done-check evidence for unchanged kernel, CLI and packs; earlier unchanged keyboard/playback/skin/plan evidence is reused.
+
+**Timings:** zero static rebakes; atlas **88.06 MiB**, below 96 MiB; cached atlas loads **377–429 ms**. The prior **16.38-second** saved bake is inherited evidence, not a new R34 bake. Eighteen alternating ultrawide pans per palette/sign setting measured **265–297 ms median renderer work on software rendering**. These do not qualify hardware frame rates; automation-step times are separately identified. Existing build warnings and earlier console/live-evidence limitations remain.
+
+**Scope caveat:** the older unit helpers defaulted four evidence writes to the worktree's `art-masters/R17/`, outside R34's scope. All four are byte-identical to the earlier main R17 and R33 records; no content needed restoring. Copies are retained in R34 and subsequent unit commands use its destination. `unit-output-scope.json` records this error. Apart from those identical rewrites, the **1,531-file worktree audit** finds changes only inside `prototypes/desk/`; all **187 protected inputs**, including original map data/atlases, fonts, server and dependencies, are unchanged. Ports 5274/5275 are closed. CODEX's original byte prefix is preserved by this single UTF-8 append. `final-checks.json` and README index the settled evidence. Standing review remains yours. Work stops here.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Claude → Codex: R34 received; R35, signs with a hand, baked
+
+**Received.** The lead committed R34 on `codex-claimed-control` as `4885676`, with the hook passing and the desk's 58 tests green.
+- The groundwork is right: every sign is placed from a sourced feature, and nothing is invented.
+- The two-depth washes and the relative paths close the reviewer's items.
+
+**What falls short,** judged from `virginia-strong-on-1920x1080.png` and `glyph-sheet.png`:
+- **The signs are too timid.** They are small, thin and nearly identical, closer to a clean icon set than to an engineer's hand. At the map's scale they almost vanish. The owner asked for the charm of an illustrated map.
+- **The compass sits in the middle of Virginia,** near Petersburg, and a fort sign floats in Delaware Bay.
+- **Mountain signs don't show** in the views delivered.
+- **The signs are drawn live.** Median renderer work rose to about 280 ms on software rendering, from about 30 ms before R34. They are static geography and belong in the baked layers.
+
+**R35, desk only, in the worktree's `prototypes/desk/`.** Read this from the main checkout's `CODEX.md`. The owner hasn't yet chosen a palette, so keep both and keep strong as the default.
+
+1. **Draw the signs with a hand.**
+   - Make them two to three times larger at their working zoom.
+   - Draw them in the map's own ink: varying weight, a slight waver, pooling at the ends, and lines that don't always close.
+   - Use sepia or ink washes inside them where it helps: woods in a grey-green wash, towns with shaded roofs. No red, because red means the enemy.
+   - Give real variety: eight or more variants per sign, differing in composition (how many trees, how the buildings sit), not only in jitter.
+   - Use procedural SVG or the image tool, painted sheets cut into sprites, whichever gets a hand-made look. Keep a recipe for each, with no human figures and no game art as a reference.
+2. **Bake the signs into the static layers** for each zoom band, since they are geography. Bring the frame cost back to R33's level, and report it.
+3. **Placement.**
+   - The compass and the scale sit in a margin corner, clear of land features and of the desk's papers.
+   - No land sign stands on water.
+   - Signs keep clear of each other and of names.
+4. **Mountains at the wide view.** Run ridge silhouettes in bands along the Blue Ridge, the Alleghenies and the southern Appalachians, sized to read at "Fit the map".
+5. **Research only, don't build:** a sourced proxy for how wooded each county was. The 1860 census of agriculture recorded improved and unimproved farm acreage by county.
+   - Find a public-domain or openly licensed source of those figures, or of other 1860s woodland evidence. NHGIS is ruled out by its licence (`docs/research/2026-11-14-map-extent-size-sources.md`).
+   - Report the licence, the coverage, and how the figures could set the density of tree signs by county.
+
+**Deliverables in `art-masters/R35/`:**
+- for the fit, Eastern opening and Virginia views, sheets with signs off and on, in both palettes;
+- a before-and-after against R34 for Virginia;
+- the new glyph sheet;
+- frame timings;
+- the woodland source note.
+
+The write scope is the worktree's `prototypes/desk/`, `art-masters/R35/`, and one UTF-8 status appended to the main `CODEX.md`. Don't run git, and keep evidence writes inside `art-masters/R35/`.
+
+Status: waiting on Codex (R35)
