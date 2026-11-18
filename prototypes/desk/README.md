@@ -660,3 +660,256 @@ A bounded warm-open follow-up passes the existing two-second target: repeated
 opens take 1.64–1.80 seconds at 3440×1440 and 1.40–1.54 seconds at 1920×1080.
 The 2.20-second initial warm-check open and the capture run's 2.03/2.04-second
 later ultrawide samples remain recorded. No performance code was tuned.
+
+
+## R33 palette comparison
+
+From this folder, run `npm run dev -- --at-war`. Open
+`http://127.0.0.1:5274/?palette=strong` or `/?palette=research`. Research is the default under R38. Strong remains available for comparison. The Map look selector groups each existing look under strong or
+research; `Manuscript (research)` selects the new pigments. V still cycles the
+map look while keeping the selected palette. Presentation choices send no game
+command.
+
+Research uses Union `#1F59A8`, enemy `#C33830`, neutral `#D5A32F` and correction
+`#76509B`. Its middle density is 66% of strong's; pooled rim widths are 6, 2.5
+and 1.2 screen pixels, compared with strong's 9, 4 and 1.4. Rim pressure,
+contested hatch spacing/opacity, broken pencil edges and age factors retain
+their existing behavior. Paper, relief, river blue/width and atlas are shared.
+The legend, headquarters, claimed fronts, approved arrows and correction ink
+follow the chosen palette.
+
+`art-masters/R33/` in the main checkout contains the three paired sheets,
+`summary-three-pairs.png`, twelve individual captures and measurements. Each
+comparison half is an unscaled 1920×1080 capture under a 64-pixel label row. The
+summary stacks all three full-size pairs. The separate ultrawide captures are
+3440×1440. All use the same saved real R32 at-war opening and matched cameras.
+
+| Wash | Strong H / S / L | Research H / S / L | Relief contrast, strong / research |
+|---|---|---|---|
+| Union | 220.9° / 49.3% / 55.1% | 206.7° / 13.4% / 60.6% | 33.9% / 56.2% |
+| Enemy | 359.0° / 60.6% / 60.2% | 15.8° / 51.4% / 63.7% | 33.0% / 56.9% |
+| Neutral | 44.5° / 85.3% / 65.3% | 41.5° / 62.7% / 67.5% | 32.9% / 56.0% |
+
+These are native sRGB composite measurements, not just endpoint swatches.
+Relief contrast is measured against matched no-wash references at source
+hachures that remain visible as dark local marks, excluding rail/river
+corridors, labels and furniture. The full method, masks and pixel counts are
+in `pigment-and-relief-measurements.json`. Research's blue composites to a quiet
+slate-blue on the warm paper; the owner still chooses the palette.
+
+Verification: 53 unit/equivalence tests, the desk build, final typecheck, paired
+browser matrix, palette switching without commands, default and visible selector
+text, and no-wash references pass. Strong's map raster matches the pre-change
+reference outside changed toolbar furniture/shadows. The 189 protected inputs
+are unchanged, with zero static bakes and the existing 88.06 MiB atlas.
+
+Run `npx playwright test --config playwright.r33.config.ts --grep 'smoke|matrix|reference|final selector'`
+for the browser checks. The baseline test is separately opt-in with
+`R33_BASELINE=1`; keep its original pre-change evidence. R32's accepted root
+checks and unchanged playback/keyboard/skin/plan evidence are reused. No root
+simulation campaign or map bake ran for R33. Existing build warnings and the
+console send-back notes limitation remain.
+
+## R34 geographic signs
+
+R41 / decision 0095 leaves pictorial geography off by default. The retained
+experiment is available only through the exact `?signs=on` URL parameter;
+the look selector has no sign option. Geographic drawings in that experiment
+sit below the live control washes.
+Both `?palette=strong` and `?palette=research` remain available, with research the
+default under R38. `public/map-signs/` contains 15 SVG designs,
+four seeded variants each, and their recipes. Runtime variants use the feature
+id as their seed and the same point strokes as the exported SVGs.
+
+At theatre fit, capitals, elevation-derived mountain signs and large named
+wetlands remain. The Eastern opening adds city blocks, towns, named forts and
+crossings. The close view adds smaller places and any supplied station points.
+Reports, fronts, arrows, papers and names have priority over these signs.
+The compass follows true north; the decorated scale uses the measured mileage.
+The cartouche reuses R15's wordless General Orders rulework.
+
+`web/map/furniture-data.json` contains 425 pack/rail/elevation display features.
+`web/map/woodlands.json` names the Wilderness of Spotsylvania, Great Dismal
+Swamp and Okefenokee, with sources, dates and extent certainty. Both files
+explicitly belong in the pack later. No modern land-cover map is used.
+The forest and marsh clumps are symbols inside approximate placement envelopes,
+not surveyed 1861 boundaries. Forts use their pack region anchors rather than
+invented footprints. Crossings use actual 1861 rail/river intersections or
+one approximate intersection for an on-map graph edge whose note names a
+bridge or ferry. Off-map graph chords are excluded. Mountain anchors select
+the highest qualifying elevation-contour endpoints in geographic cells; they
+are an overview treatment, not surveyed ridge polygons.
+
+Town classes use the pack's urban, capital and key-point hints; Baltimore also
+uses its separately transcribed 1860 city count. County aggregates are never
+treated as town populations. City blocks are emblematic street plans, not a
+new road network. There are **zero station points** in the current rail layer;
+the station glyph is supplied but no station location is invented.
+
+Control uses only held and firmly held depths, separated at a fixed internal
+800-permille threshold, with the existing ink/pencil, age and contested cues.
+Exact shares are absent from DOM attributes and diagnostics. The legend names
+both depths. The kernel's data and the console's commands are unchanged.
+The R29 fixture and R30 area scripts now resolve paths from their own files;
+`MANDATE_MAIN` optionally selects a different main checkout.
+
+Rebuild geography with `python scripts/r34-geography.py`, and the SVG library
+with `npx tsx scripts/r34-assets.ts`. They use the existing local geometry tools
+and source data. Run `npx vitest run test/r34.test.ts` for focused checks and
+`npx playwright test --config playwright.r34.config.ts` for the browser proofs.
+For the full unit suite in this worktree, set
+`DESK_EVIDENCE_REQUEST=../../ByOrderOfThePresident/art-masters/R34` first, so the
+older equivalence tests put their evidence in the current request's folder.
+
+The main checkout's `art-masters/R34/` holds six native 1920×1080 comparison
+pairs, twelve individual 3440×1440 captures, the glyph sheet, sourced list,
+recipes and logs. The four-case ultrawide pan sample records 265–297 ms median
+renderer work on software rendering; it does not qualify a hardware frame-rate
+target. It records zero static rebakes and the unchanged 88.06 MiB atlas.
+The saved atlas's earlier 16.38-second bake is inherited evidence, not a new
+R34 bake. Existing build warnings and earlier console/live-evidence limits
+remain as described above.
+## R35 geographic sprite layers
+
+The manuscript signs use eight seeded compositions per kind, with shaded roofs,
+transparent brown foliage and varied pen strokes after R38. `npm run dev -- --at-war` opens
+the research palette; `?palette=strong` selects the comparison palette and
+`?signs=on` enables the retained experiment; the default is the straight map.
+
+`python scripts/r35-geography.py` derives the new ridge catalogue from the R28
+continuous elevation and the existing R34 features. `npx tsx scripts/r35-assets.ts`
+writes the SVG/recipe set and review sheet. `npx tsx scripts/bake-furniture.ts`
+now rasterizes the signs into an ignored 6.80 MiB shared texture and builds wide,
+theatre and close placement layers. The dev launcher checks this bake. The base
+atlas is unchanged; after R40, combined static textures use 94.86 MiB. The old geometry,
+Atack rail sources and absence of station points retain their earlier limits.
+
+Placement rejects water footprints and collisions; coastal building emblems may
+sit on the landward side of their unchanged source anchor. Fort Delaware's
+regional anchor has no safe land footprint, so its geographic sign is omitted.
+Bridge and ferry signs intentionally cross water. Mountain chains interleave so
+the Blue Ridge, Alleghenies and southern Appalachians all appear at fit zoom.
+Runtime draws cached sprites and hides whole signs when reports, arrows or
+papers take priority. Names yield without changing a reported position.
+
+Unchanged live control meshes survive small pans inside a guard band. A received
+view/day/faction, palette, contrast, zoom, animation or guard-band exit rebuilds
+them. This cache never puts beliefs into the static geographic bake. Geographic
+graticule intersections are shared between the SVG and diagnostics for an
+identical camera. Cold wash rebuilds still cost more than steady panning.
+
+`npx playwright test --config playwright.r35.config.ts` writes evidence only to
+the main checkout's `art-masters/R35/`. Its retained real R32 fixtures cover the
+two-size/palette matrix, collisions, live front/report priority, mesh cache
+invalidation and bounded pan timing. For unit/equivalence evidence, set
+`DESK_EVIDENCE_REQUEST=../../ByOrderOfThePresident/art-masters/R35` before
+`npm test`, so older helpers do not write to R17. The R35 delivery README records
+the final checks, timing reuse and the research-only woodland source note.
+
+
+
+## R38 manuscript material
+
+Research is the default palette. `?palette=strong` remains a comparison choice.
+The unchanged R36 designs use fine manuscript-brown strokes, translucent brown
+roof/crown washes and transparent interiors. Source-map noise modulates the ink
+in the offline bake. Capitals retain their ring geometry and rank hierarchy;
+non-geographic ornaments retain their prior output.
+
+`npx tsx scripts/r38-assets.ts` refreshes 96 geographic SVGs and recipes, checking
+every path/circle coordinate against the prior source. The sign bake packs 288
+geographic subtiles into a 1280 by 1152 image with three placement bands. They
+share the base world's transform below live claimed washes, then operational
+arrows and labels. Texture upload explicitly premultiplies alpha. Retaining
+subtiles rather than flattening whole maps preserves R36's date-dependent
+capital scale, report avoidance and name suppression without a runtime bake.
+Reports, authors, claims and fronts never enter the static bake.
+
+Water names stay at their own anchors instead of using land-label offsets.
+Delaware Bay's name uses two lines along the bay at its existing point. Town
+names retain priority; anchored water names precede general region captions.
+Diagnostics expose water-label sources, bounds and collision classes.
+`npx tsx scripts/r38-water-proof.ts` audits delivered water names against their
+own source water points or named river lines.
+
+Evidence is in the main checkout's `art-masters/R38/`: native R36/R38 fit and
+Virginia comparisons, ultrawide captures, town/capital/hill crops, memory and
+timings, and a renderer wash attenuation proof. Selected captures retain R36's
+real snapshot and cameras. A separate diagnostic probe removes claims from
+copied fixtures, identified in their recipes. `playwright.r38.config.ts` writes
+there; set `R38_RUN` to a fresh artifact directory for each correction run.
+Use the earlier `DESK_EVIDENCE_REQUEST` setting with R38 for unit evidence.
+The evidence README records checks, reused results and retained failures.
+This is maker verification.
+
+
+### R39 geographic legibility
+
+The baked signs retain R38's placement and composition below live claimed washes. Stronger brown strokes and roof/crown tone have bounded ink load (.62 wide/theatre, .65 close); capital outlines stay stronger than town outlines. Wide hill flanks use spaced original relief hachures within unchanged footprints. Research stays default.
+
+Main `art-masters/R39/README.md` indexes the native R36/R38/R39 comparison sheets, source/placement proofs, per-band and palette contrast measurements, texture inventory and software-rendering timings. The controlled current-ink target is sign contrast >= rails and < report/front/name references under the same wash; all 3,456 samples pass. Age fading and operational conflict priority remain unchanged.
+
+Verification: `npm test`, `npm run build`, `npx playwright test --config playwright.r39.config.ts` (outputs under main R39). `npx tsx scripts/r39-contrast.ts` runs the offline controlled proof; `R39_PROOF_BAND=close` limits it to the affected band. The retained delivery reuses passing wide/theatre proof conditions and signs-off captures. No git-using root suite was run.
+
+### R40 drawing definition
+
+R40 refines the drawings inside the original placement envelopes. Houses and
+tree crowns have separate outlines, pale roof/crown tone and thinner brown pen
+lines. The legacy paths still own placement bounds; changing the drawing does
+not move a town or its name. Capitals retain their rings and rank scale. Hill
+flanks retain R39's original relief-source segments.
+
+The offline bake rasterizes at 4× and downsamples to 2× subtiles. Alpha trimming
+and height-sorted packing produce a 1024 by 1741 atlas, including two transparent
+texels around each frame. Texture `orig`/`trim` and density compensation preserve
+the same world geometry. Premultiplied upload uses nearest minification, linear
+magnification and one mip. This avoids a second smoothing of narrow pen cores;
+no runtime bake or per-pan geographic path construction is added. R39's .62/.65
+peak ink loads, grain, washes, palettes and operational priority remain.
+
+`npx tsx scripts/r40-assets.ts` updates the 96 geographic SVGs and recipes.
+`npx tsx scripts/bake-furniture.ts` builds the atlas. The dev launcher checks it.
+`npx tsx scripts/r40-contrast.ts` runs the unchanged R39 contrast references with
+the shipped sampler, writing only to main `art-masters/R40/`. All 36 conditions
+and 3,456 sign samples meet the rail lower bound and report/front/name upper
+bound. `npx playwright test --config playwright.r40.config.ts` checks the native
+views, placements, sampler, operational priority and matched pan timings.
+Set `DESK_EVIDENCE_REQUEST=../../ByOrderOfThePresident/art-masters/R40` before
+`npm test` to direct equivalence evidence there.
+
+Main `art-masters/R40/README.md` indexes the R39/R40 comparisons, four native
+close crops and their 2× pixel-inspection enlargements, diagnosis, contrast proof,
+texture memory and software-renderer timings. Source geography, cameras, zoom
+bands and research default are unchanged. Maker verification remains separate
+from the lead's aesthetic acceptance.
+
+### R41 straight map
+
+The default Union map shows places by their names, with no pictorial towns,
+capitals, forts, crossings, hills, woods or marshes. The existing place catalogue
+supplies name-only zoom hints at the original geometry points. Nearby text
+positions clear rivers and operational marks; a compact search handles river
+confluences before the older wide label offsets. Report signs, fronts and arrows
+retain priority. Research remains the default palette, and the compass and
+measured scale remain on their margin card. Water anchors and baked static base
+layers are unchanged.
+
+The browser skips the sign manifest, image decoding and texture allocation while
+signs are off. SVGs, recipes, bake code and the ignored atlas remain available for
+`?signs=on`. Neither changing the map look nor an unrecognized `signs` value
+enables the experiment. The developer launcher still verifies the saved sign
+bake so the explicit opt-in works; it does not load that texture in the page.
+
+From this folder, run `npm run dev -- --at-war` and open
+`http://127.0.0.1:5274/`. `npx playwright test --config playwright.r41.config.ts`
+checks the default, exact opt-in, selector, names, six requested captures,
+operational priority and pan timings. For unit/equivalence evidence in the
+authorized main folder, set
+`DESK_EVIDENCE_REQUEST=../../ByOrderOfThePresident/art-masters/R41` before
+`npm test`; `npm run build` typechecks and packages the browser.
+
+Main `art-masters/R41/README.md` indexes the selected opening, fit and Virginia
+captures at 1920×1080 and 3440×1440, name-anchor audit, texture measurements,
+timings, package inventory, retained failures and reused evidence. The default
+static allocation is 88.06 MiB, with zero sign texture bytes. Rendering timings
+use ANGLE SwiftShader and do not establish hardware frame rates.

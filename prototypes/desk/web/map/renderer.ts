@@ -1,5 +1,5 @@
 import {mapProjection} from './projection.ts';
-import { Application, Container, Graphics, Sprite, Text, Texture } from 'pixi.js';
+import { Application, Container, Graphics, Rectangle, Sprite, Text, Texture } from 'pixi.js';
 import { geoAlbers, geoMercator, geoPath, geoDistance } from 'd3-geo';
 import type { GeoProjection } from 'd3-geo';
 import type { GeoPermissibleObjects } from 'd3-geo';
@@ -15,7 +15,16 @@ import { PALETTES } from './skins.ts';
 import {OPENING_FRAMES} from './framing.ts';
 import {labelPolicy,labelVisible} from './label-visibility.ts';
 import type { Look } from './skins.ts';
-import {controlColour,controlOpacity,sharedFront,contactMark,CONTROL_COLOURS} from './control.ts';
+import {controlColour,controlOpacity,controlStrength,sharedFront,contactMark} from './control.ts';
+import {furnitureScale,GLYPH_KINDS} from './furniture.ts';
+import {loadFurnitureAtlas} from './furniture-atlas.ts';
+import type {BakedSign,FurnitureManifest} from './furniture-atlas.ts';
+import {capitalRank,wideTown,placeNearAnchor,namePositions,boxDistance} from './furniture-placement.ts';
+import type {CapitalRank} from './furniture-placement.ts';
+import {placeNameHints} from './place-names.ts';
+
+import {CONTROL_PALETTES} from './control-palettes.ts';
+import type {ControlPalette} from './control-palettes.ts';
 
 type Box = [number, number, number, number];
 type Painted = { path: Path2D; bbox: Box; kind: string; rank: number };
@@ -41,6 +50,17 @@ export class StaffRenderer {
   private arrows = new Graphics();
   private washes = new Graphics();
   private labels = new Container();
+  private furniture = new Container();
+  private furnitureSprites:{sprite:Sprite;sign:BakedSign;band:string}[]=[];
+  private furnitureManifest:FurnitureManifest|null=null;
+  private furnitureBytes=0;
+  // R41 / 0095: retained experiment, reachable only by an explicit URL opt-in.
+  private signsEnabled = new URLSearchParams(window.location.search).get('signs')==='on';
+  private furnitureBoxes:Box[]=[];
+  private furnitureDrawn:{id:string;kind:string;box:Box;point:Point;anchor:Point;rank:CapitalRank;pointDistance:number;waterDistance:number;nameBox?:Box;nameDistance?:number;nameGap?:number}[]=[];
+  private furnitureHidden:{id:string;reason:string}[]=[];
+  private calendar='1861-03-06';
+  setCalendar(date:string){if(this.calendar!==date){this.calendar=date;this.invalidate();}}
   private geometry: MapGeometry;
   private regions: MapRegion[];
   private regionPaths = new Map<string, Painted>();
@@ -51,7 +71,7 @@ export class StaffRenderer {
   private claimChanges=new Map<string,number>();
   private frontPaths=new Map<string,Point[][]>();
   private controlCounts={regions:0,fronts:0,contacts:0,animating:0};
-  private controlPaint:{id:string;area:boolean;colour:number;alpha:number;strength:number}[]=[];
+  private controlPaint:{id:string;area:boolean;colour:number;alpha:number;strength:'held'|'firm'}[]=[];
   private pencil: PencilRoute[] = [];
   private reviewPost: string | null = null;
   private bounds: Box;
@@ -62,9 +82,17 @@ export class StaffRenderer {
   private onCamera: () => void;
   ready = false;
   look: Look = '0';
+  private palette:ControlPalette='research';
+  setPalette(palette:ControlPalette){if(this.palette===palette)return;this.palette=palette;this.invalidate();}
   private atlas?: BakedAtlas;
   private atlasSprites: {sprite:Sprite;minZoom:number}[]=[];
   private frameTimes:number[]=[];
+  private frameProfile:Record<string,number>={};
+  private controlRevision='';
+  private controlCacheKey='';
+  private controlCacheBounds:Box|null=null;
+  private controlRebuilds=0;
+  private tickCache:{key:string;ticks:ReturnType<typeof graticuleTicks>}|null=null;
   private startup:{created:number;constructorDone?:number;appReady?:number;atlasReady?:number;firstRender?:number;lastRender?:number;lastOverlay?:number;draws:number}={created:performance.now(),draws:0};
   private textCache=new Map<string,Text>();
   private regionAngles=new Map<string,number>();
@@ -94,7 +122,7 @@ export class StaffRenderer {
       const sprite=new Sprite(Texture.from(band.canvas,true));sprite.position.set(band.box[0],band.box[1]);sprite.scale.set(1/band.scale);
       this.tiles.addChild(sprite);this.atlasSprites.push({sprite,minZoom:band.minZoom});
     }
-    this.cacheBytes=this.atlas.bytes;this.paintCount=0;this.invalidate();
+    this.cacheBytes=this.atlas.bytes+this.furnitureBytes;this.paintCount=0;this.invalidate();
     this.startup.atlasReady=performance.now();
   }
   fitGeographic(box:Box){
@@ -142,8 +170,8 @@ export class StaffRenderer {
     this.app.stage.addChild(this.content,this.frameMask);
     this.content.addChild(this.world,this.labels);
     this.content.mask=this.frameMask;
-    this.world.addChild(this.tiles,this.washes,this.arrows);
-    await this.installAtlas();if(this.dead)return;this.ready=true;if(openOnPack)this.fitOpening();else this.fit();if(this.reviewPost)this.fitPlan();
+    this.world.addChild(this.tiles,this.furniture,this.washes,this.arrows);
+    await this.installFurniture();await this.installAtlas();if(this.dead)return;this.ready=true;if(openOnPack)this.fitOpening();else this.fit();if(this.reviewPost)this.fitPlan();
     this.observer=new ResizeObserver(() => {
       const box=this.host.getBoundingClientRect();
       // The observer also fires once on attachment. Refitting an unchanged
@@ -188,7 +216,10 @@ export class StaffRenderer {
     return [0,0,this.app.screen.width,this.app.screen.height];
   }
   degreeTicks(){
-    return this.geometry.schematic||!this.ready?[]:graticuleTicks(this.projection,this.camera,this.app.screen.width,this.app.screen.height);
+    if(this.geometry.schematic||!this.ready)return [];
+    const {x,y,z}=this.camera,w=this.app.screen.width,h=this.app.screen.height,key=`${x}:${y}:${z}:${w}:${h}`;
+    if(this.tickCache?.key!==key)this.tickCache={key,ticks:graticuleTicks(this.projection,this.camera,w,h)};
+    return this.tickCache.ticks;
   }
   hoveredRegion(){return this.regions.find(r=>r.id===this.hovered)??null;}
   northAngle(){
@@ -240,6 +271,7 @@ export class StaffRenderer {
   setData(model: MapModel, pencil: PencilRoute[], reviewPost: string | null) {
     const changed=this.reviewPost!==reviewPost;
     for(const [id,belief] of Object.entries(model.control))if(JSON.stringify(belief)!==JSON.stringify(this.model.control[id as keyof typeof this.model.control]))this.claimChanges.set(id,performance.now());
+    this.controlRevision=JSON.stringify([model.control,model.day,model.faction]);
     this.model=model;this.pencil=pencil;this.reviewPost=reviewPost;
     if(changed&&reviewPost&&this.ready)this.fitPlan();this.invalidate();
   }
@@ -298,10 +330,10 @@ export class StaffRenderer {
     const [left,top,right,bottom]=this.frameScreen();
     this.frameMask.clear().rect(left,top,right-left,bottom-top).fill(0xffffff);
     for(const band of this.atlasSprites)band.sprite.visible=this.camera.z>=band.minZoom;
-    this.readOverlayBoxes();this.drawControl();this.drawArrows();this.drawLabels();
-    this.app.render();this.startup.firstRender??=performance.now();this.startup.lastRender=performance.now();this.host.dataset.ready='ready';this.onCamera();
+    let tick=performance.now();const step=(name:string)=>{const now=performance.now();this.frameProfile[name]=now-tick;tick=now;};
+    this.readOverlayBoxes();step('overlays');this.drawControl();step('control');this.drawArrows();step('arrows');this.drawFurniture();step('geographicSprites');this.drawLabels();step('labels');
+    this.app.render();step('submit');this.startup.firstRender??=performance.now();this.startup.lastRender=performance.now();this.host.dataset.ready='ready';this.onCamera();step('htmlOverlayUpdate');
     this.startup.lastOverlay=performance.now();this.startup.draws++;this.host.dataset.startup=JSON.stringify(this.startup);
-    this.host.dataset.control=JSON.stringify({...this.controlCounts,paint:this.controlPaint,beliefs:Object.keys(this.model.control).length,segments:this.model.fronts.length,approvedRoutes:this.model.plans.filter(p=>p.approved).length,changed:[...this.claimChanges.keys()],points:this.regions.filter(r=>r.point).map(r=>({id:r.id,point:this.screen(r.id)})),reducedMotion:window.matchMedia('(prefers-reduced-motion: reduce)').matches});
     this.frameTimes.push(performance.now()-started);if(this.frameTimes.length>600)this.frameTimes.shift();
     if(this.controlCounts.animating)this.invalidate();
   }
@@ -314,35 +346,45 @@ export class StaffRenderer {
     const began=this.claimChanges.get(id);return began===undefined?1:Math.min(1,(performance.now()-began)/900);
   }
   private drawControl(){
-    const g=this.washes,z=this.camera.z;g.clear();this.controlCounts={regions:0,fronts:0,contacts:0,animating:0};this.controlPaint=[];
-    const frame=this.frameScreen(),visible=(id:string)=>{const b=this.regionPaths.get(id)?.bbox;return !b||(b[2]*z+this.camera.x>frame[0]&&b[0]*z+this.camera.x<frame[2]&&b[3]*z+this.camera.y>frame[1]&&b[1]*z+this.camera.y<frame[3]);};
+    const g=this.washes,z=this.camera.z,pigment=CONTROL_PALETTES[this.palette],frame=this.frameScreen();
+    const viewport:Box=[-this.camera.x/z,-this.camera.y/z,(frame[2]-this.camera.x)/z,(frame[3]-this.camera.y)/z];
+    const key=`${z}:${this.palette}:${this.appearance.contrast}:${this.controlRevision}`;
+    const bounds=this.controlCacheBounds,animating=Object.keys(this.model.control).some(id=>this.progress(id)<1);
+    // Retain the live Graphics mesh while a pan remains inside its guard band.
+    // This never bakes a claim into geography or reuses it across new reports.
+    if(!animating&&this.controlCounts.animating===0&&key===this.controlCacheKey&&bounds&&viewport[0]>=bounds[0]&&viewport[1]>=bounds[1]&&viewport[2]<=bounds[2]&&viewport[3]<=bounds[3]){
+      this.controlCounts.fronts=0;this.controlCounts.contacts=0;return;
+    }
+    this.controlCacheKey=key;this.controlCacheBounds=[viewport[0]-220/z,viewport[1]-220/z,viewport[2]+220/z,viewport[3]+220/z];this.controlRebuilds++;
+    g.clear();this.controlCounts={regions:0,fronts:0,contacts:0,animating:0};this.controlPaint=[];
+    const visible=(id:string)=>{const b=this.regionPaths.get(id)?.bbox,c=this.controlCacheBounds!;return !b||(b[2]>c[0]&&b[0]<c[2]&&b[3]>c[1]&&b[1]<c[3]);};
     for(const [id,belief] of Object.entries(this.model.control)){
       if(!visible(id))continue;
       const rings=this.rings(id),progress=this.progress(id);if(progress<1)this.controlCounts.animating++;
       if(!belief.neutralGovernment&&!Object.values(belief.shares).some(s=>s>0))continue;
       const shares=Object.entries(belief.shares).filter(([,s])=>s>0).sort((a,b)=>b[1]-a[1]||(a[0]<b[0]?-1:1));
       const neutral=belief.neutralGovernment&&!belief.holder&&!belief.contested;
-      const colour=this.appearance.contrast?0x182d4c:controlColour(belief.holder??shares[0]?.[0]??null,this.model.faction,neutral);
-      const alpha=controlOpacity(belief,this.model.day)*(.3+.7*progress),strength=neutral?1:Math.max(...shares.map(([,s])=>s),0)/1000;
+      const colour=this.appearance.contrast?0x182d4c:controlColour(belief.holder??shares[0]?.[0]??null,this.model.faction,neutral,this.palette);
+      const alpha=controlOpacity(belief,this.model.day)*(.3+.7*progress),strength=controlStrength(belief),depth=strength==='firm'?1:.72;
       if(!rings.length){
         // A point is a claim sign, never a guessed territorial boundary.
         const region=this.regions.find(r=>r.id===id);
         if(!region?.point||['sea','river','off_map'].includes(region.kind))continue;
         const [x,y]=this.project(region.point);
-        g.circle(x,y,7/z).fill({color:colour,alpha:alpha*strength}).stroke({color:colour,width:1.5/z,alpha});
-        this.controlPaint.push({id,area:false,colour,alpha,strength});continue;
+        g.circle(x,y,7/z).fill({color:colour,alpha:alpha*depth*pigment.middle}).stroke({color:colour,width:1.5/z,alpha:alpha*depth});
+        this.controlPaint.push({id,area:false,colour,alpha:alpha*pigment.middle,strength});continue;
       }
-      this.controlCounts.regions++;this.controlPaint.push({id,area:true,colour,alpha,strength});
+      this.controlCounts.regions++;this.controlPaint.push({id,area:true,colour,alpha:alpha*pigment.middle,strength});
       for(const polygon of rings){
         const ring=polygon[0];if(!ring?.length)continue;
-        g.poly(ring.flat()).fill({color:colour,alpha:alpha*strength});for(const hole of polygon.slice(1))g.poly(hole.flat()).cut();
+        g.poly(ring.flat()).fill({color:colour,alpha:alpha*depth*pigment.middle});for(const hole of polygon.slice(1))g.poly(hole.flat()).cut();
         // Transparent, overlapping pools retain the linen and hachures below.
         // Narrow rim widths are in screen pixels; holes retain their own rim.
         for(const edge of polygon)for(let i=1;i<edge.length;i++){
           const a=edge[i-1]!,b=edge[i]!,n=grain(Math.round(a[0]*100),Math.round(a[1]*100),29);
           if(belief.mark==='pencil'&&i%5===0)continue;
           if((i/edge.length)>progress)continue;
-          for(const [width,factor] of [[9,.17],[4,.3],[1.4,.8]] as const)g.moveTo(...a).lineTo(...b).stroke({color:colour,width:width/z,alpha:alpha*factor*(.7+n*.3)});
+          for(const [width,factor] of pigment.rim)g.moveTo(...a).lineTo(...b).stroke({color:colour,width:width/z,alpha:alpha*depth*factor*(.7+n*.3)});
         }
         const hatchSpacing=belief.contested?16:27;
         for(const [k,[a,b]] of hatchRings(polygon,hatchSpacing*Math.SQRT2/z).entries()){
@@ -355,7 +397,7 @@ export class StaffRenderer {
           }
         }
         if(belief.contested){const second=shares.find(([f])=>f!==(belief.holder??shares[0]?.[0]));
-          if(second)for(const [a,b] of hatchRings(polygon,16*Math.SQRT2/z,-1))g.moveTo(...a).lineTo(...b).stroke({color:controlColour(second[0],this.model.faction),width:.9/z,alpha:alpha*1.15*progress});
+          if(second)for(const [a,b] of hatchRings(polygon,16*Math.SQRT2/z,-1))g.moveTo(...a).lineTo(...b).stroke({color:controlColour(second[0],this.model.faction,false,this.palette),width:.9/z,alpha:alpha*1.15*progress});
         }
       }
     }
@@ -367,7 +409,7 @@ export class StaffRenderer {
       const own=this.regions.find(r=>r.id===front.own)?.point,enemy=this.regions.find(r=>r.id===front.faces)?.point;if(!own||!enemy)continue;
       const key=`${front.own}:${front.faces}`;let lines=this.frontPaths.get(key);
       if(!lines){lines=sharedFront(this.rings(front.own),this.rings(front.faces));if(!lines.length){lines=[contactMark(this.rings(front.own),this.project(own),this.project(enemy))];}this.frontPaths.set(key,lines);}
-      const colour=this.appearance.contrast?0x111111:CONTROL_COLOURS.friendly,progress=Math.min(this.progress(front.own),this.progress(front.faces)),target=this.project(enemy);
+      const colour=this.appearance.contrast?0x111111:CONTROL_PALETTES[this.palette].colours.friendly,progress=Math.min(this.progress(front.own),this.progress(front.faces)),target=this.project(enemy);
       const age=Math.max(0,this.model.day-front.asOfDay),alpha=(front.mark==='ink'?.96:.72)*(age>28?.4:age>14?.6:age>7?.8:1);
       for(const line of lines){
         if(line.length<2)continue;this.controlCounts.fronts++;
@@ -433,7 +475,7 @@ export class StaffRenderer {
     if(this.study)this.drawStudy(this.study);
     for(const review of this.model.plans) {
       const active=!this.reviewPost || review.post===this.reviewPost;
-      for(const axis of review.plan.axes) this.arrow(axis.regions,review.approved?CONTROL_COLOURS.friendly:active?0x4d5144:0x9c9b83,active?15:9,!review.approved);
+      for(const axis of review.plan.axes) this.arrow(axis.regions,review.approved?CONTROL_PALETTES[this.palette].colours.friendly:active?0x4d5144:0x9c9b83,active?15:9,!review.approved);
       for(const request of review.plan.requests) {
         const [kind,post]=request.split(':');
         if(!['cooperating_axis','naval_support'].includes(kind!)||!post)continue;
@@ -455,7 +497,7 @@ export class StaffRenderer {
     const g=this.arrows,z=this.camera.z;
     for(const wash of study.washes){
       const colour=this.look==='B'?(wash.side==='friendly'?0x168acf:0xee8043):(wash.side==='friendly'?0x598fac:0xc17842);
-      const alpha=Math.max(0,Math.min(1000,wash.permille))/1000*(this.look==='B'?.42:this.look==='C'?.50:.30);
+      const alpha=(wash.permille>=800?1:.72)*(this.look==='B'?.42:this.look==='C'?.50:.30);
       for(const id of wash.regions){
        if(!this.regionRings.has(id)){const r=this.regions.find(r=>r.id===id);if(r?.shape&&!['sea','river','off_map'].includes(r.kind))this.regionRings.set(id,roughRings(r.shape,this.projection));}
        for(const polygon of this.regionRings.get(id)??[]){
@@ -484,6 +526,56 @@ export class StaffRenderer {
     this.liveObstacles.push(...lineBoxes(revision.map(([x,y])=>[x*z+this.camera.x,y*z+this.camera.y]),5));
     const note=this.project(study.estimate.point);g.ellipse(note[0],note[1],36/z,22/z).stroke({color:0x5b574f,width:1.2/z,alpha:.85});
   }
+  private async installFurniture(){
+    if(!this.signsEnabled)return;
+    const baked=await loadFurnitureAtlas(this.geometry.pack);if(!baked||this.dead)return;
+    this.furnitureManifest=baked.manifest;this.furnitureBytes=baked.manifest.bytes;
+    const texture=Texture.from({resource:baked.image,alphaMode:'premultiply-alpha-on-upload'},true);
+    // Offline band tiles contain working-scale detail; do not minify a second
+    // time or blend neighbouring subtiles through automatically generated mips.
+    texture.source.scaleMode='linear';texture.source.minFilter='nearest';texture.source.autoGenerateMipmaps=false;texture.source.mipLevelCount=1;
+    for(const band of baked.manifest.bands)for(const sign of band.signs){
+      const row=GLYPH_KINDS.indexOf(sign.kind);
+      const density=sign.texelDensity??1;
+      const part=new Texture({source:texture.source,frame:new Rectangle(...(sign.atlasFrame??[sign.variant*160,row*128,160,128])),...(sign.atlasTrim?{orig:new Rectangle(0,0,80*density,64*density),trim:new Rectangle(...sign.atlasTrim)}:{})});
+      const sprite=new Sprite(part);sprite.anchor.set(.5);sprite.position.set(...sign.point);sprite.scale.set(sign.factor/density);sprite.visible=false;
+      this.furniture.addChild(sprite);this.furnitureSprites.push({sprite,sign,band:band.name});
+    }
+  }
+  private drawFurniture(){
+    this.furnitureBoxes=[];this.furnitureDrawn=[];this.furnitureHidden=[];
+    const scale=furnitureScale(this.labelZoom()),[l,t,r,b]=this.frameScreen(),z=this.camera.z;
+    // Geographic subtiles share the base world transform, below every live wash.
+    const reports:Box[]=placeMarks(this.model.marks,id=>this.screen(id),this.app.screen.width,this.app.screen.height).map(({point:[x,y]})=>[x-24,y-24,x+24,y+24] as Box);
+    const occupied:Box[]=[...this.overlayBoxes,...this.liveObstacles];
+    const screenPoint=(p:Point):Point=>[p[0]*z+this.camera.x,p[1]*z+this.camera.y];
+    const rankOf=(sign:BakedSign)=>capitalRank(sign.id.replace(/^town:/,''),this.calendar,sign.kind);
+    const townPoints=this.furnitureSprites.filter(f=>f.band===scale&&f.sign.id.startsWith('town:')&&(scale!=='wide'||wideTown(f.sign.id.slice(5),f.sign.kind,rankOf(f.sign)))).map(f=>({id:f.sign.id,point:screenPoint(f.sign.anchor)}));
+    const order=(sign:BakedSign)=>rankOf(sign)==='national'?0:rankOf(sign)==='state'?1:sign.id.startsWith('town:')?2:3;
+    for(const {sprite,sign,band} of [...this.furnitureSprites].sort((a,b)=>order(a.sign)-order(b.sign))){
+      sprite.visible=false;if(!this.signsEnabled||band!==scale)continue;
+      const town=sign.id.startsWith('town:'),rank=town?rankOf(sign):'none',region=sign.id.replace(/^town:/,'');
+      if(town&&scale==='wide'&&!wideTown(region,sign.kind,rank))continue;
+      const multiplier=rank==='state'?.64:1,anchor=screenPoint(sign.anchor);
+      const boxAtAnchor=sign.box.map((v,i)=>(v-sign.point[i%2]!)*z*multiplier+anchor[i%2]!) as Box;
+      const alternatives=rank==='state'?sign.stateAlternatives:sign.alternatives;
+      const options=(alternatives??[sign.point]).map(screenPoint).filter(p=>{
+        const box=boxAtAnchor.map((v,i)=>v+p[i%2]!-anchor[i%2]!) as Box;
+        return box[0]>=l+3&&box[1]>=t+3&&box[2]<=r-3&&box[3]<=b-3;
+      });
+      // The unfiltered first choice is the minimum water displacement. A frame
+      // edge never authorizes moving a sign farther inland or toward a name.
+      const first=(alternatives??[sign.point])[0];
+      if(!first||!options.some(p=>Math.hypot(p[0]-screenPoint(first)[0],p[1]-screenPoint(first)[1])<.01))continue;
+      const point=town?placeNearAnchor(anchor,boxAtAnchor,options,reports,occupied,townPoints.filter(p=>p.id!==sign.id).map(p=>p.point)):options[0];
+      if(!point){this.furnitureHidden.push({id:sign.id,reason:'No nearby land-safe point clear of a report, furniture or paper'});continue;}
+      const box=boxAtAnchor.map((v,i)=>v+point[i%2]!-anchor[i%2]!) as Box;
+      if(!town&&[...occupied,...reports].some(o=>overlaps(o,box)))continue;
+      sprite.position.set((point[0]-this.camera.x)/z,(point[1]-this.camera.y)/z);sprite.scale.set(sign.factor*multiplier/(sign.texelDensity??1));
+      sprite.visible=true;sprite.tint=this.appearance.contrast?0x333333:this.appearance.lamp?0xe6cba3:0xffffff;
+      occupied.push(box);this.furnitureBoxes.push(box);this.furnitureDrawn.push({id:sign.id,kind:sign.kind,box,point,anchor,rank,pointDistance:Math.hypot(point[0]-anchor[0],point[1]-anchor[1]),waterDistance:Math.hypot(screenPoint(first)[0]-anchor[0],screenPoint(first)[1]-anchor[1])});
+    }
+  }
   private drawLabels() {
     this.omittedLabels=[];
     this.labels.removeChildren();
@@ -495,7 +587,7 @@ export class StaffRenderer {
     const occupied:Box[]=placeMarks(this.model.marks,id=>this.screen(id),w,h)
       .map(({point:[x,y]})=>[x-19,y-19,x+19,y+19]);
     
-    occupied.push(...this.overlayBoxes);
+    occupied.push(...this.overlayBoxes,...this.furnitureBoxes);
     this.riverObstacles=[];
     for(const river of this.geometry.cartography?.rivers??[]){
       if(!['Potomac','Shenandoah','Rappahannock','York','James'].includes(river.name))continue;
@@ -513,6 +605,52 @@ export class StaffRenderer {
       if(box[0]<8||box[1]<8||box[2]>w-8||box[3]>h-8||collision){this.omittedLabels.push({id,point:p,box,collision});return false;}
       occupied.push(box);this.labels.addChild(text);return true;
     };
+    // A town's name and sign form one unit. Place them before river/region
+    // captions; neither an authored label anchor nor a large search ring may
+    // detach the name from its town. Live marks and papers retain priority.
+    const namedTowns=new Set<string>();
+    // The plain map keeps every former town-name candidate. A drawing's water
+    // displacement and footprint must never displace or suppress its name.
+    if(!this.signsEnabled)for(const hint of placeNameHints(this.geometry.pack,this.calendar,labelZoom)){
+      const region=this.regions.find(r=>r.id===hint.id);if(!region?.point)continue;
+      const q=this.project(region.point),point:Point=[q[0]*this.camera.z+this.camera.x,q[1]*this.camera.z+this.camera.y];
+      if(point[0]<frame[0]||point[1]<frame[1]||point[0]>frame[2]||point[1]>frame[3])continue;
+      let text=this.textCache.get(hint.id);if(!text){text=new Text({text:region.name});this.textCache.set(hint.id,text);}
+      text.text=region.name;text.rotation=0;text.anchor.set(.5);text.label=hint.id;
+      text.style={...font,fontFamily:this.look==='A'?'Standard':font.fontFamily,fontSize:(hint.rank==='national'?16:14)*this.appearance.mapScale/100,letterSpacing:.1,fontWeight:hint.rank==='national'?'bold':'normal',stroke:{color:PALETTES[this.look].paper,width:3,join:'round'}};
+      const corners:Point[]=[];
+      for(const dx of [-1,1])for(const dy of [-1,1])corners.push([point[0]+dx*(text.width/2+8),point[1]+dy*(text.height/2+8)]);
+      // Confluences need a small tangential adjustment as well as a corner.
+      // Search beside the point before the legacy general-label wide rings.
+      for(const gap of [8,12,20])for(const shift of [-12,12,-24,24])corners.push(
+        [point[0]-text.width/2-gap,point[1]+shift],[point[0]+text.width/2+gap,point[1]+shift],
+        [point[0]+shift,point[1]-text.height/2-gap],[point[0]+shift,point[1]+text.height/2+gap]);
+      for(const p of [point,...namePositions(point,[...point,...point],text.width,text.height),...corners]){
+        text.position.set(...p);const b=text.getBounds(),box:Box=[b.x-3,b.y-3,b.x+b.width+3,b.y+b.height+3];
+        if(box[0]<frame[0]+4||box[1]<frame[1]+4||box[2]>frame[2]-4||box[3]>frame[3]-4||[...occupied,...this.liveObstacles,...this.riverObstacles].some(o=>overlaps(o,box)))continue;
+        text.alpha=this.reviewPost?.55:.88;occupied.push(box);this.labels.addChild(text);namedTowns.add(hint.id);break;
+      }
+    }
+    for(const sign of this.furnitureDrawn.filter(s=>s.id.startsWith('town:'))){
+      const id=sign.id.slice(5),region=this.regions.find(r=>r.id===id);if(!region)continue;
+      let text=this.textCache.get(id);if(!text){text=new Text({text:region.name});this.textCache.set(id,text);}
+      text.text=region.name;text.rotation=0;text.anchor.set(.5);text.label=id;
+      text.style={...font,fontFamily:this.look==='A'?'Standard':font.fontFamily,fontSize:(sign.rank==='national'?16:14)*this.appearance.mapScale/100,letterSpacing:.1,fontWeight:sign.rank==='national'?'bold':'normal',stroke:{color:PALETTES[this.look].paper,width:3,join:'round'}};
+      for(const p of namePositions(sign.point,sign.box,text.width,text.height)){
+        text.position.set(...p);const q=text.getBounds(),box:Box=[q.x-3,q.y-3,q.x+q.width+3,q.y+q.height+3];
+        if(box[0]<frame[0]+4||box[1]<frame[1]+4||box[2]>frame[2]-4||box[3]>frame[3]-4||occupied.some(b=>overlaps(b,box))||this.liveObstacles.some(b=>overlaps(b,box))||this.riverObstacles.some(b=>overlaps(b,box)))continue;
+        const gap=boxDistance(sign.point,box);
+        if(this.furnitureDrawn.some(other=>other!==sign&&other.id.startsWith('town:')&&((other.nameBox&&boxDistance(sign.point,other.nameBox)<gap)||(other.nameGap!==undefined&&boxDistance(other.point,box)<other.nameGap))))continue;
+        sign.nameBox=box;sign.nameGap=gap;sign.nameDistance=Math.hypot(p[0]-sign.point[0],p[1]-sign.point[1]);
+        occupied.push(box);this.labels.addChild(text);namedTowns.add(id);break;
+      }
+      if(!namedTowns.has(id)){
+        // A sign without its own adjacent name is ambiguous. Suppress the pair.
+        this.furnitureSprites.find(f=>f.sign.id===sign.id&&f.band===furnitureScale(labelZoom))!.sprite.visible=false;
+        this.furnitureHidden.push({id:sign.id,reason:'No adjacent name fits'});
+      }
+    }
+    this.furnitureDrawn=this.furnitureDrawn.filter(s=>!s.id.startsWith('town:')||namedTowns.has(s.id.slice(5)));
     if(this.study)for(const [id,note] of [['estimate',this.study.estimate],['draft',this.study.draftLabel]] as const){
       const p=this.project(note.point),x=p[0]*this.camera.z+this.camera.x,y=p[1]*this.camera.z+this.camera.y;
       let placed=false;
@@ -535,7 +673,8 @@ export class StaffRenderer {
     }
     // Towns are the navigation anchors of the scene. Their labels get first
     // choice among region names and may move around a report sign.
-    for(const r of [...this.regions].sort((a,b)=>(a.kind==='key_point'?0:1)-(b.kind==='key_point'?0:1)||(a.id<b.id?-1:1))) {
+    for(const r of [...this.regions].sort((a,b)=>(a.kind==='key_point'?0:a.kind==='sea'?1:2)-(b.kind==='key_point'?0:b.kind==='sea'?1:2)||(a.id<b.id?-1:1))) {
+      if(namedTowns.has(r.id))continue;
       if(!r.point || ['off_map','off-map','river'].includes(r.kind))continue;
       if(!this.labelEligibility.get(r.id))continue;
       const anchor=this.project(r.label.anchor??r.point);const p:Point=[anchor[0]*this.camera.z+this.camera.x,anchor[1]*this.camera.z+this.camera.y];
@@ -562,13 +701,16 @@ export class StaffRenderer {
           text.rotation=this.regionAngles.get(r.id)!;
         }
       }
+      // Water names stay at their own source water; collisions suppress them.
+      if(r.id==='delaware_bay'){text.text=r.name.replace(' Bay and ',' Bay\nand ');text.style.fontSize=14*this.appearance.mapScale/100;text.rotation=1.05;}
       const offsets:Point[]=[[0,0]];
-      for(let ring=1;ring<=(r.kind==='key_point'?5:2);ring++)for(const [dx,dy] of [[1,0],[-1,0],[0,-1],[0,1],[1,-1],[-1,-1],[1,1],[-1,1]])offsets.push([dx!*(text.width/2+ring*28),dy!*ring*28]);
+      for(let ring=1;r.kind!=='sea'&&ring<=(r.kind==='key_point'?5:2);ring++)for(const [dx,dy] of [[1,0],[-1,0],[0,-1],[0,1],[1,-1],[-1,-1],[1,1],[-1,1]])offsets.push([dx!*(text.width/2+ring*28),dy!*ring*28]);
       for(const [dx,dy] of offsets){
         text.position.set(p[0]+dx,p[1]+dy);
         // Measure after the authored spine rotation and any display offset.
         const bounds=text.getBounds();
         const b:Box=[bounds.x-3,bounds.y-3,bounds.x+bounds.width+3,bounds.y+bounds.height+3];
+        if(this.furnitureDrawn.some(s=>s.nameGap!==undefined&&boxDistance(s.point,b)<s.nameGap))continue;
         if(b[0]<frame[0]+4||b[1]<frame[1]+4||b[2]>frame[2]-4||b[3]>frame[3]-4||occupied.some(x=>overlaps(x,b))||this.riverObstacles.some(x=>overlaps(x,b)))continue;
         occupied.push(b);text.alpha=this.reviewPost?.55:.88;this.labels.addChild(text);break;
       }
@@ -583,11 +725,12 @@ export class StaffRenderer {
       return {id:r.id,point:p,shape:shape?[shape[0]*z+x,shape[1]*z+y,shape[2]*z+x,shape[3]*z+y] as Box:null};
     });
     const coverage=this.geometry.baseCoverage?.worldBounds;
-    return {labelZoom:this.labelZoom(),labelVisibility:this.regions.map(r=>({id:r.id,kind:r.kind,...this.labelPolicies.get(r.id),eligible:this.labelEligibility.get(r.id)??false})),look:this.look,noteAnchor:this.study?(()=>{const p=this.project(this.study.estimate.point);return [p[0]*z+x,p[1]*z+y];})():null,detail:this.geometry.atlasDetail??{sourceTolerance:this.geometry.cartography?.lod?.sourceTolerance,countyDate:this.geometry.cartography?.lod?.countyDate,counties:this.geometry.cartography?.lod?.counties.length,stations:this.geometry.cartography?.lod?.stations.length,reliefRows:this.geometry.cartography?.relief.some(r=>r.contour!==undefined)},studyControl:this.study?{mock:true,mode:this.look==='C'?'region-tint':'wash',claims:this.study.washes.map(w=>({regions:w.regions,permille:w.permille,contested:!!w.contested})),roughenedShapes:true}:null,bakeMs:this.atlas?.bakeMs,atlasLoadMs:this.atlas?.loadMs,atlasSource:this.atlas?.source,degreeTicks:this.degreeTicks(),maximumZoom:this.maximumZoom(),hatchScreenSpacing:18,staticBands:this.atlasSprites.length,staticBakes:this.paintCount,frameTimes:[...this.frameTimes],omittedLabels:this.omittedLabels,renderer:this.app.renderer?.type,tiles:this.atlasSprites.length,rawTextureBytes:this.cacheBytes,rawTextureCap:CAP,paintedTiles:this.paintCount,zoom:this.camera.z/this.camera.fit,ready:this.host.dataset.ready,
+    return {furniture:{source:'baked',composition:'static-per-band-geography-before-live-washes',sampling:{texelDensity:this.furnitureSprites[0]?.sign.texelDensity??1,minFilter:this.furnitureSprites[0]?.sprite.texture.source.minFilter,magFilter:this.furnitureSprites[0]?.sprite.texture.source.magFilter,mipLevelCount:this.furnitureSprites[0]?.sprite.texture.source.mipLevelCount,autoGenerateMipmaps:this.furnitureSprites[0]?.sprite.texture.source.autoGenerateMipmaps},alphaMode:this.furnitureSprites[0]?.sprite.texture.source.alphaMode,layerOrder:this.world.children.map(c=>c===this.tiles?'base':c===this.furniture?'geographic-signs':c===this.washes?'claims':'operations'),bakeMs:this.furnitureManifest?.bakeMs,bytes:this.furnitureBytes,revision:this.furnitureManifest?.revision,scaleFactor:2.15,enabled:this.signsEnabled,calendar:this.calendar,scale:furnitureScale(this.labelZoom()),drawn:this.furnitureDrawn,hidden:this.furnitureHidden},control:{rebuilds:this.controlRebuilds,...this.controlCounts,beliefs:Object.keys(this.model.control).length,paint:this.controlPaint},labelZoom:this.labelZoom(),labelVisibility:this.regions.map(r=>({id:r.id,kind:r.kind,...this.labelPolicies.get(r.id),eligible:this.labelEligibility.get(r.id)??false})),look:this.look,palette:this.palette,noteAnchor:this.study?(()=>{const p=this.project(this.study.estimate.point);return [p[0]*z+x,p[1]*z+y];})():null,detail:this.geometry.atlasDetail??{sourceTolerance:this.geometry.cartography?.lod?.sourceTolerance,countyDate:this.geometry.cartography?.lod?.countyDate,counties:this.geometry.cartography?.lod?.counties.length,stations:this.geometry.cartography?.lod?.stations.length,reliefRows:this.geometry.cartography?.relief.some(r=>r.contour!==undefined)},studyControl:this.study?{mock:true,mode:this.look==='C'?'region-tint':'wash',claims:this.study.washes.map(w=>({regions:w.regions,strength:w.permille>=800?'firm':'held',contested:!!w.contested})),roughenedShapes:true}:null,bakeMs:this.atlas?.bakeMs,atlasLoadMs:this.atlas?.loadMs,atlasSource:this.atlas?.source,degreeTicks:this.degreeTicks(),maximumZoom:this.maximumZoom(),hatchScreenSpacing:18,staticBands:this.atlasSprites.length,staticBakes:this.paintCount,frameTimes:[...this.frameTimes],frameProfile:this.frameProfile,omittedLabels:this.omittedLabels,renderer:this.app.renderer?.type,tiles:this.atlasSprites.length,rawTextureBytes:this.cacheBytes,rawTextureCap:CAP,paintedTiles:this.paintCount,zoom:this.camera.z/this.camera.fit,ready:this.host.dataset.ready,
     regionContainment:{points:measured.filter(r=>r.point).length,shapes:measured.filter(r=>r.shape).length,
       outside:measured.filter(r=>(r.point&&!fits([...r.point,...r.point]))||(r.shape&&!fits(r.shape))),
       excludedOffMap:this.regions.filter(r=>['off_map','off-map'].includes(r.kind)).map(r=>r.id)},
     baseCoverage:coverage?{viewport,bounds:coverage,geographicBox:this.geometry.baseCoverage!.geographicBox,inside:viewport[0]>=coverage[0]-1e-6&&viewport[1]>=coverage[1]-1e-6&&viewport[2]<=coverage[2]+1e-6&&viewport[3]<=coverage[3]+1e-6}:null,
+    waterLabelCandidates:this.regions.filter(r=>r.kind==='sea').map(r=>{const text=this.textCache.get(r.id);if(!text)return {id:r.id,source:this.screen(r.id)};const q=text.getBounds(),box:Box=[q.x-3,q.y-3,q.x+q.width+3,q.y+q.height+3];return {id:r.id,source:this.screen(r.id),position:[text.x,text.y],text:text.text,fontSize:text.style.fontSize,rotation:text.rotation,box,visible:this.labels.children.includes(text),overlayCollisions:this.overlayBoxes.filter(b=>overlaps(b,box)),liveCollisions:this.liveObstacles.filter(b=>overlaps(b,box)),labelCollisions:this.labels.children.filter(c=>{const b=c.getBounds();return overlaps([b.x-3,b.y-3,b.x+b.width+3,b.y+b.height+3],box);}).map(c=>c.label)};}),
     labelObstacles:{overlays:this.overlayBoxes,live:this.liveObstacles,rivers:this.riverObstacles},renderedLabels:this.labels.children.map(child=>{const b=child.getBounds();return {id:child.label,text:(child as Text).text,bounds:{x:b.x,y:b.y,width:b.width,height:b.height}};}),
     frame:this.frameScreen(),fitBounds:[...this.bounds],camera:{...this.camera},
     ...(this.geometry.schematic?{referencePoints:Object.fromEntries(this.regions.filter(r=>r.point).map(r=>[r.id,this.screen(r.id)]))}:{})};}

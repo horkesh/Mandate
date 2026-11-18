@@ -3,7 +3,7 @@ import csv, hashlib, io, json, os, sys
 from datetime import date
 from pathlib import Path
 P=Path(__file__).resolve().parents[1]
-MAIN=Path('C:/Pyrrhic/ByOrderOfThePresident')
+MAIN=Path(os.environ.get('MANDATE_MAIN',P.parents[1].parent/'ByOrderOfThePresident')).resolve()
 OUT=MAIN/'art-masters/R30'
 sys.path[:0]=[str(P/'.geometry-tools'),str(P/'scripts')]
 import shapefile, shapely

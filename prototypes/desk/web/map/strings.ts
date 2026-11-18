@@ -1,8 +1,11 @@
 /** R18 out-of-world map chrome; report and place wording comes from the seat and geometry. */
 export const M = {
+  paletteNames:{strong:'strong',research:'research'},
+  lookNames:{'0':'Original',A:'Manuscript',B:'Atlas plate',C:'Press map'},
   noControlReport:'no report received.',
   controlLegend:'Control on this map',
-  controlKey:{union:'Union',enemy:'Enemy',neutral:'Neutral government',contested:'Contested',single:'Single report',old:'Old report'},
+  controlKey:{union:'Union',enemy:'Enemy',neutral:'Neutral government',contested:'Contested',single:'Single report',old:'Old report',held:'Held',firm:'Firmly held'},
+  washMeaning:'Pencil and age lighten either wash.',
   regionNames:'Places on the map',
   title:'Staff map', textTwin:'Read the map as text', mapView:'Return to the map',
   loading:'Opening the staff map…', missing:'The local map has not been built. The text record is available below.',

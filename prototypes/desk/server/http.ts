@@ -54,7 +54,7 @@ export function installDesk(vite: ViteDevServer, options: { pack: string; atWar:
     const normalized = path.replace(/^\/@fs\//, '');
     if (path.startsWith('/@fs/')) {
       if (!resolve(normalized).startsWith(resolve(proto, 'node_modules') + sep)) return json(res, 403, {});
-    } else if (!(path === '/' || path === '/index.html' || /^\/map-data\/(union-1861|testbed)\.json$/.test(path) || /^\/map-data\/(union-1861|testbed)-atlas\/(?:(?:manifest|geometry)\.json|[ABC0]-(?:normal|lamp|contrast)(?:-study)?-[0-3]\.png)$/.test(path) || path.startsWith('/web/') || path.startsWith('/fonts/') || path.startsWith('/node_modules/') || path.startsWith('/@vite/') || path.startsWith('/@id/'))) {
+    } else if (!(path === '/' || path === '/index.html' || /^\/map-data\/(union-1861|testbed)\.json$/.test(path) || /^\/map-data\/(union-1861|testbed)-atlas\/(?:(?:manifest|geometry)\.json|[ABC0]-(?:normal|lamp|contrast)(?:-study)?-[0-3]\.png)$/.test(path) || /^\/map-data\/union-1861-signs\/(?:manifest\.json|geographic\.png)$/.test(path) || path.startsWith('/web/') || path.startsWith('/fonts/') || path.startsWith('/node_modules/') || path.startsWith('/@vite/') || path.startsWith('/@id/'))) {
       return json(res, 404, {});
     }
     next();

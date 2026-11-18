@@ -2,6 +2,7 @@ import { createServer } from 'vite';
 import { fileURLToPath } from 'node:url';
 import { installDesk } from '../server/http.ts';
 import {ensureMapAtlases} from './bake-map.ts';
+import {ensureFurnitureAtlas} from './bake-furniture.ts';
 import {ensureRuntimeMaps} from './runtime-map.ts';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
@@ -11,6 +12,7 @@ const pack = at >= 0 ? args[at + 1] : (args.find(x => !x.startsWith('--')) ?? 'u
 if (pack !== 'union-1861' && pack !== 'testbed') throw Error('Use --pack union-1861 or --pack testbed');
 await ensureMapAtlases([pack]);
 ensureRuntimeMaps([pack]);
+if(pack==='union-1861')await ensureFurnitureAtlas();
 const server = await createServer({
   root, configFile: false,
   server: { host: '127.0.0.1', port: 5274, strictPort: true, cors: false, fs: { strict: true, allow: [root] } },

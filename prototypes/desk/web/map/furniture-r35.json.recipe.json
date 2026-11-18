@@ -1,0 +1,32 @@
+{
+  "asset": "web/map/furniture-r35.json",
+  "request": "R35",
+  "date": "2026-11-18",
+  "tool": "Python standard library",
+  "mode": "Deterministic geographic display catalogue; no reports or truth state",
+  "plan": "Previously confirmed ChatGPT Pro 100; no image service",
+  "client": "Codex",
+  "model": "Procedural code, no image model",
+  "prompt": "Elevation-backed silhouette bands for Blue Ridge, Alleghenies and southern Appalachians; retain sourced R34 static signs",
+  "references": [
+    {
+      "path": "web/map/furniture-data.json",
+      "sha256": "9710a80ff23ef8900fb94474e6160dcf253b82352a748713f2f757053e30a1b4",
+      "recipe": "web/map/furniture-data.json.recipe.json"
+    },
+    {
+      "path": "public/map-data/union-1861.json",
+      "sha256": "a08aee73d1e35ae4958ac3a3a498b5ca9150b64fbb5bacc01383454bfd2316ff",
+      "recipe": "public/map-data/union-1861.json.recipe.json"
+    }
+  ],
+  "requestedSize": "Three ridge display bands",
+  "actualSize": "258 feature anchors",
+  "humanEdits": [],
+  "postProcess": [
+    "Broad corridor selection on actual continuous elevation contour endpoints; land-footprint and collision rejection occurs in the sign bake"
+  ],
+  "provenanceMarks": "No raster model or metadata marks",
+  "sha256": "8c7f49915b22149c0e2de3bbbd297311b60c70f46fc54f0b1bd7f3b94bd6ce24",
+  "scriptSha256": "1da84d42be3b1184b4b99fc0dac69cd52f88922ca33984d220e11d04dbc16ed4"
+}
