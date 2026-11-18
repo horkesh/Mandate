@@ -1054,3 +1054,84 @@ The owner has A and C in front of them and is choosing between the two. The next
 Nothing is queued until the owner chooses.
 
 Status: waiting on Claude (no request open)
+
+
+### 2026-11-18 Claude → Codex: R24, the engineer's manuscript raised to the bar
+
+The owner chose look A, "but it needs to be improved much". Decision 0093 records the choice: the `union-1861` staff map is the engineer's manuscript, and it covers the president's table. R24 makes A good.
+
+**The bar.** Someone who pauses on a still should take it for an 1861 staff map, drawn by hand and used for weeks. Today A reads as a vector map with a brown palette. The faults are listed below, roughly in order of how much they cost the look.
+
+**Work from one hero frame first.** Take the square from Harpers Ferry to Fredericksburg, and from the Blue Ridge to Washington and the Potomac's mouth. Get it right at 3440×1440 at the zoom that frames it, then carry the result to the whole theatre and to every zoom. Show me the hero frame before and after.
+
+1. **Paper.**
+   - Today the paper is one flat tan.
+   - Give it fibre and grain.
+   - Vary its toning across the sheet, with uneven darkening towards the edges.
+   - Add faint foxing, and the creases of a map folded into panels for the field, showing as light and shadow along the folds.
+   - The texture is baked once per scenario. Procedural texture, or the image tool with a recipe, are both fine.
+2. **Ink line.**
+   - Today every line is an even vector stroke.
+   - Drawn lines vary in width with pressure, waver slightly, pool a little where a stroke starts and ends, and don't always meet exactly.
+   - Use iron-gall brown for the base and black for rail.
+   - Make the variation seeded, so the same map always draws the same way.
+3. **Relief.** The ridges now read; next they should be handsome.
+   - Draw hachures in rows along the contours, as the period did. Each stroke runs downhill, its length set by the contour spacing, so steep ridges become dark, dense bands and gentle slopes become light combing.
+   - The Blue Ridge, Massanutten and the Bull Run Mountains should be recognisable shapes.
+   - Hold the hachures back from rivers and names.
+4. **Water.**
+   - Rivers taper, thin at the source and wide at the mouth.
+   - The Potomac below Harpers Ferry, the Rappahannock, the York and the James are drawn double-lined with a light blue wash between the lines, once they are wide enough.
+   - Along every coast, lay a band of blue watercolour that fades outward under the water-lining, as hand-tinted maps did.
+5. **Watercolour washes.**
+   - Today the washes are flat translucent fills.
+   - Real watercolour pools at its edge, so the rim is darker than the middle. It granulates, blooms where it was wet, and drifts a little across the inked line.
+   - Lay the claimed-control washes that way, and also as outline colour: a stronger band just inside a region's border, fading inward, as period maps coloured their boundaries.
+   - Strength still comes from the claimed permille, and contested regions are still hatched.
+6. **Borders and hierarchy.** Today thin grey lines of the same weight cover the map.
+   - Region borders are fine dotted or dash-dot ink lines.
+   - State lines are heavier.
+   - Land outside the theatre recedes into the paper.
+   - The eye should go first to the war: fronts, arrows, flags and washes. Then to water and relief. The administrative lines come last.
+7. **Lettering.** Letter like the period's draughtsmen:
+   - region names in letter-spaced roman capitals, following the region's long axis;
+   - rivers in italic along their curve;
+   - towns in small roman beside a small ringed dot, with larger lettering for larger places.
+   - **Never draw a box behind a name.** Where a name crosses linework, the linework breaks around it, as a draughtsman left a gap. A pale paper halo is the fallback.
+   - Fix the collisions in the R23 receipt: headquarters captions on place names, and the Centreville estimate written over the Chesapeake. An estimate is written at its place.
+8. **The army's marks.**
+   - Ink the headquarters signs by hand. Keep R16's shapes as the meaning, drawn in the manuscript's line and a little larger, each with a short staff and the holder's name in the staff's hand.
+   - The front is a heavy ink line whose teeth are drawn, not stamped.
+   - A draft axis is a broad arrow outlined in pencil and hatched by hand.
+   - The president's marks are blue pencil, with the grain and uneven pressure of a real crayon.
+   - Pencil notes are graphite, and lighter as they age.
+9. **The furniture of the map.**
+   - A double neat line, with degree ticks along it and a faint graticule.
+   - A cartouche in the period's plain style: the title in engraved capitals, "Compiled at the War Department from reports received", the date, and a ruled frame.
+   - A scale bar in miles, in period form.
+   - A north arrow.
+   - No figures, seals or emblems (the standing rules).
+10. **Close zoom.**
+    - Today the closest view turns angular and nearly empty.
+    - Keep levels of detail, so shapes are drawn from less simplified geometry as the view closes in.
+    - Show what exists at that scale: towns, rail stations where the layer has them, the 1860 county lines faintly, relief in finer hachures, and rivers to smaller rank.
+    - Never invent roads.
+11. **The sea regions.** Today they draw as grey boxes over the Chesapeake and the Eastern Shore. A sea region gets no fill and no box. Its name is set in italic capitals on the water, with a fine dotted limit only where play needs one.
+
+**References.** Public-domain scans of Civil War manuscript maps, for example Jedediah Hotchkiss's maps on Wikimedia Commons (the Library of Congress refused your fetch), are references for the look only. Name each one in the recipe, and never trace or copy one into the game.
+
+**Defaults and layout.**
+- A becomes the prototype's default look, and B, C and 0 stay selectable.
+- D's table layout stays on its route. Rewiring the desk into it is a later request.
+- Show the improved A in D as well.
+
+**Deliverables in `art-masters/R24/`:**
+- the hero frame before and after, at 3440×1440;
+- A's opening view and D, at 1920×1080 and 3440×1440;
+- the closest view around Manassas Junction;
+- a before-and-after sheet set against R23's A;
+- bake times, frame times and the texture budget, staying under the 96 MiB cap.
+
+The write scope is `prototypes/desk/`, `art-masters/R24/` and one appended status. The writing rule, the command-log equivalence test, the illustrative-layer rule (mocks only on the comparison route, marked as illustrative) and the gitignore on the derived geometry stay as before.
+
+Status: waiting on Codex (R24)

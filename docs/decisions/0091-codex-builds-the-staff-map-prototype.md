@@ -1,6 +1,6 @@
 # 0091: Codex builds the staff map into the desk prototype now
 
-Status: accepted (2026-11-17). The owner asked where the map comes in, since a player should not play through dry reports alone. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0090 (which had rejected the staff map for now) and 0089 (the desk prototype's scope).
+Status: accepted (2026-11-17). The owner asked where the map comes in, since a player should not play through dry reports alone. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0090 (which had rejected the staff map for now) and 0089 (the desk prototype's scope). Amended by 0093 (the look is the engineer's manuscript, and the map covers the table).
 
 ## Context
 

@@ -94,5 +94,6 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0088](0088-the-console-and-m2-retired.md) | The console on the new kernel, and M2 retired | accepted |
 | [0089](0089-codex-builds-a-desk-prototype.md) | Codex builds a desk prototype on the console's driver | accepted; amended by 0090, 0091 |
 | [0090](0090-codex-decoration-icons-and-desk-access.md) | Codex makes the first document decoration, drafts the map icons and gives the desk its keys and skins | accepted; amended by 0091 |
-| [0091](0091-codex-builds-the-staff-map-prototype.md) | Codex builds the staff map into the desk prototype now | accepted |
+| [0091](0091-codex-builds-the-staff-map-prototype.md) | Codex builds the staff map into the desk prototype now | accepted; amended by 0093 |
 | [0092](0092-codex-takes-coding-tasks.md) | Codex takes coding tasks through its command line | accepted |
+| [0093](0093-the-map-is-the-engineers-manuscript-on-the-table.md) | The staff map is the engineer's manuscript, and it covers the table | accepted |
