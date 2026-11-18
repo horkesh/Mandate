@@ -96,6 +96,7 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
   useEffect(()=>{engine.current?.setAppearance(appearance);},[appearance,tick===0]);
   useEffect(()=>{engine.current?.setLook(look);},[look,tick===0]);
   useEffect(()=>{engine.current?.setPalette(palette);},[palette,tick===0]);
+  useEffect(()=>{engine.current?.setCalendar(date);},[date,tick===0]);
   useEffect(()=>{if(!engine.current?.ready)return;if(framing==='hero')engine.current.fitGeographic([-78.35,38.15,-76.72,39.4]);if(framing==='eastern')engine.current.fitGeographic([-79.2,36.65,-75.35,39.65]);if(framing==='manassas')engine.current.closestManassas();},[framing]);
   const visited=useRef('');
   useEffect(()=>{if(destination&&engine.current?.ready&&visited.current!==destination){visited.current=destination;engine.current.focusRegion(destination);}},[destination,tick]);

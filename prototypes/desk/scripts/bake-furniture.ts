@@ -5,7 +5,7 @@ import {fileURLToPath,pathToFileURL} from 'node:url';
 import {createHash} from 'node:crypto';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const out=`${root}/public/map-data/union-1861-signs`,sha=(b:string|Buffer)=>createHash('sha256').update(b).digest('hex');
-const inputs=['web/map/furniture.ts','web/map/glyph-design.ts','web/map/furniture-plan.ts','web/map/furniture-r35.json','web/map/woodlands.json','web/map/projection.ts','web/furniture-build.ts','scripts/bake-furniture.ts','public/map-data/union-1861.json'];
+const inputs=['web/map/furniture.ts','web/map/glyph-design.ts','web/map/furniture-plan.ts','web/map/furniture-placement.ts','web/map/furniture-r35.json','web/map/woodlands.json','web/map/projection.ts','web/furniture-build.ts','scripts/bake-furniture.ts','public/map-data/union-1861.json'];
 export async function ensureFurnitureAtlas(force=false){
  const references=inputs.map(path=>({path,sha256:sha(readFileSync(`${root}/${path}`))})),revision=sha(JSON.stringify(references));
  if(!force&&existsSync(`${out}/manifest.json`)){
@@ -19,7 +19,7 @@ export async function ensureFurnitureAtlas(force=false){
   const {png,...result}=await page.evaluate(()=>(window as any).buildFurniture());
   mkdirSync(out,{recursive:true});const pixels=Buffer.from(png,'base64'),file='geographic.png';writeFileSync(`${out}/${file}`,pixels);
   const manifest={version:1,revision,file,sha256:sha(pixels),...result};
-  writeFileSync(`${out}/${file}.recipe.json`,JSON.stringify({asset:`public/map-data/union-1861-signs/${file}`,request:'R35',date:'2026-11-18',tool:'Chromium SVG rasterizer + Canvas2D',mode:'Static geographic sprite layer with three precomputed zoom placements',plan:'Previously confirmed ChatGPT Pro 100; no image service',client:'Codex',model:'Procedural SVG, no image model',apiKeyUnset:!process.env.OPENAI_API_KEY,prompt:'Eight compositions per geographic sign, manuscript ink and sepia/grey-green washes. No figures, flags, seals or game art.',requestedSize:'1280x1536',actualSize:'1280x1536',references,humanEdits:[],postProcess:['Pack native SVG rasterizations into one shared texture; reject colliding and water footprints at build time'],provenanceMarks:'None created or removed',sha256:manifest.sha256},null,2));
+  writeFileSync(`${out}/${file}.recipe.json`,JSON.stringify({asset:`public/map-data/union-1861-signs/${file}`,request:'R36',date:'2026-11-18',tool:'Chromium SVG rasterizer + Canvas2D',mode:'Static geographic sprite atlas, three zoom placements and bounded land-safe alternatives',plan:'Previously confirmed ChatGPT Pro 100; no image service',client:'Codex',model:'Procedural SVG, no image model',apiKeyUnset:!process.env.OPENAI_API_KEY,prompt:'R36 fine brown hill bands and town/capital signs at authored points; existing R35 non-mountain glyphs reused. No figures, flags, seals or game art.',requestedSize:'1280x1536',actualSize:'1280x1536',references,humanEdits:[],postProcess:['Pack native SVG rasterizations into one shared texture; reject colliding and water footprints at build time'],provenanceMarks:'None created or removed',sha256:manifest.sha256},null,2));
   writeFileSync(`${out}/manifest.json`,JSON.stringify(manifest,null,2));
   console.log(JSON.stringify({bakeMs:result.bakeMs,bytes:result.bytes,bands:result.bands.map((b:any)=>({name:b.name,signs:b.signs.length,rejected:b.rejected.length}))}));
  }finally{await browser.close();await server.close();}

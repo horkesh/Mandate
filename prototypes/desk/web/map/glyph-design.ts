@@ -48,9 +48,16 @@ export function glyphDesign(kind:GlyphKind,key:string):Design{
   line([-25,-9],[25,-8]);for(let i=0;i<2+v;i++)line([-16+i*5,10],[-12+i*5,10]);
  }
  if(kind==='mountain'){
-  const n=2+v%4,ridge:Point[]=[[-27,12]];
-  for(let i=0;i<n;i++){const x=-22+(i+.5)*44/n,y=-6-random()*14;ridge.push([x,y],[x+44/n*.44,7+random()*4]);line([x,y],[x+2,2],[x+44/n*.4,11]);for(let j=0;j<3+v%3;j++)line([x+2+j*1.8,y+5+j*2],[x+5+j*1.8,9]);}
-  ridge.push([28,13]);line(...ridge);wash(ridge,'#796852',.21);line([-28,15],[-9,14],[8,16],[29,14]);
+  const n=4+v%5,step=54/n;
+  for(let i=0;i<n;i++){
+   const x=-27+(i+.5)*step,base=4+random()*3,peak=base-5-random()*5;
+   // Open shoulders and a gently broken summit; fine strokes shade one flank.
+   line([x-step*.55,base],[x-1,peak+1],[x+.5,peak],[x+step*.5,base-.6]);
+   for(let j=0;j<3+v%3;j++){
+    const t=(j+1)/(4+v%3),y=peak+(base-peak)*t;
+    line([x+step*.45*t,y],[x+step*.45*t+1.5,Math.min(base+.3,y+2.8)]);
+   }
+  }
  }
  if(kind==='woods'){
   const n=2+v%5;for(let i=0;i<n;i++){
@@ -85,5 +92,6 @@ export function glyphDesign(kind:GlyphKind,key:string):Design{
 export function glyphPaths(kind:GlyphKind,key:string){return glyphDesign(kind,key).paths;}
 export function glyphSvg(kind:GlyphKind,key:string){
  const {paths,fills}=glyphDesign(kind,key),d=(p:Point[])=>p.map(([x,y],i)=>`${i?'L':'M'}${x} ${y}`).join(' ');
- return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -32 80 64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">${fills.map(f=>`<path d="${d(f.points)}Z" fill="${f.colour}" fill-opacity="${f.opacity}" stroke="none"/>`).join('')}${paths.map((p,i)=>`<path d="${d(p)}" stroke-width="${(.75+(i%5)*.22).toFixed(2)}" opacity="${.78+(i%3)*.09}"/>${i%4===0?`<circle cx="${p[0]![0]}" cy="${p[0]![1]}" r=".7" fill="currentColor" stroke="none"/>`:''}`).join('')}</svg>`;
+ const hills=kind==='mountain';
+ return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -32 80 64" fill="none" stroke="${hills?'#79604a':'currentColor'}" stroke-linecap="round" stroke-linejoin="round">${fills.map(f=>`<path d="${d(f.points)}Z" fill="${f.colour}" fill-opacity="${f.opacity}" stroke="none"/>`).join('')}${paths.map((p,i)=>`<path d="${d(p)}" stroke-width="${(hills?.34+(i%4)*.07:.75+(i%5)*.22).toFixed(2)}" opacity="${hills?.82:.78+(i%3)*.09}"/>${!hills&&i%4===0?`<circle cx="${p[0]![0]}" cy="${p[0]![1]}" r=".7" fill="currentColor" stroke="none"/>`:''}`).join('')}</svg>`;
 }

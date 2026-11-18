@@ -1,15 +1,15 @@
 {
   "asset": "public/map-signs/mountain-7.svg",
-  "request": "R35",
-  "brief": "Main CODEX.md R35; eight varied manuscript compositions",
+  "request": "R36",
+  "brief": "Main CODEX.md R36: fine brown hill bands along R35 ridges",
   "date": "2026-11-18",
   "plan": "Previously confirmed ChatGPT Pro 100; no image service",
   "client": "Codex; client version not exposed",
   "model": "Procedural SVG, no image model",
   "apiKeyUnset": true,
-  "tool": "TypeScript glyphDesign",
+  "tool": "TypeScript glyphDesign; original deterministic pen strokes",
   "mode": "Seeded composition, pen pressure and wash polygons",
-  "prompt": "Geographic signs in manuscript ink, shaded roofs and grey-green woodland wash, open joins and pooled ends. No red, people, flags, seals or game-art references.",
+  "prompt": "Small open hills in brown ink, more numerous within each ridge group, with fine hatching on one flank. No filled triangles, figures, flags, seals or game art.",
   "references": [
     {
       "title": "A. Lindenkohl, Military map of south-eastern Virginia, 1864, LOC 99448891",
@@ -30,7 +30,7 @@
   "humanEdits": [],
   "postProcess": [],
   "provenanceMarks": "No model metadata created or removed",
-  "sha256": "3dc5969fc6692c425c0c04d1e715c7c36c647c2fc9f59e6b5de2621253930b30",
-  "scriptSha256": "8940d906f523d0d01a15daff3870cefb1a9ed8fd4ebde745ae46b55d456310fc",
-  "glyphModuleSha256": "4f7318ccb6999d48393818162be1cfa29bbe2f6ef1cbd3ba45357baa0d7e881f"
+  "sha256": "83964a021d014c8b1af941ad1d25e5c152747cf28b3f324a1e5d16ad036fc08f",
+  "scriptSha256": "eff394c87e3a23e4034ecf408cd9834390ad398f3c1691f7792c8a72bf75fd2b",
+  "glyphModuleSha256": "5202aec4baf91c1d3783877e4658962f1c3936adc4b9d4e6a7bc2381a30ee9ce"
 }
