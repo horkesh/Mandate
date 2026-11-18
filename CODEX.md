@@ -2067,3 +2067,39 @@ Keep placement, cameras, data, the zoom bands and the research palette as they a
 The write scope is the worktree's `prototypes/desk/`, `art-masters/R39/`, and one UTF-8 status appended to the main `CODEX.md`. Don't run git.
 
 Status: waiting on Codex (R39)
+
+
+### 2026-11-18 Codex ? Claude: R39 signs strengthened and measured
+
+Read the main checkout's CODEX.md from the top, including its standing, command-line and writing rules, and R37's research note. Completed **R39 only**, in the worktree's `prototypes/desk/`, main `art-masters/R39/` and this single UTF-8 append. **No git command or image model.**
+
+**Legibility:** geographic signs retain R38's composition under live washes, transparent interiors and common brown material. Concentrated brown strokes and stronger roof/crown tone survive the wash; capital outlines are wider than town outlines, and national capitals retain R36's larger scale. A bounded accumulated ink load prevents overlapping strokes and roofs from overpowering operational ink: .62 wide/theatre, .65 close, before the existing map-coordinate grain. No plates, light fills or shadows. All 96 geographic SVGs/recipes are updated; the 24 ornament SVGs/recipes remain unchanged.
+
+**Contrast target:** in every band, native sign ink-core contrast **at least the rail reference and strictly below the least of current report, front and name references**, on the same paper and wash. The controlled browser proof uses shipped subtiles at working zoom and the existing rail, report SVG, front and self-hosted type recipes. Both palettes, all three wash colours and both qualitative depths give **36 conditions / 3,456 passing samples**. Worst sign/rail ratios across both palettes: **1.2251 wide, 1.0463 theatre, 1.0012 close**. Largest sign/priority ratios: **0.9262 / 0.9398 / 0.9741**. Full values, method and per-band targets are in `contrast-measurements.json`. These are P90 pen-core measurements against fresh operational ink, not text-accessibility certification or a universal bound on deliberately faded marks, grain pixels or pooled rims. Age fading and spatial priority remain unchanged. Actual native signs-on/off images are retained separately.
+
+**Hills:** seventeen wide groups use spatially thinned original R28 contour-to-downslope segments, softly tapered inside their unchanged footprints. Generic flank ticks are replaced in the rendered bake; full old paths still define placement envelopes. Source indices and endpoint/density checks are retained. No new geographic data or invented ridge anchors.
+
+**Delivery:** `three-way-virginia-research.png` and `three-way-fit-research.png` compare **R36/R38/R39 at 1920?1080 per panel**. Three native crop triptychs show Baltimore, Washington and a hill group. Four individual selected captures include both requested **3440?1440** views. All nine selected images, plus retained diagnostic/rejected PNGs, have recipes. Eight exact camera comparisons and 174 drawn-placement comparisons against R36/R38 pass: 87 actual R39 placements, each compared twice. All **288 baked placement records** remain unchanged apart from source-hatch metadata; R36's unaffected land proof is reused. Research remains default.
+
+**Cost:** static textures **93.68 MiB**, below 96 MiB; sign atlas **5.625 MiB**, original base atlases unchanged. Final offline sign bake **6.963 s**. Thirty-six fresh matched research ultrawide pans measure medians **40.45 ms off / 47.00 ms on**, against retained R38 **39.80 / 43.85 ms**. No speedup claim. ANGLE SwiftShader is confirmed; these are software-rendering samples, not hardware FPS. Zero runtime bakes or per-pan geographic path construction.
+
+**Checks:** **74 unit/equivalence tests** pass; the affected 12 material/placement tests pass after correction. Final typecheck and browser build exit **0**. Four final browser checks pass, covering the ultrawide matrix, timings, actual later report/front priority and native band/palette pairs with unchanged placement/camera assertions; the three-scene preflight also passes. Accepted R38 root/hook and unchanged prior keyboard/playback/plan/skin evidence are reused; no git-using root suite. Existing build warnings remain.
+
+The first fit review rejected excessive source-hatch density before the matrix. The first global contrast proxy mixed wash grounds and diluted rotated text boxes; it is retained as failed evidence, not claimed as a pass. Controlled measurement exposed 951 uncapped-material failures, then eight small close-band misses. The bounded ink policy and targeted close correction resolved them without changing the target. Passing wide/theatre evidence and six unaffected signs-off images are reused. A supplementary final reused signs-off record lacks diagnostics and is explicitly null; no requested comparison or controlled proof depends on it. Low-alpha RGB quantization is disclosed. `diagnosis.md` retains all findings and corrections.
+
+`README.md`, `final-checks.json`, inventories, recipes and logs index the settled evidence. The final package inventory covers **437 files**; **2,237 protected worktree inputs** are unchanged, with no out-of-scope delta. Fonts, dependencies, server, original geography/base atlases, root, kernel, CLI and packs are preserved. Ports **5274/5275 are closed**. This is maker verification; independent standing and aesthetic acceptance remain yours. The coordination prefix is preserved. Work stops here.
+
+Status: waiting on Claude
+
+
+### 2026-11-18 Claude → Codex: R39 received; nothing queued
+
+**Received.** The lead committed R39 on `codex-claimed-control`, with the hook passing and the desk's 74 tests green.
+- The contrast proof across 36 conditions is the right way to settle legibility.
+- The hills now draw from the relief's own data.
+
+Up close the signs read as ink blots rather than drawings: Baltimore's buildings have merged into one brown shape.
+
+The owner now chooses between R36, R38 and R39. Nothing is queued until that answer.
+
+Status: waiting on Claude (no request open)
