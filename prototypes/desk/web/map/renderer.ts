@@ -51,6 +51,7 @@ export class StaffRenderer {
   private claimChanges=new Map<string,number>();
   private frontPaths=new Map<string,Point[][]>();
   private controlCounts={regions:0,fronts:0,contacts:0,animating:0};
+  private controlPaint:{id:string;area:boolean;colour:number;alpha:number;strength:number}[]=[];
   private pencil: PencilRoute[] = [];
   private reviewPost: string | null = null;
   private bounds: Box;
@@ -300,7 +301,7 @@ export class StaffRenderer {
     this.readOverlayBoxes();this.drawControl();this.drawArrows();this.drawLabels();
     this.app.render();this.startup.firstRender??=performance.now();this.startup.lastRender=performance.now();this.host.dataset.ready='ready';this.onCamera();
     this.startup.lastOverlay=performance.now();this.startup.draws++;this.host.dataset.startup=JSON.stringify(this.startup);
-    this.host.dataset.control=JSON.stringify({...this.controlCounts,beliefs:Object.keys(this.model.control).length,segments:this.model.fronts.length,approvedRoutes:this.model.plans.filter(p=>p.approved).length,changed:[...this.claimChanges.keys()],points:this.regions.filter(r=>r.point).map(r=>({id:r.id,point:this.screen(r.id)})),reducedMotion:window.matchMedia('(prefers-reduced-motion: reduce)').matches});
+    this.host.dataset.control=JSON.stringify({...this.controlCounts,paint:this.controlPaint,beliefs:Object.keys(this.model.control).length,segments:this.model.fronts.length,approvedRoutes:this.model.plans.filter(p=>p.approved).length,changed:[...this.claimChanges.keys()],points:this.regions.filter(r=>r.point).map(r=>({id:r.id,point:this.screen(r.id)})),reducedMotion:window.matchMedia('(prefers-reduced-motion: reduce)').matches});
     this.frameTimes.push(performance.now()-started);if(this.frameTimes.length>600)this.frameTimes.shift();
     if(this.controlCounts.animating)this.invalidate();
   }
@@ -313,17 +314,25 @@ export class StaffRenderer {
     const began=this.claimChanges.get(id);return began===undefined?1:Math.min(1,(performance.now()-began)/900);
   }
   private drawControl(){
-    const g=this.washes,z=this.camera.z;g.clear();this.controlCounts={regions:0,fronts:0,contacts:0,animating:0};
+    const g=this.washes,z=this.camera.z;g.clear();this.controlCounts={regions:0,fronts:0,contacts:0,animating:0};this.controlPaint=[];
     const frame=this.frameScreen(),visible=(id:string)=>{const b=this.regionPaths.get(id)?.bbox;return !b||(b[2]*z+this.camera.x>frame[0]&&b[0]*z+this.camera.x<frame[2]&&b[3]*z+this.camera.y>frame[1]&&b[1]*z+this.camera.y<frame[3]);};
     for(const [id,belief] of Object.entries(this.model.control)){
       if(!visible(id))continue;
       const rings=this.rings(id),progress=this.progress(id);if(progress<1)this.controlCounts.animating++;
-      if(!rings.length||(!belief.neutralGovernment&&!Object.values(belief.shares).some(s=>s>0)))continue;
-      this.controlCounts.regions++;
+      if(!belief.neutralGovernment&&!Object.values(belief.shares).some(s=>s>0))continue;
       const shares=Object.entries(belief.shares).filter(([,s])=>s>0).sort((a,b)=>b[1]-a[1]||(a[0]<b[0]?-1:1));
       const neutral=belief.neutralGovernment&&!belief.holder&&!belief.contested;
       const colour=this.appearance.contrast?0x182d4c:controlColour(belief.holder??shares[0]?.[0]??null,this.model.faction,neutral);
       const alpha=controlOpacity(belief,this.model.day)*(.3+.7*progress),strength=neutral?1:Math.max(...shares.map(([,s])=>s),0)/1000;
+      if(!rings.length){
+        // A point is a claim sign, never a guessed territorial boundary.
+        const region=this.regions.find(r=>r.id===id);
+        if(!region?.point||['sea','river','off_map'].includes(region.kind))continue;
+        const [x,y]=this.project(region.point);
+        g.circle(x,y,7/z).fill({color:colour,alpha:alpha*strength}).stroke({color:colour,width:1.5/z,alpha});
+        this.controlPaint.push({id,area:false,colour,alpha,strength});continue;
+      }
+      this.controlCounts.regions++;this.controlPaint.push({id,area:true,colour,alpha,strength});
       for(const polygon of rings){
         const ring=polygon[0];if(!ring?.length)continue;
         g.poly(ring.flat()).fill({color:colour,alpha:alpha*strength});for(const hole of polygon.slice(1))g.poly(hole.flat()).cut();
@@ -382,7 +391,7 @@ export class StaffRenderer {
   }
   private readOverlayBoxes(){
     const origin=this.host.getBoundingClientRect(),root=this.host.closest('.playable-table,.map-study')??this.host.parentElement!;
-    const nodes=root.querySelectorAll<HTMLElement>('.map-meridian,.table-calendar,.table-trays,.table-books,.table-docket,.table-run,.table-playback,.table-paper,.holder-at-flag,.map-plan-sheet,.study-cartouche,.map-cartouche,.map-scale,.study-caption,.study-navigation,.map-tools,.table-report,.table-commander,.table-tray,.table-mock-label,.mark-caption,.hq-caption,.axis-label,.support-label,.arrow-handle,.pencil-number');
+    const nodes=root.querySelectorAll<HTMLElement>('.map-meridian,.table-calendar,.table-trays,.table-books,.table-docket,.table-run,.table-playback,.table-paper,.holder-at-flag,.map-plan-sheet,.study-cartouche,.map-cartouche,.control-legend,.map-scale,.study-caption,.study-navigation,.map-tools,.table-report,.table-commander,.table-tray,.table-mock-label,.mark-caption,.hq-caption,.axis-label,.support-label,.arrow-handle,.pencil-number');
     const boxes:Box[]=[];this.captionReservations=[];
     for(const node of nodes){if(!node.offsetWidth||getComputedStyle(node).display==='none')continue;const b=node.getBoundingClientRect();const box:Box=[b.left-origin.left-5,b.top-origin.top-5,b.right-origin.left+5,b.bottom-origin.top+5];boxes.push(box);if(!node.classList.contains('mark-caption')&&!node.classList.contains('hq-caption'))this.captionReservations.push(box);}
     const signature=JSON.stringify(boxes);this.overlayBoxes=boxes;const changed=signature!==this.overlaySignature;this.overlaySignature=signature;return changed;

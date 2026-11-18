@@ -1,5 +1,5 @@
 import {mapProjection} from '../web/map/projection.ts';
-import type {MapGeometry} from '../web/map/model.ts';
+import type {MapGeometry,GeoShape} from '../web/map/model.ts';
 import {readFileSync,writeFileSync,existsSync,mkdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {fileURLToPath,pathToFileURL} from 'node:url';
@@ -8,7 +8,9 @@ import {roughRings} from '../web/map/atlas.ts';
 const root=fileURLToPath(new URL('..',import.meta.url));
 const sha=(v:Buffer|string)=>createHash('sha256').update(v).digest('hex');
 /** Display inputs only; all geographic anchors and hit/label paths stay exact. */
-export function compactGeometry(g:MapGeometry):MapGeometry{
+export function compactGeometry(g:MapGeometry,areas:Record<string,GeoShape>={}):MapGeometry{
+ // R30 repairs absent cartography only, never existing areas or political claims.
+ g={...g,regions:g.regions.map(r=>r.shape||!areas[r.id]?r:{...r,shape:areas[r.id]!})};
  const projection=g.schematic?geoMercator().center([-1.4,52]).scale(20000).translate([0,0]):mapProjection(false);
  const regionAngles:Record<string,number>={};
  for(const r of g.regions)if(r.kind==='land'&&r.shape){
@@ -23,12 +25,13 @@ export function ensureRuntimeMaps(packs=['union-1861','testbed']){
  for(const pack of packs){
   if(!['union-1861','testbed'].includes(pack))throw Error('Unknown map');
   const source=`${root}/public/map-data/${pack}.json`,out=`${root}/public/map-data/${pack}-atlas/geometry.json`,data=readFileSync(source),sourceHash=sha(data);
+  const areaFile=`${root}/public/map-data/${pack}-claim-areas.json`,areaData=existsSync(areaFile)?readFileSync(areaFile):null,areaSha256=areaData?sha(areaData):null;
   if(existsSync(out)&&existsSync(`${out}.recipe.json`)){
    const recipe=JSON.parse(readFileSync(`${out}.recipe.json`,'utf8'));
-   if(recipe.sourceSha256===sourceHash&&recipe.scriptSha256===scriptSha256&&recipe.sha256===sha(readFileSync(out)))continue;
+   if(recipe.sourceSha256===sourceHash&&recipe.scriptSha256===scriptSha256&&(recipe.areaSha256??null)===areaSha256&&recipe.sha256===sha(readFileSync(out)))continue;
   }
-  const value=compactGeometry(JSON.parse(data.toString())),text=JSON.stringify(value);mkdirSync(`${root}/public/map-data/${pack}-atlas`,{recursive:true});writeFileSync(out,text);
-  writeFileSync(`${out}.recipe.json`,JSON.stringify({request:'R26',tool:'scripts/runtime-map.ts',mode:'Lossless display projection of static build data',source,sourceSha256:sourceHash,scriptSha256,sha256:sha(text),regionsAndRiversPreserved:true,sourceBytes:data.length,runtimeBytes:Buffer.byteLength(text),omitted:'Static relief, rail, base and fine county paths already present in saved atlas images; metadata counts retained.',precomputed:'Region label principal-axis angles, with the renderer original algorithm and projection.'},null,2));
+  const value=compactGeometry(JSON.parse(data.toString()),areaData?JSON.parse(areaData.toString()):{}),text=JSON.stringify(value);mkdirSync(`${root}/public/map-data/${pack}-atlas`,{recursive:true});writeFileSync(out,text);
+  writeFileSync(`${out}.recipe.json`,JSON.stringify({request:areaData?'R30':'R26',date:'2026-11-18',brief:'CODEX.md R30; compact display geometry',plan:'ChatGPT Pro 100, prior owner confirmation; no image service',client:'Codex command-line session',model:'No image model',apiKeyUnset:!process.env.OPENAI_API_KEY,prompt:null,requestedSize:'Geographic display vector',actualSize:Buffer.byteLength(text),variantsMade:1,variantChosen:1,humanEdits:[],postProcess:['omit already-baked static paths','precompute label angles','restore only missing areas from dated supplement'],provenanceMarks:'Geographic data; no provenance marks generated or removed',references:[{path:source,sha256:sourceHash,sourceRecipe:`${source}.recipe.json`},...(areaData?[{path:areaFile,sha256:areaSha256,sourceRecipe:`${areaFile}.recipe.json`}]:[])],tool:'scripts/runtime-map.ts',mode:'Lossless display projection with exact missing-area supplement where available',source,sourceSha256:sourceHash,scriptSha256,sha256:sha(text),areaFile:areaData?areaFile:null,areaSha256,existingRegionsAndRiversPreserved:true,restoredAreas:areaData?Object.keys(JSON.parse(areaData.toString())):[],sourceBytes:data.length,runtimeBytes:Buffer.byteLength(text),omitted:'Static relief, rail, base and fine county paths already present in saved atlas images; metadata counts retained.',precomputed:'Region label principal-axis angles, with the renderer original algorithm and projection.'},null,2));
   console.log(`${pack}: display geometry ${Buffer.byteLength(text)} bytes, source ${data.length} bytes`);
  }
 }

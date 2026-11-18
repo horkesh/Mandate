@@ -569,3 +569,94 @@ a live territorial-transfer animation. Ten capture/recipe pairs, the short
 recording, measurements, maker review, exact file inventory and retained failures
 are indexed by `art-masters/R29/final-checks.json`. Formal acceptance remains
 with Claude's review lane.
+
+## R30: stronger control colour and the missing Eastern areas
+
+The live washes use ultramarine blue `#084bd6`, crimson red `#d32238` and
+yellow ochre `#f7c52f`. Pencil pigment rises from 0.32 to 0.60 and ink from
+0.44 to 0.72, before the existing age and share factors. The pooled rims,
+broken pencil edges, contested hatching, violet corrections and blue pencil
+orders retain their meanings. Paper and relief remain in the saved atlases.
+The six-entry manuscript key sits beside the cartouche, with text for every
+swatch. Its hatch survives high contrast and its type follows the desk setting.
+
+The bare Eastern regions had received reports, rather than low positive shares.
+Washington, Fort Monroe and the Eastern Shore each have Union 1000‰. Annapolis
+and Southern Maryland, the Peninsula, Norfolk, and Suffolk and City Point have
+explicit neutral-government reports with empty faction shares. All 219 start
+table rows occur in the opening bulletin with identical faction shares. The
+unreported sea and river regions stay paper and say "no report received".
+
+Seven missing display areas are rebuilt from the existing Newberry archive's
+records active on 6 March 1861. The publisher omits possessive apostrophes and
+adds `(ext)` to counties that later ceased to exist. The District is the sole
+active District of Columbia county record, `dcs_washington`. Exact source IDs,
+dates, county matches, licence and hashes are in `art-masters/R30/area-build.json`.
+No partial area or guessed boundary is used. The supplement fills only null
+shapes in compact display geometry; it changes no claim, pack, graph edge,
+reference point, existing shape, river, or static atlas. Other claimed places
+without recovered areas, including Baltimore, get a small coloured point sign.
+They do not acquire an invented territorial field.
+
+From this worktree's `prototypes/desk/`, with its existing map data and tools:
+
+```powershell
+python -B scripts/r30-areas.py
+npm run dev -- --at-war
+```
+
+The first command reads the retained R24 Newberry source in the main checkout
+and writes an ignored `public/map-data/union-1861-claim-areas.json` plus recipe.
+The normal startup merges it into compact geometry and loads the unchanged
+saved atlas. Rebuilding those seven areas produces identical bytes.
+
+The current checks keep evidence in the main checkout's R30 folder:
+
+```powershell
+$env:DESK_EVIDENCE_REQUEST='../../ByOrderOfThePresident/art-masters/R30'
+npm run check
+npx playwright test --config playwright.r30.config.ts
+npx tsx scripts/r30-measure.ts
+python -B C:/Pyrrhic/ByOrderOfThePresident/art-masters/R30/measure.py
+```
+
+The 48 unit/equivalence tests, build, final typecheck and non-git root gates pass.
+The six distinct browser checks cover the seven areas, both display sizes,
+normal and enlarged/high-contrast key, no-report hover/text, eight real views,
+and a matched pigment comparison. R29's real peace/war/week fixtures are reused;
+no simulation campaign or synthetic political claim is added. The original R29
+opening images supply the before-and-after sheets. A separate fit image uses
+test-only module interception to reconstruct R29 pigment/opacity on identical
+R30 geometry and paper; it is a measurement control, not an original R29 capture.
+
+Measured median raster HSL, R29 to R30, on the clean 1920 fit:
+
+| Wash | Hue | Saturation |
+|---|---:|---:|
+| Union | 150.0° → 220.7° | 3.6% → 41.2% |
+| Enemy | 20.7° → 2.7° | 49.7% → 59.1% |
+| Neutral government | 41.3° → 44.1° | 55.6% → 82.4% |
+
+The nearly grey R29 Union field has an unstable hue; its very low saturation is
+the useful comparison. `pigment-measurements.json` also gives source-pigment HSL,
+the RGB values, masks, pixel counts and method. Full-share area masks exclude
+pooled rims, labels and furniture. Native peace, war, fit and Virginia captures
+at 1920×1080 and 3440×1440, their recipes and two comparisons are in R30.
+
+Earlier diagnostic evidence is retained. A stylesheet precedence error initially
+put the scale under the key; scoped styling fixes it. Namespaced swatches avoid
+the enemy panel's CSS. The capture fixture initially reversed the sea region's
+ID; correcting that selector passed the focused hover check. The final clean
+captures park the pointer on the calendar because `(0,0)` is itself map ground.
+`first-capture/` preserves the earlier images. The full desk gate is reused after
+recipe-only metadata completion; targeted tests and final typecheck pass.
+
+`final-checks.json` indexes the settled evidence. Static images remain at
+88.06 MiB with no runtime bake. This is maker verification; the existing R29
+live contested/territorial-transfer evidence gaps and console notes limitation
+are unchanged and remain outside R30.
+
+A bounded warm-open follow-up passes the existing two-second target: repeated
+opens take 1.64–1.80 seconds at 3440×1440 and 1.40–1.54 seconds at 1920×1080.
+The 2.20-second initial warm-check open and the capture run's 2.03/2.04-second
+later ultrawide samples remain recorded. No performance code was tuned.

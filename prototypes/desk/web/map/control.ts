@@ -2,13 +2,14 @@
 import type {SeatRequest} from '@mandate/kernel/seat-api';
 import type {Point} from './model.ts';
 import {markState} from './model.ts';
+import {M} from './strings.ts';
 
-export const CONTROL_COLOURS={friendly:0x2465b4,enemy:0xbd342f,neutral:0xc59324,correction:0x79438f};
+export const CONTROL_COLOURS={friendly:0x084bd6,enemy:0xd32238,neutral:0xf7c52f,correction:0x79438f};
 export type ControlBelief=SeatRequest['view']['controlBeliefs'][keyof SeatRequest['view']['controlBeliefs']];
 export function controlColour(faction:string|null,own:string|null,neutral=false){return neutral?CONTROL_COLOURS.neutral:faction===own?CONTROL_COLOURS.friendly:CONTROL_COLOURS.enemy;}
-export function controlOpacity(belief:ControlBelief,today:number){return markState(today,belief.asOfDay).opacity*(belief.mark==='ink'?.44:.32);}
+export function controlOpacity(belief:ControlBelief,today:number){return markState(today,belief.asOfDay).opacity*(belief.mark==='ink'?.72:.60);}
 export function claimWords(region:string,belief:ControlBelief|undefined,name:(id:string,kind?:string)=>string,date:(day:number)=>string){
- if(!belief)return `${region}: no control report received.`;
+ if(!belief)return `${region}: ${M.noControlReport}`;
  const holding=belief.contested?'Contested ground':belief.holder?`${name(belief.holder,'faction')} holds this ground`:belief.neutralGovernment?'Neutral government':'No holder reported';
  const shares=Object.entries(belief.shares).filter(([,v])=>v>0).sort(([a],[b])=>a<b?-1:1).map(([f,v])=>`${name(f,'faction')} ${v}‰`).join(', ');
  const authors=[...new Set(belief.sources.map(s=>name(s.author,'person')))];

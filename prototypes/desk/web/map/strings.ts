@@ -1,5 +1,8 @@
 /** R18 out-of-world map chrome; report and place wording comes from the seat and geometry. */
 export const M = {
+  noControlReport:'no report received.',
+  controlLegend:'Control on this map',
+  controlKey:{union:'Union',enemy:'Enemy',neutral:'Neutral government',contested:'Contested',single:'Single report',old:'Old report'},
   regionNames:'Places on the map',
   title:'Staff map', textTwin:'Read the map as text', mapView:'Return to the map',
   loading:'Opening the staff map…', missing:'The local map has not been built. The text record is available below.',
