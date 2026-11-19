@@ -1,0 +1,90 @@
+{
+  "asset": "prototypes/desk/public/fonts/im-fell-regular.woff2",
+  "request": "R14",
+  "brief": "CODEX.md R14; ASSETS.md section 5; decision 0035",
+  "date": "2026-11-17",
+  "tool": "FontTools + Brotli",
+  "mode": "sourced font; lossless WOFF2 encoding",
+  "model": null,
+  "plan": "not applicable; no generation",
+  "client": "Codex command line",
+  "prompt": null,
+  "requestedSize": "WOFF2; original glyph set",
+  "actualSize": 93380,
+  "references": [
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf._c_m_a_p.ttx",
+      "sha256": "022888e3f836d8bd0d00acfeae36be19a6a1f057248cb45d8e0c8b46f071bb6d"
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf._g_a_s_p.ttx",
+      "sha256": "e9948e087a145adfd38d7656b515ee81955e148e365f9fec9cc55ae6350679ab"
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf._g_l_y_f.ttx",
+      "sha256": "64255065d35d95e46e1252d3a99f6f23a6b5b0782e6c9f03536bc01a46b9e9a2"
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf._h_e_a_d.ttx",
+      "sha256": "57e9f17553c13dda9655d23475e271ef003a434a1e613e999389c7e811b0bae6"
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf._h_h_e_a.ttx",
+      "sha256": "9924b0dcba91b39b896441dc7d9b829073c1af773c53d297886bb0535684f065"
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf._h_m_t_x.ttx",
+      "sha256": "190c659fc3150b6c33481c82f45c9a56935f3179245729be3e90fee08a3606ea"
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf._k_e_r_n.ttx",
+      "sha256": "d7d9759a98540b32857b9df40d3b22cc077b4e82990b5b9d21f716f74d4d747c"
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf._l_o_c_a.ttx",
+      "sha256": "ef022c115f9a40353f5060965ccba7ef3c14c8a81331d2d0b93f7e7cdd0fe068"
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf._m_a_x_p.ttx",
+      "sha256": "c7c7ca82120c8e428b26cc1afd4d5f9226d7b8509e2446ed7cf23c10d47f8347"
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf._n_a_m_e.ttx",
+      "sha256": "82bb906b893202c725ff594fd423684851a89e67e6c9051329b00e89138931e0"
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf._p_o_s_t.ttx",
+      "sha256": "097e472a94b1e767c55c22dd6631b22727ae9e776477d15a61448bd097df8e30"
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf.G_S_U_B_.ttx",
+      "sha256": "b791ac5049504da68f3f751aebcc281b741850a2c10533f1800746eb3202fc99"
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf.GlyphOrder.ttx",
+      "sha256": "7c693cec4a0584202f955f790ee8d4b6c456efd0d8c81b97d07ac17d1864e66b"
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf.O_S_2f_2.ttx",
+      "sha256": "27604c1f1abf8201d8d3ce1fd0cd3568615845433ee7d3e3f1fca65a14f917c9"
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/librefonts/imfellenglish/4cc247267036e091cd401802ec99a383a403454a/IMFeENrm28P.ttf.ttx",
+      "sha256": "8d0ba249ee3cc8e60db105608a9db80d29336d0ba5f5d8edca6a36eb7204b0f7"
+    }
+  ],
+  "licence": "SIL Open Font License 1.1",
+  "licenceFile": "IM-Fell-OFL.txt",
+  "licenceSha256": "2a3ca501fc4d5efcad9798531e3e06962b1e20c60e464f6cbd6c17630112c773",
+  "postProcess": [
+    "Reassembled upstream split TTX tables with FontTools, encoded WOFF2; no glyph changes"
+  ],
+  "humanEdits": [],
+  "recipeScript": "scripts/font-recipes.py",
+  "recipeScriptSha256": "59faadc49c606ac1fb975064ced34f16f01b8e544659eeee02ee7cd34ea8f631",
+  "processingScript": "scripts/fonts.py",
+  "processingScriptSha256": "bce5646c6fcd27db4d45512e9969c1da60eeb9d7af237426e625e3cb81323347",
+  "masters": "art-masters/R14/fonts/",
+  "provenanceMarks": "No image generation; font metadata retained through FontTools encoding.",
+  "sha256": "bf7f2fe6153812c63af2bc25d19af7c6f603a5161cef2ee6a25d0cf403f9f375"
+}

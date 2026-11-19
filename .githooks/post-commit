@@ -1,0 +1,4 @@
+#!/bin/sh
+# Git LFS's post-commit hook (lane 0.7l), in .githooks (core.hooksPath). Without git-lfs it fails loudly.
+command -v git-lfs >/dev/null 2>&1 || { printf >&2 "\n%s\n\n" "This repository keeps the binaries under art/ in Git LFS, but 'git-lfs' was not found on your path. Install it (https://git-lfs.com) and run 'git lfs install --skip-repo'."; exit 2; }
+git lfs post-commit "$@"

@@ -980,6 +980,46 @@
       "copyUsed": "archive.org lifeofgeneralnat00woodrich, OCR: a period compilation, the weakest of the keys (lane 1.11r)",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "VA-CONV-1861",
+      "title": "Journal of the Acts and Proceedings of a General Convention of the State of Virginia, Assembled at Richmond, on Wednesday, the Thirteenth Day of February, 1861 (Richmond: Wyatt M. Elliott, 1861)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org journalofactspro00virg, OCR (lane 1.11r3); page numbers are the printed running heads",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "WADDELL-AUGUSTA",
+      "title": "Joseph A. Waddell, Annals of Augusta County, Virginia (1886 printing)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org annalsaugustaco00waddgoog, OCR (lane 1.11r3): a local history; its 1861-65 part is a war diary kept at Staunton",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "TYLER-TANEY",
+      "title": "Samuel Tyler, Memoir of Roger Brooke Taney, LL.D. (Baltimore: John Murphy, 1872)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org cu31924020877274, OCR (lane 1.11r3): a friend's biography; it prints Taney's own autobiography fragment and his letters, which are his own words, and a date or fact rests on it as a period work, not a contemporary judgment",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "TANEY-REPORTS",
+      "title": "Roger Brooke Taney, Reports of Cases Decided ... in the Circuit Court of the United States for the District of Maryland, ed. James Mason Campbell (Philadelphia: Kay & Brother, 1871)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org cu31924068531247, OCR (lane 1.11r3): Taney's own opinions, printed after his death; Ex parte Merryman is at pp. 246-270 (the headnote at p. 246 and the reporter's narrative at p. 253 are the reporter's words, not Taney's)",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

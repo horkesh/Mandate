@@ -31,7 +31,9 @@ export const SECTION_TEN_TESTS: readonly { readonly file: string; readonly least
   { file: 'packages/kernel/test/compliance.test.ts', least: 5, why: 'compliance' },
   { file: 'packages/kernel/test/rng.test.ts', least: 3, why: 'named seeded streams' },
   { file: 'packages/kernel/test/banned-apis.test.ts', least: 3, why: 'banned APIs, extended to every kernel folder' },
-  { file: 'packages/kernel/test/audience.test.ts', least: 5, why: 'the M2 audience tests' },
+  // Lane 1.13: M2's `audience.test.ts` retired with M2; lane 1.5 recast its nine cases on the new State, one for one
+  // ("M2’s audience cases on the new State"), so the check reads them there.
+  { file: 'packages/kernel/test/people-verbs.test.ts', least: 9, why: 'the M2 audience tests, recast on the new State (lane 1.5)' },
 ];
 
 export interface DoneRun {
@@ -52,10 +54,11 @@ export interface Criterion {
 }
 
 /**
- * What a run started at war by the labelled option is (0072): the stand-in generic principals march their own
- * capitals' garrisons on each other's capitals, so it proves the machinery and its outcome is not a war.
+ * What a run started at war by the labelled option is (0072). Lane 1.12 retired the stand-in generic principals: the
+ * rule-seat principals do their doctrine's historical jobs, but the war starts on day 0 by the option, not by each
+ * government's decision (lane 1.12 Part B), so the run proves the machinery and its outcome is not a war.
  */
-export const MECHANICS_RUN = ' (a mechanics run on stand-in principals: its outcome is not a war, 0072)';
+export const MECHANICS_RUN = ' (a mechanics run: at war from day 0 by the labelled option, not by the governments’ decisions; its outcome is not a war, 0072)';
 
 const fires = (s: Phase0Summary, mechanic: string): number => s.liveness.find((r) => r.mechanic === mechanic)?.fires ?? 0;
 

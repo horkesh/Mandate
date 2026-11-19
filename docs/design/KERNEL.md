@@ -1,6 +1,8 @@
-# Kernel (M2)
+# Kernel (M2, retired)
 
-This is how `packages/kernel` is put together after M2. It describes the engine before the redesign agreed on 2026-11-14 (fronts, plans, seats); it will be replaced by the foundation design. The code is the authority; this page is a map of it.
+**Retired in lane 1.13.** This page describes the M2 kernel (`GameState`, `turn`, `theatre`, its console and runners), deleted when the console moved to the new kernel. It is kept for the record; git history keeps the code. The kernel's module map is now [FOUNDATION section 10](FOUNDATION.md#10-kernel-architecture). Of M2 only `permille`, `compare`, `rng` and compliance (`compliance`, `directive` and `people`'s profile types) survive.
+
+This is how `packages/kernel` was put together after M2. It describes the engine before the redesign agreed on 2026-11-14 (fronts, plans, seats).
 
 ## Modules
 

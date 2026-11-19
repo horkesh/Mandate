@@ -108,7 +108,7 @@ export function combatPhase(ctx: TickContext, state: State): { readonly state: S
   const month = dateOfDay(state.calendarStart, ctx.day).month;
   const network = passageOf(map, state);
   // The control index alone (no supply), built fresh: the derived map's cache stays the map phase's.
-  const result = combatDay(ctx.world, { map, index: buildControlIndex(map, state.regionControl), network, month }, state, ctx.day);
+  const result = combatDay(ctx.world, { map, index: buildControlIndex(map, state.regionControl), network, month }, state, ctx.day, ctx.battleOrders);
   for (const o of result.occupations) {
     ctx.mapEvents.push({ event: 'occupation', record: o });
     fire(ctx, 'combat.occupation', o.deltaPermille);

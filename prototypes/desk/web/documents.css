@@ -1,0 +1,46 @@
+/* R15: PNG alpha supplies coverage; the active skin owns every ink colour.
+   image-set selects the independently rasterized 2x file on high-DPI screens. */
+.paper {
+  --double-rule: image-set(url('/art/union-1861/documents/rule-double.png') 1x, url('/art/union-1861/documents/rule-double@2x.png') 2x);
+  --thick-thin-rule: image-set(url('/art/union-1861/documents/rule-thick-thin.png') 1x, url('/art/union-1861/documents/rule-thick-thin@2x.png') 2x);
+}
+.document-decoration {
+  display:block;
+  background-color:var(--ink);
+  mask-repeat:no-repeat;
+  mask-position:center;
+  mask-size:100% 100%;
+  pointer-events:none;
+}
+.paper .rule {
+  border:0;
+  height:12px;
+  margin:1em 0 0;
+  mask-image:var(--double-rule);
+}
+.paper .decorated-header { position:relative; padding:1.2em .5em; border:0; margin-bottom:1.3em; }
+.document-head { position:absolute; inset:0; z-index:-1; }
+.telegraph-head {
+  mask-image:image-set(url('/art/union-1861/documents/telegraph-form-header.png') 1x, url('/art/union-1861/documents/telegraph-form-header@2x.png') 2x);
+}
+.press-head {
+  mask-image:image-set(url('/art/union-1861/documents/masthead-ornament.png') 1x, url('/art/union-1861/documents/masthead-ornament@2x.png') 2x);
+}
+/* Keep all type in normal flow, including long post identifiers at 200%. */
+.decorated-header h3 { overflow-wrap:anywhere; }
+.paper-meta>div { border-bottom:0; position:relative; padding-bottom:calc(.3em + 12px); }
+.paper-meta>div::after,.stock-printed .paper-copy p::after {
+  content:'';
+  display:block;
+  height:12px;
+  background-color:var(--ink);
+  mask-image:var(--double-rule);
+  mask-repeat:no-repeat;
+  mask-size:100% 100%;
+}
+.paper-meta>div::after { position:absolute; left:0; right:0; bottom:0; }
+.stock-printed .paper-copy p { border-bottom:0; }
+.stock-printed .paper-copy p::after { margin-top:.65em; mask-image:var(--thick-thin-rule); }
+/* These backgrounds are solid ink masks, so high contrast retains the rules. */
+.high-contrast .document-decoration,.high-contrast .paper-meta>div::after,
+.high-contrast .stock-printed .paper-copy p::after { background-color:#111!important; }

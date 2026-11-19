@@ -1,0 +1,39 @@
+{
+  "asset": "public/map-signs/mountain-2.svg",
+  "request": "R40",
+  "brief": "Main CODEX.md R40 R39 made crisper",
+  "date": "2026-11-18",
+  "plan": "Previously confirmed ChatGPT Pro 100; no image service",
+  "client": "Codex; client version not exposed",
+  "model": "Procedural SVG, no image model",
+  "apiKeyUnset": true,
+  "tool": "TypeScript procedural pen geometry; browser SVG coverage rasterizer for the map",
+  "mode": "Finer pen lines, separate house/crown interiors, light brown roof wash",
+  "prompt": "R39 manuscript approach with separated houses and crowns, finer brown outlines and pale roof tone. Original map placement envelopes and source-relief hatches remain unchanged. No plates, white fill, shadows, human figures, flags or emblems.",
+  "references": [
+    {
+      "title": "A. Lindenkohl, Military map of south-eastern Virginia, 1864, LOC 99448891",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Military-map-of-south-eastern-virginia-Lindenkohl_(99448891).png",
+      "catalogue": "https://lccn.loc.gov/99448891",
+      "path": "../R34/sources/coast-survey-1864-reference.png",
+      "sha256": "a4d94b89011fd160a9f76dbfd8506ec44bd7c3eb66d97b023d6407acf05e8b64",
+      "rights": "Public domain by publication date; R34 source-commons-ref.json retains the PD-US-expired statement",
+      "use": "R34 reference reused for non-figural geographic pen conventions only; no tracing, copied pixels, military positions or roads."
+    }
+  ],
+  "requestedSize": "80 x 64 SVG units",
+  "actualSize": "80 x 64 SVG viewBox",
+  "variantsMade": 8,
+  "variantChosen": 2,
+  "seedKey": "mountain-sheet-2",
+  "runtimeSeed": "Stable feature-id hash selects a baked composition",
+  "humanEdits": [],
+  "postProcess": [
+    "Drawing detail refined within unchanged legacy placement envelopes; geographic subtiles rasterized 4x and packed at 2x with source-coordinate grain; premultiplied upload, nearest minification, linear magnification, one mip"
+  ],
+  "provenanceMarks": "No model metadata created or removed",
+  "sha256": "01c521d0f3031a58206d2f4d0c558df87271b67b04d3aceb076102ee7efc3888",
+  "scriptSha256": "cc6a59c19c366b4f195ded95269170f8cd6b3fbe4b992429c8deaeb4114e970d",
+  "glyphModuleSha256": "f7765e2ccadcb2cb970e7cdcf584ec89cb2276d7d81baf78fbe50e621e63006a",
+  "priorSha256": "616525e772bedf062c75d06a3e0325ede5326bdc74a4017e177190b8c025ead1"
+}

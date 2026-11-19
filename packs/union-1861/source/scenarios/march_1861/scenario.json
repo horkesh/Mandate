@@ -15,5 +15,11 @@
       "capital": "montgomery",
       "playable": false
     }
-  ]
+  ],
+  "openingControl": {
+    "authors": [
+      { "faction": "union", "post": "us_secretary_war" },
+      { "faction": "confederate", "post": "cs_secretary_war" }
+    ]
+  }
 }

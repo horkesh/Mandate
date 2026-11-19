@@ -73,6 +73,12 @@
 {"by":"corran_fort","edge":"river:mere_crossing:mere_lower","provenance":[{"at":null,"source":"TB-DESIGN"}]},
 {"by":"corran_fort","edge":"river:mere_crossing:mere_upper","provenance":[{"at":null,"source":"TB-DESIGN"}]}
 ],
+"openingControl": {
+"authors": [
+{"faction":"north","post":"n_war_office"},
+{"faction":"south","post":"s_war_office"}
+]
+},
 "posts": [
 {"acting":false,"department":"n_war","departmentChanges":[],"holder":"n_fighter","id":"n_army_mere","installation":null,"intelligenceChief":null,"kind":"army","links":[],"name":"post.n_army_mere.name","parent":"n_war_office","provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"salient_base","standingOrders":[],"temporary":null,"unknowns":[]},
 {"acting":false,"department":"n_executive","departmentChanges":[],"holder":"n_leader","id":"n_head","installation":null,"intelligenceChief":null,"kind":"head_of_state","links":[],"name":"post.n_head.name","parent":null,"provenance":[{"at":null,"source":"TB-DESIGN"}],"railLine":null,"region":"n_capital","standingOrders":[],"temporary":null,"unknowns":[]},

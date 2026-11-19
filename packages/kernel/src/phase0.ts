@@ -30,6 +30,7 @@ export * from './seats/seats.ts';
 export * from './seats/requests.ts';
 export * from './view/types.ts';
 export * from './view/view.ts';
+export * from './view/claimed-control.ts';
 export * from './log/commands.ts';
 export * from './log/log.ts';
 export * from './log/session.ts';
@@ -95,3 +96,5 @@ export * from './politics/politics.ts';
 export * from './politics/rules.ts';
 export * from './politics/press.ts';
 export * from './tick/politics.ts';
+// Lane 1.13: the console's preview of an arrow edit before it is sent (lane 0.9's finding 5).
+export * from './tick/edit-preview.ts';

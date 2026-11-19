@@ -1,0 +1,34 @@
+{
+  "asset": "prototypes/desk/public/fonts/libre-caslon-regular.woff2",
+  "request": "R14",
+  "brief": "CODEX.md R14; ASSETS.md section 5; decision 0035",
+  "date": "2026-11-17",
+  "tool": "FontTools + Brotli",
+  "mode": "sourced font; lossless WOFF2 encoding",
+  "model": null,
+  "plan": "not applicable; no generation",
+  "client": "Codex command line",
+  "prompt": null,
+  "requestedSize": "WOFF2; original glyph set",
+  "actualSize": 47608,
+  "references": [
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/impallari/Libre-Caslon-Text/c31e21f7e8cf91f18d90f778ce20e66c68219c74/fonts/TTF/LibreCaslonText-Regular.ttf",
+      "sha256": "9f40a9afcbe33ef1f799e41683f4fd523c3a6bfb7c648d2404005f8d31c2fdf6"
+    }
+  ],
+  "licence": "SIL Open Font License 1.1",
+  "licenceFile": "Libre-Caslon-OFL.txt",
+  "licenceSha256": "ba0f5eb8f16cbf7096e413341a236c2b1b11dbb7a90898ecff865fe3d25c44ec",
+  "postProcess": [
+    "FontTools lossless WOFF2 encoding; no glyph changes"
+  ],
+  "humanEdits": [],
+  "recipeScript": "scripts/font-recipes.py",
+  "recipeScriptSha256": "59faadc49c606ac1fb975064ced34f16f01b8e544659eeee02ee7cd34ea8f631",
+  "processingScript": "scripts/fonts.py",
+  "processingScriptSha256": "bce5646c6fcd27db4d45512e9969c1da60eeb9d7af237426e625e3cb81323347",
+  "masters": "art-masters/R14/fonts/",
+  "provenanceMarks": "No image generation; font metadata retained through FontTools encoding.",
+  "sha256": "55c5a4fb0b7c4a5a73681ae4a07aa27124a0eda41eab7be0468aedff0a1c2b45"
+}

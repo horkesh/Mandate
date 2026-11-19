@@ -24,7 +24,10 @@
 import { strictCompare } from '../compare.ts';
 import { battleVerdict, dayShape } from '../combat/shape.ts';
 import type { BattleDay, BattleSide } from '../combat/records.ts';
+import { holdingOf } from '../control-index/control-index.ts';
+import type { RegionControlTable } from '../control/vocabulary.ts';
 import type { FactionId, PersonId, PostId, RegionId } from '../ids.ts';
+import { controlClaims } from '../knowledge/control-claims.ts';
 import type { ReportBody, ReportClaim } from '../knowledge/report.ts';
 import { term, type BiasTerm } from '../knowledge/truth.ts';
 import { isSelfGoverning } from '../command/command.ts';
@@ -32,6 +35,7 @@ import { perceptionBias, traitsOf } from '../people/traits.ts';
 import type { State } from '../root-state.ts';
 import { headquartersOf, fieldPosts, postFaction } from '../seats/posts.ts';
 import { fire, sendReport, type TickContext } from './context.ts';
+import { controlReports } from './control-reports.ts';
 
 const claim = (kind: ReportClaim['claimKind'], region: RegionId | null, value: number, token: string | null, confidence: number): ReportClaim => ({
   claimKind: kind,
@@ -66,7 +70,7 @@ export function firstReturnFigures(side: BattleSide, lowPermille: number): { rea
 }
 
 /** The day's battle reports (end of day, before cyclic reports). */
-export function battleReports(ctx: TickContext, state: State): void {
+export function battleReports(ctx: TickContext, state: State, controlBefore: RegionControlTable): void {
   const { world, day } = ctx;
   const rules = world.map.world.rules;
   const returns = rules.operations.returns;
@@ -75,18 +79,24 @@ export function battleReports(ctx: TickContext, state: State): void {
     const region = record.battleRegion;
     for (const bday of record.battleDays) {
       if (bday.bdayDay === day) {
-        dispatches(ctx, state, region, bday);
+        const { field } = battleVerdict(record);
+        const threshold = rules.supplyControlPermille;
+        const changedHands = field !== null && holdingOf(world.map, controlBefore, region, threshold).holder !== field && holdingOf(world.map, state.regionControl, region, threshold).holder === field;
+        const control = changedHands ? controlClaims(region, state.regionControl[region]!, world.map.world.factions.map((f) => f.id)) : [];
+        dispatches(ctx, state, region, bday, control);
         firstReturns(ctx, state, region, bday, returns.firstLowPermille);
-        governorWire(ctx, state, region, bday, battleVerdict(record).field);
+        commandersLost(ctx, state, region, bday);
+        governorWire(ctx, state, region, bday, field, control);
       }
       if (bday.bdayDay === day - returns.revealDays) fullReturns(ctx, state, region, bday);
     }
   }
   pocketReports(ctx, state);
+  controlReports(ctx, state, controlBefore);
 }
 
 /** Each commander's wires at the end of each phase, stamped with its hour. */
-function dispatches(ctx: TickContext, state: State, region: RegionId, bday: BattleDay): void {
+function dispatches(ctx: TickContext, state: State, region: RegionId, bday: BattleDay, control: readonly ReportClaim[]): void {
   const shape = dayShape(ctx.world.map.world.rules.combat, bday);
   bday.bdaySides.forEach((side, i) => {
     const author = authorOf(state, side);
@@ -97,9 +107,10 @@ function dispatches(ctx: TickContext, state: State, region: RegionId, bday: Batt
     for (const phase of shape.phases) {
       const mine = phase.sides[i]!;
       const well = mine.flankBreaks || mine.leaves || mine.surrenders || mine.destroyed ? 0 : 1;
+      const field = phase === shape.phases.at(-1) ? control : [];
       sendReport(ctx, state, {
-        body: body(author.person, author.post, ctx.day, phase.toHour, 'wire-dispatch', null, region, [claim('battle-phase', region, well, phase.phase, 600), claim('enemy-strength', region, seen, null, 500)]),
-        truth: { truthTerms: [term('observed', enemy.bsidePresent, { region }), ...bias.terms, term('observed', mine.killedWounded, { region, rule: `${phase.phase}:killed_wounded_unsaid` })], truthTrimmed: [] },
+        body: body(author.person, author.post, ctx.day, phase.toHour, 'wire-dispatch', null, region, [claim('battle-phase', region, well, phase.phase, 600), claim('enemy-strength', region, seen, null, 500), ...field]),
+        truth: { truthTerms: [term('observed', enemy.bsidePresent, { region }), ...bias.terms, term('observed', mine.killedWounded, { region, rule: `${phase.phase}:killed_wounded_unsaid` }), ...observedControl(region, field)], truthTrimmed: [] },
         to: ctx.world.faction(side.bsideFaction).principal,
         tag: `battle.${phase.phase}.${side.bsideFaction}`,
       });
@@ -131,6 +142,39 @@ function firstReturns(ctx: TickContext, state: State, region: RegionId, bday: Ba
   });
 }
 
+/**
+ * A post's commander lost today (lane 1.12; the lead's ruling under 0052): the principal learns of the vacancy only from
+ * this report, written by whoever now heads the chain above the post (the next holder up), or, with nobody there, sent
+ * from the field by the principal's own staff. Until it reaches him his menu still shows the post held (`seats/believed.ts`).
+ */
+function commandersLost(ctx: TickContext, state: State, region: RegionId, bday: BattleDay): void {
+  for (const side of bday.bdaySides) {
+    if (side.bsideHit === null || side.bsidePost === null || side.bsideCommander === null) continue;
+    const principal = ctx.world.faction(side.bsideFaction).principal;
+    const author = authorOf(state, side) ?? { person: principal, post: null };
+    sendReport(ctx, state, {
+      body: {
+        reportType: 'wire-dispatch',
+        reportSubtype: null,
+        reportAuthor: author.person,
+        reportAuthorPost: author.post,
+        reportSubjectKind: 'post',
+        reportSubjectId: side.bsidePost,
+        reportClaims: [claim('commander-lost', region, 0, side.bsideHit, 900)],
+        reportDay: ctx.day,
+        reportHour: null,
+        reportAdvice: null,
+        reportAnswers: null,
+      },
+      truth: { truthTerms: [term('observed', 0, { person: side.bsideCommander, post: side.bsidePost, rule: side.bsideHit })], truthTrimmed: [] },
+      to: principal,
+      tag: `commander-lost.${side.bsidePost}`,
+      fromRegion: region,
+    });
+    fire(ctx, 'reports.commander_lost');
+  }
+}
+
 /** The later return: the full figures, killed and wounded apart, the missing and the captured apart (0074). */
 function fullReturns(ctx: TickContext, state: State, region: RegionId, bday: BattleDay): void {
   for (const side of bday.bdaySides) {
@@ -151,7 +195,7 @@ function fullReturns(ctx: TickContext, state: State, region: RegionId, bday: Bat
 }
 
 /** A governor whose state's ground saw a battle wires his principal that it was fought, and who held the field. */
-function governorWire(ctx: TickContext, state: State, region: RegionId, bday: BattleDay, field: FactionId | null): void {
+function governorWire(ctx: TickContext, state: State, region: RegionId, bday: BattleDay, field: FactionId | null, control: readonly ReportClaim[]): void {
   const government = state.regionGovernments[region];
   if (government === undefined || government === 'unknown') return;
   // A self-governing nation's head is never a side's subordinate governor (0069, 0070; gate review G-1.4a), as lane 1.7's recruitment skips him.
@@ -162,13 +206,17 @@ function governorWire(ctx: TickContext, state: State, region: RegionId, bday: Ba
     const side = postFaction(ctx.world, state, post);
     if (side === null || !ctx.world.factionIds.includes(side) || !bday.bdaySides.some((s) => s.bsideFaction === side)) continue;
     sendReport(ctx, state, {
-      body: body(p.postHolder, post, ctx.day, null, 'informal', 'governor-wire', region, [claim('operation', region, field === side ? 1 : 0, 'battle', 400)]),
-      truth: { truthTerms: [], truthTrimmed: [] },
+      body: body(p.postHolder, post, ctx.day, null, 'informal', 'governor-wire', region, [claim('operation', region, field === side ? 1 : 0, 'battle', 400), ...control]),
+      truth: { truthTerms: observedControl(region, control), truthTrimmed: [] },
       to: ctx.world.faction(side).principal,
       tag: `governor.battle.${post}`,
     });
     fire(ctx, 'reports.governor_wire');
   }
+}
+
+function observedControl(region: RegionId, claims: readonly ReportClaim[]): BiasTerm[] {
+  return claims.map((c) => term('observed', c.claimValue, { region, rule: `control:${c.claimToken}` }));
 }
 
 /** Commanders a pocket closed on today wire that they are cut off (0054: the report, not the event, is the decision point). */
@@ -192,4 +240,4 @@ function pocketReports(ctx: TickContext, state: State): void {
 }
 
 /** Every mechanic battle reports count. */
-export const BATTLE_REPORT_MECHANICS = ['reports.battle_dispatch', 'reports.casualty_return', 'reports.governor_wire', 'reports.pocket'] as const;
+export const BATTLE_REPORT_MECHANICS = ['reports.battle_dispatch', 'reports.casualty_return', 'reports.commander_lost', 'reports.governor_wire', 'reports.pocket'] as const;

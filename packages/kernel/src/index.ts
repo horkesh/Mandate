@@ -1,27 +1,13 @@
+// What survives of M2 (lane 1.13): integer permille arithmetic, strict comparison, the named seeded streams, and the
+// compliance machinery the people core reads (`people` holds only its input profile, `directive` its terms and answer).
 export * from './permille.ts';
 export * from './compare.ts';
 export * from './rng.ts';
 export * from './people.ts';
 export * from './directive.ts';
 export * from './compliance.ts';
-export * from './state.ts';
-export * from './rules.ts';
-export * from './scenario.ts';
-export * from './derive.ts';
-export * from './messages.ts';
-export * from './orders.ts';
-export * from './reading.ts';
-export * from './audience.ts';
-export * from './verbs.ts';
-export * from './theatre.ts';
-export * from './proxy.ts';
-export * from './ladder.ts';
-export * from './view.ts';
-export * from './bot.ts';
-export * from './turn.ts';
 
-// Phase 0 foundations. Typed ids are a namespace because the M2 modules above
-// still export plain-string aliases with the same names (RegionId, PostId, ...).
+// Typed ids stay a namespace: `people.ts` still exports plain-string `PersonId` and `ValueId` for compliance's profile.
 export * as ids from './ids.ts';
 export * as world from './world/index.ts';
 export * from './serialize/canonical.ts';

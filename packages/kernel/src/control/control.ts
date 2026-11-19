@@ -23,12 +23,9 @@ import { lookup, type FactionId, type RegionId } from '../ids.ts';
 import type { State } from '../root-state.ts';
 import type { WorldIndex } from '../world/index.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
+import type { ControlShares, RegionControlTable } from './vocabulary.ts';
 
-/** One region's control: permille per faction, zero shares omitted. */
-export type ControlShares = Readonly<Record<FactionId, number>>;
-
-/** Control of every region that anyone controls; a region absent here is no one's. */
-export type RegionControlTable = Readonly<Record<RegionId, ControlShares>>;
+export type { ControlShares, RegionControlTable } from './vocabulary.ts';
 
 /**
  * Who may propose a control change: the proposers `OWNED_FIELDS` lists for

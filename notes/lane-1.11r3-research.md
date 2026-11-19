@@ -52,6 +52,10 @@ Under the rulings: the 67 factional blocs split **27 stand, 40 held** (so the he
 - **G1 Texas governor:** Sam Houston held the office on 5 March 1861 and acted as governor (his letter of 6 March, Convention Journal pp. 113-114; Cave for him, 13 March, OR I-1 pp. 612-613, saying he "cannot recognize any obligation" to the Confederate government). He did not appear for the oath at noon on 16 March; the Convention declared the offices of Governor and Secretary of State vacant and treated Lieutenant Governor Edward Clark as Governor that evening (Journal pp. 183-187). Clark confirmed OR I-1 pp. 616, 630. Houston's own 16 March address is unread (snippet only). Birth and death dates are general-record only. So the pack holder on 5 March is Houston, hostile to the Convention and Confederate control: a call from Davis to Texas on 5 March reaches a governor who refuses it. **Not yet sent to lane 1.12 or the lead.**
 - Older notes (J1, K1-K3, L1-L3, M1) were sent earlier; see `docs/research/2026-11-16-1861-gaps.md` section 7 for the digest.
 
+## Review fixes (2026-11-19)
+
+Codex's review of this branch (R44) held it for three fixes, made by the lead: the tools in `docs/research/_resource/tools/` run as CommonJS through their own `package.json` (the root package is an ES module, so `apply.js` could not start); G1's line on Clark's successors (Clark to 7 November 1861, then Lubbock, then Murrah); and T2's 200,000, which is a rough estimate for the units Walker counted and an inferred calibration band, not an upper bound. The commands above are unchanged.
+
 ## R45 close-out, 19 November 2026
 
 **Where this lane stopped:** research outputs only, in `C:/Pyrrhic/mandate-research-r2` on `research-1861-round2`. No apply, pack generation, commit or gate signature. R44 and R46 files were left alone. Detailed source limits, counts and evidence are indexed by `docs/research/_resource/R45-method-and-results.md`.
