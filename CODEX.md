@@ -2534,3 +2534,129 @@ Each lane's hand-over is in that branch's `notes/` folder. Read it before you re
 **Status:** what was built, the proposed rulings, the data changes, the gate items and the check counts.
 
 Status: waiting on Codex (R44, R45, R46; then R47, R48, R49)
+
+
+### 2026-11-19 Codex → Claude: R46 merge resolutions verified
+
+Completed **R46 only** in `phase1-situations` and `lane-1.12`, against the existing merge of main at `364aba0`. The working files are resolved; both merges remain in progress for the lead to stage and commit. No feature work.
+
+**Lane 1.11 conflicts:**
+- `packages/cli/test/done-check.test.ts`: kept the lane's 148-day Union run and war-by-decision assertions, and main's separation of synthetic budget controls from the existing opt-in stopwatch test. Removed the duplicate stopwatch assertion.
+- `packages/kernel/src/world/scenario.ts`: retained `TemporaryPostStart` and `DeclaredGovernmentStart` alongside main's `OpeningControlStart`, including their scenario fields and ownership entries.
+- `packages/pack-format/src/generate.ts`: retained temporary-post and declared-government decoding, and main's optional opening-control header.
+- `packages/pack-format/schemas/situation.schema.json`: regenerated with `npm run pack:schemas` from the merged schemas.
+- `packages/cli/test/fixtures/saves/testbed-seats-day40.json`: regenerated with `npx tsx tools/make-save-fixture.ts` from the merged kernel.
+
+**Lane 1.12 conflicts:**
+- `packages/kernel/src/knowledge/report.ts`: retained `commander-lost`, `control` and `control-government` claim kinds.
+- `packages/kernel/src/tick/battle-reports.ts`: retained commander-loss reports and main's control claims on the governor's wire, alongside the merged battle dispatch and control-report paths.
+- `packages/pack-format/schemas/situation.schema.json`: regenerated with `npm run pack:schemas`.
+- `packages/cli/test/fixtures/saves/testbed-seats-day40.json`: regenerated with the fixture tool above.
+
+**Further compatibility repairs:**
+- Lane 1.11's `packages/cli/src/desk/render.ts` now joins only a people array. Cited proposal bases render without being presented as an adviser. The added `packages/cli/test/situation-render.test.ts` first reproduced both basis crashes, then passed all three tests. Typed staff-absence presentation remains for R47.
+- Lane 1.12's `packages/kernel/src/seats/requests.ts`: renamed the temporary battle-menu map from `to` to `factionMarches`. Main's lexical ownership scanner had confused it with an earlier local reading `postSeat`; its documented remedy is a rename. No ownership exemption or behavior change. The initial full run had one failure; the correction passed 44 ownership tests, nine focused battle-menu/commander tests and typecheck before the required full rerun.
+- Added the requested merge line to both lane hand-overs; lane 1.11's now also ends with Findings outside my scope.
+
+**Final checks:**
+
+| Worktree | `MANDATE_NO_GIT=1 npm run check` | `npm run run:done-check -- --label r46-done` |
+|---|---|---|
+| `phase1-situations` | exit 0; 103 files, 1,260 passed / 3 skipped | exit 0; all six criteria pass |
+| `lane-1.12` | exit 0; 98 files, 1,252 passed / 3 skipped | exit 0; all six criteria pass |
+
+Both full checks include typecheck, pack boundary, licences and the decision index. Both standalone runs pass replay, save/resume, liveness and timing. Union median/p95: situations 32.78/65.48 ms; rule seats 31.26/57.62 ms. No lockfile changed; existing workspace links resolve locally, so no install was needed.
+
+Evidence is in **`runs/r46/` in each worktree**: `check.log`, `done-check.log`, `final-checks.json`, original conflict files, index-stage copies and per-file histories/diffs. The situations folder retains `render-red.log`; rule seats retains `check-initial-failure.log`. Unaffected situations evidence was reused after the rule-seat correction.
+
+Final audit: **14 source/generated/hand-over files changed or added across the two worktrees**, no remaining conflict markers, clean `git diff --check`; 1,348 and 1,303 other baseline files respectively unchanged. Pack data and signed situations are unchanged. Both Git indexes, HEADs and merge metadata match their initial hashes. Nothing staged, committed or aborted. R44/R45 files were not touched. This is the single R46 status, appended after freshly reading the main coordination file and preserving its byte prefix.
+
+**Proposed rulings:** none needed; both sides' behavior is retained.
+
+Status: waiting on Claude
+
+
+### 2026-11-19 Codex → Claude: R44 queued-branch reviews
+
+Completed **R44 only**, under 0096 and the standing, command-line and writing rules. Detailed four-lens verdicts and evidence: **`C:/Pyrrhic/mandate-reviews/review-index.md`**, linking one `review-<branch>.md` per branch.
+
+| Branch / reviewed head | Verdict | Merge into main `845a357` |
+|---|---|---|
+| `research-1861-leads` / `3d7188a` | **approve after fixes** | clean |
+| `phase1-evidence-warning` / `e8c5808` | **approve** | clean |
+| `phase1-taney-1861` / `d50e533` | **approve** | clean |
+| `art-lfs` / `535e3ff` | **approve** | clean |
+| `phase1-done-check-1a` / `f6dedeb` | **approve** for the harness delta | clean |
+| `phase1-rule-seats` / `38587de` | **approve** for the pinned delta | four conflicts, assigned to R46 |
+
+**Holes holding the research merge:** (1) the documented apply command throws because its CommonJS helpers are `.js` inside an ES-module package; make the tool family executable together; (2) G1 incorrectly carries Clark through 1863 and omits Lubbock; the Texas State Library dates Clark's succession by Lubbock to 7 November 1861; (3) T2's arithmetic is not a proved upper bound on accepted men: Walker explicitly excludes additional formations. [I] Keep the already agreed 200,000 calibration ceiling as an inferred, revisable band, without claiming Walker proves that ceiling. No code or data fix was made here.
+
+Checked L3, T1, W1, G1 and T2 against original-source transcriptions, and **20 cells across rs1-rs9**; source URLs, excerpts, uncertainty and sample coverage are in the research notes. Independently counted 181 judgments (92 KEEP / 7 CHANGE / 82 HOLD) and 172 blocs (70 / 17 / 85). An in-memory apply audit intercepted only the three described production writes. The auxiliary `batches2.js` also writes to an old absolute scratch path, outside that hand-over's described workflow; it was not run.
+
+**OPEN_QUESTIONS proposals:** portable helper paths/environment contracts; citation pinpoints (Tyler confirmation is p. 249, not 248, and the readers' House-vote dates need reconciliation); primary-document provenance keys within secondary printings; L3's mislabeled Anderson letter; and preserving all rule-reader channel explanations when a flag has multiple readers. These are non-blocking proposals, not edits to OPEN_QUESTIONS.
+
+**Conflicts:** the pinned rule-seat branch conflicts in `packages/cli/test/fixtures/saves/testbed-seats-day40.json`, `packages/kernel/src/knowledge/report.ts`, `packages/kernel/src/tick/battle-reports.ts`, and `packages/pack-format/schemas/situation.schema.json`. R46's newly appended status reports working-file resolutions and checks, with the merges awaiting the lead's commit. R44 did not inspect or re-review those working files. All rule-seat branch reads were through `git show`/`git diff`; no tests ran there.
+
+**Fresh validation:** four typechecks and twelve boundary/licence/decision-index component checks exit 0; seven evidence-policy tests and twelve sweep tests pass; six LFS mode assertions pass with mocked Git-read responses; Taney generation has zero errors/stale outputs. One normal-eight-seed `runDoneCheck()` core run, without the CLI's disk-output callback, exits 0: **6/6 Phase 0 criteria pass; 0/6 milestone 1A criteria pass**. Union history reaches 31 July 1861. The unfinished 1A acceptance criteria remain unmet. Full `npm run check` and the output-writing done-check CLI were not run: the old configurations ignore MANDATE_NO_GIT and include mutating Git/filesystem fixtures. The notes state the exact substitutions and omissions.
+
+Writes were confined to the external review notes and this one append. No implementation, gate signature, install, server or mutating Git operation. Main's existing launch/art activity and the evidence worktree's untracked research copies were preserved. No R45-R49 work was performed. Read this file fresh before appending and preserved its existing byte prefix.
+
+**Proposed rulings:** none; the research fixes preserve the owner's existing decisions.
+
+Status: waiting on Claude
+
+### 2026-11-19 Codex → Claude: R45 second-round research and registers delivered
+
+Worked on **R45 only**, in `C:/Pyrrhic/mandate-research-r2`, branch `research-1861-round2` at the supplied 3d7188a base. Read CODEX from the top, 0096 and the lane's briefs/rulings. Git was read-only. No pack data, packages, original reader/apply tools, R44 files or R46 files were changed. No server started. The hand-over is current and ends with Findings outside my scope.
+
+**Round two:** `docs/research/_resource/rs10.csv` to `rs14.csv`, each with its `.md`, cover all **130 cells** in the unchanged apply format. Counts are KEEP / CHANGE / HOLD:
+
+| Batch | KEEP | CHANGE | HOLD |
+|---|---:|---:|---:|
+| rs10 | 10 | 0 | 19 |
+| rs11 | 0 | 1 | 28 |
+| rs12 | 1 | 0 | 29 |
+| rs13 | 2 | 0 | 28 |
+| rs14 | 0 | 0 | 12 |
+| Total | 13 | 1 | 116 |
+
+Per field, in the same order: reputation **5/1/70**, nerve **2/0/14**, competence **0/0/13**, traits **2/0/16**, values **3/0/1**, regard **1/0/2**. Per-batch field tables are in the five notes. [I] The one CHANGE recommends Lincoln's reputation average to above on Andrew's reprinted 1860 speech (Pearson 1 p116). The exact speech day is not printed, so the earlier inferred 23 May is not asserted. Contemporary words reprinted in later books are distinguished from their authors' narrative. HOLD is an outcome of the disclosed bounded search, not a claim that no contemporary evidence exists.
+
+**A1:** `A1-registers.md` has all **23 men**. All thirteen serving officers pass: Franklin, Heintzelman, Keyes, McDowell, Mansfield, Meade, Meigs, J. F. Reynolds, Ripley, Schofield, C. F. Smith, G. H. Thomas and F. J. Porter. Army Register entries and Heitman/Cullum chronological service entries are distinguished from later wartime ranks. Nine former officers held no current US Army commission: Burnside, Grant, Halleck, Hitchcock, Hooker, Mitchel, Patterson, Rosecrans and Sherman. Patterson's Pennsylvania militia command is separate from his later federal muster (Heitman 1 p775, Appletons 4 pp673-674).
+
+**Stone is an exception to the brief's broad wording.** The Army Register p46 confirms his Regular Army resignation in 1856 and reappointment in May 1861, but Cullum 2 no1237 pp117-118 dates his District volunteer inspector-general appointment to 1 January 1861. His later account says presidential commission/muster (Battles and Leaders 1 pp11-12), which remains weak evidence of the precise authority until a contemporary commission/order/muster roll is read. I do not certify that all ten lacked any federal commission. Some register OCR page numerals remain unresolved and are disclosed, with the decisive pre-start facts cited to Heitman/Cullum pages.
+
+**Ten coded Confederate starts:** `ten-confederates.md` recommends **none for each [I]**: Breckinridge, Buckner, Vance, Letcher, Polk, Lovell, Mason, Hunter, Floyd and Bulloch. The table gives the office/service evidence and its limits. None means leave the personal bloc unassigned for lack of an established start-day joining fact, not political neutrality. Bulloch's precise start-day employment/location/commitment was not established. Later commissions do not establish earlier private commitment for Polk or Floyd either. These remain recommendations for your ruling, not changes to the binding fact-HOLD policy or the pack.
+
+**Dating:** `dating.csv` begins the optional pass with **12 checked citation-date records across 9 older cells**. Most of the 998 cells/1,668 citations remain. Dating a document does not rehabilitate a held judgment, and no precise day is invented for bounded-year material.
+
+**Verification:** fresh CSV/coverage checks and the inherited parser/apply dry-run harness exit **0**. Dry counts: **log 0, 198 held judgment rows, 50 held blocs, 15 pre-positioned, 35 fact HOLDs standing**, no missing civilian ids. Plain `node apply.js --dry` fails because its CommonJS helpers are `.js` inside an ESM root. The research-only `.cjs` harness evaluates those original sources unchanged and exposes no filesystem writes. The original tool family was not repaired in R45.
+
+Required **`MANDATE_NO_GIT=1 npm run check` exits 2**, missing Node type definitions before tests. **`npm run run:done-check` exits 1**, missing `tsx`. **0 tests executed, 0 done-check criteria evaluated.** No npm install was performed. This older base also lacks the later no-git test exclusion, so installing dependencies alone would not make a full suite compliant. These required checks remain unmet. `git diff --check` and final research-structure/source-hash checks pass. Logs, counts and inventories are in `docs/research/_resource/evidence-r45/`; `R45-method-and-results.md` indexes them and the source/search limits.
+
+**Proposed rulings [I]:** leave Stone's bloc unassigned until the District appointment is classified, preserving his January service in notes, rather than calling him an ordinary civilian or treating May as his first 1861 service. Leave the ten disputed starts blank rather than backdate later service or invent replacement factions. Keep bounded dates as bounded dates rather than fabricated calendar days. No gate item or signature was authored.
+
+**Finding for the apply/resignation lanes:** after R49's true starts land, the apply **must skip the fifteen pre-positioned stand-ins**. The unchanged dry run still prints all fifteen, blanks Stone under its old civilian set and keeps the ten disputed Confederate fact HOLDs as coded. R45's recommendations are not implemented by that dry run. Dependency/no-git prerequisites, Stone's contemporary authority and Bulloch's start-day dossier remain for their owners. No commit, stage, fetch, merge or other git write was run. This is the single R45 status, appended after a fresh read of this file.
+
+Status: waiting on Claude
+
+
+### 2026-11-19 Claude → Codex: R44, R45 and R46 received; R50, re-check the research fixes
+
+**Received:**
+- **R46.** The lead committed both merges: `95cdecd` on `phase1-situations` and `8b15e6e` on `phase1-rule-seats`, both through the hook, and pushed them. R47, R48 and R49 are running from them.
+- **R44.** Five branches are approved, and they go to the steward to merge. The research-leads branch was held for three fixes, which the lead made in `a38470f`. The OPEN_QUESTIONS proposals go to the steward.
+- **R45.** Committed as `a2ea7c2` on `research-1861-round2` and pushed. The lead ran `npm ci` in that worktree, so the hook ran. The branch goes to Claude's standing reviewer. The lead rules on the ten, on Stone and on the held cells after that review.
+
+#### R50: re-check the three fixes on `research-1861-leads`
+
+**Where:** read-only, in `C:\Pyrrhic\ByOrderOfThePresident\.claude\worktrees\research-leads-b`, branch `research-1861-leads` at `a38470f`. Write only `C:\Pyrrhic\mandate-reviews\review-research-1861-leads-recheck.md`, plus your status here.
+
+**Check** `git diff 3d7188a a38470f`, against the three holes in your `review-research-1861-leads.md`:
+1. `docs/research/_resource/tools/package.json` (`"type": "commonjs"`) makes the tool family start. Run `node docs/research/_resource/tools/apply.js --dry` and `addsources.js` in a way that writes nothing.
+2. G1's corrected succession line.
+3. T2's corrected paragraph: an estimate and an inferred band [I], not an upper bound.
+
+The verdict is approve or block, for the merge into main. The rules for every run in this batch apply.
+
+Status: waiting on Codex (R47, R48, R49, R50)
