@@ -18,6 +18,7 @@ import type { VerbCommand } from '../src/log/commands.ts';
 import { commanderLossReports } from '../src/tick/commander-losses.ts';
 import { relieveHolder } from '../src/command/command.ts';
 import { applyPeopleChanges } from '../src/people/people.ts';
+import { attentionPrice } from '../src/tick/attention.ts';
 import { sendMessages } from '../src/messages/transit.ts';
 import { depot, edge, F, FIXTURE_COMBAT_RULES, R, region } from './support/map-fixture.ts';
 
@@ -71,6 +72,32 @@ const menuOf = (s: State) => principalMenu(world, s, F('b'), morningGround(world
 const lossKnown = (s: State) => knowledgeOf(s, B_SEAT).knownReports.some((r) => r.knownBody.reportClaims.some((c) => c.claimKind === 'commander-lost'));
 
 describe('posts as the principal believes them (lane 1.12; 0052)', () => {
+  it('an unreported capture changes neither the audience answer nor the attention charged', () => {
+    const { state: captured } = untilCaptured();
+    const holder = PER('b_gen');
+    // Hold the undelivered traffic fixed: only the holder/status truth differs.
+    const present: State = {
+      ...captured,
+      postStates: { ...captured.postStates, [ARMY]: { ...captured.postStates[ARMY]!, postHolder: holder } },
+      personStatus: { ...captured.personStatus, [holder]: { ...captured.personStatus[holder]!, statusKind: 'serving' } },
+    };
+    expect(lossKnown(captured)).toBe(false);
+    expect(knowledgeOf(present, B_SEAT)).toEqual(knowledgeOf(captured, B_SEAT));
+    for (const state of [present, captured]) {
+      expect(believedHolder(state, B_LEAD, ARMY)).toBe(holder);
+      expect(state.planRecords[ARMY]).toBeUndefined();
+    }
+    const command: VerbCommand = { cmd: 'audience', to: ARMY, counters: [] };
+    const issue = (state: State) => tick(world, state, [{ day: state.stateDay + 1, seat: B_SEAT, command }], { freeze: true });
+    const held = issue(present);
+    const lost = issue(captured);
+    expect(held.rejections).toEqual(lost.rejections);
+    expect(held.rejections).toEqual([]);
+    expect(held.state.seatAttention[B_SEAT]).toEqual(lost.state.seatAttention[B_SEAT]);
+    expect(present.seatAttention[B_SEAT]!.attnLeft - held.state.seatAttention[B_SEAT]!.attnLeft).toBe(attentionPrice(world, present, command));
+    expect(attentionPrice(world, present, command)).toBeGreaterThan(0);
+  });
+
   it('reads a loss report without needing a battle record', () => {
     const { state } = untilCaptured();
     const withoutBattle = { ...state, battleRecords: {} };
