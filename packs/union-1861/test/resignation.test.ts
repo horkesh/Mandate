@@ -22,6 +22,16 @@ describe('the resignation data on the R49 base', () => {
     expect(world.map.world.people.find(p => p.id === 'buchanan_franklin')?.service).toBeUndefined();
   });
 
+  it.each([
+    ['holmes_theophilus_h', 'st_north_carolina', 'p539'],
+    ['loring_william_w', 'st_florida', 'p642'],
+  ])('ties %s to his appointment-state government', (id, government, page) => {
+    const { world } = seatsWorld('union-1861');
+    const service = world.map.world.people.find(p => p.id === id)?.service;
+    expect(service?.government).toBe(ids.toId('department', government));
+    expect(service?.cites.some(c => c.source === 'Heitman' && c.at?.includes(page))).toBe(true);
+  });
+
   it('brings J. E. Johnston to the other service by July in the at-war driver', () => {
     const { world, setup } = seatsWorld('union-1861');
     let state = phase0.createState(world, { ...setup, atWar: true });

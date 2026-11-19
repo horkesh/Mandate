@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { canonicalHash } from '../src/serialize/hash.ts';
-import { resignationChoice } from '../src/people/resignation.ts';
+import { blocOfPerson, resignationChoice } from '../src/people/resignation.ts';
 import { changeDepartmentSide, heldPost, relieveHolder, sideOfPerson } from '../src/command/command.ts';
 import { toId } from '../src/ids.ts';
 import { createState } from '../src/tick/setup.ts';
@@ -80,11 +80,59 @@ describe('an officer chooses his service', () => {
   it('uses the sourced date only in the history policy, even between weekly steps', () => {
     const world = fixture(true);
     const initial = changeDepartmentSide(world.map, createState(world, { seed: 3 }), home, F('b')).state;
-    expect(heldPost(through(world, initial, 8).state, P('a_gen'))).toBe(POST('a_army'));
-    const done = through(world, initial, 9);
+    const before = through(world, initial, 8).state;
+    expect(heldPost(before, P('a_gen'))).toBe(POST('a_army'));
+    expect(before.personService?.[P('a_gen')]).toBeUndefined();
+    const done = through(world, before, 9);
     expect(sideOfPerson(world.map, done.state, P('a_gen'))).toBe(F('b'));
+    expect(done.state.personService?.[P('a_gen')]).toMatchObject({ serviceChoice: 'resign', serviceDay: 9 });
     expect(done.results.flatMap(r => r.events).some(e => e.event === 'service_choice' && e.terms.some(t => t.termRule === 'historical_date'))).toBe(true);
+    const after = through(world, done.state, 10);
+    expect(after.state.personService?.[P('a_gen')]).toEqual(done.state.personService?.[P('a_gen')]);
+    expect(sideOfPerson(world.map, after.state, P('a_gen'))).toBe(F('b'));
+    expect(heldPost(after.state, P('a_gen'))).toBeNull();
+    expect(after.results.flatMap(r => r.events).filter(e => e.event === 'service_choice')).toHaveLength(0);
     expect(canonicalHash(through(world, initial, 16).state)).toBe(canonicalHash(through(world, initial, 16).state));
+  });
+
+  it.each([
+    [-1, 'stay'], [0, 'resign'], [1, 'resign'],
+  ] as const)('chooses %s from resignAt: %s', (offset, expected) => {
+    const base = fixture();
+    const rules = base.map.world.rules;
+    const map = indexWorld({ ...base.map.world, rules: { ...rules, people: { ...rules.people,
+      resignation: { ...rules.people.resignation, base: 500 + offset, resignAt: 500, values: [], traits: [] },
+    } } });
+    const answer = resignationChoice(map, createState(base, { seed: 6 }), P('a_gen'));
+    expect(answer.choice).toBe(expected);
+    expect(answer.terms.map(t => [t.termRule, t.termValue])).toEqual([['base', 500 + offset], ['threshold', -500]]);
+  });
+
+  it('moves the resigned man’s political pull to his new service bloc', () => {
+    const base = fixture();
+    const oldBloc = { id: 'a_old', faction: F('a'), voice: 1000, rest: 0, values: [], victory: 0, defeat: 0, cite: 'FIXTURE' };
+    const newBloc = { ...oldBloc, id: 'b_new', faction: F('b') };
+    const map = indexWorld({ ...base.map.world,
+      vocabularies: { ...base.map.world.vocabularies, blocs: [oldBloc, newBloc].map(b => ({ id: b.id, name: `bloc.${b.id}` })) },
+      rules: { ...base.map.world.rules, politics: { ...base.map.world.rules.politics, blocs: [oldBloc, newBloc] } },
+      people: base.map.world.people.map(p => p.id === P('a_gen') ? { ...p, bloc: oldBloc.id, service: { ...p.service!, toBloc: newBloc.id } } : p),
+    });
+    const world = indexSeatsWorld(map, base.start);
+    const initial = changeDepartmentSide(map, createState(world, { seed: 7 }), home, F('b')).state;
+    expect(blocOfPerson(map, initial, P('a_gen'))).toBe(oldBloc.id);
+    const resigned = through(world, initial, 13).state;
+    expect(sideOfPerson(map, resigned, P('a_gen'))).toBe(F('b'));
+    expect(blocOfPerson(map, resigned, P('a_gen'))).toBe(newBloc.id);
+    expect(map.world.people.find(p => p.id === P('a_gen'))?.bloc).toBe(oldBloc.id);
+    // One rung down from leaking is lobbying. Compare otherwise identical States so the
+    // actual politics phase must charge the current bloc, rather than the immutable start.
+    const lobbying: State = { ...resigned, personRungs: { ...resigned.personRungs, [P('a_gen')]: 'leaking' } };
+    const control = tick(world, resigned, [], { freeze: true }).state;
+    const pulled = tick(world, lobbying, [], { freeze: true }).state;
+    expect(pulled.personRungs[P('a_gen')]).toBe('lobbying');
+    expect(pulled.blocSupport[oldBloc.id]).toBe(control.blocSupport[oldBloc.id]);
+    expect(pulled.blocSupport[newBloc.id]).toBe(control.blocSupport[newBloc.id]! + map.world.rules.politics.ladder.lobbyingPerRung);
+    expect(map.world.rules.politics.ladder.lobbyingPerRung).not.toBe(0);
   });
 
   it('does not apply a historical default until the named government has joined', () => {

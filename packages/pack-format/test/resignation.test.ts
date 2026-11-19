@@ -26,4 +26,9 @@ describe('sourced service choices in world format v2', () => {
     expect(errorsOf(pack('r_war', '1900-06-09', 'blue', '').issues).length).toBeGreaterThan(0);
     expect(PersonSchema.shape.service).toBeDefined();
   });
+  it('rejects a service row without either trigger, while accepting each trigger alone', () => {
+    expect(errorsOf(pack('r_war', '').issues)).toEqual([]);
+    expect(errorsOf(pack('', '1900-06-09').issues)).toEqual([]);
+    expect(errorsOf(pack('', '').issues).map(i => i.kind)).toEqual(['service-trigger']);
+  });
 });
