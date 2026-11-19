@@ -1,0 +1,81 @@
+# M1: Ex parte Merryman, the facts (S18 `merryman_writ`)
+
+Lane 1.11r lead, agent leads-M1-merryman. All quotations read in OCR full text (archive.org djvu), not via a paraphrasing mirror. OCR doubts marked. Wikisource was used only as a finding aid (it reproduces the Federal Cases text); it is not cited.
+
+## Sources read (keys)
+
+- **TD** = *Reports of Cases ... Determined in the Circuit Court of the United States for the District of Maryland by Roger Brooke Taney, April term 1836 to April term 1861* (ed. J. M. Campbell, 1871), "Ex parte John Merryman", pp. 246-270. archive.org `cu31924068531247`. Official reporter's print of the court record (the writ, return, order and opinion are the court's own papers). STRONG for the papers; compiled 1871, so say "reported text", not "eyewitness".
+- **FC** = *Federal Cases* vol. 17, Case No. 9,487, pp. 144-153 (1895). archive.org `gov.uscourts.fedcases.17`. Same text as TD (reprinted from Taney 246 and 9 Am. Law Reg. 524). RETRO as a compilation; corroborates TD but is not independent of it.
+- **BE** = "The Merryman Habeas Corpus Case, Baltimore: the proceedings in full and opinion of Chief Justice Taney" (Jackson, Miss., J. L. Power, 1861), reprinting the *Baltimore Exchange* of 28 and 29 May 1861 and then the opinion. archive.org `merrymanhabeasc00merr`. STRONG contemporary newspaper report (a Southern-press pamphlet reprint, so treat the headline and the title page as partisan; the reported text is the evidence). Page numbers below are the pamphlet's.
+- **RR** = Moore, *Rebellion Record* vol. 1 (1861), Diary and Doc. 207. archive.org `rebellrecord01moorrich`. Contemporary compilation quoting the *New York Times* of 28 and 29 May 1861. STRONG as a contemporary record of what the press said; the page numbers are the printed ones (read from the OCR page-number lines).
+
+Not reached: the *Baltimore Sun*, *National Intelligencer* and *NYT* originals (not tried beyond RR/BE; Library of Congress and HathiTrust are blocked in this lane). Official Records: a Merryman entry exists in the Series I vol. 2 prisoner register per a finding aid (Maryland State Archives page), not read here.
+
+## (a) Dates and acts, in order
+
+| Date | Event | Exact words / locator | Source, strength |
+|---|---|---|---|
+| Sat 25 May 1861, about 2 a.m. | Merryman arrested at home, Baltimore County; taken to Fort McHenry | Petition: "about the hour of two o'clock a.m., on the 25th day of May, A.D. 1861, aroused from his bed by an armed force pretending to act under military orders" | TD p. 247; FC p. 145; BE p. 1. STRONG (sworn petition). Taney's opinion restates it, TD p. 254 ("at two o'clock on the morning of the 25th of May 1861") |
+| 25 May | Petition drafted at Fort McHenry and sworn; counsel Geo. H. Williams swore it before U.S. Commissioner John Hanan | "Fort McHenry, 25th May 1861" ... "Sworn to before me, the 25th day of May, A.D. 1861. John Hanan, U.S. Commissioner" | TD pp. 248-249; FC pp. 145-146. STRONG. BE p. 1 names counsel as "Geo. M. Gill and Geo. H. Williams" |
+| 25 May | Arresting authority named in the petition | Merryman "has been informed, that some order, purporting to come from one General Keim, of Pennsylvania ... directing the arrest of the captain of some company in Baltimore county" was the ground; the person detaining him "is Brigadier-General George Cadwalader" | TD p. 247-248; FC p. 145. STRONG (as what the petitioner alleged) |
+| Sun 26 May | Williams goes to Fort McHenry and asks to see or copy the papers; Cadwalader refuses | Affidavit: Cadwalader "replied, that he would neither permit the deponent ... to read the said papers, nor to have or make copies thereof" | TD pp. 248-249; FC pp. 145-146. STRONG (sworn) |
+| 26 May | Taney orders the writ; issued by clerk Thomas Spicer; returnable Monday 27 May, 11 a.m., Masonic Hall, Baltimore | "Ordered, this 26th day of May, A.D. 1861, that the writ of habeas corpus issue ... returnable at eleven o'clock, on Monday, the 27th of May 1861" ; writ "Issued 26th May 1861" | TD pp. 249-250; FC p. 146. STRONG. Headnote: petition "presented to the Chief Justice" on the 26th (TD p. 246) |
+| 26 May | Marshal serves the writ on Cadwalader | "The marshal made return that he had served the writ on General Cadwalader, on the same day on which it issued; and filed that return on the 27th May" | TD p. 250; FC p. 146. STRONG. No refusal of entry is recorded for the writ itself; see correction below |
+| 26 May | Cadwalader's return signed (see (b)) | Headed "Headquarters, Department of Annapolis, Fort McHenry, May 26, 1861"; signed "George Cadwalader, Brevet Major-General U.S.A., Commanding" | TD pp. 250-251; FC p. 146. STRONG. BE p. 2 prints the date as "May 25" (conflict, below) |
+| Mon 27 May, 11 a.m. | Taney takes the bench; Col. Lee brings the return, does not bring the body | TD: "In a few minutes, Colonel Lee, a military officer, appeared with General Cadwalader's return". BE p. 2: "Col. Lee, Aid-de-Camp of Gen. Cadwallader ... about fifteen minutes after the commencement of the proceedings" | TD p. 250; FC p. 146; BE p. 2. STRONG |
+| 27 May | Attachment for contempt ordered | "General Cadwalader was commanded to produce the body of Mr. Merryman before me this morning ... but he has acted in disobedience to the writ, and I therefore direct that an attachment be at once issued against him, returnable before me here, at twelve o'clock to-morrow." Order: "Ordered, that an attachment forthwith issue against General George Cadwalader for a contempt ... Monday, May 27 1861." | TD pp. 251-252; FC pp. 146-147; BE pp. 3-4. STRONG |
+| Tue 28 May, noon | Marshal's return on the attachment: refused entry at Fort McHenry | "I sent in my name at the outer gate; the messenger returned with the reply, 'that there was no answer to my card' ... I was not permitted to enter the gate. So answers Washington Bonifant U.S. Marshal for the District of Maryland." | TD p. 252; FC p. 147; BE p. 4. STRONG |
+| 28 May | Taney declines to order the marshal to raise the posse; reads and speaks his grounds; says he will put the opinion in writing | "I forbore yesterday to state orally the provisions of the constitution ... and I shall therefore put my opinion in writing, and file it in the office of the clerk of the circuit court, in the course of this week." Then: "he should cause his opinion, when filed, and all the proceedings, to be laid before the president" | TD p. 253; FC p. 147; BE pp. 5-6. STRONG. RR Diary p. 83 and Doc. 207 (p. 301) give the NYT of 29 May version |
+| Filing of the written opinion | Date not stated in TD, FC or BE | The opinion ends: "direct the clerk to transmit a copy, under seal, to the president of the United States. It will then remain for that high officer, in fulfilment of his constitutional obligation to 'take care that the laws be faithfully executed,' to determine what measures he will take to cause the civil process of the United States to be respected and enforced." | TD pp. 269-270; FC p. 153; BE pp. 15-16. STRONG for the words; no strong source read for the day |
+
+### The wording of the 27 May exchange
+BE p. 3 gives the courtroom dialogue (Baltimore Exchange, 28 May): Taney asked, "Have you brought with you the body of John Merryman?" Col. Lee: "I have no instructions except to deliver this response to the Court." Taney: "The commanding officer then declines to obey the writ?" Lee: "After making that communication, my duty is ended, and I have no further power." Taney: "The Court orders an attachment to issue against George Cadwallader for disobedience to the high writ of the Court, returnable at 12 o'clock to-morrow." STRONG (contemporary newspaper). TD/FC give a shorter, edited version of the same exchange.
+
+### Corrections to the brief's chain
+- The marshal was refused at the gate on **28 May, serving the attachment**, not on 26 May serving the original writ. The writ was served on 26 May (TD p. 250).
+- Taney's opinion was **filed in writing after** 28 May. On 28 May he read a short statement of the two grounds ("I ordered this attachment yesterday ..."), and promised the opinion "in the course of this week".
+- Taney did not himself order Merryman freed in any record read: the 28 May statement says only that Merryman "is entitled to be set at liberty and discharged immediately" (TD p. 253).
+
+## (b) Cadwalader's refusal, in his own words
+
+Return as read by Col. Lee on 27 May, TD pp. 250-251 (FC p. 146, same text). Key passages:
+
+- Disclaims the arrest: "the arrest of Mr. John Merryman ... was not made with his knowledge, or by his order or direction, but was made by Col. Samuel Yohe, acting under the orders of Major-General William H. Keim, both of said officers being in the military service of the United States, but not within the limits of his command."
+- Custody: "The prisoner was brought to this post on the 20th inst., by Adjutant James Wittimore and Lieut. Wm. H. Abel, by order of Col. Yohe" [sic, "20th": see conflict 2].
+- Charge: "charged with various acts of treason, and with being publicly associated with and holding a commission as lieutenant in a company having in their possession arms belonging to the United States, and avowing his purpose of armed hostility against the government."
+- The refusal and its authority: "he is duly authorized by the president of the United States, in such cases, to suspend the writ of habeas corpus, for the public safety. This is a high and delicate trust, and it has been enjoined upon him that it should be executed with judgment and discretion, but he is nevertheless also instructed that in times of civil strife, errors, if any, should be on the side of the safety of the country."
+- The request: "respectfully requests that you will postpone further action upon this case, until he can receive instructions from the president of the United States, when you shall hear further from him."
+
+Strength: STRONG (the return itself, as filed and read in court). Cadwalader does not name which order of the President he relies on, nor cite a date or document. BE p. 3 prints "safety to the country" (variation of one word).
+
+Taney's own summary of the refusal in the opinion: the return "refuses to obey the writ of habeas corpus, upon the ground that he is duly authorized by the president to suspend it" (FC p. 147, OCR line-broken "refuses to obey the writ of ha-beas corpus"; TD p. 255). The Rebellion Record (Diary p. 82, 27 May entry, quoting NYT 28 May): "Gen. Cadwallader declined surrendering the prisoner till he heard from Washington, and an attachment was issued for Gen. Cadwallader." STRONG-contemporary, summary only.
+
+## (c) What was printed with it
+
+- **Merryman's petition**, sworn 25 May, TD pp. 247-248 (quoted above); **Williams's affidavits** of 25 and 26 May, TD pp. 248-249; Hanan, "U.S. Commissioner" (and BE p. 1-2: counsel Gill and Williams).
+- **Taney's order** (26 May) and **the writ** signed "Thomas Spicer, Clerk", TD pp. 249-250.
+- **Marshal**: Washington Bonifant, "U.S. Marshal for the District of Maryland". His return on the writ: served on Cadwalader the day it issued (TD p. 250, reported in the third person, not quoted). His return on the attachment: refused at the outer gate (TD p. 252; BE p. 4). BE p. 5 adds that **Deputy Marshal Vance** handed up the return and, at Taney's instruction ("you should state that. The fact does not appear in your return"), amended it to add that he was not permitted to enter the outer gate.
+- **Colonel Lee**: surname only in TD ("Colonel Lee, a military officer") and BE ("Col. Lee, Aid-de-Camp of Gen. Cadwallader"). No first name in any source read.
+- **Arresting chain**: Col. Samuel Yohe, under Maj. Gen. William H. Keim; escort Adjutant James Wittimore and Lieut. Wm. H. Abel (all in Cadwalader's return, TD p. 250-251).
+- Cadwalader's title in the return: "Brevet Major-General U.S.A., Commanding" at "Headquarters, Department of Annapolis"; the petition says "Brigadier-General George Cadwalader" (TD p. 247). The two titles are both in the court's papers.
+- Taney's opinion: the 28 May oral statement (TD p. 253) and the written opinion (TD pp. 253-270). The opinion rests on: Congress alone may suspend (art. I, sec. 9); the President cannot authorise a military officer to; "I can see no ground whatever for supposing that the president, in any emergency, or in any state of things, can authorize the suspension of the privileges of the writ of habeas corpus, or the arrest of a citizen, except in aid of the judicial power" (TD p. 260). It notes that "No official notice has been given to the courts of justice, or to the public, by proclamation or otherwise, that the president claimed this power" (TD p. 255; FC p. 148).
+
+## Where the sources disagree
+
+1. **Date of Cadwalader's return.** TD p. 250 and FC p. 146 head it "May 26, 1861". BE p. 2 (Baltimore Exchange, 28 May) gives "May 25, 1861" and "the annexed writ of this date". The writ is dated 26 May in all three, so the 26th is the consistent date and BE's "25" looks like a newspaper error. The return could not be dated before the writ.
+2. **"Brought to this post on the 20th inst."** appears in TD, FC and BE alike. The petition and the opinion say the arrest was on the morning of 25 May. So either the return as read had a slip ("20th" for "25th") that every printer copied, or the original differed; no source read resolves it. Flag for any design text: do not use "20 May".
+3. **Weekday of the return day.** BE p. 2 prints the writ as returnable "on Tuesday, the 21th [OCR; clearly 27th] day of May". TD and FC say "Monday, the 27th". 27 May 1861 was a Monday, so BE has a printing slip. The attachment order is correctly "Tuesday, the 28th" in BE p. 4.
+4. **26 May was a Sunday.** The petition was "presented" and the writ ordered on 26 May (TD p. 246, p. 249) and Williams went to the fort that day. All sources give the 26th; none mentions it was a Sunday.
+5. **Filing date of the written opinion.** No primary read states it. TD and FC say only "in the course of this week" (said 28 May). RR Diary p. 92 (entry for 4 June) says Taney's written opinion "was published in the Washington National Intelligencer of this date" [4 June]. The date **1 June 1861** that finding aids give (FJC pamphlet, a Maynooth law-review article, Wikipedia) was not confirmed in any primary I read. Mark it unverified; say "filed in the week of 28 May; printed 4 June".
+6. **Oral-statement wording of 28 May** differs by report. TD p. 253: "nor authorize a military officer to do it." BE p. 5 (Baltimore Exchange, 29 May) and RR Doc. 207 (NYT, 29 May): "nor authorize any military officer to do so." Use TD for the quotation; the others are the press versions.
+7. **Taney's reported title for Keim and the headnote.** FC/TD headnote says "a major-general of the United States army, commanding in the state of Pennsylvania". That is the reporter's headnote, not the court record; the return itself says only "Major-General William H. Keim" in the "military service of the United States". Not verified further here.
+
+## What the pack may cite
+
+Core: TD (and FC as a second print), plus BE for the day-by-day courtroom detail and RR for the contemporary press digest. For design text use the exact return words above, which are the only place the President's authority to Cadwalader is claimed in his own voice at the time. No source read shows an order from Lincoln naming Merryman; the claim of authority is Cadwalader's own, with Taney noting the lack of any public notice.
+
+## Findings outside my scope
+
+- Lincoln's reply: nothing read here shows Lincoln's answer to the 1 June/ week-of-28-May transmission. Lincoln's 4 July 1861 message to Congress and the Bates opinion of 5 July 1861 are the usual primaries (Nicolay and Hay *Complete Works*; *Official Opinions of the Attorneys General*). Not read.
+- The Maryland State Archives page and OR Series I vol. 2 prisoner register (25 May) were named by a finding aid; worth reading for the Fort McHenry side.
+- Rebellion Record vol. 2 prints a long paper on the President's power that mentions Merryman (Doc. series; also a Vallandigham speech passage on the writ); not needed for the facts but possible adviser-voice material for S18 (not read in full, not verified as to author).

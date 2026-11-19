@@ -1,0 +1,71 @@
+# Blocs to source: batch9 (67 people)
+
+Each line: id | name | faction | kind | bloc | ranks | sources (the row as it stands; the bloc has no citation yet).
+
+- adams_charles_f | Charles Francis Adams | union | diplomat | moderates |  | BDAC adams_charles_f; APPLETONS adams_charles_f; NEWTON-LYONS ch3; WEED-MEM p350; PRFA 1862-GB-index; WELLES-D 1 p301
+- andrew_john_a | John A. Andrew | union | governor | radicals |  | OR III-1-p71; OR III-1-p78; APPLETONS andrew_john_a; PEARSON-ANDREW v2-p48; CHASE-D 1862-09-26; OR III-2-p180
+- banks_nathaniel_p | Nathaniel P. Banks | union | general | moderates | usv_maj_gen:1861-05-16 | Heitman 1 banks_nathaniel_p; BDAC banks_nathaniel_p; APPLETONS banks_nathaniel_p; OR I-12-1-p1; OR I-12-1-p2; OR I-12-3-
+- bates_edward | Edward Bates | union | cabinet | moderates |  | APPLETONS bates_edward; BDAC bates_edward; CHASE-D 1862-09-02; NH 3-p432
+- blair_francis_p | Francis P. Blair Jr. | (none) | congress | moderates | other_col:1861-04-26;other_col:1861-06-12;usv_brig_gen:1862-08-07;usv_maj_gen:18 | BDAC blair_francis_p; Heitman 1 blair_francis_p; CongDir37 2-p24-26; NH 4-p207-208; NH 4-ch7; LINCOLN 1861-05-18-blair; 
+- blair_montgomery | Montgomery Blair | union | cabinet | moderates |  | APPLETONS blair_montgomery; CHASE-D 1862-09-02; Cullum 803; Heitman 1 blair_montgomery; NH 3-p432; WELLES-D1-RETRO p57; 
+- butler_benjamin_f | Benjamin F. Butler | union | general | war_democrats | state_brig_gen:1861-04;usv_brig_gen:1861-04-17;usv_maj_gen:1861-05-16 | Heitman 1 butler_benjamin_f; APPLETONS butler_benjamin_f; BDAC butler_benjamin_f; WELLES-D 1862-12-29; OR II-1-p752; OR 
+- cameron_simon | Simon Cameron | union | cabinet | radicals |  | APPLETONS cameron_simon; BDAC cameron_simon; HR-37-2-2 p56; HR-37-2-2 p57; HR-37-2-2 p58; NH 5-p125; NH 5-p126; NH 5-p12
+- chandler_zachariah | Zachariah Chandler | union | congress | radicals |  | BDAC chandler_zachariah; CongDir37 2-p22; JCCW 2; JCCW 3; CHANDLER-OS p49-50; CHANDLER-OS p190-191; CHANDLER-OS p191-192
+- chase_salmon_p | Salmon P. Chase | union | cabinet | radicals |  | APPLETONS chase_salmon_p; BDAC chase_salmon_p; CHASE-D 1862-09-01; CHASE-D 1862-09-02; NH 3-p430; NH 6-p267; NH 6-p268; 
+- clay_cassius_m | Cassius M. Clay | (none) | diplomat | border_unionists | usv_maj_gen:1862-04-11 | Heitman 1 clay_cassius_m; APPLETONS clay_cassius_m; PRFA 1861-p286-288; WELLES-D 1862-09-08; RICH II-1861-06-01-yancey
+- covode_john | John Covode | union | congress | radicals |  | BDAC covode_john; APPLETONS covode_john; WELLES-D 1863-01-09; JCCW 2; JCCW 3; NH 5-p150-151; JULIAN-PR p201
+- crittenden_john_j | John J. Crittenden | (none) | congress | border_unionists |  | BDAC crittenden_john_j; NH 3-p223-224; NH 3-p227; NH 3-p256; NH 4-p368; NH 4-p379-380; NH 4-p382; RIDDLE-WADE p242; COX-
+- curtin_andrew_g | Andrew G. Curtin | union | governor | moderates |  | OR III-1-p82; OR III-2-p46; OR III-2-p180; BDAC curtin_andrew_g; APPLETONS curtin_andrew_g; PEARSON-ANDREW v2-p48; WELLE
+- curtis_samuel_r | Samuel R. Curtis | union | general | moderates | usv_brig_gen:1861-05-17;other_col:1861-06-01;usv_maj_gen:1862-03-21 | Cullum 655; Heitman 1 curtis_samuel_r; BDAC curtis_samuel_r; OR I-3-p541; OR I-8-p196; OR I-8-p197
+- dana_charles_a | Charles A. Dana | union | editor | radicals |  | APPLETONS dana_charles_a; DANA-RCW ch1
+- dayton_william_l | William L. Dayton | union | diplomat | moderates |  | BDAC dayton_william_l; APPLETONS dayton_william_l; PRFA 1862-p313; WEED-MEM p349; WEED-MEM p390; WEED-MEM p414
+- dennison_william | William Dennison | union | governor | moderates |  | OR III-1-p73; OR III-1-p77; OR III-1-p102; NH 4-p283; NH 4-p285; OR III-2-p180; USREPORTS
+- dix_john_a | John A. Dix | union | general | war_democrats | usa_capt:1825-08-30;usv_maj_gen:1861-05-16 | Heitman 1 dix_john_a; BDAC dix_john_a; APPLETONS dix_john_a; OR I-12-1-p1
+- fessenden_william_p | William P. Fessenden | union | congress | moderates |  | BDAC fessenden_william_p; CongDir37 2-p22; NH 6-p233-234; NH 6-p266-267; WELLES-D 1862-12-20; JULIAN-PR p356; RIDDLE-WAD
+- fremont_john_c | John C. Fremont | union | general | radicals | usa_maj_gen:1861-05-14 | BDAC fremont_john_c; Heitman 1 fremont_john_c; OR I-3-p467; OR I-3-p477; OR I-3-p485; OR I-3-p541; OR I-3-p542; OR I-3-p
+- gamble_hamilton_r | Hamilton R. Gamble | (none) | governor | border_unionists |  | NH 4-p225; OR III-1-p388; OR III-1-p623; OR III-2-p180; MO-CONV-1861
+- gooch_daniel_w | Daniel W. Gooch | union | congress | radicals |  | BDAC gooch_daniel_w; WELLES-D 1863-07-16; JCCW 2; JCCW 3; JULIAN-PR p201; NH 5-p150-151
+- greeley_horace | Horace Greeley | union | editor | radicals |  | BDAC greeley_horace; APPLETONS greeley_horace; GREELEY-RBL p402-403; DANA-RCW ch1; APPLETONS dana_charles_a; HAY-D 1864-
+- hamlin_hannibal | Hannibal Hamlin | union | other | radicals |  | APPLETONS hamlin_hannibal; BDAC hamlin_hannibal; WELLES-D 1862-08-15
+- hay_john_m | John Hay | union | other | moderates |  | APPLETONS hay_john_m; HAY-D L1908 intro; Heitman 1 hay_john_m
+- hicks_thomas_h | Thomas H. Hicks | (none) | governor | border_unionists |  | OR III-1-p79; OR III-1-p190; OR III-1-p463; BDAC hicks_thomas_h; APPLETONS hicks_thomas_h
+- holt_joseph | Joseph Holt | (none) | bureau | war_democrats | usa_col:1862-09-03 | APPLETONS holt_joseph; Heitman 1 holt_joseph; NH 3-p110; NH 3-p134; NOTE-union-war-economy; WELLES-D1-RETRO p4; HOLT-186
+- hunter_david | David Hunter | union | general | radicals | usa_maj:1842-03-14;usa_col:1861-05-14;usv_brig_gen:1861-05-17;usv_maj_gen:1861-0 | Heitman 1 hunter_david; Cullum 310; APPLETONS hunter_david; OR I-14-p341; OR II-1-p818
+- hurlbut_stephen_a | Stephen A. Hurlbut | union | general | moderates | usv_brig_gen:1861-05-17;usv_maj_gen:1862-09-17 | BDAC hurlbut_stephen_a; APPLETONS hurlbut_stephen_a; Heitman 1 hurlbut_stephen_a; NH 3-p390; NH 3-p391; OR I-10-1-p110
+- johnson_andrew | Andrew Johnson | (none) | congress | war_democrats | usv_brig_gen:1862-03-04 | BDAC johnson_andrew; Heitman 1 johnson_andrew; CongDir37 2-p22; CongDir37 2-p23; JCCW 2-p52-54; JCCW 2; JCCW 3; NH 3-p25
+- julian_george_w | George W. Julian | union | congress | radicals |  | BDAC julian_george_w; APPLETONS julian_george_w; JULIAN-PR p200; JULIAN-PR p201; JULIAN-PR p203; JULIAN-PR p204; JULIAN-
+- lane_james_h | James H. Lane | union | congress | radicals | usv_brig_gen:1861-12-18 | BDAC lane_james_h; Heitman 1 lane_james_h; NH 4-p106-107; NH 5-p83-84; NH 5-p84; NH 5-p85; LINCOLN 1862-01-31-war-secret
+- lincoln_abraham | Abraham Lincoln | union | other | moderates |  | APPLETONS lincoln_abraham; Heitman 1 lincoln_abraham; NH 3-p433; NH 3-p439; NH 3-p448; NH 3-p449; NH 4-p418; NH 5-p124; 
+- mcclellan_george_b | George B. McClellan | union | general | war_democrats | usa_capt:1855-03-03;state_maj_gen:1861-04-23;usa_maj_gen:1861-05-14 | Heitman 1 mcclellan_george_b; Cullum 1273; APPLETONS mcclellan_george_b; MCCLELLAN-OS p152; HAY-D 1861-10-26; HAY-D 1861
+- mcclernand_john_a | John A. McClernand | union | general | war_democrats | usv_brig_gen:1861-05-17;usv_maj_gen:1862-03-21 | BDAC mcclernand_john_a; Heitman 1 mcclernand_john_a; OR I-10-1-p110; GRANT-PM ch18; GRANT-PM ch29; GRANT-PM ch30
+- morgan_edwin_d | Edwin D. Morgan | union | governor | moderates | usv_maj_gen:1861-09-28 | OR III-1-p72; OR III-1-p83; OR III-2-p881; BDAC morgan_edwin_d; Heitman 1 morgan_edwin_d
+- morton_oliver_h_p_t | Oliver P. Morton | union | governor | moderates |  | OR III-1-p70; OR III-1-p75; OR III-1-p80; BDAC morton_oliver_h_p_t; APPLETONS morton_oliver_h_p_t; FOULKE-MORTON v1
+- nicolay_john_g | John G. Nicolay | union | other | moderates |  | APPLETONS nicolay_john_g; HAY-D L1908 intro; WELLES-D1-RETRO p16
+- odell_moses_f | Moses F. Odell | union | congress | war_democrats |  | BDAC odell_moses_f; WELLES-D 1864-03-12; JCCW 2; JCCW 3; JULIAN-PR p201; NH 5-p150-151
+- pendleton_george_h | George H. Pendleton | union | congress | peace_democrats |  | BDAC pendleton_george_h; COX-3DEC p75-76; NH 6-p234-235
+- pierpont_francis_h | Francis H. Pierpont | (none) | governor | border_unionists |  | OR III-1-p289; OR III-1-p378; OR III-1-p431; OR III-2-p46; OR III-2-p180; CHASE-D 1862-09-26; FFP-1899
+- ramsey_alexander | Alexander Ramsey | union | governor | moderates |  | OR III-1-p200; OR III-2-p180; OR III-2-p455; OR III-2-p465; OR III-2-p467; BDAC ramsey_alexander; APPLETONS ramsey_alexa
+- raymond_henry_j | Henry J. Raymond | union | editor | moderates |  | BDAC raymond_henry_j; APPLETONS raymond_henry_j; WELLES-D 1 p184
+- schurz_carl | Carl Schurz | union | general | radicals | usv_brig_gen:1862-04-15;usv_maj_gen:1863-03-14 | Heitman 1 schurz_carl; BDAC schurz_carl; APPLETONS schurz_carl
+- seward_william_h | William H. Seward | union | cabinet | moderates |  | APPLETONS seward_william_h; BDAC seward_william_h; NH 3-p430; NH 3-p439; NH 3-p445; NH 3-p446; NH 3-p447; NH 3-p448; NH 
+- seymour_horatio | Horatio Seymour | union | governor | war_democrats |  | APPLETONS seymour_horatio; WELLES-D 1862-09-27; WELLES-D 1863-01-10
+- sickles_daniel_e | Daniel E. Sickles | union | general | war_democrats | other_col:1861-06-20;usv_brig_gen:1861-09-03;usv_maj_gen:1862-11-29 | Heitman 1 sickles_daniel_e; BDAC sickles_daniel_e; APPLETONS sickles_daniel_e
+- sigel_franz | Franz Sigel | (none) | general | radicals | other_col:1861-05-04;usv_brig_gen:1861-05-17;usv_maj_gen:1862-03-21 | Heitman 1 sigel_franz; APPLETONS sigel_franz; OR I-12-3-p435
+- smith_caleb_b | Caleb B. Smith | union | cabinet | moderates |  | APPLETONS smith_caleb_b; BDAC smith_caleb_b; CHASE-D 1862-09-02; NH 3-p431; CHI-1860
+- stanton_edwin_m | Edwin M. Stanton | union | cabinet | war_democrats |  | APPLETONS stanton_edwin_m; CHASE-D 1862-09-01; NH 5-p131; NH 5-p132; NH 5-p134; NH 5-p135; NH 5-p141; WELLES-D1-RETRO p5
+- stevens_thaddeus | Thaddeus Stevens | union | congress | radicals |  | BDAC stevens_thaddeus; CongDir37 2-p24-26; WOODBURN-STEVENS p73-123; WOODBURN-STEVENS p226-227; WOODBURN-STEVENS p239; W
+- sumner_charles | Charles Sumner | union | congress | radicals |  | BDAC sumner_charles; CongDir37 2-p22; PIERCE-SUMNER p42-43; PIERCE-SUMNER p55-56; PIERCE-SUMNER p98-99; PIERCE-SUMNER p1
+- tod_david | David Tod | union | governor | war_democrats |  | OR III-1-p922; OR III-2-p46; OR III-2-p180; WELLES-D 1863-01-10; APPLETONS tod_david
+- trumbull_lyman | Lyman Trumbull | union | congress | moderates |  | BDAC trumbull_lyman; CongDir37 2-p22; NH 4-p379-380; NH 4-p380-381; NH 4-p467; NH 6-p266-267; WELLES-D 1862-12-20; MCCLE
+- vallandigham_clement_l | Clement L. Vallandigham | union | congress | peace_democrats |  | BDAC vallandigham_clement_l; APPLETONS vallandigham_clement_l; COX-3DEC p75-76; COX-3DEC p80-82; NH 6-p397
+- wade_benjamin_f | Benjamin F. Wade | union | congress | radicals |  | BDAC wade_benjamin_f; CongDir37 2-p23; JCCW 2-p8; JCCW 2-p52-54; RIDDLE-WADE p240; RIDDLE-WADE p241; RIDDLE-WADE p242; R
+- wadsworth_james_s | James S. Wadsworth | union | general | radicals | state_maj_gen:1861-04;usv_brig_gen:1861-08-09 | Heitman 1 wadsworth_james_s; APPLETONS wadsworth_james_s
+- washburn_israel | Israel Washburn Jr. | union | governor | moderates |  | OR III-1-p71; OR III-2-p180; BDAC washburn_israel; APPLETONS washburn_israel
+- washburne_elihu_b | Elihu B. Washburne | union | congress | moderates |  | BDAC washburne_elihu_b; CongDir37 2-p24-26; NH 3-p250; NH 3-ch16; NH 3-ch20; LINCOLN 1860-12-13-washburne; LINCOLN 1860-
+- weed_thurlow | Thurlow Weed | union | editor | moderates |  | APPLETONS weed_thurlow; WEED-MEM p349; WEED-MEM p350; WEED-MEM p390; WEED-MEM p413; WEED-MEM p414; WEED-MEM p430; WELLES
+- welles_gideon | Gideon Welles | union | cabinet | moderates |  | APPLETONS welles_gideon; CHASE-D 1862-09-01; CHASE-D 1862-09-02; NH 3-p431; WELLES-D 1862-08-15; WELLES-D1-RETRO p15; WE
+- wilson_henry | Henry Wilson | union | congress | radicals | other_col:1861-09-21 | BDAC wilson_henry; Heitman 1 wilson_henry; CongDir37 2-p22; NASON-WILSON p306-308; NASON-WILSON p309; NASON-WILSON p310;
+- wood_benjamin | Benjamin Wood | union | congress | peace_democrats |  | BDAC wood_benjamin; REBREC 2-D67
+- yates_richard | Richard Yates | union | governor | radicals |  | OR III-1-p80; OR III-1-p81; BDAC yates_richard; APPLETONS yates_richard; GRANT-PM ch17; GRANT-PM ch18
+- carlile_john_s | John S. Carlile | (none) | congress | border_unionists |  | OR I-2 p723; OR III-1 p378
+- willey_waitman_t | Waitman T. Willey | (none) | congress | border_unionists |  | OR I-2 p723; OR III-1 p378
