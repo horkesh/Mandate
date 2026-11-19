@@ -342,6 +342,9 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.14 (calibration):** mark two competence KEEPs weak. Scott's rests on the 1848 thanks resolution, thirteen years before, and says nothing of Scott at 74, unable to take the field. Sumner's rests on one friend's praise of one speech, which is oratory, not competence. Both only keep their coded bands.
   - **The cost of the cause-in-State ruling:** Holmes resigned on 22 April 1861, four weeks before North Carolina seceded on 20 May. Under the ruling, the history run shows him resigning around 20 May.
   - **Cosmetic:** the source key `NavyReg1863-RESIGN` now cites Buchanan's dismissal.
+- From R65's values (`research-1861-values`, rs16):
+  - **Lane 1.14 (calibration):** with R65's values, the resignation model scores Lee at -100 (native_state +800, union -600, duty -300, against a threshold of 500). Outside the history mode it would keep him in US service, contrary to his own letter of 23 January 1861. The coefficients need calibrating. History mode is unaffected.
+  - **Gate reviewer:** Houston's `slavery_defence` value goes to the gate reviewer under 0074 when it is applied.
 - From lane 1.4b's report (`notes/lane-1.4b-detachments.md`, merged 1cf40d5), by lane:
   - **1B (the planner):** no operation leaves a garrison, because the planner drafts no garrison step. Add one if the history run needs it.
   - **Lane 1.4 or 1B, cleanup:** after a landing, the parent blocks stay aboard as 0-strength shells until a rejoin or a disbanding. Lane 1.4c (merged a810532) made sure an emptied shell can no longer be handed over in a transfer.
