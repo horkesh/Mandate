@@ -32,7 +32,7 @@ describe('the desk uses the console driver and grammar', () => {
       expect(desk.snapshot().morning.requestDay).toBeGreaterThan(3);
       const snapshot = desk.snapshot();
       for (const r of snapshot.morning.view.reports) {
-        const text = dispatchLog({ ...snapshot.morning.view, reports: [r] })[0]!;
+        const text = dispatchLog({ ...snapshot.morning.view, reports: [r] }, 0, key => snapshot.strings[key] ?? key)[0]!;
         expect(snapshot.paperText[r.id]).toBe(text.slice(text.indexOf('): ') + 3));
       }
       writeFileSync(`${evidenceDirectory()}/equivalence-${options.pack}${options.atWar ? '-at-war' : ''}.json`, JSON.stringify({ options, turns: snapshot.history.length, requestDay: snapshot.morning.requestDay, deskLogHash: canonicalHash(deskGame.log), consoleLogHash: canonicalHash(consoleGame.log), equalState: deskGame.hash() === consoleGame.hash() }, null, 2));

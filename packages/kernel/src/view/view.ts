@@ -60,7 +60,11 @@ function reportView(r: KnownReport, threshold: number): ReportView {
     subjectKind: b.reportSubjectKind,
     subjectId: b.reportSubjectId,
     claims: freeze(
-      b.reportClaims.map((c) => freeze({ kind: c.claimKind, region: c.claimRegion, value: c.claimValue, token: c.claimToken, confidence: c.claimConfidence })),
+      b.reportClaims.map((c) => freeze({ kind: c.claimKind, region: c.claimRegion, value: c.claimValue, token: c.claimToken, confidence: c.claimConfidence,
+        ...(c.claimBattle === undefined ? {} : { battle: c.claimBattle }),
+        ...(c.claimBattleDays === undefined ? {} : { battleDays: freeze([...c.claimBattleDays]) }),
+        ...(c.claimCommander === undefined ? {} : { commander: c.claimCommander }),
+      })),
     ),
     reportedControl: freeze([...controlEvidence([r], threshold)].map(([region, { holder, contested }]) => freeze({ region, holder, contested }))),
     ...(r.knownPublicOpening === true ? { openingControl: true as const } : {}),

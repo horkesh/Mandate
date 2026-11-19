@@ -13,6 +13,7 @@ import {InTray,WeeklyPaper} from './InTray.tsx';
 import {clearFilters} from './intray.ts';
 import type {TrayFilters} from './intray.ts';
 import { S, VERBS } from './strings.ts';
+import {pressStories} from './press.ts';
 import type { Panel } from './strings.ts';
 import {dayFrames,playbackSnapshot,reportPlace} from './table.ts';
 import type {Point} from './map/model.ts';
@@ -263,8 +264,9 @@ function dateForReport(data: DeskSnapshot, day: number): string {
   return morning.toISOString().slice(0, 10);
 }
 
-function Paper({ report: r, text, t, dateOf, plain, display }: { display: (text: string) => string; report: ReportView; text: string; t: (key: string, kind?: string | number) => string; dateOf: (day: number) => string; plain: boolean }) {
+export function Paper({ report: r, text, t, dateOf, plain, display }: { display: (text: string) => string; report: ReportView; text: string; t: (key: string, kind?: string | number) => string; dateOf: (day: number) => string; plain: boolean }) {
   const stock = r.type === 'press' ? 'newsprint' : r.type === 'wire-dispatch' ? 'telegraph' : ['strength-return', 'casualty-return', 'effective-strength'].includes(r.type) ? 'printed' : 'letter';
+  const stories=pressStories(r,t);
   return <article data-testid="paper" className={`paper stock-${stock} ${plain ? 'typeset' : ''}`}>
     <header className={`paper-header ${stock === 'telegraph' || stock === 'newsprint' ? 'decorated-header' : ''}`}>
       {(stock === 'telegraph' || stock === 'newsprint') && <span aria-hidden="true" className={`document-decoration document-head ${stock === 'telegraph' ? 'telegraph-head' : 'press-head'}`} />}
@@ -272,7 +274,7 @@ function Paper({ report: r, text, t, dateOf, plain, display }: { display: (text:
       {stock !== 'newsprint' && stock !== 'telegraph' && <div aria-hidden="true" className="rule document-decoration" />}
     </header>
     <dl className="paper-meta"><div><dt>{S.from}</dt><dd>{t(r.author, 'person')}</dd></div><div><dt>{S.written}</dt><dd>{dateOf(r.day)}{r.hour !== null ? `, ${String(r.hour).padStart(2, '0')}:00` : ''}</dd></div><div><dt>{S.route}</dt><dd>{r.route}{r.via.length ? `, ${S.via} ${r.via.map(id => t(id, 'post')).join(' → ')}` : ''}</dd></div><div><dt>{S.subject}</dt><dd>{r.subjectKind}, {t(r.subjectId, r.subjectKind)}</dd></div></dl>
-    <div className="paper-copy">{text.split('; ').map((paragraph, i) => <p key={i}>{display(paragraph)}</p>)}</div><footer><p className="signature">{t(r.author, 'person')}</p><span className="received-stamp">{S.stamp}<small>{dateOf(r.receivedDay)}, {r.route}</small></span></footer>
+    <div className="paper-copy">{r.type==='press' ? (stories.length?stories.map((story,i)=><section key={i}><h3>{story.headline}</h3><p>{story.body}</p></section>):<p>{t('press.empty')}</p>) : text.split('; ').map((paragraph, i) => <p key={i}>{display(paragraph)}</p>)}</div><footer><p className="signature">{t(r.author, 'person')}</p><span className="received-stamp">{S.stamp}<small>{dateOf(r.receivedDay)}, {r.route}</small></span></footer>
   </article>;
 }
 

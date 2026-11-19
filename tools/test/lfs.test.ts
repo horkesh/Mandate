@@ -58,7 +58,9 @@ describe('the check (no binary under art/ in plain git)', () => {
     expect(problems[1]).toContain('art/_pilot/sketch.psd: a binary under art/ that no LFS pattern covers');
   });
 
-  it('reads every commit a pushed head reaches: art committed into plain git and deleted later is still refused (the review)', () => {
+  // These three fixtures write temporary Git histories. The ordinary hook and CI
+  // run them; the read-only Codex gate must not create or commit even a scratch repo.
+  it.skipIf(process.env.MANDATE_NO_GIT === '1')('reads every commit a pushed head reaches: art committed into plain git and deleted later is still refused (the review)', () => {
     // A scratch repository with no hooks and no LFS filter: the first commit puts a PNG under art/ as a plain blob, the
     // second deletes it, so the tip is clean and only the history holds it.
     const dir = mkdtempSync(join(tmpdir(), 'mandate-lfs-history-'));
@@ -79,7 +81,7 @@ describe('the check (no binary under art/ in plain git)', () => {
     expect(history[0]).toContain(`(in commit ${leaked.slice(0, 12)})`);
   });
 
-  it('refuses any path under art-masters/, staged by git add -f past .gitignore or in any commit (main 37da2a8)', () => {
+  it.skipIf(process.env.MANDATE_NO_GIT === '1')('refuses any path under art-masters/, staged by git add -f past .gitignore or in any commit (main 37da2a8)', () => {
     const dir = mkdtempSync(join(tmpdir(), 'mandate-lfs-masters-'));
     const git = (...args: string[]) => execFileSync('git', ['-c', 'core.hooksPath=no-hooks', '-c', 'user.name=test', '-c', 'user.email=test@example.invalid', '-c', 'commit.gpgsign=false', ...args], { cwd: dir, encoding: 'utf8' });
     git('init', '-q');
@@ -103,7 +105,7 @@ describe('the check (no binary under art/ in plain git)', () => {
     expect(mastersProblems(['art-masters.md', 'art/masters/x.png'])).toEqual([]);
   });
 
-  it('refuses git add -f art-masters/x.png in the staged mode the pre-commit hook runs, and in the tree mode (the re-check)', () => {
+  it.skipIf(process.env.MANDATE_NO_GIT === '1')('refuses git add -f art-masters/x.png in the staged mode the pre-commit hook runs, and in the tree mode (the re-check)', () => {
     const dir = mkdtempSync(join(tmpdir(), 'mandate-lfs-modes-'));
     const git = (...args: string[]) => execFileSync('git', ['-c', 'core.hooksPath=no-hooks', '-c', 'user.name=test', '-c', 'user.email=test@example.invalid', '-c', 'commit.gpgsign=false', ...args], { cwd: dir, encoding: 'utf8' });
     git('init', '-q');
