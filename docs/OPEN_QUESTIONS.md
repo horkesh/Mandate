@@ -325,6 +325,18 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Is this right?** When no superior is serving, the principal authors the loss report.
   - **Merge care:** R48 and R49 (`phase1-resignation`) both edit `whereIsPerson`, so merging the second of them needs care.
   - **Two older small leaks**, found outside R48's scope: `dispatchOrder` drops a vacant relay post by reading truth; `fieldPosts` drops a post that has lost its blocks while its commander lives.
+- From the standing reviewer's review of R49 (`phase1-resignation`; `review-codex-r48-r49.md`), by lane:
+  - **A test for each:** a resigned man's politics bloc, the `resignAt` boundary, and the validator's no-trigger check.
+  - **The research lane:** its Buchanan note still calls his departure a resignation, when it was a dismissal.
+  - **Lane 1.14 (calibration) and research:** the values model barely acts on the real data. 13 of the 15 have no values, and Lee sits exactly on the threshold.
+- From the review of R54 (`press-in-view`; `review-codex-r54.md`):
+  - **The CLI's and the desk's `press.ts`** are byte-identical copies. Share them, or test that they are equal.
+  - **The public closing report** carries no truth term for its result.
+  - The desk typecheck in CI closes the reviewer's earlier item.
+- From the review of R51 and R52 (`review-codex-r51-r52-r57.md`):
+  - **Lane 1.14 (calibration):** Trumbull as radicals is defensible [I], but the anti-compromise votes also take in Doolittle, Foot and King. Flag it.
+  - **The research lane:** some R52 evidence still points into another session's temporary scratchpad.
+  - **The validator's owner:** the exact-day parser ignores year, month and range bounds.
 - From lane 1.4b's report (`notes/lane-1.4b-detachments.md`, merged 1cf40d5), by lane:
   - **1B (the planner):** no operation leaves a garrison, because the planner drafts no garrison step. Add one if the history run needs it.
   - **Lane 1.4 or 1B, cleanup:** after a landing, the parent blocks stay aboard as 0-strength shells until a rejoin or a disbanding. Lane 1.4c (merged a810532) made sure an emptied shell can no longer be handed over in a transfer.
