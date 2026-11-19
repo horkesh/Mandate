@@ -304,7 +304,8 @@ export type TransferPick = 'strongest_first' | 'weakest_first';
  * captured, and a surrendered block that no post commands any more. Typed, with the battle that caused it (hard rule 6).
  */
 export type CombatCommandChange =
-  | { readonly change: 'vacate'; readonly post: PostId; readonly person: PersonId; readonly why: 'killed' | 'wounded' | 'captured'; readonly battle: string }
+  // Lane 1.12: `evacuated`: a fort's commander who left with his garrison under the record's terms (he keeps serving).
+  | { readonly change: 'vacate'; readonly post: PostId; readonly person: PersonId; readonly why: 'killed' | 'wounded' | 'captured' | 'evacuated'; readonly battle: string }
   | { readonly change: 'release'; readonly block: ForceBlockId; readonly battle: string };
 
 /**

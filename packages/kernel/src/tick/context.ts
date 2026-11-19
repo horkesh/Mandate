@@ -5,6 +5,7 @@
  * None of this is State; it is the tick's report (hard rule 6), rebuilt
  * identically on replay.
  */
+import type { BattleOrders } from '../combat/order-kinds.ts';
 import type { ControlChange, ControlDelta, ThresholdCrossing } from '../control/control.ts';
 import type { FoughtDay, OccupationRecord, RetreatRecord } from '../combat/battle.ts';
 import type { StoresCrossing } from '../forces/stores.ts';
@@ -39,6 +40,8 @@ export type RejectionReason =
   | 'not_raising_post'
   | 'bad_call'
   | 'other_side'
+  // Lane 1.12 (hard rule 1, 0016): a battle order from a seat the player drives. The player never moves a division.
+  | 'player_seat'
   | 'route_unavailable'
   | 'unknown_post'
   | 'unknown_seat'
@@ -158,6 +161,8 @@ export interface TickContext {
   /** Network changes proposed today, for `infrastructure` to apply (combat, raids, repair, operations, situations: lane 0.5). */
   readonly infrastructureDeltas: InfrastructureDelta[];
   readonly mapEvents: MapEvent[];
+  /** Commanders' battle orders for today, by post (lane 1.12): given in phase 1, read by the battle model. Absent: none. */
+  readonly battleOrders?: Map<PostId, BattleOrders>;
 }
 
 export function fire(ctx: TickContext, mechanic: string, change = 1): void {

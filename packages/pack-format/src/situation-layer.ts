@@ -145,7 +145,7 @@ export function policyRows(items: readonly { readonly file: string; readonly def
 
 /**
  * The rule-seat war setting (0064) names situation flags: warn for each one no
- * situation in the pack sets, so that faction's generic principal would keep
+ * situation in the pack sets, so that faction's rule-seat principal would keep
  * the peace for the whole run. A warning, not an error: a pack may ship before
  * the war's opening situation is authored (union-1861 does today).
  */

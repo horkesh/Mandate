@@ -87,12 +87,11 @@ describe('the gate can fail (positive controls)', () => {
   const union = REFERENCE_RUNS.find((r) => r.pack === 'union-1861')!;
   const testbed = REFERENCE_RUNS.find((r) => r.pack === 'testbed' && r.kind === 'full')!;
 
-  it('a run in which no seat orders anything leaves the movement and battle mechanics dead', () => {
-    const failures = gateFailures(union, liveness(union, NOTHING));
+  it('a run in which no seat orders anything leaves the movement, battle, occupation and recruitment mechanics dead', () => {
+    // The testbed run: lane 1.12's Union run fights no battle in 75 days, so its movement bands have no floor.
+    const failures = gateFailures(testbed, liveness(testbed, NOTHING));
     const dead = failures.filter((f) => f.problem === 'dead').map((f) => f.mechanic);
-    // Occupation and control changes can still fire: S09's call is a situation whose historical default the kernel takes
-    // (lane 1.11), and the regiments it musters occupy their governors' ground where they stand.
-    expect(dead).toEqual(expect.arrayContaining(['movement.leg_started', 'movement.arrived', 'combat.battle_day', 'orders.obeyed']));
+    expect(dead).toEqual(expect.arrayContaining(['movement.leg_started', 'movement.arrived', 'combat.battle_day', 'combat.occupation', 'control.changed', 'orders.obeyed', 'recruitment.called']));
   });
 
   it('a planted dead mechanic is reported dead, and one that fires too often too frequent', () => {

@@ -8,6 +8,7 @@
  * start and never asks a seat; resume continues from a saved State with the
  * log saved beside it. The save envelope carries the log and its hash.
  */
+import { battleOrdersProblems } from '../combat/order-kinds.ts';
 import { strictCompare } from '../compare.ts';
 import { isWellFormedId, type SeatId } from '../ids.ts';
 import { ROUTE_KINDS } from '../messages/latency.ts';
@@ -56,6 +57,7 @@ export function entryProblems(raw: unknown, i: number): string[] {
     review: ['action', 'bypass', 'cmd', 'edit', 'route', 'to'],
     go: ['bypass', 'cmd', 'route', 'to'],
     call: ['bypass', 'cmd', 'regiments', 'route', 'termDays', 'to'],
+    battle: ['cmd', 'commit', 'cutOff', 'night', 'post', 'pursue'],
     choose: ['cmd', 'option', 'request'],
     decide: ['cmd', 'options', 'situation'],
     delegate: ['cmd', 'situation', 'to'],
@@ -94,6 +96,9 @@ export function entryProblems(raw: unknown, i: number): string[] {
     routed();
     if (typeof c.regiments !== 'number' || !Number.isSafeInteger(c.regiments) || c.regiments < 1) problems.push(`${at}: call.regiments must be a whole number of regiments, at least 1`);
     if (typeof c.termDays !== 'number' || !Number.isSafeInteger(c.termDays) || c.termDays < 1) problems.push(`${at}: call.termDays must be a whole number of days, at least 1`);
+  } else if (c.cmd === 'battle') {
+    if (!id(c.post)) problems.push(`${at}: battle.post must be a post id`);
+    problems.push(...battleOrdersProblems(c as { commit: unknown; night: unknown; cutOff: unknown; pursue: unknown }).map((p) => `${at}: ${p}`));
   } else if (c.cmd === 'decide') {
     if (!id(c.situation)) problems.push(`${at}: decide.situation must be a situation id`);
     if (!Array.isArray(c.options) || !c.options.every((o) => typeof o === 'string' && o.length > 0) || new Set(c.options).size !== c.options.length) {

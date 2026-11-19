@@ -38,6 +38,14 @@ export interface OrderResponse {
   readonly respConditions: readonly ResponseCondition[];
 }
 
+/**
+ * Whether a response is a governor's answer to a call (lane 1.12): its addressee's, to an order whose id names the call
+ * and his post (`dispatchOrder` tags a call `call.<post>`).
+ */
+export function isCallAnswer(r: OrderResponse): boolean {
+  return r.respRole === 'addressee' && r.respPost !== null && r.respOrder.endsWith(`.call.${r.respPost}`);
+}
+
 /** The key of a man's response to an order: one per order per man. */
 export function responseKey(order: MessageId, person: PersonId): string {
   return `${order}|${person}`;
@@ -95,7 +103,8 @@ export function pruneResponses(state: State, day: number, keepDays: number): { r
     if (prior === undefined || r.respDay < prior.respDay || (r.respDay === prior.respDay && k < held!)) firstCall[r.respPost] = k;
   }
   for (const k of Object.values(firstCall)) named.add(k);
-  const drop = Object.keys(state.orderResponses).filter((k) => day - state.orderResponses[k]!.respDay > keepDays && !named.has(k));
+  // Keep every governor's call answer too: doctrine uses it to avoid duplicate calls (lane 1.12).
+  const drop = Object.keys(state.orderResponses).filter((k) => day - state.orderResponses[k]!.respDay > keepDays && !named.has(k) && !isCallAnswer(state.orderResponses[k]!));
   if (drop.length === 0) return { state, pruned: 0 };
   const next: Record<string, OrderResponse> = { ...state.orderResponses };
   for (const k of drop) delete next[k];

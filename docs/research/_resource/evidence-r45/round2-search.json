@@ -1,0 +1,2082 @@
+[
+  {
+    "batch": 10,
+    "person": "adams_charles_f",
+    "cell": "reputation",
+    "pattern": "adams",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 7,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 8,
+      "rs1\\chi1860.txt": 2
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "andrew_john_a",
+    "cell": "regard",
+    "pattern": "Andrew",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 7,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 13
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "andrew_john_a",
+    "cell": "value:state_autonomy",
+    "pattern": "Andrew",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 7,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 13
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "andrew_john_a",
+    "cell": "value:free_soil",
+    "pattern": "Andrew",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 7,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 13
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "andrew_john_a",
+    "cell": "value:fugitive_defence",
+    "pattern": "Andrew",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 7,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 13
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "andrew_john_a",
+    "cell": "trait:antislavery",
+    "pattern": "Andrew",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 7,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 13
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "andrew_john_a",
+    "cell": "trait:disdains_superiors",
+    "pattern": "Andrew",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 7,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 13
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "banks_nathaniel_p",
+    "cell": "reputation",
+    "pattern": "banks",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 9,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 11,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 2
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "bates_edward",
+    "cell": "nerve",
+    "pattern": "bates",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 3,
+      "rs1\\chi1860.txt": 6
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "bates_edward",
+    "cell": "reputation",
+    "pattern": "bates",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 3,
+      "rs1\\chi1860.txt": 6
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "bates_edward",
+    "cell": "regard",
+    "pattern": "bates",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 3,
+      "rs1\\chi1860.txt": 6
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "beauregard_pierre_g_t",
+    "cell": "reputation",
+    "pattern": "beauregard",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "blair_montgomery",
+    "cell": "nerve",
+    "pattern": "blair",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 3,
+      "rs1\\chi1860.txt": 20
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "bragg_braxton",
+    "cell": "reputation",
+    "pattern": "bragg",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "breckinridge_john_c",
+    "cell": "reputation",
+    "pattern": "breckinridge",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "brown_joseph_e",
+    "cell": "reputation",
+    "pattern": "brown",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 9,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 10,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 12,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 10,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 29,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 29,
+      "rs1\\chi1860.txt": 6
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "buell_don_c",
+    "cell": "reputation",
+    "pattern": "buell",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "cameron_simon",
+    "cell": "reputation",
+    "pattern": "cameron",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 6
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "chandler_zachariah",
+    "cell": "nerve",
+    "pattern": "chandler",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 5
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "chase_salmon_p",
+    "cell": "reputation",
+    "pattern": "chase",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 3,
+      "rs1\\chi1860.txt": 5
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "chase_salmon_p",
+    "cell": "trait:antislavery",
+    "pattern": "chase",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 3,
+      "rs1\\chi1860.txt": 5
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "crittenden_george_b",
+    "cell": "reputation",
+    "pattern": "crittenden",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 7,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 11,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "curtin_andrew_g",
+    "cell": "trait:organiser",
+    "pattern": "curtin",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "curtis_samuel_r",
+    "cell": "reputation",
+    "pattern": "curtis",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 3,
+      "rs1\\chi1860.txt": 13
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "dayton_william_l",
+    "cell": "reputation",
+    "pattern": "dayton",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 5
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "ewell_richard_s",
+    "cell": "reputation",
+    "pattern": "ewell",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "fessenden_william_p",
+    "cell": "reputation",
+    "pattern": "fessenden",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "foote_andrew_h",
+    "cell": "trait:organiser",
+    "pattern": "foote",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 10,
+    "person": "franklin_william_b",
+    "cell": "reputation",
+    "pattern": "franklin",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 9,
+      "rs1\\chi1860.txt": 4
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "fremont_john_c",
+    "cell": "reputation",
+    "pattern": "fremont",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 2
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "fremont_john_c",
+    "cell": "value:free_soil",
+    "pattern": "fremont",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 2
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "grant_ulysses_s",
+    "cell": "reputation",
+    "pattern": "grant",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 8,
+      "rs1\\chi1860.txt": 5
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "greeley_horace",
+    "cell": "reputation",
+    "pattern": "greeley",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 13
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "greeley_horace",
+    "cell": "trait:ambitious",
+    "pattern": "greeley",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 13
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "halleck_henry_w",
+    "cell": "reputation",
+    "pattern": "halleck",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "hardee_william_j",
+    "cell": "reputation",
+    "pattern": "hardee",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "hardee_william_j",
+    "cell": "trait:organiser",
+    "pattern": "hardee",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "harris_isham_g",
+    "cell": "reputation",
+    "pattern": "harris",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 8,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "heintzelman_samuel_p",
+    "cell": "reputation",
+    "pattern": "heintzelman",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "hill_daniel_h",
+    "cell": "reputation",
+    "pattern": "hill",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 6,
+      "rs1\\chi1860.txt": 3
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "hitchcock_ethan_a",
+    "cell": "reputation",
+    "pattern": "hitchcock",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 4
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "holmes_theophilus_h",
+    "cell": "reputation",
+    "pattern": "holmes",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "holt_joseph",
+    "cell": "competence",
+    "pattern": "holt",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "hooker_joseph",
+    "cell": "nerve",
+    "pattern": "hooker",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "hooker_joseph",
+    "cell": "reputation",
+    "pattern": "hooker",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "hunter_robert_m_t",
+    "cell": "reputation",
+    "pattern": "hunter",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 7,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 7,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "jackson_thomas_j",
+    "cell": "reputation",
+    "pattern": "jackson",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 9,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 4,
+      "rs1\\chi1860.txt": 4
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "johnson_andrew",
+    "cell": "competence",
+    "pattern": "Johnson",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 4
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "johnston_albert_s",
+    "cell": "reputation",
+    "pattern": "johnston",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "johnston_joseph_e",
+    "cell": "reputation",
+    "pattern": "johnston",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "julian_george_w",
+    "cell": "nerve",
+    "pattern": "julian",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "julian_george_w",
+    "cell": "reputation",
+    "pattern": "julian",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "julian_george_w",
+    "cell": "trait:antislavery",
+    "pattern": "julian",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "lane_james_h",
+    "cell": "reputation",
+    "pattern": "lane",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 11,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "lane_james_h",
+    "cell": "trait:antislavery",
+    "pattern": "lane",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 11,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "lee_robert_e",
+    "cell": "reputation",
+    "pattern": "lee",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "lincoln_abraham",
+    "cell": "reputation",
+    "pattern": "lincoln",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 7,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 20,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 47
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 11,
+    "person": "longstreet_james",
+    "cell": "reputation",
+    "pattern": "longstreet",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "lyon_nathaniel",
+    "cell": "competence",
+    "pattern": "lyon",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "lyon_nathaniel",
+    "cell": "reputation",
+    "pattern": "lyon",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "lyons_richard_b_p",
+    "cell": "competence",
+    "pattern": "Lyons",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "lyons_richard_b_p",
+    "cell": "nerve",
+    "pattern": "Lyons",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "lyons_richard_b_p",
+    "cell": "reputation",
+    "pattern": "Lyons",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "lyons_richard_b_p",
+    "cell": "trait:candid",
+    "pattern": "Lyons",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "magruder_john_b",
+    "cell": "reputation",
+    "pattern": "magruder",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "mason_james_m",
+    "cell": "reputation",
+    "pattern": "mason",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 9,
+      "rs1\\chi1860.txt": 2
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "mcclellan_george_b",
+    "cell": "reputation",
+    "pattern": "mcclellan",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "mcculloch_ben",
+    "cell": "reputation",
+    "pattern": "mcculloch",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "mcdowell_irvin",
+    "cell": "reputation",
+    "pattern": "mcdowell",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "meade_george_g",
+    "cell": "reputation",
+    "pattern": "meade",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "meigs_montgomery_c",
+    "cell": "trait:organiser",
+    "pattern": "meigs",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "mercier_henri",
+    "cell": "competence",
+    "pattern": "mercier",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "mercier_henri",
+    "cell": "nerve",
+    "pattern": "mercier",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "mitchel_ormsby_m",
+    "cell": "competence",
+    "pattern": "mitchel",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "mitchel_ormsby_m",
+    "cell": "nerve",
+    "pattern": "mitchel",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "mitchel_ormsby_m",
+    "cell": "reputation",
+    "pattern": "mitchel",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "mitchel_ormsby_m",
+    "cell": "trait:organiser",
+    "pattern": "mitchel",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "morgan_edwin_d",
+    "cell": "reputation",
+    "pattern": "morgan",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 4
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "morton_oliver_h_p_t",
+    "cell": "regard",
+    "pattern": "morton",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "pemberton_john_c",
+    "cell": "reputation",
+    "pattern": "pemberton",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "pendleton_george_h",
+    "cell": "reputation",
+    "pattern": "pendleton",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "pillow_gideon_j",
+    "cell": "reputation",
+    "pattern": "pillow",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "polk_leonidas",
+    "cell": "reputation",
+    "pattern": "polk",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "pope_john",
+    "cell": "nerve",
+    "pattern": "pope",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 9,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 16,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "pope_john",
+    "cell": "reputation",
+    "pattern": "pope",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 9,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 16,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "porter_fitz_john",
+    "cell": "reputation",
+    "pattern": "porter",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 8,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 3,
+      "rs1\\chi1860.txt": 3
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "price_sterling",
+    "cell": "reputation",
+    "pattern": "price",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 24,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 31,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 38,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 20,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 31,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 75,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 12,
+    "person": "ramsey_alexander",
+    "cell": "reputation",
+    "pattern": "ramsey",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 2
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "raymond_henry_j",
+    "cell": "reputation",
+    "pattern": "raymond",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "reynolds_john_f",
+    "cell": "nerve",
+    "pattern": "reynolds",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 3,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "reynolds_john_f",
+    "cell": "reputation",
+    "pattern": "reynolds",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 3,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "ripley_james_w",
+    "cell": "reputation",
+    "pattern": "ripley",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "rosecrans_william_s",
+    "cell": "nerve",
+    "pattern": "rosecrans",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "rosecrans_william_s",
+    "cell": "reputation",
+    "pattern": "rosecrans",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "rosecrans_william_s",
+    "cell": "trait:organiser",
+    "pattern": "rosecrans",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "schofield_john_m",
+    "cell": "nerve",
+    "pattern": "schofield",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "schofield_john_m",
+    "cell": "reputation",
+    "pattern": "schofield",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "schurz_carl",
+    "cell": "reputation",
+    "pattern": "schurz",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 6
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "scott_winfield",
+    "cell": "competence",
+    "pattern": "scott",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 2
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "scott_winfield",
+    "cell": "reputation",
+    "pattern": "scott",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 2
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "seward_william_h",
+    "cell": "nerve",
+    "pattern": "seward",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 27
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "seward_william_h",
+    "cell": "reputation",
+    "pattern": "seward",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 27
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "sherman_william_t",
+    "cell": "reputation",
+    "pattern": "sherman",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 2
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "slidell_john",
+    "cell": "nerve",
+    "pattern": "slidell",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "smith_charles_f",
+    "cell": "reputation",
+    "pattern": "Smith",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 8,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 11,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 10,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 19,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 20,
+      "rs1\\chi1860.txt": 13
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "smith_charles_f",
+    "cell": "trait:infirm",
+    "pattern": "Smith",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 8,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 11,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 10,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 19,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 20,
+      "rs1\\chi1860.txt": 13
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "smith_edmund_k",
+    "cell": "reputation",
+    "pattern": "Smith",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 8,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 11,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 10,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 19,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 20,
+      "rs1\\chi1860.txt": 13
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "stevens_thaddeus",
+    "cell": "competence",
+    "pattern": "stevens",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 4,
+      "rs1\\chi1860.txt": 8
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "stevens_thaddeus",
+    "cell": "trait:antislavery",
+    "pattern": "stevens",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 4,
+      "rs1\\chi1860.txt": 8
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "stone_charles_p",
+    "cell": "reputation",
+    "pattern": "stone",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 20,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 22,
+      "rs1\\chi1860.txt": 7
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "stone_charles_p",
+    "cell": "trait:organiser",
+    "pattern": "stone",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 5,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 4,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 20,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 22,
+      "rs1\\chi1860.txt": 7
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "stringham_silas_h",
+    "cell": "competence",
+    "pattern": "stringham",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "stuart_james_e_b",
+    "cell": "reputation",
+    "pattern": "stuart",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "sumner_charles",
+    "cell": "competence",
+    "pattern": "Sumner",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "sumner_charles",
+    "cell": "reputation",
+    "pattern": "Sumner",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "sumner_charles",
+    "cell": "trait:antislavery",
+    "pattern": "Sumner",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "sumner_edwin_v",
+    "cell": "reputation",
+    "pattern": "Sumner",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 13,
+    "person": "thomas_george_h",
+    "cell": "reputation",
+    "pattern": "thomas",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 11,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 9,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 13,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 10,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 12,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 11,
+      "rs1\\chi1860.txt": 18
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 14,
+    "person": "thomas_lorenzo",
+    "cell": "reputation",
+    "pattern": "thomas",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 11,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 9,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 13,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 10,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 12,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 11,
+      "rs1\\chi1860.txt": 18
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 14,
+    "person": "totten_joseph_g",
+    "cell": "competence",
+    "pattern": "totten",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 14,
+    "person": "totten_joseph_g",
+    "cell": "reputation",
+    "pattern": "totten",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 0,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 14,
+    "person": "trumbull_lyman",
+    "cell": "competence",
+    "pattern": "trumbull",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 14,
+    "person": "trumbull_lyman",
+    "cell": "reputation",
+    "pattern": "trumbull",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 14,
+    "person": "vallandigham_clement_l",
+    "cell": "nerve",
+    "pattern": "vallandigham",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 1,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 14,
+    "person": "wade_benjamin_f",
+    "cell": "reputation",
+    "pattern": "wade",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 1
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 14,
+    "person": "wilson_henry",
+    "cell": "nerve",
+    "pattern": "wilson",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 8,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 2
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 14,
+    "person": "wilson_henry",
+    "cell": "reputation",
+    "pattern": "wilson",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 8,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 2
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 14,
+    "person": "wilson_henry",
+    "cell": "trait:antislavery",
+    "pattern": "wilson",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 3,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 6,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 8,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 2
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 14,
+    "person": "wool_john_e",
+    "cell": "competence",
+    "pattern": "wool",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  },
+  {
+    "batch": 14,
+    "person": "wool_john_e",
+    "cell": "reputation",
+    "pattern": "wool",
+    "hits": {
+      "rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt": 2,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt": 0,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt": 1,
+      "rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt": 2,
+      "rs1\\chi1860.txt": 0
+    },
+    "limit": "surname matches are leads, not proof of identity, date, page or judgment"
+  }
+]

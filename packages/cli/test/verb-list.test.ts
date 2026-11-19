@@ -11,9 +11,12 @@ import { ConsoleGame } from '../src/console/game.ts';
  * never the principal's), with `review` taken by its three actions (approve, send back, edit: 0026's grammar).
  */
 
-/** The new kernel's verb list, as the principal sends it. */
+/**
+ * The new kernel's verb list, as the principal sends it. Lane 1.12: `battle`, like `choose`, is a commander's answer
+ * (his battle orders), never the principal's, and the kernel refuses it from a player's seat (hard rule 1).
+ */
 export function kernelVerbs(): string[] {
-  return phase0.COMMAND_KINDS.filter((k) => k !== 'choose')
+  return phase0.COMMAND_KINDS.filter((k) => k !== 'choose' && k !== 'battle')
     .flatMap((k) => (k === 'review' ? phase0.REVIEW_ACTIONS.map((a) => `review:${a}`) : [k]))
     .sort();
 }
@@ -60,6 +63,7 @@ describe('the console commands are the kernel verb list (lane 1.13: the new kern
     // `promise` and `pressure` share one builder (`cmd: word`), so they are counted from the switch's cases instead.
     expect([...built, 'pressure', 'promise'].sort()).toEqual(kinds);
     expect(source).not.toMatch(/cmd:\s*'choose'/);
+    expect(source).not.toMatch(/cmd:\s*'battle'/);
   });
 
   it('detects a mismatch (positive control)', () => {

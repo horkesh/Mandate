@@ -1,0 +1,62 @@
+[
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt",
+    "sha256": "92c1fda19f5b9d1b9986ed32886c9417f7197a489ba662febbd6242148f767ea",
+    "role": "retained OCR, selected passages read, not a claim of cover-to-cover inspection"
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt",
+    "sha256": "fdff32cf713ccbe694539a775cf81f2ddec06a9dad69a12a4dccd6103ebe97c9",
+    "role": "retained OCR, selected passages read, not a claim of cover-to-cover inspection"
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt",
+    "sha256": "02d25ac03d673ae48cf1a68f192bc636643dfaec1c8939402fdec486c6d7c733",
+    "role": "retained OCR, selected passages read, not a claim of cover-to-cover inspection"
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt",
+    "sha256": "543c365e23b6f651ad19d82497fd99f336e0670fca3952c1c33a90303166f7f0",
+    "role": "retained OCR, selected passages read, not a claim of cover-to-cover inspection"
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt",
+    "sha256": "9504723dc05315f7a0112bcf6ef3b729266c1d01999bf45aee189ce141dd5820",
+    "role": "retained OCR, selected passages read, not a claim of cover-to-cover inspection"
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt",
+    "sha256": "27a825b2d547c103acd282f1a09861163493640311a0b7bbd63904666456b036",
+    "role": "retained OCR, selected passages read, not a claim of cover-to-cover inspection"
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs1\\chi1860.txt",
+    "sha256": "5acfbd1545fe527d3255934bd4cea619a36909ef6a339ac5238de17718dfdc3c",
+    "role": "retained OCR, selected passages read, not a claim of cover-to-cover inspection"
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs-10\\lifeofjohnaandre01pear.txt",
+    "sha256": "3ee4583b26fe57b77dd268497241caffa4211bc9cdee437ab8f189fa71c792fc",
+    "role": "retained OCR, selected passages read, not a claim of cover-to-cover inspection"
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs1\\lordlyonsrecordo01newtuoft.txt",
+    "sha256": "bbc4314dc95ec843e7ef626ef6725f77db65bd77a80964827921722b47d17339",
+    "role": "retained OCR, selected passages read, not a claim of cover-to-cover inspection"
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs1\\abrahamlincolnhi03nico.txt",
+    "sha256": "7a00536cb99a8067fbf6da499ee9774cea14ee409ee574f15afad0ca9519928b",
+    "role": "retained OCR, selected passages read, not a claim of cover-to-cover inspection"
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs2\\stevens.txt",
+    "sha256": "d4fcfb5026687b2243add86ec16951b3841b7b07c8734659200122410668f5a9",
+    "role": "retained OCR, selected passages read, not a claim of cover-to-cover inspection"
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs1\\publicservhenrywil00nasorich.txt",
+    "sha256": "c64246545a54f9d95b355112c6cff2dc1ef2ec088f39a832f4df029414f7a6ac",
+    "role": "retained OCR, selected passages read, not a claim of cover-to-cover inspection"
+  }
+]

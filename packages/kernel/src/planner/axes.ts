@@ -91,9 +91,17 @@ export function buildAxis(ctx: Ctx, spec: AxisSpec): PlanAxis {
   };
 }
 
-/** A holding axis: no route, the force stays at staging. The honest "not yet" (D4), or "assemble and await my word". */
+/**
+ * A holding axis: no route, the force stays at staging. The honest "not yet" (D4), or "assemble and await my word".
+ * A goal to hold holds its objective, or the post's seat when it names none (lane 1.12, the lead's Fix 1): never the
+ * region of his strongest block, which made "hold Washington" a hold at New York. Blocks ordered to join the post march
+ * there by `movement/join.ts`; the holding plan moves none.
+ */
 export function holdingAxis(ctx: Ctx, post: PostId, blocks: readonly PlannerForce[], kind: 'await' | 'hold'): PlanAxis {
-  const staging = blocks[0]?.region ?? ctx.input.posts.find((p) => p.id === post)?.region ?? ctx.input.goal.goalObjective!;
+  const p = ctx.input.posts.find((x) => x.id === post);
+  const seat = p?.seat ?? null;
+  const holds = ctx.input.goal.goalPosture === 'hold' ? (ctx.input.goal.goalObjective ?? seat) : null;
+  const staging = holds ?? blocks[0]?.region ?? p?.region ?? ctx.input.goal.goalObjective!;
   return {
     axisName: kind,
     axisPost: post,

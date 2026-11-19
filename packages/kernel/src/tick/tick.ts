@@ -29,6 +29,7 @@
  * The tick is a pure function of (World, State, the day's log entries);
  * telemetry is passed in, never held.
  */
+import type { BattleOrders } from '../combat/order-kinds.ts';
 import { createDerivedMapCache, type DerivedMap, type DerivedMapCache } from '../control-index/derived.ts';
 import type { PostId } from '../ids.ts';
 import { pruneKnowledge } from '../knowledge/knowledge.ts';
@@ -81,9 +82,11 @@ export const SEATS_MECHANICS = [
   'orders.relay_held',
   'orders.relay_objected',
   'orders.relayed',
+  'orders.returned',
   'reports.filtered',
   'reports.trimmed',
   'seats.choices',
+  'seats.battle_orders',
   'seats.defaulted',
   // Lane 1.5: attention, the people verbs, the weekly people step.
   'seats.attention_refilled',
@@ -136,6 +139,8 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   let state = freeze(start);
   // The morning's ground: the map and latency the seats were asked from (0052: menus first, from the morning's State).
   const ground = morningGround(world, state, day);
+  // Commanders' battle orders for today (lane 1.12): read by the battle model, never kept in State.
+  const battleOrders = new Map<PostId, BattleOrders>();
   const ctx: TickContext = {
     world,
     latency: ground.latency,
@@ -152,6 +157,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     controlDeltas: [],
     infrastructureDeltas: [],
     mapEvents: [],
+    battleOrders,
   };
 
   // 0. The morning's plan menus, exactly as `pendingRequests` built them for the seats.
@@ -215,6 +221,17 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
       state = result.state;
       if (result.reason !== null) reject(result.reason);
       else pay();
+      return;
+    }
+    if (c.cmd === 'battle') {
+      // A commander's battle orders (lane 1.12): only the holder of the post sends them, once a day; the battle reads them.
+      // Never from a seat the player drives (hard rule 1, 0016): the player is the principal and moves no division, even
+      // if a setting ever lets him sit in a commander's seat. A player seat is one whose driver is `human`.
+      if (state.seatAssignments[entry.seat]!.seatDriver === 'human') return reject('player_seat');
+      if (heldPost(state, state.seatAssignments[entry.seat]!.seatPerson) !== c.post) return reject('not_the_decider');
+      if (battleOrders.has(c.post)) return reject('duplicate_choice');
+      battleOrders.set(c.post, { commit: c.commit, night: c.night, cutOff: c.cutOff, pursue: c.pursue });
+      fire(ctx, 'seats.battle_orders');
       return;
     }
     const post = heldPost(state, state.seatAssignments[entry.seat]!.seatPerson);

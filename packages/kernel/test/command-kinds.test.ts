@@ -10,6 +10,8 @@ import { entryProblems } from '../src/log/log.ts';
  * commands onto it. None moves a division: a place is named only inside an order to the holder of a post, a goal or an
  * edit of his plan's arrows within 0026's grammar (hard rule 1). Lane 1.2 adds `review` (approve, send back, edit) and `go`.
  * Lane 1.5 adds the people verbs: each an order to a person; a transfer names two posts and an amount, never a block.
+ * Lane 1.12 adds `battle`: a commander's own orders for his battle, sent by the holder of the post and never by a
+ * principal; it names no place and no block.
  */
 
 /** Compile time: the logged command union and the list name the same kinds. */
@@ -19,6 +21,7 @@ const KINDS_MATCH: Same<Command['cmd'], (typeof COMMAND_KINDS)[number]> = true;
 const entry = (command: unknown) => ({ day: 1, seat: 'seat.a_lead', command });
 const WELL_FORMED: Readonly<Record<(typeof COMMAND_KINDS)[number], unknown>> = {
   call: { cmd: 'call', to: 'a_army', regiments: 2, termDays: 90, route: 'wire', bypass: false },
+  battle: { cmd: 'battle', post: 'a_army', commit: 'probe', night: 'judge', cutOff: 'break_out', pursue: 'judge' },
   choose: { cmd: 'choose', request: 'plan:a_army:1', option: 'direct:least_cost:a_front>b_front' },
   decide: { cmd: 'decide', situation: 'ordinance', options: [] },
   delegate: { cmd: 'delegate', situation: 'ordinance', to: 'a_office' },
@@ -45,9 +48,9 @@ const WELL_FORMED: Readonly<Record<(typeof COMMAND_KINDS)[number], unknown>> = {
 };
 
 describe("the new kernel's command list (the verb-list test, 0072; lane 1.2)", () => {
-  it('is exactly the plan commands, lane 1.7’s call and lane 1.5’s people verbs', () => {
+  it('is exactly the plan commands, lane 1.7’s call, lane 1.5’s people verbs and lane 1.12’s battle orders', () => {
     expect(KINDS_MATCH).toBe(true);
-    expect([...COMMAND_KINDS]).toEqual(['address', 'appoint', 'audience', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer']);
+    expect([...COMMAND_KINDS]).toEqual(['address', 'appoint', 'audience', 'battle', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer']);
   });
 
   it('the log accepts each, well formed', () => {
@@ -70,6 +73,12 @@ describe("the new kernel's command list (the verb-list test, 0072; lane 1.2)", (
     expect(entryProblems(entry(withBlock), 0)).toEqual(['entry 0: transfer has fields [amount, blocks, cmd, force, from, route, to], expected [amount, cmd, force, from, route, to]']);
     expect(entryProblems(entry({ ...(WELL_FORMED.relieve as object), mode: 'shot' }), 0)).toEqual(['entry 0: relieve.mode must be one of own_request, outright, quiet_department', 'entry 0: relieve.to names the quiet post for quiet_department, and only for it']);
     expect(entryProblems(entry({ ...(WELL_FORMED.audience as object), counters: [{ kind: 'bribe', value: null, boldness: null, from: null, men: null }] }), 0)[0]).toContain('audience.counters must be counters');
+  });
+
+  it('battle orders name no place and no block, and each point takes only its own answers (hard rule 1)', () => {
+    expect(entryProblems(entry({ ...(WELL_FORMED.battle as object), region: 'b_cap' }), 0)[0]).toContain('battle has fields');
+    expect(entryProblems(entry({ ...(WELL_FORMED.battle as object), commit: 'massacre' }), 0)).toEqual(['entry 0: battle.commit must be one of judge, all_out, main, probe, defend']);
+    expect(entryProblems(entry({ ...(WELL_FORMED.battle as object), cutOff: 'stay' }), 0)).toEqual(['entry 0: battle.cutOff must be one of judge, break_out, surrender']);
   });
 
   it('the tick handles every kind and no other', () => {

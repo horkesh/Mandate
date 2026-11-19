@@ -4,18 +4,20 @@ import { describe, expect, it } from 'vitest';
 import { seatsWorld } from '../src/seats-world.ts';
 
 /**
- * The war gate (0064; lane 0.8, step 4): the generic rule-seat principal keeps every standing goal at hold
- * until his faction is at war, and opens his campaign the first morning after. "At war" is a chain flag the
- * pack names in its rule-seat settings: in union-1861 each side's own opening decision (lane 1.11: the seceded side's
- * seat opens the war, the president answers once he knows), in the testbed none (war from day 1). `atWar` is the labelled
- * mechanics option, no longer needed for a history run.
+ * The war gate (0064): doctrine waits for each side's own opening decision (lane 1.11), then calls,
+ * concentrates and orders through people (lane 1.12). The labelled atWar option opens the war on day 0.
  */
 const rules = createRuleSeat();
 const seats = () => rules;
-const orders = (log: readonly { readonly day: number; readonly command: { readonly cmd: string } }[]) => log.filter((e) => e.command.cmd === 'order');
+type Entry = { readonly day: number; readonly seat: string; readonly command: { readonly cmd: string } };
+const orders = (log: readonly Entry[]) => log.filter((e) => e.command.cmd === 'order');
+/** What the principals' doctrine sends (lane 1.12): goals, calls, appointments, transfers, inquiries. */
+const DOCTRINE = new Set(['order', 'call', 'appoint', 'transfer', 'inquire']);
+const doctrine = (log: readonly Entry[]) => log.filter((e) => DOCTRINE.has(e.command.cmd));
+/** The seats that called on their governors on a day. */
+const callers = (log: readonly Entry[], day: number) => [...new Set(log.filter((e) => e.command.cmd === 'call' && e.day === day).map((e) => e.seat))];
 /** The days of the orders that went down the chain: a later order sent around it answers an objection (lane 1.1: relays push back). */
-const chainOrderDays = (log: readonly { readonly day: number; readonly command: { readonly cmd: string } }[]) => orders(log).filter((e) => (e.command as { readonly bypass?: boolean }).bypass !== true).map((e) => e.day);
-const aroundEveryObjection = (log: readonly { readonly day: number; readonly command: { readonly cmd: string } }[]) => orders(log).filter((e) => (e.command as { readonly bypass?: boolean }).bypass === true).every((e) => (e.command as { readonly route?: string }).route === 'special-messenger');
+const chainOrderDays = (log: readonly Entry[]) => orders(log).filter((e) => (e.command as { readonly bypass?: boolean }).bypass !== true).map((e) => e.day);
 
 describe('the war gate on union-1861', () => {
   const { world, setup } = seatsWorld('union-1861');
@@ -35,7 +37,7 @@ describe('the war gate on union-1861', () => {
   it('keeps the peace until the opening decisions, then each side is at war from its own decision, with no labelled option (lane 1.11)', () => {
     const start = phase0.createState(world, setup);
     const peace = phase0.playDays(world, start, seats, 30, { freeze: true });
-    expect(orders(peace.log)).toEqual([]);
+    expect(doctrine(peace.log)).toEqual([]);
     expect(peace.state.situationFlags[warFlags.find((r) => r.faction === 'confederate')!.flag!]).toBeUndefined();
     const run = phase0.playDays(world, peace.state, seats, 30, { freeze: true });
     const day = (faction: string) => run.state.situationFlags[warFlags.find((r) => r.faction === faction)!.flag!]!;
@@ -44,6 +46,28 @@ describe('the war gate on union-1861', () => {
     expect(day('union')).toBeGreaterThanOrEqual(day('confederate'));
     expect(Math.min(...orders(run.log).map((e) => e.day))).toBeGreaterThan(day('confederate'));
     expect(run.state.forceLocations).not.toEqual(peace.state.forceLocations);
+  });
+
+  it('the labelled at-war option starts doctrine, calls and concentration', () => {
+    const war = phase0.createState(world, { ...setup, atWar: true });
+    const warRun = phase0.playDays(world, war, seats, 60, { freeze: true });
+    // Both principals start on the first morning (each asks his army where it stands). The seceding side's doctrine calls on
+    // 8 April (day 34). The Union's authored call reaches its governors before doctrine's 15 April row, so doctrine
+    // must not duplicate it; what they raise still goes to the concentration post. The doctrine's one offensive inside these days is the seceding side's order of 12 April (day
+    // 38) to take Fort Sumter, sent down the chain, then around the office that objects to it.
+    expect(Math.min(...doctrine(warRun.log).map((e) => e.day))).toBe(1);
+    expect(Math.min(...warRun.log.filter((e) => e.command.cmd === 'call').map((e) => e.day))).toBe(34);
+    expect(callers(warRun.log, 34)).toEqual(['seat:davis_jefferson']);
+    expect(callers(warRun.log, 41)).not.toContain('seat:lincoln_abraham');
+    const nyAnswers = Object.values(warRun.state.orderResponses).filter((r) =>
+      r.respKind === 'call' && r.respRole === 'addressee' && r.respPost === 'st_gov_new_york');
+    expect(nyAnswers).toHaveLength(1);
+    expect(nyAnswers[0]!.respDay).toBeLessThanOrEqual(41);
+    expect(Object.keys(warRun.state.forceBlockStates).some((b) => b.startsWith('raised.st_gov_new_york.'))).toBe(true);
+    expect(warRun.log.some((e) => e.command.cmd === 'transfer')).toBe(true);
+    expect(chainOrderDays(warRun.log)).toEqual([38]);
+    expect(orders(warRun.log).every((e) => (e.command as unknown as { readonly to: string }).to === 'cs_cmd_charleston')).toBe(true);
+    expect(warRun.state.forceLocations).not.toEqual(war.forceLocations);
   });
   it('the labelled option sets the pack’s own war flags on day 0 and nothing else; it is State, so the run hashes differently', () => {
     const peace = phase0.createState(world, setup);
@@ -54,16 +78,20 @@ describe('the war gate on union-1861', () => {
     expect(canonicalHash(war)).not.toBe(canonicalHash(peace));
   });
 
-  it('a war that begins mid-run opens his campaign the next morning, once', () => {
+  it('a war that begins mid-run starts his doctrine the next morning, and each governor is called once', () => {
     const peace = phase0.createState(world, setup);
     const early = phase0.playDays(world, peace, seats, 10, { freeze: true });
-    expect(orders(early.log)).toEqual([]);
+    expect(doctrine(early.log)).toEqual([]);
     // What a situation's effect would do on day 10: set the pack's war flags (the test plays the situation's part).
     const flags = Object.fromEntries(warFlags.map((r) => [r.flag, 10]));
     const declared = { ...early.state, situationFlags: flags };
-    const late = phase0.playDays(world, declared, seats, 10, { freeze: true });
-    expect(chainOrderDays(late.log)).toEqual([11, 11]);
-    expect(aroundEveryObjection(late.log)).toBe(true);
+    const late = phase0.playDays(world, declared, seats, 50, { freeze: true });
+    expect(Math.min(...doctrine(late.log).map((e) => e.day))).toBe(11);
+    // Each call still waits for its own date (8 and 15 April), and goes once.
+    expect(Math.min(...late.log.filter((e) => e.command.cmd === 'call').map((e) => e.day))).toBe(34);
+    expect(callers(late.log, 34)).toEqual(['seat:davis_jefferson']);
+    const called = late.log.filter((e) => e.command.cmd === 'call').map((e) => (e.command as unknown as { readonly to: string }).to);
+    expect(new Set(called).size).toBe(called.length);
     expect(late.state.forceLocations).not.toEqual(early.state.forceLocations);
   });
 });
