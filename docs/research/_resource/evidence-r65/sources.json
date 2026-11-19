@@ -1,0 +1,211 @@
+{
+  "sourceRoot": "C:\\Pyrrhic\\mandate-research-sources\\r65-sources",
+  "records": [
+    {
+      "key": "LEE-JAN1861-DOC",
+      "kind": "primary letter excerpt only",
+      "container": "A. L. Long, Memoirs of Robert E. Lee (London, 1886)",
+      "identifier": "memoirsofroberte00longuoft",
+      "document": "Lee to his son, 23 January 1861",
+      "date": "1861-01-23",
+      "pages": [
+        88,
+        89
+      ],
+      "ocr": "memoirsofroberte00longuoft.txt",
+      "images": {
+        "long-verified-p88.jpg": 88,
+        "long-verified-p89.jpg": 89
+      },
+      "rights": "1886 public-domain printing, catalogue NOT_IN_COPYRIGHT",
+      "read_limit": "Only the printed letter excerpt is a leg. Narrative and praise around it are excluded.",
+      "url": "https://archive.org/details/memoirsofroberte00longuoft",
+      "hashes": {
+        "memoirsofroberte00longuoft.txt": "ceff4ea4084ab4a516a4d2e5141ef4a31eac1b0cc1d415620efd085be9fe28bb",
+        "long-verified-p88.jpg": "d5396a801c7fe2f108c2265eb395258f47ba9ff919005b3b5fe87ccb44ab6767",
+        "long-verified-p89.jpg": "0f98ed3d89bb8c29823a888ebdb56f059a3f38a6687254d8becbb50672267dab"
+      }
+    },
+    {
+      "key": "ASJ-PORTER-1861-DOC",
+      "kind": "primary letter only",
+      "container": "William Preston Johnston, The Life of Gen. Albert Sidney Johnston (New York, 1878)",
+      "identifier": "lifeofgenalberts00john",
+      "document": "Albert Sidney Johnston to F. J. Porter, 25 February 1861",
+      "date": "1861-02-25",
+      "pages": [
+        270
+      ],
+      "ocr": "lifeofgenalberts00john.txt",
+      "images": {
+        "asjohnston-verified-p270.jpg": 270
+      },
+      "rights": "1878 public-domain printing, catalogue NOT_IN_COPYRIGHT",
+      "read_limit": "Read pp257-260 narrative as rejected hindsight and pp269-271 letters. Only the Porter letter on p270 is used, not the son letter describing others opinions or the April letter.",
+      "url": "https://archive.org/details/lifeofgenalberts00john",
+      "hashes": {
+        "lifeofgenalberts00john.txt": "c710d71c1b9f8a850bed377dcad78da17a63938c6806770cbe6c1a2c7c902fe6",
+        "asjohnston-verified-p270.jpg": "60dfc91c1473dc89c300a29e6bced6ca663b594f024312926c3e4ab44b354710"
+      }
+    },
+    {
+      "key": "OR",
+      "kind": "official primary compilation",
+      "container": "The War of the Rebellion, series I, volume 1 (1880)",
+      "identifier": "warofrebellionco0001vari",
+      "document": "E. Kirby Smith report of 1 March 1861",
+      "date": "1861-03-01",
+      "pages": [
+        559
+      ],
+      "ocr": "warofrebellionco0001vari.txt",
+      "images": {
+        "or-I1-verified-p559.jpg": 559,
+        "or-I1-p559.jpg": 560
+      },
+      "rights": "US government publication",
+      "read_limit": "Positive leg is p559 only. Also read p560 enclosure and rejected/non-motive passages on pp81,274,541-544,557-558,604. Discovery screen over surnames is not a reading of every result.",
+      "url": "https://archive.org/details/warofrebellionco0001vari",
+      "hashes": {
+        "warofrebellionco0001vari.txt": "3021eef1063df4ff3854ae416926e21ab294c5f7245a6ff1fcd9fe310c008893",
+        "or-I1-verified-p559.jpg": "228a8b2aae68d0a31f7efa08eeb310ecaefb1d1c1585fff7272fef635fa161d8",
+        "or-I1-p559.jpg": "999252a6b51338d347b52d14b5d1f3e33e4e0566538ab729fc61e7a8db3d69eb"
+      }
+    },
+    {
+      "key": "HOUSTON-AUSTIN-1860-DOC",
+      "kind": "primary speech only",
+      "container": "William Carey Crane, Life and Select Literary Remains of Sam Houston of Texas (Philadelphia, 1884)",
+      "identifier": "lifeselectlitera00cran",
+      "document": "Houston Austin speech, 22 September 1860",
+      "date": "1860-09-22",
+      "pages": [
+        599,
+        600,
+        602
+      ],
+      "ocr": "lifeselectlitera00cranrich.txt",
+      "images": {
+        "houston-verified-p599.jpg": 599,
+        "houston-verified-p600.jpg": 600,
+        "houston-p599.jpg": 602
+      },
+      "rights": "1884 public-domain printing, catalogue NOT_IN_COPYRIGHT",
+      "read_limit": "Text discovery used the separate 1884 cranrich copy. Positive pages are checked against images from cran. p599 contains the speech heading, p602 is a continuation within that speech. Additional read p610 is not a positive leg.",
+      "url": "https://archive.org/details/lifeselectlitera00cran",
+      "hashes": {
+        "lifeselectlitera00cranrich.txt": "4d5b7ee14d17e4e5b4b124975f36088c56ee59af4d5039bb6a6c5f2c9b4b52d9",
+        "houston-verified-p599.jpg": "6dc7869a2e02564c86b08e4fcadf5bf1997c0d2cbae0b1fcc096b0a0ea2ef7d6",
+        "houston-verified-p600.jpg": "8b4377efc21e2533e4d76389d7ff4f76af7c0a9a910665ddeda88534f5331899",
+        "houston-p599.jpg": "fbda6bdc0d285f2e3bb8789f08ce6a3980f0f11beeb525bf2da642c1e4a6c1ce"
+      }
+    },
+    {
+      "key": "HOUSTON-LEGIS-1861-DOC",
+      "kind": "primary message only",
+      "container": "Crane, Life and Select Literary Remains (1884)",
+      "identifier": "lifeselectlitera00cran",
+      "document": "Houston Texas legislative message, 6 February 1861",
+      "date": "1861-02-06",
+      "pages": [
+        642,
+        644,
+        645
+      ],
+      "ocr": "lifeselectlitera00cranrich.txt",
+      "images": {
+        "houston-verified-p642.jpg": 642,
+        "houston-verified-p644.jpg": 644,
+        "houston-verified-p645.jpg": 645
+      },
+      "rights": "1884 public-domain printing, catalogue NOT_IN_COPYRIGHT",
+      "read_limit": "Heading on p642, message pp642-645 read in OCR. Motive mapping is limited to Houston's pledge and conditional preparations. Do not infer support for Confederate obligations.",
+      "url": "https://archive.org/details/lifeselectlitera00cran",
+      "hashes": {
+        "lifeselectlitera00cranrich.txt": "4d5b7ee14d17e4e5b4b124975f36088c56ee59af4d5039bb6a6c5f2c9b4b52d9",
+        "houston-verified-p642.jpg": "0434a6dd0e9ed03e586bd0a8e38906d2124bce7c1c1f5e4b9a1c65463cb38355",
+        "houston-verified-p644.jpg": "394fb92adb7770668263a08dec12468819becba09a9c4226850853469e27dcdb",
+        "houston-verified-p645.jpg": "cd3e1111bc1c6eeff2ad370c5698ec5ab0ec56455b31232ccff3154457dd8252"
+      }
+    },
+    {
+      "key": "CLARK-CONVENTION-1860-DOC",
+      "kind": "primary signed public call only",
+      "container": "Ernest William Winkler, editor, Journal of the Secession Convention of Texas, 1861 (Austin, 1912)",
+      "identifier": "journalofsecessi00texa",
+      "document": "Prefatory citizens convention call, with Ed. Clark among its signers",
+      "date": "1860",
+      "pages": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "ocr": "journalofsecessi00texa.txt",
+      "images": {
+        "texas-observed-n20.jpg": 9,
+        "texas-observed-n22.jpg": 10,
+        "texas-observed-n26.jpg": 12
+      },
+      "rights": "1912 printing by Texas Library and Historical Commission, public-domain age and government compilation",
+      "read_limit": "Read complete call in OCR, including p11 election procedure. Positive value wording on p10 and signature on p12 checked on images. p9 newspaper quotation identifies the signer and gives 8 December 1860 publication. Signing day unresolved, no exact day assigned. Other Clark roll calls not assigned to Edward.",
+      "url": "https://archive.org/details/journalofsecessi00texa",
+      "hashes": {
+        "journalofsecessi00texa.txt": "fdc32a731dfff02da3aeafaaeccac44991d5bafe2c93328a16401bbbe04b1e2b",
+        "texas-observed-n20.jpg": "710c832d3e5febd105c5526ac62774571697165dc7cca6e157f4ab94e9b97946",
+        "texas-observed-n22.jpg": "68566b3b8f7c23a7bf74b7041af75a18afe9e4d40988933f6f0108d9390d38ee",
+        "texas-observed-n26.jpg": "cc0ff413a9d36994c326c49c47e071a9c85a37a6274eb235ef2fa0e545b92f1f"
+      }
+    }
+  ],
+  "excludedOrUnread": [
+    {
+      "identifier": "recollectionslet00leer",
+      "file": "recollectionslet00leer.txt",
+      "read": "pp21-26, especially the April letters, too late for this request",
+      "status": "secondary container, after-cutoff primary letters excluded"
+    },
+    {
+      "identifier": "lifecampaignsof00mccl",
+      "file": "lifecampaignsof00mccl-curl.txt",
+      "read": "pp28-32, January 1860 letter and later 1861 narrative",
+      "status": "no positive R65 leg, January 1861 Hill letter not found here"
+    },
+    {
+      "identifier": "lifejohnjcritte02colegoog",
+      "file": null,
+      "read": "none, metadata only",
+      "status": "urllib timeout and bounded curl timeout, no text obtained"
+    },
+    {
+      "identifier": "lifegenalbert00johnrich",
+      "file": null,
+      "read": "none, metadata only",
+      "status": "text timeout, different permitted public-domain copy lifeofgenalberts00john was used"
+    },
+    {
+      "identifier": "memoirsofroberte01long",
+      "file": "memoirsofroberte01long.txt",
+      "read": "discovery duplicate only",
+      "status": "not a separate source leg"
+    },
+    {
+      "identifier": "lifecampaignsofm00mccl",
+      "file": "lifecampaignsofm00mccl.txt",
+      "read": "discovery duplicate only",
+      "status": "not a separate source leg"
+    }
+  ],
+  "initialFilenamePageCorrections": {
+    "asjohnston-p270.jpg": 271,
+    "or-I1-p559.jpg": 560,
+    "or-I1-p560.jpg": "not visually checked, unused",
+    "houston-p599.jpg": 602,
+    "houston-p600.jpg": "not visually checked, unused",
+    "houston-p644.jpg": 647,
+    "houston-p645.jpg": 648,
+    "long-observed-n112.jpg": 99,
+    "long-observed-n113.jpg": 100
+  },
+  "note": "Archive n-index and scandata leafNum differ. Initial downloads are retained without treating their file names as page verification. Every positive claim uses the visually observed printed page."
+}

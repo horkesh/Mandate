@@ -78,7 +78,7 @@ export class ConsoleSession {
       case 'help':
         return [...HELP];
       case 'inbox': {
-        const lines = dispatchLog(this.request.view, all ? 0 : this.seenLastTurn);
+        const lines = dispatchLog(this.request.view, all ? 0 : this.seenLastTurn, this.t);
         return lines.length === 0 ? ['Your inbox is empty.'] : lines;
       }
       case 'situations':
@@ -104,7 +104,7 @@ export class ConsoleSession {
     const result: TurnResult = this.game.turn(sent);
     const lines: string[] = [sent.length === 0 ? 'You send nothing, and wait.' : `Sent: ${sent.map(commandText).join('; ')}.`];
     for (const d of result.days) {
-      lines.push(...dayLines({ day: d.day, date: d.date, reports: d.reports, refused: d.refused.map((r) => ({ what: commandText(r.command as phase0.SeatCommand), reason: r.reason })) }));
+      lines.push(...dayLines({ day: d.day, date: d.date, reports: d.reports, refused: d.refused.map((r) => ({ what: commandText(r.command as phase0.SeatCommand), reason: r.reason })) }, this.t));
     }
     lines.push(result.stopped === 'week' ? 'A week has passed.' : `The turn stops: ${result.stopped.join(', ')}.`);
     this.request = this.game.morning();

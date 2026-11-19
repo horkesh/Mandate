@@ -1,0 +1,813 @@
+[
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-scripts\\scan_nyt.txt",
+    "sha256": "154a26f0c37b4bc9043adf783030501158da745d7bfa3a94c965104b7de7f1eb",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-scripts\\scan_nyt2.txt",
+    "sha256": "aad65cab631be0577f708776d3dba91dbca2a9973799c5ae3ca80fb1137c0605",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs-13\\sim_new-york-times_the-new-york-times_1860-12-20_10_2886.txt",
+    "sha256": "92c1fda19f5b9d1b9986ed32886c9417f7197a489ba662febbd6242148f767ea",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs-13\\sim_new-york-times_the-new-york-times_1861-01-12_10_2905.txt",
+    "sha256": "fdff32cf713ccbe694539a775cf81f2ddec06a9dad69a12a4dccd6103ebe97c9",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs-13\\sim_new-york-times_the-new-york-times_1861-01-30_10_2920.txt",
+    "sha256": "02d25ac03d673ae48cf1a68f192bc636643dfaec1c8939402fdec486c6d7c733",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs-13\\sim_new-york-times_the-new-york-times_1861-02-05_10_2925.txt",
+    "sha256": "543c365e23b6f651ad19d82497fd99f336e0670fca3952c1c33a90303166f7f0",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs-13\\sim_new-york-times_the-new-york-times_1861-02-19_10_2937.txt",
+    "sha256": "9504723dc05315f7a0112bcf6ef3b729266c1d01999bf45aee189ce141dd5820",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs-13\\sim_new-york-times_the-new-york-times_1861-03-02_10_2947.txt",
+    "sha256": "27a825b2d547c103acd282f1a09861163493640311a0b7bbd63904666456b036",
+    "hits": [
+      {
+        "line": 13896,
+        "text": "\nSteamships Fulton, Wotton, Havre, North Atlantic \nSteamship .0,.; Champien, Seabury, Aspinwall, D. B. \nAllen ; bienviile, Bulioch, Havana and New-Urleans, \nLivingston, Crocheron & Co.; Kangaroo, Mierhouse, \n\nps isaac Webb, Hutchinson, Liverpool, C. H. Mar- \nshall & Co; W. Frothingham, Stetson Boyd & \n_* ; Asa Eldridge, Colman, San Francisco, Sutton \n\n"
+      },
+      {
+        "line": 14059,
+        "text": "\n\nSailed. \n\nSteamships Champion, for Aspinwall ; Bienville, for \nHavana and New-Orleans. Ship Contest, for San Fran- \ndisco. Barks Sartelle, for New-Orleans; Canton, for \nLiverpool ; Chas. Brewer, for Cienfuegos ; \u00a9. Heddle, \nfor Havana ; Rainbow, for Barbadgs. Brigs Nicola, for \nSt Thomas; Icurian, for New-Orleans: Proteus, for \nMatanzas, "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs2\\nyt21_10_2887.txt",
+    "sha256": "6b0c91a4fb85f135881d515b47924764b1f18aa8e1e0ed98c2b9ff391f0ea51a",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs2\\nyt31_10_2921.txt",
+    "sha256": "2b2edbec222a329e216903f708785f7fe5f93ea70e2ba2555f6783591fe84696",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs2\\nyt_1861-02-01_10_2922.txt",
+    "sha256": "4a2ea4f1691723d6bb6557a2521edd73bc590f4b85cc0697a02be4ac7e332232",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs2\\nyt_1861-02-02_10_2923.txt",
+    "sha256": "52fbc11f5b117b6813ea3d6419700ed0ef112ddb0fbe5e3966fae8cfb896f2d1",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs2\\nyt_1861-02-04_10_2924.txt",
+    "sha256": "1d8e1449c17c4ba09a451f379357c46f59228073e2369248bced0cd1f6422bdb",
+    "hits": [
+      {
+        "line": 4207,
+        "text": "fidence in the whole market, which is thereby \nrendered irregu'ar to a degree.\u201d | \n\n\nThe stegmsbip Bienville for Havana, on \nSaturday, carried back $270,000 in Spanish doub- \nloons of the recent importations, The relief in \n\n\nSpanish gold arrived here too late for some of the \nhouses in the Cuban trade, whose bills had already "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-01_10_2896.txt",
+    "sha256": "152a3855a6f2999055fde7970a0e2260f54be7fbb98b61860e6f1eafec9b4649",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-03_10_2897.txt",
+    "sha256": "c1b1a67387087d113c003fd7ebb4f99d2ae3a4d374c121d26b2811228b77b8dd",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-04_10_2898.txt",
+    "sha256": "3014981688870e9faffc4ed87d0a484241b2a5eb8a1c0912b103ac577522a307",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-05_10_2899.txt",
+    "sha256": "5f7c98e2d17c40a4d2c6c340b8a2f45224a59ef85854c25cce3bdd46f6e4857f",
+    "hits": [
+      {
+        "line": 12965,
+        "text": "No. 68 \n_The steamship DE SOTO will sai! ) Jan. 2 \n\n\nLIVINGSTON, CROCHERON & Cu., \nMurray st. \n\n\nr HE NORTH GERMAN LLOYDS? STEAM. \nship BREMEN, H. WrsseLs, Commander, carr \n"
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-07_10_2900.txt",
+    "sha256": "c678ad5ddd8db4776f603ded523bbd1b89ace413447c055d122cb6c588780a7b",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-08_10_2901.txt",
+    "sha256": "d700f07e6bdf720868ddf00bbdf30dfc558ef2617277c541030d66606dd6e6c0",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-09_10_2902.txt",
+    "sha256": "bdd537c3a23605e863b914b3e850757564a7a43b3ab5d476f1485034cb8cc8b8",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-10_10_2903.txt",
+    "sha256": "eccc428b1d75563834a8750a713a9318891b8ed30b7d749392a921c6fa3b2dd1",
+    "hits": [
+      {
+        "line": 9863,
+        "text": "\nHorses taken to Havana ; steamer fitted with stails. \nThe above steamer has water-tight compartments, and \nsplendid accommodations for freight and passengers. \nLIVINGSTON, CROCHERON & Cu., \nNo. 68 Murray <6. \n_The e steamship DE SOTO wil sail Jan. 21. \n\n\nNORTH GERMAN STEAM- \nship BREMEN, H. Wrsszis, Comma "
+      },
+      {
+        "line": 12140,
+        "text": "ay has elapsed, business will resume its former ac- \ntivity and moneyed affairs will become easier. \n\nJan. 6, 9 A. M., 250 miles from Havana, signalized \nsteamer Bienville, hence for Havana. Sugars are \n\nuoted in Havana as follows: Newcrep, No. 12, a \new lots at 83 rials per arrobe ; in Muscovado noth- \ning doing. Stock on hand in Havana\u2018and in Matanzas \n28.000 boxes, of which 3,500 boxes are new crop. \n"
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-11_10_2904.txt",
+    "sha256": "c308b4d1bedacd16185a2e2317328dda38dc75b668952aa13618d1cf696d40ac",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-14_10_2906.txt",
+    "sha256": "70d037724eca1e3a228d5ba7175701551da449ff32739fb72703678cdc554151",
+    "hits": [
+      {
+        "line": 13612,
+        "text": "Heineken ; Potomac, Watson, Baltimore, H. B. Crom- \nwell & Co.; Gen. Flores, Tilby, Callan, Wallace & Sher- \nwood ; Augusta. Wooehul!, Suvarnah, 8. L. Mitchill & \nSon: W. G. Hewes, Lawless, Havana, Livingston, \nCrocheron & Co.: Patapeco, Vale. Portiand, H. B. Crom- \nwel] & Co.; MonticeNo, Gager, Savannah. H. B. Crom- \nwe)] & Co.; Boston, Crocker. Philadelphia F. Perkins ; \nStannard, Wilmington, H. B. Crom: \n\n0. \n"
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-15_10_2907.txt",
+    "sha256": "4756c509212a4a10c16dfe77da495f505d8f629851b2f1a2b5d391b65b725d58",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-16_10_2908.txt",
+    "sha256": "7541db25d70cb88cc7a15a2da34b1da3b4146ee6c1d2e701cdf9088e195368d3",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-17_10_2909.txt",
+    "sha256": "b0681152cfead76bc2ddf2909edf36a5fd915a1a5b8414e2414fe29c21cca4f6",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-18_10_2910.txt",
+    "sha256": "7d3de2fd2053650493b985998c33d5382c66d422cb541f7fb1d6b9d053589815",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-19_10_2911.txt",
+    "sha256": "352831b5d2dedca34c797b6e9f9baf52ce067f716314b9aae9132b73e326207a",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-21_10_2912.txt",
+    "sha256": "5b83b54ce1b75da48e6f61b78fbf60ea3863ba50d52817f80faf7603bbd1de83",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-22_10_2913.txt",
+    "sha256": "f31c991f3b44ffa5bc26c697f7e7a8fd68e09311926018acb19c461ec4f8f69e",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-23_10_2914.txt",
+    "sha256": "fd8fe9434c1901fbf6e30d8ec686d81398ddf346a8ee4563956c133d49d48108",
+    "hits": [
+      {
+        "line": 2720,
+        "text": "\nLATER FROM HAVANA. \n\n\nArrival of the Bienville\u2014Commerce and Fi- \n\n\nnance in Havana\u2014lInteresting Miscclla- \nneous News. \nThe United States steamship Bienville, J. D. \nBuLiiecu, commander, from New-Orleans the 15th and "
+      },
+      {
+        "line": 2725,
+        "text": "\n\nnance in Havana\u2014lInteresting Miscclla- \nneous News. \nThe United States steamship Bienville, J. D. \nBuLiiecu, commander, from New-Orleans the 15th and \nHavana the Isth, arrived at this port at an early hour \n\n\n| yesterday morning. \n"
+      },
+      {
+        "line": 12583,
+        "text": "vin, D. P. Bowers, and 3 in the steerage. \\ \nPassengers Arrived. \n\n\nIn steamship Bienville, from New-Orieans and Havana. \n\n\nViilegas, J. E. Crane, OC. B. Cabinel \n\nM.E.T E. Lumber, N. 8. Heche- \nverria, Mr. Godler. A Herschal, Gerard Pancheo, F. "
+      },
+      {
+        "line": 12683,
+        "text": "\nhence, arr at Liver 1 6th. \n\n\nSteamship Bienville, Bulloch, New-Orleans 15th, and\u2019 \n\n\nHavana 1l&th, with mdse. and passengers to Livingston,. \nCrocheron & Co. \n\nSteamzhiv Augusta, Woodhull, Savannah, with mdse.. "
+      },
+      {
+        "line": 12687,
+        "text": "Steamship Bienville, Bulloch, New-Orleans 15th, and\u2019 \n\n\nHavana 1l&th, with mdse. and passengers to Livingston,. \nCrocheron & Co. \n\nSteamzhiv Augusta, Woodhull, Savannah, with mdse.. \nand passer gersto 8S. L. Mitchill & Son. \n\nSteamship Thomas Swann, Baltimore and \nNorfolk, with mdse, to H. B. Cromwell & Co. "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-24_10_2915.txt",
+    "sha256": "44def55519a355052242662bb80ead223991745df8949f6ec8fd5743524b52b9",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-25_10_2916.txt",
+    "sha256": "1fecb6952e02291706186f50c65809c06ec2ce4a8a3a6abb5ecd822baaa80b8d",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-26_10_2917.txt",
+    "sha256": "539e6a3d518628caf8777f369487e1dcd8f2b0e6186ffaa847ab14547980353c",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-28_10_2918.txt",
+    "sha256": "d6465a8ab830b8ace9c62be3353e4bea65a906729cd44f5f1bfbbac1c2c4d117",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-01-29_10_2919.txt",
+    "sha256": "ed9067921512527c86a6d44bc415f05434dabbca729de57a8c4302700c92555c",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-06_10_2926.txt",
+    "sha256": "ffedd8ddf5e48aa33d7c350a5da89054c86a7fe32dd720cb790ce7b28baa3777",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-07_10_2927.txt",
+    "sha256": "8a6603b17c917fce8a2d10e84b5970d1066f69e76575b7365da0f51e4cb6a8ed",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-08_10_2928.txt",
+    "sha256": "9f5fc86563af7c7b7956a82281c327133c41af0a59c0ac54fd92ace7cd7228f2",
+    "hits": [
+      {
+        "line": 7660,
+        "text": "nd. \n\nCrocHEroy.\u2014In Brooklyn, on Wednesday even \nFeb, 6, KkuBEN, eldest son of James M. and Sarah R. \nCrocheron, aged 19 years, 3 months and 12 days. \n\nHis friends, and the friends of the family, also the \nmembers of the Class of 1860 of the New-York Free \nAcademy, are respectfully invited to attend the funeral, \nfrom the residence of his Q@rents. No. 398 Hicks-st.. cor- \nner of Carroll, on Saturday morning, Feb. 9, at 10 "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-09_10_2929.txt",
+    "sha256": "8a559e907aed09d1658033f0b34a0334e71b1856d83f56567240d4cd804817d6",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-11_10_2930.txt",
+    "sha256": "6ff89391cea6de76a7135409fe24d7f4dafd349acf5038d6f9b4b6198f74e75b",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-12_10_2931.txt",
+    "sha256": "5abbc83277d41e04ba5bc93b724d7b014bcba1102ee87ccc9ababf3f74b3f048",
+    "hits": [
+      {
+        "line": 11029,
+        "text": "\n\nSteamehips Northern Light, Tinklepaugh, Aspinwall, \nD. D. Allen; Cahawba Smith Havana and New-Or- \nleans, Livingston, Crocheron & Co; Mount Vernon, \nLayfield, Savannah H. B. Cromwell & Co. \n\nShips Wisconsin, Scott New-Orleans, W. T. Frost; \ngs Wave, Emery. Rotterdam W. Salem; A. Law- \nrence, Nickerson, Liversean Nesmith & Sons; Circe, \n(Br ,) Smith, Liverpool, J B. Adams "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-13_10_2932.txt",
+    "sha256": "0b1a69160f23e70bbc4e1d3c8989aa6e0dd0734cde6a7590b1960f38ef92e4e6",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-14_10_2933.txt",
+    "sha256": "2536ea929ba464819f867cc5a6ec8a01a15c8c0f45852dbf9523747213d022f5",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-15_10_2934.txt",
+    "sha256": "2914ef23ed388e9be8ec261615073f9b45f4c4a047988ae6e917c188c643f183",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-16_10_2935.txt",
+    "sha256": "34b0bf95bf1b095c1d3a84d329a222f378a791dcc9b05a9ac9e059bbe41b58fe",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-18_10_2936.txt",
+    "sha256": "063e2a4940c0e4a30a7601f347f15c1c5db61e681649db668d1fa30c553dbbf8",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-20_10_2938.txt",
+    "sha256": "bf36552b1a9116f22a126e6488bbf7c9f7b8591bb5ebf8950125c2d686badc09",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-21_10_2939.txt",
+    "sha256": "584ebe75a80b9c5da36b9f9c96ea9367a294a87ed74a055226d956da6453d125",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-22_10_2940.txt",
+    "sha256": "4f870cd9e335b49ea3e1c42ea7a07ccac4bc38a23d8a9f1400c72a0763414ca5",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-23_10_2941.txt",
+    "sha256": "8d34bf1b245c9eb316f88e9d561bce65056da896733c0c20168c1e0f21e2206e",
+    "hits": [
+      {
+        "line": 6306,
+        "text": "72@74; Erie, 28% @29. \n\n\nFrom Havasa. \nARRIVAL OF THE BIENVILLE\u2014THE HAVANA MAR- \nKkTS. \n\nThe United States mail steamship Bienville, J. \nD. Buttock, Commander, from New-Orleans on the \n15th and Havana the 18th, arrived at1 o\u2019cloek-yester- \nday afternoon, after a fine run of less than four days\u2014 "
+      },
+      {
+        "line": 6309,
+        "text": "From Havasa. \nARRIVAL OF THE BIENVILLE\u2014THE HAVANA MAR- \nKkTS. \n\nThe United States mail steamship Bienville, J. \nD. Buttock, Commander, from New-Orleans on the \n15th and Havana the 18th, arrived at1 o\u2019cloek-yester- \nday afternoon, after a fine run of less than four days\u2014 \nthe last two days against strong northerly wiads \nand bead seas. \n"
+      },
+      {
+        "line": 12396,
+        "text": "ilson, Beard, Cooley, Fisher. Moss, Roston, Samson, \nH\u00e9llis, Jr., Mise Turner, Snow, Mulot, Crowley, Butter- \nwerth, Greenhalgh, Hughes, Devenport, Scott \n\nIn steamship Bienville, from New-Orleans and Harana \n\u2014C. Thompson, Robert Kelly, R. Maxwell, W. P. Tal- \nboys, H. H. Burnet:, E. A. Hutchinson, Mr. Thurrer, F, \nA. Harris, Cavt. French, Mrs. Dyer and niece, tT. P. \nDoane, W. P. S\u2018idell, F. Osgood and Jady, G. V. Hal\u2019, G. \nH. Freeman, Mrs. Dunham and son. Mr. Dunn, lady, \nchild and servant; Mme. A. Zanfretta, Mrs. Crabb and "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-25_10_2942.txt",
+    "sha256": "005cd9135deb23f6189c9a0c25d88e1729bbb8fe05c1b7af8d070b6f168ce558",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-26_10_2943.txt",
+    "sha256": "2904a65e92d50bef7271d3ddc0ff3b749ed1e79f542d0462129dfc1d26ff6b47",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-27_10_2944.txt",
+    "sha256": "d0eda8980ac71c0d3bcae46970ce4203f3d8b07e8af67cedfe5c3aff59b46374",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-02-28_10_2945.txt",
+    "sha256": "48780e17934026e9b86c5bffcba91a9f56bb38226560958e5f8827e27b473e06",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-03-01_10_2946.txt",
+    "sha256": "5452623a0e4956745fd30e99dab16551a774f0878e6254964e34e18b0777344a",
+    "hits": [
+      {
+        "line": 4545,
+        "text": "FROM THE UNITED STATES. \n\nve. For \n..NWew-York...... Aspinwall...... Mch 1 \nBienville.... ..,.N Hav.&N.0O....Mch 1 \nSaxonia..........New-York...... Hamburg.......Mch 2 \nKangaroo,....... York...... Liverpool.......Mch 2 \n\new-York ..... ch 2 \nNova Scotian....Portland..... -. Liverpool,......Mch 2 \n"
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs7\\nyt\\sim_new-york-times_the-new-york-times_1861-03-04_10_2948.txt",
+    "sha256": "cf8524a3e7d9ece28e94e8585bdb3bb8687c12160031736a49a2f1e6b29e344a",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs1\\nyt\\nyt_1860-10-11.txt",
+    "sha256": "58e1262c6d68f3d87ff234e439063dd2992a7d66d8409eb3689c5b18bae8d188",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs1\\nyt\\nyt_1860-12-17.txt",
+    "sha256": "0731a36620baae270aacbcdf3b304a4a1e326d7a4f4720fc500af4d133314ee1",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs1\\nyt\\nyt_1860-12-18.txt",
+    "sha256": "5f10b536e5225e54cc13b549a11c62269f547b278ad80824c37b6664de9e2945",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs1\\nyt\\nyt_1861-04-19.txt",
+    "sha256": "35f2d184be2cface4829438a1f3e9bc52be8fcd25b0fd3b37c0abae6d5be10d3",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs1\\nyt\\nyt_1861-04-20.txt",
+    "sha256": "e2a1f7b9b0d027523c7c5d209ea44680bdeecc87c9e94c681606e0d92275b151",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs1\\nyt\\nyt_1861-04-24.txt",
+    "sha256": "2ac7b730e84b8361042c7a36884b68118a4195a83ba7f8cfd21b97a457e86179",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-05-26_10_3019.txt",
+    "sha256": "11876a187e5bf5f8b1033ea4194924c8f9154068eaad2fcb3dbfe3f9a4b3d528",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-05-27_10_3020.txt",
+    "sha256": "64e1f13736b4355a4451a8c83905e2b3c5701a4443008fd06573247fe8133597",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-05-28_10_3021.txt",
+    "sha256": "7adee0b7070ba955eab9c2b21cf1b665cb34cea31fda09045d7e485f94556f16",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-05-29_10_3022.txt",
+    "sha256": "3633c4480e68b401b8b3abda74ff0ed26d03ff8d9e7f3ae20a8b2737d53000d3",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-05-30_10_3023.txt",
+    "sha256": "e71190b4f8faa8bc63c2298f715c5da2f59ad8838766bd96d74e2ea052ba658c",
+    "hits": [
+      {
+        "line": 13773,
+        "text": "\n\nArrived. \n\nn steamship Bienville, from Havana\u2014F. 8. Maci \nvontreras, Mr, Wealthy, \u00a5. Kohler, M. Harper, = \n\u201cortin 38. Baral, Mr Kobbe and family, C. Tessidor, \nF. Kealing, P. McGinthy, Mrs Schneedler and daughter, \n&. V ceterlink, B. abacia, J. B. Abadia, Leonard Dew- \nars, kh. 8 de Escalon, daughter and servant, N. Guervo. \nU.A. Andrade, L. C. Luarez. Capt. Laviit, Mr. Mac- "
+      },
+      {
+        "line": 13795,
+        "text": "\n\nU. 8. steom transport Jersey Blue, Chadsey, Washing- \nD. \u00a9. 24 bours. wm ballast \nSteamsbiy Bienville. Bullock Havana May 25. at 6 P. \nM with m. se. and passengers to Livingston, Crocheron \n\n\n& Co. \nSte with mdse. to J. \n\u201cmer Mars, Nichols, Philagelphia, "
+      },
+      {
+        "line": 13796,
+        "text": "\nU. 8. steom transport Jersey Blue, Chadsey, Washing- \nD. \u00a9. 24 bours. wm ballast \nSteamsbiy Bienville. Bullock Havana May 25. at 6 P. \nM with m. se. and passengers to Livingston, Crocheron \n\n\n& Co. \nSte with mdse. to J. \n\u201cmer Mars, Nichols, Philagelphia, \n"
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-05-31_10_3024.txt",
+    "sha256": "0aca0c339e9e2114ac7e6ccf3045410beff29b371886f62a8d65b11d7372c47f",
+    "hits": [
+      {
+        "line": 713,
+        "text": "dispatched in a few days for New-York, for the \npurpose of carrying a large amount of specie, and \n\u2018will return with the mail and any dispatches given \nher\u2014the mail steamers not being considered as \nyet entirely safe from privateers. \"The Bienville, \nfrom New-York, Capt. BuLLOCK, is now three \ndays overdue. \n\n\nA stabbing affair occurred yesterday on board \nof the American ship Occan Traveler, from Maine. "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-01_10_3025.txt",
+    "sha256": "8763cfc91dea06e43b2af11c053d5a9f85ae2ee2aba556b746b4687bb3767b0e",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-02_10_3025.txt",
+    "sha256": "5723f59f1404a5d930b56488fb2b3d52208e7a500133391f02285a2dfbe11c46",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-03_10_3026.txt",
+    "sha256": "c7c91c24d4c79a301d4fe31866af301af123b6f267bbb42ac728e1e96c48936c",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-04_10_3027.txt",
+    "sha256": "ac13a6bd39f5c67da30f3cb0402ad0f71016cbd88b4efa39a51d5c8e03ef7fcf",
+    "hits": [
+      {
+        "line": 8701,
+        "text": "\nCourse. Members\u2019 stand served for isa \n\ntobe eppeintes od the Di cokers ef t \nPH CROCHERON, \n\n\n_IRON AND HARDWARE. \nTH VERE \n\n"
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-05_10_3028.txt",
+    "sha256": "a288bbfad7d7ee3ff29e8a892c40c4929e593deaefebaf10f94521ac03cfd918",
+    "hits": [
+      {
+        "line": 17466,
+        "text": "Steamships New-York, Hunter, Philadelphia, James \n\n\nHand; Stute of Georgia. Gar vin, Fort Monroe, : \nme. Rathbone, Havana, Livingston, Crocheron \n\n\nShip Centurion, Zerega, Artwerp Zerega & Co. \n\nBarks Ercoie. (Italian) Beltom.Genoa J 8. Spinney ; \nB. Hallett, Little, Philadel \u2014; Leaviut. Hal- "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-06_10_3029.txt",
+    "sha256": "1ed41472d49399b3a952c8f357ce1816e869ad977e450b2d7343d98fc64eec6e",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-07_10_3030.txt",
+    "sha256": "ae93e589eaecbfe8c47070e6dc895dbb93b8e470f016734e3ff87487ab5a6ffa",
+    "hits": [
+      {
+        "line": 13666,
+        "text": "\nArrived. \n\nSteamship De Soto, Johnston, Havana June2, with \nmdse. and pssengers to Livingston, Crocheron & Co. \nThe Br. steamship Karnak, hence, arr. 2d. \n\nSteamer Wamsutta, Arey, New-Bedford, with mdse. \nand ay to master. \n\nSteamer Mars, Nichols, Philadelphia, with mdse. to J. "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-08_10_3031.txt",
+    "sha256": "f6ef56898094a18a67ac65aee6aab3f6b21dae55d45481a702efc422c4710326",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-09_10_3031.txt",
+    "sha256": "26a0a06af84c3f2b5625776f21ec755ba9fb7204680d33062e7ea7723f3b855d",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-10_10_3032.txt",
+    "sha256": "4e64d175044dc9432dca97f7d52052c83d5e7ebeffa21c81e6e470ca5501b32e",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-11_10_3033.txt",
+    "sha256": "ab500967336fd9c7f18354c86e4cd2b7f5937ad802568776f80b3e74e3b7cc9c",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-12_10_3034.txt",
+    "sha256": "c9ee69fd37f7c6af773bab3f2943e83cd8f6e5b036deabb09afcb8d7eb046047",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-13_10_3035.txt",
+    "sha256": "a28eec8da48a5758371bb2bb0c1535911b2111920cb7a696c7d843a37b20853a",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-14_10_3036.txt",
+    "sha256": "8d1d7411dd6d931fa96add4b7d18256074aa765c17c9731c5e68b6da716f09ff",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-15_10_3037.txt",
+    "sha256": "c16f0b355223ef4174a8b1ccd6f4513fb805f9e887c57c553665344b25c07625",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-16_10_3037.txt",
+    "sha256": "e8bfe968bd9bbba72a185a90f7661e9e0e5c567a319b2302e048e823a7970e77",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-17_10_3038.txt",
+    "sha256": "f6e3f20f73bd9432b90b3b1be079da4dcc95f9c6092718793881717be107be86",
+    "hits": [
+      {
+        "line": 9784,
+        "text": "\u2014\u2014 \u2014 \u016f\u2014 \nPassengers Arrived. \n\n\nIn steamship Bienville, from Havana\u2014I. R,. Recur. B. \nDew, Guiterres. F. Martinez, J. M. artache. F. Santos, F. \nGov Weller and son, F. Can jaty and servant ; \nR. Williams, A. Deville, Mme. 4. Guillard, piece ani \nservant: Mr. De Pino and lady. 8 \u00a5 Reimer, J. E. \nOabrera. Miss Amelia Forbes, F. Thompson, E. Arm- \netror g and lady, T. Henry, J wcofield. Mr G oiwell, "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-18_10_3039.txt",
+    "sha256": "4d5954504afc0fc5e91ed0d3da01f67001a65a88d06333f4d56ae4df52632429",
+    "hits": [
+      {
+        "line": 3060,
+        "text": "large, and itis feared his failure will cause some of \nhis friends and neighbors to succumb. \n\nMr. Marusws, late British Minister to Mexico, \nleaves in the Bienville to-day, for New York en route \n\nfor Engiard. \n\nGen. late United States Minister Plenipe- \ntentiary to Mexico, left thiscity rather more thana \nweek since, in the steamer Salvor, for Key West, on "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-19_10_3040.txt",
+    "sha256": "70f963933f49a867649d1aa7fce0a7ec47060571ff9cdab13229bcfd926759a6",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-20_10_3041.txt",
+    "sha256": "583cfeb3ae4018565dbd28750a24cb9f1ab2ce49bece42ef796f753fdc1346c1",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-21_10_3042.txt",
+    "sha256": "53e5870e457c76c5b7c173d897aefcb5be363d344818138246e0261f96cb80d5",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-22_10_3043.txt",
+    "sha256": "296c3c3720790d7016f6ecd45ad8c75265354f04ee4e9774f4230bcfd13142f3",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-23_10_3043.txt",
+    "sha256": "9bee0e126bf4dfbb7a8af86c04dfdbedc0ca82105be9816f3ce55a57bf7cb649",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-24_10_3044.txt",
+    "sha256": "c5b2724a15c97d55d5bbd827ef310843fe510665846f60db05b6c0f174afffb7",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-25_10_3045.txt",
+    "sha256": "dcaeca99ce9b4055f09e462986865b9786dddf9e494238a88bc0b1b8e9094ec5",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-26_10_3046.txt",
+    "sha256": "273fc1cf908b04c535ec8c4e63e2968ca9433f5f6e1ae52d06b4d667bac1ddf4",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-27_10_3047.txt",
+    "sha256": "dc12752593356a07186fd6db9265b2526ce655d2dbae65895701fa111c4eb7d2",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-28_10_3048.txt",
+    "sha256": "61f6b710a46d4e5b77dd531ba23b009870e14e1efa179389fde87b7cd81b9a42",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-29_10_3049.txt",
+    "sha256": "0986de9a67c1d06bb1422d0843e4a964d026b0b1caf7d1678e95926990ee46f7",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-06-30_10_3049.txt",
+    "sha256": "37e4547b2e5374015a650b6e301869addb8a2f1120f40b259fab022cd25c661d",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-07-01_10_3050.txt",
+    "sha256": "3b53fdd9c3fa060e8c6655ba1ec3ff5001942eb44f5ce8ae18a706d603f9369c",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-07-02_10_3051.txt",
+    "sha256": "097d317ec8667eccd959e946cc41ecfd1d6c6ef90ad04dad0df586f259c9384e",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-07-03_10_3052.txt",
+    "sha256": "872b5b7ae020bbf543ca75eb6bd3e25318c880e115a0b01a36da9789878b4d9e",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-07-04_10_3053.txt",
+    "sha256": "93e0f990174439e36b8f99cf7b22bc4c27904d831b65f5c7bd9085a49dc42ff8",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\leads-N1-congress-writ\\nyt\\sim_new-york-times_the-new-york-times_1861-07-06_10_3054.txt",
+    "sha256": "ab3fc88d70c7a62a8b659261ea5d7d633a91d2ea487514be67ccabc4fa3dfa6a",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-03-11_10_2954.txt",
+    "sha256": "e3ef5ee3a503e2b44353eb7244293e431b7993d4bc7cb5a291ca7c23ae4a71e8",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-03-12_10_2955.txt",
+    "sha256": "2718455be867e4e81d0171f9d9077bf05da21179ab2b817d6415937a2aff2a7a",
+    "hits": [
+      {
+        "line": 10739,
+        "text": "ments, $76,000; Real Betate Purchases, $111,000; relieve him and his death Cor- The United Btates steam frigate Powhatan, and the y the proper the NEW-YORKE....MONDAY, March 11. \nBeadsend Avenues, $115,000 ; Saiaries in the City the \u2018at all ev I ig | ODer held an inquest the body. corvetie Cumberland, sailed from Vera Cruz for New- The Atlanta (Georgia) Confed \n| \"s , te appear so? FOUND IN THE WATER. ork or Norfoik cn the 23d ult, and will be due in its commenis thus : Steamshi ps Norther \n| he MAEEES \u201cDETWE wanted \u00ab vote on the amend- Mr. Kennedy\u2014I have never said that to any man ; Coroner Game held an inquest yestercay, at No. | the States this week. Tae Powhatan was commis- \u2018\u201c\u2018 A very few words will do for this document. It | D. B. allen ; Gahawba, Smith, Havens Linnean \n- memte seperately. tothose men who went, I said there were stones in 502 Greenwich street, upon the body of Patrick Brady, sioned some months since at Philadelphia, a few days isa medley of ignorance, sanctimonious cant and ten- Crocheron & Co. ? - \nWiderman thought the question must be circulation to that effect. } anative of Ireland, \u00abgei 30, who had missing | after her return irom China ; and the Cumberland was | der-footeda bullyism.\u201d T. Coleman & \n\n\nMr. Bowen\u2014Dia you ever inform Williamson or an \n\nteen pm the Report of the Committee as a whole. other alt the Sean that you were a candidate for the from his home, No. 502 Greenwich-street, sinve last | recently cispatched to relieve the Savannah, as flag- The Nashville (Tennessee) Unton and Amert- Barks Geo. Leslie, Bradbury, Cienfuegos, R. W "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-03-13_10_2956.txt",
+    "sha256": "d9fcaa1cc79eff8e42a2c5fa097a0154dd85ed57355856675390c40cb01b0bf8",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-03-14_10_2957.txt",
+    "sha256": "daf5985d94baaa9c7aec4931871e44c1f7d2ad197d75a0de8b20e473e716f172",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-03-15_10_2958.txt",
+    "sha256": "79594b5a3ba0ba23355335f8fc6e403a3ee7781f831e730c77269c40b7c134a0",
+    "hits": [
+      {
+        "line": 13119,
+        "text": "hence for Southampton. \n\nSteamship De Soto. Johnston, New-Orleans 6th inst., \nand Havana 9th, at4 P, M. with mdse. and passengers \nto Livingston, Crocheron & Co. &th inst., lat. 23 40. lon. \n#2 55, passed ship Merrie England, bound N ; same time, \nae signals with a brig. showing Marryatt\u2019s Nos. \n91157, distg. pendant; 9th, lat. 30 20, lon. 79 29, sig- \nnalized a bark showing a blue, ite and red si no \nwith letters Eand-P, bound N. Has had heavy \nto N.N. E. winds from Havana up toQape Hatteras, "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-03-16_10_2959.txt",
+    "sha256": "0a68122f4f7ca35ae2743995cee2ed75ddcd6dd6d9dd7c2c3d82cab990b0d64a",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-03-25_10_2966.txt",
+    "sha256": "d7d3447a3eb9f3917ac38ec8bc0b68b320938c8d016885b36532fe96d85dd89e",
+    "hits": [
+      {
+        "line": 6911,
+        "text": "\nFrem Havanse. \nCOMMERCIAL INTELLIGENCE. \n\nThe United State Mail steamship Bienville, J. D. \nCommander, from New- Orleans the 15th and \nHavana at 5 P.M. of the 18th, arrived at an early \nheur Saturday morning. \n\nWe are indebted to the Purser, R. G. Parrsn, for \nearly delivery of our files. "
+      },
+      {
+        "line": 6919,
+        "text": "\nWe are indebted to the Purser, R. G. Parrsn, for \nearly delivery of our files. \n\nThe Bienville has had an unusually severe passage, \nwith strong gales from the north and northwest the \nentire distance from the latitude of Cape Florida. \n\nH. B. S. Gladiator was in Havana when the Bienville \nleft. The Sugar market is less active, under a tight \nmoney condition and unfavorable news. Quotations "
+      },
+      {
+        "line": 6923,
+        "text": "The Bienville has had an unusually severe passage, \nwith strong gales from the north and northwest the \nentire distance from the latitude of Cape Florida. \n\nH. B. S. Gladiator was in Havana when the Bienville \nleft. The Sugar market is less active, under a tight \nmoney condition and unfavorable news. Quotations \nat 6@6% rials for No. 11 and 12. Stock\u2014235,000 boxes, \nagainst 175,000 at this date last year. Molasses, 1 \nrials for Clayed, and 2% rials for Muscovados, at \nwhich figures sales. American Provisions dull of "
+      },
+      {
+        "line": 10199,
+        "text": "Manon 23 \u2014In Teutonia, from Hamburg, &c. \nP H.A. Wilcke, K Wilcke, U. 8. Luzur Wegede, lsa- \nbella Wegede, Otto Simons, Capt. Peel. \n\nIn steamship Bienville, from New-Orleans and Havana \n\u2014Capt. B. A. Gardner, M. Dijart, L. 8 Hardin, Miss \n\n\nThomreson, J. Muller, J. M Miss Rich, J. N. Den- \nman, lady and son, Capt. W. Kelly T. N. Stanton, Mrs. \nC. H. Banford and infant, Mrs. Schober, Miss Newm.n,. "
+      },
+      {
+        "line": 10299,
+        "text": "Steamship Vigo, for New-York 1-ft Queenstown. &th at \n@A M. 7th inst., passed ship Fidelis, hence, bound ia. \nNo passengers. \n\nSteamship Bienville, Bulloch, New-Orleans 15th ivst., \nand Havana 18th, with mdse. and passengers to Livings- \nton, Crocheron & Co. Had ap unusu:lly severe passage, \nwith strong gales from N. W. the entire distance from the \n\n\nlatitude ef Cape Florida. "
+      },
+      {
+        "line": 10301,
+        "text": "No passengers. \n\nSteamship Bienville, Bulloch, New-Orleans 15th ivst., \nand Havana 18th, with mdse. and passengers to Livings- \nton, Crocheron & Co. Had ap unusu:lly severe passage, \nwith strong gales from N. W. the entire distance from the \n\n\nlatitude ef Cape Florida. \n\nSteamship James Adger, Phillips. Charleston, with "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-03-26_10_2967.txt",
+    "sha256": "439832752c7cfdb1cdeeea052dcfbb96964132a291122a258e6eba068ccd8b32",
+    "hits": [
+      {
+        "line": 1651,
+        "text": "their offices, within which were placed the mail-bags, \n. ard no letter deposited in them could possibly be ab- \nstracted from the outside. Messrs. Canusam \nuns, the agents and part proprietors of the Cahawba, \n' De Sote and Bienville line of steamers, hav\u00e9 had a \ndeep, long box made, within which is placed the \n~mail-bag, aid\u2019 which, were a lock attavhed to it, \n' would answer admirably for the security of letters \n\n\nplaced therein ; but when it happens that two of the "
+      },
+      {
+        "line": 2151,
+        "text": "ted to the Pope\u2019s Nuncio at Madrid, will make the \npretty sum of $74,000 subscribed in this island in aid \nof His \u2018\u2018 Holiness.\u201d \n\nFrezzo.ini left this city per Bienville for New Or- \nleans 7th inst. It is expected she will return with some \nartistes ef note from the United States, and give a few \nconcerts in this city. The present artistes at the Teatre \nTacon are taking their benefits, a symptom of the ap- \nproach of the close of the season. \n"
+      },
+      {
+        "line": 2203,
+        "text": "letier that it was commenced two days ago, and in- \ntended to be sent by the British steamship Karnak, but \nshe having been detained a day longer than her ad- \nvertised period of sailing, I have kept this letter back \nfor the Bienville, to sail early this day, thinking there- \nby it will reach your hands earlier. | \n\nI have just heard that the liabilities of the house of \nStatimer & Co., which, you will remember, failed a \nshort time ago, amount to $2.600,000. The amount of \ntheir assets my informant did not know. "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-03-27_10_2968.txt",
+    "sha256": "d2ddca766d8b1d29b8e73c602e64e9804694cc5e82ec6a2a9abf14341eb97bb0",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-03-28_10_2969.txt",
+    "sha256": "9260526867b16bba3df6009b192a1cebffbd40f717f1aa8a17c4b75a4d8169ce",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-03-29_10_2970.txt",
+    "sha256": "5a68e22e480aaf60e92f4e2101bc9d4a9251436c93c184f14fc9e3652d13e8b1",
+    "hits": [
+      {
+        "line": 11067,
+        "text": "ee aga with it\u2014at least all left the building imme- \nately. | \n\n\nTHE STEAMER BIENVILLE RELEASED. \u2014In \nthe case of the steamer Bienville, of Livine- \nsTON, CrocezRen & Co.\u2019s, New Orleans line, which \nwas arrested on her late arrival here by \nthe Collector for not baving a Federal clear- \nance, it has been arranged that the matter shall \nbe referred to the Secretary of the Treasury, and that "
+      },
+      {
+        "line": 11068,
+        "text": "ately. | \n\n\nTHE STEAMER BIENVILLE RELEASED. \u2014In \nthe case of the steamer Bienville, of Livine- \nsTON, CrocezRen & Co.\u2019s, New Orleans line, which \nwas arrested on her late arrival here by \nthe Collector for not baving a Federal clear- \nance, it has been arranged that the matter shall \nbe referred to the Secretary of the Treasury, and that \nshe shall be permitted to leave on Saturday, with the "
+      },
+      {
+        "line": 11076,
+        "text": "ance, it has been arranged that the matter shall \nbe referred to the Secretary of the Treasury, and that \nshe shall be permitted to leave on Saturday, with the \nmails, provided the owners sign the requisite bonds \nfor the payment of the penalty. The Bienville had \namong her cargo some $1,600 worth of fereign goods, \nwhich had Veen daly entered at New-Orleans, and re- \nshipped here to sell: These goods are held by the \nCustom-house authorities. Several other vessels have \narrived here from Soathern ports, without the appro- \n"
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-03-30_10_2971.txt",
+    "sha256": "a85430f389d770c25cb1d5602bcc5ed5c66cf07d2a09d97d450704d645a0de48",
+    "hits": [
+      {
+        "line": 647,
+        "text": "J. J. Rooszve.r, Esq., U.S.| District-attorney, New- \n\n\nYork City. \n~ THE STEAMSHIP BIENVILLE. | \nWe are requested to state that the ease of the \nsteamship Bienvilie has been arranged in Washington, \nand that she will positively sail for Havana and New- \nOrleans on Monday next. \n\n"
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-04-01_10_2972.txt",
+    "sha256": "f238353bdc0358791991c709cdbe454593d0acc742b72e089f55e17505298280",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-04-02_10_2973.txt",
+    "sha256": "2b7155ecff260750de7343d899c688cd998ede2f03fbe72fd32a5112e8861a6e",
+    "hits": [
+      {
+        "line": 12225,
+        "text": "is using the mon\u00a2\u00e9y furnished for of tne pesi- \nfor his personal ends. To show 808 | eae. | } \n| tive action on that subject at head tof the : \n\u2018ou copies of resolutions, also a pas \nRelief Committee up to alate date. \u2018bat | Crocheron & Co, \nThe Governor\u2019s Message is not i eee | Ships Palestine, Lord, London, E. E. Morgan & Wiley; \n|, inclose you a copy in advance of its pefore | Columbia, Bryant, Liverpool, C H. Marshall & Co. \n4 From present appearances it may be some) | Barks 8S. Crooker, Staples, Sagua, H. D. Brookman & \nit will be in order. h in | E. York, \nmidni aro rigs K. er, Staples, Cieniuegos, \nthe degree im the Lane camp, wit { Tasso, Cork and market, A. "
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-04-03_10_2974.txt",
+    "sha256": "34f68829486e9eda7a60c906e7a715886616aaa68075b031adf554821b04b72e",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-04-04_10_2975.txt",
+    "sha256": "4e176429c1f4047d2f17528ba6a4d76e31327cdec4cbb5d7ab640a10b18e2291",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-04-05_10_2976.txt",
+    "sha256": "d43db7a493a355249b9e1daa4b7e111cde8e0061edbb1e3bdd3897da1f2ca76e",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-04-06_10_2977.txt",
+    "sha256": "e4857f54b08130a795a55df9ad1be76c1cf4e712218f590224438efeb2381fad",
+    "hits": []
+  },
+  {
+    "file": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-A-march\\news\\sim_new-york-times_the-new-york-times_1861-04-08_10_2978.txt",
+    "sha256": "d9e9ed3b8757e2cf4088af454aaa0eb3ddb644811ef4366c9c1a4db71b90da26",
+    "hits": []
+  }
+]

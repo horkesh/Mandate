@@ -1,0 +1,1021 @@
+APPLETONS 3-p203-204
+APPLETONS 4-p28-29
+APPLETONS adams_charles_f
+APPLETONS andrew_john_a
+APPLETONS andrew_john_a (existing row)
+APPLETONS banks_nathaniel_p
+APPLETONS bates_edward
+APPLETONS benjamin_judah_p
+APPLETONS bennett_james_g
+APPLETONS blair_montgomery
+APPLETONS brown_joseph_e
+APPLETONS buchanan_franklin
+APPLETONS butler_benjamin_f
+APPLETONS chase_salmon_p
+APPLETONS clay_cassius_m
+APPLETONS cobb_howell
+APPLETONS covode_john
+APPLETONS curtin_andrew_g
+APPLETONS dahlgren_john_a_b
+APPLETONS dana_charles_a
+APPLETONS daniel_john_m
+APPLETONS davis_charles_h
+APPLETONS dennison_william
+APPLETONS dennison_william (took control of telegraph and railroads, single source)
+APPLETONS dix_john_a
+APPLETONS du_pont_samuel_f
+APPLETONS farragut_david_g
+APPLETONS foote_andrew_h
+APPLETONS fox_gustavus_v
+APPLETONS harris_isham_g
+APPLETONS hay_john_m
+APPLETONS hicks_thomas_h
+APPLETONS hitchcock_ethan_a
+APPLETONS holt_joseph
+APPLETONS hunter_david
+APPLETONS hurlbut_stephen_a
+APPLETONS jackson_claiborne_f
+APPLETONS letcher_john
+APPLETONS lincoln_abraham
+APPLETONS magoffin_beriah
+APPLETONS marble_manton_m
+APPLETONS memminger_christopher_g
+APPLETONS morgan_john_h
+APPLETONS morton_oliver_h_p_t
+APPLETONS nicolay_john_g
+APPLETONS patterson_robert
+APPLETONS pillow_gideon_j
+APPLETONS porter_david_d
+APPLETONS price_sterling
+APPLETONS ramsey_alexander
+APPLETONS raymond_henry_j
+APPLETONS rodgers_john
+APPLETONS schurz_carl
+APPLETONS scott_thomas_a
+APPLETONS semmes_raphael
+APPLETONS seymour_horatio
+APPLETONS sickles_daniel_e
+APPLETONS slidell_john
+APPLETONS smith_caleb_b
+APPLETONS stanton_edwin_m
+APPLETONS stringham_silas_h
+APPLETONS sumner_edwin_v
+APPLETONS tattnall_josiah
+APPLETONS toombs_robert_a
+APPLETONS vallandigham_clement_l
+APPLETONS van_dorn_earl
+APPLETONS vance_zebulon_b
+APPLETONS wadsworth_james_s
+APPLETONS washburn_israel
+APPLETONS weed_thurlow
+APPLETONS welles_gideon
+APPLETONS wilkes_charles
+APPLETONS wool_john_e
+APPLETONS yancey_william_l
+APPLETONS yates_richard
+BDAC adams_charles_f
+BDAC banks_nathaniel_p
+BDAC bates_edward
+BDAC benjamin_judah_p
+BDAC blair_francis_p
+BDAC breckinridge_john_c
+BDAC brown_joseph_e
+BDAC butler_benjamin_f
+BDAC cameron_simon
+BDAC chandler_zachariah
+BDAC chase_salmon_p
+BDAC cobb_howell
+BDAC covode_john
+BDAC crittenden_john_j
+BDAC curtin_andrew_g
+BDAC curtis_samuel_r
+BDAC davis_jefferson
+BDAC dayton_william_l
+BDAC dix_john_a
+BDAC fessenden_william_p
+BDAC fremont_john_c
+BDAC fremont_john_c (1856 Republican nominee)
+BDAC gooch_daniel_w
+BDAC greeley_horace
+BDAC hamlin_hannibal
+BDAC harris_isham_g
+BDAC hicks_thomas_h
+BDAC hunter_robert_m_t
+BDAC hurlbut_stephen_a
+BDAC johnson_andrew
+BDAC julian_george_w
+BDAC lane_james_h
+BDAC letcher_john
+BDAC mallory_stephen_r
+BDAC mason_james_m
+BDAC mcclernand_john_a
+BDAC morgan_edwin_d
+BDAC morton_oliver_h_p_t
+BDAC odell_moses_f
+BDAC pendleton_george_h
+BDAC pickens_francis_w
+BDAC price_sterling
+BDAC ramsey_alexander
+BDAC raymond_henry_j
+BDAC reagan_john_h
+BDAC schurz_carl
+BDAC seddon_james_a
+BDAC seward_william_h
+BDAC sickles_daniel_e
+BDAC slidell_john
+BDAC smith_caleb_b
+BDAC stephens_alexander_h
+BDAC stevens_thaddeus
+BDAC sumner_charles
+BDAC toombs_robert_a
+BDAC trumbull_lyman
+BDAC vallandigham_clement_l
+BDAC vance_zebulon_b
+BDAC wade_benjamin_f
+BDAC washburn_israel
+BDAC washburne_elihu_b
+BDAC wigfall_louis_t
+BDAC wilson_henry
+BDAC wood_benjamin
+BDAC yancey_william_l
+BDAC yates_richard
+BL 1-p102
+BL 1-p103
+BL 1-p104
+BL 1-p105
+BL 1-p106
+BL 1-p171
+BL 1-p239
+BL 1-p261
+BL 1-p263-267
+BL 1-p273
+BL 1-p282
+BL 1-p346
+BL 1-p425
+BL 1-p426
+BL 1-p434
+BL 1-p448
+BL 1-p454-457
+BL 1-p627
+BL 1-p633-634
+BL 1-p634
+BL 1-p671
+BL 1-p671-674
+BL 1-p677-678
+BL 1-p694-695
+BL 1-p705-706
+BL 1-p710-711
+BL 2-p135
+BL 2-p24
+BL 2-p264
+BL 2-p268
+BL 2-p28-29
+BL 2-p32
+BL 2-p41-45
+BL 2-p77
+BULLOCH SS-p62-63
+CHANDLER-OS p190-191
+CHANDLER-OS p191-192
+CHANDLER-OS p49-50
+CHASE-1847 p3-4
+CHASE-D 1862-09-01
+CHASE-D 1862-09-02
+CHESNUT 1905-p101
+CHESNUT 1905-p12
+CHESNUT 1905-p202
+CHESNUT 1905-p6
+CHESNUT 1905-p97
+CHI-1860 p108-109 dated 1860-05-18
+COX-3DEC p75-76
+COX-3DEC p80-82
+Callahan THANKS
+Callahan buchanan_franklin
+Callahan bulloch_james_d
+Callahan dahlgren_john_a_b
+Callahan davis_charles_h
+Callahan du_pont_samuel_f
+Callahan farragut_david_g
+Callahan foote_andrew_h
+Callahan goldsborough_louis_m
+Callahan porter_david_d
+Callahan rodgers_john
+Callahan semmes_raphael
+Callahan stringham_silas_h
+Callahan tattnall_josiah
+Callahan wilkes_charles
+CongDir37 2-p22
+CongDir37 2-p23
+CongDir37 2-p24-26
+Cullum 10
+Cullum 102
+Cullum 1022
+Cullum 1028
+Cullum 1029
+Cullum 1064
+Cullum 1069
+Cullum 1084
+Cullum 1090
+Cullum 1115
+Cullum 1119
+Cullum 1127
+Cullum 1138
+Cullum 1162
+Cullum 1164
+Cullum 1187
+Cullum 1216
+Cullum 1237
+Cullum 1238
+Cullum 1255
+Cullum 1273
+Cullum 1288
+Cullum 1345
+Cullum 1348
+Cullum 156
+Cullum 1585
+Cullum 1643
+Cullum 310
+Cullum 342
+Cullum 406
+Cullum 410
+Cullum 436
+Cullum 445
+Cullum 477
+Cullum 530
+Cullum 542
+Cullum 553
+Cullum 555
+Cullum 584
+Cullum 601
+Cullum 650
+Cullum 655
+Cullum 671
+Cullum 687
+Cullum 803
+Cullum 804
+Cullum 846
+Cullum 895
+Cullum 917
+Cullum 919
+Cullum 942
+Cullum 963
+Cullum 966
+Cullum 988
+DANA-RCW ch1
+DNB lyons_richard_b_p
+DNB russell_john
+DOC-1861 ANDERSON 1861-02-28-cooper
+DOC-1861 ANDERSON 1861-02-28-cooper (OR I-1 p196, page unverified)
+DOC-1861 BENJAMIN 1861-02-04-senate-farewell (MARTIN 1905 p89-97)
+DOC-1861 BENJAMIN 1861-02-04-senate-farewell (MARTIN 1905 p89-97: 1803 treaty protected slave property)
+DOC-1861 BROWN 1861-01-05-alabama-commissioner
+DOC-1861 BROWN 1861-01-05-alabama-commissioner (OR IV-1 p18-19)
+DOC-1861 BROWN 1861-01-05-alabama-commissioner (OR IV-1 p18-19: calls Southern states "pro-slavery States")
+DOC-1861 CHASE 1861-02-26-inaugural-remarks
+DOC-1861 CHASE 1861-03-16-lincoln
+DOC-1861 HARNEY 1861-05-14-gantt (rests on "my understanding of President Lincoln's views"; own regard not stated)
+DOC-1861 HARRIS 1861-01-07-message
+DOC-1861 HARRIS 1861-01-07-message (conditional: "equality in the Union, or independence out of it")
+DOC-1861 HARRIS 1861-01-07-message (slavery protected property "interwoven with our wealth")
+DOC-1861 HARRIS 1861-04-25-message
+DOC-1861 HARRIS 1861-05-07-military-league (action; own words of regard NOT FOUND)
+DOC-1861 JFEPPERSON SumterScottAL0312
+DOC-1861 JOHNSTON 1861-06-12-report
+DOC-1861 LEE 1861-04-20-anne-marshall (NPS arho)
+DOC-1861 LEE 1861-04-20-scott
+DOC-1861 LEE 1861-04-20-scott (NPS arho)
+DOC-1861 LEE 1861-06-07-johnston
+DOC-1861 LYON 1860-11-editorial
+DOC-1861 LYON 1860-11-editorial (LYON-WRITINGS p204-209)
+DOC-1861 MCCLELLAN 1861-04-27-thomas
+DOC-1861 MCCLELLAN 1861-06-21-wife
+DOC-1861 McClellan 26 May 1861 proclamation to the people of western Virginia, his own wording (S15): troops "will not interfere" with slaves and will crush any insurrection
+DOC-1861 PATTERSON 1861-06-12-townsend
+DOC-1861 PATTERSON 1861-06-29-mcclellan
+DOC-1861 PATTERSON 1861-07-09-townsend
+DOC-1861 PATTERSON 1861-07-14
+DOC-1861 PATTERSON 1861-07-16/18
+DOC-1861 PATTERSON 1861-07-16/18 (candid on volunteers' mood; defensive after Scott's telegram)
+DOC-1861 PATTERSON 1861-07-18-report
+DOC-1861 SCOTT 1861-03-03-seward
+DOC-1861 SCOTT 1861-03-12-lincoln
+DOC-1861 SCOTT 1861-04-19-wright
+DOC-1861 SEWARD 1861-04-01-thoughts
+DOC-1861 SEWARD 1861-04-01-thoughts (frank to his president, to the point of presumption; the Confederate-commissioners channel is candour toward an adversary and is not coded)
+DOC-1861 STEPHENS 1860-11-14-ga-legislature
+DOC-1861 STEPHENS 1860-11-14-ga-legislature (Union as constitutional compact)
+DOC-1861 STEPHENS 1860-11-14-ga-legislature (against secession, then accepted office)
+DOC-1861 TOOMBS 1861-01-07-senate
+DOC-1861 TOOMBS 1861-01-07-senate (MARTIN 1905 p144-179)
+DOC-1861 TOOMBS 1861-01-07-senate (MARTIN 1905 p144-179, Cong. Globe 36-2 p267-271)
+FOULKE-MORTON v1
+FOULKE-MORTON v1 p113-114
+FOULKE-MORTON v1 p128
+FOULKE-MORTON v1 p128-129
+FOULKE-MORTON v1 p129 n
+FOULKE-MORTON v1 p129 n,p146-147
+FOULKE-MORTON v1 p133-136
+FOULKE-MORTON v1 p133-147
+FOX-CC 1:10
+FOX-CC 1:10-11
+FOX-CC 1:11-12 dated 1861-03-31
+FOX-CC 1:2-3 dated 1861-01-31
+FOX-CC 1:20
+FOX-CC 1:26-27 (letter to wife 1861-04-06)
+FOX-CC 1:32-33
+FOX-CC 1:33 (frank in private, guarded in public)
+FOX-CC 1:34 (letters to Blair 1861-03-31, 04-17)
+FOX-CC 1:36-37
+FOX-CC 1:365
+FOX-CC 1:38-41 (claims credit for plan, fears loss of reputation)
+FOX-CC 1:38-42
+FOX-CC 1:39
+FOX-CC 1:40-42
+FOX-CC 1:43-44 (Lincoln letter 1861-05-01)
+FOX-CC 1:43-44 dated 1861-05-01
+FOX-CC 1:46-47
+FOX-CC 1:49-50
+FOX-CC 1:49-51
+FOX-CC 1:5
+FOX-CC 1:7
+FOX-CC 1:7-8 dated 1861-02-08
+FOX-CC 1:9-10 (letter to wife 1861-03-19: "taken a high esteem for me")
+GRANT-PM ch22
+GRANT-PM ch25
+GRANT-PM ch26
+GRANT-PM ch28
+GRANT-PM ch30
+GRANT-PM ch62
+HAY-D 1 p53-54
+HAY-D 1861-10-26
+HAY-D 1861-11-01
+HAY-D 1861-11-13
+HAY-D 1864-07-20
+HAY-D L1908 intro
+HR-37-2-2 p41
+HR-37-2-2 p42
+HR-37-2-2 p56
+HR-37-2-2 p57
+HR-37-2-2 p58
+HR-37-2-2 p78
+Heitman 1 anderson_robert
+Heitman 1 banks_nathaniel_p
+Heitman 1 beauregard_pierre_g_t
+Heitman 1 bragg_braxton
+Heitman 1 buckner_simon_b
+Heitman 1 buell_don_c
+Heitman 1 burnside_ambrose_e
+Heitman 1 clay_cassius_m
+Heitman 1 cooper_samuel
+Heitman 1 crittenden_george_b
+Heitman 1 davis_jefferson
+Heitman 1 ewell_richard_s
+Heitman 1 franklin_william_b
+Heitman 1 fremont_john_c
+Heitman 1 grant_ulysses_s
+Heitman 1 halleck_henry_w
+Heitman 1 hardee_william_j
+Heitman 1 heintzelman_samuel_p
+Heitman 1 hill_ambrose_p
+Heitman 1 hill_daniel_h
+Heitman 1 hitchcock_ethan_a
+Heitman 1 holmes_theophilus_h
+Heitman 1 holt_joseph
+Heitman 1 hooker_joseph
+Heitman 1 hurlbut_stephen_a
+Heitman 1 jackson_thomas_j
+Heitman 1 johnson_andrew
+Heitman 1 johnston_albert_s
+Heitman 1 johnston_joseph_e
+Heitman 1 keyes_erasmus_d
+Heitman 1 lane_james_h
+Heitman 1 lee_robert_e
+Heitman 1 lincoln_abraham
+Heitman 1 longstreet_james
+Heitman 1 loring_william_w
+Heitman 1 lovell_mansfield
+Heitman 1 lyon_nathaniel
+Heitman 1 magruder_john_b
+Heitman 1 mcclellan_george_b
+Heitman 1 mcclernand_john_a
+Heitman 1 mcculloch_ben
+Heitman 1 mcdowell_irvin
+Heitman 1 meade_george_g
+Heitman 1 meigs_montgomery_c
+Heitman 1 morgan_edwin_d
+Heitman 1 nelson_william
+Heitman 1 northrop_lucius_b
+Heitman 1 patterson_robert
+Heitman 1 pemberton_john_c
+Heitman 1 pillow_gideon_j
+Heitman 1 pope_john
+Heitman 1 porter_fitz_john
+Heitman 1 price_sterling
+Heitman 1 reynolds_john_f
+Heitman 1 ripley_james_w
+Heitman 1 schofield_john_m
+Heitman 1 schurz_carl
+Heitman 1 scott_winfield
+Heitman 1 sigel_franz
+Heitman 1 smith_edmund_k
+Heitman 1 stone_charles_p
+Heitman 1 stuart_james_e_b
+Heitman 1 sumner_edwin_v
+Heitman 1 thomas_george_h
+Heitman 1 thomas_lorenzo
+Heitman 1 totten_joseph_g
+Heitman 1 twiggs_david_e
+Heitman 1 van_dorn_earl
+Heitman 1 wadsworth_james_s
+Heitman 1 wallace_lewis
+Heitman 1 wool_john_e
+Heitman 2 p62
+Heitman 2 p64
+JCCS I-p106 dated 1861-03-05
+JCCS I-p16 dated 1861-02-04
+JCCS I-p19 dated 1861-02-05
+JCCS I-p25 dated 1861-02-07
+JCCS I-p40
+JCCS I-p464 dated 1861-08-31
+JCCS I-p73 dated 1861-02-21
+JCCS I-p85 dated 1861-02-25
+JCCS I-p96 dated 1861-03-01
+JCCS II-p20
+JCCS II-p26
+JCCW 2
+JCCW 2-p5
+JCCW 2-p8
+JCCW 3
+JONES I 1861-05-21..23
+JONES I 1861-05-22
+JONES I 1861-05-22 (dissent in cabinet)
+JONES I 1861-05-23
+JONES I 1861-07-09
+JONES I 1861-07-20
+JONES I-1861-04-16
+JONES I-1861-05-20
+JONES I-1861-05-22
+JONES I-1861-05-23
+JONES I-1861-05-26
+JONES I-1861-06-17
+JONES I-1861-07-20
+JONES I-1861-07-21
+JONES I-1861-10-01
+JONES I-1861-10-15
+JONES I-1861-10-29
+JONES I-1861-10-30
+JONES I-1861-11-02
+JONES I-1862-01-20
+JONES I-1862-03-28
+JONES I-1862-04-12
+JONES I-1862-06-24
+JONES I-1862-10-03
+JONES I-1862-10-30
+JONES I-1862-10-31
+JONES I-1862-11-02
+JONES I-1862-11-06
+JONES I-1862-11-13
+JONES I-1862-11-14
+JONES I-1862-11-17
+JONES I-1862-12-04
+JONES I-1862-12-12
+JONES I-1862-12-23
+JORDAN-PRYOR-1868 p25
+JORDAN-PRYOR-1868 p88
+JULIAN-PR p200
+JULIAN-PR p201
+JULIAN-PR p203
+JULIAN-PR p204
+JULIAN-PR p205
+JULIAN-PR p250
+JULIAN-PR p356
+JULIAN-PR p357
+JULIAN-PR p361
+JULIAN-PR p362
+LEE-1904 p28
+LEE-1904 p36
+LEE-1904 p36 (cautious planner; eager for field)
+LEE-1904 p94-95
+LINCOLN 1860-12-10-trumbull
+LINCOLN 1860-12-10-trumbull (Basler 4:149-150)
+LINCOLN 1860-12-13-washburne
+LINCOLN 1860-12-21-washburne
+LINCOLN 1861-01-12-seward (Gilmer)
+LINCOLN 1861-03-04-seward
+LINCOLN 1861-04-01-seward
+LINCOLN 1861-04-13-va-committee
+LINCOLN 1861-04-25-scott
+LINCOLN 1861-05-01-fox
+LINCOLN 1861-05-18-blair
+LINCOLN 1862-01-31-war-secretary
+LINCOLN 1862-02-10-hunter
+LONGSTREET-1896 ch11
+MCCLELLAN-OS p171
+MCCLELLAN-OS p215
+MCCLELLAN-OS p243
+MEADE-PAULDING p238-240 (own report on burning Gosport)
+NASON-WILSON p306-308
+NASON-WILSON p309
+NEVINS-FREMONT p470-477
+NEVINS-FREMONT p471-475
+NEVINS-FREMONT p471-477 (unauthorised arms purchase; pressed for command)
+NEVINS-FREMONT p477
+NEWTON-LYONS ch3
+NEWTON-LYONS ch4
+NH 3 p253-254
+NH 3-ch16
+NH 3-ch20
+NH 3-p110
+NH 3-p134
+NH 3-p223-224
+NH 3-p227
+NH 3-p250
+NH 3-p256
+NH 3-p348-351
+NH 3-p351-352
+NH 3-p352-354
+NH 3-p354-360
+NH 3-p355-361
+NH 3-p365-366
+NH 3-p367
+NH 3-p368-370
+NH 3-p370-372
+NH 3-p370-372 (2 March 1861 request to withdraw reads as rivalry with Chase, not wariness of Lincoln; "the greater man" is a second-hand memoir and is not coded)
+NH 3-p378
+NH 3-p385-386
+NH 3-p385-388
+NH 3-p387 (followed the reasoning of the army officers)
+NH 3-p390
+NH 3-p391
+NH 3-p394-395
+NH 3-p409
+NH 3-p430
+NH 3-p431
+NH 3-p432
+NH 3-p433
+NH 3-p434
+NH 3-p436
+NH 3-p439
+NH 3-p445
+NH 3-p446
+NH 3-p447
+NH 3-p448
+NH 3-p449
+NH 3-p56
+NH 4 p163 (he called out the existing militia, mainly disloyal, instead of four loyal regiments)
+NH 4 p209
+NH 4 p210-211 (OR IV-1 p94,p138)
+NH 4 p210-224
+NH 4 p211 (6 May 1861 'in confidence' to Davis's War Secretary, OR IV-1 p138) vs NH 4 p223 (public professions)
+NH 4 p219
+NH 4 p219-224
+NH 4 p223 n
+NH 4 p223 n (12 Jun 1861 proclamation "your first allegiance is due to your own State", via Peckham, own-side quotation)
+NH 4 p225
+NH 4 p229
+NH 4 p229,p242
+NH 4 p230 (bold on 15 April, then neutrality because he could not carry Kentucky)
+NH 4 p230 (neutrality, own-side says a cover: weak)
+NH 4 p93-94
+NH 4 p93-94,p162-163
+NH 4 p95 (asked that Maryland troops stay in the state except to defend the capital)
+NH 4-ch7
+NH 4-p106-107
+NH 4-p207-208
+NH 4-p211
+NH 4-p216-217
+NH 4-p224
+NH 4-p225
+NH 4-p285
+NH 4-p288
+NH 4-p308
+NH 4-p368
+NH 4-p379-380
+NH 4-p380-381
+NH 4-p382
+NH 4-p4-6
+NH 4-p418
+NH 4-p467
+NH 4-p5-6
+NH 5-ch4
+NH 5-p124
+NH 5-p125
+NH 5-p126
+NH 5-p129
+NH 5-p130
+NH 5-p132
+NH 5-p134
+NH 5-p135
+NH 5-p141
+NH 5-p150-151
+NH 5-p35
+NH 5-p36
+NH 5-p38
+NH 5-p39
+NH 5-p83-84
+NH 5-p84
+NH 5-p85
+NH 6-p153
+NH 6-p232
+NH 6-p233-234
+NH 6-p266-267
+NH 6-p267
+NH 6-p268
+NH 6-p397
+NH-CW 6 p192-201
+NH-CW 6 p201-207
+NH-CW 6 p208-210
+NH-CW 6 p210-214
+NH-CW 6 p214-217
+NH-CW 6 p217-220
+NH-CW 6 p228
+NH-CW 6 p228-229
+NH-CW 6 p228-231
+NH-CW 6 p229-230
+NH-CW 6 p230
+NH-CW 6 p230 ("no confidence in judgment")
+NH-CW 6 p230-231
+NPS ellis
+NPS ellis (low Jan to 14 Apr, high after 15 Apr)
+NPS ellis (third-party reference: a federal agency's biography of him, not his own words. A primary is a lead: his papers and his January 1861 correspondence)
+NPS john-albion-andrew (Boston Vigilance Committee 1846 and 1850, defence in the Hayden, Botts, Burns and Johnson cases, Clarke 1880 p13 "always ready to defend any person arrested under the Fugitive Law")
+OR I-1 p12
+OR I-1 p163
+OR I-1 p200-201
+OR I-1 p23 dated 1861-04-13
+OR I-1 p283
+OR I-1 p291-292 (to Whiting 10 Apr)
+OR I-1 p297
+OR I-1 p297-302
+OR I-1 p301
+OR I-1 p301 (hedge)
+OR I-1 p301-302
+OR I-1 p301-302 (courteous)
+OR I-1 p32 dated 1861-04-13
+OR I-1 p38 dated 1861-04-13
+OR I-1 p61 dated 1861-04-13
+OR I-1-p113
+OR I-1-p12
+OR I-1-p166
+OR I-1-p30-32
+OR I-1-p7
+OR I-1-p9
+OR I-10-1-p109
+OR I-10-1-p110
+OR I-10-1-p384-385
+OR I-10-1-p385
+OR I-10-1-p388
+OR I-10-1-p389
+OR I-10-1-p466
+OR I-10-1-p467
+OR I-10-2-p379
+OR I-11-1-p1036-1046
+OR I-11-1-p275-276
+OR I-11-1-p37
+OR I-11-1-p458
+OR I-11-1-p61
+OR I-11-1-p67
+OR I-11-1-p70
+OR I-11-1-p74
+OR I-11-1-p751
+OR I-11-1-p78
+OR I-11-1-p82
+OR I-11-1-p933-935
+OR I-11-1-p934-935
+OR I-11-1-p936-938
+OR I-11-2-p400
+OR I-11-2-p489-498
+OR I-11-2-p490
+OR I-11-2-p491
+OR I-11-2-p492
+OR I-11-2-p495-496
+OR I-11-2-p679-680
+OR I-11-2-p680-681
+OR I-11-3-p422
+OR I-11-3-p455-456
+OR I-12-1-p379-380
+OR I-12-3-p473
+OR I-14-p341
+OR I-15-p426
+OR I-15-p73
+OR I-16-1-p1087
+OR I-16-1-p1088
+OR I-16-1-p1109
+OR I-16-1-p761
+OR I-16-1-p809
+OR I-16-1-p934
+OR I-16-2-p640
+OR I-17-1-p119
+OR I-17-1-p375
+OR I-17-1-p385
+OR I-17-1-p413
+OR I-17-1-p459
+OR I-17-1-p503
+OR I-17-2-p424
+OR I-19-1-p216
+OR I-19-1-p30
+OR I-19-1-p46
+OR I-2 (12 vs 14/16 Jul reports)
+OR I-2 (16 Jul address)
+OR I-2 (17 Jul halt)
+OR I-2 (17 Jul)
+OR I-2 (18 Jun)
+OR I-2 (19 Jun to Scott)
+OR I-2 (19 Jun)
+OR I-2 (McClellan 12/14/16 Jul)
+OR I-2 (McClellan 13-15 Jul to Pegram)
+OR I-2 (McClellan telegrams 24/27 May,19 Jun)
+OR I-2 (McDowell to Townsend 17 Jul)
+OR I-2 (Scott to Patterson 13-18 Jul)
+OR I-2 (Wright to Scott 1861-04-26, spirit61 hg-wright-1)
+OR I-2 (telegrams 13-18 Jul)
+OR I-2 p1007 dated 1861-07-29
+OR I-2 p28
+OR I-2 p29
+OR I-2 p30
+OR I-2 p316 (21-22 Jul wires; after window)
+OR I-2 p32
+OR I-2 p440
+OR I-2 p440,p473
+OR I-2 p473
+OR I-2 p473 [self-report]
+OR I-2 p473,p478 (18 Jul junction)
+OR I-2 p478
+OR I-2 p484
+OR I-2 p504-505 (report written after window: needs-source)
+OR I-2 p581
+OR I-2 p593
+OR I-2 p614
+OR I-2 p618-619
+OR I-2 p618-619 (argued to seize Arlington Heights; tied to ample troops)
+OR I-2 p713
+OR I-2 p713,p723
+OR I-2 p881
+OR I-2 p881 (withdrawal)
+OR I-2 p897-898
+OR I-2-p118
+OR I-2-p324
+OR I-2-p325
+OR I-2-p475
+OR I-21-p67
+OR I-3 p372
+OR I-3 p374
+OR I-3 p374-378
+OR I-3 p375
+OR I-3 p377
+OR I-3 p377-378
+OR I-3 p395
+OR I-3 p395,p408
+OR I-3 p399 (18 Jul telegram: proceed without coming to Washington)
+OR I-3 p4
+OR I-3 p407
+OR I-3 p407-408
+OR I-3 p408
+OR I-3-p104
+OR I-3-p185
+OR I-3-p467
+OR I-3-p477
+OR I-3-p485
+OR I-3-p541
+OR I-3-p542
+OR I-3-p543
+OR I-3-p544
+OR I-3-p57
+OR I-4 p378
+OR I-4 p378,p396 (applied for arms, sought assurance of neutrality)
+OR I-4-p179
+OR I-4-p180
+OR I-4-p189
+OR I-4-p296
+OR I-4-p314
+OR I-5-p1053
+OR I-5-p1090
+OR I-5-p192-193
+OR I-5-p639
+OR I-5-p823-824
+OR I-5-p868
+OR I-51-1 p339
+OR I-51-1 p339 (2 May indorsement)
+OR I-51-1 p339 (plans vs field)
+OR I-51-1 p369
+OR I-51-1 p388
+OR I-6-p558
+OR I-7-p102
+OR I-7-p103
+OR I-7-p104
+OR I-7-p110
+OR I-7-p161
+OR I-7-p254
+OR I-7-p259
+OR I-7-p260
+OR I-7-p261
+OR I-7-p278
+OR I-7-p284
+OR I-7-p289
+OR I-7-p301
+OR I-7-p301-302
+OR I-7-p427-428
+OR I-7-p680
+OR I-7-p682
+OR I-7-p683
+OR I-7-p746
+OR I-7-p79
+OR I-7-p80
+OR I-7-p927
+OR I-7-p928
+OR I-8-p194
+OR I-8-p196
+OR I-8-p197
+OR I-8-p281
+OR I-8-p282
+OR I-8-p286
+OR I-8-p370
+OR I-9-p207
+OR I-9-p80
+OR II-1 p752-754
+OR II-1 p754
+OR II-1-p752
+OR II-1-p754
+OR II-1-p755
+OR II-1-p818
+OR III-1 p298 (held Reserve Corps standard vs Cameron)
+OR III-1 p337
+OR III-1 p378
+OR III-1 p388 (accepted Blair-offered quota; after window)
+OR III-1 p431
+OR III-1 p431 (Aug 1861: reports home guards few and ill-armed)
+OR III-1 p439
+OR III-1 p439 (courteous, legalistic; Aug 1861)
+OR III-1 p439 (state control of enlistment)
+OR III-1 p70
+OR III-1 p70 ("wicked purpose")
+OR III-1 p70 (15 Apr 1861 reply to Cameron: "no troops ... for subduing her sister Southern States")
+OR III-1 p70,p75,p80
+OR III-1 p71
+OR III-1 p71,p74,p79
+OR III-1 p71,p79
+OR III-1 p72
+OR III-1 p72 (15 Apr 1861 reply to Cameron)
+OR III-1 p72,p83
+OR III-1 p72,p83 (asks questions, accepts quota; no risk-taking shown)
+OR III-1 p73
+OR III-1 p76 (16 Apr 1861 reply to Cameron)
+OR III-1 p76 (16 Apr reply to Cameron)
+OR III-1 p80
+OR III-1 p80 (Six Regiment Bill, "Why this discrimination against Indiana?")
+OR III-1 p80-81
+OR III-1 p81
+OR III-1 p81 (17 Apr 1861 reply to Cameron)
+OR III-1 p82
+OR III-1 p82-83
+OR III-1 p82-83 (17 Apr 1861 reply to Cameron)
+OR III-1-p102
+OR III-1-p388
+OR III-1-p431
+OR III-1-p463
+OR III-1-p623
+OR III-1-p70
+OR III-1-p71
+OR III-1-p72
+OR III-1-p73
+OR III-1-p75
+OR III-1-p76
+OR III-1-p77
+OR III-1-p78
+OR III-1-p80
+OR III-1-p81
+OR III-1-p82
+OR III-1-p83
+OR III-2-p180
+OR III-2-p46
+OR III-2-p881
+OR IV-1
+OR IV-1 (1861-04-19 compliance; later wariness is outside window)
+OR IV-1 (1861-04-19)
+OR IV-1 (Letcher to Davis 1861-04-18)
+OR IV-1 (Letcher to Davis 1861-04-18; his own words of regard NOT FOUND)
+OR IV-1 (Walker-Brown wire 1861-04-19, weak)
+OR IV-1-p247
+OR IV-1-p253
+OR IV-1-p535
+OR IV-1-p969
+ORN I-12 p195-198 dated 1861-07-05
+ORN I-16 p519,p566
+ORN I-16 p522,p566
+ORN I-16 p524-566 (formal)
+ORN I-16 p525
+ORN I-16 p565-566
+ORN I-4 p290 dated 1861-04-23
+ORN I-5 p624
+ORN I-5 p624-626
+ORN I-5 p637-638,p649 (active blockade, Cape Henry)
+ORN I-5 p667-668
+ORN I-5 p667-668,p682
+ORN I-5 p682-683 (asks for adequate vessels)
+ORN II-2 p76 dated 1861-07-18
+PEARSON-ANDREW v1 p112-116
+PEARSON-ANDREW v1 p112-116 (June 1860 Boston speech, reported by friendly biographer; wary only after window)
+PEARSON-ANDREW v1 p162
+PEARSON-ANDREW v1 p167,p196 (conservatives and the Springfield Republican called his preparations absurd in March and April 1861; opinion turned after 15 April)
+PEARSON-ANDREW v1 p174
+PEARSON-ANDREW v1 p183-185,p217
+PEARSON-ANDREW v1 p224
+PEARSON-ANDREW v1 p224-225
+PEARSON-ANDREW v2-p48
+PIERCE-SUMNER p100
+PIERCE-SUMNER p42-43
+PIERCE-SUMNER p55-56
+PIERCE-SUMNER p98-99
+PRFA 1862-GB-index
+PRFA 1862-p313
+REBREC 2-D67
+RICH I p32-33 (inaugural, 18 Feb 1861)
+RICH I p33-34
+RICH I p36 (appointment)
+RICH I p55 (commission of trust)
+RICH I p55 (commission; Stephens's own words NOT FOUND)
+RICH I p59 (slave-trade veto on constitutional grounds)
+RICH I p68 (29 Apr 1861 message: slave labour "indispensable", enslaved described as under the supervision of a "superior race")
+RICH I p73 (public praise only)
+RICH I p73 (public statements, weak)
+RICH I p96
+RICH I p96 (Walker order of 10 Apr)
+RICH II-1861-03-16-toombs
+RICH II-1861-06-01-yancey
+RICH II-1861-10-05-mason
+RICH II-1861-11-08-yancey
+RICH II-1862-03-26-slidell
+RICH II-1862-07-30-mason
+RICH II-1862-10-09-slidell
+RIDDLE-WADE p240
+RIDDLE-WADE p241
+RIDDLE-WADE p242
+RIDDLE-WADE p243
+RIDDLE-WADE p244-245
+RIDDLE-WADE p246
+RIDDLE-WADE p247
+RIDDLE-WADE p248
+SCHUCKERS p199-201
+SCHUCKERS p202
+SCHUCKERS p203
+SHERMAN-M ch9
+STEPHENS 1861-03-21-CORNERSTONE
+STEPHENS 1861-03-21-cornerstone, press report of the speech
+USREPORTS 24 How 66 dated 1860-04-14
+WEED-MEM p349
+WEED-MEM p390
+WEED-MEM p414
+WELLES-D 1 p158
+WELLES-D 1 p184
+WELLES-D 1 p241
+WELLES-D 1 p62
+WELLES-D 1 p62-63
+WELLES-D 1 p63
+WELLES-D 1 p76
+WELLES-D 1862-08-10
+WELLES-D 1862-08-15
+WELLES-D 1862-08-20
+WELLES-D 1862-09-02
+WELLES-D 1862-09-07
+WELLES-D 1862-09-10
+WELLES-D 1862-09-12
+WELLES-D 1862-09-27
+WELLES-D 1862-10-01
+WELLES-D 1862-10-02
+WELLES-D 1862-10-09
+WELLES-D 1862-10-10
+WELLES-D 1862-12-20
+WELLES-D 1862-12-29
+WELLES-D 1863-01-09
+WELLES-D 1863-01-10
+WELLES-D 1863-02-07
+WELLES-D 1863-02-16
+WELLES-D 1863-03-12
+WELLES-D 1863-04-02
+WELLES-D 1863-06-14
+WELLES-D 1863-06-15
+WELLES-D1-RETRO p13-14
+WELLES-D1-RETRO p15
+WELLES-D1-RETRO p16-17
+WELLES-D1-RETRO p17
+WELLES-D1-RETRO p18
+WELLES-D1-RETRO p4-10
+WELLES-D1-RETRO p55
+WELLES-D1-RETRO p57
+WELLES-D1-RETRO p60
+WELLES-D1-RETRO p8
+WELLES-D1-RETRO p8-9
+WELLES-D1-RETRO p9
+WELLES-D1-RETRO p9,p13,p15
+WELLES-D1-RETRO p9-28
+WOODBURN-STEVENS p226-227
+WOODBURN-STEVENS p239
+WOODBURN-STEVENS p250-251
+WOODBURN-STEVENS p263
+WOODBURN-STEVENS p277-278
+WOODBURN-STEVENS p73-123
+Wright p21
+Wright p48
+Wright p49
+Wright p50
+Wright p70
+Wright p9

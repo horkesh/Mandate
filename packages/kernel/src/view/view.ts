@@ -26,7 +26,8 @@ import type { WorldIndex } from '../world/index.ts';
 import { claimedControlView } from './claimed-control.ts';
 import { controlEvidence } from '../knowledge/control-beliefs.ts';
 import { nextPeopleChange, peopleProjection, type PeopleProjection } from './people.ts';
-import type { BeliefView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
+import type { ReportClaim } from '../knowledge/report.ts';
+import type { BeliefView, ClaimView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
 
 export interface ViewCache {
   readonly knowledge: KnowledgeCache;
@@ -51,6 +52,19 @@ function freeze<T extends object>(o: T): T {
   return Object.freeze(o);
 }
 
+/** Build once, then freeze: absent battle fields need no temporary objects on ordinary claims. */
+function claimView(c: ReportClaim): ClaimView {
+  if (c.claimBattle === undefined && c.claimBattleDays === undefined && c.claimCommander === undefined) return freeze({
+    kind: c.claimKind, region: c.claimRegion, value: c.claimValue, token: c.claimToken, confidence: c.claimConfidence,
+  });
+  return freeze({
+    kind: c.claimKind, region: c.claimRegion, value: c.claimValue, token: c.claimToken, confidence: c.claimConfidence,
+    ...(c.claimBattle === undefined ? {} : { battle: c.claimBattle }),
+    ...(c.claimBattleDays === undefined ? {} : { battleDays: freeze([...c.claimBattleDays]) }),
+    ...(c.claimCommander === undefined ? {} : { commander: c.claimCommander }),
+  });
+}
+
 function reportView(r: KnownReport, threshold: number): ReportView {
   const b = r.knownBody;
   return freeze({
@@ -61,9 +75,7 @@ function reportView(r: KnownReport, threshold: number): ReportView {
     authorPost: b.reportAuthorPost,
     subjectKind: b.reportSubjectKind,
     subjectId: b.reportSubjectId,
-    claims: freeze(
-      b.reportClaims.map((c) => freeze({ kind: c.claimKind, region: c.claimRegion, value: c.claimValue, token: c.claimToken, confidence: c.claimConfidence })),
-    ),
+    claims: freeze(b.reportClaims.map(claimView)),
     reportedControl: freeze([...controlEvidence([r], threshold)].map(([region, { holder, contested }]) => freeze({ region, holder, contested }))),
     ...(r.knownPublicOpening === true ? { openingControl: true as const } : {}),
     day: b.reportDay,
