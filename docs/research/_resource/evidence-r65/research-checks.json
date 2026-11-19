@@ -1,0 +1,59 @@
+{
+  "pass": true,
+  "rows": 82,
+  "people": 17,
+  "counts": {
+    "KEEP": 2,
+    "CHANGE": 7,
+    "HOLD": 73
+  },
+  "inMemoryOptInOnly": true,
+  "packWriteAttempts": 0,
+  "mutated": [
+    {
+      "person": "johnston_albert_s",
+      "field": "values",
+      "before": "",
+      "after": "union:ASJ-PORTER-1861-DOC p270 dated 1861-02-25"
+    },
+    {
+      "person": "johnston_joseph_e",
+      "field": "values",
+      "before": "caution:OR I-2 p881+DOC-1861 JOHNSTON 1861-06-12-report;duty:OR I-2 p473 [self-report]",
+      "after": "caution:OR I-2 p881+DOC-1861 JOHNSTON 1861-06-12-report"
+    },
+    {
+      "person": "lee_robert_e",
+      "field": "values",
+      "before": "duty:DOC-1861 LEE 1861-04-20-scott (NPS arho)+LEE-1904 p28;native_state:DOC-1861 LEE 1861-04-20-scott (NPS arho)+DOC-1861 LEE 1861-04-20-anne-marshall (NPS arho)",
+      "after": "native_state:LEE-JAN1861-DOC pp88-89 dated 1861-01-23;union:LEE-JAN1861-DOC p88 dated 1861-01-23"
+    },
+    {
+      "person": "smith_edmund_k",
+      "field": "values",
+      "before": "",
+      "after": "duty:OR I-1 p559 dated 1861-03-01"
+    },
+    {
+      "person": "houston_samuel",
+      "field": "values",
+      "before": "union:HOUSTON-DALY-1860 pp118-120 dated 1860-08-14",
+      "after": "union:HOUSTON-AUSTIN-1860-DOC pp599-600 dated 1860-09-22;native_state:HOUSTON-LEGIS-1861-DOC pp644-645 dated 1861-02-06;duty:HOUSTON-LEGIS-1861-DOC p645 dated 1861-02-06;slavery_defence:HOUSTON-AUSTIN-1860-DOC p602 dated 1860-09-22"
+    },
+    {
+      "person": "clark_edward",
+      "field": "values",
+      "before": "",
+      "after": "state_autonomy:CLARK-CONVENTION-1860-DOC pp9-12 dated 1860"
+    }
+  ],
+  "applyMessages": [
+    "NO SEGMENT value:union for johnston_albert_s (rs16); adding",
+    "NO SEGMENT value:union for lee_robert_e (rs16); adding",
+    "NO SEGMENT value:duty for smith_edmund_k (rs16); adding",
+    "NO SEGMENT value:native_state for houston_samuel (rs16); adding",
+    "NO SEGMENT value:duty for houston_samuel (rs16); adding",
+    "NO SEGMENT value:slavery_defence for houston_samuel (rs16); adding",
+    "NO SEGMENT value:state_autonomy for clark_edward (rs16); adding"
+  ]
+}

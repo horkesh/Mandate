@@ -129,3 +129,23 @@ The required **`MANDATE_NO_GIT=1 npm run check` exits 2** for missing Node type 
 ## Findings outside my scope
 
 The inherited apply does not consume rs15. The exact-day evidence parser does not establish an honest month bound by itself. Dependencies and compliant no-Git test collection are absent on this research base. The owning integration lane must address those prerequisites. No pack, generated output, signed item, engine file, lockfile or other run's worktree was changed. Git remained read-only, with no commit or push.
+
+## R65 close-out, 19 November 2026
+
+For the lead: 3 items. Research only in `C:/Pyrrhic/mandate-research-values`, branch `research-1861-values`, at `459b4a5`. The deliverables are `docs/research/_resource/rs16.csv` and `rs16.md`: **82 decisions, 17 people, KEEP 2 / CHANGE 7 / HOLD 73**. The CSV covers all four resignation values for the fifteen, Houston and Clark's six scalar fields and four corresponding values, and two explicit slavery-defence companion cells. Houston's existing Union value is included as a corroboration, not counted as a newly recovered hold. Empty trait sets stay empty, and his existing Davis relationship is preserved.
+
+**Positive recommendations [I]:** Lee native_state and union from his 23 January letter (Long pp88-89), A. S. Johnston union from his 25 February letter to Porter (William Preston Johnston p270), E. Kirby Smith duty from his 1 March report (OR I-1 p559), Houston's existing union from his September 1860 speech (Crane pp599-600), Houston adopted-state attachment and civic duty from his 6 February message (Crane pp644-645, heading p642), Houston slavery_defence from the same September speech (p602), and Clark state_autonomy from his signed convention call (Texas journal pp9-12). Every positive printed page was visually checked. The CSV marks each mapping [I], limits the later books to their primary documents, and keeps Clark's signing date at a year bound rather than inventing a day.
+
+**Limits:** Lee's and J. E. Johnston's duty fields are HOLD. No newly verified pre-start state-loyalty leg is supplied for J. E. Johnston, Magruder or Stuart. Stuart's January letter and Ewell's late-January correspondence were found only through modern quotations, without an admitted original/printing. Clark's slavery_defence is an explicit companion HOLD under 0074. Houston's civic duty is not loyalty to the Army or acceptance of Davis's call. These are evidence recommendations, not a calibration fix or permission to place gated text.
+
+**Verification:** the inherited parser and actual apply judgment loop accept rs16 when explicitly opted in **in memory**, exit 0, with 82 rows, exact prior values, no duplicates, pre-cutoff dates and zero pack-write attempts. Six value strings would change and no other field would. An arithmetic-only projection under the unchanged resignation rules leaves every officer below the threshold, including Lee at 200 against 500. No campaign, model tuning or pack apply was done. The required check exits 2 for missing Node types, and done-check exits 1 for missing `tsx`: **zero tests and zero done criteria ran**. No install or expensive retry. Evidence is in `docs/research/_resource/evidence-r65/`, including `final-checks.json`, source readings/hashes, counts, failed requests and the in-memory exercise. All scans stay in `C:/Pyrrhic/mandate-research-sources/r65-sources/`.
+
+## For the lead
+
+1. Route the nine positive recommendations to Claude's standing reviewer under 0096, including Houston's civic/adopted-state mappings and Clark's explicit 0074 companion issue. No independent or gate sign-off is claimed.
+2. Preserve the 73 holds and pursue the named primary-letter leads if more values are needed. Do not backdate later resignations or fill values to make a model threshold pass.
+3. Route the reviewed rs15/rs16 opt-in, honest date-bound handling and missing project gates to integration. The old apply stops at rs14 and retains obsolete bloc/fifteen-officer handling. Its KEEP branch replaces citations, so corroborating Houston should retain the earlier citation too.
+
+## Findings outside my scope
+
+The current resignation rule does not express all the conditional commitments in the read documents, and Houston's call response remains a separate model question. Clark's slavery companion needs review before placement. The old no-Git fixture exclusions and absent dependencies prevent the required project gates here. No runtime, pack, lockfile, signed item, other request or other run's worktree changed. Git was read-only and HEAD remained `459b4a5`.
