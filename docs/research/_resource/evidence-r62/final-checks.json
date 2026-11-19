@@ -1,0 +1,86 @@
+{
+  "result": "PASS",
+  "current_cells": 1017,
+  "current_citations": 1705,
+  "supplements_unchanged": 11,
+  "current_dates": {
+    "unresolved": 1293,
+    "bound": 255,
+    "exact": 157
+  },
+  "exact_groups_audited": 99,
+  "rows_changed": 10,
+  "regeneration_byte_identical": true,
+  "baseline_files_unchanged": 787,
+  "protected_lane_note_unchanged": true,
+  "changed_files": [
+    "docs/research/2026-11-14-union-navy.md",
+    "docs/research/2026-11-16-cast-1861.md",
+    "docs/research/_resource/dating-method.md",
+    "docs/research/_resource/dating.csv",
+    "docs/research/_resource/evidence-r52/date-overrides.json",
+    "docs/research/_resource/rs8.csv",
+    "docs/research/_resource/rs8.md",
+    "docs/research/_resource/tools/addsources.js",
+    "docs/research/_resource/tools/apply.js",
+    "docs/research/_resource/tools/r52-dating.py"
+  ],
+  "additions": [
+    "docs/research/_resource/evidence-r62/baseline.json",
+    "docs/research/_resource/evidence-r62/date-changes.json",
+    "docs/research/_resource/evidence-r62/dating-build.log",
+    "docs/research/_resource/evidence-r62/exact-day-audit.json",
+    "docs/research/_resource/evidence-r62/leg-audit.json",
+    "docs/research/_resource/evidence-r62/regeneration.log",
+    "docs/research/_resource/evidence-r62/source-reading.json",
+    "docs/research/_resource/evidence-r62/typecheck.log",
+    "docs/research/_resource/evidence-r62/verify.log",
+    "docs/research/_resource/evidence-r62/wording-probe-final.log",
+    "docs/research/_resource/evidence-r62/wording-probe.log",
+    "docs/research/_resource/tools/r62-verify.py",
+    "docs/research/_resource/tools/r62-wording-probe.cjs"
+  ],
+  "git": {
+    "log -1 --format=%H %D": {
+      "exit": 0,
+      "output": "3230269c28c199b487dd5f08b8ab53ccad9a2b70 HEAD -> research-1861-dating, origin/research-1861-dating, research-1861-round3\n"
+    },
+    "diff --cached --name-only": {
+      "exit": 0,
+      "output": ""
+    },
+    "diff --check": {
+      "exit": 0,
+      "output": "warning: in the working copy of 'docs/research/_resource/evidence-r52/dating-counts.json', CRLF will be replaced by LF the next time Git touches it\n"
+    },
+    "status --short": {
+      "exit": 0,
+      "output": " M docs/research/2026-11-14-union-navy.md\n M docs/research/2026-11-16-cast-1861.md\n M docs/research/_resource/dating-method.md\n M docs/research/_resource/dating.csv\n M docs/research/_resource/evidence-r52/date-overrides.json\n M docs/research/_resource/rs8.csv\n M docs/research/_resource/rs8.md\n M docs/research/_resource/tools/addsources.js\n M docs/research/_resource/tools/apply.js\n M docs/research/_resource/tools/r52-dating.py\n?? docs/research/_resource/evidence-r62/\n?? docs/research/_resource/tools/r62-verify.py\n?? docs/research/_resource/tools/r62-wording-probe.cjs\n"
+    }
+  },
+  "validation": {
+    "typecheck": {
+      "exit": 0,
+      "log": "typecheck.log"
+    },
+    "wording_probe": {
+      "exit": 0,
+      "log": "wording-probe-final.log",
+      "physical_tool_writes": 0
+    },
+    "initial_wording_probe": {
+      "exit": 1,
+      "log": "wording-probe.log",
+      "cause": "old base lacks R50 CommonJS marker; unchanged CSV helper now explicitly loaded in probe"
+    },
+    "full_check": {
+      "status": "not run",
+      "reason": "Git-mutating staged-check fixtures are not excluded by this base"
+    },
+    "done_check": {
+      "status": "not run",
+      "reason": "CLI output is restricted to runs/, outside authorized research paths"
+    },
+    "standing_review": "pending Claude"
+  }
+}
