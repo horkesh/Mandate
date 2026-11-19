@@ -49,6 +49,15 @@ describe('the CI workflow', () => {
     expect(all.check).toContain('wall-clock budget tests');
   });
 
+  it('proves on the Linux job that the timed tests ran: it fails when any test is skipped (lane 1.14, from 0086)', () => {
+    const step = all.check!.slice(all.check!.indexOf('- id: no_skips'), all.check!.indexOf('- id: boundary'));
+    expect(step).toMatch(/matrix\.os == 'ubuntu-24\.04'/);
+    // It reads the report the test step writes, on the same job, after it.
+    expect(step).toContain('run: npx tsx tools/no-skips.ts runs/ci/vitest.json');
+    expect(all.check!.indexOf('- id: test')).toBeLessThan(all.check!.indexOf('- id: no_skips'));
+    expect(all.check).toContain('--outputFile.json=runs/ci/vitest.json');
+  });
+
   it('runs on pinned Linux and Windows images, never a moving -latest label', () => {
     expect(all.check).toMatch(/os: \[ubuntu-24\.04, windows-2025\]/);
     expect(workflow).not.toMatch(/-latest\b/);

@@ -64,6 +64,11 @@ jobs:
           MANDATE_TIMING: ${{ matrix.os == 'ubuntu-24.04' && '1' || '' }}
         run: npm run test -- --reporter=default --reporter=json --outputFile.json=runs/ci/vitest.json
 
+      - id: no_skips
+        name: No test skipped where the timing gate is open (Linux; lane 1.14, from 0086)
+        if: ${{ !cancelled() && steps.install.outcome == 'success' && matrix.os == 'ubuntu-24.04' }}
+        run: npx tsx tools/no-skips.ts runs/ci/vitest.json
+
       - id: boundary
         name: npm run check:boundary
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
@@ -118,6 +123,7 @@ jobs:
           TYPECHECK: ${{ steps.typecheck.outcome }}
           TEST: ${{ steps.test.outcome }}
           TIMING: ${{ matrix.os == 'ubuntu-24.04' && 'on (MANDATE_TIMING=1)' || 'off' }}
+          NO_SKIPS: ${{ steps.no_skips.outcome }}
           BOUNDARY: ${{ steps.boundary.outcome }}
           LICENCES: ${{ steps.licences.outcome }}
           DECISIONS: ${{ steps.decisions.outcome }}
@@ -142,6 +148,7 @@ jobs:
             echo "| npm run typecheck | $TYPECHECK |"
             echo "| npm run test | $TEST ($tests) |"
             echo "| wall-clock budget tests | $TIMING |"
+            echo "| no test skipped (Linux) | $NO_SKIPS |"
             echo "| npm run check:boundary | $BOUNDARY |"
             echo "| npm run check:licences | $LICENCES |"
             echo "| npm run check:decisions | $DECISIONS |"

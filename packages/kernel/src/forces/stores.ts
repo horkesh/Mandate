@@ -71,7 +71,7 @@ export function storesStep(map: WorldIndex, state: State, supply: SupplyResult):
     const loc = state.forceLocations[block];
     if (b.fbStoresMilli === null || loc === undefined) continue;
     const kind = map.regions.get(loc.locRegion)!.kind;
-    // STAND-IN (lane 1.4 labels it; owner: 1B's ships' stores, 0064): ships and troops afloat neither eat nor draw stores.
+    // STAND-IN(owner: 1B, ships' stores; 0064; labelled by lane 1.4): ships and troops afloat neither eat nor draw stores.
     if (kind === 'river' || kind === 'sea' || kind === 'off_map') continue;
     const faction = factionOfBlock(map, state, block);
     if (faction === null) continue;

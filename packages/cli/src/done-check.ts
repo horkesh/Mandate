@@ -16,8 +16,14 @@
  */
 import { existsSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { atrocityDecisions, errorsOf, formatIssue, loadPack, type Checkpoints } from '@mandate/pack-format';
+import { checkpointsScore, historyDays, observeRun, operationScore, pushbackScore, unknownStrengthScore, type Observations } from './history-run.ts';
+import { runSweep, sweepScore, type SweepResult } from './lever-sweep.ts';
 import { gateFailures, REFERENCE_RUNS, referenceRunFor, seatsNamed, type ReferenceRun } from './liveness-gate.ts';
+import { packFilesAt, packRoot, v2Packs } from './pack-files.ts';
 import { phase0Run, type Phase0Summary } from './phase0-run.ts';
+import { seatsMechanics, seatsWorld } from './seats-world.ts';
+import { m2CarriedValues, standInReport } from './stand-ins.ts';
 
 /** The tick's budget in ms a day (FOUNDATION section 9: a 1,460-day campaign in under a minute). */
 export const TICK_BUDGET_MS = 40;
@@ -44,14 +50,49 @@ export interface DoneRun {
   readonly repeat: Phase0Summary;
   /** The same game with the clock on and no hashing: the tick's cost. */
   readonly timed: Phase0Summary;
+  /** The battles the repeat run saw (lane 1.14: 1A's unknown-strength criterion reads every run). */
+  readonly battles?: Observations['battles'];
 }
 
+/**
+ * 1A's history run (FOUNDATION section 12; lane 1.14): a pack with done-check bands, from its start to its last
+ * checkpoint date with its own peace and war, observed, timed, and swept by the victory-only bot.
+ */
+export interface HistoryRun {
+  readonly name: string;
+  readonly pack: string;
+  readonly startDate: string;
+  readonly checkpoints: Checkpoints;
+  readonly summary: Phase0Summary;
+  readonly observations: Observations;
+  readonly timed: Phase0Summary;
+  readonly sweep: SweepResult | null;
+}
+
+/** Phase 0's six criteria, and 1A's, which `run:done-check` reports beside them (lane 1.14). */
+export type CriterionId = 'behaviour' | 'hash' | 'resume' | 'liveness' | 'section-ten' | 'budget' | 'checkpoints' | 'operation' | 'pushback' | 'unknown-strength' | 'stand-ins' | 'lever-sweep';
+
 export interface Criterion {
-  readonly id: 'behaviour' | 'hash' | 'resume' | 'liveness' | 'section-ten' | 'budget';
+  readonly id: CriterionId;
+  /** Phase 0's criteria decide the exit status; 1A's are measured and reported until the lead makes them binding. */
+  readonly milestone: 'phase0' | '1A';
   readonly text: string;
   readonly problems: readonly string[];
   readonly evidence: readonly string[];
 }
+
+/** 1A's criteria, in the order `run:done-check` reports them. */
+export const MILESTONE_1A: readonly CriterionId[] = ['checkpoints', 'operation', 'pushback', 'unknown-strength', 'stand-ins', 'lever-sweep'];
+
+/**
+ * The systems the budget must be measured with running (FOUNDATION section 12, 1A: the tick budget re-measured with the
+ * planner, people and situations running): a mechanic of each that some timed run fired.
+ */
+export const BUDGET_SYSTEMS: readonly { readonly system: string; readonly mechanic: string }[] = [
+  { system: 'the planner', mechanic: 'plans.drafted' },
+  { system: 'people', mechanic: 'ladder.moved' },
+  { system: 'situations', mechanic: 'situations.fired' },
+];
 
 /**
  * What a run started at war by the labelled option is (0072). Lane 1.12 retired the stand-in generic principals: the
@@ -132,7 +173,7 @@ export function sectionTenProblems(root: string = REPO): string[] {
 }
 
 /** Criterion 6: the day's cost (requests, seats and tick; no hashing) against the budget. */
-export function budgetProblems(run: DoneRun, budgetMs = TICK_BUDGET_MS): string[] {
+export function budgetProblems(run: Pick<DoneRun, 'name' | 'timed'>, budgetMs = TICK_BUDGET_MS): string[] {
   const t = run.timed.timing;
   if (t === null) return [`${run.name}: the timed run took no timings`];
   const problems: string[] = [];
@@ -141,11 +182,55 @@ export function budgetProblems(run: DoneRun, budgetMs = TICK_BUDGET_MS): string[
   return problems;
 }
 
+/** Criterion 6's second half (1A): the budget was measured with the planner, people and situations running. */
+export function budgetSystemsProblems(timed: readonly Phase0Summary[]): string[] {
+  const fired = (m: string) => timed.some((s) => (s.liveness.find((r) => r.mechanic === m)?.fires ?? 0) > 0);
+  return BUDGET_SYSTEMS.filter((s) => !fired(s.mechanic)).map((s) => `no timed run had ${s.system} running (${s.mechanic} fired in none), so the budget was not measured with it`);
+}
+
 export interface DoneCheckInput {
   readonly runs: readonly DoneRun[];
   /** Liveness of the exercise runs, by reference run name. */
   readonly exercises: Readonly<Record<string, Phase0Summary['liveness']>>;
   readonly root?: string;
+  /** 1A's history runs (lane 1.14): one per pack with done-check bands. */
+  readonly history?: readonly HistoryRun[];
+  /** The stand-ins criterion, read from the code (`standInReport`). */
+  readonly standIns?: { readonly problems: readonly string[]; readonly evidence: readonly string[] };
+}
+
+/** 1A's criteria over the history runs and every run's battles. */
+export function milestone1A(input: DoneCheckInput): Criterion[] {
+  const history = input.history ?? [];
+  const none = history.length === 0 ? ['no history run was made (no pack has done-check bands, checkpoints.json)'] : [];
+  const each = (f: (h: HistoryRun) => { readonly problems: readonly string[]; readonly evidence: readonly string[] }) => {
+    const problems: string[] = [...none];
+    const evidence: string[] = [];
+    for (const h of history) {
+      const s = f(h);
+      problems.push(...s.problems.map((p) => `${h.name}: ${p}`));
+      evidence.push(...s.evidence.map((e) => `${h.name}: ${e}`));
+    }
+    return { problems, evidence };
+  };
+  const declared = new Set(seatsMechanics());
+  const checkpoints = each((h) => checkpointsScore(h.checkpoints, h.observations, h.startDate, h.summary.atWar));
+  const operation = each((h) => operationScore(h.observations));
+  const pushback = each((h) => pushbackScore(h.checkpoints, h.observations, h.summary.daily, h.startDate, declared));
+  const unknown = unknownStrengthScore([
+    ...input.runs.filter((r) => r.battles !== undefined).map((r) => ({ name: r.name, battles: r.battles! })),
+    ...history.map((h) => ({ name: h.name, battles: h.observations.battles })),
+  ]);
+  const sweep = each((h) => (h.sweep === null ? { problems: ['the lever sweep was not run'], evidence: [] } : sweepScore(h.sweep)));
+  const standIns = input.standIns ?? { problems: ['the stand-ins were not read'], evidence: [] };
+  return [
+    { id: 'checkpoints', milestone: '1A', text: 'the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought', ...checkpoints },
+    { id: 'operation', milestone: '1A', text: 'at least one operation drafted by the kernel planner, chosen by its commander’s seat, approved, executed and fought with the battle model, with a breakdown', ...operation },
+    { id: 'pushback', milestone: '1A', text: 'pushback fires inside its bands: lower bounds from the record’s sourced cases (S01–S21), upper bounds the lead’s', ...pushback },
+    { id: 'unknown-strength', milestone: '1A', text: 'no block fights with unknown strength: every battle record, in every run, lists none unknown', problems: [...unknown.problems], evidence: [...unknown.evidence] },
+    { id: 'stand-ins', milestone: '1A', text: 'the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane', problems: [...standIns.problems], evidence: [...standIns.evidence] },
+    { id: 'lever-sweep', milestone: '1A', text: 'the lever sweep (D6): no watched option, nor an atrocity-class decision’s inaction, is the victory-only bot’s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active', ...sweep },
+  ];
 }
 
 export function evaluateDoneCheck(input: DoneCheckInput): Criterion[] {
@@ -169,7 +254,8 @@ export function evaluateDoneCheck(input: DoneCheckInput): Criterion[] {
     }
   }
   const sectionTen = sectionTenProblems(input.root);
-  return [
+  const history = input.history ?? [];
+  const phase0Criteria: Omit<Criterion, 'milestone'>[] = [
     {
       id: 'behaviour',
       text: 'rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply',
@@ -197,11 +283,19 @@ export function evaluateDoneCheck(input: DoneCheckInput): Criterion[] {
     },
     {
       id: 'budget',
-      text: `the day's cost stays inside the ${TICK_BUDGET_MS} ms tick budget (median), and its slowest days inside ${TICK_P95_FACTOR} times it (p95)`,
-      problems: runs.flatMap((r) => budgetProblems(r)),
-      evidence: runs.map((r) => (r.timed.timing ? `${r.name}: median ${r.timed.timing.median.toFixed(2)} ms, p95 ${r.timed.timing.p95.toFixed(2)} ms, max ${r.timed.timing.max.toFixed(2)} ms` : `${r.name}: no timings`)),
+      text: `the day's cost stays inside the ${TICK_BUDGET_MS} ms tick budget (median), and its slowest days inside ${TICK_P95_FACTOR} times it (p95), measured with the planner, people and situations running (1A)`,
+      problems: [
+        ...[...runs, ...history].flatMap((r) => budgetProblems(r)),
+        ...(runs.length + history.length > 0 ? budgetSystemsProblems([...runs, ...history].map((r) => r.timed)) : []),
+      ],
+      evidence: [...runs, ...history].map((r) => {
+        const t = r.timed.timing;
+        const live = BUDGET_SYSTEMS.map((s) => `${s.mechanic} ${r.timed.liveness.find((x) => x.mechanic === s.mechanic)?.fires ?? 0}`).join(', ');
+        return t ? `${r.name}: median ${t.median.toFixed(2)} ms, p95 ${t.p95.toFixed(2)} ms, max ${t.max.toFixed(2)} ms over ${t.days} days (${live})` : `${r.name}: no timings`;
+      }),
     },
   ];
+  return [...phase0Criteria.map((c) => ({ ...c, milestone: 'phase0' as const })), ...milestone1A(input)];
 }
 
 export interface DoneCheckRunSpec {
@@ -221,23 +315,79 @@ export const DONE_CHECK_RUNS: readonly DoneCheckRunSpec[] = [
 export interface DoneCheckResult {
   readonly criteria: readonly Criterion[];
   readonly runs: readonly DoneRun[];
+  readonly history: readonly HistoryRun[];
+  /** Phase 0's criteria all pass: the exit status. */
   readonly passed: boolean;
+  /** 1A's criteria all pass too (lane 1.14: measured and reported; binding when the lead says so). */
+  readonly passed1A: boolean;
+}
+
+/** The lever sweep's size in the done check: seeds from the start's own, and how far each move is played on. */
+export const SWEEP = { seeds: 8, horizonDays: 30 } as const;
+
+/** A pack's done-check bands and what the history run and the sweep need from it; null for a pack without bands. */
+export function historyPack(pack: string): { readonly checkpoints: Checkpoints; readonly startDate: string; readonly seed: number; readonly atrocity: ReadonlySet<string>; readonly rules: unknown } | null {
+  const { pack: data, issues } = loadPack(packFilesAt(packRoot(pack)));
+  if (data === null) throw new Error(`pack ${pack} does not load:\n${errorsOf(issues).map(formatIssue).join('\n')}`);
+  const start = data.scenarios[0];
+  if (data.checkpoints === undefined || data.checkpoints === null || start === undefined) return null;
+  const atrocity = data.gate === undefined || data.gate === null ? new Set<string>() : atrocityDecisions(data.situations ?? [], data.gate);
+  return { checkpoints: data.checkpoints, startDate: start.startDate, seed: start.seed, atrocity, rules: data.world.rules };
+}
+
+/** 1A's history run for one pack: observed, timed and (unless `seeds` is 0) swept. */
+export function historyRun(pack: string, options: { readonly sweepSeeds?: number } = {}): HistoryRun | null {
+  const h = historyPack(pack);
+  if (h === null) return null;
+  const days = historyDays(h.checkpoints, h.startDate);
+  const observer = observeRun(h.checkpoints, h.startDate);
+  const summary = phase0Run({ pack, days, atWar: false, checks: false, replay: false, hash: 'checkpoints', checkpointEvery: days, onTick: observer.onTick });
+  const timed = phase0Run({ pack, days, atWar: false, hash: 'checkpoints', checkpointEvery: days, timings: true, replay: false });
+  const seeds = options.sweepSeeds ?? SWEEP.seeds;
+  const sweep =
+    seeds === 0
+      ? null
+      : runSweep(seatsWorld(pack).world, {
+          seeds: Array.from({ length: seeds }, (_, i) => h.seed + i),
+          days,
+          horizonDays: SWEEP.horizonDays,
+          weights: h.checkpoints.victory,
+          atrocity: h.atrocity,
+          // G-1.14b: the governments whose side could change; their governors close the recruitment chain.
+          borderDepartments: h.checkpoints.checkpoints.flatMap((k) => (k.kind === 'government-side' ? k.departments : [])),
+        });
+  return { name: `${pack} history run, ${days} days to ${h.checkpoints.checkpoints.map((k) => k.date).sort().at(-1) ?? 'its end'}`, pack, startDate: h.startDate, checkpoints: h.checkpoints, summary, observations: observer.observations(), timed, sweep };
+}
+
+/** The packs with done-check bands, whose history runs 1A's criteria read. */
+export function historyPacks(): string[] {
+  return v2Packs().filter((p) => existsSync(`${packRoot(p)}/checkpoints.json`));
 }
 
 /** Make the runs and evaluate them. `onChecked` sees each checked run's summary, to write it for the cross-machine comparison. */
-export function runDoneCheck(options: { readonly onChecked?: (summary: Phase0Summary, saves: ReadonlyMap<number, string>) => void } = {}): DoneCheckResult {
+export function runDoneCheck(options: { readonly onChecked?: (summary: Phase0Summary, saves: ReadonlyMap<number, string>) => void; readonly sweepSeeds?: number } = {}): DoneCheckResult {
   const runs: DoneRun[] = DONE_CHECK_RUNS.map((spec) => {
     const saves = new Map<number, string>();
     const checked = phase0Run({ pack: spec.pack, days: spec.days, atWar: spec.atWar, hash: 'daily', resumeAtDay: spec.resumeAt, onSave: (text, day) => saves.set(day, text) });
     options.onChecked?.(checked, saves);
-    const repeat = phase0Run({ pack: spec.pack, days: spec.days, atWar: spec.atWar, hash: 'daily', checks: false, replay: false });
+    // The repeat run also lends its battles to 1A's unknown-strength criterion (an observer reads; it never writes).
+    const observer = observeRun(null, '1861-01-01');
+    const repeat = phase0Run({ pack: spec.pack, days: spec.days, atWar: spec.atWar, hash: 'daily', checks: false, replay: false, onTick: observer.onTick });
     const timed = phase0Run({ pack: spec.pack, days: spec.days, atWar: spec.atWar, hash: 'checkpoints', checkpointEvery: spec.days, timings: true, replay: false });
-    return { name: spec.name, checked, repeat, timed };
+    return { name: spec.name, checked, repeat, timed, battles: observer.observations().battles };
   });
   const exercises: Record<string, Phase0Summary['liveness']> = {};
   for (const reference of REFERENCE_RUNS.filter((r) => r.kind === 'exercise')) {
     exercises[reference.name] = phase0Run({ pack: reference.pack, days: reference.days, atWar: reference.atWar, seats: seatsNamed(reference.seats), checks: false, replay: false, hash: 'checkpoints', checkpointEvery: reference.days }).liveness;
   }
-  const criteria = evaluateDoneCheck({ runs, exercises });
-  return { criteria, runs, passed: criteria.every((c) => c.problems.length === 0) };
+  const history = historyPacks().flatMap((p) => historyRun(p, options.sweepSeeds === undefined ? {} : { sweepSeeds: options.sweepSeeds }) ?? []);
+  const m2 = history.flatMap((h) => m2CarriedValues(historyPack(h.pack)?.rules ?? null).map((path) => `${h.pack} ${path}`));
+  const criteria = evaluateDoneCheck({ runs, exercises, history, standIns: standInReport(REPO, m2) });
+  return {
+    criteria,
+    runs,
+    history,
+    passed: criteria.filter((c) => c.milestone === 'phase0').every((c) => c.problems.length === 0),
+    passed1A: criteria.every((c) => c.problems.length === 0),
+  };
 }

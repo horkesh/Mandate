@@ -7,6 +7,7 @@
  * (`npm run pack:validate`).
  */
 import { z } from 'zod';
+import { CheckpointsSchema } from './checkpoints.ts';
 import { formatGenerated } from './format.ts';
 import { AnachronismsSchema, ChecklistSchema, ClassesSchema, ForbiddenSchema, RegisterSchema, ReleaseSchema, ReviewersSchema, SourcePolicySchema, TriggersSchema } from './gate.ts';
 import { ManifestSchema, ProvenanceFileSchema, ScenarioHeaderSchema, ScenarioSchema, StringTableSchema, WorldSchema } from './schemas.ts';
@@ -32,6 +33,8 @@ const SCHEMAS: readonly { readonly file: string; readonly title: string; readonl
   { file: 'gate-checklist.schema.json', title: 'Mandate gate checklist versions (gate/checklist.json)', schema: ChecklistSchema },
   { file: 'gate-release.schema.json', title: 'Mandate gate release windows (gate/release.json)', schema: ReleaseSchema },
   { file: 'gate-reviewers.schema.json', title: 'Mandate gate reviewers a release accepts (gate/reviewers.json)', schema: ReviewersSchema },
+  // Lane 1.14: the done check's bands.
+  { file: 'checkpoints.schema.json', title: 'Mandate done-check bands (checkpoints.json): checkpoints, pushback and the victory measure', schema: CheckpointsSchema },
 ];
 
 /** File name to JSON text, in a stable order. */
