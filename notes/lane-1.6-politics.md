@@ -336,3 +336,13 @@ Evidence: `runs/r68/final-checks.json`, `final-validation-jobs.json`, `preservat
 - **For 1B (the gate review's item 7):** the border Unionists' values ("conciliation, union") omit their stake in slavery, which was the core of the border problem. Add `slavery_noninterference` when blocs read policy (R7's consequences). Today nothing reads bloc values but the address penalty.
 - ~~The press reads the battle record's truth, not the casualty returns.~~ Fixed by the lead's ruling (see "The press's figures from the returns").
 - M2's `derive.ts` stays until M2 retires.
+
+## R72 merge resolution, 19 November 2026
+
+The lead's merge of main `fabef47` into `f8f74da` remains in progress. App.tsx retains both R54's `pressStories` import and R66's audience/org-board imports and behaviour. No further code change was needed. Git was read-only and the merge is not staged or committed.
+
+`MANDATE_NO_GIT=1 npm run check` passes: 107 files, 1,323 tests passed, 3 existing optional skips, with typecheck, boundary, licences and decisions passing. Desk `tsc --noEmit` passes; its suite passes 82 tests with 8 existing skips. `npm run run:done-check -- --label r72-press-done` exits 0, all six binding Phase 0 criteria pass. The later reported 1A criteria remain 2/6, with checkpoints, operation, pushback and lever-sweep failing on this branch; exit 0 is not 1A acceptance. No bands changed here. Evidence: `runs/r72/gates.json` and linked logs.
+
+## Findings outside my scope
+
+The situations merge remains separately blocked by the signed Sumter notice's post-holder declaration; this worktree does not include lane 1.11's history. No R70/R71 files were touched. Claude retains merge completion and standing review.

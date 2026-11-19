@@ -42,7 +42,7 @@ npm run check:licences  # dependency-licence check over every lockfile
 npm run check:decisions  # every decision record has an index row, and the index's amendment notes match each record's Status
 npm run demo             # headless demo: three testbed commanders read the same order (the people core on the new State)
 npm run run:phase0         # Phase 0 runner on the new kernel (reference runs with the liveness gate)
-npm run run:done-check     # the Phase 0 done check: six criteria, each PASS or FAIL (also run in CI)
+npm run run:done-check     # the Phase 0 done check (six criteria, the exit status) and 1A's beside it (six more, reported), each PASS or FAIL (also run in CI); --milestone 1a makes 1A's binding
 npm run run:seats          # Phase 0 seats runner (rule seats, knowledge, command log); on union-1861 it is now a peace run
 npm run pack:generate -- <pack>   # (also pack:validate, pack:schemas) world format v2: generate, validate and publish schemas for a pack
 npm run play -- union-1861       # play Lincoln in the text console: turns of up to a week (default pack: testbed; --at-war opens the war)

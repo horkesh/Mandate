@@ -1,0 +1,223 @@
+{
+  "checkpoints": [
+    {
+      "id": "seceded",
+      "date": "1861-07-31",
+      "kind": "side-set",
+      "faction": "confederate",
+      "departmentKinds": ["state_government"],
+      "exactly": ["st_alabama", "st_arkansas", "st_florida", "st_georgia", "st_louisiana", "st_mississippi", "st_north_carolina", "st_south_carolina", "st_tennessee", "st_texas", "st_virginia"],
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 'Which states have seceded' (an exact band: eleven) and Appendix A; Missouri, Kentucky, Maryland and Delaware had not seceded on 31 July"
+    },
+    {
+      "id": "side_maryland",
+      "date": "1861-07-31",
+      "kind": "government-side",
+      "name": "Maryland",
+      "departments": ["st_maryland"],
+      "side": "union",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: Union, not seceded, Hicks governor, Federal troops at Baltimore from 13 May (MSA exhibit; OR I-2 p. 29)"
+    },
+    {
+      "id": "side_delaware",
+      "date": "1861-07-31",
+      "kind": "government-side",
+      "name": "Delaware",
+      "departments": ["st_delaware"],
+      "side": "union",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: Union, not seceded, Burton governor (AAC)"
+    },
+    {
+      "id": "side_kentucky",
+      "date": "1861-07-31",
+      "kind": "government-side",
+      "name": "Kentucky",
+      "departments": ["st_kentucky"],
+      "side": null,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: neutral by the Governor's proclamation of 20 May, government not seceded (AAC; Kentucky archives)"
+    },
+    {
+      "id": "side_missouri",
+      "date": "1861-07-31",
+      "kind": "government-side",
+      "name": "Missouri",
+      "departments": ["st_missouri"],
+      "side": "union",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: Union by 31 July, the convention installed Gamble's provisional government (Missouri convention journal; MoSA); Jackson's rival government continues in the field"
+    },
+    {
+      "id": "side_western_virginia",
+      "date": "1861-07-31",
+      "kind": "government-side",
+      "name": "western Virginia (the Restored Government at Wheeling)",
+      "departments": [],
+      "side": "union",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: Union, the Restored Government of Virginia at Wheeling, Pierpont governor from 20 June, senators seated 13 July (WV Archives). The pack has no department for it yet"
+    },
+    {
+      "id": "side_muscogee",
+      "date": "1861-07-31",
+      "kind": "government-side",
+      "name": "the Creek (Muscogee) Nation",
+      "departments": ["nation_muscogee"],
+      "side": "confederate",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: allied to the Confederacy by treaty (10 July; CSAL)"
+    },
+    {
+      "id": "side_choctaw",
+      "date": "1861-07-31",
+      "kind": "government-side",
+      "name": "the Choctaw Nation",
+      "departments": ["nation_choctaw"],
+      "side": "confederate",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: allied to the Confederacy by treaty (12 July; CSAL)"
+    },
+    {
+      "id": "side_chickasaw",
+      "date": "1861-07-31",
+      "kind": "government-side",
+      "name": "the Chickasaw Nation",
+      "departments": ["nation_chickasaw"],
+      "side": "confederate",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: allied to the Confederacy by treaty (12 July; CSAL)"
+    },
+    {
+      "id": "side_cherokee",
+      "date": "1861-07-31",
+      "kind": "government-side",
+      "name": "the Cherokee Nation",
+      "departments": ["nation_cherokee"],
+      "side": null,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: neutral (Ross's proclamation, 17 May; OR I-13 p. 490); the treaty of 7 October is after the window"
+    },
+    {
+      "id": "side_seminole",
+      "date": "1861-07-31",
+      "kind": "government-side",
+      "name": "the Seminole Nation",
+      "departments": ["nation_seminole"],
+      "side": null,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: not yet allied; treaties from 1 August are after the window (CSAL)"
+    },
+    {
+      "id": "washington_held",
+      "date": "1861-07-31",
+      "kind": "held",
+      "region": "washington",
+      "faction": "union",
+      "throughout": true,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 'Whether Washington is held': yes, throughout; isolated 19 to 25 April, never attacked (OR I-2 pp. 29 to 30, 38 to 40, 314 to 316)"
+    },
+    {
+      "id": "men_union",
+      "date": "1861-07-31",
+      "kind": "men",
+      "faction": "union",
+      "min": 95000,
+      "max": 250000,
+      "floorBinding": false,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 'Each side's men under arms': a block's strength is men present, which lies between present for duty (inferred about 100,000 to 165,000) and the rolls (inferred about 145,000 to 245,000); the edges rounded outward per the review nit (95,000; 250,000). No dated 31 July return exists: the note's rule is that a run is not failed below the lower edge. Cross-check on the upper edge (lane 1.11r3): Cameron's speech of 22 June 1861 claims 250,000 men in the field, a public claim and not a return, consistent with the edge; the 1 July report (OR III-1 pp. 303-305) remains the anchor"
+    },
+    {
+      "id": "men_confederate",
+      "date": "1861-07-31",
+      "kind": "men",
+      "faction": "confederate",
+      "min": 100000,
+      "max": 200000,
+      "floorBinding": true,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 and Appendix B A3: whole Confederacy about 112,040 in July (Livermore p. 42, an estimate he calls probably too low), rounded outward to 100,000; above 32,232 effectives at Bull Run alone (Livermore p. 77). Ceiling 200,000 [I]: docs/research/_leads/T2-strengths.md, section 1, corrected reasoning (R44), Walker to Davis, 24 July 1861, OR IV-1 pp. 496-497. His 190 regiments and 34 battalions give a rough paper estimate of about 200,000 to 210,000 for those units [I], not a count of men present or under arms. The independent companies, twelve recently called regiments and reserve corps of 30,000 are outside that count. The 200,000 ceiling is an inferred, revisable calibration band [I], not an upper bound the sources prove; Davis's 20 July message gives no troop count"
+    },
+    {
+      "id": "operations_union",
+      "date": "1861-07-31",
+      "kind": "operations-fought",
+      "faction": "union",
+      "min": 1,
+      "max": 26,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 'Planned operations fought' and Appendix B B2: at least the one Livermore-scale case (McDowell's offensive, First Bull Run); at most the 26 cases of B1, every battle and planned skirmish read. A count of the record's cases, never a required event"
+    },
+    {
+      "id": "operations_confederate",
+      "date": "1861-07-31",
+      "kind": "operations-fought",
+      "faction": "confederate",
+      "min": 1,
+      "max": 4,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 and Appendix B B1-B2: at least one, the Sumter bombardment planned on Davis's government's order (Walker to Beauregard 10 April, OR I-1 p. 297), which lane 1.12's bombardment stage makes fightable; at most four (Sumter, Cole Camp inferred, Mesilla; Carthage disputed). The lead's ruling: FOUNDATION's 'a planned operation fought by each side' stands"
+    }
+  ],
+  "pushback": [
+    {
+      "id": "relay_objections",
+      "name": "relay objections",
+      "count": { "mechanic": "orders.relay_objected" },
+      "through": "1861-07-31",
+      "min": 0,
+      "max": 6,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C counts: no relay objection is sourced; the record's RELAY cases are two holds (N3-11, N3-27). Upper bound three times those two cases (the lead's ruling)"
+    },
+    {
+      "id": "relay_holds",
+      "name": "relay holds",
+      "count": { "mechanic": "orders.relay_held" },
+      "through": "1861-07-31",
+      "min": 2,
+      "max": 6,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-11 (the Adjutant-General's office and the Crusader's passage) and N3-27 (Special Orders 135 held), both verified; upper bound three times those two cases (the lead's ruling)"
+    },
+    {
+      "id": "filter_holds",
+      "name": "filter holds",
+      "count": { "mechanic": "reports.filtered" },
+      "through": "1861-07-31",
+      "min": 1,
+      "max": 9,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-06 (Seward's memorandum held, verified primary); upper bound three times the three holds N3-06, N3-09 (note-only, the adversary's) and X-03 (extra) (the lead's ruling)"
+    },
+    {
+      "id": "trims",
+      "name": "trims",
+      "count": { "mechanic": "reports.trimmed" },
+      "through": "1861-07-31",
+      "min": 1,
+      "max": 4,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-07 (Seward's assurances to Campbell not passed up, verified secondary), the record's only trim; upper bound that one case plus three, as three times one is below the floor of plus three (the lead's ruling)"
+    },
+    {
+      "id": "reservations",
+      "name": "compliance with reservations",
+      "count": { "response": "comply_with_reservations" },
+      "through": "1861-07-31",
+      "min": 1,
+      "max": 9,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-26 (Harney's agreement with Price, verified primary); upper bound three times the three cases N3-26, N3-15 (note-only) and X-04 (extra) (the lead's ruling)"
+    },
+    {
+      "id": "slow_walks",
+      "name": "slow walks",
+      "count": { "response": "slow_walk" },
+      "through": "1861-07-31",
+      "min": 2,
+      "max": 9,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-10 (Scott and the Pickens order) and N3-34 (Patterson, 17 to 18 July), verified; upper bound three times the three cases N3-10, N3-34 and N3-28 (note-only) (the lead's ruling)"
+    },
+    {
+      "id": "plan_objections",
+      "name": "objections to a plan",
+      "count": { "response": "object" },
+      "through": "1861-07-31",
+      "min": 10,
+      "max": 42,
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound the ten verified N3-01, 02, 03, 05, 14, 22, 23, 25, 32 and 33; upper bound three times the fourteen with the note-only N3-04, 08 and 31 and the extra X-05 (the lead's ruling)"
+    }
+  ],
+  "victory": {
+    "capital": 1000,
+    "government": 100,
+    "menShare": 1,
+    "groundShare": 1,
+    "mandate": 1,
+    "cite": "[I] the lead's ruling on lane 1.14's proposal (notes/lane-1.14-done-check.md), amended by G-1.14c: read from the checkpoint scores; a capital weighs 1000, twice the most the men share can give (500 permille above an even split, at 1 a permille); a government a tenth of a capital; men and ground 1 a permille each; the mandate (lane 1.6) 1 a permille above its rest"
+  }
+}
