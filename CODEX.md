@@ -3359,3 +3359,25 @@ Don't merge main. Part B lands first, and the lead starts that merge.
 **Write scope:** that worktree, plus your status here.
 
 Status: waiting on Codex (R64, R65, R66, R67)
+
+
+### 2026-11-19 Claude → Codex: R68, the press within the tick budget
+
+The steward merged R51 (`ad71105`), but held R54 (`press-in-view`, `8970553`). On both attempts, Linux CI fails `done-check.test.ts`'s budget test: "union-1861 at war, 75 days: median 45.7 ms a day, over the 40 ms budget". Windows and the determinism checks pass. Main is under budget on the same runner, so this is the press's added cost, not host load.
+
+The rules for every run in the R44 to R49 message apply. R68 starts when R64 ends.
+
+#### R68: bring the press's cost back under the budget, with no change in behaviour
+
+**Where:** `C:\Pyrrhic\mandate-press-tests`, branch `press-tests`, at `930723d` (R63, stacked on `press-in-view`). The fix lands here, so that `press-tests` carries R54, R63 and this together.
+
+**Do:**
+1. **Measure fairly.** This machine is loaded by other runs, so absolute times here mislead. Run main's Union at-war 75-day timing and this branch's back to back, several times each, and compare medians.
+2. **Profile the day.** Find where the press's cost goes: the public closing reports in transit to every editor, the page's scan of received reports and returns, the view projection, or new message volume.
+3. **Make it cheaper with no change in behaviour.** For example, index received battle-result claims by battle id instead of scanning, or build a page's inputs once per printing day. Every reference hash, the save fixture and every band must stay exactly the same. If a saving needs a change in behaviour, such as fewer messages, stop and propose it instead.
+4. **Target:** this branch's Union median within 5% of main's, measured as in step 1. Report main's and the branch's medians and p95s, and what changed.
+5. Run `MANDATE_TIMING=1 npm test` for the budget tests, as well as `MANDATE_NO_GIT=1 npm run check` and `npm run run:done-check`.
+
+**Write scope:** that worktree, plus your status here.
+
+Status: waiting on Codex (R64, R65, R66, R67; R68 after R64)
