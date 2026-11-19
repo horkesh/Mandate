@@ -338,6 +338,10 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.14 (calibration):** Trumbull as radicals is defensible [I], but the anti-compromise votes also take in Doolittle, Foot and King. Flag it.
   - **The research lane:** some R52 evidence still points into another session's temporary scratchpad.
   - **The validator's owner:** the exact-day parser ignores year, month and range bounds.
+- From the standing reviewer's reviews of R59 to R63 (`review-codex-r59-r63.md`), by lane:
+  - **Lane 1.14 (calibration):** mark two competence KEEPs weak. Scott's rests on the 1848 thanks resolution, thirteen years before, and says nothing of Scott at 74, unable to take the field. Sumner's rests on one friend's praise of one speech, which is oratory, not competence. Both only keep their coded bands.
+  - **The cost of the cause-in-State ruling:** Holmes resigned on 22 April 1861, four weeks before North Carolina seceded on 20 May. Under the ruling, the history run shows him resigning around 20 May.
+  - **Cosmetic:** the source key `NavyReg1863-RESIGN` now cites Buchanan's dismissal.
 - From lane 1.4b's report (`notes/lane-1.4b-detachments.md`, merged 1cf40d5), by lane:
   - **1B (the planner):** no operation leaves a garrison, because the planner drafts no garrison step. Add one if the history run needs it.
   - **Lane 1.4 or 1B, cleanup:** after a landing, the parent blocks stay aboard as 0-strength shells until a rejoin or a disbanding. Lane 1.4c (merged a810532) made sure an emptied shell can no longer be handed over in a transfer.
