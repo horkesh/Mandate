@@ -268,6 +268,11 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **How a commander perceives control shares.** Battle reports now carry the true share at full confidence, unlike every other battle claim, which passes through the author's perception. The player sees only the holder and whether a region is contested (0094 item 1, amended 12ce79a). Whether a commander's report should state shares through his perception is open. From the re-check of `a68e6f4`: R32's occupation and threshold reports carry exact true shares at full confidence too, as battle claims do.
   - **The sign catalogues** (`prototypes/desk/web/map/furniture-data.json`, `furniture-r35.json`, `woodlands.json`; light review of `c78e514`) are `union-1861` data held in the desk prototype, and their own comments say they belong in the pack. They are off by default under 0095; if pictorial signs return they move to the pack.
   - **The held/firmly held line** is a desk constant (800‰), not a pack rule. 0094 item 1 lets the player see only the holder, whether a region is contested, and those two depths. Whether the threshold should be pack data is open.
+  - **From the review of R42 (`6180a24`, merged 1d4b10e):**
+    - No check stops a future direct reader of `state.reportTruth[...]` that bypasses `truthOf`. The opening bulletins' entries hold no terms of their own, so such a reader would see empty terms.
+    - Kernel tests now import `cli/src`, `rule-seats` and `pack-format` (R42's `support/opening-comparison.ts`). They belong in `packages/cli/test`, or the dependency should be declared.
+    - `state-data.test.ts` takes about 14 seconds on every commit.
+    - The extra comparisons in `knowledgeOf`'s cache, on the stored report and the shared claims, have no test.
   - **A missing test (re-check of `a68e6f4`).** No test covers a field superior signing a control report for a vacant local post, so removing the chain walk fails no test.
   - **The two opening bulletins repeat the same claims** in their bodies and in their truth: about 0.30 MB of the 0.51 MB starting State (0.21 MB without it). Every daily hash pays for it.
   - **Expired control excerpts stay in the player's papers.** An expired dispatch's control excerpt stays in `view.reports`, with only its control claim.
