@@ -270,7 +270,10 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **The two opening bulletins repeat the same claims** in their bodies and in their truth: about 0.30 MB of the 0.51 MB starting State (0.21 MB without it). Every daily hash pays for it.
   - **Expired control excerpts stay in the player's papers.** An expired dispatch's control excerpt stays in `view.reports`, with only its control claim.
   - **Governments are never re-reported after day 0.** `control-government` is written once, so a government that changes side (0065) or closes (Kentucky) keeps its day-0 colour. Not exercised in the reference runs.
-  - **The opening reads true governments** even when a pack overrides the start table, because the override carries control claims only. Harmless for 1861 (public) and the testbed; a pack whose start is not public would leak its governments on day 0. The override should carry governments too.
+  - **Governments in an opening override.**
+    - The leak is closed by R42 (`6180a24` on `codex-hardening`): a control-only override makes no government claims and never reads true governments.
+    - Still open: letting an override name its governments. This needs `packages/pack-format/` (`schemas.ts`, `validate.ts`, and the regenerated scenario schemas), which lane 1.12 also changes.
+    - It is for the first pack whose start is not public. Codex's candidate is in `art-masters/R42/`.
   - **The desk prototype's older tests (R22 to R28)** cannot run in a reviewer's worktree, because they read ignored map data (`ENOENT`). Only Codex's worktree has it, so the desk's full suite has been run only there. Reviewing prototypes needs a way to get the data.
   - **Lane 1.12 (or the research lane):** the at-war reference run loses Washington. A battle on day 27 leaves it Union 800, Confederate 200, and occupation takes it around day 33. It looks like the retired generic principal's behaviour. Check, once lane 1.12 merges, that it is gone.
 
