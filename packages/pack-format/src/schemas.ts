@@ -229,6 +229,26 @@ export const RulesSchema = z.strictObject({
           lossShares: z.strictObject(Object.fromEntries(phase0.BATTLE_TYPES.map((t) => [t, z.array(permille)])) as Record<phase0.BattleType, z.ZodArray<typeof permille>>),
         })
         .describe('The day shape (P10): each phase’s hours, and each battle type’s share of the day’s losses per phase.'),
+      bombardment: z
+        .strictObject({
+          gunArms: z.array(termId).min(1).describe('The arms (arm ids) whose known men count as guns.'),
+          objectives: z
+            .array(z.strictObject({ region: idOf('region'), source: z.string().min(1) }))
+            .describe('The fortifications that may be bombarded, each cited (G-1.12a); any other objective is refused, so no town is bombarded as such.'),
+          rangeMaxDaysPermille: nonNegative.describe('A water edge carries fire only if it is at most this long, permille days (the batteries’ range).'),
+          moraleLossPerDay: permille.describe('Morale the defender loses a day at a fire ratio of 1000.'),
+          ratioCapPermille: nonNegative.describe('The fire ratio (attacker’s guns over the defender’s, permille) is capped here.'),
+          outOfStoresMoraleLoss: permille.describe('Morale lost a day besides when the garrison’s stores are out.'),
+          worksWearPerDay: permille.describe('Fortification permille the defender’s works lose a day at a fire ratio of 1000.'),
+          lossPermille: permille.describe('The defender’s killed and wounded a day, permille of his men, at a fire ratio of 1000.'),
+          surrenderMorale: permille.describe('An average commander surrenders when his men’s morale falls below this.'),
+          boldnessWeight: permille.describe('Permille of that floor per point of his boldness from 500: a bolder man holds to a lower floor.'),
+          recordTerms: z
+            .array(z.strictObject({ region: idOf('region'), faction: idOf('faction'), terms: z.enum(phase0.BOMBARD_TERMS), source: z.string().min(1) }))
+            .describe('The terms a surrender was given in the record, by fort and defending side, cited; only these are ever stated (0074). With no row, the men are captured.'),
+          source: z.string().min(1).describe('Where the numbers come from.'),
+        })
+        .describe('Bombardment across water (lane 1.12): a fire-only engagement against a fort the attacker cannot reach by land. Guns are the known men of artillery-arm blocks.'),
     })
     .describe('The battle model (lane 1.3; the combat note): design parameters the pack states (0072), not sourced facts; the starting values sit inside Livermore’s and Fox’s bands.'),
   operations: z
@@ -260,8 +280,28 @@ export const RulesSchema = z.strictObject({
           }),
         )
         .describe('One row per faction in the manifest.'),
+      principals: z
+        .array(
+          z.strictObject({
+            faction: idOf('faction'),
+            crossNeutral: z.boolean().describe('Whether his goals may cross a neutral government’s open ground: a political act (lane 1.12).'),
+            concentrateAt: idOf('post').nullable().describe('The post his raised regiments are transferred to; null leaves them with the governors.'),
+            concentrateSource: z.string().min(1).nullable().describe('Why that post: the research it rests on, the choice of post labelled [I]; null exactly when concentrateAt is.'),
+            calls: z
+              .array(z.strictObject({ post: idOf('post'), regiments: positive, termDays: positive, fromDate: historicalDate, source: z.string().min(1) }))
+              .describe('His calls for regiments, each once, from its date (or the day after war, if later); each cites its source. Remove a row when a situation makes the same call (one owner per levy).'),
+            offensives: z
+              .array(z.strictObject({ post: idOf('post'), objective: idOf('region'), fromDate: historicalDate, source: z.string().min(1) }))
+              .describe('The offensive goals he gives, each from its date (or the day after war, if later); each cites its source.'),
+            inquireEveryDays: positive.describe('How often he asks each army where it stands, in days (an inquiry costs no attention).'),
+            appointKinds: z
+              .strictObject({ land: z.array(termId), naval: z.array(termId) })
+              .describe('The person kinds he appoints to a vacant post commanding land troops, and naval ones.'),
+          }),
+        )
+        .describe('One row per faction: its rule-seat principal’s doctrine (lane 1.12, replacing the generic principal of 0072).'),
     })
-    .describe('The generic rule-seat principal (0064): its standing goals stay at hold until its faction is at war, which a situation flag the pack names marks.'),
+    .describe('The rule-seat principals: when each side is at war (0064, 0066), and how its principal does his historical jobs (lane 1.12).'),
   // Moved out of the kernel by 0072 (the exit review's S3), as 0064 moved lane 0.5's: every pack states them, there is no default.
   latency: z
     .strictObject({

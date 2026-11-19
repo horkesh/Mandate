@@ -120,7 +120,9 @@ function notHere(why: string): GateBand {
 const SITUATIONS_UNAUTHORED = 'union-1861 has no situations authored until the March 1861 authoring lane (0042, 0046); the testbed run exercises them';
 const FILTER_EMPTY = 'both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post';
 const NO_CANDID_RELAY = 'the testbed’s one relaying office (the war ministry) holds what it dislikes rather than objecting: its holder is not candid (lane 1.1); union-1861 fires it, and the kernel test drives it';
-const VERBS_UNUSED = 'no rule seat uses the people verbs yet (lane 1.5 builds them; the generic principal orders, reviews and decides only); the kernel test drives it';
+const VERBS_UNUSED = 'the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it';
+/** Lane 1.12: the Union run's one engagement in 75 days is the bombardment of Fort Sumter, fire only across water. */
+const NO_UNION_BATTLE = 'the Union run fights no field battle in 75 days: its one engagement is the bombardment of Fort Sumter, fire only across water, with no crossing and no assault (lane 1.12); the testbed run fires it';
 const PV = 'packages/kernel/test/people-verbs.test.ts';
 const POL = 'packages/kernel/test/politics.test.ts';
 const NO_PROPOSER = 'nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it';
@@ -137,29 +139,35 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   // Lane 1.4: operations and their reports.
   'combat.records_pruned': { why: 'a closed battle is pruned after the pack\'s battleDays (120), longer than either reference run', test: 'packages/kernel/test/operations.test.ts', needle: 'prunes ended operations, closed battles and old responses' },
   'operations.landed': { why: 'no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)', test: 'packages/kernel/test/detachments.test.ts', needle: 'lands its troops at the objective' },
-  'operations.repulsed': { why: 'no operation in either reference run is driven back by a battle: each attacker carries its objective or holds', test: 'packages/kernel/test/operations.test.ts', needle: 'driven back, an axis withdraws, pauses and tries again' },
   'operations.support_answered': { why: 'no plan the reference runs draft asks another holder for an axis (no pincer is drafted)', test: 'packages/kernel/test/operations.test.ts', needle: 'a willing holder complies, his axis marches' },
   'operations.support_refused': { why: 'no plan the reference runs draft asks another holder for an axis (no pincer is drafted)', test: 'packages/kernel/test/operations.test.ts', needle: 'a holder who will not move refuses the request' },
   'operations.support_sent': { why: 'no plan the reference runs draft asks another holder for an axis (no pincer is drafted)', test: 'packages/kernel/test/operations.test.ts', needle: 'a willing holder complies, his axis marches' },
-  'map.pocket_lost': { why: 'a pocket is overrun only when a battle or an occupation takes its ground; the reference runs close none', test: 'packages/kernel/test/map-tick.test.ts', needle: 'reports an overrun pocket as lost' },
-  'combat.breakout': { why: `a cut-off force breaks out only when its commander believes it can fight free; ${FEW_BATTLE_DAYS}, and the one force cut off (the Union run's trapped garrison) is too weak, so it surrenders`, test: 'packages/kernel/test/combat.test.ts', needle: 'a cut-off force strong enough to fight breaks out' },
+  'combat.breakout': { why: `a cut-off force breaks out only when its commander believes it can fight free; ${FEW_BATTLE_DAYS}, and no force is cut off`, test: 'packages/kernel/test/combat.test.ts', needle: 'a cut-off force strong enough to fight breaks out' },
   'combat.destroyed': { why: `a force is destroyed only when the breakout its commander chose fails; ${FEW_BATTLE_DAYS}, and no force breaks out`, test: 'packages/kernel/test/combat.test.ts', needle: 'its breakout failed, and the force is destroyed' },
+  // Lane 1.12: these fired only in the Union run's march on Washington, which the generic principal ordered and the
+  // doctrine does not (the history has no such march); every testbed loser has a way back, and no testbed general is hit.
+  'combat.cut_off': { why: 'a side is cut off only with no legal retreat (0019) in a field battle; every testbed loser has a way back, and the Union run fights no field battle in 75 days (Sumter is a bombardment, lane 1.12)', test: 'packages/kernel/test/combat.test.ts', needle: 'a trapped garrison with nowhere to go surrenders' },
+  'combat.general_hit': { why: `a commander is hit on a low draw on his own stream; none of the testbed run’s battle-days draws one, and the Union run fights no field battle (lane 1.12)`, test: 'packages/kernel/test/combat.test.ts', needle: 'a general wounded leaves his post vacant' },
   'map.pocket_relieved': { why: 'a pocket is relieved when a repair or a closing reverses; nothing reverses one in these runs', test: 'packages/kernel/test/map-tick.test.ts', needle: 'then its opening' },
+  'operations.repulsed': { why: 'no operation in either reference run is driven back by a battle: each attacker carries its objective or holds', test: 'packages/kernel/test/operations.test.ts', needle: 'driven back, an axis withdraws, pauses and tries again' },
+  // Lane 1.12: the Charleston commander's bombardment goes ahead as drafted (lane 1.12 retired the Washington garrison's reviewed hold),
+  // and the editing exercise edits every reviewed plan rather than approving it.
+  'plans.approved': { why: 'no reference run submits a plan the principal then approves as it stands: every plan goes ahead as drafted, and the editing exercise edits what comes back', test: 'packages/kernel/test/plans.test.ts', needle: 'who approves it; it waits for his word, then goes' },
+  'movement.join_blocked': { why: 'every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait', test: 'packages/kernel/test/join.test.ts', needle: 'waits, typed no_route, when no route reaches the seat' },
+  // Lane 1.12 (0052): a commander's loss reaches the principal by report, and a dispatch to a post that fell vacant on
+  // its way comes back; no reference run takes a commander (no general is hit, and no force is cut off).
+  'reports.commander_lost': { why: 'a battle takes no commander in either reference run (no general is hit and no force surrenders); the kernel test drives it', test: 'packages/kernel/test/believed-posts.test.ts', needle: 'a captured commander’s post stays on the menu' },
+  'orders.returned': { why: 'no dispatch finds its post vacant or in other hands in either reference run, since no battle takes a commander; the kernel test drives it', test: 'packages/kernel/test/believed-posts.test.ts', needle: 'bounces on arrival as a returned dispatch, typed' },
   'orders.conflict': { why: 'a conflict needs two issuers, a chain order and one sent around it; here only the principal orders', test: 'packages/kernel/test/seats-orders.test.ts', needle: 'conflicting orders: one down the chain, one around it' },
   'reports.filtered': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
   'reports.trimmed': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
   'situations.lapsed': { why: 'a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'expires an option, resurfaces on its clock, and lapses' },
-  // Lane 1.7: no rule seat calls for regiments yet (lane 1.12's rule-seat principals will), so recruitment fires in no reference run.
-  'recruitment.called': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'the northern governor answers the call' },
-  'recruitment.answered': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'the northern governor answers the call' },
-  'recruitment.slow_walked': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'slow-walks the call' },
-  'recruitment.refused': { why: 'no rule seat calls for regiments until lane 1.12; a governor who raises nothing is driven by the kernel rule that a rung not listed raises none', test: 'packages/cli/test/men-regions.test.ts', needle: "regimentsRaised(rules, 10, 'refuse', 900)" },
-  'recruitment.mustered': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'musters the levy into a new block' },
-  'recruitment.men': { why: 'no rule seat calls for regiments until lane 1.12', test: 'packages/cli/test/men-regions.test.ts', needle: 'musters the levy into a new block' },
-  'recruitment.muster_blocked': { why: 'no rule seat calls for regiments until lane 1.12, so no levy waits on a region in enemy hands', test: 'packages/cli/test/men-regions.test.ts', needle: 'a levy due in an enemy-held region waits' },
-  'recruitment.lapsed': { why: 'no rule seat calls for regiments until lane 1.12, so no levy lapses', test: 'packages/cli/test/men-regions.test.ts', needle: 'lapses past the pack’s days' },
-  'recruitment.disbanded': { why: 'no rule seat calls for regiments until lane 1.12, so no enlistment runs out', test: 'packages/cli/test/men-regions.test.ts', needle: 'then disbands it when its ninety days end' },  // Lane 1.2: the plan cycle's paths that no rule seat takes, each driven by its own kernel test.
-  'plans.sent_back': { why: 'no rule seat sends a plan back: the generic principal approves, the editing exercise edits', test: 'packages/kernel/test/plans.test.ts', needle: 'sends the plan back, and he drafts it again' },
+  // Lane 1.7's recruitment: lane 1.12's doctrine calls for regiments, so the calls, answers and musters are banded in the
+  // runs; a levy that waits on enemy ground or lapses waits for a governor's seat to fall, which neither run sees.
+  'recruitment.muster_blocked': { why: 'no governor called in either run has his seat region in enemy hands when his levy falls due', test: 'packages/cli/test/men-regions.test.ts', needle: 'a levy due in an enemy-held region waits' },
+  'recruitment.lapsed': { why: 'a levy lapses only after waiting on enemy ground past the pack’s days, and none waits in either run', test: 'packages/cli/test/men-regions.test.ts', needle: 'lapses past the pack’s days' },
+  // Lane 1.2: the plan cycle's paths that no rule seat takes, each driven by its own kernel test.
+  'plans.sent_back': { why: 'no rule seat sends a plan back: the rule-seat principal approves, the editing exercise edits', test: 'packages/kernel/test/plans.test.ts', needle: 'sends the plan back, and he drafts it again' },
   'plans.draft_deferred': { why: 'no reference run asks for more plans in a day than the pack’s cap of three (0062)', test: 'packages/kernel/test/plans.test.ts', needle: 'defers drafts past the day’s cap' },
   'plans.edit_invalid': { why: 'the editing exercise edits only a moving axis’s timing, which can always be made', test: 'packages/kernel/test/plans.test.ts', needle: 'refuses an edit no route can make' },
   'plans.edit_shirked': { why: 'the testbed’s commanders answer the edits the exercise makes by complying or objecting, never covertly', test: 'packages/cli/test/planner.test.ts', needle: 'executes a covert rung’s concrete plan' },
@@ -173,9 +181,8 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'situations.options_changed': { why: 'an option changes only for a situation left open past an appearance or expiry; the rule-driven principal does not leave one open (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'a waiting option defers the decision until its condition holds' },
   'situations.resurfaced': { why: 'a resurfacing follows a wait or expiry the rule-driven principal does not choose (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'expires an option, resurfaces on its clock' },
   'situations.waiting': { why: 'waiting is an option a human takes; the rule-driven principal takes the historical default (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'waits for news to reach the principal' },
-  // Lane 1.5: the people verbs, which no rule seat uses yet, each driven by its own kernel test.
-  'verbs.answered': { why: VERBS_UNUSED, test: PV, needle: 'relieve outright, then appoint: each answered through his compliance' },
-  'verbs.declined': { why: VERBS_UNUSED, test: PV, needle: 'or declines and says why' },
+  // Lane 1.5: the people verbs no rule seat uses yet, each driven by its own kernel test (lane 1.12's doctrine drives
+  // appoint, transfer and inquire, banded as verbs.answered and verbs.declined).
   'verbs.consulted': { why: VERBS_UNUSED, test: PV, needle: 'his answer becomes a stance on record' },
   'verbs.audience': { why: VERBS_UNUSED, test: PV, needle: 'during: held about an approved plan' },
   'verbs.in_washington': { why: VERBS_UNUSED, test: PV, needle: 'promise, pressure and address act in Washington' },
@@ -187,7 +194,7 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   // Lane 1.5b: a floor cost the principal's standing cannot pay, recorded and never dropped. The gate reviewer's condition:
   // it never happens in a reference run (banded at zero in both), and the kernel test drives it.
   'situations.policy_unpaid': { why: 'a floor cost falls on the principal only when the floored row has no stakeholder or carrier of its own, and no reference run chooses a policy at all; the gate reviewer requires it never to fire in one', test: 'packages/kernel/test/gate-wiring.test.ts', needle: 'with standing at 0 and no stakeholders, the whole floor cost is recorded unpaid' },
-  'seats.attention_refused': { why: 'the generic principal spends a few points a week of a budget of twelve, so nothing is refused for want of attention; the kernel test drives it', test: PV, needle: 'refuses what it cannot pay' },
+  'seats.attention_refused': { why: 'the rule-seat principal prices each command by the pack’s table and sends only what his week’s attention pays for (lane 1.12), so the kernel refuses him nothing; the kernel test drives it', test: PV, needle: 'refuses what it cannot pay' },
   // Lane 1.6: politics' paths that wait for authored situations (lane 1.11: S09's call, S20's ratification, the war's opening).
   'politics.act': { why: 'no situation enters an act on the ledger until lane 1.11 authors S09 and S20', test: POL, needle: 'enters an act taken while away, meets it when a chamber sits, and answers it' },
   'politics.met': { why: 'no act is on the ledger until lane 1.11 authors S09 and S20', test: POL, needle: 'enters an act taken while away, meets it when a chamber sits, and answers it' },
@@ -198,14 +205,14 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'politics.press_silent': { why: 'every paper’s editor serves on his paper’s side throughout both runs', test: POL, needle: 'a paper whose editor no longer serves prints nothing' },
 };
 
-/** What a pack at peace never does: no order is given, so no force marches, no ground is contested. */
-const PEACE_QUIET: readonly string[] = ['orders.relayed', 'orders.obeyed', 'plans.goal_reached', 'movement.leg_started', 'movement.arrived', 'combat.battle_day', 'combat.occupation', 'control.changed'];
+/** What a pack at peace never does: no order is given and no governor called, so no force marches, no ground is contested. */
+const PEACE_QUIET: readonly string[] = ['orders.relayed', 'orders.obeyed', 'plans.goal_reached', 'movement.leg_started', 'movement.arrived', 'combat.battle_day', 'combat.occupation', 'control.changed', 'recruitment.called'];
 
 /** What only the editing exercise run does (lane 1.2): edits and their answers, the word to go, and `haste`, an edit-only term. */
-const EDITS_ONLY = 'only the editing exercise run reviews and edits plans; the generic principal approves them as drafted';
+const EDITS_ONLY = 'only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted';
 const NO_DEPARTURE = 'every testbed commander picks a moving plan with no condition, so it goes ahead as drafted, unreviewed';
 
-/** The plan cycle's bands in a full run where the generic principal approves every plan (lane 1.2). */
+/** The plan cycle's bands in a full run where the rule-seat principal approves every plan (lane 1.2). */
 function planBands(n: { readonly drafts: number; readonly reviewed: number; readonly wentAhead: number; readonly goalFit: number; readonly supply: number }): Record<string, GateBand> {
   return {
     'planner.candidates': around(n.drafts),
@@ -226,148 +233,187 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
   };
 }
 
-/** The union-1861 reference run: 75 days from 5 March 1861, at war (the war gate's labelled option, 0064). */
+/**
+ * The union-1861 reference run: 75 days from 5 March 1861, at war (the war gate's labelled option, 0064).
+ *
+ * Lane 1.12 re-banded it from the merged run of the doctrine (rules.ruleSeats.principals) and the lead's two fixes:
+ * - **the doctrine:** each principal calls on his governors on the call's date (8 and 15 April); what they raise is
+ *   transferred to the concentration post (Washington, Charleston); each army is asked weekly where it stands;
+ * - **a transfer concentrates:** the levies march to the post's seat, by rail where it runs;
+ * - **the bombardment:** the attacking principal's order of 12 April to take Fort Sumter becomes his Charleston commander's bombardment.
+ *   Anderson, cut off with his stores out, chooses by his traits, and the garrison leaves under the record's terms. The
+ *   fort passes to the attacker's side.
+ * The generic principal's march on Washington, which no history has, is gone. So is every field battle of the old run:
+ * the testbed keeps them alive.
+ */
 const UNION_BANDS: Record<string, GateBand> = {
-  // Lanes 1.2 and 1.3: the Charleston command's plan marches on Washington, whose garrison now holds (lane 1.2), and the
-  // battle model fights it out (lane 1.3). Re-banded from the merged run.
-  'combat.battle_closed': around(1),
-  'combat.battle_day': around(1),
-  'combat.battle_opened': around(1),
-  'combat.captured': around(1),
-  'combat.cut_off': around(1),
-  'combat.general_hit': around(1),
-  'combat.killed_wounded': around(2),
-  'combat.missing': around(1),
-  'combat.occupation': around(14),
-  'combat.pursuit_chosen': notHere('the winner chooses a pursuit only after the other side withdraws or routs; the Union run\'s one loser surrenders; the testbed run fires it'),
+  // The bombardment of Fort Sumter: two days of fire, then Anderson's surrender, evacuated under the record's terms.
+  'combat.battle_day': around(2),
+  'combat.bombardment': around(2),
+  'combat.evacuated': around(1),
   'combat.surrendered': around(1),
-  'combat.withdrew': around(1),
-  'control.changed': around(15),
-  'control.threshold_crossed': around(6),
-  // Lane 1.4: the Home Squadron's ships take the pack's assumed one-month norm (lane 1.10), and eat it where no supply reaches.
-  'forces.stores_fell': around(37),
-  'forces.stores_low': around(1),
-  'forces.stores_refilled': notHere('most Union blocks have unknown stores (lane 0.3 data, lane 0.5 finding 3), so the few that fall do not refill in 75 days; the testbed run fires it'),
-  // Lane 1.11a: with the people data entered (the cast's temperament, values and regard), the merged run's one battle-day leaves more stragglers, who return: 32 fires (it was 10 before). Re-banded from the merged run; flank_broken, routed and withdrew stay inside lane 1.4's bands.
-  'forces.stragglers_returned': around(32),
-  // Lane 1.4: the Charleston command's operation on Washington: one opened, its stages, works dug after it holds; the
-  // battle's dispatches by the hour and both sides' returns, first and full.
-  // Lane 1.11a (the reviewer's note): the merged Union run breaks a flank once, so the mechanic is banded, as retreat_blocked is.
-  'combat.flank_broken': around(1),
-  'combat.routed': notHere('the garrison surrenders before it routs; the testbed run fires it'),
-  'combat.works_stormed': notHere('the one battle is in ground with no works; the testbed run fires it'),
-  'operations.ended': around(1),
+  'control.changed': around(2),
+  'control.threshold_crossed': around(4),
+  'map.pocket_lost': around(1),
   'operations.opened': around(1),
-  'operations.stage': around(20),
-  'operations.works': around(6),
-  'orders.responses_pruned': around(4),
-  'reports.battle_dispatch': around(8),
-  'reports.casualty_return': around(4),
-  'reports.governor_wire': notHere('the one battle\'s ground belongs to no government whose head post is on a side that fought there; the testbed run fires it'),
-  'reports.pocket': notHere('no headquarters is cut off in 75 days; the testbed run fires it'),
-  'map.pocket_closed': notHere('no pocket closes in the first 75 days of the merged Union run; the testbed run fires it'),
-  // Lane 1.6: front pages are kept the press template's 21 days, so more reports age out of knowledge.
-  'knowledge.pruned_age': around(29),
-  'knowledge.pruned_superseded': around(73),
-  'map.recomputed': around(10),
-  // Lane 1.6: a weather day on the mail is counted apart (`messages.mail_delay`), so this watches orders and reports by
-  // courier only (the pre-press 197 counted the mail's weather days too). The mail is the press's bulk: about 2,500 front
-  // pages, by mail from New York, nearly double the run's messages. Re-banded from the run merged with main at d4943e5.
-  'messages.courier_delay': around(70),
-  'messages.mail_delay': around(1247),
-  'messages.delivered': around(4810),
-  'messages.sent': around(5288),
-  // The War Department withholds the principal's approval of the Washington garrison's plan; he sends it around.
-  'messages.special_messenger': around(2),
-  'orders.bypassed': around(4),
-  'movement.arrived': around(19),
-  'movement.leg_started': around(10),
-  'orders.obeyed': around(2),
-  'orders.relay_held': around(1),
-  'orders.relay_objected': around(1),
-  'orders.relayed': around(3),
+  'operations.ended': around(1),
+  'operations.stage': around(3),
   'plans.goal_reached': around(1),
-  // Lane 1.6: three papers print weekly to every serving Union post holder, by mail, so courier messages and pruning by
-  // age grow with them (re-banded from the merged run); the Senate's special session of March 1861 adjourns on the 28th.
+  'plans.went_ahead': around(1),
+  'combat.battle_closed': notHere(NO_UNION_BATTLE),
+  'combat.battle_opened': notHere(NO_UNION_BATTLE),
+  'combat.captured': notHere('the one surrender, Sumter, is an evacuation under the record’s terms, never a capture; the testbed run fires it'),
+  'combat.killed_wounded': notHere('nobody was killed or wounded by the bombardment of Sumter (the pack’s lossPermille 0, cited), and no field battle is fought; the testbed run fires it'),
+  'combat.missing': notHere(NO_UNION_BATTLE),
+  'combat.occupation': notHere(NO_UNION_BATTLE),
+  'combat.pursuit_chosen': notHere(NO_UNION_BATTLE),
+  'combat.withdrew': notHere(NO_UNION_BATTLE),
+  'combat.routed': notHere(NO_UNION_BATTLE),
+  'combat.works_stormed': notHere(NO_UNION_BATTLE),
+  'combat.flank_broken': notHere(NO_UNION_BATTLE),
+  'forces.stragglers_returned': notHere(NO_UNION_BATTLE),
+  'operations.works': notHere('the one operation bombards across water and digs no works; the testbed run fires it'),
+  'operations.repulsed': notHere(NO_UNION_BATTLE),
+  'reports.battle_dispatch': notHere(NO_UNION_BATTLE),
+  'reports.casualty_return': notHere(NO_UNION_BATTLE),
+  'reports.governor_wire': notHere(NO_UNION_BATTLE),
+  'reports.pocket': notHere('no headquarters is cut off by a closing pocket in 75 days; the testbed run fires it'),
+  'map.pocket_closed': notHere('no pocket closes in the first 75 days; the testbed run fires it'),
+  'seats.battle_orders': notHere(NO_UNION_BATTLE),
+  // Concentration (lane 1.12, Fix 1): the governors' levies march to Washington and Charleston, by rail where it runs.
+  'movement.arrived': around(107),
+  'movement.leg_started': around(82),
+  'movement.joined': around(15),
+  // Stores: the levies carry stores and eat them on the march, and refill at their depots.
+  'forces.stores_fell': around(142),
+  'forces.stores_low': around(1),
+  'forces.stores_refilled': around(266),
+  'knowledge.pruned_age': around(30),
+  'knowledge.pruned_superseded': around(73),
+  'map.recomputed': around(4),
+  // The press is the mail's bulk (lane 1.6): three papers weekly to every serving Union post holder.
+  'messages.courier_delay': around(10),
+  'messages.mail_delay': around(1248),
+  'messages.delivered': around(5021),
+  'messages.sent': around(5480),
+  // The attacking side's war office objects to the Sumter order; its principal sends it around the office.
+  'messages.special_messenger': around(1),
+  'orders.bypassed': around(1),
+  'orders.relay_objected': around(1),
+  'orders.obeyed': around(1),
+  'orders.relay_held': notHere('the one relayed order meets an office that objects rather than holds; the testbed run fires it'),
+  'orders.relayed': notHere('the Sumter order is objected to and sent around the office, so nothing is relayed; the testbed run fires it'),
+  'orders.responses_pruned': around(2),
+  // The Charleston commander's draft: a bombardment from Charleston (and a hold); he picks it, and it goes ahead as drafted.
+  'planner.candidates': around(1),
+  'planner.searches': around(1),
+  'plans.drafted': around(1),
+  'plans.chosen': around(1),
+  'plans.goal_set': around(1),
+  'seats.choices': around(1),
+  'plans.submitted': notHere('the bombardment goes ahead as drafted, unreviewed; the testbed’s editing exercise run fires it'),
+  'planner.term.goal_fit': notHere('the bombardment is the one candidate that moves on the objective, so goal fit alone decides nothing; the testbed run fires it'),
+  'planner.term.supply': notHere('the bombardment and the hold take no route, so supply decides nothing; the testbed run fires it'),
+  'planner.term.haste': quiet(`an edit-only term (lane 0.9: drafts always concentrate as long as he wants): ${EDITS_ONLY}`),
+  'plans.edit_received': quiet(EDITS_ONLY),
+  'plans.edit_answered': quiet(EDITS_ONLY),
+  'plans.edit_objected': quiet(EDITS_ONLY),
+  'plans.released': quiet('no goal here says "prepare, await my word"; the editing exercise run gives the word'),
+  // Lane 1.6: the Senate's special session of March 1861 adjourns on the 28th; the papers print weekly.
   'politics.adjourned': around(1),
   'politics.front_page': around(30),
-  'politics.support': around(23),
+  'politics.support': notHere('a bloc moves on the ladder of men lobbying or above, and in this run one man moves one rung and none reaches lobbying; the testbed run fires it'),
   'politics.opened': notHere('the Senate sits at the start and the House waits for a call no situation makes until lane 1.11 authors S09; the testbed run fires it'),
   // Lane 1.11b (0085): the Union pack now carries the 1860 census by region (205 rows, Kennedy 1864), so the term runs on
   // the Union side: 1,528 region-cadences with people resisting or fleeing within, and 132 arrivals proposed where the
   // Union's ground and posts are reached (75 days, at war). It was notHere while the pack had no census.
   'regions.self_emancipation': around(1528),
   'regions.reached_lines': around(132),
-  'seats.choices': around(2),
-  // The two opening goals: the Charleston command's plan goes ahead; the Washington garrison's holds, so it is reviewed and approved.
-  ...planBands({ drafts: 2, reviewed: 1, wentAhead: 1, goalFit: 0, supply: 2 }),
+  // Lane 1.12: the doctrine's calls. 23 of 24 rows go out (the Texas governor's post has no holder, so that call waits);
+  // each governor answers by his own compliance, some slow-walk, some refuse, and the levies muster.
+  'recruitment.called': around(23),
+  'recruitment.answered': around(15),
+  'recruitment.slow_walked': around(11),
+  'recruitment.refused': around(8),
+  'recruitment.mustered': around(15),
+  'recruitment.men': around(15),
+  'recruitment.disbanded': notHere('the 90-day men of mid-April muster in late April and serve past day 75; the testbed run fires it'),
+  // Lane 1.12: each side's weekly inquiry of its army (Washington, Charleston) and the governors' transfers, answered.
+  'verbs.answered': around(37),
+  'verbs.declined': notHere('every army asked in this run answers; the testbed run fires it'),
   'seats.defaulted': notHere('every request is answered in this run; the silent-seats exercise run fires it'),
   'situations.decided': quiet(SITUATIONS_UNAUTHORED),
   'situations.delegated': quiet(SITUATIONS_UNAUTHORED),
-  'situations.fired': quiet(SITUATIONS_UNAUTHORED),
-  'situations.notice_reports': quiet(SITUATIONS_UNAUTHORED),
-  'situations.noticed': quiet(SITUATIONS_UNAUTHORED),
+  // Lane 1.12: the pack's one signed situation, the Sumter notice (text only), fires when the principal learns of the
+  // evacuation; the rest wait for lane 1.11's situations.
+  'situations.fired': around(1),
+  'situations.notice_reports': around(1),
+  'situations.noticed': around(1),
+  'situations.surfaced': around(1),
   'situations.orders': quiet(SITUATIONS_UNAUTHORED),
   'situations.proposals': quiet(SITUATIONS_UNAUTHORED),
   'situations.staff_lines': quiet(SITUATIONS_UNAUTHORED),
-  'situations.surfaced': quiet(SITUATIONS_UNAUTHORED),
-  // Lane 1.5: grievances from overruled and bypassed men climb the ladder and fade week by week; attention is spent on
-  // the opening orders and refilled each week. The Union pack authors no seat initiative and no man here is famous enough to be a rival.
-  'ladder.moved': around(4),
+  // Lane 1.5: the bypassed office's grievance climbs the ladder and fades week by week; the doctrine's calls, transfers
+  // and orders spend attention, refilled each week. The Union pack authors no seat initiative, and no man is a rival.
+  'ladder.moved': around(1),
   'ladder.rival': notHere('nobody on a Union ladder rung of lobbying or above has the standing of a rival in 75 days; the testbed run fires it'),
-  'people.grievances_faded': around(20),
+  'people.grievances_faded': around(5),
   'seats.attention_refilled': around(10),
-  'seats.attention_spent': around(4),
+  'seats.attention_spent': around(40),
   'seats.initiative': quiet('the Union pack authors no seat initiative yet (lane 1.5 builds the mechanism; the cast’s initiatives are 1B data); the testbed run fires it'),
 };
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
 const TESTBED_BANDS: Record<string, GateBand> = {
-  // Lane 1.3, merged with lane 1.2's plans: three battles, each one day: the defender withdraws, and the winner chooses
-  // whether to pursue.
-  'combat.battle_closed': around(3),
-  'combat.battle_day': around(3),
-  'combat.battle_opened': around(3),
-  'combat.captured': around(3),
-  'combat.cut_off': notHere('a side is cut off only with no legal retreat (0019); every testbed loser has a way back; the Union run fires it'),
-  'combat.general_hit': notHere('a commander is hit on a low draw on his own stream; none of the testbed run\'s three battle-days draws one; the Union run fires it'),
-  'combat.killed_wounded': around(6),
-  'combat.missing': around(6),
-  'combat.occupation': around(20),
+  // Lane 1.3, merged with lane 1.2's plans: battles of one day each, in which the defender withdraws or routs and the winner
+  // chooses whether to pursue. Re-banded from lane 1.12's run (the doctrine's levies, inquiries and concentration): four battle-days.
+  'combat.battle_closed': around(4),
+  'combat.battle_day': around(4),
+  'combat.battle_opened': around(4),
+  'combat.captured': around(4),
+  'combat.killed_wounded': around(8),
+  'combat.missing': around(8),
+  'combat.occupation': around(31),
   'combat.pursuit_chosen': around(1),
-  'combat.surrendered': notHere('only a cut-off force surrenders, and no testbed force is cut off; the Union run fires it'),
   'combat.withdrew': around(3),
-  'control.changed': around(23),
-  'control.threshold_crossed': around(11),
-  'forces.stores_fell': around(183),
+  'control.changed': around(35),
+  'control.threshold_crossed': around(13),
+  'forces.stores_fell': around(187),
   'forces.stores_low': around(6),
-  'forces.stores_refilled': around(193),
-  'forces.stragglers_returned': around(87),
+  'forces.stores_refilled': around(238),
+  // Lane 1.12: the doctrine's levies and transfers put more men in the field, and the battles leave more stragglers.
+  'forces.stragglers_returned': around(108),
+  // Lane 1.12: a flank breaks once; a transferred levy joins its army at its seat (Fix 1). No testbed fort lies across water.
+  'combat.flank_broken': around(1),
+  'movement.joined': around(1),
+  'combat.bombardment': notHere('no testbed objective lies across water from a shore with guns; the Union run fires it'),
+  'combat.evacuated': notHere('no testbed fort is bombarded, so none surrenders under terms; the Union run fires it'),
+  'combat.surrendered': notHere('only a cut-off force surrenders, and no testbed force is cut off; the Union run fires it'),
+  'map.pocket_lost': notHere('no testbed pocket is overrun; the Union run fires it (Sumter’s, when the fort falls)'),
   // Lane 1.4: three operations, their stages and works; the battles' hourly dispatches, returns, governors' wires and pocket reports.
-  'combat.flank_broken': around(2),
-  'combat.routed': around(2),
+  'combat.routed': around(1),
   'combat.works_stormed': around(1),
   'operations.ended': around(3),
   'operations.opened': around(3),
   'operations.stage': around(13),
   'operations.works': around(4),
-  'orders.responses_pruned': around(3),
-  'reports.battle_dispatch': around(24),
-  'reports.casualty_return': around(12),
-  'reports.governor_wire': around(3),
+  'orders.responses_pruned': around(16),
+  'reports.battle_dispatch': around(32),
+  'reports.casualty_return': around(16),
+  'reports.governor_wire': around(4),
   'reports.pocket': around(3),
   'map.pocket_closed': around(1),
-  'knowledge.pruned_age': around(15),
+  'knowledge.pruned_age': around(41),
   'knowledge.pruned_superseded': around(118),
-  'map.recomputed': around(14),
+  'map.recomputed': around(20),
   // Lane 1.6: courier and mail counted apart (the northern gazette's front pages are the mail's bulk).
-  'messages.courier_delay': around(35),
+  'messages.courier_delay': around(49),
   'messages.mail_delay': around(107),
-  'messages.delivered': around(1812),
-  'messages.sent': around(1829),
+  'messages.delivered': around(2120),
+  'messages.sent': around(2151),
   'messages.special_messenger': around(1),
-  'movement.arrived': around(18),
-  'movement.leg_started': around(7),
+  'movement.arrived': around(27),
+  'movement.leg_started': around(16),
   'orders.bypassed': notHere('the principal goes around an office only when it objects, which the testbed’s does not (it holds instead); union-1861 fires it'),
   'orders.obeyed': around(3),
   // Lane 1.1: the war minister, not candid and cool toward his leader, slow-walks what he relays.
@@ -381,10 +427,25 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'politics.adjourned': around(1),
   'politics.front_page': around(17),
   'politics.opened': around(1),
-  'politics.support': around(61),
-  'regions.self_emancipation': around(72),
+  'politics.support': around(72),
+  'regions.self_emancipation': around(90),
   'regions.reached_lines': around(36),
   'seats.choices': around(3),
+  // Lane 1.12: a commander marching on a held region is asked for his orders the morning before he arrives.
+  'seats.battle_orders': around(1),
+  // Lane 1.12: each principal calls on his governor (the testbed's doctrine), whose levy musters and is concentrated at
+  // his army; the northern levy's enlistment runs out inside the run. Each side asks its army weekly where it stands (the
+  // southern army declines some), and the governors answer the transfers. The longer war drives one operation back and
+  // relieves one pocket.
+  'recruitment.called': around(2),
+  'recruitment.answered': around(2),
+  'recruitment.slow_walked': around(1),
+  'recruitment.mustered': around(2),
+  'recruitment.men': around(2),
+  'recruitment.disbanded': around(1),
+  'recruitment.refused': notHere('both testbed governors answer their calls; the Union run fires it'),
+  'verbs.answered': around(36),
+  'verbs.declined': around(17),
   'seats.defaulted': notHere('every request is answered in this run; the silent-seats exercise run fires it'),
   // Three goals (each side's opening, and the situation's order to press on): every plan moves and goes ahead as drafted.
   ...planBands({ drafts: 3, reviewed: 0, wentAhead: 3, goalFit: 2, supply: 2 }),
@@ -402,7 +463,7 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'ladder.rival': around(1),
   'people.grievances_faded': notHere('no testbed man holds a grievance at any week’s end in this run (nobody is overruled, and its office holds rather than objects, so it is never bypassed); its ladder moves come from cool regard alone; union-1861 fires it'),
   'seats.attention_refilled': around(17),
-  'seats.attention_spent': around(2),
+  'seats.attention_spent': around(6),
   'seats.initiative': around(15),
 };
 

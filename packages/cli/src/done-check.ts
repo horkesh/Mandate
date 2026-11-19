@@ -54,10 +54,11 @@ export interface Criterion {
 }
 
 /**
- * What a run started at war by the labelled option is (0072): the stand-in generic principals march their own
- * capitals' garrisons on each other's capitals, so it proves the machinery and its outcome is not a war.
+ * What a run started at war by the labelled option is (0072). Lane 1.12 retired the stand-in generic principals: the
+ * rule-seat principals do their doctrine's historical jobs, but the war starts on day 0 by the option, not by each
+ * government's decision (lane 1.12 Part B), so the run proves the machinery and its outcome is not a war.
  */
-export const MECHANICS_RUN = ' (a mechanics run on stand-in principals: its outcome is not a war, 0072)';
+export const MECHANICS_RUN = ' (a mechanics run: at war from day 0 by the labelled option, not by the governments’ decisions; its outcome is not a war, 0072)';
 
 const fires = (s: Phase0Summary, mechanic: string): number => s.liveness.find((r) => r.mechanic === mechanic)?.fires ?? 0;
 

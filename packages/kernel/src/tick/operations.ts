@@ -23,6 +23,8 @@
 import { strictCompare } from '../compare.ts';
 import { factionOfBlock, isNaval } from '../forces/forces.ts';
 import type { FactionId, ForceBlockId, PostId, RegionId } from '../ids.ts';
+import { endJoins, markJoins } from '../movement/join.ts';
+import { BOMBARD_MECHANICS, bombardFort } from './bombard.ts';
 import { advanceMarches, marchBar, marchSteps, startLeg, type MarchGround } from '../movement/march.ts';
 import { enter, openOperationOf, openOperations, operationId, putOperations, type OpAxis, type OperationRecord, type OpRequest, type StageReason } from '../operations/operations.ts';
 import type { PlanCandidate } from '../planner/types.ts';
@@ -39,6 +41,8 @@ import { sendSupportRequest } from './support.ts';
 /** Every mechanic this phase counts. */
 export const OPERATIONS_MECHANICS = [
   'movement.arrived',
+  'movement.join_blocked',
+  'movement.joined',
   'movement.leg_started',
   'operations.ended',
   'operations.landed',
@@ -50,6 +54,7 @@ export const OPERATIONS_MECHANICS = [
   'operations.support_sent',
   'operations.works',
   'plans.goal_reached',
+  ...BOMBARD_MECHANICS,
 ] as const;
 
 /** Blocks of an axis still in it: they exist, its post commands them, and they have not surrendered. */
@@ -235,11 +240,65 @@ export function operationsPhase(ctx: TickContext, start: State): State {
     for (const c of applied.changes) fire(ctx, 'operations.works', c.after - c.before);
   }
 
+  // 2b. Blocks under orders to join their post march toward its seat (lane 1.12: a transfer concentrates).
+  state = joinStep(ctx, state, ground);
+
   // 3. Every march gains a day.
   const marched = advanceMarches(state, day);
   state = marched.state;
   for (const a of marched.arrivals) fire(ctx, 'movement.arrived', 1 + a.carried.length);
   return state;
+}
+
+/**
+ * The day's legs for blocks ordered to join their post at its seat (lane 1.12; `movement/join.ts`). A block standing
+ * (not on a leg, not aboard) takes the first leg of a quickest route to the seat, by movement's own rules, so by rail
+ * where its side traces the line; blocks standing together going to the same seat march together. A block with no route
+ * waits, typed `no_route`, and is tried again tomorrow. The order ends when the block stands at the seat
+ * (`movement.joined`), or when it is no longer the post's, has surrendered, is gone, or is in one of the post's
+ * operations, which moves it from then on.
+ */
+function joinStep(ctx: TickContext, start: State, ground: MarchGround): State {
+  let state = start;
+  const ids = Object.keys(state.forceJoins).sort(strictCompare) as ForceBlockId[];
+  if (ids.length === 0) return state;
+  const inOperation = new Set(openOperations(state).flatMap((id) => state.operationRecords[id]!.opAxes.filter((a) => a.oaxStage !== 'end').flatMap((a) => a.oaxBlocks)));
+  const ended: ForceBlockId[] = [];
+  const groups = new Map<string, { readonly from: RegionId; readonly to: RegionId; readonly naval: boolean; readonly blocks: ForceBlockId[] }>();
+  for (const b of ids) {
+    const j = state.forceJoins[b]!;
+    const loc = state.forceLocations[b];
+    const f = state.forceBlockStates[b];
+    if (loc === undefined || f === undefined || f.fbSurrenderedDay !== null || state.forceAssignments[b] !== j.joinPost || inOperation.has(b)) {
+      ended.push(b);
+      continue;
+    }
+    if (loc.locMarch !== null || loc.locAboard !== null) continue;
+    if (loc.locRegion === j.joinRegion) {
+      ended.push(b);
+      fire(ctx, 'movement.joined');
+      continue;
+    }
+    const naval = isNaval(ctx.world.map, state, b);
+    const key = `${loc.locRegion}|${j.joinRegion}|${naval ? 'n' : 'l'}`;
+    const g = groups.get(key) ?? { from: loc.locRegion, to: j.joinRegion, naval, blocks: [] };
+    g.blocks.push(b);
+    groups.set(key, g);
+  }
+  for (const key of [...groups.keys()].sort(strictCompare)) {
+    const g = groups.get(key)!;
+    const side = factionOfBlock(ctx.world.map, state, g.blocks[0]!);
+    const leg = side === null ? null : (marchSteps(ground, g.from, g.to, side, g.naval)[0]?.leg ?? null);
+    if (side === null || leg === null) {
+      state = markJoins(state, g.blocks, 'no_route');
+      fire(ctx, 'movement.join_blocked', g.blocks.length);
+      continue;
+    }
+    state = markJoins(state, g.blocks, null);
+    fire(ctx, 'movement.leg_started');
+    state = startLeg(ground, state, g.blocks, leg, side, g.naval, ctx.day);
+  }
+  return endJoins(state, ended);
 }
 
 /** One axis's day: the stage it takes, the legs it starts, the works it digs. */
@@ -338,8 +397,21 @@ function stepAxis(ctx: TickContext, start: State, ground: MarchGround, op: Opera
         if (req.oreqAnswer === 'delayed' && req.oreqFrom !== null && day < req.oreqFrom) return { state, axis: axis.oaxLog[axis.oaxLog.length - 1]?.axevReason === 'support_delayed' ? axis : move(axis, 'assemble', 'support_delayed', here, req.oreqFrom) };
       }
       if (axis.oaxUntil !== null && day < axis.oaxUntil) return { state, axis };
+      // Lane 1.12: a bombardment fires from where it concentrated; nothing crosses the water.
+      if (op.opMethod === 'bombard') return { state, axis: move(axis, 'bombard', 'bombarding', here) };
       const a = move(axis, 'march', 'concentrated', here);
       return legToward(a, a.oaxObjective);
+    }
+    case 'bombard': {
+      // The fort is the side's once the garrison has gone and its control has passed: the goal is reached.
+      if ((state.regionControl[axis.oaxObjective]?.[side] ?? 0) >= rules.holdControlPermille) {
+        fire(ctx, 'plans.goal_reached');
+        return { state, axis: move(axis, 'end', 'objective_held', axis.oaxObjective) };
+      }
+      if (group.marching || group.standing.length === 0) return { state, axis };
+      const fired = bombardFort(ctx, state, axis.oaxPost, group.standing, axis.oaxObjective, side, works);
+      if (fired.fort?.surrendered !== null && fired.fort?.surrendered !== undefined) return { state: fired.state, axis: move({ ...axis, oaxArrived: axis.oaxArrived ?? day }, 'bombard', 'garrison_surrendered', axis.oaxObjective) };
+      return { state: fired.state, axis };
     }
     case 'march': {
       if (group.marching) return { state, axis };

@@ -66,6 +66,7 @@ export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
     if (c.cmd === 'decide') return { day, seat, command: { cmd: 'decide', situation: c.situation, options: [...c.options] } };
     if (c.cmd === 'delegate') return { day, seat, command: { cmd: 'delegate', situation: c.situation, to: c.to } };
     if (c.cmd === 'go') return { day, seat, command: { cmd: 'go', to: c.to, route: c.route, bypass: c.bypass } };
+    if (c.cmd === 'battle') return { day, seat, command: { cmd: 'battle', post: c.post, commit: c.commit, night: c.night, cutOff: c.cutOff, pursue: c.pursue } };
     if (c.cmd === 'call') return { day, seat, command: { cmd: 'call', to: c.to, regiments: c.regiments, termDays: c.termDays, route: c.route, bypass: c.bypass } };
     if (c.cmd === 'review') {
       const e = c.edit;

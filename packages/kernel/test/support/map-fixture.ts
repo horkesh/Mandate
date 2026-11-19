@@ -168,6 +168,7 @@ export const FIXTURE_COMBAT_RULES: CombatRules = {
   fieldControlPermille: 200,
   pursuit: { followPermille: 100, pressPermille: 300, cavalryPermille: 150 },
   straggleReturnPermille: 100,
+  bombardment: { gunArms: ['artillery'], objectives: [], rangeMaxDaysPermille: 1000, moraleLossPerDay: 40, ratioCapPermille: 3000, outOfStoresMoraleLoss: 60, worksWearPerDay: 50, lossPermille: 20, surrenderMorale: 350, boldnessWeight: 500, recordTerms: [], source: 'fixture' },
   leaders: { killedPermille: 15, woundedPermille: 40, capturedPermille: 20 },
   phases: {
     hours: [
@@ -187,7 +188,7 @@ export const FIXTURE_COMBAT_RULES: CombatRules = {
   operations: { pauseDays: 3, maxRepulses: 3, pursuitDays: { follow: 1, press: 2 }, holdControlPermille: 500, works: { perNightPermille: 50, capPermille: 300, lostWhenStormedPermille: 150 }, returns: { firstLowPermille: 200, revealDays: 7 } },
   pruning: { operationDays: 60, battleDays: 120, responseDays: 60 },
   movement: { marchMinCapacityPermille: 1000, courierPermille: 333 },
-  ruleSeats: { warFlags: [] },
+  ruleSeats: { warFlags: [], principals: [] },
   latency: { wireDays: 0, mailPermille: 2000, specialMessengerPermille: 500, courierNoiseMaxDays: 1, specialMessengerPrice: 1 },
   reportTemplates: FIXTURE_TEMPLATES,
   standing: { conflictWindowDays: 7 },
@@ -279,7 +280,11 @@ export function mapWorld(parts: WorldParts): World {
       seasons: SEASONS,
       ...FIXTURE_RULES,
       // Every fixture faction is at war from day 1 (0064): the fixtures test the war, not the peace before it.
-      ruleSeats: { warFlags: (parts.factions ?? ['a', 'b']).map((f) => ({ faction: F(f), flag: null })) },
+      ruleSeats: {
+        warFlags: (parts.factions ?? ['a', 'b']).map((f) => ({ faction: F(f), flag: null })),
+        // Lane 1.12: an empty doctrine for each side (no calls, no offensives, no concentration).
+        principals: (parts.factions ?? ['a', 'b']).map((f) => ({ faction: F(f), crossNeutral: false, concentrateAt: null, concentrateSource: null, calls: [], offensives: [], inquireEveryDays: 7, appointKinds: { land: [], naval: [] } })),
+      },
     },
     vocabularies: { terrains: [], postKinds: [], departmentKinds: [], arms: [], personKinds: [], traits: [], ranks: [], rankKinds: [], values: FIXTURE_VALUES.map((v) => ({ id: v, name: `value.${v}`, costOnly: false })), blocs: [], standingOrderKinds: [] },
     factions: (parts.factions ?? ['a', 'b']).map((f) => ({ id: F(f), name: `faction.${f}.name` })),
