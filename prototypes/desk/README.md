@@ -859,6 +859,59 @@ Use the earlier `DESK_EVIDENCE_REQUEST` setting with R38 for unit evidence.
 The evidence README records checks, reused results and retained failures.
 This is maker verification.
 
+## R66 audience and org board
+
+Run `npm run dev -- --at-war` from this folder. Open the org board with B or
+its desk button. The board follows the command chains in the principal's
+menu. Open a post to read its received papers or draft an order. A supplied
+vacancy is distinct from a post whose holder is not supplied. Raising posts
+whose placement is absent stay in a separate list; strings are never used to
+invent a hierarchy or a holder.
+
+On a commandable holder's card, Request an audience opens the scene. The desk
+recedes behind a plain name-and-post card, 420×560 at 1920×1080 and 540×720 at
+3440×1440. No likeness is used. Earlier received reasons are numbered and
+linked to their source papers. Reading a source and returning preserves the
+unsigned answers. All eight counter forms serialize the existing console
+grammar. Signing queues an `audience` command; it does not hold an audience or
+advance a day. The kernel checks the request when the days run. Escape returns
+one level and the final close returns focus to the desk button. Enlarged text
+reflows and scrolls vertically; reduced motion removes the transition.
+
+**Acceptance gaps remain.** The seat API has no current audience case, allowed
+counter menu, eligible framing values, declared reply per counter or filed
+audience transcript. Earlier advice is explicitly labelled as earlier advice,
+and the desk predicts no response. Staff assessment bands, standing, stances
+and attached observers are also absent. The API has no complete public post
+catalogue: relay chains expose some internal posts but not their holders;
+initial vacancies and many offices are absent. These need lead-owned seat
+projections before the full requirements of PRESENTATION 1.3 and 1.5 can pass.
+No State or pack data was exposed to work around them.
+
+`web/people.ts` and `web/People.tsx` take `SeatRequest` and display strings only.
+The server adapter and HTTP boundary are unchanged. New player text is in
+`web/strings.ts`. The full desk suite passed 87 tests before the final targeted
+corrections. Twelve focused tests then passed, including the fifth R66 test
+that parses all generated counters through the actual console grammar. The
+final typecheck/build passes. Eight distinct browser checks passed across the
+retained runs; unaffected board captures and suite evidence were reused after
+the final portrait proportion correction.
+
+Evidence, eight native captures with recipes, failures, scope audit and the
+437-file browser-build inventory are in `../../art-masters/R66/`.
+`final-checks.json` indexes the results. Regenerate browser fixtures with
+`npx tsx scripts/r66-fixture.ts`; run the browser checks with
+`npx playwright test --config playwright.r66.config.ts`. The R66 proof server
+uses the required loopback port 5274 and existing saved map data, without a
+map rebuild. `R66_RUN` selects a fresh evidence subfolder. Leave
+`R66_REUSE_1920` unset when regenerating all captures.
+
+Root typecheck, pack boundary, licences and decision-index checks passed.
+The inherited full root check was not run: this main checkout still has LFS
+fixtures that write Git, even with `MANDATE_NO_GIT=1`. The standalone done-check
+was not run because its CLI writes only under `runs/`, outside R66's scope.
+Those gates remain unverified. Claude's independent standing review is pending.
+
 
 ### R39 geographic legibility
 

@@ -13,12 +13,14 @@ import {InTray,WeeklyPaper} from './InTray.tsx';
 import {clearFilters} from './intray.ts';
 import type {TrayFilters} from './intray.ts';
 import { S, VERBS } from './strings.ts';
+import {AudienceScene, OrgBoard, PostDetails} from './People.tsx';
+import type {CounterDraft} from './people.ts';
 import type { Panel } from './strings.ts';
 import {dayFrames,playbackSnapshot,reportPlace} from './table.ts';
 import type {Point} from './map/model.ts';
 import './table.css';
 
-type Sheet = { panel: Panel; paper?: ReportView; person?: CommandablePost; summary?:boolean };
+type Sheet = { panel: Panel; paper?: ReportView; person?: CommandablePost; post?:string; audience?:string; summary?:boolean };
 const art = (name: string) => `/art/app/chrome/${name}.png`;
 const objects: Partial<Record<Panel, string>> = {
   calendar: 'calendar-block', inbox: 'tray-in', outbox: 'tray-out', board: 'board-frame',
@@ -32,6 +34,7 @@ export function App() {
   const [notice, setNotice] = useState('');
   const [stack, setStack] = useState<Sheet[]>([]);
   const [line, setLine] = useState('');
+  const [audienceDrafts,setAudienceDrafts]=useState<Record<string,CounterDraft[]>>({});
   const [preview, setPreview] = useState<DeskReply['preview']>();
   const [busy, setBusy] = useState(false);
   const [filed, setFiled] = useState<Set<string>>(new Set());
@@ -182,6 +185,8 @@ export function App() {
   const onTable=!!current?.paper||!!current?.summary||planOpen;
   const modalDepth=onTable?0:stack.length;
   const order = (text: string) => { if(!stack.length)opener.current=document.activeElement as HTMLElement;setLine(text); setPreview(undefined); setNotice(''); setStack(previous => [...previous, { panel: 'orders' }]); };
+  const audience=(post:string)=>{setStack(previous=>[...previous,{panel:'board',audience:post}]);setNotice('');setError('');sound('door-audience');};
+  const sourcePaper=(report:ReportView)=>{setRead(previous=>new Set(previous).add(report.id));setStack(previous=>[...previous,{panel:'inbox',paper:report}]);sound('paper-draw');};
   const count = (id: Panel) => id === 'inbox' ? reports.filter(r => !read.has(r.id)).length : id === 'outbox' ? data.queue.length : id === 'docket' ? active.length : null;
   const paperList = (items: readonly ReportView[]) => items.length ? <div className="paper-list">{[...items].reverse().map(r => <button data-testid="paper-link" className={`paper-link ${read.has(r.id) ? 'read' : ''}`} key={r.id} onClick={() => paper(r)}>
     <span className="eyebrow">{S.genres[r.type] ?? r.type}<span>{S.day} {r.receivedDay}</span></span><strong>{t(r.author, 'person')}</strong><span>{t(r.subjectId, r.subjectKind)}</span><span className="route-line">{r.route}, {S.written} {r.day}{r.hour !== null ? `, ${r.hour}:00` : ''}</span>
@@ -193,7 +198,8 @@ export function App() {
     if (current.paper) return <><Paper report={current.paper} text={data!.paperText[current.paper.id] ?? ''} t={t} dateOf={day => dateForReport(data!, day)} plain={plain} display={display} />
       <div className="actions"><button data-hotkey="f" onClick={() => { setFiled(previous => new Set(previous).add(current.paper!.id)); sound('stamp'); back(); }}>{S.filePaper}</button>
         {current.paper.authorPost && <button data-hotkey="i" onClick={() => order(`inquire ${current.paper!.authorPost}`)}>{S.ask}</button>}</div></>;
-    if (current.person) return <Person person={current.person} t={t} order={order} />;
+    if(current.audience){const key=`${data!.morning.requestKey}:${menu.commandable.find(p=>p.post===current.audience)?.holder??''}:${current.audience}`;return <AudienceScene key={key} request={data!.morning} strings={data!.strings} post={current.audience} busy={busy||!!playback||data!.closed} queue={data!.queue} execute={execute} openPaper={sourcePaper} draft={audienceDrafts[key]??[]} setDraft={value=>setAudienceDrafts(old=>({...old,[key]:value}))}/>;}
+    if(current.post||current.person)return <PostDetails key={current.post??current.person!.post} request={data!.morning} strings={data!.strings} post={current.post??current.person!.post} order={order} openAudience={audience} openPaper={sourcePaper}/>;
     switch (current.panel) {
       case 'find': return <Find data={data!} region={id => { setDestination(id); open('map'); }} person={person => setStack(previous => [...previous, { panel: 'board', person }])}/>;
       case 'calendar': return <div className="calendar-sheet"><p className="large-date">{date}</p><p>{S.day} {data!.morning.requestDay}</p><p>{menu.atWarSince === null ? S.atPeace : S.atWar}</p></div>;
@@ -201,8 +207,7 @@ export function App() {
       case 'inbox': return <InTray data={tableData} papers={reports.filter(r=>!filed.has(r.id))} read={read} filters={trayFilters} setFilters={setTrayFilters} openSummary={()=>setStack(previous=>[...previous,{panel:'inbox',summary:true}])}>{paperList}</InTray>;
       case 'file': return <><label className="search">{S.search}<input value={query} onChange={e => setQuery(e.target.value)} /></label>{paperList(reports.filter(r => filed.has(r.id) && `${t(r.author, 'person')} ${t(r.subjectId, r.subjectKind)} ${dateForReport(data!, r.day)} ${r.day}`.toLowerCase().includes(query.toLowerCase())))}</>;
       case 'outbox': return <><p className="margin-note">{S.outboxNote}</p>{data!.queue.length ? <ol className="order-list">{data!.queue.map((q, i) => <li key={`${i}:${q.line}`}><p>{display(q.text)}</p><code>{display(q.line)}</code><button disabled={busy} onClick={() => void execute(`cancel ${i + 1}`)}>{S.cancel}</button></li>)}</ol> : <p className="empty">{S.noQueue}</p>}<button onClick={() => order('')}>{S.orders}</button></>;
-      case 'board': return <div className="board-cards">{menu.commandable.map(person => <button className="person-tile" key={person.post} onClick={() => { setStack(previous => [...previous, { panel: 'board', person }]); sound('pin'); }}>
-        <span className="likeness" aria-hidden="true">{S.noLikeness}</span><span><small>{t(person.post, 'post')}</small><strong>{t(person.holder, 'person')}</strong></span></button>)}</div>;
+      case 'board': return <OrgBoard request={data!.morning} strings={data!.strings} openPost={post=>{setStack(previous=>[...previous,{panel:'board',post}]);sound('pin');}}/>;
       case 'docket': return <><p className="margin-note">{S.docketNote}</p>{active.length ? active.map(s => <Situation key={s.id} situation={s} menu={menu} t={t} execute={execute} order={order} busy={busy} />) : <p className="empty">{S.noSituations}</p>}</>;
       case 'plans': if(menu.reviews.length)return <MapReview destination={destination} data={data!} execute={execute} busy={busy} textEdit={order}/>;
         return <><button className="primary" onClick={() => setStack(previous => [...previous, { panel: 'map' }])}>{M.review}</button><h3>{S.submitted}</h3>{menu.reviews.length ? menu.reviews.map(r => <section className="plan-card" key={r.post}><p className="eyebrow">{t(r.holder, 'person')}, {t(r.post, 'post')}</p><Plan plan={r.plan} t={t} display={display} /><div className="actions">
@@ -226,7 +231,7 @@ export function App() {
     }
   }
 
-  return <SettingsContext.Provider value={settings}><div className={`app table-app ${plain ? 'plain' : ''} ${settings.scale > 140 ? 'large-type' : ''} ${settings.contrast ? 'high-contrast' : ''} ${settings.lamp ? 'evening-lamp' : ''}`} style={{ '--text-scale': settings.scale / 100 } as CSSProperties}>
+  return <SettingsContext.Provider value={settings}><div className={`app table-app ${current?.audience?'audience-open':''} ${plain ? 'plain' : ''} ${settings.scale > 140 ? 'large-type' : ''} ${settings.contrast ? 'high-contrast' : ''} ${settings.lamp ? 'evening-lamp' : ''}`} style={{ '--text-scale': settings.scale / 100 } as CSSProperties}>
     <div ref={room} data-testid="desk" className="desk-shell table-shell" inert={modalDepth>0}>
       <main className="playable-table" aria-label={S.subtitle}>
         <MapReview data={tableData} destination={destination} execute={execute} busy={busy} textEdit={order} table reviewOpen={planOpen} mapProps={{
@@ -243,12 +248,12 @@ export function App() {
         {playback&&<section className="table-playback" data-testid="turn-playback" aria-live="polite"><time>{date}</time><p>{frame?.report?`${t(frame.report.author,'person')}, ${S.genres[frame.report.type]??S.paper}`:S.noReports}</p>{frame?.day.refused.map((r,i)=><p className="refusal" key={i}>{S.refused}: {display(r.reason)}</p>)}
           {playback.index===frames.length-1?<><p>{S.stopped}: {playback.turn.stopped==='week'?S.week:display(playback.turn.stopped.join(', '))}</p><button onClick={()=>{setPlayback(null);setHeldMap(null);}}>{S.nextMorning}</button></>:<><button onClick={skipDays}>{S.skipDays}</button><button onClick={()=>setPlayback(p=>{if(!p)return p;const next=frames.findIndex((f,i)=>i>p.index&&f.day.day!==frames[p.index]?.day.day);return {...p,index:next<0?frames.length-1:next};})}>{S.nextDay}</button></>}
         </section>}
-        {(current?.paper||current?.summary)&&<section className="table-paper" data-testid="paper-on-map" role="region" aria-label={S.paper} style={paperPoint?{left:Math.max(24,Math.min(window.innerWidth-Math.min(680*settings.scale/100,window.innerWidth*.43)-24,paperPoint[0]-Math.min(680*settings.scale/100,window.innerWidth*.43)-45)),top:Math.max(150,Math.min(window.innerHeight-650,paperPoint[1]-220))}:undefined} onKeyDown={e=>{if(e.key==='Escape'&&!isTyping(e.target)){e.preventDefault();e.stopPropagation();back();}}}><button autoFocus className="return-paper" onClick={back}>{S.returnPaper}</button>{content()}</section>}
+        {(current?.paper||current?.summary)&&<section className="table-paper" data-testid="paper-on-map" role="region" aria-label={S.paper} style={paperPoint?{left:Math.max(24,Math.min(window.innerWidth-Math.min(680*settings.scale/100,window.innerWidth*.43)-24,paperPoint[0]-Math.min(680*settings.scale/100,window.innerWidth*.43)-45)),top:Math.max(150,Math.min(window.innerHeight-650,paperPoint[1]-220))}:undefined} onKeyDown={e=>{if(e.key==='Escape'&&!isTyping(e.target)){e.preventDefault();e.stopPropagation();back();}}}><button autoFocus className="return-paper" onClick={back}>{stack.at(-2)?.panel==='board'?S.back:S.returnPaper}</button>{content()}</section>}
         {planOpen&&<button className="close-review" onClick={back}>{S.closeReview}</button>}
       </main>
       {data.closed&&<div className="ended" role="status">{S.ended}</div>}
     </div>
-    <Modal depth={modalDepth} title={current?.person?t(current.person.holder,'person'):current?S[current.panel]:''} back={back} opener={opener.current} reading={false} kind={current?.panel}>
+    <Modal depth={modalDepth} title={current?.audience?S.audienceTitle:current?.post?t(current.post,'post'):current?.person?t(current.person.holder,'person'):current?S[current.panel]:''} back={back} opener={opener.current} reading={false} kind={current?.audience?'audience':current?.panel}>
       <div className="feedback" aria-live="polite">{notice&&<p role="status">{notice}</p>}{error&&<p role="alert">{display(error)}</p>}{data.closed&&<p>{S.ended}</p>}</div>{!onTable&&content()}
     </Modal>
   </div></SettingsContext.Provider>;
@@ -274,10 +279,6 @@ function Paper({ report: r, text, t, dateOf, plain, display }: { display: (text:
     <dl className="paper-meta"><div><dt>{S.from}</dt><dd>{t(r.author, 'person')}</dd></div><div><dt>{S.written}</dt><dd>{dateOf(r.day)}{r.hour !== null ? `, ${String(r.hour).padStart(2, '0')}:00` : ''}</dd></div><div><dt>{S.route}</dt><dd>{r.route}{r.via.length ? `, ${S.via} ${r.via.map(id => t(id, 'post')).join(' → ')}` : ''}</dd></div><div><dt>{S.subject}</dt><dd>{r.subjectKind}, {t(r.subjectId, r.subjectKind)}</dd></div></dl>
     <div className="paper-copy">{text.split('; ').map((paragraph, i) => <p key={i}>{display(paragraph)}</p>)}</div><footer><p className="signature">{t(r.author, 'person')}</p><span className="received-stamp">{S.stamp}<small>{dateOf(r.receivedDay)}, {r.route}</small></span></footer>
   </article>;
-}
-
-function Person({ person, t, order }: { person: CommandablePost; t: (key: string, kind?: string | number) => string; order: (line: string) => void }) {
-  return <section data-testid="person-card" className="person-card"><div className="likeness">{S.noLikeness}</div><h3>{t(person.holder, 'person')}</h3><p>{t(person.post, 'post')}</p><p>{S.through}: {person.relays.map(id => t(id, 'post')).join(' → ') || S.unknown}</p><ul>{person.routes.map(r => <li key={r.route}>{r.route}, {r.typicalDays} {S.typicalDays}, {r.price} {S.routePrice}</li>)}</ul><div className="actions"><button onClick={() => order(`order ${person.post} hold`)}>{S.makeOrder}</button><button data-hotkey="i" onClick={() => order(`inquire ${person.post}`)}>{S.ask}</button><button onClick={() => order(`audience ${person.post}`)}>{S.audience}</button><button onClick={() => order(`transfer ${person.post} `)}>{S.personnel}</button></div></section>;
 }
 
 function Situation({ situation: s, menu, t, execute, order, busy }: { situation: SituationView; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; execute: (line: string) => Promise<unknown>; order: (line: string) => void; busy: boolean }) {
