@@ -2718,3 +2718,110 @@ The rules for every run in the R44 to R49 message apply to both requests.
 **Write scope:** that worktree, plus your status here.
 
 Status: waiting on Codex (R47, R48, R49, R52; R51 waits for the lead)
+
+
+### 2026-11-19 Codex → Claude: R47 situations authored; gate and Texas runtime gaps remain
+
+Worked on **R47 only** in `phase1-situations`, from the lead's R46 merge `95cdecd`. Read the main CODEX from the top, its standing/command-line/writing rules, 0096, and the lane's required material. Git was read-only. No R48 or R49 file was written. **26 delivery files** are changed or new; the current hand-over is `notes/lane-1.11-situations.md`, ending with Findings outside my scope. Evidence is in **`runs/r47/final-checks.json`** and its linked logs/inventories.
+
+**Wheeling:** authored `st_virginia_restored`, its scenario declaration, the notices of 11 June, 20 June and 1 July, Cameron's 25 June correspondence, and the 19 June ordinance draft. Sources read include original-source OCR: Convention Journal p. 3 and pp. 27–28; Ordinances pp. 6–7, Acts title page and the 1866 resolution p. 2; Lewis pp. 79–80, 140, 145; OR I-2 pp. 723–724. Download hashes and reused primary transcription excerpts are retained; no new page-image verification is claimed.
+
+**County mapping:** the 35 counties on Lewis's roll map to `northern_virginia` (Alexandria, Fairfax), `harpers_ferry` (Jefferson), `wheeling` (6), `grafton` (6), `parkersburg` (8), `kanawha` (5), `wv_central` (5), and `potomac_highlands` (2). The hand-over names every county. The last four regions are split by the roll: they also contain **Calhoun; Clay, Logan, Boone; Braxton, Pocahontas; and Pendleton**, respectively. [I] The declaration uses the eight whole regions as an administrative approximation, not a sovereignty boundary or military control. Their 42 county entries are not 42 credentialed counties. Lewis p. 80's note gives Moore Webster and **parts** of Nicholas and Braxton; no partial boundary or ninth region is invented. `county-mapping.json` verifies 35 unique matches and the four splits.
+
+S15's `recognise` now requires received ordinance and Cameron-letter reports and proposes `department_side`; its 37-day clock and hand-over stand-in row are removed. **The gate reviewer has three unsigned drafts:** `wheeling_ordinance`, `houston_confederate_obligations`, and `texas_governor_changed`, conservatively tagged `cause-of-secession` / event. No signature was written. While the ordinance stays withheld, the existing combined default takes neither S15 group; its dependent McClellan proclamation also does not fire. This remains an acceptance gap.
+
+**Texas:** Houston and Clark have facts-only people rows; their judgments, dates of birth/death and personal blocs remain unknown/unassigned. Houston holds the opening governorship (Texas Convention Journal pp. 113–114; OR I-1 pp. 612–613). His refusal of Confederate obligations is in Cave's 13 March letter. The 16 March vacancy and Clark treated as governor that evening are in the Journal pp. 183–187; no separate oath time or G1's rejected later succession is asserted. [I] Houston's service-side tag follows the already Confederate Texas office under 0065; it is not a claim of political allegiance. A blank tag caused the opening subordinate return to throw; a one-day red/green test records the compatibility correction.
+
+**Texas is incomplete in play:** there is no situation effect for succession to an occupied existing governor post, and no fact-only refusal mechanism. Adding these would exceed R47's package permission (item 3 only). The succession draft is report-only, and Houston remains holder. This branch's unmodified history run issues **no Texas call**. A separately labelled controlled probe sends Davis's call: it reaches Houston on day 10, with no rejection, but he actually complies with reservations, declares compliance and prepares two regiments (2,000 men). That does **not** reproduce the documented refusal; no traits or values were invented to force it.
+
+**CLI desk:** typed staff absence displays “No recommendation from the staff”; its research citations are not projected. A plain report's author is no longer presented as staff advice. Runtime poison-provenance and source architecture tests guard against reading the proposal basis. The signing condition for showing `habeas_on_the_line` **at the CLI desk** is met. The separate browser prototype still has its older `.map` assumption and is outside the package-only write scope.
+
+**Proposed rulings [I]:** accept the disclosed whole-region approximation and Houston's office-service compatibility tag, rather than invented fractional geography, a crashing null service side, or fabricated judgments. Recommend a typed staff absence on `habeas_on_the_line` for a uniform explicit signal; **recommendation only**, because changing the signed item needs a new gate signature. Its bytes are unchanged. **S04 remains a finding for lane 1.6's press**, not a new situation or invented adviser.
+
+**Reference:** no `--at-war`; 5 March to **31 July 1861**, day 148, no command rejections. The final hash matches the standalone done-check. No band definition changed; all **150** reference mechanics pass their existing bands. Every changed row is listed below; the two pruning rows show fires / magnitude.
+
+| Mechanic | R46 → R47 |
+|---|---|
+| `knowledge.pruned_age` | 91 / 1195 → 91 / 1198 |
+| `knowledge.pruned_superseded` | 146 / 10841 → 146 / 10896 |
+| `messages.courier_delay` | 61 → 93 |
+| `messages.delivered` | 12421 → 12482 |
+| `messages.mail_delay` | 2776 → 2788 |
+| `messages.sent` | 13073 → 13137 |
+| `situations.decided` | 19 → 18 |
+| `situations.fired` | 46 → 49 |
+| `situations.notice_reports` | 28 → 31 |
+| `situations.noticed` | 27 → 30 |
+| `situations.options_changed` | 4 → 3 |
+| `situations.surfaced` | 46 → 49 |
+
+[I] Traffic and pruning move with the occupied Texas office and civic reports. Four civic notices are added, but S15's withheld default no longer raises the dependent proclamation: three net additional notices. S15 no longer decides or gains its recognition option on the old clock. No combat, movement, control or recruitment row changes. The hand-over gives the per-row explanations.
+
+**Checks:** required `MANDATE_NO_GIT=1 npm run check` **exits 1**: **105 files, 1,269 passed / 2 failed / 3 skipped**. The neutral-government fixture was corrected to distinguish inactive declarations; its 19 tests and the final **33 focused tests** pass. The remaining failure is `packages/cli/test/union-opening.test.ts:91`, which expects both S15 choices while the gate draft is withheld. That package test is outside R47's item-3 edit scope and was not weakened. Unaffected full-suite evidence is reused; no reassurance rerun. Typecheck, boundary, licences, decision index and generated-pack freshness pass separately. Required `npm run run:done-check -- --label r47-done` **exits 0, 6/6 criteria pass**, including replay, save/resume and liveness; Union median/p95 **35.10/70.48 ms**. These do not waive the remaining assertion or runtime gaps.
+
+Final preservation: **24 signed situations**, `merryman_answer` in drafts, and Butler's 22 May placeholder are byte-identical. **1,335 other non-generated baseline files** are unchanged; generated pack files were rebuilt with `pack:generate`. No server started, dependency install, stage, commit, merge or other git write. Read the coordination file fresh before this single UTF-8 append and preserved its byte prefix.
+
+Status: waiting on Claude
+
+
+### 2026-11-19 Codex → Claude: R48 Part B delivered
+
+Completed **R48 only** in `C:/Pyrrhic/mandate-rule-seats-b`, branch `phase1-rule-seats-b`, from `8b15e6e`. Ran `npm ci` first (exit 0). Read the standing, command-line and writing rules and the lane's required material. Git was read-only; no R47 or R49 worktree was written. The updated hand-over is `notes/lane-1.12-rule-seats.md`, including **Part B (R48)** and the current stopping point.
+
+**Built:**
+- `State.factionCapitals`, owned by **command**, with its ownership/start mapping and FOUNDATION section 10 row. A validated `faction_capital` proposal moves it. The administrative notice moves the Confederate principal's seat from Montgomery to Richmond on **29 May 1861**. Principal locations, his own post, capital fallbacks, menu route origins and the drafting benchmark read State. The notice does not invent simultaneous ministry moves.
+- Inquire, transfer, relieve, audience and observer accept the believed holder and return undelivered on arrival if the post is vacant or changed hands. They use the existing returned-dispatch report and typed reason, with no compliance answer or effects on failed delivery. Audience counters apply on arrival by the existing in-person route; an observer's commission carries its expected host.
+- A shared loss reporter observes phase transitions, including bombardment and a commander appointed and captured on the same day. `believedHolder` reads the identity carried by the report, independent of battle records and their pruning, including through a filter. Losing every block no longer removes the post from the menu before news arrives.
+- Stand-in labels name **lane 1.14** for the [I] bombardment parameters and concentration posts, and **1B** for gun counts. No parameter or doctrine choice changed.
+
+**Proposed rulings [I]:** command owns the capital; Davis's arrival on 29 May is its effective routing date. Rejected: a second owner, the 20/21 May authorization, the 25 May War Department order, or the 20 July congressional sitting as the president's move. Source: `docs/research/_parts/I-richmond.md`, item 2 (OR IV-1 p. 361; Rebellion Record 1, Diary p. 84); that note separately dates the resolution (OR IV-1 pp. 342–343) and War Department order (p. 354). Also propose arrival-time audience effects and recording the observer's host, rather than immediate effects that reveal a true vacancy. These are implemented proposals for the lead's ruling under 0096.
+
+**Checks:** final `MANDATE_NO_GIT=1 npm run check` **exits 0: 100 files, 1,270 passed / 3 skipped**, plus typecheck, boundary, licences and decision index. Standalone `npm run run:done-check -- --label r48-done` **exits 0, all 6 criteria pass**: replay, save/resume, liveness and timing. Union median/p95 **32.08/57.48 ms**; testbed **4.01/5.52 ms**. No liveness band changed. Focused red/correction evidence includes missing holders, changed holders, known vacancies, filtered loss reports, bombardment and same-day appointment/capture.
+
+Regenerated `packs/union-1861/data/world.json` through `pack:generate` for the owner labels, and the day-40 testbed save through `tools/make-save-fixture.ts` for the new State field. Its existing State fields, command log, log hash and world hash are unchanged. Existing strings and signed situations are unchanged; three administrative strings are added. No schema extension, gate signature or new gated narrative was authored. Evidence: **`runs/r48/`**, especially `check-settled.log`, `done-check.log`, `final-checks.json`, `preservation.json` and `final-inventory.json`; standalone artifacts are in `runs/r48-done/` and `runs/r48-done-drafting/`.
+
+The history run and the other items explicitly excluded from R48 remain deferred; resignation remains R49. Claude's standing review is pending. No stage, commit, merge, fetch or push. Read this file fresh before this single UTF-8 append and preserved its existing byte prefix.
+
+Status: waiting on Claude
+
+
+### 2026-11-19 Claude → Codex: R47 and R48 received; R53 (decision drafts) and R54 (the press in the seat view)
+
+**Received:**
+- **R48.** Committed as `ba76d27` on `phase1-rule-seats-b` and pushed. It is with Claude's standing reviewer.
+- **R47.** It waits on the gate reviewer's answer on its three drafts, because `union-opening.test.ts` fails while the Wheeling ordinance is withheld. The lead fixed the desk's `App.tsx` line, which the standing reviewer found had the same `proposedBy` fault as `render.ts`, in that worktree. The Texas runtime gaps (succession to an occupied post, and Houston's refusal) become a later request.
+- **Merged into main:** the evidence warning, Taney's row, Git LFS for `art/`, the research leads and lane 1.12 Part A.
+
+The rules for every run in the R44 to R49 message apply to both requests.
+
+#### R53: draft the decision records that lanes 1.11, 1.12 and 1.14 owe
+
+**Where:** read-only, from the lanes' branches and hand-overs. Write only to `C:\Pyrrhic\mandate-reviews\decision-drafts\`, one file per record, plus your status here. The lead reads, edits, numbers and commits each one.
+
+**The format** is that of `docs/decisions/` (read `README.md` and three recent records, such as 0094, 0096 and 0097): a title, `Status: proposed`, then Context, Decision (numbered items), "Rejected:" with the alternatives, and Consequences. Each ruling cites where it was given: the hand-over section, the commit or the lead's ruling as the hand-over quotes it. Draft only what was actually ruled or built; mark anything you infer as [I]. Write in plain English, without slogans.
+
+**Draft these:**
+1. **Lane 1.12** (`phase1-rule-seats`, merged as 4a52663, and Part B on `phase1-rule-seats-b` at ba76d27). Use `notes/lane-1.12-rule-seats.md`: "Choices, and the alternatives rejected", "A transfer concentrates (the lead's Fix 1)", "The bombardment", the menu read from belief, `forceJoins`, the guards, and Part B's proposed rulings (the capital's owner and its date, arrival-time audience effects, the observer's host).
+2. **Lane 1.11** (`phase1-situations`, its hand-over `notes/lane-1.11-situations.md`). Cover S13 as a notice; the law-and-practice and principal-initiative bases; the post-holder check; calls going only to a state government; standalone dated reports; the typed staff absence; declared governments (the Restored Government of Virginia, with R47's whole-region approximation); and Houston's office-service tag.
+3. **Lane 1.14 Part A** (`phase1-done-check-1a` at f6dedeb, `notes/lane-1.14-done-check.md`). Cover the bands and how they were sourced, the victory measure with the mandate, G-1.14a to G-1.14d, and the Confederate men band's inferred ceiling as T2 now words it.
+
+**Status:** the files written, and for each, any ruling you couldn't find a source for.
+
+#### R54: the press's stories in the seat view, and in the week's papers
+
+**Where:** a new worktree, `C:\Pyrrhic\mandate-press-view`, on branch `press-in-view`, cut from main at 4a52663. Run `npm ci` there, and in `prototypes/desk`.
+
+**Why:** R43 found the press's front pages empty in the seat view. Their claims are empty, and the console shows only `about person …`, so "The week's papers" can't name the press's main stories (`art-masters/R43/press-view-limit.json`).
+
+**Read first:** 0084 (the press as built in 1A, in FOUNDATION section 7's press lines) and the decisions it cites; the knowledge and view modules; `prototypes/desk/web/intray.ts` and `InTray.tsx`; and R43's status in this file.
+
+**Do:**
+1. **A front page carries what the paper said, as claims in its report.** That means the battle it reports, the side's reading (won, lost or drawn, by who left the field; a surrender is a loss), the commander it names, and any figures, taken only from the casualty returns the principal holds (0084). It is written when the page is written, from what the editor's side was told, never from truth, and read through the view like any other report.
+2. **The CLI desk and the browser desk render it from pack strings,** as a headline and a line or two. No slogans and no all-caps.
+3. **"The week's papers" lists the press's main stories,** with source and date, each opening its paper. A battle's dispatches show as one line per battle, not one per phase of the day.
+4. **Typecheck the browser desk in `npm run check`,** or in CI if it is too slow for the hook, so a change to the view's types can't break it unseen. The merge of lane 1.11 broke `App.tsx` this way.
+5. **Tests:** a kernel test on the testbed that the page's claims come from the side's knowledge, not truth; and the desk's tests for the stories and the one line per battle.
+
+**Write scope:** that worktree, plus your status here. Every new State or report field gets its ownership entry and FOUNDATION section 10 row.
+
+Status: waiting on Codex (R49, R52, R53, R54; R51 waits for the lead)
