@@ -36,3 +36,14 @@ it('shows empty received records without substituting private fields or the comm
   const html = renderToStaticMarkup(createElement(PostDetails, { request: request as SeatRequest, strings: {}, post: 'internal', openPaper: () => {}, order: () => {}, openAudience: () => {} }));
   expect(html).not.toContain('truth-decoy'); expect(html).toContain('No assessment'); expect(html).toContain('No public standing');
 });
+
+it('shows no public standing in either card when the seat has no figure for a known man', () => {
+  const request = fixture();
+  Object.assign(request.view.people[0]!, { standing: null });
+  const common = { request, strings: {}, post: 'internal', openPaper: () => {}, order: () => {}, openAudience: () => {} };
+  const cards = [
+    renderToStaticMarkup(createElement(PostDetails, common)),
+    renderToStaticMarkup(createElement(AudienceScene, { ...common, busy: false, queue: [], execute: async () => {} })),
+  ];
+  for (const html of cards) { expect(html).toContain('No public standing'); expect(html).not.toContain('720'); }
+});

@@ -1,6 +1,6 @@
 import { expect, it } from 'vitest';
 import { ConsoleGame } from '../../../packages/cli/src/console/game.ts';
-import { viewFor } from '../../../packages/kernel/src/view/view.ts';
+import { createViewCache, viewFor } from '../../../packages/kernel/src/view/view.ts';
 import { deliverReport } from '../../../packages/kernel/src/knowledge/knowledge.ts';
 import { NO_TRUTH } from '../../../packages/kernel/src/knowledge/truth.ts';
 import { toId } from '../../../packages/kernel/src/ids.ts';
@@ -28,4 +28,21 @@ it('the testbed catalogue and people records do not change with unreported comma
     knownBody: { reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: before.person, reportAuthorPost: null, reportSubjectKind: 'post', reportSubjectId: target.id, reportClaims: [{ claimKind: 'commander-lost', claimToken: 'captured', claimValue: 0, claimRegion: null, claimConfidence: 900 }], reportDay: 1, reportHour: null, reportAdvice: null, reportAnswers: null },
   }, NO_TRUTH);
   expect(viewFor(game.world, told, game.seat).posts.find(p => p.post === target.id)).toMatchObject({ holder: null, status: 'vacant', source: 'm.test.loss' });
+});
+
+it('a received enemy author or subject does not expose his changing live standing in the testbed', () => {
+  const game = new ConsoleGame({ pack: 'testbed' });
+  let state: State = { ...game.state, stateDay: 1 };
+  for (const [author, subject] of [['s_cavalier', 's_veteran'], ['n_secretary', 's_cavalier']]) {
+    state = deliverReport(state, game.seat, {
+      id: toId('message', `m.test.standing.${author}`), knownReceivedDay: 1, knownRoute: 'courier', knownVia: [],
+      knownBody: { reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: toId('person', author!), reportAuthorPost: null, reportSubjectKind: 'person', reportSubjectId: subject!, reportClaims: [], reportDay: 1, reportHour: null, reportAdvice: null, reportAnswers: null },
+    }, NO_TRUTH);
+  }
+  const changed: State = { ...state, personStanding: { ...state.personStanding, [toId('person', 's_cavalier')]: 999, [toId('person', 's_veteran')]: 1 } };
+  for (const cache of [undefined, createViewCache()]) {
+    const before = viewFor(game.world, state, game.seat, cache);
+    for (const id of ['s_cavalier', 's_veteran']) expect(before.people.find(p => p.person === toId('person', id))!.standing).toBeNull();
+    expect(viewFor(game.world, changed, game.seat, cache)).toEqual(before);
+  }
 });

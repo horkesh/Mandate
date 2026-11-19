@@ -40,7 +40,7 @@ export interface ViewCache {
   readonly goals: WeakMap<PlanRecord, GoalView>;
   readonly views: Map<SeatId, SeatView>;
   readonly situations: Map<SeatId, { readonly states: State['situationStates']; readonly views: readonly SituationView[] }>;
-  readonly people: Map<SeatId, { readonly world: SeatsWorld; readonly reports: readonly ReportView[]; readonly standing: State['personStanding']; readonly day: number; readonly nextChange: number | null; readonly calendar: string | null; readonly person: PersonId; readonly faction: SeatView['faction']; readonly projection: PeopleProjection }>;
+  readonly people: Map<SeatId, { readonly world: SeatsWorld; readonly reports: readonly ReportView[]; readonly standing: State['personStanding']; readonly posts: State['postStates']; readonly sides: State['departmentFactions']; readonly day: number; readonly nextChange: number | null; readonly calendar: string | null; readonly person: PersonId; readonly faction: SeatView['faction']; readonly projection: PeopleProjection }>;
 }
 
 export function createViewCache(): ViewCache {
@@ -175,9 +175,12 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
   // Lane 1.13: his own week's attention (0025), which he always knows; null for a seat that keeps none.
   const attention = attentionLeft(state, seat);
   let people = cache.people.get(seat);
-  if (people === undefined || people.world !== world || people.reports !== reports || people.standing !== state.personStanding || people.person !== person.id || people.faction !== faction || people.calendar !== state.calendarStart || state.stateDay < people.day || (people.nextChange !== null && state.stateDay >= people.nextChange)) {
-    const projection = peopleProjection(world, person.id, faction, reports, state.personStanding, state.stateDay, state.calendarStart);
-    people = { world, reports, standing: state.personStanding, day: state.stateDay, nextChange: nextPeopleChange(world, reports, state.stateDay, state.calendarStart), calendar: state.calendarStart, person: person.id, faction, projection };
+  if (people === undefined || people.world !== world || people.reports !== reports || people.standing !== state.personStanding || people.posts !== state.postStates || people.sides !== state.departmentFactions || people.person !== person.id || people.faction !== faction || people.calendar !== state.calendarStart || state.stateDay < people.day || (people.nextChange !== null && state.stateDay >= people.nextChange)) {
+    // Public does not mean a live feed from the other side. Reports currently carry no standing figure;
+    // a foreign or neutral man's standing therefore remains unknown, even when his letter is received.
+    const standingFor = (id: PersonId) => world.personIds.includes(id) && sideOfPerson(world.map, state, id) === faction ? state.personStanding[id] ?? null : null;
+    const projection = peopleProjection(world, person.id, faction, reports, standingFor, state.stateDay, state.calendarStart);
+    people = { world, reports, standing: state.personStanding, posts: state.postStates, sides: state.departmentFactions, day: state.stateDay, nextChange: nextPeopleChange(world, reports, state.stateDay, state.calendarStart), calendar: state.calendarStart, person: person.id, faction, projection };
     cache.people.set(seat, people);
   }
   const previous = cache.views.get(seat);

@@ -172,7 +172,7 @@ export interface KnownStanceView {
 
 export interface KnownPersonView {
   readonly person: PersonId;
-  /** Public standing (0079), not a hidden ability or reputation draw. Null if no public figure exists. */
+  /** Live public standing on the principal's own side (R75). Others need a received figure; null if none is held. */
   readonly standing: number | null;
   readonly stances: readonly KnownStanceView[];
   /** Received advice about this person, retaining its author and uncertainty through the source report. */

@@ -8,7 +8,7 @@ import { indexSeatsWorld } from '../src/seats/world.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
 import { createState } from '../src/tick/setup.ts';
 import { createViewCache, viewFor } from '../src/view/view.ts';
-import { indexedFixture, P, POST } from './support/seats-fixture.ts';
+import { indexedFixture, F, P, POST } from './support/seats-fixture.ts';
 
 const seat = seatIdFor(P('a_lead'));
 const world = indexedFixture();
@@ -76,4 +76,63 @@ it('keeps projection references stable, invalidates on receipt and public standi
   expect(three.people.find(p => p.person === P('a_gen'))!.standing).toBe(987);
   expect(viewFor(world, receive({ ...state, stateDay: 1 }, 'm.received'), seat, cache).posts).not.toBe(one.posts);
   expect(viewFor(world, state, seatIdFor(P('a_gen'))).posts).toEqual([]);
+});
+
+it('does not reveal live standing for an enemy named as author or subject, with or without a shared cache', () => {
+  let state = { ...createState(world, { seed: 1 }), stateDay: 10 };
+  state = receive(state, 'm.enemy-author', { reportAuthor: P('b_gen'), reportAuthorPost: null });
+  state = receive(state, 'm.enemy-subject', { reportSubjectKind: 'person', reportSubjectId: 'b_min' });
+  const hidden = { ...state, personStanding: { ...state.personStanding, [P('b_gen')]: 999, [P('b_min')]: 1 } };
+  const before = viewFor(world, state, seat);
+  for (const id of ['b_gen', 'b_min']) expect(before.people.find(p => p.person === P(id))!.standing).toBeNull();
+  expect(viewFor(world, hidden, seat)).toEqual(before);
+  const cache = createViewCache();
+  expect(viewFor(world, hidden, seat, cache)).toEqual(viewFor(world, state, seat, cache));
+  expect(before.people.find(p => p.person === P('a_gen'))!.standing).toBe(state.personStanding[P('a_gen')]);
+});
+
+it.each([F('b'), null])('invalidates cached standing when a known holder changes side to %s, without changing the received post catalogue', side => {
+  const state = createState(world, { seed: 1 }), cache = createViewCache();
+  const before = viewFor(world, state, seat, cache);
+  const foreign = { ...state, departmentFactions: { ...state.departmentFactions, [toId('department', 'a_war')]: side } };
+  const after = viewFor(world, foreign, seat, cache);
+  expect(after.people.find(p => p.person === P('a_gen'))!.standing).toBeNull();
+  expect(after.posts).toEqual(before.posts);
+  // Losing his post restores his own side (0065); the received catalogue has not changed.
+  const released = { ...foreign, postStates: { ...foreign.postStates, [POST('a_army')]: { ...foreign.postStates[POST('a_army')]!, postHolder: null } } };
+  const restored = viewFor(world, released, seat, cache);
+  expect(restored.people.find(p => p.person === P('a_gen'))!.standing).toBe(state.personStanding[P('a_gen')]);
+  expect(restored.posts).toEqual(before.posts);
+});
+
+it.each([null, P('a_bold')])('T5: a declined appointment preserves the last known holder %s', holder => {
+  const w = indexSeatsWorld(world.map, { ...world.start, posts: world.start.posts.map(p => p.id === POST('a_reserve') ? { ...p, holder } : p) });
+  let state = { ...createState(w, { seed: 1 }), stateDay: 10 };
+  state = receive(state, 'm.declined', { reportAuthor: P('a_spy'), reportAuthorPost: null, reportSubjectId: 'a_reserve', reportClaims: [claim('verb-answered', 'appoint:refuse', 0)] });
+  expect(viewFor(w, state, seat).posts.find(p => p.post === POST('a_reserve'))).toMatchObject({ holder, status: holder === null ? 'vacant' : 'held', source: null, asOfDay: 0 });
+});
+
+it('T6: an own letter about the man is not an assessment of him', () => {
+  let state = { ...createState(world, { seed: 1 }), stateDay: 10 };
+  const about = { reportSubjectKind: 'person' as const, reportSubjectId: 'a_gen', reportType: 'advice' as const, reportSubtype: 'memorandum', reportAdvice: { adviceRecommends: 'retain', adviceConfidence: 700, adviceReasons: [] } };
+  state = receive(state, 'm.self', about);
+  state = receive(state, 'm.other', { ...about, reportAuthor: P('a_sec'), reportAuthorPost: POST('a_office') });
+  const view = viewFor(world, state, seat);
+  expect(view.people.find(p => p.person === P('a_gen'))!.assessments).toEqual(['m.other']);
+  expect(view.reports.some(r => r.id === 'm.self')).toBe(true);
+});
+
+it.each([
+  { subtype: 'memorandum', claims: [] },
+  { subtype: 'requested', claims: [] },
+  { subtype: 'requested', claims: [claim('verb-answered', 'inquire:comply')] },
+  { subtype: 'requested', claims: [claim('verb-answered', 'consult:refuse', 0)] },
+])('T9: advice without a recorded consult stance is not a stance (%j)', ({ subtype, claims }) => {
+  let state = { ...createState(world, { seed: 1 }), stateDay: 10 };
+  const advice = { reportType: 'advice' as const, reportSubtype: subtype, reportAdvice: { adviceRecommends: 'wait', adviceConfidence: 700, adviceReasons: [] } };
+  state = receive(state, 'm.not-consult', { ...advice, reportClaims: claims });
+  state = receive(state, 'm.actual-consult', { ...advice, reportSubtype: 'requested', reportDay: 2, reportClaims: [claim('verb-answered', 'consult:comply')] });
+  const view = viewFor(world, state, seat);
+  expect(view.people.find(p => p.person === P('a_gen'))!.stances).toEqual([{ subjectKind: 'post', subjectId: 'a_army', recommends: 'wait', confidence: 700, day: 2, source: 'm.actual-consult' }]);
+  expect(view.reports.some(r => r.id === 'm.not-consult')).toBe(true);
 });

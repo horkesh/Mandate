@@ -1,4 +1,4 @@
-/** R70: public opening knowledge and received evidence only. Never reads current posts, traits, stances or responses. */
+/** R70: public opening knowledge and received evidence only. R75 limits live standing to one's own side. */
 import { strictCompare } from '../compare.ts';
 import type { FactionId, PersonId, PostId } from '../ids.ts';
 import type { SeatsWorld } from '../seats/world.ts';
@@ -24,7 +24,7 @@ export function nextPeopleChange(world: SeatsWorld, reports: readonly ReportView
 
 export function peopleProjection(
   world: SeatsWorld, principal: PersonId, faction: FactionId | null, reports: readonly ReportView[],
-  standing: Readonly<Record<PersonId, number>>, day: number, calendar: string | null,
+  standingFor: (person: PersonId) => number | null, day: number, calendar: string | null,
 ): PeopleProjection {
   if (faction === null || !world.factionIds.includes(faction) || world.faction(faction).principal !== principal) {
     return Object.freeze({ posts: Object.freeze([]), people: Object.freeze([]) });
@@ -83,7 +83,7 @@ export function peopleProjection(
       }
       if (r.author !== person && r.subjectKind === 'person' && r.subjectId === person && r.type === 'advice' && r.advice !== null) assessments.push(r.id);
     }
-    return Object.freeze({ person, standing: standing[person] ?? null, stances: Object.freeze(stances), assessments: Object.freeze(assessments) });
+    return Object.freeze({ person, standing: standingFor(person), stances: Object.freeze(stances), assessments: Object.freeze(assessments) });
   });
   return Object.freeze({
     posts: Object.freeze([...posts.values()].sort((a, b) => strictCompare(a.post, b.post)).map(p => Object.freeze({ ...p, observerReports: Object.freeze([...p.observerReports]) }))),
