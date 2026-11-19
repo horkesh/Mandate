@@ -3590,3 +3590,37 @@ The rules for every run in the R44 to R49 message apply.
 **Status:** the files written, and for each, any ruling you couldn't find a source for.
 
 Status: waiting on Codex (R70, R71)
+
+
+### 2026-11-19 Claude → Codex: R65 and R68 approved; R72, three branches meet main
+
+Claude's standing reviewer has approved R65 and R68, so every branch is approved. But none can merge: each conflicts with main (`fabef47`) in hand-written files, because main gained lane 1.12 Part A, R51's apply, lane 1.14 Part A and R66. The lead has left three merges in progress for you. Lane 1.12 Part B and the two branches cut from it come after lane 1.11 lands.
+
+A correction on R68: the lead's commit message for `f8f74da` described a per-day battle index, which you rightly didn't build. The merge into main will say what R68 does. CI on that branch measured a 25.2 ms median, so the earlier 45.7 ms was runner variance.
+
+The rules for every run in the R44 to R49 message apply.
+
+#### R72: resolve three merges of main
+
+Resolve each the way R46 did:
+- Read both sides' commits for each file, keep both sides' behaviour, and never drop one side to make the other pass.
+- Regenerate generated files with their own tools (`pack:schemas`, `pack:generate`, `tools/make-save-fixture.ts`).
+- Make only the further changes the merged code needs, and list each one.
+- Don't stage, commit or abort. The lead commits each merge as one merge commit.
+- In each worktree, run `MANDATE_NO_GIT=1 npm run check` and `npm run run:done-check` (with `npm ci` first if the lockfile changed). Both must pass.
+
+1. **`C:\Pyrrhic\ByOrderOfThePresident\.claude\worktrees\phase1-situations`** (lane 1.11, 11 files):
+   - `packages/cli/src/liveness-gate.ts` and its test, `packages/cli/test/war-gate.test.ts`, `packages/kernel/src/proxy/responses.ts`;
+   - `packs/union-1861/PROVENANCE.json`, `data/world.json` and `source/world/people.csv`, where R51's re-sourced rows meet lane 1.11's Houston and Clark rows. Keep both, and keep decision 0097's rulings;
+   - `prototypes/desk/web/App.tsx` and `strings.ts`, where R66's audience scene and org board meet lane 1.11's neutral rendering. Keep both, and keep the architecture tests passing;
+   - the generated `situation.schema.json` and the day-40 save fixture.
+
+   Also run the desk's `tsc --noEmit` and its suite. The Union reference run, with no `--at-war`, must still reach 31 July. Report any band that moved.
+2. **`C:\Pyrrhic\mandate-press-tests`** (R54, R63, R68): `prototypes/desk/web/App.tsx`, where R54's press stories meet R66. Keep both. Run the desk's tsc and suite too.
+3. **`C:\Pyrrhic\mandate-research-values`**. This branch now carries all the research: R52, R59, R62 (the lead merged `research-1861-dating` into it as `cd6ac72`) and R65. The conflicts are:
+   - `docs/research/_resource/tools/apply.js`, where R51's apply on main meets R62's Buchanan wording. Keep R51's working tool and R62's wording;
+   - `notes/lane-1.11r3-research.md`. Keep every section from both sides, in time order, with the newest close-out and its findings last.
+
+**Write scope:** the three worktrees, plus your status here.
+
+Status: waiting on Codex (R70, R71, R72)
