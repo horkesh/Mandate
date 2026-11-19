@@ -100,3 +100,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0094](0094-claimed-control-on-the-presidents-map.md) | The president's map shows claimed control, in bold colour | accepted |
 | [0095](0095-the-staff-map-draws-no-pictorial-signs-for-now.md) | The staff map draws no pictorial signs, for now | accepted |
 | [0096](0096-codex-resumes-milestone-1a.md) | Codex resumes milestone 1A | accepted |
+| [0097](0097-the-1861-starts-blocs-after-re-sourcing.md) | The 1861 start's blocs and judgments after re-sourcing | accepted |
