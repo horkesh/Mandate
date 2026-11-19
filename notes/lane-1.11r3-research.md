@@ -1,5 +1,7 @@
 # Lane 1.11r3 (research leads and re-sourcing): hand-over at the pause
 
+R52 update, 19 November 2026: read the R52 close-out and `docs/research/_resource/dating-method.md` first. Decision 0097 supersedes the older pre-positioning/bloc instructions below: R49 owns the fifteen officers; the ten disputed Confederate starts and nine civilians get none; Stone gets none pending authority; Lincoln's reputation CHANGE is rejected. R52 is research only. Earlier hand-over sections are retained for provenance.
+
 R45 update, 19 November 2026: round two and the register/bloc notes are now under `docs/research/_resource/` in `research-1861-round2`, uncommitted for the lead. Nothing has been applied to pack data. Read the R45 close-out below before running the older apply: it still pre-positions fifteen officers, blanks Stone as a civilian and keeps the ten disputed Confederate fact HOLDs as coded. Those outcomes need reconciliation with R49 and the new research. The earlier pause record follows for provenance.
 
 ## Branches and heads (all pushed)
@@ -74,3 +76,29 @@ Under the rulings: the 67 factional blocs split **27 stand, 40 held** (so the he
 - **Lead/research:** obtain Stone's contemporary commission/order/muster authority and a precise Bulloch start-day dossier if a positive starting bloc is desired. Schofield's first-lieutenant dates differ between the registers, but both precede the start and A1's verdict is unaffected.
 - **Validation owner:** supply dependencies and the later no-git exclusion on the apply/integration base, then run the two required gates. They did not pass in this research-only checkout.
 - Earlier Harris/Henderson and Cameron strength findings remain in the earlier hand-over, without a new historical verification claim from R45.
+
+
+## R52 close-out, 19 November 2026
+
+Research outputs only, on `research-1861-dating` at `a2ea7c2`, in `C:/Pyrrhic/mandate-research-dating`. R51 was not undertaken. R48/R49 files and every pack source are unchanged. The current rulings are 0097, not the old pre-positioned-fifteen and fact-HOLD instructions in the retained earlier hand-over.
+
+**Dating delivered:** `dating.csv` keeps the same four columns and covers all **1,017 cited cells / 1,705 current citations**, independently matched to source and generated World. The old 998/1,668 inventory is superseded by the actual input count. **412 current citations have dates/bounds (167 days, 245 bounds); 1,293 explicitly say not found**, with limitations in their row. Eleven narrower R45 records remain labelled supplements; 1,716 data rows total. Unresolved means no underlying document date established for that locator, not an assertion that it is undatable or read cover to cover. No event day, compilation imprint or missing day was invented to fill the table.
+
+**Projected check before the R51 apply:** current exact-day parser, with verified dates/bounds inserted in memory, warns **377 judgment cells** for no contemporary leg; **59 cells** separately fail weak-citations-only (overlapping, not additional). Including 67 uncited factional blocs gives 444 warnings. Respecting verified month/year bounds finds **485 definite no-leg judgments**, 312 undecided and 42 with a verified timely leg; 145 cells are definitely weak-only. The exact-day parser ignores bounds. Counts, affected-cell lists, source kinds, policy snapshot and scope are in `dating-method.md` and `evidence-r52/leg-audit.json`; these are not post-rs1-rs14 totals. The earlier 84 was an unverified embedded-date sensitivity, a different measure/base.
+
+**Date corrections:** OR I-1 p 12 report 19 April 1861; p 23 Foster journal submitted 1 October 1861, not its internal 13 April narrative; p 32 Beauregard report 27 April 1861, not the narrated 13 April; OR I-6 p 558 April 1863 inquiry. Cabinet second opinions use 29 March, not the next running-head day. Confederate Journal pp 96/106 retain bounds because a running head anticipates the next sitting. USREPORTS 24 How 66's 14 April 1860 date identifies Wolcott's advice in the case text, not Taney's decision; that current documentary locator remains unresolved. Every proposed date is research for review/application, never a rehabilitation of a held judgment.
+
+**Stone:** `stone-1861.md` delivers the 1888 Adjutant-General service statement printed in Senate Report 1054, pp 2-3. It reports District militia appointment 1 January 1861 and muster 2 January on Scott's application. The original 1861 instrument/legal appointing authority was not found. [I] Retain none under 0097; do not classify his January service as proved federal merely from the 1888 summary.
+
+**Bulloch:** `bulloch-1861.md` adds visually checked contemporary New-York Times shipping pages: 2 March 1861, p 8 (clearance/sailing on 1 March) and 25 March 1861, p 8 (arrival on 23 March), naming Bienville, Bulloch and Livingston, Crocheron & Co. [I] Probably continuing as the ship's commercial master on 5 March. Exact location, contractual employer and Confederate commitment that day remain unproved. Later memoir passages are separated from contemporary evidence. [I] Retain none under 0097; absence of proof is not neutrality.
+
+**Checks:** table/coverage/date-shape audit exit 0; source/World multiset and preservation audit exit 0; 629 protected baseline files unchanged; HEAD unchanged, index empty, `git diff --check` clean. Required `MANDATE_NO_GIT=1 npm run check` exits 2 for missing Node type definitions; `npm run run:done-check` exits 1 for missing `tsx`: 0 tests and 0 done criteria ran. No install, suite/campaign retry or pack generation. The old Vitest configuration also lacks the later no-git exclusion. Logs, input inventory, source hashes, source-code snapshots and artifact inventory are in `evidence-r52/`.
+
+Optional rs15 was not undertaken. Claude's standing review and the remaining historical proof are outstanding. The worktree is uncommitted; git was used only to read. The one final coordination status is appended to the main CODEX after a fresh read.
+
+## Findings outside my scope
+
+- **R51/integration:** preserve 0097 and R49's fifteen service records; do not use the superseded old apply choices. Apply only reviewed date rows at their real precision, replace the two corrected Sumter markers, and do not treat an unresolved embedded marker as verified. A new post-apply warning total must be calculated on that integrated data.
+- **Validator owner:** year/month bounds currently evade the exact-day evidence parser. No day should be manufactured to work around it. Documentary quotations under secondary source keys also need explicit handling; a whole biography must not be promoted to primary.
+- **Historical follow-up:** Stone's original January instrument and Bulloch's exact 5 March commitment/employment contract remain unproved. The notes identify the smallest further evidence needed without inventing an archival reference.
+- **Validation owner:** supply the compatible dependencies/no-git exclusion and satisfy the two required gates on the apply base. R52's focused checks do not waive them.

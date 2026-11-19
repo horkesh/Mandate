@@ -1,0 +1,5 @@
+﻿{
+    "command":  "MANDATE_NO_GIT=1 npm run check",
+    "localNodeModules":  false,
+    "exit":  2
+}
