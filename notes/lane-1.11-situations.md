@@ -261,9 +261,25 @@ Testbed gains explicit zero-floor, open-ceiling `notHere` explanations for estab
 3. **[I] Keep only the sourced Houston judgments and leave the unreplicated refusal to lane 1.14's calibration.** Rejected: inventing temperament, state-autonomy or deterrence ratings, changing generic call weights to force the desired answer, or calling the injected probe the reference run.
 4. **[I] Keep 17 April for Virginia's operational allegiance**, with the legal ratification distinction above. Rejected: delaying all service choices to 23 May. Recommendation only; no change applied.
 
+## R64: desk playback test after lane 1.11 (2026-11-19)
+
+Completed R64 only, on `phase1-situations` at `d5f7ef8`. The first `--at-war` turn stops on day one with `situation-surfaced`, as PRESENTATION section 1.8 allows; no turn-flow defect was found. The next unmodified turn runs days 2–8, with 114 playback frames and two days without reports.
+
+`prototypes/desk/test/r26.test.ts` now prepares that second turn. It retains the greater-than-seven-frame assertion and checks consecutive days, every day's presence, report order through both mark and land phases, date-only frames on quiet days, and the calendar and cumulative tray contents at every frame. The existing paper visibility and location assertions remain. No runtime or pack code changed.
+
+Validation, with logs in `runs/r64/`:
+
+- Original test: exit 1, one intended failure (`2 > 7`), two passes. Corrected focused file: exit 0, three passes.
+- Deliberately limiting `dayFrames` to its first day: exit 1, exactly one intended failure at the complete-day assertion. The production source was restored byte-for-byte before the full suite; hashes are in `rebreak.json`.
+- Desk full suite: exit 0, 77 passed / 8 existing optional map-data skips; `tsc --noEmit`: exit 0.
+- Required `MANDATE_NO_GIT=1 npm run check`: exit 0, 107 files, 1,290 passed / 3 existing optional skips; typecheck, boundary, licences and decisions pass.
+- Standalone `npm run run:done-check -- --label r64-done`: exit 0, 6/6 criteria. Union median/p95 29.38/59.53 ms; testbed 3.14/5.20 ms. All 151 reference mechanics per pack remain within unchanged bands. Summaries and saves are under `runs/r64-done/`; drafting evidence is under `runs/r64-done-drafting/`.
+
+Final evidence index: `runs/r64/final-checks.json`. Source preservation was checked after the runtime gates, before this hand-over update. Only the test and this hand-over are delivery changes; other baseline files, lockfiles, saved fixtures, signed situations and gate files are preserved. No server, install, build, Git mutation or other worktree write. No proposed ruling. Claude's standing review remains pending under 0096.
+
 ## Findings outside my scope
 
 1. **Lane 1.14 / calibration:** Houston still does not refuse the controlled Confederate call; the generic call terms honour `union` for either issuer. His inherited unposted faction remains an office-service compatibility tag after succession, not a sourced personal allegiance. Calibrate or design these deliberately; do not invent more ratings in this lane.
-2. **Prototype owner:** the inherited R26 first-turn playback fixture expects a full week's worth of frames despite a legitimate day-one situation stop. The in-memory R47 control reproduces it. Its one failure remains outstanding; it does not invalidate the new neutral-rendering tests.
+2. **Prototype owner:** the inherited R26 first-turn playback fixture failure recorded at R55 is resolved by R64 above. The legitimate day-one situation stop remains.
 3. **Lead / standing reviewer:** review R47 and R55 together, including the eight-region Restored Government approximation and the new succession proposal. The gate's exact habeas approval was copied only within its authorised scope. No independent standing review is claimed here. The root evidence is explicitly composite; the original full command's nonzero exit is retained.
 4. **Lane 1.6 press / research / later authoring:** S04's rumour wave, the remaining primary-source leads, and S18's draft still have their previous owners. No R48, R49, R56 or other run's files were changed. This run does not promote `merryman_answer` or alter resignation/secession timing.
