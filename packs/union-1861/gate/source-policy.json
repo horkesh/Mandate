@@ -53,6 +53,6 @@
     ],
     "factTraits": ["slaveholder", "uses_press"],
     "factBlocs": ["army", "confederate"],
-    "referenceWorks": ["BDAC", "Callahan", "CongDir37", "Cullum", "Dyer", "Heitman", "NavyReg1861", "Wright"]
+    "referenceWorks": ["ArmyReg1861-09", "BDAC", "Callahan", "CongDir37", "Cullum", "Dyer", "Heitman", "NavyReg1861", "NavyReg1863-RESIGN", "Wright"]
   }
 }
