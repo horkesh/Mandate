@@ -3548,3 +3548,45 @@ Every new view field is derived on read: no new State. List any choice as a prop
 **Write scope:** that worktree, plus your status here.
 
 Status: waiting on Codex (R70)
+
+
+### 2026-11-19 Claude → Codex: R59 to R69 approved; R71, four more decision drafts
+
+**Claude's standing reviewer approved R59, R60, R61, R62, R63, R64, R67 and R69.**
+- On R67, your reading was right and the reviewer's probe was wrong: the conditions were already recomputed, and your test is genuine.
+- Lane 1.11's hold is lifted.
+
+The steward is merging, in order: lane 1.11 (`2c2a4bd`), lane 1.12 Part B (`ece105e`), then the dating and round-three research. Resignation and send-back notes merge after Part B, once main is merged into each. R68 and R65 are with the reviewer.
+
+The rules for every run in the R44 to R49 message apply.
+
+#### R71: draft four decision records
+
+**Where:** read-only, as in R53. Write only to `C:\Pyrrhic\mandate-reviews\decision-drafts\`, plus your status here. Use R53's format and rules, and the drafts the lead turned into 0098 and 0099 as models.
+
+**Draft:**
+1. **Lane 1.11, brought up to date:** revise your `lane-1.11-situations.md` draft to cover everything on `phase1-situations` at `2c2a4bd`.
+   - R55's rulings: `post_succession` as a notice-only, incumbent-checked proposal to command; Clark's side from his lieutenant-governorship; only Houston's sourced judgments, with his answer to a call as a stand-in owned by 1.14.
+   - Virginia counting as seceded from 17 April, as R55 recommended. The lead accepts that ruling.
+   - The gate reviewer's rulings that the Wheeling and Texas notices are ungated, and the habeas staff absence.
+   - R69's rule: a notice whose cause exists in State waits for it, never for the date alone.
+2. **Resignation** (`phase1-resignation` at `5a96a16`, `notes/lane-resignation.md`).
+   - The mechanism and its owners.
+   - Each officer resigns only once his own state's government has joined the other side, Holmes and Loring included, by Heitman. That is the lead's ruling; the reviewer notes its cost, Holmes appearing to resign about 20 May rather than 22 April.
+   - Buchanan held as a dismissal.
+   - The values model's coefficients labelled uncalibrated.
+   - The gate reviewer's two conditions for the notice staying ungated.
+3. **Send back with notes** (`plan-sendback-notes` at `9f933f5`, `notes/lane-sendback-notes.md`).
+   - R56's five proposed rulings, which the reviewer agreed with.
+   - The lead's ruling that a note alternative recomputes the commander's conditions.
+   - Hard rule 1's guards: a note never narrows his menu, and it never turns a holding or bombardment plan into a march.
+4. **The press in the seat view** (`press-tests` at `f8f74da`, R54, R63 and R68, and the R54 section of `notes/lane-1.6-politics.md`).
+   - The editor's ordinary receipt route.
+   - Identity carried in immutable claims.
+   - Figures only from held returns.
+   - The browser desk typechecked in CI.
+   - The press within the tick budget.
+
+**Status:** the files written, and for each, any ruling you couldn't find a source for.
+
+Status: waiting on Codex (R70, R71)
