@@ -68,6 +68,8 @@ export interface State {
    * at the start; a situation's `department_side` proposal moves a government to a side. Writer: `command`.
    */
   readonly departmentFactions: DepartmentSides;
+  /** Each faction's current capital, copied from the start and moved by a situation. Writer: command. */
+  readonly factionCapitals: Readonly<Record<FactionId, RegionId>>;
   /** Who drives each person. Writer: `seats`. */
   readonly seatAssignments: Readonly<Record<SeatId, SeatAssignment>>;
   /** Orders and reports on their way, in (arrival day, id) order. Writer: `messages`. */

@@ -283,12 +283,12 @@ export function Paper({ report: r, text, t, dateOf, plain, display }: { display:
   </article>;
 }
 
-function Situation({ situation: s, menu, t, execute, order, busy }: { situation: SituationView; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; execute: (line: string) => Promise<unknown>; order: (line: string) => void; busy: boolean }) {
+export function Situation({ situation: s, menu, t, execute, order, busy }: { situation: SituationView; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; execute: (line: string) => Promise<unknown>; order: (line: string) => void; busy: boolean }) {
   const [referring, setReferring] = useState(false);
   const [selected, setSelected] = useState<string[]>([]);
   const choice = menu.situations.find(c => c.situation === s.id);
-  return <section className="situation"><p className="eyebrow">{s.status}, {S.beforeSince} {s.surfacedDay}</p><h3>{t(s.title)}</h3><p>{t(s.text)}</p>{s.staffAuthor && <p>{S.staff}: {t(s.staffAuthor, 'person')}</p>}
-    <fieldset disabled={busy || !choice}><legend>{S.selection}</legend>{s.options.filter(o => choice?.options.some(c => c.optionId === o.id)).map(o => <label className="situation-option" key={o.id}><input type="checkbox" checked={selected.includes(o.id)} onChange={e => setSelected(old => e.target.checked ? [...old, o.id] : old.filter(id => id !== o.id))} /><span>{t(o.label)}<small>{o.proposedBy === 'inaction' ? S.takeCourse : `${S.advisers}: ${o.proposedBy.map(id => t(id, 'person')).join(', ')}`}</small></span></label>)}</fieldset>
+  return <section className="situation"><p className="eyebrow">{s.status}, {S.beforeSince} {s.surfacedDay}</p><h3>{t(s.title)}</h3><p>{t(s.text)}</p>{s.staffAbsence === 'no-adviser-on-record' && <p>{S.noStaffRecommendation}</p>}{s.staffAuthor && <p>{S.staff}: {t(s.staffAuthor, 'person')}</p>}
+    <fieldset disabled={busy || !choice}><legend>{S.selection}</legend>{s.options.filter(o => choice?.options.some(c => c.optionId === o.id)).map(o => <label className="situation-option" key={o.id}><input type="checkbox" checked={selected.includes(o.id)} onChange={e => setSelected(old => e.target.checked ? [...old, o.id] : old.filter(id => id !== o.id))} /><span>{t(o.label)}<small>{o.proposedBy === 'inaction' ? S.takeCourse : Array.isArray(o.proposedBy) ? `${S.advisers}: ${o.proposedBy.map(id => t(id, 'person')).join(', ')}` : ''}</small></span></label>)}</fieldset>
     <div className="actions"><button disabled={busy || !choice || !selected.length} onClick={() => void execute(`decide ${s.id} ${selected.join(' ')}`)}>{S.signDecision}</button><button disabled={busy || !choice} onClick={() => void execute(`decide ${s.id}`)}>{S.takeCourse}</button><button disabled={!choice} onClick={() => order(`consult ${s.id} `)}>{S.consult}</button>{!!choice?.delegableTo.length && <button data-hotkey="r" onClick={() => setReferring(value => !value)}>{S.referDecision}</button>}{referring && choice?.delegableTo.map(post => <button disabled={busy} key={post} onClick={() => void execute(`delegate ${s.id} ${post}`)}>{S.refer} {t(post, 'post')}</button>)}</div>
   </section>;
 }

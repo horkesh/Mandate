@@ -111,7 +111,7 @@ export interface PrincipalDoctrine {
   readonly faction: FactionId;
   /** Whether his goals may cross a neutral government's open ground: a political act, decided per side. */
   readonly crossNeutral: boolean;
-  /** The post his raised regiments are transferred to, to concentrate; null to leave them with the governors. */
+  /** The concentration post: a Part A [I] stand-in owned by lane 1.14; null to leave regiments with the governors. */
   readonly concentrateAt: PostId | null;
   /** Why that post: the research it rests on, the choice of post labelled [I]; null exactly when `concentrateAt` is. */
   readonly concentrateSource: string | null;

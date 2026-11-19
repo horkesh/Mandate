@@ -1,0 +1,115 @@
+{
+  "id": "pratt_street_deaths",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.pratt_street_deaths.title",
+  "text": "situation.pratt_street_deaths.text",
+  "earliest": "1861-04-19",
+  "event": {
+    "callReceived": {
+      "post": "st_gov_massachusetts",
+      "days": 4
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_general_in_chief",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "railroad-man"
+  },
+  "gate": {
+    "topics": [
+      "civilian-deaths-1861"
+    ],
+    "placement": "event",
+    "risks": [
+      "atrocity"
+    ],
+    "actingSide": "union"
+  },
+  "citations": [
+    {
+      "source": "NPS-PRATT",
+      "at": "the Baltimore riot and the dead, with the sources' differing counts"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "3.2, 6.7, 6.8"
+    }
+  ],
+  "gateReview": {
+    "author": "lane-1.11",
+    "reviewer": "gate-reviewer",
+    "date": "2026-11-16",
+    "questionVersions": {
+      "A1": 1,
+      "A2": 1,
+      "A3": 1,
+      "A4": 1,
+      "A5": 1,
+      "A6": 1,
+      "A7": 1,
+      "A8": 1,
+      "B1": 1,
+      "B2": 1,
+      "B3": 1,
+      "B4": 1,
+      "B5": 1,
+      "B7": 1,
+      "B9": 1,
+      "B10": 1,
+      "C1": 1,
+      "C2": 1,
+      "C3": 1,
+      "C4": 1,
+      "D1": 1,
+      "D2": 1,
+      "D3": 1,
+      "D4": 1,
+      "D5": 1,
+      "D6": 1,
+      "E1": 1,
+      "E2": 1,
+      "E3": 1,
+      "E4": 1,
+      "E5": 1,
+      "E7": 1,
+      "F1": 1,
+      "F2": 1,
+      "F3": 1,
+      "F4": 1,
+      "F5": 1,
+      "F6": 1,
+      "F7": 1,
+      "G1": 1,
+      "G2": 1,
+      "G3": 1,
+      "G4": 1,
+      "G5": 1,
+      "H1": 1,
+      "H2": 1,
+      "H3": 1,
+      "H4": 1,
+      "H5": 1,
+      "Q1": 1,
+      "Q2": 1,
+      "Q3": 1,
+      "Q4": 1,
+      "Q5": 1,
+      "Q6": 1,
+      "Q7": 1,
+      "Q8": 1,
+      "Q9": 1,
+      "Q10": 1,
+      "Q11": 1,
+      "Q12": 1
+    },
+    "contentHash": "96f96cd7d226b645768c1b09fc27fb6b232665039035c920a224254647906f69",
+    "notes": {
+      "item": "actingSide union: the troops' fire killed the civilians. The crowd attacked first, and the soldiers it killed are not atrocity-class. No effects, so nothing benefits any side (E7). Ranges are nine to twelve and four or five (F4). S12 and the route's closure never read this notice (0060, 0074)."
+    }
+  }
+}

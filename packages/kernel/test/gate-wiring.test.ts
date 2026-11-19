@@ -38,7 +38,7 @@ const row = (order: string, offends: string[], over: Partial<OrderValueRow> = {}
 const ROWS = [row('policy:shelter', ['caution', 'order']), row('policy:send_back', ['glory'], { notCheaperThan: 'policy:shelter', clashes: [PRACTICE] })];
 
 function option(id: string, displayKey: number, over: Partial<OptionDef> = {}): OptionDef {
-  return { id, label: `situation.crossers.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [], lockedCosts: [], orders: [], honours: [], watched: false, policy: null, gate: null, ...over };
+  return { id, label: `situation.crossers.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [], lockedCosts: [], orders: [], calls: [], honours: [], watched: false, policy: null, gate: null, ...over };
 }
 
 const CROSSERS: SituationDef = {

@@ -8,7 +8,7 @@
  * trigger counts only news received since its clock started (`since`), so a
  * report the seat held before the event never surfaces it (review S1).
  */
-import type { PostId, RegionId, SituationId } from '../ids.ts';
+import type { PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import type { SeatKnowledge } from '../knowledge/knowledge.ts';
 import type { State } from '../root-state.ts';
 import type { SituationRecord } from './situations.ts';
@@ -26,12 +26,15 @@ export interface ConditionContext {
   readonly since: number | null;
   /** Where a post's headquarters is today (lane 0.5: derived from its force blocks); absent, nothing stands anywhere. */
   readonly headquartersOf?: (post: PostId) => RegionId | null;
+  /** A person's cited practices (lane 1.5b), for `holderPractice`; absent, nobody has any. */
+  readonly practicesOf?: (person: PersonId) => readonly string[];
 }
 
 /** Whether a report the seat holds (received on or after `since`, if given) matches the pattern. */
-export function knowsMatch(knowledge: SeatKnowledge, p: KnowsPattern, since: number | null = null): boolean {
+export function knowsMatch(knowledge: SeatKnowledge, p: KnowsPattern, since: number | null = null, receivedBy: number | null = null): boolean {
   return knowledge.knownReports.some((r) => {
     if (since !== null && r.knownReceivedDay < since) return false;
+    if (receivedBy !== null && r.knownReceivedDay > receivedBy) return false;
     const b = r.knownBody;
     if (p.reportType !== null && b.reportType !== p.reportType) return false;
     if (p.subtype !== null && b.reportSubtype !== p.subtype) return false;
@@ -54,9 +57,18 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
     if (r === undefined || !isFinal(r)) return false;
     return c.options === null || r.sitChosen.some((o) => c.options!.includes(o));
   }
-  if ('knows' in c) return knowsMatch(ctx.knowledge, c.knows, ctx.since);
+  if ('knows' in c) return knowsMatch(ctx.knowledge, c.knows, ctx.since, ctx.day - (c.forDays ?? 0));
   if ('goal' in c) return ctx.state.planRecords[c.goal.post]?.planGoal.goalPosture === c.goal.posture;
   if ('headquartersAt' in c) return ctx.headquartersOf !== undefined && ctx.headquartersOf(c.headquartersAt.post) === c.headquartersAt.region;
+  if ('callReceived' in c) {
+    const { post, days } = c.callReceived;
+    return Object.values(ctx.state.orderResponses).some((r) => r.respPost === post && r.respRole === 'addressee' && r.respKind === 'call' && ctx.day - r.respDay >= days);
+  }
+  if ('holds' in c) return ctx.state.postStates[c.holds.post]?.postHolder === c.holds.person;
+  if ('holderPractice' in c) {
+    const holder = ctx.state.postStates[c.holderPractice.post]?.postHolder ?? null;
+    return holder !== null && ctx.practicesOf !== undefined && ctx.practicesOf(holder).includes(c.holderPractice.practice);
+  }
   if ('chamber' in c) return (ctx.state.chamberStates[c.chamber.id]?.chamState ?? 'adjourned') === c.chamber.state;
   if ('ledger' in c) {
     const l = c.ledger;
@@ -76,7 +88,7 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
 
 /** The predicate at the top of a condition. */
 export function predicateOf(c: Condition): string {
-  for (const k of ['all', 'any', 'not', 'dayAtLeast', 'flag', 'fired', 'decided', 'knows', 'goal', 'headquartersAt', 'clockAtLeast', 'chamber', 'ledger'] as const) if (k in c) return k;
+  for (const k of ['all', 'any', 'not', 'dayAtLeast', 'flag', 'fired', 'decided', 'knows', 'goal', 'headquartersAt', 'callReceived', 'holds', 'holderPractice', 'clockAtLeast', 'chamber', 'ledger'] as const) if (k in c) return k;
   return 'unknown';
 }
 

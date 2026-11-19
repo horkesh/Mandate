@@ -259,11 +259,12 @@ function situationViews(world: SeatsWorld, state: State, seat: SeatId, person: P
         options: freeze(
           def.options
             .filter((o) => r.sitOpenOptions.includes(o.id))
-            .map((o) => freeze({ id: o.id, label: o.label, proposedBy: o.proposedBy === 'inaction' ? 'inaction' : freeze([...o.proposedBy]), group: o.group })),
+            .map((o) => freeze({ id: o.id, label: o.label, proposedBy: o.proposedBy === 'inaction' ? 'inaction' : Array.isArray(o.proposedBy) ? freeze([...(o.proposedBy as readonly PersonId[])]) : o.proposedBy, group: o.group })),
         ),
         chosen: freeze([...r.sitChosen]),
         delegatedTo: r.sitDelegate,
-        staffAuthor: r.sitStaffAuthor,
+        staffAuthor: def.staffLine === null ? null : r.sitStaffAuthor,
+        ...(def.staffAbsence === undefined ? {} : { staffAbsence: def.staffAbsence.none }),
       }),
     );
   }

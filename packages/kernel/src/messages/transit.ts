@@ -16,6 +16,7 @@ import { toId, type MessageId, type PersonId, type PostId } from '../ids.ts';
 import type { ReportBody } from '../knowledge/report.ts';
 import type { ReportTruth } from '../knowledge/truth.ts';
 import type { EditSpec, PlanGoal } from '../plans/goal.ts';
+import type { CounterKind } from '../audience/counters.ts';
 import type { State } from '../root-state.ts';
 import { sha256OfText } from '../serialize/sha256.ts';
 import type { RouteKind } from './latency.ts';
@@ -64,10 +65,17 @@ export interface OrderBody {
  * What a person verb carries (lane 1.5): a letter or telegram from the principal to one person, answered on arrival through
  * his compliance (the pack's order-to-value map). Never relayed: it goes straight to him. Fields a verb does not use are null.
  */
-export const VERB_KINDS = ['appoint', 'consult', 'inquire', 'observer', 'relieve', 'transfer'] as const;
+export const VERB_KINDS = ['appoint', 'audience', 'consult', 'inquire', 'observer', 'relieve', 'transfer'] as const;
 export type VerbKind = (typeof VERB_KINDS)[number];
 
+/** Value packet for an audience counter: kind, frame, boldness, reinforcement post, men. */
+export type AudienceCounterPacket = readonly [CounterKind, string | null, number | null, string | null, number | null];
+
 export interface VerbBody {
+  /** The expected host at an observer's destination (distinct from the observer receiving the commission). */
+  readonly verbHost?: PersonId;
+  /** Counters carried by an audience request; absent on other verbs. */
+  readonly verbCounters?: readonly AudienceCounterPacket[];
   readonly verbKind: VerbKind;
   readonly verbIssuer: PersonId;
   /** The post it concerns: the post to fill, to relieve, to send from, to report on, to watch. */

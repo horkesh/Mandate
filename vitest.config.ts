@@ -13,7 +13,8 @@ export default defineConfig({
     // many times that when the suite runs files in parallel on a busy machine; the 5 s default failed `npm run check` twice
     // on tests that pass alone. One generous bound, named here and nowhere else: a hung test still fails, a slow one does not.
     testTimeout: 120_000,
-    hookTimeout: 300_000,
+    // R73: the integrated live-decision sweep can play each fork to its 400-day cap; keep all seeds and checks.
+    hookTimeout: 1_200_000,
     include: ['packages/*/test/**/*.test.ts', 'packs/*/test/**/*.test.ts', 'tools/test/**/*.test.ts'],
     // Codex's command-line lane must never invoke git, including test fixtures.
     // Exclude files that write Git fixtures before collection; the ordinary gate remains full.

@@ -1,0 +1,54 @@
+{
+  "id": "sumter_fired_upon",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.sumter_fired_upon.title",
+  "text": "situation.sumter_fired_upon.text",
+  "earliest": "1861-04-12",
+  "event": {
+    "knows": {
+      "reportType": "wire-dispatch",
+      "subjectKind": "region",
+      "subjectId": "fort_sumter",
+      "claimKind": "battle-phase",
+      "token": "bombard"
+    }
+  },
+  "report": {
+    "authors": [
+      "us_fort_sumter",
+      "us_secretary_war"
+    ],
+    "reportType": "wire-dispatch"
+  },
+  "gate": {
+    "none": "news that a fort was fired on; no gate topic"
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-1 p. 31: first fire 12 April at 4.30 a.m. https://ehistory.osu.edu/books/official-records/001/0031; p. 12: Anderson's surviving report is dated 18 April. [I] The same-day defending commander's wire is R80's modelled reporting path, not a transcription of that report."
+    }
+  ],
+  "effects": [
+    {
+      "propose": {
+        "owner": "politics",
+        "field": "framing",
+        "subject": "union",
+        "delta": 500,
+        "reason": "fired-on-first",
+        "side": "union"
+      }
+    }
+  ],
+  "knowledge": {
+    "knows": {
+      "reportType": "wire-dispatch",
+      "subjectKind": "region",
+      "subjectId": "fort_sumter",
+      "claimKind": "battle-phase",
+      "token": "bombard"
+    }
+  }
+}

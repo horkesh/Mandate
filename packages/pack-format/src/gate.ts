@@ -194,14 +194,20 @@ export function resolvedStrings(def: SituationDef, strings: ReadonlyMap<string, 
  * The content hash a sign-off records (A7; section 5): the item in canonical
  * JSON without its `gateReview`, with the text of every string it shows, in
  * every locale (review N4: a translation is part of what was signed), and every
- * source row it cites. Any edit to any of them voids the sign-off.
+ * source row it cites. Any edit to any of them voids the sign-off. A field the schema added later hashes as absent while
+ * it is empty (an option's `calls`, lane 1.11), so adding a field never voids a sign-off that did not use it.
  */
 export function gateContentHash(def: SituationDef, strings: LocaleStrings, provenance: ProvenanceFile): string {
   const { gateReview: _review, ...signed } = def;
   // Lane 1.5b: an option that is no policy carries nothing new, so items signed before the field existed keep their hash;
   // naming a policy row changes the content and voids the sign-off.
   const inaction = signed.inaction === null ? null : (({ policy, ...rest }) => (policy === null ? rest : { ...rest, policy }))(signed.inaction);
-  const item = { ...signed, options: signed.options.map(({ policy, ...o }) => (policy === null ? o : { ...o, policy })), inaction };
+  const item = {
+    ...signed,
+    // Lane 1.11: so are an option's calls when it issues none.
+    options: signed.options.map(({ policy, calls, ...o }) => ({ ...o, ...(policy === null ? {} : { policy }), ...(calls.length === 0 ? {} : { calls }) })),
+    inaction,
+  };
   const cited = new Set(def.citations.map((c) => c.source));
   const sources = provenance.sources.filter((s) => cited.has(s.key)).sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0));
   const byLocale: Record<string, Record<string, string>> = {};
@@ -373,6 +379,17 @@ export function checkGate(
     def.citations.forEach((c, i) => {
       if (!sources.has(c.source)) err('unknown-reference', `citations[${i}].source`, `"${c.source}" is not a source in PROVENANCE.json`, 'a source key (A5)');
       if (gate.sourcePolicy.banned.includes(c.source)) err('gate-banned-source', `citations[${i}].source`, `"${c.source}" is banned as evidence by the pack's source policy`, 'another source (A6)');
+    });
+    // The lead's S18 ruling: a declared absence of staff advice cites the research that found none.
+    (def.staffAbsence?.cites ?? []).forEach((c, j) => {
+      if (!sources.has(c.source)) err('unknown-reference', `staffAbsence.cites[${j}].source`, `"${c.source}" is not a source in PROVENANCE.json`, 'a source key (A5)');
+    });
+    // The lead's S17 ruling: a proposal's basis in law and practice resolves its cites too.
+    def.options.forEach((o, i) => {
+      if (!phase0.isProposalBasis(o.proposedBy)) return;
+      o.proposedBy.cites.forEach((c, j) => {
+        if (!sources.has(c.source)) err('unknown-reference', `options[${i}].proposedBy.cites[${j}].source`, `\"${c.source}\" is not a source in PROVENANCE.json`, 'a source key (A5)');
+      });
     });
     if (def.citations.length > 0 && def.citations.every((c) => gate.sourcePolicy.weak.includes(c.source))) err('gate-weak-sources', 'citations', 'every citation is a weak source', 'at least one source the policy does not mark weak (A6)');
 

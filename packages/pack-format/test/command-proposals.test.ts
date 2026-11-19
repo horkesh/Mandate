@@ -20,6 +20,12 @@ function raised(propose: { field: string; subject: string | null; delta: number;
 }
 
 describe('proposals to command in situation files (0058, 0065)', () => {
+  it('a capital move names a region and faction with delta zero; invalid references and deltas are refused', () => {
+    expect(raised({ field: 'faction_capital', subject: 'n_capital', side: 'north', delta: 0 })).toEqual([]);
+    expect(raised({ field: 'faction_capital', subject: 'missing', side: 'north', delta: 0 })).toContainEqual(expect.stringContaining('subject: a capital needs'));
+    expect(raised({ field: 'faction_capital', subject: 'n_capital', side: null, delta: 0 })).toContainEqual(expect.stringContaining('side: a capital move needs'));
+    expect(raised({ field: 'faction_capital', subject: 'n_capital', side: 'north', delta: 1 })).toContainEqual(expect.stringContaining('delta: a capital move uses delta 0'));
+  });
   it('a change of side and a closing of a government load clean (positive controls)', () => {
     expect(raised({ field: 'department_side', subject: 's_province', delta: 1, side: 'north' })).toEqual([]);
     expect(raised({ field: 'government_closed', subject: 's_province', delta: 1, side: null })).toEqual([]);

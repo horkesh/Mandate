@@ -306,9 +306,9 @@ export interface DoneCheckRunSpec {
   readonly resumeAt: number;
 }
 
-/** The runs the done check makes: the Union pack at war (about 75 days), and the testbed. */
+/** The runs the done check makes: the Union pack from 5 March to 31 July, its war opened by each side's own decision (lane 1.11), and the testbed. */
 export const DONE_CHECK_RUNS: readonly DoneCheckRunSpec[] = [
-  { name: 'union-1861 at war, 75 days', pack: 'union-1861', days: 75, atWar: true, resumeAt: 30 },
+  { name: 'union-1861, war by decision, 148 days', pack: 'union-1861', days: 148, atWar: false, resumeAt: 60 },
   { name: 'testbed, 120 days', pack: 'testbed', days: 120, atWar: false, resumeAt: 40 },
 ];
 

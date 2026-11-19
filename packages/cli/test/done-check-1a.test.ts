@@ -197,7 +197,7 @@ describe('the stand-ins (1A: the eight gone, any left labelled and owned by a 1B
 
 describe('the victory measure and the lever sweep (D6)', () => {
   const S = (id: string) => toId('situation', id) as ids.SituationId;
-  const opt = (id: string, displayKey: number, honours: string[], watched = false): phase0.OptionDef => ({ id, label: `situation.crossers.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [], lockedCosts: [], orders: [], honours, watched, policy: null, gate: null });
+  const opt = (id: string, displayKey: number, honours: string[], watched = false): phase0.OptionDef => ({ id, label: `situation.crossers.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [], lockedCosts: [], orders: [], calls: [], honours, watched, policy: null, gate: null });
   const CROSSERS: phase0.SituationDef = {
     id: S('crossers'),
     kind: 'decision',

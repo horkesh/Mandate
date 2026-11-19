@@ -61,7 +61,7 @@ export const S = {
   boardCount:(count:number)=>`${count} posts supplied`,
   peoplePressure:'Apply pressure', peopleForce:'Force to request', peopleBlocks:'Force blocks', peopleAmount:'Number',
   peopleTransferNote:'The sending holder chooses which units go. Their movement appears only when reported.', peopleDraftTransfer:'Draft this transfer',
-  noSituations: 'No situation is before you.', beforeSince: 'Before you since day', advisers: 'Urged by', staff: 'Staff author',
+  noSituations: 'No situation is before you.', beforeSince: 'Before you since day', advisers: 'Urged by', staff: 'Staff author', noStaffRecommendation: 'No recommendation from the staff',
   signDecision: 'Sign this decision', takeCourse: 'Let it take its course', refer: 'Refer to', consult: 'Ask in writing',
   docketNote: 'Select a decision to sign or refer.',
   noQueue: 'No signed orders are waiting.', queued: 'Order placed in the out-tray.', recalled: 'Order taken back.', cancel: 'Recall',

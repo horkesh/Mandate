@@ -1,0 +1,37 @@
+{
+  "id": "wheeling_legislature",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.wheeling_legislature.title",
+  "text": "situation.wheeling_legislature.text",
+  "earliest": "1861-07-01",
+  "event": {
+    "all": [
+      {
+        "fired": "pierpont_elected"
+      },
+      {
+        "dayAtLeast": 118
+      }
+    ]
+  },
+  "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_state",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Civil organisation and correspondence only; no secession-cause claim, slavery policy, security order or protected-population effect."
+  },
+  "citations": [
+    {
+      "source": "WHEELING-ORDINANCES-1861",
+      "at": "Acts title page (extra session held July first, 1861); 1866 reprint resolution p. 2"
+    }
+  ]
+}

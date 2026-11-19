@@ -26,6 +26,8 @@ export interface OrderResponse {
   readonly respPost: PostId | null;
   /** He relayed it (0040) or it was addressed to him. */
   readonly respRole: 'relay' | 'addressee';
+  /** What he answered: the order's kind (a goal, a call, an edit, ...) or the verb's (`verb:audience`); lane 1.11's `callReceived` reads it. */
+  readonly respKind: string;
   readonly respDay: number;
   readonly respActual: ComplianceRung;
   readonly respDeclared: ComplianceRung;
@@ -52,13 +54,14 @@ export function responseKey(order: MessageId, person: PersonId): string {
 /** A response as State, from compliance's answer. */
 export function responseOf(
   answer: DirectiveResponse,
-  at: { readonly order: MessageId; readonly person: PersonId; readonly post: PostId | null; readonly role: 'relay' | 'addressee'; readonly day: number },
+  at: { readonly order: MessageId; readonly person: PersonId; readonly post: PostId | null; readonly role: 'relay' | 'addressee'; readonly day: number; readonly kind: string },
 ): OrderResponse {
   return {
     respOrder: at.order,
     respPerson: at.person,
     respPost: at.post,
     respRole: at.role,
+    respKind: at.kind,
     respDay: at.day,
     respActual: answer.actual,
     respDeclared: answer.declared,
@@ -77,7 +80,8 @@ export function recordResponse(state: State, response: OrderResponse): State {
 
 /**
  * Prune responses older than `keepDays` (lane 1.4; the pack's `pruning.responseDays`), as knowledge prunes: `orderResponses`
- * grows with every hop of every order. A response a plan, an operation or a levy still names is kept, whatever its age.
+ * grows with every hop of every order. A response a plan, an operation or a levy still names is kept, whatever its age,
+ * and so is each post holder's first answer to a call (lane 1.11).
  */
 export function pruneResponses(state: State, day: number, keepDays: number): { readonly state: State; readonly pruned: number } {
   const named = new Set<string>();
@@ -88,8 +92,18 @@ export function pruneResponses(state: State, day: number, keepDays: number): { r
   for (const o of Object.values(state.operationRecords)) for (const q of o.opRequests) if (q.oreqResponse !== null) named.add(q.oreqResponse);
   // Lane 1.7: a levy names the governor's answer to the call that raised it.
   for (const l of Object.values(state.postLevies)) named.add(l.levyResponse);
-  // Lane 1.12: a governor's answer to a call is kept for good: it is the record that he was called, which the rule-seat
-  // principal reads so as to call each governor once (one per call, so it does not grow with the hops of the war's orders).
+  // Lane 1.11: a post holder's first answer to a call is kept, since the `callReceived` condition dates a government's
+  // act from the call's arrival (at most one per post).
+  const firstCall: Record<string, string> = {};
+  for (const k of Object.keys(state.orderResponses)) {
+    const r = state.orderResponses[k]!;
+    if (r.respKind !== 'call' || r.respRole !== 'addressee' || r.respPost === null) continue;
+    const held = firstCall[r.respPost];
+    const prior = held === undefined ? undefined : state.orderResponses[held]!;
+    if (prior === undefined || r.respDay < prior.respDay || (r.respDay === prior.respDay && k < held!)) firstCall[r.respPost] = k;
+  }
+  for (const k of Object.values(firstCall)) named.add(k);
+  // Keep every governor's call answer too: doctrine uses it to avoid duplicate calls (lane 1.12).
   const drop = Object.keys(state.orderResponses).filter((k) => day - state.orderResponses[k]!.respDay > keepDays && !named.has(k) && !isCallAnswer(state.orderResponses[k]!));
   if (drop.length === 0) return { state, pruned: 0 };
   const next: Record<string, OrderResponse> = { ...state.orderResponses };

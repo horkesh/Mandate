@@ -1,0 +1,70 @@
+{
+  "id": "virginia_unionists",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.virginia_unionists.title",
+  "text": "situation.virginia_unionists.text",
+  "earliest": "1861-04-04",
+  "event": {
+    "dayAtLeast": 30
+  },
+  "railroad": "the Virginia Unionist's visit of 4 April, which the Secretary of State arranged; the convention's sitting is not modelled, so the meeting comes on its date",
+  "options": [
+    {
+      "id": "offer_fort",
+      "label": "situation.virginia_unionists.option.offer_fort",
+      "displayKey": 1,
+      "proposedBy": [
+        "seward_william_h"
+      ],
+      "honours": [
+        "conciliation",
+        "union"
+      ],
+      "effects": [
+        {
+          "setFlag": "fort_offered_for_adjournment"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.virginia_unionists.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "offer_fort"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_state"
+    ],
+    "recommends": [
+      "offer_fort"
+    ],
+    "reasons": [
+      {
+        "kind": "conciliation",
+        "weight": 600
+      }
+    ],
+    "confidence": 500
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "a meeting with a Unionist delegate about the fort and the convention; no gate topic"
+  },
+  "citations": [
+    {
+      "source": "FOX-CC",
+      "at": "vol. 1 p. 38 (Fox's memo of April 1861: \"The last card was to send for a Union man from the Virginia Convention and say to him that Sumpter would be evacuated at once if the Union people ... would adjourn it\")"
+    },
+    {
+      "source": "JCR",
+      "at": "Part II pp. 102 to 105 (Baldwin, sworn: \"No pledge; no undertaking; no offer\"), pp. 114 to 116 (Botts, sworn: the offer made), p. 71 (Lewis)"
+    }
+  ]
+}

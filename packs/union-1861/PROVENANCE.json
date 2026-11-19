@@ -1013,11 +1013,11 @@
     },
     {
       "key": "TANEY-REPORTS",
-      "title": "Roger Brooke Taney, Reports of Cases Decided ... in the Circuit Court of the United States for the District of Maryland, ed. James Mason Campbell (Philadelphia: Kay & Brother, 1871)",
+      "title": "J. M. Campbell, Reports of Cases Decided by Roger Brooke Taney in the Circuit Court of the United States for the District of Maryland (1871): Ex parte Merryman, pp. 246 to 270 (also Federal Cases vol. 17, pp. 144 to 153)",
       "kind": "primary",
       "licence": "public-domain",
       "basis": "expired-copyright",
-      "copyUsed": "archive.org cu31924068531247, OCR (lane 1.11r3): Taney's own opinions, printed after his death; Ex parte Merryman is at pp. 246-270 (the headnote at p. 246 and the reporter's narrative at p. 253 are the reporter's words, not Taney's)",
+      "copyUsed": "archive.org cu31924068531247, OCR, read by lane 1.11r3 (docs/research/_leads/M1-merryman.md); two quotations confirmed in the OCR",
       "licencePage": null,
       "licenceReadOn": null
     },
@@ -1498,6 +1498,146 @@
       "licence": "public-domain",
       "basis": "government-work",
       "copyUsed": "Same copy as WOODBURN-STEVENS; rs2 and rs13 identify the congressional speech of 29 January 1861 at pp.165-166. Only the reprinted speech, never Woodburn's interpretation. R51, decision 0087 (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "EPP-SUMTER",
+      "title": "J. F. Epperson, Fort Sumter chronology and document pages: transcriptions of the March and April 1861 papers (Scott's and Seward's memoranda, Lincoln's reply to Seward, the cabinet's answers), as read by research lane 1.10 (numbers-and-facts-1861, Appendix C)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "www.jfepperson.org/sumter.htm and its document pages, read 2026-11-16",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NPS-PRATT",
+      "title": "National Park Service pages on the Baltimore riot of 19 April 1861 and the Pratt Street dead, as read by research note secession-winter-1861 (3.2: 4 or 5 soldiers and 9 to 12 civilians killed by the sources' counts; the pages give 11 and 16)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "nps.gov pages cited [NPS-Pratt] and [NPS-Riot] in the note, read 2026-11-14",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "EV-ORDINANCE",
+      "title": "Virginia's Ordinance of Secession, 17 April 1861, as transcribed by Encyclopedia Virginia (primary documents), read by research note secession-winter-1861 (6.1, cited [EV-Ordinance])",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "encyclopediavirginia.org/primary-documents/virginia-ordinance-of-secession-april-17-1861/, read 2026-11-14",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "RR",
+      "title": "F. Moore, ed., The Rebellion Record, vols. 1 to 3 (1861 to 1862): documents, letters and proclamations printed at the time",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org scans, OCR, read by lane 1.11r (docs/research/2026-11-16-1861-gaps.md, parts B and C)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NPS-FOMR",
+      "title": "National Park Service, Fort Monroe National Monument pages: \"Building #1, Quarters No. 1\", \"Fort Monroe Main Gate\" and \"Freedom's Fortress\"",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "nps.gov/places/building-1-quarters-no-1.htm, nps.gov/places/fort-monroe-main-gate.htm, nps.gov/articles/featured_stories_fomr.htm, read 2026-11-16",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "JCR",
+      "title": "Report of the Joint Committee on Reconstruction, at the First Session, Thirty-ninth Congress (GPO, 1866), Part II: sworn testimony on Virginia",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org scan, OCR, read by lane 1.11r (docs/research/2026-11-16-1861-gaps.md, part A)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NOTE-1861-leads",
+      "title": "Project research notes docs/research/_leads/ (lane 1.11r3: L1-habeas.md, M1-merryman.md, N1-congress-writ.md, T1-taney.md), a pointer to primary documents, never the source of a fact",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "docs/research/_leads/ on branch research-1861-leads",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "TX-CONV-1861",
+      "title": "Journal of the Secession Convention of Texas, 1861, ed. E. W. Winkler (Texas Library and Historical Commission, 1912)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/download/journalofsecessi00texa/journalofsecessi00texa_djvu.txt; the Convention minutes, pp. 113-114, 178-187; editorial later succession not used",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "WHEELING-JOURNAL-1861",
+      "title": "Journal of the convention assembled at Wheeling, on the 11th of June, 1861 (printed by authority, Daily Press, 1861)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ia903105.us.archive.org/6/items/esrp904084809/0001.001_djvu.txt; opening p. 3, election and oath pp. 27-28",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "WHEELING-ORDINANCES-1861",
+      "title": "Ordinances and acts of the restored government of Virginia (Wheeling, Frew, 1866), reprinting the Convention ordinances and 1861 Acts",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ia903104.us.archive.org/21/items/esrp681482731/0001.001_djvu.txt; Ordinances pp. 6-7; Acts title page and resolution p. 2",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "HOUSTON-DALY-1860",
+      "title": "Sam Houston to A. Daly, Austin, 14 August 1860, printed in The Writings of Sam Houston, vol. VIII, pp. 118-120",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.texashistorytrust.org/view/728572066/142/; /143/; /144/. Only the verbatim 1860 letter, not the 1943 editorsâ€™ judgments or annotations. The printing identifies Governorsâ€™ Letters and Executive Records, 1859-1861 pp. 210-211, Texas State Library.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CRANE-HOUSTON-1884",
+      "title": "William Carey Crane, Life and Select Literary Remains of Sam Houston of Texas (1884), chapter XXV",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://en.wikisource.org/wiki/Life_and_select_literary_remains_of_Sam_Houston_of_Texas/Chapter_25; chapter XXV, the paragraph identifying Edward Clark as the incumbent Lieutenant Governor before the 16 March succession. Used for office facts only, not Crane?s character judgments. The earlier tenure is cross-checked against the Legislative Reference Library?s official office-term entry (1859-12-21 through 1861-03-16); no text or images from that modern page copied.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "TANEY-REPORTS-CATALOGUE",
+      "title": "Roger Brooke Taney, Reports of Cases Decided ... in the Circuit Court of the United States for the District of Maryland, ed. James Mason Campbell (Philadelphia: Kay & Brother, 1871)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org cu31924068531247, OCR (lane 1.11r3): Taney's own opinions, printed after his death; Ex parte Merryman is at pp. 246-270 (the headnote at p. 246 and the reporter's narrative at p. 253 are the reporter's words, not Taney's)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "SEWARD-REMINISCENCES",
+      "title": "Frederick W. Seward, Reminiscences of a War-Time Statesman and Diplomat, 1830-1915 (1916)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/stream/reminiscencesofwsewa/reminiscencesofwsewa_djvu.txt; pp. 151-152 read for R80. Retrospective memoir, not a contemporary cabinet minute.",
       "licencePage": null,
       "licenceReadOn": null
     }

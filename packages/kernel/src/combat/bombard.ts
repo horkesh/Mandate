@@ -7,7 +7,7 @@
  *   as such (0029; SENSITIVE-HISTORY 3.6). The target is the defending blocks and the region's fortification; nothing
  *   here reads or writes a population, and the stage is offered only where an enemy force or works stand.
  * - **Each day** the battle model fights a fire-only engagement: no crossing, no assault. Fire is the attacker's guns
- *   against the defender's (the known men of the pack's gun arms, a stand-in, since the data has no gun counts), as a
+ *   against the defender's (the known men of the pack's gun arms, a stand-in owned by 1B, since the data has no gun counts), as a
  *   ratio, capped. The defender's morale falls by the pack's rate at that ratio, and further when his stores are out; his
  *   works wear; his killed and wounded are the pack's share (Sumter's rule is none). Every number has its typed terms.
  * - **The defender is cut off**, so his own choice decides, from his seat's orders or else his traits (0074, lane 1.3):
@@ -164,7 +164,8 @@ export function fortDay(world: SeatsWorld, state: State, attackers: readonly For
   if (d.choice === 'hold') return { ...base, surrendered: null, recordSource: null, forces, musters: [], command: [], people: [], control: [] };
 
   // He surrenders: only the record's terms, when this is the record's case (0074; the lead's gate condition 1).
-  const row = rules.recordTerms.find((r) => r.region === objective && r.faction === defFaction) ?? null;
+  const row = rules.recordTerms.find((r) => r.region === objective && r.faction === defFaction && r.commander === commander
+    && (r.offerWindow === null || (day > r.offerWindow.offerDay && day <= r.offerWindow.lastDay))) ?? null;
   const surrendered = row === null ? 'captured' : row.terms;
   const battle = `bombard:${objective}:${day}`;
   const musters: MusterDelta[] = [];

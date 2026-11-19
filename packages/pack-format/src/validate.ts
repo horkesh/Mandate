@@ -383,6 +383,9 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
 
   // ---- people
   const people = idSet('people', world.people);
+  world.rules.combat.bombardment.recordTerms.forEach((row, i) => {
+    if (!people.has(row.commander)) err('unknown-reference', W('rules.combat.bombardment.recordTerms', i, 'commander'), `"${row.commander}" is not a person in this pack`, 'the commander named by the cited surrender record');
+  });
   const clashable = new Set(world.rules.people.verbs.orderValues.flatMap((r) => r.clashes));
   // Lane 1.11a (hard rule 7; 0074): a cell whose every admissible citation is weak is refused. A citation is weak when its
   // source is on the gate's weak list (memoirs, self-reports, pointers) or banned, or its place carries a weak marker
@@ -615,6 +618,25 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       const sum = l.shares.reduce((n, sh) => n + sh.permille, 0);
       if (sum > 1000) err('loyalty-sum', S('loyalty', i), `loyalty shares sum to ${sum}`, 'at most 1000 permille in all');
       if (new Set(l.shares.map((x) => x.faction)).size !== l.shares.length) err('duplicate-entry', S('loyalty', i), 'a faction has two shares');
+    });
+    // Lane 1.11: temporary posts the start declares for a situation to open (0040): a temporary kind creatable in play,
+    // a known department, parent post, holder and region, and an id no post at the start already has.
+    const startPosts = new Set(s.posts.map((p) => p.id as string));
+    // Lane 1.11: a declared government is a government department that governs nothing at the start.
+    const governingAtStart = new Set(s.governments.map((g) => g.department as string));
+    s.declaredGovernments.forEach((g, i) => {
+      refCheck(departments, 'department', g.id, S('declaredGovernments', i, 'id'));
+      if (governingAtStart.has(g.id)) err('declared-government', S('declaredGovernments', i, 'id'), `"${g.id}" already governs a region at the start`, 'a government that governs nothing until a situation establishes it');
+      g.regions.forEach((r, j) => refCheck(regions, 'region', r, S('declaredGovernments', i, `regions[${j}]`)));
+    });
+    s.temporaryPosts.forEach((p, i) => {
+      const kind = vocab.postKinds.find((k) => k.id === p.kind);
+      if (kind === undefined || !kind.temporary || kind.creatable === 'start_only') err('temporary-post', S('temporaryPosts', i, 'kind'), `kind "${p.kind}" is not a temporary post kind creatable in play`, 'a post kind the vocabulary marks temporary and not start_only');
+      refCheck(departments, 'department', p.department, S('temporaryPosts', i, 'department'));
+      if (p.parent !== null && !startPosts.has(p.parent)) err('unknown-reference', S('temporaryPosts', i, 'parent'), `"${p.parent}" is not a post of this start`, 'a post of the same start');
+      if (p.holder !== null) refCheck(people, 'person', p.holder, S('temporaryPosts', i, 'holder'));
+      if (p.region !== null) refCheck(regions, 'region', p.region, S('temporaryPosts', i, 'region'));
+      if (startPosts.has(p.id)) err('duplicate-entry', S('temporaryPosts', i, 'id'), `"${p.id}" is already a post at the start`, 'an id for a post the start does not open');
     });
     s.edgeConditions.forEach((c, i) => refCheck(edges, 'edge', c.edge, S('edgeConditions', i, 'edge')));
     s.depotConditions.forEach((c, i) => refCheck(depots, 'depot', c.depot, S('depotConditions', i, 'depot')));

@@ -8,6 +8,8 @@
  * 2. **Each axis moves through its stages** (`operations/operations.ts`), reading the plan and what the battle model
  *    did yesterday:
  *    - `assemble`: until the plan's concentration ends, the word to go comes, and a partner axis's holder agrees;
+ *    - `bombard`: guns already at the firing shore use the pack's battery preparation, then fire without a march
+ *      or a works phase; guns displaced from that shore must march back before they fire;
  *    - `march`: along the plan's own route, leg by leg (rerouting by the quickest legs where a leg is barred), with a
  *      pause at each depot step;
  *    - `assault`: where the enemy stands in its way; the battle model fights it (phase 3b);
@@ -396,9 +398,13 @@ function stepAxis(ctx: TickContext, start: State, ground: MarchGround, op: Opera
         if (req.oreqAnswer === 'pending') return { state, axis: axis.oaxLog[axis.oaxLog.length - 1]?.axevReason === 'awaiting_support' ? axis : move(axis, 'assemble', 'awaiting_support', here, axis.oaxUntil) };
         if (req.oreqAnswer === 'delayed' && req.oreqFrom !== null && day < req.oreqFrom) return { state, axis: axis.oaxLog[axis.oaxLog.length - 1]?.axevReason === 'support_delayed' ? axis : move(axis, 'assemble', 'support_delayed', here, req.oreqFrom) };
       }
+      // A plan's firing position is not the fort. If its guns have moved since drafting, get them back first.
+      if (op.opMethod === 'bombard' && (here !== axis.oaxRoute.routeFrom || group.marching)) {
+        return legToward(move(axis, 'march', 'on_route', here), axis.oaxRoute.routeFrom);
+      }
       if (axis.oaxUntil !== null && day < axis.oaxUntil) return { state, axis };
-      // Lane 1.12: a bombardment fires from where it concentrated; nothing crosses the water.
-      if (op.opMethod === 'bombard') return { state, axis: move(axis, 'bombard', 'bombarding', here) };
+      // Ready batteries open now, without spending another day merely changing stages.
+      if (op.opMethod === 'bombard') return stepAxis(ctx, state, ground, op, move(axis, 'bombard', 'bombarding', here), awaitingWord, works);
       const a = move(axis, 'march', 'concentrated', here);
       return legToward(a, a.oaxObjective);
     }
@@ -409,12 +415,21 @@ function stepAxis(ctx: TickContext, start: State, ground: MarchGround, op: Opera
         return { state, axis: move(axis, 'end', 'objective_held', axis.oaxObjective) };
       }
       if (group.marching || group.standing.length === 0) return { state, axis };
+      if (here !== axis.oaxRoute.routeFrom) return legToward(move(axis, 'march', 'on_route', here), axis.oaxRoute.routeFrom);
+      const batteries = world.map.world.rules.combat.bombardment;
+      const inRange = (world.map.edgesAt.get(here) ?? []).some((e) => (e.type === 'sea' || e.type === 'river') && otherEnd(e, here) === axis.oaxObjective && e.lengthDays * 1000 <= batteries.rangeMaxDaysPermille);
+      if (!inRange || !group.standing.some((b) => batteries.gunArms.includes(state.forceBlockStates[b]!.fbArm) && (state.forceBlockStates[b]!.fbStrength ?? 0) > 0)) return { state, axis: move(axis, 'end', 'no_forces', here) };
       const fired = bombardFort(ctx, state, axis.oaxPost, group.standing, axis.oaxObjective, side, works);
       if (fired.fort?.surrendered !== null && fired.fort?.surrendered !== undefined) return { state: fired.state, axis: move({ ...axis, oaxArrived: axis.oaxArrived ?? day }, 'bombard', 'garrison_surrendered', axis.oaxObjective) };
       return { state: fired.state, axis };
     }
     case 'march': {
       if (group.marching) return { state, axis };
+      if (op.opMethod === 'bombard') {
+        if (here !== axis.oaxRoute.routeFrom) return legToward(axis, axis.oaxRoute.routeFrom);
+        if (axis.oaxUntil !== null && day < axis.oaxUntil) return { state, axis };
+        return stepAxis(ctx, state, ground, op, move(axis, 'bombard', 'bombarding', here), awaitingWord, works);
+      }
       if (enemyIn(ctx, state, here, side)) return { state, axis: move(axis, 'assault', 'enemy_ahead', here) };
       if (here === axis.oaxObjective) {
         const a = move({ ...axis, oaxArrived: axis.oaxArrived ?? day }, 'works', 'objective_reached', here);

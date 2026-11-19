@@ -228,7 +228,7 @@ function answerEdit(ctx: TickContext, start: State, post: PostId, derived: Deriv
   // Lane 1.5b: what he holds for the plan, on editDirective's scale, so an edit asking more men than it commits states the
   // shortfall; lane 1.4: read at the oversight where he stands.
   const response = answerOrder(world, start, holder, record.planIssuer, terms, { available: PLAN_HOLDS, oversight: oversightOf(ctx, start, holder, record.planIssuer).value });
-  const state = recordResponse(start, responseOf(response, { order: pending.pendingOrder, person: holder, post, role: 'addressee', day }));
+  const state = recordResponse(start, responseOf(response, { order: pending.pendingOrder, person: holder, post, role: 'addressee', day, kind: 'edit' }));
   const executes = concretePlan(input, record.planDraft, chosen, result.edited, response.actual);
   for (const f of result.fell) fire(ctx, `planner.term.${f.term}`);
   fire(ctx, 'plans.edit_answered');
