@@ -154,10 +154,9 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   // and the editing exercise edits every reviewed plan rather than approving it.
   'plans.approved': { why: 'no reference run submits a plan the principal then approves as it stands: every plan goes ahead as drafted, and the editing exercise edits what comes back', test: 'packages/kernel/test/plans.test.ts', needle: 'who approves it; it waits for his word, then goes' },
   'movement.join_blocked': { why: 'every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait', test: 'packages/kernel/test/join.test.ts', needle: 'waits, typed no_route, when no route reaches the seat' },
-  // Lane 1.12 (0052): a commander's loss reaches the principal by report, and a dispatch to a post that fell vacant on
-  // its way comes back; no reference run takes a commander (no general is hit, and no force is cut off).
-  'reports.commander_lost': { why: 'a battle takes no commander in either reference run (no general is hit and no force surrenders); the kernel test drives it', test: 'packages/kernel/test/believed-posts.test.ts', needle: 'a captured commander’s post stays on the menu' },
-  'orders.returned': { why: 'no dispatch finds its post vacant or in other hands in either reference run, since no battle takes a commander; the kernel test drives it', test: 'packages/kernel/test/believed-posts.test.ts', needle: 'bounces on arrival as a returned dispatch, typed' },
+  // R74: the delayed reference fall is captured. Matching recorded terms are driven separately on fictional ground.
+  'combat.evacuated': { why: 'the Union reference bombardment falls after the recorded offer window (R74), and no testbed fort is bombarded; the kernel test grants terms when the recorded commander and dates match', test: 'packages/kernel/test/bombard.test.ts', needle: 'with the record’s terms for this fort, the garrison is evacuated' },
+  'orders.returned': { why: 'no dispatch arrives at a vacant or changed post in either reference run; the kernel test sends one before the loss is reported and drives its return', test: 'packages/kernel/test/believed-posts.test.ts', needle: 'bounces on arrival as a returned dispatch, typed' },
   'orders.conflict': { why: 'a conflict needs two issuers, a chain order and one sent around it; here only the principal orders', test: 'packages/kernel/test/seats-orders.test.ts', needle: 'conflicting orders: one down the chain, one around it' },
   'reports.filtered': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
   'reports.trimmed': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
@@ -241,16 +240,17 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
  *   transferred to the concentration post (Washington, Charleston); each army is asked weekly where it stands;
  * - **a transfer concentrates:** the levies march to the post's seat, by rail where it runs;
  * - **the bombardment:** the attacking principal's order of 12 April to take Fort Sumter becomes his Charleston commander's bombardment.
- *   Anderson, cut off with his stores out, chooses by his traits, and the garrison leaves under the record's terms. The
- *   fort passes to the attacker's side.
+ *   Anderson, cut off with his stores out, chooses by his traits. This run falls after the recorded offer window, so
+ *   the garrison and commander are captured (R74); the fort passes to the attacker's side.
  * The generic principal's march on Washington, which no history has, is gone. So is every field battle of the old run:
  * the testbed keeps them alive.
  */
 const UNION_BANDS: Record<string, GateBand> = {
-  // The bombardment of Fort Sumter: two days of fire, then Anderson's surrender, evacuated under the record's terms.
+  // Two days of fire, then surrender on day 46: outside the recorded 11–13 April window (R74).
   'combat.battle_day': around(2),
   'combat.bombardment': around(2),
-  'combat.evacuated': around(1),
+  'combat.evacuated': quiet('the fort falls on day 46, after the recorded offer window ends on day 39 (R74); the historical case is driven by the kernel test in QUIET'),
+  'reports.commander_lost': around(1),
   'combat.surrendered': around(1),
   'control.changed': around(2),
   'control.threshold_crossed': around(4),
@@ -262,7 +262,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'plans.went_ahead': around(1),
   'combat.battle_closed': notHere(NO_UNION_BATTLE),
   'combat.battle_opened': notHere(NO_UNION_BATTLE),
-  'combat.captured': notHere('the one surrender, Sumter, is an evacuation under the record’s terms, never a capture; the testbed run fires it'),
+  'combat.captured': around(1),
   'combat.killed_wounded': notHere('nobody was killed or wounded by the bombardment of Sumter (the pack’s lossPermille 0, cited), and no field battle is fought; the testbed run fires it'),
   'combat.missing': notHere(NO_UNION_BATTLE),
   'combat.occupation': notHere(NO_UNION_BATTLE),
@@ -344,12 +344,11 @@ const UNION_BANDS: Record<string, GateBand> = {
   'seats.defaulted': notHere('every request is answered in this run; the silent-seats exercise run fires it'),
   'situations.decided': quiet(SITUATIONS_UNAUTHORED),
   'situations.delegated': quiet(SITUATIONS_UNAUTHORED),
-  // Lane 1.12: the pack's one signed situation, the Sumter notice (text only), fires when the principal learns of the
-  // evacuation; the rest wait for lane 1.11's situations.
-  'situations.fired': around(1),
-  'situations.notice_reports': around(1),
-  'situations.noticed': around(1),
-  'situations.surfaced': around(1),
+  // R74: the delayed fall is reported as captured, so the signed evacuation notice has no cause.
+  'situations.fired': quiet('the delayed fall is captured, so the evacuation notice has no cause (R74); the rest wait for lane 1.11'),
+  'situations.notice_reports': quiet('the delayed fall is captured, so the evacuation notice has no cause (R74); the rest wait for lane 1.11'),
+  'situations.noticed': quiet('the delayed fall is captured, so the evacuation notice has no cause (R74); the rest wait for lane 1.11'),
+  'situations.surfaced': quiet('the delayed fall is captured, so the evacuation notice has no cause (R74); the rest wait for lane 1.11'),
   'situations.orders': quiet(SITUATIONS_UNAUTHORED),
   'situations.proposals': quiet(SITUATIONS_UNAUTHORED),
   'situations.staff_lines': quiet(SITUATIONS_UNAUTHORED),
@@ -387,7 +386,8 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'combat.flank_broken': around(1),
   'movement.joined': around(1),
   'combat.bombardment': notHere('no testbed objective lies across water from a shore with guns; the Union run fires it'),
-  'combat.evacuated': notHere('no testbed fort is bombarded, so none surrenders under terms; the Union run fires it'),
+  'combat.evacuated': notHere('no testbed fort is bombarded, so none surrenders under terms; the kernel test in QUIET drives it'),
+  'reports.commander_lost': quiet('no commander is lost in this testbed run; the Union bombardment capture drives the loss report'),
   'combat.surrendered': notHere('only a cut-off force surrenders, and no testbed force is cut off; the Union run fires it'),
   'map.pocket_lost': notHere('no testbed pocket is overrun; the Union run fires it (Sumter’s, when the fort falls)'),
   // Lane 1.4: three operations, their stages and works; the battles' hourly dispatches, returns, governors' wires and pocket reports.

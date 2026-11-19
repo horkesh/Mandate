@@ -380,6 +380,9 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
 
   // ---- people
   const people = idSet('people', world.people);
+  world.rules.combat.bombardment.recordTerms.forEach((row, i) => {
+    if (!people.has(row.commander)) err('unknown-reference', W('rules.combat.bombardment.recordTerms', i, 'commander'), `"${row.commander}" is not a person in this pack`, 'the commander named by the cited surrender record');
+  });
   const clashable = new Set(world.rules.people.verbs.orderValues.flatMap((r) => r.clashes));
   // Lane 1.11a (hard rule 7; 0074): a cell whose every admissible citation is weak is refused. A citation is weak when its
   // source is on the gate's weak list (memoirs, self-reports, pointers) or banned, or its place carries a weak marker

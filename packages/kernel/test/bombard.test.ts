@@ -13,11 +13,13 @@ import { createState } from '../src/tick/setup.ts';
 import { indexWorld } from '../src/world/index.ts';
 import { block, DEP, forcesStart, forcesWorld, P, PER, person, post, type PersonTemper } from './support/forces-fixture.ts';
 import { depot, edge, F, FIXTURE_COMBAT_RULES, R, region } from './support/map-fixture.ts';
-import { worldOf } from './support/tick-context.ts';
+import { ctxFor, worldOf } from './support/tick-context.ts';
 import { order, scriptedSeats } from './support/test-seats.ts';
 import { believedHolder } from '../src/seats/believed.ts';
 import { morningGround, principalMenu } from '../src/seats/requests.ts';
-import { relieveHolder } from '../src/command/command.ts';
+import { appointHolder, relieveHolder } from '../src/command/command.ts';
+import { bombardFort } from '../src/tick/bombard.ts';
+import { combatRulesProblems } from '../src/combat/rules.ts';
 import { sendMessages, type TransitMessage } from '../src/messages/transit.ts';
 
 /**
@@ -60,14 +62,14 @@ describe('a day of fire on a fort (combat/bombard.ts)', () => {
   });
 });
 
-function game(o: { readonly boldness?: PersonTemper['boldness']; readonly recordTerms?: boolean } = {}) {
+function game(o: { readonly boldness?: PersonTemper['boldness']; readonly recordTerms?: boolean; readonly offerWindow?: { readonly offerDay: number; readonly lastDay: number } | null } = {}) {
   const base = forcesWorld({
     regions: ['a1', 'shore', 'fort', 'town', 'b1'].map((r) => region(r)),
     edges: [edge('a1', 'shore'), edge('shore', 'fort', { type: 'sea' }), edge('shore', 'town', { type: 'sea' }), edge('town', 'b1')],
     depots: [depot('a_src', 'a1'), depot('b_src', 'b1')],
-    people: [person('a_lead', 'a'), person('a_gen', 'a'), person('b_lead', 'b'), person('b_gen', 'b', o.boldness === undefined ? {} : { boldness: o.boldness })],
+    people: [person('a_lead', 'a'), person('a_gen', 'a'), person('b_lead', 'b'), person('b_other', 'b'), person('b_gen', 'b', o.boldness === undefined ? {} : { boldness: o.boldness })],
   });
-  const terms = o.recordTerms === true ? [{ region: R('fort'), faction: F('b'), terms: 'evacuated_under_terms' as const, source: 'fixture record' }] : [];
+  const terms = o.recordTerms === true ? [{ region: R('fort'), faction: F('b'), commander: PER('b_gen'), offerWindow: o.offerWindow === undefined ? { offerDay: 0, lastDay: 15 } : o.offerWindow, terms: 'evacuated_under_terms' as const, source: 'fixture record' }] : [];
   // G-1.12a: only the fort may be bombarded; the town is no fortification on the list.
   const map = indexWorld({ ...base, rules: { ...base.rules, combat: { ...FIXTURE_COMBAT_RULES, bombardment: { ...RULES, objectives: [{ region: R('fort'), source: 'fixture fort' }], recordTerms: terms } } } });
   const start = forcesStart(
@@ -105,6 +107,59 @@ function play(g: ReturnType<typeof game>, objective: string, days: number) {
 }
 
 describe('a fort across water is bombarded until its commander surrenders (tick/bombard.ts)', () => {
+  it('captures a replacement commander and his garrison instead of granting another man’s recorded terms', () => {
+    const g = game({ recordTerms: true });
+    const changed = appointHolder(g.world.map, relieveHolder(g.state, P('b_fort')), P('b_fort'), PER('b_other'));
+    const { state, telemetry } = play({ ...g, state: changed }, 'fort', 15);
+    expect(telemetry.mechanics['combat.evacuated']!.fires).toBe(0);
+    expect(state.personStatus[PER('b_other')]?.statusKind).toBe('captured');
+    expect(state.personStatus[PER('b_gen')]?.statusKind ?? 'serving').toBe('serving');
+    expect(state.postStates[P('b_fort')]!.postHolder).toBeNull();
+    expect(state.forceBlockStates[toId('forceBlock', 'b_gar')]!.fbStrength).toBe(0);
+    expect(state.forceBlockStates[toId('forceBlock', 'b_gar')]!.fbSurrenderedDay).not.toBeNull();
+    const told = knowledgeOf(state, seatIdFor(PER('b_lead'))).knownReports.flatMap((r) => r.knownBody.reportClaims).find((c) => c.claimKind === 'fort-surrendered');
+    expect(told?.claimToken).toBe('captured');
+  });
+
+  it.each([{ offerDay: 15, lastDay: 17 }, { offerDay: 0, lastDay: 1 }])('captures a garrison whose fall is outside the recorded offer window %j', (offerWindow) => {
+    const { state, telemetry } = play(game({ recordTerms: true, offerWindow }), 'fort', 15);
+    expect(telemetry.mechanics['combat.evacuated']!.fires).toBe(0);
+    expect(state.personStatus[PER('b_gen')]?.statusKind).toBe('captured');
+    expect(state.forceBlockStates[toId('forceBlock', 'b_gar')]!.fbStrength).toBe(0);
+    expect(state.forceBlockStates[toId('forceBlock', 'b_gar')]!.fbSurrenderedDay).not.toBeNull();
+    const told = knowledgeOf(state, seatIdFor(PER('b_lead'))).knownReports.flatMap((r) => r.knownBody.reportClaims).find((c) => c.claimKind === 'fort-surrendered');
+    expect(told?.claimToken).toBe('captured');
+  });
+
+  it.each([4, 5, 6, 7, 8])('applies dated terms strictly after the offer through the last day (fall on day %i)', (day) => {
+    const g = game({ recordTerms: true, offerWindow: { offerDay: 5, lastDay: 7 } });
+    const ctx = { ...ctxFor(g.world, g.state, day, [...TICK_MECHANICS, ...MAP_MECHANICS]), battleOrders: new Map([[P('b_fort'), { commit: 'judge', night: 'judge', cutOff: 'surrender', pursue: 'judge' } as const]]) };
+    const result = bombardFort(ctx, g.state, P('a_army'), [toId('forceBlock', 'a_guns')], R('fort'), F('a'), []);
+    const granted = day > 5 && day <= 7;
+    expect(result.fort?.surrendered).toBe(granted ? 'evacuated_under_terms' : 'captured');
+    expect(result.fort?.recordSource).toBe(granted ? 'fixture record' : null);
+    expect(result.state.personStatus[PER('b_gen')]?.statusKind ?? 'serving').toBe(granted ? 'serving' : 'captured');
+    expect(result.state.forceBlockStates[toId('forceBlock', 'b_gar')] === undefined).toBe(granted);
+  });
+
+  it('keeps a commander-only record undated when no offer date is recorded', () => {
+    const g = game({ recordTerms: true, offerWindow: null });
+    expect(fortDay(g.world, g.state, [toId('forceBlock', 'a_guns')], R('fort'), F('a'), () => 'surrender', 100)?.surrendered).toBe('evacuated_under_terms');
+    const vacant = relieveHolder(g.state, P('b_fort'));
+    expect(fortDay(g.world, vacant, [toId('forceBlock', 'a_guns')], R('fort'), F('a'), () => 'surrender', 100)?.surrendered).toBe('captured');
+  });
+
+  it('rejects invalid recorded offer windows and unknown commanders at the world boundary', () => {
+    const g = game({ recordTerms: true });
+    const combat = g.world.map.world.rules.combat;
+    const row = combat.bombardment.recordTerms[0]!;
+    for (const offerWindow of [{ offerDay: -1, lastDay: 3 }, { offerDay: 1.5, lastDay: 3 }, { offerDay: 3, lastDay: 3 }, { offerDay: 4, lastDay: 3 }]) {
+      expect(combatRulesProblems({ ...combat, bombardment: { ...combat.bombardment, recordTerms: [{ ...row, offerWindow }] } }, []).join('\n')).toContain('offerWindow');
+    }
+    const map = indexWorld({ ...g.world.map.world, rules: { ...g.world.map.world.rules, combat: { ...combat, bombardment: { ...combat.bombardment, recordTerms: [{ ...row, commander: PER('missing') }] } } } });
+    expect(() => worldOf(map, g.world.start)).toThrow('missing is not a person');
+  });
+
   it('reports a commander appointed earlier on the very day the bombardment captures him', () => {
     const g = game();
     const rules = scriptedSeats({ a: { 1: [order('a_army', 'advance', 'fort')] } });

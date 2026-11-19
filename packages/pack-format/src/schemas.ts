@@ -243,8 +243,8 @@ export const RulesSchema = z.strictObject({
           surrenderMorale: permille.describe('An average commander surrenders when his men’s morale falls below this.'),
           boldnessWeight: permille.describe('Permille of that floor per point of his boldness from 500: a bolder man holds to a lower floor.'),
           recordTerms: z
-            .array(z.strictObject({ region: idOf('region'), faction: idOf('faction'), terms: z.enum(phase0.BOMBARD_TERMS), source: z.string().min(1) }))
-            .describe('The terms a surrender was given in the record, by fort and defending side, cited; only these are ever stated (0074). With no row, the men are captured.'),
+            .array(z.strictObject({ region: idOf('region'), faction: idOf('faction'), commander: idOf('person'), offerWindow: z.strictObject({ offerDay: nonNegative, lastDay: nonNegative }).nullable(), terms: z.enum(phase0.BOMBARD_TERMS), source: z.string().min(1) }))
+            .describe('Cited surrender terms for this fort, defending side and commander (0074). A dated offer applies strictly after offerDay through lastDay (scenario days); null records no offer date. Without a matching case, the garrison is captured.'),
           source: z.string().min(1).describe('Where the numbers come from.'),
         })
         .describe('Bombardment across water (lane 1.12): a fire-only engagement against a fort the attacker cannot reach by land. Guns are the known men of artillery-arm blocks.'),

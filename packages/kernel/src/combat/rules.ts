@@ -4,7 +4,7 @@
  * placed inside Livermore's and Fox's bands, for lane 1.14 to calibrate. The engine names no terrain (hard rule 3): the
  * frontage table keys the pack's own terrain ids, and `otherTerrain` is the pack's stated row for any terrain it omits.
  */
-import type { FactionId, RegionId } from '../ids.ts';
+import type { FactionId, PersonId, RegionId } from '../ids.ts';
 
 /** The five battle types (P2), each with its own base loss rates. */
 export const BATTLE_TYPES = ['meeting', 'attack_open', 'attack_hasty', 'assault_works', 'rearguard'] as const;
@@ -170,10 +170,18 @@ export interface BombardmentRules {
   /** How far his boldness moves that floor: permille of floor per point of boldness from 500 (bolder holds lower). */
   readonly boldnessWeight: number;
   /**
-   * The terms a surrender was given in the record, by fort and defending side: only these are ever stated, and only
-   * when that case happens in play (0074; the lead's gate condition 1). With no row, the men are captured.
+   * The terms a surrender was given in the record, for this fort, side and commander (0074). A dated offer applies
+   * strictly after offerDay through lastDay (scenario days, inclusive at the end); null means no offer date is recorded.
+   * Without a matching case, the garrison and its commander are captured through the existing owners.
    */
-  readonly recordTerms: readonly { readonly region: RegionId; readonly faction: FactionId; readonly terms: BombardTerms; readonly source: string }[];
+  readonly recordTerms: readonly {
+    readonly region: RegionId;
+    readonly faction: FactionId;
+    readonly commander: PersonId;
+    readonly offerWindow: { readonly offerDay: number; readonly lastDay: number } | null;
+    readonly terms: BombardTerms;
+    readonly source: string;
+  }[];
   /** Where the rule's numbers come from. */
   readonly source: string;
 }
@@ -278,6 +286,11 @@ export function combatRulesProblems(rules: CombatRules | undefined, terrains: re
       if (!permitted.has(t.region)) problems.push(`combat rule bombardment.recordTerms: ${t.region} is not a fort the rules let be bombarded (bombardment.objectives)`);
       if (!BOMBARD_TERMS.includes(t.terms)) problems.push(`combat rule bombardment.recordTerms: "${t.terms}" is not a kind of terms`);
       if (t.source.length === 0) problems.push(`combat rule bombardment.recordTerms: ${t.region} cites no source`);
+      if (t.offerWindow !== null) {
+        whole(t.offerWindow.offerDay, 'bombardment.recordTerms.offerWindow.offerDay');
+        whole(t.offerWindow.lastDay, 'bombardment.recordTerms.offerWindow.lastDay');
+        if (t.offerWindow.lastDay <= t.offerWindow.offerDay) problems.push('combat rule bombardment.recordTerms.offerWindow: lastDay must follow offerDay');
+      }
       if (cases.has(`${t.region}|${t.faction}`)) problems.push(`combat rule bombardment.recordTerms: ${t.region} for ${t.faction} twice`);
       cases.add(`${t.region}|${t.faction}`);
     }
