@@ -19,6 +19,8 @@ import { commanderLossReports } from '../src/tick/commander-losses.ts';
 import { relieveHolder } from '../src/command/command.ts';
 import { applyPeopleChanges } from '../src/people/people.ts';
 import { attentionPrice } from '../src/tick/attention.ts';
+import type { MessageId } from '../src/ids.ts';
+import { setGoal } from '../src/plans/plans.ts';
 import { sendMessages } from '../src/messages/transit.ts';
 import { depot, edge, F, FIXTURE_COMBAT_RULES, R, region } from './support/map-fixture.ts';
 
@@ -92,9 +94,9 @@ describe('posts as the principal believes them (lane 1.12; 0052)', () => {
     const held = issue(present);
     const lost = issue(captured);
     expect(held.rejections).toEqual(lost.rejections);
-    expect(held.rejections).toEqual([]);
+    expect(held.rejections.map((r) => r.reason)).toEqual(['bad_counters']);
     expect(held.state.seatAttention[B_SEAT]).toEqual(lost.state.seatAttention[B_SEAT]);
-    expect(present.seatAttention[B_SEAT]!.attnLeft - held.state.seatAttention[B_SEAT]!.attnLeft).toBe(attentionPrice(world, present, command));
+    expect(held.state.seatAttention[B_SEAT]!.attnLeft).toBe(present.seatAttention[B_SEAT]!.attnLeft);
     expect(attentionPrice(world, present, command)).toBeGreaterThan(0);
   });
 
@@ -123,7 +125,16 @@ describe('posts as the principal believes them (lane 1.12; 0052)', () => {
     { cmd: 'observer', to: ARMY, person: PER('b_spare'), route: 'courier' },
   ];
   it.each(verbs)('$cmd accepts a believed holder, then returns undelivered without answering or applying effects', (command) => {
-    const { state } = untilCaptured();
+    const { state: captured } = untilCaptured();
+    // The audience needs an existing subject; no-plan refusal has its own paired-State test above.
+    const state = command.cmd !== 'audience' ? captured : setGoal(captured, ARMY, {
+      id: 'm.0.audience-subject' as MessageId,
+      issuer: B_LEAD,
+      goal: { goalObjective: null, goalPosture: 'hold', goalRisk: 300, goalDeadlineDays: 20, goalRail: false, goalRiver: false, goalSea: false, goalNeutral: false, goalCommitted: [], goalAwaitWord: false, goalApproveAsDrafted: true },
+      viaChain: true,
+      issuedDay: 0,
+      response: 'm.0.audience-subject|b_gen',
+    }, 0);
     const ctx = ctxFor(world, state, state.stateDay + 1, [...TICK_MECHANICS, ...MAP_MECHANICS]);
     const sent = applyVerb(ctx, state, B_SEAT, command);
     expect(sent.reason).toBeNull();

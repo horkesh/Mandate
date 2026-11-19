@@ -160,8 +160,8 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
       if (!postOnSide(ctx, start, c.to, principal) || holder === null) return reject('unknown_post');
       const last = start.audienceHeld[holder];
       if (last !== undefined && ctx.day - last.audDay < rules.verbs.audience.cooldownDays) return reject('too_soon');
-      // With no plan, use the same prospective subject for every believed holder (0052).
-      const outcome = previewAudience(world, start, principal, c.to, c.counters, ctx.day, start.planRecords[c.to] === undefined ? 'hold' : null, planReading(world, start, c.to, ctx.day), oversightOf(ctx, start, holder, principal).value, holder);
+      // The principal's own plan records supply the subject, just as on arrival (0052).
+      const outcome = previewAudience(world, start, principal, c.to, c.counters, ctx.day, null, planReading(world, start, c.to, ctx.day), oversightOf(ctx, start, holder, principal).value, holder);
       if (typeof outcome === 'string' || outcome.problems.length > 0) return reject('bad_counters');
       sendVerb(ctx, start, principal, holder, c.to, 'in-person', { ...body('audience', { verbPost: c.to }), verbCounters: c.counters.map((k) => [k.kind, k.value, k.boldness, k.from, k.men] as const) });
       return { state: start, reason: null };
