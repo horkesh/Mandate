@@ -12,6 +12,7 @@
  */
 import type { ForceBlockId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import type { CounterTerms } from '../audience/counters.ts';
+import type { BattleOrders } from '../combat/order-kinds.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { EditKind, Posture } from '../plans/goal.ts';
 
@@ -86,6 +87,20 @@ export interface CallCommand {
   readonly termDays: number;
   readonly route: RouteKind;
   readonly bypass: boolean;
+}
+
+/**
+ * A commander's battle orders for the day (lane 1.12): sent by the holder of the post whose men hold his side of a
+ * battle, never by a principal (hard rule 1: the player never fights a division). Each point is an explicit choice or
+ * `judge`, which leaves it to his traits (`combat/orders.ts`).
+ */
+export interface BattleCommand {
+  readonly cmd: 'battle';
+  readonly post: PostId;
+  readonly commit: BattleOrders['commit'];
+  readonly night: BattleOrders['night'];
+  readonly cutOff: BattleOrders['cutOff'];
+  readonly pursue: BattleOrders['pursue'];
 }
 
 export interface ChooseCommand {
@@ -200,8 +215,8 @@ export interface AddressCommand {
 export type VerbCommand = AppointCommand | RelieveCommand | TransferCommand | InquireCommand | ConsultCommand | AudienceCommand | ObserverCommand | PromiseCommand | PressureCommand | AddressCommand;
 
 /** What a seat may send in a `commands` answer. */
-export type SeatCommand = OrderCommand | ReviewCommand | GoCommand | CallCommand | DecideCommand | DelegateCommand | VerbCommand;
+export type SeatCommand = OrderCommand | ReviewCommand | GoCommand | CallCommand | DecideCommand | DelegateCommand | VerbCommand | BattleCommand;
 
-export type Command = OrderCommand | ReviewCommand | GoCommand | CallCommand | ChooseCommand | DecideCommand | DelegateCommand | VerbCommand;
+export type Command = OrderCommand | ReviewCommand | GoCommand | CallCommand | ChooseCommand | DecideCommand | DelegateCommand | VerbCommand | BattleCommand;
 
-export const COMMAND_KINDS = ['address', 'appoint', 'audience', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer'] as const;
+export const COMMAND_KINDS = ['address', 'appoint', 'audience', 'battle', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer'] as const;

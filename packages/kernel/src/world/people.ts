@@ -88,6 +88,8 @@ export interface PersonRecord {
   readonly traits: readonly TraitEvidence[];
   /** A bloc from the pack's vocabulary, or null. */
   readonly bloc: string | null;
+  /** The citations for his bloc (0087); absent when none is given, so a world with no bloc citations keeps its hash. */
+  readonly blocCites?: readonly Citation[];
   /** Ranks in date order; the rank at a start is the last one on or before its date. */
   readonly ranks: readonly RankHeld[];
   /** Fields whose null means "unknown, needs a source" rather than "none". */

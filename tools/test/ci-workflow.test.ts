@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { describe, expect, it } from 'vitest';
 
 /**
@@ -22,6 +23,18 @@ function jobs(text: string): Record<string, string> {
 
 describe('the CI workflow', () => {
   const all = jobs(workflow);
+
+  it('refuses any MANDATE_NO_GIT setting in CI before test exclusion can hide a file', () => {
+    const env: NodeJS.ProcessEnv = { ...process.env, CI: 'true' };
+    delete env.MANDATE_NO_GIT;
+    const load = (environment: NodeJS.ProcessEnv) => spawnSync(process.execPath, ['--import', 'tsx', '--input-type=module', '-e', "await import('./vitest.config.ts')"], { cwd: new URL('../../', import.meta.url), env: environment, encoding: 'utf8' });
+    expect(load(env).status).toBe(0);
+    for (const value of ['', '0', '1']) {
+      const result = load({ ...env, MANDATE_NO_GIT: value });
+      expect(result.status, `CI value ${JSON.stringify(value)}`).not.toBe(0);
+      expect(result.stderr).toContain('MANDATE_NO_GIT must be unset in CI');
+    }
+  });
 
   it('runs every part of npm run check as its own step', () => {
     const parts = pkg.scripts.check!.split('&&').map((s) => s.trim().replace(/^npm run /, ''));
@@ -59,6 +72,19 @@ describe('the CI workflow', () => {
     expect(all.check).toMatch(/run: npm run run:done-check -- --label ci-determinism/);
     expect(all.determinism).toMatch(/needs: check/);
     expect(all.determinism).toMatch(/compare-runs\.ts ci-results\/determinism-ubuntu-24\.04 ci-results\/determinism-windows-2025/);
+  });
+
+  it('fetches no LFS objects on any checkout, and refuses art pushed into plain git (lane 0.7l)', () => {
+    // Every CI download of an LFS object counts against the owner's bandwidth (docs/design/ASSETS.md 0.7).
+    const checkouts = [...workflow.matchAll(/uses: actions\/checkout@\S+\n((?: {8}.*\n)*)/g)];
+    expect(checkouts.length).toBeGreaterThan(1);
+    for (const m of checkouts) expect(m[1], 'a checkout step').toMatch(/^ {8}with:\n(?: {10}#.*\n)* {10}lfs: false$/m);
+    expect(workflow).not.toMatch(/lfs: true/);
+    expect(workflow).not.toMatch(/git lfs (pull|fetch|checkout)/);
+    // Every commit pushed, not only the tip (the review of lane 0.7l): a --no-verify commit later deleted still leaves its
+    // blob in public history. So the check job fetches the whole history.
+    expect(all.check).toMatch(/run: npx tsx tools\/lfs-check\.ts --history HEAD/);
+    expect(all.check).toMatch(/uses: actions\/checkout@\S+\n {8}with:\n(?: {10}.*\n)* {10}fetch-depth: 0\n/);
   });
 
   it('reports the outcome of every step that has an id (honest CI)', () => {

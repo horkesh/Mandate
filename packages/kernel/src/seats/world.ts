@@ -15,9 +15,8 @@
  *   stand-in adapter, 0058): read a man through `traitsOf(world, state, id)`
  *   (`people/traits.ts`), never from here. This World keeps only a person's
  *   side at the start.
- * - **A faction's objective** (STAND-IN(capital-objective; owner: lane 1.12)):
- *   the other faction's capital, when there are exactly two (0058). Its
- *   replacement is the goals of Phase 1's principals (0058, 0072).
+ * - **A faction's objective** is no longer the other capital (0058's stand-in, retired by lane 1.12): each principal's
+ *   goals come from his pack doctrine (`rules.ruleSeats.principals`).
  */
 import { strictCompare } from '../compare.ts';
 import { wireOwnerOf, type ControlIndex } from '../control-index/control-index.ts';
@@ -61,8 +60,6 @@ export interface SeatFaction {
   readonly principal: PersonId;
   /** Where the principal sits: orders start and his reports end here (the start's capital). */
   readonly seatRegion: RegionId;
-  /** STAND-IN(capital-objective; owner: lane 1.12; 0058): the other faction's capital, when there are exactly two; null otherwise. */
-  readonly objective: RegionId | null;
 }
 
 export interface SeatsWorld {
@@ -129,7 +126,6 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
   const people = new Map<PersonId, SeatPerson>();
   for (const p of map.world.people) people.set(p.id, { id: p.id, faction: p.faction });
 
-  const capitals = start.factions.filter((f) => f.capital !== null);
   const factions = new Map<FactionId, SeatFaction>();
   for (const f of start.factions) {
     if (f.principal === null) continue;
@@ -138,8 +134,7 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
       continue;
     }
     if (people.get(f.principal)?.faction !== f.faction) problems.push(`faction ${f.faction}: principal ${f.principal} is not one of its people`);
-    const other = capitals.length === 2 ? capitals.find((c) => c.faction !== f.faction)!.capital : null;
-    factions.set(f.faction, { id: f.faction, principal: f.principal, seatRegion: f.capital, objective: other });
+    factions.set(f.faction, { id: f.faction, principal: f.principal, seatRegion: f.capital });
   }
 
   const situations = [...(options.situations ?? [])].sort((a, b) => strictCompare(a.id, b.id));
@@ -159,6 +154,11 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
       regions: map.regions,
     }),
   );
+  problems.push(...doctrineProblems(map, start, factions, postSides));
+  // Lane 1.12 (G-1.12a): the forts the rules let be bombarded, and the record's terms, name regions of the map and sides.
+  const bombardment = map.world.rules.combat.bombardment;
+  for (const o of bombardment.objectives) if (!map.regions.has(o.region)) problems.push(`rules.combat.bombardment.objectives: ${o.region} is not a region`);
+  for (const t of bombardment.recordTerms) if (!factions.has(t.faction)) problems.push(`rules.combat.bombardment.recordTerms: ${t.faction} is not a faction`);
   if (problems.length > 0) throw new SeatsWorldError(problems);
 
   const regionIds = [...map.regions.keys()].sort(strictCompare);
@@ -313,5 +313,50 @@ export function menAndRegionsReferenceProblems(world: World): string[] {
     if (region === undefined || (region.kind !== 'land' && region.kind !== 'key_point')) problems.push(`census: region ${c.region} is not a land region of the World`);
     if (!Number.isSafeInteger(c.enslavedPopulation) || c.enslavedPopulation < 0) problems.push(`census: region ${c.region}: a whole number of people, not negative`);
   }
+  return problems;
+}
+/**
+ * Problems with the rule-seat principals' doctrine (lane 1.12; `rules.ruleSeats.principals`): at most one row for each
+ * faction with a principal (none: no doctrine); its posts on that faction's side at the start; its calls to posts that raise regiments (a governor,
+ * under the pack's recruitment rules) within the pack's longest term, each post once; its offensives to known regions.
+ */
+export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions: ReadonlyMap<FactionId, SeatFaction>, postSides: ReadonlyMap<string, { readonly faction: FactionId | null }>): string[] {
+  const problems: string[] = [];
+  const rows = map.world.rules.ruleSeats.principals;
+  const recruitment = map.world.rules.recruitment;
+  const selfGoverning = new Set(map.world.vocabularies.departmentKinds.filter((k) => k.selfGoverning).map((k) => k.id));
+  const posts = new Map(start.posts.map((p) => [p.id as string, p]));
+  const kinds = new Set(map.world.vocabularies.personKinds.map((k) => k.id as string));
+  for (const id of [...factions.keys()].sort(strictCompare)) {
+    // A faction with no row has no doctrine: its rule-seat principal answers his commanders and gives no order of his own.
+    // A pack states one row for each faction (the pack validator requires it); two are a contradiction.
+    const n = rows.filter((r) => r.faction === id).length;
+    if (n > 1) problems.push(`rules.ruleSeats.principals: faction ${id} has ${n} doctrine rows, not one`);
+  }
+  rows.forEach((r, i) => {
+    const at = `rules.ruleSeats.principals[${i}]`;
+    const onSide = (post: string, what: string) => {
+      if (!posts.has(post)) problems.push(`${at}.${what}: ${post} is not a start post`);
+      else if (postSides.get(post)?.faction !== r.faction) problems.push(`${at}.${what}: ${post} is not on ${r.faction}'s side at the start`);
+    };
+    if (r.concentrateAt !== null) onSide(r.concentrateAt, 'concentrateAt');
+    if ((r.concentrateAt === null) !== (r.concentrateSource === null)) problems.push(`${at}.concentrateSource: a concentration post cites its source, and only a concentration post has one`);
+    if (!(r.inquireEveryDays >= 1)) problems.push(`${at}.inquireEveryDays must be at least 1`);
+    for (const arm of ['land', 'naval'] as const) for (const k of r.appointKinds[arm]) if (!kinds.has(k)) problems.push(`${at}.appointKinds.${arm}: "${k}" is not a person kind`);
+    const called = new Set<string>();
+    r.calls.forEach((c, j) => {
+      onSide(c.post, `calls[${j}].post`);
+      const p = posts.get(c.post);
+      const dept = p === undefined ? undefined : map.world.departments.find((d) => d.id === p.department);
+      if (p !== undefined && (!recruitment.raisingPostKinds.includes(p.kind) || (dept !== undefined && selfGoverning.has(dept.kind)))) problems.push(`${at}.calls[${j}]: ${c.post} does not raise regiments (rules.recruitment.raisingPostKinds)`);
+      if (c.termDays > recruitment.maxTermDays) problems.push(`${at}.calls[${j}]: a term of ${c.termDays} days is longer than the pack's ${recruitment.maxTermDays}`);
+      if (called.has(c.post)) problems.push(`${at}.calls[${j}]: ${c.post} is called twice`);
+      called.add(c.post);
+    });
+    r.offensives.forEach((o, j) => {
+      onSide(o.post, `offensives[${j}].post`);
+      if (!map.regions.has(o.objective)) problems.push(`${at}.offensives[${j}]: ${o.objective} is not a region`);
+    });
+  });
   return problems;
 }

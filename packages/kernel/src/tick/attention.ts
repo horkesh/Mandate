@@ -38,6 +38,8 @@ function keyOf(world: SeatsWorld, c: Command): AttentionKey | null {
     // A call for regiments (lane 1.7) is an order to a governor: priced as an order.
     case 'call':
       return 'order';
+    // A commander's battle orders cost no attention: commanders have none (lane 1.12).
+    case 'battle':
     case 'choose':
       return null;
   }

@@ -1,0 +1,137 @@
+[
+  {
+    "path": "R18/sources/US_AtlasHCB_Counties_Gen01.zip",
+    "url": "https://publications.newberry.org/ahcb/downloads/gis/US_AtlasHCB_Counties_Gen01.zip",
+    "sha256": "168de25a7ff6e1c7e62c5663373ddd538881203454f3fffbf5b02ebfd1c796ed"
+  },
+  {
+    "path": "R18/sources/natural-earth-terms.html",
+    "url": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "sha256": "d724b6e2586f31a0fbfd241b90ca5cebaa40ba6ea8e8e3ff2be132740fa622be"
+  },
+  {
+    "path": "R18/sources/ne_10m_coastline.zip",
+    "url": "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_coastline.zip",
+    "sha256": "bfa04cdbcbef07ef90dfca1dabb48062eca29900a113df0f389303e255484017"
+  },
+  {
+    "path": "R18/sources/ne_10m_lakes.zip",
+    "url": "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes.zip",
+    "sha256": "0803a06f9c3cb4671d89b68c48b142aad9366ba40f665245e12a913fbc61722a"
+  },
+  {
+    "path": "R18/sources/ne_10m_land.zip",
+    "url": "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_land.zip",
+    "sha256": "e547d749445eaa0964aba76738090ec88f5e63c4585122170f98c67a7ea922dc"
+  },
+  {
+    "path": "R18/sources/ne_10m_rivers_lake_centerlines.zip",
+    "url": "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_rivers_lake_centerlines.zip",
+    "sha256": "ded71b01870855ccfe19b51f2ec14c9bb48fae23c0e9f3c11974d426433b5c38"
+  },
+  {
+    "path": "R18/sources/ne_10m_rivers_north_america.zip",
+    "url": "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_rivers_north_america.zip",
+    "sha256": "7fbe85a2acbf1f3ef4361a16bb39677ad1ea86f888be1689f7a4caeafc7529e8"
+  },
+  {
+    "path": "R18/sources/newberry-downloads.html",
+    "url": "https://publications.newberry.org/ahcb/downloads/index.html",
+    "sha256": "e8a38404667c5f5744d1c5edd13fab0ab78442363e802d336d917ccb7fb98c1d"
+  },
+  {
+    "path": "R18/sources/newberry-policy.html",
+    "url": "https://www.newberry.org/policies",
+    "sha256": "eb6519bbcfcb35bc3d4e8cd41925d4b4b59ecd276eafdfdc16c7678e1d60f040"
+  },
+  {
+    "path": "R18/sources/newberry-us.html",
+    "url": "https://publications.newberry.org/ahcb/downloads/united_states.html",
+    "sha256": "ba010c2fdbb7982c543fead8a66c485783a0625bfcc05d05c04ed8519ecc8d08"
+  },
+  {
+    "path": "R22/sources/etopo1.tif",
+    "url": "https://gis.ngdc.noaa.gov/arcgis/rest/services/DEM_mosaics/ETOPO1_bedrock/ImageServer/exportImage?bbox=-105%2C24%2C-65%2C50&bboxSR=4326&imageSR=4326&size=2000%2C1300&format=tiff&pixelType=F32&interpolation=%2BRSP_BilinearInterpolation&noData=-99999&f=image",
+    "sha256": "65ece881fdae8cbe1c8d9882f2b3a1ae240b0a55215161576e18c2e0f3f2aece",
+    "licence": "Public domain NOAA ETOPO1"
+  },
+  {
+    "path": "R22/sources/etopo1-service.json",
+    "url": "https://gis.ngdc.noaa.gov/arcgis/rest/services/DEM_mosaics/ETOPO1_bedrock/ImageServer?f=pjson",
+    "sha256": "db4f87af8bde644b76c812e360b0e88983ee98f44a39ae4cccff5a2adb358f2f",
+    "licence": "Public domain NOAA"
+  },
+  {
+    "path": "R22/sources/etopo-rights.html",
+    "url": "https://www.ncei.noaa.gov/products/etopo-global-relief-model",
+    "sha256": "2338eccf8d06887253aef8719dd3d8dbfdc3a217119558e21a9c7750ec8e1293",
+    "licence": "NOAA terms and citation"
+  },
+  {
+    "path": "R22/sources/rail.zip",
+    "url": "https://cdn.vanderbilt.edu/t2-my/my-prd/wp-content/uploads/sites/133/2024/09/RR1826-1911Modified103123.zip",
+    "sha256": "884c56054b798073ed71f7f7a05ddbb5af4b4336fd48dd68397df384058dff65",
+    "licence": "Owner written permission recorded in CODEX R22: derived game/repository lines permitted"
+  },
+  {
+    "path": "R22/sources/rail-documentation.pdf",
+    "url": "https://cdn.vanderbilt.edu/t2-my/my-prd/wp-content/uploads/sites/133/2021/02/Creating-Historical-Transportation-Shapefiles-RevisedFeb2021.pdf",
+    "sha256": "ddb18cabe2e1c5008f9558f4a8b4b96bea62015212c3237180a943595bde864b",
+    "licence": "Documentation only"
+  },
+  {
+    "path": "R22/sources/rail-download.html",
+    "url": "https://my.vanderbilt.edu/jeremyatack/data-downloads/",
+    "sha256": "14440e24ba5509f9544433deb2e7f9f17ffe087f64c30b5f300d09154b265bf9",
+    "licence": "Credit wording and source link"
+  },
+  {
+    "path": "R22/sources/etopo-faq.pdf",
+    "url": "https://www.ncei.noaa.gov/sites/default/files/2023-01/Frequently%20Asked%20Questions.pdf",
+    "sha256": "fc7efaf29118f3b3cc9e25977cb4196344c5acf66b336787f0db6f275426b08b",
+    "licence": "Public domain NOAA rights statement"
+  },
+  {
+    "path": "R24/sources/US_AtlasHCB_Counties_Gen001.zip",
+    "url": "https://publications.newberry.org/ahcb/downloads/gis/US_AtlasHCB_Counties_Gen001.zip",
+    "sha256": "fd122e4b07dbde4d33d61f4e81098c5875b85d08509257e17a7d468ee95ee0fd",
+    "licence": "CC0; Newberry confirmation recorded in docs/research/2026-11-14-map-extent-size-sources.md",
+    "use": "Less-generalized close geometry and dated county/state display boundaries only"
+  },
+  {
+    "path": "R24/sources/3dep-virginia.tif",
+    "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-79.5%2C37.4%2C-76.4%2C40.2&bboxSR=4326&size=1800%2C1600&imageSR=4326&format=tiff&pixelType=F32&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A%22None%22%7D&f=json",
+    "sha256": "be4589897e313217344592fb7d9ed1b84c784c4aa14a2c83a42acdc64bf83ca0",
+    "licence": "USGS 3DEP public domain US government elevation; official service copyright USGS",
+    "credit": "U.S. Geological Survey, USGS National Map 3D Elevation Program (3DEP), October 27, 2026.",
+    "rightsPage": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+    "use": "Close-only contour hachures; modern DEM, no roads or buildings copied."
+  },
+  {
+    "path": "R28/sources/3dep-response.json",
+    "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-86%2C31%2C-73%2C43&bboxSR=4326&imageSR=4326&size=5200%2C4800&format=tiff&pixelType=F32&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22None%22%7D&f=json",
+    "sha256": "8daa0dc0cca44d89cb505e777aeb8ad0b0219607e8a3643ced4e58000a350740",
+    "licence": "USGS 3DEP public domain US government elevation",
+    "credit": "USGS National Map 3D Elevation Program (3DEP). October 27, 2026.",
+    "rightsPage": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+    "use": "Modern bare-earth landforms only; no roads, buildings or modern places."
+  },
+  {
+    "path": "R28/sources/3dep-service.json",
+    "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer?f=pjson",
+    "sha256": "2288d6bedae945ed1c7f651ac1587c0d0f17c0738ef8543e414867252d6361bf",
+    "licence": "USGS 3DEP public domain US government elevation",
+    "credit": "USGS National Map 3D Elevation Program (3DEP). October 27, 2026.",
+    "rightsPage": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+    "use": "Modern bare-earth landforms only; no roads, buildings or modern places."
+  },
+  {
+    "path": "R28/sources/3dep-east.tif",
+    "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-86%2C31%2C-73%2C43&bboxSR=4326&imageSR=4326&size=5200%2C4800&format=tiff&pixelType=F32&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22None%22%7D&f=image",
+    "sha256": "45bd0787b3f51fffa1107bd9ebcbfb1dc4990325a90341053a02d9cf1a7e77b5",
+    "licence": "USGS 3DEP public domain US government elevation",
+    "credit": "USGS National Map 3D Elevation Program (3DEP). October 27, 2026.",
+    "rightsPage": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+    "use": "Modern bare-earth landforms only; no roads, buildings or modern places."
+  }
+]

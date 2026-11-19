@@ -2,8 +2,8 @@
  * The deep-freeze backstop for one writer per field (decision 0044's
  * candidate, the lane 0.1 reviewer's suggestion).
  *
- * The one-writer test is a source scan and cannot see writes through an
- * alias (`const c = state.x; c.push(v)`). State is copy-on-write, so nothing
+ * The one-writer test is a source scan and cannot see every write through
+ * an alias, parameter or function call. State is copy-on-write, so nothing
  * legitimate ever edits a record in place; freezing it therefore costs no
  * writer anything and turns any in-place write, by anyone, through any alias,
  * into a TypeError. Tests and determinism runs freeze State after every phase

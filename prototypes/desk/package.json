@@ -1,0 +1,40 @@
+{
+  "name": "presidential-desk-prototype",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx scripts/dev.ts",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "test:ui": "tsx scripts/r26-fixture.ts && playwright test --config playwright.r26.config.ts",
+    "test:plan": "playwright test --config playwright.r26-plan.config.ts",
+    "documents:fixture": "tsx scripts/document-fixture.ts",
+    "test:documents": "npm run documents:fixture && playwright test --config playwright.r15.config.ts",
+    "check": "npm test && npm run build",
+    "map:fetch": "python scripts/fetch-map.py",
+    "map:build": "python scripts/build-map.py && tsx scripts/map-bake.ts",
+    "map:bake": "tsx scripts/map-bake.ts",
+    "map:verify": "python scripts/verify-map.py",
+    "map:icons": "python scripts/copy-map-icons.py",
+    "map:setup": "python -B scripts/map-setup.py",
+    "test:intray": "tsx scripts/r43-volume.ts && playwright test --config playwright.r43.config.ts"
+  },
+  "dependencies": {
+    "d3-geo": "3.1.2",
+    "pixi.js": "8.23.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "@types/d3-geo": "3.1.0",
+    "@types/node": "22.20.5",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "7.3.1",
+    "vitest": "5.1.0"
+  }
+}

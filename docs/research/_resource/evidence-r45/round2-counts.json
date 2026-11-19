@@ -1,0 +1,119 @@
+{
+  "10": {
+    "total": 29,
+    "KEEP": 10,
+    "CHANGE": 0,
+    "HOLD": 19,
+    "fields": {
+      "nerve": {
+        "KEEP": 2,
+        "HOLD": 1
+      },
+      "regard": {
+        "KEEP": 1,
+        "HOLD": 1
+      },
+      "reputation": {
+        "HOLD": 13,
+        "KEEP": 3
+      },
+      "trait": {
+        "KEEP": 1,
+        "HOLD": 4
+      },
+      "value": {
+        "KEEP": 3
+      }
+    }
+  },
+  "11": {
+    "total": 29,
+    "KEEP": 0,
+    "CHANGE": 1,
+    "HOLD": 28,
+    "fields": {
+      "competence": {
+        "HOLD": 2
+      },
+      "nerve": {
+        "HOLD": 2
+      },
+      "reputation": {
+        "HOLD": 19,
+        "CHANGE": 1
+      },
+      "trait": {
+        "HOLD": 4
+      },
+      "value": {
+        "HOLD": 1
+      }
+    }
+  },
+  "12": {
+    "total": 30,
+    "KEEP": 1,
+    "CHANGE": 0,
+    "HOLD": 29,
+    "fields": {
+      "competence": {
+        "HOLD": 4
+      },
+      "nerve": {
+        "HOLD": 4
+      },
+      "regard": {
+        "HOLD": 1
+      },
+      "reputation": {
+        "HOLD": 17,
+        "KEEP": 1
+      },
+      "trait": {
+        "HOLD": 3
+      }
+    }
+  },
+  "13": {
+    "total": 30,
+    "KEEP": 2,
+    "CHANGE": 0,
+    "HOLD": 28,
+    "fields": {
+      "competence": {
+        "HOLD": 4
+      },
+      "nerve": {
+        "HOLD": 5
+      },
+      "reputation": {
+        "HOLD": 15,
+        "KEEP": 1
+      },
+      "trait": {
+        "HOLD": 4,
+        "KEEP": 1
+      }
+    }
+  },
+  "14": {
+    "total": 12,
+    "KEEP": 0,
+    "CHANGE": 0,
+    "HOLD": 12,
+    "fields": {
+      "competence": {
+        "HOLD": 3
+      },
+      "nerve": {
+        "HOLD": 2
+      },
+      "reputation": {
+        "HOLD": 6
+      },
+      "trait": {
+        "HOLD": 1
+      }
+    }
+  }
+}

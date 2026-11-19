@@ -1,0 +1,28 @@
+{
+  "asset": "prototypes/desk/web/map/icons/edit-number.svg",
+  "request": "R18",
+  "brief": "ASSETS.md#1",
+  "date": "2026-11-17",
+  "plan": "owner previously recorded ChatGPT Pro 100",
+  "client": "Codex command-line session",
+  "model": "not exposed by this tool",
+  "apiKeyUnset": "not required; no image model",
+  "tool": "Python file copy",
+  "mode": "byte-for-byte reuse of R16 rough SVG",
+  "prompt": null,
+  "references": [
+    {
+      "path": "prototypes/map-icons/icons/rough/edit-number.svg",
+      "sha256": "ff9b265916720c7916d9f28a5bddbe9c91479939eaf86c55c350ab21ce0d17f6",
+      "sourceRecipe": "prototypes/map-icons/icons/rough/edit-number.svg.recipe.json"
+    }
+  ],
+  "requestedSize": "24-unit vector",
+  "actualSize": "24-unit vector",
+  "variantsMade": 1,
+  "variantChosen": 1,
+  "humanEdits": [],
+  "postProcess": [],
+  "provenanceMarks": "procedural SVG; no embedded image-model marks",
+  "sha256": "ff9b265916720c7916d9f28a5bddbe9c91479939eaf86c55c350ab21ce0d17f6"
+}

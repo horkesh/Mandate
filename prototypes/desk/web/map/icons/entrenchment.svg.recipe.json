@@ -1,0 +1,28 @@
+{
+  "asset": "prototypes/desk/web/map/icons/entrenchment.svg",
+  "request": "R18",
+  "brief": "ASSETS.md#1",
+  "date": "2026-11-17",
+  "plan": "owner previously recorded ChatGPT Pro 100",
+  "client": "Codex command-line session",
+  "model": "not exposed by this tool",
+  "apiKeyUnset": "not required; no image model",
+  "tool": "Python file copy",
+  "mode": "byte-for-byte reuse of R16 rough SVG",
+  "prompt": null,
+  "references": [
+    {
+      "path": "prototypes/map-icons/icons/rough/entrenchment.svg",
+      "sha256": "f3e9c9318ddade98a681503facd0ccc4dc9784692ec8fdc9871de08e4ed0c5b3",
+      "sourceRecipe": "prototypes/map-icons/icons/rough/entrenchment.svg.recipe.json"
+    }
+  ],
+  "requestedSize": "24-unit vector",
+  "actualSize": "24-unit vector",
+  "variantsMade": 1,
+  "variantChosen": 1,
+  "humanEdits": [],
+  "postProcess": [],
+  "provenanceMarks": "procedural SVG; no embedded image-model marks",
+  "sha256": "f3e9c9318ddade98a681503facd0ccc4dc9784692ec8fdc9871de08e4ed0c5b3"
+}

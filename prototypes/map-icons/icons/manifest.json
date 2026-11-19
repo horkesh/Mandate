@@ -1,0 +1,467 @@
+{
+  "request": "R16",
+  "seed": 4816,
+  "icons": [
+    {
+      "id": "hq-army",
+      "group": "headquarters"
+    },
+    {
+      "id": "hq-department",
+      "group": "headquarters"
+    },
+    {
+      "id": "hq-corps",
+      "group": "headquarters"
+    },
+    {
+      "id": "hq-temporary",
+      "group": "headquarters"
+    },
+    {
+      "id": "hq-detachment",
+      "group": "headquarters"
+    },
+    {
+      "id": "squadron",
+      "group": "naval"
+    },
+    {
+      "id": "flotilla",
+      "group": "naval"
+    },
+    {
+      "id": "fort",
+      "group": "works"
+    },
+    {
+      "id": "depot",
+      "group": "places"
+    },
+    {
+      "id": "port",
+      "group": "places"
+    },
+    {
+      "id": "arsenal-yard",
+      "group": "places"
+    },
+    {
+      "id": "town-small",
+      "group": "places"
+    },
+    {
+      "id": "town-medium",
+      "group": "places"
+    },
+    {
+      "id": "town-large",
+      "group": "places"
+    },
+    {
+      "id": "key-point",
+      "group": "places"
+    },
+    {
+      "id": "rail-junction",
+      "group": "infrastructure"
+    },
+    {
+      "id": "rail-cut",
+      "group": "infrastructure"
+    },
+    {
+      "id": "bridge-out",
+      "group": "infrastructure"
+    },
+    {
+      "id": "ford",
+      "group": "infrastructure"
+    },
+    {
+      "id": "enemy-area",
+      "group": "estimates",
+      "semantic": "estimate"
+    },
+    {
+      "id": "enemy-point",
+      "group": "estimates",
+      "semantic": "estimate"
+    },
+    {
+      "id": "observer",
+      "group": "communications"
+    },
+    {
+      "id": "courier",
+      "group": "communications",
+      "availability": "reserved-no-transit-view"
+    },
+    {
+      "id": "wire-in-transit",
+      "group": "communications",
+      "availability": "reserved-no-transit-view"
+    },
+    {
+      "id": "telegraph-office",
+      "group": "communications"
+    },
+    {
+      "id": "battle",
+      "group": "works"
+    },
+    {
+      "id": "siege",
+      "group": "works"
+    },
+    {
+      "id": "entrenchment",
+      "group": "works"
+    },
+    {
+      "id": "pocket-ring",
+      "group": "works"
+    },
+    {
+      "id": "support-request",
+      "group": "annotations"
+    },
+    {
+      "id": "axis-number",
+      "group": "annotations",
+      "slot": [
+        5,
+        10,
+        8,
+        4
+      ]
+    },
+    {
+      "id": "edit-number",
+      "group": "annotations",
+      "slot": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "semantic": "president-mark"
+    },
+    {
+      "id": "correction-initials",
+      "group": "annotations",
+      "slot": [
+        5,
+        4,
+        7,
+        6
+      ],
+      "semantic": "correction"
+    },
+    {
+      "id": "spare-lozenge",
+      "group": "spares",
+      "availability": "unassigned"
+    },
+    {
+      "id": "spare-bracket",
+      "group": "spares",
+      "availability": "unassigned"
+    },
+    {
+      "id": "spare-fan",
+      "group": "spares",
+      "availability": "unassigned"
+    }
+  ],
+  "files": [
+    {
+      "path": "icons/clean/hq-army.svg",
+      "sha256": "0ff8ff32146e45533b5a93e7951f816948cfc456cf1fc4f71e0af331537c6200"
+    },
+    {
+      "path": "icons/clean/hq-department.svg",
+      "sha256": "1f219d73bfb64ac03d46d1d147fbb88aad316f2cbff528b76406543105e0b2de"
+    },
+    {
+      "path": "icons/clean/hq-corps.svg",
+      "sha256": "1d76db29bdcab02c8a07eaccf58462d95bb1b9e276179de7dc496d5a17fb44c6"
+    },
+    {
+      "path": "icons/clean/hq-temporary.svg",
+      "sha256": "0d3366fecc886f2be0546e6f21eaee351184e0621a0de9ff49d1e4a9564d3c17"
+    },
+    {
+      "path": "icons/clean/hq-detachment.svg",
+      "sha256": "0ba0b3c30d006e03d88650ea0fe30167a7fd9b8e6e6c7a4cdb8462fb077356a8"
+    },
+    {
+      "path": "icons/clean/squadron.svg",
+      "sha256": "457450ab11e95fcfbe42bc84165530471ae9b078d0e27bf01fa2adad64e5080e"
+    },
+    {
+      "path": "icons/clean/flotilla.svg",
+      "sha256": "0b15a53f3e3953768ad86669ea00307f8bd844f7b4bc5f71bb9c08e98cc23f5e"
+    },
+    {
+      "path": "icons/clean/fort.svg",
+      "sha256": "bda9fb0c4982186f29567368e3be5ef66e720d3615a3deeb37dd1dd4de87f71b"
+    },
+    {
+      "path": "icons/clean/depot.svg",
+      "sha256": "4b50371cece6346cee13696ee87bbcb6e7b688518bf0c1a52e9cd9a34c46b020"
+    },
+    {
+      "path": "icons/clean/port.svg",
+      "sha256": "ea77637395d51e7c7ad3005c568548a2925bf537cd0992d450cdf152dfa21289"
+    },
+    {
+      "path": "icons/clean/arsenal-yard.svg",
+      "sha256": "23b21e71f753da61dce22a479d5fbd4e1df7336442ff11e716867914052cc6bd"
+    },
+    {
+      "path": "icons/clean/town-small.svg",
+      "sha256": "aaec8a8d8c502b3f5d6d236246d57126e235b7113ac0f1855b001d2405afaed2"
+    },
+    {
+      "path": "icons/clean/town-medium.svg",
+      "sha256": "f18c3da2b9120c26c6e2b6e3737b2e5d6afe715cfcade3cbbf808ca01f6bc105"
+    },
+    {
+      "path": "icons/clean/town-large.svg",
+      "sha256": "9023dbad9537e8401beb8acc7bb115d23424d89cca78a617c47aa51260082ab2"
+    },
+    {
+      "path": "icons/clean/key-point.svg",
+      "sha256": "79f09f227e3388cff54c9fa0bd7407eef5fcd592a80dcb377b4a5675f88a4188"
+    },
+    {
+      "path": "icons/clean/rail-junction.svg",
+      "sha256": "59addbcdac8b1c6ffec40f9215f93ccde2e90d92d7fda3cbfad847daea184e68"
+    },
+    {
+      "path": "icons/clean/rail-cut.svg",
+      "sha256": "2883cc189012f84825d9e1e5b1f4f01f69b8883ba54841e27cc3020190549d35"
+    },
+    {
+      "path": "icons/clean/bridge-out.svg",
+      "sha256": "9859fc7d9686a5dad989c66ea33679e2b18b511b537d933135f9fc6492b721e3"
+    },
+    {
+      "path": "icons/clean/ford.svg",
+      "sha256": "2f42b742a4a899e96fa4d655b33699ee94e2805f16d9fa84976f32580cf7d5b0"
+    },
+    {
+      "path": "icons/clean/enemy-area.svg",
+      "sha256": "5bb18c5d27443eab73318fa12ede8d7054a6ff77e745e29849b9a610d90c747d"
+    },
+    {
+      "path": "icons/clean/enemy-point.svg",
+      "sha256": "2704b298cf5594dd411a4994d4bfd89066127ed69c63b624881abd305a53e456"
+    },
+    {
+      "path": "icons/clean/observer.svg",
+      "sha256": "b270d451dbeb1b369b61b477d906e2125033d35b11b29d1d32dc3ae0514065d9"
+    },
+    {
+      "path": "icons/clean/courier.svg",
+      "sha256": "6f4728b729c94803814c5645d03fca844d0e06101112ebf2181ebd2cefd21185"
+    },
+    {
+      "path": "icons/clean/wire-in-transit.svg",
+      "sha256": "7cafb7885cc68a633bf6d3f7337b67e659325c215975fccd6af68d85979c2aa2"
+    },
+    {
+      "path": "icons/clean/telegraph-office.svg",
+      "sha256": "3eca138e0bebd9f8cccc48e0cbfc054f4699b1b451e9bacd89401c150d05a795"
+    },
+    {
+      "path": "icons/clean/battle.svg",
+      "sha256": "769f768827630ba347a3fcea73396e0f1d4c8cf29d7347931556cd871deb0044"
+    },
+    {
+      "path": "icons/clean/siege.svg",
+      "sha256": "92ea5735b733b684e3060ce731c1e6f9ebc061b22e52675fe69443e5b6f51199"
+    },
+    {
+      "path": "icons/clean/entrenchment.svg",
+      "sha256": "eb5f48325b9f54c5e8f10e40cced5e507e628c872ce4cda981231def2e6c7378"
+    },
+    {
+      "path": "icons/clean/pocket-ring.svg",
+      "sha256": "6524470ddc147d366ad5e7f12f6a7ac8e523a7224dcc44dfe82dc0fa9822dcd0"
+    },
+    {
+      "path": "icons/clean/support-request.svg",
+      "sha256": "9994c3e115a6f0274efd210e12b6b66b527dde4abc8c0d8e274c1da7ebb95fde"
+    },
+    {
+      "path": "icons/clean/axis-number.svg",
+      "sha256": "3476ac37b001da84615491682aa20756003119d6841d732990c6d202049274c4"
+    },
+    {
+      "path": "icons/clean/edit-number.svg",
+      "sha256": "d8d35c09f6e2bf8ae4ef244c5b3a9dae7d6a273ef6e5c68f33b333cf7a04e19e"
+    },
+    {
+      "path": "icons/clean/correction-initials.svg",
+      "sha256": "fc160bab2fec0e4c4c598cbf7ec7ad4fc001748a9bd56e772bb0d95d2ba28498"
+    },
+    {
+      "path": "icons/clean/spare-lozenge.svg",
+      "sha256": "2eee3e7b5c25392d578cf4361501d19a59ea3b310cb5eba0020b7dd39e719e39"
+    },
+    {
+      "path": "icons/clean/spare-bracket.svg",
+      "sha256": "d5a75413c9c70251af5fd5c9b6082b15ce200a815a72cad06f65f3e562cfadad"
+    },
+    {
+      "path": "icons/clean/spare-fan.svg",
+      "sha256": "392df24bba52bce58161ecd54f77582fb021d7169a2f0595a5b2d9fa12068c4d"
+    },
+    {
+      "path": "icons/rough/hq-army.svg",
+      "sha256": "46393ec167d1ac824ca1d8444ffef9f53b623d4ef7a2d9732c0bb27d07f74248"
+    },
+    {
+      "path": "icons/rough/hq-department.svg",
+      "sha256": "e228188cd801271314dfae3f5e4dfff49c25fd2fd8acc9752e38877ab827802d"
+    },
+    {
+      "path": "icons/rough/hq-corps.svg",
+      "sha256": "f9ac4ec3525bad4ad67fa3542aeeecb46548d269bb8e169f8898660f18505a2b"
+    },
+    {
+      "path": "icons/rough/hq-temporary.svg",
+      "sha256": "e919dacea801e7398e231af49b91ca4184df5bb367ec68371a566a83c2933145"
+    },
+    {
+      "path": "icons/rough/hq-detachment.svg",
+      "sha256": "1889c2fb5dbc030b3d9f73637c3f4a86700925be09aa1433a270298b3862b150"
+    },
+    {
+      "path": "icons/rough/squadron.svg",
+      "sha256": "6c32c1ad82d3d8d64a8de22ac876d9a03a103b4fe7b6fafe9bb494314bd49b5a"
+    },
+    {
+      "path": "icons/rough/flotilla.svg",
+      "sha256": "d30cf88fd18648bbcc72ca2009d0edcaf0e097b1ba7ce32f40588a77c1131e8d"
+    },
+    {
+      "path": "icons/rough/fort.svg",
+      "sha256": "2a29c7811c9b47a48e49e82ea5dd7ee486ce18807cb34c8271c7a4de4fe96602"
+    },
+    {
+      "path": "icons/rough/depot.svg",
+      "sha256": "10314dc493469121d7f2af1b3d8a6905432df1c62cdc6b758048b5b49846731d"
+    },
+    {
+      "path": "icons/rough/port.svg",
+      "sha256": "9c8ee48efa0899f2eaffeb041e2405e7e7edeb30b41fe27abdafc6f67a279947"
+    },
+    {
+      "path": "icons/rough/arsenal-yard.svg",
+      "sha256": "6a01f22ca38279240efc501a005f8db726941ffaddba7c8abca75864087c6213"
+    },
+    {
+      "path": "icons/rough/town-small.svg",
+      "sha256": "4b7c56d95296b82ebd56cc989487c0f6f40a5d81b8d9fb646a09aa4e8d5d93ce"
+    },
+    {
+      "path": "icons/rough/town-medium.svg",
+      "sha256": "dab86b168d303184eacaec10f4e68372d4f4f43eae96888cb823cd1e5210e793"
+    },
+    {
+      "path": "icons/rough/town-large.svg",
+      "sha256": "ba29467ebb516622466719e787c5e84863ca6ce7dcb0f498b3cea0e0ec72e97d"
+    },
+    {
+      "path": "icons/rough/key-point.svg",
+      "sha256": "627e5d6b4f13dde76e55995ef36ecd09f5765f140d35a549fddaafc279727147"
+    },
+    {
+      "path": "icons/rough/rail-junction.svg",
+      "sha256": "bc41dc331fe1e66ce6ac039a5cda8325909041689425dabe2452eba2e9f7d1d5"
+    },
+    {
+      "path": "icons/rough/rail-cut.svg",
+      "sha256": "de00d149a6aae0a5d8117037a2ff78ba13bb48c42e7af3181f1bce38d77611dd"
+    },
+    {
+      "path": "icons/rough/bridge-out.svg",
+      "sha256": "af468238aaec54f422068fa3750414dbd5371d5a409bd6f807fca4ae00a02b48"
+    },
+    {
+      "path": "icons/rough/ford.svg",
+      "sha256": "82df1199546b6f8e8e32f8065c0f517398ed9512d7c8972addf7288bbec08185"
+    },
+    {
+      "path": "icons/rough/enemy-area.svg",
+      "sha256": "d10cd357b2a6e47b44545acd23cbf96c207e290c7cbf2a2510b06ebc57d2a7b1"
+    },
+    {
+      "path": "icons/rough/enemy-point.svg",
+      "sha256": "4af064ae5ed7c0d57ac4525c7fba669176bc32e79d8c9802dbc6d018f2fcc631"
+    },
+    {
+      "path": "icons/rough/observer.svg",
+      "sha256": "5734ecd6df318e07f554f9f1c78ee6de2e4ed09d2392fd8e90e939f993339007"
+    },
+    {
+      "path": "icons/rough/courier.svg",
+      "sha256": "716b36a86d4165787d1f20e0a1788f01f1a1b33f73f8283135c4f83f1cf18053"
+    },
+    {
+      "path": "icons/rough/wire-in-transit.svg",
+      "sha256": "429934bea6720bfce534e3cc2b8fe27b959825117ec4a2d58abb53b33074fcbe"
+    },
+    {
+      "path": "icons/rough/telegraph-office.svg",
+      "sha256": "cb39c74f081495e818031803fbb8a4e3aab7c86c60b5ff4631d314b912bd2d64"
+    },
+    {
+      "path": "icons/rough/battle.svg",
+      "sha256": "1a9942b6dfc7a77b8c6de0655c755cada5302cdf49871b734709d54aa1476929"
+    },
+    {
+      "path": "icons/rough/siege.svg",
+      "sha256": "a80e440254f80d71a8f5ee804fc906330522430a4cf46f385319cdfb6c7e9da8"
+    },
+    {
+      "path": "icons/rough/entrenchment.svg",
+      "sha256": "f3e9c9318ddade98a681503facd0ccc4dc9784692ec8fdc9871de08e4ed0c5b3"
+    },
+    {
+      "path": "icons/rough/pocket-ring.svg",
+      "sha256": "2bfa60ef1f5ae4ba96ebd83e5ec1cd606f95cb3a9924a1c0e0c6b510a4954627"
+    },
+    {
+      "path": "icons/rough/support-request.svg",
+      "sha256": "89ed404526f71da2d16ac981b5278cc6409211596929c74c2cdaeefd40c845c4"
+    },
+    {
+      "path": "icons/rough/axis-number.svg",
+      "sha256": "439f640f5a0ef5a3116d26b5d08ae73d360050a151c58280966669f78a3bcfa8"
+    },
+    {
+      "path": "icons/rough/edit-number.svg",
+      "sha256": "ff9b265916720c7916d9f28a5bddbe9c91479939eaf86c55c350ab21ce0d17f6"
+    },
+    {
+      "path": "icons/rough/correction-initials.svg",
+      "sha256": "d6c30fc33f2993da1e6335a7a6e2218414e00f87bb6e1601a00e20d3a5f4e558"
+    },
+    {
+      "path": "icons/rough/spare-lozenge.svg",
+      "sha256": "c6283b84a685cbcc1454e3c7972ed34d489f9503ab08862de9dce10933ccbc86"
+    },
+    {
+      "path": "icons/rough/spare-bracket.svg",
+      "sha256": "ad8ff2a12cb9a4dd5a099251b0faab769e13ba5be15423cefc1889a1e697da20"
+    },
+    {
+      "path": "icons/rough/spare-fan.svg",
+      "sha256": "45db8d88e1c8d0c8e567dcc7d40c450d71676b278e797906224831fc414a01d3"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
 import { strictCompare } from '../compare.ts';
 import type { RegionId } from '../ids.ts';
 import { makeCtx, type PlannerInput } from './context.ts';
-import { byWater, direct, directRoute, flank, holding, pincer, supplyLine, type Outcome } from './methods.ts';
+import { bombard, byWater, direct, directRoute, flank, holding, pincer, supplyLine, type Outcome } from './methods.ts';
 import { overlap } from './route.ts';
 import type { PlanCandidate, DraftSet, PlanRejected } from './types.ts';
 
@@ -32,7 +32,8 @@ function sameShape(a: PlanCandidate, b: PlanCandidate): boolean {
 export function draft(input: PlannerInput): DraftSet {
   const ctx = makeCtx(input);
   const route = directRoute(ctx);
-  const outcomes: Outcome[] = [direct(ctx, route), flank(ctx, route), supplyLine(ctx), ...pincer(ctx, route), ...byWater(ctx), holding(ctx)];
+  // Lane 1.12: a bombardment only where no land route reaches the objective (it fires instead of halting with no route).
+  const outcomes: Outcome[] = [direct(ctx, route), flank(ctx, route), supplyLine(ctx), ...pincer(ctx, route), ...byWater(ctx), ...(route === null ? [bombard(ctx)] : []), holding(ctx)];
   const rejected: PlanRejected[] = [];
   const kept: PlanCandidate[] = [];
   for (const o of outcomes) {

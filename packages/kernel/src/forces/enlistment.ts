@@ -44,8 +44,11 @@ export interface NewBlock {
   readonly enlistment: Enlistment;
 }
 
-/** `create` and `disband`: the changes recruitment proposes for `forces` (the proposer `OWNED_FIELDS` lists). */
-export type MusterDelta = { readonly change: 'create'; readonly create: NewBlock; readonly cause: 'recruitment' } | { readonly change: 'disband'; readonly block: ForceBlockId; readonly cause: 'recruitment' };
+/**
+ * `create` and `disband`: the changes recruitment proposes for `forces` (the proposer `OWNED_FIELDS` lists). Lane 1.12: a
+ * garrison evacuated under the record's terms after a bombardment leaves play by the same disbanding, with its own cause.
+ */
+export type MusterDelta = { readonly change: 'create'; readonly create: NewBlock; readonly cause: 'recruitment' } | { readonly change: 'disband'; readonly block: ForceBlockId; readonly cause: 'recruitment' | 'evacuated_under_terms' };
 
 /**
  * A new block's State: whole, with nothing unknown (its strength and stores are what the governor raised and issued), in

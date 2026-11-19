@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { INFORMAL_SUBTYPES, reportProblems, type ReportBody } from '../src/knowledge/report.ts';
+import { knowledgeOf, reportsForView } from '../src/knowledge/knowledge.ts';
 import { MAX_REPORT_AGE_DAYS, REPORT_KINDS, templateFor, templateProblems } from '../src/knowledge/templates.ts';
 import type { RouteKind } from '../src/messages/latency.ts';
 import { indexSeatsWorld } from '../src/seats/world.ts';
@@ -13,7 +14,7 @@ import { answerEntries, playDays, replay } from '../src/log/session.ts';
 import { IMMUTABLE_ROOT_FIELDS, OWNED_FIELDS } from '../src/ownership.ts';
 import type { State } from '../src/root-state.ts';
 import { pendingRequests } from '../src/seats/requests.ts';
-import { seatIdFor } from '../src/seats/seats.ts';
+import { seatIdFor, seatIds } from '../src/seats/seats.ts';
 import { canonicalHash } from '../src/serialize/hash.ts';
 import { decodeSave, encodeSave } from '../src/serialize/save.ts';
 import { createTelemetry } from '../src/telemetry.ts';
@@ -121,7 +122,7 @@ describe('knowledge stays bounded (FOUNDATION section 8)', () => {
     const sizes: number[] = [];
     const { state } = playDays(world, createState(world, { seed: 3 }), scriptedSeats(SCRIPT), 240, {
       telemetry,
-      onDay: (r) => sizes.push(Math.max(...Object.values(r.state.knowledgeBySeat).map((k) => k.knownReports.length))),
+      onDay: (r) => sizes.push(Math.max(...seatIds(r.state).map((seat) => reportsForView(knowledgeOf(r.state, seat)).length))),
     });
     const delivered = telemetry.mechanics['messages.delivered']!.fires;
     // Lane 1.4: the battle model wounds one commander here and his post falls vacant, so fewer dispatches go (900 in 240 days).
@@ -132,7 +133,7 @@ describe('knowledge stays bounded (FOUNDATION section 8)', () => {
     expect(telemetry.mechanics['knowledge.pruned_superseded']!.fires).toBeGreaterThan(0);
     expect(telemetry.mechanics['knowledge.pruned_age']!.fires).toBeGreaterThan(0);
     // Truth is kept only for reports some seat still holds.
-    const held = new Set(Object.values(state.knowledgeBySeat).flatMap((k) => k.knownReports.map((r) => r.id)));
+    const held = new Set(seatIds(state).flatMap((seat) => reportsForView(knowledgeOf(state, seat)).map((r) => r.id)));
     expect(Object.keys(state.reportTruth).sort()).toEqual([...held].sort());
   });
 });
@@ -352,6 +353,7 @@ describe('ownership of the new State (0044)', () => {
       'forceAssignments:command',
       'forceBlockStates:forces',
       'forceEnlistments:forces',
+      'forceJoins:movement',
       'forceLocations:movement',
       'infraDepotCondition:infrastructure',
       'infraEdgeCondition:infrastructure',
@@ -359,6 +361,8 @@ describe('ownership of the new State (0044)', () => {
       'knowledgeBySeat:knowledge',
       'messagesInTransit:messages',
       'observerPostings:command',
+      'openingControlClaims:knowledge',
+      'openingControlReports:knowledge',
       'operationRecords:operations',
       'orderResponses:proxy',
       'personGrievances:people',
@@ -410,9 +414,9 @@ describe('ownership of the new State (0044)', () => {
     // Lane 1.5: the scripted seats send no people verbs and never run out of attention; promises, rivals and initiatives
     // need verbs or a rung this game does not reach. Each has its own kernel test (people-verbs.test.ts).
     // Lane 1.4: no plan here asks another holder for support, and nothing is old enough to prune in 60 days; both have their own tests.
-    // A scripted order now meets a post the battle model left vacant and is rejected, so `commands.rejected` is live here;
+    // A scripted order meets a post the battle model left vacant; lane 1.12 (0052) accepts it, since the principal has not been told, and it comes back as a returned dispatch, so `commands.rejected` is dead here and `orders.returned` live;
     // no state's ground sees a battle (no governor's wire) and no headquarters is cut off (no pocket report).
-    expect([...dead].sort()).toEqual(['ladder.rival', 'operations.landed', 'operations.support_answered', 'operations.support_refused', 'operations.support_sent', 'orders.conflict', 'orders.relay_objected', 'orders.responses_pruned', 'people.promise_broken', 'people.promise_kept', ...POLITICS_MECHANICS, 'reports.governor_wire', 'reports.observer_letter', 'reports.pocket', 'reports.trimmed', 'seats.attention_refused', 'seats.defaulted', 'seats.initiative', 'verbs.answered', 'verbs.audience', 'verbs.consulted', 'verbs.declined', 'verbs.in_washington']);
+    expect([...dead].sort()).toEqual(['combat.bombardment', 'combat.evacuated', 'commands.rejected', 'ladder.rival', 'movement.join_blocked', 'movement.joined', 'operations.landed', 'operations.support_answered', 'operations.support_refused', 'operations.support_sent', 'orders.conflict', 'orders.relay_objected', 'orders.responses_pruned', 'people.promise_broken', 'people.promise_kept', ...POLITICS_MECHANICS, 'reports.governor_wire', 'reports.observer_letter', 'reports.pocket', 'reports.trimmed', 'seats.attention_refused', 'seats.defaulted', 'seats.initiative', 'verbs.answered', 'verbs.audience', 'verbs.consulted', 'verbs.declined', 'verbs.in_washington']);
     // The plan cycle's mechanics have their own tests (`plans.test.ts`); this game goals, drafts and picks plans.
     const fired = SEATS_MECHANICS.filter((m) => plan(m) && telemetry.mechanics[m]!.fires > 0);
     expect(fired).toEqual(expect.arrayContaining(['planner.candidates', 'planner.searches', 'plans.chosen', 'plans.drafted', 'plans.goal_set']));

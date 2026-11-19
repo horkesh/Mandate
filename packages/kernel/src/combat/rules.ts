@@ -4,6 +4,7 @@
  * placed inside Livermore's and Fox's bands, for lane 1.14 to calibrate. The engine names no terrain (hard rule 3): the
  * frontage table keys the pack's own terrain ids, and `otherTerrain` is the pack's stated row for any terrain it omits.
  */
+import type { FactionId, RegionId } from '../ids.ts';
 
 /** The five battle types (P2), each with its own base loss rates. */
 export const BATTLE_TYPES = ['meeting', 'attack_open', 'attack_hasty', 'assault_works', 'rearguard'] as const;
@@ -133,7 +134,52 @@ export interface CombatRules {
     readonly hours: readonly { readonly phase: DayPhase; readonly fromHour: number; readonly toHour: number }[];
     readonly lossShares: Readonly<Record<BattleType, readonly number[]>>;
   };
+  /** Bombardment across water (lane 1.12, the lead's ruling): a fire-only engagement against a fort the attacker cannot reach by land. */
+  readonly bombardment: BombardmentRules;
 }
+
+/**
+ * A fire-only engagement across a water edge (lane 1.12; `combat/bombard.ts`). Guns are the known men of a side's
+ * artillery-arm blocks (a stand-in: no gun counts are in the data). Every number is permille, and every one is a pack
+ * rule with no kernel default.
+ */
+export interface BombardmentRules {
+  /** The arms (the pack's arm ids) whose known men count as guns. */
+  readonly gunArms: readonly string[];
+  /**
+   * The fortifications that may be bombarded, each cited (the gate reviewer's G-1.12a): any other objective is refused,
+   * so no town is ever bombarded as such, whatever force stands in it. A later fort is added, cited, when its lane needs
+   * it; a populated place needs its civilian consequences authored first, under the sign rule.
+   */
+  readonly objectives: readonly { readonly region: RegionId; readonly source: string }[];
+  /** A water edge carries fire only if it is at most this long, permille days (the batteries' range). */
+  readonly rangeMaxDaysPermille: number;
+  /** Morale the defender loses a day at a fire ratio of 1000 (his guns equal to the attacker's). */
+  readonly moraleLossPerDay: number;
+  /** The fire ratio (attacker's guns over the defender's, permille) is capped here. */
+  readonly ratioCapPermille: number;
+  /** Morale lost a day besides when the garrison's stores are out. */
+  readonly outOfStoresMoraleLoss: number;
+  /** Fortification permille the defender's works lose a day at a fire ratio of 1000. */
+  readonly worksWearPerDay: number;
+  /** The defender's killed and wounded a day, permille of his men, at a fire ratio of 1000. */
+  readonly lossPermille: number;
+  /** An average commander surrenders when his men's morale falls below this. */
+  readonly surrenderMorale: number;
+  /** How far his boldness moves that floor: permille of floor per point of boldness from 500 (bolder holds lower). */
+  readonly boldnessWeight: number;
+  /**
+   * The terms a surrender was given in the record, by fort and defending side: only these are ever stated, and only
+   * when that case happens in play (0074; the lead's gate condition 1). With no row, the men are captured.
+   */
+  readonly recordTerms: readonly { readonly region: RegionId; readonly faction: FactionId; readonly terms: BombardTerms; readonly source: string }[];
+  /** Where the rule's numbers come from. */
+  readonly source: string;
+}
+
+/** Terms a surrender may carry: the garrison leaves under them (never captured; its commander keeps serving). */
+export const BOMBARD_TERMS = ['evacuated_under_terms'] as const;
+export type BombardTerms = (typeof BOMBARD_TERMS)[number];
 
 const RESULT_KEYS: readonly DayResult[] = DAY_RESULTS;
 
@@ -213,5 +259,27 @@ export function combatRulesProblems(rules: CombatRules | undefined, terrains: re
     if (h.toHour <= h.fromHour) problems.push(`combat rule phases.hours.${h.phase} must end after it starts`);
     if (i > 0 && h.fromHour < hours[i - 1]!.toHour) problems.push(`combat rule phases.hours.${h.phase} must start after ${hours[i - 1]!.phase} ends`);
   });
+  const b = rules.bombardment;
+  if (b === undefined) problems.push('combat rule bombardment is missing');
+  else {
+    whole(b.rangeMaxDaysPermille, 'bombardment.rangeMaxDaysPermille');
+    for (const k of ['moraleLossPerDay', 'outOfStoresMoraleLoss', 'worksWearPerDay', 'lossPermille', 'surrenderMorale', 'boldnessWeight'] as const) whole(b[k], `bombardment.${k}`, 1000);
+    whole(b.ratioCapPermille, 'bombardment.ratioCapPermille');
+    if (typeof b.source !== 'string' || b.source.length === 0) problems.push('combat rule bombardment.source must cite where its numbers come from');
+    const permitted = new Set<string>();
+    for (const o of b.objectives) {
+      if (o.source.length === 0) problems.push(`combat rule bombardment.objectives: ${o.region} cites no source`);
+      if (permitted.has(o.region)) problems.push(`combat rule bombardment.objectives: ${o.region} twice`);
+      permitted.add(o.region);
+    }
+    const cases = new Set<string>();
+    for (const t of b.recordTerms) {
+      if (!permitted.has(t.region)) problems.push(`combat rule bombardment.recordTerms: ${t.region} is not a fort the rules let be bombarded (bombardment.objectives)`);
+      if (!BOMBARD_TERMS.includes(t.terms)) problems.push(`combat rule bombardment.recordTerms: "${t.terms}" is not a kind of terms`);
+      if (t.source.length === 0) problems.push(`combat rule bombardment.recordTerms: ${t.region} cites no source`);
+      if (cases.has(`${t.region}|${t.faction}`)) problems.push(`combat rule bombardment.recordTerms: ${t.region} for ${t.faction} twice`);
+      cases.add(`${t.region}|${t.faction}`);
+    }
+  }
   return problems;
 }

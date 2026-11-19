@@ -1,0 +1,42 @@
+{
+  "asset": "prototypes/map-icons/icons/rough/rail-cut.svg",
+  "request": "R16",
+  "brief": "docs/design/ASSETS.md#1",
+  "date": "2026-11-17",
+  "plan": "ChatGPT Pro 100 (owner confirmation recorded in CODEX.md)",
+  "client": "Codex CLI 0.167.0",
+  "model": "Codex; exact runtime model identifier not recorded by this procedural generator",
+  "apiKeyUnset": true,
+  "tool": "Node.js authored vector generator",
+  "mode": "procedural SVG; no image model",
+  "prompt": "R16: original abstract staff-map convention for rail-cut; 24-unit grid; no lettering, flags, emblems or figures.",
+  "references": [],
+  "requestedSize": "24x24 vector units",
+  "actualSize": "24x24 vector units",
+  "variantsMade": 2,
+  "variantChosen": "rough",
+  "humanEdits": [],
+  "postProcess": [
+    "xorshift32 seeded resampling; seed 4816; 1.4-unit maximum segment; 0.105-unit maximum axis displacement; 0.001-unit serialization"
+  ],
+  "provenanceMarks": "Code-produced SVG; no image-tool metadata or embedded provenance marks were created or removed.",
+  "sha256": "de00d149a6aae0a5d8117037a2ff78ba13bb48c42e7af3181f1bce38d77611dd",
+  "sources": [
+    {
+      "path": "src/catalog.mjs",
+      "sha256": "78a0bd53d84ab7cce6920ed1dd55157be03d786773096a512e66290a2fd3b57e"
+    },
+    {
+      "path": "src/roughen.mjs",
+      "sha256": "ab770650c9a884b4e827e73faf0aefe89106e7318ef3cd3cf0072ec454ef15fe"
+    },
+    {
+      "path": "scripts/generate.mjs",
+      "sha256": "8b427ace1dfc638a1f2eb4f4a0eb7e421f540a271f20c4f3db5911676b0dc180"
+    }
+  ],
+  "seed": 4816,
+  "slot": null,
+  "availability": "draft",
+  "notes": "AI-assisted authored vectors, not traced from historical art. CSS supplies colour and source state. Standing review pending."
+}

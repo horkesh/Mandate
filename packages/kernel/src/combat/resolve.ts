@@ -26,6 +26,7 @@ import type { FactionId, ForceBlockId, PostId, RegionId } from '../ids.ts';
 import { clamp } from '../permille.ts';
 import { nextInt, type RngStream } from '../rng.ts';
 import { commitAtDawn, cutOffChoice, pursuitChoice, standAtNight, type CommanderView } from './decide.ts';
+import { JUDGE, ordered, type BattleOrders } from './orders.ts';
 import type { BattleDay, BattleSide, BattleTerm, BlockLoss, CutOff, LeaderHit, Pursuit } from './records.ts';
 import type { BattleType, CombatRules, Commit, DayResult } from './rules.ts';
 
@@ -62,6 +63,8 @@ export interface SideInput {
   readonly surprised: boolean;
   /** Pursued (lane 1.4): the share of its stragglers the pursuer takes today, permille (0 when nobody pursues it). */
   readonly pursuedPermille: number;
+  /** His seat's orders for tonight's choices (lane 1.12): each explicit, or `judge` to leave it to his traits. Absent: all `judge`. */
+  readonly orders?: Pick<BattleOrders, 'night' | 'cutOff' | 'pursue'>;
 }
 
 export interface DayInput {
@@ -235,7 +238,7 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
   const left = input.sides.map((s, i) => basics[i]!.present - loss[i]!.kw);
   const night = input.sides.map((side, i) => {
     if (morale[i]!.routed) return { leaves: true, terms: [] as BattleTerm[] };
-    const d = standAtNight(rules, side.commander, left[i]!, left[1 - i]!);
+    const d = ordered(standAtNight(rules, side.commander, left[i]!, left[1 - i]!), side.orders?.night ?? JUDGE, side.commander.person);
     return { leaves: d.choice === 'withdraw', terms: d.terms };
   });
   const verdict = input.sides.map((side, i) => {
@@ -249,7 +252,7 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
         decisions.push(term('breakout_failed', 0, side.commander.person));
       } else {
         // Surrender is the cut-off commander's own act, from his traits, routed or not (0074).
-        const c = cutOffChoice(rules, side.commander, left[i]!, left[1 - i]!);
+        const c = ordered(cutOffChoice(rules, side.commander, left[i]!, left[1 - i]!), side.orders?.cutOff ?? JUDGE, side.commander.person);
         cutOff = c.choice;
         decisions.push(...c.terms);
       }
@@ -332,7 +335,7 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
     let pursue: Pursuit | null = null;
     const decisions = [...verdict[i]!.decisions];
     if (stays && !morale[i]!.routed && !night[i]!.leaves && leaving(1 - i) && verdict[1 - i]!.cutOff !== 'surrender' && verdict[1 - i]!.cutOff !== 'destroyed') {
-      const p = pursuitChoice(rules, side.commander, left[i]!, left[1 - i]!);
+      const p = ordered(pursuitChoice(rules, side.commander, left[i]!, left[1 - i]!), side.orders?.pursue ?? JUDGE, side.commander.person);
       pursue = p.choice;
       decisions.push(...p.terms);
     }

@@ -28,7 +28,7 @@
 - `packs/`: setting data (one folder per pack)
 - `docs/decisions/`, `docs/design/`, `docs/research/` (dated, sourced), `docs/LESSONS.md`, `docs/OPEN_QUESTIONS.md`
 - `tools/`: validators
-- `CODEX.md`: the one coordination file through which Claude writes asset requests for Codex (0048)
+- `CODEX.md`: the one coordination file through which Claude writes requests for Codex: assets (0048), the prototypes in `prototypes/desk/` and `prototypes/map-icons/` (0089, 0090), coding tasks run through Codex's command line (0092), and the paused 1A lanes, which Codex now implements while it reviews Claude's work (0096)
 
 ## Commands
 
@@ -49,6 +49,8 @@ npm run play -- union-1861       # play Lincoln in the text console: turns of up
 ```
 
 Hooks: `git config core.hooksPath .githooks`. The pre-commit hook checks exactly the staged tree, in a private snapshot when the working tree differs from the index.
+
+Git LFS (lane 0.7l): binaries under `art/` live in Git LFS. Install git-lfs and run `git lfs install --skip-repo` once; `.githooks` already carries LFS's hooks, and the pre-commit hook and CI refuse a binary under `art/` that is not an LFS pointer.
 
 ## Working style
 

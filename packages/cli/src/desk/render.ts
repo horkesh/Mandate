@@ -123,5 +123,8 @@ export function commandText(c: SeatCommand): string {
       return `press ${c.person}`;
     case 'address':
       return `address the ${c.bloc}`;
+    // Lane 1.12: a commander's battle orders. The kernel refuses them from a player's seat (hard rule 1); listed for completeness.
+    case 'battle':
+      return `battle orders for ${c.post}: commit ${c.commit}, night ${c.night}, cut off ${c.cutOff}, pursue ${c.pursue}`;
   }
 }

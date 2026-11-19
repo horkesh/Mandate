@@ -27,21 +27,38 @@ const plans = (options: OptionView[]): PlanMenu => ({
   options,
 });
 const DEFAULTS = { risk: 500, deadlineDays: 20, rail: true, river: false, sea: false, neutral: false, awaitWord: false, approveAsDrafted: true };
-const take = (objective: string): GoalTerms => ({ ...DEFAULTS, objective: region(objective), posture: 'take', committed: [], neutral: true });
+const take = (objective: string, neutral = false): GoalTerms => ({ ...DEFAULTS, objective: region(objective), posture: 'take', committed: [], neutral });
+const person = (s: string) => ids.toId('person', s);
+const COSTS = { order: 1, review_edit: 1, review_approve: 0, review_send_back: 0, go: 0, decide_staff: 0, decide_overrule: 1, delegate: 0, appoint: 1, relieve: 1, transfer: 1, inquire: 0, consult: 1, audience: 1, observer: 1, promise: 1, pressure: 1, address: 1 };
+const army = (id: string, days: number, over: Partial<PrincipalMenu['commandable'][number]> = {}): PrincipalMenu['commandable'][number] => ({
+  post: post(id),
+  holder: person(`${id}_holder`),
+  relays: [post('office')],
+  routes: [{ route: 'courier', typicalDays: days, price: 0 }, { route: 'special-messenger', typicalDays: 1, price: 1 }],
+  men: 1000,
+  raising: false,
+  inTransit: [],
+  ...over,
+});
+/** A principal at war since day 0, with two armies and an empty doctrine: he orders nothing of his own until a row says so. */
 const menu: PrincipalMenu = {
   menuKind: 'principal',
   situations: [],
   faction: ids.toId('faction', 'a'),
-  objective: region('r9'),
   atWarSince: 0,
-  commandable: [
-    { post: post('far'), holder: ids.toId('person', 'x'), relays: [post('office')], routes: [{ route: 'courier', typicalDays: 6, price: 0 }, { route: 'special-messenger', typicalDays: 3, price: 1 }] },
-    { post: post('near'), holder: ids.toId('person', 'y'), relays: [post('office')], routes: [{ route: 'courier', typicalDays: 2, price: 0 }, { route: 'wire', typicalDays: 0, price: 0 }] },
-  ],
+  doctrine: { crossNeutral: false, concentrateAt: null, calls: [], offensives: [], inquireEveryDays: 7, appointKinds: { land: ['general'], naval: ['naval_officer'] } },
+  raising: [],
+  vacancies: [],
+  candidates: [],
+  attention: { left: 12, costs: COSTS, specialMessenger: 1 },
+  commandable: [army('far', 6), army('near', 2)],
   reviews: [],
   awaiting: [],
   goalDefaults: DEFAULTS,
 };
+const doctrine = (over: Partial<PrincipalMenu['doctrine']>): PrincipalMenu => ({ ...menu, doctrine: { ...menu.doctrine, ...over } });
+/** Days that are not his doctrine's inquiry days, so tests of the other jobs see only their own commands. */
+const quiet = (orders: readonly { cmd: string }[]) => orders.filter((o) => o.cmd !== 'inquire');
 const memo = (receivedDay: number, about: string): ReportView => ({
   id: ids.toId('message', `m.${receivedDay}.memo`),
   type: 'advice',
@@ -80,48 +97,110 @@ describe('a holder handed a situation (lane 0.7)', () => {
   });
 });
 
-describe('a principal', () => {
-  it('opens with the army reached soonest, by the quickest free route, with a goal to take the objective on the pack’s terms', () => {
-    expect(principalOrders(menu, [], 1)).toEqual([{ cmd: 'order', to: post('near'), goal: take('r9'), route: 'wire', bypass: false }]);
-    expect(principalOrders(menu, [], 2)).toEqual([]);
+describe('a principal doing his historical jobs by his pack doctrine (lane 1.12)', () => {
+  it('gives each offensive goal on its day, by the quickest free route, on the pack’s terms and his neutral-ground policy', () => {
+    const m = doctrine({ offensives: [{ post: post('far'), objective: region('r9'), day: 30 }] });
+    expect(quiet(principalOrders(m, [], 29))).toEqual([]);
+    expect(quiet(principalOrders(m, [], 30))).toEqual([{ cmd: 'order', to: post('far'), goal: take('r9'), route: 'courier', bypass: false }]);
+    expect(quiet(principalOrders(m, [], 31))).toEqual([]);
+    // A side that crosses neutral ground says so in every goal it gives.
+    expect(quiet(principalOrders({ ...m, doctrine: { ...m.doctrine, crossNeutral: true } }, [], 30))).toEqual([{ cmd: 'order', to: post('far'), goal: take('r9', true), route: 'courier', bypass: false }]);
+    // An offensive dated before the war opens the morning after it.
+    const early = doctrine({ offensives: [{ post: post('near'), objective: region('r9'), day: 0 }] });
+    expect(quiet(principalOrders({ ...early, atWarSince: 40 }, [], 41))).toHaveLength(1);
   });
 
-  it('goes around an office that objected yesterday, by special messenger, once', () => {
-    expect(principalOrders(menu, [memo(4, 'far')], 5)).toEqual([{ cmd: 'order', to: post('far'), goal: take('r5'), route: 'special-messenger', bypass: true }]);
-    expect(principalOrders(menu, [memo(4, 'far')], 6)).toEqual([]);
-    expect(principalOrders(menu, [memo(4, 'far')], 5, { openingDay: 1, goAroundObjections: false, crossNeutral: true })).toEqual([]);
+  it('never orders an army anywhere the doctrine does not name: the capital’s garrison stays (he holds it)', () => {
+    for (const day of [1, 2, 30, 90]) expect(quiet(principalOrders(menu, [], day))).toEqual([]);
+  });
+
+  it('keeps the peace until his side is at war (0064, 0066): nothing of his doctrine before the morning after', () => {
+    const m = doctrine({ offensives: [{ post: post('near'), objective: region('r9'), day: 0 }], calls: [{ post: post('gov'), regiments: 2, termDays: 90, day: 0 }] });
+    const raising = [{ post: post('gov'), holder: person('gov_holder'), routes: [{ route: 'courier' as const, typicalDays: 3, price: 0 }], called: false }];
+    expect(principalOrders({ ...m, raising, atWarSince: null }, [], 5)).toEqual([]);
+    expect(principalOrders({ ...m, raising, atWarSince: 40 }, [], 40)).toEqual([]);
+    expect(quiet(principalOrders({ ...m, raising, atWarSince: 40 }, [], 41)).map((o) => o.cmd)).toEqual(['order', 'call']);
+  });
+
+  it('calls on each raising post his doctrine lists, once: never one already called, never one it does not list', () => {
+    const raising = (called: boolean) => [
+      { post: post('gov'), holder: person('gov_holder'), routes: [{ route: 'courier' as const, typicalDays: 3, price: 0 }], called },
+      { post: post('other_gov'), holder: person('o'), routes: [{ route: 'courier' as const, typicalDays: 3, price: 0 }], called: false },
+    ];
+    const m = doctrine({ calls: [{ post: post('gov'), regiments: 2, termDays: 90, day: 3 }] });
+    expect(quiet(principalOrders({ ...m, raising: raising(false) }, [], 3))).toEqual([{ cmd: 'call', to: post('gov'), regiments: 2, termDays: 90, route: 'courier', bypass: false }]);
+    // Not before its date; and never twice, whoever made the first call (a situation's option included: one owner per levy).
+    expect(quiet(principalOrders({ ...m, raising: raising(false) }, [], 2))).toEqual([]);
+    expect(quiet(principalOrders({ ...m, raising: raising(true) }, [], 3))).toEqual([]);
+  });
+
+  it('concentrates what a governor raised at his doctrine’s post, once while the transfer is on its way', () => {
+    const levy = army('gov', 3, { raising: true, men: 2000 });
+    const m = { ...doctrine({ concentrateAt: post('near') }), commandable: [army('near', 2), levy] };
+    expect(quiet(principalOrders(m, [], 3))).toEqual([{ cmd: 'transfer', from: post('gov'), to: post('near'), force: 'blocks', amount: 999, route: 'courier' }]);
+    expect(quiet(principalOrders({ ...m, commandable: [army('near', 2), { ...levy, inTransit: ['transfer'] }] }, [], 3))).toEqual([]);
+    // A governor with nothing raised, or no concentration post, sends nothing.
+    expect(quiet(principalOrders({ ...m, commandable: [army('near', 2), { ...levy, men: 0 }] }, [], 3))).toEqual([]);
+    expect(quiet(principalOrders({ ...m, doctrine: { ...m.doctrine, concentrateAt: null } }, [], 3))).toEqual([]);
+  });
+
+  it('fills a post the battle left vacant with the senior man of the right kind, once while the appointment is on its way', () => {
+    const vacancy = (arm: 'land' | 'naval', appointing = false) => ({ post: post('army2'), arm, routes: [{ route: 'courier' as const, typicalDays: 2, price: 0 }], appointing });
+    const candidates = [
+      { person: person('commodore'), kind: 'naval_officer', seniority: 9 },
+      { person: person('colonel'), kind: 'general', seniority: 5 },
+      { person: person('lieutenant'), kind: 'general', seniority: 1 },
+    ];
+    expect(quiet(principalOrders({ ...menu, vacancies: [vacancy('land')], candidates }, [], 3))).toEqual([{ cmd: 'appoint', post: post('army2'), person: person('colonel'), rank: null, route: 'courier' }]);
+    expect(quiet(principalOrders({ ...menu, vacancies: [vacancy('naval')], candidates }, [], 3))).toEqual([{ cmd: 'appoint', post: post('army2'), person: person('commodore'), rank: null, route: 'courier' }]);
+    expect(quiet(principalOrders({ ...menu, vacancies: [vacancy('land', true)], candidates }, [], 3))).toEqual([]);
+    // Two vacancies never take the same man.
+    const two = [vacancy('land'), { ...vacancy('land'), post: post('army3') }];
+    expect(quiet(principalOrders({ ...menu, vacancies: two, candidates }, [], 3)).map((o) => ('person' in o ? o.person : null))).toEqual([person('colonel'), person('lieutenant')]);
+  });
+
+  it('asks each of his armies where it stands on his doctrine’s cadence, no other post, never twice while one is on its way', () => {
+    // His armies: the concentration post and each offensive's post. Another field post and a governor are not asked.
+    const m = { ...doctrine({ concentrateAt: post('far'), offensives: [{ post: post('near'), objective: region('x'), day: 99 }] }), commandable: [army('far', 6), army('near', 2, { inTransit: ['inquire'] }), army('fort', 4), army('gov', 3, { raising: true, men: 0 })] };
+    const asks = (day: number) => principalOrders(m, [], day).filter((o) => o.cmd === 'inquire');
+    expect(asks(1)).toEqual([{ cmd: 'inquire', to: post('far'), subject: null, route: 'courier' }]);
+    expect(asks(2)).toEqual([]);
+    expect(asks(8)).toHaveLength(1);
+    // With no army in his doctrine he asks nobody.
+    expect(principalOrders({ ...menu, commandable: [army('fort', 4)] }, [], 1)).toEqual([]);
+  });
+
+  it('spends no more attention than he has: what he cannot pay today waits', () => {
+    const raising = ['g1', 'g2', 'g3'].map((g) => ({ post: post(g), holder: person(g), routes: [{ route: 'courier' as const, typicalDays: 3, price: 0 }], called: false }));
+    const m = { ...doctrine({ calls: raising.map((r) => ({ post: r.post, regiments: 1, termDays: 90, day: 0 })) }), raising, attention: { left: 2, costs: COSTS, specialMessenger: 1 } };
+    expect(quiet(principalOrders(m, [], 3)).map((o) => ('to' in o ? o.to : null))).toEqual([post('g1'), post('g2')]);
+    // Answers that cost nothing still go when he has nothing left.
+    const review = { post: post('far'), holder: person('x'), report: 'm.3.plan', plan: option('direct:x', 400) };
+    expect(quiet(principalOrders({ ...m, attention: { left: 0, costs: COSTS, specialMessenger: 1 }, reviews: [review] }, [], 3))).toEqual([{ cmd: 'review', to: post('far'), action: 'approve', edit: null, route: 'courier', bypass: false }]);
+  });
+
+  it('goes around an office that objected yesterday, by special messenger, to the objective it named, once', () => {
+    expect(quiet(principalOrders(menu, [memo(4, 'far')], 5))).toEqual([{ cmd: 'order', to: post('far'), goal: take('r5'), route: 'special-messenger', bypass: true }]);
+    expect(quiet(principalOrders(menu, [memo(4, 'far')], 6))).toEqual([]);
+    expect(quiet(principalOrders(menu, [memo(4, 'far')], 5, { openingDay: 1, goAroundObjections: false }))).toEqual([]);
   });
 
   it('approves every plan before him as drafted, and gives the word to every operation awaiting it, even at peace', () => {
-    const review = { post: post('far'), holder: ids.toId('person', 'x'), report: 'm.3.plan', plan: option('direct:x', 400) };
+    const review = { post: post('far'), holder: person('x'), report: 'm.3.plan', plan: option('direct:x', 400) };
     const before = { ...menu, atWarSince: null, reviews: [review], awaiting: [post('near')] };
     expect(principalOrders(before, [], 9)).toEqual([
       { cmd: 'review', to: post('far'), action: 'approve', edit: null, route: 'courier', bypass: false },
-      { cmd: 'go', to: post('near'), route: 'wire', bypass: false },
+      { cmd: 'go', to: post('near'), route: 'courier', bypass: false },
     ]);
   });
 
   it('goes around an office that withheld his answer to a plan with the same answer, never a fresh goal (lane 1.2)', () => {
-    const review = { post: post('far'), holder: ids.toId('person', 'x'), report: 'm.3.plan', plan: option('direct:x', 400) };
+    const review = { post: post('far'), holder: person('x'), report: 'm.3.plan', plan: option('direct:x', 400) };
     const withheld = { ...menu, reviews: [review], awaiting: [post('near')] };
-    expect(principalOrders(withheld, [memo(4, 'far'), memo(4, 'near')], 5)).toEqual([
+    expect(quiet(principalOrders(withheld, [memo(4, 'far'), memo(4, 'near')], 5))).toEqual([
       { cmd: 'review', to: post('far'), action: 'approve', edit: null, route: 'special-messenger', bypass: true },
       { cmd: 'go', to: post('near'), route: 'special-messenger', bypass: true },
     ]);
-  });
-
-  it('keeps the peace until his side is at war: no goal at peace, the opening goal the day it is war (0064)', () => {
-    expect(principalOrders({ ...menu, atWarSince: null }, [], 1)).toEqual([]);
-    expect(principalOrders({ ...menu, atWarSince: null }, [memo(0, 'far')], 1)).toEqual([]);
-    expect(principalOrders({ ...menu, atWarSince: 0 }, [], 1)).toHaveLength(1);
-    // The war begins on day 40: he opens on day 41, not before and not again.
-    expect(principalOrders({ ...menu, atWarSince: 40 }, [], 40)).toEqual([]);
-    expect(principalOrders({ ...menu, atWarSince: 40 }, [], 41)).toHaveLength(1);
-    expect(principalOrders({ ...menu, atWarSince: 40 }, [], 42)).toEqual([]);
-  });
-
-  it('orders nothing without an objective', () => {
-    expect(principalOrders({ ...menu, objective: null }, [], 1)).toEqual([]);
   });
 
   it('answers the same request the same way every time (no state, no dice)', () => {
@@ -132,7 +211,6 @@ describe('a principal', () => {
     expect(Object.isFrozen(seat)).toBe(true);
   });
 });
-
 describe('rule seats run a whole side (the testbed, every seat on the rules model)', () => {
   // The testbed's generated v2 data (world format v2: lane 0.5 retired the M2 scenario adapter).
   const read = (p: string) => JSON.parse(readFileSync(new URL(`../../../packs/testbed/data/${p}`, import.meta.url), 'utf8')) as unknown;
@@ -153,5 +231,18 @@ describe('rule seats run a whole side (the testbed, every seat on the rules mode
       expect(r.planStatus).toBe('approved');
       expect(r.planDraft!.draftCandidates.length).toBeGreaterThan(0);
     }
+  });
+
+  it('reappoints a post that lost the holder the scenario gave it, the next morning, and fills no other post', () => {
+    const s0 = phase0.createState(world, { seed: start.seed });
+    const army = post('n_army_east');
+    expect(s0.postStates[army]!.postHolder).not.toBeNull();
+    // As the battle model leaves one: its general hit, the post vacant (the kernel test drives the hit itself).
+    const vacated = { ...s0, postStates: { ...s0.postStates, [army]: { ...s0.postStates[army]!, postHolder: null } } };
+    const { log } = phase0.playDays(world, vacated, () => seat, 2, { freeze: true });
+    const appointments = log.filter((e) => e.command.cmd === 'appoint').map((e) => (e.command as { readonly post?: string }).post);
+    expect(appointments).toEqual([army]);
+    // Positive control: with the post held, nobody is appointed.
+    expect(phase0.playDays(world, s0, () => seat, 2, { freeze: true }).log.filter((e) => e.command.cmd === 'appoint')).toEqual([]);
   });
 });

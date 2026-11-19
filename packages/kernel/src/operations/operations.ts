@@ -20,7 +20,7 @@ import type { Posture } from '../plans/goal.ts';
 import type { State } from '../root-state.ts';
 
 /** An axis's stages (0073's lifecycle): `works` is digging in at the objective it holds. */
-export const AXIS_STAGES = ['assemble', 'march', 'works', 'assault', 'pause', 'pursue', 'withdraw', 'end'] as const;
+export const AXIS_STAGES = ['assemble', 'march', 'works', 'assault', 'bombard', 'pause', 'pursue', 'withdraw', 'end'] as const;
 export type AxisStage = (typeof AXIS_STAGES)[number];
 
 /** How an operation ended. */
@@ -55,6 +55,9 @@ export const STAGE_REASONS = [
   'no_route',
   'superseded',
   'force_taken',
+  // Lane 1.12: the bombardment stage.
+  'bombarding',
+  'garrison_surrendered',
 ] as const;
 export type StageReason = (typeof STAGE_REASONS)[number];
 

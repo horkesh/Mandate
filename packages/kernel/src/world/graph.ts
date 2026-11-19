@@ -17,7 +17,14 @@
  * Zod schemas produce exactly these types (a type-level test holds them
  * together), so the kernel never imports a schema library.
  */
-import type { DepotId, EdgeId, InstallationId, RailLineId, RegionId, WeatherZoneId } from '../ids.ts';
+import { IdError, type DepotId, type EdgeId, type InstallationId, type RailLineId, type RegionId, type WeatherZoneId } from '../ids.ts';
+
+/** The far end of an edge seen from one of its ends. Throws if `from` is neither end. */
+export function otherEnd(edge: EdgeRecord, from: RegionId): RegionId {
+  if (edge.a === from) return edge.b;
+  if (edge.b === from) return edge.a;
+  throw new IdError('region', from, 'unknown');
+}
 
 /** A key into the pack's string tables (decision 0030). World records hold keys, never player text. */
 export type StringKey = string;

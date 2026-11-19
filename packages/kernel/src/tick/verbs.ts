@@ -21,6 +21,7 @@ import type { ReportBody, ReportClaim, StatedReason } from '../knowledge/report.
 import { term } from '../knowledge/truth.ts';
 import type { VerbCommand } from '../log/commands.ts';
 import { mintMessageId, type TransitMessage, type VerbBody, type VerbKind } from '../messages/transit.ts';
+import { orderJoins } from '../movement/join.ts';
 import { applyPeopleChanges, type PeopleChange } from '../people/people.ts';
 import { traitsOf } from '../people/traits.ts';
 import { recordResponse, responseOf } from '../proxy/responses.ts';
@@ -300,6 +301,10 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
           const result = transferForce(world.map, state, from, v.verbTo!, v.verbMode === 'blocks' ? { force: 'blocks', count: amount } : { force: 'men', men: amount }, pick);
           state = result.state;
           done = result.moved.length > 0;
+          // A transfer concentrates (lane 1.12, the lead's Fix 1): what was handed over is ordered to join the receiving
+          // post at its seat (its home region in pack data), and marches there by movement's own routes.
+          const seat = state.postStates[v.verbTo!]!.postSeat;
+          if (seat !== null) state = orderJoins(state, result.moved, v.verbTo!, seat, ctx.day);
         } catch (e) {
           if (!(e instanceof CommandError)) throw e;
           done = false;
