@@ -1,0 +1,54 @@
+# A1: commissions at the start
+
+2026-11-19. R45 research, not an apply or a ruling on the definition of a bloc.
+
+**Result:** all thirteen serving officers held a US Army commission before 5 March 1861. Nine of the ten proposed civilians had left US Army service and had not returned by that date. Stone had left the Regular Army, but held a District volunteer appointment. He cannot safely be described as having no federally issued commission without resolving the District exception below.
+
+Sources read: [Army Register, 1 September 1861](https://archive.org/details/officialarmyregi1861unit), [Heitman, volume 1](https://archive.org/details/historicalregist01heitrich), and Cullum, [volume 1](https://archive.org/details/biographicalregi01cull), [volume 2](https://archive.org/details/biographicalregi02cull). These are factual service checks, not contemporary judgments of ability. Cullum locators below give his numbered entry and the printed page range containing its service history. Retained OCR and selected register images were read. The image named `p18.jpg` is scan leaf 18, **printed page 13**, not printed page 18. Image `p23.jpg` is printed page 18. See `evidence-r45/A1-*.json` and `A1-extract.log` for retained excerpts. Page references are printed pages.
+
+The September rank is often a new wartime rank. Its existence alone does not establish service on 5 March. The resignation/reappointment footnotes and the chronological entries supply that distinction. In particular, the register's printed p3 explicitly records Halleck's 1854 resignation and August 1861 reappointment, and p46 records Stone's 1856 resignation and May 1861 reappointment.
+
+## Thirteen serving officers
+
+| Man | Entry and evidence | Verdict on 5 March 1861 |
+|---|---|---|
+| William B. Franklin | ArmyReg1861-09 pp13,55, William B. Franklin. Heitman 1 p434: captain, topographical engineers, 1 July 1857, followed by the May 1861 colonelcy. Cullum 2 no1167 pp72-73: that captaincy and continuing federal engineering duty in 1860-61. | Commission held. Keep `army` as a fact. |
+| Samuel P. Heintzelman | ArmyReg1861-09 pp13,55. Heitman 1 p521: major, 1st infantry, 3 March 1855. Cullum 1 no445 pp295-296: that majority, leave in 1860-61 and further Army duty. | Commission held. Keep `army`. |
+| Erasmus D. Keyes | ArmyReg1861-09 pp13,55. Heitman 1 p596: major, 1st artillery, 12 October 1858, military secretary from 1 January 1860. Cullum 1 no671 pp401-402: service as Scott's military secretary through 19 April 1861. | Commission held. Keep `army`. |
+| Irvin McDowell | ArmyReg1861-09 p3. Heitman 1 p664: assistant adjutant-general with brevet-major staff rank from 31 March 1856. Cullum 1 no963 pp559-560: that appointment, inspection in 1860-61 and Washington duty in February-April 1861. | Commission held. Keep `army`. A staff commission is not excluded because the May generalship was later. |
+| Joseph K. F. Mansfield | ArmyReg1861-09 p3. Heitman 1 p688: colonel, inspector-general, 28 May 1853. Cullum 1 no287 pp221-222: that appointment and inspection of Texas in 1860-61. | Commission held. Keep `army`. |
+| George G. Meade | ArmyReg1861-09 p18: captain dated 19 May 1856, with footnote recording the 1842 return after his 1836 resignation. Heitman 1 p700 and Cullum 1 no804 pp471-472 agree on the renewed service and captaincy. | Commission held. Keep `army`. Do not carry the 1836 resignation forward past his reappointment. |
+| Montgomery C. Meigs | ArmyReg1861-09, Quartermaster General entry, records the later 15 May 1861 appointment. Heitman 1 p702: captain of engineers, 3 March 1853. Cullum 1 no846 pp495-496: that captaincy and engineering duty continuing through 1860-61. | Commission held. Keep `army`. The September office is not used as proof of a March generalship. |
+| John F. Reynolds | ArmyReg1861-09 pp13,46. Heitman 1 p825: captain, 3rd artillery, 3 March 1855. Cullum 2 no1084 pp22-23: that captaincy and continuing military duty into 1861. | Commission held. Keep `army`. |
+| James W. Ripley | ArmyReg1861-09, Ordnance Department, James W. Ripley entry, later chief's appointment dated 3 August 1861. Heitman 1 p832 and Cullum 1 no102 pp137-138: lieutenant-colonel of ordnance from 31 December 1854, with continuing service. | Commission held. Keep `army`. Not chief of ordnance on 5 March on this evidence. |
+| John M. Schofield | ArmyReg1861-09 artillery entry, OCR `John M. Schotield`, and index under Schofield, John M. Heitman 1 p865: 1st artillery service before the May 1861 captaincy. Cullum 2 no1585 p338: 1st artillery lieutenant and leave in 1860-61. Their printed dates for his first-lieutenant promotion differ, but both precede March 1861. | Commission held. Keep `army`. The date discrepancy does not affect A1. |
+| Charles F. Smith | ArmyReg1861-09 pp13,55: lieutenant-colonel, 10th infantry, 3 March 1855. Heitman 1 p895 and Cullum 1 no410 pp280-281 record the same appointment and continuing duty. | Commission held. Keep `army`. |
+| George H. Thomas | ArmyReg1861-09 p13 lists the later volunteer generalship. Heitman 1 pp953-954: major, 2nd cavalry, 12 May 1855. Cullum 1 no1028 pp600-601: that majority and leave in 1860-61. | Commission held. Keep `army`. |
+| Fitz John Porter | ArmyReg1861-09 pp13,55. Heitman 1 p799: assistant adjutant-general, brevet-captain staff rank, 27 June 1856. Cullum 2 no1238 pp118-119: that appointment and special duty in February-March 1861. | Commission held. Keep `army`. |
+
+The Meigs, Ripley and Schofield register entries were read in OCR, whose running-page recognition is poor. Their exact register page numerals have **not** been silently supplied from scan-leaf arithmetic. Their decisive pre-start facts have the verified Heitman/Cullum locators above. This is a locator limitation, not an unverified March-service verdict.
+
+## Ten former officers and the District exception
+
+| Man | Entry, page and transition | Verdict on 5 March 1861 |
+|---|---|---|
+| Ambrose E. Burnside | Heitman 1 p266: resigned 2 October 1853, Rhode Island colonelcy 2 May 1861. Cullum 2 no1348 pp191-192: resignation, civilian railroad employment in 1860-61. ArmyReg1861-09 p13 lists his later August generalship. | No current US Army commission. Bloc none under the ruling. |
+| Ulysses S. Grant | Heitman 1 p470: resigned 31 July 1854, subsequent commissions in 1861. Cullum 2 no1187 pp85-86: resignation and merchant at Galena in 1860-61. ArmyReg1861-09 p13 is the later volunteer generalship. | No current US Army commission. None. |
+| Henry W. Halleck | ArmyReg1861-09 p3 footnote: resigned 1 August 1854, reappointed 19 August 1861. Heitman 1 p491 and Cullum 1 no988 pp573-574 corroborate, and Cullum separately lists California militia service. | No current US Army commission. A state militia title does not restore the federal commission. None. |
+| Ethan A. Hitchcock | Heitman 1 p532: resigned 18 October 1855, federal volunteer appointment in February 1862. Cullum 1 no177 pp169-170: resignation and literary pursuits in 1855-62. No September register appointment is used to fill that gap. | No current US Army commission. None. |
+| Joseph Hooker | Heitman 1 p540: resigned 21 February 1853, volunteer generalship 17 May 1861. Cullum 1 no919 pp536-537: resignation and California militia colonelcy in 1859-61. ArmyReg1861-09 p13 lists the May generalship. | No current US Army commission. State militia service is separate. None. |
+| Ormsby M. Mitchel | Heitman 1 p715: resigned 30 September 1832, volunteer generalship 9 August 1861. Cullum 1 no555 pp345-346: resignation and observatory work in 1859-61. ArmyReg1861-09 p13 lists the August generalship. | No current US Army commission. None. |
+| Robert Patterson | Heitman 1 p775: Mexican-war volunteer service ended 20 July 1848, next appointment major-general of Pennsylvania volunteers 15 April 1861. Appletons 4 pp673-674, Robert Patterson the soldier, explicitly places his Pennsylvania militia command after the Mexican War and federal muster on 15 April. No Cullum graduate entry is used for him. The September register is not a complete roll of earlier expired volunteer appointments. | No current US Army commission. Pennsylvania militia title, not continuous federal service from Mexico. None. |
+| William S. Rosecrans | ArmyReg1861-09 p3 footnote: resigned 1 April 1854, reappointed 16 May 1861. Heitman 1 p846 (OCR `Bosecrans`) and Cullum 2 no1115 pp42-43 corroborate the resignation and intervening civilian employment. | No current US Army commission. None. |
+| William T. Sherman | ArmyReg1861-09 p45 footnote: resigned 6 September 1853, reappointed 14 May 1861. Heitman 1 p882 and Cullum 1 no1022 pp595-596 corroborate. | No current US Army commission. None. |
+| Charles P. Stone | ArmyReg1861-09 p46 footnote: resigned 17 November 1856, reappointed 14 May 1861. Heitman 1 pp928-929 distinguishes the regular appointment from District volunteers. **Cullum 2 no1237 pp117-118 separately dates his District volunteer inspector-general appointment to 1 January 1861.** | No Regular Army commission, but a current District volunteer appointment. The unqualified claim that he had no federal commission is not established. |
+
+## Stone: authority and proposed ruling
+
+Cullum is a permitted factual register source. It supplies the January District appointment that the brief's word *civilian* conceals. Stone's later first-person account, *Battles and Leaders* 1 pp11-12, says the President commissioned him after his 31 December interview with Scott and that he was mustered from 2 January 1861. Earlier, on p9, he describes organizing under the old law of 1799. The [Perseus transcription](https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2001.05.0007:part=2.2:chapter=2.3) was read in the retained `stone_bl.html`. **WEAK retrospective evidence**: the presidential-authority and January-muster claims require a contemporaneous commission, order or muster roll before they are treated as independently verified. The statute itself was not read. No legal conclusion about its powers is asserted here.
+
+**Proposed ruling [I]:** preserve the distinction and leave Stone's start bloc unassigned pending the lead's application of *federal commission* to this appointment. Reject calling him an ordinary civilian, and reject treating the May Regular Army reappointment as the beginning of all his 1861 service. If `army` means Regular Army only, his bloc is none. If the presidential District appointment counts, Cullum makes him an exception to the ten-person blanket rule. Do not run a blanket civilian apply as though A1 certified all ten.
+
+## Findings outside my scope
+
+The 13 `army` verdicts are ready for the apply lane. Stone's classification and the Schofield date disagreement are explicitly separated from those verdicts. R49 must receive the fifteen post-start resignations without the older apply's pre-positioned stand-ins. No pack file or apply tool was changed.
