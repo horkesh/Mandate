@@ -1,6 +1,6 @@
-/** R70: public opening knowledge and received evidence only. R75 limits live standing to one's own side. */
+/** Public opening knowledge and received evidence only, including which side a known man serves (R76). */
 import { strictCompare } from '../compare.ts';
-import type { FactionId, PersonId, PostId } from '../ids.ts';
+import type { DepartmentId, FactionId, PersonId, PostId } from '../ids.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import { dateOfDay, daysFromCivil, formatIsoDate, parseIsoDate } from '../world/calendar.ts';
 import type { KnownPersonView, KnownPostView, KnownStanceView, ReportView } from './types.ts';
@@ -31,6 +31,8 @@ export function peopleProjection(
   }
   const departments = new Set(world.map.world.departments.filter(d => d.faction === faction).map(d => d.id));
   const posts = new Map<PostId, KnownPostView>();
+  const knownSides = new Map<DepartmentId, FactionId>();
+  const postDepartments = new Map<PostId, DepartmentId>();
   const people = new Set<PersonId>([principal]);
   const today = calendar === null ? null : formatIsoDate(dateOfDay(calendar, day));
   // The principal knows his own opening establishment, including unfilled offices. A foreign report reveals only
@@ -38,6 +40,7 @@ export function peopleProjection(
   for (const p of world.start.posts) {
     if (!departments.has(p.department)) continue;
     const scheduled = today === null ? [] : [...p.departmentChanges].filter(c => c.on <= today).sort((a, b) => strictCompare(a.on, b.on));
+    postDepartments.set(p.id, scheduled.length === 0 ? p.department : scheduled[scheduled.length - 1]!.department);
     const parent = scheduled.length === 0 ? p.parent : scheduled[scheduled.length - 1]!.parent;
     posts.set(p.id, { post: p.id, parent, placementKnown: true, holder: p.holder, status: p.holder === null ? 'vacant' : 'held', vacantSince: null, source: null, asOfDay: 0, observerReports: [] });
     if (p.holder !== null) people.add(p.holder);
@@ -47,6 +50,10 @@ export function peopleProjection(
   const ensure = (id: PostId): KnownPostView => {
     const old = posts.get(id);
     if (old !== undefined) return old;
+    // Once a paper names a post, its public department can identify a government notice.
+    // Its opening holder and parent still supply no evidence about who holds it now.
+    const opening = world.start.posts.find(p => p.id === id);
+    if (opening !== undefined) postDepartments.set(id, opening.department);
     const unknown: KnownPostView = { post: id, parent: null, placementKnown: false, holder: null, status: 'unknown', vacantSince: null, source: null, asOfDay: 0, observerReports: [] };
     posts.set(id, unknown);
     return unknown;
@@ -57,6 +64,18 @@ export function peopleProjection(
     if (holder !== null) people.add(holder);
   };
   for (const r of chronological) {
+    // A notice's received paper identifies the public act. Never inspect whether its event fired in State,
+    // and never interpret a decision's possible effects as an announcement that they happened.
+    if (r.subjectKind === 'situation') {
+      const notice = world.situations.find(s => s.id === r.subjectId);
+      if (notice?.kind === 'notice' && notice.report?.reportType === r.type && notice.report.subtype === r.subtype) {
+        for (const effect of notice.effects) {
+          if (!('propose' in effect)) continue;
+          const p = effect.propose;
+          if (p.owner === 'command' && p.field === 'department_side' && p.subject !== null && p.side !== null && p.delta > 0) knownSides.set(p.subject as DepartmentId, p.side);
+        }
+      }
+    }
     for (const via of r.via) ensure(via);
     people.add(r.author);
     if (r.subjectKind === 'person') people.add(r.subjectId as PersonId);
@@ -75,6 +94,12 @@ export function peopleProjection(
     }
   }
   const personViews: KnownPersonView[] = [...people].sort(strictCompare).map(person => {
+    let side = world.personIds.includes(person) ? world.person(person).faction : null;
+    for (const post of posts.values()) {
+      if (post.holder !== person) continue;
+      const department = postDepartments.get(post.post);
+      if (department !== undefined && knownSides.has(department)) side = knownSides.get(department)!;
+    }
     const stances: KnownStanceView[] = [];
     const assessments: KnownPersonView['assessments'][number][] = [];
     for (const r of chronological) {
@@ -83,7 +108,7 @@ export function peopleProjection(
       }
       if (r.author !== person && r.subjectKind === 'person' && r.subjectId === person && r.type === 'advice' && r.advice !== null) assessments.push(r.id);
     }
-    return Object.freeze({ person, standing: standingFor(person), stances: Object.freeze(stances), assessments: Object.freeze(assessments) });
+    return Object.freeze({ person, standing: side === faction ? standingFor(person) : null, stances: Object.freeze(stances), assessments: Object.freeze(assessments) });
   });
   return Object.freeze({
     posts: Object.freeze([...posts.values()].sort((a, b) => strictCompare(a.post, b.post)).map(p => Object.freeze({ ...p, observerReports: Object.freeze([...p.observerReports]) }))),

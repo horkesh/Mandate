@@ -172,7 +172,7 @@ export interface KnownStanceView {
 
 export interface KnownPersonView {
   readonly person: PersonId;
-  /** Live public standing on the principal's own side (R75). Others need a received figure; null if none is held. */
+  /** Live public standing for men believed own-side from opening data and received evidence (R76). Null otherwise. */
   readonly standing: number | null;
   readonly stances: readonly KnownStanceView[];
   /** Received advice about this person, retaining its author and uncertainty through the source report. */

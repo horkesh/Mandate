@@ -4,6 +4,7 @@ import { deliverReport } from '../src/knowledge/knowledge.ts';
 import { NO_TRUTH } from '../src/knowledge/truth.ts';
 import type { ReportBody } from '../src/knowledge/report.ts';
 import type { State } from '../src/root-state.ts';
+import type { SituationDef } from '../src/situations/types.ts';
 import { indexSeatsWorld } from '../src/seats/world.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
 import { createState } from '../src/tick/setup.ts';
@@ -91,18 +92,56 @@ it('does not reveal live standing for an enemy named as author or subject, with 
   expect(before.people.find(p => p.person === P('a_gen'))!.standing).toBe(state.personStanding[P('a_gen')]);
 });
 
-it.each([F('b'), null])('invalidates cached standing when a known holder changes side to %s, without changing the received post catalogue', side => {
+it.each([F('b'), null])('keeps standing and cached catalogues unchanged when hidden command tables change to %s', side => {
   const state = createState(world, { seed: 1 }), cache = createViewCache();
   const before = viewFor(world, state, seat, cache);
   const foreign = { ...state, departmentFactions: { ...state.departmentFactions, [toId('department', 'a_war')]: side } };
   const after = viewFor(world, foreign, seat, cache);
-  expect(after.people.find(p => p.person === P('a_gen'))!.standing).toBeNull();
-  expect(after.posts).toEqual(before.posts);
-  // Losing his post restores his own side (0065); the received catalogue has not changed.
+  expect(after.people).toBe(before.people);
+  expect(after.posts).toBe(before.posts);
+  expect(viewFor(world, foreign, seat).people).toEqual(before.people);
   const released = { ...foreign, postStates: { ...foreign.postStates, [POST('a_army')]: { ...foreign.postStates[POST('a_army')]!, postHolder: null } } };
   const restored = viewFor(world, released, seat, cache);
   expect(restored.people.find(p => p.person === P('a_gen'))!.standing).toBe(state.personStanding[P('a_gen')]);
-  expect(restored.posts).toEqual(before.posts);
+  expect(restored.people).toBe(before.people);
+  expect(restored.posts).toBe(before.posts);
+  expect(viewFor(world, released, seat).people).toEqual(before.people);
+});
+
+const sideNotice = (id: string, side: 'a' | 'b'): SituationDef => ({
+  id: toId('situation', id), kind: 'notice', faction: F('a'), title: 'notice.title', text: 'notice.text',
+  earliest: '1900-06-01', event: { dayAtLeast: 1 }, knowledge: null, railroad: 'test fixture', chain: null,
+  subjects: [], options: [], inaction: null, historicalDefault: null, staffLine: null,
+  delegableTo: [], resurfaceOn: [],
+  effects: [{ propose: { owner: 'command', field: 'department_side', subject: 'a_war', side: F(side), delta: 1, reason: 'notice' } }],
+  report: { authors: [POST('a_office')], reportType: 'wire-dispatch', subtype: null },
+  gate: { none: 'test fixture' }, gateReview: null, citations: [],
+});
+
+it('changes known side only on a received government notice, in written order, independent of hidden truth', () => {
+  const w = indexedFixture({}, [sideNotice('joins_b', 'b'), sideNotice('returns_a', 'a')]);
+  const state = { ...createState(w, { seed: 1 }), stateDay: 10 };
+  const hidden = { ...state, departmentFactions: { ...state.departmentFactions, [toId('department', 'a_war')]: F('b') } };
+  const notice = { reportAuthor: P('a_sec'), reportAuthorPost: POST('a_office'), reportSubjectKind: 'situation' as const, reportSubjectId: 'joins_b', reportDay: 5 };
+  for (const cache of [undefined, createViewCache()]) {
+    const before = viewFor(w, state, seat, cache);
+    expect(viewFor(w, hidden, seat, cache).people).toEqual(before.people);
+    const told = receive(state, 'm.notice', notice);
+    const changed = viewFor(w, told, seat, cache);
+    expect(changed.people.find(p => p.person === P('a_gen'))!.standing).toBeNull();
+    expect(viewFor(w, receive(hidden, 'm.notice', notice), seat, cache).people).toEqual(changed.people);
+    const restored = receive(told, 'm.newer', { ...notice, reportSubjectId: 'returns_a', reportDay: 7 });
+    const late = receive(restored, 'm.old', { ...notice, reportDay: 3 });
+    expect(viewFor(w, late, seat, cache).people.find(p => p.person === P('a_gen'))!.standing).toBe(state.personStanding[P('a_gen')]);
+    const laterTruth = { ...told, personStanding: { ...state.personStanding, [P('a_gen')]: 999 }, postStates: { ...state.postStates, [POST('a_army')]: { ...state.postStates[POST('a_army')]!, postHolder: null } } };
+    expect(viewFor(w, laterTruth, seat, cache).people.find(p => p.person === P('a_gen'))!.standing).toBeNull();
+    for (const over of [{ reportDay: 11 }, { reportType: 'observer-letter' as const }, { reportSubjectKind: 'post' as const }]) {
+      expect(viewFor(w, receive(state, 'm.not-notice', { ...notice, ...over }), seat, cache).people).toEqual(before.people);
+    }
+    const pending = receive(state, 'm.pending', notice, 11);
+    expect(viewFor(w, pending, seat, cache).people).toEqual(before.people);
+    expect(viewFor(w, { ...pending, stateDay: 11 }, seat, cache).people.find(p => p.person === P('a_gen'))!.standing).toBeNull();
+  }
 });
 
 it.each([null, P('a_bold')])('T5: a declined appointment preserves the last known holder %s', holder => {

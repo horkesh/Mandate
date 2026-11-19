@@ -1,16 +1,81 @@
-# Seat view people: R70 and R75 hand-over
+# Seat view people: R70, R75 and R76 hand-over
 
 For the lead: 2 items.
 
-R75 only, `C:/Pyrrhic/mandate-seat-view`, branch `seat-view-people`, starting at
-`a2427a7`. Git was read-only. Claude approved R70 at this head in the R75
-request; the live-audience source gap below remains deferred. R73 and R74
-run elsewhere and were not touched.
+R76 only, `C:/Pyrrhic/mandate-seat-view`, branch `seat-view-people`, starting at
+`0201488`. Git was read-only. Claude held R75 for the knowledge leak corrected
+below; its other work stands. R73 runs elsewhere and was not touched.
 
-## R75 delivered
+## R76 delivered
 
-Live standing is now limited to a known man's current side matching the
-principal's, using `sideOfPerson` (0065). The existing report format has no
+Standing eligibility starts with `world.person(id).faction`. A man's current
+post, department side and service truth do not decide it. A received report
+about a government-change notice supplies its authored `department_side` act;
+the report must match the notice's type and subtype. Known holders of that
+government's posts then follow the received side. The known post catalogue
+comes from opening knowledge and received letters, never live command tables.
+Foreign post references supply only the public department, without borrowing
+the opening holder or parent. Decisions' possible effects are not evidence.
+Written day, hour and report id order the notices, so a late older report
+cannot undo a newer one. Future-written or future-received papers wait.
+
+The people cache no longer depends on `postStates` or `departmentFactions`.
+Paired-State tests now require hidden changes to those tables to preserve
+standing and the cached catalogue references. A received notice changes
+eligibility equally in both States, including with cold/shared caches. Tests
+also cover a later return to the opening side, stale notices, unrelated report
+types and subjects, and receipt-day cache expiry. The original code failed
+three regressions before the correction (12 passed); the final focused gate
+passes 42 tests across kernel, real testbed, boundary and banned-API checks.
+
+R49 is absent on this head: neither `personService` nor service-choice letters
+exist here. Consuming a received service-choice letter remains for that merge;
+no guessed token, State field, report schema or writer was added. Reported
+foreign/neutral standing remains null because reports carry no standing figure.
+No player-facing wording, pack data, save, gate record or lockfile changed.
+
+## R76 validation and limits
+
+Evidence: `runs/r76/final-checks.json`. Raw logs and the initial red failure
+remain beside it. Pack startup and local kernel resolution passed before
+the longer checks; both typechecks and the 42-test focused gate exited 0.
+
+- Safe root suite: exit 0, **105 files, 1,324 passed / 3 optional skips**.
+  Root typecheck, boundary, licences, decisions and whitespace: exit 0.
+- Desk `tsc --noEmit`: exit 0. Desk suite: exit 0, **84 passed / 8 existing
+  skips**, 26 files. No build, browser or server was needed.
+- **Exact `MANDATE_NO_GIT=1 npm run check` remains unrun/unmet.** Its no-git
+  configuration still collects three Git-writing LFS fixtures. The safe
+  check components ran with `tools/test/lfs.test.ts` additionally excluded,
+  preserving the explicit read-only-Git instruction. No test infrastructure
+  was changed to expand this fix.
+- Standalone `npm run run:done-check -- --label r76-done-check`: **exit 0,
+  Phase 0 6/6**. Union at war median/p95 **32.61/61.83 ms**; Union history
+  **31.35/65.40 ms**; testbed **3.34/5.25 ms**. Limits remain **40/160 ms**.
+- 1A remains **2/6**: checkpoints, operation, pushback and lever sweep fail.
+  Every one of the eleven non-budget criteria has the same status/problem
+  list as retained R75 evidence. The history reaches 31 July with neither
+  side at war, missing government sides/strengths, no operations, no gated
+  decisions and no recruitment calls. All failure categories were inspected;
+  no band changed or campaign retried.
+- All **195 daily hashes** and both final hashes match R75. The comparison
+  reuses its retained summaries, with no baseline campaign rerun.
+
+Final runtime and pre-documentation inventory: four source/test files changed,
+1,432 other baseline files unchanged, no additions/deletions, and all eight
+worktree Git metadata files byte-identical. The final inventory also includes
+this hand-over. No independent-review approval is claimed; Claude's standing
+review under 0096 remains pending.
+
+No new proposed ruling. R76 supplies the knowledge boundary; the received
+notice identifies its authored public act without reading its hidden trigger,
+State outcome, decision choices or historical default.
+
+## R75 delivered (historical; its side lookup is replaced by R76)
+
+R75 limited live standing to a known man's current side matching the
+principal's, using `sideOfPerson` (0065). R76 replaces this truth lookup and
+its cache keys as described above. The existing report format has no
 standing claim or field, so foreign and neutral men have `standing: null`.
 No foreign figure is reconstructed from State or an opening reputation.
 The projection cache now also depends on post holders and department sides,
@@ -92,7 +157,7 @@ an unreported change in State does not. Correspondence can reveal another
 post's existence without revealing its holder or parent. Each holder has an
 as-of day and source; an opening vacancy has no invented start date.
 
-`SeatView.people` exposes own-side public standing (restricted by R75), received consult answers and
+`SeatView.people` exposes own-side public standing (restricted by R76's received knowledge), received consult answers and
 received advice about each known man. The catalogue also references received
 observer letters. These are sources, not hidden ability bands or assertions
 about current observer postings. New arrays and entries are frozen and cached
@@ -136,7 +201,7 @@ No State or report writer was changed to work around these gaps.
    references, without filling their holders/parents from truth. Rejected: current
    `postStates` or the field-order menu as the catalogue's owner.
 2. Read own-side public standing from its explicitly public State table, subject
-   to R75's restriction above. Derive
+   to R76's knowledge restriction above. Derive
    consults, person advice and observer letters solely from retained received
    reports, keeping their original subjects and dates. Rejected: hidden traits,
    private stances/postings, invented assessment bands, or calling a received
@@ -185,14 +250,15 @@ approved R70 as recorded in the R75 request.
 
 ## For the lead
 
-1. Review R75's standing boundary and the tests that now reject T5/T6/T9.
-2. Route the unmet exact root check and failed timing/history gates to
-   integration. Their acceptance criteria remain unchanged.
+1. Review R76's received-side boundary; R75's T5/T6/T9 tests still pass.
+2. Route the unmet exact root check and four failed 1A criteria to integration,
+   and connect received service-choice letters when R49 lands. Their
+   acceptance criteria remain unchanged; Phase 0 timing passes in R76.
 
 ## Findings outside my scope
 
-The unexcluded Git-writing LFS fixtures and failed done-check categories are
+The unexcluded Git-writing LFS fixtures and failed 1A categories are
 detailed above. R70's live-audience source gap, missing Union map inputs and
-lossy consult subject remain outside R75. Received resignation letters will
+lossy consult subject remain outside R76. Received resignation letters will
 vacate the catalogue only in the later follow-up the request deferred.
 No other run's files were changed.
