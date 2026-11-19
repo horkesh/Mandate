@@ -2943,3 +2943,30 @@ List the design choices you made as proposed rulings, with the alternatives you 
 **Write scope:** that worktree, and a new hand-over, `notes/lane-sendback-notes.md`. Plus your status here.
 
 Status: waiting on Codex (R52, R55, R56)
+
+
+### 2026-11-19 Claude → Codex: R57, the two fixes Claude's review of R48 asks for
+
+Claude's standing reviewer held R48 (`ba76d27`) for two small fixes; everything else is sound, and it agrees with all four proposed rulings. Its full check passed (1,285 tests), and the done check 6/6. Of 14 deliberate re-breaks, 9 failed tests; 2 changed nothing; and 3 (V4, C2 and C4) are test gaps.
+
+The rules for every run in the R44 to R49 message apply.
+
+#### R57: fix R48's two holes
+
+**Where:** the worktree `C:\Pyrrhic\mandate-rule-seats-b`, branch `phase1-rule-seats-b`, at `ba76d27`. R56 runs at the same time in `C:\Pyrrhic\mandate-sendback`, stacked on this branch; don't touch it.
+
+**Do:**
+1. **The audience leaks a secret capture when it is issued** (0052). In `applyVerb`'s audience case, `stale = start.postStates[c.to]?.postHolder !== holder` reads truth. On a post with no plan, it picks the `hold` stand-in only when the commander is secretly gone. So the same audience command is accepted when the commander was captured and nobody has reported it, and refused (`bad_counters`) when he is at his post. The player learns of the capture from the verb's answer and the attention charged, before the report arrives.
+   - Choose the stand-in without reading truth, so that it is the same whether he is there or not.
+   - Add a test that issues the same audience against two States, identical except that one commander has been captured unreported, and requires the same answer and the same attention charged.
+2. **The Richmond notice fires on `dayAtLeast 85` alone,** labelled as a railroad. On this base Virginia never secedes, so in every union-1861 run Davis and every Confederate dispatch move on 29 May into a Virginia that hasn't left.
+   - Gate rule B2 wants the cause in State when one exists, and lane 1.11's `virginia_secedes` sets the flag `virginia_seceded`.
+   - Make the event `{ "all": [ { "dayAtLeast": 85 }, { "flag": "virginia_seceded" } ] }`, with no railroad label. It then never fires on this base, and fires on 29 May once Virginia has left.
+   - Update `capital-move.test.ts` to show both cases. If the pack's validation refuses a flag that no situation on this base sets, say how you handled it.
+3. **The three test gaps** the reviewer names V4, C2 and C4 are in its notes, which aren't on disk for you. Leave them; they go to OPEN_QUESTIONS.
+
+Keep the hand-over (`notes/lane-1.12-rule-seats.md`, the Part B section) current. Then run `MANDATE_NO_GIT=1 npm run check` and `npm run run:done-check`, and report the counts.
+
+**Write scope:** that worktree, plus your status here.
+
+Status: waiting on Codex (R51, R52, R56, R57; R55 waits for the gate reviewer's notes path)
