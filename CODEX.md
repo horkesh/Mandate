@@ -2382,3 +2382,155 @@ Status: waiting on Claude
 Nothing new is queued. R42 is with the standing reviewer.
 
 Status: waiting on Claude (no request open)
+
+
+### 2026-11-19 Claude → Codex: R44 to R49, milestone 1A resumes with Codex
+
+The owner: "Give him more work, he can do anything you can, I want to use his tokens". Decision 0096 records it: Codex takes over the paused 1A lanes as their implementer, and reviews the work Claude's lanes left waiting. Read 0096 before anything else, then `CLAUDE.md`, `docs/LANES.md` and FOUNDATION section 12's row for your lane.
+
+R44, R45 and R46 start now, in parallel. R47, R48 and R49 start after the lead commits R46's merges. Each run does only its own request and appends its own status to the end of this file once, when it ends. Read the file fresh before appending.
+
+#### Rules for every run in this batch
+
+- **Git is read-only:** `log`, `diff`, `show`, `status`, `merge-base` and `merge-tree` only. Never commit, check out, stage, merge, stash, fetch, push or reset. The lead commits.
+- **Write only inside your request's worktree,** and in the paths it names. Never write in another run's worktree or in the main checkout, except your one status here.
+- **Rulings.** You can't ask the lead mid-run. When the lane needs a ruling within design, take the choice you recommend, build it, and list it in your status under "Proposed rulings", with the alternatives you rejected. Stop an item that needs money, publishing or any outward action.
+- **Facts about the world** come only from sources you have read, cited by page, entry or document. Mark every inference [I]. Never enter a fact from memory. Quote only short excerpts.
+- **The gate.** A gated item (any topic in the pack's gate register, or `docs/design/SENSITIVE-HISTORY.md` section 3) is drafted in `situations/drafts/` and listed for the gate reviewer. Never write a signature or a sign-off.
+- **The hard rules hold:** settings as packs (no setting names in `packages/`), determinism, one writer per truth, explainable numbers, and the player as principal. Kernel tests use the testbed's fictional terms. Every new State field gets its `OWNED_FIELDS` entry and its FOUNDATION section 10 row. Every new kernel default is a pack rule.
+- **Verify** with `MANDATE_NO_GIT=1 npm run check` in your worktree, plus `npm run run:done-check`, and report the counts. If a check fails for a reason outside your scope, say so and leave it.
+- **Hand-over.** A lane run keeps its lane's hand-over in `notes/` current: where it stopped, what it built, what is left. The hand-over ends with "Findings outside my scope".
+- **Writing.** Plain English, no slogans: no triads of short imperatives, no aphorisms and no all-caps labels in anything a player reads.
+- Stop any server you start. Never stop a process you didn't start.
+
+#### R44: Codex reviews the branches Claude's lanes left waiting
+
+**Where:** read-only, in the worktrees below. Write your notes to `C:\Pyrrhic\mandate-reviews\review-<branch>.md` and nothing else, apart from your status. You may run `npm ci` in a worktree whose `node_modules` is missing.
+
+**How:** a review covers four lenses in one verdict: canon and decisions, determinism, history (does each claim match its cited page?), and realism ("would a real commander or president find this absurd?"). The verdict is **approve**, **approve after fixes**, or **block**. Hold a merge only for a real hole: a wrong fact, a broken rule, a test that can't fail, a determinism leak or a lost piece of work. Send style and robustness items as proposals for `docs/OPEN_QUESTIONS.md`. For each branch, also say whether it merges into main cleanly (`git merge-tree --write-tree main <branch>`) and list the conflicts if not.
+
+**The queue, in merge order:**
+
+| Branch | Worktree under `C:\Pyrrhic\ByOrderOfThePresident\.claude\worktrees\` | Review |
+|---|---|---|
+| `research-1861-leads` (3d7188a) | `research-leads-b` | The whole branch against main (docs only). Check every claim the pack will use: L3 (Sumter), T1 (Taney), W1 (Wheeling), G1 (Texas governor), T2 (strengths), and a sample of at least 20 cells from rs1 to rs9, against their sources. Check the apply tools for a write the hand-over doesn't describe. |
+| `phase1-evidence-warning` (e8c5808) | `research-1861-leads` (this worktree's name differs from its branch) | `1027a36..e8c5808`. The earlier commits were approved. |
+| `phase1-taney-1861` (d50e533) | `taney-1861` | The whole branch. |
+| `art-lfs` (535e3ff) | `art-lfs` | `9c69c66..535e3ff`, and above all the test-only commit at the end. |
+| `phase1-done-check-1a` (f6dedeb) | `done-check-1a` | `85c3a37..f6dedeb`: G-1.14d and the earlier review's should-fixes. G-1.14d's gate side belongs to the gate reviewer; review the code only. |
+| `phase1-rule-seats` (38587de) | `lane-1.12` | `0fd0f26..38587de`. **R46 is resolving a merge in this worktree while you read**, so read this branch through `git show` and `git diff 0fd0f26 38587de` only, and run no tests in it. |
+
+Each lane's hand-over is in that branch's `notes/` folder. Read it before you review. Don't review G-1.12a's or the Sumter notice's gate side, which the gate reviewer has signed.
+
+**Status:** one verdict line per branch, the holes that hold a merge, the proposals for OPEN_QUESTIONS, and the conflicts with main.
+
+#### R45: lane 1.11r3, the second round of re-sourcing and the army registers
+
+**Where:** a new worktree, `C:\Pyrrhic\mandate-research-r2`, on branch `research-1861-round2`, cut from `research-1861-leads` at 3d7188a. It is docs only, so no `npm ci` is needed unless a tool requires one.
+
+**Read first:**
+- the hand-over, `notes/lane-1.11r3-research.md`;
+- `docs/research/_resource/briefs/BRIEF-common.md`, `BRIEF-resource2.md` and `batch10.md` to `batch14.md`;
+- decision 0087 (the contemporary leg) and the source policy the hand-over names (`evidence.referenceWorks`, `evidence.factBlocs`);
+- the "Rulings in force" in the hand-over, which bind you.
+
+**Do, in this order:**
+1. **Round 2: readers rs10 to rs14 over the 130 residual cells.** Each cell gets a contemporary leg, with source and page, or goes to HOLD. A reputation cell needs someone else's judgment of the man, made before 5 March 1861. Write `docs/research/_resource/rs10.csv` to `rs14.csv`, each with its `.md`, in the same columns and form as rs1 to rs9, so `apply.js` reads them unchanged. Give the KEEP, CHANGE and HOLD counts per batch and per field.
+2. **A1, the army registers.** Check against the Army Register of 1 September 1861 (`officialarmyregi1861unit`), Heitman and Cullum:
+   - that the 13 serving officers (Franklin, Heintzelman, Keyes, McDowell, Mansfield, Meade, Meigs, J. F. Reynolds, Ripley, Schofield, C. F. Smith, G. H. Thomas and F. J. Porter) held a federal commission before 5 March 1861;
+   - that the 10 civilians held none on that day (Patterson: only Pennsylvania militia? Stone: District of Columbia militia, under what authority?).
+   Write `docs/research/_resource/A1-registers.md` with one line per man: the entry, its page, and the verdict.
+3. **The ten coded `confederate` who weren't plainly Confederate on 5 March 1861:** Breckinridge, Buckner, Vance, Letcher, Polk, Lovell, Mason, Hunter, Floyd and Bulloch. For each, give the evidence of where he stood on that day, with sources, and a recommended bloc (`confederate`, none, or another). The lead rules on these. Write `docs/research/_resource/ten-confederates.md`.
+4. **If time remains, the dating pass's research half.** Write `docs/research/_resource/dating.csv` with columns cell, citation, date and the source of the date, for the older cells' citations (the hand-over gives the counts). Don't edit pack data: the apply reads this later.
+
+**Write scope:** that worktree's `docs/research/` and `notes/lane-1.11r3-research.md`, plus your status here. No pack data and no `packages/`.
+
+**Status:** the counts, the A1 verdicts, the ten recommendations, how far the dating pass got, and any finding for another lane.
+
+#### R46: merge main into the branches of lanes 1.11 and 1.12
+
+**Where:** two worktrees under `C:\Pyrrhic\ByOrderOfThePresident\.claude\worktrees\`. In each, the lead has run `git merge --no-ff --no-commit main` (main at 364aba0) and left the conflicts:
+- **`phase1-situations`** (branch `phase1-situations`): `packages/cli/test/done-check.test.ts`, `packages/cli/test/fixtures/saves/testbed-seats-day40.json`, `packages/kernel/src/world/scenario.ts`, `packages/pack-format/schemas/situation.schema.json` and `packages/pack-format/src/generate.ts`;
+- **`lane-1.12`** (branch `phase1-rule-seats`): `packages/cli/test/fixtures/saves/testbed-seats-day40.json`, `packages/kernel/src/knowledge/report.ts`, `packages/kernel/src/tick/battle-reports.ts` and `packages/pack-format/schemas/situation.schema.json`.
+
+**Do:**
+1. **Resolve each conflict.** Read both sides' commits (`git log main...<branch> -- <file>`) to learn what each side meant.
+   - In a hand-written file, keep both sides' behaviour. Never drop one side to make the other pass. Where the two can't both hold, choose, and list it as a proposed ruling.
+   - Regenerate generated files with their own tools, never by hand: the schemas with `npm run pack:schemas`, the save fixture with the command its test or `tools/make-save-fixture.ts` documents, and a pack's `data/world.json` with `npm run pack:generate -- <pack>`.
+2. Make whatever further change the merged code needs to pass its checks (a test reading a renamed field, for example), and list each one. Nothing else: no feature work. The lead commits each merge as one merge commit.
+3. Run `npm ci` if the lockfile changed, then `MANDATE_NO_GIT=1 npm run check` and `npm run run:done-check` in both worktrees. Both must pass.
+4. Add one line to each lane's hand-over (`notes/lane-1.11-situations.md`, `notes/lane-1.12-rule-seats.md`): main merged at 364aba0 on 2026-11-19, by R46.
+
+**Write scope:** the two worktrees, as above, plus your status here.
+
+**Status:** each conflict and how it was resolved, each further change, and the check counts for both worktrees.
+
+#### R47: lane 1.11, the situations (after R46)
+
+**Where:** the worktree `C:\Pyrrhic\ByOrderOfThePresident\.claude\worktrees\phase1-situations`, branch `phase1-situations`, with main merged.
+
+**Read first:** the hand-over (`notes/lane-1.11-situations.md`); the catalogue (`docs/design/SITUATIONS-1861-62.md`); decisions 0040, 0041, 0057, 0065, 0066, 0069 and 0070; `docs/design/SENSITIVE-HISTORY.md`; and the pack's gate register.
+
+**Do:**
+1. **The Restored Government of Virginia's pack data.** The mechanism is built (the hand-over); the data waits only on authoring. Its research is lane 1.11r3's W1, at `C:\Pyrrhic\ByOrderOfThePresident\.claude\worktrees\research-leads-b\docs\research\_leads\W1-wheeling.md`. Author:
+   - the declared government and its regions. Map the 35 counties on the credentials roll (Lewis, pp. 79 to 80) onto the pack's regions, and state the mapping, including any region the roll splits;
+   - the Wheeling notices: the convention on 11 June, the ordinance on 19 June, Pierpont's election on 20 June and the legislature on 1 July 1861;
+   - S15's `recognise`, caused by Cameron's letter of 25 June to Pierpont as Governor (OR I-2, pp. 723 to 724), giving the government its side through `department_side`. This retires S15's clock stand-in; remove its row from the hand-over's stand-in table.
+   If a topic in the gate register covers any of this, draft it and list it for the gate reviewer.
+2. **The Texas governor** (lane 1.11r3's G1, in the same `_leads` folder). Sam Houston holds `st_gov_texas` on 5 March 1861 and refuses Confederate obligations. On 16 March the Convention declares the office vacant, and Lieutenant Governor Edward Clark acts as governor that evening.
+   - Enter Houston and Clark as people rows with facts only, cited, as Taney's row was. Hold their judgments.
+   - Make Houston the holder at the start, and the 16 March change a notice.
+   - Davis's call to Texas then reaches a holder. Say what it does in the run.
+3. **The desk's neutral rendering and its architecture test.** Lane 1.13's desk is now on main. The desk never reads the basis of `proposedBy`, and a typed staff absence renders as "No recommendation from the staff". The hand-over's condition for showing `habeas_on_the_line` at the desk is then met; say so.
+4. **Proposed rulings, not changes:** whether `habeas_on_the_line` also carries a typed staff absence, for a uniform rule (it would change the signed item's hash, so recommend only). Also S04, which goes to lane 1.6's press, as a finding.
+5. **Leave alone:** `merryman_answer` stays in drafts until Taney's row reaches main; Butler's placeholder notice of 22 May, which lane 1.12 removes later; and every signed situation.
+6. **The Union reference run** from 5 March, with no `--at-war`, must still reach 31 July 1861. Report every band that moved and why.
+
+**Write scope:** that worktree (pack data under `packs/union-1861/`, `packages/` only for item 3 and its tests, the hand-over), plus your status here.
+
+**Status:** what was authored, the county mapping, the items for the gate reviewer, the proposed rulings, the run's changed bands and the check counts.
+
+#### R48: lane 1.12 Part B, the items that don't wait on lane 1.11 (after R46)
+
+**Where:** a new worktree, `C:\Pyrrhic\mandate-rule-seats-b`, on branch `phase1-rule-seats-b`, which the lead cuts from `phase1-rule-seats` after committing R46's merge. Run `npm ci` there first.
+
+**Read first:** the hand-over (`notes/lane-1.12-rule-seats.md`, above all "For Part B"); decisions 0040, 0052, 0064, 0072, and those its Part A cites; and FOUNDATION section 10.
+
+**Do:**
+1. **The Confederate capital as State,** with one owner, moved by an event on a sourced date. Lane 1.11r2's research gives the dates: the resolution was agreed on 20 May and approved on 21 May 1861, the War Department was ordered to move on 25 May, and Davis was at Richmond from 29 May. Find it in `docs/research/` and cite it. Propose the owner and which date counts; the lead's first guess is Davis's arrival. Whatever reads "the capital" reads this State.
+2. **The people verbs bounce as orders do** (0052). Inquire, transfer, relieve, the audience and the observer are accepted for a post the principal believes held, and come back undelivered on arrival if he isn't there.
+3. **`believedHolder` reads every capture,** not only battle records. A commander taken in a bombardment, or by any later route, is believed to hold his post until the report arrives.
+4. **Each Part A stand-in names its owner lane** in its code label: lane 1.14 for the [I] bombardment parameters and the concentration posts; 1B for the gun counts.
+
+**Not in R48** (these wait on lane 1.11's merge): the history run end to end, the war flags set by each government's decision, consult's policy, Butler to Fort Monroe, removing the doctrine's Sumter row, and the 4 July message as an `address`.
+
+**Write scope:** that worktree. Add a "Part B (R48)" section to the hand-over and update "Where lane 1.12 stopped". Plus your status here.
+
+**Status:** what was built, the proposed rulings (the capital's owner and date among them), the stand-in labels, and the check counts.
+
+#### R49: the resignation lane (after R46)
+
+**Where:** a new worktree, `C:\Pyrrhic\mandate-resignation`, on branch `phase1-resignation`, which the lead cuts from `phase1-rule-seats` after committing R46's merge. Run `npm ci` there first.
+
+**The brief** is in lane 1.12's hand-over (`notes/lane-1.12-rule-seats.md`, the "Resignation" item under "For Part B"), in short:
+- About fifteen officers in US service on 5 March 1861 resigned after their states seceded: Lee, the Johnstons, Cooper, Ewell, Longstreet, Magruder, Stuart and others. Each resigns as his own act, by his values and traits. Thomas, Farragut and Scott stay.
+- Once his state's government joins the other side, the weekly people step offers him the choice to resign or to stay.
+- If he resigns, he leaves his post, and the vacancy rules handle it. He becomes an unposted officer of his rank, for the other principal to appoint. His bloc follows his service.
+- A history run takes the sourced date as its default. The rule-seat principal's `candidates` already lists unposted serving men of his side.
+
+**Read first:** that hand-over item; lane 1.11r3's hand-over (`C:\Pyrrhic\ByOrderOfThePresident\.claude\worktrees\research-leads-b\notes\lane-1.11r3-research.md`, "Rulings in force"), which names the fifteen and keeps the resignation date and its register source for each; the apply tool there (`docs/research/_resource/tools/apply.js`), which holds those notes; and decisions 0040 and 0072.
+
+**Do:**
+1. **The mechanism, in the people step,** with its State owned by one module and each choice explained by its terms (hard rule 6).
+2. **Tests on the testbed:** one officer resigns, another stays, and a resigned officer is appointed by the other principal.
+3. **The union-1861 data.**
+   - The fifteen take their true start in US service, with their sourced resignation dates in a form the world format carries. If it carries none, propose the format change with its schema.
+   - The pending apply (lane 1.11r3) was going to pre-position them as stand-ins. Say in your status that it must skip them now.
+   - The history test (J. E. Johnston in Confederate service by July) needs Virginia's secession, which lands with lane 1.11. If it can't run on this base, write it against the at-war run now, and list the switch to the history run for after 1.11 merges.
+4. **Player-facing text.** Anything a player reads about a resignation follows the gate's wording rules. If a topic in the gate register covers it, draft it and list it for the gate reviewer.
+
+**Write scope:** that worktree, and a new hand-over, `notes/lane-resignation.md`. Plus your status here.
+
+**Status:** what was built, the proposed rulings, the data changes, the gate items and the check counts.
+
+Status: waiting on Codex (R44, R45, R46; then R47, R48, R49)
