@@ -302,7 +302,13 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - From lane 1.13 (minor, lane 1.4's code): at the testbed capital, the governor's wire comes from the principal himself, because `n_leader` holds the capital region's government post. `governorWire` could skip a governor who is the principal. It is harmless today.
 - From lane 1.11b's hand-over (`notes/lane-1.11b-data-entry.md`, merged a38d7ea): the cells entered before the date rule cite evidence with no date, so the date check cannot judge them (Harney's regard for Price, May 1861 evidence, is one such start-class cell); a pass that dates those citations is lane 1.11r3's. The Lillington inference and the census caveats stay labelled in the census rows' notes (0085); lane 1.14 carries them. The held-back draft CSV keeps its 118 rows, with reasons.
 - From lane 1.13's review (`review-lane-1.13.md`, item 5), **the next lane to touch the console:** one test that previews an edit, sends it, and asserts that the commander's edited plan on arrival equals the preview, on a map that does not change in between. Building the preview from the issuer's view instead of the commander's fails 0 tests today.
-- **Lane 1.14 Part A** (the done check's harness) is open on the lane 1.13 session, branch `phase1-done-check-1a`.
+- **Lane 1.14 Part A** (the done check's harness) is open on the lane 1.13 session, branch `phase1-done-check-1a`. Codex's R44 approved it at `f6dedeb`; it is held for the gate reviewer's verdict on G-1.14d (a gate-side finding implemented in harness code, with no gated content in the pack yet).
+- From Codex's R44 review of `research-1861-leads` (`review-research-1861-leads.md`, "Four lenses and proposals"; non-blocking), by lane:
+  - **The research lane:** portable paths for the research helpers, with their environment variables documented.
+  - **The research lane:** exact citation locators (Tyler p. 249, not 248; the readers' House-vote dates).
+  - **The research lane:** separate provenance keys for primary documents printed inside secondary works.
+  - **The research lane:** L3's last paragraph wrongly labels Anderson's letter of 12 April as Confederate correspondence.
+  - **Lane 1.12 (rule seats):** keep every rule reader's explanation when a flag has several readers.
 - From lane 1.4b's report (`notes/lane-1.4b-detachments.md`, merged 1cf40d5), by lane:
   - **1B (the planner):** no operation leaves a garrison, because the planner drafts no garrison step. Add one if the history run needs it.
   - **Lane 1.4 or 1B, cleanup:** after a landing, the parent blocks stay aboard as 0-strength shells until a rejoin or a disbanding. Lane 1.4c (merged a810532) made sure an emptied shell can no longer be handed over in a transfer.
