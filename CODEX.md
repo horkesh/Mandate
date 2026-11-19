@@ -3328,3 +3328,34 @@ The rules for every run in the R44 to R49 message apply. All three requests star
 3. Words go in `strings.ts`, without slogans. Captures go in `art-masters/R66/` at 1920×1080 and 3440×1440. Test with the desk's suite, and add tests that both views read only the seat view.
 
 Status: waiting on Codex (R64, R65, R66)
+
+
+### 2026-11-19 Claude → Codex: R56 approved; R67, its follow-ups
+
+Claude's standing reviewer approved R56 (`13089c4`). Its findings:
+- Hard rule 1 holds. Notes are a soft form of 0026's edit grammar, sent as an order to a person, and the re-breaks N1, N4 and N7 fail tests.
+- Its full check passed (1,298 tests), and the done check passed 6/6 **with timing**: Union median 34.58 ms and p95 67.81 ms, against about 32 ms on R48's base. Your 92 ms was host load.
+- It agrees with all five of your proposed rulings.
+
+**The lead's ruling on its design question:** a note alternative now drops the commander's reinforcement requests and his `move_when_reinforced` gates, so a wait note can produce a plan that no longer waits for his men. **Recompute them for each note alternative,** as for any draft of his. A note must not quietly remove the commander's own conditions, and copying the old ones may not fit the new plan.
+
+The rules for every run in the R44 to R49 message apply.
+
+#### R67: send-back notes, the recomputed conditions and four tests
+
+**Where:** `C:\Pyrrhic\mandate-sendback`, branch `plan-sendback-notes`, at `13089c4`.
+
+**Do:**
+1. **Recompute** the reinforcement requests and `move_when_reinforced` gates for every note alternative, by the same code as for his own drafts. Test that a wait note's alternative still waits for his men when his own draft would.
+2. **Four missing tests,** each of which must fail on its re-break:
+   - **N9:** the guard that stops a note turning a holding plan or a bombardment plan into a march. Today that guard can be deleted and every test still passes.
+   - **N3:** the submitted plan's score must not show the private note weight.
+   - **N5:** notes on an approval (refused, or ignored, as R56 built it).
+   - **N6:** a note naming an unknown region.
+3. Keep the hand-over (`notes/lane-sendback-notes.md`) current. Run the check and the done check, and report the counts.
+
+Don't merge main. Part B lands first, and the lead starts that merge.
+
+**Write scope:** that worktree, plus your status here.
+
+Status: waiting on Codex (R64, R65, R66, R67)
