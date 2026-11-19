@@ -155,3 +155,39 @@ it('routes the public surrender report to a testbed editor even when the force s
   for(let day=2;day<=Math.max(2,publicReport.msgArriveDay);day++)state=tick(world,state,[]).state;
   expect(frontPage(rules,state,paper,7,principal,1).battles).toEqual([{battle:'battle.public',region,result:'lost',commander:null,casualties:0,captured:0,returned:'none'}]);
 });
+
+it('projects each combination of optional battle fields without adding absent keys or freezing the source', () => {
+  const { world, setup } = seatsWorld('testbed');
+  const state = createState(world, setup);
+  const principal = world.faction(world.factionIds[0]!).principal;
+  const base: ReportClaim = { claimKind: 'battle-result', claimRegion: null, claimValue: 17, claimToken: 'won', claimConfidence: 900 };
+  for (const commander of [null, principal]) for (let mask = 0; mask < 8; mask++) {
+    const days = [2, 3];
+    const claim: ReportClaim = { ...base,
+      ...(mask & 1 ? { claimBattle: 'battle.example' } : {}),
+      ...(mask & 2 ? { claimBattleDays: days } : {}),
+      ...(mask & 4 ? { claimCommander: commander } : {}),
+    };
+    const received = deliverReport(state, seatIdFor(principal), {
+      id: toId('message', 'm.fields'), knownReceivedDay: 4, knownRoute: 'wire', knownVia: [],
+      knownBody: { reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: principal, reportAuthorPost: null,
+        reportSubjectKind: 'person', reportSubjectId: principal, reportClaims: [claim], reportDay: 3,
+        reportHour: null, reportAdvice: null, reportAnswers: null },
+    }, NO_TRUTH);
+    const projected = viewFor(world, received, seatIdFor(principal)).reports.find(r => r.id === 'm.fields')!.claims[0]!;
+    const keys = ['kind', 'region', 'value', 'token', 'confidence',
+      ...(mask & 1 ? ['battle'] : []), ...(mask & 2 ? ['battleDays'] : []), ...(mask & 4 ? ['commander'] : [])];
+    expect(Object.keys(projected)).toEqual(keys);
+    expect(projected).toEqual({ kind: 'battle-result', region: null, value: 17, token: 'won', confidence: 900,
+      ...(mask & 1 ? { battle: 'battle.example' } : {}), ...(mask & 2 ? { battleDays: [2, 3] } : {}),
+      ...(mask & 4 ? { commander } : {}),
+    });
+    expect(Object.isFrozen(projected)).toBe(true);
+    if (mask & 2) {
+      expect(projected.battleDays).not.toBe(days);
+      expect(Object.isFrozen(projected.battleDays)).toBe(true);
+    }
+    expect(Object.isFrozen(claim)).toBe(false);
+    expect(Object.isFrozen(days)).toBe(false);
+  }
+});

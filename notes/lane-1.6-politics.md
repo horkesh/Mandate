@@ -291,7 +291,40 @@ Final audit: **seven delivery files**, **1,380 other baseline files unchanged**,
 For the lead:
 1. Review the R63 tests and fixture move; run the ordinary Git-fixture tests through the authorised hook/CI. This run preserved their bodies and verified collection without creating Git histories.
 
+## R68: the press within the tick budget
+
+Completed R68 only on `press-tests`, retaining `930723df18b8565696cbc010ab630dd5cde6c934`. The runtime change is confined to `packages/kernel/src/view/view.ts`: ordinary claims without battle metadata take a direct frozen-object path, avoiding three conditional empty spread operands. Claims carrying battle metadata keep the previous projection. Optional keys, their order, null commanders, copied frozen day arrays and source immutability are covered across all 16 combinations. No State, report, message, press-selection, route, return, save or rule changed.
+
+### Measurement and diagnosis
+
+Main is pinned to `e56a08811117b17346380b2257b158439356b0a3`, copied to `C:/Pyrrhic/r68-main-comparison` outside every repository. No comparison worktree was created. Its workspace package links resolve to that copy. `runs/r68/prepare.py` records the source-copy method; `environment.json` records the revisions and Node version. Git commands were read-only.
+
+Three final back-to-back Union at-war 75-day pairs alternate execution order. Both sides use the existing `phase0Run` timing mode: requests, seats and tick, without freezing or daily hashing, final checkpoint only. No other validation from this task ran alongside these final pairs.
+
+| Pair | Main median / p95, ms | Branch median / p95, ms |
+|---|---:|---:|
+| 1 | 33.5943 / 68.5064 | 36.5255 / 74.7312 |
+| 2 | 29.8806 / 64.4259 | 29.2377 / 66.2915 |
+| 3 | 32.6303 / 74.0275 | 31.6048 / 68.1612 |
+| Median of the three measurements | 32.6303 / 68.5064 | 31.6048 / 68.1612 |
+
+The branch's median is 3.14% below main's, meeting the 5% target. Pair 1 alone is 8.73% above main; it is retained, not discarded. Earlier samples show substantial host variation. The first series also overlapped this task's separate baseline hash capture at its opening; it is not evidence of a causal before/after speedup. `final-pairs.json` retains all final measurements and hashes.
+
+The CPU profiles and `profile-summary.json` separate initialization from `playDays`: courier-table construction is startup, while command/post lookup and report delivery dominate the day. The Union reference prints no closing battle story; return/page scans have no sampled cost, and main/branch traffic is nearly identical (5,484/5,483 sent). This does not justify an index or a traffic change. The R54 addition also runs three conditional spreads on every ordinary projected claim. The bounded same-process projection probe gives 16.9310 to 15.6008 ms median for 300,000 ordinary claims (7.86% lower), with equal projected values. The metadata case is 57.3126 to 59.5948 ms; no speedup is claimed there. Profiles do not establish the source of the Linux CI regression or a whole-day causal speedup. The exact final helper is bound by the delivery inventory; the file named `after.cpuprofile` predates the immutable-construction correction.
+
+### Verification and preservation
+
+The final combined command sets both `MANDATE_NO_GIT=1` and `MANDATE_TIMING=1` for `npm run check`. Its `npm test` child therefore runs all three wall-clock tests. Exit 0: 102 files, 1,279 passed, zero skips, plus typecheck, pack boundary, dependency licences and decisions index. The Git-writing fixture files remain excluded as required by the read-only run. The final focused projection/one-writer selection passes 50 tests; the earlier banned-API selection and final typecheck pass.
+
+`npm run run:done-check -- --label r68-done` exits 0, 6/6 criteria. Union median/p95 35.61/70.42 ms; testbed 3.91/5.60 ms. Repeat/frozen hashes, replay, save/resume and liveness pass. All 153 mechanics bands per pack retain their definitions and measured values. The checked frozen runs also match all 195 daily hashes captured before editing. Complete before/final run summaries are identical. Eight view snapshots retain 968 identical successful hashes and 136 identical inherited RangeErrors; failed views are recorded, not called successes. The committed save fixture, both lockfiles, budgets and band definitions are byte-identical to entry.
+
+The first full check found exactly one scanner failure: assigning `battleDays` on the temporary view builder conflicts with the global immutable-key rule. Its other 1,275 tests passed. The correction uses object construction, without scanner exceptions. Focused scanner/projection/type checks passed before the single combined full gate. The original failure, Windows file-URL harness startup failure and unsupported TypeScript transpilation API probe are retained in the evidence. No required limit was weakened.
+
+Evidence: `runs/r68/final-checks.json`, `final-validation-jobs.json`, `preservation.json`, paired timing summaries/logs, CPU profiles, projection probe, daily/view comparisons and `runs/r68-done*`. Three delivery files: the projection, its regression and this hand-over. No server, install, build, generated-file regeneration, Git mutation or other run's work. Proposed rulings: none. Claude's standing review remains pending under 0096.
+
 ## Findings outside my scope
+
+- R68: the reported Linux CI failure needs its integration rerun. Local comparisons pass the agreed target; the profiles do not prove the Linux failure's cause. The 136 unavailable view results match entry and remain outside this performance fix.
 
 - R63's desk `npm ci` reported two dependency vulnerabilities (one low, one high). Its existing lockfile is unchanged; dependency remediation is outside R63.
 
