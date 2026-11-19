@@ -526,24 +526,49 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     });
     if (!s.factions.some((f) => f.playable)) err('no-playable-faction', S('factions', 0), 'no faction is playable in this start', 'at least one playable faction');
 
-    const controlled = new Set<string>();
-    s.control.forEach((c, i) => {
-      refCheck(regions, 'region', c.region, S('control', i, 'region'));
-      if (controlled.has(c.region)) err('duplicate-entry', S('control', i, 'region'), `region "${c.region}" has two control rows`);
-      controlled.add(c.region);
-      let sum = 0;
-      c.shares.forEach((sh, j) => {
-        refCheck(factions, 'faction', sh.faction, S('control', i, `shares[${j}].faction`));
-        sum += sh.permille;
+    function validateControlTable(rows: readonly w.RegionControlStart[], table: string) {
+      const controlled = new Set<string>();
+      rows.forEach((c, i) => {
+        const where = S(table, i, 'region');
+        refCheck(regions, 'region', c.region, where);
+        const kind = regionKind.get(c.region);
+        if (kind !== undefined && kind !== 'land' && kind !== 'key_point') err('control-region-kind', where, `region "${c.region}" is ${kind}, which carries no control`);
+        if (controlled.has(c.region)) err('duplicate-entry', where, `region "${c.region}" has two control rows`);
+        controlled.add(c.region);
+        let sum = 0;
+        c.shares.forEach((sh, j) => {
+          refCheck(factions, 'faction', sh.faction, S(table, i, `shares[${j}].faction`));
+          sum += sh.permille;
+        });
+        if (sum > 1000) err('control-sum', S(table, i), `control shares sum to ${sum}`, 'at most 1000 permille in all');
+        if (new Set(c.shares.map((x) => x.faction)).size !== c.shares.length) err('duplicate-entry', S(table, i), 'a faction has two shares');
       });
-      if (sum > 1000) err('control-sum', S('control', i), `control shares sum to ${sum}`, 'at most 1000 permille in all');
-      if (new Set(c.shares.map((x) => x.faction)).size !== c.shares.length) err('duplicate-entry', S('control', i), 'a faction has two shares');
-    });
-    world.regions.forEach((r) => {
-      if ((r.kind === 'land' || r.kind === 'key_point') && !controlled.has(r.id)) {
-        err('control-missing', S('control', s.control.length), `region "${r.id}" has no control row`, 'a control row for every land region and key point (empty shares for no one)');
+      for (const r of world.regions) {
+        if ((r.kind === 'land' || r.kind === 'key_point') && !controlled.has(r.id)) {
+          err('control-missing', S(table, rows.length), `region "${r.id}" has no control row`, 'a control row for every land region and key point (empty shares for no one)');
+        }
       }
-    });
+    }
+    validateControlTable(s.control, 'control');
+
+    if (s.openingControl !== undefined) {
+      const { authors, table } = s.openingControl;
+      const named = new Set<string>();
+      authors.forEach(({ faction, post }, i) => {
+        const row = s.posts.find((p) => p.id === post);
+        if (!startFactions.has(faction) || named.has(faction)) {
+          err('opening-control-author', S('openingControl.authors', i, 'faction'), `expected one author per scenario faction, got "${faction}"`);
+        }
+        if (row === undefined || row.holder === null || world.departments.find((d) => d.id === row.department)?.faction !== faction) {
+          err('opening-control-author', S('openingControl.authors', i, 'post'), `"${post}" must be a filled post of "${faction}"`);
+        }
+        named.add(faction);
+      });
+      for (const f of startFactions) {
+        if (!named.has(f)) err('opening-control-author', S('openingControl.authors', authors.length), `no author for "${f}"`);
+      }
+      if (table !== undefined) validateControlTable(table, 'openingControl.table');
+    }
     s.fortification.forEach((f, i) => refCheck(regions, 'region', f.region, S('fortification', i, 'region')));
     // Lane 1.7: loyalty, checked as control is (never a stand-in for it): known regions and factions, at most 1000 in all.
     const loyal = new Set<string>();

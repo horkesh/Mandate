@@ -11,6 +11,7 @@ import { initialControl } from '../control/control.ts';
 import { initialForces } from '../forces/forces.ts';
 import type { DepartmentId, RegionId } from '../ids.ts';
 import { initialInfrastructure } from '../infrastructure/infrastructure.ts';
+import { fileOpeningControl } from '../knowledge/opening-control.ts';
 import { initialLocations } from '../movement/movement.ts';
 import { initialPeople, SHADOW_MODES, type ShadowMode } from '../people/people.ts';
 import { chambersOn, initialBlocSupport } from '../politics/politics.ts';
@@ -179,7 +180,7 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
   const network = initialInfrastructure(map, start);
   // People: true stats drawn by history's shadow on each person's named stream, the rest copied from the World (lane 1.1).
   const people = initialPeople(map, start, options.seed, mode);
-  return {
+  return fileOpeningControl(world, {
     gameSeed: options.seed,
     calendarStart: start.startDate,
     stateDay: 0,
@@ -233,5 +234,5 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
     chamberStates: chambersOn(map.world.rules.politics, start.startDate, {}, 0),
     congressLedger: [],
     warFraming: {},
-  };
+  });
 }

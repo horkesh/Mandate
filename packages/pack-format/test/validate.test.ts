@@ -46,6 +46,32 @@ const withTemper = (cells: Readonly<Record<string, { boldness?: string; candour?
   }).join('\n'), base);
 const kinds = (issues: readonly Issue[]) => [...new Set(issues.map((i) => `${i.severity} ${i.kind}`))].sort();
 
+describe('authored opening control (0094)', () => {
+  const header = 'source/scenarios/start/scenario.json';
+  const authors = [{ faction: 'red', post: 'red_top' }, { faction: 'blue', post: 'blue_top' }];
+  const table = [{ region: 'alpha', shares: [] }, { region: 'beta', shares: [{ faction: 'blue', permille: 900 }] }, { region: 'port', shares: [] }];
+  const withOpening = (openingControl: unknown) => editJson<Record<string, unknown>>(header, (s) => { s.openingControl = openingControl; });
+
+  it('preserves a valid override in generated scenarios without changing starting control', () => {
+    const { pack, issues } = run(withOpening({ authors, table }));
+    expect(errorsOf(issues)).toEqual([]);
+    expect(pack!.scenarios[0]!.openingControl?.table).toEqual(table);
+    expect(pack!.scenarios[0]!.control).not.toEqual(table);
+  });
+
+  it('rejects an open, vacant, or wrong-side author post at the source header', () => {
+    const { issues } = run(withOpening({ authors: [{ faction: 'red', post: 'blue_top' }, { faction: 'blue', post: 'red_army' }] }));
+    expect(issues.filter((i) => i.kind === 'opening-control-author').map((i) => i.file)).toEqual([header, header]);
+  });
+
+  it('checks coverage, share totals, and faction references in an override', () => {
+    const rows = [{ region: 'beta', shares: [{ faction: 'red', permille: 800 }, { faction: 'grey', permille: 500 }] }];
+    const { issues } = run(withOpening({ authors: [authors[0]], table: rows }));
+    const errors = errorsOf(issues).filter((i) => i.file === header);
+    expect(errors.map((i) => i.kind)).toEqual(expect.arrayContaining(['opening-control-author', 'control-missing', 'control-sum', 'unknown-reference']));
+  });
+});
+
 describe('the fixture pack', () => {
   it('generates with no errors, and only the expected warning', () => {
     const result = run(fixture());

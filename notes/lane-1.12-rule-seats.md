@@ -1,5 +1,7 @@
 # Lane 1.12: rule-seat principals and commander seats (Part A)
 
+Main merged at `364aba0` on 2026-11-19, by R46; working files resolved and checked, with staging and the merge commit left to the lead.
+
 ## Where lane 1.12 stopped (2026-11-17, paused by the owner)
 
 **Part A** is complete on `phase1-rule-seats`, head 0fd0f26, pushed. It has not merged.

@@ -12,6 +12,26 @@ Answered and moved to decisions:
 - **Clear the title before it is used publicly** (0036): the register searches were run on 2026-11-16 (`docs/research/2026-11-14-name-collisions.md`, "Update, 2026-11-16"): no "BY ORDER OF THE PRESIDENT" mark in USPTO, TMview or WIPO, and nothing on Steam. Still open: a trademark attorney clears *By Order of the President* before marketing or a store listing, weighing **Garrison Drama's UK "BY ORDER OF THE" registration (UK00003362841), which covers classes 9, 28 and 41** (the *Peaky Blinders* catchphrase); MobyGames by hand (a bot check stopped the browser); and Steam again on the day of decision. Studio domains: `pyrrhic.com` is parked for sale; `pyrrhicgames.com` and `pyrrhicstudio.com` had no DNS on 2026-11-14 (check only; buying is the owner's call).
 - **Before any live AI-generated text ships** (AI-players lane): Steam requires a disclosure of AI content and a description of guardrails; check the licence of any local model before bundling it; AI voice acting raises union issues (SAG-AFTRA's charge over Fortnite's AI Vader). Source: `docs/research/2026-11-14-ai-players.md`.
 - **Ask Valve about bring-your-own-key AI** (0038): once a Steamworks partner account exists. Until Valve answers, the Steam build ships template voices only.
+- **A bundled local model for the voice layer** (parked by the owner on 2026-11-17).
+  - **The question.** Should the game ship a small offline model to write its letters, audience speech and press reports, instead of an API key? 0022 already allows an optional local model, and 0038 keeps it out of the Steam build until Valve answers. What isn't decided is bundling one by default.
+  - **For it:**
+    - Turns are long enough to hide generation while the days run.
+    - A desk game leaves the graphics card mostly free.
+    - There is no key, no per-letter cost and no paid service under Steam's payment rules.
+  - **Against it:**
+    - Small models write generic prose, the kind of text the owner rejects as slop, and an 1861 voice is hard for them.
+    - They invent facts about real people, so every generated line would need checking against the gate (0021) as it is written.
+    - It adds a 1–3 GB download and is slow without a graphics card.
+    - Steam still requires a disclosure, guardrails and a report button for live-generated text.
+    - Model licences vary.
+  - **The lead's recommendation: test before deciding.** A prototype run by Codex or a lane would:
+    1. take two or three small open models whose licences a research lane has checked;
+    2. have each write the commanders' letters from the desk's reports over a few turns;
+    3. time each letter with and without the graphics card;
+    4. run the gate's checks on the output.
+
+    Then the owner reads the letters blind beside the templates. If the models win, a record bundles one, in non-Steam builds first.
+  - **Before it runs:** it downloads a few gigabytes of models to the owner's machine, so it needs the owner's yes. Source: `docs/research/2026-11-14-ai-players.md`.
 - **Open gate records R1–R7** (docs/design/SENSITIVE-HISTORY.md section 4; accepted by 0046): R1 a playable Confederacy, R2 Black military service, R3 the wars against Native nations, R4 prisoners, exchange and retaliation, R5 verdict text, R6 civilians, guerrilla war and commanders' conduct, R7 emancipation and fugitive policy. R2 and R3 block the 1861–62 slice's release, and R4 is now in the slice as a fifth ship-blocker (amendment merged 1dbb767). 0046 already settled R1's interim rule, R8 and R7's `return` ruling, and 0073 schedules R4's battle ruling in lane 1.8; R2, R3, the rest of R4, R6 and R7's later decisions fall in 1B.
 - **What the gate-and-catalogue facts note informs** (docs/research/2026-11-14-gate-and-catalogue-facts.md, merged; both reviewers approved): it meets most of the research prerequisite for R3 (the Dakota war and Indian Territory: causes, the commission, the count with each number sourced, the advisers, the 1863 acts). Still open: R3 itself must be written, with the Dakota-voiced sources it lists as unread leads; R2 is a decision record, not research, so it stays open; union-freedpeople-camps is not researched and still blocks the slice; East Tennessee repression and camp conditions are not researched. The lead decided the follow-ups: R4 (`prisoners-and-exchange`) moved into the slice, and the register text on Brown and the legislators and on Watie's figure was corrected (1dbb767).
 - **LOC item-level rights pass (owner, a person):** the Library of Congress shows a Cloudflare bot check even in a real browser, and no asset tool can automate it (reviewer, `review-research-images.md`). Before Codex's portrait pilot (McClellan and Stanton), a person records each demo portrait's Rights Advisory and reproduction number from its LOC item page. 17 of the 24 demo cast are ready for that pass (presentation lane).
@@ -194,6 +214,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **1B, R6:** the gate reviewer's boundary: orders directing killings, burnings or collective reprisals are atrocity-class and carry both topics.
   - **1B, R7:** drop `fund-a-scheme`.
   - **1B, with R2:** the decision about accepting Black volunteers. In 1A, S13 is a notice only (`black-enlistment-1861-offers`, placed as an event), because lane 1.11r found no advocate in 1861 for asking Congress (22 Congressional Globe issues, 8 July to 7 August 1861). The decision belongs where the 1862 advocates are on record.
+  - **1B:** a man's bloc is pack data and does not change in play. So a civilian commissioned later, such as Grant or Sherman, who start with bloc none under 0087 because they held no federal commission on 5 March 1861, never joins the army bloc. Whether a commission, or a change of side, should move a man's bloc is 1B's question. (Lane 1.11r3 now treats `army` and `confederate` as fact blocs, `evidence.factBlocs`, exempt from the contemporary-leg rule.)
   - **1B:** a decided situation reopening on a cause. Today `resurfaceOn` only brings back an open decision on its clock. S17 (Fort Monroe) is the case: in 1A it is decided once, and the July voices (Townsend for Scott, Bates) arrive as standalone dated reports. Its natural first reopening is the First Confiscation Act of August 1861.
   - **1B:** Miles and Harvey Brown are not in the people table, so their practices on fugitives (Miles returned people, 15 July; Brown refused, 22 June) are not entered. Add them with sourced rows if a later situation needs them.
   - **Lane 1.12:** `crossNeutral` is a stand-in, owned by lane 1.12.
@@ -239,7 +260,29 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.11:** loyalty data must never come from the census; narrator text says whose loyalty it means (in a slave state, the free and voting population's); no border-state census rows are entered until lane 1.7's G-1.7a fix is merged (superseded by 0078, G-1.7b: a protection flag skips a region only where slavery has ended there in law or in fact; a policy protecting arrivals is a policy flag that raises flight and never skips).
   - From the same review, **lanes 1.4 and 1.14:** McClellan bold on paper (27 April, 80,000 men) and cautious in action (Rich Mountain, 11 July). A single boldness cannot hold both. Watch whether drafting and execution need separate terms when operations land, and in calibration.
 **Phase 2 (desk and map)**
-- **The desk, from lane 1.13:** Union inbox volume, now that the press is on. It needs filtering and weekly summaries.
+- **The desk, from lane 1.13:** Union inbox volume, now that the press is on. Codex's R43 built the in-tray's filters and a weekly summary paper in the desk prototype. Two gaps are left:
+  - **The press's stories are not in the seat view.** A press paper's `ReportView` has empty claims, and its text is only "about person …", so the summary can link the papers but can't say what they print. Giving the view the story text is a view change for whoever next touches the press or the view (lane 1.11 changes `view/`).
+  - **A battle appears once per phase of the day** in the summary ("dawn at Washington: going well", then morning, afternoon and evening). It should read as one line per battle, with its latest state.
+- **Send back with notes, from Codex's R18 (the desk prototype, 0091):** PRESENTATION.md §3 has two ways to send the blue-pencil marks, but the console's `sendback` (`ReviewCommand`) carries no notes. The desk therefore queues a bare `sendback <post>` and keeps the marks on the desk, and the commander never reads them. The kernel needs a notes payload that the commander reads like an order and redrafts by his own judgement. Whoever next touches plan review owns it.
+- From the review of R29, claimed control (`review-claimed-control.md`, branch `codex-claimed-control` at `b5bfaf0`; decision 0094):
+  - **How a commander perceives control shares.** Battle reports now carry the true share at full confidence, unlike every other battle claim, which passes through the author's perception. The player sees only the holder and whether a region is contested (0094 item 1, amended 12ce79a). Whether a commander's report should state shares through his perception is open. From the re-check of `a68e6f4`: R32's occupation and threshold reports carry exact true shares at full confidence too, as battle claims do.
+  - **The sign catalogues** (`prototypes/desk/web/map/furniture-data.json`, `furniture-r35.json`, `woodlands.json`; light review of `c78e514`) are `union-1861` data held in the desk prototype, and their own comments say they belong in the pack. They are off by default under 0095; if pictorial signs return they move to the pack.
+  - **The held/firmly held line** is a desk constant (800‰), not a pack rule. 0094 item 1 lets the player see only the holder, whether a region is contested, and those two depths. Whether the threshold should be pack data is open.
+  - **From the review of R42 (`6180a24`, merged 1d4b10e):**
+    - No check stops a future direct reader of `state.reportTruth[...]` that bypasses `truthOf`. The opening bulletins' entries hold no terms of their own, so such a reader would see empty terms.
+    - Kernel tests now import `cli/src`, `rule-seats` and `pack-format` (R42's `support/opening-comparison.ts`). They belong in `packages/cli/test`, or the dependency should be declared.
+    - `state-data.test.ts` takes about 14 seconds on every commit.
+    - The extra comparisons in `knowledgeOf`'s cache, on the stored report and the shared claims, have no test.
+  - **A missing test (re-check of `a68e6f4`).** No test covers a field superior signing a control report for a vacant local post, so removing the chain walk fails no test.
+  - **The two opening bulletins repeat the same claims** in their bodies and in their truth: about 0.30 MB of the 0.51 MB starting State (0.21 MB without it). Every daily hash pays for it.
+  - **Expired control excerpts stay in the player's papers.** An expired dispatch's control excerpt stays in `view.reports`, with only its control claim.
+  - **Governments are never re-reported after day 0.** `control-government` is written once, so a government that changes side (0065) or closes (Kentucky) keeps its day-0 colour. Not exercised in the reference runs.
+  - **Governments in an opening override.**
+    - The leak is closed by R42 (`6180a24` on `codex-hardening`): a control-only override makes no government claims and never reads true governments.
+    - Still open: letting an override name its governments. This needs `packages/pack-format/` (`schemas.ts`, `validate.ts`, and the regenerated scenario schemas), which lane 1.12 also changes.
+    - It is for the first pack whose start is not public. Codex's candidate is in `art-masters/R42/`.
+  - **The desk prototype's older tests (R22 to R28)** cannot run in a reviewer's worktree, because they read ignored map data (`ENOENT`). Only Codex's worktree has it, so the desk's full suite has been run only there. Reviewing prototypes needs a way to get the data.
+  - **Lane 1.12 (or the research lane):** the at-war reference run loses Washington. A battle on day 27 leaves it Union 800, Confederate 200, and occupation takes it around day 33. It looks like the retired generic principal's behaviour. Check, once lane 1.12 merges, that it is gone.
 
 - From lane 1.7's hand-over (`notes/lane-1.7-men-regions.md`, merged 2c97b64), by lane:
   - **Lane 1.12 (rule seats):** no rule seat calls for regiments, so recruitment's mechanics are QUIET in the reference runs, each with its driving test. The principals need a call policy.

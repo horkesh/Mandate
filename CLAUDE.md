@@ -28,7 +28,7 @@
 - `packs/`: setting data (one folder per pack)
 - `docs/decisions/`, `docs/design/`, `docs/research/` (dated, sourced), `docs/LESSONS.md`, `docs/OPEN_QUESTIONS.md`
 - `tools/`: validators
-- `CODEX.md`: the one coordination file through which Claude writes asset requests for Codex (0048)
+- `CODEX.md`: the one coordination file through which Claude writes requests for Codex: assets (0048), the prototypes in `prototypes/desk/` and `prototypes/map-icons/` (0089, 0090), and coding tasks run through Codex's command line (0092)
 
 ## Commands
 

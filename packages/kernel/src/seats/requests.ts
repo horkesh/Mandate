@@ -244,9 +244,9 @@ export function battleMenus(world: SeatsWorld, state: State, ground: MarchGround
     if (loc.locMarch === null || loc.locAboard !== null || isNaval(world.map, state, id) || state.forceBlockStates[id]!.fbSurrenderedDay !== null) continue;
     const faction = factionOfBlock(world.map, state, id);
     if (faction === null) continue;
-    const to = marching.get(loc.locMarch.marchTo) ?? new Map<FactionId, ForceBlockId[]>();
-    marching.set(loc.locMarch.marchTo, to);
-    to.set(faction, [...(to.get(faction) ?? []), id]);
+    const factionMarches = marching.get(loc.locMarch.marchTo) ?? new Map<FactionId, ForceBlockId[]>();
+    marching.set(loc.locMarch.marchTo, factionMarches);
+    factionMarches.set(faction, [...(factionMarches.get(faction) ?? []), id]);
   }
   for (const region of [...new Set([...standing.keys(), ...marching.keys()])].sort(strictCompare)) {
     if (Object.keys(state.regionControl[region] ?? {}).length === 0 && ground.network.neutralGround?.[region] !== undefined) continue;

@@ -1,0 +1,28 @@
+{
+  "asset": "prototypes/desk/web/map/icons/hq-army.svg",
+  "request": "R18",
+  "brief": "ASSETS.md#1",
+  "date": "2026-11-17",
+  "plan": "owner previously recorded ChatGPT Pro 100",
+  "client": "Codex command-line session",
+  "model": "not exposed by this tool",
+  "apiKeyUnset": "not required; no image model",
+  "tool": "Python file copy",
+  "mode": "byte-for-byte reuse of R16 rough SVG",
+  "prompt": null,
+  "references": [
+    {
+      "path": "prototypes/map-icons/icons/rough/hq-army.svg",
+      "sha256": "46393ec167d1ac824ca1d8444ffef9f53b623d4ef7a2d9732c0bb27d07f74248",
+      "sourceRecipe": "prototypes/map-icons/icons/rough/hq-army.svg.recipe.json"
+    }
+  ],
+  "requestedSize": "24-unit vector",
+  "actualSize": "24-unit vector",
+  "variantsMade": 1,
+  "variantChosen": 1,
+  "humanEdits": [],
+  "postProcess": [],
+  "provenanceMarks": "procedural SVG; no embedded image-model marks",
+  "sha256": "46393ec167d1ac824ca1d8444ffef9f53b623d4ef7a2d9732c0bb27d07f74248"
+}

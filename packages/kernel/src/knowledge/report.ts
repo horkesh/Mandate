@@ -12,7 +12,7 @@
  * `IMMUTABLE_RECORDS` (`ownership.ts`), and its keys are prefixed so they stay
  * unique across all State records (decision 0044).
  */
-import type { MessageId, PersonId, PostId, RegionId } from '../ids.ts';
+import { isWellFormedId, type MessageId, type PersonId, type PostId, type RegionId } from '../ids.ts';
 
 /** The report types of 0032, plus advice (0040). Each is a pack-tunable template (`ReportTemplate`). */
 export const REPORT_TYPES = [
@@ -79,6 +79,9 @@ export type SubjectKind = (typeof SUBJECT_KINDS)[number];
  *   full returns, 500 while a first return stands for a day, and 0 with no return yet (no figure printed); once every
  *   day's full return has come, a `captured` claim beside it gives the captured apart (never before: no early split);
  * - `framing`: who its public believes began the war, signed permille (positive: the other side).
+ * - `control` (0094): `claimToken` is the faction and `claimValue` its share, permille. A report's control claims
+ *   for a region are a complete snapshot; an omitted faction has no share in that snapshot.
+ * - `control-government`: the named department governs the region, with value 1 for neutral and 0 for aligned.
  */
 export const CLAIM_KINDS = [
   'arrived',
@@ -89,6 +92,8 @@ export const CLAIM_KINDS = [
   'casualties',
   // Lane 1.12: a post's commander lost in battle (token: killed, wounded or captured); the subject is the post.
   'commander-lost',
+  'control',
+  'control-government',
   'effective-strength',
   'enemy-strength',
   // Lane 1.12: a fort surrendered under bombardment (token: the record's terms, evacuated_under_terms, or captured).
@@ -179,6 +184,11 @@ export function reportProblems(body: ReportBody): string[] {
   for (const c of body.reportClaims) {
     if (!isPermille(c.claimConfidence)) problems.push(`claim ${c.claimKind}: confidence must be a permille`);
     if (!Number.isSafeInteger(c.claimValue)) problems.push(`claim ${c.claimKind}: value must be an integer`);
+    if (c.claimKind === 'control' || c.claimKind === 'control-government') {
+      if (c.claimRegion === null || c.claimToken === null || !isWellFormedId(c.claimToken)) problems.push(`claim ${c.claimKind}: needs a region and a ${c.claimKind === 'control' ? 'faction' : 'department'} token`);
+      if (c.claimKind === 'control' && !isPermille(c.claimValue)) problems.push('claim control: share must be a permille');
+      if (c.claimKind === 'control-government' && c.claimValue !== 0 && c.claimValue !== 1) problems.push('claim control-government: value must be 0 or 1');
+    }
   }
   if (body.reportHour !== null && (!Number.isSafeInteger(body.reportHour) || body.reportHour < 0 || body.reportHour > 23)) problems.push('hour must be 0..23');
   return problems;

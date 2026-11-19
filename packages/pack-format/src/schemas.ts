@@ -698,6 +698,12 @@ export const ForceBlockSchema = z.strictObject({
   provenance,
 });
 
+const controlTable = z.array(z.strictObject({ region: idOf('region'), shares: z.array(z.strictObject({ faction: idOf('faction'), permille })) }));
+const openingControl = z.strictObject({
+  authors: z.array(z.strictObject({ faction: idOf('faction'), post: idOf('post') })).min(1),
+  table: controlTable.optional().describe('A complete report-only table. If omitted, the opening report uses the scenario’s control table.'),
+}).optional().describe('The opening map report, with one filled authoring post per faction in the scenario.');
+
 export const ScenarioSchema = z.strictObject({
   id: idOf('scenario'),
   name: stringKey,
@@ -706,7 +712,8 @@ export const ScenarioSchema = z.strictObject({
   factions: z.array(
     z.strictObject({ faction: idOf('faction'), principal: idOf('person').nullable(), capital: idOf('region').nullable(), playable: z.boolean() }),
   ),
-  control: z.array(z.strictObject({ region: idOf('region'), shares: z.array(z.strictObject({ faction: idOf('faction'), permille })) })),
+  control: controlTable,
+  openingControl,
   fortification: z.array(z.strictObject({ region: idOf('region'), levelPermille: permille })),
   loyalty: z.array(z.strictObject({ region: idOf('region'), shares: z.array(z.strictObject({ faction: idOf('faction'), permille })) })).describe('Region loyalty at the start (lane 1.7): each faction’s share, summing to at most 1000. Never a stand-in for control.'),
   edgeConditions: z.array(z.strictObject({ edge: idOf('edge'), conditionPermille: permille })),
@@ -775,6 +782,7 @@ export const ScenarioHeaderSchema = z.strictObject({
   factions: z.array(
     z.strictObject({ faction: idOf('faction'), principal: idOf('person').nullable(), capital: idOf('region').nullable(), playable: z.boolean() }),
   ),
+  openingControl,
 });
 
 export type Manifest = z.output<typeof ManifestSchema>;

@@ -132,7 +132,16 @@ describe('the view layer cannot reach State or the truth layer', () => {
     const closure = importClosure(VIEW_LAYER_ROOT, readRepo);
     expect(closure).toContain('packages/kernel/src/view/types.ts');
     expect(closure).toContain('packages/kernel/src/seats/api.ts');
+    expect(closure).toContain('packages/kernel/src/control/vocabulary.ts');
     expect(forbiddenIn(closure)).toEqual([]);
+  });
+
+  it('claimed control and fronts have no import path to the control writer or the State table', () => {
+    const closure = importClosure('packages/kernel/src/view/claimed-control.ts', readRepo);
+    expect(closure).toContain('packages/kernel/src/control-index/control-index.ts');
+    expect(closure).not.toContain('packages/kernel/src/control/control.ts');
+    expect(forbiddenIn(closure)).toEqual([]);
+    expect(closure.filter((file) => /\bregionControl\b/.test(lexSource(readRepo(file)).code))).toEqual([]);
   });
 
   it('catches a forbidden file reached through an intermediate (positive control)', () => {

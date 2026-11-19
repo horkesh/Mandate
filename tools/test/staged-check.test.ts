@@ -56,7 +56,9 @@ function makeRepo(): Repo {
     mkdirSync(dirname(join(root, path)), { recursive: true });
     writeFileSync(join(root, path), text);
   };
-  const git = (...args: string[]) => execFileSync('git', args, { cwd: root, encoding: 'utf8' });
+  const git = (...args: string[]) => {
+    return execFileSync('git', args, { cwd: root, encoding: 'utf8' });
+  };
   git('init', '-q');
   write('.gitignore', 'node_modules/\n');
   write('package.json', JSON.stringify({ name: 'throwaway', private: true, workspaces: ['packages/*'] }));
