@@ -12,7 +12,7 @@ CELLS=json.loads((E/'cells.json').read_text(encoding='utf-8'))
 # These date headings were read in official-reading.txt and the retained extracts.
 # Broad bounds deliberately include adjacent letters when a locator is not specific.
 OFFICIAL={
- 'OR I-1':{12:'1861-04-19',163:'1861-02',166:'1861-02-06',9:'1860-12..1861-01',291:'1861-04',297:'1861-04',301:'1861-04',38:'1861-04',61:'1861-04',30:'1861-04'},
+ 'OR I-1':{12:'1861-04-18..1861-04-19',163:'1861-02',166:'1861-02-06',9:'1860-12..1861-01',291:'1861-04',297:'1861-04',301:'1861-04',38:'1861-04',61:'1861-04',30:'1861-04'},
  'OR I-2':{1007:'1861-07',28:'1861-05',30:'1861-05',32:'1861-05',316:'1861-07',581:'1861-04',593:'1861-04',614:'1861-04',618:'1861-05',713:'1861-06',881:'1861-05',897:'1861-05',118:'1861-06'},
  'OR I-3':{372:'1861-05',374:'1861-05',375:'1861-05',377:'1861-05',395:'1861-07',399:'1861-07',408:'1861-07',104:'1861-07..1861-08',185:'1861-09',467:'1861-08',485:'1861-09',541:'1861-08..1862-03',542:'1861-08..1861-10',543:'1861-08..1861-10',544:'1861-09',57:'1861-08'},
  'OR I-4':{378:'1861-07..1861-08',180:'1861-08..1861-09',296:'1861-10',314:'1861-10'},
@@ -22,7 +22,7 @@ OFFICIAL={
  'OR I-8':{194:'1862-03',196:'1862-03..1862-04',282:'1862-03',286:'1862-03..1862-04',370:'1861-11'},
  'OR I-9':{207:'1862-03'},
  'OR I-10-2':{379:'1862-03..1862-04'},
- 'OR I-11-1':{1036:'1862-06',275:'1862-05',37:'1862-05',61:'1862-06-28',74:'1862-07',751:'1862-06',78:'1862-07..1862-08',82:'1862-08',933:'1862-06',934:'1862-06'},
+ 'OR I-11-1':{1036:'1862-06',275:'1862-05',37:'1862-05',61:'1862-06-28..1863-08-04',74:'1862-07',751:'1862-06',78:'1862-07..1862-08',82:'1862-08',933:'1862-06',934:'1862-06'},
  'OR I-11-2':{680:'1862-08..1862-09'},
  'OR I-11-3':{422:'1862-04'},
  'OR I-12-1':{379:'1862-03'},
@@ -52,6 +52,10 @@ def resolution(c):
             tail=cite[m.end():]
             if re.match(r'[-,]\s*(?:p\s*)?\d',tail):
                 return 'not found', f'{v} p{p}: the first-page heading gives {d}, but the complete multi-page locator was not resolved to one document or independently bounded. No date is assigned to its unread or unidentified additional documents. See official-page-extracts.json and official-reading.txt.'
+            if (v,p)==('OR I-1',12):
+                return d, 'OR I-1 p12: Anderson telegram headed April18 [1861] and letter headed New York April19 1861, both under No6. The page-only locator selects neither separately, so retain 1861-04-18..1861-04-19. See evidence-r62/source-reading.json and evidence-r52/official-page-extracts.json.'
+            if (v,p)==('OR I-11-1',61):
+                return d, 'OR I-11-1 p61: independently headed telegram of June28 1862 quoted inside McClellan report No1, headed August4 1863 on p5. The page-only locator does not distinguish the telegram from the surrounding report. Retain 1862-06-28..1863-08-04; do not date the whole report from its quoted telegram. See evidence-r62/source-reading.json.'
             return d, f'{v} p{p}: printed date headings read in evidence-r52/official-page-extracts.json and official-reading.txt; bound covers neighboring documents where the locator does not select one. This dates this page only.'
         return 'not found',f'{v} p{p}: document date not established in this pass. See official-missing.txt or official-page-extracts.json; an absent date heading, continuation, ambiguous OCR page or unresolved additional document is not dated from the event it describes. Any embedded date remains unverified.'
     if s=='WELLES-D' and re.fullmatch(r'186[23]-\d\d-\d\d',at):

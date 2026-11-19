@@ -4,12 +4,12 @@
     "basis": "Nicolay/Hay Complete Works, vol6, pp192-220 and 227-231, cabinet-opinion headings read in completeworv6linc OCR lines7401-8891. March 15/16 for first round, March 29 for second. A March 30 running head is not substituted for the explicit March 29 group heading. Broad locators retain a March bound."
   },
   "NH-CW 6 p230-231": {
-    "date": "1861-03-29",
-    "basis": "Nicolay/Hay Complete Works, vol6, pp192-220 and 227-231, cabinet-opinion headings read in completeworv6linc OCR lines7401-8891. March 15/16 for first round, March 29 for second. A March 30 running head is not substituted for the explicit March 29 group heading. Broad locators retain a March bound."
+    "date": "1861-03-29..1861-03-30",
+    "basis": "Nicolay/Hay Complete Works vol6 pp227-231: cabinet opinions have the March29 1861 group heading on p227, but p231 also begins the letter to John T. Stuart headed March30 1861. This page-span locator names neither document separately. Retain both days; the explicit Stuart heading, not the March30 running head alone, establishes the upper bound. See evidence-r62/source-reading.json."
   },
   "NH-CW 6 p228-231": {
-    "date": "1861-03-29",
-    "basis": "Nicolay/Hay Complete Works, vol6, pp192-220 and 227-231, cabinet-opinion headings read in completeworv6linc OCR lines7401-8891. March 15/16 for first round, March 29 for second. A March 30 running head is not substituted for the explicit March 29 group heading. Broad locators retain a March bound."
+    "date": "1861-03-29..1861-03-30",
+    "basis": "Nicolay/Hay Complete Works vol6 pp227-231: cabinet opinions have the March29 1861 group heading on p227, but p231 also begins the letter to John T. Stuart headed March30 1861. This page-span locator names neither document separately. Retain both days; the explicit Stuart heading, not the March30 running head alone, establishes the upper bound. See evidence-r62/source-reading.json."
   },
   "NH-CW 6 p214-217": {
     "date": "1861-03",

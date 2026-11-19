@@ -72,13 +72,14 @@ for (const f of ['rs7.csv', 'rs8.csv', 'rs9.csv']) {
     const cites = stripNew(c.bloc_cites.trim());
     if (c.decision === 'KEEP') { row[col('bloc_cites')] = cites; touch(c.person, 'kept'); }
     else if (c.decision === 'CHANGE' && c.proposed_bloc === 'army') {
-      // The lead's ruling: an officer who resigned after 5 March is a PRE-POSITIONED stand-in (owned by lane 1.12) until the engine can
+      // The lead's earlier ruling: an officer who left US service after 5 March is a PRE-POSITIONED stand-in (owned by lane 1.12) until the engine can
       // resign an officer; he keeps his coded bloc, and the row's notes carry the register fact for lane 1.12.
       const dates = [...cites.matchAll(/dated (\d{4}-\d{2}-\d{2})/g)].map((m) => m[1]);
       const when = dates[dates.length - 1];
       const src = cites.split('+').pop().replace(/ dated .*$/, '');
+      const departure = c.person === 'buchanan_franklin' ? 'was dismissed' : 'resigned';
       row[col('bloc_cites')] = cites;
-      row[col('notes')] = (row[col('notes')] + ` [Pre-positioned stand-in, owned by lane 1.12: held a US commission on 5 March 1861 (bloc army, a register fact) and resigned on ${when} (${src}); he takes his true start in US service once lane 1.12 builds resignation (Part B).]`).trim();
+      row[col('notes')] = (row[col('notes')] + ` [Pre-positioned stand-in, owned by lane 1.12: held a US commission on 5 March 1861 (bloc army, a register fact) and ${departure} on ${when} (${src}); he takes his true start in US service once lane 1.12 builds resignation (Part B).]`).trim();
       touch(c.person, 'kept'); preposition.push(`${c.person} ${when}`);
     } else if (c.decision === 'CHANGE') { row[col('bloc')] = c.proposed_bloc; row[col('bloc_cites')] = cites; touch(c.person, 'changed'); blocLog.push(`${c.person}: ${prior} -> ${c.proposed_bloc}`); }
     else if (FACT.has(prior) && !CIVILIANS.has(c.person)) {
