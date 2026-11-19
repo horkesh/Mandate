@@ -155,6 +155,8 @@ export interface BombardmentRules {
   readonly objectives: readonly { readonly region: RegionId; readonly source: string }[];
   /** A water edge carries fire only if it is at most this long, permille days (the batteries' range). */
   readonly rangeMaxDaysPermille: number;
+  /** Preparation days for guns already at the firing position; movement to it remains an operation's march. */
+  readonly inPositionPreparationDays: number;
   /** Morale the defender loses a day at a fire ratio of 1000 (his guns equal to the attacker's). */
   readonly moraleLossPerDay: number;
   /** The fire ratio (attacker's guns over the defender's, permille) is capped here. */
@@ -272,6 +274,7 @@ export function combatRulesProblems(rules: CombatRules | undefined, terrains: re
   if (b === undefined) problems.push('combat rule bombardment is missing');
   else {
     whole(b.rangeMaxDaysPermille, 'bombardment.rangeMaxDaysPermille');
+    whole(b.inPositionPreparationDays, 'bombardment.inPositionPreparationDays');
     for (const k of ['moraleLossPerDay', 'outOfStoresMoraleLoss', 'worksWearPerDay', 'lossPermille', 'surrenderMorale', 'boldnessWeight'] as const) whole(b[k], `bombardment.${k}`, 1000);
     whole(b.ratioCapPermille, 'bombardment.ratioCapPermille');
     if (typeof b.source !== 'string' || b.source.length === 0) problems.push('combat rule bombardment.source must cite where its numbers come from');

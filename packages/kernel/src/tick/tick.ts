@@ -45,7 +45,7 @@ import type { Telemetry } from '../telemetry.ts';
 import { createViewCache, type ViewCache } from '../view/view.ts';
 import { applyPlanChoices, choosingPosts, planKey, planOptions, plansPhase, PLANS_MECHANICS } from './plans.ts';
 import { fire, type DecisionPoint, type MapEvent, type Price, type Proposal, type Rejection, type TickContext, type TickEvent } from './context.ts';
-import { deliverDue } from './deliver.ts';
+import { deliverDue, deliverSituationOrders } from './deliver.ts';
 import { createFreezeLedger, deepFreeze, type FreezeLedger } from './freeze.ts';
 import { generateReports } from './generate.ts';
 import { battleReports, BATTLE_REPORT_MECHANICS } from './battle-reports.ts';
@@ -286,7 +286,11 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
 
   // 4b. Situations, after the map so a cause sees today's control: fire on their causes, surface on what the seat
   // knows, stay live, take history defaults (lane 0.7).
+  const situationOutboxStart = ctx.outbox.length;
   state = applyPhase(runSituations(ctx, state));
+  // An option can issue a zero-day dispatch after phase 2. Settle its due hops today too: the wire's
+  // stated latency must not acquire an implicit overnight wait merely from the phase that sent it.
+  state = applyPhase(deliverSituationOrders(ctx, state, situationOutboxStart));
 
   // 4c. The proposals `command` owns: a neutral government closing or reopening (0055, 0058).
   const proposed = commandProposalsPhase(ctx, state);

@@ -2,11 +2,11 @@
 
 Main merged at `364aba0` on 2026-11-19, by R46. R48 starts from the committed merge at `8b15e6e`, in `C:/Pyrrhic/mandate-rule-seats-b`, branch `phase1-rule-seats-b`.
 
-## Where lane 1.12 stopped (2026-11-19, R77)
+## Where lane 1.12 stopped (2026-11-19, R78)
 
-**R74 is approved at `5a08456`. R77 resolves the working-file contents of the in-progress merge of lane 1.11 at `b6f935b`; the index intentionally remains unmerged.** Nothing is staged, committed or aborted. Both lanes' behavior is retained. The first checked integrated history reaches 31 July/day 148, without `--at-war`, with zero rejections, matching daily replay and day-60 save/resume. Sumter falls on **20 April/day 46 under Anderson**, outside R74's recorded window: capture, no evacuation notice, `combat.evacuated = 0`. Richmond moves once on **29 May/day 85**, after `virginia_seceded` on day 43. Each side's own decision sets its war flag (Confederate day 37; Union day 38). No outcome was tuned.
+**The lead committed R77 as `235cfef`; R78 is implemented from that clean head, without Git mutation.** The history reaches 31 July/day 148 without `--at-war`, with zero rejections, matching daily replay and day-60 save/resume. The guns fire on **12–13 April/days 38–39** and Sumter falls on **13 April/day 39 under Anderson**, with the recorded evacuation terms, the signed notice on day 40, and `combat.evacuated` banded at exactly one. Richmond still moves once on **29 May/day 85**. The earlier authorization also moves the unchanged opening chain: Confederate war day 36, Union war day 37, Virginia notice day 42. R78 below records those wider date effects and the proposed date-gating ruling.
 
-Required no-Git full check: **exit 0, 126 files / 1,440 passed / 3 optional skips**. Desk types and suite: **exit 0, 84 passed / 8 existing skips**. Standalone done check: **exit 0, Phase 0 6/6; 1A 1/6**. Full details and all remaining gate problems are in R77 below and `runs/r77/final-checks.json`. The unmet Sumter condition belongs to the next request.
+Required no-Git full check: **exit 0, 126 files / 1,445 passed / 3 optional skips**. Desk types and suite: **exit 0, 84 passed / 8 existing skips**. Standalone eight-seed done check: **exit 0, Phase 0 6/6; 1A 1/6**. All five failed 1A categories remain; no historical checkpoint or timing limit changed. Evidence: `runs/r78/final-checks.json`. Claude's standing reviewer owns the independent review under 0096. The earlier sections below retain the lane's implementation history; R78 supersedes their late-Sumter result and pending doctrine-row removal.
 
 The Part A review history at the pause follows:
 
@@ -19,8 +19,8 @@ The Part A review history at the pause follows:
   - The notice fires once in the Union run, when the principal learns of the evacuation. `situations.fired`, `noticed`, `notice_reports` and `surfaced` are banded at one there.
 - **Before merging:** lane 1.11r3's `L3-sumter.md` (990275c, on `research-1861-leads`) must reach main. The notice and `recordTerms` cite it.
 
-**R77 integrates lane 1.11 and reports the history and war flags.** The list in "For Part B" below is the original brief; its remaining policy changes await the lead’s next request:
-- the history run end to end, through lane 1.11's situations: reported in R77, with the Sumter timing condition unmet;
+**R77 integrates lane 1.11; R78 meets the Sumter timing condition and removes the duplicate doctrine row.** The list in "For Part B" below is the original brief; its remaining policy changes await the lead’s next request:
+- the history run end to end, through lane 1.11's situations: reported in R77 and checked again in R78, with the Sumter timing condition now met;
 - the Confederate capital as State: done in R48;
 - Butler to Fort Monroe;
 - the people verbs bouncing like orders: done in R48;
@@ -50,7 +50,7 @@ Original brief, branch `phase1-rule-seats`: commanders' battle choices as seat r
 - **union-1861:**
   - **Union calls:** 17 calls from the 15 April 1861 quota table, 74 regiments for 90 days (OR III-1 p. 69), dated 15 April.
   - **Confederate calls:** 3 regiments for 12 months to each of SC, MS, FL, AL, GA, LA and TX (NF App G (a); OR IV-1 pp. 126-127), dated 8 April.
-  - **Offensives:** the Charleston command takes Fort Sumter from 12 April (the first shot, NPS-Sumter), and Washington moves on Manassas from 16 July (McDowell marches, WIKI-Bull). Both are cited from `docs/research/2026-11-14-secession-winter-1861.md`.
+  - **Offensives:** Washington moves on Manassas from 16 July (McDowell marches, WIKI-Bull, in `docs/research/2026-11-14-secession-winter-1861.md`). R78 removes the former Charleston–Sumter row: the authored `reduce_sumter` option now owns that goal.
   - **Concentration posts:** `us_dc_militia` and `cs_cmd_charleston`, each with a `concentrateSource` citing the research notes. The choice of post is labelled [I], as the lead ruled.
   - **Other settings:** inquiry every 7 days; appoint `general` to land posts and `naval_officer` to naval ones.
 - **testbed:** the mirror, with TB-DESIGN sources.
@@ -130,7 +130,7 @@ Original brief, branch `phase1-rule-seats`: commanders' battle choices as seat r
 - **Tests:**
   - `bombard.test.ts`, on fictional ground: the day rule, the target check, a captured garrison with no record terms, a bolder commander holding longer, the record's terms evacuating, and a town refused `no_target`;
   - `bombardment.test.ts`: the Union run end to end.
-- **For lane 1.11's hook:** the stage reads a goal with posture `take` whose objective is the fort's region (`fort_sumter`), sent to `cs_cmd_charleston`; the planner's `bombard` method does the rest. When lane 1.11's `reduce_sumter` order sends that goal, remove the doctrine's Sumter offensive row (one owner, as with the calls).
+- **Lane 1.11's hook:** the stage reads a goal with posture `take` whose objective is the fort's region (`fort_sumter`), sent to `cs_cmd_charleston`; the planner's `bombard` method does the rest. R78 removes the doctrine's Sumter offensive row now that `reduce_sumter` sends that goal, and tests the authored opening as its only source.
 - **The forts that may be bombarded** (the gate reviewer's G-1.12a, the lead's ruling): `combat.bombardment.objectives`, a pack rule listing fortification regions, each cited. In `union-1861` the list is `fort_sumter` and `fort_pickens`; in the testbed it is empty.
   - Any other objective is refused `no_target` by the planner method, and the stage itself fires on nothing outside the list (rule 7).
   - A record-terms row must name a listed fort.
@@ -184,7 +184,7 @@ All six criteria pass with no amendment (the lead's ruling: the criterion was ca
 - **The Confederate capital:** it becomes State with one owner, moved by an event on a sourced date (lane 1.11r2: resolution agreed 20 May, approved 21 May 1861; Davis at Richmond from 29 May; the War Department ordered to move 25 May). Propose the owner and which date counts; the lead's first guess is Davis's arrival.
 - **Butler to Fort Monroe:** the rule-seat Lincoln appoints Butler to `us_fort_monroe` on the sourced date, in the history run only. Lane 1.11's placeholder notice of 22 May is removed, in coordination with lane 1.11, which names it in its hand-over.
 - **Lane 1.14:** checks the concentration against the 31 July checkpoints (men under arms, and a planned operation by each side).
-- **Lane 1.11's Sumter hook:** `reduce_sumter` sends the goal the bombardment reads (posture `take`, objective `fort_sumter`, to `cs_cmd_charleston`; c878fd9 on `phase1-situations`). After lane 1.11 merges, remove the doctrine's Sumter row and re-run `bombardment.test.ts` with the situation as the order's only source.
+- **Lane 1.11's Sumter hook — done in R78:** `reduce_sumter` sends the goal the bombardment reads (posture `take`, objective `fort_sumter`, to `cs_cmd_charleston`; c878fd9 on `phase1-situations`). The duplicate doctrine row is removed, and `bombardment.test.ts` now checks the history with the situation as the order's only source.
 - **The people verbs bounce like orders** (the lead's addition): inquire, transfer, relieve, audience and observer are accepted for a post the principal believes held, and come back undelivered on arrival, as orders do (0052).
 - **`believedHolder` reads every capture** (the lead's addition), not only battle records: a commander captured in a bombardment, or by any later route, is believed held until the report arrives.
 - **Resignation** (the lead's addition, 2026-11-17; lane 1.12 recommended its own lane, and the lead had not yet ruled):
@@ -247,7 +247,7 @@ Only the four items that do not wait on lane 1.11 were implemented. Git was read
 - The required standalone done check exits **1: 5/6 criteria pass**. Behaviour, daily repeat/frozen hashes, replay/save-resume, liveness and FOUNDATION test presence pass. **Timing remains unmet:** Union median/p95 **101.71/197.10 ms**, against unchanged **40/160 ms** limits; testbed **5.01/32.03 ms** passes. No liveness band or timing threshold was changed and no long run was retried. A read-only snapshot after the run found 77 Node processes and 16 logical processors; it establishes no cause and no process was stopped. The lead owns the next bounded timing check.
 - Evidence: `runs/r60/regression-red.log`, `regression-green.log`, `check.log`, `done-check.log`, exit records, `runtime.json`, `final-checks.json` and `final-preservation.json`; standalone artifacts in `runs/r60-done/` and `runs/r60-done-drafting/`. Git is read-only. No generated file, schema, saved fixture, pack rule, State field, signed item or other run's worktree changed. No additional proposed ruling was needed; standing review remains pending.
 
-R77 below reports the end-to-end history run and verifies each government’s war decision. Consult policy, Butler’s integration, removing the doctrine’s Sumter row and the 4 July message as an `address` remain deferred. Resignation remains its own lane. R57’s three-day capital test remains a separate boundary control.
+R77 below reports the first integrated history and R78 repairs the bombardment's timing and removes the duplicate doctrine row. Consult policy, Butler’s integration and the 4 July message as an `address` remain deferred. Resignation remains its own lane. R57’s three-day capital test remains a separate boundary control.
 
 ### R74: recorded terms require the recorded case
 
@@ -318,9 +318,58 @@ Remaining done-check failures:
 
 Final evidence index: `runs/r77/final-checks.json`. Final inventories and metadata preservation are in `final-preservation.json` and `final-inventory.json`. The source inventory and runtime diagnostics preceded this closeout; the final audit includes this hand-over. Claude commits the merge after review. R77 does not stage, commit or abort it.
 
+## R78: the bombardment opens on time (2026-11-19)
+
+For the lead: 2 items. Implemented **R78 only**, from the lead's R77 merge `235cfef`, on `phase1-rule-seats-b`. Git was read-only. R79 and other worktrees were not changed. The historical Sumter condition is met; the wider 1A milestone remains incomplete. Independent review belongs to Claude's standing reviewer under 0096.
+
+### Where the week went, and the corrections
+
+R77's trace was the baseline: authored goal day 37, duplicate doctrine goal day 38, Walker's objections day 38, bypasses sent day 39 and received day 42, choice day 43, concentration to day 44, and fire days 45–46. There was **no march across the harbour and no works phase** in that operation. The unnecessary operation time was field concentration and a day spent entering `bombard` before firing. The relay preserved the requested wire route; the later bypass policy hard-coded a special messenger.
+
+| Change | Effect on the fall date |
+|---|---|
+| Remove the Confederate doctrine's Sumter offensive row. The authored `reduce_sumter` option owns the goal. | No date gain by itself; removes the duplicate goal, objection and bypass. One authored goal and its necessary bypass remain. |
+| An urgent bypass chooses the fastest offered route, with price breaking ties. Reviews and the word to go use the same rule. | The Montgomery–Charleston bypass uses the existing zero-day wire instead of a three-day special messenger: **three days earlier**. No map, latency constant or person's traits changed. |
+| Add required `WorldRules.combat.bombardment.inPositionPreparationDays`, stated as zero with a reason by both packs and both shared fixtures. The planner uses it instead of field concentration; a ready axis fires on entering the bombardment stage. | This operation loses its one concentration day and its empty stage-transition day: **two days earlier**. In the model, readiness means live guns standing at the planned firing shore, within the pack's water-edge range. Displaced guns must march back, and cannot fire inland. |
+| Settle an option's zero-day order hops and their replies in phase 4b, through the existing delivery owner. Positive travel/holds remain in transit; other queued reports retain their dispatch phase. | Walker receives the local order and his objection returns on the issue day, rather than tomorrow: **one day earlier**. The normal next-morning bypass and commander's choice are retained. |
+| Replace the opening option's four-day clock with availability from **10 April/day 36**, still requiring the opening situation's existing relief/landing/fallback cause. | The recorded initial authorization goes out on 10 April instead of 11 April: **one day earlier**. This is an absolute earliest authorization date, not a new three-day deliberation rule. |
+
+The accounting is **day 46 → 43 → 41 → 40 → 39** after the no-date-change duplicate removal. Intermediate dates are [I], computed from the retained route and stage timings, not five new counterfactual campaigns. A retained 60-day probe after the first three changes directly observes day 41 (`runs/r78/probe-trace.json`).
+
+**Sources read:** Walker's authorization of 10 April and Beauregard's same-day reply are [OR I-1 p. 297](https://ehistory.osu.edu/books/official-records/001/0297). The further exchange of 11 April is [p. 301](https://ehistory.osu.edu/books/official-records/001/0301). Beauregard's detailed report, dated 27 April, says the channel defences and batteries were completed before the 11 April demand, and records instructions received by telegraph at 9.10 p.m. after the aides returned at 5.10 p.m. ([p. 30](https://ehistory.osu.edu/books/official-records/001/0030)); it places the signal shell at 4.30 a.m. on 12 April ([p. 31](https://ehistory.osu.edu/books/official-records/001/0031)). Whiting's complaints about confused new infantry and support preparations remain important counterevidence to treating the whole force as ready ([p. 302](https://ehistory.osu.edu/books/official-records/001/0302)). The fix concerns batteries already positioned, not the readiness of every reinforcement. The terms remain sourced by `docs/research/_leads/L3-sumter.md`, OR I-1 pp. 12–15.
+
+**Proposed rulings [I], for the lead to record:** the zero battery-preparation setting, fastest-route bypass policy and issue-day settlement implement R78's physical/latency ruling. The date correction treats the 10 April authorization as the option's earliest availability while retaining its event cause. Rejected: fitting a three-day relative clock only to this run; retaining an unsupported four-day wait; overriding Walker's compliance or changing his traits; skipping an unmade commander's choice; widening R74's offer window or changing morale, losses or surrender thresholds. Walker's objection is still the model's behaviour; the source has him issuing the order, not objecting to it.
+
+### Checked history and wider dates
+
+The run without `--at-war` reaches **31 July/day 148**, zero rejected commands, all daily replay hashes matching, and day-60 save/resume matching. Final State: **`444394e36f9ad384f9998516d5d2d129a969e6e11e7bada5889984ba28d6659a`**. World: `4a379964b2ba89f0c2adac5c3f506ac075d21cb8f17f02f91579afda331784b6`. The initial State hash is unchanged from R77.
+
+- **10 April/day 36:** the authored goal, and Walker's objection received by Davis.
+- **11 April/day 37:** the single bypass travels by wire and reaches Beauregard; he drafts.
+- **12 April/day 38:** his normal choice approves the bombardment and the ready guns fire.
+- **13 April/day 39:** second day of fire; Anderson surrenders under the unchanged recorded terms. His garrison leaves play, he remains serving, `combat.evacuated = 1`, `combat.captured = 0`, no commander-loss report. Day-39 State hash: **`6f135c6271896119347e94e4343bdc11ad82efaeca58e083aef0e38d5f219965`**.
+- **14 April/day 40:** the signed `sumter_evacuated` notice fires on receipt of the report. Its bytes and gate material are unchanged. This model's day-39 event represents the agreement/fall; the source distinguishes the physical departure on 14 April.
+- **Wider existing chain:** Confederate war flag is now day 36 (10 April), Union war flag day 37 (11 April), `virginia_seceded` day 42 (16 April). Each government's own decision remains the writer. These are one day earlier than R77, not corrected elsewhere by R78. Richmond remains one move on **29 May/day 85**, after the prerequisite, and remains Richmond through July.
+
+`history-findings.json`, `history-trace.json` and the day-60 save contain the evidence. The original history command's **exit 1** is retained: it encountered four stale liveness bands. Its retained summary passes the final table (**exit 0**, `retained-history-validation.json`), without repeating that campaign. The standalone done check independently reproduces **all 148 Union daily hashes**. All **120 testbed daily hashes** match R77.
+
+### Bands, checks and preservation
+
+Only four numeric Union bands change: capture **1..4 → 0**, evacuation **0 → exactly 1**, special messengers **1..6 → 0**, commander-loss reports **1..4 → 0**. Their reasons are the recorded evacuation and wire bypass. Evacuation leaves global `QUIET`; commander-loss reporting gains its existing shared-path kernel driver. Testbed numeric bands, historical checkpoint bands, seeds, fork horizons and timing limits are unchanged. All four changes and all **25 changed measured counts** against R77 are retained in `band-differences.json` and `measured-differences.json`; other counts stay within their existing bands. No extra attribution campaign was run.
+
+- Exact `MANDATE_NO_GIT=1 npm run check`: **exit 0, 126 files / 1,445 passed / 3 optional skips**, including types, boundary, licences and decisions. An initial long run was stopped when four files exposed the missing new field in the pack-format shared manifest. Adding that field passed **262 focused tests** and the remaining cheap gates before the corrected full check. All failure and correction logs remain.
+- Desk typecheck and suite: **exit 0, 84 passed / 8 existing skips**. Their evidence is reused after only a non-desk test-fixture correction. No build, server or browser campaign.
+- Standalone `npm run run:done-check -- --label r78-done`: **exit 0, Phase 0 6/6; 1A 1/6**, eight seeds and default drafting measurement. Union reference median/p95 **36.95/70.67 ms**; testbed **3.85/5.67 ms**; Union history **37.86/66.40 ms**. Limits remain **40/160 ms**.
+- Every 1A failure category was read. All eleven non-budget statuses match R77; the only changed problem text is **45 reservations rather than 46**, still above nine. Checkpoints, operation, pushback, stand-ins and lever sweep remain failed. Their full lists are in `done-criteria.json`. Zero wins for `return` is still not D6 clearance while the channels and border recruitment chain are unmeasured.
+- Regenerated schemas, both pack Worlds and the day-40 save with their own tools. The save's State, log, State hash and log hash are identical; only its World hash changes for the explicit pack rule. No new State field, owner, save schema, player wording, trait, strength or existing combat rate was introduced or tuned. R74's whole `recordTerms` row is identical.
+- Final source inventory and runtime diagnostics precede this closeout. **27 delivery files, 1,615 other baseline files unchanged**, no addition/deletion outside ignored evidence; all **nine captured worktree Git metadata files unchanged**. Signed items, gate records, source rosters, checkpoint files and lockfiles are preserved. Evidence index: `runs/r78/final-checks.json`; inventories: `final-inventory.json`, `final-preservation.json`.
+
+For the lead:
+1. Review R78 under 0096, including the proposed earliest authorization date, its effect on counterfactual availability, the late order-delivery settlement and the four directly affected liveness bands.
+2. Retain ownership of the five failed 1A gates and the wider opening-chain date shifts. R78's Sumter condition and passing Phase 0 checks do not waive them.
+
 ## Findings outside my scope
 
-1. **Lead / next Part B request:** Sumter's day-46 capture misses the required 12–13 April evacuation and signed notice. The trace exposes both the authored and doctrine orders and their relay/travel/staging delay; R77 leaves their behavior intact.
-2. **Lead / lane 1.14:** the budget passes; all eleven non-budget criterion statuses and problem lists match retained R73 evidence. Retain the five failed 1A gates listed above. A passing root suite or liveness table does not waive historical, operation, pushback, stand-in or D6 conditions. `return` being best in zero seeds is not D6 clearance while the required channels/chain are unmeasured.
-3. **Lead / remaining Part B policy:** consult policy, Butler's integration/placeholder cleanup, retiring the doctrine Sumter row, and the July message as `address` remain outside R77. Resignation is its separate lane.
-4. **Lead / standing reviewer:** review the combined contents and the ungated capital annotation under 0096. The ten index conflicts remain intentionally unmerged for the lead to stage; no Git metadata or another worktree was written.
+1. **Lead / lane 1.11:** its unchanged opening-flag chain now produces Union war on 11 April and Virginia's notice on 16 April. These are observed consequences of the sourced one-day authorization correction; separating an authorization flag from actual fire or revising the later chain needs its own ruling. R78 does not silently repair other situations to preserve old dates.
+2. **Lead / lane 1.14 and R79:** retain the failed checkpoint, operation, pushback, stand-in and lever-sweep gates. R79's hook bound and label cleanup were not undertaken. The only changed problem count is reservations 46 → 45; no acceptance criterion was retired.
+3. **Lead / remaining Part B policy:** consult policy, Butler's integration/placeholder cleanup and the July message as `address` remain deferred. Resignation is its separate lane. The duplicate Sumter doctrine row is now removed.

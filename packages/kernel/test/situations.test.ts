@@ -289,6 +289,18 @@ describe('deciding: the principal, a history default, several options, waiting, 
 });
 
 describe('orders an option issues, and delegation (0052)', () => {
+  it('delivers an option-issued zero-day wire on its issue day, including the relay objection', () => {
+    const sit = decision('wire_today', {
+      options: [option('advance', 1, { orders: [{ to: POST('a_reserve'), posture: 'take', objective: R('b_mid'), route: 'wire' }] })],
+      historicalDefault: { options: ['advance'] },
+    });
+    const { world, state } = setup([sit], { a_lead: 'rules' });
+    const run = days(world, state, 1);
+    expect(run.results[0]!.events.some((e) => e.event === 'objected' && e.person === P('a_sec'))).toBe(true);
+    expect(knowledgeOf(run.state, lead).knownReports.some((r) => r.knownReceivedDay === 1 && r.knownBody.reportClaims.some((c) => c.claimKind === 'order-objected'))).toBe(true);
+    expect(run.state.messagesInTransit.some((m) => m.msgOrder !== null && m.msgArriveDay <= 1)).toBe(false);
+  });
+
   it('issues an option’s orders in the principal’s name through the validated path, and reports a refused one', () => {
     const sit = decision('order', {
       options: [option('advance', 1, { orders: [{ to: POST('a_reserve'), posture: 'take', objective: R('b_mid'), route: 'special-messenger' }, { to: POST('a_office'), posture: 'hold', objective: null, route: 'courier' }] }), option('hold', 2)],
@@ -296,8 +308,11 @@ describe('orders an option issues, and delegation (0052)', () => {
     });
     const { world, state } = setup([sit], { a_lead: 'rules' });
     const run = days(world, state, 1);
-    const orders = run.state.messagesInTransit.filter((m) => m.msgOrder !== null);
-    expect(orders.map((m) => [m.msgOrder!.orderIssuer, m.msgOrder!.orderTarget, m.msgRoute])).toEqual([[P('a_lead'), POST('a_reserve'), 'special-messenger']]);
+    // The first local hop has zero days even for this messenger. It has already reached the relay today.
+    const response = Object.values(run.state.orderResponses).find((r) => r.respPerson === P('a_sec'))!;
+    expect(response.respOrder).toBe('m.1.a_lead.a_sec.order.a_reserve');
+    expect(response.respRole).toBe('relay');
+    expect(response.respDay).toBe(1);
     // An option ordering a post that commands no army is refused like any order: entry -1 marks it as option-issued.
     expect(run.results[0]!.rejections).toEqual([{ day: 1, seat: lead, entry: -1, reason: 'not_field_post' }]);
   });

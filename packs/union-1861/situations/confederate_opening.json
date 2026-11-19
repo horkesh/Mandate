@@ -32,7 +32,7 @@
       ],
       "honours": [],
       "appearsWhen": {
-        "clockAtLeast": 4
+        "dayAtLeast": 36
       },
       "effects": [
         {
@@ -88,7 +88,7 @@
     },
     {
       "source": "OR",
-      "at": "I-1 pp. 297 to 302 (Walker's telegrams of 10 and 11 April)"
+      "at": "I-1 p. 297: Walker authorizes the demand and, if refused, reduction on 10 April (day 36); pp. 301-302: the further telegrams of 11 April. https://ehistory.osu.edu/books/official-records/001/0297. [I] the option opens from the dated authorization, after this situation has its relief or landing cause, rather than waiting four days from that cause"
     }
   ]
 }

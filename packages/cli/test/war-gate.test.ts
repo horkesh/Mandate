@@ -54,8 +54,8 @@ describe('the war gate on union-1861', () => {
     const warRun = phase0.playDays(world, war, seats, 60, { freeze: true });
     // Both principals start on the first morning (each asks his army where it stands). The seceding side's doctrine calls on
     // 8 April (day 34). The Union's authored call reaches its governors before doctrine's 15 April row, so doctrine
-    // must not duplicate it; what they raise still goes to the concentration post. The doctrine's one offensive inside these days is the seceding side's order of 12 April (day
-    // 38) to take Fort Sumter, sent down the chain, then around the office that objects to it.
+    // must not duplicate it; what they raise still goes to the concentration post. Sumter's goal now belongs to the
+    // authored opening alone: the doctrine sends no second goal down the chain, and only answers its relay objection.
     expect(Math.min(...doctrine(warRun.log).map((e) => e.day))).toBe(1);
     expect(Math.min(...warRun.log.filter((e) => e.command.cmd === 'call').map((e) => e.day))).toBe(34);
     expect(callers(warRun.log, 34)).toEqual(['seat:davis_jefferson']);
@@ -66,7 +66,8 @@ describe('the war gate on union-1861', () => {
     expect(nyAnswers[0]!.respDay).toBeLessThanOrEqual(41);
     expect(Object.keys(warRun.state.forceBlockStates).some((b) => b.startsWith('raised.st_gov_new_york.'))).toBe(true);
     expect(warRun.log.some((e) => e.command.cmd === 'transfer')).toBe(true);
-    expect(chainOrderDays(warRun.log)).toEqual([38]);
+    expect(chainOrderDays(warRun.log)).toEqual([]);
+    expect(orders(warRun.log)).toHaveLength(1);
     expect(orders(warRun.log).every((e) => (e.command as unknown as { readonly to: string }).to === 'cs_cmd_charleston')).toBe(true);
     expect(warRun.state.forceLocations).not.toEqual(war.forceLocations);
   });

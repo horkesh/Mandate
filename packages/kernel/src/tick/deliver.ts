@@ -20,6 +20,16 @@ import { arriveCall } from './recruitment.ts';
 /** A day can chain same-day hops (a relay in the same town); more rounds than this means a loop, which is a bug. */
 const MAX_ROUNDS = 64;
 
+/** Settle orders emitted by late-day situations without advancing cyclic or combat reports' dispatch phase. */
+export function deliverSituationOrders(ctx: TickContext, start: State, outboxStart: number): State {
+  const queued = ctx.outbox.splice(0);
+  const isOrder = (m: TransitMessage, i: number) => i >= outboxStart && m.msgOrder !== null;
+  const orders = queued.filter(isOrder);
+  const state = orders.length === 0 ? start : deliverDue(ctx, sendMessages(start, orders));
+  ctx.outbox.push(...queued.filter((m, i) => !isOrder(m, i)));
+  return state;
+}
+
 export function deliverDue(ctx: TickContext, start: State): State {
   let state = start;
   for (let round = 0; ; round++) {

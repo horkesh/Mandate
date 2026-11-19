@@ -91,6 +91,11 @@ function quickest(routes: readonly RouteOption[]): RouteOption | undefined {
   return [...(free.length > 0 ? free : routes)].sort((a, b) => a.typicalDays - b.typicalDays || compareText(a.route, b.route))[0];
 }
 
+/** Urgent bypasses take the fastest offered route, paying for a messenger only when it is quicker. */
+function fastest(routes: readonly RouteOption[]): RouteOption | undefined {
+  return [...routes].sort((a, b) => a.typicalDays - b.typicalDays || a.price - b.price || compareText(a.route, b.route))[0];
+}
+
 /** Memoranda that objected to one of his orders and reached him yesterday. */
 function freshObjections(reports: readonly ReportView[], day: number): ReportView[] {
   return reports.filter((r) => r.type === 'advice' && r.subtype === 'memorandum' && r.answers !== null && r.receivedDay === day - 1 && r.subjectKind === 'post');
@@ -122,14 +127,14 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   // An office that withheld his answer (its objection reached him yesterday) is gone around with the same answer, by the
   // fastest messenger, at its price; never with a fresh goal, which would start the plan over (lane 1.2).
   const withheld = new Set(policy.goAroundObjections ? freshObjections(reports, day).map((m) => m.subjectId) : []);
-  const routeTo = (post: string) => quickest(menu.commandable.find((c) => c.post === post)?.routes ?? [])?.route ?? 'courier';
+  const routeTo = (post: string, urgent = false) => (urgent ? fastest : quickest)(menu.commandable.find((c) => c.post === post)?.routes ?? [])?.route ?? 'courier';
   for (const r of menu.reviews) {
     const around = withheld.has(r.post);
-    send({ cmd: 'review', to: r.post, action: 'approve', edit: null, route: around ? 'special-messenger' : routeTo(r.post), bypass: around });
+    send({ cmd: 'review', to: r.post, action: 'approve', edit: null, route: routeTo(r.post, around), bypass: around });
   }
   for (const post of menu.awaiting) {
     const around = withheld.has(post);
-    send({ cmd: 'go', to: post, route: around ? 'special-messenger' : routeTo(post), bypass: around });
+    send({ cmd: 'go', to: post, route: routeTo(post, around), bypass: around });
   }
   const answered = new Set<string>([...menu.reviews.map((r) => r.post), ...menu.awaiting]);
   // 0064, 0066: nothing of his doctrine before the morning after his side is at war.
@@ -154,7 +159,7 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
       if (target === undefined || target.relays.length === 0 || answered.has(target.post)) continue;
       const region = memo.claims.find((c) => c.kind === 'order-objected')?.region ?? null;
       if (region === null) continue;
-      send({ cmd: 'order', to: target.post, goal: takeGoal(menu, region), route: 'special-messenger', bypass: true });
+      send({ cmd: 'order', to: target.post, goal: takeGoal(menu, region), route: routeTo(target.post, true), bypass: true });
     }
   }
   // 3. A post commanding troops with nobody to command them gets the senior man of the right kind (lane 1.5's appoint).

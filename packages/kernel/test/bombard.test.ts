@@ -21,6 +21,7 @@ import { appointHolder, relieveHolder } from '../src/command/command.ts';
 import { bombardFort } from '../src/tick/bombard.ts';
 import { combatRulesProblems } from '../src/combat/rules.ts';
 import { sendMessages, type TransitMessage } from '../src/messages/transit.ts';
+import { placeAndRemove } from '../src/movement/movement.ts';
 
 /**
  * Bombardment across water (lane 1.12; the lead's ruling on Sumter, and the gate's conditions), on fictional ground:
@@ -59,6 +60,51 @@ describe('a day of fire on a fort (combat/bombard.ts)', () => {
   it('fires only on works and forces, never a town as such (0029; SENSITIVE-HISTORY 3.6: rule 7)', () => {
     expect([...BOMBARD_TARGET_KINDS]).toEqual(['force', 'works']);
     expect(BOMBARD_TARGET_KINDS as readonly string[]).not.toContain('town');
+  });
+});
+
+describe('guns already in battery', () => {
+  it('requires every pack to state a whole, nonnegative preparation time', () => {
+    for (const inPositionPreparationDays of [undefined, -1, 0.5]) {
+      const bombardment = { ...RULES, inPositionPreparationDays } as BombardmentRules;
+      expect(combatRulesProblems({ ...FIXTURE_COMBAT_RULES, bombardment }, []).join('\n')).toContain('inPositionPreparationDays');
+    }
+  });
+  it('opens the day after receipt, without concentration, march or works', () => {
+    const g = game();
+    const seats = scriptedSeats({ a: { 1: [order('a_army', 'advance', 'fort')] } });
+    const telemetry = createTelemetry([...TICK_MECHANICS, ...MAP_MECHANICS]);
+    let state = g.state;
+    let received: number | null = null;
+    let fired: number | null = null;
+    for (let i = 0; i < 15 && fired === null; i++) {
+      state = playDays(g.world, state, seats, 1, { telemetry, freeze: true }).state;
+      received ??= state.planRecords[P('a_army')]?.planSetDay ?? null;
+      if (telemetry.mechanics['combat.bombardment']!.fires > 0) fired = state.stateDay;
+    }
+    expect(received).not.toBeNull();
+    expect(fired).toBe(received! + 1);
+    const op = Object.values(state.operationRecords)[0]!;
+    expect(op.opAxes[0]!.oaxLog.some((e) => ['march', 'works'].includes(e.axevStage))).toBe(false);
+    expect(state.forceLocations[toId('forceBlock', 'a_guns')]!.locRegion).toBe(R('shore'));
+  });
+
+  it('marches back to its firing position if its guns moved after drafting, without firing inland', () => {
+    const g = game();
+    const seats = scriptedSeats({ a: { 1: [order('a_army', 'advance', 'fort')] } });
+    const telemetry = createTelemetry([...TICK_MECHANICS, ...MAP_MECHANICS]);
+    let state = g.state;
+    for (let i = 0; i < 15 && state.planRecords[P('a_army')]?.planStatus !== 'choosing'; i++) state = playDays(g.world, state, seats, 1, { telemetry }).state;
+    expect(state.planRecords[P('a_army')]?.planStatus).toBe('choosing');
+    const moved = ['a_guns', 'a_inf'].map((id) => toId('forceBlock', id));
+    state = placeAndRemove(g.world.map, placeAndRemove(g.world.map, state, [], moved), moved.map((block) => ({ block, region: R('a1'), day: state.stateDay })), []);
+    state = playDays(g.world, state, seats, 1, { telemetry }).state;
+    expect(telemetry.mechanics['combat.bombardment']!.fires).toBe(0);
+    expect(telemetry.mechanics['movement.leg_started']!.fires).toBeGreaterThan(0);
+    expect(Object.values(state.operationRecords)[0]!.opAxes[0]!.oaxLog.some((e) => e.axevStage === 'march')).toBe(true);
+    for (let i = 0; i < 15 && telemetry.mechanics['combat.bombardment']!.fires === 0; i++) state = playDays(g.world, state, seats, 1, { telemetry }).state;
+    expect(telemetry.mechanics['combat.bombardment']!.fires).toBeGreaterThan(0);
+    expect(state.forceLocations[toId('forceBlock', 'a_guns')]!.locRegion).toBe(R('shore'));
   });
 });
 
