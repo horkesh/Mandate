@@ -27,8 +27,17 @@
  * - a write through a local bound to the key (`const c = x.key; c.push(v)`,
  *   `c[id] = v`; see `localAliasWrites`).
  * Not recognised: writes through a destructured binding (`const { key } = x`),
- * a parameter or a value passed further; the deep freeze in tests
- * (`tick/freeze.ts`) is the backstop for those.
+ * a parameter, a value passed further, or a call after the key/alias. Without
+ * types `.get(id)!.push(f)` cannot be distinguished from a method returning
+ * a copy: do not guess that a call preserves identity. The test-time deep
+ * freeze (`tick/freeze.ts`) catches in-place writes through these escapes.
+ * Map/Set contents escape Object.freeze; `state-data.test.ts` walks starting
+ * and 30-day States for every real pack at peace/war and rejects them and
+ * class instances. Only plain objects, arrays and primitives may enter State.
+ * Local alias tracking is lexical, not scope/type analysis: shadowed names
+ * and a later rebinding remain conservative matches, as before. Bindings
+ * separated by commas and dynamic property names are not followed; freeze
+ * is their backstop too.
  *
  * Each file is lexed once (`lexSource`); a file the lexer cannot read is
  * reported, never skipped.
@@ -208,18 +217,92 @@ const TAIL_STEP = String.raw`(?:\s*!|\s*(?:\?\.)?${INDEX}|\s*\??\.\s*[\w$]+)+`;
  * renaming. Destructured bindings (`const { key } = x`) and parameters are not
  * followed; the test-time freeze (`tick/freeze.ts`) remains their backstop.
  */
+/** Split only expression-level operators, never calls, indexes or literal bodies. */
+function expressionParts(text: string): string[] {
+  let depth = 0;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i]!;
+    if ('([{'.includes(c)) depth++;
+    else if (')]}'.includes(c)) depth--;
+    else if (depth === 0) {
+      if (/^\s+(?:as|satisfies)\s+/.test(text.slice(i))) return [text.slice(0, i)];
+      if (text.slice(i, i + 2) === '??' || text.slice(i, i + 2) === '||') return [text.slice(0, i), ...expressionParts(text.slice(i + 2))];
+      if (c === '?' && text[i + 1] !== '.' && text[i - 1] !== '?') {
+        let nested = 0;
+        let groups = 0;
+        for (let j = i + 1; j < text.length; j++) {
+          const d = text[j]!;
+          if ('([{'.includes(d)) groups++;
+          else if (')]}'.includes(d)) groups--;
+          else if (groups === 0) {
+            if (d === '?' && text[j + 1] !== '?' && text[j + 1] !== '.' && text[j - 1] !== '?') nested++;
+            if (d === ':' && nested-- === 0) return [text.slice(i + 1, j), text.slice(j + 1)];
+          }
+        }
+      }
+    }
+  }
+  return [text];
+}
+
+function balanced(text: string): boolean {
+  const stack: string[] = [];
+  for (const c of text) {
+    if ('([{'.includes(c)) stack.push(c);
+    else if (')]}'.includes(c) && stack.pop() !== ({ ')': '(', ']': '[', '}': '{' } as Record<string, string>)[c]) return false;
+  }
+  return stack.length === 0;
+}
+
+function aliasesExpression(text: string, p: KeyPatterns, names: ReadonlySet<string>): boolean {
+  text = text.trim();
+  while (text.startsWith('(') && text.endsWith(')') && balanced(text.slice(1, -1))) text = text.slice(1, -1).trim();
+  const parts = expressionParts(text);
+  if (parts.length !== 1 || parts[0] !== text) return parts.some(part => aliasesExpression(part, p, names));
+  // The key must end a reference, not be an argument of a surrounding call
+  // or part of a new literal. Receiver calls such as current().key are fine.
+  const ref = new RegExp(String.raw`(?:\.\s*${escape(p.key)}(?![\w$])|\[\s*(?:'${escape(p.key)}'|"${escape(p.key)}"|\x60${escape(p.key)}\x60)\s*\])${TAIL}\s*$`);
+  const match = ref.exec(text);
+  if (match && balanced(text.slice(0, match.index)) && !/[{},;=]/.test(text.slice(0, match.index).replace(/\([^()]*\)|\[[^\[\]]*\]/g, ''))) return true;
+  for (const name of names) if (new RegExp(String.raw`^${escape(name)}${TAIL}\s*$`).test(text)) return true;
+  return false;
+}
+
 function localAliasWrites(lexed: LexedSource, p: KeyPatterns, writeParens: readonly ParenGroup[]): { line: number }[] {
-  const k = escape(p.key);
-  const out: { line: number }[] = [];
-  const decl = (ref: string) =>
-    new RegExp(String.raw`\b(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*(?::[^=;]*)?=\s*\(*\s*(?:[\w$.\[\]!?:\s]|\([^()]*\))*?${ref}${TAIL}\s*\)*\s*(?:\?\?\s*(?:\{\s*\}|\[\s*\]|[\w$.]+)\s*\)*\s*)?(?::\s*[^;]+)?(?:as\s+[^;]+)?;`, 'g');
-  const declarations = [
-    ...[...lexed.code.matchAll(decl(String.raw`\.\s*${k}(?![\w$])`))],
-    ...[...lexed.withStrings.matchAll(decl(String.raw`\[\s*(?:'${k}'|"${k}"|\x60${k}\x60)\s*\]`))],
-  ];
-  for (const d of declarations) {
-    const name = escape(d[1]!);
-    const ref = String.raw`(?<![\w$.])${name}(?![\w$])`;
+  const code = lexed.withStrings;
+  const bindings: { name: string; from: number; expression: string }[] = [];
+  // The lexer retains offsets while removing comments. Read a whole balanced
+  // initializer, including object defaults; a semicolon inside it is not its end.
+  for (const d of lexed.code.matchAll(/\b(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*(?::[^=;]*)?=\s*/g)) {
+    const start = d.index + d[0].length;
+    let depth = 0;
+    let end = start;
+    for (; end < code.length; end++) {
+      const c = lexed.code[end]!;
+      if ('([{'.includes(c)) depth++;
+      else if (')]}'.includes(c)) { if (depth === 0) break; depth--; }
+      else if (depth === 0 && c === ';') break;
+    }
+    bindings.push({ name: d[1]!, from: end, expression: code.slice(start, end) });
+  }
+  for (const d of lexed.code.matchAll(/\bfor\s*(?:await\s*)?\(\s*(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s+of\s+/g)) {
+    const start = d.index + d[0].length;
+    let depth = 0;
+    let end = start;
+    for (; end < code.length; end++) {
+      const c = lexed.code[end]!;
+      if ('([{'.includes(c)) depth++;
+      else if (')]}'.includes(c)) { if (depth === 0) break; depth--; }
+    }
+    bindings.push({ name: d[1]!, from: end, expression: code.slice(start, end) });
+  }
+  bindings.sort((a, b) => a.from - b.from);
+  const names = new Set<string>();
+  const lines = new Set<number>();
+  for (const d of bindings) {
+    if (!aliasesExpression(d.expression, p, names)) continue;
+    names.add(d.name);
+    const ref = String.raw`(?<![\w$.])${escape(d.name)}(?![\w$])`;
     const uses = [
       new RegExp(String.raw`${ref}${TAIL_STEP}\s*${ASSIGN_OP}`, 'g'),
       new RegExp(String.raw`${ref}${TAIL_STEP}\s*(?:\+\+|--)`, 'g'),
@@ -227,14 +310,11 @@ function localAliasWrites(lexed: LexedSource, p: KeyPatterns, writeParens: reado
       new RegExp(String.raw`\bdelete\s+${ref}${TAIL_STEP}`, 'g'),
       new RegExp(String.raw`\b${REFLECTIVE}\s*\(\s*${ref}`, 'g'),
     ];
-    const from = d.index + d[0].length;
-    const tail = lexed.code.slice(from);
-    for (const u of uses) for (const m of tail.matchAll(u)) out.push({ line: lexed.lineOf(from + m.index) });
-    // A cast at the write: a parenthesised group that mentions the local and is written through (review S1).
-    const named = new RegExp(ref);
-    for (const g of writeParens) if (g.offset >= from && named.test(g.code)) out.push({ line: lexed.lineOf(g.offset) });
+    const tail = lexed.code.slice(d.from);
+    for (const u of uses) for (const m of tail.matchAll(u)) lines.add(lexed.lineOf(d.from + m.index));
+    for (const g of writeParens) if (g.offset >= d.from && new RegExp(ref).test(g.code)) lines.add(lexed.lineOf(g.offset));
   }
-  return out;
+  return [...lines].sort((a, b) => a - b).map(line => ({ line }));
 }
 
 /** Every place in `file` that writes property `key`. Throws `LexerError` if the file cannot be lexed. */
@@ -398,25 +478,72 @@ export function writeViolations(
 }
 
 /** Every interface and object type alias in a file, with its top-level keys and the type names it mentions. */
+/** Named type heads, allowing nested generics and defaults containing `=`. */
+function typeHeads(code: string): { name: string; start: number; parameters: string }[] {
+  const out: { name: string; start: number; parameters: string }[] = [];
+  for (const m of code.matchAll(/\btype\s+([A-Za-z_$][\w$]*)\s*/g)) {
+    let i = m.index + m[0].length;
+    const begin = i;
+    if (code[i] === '<') {
+      let depth = 1;
+      for (i++; i < code.length && depth > 0; i++) {
+        if (code[i] === '<') depth++;
+        if (code[i] === '>' && code[i - 1] !== '=') depth--;
+      }
+    }
+    const parameters = code.slice(begin, i);
+    while (/\s/.test(code[i] ?? '') && i < code.length) i++;
+    if (code[i] !== '=' || code[i + 1] === '>') continue;
+    out.push({ name: m[1]!, start: i + 1, parameters });
+  }
+  return out;
+}
+
 export function typeRecords(file: SourceFile): TypeRecord[] {
   const code = lexSource(file.code).code;
   const records: TypeRecord[] = [];
-  const head = /\b(?:interface\s+([A-Za-z_$][\w$]*)\b[^{=;]*|type\s+([A-Za-z_$][\w$]*)\s*(?:<[^=]*>)?\s*=\s*)\{/g;
-  for (const m of code.matchAll(head)) {
-    const open = m.index + m[0].length - 1;
+  function record(name: string, open: number): void {
     const close = matchingBrace(code, open);
     const raw = code.slice(open + 1, close);
     let body = raw;
-    // Flatten nested object types and parameter lists so only top-level keys remain.
-    for (let prev = ''; prev !== body; ) {
-      prev = body;
-      body = body.replace(/\{[^{}]*\}/g, '0').replace(/\([^()]*\)/g, '0');
+    // Keep offsets when blanking child groups, then give inline types their
+    // own reachable record name. Keys inside them must not disappear.
+    const children: { name: string; open: number }[] = [];
+    for (let i = open + 1; i < close; i++) {
+      if (code[i] === '{') {
+        const end = matchingBrace(code, i);
+        const before = code.slice(open + 1, i);
+        const member = /(?:^|[;,\n])\s*(?:readonly\s+)?([A-Za-z_$][\w$]*)\??\s*:[^;{}]*$/.exec(before);
+        if (member) children.push({ name: `${name}.${member[1]}`, open: i });
+        body = body.slice(0, i - open - 1) + ' '.repeat(end - i + 1) + body.slice(end - open);
+        i = end;
+      }
     }
-    const keys = [...body.matchAll(/(?:^|[;,\n])\s*(?:readonly\s+)?([A-Za-z_$][\w$]*)\s*\??\s*:/g)].map((k) => k[1]!);
-    const mentions = [...new Set([...raw.matchAll(/\b[A-Z][\w$]*\b/g)].map((t) => t[0]))].sort();
-    records.push({ path: file.path, record: (m[1] ?? m[2])!, keys, mentions });
+    // Parameter lists are not data members.
+    for (let previous = ''; previous !== body;) {
+      previous = body;
+      body = body.replace(/\([^()]*\)/g, group => ' '.repeat(group.length));
+    }
+    const keys = [...body.matchAll(/(?:^|[;,\n])\s*(?:readonly\s+)?([A-Za-z_$][\w$]*)\s*\??\s*:/g)].map(k => k[1]!);
+    const mentions = [...new Set([...raw.matchAll(/\b[A-Z][\w$]*\b/g)].map(t => t[0]))].sort();
+    records.push({ path: file.path, record: name, keys, mentions: [...mentions, ...children.map(c => c.name)] });
+    for (const child of children) record(child.name, child.open);
   }
-  return records;
+  const heads = [...code.matchAll(/\binterface\s+([A-Za-z_$][\w$]*)\b[^{=;]*\{/g)].map(m => ({ name: m[1]!, open: m.index + m[0].length - 1 }));
+  for (const h of typeHeads(code)) {
+    const leading = /^\s*(?:Readonly\s*<\s*)?\{/.exec(code.slice(h.start));
+    if (leading) heads.push({ name: h.name, open: h.start + leading[0].length - 1 });
+  }
+  heads.sort((a, b) => a.open - b.open);
+  for (const head of heads) record(head.name, head.open);
+  // Union arms belong to one named type. Their repeated discriminator keys
+  // are one immutable field, not two unrelated State records.
+  const merged = new Map<string, TypeRecord>();
+  for (const r of records) {
+    const previous = merged.get(r.record);
+    merged.set(r.record, previous === undefined ? r : { ...r, keys: [...new Set([...previous.keys, ...r.keys])], mentions: [...new Set([...previous.mentions, ...r.mentions])] });
+  }
+  return [...merged.values()];
 }
 
 /** A type alias that is not an object type (`type X = Readonly<Record<K, R>>`, `type Y = A | B[]`): a name to walk through, with no keys. */
@@ -430,11 +557,10 @@ export interface TypeAlias {
 export function typeAliases(file: SourceFile): TypeAlias[] {
   const code = lexSource(file.code).code;
   const out: TypeAlias[] = [];
-  const head = /\btype\s+([A-Za-z_$][\w$]*)\s*(?:<[^=]*>)?\s*=(?![=>])/g;
-  for (const m of code.matchAll(head)) {
-    const start = m.index + m[0].length;
-    if (/^\s*\{/.test(code.slice(start))) continue; // an object alias: `typeRecords` reads it
-    out.push({ path: file.path, alias: m[1]!, mentions: [...new Set([...aliasBody(code, start).matchAll(/\b[A-Z][\w$]*\b/g)].map((t) => t[0]))].sort() });
+  for (const h of typeHeads(code)) {
+    if (/^\s*\{/.test(code.slice(h.start))) continue;
+    const body = `${h.parameters} ${aliasBody(code, h.start)}`;
+    out.push({ path: file.path, alias: h.name, mentions: [...new Set([...body.matchAll(/\b[A-Z][\w$]*\b/g)].map(t => t[0]))].sort() });
   }
   return out;
 }

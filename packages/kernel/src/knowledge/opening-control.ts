@@ -9,7 +9,6 @@ import type { SeatsWorld } from '../seats/world.ts';
 import { controlClaims } from './control-claims.ts';
 import { fileOpeningReports, type KnownReport } from './knowledge.ts';
 import type { ReportClaim } from './report.ts';
-import { term } from './truth.ts';
 
 /** File the authors' day-zero copies of the opening picture with each seat. */
 export function fileOpeningControl(world: SeatsWorld, startState: State): State {
@@ -19,10 +18,13 @@ export function fileOpeningControl(world: SeatsWorld, startState: State): State 
   const rows = opening.table ?? start.control;
   const table = opening.table === undefined ? startState.regionControl : initialControl(map, { ...start, control: opening.table });
   const factions = map.world.factions.map((f) => f.id);
-  const claims = [...rows].sort((a, b) => strictCompare(a.region, b.region)).flatMap(({ region }) => {
+  const claims = [...rows].sort((a, b) => strictCompare(a.region, b.region)).flatMap((row) => {
+    const { region } = row;
     const shares = Object.hasOwn(table, region) ? table[region]! : {};
     const out = controlClaims(region, shares, factions);
-    const government = Object.hasOwn(startState.regionGovernments, region) ? startState.regionGovernments[region] : undefined;
+    const government = opening.table === undefined
+      ? (Object.hasOwn(startState.regionGovernments, region) ? startState.regionGovernments[region] : undefined)
+      : undefined; // A control-only override supplies no government claim.
     if (government !== undefined && government !== 'unknown') {
       const neutral = startState.departmentFactions[government] === null;
       const claim: ReportClaim = { claimKind: 'control-government', claimRegion: region, claimValue: neutral ? 1 : 0, claimToken: government, claimConfidence: 1000 };
@@ -30,10 +32,6 @@ export function fileOpeningControl(world: SeatsWorld, startState: State): State 
     }
     return out;
   });
-  const truth = {
-    truthTerms: claims.map((claim) => term('observed', claim.claimValue, { region: claim.claimRegion!, rule: `${claim.claimKind}:${claim.claimToken}` })),
-    truthTrimmed: [],
-  };
   const reports = new Map<FactionId, KnownReport>();
   const mint = createIdMint(startState);
   for (const row of [...opening.authors].sort((a, b) => strictCompare(a.faction, b.faction))) {
@@ -66,5 +64,5 @@ export function fileOpeningControl(world: SeatsWorld, startState: State): State 
     const side = sideOfPerson(map, startState, startState.seatAssignments[seat]!.seatPerson);
     copies.set(seat, (side === null ? undefined : reports.get(side)) ?? publicReport);
   }
-  return fileOpeningReports(startState, copies, truth);
+  return fileOpeningReports(startState, copies, claims);
 }

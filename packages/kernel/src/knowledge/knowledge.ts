@@ -37,36 +37,38 @@ function storedKnowledgeOf(state: State, seat: SeatId): SeatKnowledge {
 function openingReportOf(state: State, id: MessageId): KnownReport {
   const report = state.openingControlReports?.[id];
   if (report === undefined) throw new RangeError(`missing opening control report ${id}`);
-  return report;
+  return state.openingControlClaims === undefined ? report : { ...report, knownBody: { ...report.knownBody, reportClaims: state.openingControlClaims } };
 }
 
-export type KnowledgeCache = WeakMap<SeatKnowledge, { readonly opening: KnownReport; readonly knowledge: SeatKnowledge }>;
+export type KnowledgeCache = WeakMap<SeatKnowledge, { readonly opening: KnownReport; readonly claims: readonly ReportClaim[] | undefined; readonly knowledge: SeatKnowledge }>;
 
 /** What the seat holds, resolving its opening bulletin for the map without copying it into saved knowledge. */
 export function knowledgeOf(state: State, seat: SeatId, cache?: KnowledgeCache): SeatKnowledge {
   const held = storedKnowledgeOf(state, seat);
   if (held.knownOpeningControl === undefined) return held;
-  const opening = openingReportOf(state, held.knownOpeningControl);
+  const stored = state.openingControlReports?.[held.knownOpeningControl];
   const previous = cache?.get(held);
-  if (previous?.opening === opening) return previous.knowledge;
+  if (previous !== undefined && previous.opening === stored && previous.claims === state.openingControlClaims) return previous.knowledge;
+  const opening = openingReportOf(state, held.knownOpeningControl);
   const knowledge = { ...held, knownControlReports: [{ ...opening, knownPublicOpening: true as const }, ...(held.knownControlReports ?? [])] };
-  cache?.set(held, { opening, knowledge });
+  cache?.set(held, { opening: stored!, claims: state.openingControlClaims, knowledge });
   return knowledge;
 }
 
 /** Give each seat its opening bulletin by reference and store each original report and its truth once. */
-export function fileOpeningReports(state: State, copies: ReadonlyMap<SeatId, KnownReport>, truth: ReportTruth): State {
+export function fileOpeningReports(state: State, copies: ReadonlyMap<SeatId, KnownReport>, claims: readonly ReportClaim[]): State {
   const knowledge = new Map<SeatId, SeatKnowledge>();
   const reports = new Map<MessageId, KnownReport>();
   for (const [seat, report] of copies) {
     knowledge.set(seat, { ...storedKnowledgeOf(state, seat), knownOpeningControl: report.id });
-    reports.set(report.id, report);
+    reports.set(report.id, { ...report, knownBody: { ...report.knownBody, reportClaims: [] } });
   }
   return {
     ...state,
     knowledgeBySeat: { ...state.knowledgeBySeat, ...Object.fromEntries(knowledge) },
     openingControlReports: Object.fromEntries(reports),
-    reportTruth: { ...state.reportTruth, ...Object.fromEntries([...reports.keys()].map((id) => [id, truth])) },
+    openingControlClaims: claims,
+    reportTruth: { ...state.reportTruth, ...Object.fromEntries([...reports.keys()].map((id) => [id, { truthTerms: [], truthTrimmed: [], truthOpeningClaims: true as const }])) },
   };
 }
 
