@@ -1,0 +1,28 @@
+{
+  "asset": "prototypes/desk/web/map/icons/key-point.svg",
+  "request": "R18",
+  "brief": "ASSETS.md#1",
+  "date": "2026-11-17",
+  "plan": "owner previously recorded ChatGPT Pro 100",
+  "client": "Codex command-line session",
+  "model": "not exposed by this tool",
+  "apiKeyUnset": "not required; no image model",
+  "tool": "Python file copy",
+  "mode": "byte-for-byte reuse of R16 rough SVG",
+  "prompt": null,
+  "references": [
+    {
+      "path": "prototypes/map-icons/icons/rough/key-point.svg",
+      "sha256": "627e5d6b4f13dde76e55995ef36ecd09f5765f140d35a549fddaafc279727147",
+      "sourceRecipe": "prototypes/map-icons/icons/rough/key-point.svg.recipe.json"
+    }
+  ],
+  "requestedSize": "24-unit vector",
+  "actualSize": "24-unit vector",
+  "variantsMade": 1,
+  "variantChosen": 1,
+  "humanEdits": [],
+  "postProcess": [],
+  "provenanceMarks": "procedural SVG; no embedded image-model marks",
+  "sha256": "627e5d6b4f13dde76e55995ef36ecd09f5765f140d35a549fddaafc279727147"
+}

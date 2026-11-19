@@ -174,7 +174,10 @@ describe('the standing review of lane 1.7: refusals, a blocked muster, a battle 
   it('refuses a call to a raising post of a self-governing department (SENSITIVE-HISTORY 3.7: no seat recruits a nation)', () => {
     const map = v2Map('testbed')!;
     const kinds = map.world.vocabularies.departmentKinds.map((k) => (k.id === 'shire' ? { ...k, selfGoverning: true } : k));
-    const world = phase0.indexSeatsWorld(w.indexWorld({ ...map.world, vocabularies: { ...map.world.vocabularies, departmentKinds: kinds } }), map.start);
+    // The pack's doctrine calls on that governor, which the world check now refuses (lane 1.12); drop its calls, so
+    // what is tested is the kernel's own refusal of a command no doctrine sent.
+    const ruleSeats = { ...map.world.rules.ruleSeats, principals: map.world.rules.ruleSeats.principals.map((p) => ({ ...p, calls: [] })) };
+    const world = phase0.indexSeatsWorld(w.indexWorld({ ...map.world, rules: { ...map.world.rules, ruleSeats }, vocabularies: { ...map.world.vocabularies, departmentKinds: kinds } }), map.start);
     const state = phase0.createState(world, { seed: map.start.seed, people: 'as-history' });
     const r = phase0.tick(world, state, [{ day: 1, seat: phase0.seatIdFor(P('n_leader')), command: call(NORTH_GOVERNOR, 2, 90) }]);
     expect(r.rejections.map((x) => x.reason)).toEqual(['not_raising_post']);

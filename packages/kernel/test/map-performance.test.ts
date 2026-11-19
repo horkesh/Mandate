@@ -2,7 +2,11 @@ import { describe, expect, it } from 'vitest';
 import { buildControlIndex } from '../src/control-index/control-index.ts';
 import { createDerivedMapCache, deriveMap, mapSignature } from '../src/control-index/derived.ts';
 import { controlInvariants, derivedInvariants } from '../src/invariants/map.ts';
+import { toId } from '../src/ids.ts';
+import { controlClaims } from '../src/knowledge/control-claims.ts';
+import type { KnownReport } from '../src/knowledge/records.ts';
 import { deriveSupply, INTACT_NETWORK } from '../src/supply/supply.ts';
+import { claimedControlView } from '../src/view/claimed-control.ts';
 import { F, R } from './support/map-fixture.ts';
 import { TIMING } from './support/timing.ts';
 import { unionSizeControl, unionSizeMap } from './support/union-size-map.ts';
@@ -52,6 +56,14 @@ function time(f: () => unknown, runs: number): number {
 describe('the map inside its tick budget (at least the Union draft: 263 regions, 931 edges)', () => {
   const map = unionSizeMap();
   const control = unionSizeControl();
+  const opening: KnownReport = {
+    id: toId('message', 'opening'), knownReceivedDay: 0, knownRoute: 'in-person', knownVia: [],
+    knownBody: {
+      reportType: 'informal', reportSubtype: 'cabinet-word', reportAuthor: toId('person', 'cartographer'), reportAuthorPost: null,
+      reportSubjectKind: 'region', reportSubjectId: 'map', reportDay: 0, reportHour: null, reportAdvice: null, reportAnswers: null,
+      reportClaims: [...map.regions.keys()].flatMap((r) => controlClaims(r, control[r]!, [F('a'), F('b')])),
+    },
+  };
 
   it('is at least the size of the Union draft, with fronts, contested regions and a pocket', () => {
     expect(map.regions.size).toBeGreaterThanOrEqual(263);
@@ -73,6 +85,15 @@ describe('the map inside its tick budget (at least the Union draft: 263 regions,
     expect(yearCache.recomputes).toBeLessThanOrEqual(15);
   });
 
+  it('projects the same front segments as the control index on a full-size map', () => {
+    const view = claimedControlView(map, [opening]);
+    const index = buildControlIndex(map, control);
+    const segments = [...index.fronts.values()].flatMap((lines) => lines.flatMap((l) => l.segments));
+    expect(Object.keys(view.controlBeliefs)).toHaveLength(map.regions.size);
+    expect(view.claimedFronts).toHaveLength(segments.length);
+    expect(view.claimedFronts).toEqual(expect.arrayContaining(segments.map((segment) => ({ ...segment, mark: 'pencil', asOfDay: 0 }))));
+  });
+
   it.runIf(TIMING)('rebuilds, idles and runs a year within budget (wall clock: MANDATE_TIMING=1)', () => {
     const rebuild = time(() => deriveSupply(map, buildControlIndex(map, control), 1, INTACT_NETWORK), 15);
     const index = time(() => buildControlIndex(map, control), 15);
@@ -91,12 +112,14 @@ describe('the map inside its tick budget (at least the Union draft: 263 regions,
     }
     const year = performance.now() - t;
     const deep = time(() => derivedInvariants(map, control, 1, INTACT_NETWORK, cache.entry!), 5);
+    const claimed = time(() => claimedControlView(map, [opening]), 50);
     console.log(
       `map budget on this machine: rebuild ${rebuild.toFixed(2)} ms (index ${index.toFixed(2)} ms), quiet day ${quiet.toFixed(3)} ms (signature ${signature.toFixed(3)} ms), ` +
-        `year ${year.toFixed(0)} ms with ${yearCache.recomputes} rebuilds, deep invariants ${deep.toFixed(2)} ms (tests only)`,
+        `year ${year.toFixed(0)} ms with ${yearCache.recomputes} rebuilds, deep invariants ${deep.toFixed(2)} ms (tests only), seat control projection ${claimed.toFixed(2)} ms`,
     );
     expect(rebuild).toBeLessThan(BUDGET.rebuildMs);
     expect(quiet).toBeLessThan(BUDGET.quietDayMs);
     expect(year).toBeLessThan(BUDGET.yearMs);
+    expect(claimed).toBeLessThan(BUDGET.rebuildMs);
   });
 });

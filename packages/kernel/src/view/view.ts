@@ -13,37 +13,43 @@
  */
 import type { EdgeId, PersonId, RegionId, SeatId } from '../ids.ts';
 import { latestEnemyClaims, latestObstructionClaims, latestWorksClaims, perceived } from '../knowledge/beliefs.ts';
-import { knowledgeOf, type KnownReport, type SeatKnowledge } from '../knowledge/knowledge.ts';
+import { knowledgeOf, reportsForView, type KnowledgeCache, type KnownReport, type SeatKnowledge } from '../knowledge/knowledge.ts';
 import type { PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import { seatOf } from '../seats/seats.ts';
+import { attentionLeft } from '../seats/attention.ts';
 import { perceptionBias, traitsOf } from '../people/traits.ts';
 import { heldPost, sideOfPerson } from '../command/command.ts';
 import { whereIsPerson } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
+import type { WorldIndex } from '../world/index.ts';
+import { claimedControlView } from './claimed-control.ts';
+import { controlEvidence } from '../knowledge/control-beliefs.ts';
 import type { BeliefView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
 
 export interface ViewCache {
+  readonly knowledge: KnowledgeCache;
   readonly reports: WeakMap<KnownReport, ReportView>;
   readonly lists: WeakMap<SeatKnowledge, readonly ReportView[]>;
   /** Beliefs depend on what he holds and on how he reads it, so both are in the key (review F4). */
   readonly beliefs: Map<SeatId, { readonly knowledge: SeatKnowledge; readonly perception: number; readonly beliefs: Readonly<Record<RegionId, BeliefView>> }>;
   /** What he has been told of works and obstructions depends only on what he holds. */
   readonly ground: Map<SeatId, { readonly knowledge: SeatKnowledge; readonly works: Readonly<Record<RegionId, WorksView>>; readonly obstructions: Readonly<Record<EdgeId, ObstructionView>> }>;
+  readonly control: WeakMap<WorldIndex, WeakMap<SeatKnowledge, ReturnType<typeof claimedControlView>>>;
   readonly goals: WeakMap<PlanRecord, GoalView>;
   readonly views: Map<SeatId, SeatView>;
   readonly situations: Map<SeatId, { readonly states: State['situationStates']; readonly views: readonly SituationView[] }>;
 }
 
 export function createViewCache(): ViewCache {
-  return { reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), goals: new WeakMap(), views: new Map(), situations: new Map() };
+  return { knowledge: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map() };
 }
 
 function freeze<T extends object>(o: T): T {
   return Object.freeze(o);
 }
 
-function reportView(r: KnownReport): ReportView {
+function reportView(r: KnownReport, threshold: number): ReportView {
   const b = r.knownBody;
   return freeze({
     id: r.id,
@@ -56,6 +62,8 @@ function reportView(r: KnownReport): ReportView {
     claims: freeze(
       b.reportClaims.map((c) => freeze({ kind: c.claimKind, region: c.claimRegion, value: c.claimValue, token: c.claimToken, confidence: c.claimConfidence })),
     ),
+    reportedControl: freeze([...controlEvidence([r], threshold)].map(([region, { holder, contested }]) => freeze({ region, holder, contested }))),
+    ...(r.knownPublicOpening === true ? { openingControl: true as const } : {}),
     day: b.reportDay,
     hour: b.reportHour,
     advice:
@@ -99,15 +107,15 @@ function same<T>(a: readonly T[], b: readonly T[]): boolean {
 export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: ViewCache = createViewCache()): SeatView {
   const person = world.person(seatOf(state, seat).seatPerson);
   const post = heldPost(state, person.id);
-  const knowledge = knowledgeOf(state, seat);
+  const knowledge = knowledgeOf(state, seat, cache.knowledge);
 
   let reports = cache.lists.get(knowledge);
   if (reports === undefined) {
     reports = freeze(
-      knowledge.knownReports.map((r) => {
+      reportsForView(knowledge).map((r) => {
         let v = cache.reports.get(r);
         if (v === undefined) {
-          v = reportView(r);
+          v = reportView(r, world.map.world.rules.supplyControlPermille);
           cache.reports.set(r, v);
         }
         return v;
@@ -137,6 +145,17 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     cache.ground.set(seat, ground);
   }
 
+  let controlOnMap = cache.control.get(world.map);
+  if (controlOnMap === undefined) {
+    controlOnMap = new WeakMap();
+    cache.control.set(world.map, controlOnMap);
+  }
+  let control = controlOnMap.get(knowledge);
+  if (control === undefined) {
+    control = claimedControlView(world.map, reportsForView(knowledge));
+    controlOnMap.set(knowledge, control);
+  }
+
   let goal: GoalView | null = null;
   const record = post === null ? undefined : state.planRecords[post];
   if (record !== undefined) {
@@ -151,16 +170,20 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
   const situations = situationViews(world, state, seat, person.id, cache);
   // His side today: his post's while he holds one (0065), so it can change in play.
   const faction = sideOfPerson(world.map, state, person.id);
+  // Lane 1.13: his own week's attention (0025), which he always knows; null for a seat that keeps none.
+  const attention = attentionLeft(state, seat);
   const previous = cache.views.get(seat);
   if (
     previous !== undefined &&
     previous.day === state.stateDay &&
+    previous.attention === attention &&
     previous.faction === faction &&
     previous.region === region &&
     previous.goal === goal &&
     previous.enemyBeliefs === beliefs.beliefs &&
     previous.worksBeliefs === ground.works &&
     previous.obstructionBeliefs === ground.obstructions &&
+    previous.controlBeliefs === control.controlBeliefs &&
     previous.situations === situations &&
     same(previous.reports, reports)
   ) {
@@ -178,7 +201,9 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     enemyBeliefs: beliefs.beliefs,
     worksBeliefs: ground.works,
     obstructionBeliefs: ground.obstructions,
+    ...control,
     situations,
+    attention,
   });
   cache.views.set(seat, view);
   return view;

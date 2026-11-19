@@ -1,12 +1,12 @@
 # Roadmap
 
-The game and engine were redesigned on 2026-11-14 (decision records from 0015 on, listed in [decisions/README.md](decisions/README.md); design in [design/FOUNDATION.md](design/FOUNDATION.md)). The phases below come from FOUNDATION section 12, which holds the lane table and sequence. Last commit synced: `e2ecd16` (2026-11-16).
+The game and engine were redesigned on 2026-11-14 (decision records from 0015 on, listed in [decisions/README.md](decisions/README.md); design in [design/FOUNDATION.md](design/FOUNDATION.md)). The phases below come from FOUNDATION section 12, which holds the lane table and sequence. Last commit synced: `ad71105` (2026-11-19).
 
 ## Done
 
 - **M0 Foundations** (2026-11-13): repo, decisions, kernel primitives, and a demo of three proxies answering one directive differently.
 - **M1 People kernel, headless** (2026-11-14): persons, posts, directives and the compliance ladder, claims with authors, the insubordination ladder, standing, the leader's record, latency and attention, in a scripted 20-turn run with typed reasons. Gaps in [design/KERNEL.md](design/KERNEL.md).
-- **M2 Union 1861–62 slice, console** (built 2026-11-14): the Audience with typed counters, `packs/union-1861`, and `npm run play`. Its pending playtest and calibration are superseded by the redesign; its people core and Union people data carry into Phase 1.
+- **M2 Union 1861–62 slice, console** (built 2026-11-14): the Audience with typed counters, `packs/union-1861`, and `npm run play`. Its pending playtest and calibration were superseded by the redesign; its people core and Union people data carried into Phase 1, and M2 itself was retired in lane 1.13 (`fb1dea7`: `run:testbed`, `run:headless`, `run:pack` and M2's `play` are gone, and `npm run play` now plays the new kernel).
 
 ## Next
 

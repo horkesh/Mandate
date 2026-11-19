@@ -1,0 +1,3 @@
+-r geometry-requirements.txt
+-r r28-requirements.txt
+pyproj==3.7.2

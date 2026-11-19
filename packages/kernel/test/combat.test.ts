@@ -3,6 +3,13 @@ import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
 import { combatDay, type CombatResult } from '../src/combat/battle.ts';
+import { ALL_JUDGE, type BattleOrders } from '../src/combat/orders.ts';
+import type { PostId } from '../src/ids.ts';
+import { battleMenus } from '../src/seats/requests.ts';
+import { reassignSeat, seatIdFor } from '../src/seats/seats.ts';
+import { createTelemetry } from '../src/telemetry.ts';
+import { tick, TICK_MECHANICS } from '../src/tick/tick.ts';
+import { indexedFixture, P as SP, POST as SPOST } from './support/seats-fixture.ts';
 import { believedRatio, commitAtDawn } from '../src/combat/decide.ts';
 import type { BattleDay, BattleSide, BattleTerm } from '../src/combat/records.ts';
 import { apportion, DRAWS_PER_DAY, LEADER_DRAWS_PER_DAY, leaderHits, resolveDay, type DayInput, type SideInput } from '../src/combat/resolve.ts';
@@ -349,13 +356,14 @@ describe('only the battle model captures men (R4\'s battle ruling; lane 1.8\'s n
 
   it('only combat proposes a battle loss, the one change that captures men, and only forces applies it', () => {
     const proposers = sources.filter((f) => /change:\s*['`"]battle_losses['`"]/.test(readFileSync(f, 'utf8'))).map((f) => relative(root, f).split('\\').join('/'));
-    expect(proposers).toEqual(['packages/kernel/src/combat/battle.ts', 'packages/kernel/src/forces/forces.ts']);
+    // Lane 1.12: the bombardment is the battle model's too (a fire-only engagement), in combat/.
+    expect(proposers).toEqual(['packages/kernel/src/combat/battle.ts', 'packages/kernel/src/combat/bombard.ts', 'packages/kernel/src/forces/forces.ts']);
     expect(readFileSync(join(root, 'packages/kernel/src/forces/forces.ts'), 'utf8')).toContain("readonly cause: 'combat';");
   });
 
   it('only people writes a person\'s status, and only combat proposes one', () => {
     const writers = sources.filter((f) => /change:\s*['`"]status['`"]/.test(readFileSync(f, 'utf8'))).map((f) => relative(root, f).split('\\').join('/'));
-    expect(writers).toEqual(['packages/kernel/src/combat/battle.ts', 'packages/kernel/src/people/people.ts']);
+    expect(writers).toEqual(['packages/kernel/src/combat/battle.ts', 'packages/kernel/src/combat/bombard.ts', 'packages/kernel/src/people/people.ts']);
   });
 });
 
@@ -526,5 +534,86 @@ describe('a pocket forming when a force cuts a line, and lifting when it is reli
     expect(events).toContain('8:b:pocket_closed');
     expect(events.some((e) => e.endsWith(':b:pocket_relieved'))).toBe(true);
     expect(Object.values(state.battleRecords).length).toBeGreaterThan(0);
+  });
+});
+
+describe('a commander’s battle orders (lane 1.12): his seat fights the battle point by point, or leaves it to his traits', () => {
+  const g = game(BASE, [aBlock('a_1', 'mid', 10000), bBlock('b_1', 'mid', 4000)], ['a_1']);
+  const withOrders = (orders: Record<string, Partial<BattleOrders>>) => combatDay(g.world, groupOrders(g), g.state, 2, new Map(Object.entries(orders).map(([post, o]) => [P(post) as PostId, { ...ALL_JUDGE, ...o }])));
+  const groupOrders = (x: Game) => groundOf(x);
+  const has = (terms: readonly BattleTerm[], kind: string) => terms.some((t) => t.btermKind === kind);
+
+  it('with no orders, or `judge` everywhere, the battle is the trait rule’s exactly', () => {
+    expect(JSON.stringify(withOrders({ a_army: {}, b_army: {} }))).toBe(JSON.stringify(day(g)));
+  });
+
+  it('an explicit commit replaces his traits’ choice, recorded beside it as ordered; both sides defending fight nothing', () => {
+    const judged = sideOf(day(g).fought[0]!.day, 'a');
+    expect(judged.bsideCommit).not.toBe('probe');
+    const probe = sideOf(withOrders({ a_army: { commit: 'probe' } }).fought[0]!.day, 'a');
+    expect(probe.bsideCommit).toBe('probe');
+    expect(has(probe.bsideDecisions, 'ordered')).toBe(true);
+    // The rule's own terms stay: the record shows what his traits would have done.
+    expect(has(probe.bsideDecisions, 'believed_ratio')).toBe(true);
+    expect(withOrders({ a_army: { commit: 'defend' } }).fought).toEqual([]);
+  });
+
+  it('an order the battle cannot carry out is not obeyed, and says so: a side that may not attack defends', () => {
+    const b = sideOf(withOrders({ b_army: { commit: 'all_out' } }).fought[0]!.day, 'b');
+    expect(b.bsideCommit).toBe('defend');
+    expect(has(b.bsideDecisions, 'order_not_possible')).toBe(true);
+  });
+
+  it('a night order holds him or takes him off the field, whatever his traits would do', () => {
+    const judged = sideOf(day(g).fought[0]!.day, 'a');
+    expect(judged.bsideResult).not.toBe('withdrew');
+    const away = sideOf(withOrders({ a_army: { night: 'withdraw' } }).fought[0]!.day, 'a');
+    expect(['withdrew', 'fell_back']).toContain(away.bsideResult);
+    expect(has(away.bsideDecisions, 'ordered')).toBe(true);
+  });
+
+  it('asks each side’s commander, with his traits’ choices on the morning’s numbers, where a battle can be fought today', () => {
+    const menus = battleMenus(g.world, g.state, groundOf(g), 2);
+    expect(menus.map((m) => [m.holder, m.menu.post, m.menu.region, m.menu.mayAttack]).sort()).toEqual([
+      [PER('a_gen'), P('a_army'), R('mid'), true],
+      [PER('b_gen'), P('b_army'), R('mid'), false],
+    ]);
+    const a = menus.find((m) => m.holder === PER('a_gen'))!.menu;
+    expect(a.judged.commit).toBe(sideOf(day(g).fought[0]!.day, 'a').bsideCommit);
+    expect(a.options.commit[0]).toBe('judge');
+    // Two armies at peace, neither marched in, are not asked.
+    const still = game(BASE, [aBlock('a_1', 'mid', 10000), bBlock('b_1', 'mid', 4000)], []);
+    expect(battleMenus(still.world, still.state, groundOf(still), 2)).toEqual([]);
+  });
+
+  it('the tick’s orders reach the battle: through the day’s context, as the battle model reads them', () => {
+    const ctx = { ...ctxFor(g.world, g.state, 2, MAP_MECHANICS), battleOrders: new Map([[P('a_army') as PostId, { ...ALL_JUDGE, commit: 'defend' as const }]]) };
+    expect(combatPhase(ctx, g.state).result!.fought).toEqual([]);
+    expect(combatPhase(ctxFor(g.world, g.state, 2, MAP_MECHANICS), g.state).result!.fought).toHaveLength(1);
+  });
+});
+
+describe('battle orders in the tick (lane 1.12): only the holder of the post gives them, once a day', () => {
+  it('refuses another man’s orders and a second set, and counts the one it takes as seats.battle_orders', () => {
+    const world = indexedFixture();
+    const state = createState(world, { seed: 1 });
+    const telemetry = createTelemetry([...TICK_MECHANICS, ...MAP_MECHANICS]);
+    const order = (seat: string, commit: BattleOrders['commit']) => ({ day: 1, seat: seatIdFor(SP(seat)), command: { cmd: 'battle' as const, post: SPOST('a_army'), commit, night: 'judge' as const, cutOff: 'judge' as const, pursue: 'judge' as const } });
+    const r = tick(world, state, [order('a_bold', 'defend'), order('a_gen', 'defend'), order('a_gen', 'probe')], { telemetry });
+    expect(r.rejections.map((x) => [x.entry, x.reason])).toEqual([
+      [0, 'not_the_decider'],
+      [2, 'duplicate_choice'],
+    ]);
+    expect(telemetry.mechanics['seats.battle_orders']!.fires).toBe(1);
+  });
+
+  it('never takes them from a seat the player drives, even the holder’s own (hard rule 1, 0016: the player moves no division)', () => {
+    const world = indexedFixture();
+    const state = reassignSeat(createState(world, { seed: 1 }), seatIdFor(SP('a_gen')), 'human');
+    const telemetry = createTelemetry([...TICK_MECHANICS, ...MAP_MECHANICS]);
+    const command = { cmd: 'battle' as const, post: SPOST('a_army'), commit: 'defend' as const, night: 'judge' as const, cutOff: 'judge' as const, pursue: 'judge' as const };
+    const r = tick(world, state, [{ day: 1, seat: seatIdFor(SP('a_gen')), command }], { telemetry });
+    expect(r.rejections.map((x) => [x.entry, x.reason])).toEqual([[0, 'player_seat']]);
+    expect(telemetry.mechanics['seats.battle_orders']!.fires).toBe(0);
   });
 });

@@ -51,6 +51,15 @@ export function seatsMechanics(): readonly string[] {
   return [...phase0.TICK_MECHANICS, ...phase0.MAP_MECHANICS];
 }
 
+/** The pack's strings in its default locale, merged into one table (lane 1.13: the console shows titles and labels). */
+export function packStrings(pack: string): Readonly<Record<string, string>> {
+  const { pack: data } = loadPack(packFilesAt(packRoot(pack)));
+  if (data === null) return {};
+  const out: Record<string, string> = {};
+  for (const { table } of data.strings.get(data.manifest.defaultLocale) ?? []) Object.assign(out, table);
+  return out;
+}
+
 /**
  * The pack's situations (lane 0.7), loaded and gate-checked through the pack
  * format when the pack has a v2 manifest; none otherwise. A pack whose

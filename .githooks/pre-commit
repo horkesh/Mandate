@@ -3,5 +3,10 @@
 # tools/staged-check.ts checks the working tree in place when it equals the index,
 # and otherwise a private snapshot of the index, so unstaged edits and untracked
 # files can neither hide a failure nor cause one. The working tree is never touched.
+#
+# First (lane 0.7l): no binary under art/ goes into plain git. tools/lfs-check.ts reads
+# the staged blobs themselves (the snapshot's files are smudged, so it cannot), and
+# refuses a binary that is not a Git LFS pointer.
 set -e
+node --import tsx tools/lfs-check.ts --staged
 exec node --import tsx tools/staged-check.ts

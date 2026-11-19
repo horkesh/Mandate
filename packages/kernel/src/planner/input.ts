@@ -54,6 +54,7 @@ export function sideForces(world: SeatsWorld, state: State, faction: FactionId):
       region: loc.locRegion,
       kind: fb.fbKind === 'detachment' ? 'detachment' : 'block',
       naval: isNaval(world.map, state, id),
+      arm: fb.fbArm,
       strength: fb.fbStrength ?? 0,
       storesDays: Math.trunc((fb.fbStoresMilli ?? 0) / 1000),
       storesAssumed: fb.fbStoresAssumed,
@@ -90,6 +91,7 @@ export function sidePosts(world: SeatsWorld, state: State, faction: FactionId, d
         holder,
         parent: p.postParent,
         region: commandedBlocks(state, id).length > 0 ? headquartersOf(world, state, id) : null,
+        seat: p.postSeat,
         holderWillingness: willing + 0,
       };
     });
@@ -136,5 +138,6 @@ export function plannerInputFor(world: SeatsWorld, state: State, derived: Derive
     assaultMargin: people.traits.assaultMargin,
     reinforceShare: { timid: people.compliance.reinforceShareTimid, bold: people.compliance.reinforceShareBold },
     day,
+    bombardment: { gunArms: world.map.world.rules.combat.bombardment.gunArms, objectives: world.map.world.rules.combat.bombardment.objectives, rangeMaxDaysPermille: world.map.world.rules.combat.bombardment.rangeMaxDaysPermille },
   };
 }

@@ -1,0 +1,15 @@
+{
+  "name": "staff-map-icons-prototype",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/server.mjs",
+    "generate": "node scripts/generate.mjs",
+    "test": "node --test test/*.test.mjs",
+    "preflight": "node scripts/verify.mjs --preflight",
+    "check": "npm test && node scripts/verify.mjs",
+    "capture": "node scripts/verify.mjs --capture"
+  },
+  "devDependencies": { "playwright": "1.65.1" }
+}

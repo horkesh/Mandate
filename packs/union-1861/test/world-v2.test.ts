@@ -174,7 +174,7 @@ describe('Union 1861 world v2', () => {
     const holders = new Set(start.posts.map((p) => p.holder).filter((h) => h !== null));
     const noPost = world.people.filter((p) => !holders.has(p.id));
     const count = (f: (p: (typeof noPost)[number]) => boolean) => noPost.filter(f).length;
-    expect([count((p) => p.faction === 'union'), count((p) => p.faction === 'confederate')]).toEqual([83 + 1 + 8 - 1 + 3, 12 + 2]); // + Vogdes, kept by ruling; + the eight sourced Union residences and the two sourced Confederate ones; - Nicolay, who now holds the secretary post (2026-11-15); + Mansfield, Paulding and Mervine, the three Union men lane 1.11a added from lane 1.9 (Carlile and Willey have no faction)
+    expect([count((p) => p.faction === 'union'), count((p) => p.faction === 'confederate')]).toEqual([83 + 1 + 8 - 1 + 3 + 1, 12 + 2]); // + Lamon (a Union man with no post, lane 1.11r3; Baldwin, Botts and Summers are Virginia men with no faction); + Vogdes, kept by ruling; + the eight sourced Union residences and the two sourced Confederate ones; - Nicolay, who now holds the secretary post (2026-11-15); + Mansfield, Paulding and Mervine, the three Union men lane 1.11a added from lane 1.9 (Carlile and Willey have no faction)
   });
 
   it('has supply sources for both sides, each in a region that side holds, and depots at the navy yards (0055)', () => {

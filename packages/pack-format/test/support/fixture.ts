@@ -42,6 +42,7 @@ export const MESSAGE_RULES = {
   selfEmancipation: {"linesFaction":null,"agencyReasons":{"resistanceWithin":"agency:fixture","resistanceElsewhere":"agency:fixture","flightToLines":"agency:fixture"},"protectedFlags":[],"cadenceDays":7,"resistancePerMillion":200,"pressureFlags":[],"flightPerMillion":1000,"reachWithForce":1000,"reachLinesOnly":400,"holdShare":600,"policyBase":500,"policyFlags":[]},
   // Lane 1.6: no blocs, chambers or papers; a flat credibility of 500 (lane 1.1's stand-in value).
   politics: { blocs: [], drift: { divisor: 20, cite: 'FIXTURE' }, address: { support: 100, othersPenalty: -15, cite: 'FIXTURE' }, ladder: { lobbyingPerRung: -10, publicDefiance: -20, rival: -10, cite: 'FIXTURE' }, chambers: [], sessions: [], credibility: { base: 500, mandatePermille: 0, perRelief: 0, min: 0, max: 1000, cite: 'FIXTURE' }, framing: { mandatePermille: 0, cite: 'FIXTURE' }, press: { cadenceDays: 7, papers: [], standing: { victory: 60, defeat: -60, cite: 'FIXTURE' } } },
+  turns: { maxDays: 7, cite: 'FIXTURE' },
   // Lane 1.1: the people core's rules, at the packs' values.
   people: {
     shadow: {
@@ -118,6 +119,7 @@ export const COMBAT_RULES = {
   fieldControlPermille: 200,
   pursuit: { followPermille: 100, pressPermille: 300, cavalryPermille: 150 },
   straggleReturnPermille: 100,
+  bombardment: { gunArms: ['artillery'], objectives: [], rangeMaxDaysPermille: 1000, moraleLossPerDay: 40, ratioCapPermille: 3000, outOfStoresMoraleLoss: 60, worksWearPerDay: 50, lossPermille: 20, surrenderMorale: 350, boldnessWeight: 500, recordTerms: [], source: 'fixture' },
   leaders: { killedPermille: 15, woundedPermille: 40, capturedPermille: 20 },
   phases: {
     hours: [
@@ -146,7 +148,10 @@ const manifest = {  formatVersion: 2,
     operations: { pauseDays: 3, maxRepulses: 3, pursuitDays: { follow: 1, press: 2 }, holdControlPermille: 500, works: { perNightPermille: 50, capPermille: 300, lostWhenStormedPermille: 150 }, returns: { firstLowPermille: 200, revealDays: 7 } },
     pruning: { operationDays: 60, battleDays: 120, responseDays: 60 },
     movement: { marchMinCapacityPermille: 1000, courierPermille: 333 },
-    ruleSeats: { warFlags: [{ faction: 'red', flag: null }, { faction: 'blue', flag: null }] },
+    ruleSeats: {
+      warFlags: [{ faction: 'red', flag: null }, { faction: 'blue', flag: null }],
+      principals: ['red', 'blue'].map((faction) => ({ faction, crossNeutral: false, concentrateAt: null, concentrateSource: null, calls: [], offensives: [], inquireEveryDays: 7, appointKinds: { land: [], naval: [] } })),
+    },
     ...MESSAGE_RULES,
     seasons: [
       { reason: 'mud', defaultMonths: [1, 2, 12], lengthPermille: 1500, capacityPermille: 600 },

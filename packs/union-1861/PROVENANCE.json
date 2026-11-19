@@ -980,6 +980,526 @@
       "copyUsed": "archive.org lifeofgeneralnat00woodrich, OCR: a period compilation, the weakest of the keys (lane 1.11r)",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "VA-CONV-1861",
+      "title": "Journal of the Acts and Proceedings of a General Convention of the State of Virginia, Assembled at Richmond, on Wednesday, the Thirteenth Day of February, 1861 (Richmond: Wyatt M. Elliott, 1861)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org journalofactspro00virg, OCR (lane 1.11r3); page numbers are the printed running heads",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "WADDELL-AUGUSTA",
+      "title": "Joseph A. Waddell, Annals of Augusta County, Virginia (1886 printing)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org annalsaugustaco00waddgoog, OCR (lane 1.11r3): a local history; its 1861-65 part is a war diary kept at Staunton",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "TYLER-TANEY",
+      "title": "Samuel Tyler, Memoir of Roger Brooke Taney, LL.D. (Baltimore: John Murphy, 1872)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org cu31924020877274, OCR (lane 1.11r3): a friend's biography; it prints Taney's own autobiography fragment and his letters, which are his own words, and a date or fact rests on it as a period work, not a contemporary judgment",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "TANEY-REPORTS",
+      "title": "Roger Brooke Taney, Reports of Cases Decided ... in the Circuit Court of the United States for the District of Maryland, ed. James Mason Campbell (Philadelphia: Kay & Brother, 1871)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org cu31924068531247, OCR (lane 1.11r3): Taney's own opinions, printed after his death; Ex parte Merryman is at pp. 246-270 (the headnote at p. 246 and the reporter's narrative at p. 253 are the reporter's words, not Taney's)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "BOWLES-MERRIAM",
+      "title": "G. S. Merriam, The Life and Times of Samuel Bowles, vol. 1 (New York: Century, 1885)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org lifetimesofsamue01merr; p. 318 prints Bowles to H. L. Dawes of 26 February 1861 (the letter is the leg, the biography only prints it) (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "BLAIR-COOPER-1860",
+      "title": "Speech of Hon. F. P. Blair, Jr., at the Cooper Institute, 25 January 1860 (New York: Buell and Blanchard, 1860)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org ASPC0001904700; with Hiram Barney's introduction from the N.Y. Herald of 26 January (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "BLAIR-COLONIZATION-1859",
+      "title": "F. P. Blair, Jr., Colonization and Commerce: address at Cincinnati, 29 November 1859",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org colonizationcomm00blai; unpaginated in the OCR (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "PA-TELEGRAPH-1860",
+      "title": "Pennsylvania Daily Telegraph (Harrisburg), 6 October 1860, edition 1",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org per_pennsylvania-daily-telegraph_pennsylvania-daily-telegraph_1860-10-06_1; quotes the Philadelphia Evening Journal of 28 February 1860; OCR garbled, page not shown (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CONG-GLOBE-37-1",
+      "title": "Congressional Globe, 37th Congress, extra session, issue 2 (printed 10 July 1861; sittings of 5, 8 and 9 July)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org sim_united-states-congress-congressional-globe_1861-07-10_2; page numbers not read from the OCR (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "GLOBE-36-2",
+      "title": "Congressional Globe, 36th Congress, 2nd session, daily issues (December 1860 to March 1861)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org sim_united-states-congress-congressional-globe_<date>_<n>; read at the issue of the day after the sitting; page numbers from the OCR running heads, whose columns are interleaved (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NYT-1860-12-20",
+      "title": "The New York Times, 20 December 1860",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org sim_new-york-times_the-new-york-times_1860-12-20_10_2886; OCR columns scrambled, page not read (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NYT-1861-01-12",
+      "title": "The New York Times, 12 January 1861",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org sim_new-york-times_the-new-york-times_1861-01-12_10_2905; OCR columns scrambled, page not read (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NYT-1861-01-30",
+      "title": "The New York Times, 30 January 1861",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org sim_new-york-times_the-new-york-times_1861-01-30_10_2920; OCR columns scrambled, page not read (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NYT-1861-02-05",
+      "title": "The New York Times, 5 February 1861",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org sim_new-york-times_the-new-york-times_1861-02-05_10_2925; OCR columns scrambled, page not read (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NYT-1861-02-19",
+      "title": "The New York Times, 19 February 1861",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org sim_new-york-times (issue of 19 February 1861); OCR columns scrambled, page not read (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NYT-1861-03-02",
+      "title": "The New York Times, 2 March 1861",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org sim_new-york-times (issue of 2 March 1861); OCR columns scrambled, page not read (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "QV-LETTERS",
+      "title": "The Letters of Queen Victoria, vol. 3 (London: Murray, 1907)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org lettersofqueenvi03victuoft; p. 383 prints Russell's letter to the Queen of 11 January 1860 (the letter is the leg) (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CURTIS-BUCHANAN",
+      "title": "G. T. Curtis, Life of James Buchanan, vol. 2 (New York: Harper, 1883)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org lifeofjamesbucha02incurt; pp. 534-535 and 559 print Stanton's private letters of 16 March and 26 July 1861 (the letters are the leg) (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "FREMONT-DEFENCE-1848",
+      "title": "Defence of Lieut. Col. J. C. Fremont before the military court martial, Washington, January 1848",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org defenceoflieutco00frrich; pp. 13-14 print Kearny's testimony and Fremont's reply (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "BIGELOW-FREMONT-1856",
+      "title": "J. Bigelow, Memoir of the Life and Public Services of John Charles Fremont (1856)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org memoiroflifepubl5830bige; a campaign Life: used only for the letter of acceptance of 8 July 1856 (pp. 458-459) and the informal ballot of 17 June 1856 (p. 451), which it prints (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CHITTENDEN-1864",
+      "title": "L. E. Chittenden, Report of the Debates and Proceedings in the Secret Sessions of the Conference Convention (New York, 1864)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org reportofdebatesa00chitrich; compiled from the secretary's notes and treated as near-contemporary: the New York delegation minutes (Appendix p. 600) and Chase (p. 272) (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "BROWNING-D",
+      "title": "The Diary of Orville Hickman Browning, vol. 1, 1850-1864, ed. T. C. Pease and J. G. Randall (Springfield: Illinois State Historical Library, 1925)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org diaryoforvillehi0001theo; a diary of the time (entries of 9 and 11 February and 26 April 1861 used) (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "MO-CONV-JUL1861",
+      "title": "Journal of the Missouri State Convention, held at Jefferson City, July 1861",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org journalofmissour00miss; Gamble's election (p. 25), his address (pp. 27-28) and oath (p. 32) (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "HOPPIN-FOOTE",
+      "title": "J. M. Hoppin, Life of Admiral Foote (New York: Appleton, 1874)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org lifeofandrewhull00hopprich; p. 147 prints Du Pont's letter of 25 January 1861 (the letter is the leg, the Life a friendly biography) (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CLAY-WRITINGS",
+      "title": "C. M. Clay, The Writings of Cassius Marcellus Clay, including speeches and addresses (New York: Harper, 1848)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org writingsofcassiu00clay; his own speeches and True American editorials, each dated in the original (pp. 134, 213-215) (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "SEYMOUR-SPEECHES",
+      "title": "Speeches of Hon. Horatio Seymour at the conventions held at Albany, January 31, 1861 and September 10, 1862 (1862)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org speechhoratio00seymrich; only the 31 January 1861 speech is used (the 1862 speech is after every boundary) (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "SEYMOUR-RECORD",
+      "title": "Public Record: including speeches, messages, proclamations ... and other public utterances of Horatio Seymour (New York, 1868)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org cu31924032762290; prints each speech in full; used for the 4 July 1856 Springfield speech (pp. 18-20, 9-10) (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "JONES-TATTNALL",
+      "title": "C. C. Jones, Jr., The Life and Services of Commodore Josiah Tattnall (Savannah, 1878)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org josiahtattnall00jonerich; a life, used only for the official letters it prints verbatim (Lord Lyons to Cass, October 1859; Toucey to Tattnall, 22 October 1859; Tattnall's reply; pp. 106-109) (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "GREELEY-HINTS",
+      "title": "H. Greeley, Hints toward Reforms, in Lectures, Addresses, and Other Writings (New York, 1850; 1854 printing)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org hintstowardrefor00greeuoft; pp. 352-357 print his letter \"Slavery at Home\" of 3 June 1845 (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "RUSSELL-DIARY",
+      "title": "W. H. Russell, My Diary North and South (Boston: Burnham, 1863)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org mydiarynorthsout00russe; written from his Times letters of 1861; the entry date for the Sanford dinner is not printed in the OCR (he reached Washington on 27 March 1861), so it is dated 1861-03 (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "SEWARD-WASH",
+      "title": "F. W. Seward, Seward at Washington as Senator and Secretary of State, vol. 1 (New York, 1891)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org sewardatwashingt01sewa; used only for the letters it prints verbatim (Seward to Weed 13 December 1860; to Lincoln 16 December 1860 and 8 January 1861; Lincoln to Seward 3 January 1861); the son's narrative is not a leg (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "FARRAGUT-LIFE",
+      "title": "Loyall Farragut, The Life of David Glasgow Farragut (New York: Appleton, 1879)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org lifeofdavidglasg01farr; pp. 172-173 print Farragut's letters to Secretary Dobbin (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "USNI-1935",
+      "title": "\"The First Academic Staff\", U.S. Naval Institute Proceedings 61 (October 1935)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "read on the penelope.uchicago.edu mirror (no page number there); it quotes a fragment of Bancroft's annual report for 1845, which was not itself reached: a thin leg (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "IL-AGR1",
+      "title": "Report of the Adjutant General of the State of Illinois, vol. 1 (Springfield, 1867)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org reportofadjutant01illi1 (University of Illinois OCR mirror); p. 7 by its own table of contents (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "YATES-1860",
+      "title": "Speech of Hon. Richard Yates at the Springfield Jubilee, 20 November 1860 (pamphlet)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org speechofhonricha00yate; no page numbers in the OCR (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "MANSFIELD-1848",
+      "title": "The Mexican War: a history of its origin ... with the official dispatches of the generals (1848)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org mexicanwarhistor01mans; General Scott's despatch of 19 April 1847 (Cerro Gordo), pp. 198-199 (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "YANCEY-1860",
+      "title": "Speech of the Hon. William L. Yancey, Charleston, 28 April 1860",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org speechofhonwilli00yanc; pp. 14-15; OCR garbled in the quoted lines (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "ArmyReg1861-09",
+      "title": "Official Army Register for September 1861 (Adjutant General's Office, 1 September 1861)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org officialarmyregi1861unit; casualties (resignations and dismissals with dates) pp. 61-66; not the 1 January 1861 register (officialarmyreg01offigoog timed out) (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NavyReg1863-RESIGN",
+      "title": "Register of the Commissioned and Warrant Officers of the Navy, 1863 edition: the table of resignations, 1 January 1861 to 31 December 1862",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org registerofcommi00unit (a composite volume, 1861-1863); the table has no page number in the OCR (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "ANDREW-1861-01-05",
+      "title": "Address of His Excellency John A. Andrew to the two branches of the Legislature of Massachusetts, 5 January 1861 (Senate No. 2)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org wsb19f30_images (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "JOHNSON-1861-02-05",
+      "title": "Speech of Hon. Andrew Johnson, 5 February 1861 (pamphlet)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org speechofhonandre00john (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "DEM-1860",
+      "title": "Official Proceedings of the Democratic National Convention, Charleston and Baltimore, 1860",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org officialproceedidemo (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NH-CW2",
+      "title": "J. G. Nicolay and J. Hay, eds., Complete Works of Abraham Lincoln, vol. 2 (1894)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org completeworksofa02linc_0; p. 6, First Inaugural Address (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "MCCLERNAND-1861-01-14",
+      "title": "Speech of Hon. John A. McClernand, 14 January 1861 (pamphlet)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org speechofhonjohna00mccl (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "SEWARD-1861-01-12",
+      "title": "Speech of William H. Seward on the Union, 12 January 1861 (pamphlet)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org unionspeechofw00sewa (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "STEVENS-1861-01-29",
+      "title": "Speech of Thaddeus Stevens on the state of the Union, 29 January 1861 (pamphlet)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org stateofunionspee00stev; no page markers in the OCR (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "VALLANDIGHAM-1861-02-20",
+      "title": "Speech of Hon. C. L. Vallandigham, 20 February 1861 (pamphlet)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org speechofhonclval00vall (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "WADE-1860-12-17",
+      "title": "Speech of Hon. B. F. Wade, 17 December 1860 (pamphlet)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "archive.org speechofhonbfwad01lcwade (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "PEARSON-ANDREW-DOCS",
+      "title": "Contemporary speeches, letters and newspaper extracts quoted in H. G. Pearson, Life of John A. Andrew, vol. 1 (1904)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "Same copy as PEARSON-ANDREW; rs1 and rs10 identify each quoted document by page and date or bounded year. Only the reprinted document is primary, never Pearson's surrounding narrative. R51, decision 0087 (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NH-DOCS",
+      "title": "March 1861 cabinet opinions printed in Nicolay and Hay, Abraham Lincoln: A History, vol. 3 (1890)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "Same copies as NH; Bates opinions pp.388 and 432, 16 and 29 March 1861; Blair opinion p.432, 29 March 1861. rs1 and rs10 distinguish the memoranda from the later narrative. R51, decision 0087 (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NEWTON-LYONS-DOCS",
+      "title": "Contemporary correspondence quoted in Lord Newton, Lord Lyons: A Record of British Diplomacy, vol. 1 (1913)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "Same copy as NEWTON-LYONS; rs6 and rs12 identify the quoted letters. Russell letter p.2 is bounded to early 1853, not an invented January date; rs12 supersedes rs6 on reputation. Only letters, never Newton's characterization. R51, decision 0087 (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "WOODBURN-STEVENS-DOCS",
+      "title": "Congressional speeches quoted in J. A. Woodburn, Life of Thaddeus Stevens (1913)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "Same copy as WOODBURN-STEVENS; rs2 and rs13 identify the congressional speech of 29 January 1861 at pp.165-166. Only the reprinted speech, never Woodburn's interpretation. R51, decision 0087 (lane 1.11r3)",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

@@ -6,7 +6,9 @@ import { compareSummaries } from '../../../tools/compare-runs.ts';
 import {
   behaviourProblems,
   budgetProblems,
+  budgetSystemsProblems,
   evaluateDoneCheck,
+  MILESTONE_1A,
   hashProblems,
   livenessProblems,
   MECHANICS_RUN,
@@ -32,16 +34,41 @@ import { TIMING } from '../../kernel/test/support/timing.ts';
  */
 let result: DoneCheckResult;
 beforeAll(() => {
-  result = runDoneCheck();
+  // Two seeds keep the lever sweep's share of the suite small; `run:done-check` sweeps eight (`SWEEP`).
+  result = runDoneCheck({ sweepSeeds: 2 });
 });
 
 const union = () => result.runs.find((r) => r.checked.pack === 'union-1861')!;
 const testbed = () => result.runs.find((r) => r.checked.pack === 'testbed')!;
 
 describe('the done check on union-1861 at war and the testbed', () => {
-  it('passes every criterion but the budget, which is a stopwatch', () => {
-    for (const c of result.criteria) if (c.id !== 'budget') expect(c.problems, c.id).toEqual([]);
-    expect(result.criteria.map((c) => c.id)).toEqual(['behaviour', 'hash', 'resume', 'liveness', 'section-ten', 'budget']);
+  it('passes every Phase 0 criterion but the budget, which is a stopwatch', () => {
+    for (const c of result.criteria) if (c.milestone === 'phase0' && c.id !== 'budget') expect(c.problems, c.id).toEqual([]);
+    expect(result.criteria.filter((c) => c.milestone === 'phase0').map((c) => c.id)).toEqual(['behaviour', 'hash', 'resume', 'liveness', 'section-ten', 'budget']);
+  });
+
+  it('reports 1A’s criteria beside them, each PASS or FAIL with its reasons, without setting the exit status (lane 1.14)', () => {
+    const a = result.criteria.filter((c) => c.milestone === '1A');
+    expect(a.map((c) => c.id)).toEqual([...MILESTONE_1A]);
+    for (const c of a) expect(c.problems.length + c.evidence.length, c.id).toBeGreaterThan(0);
+    // The history run plays the Union pack to its last checkpoint with its own peace and war, and is timed and swept.
+    const h = result.history.find((x) => x.pack === 'union-1861')!;
+    expect(h.summary.atWar).toBe(false);
+    expect(h.summary.finalDay).toBe(148);
+    expect(h.timed.timing!.days).toBe(148);
+    expect(h.sweep!.seeds).toBe(2);
+    // Phase 0's criteria alone decide `passed`; `passed1A` needs every criterion.
+    const phase0 = result.criteria.filter((c) => c.milestone === 'phase0').every((c) => c.problems.length === 0);
+    expect(result.passed).toBe(phase0);
+    expect(result.passed1A).toBe(result.criteria.every((c) => c.problems.length === 0));
+  });
+
+  it('measures the budget with the planner, people and situations running, and says when one was not (1A)', () => {
+    const budget = result.criteria.find((c) => c.id === 'budget')!;
+    expect(budget.evidence.join('\n')).toContain('plans.drafted');
+    expect(budgetSystemsProblems(result.runs.map((r) => r.timed))).toEqual([]);
+    const quiet = result.runs.map((r) => ({ ...r.timed, liveness: r.timed.liveness.map((x) => (x.mechanic === 'situations.fired' ? { ...x, fires: 0 } : x)) }));
+    expect(budgetSystemsProblems(quiet)).toEqual(['no timed run had situations running (situations.fired fired in none), so the budget was not measured with it']);
   });
 
   // Wall clock: runs only with MANDATE_TIMING=1 (lane 1.0t; CI's Linux job sets it, the pre-commit hook does not).
@@ -133,13 +160,14 @@ describe('each criterion can fail (positive controls)', () => {
     const run = union();
     const reference = REFERENCE_RUNS.find((x) => x.name === 'union-1861 at war, 75 days')!;
     expect(livenessProblems(reference, run.checked.liveness)).toEqual([]);
-    const planted = run.checked.liveness.map((row) => (row.mechanic === 'movement.arrived' ? { ...row, fires: 0, magnitude: 0 } : row));
-    expect(livenessProblems(reference, planted)).toEqual([expect.stringContaining('movement.arrived is dead (0 fires')]);
+    // Lane 1.12: a mechanic the Union doctrine drives (its run has no march, so movement has no floor there).
+    const planted = run.checked.liveness.map((row) => (row.mechanic === 'recruitment.called' ? { ...row, fires: 0, magnitude: 0 } : row));
+    expect(livenessProblems(reference, planted)).toEqual([expect.stringContaining('recruitment.called is dead (0 fires')]);
     // The whole check reports it, under the liveness criterion and no other.
     const doctored: DoneRun = { ...run, checked: { ...run.checked, liveness: planted } };
     const exercises = Object.fromEntries(REFERENCE_RUNS.filter((x) => x.kind === 'exercise').map((x) => [x.name, [] as Phase0Summary['liveness']]));
     const criteria = evaluateDoneCheck({ runs: [doctored, testbed()], exercises });
-    expect(criteria.find((c) => c.id === 'liveness')!.problems.join('\n')).toContain('movement.arrived is dead');
+    expect(criteria.find((c) => c.id === 'liveness')!.problems.join('\n')).toContain('recruitment.called is dead');
   });
 
   it('section ten: a deleted test file, a skipped test and a thinned file are each named', () => {
@@ -161,8 +189,9 @@ describe('each criterion can fail (positive controls)', () => {
 
   it('budget: a tick over the budget, or a slow tail, fails', () => {
     const run = union();
-    expect(budgetProblems(run)).toEqual([]);
     const slow = (median: number, p95: number): DoneRun => ({ ...run, timed: { ...run.timed, timing: { unit: 'ms', days: 75, median, p95, max: p95 * 2 } } });
+    // Given timings, not this machine's stopwatch (lane 1.0t; lane 1.13): the real run's budget is the MANDATE_TIMING test above.
+    expect(budgetProblems(slow(10, 20))).toEqual([]);
     expect(budgetProblems(slow(TICK_BUDGET_MS * 2, TICK_BUDGET_MS * 2)).join('\n')).toContain('over the 40 ms budget');
     expect(budgetProblems(slow(10, TICK_BUDGET_MS * 5)).join('\n')).toContain('p95');
     expect(budgetProblems({ ...run, timed: { ...run.timed, timing: null } })).toEqual([`${run.name}: the timed run took no timings`]);

@@ -11,7 +11,9 @@
  * - A special messenger is a route with a price.
  */
 import { commandedBlocks, sideOfPerson } from '../command/command.ts';
-import type { MessageId, PersonId, PostId, SeatId } from '../ids.ts';
+import type { MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
+import { term } from '../knowledge/truth.ts';
+import { believedHolder } from '../seats/believed.ts';
 import type { ReportBody, ReportClaim } from '../knowledge/report.ts';
 import type { EditTerms, GoCommand, GoalTerms, OrderCommand, ReviewCommand } from '../log/commands.ts';
 import type { Hop, OrderBody, TransitMessage } from '../messages/transit.ts';
@@ -23,7 +25,7 @@ import type { State } from '../root-state.ts';
 import { answerOrder, goalTerms, relayAction, resolveOrderConflict } from '../reading/orders.ts';
 import { callTerms } from '../recruitment/rules.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
-import { isFieldPost, postFaction, relayChain } from '../seats/posts.ts';
+import { headquartersOf, isFieldPost, postFaction, relayChain } from '../seats/posts.ts';
 import { fire, hop, oversightOf, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
 import { arriveSupport } from './support.ts';
 
@@ -81,7 +83,9 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   if (state.postStates[cmd.to] === undefined) return 'unknown_post';
   const target = state.postStates[cmd.to]!;
   if (!isFieldPost(state, cmd.to) || postFaction(world, state, cmd.to) !== side) return 'not_field_post';
-  if (target.postHolder === null) return 'vacant_post';
+  // Lane 1.12 (0052): refused at once only if he knows the post vacant. One he still believes held (the report of its
+  // commander's loss not yet in his hands) is accepted, and the dispatch comes back undelivered when it arrives.
+  if (target.postHolder === null && believedHolder(state, issuer.id, cmd.to) === null) return 'vacant_post';
   // Only the routes the principal's menu offers (review N1): an order "in person" would be a visit, a verb of its own.
   if (!ORDER_ROUTES.includes(cmd.route)) return 'route_unavailable';
 
@@ -128,15 +132,17 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
   const chain = relayChain(state, issuer.id, cmd.to);
   // Vacant relay posts cannot relay: the order skips them.
   const relays = chain.slice(0, -1).filter((p) => state.postStates[p]!.postHolder !== null);
+  // The addressee is the man the issuer believes holds the post (lane 1.12): its holder, or the commander a battle took
+  // whose loss has not been reported to him.
   const hops: Hop[] = [...(cmd.bypass ? [] : relays), cmd.to].map((p, i, all) => ({
-    hopPerson: state.postStates[p]!.postHolder!,
+    hopPerson: state.postStates[p]!.postHolder ?? believedHolder(state, issuer.id, p)!,
     hopPost: p,
     hopRole: i === all.length - 1 ? 'addressee' : 'relay',
   }));
   const first = hops[0]!;
   const tag = body.orderKind === 'goal' ? `order.${cmd.to}` : `${body.orderKind}.${cmd.to}`;
   const id = mintMessageId(ctx.mint, ctx.day, issuer.id, first.hopPerson, tag);
-  const leg = hop(ctx, state, cmd.route, issuer.id, whereIs(ctx, state, issuer.id), whereIs(ctx, state, first.hopPerson), id);
+  const leg = hop(ctx, state, cmd.route, issuer.id, whereIs(ctx, state, issuer.id), hopRegion(ctx, state, first), id);
   ctx.outbox.push({
     id,
     msgOrigin: id,
@@ -166,6 +172,44 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
     }
   }
   return id;
+}
+
+/**
+ * Where a hop's leg ends: where its man is, or, for a man who no longer holds the post it is addressed to (a commander
+ * a battle took, lane 1.12), the post's headquarters, where the dispatch goes looking for him.
+ */
+function hopRegion(ctx: TickContext, state: State, h: Hop): RegionId {
+  if (h.hopPost !== null && state.postStates[h.hopPost]?.postHolder !== h.hopPerson) return headquartersOf(ctx.world, state, h.hopPost);
+  return whereIs(ctx, state, h.hopPerson);
+}
+
+/**
+ * A dispatch that reaches a post whose holder is no longer the man it was addressed to (lane 1.12, 0052): the post fell
+ * vacant, or changed hands, while it travelled. It is not answered; it comes back to its issuer, from the post, by the
+ * way it went, as a returned dispatch naming the post and why (`vacant_post` or `holder_changed`). The player reads it
+ * in his reports, like any answer to an order.
+ */
+export function returnDispatch(ctx: TickContext, state: State, msg: TransitMessage): State {
+  const order = msg.msgOrder!;
+  const post = msg.msgToPost!;
+  const why = state.postStates[post]?.postHolder === null ? 'vacant_post' : 'holder_changed';
+  sendReport(ctx, state, {
+    body: answerBody(order.orderIssuer, null, ctx.day, {
+      reportType: 'wire-dispatch',
+      reportSubtype: null,
+      reportClaims: [{ claimKind: 'order-returned', claimRegion: objectiveOf(state, order), claimValue: 0, claimToken: why, claimConfidence: 1000 }],
+      reportAdvice: null,
+      answers: msg.msgOrigin,
+      about: post,
+    }),
+    truth: { truthTerms: [term('observed', 0, { person: msg.msgTo, post, rule: why })], truthTrimmed: [] },
+    to: order.orderIssuer,
+    tag: `returned.${post}`,
+    route: msg.msgRoute,
+    fromRegion: headquartersOf(ctx.world, state, post),
+  });
+  fire(ctx, 'orders.returned');
+  return state;
 }
 
 /** A report answering an order: its subject is the post the order was for, and it names the order it answers. */
@@ -228,7 +272,7 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
   }
   const next = msg.msgPending[0]!;
   const id = mintMessageId(ctx.mint, ctx.day, relayer.id, next.hopPerson, `order.${order.orderTarget}`);
-  const leg = hop(ctx, state, msg.msgRoute, relayer.id, whereIs(ctx, state, relayer.id), whereIs(ctx, state, next.hopPerson), id, decision.holdDays);
+  const leg = hop(ctx, state, msg.msgRoute, relayer.id, whereIs(ctx, state, relayer.id), hopRegion(ctx, state, next), id, decision.holdDays);
   fire(ctx, 'orders.relayed');
   if (decision.holdDays > 0) fire(ctx, 'orders.relay_held', decision.holdDays);
   ctx.events.push({ event: 'relayed', person: relayer.id, post, message: msg.msgOrigin, terms: decision.terms });

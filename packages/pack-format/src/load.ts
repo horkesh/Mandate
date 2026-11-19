@@ -5,6 +5,7 @@
  */
 import type { world as w } from '@mandate/kernel';
 import { readBannedSources, readEvidencePolicy, readWeakSources } from './banned-sources.ts';
+import { CHECKPOINTS_FILE, CheckpointsSchema, validateCheckpoints } from './checkpoints.ts';
 import { readJson, type PackFiles } from './generate.ts';
 import { errorsOf, type Issue, IssueSink } from './issues.ts';
 import { generatedStringsFile, MANIFEST_FILE, PROVENANCE_FILE, scenarioFile, stringsFile, WORLD_FILE } from './layout.ts';
@@ -48,6 +49,9 @@ export function loadPack(files: PackFiles): LoadResult {
   if (errorsOf(sink.issues).some((i) => !CITATION_POLICY_KINDS.has(i.kind))) return { pack: null, issues: sink.issues };
   const layer = readSituationLayer(files, worldPack);
   sink.add(layer.issues);
-  const pack: PackData = { ...worldPack, situations: layer.situations, gate: layer.gate };
+  // Lane 1.14: the done check's bands, optional, checked against the World they name.
+  const checkpoints = readJson(files, CHECKPOINTS_FILE, CheckpointsSchema, sink, false);
+  if (checkpoints !== null) validateCheckpoints(checkpoints, world, scenarios[0]?.startDate ?? null, sink);
+  const pack: PackData = { ...worldPack, situations: layer.situations, gate: layer.gate, checkpoints };
   return { pack: errorsOf(sink.issues).length > 0 ? null : pack, issues: sink.issues };
 }

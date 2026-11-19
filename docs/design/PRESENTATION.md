@@ -502,9 +502,9 @@ Playable at every phase [canon: 0030 item 4]. Phase 1 ends console-playable: pla
 | Step | Phase | What is playable | Map | Status |
 |---|---|---|---|---|
 | 1 | Phase 1 | The console, rebuilt on the presenter: papers printed with genre, author, route and stamp; the docket as a list with clocks as date ranges; plans as numbered axes with routes listed as region names; edits typed in the grammar (`edit 2 objective <region>`); audiences as numbered reasons and counters; the battle night as a timed dispatch log | text twin only | canon (console loop); presenter proposed |
-| 2 | Phase 2, first | The React desk without the map: tray, reading column, docket, board, ledger, file, attention, calendar, out-tray; the map's place shows the text twin | text twin | proposed |
-| 3 | Phase 2 | The staff map, read-only: base bake, washes, fronts, flags, pencil, fading, labels | PixiJS | proposed (renderer canon 0035, 0043) |
-| 4 | Phase 2 | Plan review on the map: arrows, blue-pencil edits, send back or order | PixiJS | proposed |
+| 2 | Phase 2, first | The React desk without the map: tray, reading column, docket, board, ledger, file, attention, calendar, out-tray; the map's place shows the text twin | text twin | proposed; a prototype by Codex in `prototypes/desk/` (0089), with its keyboard and skins (R17, 0090) |
+| 3 | Phase 2 | The staff map, read-only: base bake, washes, fronts, flags, pencil, fading, labels | PixiJS | proposed (renderer canon 0035, 0043); a prototype by Codex in `prototypes/desk/` (R18, 0091) |
+| 4 | Phase 2 | Plan review on the map: arrows, blue-pencil edits, send back or order | PixiJS | proposed; a prototype by Codex (R18, 0091) |
 | 5 | Phase 2 | The audience scene with portraits; the night of the battle | — | proposed |
 | 6 | Phase 2 | The Electron build, the demo scenario, the store screenshots (Playwright at 3440×1440 and 1920×1080) | — | proposed (tools canon 0035; sizes canon 0049) |
 

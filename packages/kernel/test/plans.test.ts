@@ -84,6 +84,25 @@ describe('a goal is drafted on request, and the commander picks (lane 1.2)', () 
     expect(out.state.planRecords[RESERVE]!.planStatus).toBe('approved');
   });
 
+  it('counts a commander’s pick among his candidates as seats.choices, once, and a pick the menu never offered is refused (lane 1.12)', () => {
+    const world = strong();
+    const telemetry = createTelemetry([...TICK_MECHANICS, ...MAP_MECHANICS]);
+    const days: TickResult[] = [];
+    playDays(world, createState(world, { seed: 7 }), scriptedSeats({ a: { 1: [take()] } }), 4, { freeze: true, telemetry, onDay: (r) => days.push(r) });
+    expect(days.flatMap((r) => r.rejections)).toEqual([]);
+    expect(fired(telemetry, 'seats.choices')).toBe(1);
+    // The pick his seat made is the plan he chose: the best his own scorer ranked (the scripted seat takes the top score).
+    const record = days.at(-1)!.state.planRecords[RESERVE]!;
+    expect(record.planChosen).toBe([...record.planDraft!.draftCandidates].sort((a, b) => b.candScore - a.candScore || (a.id < b.id ? -1 : 1))[0]!.id);
+    // A pick that is not on the morning's menu is refused, and counts nothing.
+    const choosing = days.find((r) => r.state.planRecords[RESERVE]?.planStatus === 'choosing')!;
+    const t2 = createTelemetry([...TICK_MECHANICS, ...MAP_MECHANICS]);
+    const next = choosing.day + 1;
+    const r = tick(world, choosing.state, [{ day: next, seat: seatIdFor(choosing.state.postStates[RESERVE]!.postHolder!), command: { cmd: 'choose', request: `plan:${RESERVE}:${next}`, option: 'no-such-plan' } }], { telemetry: t2 });
+    expect(r.rejections.map((x) => x.reason)).toEqual(['not_an_option']);
+    expect(fired(t2, 'seats.choices')).toBe(0);
+  });
+
   it('keeps a plan off his menu while an office’s objection to his answer is on its way back to him (0040: he believes it went on)', () => {
     // A plan before him for review, as the day ends.
     const { results } = play(strong(), 12, (d) => (d === 1 ? [take({ approveAsDrafted: false })] : []));

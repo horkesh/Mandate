@@ -12,6 +12,7 @@
  * the truth layer.
  */
 import type { EdgeId, FactionId, ForceBlockId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
+import type { ControlShares, FrontSegment } from '../control/vocabulary.ts';
 import type { ClaimKind, ReportType, SubjectKind } from '../knowledge/report.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { PlanStatus, Posture } from '../plans/goal.ts';
@@ -39,6 +40,10 @@ export interface ReportView {
   readonly subjectKind: SubjectKind;
   readonly subjectId: string;
   readonly claims: readonly ClaimView[];
+  /** Qualitative holdings in this report, derived with the pack's threshold. */
+  readonly reportedControl?: readonly { readonly region: RegionId; readonly holder: FactionId | null; readonly contested: boolean }[];
+  /** The public opening picture; preserved by presentation playback. */
+  readonly openingControl?: true;
   readonly day: number;
   readonly hour: number | null;
   readonly advice: AdviceView | null;
@@ -69,6 +74,32 @@ export interface ObstructionView {
   readonly by: RegionId | null;
   readonly asOfDay: number;
   readonly source: MessageId;
+}
+
+export interface ControlBeliefSource {
+  readonly report: MessageId;
+  readonly author: PersonId;
+  readonly authorPost: PostId | null;
+  readonly asOfDay: number;
+}
+
+export interface ControlBeliefView {
+  readonly shares: ControlShares;
+  readonly holder: FactionId | null;
+  /** Two or more factions trace the region, including a tie for the largest share. */
+  readonly contested: boolean;
+  readonly neutralGovernment: boolean;
+  readonly asOfDay: number;
+  readonly mark: 'ink' | 'pencil';
+  /** Latest control report, independent corroboration if held, then the distinct government source if any. */
+  readonly sources: readonly ControlBeliefSource[];
+}
+
+export interface ClaimedFrontView extends FrontSegment {
+  /** The older of the two claims at its ends. */
+  readonly asOfDay: number;
+  /** Ink only where both ends are corroborated. */
+  readonly mark: ControlBeliefView['mark'];
 }
 
 /** The goal he was given (lane 1.2: the full goal, FOUNDATION section 5), and where its plan stands. */
@@ -132,6 +163,10 @@ export interface SeatView {
   readonly worksBeliefs: Readonly<Record<RegionId, WorksView>>;
   /** Water edges he has been told of, closed or clear (the latest obstruction claim he holds per edge). */
   readonly obstructionBeliefs: Readonly<Record<EdgeId, ObstructionView>>;
+  readonly controlBeliefs: Readonly<Record<RegionId, ControlBeliefView>>;
+  readonly claimedFronts: readonly ClaimedFrontView[];
   /** Situations that have reached him (as principal, or as the holder one was handed to), in id order. */
   readonly situations: readonly SituationView[];
+  /** What is left of his week's attention (0025, lane 1.13): his own budget, which he always knows; null for a seat that keeps none. */
+  readonly attention: number | null;
 }

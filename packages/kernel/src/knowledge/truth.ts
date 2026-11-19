@@ -8,8 +8,9 @@
  * to a seat: the view layer (`seat-api.ts` and `view/types.ts`) cannot import
  * this file, and `test/boundary.test.ts` proves it.
  */
-import type { PersonId, PostId, RegionId } from '../ids.ts';
+import type { MessageId, PersonId, PostId, RegionId } from '../ids.ts';
 import type { ReportClaim } from './report.ts';
+import type { State } from '../root-state.ts';
 
 export const BIAS_TERM_KINDS = [
   /** The raw value observed (an enemy strength seen by scouts, a strength on the rolls). */
@@ -66,6 +67,17 @@ export interface BiasTerm {
 export interface ReportTruth {
   readonly truthTerms: readonly BiasTerm[];
   readonly truthTrimmed: readonly ReportClaim[];
+  /** Observed terms are derived from State.openingControlClaims, never copied into each bulletin. */
+  readonly truthOpeningClaims?: true;
+}
+
+/** Complete assessment information, including compact opening bulletins. */
+export function truthOf(state: State, id: MessageId): ReportTruth | undefined {
+  const truth = state.reportTruth[id];
+  if (truth?.truthOpeningClaims !== true) return truth;
+  const claims = state.openingControlClaims;
+  if (claims === undefined) throw new RangeError(`missing opening claims for report truth ${id}`);
+  return { truthTerms: claims.map(claim => term('observed', claim.claimValue, { region: claim.claimRegion!, rule: `${claim.claimKind}:${claim.claimToken}` })), truthTrimmed: truth.truthTrimmed };
 }
 
 export const NO_TRUTH: ReportTruth = Object.freeze({ truthTerms: Object.freeze([]), truthTrimmed: Object.freeze([]) });

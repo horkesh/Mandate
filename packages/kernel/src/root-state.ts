@@ -27,8 +27,9 @@ import type { ForceLocation } from './movement/movement.ts';
 import type { DepartmentId, DepotId, EdgeId, FactionId, ForceBlockId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from './ids.ts';
 import type { ChamberState, CongressAct } from './politics/politics.ts';
 import type { SituationRecord } from './situations/situations.ts';
-import type { SeatKnowledge } from './knowledge/knowledge.ts';
+import type { KnownReport, SeatKnowledge } from './knowledge/knowledge.ts';
 import type { ReportTruth } from './knowledge/truth.ts';
+import type { ReportClaim } from './knowledge/report.ts';
 import type { TransitMessage } from './messages/transit.ts';
 import type { OperationTable } from './operations/operations.ts';
 import type { PlanRecord } from './plans/plans.ts';
@@ -44,6 +45,7 @@ import type { ArrivalTable, FortificationTable, LoyaltyTable } from './regions/r
 import type { EnlistmentTable } from './forces/enlistment.ts';
 import type { LevyTable } from './command/levies.ts';
 import type { BattleTable } from './combat/records.ts';
+import type { JoinTable } from './movement/join.ts';
 
 export interface State {
   /** The game's seed, set at setup; every named stream derives from it. Immutable. */
@@ -72,6 +74,10 @@ export interface State {
   readonly messagesInTransit: readonly TransitMessage[];
   /** The reports each seat holds. Writer: `knowledge`. */
   readonly knowledgeBySeat: Readonly<Record<SeatId, SeatKnowledge>>;
+  /** The opening bulletins, each stored once and referred to by the seats that hold it. Writer: `knowledge`. */
+  readonly openingControlReports?: Readonly<Record<MessageId, KnownReport>>;
+  /** Shared claims referenced by every opening bulletin and its assessment terms. Writer: `knowledge`. */
+  readonly openingControlClaims?: readonly ReportClaim[];
   /** Why each held report says what it says (the truth layer). Writer: `knowledge`. */
   readonly reportTruth: Readonly<Record<MessageId, ReportTruth>>;
   /** Each post's goal and its plan: draft set, the seat's pick, approval, edits as counter-orders (lane 1.2). Writer: `plans`. */
@@ -86,6 +92,8 @@ export interface State {
   readonly forceBlockStates: ForceTable;
   /** Where each block stands, or the ship it is aboard. Writer: `movement`. */
   readonly forceLocations: Readonly<Record<ForceBlockId, ForceLocation>>;
+  /** Blocks under orders to join their post at its seat, from a transfer (lane 1.12; `movement/join.ts`). Writer: `movement`. */
+  readonly forceJoins: JoinTable;
   /** Posts: holders, chain, departments, temporary posts, standing orders. Writer: `command`. */
   readonly postStates: PostTable;
   /** Which post commands each block (division-to-post assignment). Writer: `command`. */

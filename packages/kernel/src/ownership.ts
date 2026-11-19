@@ -95,6 +95,8 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('edge condition', 'infrastructure', ['combat', 'raids', 'repair orders'], [at('State', 'infraEdgeCondition')]),
   // Lane 0.5: a block's region (or the ship it is aboard), from the start (0050).
   field('division location', 'movement', ['operations', 'recruitment (a new block placed, a disbanded one removed)'], [at('State', 'forceLocations')]),
+  // Lane 1.12: a transfer orders the blocks it hands over to join the receiving post at its seat.
+  field("a block's order to join its post at the post's seat", 'movement', ['verbs (a transfer)', 'operations (the day\'s legs)'], [at('State', 'forceJoins')]),
   // Lane 0.5: one record per block or detachment carries strength, stores and
   // non-combatants (`forces/forces.ts`), so the three `forces` rows below share it.
   // Lane 1.3: morale, experience, equipment, stragglers, and the days a block routed or surrendered join the same record.
@@ -141,7 +143,7 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('goals, plans, approvals, edits', 'plans', ['verbs', 'seat selections', 'order arrival', 'the planner (draft sets, on request)'], [at('State', 'planRecords')]),
   // Lane 1.4: approved plans in execution, each axis's stage, its support requests and its outcome.
   field('operations and their lifecycles', 'operations', ['plan approval', 'movement and combat outcomes', 'a support request answered'], [at('State', 'operationRecords')]),
-  field('knowledge (reports per seat)', 'knowledge', ['message delivery', 'pruning'], [at('State', 'knowledgeBySeat'), at('State', 'reportTruth')]),
+  field('knowledge (reports per seat)', 'knowledge', ['opening bulletins', 'message delivery', 'pruning'], [at('State', 'knowledgeBySeat'), at('State', 'openingControlReports'), at('State', 'openingControlClaims'), at('State', 'reportTruth')]),
   field('messages in transit', 'messages', ['commands', 'reports', 'relay links forwarding an order', "the kernel's latency rules"], [at('State', 'messagesInTransit')]),
   field('economy stocks', 'economy', ['weekly step', 'verbs']),
   field('situations fired, live (open options, clocks) and decided', 'situations', ['cause evaluation', 'decisions', "delegated seats' choices"], [at('State', 'situationStates')]),
@@ -198,6 +200,8 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'EditSpec',
   'PlanRecord',
   'Enlistment',
+  // Lane 1.12: a block's order to join its post, replaced whole by `movement`.
+  'ForceJoin',
   'Levy',
   'CallSpec',
   'PlanCounter',
@@ -276,12 +280,11 @@ export const NEVER_REASSIGNED_KEYS: readonly string[] = ['id'];
 
 /**
  * State records the classification check skips, because the M2 kernel that
- * declares them is being replaced in Phase 0. The test fails if an entry
- * names a file or interface that no longer exists, so this list only shrinks.
+ * declared them was being replaced. The test fails if an entry names a file or
+ * interface that no longer exists, so this list only shrinks. Empty since M2's
+ * `GameState` retired with M2 (lane 1.13).
  */
-export const LEGACY_STATE_RECORDS: readonly { readonly file: string; readonly record: string; readonly reason: string }[] = [
-  { file: 'packages/kernel/src/state.ts', record: 'GameState', reason: 'M2 state; replaced by the new State in Phase 0' },
-];
+export const LEGACY_STATE_RECORDS: readonly { readonly file: string; readonly record: string; readonly reason: string }[] = [];
 
 /**
  * Lane 0.6 (review F6). State is copy-on-write, so building a new object

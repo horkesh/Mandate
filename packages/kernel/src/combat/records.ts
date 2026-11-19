@@ -41,14 +41,15 @@ export interface BlockLoss {
 export const LEADER_HITS = ['killed', 'wounded', 'captured'] as const;
 export type LeaderHit = (typeof LEADER_HITS)[number];
 
-/** The commander's choice with no way out (P8): break out, or surrender the force. */
-export type CutOffChoice = 'break_out' | 'surrender';
+/**
+ * The commander's choice with no way out (P8): break out, or surrender the force; and the winner's choice the morning
+ * after a withdrawal or rout (P6.3), which lane 1.4 runs. Their vocabulary is `combat/order-kinds.ts` (lane 1.12), which
+ * a seat's battle orders name.
+ */
+export { PURSUITS, type CutOffChoice, type Pursuit } from './order-kinds.ts';
+import type { CutOffChoice, Pursuit } from './order-kinds.ts';
 /** What became of a side cut off: his choice, or destroyed when the breakout he chose failed (never his surrender, 0074). */
 export type CutOff = CutOffChoice | 'destroyed';
-
-/** The winner's choice the morning after a withdrawal or rout (P6.3). Lane 1.4 runs the pursuit; combat only emits it. */
-export const PURSUITS = ['none', 'follow', 'press'] as const;
-export type Pursuit = (typeof PURSUITS)[number];
 
 /** One side on one battle-day: what it brought, what it lost and why, and what its commander decided. */
 export interface BattleSide {

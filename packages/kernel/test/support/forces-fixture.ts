@@ -70,6 +70,8 @@ export function forcesWorld(parts: ForcesParts): World {
       arms: [
         { id: 'infantry', name: 'arm.infantry', naval: false, cavalry: false },
         { id: 'cavalry', name: 'arm.cavalry', naval: false, cavalry: true },
+        // Lane 1.12: the fixture's gun arm for the bombardment rules.
+        { id: 'artillery', name: 'arm.artillery', naval: false, cavalry: false },
         { id: 'naval', name: 'arm.naval', naval: true, cavalry: false },
       ],
     },

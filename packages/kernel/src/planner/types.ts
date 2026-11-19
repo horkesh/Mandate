@@ -12,7 +12,7 @@ import type { EdgeId, FactionId, ForceBlockId, PersonId, PostId, RegionId } from
 /** How an axis travels: on foot and by rail, or carried by ship or boat on rivers or the sea. */
 export type AxisMode = 'land' | 'river' | 'sea';
 
-export const PHASE_KINDS = ['assault', 'await', 'clear', 'concentrate', 'depot_step', 'hold', 'march', 'reduce', 'run_past'] as const;
+export const PHASE_KINDS = ['assault', 'await', 'bombard', 'clear', 'concentrate', 'depot_step', 'hold', 'march', 'reduce', 'run_past'] as const;
 export type PhaseKind = (typeof PHASE_KINDS)[number];
 
 /** One phase of an axis, with its day offset from the plan's start. */
@@ -107,9 +107,11 @@ export const GATE_KINDS = [
   'needs_permission',
   'no_carrier',
   'no_forces',
+  'no_guns',
   'no_objective',
   'no_partner',
   'no_route',
+  'no_target',
   'staging_not_adjacent',
   'vacant_post',
 ] as const;
@@ -132,7 +134,7 @@ export interface PlanTerm {
   readonly contribWhy: string;
 }
 
-export const METHODS = ['by_water', 'direct', 'flank', 'holding', 'pincer', 'supply_line'] as const;
+export const METHODS = ['bombard', 'by_water', 'direct', 'flank', 'holding', 'pincer', 'supply_line'] as const;
 export type Method = (typeof METHODS)[number];
 
 export interface PlanCandidate {
@@ -183,6 +185,8 @@ export interface PlannerForce {
   /** A detachment is a garrison: it stays unless the goal commits it (lane 0.9 finding 6). */
   readonly kind: 'block' | 'detachment';
   readonly naval: boolean;
+  /** Its arm (the pack's arm id): the bombardment method counts the guns of the pack's gun arms (lane 1.12). */
+  readonly arm: string;
   /** Men; an unknown strength counts as none. */
   readonly strength: number;
   /** Whole days of stores; unknown counts as none. */
@@ -200,6 +204,8 @@ export interface PlannerPost {
   readonly parent: PostId | null;
   /** Where its headquarters is (derived from its strongest block), or null for a post that commands nothing. */
   readonly region: RegionId | null;
+  /** Its seat: its home region in pack data (the start's `region`), or null; a goal to hold with no objective holds it (lane 1.12). */
+  readonly seat: RegionId | null;
   /**
    * The cooperation the drafting commander expects of this holder, signed permille, from what he can know: his regard for
    * him and the holder's public standing (`expectedCooperation`; never the holder's hidden temperament). 0 for a vacant post

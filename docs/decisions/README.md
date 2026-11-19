@@ -51,7 +51,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0045](0045-the-steward-integrates.md) | The steward integrates; reviews are lanes | accepted; amended by 0047 |
 | [0046](0046-gate-checklist-and-situations-catalogue.md) | The sensitive-history checklist and the situations catalogue are accepted | accepted; refined by 0069 |
 | [0047](0047-a-standing-reviewer.md) | A standing reviewer lane | accepted |
-| [0048](0048-assets-are-made-by-codex.md) | Assets are made by Codex, through one coordination file | accepted; amended by 0051 |
+| [0048](0048-assets-are-made-by-codex.md) | Assets are made by Codex, through one coordination file | accepted; amended by 0051, 0089, 0092 |
 | [0049](0049-ultrawide-first.md) | The game is designed for ultrawide displays first (3440×1440 reference) | accepted |
 | [0050](0050-world-format-v2.md) | World format v2: the pack format, its validator and generator, and what becomes State at scenario start | accepted; amended by 0055, 0058, 0065 |
 | [0051](0051-codex-output-rules.md) | Rules for Codex output: no AI likenesses of real people, game-resolution assets only, and full provenance | accepted; amended by 0077 |
@@ -91,3 +91,15 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0085](0085-evidence-rules-and-the-1860-census.md) | Evidence rules for the 1861 cast, and the 1860 census by region | accepted; amended by 0087 |
 | [0086](0086-wall-clock-tests-behind-a-flag.md) | Wall-clock tests run behind a flag, not in the pre-commit hook | accepted |
 | [0087](0087-evidence-rules-as-checks.md) | The evidence rules as checks, and what a later work can source | accepted |
+| [0088](0088-the-console-and-m2-retired.md) | The console on the new kernel, and M2 retired | accepted |
+| [0089](0089-codex-builds-a-desk-prototype.md) | Codex builds a desk prototype on the console's driver | accepted; amended by 0090, 0091 |
+| [0090](0090-codex-decoration-icons-and-desk-access.md) | Codex makes the first document decoration, drafts the map icons and gives the desk its keys and skins | accepted; amended by 0091 |
+| [0091](0091-codex-builds-the-staff-map-prototype.md) | Codex builds the staff map into the desk prototype now | accepted; amended by 0093 |
+| [0092](0092-codex-takes-coding-tasks.md) | Codex takes coding tasks through its command line | accepted; amended by 0096 |
+| [0093](0093-the-map-is-the-engineers-manuscript-on-the-table.md) | The staff map is the engineer's manuscript, and it covers the table | accepted; refined by 0094, 0095 |
+| [0094](0094-claimed-control-on-the-presidents-map.md) | The president's map shows claimed control, in bold colour | accepted |
+| [0095](0095-the-staff-map-draws-no-pictorial-signs-for-now.md) | The staff map draws no pictorial signs, for now | accepted |
+| [0096](0096-codex-resumes-milestone-1a.md) | Codex resumes milestone 1A | accepted |
+| [0097](0097-the-1861-starts-blocs-after-re-sourcing.md) | The 1861 start's blocs and judgments after re-sourcing | accepted |
+| [0098](0098-rule-seat-doctrine-concentration-bombardment-and-lost-commanders.md) | Rule-seat doctrine, concentration, bombardment and lost commanders | accepted |
+| [0099](0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md) | The 1A checkpoint bands and the limits of the victory sweep | accepted |

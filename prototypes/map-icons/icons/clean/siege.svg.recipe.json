@@ -1,0 +1,40 @@
+{
+  "asset": "prototypes/map-icons/icons/clean/siege.svg",
+  "request": "R16",
+  "brief": "docs/design/ASSETS.md#1",
+  "date": "2026-11-17",
+  "plan": "ChatGPT Pro 100 (owner confirmation recorded in CODEX.md)",
+  "client": "Codex CLI 0.167.0",
+  "model": "Codex; exact runtime model identifier not recorded by this procedural generator",
+  "apiKeyUnset": true,
+  "tool": "Node.js authored vector generator",
+  "mode": "procedural SVG; no image model",
+  "prompt": "R16: original abstract staff-map convention for siege; 24-unit grid; no lettering, flags, emblems or figures.",
+  "references": [],
+  "requestedSize": "24x24 vector units",
+  "actualSize": "24x24 vector units",
+  "variantsMade": 2,
+  "variantChosen": "clean",
+  "humanEdits": [],
+  "postProcess": [],
+  "provenanceMarks": "Code-produced SVG; no image-tool metadata or embedded provenance marks were created or removed.",
+  "sha256": "92ea5735b733b684e3060ce731c1e6f9ebc061b22e52675fe69443e5b6f51199",
+  "sources": [
+    {
+      "path": "src/catalog.mjs",
+      "sha256": "78a0bd53d84ab7cce6920ed1dd55157be03d786773096a512e66290a2fd3b57e"
+    },
+    {
+      "path": "src/roughen.mjs",
+      "sha256": "ab770650c9a884b4e827e73faf0aefe89106e7318ef3cd3cf0072ec454ef15fe"
+    },
+    {
+      "path": "scripts/generate.mjs",
+      "sha256": "8b427ace1dfc638a1f2eb4f4a0eb7e421f540a271f20c4f3db5911676b0dc180"
+    }
+  ],
+  "seed": null,
+  "slot": null,
+  "availability": "draft",
+  "notes": "AI-assisted authored vectors, not traced from historical art. CSS supplies colour and source state. Standing review pending."
+}
