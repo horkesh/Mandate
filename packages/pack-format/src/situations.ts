@@ -57,7 +57,7 @@ export const ConditionSchema: z.ZodType<Condition> = z.lazy(() =>
     z.strictObject({ flag: termId }),
     z.strictObject({ fired: idOf('situation') }),
     z.strictObject({ decided: idOf('situation'), options: z.array(termId).min(1).nullable().default(null) }),
-    z.strictObject({ knows }),
+    z.strictObject({ knows, forDays: nonNegative.optional().describe('A pack-stated deliberation interval from receipt of a matching report; omitting it requires receipt only.') }),
     z.strictObject({ goal: z.strictObject({ post: idOf('post'), posture: z.enum(phase0.POSTURES) }).describe('The post holds a goal of this posture, ordered by its principal (lane 1.2: a goal in plans, no longer a standing goal).') }),
     z.strictObject({ headquartersAt: z.strictObject({ post: idOf('post'), region: idOf('region') }) }),
     z.strictObject({ callReceived: z.strictObject({ post: idOf('post'), days: int.min(0) }) }).describe('A call for regiments reached the holder of a post at least this many days ago (lane 1.11): a state’s act a pack-set delay after the call arrives. STAND-IN until conventions are modelled (1B).'),

@@ -1,7 +1,7 @@
-import { canonicalHash, phase0 } from '@mandate/kernel';
+import { canonicalHash, createTelemetry, phase0 } from '@mandate/kernel';
 import { createRuleSeat } from '@mandate/rule-seats';
 import { describe, expect, it } from 'vitest';
-import { seatsWorld } from '../src/seats-world.ts';
+import { seatsMechanics, seatsWorld } from '../src/seats-world.ts';
 
 /**
  * The war gate (0064): doctrine waits for each side's own opening decision (lane 1.11), then calls,
@@ -40,11 +40,32 @@ describe('the war gate on union-1861', () => {
     const peace = phase0.playDays(world, start, seats, 30, { freeze: true });
     expect(doctrine(peace.log)).toEqual([]);
     expect(peace.state.situationFlags[warFlags.find((r) => r.faction === 'confederate')!.flag!]).toBeUndefined();
-    const run = phase0.playDays(world, peace.state, seats, 30, { freeze: true });
+    let firstFire: number | null = null;
+    let firstKnowledge: number | null = null;
+    const telemetry = createTelemetry(seatsMechanics());
+    const run = phase0.playDays(world, peace.state, seats, 30, { freeze: true, telemetry, onDay: (r) => {
+      if (telemetry.mechanics['combat.bombardment']!.fires > 0) firstFire ??= r.day;
+      const dispatch = r.state.knowledgeBySeat['seat:lincoln_abraham' as never]?.knownReports.find((paper) => paper.knownBody.reportAuthor === 'anderson_robert' && paper.knownBody.reportSubjectId === 'fort_sumter' && paper.knownBody.reportClaims.some((c) => c.claimKind === 'battle-phase'));
+      if (dispatch !== undefined) {
+        firstKnowledge ??= dispatch.knownReceivedDay;
+        expect(dispatch.knownRoute).toBe('wire');
+        expect(dispatch.knownBody.reportDay).toBeGreaterThanOrEqual(firstFire!);
+      }
+    } });
     const day = (faction: string) => run.state.situationFlags[warFlags.find((r) => r.faction === faction)!.flag!]!;
     // The seceded side's seat opens the war (0040's labelled railroad); the president answers once he knows.
     expect(day('confederate')).toBeGreaterThan(30);
     expect(day('union')).toBeGreaterThanOrEqual(day('confederate'));
+    expect(firstFire).toBe(38);
+    expect(firstKnowledge).toBe(38);
+    const firedUpon = run.state.situationStates['sumter_fired_upon' as never]!;
+    const call = run.state.situationStates['call_for_troops' as never]!;
+    expect(firedUpon.sitFiredDay).toBeGreaterThanOrEqual(firstFire!);
+    expect(firedUpon.sitSurfacedDay).toBe(38);
+    expect(call).toMatchObject({ sitSurfacedDay: 40, sitDecidedDay: 41 });
+    expect(day('union')).toBe(41);
+    expect(run.state.situationFlags.virginia_seceded).toBeGreaterThan(day('union'));
+    expect(run.state.situationStates['virginia_secedes' as never]!.sitFiredDay).toBeGreaterThan(day('union'));
     expect(Math.min(...orders(run.log).map((e) => e.day))).toBeGreaterThan(day('confederate'));
     expect(run.state.forceLocations).not.toEqual(peace.state.forceLocations);
   });
@@ -53,8 +74,8 @@ describe('the war gate on union-1861', () => {
     const war = phase0.createState(world, { ...setup, atWar: true });
     const warRun = phase0.playDays(world, war, seats, 60, { freeze: true });
     // Both principals start on the first morning (each asks his army where it stands). The seceding side's doctrine calls on
-    // 8 April (day 34). The Union's authored call reaches its governors before doctrine's 15 April row, so doctrine
-    // must not duplicate it; what they raise still goes to the concentration post. Sumter's goal now belongs to the
+    // 8 April (day 34). The Union's call belongs to its news-driven authored decision, including with war forced on:
+    // no dated doctrine row duplicates it; what they raise still goes to the concentration post. Sumter's goal belongs to the
     // authored opening alone: the doctrine sends no second goal down the chain, and only answers its relay objection.
     expect(Math.min(...doctrine(warRun.log).map((e) => e.day))).toBe(1);
     expect(Math.min(...warRun.log.filter((e) => e.command.cmd === 'call').map((e) => e.day))).toBe(34);
@@ -63,7 +84,7 @@ describe('the war gate on union-1861', () => {
     const nyAnswers = Object.values(warRun.state.orderResponses).filter((r) =>
       r.respKind === 'call' && r.respRole === 'addressee' && r.respPost === 'st_gov_new_york');
     expect(nyAnswers).toHaveLength(1);
-    expect(nyAnswers[0]!.respDay).toBeLessThanOrEqual(41);
+    expect(nyAnswers[0]!.respDay).toBe(41);
     expect(Object.keys(warRun.state.forceBlockStates).some((b) => b.startsWith('raised.st_gov_new_york.'))).toBe(true);
     expect(warRun.log.some((e) => e.command.cmd === 'transfer')).toBe(true);
     expect(chainOrderDays(warRun.log)).toEqual([]);

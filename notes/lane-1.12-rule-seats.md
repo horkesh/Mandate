@@ -373,3 +373,74 @@ For the lead:
 1. **Lead / lane 1.11:** its unchanged opening-flag chain now produces Union war on 11 April and Virginia's notice on 16 April. These are observed consequences of the sourced one-day authorization correction; separating an authorization flag from actual fire or revising the later chain needs its own ruling. R78 does not silently repair other situations to preserve old dates.
 2. **Lead / lane 1.14 and R79:** retain the failed checkpoint, operation, pushback, stand-in and lever-sweep gates. R79's hook bound and label cleanup were not undertaken. The only changed problem count is reservations 46 → 45; no acceptance criterion was retired.
 3. **Lead / remaining Part B policy:** consult policy, Butler's integration/placeholder cleanup and the July message as `address` remain deferred. Resignation is its separate lane. The duplicate Sumter doctrine row is now removed.
+
+## R80: the opening follows received news (2026-11-19)
+
+For the lead: 2 items. Implemented **R80 only**, from `ebb4227`, on `phase1-rule-seats-b`. Git commands were read-only; no staging, commit, fetch or push. R79 was not undertaken. Independent review remains with Claude's standing reviewer under 0096. Evidence index: `runs/r80/final-checks.json`.
+
+### Built and proposed choices
+
+- Each day of bombardment produces the defending commander's `wire-dispatch`, subject the fort, with a `battle-phase/bombard` claim. It is written before surrender vacates his post. The ordinary route and filter still apply. Due phase dispatches enter the delivery owner before situations; positive travel remains in transit.
+- `sumter_fired_upon` fires and surfaces only on that received claim at `fort_sumter`. Neither it nor the troop-call trigger reads authorization flags or control. The old `sumter_fired` flag remains an authorization-era compatibility flag; it no longer tells Lincoln anything.
+- The troop-call event registers received bombardment, surrender or evacuation news. It surfaces on a received `fort-surrendered` claim or evacuation notice, or after **two days holding bombardment news**. Both options open **one day after surfacing**. The new optional `knows.forDays` condition reads receipt time and the existing `since` window; there is no new State field or global timing rule.
+- `confederate_opening/reduce_sumter` now uses **`clockAtLeast: 3`**, as R80 rules. It still surfaces on its existing cause. Its history decision stays day 36; a late cause moves the option with it.
+- Removed the **17 Union doctrine call rows**. With the call now due on day 41, a forced-war fixture otherwise sends doctrine calls that morning and the authored call that evening. The authored decision now owns this call, just as it owns the normal peace-to-war path. Quotas, terms, both options and governor compliance are unchanged; New York answers once and musters in the retained fixture. Pack generation changes only that table in `data/world.json`.
+
+**Proposed rulings [I]:** two days from receipt is the holding-fort fallback, and one day from surfacing represents consultation and publication. Reject an indefinite wait for surrender, an absolute 15 April cutoff, counting from a hidden or report-written day, and letting a dated doctrine duplicate the call. The lead already ruled on the three-day Confederate clock and the Anderson dispatch path; those are implemented, not new proposals.
+
+**Sources read by this run:** [OR I-1 p. 31](https://ehistory.osu.edu/books/official-records/001/0031) dates the first shell to 4.30 a.m. on 12 April. [OR I-1 p. 297](https://ehistory.osu.edu/books/official-records/001/0297) contains Walker's 10 April authorization and Beauregard's reply. [OR III-1 pp. 67–68](https://ehistory.osu.edu/books/official-records/122/0067) contains the proclamation, dated 15 April on [p. 68](https://ehistory.osu.edu/books/official-records/122/0068), and that day's requisition. Frederick W. Seward's retrospective *Reminiscences* (1916), [pp. 151–152](https://archive.org/stream/reminiscencesofwsewa/reminiscencesofwsewa_djvu.txt), describes Sunday consultation after Washington knew the fort would evacuate, followed by preparation for Monday publication. The fallback interval is inferred from the 12-to-14 April interval, not a documented policy for a fort that holds.
+
+**Source limit:** Seward places Washington's bombardment news on Saturday, 13 April, and describes assailants' telegraphic dispatches. Anderson's surviving report on [OR I-1 p. 12](https://ehistory.osu.edu/books/official-records/001/0012) is dated 18 April and describes departure on 14 April. R80's Anderson wire received on 12 April is a modelled reporting path [I], not an authenticated historical telegram. No telegram text was invented. Read pages and the limitation are retained in `runs/r80/sources-read.json`.
+
+### History without `--at-war`
+
+| Event or received knowledge | Run date / day |
+|---|---|
+| Confederate authorization / own war flag | 10 April / 36 |
+| First shot; Anderson's first phase wire written and received by Lincoln; fired-upon notice fires and surfaces | 12 April / 38 |
+| Fall under Anderson, evacuated under R74's unchanged terms | 13 April / 39 |
+| Surrender claim received by Lincoln; troop decision surfaces; signed evacuation notice fires | 14 April / 40 |
+| Troop decision issues the call and sets the Union war flag; evacuation notice surfaces | 15 April / 41 |
+| Virginia notice fires / `virginia_seceded` | 20 April / 46 |
+| Virginia notice surfaces | 21 April / 47 |
+| Richmond move, once | 29 May / 85 |
+
+Virginia's unchanged cause waits two days after its call is received; the call takes three days to arrive. No date was fitted elsewhere to hide the later call. `combat.evacuated = 1`, capture and commander-loss reports zero; Anderson keeps serving. The signed evacuation item, all gate material and R74's entire `recordTerms` row are unchanged.
+
+The 148-day run reaches **31 July**, zero rejections, daily replay matching and day-60 save/resume matching. Final State **`59ae6644ff381b02e8086ca57be88ec5f828979eeaaaed37cbcb6ebbdee7b097`**. All 148 daily hashes match the standalone reference. All 120 testbed daily hashes match R78.
+
+### Exact tick order for the lead's decision record
+
+The morning ground/latency and standing plan menus still come first, from the State the seats were asked from (0052), followed by attention refill. Then:
+
+1. **1 / 1b:** validate commands in log order; apply plan choices; flush messages. **2:** settle due messages through the delivery owner until none remain due. **2b:** apply immediate people changes. **2c:** answer plan edits and draft, then flush. **2d:** recruitment musters and disbandings.
+2. **3:** operations, including fort bombardment, then movement. **3b:** battles and occupation. **4:** control and derived map. **4a:** stragglers and stores. **4a':** derived regional term.
+3. **4a'' (R80):** temporarily remove the outbox, send only queued reports carrying `battle-phase`, and, if any exist, call the existing **full** due-delivery loop. This also settles any other already-transiting due messages and newly generated replies/filter hops. Restore the unselected outbox; surrender reports are unselected. Future arrivals and positive filter holds remain in transit. With no phase dispatch there is no additional loop.
+4. **4b:** run situations in their existing order. **R78's `deliverSituationOrders` then adds its delivery pass:** remember the outbox length before situations; temporarily remove the outbox afterwards; select only new entries at or beyond that index carrying `msgOrder` (option goals and calls). If any exist, send them and run the same full due-delivery loop, including immediate replies and relays. Restore all unselected entries. It does not select pre-existing reports, new notice/staff reports or people verbs. Positive travel/holds remain in transit. Situations are not evaluated again that day.
+5. **4c:** command proposals. **4d:** weekly people step and flush, when due. **4e:** politics and flush. **5:** field-battle reports, cyclic reports and observer letters, then flush. **6:** pruning. **7:** advance day. **8:** invariant barrier.
+
+Thus an operation's due bombardment wire can inform today's situations, and a situation's zero-day order can be answered after them. A field-battle phase report written in phase 5, or an unselected surrender/notice report, still waits for the next delivery pass. The two additional calls reuse the delivery owner; they do not add a knowledge writer.
+
+### Bands, validation and preservation
+
+**No numeric liveness or historical checkpoint band moved.** The unchanged reference accepts the history. All **26 changed measured rows**, including magnitude-only differences, have old/new values, retained bounds and causes in [the reconciliation](../runs/r80/band-reconciliation.md). Direct producer/data causes are distinguished from downstream inferences [I]; no extra counterfactual campaign was run. All shifted situation dates are in `situation-date-differences.json`.
+
+- Exact `MANDATE_NO_GIT=1 npm run check`: **exit 0, 127 files / 1,453 passed / 3 existing optional skips**; types, boundary, licences and decisions pass. Suite duration **355.45 s**. Focused evidence: 52 tests plus the six war-gate tests, including the real history order, hidden-State controls, a holding fort with a late wire, receipt-age boundaries, and due versus travelling dispatches.
+- Desk tsc and suite: **exit 0, 84 passed / 8 existing skips**. No desk source changed.
+- Standalone `npm run run:done-check -- --label r80-done`: **exit 0, Phase 0 6/6; 1A 1/6**, eight seeds, existing fork cap and default drafting measurement. Median/p95: Union reference **25.43/46.63 ms**, testbed **2.42/3.32 ms**, history **25.16/45.62 ms**; limits remain **40/160 ms**.
+- Every failure category was read. **Checkpoints:** new Missouri-side failure; western-Virginia government still missing; Confederate strength **20,957 < 100,000**; both sides still have zero planned operations fought. **Operation:** two operations, zero field battles. **Pushback:** holds 1 < 2, filter holds 0 < 1, trims 0 < 1, reservations **44 > 9** (R78: 45). **Stand-ins:** the two existing unowned labels remain, one line number shifts. **Lever sweep:** the victory measure still omits the policy-pushback channel and the border recruitment chain remains unexercised. Return best in 0/8 is still not D6 clearance. Complete problems and R78 differences: `done-criteria.json`, `done-problem-differences.json`.
+- Missouri's unchanged **106-day** cause now puts its provisional-government notice beyond the horizon. Its notice/effects/report account for the missing situation, proposal and side change. Arkansas's levy remains enlisted until **day 150**, explaining one fewer disbanding and the extra 1,000 Confederate men at day 148 after its government's side change. Neither acceptance band was widened.
+- Initial fixture telemetry/type errors and the missing provenance key were corrected cheaply before the long gates. The forced-war duplication was reproduced and corrected before the full suite. A Windows default-code-page audit produced a false citation mismatch; explicit UTF-8 comparison passes. No expensive gate was retried.
+- After the runs, corrected **only two citation strings**: encoding damage in the Anderson note and the obsolete absolute-date explanation. Final pack validation passes; normalized non-citation definitions are deeply equal, and the initial State is unchanged. The kernel does not read these citation fields. Behavioral evidence is explicitly reused in `citation-only-evidence-reuse.json`; no second history is claimed. Measured World **`32659168f36d661c3cd8ca7986844a8dd6c2ac8f1f495adec3cb8eb9077815bb`**; final World after citation cleanup **`84629d1ae8fa463de9fc67e0db9130c601017d1cfcf5b1c32ced649c52e768db`**. The final State hash above is unchanged.
+- Regenerated the situation schema, Union World and save fixture with their tools. The save fixture is byte-identical. No State/save schema, trait, combat rate, report template, gate signature or player wording changed. Imports resolve to this worktree. No install, build, server or browser.
+- Source inventory, runtime diagnostics and protected-input checks preceded this closeout. Final inventory: **19 delivery files, 1,625 other baseline files unchanged**, no deletion or unexpected path; **88 protected inputs unchanged**. Eight of nine captured Git metadata files retain their byte hashes. The index byte hash changed during the permitted read-only checks, but its staged diff is empty and HEAD stays `ebb4227`; no metadata restoration was attempted. Subsequent reads disable optional locks. Details: `final-inventory.json`, `git-metadata-observation.json`, `final-runtime.json`.
+
+For the lead:
+1. Review R80 under 0096, record the two delivery passes and the proposed receipt-based intervals, with their source limits.
+2. Retain the failed 1A gates and route the later Virginia and Missouri consequences to their existing owners. R80 does not change their authored delays or waive their checks.
+
+## Findings outside my scope
+
+1. **Lead / lane 1.11:** the later Union call moves Virginia's notice to 20 April and Missouri's provisional-government cause beyond 31 July. These follow the existing receipt-and-delay rules; revising those rules is a separate decision. R80 supersedes R78's premature Union-flag finding.
+2. **Lead / lane 1.14 and R79:** five 1A categories remain failed, now including the Missouri checkpoint. The hook bound, two stand-in labels and Taney follow-ups remain R79; no part of R79 was undertaken here.
+3. **Lead / remaining Part B policy:** consult policy, Butler placeholder integration and the July message as `address` remain deferred. Independent review of this implementation remains with Claude.

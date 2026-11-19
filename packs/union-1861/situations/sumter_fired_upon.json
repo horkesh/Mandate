@@ -6,7 +6,13 @@
   "text": "situation.sumter_fired_upon.text",
   "earliest": "1861-04-12",
   "event": {
-    "flag": "sumter_fired"
+    "knows": {
+      "reportType": "wire-dispatch",
+      "subjectKind": "region",
+      "subjectId": "fort_sumter",
+      "claimKind": "battle-phase",
+      "token": "bombard"
+    }
   },
   "report": {
     "authors": [
@@ -21,11 +27,7 @@
   "citations": [
     {
       "source": "OR",
-      "at": "I-1 pp. 297 to 302 (Walker's telegrams of 10 and 11 April and Beauregard's replies, per the numbers note)"
-    },
-    {
-      "source": "NOTE-secession-winter-1861",
-      "at": "chronology 1861-04-12"
+      "at": "I-1 p. 31: first fire 12 April at 4.30 a.m. https://ehistory.osu.edu/books/official-records/001/0031; p. 12: Anderson's surviving report is dated 18 April. [I] The same-day defending commander's wire is R80's modelled reporting path, not a transcription of that report."
     }
   ],
   "effects": [
@@ -39,5 +41,14 @@
         "side": "union"
       }
     }
-  ]
+  ],
+  "knowledge": {
+    "knows": {
+      "reportType": "wire-dispatch",
+      "subjectKind": "region",
+      "subjectId": "fort_sumter",
+      "claimKind": "battle-phase",
+      "token": "bombard"
+    }
+  }
 }

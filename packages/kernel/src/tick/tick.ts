@@ -45,7 +45,7 @@ import type { Telemetry } from '../telemetry.ts';
 import { createViewCache, type ViewCache } from '../view/view.ts';
 import { applyPlanChoices, choosingPosts, planKey, planOptions, plansPhase, PLANS_MECHANICS } from './plans.ts';
 import { fire, type DecisionPoint, type MapEvent, type Price, type Proposal, type Rejection, type TickContext, type TickEvent } from './context.ts';
-import { deliverDue, deliverSituationOrders } from './deliver.ts';
+import { deliverBattleDispatches, deliverDue, deliverSituationOrders } from './deliver.ts';
 import { createFreezeLedger, deepFreeze, type FreezeLedger } from './freeze.ts';
 import { generateReports } from './generate.ts';
 import { battleReports, BATTLE_REPORT_MECHANICS } from './battle-reports.ts';
@@ -283,6 +283,10 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
 
   // 4a'. Regions (lane 1.7): the derived self-emancipation term, on its cadence, proposes who reached the lines.
   state = applyPhase(regionsPhase(ctx, state));
+
+  // 4a''. Settle battle-phase wires written during operations. Travel and filtering still use the delivery owner;
+  // surrender reports retain their normal dispatch phase. Situations can now read news actually received today.
+  state = applyPhase(deliverBattleDispatches(ctx, state));
 
   // 4b. Situations, after the map so a cause sees today's control: fire on their causes, surface on what the seat
   // knows, stay live, take history defaults (lane 0.7).

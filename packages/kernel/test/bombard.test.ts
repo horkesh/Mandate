@@ -19,6 +19,7 @@ import { believedHolder } from '../src/seats/believed.ts';
 import { morningGround, principalMenu } from '../src/seats/requests.ts';
 import { appointHolder, relieveHolder } from '../src/command/command.ts';
 import { bombardFort } from '../src/tick/bombard.ts';
+import { deliverBattleDispatches } from '../src/tick/deliver.ts';
 import { combatRulesProblems } from '../src/combat/rules.ts';
 import { sendMessages, type TransitMessage } from '../src/messages/transit.ts';
 import { placeAndRemove } from '../src/movement/movement.ts';
@@ -64,6 +65,31 @@ describe('a day of fire on a fort (combat/bombard.ts)', () => {
 });
 
 describe('guns already in battery', () => {
+  it('sends the defending commander’s phase dispatch on each day of fire, even while he holds', () => {
+    const g = game();
+    const ctx = ctxFor(g.world, g.state, 1, [...TICK_MECHANICS, ...MAP_MECHANICS]);
+    const result = bombardFort(ctx, g.state, P('a_army'), [toId('forceBlock', 'a_guns')], R('fort'), F('a'), []);
+    expect(result.fort?.surrendered).toBeNull();
+    const wire = ctx.outbox.find((m) => m.msgReport?.reportClaims.some((c) => c.claimKind === 'battle-phase'));
+    expect(wire?.msgReport).toMatchObject({ reportType: 'wire-dispatch', reportAuthor: PER('b_gen'), reportAuthorPost: P('b_fort'), reportSubjectId: 'fort', reportDay: 1 });
+    expect(wire?.msgReport?.reportClaims).toContainEqual({ claimKind: 'battle-phase', claimRegion: R('fort'), claimValue: 1, claimToken: 'bombard', claimConfidence: 1000 });
+    expect(wire?.msgTo).toBe(PER('b_lead'));
+  });
+  it('settles only due battle dispatches before situations, preserving travel and other reports’ dispatch phase', () => {
+    const g = game();
+    const ctx = ctxFor(g.world, g.state, 1, [...TICK_MECHANICS, ...MAP_MECHANICS]);
+    bombardFort(ctx, g.state, P('a_army'), [toId('forceBlock', 'a_guns')], R('fort'), F('a'), []);
+    const wire = ctx.outbox[0]!;
+    ctx.outbox.length = 0;
+    const due = { ...wire, msgArriveDay: 1, msgRoute: 'wire' as const, msgRole: 'addressee' as const, msgPending: [] };
+    const later = { ...due, id: toId('message', 'later'), msgOrigin: toId('message', 'later'), msgArriveDay: 3, msgRoute: 'courier' as const };
+    const surrender = { ...due, id: toId('message', 'surrender'), msgReport: { ...due.msgReport!, reportClaims: [{ ...due.msgReport!.reportClaims[0]!, claimKind: 'fort-surrendered' as const }] } };
+    ctx.outbox.push(due, later, surrender);
+    const state = deliverBattleDispatches(ctx, g.state);
+    expect(knowledgeOf(state, seatIdFor(PER('b_lead'))).knownReports).toMatchObject([{ knownReceivedDay: 1, knownRoute: 'wire' }]);
+    expect(state.messagesInTransit).toContainEqual(later);
+    expect(ctx.outbox).toEqual([surrender]);
+  });
   it('requires every pack to state a whole, nonnegative preparation time', () => {
     for (const inPositionPreparationDays of [undefined, -1, 0.5]) {
       const bombardment = { ...RULES, inPositionPreparationDays } as BombardmentRules;

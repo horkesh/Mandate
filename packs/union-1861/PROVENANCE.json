@@ -1630,6 +1630,16 @@
       "copyUsed": "archive.org cu31924068531247, OCR (lane 1.11r3): Taney's own opinions, printed after his death; Ex parte Merryman is at pp. 246-270 (the headnote at p. 246 and the reporter's narrative at p. 253 are the reporter's words, not Taney's)",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "SEWARD-REMINISCENCES",
+      "title": "Frederick W. Seward, Reminiscences of a War-Time Statesman and Diplomat, 1830-1915 (1916)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/stream/reminiscencesofwsewa/reminiscencesofwsewa_djvu.txt; pp. 151-152 read for R80. Retrospective memoir, not a contemporary cabinet minute.",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

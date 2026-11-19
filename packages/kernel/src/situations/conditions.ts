@@ -31,9 +31,10 @@ export interface ConditionContext {
 }
 
 /** Whether a report the seat holds (received on or after `since`, if given) matches the pattern. */
-export function knowsMatch(knowledge: SeatKnowledge, p: KnowsPattern, since: number | null = null): boolean {
+export function knowsMatch(knowledge: SeatKnowledge, p: KnowsPattern, since: number | null = null, receivedBy: number | null = null): boolean {
   return knowledge.knownReports.some((r) => {
     if (since !== null && r.knownReceivedDay < since) return false;
+    if (receivedBy !== null && r.knownReceivedDay > receivedBy) return false;
     const b = r.knownBody;
     if (p.reportType !== null && b.reportType !== p.reportType) return false;
     if (p.subtype !== null && b.reportSubtype !== p.subtype) return false;
@@ -56,7 +57,7 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
     if (r === undefined || !isFinal(r)) return false;
     return c.options === null || r.sitChosen.some((o) => c.options!.includes(o));
   }
-  if ('knows' in c) return knowsMatch(ctx.knowledge, c.knows, ctx.since);
+  if ('knows' in c) return knowsMatch(ctx.knowledge, c.knows, ctx.since, ctx.day - (c.forDays ?? 0));
   if ('goal' in c) return ctx.state.planRecords[c.goal.post]?.planGoal.goalPosture === c.goal.posture;
   if ('headquartersAt' in c) return ctx.headquartersOf !== undefined && ctx.headquartersOf(c.headquartersAt.post) === c.headquartersAt.region;
   if ('callReceived' in c) {

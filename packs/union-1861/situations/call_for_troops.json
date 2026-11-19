@@ -6,13 +6,59 @@
   "text": "situation.call_for_troops.text",
   "earliest": "1861-04-12",
   "event": {
-    "fired": "sumter_fired_upon"
+    "any": [
+      {
+        "knows": {
+          "reportType": "wire-dispatch",
+          "subjectKind": "region",
+          "subjectId": "fort_sumter",
+          "claimKind": "battle-phase",
+          "token": "bombard"
+        }
+      },
+      {
+        "knows": {
+          "reportType": "wire-dispatch",
+          "subjectKind": "region",
+          "subjectId": "fort_sumter",
+          "claimKind": "fort-surrendered"
+        }
+      },
+      {
+        "knows": {
+          "subjectKind": "situation",
+          "subjectId": "sumter_evacuated"
+        }
+      }
+    ]
   },
   "knowledge": {
-    "knows": {
-      "subjectKind": "situation",
-      "subjectId": "sumter_fired_upon"
-    }
+    "any": [
+      {
+        "knows": {
+          "reportType": "wire-dispatch",
+          "subjectKind": "region",
+          "subjectId": "fort_sumter",
+          "claimKind": "fort-surrendered"
+        }
+      },
+      {
+        "knows": {
+          "subjectKind": "situation",
+          "subjectId": "sumter_evacuated"
+        }
+      },
+      {
+        "knows": {
+          "reportType": "wire-dispatch",
+          "subjectKind": "region",
+          "subjectId": "fort_sumter",
+          "claimKind": "battle-phase",
+          "token": "bombard"
+        },
+        "forDays": 2
+      }
+    ]
   },
   "options": [
     {
@@ -201,7 +247,10 @@
           "termDays": 90,
           "route": "wire"
         }
-      ]
+      ],
+      "appearsWhen": {
+        "clockAtLeast": 1
+      }
     },
     {
       "id": "militia_call",
@@ -387,7 +436,10 @@
           "termDays": 90,
           "route": "wire"
         }
-      ]
+      ],
+      "appearsWhen": {
+        "clockAtLeast": 1
+      }
     }
   ],
   "inaction": {
@@ -429,6 +481,14 @@
     {
       "source": "NOTE-secession-winter-1861",
       "at": "1, 2.5, 3.6, 4.3; Scott to McClellan, 3 May (60,000 three-year volunteers)"
+    },
+    {
+      "source": "SEWARD-REMINISCENCES",
+      "at": "Frederick W. Seward, Reminiscences of a War-Time Statesman and Diplomat (1916), pp. 151-152: Sunday 14 April consultation after Washington knew the fort would evacuate; proclamation prepared for Monday publication. Retrospective account. https://archive.org/stream/reminiscencesofwsewa/reminiscencesofwsewa_djvu.txt"
+    },
+    {
+      "source": "OR",
+      "at": "III-1 pp. 67-68: proclamation dated 15 April and requisition that day. https://ehistory.osu.edu/books/official-records/122/0067 and /0068. [I] One day from surfacing represents deliberation/publication; if the fort holds, two days from received bombardment news substitutes for surrender news, using the 12 April opening (I-1 p. 31) to 14 April consultation interval. This counterfactual interval is inferred, not a documented holding-fort policy."
     }
   ]
 }

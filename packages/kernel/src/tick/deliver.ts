@@ -20,6 +20,16 @@ import { arriveCall } from './recruitment.ts';
 /** A day can chain same-day hops (a relay in the same town); more rounds than this means a loop, which is a bug. */
 const MAX_ROUNDS = 64;
 
+/** Dispatches written during operations can reach the principal before situations when their route is due today. */
+export function deliverBattleDispatches(ctx: TickContext, start: State): State {
+  const queued = ctx.outbox.splice(0);
+  const isPhase = (m: TransitMessage) => m.msgReport?.reportClaims.some((c) => c.claimKind === 'battle-phase') === true;
+  const dispatches = queued.filter(isPhase);
+  const state = dispatches.length === 0 ? start : deliverDue(ctx, sendMessages(start, dispatches));
+  ctx.outbox.push(...queued.filter((m) => !isPhase(m)));
+  return state;
+}
+
 /** Settle orders emitted by late-day situations without advancing cyclic or combat reports' dispatch phase. */
 export function deliverSituationOrders(ctx: TickContext, start: State, outboxStart: number): State {
   const queued = ctx.outbox.splice(0);

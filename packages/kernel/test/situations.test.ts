@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { toId, type SituationId } from '../src/ids.ts';
-import { knowledgeOf } from '../src/knowledge/knowledge.ts';
+import { deliverReport, knowledgeOf } from '../src/knowledge/knowledge.ts';
+import { holds } from '../src/situations/conditions.ts';
 import type { LogEntry } from '../src/log/log.ts';
 import { playDays, replay } from '../src/log/session.ts';
 import type { State } from '../src/root-state.ts';
@@ -87,6 +88,19 @@ function days(world: SeatsWorld, start: State, n: number, entries: Record<number
 }
 
 describe('situations fire on their causes and surface on what the seat knows (0046)', () => {
+  it('measures pack-stated deliberation from receipt, preserving the since boundary and the earliest held dispatch', () => {
+    const { state } = setup([]);
+    const report = (received: number) => ({ id: toId('message', `heard.${received}`), knownReceivedDay: received, knownRoute: 'wire' as const, knownVia: [],
+      knownBody: { reportType: 'wire-dispatch' as const, reportSubtype: null, reportAuthor: P('a_sec'), reportAuthorPost: POST('a_office'), reportSubjectKind: 'region' as const, reportSubjectId: 'a_front', reportClaims: [], reportDay: 1, reportHour: null, reportAdvice: null, reportAnswers: null } });
+    const heard = [10, 11].reduce((s, day) => deliverReport(s, lead, report(day), { truthTerms: [], truthTrimmed: [] }), state);
+    const cc = { state: heard, day: 11, situation: null, knowledge: knowledgeOf(heard, lead), since: null };
+    const knows = { reportType: 'wire-dispatch', subtype: null, subjectKind: 'region', subjectId: 'a_front', claimKind: null, token: null } as const;
+    expect(holds({ knows, forDays: 2 }, cc)).toBe(false);
+    expect(holds({ knows, forDays: 2 }, { ...cc, day: 12 })).toBe(true);
+    expect(holds({ knows, forDays: 2 }, { ...cc, day: 12, since: 11 })).toBe(false);
+    expect(holds({ knows, forDays: 2 }, { ...cc, day: 13, since: 11 })).toBe(true);
+    expect(holds({ knows }, { ...cc, day: 9 })).toBe(false);
+  });
   it('fires on its event, waits for news to reach the principal, then writes the staff line', () => {
     const sit = decision('news', {
       event: { decided: S('trigger'), options: null },

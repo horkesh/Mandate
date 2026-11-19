@@ -32,7 +32,7 @@
       ],
       "honours": [],
       "appearsWhen": {
-        "dayAtLeast": 36
+        "clockAtLeast": 3
       },
       "effects": [
         {
@@ -88,7 +88,7 @@
     },
     {
       "source": "OR",
-      "at": "I-1 p. 297: Walker authorizes the demand and, if refused, reduction on 10 April (day 36); pp. 301-302: the further telegrams of 11 April. https://ehistory.osu.edu/books/official-records/001/0297. [I] the option opens from the dated authorization, after this situation has its relief or landing cause, rather than waiting four days from that cause"
+      "at": "I-1 p. 297: Walker's 10 April authorization and Beauregard's reply. https://ehistory.osu.edu/books/official-records/001/0297. R80 ruling: the option opens three days from surfacing, tied to its relief or landing cause. The recorded authorization is a history reference, not an absolute option threshold."
     }
   ]
 }

@@ -58,7 +58,8 @@ export type Condition =
   | { readonly fired: SituationId }
   /** The situation was decided, with one of `options` among its choices (null: any decision). */
   | { readonly decided: SituationId; readonly options: readonly string[] | null }
-  | { readonly knows: KnowsPattern }
+  /** `forDays`, if stated by the pack, measures deliberation from receipt, never the report's writing date. */
+  | { readonly knows: KnowsPattern; readonly forDays?: number }
   /**
    * A post holds a goal of this posture, ordered by its principal (lane 1.2: read from `plans`, no longer a standing
    * goal). A goal is the principal's own order, so an item that moves a self-governing government may not read it (0071).
