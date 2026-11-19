@@ -4,11 +4,8 @@ import { describe, expect, it } from 'vitest';
 import { seatsWorld } from '../src/seats-world.ts';
 
 /**
- * The war gate (0064; lane 0.8, step 4): the rule-seat principal does nothing of his doctrine until his faction is
- * at war, and starts it the first morning after (lane 1.12: the pack's doctrine replaced the generic principal of
- * 0072). "At war" is a chain flag the pack names in its rule-seat settings: in union-1861 the war's opening
- * situation (not authored yet, so a history run keeps the peace), in the testbed none (war from day 1). `atWar` is
- * the labelled mechanics option.
+ * The war gate (0064): doctrine waits for each side's own opening decision (lane 1.11), then calls,
+ * concentrates and orders through people (lane 1.12). The labelled atWar option opens the war on day 0.
  */
 const rules = createRuleSeat();
 const seats = () => rules;
@@ -26,37 +23,53 @@ describe('the war gate on union-1861', () => {
   const { world, setup } = seatsWorld('union-1861');
   const warFlags = world.map.world.rules.ruleSeats.warFlags;
 
-  it('names a war flag for every faction, and nothing sets it yet', () => {
+  it('names a war flag for every faction, each set only by a decision option of that side’s own opening situation (0066)', () => {
     expect(warFlags.length).toBe(world.map.world.factions.length);
     expect(warFlags.every((r) => r.flag !== null)).toBe(true);
-    // R48 adds the capital move, which has an administrative effect but sets no war flag.
-    const warFlagNames = new Set(warFlags.map((r) => r.flag));
-    expect(world.situations.flatMap((s) => phase0.effectsOf(s)).some(({ effect }) => 'setFlag' in effect && warFlagNames.has(effect.setFlag))).toBe(false);
+    for (const { faction, flag } of warFlags) {
+      const setters = world.situations.flatMap((s) => s.options.filter((o) => o.effects.some((e) => 'setFlag' in e && e.setFlag === flag)).map((o) => [s.id, s.kind, s.faction, o.id]));
+      expect(setters.length, flag!).toBeGreaterThan(0);
+      for (const [, kind, side] of setters) expect([kind, side]).toEqual(['decision', faction]);
+      // No notice, inaction or other side sets it.
+      expect(world.situations.some((s) => s.effects.some((e) => 'setFlag' in e && e.setFlag === flag)), flag!).toBe(false);
+    }
   });
 
-  it('at peace: nothing of the doctrine is sent and no force marches (positive control: at war both sides call and concentrate)', () => {
-    const peace = phase0.createState(world, setup);
-    const run = phase0.playDays(world, peace, seats, 40, { freeze: true });
-    expect(doctrine(run.log)).toEqual([]);
-    expect(run.state.regionControl).toEqual(peace.regionControl);
-    expect(run.state.forceLocations).toEqual(peace.forceLocations);
+  it('keeps the peace until the opening decisions, then each side is at war from its own decision, with no labelled option (lane 1.11)', () => {
+    const start = phase0.createState(world, setup);
+    const peace = phase0.playDays(world, start, seats, 30, { freeze: true });
+    expect(doctrine(peace.log)).toEqual([]);
+    expect(peace.state.situationFlags[warFlags.find((r) => r.faction === 'confederate')!.flag!]).toBeUndefined();
+    const run = phase0.playDays(world, peace.state, seats, 30, { freeze: true });
+    const day = (faction: string) => run.state.situationFlags[warFlags.find((r) => r.faction === faction)!.flag!]!;
+    // The seceded side's seat opens the war (0040's labelled railroad); the president answers once he knows.
+    expect(day('confederate')).toBeGreaterThan(30);
+    expect(day('union')).toBeGreaterThanOrEqual(day('confederate'));
+    expect(Math.min(...orders(run.log).map((e) => e.day))).toBeGreaterThan(day('confederate'));
+    expect(run.state.forceLocations).not.toEqual(peace.state.forceLocations);
+  });
 
+  it('the labelled at-war option starts doctrine, calls and concentration', () => {
     const war = phase0.createState(world, { ...setup, atWar: true });
     const warRun = phase0.playDays(world, war, seats, 60, { freeze: true });
-    // Both principals start on the first morning (each asks his army where it stands). Each calls on his governors on
-    // the call's date: the seceding side on 8 April (day 34), the other on 15 April (day 41); what they raise is sent to the
-    // doctrine's concentration post. The doctrine's one offensive inside these days is the seceding side's order of 12 April (day
+    // Both principals start on the first morning (each asks his army where it stands). The seceding side's doctrine calls on
+    // 8 April (day 34). The Union's authored call reaches its governors before doctrine's 15 April row, so doctrine
+    // must not duplicate it; what they raise still goes to the concentration post. The doctrine's one offensive inside these days is the seceding side's order of 12 April (day
     // 38) to take Fort Sumter, sent down the chain, then around the office that objects to it.
     expect(Math.min(...doctrine(warRun.log).map((e) => e.day))).toBe(1);
     expect(Math.min(...warRun.log.filter((e) => e.command.cmd === 'call').map((e) => e.day))).toBe(34);
     expect(callers(warRun.log, 34)).toEqual(['seat:davis_jefferson']);
-    expect(callers(warRun.log, 41)).toContain('seat:lincoln_abraham');
+    expect(callers(warRun.log, 41)).not.toContain('seat:lincoln_abraham');
+    const nyAnswers = Object.values(warRun.state.orderResponses).filter((r) =>
+      r.respKind === 'call' && r.respRole === 'addressee' && r.respPost === 'st_gov_new_york');
+    expect(nyAnswers).toHaveLength(1);
+    expect(nyAnswers[0]!.respDay).toBeLessThanOrEqual(41);
+    expect(Object.keys(warRun.state.forceBlockStates).some((b) => b.startsWith('raised.st_gov_new_york.'))).toBe(true);
     expect(warRun.log.some((e) => e.command.cmd === 'transfer')).toBe(true);
     expect(chainOrderDays(warRun.log)).toEqual([38]);
     expect(orders(warRun.log).every((e) => (e.command as unknown as { readonly to: string }).to === 'cs_cmd_charleston')).toBe(true);
     expect(warRun.state.forceLocations).not.toEqual(war.forceLocations);
   });
-
   it('the labelled option sets the pack’s own war flags on day 0 and nothing else; it is State, so the run hashes differently', () => {
     const peace = phase0.createState(world, setup);
     const war = phase0.createState(world, { ...setup, atWar: true });

@@ -1,0 +1,140 @@
+{
+  "id": "pickens_refused",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.pickens_refused.title",
+  "text": "situation.pickens_refused.text",
+  "earliest": "1861-04-06",
+  "event": {
+    "all": [
+      {
+        "decided": "pickens_reinforcement",
+        "options": [
+          "land_company"
+        ]
+      },
+      {
+        "dayAtLeast": 32
+      }
+    ]
+  },
+  "railroad": "Captain Adams's refusal reaches the president on 6 April: the order's nineteen days out by sea and the five days of the refusal's return are not yet carried by messages at sea (lane 1.4), so the refusal arrives on its date",
+  "options": [
+    {
+      "id": "courier_order",
+      "label": "situation.pickens_refused.option.courier_order",
+      "displayKey": 1,
+      "proposedBy": [
+        "welles_gideon"
+      ],
+      "honours": [
+        "duty",
+        "order"
+      ],
+      "group": "order",
+      "effects": [
+        {
+          "setFlag": "pickens_order_by_courier"
+        },
+        {
+          "landing": {
+            "parent": "fb_us_pickens_vogdes_co_a",
+            "men": 90,
+            "region": "fort_pickens"
+          }
+        },
+        {
+          "setFlag": "pickens_landed"
+        }
+      ]
+    },
+    {
+      "id": "department_order",
+      "label": "situation.pickens_refused.option.department_order",
+      "displayKey": 2,
+      "proposedBy": [
+        "welles_gideon"
+      ],
+      "honours": [
+        "order"
+      ],
+      "group": "order",
+      "effects": [
+        {
+          "setFlag": "pickens_order_by_ship"
+        },
+        {
+          "landing": {
+            "parent": "fb_us_pickens_vogdes_co_a",
+            "men": 90,
+            "region": "fort_pickens"
+          }
+        },
+        {
+          "setFlag": "pickens_landed"
+        }
+      ]
+    },
+    {
+      "id": "special_expedition",
+      "label": "situation.pickens_refused.option.special_expedition",
+      "displayKey": 3,
+      "proposedBy": [
+        "seward_william_h"
+      ],
+      "honours": [
+        "union"
+      ],
+      "group": "expedition",
+      "effects": [
+        {
+          "setFlag": "pickens_special_expedition"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.pickens_refused.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "courier_order",
+      "special_expedition"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_navy"
+    ],
+    "recommends": [
+      "department_order"
+    ],
+    "reasons": [
+      {
+        "kind": "order",
+        "weight": 700
+      }
+    ],
+    "confidence": 600
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "orders to a squadron and a fort; no gate topic"
+  },
+  "citations": [
+    {
+      "source": "ORN",
+      "at": "I-4 p. 112 (Porter to Seward, 6 April: \"I received my orders from the President and shall proceed and execute them\"); pp. 109 to 110 (Adams's refusal)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "1, 2.3"
+    },
+    {
+      "source": "NOTE-march-1861-facts",
+      "at": "3, 7; des. 5, 6; out 1, 7, 8"
+    }
+  ]
+}

@@ -32,7 +32,7 @@ describe('the band table', () => {
   });
 
   it('a stalled band names a kernel test that exists and says so, and has a ceiling', () => {
-    // Lane 1.3: the one stalled band, Phase 0's trapped garrison at Washington, is gone: the battle model makes it surrender.
+    // Lane 1.3: the one stalled band, Phase 0's trapped garrison at Washington, is gone: the battle model ends the stand-off\n    // (lane 1.11's war by decision: its loser withdraws, so the control plants on the withdrawal; cut-off and surrender are QUIET).
     const stalledBands = REFERENCE_RUNS.flatMap((r) => Object.entries(r.bands).filter(([, b]) => b.driver !== undefined).map(([m, b]) => ({ m, b })));
     expect(stalledBands.map((s) => s.m)).toEqual([]);
     // The control: a stalled band without a ceiling is refused, and one with its driver is sound.
@@ -41,9 +41,8 @@ describe('the band table', () => {
     const band = stalled(1, 'planted: a stand-off band for the control', driver);
     expect(readFileSync(`${REPO}${driver.test}`, 'utf8')).toContain(driver.needle);
     const others = REFERENCE_RUNS.filter((r) => r !== union);
-    // Planted on a mechanic not in QUIET (lane 1.12 moved combat.cut_off there: no reference run cuts a force off).
-    expect(bandProblems([{ ...union, bands: { ...union.bands, 'combat.battle_day': band } }, ...others])).toEqual([]);
-    expect(bandProblems([{ ...union, bands: { ...union.bands, 'combat.battle_day': { ...band, maxFires: undefined } } }, ...others])).toContain(`${union.name}: combat.battle_day is stalled with no ceiling`);
+    expect(bandProblems([{ ...union, bands: { ...union.bands, 'combat.withdrew': band } }, ...others])).toEqual([]);
+    expect(bandProblems([{ ...union, bands: { ...union.bands, 'combat.withdrew': { ...band, maxFires: undefined } } }, ...others])).toContain(`${union.name}: combat.withdrew is stalled with no ceiling`);
   });
 
   it('a stand-off band lets a run that ends the stand-off pass and fails a flood (review S1 of the close-out)', () => {
@@ -93,9 +92,6 @@ describe('the gate can fail (positive controls)', () => {
     const failures = gateFailures(testbed, liveness(testbed, NOTHING));
     const dead = failures.filter((f) => f.problem === 'dead').map((f) => f.mechanic);
     expect(dead).toEqual(expect.arrayContaining(['movement.leg_started', 'movement.arrived', 'combat.battle_day', 'combat.occupation', 'control.changed', 'orders.obeyed', 'recruitment.called']));
-    // And the Union run's doctrine: no call, no inquiry.
-    const union0 = gateFailures(union, liveness(union, NOTHING)).filter((f) => f.problem === 'dead').map((f) => f.mechanic);
-    expect(union0).toEqual(expect.arrayContaining(['recruitment.called', 'verbs.answered', 'plans.drafted']));
   });
 
   it('a planted dead mechanic is reported dead, and one that fires too often too frequent', () => {

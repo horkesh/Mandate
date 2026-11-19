@@ -91,7 +91,7 @@ export function applyPolicy(ctx: TickContext, start: State, def: SituationDef, p
   const key = `m.${day}.policy.${def.id}.${choice}` as MessageId;
   for (const carrier of carriers) {
     const post = policy.carriedBy.find((p) => start.postStates[p]?.postHolder === carrier)!;
-    state = recordResponse(state, responseOf(answerOrder(world, start, carrier, principal, orderTerms(rules, row), readAt(carrier)), { order: key, person: carrier, post, role: 'addressee', day }));
+    state = recordResponse(state, responseOf(answerOrder(world, start, carrier, principal, orderTerms(rules, row), readAt(carrier)), { order: key, person: carrier, post, role: 'addressee', day, kind: 'policy' }));
   }
   ctx.events.push({ event: 'policy', person: principal, post: null, message: key, terms: trail });
   if (unpaid !== null) fire(ctx, 'situations.policy_unpaid', unpaid.amount);

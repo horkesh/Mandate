@@ -1,0 +1,91 @@
+{
+  "id": "washington_cut_off",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.washington_cut_off.title",
+  "text": "situation.washington_cut_off.text",
+  "earliest": "1861-04-19",
+  "event": {
+    "flag": "baltimore_route_closed"
+  },
+  "knowledge": {
+    "knows": {
+      "subjectKind": "situation",
+      "subjectId": "baltimore_route_closed"
+    }
+  },
+  "options": [
+    {
+      "id": "around_baltimore",
+      "label": "situation.washington_cut_off.option.around_baltimore",
+      "displayKey": 1,
+      "proposedBy": [
+        "scott_winfield"
+      ],
+      "honours": [
+        "union",
+        "caution"
+      ],
+      "effects": [
+        {
+          "setFlag": "annapolis_route"
+        }
+      ]
+    },
+    {
+      "id": "meet_governor",
+      "label": "situation.washington_cut_off.option.meet_governor",
+      "displayKey": 2,
+      "proposedBy": [
+        "hicks_thomas_h"
+      ],
+      "honours": [
+        "conciliation"
+      ],
+      "effects": [
+        {
+          "setFlag": "no_troops_through_maryland"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.washington_cut_off.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "around_baltimore"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_general_in_chief"
+    ],
+    "recommends": [
+      "around_baltimore"
+    ],
+    "reasons": [
+      {
+        "kind": "caution",
+        "weight": 600
+      }
+    ],
+    "confidence": 600
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "a route for troops to the capital; the deaths that day are their own notice, and this decision reads only the route's closure (0074)"
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 p. 581 (Hicks to Cameron, 20 April; Lincoln and Scott's answer: no troops through Baltimore if they can march around it)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "1, 3.2"
+    }
+  ]
+}

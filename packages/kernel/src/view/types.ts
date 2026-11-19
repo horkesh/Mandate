@@ -23,6 +23,9 @@ export interface ClaimView {
   readonly value: number;
   readonly token: string | null;
   readonly confidence: number;
+  readonly battle?: string;
+  readonly battleDays?: readonly number[];
+  readonly commander?: PersonId | null;
 }
 
 export interface AdviceView {
@@ -122,7 +125,8 @@ export interface GoalView {
 export interface SituationOptionView {
   readonly id: string;
   readonly label: string;
-  readonly proposedBy: readonly PersonId[] | 'inaction';
+  /** Persons, inaction, or a basis in law and practice (a gate-kept option; the view keeps its own copy of the shape). */
+  readonly proposedBy: readonly PersonId[] | 'inaction' | { readonly basis: 'law-and-practice' | 'principal-initiative'; readonly cites: readonly { readonly source: string; readonly at: string | null }[] };
   readonly group: string | null;
 }
 
@@ -143,6 +147,8 @@ export interface SituationView {
   readonly chosen: readonly string[];
   readonly delegatedTo: PersonId | null;
   readonly staffAuthor: PersonId | null;
+  /** A declared absence of advice, never the research citations behind it. Absent on older views. */
+  readonly staffAbsence?: 'no-adviser-on-record';
 }
 
 export interface SeatView {

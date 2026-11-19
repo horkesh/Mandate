@@ -6,11 +6,32 @@ import {reportPlace,dayFrames,playbackSnapshot} from '../web/table.ts';
 import {ConsoleGame} from '../../../packages/cli/src/console/game.ts';
 import {DeskAdapter} from '../server/adapter.ts';
 
-it('R26 reveals each received paper before it enters the tray, in delivery order',()=>{
- const desk=new DeskAdapter(new ConsoleGame({pack:'union-1861',atWar:true})),before=desk.snapshot();
- desk.execute('inquire us_general_in_chief');const result=desk.execute('end');expect(result.ok).toBe(true);
+it('R26 plays every day of a multi-day turn and reveals papers before they enter the tray, in delivery order',()=>{
+ const desk=new DeskAdapter(new ConsoleGame({pack:'union-1861',atWar:true}));
+ // Opening notices stop day one; the following turn runs for several days.
+ expect(desk.execute('inquire us_general_in_chief').ok).toBe(true);
+ const opening=desk.execute('end');expect(opening.ok).toBe(true);
+ expect(opening.turn!.days).toHaveLength(1);expect(opening.turn!.stopped).toContain('situation-surfaced');
+ const before=opening.snapshot,result=desk.execute('end');expect(result.ok).toBe(true);
+ expect(result.turn!.days.length).toBeGreaterThan(1);
  const frames=dayFrames(result.turn!);expect(frames.length).toBeGreaterThan(7);
+ const days=Array.from({length:result.turn!.days.length},(_,i)=>before.morning.requestDay+i);
+ expect(result.turn!.days.map(d=>d.day)).toEqual(days);
+ expect([...new Set(frames.map(f=>f.day.day))]).toEqual(days);
  expect(frames.map(f=>f.day.day)).toEqual(frames.map(f=>f.day.day).sort((a,b)=>a-b));
+ const reports=result.turn!.days.flatMap(d=>d.reports);
+ expect(frames.filter(f=>f.phase==='mark').map(f=>f.report!.id)).toEqual(reports.map(r=>r.id));
+ expect(frames.filter(f=>f.phase==='land').map(f=>f.report!.id)).toEqual(reports.map(r=>r.id));
+ const quietDays=result.turn!.days.filter(d=>d.reports.length===0).map(d=>d.day);
+ expect(quietDays.length).toBeGreaterThan(0);
+ expect(frames.filter(f=>f.phase==='date').map(f=>f.day.day)).toEqual(quietDays);
+ const received=new Set(before.morning.view.reports.map(r=>r.id));
+ for(const [index,f] of frames.entries()){
+  if(f.phase==='land')received.add(f.report!.id);
+  const snapshot=playbackSnapshot(before,result.snapshot,frames,index);
+  expect(snapshot.morning.requestDay).toBe(f.day.day);expect(snapshot.date).toBe(f.day.date);
+  expect(snapshot.morning.view.reports.map(r=>r.id)).toEqual([...received]);
+ }
  const i=frames.findIndex(f=>f.phase==='mark'),frame=frames[i]!;
  expect(frame.report).toBeDefined();
  const during=playbackSnapshot(before,result.snapshot,frames,i);

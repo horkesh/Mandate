@@ -131,8 +131,9 @@ export interface PrincipalDoctrine {
 }
 
 /**
- * Conflicting orders (0040, 0072). DESIGN PARAMETERS the pack states, never kernel defaults. STAND-IN: lane 1.1's
- * compliance function resolves conflicting orders and retires this window.
+ * Conflicting orders (0040, 0072). DESIGN PARAMETERS the pack states, never kernel defaults. Lane 1.1's compliance
+ * function resolves a conflict (`resolveConflict`), which retired Phase 0's stand-in, conflicts resolved by
+ * department; the window in which two orders conflict stays a design parameter.
  */
 export interface StandingRules {
   /** Days within which a chain order stands against a newer order that went around the chain (0040: conflicting orders). */

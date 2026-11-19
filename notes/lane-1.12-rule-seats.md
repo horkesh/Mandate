@@ -2,9 +2,11 @@
 
 Main merged at `364aba0` on 2026-11-19, by R46. R48 starts from the committed merge at `8b15e6e`, in `C:/Pyrrhic/mandate-rule-seats-b`, branch `phase1-rule-seats-b`.
 
-## Where lane 1.12 stopped (2026-11-19, R74)
+## Where lane 1.12 stopped (2026-11-19, R77)
 
-**R60 is committed as `ece105e`; R74 is delivered, uncommitted, on `phase1-rule-seats-b`.** Recorded surrender terms now require the recorded commander and, when dated, a fall strictly after the offer through the recorded window's last day. Sumter's row names Anderson and days 37–39 (11–13 April). Other cases use the existing capture owners. The historical surrender proposal is canonically identical; this branch's delayed day-46 mechanics run instead captures the garrison and commander. Final `MANDATE_NO_GIT=1 npm run check`: exit 0, 102 files, 1,295 passed / 3 optional skips. Standalone done check: exit 0, 6/6; Union median/p95 30.86/63.45 ms against unchanged 40/160 ms limits. R57/R60's audience and Richmond corrections remain. Details, changed hashes and bands are in "R74" below. Claude's standing review remains pending under 0096; V4, C2 and C4 remain for OPEN_QUESTIONS.
+**R74 is approved at `5a08456`. R77 resolves the working-file contents of the in-progress merge of lane 1.11 at `b6f935b`; the index intentionally remains unmerged.** Nothing is staged, committed or aborted. Both lanes' behavior is retained. The first checked integrated history reaches 31 July/day 148, without `--at-war`, with zero rejections, matching daily replay and day-60 save/resume. Sumter falls on **20 April/day 46 under Anderson**, outside R74's recorded window: capture, no evacuation notice, `combat.evacuated = 0`. Richmond moves once on **29 May/day 85**, after `virginia_seceded` on day 43. Each side's own decision sets its war flag (Confederate day 37; Union day 38). No outcome was tuned.
+
+Required no-Git full check: **exit 0, 126 files / 1,440 passed / 3 optional skips**. Desk types and suite: **exit 0, 84 passed / 8 existing skips**. Standalone done check: **exit 0, Phase 0 6/6; 1A 1/6**. Full details and all remaining gate problems are in R77 below and `runs/r77/final-checks.json`. The unmet Sumter condition belongs to the next request.
 
 The Part A review history at the pause follows:
 
@@ -17,8 +19,8 @@ The Part A review history at the pause follows:
   - The notice fires once in the Union run, when the principal learns of the evacuation. `situations.fired`, `noticed`, `notice_reports` and `surfaced` are banded at one there.
 - **Before merging:** lane 1.11r3's `L3-sumter.md` (990275c, on `research-1861-leads`) must reach main. The notice and `recordTerms` cite it.
 
-**Part B's remaining work waits on lane 1.11.** The list in "For Part B" below is the original brief; R48 completes these four entries:
-- the history run end to end, through lane 1.11's situations;
+**R77 integrates lane 1.11 and reports the history and war flags.** The list in "For Part B" below is the original brief; its remaining policy changes await the lead’s next request:
+- the history run end to end, through lane 1.11's situations: reported in R77, with the Sumter timing condition unmet;
 - the Confederate capital as State: done in R48;
 - Butler to Fort Monroe;
 - the people verbs bouncing like orders: done in R48;
@@ -26,7 +28,7 @@ The Part A review history at the pause follows:
 - an owner lane for each stand-in: done in R48;
 - resignation runs separately as R49; its worktree was not changed here.
 
-Branch `phase1-rule-seats`. Part A of the brief: commanders' battle choices as seat requests, a doctrine for each rule-seat principal (Lincoln, Davis) read from the pack, the generic principal of 0072 and the capital-as-objective stand-in retired, and the lead's rulings on the menu (posts as the principal believes them) and on the battle guard. Part B, the history run end to end, waits for lane 1.11's situations.
+Original brief, branch `phase1-rule-seats`: commanders' battle choices as seat requests, a doctrine for each rule-seat principal (Lincoln, Davis) read from the pack, the generic principal of 0072 and the capital-as-objective stand-in retired, and the lead's rulings on the menu (posts as the principal believes them) and on the battle guard. R77 below reports Part B's history after integrating lane 1.11.
 
 ## What changed in Part A
 
@@ -245,7 +247,7 @@ Only the four items that do not wait on lane 1.11 were implemented. Git was read
 - The required standalone done check exits **1: 5/6 criteria pass**. Behaviour, daily repeat/frozen hashes, replay/save-resume, liveness and FOUNDATION test presence pass. **Timing remains unmet:** Union median/p95 **101.71/197.10 ms**, against unchanged **40/160 ms** limits; testbed **5.01/32.03 ms** passes. No liveness band or timing threshold was changed and no long run was retried. A read-only snapshot after the run found 77 Node processes and 16 logical processors; it establishes no cause and no process was stopped. The lead owns the next bounded timing check.
 - Evidence: `runs/r60/regression-red.log`, `regression-green.log`, `check.log`, `done-check.log`, exit records, `runtime.json`, `final-checks.json` and `final-preservation.json`; standalone artifacts in `runs/r60-done/` and `runs/r60-done-drafting/`. Git is read-only. No generated file, schema, saved fixture, pack rule, State field, signed item or other run's worktree changed. No additional proposed ruling was needed; standing review remains pending.
 
-Still deferred exactly as R48 requires: the end-to-end history run, each government's war decision, consult policy, Butler to Fort Monroe, removing the doctrine's Sumter row and the 4 July message as an `address`. Resignation remains R49. The three-day capital-boundary test is not a claim that the full history run is complete.
+R77 below reports the end-to-end history run and verifies each government’s war decision. Consult policy, Butler’s integration, removing the doctrine’s Sumter row and the 4 July message as an `address` remain deferred. Resignation remains its own lane. R57’s three-day capital test remains a separate boundary control.
 
 ### R74: recorded terms require the recorded case
 
@@ -262,8 +264,63 @@ For the lead:
 1. Route R74 to Claude's standing reviewer under 0096, including the proposed applicability window and seven directly affected bands.
 2. Retain the deferred Part B history work after lane 1.11 lands; R74 does not repair the late doctrine run or claim 31 July history validation.
 
+## R77: lanes 1.11 and 1.12 Part B integrated (2026-11-19)
+
+Read the standing, command-line and writing rules and 0096. Work stayed in `C:/Pyrrhic/mandate-rule-seats-b`, apart from the single requested status in the main checkout's CODEX.md. Git is read-only; the captured HEAD, index and merge metadata are unchanged. Claude's standing reviewer owns review under 0096. Proposed rulings: none.
+
+### Merge contents
+
+| Conflict | Resolution |
+|---|---|
+| CLI liveness table | Keep lane 1.11's 148-day reference and R74's capture, zero evacuation and loss-report bands. Preserve R74's testbed zero-loss band and historical evacuation driver. |
+| War-gate test | Keep the non-null war-flag invariant and the authored own-government decision writers; the pre-authoring absence assertion is obsolete. |
+| Command owner | Keep capital moves and all succession, temporary-post and declared-government branches, with separate validation and applied results. |
+| Battle reports | Keep the incoming battle IDs and public press result; retain Part B's shared phase-boundary loss reporter, avoiding the old battle-only duplicate. |
+| Tick context | Keep both capital and institutional-succession events. |
+| Tick forces | Dispatch both lanes' command proposals to their existing owners. |
+| People verbs | Keep Part B's in-person audience dispatch, arrival effects and bounces. Supply the incoming required `verb:audience` response kind at arrival. |
+| Pack situations validator | Keep both capital validation and succession/temporary-post/declared-government validation. |
+| Union strings | Preserve every key/value from both parents, without duplicate keys. |
+| Day-40 save | Regenerate with `npx tsx tools/make-save-fixture.ts`; its log and log hash match both parents. Against the incoming fixture, only `factionCapitals` is added to State. |
+
+Further compatibility correction: the ungated capital notice needs `namedOnly` under lane 1.11's name check. Its annotation identifies the sourced administrative destination and disambiguates the two Davises; no trigger, effect, wording or speaker guard changed. The initial two loader errors are retained. `pack:generate -- union-1861` exits 0 with zero errors; all four generated data files are already identical to its output. Signed situations and gate records are unchanged. No schema, scenario, combat parameter, doctrine row, checkpoint band, lockfile, new State field or feature was added.
+
+### First integrated history
+
+`npx tsx runs/r77/history.ts` runs the pack's seed from 5 March to **31 July/day 148**, without `--at-war`, with daily hashes, replay and a day-60 save/resume: **exit 0, zero rejections, no liveness gate failures**. Final State: `da5627c37d44329fc1def3ce249c90d5e2ca66324e0e03fcc7e3a8e70ddd3e6c`; combined World: `b4f70f7cbc8fd5d2ad1ecc78f7783f43e2febe3e478a4d860a818f7e576a737e`. The standalone done check independently reproduces all 148 daily hashes.
+
+- **Sumter fails the reviewer's historical condition.** Anderson commands until surrender on **20 April/day 46**; Beauregard commands the attacking operation. R74's commander condition matches, but its date window ends on day 39. The result is capture: the 85-man garrison's strength becomes zero, Anderson is captured, `combat.captured = 1`, `reports.commander_lost = 1`, `combat.evacuated = 0`, and the signed `sumter_evacuated` notice never fires by day 148.
+- **Why late:** the authored `reduce_sumter` decision is taken on day 37; the retained doctrine issues another order on day 38. Walker objects to both on day 38. Two bypass messages depart on day 39 and reach Beauregard on day 42. He chooses the bombardment on day 43, its axis enters the bombard stage on day 44, fires on days 45–46, and ends on day 47. No duplicate order, relay, route, concentration day, trait, parameter or offer window was changed here.
+- **Richmond:** `virginia_seceded` is set on day 43 (17 April). Exactly one `capital_moved` event occurs on **day 85/29 May**; its notice surfaces on day 86. State retains Richmond through day 148.
+- **War:** the Confederate `confederate_opening/reduce_sumter` decision sets its flag on **day 37/11 April**. The Union `call_for_troops/militia_call` decision sets its own flag on **day 38/12 April**. The pack's setter audit confirms these are decision options of the respective faction, with no notice or other-side setter.
+- **Texas:** Houston is replaced by Clark by the inherited `post_succeeded` event on day 11; the old vacancy finding is retired.
+
+Evidence: `runs/r77/history-findings.json`, `history-summary.json`, `history-trace.json`, `history-final-state.json`, `history-save-day-60.json`, and `done-summary-comparison.json`.
+
+### Bands and checks
+
+The [complete band comparison](../runs/r77/band-reconciliation.md) lists **77 changed numeric bands against R74's 75-day at-war reference**, and **three against lane 1.11's 148-day reference** (capture, evacuation, loss reports), with bounds, measured counts and causes. `band-merge-diff.json` also retains all 103 literal Union-row differences against R74, including explanation-only differences. Historical checkpoint bands are unchanged. **No band was fitted after the history result.**
+
+The retained R73 run differs in nine measured counts: the three surrender/loss counts and six within-band counts (age pruning, courier delays, messages sent/delivered, response pruning and situation proposals). All daily differences and causal limits are in `measured-differences-from-r73.json`. The capital proposal is observed directly; inferred routing/pruning explanations are marked [I], with per-paper attribution left unestablished where the old summary has no IDs. No extra counterfactual campaign was run.
+
+- Root `MANDATE_NO_GIT=1 npm run check`: **exit 0, 126 files / 1,440 passed / 3 optional skips**. Types, boundary, licences and decisions pass. This is the exact required no-Git check.
+- Desk: dependencies were absent; locked `npm ci` exits 0. Typecheck and suite exit 0: **84 passed / 8 existing optional skips**. No build, server or browser was started.
+- Standalone `npm run run:done-check -- --label r77-done`: **exit 0, Phase 0 6/6; 1A 1/6**. Eight seeds, fork cap 400 days, default drafting measurement, all limits unchanged. union-1861, war by decision, 148 days: 34.29/65.80 ms median/p95; testbed, 120 days: 3.30/4.93 ms median/p95; union-1861 history run, 148 days to 1861-07-31: 34.29/62.27 ms median/p95. Limits remain **40/160 ms**.
+- All failure categories were read. No full suite, sweep or unchanged review was repeated after the result. `done-comparison-with-r73.json` compares every criterion and problem list with retained R73 evidence. Preflight failures and their targeted corrections are in `preflight-corrections.json`; the other seven focused files' passing evidence was reused, then the required full suite passed.
+
+Remaining done-check failures:
+
+- **checkpoints (FAIL):** union-1861 history run, 148 days to 1861-07-31: side_western_virginia (1861-07-31, day 148): no government in the pack stands for western Virginia (the Restored Government at Wheeling) (a data gap: the band is union); union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 19957 men, below 100000; union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 0 planned operations, below 1; union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 0 planned operations, below 1
+- **operation (FAIL):** union-1861 history run, 148 days to 1861-07-31: no operation fought a battle in the history run (2 operations, 0 battles)
+- **pushback (FAIL):** union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2; union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1; union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1; union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 46, above 9
+- **stand-ins (FAIL):** packages/kernel/src/situations/types.ts:73: a stand-in with no owner (write STAND-IN(<key>; owner: <lane>)); packages/pack-format/src/situations.ts:63: a stand-in with no owner (write STAND-IN(<key>; owner: <lane>))
+- **lever-sweep (FAIL):** union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d); union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)
+
+Final evidence index: `runs/r77/final-checks.json`. Final inventories and metadata preservation are in `final-preservation.json` and `final-inventory.json`. The source inventory and runtime diagnostics preceded this closeout; the final audit includes this hand-over. Claude commits the merge after review. R77 does not stage, commit or abort it.
+
 ## Findings outside my scope
 
-- **The cited Sumter research is present on main and was read for R74**, but is absent from this branch's older base (`docs/research/_leads/L3-sumter.md`). No other branch was merged here.
-- **The Texas governor's post (`st_gov_texas`) has no holder** at `union-1861`'s start, so Davis's call to Texas waits. The lead has sent it to research.
-- **The stopwatch:** the Union day's cost reads 25 ms standalone but about 70 ms under the full suite's parallel load. 0086's flag keeps that out of the hook.
+1. **Lead / next Part B request:** Sumter's day-46 capture misses the required 12–13 April evacuation and signed notice. The trace exposes both the authored and doctrine orders and their relay/travel/staging delay; R77 leaves their behavior intact.
+2. **Lead / lane 1.14:** the budget passes; all eleven non-budget criterion statuses and problem lists match retained R73 evidence. Retain the five failed 1A gates listed above. A passing root suite or liveness table does not waive historical, operation, pushback, stand-in or D6 conditions. `return` being best in zero seeds is not D6 clearance while the required channels/chain are unmeasured.
+3. **Lead / remaining Part B policy:** consult policy, Butler's integration/placeholder cleanup, retiring the doctrine Sumter row, and the July message as `address` remain outside R77. Resignation is its separate lane.
+4. **Lead / standing reviewer:** review the combined contents and the ungated capital annotation under 0096. The ten index conflicts remain intentionally unmerged for the lead to stage; no Git metadata or another worktree was written.

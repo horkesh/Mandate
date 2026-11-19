@@ -1,0 +1,632 @@
+[
+  {
+    "path": "docs/research/_resource/bulloch-1861.md",
+    "bytes": 5075,
+    "sha256": "4f545062506de1ad66bdaa382a36a3cdbc9712556c08b596d5274cb01f074e35"
+  },
+  {
+    "path": "docs/research/_resource/dating-method.md",
+    "bytes": 14364,
+    "sha256": "4100afd004ca179c58f98df706a0e88f3093c3f9555cffca9a863df5956a688a"
+  },
+  {
+    "path": "docs/research/_resource/dating.csv",
+    "bytes": 590700,
+    "sha256": "5b968e96b73a48e8bf827d26c9ba5abeb54a0a717fce5ed0e3b31cf3994d8810"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/baseline.json",
+    "bytes": 85566,
+    "sha256": "78128b6192146f8f3d9dba4846388cf065b2dc8a5a326ec94a22396675111421"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/bulloch-newspaper-reading.txt",
+    "bytes": 34272,
+    "sha256": "7163faeb5c9ff7194a4f1537a4d498db3134d7e0db95b15f60f25180789bd4c9"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/bulloch-newspaper-search.json",
+    "bytes": 59798,
+    "sha256": "d22433c829309291fde550196f7a4d2f8820d539b44d407a6d02b2e62de8782e"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/catalogue.json",
+    "bytes": 544320,
+    "sha256": "015ce16d94616b5399734dc057357f14eec892be8c7168bdf62c2497a18eba35"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/catalogue.log",
+    "bytes": 16584,
+    "sha256": "29170014a7037c5a53624729deb32333156b325c892f6960f3a811f21ca5a9d6"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/cells.json",
+    "bytes": 245666,
+    "sha256": "3bee2a8996ab19bac7cd055dfd56205db5f34fc94c374194ee7775e83b3c40c7"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/check-result.json",
+    "bytes": 109,
+    "sha256": "deda9bf873cb877ba2bbe86a0c5ce330e48313dc67dbe97cf1260cf67bc73bd3"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/check.log",
+    "bytes": 662,
+    "sha256": "9cfc0527cd804bf20d8daf05b13ea5a02e6fb0745c061760bdf2d5f2bab4d7a0"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/coordination-append-proof.json",
+    "bytes": 385,
+    "sha256": "4de274dbe6cfb2cdcab98d96ffa12111940755623a314055933e3f1413274b4e"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/coordination-before-append.json",
+    "bytes": 165,
+    "sha256": "804848302be9f8893454568995b3b88266f4c64d5f92c1cfea77f1772b0ec994"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/date-overrides.json",
+    "bytes": 41625,
+    "sha256": "345a09ff4a8243f69608218d442c3322ddfead52eaf6bd0f4705505d2e229439"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/dating-build.log",
+    "bytes": 6150,
+    "sha256": "c3f790eb3880a0eafbb50cbe20343905949154c2ce516237e539c2761929bea8"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/dating-counts.json",
+    "bytes": 3074,
+    "sha256": "b12964ee4367e7963519c47f74a2e69d790956454a2824a0133f4571e6fedf82"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/dating-r45-original.csv",
+    "bytes": 1750,
+    "sha256": "ac88e3ff159189bb650c04b9eae7b365942983891dc0e5a13d9341c844c2e79f"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/diary-heading-extracts.json",
+    "bytes": 83542,
+    "sha256": "3ec18e2533c0bde5c4c6a1338f15ab6d734f4f98649dcbcfd141148e183760d3"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/diary-reading.txt",
+    "bytes": 79762,
+    "sha256": "33889f42cb355a28c085e78a4a7099c274cfd9c2049dfe3a4154990a6ff65a75"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/done-check-result.json",
+    "bytes": 68,
+    "sha256": "524ccce0f0209a45179d90d91e9d8ae249bd96769ea05ee90a629158a1d7c179"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/done-check.log",
+    "bytes": 998,
+    "sha256": "11d5f6cad9ecddf0682a57d482033e01ffc98bf28b2ed78e6ecb8716c494e7a6"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/entry-page-anchors.json",
+    "bytes": 22745,
+    "sha256": "45d38c7f29033f95d97506ed0a6e2325ade05db05a7cf516cef51af3fd0366d1"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/inherited-date-sensitivity.json",
+    "bytes": 279,
+    "sha256": "c9e1e498cb4e6c449eb0189ae06f8251588a7b32081cf892c3447fcb758e1a81"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/jccs-page-extracts.json",
+    "bytes": 6832,
+    "sha256": "d73bb359a8862bc004ca6b3ac8b2ef41984d830875c7d0dd8cb86d68dd170259"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/jones-selected-extracts.json",
+    "bytes": 31449,
+    "sha256": "d3e42fe46b04aa479db2c06f622472b81a6d0c16d07ef94b102936958e029120"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/leg-audit.json",
+    "bytes": 67927,
+    "sha256": "6dfb557eb739fa34a1535c92c9337443bcf460ce19ea432f1ec4ffeb289dda87"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/leg-audit.log",
+    "bytes": 1078,
+    "sha256": "d271db575ba80e55fa9cfdb28390059cd4198f0be4e6ebad4755994280be986a"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/lincoln-heading-extracts.json",
+    "bytes": 27791,
+    "sha256": "cf2fd712d0474bcdceb4a3757db1b92373ef4d1b2ab46fb0c62aa473ef2c535d"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/lincoln-page-anchors.json",
+    "bytes": 3641,
+    "sha256": "52ddd34c3f038e32e567358ef53c26c7b13be8feba5a97da4b9bcf362f0b8c50"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/official-missing.txt",
+    "bytes": 1480,
+    "sha256": "3d135bacc340c6002408c2afa086160f42b373eb4d7d646c9241fa5d297a080d"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/official-page-extracts.json",
+    "bytes": 1226869,
+    "sha256": "2005c4e3324fdebe020c3da29244aa9c5803d3767200ddef13d9025d5bf32997"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/official-reading.txt",
+    "bytes": 107356,
+    "sha256": "3dc18993ca4694754e0b8f407a8ea6784f21a9e5aa37d23b07094a832486fb5e"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/policy-e8c5808.json",
+    "bytes": 1398,
+    "sha256": "38283c46fa759ebed763eb36f3dd29d996a4458ca778ce37b2eb2e11850c9435"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/preservation.json",
+    "bytes": 1074,
+    "sha256": "5cbab6e013fef9f79d5625d62f2a4ce3be88c7ca208c6fdad1fd93e39f2f207a"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/retained-files.json",
+    "bytes": 73052,
+    "sha256": "86329888abae39125b40a88b1b2392647f7feda309254741f085d6ec19a0623a"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/richardson-page-extracts.json",
+    "bytes": 66348,
+    "sha256": "fbe4bc68dd711fa644051d8df0137162d58b95896320c3f1f1a25ee4db1c68f2"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/congressionaldirunit.fetch.json",
+    "bytes": 386,
+    "sha256": "fac9324018bd59637ce5358727976339938f0692a2afc48c97d3f50667cebeb9"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/congressionaldirunit.txt",
+    "bytes": 188221,
+    "sha256": "3d0a79260286491a276ddce3542fa90712f98481b4295e9097be7faabbed6113"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/frmontpathmarker02nevi.fetch.json",
+    "bytes": 394,
+    "sha256": "c9698bf6f8c797990c769f0826943086efdf53a467089dd6fa50bd025a27b163"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/frmontpathmarker02nevi.txt",
+    "bytes": 851133,
+    "sha256": "49110f807898655fa5bc9e902f3dcb15e46aeec776ec78fac0b591b49b0cc5e1"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/frommanassastoapp00long.fetch.json",
+    "bytes": 214,
+    "sha256": "d638b9f8160962eab998e14e897261a0fa15728b764853bb58d449a3fddcce4d"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/generalofficers00wrigrich.fetch.json",
+    "bytes": 406,
+    "sha256": "3c58f540675a4199bf437b9390c246412da9bd5655190c83bd50ba2e66f4220d"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/generalofficers00wrigrich.txt",
+    "bytes": 209525,
+    "sha256": "3fb62e63a312b7496909fe2dc20b1f2800776d90969af69b23a83adde3f8c3bb"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/governmentcontra00wash.fetch.json",
+    "bytes": 394,
+    "sha256": "18d32abfc8138c4accdc9e4b4018c0ebf40f942a0a87075376911dac5e6d2431"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/governmentcontra00wash.txt",
+    "bytes": 455152,
+    "sha256": "eb44617283bc9b85465aff58001906d75a204599531a0fd04aee130c9bb6de64"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/lifehirampaul00meadrich.fetch.json",
+    "bytes": 398,
+    "sha256": "59dea01b3ccb9f4a3fb5f71a7492f77159de9a05104552df1faf7cefd0fbb952"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/lifehirampaul00meadrich.txt",
+    "bytes": 521450,
+    "sha256": "833f3e0fcb9aa55a809963ea41e3ca92c0c95c74fa5a553e6165acda7b2d7220"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/lifeofbenjaminfw00ridd.fetch.json",
+    "bytes": 394,
+    "sha256": "c0eb2c416aff1c49ad3787fa8d345125b55bd30c67333c0c3f98eb64bd844be8"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/lifeofbenjaminfw00ridd.txt",
+    "bytes": 555611,
+    "sha256": "f0e5955550ee6ad83360cc3a2c06c28a3bea2c22c4fe599f0d90d45a861a637c"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/lifepublicservic00inschu.fetch.json",
+    "bytes": 403,
+    "sha256": "746ae130449f36194a3d1dabb3b7a022379be485b51b1e66069d87e043b53ff3"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/lifepublicservic00inschu.txt",
+    "bytes": 1995749,
+    "sha256": "4105105a6d7a8cc823c46e2e9b14e4d7a0b3210fa72de9b911123532eb3d90e2"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/mcclellansownsto00mccle.fetch.json",
+    "bytes": 214,
+    "sha256": "2143a001a0a7ed9ff56a3d278bdc727907ffe4fb305f278d09ab1147b6a425f4"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/memoirlettersofc04pier.fetch.json",
+    "bytes": 211,
+    "sha256": "9523f1de8c9988eb0d5d54f939cceb41d121452e01dafd8d410e908882951f8b"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/nyt-1861-03-02-page8-cleared-crop.png",
+    "bytes": 848006,
+    "sha256": "d17b739dae9f43b4b4b5510a5c062f080b19067a60171dca70580c8a06f09c19"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/nyt-1861-03-02-page8-overview.jpg",
+    "bytes": 859241,
+    "sha256": "c701faf09547c42cd21841a6495a38020c4d098f2901516c73f3b74e7c225888"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/nyt-1861-03-02-page8.jpg",
+    "bytes": 23945023,
+    "sha256": "30521a7717f7430b3add4f571e28cd901ff07511c8eaeba2a7628a33e4dadf56"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/nyt-1861-03-25-page8-arrived-crop.png",
+    "bytes": 575285,
+    "sha256": "c45111019ea02bea6734a6f8d8ebfe978ae36d47ff3aad3e05ce534ca7085894"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/nyt-1861-03-25-page8-overview.jpg",
+    "bytes": 945546,
+    "sha256": "8f6b03c03290bee822fe1121c384dea44665b33c64c77e2a710baae9f75c04b1"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/nyt-1861-03-25-page8.fetch.json",
+    "bytes": 267,
+    "sha256": "80306215ca93744ad5c9dbd2060e663de3666a85e130bb8d360b26f1c758b395"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/nyt-1861-03-25-page8.jpg",
+    "bytes": 24527499,
+    "sha256": "6a2fdc772e675489f2a3d9e0cc39f5adc00207870a5f01b96baca5fe7d6ee392"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/personalmemoirsof01gran.fetch.json",
+    "bytes": 241,
+    "sha256": "1bad9d75e2aa30f960290fd8a1ed441b7654dd4651cc3924b397eb7e3f39c7ea"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/politicalrecolle00juli.fetch.json",
+    "bytes": 394,
+    "sha256": "a08d2c60dc0a79e526c73d5f297971e4e5b414f7473b409c6e7dc20c10471661"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/politicalrecolle00juli.txt",
+    "bytes": 662734,
+    "sha256": "e4aa0cd96c8d8c2cfde1ecda5db8c072720d23d0d819348c29bc3dd1bf86e46e"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/recollectionsofc00danarich.fetch.json",
+    "bytes": 410,
+    "sha256": "adcfd43a2a8ee11390c22ccc02380cde4ee289a1cce5818291c78844acec8353"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/recollectionsofc00danarich.txt",
+    "bytes": 571749,
+    "sha256": "7ead30e2eb70b25fc4245504d5012313b054519882136e88d985ad830d4e98b5"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/secretserviceofc01bull.fetch.json",
+    "bytes": 395,
+    "sha256": "254aa03e04867f41c9c8b409b0afbd2028c5377b12dfef57d82430c7180e7844"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/secretserviceofc01bull.txt",
+    "bytes": 1004575,
+    "sha256": "01fb8c7823a58c74585468d7001ae89f6c5c2a871eef8fa261a06937ec12cbb0"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/sim_new-york-times_the-new-york-times_1861-02-28_10_2945.fetch.json",
+    "bytes": 530,
+    "sha256": "939cd2110b88e192736d5d716a29579522fbcb87e3f54aca19a746ef370731f9"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/sim_new-york-times_the-new-york-times_1861-02-28_10_2945.txt",
+    "bytes": 441170,
+    "sha256": "48780e17934026e9b86c5bffcba91a9f56bb38226560958e5f8827e27b473e06"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/sim_new-york-times_the-new-york-times_1861-03-01_10_2946.fetch.json",
+    "bytes": 530,
+    "sha256": "fdbef374c19fbb07eb85c87890b0acfa0ac078366f8a4e0999df08848b3e5d4f"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/sim_new-york-times_the-new-york-times_1861-03-01_10_2946.txt",
+    "bytes": 425239,
+    "sha256": "5452623a0e4956745fd30e99dab16551a774f0878e6254964e34e18b0777344a"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/sim_new-york-times_the-new-york-times_1861-03-02_10_2947.metadata.json",
+    "bytes": 15419,
+    "sha256": "79e1f593f03e5e748d8534b72fbcfdad5d3d9d67f9f5961798fe1b7c4d4b3c6f"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/sim_new-york-times_the-new-york-times_1861-03-04_10_2948.fetch.json",
+    "bytes": 530,
+    "sha256": "a7f9e505762a6cfdef29ac7f9b0e270ef22c7bf984b3bc02a2ce50d26bb0a016"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/sim_new-york-times_the-new-york-times_1861-03-04_10_2948.txt",
+    "bytes": 426392,
+    "sha256": "cf8524a3e7d9ece28e94e8585bdb3bb8687c12160031736a49a2f1e6b29e344a"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/sim_new-york-times_the-new-york-times_1861-03-05_10_2949.fetch.json",
+    "bytes": 530,
+    "sha256": "0da723715cf9a42e76a29bc6e1e79884492dacfac3c73fc538d4f15a8309dda2"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/sim_new-york-times_the-new-york-times_1861-03-05_10_2949.txt",
+    "bytes": 413462,
+    "sha256": "4546deebe39e7f9d9d85be8064d9ce98db7efe35ff6a792b152b64248e5cc038"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/sim_new-york-times_the-new-york-times_1861-03-06_10_2950.fetch.json",
+    "bytes": 530,
+    "sha256": "d53d54de0eba8672366a505680d8e393137a90668bdfac9b43a3e1b0c9cde3cf"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/sim_new-york-times_the-new-york-times_1861-03-06_10_2950.txt",
+    "bytes": 403087,
+    "sha256": "d2402752378567317536df8499f32a14c43de387d4b9b156b51bc603ed62b8b5"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/stone-pension-senate-report1054.fetch.json",
+    "bytes": 368,
+    "sha256": "433778e90a0f2eeda64fabbce5427edf5f25f7e1cb7d682a61a211e9f11eb844"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/stone-pension-senate-report1054.pdf",
+    "bytes": 1895959,
+    "sha256": "30d808f8eb791c4a5aefde979a83118d78ab4abcce76ca42f1f3d761cf09d5dd"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/stone-pension-senate-report1054.txt",
+    "bytes": 9850,
+    "sha256": "c3d7cf892ac2e3dbad0dac6662ba94583aa04d66a56e6c2c91123d2c6134bae3"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/stone-report-page1.png",
+    "bytes": 531417,
+    "sha256": "941ba42564cc65cc6e626055af4dcacbaf08819afabf7b9ad4c801199a890e86"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/stone-report-page2.png",
+    "bytes": 520961,
+    "sha256": "da86f7ec1625244bcb8ede9d84fbba93faffc3f83b212e8ba1289b3c45b3c7b7"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/uniondisunionreu00cox.fetch.json",
+    "bytes": 208,
+    "sha256": "0e2cd129491ba36bd85cb3752ce7c827bf9e5ee222cc52b9f61604642a3868fe"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion06unit.fetch.json",
+    "bytes": 387,
+    "sha256": "a2c952ca762bb8182dedd7fb4bc115e4597120e40ffedba568c6209bb5c91b1c"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion06unit.txt",
+    "bytes": 3533737,
+    "sha256": "41073e206935c556f1b527a2c8279fbf30d78fb4f076351b34ce946089a43452"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion08unit.fetch.json",
+    "bytes": 387,
+    "sha256": "178b78dfddbe512fcd2b520a15749b9f9e44cdec41e67e0c8afe5be22543cf7f"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion08unit.txt",
+    "bytes": 2996045,
+    "sha256": "f9bad99dd264b5eebe8038fdead64afc082f6603998dffec99de94b3ec49cfb9"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion09unit.fetch.json",
+    "bytes": 387,
+    "sha256": "9f32bf74ed93e35fd2d19871c2a2e1b98e8bae0ace4c55bac7d602de762b2c08"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion09unit.txt",
+    "bytes": 2864352,
+    "sha256": "75ccd8a0db0019027a538b89ac991beda5e15131a6121605db41eeea1627d955"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion101unit.fetch.json",
+    "bytes": 391,
+    "sha256": "640a2f4cd3810da17854e3699c374b18865370798aee7000d948aeaf9580b7bc"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion101unit.metadata.json",
+    "bytes": 170439,
+    "sha256": "e5aceb8704e451d7b8c750eaddc2fe748f7a6342b6610b1a79c0409dd0384a7f"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion101unit.txt",
+    "bytes": 3715861,
+    "sha256": "10f7038c801bbb5b6046cf5e3264c1725f183a44aacb0f0e8f6eeb14de85dd1a"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion111unit.fetch.json",
+    "bytes": 391,
+    "sha256": "0a42c5f05e622cf47bc3dd809783ba90b60601e9ecc8dcbbc7c1ddfcee435ed9"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion111unit.txt",
+    "bytes": 4378110,
+    "sha256": "13ec50bb7ec6b5e0c202d60b7c95167d0864c7556510ce5d619c7f2606c36de2"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion112unit.fetch.json",
+    "bytes": 391,
+    "sha256": "caed5135b81f8ce0850f010f1d37d048a73c009aa21724b0a55e574438fc6f73"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion112unit.txt",
+    "bytes": 3985146,
+    "sha256": "f72e5e77b113865f5c033b9b5abaafc2e34bdc04fc2ccd68a3b9d68f7f873c38"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion113unit.fetch.json",
+    "bytes": 391,
+    "sha256": "fd93af137c6be844456cf8d25cf85cd0c7327ab9040dec6927310a37b6427344"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion113unit.txt",
+    "bytes": 2228002,
+    "sha256": "9e2b9f41d77a77dfa4f763ccd17de1f7e17da7cfd4d13dc0b2e3de779cf4ab91"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion121unit.fetch.json",
+    "bytes": 391,
+    "sha256": "98fae95d09c934231e1d3961816d78be7d63f2e4bafade584e172fb929f11f12"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion121unit.txt",
+    "bytes": 3165239,
+    "sha256": "7231e6f4840dcc87e009f8a7cb3d3b01d4cb4828a699000f0841aca1c437f4ee"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion123unit.fetch.json",
+    "bytes": 391,
+    "sha256": "a20e4b81bea9aa6b1ef430cd675ce80123398d52a6e4d213f21d611b390387d6"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion123unit.txt",
+    "bytes": 3006770,
+    "sha256": "ffa35e0f96bef1ca7491cfaf94e51259055cf179d0d772513ac77a66fff3cf96"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion14unit.fetch.json",
+    "bytes": 387,
+    "sha256": "7a3a7b474433ca74e4589e9c8e722f072e19e69467f02984c9495a4d2f67a7fa"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion14unit.txt",
+    "bytes": 3711039,
+    "sha256": "3449022dc9b83e31953854590e44c8c93d302aafe41e2725db1697f996c99bd6"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion15unit.fetch.json",
+    "bytes": 232,
+    "sha256": "158f0ead8afb9e751b0602b068a90bc001550857ffc53bdb696f191c195fd6a4"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion161unit.fetch.json",
+    "bytes": 391,
+    "sha256": "cade07f49397584754ce3db5c64e89e00a9475c4f65ac4b4fc7bd6b6991090bb"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion161unit.txt",
+    "bytes": 4833211,
+    "sha256": "431e3333db3afc277466f187a7e9c6b6b5dfcfe135d1ad9d27119ec6318f853c"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion171unit.fetch.json",
+    "bytes": 391,
+    "sha256": "4cbf6c89c40ffd571b048c483762db6ca8ab30e2f93e7fb9924a4048040d3658"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion171unit.txt",
+    "bytes": 3210572,
+    "sha256": "7506d2ee9d3b1b06886a93de9aac3fd381a3c176e3ddadd317f3952729301a02"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion191unit.fetch.json",
+    "bytes": 391,
+    "sha256": "1080975877437e74cab68766a19a824c30ae150fe8b1348bb965eabdf6e6673d"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion191unit.txt",
+    "bytes": 4475448,
+    "sha256": "25a0c5be12d302b8d45c5dab0759f022ba4e689ebf49e07d613acafc1bf37ed3"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion21unit.fetch.json",
+    "bytes": 387,
+    "sha256": "8cf284343e286798d3e3568aed305560ebc71d335c75c7d86d444567a0412837"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellion21unit.txt",
+    "bytes": 4302597,
+    "sha256": "599c249918ce3644d033fa467d2a78f1465c4f41972f71b8c0b0ecb55caf4371"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/sources/warofrebellionco51unit.fetch.json",
+    "bytes": 211,
+    "sha256": "abf82ab3ad3f02b775aafdd32ac36352ccc1a43d9f14756a1ca326dfedac9bd5"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/unique-citations.txt",
+    "bytes": 24210,
+    "sha256": "d47dd3ecd1c0f3cc83a4036d869cc69f58d86905cf058ff92fef5176c1b192db"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/validator-e8c5808-banned-sources.ts.txt",
+    "bytes": 6122,
+    "sha256": "cde47956d0aad3bb51e3306783085bbeecce37205fcd5ee9004f5f22ca16289a"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/validator-e8c5808-validate.ts.txt",
+    "bytes": 63451,
+    "sha256": "0eff9f42c201f5b360f682a57383f8cdd3e6305dee95fdf60dae7ba0b6965204"
+  },
+  {
+    "path": "docs/research/_resource/stone-1861.md",
+    "bytes": 4195,
+    "sha256": "c46d4660e7595cff7a9368030ceb3fe9ddd4f22d50379a6d2204af84198df678"
+  },
+  {
+    "path": "docs/research/_resource/tools/r52-dating.py",
+    "bytes": 7431,
+    "sha256": "72f8f0ab7f82070bf3442380b6ae20ed11054ebb7dda30876e28edd7705605ea"
+  },
+  {
+    "path": "docs/research/_resource/tools/r52-fetch.py",
+    "bytes": 1179,
+    "sha256": "744cc528cdcb781340083bd1167882c05c47052bb4b00b16cd2b9b8c1faeee58"
+  },
+  {
+    "path": "docs/research/_resource/tools/r52-leg-audit.py",
+    "bytes": 5467,
+    "sha256": "d1bdc03bc309678399d39d1697b1f3a2a749e6fcba95fd2c15c126986a8fe511"
+  },
+  {
+    "path": "docs/research/_resource/tools/r52-pages.py",
+    "bytes": 4452,
+    "sha256": "bbfe4fb33f6973355ea93973a9bc0d5f6869c6af17532d1c84c4123d0de5cd7a"
+  },
+  {
+    "path": "docs/research/_resource/tools/r52-read.py",
+    "bytes": 2284,
+    "sha256": "b07d08d4a43c9b099a3f3f25bc435367229c4261c2b21d03601077c2d4cf6618"
+  },
+  {
+    "path": "docs/research/_resource/tools/r52-verify.py",
+    "bytes": 4557,
+    "sha256": "19b8fa2a9e311f34c1b5a49fb1fdf519ede92ab53f87ee856899b8d75c6c4bd3"
+  },
+  {
+    "path": "notes/lane-1.11r3-research.md",
+    "bytes": 21305,
+    "sha256": "c5b26eaa03470e144db8305680971d14259e9cb000fc49f9bd8af28dedf1248f"
+  }
+]

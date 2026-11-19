@@ -1,0 +1,139 @@
+{
+  "id": "sumter_garrison",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.sumter_garrison.title",
+  "text": "situation.sumter_garrison.text",
+  "earliest": "1861-03-05",
+  "event": {
+    "dayAtLeast": 1
+  },
+  "railroad": "the premise: Anderson's letters of 28 February and 2 March reach the president on 4 March, so the situation opens the day after the inaugural (0042)",
+  "subjects": [
+    "anderson_robert"
+  ],
+  "options": [
+    {
+      "id": "give_up_both",
+      "label": "situation.sumter_garrison.option.give_up_both",
+      "displayKey": 1,
+      "proposedBy": [
+        "scott_winfield"
+      ],
+      "honours": [
+        "conciliation",
+        "caution"
+      ],
+      "appearsWhen": {
+        "clockAtLeast": 23
+      },
+      "effects": [
+        {
+          "setFlag": "sumter_withdrawn"
+        },
+        {
+          "setFlag": "pickens_given_up"
+        }
+      ]
+    },
+    {
+      "id": "provision_notice",
+      "label": "situation.sumter_garrison.option.provision_notice",
+      "displayKey": 2,
+      "proposedBy": [
+        "welles_gideon",
+        "blair_montgomery",
+        "chase_salmon_p"
+      ],
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "appearsWhen": {
+        "clockAtLeast": 31
+      },
+      "effects": [
+        {
+          "propose": {
+            "owner": "command",
+            "field": "temporary_post",
+            "subject": "us_sumter_relief_expedition",
+            "delta": 1,
+            "reason": "relief-expedition",
+            "side": "union"
+          }
+        },
+        {
+          "setFlag": "sumter_relief_ordered"
+        }
+      ]
+    },
+    {
+      "id": "withdraw",
+      "label": "situation.sumter_garrison.option.withdraw",
+      "displayKey": 3,
+      "proposedBy": [
+        "seward_william_h",
+        "scott_winfield",
+        "smith_caleb_b",
+        "bates_edward",
+        "cameron_simon"
+      ],
+      "honours": [
+        "conciliation",
+        "caution"
+      ],
+      "effects": [
+        {
+          "setFlag": "sumter_withdrawn"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.sumter_garrison.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "provision_notice"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_general_in_chief"
+    ],
+    "recommends": [
+      "withdraw"
+    ],
+    "reasons": [
+      {
+        "kind": "caution",
+        "weight": 800
+      }
+    ],
+    "confidence": 700
+  },
+  "delegableTo": [],
+  "resurfaceOn": [
+    23,
+    27
+  ],
+  "gate": {
+    "none": "a decision on a fort's garrison and its provisions; why the states seceded is narrated under cause-of-secession, not here"
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-1 p. 197 (Anderson's estimate of the force a relief needs, 20,000, per the numbers note's correction 9)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "1, 2.1, 2.2"
+    },
+    {
+      "source": "NOTE-march-1861-facts",
+      "at": "2, 4, 5, 7, 11; des. 11, 17, 20"
+    }
+  ]
+}

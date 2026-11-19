@@ -1,0 +1,42 @@
+{
+  "research_validation": {
+    "command": "node docs/research/_resource/tools/r59-validate.cjs",
+    "exit": 0,
+    "result": {
+      "verdict": "PASS",
+      "rows": 189,
+      "people": 105,
+      "KEEP": 9,
+      "CHANGE": 0,
+      "HOLD": 180,
+      "sourceFileReferencesVerified": 31,
+      "blocs": 60,
+      "physicalPackWrites": 0
+    },
+    "log": "validate-final.log"
+  },
+  "project_gates": [
+    {
+      "command": "MANDATE_NO_GIT=1 npm.cmd run check",
+      "exit": 2,
+      "log": "docs\\research\\_resource\\evidence-r59\\check.log"
+    },
+    {
+      "command": "MANDATE_NO_GIT=1 npm.cmd run run:done-check",
+      "exit": 1,
+      "log": "docs\\research\\_resource\\evidence-r59\\done-check.log"
+    }
+  ],
+  "preservation": "preservation.json",
+  "sources": "sources.json",
+  "source_inventory": "source-inventory.json",
+  "access_limits": "access-log.json",
+  "screen": "surname-screen.json",
+  "counts": "counts.json",
+  "retained_summary_correction": "closeout-failure.log",
+  "no_apply_or_pack_generation": true,
+  "standing_review": "pending",
+  "coordination_append": "coordination-append-proof.json",
+  "final_inventory": "final-inventory.json",
+  "source_inventory_unchanged_at_close": true
+}

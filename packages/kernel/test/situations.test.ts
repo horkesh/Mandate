@@ -30,7 +30,7 @@ function option(id: string, displayKey: number, over: Partial<OptionDef> = {}): 
     waitsOn: null,
     effects: [],
     lockedCosts: [],
-    orders: [],
+    orders: [], calls: [],
     honours: [],
     watched: false, policy: null,
     gate: null,

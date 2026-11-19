@@ -70,7 +70,7 @@ export function arriveSupport(ctx: TickContext, start: State, msg: TransitMessag
   const order = msg.msgOrder!;
   const post = msg.msgToPost!;
   const response = answerOrder(ctx.world, start, msg.msgTo, order.orderIssuer, goalTerms(ctx.world.rules.people, 'advance'), { oversight: oversightOf(ctx, start, msg.msgTo, order.orderIssuer).value });
-  let state = recordResponse(start, responseOf(response, { order: msg.msgOrigin, person: msg.msgTo, post, role: 'addressee', day: ctx.day }));
+  let state = recordResponse(start, responseOf(response, { order: msg.msgOrigin, person: msg.msgTo, post, role: 'addressee', day: ctx.day, kind: order.orderKind }));
   const { answer, from } = answerOf(ctx, response);
   fire(ctx, 'operations.support_answered');
   if (answer === 'refused') fire(ctx, 'operations.support_refused');

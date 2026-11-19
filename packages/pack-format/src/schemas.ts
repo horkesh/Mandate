@@ -153,6 +153,7 @@ export const PersonSchema = z.strictObject({
     .describe('His own standing practices (lane 1.5b), each cited: conduct an order of the map can run against (a row’s clashes), such as a commander’s practice toward fugitives. Gate content.'),
   traits: z.array(z.strictObject({ trait: termId, cites: z.array(citation) })),
   bloc: termId.nullable(),
+  blocCites: z.array(citation).optional().describe('The citations for his bloc (0087: a bloc is a judgment true at the start, so it needs a contemporary leg dated before the pack’s first start); absent when none is given.'),
   ranks: z.array(z.strictObject({ rank: termId, from: historicalDate })),
   unknowns: z.array(z.string()),
   provenance,
@@ -721,6 +722,12 @@ export const ScenarioSchema = z.strictObject({
   depotConditions: z.array(z.strictObject({ depot: idOf('depot'), conditionPermille: permille })),
   posts: z.array(PostSchema),
   forceBlocks: z.array(ForceBlockSchema),
+  declaredGovernments: z
+    .array(z.strictObject({ id: idOf('department'), regions: z.array(idOf('region')).min(1) }))
+    .describe('Governments the start declares but does not establish: one a situation’s effect establishes, taking its regions from whoever held them (lane 1.11).'),
+  temporaryPosts: z
+    .array(z.strictObject({ id: idOf('post'), name: stringKey, kind: termId, department: idOf('department'), parent: idOf('post').nullable(), holder: idOf('person').nullable(), region: idOf('region').nullable(), operation: termId }))
+    .describe('Temporary posts the start declares but does not open: an expedition command a situation’s effect opens (0040; lane 1.11).'),
   governments: z.array(
     z.strictObject({
       region: idOf('region'),

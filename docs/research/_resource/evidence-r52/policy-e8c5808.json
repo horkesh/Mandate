@@ -1,0 +1,58 @@
+﻿{
+  "banned": [
+    "DAVIS-RF",
+    "JOHNSTON-1874"
+  ],
+  "weak": [
+    "NOTE-confederate-side",
+    "NOTE-governments-stores-1861",
+    "NOTE-indian-territory-1861-sources",
+    "NOTE-map-extent-size-sources",
+    "NOTE-march-1861-facts",
+    "NOTE-people-posts-1861",
+    "NOTE-secession-winter-1861",
+    "NOTE-union-1861-62",
+    "NOTE-union-navy",
+    "NOTE-union-politics",
+    "NOTE-union-war-economy",
+    "BL",
+    "BULLOCH",
+    "CHESNUT",
+    "COX-3DEC",
+    "DANA-RCW",
+    "GRANT-PM",
+    "GREELEY-RBL",
+    "JULIAN-PR",
+    "LEE-1904",
+    "LEWWALLACE-AUTO",
+    "LONGSTREET-1896",
+    "MCCLELLAN-OS",
+    "MEADE-PAULDING",
+    "SHERMAN-M",
+    "WEED-MEM",
+    "WELLES-D1-RETRO"
+  ],
+  "evidence": {
+    "innateThrough": "1861-07-31",
+    "startBefore": "1861-03-05",
+    "innateStats": ["competence", "nerve"],
+    "innateTraits": [
+      "slow",
+      "rank_proud",
+      "joint_minded",
+      "organiser",
+      "micromanages",
+      "intrigues",
+      "quarrelsome",
+      "ambitious",
+      "insubordinate",
+      "disdains_superiors",
+      "shifts_blame",
+      "self_doubting",
+      "holds_grudges"
+    ],
+    "factTraits": ["slaveholder", "uses_press"],
+    "factBlocs": ["army", "confederate"],
+    "referenceWorks": ["BDAC", "Callahan", "CongDir37", "Cullum", "Dyer", "Heitman", "NavyReg1861", "Wright"]
+  }
+}

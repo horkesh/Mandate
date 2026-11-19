@@ -1,0 +1,42 @@
+{
+  "id": "pierpont_elected",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.pierpont_elected.title",
+  "text": "situation.pierpont_elected.text",
+  "earliest": "1861-06-20",
+  "event": {
+    "all": [
+      {
+        "fired": "wheeling_convention"
+      },
+      {
+        "dayAtLeast": 107
+      }
+    ]
+  },
+  "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_state",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Civil organisation and correspondence only; no secession-cause claim, slavery policy, security order or protected-population effect."
+  },
+  "citations": [
+    {
+      "source": "WHEELING-JOURNAL-1861",
+      "at": "pp. 27-28, 20 June 1861"
+    },
+    {
+      "source": "LEWIS-HWVM",
+      "at": "pp. 140, 145"
+    }
+  ],
+  "namedOnly": "The election and oath as the convention records them, not a quotation or an act by the holder of a pack post. No governor post is opened or filled by this report."
+}

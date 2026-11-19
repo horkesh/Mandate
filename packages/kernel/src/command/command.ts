@@ -516,6 +516,13 @@ export function neutralGroundOf(_map: WorldIndex, state: State): Readonly<Record
 
 /** The field id a situation names to close (delta above 0) or reopen (below 0) a neutral government (0055, 0058). */
 export const GOVERNMENT_CLOSED_FIELD = 'government_closed';
+/** Lane 1.11: a declared government is established, and its declared regions pass to it (no side until one is proposed). */
+export const GOVERNMENT_ESTABLISHED_FIELD = 'government_established';
+
+export interface DeclaredGovernmentSpec {
+  readonly id: DepartmentId;
+  readonly regions: readonly RegionId[];
+}
 
 /**
  * The field id a situation names to move a government to a side (0065): the subject is the department, the
@@ -524,6 +531,10 @@ export const GOVERNMENT_CLOSED_FIELD = 'government_closed';
 export const DEPARTMENT_SIDE_FIELD = 'department_side';
 /** A situation's capital move: subject is the region, side the faction, delta exactly zero. */
 export const FACTION_CAPITAL_FIELD = 'faction_capital';
+/** A temporary post the scenario start declares, opened by a situation's effect (0040: an expedition command; lane 1.11). */
+export const TEMPORARY_POST_FIELD = 'temporary_post';
+/** A notice records an institution's succession to an existing occupied office. */
+export const POST_SUCCESSION_FIELD = 'post_succession';
 
 /** Why a department is not a government, or null: the pack's department kinds mark governments (0058). */
 function notAGovernment(map: WorldIndex, department: DepartmentId): string | null {
@@ -643,12 +654,14 @@ export interface CommandProposal {
    * self-governing government is moved only by a notice, its own act, never by a principal's choice.
    */
   readonly origin: ProposalOrigin;
+  readonly reason?: string;
+  readonly succession?: { readonly from: PersonId; readonly to: PersonId };
 }
 
 export type ProposalOrigin = 'notice' | 'decision';
 
 /** Why `command` refused a proposal: a typed reason (hard rule 6), with the sentence that says it. */
-export const REFUSAL_REASONS = ['invalid', 'self_governing_decision', 'self_governing_region'] as const;
+export const REFUSAL_REASONS = ['invalid', 'self_governing_decision', 'self_governing_region', 'notice_required', 'incumbent_changed'] as const;
 export type RefusalReason = (typeof REFUSAL_REASONS)[number];
 export interface Refusal {
   readonly reason: RefusalReason;
@@ -692,8 +705,11 @@ export function regionMoveProblem(map: WorldIndex, from: DepartmentId | 'unknown
 
 export type AppliedProposal =
   | { readonly field: typeof FACTION_CAPITAL_FIELD; readonly subject: RegionId; readonly change: 'moved' | 'unchanged'; readonly faction: FactionId }
+  | { readonly field: typeof POST_SUCCESSION_FIELD; readonly subject: PostId; readonly change: 'succeeded' | 'unchanged'; readonly from: PersonId; readonly to: PersonId; readonly reason: 'institutional-succession'; readonly cause: string | null }
   | { readonly field: typeof GOVERNMENT_CLOSED_FIELD; readonly subject: DepartmentId; readonly change: 'closed' | 'reopened' | 'unchanged' }
-  | { readonly field: typeof DEPARTMENT_SIDE_FIELD; readonly subject: DepartmentId; readonly change: 'joined' | 'unchanged'; readonly side: SideChange | null };
+  | { readonly field: typeof DEPARTMENT_SIDE_FIELD; readonly subject: DepartmentId; readonly change: 'joined' | 'unchanged'; readonly side: SideChange | null }
+  | { readonly field: typeof TEMPORARY_POST_FIELD; readonly subject: PostId; readonly change: 'opened' | 'unchanged' }
+  | { readonly field: typeof GOVERNMENT_ESTABLISHED_FIELD; readonly subject: DepartmentId; readonly change: 'established' | 'unchanged' };
 
 /**
  * Apply the proposals `command` owns (owner `command`), in order; others are
@@ -710,6 +726,8 @@ export function applyCommandProposals(
   start: State,
   proposals: readonly CommandProposal[],
   day: number,
+  temporaryPosts: readonly TemporaryPostSpec[] = [],
+  declaredGovernments: readonly DeclaredGovernmentSpec[] = [],
 ): { readonly state: State; readonly applied: readonly AppliedProposal[]; readonly refused: readonly Refusal[] } {
   let state = start;
   const applied: AppliedProposal[] = [];
@@ -726,6 +744,85 @@ export function applyCommandProposals(
       const before = state;
       state = moveCapital(state, p.side, region.id);
       applied.push({ field: FACTION_CAPITAL_FIELD, subject: region.id, change: state === before ? 'unchanged' : 'moved', faction: p.side });
+      continue;
+    }
+    if (p.field === POST_SUCCESSION_FIELD) {
+      const post = p.subject as PostId;
+      const current = state.postStates[post];
+      const change = p.succession;
+      if (p.origin !== 'notice') {
+        refuse('notice_required', 'institutional succession is an institution’s act, recorded by a notice');
+        continue;
+      }
+      if (current === undefined || change === undefined || change.from === change.to || p.delta !== 1 || p.side !== null ||
+          !map.world.people.some((person) => person.id === change.from) ||
+          !map.world.people.some((person) => person.id === change.to)) {
+        refuse('invalid', `invalid institutional succession at ${p.subject ?? 'none'}`);
+        continue;
+      }
+      const record = { field: POST_SUCCESSION_FIELD, subject: post, from: change.from, to: change.to, reason: 'institutional-succession', cause: p.reason ?? null } as const;
+      if (current.postHolder === change.to) {
+        applied.push({ ...record, change: 'unchanged' });
+        continue;
+      }
+      if (current.postHolder !== change.from) {
+        refuse('incumbent_changed', `post ${post} is no longer held by ${change.from}`);
+        continue;
+      }
+      if (state.personStatus[change.to]?.statusKind !== 'serving') {
+        refuse('invalid', `successor ${change.to} is not serving`);
+        continue;
+      }
+      try {
+        // Commit both writes together only after the existing appointment guards pass. Neither person's status changes.
+        const next = appointHolder(map, relieveHolder(state, post), post, change.to);
+        state = next;
+        applied.push({ ...record, change: 'succeeded' });
+      } catch (e) {
+        refuse('invalid', e instanceof CommandError ? e.problems.join('; ') : String(e));
+      }
+      continue;
+    }
+    // A temporary post the start declares (0040): opened once, by a situation's effect; the post then serves as any post.
+    if (p.field === TEMPORARY_POST_FIELD) {
+      const spec = temporaryPosts.find((s) => s.id === p.subject);
+      if (spec === undefined) {
+        refuse('invalid', `no temporary post ${p.subject ?? 'none'} is declared in the start`);
+        continue;
+      }
+      if (state.postStates[spec.id] !== undefined) {
+        applied.push({ field: TEMPORARY_POST_FIELD, subject: spec.id, change: 'unchanged' });
+        continue;
+      }
+      try {
+        state = createTemporaryPost(map, state, spec);
+        applied.push({ field: TEMPORARY_POST_FIELD, subject: spec.id, change: 'opened' });
+      } catch (e) {
+        refuse('invalid', e instanceof CommandError ? e.problems.join('; ') : String(e));
+      }
+      continue;
+    }
+    // Lane 1.11: a government the start declares is established once; its declared regions pass to it from whoever held them.
+    if (p.field === GOVERNMENT_ESTABLISHED_FIELD) {
+      const spec = declaredGovernments.find((g) => g.id === p.subject);
+      if (spec === undefined) {
+        refuse('invalid', `no government ${p.subject ?? 'none'} is declared in the start`);
+        continue;
+      }
+      if (spec.regions.every((r) => state.regionGovernments[r] === spec.id)) {
+        applied.push({ field: GOVERNMENT_ESTABLISHED_FIELD, subject: spec.id, change: 'unchanged' });
+        continue;
+      }
+      // 0069, 0070: a region a people governs themselves passes only to a government of its own people.
+      const moved = spec.regions.map((r) => regionMoveProblem(map, state.regionGovernments[r] ?? 'unknown', spec.id)).find((x) => x !== null) ?? null;
+      if (moved !== null) {
+        refuse('self_governing_region', moved);
+        continue;
+      }
+      const governments: Record<string, DepartmentId | 'unknown'> = { ...state.regionGovernments };
+      for (const r of spec.regions) governments[r] = spec.id;
+      state = { ...state, regionGovernments: governments as State['regionGovernments'] };
+      applied.push({ field: GOVERNMENT_ESTABLISHED_FIELD, subject: spec.id, change: 'established' });
       continue;
     }
     if ((p.field !== GOVERNMENT_CLOSED_FIELD && p.field !== DEPARTMENT_SIDE_FIELD) || p.subject === null) {

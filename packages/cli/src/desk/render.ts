@@ -34,7 +34,8 @@ export function situationLines(views: readonly SituationView[], menu: PrincipalM
     out.push(`${s.id}: ${t(s.title)} (${s.status}, before you since day ${s.surfacedDay.toString()})`);
     out.push(`  ${t(s.text)}`);
     if (s.staffAuthor !== null) out.push(`  The staff's advice comes from ${s.staffAuthor} (in your inbox).`);
-    for (const o of s.options) out.push(`  - ${o.id}: ${t(o.label)}${o.proposedBy === 'inaction' ? '' : ` (urged by ${o.proposedBy.join(', ')})`}`);
+    else if (s.staffAbsence === 'no-adviser-on-record') out.push('  No recommendation from the staff');
+    for (const o of s.options) out.push(`  - ${o.id}: ${t(o.label)}${Array.isArray(o.proposedBy) ? ` (urged by ${o.proposedBy.join(', ')})` : ''}`);
     if (choice !== undefined && choice.delegableTo.length > 0) out.push(`  You may hand it to: ${choice.delegableTo.join(', ')}`);
   }
   return out;
@@ -65,7 +66,7 @@ export function morningLines(request: SeatRequest, sinceDay: number, t: Strings,
   const attention = header.attention === null ? '' : `; ${header.attention.toString()} attention left this week`;
   const war = menu.atWarSince === null ? '; at peace' : '';
   const out = [`=== ${header.date} (day ${request.requestDay.toString()}): ${view.person}, ${menu.faction}${war}${attention} ===`];
-  const fresh = dispatchLog(view, sinceDay);
+  const fresh = dispatchLog(view, sinceDay, t);
   out.push(fresh.length === 0 ? 'Nothing new has arrived.' : `${fresh.length.toString()} new in your inbox:`, ...fresh.map((l) => `  ${l}`));
   const open = view.situations.filter((s) => s.status === 'open');
   if (open.length > 0) out.push(`Before you: ${open.map((s) => `${s.id} (${t(s.title)})`).join('; ')}. Type "situations".`);
@@ -75,11 +76,11 @@ export function morningLines(request: SeatRequest, sinceDay: number, t: Strings,
 }
 
 /** The days of a turn passing: each day's new reports, any of his orders refused, and why the turn stopped. */
-export function dayLines(day: { readonly day: number; readonly date: string; readonly reports: readonly ReportView[]; readonly refused: readonly { readonly what: string; readonly reason: string }[] }): string[] {
+export function dayLines(day: { readonly day: number; readonly date: string; readonly reports: readonly ReportView[]; readonly refused: readonly { readonly what: string; readonly reason: string }[] }, t: Strings = key => key): string[] {
   const out = [`--- ${day.date} (day ${day.day.toString()}) ---`];
   for (const r of day.refused) out.push(`  Refused: ${r.what} (${r.reason})`);
   const view = { reports: day.reports } as unknown as Parameters<typeof dispatchLog>[0];
-  for (const l of dispatchLog(view)) out.push(`  ${l}`);
+  for (const l of dispatchLog(view, 0, t)) out.push(`  ${l}`);
   return out;
 }
 

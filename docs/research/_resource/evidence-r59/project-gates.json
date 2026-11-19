@@ -1,0 +1,12 @@
+[
+  {
+    "command": "MANDATE_NO_GIT=1 npm.cmd run check",
+    "exit": 2,
+    "log": "docs\\research\\_resource\\evidence-r59\\check.log"
+  },
+  {
+    "command": "MANDATE_NO_GIT=1 npm.cmd run run:done-check",
+    "exit": 1,
+    "log": "docs\\research\\_resource\\evidence-r59\\done-check.log"
+  }
+]

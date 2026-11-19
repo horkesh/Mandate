@@ -105,7 +105,7 @@ export const SourcePolicySchema = z.strictObject({
   weak: z.array(z.string().min(1)).default([]),
   /** 0085: the evidence-date boundaries and the class of each innate stat and trait; read by the people checks (`banned-sources.ts`). */
   evidence: z
-    .strictObject({ innateThrough: date, startBefore: date, innateStats: z.array(z.string().min(1)), innateTraits: z.array(z.string().min(1)) })
+    .strictObject({ innateThrough: date, startBefore: date, innateStats: z.array(z.string().min(1)), innateTraits: z.array(z.string().min(1)), factTraits: z.array(z.string().min(1)).optional(), referenceWorks: z.array(z.string().min(1)).optional(), factBlocs: z.array(z.string().min(1)).optional() })
     .optional(),
 });
 export const ChecklistSchema = z.strictObject({
@@ -194,14 +194,20 @@ export function resolvedStrings(def: SituationDef, strings: ReadonlyMap<string, 
  * The content hash a sign-off records (A7; section 5): the item in canonical
  * JSON without its `gateReview`, with the text of every string it shows, in
  * every locale (review N4: a translation is part of what was signed), and every
- * source row it cites. Any edit to any of them voids the sign-off.
+ * source row it cites. Any edit to any of them voids the sign-off. A field the schema added later hashes as absent while
+ * it is empty (an option's `calls`, lane 1.11), so adding a field never voids a sign-off that did not use it.
  */
 export function gateContentHash(def: SituationDef, strings: LocaleStrings, provenance: ProvenanceFile): string {
   const { gateReview: _review, ...signed } = def;
   // Lane 1.5b: an option that is no policy carries nothing new, so items signed before the field existed keep their hash;
   // naming a policy row changes the content and voids the sign-off.
   const inaction = signed.inaction === null ? null : (({ policy, ...rest }) => (policy === null ? rest : { ...rest, policy }))(signed.inaction);
-  const item = { ...signed, options: signed.options.map(({ policy, ...o }) => (policy === null ? o : { ...o, policy })), inaction };
+  const item = {
+    ...signed,
+    // Lane 1.11: so are an option's calls when it issues none.
+    options: signed.options.map(({ policy, calls, ...o }) => ({ ...o, ...(policy === null ? {} : { policy }), ...(calls.length === 0 ? {} : { calls }) })),
+    inaction,
+  };
   const cited = new Set(def.citations.map((c) => c.source));
   const sources = provenance.sources.filter((s) => cited.has(s.key)).sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0));
   const byLocale: Record<string, Record<string, string>> = {};
@@ -373,6 +379,17 @@ export function checkGate(
     def.citations.forEach((c, i) => {
       if (!sources.has(c.source)) err('unknown-reference', `citations[${i}].source`, `"${c.source}" is not a source in PROVENANCE.json`, 'a source key (A5)');
       if (gate.sourcePolicy.banned.includes(c.source)) err('gate-banned-source', `citations[${i}].source`, `"${c.source}" is banned as evidence by the pack's source policy`, 'another source (A6)');
+    });
+    // The lead's S18 ruling: a declared absence of staff advice cites the research that found none.
+    (def.staffAbsence?.cites ?? []).forEach((c, j) => {
+      if (!sources.has(c.source)) err('unknown-reference', `staffAbsence.cites[${j}].source`, `"${c.source}" is not a source in PROVENANCE.json`, 'a source key (A5)');
+    });
+    // The lead's S17 ruling: a proposal's basis in law and practice resolves its cites too.
+    def.options.forEach((o, i) => {
+      if (!phase0.isProposalBasis(o.proposedBy)) return;
+      o.proposedBy.cites.forEach((c, j) => {
+        if (!sources.has(c.source)) err('unknown-reference', `options[${i}].proposedBy.cites[${j}].source`, `\"${c.source}\" is not a source in PROVENANCE.json`, 'a source key (A5)');
+      });
     });
     if (def.citations.length > 0 && def.citations.every((c) => gate.sourcePolicy.weak.includes(c.source))) err('gate-weak-sources', 'citations', 'every citation is a weak source', 'at least one source the policy does not mark weak (A6)');
 
@@ -682,6 +699,72 @@ export function blocSignOffProblems(blocs: readonly phase0.BlocRule[], names: Re
 
 /** The fewest gated decisions of three or more options before C2 counts positions. */
 export const C2_MINIMUM = 3;
+
+/**
+ * The decisions about atrocity-class conduct (0074; lane 1.14). The lever sweep (D6) reads such a decision's inaction
+ * outcome as if it were a watched option, since letting the order or sentence stand is only inaction. Two routes:
+ * - **backward:** the decision's trigger depends on an atrocity-class item, by any route, as D5 reads it;
+ * - **forward** (G-1.14a): the decision's inaction fires an atrocity-class item, directly or through a chain of items,
+ *   such as a death sentence brought to the president that is carried out unless he acts.
+ */
+export function atrocityDecisions(situations: readonly SituationDef[], gate: GateData): Set<string> {
+  const topics = new Map(gate.register.topics.map((t) => [t.id, t]));
+  const classes = new Map(gate.classes.classes.map((c) => [c.id, c]));
+  const atrocity = (topic: string) => classes.get(topics.get(topic)?.class ?? '')?.atrocity === true;
+  const isAtrocity = (def: SituationDef) => !('none' in def.gate) && def.gate.topics.some(atrocity);
+  const items = situations.map((def) => ({ def }));
+  const seeds = situations.flatMap((def) => {
+    const t = def.gate;
+    if ('none' in t || !t.topics.some(atrocity) || t.actingSide === null) return [];
+    return [{ id: def.id as string, actingSide: t.actingSide as string }];
+  });
+  const taint = atrocityTaint(items, seeds);
+  const out = new Set<string>();
+  for (const def of situations) {
+    if (def.kind !== 'decision') continue;
+    if ((taint.get(def.id) ?? []).some((t) => t.option === null && t.atrocity !== def.id)) out.add(def.id);
+  }
+  const atrocities = new Set(situations.filter(isAtrocity).map((d) => d.id as string));
+  for (const decision of situations.filter((d) => d.kind === 'decision')) {
+    const fired = inactionSeeds(decision, situations);
+    if (fired.length === 0) continue;
+    // The decision itself is resolved by its inaction, so no route runs back through one of its own options.
+    const others = items.filter((x) => x.def.id !== decision.id);
+    const reach = dependenceTaint(others, fired.map((id) => ({ id, option: null, atrocity: decision.id, actingSide: '', via: [] })));
+    if ([...reach.entries()].some(([id, ts]) => atrocities.has(id) && ts.some((t) => t.option === null))) out.add(decision.id);
+  }
+  return out;
+}
+
+/**
+ * The items whose trigger a decision's inaction satisfies directly (G-1.14a): a chain stage that follows it whatever
+ * was chosen, a flag its inaction outcome sets or clears, a read that it was decided with any outcome, or a read that it
+ * was not decided with some option (which inaction leaves true).
+ */
+function inactionSeeds(decision: SituationDef, situations: readonly SituationDef[]): string[] {
+  const flags = new Set((decision.inaction?.effects ?? []).flatMap((e) => ('setFlag' in e ? [e.setFlag] : 'clearFlag' in e ? [e.clearFlag] : [])));
+  return situations
+    .filter((x) => x.id !== decision.id)
+    .filter((x) => {
+      const scope = dependenceScopes(x)[0]!;
+      if (scope.follows?.situation === decision.id && scope.follows.options === null) return true;
+      const reads = new Set(scope.conditions.flatMap((c) => phase0.flagsIn(c)));
+      if ([...flags].some((f) => reads.has(f))) return true;
+      return scope.conditions.some((c) => inactionSatisfies(c, decision.id, false));
+    })
+    .map((x) => x.id as string);
+}
+
+/** Whether a decision resolved by inaction makes this read of it true (under `negated`, false). */
+function inactionSatisfies(c: phase0.Condition, situation: string, negated: boolean): boolean {
+  if ('all' in c) return c.all.some((x) => inactionSatisfies(x, situation, negated));
+  if ('any' in c) return c.any.some((x) => inactionSatisfies(x, situation, negated));
+  if ('not' in c) return inactionSatisfies(c.not, situation, !negated);
+  if (!('decided' in c) || c.decided !== situation) return false;
+  // Inaction is a decision with no option: `decided` with any outcome holds; `decided` naming options does not.
+  const holds = c.options === null;
+  return negated ? !holds : holds;
+}
 
 /** One route by which an item, or one of its options, depends on an atrocity-class item (D5; gate G4). */
 export interface AtrocityTaint {

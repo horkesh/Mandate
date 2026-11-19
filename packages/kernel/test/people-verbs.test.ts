@@ -546,7 +546,7 @@ describe('regard between people (lane 1.5’s column)', () => {
 });
 
 function option(id: string, displayKey: number, over: Partial<OptionDef> = {}): OptionDef {
-  return { id, label: `situation.x.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [], lockedCosts: [], orders: [], honours: [], watched: false, policy: null, gate: null, ...over };
+  return { id, label: `situation.x.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [], lockedCosts: [], orders: [], calls: [], honours: [], watched: false, policy: null, gate: null, ...over };
 }
 
 function decision(id: string, over: Partial<SituationDef> = {}): SituationDef {

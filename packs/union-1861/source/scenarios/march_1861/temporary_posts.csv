@@ -1,0 +1,3 @@
+id,name,kind,department,parent,holder,region,operation,sources,notes
+us_sumter_relief_expedition,Fort Sumter relief expedition,temporary_command,us_war,us_secretary_war,fox_gustavus_v,new_york,sumter_relief,"OR, ORN","Fox, a man without a post, commands the troops and stores (OR I-1 p. 235; ORN I-4 pp. 245 to 248). Opened by S01's provision_notice (0040)."
+us_dept_virginia,Department of Virginia (Fort Monroe),temporary_command,us_war,us_general_in_chief,butler_benjamin_f,fort_monroe,fort_monroe_command,OR,"Butler commands at Fort Monroe from 22 May 1861 (OR I-2 pp. 648 to 651: his reports from the fort, 24 to 27 May). A STAND-IN for a department created in play (1B); opened by butler_at_fort_monroe."

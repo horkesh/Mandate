@@ -18,7 +18,7 @@
  * a rule-driven principal (a history run); the view layer never carries it
  * (0040; checked by `test/boundary.test.ts`).
  */
-import type { DepartmentId, FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
+import type { DepartmentId, FactionId, ForceBlockId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import type { ClaimKind, ReportType, SubjectKind } from '../knowledge/report.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { Posture } from '../plans/goal.ts';
@@ -68,6 +68,16 @@ export type Condition =
   | { readonly headquartersAt: { readonly post: PostId; readonly region: RegionId } }
   /** Days since this situation surfaced to the principal (its clock; gate re-check N6): for `expiresWhen`, `appearsWhen` and `waitsOn`. */
   | { readonly clockAtLeast: number }
+  /**
+   * A call for regiments reached the holder of a post at least `days` ago (lane 1.11, the lead's ruling): the cause of a
+   * state's act a pack-set delay after the call arrives. A STAND-IN until conventions and legislatures are modelled (1B):
+   * a run where the call comes late moves the act with it.
+   */
+  | { readonly callReceived: { readonly post: PostId; readonly days: number } }
+  /** The post's holder today is this person (lane 1.11: the post-holder check). */
+  | { readonly holds: { readonly post: PostId; readonly person: PersonId } }
+  /** The post's holder today carries this practice (lane 1.5b's cited practices): text that depends on his own conduct. */
+  | { readonly holderPractice: { readonly post: PostId; readonly practice: string } }
   /** A chamber of the legislature is in this state today (lane 1.6, 0040): which options are legal. A public fact. */
   | { readonly chamber: { readonly id: string; readonly state: ChamberStateKind } }
   /**
@@ -102,8 +112,15 @@ export type Effect =
         readonly reason: string;
         /** The side whose measure this is, for the gate's sign rule (E7); null if no side's. */
         readonly side: FactionId | null;
+        /** Institutional succession only: replace this incumbent with this successor; never a free appointment. */
+        readonly succession?: { readonly from: PersonId; readonly to: PersonId };
       };
-    };
+    }
+  /**
+   * A landing (lane 1.11, on lane 1.4b's detachment path): `men` of a block aboard ship go ashore in `region`, across an
+   * edge from the ship. `forces` applies it, or refuses it with a typed reason, in phase 4c beside `command`'s proposals.
+   */
+  | { readonly landing: { readonly parent: ForceBlockId; readonly men: number; readonly region: RegionId } };
 
 /**
  * An order an option issues: always in the principal's name, through the validated command path (0052). It names a
@@ -114,6 +131,17 @@ export interface OptionOrder {
   readonly to: PostId;
   readonly posture: Posture;
   readonly objective: RegionId | null;
+  readonly route: RouteKind;
+}
+
+/**
+ * A call for regiments an option issues (lane 1.11): in the principal's name, through the validated call path, as a
+ * goal goes through the order path (`dispatchOrder`). Each governor answers by his own compliance (lane 1.7).
+ */
+export interface OptionCall {
+  readonly to: PostId;
+  readonly regiments: number;
+  readonly termDays: number;
   readonly route: RouteKind;
 }
 
@@ -141,6 +169,30 @@ export interface GateReview {
   readonly notes: Readonly<Record<string, string>>;
 }
 
+/**
+ * A proposal grounded in law and practice rather than a person (the lead's ruling on S17, a recorded exception): only an
+ * option the gate keeps (the register lists it in `supersededOptions`, or marks it `watched`) may carry it, so no adviser
+ * is invented for a policy the record shows was practised but nobody on the staff urged. The validator refuses it anywhere else.
+ */
+export type ProposalBasis =
+  | { readonly basis: 'law-and-practice'; readonly cites: readonly SituationCitation[] }
+  /**
+   * The principal's own consideration, on record before the decision (the lead's S12 ruling): the document is his own
+   * (`author`), dated (`dated`, ISO). It is provenance only: the option shows no proposer and no staff line (B9).
+   */
+  | { readonly basis: 'principal-initiative'; readonly author: PersonId; readonly dated: string; readonly cites: readonly SituationCitation[] };
+
+/** True for a proposal's basis in law and practice (not a list of persons, nor inaction). */
+export function isProposalBasis(p: unknown): p is ProposalBasis {
+  return typeof p === 'object' && p !== null && !Array.isArray(p) && ['law-and-practice', 'principal-initiative'].includes((p as { basis?: unknown }).basis as string);
+}
+
+/** A named man whose words or acts an item gives, and the post he must hold for it to fire (null: serving anywhere). */
+export interface Speaker {
+  readonly post: PostId | null;
+  readonly person: PersonId;
+}
+
 export interface SituationCitation {
   readonly source: string;
   readonly at: string | null;
@@ -158,7 +210,7 @@ export interface OptionDef {
   /** The neutral display order: the order advisers raised them, unrelated to the historical default (0041). */
   readonly displayKey: number;
   /** Who argued for it, in their own terms (C1): person ids, or `inaction`. */
-  readonly proposedBy: readonly PersonId[] | 'inaction';
+  readonly proposedBy: readonly PersonId[] | 'inaction' | ProposalBasis;
   /** Options in different groups may be taken together; an option with no group is taken alone (catalogue P3). */
   readonly group: string | null;
   readonly appearsWhen: Condition | null;
@@ -169,6 +221,8 @@ export interface OptionDef {
   /** Costs that apply on every use, whatever follows (gate B5): no condition, no chance. */
   readonly lockedCosts: readonly Effect[];
   readonly orders: readonly OptionOrder[];
+  /** Calls for regiments to governors' posts (lane 1.11). */
+  readonly calls: readonly OptionCall[];
   /**
    * Values the option honours, which a delegate weighs when he decides by his values (0040). An option that names a
    * policy row honours exactly that row's values (the validator checks it), so the map and a delegate's choice agree.
@@ -256,6 +310,11 @@ export interface SituationDef {
   readonly historicalDefault: HistoricalDefault | null;
   readonly staffLine: StaffLine | null;
   /**
+   * A decision with no staff recommendation, as a typed and cited absence (the lead's S18 ruling): the research that found
+   * no adviser on record. It is told by a plain report; the desk shows only that the staff gave no recommendation.
+   */
+  readonly staffAbsence?: { readonly none: 'no-adviser-on-record'; readonly cites: readonly SituationCitation[] };
+  /**
    * For a notice that moves a self-governing department (0070): whose act it is. It must be the proposal's subject, so
    * a nation's act is the nation's own and never a side's. Absent for every other item.
    */
@@ -267,6 +326,14 @@ export interface SituationDef {
   readonly effects: readonly Effect[];
   /** Required for a notice: the report that tells the principal. Null for a decision (its staff line is its report). */
   readonly report: NoticeReport | null;
+  /**
+   * The post-holder check (lane 1.11, the lead's rule): the named men whose words or acts the text gives, each in the post
+   * he must hold that day (null: serving, in whatever post). The kernel fires the item only while every one of them
+   * does, so it never quotes a man the player has removed. Absent or empty: the text gives no named man's words or acts.
+   */
+  readonly speakers?: readonly Speaker[];
+  /** Why the text names a man without giving his words or acts (a treaty's signers, an appointment as the record states it). */
+  readonly namedOnly?: string;
   readonly gate: GateTag;
   readonly gateReview: GateReview | null;
   readonly citations: readonly SituationCitation[];

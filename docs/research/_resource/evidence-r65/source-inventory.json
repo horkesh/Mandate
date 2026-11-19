@@ -1,0 +1,332 @@
+[
+  {
+    "file": "asjohnston-p270.jpg",
+    "bytes": 641768,
+    "sha256": "fa3796d5ac8e2b2762da8a5949658a2d890bdf94697103c74183a2ead7fba9f2"
+  },
+  {
+    "file": "asjohnston-verified-p270.jpg",
+    "bytes": 775709,
+    "sha256": "60dfc91c1473dc89c300a29e6bced6ca663b594f024312926c3e4ab44b354710"
+  },
+  {
+    "file": "catalog-0.json",
+    "bytes": 898,
+    "sha256": "1d641bac658531f64e1f229c1b5938dc9dd7f3066f0bdcec6894c599c2211612"
+  },
+  {
+    "file": "catalog-1.json",
+    "bytes": 1461,
+    "sha256": "546e258fb2baf7f469ada680cc87c0dfdfef246ed0542298eeda5ed609d2c26a"
+  },
+  {
+    "file": "catalog-2.json",
+    "bytes": 375,
+    "sha256": "2a7ec290ac41f7b191d548e214f1b2a7c42fd957dd92928c723eebca40a8cdd5"
+  },
+  {
+    "file": "catalog-3.json",
+    "bytes": 262,
+    "sha256": "a6696fb52b38c3740615002652ea690705a6520b4f8fdb74b8408bc0dbf68fdd"
+  },
+  {
+    "file": "catalog-4.json",
+    "bytes": 317,
+    "sha256": "2dff624b45e392607ca84b4eebc943365275866adb6fa0777c0f37cd1790a868"
+  },
+  {
+    "file": "catalog-5.json",
+    "bytes": 229,
+    "sha256": "45d893b1102b1a88cf26ed871e1a1652271169f186bb62b34bf2e3f725104ae3"
+  },
+  {
+    "file": "catalog-6.json",
+    "bytes": 549,
+    "sha256": "3af2913e339d400bdf2b62710875a4eb4205fa32fb030a97d59b1ebee8f018e3"
+  },
+  {
+    "file": "houston-p599.jpg",
+    "bytes": 778032,
+    "sha256": "fbda6bdc0d285f2e3bb8789f08ce6a3980f0f11beeb525bf2da642c1e4a6c1ce"
+  },
+  {
+    "file": "houston-p600.jpg",
+    "bytes": 759288,
+    "sha256": "1949421fa7ef936b43c37d9505be167361b4efaed224082f2aacc4f1ae634096"
+  },
+  {
+    "file": "houston-p644.jpg",
+    "bytes": 580386,
+    "sha256": "44dcad13187af8e86b62a483dbe0ab1ca8b56b80d9553f9858fa81ee5f418945"
+  },
+  {
+    "file": "houston-p645.jpg",
+    "bytes": 686457,
+    "sha256": "a4495a02e274fd8bd75194700c5eacb8586e6760463adcf0f8fb4c0d024e98aa"
+  },
+  {
+    "file": "houston-verified-p599.jpg",
+    "bytes": 707203,
+    "sha256": "6dc7869a2e02564c86b08e4fcadf5bf1997c0d2cbae0b1fcc096b0a0ea2ef7d6"
+  },
+  {
+    "file": "houston-verified-p600.jpg",
+    "bytes": 707357,
+    "sha256": "8b4377efc21e2533e4d76389d7ff4f76af7c0a9a910665ddeda88534f5331899"
+  },
+  {
+    "file": "houston-verified-p610.jpg",
+    "bytes": 413089,
+    "sha256": "d655aa133afcb8d3fe02c42a1234bda34185d4ac74b50637b86bf1f73b25c937"
+  },
+  {
+    "file": "houston-verified-p642.jpg",
+    "bytes": 657122,
+    "sha256": "0434a6dd0e9ed03e586bd0a8e38906d2124bce7c1c1f5e4b9a1c65463cb38355"
+  },
+  {
+    "file": "houston-verified-p644.jpg",
+    "bytes": 728248,
+    "sha256": "394fb92adb7770668263a08dec12468819becba09a9c4226850853469e27dcdb"
+  },
+  {
+    "file": "houston-verified-p645.jpg",
+    "bytes": 310965,
+    "sha256": "cd3e1111bc1c6eeff2ad370c5698ec5ab0ec56455b31232ccff3154457dd8252"
+  },
+  {
+    "file": "journalofsecessi00texa-metadata.json",
+    "bytes": 171736,
+    "sha256": "443f88c8a15563ee745b22ec61996bdd3a83d3f839d1689f0f7aa27b14dea844"
+  },
+  {
+    "file": "journalofsecessi00texa-scandata.xml",
+    "bytes": 969669,
+    "sha256": "9bb0a8147e76ac41246fad987acc19f1cc6ea48859ba1607e6194efa9b5520c2"
+  },
+  {
+    "file": "journalofsecessi00texa.txt",
+    "bytes": 1356760,
+    "sha256": "fdc32a731dfff02da3aeafaaeccac44991d5bafe2c93328a16401bbbe04b1e2b"
+  },
+  {
+    "file": "last-catalog-0.json",
+    "bytes": 958,
+    "sha256": "5ed0293efa80879dfcb569caf111b6f94ac073235c441cb111f084d5f0060133"
+  },
+  {
+    "file": "last-catalog-1.json",
+    "bytes": 392,
+    "sha256": "ea69b36b2509ea33201ee2a1be3900198c5ebd6a48d69afb174d2d94449f63fc"
+  },
+  {
+    "file": "last-catalog-2.json",
+    "bytes": 668,
+    "sha256": "6d480a646492eac17ecd1334cfba16c3ec77a9da5a7cf8f5c7cd478257fe8e94"
+  },
+  {
+    "file": "lifecampaignsof00mccl-curl.txt",
+    "bytes": 1133062,
+    "sha256": "ce6aa6410212749cbff7c3526757aad1d2f18706466781fe6affdc81434f2645"
+  },
+  {
+    "file": "lifecampaignsof00mccl-metadata.json",
+    "bytes": 95800,
+    "sha256": "b2b8ec40102a7abf7e8888d4c062ec76435c8b6e75792189efa2eb7030bd1386"
+  },
+  {
+    "file": "lifecampaignsof00mccl-scandata.xml",
+    "bytes": 268362,
+    "sha256": "0645c4ddb63afa8541ee47fa14880b8ee2e14a2fec5c068654a159087c4e3170"
+  },
+  {
+    "file": "lifecampaignsofm00mccl-metadata.json",
+    "bytes": 98102,
+    "sha256": "05e7b7dd74b0a936a90f49e075f3fb3e8570a1c99455d28c86fcec7ed286de26"
+  },
+  {
+    "file": "lifecampaignsofm00mccl.txt",
+    "bytes": 1128296,
+    "sha256": "0bc33d7d31a45c778a0d18dce2ceab8c38ccc6660ba4d3955c6a002f43cc11f9"
+  },
+  {
+    "file": "lifegenalbert00johnrich-metadata.json",
+    "bytes": 146799,
+    "sha256": "6c8975ab1637e59bc42fd99455df8d416da83bf66a3aef610219b4c21ff6af38"
+  },
+  {
+    "file": "lifejohnjcritte02colegoog-metadata.json",
+    "bytes": 5289,
+    "sha256": "bc589b5722d435e442e4287bf94d196230d9f9ed4efdc0046eecc3abb085cb7c"
+  },
+  {
+    "file": "lifeofgenalberts00john-metadata.json",
+    "bytes": 147450,
+    "sha256": "f16846a09ed421422a93728e62e19105649596101d6c5c8238ebff46ab68227b"
+  },
+  {
+    "file": "lifeofgenalberts00john-scandata.xml",
+    "bytes": 419814,
+    "sha256": "6f95e9c064ff21b2c25b40c90c22aac1afe1764af11c54088f93a71bc78edf0d"
+  },
+  {
+    "file": "lifeofgenalberts00john.txt",
+    "bytes": 2698935,
+    "sha256": "c710d71c1b9f8a850bed377dcad78da17a63938c6806770cbe6c1a2c7c902fe6"
+  },
+  {
+    "file": "lifeselectlitera00cran-metadata.json",
+    "bytes": 127003,
+    "sha256": "e15a42eae7bf81e7a71fd6ae5fd33c598b94e7d24a906753c8552b0cf4a065cd"
+  },
+  {
+    "file": "lifeselectlitera00cran-scandata.xml",
+    "bytes": 364147,
+    "sha256": "93a06da6d920f0bb7a8713807c97153a31a1deb18c948e0e87c48fcfc2055c2b"
+  },
+  {
+    "file": "lifeselectlitera00cranrich-metadata.json",
+    "bytes": 128998,
+    "sha256": "ccf1d3f08d73fa30ab02acd38e0ac2e10152446bd53f7772392b87aa764f1da9"
+  },
+  {
+    "file": "lifeselectlitera00cranrich.txt",
+    "bytes": 2464113,
+    "sha256": "4d5b7ee14d17e4e5b4b124975f36088c56ee59af4d5039bb6a6c5f2c9b4b52d9"
+  },
+  {
+    "file": "long-catalog.json",
+    "bytes": 1381,
+    "sha256": "1ae102a9deffe1f94fbfeb6d7529039ce5513a2084ed90ffcb34a0b0ec8a7656"
+  },
+  {
+    "file": "long-observed-n112.jpg",
+    "bytes": 992289,
+    "sha256": "5bee66b58e4f1e8ab7c4fa309617740a8bc8a62db16cc4412e832d97dfd29c99"
+  },
+  {
+    "file": "long-observed-n113.jpg",
+    "bytes": 1151931,
+    "sha256": "f16c963cef1e2c9f234cf05c03ae3e8c2b9e8552acb60ba29cd8c5f8e52f8c69"
+  },
+  {
+    "file": "long-verified-p88.jpg",
+    "bytes": 1246611,
+    "sha256": "d5396a801c7fe2f108c2265eb395258f47ba9ff919005b3b5fe87ccb44ab6767"
+  },
+  {
+    "file": "long-verified-p89.jpg",
+    "bytes": 1372347,
+    "sha256": "0f98ed3d89bb8c29823a888ebdb56f059a3f38a6687254d8becbb50672267dab"
+  },
+  {
+    "file": "memoirsofroberte00longuoft-metadata.json",
+    "bytes": 136864,
+    "sha256": "d0af416b3f90bedda506c66090a86190751310aa884266ad75d037a34758e711"
+  },
+  {
+    "file": "memoirsofroberte00longuoft.txt",
+    "bytes": 1894089,
+    "sha256": "ceff4ea4084ab4a516a4d2e5141ef4a31eac1b0cc1d415620efd085be9fe28bb"
+  },
+  {
+    "file": "memoirsofroberte01long-metadata.json",
+    "bytes": 137481,
+    "sha256": "6cc61db943d49d4fc0780bd674f737c2e06a760671efaa35889f769b66127d37"
+  },
+  {
+    "file": "memoirsofroberte01long.txt",
+    "bytes": 1905302,
+    "sha256": "b83cd59eb3c107716f08540281ff4a318f92f476bd175158548a5d0bedaca54a"
+  },
+  {
+    "file": "more-catalog-0.json",
+    "bytes": 941,
+    "sha256": "a3e3d37244af4d6247ece4f78c566ed48a4c454883c5a75ca796bea540715b33"
+  },
+  {
+    "file": "more-catalog-1.json",
+    "bytes": 809,
+    "sha256": "f05637f430651da1e37d7a736399f4f310e6c34204aad9e60cb63c6b45bf7b5f"
+  },
+  {
+    "file": "more-catalog-2.json",
+    "bytes": 240,
+    "sha256": "2c11e6f8219fb34b6e96dbb4621484c05ffa3b749196b813ac1339e428e37e36"
+  },
+  {
+    "file": "more-catalog-3.json",
+    "bytes": 1487,
+    "sha256": "6476da7da35c0baf53459ca6510e5844257fb7674c81e62c07bbe56e7c41b270"
+  },
+  {
+    "file": "more-catalog-4.json",
+    "bytes": 261,
+    "sha256": "a6f8e271cf9127d2b8661e65760c92bd979dc43f00517e463638950248ce050b"
+  },
+  {
+    "file": "or-I1-check-p274.jpg",
+    "bytes": 926405,
+    "sha256": "8b0b6f948523261a09e591aab90a2d53d9160177e62c4f71a450425fd6f0eaf5"
+  },
+  {
+    "file": "or-I1-p559.jpg",
+    "bytes": 703398,
+    "sha256": "999252a6b51338d347b52d14b5d1f3e33e4e0566538ab729fc61e7a8db3d69eb"
+  },
+  {
+    "file": "or-I1-p560.jpg",
+    "bytes": 789037,
+    "sha256": "9fa143100ffcecafba05d6f7e48c113b9a2ae63c63613d469eb4f191bc753499"
+  },
+  {
+    "file": "or-I1-verified-p559.jpg",
+    "bytes": 768242,
+    "sha256": "228a8b2aae68d0a31f7efa08eeb310ecaefb1d1c1585fff7272fef635fa161d8"
+  },
+  {
+    "file": "recollectionslet00leer-metadata.json",
+    "bytes": 95131,
+    "sha256": "e161a5b306fd5a3547dd8206c70526903448e85e3795c455975f515237d6c0e2"
+  },
+  {
+    "file": "recollectionslet00leer-scandata.xml",
+    "bytes": 257783,
+    "sha256": "f314377123cec2453d98cb83590e04738fd9e0402e952afeb213a0c50e765b45"
+  },
+  {
+    "file": "recollectionslet00leer.txt",
+    "bytes": 1006834,
+    "sha256": "7f762c02c71f971efb9112184a25f8254bad84acbeb6bec42df5258f94c820a8"
+  },
+  {
+    "file": "texas-observed-n20.jpg",
+    "bytes": 1247571,
+    "sha256": "710c832d3e5febd105c5526ac62774571697165dc7cca6e157f4ab94e9b97946"
+  },
+  {
+    "file": "texas-observed-n22.jpg",
+    "bytes": 1384999,
+    "sha256": "68566b3b8f7c23a7bf74b7041af75a18afe9e4d40988933f6f0108d9390d38ee"
+  },
+  {
+    "file": "texas-observed-n26.jpg",
+    "bytes": 1159134,
+    "sha256": "cc0ff413a9d36994c326c49c47e071a9c85a37a6274eb235ef2fa0e545b92f1f"
+  },
+  {
+    "file": "warofrebellionco0001vari-metadata.json",
+    "bytes": 141093,
+    "sha256": "45ace57bbd3f860977f581ce377beac338e6a344cb27f911ed342e595ff8c0c3"
+  },
+  {
+    "file": "warofrebellionco0001vari-scandata.xml",
+    "bytes": 954547,
+    "sha256": "981d7d2a938c218e7158706a67cf1d2091434c640edce7ea14ed64cd23a816b7"
+  },
+  {
+    "file": "warofrebellionco0001vari.txt",
+    "bytes": 2336051,
+    "sha256": "3021eef1063df4ff3854ae416926e21ab294c5f7245a6ff1fcd9fe310c008893"
+  }
+]

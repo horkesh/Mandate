@@ -1,0 +1,43 @@
+{
+  "id": "sumter_fired_upon",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.sumter_fired_upon.title",
+  "text": "situation.sumter_fired_upon.text",
+  "earliest": "1861-04-12",
+  "event": {
+    "flag": "sumter_fired"
+  },
+  "report": {
+    "authors": [
+      "us_fort_sumter",
+      "us_secretary_war"
+    ],
+    "reportType": "wire-dispatch"
+  },
+  "gate": {
+    "none": "news that a fort was fired on; no gate topic"
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-1 pp. 297 to 302 (Walker's telegrams of 10 and 11 April and Beauregard's replies, per the numbers note)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "chronology 1861-04-12"
+    }
+  ],
+  "effects": [
+    {
+      "propose": {
+        "owner": "politics",
+        "field": "framing",
+        "subject": "union",
+        "delta": 500,
+        "reason": "fired-on-first",
+        "side": "union"
+      }
+    }
+  ]
+}

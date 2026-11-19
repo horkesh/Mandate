@@ -1,0 +1,50 @@
+{
+  "id": "kentucky_neutrality_proclaimed",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.kentucky_neutrality_proclaimed.title",
+  "text": "situation.kentucky_neutrality_proclaimed.text",
+  "earliest": "1861-05-20",
+  "event": {
+    "callReceived": {
+      "post": "st_gov_kentucky",
+      "days": 35
+    }
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "government_closed",
+        "subject": "st_kentucky",
+        "delta": 1,
+        "reason": "proclaimed-neutrality",
+        "side": null
+      }
+    },
+    {
+      "setFlag": "kentucky_neutral"
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_secretary_state",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "governor-wire"
+  },
+  "gate": {
+    "none": "a state proclaims neutrality; no gate topic"
+  },
+  "citations": [
+    {
+      "source": "APPLETONS",
+      "at": "Kentucky: the proclamation of 20 May and the House resolution of 16 May"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "3.4"
+    }
+  ]
+}

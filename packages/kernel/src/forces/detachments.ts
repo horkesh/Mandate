@@ -18,7 +18,8 @@ import { ForcesError, type ForceBlockState } from './forces.ts';
 import type { Enlistment } from './enlistment.ts';
 
 /** Who proposes a detachment's change (the proposers `OWNED_FIELDS` lists for the detachments row). */
-export type DetachmentCause = 'operations' | 'command';
+/** Who proposed it: an operation's landing, `command`, or a situation's option (lane 1.11: S02's landing). */
+export type DetachmentCause = 'operations' | 'command' | 'situations';
 
 /** `forces`' part of a detachment proposal. */
 export type DetachmentDelta =

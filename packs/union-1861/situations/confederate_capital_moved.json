@@ -7,6 +7,7 @@
   "earliest": "1861-05-29",
   "event": { "all": [ { "dayAtLeast": 85 }, { "flag": "virginia_seceded" } ] },
   "subjects": ["davis_jefferson"],
+  "namedOnly": "The sourced arrival dates the administrative dispatch destination, not a quotation or discretionary act by a post holder. Davis here is Jefferson Davis, not Henry Winter Davis.",
   "effects": [{ "propose": { "owner": "command", "field": "faction_capital", "subject": "richmond", "side": "confederate", "delta": 0, "reason": "principal_seat_moved" } }],
   "report": { "authors": ["cs_secretary_war"], "reportType": "wire-dispatch" },
   "gate": { "none": "The president's administrative seat and dispatch destination; no secession argument, war aim, civilian consequence or prisoner policy." },

@@ -11,6 +11,7 @@
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
+    "typecheck:desk": "npm --prefix prototypes/desk run typecheck",
     "test": "vitest run",
     "check:boundary": "node tools/check-pack-boundary.mjs",
     "check:licences": "tsx tools/check-licences.ts",

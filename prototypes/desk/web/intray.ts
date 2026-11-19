@@ -3,6 +3,7 @@ import type {ReportView} from '@mandate/kernel/seat-api';
 import type {DeskSnapshot} from './adapter.ts';
 import {presenter} from './presentation.ts';
 import {S} from './strings.ts';
+import {pressStories} from './press.ts';
 
 export type SenderGroup = 'all'|'commanders'|'departments'|'press'|'cabinet'|'others';
 export interface TrayFilters {sender:SenderGroup;place:string;unread:boolean}
@@ -39,11 +40,12 @@ export function filterPapers(data:DeskSnapshot,papers:readonly ReportView[],filt
 export type SummarySection = keyof typeof S.weeklySections;
 export interface SummaryLine {paper:ReportView;text:string;source:string;date:string;section:SummarySection}
 export function weeklyPapers(data:DeskSnapshot) {
-  const through=data.morning.view.day,from=Math.max(0,through-6),{name,text}=presenter(data.strings);
+  const through=data.morning.view.day,from=Math.max(0,through-6),{name}=presenter(data.strings);
   const reports=data.morning.view.reports.filter(r=>r.day<=through&&r.receivedDay<=through);
   const lines:SummaryLine[]=[];
+  const battles=new Map<string,{paper:ReportView;text:string}>();
   const add=(section:SummarySection,paper:ReportView,words:string)=>lines.push({section,paper,text:words,
-    source:`${name(paper.author,'person')}, ${name(paper.authorPost??paper.author,paper.authorPost?'post':'person')}`,date:dateOfPaper(data,paper.day)});
+    source:paper.authorPost?`${name(paper.author,'person')}, ${name(paper.authorPost,'post')}`:name(paper.author,'person'),date:dateOfPaper(data,paper.day)});
   const holdings=new Map<string,string>();
   for(const r of [...reports].sort((a,b)=>a.day-b.day||(a.hour??0)-(b.hour??0)||a.receivedDay-b.receivedDay||a.id.localeCompare(b.id))){
     for(const c of r.reportedControl??[]){
@@ -53,17 +55,17 @@ export function weeklyPapers(data:DeskSnapshot) {
       holdings.set(c.region,current);
     }
     if(r.receivedDay<from)continue;
-    if(r.claims.some(c=>c.kind==='battle-result'||c.kind==='battle-phase')){
-      const places=[...new Set(r.claims.filter(c=>c.kind==='battle-result'||c.kind==='battle-phase').flatMap(c=>c.region?[name(c.region,'region')]:[]))];
-      add('battles',r,text(data.paperText[r.id]??'').split('; ')[0]||(places.length?S.weeklyBattle(places.join(', ')):S.claims['battle-result']!));
+    if(r.type!=='press')for(const c of r.claims.filter(c=>c.kind==='battle-result'||c.kind==='battle-phase')){
+      // New dispatches carry the actual battle id. Old presentation fixtures have
+      // no such id: group only the same region and day, never parse a message id.
+      const key=c.battle??`${c.region}:${r.day}`;
+      battles.set(key,{paper:r,text:c.region?S.weeklyBattle(name(c.region,'region')):S.claims['battle-result']!});
     }
     if(r.type==='press'){
-      // ReportView has no press story body. The console envelope ("about
-      // person ...") cannot supply one. R43's main-stories requirement is
-      // blocked here; retain only an attributed link to the received paper.
-      add('press',r,S.genres.press!);
+      for(const story of pressStories(r,key=>data.strings[key]??key))add('press',r,story.headline);
     }
   }
+  for(const {paper,text:words} of battles.values())add('battles',paper,words);
   if(data.morning.menu.menuKind==='principal')for(const review of data.morning.menu.reviews){
     const paper=reports.find(r=>r.id===review.report);
     if(paper)add('plans',paper,S.weeklyPlan(name(review.post,'post')));

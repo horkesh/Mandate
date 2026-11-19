@@ -10,7 +10,7 @@ import type { ControlChange, ControlDelta, ThresholdCrossing } from '../control/
 import type { FoughtDay, OccupationRecord, RetreatRecord } from '../combat/battle.ts';
 import type { StoresCrossing } from '../forces/stores.ts';
 import type { InfrastructureChange, InfrastructureDelta } from '../infrastructure/infrastructure.ts';
-import type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
+import type { FactionId, ForceBlockId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import type { Cut } from '../supply/supply.ts';
 import type { ReportBody } from '../knowledge/report.ts';
 import { templateFor } from '../knowledge/templates.ts';
@@ -82,6 +82,8 @@ export type Proposal =
   /** Lane 1.5: the principal addressed a bloc; blocs are `politics`' (lane 1.6), which applies nothing until it exists. */
   | { readonly proposal: 'address'; readonly bloc: string; readonly by: PersonId; readonly side: FactionId | null }
   | { readonly proposal: 'grievance'; readonly person: PersonId; readonly cause: 'bypassed'; readonly order: MessageId }
+  /** Lane 1.11: a situation's landing, for `forces`' detachment path (lane 1.4b), applied in phase 4c beside `command`'s proposals. */
+  | { readonly proposal: 'landing'; readonly parent: ForceBlockId; readonly men: number; readonly region: RegionId; readonly situation: SituationId; readonly option: string | null }
   | {
       readonly proposal: 'effect';
       readonly owner: string;
@@ -90,6 +92,7 @@ export type Proposal =
       readonly delta: number;
       readonly reason: string;
       readonly side: FactionId | null;
+      readonly succession?: { readonly from: PersonId; readonly to: PersonId };
       /** The situation, and the option (null: its inaction or a notice), it comes from. */
       readonly situation: SituationId;
       readonly option: string | null;
@@ -116,6 +119,7 @@ export interface DecisionPoint {
 /** What the map phases changed or found (lane 0.4). Truth, for the run report and tests; the player learns of it only through reports. */
 export type MapEvent =
   | { readonly event: 'capital_moved'; readonly faction: FactionId; readonly region: RegionId }
+  | { readonly event: 'post_succeeded'; readonly post: PostId; readonly from: PersonId; readonly to: PersonId; readonly reason: 'institutional-succession'; readonly cause: string | null }
   | { readonly event: 'control_changed'; readonly change: ControlChange }
   | { readonly event: 'threshold_crossed'; readonly crossing: ThresholdCrossing }
   /** The network's condition changed (lane 0.5): an edge or depot damaged or repaired, an edge obstructed or cleared. */
@@ -178,6 +182,16 @@ export function sideOf(ctx: TickContext, state: State, person: PersonId): Factio
   return f;
 }
 
+/**
+ * The side a message travels on: its sender's, or, for a sender on no side (a neutral government's officer answering a
+ * requisition, lane 1.11), its recipient's, since he sends it toward that side's lines.
+ */
+function travelSide(ctx: TickContext, state: State, sender: PersonId, recipient: PersonId | null): FactionId {
+  const own = sideOfPerson(ctx.world.map, state, sender);
+  if (own !== null || recipient === null) return own ?? sideOf(ctx, state, sender);
+  return sideOf(ctx, state, recipient);
+}
+
 /** One typed term of a man's oversight (hard rule 6): the pack's base, his distance, the wire, and the clamp. */
 export interface OversightTerm {
   readonly ovKind: 'base' | 'distance' | 'wire' | 'floor' | 'ceiling';
@@ -211,21 +225,22 @@ export function oversightOf(ctx: TickContext, state: State, person: PersonId, is
   if (value < raw) terms.push({ ovKind: 'ceiling', ovValue: value - raw });
   return { value, terms };
 }
+
 /** The route a message by `route` really takes (a wire sent off the wire goes by courier). No dice drawn. */
-export function takenRoute(ctx: TickContext, state: State, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId): RouteKind {
+export function takenRoute(ctx: TickContext, state: State, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId, recipient: PersonId | null = null): RouteKind {
   if (route !== 'wire' || from === to) return route;
-  const l = routeLatency(ctx.latency, ctx.world.rules.latency, route, from, to, sideOf(ctx, state, sender), null);
+  const l = routeLatency(ctx.latency, ctx.world.rules.latency, route, from, to, travelSide(ctx, state, sender, recipient), null);
   return l.ok && l.latency.parts.some((p) => p.part === 'wire') ? 'wire' : 'courier';
 }
 
 /** Arrival of one hop by `route`, sent by `sender`, and the route actually taken (a wire sent off his side's wire goes by courier). */
-export function hop(ctx: TickContext, state: State, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId, id: MessageId, extraDays = 0): { readonly arrive: number; readonly route: RouteKind } {
-  const l = routeLatency(ctx.latency, ctx.world.rules.latency, route, from, to, sideOf(ctx, state, sender), { seed: ctx.seed, message: id });
+export function hop(ctx: TickContext, state: State, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId, id: MessageId, extraDays = 0, recipient: PersonId | null = null): { readonly arrive: number; readonly route: RouteKind } {
+  const l = routeLatency(ctx.latency, ctx.world.rules.latency, route, from, to, travelSide(ctx, state, sender, recipient), { seed: ctx.seed, message: id });
   if (!l.ok) throw new RangeError(`route ${route} is not available from ${from} to ${to}`);
   const weather = l.latency.parts.find((p) => p.part === 'weather');
   // Lane 1.6: the mail (the press's front pages) is counted apart, so the courier count keeps watching orders and reports.
   if (weather) fire(ctx, route === 'mail' ? 'messages.mail_delay' : 'messages.courier_delay', weather.days);
-  return { arrive: ctx.day + l.latency.days + extraDays, route: takenRoute(ctx, state, route, sender, from, to) };
+  return { arrive: ctx.day + l.latency.days + extraDays, route: takenRoute(ctx, state, route, sender, from, to, recipient) };
 }
 
 /**
@@ -257,10 +272,10 @@ export function sendReport(
   const toPost = heldPost(state, report.to);
   const addressee: Hop = { hopPerson: report.to, hopPost: toPost, hopRole: 'addressee' };
   // Only a report that really goes by wire meets the filter; one sent off the wire rides past it.
-  const throughFilter = filter !== undefined && report.to === faction.principal && takenRoute(ctx, state, route, from, fromRegion, whereIs(ctx, state, report.to)) === 'wire';
+  const throughFilter = filter !== undefined && report.to === faction.principal && takenRoute(ctx, state, route, from, fromRegion, whereIs(ctx, state, report.to), report.to) === 'wire';
   const first: Hop = throughFilter ? { hopPerson: filter.holder, hopPost: filter.id, hopRole: 'filter' } : addressee;
   const id = mintMessageId(ctx.mint, ctx.day, from, first.hopPerson, report.tag);
-  const leg = hop(ctx, state, route, from, fromRegion, whereIs(ctx, state, first.hopPerson), id);
+  const leg = hop(ctx, state, route, from, fromRegion, whereIs(ctx, state, first.hopPerson), id, 0, report.to);
   ctx.outbox.push({
     id,
     msgOrigin: id,

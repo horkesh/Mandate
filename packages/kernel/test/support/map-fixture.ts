@@ -330,6 +330,7 @@ export function startWith(
     control: Object.keys(control).map((r) => ({ region: R(r), shares: Object.keys(control[r]!).map((f) => ({ faction: F(f), permille: control[r]![f]! })) })),
     fortification: [],
     loyalty: [],
+    temporaryPosts: [], declaredGovernments: [],
     edgeConditions: [],
     obstructions: [],
     depotConditions: [],

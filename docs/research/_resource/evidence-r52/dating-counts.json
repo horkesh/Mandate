@@ -1,0 +1,182 @@
+{
+  "cells": 1017,
+  "citations": 1705,
+  "supplemental_r45_records": 11,
+  "dated_current": 412,
+  "unresolved_current": 1293,
+  "by_source": {
+    "APPLETONS": {
+      "not found": 165
+    },
+    "BDAC": {
+      "not found": 118
+    },
+    "BL": {
+      "not found": 48
+    },
+    "BULLOCH": {
+      "not found": 1
+    },
+    "CHANDLER-OS": {
+      "not found": 3
+    },
+    "CHASE-1847": {
+      "not found": 1
+    },
+    "CHASE-D": {
+      "not found": 3
+    },
+    "CHESNUT": {
+      "not found": 7
+    },
+    "CHI-1860": {
+      "resolved": 1
+    },
+    "COX-3DEC": {
+      "not found": 4
+    },
+    "Callahan": {
+      "not found": 23
+    },
+    "CongDir37": {
+      "not found": 11
+    },
+    "Cullum": {
+      "not found": 101
+    },
+    "DANA-RCW": {
+      "not found": 2
+    },
+    "DNB": {
+      "not found": 8
+    },
+    "DOC-1861": {
+      "not found": 63,
+      "resolved": 7
+    },
+    "FOULKE-MORTON": {
+      "not found": 12
+    },
+    "FOX-CC": {
+      "resolved": 25,
+      "not found": 2
+    },
+    "GRANT-PM": {
+      "not found": 10
+    },
+    "HAY-D": {
+      "not found": 9
+    },
+    "HR-37-2-2": {
+      "resolved": 11
+    },
+    "Heitman": {
+      "not found": 108
+    },
+    "JCCS": {
+      "resolved": 13,
+      "not found": 2
+    },
+    "JCCW": {
+      "not found": 11
+    },
+    "JONES": {
+      "resolved": 47
+    },
+    "JORDAN-PRYOR-1868": {
+      "not found": 2
+    },
+    "JULIAN-PR": {
+      "not found": 23
+    },
+    "LEE-1904": {
+      "not found": 4
+    },
+    "LINCOLN": {
+      "resolved": 13,
+      "not found": 3
+    },
+    "LONGSTREET-1896": {
+      "not found": 1
+    },
+    "MCCLELLAN-OS": {
+      "not found": 4
+    },
+    "MEADE-PAULDING": {
+      "not found": 1
+    },
+    "NASON-WILSON": {
+      "not found": 5
+    },
+    "NEVINS-FREMONT": {
+      "not found": 4
+    },
+    "NEWTON-LYONS": {
+      "not found": 11
+    },
+    "NH": {
+      "not found": 166,
+      "resolved": 1
+    },
+    "NH-CW": {
+      "resolved": 41
+    },
+    "NPS": {
+      "not found": 4
+    },
+    "OR": {
+      "resolved": 187,
+      "not found": 215
+    },
+    "ORN": {
+      "not found": 12,
+      "resolved": 5
+    },
+    "PEARSON-ANDREW": {
+      "not found": 15
+    },
+    "PIERCE-SUMNER": {
+      "not found": 6
+    },
+    "PRFA": {
+      "not found": 2
+    },
+    "REBREC": {
+      "not found": 1
+    },
+    "RICH": {
+      "not found": 20
+    },
+    "RIDDLE-WADE": {
+      "not found": 17
+    },
+    "SCHUCKERS": {
+      "not found": 3
+    },
+    "SHERMAN-M": {
+      "not found": 3
+    },
+    "STEPHENS": {
+      "not found": 4
+    },
+    "USREPORTS": {
+      "not found": 1
+    },
+    "WEED-MEM": {
+      "not found": 5
+    },
+    "WELLES-D": {
+      "resolved": 61,
+      "not found": 10
+    },
+    "WELLES-D1-RETRO": {
+      "not found": 20
+    },
+    "WOODBURN-STEVENS": {
+      "not found": 9
+    },
+    "Wright": {
+      "not found": 10
+    }
+  }
+}
