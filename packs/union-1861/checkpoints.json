@@ -124,9 +124,9 @@
       "kind": "men",
       "faction": "confederate",
       "min": 100000,
-      "max": null,
+      "max": 200000,
       "floorBinding": true,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 and Appendix B A3: whole Confederacy about 112,040 in July (Livermore p. 42, an estimate he calls probably too low), rounded outward to 100,000; above 32,232 effectives at Bull Run alone (Livermore p. 77). No sourced upper bound: open-topped by the lead's ruling until lane 1.11r3 reads Walker's or Cooper's returns (OR IV-1)"
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 and Appendix B A3: whole Confederacy about 112,040 in July (Livermore p. 42, an estimate he calls probably too low), rounded outward to 100,000; above 32,232 effectives at Bull Run alone (Livermore p. 77). Ceiling 200,000 [I]: docs/research/_leads/T2-strengths.md, section 1, corrected reasoning (R44), Walker to Davis, 24 July 1861, OR IV-1 pp. 496-497. His 190 regiments and 34 battalions give a rough paper estimate of about 200,000 to 210,000 for those units [I], not a count of men present or under arms. The independent companies, twelve recently called regiments and reserve corps of 30,000 are outside that count. The 200,000 ceiling is an inferred, revisable calibration band [I], not an upper bound the sources prove; Davis's 20 July message gives no troop count"
     },
     {
       "id": "operations_union",
