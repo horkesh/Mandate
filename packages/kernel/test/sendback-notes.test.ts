@@ -4,7 +4,7 @@ import { tick } from '../src/tick/tick.ts';
 import { createState } from '../src/tick/setup.ts';
 import { pendingRequests } from '../src/seats/requests.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
-import { indexedFixture, P, POST } from './support/seats-fixture.ts';
+import { indexedFixture, P, POST, R } from './support/seats-fixture.ts';
 import { goalTerms } from './support/test-seats.ts';
 import type { ReviewCommand } from '../src/log/commands.ts';
 import type { LogEntry } from '../src/log/log.ts';
@@ -13,6 +13,8 @@ import { relieveHolder } from '../src/command/command.ts';
 import { encodeSave, decodeSave } from '../src/serialize/save.ts';
 import type { State } from '../src/root-state.ts';
 import { previewEdit } from '../src/tick/edit-preview.ts';
+import { issueOrder } from '../src/tick/orders.ts';
+import { ctxFor } from './support/tick-context.ts';
 
 const post = POST('a_reserve');
 const seat = seatIdFor(P('a_lead'));
@@ -108,4 +110,52 @@ it('a note whose post falls vacant in transit bounces without compliance or redr
   expect(Object.values(state.orderResponses).some(r => r.respOrder === message.msgOrigin && r.respRole === 'addressee')).toBe(false);
   expect(state.planRecords[post]).toEqual(previous);
   expect(Object.values(state.knowledgeBySeat).flatMap(k=>k.knownReports).some(k=>k.knownBody.reportAnswers === message.msgOrigin && k.knownBody.reportClaims.some(c=>c.claimKind==='order-returned' && c.claimToken==='vacant_post'))).toBe(true);
+});
+
+it('N3: the submitted score excludes a positive private note weight', () => {
+  const { world, state, record } = run();
+  const chosen = record.planDraft!.draftCandidates.find(c => c.id === record.planChosen)!;
+  const amount = chosen.candTerms.find(t => t.contribTerm === 'notes')!.contribAmount;
+  expect(amount).toBeGreaterThan(0);
+  const menu = pendingRequests(world, state).find(r => r.requestSeat === seat)!.menu;
+  if (menu.menuKind !== 'principal') throw Error('principal expected');
+  const review = menu.reviews.find(r => r.post === post)!;
+  const ordinary = chosen.candTerms.filter(t => t.contribTerm !== 'notes').reduce((sum, t) => sum + t.contribAmount, 0);
+  expect(review.plan.score).toBe(ordinary);
+  expect(review.plan.score).toBe(chosen.candScore - amount);
+  expect(review.plan.terms.some(t => t.term === 'notes')).toBe(false);
+  const report = state.knowledgeBySeat[seat]!.knownReports.find(r => r.id === review.report)!;
+  expect(report.knownBody.reportClaims.find(c => c.claimKind === 'plan-submitted')!.claimValue).toBe(ordinary);
+});
+
+it('N5: approval refuses notes before dispatch, while a bare approval is accepted', () => {
+  const { world, state } = run();
+  const ctx = ctxFor(world, state, state.stateDay + 1, ['messages.sent', 'messages.courier_delay', 'orders.bypassed']);
+  const command: ReviewCommand = { cmd: 'review', to: post, action: 'approve', edit: null, notes: [note], route: 'courier', bypass: true };
+  const before = canonicalHash(state);
+  expect(issueOrder(ctx, state, seat, command)).toBe('bad_review');
+  expect(ctx.outbox).toEqual([]);
+  expect(canonicalHash(state)).toBe(before);
+  const { notes: ignored, ...bare } = command;
+  expect(issueOrder(ctx, state, seat, bare)).toBeNull();
+  expect(ctx.outbox).toHaveLength(1);
+  expect(ctx.outbox[0]!.msgOrder!.orderKind).toBe('approve');
+  expect(ctx.outbox[0]!.msgOrder!.orderNotes).toBeUndefined();
+});
+
+it('N6: a note naming an unknown objective or waypoint is refused before dispatch', () => {
+  const { world, state } = run();
+  for (const mark of [
+    { ...note, markKind: 'focus' as const, markDays: null, markRegion: R('not_on_the_map') },
+    { ...note, markKind: 'avoid' as const, markDays: null, markRegion: R('not_on_the_map') },
+    { ...note, markKind: 'via' as const, markDays: null, markVia: [R('not_on_the_map')] },
+  ]) {
+    const ctx = ctxFor(world, state, state.stateDay + 1, ['messages.sent', 'messages.courier_delay', 'orders.bypassed']);
+    const command: ReviewCommand = { cmd: 'review', to: post, action: 'send_back', edit: null, notes: [mark], route: 'courier', bypass: true };
+    expect(issueOrder(ctx, state, seat, command), mark.markKind).toBe('bad_review');
+    expect(ctx.outbox).toEqual([]);
+    const known = { ...mark, markRegion: mark.markRegion === null ? null : R('b_mid'), markVia: mark.markVia.map(() => R('b_front')) };
+    expect(issueOrder(ctx, state, seat, { ...command, notes: [known] }), mark.markKind).toBeNull();
+    expect(ctx.outbox).toHaveLength(1);
+  }
 });
