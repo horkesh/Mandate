@@ -309,6 +309,12 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **The research lane:** separate provenance keys for primary documents printed inside secondary works.
   - **The research lane:** L3's last paragraph wrongly labels Anderson's letter of 12 April as Confederate correspondence.
   - **Lane 1.12 (rule seats):** keep every rule reader's explanation when a flag has several readers.
+  - **The research lane (R50 re-check):** `docs/research/_leads/T2-strengths.md`'s later band summary should match the paragraph the lead corrected, which calls the 200,000 an inferred calibration band, not an upper bound.
+- From the standing reviewer's review of the lane 1.11 and 1.12 merges (`review-codex-r45-r46.md`):
+  - **Check or CI:** typecheck `prototypes/desk`. The merge broke `tsc --noEmit` there and nothing caught it.
+  - **The one-writer scanner:** its file-wide alias names give false positives, such as `requests.ts:249` with the old `to`.
+  - **The research lane:** `docs/research/_resource/tools/r45-read.py` points at another session's temporary scratchpad, so the OCR it retained is not durable.
+  - **Lane hand-overs:** both still say the merge commit was left to the lead. It is committed now (`95cdecd`, `8b15e6e`).
 - From lane 1.4b's report (`notes/lane-1.4b-detachments.md`, merged 1cf40d5), by lane:
   - **1B (the planner):** no operation leaves a garrison, because the planner drafts no garrison step. Add one if the history run needs it.
   - **Lane 1.4 or 1B, cleanup:** after a landing, the parent blocks stay aboard as 0-strength shells until a rejoin or a disbanding. Lane 1.4c (merged a810532) made sure an emptied shell can no longer be handed over in a transfer.
