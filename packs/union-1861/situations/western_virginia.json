@@ -35,16 +35,39 @@
       "label": "situation.western_virginia.option.recognise",
       "displayKey": 2,
       "proposedBy": [
-        "pierpont_francis_h"
+        "cameron_simon"
       ],
       "honours": [
         "union",
         "order"
       ],
       "appearsWhen": {
-        "clockAtLeast": 37
+        "all": [
+          {
+            "knows": {
+              "subjectKind": "situation",
+              "subjectId": "wheeling_ordinance"
+            }
+          },
+          {
+            "knows": {
+              "subjectKind": "situation",
+              "subjectId": "wheeling_recognition_letter"
+            }
+          }
+        ]
       },
       "effects": [
+        {
+          "propose": {
+            "owner": "command",
+            "field": "department_side",
+            "subject": "st_virginia_restored",
+            "delta": 1,
+            "reason": "recognition-letter",
+            "side": "union"
+          }
+        },
         {
           "setFlag": "wheeling_government_recognised"
         }
@@ -90,6 +113,10 @@
     {
       "source": "NOTE-secession-winter-1861",
       "at": "1, 3.6"
+    },
+    {
+      "source": "OR",
+      "at": "I-2 pp. 723-724, Cameron to Pierpont as Governor, 25 June 1861; ordinance: WHEELING-ORDINANCES-1861 pp. 6-7"
     }
   ]
 }

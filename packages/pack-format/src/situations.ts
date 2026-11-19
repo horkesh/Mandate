@@ -85,6 +85,7 @@ export const EffectSchema = z.union([
         'Signed permille. Every side measure reads higher-is-better for its own side: a rise helps that side, a fall harms it. The gate’s sign rule (E7, D5) relies on this, so a field where higher is worse for its side (war-weariness, say) must be declared the other way round.',
       ),
       reason: termId,
+      succession: z.strictObject({ from: idOf('person'), to: idOf('person') }).optional(),
       side: idOf('faction')
         .nullable()
         .default(null)
@@ -366,7 +367,15 @@ export function validateSituations(items: readonly { readonly file: string; read
   const temporaryPostIds = new Set(pack.scenarios.flatMap((s) => s.temporaryPosts.map((p) => p.id as string)));
   const declaredGovernmentIds = new Set(pack.scenarios.flatMap((s) => (s.declaredGovernments ?? []).map((g) => g.id as string)));
   type Err = (kind: string, at: string, message: string, expected?: string) => void;
-  const commandProposal = (p: { readonly field: string; readonly subject: string | null; readonly delta: number; readonly side: string | null }, at: string, err: Err, fromNotice: boolean) => {
+  const commandProposal = (p: { readonly field: string; readonly subject: string | null; readonly delta: number; readonly side: string | null; readonly succession?: { readonly from: string; readonly to: string } }, at: string, err: Err, fromNotice: boolean) => {
+    if (p.field === phase0.POST_SUCCESSION_FIELD) {
+      if (!fromNotice) err('situation-command-proposal', at, 'institutional succession must come from a notice, not a principal decision');
+      if (p.subject === null || !posts.has(p.subject)) err('unknown-reference', `${at}.subject`, 'succession names no existing post');
+      if (p.delta !== 1 || p.side !== null) err('situation-command-proposal', at, 'succession requires delta +1 and no side measure');
+      if (p.succession === undefined || p.succession.from === p.succession.to) err('situation-command-proposal', `${at}.succession`, 'succession must name distinct incumbent and successor');
+      for (const person of Object.values(p.succession ?? {})) if (!people.has(person)) err('unknown-reference', `${at}.succession`, `unknown person ${person}`);
+      return;
+    }
     // Lane 1.11: a government the start declares, established by an effect.
     if (p.field === phase0.GOVERNMENT_ESTABLISHED_FIELD) {
       if (p.subject === null || !declaredGovernmentIds.has(p.subject)) err('situation-command-proposal', `${at}.subject`, `"${p.subject ?? 'none'}" is not a government any start declares`, 'the id of a row in a start’s declared_governments.csv');
@@ -561,6 +570,7 @@ export function validateSituations(items: readonly { readonly file: string; read
       });
     }
     for (const { at, effect } of phase0.effectsOf(def)) {
+      if ('propose' in effect && effect.propose.succession !== undefined && (effect.propose.owner !== 'command' || effect.propose.field !== phase0.POST_SUCCESSION_FIELD)) err('situation-command-proposal', `${at}.propose.succession`, 'a succession payload belongs only to command.post_succession');
       if ('propose' in effect && effect.propose.side !== null) ref(factions, 'faction', effect.propose.side, `${at}.propose.side`);
       if ('propose' in effect && effect.propose.owner === 'command') commandProposal(effect.propose, `${at}.propose`, err, def.kind === 'notice');
       if ('propose' in effect && effect.propose.owner === 'politics') politicsProposal(effect.propose, `${at}.propose`, err);

@@ -529,6 +529,8 @@ export interface DeclaredGovernmentSpec {
 export const DEPARTMENT_SIDE_FIELD = 'department_side';
 /** A temporary post the scenario start declares, opened by a situation's effect (0040: an expedition command; lane 1.11). */
 export const TEMPORARY_POST_FIELD = 'temporary_post';
+/** A notice records an institution's succession to an existing occupied office. */
+export const POST_SUCCESSION_FIELD = 'post_succession';
 
 /** Why a department is not a government, or null: the pack's department kinds mark governments (0058). */
 function notAGovernment(map: WorldIndex, department: DepartmentId): string | null {
@@ -648,12 +650,14 @@ export interface CommandProposal {
    * self-governing government is moved only by a notice, its own act, never by a principal's choice.
    */
   readonly origin: ProposalOrigin;
+  readonly reason?: string;
+  readonly succession?: { readonly from: PersonId; readonly to: PersonId };
 }
 
 export type ProposalOrigin = 'notice' | 'decision';
 
 /** Why `command` refused a proposal: a typed reason (hard rule 6), with the sentence that says it. */
-export const REFUSAL_REASONS = ['invalid', 'self_governing_decision', 'self_governing_region'] as const;
+export const REFUSAL_REASONS = ['invalid', 'self_governing_decision', 'self_governing_region', 'notice_required', 'incumbent_changed'] as const;
 export type RefusalReason = (typeof REFUSAL_REASONS)[number];
 export interface Refusal {
   readonly reason: RefusalReason;
@@ -696,6 +700,7 @@ export function regionMoveProblem(map: WorldIndex, from: DepartmentId | 'unknown
 }
 
 export type AppliedProposal =
+  | { readonly field: typeof POST_SUCCESSION_FIELD; readonly subject: PostId; readonly change: 'succeeded' | 'unchanged'; readonly from: PersonId; readonly to: PersonId; readonly reason: 'institutional-succession'; readonly cause: string | null }
   | { readonly field: typeof GOVERNMENT_CLOSED_FIELD; readonly subject: DepartmentId; readonly change: 'closed' | 'reopened' | 'unchanged' }
   | { readonly field: typeof DEPARTMENT_SIDE_FIELD; readonly subject: DepartmentId; readonly change: 'joined' | 'unchanged'; readonly side: SideChange | null }
   | { readonly field: typeof TEMPORARY_POST_FIELD; readonly subject: PostId; readonly change: 'opened' | 'unchanged' }
@@ -725,6 +730,43 @@ export function applyCommandProposals(
   const refuse = (reason: RefusalReason, why: string) => refused.push({ reason, why });
   for (const p of proposals) {
     if (p.owner !== 'command') continue;
+    if (p.field === POST_SUCCESSION_FIELD) {
+      const post = p.subject as PostId;
+      const current = state.postStates[post];
+      const change = p.succession;
+      if (p.origin !== 'notice') {
+        refuse('notice_required', 'institutional succession is an institution’s act, recorded by a notice');
+        continue;
+      }
+      if (current === undefined || change === undefined || change.from === change.to || p.delta !== 1 || p.side !== null ||
+          !map.world.people.some((person) => person.id === change.from) ||
+          !map.world.people.some((person) => person.id === change.to)) {
+        refuse('invalid', `invalid institutional succession at ${p.subject ?? 'none'}`);
+        continue;
+      }
+      const record = { field: POST_SUCCESSION_FIELD, subject: post, from: change.from, to: change.to, reason: 'institutional-succession', cause: p.reason ?? null } as const;
+      if (current.postHolder === change.to) {
+        applied.push({ ...record, change: 'unchanged' });
+        continue;
+      }
+      if (current.postHolder !== change.from) {
+        refuse('incumbent_changed', `post ${post} is no longer held by ${change.from}`);
+        continue;
+      }
+      if (state.personStatus[change.to]?.statusKind !== 'serving') {
+        refuse('invalid', `successor ${change.to} is not serving`);
+        continue;
+      }
+      try {
+        // Commit both writes together only after the existing appointment guards pass. Neither person's status changes.
+        const next = appointHolder(map, relieveHolder(state, post), post, change.to);
+        state = next;
+        applied.push({ ...record, change: 'succeeded' });
+      } catch (e) {
+        refuse('invalid', e instanceof CommandError ? e.problems.join('; ') : String(e));
+      }
+      continue;
+    }
     // A temporary post the start declares (0040): opened once, by a situation's effect; the post then serves as any post.
     if (p.field === TEMPORARY_POST_FIELD) {
       const spec = temporaryPosts.find((s) => s.id === p.subject);

@@ -31,7 +31,7 @@ export const S = {
   filePaper: 'File this paper', ask: 'Ask for a report', noLikeness: 'No likeness on file', post: 'Post', holder: 'Holder',
   through: 'Through', typicalDays: 'typical days', routePrice: 'attention for this route',
   makeOrder: 'Set a goal', audience: 'Request an audience', personnel: 'Personnel & transfer orders',
-  noSituations: 'No situation is before you.', beforeSince: 'Before you since day', advisers: 'Urged by', staff: 'Staff author',
+  noSituations: 'No situation is before you.', beforeSince: 'Before you since day', advisers: 'Urged by', staff: 'Staff author', noStaffRecommendation: 'No recommendation from the staff',
   signDecision: 'Sign this decision', takeCourse: 'Let it take its course', refer: 'Refer to', consult: 'Ask in writing',
   docketNote: 'Select a decision to sign or refer.',
   noQueue: 'No signed orders are waiting.', queued: 'Order placed in the out-tray.', recalled: 'Order taken back.', cancel: 'Recall',

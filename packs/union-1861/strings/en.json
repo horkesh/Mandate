@@ -344,5 +344,22 @@
   "situation.merryman_answer.text": "The Chief Justice has sent the president a copy of his opinion in Merryman's case. \"It will then remain for that high officer, in fulfilment of his constitutional obligation to 'take care that the laws be faithfully executed,' to determine what measures he will take to cause the civil process of the United States to be respected and enforced.\"",
   "situation.merryman_answer.option.comply": "Have the prisoner produced, and let the court's process be enforced on the line",
   "situation.merryman_answer.inaction": "The writ goes unanswered, and the suspension stands.",
-  "reason.process-enforced": "the army resents the court's process enforced against its officers"
+  "reason.process-enforced": "the army resents the court's process enforced against its officers",
+  "situation.wheeling_convention.title": "The convention at Wheeling",
+  "situation.wheeling_convention.text": "Delegates from western Virginia have assembled in convention at Wheeling.",
+  "situation.wheeling_ordinance.title": "The Virginia government at Wheeling",
+  "situation.wheeling_ordinance.text": "The convention at Wheeling has passed an ordinance reorganising the government of Virginia. It provides for a governor and a legislature to assemble on 1 July.",
+  "situation.pierpont_elected.title": "Pierpont elected governor",
+  "situation.pierpont_elected.text": "The Wheeling convention has elected Francis H. Pierpont Governor of Virginia; he has taken the oath before the convention.",
+  "situation.wheeling_recognition_letter.title": "Cameron writes to Pierpont",
+  "situation.wheeling_recognition_letter.text": "Cameron has addressed Pierpont as Governor of the Commonwealth of Virginia. Replying for the President to the application of 21 June, he promises additional troops and places federal recruiting agents under the Governor’s direction.",
+  "situation.wheeling_legislature.title": "The legislature at Wheeling",
+  "situation.wheeling_legislature.text": "The General Assembly of the government at Wheeling has met for its extra session.",
+  "situation.houston_confederate_obligations.title": "Houston declines Confederate obligations",
+  "situation.houston_confederate_obligations.text": "Writing for Governor Houston, Secretary of State E. W. Cave tells the Confederate War Department that the Governor does not recognise obligations to the Confederate government or the Convention’s authority.",
+  "situation.texas_governor_changed.title": "The Texas governorship",
+  "situation.texas_governor_changed.text": "The Convention has declared the Governor’s office vacant after Houston did not appear to take its oath. Its proceedings treat Lieutenant Governor Edward Clark as Governor that evening.",
+  "reason.recognition-letter": "The War Department has addressed the government at Wheeling through its Governor.",
+  "reason.reorganisation-ordinance": "The Wheeling convention has reorganised the government of Virginia.",
+  "reason.convention-succession": "Succession recorded by the convention"
 }

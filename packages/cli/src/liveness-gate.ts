@@ -137,7 +137,6 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'combat.surrendered': { why: 'only a cut-off force surrenders, and no reference run cuts one off', test: 'packages/kernel/test/combat.test.ts', needle: 'a trapped garrison with nowhere to go surrenders' },
   'combat.general_hit': { why: 'a commander is hit only on a low draw on his own stream, and neither reference run\'s battle-days draws one', test: 'packages/kernel/test/combat.test.ts', needle: 'a general wounded leaves his post vacant' },
   'forces.landing_refused': { why: 'the one situation landing in the reference runs is made', test: 'packages/cli/test/situation-landing.test.ts', needle: 'refuses a landing from a block that is not aboard' },
-  'command.government_established': { why: 'no pack declares a government yet: the Union pack’s first declared government waits on its sourced dates (lane 1.11)', test: 'packages/cli/test/declared-government.test.ts', needle: 'takes its declared region with no side' },
   // Lane 1.4: operations and their reports.
   'combat.records_pruned': { why: 'a closed battle is pruned after the pack\'s battleDays (120), longer than either reference run', test: 'packages/kernel/test/operations.test.ts', needle: 'prunes ended operations, closed battles and old responses' },
   'operations.landed': { why: 'no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)', test: 'packages/kernel/test/detachments.test.ts', needle: 'lands its troops at the objective' },
@@ -293,13 +292,18 @@ const UNION_BANDS: Record<string, GateBand> = {
   'situations.decided': around(17),
   'situations.delegated': notHere('no authored Union situation in this window names a delegate as its historical default; the testbed run fires it'),
   'situations.fired': around(28),
-  'situations.notice_reports': around(17),
+  // R55: three promoted notices and the restored S15 proclamation add four reports (31 -> 35).
+  'situations.notice_reports': around(35),
   'situations.noticed': around(17),
   'situations.options_changed': around(3),
   'situations.orders': around(24),
   // Two border governments change side (a legislature's vote, a provisional government); a third's neutrality closes its land.
-  'situations.proposals': around(12),
+  // R55: succession, establishment and S15 recognition now apply (+3 proposals, 23 -> 26).
+  'situations.proposals': around(26),
   'command.side_changed': around(9),
+  // R55: the 19 June ordinance establishes the declared government; the 16 March notice succeeds the Texas governor.
+  'command.government_established': around(1),
+  'command.post_succeeded': around(1),
   'command.government_closed': around(1),
   // S01's relief opens the expedition command it declares (0040).
   'command.temporary_post_opened': around(1),
@@ -316,7 +320,8 @@ const UNION_BANDS: Record<string, GateBand> = {
   'recruitment.disbanded': around(19),
   // Lane 1.5: grievances from overruled and bypassed men climb the ladder and fade week by week; attention is spent on
   // the opening orders and refilled each week. The Union pack authors no seat initiative and no man here is famous enough to be a rival.
-  'ladder.moved': around(4),
+  // R55: Houston's sourced low regard toward his service principal adds three weekly rung moves (7 -> 10).
+  'ladder.moved': around(10),
   'ladder.rival': notHere('nobody on a Union ladder rung of lobbying or above has the standing of a rival in 75 days; the testbed run fires it'),
   'people.grievances_faded': around(48),
   // Twenty-one weeks in the 148-day run.
@@ -344,6 +349,8 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'command.temporary_post_opened': notHere('no testbed situation declares or opens a temporary post; union-1861 fires it (the relief expedition)'),
   'command.government_closed': notHere('no testbed situation closes a neutral government in this run; union-1861 fires it (a border state’s neutrality)'),
   'command.side_changed': notHere('no testbed situation changes a government’s side in this run; union-1861 fires it'),
+  'command.government_established': notHere('no testbed notice establishes a declared government; the Union reference does'),
+  'command.post_succeeded': notHere('no testbed notice replaces an occupied post’s holder; the Union reference does'),
   // Lane 1.11: the testbed's rule-seat principal makes no call, and its situations neither resurface nor change their options in this run; union-1861 fires them.
   'recruitment.called': notHere('the testbed\'s principal makes no call for regiments; union-1861\'s S09 call fires it'),
   'recruitment.answered': notHere('the testbed\'s principal makes no call for regiments; union-1861\'s S09 call fires it'),

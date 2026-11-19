@@ -1,0 +1,34 @@
+{
+  "id": "wheeling_convention",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.wheeling_convention.title",
+  "text": "situation.wheeling_convention.text",
+  "earliest": "1861-06-11",
+  "event": {
+    "dayAtLeast": 98
+  },
+  "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_state",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Civil organisation and correspondence only; no secession-cause claim, slavery policy, security order or protected-population effect."
+  },
+  "citations": [
+    {
+      "source": "WHEELING-JOURNAL-1861",
+      "at": "p. 3, 11 June 1861"
+    },
+    {
+      "source": "LEWIS-HWVM",
+      "at": "pp. 78-79"
+    }
+  ]
+}

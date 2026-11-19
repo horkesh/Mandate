@@ -34,6 +34,7 @@ export function situationLines(views: readonly SituationView[], menu: PrincipalM
     out.push(`${s.id}: ${t(s.title)} (${s.status}, before you since day ${s.surfacedDay.toString()})`);
     out.push(`  ${t(s.text)}`);
     if (s.staffAuthor !== null) out.push(`  The staff's advice comes from ${s.staffAuthor} (in your inbox).`);
+    else if (s.staffAbsence === 'no-adviser-on-record') out.push('  No recommendation from the staff');
     for (const o of s.options) out.push(`  - ${o.id}: ${t(o.label)}${Array.isArray(o.proposedBy) ? ` (urged by ${o.proposedBy.join(', ')})` : ''}`);
     if (choice !== undefined && choice.delegableTo.length > 0) out.push(`  You may hand it to: ${choice.delegableTo.join(', ')}`);
   }

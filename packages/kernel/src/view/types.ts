@@ -144,6 +144,8 @@ export interface SituationView {
   readonly chosen: readonly string[];
   readonly delegatedTo: PersonId | null;
   readonly staffAuthor: PersonId | null;
+  /** A declared absence of advice, never the research citations behind it. Absent on older views. */
+  readonly staffAbsence?: 'no-adviser-on-record';
 }
 
 export interface SeatView {

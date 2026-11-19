@@ -89,6 +89,7 @@ export type Proposal =
       readonly delta: number;
       readonly reason: string;
       readonly side: FactionId | null;
+      readonly succession?: { readonly from: PersonId; readonly to: PersonId };
       /** The situation, and the option (null: its inaction or a notice), it comes from. */
       readonly situation: SituationId;
       readonly option: string | null;
@@ -114,6 +115,7 @@ export interface DecisionPoint {
 
 /** What the map phases changed or found (lane 0.4). Truth, for the run report and tests; the player learns of it only through reports. */
 export type MapEvent =
+  | { readonly event: 'post_succeeded'; readonly post: PostId; readonly from: PersonId; readonly to: PersonId; readonly reason: 'institutional-succession'; readonly cause: string | null }
   | { readonly event: 'control_changed'; readonly change: ControlChange }
   | { readonly event: 'threshold_crossed'; readonly crossing: ThresholdCrossing }
   /** The network's condition changed (lane 0.5): an edge or depot damaged or repaired, an edge obstructed or cleared. */

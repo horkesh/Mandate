@@ -237,7 +237,8 @@ function situationViews(world: SeatsWorld, state: State, seat: SeatId, person: P
         ),
         chosen: freeze([...r.sitChosen]),
         delegatedTo: r.sitDelegate,
-        staffAuthor: r.sitStaffAuthor,
+        staffAuthor: def.staffLine === null ? null : r.sitStaffAuthor,
+        ...(def.staffAbsence === undefined ? {} : { staffAbsence: def.staffAbsence.none }),
       }),
     );
   }

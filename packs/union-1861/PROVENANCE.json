@@ -1080,6 +1080,56 @@
       "copyUsed": "docs/research/_leads/ on branch research-1861-leads",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "TX-CONV-1861",
+      "title": "Journal of the Secession Convention of Texas, 1861, ed. E. W. Winkler (Texas Library and Historical Commission, 1912)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/download/journalofsecessi00texa/journalofsecessi00texa_djvu.txt; the Convention minutes, pp. 113-114, 178-187; editorial later succession not used",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "WHEELING-JOURNAL-1861",
+      "title": "Journal of the convention assembled at Wheeling, on the 11th of June, 1861 (printed by authority, Daily Press, 1861)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ia903105.us.archive.org/6/items/esrp904084809/0001.001_djvu.txt; opening p. 3, election and oath pp. 27-28",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "WHEELING-ORDINANCES-1861",
+      "title": "Ordinances and acts of the restored government of Virginia (Wheeling, Frew, 1866), reprinting the Convention ordinances and 1861 Acts",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ia903104.us.archive.org/21/items/esrp681482731/0001.001_djvu.txt; Ordinances pp. 6-7; Acts title page and resolution p. 2",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "HOUSTON-DALY-1860",
+      "title": "Sam Houston to A. Daly, Austin, 14 August 1860, printed in The Writings of Sam Houston, vol. VIII, pp. 118-120",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.texashistorytrust.org/view/728572066/142/; /143/; /144/. Only the verbatim 1860 letter, not the 1943 editors’ judgments or annotations. The printing identifies Governors’ Letters and Executive Records, 1859-1861 pp. 210-211, Texas State Library.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CRANE-HOUSTON-1884",
+      "title": "William Carey Crane, Life and Select Literary Remains of Sam Houston of Texas (1884), chapter XXV",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://en.wikisource.org/wiki/Life_and_select_literary_remains_of_Sam_Houston_of_Texas/Chapter_25; chapter XXV, the paragraph identifying Edward Clark as the incumbent Lieutenant Governor before the 16 March succession. Used for office facts only, not Crane?s character judgments. The earlier tenure is cross-checked against the Legislative Reference Library?s official office-term entry (1859-12-21 through 1861-03-16); no text or images from that modern page copied.",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

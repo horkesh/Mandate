@@ -112,6 +112,8 @@ export type Effect =
         readonly reason: string;
         /** The side whose measure this is, for the gate's sign rule (E7); null if no side's. */
         readonly side: FactionId | null;
+        /** Institutional succession only: replace this incumbent with this successor; never a free appointment. */
+        readonly succession?: { readonly from: PersonId; readonly to: PersonId };
       };
     }
   /**

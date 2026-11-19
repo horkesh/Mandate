@@ -96,6 +96,15 @@
       "suspend_on_line"
     ]
   },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "NOTE-1861-leads",
+        "at": "L1-habeas.md (no one on record urged the suspension before Lincoln's letter to Scott of 25 April 1861; OR Series II vol. 1 and the memoirs not read)"
+      }
+    ]
+  },
   "staffLine": null,
   "delegableTo": [],
   "resurfaceOn": [],
@@ -132,7 +141,7 @@
   "gateReview": {
     "author": "lane-1.11",
     "reviewer": "gate-reviewer",
-    "date": "2026-11-16",
+    "date": "2026-11-19",
     "questionVersions": {
       "A1": 1,
       "A2": 1,
@@ -196,9 +205,9 @@
       "Q11": 1,
       "Q12": 1
     },
-    "contentHash": "d1c627ac89bd088197aa5eec4be8b27af8aa7d877d0c004b73bc234901b33e53",
+    "contentHash": "4cb7024226f63f8a6a7fab91dce3fa518b9ea2d0bc001dfba2b9b2564cd71d3e",
     "notes": {
-      "item": "Lincoln’s own initiative, 25 April (N&H vol. 2 p. 38), as provenance only: the option shows no proposer, and the decision has no staff line (B9). A security order through the general-in-chief (3.5, R8), with locked costs on the border Unionists and both Democratic blocs (B5) and a ledger act owed to Congress (0040). Inaction needs no gate cost: it is the absence of the coercive policy. The desk’s neutral rendering and its architecture test are owed before any desk shows this decision."
+      "item": "Lincoln's own initiative, 25 April (N&H vol. 2 p. 38), as provenance only: the option shows no proposer. The decision declares no adviser on record (L1-habeas.md, with its stated gaps), shown once for the whole decision, never by option (B9). A security order through the general-in-chief (3.5, R8), with locked costs on the border Unionists and both Democratic blocs (B5) and a ledger act owed to Congress (0040). Inaction needs no gate cost: it is the absence of the coercive policy. The CLI desk's neutral rendering and its architecture test are in (R47). No other presenter may show this decision until it passes the same test."
     }
   }
 }

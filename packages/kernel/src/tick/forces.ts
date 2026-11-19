@@ -8,7 +8,7 @@
  */
 import { combatDay, type CombatResult } from '../combat/battle.ts';
 import { applyBattleRecords } from '../combat/records.ts';
-import { applyCombatCommand, applyCommandProposals, DEPARTMENT_SIDE_FIELD, GOVERNMENT_ESTABLISHED_FIELD, TEMPORARY_POST_FIELD } from '../command/command.ts';
+import { applyCombatCommand, applyCommandProposals, DEPARTMENT_SIDE_FIELD, GOVERNMENT_ESTABLISHED_FIELD, POST_SUCCESSION_FIELD, TEMPORARY_POST_FIELD } from '../command/command.ts';
 import { applyForces } from '../forces/forces.ts';
 import { stragglersStep } from '../forces/stragglers.ts';
 import type { ForceBlockId } from '../ids.ts';
@@ -49,6 +49,7 @@ export const FORCES_MECHANICS = [
   'command.government_reopened',
   'command.proposal_refused',
   'command.side_changed',
+  'command.post_succeeded',
   'command.temporary_post_opened',
   'forces.landed_by_situation',
   'forces.landing_refused',
@@ -97,6 +98,13 @@ export function commandProposalsPhase(ctx: TickContext, start: State): { readonl
     ctx.world.start.declaredGovernments ?? [],
   );
   for (const a of result.applied) {
+    if (a.field === POST_SUCCESSION_FIELD) {
+      if (a.change === 'succeeded') {
+        ctx.mapEvents.push({ event: 'post_succeeded', post: a.subject, from: a.from, to: a.to, reason: a.reason, cause: a.cause });
+        fire(ctx, 'command.post_succeeded');
+      }
+      continue;
+    }
     if (a.field === TEMPORARY_POST_FIELD) {
       if (a.change === 'opened') fire(ctx, 'command.temporary_post_opened');
       continue;
