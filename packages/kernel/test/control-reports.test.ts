@@ -51,6 +51,22 @@ describe('reports of control changes outside battle', () => {
     expect(reports.find(m => m.msgReport!.reportAuthor === P('a_sec'))?.msgReport!.reportAuthorPost).toBe('a_office');
   });
 
+  it('lets a serving field superior sign for a vacant local post before the department office', () => {
+    const world = indexedFixture();
+    const initial = createState(world, { seed: 1 });
+    const start = { ...initial,
+      regionControl: { ...initial.regionControl, [R('a_mid')]: { a: 490, b: 510 } },
+      postStates: { ...initial.postStates, [POST('a_reserve')]: { ...initial.postStates[POST('a_reserve')]!, postHolder: null, postParent: POST('a_army') } },
+    };
+    const ctx = { ...ctxFor(world, start, 1), telemetry: undefined };
+    ctx.controlDeltas.push({ region: R('a_mid'), faction: F('a'), deltaPermille: 20, cause: 'occupation' });
+    const state = mapPhase(ctx, start, createDerivedMapCache()).state;
+    battleReports(ctx, state, start.regionControl);
+    const report = ctx.outbox.find(m => m.msgReport?.reportClaims.some(c => c.claimKind === 'control') && m.msgReport.reportAuthor === P('a_gen'));
+    expect(report?.msgReport).toMatchObject({ reportAuthor: 'a_gen', reportAuthorPost: 'a_army', reportSubjectId: 'a_mid' });
+    expect(ctx.outbox.some(m => m.msgReport?.reportAuthor === P('a_sec'))).toBe(false);
+  });
+
   it('writes nothing for an ordinary subthreshold increment or no change', () => {
     expect(change(100, 10).reports).toEqual([]);
     expect(change(1000, 10).reports).toEqual([]);

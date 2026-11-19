@@ -3,6 +3,7 @@ import { applyControl } from '../src/control/control.ts';
 import { toId } from '../src/ids.ts';
 import { deliverReport, knowledgeOf, pruneKnowledge, reportsForView } from '../src/knowledge/knowledge.ts';
 import type { ReportClaim } from '../src/knowledge/report.ts';
+import { term, truthOf } from '../src/knowledge/truth.ts';
 import type { State } from '../src/root-state.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
 import { indexSeatsWorld } from '../src/seats/world.ts';
@@ -34,6 +35,30 @@ function tell(state: State, id: string, author: string, stamp: number, arrival: 
 }
 
 describe('the seat’s claimed control', () => {
+  it('never fills a control-only opening override with government truth', () => {
+    const base = indexedFixture();
+    const governments = base.start.control.map(row => ({ region: row.region, department: toId('department', 'a_war'), provenance: [] }));
+    const w = indexSeatsWorld(base.map, { ...base.start, governments, openingControl: { authors: [{ faction: a, post: POST('a_office') }, { faction: b, post: POST('b_office') }], table: base.start.control } });
+    const state = createState(w, { seed: 1 });
+    for (const id of Object.keys(state.seatAssignments) as (keyof State['seatAssignments'])[]) {
+      expect(viewFor(w, state, id).reports.flatMap(r => r.claims).filter(c => c.kind === 'control-government')).toEqual([]);
+    }
+    expect(Object.values(state.regionGovernments).every(g => g === 'a_war')).toBe(true);
+  });
+
+  it('serializes the shared opening claims once and retains their complete assessment terms', () => {
+    const w = world();
+    const state = createState(w, { seed: 1 });
+    const opening = viewFor(w, state, seat).reports[0]!;
+    const text = encodeSave({ worldHash: '0'.repeat(64), state });
+    expect(text.match(/"claimKind":"control"/g)).toHaveLength(opening.claims.filter(c => c.kind === 'control').length);
+    expect(text.match(/"termKind":"observed"/g) ?? []).toHaveLength(0);
+    for (const id of Object.keys(state.openingControlReports!) as (keyof State['reportTruth'])[]) {
+      const expected = reportsForView(knowledgeOf(state, seat)).find(r => r.id === opening.id)!.knownBody.reportClaims.map(c => term('observed', c.claimValue, { region: c.claimRegion!, rule: `${c.claimKind}:${c.claimToken}` }));
+      expect(truthOf(state, id)).toEqual({ truthTerms: expected, truthTrimmed: [] });
+      expect(truthOf(decodeSave(text).state as unknown as State, id)).toEqual(truthOf(state, id));
+    }
+  });
   it('opens with one day-zero report from the named post and uses the override for the map alone', () => {
     const w = world();
     const s = createState(w, { seed: 1 });
@@ -57,7 +82,7 @@ describe('the seat’s claimed control', () => {
     const bView = viewFor(w, state, other);
     expect(Object.keys(state.knowledgeBySeat).length).toBeGreaterThan(2);
     const text = encodeSave({ worldHash: '0'.repeat(64), state });
-    const claims = [...aView.reports[0]!.claims, ...bView.reports[0]!.claims].filter((c) => c.kind === 'control');
+    const claims = aView.reports[0]!.claims.filter((c) => c.kind === 'control');
     expect(text.match(/"claimKind":"control"/g)).toHaveLength(claims.length);
     const saved = decodeSave(text).state as unknown as State;
     expect(reportsForView(knowledgeOf(saved, seat)).map((report) => report.id)).toEqual([aView.reports[0]!.id]);
@@ -131,13 +156,13 @@ describe('the seat’s claimed control', () => {
     const w = world();
     const start = createState(w, { seed: 1 });
     const openingId = viewFor(w, start, seat).reports[0]!.id;
-    const openingTruth = start.reportTruth[openingId];
+    const openingTruth = truthOf(start, openingId);
     expect(openingTruth?.truthTerms.length).toBeGreaterThan(0);
     const told = tell(start, 'expire-me', 'a_sec', 1, 2, [{ ...control(region, b, 2), claimKind: 'enemy-strength' }]);
     const pruned = pruneKnowledge(told, w.rules.templates, 200, w.map.world.rules.supplyControlPermille);
     expect(pruned.counts.byAge).toBeGreaterThan(0);
     expect(pruned.state.reportTruth[toId('message', 'expire-me')]).toBeUndefined();
-    expect(pruned.state.reportTruth[openingId]).toEqual(openingTruth);
+    expect(truthOf(pruned.state, openingId)).toEqual(openingTruth);
     expect(viewFor(w, pruned.state, seat).controlBeliefs).toEqual(viewFor(w, start, seat).controlBeliefs);
     expect(viewFor(w, decodeSave(encodeSave({ worldHash: '0'.repeat(64), state: pruned.state })).state as unknown as State, seat).controlBeliefs).toEqual(viewFor(w, start, seat).controlBeliefs);
   });

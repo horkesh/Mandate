@@ -29,6 +29,7 @@ import type { ChamberState, CongressAct } from './politics/politics.ts';
 import type { SituationRecord } from './situations/situations.ts';
 import type { KnownReport, SeatKnowledge } from './knowledge/knowledge.ts';
 import type { ReportTruth } from './knowledge/truth.ts';
+import type { ReportClaim } from './knowledge/report.ts';
 import type { TransitMessage } from './messages/transit.ts';
 import type { OperationTable } from './operations/operations.ts';
 import type { PlanRecord } from './plans/plans.ts';
@@ -74,6 +75,8 @@ export interface State {
   readonly knowledgeBySeat: Readonly<Record<SeatId, SeatKnowledge>>;
   /** The opening bulletins, each stored once and referred to by the seats that hold it. Writer: `knowledge`. */
   readonly openingControlReports?: Readonly<Record<MessageId, KnownReport>>;
+  /** Shared claims referenced by every opening bulletin and its assessment terms. Writer: `knowledge`. */
+  readonly openingControlClaims?: readonly ReportClaim[];
   /** Why each held report says what it says (the truth layer). Writer: `knowledge`. */
   readonly reportTruth: Readonly<Record<MessageId, ReportTruth>>;
   /** Each post's goal and its plan: draft set, the seat's pick, approval, edits as counter-orders (lane 1.2). Writer: `plans`. */

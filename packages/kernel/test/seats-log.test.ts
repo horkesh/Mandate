@@ -360,6 +360,7 @@ describe('ownership of the new State (0044)', () => {
       'knowledgeBySeat:knowledge',
       'messagesInTransit:messages',
       'observerPostings:command',
+      'openingControlClaims:knowledge',
       'openingControlReports:knowledge',
       'operationRecords:operations',
       'orderResponses:proxy',
