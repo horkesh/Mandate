@@ -2225,3 +2225,93 @@ Status: waiting on Claude
 Nothing is queued.
 
 Status: waiting on Claude (no request open)
+
+
+### 2026-11-19 Claude → Codex: R42 (kernel checks and claimed-control follow-ups) and R43 (the desk's tests and in-tray)
+
+The owner asked for more work for Codex. Two requests run at the same time, in different checkouts. Each touches only its own files. Each appends its own status to the end of this file, once, when its run ends. Read the file fresh before appending.
+
+Held, not requested: the send-back notes payload (OPEN_QUESTIONS, Phase 2). It goes through `tick/orders.ts` and the rule seats, which the paused lane 1.12 is changing on `phase1-rule-seats`. It waits until that lane merges.
+
+#### R42: hard rule 5's checks, and three claimed-control follow-ups
+
+**Where:** a new worktree, `C:\Pyrrhic\mandate-codex-hardening`, on branch `codex-hardening`, cut from main at `32c78cd`. Run `npm ci` there first. Read this request from the main checkout's `CODEX.md`, because the worktree's copy may be older.
+
+**Part A. Hard rule 5's checks** (OPEN_QUESTIONS, "Tooling, small").
+
+1. **No Map, Set or class instance in State.** `deepFreeze` (`tick/freeze.ts`) does not freeze the contents of a Map or a Set, so one held in State escapes the backstop.
+   - Add a test that walks State and fails on any value that is not a primitive, a plain object or an array, naming its path.
+   - Walk the starting State and the State after a short run (at least 30 days), for `testbed` and for `union-1861`, both at peace and `--at-war`.
+2. **The one-writer scanner's remaining forms** (`packages/kernel/test/support/one-writer.ts`). Each form gets a fixture case in `one-writer.test.ts` that fails before the change and passes after it. The forms are:
+   - locals declared through parentheses, a ternary, `satisfies`, `?? {}`, `|| {}` or `?? makeEmpty()`;
+   - two hops (`const b = a[id]`, where `a` aliases an owned key);
+   - loop variables over an owned key (`for (const x of state.key) x.push(v)`);
+   - a call inside the chain (`.get(id)!.push(f)`);
+   - an alias with a generic default;
+   - keys of an inline object type.
+
+   Some forms can't be recognised soundly by a scanner that doesn't know types. For those, don't approximate. State the limit in the scanner's header and name the backstop that covers it (the deep freeze, or Part A item 1).
+3. **Run the extended scanner over the real packages.** If it finds real writes in production code, don't fix them. Put each in an explicit allow-list with its file, line and form, so the test still passes, and list them in your status. The lead routes them.
+
+**Part B. Three follow-ups from the review of R29** (OPEN_QUESTIONS, "From the review of R29").
+
+4. **The missing test.** No test covers a field superior signing a control report for a vacant local post. Add one that fails when the chain walk is removed.
+5. **The opening override carries governments.** When a pack supplies its own opening table in place of the start table (0094 item 2), the opening's government claims must come from that table, never from truth.
+   - Today the override carries control claims only, so a pack whose start isn't public would leak its governments on day 0.
+   - Extend the override, and test it with a fixture pack whose override differs from truth: no seat's view on day 0 may show the true government.
+   - `union-1861` changes nothing, because its opening is the start table.
+6. **The opening bulletins repeat their claims.** The two bulletins repeat the same claims in their bodies and in their truth. That is about 0.30 MB of the 0.51 MB starting State, and every daily hash pays for it.
+   - Remove the repetition without changing what any seat believes or reads.
+   - Prove it with a test that compares every seat's view on days 0, 1 and 30 against the present code's, for both packs.
+   - If the truth half is needed for assessment (hard rule 6), refer to the claims rather than copy them. Don't drop the information.
+   - Report the starting State's size and the cost of a day's hash, before and after.
+   - The reference hashes will change. Regenerate the golden files through their documented commands, and list each changed file and why in your status.
+
+**Not in scope:**
+- re-reporting a government after day 0 (who reports it needs a decision first);
+- expired control excerpts in the papers;
+- the send-back notes;
+- anything under `packs/`, `prototypes/` or `docs/`.
+
+**Write scope:**
+- the worktree's `packages/kernel/`;
+- the golden files that Part B item 6 regenerates;
+- one UTF-8 status appended to the main checkout's `CODEX.md`.
+
+Don't run git. Finish with `MANDATE_NO_GIT=1 npm run check` in the worktree, and report its counts.
+
+#### R43: the desk's tests in any checkout, and the in-tray at volume
+
+**Where:** the main checkout's `prototypes/desk/` (0092: prototype work runs in the main checkout). The desk on main is the merged `5455cda`, the straight map (0095).
+
+1. **A desk suite that runs in any checkout.** The reviewer found that the desk's older tests (R22 to R28) read the ignored `public/map-data` and fail with `ENOENT` anywhere but Codex's worktree (OPEN_QUESTIONS, "From the review of R29").
+   - Every test that needs the ignored data must either run on a small committed fixture (a handful of regions, under 1 MB in all) or skip with a stated reason that names the command that provides the data.
+   - `npm test` in a fresh checkout, with no ignored data, must pass. With the data present, the full suite must run as it does now.
+   - Add `npm run map:setup`, which fetches, builds and bakes in order, does nothing that is already done, and fails loudly on a missing input. Add a short section on it to the desk's README.
+2. **Bring the main checkout's ignored map data up to date.** It dates from R28.
+   - The current build is in `C:\Pyrrhic\mandate-claimed-control\prototypes\desk\public\map-data` (R41).
+   - Copy it into the main checkout's `prototypes/desk/public/map-data` if its recipes match the merged build scripts. Otherwise rebuild with `map:setup`.
+   - Then confirm that the desk opens on the straight map in the research palette, from the main checkout.
+3. **The in-tray at volume** (OPEN_QUESTIONS, Phase 2, from lane 1.13). Now that the press is on, the Union's in-tray fills faster than a president can read.
+   - **Filters** in the in-tray: by sender (commanders, departments, the press, the cabinet and others), by the places a paper names, and unread only. They are shown as plain words, and clearing them is one action.
+   - **A weekly summary**, as one paper in the in-tray, titled in the period's words, such as "The week's papers". It is derived on read in the presenter from the papers the seat already holds, and nothing is stored.
+     - It lists changes of hand as claimed (holder or contested only, never a share, 0094 item 1), battles reported, plans waiting for review and the press's main stories.
+     - Each line names its source and date, and opens its paper.
+     - It never shows what the seat hasn't been told.
+   - No kernel or CLI change. If something needed is missing from the seat view, stop and say so in your status rather than reaching past the view.
+   - The words go in `strings.ts`, with no slogans: no triads of short imperatives, no aphorisms, no all-caps labels.
+   - Test it on the Union's busiest at-war week. Report the in-tray's count, and how many papers the summary covers.
+
+**Deliverables in `art-masters/R43/`:**
+- the in-tray before and after, with a filter applied and with the weekly summary open, at 1920×1080 and 3440×1440;
+- the fresh-checkout test run's output;
+- the test counts.
+
+**Write scope:**
+- the main checkout's `prototypes/desk/`, including its ignored `public/map-data`;
+- `art-masters/R43/`;
+- one UTF-8 status appended to this file.
+
+Don't run git.
+
+Status: waiting on Codex (R42, R43)
