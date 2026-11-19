@@ -2,11 +2,11 @@
 
 Main merged at `364aba0` on 2026-11-19, by R46. R48 starts from the committed merge at `8b15e6e`, in `C:/Pyrrhic/mandate-rule-seats-b`, branch `phase1-rule-seats-b`.
 
-## Where lane 1.12 stopped (2026-11-19, R78)
+## Where lane 1.12 stopped (2026-11-19, R81)
 
-**The lead committed R77 as `235cfef`; R78 is implemented from that clean head, without Git mutation.** The history reaches 31 July/day 148 without `--at-war`, with zero rejections, matching daily replay and day-60 save/resume. The guns fire on **12–13 April/days 38–39** and Sumter falls on **13 April/day 39 under Anderson**, with the recorded evacuation terms, the signed notice on day 40, and `combat.evacuated` banded at exactly one. Richmond still moves once on **29 May/day 85**. The earlier authorization also moves the unchanged opening chain: Confederate war day 36, Union war day 37, Virginia notice day 42. R78 below records those wider date effects and the proposed date-gating ruling.
+**R80 is committed as `f444fa2`; R81 changes only the cost of looking up a post holder.** Its linear scan returns the same code-unit-first own matching post. The two decision-led 148-day paths preserve every daily hash and liveness count; the normal done check also preserves all 120 testbed hashes, replay and save/resume. R80 below remains the account of the opening's dates and delivery order. All save fixtures, bands, pack data and signed/gate inputs remain unchanged.
 
-Required no-Git full check: **exit 0, 126 files / 1,445 passed / 3 optional skips**. Desk types and suite: **exit 0, 84 passed / 8 existing skips**. Standalone eight-seed done check: **exit 0, Phase 0 6/6; 1A 1/6**. All five failed 1A categories remain; no historical checkpoint or timing limit changed. Evidence: `runs/r78/final-checks.json`. Claude's standing reviewer owns the independent review under 0096. The earlier sections below retain the lane's implementation history; R78 supersedes their late-Sumter result and pending doctrine-row removal.
+Timing-enabled no-Git root check: **exit 0, 127 files / 1,457 passed / zero skips**. Normal eight-seed done check with drafting: **exit 0, Phase 0 6/6; 1A 1/6**, with identical non-budget problem lists. Final back-to-back medians against preserved `f444fa2` source are **23.07 → 20.58 ms** (war by decision) and **22.02 → 19.40 ms** (history). **Other host jobs were active: unloaded confirmation and Linux CI remain pending.** No acceptance limit was changed or waived. R79 was not undertaken. Evidence: `runs/r81/final-checks.json`; independent review belongs to Claude under 0096.
 
 The Part A review history at the pause follows:
 
@@ -444,3 +444,55 @@ For the lead:
 1. **Lead / lane 1.11:** the later Union call moves Virginia's notice to 20 April and Missouri's provisional-government cause beyond 31 July. These follow the existing receipt-and-delay rules; revising those rules is a separate decision. R80 supersedes R78's premature Union-flag finding.
 2. **Lead / lane 1.14 and R79:** five 1A categories remain failed, now including the Missouri checkpoint. The hook bound, two stand-in labels and Taney follow-ups remain R79; no part of R79 was undertaken here.
 3. **Lead / remaining Part B policy:** consult policy, Butler placeholder integration and the July message as `address` remain deferred. Independent review of this implementation remains with Claude.
+
+## R81: cheaper post-holder lookup, unchanged outcomes (2026-11-19)
+
+For the lead: 2 items. R81 only, from `f444fa2`, on `phase1-rule-seats-b`. Git commands were read-only; HEAD and the index are unchanged. No R79 work. Evidence index: `runs/r81/final-checks.json`.
+
+### Change and profile
+
+`heldPost` previously sorted every post ID for every person lookup, then scanned for that holder. It now scans own post keys once and chooses the code-unit-minimum matching ID. This preserves the old result even with duplicate holders, numeric-looking or differently inserted keys; inherited keys remain excluded. The regression checks insertion order, duplicate holders, inherited posts, an absent holder, and a replaced table while retaining the original State. No State, World, ownership, tick order or report writer changes. Proposed rulings: none.
+
+The Node CPU sampler runs over both 148-day done-check slots. Those slots have identical scenario/defaults (`atWar:false`); the production runner measures them separately. The category table below excludes setup and checkpoint hashing, and leaves unparented GC samples unassigned. Values are sampled CPU milliseconds per day, not an additive breakdown of the median stopwatch result.
+
+| Sampled category | War before | War after | History before | History after |
+|---|---:|---:|---:|---:|
+| Morning requests, including views/freezing | 11.540 | 9.010 | 10.869 | 8.562 |
+| Delivery | 4.834 | 4.724 | 4.426 | 4.466 |
+| Cyclic reports | 4.745 | 4.426 | 4.229 | 3.844 |
+| Politics and press | 2.881 | 2.092 | 2.752 | 1.855 |
+| Situations | 0.290 | 0.334 | 0.224 | 0.274 |
+| Map | 1.072 | 1.000 | 1.104 | 0.841 |
+
+The remaining largest self costs are `deliverReport` (3.77/3.69 sampled ms/day), `heldPost` (3.53/3.44), and `deepFreeze` (1.16/1.22). Before the change, `postIdsOf` alone cost 5.25/4.54 sampled ms/day; afterwards it costs 0.65/0.42. This is the profile evidence for eliminating the repeated sort. Situations' condition scans are a small part of this run. Raw CPU profiles and `day-profiles.json` retain the other phases and stacks.
+
+### Back-to-back comparison and its limit
+
+| 148-day slot | Before median / p95 | After median / p95 | Observed median reduction |
+|---|---:|---:|---:|
+| War by decision | 23.068 / 41.956 ms | 20.576 / 36.875 ms | 2.493 ms |
+| History | 22.021 / 41.649 ms | 19.404 / 32.466 ms | 2.617 ms |
+
+Both optimized medians are below the requested 28 ms number. **The requested unloaded comparison is not established.** Other jobs remained active after a bounded quiet-host wait; aggregate load samples were 31%, 80%, 56% before the pair and 3% afterwards, with active CPU-heavy processes still recorded. Load changed, so these observed reductions are not precise causal estimates. No other process was stopped. Linux CI was not run or triggered; its deciding budget remains to be confirmed by the lead.
+
+The baseline loader substitutes only a byte-identical snapshot of `command.ts` taken before editing; its SHA-256 equals both the entry inventory and `git show f444fa2:packages/kernel/src/command/command.ts`. Every other runtime source is unchanged, and imports resolve into this worktree. No checkout, source rollback or Git write was used. Timing uses the exact last-day-only hash cadence and no freeze, deep checks, replay or observer, as the done check's stopwatch does. Daily hash preservation was checked separately.
+
+### Behavior, gates and preservation
+
+- Both decision-led paths match all 148 daily hashes, daily events, liveness counts, log-entry counts, decision points and rejections against the retained f444fa2 baseline. The final hash remains `59ae6644ff381b02e8086ca57be88ec5f828979eeaaaed37cbcb6ebbdee7b097`. The standalone checked Union and testbed summaries also match R80 on all 148 + 120 daily hashes, liveness, replay and resume. No numeric band or measured count changed.
+- The day-40 save fixture is reproduced byte-for-byte by both baseline and optimized source, without writing the fixture: SHA-256 `b865972cd76f99a73fa35b3ac5d54bf4072c1f59dc33d783ba9ea9e4c49a8036`. Every existing save fixture and all 206 protected pack/band/lock/configuration inputs are unchanged.
+- Cheap gates before the full check: typecheck; 54 focused command/succession/believed-holder/determinism tests; boundary, licences and decision index. The new regression also passes on the original implementation, establishing its preserved semantics before the optimization.
+- Exact `MANDATE_NO_GIT=1 MANDATE_TIMING=1 npm run check`: **exit 0**, 127 files, **1,457 passed / zero skips**, 331.89 seconds. This includes the requested timing-enabled `npm test` and its budget tests. Git-writing fixture files are excluded by the existing no-Git mode; they remain for the lead/CI.
+- Normal standalone eight-seed `npm run run:done-check -- --label r81-done`, with default drafting: **exit 0, Phase 0 6/6; 1A 1/6**. War-by-decision median/p95 **22.20/38.08 ms**, history **22.52/37.56 ms**; unchanged limits **40/160**. Testbed **2.34/3.15 ms**. Every failure category was inspected. Checkpoints, operation, pushback, stand-ins and lever sweep retain exactly R80's problem lists, including Missouri, Wheeling, 20,957 Confederate men, no planned operations fought, 44 reservations, the two unowned labels and the unmeasured D6 channels. No gate was waived, fitted or retried.
+- The initial exploratory `war` slot mistakenly used the labelled `atWar:true` mechanics path. Its evidence remains supplemental; reported profiles/timings use the corrected exact paths after a three-day loader smoke. A UTF-16 shell-log decoding error was fixed in the evidence parser only. No campaign was rerun for it.
+- Runtime/import diagnostics and the source inventory preceded this closeout. Final inventory: **three delivery files, 1,641 other baseline files unchanged**, no unexpected addition/deletion, all **nine captured Git metadata files byte-identical**, staged diff empty. No install, package build, server or browser. Only the production lookup, its test and this hand-over changed outside ignored evidence.
+
+For the lead:
+
+1. Review R81 under 0096, then obtain the unloaded comparison and Linux CI timing verdict; the loaded measurements do not waive either condition.
+2. Retain the five failed 1A categories with their existing owners. R81 changes no behavior or acceptance criteria.
+
+## Findings outside my scope
+
+1. **Lead / steward:** unloaded and Linux CI confirmation remain outstanding. The 28 ms number is met in the recorded loaded samples, but this is not an unloaded or hosted-CI claim.
+2. **Lead / lane 1.14 and R79:** the inherited five 1A failure categories, hook bound, stand-in labels and Taney follow-ups remain separate work. No R79 item was undertaken.

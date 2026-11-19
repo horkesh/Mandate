@@ -222,8 +222,13 @@ export function postIdsOf(state: State): PostId[] {
 
 /** The post a person holds, or null. */
 export function heldPost(state: State, person: PersonId): PostId | null {
-  for (const id of postIdsOf(state)) if (state.postStates[id]!.postHolder === person) return id;
-  return null;
+  // A lookup need not sort the entire table. Keep the same first-in-code-unit-order
+  // result even for a malformed table in which a person holds more than one post.
+  let first: PostId | null = null;
+  for (const id of Object.keys(state.postStates) as PostId[]) {
+    if (state.postStates[id]!.postHolder === person && (first === null || strictCompare(id, first) < 0)) first = id;
+  }
+  return first;
 }
 
 /** The faction a post serves, through its department's side today (0065); null for a neutral government's post. */
