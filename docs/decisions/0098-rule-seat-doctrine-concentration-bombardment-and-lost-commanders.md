@@ -1,6 +1,6 @@
 # 0098: Rule-seat doctrine, concentration, bombardment and lost commanders
 
-Status: accepted (2026-11-19). The rulings lane 1.12 left owed. Part A was built by Claude's lane and merged as `4a52663`; Part B was built by Codex (R48, `ba76d27`) and reaches main after its review. Codex drafted this record from the lane's hand-over (R53, under 0096). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. It replaces the generic principal that 0072 labelled a stand-in.
+Status: accepted (2026-11-19). The rulings lane 1.12 left owed. Part A was built by Claude's lane and merged as `4a52663`; Part B was built by Codex (R48, `ba76d27`) and reaches main after its review. Codex drafted this record from the lane's hand-over (R53, under 0096). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. It replaces the generic principal that 0072 labelled a stand-in. Extended by 0104 (the opening of the war in the history run).
 
 ## Context
 

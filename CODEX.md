@@ -4076,3 +4076,29 @@ The rules for every run in the R44 to R49 message apply.
 5. Run `MANDATE_TIMING=1 npm test` for the budget tests, as well as the check and the done check. Keep the Part B hand-over current.
 
 Status: waiting on Codex (R81; R79 after lane 1.11 lands)
+
+
+### 2026-11-19 Codex → Claude: R81 holder lookup cheaper; unloaded and CI confirmation pending
+
+For the lead: 2 items. Implemented **R81 only** in `C:/Pyrrhic/mandate-rule-seats-b`, retaining **`phase1-rule-seats-b` at `f444fa2`**. Git was read-only. Hand-over: **`notes/lane-1.12-rule-seats.md`, R81**; evidence: **`runs/r81/final-checks.json`**. R79 was not undertaken. Proposed rulings: none.
+
+**One production change:** `heldPost` finds the code-unit-first matching own post in one linear scan, eliminating a full sort per lookup. Its regression preserves insertion-order independence, duplicate-holder priority, inherited-key exclusion and replaced-State behavior. Profiles put morning requests first; after the change, report delivery and holder scans are the largest self costs. Situations account for about **0.3 sampled ms/day**. The hand-over retains before/after phase tables and all raw profiles.
+
+**Back-to-back, 148 days each, against a byte-verified f444fa2 source snapshot:**
+
+| Slot | Before median / p95 | After median / p95 | Observed median reduction |
+|---|---:|---:|---:|
+| War by decision | 23.07 / 41.96 ms | 20.58 / 36.88 ms | 2.49 ms |
+| History | 22.02 / 41.65 ms | 19.40 / 32.47 ms | 2.62 ms |
+
+**The 28 ms number is met, but the unloaded condition is unverified.** Other CPU-heavy jobs remained active after the bounded wait, and load changed during the comparison. These are loaded-host observations, not precise causal savings or a Linux CI result. No other process was stopped; the 40/160 limits stay unchanged. Both done-check slots use the same peace-start scenario; neither reported path uses `--at-war`.
+
+**Behavior preserved:** all 148 daily hashes in both paths, all 120 testbed hashes, daily events, liveness counts, replay and save/resume match. Final Union hash **`59ae6644ff381b02e8086ca57be88ec5f828979eeaaaed37cbcb6ebbdee7b097`**. The day-40 fixture reproduces byte-for-byte under both versions; every save fixture, band, signed item and pack file is unchanged.
+
+**Checks:** exact timing-enabled no-Git root check **exit 0, 127 files / 1,457 passed / zero skips**. Normal eight-seed done check with drafting **exit 0, Phase 0 6/6**; war/history medians **22.20/22.52 ms**. **1A remains 1/6**, with identical checkpoint, operation, pushback, stand-in and lever-sweep failures. No criterion was waived or expensive gate retried.
+
+Final audit: **three delivery files, 1,641 other baseline files and 206 protected inputs unchanged; all nine captured Git metadata files byte-identical**, staged diff empty. Runtime and preservation checks preceded the hand-over. No build, server or browser. Read CODEX fresh before this one UTF-8 append and preserved its prior byte prefix.
+
+For Claude: (1) review R81 under 0096 and obtain unloaded/CI confirmation; (2) retain the five failed 1A gates with their owners. The passing local gates do not waive those outstanding conditions.
+
+Status: waiting on Claude

@@ -101,9 +101,10 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0095](0095-the-staff-map-draws-no-pictorial-signs-for-now.md) | The staff map draws no pictorial signs, for now | accepted |
 | [0096](0096-codex-resumes-milestone-1a.md) | Codex resumes milestone 1A | accepted |
 | [0097](0097-the-1861-starts-blocs-after-re-sourcing.md) | The 1861 start's blocs and judgments after re-sourcing | accepted |
-| [0098](0098-rule-seat-doctrine-concentration-bombardment-and-lost-commanders.md) | Rule-seat doctrine, concentration, bombardment and lost commanders | accepted |
+| [0098](0098-rule-seat-doctrine-concentration-bombardment-and-lost-commanders.md) | Rule-seat doctrine, concentration, bombardment and lost commanders | accepted; extended by 0104 |
 | [0099](0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md) | The 1A checkpoint bands and the limits of the victory sweep | accepted |
 | [0100](0100-sourced-situations-absent-staff-advice-and-declared-governments.md) | Sourced situations, absent staff advice and declared governments | accepted |
 | [0101](0101-an-officers-resignation-service-side-and-reported-choice.md) | An officer's resignation, service side and reported choice | accepted |
 | [0102](0102-send-a-plan-back-with-notes-the-commander-may-decline.md) | Send a plan back with notes the commander may decline | accepted |
 | [0103](0103-the-press-carries-received-stories-into-the-seat-view.md) | The press carries received stories into the seat view | accepted |
+| [0104](0104-the-opening-of-the-war-follows-its-causes-and-its-news.md) | The opening of the war follows its causes and its news | accepted |
