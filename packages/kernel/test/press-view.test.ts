@@ -15,6 +15,77 @@ import { ctxFor } from './support/tick-context.ts';
 import { sendMessages } from '../src/messages/transit.ts';
 import { tick } from '../src/tick/tick.ts';
 
+/** Received reports with independent written/arrival stamps; no battle records supply a page. */
+function pressFixture() {
+  const { world, setup } = seatsWorld('testbed');
+  const rules = world.map.world.rules.politics, paper = rules.press.papers[0]!;
+  const principal = world.faction(paper.faction).principal;
+  const region = toId('region', 'w_valley'), commander = toId('person', 'n_fighter');
+  let state = createState(world, setup);
+  const claim = (battle: string, kind: ReportClaim['claimKind'], value: number, token: string, days: number[]): ReportClaim => ({
+    claimKind: kind, claimValue: value, claimToken: token, claimRegion: region, claimConfidence: 600,
+    claimBattle: battle, claimBattleDays: days, claimCommander: commander,
+  });
+  const receive = (who: typeof principal, id: string, type: ReportBody['reportType'], written: number, received: number, claims: ReportClaim[]) => {
+    state = deliverReport(state, seatIdFor(who), {
+      id: toId('message', id), knownReceivedDay: received, knownRoute: 'wire', knownVia: [],
+      knownBody: { reportType: type, reportSubtype: null, reportAuthor: commander, reportAuthorPost: null,
+        reportSubjectKind: 'region', reportSubjectId: region, reportClaims: claims, reportDay: written,
+        reportHour: null, reportAdvice: null, reportAnswers: null },
+    }, NO_TRUTH);
+  };
+  return { paper, principal, commander, region, claim, receive,
+    page: (day: number) => frontPage(rules, state, paper, day, principal, 1) };
+}
+
+it('P1: prints only its own editor’s stories when another seat holds a different closing report', () => {
+  const f = pressFixture();
+  f.receive(f.paper.editor, 'm.own-editor', 'wire-dispatch', 3, 4, [f.claim('battle.own', 'battle-result', 0, 'won', [3])]);
+  // The principal is a different seat on the same side: this is not a foreign-side filter.
+  expect(f.principal).not.toBe(f.paper.editor);
+  f.receive(f.principal, 'm.other-seat', 'wire-dispatch', 4, 5, [f.claim('battle.other', 'battle-result', 0, 'lost', [4])]);
+  expect(f.page(7).battles).toEqual([
+    { battle: 'battle.own', region: f.region, commander: f.commander, result: 'won', casualties: 0, captured: 0, returned: 'none' },
+  ]);
+  expect(f.page(7).claims.map(c => c.claimBattle)).toEqual(['battle.own']);
+  expect(f.page(7).people).toHaveLength(1);
+  expect(f.page(7).people[0]).toMatchObject({ change: 'standing', person: f.commander });
+});
+
+it('P2: defers a closing report received after printing to the next issue', () => {
+  const f = pressFixture();
+  // Written within the first issue’s window, but not delivered until the following day.
+  f.receive(f.paper.editor, 'm.late-closing', 'wire-dispatch', 4, 8, [f.claim('battle.late', 'battle-result', 0, 'lost', [4])]);
+  expect(f.page(7)).toMatchObject({ battles: [], claims: [], politics: [], people: [] });
+  expect(f.page(14).battles).toEqual([
+    { battle: 'battle.late', region: f.region, commander: f.commander, result: 'lost', casualties: 0, captured: 0, returned: 'none' },
+  ]);
+  expect(f.page(14).claims[0]).toMatchObject({ claimBattle: 'battle.late', claimToken: 'lost', claimConfidence: 0 });
+  expect(f.page(21)).toMatchObject({ battles: [], claims: [], politics: [], people: [] });
+});
+
+it('P3: keeps returns with their battle when two battles share a region and a covered day', () => {
+  const f = pressFixture();
+  // Overlapping coverage makes place and day insufficient to identify either return.
+  for (const [battle, result] of [['battle.one', 'won'], ['battle.two', 'lost']] as const) {
+    f.receive(f.paper.editor, `m.closing.${battle}`, 'wire-dispatch', 3, 4, [f.claim(battle, 'battle-result', 0, result, [3])]);
+  }
+  f.receive(f.principal, 'm.return.one', 'casualty-return', 4, 5, [
+    f.claim('battle.one', 'own-losses', 11, 'full', [3]), f.claim('battle.one', 'captured', 2, 'full', [3]),
+  ]);
+  f.receive(f.principal, 'm.return.two', 'casualty-return', 4, 5, [
+    f.claim('battle.two', 'own-losses', 80, 'full', [3]), f.claim('battle.two', 'captured', 9, 'full', [3]),
+  ]);
+  expect(f.page(7).battles).toEqual([
+    { battle: 'battle.one', region: f.region, commander: f.commander, result: 'won', casualties: 13, captured: 2, returned: 'full' },
+    { battle: 'battle.two', region: f.region, commander: f.commander, result: 'lost', casualties: 89, captured: 9, returned: 'full' },
+  ]);
+  expect(f.page(7).claims.map(c => [c.claimBattle, c.claimKind, c.claimValue])).toEqual([
+    ['battle.one', 'battle-result', 13], ['battle.one', 'captured', 2],
+    ['battle.two', 'battle-result', 89], ['battle.two', 'captured', 9],
+  ]);
+});
+
 it('prints the testbed editor’s received story and principal’s returns, independently of battle truth', () => {
   const { world, setup } = seatsWorld('testbed');
   const rules = world.map.world.rules.politics, paper = rules.press.papers[0]!;

@@ -16,8 +16,8 @@ export default defineConfig({
     hookTimeout: 300_000,
     include: ['packages/*/test/**/*.test.ts', 'packs/*/test/**/*.test.ts', 'tools/test/**/*.test.ts'],
     // Codex's command-line lane must never invoke git, including test fixtures.
-    // Exclude the hook file before collection; the ordinary gate remains full.
-    exclude: process.env.MANDATE_NO_GIT === '1' ? ['tools/test/staged-check.test.ts'] : [],
+    // Exclude files that write Git fixtures before collection; the ordinary gate remains full.
+    exclude: process.env.MANDATE_NO_GIT === '1' ? ['tools/test/staged-check.test.ts', 'tools/test/lfs-git.test.ts'] : [],
     fsModuleCachePath: process.env.MANDATE_NO_GIT === '1' ? 'node_modules/.vitest-no-git' : undefined,
   },
 });

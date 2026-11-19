@@ -264,7 +264,36 @@ The desk suite without ignored map data passes 76 / skips 8 (84 collected); skip
 
 The day-40 testbed save was regenerated using `npx tsx tools/make-save-fixture.ts`, for the new report metadata and public traffic. Its command log, log hash and world hash are unchanged. Existing strings, lockfiles, scenario sources, signed situations and gate files are preserved. HEAD remains `4a526635cf672ed318d75af1c6376c0396ec1d6a`; the index is empty. The browser server is stopped. Claude's independent standing review remains pending.
 
+## R63: the three truth regressions and LFS fixture separation
+
+For the lead: 1 item. Completed R63 only in `C:/Pyrrhic/mandate-press-tests`, branch `press-tests`, from `89705531c73c50064f30d57fd64daabfbad270cf`. Both requested `npm ci` installs passed before implementation. No runtime source, pack, save, lockfile, signed item or other run's worktree changed. Evidence is in `runs/r63/final-checks.json`, with the retained logs and preservation inventory beside it.
+
+`packages/kernel/test/press-view.test.ts` now has three separate regressions:
+
+- **P1:** the editor holds one story and another seat on the same side holds a different one. Only the editor's story and its effects print.
+- **P2:** a closing report written on day 4 arrives on day 8. It is absent from day 7's page, appears on day 14's page and does not repeat on day 21.
+- **P3:** two battles share a region and a covered day. Their full returns carry different losses and captured counts; each page claim keeps its own battle's figures. Sharing a covered day makes place and day insufficient to pass this test.
+
+Each test was run against its deliberate re-break: flatten all seats' reports (P1), remove the printing-day receipt ceiling (P2), or remove battle identity from return matching (P3). Each run exited 1 with exactly its intended test failing. `runs/r63/rebreaks.json` records the exact changes, and the per-case JSON and logs retain the failures. Every mutation was restored byte-for-byte. The final production sources match the baseline. The later P1 correction only replaces an invalid union-property assertion; its story assertion, which caught P1, is unchanged.
+
+The three Git-writing tests moved from `tools/test/lfs.test.ts` to `tools/test/lfs-git.test.ts`. Their bodies and assertions are preserved, with only the `skipIf` wrappers removed (`runs/r63/lfs-move.json`). The config excludes that whole file beside `staged-check.test.ts` only for `MANDATE_NO_GIT=1`. Normal collection includes both, and the existing CI rejection of any `MANDATE_NO_GIT` setting still passes. The ordinary fixtures were collected but were not executed in this read-only run. A new config test covers the unset, `0` and `1` modes.
+
+The CLI and desk retain their byte-identical local `press.ts` copies. The desk development server deliberately denies sibling `packages/` sources (`scripts/dev.ts` and `server/http.ts`); a shared import would require widening that boundary. Used the request's equality fallback: `tools/test/press-copy.test.ts` compares the actual bytes. A deliberate one-line divergence exits 1 with that test failing; the original bytes were restored. The existing desk test still verifies equivalent rendered stories. No source-server change or new design ruling is proposed.
+
+**Verification:** the required `MANDATE_NO_GIT=1 npm run check` exited 0: **102 files, 1,275 passed / 3 optional timing skips**, plus root typecheck, boundary, licences and decision index. Focused checks passed **22/22** before the P1 type correction; its final affected file passes **5/5**, followed by a passing root typecheck and full gate. The desk suite passes **77 / skips 8** optional map-data tests, and its typecheck exits 0. No browser or package build was needed for this test/config-only change. Those runtime paths and both presenter sources are unchanged.
+
+The required standalone `npm run run:done-check -- --label r63-done` exited 0, **6/6 criteria**: repeat/frozen hashes, replay, save/resume, liveness, required section-10 coverage and timing. Union median/p95 **34.44/67.01 ms**; testbed **7.76/26.51 ms**. Both mechanics runs retain all **153** existing bands. Drafting diagnostics and the summaries/saves are under `runs/r63-done*`. These are Phase 0 mechanics checks, not milestone 1A acceptance or hosted CI.
+
+The pre-edit config regression failed for the missing exclusion, as intended. Root typecheck then found an invalid `.delta` read on the `PeopleChange` union in the new P1 assertion; its typed replacement passed the affected test and typecheck before any full gate. A preservation helper initially demanded byte-identical Git metadata; the final audit records the actual narrower evidence: `.git` and HEAD unchanged, the index byte hash changed, and `git diff --cached` empty. Only read commands were issued, with optional locks disabled for final reads; no Git metadata was restored or edited directly. There was no expensive retry.
+
+Final audit: **seven delivery files**, **1,380 other baseline files unchanged**, no deletions or unexpected additions. All production sources, generated files, lockfiles, saves, scenario sources, signed items and gate files match entry. HEAD remains `89705531c73c50064f30d57fd64daabfbad270cf`; there are no staged changes. Whitespace checks pass. No server was started. The standing reviewer still reviews this delivery under 0096.
+
+For the lead:
+1. Review the R63 tests and fixture move; run the ordinary Git-fixture tests through the authorised hook/CI. This run preserved their bodies and verified collection without creating Git histories.
+
 ## Findings outside my scope
+
+- R63's desk `npm ci` reported two dependency vulnerabilities (one low, one high). Its existing lockfile is unchanged; dependency remediation is outside R63.
 
 - The enemy reads the papers (0032: Lee followed McClellan in the Inquirer). Front pages go only to their own side, so the enemy route is 1B.
 - The relieve verb proposes no bloc resentment. M2 cost the blocs sharing the man's values in proportion to his standing.

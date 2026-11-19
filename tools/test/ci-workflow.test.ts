@@ -24,6 +24,24 @@ function jobs(text: string): Record<string, string> {
 describe('the CI workflow', () => {
   const all = jobs(workflow);
 
+  it('excludes both git-fixture files only in the no-git lane, keeping the ordinary gate full', () => {
+    const env: NodeJS.ProcessEnv = { ...process.env };
+    delete env.CI;
+    delete env.MANDATE_NO_GIT;
+    const exclusions = (environment: NodeJS.ProcessEnv) => {
+      const result = spawnSync(process.execPath, ['--import', 'tsx', '--input-type=module', '-e',
+        "console.log(JSON.stringify((await import('./vitest.config.ts')).default.test.exclude))"],
+      { cwd: new URL('../../', import.meta.url), env: environment, encoding: 'utf8' });
+      expect(result.status, result.stderr).toBe(0);
+      return JSON.parse(result.stdout) as string[];
+    };
+    expect(exclusions({ ...env, MANDATE_NO_GIT: '1' })).toEqual([
+      'tools/test/staged-check.test.ts', 'tools/test/lfs-git.test.ts',
+    ]);
+    expect(exclusions(env)).toEqual([]);
+    expect(exclusions({ ...env, MANDATE_NO_GIT: '0' })).toEqual([]);
+  });
+
   it('refuses any MANDATE_NO_GIT setting in CI before test exclusion can hide a file', () => {
     const env: NodeJS.ProcessEnv = { ...process.env, CI: 'true' };
     delete env.MANDATE_NO_GIT;
