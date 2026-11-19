@@ -197,6 +197,7 @@ export const FIXTURE_COMBAT_RULES: CombatRules = {
   selfEmancipation: {"linesFaction":null,"agencyReasons":{"resistanceWithin":"agency:fixture","resistanceElsewhere":"agency:fixture","flightToLines":"agency:fixture"},"protectedFlags":[],"cadenceDays":7,"resistancePerMillion":200,"pressureFlags":[],"flightPerMillion":1000,"reachWithForce":1000,"reachLinesOnly":400,"holdShare":600,"policyBase":500,"policyFlags":[]},
   people: FIXTURE_PEOPLE_RULES,
   politics: FIXTURE_POLITICS_RULES,
+  turns: { maxDays: 7, cite: 'FIXTURE' },
 } as const;
 
 export function region(id: string, kind: RegionKind = 'land'): RegionRecord {

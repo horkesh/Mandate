@@ -114,6 +114,54 @@ describe('the scanner catches violations (positive control)', () => {
   ];
   const owned = ownedKeys(fixtureFields);
 
+  it.each([
+    ['nested parentheses', 'const x = ((state.controller)); x.push(f);'],
+    ['parenthesised ternary', 'const x = (ok ? state.controller : other); x.push(f);'],
+    ['satisfies', 'const x = state.controller satisfies T[]; x.push(f);'],
+    ['parenthesised nullish default', 'const x = ((state.controller ?? {})); x[id] = f;'],
+    ['logical default', 'const x = state.controller || {}; x[id] = f;'],
+    ['factory default', 'const x = state.controller ?? makeEmpty(); x[id] = f;'],
+    ['two hops', 'const a = state.controller; const b = a[id]; b.push(f);'],
+    ['loop element', 'for (const x of state.controller) x.push(f);'],
+    ['loop through alias', 'const a = state.controller; for (const x of a) x.push(f);'],
+  ])('follows %s', (_, code) => {
+    expect(writeViolations([{ path: 'packages/kernel/src/supply.ts', code }], owned, [])).toEqual([
+      expect.objectContaining({ key: 'controller', form: 'write through a local alias' }),
+    ]);
+  });
+
+  it('follows a generic alias with a default to its State row', () => {
+    const files = [{ path: 'packages/kernel/src/state.ts', code: 'interface State { rows: Rows } type Rows<T = Row> = Readonly<Record<string, T>>; interface Row { readonly rowValue: number }' }];
+    const records = stateRecords(files);
+    expect(records.map(r => r.record)).toContain('Row');
+    const keys = immutableKeys(records, { records: ['Row'], rootFields: [], neverReassigned: [] });
+    expect(writeViolations([{ path: 'packages/cli/src/x.ts', code: 'r.rowValue = 2;' }], [], keys)).toHaveLength(1);
+  });
+
+  it('classifies keys of inline object types, including arrays of inline objects', () => {
+    const records = stateRecords([{ path: 'packages/kernel/src/state.ts', code: 'interface State { detail: { readonly inlineValue: number; children: readonly { readonly childValue: number }[] } }' }]);
+    expect(records.map(r => [r.record, r.keys])).toEqual([
+      ['State', ['detail']], ['State.detail', ['inlineValue', 'children']], ['State.detail.children', ['childValue']],
+    ]);
+    const keys = immutableKeys(records, { records: ['State.detail', 'State.detail.children'], rootFields: [], neverReassigned: [] });
+    expect(writeViolations([{ path: 'packages/cli/src/x.ts', code: 'r.inlineValue++; r.childValue = 2;' }], [], keys)).toHaveLength(2);
+  });
+
+  it('does not guess whether a method returns owned storage or a copy', () => {
+    expect(writeSites({ path: 'x.ts', code: 'state.controller.get(id)!.push(f);' }, 'controller')).toEqual([]);
+    expect(readFileSync(new URL('./support/one-writer.ts', import.meta.url), 'utf8').split('import type')[0]).toContain('state-data.test.ts');
+  });
+
+  it('keeps inline keys behind a wrapper alias reachable from State', () => {
+    const records = stateRecords([{ path: 'x.ts', code: 'interface State { rows: Rows } type Rows<T = number> = Readonly<{ readonly wrappedValue: T }>[];' }]);
+    expect(records.map(r => [r.record, r.keys])).toEqual([['State', ['rows']], ['Rows', ['wrappedValue']]]);
+  });
+
+  it('does not follow an alias through a copy, a call result, or a loop over a copy', () => {
+    const code = 'const a = state.controller; const b = [...a]; b.push(f); const c = a.slice(); c.push(f); for (const x of a.map(copy)) x.push(f);';
+    expect(writeViolations([{ path: 'packages/kernel/src/supply.ts', code }], owned, [])).toEqual([]);
+  });
+
   const control: SourceFile = {
     path: 'packages/kernel/src/control.ts',
     code: [
@@ -408,9 +456,9 @@ describe('the scanner catches violations (positive control)', () => {
       ].join('\n'),
     };
     const records = stateRecords([root]);
-    expect(records.map((r) => r.record).sort()).toEqual(['CutRow', 'EntryNote', 'RosterRow', 'State', 'TrimRow']);
+    expect(records.map((r) => r.record).sort()).toEqual(['CutRow', 'EntryNote', 'LedgerEntry', 'RosterRow', 'State', 'TrimRow']);
     const fields: OwnedField[] = [{ field: 'roster', writer: 'people', proposedBy: [], code: [{ record: 'State', key: 'roster' }, { record: 'State', key: 'ledger' }] }];
-    const decl: ImmutableDeclaration = { records: ['CutRow', 'EntryNote', 'TrimRow'], rootFields: ['day'], neverReassigned: ['id'] };
+    const decl: ImmutableDeclaration = { records: ['CutRow', 'EntryNote', 'LedgerEntry', 'TrimRow'], rootFields: ['day'], neverReassigned: ['id'] };
     // The alias-hidden record is classified: its unowned field is reported, where before the scan never saw it.
     expect(classificationProblems(records, fields, decl, [])).toEqual([
       `packages/kernel/src/state.ts: RosterRow.rosterRank has no writer in OWNED_FIELDS${NOT_DECLARED('RosterRow')} (packages/kernel/src/ownership.ts)`,

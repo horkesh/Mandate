@@ -1,0 +1,58 @@
+/* R17: page settings change presentation only. */
+.masthead{order:0}.desk-stage{order:1;container-type:size}.fallback{order:2}
+.desk-cover{width:calc(100cqh * 2.38889);height:100cqh}
+.run-object,.write-object{top:auto;bottom:1%}
+.app{--text-scale:1}
+.masthead h1{font-size:calc(clamp(22px,2vw,42px) * var(--text-scale))}
+.masthead .eyebrow{font-size:calc(12px * var(--text-scale))}
+.mute,.fallback button{font-size:calc(15px * var(--text-scale))}
+.safe-desk{font-size:calc(clamp(15px,1.1vw,26px) * var(--text-scale))}
+.desk-map{font-size:clamp(15px,1.1vw,26px)}
+.object-label{white-space:normal;text-align:center;max-width:15em}
+.large-type .object-label,.large-type .date-on-object,.large-type .board-preview{display:none}
+.large-type .docket-rail{top:70%;height:15%;min-height:0;overflow:auto;font-size:.75em;grid-template-columns:1fr}
+.large-type .docket-rail>span:last-child{display:none}
+.large-type .write-object{left:18%;width:22%;font-size:.6em;display:block;padding:.3em;white-space:normal}
+.large-type .run-object{right:18%;width:35%;font-size:.8em;gap:.5em;padding:.4em .7em}
+.date-on-object{overflow-wrap:anywhere}
+.reading-dialog{width:min(calc(760px * var(--text-scale)),calc(100vw - 48px));margin-left:auto;margin-right:auto}
+.paper-copy{max-width:70ch}
+.key-card{border-collapse:collapse;width:100%;font-size:.85em}
+.key-card th,.key-card td{padding:.6em;text-align:left;border-bottom:1px solid #9d9074;line-height:1.5}
+.key-card th{width:12em;font-weight:400}
+.settings .scale-setting{flex-direction:column;align-items:stretch;flex-basis:100%}
+.settings input[type=range]{width:100%}
+.find-results{padding:0;list-style:none;display:grid;gap:.5em}
+.find-results button{text-align:left;width:100%;overflow-wrap:anywhere}
+.review-dialog .panel-header,.review-dialog .feedback{font-size:calc(16px * var(--text-scale))}
+.map-plan-sheet{font-size:calc(18px * var(--text-scale));overflow-wrap:anywhere}
+.plan-map-layout{grid-template-columns:minmax(0,min(42%,calc(620px * var(--text-scale)))) minmax(0,1fr)}
+.map-plan-sheet select{width:100%}
+.map-text{font-size:calc(18px * var(--text-scale))}
+.map-note{font-size:calc(13px * var(--text-scale))}
+.review-dialog .map-header{font-size:calc(19px * var(--text-scale))}
+.review-dialog .map-tools{font-size:calc(13px * var(--text-scale))}
+.review-dialog .map-footer{font-size:calc(12px * var(--text-scale));flex-wrap:wrap;gap:.5em}
+.evening-lamp{--paper:#d8c7a8;--ink:#27221b}
+.evening-lamp .desk-stage{background-color:#683e22;background-blend-mode:multiply}
+.evening-lamp .masthead,.evening-lamp .fallback{background:#33291e}
+.evening-lamp dialog,.evening-lamp .panel-header,.evening-lamp .paper,.evening-lamp .map-plan-sheet,.evening-lamp .map-text,.evening-lamp .paper-link{background-color:#d8c7a8;background-image:none;color:#27221b}
+.evening-lamp .paper:after{opacity:.06}
+.evening-lamp .staff-map,.evening-lamp .map-drawing{background:#d8c7a8}
+.high-contrast{--paper:#fff;--ink:#111;--pencil:#111}
+.high-contrast *,.high-contrast *:before,.high-contrast *:after{background-image:none!important;text-shadow:none!important}
+.high-contrast .desk-stage{background:#303030}
+.high-contrast .masthead,.high-contrast .fallback{background:#111;color:#fff}
+.high-contrast .masthead *,.high-contrast .fallback button{color:#fff;border-color:#fff}
+.high-contrast dialog,.high-contrast .panel-header,.high-contrast .paper,.high-contrast .paper-link,.high-contrast .map-plan-sheet,.high-contrast .staff-map,.high-contrast .map-drawing,.high-contrast .map-text{background:#fff;color:#111}
+.high-contrast dialog *{color:#111!important;text-shadow:none!important;filter:none}
+.high-contrast dialog :is(button,input,select,textarea,.feedback p,.refusal,.map-review-message,.map-note,.likeness,.situation,.grammar-hint,.stop-slip,.day-strip span){background:#fff!important;color:#111!important;border-color:#111}
+.high-contrast .map-grain,.high-contrast .paper:after{display:none}
+.high-contrast .map-mark{filter:none;opacity:1}
+.high-contrast .object-label,.high-contrast .date-on-object,.high-contrast .board-preview>span,.high-contrast .docket-rail,.high-contrast .run-object{background:#fff;color:#111}
+.high-contrast .attention-object,.high-contrast .write-object,.high-contrast .desk-status{color:#fff}
+.high-contrast :focus-visible{outline:3px solid #111!important;outline-offset:3px;box-shadow:0 0 0 7px #fff!important}
+.high-contrast .pixi-map:focus-visible{outline-offset:-6px;box-shadow:inset 0 0 0 3px #fff!important}
+.high-contrast button:disabled{opacity:1;border-style:dashed!important;cursor:default}
+@media(max-aspect-ratio:19/9){.safe-desk{font-size:calc(clamp(15px,1.5vw,23px) * var(--text-scale))}.map-plan-sheet{font-size:calc(16px * var(--text-scale))}}
+@media(max-width:1150px){.plan-map-layout{grid-template-columns:minmax(0,45%) minmax(0,1fr)}.key-card th{width:auto}.panel-header{flex-wrap:wrap}}

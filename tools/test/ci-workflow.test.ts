@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { describe, expect, it } from 'vitest';
 
 /**
@@ -23,6 +24,18 @@ function jobs(text: string): Record<string, string> {
 describe('the CI workflow', () => {
   const all = jobs(workflow);
 
+  it('refuses any MANDATE_NO_GIT setting in CI before test exclusion can hide a file', () => {
+    const env: NodeJS.ProcessEnv = { ...process.env, CI: 'true' };
+    delete env.MANDATE_NO_GIT;
+    const load = (environment: NodeJS.ProcessEnv) => spawnSync(process.execPath, ['--import', 'tsx', '--input-type=module', '-e', "await import('./vitest.config.ts')"], { cwd: new URL('../../', import.meta.url), env: environment, encoding: 'utf8' });
+    expect(load(env).status).toBe(0);
+    for (const value of ['', '0', '1']) {
+      const result = load({ ...env, MANDATE_NO_GIT: value });
+      expect(result.status, `CI value ${JSON.stringify(value)}`).not.toBe(0);
+      expect(result.stderr).toContain('MANDATE_NO_GIT must be unset in CI');
+    }
+  });
+
   it('runs every part of npm run check as its own step', () => {
     const parts = pkg.scripts.check!.split('&&').map((s) => s.trim().replace(/^npm run /, ''));
     expect(parts.length).toBeGreaterThan(2);
@@ -42,7 +55,8 @@ describe('the CI workflow', () => {
   });
 
   it('compares both machines’ determinism summaries', () => {
-    expect(all.check).toMatch(/run: npm run run:headless -- testbed/);
+    // M2's headless runner retired with M2 (lane 1.13): CI no longer runs it.
+    expect(all.check).not.toMatch(/run:headless/);
     // The seats layer's run hashes every day, replays its log and resumes from a save (lane 0.6).
     expect(all.check).toMatch(/run: npm run run:seats -- testbed \d+ --resume-at \d+ --label ci-determinism/);
     // The Phase 0 done check (lane 0.8) hashes every day on both packs and writes the summaries the comparison reads.

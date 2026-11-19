@@ -1,0 +1,30 @@
+export const strings = {
+  title:'Staff map symbols',
+  intro:'Each symbol is shown at four sizes in all three source states.',
+  stock:'Paper', variant:'Outlines', vision:'Colour vision', search:'Find a symbol',
+  all:'Both stocks', linen:'Linen map paper', letter:'Letter paper',
+  rough:'Roughened', clean:'Clean', normal:'Standard view',
+  protanopia:'Protanopia', deuteranopia:'Deuteranopia', tritanopia:'Tritanopia',
+  ink:'Ink', pencil:'Pencil', faded:'Faded',
+  stateNote:'Ink has a solid stroke; pencil and faded marks have broken edges.',
+  sourceNote:'A map mark must carry its report’s author and date beside it.',
+  draftNote:'This draft is for the Phase 2 desk lane to review.',
+  reservedNote:'Courier and wire-transit signs are reserved because the current view supplies no message positions.',
+  spareNote:'The three spare signs have no assigned meaning.',
+  slotsNote:'Numbers and correction initials are set separately in the empty slots.',
+  noMatches:'No symbols match this name.',
+  simulationNote:'Colour-vision views use Machado, Oliveira and Fernandes’s 2009 model at full severity.',
+  groups:{headquarters:'Headquarters',naval:'Naval posts',places:'Places',works:'Works and reported engagements',infrastructure:'Routes and crossings',estimates:'Enemy estimates',communications:'Observation and messages',annotations:'Plan annotations',spares:'Unassigned signs'},
+  labels:{
+    'hq-army':'Army headquarters','hq-department':'Department headquarters','hq-corps':'Corps headquarters',
+    'hq-temporary':'Temporary post','hq-detachment':'Detachment headquarters',squadron:'Squadron',flotilla:'Flotilla',
+    fort:'Fort',depot:'Depot',port:'Port','arsenal-yard':'Arsenal or yard',
+    'town-small':'Small town','town-medium':'Town','town-large':'Large town','key-point':'Key point',
+    'rail-junction':'Rail junction','rail-cut':'Rail cut','bridge-out':'Bridge out',ford:'Ford',
+    'enemy-area':'Enemy area estimate','enemy-point':'Enemy point estimate',observer:'Observer',courier:'Courier in transit',
+    'wire-in-transit':'Wire in transit','telegraph-office':'Telegraph office',battle:'Reported battle',siege:'Siege',
+    entrenchment:'Entrenchment','pocket-ring':'Staff pocket reading','support-request':'Support request',
+    'axis-number':'Axis number slot','edit-number':'Edit number slot','correction-initials':'Correction initials slot',
+    'spare-lozenge':'Spare lozenge','spare-bracket':'Spare bracket','spare-fan':'Spare fan'
+  }
+};

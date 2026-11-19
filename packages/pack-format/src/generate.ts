@@ -768,6 +768,7 @@ export function generatePack(files: PackFiles): GenerateResult {
         startDate: header.startDate,
         seed: header.seed,
         factions: header.factions,
+        openingControl: header.openingControl,
         control,
         fortification: keyed('fortification', 'region', (r, id) => ({ region: id, levelPermille: r.int('level', 0) })),
         declaredGovernments: place(scope, 'declaredGovernments', st('declaredGovernments').rows.map((r) => { const id = r.id_('id'); return { origin: { ...r.origin(), id }, rec: { id, regions: r.text('regions').split(';').map((x) => x.trim()).filter((x) => x !== '') } }; })),
@@ -793,6 +794,9 @@ export function generatePack(files: PackFiles): GenerateResult {
     if (where.table === 'scenario') return { file: `${scenarioSourceDir(where.scope.slice('scenario:'.length))}/scenario.json`, at: where.field ?? '' };
     if (where.scope.startsWith('scenario:') && where.table === 'factions') {
       return { file: `${scenarioSourceDir(where.scope.slice('scenario:'.length))}/scenario.json`, at: `factions[${where.index}]${where.field ? `.${where.field}` : ''}` };
+    }
+    if (where.scope.startsWith('scenario:') && where.table.startsWith('openingControl.')) {
+      return { file: `${scenarioSourceDir(where.scope.slice('scenario:'.length))}/scenario.json`, at: `${where.table}[${where.index}]${where.field ? `.${where.field}` : ''}` };
     }
     let origin = origins.get(`${where.scope}|${where.table}|${where.index}`);
     let field = where.field ?? '';
@@ -862,12 +866,12 @@ export function generatePack(files: PackFiles): GenerateResult {
     people: records('world', 'people', WS.people.element, rawWorld.people),
   };
   const SS = ScenarioSchema.shape;
-  const Head = ScenarioSchema.pick({ id: true, name: true, startDate: true, seed: true, factions: true });
+  const Head = ScenarioSchema.pick({ id: true, name: true, startDate: true, seed: true, factions: true, openingControl: true });
   const scenarios: w.ScenarioStart[] = [];
   for (const s of rawScenarios) {
     const scope = `scenario:${s.id}`;
     const raw = s.raw as Record<string, unknown> & Record<'control' | 'fortification' | 'loyalty' | 'temporaryPosts' | 'declaredGovernments' | 'edgeConditions' | 'obstructions' | 'depotConditions' | 'posts' | 'forceBlocks' | 'governments', unknown[]>;
-    const headRaw = { id: raw.id, name: raw.name, startDate: raw.startDate, seed: raw.seed, factions: raw.factions };
+    const headRaw = { id: raw.id, name: raw.name, startDate: raw.startDate, seed: raw.seed, factions: raw.factions, ...(raw.openingControl === undefined ? {} : { openingControl: raw.openingControl }) };
     const head = shapeCheck(Head, headRaw, (p) => ({ file: `${scenarioSourceDir(s.id)}/scenario.json`, at: zodPath(p) }), sink);
     if (!head) continue;
     scenarios.push({

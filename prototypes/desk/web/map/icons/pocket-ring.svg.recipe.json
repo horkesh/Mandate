@@ -1,0 +1,28 @@
+{
+  "asset": "prototypes/desk/web/map/icons/pocket-ring.svg",
+  "request": "R18",
+  "brief": "ASSETS.md#1",
+  "date": "2026-11-17",
+  "plan": "owner previously recorded ChatGPT Pro 100",
+  "client": "Codex command-line session",
+  "model": "not exposed by this tool",
+  "apiKeyUnset": "not required; no image model",
+  "tool": "Python file copy",
+  "mode": "byte-for-byte reuse of R16 rough SVG",
+  "prompt": null,
+  "references": [
+    {
+      "path": "prototypes/map-icons/icons/rough/pocket-ring.svg",
+      "sha256": "2bfa60ef1f5ae4ba96ebd83e5ec1cd606f95cb3a9924a1c0e0c6b510a4954627",
+      "sourceRecipe": "prototypes/map-icons/icons/rough/pocket-ring.svg.recipe.json"
+    }
+  ],
+  "requestedSize": "24-unit vector",
+  "actualSize": "24-unit vector",
+  "variantsMade": 1,
+  "variantChosen": 1,
+  "humanEdits": [],
+  "postProcess": [],
+  "provenanceMarks": "procedural SVG; no embedded image-model marks",
+  "sha256": "2bfa60ef1f5ae4ba96ebd83e5ec1cd606f95cb3a9924a1c0e0c6b510a4954627"
+}

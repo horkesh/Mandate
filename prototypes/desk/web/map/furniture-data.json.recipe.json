@@ -1,0 +1,41 @@
+{
+  "request": "R34",
+  "asset": "web/map/furniture-data.json",
+  "date": "2026-11-18",
+  "tool": "Python/Shapely",
+  "mode": "Static pack/elevation/rail derived display furniture",
+  "plan": "Previously confirmed ChatGPT Pro 100; no image generation",
+  "client": "Codex command-line session",
+  "model": "Code-assisted procedural data, no image model",
+  "apiKeyUnset": true,
+  "prompt": null,
+  "requestedSize": "Geographic display catalogue",
+  "actualSize": 93822,
+  "references": [
+    {
+      "path": "packs/union-1861/source/world/regions.csv",
+      "sha256": "4ad5857be8dca63af6ad94e86f308e4db130b33b8a211d39a54ef0d33450f5d8"
+    },
+    {
+      "path": "packs/union-1861/source/world/installations.csv",
+      "sha256": "609a29b736e56249df6b528c7d2512ceb5d029b177fbad0c6a296d5db93c4f7b"
+    },
+    {
+      "path": "packs/union-1861/source/world/edges.csv",
+      "sha256": "03a60cdc6da6770e13d095df6f7f03403a8198d3d0f97188d0a322b2d33fbe28"
+    },
+    {
+      "path": "packs/union-1861/source/drafts/census/kennedy-baltimore-split-1860.csv",
+      "sha256": "12a3803376dcc0252cbae69e1d2347ef588feb3096bd42defb0f3f5cef7b8cc9"
+    },
+    {
+      "path": "prototypes/desk/public/map-data/union-1861.json",
+      "sha256": "a08aee73d1e35ae4958ac3a3a498b5ca9150b64fbb5bacc01383454bfd2316ff"
+    }
+  ],
+  "humanEdits": [],
+  "postProcess": [],
+  "provenanceMarks": "No marks created or removed",
+  "sha256": "9710a80ff23ef8900fb94474e6160dcf253b82352a748713f2f757053e30a1b4",
+  "scriptSha256": "48f41e80c57241cd7efd805c88f1366ef5201b252e8c7df6feed20dd5d03c04d"
+}

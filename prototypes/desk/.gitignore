@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.vite/
+test-results/
+playwright-report/
+.font-tools/
+.geometry-tools/
+# R18: do not publish raw or Newberry-derived geometry before written confirmation.
+/public/map-data/
+/data/
+*.shp
+*.shx
+*.dbf
+*.prj
+*.zip
+__pycache__/

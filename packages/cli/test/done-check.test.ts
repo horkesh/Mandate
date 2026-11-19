@@ -161,10 +161,9 @@ describe('each criterion can fail (positive controls)', () => {
 
   it('budget: a tick over the budget, or a slow tail, fails', () => {
     const run = union();
-    // The real run's wall clock only with MANDATE_TIMING=1 (lane 1.0t's rule): under the hook's parallel load it can exceed
-    // the budget though the run alone is well inside it. The logic below is tested on given timings.
-    if (TIMING) expect(budgetProblems(run)).toEqual([]);
     const slow = (median: number, p95: number): DoneRun => ({ ...run, timed: { ...run.timed, timing: { unit: 'ms', days: 75, median, p95, max: p95 * 2 } } });
+    // Given timings, not this machine's stopwatch (lane 1.0t; lane 1.13): the real run's budget is the MANDATE_TIMING test above.
+    expect(budgetProblems(slow(10, 20))).toEqual([]);
     expect(budgetProblems(slow(TICK_BUDGET_MS * 2, TICK_BUDGET_MS * 2)).join('\n')).toContain('over the 40 ms budget');
     expect(budgetProblems(slow(10, TICK_BUDGET_MS * 5)).join('\n')).toContain('p95');
     expect(budgetProblems({ ...run, timed: { ...run.timed, timing: null } })).toEqual([`${run.name}: the timed run took no timings`]);

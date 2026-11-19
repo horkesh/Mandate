@@ -2,6 +2,8 @@
 
 Branch `phase1-situations`. This note is kept current until the lane closes. The catalogue is `docs/design/SITUATIONS-1861-62.md`, and the facts come from `docs/research/2026-11-14-secession-winter-1861.md` (cited as NOTE-secession-winter-1861).
 
+Main merged at `364aba0` on 2026-11-19, by R46; working files resolved and checked, with staging and the merge commit left to the lead.
+
 ## What runs
 
 The Union reference run is 148 days (5 March to 31 July 1861) and has no `--at-war` flag: each side's war flag is set by that side's own decision (0066).
@@ -107,3 +109,7 @@ None at present: S13's decision, which carried a locked cost on the radicals blo
 - The typed staff absence (the lead's (b) on S18): built and tested (staffAbsence { none, cites }). Open: whether habeas_on_the_line should also carry one, for a uniform rule; that changes its hash and needs re-signing, so it would go in S18's sign-off batch.
 
 **Waiting on other lanes:** taney_roger_b (lane 1.11r3); the Wheeling research (routed by the lead); lane 1.13's desk; lane 1.12's bombardment stage (it removes its own dated Sumter row once it reads reduce_sumter's order). Gone to 1B: S13's decision, S17's recurrence, S19, S16 stage B (August).
+
+## Findings outside my scope
+
+None added by R46. The pending items above remain with their assigned lanes.

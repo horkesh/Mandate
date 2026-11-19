@@ -17,7 +17,7 @@ import type { TraitRules } from '../people/rules.ts';
 import { perceptionBias, type PerceivingPerson } from '../people/traits.ts';
 import type { KnownReport, SeatKnowledge } from './knowledge.ts';
 import type { ClaimKind, ReportClaim } from './report.ts';
-import { term, type BiasTerm } from './truth.ts';
+import { term, truthOf, type BiasTerm } from './truth.ts';
 
 export interface EnemyBelief {
   /** Men he believes are there. */
@@ -96,7 +96,7 @@ export function enemyBeliefs(state: State, rules: TraitRules, person: Perceiving
   const bias = perceptionBias(rules, person);
   const out = new Map<RegionId, EnemyBelief>();
   for (const [region, { report, value }] of [...latestEnemyClaims(knowledge)].sort(([a], [b]) => strictCompare(a, b))) {
-    const below = state.reportTruth[report.id]?.truthTerms.filter((t) => t.termRegion === null || t.termRegion === region) ?? [];
+    const below = truthOf(state, report.id)?.truthTerms.filter((t) => t.termRegion === null || t.termRegion === region) ?? [];
     out.set(region, {
       value: perceived(value, bias.permille),
       asOfDay: report.knownBody.reportDay,

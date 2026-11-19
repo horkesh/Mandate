@@ -68,6 +68,12 @@ export interface DeclaredGovernmentStart {
   readonly regions: readonly RegionId[];
 }
 
+/** The faction offices that issue the opening map, and an optional report-only control table. */
+export interface OpeningControlStart {
+  readonly authors: readonly { readonly faction: FactionId; readonly post: PostId }[];
+  readonly table?: readonly RegionControlStart[];
+}
+
 /** A region's loyalty at the start (lane 1.7): each faction's share, permille, summing to at most 1000. Never a stand-in for control. */
 export interface LoyaltyStart {
   readonly region: RegionId;
@@ -230,6 +236,7 @@ export interface ScenarioStart {
   readonly seed: number;
   readonly factions: readonly FactionStart[];
   readonly control: readonly RegionControlStart[];
+  readonly openingControl?: OpeningControlStart;
   readonly fortification: readonly FortificationStart[];
   /** Region loyalty at the start (lane 1.7; `regions`). Rows only where a source gives it. */
   readonly loyalty: readonly LoyaltyStart[];
@@ -252,6 +259,7 @@ export interface ScenarioStart {
  */
 export const START_OWNERS: Readonly<Record<string, string>> = Object.freeze({
   control: 'control',
+  openingControl: 'knowledge',
   fortification: 'regions',
   loyalty: 'regions',
   edgeConditions: 'infrastructure',
