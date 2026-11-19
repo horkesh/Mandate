@@ -3,9 +3,9 @@
  * his compliance with the pack's order-to-value map (`verb:<verb>` rows), and every answer is recorded by `proxy` with
  * its rungs and reasons.
  *
- * - **Letters** (appoint, relieve, transfer, inquire, consult, observer) travel as messages (`msgVerb`) straight to the
+ * - **Letters** (appoint, relieve, transfer, inquire, consult, observer, audience) travel as messages (`msgVerb`) straight to the
  *   man they concern, and act when they arrive, by his answer.
- * - **In Washington** (audience, promise, pressure, address) act at once: the principal speaks to the man, or to the public.
+ * - **In Washington** (promise, pressure, address) act at once: the principal speaks to the man, or to the public.
  *
  * Nothing here moves a division or names a place outside an order to a person (hard rule 1): a transfer names two posts
  * and an amount, and the sending commander picks the blocks (0033).
@@ -31,6 +31,9 @@ import { planReading } from './audience-plan.ts';
 import type { State } from '../root-state.ts';
 import { dateOfDay, formatIsoDate } from '../world/calendar.ts';
 import { headquartersOf, isFieldPost } from '../seats/posts.ts';
+import { believedHolder } from '../seats/believed.ts';
+import { returnDispatch } from './orders.ts';
+import type { CounterTerms } from '../audience/counters.ts';
 import { situationChoice } from '../seats/requests.ts';
 import { seatIdFor } from '../seats/seats.ts';
 import { fire, hop, oversightOf, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
@@ -58,7 +61,7 @@ const knownPerson = (ctx: TickContext, person: PersonId) => ctx.world.personIds.
 /** Send a verb's letter straight to `to` (no relays: it is a letter to one man). */
 function sendVerb(ctx: TickContext, state: State, issuer: PersonId, to: PersonId, toPost: PostId | null, route: TransitMessage['msgRoute'], body: Omit<VerbBody, 'verbIssuer' | 'verbIssuedDay'>): MessageId {
   const id = mintMessageId(ctx.mint, ctx.day, issuer, to, `verb.${body.verbKind}.${body.verbPost ?? body.verbSubject ?? to}`);
-  const leg = hop(ctx, state, route, issuer, whereIs(ctx, state, issuer), whereIs(ctx, state, to), id);
+  const leg = hop(ctx, state, route, issuer, whereIs(ctx, state, issuer), (toPost !== null ? headquartersOf(ctx.world, state, toPost) : body.verbKind === 'observer' ? headquartersOf(ctx.world, state, body.verbPost!) : whereIs(ctx, state, to)), id);
   ctx.outbox.push({
     id,
     msgOrigin: id,
@@ -104,7 +107,7 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
   if (principal === null) return reject('not_a_principal');
   const world = ctx.world;
   const rules = world.map.world.rules.people;
-  const holderOf = (post: PostId) => start.postStates[post]?.postHolder ?? null;
+  const holderOf = (post: PostId) => believedHolder(start, principal, post);
   switch (c.cmd) {
     case 'appoint': {
       if (!postOnSide(ctx, start, c.post, principal)) return reject('unknown_post');
@@ -149,7 +152,7 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
       if (!postOnSide(ctx, start, c.to, principal) || holderOf(c.to) === null) return reject('unknown_post');
       if (!knownPerson(ctx, c.person) || !sameSide(ctx, start, c.person, principal) || c.person === principal || holderOf(c.to) === c.person) return reject('unknown_person');
       if (start.observerPostings[c.person] !== undefined) return reject('person_holds_post');
-      sendVerb(ctx, start, principal, c.person, null, c.route, body('observer', { verbPost: c.to }));
+      sendVerb(ctx, start, principal, c.person, null, c.route, { ...body('observer', { verbPost: c.to }), verbHost: holderOf(c.to)! });
       return { state: start, reason: null };
     }
     case 'audience': {
@@ -157,21 +160,11 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
       if (!postOnSide(ctx, start, c.to, principal) || holder === null) return reject('unknown_post');
       const last = start.audienceHeld[holder];
       if (last !== undefined && ctx.day - last.audDay < rules.verbs.audience.cooldownDays) return reject('too_soon');
-      const outcome = previewAudience(world, start, principal, c.to, c.counters, ctx.day, null, planReading(world, start, c.to, ctx.day), oversightOf(ctx, start, holder, principal).value);
+      const stale = start.postStates[c.to]?.postHolder !== holder;
+      const outcome = previewAudience(world, start, principal, c.to, c.counters, ctx.day, stale && start.planRecords[c.to] === undefined ? 'hold' : null, planReading(world, start, c.to, ctx.day), oversightOf(ctx, start, holder, principal).value, holder);
       if (typeof outcome === 'string' || outcome.problems.length > 0) return reject('bad_counters');
-      let state = applyPeopleChanges(start, outcome.changes, ctx.day, rules, world.map.world.vocabularies.ranks);
-      for (const o of outcome.recall) state = recallObserver(state, o);
-      state = recordAudience(state, holder, { audDay: ctx.day, audAbout: outcome.about, audCounters: c.counters.map((k) => k.kind) });
-      const key = `m.${ctx.day}.audience.${c.to}` as MessageId;
-      state = recordResponse(state, responseOf(outcome.response, { order: key, person: holder, post: c.to, role: 'addressee', day: ctx.day }));
-      // A promised reinforcement is itself an order, to another holder who may drag his feet (P1).
-      if (outcome.reinforce !== null) {
-        const sender = holderOf(outcome.reinforce.from);
-        if (sender !== null) sendVerb(ctx, state, principal, sender, outcome.reinforce.from, 'courier', body('transfer', { verbPost: outcome.reinforce.from, verbTo: c.to, verbMode: 'men', verbAmount: outcome.reinforce.men }));
-      }
-      fire(ctx, 'verbs.audience');
-      ctx.events.push({ event: 'audience', person: holder, post: c.to, message: null, terms: outcome.response.contributions.map((k) => term('relay_term', k.amount, { person: holder, post: c.to, rule: k.term })) });
-      return { state, reason: null };
+      sendVerb(ctx, start, principal, holder, c.to, 'in-person', { ...body('audience', { verbPost: c.to }), verbCounters: c.counters.map((k) => [k.kind, k.value, k.boldness, k.from, k.men] as const) });
+      return { state: start, reason: null };
     }
     case 'promise': {
       if (!knownPerson(ctx, c.person) || !sameSide(ctx, start, c.person, principal) || c.person === principal) return reject('unknown_person');
@@ -225,6 +218,11 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
   const rules = world.map.world.rules.people;
   const v = msg.msgVerb!;
   const me = msg.msgTo;
+  const target = v.verbPost;
+  const expected = v.verbKind === 'observer' ? v.verbHost : msg.msgTo;
+  if (target !== null && v.verbKind !== 'appoint' && expected !== undefined && start.postStates[target]?.postHolder !== expected) return returnDispatch(ctx, start, msg);
+  if (v.verbKind === 'audience') return holdAudience(ctx, start, msg);
+
   // Lane 1.4's oversight: a verb is an order to a person, read where he stands; an observer's or pressure's `watched` terms stack on top.
   const answer = answerOrder(world, start, me, v.verbIssuer, orderTerms(rules, `verb:${v.verbKind}`), { oversight: oversightOf(ctx, start, me, v.verbIssuer).value });
   let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: me, post: msg.msgToPost, role: 'addressee', day: ctx.day }));
@@ -400,5 +398,39 @@ export function observerLetters(ctx: TickContext, start: State): State {
     state = noteLetter(state, o, ctx.day);
     fire(ctx, 'reports.observer_letter');
   }
+  return state;
+}
+
+/** An audience reaches the commander; its counters take effect only now. */
+function holdAudience(ctx: TickContext, start: State, msg: TransitMessage): State {
+  const world = ctx.world;
+  const rules = world.rules.people;
+  const principal = msg.msgVerb!.verbIssuer;
+  const post = msg.msgVerb!.verbPost!;
+  const counters: readonly CounterTerms[] = (msg.msgVerb!.verbCounters ?? []).map(([kind, value, boldness, from, men]) => ({ kind, value, boldness, from, men }));
+  const holder = msg.msgTo;
+  const last = start.audienceHeld[holder];
+  const outcome = previewAudience(world, start, principal, post, counters, ctx.day, null, planReading(world, start, post, ctx.day), oversightOf(ctx, start, holder, principal).value);
+  const unavailable = last !== undefined && ctx.day - last.audDay < rules.verbs.audience.cooldownDays ? 'too_soon' : typeof outcome === 'string' || outcome.problems.length > 0 ? 'bad_counters' : null;
+  if (unavailable !== null || typeof outcome === 'string') {
+    sendReport(ctx, start, {
+      body: answerBody(holder, post, ctx.day, msg.msgOrigin, { kind: 'post', id: post }, [{ claimKind: 'verb-answered', claimRegion: null, claimValue: 0, claimToken: `audience:${unavailable}`, claimConfidence: 1000 }], null),
+      truth: { truthTerms: [term('observed', 0, { person: holder, post, rule: unavailable ?? 'bad_counters' })], truthTrimmed: [] },
+      to: principal, tag: `answer.audience.${post}`,
+    });
+    return start;
+  }
+  let state = applyPeopleChanges(start, outcome.changes, ctx.day, rules, world.map.world.vocabularies.ranks);
+  for (const o of outcome.recall) state = recallObserver(state, o);
+  state = recordAudience(state, holder, { audDay: ctx.day, audAbout: outcome.about, audCounters: counters.map((k) => k.kind) });
+  const key = msg.msgOrigin;
+  state = recordResponse(state, responseOf(outcome.response, { order: key, person: holder, post: post, role: 'addressee', day: ctx.day }));
+  // A promised reinforcement is itself an order, to another holder who may drag his feet (P1).
+  if (outcome.reinforce !== null) {
+    const sender = believedHolder(state, principal, outcome.reinforce.from);
+    if (sender !== null) sendVerb(ctx, state, principal, sender, outcome.reinforce.from, 'courier', body('transfer', { verbPost: outcome.reinforce.from, verbTo: post, verbMode: 'men', verbAmount: outcome.reinforce.men }));
+  }
+  fire(ctx, 'verbs.audience');
+  ctx.events.push({ event: 'audience', person: holder, post: post, message: null, terms: outcome.response.contributions.map((k) => term('relay_term', k.amount, { person: holder, post: post, rule: k.term })) });
   return state;
 }

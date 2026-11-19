@@ -16,6 +16,7 @@
  *   or its side's capital when it has no seat.
  */
 import { strictCompare } from '../compare.ts';
+import { capitalOf } from '../command/capitals.ts';
 import { chainBelow, commandedBlocks, factionOfPost, heldPost, postIdsOf, postStateOf } from '../command/command.ts';
 import type { FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
 import type { State } from '../root-state.ts';
@@ -75,22 +76,25 @@ export function mainBody(state: State, post: PostId): ForceBlockId | null {
 
 /** Where a post's headquarters is today. */
 export function headquartersOf(world: SeatsWorld, state: State, post: PostId): RegionId {
+  const faction = postFaction(world, state, post);
+  if (faction !== null && world.factionIds.includes(faction) && state.postStates[post]?.postHolder === world.faction(faction).principal) return capitalOf(state, faction);
   const body = mainBody(state, post);
   if (body !== null) return state.forceLocations[body]!.locRegion;
   const p = postStateOf(state, post);
   if (p.postSeat !== null) return p.postSeat;
-  const faction = postFaction(world, state, post);
-  if (faction !== null && world.factionIds.includes(faction)) return world.faction(faction).seatRegion;
+  if (faction !== null && world.factionIds.includes(faction)) return capitalOf(state, faction);
   throw new RangeError(`post ${post} has no blocks, no seat and no side's capital to stand in`);
 }
 
 /** Where a person is: his post's headquarters, or his side's capital for a man without a post (a principal). */
 export function whereIsPerson(world: SeatsWorld, state: State, person: PersonId): RegionId {
+  const principalSide = world.factionIds.find((f) => world.faction(f).principal === person);
+  if (principalSide !== undefined) return capitalOf(state, principalSide);
   const post = heldPost(state, person);
   if (post !== null) return headquartersOf(world, state, post);
   const faction = world.person(person).faction;
   if (faction === null || !world.factionIds.includes(faction)) throw new RangeError(`${person} holds no post and has no side's capital to stand in`);
-  return world.faction(faction).seatRegion;
+  return capitalOf(state, faction);
 }
 
 /** The posts an order from `principal` passes on its way to `target`: the chain below the post he holds (or below the top). */

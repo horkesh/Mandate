@@ -8,7 +8,7 @@
  */
 import { combatDay, type CombatResult } from '../combat/battle.ts';
 import { applyBattleRecords } from '../combat/records.ts';
-import { applyCombatCommand, applyCommandProposals, DEPARTMENT_SIDE_FIELD } from '../command/command.ts';
+import { applyCombatCommand, applyCommandProposals, DEPARTMENT_SIDE_FIELD, FACTION_CAPITAL_FIELD } from '../command/command.ts';
 import { applyForces } from '../forces/forces.ts';
 import { stragglersStep } from '../forces/stragglers.ts';
 import type { ForceBlockId } from '../ids.ts';
@@ -67,6 +67,10 @@ export function commandProposalsPhase(ctx: TickContext, state: State): { readonl
   if (mine.length === 0) return { state, derived: null };
   const result = applyCommandProposals(map, state, mine, ctx.day);
   for (const a of result.applied) {
+    if (a.field === FACTION_CAPITAL_FIELD) {
+      if (a.change === 'moved') ctx.mapEvents.push({ event: 'capital_moved', faction: a.faction, region: a.subject });
+      continue;
+    }
     if (a.field === DEPARTMENT_SIDE_FIELD) {
       // A change of side is its own event, never a closing (0065).
       if (a.side !== null) {

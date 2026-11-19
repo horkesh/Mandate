@@ -4,7 +4,7 @@ import { toId, type PersonId, type PostId, type SituationId } from '../src/ids.t
 import { previewAudience } from '../src/audience/audience.ts';
 import type { CounterTerms } from '../src/audience/counters.ts';
 import { knowledgeOf } from '../src/knowledge/knowledge.ts';
-import type { Command } from '../src/log/commands.ts';
+import type { AudienceCommand, Command } from '../src/log/commands.ts';
 import type { LogEntry } from '../src/log/log.ts';
 import { applyPeopleChanges } from '../src/people/people.ts';
 import { verbRulesProblems } from '../src/people/verb-rules.ts';
@@ -51,6 +51,19 @@ function days(world: SeatsWorld, start: State, n: number, entries: Record<number
 }
 const fired = (results: readonly TickResult[]) => results.flatMap((r) => r.rejections.map((x) => x.reason));
 const answers = (state: State, person: string) => Object.values(state.orderResponses).filter((r) => r.respPerson === P(person));
+/** Hold only after the request reaches its commander (R48); counter tests inspect the delivered result. */
+function audienceArrives(world: SeatsWorld, state: State, command: AudienceCommand, telemetry?: Telemetry): TickResult {
+  let result = tick(world, state, [{ day: state.stateDay + 1, seat: lead, command }], { telemetry, freeze: true });
+  if (result.rejections.length > 0) return result;
+  const letter = result.state.messagesInTransit.find((m) => m.msgVerb?.verbKind === 'audience');
+  if (letter === undefined) return result; // Same-region delivery already held it.
+  expect(result.state.audienceHeld).toEqual(state.audienceHeld);
+  for (let i = 0; result.day < letter.msgArriveDay && i < 30; i++) result = tick(world, result.state, [], { telemetry, freeze: true });
+  expect(result.day).toBe(letter.msgArriveDay);
+  return result;
+}
+const audienceResponse = (state: State) => Object.values(state.orderResponses).find((r) => r.respPerson === P('a_gen') && r.respOrder.includes('verb.audience'))!;
+
 const answered = (state: State) =>
   knowledgeOf(state, lead).knownReports.flatMap((r) => r.knownBody.reportClaims.filter((c) => c.claimKind === 'verb-answered').map((c) => `${r.knownBody.reportAuthor}:${c.claimToken}:${c.claimValue}`));
 
@@ -191,7 +204,7 @@ describe('the people verbs, each an order to a person answered with typed reason
 
   it('send an observer: he watches, the watched man is monitored and watched more closely (its own typed term), and letters come', () => {
     const world = indexedFixture();
-    const run = days(world, createState(world, { seed: 1 }), 14, { 1: [{ cmd: 'observer', person: P('a_spy'), to: POST('a_army'), route: 'courier' }] });
+    const run = days(world, createState(world, { seed: 1 }), 21, { 1: [{ cmd: 'observer', person: P('a_spy'), to: POST('a_army'), route: 'courier' }] });
     expect(run.state.observerPostings[P('a_spy')]).toEqual(expect.objectContaining({ obsPost: POST('a_army'), obsSender: P('a_lead') }));
     expect(run.state.personGrievances[P('a_gen')]?.map((g) => g.grievanceKind)).toContain('monitored');
     const context = contextFor(world, run.state, P('a_gen'));
@@ -251,15 +264,15 @@ describe('the audience, before and during a plan (P3)', () => {
     const withPlan = days(world, s, 1, { 1: [{ cmd: 'pressure', person: P('a_gen') }] }).state;
     const during = planned(withPlan);
     const telemetry = createTelemetry(MECHANICS);
-    const r = tick(world, during, [{ day: 2, seat: lead, command: { cmd: 'audience', to: POST('a_army'), counters: [counter('ease_pressure'), counter('vindicate')] } }], { telemetry });
+    const r = audienceArrives(world, during, { cmd: 'audience', to: POST('a_army'), counters: [counter('ease_pressure'), counter('vindicate')] }, telemetry);
     expect(telemetry.mechanics['verbs.audience']!.fires).toBe(1);
     expect(r.rejections).toEqual([]);
-    expect(r.state.audienceHeld[P('a_gen')]).toEqual({ audDay: 2, audAbout: 'during', audCounters: ['ease_pressure', 'vindicate'] });
+    expect(r.state.audienceHeld[P('a_gen')]).toEqual({ audDay: r.day, audAbout: 'during', audCounters: ['ease_pressure', 'vindicate'] });
     expect(r.state.personGrievances[P('a_gen')]).toBeUndefined();
     expect(r.state.personRegard[P('a_gen')]![P('a_lead')]).toBe(300 + 150);
     expect(r.state.seatAttention[lead]!.attnLeft).toBe(12 - 1 - 1);
-    expect(r.state.orderResponses[`m.2.audience.${POST('a_army')}|${P('a_gen')}`]!.respRole).toBe('addressee');
-    const again = tick(world, r.state, [{ day: 3, seat: lead, command: { cmd: 'audience', to: POST('a_army'), counters: [] } }]);
+    expect(audienceResponse(r.state).respRole).toBe('addressee');
+    const again = tick(world, r.state, [{ day: r.day + 1, seat: lead, command: { cmd: 'audience', to: POST('a_army'), counters: [] } }]);
     expect(again.rejections.map((x) => x.reason)).toEqual(['too_soon']);
     // A counter that answers nothing he holds is refused, and a refused audience changes nothing.
     const bad = tick(world, s, [{ day: 1, seat: lead, command: { cmd: 'audience', to: POST('a_army'), counters: [counter('ease_pressure')] } }]);
@@ -278,7 +291,7 @@ describe('M2’s audience cases on the new State (P3)', () => {
     if (typeof o === 'string') throw new Error(o);
     return o;
   };
-  const hold = (state: State, counters: CounterTerms[]) => tick(world, planned(state), [{ day: 1, seat: lead, command: { cmd: 'audience', to: POST('a_army'), counters } }]);
+  const hold = (state: State, counters: CounterTerms[]) => audienceArrives(world, planned(state), { cmd: 'audience', to: POST('a_army'), counters });
 
   it('M2 case 1: a candid man states his reasons, and only matching counters are offered', () => {
     const o = preview(createState(world, { seed: 1 }));
@@ -336,12 +349,12 @@ describe('M2’s audience cases on the new State (P3)', () => {
     const r = hold(passedOver(world, createState(world, { seed: 1 })), [counter('promise_advancement')]);
     expect(r.rejections).toEqual([]);
     expect(r.state.personGrievances[P('a_gen')]).toBeUndefined();
-    expect(r.state.personPromises[P('a_gen')]).toEqual([expect.objectContaining({ promiseKind: 'advancement', promiseDay: 1 })]);
+    expect(r.state.personPromises[P('a_gen')]).toEqual([expect.objectContaining({ promiseKind: 'advancement', promiseDay: r.day })]);
   });
 
   it('M2 case 7: promised reinforcements are an order to another holder, who answers it by his own compliance', () => {
     const strong = indexedFixture({ posts: { a_reserve: { strength: 600 } } });
-    const r = tick(strong, planned(createState(strong, { seed: 1 })), [{ day: 1, seat: lead, command: { cmd: 'audience', to: POST('a_army'), counters: [counter('reinforce', { from: POST('a_reserve'), men: 300 })] } }]);
+    const r = audienceArrives(strong, planned(createState(strong, { seed: 1 })), { cmd: 'audience', to: POST('a_army'), counters: [counter('reinforce', { from: POST('a_reserve'), men: 300 })] });
     expect(r.rejections).toEqual([]);
     // The promise is not the men: a transfer order goes by courier to a_reserve's holder, and he answers it himself.
     expect(r.state.forceAssignments[toId('forceBlock', 'a_reserve_1')]).toBe(POST('a_reserve'));
@@ -382,9 +395,9 @@ describe('M2’s audience cases on the new State (P3)', () => {
     expect(shortfall(reinforced)).toBe(Math.max(0, shortfall(plain) - believed));
     expect(shortfall(reinforced)).toBeLessThan(shortfall(plain));
     // Held in the tick, the audience reads the same plan: his recorded answer states the reduced shortfall, and the promise goes as a transfer order.
-    const held = tick(w, run.state, [{ day, seat: lead, command: { cmd: 'audience', to: POST('a_army'), counters: [counter('reinforce', { from: POST('a_reserve'), men })] } }]);
+    const held = audienceArrives(w, run.state, { cmd: 'audience', to: POST('a_army'), counters: [counter('reinforce', { from: POST('a_reserve'), men })] });
     expect(held.rejections).toEqual([]);
-    expect(held.state.orderResponses[`m.${day}.audience.${POST('a_army')}|${P('a_gen')}`]!.respReasons).toContainEqual({ kind: 'lacks_resources', shortfall: shortfall(reinforced) });
+    expect(audienceResponse(held.state).respReasons).toContainEqual({ kind: 'lacks_resources', shortfall: shortfall(reinforced) });
   });
 
   it('M2 case 8: counters are limited and validated, and a refused audience changes nothing', () => {

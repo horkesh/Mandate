@@ -13,7 +13,7 @@
 import { commandedBlocks, sideOfPerson } from '../command/command.ts';
 import type { MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
 import { term } from '../knowledge/truth.ts';
-import { believedHolder } from '../seats/believed.ts';
+import { believedHolder, vacancyUnreported } from '../seats/believed.ts';
 import type { ReportBody, ReportClaim } from '../knowledge/report.ts';
 import type { EditTerms, GoCommand, GoalTerms, OrderCommand, ReviewCommand } from '../log/commands.ts';
 import type { Hop, OrderBody, TransitMessage } from '../messages/transit.ts';
@@ -82,7 +82,7 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   if (side === null || !world.factionIds.includes(side) || world.faction(side).principal !== issuer.id) return 'not_a_principal';
   if (state.postStates[cmd.to] === undefined) return 'unknown_post';
   const target = state.postStates[cmd.to]!;
-  if (!isFieldPost(state, cmd.to) || postFaction(world, state, cmd.to) !== side) return 'not_field_post';
+  if ((!isFieldPost(state, cmd.to) && !vacancyUnreported(state, issuer.id, cmd.to)) || postFaction(world, state, cmd.to) !== side) return 'not_field_post';
   // Lane 1.12 (0052): refused at once only if he knows the post vacant. One he still believes held (the report of its
   // commander's loss not yet in his hands) is accepted, and the dispatch comes back undelivered when it arrives.
   if (target.postHolder === null && believedHolder(state, issuer.id, cmd.to) === null) return 'vacant_post';
@@ -135,7 +135,7 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
   // The addressee is the man the issuer believes holds the post (lane 1.12): its holder, or the commander a battle took
   // whose loss has not been reported to him.
   const hops: Hop[] = [...(cmd.bypass ? [] : relays), cmd.to].map((p, i, all) => ({
-    hopPerson: state.postStates[p]!.postHolder ?? believedHolder(state, issuer.id, p)!,
+    hopPerson: i === all.length - 1 ? believedHolder(state, issuer.id, p)! : state.postStates[p]!.postHolder!,
     hopPost: p,
     hopRole: i === all.length - 1 ? 'addressee' : 'relay',
   }));
@@ -190,20 +190,20 @@ function hopRegion(ctx: TickContext, state: State, h: Hop): RegionId {
  * in his reports, like any answer to an order.
  */
 export function returnDispatch(ctx: TickContext, state: State, msg: TransitMessage): State {
-  const order = msg.msgOrder!;
-  const post = msg.msgToPost!;
+  const issuer = msg.msgOrder?.orderIssuer ?? msg.msgVerb!.verbIssuer;
+  const post = msg.msgVerb?.verbPost ?? msg.msgToPost!;
   const why = state.postStates[post]?.postHolder === null ? 'vacant_post' : 'holder_changed';
   sendReport(ctx, state, {
-    body: answerBody(order.orderIssuer, null, ctx.day, {
+    body: answerBody(issuer, null, ctx.day, {
       reportType: 'wire-dispatch',
       reportSubtype: null,
-      reportClaims: [{ claimKind: 'order-returned', claimRegion: objectiveOf(state, order), claimValue: 0, claimToken: why, claimConfidence: 1000 }],
+      reportClaims: [{ claimKind: 'order-returned', claimRegion: msg.msgOrder === null ? null : objectiveOf(state, msg.msgOrder), claimValue: 0, claimToken: why, claimConfidence: 1000 }],
       reportAdvice: null,
       answers: msg.msgOrigin,
       about: post,
     }),
     truth: { truthTerms: [term('observed', 0, { person: msg.msgTo, post, rule: why })], truthTrimmed: [] },
-    to: order.orderIssuer,
+    to: issuer,
     tag: `returned.${post}`,
     route: msg.msgRoute,
     fromRegion: headquartersOf(ctx.world, state, post),

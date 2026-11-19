@@ -232,6 +232,7 @@ Module map, adapted from the AWWV-architecture note:
 
 | State field | Only writer | Proposed by |
 |---|---|---|
+| each faction's current capital (`factionCapitals`) | `command` | the scenario start, situations' `faction_capital` proposal (region as subject, faction as side, delta 0) |
 | region control | `control` | combat, occupation |
 | region population, loyalty (`regionLoyalty`, from sourced start values; never a stand-in for control), supply value | `regions` | economy, situations, occupation |
 | edge condition (`infraEdgeCondition`) | `infrastructure` | combat, raids, repair orders |

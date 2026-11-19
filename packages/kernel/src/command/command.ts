@@ -30,6 +30,7 @@
  * holds the post. Control is `control`'s and does not move.
  */
 import { strictCompare } from '../compare.ts';
+import { moveCapital } from './capitals.ts';
 import type { DepartmentId, FactionId, ForceBlockId, InstallationId, PersonId, PostId, RegionId } from '../ids.ts';
 import type { State } from '../root-state.ts';
 import { parseIsoDate } from '../world/calendar.ts';
@@ -521,6 +522,8 @@ export const GOVERNMENT_CLOSED_FIELD = 'government_closed';
  * proposal's `side` the faction it joins, and the delta above 0. A change of side, never a closing.
  */
 export const DEPARTMENT_SIDE_FIELD = 'department_side';
+/** A situation's capital move: subject is the region, side the faction, delta exactly zero. */
+export const FACTION_CAPITAL_FIELD = 'faction_capital';
 
 /** Why a department is not a government, or null: the pack's department kinds mark governments (0058). */
 function notAGovernment(map: WorldIndex, department: DepartmentId): string | null {
@@ -688,6 +691,7 @@ export function regionMoveProblem(map: WorldIndex, from: DepartmentId | 'unknown
 }
 
 export type AppliedProposal =
+  | { readonly field: typeof FACTION_CAPITAL_FIELD; readonly subject: RegionId; readonly change: 'moved' | 'unchanged'; readonly faction: FactionId }
   | { readonly field: typeof GOVERNMENT_CLOSED_FIELD; readonly subject: DepartmentId; readonly change: 'closed' | 'reopened' | 'unchanged' }
   | { readonly field: typeof DEPARTMENT_SIDE_FIELD; readonly subject: DepartmentId; readonly change: 'joined' | 'unchanged'; readonly side: SideChange | null };
 
@@ -713,6 +717,17 @@ export function applyCommandProposals(
   const refuse = (reason: RefusalReason, why: string) => refused.push({ reason, why });
   for (const p of proposals) {
     if (p.owner !== 'command') continue;
+    if (p.field === FACTION_CAPITAL_FIELD) {
+      const region = map.regions.get(p.subject as RegionId);
+      if (p.side === null || state.factionCapitals[p.side] === undefined || region === undefined || !['land', 'key_point'].includes(region.kind) || p.delta !== 0) {
+        refuse('invalid', 'a capital move needs an existing faction capital, a land or key-point region as subject, and delta 0');
+        continue;
+      }
+      const before = state;
+      state = moveCapital(state, p.side, region.id);
+      applied.push({ field: FACTION_CAPITAL_FIELD, subject: region.id, change: state === before ? 'unchanged' : 'moved', faction: p.side });
+      continue;
+    }
     if ((p.field !== GOVERNMENT_CLOSED_FIELD && p.field !== DEPARTMENT_SIDE_FIELD) || p.subject === null) {
       refuse('invalid', `command owns no field "${p.field}" with subject ${p.subject ?? 'none'}`);
       continue;

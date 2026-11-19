@@ -311,6 +311,13 @@ export function validateSituations(items: readonly { readonly file: string; read
   const selfGoverningKinds = new Set(pack.world.vocabularies.departmentKinds.filter((k) => k.selfGoverning).map((k) => k.id as string));
   type Err = (kind: string, at: string, message: string, expected?: string) => void;
   const commandProposal = (p: { readonly field: string; readonly subject: string | null; readonly delta: number; readonly side: string | null }, at: string, err: Err, fromNotice: boolean) => {
+    if (p.field === phase0.FACTION_CAPITAL_FIELD) {
+      const region = pack.world.regions.find((r) => r.id === p.subject);
+      if (region === undefined || !['land', 'key_point'].includes(region.kind)) err('situation-command-proposal', `${at}.subject`, 'a capital needs a land or key-point region');
+      if (p.side === null || !factions.has(p.side)) err('situation-command-proposal', `${at}.side`, 'a capital move needs a faction');
+      if (p.delta !== 0) err('situation-command-proposal', `${at}.delta`, 'a capital move uses delta 0; its subject names the destination');
+      return;
+    }
     const closing = p.field === phase0.GOVERNMENT_CLOSED_FIELD;
     if (!closing && p.field !== phase0.DEPARTMENT_SIDE_FIELD) {
       err('situation-command-proposal', `${at}.field`, `command owns no field "${p.field}"`, `"${phase0.GOVERNMENT_CLOSED_FIELD}" (a neutral government closes or reopens) or "${phase0.DEPARTMENT_SIDE_FIELD}" (a government joins a side)`);

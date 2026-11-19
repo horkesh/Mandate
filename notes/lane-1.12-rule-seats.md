@@ -1,8 +1,12 @@
-# Lane 1.12: rule-seat principals and commander seats (Part A)
+# Lane 1.12: rule-seat principals and commander seats (Parts A and B)
 
-Main merged at `364aba0` on 2026-11-19, by R46; working files resolved and checked, with staging and the merge commit left to the lead.
+Main merged at `364aba0` on 2026-11-19, by R46. R48 starts from the committed merge at `8b15e6e`, in `C:/Pyrrhic/mandate-rule-seats-b`, branch `phase1-rule-seats-b`.
 
-## Where lane 1.12 stopped (2026-11-17, paused by the owner)
+## Where lane 1.12 stopped (2026-11-19, R48)
+
+**R48's four items are delivered, uncommitted.** The capital is State, the five people verbs return undelivered to a missing holder, loss belief no longer depends on battle records, and the Part A stand-ins name their owner lanes. `npm ci` passed first. Final `MANDATE_NO_GIT=1 npm run check`: exit 0, 100 files, 1,270 passed / 3 skipped. Standalone `npm run run:done-check -- --label r48-done`: exit 0, all six criteria pass. Details, proposed rulings and evidence are in "Part B (R48)" below. Standing review remains with Claude under 0096.
+
+The Part A review history at the pause follows:
 
 **Part A** is complete on `phase1-rule-seats`, head 0fd0f26, pushed. It has not merged.
 - **Checks:** `npm run check` passes, and so do all six `run:done-check` criteria. CI was green on ea764cd. Every later commit passed the full check in its pre-commit hook.
@@ -13,18 +17,18 @@ Main merged at `364aba0` on 2026-11-19, by R46; working files resolved and check
   - The notice fires once in the Union run, when the principal learns of the evacuation. `situations.fired`, `noticed`, `notice_reports` and `surfaced` are banded at one there.
 - **Before merging:** lane 1.11r3's `L3-sumter.md` (990275c, on `research-1861-leads`) must reach main. The notice and `recordTerms` cite it.
 
-**Part B** is not started. Its full list is in "For Part B" below:
+**Part B's remaining work waits on lane 1.11.** The list in "For Part B" below is the original brief; R48 completes these four entries:
 - the history run end to end, through lane 1.11's situations;
-- the Confederate capital as State;
+- the Confederate capital as State: done in R48;
 - Butler to Fort Monroe;
-- the people verbs bouncing like orders;
-- `believedHolder` reading every capture;
-- an owner lane for each stand-in;
-- resignation is no longer in Part B: the lead made it its own lane, to open when the owner resumes, with lane 1.12's note on what it can rely on (under "For Part B").
+- the people verbs bouncing like orders: done in R48;
+- `believedHolder` reading every capture: done in R48;
+- an owner lane for each stand-in: done in R48;
+- resignation runs separately as R49; its worktree was not changed here.
 
 Branch `phase1-rule-seats`. Part A of the brief: commanders' battle choices as seat requests, a doctrine for each rule-seat principal (Lincoln, Davis) read from the pack, the generic principal of 0072 and the capital-as-objective stand-in retired, and the lead's rulings on the menu (posts as the principal believes them) and on the battle guard. Part B, the history run end to end, waits for lane 1.11's situations.
 
-## What changed
+## What changed in Part A
 
 **Battle orders are seat requests** (`combat/order-kinds.ts`, `combat/orders.ts`, `seats/requests.ts` `battleMenus`, `tick.ts`).
 - A commander whose men stand where the enemy's do, or march in, gets a `battle` menu each morning: commit, night, cut-off and pursuit, each an option or `judge` (his traits decide on the spot). The menu shows what his traits would choose on the morning's numbers as he believes them.
@@ -62,7 +66,7 @@ Branch `phase1-rule-seats`. Part A of the brief: commanders' battle choices as s
   - On arrival, an order whose addressee no longer holds the post is not answered. It comes back as a **returned dispatch**: a `wire-dispatch` report to the issuer, by the route the order went, from the post's headquarters. The report's subject is the post, it answers the order's id, and it carries one claim, `order-returned`, with the token `vacant_post` or `holder_changed`. Telemetry: `orders.returned`.
   - **How it reaches the player:** like any answer to an order, in his reports (his knowledge, then his view). He sees which dispatch came back and why, and he learns of the vacancy itself from the `commander-lost` report.
   - An order to a post he *knows* is vacant is still refused at once (`vacant_post`).
-- Scope of the bounce: orders (goals, reviews, the word to go, edits, calls) addressed to a post's holder. A support request between holders keeps lane 1.4's handling. The people verbs still refuse `vacant_post` from State at once; see the findings.
+- Scope of the bounce in Part A: orders (goals, reviews, the word to go, edits, calls) addressed to a post's holder. A support request between holders keeps lane 1.4's handling. R48 supersedes the Part A limitation on people verbs below.
 - Tests (`believed-posts.test.ts`):
   - a captured commander's post stays on the menu until the report arrives, then becomes a vacancy;
   - an order sent before then bounces on arrival, typed;
@@ -192,6 +196,39 @@ All six criteria pass with no amendment (the lead's ruling: the criterion was ca
 - **Each Part A stand-in names an owner lane** (the lead's addition):
   - lane 1.14 for the [I] bombardment parameters and the concentration posts;
   - 1B for gun counts (today, the known men of the gun arms).
+
+## Part B (R48)
+
+Only the four items that do not wait on lane 1.11 were implemented. Git was read-only. No R47 or R49 files, existing signed situation, gate signature, historical start row or war flag was changed.
+
+### The capital
+
+- `State.factionCapitals` has one owner, `command/capitals.ts`, copied once from `FactionStart.capital`. `OWNED_FIELDS`, `START_OWNERS` and FOUNDATION section 10 name the owner.
+- A situation proposes `faction_capital`: its subject is the destination region, its side the faction, and its delta 0. Both the pack validator and command owner reject invalid references or a nonzero delta. `capital_moved` records the applied event.
+- `confederate_capital_moved.json` fires on day 85, 29 May 1861, with a labelled scheduled cause. It changes the dispatch destination from Montgomery to Richmond. Its plain text says Davis arrived there, without dating the move of every ministry. Its administrative subject touches no registered gate topic; no signature was authored.
+- Principal locations, the principal's own post, capital fallbacks, menu route origins and the drafting benchmark read State. Davis's fixed start-post seat therefore cannot keep dispatches at Montgomery after the move. Explicit ministry seats are not given invented removal dates.
+- Source: `docs/research/_parts/I-richmond.md`, item 2, Davis's Richmond-dated telegram (OR IV-1 p. 361) and the contemporary arrival report (Rebellion Record vol. 1, Diary p. 84). The note distinguishes the resolution agreed 20 May / approved 21 May (OR IV-1 pp. 342-343), the War Department order of 25 May (p. 354), and Congress's first Richmond sitting on 20 July.
+- **Proposed ruling [I]: command owns the capital, effective 29 May.** Rejected: a second capital in politics or the seats World; 20/21 May, which dates authorization; 25 May, which dates one department's order; and 20 July, which dates Congress rather than the president's arrival. The lead records acceptance under 0096.
+
+### People messages and loss belief
+
+- Inquire, transfer, relieve, audience and observer validate the principal's believed holder. On arrival a vacant post or changed holder returns the original dispatch by its route, with the existing `order-returned` claim and `vacant_post` / `holder_changed` token. No compliance response, grievance, transfer, audience counter or observer posting occurs on that failed delivery.
+- Audience now travels by the existing `in-person` route: same-region delivery is immediate; elsewhere the bearer rides. Counter packets are immutable message values. Counters and cooldown are checked again on arrival. An observer's commission records the expected host separately from the observer and travels to that post's headquarters.
+- **Proposed ruling [I]: these effects occur on arrival, including the audience; an observer's host identity belongs in the commission.** Rejected: keeping an immediate audience that reads a true vacancy, and following a captured addressee to his side's capital instead of taking the dispatch to the post.
+- `tick/commander-losses.ts` writes the shared loss report after each phase's holder/status transition. Battle-only report production is removed. The report's truth names the lost holder, so `believedHolder` works for bombardment and later routes, through a filter, and without retained battle records. A post that lost all its blocks stays addressable until the report arrives.
+- The phase boundary matters: a commander appointed in deliveries and captured by bombardment that same day must also be reported. A retained red test exposed the daily-snapshot gap; the phase observer and the regression now pass.
+
+### Stand-ins, generated files and checks
+
+- [I] Bombardment parameters and concentration posts name **owner lane 1.14** in code and pack labels. The known men of the gun arms, standing in for gun counts, name **owner 1B**. No number or doctrine choice changed.
+- Regenerated `packs/union-1861/data/world.json` with `npm run pack:generate -- union-1861`: only the three owner-source labels changed. No format/schema extension was needed.
+- Regenerated `packages/cli/test/fixtures/saves/testbed-seats-day40.json` with `npx tsx tools/make-save-fixture.ts`: its only State addition is `factionCapitals`; existing State fields, command log, log hash and world hash are unchanged. No save schema bump before a public build (0052).
+- Final full gate: **100 files; 1,270 passed / 3 skipped**, exit 0, including typecheck, boundary (287 files, 61 terms), licences and decision index (95 records / rows). The three timing skips are the existing 0086 opt-in tests. No-git mode excludes the Git-writing staged-hook file before collection.
+- Standalone done check: **6/6 pass**, exit 0; daily replay, save/resume and all existing liveness bands pass. Union median/p95 **32.08/57.48 ms**; testbed **4.01/5.52 ms**. No liveness band was changed.
+- Evidence: `runs/r48/check-settled.log`, `done-check.log`, `final-checks.json`, `final-inventory.json`, `preservation.json`, and the focused/red/correction logs. Done-check run artifacts are in `runs/r48-done/` and `runs/r48-done-drafting/`. Workspace links resolve to this worktree.
+- The first full run had two obsolete assertions (root-field inventory; notices having no effects). Their corrections were checked narrowly. Component checks caught the historical test's package boundary; it now lives under the pack. The 1,269-pass full run is retained; the final 1,270-pass run includes the subsequent same-day-capture correction. Earlier failures remain in their own logs.
+
+Still deferred exactly as R48 requires: the end-to-end history run, each government's war decision, consult policy, Butler to Fort Monroe, removing the doctrine's Sumter row and the 4 July message as an `address`. Resignation remains R49. The three-day capital-boundary test is not a claim that the full history run is complete.
 
 ## Findings outside my scope
 

@@ -54,8 +54,8 @@ export function draftingInputs(pack: string): planner.PlannerInput[] {
     if (holder === null || faction === null || !world.factionIds.includes(faction)) continue;
     // A benchmark's objective, not a goal anyone gives (lane 1.12 retired the capital as every side's objective): each
     // post drafts toward the other side's capital, so the measure stays the same draft as before.
-    const capitals = world.start.factions.filter((f) => f.capital !== null);
-    const objective = capitals.length === 2 ? (capitals.find((f) => f.faction !== faction)?.capital ?? null) : null;
+    const capitals = Object.entries(state.factionCapitals);
+    const objective = capitals.length === 2 ? (capitals.find(([f]) => f !== faction)?.[1] ?? null) : null;
     if (objective === null) continue;
     // His side's whole picture of the enemy, as one estimate in his knowledge.
     const enemy = new Map<string, number>();

@@ -350,6 +350,7 @@ describe('ownership of the new State (0044)', () => {
       'closedGovernments:command',
       'congressLedger:politics',
       'departmentFactions:command',
+      'factionCapitals:command',
       'forceAssignments:command',
       'forceBlockStates:forces',
       'forceEnlistments:forces',

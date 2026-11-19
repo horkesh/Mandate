@@ -229,6 +229,7 @@ export interface ScenarioStart {
  * data so the hand-over and the setup code read the same table.
  */
 export const START_OWNERS: Readonly<Record<string, string>> = Object.freeze({
+  'factions.capital': 'command',
   control: 'control',
   openingControl: 'knowledge',
   fortification: 'regions',

@@ -172,5 +172,8 @@
   "value.slavery_noninterference": "non-interference with slavery",
   "value.free_soil": "free soil",
   "value.native_state": "his native state",
-  "value.fugitive_defence": "defence of fugitives from slavery"
+  "value.fugitive_defence": "defence of fugitives from slavery",
+  "reason.principal_seat_moved": "The president's seat has moved.",
+  "situation.confederate_capital_moved.title": "The president at Richmond",
+  "situation.confederate_capital_moved.text": "President Davis arrived at Richmond on 29 May. Dispatches for the Confederate president now go there."
 }

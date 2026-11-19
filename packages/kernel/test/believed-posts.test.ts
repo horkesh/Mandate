@@ -12,6 +12,13 @@ import { indexWorld } from '../src/world/index.ts';
 import type { PostStart } from '../src/world/scenario.ts';
 import { worldOf } from './support/tick-context.ts';
 import { B, block, DEP, forcesStart, forcesWorld, P, PER, person, post } from './support/forces-fixture.ts';
+import { ctxFor } from './support/tick-context.ts';
+import { applyVerb, arriveVerb } from '../src/tick/verbs.ts';
+import type { VerbCommand } from '../src/log/commands.ts';
+import { commanderLossReports } from '../src/tick/commander-losses.ts';
+import { relieveHolder } from '../src/command/command.ts';
+import { applyPeopleChanges } from '../src/people/people.ts';
+import { sendMessages } from '../src/messages/transit.ts';
 import { depot, edge, F, FIXTURE_COMBAT_RULES, R, region } from './support/map-fixture.ts';
 
 /**
@@ -26,12 +33,12 @@ const MAP = (() => {
     regions: ['a1', 'a2', 'mid', 'b2', 'b1', 'n', 'u'].map((r) => region(r)),
     edges: [edge('a1', 'a2', { type: 'rail', line: 'a_line' }), edge('a2', 'mid'), edge('mid', 'b2'), edge('b2', 'b1', { type: 'rail', line: 'b_line' }), edge('mid', 'n'), edge('mid', 'u')],
     depots: [depot('a_src', 'a1'), depot('b_src', 'b1')],
-    people: [person('a_lead', 'a'), person('a_gen', 'a'), person('b_lead', 'b'), person('b_gen', 'b'), person('b_spare', 'b')],
+    people: [person('a_lead', 'a'), person('a_gen', 'a'), person('b_lead', 'b'), person('b_gen', 'b'), person('b_spare', 'b'), person('b_other', 'b')],
   });
   return indexWorld({ ...base, rules: { ...base.rules, combat: FIXTURE_COMBAT_RULES } });
 })();
 const TRAPPED = { a1: { a: 1000 }, a2: { a: 1000 }, mid: { a: 1000 }, b2: { a: 1000 }, b1: { b: 1000 } };
-const POSTS: readonly PostStart[] = [post('a_army', { department: 'a_war', holder: PER('a_gen'), region: R('a2') }), post('b_army', { department: 'b_war', holder: PER('b_gen'), region: R('b1') })];
+const POSTS: readonly PostStart[] = [post('a_army', { department: 'a_war', holder: PER('a_gen'), region: R('a2') }), post('b_army', { department: 'b_war', holder: PER('b_gen'), region: R('b1') }), post('b_other', { department: 'b_war', holder: PER('b_other'), region: R('b1') })];
 const GOVERNMENTS = [
   { region: R('n'), department: DEP('neutral_gov'), provenance: [] },
   { region: R('u'), department: 'unknown' as const, provenance: [] },
@@ -64,6 +71,58 @@ const menuOf = (s: State) => principalMenu(world, s, F('b'), morningGround(world
 const lossKnown = (s: State) => knowledgeOf(s, B_SEAT).knownReports.some((r) => r.knownBody.reportClaims.some((c) => c.claimKind === 'commander-lost'));
 
 describe('posts as the principal believes them (lane 1.12; 0052)', () => {
+  it('reads a loss report without needing a battle record', () => {
+    const { state } = untilCaptured();
+    const withoutBattle = { ...state, battleRecords: {} };
+    expect(believedHolder(withoutBattle, B_LEAD, ARMY)).toBe(PER('b_gen'));
+  });
+
+  it('a capture from any other phase is reported by the shared path, and belief survives a filter hop', () => {
+    const before = start();
+    const state = relieveHolder(applyPeopleChanges(before, [{ change: 'status', person: PER('b_gen'), status: 'captured' }], 1, world.rules.people, world.map.world.vocabularies.ranks), ARMY);
+    const ctx = ctxFor(world, state, 1, [...TICK_MECHANICS, ...MAP_MECHANICS]);
+    commanderLossReports(ctx, before, state);
+    expect(ctx.outbox).toHaveLength(1);
+    const report = ctx.outbox[0]!;
+    const filtered = { ...report, msgTo: PER('b_other'), msgRole: 'filter' as const, msgPending: [{ hopPerson: B_LEAD, hopPost: null, hopRole: 'addressee' as const }] };
+    expect(believedHolder(sendMessages(state, [filtered]), B_LEAD, ARMY)).toBe(PER('b_gen'));
+  });
+
+  const verbs: readonly VerbCommand[] = [
+    { cmd: 'inquire', to: ARMY, subject: null, route: 'courier' },
+    { cmd: 'transfer', from: ARMY, to: P('b_other'), force: 'blocks', amount: 1, route: 'courier' },
+    { cmd: 'relieve', post: ARMY, mode: 'outright', to: null, route: 'courier' },
+    { cmd: 'audience', to: ARMY, counters: [] },
+    { cmd: 'observer', to: ARMY, person: PER('b_spare'), route: 'courier' },
+  ];
+  it.each(verbs)('$cmd accepts a believed holder, then returns undelivered without answering or applying effects', (command) => {
+    const { state } = untilCaptured();
+    const ctx = ctxFor(world, state, state.stateDay + 1, [...TICK_MECHANICS, ...MAP_MECHANICS]);
+    const sent = applyVerb(ctx, state, B_SEAT, command);
+    expect(sent.reason).toBeNull();
+    expect(sent.state).toBe(state);
+    const message = ctx.outbox.splice(0)[0]!;
+    expect(message).toBeDefined();
+    const arrived = arriveVerb({ ...ctx, day: message.msgArriveDay }, state, message);
+    expect(arrived).toBe(state);
+    const returned = ctx.outbox.find((m) => m.msgReport?.reportAnswers === message.msgOrigin)!;
+    expect(returned.msgReport?.reportSubjectId).toBe(ARMY);
+    expect(returned.msgReport?.reportClaims).toContainEqual(expect.objectContaining({ claimKind: 'order-returned', claimToken: 'vacant_post' }));
+    // A new holder also cannot answer a letter addressed to the lost man.
+    const changed = { ...state, postStates: { ...state.postStates, [ARMY]: { ...state.postStates[ARMY]!, postHolder: PER('b_spare') } } };
+    ctx.outbox.splice(0);
+    expect(arriveVerb({ ...ctx, day: message.msgArriveDay }, changed, message)).toBe(changed);
+    expect(ctx.outbox[0]?.msgReport?.reportClaims[0]?.claimToken).toBe('holder_changed');
+  });
+
+  it.each(verbs)('$cmd is refused once the principal has learned the post is vacant', (command) => {
+    let { state } = untilCaptured();
+    for (let d = 0; d < 30 && !lossKnown(state); d++) state = tick(world, state, []).state;
+    expect(lossKnown(state)).toBe(true);
+    const ctx = ctxFor(world, state, state.stateDay + 1, [...TICK_MECHANICS, ...MAP_MECHANICS]);
+    expect(applyVerb(ctx, state, B_SEAT, command).reason).toBe(command.cmd === 'audience' || command.cmd === 'observer' ? 'unknown_post' : 'vacant_post');
+    expect(ctx.outbox).toEqual([]);
+  });
   it('a captured commander’s post stays on the menu, held by him, until the report of the capture arrives; then it is a vacancy', () => {
     const { state, telemetry } = untilCaptured();
     expect(state.postStates[ARMY]!.postHolder).toBeNull();

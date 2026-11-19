@@ -6,6 +6,7 @@
  * (0050), and the start's date becomes the calendar's day 0.
  */
 import { initialCommand, initialDepartmentSides } from '../command/command.ts';
+import { initialCapitals } from '../command/capitals.ts';
 import { strictCompare } from '../compare.ts';
 import { initialControl } from '../control/control.ts';
 import { initialForces } from '../forces/forces.ts';
@@ -88,6 +89,7 @@ export function emptyState(): State {
     regionGovernments: {},
     closedGovernments: {},
     departmentFactions: {},
+    factionCapitals: {},
     seatAssignments: {},
     messagesInTransit: [],
     knowledgeBySeat: {},
@@ -188,6 +190,7 @@ export function createState(world: SeatsWorld, options: SetupOptions): State {
     regionGovernments: initialGovernments(map, start),
     closedGovernments: {},
     departmentFactions: initialDepartmentSides(map),
+    factionCapitals: initialCapitals(start),
     seatAssignments: initialSeats(world, options.drivers),
     messagesInTransit: [],
     knowledgeBySeat: {},

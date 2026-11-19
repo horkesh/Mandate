@@ -15,6 +15,10 @@ import { block, DEP, forcesStart, forcesWorld, P, PER, person, post, type Person
 import { depot, edge, F, FIXTURE_COMBAT_RULES, R, region } from './support/map-fixture.ts';
 import { worldOf } from './support/tick-context.ts';
 import { order, scriptedSeats } from './support/test-seats.ts';
+import { believedHolder } from '../src/seats/believed.ts';
+import { morningGround, principalMenu } from '../src/seats/requests.ts';
+import { relieveHolder } from '../src/command/command.ts';
+import { sendMessages, type TransitMessage } from '../src/messages/transit.ts';
 
 /**
  * Bombardment across water (lane 1.12; the lead's ruling on Sumter, and the gate's conditions), on fictional ground:
@@ -101,6 +105,45 @@ function play(g: ReturnType<typeof game>, objective: string, days: number) {
 }
 
 describe('a fort across water is bombarded until its commander surrenders (tick/bombard.ts)', () => {
+  it('reports a commander appointed earlier on the very day the bombardment captures him', () => {
+    const g = game();
+    const rules = scriptedSeats({ a: { 1: [order('a_army', 'advance', 'fort')] } });
+    let state = g.state;
+    let before = state;
+    for (let d = 1; d <= 20 && state.personStatus[PER('b_gen')]?.statusKind !== 'captured'; d++) {
+      before = state;
+      state = playDays(g.world, state, rules, 1).state;
+    }
+    expect(state.personStatus[PER('b_gen')]?.statusKind).toBe('captured');
+    const day = before.stateDay + 1;
+    const id = toId('message', 'appointment.arrives');
+    const appoint: TransitMessage = {
+      id, msgOrigin: id, msgFrom: PER('b_lead'), msgTo: PER('b_gen'), msgToPost: null, msgRole: 'addressee', msgRoute: 'courier',
+      msgSentDay: day - 1, msgArriveDay: day, msgVia: [], msgPending: [], msgOrder: null, msgReport: null, msgTruth: null,
+      msgVerb: { verbKind: 'appoint', verbIssuer: PER('b_lead'), verbIssuedDay: day - 1, verbPost: P('b_fort'), verbTo: null, verbMode: null, verbAmount: null, verbRank: null, verbSubject: null },
+    };
+    const vacant = relieveHolder(before, P('b_fort'));
+    const captured = playDays(g.world, sendMessages(vacant, [appoint]), rules, 1).state;
+    expect(captured.personStatus[PER('b_gen')]?.statusKind).toBe('captured');
+    expect(captured.messagesInTransit.some((m) => m.msgReport?.reportClaims.some((c) => c.claimKind === 'commander-lost'))).toBe(true);
+    expect(believedHolder(captured, PER('b_lead'), P('b_fort'))).toBe(PER('b_gen'));
+  });
+  it('a bombardment capture leaves the commander believed in post until its report arrives, without battle records', () => {
+    const g = game();
+    const rules = scriptedSeats({ a: { 1: [order('a_army', 'advance', 'fort')] } });
+    let state = g.state;
+    for (let d = 1; d <= 20 && state.personStatus[PER('b_gen')]?.statusKind !== 'captured'; d++) state = playDays(g.world, state, rules, 1, { freeze: true }).state;
+    expect(state.personStatus[PER('b_gen')]?.statusKind).toBe('captured');
+    expect(state.battleRecords).toEqual({});
+    const report = state.messagesInTransit.find((m) => m.msgReport?.reportClaims.some((c) => c.claimKind === 'commander-lost'))!;
+    expect(report).toBeDefined();
+    expect(believedHolder(state, PER('b_lead'), P('b_fort'))).toBe(PER('b_gen'));
+    const menu = principalMenu(g.world, state, F('b'), morningGround(g.world, state, state.stateDay + 1));
+    expect(menu.commandable.find((p) => p.post === P('b_fort'))?.holder).toBe(PER('b_gen'));
+    for (let d = 0; d < 30 && state.messagesInTransit.some((m) => m.msgOrigin === report.msgOrigin); d++) state = playDays(g.world, state, rules, 1).state;
+    expect(knowledgeOf(state, seatIdFor(PER('b_lead'))).knownReports.some((r) => r.id === report.msgOrigin)).toBe(true);
+    expect(believedHolder(state, PER('b_lead'), P('b_fort'))).toBeNull();
+  });
   it('a’s army, with no land route, bombards from the shore; b’s commander surrenders by his traits; his men are captured with no record terms', () => {
     const { state, telemetry, fell } = play(game(), 'fort', 15);
     expect(fell).not.toBeNull();

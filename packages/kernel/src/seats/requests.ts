@@ -20,6 +20,7 @@ import type { MarchGround } from '../movement/march.ts';
 import { candidateOf, postsInStatus } from '../plans/plans.ts';
 import { isCallAnswer } from '../proxy/responses.ts';
 import { believedHolder, lossesInTransit, vacancyUnreported } from './believed.ts';
+import { capitalOf } from '../command/capitals.ts';
 import type { State } from '../root-state.ts';
 import type { SituationDef } from '../situations/types.ts';
 import { valuesOf } from '../people/traits.ts';
@@ -138,10 +139,11 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   // the principal is not told where it is today (exit review P2).
   const routesTo = (id: PostId): RouteOption[] => {
     const p = state.postStates[id]!;
-    const to = p.postSeat ?? world.startHeadquarters(id) ?? f.seatRegion;
+    const capital = capitalOf(state, faction);
+    const to = p.postSeat ?? world.startHeadquarters(id) ?? capital;
     const routes: RouteOption[] = [];
     for (const route of ORDER_ROUTES) {
-      const l = routeLatency(ground.latency, world.rules.latency, route, f.seatRegion, to, faction, null);
+      const l = routeLatency(ground.latency, world.rules.latency, route, capital, to, faction, null);
       if (l.ok) routes.push({ route, typicalDays: l.latency.days, price: route === 'special-messenger' ? world.rules.latency.specialMessengerPrice : 0 });
     }
     return routes;
@@ -157,7 +159,7 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   // the man he lost, until the report of it reaches him; an order he sends it meanwhile comes back undelivered.
   const ownPosts = (Object.keys(state.postStates).sort(strictCompare) as PostId[]).filter((id) => postFaction(world, state, id) === faction);
   const losses = lossesInTransit(state, f.principal);
-  const unreported = new Set(losses.size === 0 ? [] : ownPosts.filter((id) => isFieldPost(state, id) && vacancyUnreported(state, f.principal, id, losses)));
+  const unreported = new Set(losses.size === 0 ? [] : ownPosts.filter((id) => vacancyUnreported(state, f.principal, id, losses)));
   const commandable: CommandablePost[] = [];
   for (const id of [...new Set([...fieldPosts(world, state), ...unreported])].sort(strictCompare)) {
     if (postFaction(world, state, id) !== faction) continue;

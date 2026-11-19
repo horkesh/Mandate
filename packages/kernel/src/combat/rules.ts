@@ -140,7 +140,8 @@ export interface CombatRules {
 
 /**
  * A fire-only engagement across a water edge (lane 1.12; `combat/bombard.ts`). Guns are the known men of a side's
- * artillery-arm blocks (a stand-in: no gun counts are in the data). Every number is permille, and every one is a pack
+ * artillery-arm blocks (a stand-in owned by 1B: no gun counts are in the data). The [I] bombardment parameters belong to
+ * lane 1.14. Every number is permille, and every one is a pack
  * rule with no kernel default.
  */
 export interface BombardmentRules {

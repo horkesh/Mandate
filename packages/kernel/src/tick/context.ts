@@ -115,6 +115,7 @@ export interface DecisionPoint {
 
 /** What the map phases changed or found (lane 0.4). Truth, for the run report and tests; the player learns of it only through reports. */
 export type MapEvent =
+  | { readonly event: 'capital_moved'; readonly faction: FactionId; readonly region: RegionId }
   | { readonly event: 'control_changed'; readonly change: ControlChange }
   | { readonly event: 'threshold_crossed'; readonly crossing: ThresholdCrossing }
   /** The network's condition changed (lane 0.5): an edge or depot damaged or repaired, an edge obstructed or cleared. */

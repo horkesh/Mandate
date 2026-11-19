@@ -49,6 +49,7 @@ import { deliverDue } from './deliver.ts';
 import { createFreezeLedger, deepFreeze, type FreezeLedger } from './freeze.ts';
 import { generateReports } from './generate.ts';
 import { battleReports, BATTLE_REPORT_MECHANICS } from './battle-reports.ts';
+import { commanderLossReports } from './commander-losses.ts';
 import { combatPhase, commandProposalsPhase, storesPhase } from './forces.ts';
 import { mapBarrier, mapPhase } from './map.ts';
 import { issueOrder } from './orders.ts';
@@ -160,6 +161,13 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     battleOrders,
   };
 
+  // Observe each phase's holder/status transitions, rather than only the day's opening holders. This also catches
+  // a commander appointed in deliveries and lost in operations or combat that same day, and later capture routes.
+  const applyPhase = (next: State): State => {
+    if (next.postStates !== state.postStates || next.personStatus !== state.personStatus) commanderLossReports(ctx, state, next);
+    return freeze(next);
+  };
+
   // 0. The morning's plan menus, exactly as `pendingRequests` built them for the seats.
   const menus = new Map<PostId, readonly OptionView[]>();
   for (const post of choosingPosts(state, day)) {
@@ -169,7 +177,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
 
   // 0b. Attention refills weekly to its cap, with no carry-over (lane 1.5; 0025, 0040).
   const refill = refillAttention(state, world.rules.people.attention, day);
-  state = freeze(refill.state);
+  state = applyPhase(refill.state);
   if (refill.refilled.length > 0) fire(ctx, 'seats.attention_refilled', refill.refilled.length);
 
   // 1. Today's commands, in log order. A principal's command is priced from the pack's table and refused if his week's
@@ -211,14 +219,14 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     }
     if (c.cmd === 'appoint' || c.cmd === 'relieve' || c.cmd === 'transfer' || c.cmd === 'inquire' || c.cmd === 'consult' || c.cmd === 'audience' || c.cmd === 'observer' || c.cmd === 'promise' || c.cmd === 'pressure' || c.cmd === 'address') {
       const result = applyVerb(ctx, state, entry.seat, c);
-      state = result.state;
+      state = applyPhase(result.state);
       if (result.reason !== null) reject(result.reason);
       else pay();
       return;
     }
     if (c.cmd === 'decide' || c.cmd === 'delegate') {
       const result = c.cmd === 'decide' ? decideCommand(ctx, state, entry.seat, c) : delegateCommand(ctx, state, entry.seat, c);
-      state = result.state;
+      state = applyPhase(result.state);
       if (result.reason !== null) reject(result.reason);
       else pay();
       return;
@@ -243,65 +251,65 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   });
 
   // 1b. Commanders' picks among their candidates: each goes ahead or is submitted for review (lane 1.2).
-  state = freeze(applyPlanChoices(ctx, state, menus, choices));
-  state = freeze(sendMessages(state, ctx.outbox.splice(0)));
+  state = applyPhase(applyPlanChoices(ctx, state, menus, choices));
+  state = applyPhase(sendMessages(state, ctx.outbox.splice(0)));
 
   // 2. Deliveries.
-  state = freeze(deliverDue(ctx, state));
+  state = applyPhase(deliverDue(ctx, state));
 
   // 2b. People apply the changes proposed to them so far today (lane 1.1): a bypassed relay holds a grievance.
-  state = freeze(applyPeopleChanges(state, peopleChangesFrom(world, state, ctx.proposals), day, world.rules.people, world.map.world.vocabularies.ranks));
+  state = applyPhase(applyPeopleChanges(state, peopleChangesFrom(world, state, ctx.proposals), day, world.rules.people, world.map.world.vocabularies.ranks));
 
   // 2c. Plans: edits that arrived are answered, then goals awaiting a plan are drafted within the daily cap (lane 1.2).
-  state = freeze(plansPhase(ctx, state, options.viewCache ?? createViewCache()));
-  state = freeze(sendMessages(state, ctx.outbox.splice(0)));
+  state = applyPhase(plansPhase(ctx, state, options.viewCache ?? createViewCache()));
+  state = applyPhase(sendMessages(state, ctx.outbox.splice(0)));
 
   // 2d. Recruitment (lane 1.7): levies due muster into new blocks, enlistments that end disband; one proposal per block.
-  state = freeze(recruitmentPhase(ctx, state));
+  state = applyPhase(recruitmentPhase(ctx, state));
 
   // 3. Operations: approved plans executed axis by axis (lane 1.4), then every march a day further.
-  state = freeze(operationsPhase(ctx, state));
+  state = applyPhase(operationsPhase(ctx, state));
 
   // 3b. Combat (lane 1.3; only with a map): battles and occupation. Each owner applies its proposals now; control deltas wait for 4.
   const fought = combatPhase(ctx, state);
-  state = freeze(fought.state);
+  state = applyPhase(fought.state);
 
   // 4. Control changes and the derived map.
   const mapped = mapPhase(ctx, state, options.mapCache ?? createDerivedMapCache());
-  state = freeze(mapped.state);
+  state = applyPhase(mapped.state);
 
   // 4a. Stragglers rejoin, then stores on hand fall or refill, from today's supply trace (lanes 0.5, 1.3; only with a map).
-  state = freeze(storesPhase(ctx, state, mapped.derived, new Set(fought.result?.inBattle ?? [])));
+  state = applyPhase(storesPhase(ctx, state, mapped.derived, new Set(fought.result?.inBattle ?? [])));
 
   // 4a'. Regions (lane 1.7): the derived self-emancipation term, on its cadence, proposes who reached the lines.
-  state = freeze(regionsPhase(ctx, state));
+  state = applyPhase(regionsPhase(ctx, state));
 
   // 4b. Situations, after the map so a cause sees today's control: fire on their causes, surface on what the seat
   // knows, stay live, take history defaults (lane 0.7).
-  state = freeze(runSituations(ctx, state));
+  state = applyPhase(runSituations(ctx, state));
 
   // 4c. The proposals `command` owns: a neutral government closing or reopening (0055, 0058).
   const proposed = commandProposalsPhase(ctx, state);
-  state = freeze(proposed.state);
+  state = applyPhase(proposed.state);
   const dayMap = proposed.derived ?? mapped.derived;
 
   // 4d. The weekly people step (lane 1.5): grievances fade, promises due break, the ladder and rivals, seat initiatives.
   if (isPeopleWeek(ctx)) {
-    state = freeze(peopleWeek(ctx, state));
-    state = freeze(sendMessages(state, ctx.outbox.splice(0)));
+    state = applyPhase(peopleWeek(ctx, state));
+    state = applyPhase(sendMessages(state, ctx.outbox.splice(0)));
   }
 
   // 4e. Politics (lane 1.6): today's addresses and effects, the week's drift and the ladder's pull, the press's front
   // pages, then the chambers by the calendar and the ledger they meet.
-  state = freeze(politicsPhase(ctx, state));
-  state = freeze(sendMessages(state, ctx.outbox.splice(0)));
+  state = applyPhase(politicsPhase(ctx, state));
+  state = applyPhase(sendMessages(state, ctx.outbox.splice(0)));
 
   // 5. Reports on their cycles.
   battleReports(ctx, state, start.regionControl);
   generateReports(ctx, state);
   // Observer letters on their cadence (lane 1.5).
-  state = freeze(observerLetters(ctx, state));
-  state = freeze(sendMessages(state, ctx.outbox.splice(0)));
+  state = applyPhase(observerLetters(ctx, state));
+  state = applyPhase(sendMessages(state, ctx.outbox.splice(0)));
 
   // 6. Pruning.
   const pruned = pruneKnowledge(state, world.rules.templates, day, world.map.world.rules.supplyControlPermille);
@@ -317,7 +325,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   kept = responses.state;
 
   // 7. The day.
-  state = freeze(advanceDay(kept, day));
+  state = applyPhase(advanceDay(kept, day));
 
   // 8. The invariant barrier.
   mapBarrier(ctx, state, dayMap, options.deepChecks === true);

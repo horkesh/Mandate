@@ -58,7 +58,7 @@ export interface SeatPerson {
 export interface SeatFaction {
   readonly id: FactionId;
   readonly principal: PersonId;
-  /** Where the principal sits: orders start and his reports end here (the start's capital). */
+  /** The start's capital, for setup and validation only. Live locations read State.factionCapitals. */
   readonly seatRegion: RegionId;
 }
 
