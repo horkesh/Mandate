@@ -9,13 +9,16 @@ import { Modal } from './Modal.tsx';
 import { MapReview } from './map/StaffMap.tsx';
 import { M } from './map/strings.ts';
 import { presenter } from './presentation.ts';
+import {InTray,WeeklyPaper} from './InTray.tsx';
+import {clearFilters} from './intray.ts';
+import type {TrayFilters} from './intray.ts';
 import { S, VERBS } from './strings.ts';
 import type { Panel } from './strings.ts';
 import {dayFrames,playbackSnapshot,reportPlace} from './table.ts';
 import type {Point} from './map/model.ts';
 import './table.css';
 
-type Sheet = { panel: Panel; paper?: ReportView; person?: CommandablePost };
+type Sheet = { panel: Panel; paper?: ReportView; person?: CommandablePost; summary?:boolean };
 const art = (name: string) => `/art/app/chrome/${name}.png`;
 const objects: Partial<Record<Panel, string>> = {
   calendar: 'calendar-block', inbox: 'tray-in', outbox: 'tray-out', board: 'board-frame',
@@ -34,6 +37,7 @@ export function App() {
   const [filed, setFiled] = useState<Set<string>>(new Set());
   const [read, setRead] = useState<Set<string>>(new Set());
   const [query, setQuery] = useState('');
+  const [trayFilters,setTrayFilters]=useState<TrayFilters>({...clearFilters});
   const [settings, setSettings] = useSettings();
   const { muted, plain, speed } = settings;
   const [destination, setDestination] = useState('');
@@ -88,7 +92,7 @@ export function App() {
   }, [sound]);
   const paper = useCallback((report: ReportView) => {
     setRead(previous => new Set(previous).add(report.id));
-    setStack([{ panel: 'inbox', paper: report }]); sound(report.route === 'wire' ? 'sounder-wire' : 'paper-draw');
+    setStack(previous=>[...(previous.at(-1)?.panel==='inbox'&&!previous.at(-1)?.paper?previous:[{panel:'inbox' as const}]),{panel:'inbox',paper:report}]); sound(report.route === 'wire' ? 'sounder-wire' : 'paper-draw');
   }, [sound]);
   const back = useCallback(() => {
     setStack(previous => previous.slice(0, -1)); setError(''); setNotice(''); sound('paper-down');
@@ -97,7 +101,7 @@ export function App() {
   }, [sound]);
 
   useEffect(() => {
-    if(stack.at(-1)?.paper)requestAnimationFrame(()=>document.querySelector<HTMLElement>('.return-paper')?.focus());
+    if(stack.at(-1)?.paper||stack.at(-1)?.summary)requestAnimationFrame(()=>document.querySelector<HTMLElement>('.return-paper')?.focus());
     if (stack.at(-1)?.panel === 'map') document.querySelector<HTMLElement>('dialog[open] .pixi-map')?.focus();
     if (stack.at(-1)?.panel === 'find') document.querySelector<HTMLInputElement>('dialog[open] .panel-body input')?.focus();
   }, [stack]);
@@ -122,7 +126,7 @@ export function App() {
         return;
       }
       if (event.code === 'Space') { event.preventDefault(); if (playback) skipDays(); else nextUnread(); return; }
-      if(key==='escape'&&(stack.at(-1)?.paper||stack.at(-1)?.panel==='plans')){event.preventDefault();back();return;}
+      if(key==='escape'&&(stack.at(-1)?.paper||stack.at(-1)?.summary||stack.at(-1)?.panel==='plans')){event.preventDefault();back();return;}
       if (key === '?') { event.preventDefault(); open('help'); return; }
       if (['arrowup', 'arrowdown', 'k', 'j'].includes(key)) {
         const dialog = document.querySelector('dialog[open]');
@@ -175,7 +179,7 @@ export function App() {
   const current = stack.at(-1);
   const date = frame?.day.date ?? data.date;
   const planOpen=!!current&&['plans','map'].includes(current.panel)&&menu.reviews.length>0&&!current.paper;
-  const onTable=!!current?.paper||planOpen;
+  const onTable=!!current?.paper||!!current?.summary||planOpen;
   const modalDepth=onTable?0:stack.length;
   const order = (text: string) => { if(!stack.length)opener.current=document.activeElement as HTMLElement;setLine(text); setPreview(undefined); setNotice(''); setStack(previous => [...previous, { panel: 'orders' }]); };
   const count = (id: Panel) => id === 'inbox' ? reports.filter(r => !read.has(r.id)).length : id === 'outbox' ? data.queue.length : id === 'docket' ? active.length : null;
@@ -185,6 +189,7 @@ export function App() {
 
   function content(): ReactNode {
     if (!current) return null;
+    if(current.summary)return <WeeklyPaper data={tableData} openPaper={paper}/>;
     if (current.paper) return <><Paper report={current.paper} text={data!.paperText[current.paper.id] ?? ''} t={t} dateOf={day => dateForReport(data!, day)} plain={plain} display={display} />
       <div className="actions"><button data-hotkey="f" onClick={() => { setFiled(previous => new Set(previous).add(current.paper!.id)); sound('stamp'); back(); }}>{S.filePaper}</button>
         {current.paper.authorPost && <button data-hotkey="i" onClick={() => order(`inquire ${current.paper!.authorPost}`)}>{S.ask}</button>}</div></>;
@@ -193,7 +198,7 @@ export function App() {
       case 'find': return <Find data={data!} region={id => { setDestination(id); open('map'); }} person={person => setStack(previous => [...previous, { panel: 'board', person }])}/>;
       case 'calendar': return <div className="calendar-sheet"><p className="large-date">{date}</p><p>{S.day} {data!.morning.requestDay}</p><p>{menu.atWarSince === null ? S.atPeace : S.atWar}</p></div>;
       case 'attention': return <><h3>{data!.morning.view.attention ?? S.unknown} {S.remaining}</h3><p>{S.attentionNote}</p></>;
-      case 'inbox': return paperList(reports.filter(r => !filed.has(r.id)));
+      case 'inbox': return <InTray data={tableData} papers={reports.filter(r=>!filed.has(r.id))} read={read} filters={trayFilters} setFilters={setTrayFilters} openSummary={()=>setStack(previous=>[...previous,{panel:'inbox',summary:true}])}>{paperList}</InTray>;
       case 'file': return <><label className="search">{S.search}<input value={query} onChange={e => setQuery(e.target.value)} /></label>{paperList(reports.filter(r => filed.has(r.id) && `${t(r.author, 'person')} ${t(r.subjectId, r.subjectKind)} ${dateForReport(data!, r.day)} ${r.day}`.toLowerCase().includes(query.toLowerCase())))}</>;
       case 'outbox': return <><p className="margin-note">{S.outboxNote}</p>{data!.queue.length ? <ol className="order-list">{data!.queue.map((q, i) => <li key={`${i}:${q.line}`}><p>{display(q.text)}</p><code>{display(q.line)}</code><button disabled={busy} onClick={() => void execute(`cancel ${i + 1}`)}>{S.cancel}</button></li>)}</ol> : <p className="empty">{S.noQueue}</p>}<button onClick={() => order('')}>{S.orders}</button></>;
       case 'board': return <div className="board-cards">{menu.commandable.map(person => <button className="person-tile" key={person.post} onClick={() => { setStack(previous => [...previous, { panel: 'board', person }]); sound('pin'); }}>
@@ -238,7 +243,7 @@ export function App() {
         {playback&&<section className="table-playback" data-testid="turn-playback" aria-live="polite"><time>{date}</time><p>{frame?.report?`${t(frame.report.author,'person')}, ${S.genres[frame.report.type]??S.paper}`:S.noReports}</p>{frame?.day.refused.map((r,i)=><p className="refusal" key={i}>{S.refused}: {display(r.reason)}</p>)}
           {playback.index===frames.length-1?<><p>{S.stopped}: {playback.turn.stopped==='week'?S.week:display(playback.turn.stopped.join(', '))}</p><button onClick={()=>{setPlayback(null);setHeldMap(null);}}>{S.nextMorning}</button></>:<><button onClick={skipDays}>{S.skipDays}</button><button onClick={()=>setPlayback(p=>{if(!p)return p;const next=frames.findIndex((f,i)=>i>p.index&&f.day.day!==frames[p.index]?.day.day);return {...p,index:next<0?frames.length-1:next};})}>{S.nextDay}</button></>}
         </section>}
-        {current?.paper&&<section className="table-paper" data-testid="paper-on-map" role="region" aria-label={S.paper} style={paperPoint?{left:Math.max(24,Math.min(window.innerWidth-Math.min(680*settings.scale/100,window.innerWidth*.43)-24,paperPoint[0]-Math.min(680*settings.scale/100,window.innerWidth*.43)-45)),top:Math.max(150,Math.min(window.innerHeight-650,paperPoint[1]-220))}:undefined} onKeyDown={e=>{if(e.key==='Escape'&&!isTyping(e.target)){e.stopPropagation();back();}}}><button autoFocus className="return-paper" onClick={back}>{S.returnPaper}</button>{content()}</section>}
+        {(current?.paper||current?.summary)&&<section className="table-paper" data-testid="paper-on-map" role="region" aria-label={S.paper} style={paperPoint?{left:Math.max(24,Math.min(window.innerWidth-Math.min(680*settings.scale/100,window.innerWidth*.43)-24,paperPoint[0]-Math.min(680*settings.scale/100,window.innerWidth*.43)-45)),top:Math.max(150,Math.min(window.innerHeight-650,paperPoint[1]-220))}:undefined} onKeyDown={e=>{if(e.key==='Escape'&&!isTyping(e.target)){e.preventDefault();e.stopPropagation();back();}}}><button autoFocus className="return-paper" onClick={back}>{S.returnPaper}</button>{content()}</section>}
         {planOpen&&<button className="close-review" onClick={back}>{S.closeReview}</button>}
       </main>
       {data.closed&&<div className="ended" role="status">{S.ended}</div>}

@@ -1,3 +1,4 @@
+import {mapTest} from './support/map-data.ts';
 import {expect,it} from 'vitest';
 import {geoAlbers} from 'd3-geo';
 import {StaffRenderer} from '../web/map/renderer.ts';
@@ -8,7 +9,7 @@ import {compactGeometry} from '../scripts/runtime-map.ts';
 import {readFileSync} from 'node:fs';
 import type {MapGeometry} from '../web/map/model.ts';
 
-it('R25 loads the same regions and rivers without reparsing baked relief, rail and base paths',()=>{
+mapTest(['union-1861.json'], 'R25 loads the same regions and rivers without reparsing baked relief, rail and base paths',()=>{
  const source:MapGeometry=JSON.parse(readFileSync('public/map-data/union-1861.json','utf8'));
  const compact=compactGeometry(source);
  expect(compact.regions).toEqual(source.regions);expect(compact.cartography!.rivers).toEqual(source.cartography!.rivers);

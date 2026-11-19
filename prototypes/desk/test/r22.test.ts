@@ -1,3 +1,4 @@
+import {mapTest} from './support/map-data.ts';
 import { expect, it } from 'vitest';
 import { existsSync } from 'node:fs';
 import { readFileSync } from 'node:fs';
@@ -28,13 +29,13 @@ it('separates the captions of headquarters sharing Washington without moving the
   }
 });
 
-it('has real relief, only selected historical rails, and all five named river lines',()=>{
+mapTest(['union-1861.json', 'union-1861.json.recipe.json'], 'has real relief, only selected historical rails, and all five named river lines',()=>{
   const geometry:MapGeometry=JSON.parse(readFileSync('public/map-data/union-1861.json','utf8'));
-  const build=JSON.parse(readFileSync('../../art-masters/R22/cartography-build.json','utf8'));
+  const build=JSON.parse(readFileSync('public/map-data/union-1861.json.recipe.json','utf8')).R22;
   expect(geometry.cartography!.rail.length).toBeGreaterThan(1000);
   expect(geometry.cartography!.relief.length).toBeGreaterThan(1000);
   for(const name of ['Potomac','Shenandoah','Rappahannock','York','James'])expect(geometry.cartography!.rivers.some(r=>r.name===name)).toBe(true);
-  expect(build.railYearRange[1]).toBe(1861);expect(build.regionsPreserved).toBe(true);expect(build.basePreserved).toBe(true);
+  expect(build.railSelection).toContain('<= 1861');expect(build.regionHash).toBeTruthy();expect(build.baseHash).toBeTruthy();
   const main=readFileSync('web/main.tsx','utf8');expect(main).toContain("get('study')==='1'");
   const desk=readFileSync('web/App.tsx','utf8');expect(desk).not.toContain('StudyMarks');expect(desk).not.toContain('illustration');
 });

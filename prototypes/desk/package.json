@@ -16,7 +16,9 @@
     "map:build": "python scripts/build-map.py && tsx scripts/map-bake.ts",
     "map:bake": "tsx scripts/map-bake.ts",
     "map:verify": "python scripts/verify-map.py",
-    "map:icons": "python scripts/copy-map-icons.py"
+    "map:icons": "python scripts/copy-map-icons.py",
+    "map:setup": "python -B scripts/map-setup.py",
+    "test:intray": "tsx scripts/r43-volume.ts && playwright test --config playwright.r43.config.ts"
   },
   "dependencies": {
     "d3-geo": "3.1.2",

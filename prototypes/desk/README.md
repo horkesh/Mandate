@@ -7,14 +7,31 @@ From a checkout with the root workspace dependencies installed:
 ```powershell
 cd prototypes/desk
 npm ci
-python -m pip install --target .geometry-tools -r scripts/geometry-requirements.txt
-npm run map:fetch
-npm run map:build
-npm run map:verify
+python -m pip install --target .geometry-tools -r scripts/map-requirements.txt
+npx playwright install chromium
+npm run map:setup
 npm run dev
 ```
 
 Open **http://127.0.0.1:5274/**. The process owns one local session, shared by its browser tabs. Refresh preserves the game and queue. Read/file marks belong to the current page; display, sound and playback settings persist in local storage. Restart the process to begin a new game.
+
+### Map setup
+
+`npm run map:setup` fetches missing pinned inputs, builds stale geography in dependency order, then bakes stale map and sign images. Current recipes and output hashes reuse completed work; CRLF/LF changes alone do not invalidate geographic recipes. `python -B scripts/map-setup.py --check` lists the required geography stages. Missing pack files, tools, failed downloads and changed source hashes fail with the input named. Python dependencies and Chromium must be installed first, as above.
+
+New sources and build intermediates stay in ignored `data/map-setup/rebuild/`; the older builders run there so they cannot overwrite historical evidence. Existing verified source masters can seed that cache without a download. `--full` rebuilds geography from the base stage. Raw-source retrieval is pinned to the accepted source catalogue in `scripts/map-sources.json`; a changed provider export needs a reviewed catalogue update. The research palette and straight map remain the default; the retained sign experiment still requires `?signs=on`.
+
+`npm test` needs no ignored map files or old evidence directories. Eight integration checks skip only when their named map inputs are absent; each skipped title names `npm run map:setup`. With those inputs present they run normally and malformed data fails. Test evidence defaults to `node_modules/.cache/desk-test-evidence`, or to the explicitly selected `DESK_EVIDENCE_REQUEST` folder. Historical Playwright delivery scripts still use their original request fixtures; they are separate from this unit/equivalence suite.
+
+### Finding papers
+
+The in-tray filters received papers by sender group, named place and unread status. **Clear filters** clears all three. Opening a paper marks it read; returning it preserves the filters. Sender groups use only the received paper's type, the supplied post title and the morning's commandable posts. Unknown roles stay under Others.
+
+**The week’s papers** is computed when opened from the seat's held papers. It links qualitative reported changes of hand, battle dispatches and plans still awaiting review. Every entry retains its author and date and opens its source paper. Filing a source does not erase the seat's knowledge. No summary or new game data is stored.
+
+R43 remains incomplete for the press's main stories: today's `ReportView` has no press story body, and the real press papers checked have empty claims. The console text is only an envelope such as `about person …`. The weekly paper therefore offers attributed press source links, without inventing headlines or stories. Completing that requirement needs a lead-owned view change; no kernel or CLI change is made here.
+
+`npm run test:intray` creates the real at-war volume fixture and runs the R43 browser checks. The retained scan covers eleven completed weeks, days 1–77, with a silent human principal. Days 22–28 have the most held papers received in a week: 41, in an in-tray of 42. The partial summary links seven papers (four battle dispatches and three press envelopes); no waiting plan or control transfer was in that week's held papers. This is the busiest observed week in that bounded run, not a claim about every possible campaign.
 
 Geometry is built locally and stays ignored while the prototype awaits review. Newberry confirmed CC0 and commercial redistribution on 16 November 2026. If it has not been built, the map offers the available reports as text. The Python GIS tools are development tools; the browser uses the generated JSON. Pyshp is MIT and Shapely is BSD-3-Clause; Shapely's GEOS library has its own LGPL licence. These Python libraries are not bundled into the browser build. The npm runtime dependencies remain permissive.
 

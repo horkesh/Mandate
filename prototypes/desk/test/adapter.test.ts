@@ -1,3 +1,4 @@
+import {evidenceDirectory} from './support/map-data.ts';
 import { describe, expect, it } from 'vitest';
 import { canonicalHash } from '@mandate/kernel';
 import { ConsoleGame } from '../../../packages/cli/src/console/game.ts';
@@ -34,7 +35,7 @@ describe('the desk uses the console driver and grammar', () => {
         const text = dispatchLog({ ...snapshot.morning.view, reports: [r] })[0]!;
         expect(snapshot.paperText[r.id]).toBe(text.slice(text.indexOf('): ') + 3));
       }
-      writeFileSync(new URL(`../../../art-masters/${process.env.DESK_EVIDENCE_REQUEST ?? 'R17'}/equivalence-${options.pack}${options.atWar ? '-at-war' : ''}.json`, import.meta.url), JSON.stringify({ options, turns: snapshot.history.length, requestDay: snapshot.morning.requestDay, deskLogHash: canonicalHash(deskGame.log), consoleLogHash: canonicalHash(consoleGame.log), equalState: deskGame.hash() === consoleGame.hash() }, null, 2));
+      writeFileSync(`${evidenceDirectory()}/equivalence-${options.pack}${options.atWar ? '-at-war' : ''}.json`, JSON.stringify({ options, turns: snapshot.history.length, requestDay: snapshot.morning.requestDay, deskLogHash: canonicalHash(deskGame.log), consoleLogHash: canonicalHash(consoleGame.log), equalState: deskGame.hash() === consoleGame.hash() }, null, 2));
     });
   }
   it('reads, queueing, cancel and preview never advance the game; only end does', () => {

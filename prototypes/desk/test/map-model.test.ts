@@ -1,3 +1,4 @@
+import {evidenceDirectory} from './support/map-data.ts';
 import { describe, expect, it } from 'vitest';
 import { canonicalHash } from '@mandate/kernel';
 import { ConsoleGame } from '../../../packages/cli/src/console/game.ts';
@@ -71,7 +72,7 @@ it('map marks and the same typed edits produce identical commands and command-lo
   desk.execute('end'); console.handle('end');
   expect(canonicalHash(game.log)).toBe(canonicalHash(typed.log));
   expect(game.hash()).toBe(typed.hash());
-  const evidence = `../../art-masters/${process.env.DESK_EVIDENCE_REQUEST ?? 'R17'}`;
+  const evidence = evidenceDirectory();
   mkdirSync(evidence, { recursive: true });
   writeFileSync(`${evidence}/map-edit-equivalence.json`, JSON.stringify({ commands:generated, deskLogHash:canonicalHash(game.log), consoleLogHash:canonicalHash(typed.log), equalState:game.hash() === typed.hash() }, null, 2));
 });

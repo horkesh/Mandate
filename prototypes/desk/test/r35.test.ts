@@ -1,3 +1,4 @@
+import {mapTest} from './support/map-data.ts';
 import {expect,it} from 'vitest';
 import {readFileSync} from 'node:fs';
 import {glyphPaths,GLYPH_KINDS,glyphSvg} from '../web/map/furniture.ts';
@@ -20,7 +21,7 @@ it('R35 keeps the compass and scale in a paper margin',()=>{
  expect(css).toContain('/* R35 margin furniture */');
  expect(css).toContain('right:32px!important');
 });
-it('R35 bakes all three requested mountain bands at wide zoom',()=>{
+mapTest(['union-1861-signs/manifest.json'], 'R35 bakes all three requested mountain bands at wide zoom',()=>{
  const manifest=JSON.parse(readFileSync(new URL('../public/map-data/union-1861-signs/manifest.json',import.meta.url),'utf8'));
  for(const name of ['Blue Ridge','Alleghenies','southern Appalachians'])expect(manifest.bands[0].signs.some((s:any)=>s.ridgeBand===name),name).toBe(true);
 });

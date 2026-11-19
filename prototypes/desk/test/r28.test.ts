@@ -1,9 +1,10 @@
+import {mapTest} from './support/map-data.ts';
 import {expect,it} from 'vitest';
 import {readFileSync} from 'node:fs';
 import type {MapGeometry} from '../web/map/model.ts';
 import {mapProjection} from '../web/map/projection.ts';
 
-it('R28 uses one continuous relief field, without a rectangular close replacement',()=>{
+mapTest(['union-1861.json'], 'R28 uses one continuous relief field, without a rectangular close replacement',()=>{
  const g:MapGeometry=JSON.parse(readFileSync('public/map-data/union-1861.json','utf8'));
  expect(g.cartography!.lod?.reliefExtent).toBeUndefined();
  expect(g.cartography!.lod?.relief).toBeUndefined();
@@ -15,7 +16,7 @@ it('R28 uses one continuous relief field, without a rectangular close replacemen
  expect(marks.every(m=>m.contour!==undefined&&m.contour%100===0&&m.slope!>=18)).toBe(true);
 });
 
-it('R28 keeps the Cumberland edge and the whole Eastern frame inside the detailed raster',()=>{
+mapTest(['union-1861-atlas/manifest.json'], 'R28 keeps the Cumberland edge and the whole Eastern frame inside the detailed raster',()=>{
  const m=JSON.parse(readFileSync(`public/map-data/union-1861-atlas/${process.env.DESK_R28_PREFLIGHT==='1'?'preflight':'manifest'}.json`,'utf8'));
  const band=m.variants['A-normal'].bands.find((b:any)=>b.minZoom===8);
  expect(band.scale).toBe(16);

@@ -1,3 +1,4 @@
+import {mapTest} from './support/map-data.ts';
 import { expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { presenter } from '../web/presentation.ts';
@@ -29,13 +30,13 @@ it('says no enemy seen for zero counts in every shared prose presentation',()=>{
   expect(p.text('enemy 10 at fort_monroe')).toBe('enemy 10 at Fort Monroe');
 });
 
-it('R24 relief lies in real elevation rows with downhill strokes and no flat-ground marks',()=>{
+mapTest(['union-1861.json'], 'R24 relief lies in real elevation rows with downhill strokes and no flat-ground marks',()=>{
  const g:MapGeometry=JSON.parse(readFileSync('public/map-data/union-1861.json','utf8'));
  expect(g.cartography!.relief.length).toBeGreaterThan(1000);
  expect(g.cartography!.relief.every(m=>m.contour!==undefined&&m.contour%100===0&&m.slope!>=18&&(m.a[0]!==m.b[0]||m.a[1]!==m.b[1]))).toBe(true);
 });
 
-it('draws full major river features once with a single rank for each named river',()=>{
+mapTest(['union-1861.json'], 'draws full major river features once with a single rank for each named river',()=>{
   const g:MapGeometry=JSON.parse(readFileSync('public/map-data/union-1861.json','utf8'));
   const rivers=g.cartography!.rivers as {name:string;rank:number;shape:unknown}[];
   expect(rivers.length).toBeGreaterThan(100);

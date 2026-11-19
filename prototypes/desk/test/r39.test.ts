@@ -1,3 +1,4 @@
+import {mapTest} from './support/map-data.ts';
 import {expect,it} from 'vitest';
 import {glyphSvg} from '../web/map/furniture.ts';
 import {readFileSync} from 'node:fs';
@@ -20,7 +21,7 @@ it('R39 wide hill bake takes flank hatching from the existing elevation geometry
  expect(bake).toContain('geographicSvg');
 });
 
-it('R39 ridge flank endpoints remain sourced and density is bounded at fit',async()=>{
+mapTest(['union-1861.json', 'union-1861-signs/manifest.json'], 'R39 ridge flank endpoints remain sourced and density is bounded at fit',async()=>{
  const {ridgeHatches}=await import('../web/map/geographic-material.ts');
  const geometry=JSON.parse(readFileSync(new URL('../public/map-data/union-1861.json',import.meta.url),'utf8'));
  const manifest=JSON.parse(readFileSync(new URL('../public/map-data/union-1861-signs/manifest.json',import.meta.url),'utf8'));
