@@ -315,6 +315,10 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **The one-writer scanner:** its file-wide alias names give false positives, such as `requests.ts:249` with the old `to`.
   - **The research lane:** `docs/research/_resource/tools/r45-read.py` points at another session's temporary scratchpad, so the OCR it retained is not durable.
   - **Lane hand-overs:** both still say the merge commit was left to the lead. It is committed now (`95cdecd`, `8b15e6e`).
+- From the gate reviewer's look at R49 (resignation), by lane:
+  - **Lane 1.14 (calibration):** with the pack's dated history off, only Lee resigns, because his two values just reach the threshold. The weights are uncalibrated.
+  - **Lane 1.14 (calibration and the wording rules):** five of the fifteen wait for Virginia to join the other side, and Virginia goes only after S09's call. A player who never issues the call keeps Lee, Magruder and Stuart in US service. That is within SENSITIVE-HISTORY 3.1, but no text may present the call as the reason an officer left.
+  - **Lane 1.11 and resignation:** when Virginia counts as seceded. The register dates Magruder's resignation 20 April and Lee's 25 April. If the game counts Virginia only from ratification on 23 May, the five wait until then, and the history run drifts from the register.
 - From lane 1.4b's report (`notes/lane-1.4b-detachments.md`, merged 1cf40d5), by lane:
   - **1B (the planner):** no operation leaves a garrison, because the planner drafts no garrison step. Add one if the history run needs it.
   - **Lane 1.4 or 1B, cleanup:** after a landing, the parent blocks stay aboard as 0-strength shells until a rejoin or a disbanding. Lane 1.4c (merged a810532) made sure an emptied shell can no longer be handed over in a transfer.
