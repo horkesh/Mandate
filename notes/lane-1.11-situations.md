@@ -43,7 +43,7 @@ Each state's act fires a pack-set delay after the call reaches its governor (`ca
 
 Notices:
 - **Live:**
-  - R47/R55: `wheeling_convention` (11 June), `wheeling_ordinance` (19 June), `pierpont_elected` (20 June), `wheeling_recognition_letter` (25 June), `wheeling_legislature` (1 July). R55 also promotes `houston_confederate_obligations` (13 March) and `texas_governor_changed` (16 March), with command's occupied-post succession effect. All seven are ungated under the reviewer's content ruling.
+  - R47/R55: `wheeling_convention` (11 June), `wheeling_ordinance` (19 June), `pierpont_elected` (20 June), `wheeling_recognition_letter` (25 June), `wheeling_legislature` (1 July). R69 requires `virginia_seceded` as well as day 98 for the convention, without a railroad label; the later notices retain their existing dependencies. R55 also promotes `houston_confederate_obligations` (13 March) and `texas_governor_changed` (16 March), with command's occupied-post succession effect. All seven are ungated under the reviewer's content ruling.
   - `confederate_opening` (the railroad);
   - `sumter_fired_upon`;
   - `maryland_legislature` (14 days after the call);
@@ -276,6 +276,43 @@ Validation, with logs in `runs/r64/`:
 - Standalone `npm run run:done-check -- --label r64-done`: exit 0, 6/6 criteria. Union median/p95 29.38/59.53 ms; testbed 3.14/5.20 ms. All 151 reference mechanics per pack remain within unchanged bands. Summaries and saves are under `runs/r64-done/`; drafting evidence is under `runs/r64-done-drafting/`.
 
 Final evidence index: `runs/r64/final-checks.json`. Source preservation was checked after the runtime gates, before this hand-over update. Only the test and this hand-over are delivery changes; other baseline files, lockfiles, saved fixtures, signed situations and gate files are preserved. No server, install, build, Git mutation or other worktree write. No proposed ruling. Claude's standing review remains pending under 0096.
+
+## R69: Wheeling requires Virginia's secession (2026-11-19)
+
+Completed R69 only, on `phase1-situations` at `2d31903`. The convention now requires exactly `all: [dayAtLeast 98, flag virginia_seceded]`, with its railroad label removed. The notice remains ungated. No player wording, citation, downstream notice, signed item or signature changed.
+
+### Pack regressions
+
+`packs/union-1861/test/r69-wheeling.test.ts` uses the loaded pack's five civic notices and S15, starting just before June and ticking through day 148. Both controls have a received Virginia call so S15 opens; only the secession flag differs. This isolates the cause without replaying the unrelated opening twice in every suite.
+
+- With the flag: the convention fires on day 98, ordinance on 106, election on 107, recognition letter on 112, legislature on 118; every preceding day is checked. The ordinance establishes the declared government without a side, then received correspondence enables S15's recognition and gives it the Union side.
+- Without the flag: none of the five notices fires on any tested day through 31 July. Civil jurisdiction remains at its starting value, the declared government remains without a side, S15 stays open without the recognition option, and no recognition flag appears.
+
+The original data fails both tests: the railroad remains, and the convention fires without secession on day 98 (`red.log`). The final focused run passes both new tests and the eight existing R47 tests, exit 0. An intermediate assertion incorrectly treated the telemetry mechanic `command.government_established` as a map-event name; typecheck caught both occurrences and the focused positive control caught its zero count. The test now verifies the actual jurisdiction and side changes directly. Its final typecheck passes; no production correction beyond the requested data edit was needed.
+
+### Audit of the other situations
+
+`runs/r69/situation-audit.json` retains every event, chain, railroad label, citation, effect and gate classification across **54 live situations and one draft**. After the fix, nine date-only events remain, all labelled railroads. No further instance has a missing cause in State as clear as R69's. These are data-audit findings, not a new historical-source pass.
+
+| Remaining date-only item | Why it remains |
+|---|---|
+| `sumter_garrison`, `pickens_reinforcement` | Opening premises under 0042; their triggering circumstances are already in the starting situation. |
+| `confederate_commissioners` | Its label describes arrival at the start and later notice to the president; the intervening contact has no separate event in State. |
+| `lamon_promise`, `virginia_unionists` | Their labels identify visits or correspondence whose causes are not separately modelled in State. No existing flag represents either visit. |
+| `houston_confederate_obligations`, `texas_governor_changed` | R69 expressly retains these: Texas seceded before the start. |
+| `cherokee_neutrality`, `confederate_protection_act` | Their labels and 0070 make them independent institutional acts; the council or Confederate Congress has no modelled choice to read. Signed items remain untouched. |
+
+The other ten railroad-labelled events already have conditions in State, including the four downstream Wheeling notices, the three treaty notices, the posts given up, and the Pickens refusal. `confederate_opening` retains 0040's expressly authorised date fallback alongside its two flag causes. Every other live or draft event also reads a cause in State. No other situation was edited.
+
+### Required checks and preservation
+
+- `MANDATE_NO_GIT=1 npm run check`: **exit 0**, **108 files, 1,292 passed / 3 existing optional skips**; typecheck, pack boundary, licences and decision index pass.
+- `npm run run:done-check -- --label r69-done`: **exit 0, 6/6 criteria**, with repeat/frozen hashes, replay, save/resume and liveness passing. Union median/p95 **36.40/75.58 ms**; testbed **3.27/4.66 ms**. Existing limits remain unchanged.
+- `npm run run:phase0 -- union-1861 148 --label r69-reference`: **exit 0**, no `--at-war`, day 148 / 31 July, zero rejected commands, replay matches. All **151 mechanics** pass their bands. The final State hash remains **`684e3cf3a4d583824ffed694f2ed5fba72512a9d89f61e04d2e06a3f9da9bbc6`**, matching R64's retained Union summary. **No liveness row or band moved.** The world hash changes because the authored event changed.
+
+`runs/r69/final-checks.json` indexes the settled results and baseline comparison; logs and the full situation audit are beside it. The first evidence summariser misread PowerShell's UTF-16 logs as UTF-8; its failed result is retained in `final-audit-initial.log`. Recognising the log encoding fixes that evidence-only parser; no suite or campaign was repeated. Required long checks each ran once.
+
+Final inventory was checked before this note: only the requested JSON and new pack test differed. With this hand-over, delivery is three files; the other **1,367 baseline files** are preserved, including lockfiles, saves, gate files and every signed situation. HEAD remains `2d31903`, the staged diff is empty, and whitespace checks pass. No install, build, server, Git mutation or other run's worktree write. Proposed rulings: none. Claude's standing review remains pending under 0096.
 
 ## Findings outside my scope
 

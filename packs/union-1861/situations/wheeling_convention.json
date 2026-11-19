@@ -6,9 +6,15 @@
   "text": "situation.wheeling_convention.text",
   "earliest": "1861-06-11",
   "event": {
-    "dayAtLeast": 98
+    "all": [
+      {
+        "dayAtLeast": 98
+      },
+      {
+        "flag": "virginia_seceded"
+      }
+    ]
   },
-  "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
   "effects": [],
   "report": {
     "authors": [
