@@ -102,3 +102,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0096](0096-codex-resumes-milestone-1a.md) | Codex resumes milestone 1A | accepted |
 | [0097](0097-the-1861-starts-blocs-after-re-sourcing.md) | The 1861 start's blocs and judgments after re-sourcing | accepted |
 | [0098](0098-rule-seat-doctrine-concentration-bombardment-and-lost-commanders.md) | Rule-seat doctrine, concentration, bombardment and lost commanders | accepted |
+| [0099](0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md) | The 1A checkpoint bands and the limits of the victory sweep | accepted |
