@@ -130,6 +130,7 @@ const FEW_BATTLE_DAYS = 'the reference runs fight only a few battle-days (one in
 
 /** Mechanics that fire in neither reference run: the reason, and the kernel test that proves the mechanic is alive. */
 export const QUIET: Readonly<Record<string, QuietReason>> = {
+  'people.stayed': { why: 'the testbed has no authored service choices, and the relevant government has not joined on this Union base', test: 'packages/kernel/test/resignation.test.ts', needle: 'one man resigns and another stays' },
   'command.government_closed': { why: 'no pack situation closes a neutral government yet (the closing of a neutral government waits for authored situations)', test: 'packages/kernel/test/governments.test.ts', needle: 'takes the default "close" on day 2' },
   'command.government_reopened': { why: 'no pack situation reopens one yet', test: 'packages/kernel/test/governments.test.ts', needle: 'reopening and repeats are plain' },
   'command.side_changed': { why: 'a neutral government changes side only by a situation, and none is authored yet (0065, 0067)', test: 'packages/kernel/test/department-sides.test.ts', needle: 'end to end through the tick: on day 2 its land stops being neutral ground' },
@@ -247,6 +248,7 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
  * the testbed keeps them alive.
  */
 const UNION_BANDS: Record<string, GateBand> = {
+  'people.resigned': around(7),
   // The bombardment of Fort Sumter: two days of fire, then Anderson's surrender, evacuated under the record's terms.
   'combat.battle_day': around(2),
   'combat.bombardment': around(2),
@@ -365,6 +367,7 @@ const UNION_BANDS: Record<string, GateBand> = {
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
 const TESTBED_BANDS: Record<string, GateBand> = {
+  'people.resigned': notHere('the testbed reference pack has no service-choice records; union-1861 fires it, and resignation.test.ts drives the government path'),
   // Lane 1.3, merged with lane 1.2's plans: battles of one day each, in which the defender withdraws or routs and the winner
   // chooses whether to pursue. Re-banded from lane 1.12's run (the doctrine's levies, inquiries and concentration): four battle-days.
   'combat.battle_closed': around(4),

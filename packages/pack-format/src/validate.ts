@@ -164,7 +164,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   for (const problem of phase0.verbRulesProblems(world.rules.people.attention, world.rules.people.verbs, vocab.values.map((v) => v.id), vocab.personKinds.map((k) => k.id))) {
     err('rules-people', W('rules', 0, 'people'), problem, 'the pack’s attention and verb rules, whole and in range, naming values and person kinds from its vocabularies');
   }
-  for (const problem of phase0.peopleRulesProblems(world.rules.people, vocab.values.map((v) => v.id))) {
+  for (const problem of phase0.peopleRulesProblems(world.rules.people, vocab.values.map((v) => v.id), vocab.traits.map(t => t.id))) {
     err('rules-people', W('rules', 0, 'people'), problem, 'whole permille for each people rule, and values from the pack’s values vocabulary');
   }
   // Lane 1.3: the combat rules, by the kernel's own rule (it checks the same when it indexes a World): every terrain the
@@ -402,6 +402,14 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     refCheck(factions, 'faction', p.faction, at('faction'));
     term('personKinds', p.kind, at('kind'));
     term('blocs', p.bloc, at('bloc'));
+    if (p.service !== undefined) {
+      refCheck(departments, 'department', p.service.government, at('service.government'));
+      refCheck(factions, 'faction', p.service.toFaction, at('service.toFaction'));
+      term('blocs', p.service.toBloc, at('service.toBloc'));
+      citeCheck(p.service.cites, at('service.cites'), true, 'the service choice');
+      if (p.service.toFaction === p.faction) err('service-side', at('service.toFaction'), 'resignation must join another side');
+      if (p.service.government === null && p.service.historicalOn === null) err('service-trigger', at('service'), 'a service choice needs a government or a historical date');
+    }
     // Every record cites a real source, invented or not (review F7); only the centres and traits of an invented person need none.
     citeCheck(p.provenance, at(), true, 'this person');
     if (p.invented && !manifest.allowsInventedPeople) {

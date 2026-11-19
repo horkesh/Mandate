@@ -85,6 +85,7 @@ export const FIXTURE_POLITICS_RULES: PoliticsRules = {
 };
 
 export const FIXTURE_PEOPLE_RULES: PeopleRules = {
+  resignation: { historicalDefaults: false, base: 0, resignAt: 500, values: [], traits: [] },
   shadow: {
     centrePermille: { high: 800, above: 600, average: 500, below: 400, low: 200 },
     unknownCentre: 500,

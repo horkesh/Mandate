@@ -1,0 +1,41 @@
+{
+  "id": "officer_resignation",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.officer_resignation.title",
+  "text": "situation.officer_resignation.text",
+  "earliest": "1861-03-07",
+  "event": {
+    "knows": {
+      "reportType": "wire-dispatch",
+      "subtype": null,
+      "subjectKind": "person",
+      "subjectId": null,
+      "claimKind": "service-choice",
+      "token": "resign"
+    }
+  },
+  "subjects": [],
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "cause-of-secession"
+    ],
+    "placement": "text",
+    "risks": [],
+    "actingSide": null
+  },
+  "citations": [
+    {
+      "source": "ArmyReg1861-09",
+      "at": "pp61-62 and p64, individual resignation entries; read 2026-11-19 for R49"
+    }
+  ]
+}

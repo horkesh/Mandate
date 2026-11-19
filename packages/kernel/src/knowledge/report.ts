@@ -84,6 +84,7 @@ export type SubjectKind = (typeof SUBJECT_KINDS)[number];
  * - `control-government`: the named department governs the region, with value 1 for neutral and 0 for aligned.
  */
 export const CLAIM_KINDS = [
+  'service-choice',
   'arrived',
   'battle-phase',
   'battle-result',

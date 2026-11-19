@@ -233,8 +233,8 @@ export function factionOfPost(_map: WorldIndex, state: State, id: PostId): Facti
 }
 
 /**
- * A person's side (0065, 0055): the side of the post he holds, while he holds it; otherwise his own in the World.
- * A man with no post changes side only through situations or events (the people module, Phase 1).
+ * A person's side (0065, 0055): his chosen service after resignation (R49); otherwise the side of his post,
+ * guarded below, or his starting side when unposted.
  *
  * A holder follows his post only where `command` could have put him there: his own side is the post's today (he
  * was appointed to it) or its department's at the start (he held it when the government changed side, as a
@@ -244,6 +244,8 @@ export function factionOfPost(_map: WorldIndex, state: State, id: PostId): Facti
 export function sideOfPerson(map: WorldIndex, state: State, person: PersonId): FactionId | null {
   const record = map.world.people.find((x) => x.id === person);
   if (record === undefined) throw new CommandError([`${person} is not a person in the World`]);
+  const chosen = state.personService?.[person];
+  if (chosen?.serviceChoice === 'resign') return chosen.serviceFaction;
   const post = heldPost(state, person);
   if (post === null) return record.faction;
   const side = factionOfPost(map, state, post);
@@ -278,7 +280,7 @@ function withPost(state: State, id: PostId, post: PostState): State {
  * He may hold only one post, and only on his own side (`sideOfPerson`): a man
  * with no post brings his faction in the World, which must be the post's (a
  * neutral government's post takes a man of no faction). Changing a man's side
- * is a situation's work for the people module (Phase 1).
+ * is the people step's service choice (R49).
  */
 export function appointHolder(map: WorldIndex, state: State, post: PostId, person: PersonId, acting = false): State {
   const p = postStateOf(state, post);

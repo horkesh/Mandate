@@ -30,6 +30,8 @@ function claimText(c: ClaimView): string {
       return `submits a plan (${c.token ?? 'plan'})${c.region === null ? '' : ` for ${c.region}`}`;
     case 'plan-answer':
       return `answers your edit: ${c.token ?? 'no answer'}`;
+    case 'service-choice':
+      return c.token === 'resign' ? 'has resigned from his service' : 'remains in his service';
     case 'verb-answered':
       return `${(c.token ?? '').replace(':', ': ')}${c.value === 1 ? '' : ' (not done)'}`;
     case 'battle-phase':

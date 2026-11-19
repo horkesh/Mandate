@@ -34,6 +34,7 @@ import type { TransitMessage } from './messages/transit.ts';
 import type { OperationTable } from './operations/operations.ts';
 import type { PlanRecord } from './plans/plans.ts';
 import type { SeatAssignment } from './seats/seats.ts';
+import type { PersonService } from './people/resignation.ts';
 import type { PersonGrievance, PersonPromise, PersonStatus, PersonTrue, Stance } from './people/people.ts';
 import type { AttentionState } from './seats/attention.ts';
 import type { LadderRung } from './people/verb-rules.ts';
@@ -48,6 +49,8 @@ import type { BattleTable } from './combat/records.ts';
 import type { JoinTable } from './movement/join.ts';
 
 export interface State {
+  /** Personal service choices, owned by people. Absent in older saves means nobody has chosen yet. */
+  readonly personService?: Readonly<Record<PersonId, PersonService>>;
   /** The game's seed, set at setup; every named stream derives from it. Immutable. */
   readonly gameSeed: number;
   /** ISO date of day 0, from the scenario start (null without a map). Seasons read the month from it. Immutable. */

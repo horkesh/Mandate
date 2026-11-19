@@ -9,6 +9,7 @@
  * Fields it does not build yet (the foreign clocks, national will: 1B) are left reported, as before.
  */
 import { strictCompare } from '../compare.ts';
+import { blocOfPerson } from '../people/resignation.ts';
 import { heldPost, sideOfPerson } from '../command/command.ts';
 import type { FactionId, PersonId } from '../ids.ts';
 import { rungIndex, rungOf } from '../ladder/ladder.ts';
@@ -63,7 +64,7 @@ export function effectChange(p: Extract<Proposal, { proposal: 'effect' }>): Poli
 function ladderChanges(ctx: TickContext, state: State, rules: PoliticsRules): PoliticsChange[] {
   const out: PoliticsChange[] = [];
   const lobbying = rungIndex('lobbying');
-  const blocOf = new Map(ctx.world.map.world.people.map((r) => [r.id, r.bloc] as const));
+  const blocOf = new Map(ctx.world.map.world.people.map((r) => [r.id, blocOfPerson(ctx.world.map, state, r.id)] as const));
   for (const p of [...ctx.world.personIds].sort(strictCompare)) {
     const index = rungIndex(rungOf(state, p));
     if (index < lobbying) continue;

@@ -69,7 +69,7 @@ export interface Rejection {
 
 /** Something a mechanism decided, with its terms: the explanation trail (hard rule 6). */
 export interface TickEvent {
-  readonly event: 'audience' | 'conflict' | 'filtered' | 'initiative' | 'objected' | 'policy' | 'policy_unpaid' | 'relayed' | 'seat_defaulted';
+  readonly event: 'service_choice' | 'audience' | 'conflict' | 'filtered' | 'initiative' | 'objected' | 'policy' | 'policy_unpaid' | 'relayed' | 'seat_defaulted';
   readonly person: PersonId;
   readonly post: PostId | null;
   /** The order or report it concerns (null for a defaulted seat choice). */

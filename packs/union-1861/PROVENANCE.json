@@ -1000,6 +1000,16 @@
       "copyUsed": "archive.org annalsaugustaco00waddgoog, OCR (lane 1.11r3): a local history; its 1861-65 part is a war diary kept at Staunton",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "ArmyReg1861-09",
+      "title": "Official Army Register, September 1861 (Adjutant General, 1 September 1861)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://archive.org/download/officialarmyregi1861unit/officialarmyregi1861unit_djvu.txt; resignation entries pp. 61, 62, 64, read for R49 on 2026-11-19",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

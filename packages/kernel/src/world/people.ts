@@ -12,7 +12,7 @@
  * Which post a person holds, and his rank on a given day, are scenario and
  * State matters; the record keeps only what does not change in play.
  */
-import type { FactionId, PersonId } from '../ids.ts';
+import type { DepartmentId, FactionId, PersonId } from '../ids.ts';
 import type { Citation, Provenance, StringKey } from './graph.ts';
 
 export const STAT_DIRECTIONS = ['high', 'above', 'average', 'below', 'low'] as const;
@@ -88,6 +88,15 @@ export interface PersonRecord {
   readonly traits: readonly TraitEvidence[];
   /** A bloc from the pack's vocabulary, or null. */
   readonly bloc: string | null;
+  /** Optional service choice. Government is an authored allegiance, never inferred from birthplace by the kernel. */
+  readonly service?: {
+    readonly government: DepartmentId | null;
+    readonly toFaction: FactionId;
+    readonly toBloc: string | null;
+    /** Register's effective resignation date; null when no voluntary departure is established. */
+    readonly historicalOn: string | null;
+    readonly cites: readonly Citation[];
+  };
   /** Ranks in date order; the rank at a start is the last one on or before its date. */
   readonly ranks: readonly RankHeld[];
   /** Fields whose null means "unknown, needs a source" rather than "none". */

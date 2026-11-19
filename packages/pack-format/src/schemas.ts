@@ -153,6 +153,7 @@ export const PersonSchema = z.strictObject({
     .describe('His own standing practices (lane 1.5b), each cited: conduct an order of the map can run against (a row’s clashes), such as a commander’s practice toward fugitives. Gate content.'),
   traits: z.array(z.strictObject({ trait: termId, cites: z.array(citation) })),
   bloc: termId.nullable(),
+  service: z.strictObject({ government: idOf('department').nullable(), toFaction: idOf('faction'), toBloc: termId.nullable(), historicalOn: isoDate.nullable(), cites: z.array(citation).min(1) }).optional(),
   ranks: z.array(z.strictObject({ rank: termId, from: historicalDate })),
   unknowns: z.array(z.string()),
   provenance,
@@ -493,6 +494,9 @@ export const RulesSchema = z.strictObject({
     .describe('Turns (0027): read by the shell (the console), never by the kernel, which ticks a day at a time.'),
   people: z
     .strictObject({
+      resignation: z.strictObject({ historicalDefaults: z.boolean(), base: int, resignAt: int,
+        values: z.array(z.strictObject({ value: termId, weight: int })),
+        traits: z.array(z.strictObject({ trait: termId, weight: int })) }),
       shadow: z
         .strictObject({
           centrePermille: z.strictObject({ high: permille, above: permille, average: permille, below: permille, low: permille }).describe('The permille centre of each cited direction. A design parameter.'),

@@ -58,7 +58,7 @@ import { pruneOperations } from '../operations/operations.ts';
 import { pruneBattles } from '../combat/records.ts';
 import { pruneResponses } from '../proxy/responses.ts';
 import { applyVerb, observerLetters, VERB_MECHANICS } from './verbs.ts';
-import { isPeopleWeek, peopleWeek, WEEK_MECHANICS } from './people-week.ts';
+import { isPeopleWeek, peopleWeek, serviceChoices, WEEK_MECHANICS } from './people-week.ts';
 import { attentionLeft, refillAttention, spendAttention } from '../seats/attention.ts';
 import { attentionPrice } from './attention.ts';
 import { issueCall, recruitmentPhase, RECRUITMENT_MECHANICS } from './recruitment.ts';
@@ -286,6 +286,8 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   const dayMap = proposed.derived ?? mapped.derived;
 
   // 4d. The weekly people step (lane 1.5): grievances fade, promises due break, the ladder and rivals, seat initiatives.
+  state = freeze(serviceChoices(ctx, state));
+  state = freeze(sendMessages(state, ctx.outbox.splice(0)));
   if (isPeopleWeek(ctx)) {
     state = freeze(peopleWeek(ctx, state));
     state = freeze(sendMessages(state, ctx.outbox.splice(0)));

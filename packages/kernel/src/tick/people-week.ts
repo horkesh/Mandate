@@ -6,7 +6,10 @@
  */
 import { strictCompare } from '../compare.ts';
 import { resolveDirective } from '../compliance.ts';
-import { heldPost, sideOfPerson } from '../command/command.ts';
+import { departmentSide, heldPost, relieveHolder, sideOfPerson } from '../command/command.ts';
+import { blocOfPerson, resignationChoice } from '../people/resignation.ts';
+import { dateOfDay, formatIsoDate } from '../world/calendar.ts';
+import { whereIsPerson } from '../seats/posts.ts';
 import type { ComplianceRung } from '../directive.ts';
 import type { PersonId } from '../ids.ts';
 import { rungIndex, rungOf, weeklyLadder } from '../ladder/ladder.ts';
@@ -18,7 +21,51 @@ import { seatIdFor } from '../seats/seats.ts';
 import { term } from '../knowledge/truth.ts';
 import { fire, sendReport, type TickContext } from './context.ts';
 
-export const WEEK_MECHANICS = ['ladder.moved', 'ladder.rival', 'people.grievances_faded', 'people.promise_broken', 'seats.initiative'] as const;
+export const WEEK_MECHANICS = ['ladder.moved', 'ladder.rival', 'people.grievances_faded', 'people.promise_broken', 'seats.initiative', 'people.resigned', 'people.stayed'] as const;
+
+/** Historical departures fall on their effective date; unscripted choices are offered on the people week. */
+export function serviceChoices(ctx: TickContext, start: State): State {
+  const map = ctx.world.map;
+  const rules = map.world.rules.people;
+  const today = formatIsoDate(dateOfDay(ctx.world.start.startDate, ctx.day));
+  let state = start;
+  for (const record of [...map.world.people].sort((a, b) => strictCompare(a.id, b.id))) {
+    const p = record.id;
+    const row = record.service;
+    if (row === undefined || state.personService?.[p] !== undefined || state.personStatus[p]?.statusKind !== 'serving') continue;
+    const from = sideOfPerson(map, state, p);
+    if (from === null || from === row.toFaction) continue;
+    const historical = rules.resignation.historicalDefaults && row.historicalOn !== null;
+    if (historical) {
+      if (today < row.historicalOn! || (row.government !== null && departmentSide(state, row.government) !== row.toFaction)) continue;
+    } else if (!isPeopleWeek(ctx) || row.government === null || departmentSide(state, row.government) !== row.toFaction) continue;
+    const answer = resignationChoice(map, state, p);
+    const choice = historical ? 'resign' : answer.choice;
+    const terms = historical ? [...answer.terms, term('service_term', ctx.day, { person: p, rule: 'historical_date' })] : answer.terms;
+    const post = heldPost(state, p);
+    const origin = whereIsPerson(ctx.world, state, p);
+    // His own letter, sent from where he was serving, reaches both principals by the existing report routes.
+    for (const side of [...new Set([from, ...(choice === 'resign' ? [row.toFaction] : [])])].sort(strictCompare)) {
+      if (!ctx.world.factionIds.includes(side)) continue;
+      sendReport(ctx, state, {
+        body: { reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: p, reportAuthorPost: post,
+          reportSubjectKind: 'person', reportSubjectId: p,
+          reportClaims: [{ claimKind: 'service-choice', claimToken: choice, claimRegion: null, claimValue: 1, claimConfidence: 1000 }],
+          reportDay: ctx.day, reportHour: null, reportAdvice: null, reportAnswers: null },
+        truth: { truthTerms: terms, truthTrimmed: [] }, to: ctx.world.faction(side).principal,
+        tag: `service.${p}.${side}`, fromRegion: origin,
+      });
+    }
+    if (choice === 'resign' && post !== null) state = relieveHolder(state, post);
+    state = applyPeopleChanges(state, [{ change: 'service', person: p, service: {
+      serviceFaction: choice === 'resign' ? row.toFaction : from,
+      serviceBloc: choice === 'resign' ? row.toBloc : blocOfPerson(map, state, p), serviceChoice: choice, serviceDay: ctx.day,
+    } }], ctx.day, rules, map.world.vocabularies.ranks);
+    fire(ctx, choice === 'resign' ? 'people.resigned' : 'people.stayed');
+    ctx.events.push({ event: 'service_choice', person: p, post, message: null, terms });
+  }
+  return state;
+}
 
 const TAKES: ReadonlySet<ComplianceRung> = new Set(['exceed', 'comply']);
 

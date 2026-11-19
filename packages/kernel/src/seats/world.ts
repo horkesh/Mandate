@@ -110,7 +110,7 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
     ...templateProblems(rules.templates),
     ...latencyProblems(rules.latency),
     ...standingProblems(pack.standing),
-    ...peopleRulesProblems(pack.people, map.world.vocabularies.values?.map((v) => v.id) ?? []),
+    ...peopleRulesProblems(pack.people, map.world.vocabularies.values?.map((v) => v.id) ?? [], map.world.vocabularies.traits.map(t => t.id)),
     // Lane 1.5: attention, the order-to-value map, the verbs, the ladder, the audience and initiatives.
     ...verbRulesProblems(pack.people?.attention, pack.people?.verbs, map.world.vocabularies.values?.map((v) => v.id) ?? [], map.world.vocabularies.personKinds.map((k) => k.id)),
     ...plannerRuleProblems(pack.planner, pack.plans),
