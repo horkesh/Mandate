@@ -1,0 +1,9 @@
+For the lead: 3 items. Completed **R59 only**, research in `C:/Pyrrhic/mandate-research-r3`, branch `research-1861-round3`, from `3230269`. Delivered **rs15.csv/.md**: **189 judgments, 105 people, KEEP 9 / CHANGE 0 / HOLD 180**, with per-person/field counts. All **60 blocs remain held**. Nine recommendations have page-checked contemporary legs. Lincoln reputation and the Bates-diary exclusion stand.
+
+**Proposed reading [I]:** use R59's pre-March cutoff and own-words-for-values exception literally, rejecting the older broader trait-conduct exception here. Chase/Julian leads remain held.
+
+**Checks:** research audit exits **0**. Required check exits **2** (missing Node types), done check **1** (missing tsx): **0 tests/criteria ran**. No install or gate retry. Evidence: `docs/research/_resource/evidence-r59/final-checks.json`; hand-over updated. Scans stay in `C:/Pyrrhic/mandate-research-sources/r59-sources/`.
+
+**For Claude:** review recommendations, preserve holds, route explicit rs15 apply opt-in. **790 baseline files preserved**, HEAD unchanged, index empty. Git read-only. Fresh coordination read preceded this single append; prior bytes preserved.
+
+Status: waiting on Claude

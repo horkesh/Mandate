@@ -1,0 +1,127 @@
+[
+  {
+    "path": "docs/research/2026-11-14-union-navy.md",
+    "bytes": 55430,
+    "sha256": "b5e1f00463fdc22103fb27c21bad7811448c4e2834f8511d6f7f75261987b5d2"
+  },
+  {
+    "path": "docs/research/2026-11-16-cast-1861.md",
+    "bytes": 323188,
+    "sha256": "87b9f00be5e6b5aee784d546571303d661d23588ee76d56b10e84b876ce37f72"
+  },
+  {
+    "path": "docs/research/_resource/dating-method.md",
+    "bytes": 17691,
+    "sha256": "e72c5c4adc1e05882763962c171563c73637c3a4595a3f746332d0595612b1e5"
+  },
+  {
+    "path": "docs/research/_resource/dating.csv",
+    "bytes": 591657,
+    "sha256": "53fb88481ad5c9059efa3820d52751d7d422dca64850f07251e5401e3931aa6b"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r52/date-overrides.json",
+    "bytes": 41401,
+    "sha256": "9c9c075725a407cf501fc9b75f23cde7e9d312a5926f7682a8462daff5487ceb"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r62/baseline.json",
+    "bytes": 91801,
+    "sha256": "de653310136a854423bd3881c2500dde7d5f261e387727f774bcceb2702bde32"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r62/date-changes.json",
+    "bytes": 1568,
+    "sha256": "84c2d44532311a82a3ce5b512bdb181823eec4b5707b1bc9f2c4542259d760d9"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r62/dating-build.log",
+    "bytes": 3074,
+    "sha256": "b12964ee4367e7963519c47f74a2e69d790956454a2824a0133f4571e6fedf82"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r62/exact-day-audit.json",
+    "bytes": 51496,
+    "sha256": "f4030233eda0101af367d260ee9e5be818e54433ab4f9571a9f2838baf6c483c"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r62/final-checks.json",
+    "bytes": 3627,
+    "sha256": "d544a57a544d5cb45b1e7874ec299158b5c183fda3a19b5f34f202ea4490ee3a"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r62/leg-audit.json",
+    "bytes": 67379,
+    "sha256": "d20acbd14842923a6900081b16dd4e14863117b0e265759712d9131e29f1c01e"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r62/regeneration.log",
+    "bytes": 3074,
+    "sha256": "b12964ee4367e7963519c47f74a2e69d790956454a2824a0133f4571e6fedf82"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r62/source-reading.json",
+    "bytes": 49654,
+    "sha256": "b9c4eb412eeb9a688c92c65f9ff065bdfc36785cc0cd042efd9acfa2d0d7efd0"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r62/typecheck.log",
+    "bytes": 68,
+    "sha256": "6ee13f15916108faa58011f64353837b9ba6cd2d3599c631d3952129f2c61465"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r62/verify.log",
+    "bytes": 412,
+    "sha256": "49be0faacff2851500734ebbd491eb7df9318b887f8b04a08c79d5a2bc6f5c55"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r62/wording-probe-final.log",
+    "bytes": 474,
+    "sha256": "b5a23ad528260cb1f9e9d8a18ed57ffde0ee6a4f34e03fc1e458b90bca78ceb1"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r62/wording-probe.log",
+    "bytes": 3002,
+    "sha256": "f85777b2db77d24d4610f1fe3aa895bad2219655adde7dc9d65f81fad95423eb"
+  },
+  {
+    "path": "docs/research/_resource/rs8.csv",
+    "bytes": 22294,
+    "sha256": "e26543831a41b9a93e90fc5832d4f8f957942dfa95173b68b2bc0042bd4def9e"
+  },
+  {
+    "path": "docs/research/_resource/rs8.md",
+    "bytes": 4602,
+    "sha256": "2d3629f5d8d9a7f35cb89821fec8342695f13f149f66e7f934152f7b8174ab3d"
+  },
+  {
+    "path": "docs/research/_resource/tools/addsources.js",
+    "bytes": 11649,
+    "sha256": "526c79772aa78a6a606fe9509210f264fda7eeb1ab4afe7c2f54ca435de3e31f"
+  },
+  {
+    "path": "docs/research/_resource/tools/apply.js",
+    "bytes": 6828,
+    "sha256": "a07319a023973c5287a72f32393db9d43318cc00febb5ba04ce02382966516e3"
+  },
+  {
+    "path": "docs/research/_resource/tools/r52-dating.py",
+    "bytes": 8196,
+    "sha256": "ed1943ee89aa4f057eb5cbe942e9520ca4f2bb3b22400ce83628f41c949f98a3"
+  },
+  {
+    "path": "docs/research/_resource/tools/r62-verify.py",
+    "bytes": 6824,
+    "sha256": "d8b4f9c9fca81197fd32e3c4ae0402f07adfba7aab23e2332cb41b33b1af0ae2"
+  },
+  {
+    "path": "docs/research/_resource/tools/r62-wording-probe.cjs",
+    "bytes": 3543,
+    "sha256": "062b5571ffe0e2b35118c703492e051854b866d6ff031e5345fc2191f5234c24"
+  },
+  {
+    "path": "docs/research/_resource/evidence-r62/coordination-append-proof.json",
+    "bytes": 260,
+    "sha256": "e0c48611f8e54858a118ceef86cbfe9653418c0bd5d80955c662d5e853f95574"
+  }
+]

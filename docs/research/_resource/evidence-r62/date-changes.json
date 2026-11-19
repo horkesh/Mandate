@@ -1,0 +1,62 @@
+[
+  {
+    "cell": "anderson_robert/competence",
+    "citation": "OR I-1-p12",
+    "before": "1861-04-19",
+    "after": "1861-04-18..1861-04-19"
+  },
+  {
+    "cell": "anderson_robert/nerve",
+    "citation": "OR I-1-p12",
+    "before": "1861-04-19",
+    "after": "1861-04-18..1861-04-19"
+  },
+  {
+    "cell": "anderson_robert/boldness",
+    "citation": "OR I-1 p12",
+    "before": "1861-04-19",
+    "after": "1861-04-18..1861-04-19"
+  },
+  {
+    "cell": "anderson_robert/value:duty",
+    "citation": "OR I-1 p12",
+    "before": "1861-04-19",
+    "after": "1861-04-18..1861-04-19"
+  },
+  {
+    "cell": "anderson_robert/value:order",
+    "citation": "OR I-1 p12",
+    "before": "1861-04-19",
+    "after": "1861-04-18..1861-04-19"
+  },
+  {
+    "cell": "bates_edward/boldness",
+    "citation": "NH-CW 6 p230-231",
+    "before": "1861-03-29",
+    "after": "1861-03-29..1861-03-30"
+  },
+  {
+    "cell": "bates_edward/candour",
+    "citation": "NH-CW 6 p228-231",
+    "before": "1861-03-29",
+    "after": "1861-03-29..1861-03-30"
+  },
+  {
+    "cell": "bates_edward/value:union",
+    "citation": "NH-CW 6 p230-231",
+    "before": "1861-03-29",
+    "after": "1861-03-29..1861-03-30"
+  },
+  {
+    "cell": "mcclellan_george_b/trait:shifts_blame",
+    "citation": "OR I-11-1-p61",
+    "before": "1862-06-28",
+    "after": "1862-06-28..1863-08-04"
+  },
+  {
+    "cell": "mcclellan_george_b/trait:disdains_superiors",
+    "citation": "OR I-11-1-p61",
+    "before": "1862-06-28",
+    "after": "1862-06-28..1863-08-04"
+  }
+]
