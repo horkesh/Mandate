@@ -3,7 +3,7 @@ import type {CommandablePost, CounterKind, ReportView, SeatRequest} from '@manda
 export interface PostCard {
   post:string; parent:string|null; placed:boolean; holder:string|null;
   status:'held'|'vacant'|'unknown'; commandable:CommandablePost|null;
-  reports:readonly ReportView[]; vacantSince:number|null;
+  reports:readonly ReportView[]; vacantSince:number|null; asOfDay:number;
 }
 export interface CounterDraft {kind:CounterKind; value?:string; boldness?:number; from?:string; men?:number}
 /** Both presenters take the seat boundary itself, never the server snapshot or game. */
@@ -14,35 +14,13 @@ export function postReports(request:SeatRequest,post:string,holder:string|null):
   return receivedReports(request).filter(r=>r.authorPost===post||(r.subjectKind==='post'&&r.subjectId===post)||(holder!==null&&r.subjectKind==='person'&&r.subjectId===holder));
 }
 export function buildOrgBoard(request:SeatRequest):{nodes:PostCard[]} {
-  const nodes=new Map<string,PostCard>();
-  const ensure=(post:string)=>{
-    let node=nodes.get(post);
-    if(!node){node={post,parent:null,placed:false,holder:null,status:'unknown',commandable:null,reports:[],vacantSince:null};nodes.set(post,node);}
-    return node;
-  };
-  if(request.view.post){const own=ensure(request.view.post);Object.assign(own,{holder:request.view.person,status:'held',placed:true});}
-  if(request.menu.menuKind==='principal'){
-    for(const command of request.menu.commandable){
-      // Relays are the exposed command chain, excluding the principal and target.
-      const chain=[...(request.view.post?[request.view.post]:[]),...command.relays,command.post];
-      for(let i=0;i<chain.length;i++){
-        const node=ensure(chain[i]!);node.parent=i>0?chain[i-1]!:null;node.placed=true;
-      }
-      Object.assign(ensure(command.post),{holder:command.holder,status:'held',commandable:command});
-    }
-    for(const raising of request.menu.raising)Object.assign(ensure(raising.post),{holder:raising.holder,status:'held'});
-    for(const vacancy of request.menu.vacancies)Object.assign(ensure(vacancy.post),{holder:null,status:'vacant',commandable:null});
-  }
-  for(const node of nodes.values()){
-    node.reports=postReports(request,node.post,node.holder);
-    // This is the date of a received loss report, not a guessed appointment date.
-    if(node.status==='vacant')node.vacantSince=[...node.reports].reverse().find(r=>r.claims.some(c=>c.kind==='commander-lost'))?.day??null;
-  }
-  return {nodes:[...nodes.values()].sort((a,b)=>a.post<b.post?-1:a.post>b.post?1:0)};
+  const menu=request.menu.menuKind==='principal'?request.menu:null;
+  return {nodes:request.view.posts.map(p=>({post:p.post,parent:p.parent,placed:p.placementKnown,holder:p.holder,status:p.status,vacantSince:p.vacantSince,asOfDay:p.asOfDay,
+    commandable:menu?.commandable.find(c=>c.post===p.post&&c.holder===p.holder)??null,reports:postReports(request,p.post,p.holder)}))};
 }
 export function audienceRecord(request:SeatRequest,post:string) {
-  const commandable=request.menu.menuKind==='principal'?request.menu.commandable.find(p=>p.post===post)??null:null;
-  const holder=commandable?.holder??null;
+  const holder=request.view.posts.find(p=>p.post===post)?.holder??null;
+  const commandable=request.menu.menuKind==='principal'?request.menu.commandable.find(p=>p.post===post&&p.holder===holder)??null:null;
   // An earlier holder's words cannot become the present visitor's case.
   const reports=holder===null?[]:receivedReports(request).filter(r=>r.author===holder&&r.authorPost===post);
   const reasons=reports.flatMap(r=>(r.advice?.reasons??[]).map(reason=>({kind:reason.kind,source:r.id,author:r.author,day:r.day})));

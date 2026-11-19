@@ -862,11 +862,13 @@ This is maker verification.
 ## R66 audience and org board
 
 Run `npm run dev -- --at-war` from this folder. Open the org board with B or
-its desk button. The board follows the command chains in the principal's
-menu. Open a post to read its received papers or draft an order. A supplied
-vacancy is distinct from a post whose holder is not supplied. Raising posts
-whose placement is absent stay in a separate list; strings are never used to
-invent a hierarchy or a holder.
+its desk button. The board now reads the principal's dated post catalogue
+from SeatView.posts, including internal offices and opening vacancies. The
+opening establishment supplies known parents and holders; received reports
+supply subsequent holder evidence. A post whose placement has not been
+reported stays in a separate list. Field orders remain tied to the existing
+command menu. Opening vacancies have no invented date of becoming vacant.
+Open a post to read its received papers or draft an available order.
 
 On a commandable holder's card, Request an audience opens the scene. The desk
 recedes behind a plain name-and-post card, 420×560 at 1920×1080 and 540×720 at
@@ -881,12 +883,23 @@ reflows and scrolls vertically; reduced motion removes the transition.
 **Acceptance gaps remain.** The seat API has no current audience case, allowed
 counter menu, eligible framing values, declared reply per counter or filed
 audience transcript. Earlier advice is explicitly labelled as earlier advice,
-and the desk predicts no response. Staff assessment bands, standing, stances
-and attached observers are also absent. The API has no complete public post
-catalogue: relay chains expose some internal posts but not their holders;
-initial vacancies and many offices are absent. These need lead-owned seat
-projections before the full requirements of PRESENTATION 1.3 and 1.5 can pass.
-No State or pack data was exposed to work around them.
+and the desk predicts no response. R70 supplies public standing and received
+consults, advice about the man and observer letters through SeatView.people
+and the catalogue's source references. Missing records remain explicit.
+Observer letters do not imply an observer is still attached, and received
+consults retain their letter's subject rather than borrowing the private
+stance table's subject. No assessment band is inferred from hidden ability.
+
+R70 remains incomplete on the live audience projection. StatedReason stores
+only reason kind and weight; AudienceRecord stores only day, before/during
+and counter kinds, without principal attribution or a transcript. The
+preview computes framing values and replies from hidden person inputs.
+A seat-owned declaration source or a ruling permitting newly spoken
+read-only declarations is needed before the audience requirement can pass.
+The implementation adds no State and exposes none of those private inputs.
+See notes/lane-seat-view-people.md at the repository root for proposed
+choices, validation and remaining gates; runs/r70/final-checks.json indexes
+the evidence.
 
 `web/people.ts` and `web/People.tsx` take `SeatRequest` and display strings only.
 The server adapter and HTTP boundary are unchanged. New player text is in

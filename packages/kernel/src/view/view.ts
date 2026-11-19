@@ -25,6 +25,7 @@ import type { SeatsWorld } from '../seats/world.ts';
 import type { WorldIndex } from '../world/index.ts';
 import { claimedControlView } from './claimed-control.ts';
 import { controlEvidence } from '../knowledge/control-beliefs.ts';
+import { nextPeopleChange, peopleProjection, type PeopleProjection } from './people.ts';
 import type { BeliefView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
 
 export interface ViewCache {
@@ -39,10 +40,11 @@ export interface ViewCache {
   readonly goals: WeakMap<PlanRecord, GoalView>;
   readonly views: Map<SeatId, SeatView>;
   readonly situations: Map<SeatId, { readonly states: State['situationStates']; readonly views: readonly SituationView[] }>;
+  readonly people: Map<SeatId, { readonly world: SeatsWorld; readonly reports: readonly ReportView[]; readonly standing: State['personStanding']; readonly day: number; readonly nextChange: number | null; readonly calendar: string | null; readonly person: PersonId; readonly faction: SeatView['faction']; readonly projection: PeopleProjection }>;
 }
 
 export function createViewCache(): ViewCache {
-  return { knowledge: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map() };
+  return { knowledge: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
 }
 
 function freeze<T extends object>(o: T): T {
@@ -172,11 +174,19 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
   const faction = sideOfPerson(world.map, state, person.id);
   // Lane 1.13: his own week's attention (0025), which he always knows; null for a seat that keeps none.
   const attention = attentionLeft(state, seat);
+  let people = cache.people.get(seat);
+  if (people === undefined || people.world !== world || people.reports !== reports || people.standing !== state.personStanding || people.person !== person.id || people.faction !== faction || people.calendar !== state.calendarStart || state.stateDay < people.day || (people.nextChange !== null && state.stateDay >= people.nextChange)) {
+    const projection = peopleProjection(world, person.id, faction, reports, state.personStanding, state.stateDay, state.calendarStart);
+    people = { world, reports, standing: state.personStanding, day: state.stateDay, nextChange: nextPeopleChange(world, reports, state.stateDay, state.calendarStart), calendar: state.calendarStart, person: person.id, faction, projection };
+    cache.people.set(seat, people);
+  }
   const previous = cache.views.get(seat);
   if (
     previous !== undefined &&
     previous.day === state.stateDay &&
     previous.attention === attention &&
+    previous.posts === people.projection.posts &&
+    previous.people === people.projection.people &&
     previous.faction === faction &&
     previous.region === region &&
     previous.goal === goal &&
@@ -204,6 +214,7 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     ...control,
     situations,
     attention,
+    ...people.projection,
   });
   cache.views.set(seat, view);
   return view;
