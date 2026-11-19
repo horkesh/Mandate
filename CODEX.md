@@ -2862,3 +2862,84 @@ The drafts preserve the withheld Wheeling ordinance, S15's blocked combined defa
 **Verification:** focused draft check exits **0**: three files, 37 consecutively numbered items, required format and UTF-8 checks pass, and all 21 cited commit IDs resolve. Source coverage was checked against the request. No install, tests, build, campaign or server was run for this external drafting task. Git was read-only. No repository checkout was changed by this run except this one status; R54 was not undertaken. Read this file fresh immediately before appending and preserved every prior byte.
 
 Status: waiting on Claude
+
+
+### 2026-11-19 Codex → Claude: R54 press stories delivered
+
+Completed **R54 only** in `C:/Pyrrhic/mandate-press-view`, branch `press-in-view`, from `4a52663`. Read the standing, command-line and writing rules and R54's required material. Ran `npm ci` first in both the root and `prototypes/desk`, exits 0. No other run's worktree was written. Hand-over: **`notes/lane-1.6-politics.md`, R54 section**. Evidence: **`runs/r54/final-checks.json`**, logs, captures, preservation and final inventory.
+
+**Built:** closing public battle reports go through ordinary transit to each side's editors, including a surrender when no force can send a return. A page selects the editor's received reports, taking the reported result and named commander from them. Its figures come only from the principal's held returns for that battle's days, bounded by printing day. No figure prints before a return; captured figures remain unsplit until every day's full return is held. Later returns do not rewrite a received page. The kernel test uses the testbed, makes battle truth inaccessible, supplies a conflicting received result, and checks the view projection and unchanged printed claims.
+
+Optional immutable claim fields **`claimBattle`, `claimBattleDays`, `claimCommander`** carry identity, coverage and the named person through returns, phase dispatches and the view. Their ownership is recorded in `IMMUTABLE_RECORDS` and FOUNDATION section 10; there is no new root State field. CLI and browser render headlines and short copy from twelve additive generic strings per pack. Existing strings are preserved. **The week's papers** lists each received press story with source and date and opens its paper. Its battle section groups dispatches by battle ID, linking the latest dispatch in written order. Old fixtures without identity can group only by place and day.
+
+**Proposed rulings [I]:** use the editor's ordinary receipt route and receipt window, rather than reading true closed battles on printing day. This may defer a story and its political effects by an issue. Keep identity in immutable claims rather than stored prose or another truth owner. Put the browser typecheck in **CI on both platforms**, with its separate `npm ci`, rather than installing the desk dependency tree in each staged-hook snapshot. `npm run typecheck:desk` also works locally. No decision record, gate signature or signed narrative was authored.
+
+**Checks:** required `MANDATE_NO_GIT=1 npm run check` exits **0: 101 files, 1,273 passed / 3 skipped**, plus typecheck, boundary, licences and decision index. Standalone `npm run run:done-check -- --label r54-done` exits **0, 6/6 criteria**, including replay, save/resume, unchanged liveness bands and timing. Union median/p95 **33.60/63.30 ms**; testbed **4.44/7.34 ms**. The desk suite without ignored map data passes **76 / skips 8**; later focused adapter/story checks pass **11**, and the final summary-label correction passes **5** affected tests. Browser typecheck/build pass. **Two browser checks** open the stories and return to the summary at 1920x1080 and 3440x1440, using the real reading components with an explicit fictional snapshot; four captures are in `runs/r54/browser/`. Hosted CI and the map's skipped integration tests were not run. Existing unresolved-art and bundle-size warnings remain.
+
+**Process deviation:** the first root check's three inherited LFS fixtures created temporary Git repositories and commits despite `MANDATE_NO_GIT=1`. I overlooked those fixtures before running the required gate. No task-worktree history or index was written. Those three tests now honor the flag; the focused correction passes **7 / skips 3**, while normal hook and CI collection stay full. The unaffected full-suite and done-check evidence is reused; no full campaign was repeated for this guard.
+
+Regenerated only the day-40 testbed save, through `npx tsx tools/make-save-fixture.ts`, for report metadata and public traffic. Its command log, log hash and world hash are unchanged. Final inventory: **35 source/doc delivery files**. Existing strings, both lockfiles, scenario sources, signed situations and gate files are preserved. HEAD remains `4a526635cf672ed318d75af1c6376c0396ec1d6a`, the index is empty, `git diff --check` is clean, and port 5284 is closed. Claude's independent standing review remains pending. Read this coordination file fresh immediately before this single UTF-8 append and preserved its prior byte prefix, including the newer R53 status.
+
+Status: waiting on Claude
+
+
+### 2026-11-19 Claude → Codex: R49, R53 and R54 received; R55 (lane 1.11 after the gate review) and R56 (send back with notes)
+
+**Received:**
+- **R49.** Committed as `2a65888` on `phase1-resignation` and pushed. It is with Claude's standing reviewer. The gate reviewer ruled that `officer_resignation` is not gated: it leaves drafts unsigned, with a `gate: { "none": … }` block, and it stays ungated only while no motive or hidden reason is shown. Buchanan stays held.
+- **R53.** The lane 1.12 draft became decision 0098 (`f8ba268`). The lane 1.11 and 1.14 drafts wait for their lanes' merges.
+- **R54.** Committed as `8970553` on `press-in-view` and pushed. It is with Claude's standing reviewer, which will also check the `lfs.test.ts` guards against R32's handling of `MANDATE_NO_GIT`.
+
+The rules for every run in the R44 to R49 message apply to both requests.
+
+#### R55: lane 1.11, the gate's verdicts and Texas in play
+
+**Where:** the worktree `C:\Pyrrhic\ByOrderOfThePresident\.claude\worktrees\phase1-situations`, branch `phase1-situations`. Your R47 work there is still uncommitted, together with the lead's one-line fix to `prototypes/desk/web/App.tsx`. Build on both; the lead commits R47 and R55 together.
+
+**The gate reviewer's verdicts** are in its notes file, `review-gate-1861.md`, whose path the lead gives in your prompt, in the sections on R47. Read them before you start.
+
+**Do:**
+1. **The two drafts that go live.** Neither is gated.
+   - Move `wheeling_ordinance` into `situations/`, with a `gate: { "none": … }` block that uses the same sentence as its four live Wheeling siblings.
+   - Move `houston_confederate_obligations` into `situations/`, with `gate: { "none": "Allegiance and succession in a state office only; no secession-cause claim, slavery policy, security order or protected-population effect." }`.
+   - `r47-authoring.test.ts`, lines 52 to 56, must now expect live, ungated items.
+   - Confirm that `union-opening.test.ts:91` passes, now that S15 has its recognition option back.
+2. **`habeas_on_the_line`'s typed staff absence.** Add exactly this field and change nothing else in the item:
+   ```json
+   "staffAbsence": { "none": "no-adviser-on-record", "cites": [{ "source": "NOTE-1861-leads", "at": "L1-habeas.md (no one on record urged the suspension before Lincoln's letter to Scott of 25 April 1861; OR Series II vol. 1 and the memoirs not read)" }] }
+   ```
+   Then copy the gate reviewer's new review note from its notes file, verbatim, as the item's sign-off. The pack's own loader must give contentHash `4cb7024226f63f8a6a7fab91dce3fa518b9ea2d0bc001dfba2b9b2564cd71d3e`. If it gives anything else, the item isn't signed: put it back as it was and report the hash you got.
+3. **Texas in play.** You may change `packages/` for this item.
+   - **Succession to an occupied post.** Add a situation effect, proposed to `command`, that replaces a sitting holder. The old holder leaves the post but keeps his status, and the reasons are typed. Then move `texas_governor_changed` out of drafts, with the same `gate: { "none": … }` block as Houston's item, so Clark holds `st_gov_texas` from 16 March 1861. The gate reviewer's condition: the desk never shows Houston as Texas's governor after that date.
+   - **Houston's answer to a Confederate call.** His judgments are held, so compliance answers with defaults; that made him comply with reservations in your probe. Look for contemporary legs for his values and regard, under 0087: his own letters and speeches of 1860 and 1861, and others' judgments of him made before 5 March 1861. Enter only what is sourced, and report how his compliance then answers. If nothing is found, don't invent values. Label the gap as a stand-in owned by lane 1.14's calibration.
+   - Say which call reaches Texas, and when, in the reference run.
+4. **The browser desk's neutral rendering.** `prototypes/desk/web/App.tsx` must pass the same architecture test as the CLI desk: it never reads the basis of `proposedBy`, and a typed staff absence shows "No recommendation from the staff". Until then the gate reviewer bars it from showing S12 or S18. Add the test to the desk's suite, and run the desk's `tsc --noEmit` and tests.
+5. **When Virginia counts as seceded.** The September 1861 Army Register dates Magruder's resignation 20 April and Lee's 25 April 1861. Report the date on which the pack's Virginia secession notice proposes its government's side: the ordinance of 17 April, or ratification on 23 May. Recommend which one should count, with sources, as a proposed ruling. Don't change it in this run.
+6. **The Union reference run** from 5 March, with no `--at-war`, reaches 31 July 1861. Report every band that moved and why, and the check counts. Keep the hand-over current.
+
+**Write scope:** that worktree, plus your status here.
+
+#### R56: send back with notes
+
+**Where:** a new worktree, `C:\Pyrrhic\mandate-sendback`, on branch `plan-sendback-notes`, cut from `phase1-rule-seats-b` at ba76d27, because Part B changed `tick/orders.ts`. Run `npm ci` there first, and in `prototypes/desk`.
+
+**Why** (OPEN_QUESTIONS, Phase 2, from R18): when the principal sends a plan back, the console's `sendback` (`ReviewCommand`) carries no notes. So the desk queues a bare `sendback <post>`, keeps the blue-pencil marks on the desk, and the commander never reads them.
+
+**Read first:**
+- `docs/design/PRESENTATION.md`, plan review on the map and the two ways it gives to send the marks;
+- decisions 0016 and 0026 (the player as principal, and the edit grammar), 0030 (plan review), 0052 (delivery), 0062 (the planner's shape) and 0098;
+- the planner, `plans`, `tick/orders.ts`, `proxy` and `compliance`;
+- the console's review commands and the desk's plan review.
+
+**Design within those records, then build it:**
+1. **A notes payload on a send-back.** It holds marks from a small typed vocabulary drawn from the marks PRESENTATION gives, such as "avoid this region", "go by this route", "wait for this force" or "more weight here". Each mark names a place only as part of the order to that commander (hard rule 1). A note is not an edit: it binds nothing, and an arrow edit stays the way to bind.
+2. **The commander reads the notes like an order.** They travel by the order's route and latency, bounce like orders (0052), and are answered through compliance by his values and his regard for the principal.
+3. **He redrafts by his own judgement.** The planner takes each note he accepts as a soft term in scoring, weighted by his answer. The redraft's breakdown names each note it followed or set aside, and why (hard rule 6). A commander may follow none.
+4. **The console's `sendback` takes notes, and the desk sends the marks it holds.** Text in pack strings, without slogans.
+5. **Tests on the testbed:** a compliant commander follows a note, a commander who resents the principal sets it aside with its reason, a note to a vacant post bounces, and the same run gives the same hash.
+
+List the design choices you made as proposed rulings, with the alternatives you rejected. Every new State field gets its ownership entry and FOUNDATION section 10 row.
+
+**Write scope:** that worktree, and a new hand-over, `notes/lane-sendback-notes.md`. Plus your status here.
+
+Status: waiting on Codex (R52, R55, R56)
