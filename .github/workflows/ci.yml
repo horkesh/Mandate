@@ -34,6 +34,11 @@ jobs:
       - id: checkout
         name: Checkout
         uses: actions/checkout@v7
+        with:
+          # Lane 0.7l: no LFS objects until a build or test needs the art; every CI download counts against the owner's bandwidth.
+          lfs: false
+          # Lane 0.7l (review): the whole history, so the art check reads every commit pushed, not only the tip.
+          fetch-depth: 0
 
       - id: node
         name: Set up Node from .nvmrc
@@ -74,6 +79,11 @@ jobs:
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: npm run check:decisions
 
+      - id: lfs_check
+        name: No binary under art/ in plain git, in any commit pushed (lane 0.7l; so a --no-verify commit is caught even once deleted)
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npx tsx tools/lfs-check.ts --history HEAD
+
       - id: determinism_seats
         name: Determinism run (seats layer, testbed, a hash every day, replay and resume from day 60)
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
@@ -111,6 +121,7 @@ jobs:
           BOUNDARY: ${{ steps.boundary.outcome }}
           LICENCES: ${{ steps.licences.outcome }}
           DECISIONS: ${{ steps.decisions.outcome }}
+          LFS_CHECK: ${{ steps.lfs_check.outcome }}
           DET_SEATS: ${{ steps.determinism_seats.outcome }}
           DET_SEATS_UNION: ${{ steps.determinism_seats_union.outcome }}
           DONE_CHECK: ${{ steps.done_check.outcome }}
@@ -134,6 +145,7 @@ jobs:
             echo "| npm run check:boundary | $BOUNDARY |"
             echo "| npm run check:licences | $LICENCES |"
             echo "| npm run check:decisions | $DECISIONS |"
+            echo "| no binary under art/ in plain git, in any commit | $LFS_CHECK |"
             echo "| determinism run: seats layer (testbed) | $DET_SEATS |"
             echo "| determinism run: seats layer (union-1861) | $DET_SEATS_UNION |"
             echo "| Phase 0 done check (union-1861 at war, testbed) | $DONE_CHECK |"
@@ -149,6 +161,9 @@ jobs:
       - id: checkout
         name: Checkout
         uses: actions/checkout@v7
+        with:
+          # Lane 0.7l: no LFS objects (see the check job's checkout).
+          lfs: false
 
       - id: node
         name: Set up Node from .nvmrc
