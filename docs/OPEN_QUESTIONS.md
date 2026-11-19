@@ -319,6 +319,12 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.14 (calibration):** with the pack's dated history off, only Lee resigns, because his two values just reach the threshold. The weights are uncalibrated.
   - **Lane 1.14 (calibration and the wording rules):** five of the fifteen wait for Virginia to join the other side, and Virginia goes only after S09's call. A player who never issues the call keeps Lee, Magruder and Stuart in US service. That is within SENSITIVE-HISTORY 3.1, but no text may present the call as the reason an officer left.
   - **Lane 1.11 and resignation:** when Virginia counts as seceded. The register dates Magruder's resignation 20 April and Lee's 25 April. If the game counts Virginia only from ratification on 23 May, the five wait until then, and the history run drifts from the register.
+- From the standing reviewer's review of R48 (`phase1-rule-seats-b` at `ba76d27`; `review-codex-r48-r49.md`; Codex's R57 fixes the two holes R48 was held for):
+  - **Rule seats:** a capital may be moved into a region the other side holds; nothing prevents it.
+  - **A test for each of three re-breaks** the reviewer's notes call V4, C2 and C4: R48's tests miss all three.
+  - **Is this right?** When no superior is serving, the principal authors the loss report.
+  - **Merge care:** R48 and R49 (`phase1-resignation`) both edit `whereIsPerson`, so merging the second of them needs care.
+  - **Two older small leaks**, found outside R48's scope: `dispatchOrder` drops a vacant relay post by reading truth; `fieldPosts` drops a post that has lost its blocks while its commander lives.
 - From lane 1.4b's report (`notes/lane-1.4b-detachments.md`, merged 1cf40d5), by lane:
   - **1B (the planner):** no operation leaves a garrison, because the planner drafts no garrison step. Add one if the history run needs it.
   - **Lane 1.4 or 1B, cleanup:** after a landing, the parent blocks stay aboard as 0-strength shells until a rejoin or a disbanding. Lane 1.4c (merged a810532) made sure an emptied shell can no longer be handed over in a transfer.
