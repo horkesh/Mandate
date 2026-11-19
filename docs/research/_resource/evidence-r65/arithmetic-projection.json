@@ -1,0 +1,135 @@
+{
+  "inputCommit": "5a96a16",
+  "rules": {
+    "historicalDefaults": true,
+    "base": 0,
+    "resignAt": 500,
+    "values": [
+      {
+        "value": "state_autonomy",
+        "weight": 600
+      },
+      {
+        "value": "native_state",
+        "weight": 800
+      },
+      {
+        "value": "union",
+        "weight": -600
+      },
+      {
+        "value": "duty",
+        "weight": -300
+      }
+    ],
+    "traits": []
+  },
+  "method": "Set membership and integer sum only, matching the read resignationChoice source. Not a simulation, government eligibility, historical date or future choice test. No other held fields or R59 recommendations are applied.",
+  "rows": [
+    {
+      "person": "buchanan_franklin",
+      "beforeScore": 0,
+      "reviewedResearchProjectionScore": 0,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    },
+    {
+      "person": "cooper_samuel",
+      "beforeScore": 0,
+      "reviewedResearchProjectionScore": 0,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    },
+    {
+      "person": "crittenden_george_b",
+      "beforeScore": 0,
+      "reviewedResearchProjectionScore": 0,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    },
+    {
+      "person": "ewell_richard_s",
+      "beforeScore": 0,
+      "reviewedResearchProjectionScore": 0,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    },
+    {
+      "person": "gorgas_josiah",
+      "beforeScore": 0,
+      "reviewedResearchProjectionScore": 0,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    },
+    {
+      "person": "holmes_theophilus_h",
+      "beforeScore": 0,
+      "reviewedResearchProjectionScore": 0,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    },
+    {
+      "person": "johnston_albert_s",
+      "beforeScore": 0,
+      "reviewedResearchProjectionScore": -600,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    },
+    {
+      "person": "johnston_joseph_e",
+      "beforeScore": -300,
+      "reviewedResearchProjectionScore": 0,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    },
+    {
+      "person": "lee_robert_e",
+      "beforeScore": 500,
+      "reviewedResearchProjectionScore": 200,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    },
+    {
+      "person": "longstreet_james",
+      "beforeScore": 0,
+      "reviewedResearchProjectionScore": 0,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    },
+    {
+      "person": "loring_william_w",
+      "beforeScore": 0,
+      "reviewedResearchProjectionScore": 0,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    },
+    {
+      "person": "magruder_john_b",
+      "beforeScore": 0,
+      "reviewedResearchProjectionScore": 0,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    },
+    {
+      "person": "pemberton_john_c",
+      "beforeScore": 0,
+      "reviewedResearchProjectionScore": 0,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    },
+    {
+      "person": "smith_edmund_k",
+      "beforeScore": 0,
+      "reviewedResearchProjectionScore": -300,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    },
+    {
+      "person": "stuart_james_e_b",
+      "beforeScore": 0,
+      "reviewedResearchProjectionScore": 0,
+      "threshold": 500,
+      "choiceIfOfferedWithoutHistoricalDefault": "stay"
+    }
+  ]
+}

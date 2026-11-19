@@ -23,6 +23,9 @@ export interface ClaimView {
   readonly value: number;
   readonly token: string | null;
   readonly confidence: number;
+  readonly battle?: string;
+  readonly battleDays?: readonly number[];
+  readonly commander?: PersonId | null;
 }
 
 export interface AdviceView {

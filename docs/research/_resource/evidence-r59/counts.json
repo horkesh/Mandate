@@ -1,0 +1,673 @@
+{
+  "judgments": 189,
+  "people": 105,
+  "KEEP": 9,
+  "CHANGE": 0,
+  "HOLD": 180,
+  "held_blocs_read": 60,
+  "bloc_changes_proposed": 0,
+  "by_person": {
+    "lincoln_abraham": {
+      "KEEP": 1,
+      "HOLD": 3
+    },
+    "bates_edward": {
+      "HOLD": 3
+    },
+    "blair_montgomery": {
+      "HOLD": 4
+    },
+    "cameron_simon": {
+      "HOLD": 5,
+      "KEEP": 1
+    },
+    "chase_salmon_p": {
+      "HOLD": 2
+    },
+    "seward_william_h": {
+      "HOLD": 2
+    },
+    "welles_gideon": {
+      "HOLD": 2
+    },
+    "stanton_edwin_m": {
+      "HOLD": 1
+    },
+    "scott_winfield": {
+      "KEEP": 2
+    },
+    "banks_nathaniel_p": {
+      "HOLD": 1
+    },
+    "beauregard_pierre_g_t": {
+      "HOLD": 1
+    },
+    "bragg_braxton": {
+      "HOLD": 1
+    },
+    "buell_don_c": {
+      "HOLD": 1
+    },
+    "dix_john_a": {
+      "KEEP": 1
+    },
+    "fremont_john_c": {
+      "HOLD": 3
+    },
+    "halleck_henry_w": {
+      "HOLD": 1
+    },
+    "hardee_william_j": {
+      "HOLD": 2
+    },
+    "mcclellan_george_b": {
+      "HOLD": 1
+    },
+    "mcculloch_ben": {
+      "HOLD": 1
+    },
+    "mcdowell_irvin": {
+      "HOLD": 1
+    },
+    "patterson_robert": {
+      "HOLD": 1
+    },
+    "pillow_gideon_j": {
+      "HOLD": 2
+    },
+    "polk_leonidas": {
+      "HOLD": 1
+    },
+    "rosecrans_william_s": {
+      "HOLD": 3
+    },
+    "sumner_edwin_v": {
+      "HOLD": 1
+    },
+    "wool_john_e": {
+      "HOLD": 2
+    },
+    "andrew_john_a": {
+      "HOLD": 3
+    },
+    "curtin_andrew_g": {
+      "HOLD": 1
+    },
+    "dennison_william": {
+      "HOLD": 1
+    },
+    "morgan_edwin_d": {
+      "HOLD": 1
+    },
+    "morton_oliver_h_p_t": {
+      "HOLD": 5
+    },
+    "ramsey_alexander": {
+      "HOLD": 1
+    },
+    "hunter_robert_m_t": {
+      "HOLD": 1
+    },
+    "adams_charles_f": {
+      "HOLD": 1
+    },
+    "bennett_james_g": {
+      "HOLD": 1
+    },
+    "breckinridge_john_c": {
+      "HOLD": 1
+    },
+    "brown_joseph_e": {
+      "HOLD": 1
+    },
+    "chandler_zachariah": {
+      "HOLD": 1
+    },
+    "covode_john": {
+      "HOLD": 1
+    },
+    "crittenden_john_j": {
+      "HOLD": 2
+    },
+    "curtis_samuel_r": {
+      "HOLD": 1
+    },
+    "dahlgren_john_a_b": {
+      "HOLD": 1
+    },
+    "dana_charles_a": {
+      "HOLD": 3
+    },
+    "daniel_john_m": {
+      "HOLD": 5
+    },
+    "davis_charles_h": {
+      "HOLD": 1
+    },
+    "du_pont_samuel_f": {
+      "HOLD": 1
+    },
+    "ellis_john_w": {
+      "HOLD": 1
+    },
+    "farragut_david_g": {
+      "HOLD": 2
+    },
+    "fessenden_william_p": {
+      "HOLD": 1
+    },
+    "foote_andrew_h": {
+      "HOLD": 1
+    },
+    "franklin_william_b": {
+      "HOLD": 1
+    },
+    "gamble_hamilton_r": {
+      "HOLD": 1
+    },
+    "grant_ulysses_s": {
+      "HOLD": 1
+    },
+    "greeley_horace": {
+      "HOLD": 2
+    },
+    "harris_isham_g": {
+      "HOLD": 2
+    },
+    "heintzelman_samuel_p": {
+      "HOLD": 1
+    },
+    "hill_daniel_h": {
+      "HOLD": 1
+    },
+    "hitchcock_ethan_a": {
+      "HOLD": 1
+    },
+    "holt_joseph": {
+      "HOLD": 1
+    },
+    "hooker_joseph": {
+      "HOLD": 2
+    },
+    "hurlbut_stephen_a": {
+      "HOLD": 3
+    },
+    "jackson_claiborne_f": {
+      "HOLD": 7
+    },
+    "jackson_thomas_j": {
+      "HOLD": 1
+    },
+    "johnson_andrew": {
+      "HOLD": 1
+    },
+    "julian_george_w": {
+      "HOLD": 3
+    },
+    "lane_james_h": {
+      "HOLD": 5
+    },
+    "lyon_nathaniel": {
+      "HOLD": 2
+    },
+    "lyons_richard_b_p": {
+      "HOLD": 3
+    },
+    "magoffin_beriah": {
+      "HOLD": 3
+    },
+    "mason_james_m": {
+      "HOLD": 1
+    },
+    "meade_george_g": {
+      "HOLD": 1
+    },
+    "meigs_montgomery_c": {
+      "HOLD": 2
+    },
+    "mercier_henri": {
+      "HOLD": 2
+    },
+    "mitchel_ormsby_m": {
+      "HOLD": 4
+    },
+    "pendleton_george_h": {
+      "HOLD": 1
+    },
+    "pope_john": {
+      "HOLD": 2
+    },
+    "porter_fitz_john": {
+      "HOLD": 1
+    },
+    "price_sterling": {
+      "HOLD": 1
+    },
+    "raymond_henry_j": {
+      "HOLD": 1
+    },
+    "reynolds_john_f": {
+      "HOLD": 2
+    },
+    "ripley_james_w": {
+      "HOLD": 1
+    },
+    "russell_john": {
+      "HOLD": 2
+    },
+    "schofield_john_m": {
+      "HOLD": 2
+    },
+    "schurz_carl": {
+      "HOLD": 1
+    },
+    "seymour_horatio": {
+      "HOLD": 1
+    },
+    "sherman_william_t": {
+      "HOLD": 1
+    },
+    "sickles_daniel_e": {
+      "HOLD": 1
+    },
+    "slidell_john": {
+      "HOLD": 2
+    },
+    "smith_charles_f": {
+      "HOLD": 2
+    },
+    "stevens_thaddeus": {
+      "HOLD": 4
+    },
+    "stone_charles_p": {
+      "HOLD": 2
+    },
+    "stringham_silas_h": {
+      "HOLD": 1
+    },
+    "sumner_charles": {
+      "KEEP": 2,
+      "HOLD": 1
+    },
+    "thomas_george_h": {
+      "HOLD": 1
+    },
+    "thomas_lorenzo": {
+      "HOLD": 1
+    },
+    "totten_joseph_g": {
+      "HOLD": 2
+    },
+    "trumbull_lyman": {
+      "HOLD": 2
+    },
+    "vallandigham_clement_l": {
+      "HOLD": 2
+    },
+    "van_dorn_earl": {
+      "HOLD": 1
+    },
+    "vance_zebulon_b": {
+      "HOLD": 3
+    },
+    "wade_benjamin_f": {
+      "HOLD": 1
+    },
+    "wadsworth_james_s": {
+      "KEEP": 1
+    },
+    "weed_thurlow": {
+      "HOLD": 1
+    },
+    "wilkes_charles": {
+      "HOLD": 1
+    },
+    "wilson_henry": {
+      "HOLD": 2,
+      "KEEP": 1
+    }
+  },
+  "by_field": {
+    "competence": {
+      "KEEP": 4,
+      "HOLD": 23
+    },
+    "regard_others": {
+      "HOLD": 18
+    },
+    "reputation": {
+      "HOLD": 75,
+      "KEEP": 3
+    },
+    "regard": {
+      "HOLD": 5
+    },
+    "nerve": {
+      "HOLD": 24
+    },
+    "trait": {
+      "HOLD": 27,
+      "KEEP": 2
+    },
+    "value": {
+      "HOLD": 7
+    },
+    "candour": {
+      "HOLD": 1
+    }
+  },
+  "by_exact_field": {
+    "competence": {
+      "KEEP": 4,
+      "HOLD": 23
+    },
+    "regard_others:blair_montgomery": {
+      "HOLD": 4
+    },
+    "regard_others:welles_gideon": {
+      "HOLD": 2
+    },
+    "reputation": {
+      "HOLD": 75,
+      "KEEP": 3
+    },
+    "regard": {
+      "HOLD": 5
+    },
+    "regard_others:bates_edward": {
+      "HOLD": 1
+    },
+    "regard_others:chase_salmon_p": {
+      "HOLD": 1
+    },
+    "nerve": {
+      "HOLD": 24
+    },
+    "trait:makes_policy": {
+      "HOLD": 1
+    },
+    "value:career": {
+      "HOLD": 1
+    },
+    "value:party": {
+      "HOLD": 1
+    },
+    "trait:antislavery": {
+      "HOLD": 4,
+      "KEEP": 2
+    },
+    "regard_others:seward_william_h": {
+      "HOLD": 1
+    },
+    "value:order": {
+      "HOLD": 1
+    },
+    "trait:organiser": {
+      "HOLD": 9
+    },
+    "value:free_soil": {
+      "HOLD": 1
+    },
+    "trait:quarrelsome": {
+      "HOLD": 3
+    },
+    "regard_others:butler_benjamin_f": {
+      "HOLD": 1
+    },
+    "trait:disdains_superiors": {
+      "HOLD": 2
+    },
+    "regard_others:cameron_simon": {
+      "HOLD": 2
+    },
+    "regard_others:dennison_william": {
+      "HOLD": 1
+    },
+    "regard_others:magoffin_beriah": {
+      "HOLD": 1
+    },
+    "value:slavery_defence": {
+      "HOLD": 1
+    },
+    "trait:popular_with_troops": {
+      "HOLD": 1
+    },
+    "value:conciliation": {
+      "HOLD": 1
+    },
+    "trait:ambitious": {
+      "HOLD": 3
+    },
+    "trait:candid": {
+      "HOLD": 2
+    },
+    "candour": {
+      "HOLD": 1
+    },
+    "regard_others:davis_jefferson": {
+      "HOLD": 1
+    },
+    "regard_others:lyon_nathaniel": {
+      "HOLD": 1
+    },
+    "regard_others:price_sterling": {
+      "HOLD": 1
+    },
+    "value:native_state": {
+      "HOLD": 1
+    },
+    "trait:harsh_with_civilians": {
+      "HOLD": 1
+    },
+    "regard_others:morton_oliver_h_p_t": {
+      "HOLD": 1
+    },
+    "trait:infirm": {
+      "HOLD": 1
+    }
+  },
+  "cohorts": {
+    "principal and US cabinet": [
+      "lincoln_abraham",
+      "bates_edward",
+      "blair_montgomery",
+      "cameron_simon",
+      "chase_salmon_p",
+      "seward_william_h",
+      "smith_caleb_b",
+      "welles_gideon",
+      "stanton_edwin_m"
+    ],
+    "Scott and commander search": [
+      "scott_winfield",
+      "banks_nathaniel_p",
+      "beauregard_pierre_g_t",
+      "bragg_braxton",
+      "buell_don_c",
+      "butler_benjamin_f",
+      "dix_john_a",
+      "fremont_john_c",
+      "halleck_henry_w",
+      "hardee_william_j",
+      "harney_william_s",
+      "hunter_david",
+      "mcclellan_george_b",
+      "mcculloch_ben",
+      "mcdowell_irvin",
+      "patterson_robert",
+      "pillow_gideon_j",
+      "polk_leonidas",
+      "rosecrans_william_s",
+      "sumner_edwin_v",
+      "wool_john_e"
+    ],
+    "April-call governor search": [
+      "andrew_john_a",
+      "blair_austin",
+      "buckingham_william_a",
+      "curtin_andrew_g",
+      "dennison_william",
+      "kirkwood_samuel_j",
+      "morgan_edwin_d",
+      "morton_oliver_h_p_t",
+      "ramsey_alexander",
+      "randall_alexander_w",
+      "sprague_william",
+      "washburn_israel_jr",
+      "yates_richard"
+    ],
+    "Davis and cabinet search": [
+      "davis_jefferson",
+      "benjamin_judah_p",
+      "hunter_robert_m_t",
+      "mallory_stephen_r",
+      "memminger_christopher_g",
+      "reagan_john_h",
+      "toombs_robert_a",
+      "walker_leroy_p"
+    ]
+  },
+  "priority_name_counts": {
+    "lincoln_abraham": {
+      "KEEP": 1,
+      "HOLD": 3
+    },
+    "bates_edward": {
+      "HOLD": 3
+    },
+    "blair_montgomery": {
+      "HOLD": 4
+    },
+    "cameron_simon": {
+      "HOLD": 5,
+      "KEEP": 1
+    },
+    "chase_salmon_p": {
+      "HOLD": 2
+    },
+    "seward_william_h": {
+      "HOLD": 2
+    },
+    "smith_caleb_b": {},
+    "welles_gideon": {
+      "HOLD": 2
+    },
+    "stanton_edwin_m": {
+      "HOLD": 1
+    },
+    "scott_winfield": {
+      "KEEP": 2
+    },
+    "banks_nathaniel_p": {
+      "HOLD": 1
+    },
+    "beauregard_pierre_g_t": {
+      "HOLD": 1
+    },
+    "bragg_braxton": {
+      "HOLD": 1
+    },
+    "buell_don_c": {
+      "HOLD": 1
+    },
+    "butler_benjamin_f": {},
+    "dix_john_a": {
+      "KEEP": 1
+    },
+    "fremont_john_c": {
+      "HOLD": 3
+    },
+    "halleck_henry_w": {
+      "HOLD": 1
+    },
+    "hardee_william_j": {
+      "HOLD": 2
+    },
+    "harney_william_s": {},
+    "hunter_david": {},
+    "mcclellan_george_b": {
+      "HOLD": 1
+    },
+    "mcculloch_ben": {
+      "HOLD": 1
+    },
+    "mcdowell_irvin": {
+      "HOLD": 1
+    },
+    "patterson_robert": {
+      "HOLD": 1
+    },
+    "pillow_gideon_j": {
+      "HOLD": 2
+    },
+    "polk_leonidas": {
+      "HOLD": 1
+    },
+    "rosecrans_william_s": {
+      "HOLD": 3
+    },
+    "sumner_edwin_v": {
+      "HOLD": 1
+    },
+    "wool_john_e": {
+      "HOLD": 2
+    },
+    "andrew_john_a": {
+      "HOLD": 3
+    },
+    "blair_austin": {},
+    "buckingham_william_a": {},
+    "curtin_andrew_g": {
+      "HOLD": 1
+    },
+    "dennison_william": {
+      "HOLD": 1
+    },
+    "kirkwood_samuel_j": {},
+    "morgan_edwin_d": {
+      "HOLD": 1
+    },
+    "morton_oliver_h_p_t": {
+      "HOLD": 5
+    },
+    "ramsey_alexander": {
+      "HOLD": 1
+    },
+    "randall_alexander_w": {},
+    "sprague_william": {},
+    "washburn_israel_jr": {},
+    "yates_richard": {},
+    "davis_jefferson": {},
+    "benjamin_judah_p": {},
+    "hunter_robert_m_t": {
+      "HOLD": 1
+    },
+    "mallory_stephen_r": {},
+    "memminger_christopher_g": {},
+    "reagan_john_h": {},
+    "toombs_robert_a": {},
+    "walker_leroy_p": {}
+  },
+  "cohort_counts": {
+    "principal and US cabinet": {
+      "KEEP": 2,
+      "CHANGE": 0,
+      "HOLD": 22
+    },
+    "Scott and commander search": {
+      "KEEP": 3,
+      "CHANGE": 0,
+      "HOLD": 23
+    },
+    "April-call governor search": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 12
+    },
+    "Davis and cabinet search": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 1
+    }
+  }
+}

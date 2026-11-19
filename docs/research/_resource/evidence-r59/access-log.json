@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://www.loc.gov/resource/sn83045462/1861-01-04/ed-1/?sp=2&fo=json",
+    "result": "403",
+    "retained_response": "loc-star-1861-01-04.json",
+    "use": "blocked, not newspaper text, no retry through proxy/cache"
+  },
+  {
+    "identifier": "diaryandcorrespo00chasrich",
+    "result": "urllib handshake timeout, curl text succeeded",
+    "text": "chase-diary.txt"
+  },
+  {
+    "identifier": "slamonportlandchas00wardrich",
+    "result": "successful distinct catalogue-selected Warden copy",
+    "text": "warden-chase.txt"
+  },
+  {
+    "identifier": "lifeandpublicser00wardgoog",
+    "result": "503, unread"
+  },
+  {
+    "identifier": "memoirsofjohnad01dixj",
+    "result": "503, unread"
+  },
+  {
+    "identifier": "generalmcclellan00hillgoog",
+    "result": "503, unread"
+  },
+  {
+    "identifier": "memoirsofjohnada02dixm",
+    "result": "curl timeout, unread"
+  },
+  {
+    "identifier": "secretarywarrep00unitrich",
+    "result": "curl timeout, unread"
+  },
+  {
+    "identifier": "barbarismofslave00lcsumn",
+    "result": "urllib timeout and bounded curl timeout, unread"
+  },
+  {
+    "identifier": "speechofhocharl00sumn",
+    "result": "bounded curl timeout, unread"
+  },
+  {
+    "identifier": "reportofsecretar1857unit",
+    "result": "urllib handshake timeout, unread"
+  },
+  {
+    "identifier": "reportsecretary00clelgoog",
+    "result": "distinct public-domain copy obtained",
+    "text": "mcclellan-report1857.txt"
+  },
+  {
+    "identifier": "sim_united-states-congress-congressional-globe_1861-01-16_24",
+    "result": "urllib timeout, bounded curl succeeded",
+    "text": "globe-1861-01-16.txt"
+  },
+  {
+    "identifier": "speechesonpoliti00juli",
+    "result": "OCR succeeded, scandata requests timed out, printed-page-label image URLs succeeded",
+    "text": "speechesonpoliti00juli.txt"
+  }
+]

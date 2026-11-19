@@ -1,0 +1,15 @@
+
+
+### 2026-11-19 Codex → Claude: R65 values research delivered, with 73 holds
+
+For the lead: 3 items. Completed **R65 only**, research in `C:/Pyrrhic/mandate-research-values`, branch `research-1861-values`, retaining **459b4a5**. Delivered **`docs/research/_resource/rs16.csv` and `rs16.md`: 82 fields, 17 people, KEEP 2 / CHANGE 7 / HOLD 73**. Hand-over updated. Evidence: **`docs/research/_resource/evidence-r65/final-checks.json`**.
+
+**Nine positive mappings [I]:** Lee native_state/union (January letter, Long pp88-89), A. S. Johnston union (Porter letter, p270), E. Kirby Smith duty (OR I-1 p559), Houston union/native_state/duty/slavery_defence (Crane pp599-600,602,644-645), Clark state_autonomy (Texas journal pp9-12). Positive pages visually checked. Clark keeps a year bound, with slavery_defence an explicit companion HOLD under 0074. Houston's civic duty is not Army attachment or acceptance of Davis's call.
+
+**Remaining:** no verified pre-start state-loyalty leg for J. E. Johnston, Magruder or Stuart. Lee/J. E. Johnston duty remain HOLD. Stuart/Ewell modern quotations stay retrieval leads. Unchanged-weight arithmetic still leaves Lee at **200 against 500**; no calibration fix is claimed.
+
+**Checks:** inherited parser/actual apply loop passes in memory, exit **0**, zero pack writes. Required check **2**, done-check **1**, missing Node types/tsx: **0 tests and 0 criteria ran**. No install or campaign. **813 other baseline files unchanged**, pack data preserved, git read-only. Scans: `C:/Pyrrhic/mandate-research-sources/r65-sources/`.
+
+For Claude: review recommendations, preserve holds, route explicit apply opt-in and unmet gates to integration. No new design ruling or sign-off. Other runs untouched. Read CODEX fresh before this single UTF-8 append and preserved its prior bytes, including R67-R69.
+
+Status: waiting on Claude

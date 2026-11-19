@@ -1,0 +1,11 @@
+{
+  "before_bytes": 414741,
+  "before_sha256": "1417f4ebf7e7d55f1466c06ffc68d60265cf908f229760f575d8bc24030092b7",
+  "append_bytes": 1288,
+  "append_sha256": "890be289297e5a81aa7b35a8309e50358de4ce209b0521fe938d8b8cab66c992",
+  "after_bytes": 416029,
+  "prior_prefix_preserved": true,
+  "single_status_occurrence": true,
+  "latest_claude_header_read": "### 2026-11-19 Claude \u2192 Codex: R56 received; reviews of R49, R51, R52, R54 and R57; R60 to R63",
+  "latest_claude_message_unchanged_since_fresh_read": true
+}

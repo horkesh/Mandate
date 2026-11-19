@@ -983,3 +983,22 @@ captures at 1920×1080 and 3440×1440, name-anchor audit, texture measurements,
 timings, package inventory, retained failures and reused evidence. The default
 static allocation is 88.06 MiB, with zero sign texture bytes. Rendering timings
 use ANGLE SwiftShader and do not establish hardware frame rates.
+
+### Press stories and the week's papers
+
+Front pages render the claims received in the seat view, using pack strings for
+headlines and copy. The weekly paper lists each press story with its editor and
+date and opens the received source. Battle dispatches carrying the same battle
+ID appear as one line, linking the latest dispatch. Earlier fixtures without an
+ID can only group reports from the same place and day.
+
+From the repository root, `npm run typecheck:desk` checks the complete browser
+and server types. CI installs this folder's dependencies and runs that command
+on both platforms. It stays outside the staged hook because that hook's private
+snapshot supplies only the root dependency tree.
+
+From this folder, `npx vitest run test/intray.test.ts test/press.test.ts` checks
+the stories and grouping. `npx playwright test --config playwright.r54.config.ts`
+checks source opening and return at 1920×1080 and 3440×1440, using the real reading
+components with a small fictional snapshot. It needs no ignored map data and
+writes its captures and results to the worktree's `runs/r54/browser/`.

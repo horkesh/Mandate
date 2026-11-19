@@ -1,0 +1,282 @@
+[
+  {
+    "name": "barbarismofslave00lcsumn.fetch.json",
+    "bytes": 345,
+    "sha256": "2d7ccb9646a05c0dc4476486f74fa8b64a7a7c6a9caa762ef7a523b397e21cdc"
+  },
+  {
+    "name": "catalogue-extra-0.json",
+    "bytes": 465,
+    "sha256": "80137be9edb114df3a477b3576efc8bf2f57ea3ca51493bf458ecc3b7787d346"
+  },
+  {
+    "name": "catalogue-extra-1.json",
+    "bytes": 500,
+    "sha256": "983ef8d88d5891fdd6dbb04c48a2484a9041191fb758fe5a0f16e36135a6f8b3"
+  },
+  {
+    "name": "catalogue-extra-2.json",
+    "bytes": 351,
+    "sha256": "fa4264d9c70f7ed68a57fd231c204ae73d4795d303f7088a1a8d668c56ce30ca"
+  },
+  {
+    "name": "catalogue-military-0.json",
+    "bytes": 444,
+    "sha256": "e27a153620733e86f4a00e68b800dd75d9482bb63ee29673acc368fd61793af4"
+  },
+  {
+    "name": "catalogue-military-1.json",
+    "bytes": 310,
+    "sha256": "a63465d54b7cf9616f6322e166831b670f50292eb4ef7930a497f7d7e414554b"
+  },
+  {
+    "name": "catalogue-military-2.json",
+    "bytes": 434,
+    "sha256": "3e5dc3d72e24a9f9bf4ef40e8128b15baa0b551ed24ed270a59b502acbf9376b"
+  },
+  {
+    "name": "chase-1847.txt",
+    "bytes": 238790,
+    "sha256": "e3ff6bf0d784bea4032d1aa9c4747b3f6afc6c4bb2bdace950ced25be73c512e"
+  },
+  {
+    "name": "chase-diary.txt",
+    "bytes": 1317306,
+    "sha256": "c1ae5659becdac9d66926ae473443113e540675ccaef7d12bb76f806e1d2cbb5"
+  },
+  {
+    "name": "chase-djvu.xml",
+    "bytes": 15459594,
+    "sha256": "0143fb5dbca6270f09bddceb73810eccdba3ec1d29a55a28b661d57f1159ed4e"
+  },
+  {
+    "name": "chase-p271.jpg",
+    "bytes": 1165642,
+    "sha256": "17516a87c9eba17e81d8a17b194bb508b2ded80699ea057b9117c03cef8663e6"
+  },
+  {
+    "name": "chase-p272.jpg",
+    "bytes": 1254890,
+    "sha256": "6149d40e8bb02bb6a0d44d0682de7b9627a49c617af69f21e68f2e679bc63e60"
+  },
+  {
+    "name": "chase-p277.jpg",
+    "bytes": 956146,
+    "sha256": "57c88cfa2882e621ae762ae67338f910911f60ceed1aae6a515369e13dbab96b"
+  },
+  {
+    "name": "chase-p278.jpg",
+    "bytes": 1094763,
+    "sha256": "b03db745036e22fb716ad9f460a0e3f4071a6dfe840c257a00da69b5018d421c"
+  },
+  {
+    "name": "chase-p288.jpg",
+    "bytes": 1093212,
+    "sha256": "b01538a39263a3d89e14f2916c8af51352158e8f9b92a93bc6ab0ce51bea1d5d"
+  },
+  {
+    "name": "chase-p484.jpg",
+    "bytes": 1185749,
+    "sha256": "d96b57eda595f5ac9e2e767ff4d2801d79dddf64a3563c244f3cacac92aa3f86"
+  },
+  {
+    "name": "chase-p487.jpg",
+    "bytes": 1147392,
+    "sha256": "4945315c41b7c6c2e7e38d5efa07631ff6e527b56296047975717338a7f396d4"
+  },
+  {
+    "name": "chase-p488.jpg",
+    "bytes": 1253554,
+    "sha256": "5cdea2ffc9f0be0715e7422268d4583d3d7f3a81fcabe5708ac8e5368eb825ef"
+  },
+  {
+    "name": "chase-p489.jpg",
+    "bytes": 1160308,
+    "sha256": "7631cf1490a1cd8c55406843fbb6f79d1e25a1e3719163900c4fed4bea6c5c15"
+  },
+  {
+    "name": "chase-p490.jpg",
+    "bytes": 1192051,
+    "sha256": "2965b35b57f3fb205c072295fdebdb657cc05d26b88ff81692886ca5d27553a6"
+  },
+  {
+    "name": "chase-p491.jpg",
+    "bytes": 1312981,
+    "sha256": "a4319cd3f6ae232369168b55f9191be357f591259285e499c8aaf0dd3c306f72"
+  },
+  {
+    "name": "chase1847-observed-blank.jpg",
+    "bytes": 162933,
+    "sha256": "14dac76d260ec79f00a7cb7b4116ef00471be849c8eb6ad99c3f1f504120dee0"
+  },
+  {
+    "name": "chase1847-observed-p108.jpg",
+    "bytes": 337187,
+    "sha256": "187cd40386abc9ff4ec7860fda12510ac9b78b09c45d93c95414320e9494521e"
+  },
+  {
+    "name": "chase1847-p107.jpg",
+    "bytes": 567189,
+    "sha256": "7967f09886140bce9de05533bfae8021c6cb051a6b916357c618ea45d54cdbf4"
+  },
+  {
+    "name": "diaryandcorrespo00chasrich.fetch.json",
+    "bytes": 353,
+    "sha256": "02e783e4b7c86e99d84c881637f6dcaf98a28199f4f4d626aadea078b231618a"
+  },
+  {
+    "name": "diaryandcorrespo00chasrich.metadata.json",
+    "bytes": 61409,
+    "sha256": "991b1cdee7211336e6b342eb31ab4b7d0a221ce08ca32ed2fb2f47da9d8b8dc1"
+  },
+  {
+    "name": "dix-observed-p368.jpg",
+    "bytes": 611700,
+    "sha256": "be99f9f58aec841ec2317d51484c39756637c615efe34acb377dde24b74f24f8"
+  },
+  {
+    "name": "dix-p363.jpg",
+    "bytes": 539695,
+    "sha256": "33188b42462f604ff6492ad131787ca104d27786b88149f6a109c23d764fe6fb"
+  },
+  {
+    "name": "dix-v1.txt",
+    "bytes": 980665,
+    "sha256": "4e31d0b9a3a280400b12e7400fd3715a904c5babac931f7be4ed4ca39445f32d"
+  },
+  {
+    "name": "generalmcclellan00hillgoog.fetch.json",
+    "bytes": 326,
+    "sha256": "24fb17cb5926b09cb261fbbc296d803084d510994bbaf7122dc1c82de10029f8"
+  },
+  {
+    "name": "globe-1861-01-16.txt",
+    "bytes": 460735,
+    "sha256": "63b6f86dea2676881c4040305a847c5974cf8059d2d9a7f727742571f1cbf8bd"
+  },
+  {
+    "name": "julian-p1-label.jpg",
+    "bytes": 654778,
+    "sha256": "cdf356799ce80d9de1090247fe311a2f59c2ff6321d9434b4571aaad9fce96ea"
+  },
+  {
+    "name": "julian-p7-label.jpg",
+    "bytes": 849283,
+    "sha256": "8219fb71f6bd02d52ad2d7e10bbc8ae0dbc8a0c2c9f4b1669fa2ca8384502845"
+  },
+  {
+    "name": "lifeandpublicser00wardgoog.fetch.json",
+    "bytes": 326,
+    "sha256": "e8c44036ac7b4e20d651dc41c14512d32460c68c0f1378192620d00e21f6c256"
+  },
+  {
+    "name": "loc-star-1861-01-04.json",
+    "bytes": 5636,
+    "sha256": "9b16ae9bc026c33f7ec618cbdf2421989edbcecf7cd63bcba31b5c896dabd025"
+  },
+  {
+    "name": "mcclellan-report1857.txt",
+    "bytes": 980474,
+    "sha256": "87a9b32c047954841461ae0001ac3a24086056650b1429160cf6ef410824ec11"
+  },
+  {
+    "name": "memoirsofjohnad01dixj.fetch.json",
+    "bytes": 306,
+    "sha256": "4f53bb38d66c10eee38c37a824142762278e36a3a307d8d8b66864d4b1854402"
+  },
+  {
+    "name": "memoirsofjohnada01dixm-scandata.xml",
+    "bytes": 217995,
+    "sha256": "a99e246343903b2e7df17610f10c83c145d87cf5615d5e3ad3b647442a2bf9eb"
+  },
+  {
+    "name": "memoirsofjohnada01dixm.metadata.json",
+    "bytes": 49759,
+    "sha256": "b48f0082a725c989ef0c3a7f62f2f2cf3a2d7368fccd85988be7486243bcf821"
+  },
+  {
+    "name": "nyt-1861-01-14.txt",
+    "bytes": 440502,
+    "sha256": "70d037724eca1e3a228d5ba7175701551da449ff32739fb72703678cdc554151"
+  },
+  {
+    "name": "or-I-1.txt",
+    "bytes": 2578372,
+    "sha256": "3055cba20c14ea27c1f52373cefe1b9f7ee7b8fa1dd25579941969f3040840c4"
+  },
+  {
+    "name": "reclamationoffug00chas-scandata.xml",
+    "bytes": 67233,
+    "sha256": "fdf74930a68ef5cf062253a1d96de0e1e29a3f20d9987689f4415f5e1e4dae1e"
+  },
+  {
+    "name": "reclamationoffug00chas.metadata.json",
+    "bytes": 21518,
+    "sha256": "efb15d9f5c82b3482deb191da3a395e6bc73407be6eb99b9935bf57720884b28"
+  },
+  {
+    "name": "reportofsecretar1857unit.fetch.json",
+    "bytes": 345,
+    "sha256": "c326eb7b55c35d5f0f68af914f867e5661569c11aceae067e250ecc8ca7b7990"
+  },
+  {
+    "name": "shermanlettersco00sher.fetch.json",
+    "bytes": 356,
+    "sha256": "05d29029d11b6d6daf7c904cd0dbbf8320ca051c932d953d9ab6f51b7458733d"
+  },
+  {
+    "name": "shermanlettersco00sher.txt",
+    "bytes": 816766,
+    "sha256": "828626be9efbeabdf27e45c4ab52ab86dc289631b4c52d4a76d1aa172a2aa98c"
+  },
+  {
+    "name": "sim_united-states-congress-congressional-globe_1861-01-16_24.fetch.json",
+    "bytes": 489,
+    "sha256": "5d9a5060663e86a88011893be276f852e8ed4499efea567a0b454e7f2abd0094"
+  },
+  {
+    "name": "slamonportlandchas00wardrich.metadata.json",
+    "bytes": 91422,
+    "sha256": "1b5d836a4dc35c3e56101784ddd4b3555b4e034cbcd7cf135ea9a40306aa620e"
+  },
+  {
+    "name": "speechesonpoliti00juli.fetch.json",
+    "bytes": 357,
+    "sha256": "a61d7c47255f0106c33f40108cd1c048495706eee8d719a255a8580faa54d613"
+  },
+  {
+    "name": "speechesonpoliti00juli.txt",
+    "bytes": 1511637,
+    "sha256": "4ecb97f13dc0f5782ecee29ad500c8b242b5b8167d17dea4d553bf90d4d750a6"
+  },
+  {
+    "name": "stat9-p333-scrape.md",
+    "bytes": 4411,
+    "sha256": "ccb20dc863d8dcf34b6517765b7da82ab566231787bf6908d26f886b8eeb7949"
+  },
+  {
+    "name": "stat9-p333.jpg",
+    "bytes": 576762,
+    "sha256": "a82f06ff8a6ec98bfd429da2c3414a55218ed85a846a5a9bec07d4b90fa11051"
+  },
+  {
+    "name": "war-report-1856.txt",
+    "bytes": 33218,
+    "sha256": "562e3219d9cd22304fa252d11965bd9175d21966cb090720af10e97e78d93a12"
+  },
+  {
+    "name": "warden-chase.txt",
+    "bytes": 2652643,
+    "sha256": "3f8456df81566344334e11d9133a789dbc8477a0e9c1c0cc4109256d0f245a2c"
+  },
+  {
+    "name": "warden-djvu.xml",
+    "bytes": 31318485,
+    "sha256": "af8bd2f1155f8b7cc82676680e8a07ca921ae8e27442da8db437a372ebf44c77"
+  },
+  {
+    "name": "warden-p377.jpg",
+    "bytes": 581386,
+    "sha256": "8e494ca386b32d05e1e43c44675441c306c47ba19dc54aa1ebdb43576d2dc2cf"
+  }
+]

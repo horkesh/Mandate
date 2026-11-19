@@ -86,13 +86,27 @@ function withReturn(state: State, written: number, received: number, token: stri
     reportAuthorPost: null,
     reportSubjectKind: 'region' as const,
     reportSubjectId: R('a_front'),
-    reportClaims: claims.map(([kind, value]) => ({ claimKind: kind as ReportClaim['claimKind'], claimRegion: R('a_front'), claimValue: value, claimToken: token, claimConfidence: 600 })),
+    reportClaims: claims.map(([kind, value]) => ({ claimKind: kind as ReportClaim['claimKind'], claimRegion: R('a_front'), claimValue: value, claimToken: token, claimConfidence: 600, claimBattle: 'battle:a_front:4', claimBattleDays: [token === 'full' ? written - fixtureMap().world.rules.operations.returns.revealDays : written] })),
     reportDay: written,
     reportHour: null,
     reportAdvice: null,
     reportAnswers: null,
   };
   return deliverReport(state, lead, { id: `m.${written}.${token}` as KnownReport['id'], knownReceivedDay: received, knownRoute: 'courier', knownVia: [], knownBody: body }, NO_TRUTH);
+}
+
+
+/** A public closing report already received by the editor; the writer never consults the fixture's battle truth. */
+function withPublicResult(state: State, record: BattleRecord = state.battleRecords['battle:a_front:4']!): State {
+  const report: KnownReport = {
+    id: toId('message', 'm.public_result'), knownReceivedDay: record.battleEndDay!, knownRoute: 'wire', knownVia: [],
+    knownBody: { reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: P('a_gen'), reportAuthorPost: null,
+      reportSubjectKind: 'region', reportSubjectId: R('a_front'), reportDay: record.battleEndDay!, reportHour: null,
+      reportAdvice: null, reportAnswers: null, reportClaims: [{claimKind:'battle-result',claimRegion:R('a_front'),
+        claimToken:battleResultFor(record,F('a')),claimValue:0,claimConfidence:0,claimBattle:'battle:a_front:4',
+        claimBattleDays:record.battleDays.map(d=>d.bdayDay),claimCommander:P('a_gen')}] },
+  };
+  return deliverReport(state,seatIdFor(P('a_editor')),report,NO_TRUTH);
 }
 
 const at = (state: State, day: number): Parameters<typeof holds>[1] => ({ state, day, situation: null, knowledge: knowledgeOf(state, lead), since: null });
@@ -235,9 +249,10 @@ describe('the press as a report route (FOUNDATION section 7)', () => {
     // The record says side a lost 100 killed, 300 wounded, 50 missing and 70 captured; no page may print that truth.
     const b = battle(5);
     const taken = { ...b, battleDays: [{ ...b.battleDays[0]!, bdaySides: b.battleDays[0]!.bdaySides.map((x) => ({ ...x, bsideCaptured: x.bsideFaction === F('a') ? 70 : 900 })) }] } as unknown as BattleRecord;
-    const s0 = { ...createState(world, { seed: 1 }), battleRecords: { 'battle:a_front:4': taken } };
+    const s0 = withPublicResult({ ...createState(world, { seed: 1 }), battleRecords: { 'battle:a_front:4': taken } });
     const figure = (s: State, day: number) => {
-      const c = frontPage(POLITICS, s, POLITICS.press.papers[0]!, day, P('a_lead'), reveal).claims[0]!;
+      // This counterfactual paper prints after the delayed full return, on a longer cadence.
+      const c = frontPage({...POLITICS,press:{...POLITICS.press,cadenceDays:28}}, s, POLITICS.press.papers[0]!, day, P('a_lead'), reveal).claims[0]!;
       return [c.claimToken, c.claimValue, c.claimConfidence];
     };
     // Before any return: the result, with no figure.
@@ -247,7 +262,7 @@ describe('the press as a report route (FOUNDATION section 7)', () => {
     expect(figure(first, 7)).toEqual(['won', 420, 500]);
     // After the full return (the captured apart, and counted: G-1.6a), the page prints the full figure.
     const full = withReturn(first, 5 + reveal, 6 + reveal, 'full', [['own-losses', 400], ['missing', 50], ['captured', 70]]);
-    expect(figure(full, 7)).toEqual(['won', 520, 900]);
+    expect(figure(full, Math.max(7, 6 + reveal))).toEqual(['won', 520, 900]);
     // The enemy's losses the return claims are not the side's own.
     const enemy = withReturn(s0, 5, 6, 'enemy', [['casualties', 5000]]);
     expect(figure(enemy, 7)).toEqual(['won', 0, 0]);
@@ -256,8 +271,8 @@ describe('the press as a report route (FOUNDATION section 7)', () => {
   it('splits the captured out only once the full return has come: never on the first page (the gate reviewer’s condition)', () => {
     const world = politicsWorld();
     const reveal = world.map.world.rules.operations.returns.revealDays;
-    const s0 = { ...createState(world, { seed: 1 }), battleRecords: { 'battle:a_front:4': battle(5) } };
-    const page = (s: State) => frontPage(POLITICS, s, POLITICS.press.papers[0]!, 7, P('a_lead'), reveal).claims.map((c) => [c.claimKind, c.claimValue]);
+    const s0 = withPublicResult({ ...createState(world, { seed: 1 }), battleRecords: { 'battle:a_front:4': battle(5) } });
+    const page = (s: State) => frontPage({...POLITICS,press:{...POLITICS.press,cadenceDays:28}}, s, POLITICS.press.papers[0]!, Math.max(7, s.knowledgeBySeat[lead]?.knownReports.at(-1)?.knownReceivedDay ?? 7), P('a_lead'), reveal).claims.map((c) => [c.claimKind, c.claimValue]);
     const first = withReturn(s0, 5, 6, 'first', [['own-losses', 300], ['missing', 120]]);
     // The first page: the captured are among the missing, and nothing prints them apart.
     expect(page(first)).toEqual([['battle-result', 420]]);
@@ -273,7 +288,7 @@ describe('the press as a report route (FOUNDATION section 7)', () => {
     const taken = { ...b, battleDays: [{ ...b.battleDays[0]!, bdaySides: b.battleDays[0]!.bdaySides.map((x) => (x.bsideFaction === F('a') ? { ...x, bsideCutOff: 'surrender' } : { ...x, bsideResult: 'held' })) }] } as unknown as BattleRecord;
     const army = s0.postStates[POST('a_army')]!;
     const vacant = { ...s0, stateDay: 6, battleRecords: { 'battle:a_front:4': taken }, postStates: { ...s0.postStates, [POST('a_army')]: { ...army, postHolder: null } } };
-    const run = days(world, vacant, 2);
+    const run = days(world, withPublicResult(vacant), 2);
     const held = knowledgeOf(run.state, lead).knownReports.filter((r) => r.knownBody.reportType === 'press');
     expect(held.map((r) => r.knownBody.reportClaims.map((c) => [c.claimKind, c.claimToken, c.claimValue, c.claimConfidence]))).toEqual([[['battle-result', 'lost', 0, 0]]]);
     // No casualty return reached the principal: the page's "lost" comes from the public fact of the surrender.
@@ -283,16 +298,16 @@ describe('the press as a report route (FOUNDATION section 7)', () => {
   it('prints the week’s battles, moves the blocs and the commander’s standing at its reach, and reaches the readers', () => {
     const world = politicsWorld();
     const s0 = createState(world, { seed: 1 });
-    const page = frontPage(POLITICS, { ...s0, battleRecords: { 'battle:a_front:4': battle(5) } }, POLITICS.press.papers[0]!, 7, P('a_lead'), world.map.world.rules.operations.returns.revealDays);
+    const page = frontPage(POLITICS, withPublicResult({ ...s0, battleRecords: { 'battle:a_front:4': battle(5) } }), POLITICS.press.papers[0]!, 7, P('a_lead'), world.map.world.rules.operations.returns.revealDays);
     // No return has reached the principal in this State, so the page has the result and no figure.
-    expect(page.claims).toEqual([{ claimKind: 'battle-result', claimRegion: R('a_front'), claimValue: 0, claimToken: 'won', claimConfidence: 0 }]);
+    expect(page.claims).toEqual([{ claimKind: 'battle-result', claimRegion: R('a_front'), claimValue: 0, claimToken: 'won', claimConfidence: 0, claimBattle:'battle:a_front:4', claimCommander:P('a_gen') }]);
     expect(page.politics).toEqual([
       { change: 'support', bloc: 'a_doves', delta: -20, reason: 'press:a_paper:won' },
       { change: 'support', bloc: 'a_hawks', delta: 25, reason: 'press:a_paper:won' },
     ]);
     expect(page.people).toEqual([{ change: 'standing', person: P('a_gen'), delta: 50 }]);
     // In the tick: day 7 is the press's day; the battle closed on day 5.
-    const run = days(world, { ...s0, stateDay: 6, battleRecords: { 'battle:a_front:4': battle(5) } }, 3);
+    const run = days(world, withPublicResult({ ...s0, stateDay: 6, battleRecords: { 'battle:a_front:4': battle(5) } }), 3);
     const day7 = run.results[0]!.state;
     expect([day7.blocSupport['a_hawks'], day7.blocSupport['a_doves']]).toEqual([300 + 25, -200 - 20]);
     expect(day7.personStanding[P('a_gen')]).toBe((s0.personStanding[P('a_gen')] ?? 0) + 50);

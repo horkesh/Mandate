@@ -6,6 +6,7 @@ const res = root + 'docs/research/_resource/';
 const peopleFile = root + 'packs/union-1861/source/world/people.csv';
 const dry = process.argv.includes('--dry');
 // These whole rows belong to R49, including their judgments and notes.
+// R62: Buchanan was dismissed; he did not resign. Preserve R49's wording rather than pre-positioning him here.
 const R49 = new Set(['buchanan_franklin', 'cooper_samuel', 'crittenden_george_b', 'ewell_richard_s', 'gorgas_josiah', 'holmes_theophilus_h', 'johnston_albert_s', 'johnston_joseph_e', 'lee_robert_e', 'longstreet_james', 'loring_william_w', 'magruder_john_b', 'pemberton_john_c', 'smith_edmund_k', 'stuart_james_e_b']);
 
 const people = parse(fs.readFileSync(peopleFile, 'utf8'));
