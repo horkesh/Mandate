@@ -9,6 +9,7 @@ import { makeCtx, type PlannerInput } from './context.ts';
 import { bombard, byWater, direct, directRoute, flank, holding, pincer, supplyLine, type Outcome } from './methods.ts';
 import { overlap } from './route.ts';
 import type { PlanCandidate, DraftSet, PlanRejected } from './types.ts';
+import { followsNote, noteCandidates } from './notes.ts';
 
 function regionsOfCandidate(c: PlanCandidate): RegionId[] {
   return c.candAxes.flatMap((a) => a.axisRoute.routeLegs.map((l) => l.legTo));
@@ -40,19 +41,21 @@ export function draft(input: PlannerInput): DraftSet {
     if ('rejected' in o) rejected.push(o.rejected);
     else kept.push(o.ok);
   }
+  const scored = noteCandidates(ctx, kept);
   if (ctx.searches > input.rules.maxSearches) {
     rejected.push({ rejMethod: 'direct', rejVariant: 'search_cap', rejGates: [{ gateKind: 'no_route', gateHard: true, gateDetail: `search cap ${input.rules.maxSearches} reached (${ctx.searches} asked)` }] });
   }
   // Deduplicate: a candidate repeating a better one's ground, shape and arrival goes.
-  kept.sort(compareCandidates);
+  scored.sort(compareCandidates);
   const unique: PlanCandidate[] = [];
   let deduplicated = 0;
-  for (const c of kept) {
+  for (const c of scored) {
     const twin = unique.find(
       (u) =>
         u.candAxes.length === c.candAxes.length &&
         u.candMethod !== 'holding' &&
         c.candMethod !== 'holding' &&
+        (input.notes ?? []).every(n => followsNote(u,n.mark) === followsNote(c,n.mark)) &&
         overlap(regionsOfCandidate(u), regionsOfCandidate(c)) >= input.rules.dedupeOverlap &&
         sameShape(u, c) &&
         Math.abs(arrival(u) - arrival(c)) <= input.rules.dedupeArrival,
@@ -75,7 +78,7 @@ export function draft(input: PlannerInput): DraftSet {
     draftCandidates: candidates,
     draftRejected: rejected,
     draftSearches: ctx.searches,
-    draftGenerated: kept.length,
+    draftGenerated: scored.length,
     draftDeduplicated: deduplicated,
   };
 }

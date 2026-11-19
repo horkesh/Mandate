@@ -13,6 +13,7 @@
  * unique across all State records (decision 0044).
  */
 import { isWellFormedId, type MessageId, type PersonId, type PostId, type RegionId } from '../ids.ts';
+import type { PlanNote } from '../plans/notes.ts';
 
 /** The report types of 0032, plus advice (0040). Each is a pack-tunable template (`ReportTemplate`). */
 export const REPORT_TYPES = [
@@ -137,6 +138,13 @@ export interface StatedReason {
   readonly reasonWeight: number;
 }
 
+/** A commander's account of a returned mark; contains no private willingness or actual rung. */
+export interface NoteAccount {
+  readonly accountMark: PlanNote;
+  readonly accountOutcome: 'followed' | 'declined' | 'own_judgement' | 'unavailable';
+  readonly accountReasons: readonly StatedReason[];
+}
+
 /** The advice payload (0040): a recommended option, stated reasons, and a confidence. */
 export interface AdviceBody {
   readonly adviceRecommends: string;
@@ -146,6 +154,7 @@ export interface AdviceBody {
 
 /** What a report says. Shared by a message in transit and the report as a seat holds it. */
 export interface ReportBody {
+  readonly reportNotes?: readonly NoteAccount[];
   readonly reportType: ReportType;
   /** Required for `informal` (an `InformalSubtype`) and `advice` (an `AdviceSubtype`); null otherwise. */
   readonly reportSubtype: string | null;

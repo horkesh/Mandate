@@ -7,6 +7,7 @@
 import type { AxisView, OptionView, PrincipalMenu, ReportView, SeatRequest, SituationView } from '@mandate/kernel/seat-api';
 import { dispatchLog, enemyPicture } from './dispatches.ts';
 import type { SeatCommand } from '@mandate/kernel/seat-api';
+import { noteAccountLines, noteText } from './notes.ts';
 
 export type Strings = (key: string) => string;
 
@@ -41,9 +42,9 @@ export function situationLines(views: readonly SituationView[], menu: PrincipalM
 }
 
 /** Plans submitted for his review, and operations waiting for his word. */
-export function planReviewLines(menu: PrincipalMenu): string[] {
+export function planReviewLines(menu: PrincipalMenu, t: Strings = key => key): string[] {
   const out: string[] = [];
-  for (const r of menu.reviews) out.push(`${r.post} (${r.holder}) submits a plan for your review:`, ...planLines(r.plan));
+  for (const r of menu.reviews) out.push(`${r.post} (${r.holder}) submits a plan for your review:`, ...planLines(r.plan), ...noteAccountLines(r.notes ?? [],t).map(s => `  ${s}`));
   for (const p of menu.awaiting) out.push(`${p}: prepared, waiting for your word ("go ${p}").`);
   return out.length === 0 ? ['No plan waits for you.'] : out;
 }
@@ -89,12 +90,12 @@ export function enemyLines(request: SeatRequest): string[] {
 }
 
 /** A queued command, as the queue lists it. */
-export function commandText(c: SeatCommand): string {
+export function commandText(c: SeatCommand, t: Strings = key => key): string {
   switch (c.cmd) {
     case 'order':
       return `order ${c.to} to ${c.goal.posture}${c.goal.objective === null ? '' : ` ${c.goal.objective}`} (risk ${c.goal.risk.toString()}, ${c.goal.deadlineDays.toString()} days) by ${c.route}${c.bypass ? ', around the chain' : ''}`;
     case 'review':
-      return c.action === 'edit' && c.edit !== null ? `edit ${c.to}'s plan: ${c.edit.kind}${c.edit.axis === null ? '' : ` ${c.edit.axis}`}${c.edit.region === null ? '' : ` to ${c.edit.region}`}${c.edit.via.length > 0 ? ` via ${c.edit.via.join(',')}` : ''}` : `${c.action === 'approve' ? 'approve' : 'send back'} ${c.to}'s plan`;
+      return c.action === 'edit' && c.edit !== null ? `edit ${c.to}'s plan: ${c.edit.kind}${c.edit.axis === null ? '' : ` ${c.edit.axis}`}${c.edit.region === null ? '' : ` to ${c.edit.region}`}${c.edit.via.length > 0 ? ` via ${c.edit.via.join(',')}` : ''}` : `${c.action === 'approve' ? 'approve' : 'send back'} ${c.to}'s plan${c.notes?.length ? ': '+c.notes.map(n => noteText(n,t)).join(' ') : ''}`;
     case 'decide':
       return `decide ${c.situation}: ${c.options.length === 0 ? 'let it take its course' : c.options.join(', ')}`;
     case 'delegate':

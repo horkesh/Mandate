@@ -53,6 +53,7 @@ function reportView(r: KnownReport, threshold: number): ReportView {
   const b = r.knownBody;
   return freeze({
     id: r.id,
+    ...(b.reportNotes === undefined ? {} : { notes: freeze(b.reportNotes.map(n => freeze({ ...n, accountMark: freeze({ ...n.accountMark, markVia: freeze([...n.accountMark.markVia]) }), accountReasons: freeze(n.accountReasons.map(s => freeze({ ...s }))) }))) }),
     type: b.reportType,
     subtype: b.reportSubtype,
     author: b.reportAuthor,

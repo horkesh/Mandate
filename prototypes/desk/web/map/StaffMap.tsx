@@ -15,6 +15,8 @@ import type { StudyMarks } from './renderer.ts';
 import { LOOKS, LOOK_NAMES, readLook } from './skins.ts';
 import { STUDY } from './study-strings.ts';
 import { M } from './strings.ts';
+import { sendbackLine } from './notes.ts';
+import { noteAccountLines } from '../notes.ts';
 import {glyphSvg} from './furniture.ts';
 import {claimWords,controlColour,reportControlWords} from './control.ts';
 import {CONTROL_PALETTES,CONTROL_PALETTE_IDS,readControlPalette} from './control-palettes.ts';
@@ -238,11 +240,11 @@ export function MapReview({destination="",data,execute,busy,textEdit,table=false
   const send=async(notes:boolean)=>{
     if(!review||lock.current||busy)return;lock.current=true;setChecking(true);
     try {
-      const commands=notes?[`sendback ${review.post}`]:marks.map(m=>m.line);
+      const commands=notes?[sendbackLine(review.post,marks,review.plan)]:marks.map(m=>m.line);
       let count=0;
       for(const line of commands){const result=await execute(line);if(!result?.ok){setMessage(result?.message??M.rejected);return;}count++;}
-      setMessage(notes?M.sentback:M.queued);
-      if(!notes)setMarks([]);
+      setMessage(notes?(data.strings['plan.note.sent']??''):M.queued);
+      setMarks([]);
     }finally{lock.current=false;setChecking(false);}
   };
   const handles:Handle[]=review?.plan.axes.flatMap(a=>a.regions.length?[{axis:a.name,kind:'objective' as const,region:a.regions.at(-1)!},{axis:a.name,kind:'waypoints' as const,region:a.regions[Math.max(0,Math.floor((a.regions.length-1)/2))]!}]:[])??[];
@@ -252,13 +254,14 @@ export function MapReview({destination="",data,execute,busy,textEdit,table=false
       {reviews.length>1&&<label>{M.plan}<select aria-label={M.plan} value={review?.post??''} onChange={e=>{setPost(e.target.value);setAxis('');}}>{reviews.map(r=><option key={r.post} value={r.post}>{t(r.holder,'person')}</option>)}</select></label>}
       {review?<><div className="plan-holder"><span className="likeness">{S.noLikeness}</span><div><h3>{t(review.holder,'person')}</h3><p className="plan-byline">{t(review.post,'post')}<br/>{paper&&reportDate(data.morning.requestDay,data.date,paper.day)}</p></div></div><p>{display(review.plan.method)} / {display(review.plan.variant)}</p>
         {review.plan.axes.map(a=><section className="axis-sheet" key={a.name}><h4>{M.axis} {display(a.name)}</h4><p>{a.regions.map(id=>t(id,'region')).join(' → ')}</p><p>{a.strength} {M.reportedMen}; {display(a.mode)}</p><p>{M.phase}: {display(a.phases.join(', '))}</p><button disabled={busy||checking} onClick={()=>void propose(a.name,'remove_axis')}>{M.strike} {display(a.name)}</button></section>)}
+        {(review.notes??[]).length>0&&<ol className="plan-note-account">{noteAccountLines(review.notes!, data.strings, id=>t(id,'region')).map((line,i)=><li key={i}>{line}</li>)}</ol>}
         {review.plan.requests.length>0&&<section><h4>{M.asks}</h4>{review.plan.requests.map(request=><p key={request}>{display(request)}</p>)}</section>}
         <fieldset disabled={busy||checking}><legend>{M.pencil}</legend><label>{M.chooseAxis}<select aria-label={M.chooseAxis} value={axisName} onChange={e=>setAxis(e.target.value)}>{review.plan.axes.map(a=><option key={a.name} value={a.name}>{display(a.name)}</option>)}</select></label>
           <label>{M.chooseRegion}<select aria-label={M.chooseRegion} value={region} onChange={e=>setRegion(e.target.value)}><option value="">{M.chooseRegion}</option>{geometry?.regions.filter(r=>r.point).map(r=><option key={r.id} value={r.id}>{t(r.id,'region')}</option>)}</select></label><div className="actions"><button disabled={!region} onClick={()=>void propose(axisName,'objective',region)}>{M.markObjective}</button><button disabled={!region} onClick={()=>void propose(axisName,'waypoints',region)}>{M.markWaypoint}</button></div>
         </fieldset>
         <p className="map-handle-note">{M.handles}</p><h4>{M.pencil}</h4>{marks.length?<ol className="pencil-list">{marks.map(m=><li key={m.number}>{m.kind==='objective'?M.objective:m.kind==='waypoints'?M.waypoint:M.strike}: {m.region?t(m.region,'region'):display(m.axis)}<code>{display(m.line)}</code></li>)}</ol>:<p>{M.noMarks}</p>}
         {marks.length>0&&<p className="map-handle-note">{M.separate}</p>}
-        <div className="actions"><button className="primary" disabled={!marks.length||busy||checking} onClick={()=>void send(false)}>{M.order}</button><button data-hotkey="n" disabled={busy||checking} onClick={()=>void send(true)}>{M.sendback}</button><button disabled={!marks.length||checking} onClick={()=>setMarks([])}>{M.clear}</button><button data-hotkey="a" disabled={!!marks.length||busy||checking} onClick={()=>void execute(`approve ${review.post}`)}>{S.approve}</button>{textEdit&&<button disabled={busy||checking} onClick={()=>textEdit(`edit ${review.post} timing days=3`)}>{S.edit}</button>}</div><p className="map-handle-note">{M.notesLocal}</p>
+        <div className="actions"><button className="primary" disabled={!marks.length||busy||checking} onClick={()=>void send(false)}>{M.order}</button><button data-hotkey="n" disabled={busy||checking} onClick={()=>void send(true)}>{data.strings['plan.note.send']??M.sendback}</button><button disabled={!marks.length||checking} onClick={()=>setMarks([])}>{M.clear}</button><button data-hotkey="a" disabled={!!marks.length||busy||checking} onClick={()=>void execute(`approve ${review.post}`)}>{S.approve}</button>{textEdit&&<button disabled={busy||checking} onClick={()=>textEdit(`edit ${review.post} timing days=3`)}>{S.edit}</button>}</div><p className="map-handle-note">{data.strings['plan.note.explanation']??''}</p>
       </>:<p>{M.noPlan}</p>}
       {message&&<p role="status" className="map-review-message">{display(message)}</p>}
     </aside>}

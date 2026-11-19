@@ -20,7 +20,8 @@ import type { Hop, OrderBody, TransitMessage } from '../messages/transit.ts';
 import { mintMessageId } from '../messages/transit.ts';
 import { ORDER_ROUTES } from '../messages/latency.ts';
 import { editProblems, goalKindOf, goalProblems, sameGoal, type EditSpec, type GoalKind, type PlanGoal } from '../plans/goal.ts';
-import { approve, planOf, receiveCounter, release, sendBack, setGoal, type PlanRecord } from '../plans/plans.ts';
+import { approve, planOf, receiveCounter, release, sendBack, setGoal, type PlanRecord, type NoteReading } from '../plans/plans.ts';
+import { copyNote, noteProblems } from '../plans/notes.ts';
 import type { State } from '../root-state.ts';
 import { answerOrder, goalTerms, relayAction, resolveOrderConflict } from '../reading/orders.ts';
 import { callTerms } from '../recruitment/rules.ts';
@@ -89,7 +90,7 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   // Only the routes the principal's menu offers (review N1): an order "in person" would be a visit, a verb of its own.
   if (!ORDER_ROUTES.includes(cmd.route)) return 'route_unavailable';
 
-  let body: Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall'>;
+  let body: Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall' | 'orderNotes'>;
   if (cmd.cmd === 'order') {
     const goal = goalOf(cmd.goal);
     if (goalProblems(goal).length > 0) return 'bad_goal';
@@ -112,7 +113,17 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
       body = { orderKind: 'edit', orderGoal: null, orderEdit: edit, orderCall: null };
     } else {
       if (plan.planStatus !== 'review') return 'no_plan';
-      body = { orderKind: cmd.action, orderGoal: null, orderEdit: null, orderCall: null };
+      const notes = cmd.notes;
+      if (notes !== undefined) {
+        const limits = world.map.world.rules.plans.notes;
+        if (cmd.action !== 'send_back' || notes.length > limits.maxMarks) return 'bad_review';
+        for (const n of notes) {
+          if (noteProblems(n).length || n.markVia.length > limits.maxWaypoints || (n.markDays !== null && n.markDays > limits.maxWaitDays)) return 'bad_review';
+          if ([n.markRegion, ...n.markVia].some(r => r !== null && !world.regionIds.includes(r))) return 'bad_review';
+          if (!plan.planDraft?.draftCandidates.find(c => c.id === plan.planChosen)?.candAxes.some(a => a.axisName === n.markAxis)) return 'bad_review';
+        }
+      }
+      body = { orderKind: cmd.action, orderGoal: null, orderEdit: null, orderCall: null, ...(notes === undefined ? {} : { orderNotes: notes.map(copyNote) }) };
     }
   }
 
@@ -124,7 +135,7 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
  * Send a validated order down the chain (or around it): the hops, the first leg, a special messenger's price and each
  * bypassed relay's grievance. Shared by goals, reviews, the word to go and calls (lane 1.7).
  */
-export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issuerId: PersonId, to: PostId, route: OrderCommand['route'], bypass: boolean, body: Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall'>): MessageId {
+export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issuerId: PersonId, to: PostId, route: OrderCommand['route'], bypass: boolean, body: Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall' | 'orderNotes'>): MessageId {
   const { world } = ctx;
   const cmd = { to, route, bypass };
   const issuer = { id: issuerId };
@@ -217,9 +228,10 @@ export function answerBody(
   author: PersonId,
   authorPost: PostId | null,
   day: number,
-  partial: Pick<ReportBody, 'reportType' | 'reportSubtype' | 'reportClaims' | 'reportAdvice'> & { readonly answers: MessageId; readonly about: PostId },
+  partial: Pick<ReportBody, 'reportType' | 'reportSubtype' | 'reportClaims' | 'reportAdvice' | 'reportNotes'> & { readonly answers: MessageId; readonly about: PostId },
 ): ReportBody {
   return {
+    ...(partial.reportNotes === undefined ? {} : { reportNotes: partial.reportNotes }),
     reportType: partial.reportType,
     reportSubtype: partial.reportSubtype,
     reportAuthor: author,
@@ -382,7 +394,16 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
     acknowledge(ctx, state, msg, 'stale', false);
     return state;
   }
-  const changed = order.orderKind === 'approve' ? approve(state, post) : order.orderKind === 'send_back' ? sendBack(state, post) : release(state, post);
+  let answered = state;
+  const readings: NoteReading[] = [];
+  if (order.orderKind === 'send_back') for (const [index, n] of (order.orderNotes ?? []).entries()) {
+    const terms = ctx.world.map.world.rules.plans.notes.terms.find(t => t.kind === n.markKind);
+    if (terms === undefined) throw new RangeError(`pack has no terms for note ${n.markKind}`);
+    const answer = answerOrder(ctx.world, answered, msg.msgTo, order.orderIssuer, { boldness: terms.boldness, honours: terms.honours, offends: terms.offends, required: 0 }, { oversight: oversightOf(ctx, answered, msg.msgTo, order.orderIssuer).value });
+    answered = recordResponse(answered, responseOf(answer, { order: msg.msgOrigin, person: msg.msgTo, post, role: 'addressee', day: ctx.day, note: index }));
+    readings.push({ readingMark: n, readingResponse: responseKey(msg.msgOrigin, msg.msgTo, index) });
+  }
+  const changed = order.orderKind === 'approve' ? approve(answered, post) : order.orderKind === 'send_back' ? sendBack(answered, post, readings) : release(answered, post);
   fire(ctx, order.orderKind === 'approve' ? 'plans.approved' : order.orderKind === 'send_back' ? 'plans.sent_back' : 'plans.released');
   acknowledge(ctx, changed, msg, order.orderKind, true);
   return changed;

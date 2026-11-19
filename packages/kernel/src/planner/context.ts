@@ -17,8 +17,12 @@ import { otherEnd } from '../world/index.ts';
 import type { PlannerRules } from '../world/world.ts';
 import type { BombardmentRules } from '../combat/rules.ts';
 import type { PlannerForce, PlannerPost, Profile } from './types.ts';
+import type { PlanNote } from '../plans/notes.ts';
 
 export interface PlannerInput {
+  /** Compliance-weighted preferences, from the delivered send-back. Never constraints. */
+  readonly notes?: readonly { readonly mark: PlanNote; readonly weight: number }[];
+  readonly noteScoreWeight?: number;
   /**
    * The map, his side's control index and the network as the derived map reads them, and the month. Its network
    * carries no obstructions: those he plans on are `obstructions`, from his view.

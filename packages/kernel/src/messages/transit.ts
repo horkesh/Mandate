@@ -16,6 +16,7 @@ import { toId, type MessageId, type PersonId, type PostId } from '../ids.ts';
 import type { ReportBody } from '../knowledge/report.ts';
 import type { ReportTruth } from '../knowledge/truth.ts';
 import type { EditSpec, PlanGoal } from '../plans/goal.ts';
+import type { PlanNote } from '../plans/notes.ts';
 import type { CounterKind } from '../audience/counters.ts';
 import type { State } from '../root-state.ts';
 import { sha256OfText } from '../serialize/sha256.ts';
@@ -47,6 +48,7 @@ export interface CallSpec {
 }
 
 export interface OrderBody {
+  readonly orderNotes?: readonly PlanNote[];
   readonly orderKind: OrderKind;
   readonly orderIssuer: PersonId;
   readonly orderTarget: PostId;

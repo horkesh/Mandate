@@ -14,7 +14,8 @@ import { strictCompare } from '../compare.ts';
 import { deriveMap, type DerivedMap } from '../control-index/derived.ts';
 import type { ComplianceRung, Reason } from '../directive.ts';
 import type { MessageId, PostId } from '../ids.ts';
-import type { ReportClaim, StatedReason } from '../knowledge/report.ts';
+import type { ReportClaim, StatedReason, NoteAccount } from '../knowledge/report.ts';
+import { followsNote } from '../planner/notes.ts';
 import { term } from '../knowledge/truth.ts';
 import { liveTerms, draft } from '../planner/draft.ts';
 import { applyEdit, concretePlan, editDirective, PLAN_HOLDS } from '../planner/edits.ts';
@@ -39,7 +40,7 @@ import { passageOf } from './passage.ts';
 export const PLANS_MECHANICS = [
   'planner.candidates',
   'planner.searches',
-  ...(['caution', 'coordination', 'dependence', 'exposure', 'force_ratio', 'glory', 'goal_fit', 'haste', 'supply', 'time'] as const satisfies readonly TermKind[]).map((t) => `planner.term.${t}`),
+  ...(['caution', 'coordination', 'dependence', 'exposure', 'force_ratio', 'glory', 'goal_fit', 'haste', 'notes', 'supply', 'time'] as const satisfies readonly TermKind[]).map((t) => `planner.term.${t}`),
   'plans.approved',
   'plans.chosen',
   'plans.draft_deferred',
@@ -57,13 +58,14 @@ export const PLANS_MECHANICS = [
 ] as const;
 
 /** A candidate as a seat sees it on a menu or under review. */
-export function optionView(c: PlanCandidate): OptionView {
+export function optionView(c: PlanCandidate, privateTerms = true): OptionView {
+  const visibleTerms = c.candTerms.filter(t => privateTerms || t.contribTerm !== 'notes');
   return {
-    optionId: c.id,
+    optionId: privateTerms ? c.id : c.id.replace(/\+note\d+/g, ''),
     method: c.candMethod,
-    variant: c.candVariant,
-    score: c.candScore,
-    terms: c.candTerms.map((t) => ({ term: t.contribTerm, amount: t.contribAmount })),
+    variant: privateTerms ? c.candVariant : c.candVariant.replace(/\+note\d+/g, ''),
+    score: visibleTerms.reduce((s,t) => s+t.contribAmount,0),
+    terms: visibleTerms.map((t) => ({ term: t.contribTerm, amount: t.contribAmount })),
     axes: c.candAxes.map((a) => ({
       name: a.axisName,
       post: a.axisPost,
@@ -93,11 +95,11 @@ export function choosingPosts(state: State, day: number): PostId[] {
 /** The options a commander is offered this morning: every candidate of his draft set, best first; null when he has nothing to pick. */
 export function planOptions(state: State, post: PostId, day: number): readonly OptionView[] | null {
   if (!choosingPosts(state, day).includes(post)) return null;
-  return state.planRecords[post]!.planDraft!.draftCandidates.map(optionView);
+  return state.planRecords[post]!.planDraft!.draftCandidates.map(c => optionView(c));
 }
 
 /** A report from a commander to the goal's issuer, answering the goal's order. */
-function toIssuer(ctx: TickContext, state: State, post: PostId, record: PlanRecord, claims: readonly ReportClaim[], options: { readonly objection?: readonly StatedReason[]; readonly truth?: ReturnType<typeof term>[]; readonly answers: MessageId; readonly tag: string }): MessageId {
+function toIssuer(ctx: TickContext, state: State, post: PostId, record: PlanRecord, claims: readonly ReportClaim[], options: { readonly notes?: readonly NoteAccount[]; readonly objection?: readonly StatedReason[]; readonly truth?: ReturnType<typeof term>[]; readonly answers: MessageId; readonly tag: string }): MessageId {
   const holder = state.postStates[post]!.postHolder!;
   return sendReport(ctx, state, {
     body: answerBody(holder, post, ctx.day, {
@@ -105,6 +107,7 @@ function toIssuer(ctx: TickContext, state: State, post: PostId, record: PlanReco
       reportSubtype: options.objection === undefined ? null : 'memorandum',
       reportClaims: claims,
       reportAdvice: options.objection === undefined ? null : { adviceRecommends: 'keep-own-plan', adviceReasons: options.objection, adviceConfidence: 800 },
+      ...(options.notes === undefined ? {} : { reportNotes: options.notes }),
       answers: options.answers,
       about: post,
     }),
@@ -136,7 +139,15 @@ export function applyPlanChoices(ctx: TickContext, start: State, menus: Readonly
     fire(ctx, 'plans.chosen');
     if (chosen.status === 'review') {
       const c = candidateOf(record, pick)!;
-      const report = toIssuer(ctx, state, post, record, [{ claimKind: 'plan-submitted', claimRegion: record.planGoal.goalObjective, claimValue: c.candScore, claimToken: c.candMethod, claimConfidence: 1000 }], { answers: record.planOrder, tag: `plan.${post}` });
+      const notes: NoteAccount[] = (record.planNotes ?? []).map(n => {
+        const response = state.orderResponses[n.readingResponse]!;
+        const followed = followsNote(c, n.readingMark);
+        const possible = record.planDraft!.draftCandidates.some(other => followsNote(other, n.readingMark));
+        return { accountMark: n.readingMark,
+          accountOutcome: followed ? 'followed' : OBJECTS.includes(response.respDeclared) ? 'declined' : possible ? 'own_judgement' : 'unavailable',
+          accountReasons: response.respStated.map(r => ({ reasonKind: r.kind, reasonWeight: statedWeight(r) })) };
+      });
+      const report = toIssuer(ctx, state, post, record, [{ claimKind: 'plan-submitted', claimRegion: record.planGoal.goalObjective, claimValue: optionView(c, false).score, claimToken: c.candMethod, claimConfidence: 1000 }], { answers: record.planOrder, tag: `plan.${post}`, ...(notes.length ? { notes } : {}) });
       state = submitted(state, post, report);
       fire(ctx, 'plans.submitted');
     } else {
@@ -188,7 +199,15 @@ export function plansPhase(ctx: TickContext, start: State, cache: ViewCache): St
     }
     used[faction] = (used[faction] ?? 0) + 1;
     const view = viewFor(world, state, seatIdFor(holder), cache);
-    const set = draft(plannerInputFor(world, state, derived, network, month, view, post, record.planGoal, day));
+    const noteRules = world.map.world.rules.plans.notes;
+    const notes = (record.planNotes ?? []).map(n => {
+      const response = state.orderResponses[n.readingResponse]!;
+      const rung = noteRules.rungs.find(r => r.rung === response.respActual);
+      if (rung === undefined) throw new RangeError(`pack has no note weight for ${response.respActual}`);
+      return { mark: n.readingMark, weight: rung.weight };
+    });
+    const input = plannerInputFor(world, state, derived, network, month, view, post, record.planGoal, day);
+    const set = draft(notes.length ? { ...input, notes, noteScoreWeight: noteRules.scoreWeight } : input);
     fire(ctx, 'plans.drafted');
     fire(ctx, 'planner.candidates', set.draftCandidates.length);
     fire(ctx, 'planner.searches', set.draftSearches);

@@ -41,7 +41,7 @@ export class ConsoleSession {
   }
 
   handle(line: string): Handled {
-    const input: DeskInput = parseLine(line, this.request);
+    const input: DeskInput = parseLine(line, this.request, this.t);
     const menu = this.request.menu as phase0.PrincipalMenu;
     switch (input.kind) {
       case 'error':
@@ -50,11 +50,11 @@ export class ConsoleSession {
         return { lines: [`Left on day ${this.request.requestDay.toString()} (${this.game.dateOf(this.request.requestDay)}).`], done: true };
       case 'command':
         this.queue.push(input.command);
-        return { lines: [`Queued ${this.queue.length.toString()}: ${commandText(input.command)}. It goes when you end the turn.`], done: false };
+        return { lines: [`Queued ${this.queue.length.toString()}: ${commandText(input.command, this.t)}. It goes when you end the turn.`], done: false };
       case 'cancel': {
         if (input.index < 1 || input.index > this.queue.length) return { lines: [`No order ${input.index.toString()} in the queue.`], done: false };
         const [gone] = this.queue.splice(input.index - 1, 1);
-        return { lines: [`Taken back: ${commandText(gone!)}.`], done: false };
+        return { lines: [`Taken back: ${commandText(gone!, this.t)}.`], done: false };
       }
       case 'preview': {
         const p = this.game.preview(input.post, input.edit);
@@ -84,13 +84,13 @@ export class ConsoleSession {
       case 'situations':
         return situationLines(this.request.view.situations, menu, this.t);
       case 'plans':
-        return planReviewLines(menu);
+        return planReviewLines(menu, this.t);
       case 'posts':
         return postLines(menu);
       case 'enemy':
         return enemyLines(this.request);
       case 'queue':
-        return this.queue.length === 0 ? ['Nothing queued.'] : this.queue.map((c, i) => `${(i + 1).toString()}. ${commandText(c)}`);
+        return this.queue.length === 0 ? ['Nothing queued.'] : this.queue.map((c, i) => `${(i + 1).toString()}. ${commandText(c, this.t)}`);
     }
   }
 
@@ -102,9 +102,9 @@ export class ConsoleSession {
     this.queue = [];
     this.seenLastTurn = this.request.requestDay;
     const result: TurnResult = this.game.turn(sent);
-    const lines: string[] = [sent.length === 0 ? 'You send nothing, and wait.' : `Sent: ${sent.map(commandText).join('; ')}.`];
+    const lines: string[] = [sent.length === 0 ? 'You send nothing, and wait.' : `Sent: ${sent.map(c => commandText(c, this.t)).join('; ')}.`];
     for (const d of result.days) {
-      lines.push(...dayLines({ day: d.day, date: d.date, reports: d.reports, refused: d.refused.map((r) => ({ what: commandText(r.command as phase0.SeatCommand), reason: r.reason })) }));
+      lines.push(...dayLines({ day: d.day, date: d.date, reports: d.reports, refused: d.refused.map((r) => ({ what: commandText(r.command as phase0.SeatCommand, this.t), reason: r.reason })) }));
     }
     lines.push(result.stopped === 'week' ? 'A week has passed.' : `The turn stops: ${result.stopped.join(', ')}.`);
     this.request = this.game.morning();

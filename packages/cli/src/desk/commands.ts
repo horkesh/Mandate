@@ -6,7 +6,8 @@
  * Every verb is an order to a person (hard rule 1, 0016). A place appears only inside one: an order's objective, an
  * arrow edit's region or waypoints, or an inquiry's subject (0040). There is no word that moves a force.
  */
-import { COUNTER_KINDS, EDIT_KINDS, POSTURES, RELIEF_MODES } from '@mandate/kernel/seat-api';
+import { COUNTER_KINDS, EDIT_KINDS, POSTURES, RELIEF_MODES, NOTE_KINDS } from '@mandate/kernel/seat-api';
+import type { PlanNote } from '@mandate/kernel/seat-api';
 import type { CounterKind, CounterTerms, EditKind, EditTerms, PersonId, PostId, Posture, PrincipalMenu, RegionId, ReliefMode, RouteKind, SeatCommand, SeatRequest, SituationId } from '@mandate/kernel/seat-api';
 
 /** Each console word that changes the game, and the kernel command it sends: `review` splits by its action. */
@@ -59,7 +60,7 @@ export const HELP: readonly string[] = [
   '  quit',
   'Orders to people (each answered by the man, through his own judgement):',
   '  order <post> <hold|take|relieve> [objective] [risk=N] [deadline=N] [rail|norail] [river] [sea] [neutral] [await] [review] [by=<route>] [bypass]',
-  '  approve <post> | sendback <post>',
+  '  approve <post> | sendback <post> [focus:<axis>:<region> | via:<axis>:<region>,<region> | wait:<axis>:<days> | avoid:<axis>:<region>] ... [by=<route>] [bypass]',
   '  edit <post> <objective|waypoints|timing|add_axis|remove_axis> [axis=<name>] [region=<r>] [via=<r>,<r>] [days=N]',
   '  go <post>                             the word an operation prepared under "await my word" waits for',
   '  call <post> <regiments> <termDays>    a call for regiments to a governor',
@@ -88,6 +89,21 @@ function split(tokens: readonly string[]): { readonly words: string[]; readonly 
 }
 
 const whole = (s: string | undefined): number | null => (s !== undefined && /^-?\d+$/.test(s) ? Number(s) : null);
+
+function noteFrom(token: string, t: (key: string) => string): PlanNote | string {
+  // Axes and regions can contain colons (notably added:<region>). Encode those as %3A in a note token.
+  const parts = token.split(':');
+  if (parts.length !== 3) return t('plan.note.error.shape');
+  let kind: string, axis: string, value: string;
+  try { [kind, axis, value] = parts.map(decodeURIComponent) as [string,string,string]; }
+  catch { return t('plan.note.error.escape'); }
+  if (!(NOTE_KINDS as readonly string[]).includes(kind) || !axis || !value) return t('plan.note.error.kind');
+  const days = kind === 'wait' ? whole(value) : null;
+  if (kind === 'wait' && (days === null || !Number.isSafeInteger(days) || days < 0)) return t('plan.note.error.days');
+  const via = kind === 'via' ? value.split(',') : [];
+  if (via.some(r => !r)) return t('plan.note.error.waypoint');
+  return { markKind: kind as PlanNote['markKind'], markAxis: axis, markRegion: (kind === 'focus' || kind === 'avoid' ? value : null) as RegionId | null, markVia: via as RegionId[], markDays: days };
+}
 
 /** The route an order to `post` goes by: the one named, else the wire where it reaches him, else the courier. */
 function routeTo(menu: PrincipalMenu, post: string, named: string | undefined): RouteKind | string {
@@ -130,7 +146,7 @@ function counterFrom(token: string): CounterTerms | string {
  * (an unknown person or region is the kernel's to refuse, and the refusal is shown); what the menu itself can tell (a
  * post he may not order, a situation not before him, a plan not under review) is refused here, before it costs anything.
  */
-export function parseLine(line: string, request: SeatRequest): DeskInput {
+export function parseLine(line: string, request: SeatRequest, t: (key: string) => string = key => key): DeskInput {
   const tokens = line.trim().split(/\s+/).filter((t) => t.length > 0);
   const word = tokens[0]?.toLowerCase();
   if (word === undefined) return { kind: 'look', what: 'help', all: false };
@@ -198,7 +214,20 @@ export function parseLine(line: string, request: SeatRequest): DeskInput {
       const problem = reviewProblem(menu, post);
       if (problem !== null) return fail(problem);
       const route = routeTo(menu, post!, opts.get('by')) as RouteKind;
-      if (word !== 'edit') return { kind: 'command', word, command: { cmd: 'review', to: post!, action: word === 'approve' ? 'approve' : 'send_back', edit: null, route, bypass: flags.has('bypass') } };
+      if (word !== 'edit') {
+        if ([...opts.keys()].some(k => k !== 'by')) return fail(t('plan.note.error.shape'));
+        const tokens = words.slice(1).filter(w => w !== 'bypass');
+        if (word === 'approve' && tokens.length) return fail(t('plan.note.error.sendback'));
+        const notes: PlanNote[] = [];
+        for (const token of tokens) {
+          const note = noteFrom(token,t);
+          if (typeof note === 'string') return fail(note);
+          notes.push(note);
+        }
+        const bad = knownRoute(menu, post!, route);
+        if (bad) return fail(bad);
+        return { kind: 'command', word, command: { cmd: 'review', to: post!, action: word === 'approve' ? 'approve' : 'send_back', edit: null, ...(notes.length ? { notes } : {}), route, bypass: flags.has('bypass') } };
+      }
       const edit = editFrom(words.slice(1), opts, firstAxis(menu, post!));
       if (typeof edit === 'string') return fail(edit);
       return { kind: 'command', word: 'edit', command: { cmd: 'review', to: post!, action: 'edit', edit, route, bypass: flags.has('bypass') } };

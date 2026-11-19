@@ -10,6 +10,8 @@
  * belongs to the pack.
  */
 import type { DepartmentId, FactionId, PostId, RegionId } from '../ids.ts';
+import type { ComplianceRung } from '../directive.ts';
+import type { NoteKind } from '../plans/notes.ts';
 import type {
   CensusRecord,
   DepotRecord,
@@ -246,6 +248,15 @@ export interface PlannerRules {
 
 /** Goals and plans (0040, 0062; lane 1.2). DESIGN PARAMETERS the pack states. */
 export interface PlansRules {
+  /** Send-back design parameters; each note is a soft preference, never an edit. */
+  readonly notes: {
+    readonly maxMarks: number;
+    readonly maxWaypoints: number;
+    readonly maxWaitDays: number;
+    readonly scoreWeight: number;
+    readonly rungs: readonly { readonly rung: ComplianceRung; readonly weight: number }[];
+    readonly terms: readonly { readonly kind: NoteKind; readonly boldness: number; readonly honours: readonly string[]; readonly offends: readonly string[] }[];
+  };
   /** The goal terms an order carries when it names only a posture and an objective (a situation's option). */
   readonly goalDefaults: {
     readonly risk: number;
