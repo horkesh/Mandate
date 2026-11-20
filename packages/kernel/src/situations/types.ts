@@ -71,7 +71,7 @@ export type Condition =
   | { readonly clockAtLeast: number }
   /**
    * A call for regiments reached the holder of a post at least `days` ago (lane 1.11, the lead's ruling): the cause of a
-   * state's act a pack-set delay after the call arrives. A STAND-IN until conventions and legislatures are modelled (1B):
+   * state's act a pack-set delay after the call arrives. STAND-IN(call-received-delay; owner: 1B, conventions and legislatures):
    * a run where the call comes late moves the act with it.
    */
   | { readonly callReceived: { readonly post: PostId; readonly days: number } }
