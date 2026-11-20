@@ -138,7 +138,9 @@ export interface DoctrineView {
   /** 0 for a side with no doctrine: he never inquires. */
   readonly crossNeutral: boolean;
   readonly concentrateAt: PostId | null;
-  readonly calls: readonly { readonly post: PostId; readonly regiments: number; readonly termDays: number; readonly day: number }[];
+  readonly concentrateFrom?: readonly PostId[];
+  readonly appointments?: readonly { readonly post: PostId; readonly person: PersonId; readonly from: PostId | null; readonly ready: boolean; readonly issued: boolean; readonly routes: readonly RouteOption[] }[];
+  readonly calls: readonly { readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly day: number; readonly atPeace?: boolean; readonly issued?: boolean }[];
   readonly offensives: readonly { readonly post: PostId; readonly objective: RegionId; readonly day: number }[];
   readonly inquireEveryDays: number;
   readonly appointKinds: { readonly land: readonly string[]; readonly naval: readonly string[] };
@@ -156,6 +158,8 @@ export interface SituationOptionChoice {
 export interface SituationChoice {
   readonly situation: SituationId;
   readonly options: readonly SituationOptionChoice[];
+  /** Held own-side posts of the open options' proposers, excluding consultations already sent. Absent for delegates. */
+  readonly consultPosts?: readonly PostId[];
   /** Posts the principal may hand the choice to; empty for a delegate. */
   readonly delegableTo: readonly PostId[];
 }
@@ -172,6 +176,8 @@ export interface PrincipalMenu {
   readonly atWarSince: number | null;
   /** His doctrine (lane 1.12): what the rule-seat principal does, from the pack. */
   readonly doctrine: DoctrineView;
+  /** Due historical appointments, only for the rules driver; never in a human or AI menu. */
+  readonly historicalAppointments?: readonly { readonly post: PostId; readonly person: PersonId; readonly routes: readonly RouteOption[] }[];
   /** Posts on his side that raise regiments, held (lane 1.12). */
   readonly raising: readonly RaisingPost[];
   /** Posts commanding troops on his side that have lost the holder the scenario gave them (lane 1.12). */

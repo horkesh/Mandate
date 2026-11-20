@@ -120,9 +120,7 @@ function notHere(why: string): GateBand {
 const SITUATIONS_UNAUTHORED = 'union-1861 has no situations authored until the March 1861 authoring lane (0042, 0046); the testbed run exercises them';
 const FILTER_EMPTY = 'both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post';
 const NO_CANDID_RELAY = 'the testbed’s one relaying office (the war ministry) holds what it dislikes rather than objecting: its holder is not candid (lane 1.1); union-1861 fires it, and the kernel test drives it';
-const VERBS_UNUSED = 'the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it';
-/** Lane 1.12: the Union run's one engagement in 148 days is the bombardment of Fort Sumter, fire only across water. */
-const NO_UNION_BATTLE = 'the Union run fights no field battle in 148 days: its one engagement is the bombardment of Fort Sumter, fire only across water, with no crossing and no assault (lane 1.12); the testbed run fires it';
+const VERBS_UNUSED = 'the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it';
 const PV = 'packages/kernel/test/people-verbs.test.ts';
 const POL = 'packages/kernel/test/politics.test.ts';
 const NO_PROPOSER = 'nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it';
@@ -146,10 +144,9 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'combat.breakout': { why: `a cut-off force breaks out only when its commander believes it can fight free; ${FEW_BATTLE_DAYS}, and no force is cut off`, test: 'packages/kernel/test/combat.test.ts', needle: 'a cut-off force strong enough to fight breaks out' },
   'combat.destroyed': { why: `a force is destroyed only when the breakout its commander chose fails; ${FEW_BATTLE_DAYS}, and no force breaks out`, test: 'packages/kernel/test/combat.test.ts', needle: 'its breakout failed, and the force is destroyed' },
   // Lane 1.12: these fired only in the Union run's march on Washington, which the generic principal ordered and the
-  // doctrine does not (the history has no such march); every testbed loser has a way back, and no testbed general is hit.
-  'combat.cut_off': { why: 'a side is cut off only with no legal retreat (0019) in a field battle; every testbed loser has a way back, and the Union run fights no field battle in 148 days (Sumter is a bombardment, lane 1.12)', test: 'packages/kernel/test/combat.test.ts', needle: 'a trapped garrison with nowhere to go surrenders' },
-  'combat.general_hit': { why: `a commander is hit on a low draw on his own stream; none of the testbed run’s battle-days draws one, and the Union run fights no field battle (lane 1.12)`, test: 'packages/kernel/test/combat.test.ts', needle: 'a general wounded leaves his post vacant' },
-  'map.pocket_relieved': { why: 'a pocket is relieved when a repair or a closing reverses; nothing reverses one in these runs', test: 'packages/kernel/test/map-tick.test.ts', needle: 'then its opening' },
+  // doctrine retires that march; current reference field losers have a way back and no general is hit.
+  'combat.cut_off': { why: 'a side is cut off only with no legal retreat (0019) in a field battle; the retained reference field losers have legal retreats, while the separate trapped-garrison test drives it', test: 'packages/kernel/test/combat.test.ts', needle: 'a trapped garrison with nowhere to go surrenders' },
+  'combat.general_hit': { why: `a commander is hit on a low draw on his own stream; no retained reference battle-day draws a commander hit, while the separate kernel test drives it`, test: 'packages/kernel/test/combat.test.ts', needle: 'a general wounded leaves his post vacant' },
   // Lane 1.12: the Charleston commander's bombardment goes ahead as drafted (lane 1.12 retired the Washington garrison's reviewed hold),
   // and the editing exercise edits every reviewed plan rather than approving it.
   'movement.join_blocked': { why: 'every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait', test: 'packages/kernel/test/join.test.ts', needle: 'waits, typed no_route, when no route reaches the seat' },
@@ -180,7 +177,6 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'situations.waiting': { why: 'waiting is an option a human takes; the rule-driven principal takes the historical default (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'waits for news to reach the principal' },
   // Lane 1.5: the people verbs no rule seat uses yet, each driven by its own kernel test (lane 1.12's doctrine drives
   // appoint, transfer and inquire, banded as verbs.answered and verbs.declined).
-  'verbs.consulted': { why: VERBS_UNUSED, test: PV, needle: 'his answer becomes a stance on record' },
   'verbs.audience': { why: VERBS_UNUSED, test: PV, needle: 'during: held about an approved plan' },
   'verbs.in_washington': { why: VERBS_UNUSED, test: PV, needle: 'promise, pressure and address act in Washington' },
   'people.promise_kept': { why: VERBS_UNUSED, test: PV, needle: 'with a promise of advancement kept by it' },
@@ -231,7 +227,13 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
  * bombardment, not the retired generic march on Washington. Concentrating levies march, consume stores
  * and refill at depots; the spring's decisions change governments and bring Congress into session.
  * Every positive centre below is the retained history run's count, with the usual half-to-double band.
- * runs/r73/band-reconciliation.json records each change and its cause. Historical checkpoint bands
+ * runs/r73/band-reconciliation.json records each change and its cause. R96 recentres only the eight
+ * full-run breaches caused by R90's sourced calls; runs/r96/band-reconciliation.json lists them.
+ * R98 recentres six breaches after northern concentration produces field combat, with the same helper.
+ * runs/r98/band-reconciliation.json retains every changed measured row and its direct or inferred cause.
+ * S1/R97 recentres all 43 changed counts, including the five requested transfer rows, with `around()` and causes.
+ * runs/s1/r97-band-reconciliation.json retains the comparison; historical checkpoint and pushback bands stay fixed.
+ * Historical checkpoint bands
  * (each pack's checkpoints.json) are independent and unchanged; these are mechanic liveness counts only.
  */
 const UNION_BANDS: Record<string, GateBand> = {
@@ -239,46 +241,48 @@ const UNION_BANDS: Record<string, GateBand> = {
   // R82: an integrated government notice offers one officer his choice; he stays.
   'people.stayed': around(1),
   // The bombardment of Fort Sumter: two days of fire, then Anderson's surrender, evacuated under the record's terms.
-  'combat.battle_closed': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
-  'combat.battle_day': around(2),
-  'combat.battle_opened': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
-  'combat.captured': quiet('Sumter falls under Anderson on day 39, within the recorded offer window, so its garrison evacuates instead of being captured (R78)'),
-  'combat.killed_wounded': notHere("Sumter's authored bombardment loss rate is zero and the 148-day run fights no field battle; the testbed run fires it"),
-  'combat.missing': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
-  'combat.occupation': around(18),
-  'combat.pursuit_chosen': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
+  'combat.battle_closed': { ...around(1), why: "R97 [I]: the State-force contingents reach the northern command, so the existing summer order now meets an opposing army at the junction; the unchanged field resolver supplies these events." },
+  'verbs.consulted': around(5),
+  'combat.battle_day': { ...around(5), why: "R97 [I]: the State-force contingents reach the northern command, so the existing summer order now meets an opposing army at the junction; the unchanged field resolver supplies these events." },
+  'combat.battle_opened': { ...around(1), why: "R97 [I]: the State-force contingents reach the northern command, so the existing summer order now meets an opposing army at the junction; the unchanged field resolver supplies these events." },
+  'combat.captured': { ...around(1), why: "R97 [I]: the State-force contingents reach the northern command, so the existing summer order now meets an opposing army at the junction; the unchanged field resolver supplies these events." },
+  'combat.killed_wounded': { ...around(6), why: "R97 [I]: the State-force contingents reach the northern command, so the existing summer order now meets an opposing army at the junction; the unchanged field resolver supplies these events." },
+  'combat.missing': { ...around(6), why: "R97 [I]: the State-force contingents reach the northern command, so the existing summer order now meets an opposing army at the junction; the unchanged field resolver supplies these events." },
+  'combat.occupation': { ...around(102), why: "R97 [I]: the State-force contingents reach the northern command, so the existing summer order now meets an opposing army at the junction; the unchanged field resolver supplies these events." },
+  'combat.pursuit_chosen': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
   'combat.surrendered': around(1),
-  'combat.withdrew': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
-  'control.changed': around(20),
-  'control.threshold_crossed': around(10),
-  'forces.stores_fell': around(587),
-  'forces.stores_low': around(2),
-  'forces.stores_refilled': around(704),
-  'forces.stragglers_returned': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
-  'combat.flank_broken': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
-  'combat.routed': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
-  'combat.works_stormed': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
+  'combat.withdrew': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
+  'control.changed': { ...around(105), why: "R97 [I]: new State-force joining marches and the emerged field engagement change occupation through the existing control owner and cross its unchanged thresholds." },
+  'control.threshold_crossed': { ...around(40), why: "R97 [I]: new State-force joining marches and the emerged field engagement change occupation through the existing control owner and cross its unchanged thresholds." },
+  'forces.stores_fell': { ...around(1103), why: "R97 [I]: actual State-force contingents add supply consumers and joining journeys; field combat supplies stragglers that return through the existing forces owner." },
+  'forces.stores_low': { ...around(45), why: "R97 [I]: actual State-force contingents add supply consumers and joining journeys; field combat supplies stragglers that return through the existing forces owner." },
+  'forces.stores_refilled': { ...around(848), why: "R97 [I]: actual State-force contingents add supply consumers and joining journeys; field combat supplies stragglers that return through the existing forces owner." },
+  'forces.stragglers_returned': { ...around(14), why: "R97 [I]: actual State-force contingents add supply consumers and joining journeys; field combat supplies stragglers that return through the existing forces owner." },
+  'combat.flank_broken': { ...around(1), why: "R97 [I]: the State-force contingents reach the northern command, so the existing summer order now meets an opposing army at the junction; the unchanged field resolver supplies these events." },
+  'combat.routed': { ...around(1), why: "R97 [I]: the State-force contingents reach the northern command, so the existing summer order now meets an opposing army at the junction; the unchanged field resolver supplies these events." },
+  'combat.works_stormed': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
   'operations.ended': around(1),
   'operations.opened': around(2),
-  'operations.stage': around(7),
-  'operations.works': around(3),
+  'operations.stage': { ...around(8), why: "R97 [I]: the existing summer plan now reaches field combat rather than unopposed ground; battle stages replace some of its former construction days." },
+  'operations.works': { ...around(1), why: "R97 [I]: the existing summer plan now reaches field combat rather than unopposed ground; battle stages replace some of its former construction days." },
   'orders.responses_pruned': around(20),
-  'reports.battle_dispatch': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
-  'reports.casualty_return': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
-  'reports.governor_wire': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
-  'reports.pocket': notHere("no headquarters is cut off by a closing pocket in the 148-day Union run; the testbed run fires it"),
-  'map.pocket_closed': notHere("no new pocket closes in the 148-day Union run; Sumter's opening pocket is lost, not newly closed; the testbed run fires it"),
+  'reports.battle_dispatch': { ...around(26), why: "R97 [I]: the field engagement adds hour-stamped battle dispatches and casualty returns; the new movements and pocket changes generate their ordinary reports." },
+  'reports.casualty_return': { ...around(14), why: "R97 [I]: the field engagement adds hour-stamped battle dispatches and casualty returns; the new movements and pocket changes generate their ordinary reports." },
+  'reports.governor_wire': { ...around(5), why: "R97 [I]: the field engagement adds hour-stamped battle dispatches and casualty returns; the new movements and pocket changes generate their ordinary reports." },
+  'reports.pocket': { ...around(3), why: "R97 [I]: the field engagement adds hour-stamped battle dispatches and casualty returns; the new movements and pocket changes generate their ordinary reports." },
+  'map.pocket_closed': { ...around(4), why: "R97 [I]: the additional troop movements, occupation and field retreat change control and pockets, requiring more existing map recomputations; one pocket reopens." },
   'knowledge.pruned_age': around(104),
   'knowledge.pruned_superseded': around(146),
-  'map.recomputed': around(24),
-  'messages.courier_delay': around(64),
+  'map.pocket_relieved': { ...around(1), why: "R97 [I]: the additional troop movements, occupation and field retreat change control and pockets, requiring more existing map recomputations; one pocket reopens." },
+  'map.recomputed': { ...around(55), why: "R97 [I]: the additional troop movements, occupation and field retreat change control and pockets, requiring more existing map recomputations; one pocket reopens." },
+  'messages.courier_delay': { ...around(114), why: "R97 [I]: seven institutional notices and field dispatches change routed traffic; eleven removed governor requisitions no longer generate their former order/answer traffic." },
   'messages.mail_delay': around(2682),
-  'messages.delivered': around(10543),
-  'messages.sent': around(11185),
+  'messages.delivered': { ...around(11009), why: "R97 [I]: seven institutional notices and field dispatches change routed traffic; eleven removed governor requisitions no longer generate their former order/answer traffic." },
+  'messages.sent': { ...around(11647), why: "R97 [I]: seven institutional notices and field dispatches change routed traffic; eleven removed governor requisitions no longer generate their former order/answer traffic." },
   'messages.special_messenger': quiet('the one bypass uses the faster zero-day wire instead of a three-day messenger (R78)'),
   'orders.bypassed': around(4),
-  'movement.arrived': around(123),
-  'movement.leg_started': around(98),
+  'movement.arrived': { ...around(518), why: "R97 [I]: the State-force contingents join the northern concentration through ordinary transfers, legs and arrivals, in place of eleven fictional governor transfer requisitions." },
+  'movement.leg_started': { ...around(240), why: "R97 [I]: the State-force contingents join the northern concentration through ordinary transfers, legs and arrivals, in place of eleven fictional governor transfer requisitions." },
   'orders.obeyed': around(3),
   'orders.relay_held': around(1),
   'orders.relay_objected': around(3),
@@ -286,7 +290,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'plans.goal_reached': around(1),
   'politics.adjourned': around(1),
   'politics.front_page': around(63),
-  'politics.support': around(16),
+  'politics.support': { ...around(67), why: "R97 [I]: the emerged field battle and its casualty reports reach editors and change ordinary press effects; no troop notice directly changes support." },
   'politics.opened': around(2),
   'regions.self_emancipation': around(3081),
   'regions.reached_lines': around(253),
@@ -309,12 +313,12 @@ const UNION_BANDS: Record<string, GateBand> = {
   'seats.defaulted': notHere("every request is answered in this run; the silent-seats exercise run fires it"),
   'situations.decided': around(19),
   'situations.delegated': notHere("no authored Union situation in this window names a delegate as its historical default; the testbed run fires it"),
-  'situations.fired': around(54),
-  'situations.notice_reports': around(36),
-  'situations.noticed': around(35),
+  'situations.fired': { ...around(62), why: "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle." },
+  'situations.notice_reports': { ...around(44), why: "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle." },
+  'situations.noticed': { ...around(43), why: "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle." },
   'situations.options_changed': around(4),
   'situations.orders': around(25),
-  'situations.proposals': around(26),
+  'situations.proposals': { ...around(41), why: "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle." },
   'command.side_changed': around(10),
   'command.government_established': around(1),
   'command.post_succeeded': around(1),
@@ -322,21 +326,21 @@ const UNION_BANDS: Record<string, GateBand> = {
   'command.temporary_post_opened': around(2),
   'situations.resurfaced': around(2),
   'situations.staff_lines': around(18),
-  'situations.surfaced': around(54),
-  'recruitment.called': around(31),
-  'recruitment.answered': around(19),
-  'recruitment.slow_walked': around(15),
-  'recruitment.refused': around(12),
-  'recruitment.mustered': around(19),
+  'situations.surfaced': { ...around(61), why: "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle." },
+  'recruitment.called': { ...around(78), why: "R97: seven State-act notices replace eleven governor transfer requisitions; fewer ordinary calls therefore reach compliance. Ordinary calls, thresholds, quota conversion and delays are unchanged." },
+  'recruitment.answered': { ...around(50), why: "R97: seven State-act notices replace eleven governor transfer requisitions; fewer ordinary calls therefore reach compliance. Ordinary calls, thresholds, quota conversion and delays are unchanged." },
+  'recruitment.slow_walked': { ...around(46), why: "R97: seven State-act notices replace eleven governor transfer requisitions; fewer ordinary calls therefore reach compliance. Ordinary calls, thresholds, quota conversion and delays are unchanged." },
+  'recruitment.refused': { ...around(28), why: "R97: seven State-act notices replace eleven governor transfer requisitions; fewer ordinary calls therefore reach compliance. Ordinary calls, thresholds, quota conversion and delays are unchanged." },
+  'recruitment.mustered': { ...around(39), why: "R96: R90's additional absolute requisitions and transfer entries use the existing raising path, producing 39 musters including four unknown-strength blocks" },
   'recruitment.men': around(19),
   'recruitment.disbanded': around(15),
   'ladder.moved': around(10),
   'ladder.rival': notHere("no holder reaches a rival rung with the required standing in the merged 148-day history run; the testbed run fires it"),
   'people.grievances_faded': around(30),
   'seats.attention_refilled': around(21),
-  'seats.attention_spent': around(29),
+  'seats.attention_spent': { ...around(94), why: "R97 [I]: the new field engagement adds battle decisions while removing eleven governor transfer requests changes attention use; all request prices and budgets are unchanged." },
   'seats.initiative': around(9),
-  'operations.repulsed': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
+  'operations.repulsed': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
   'forces.landed_by_situation': around(1),
   'politics.act': around(2),
   'politics.answered': around(2),
@@ -348,9 +352,9 @@ const UNION_BANDS: Record<string, GateBand> = {
   'reports.commander_lost': quiet('Anderson evacuates under terms on day 39 and keeps serving; no commander is lost (R78)'),
   'combat.evacuated': { minFires: 1, maxFires: 1 },
   'map.pocket_lost': around(1),
-  'seats.battle_orders': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
-  'movement.joined': around(17),
-  'verbs.answered': around(49),
+  'seats.battle_orders': { ...around(60), why: "R97 [I]: the new field engagement adds battle decisions while removing eleven governor transfer requests changes attention use; all request prices and budgets are unchanged." },
+  'movement.joined': { ...around(40), why: "R97 [I]: the State-force contingents join the northern concentration through ordinary transfers, legs and arrivals, in place of eleven fictional governor transfer requisitions." },
+  'verbs.answered': { ...around(69), why: "R97 [I]: the new institutional contingents produce more ordinary transfers and answers when they join their commands; no verb threshold or price changes." },
   'verbs.declined': notHere("every army asked in the merged history run answers; recruitment refusals are counted separately; the testbed run fires it"),
 };
 
@@ -358,6 +362,7 @@ const UNION_BANDS: Record<string, GateBand> = {
 const TESTBED_BANDS: Record<string, GateBand> = {
   'people.resigned': notHere('the testbed reference pack has no service-choice records; union-1861 fires it, and resignation.test.ts drives the government path'),
   'people.stayed': notHere('the testbed reference pack has no service-choice records; union-1861 fires it when an officer stays after his government joins'),
+  'verbs.consulted': quiet('the testbed history resolves its situations before a morning consultation; the Union history consults the open question’s proposers (R84)'),
   // Lane 1.3, merged with lane 1.2's plans: battles of one day each, in which the defender withdraws or routs and the winner
   // chooses whether to pursue. Re-banded from lane 1.12's run (the doctrine's levies, inquiries and concentration): four battle-days.
   'combat.battle_closed': around(4),
@@ -399,6 +404,7 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'map.pocket_closed': around(1),
   'knowledge.pruned_age': around(41),
   'knowledge.pruned_superseded': around(118),
+  'map.pocket_relieved': quiet('S1 R97: this testbed reference reverses no pocket closing; the integrated Union reference relieves a pocket and now drives the mechanic.'),
   'map.recomputed': around(20),
   // Lane 1.6: courier and mail counted apart (the northern gazette's front pages are the mail's bulk).
   'messages.courier_delay': around(49),
@@ -518,7 +524,10 @@ export const REFERENCE_RUNS: readonly ReferenceRun[] = [
     days: 30,
     atWar: false,
     seats: 'rules',
-    bands: Object.fromEntries(PEACE_QUIET.map((m) => [m, quiet(`union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine`)])),
+    bands: {
+      ...Object.fromEntries(PEACE_QUIET.map((m) => [m, quiet(`union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine`)])),
+      'recruitment.called': { ...around(7), why: "R96: R90's seven sourced 9 March provisional-force requisitions precede the war decisions; other war doctrine still waits on each side's own decision" },
+    },
   },
 ];
 

@@ -110,3 +110,51 @@ The counters are M2's eight, each answering only its kinds of reason:
   - `messages/transit.ts`;
   - the pack format (schemas, the `regard_others` column, validation);
   - both packs' `pack.json` (attention and verbs; the Union pack's six 0074 values, two of them cost-only).
+
+## R92: initiative admission and the filter office (20 November 2026)
+
+For the lead: 2 items. R92 only, in `C:/Pyrrhic/mandate-initiative`, branch `phase1-initiative-threshold`, HEAD `3cbf71e6a04ac93c9393b73c7cf8585287069ecf`. Read the main checkout's CODEX standing, command-line, writing and R44–R49 rules, R92, and decision 0105. `npm ci` ran first, exit 0, zero vulnerabilities. Git was read-only. Claude's independent review remains pending under 0096.
+
+### What changed
+
+- `WorldRules.people.verbs.initiativeAt` is required by the TypeScript type, raw-World validation and pack schema. Both packs state **150**, the former admission value. It is a whole willingness threshold, not a permille weight; there is no kernel fallback.
+- The weekly step shares compliance's willingness terms and candour machinery, substitutes the initiative threshold for its stated answer, and admits by willingness against `initiativeAt`. The independent admission check also prevents an ordinary `exceed` threshold bypassing a higher initiative threshold. Ordinary orders retain their existing rules and code path.
+- Two new kernel cases cover separation in both directions and invalid/missing thresholds. They first failed for the intended missing behavior (`runs/r92/red.log`: 2 failed, 29 passed), then passed. Two pack-validator cases reject a missing or fractional threshold. The fixtures state the new rule.
+- Regenerated the published schemas and both Worlds with their tools, and the day-40 save with `tools/make-save-fixture.ts`. The semantic audit finds only the added rule in each manifest/World and only `worldHash` changed in the save. Its State and command log are identical. No new State field or owner. FOUNDATION's initiative paragraph now names the separate threshold.
+
+### One measured comparison, without retaining the lower value
+
+Seed **1861**, normal peace-to-war start, **148 days** through 31 July, no `--at-war`. Change only ordinary **`complyAt` 150 → 10**, leaving **`initiativeAt` 150**. Initiatives remain **9 → 9**; all nine event days, people, posts and contribution terms are identical. Reservations become **44 → 4**, against the unchanged **1..9** band. The lowered value is not delivered: both temporarily edited files were restored byte-for-byte (`comparison-restore.json`). This is evidence for separation, not calibration acceptance or a second-budget tuning campaign.
+
+`runs/r92/comparison.json` records every scored checkpoint/pushback result before and after. Its control was captured before the split; the full checked default run subsequently proves the split at 150 preserves **all 148 daily State hashes, every daily telemetry row and every liveness count**, making it the same control after the split. See `default-control.json`. Union final State is **`59ae6644ff381b02e8086ca57be88ec5f828979eeaaaed37cbcb6ebbdee7b097`**; replay and day-60 resume match, zero rejections. Testbed's 120-day replay and day-40 resume match too.
+
+The small evidence adapter's initial one-day startup failed because it passed the wrong argument to `operationScore`; corrected before the baseline campaign. Its initial score also omitted the declared-mechanic set. Rescored the retained daily telemetry with the actual declarations, without repeating either comparison run (`startup.log`, `startup-fixed.log`, `rescore.ts`, `rescore.log`). Production checks use the unchanged official scorer.
+
+### Sourced filter finding
+
+Leave the wire-filter role unfilled for **5 March–31 July**. Hay's account assigns letters to himself and visitors/general supervision to Nicolay: Herndon and Weik, *Abraham Lincoln: The True Story of a Great Life*, vol. II, **pp. 225–226**, [read OCR](https://archive.org/stream/abrahamlincolntr02hernuoft/abrahamlincolntr02hernuoft_djvu.txt). It describes the administration generally, not a dated March handover or military-wire control.
+
+Bates, *Lincoln in the Telegraph Office* (1907), **pp. 25–29**, names Strouse as first superintendent (official appointment 15 May, **p. 27 note 2**) but does not attribute screening Lincoln's wires to him. The named withholding case is **Eckert on 21 October 1861**, under Cameron's instructions to deliver military telegrams first to McClellan, **pp. 93–96**. Stanton's centralized supervision is later, **pp. 38–40**. [Read OCR](https://archive.org/stream/lincolnintelegra00bates/lincolnintelegra00bates_djvu.txt). These are retrospective accounts; no contemporary appointment order was newly verified. Technical management, White House mail sorting and the later headquarters case cannot establish a general presidential wire-filter holder in this run's window [I]. This is an evidence limit, not a finding that no screening occurred.
+
+The detailed dated finding and retained extract paths are in the **R92 section of `docs/research/2026-11-14-union-information-flows.md`**. No holder, person, post kind, value, trait or situation was added or relabelled; Nicolay's existing role remains null. Proposed ruling: retain that distinction and the empty wire role; reject filling it from mail/caller work or an undated technical title merely to pass a band.
+
+### Settled checks and bands
+
+- Exact **`MANDATE_NO_GIT=1 npm run check`: exit 0**, **129 files / 1,475 passed / 3 existing optional timing skips**; all chained gates pass. Focused checks: **5 files / 314 passed**, exit 0. Separate typecheck, schema generation, pack generation and save-fixture generation exited 0.
+- Full **`npm run run:done-check -- --label r92-done --milestone 1a`**, with drafting and all **eight seeds**: **exit 1**, **1,538.52 seconds**, run once. **Phase 0 5/6**, with only timing failed; **1A 2/6**, unknown strength and stand-ins pass. Every other criterion and each problem was inspected in `runs/r92/done-check.log`.
+- Timing remains unmet: Union reference median/p95 **40.65/66.87 ms**, history **41.17/65.88**, against unchanged **40/160**. Testbed **3.87/5.83**. No unloaded-host, CI, causal-regression or performance-pass claim. No expensive retry.
+- **No default band count changes.** Pushback: relay objections **2** (0..6), relay holds **1** (2..6), filter holds **0** (1..9), trims **0** (1..4), reservations **44** (1..9), slow walks **5** (2..9), plan objections **11** (10..42). Initiatives **9**, inside the unchanged liveness band. The temporary comparison changes only reservations among those seven scores.
+- Checkpoints still fail Missouri's neutral side, the missing western-Virginia checkpoint department, Confederate known men **20,957** (100,000..200,000), and both sides' **zero** fought planned operations. Union known men **18,686**, four unknown blocks, remain below its non-binding 95,000 floor (250,000 ceiling); Confederate unknown blocks **13**. The history observer sees **2 operations / 0 BattleRecords**. Bombardment telemetry is not a fought-operation record. The other checkpoint results are unchanged; no checkpoint or liveness file was edited.
+- Sweep: **8 seeds / 8 decisions / 248 base-run calls**, `return` best **0/8**. It still fails because policy grievances are unmeasured and **24 moves** lack a border-governor levy. D6 clearance stays parked under 0105; its recruitment-chain failure stays reported. No band or criterion is waived.
+
+Runtime diagnostics, semantic data/save audit and the 16-file delivery inventory preceded this hand-over. The done-check process exited; no server or browser was started. Evidence index: `runs/r92/final-checks.json`; full summaries and saves: `runs/r92-done/`, drafting: `runs/r92-done-drafting/`. Other worktrees, signed situations, provenance, bands and lockfiles were not changed. The lower compliance value is restored; no staging, commit, merge or push.
+
+### For the lead
+
+1. Review R92's required rule/schema change and sourced empty-filter finding under 0096, then integrate before the second calibration budget. Third-party packs will also need to state `initiativeAt`; there is deliberately no implicit default.
+2. Retain the failed timing gate and four 1A categories with their current owners. R92 supplies threshold separation; it does not accept `complyAt: 10`, invent a filtering holder, integrate R85's corrections, or undertake R90/R91/R93/R94.
+
+## Findings outside my scope
+
+- The older people-and-posts note's unverified suggestion that Eckert came to Washington in 1862 is too late for Bates's dated September/October 1861 account, pp. 93–96. The R92 information-flows section records the correction and its limits; it still supplies no March–July filtering appointment.
+- The full timing failure remains an unmet acceptance criterion. No performance correction or new measurement campaign was authorized or attempted here. The unchanged behavior evidence does not determine its cause.

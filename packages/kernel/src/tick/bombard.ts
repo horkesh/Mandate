@@ -12,7 +12,8 @@
  */
 import { applyCombatCommand } from '../command/command.ts';
 import { musterAssignments } from '../command/levies.ts';
-import { fortDay, type FortDay } from '../combat/bombard.ts';
+import { bombardRecords, fortDay, type FortDay } from '../combat/bombard.ts';
+import { applyBattleRecords } from '../combat/records.ts';
 import { JUDGE } from '../combat/order-kinds.ts';
 import { applyMusters } from '../forces/enlistment.ts';
 import { applyForces } from '../forces/forces.ts';
@@ -54,7 +55,8 @@ export function bombardFort(ctx: TickContext, start: State, attackerPost: PostId
     fire(ctx, 'reports.battle_dispatch');
   }
   works.push(...fort.works);
-  let state = applyForces(start, fort.forces).state;
+  let state = applyBattleRecords(start, bombardRecords(world, start, fort, attackerPost, attackers, objective, side, day));
+  state = applyForces(state, fort.forces).state;
   if (fort.surrendered === null) return { state, fort };
 
   if (fort.musters.length > 0) {

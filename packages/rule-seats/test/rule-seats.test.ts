@@ -57,6 +57,30 @@ const menu: PrincipalMenu = {
   goalDefaults: DEFAULTS,
 };
 const doctrine = (over: Partial<PrincipalMenu['doctrine']>): PrincipalMenu => ({ ...menu, doctrine: { ...menu.doctrine, ...over } });
+
+describe('dated command establishments', () => {
+  const appointment = { post: post('new_army'), person: person('near_holder'), from: post('near'), ready: true, issued: false, routes: army('near', 2).routes };
+  it('issues a ready assignment through the appointment verb, with the old post named', () => {
+    const commands = principalOrders(doctrine({ appointments: [appointment] }), [], 3);
+    expect(commands).toContainEqual({ cmd: 'appoint', post: appointment.post, person: appointment.person, from: appointment.from, rank: null, route: 'courier' });
+    for (const row of [{ ...appointment, ready: false }, { ...appointment, issued: true }]) {
+      expect(principalOrders(doctrine({ appointments: [row] }), [], 3).some(c => c.cmd === 'appoint')).toBe(false);
+    }
+    expect(principalOrders({ ...doctrine({ appointments: [appointment] }), atWarSince: null }, [], 3)).toEqual([]);
+  });
+  it('uses the same transfer path to bring the former concentration forward', () => {
+    const m = { ...doctrine({ concentrateAt: post('far'), concentrateFrom: [post('near')] }), commandable: [army('near', 2), army('far', 6)] };
+    expect(principalOrders(m, [], 3)).toContainEqual({ cmd: 'transfer', from: post('near'), to: post('far'), force: 'blocks', amount: 999, route: 'courier' });
+  });
+  it('does not appoint an officer to a vacancy while his sourced assignment is being issued or is in transit', () => {
+    for (const issued of [false, true]) {
+      const m = { ...doctrine({ appointments: [{ ...appointment, from: null, issued }] }),
+        candidates: [{ person: appointment.person, kind: 'general', seniority: 10 }],
+        vacancies: [{ post: post('other'), arm: 'land' as const, routes: appointment.routes, appointing: false }] };
+      expect(principalOrders(m, [], 3).some(c => c.cmd === 'appoint' && c.post === post('other'))).toBe(false);
+    }
+  });
+});
 /** Days that are not his doctrine's inquiry days, so tests of the other jobs see only their own commands. */
 const quiet = (orders: readonly { cmd: string }[]) => orders.filter((o) => o.cmd !== 'inquire');
 const memo = (receivedDay: number, about: string): ReportView => ({
@@ -98,6 +122,27 @@ describe('a holder handed a situation (lane 0.7)', () => {
 });
 
 describe('a principal doing his historical jobs by his pack doctrine (lane 1.12)', () => {
+  it('sends offered historical appointments through the ordinary verb, within attention', () => {
+    const offered = { post: post('expedition'), person: person('officer'), routes: [{ route: 'courier' as const, typicalDays: 0, price: 0 }] };
+    const m = { ...menu, historicalAppointments: [offered] };
+    expect(quiet(principalOrders(m, [], 5))).toEqual([{ cmd: 'appoint', post: post('expedition'), person: person('officer'), rank: null, route: 'courier' }]);
+    expect(quiet(principalOrders({ ...m, attention: { ...menu.attention, left: 0 } }, [], 5))).toEqual([]);
+    expect(quiet(principalOrders({ ...m, atWarSince: null }, [], 5))).toEqual([]);
+  });
+  it('does not also fill a historical appointment’s post through the generic vacancy policy', () => {
+    const target = { post: post('vacant'), arm: 'land' as const, routes: [{ route: 'courier' as const, typicalDays: 0, price: 0 }], appointing: false };
+    const m = { ...menu, vacancies: [target], candidates: [{ person: person('historical'), kind: 'general', seniority: 1 }, { person: person('other'), kind: 'general', seniority: 0 }],
+      historicalAppointments: [{ post: target.post, person: person('historical'), routes: target.routes }] };
+    expect(quiet(principalOrders(m, [], 5))).toEqual([{ cmd: 'appoint', post: target.post, person: person('historical'), rank: null, route: 'courier' }]);
+  });
+  it('consults the offered proposer posts once per situation, including at peace, within attention', () => {
+    const situation = ids.toId('situation', 'question');
+    const choice = { situation, options: [], delegableTo: [], consultPosts: [post('near'), post('far'), post('near')] };
+    const open = { ...menu, atWarSince: null, situations: [choice] };
+    expect(principalOrders(open, [], 1)).toEqual([{ cmd: 'consult', situation, posts: [post('far'), post('near')] }]);
+    expect(principalOrders({ ...open, attention: { ...menu.attention, left: 0 } }, [], 1)).toEqual([]);
+    expect(principalOrders({ ...open, situations: [{ ...choice, consultPosts: [] }] }, [], 2)).toEqual([]);
+  });
   it('gives each offensive goal on its day, by the quickest free route, on the pack’s terms and his neutral-ground policy', () => {
     const m = doctrine({ offensives: [{ post: post('far'), objective: region('r9'), day: 30 }] });
     expect(quiet(principalOrders(m, [], 29))).toEqual([]);
@@ -132,6 +177,22 @@ describe('a principal doing his historical jobs by his pack doctrine (lane 1.12)
     // Not before its date; and never twice, whoever made the first call (a situation's option included: one owner per levy).
     expect(quiet(principalOrders({ ...m, raising: raising(false) }, [], 2))).toEqual([]);
     expect(quiet(principalOrders({ ...m, raising: raising(true) }, [], 3))).toEqual([]);
+  });
+
+  it('distinguishes sourced repeat calls and permits only explicitly peaceful calls before war', () => {
+    const raising = [{ post: post('gov'), holder: person('holder'), routes: [{ route: 'courier' as const, typicalDays: 3, price: 0 }], called: true }];
+    const m = doctrine({ calls: [
+      { id: 'first', post: post('gov'), regiments: 2, termDays: 365, day: 3, atPeace: true, issued: true },
+      { id: 'second', post: post('gov'), regiments: 1, men: 500, termDays: 365, day: 5, atPeace: true, issued: false },
+      { id: 'war_only', post: post('gov'), regiments: 3, termDays: 365, day: 5, issued: false },
+    ] });
+    const peace = { ...m, raising, atWarSince: null };
+    expect(quiet(principalOrders(peace, [], 4))).toEqual([]);
+    expect(quiet(principalOrders(peace, [], 5))).toEqual([
+      { cmd: 'call', to: post('gov'), regiments: 1, men: 500, callId: 'second', termDays: 365, route: 'courier', bypass: false },
+    ]);
+    const issued = { ...peace, doctrine: { ...peace.doctrine, calls: peace.doctrine.calls.map(c => ({ ...c, issued: true })) } };
+    expect(quiet(principalOrders(issued, [], 6))).toEqual([]);
   });
 
   it('concentrates what a governor raised at his doctrine’s post, once while the transfer is on its way', () => {

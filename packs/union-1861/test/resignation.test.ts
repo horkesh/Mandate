@@ -48,13 +48,15 @@ describe('the resignation data and ordinary history', () => {
     const johnston = person('johnston_joseph_e');
     expect(phase0.departmentSide(state, virginia)).toBeNull();
     const seat = createRuleSeat();
-    const before = phase0.playDays(world, state, () => seat, 45, { freeze: true });
+    // R90's documented public wire reaches Letcher on 15 April; the existing
+    // two-day cause now puts Virginia on day 43, before Johnston's dated act.
+    const before = phase0.playDays(world, state, () => seat, 42, { freeze: true });
     expect(phase0.departmentSide(before.state, virginia)).toBeNull();
     expect(before.state.personService?.[johnston]).toBeUndefined();
     const joins = phase0.playDays(world, before.state, () => seat, 1, { freeze: true });
     expect(phase0.departmentSide(joins.state, virginia)).toBe(other);
     expect(joins.state.personService?.[johnston]).toBeUndefined();
-    const eve = phase0.playDays(world, joins.state, () => seat, 1, { freeze: true });
+    const eve = phase0.playDays(world, joins.state, () => seat, 4, { freeze: true });
     expect(eve.state.personService?.[johnston]).toBeUndefined();
     const changes = phase0.playDays(world, eve.state, () => seat, 1, { freeze: true });
     expect(changes.state.personService?.[johnston]).toMatchObject({ serviceFaction: other, serviceChoice: 'resign', serviceDay: 48 });

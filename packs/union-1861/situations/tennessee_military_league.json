@@ -1,0 +1,39 @@
+{
+  "id": "tennessee_military_league",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.tennessee_military_league.title",
+  "text": "situation.tennessee_military_league.text",
+  "earliest": "1861-05-07",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 63
+      },
+      {
+        "flag": "tennessee_seceded"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "setFlag": "tennessee_military_league"
+    }
+  ],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative military authority only; no motive or secession-cause claim, slavery policy, security order, civilian conduct or protected-population effect."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "IV-1 pp. 296–297, convention and military league agreed 7 May, subject to ratification by both governments"
+    }
+  ]
+}

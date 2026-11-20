@@ -138,7 +138,7 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field("the president's attention this week", 'seats', ['command validation (spending)', 'the weekly refill'], [at('State', 'seatAttention')]),
   field('seat initiative state (each initiative\'s last firing day)', 'seats', ['the weekly people step'], [at('State', 'seatInitiatives')]),
   // Lane 1.1: a man's answer to an order that reached him, as a relay or its addressee; plans holds only its key (0073).
-  field('responses to orders (declared and actual rungs, reasons)', 'proxy', ['message arrival'], [at('State', 'orderResponses')]),
+  field('responses to orders (declared and actual rungs, reasons, dated-call identity)', 'proxy', ['message arrival'], [at('State', 'orderResponses')]),
   field('audience state', 'audience', ['the audience verb'], [at('State', 'audienceHeld')]),
   // Lane 1.2: each post's goal and plan record (`plans/plans.ts`): its draft set, saved on the request day, the seat's
   // pick, approval or send-back, and edits as counter-orders. Lane 1.4 retired the standing-goal execution adapter.
@@ -155,7 +155,7 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('the framing term (who the public believes began the war)', 'politics', ["the war's opening situations", 'the press'], [at('State', 'warFraming')]),
   field('the Congress accountability ledger: acts taken while Congress was away', 'politics', ['situations (an act owed an answer; an answer)', 'the chambers meeting'], [at('State', 'congressLedger')]),
   field('people who have reached Union lines', 'regions', ['the derived self-emancipation term (0046); never a lever'], [at('State', 'regionReachedUnionLines')]),
-  field("a raised block's enlistment: who raised it on whose call, and when its men's term ends", 'forces', ['recruitment'], [at('State', 'forceEnlistments')]),
+  field("a block's enlistment: raiser, durable call identity or institutional source act, and fixed, war-service or explicitly unknown expiry", 'forces', ['recruitment (calls and notice-only state-force entries)'], [at('State', 'forceEnlistments')]),
   field('seat assignments', 'seats', ['setup', "the player's settings"], [at('State', 'seatAssignments')]),
   // Reserved by world format v2 (lane 0.2): State that starts from a scenario
   // start or a World rule, with its owner named before the mechanic is built.

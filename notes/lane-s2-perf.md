@@ -1,3 +1,29 @@
+# S30: performance on integrated 1A
+
+For the lead: 3 items. S30 only in `C:/Pyrrhic/sprint-perf`, `sprint/perf`, starting at `e9f7ca0`. Integrate the read-only `sprint/1a` ref at `bf6cc66`, preserve the six existing optimizations, then optimize measured self costs without changing integrated behavior. Review remains Claude's after the sprint under 0106. Never push or write another lane's worktree.
+
+## S30 plan and validation
+
+1. Root `npm ci` first (exit 0; 51 packages, zero vulnerabilities). Resolve the one `seats/requests.ts` conflict by retaining S20's candidate derivation/cache and 1A's dated historical appointment menu. Run typecheck and focused appointment/candidate tests before the real merge hook. No generated file conflicts.
+2. Retain an integrated runtime snapshot, inventory, three-day startup smoke, daily-hash baseline and CPU profiles for the 148-day war-by-decision and history slots. These slots currently use the same setup/options; keep distinct samples. Restrict rankings to tick stacks and retain full profiles separately.
+3. Select the largest measured self costs, one coherent optimization per commit. Before an expensive run, verify its assumptions with focused semantic tests and typecheck. Compare every daily hash, daily fires, liveness row, checkpoint, decision and rejection to the integrated baseline. Stop immediately on divergence. Measure three alternating parent/change pairs per slot and retain all losses. Snapshot parents must match their actual commits. No retries for better clocks.
+4. Each commit runs the actual pre-commit hook (`MANDATE_NO_GIT=1`, supported single-worker execution, unchanged timeouts/checks). Expected cost: seconds for focused checks, tens of seconds per full-run sample, several minutes per hook on this shared host. Diagnose unexpected failure before an affected retry; reuse unaffected evidence.
+5. Final validation: frozen daily hashes, replay and save/resume for Union and testbed; fixture reproduction, aliases, final package/runtime inventory and protected-input preservation; final profiles; one default eight-seed `npm run run:done-check` including drafting (roughly 30–45 minutes). Record every failure; no band, budget, signature, behavior or State/schema change. Complete inventories before final documentation. The 40/160 ms gate, 20 ms unloaded aim and Linux CI distinction remain.
+
+## S30 progress
+
+Merge resolution prepared; targeted checks and merge hook pending. Raw logs and snapshots stay in ignored `runs/s30/`.
+
+## S30 proposed rulings
+
+Retain both appointment behavior and the existing candidate optimization, rejecting either-side conflict replacement. Further choices will be recorded with their rejected alternatives after measurement.
+
+## S30 findings outside my scope
+
+Whole-branch review and Linux CI remain the lead's. Integrated 1A acceptance failures will be reported without calibration or waiver.
+
+---
+
 # S2 and S20: tick budget without behavior changes
 
 For the lead: 3 items. S20 only, on sprint/perf from fae69bc, under 0106. Review the three optimizations separately; retain the local/CI distinction and all unmet criteria; route the inherited 1A and view-cache findings to their owners. No push, history rewrite, other sprint write or gate signature.

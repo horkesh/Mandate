@@ -115,6 +115,8 @@ export type Effect =
         readonly side: FactionId | null;
         /** Institutional succession only: replace this incumbent with this successor; never a free appointment. */
         readonly succession?: { readonly from: PersonId; readonly to: PersonId };
+        /** A state's already raised forces, entering service by its own institutional act. */
+        readonly stateForces?: StateForces;
       };
     }
   /**
@@ -122,6 +124,19 @@ export type Effect =
    * edge from the ship. `forces` applies it, or refuses it with a typed reason, in phase 4c beside `command`'s proposals.
    */
   | { readonly landing: { readonly parent: ForceBlockId; readonly men: number; readonly region: RegionId } };
+
+export interface StateForces {
+  /** Stable identity, also used by a later quantified return for the same contingent. */
+  readonly id: string;
+  readonly regiments: number | null;
+  readonly men: number | null;
+  readonly arm: string;
+  readonly termDays: number | null;
+  /** Original expiries are unread, distinct from an indefinite war enlistment. */
+  readonly termUnknown?: boolean;
+  /** Prior requisitions included in this return, so their surviving men are not counted twice. */
+  readonly includesCalls?: readonly string[];
+}
 
 /**
  * An order an option issues: always in the principal's name, through the validated command path (0052). It names a

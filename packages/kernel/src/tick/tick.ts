@@ -51,6 +51,7 @@ import { generateReports } from './generate.ts';
 import { battleReports, BATTLE_REPORT_MECHANICS } from './battle-reports.ts';
 import { commanderLossReports } from './commander-losses.ts';
 import { combatPhase, commandProposalsPhase, storesPhase } from './forces.ts';
+import { stateForcesPhase } from './recruitment.ts';
 import { mapBarrier, mapPhase } from './map.ts';
 import { issueOrder } from './orders.ts';
 import { decideCommand, delegateCommand, runSituations, SITUATION_MECHANICS } from './situations.ts';
@@ -299,6 +300,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   // 4c. The proposals `command` owns: a neutral government closing or reopening (0055, 0058).
   const proposed = commandProposalsPhase(ctx, state);
   state = applyPhase(proposed.state);
+  state = applyPhase(stateForcesPhase(ctx, state));
   const dayMap = proposed.derived ?? mapped.derived;
 
   // 4d. The weekly people step (lane 1.5): grievances fade, promises due break, the ladder and rivals, seat initiatives.
