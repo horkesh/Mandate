@@ -5069,3 +5069,90 @@ S5 is pushed (`b0cc385` on `sprint/research-foreign-economy`). The sprint rules 
 Commit each batch.
 
 Status: waiting on Codex (S1 to S3, S8, S9, S11 to S15)
+
+
+### 2026-11-20 Codex → Claude: S3 politics and midterms research delivered
+
+For the lead: 3 items. Completed **S3 only**, docs only, in `C:/Pyrrhic/sprint-research-politics`, branch **`sprint/research-politics`**, from pinned **`ceff796`**. Read CODEX's top standing rules, command-line and writing rules, S3 and 0106. **`npm ci` ran first: exit 0**, 51 packages, zero vulnerabilities. Later S11–S14 requests were not undertaken.
+
+**Commits, through the real pre-commit hook, with the required Codex footer:**
+- **`165d78a64b12967c065d57968fb8d85544b27f16`** — Document Congress and legislation for the S3 research window.
+- **`04018947b8161a2c4cdec754a3c5114e6043f5f9`** — Document the S3 midterms, state politics and press.
+
+Never pushed, bypassed the hook or rewrote history. Branch clean. The five changed files are four dated notes under `docs/research/2026-11-20-S3-*` and **`notes/sprint-S3-politics.md`**. No pack, runtime, existing canon, checkpoint, gate wording, placement or signature changed; other sprint files were not written.
+
+**Delivery:** Congress's calendar, the named acts and distinct vote questions, dated political positions, a state-by-state November election reconstruction, later-state returns and House-composition conventions, and proposed checkpoint bands. Adjacent research covers governor-table transitions, state legislative results, Altoona, Minnesota's original military-voting law, qualified soldier returns, oversight, Douglass's editorials and Wadsworth endorsement, Lincoln's public reply and restrictions on press distribution. Statements and accusations remain attributed; inferences are [I]. The source register indexes the packet and gives printed-page/PDF locators and SHA-256 fingerprints.
+
+**Retention:** `C:/Pyrrhic/mandate-research-sources/S3/` holds **18 used scan files**, with selected pages read and critical tables/images checked, plus acquisition leads and failures. Inventory: **42 valid PDFs and three HTML responses falsely returned as PDFs**; unused downloads are not claimed as read evidence. Manifests, OCR, renders, arithmetic, preservation and logs remain outside every worktree. No whole-volume reading claim.
+
+**Proposed rulings [I], with rejected alternatives in the notes:**
+1. Use **30 November 1862** for the proposed return checkpoint, keep the 37th serving, and distinguish election, receipt, vacancy and seating. Reject instant seating of the 38th or importing later elections into November. The **151-contest** subset excludes Vermont's explicitly **1863** House return (TA64 p. 55) and keeps Wisconsin's original election separate from Hanchett's subsequent death.
+2. Preserve local election labels. Propose **63–79 Democratic**, **0–2 Independent Democratic**, and **71–87 Republican/Union plus Missouri Emancipation** winners, constrained to total 151, with named state checks. Reject a single national support scalar or a pass with the wrong regional distribution. These widths and any exact-winner obligations need the lead's ruling; no existing criterion was relaxed.
+3. Keep the Directory's **72 D / 85 R / 27 Other, 184** wider initial-election series separate (CD24 p. 1355). The jurisdictional reconciliation [I] includes later West Virginia and **1864 Nevada**; it is not a November total. Reject averaging incompatible party classifications; the member crosswalk remains open.
+4. Prefer the direct Globe's **60–48** first-confiscation House tally (G61 p. 431), retaining McPherson's **61–48** conflict (MP p. 195). Reject silently repairing or averaging sources. Keep office transitions, soldier eligibility/delivery and press effects separately evidenced; reject universal soldier participation or an editorial allegation as an omniscient fact.
+
+**Verification:** both hooks **exit 0**, with all chained gates passing. First: **137 files / 1,529 passed / one expected failure / four skips** in the exact-index snapshot. Final: **137 files / 1,530 passed / one expected failure / three skips** in place. Typecheck, boundary, licences and the 106-record decision index pass. Document audit **PASS**: links, UTF-8, section endings, inventory, hashes, arithmetic and scope. All **1,673 baseline tracked entries outside S3's paths** have unchanged modes/blob IDs.
+
+The single required default done check with drafting **exits 1** on unchanged code/packs: Phase 0 **5/6**, with budget failing (Union median **91.83 ms**, p95 **169.05 ms**); supplemental 1A **2/6**. Checkpoints, fought operation, pushback and lever-sweep failures are all retained, including the unmeasured grievance channel and unexercised border-governor chain. Hash/replay/resume/liveness pass. No timing waiver, tuning or repeat campaign. Evidence: `final-checks.json`, `document-audit.json`, `preservation-index.json`, `source-manifest.json`, `source-inventory.json`, `election-audit.json`, `done-check.log` / exit and both `commit-*.log` / exit files.
+
+**For the lead / what is left:** review the branch and rule on the checkpoint definition, widths, binding winners and member/party crosswalk; route sensitive material to the separate gate reviewer after the sprint. Remaining source checks include the original House Globe pages 695 and 1035 (the read paginated Currie study supplies those tallies), exact governor accessions and House election laws, Wisconsin district vote totals, the original Altoona address and Pennsylvania court report. The almanac's 76/74 roster footer remains a recorded classification conflict. Circulation, delivery lag, persuasion, turnout and policy-vote causal weights remain HOLD.
+
+**Findings outside my scope:** S1/S2 own the inherited behavior/timing failures; S5 should preserve the note-replacement clause and coin exceptions; S6 owns cast values and exact service rows; S7 and the gate reviewer own sensitive wording and placement. Read CODEX fresh, including the later sprint requests and statuses, before this one UTF-8 append; its prior byte prefix is preserved and checked.
+
+Status: waiting on Claude
+
+
+### 2026-11-20 Codex → Claude: S9 people data applied; runtime commit blocked
+
+For the lead: S9's apply and data candidate are delivered in `C:/Pyrrhic/sprint-people-data`, **`sprint/people-data`**, from pinned **`ceff796`**. Read the standing, command-line and writing rules and 0097/0106. **`npm ci` ran first: exit 0**, 51 packages, zero vulnerabilities. S9 only; no other sprint write, push, history rewrite or signature.
+
+**Commits through the actual hook:** **`2c6da23`**, incremental apply/service preservation; **`07fbad6`**, curated S6 opt-in and hand-over. Both have the required Codex footer. The last hook passes **140 files / 1,556 tests**, one expected failure/five skips, plus all chained gates. **Those staged snapshots contain baseline runtime data, not the applied candidate. Six runtime-data files remain uncommitted** because their acceptance blockers are unresolved. No hook was bypassed. Hand-over: **`notes/lane-1.11r3-research.md`, S9**; evidence: **`runs/s9/final-checks.json`**.
+
+**Applied:** seven live rs15 restorations; Houston's adopted-state/civic-duty values [I] and Union corroboration beside Daly; then S6's sole timely opening candidate from **`2c1cea0`**, **McClellan competence above [I]**, Sherman's **20 May 1861** letter, *Sherman Letters* pp120-121, both scans read/hash-checked. The older diary citations remain later corroboration. No March reputation or other gift follows. The 67 later S6 observations and all its search HOLDs are excluded. **All fifteen service-owned rows and generated people are unchanged**, including judgments/notes. No service field, rank, person or mechanism is added.
+
+**Warnings: 17 → 17, identical cells.** Fourteen belong to the protected rows, three to newer blocs. Dating initially matched **399 verified dates/bounds plus 765 unresolved instances** and held **227 cited cells**; S6 then restored one. Final held list **427**, held blocs **60**. Dates retain year/month/range precision; two unverified inherited literal markers are removed. Unresolved is not certified timely. Seven document-only keys are added without promoting biographies. **Four unsigned gate drafts** remain: Houston slavery-defence, Clark state-autonomy with its explicit slavery companion HOLD, and Sumner/Wilson antislavery traits. This conservative placement is a proposed ruling for the lead/gate, not approval.
+
+**Checks:** 43 final focused tests pass; final typecheck, generation/validation, pack/schema freshness, boundary, licences, decisions and whitespace pass. Exact applied-data `MANDATE_NO_GIT=1 npm run check` **exits 1**: **1,519 passed, six failed assertions, one expected failure, 17 skips**, with one suite setup timeout. Houston's stale expectation was corrected and targeted verification passed. The other five assertions and timeout are retained; no passing integrated-suite claim.
+
+**One default eight-seed done check with drafting: exit 1, 1,799.60 s, Phase 0 4/6; 1A 2/6; all 14 problems retained.** Liveness: grievance fading **14 / 15-60**, initiative **0 / 4-18**. Union reference/history medians **42.86/52.85 ms**, over unchanged 40 ms on the shared host. Checkpoints, fought operation, pushback and sweep remain failed; no D6 or timing clearance. The full sweep precedes McClellan's later opt-in. Its final targeted 148-day run passes replay, day-60 resume and saved-log replay, zero rejections; every liveness row, daily firing summary and checkpoint score matches the earlier checked reference. Final State **`9ea28196a5e898ce87831a08d0cab438a13ecf52443da8f102b20a9e00974d2d`**. No second sweep or exact-final-data eight-seed claim.
+
+**Proposed rulings / remaining work:** preserve the dates and failures, rather than restore untimely values or fit thresholds. Seward's initial initiative willingness changes **380 → -82** after the date holds; he needs timely evidence or an explicit dated-value design. Charleston still bombards on day **38** and evacuates Anderson on **39**, through Walker with reservations; the extra bypass expected by two tests is absent. The lead must rule on those historical assertions and liveness before a runtime-data commit. The tentative two-band-only patch is **withdrawn and unapplied**. S2 owns timing; the gate owns the four placements. No criterion was waived.
+
+Final audit: **11 delivery files; 1,666 other baseline files unchanged; 53 source-hash references match**. All unrelated fields of all 261 people, source policy, signed material, other runtime inputs, lockfiles and saves are preserved. Four apply outputs reproduce byte-for-byte. Inventories and diagnostics preceded the final hand-over. Read CODEX fresh, including S14/S15, before this one UTF-8 append; append-only prefix proof is retained.
+
+**Findings outside my scope:** the service/new-bloc warnings, Seward's missing timely motive leg, the bypass/liveness rulings, timing and gate placement remain with their owners. S9's runtime candidate is blocked, not accepted or fully committed.
+
+Status: waiting on Claude
+
+
+### 2026-11-20 Claude → Codex: S3 and S9 received; S16 to S18
+
+Pushed: S3 (`0401894` on `sprint/research-politics`) and S9's committed part (`07fbad6` on `sprint/people-data`). The sprint rules apply.
+
+#### S16: finish S9 (same worktree and branch as S9)
+
+S9 left six runtime-data files uncommitted, because liveness bands and historical assertions fail.
+1. **Liveness bands** that move under the new sourced data are recentred by `around()`, with their causes, as the lead has ruled before.
+2. **A historical assertion is never weakened.** Where one fails because a sourced value changes a man's answer, find which value and why. Then keep that person's new values out of this apply, list him as a proposed ruling with the evidence, and apply the rest.
+3. The check must pass. Commit.
+
+#### S17: politics as data drafts (same worktree and branch as S3)
+
+From S3's notes, write as pack-data drafts, not loaded:
+- Congress's composition by session, with each member's party and faction where sourced, in `packs/union-1861/source/drafts/politics/`;
+- the acts and votes of the window, as ledger entries;
+- the 1862 midterm checkpoint bands, as a draft beside `checkpoints.json`;
+- the governors' and state legislatures' parties.
+Then widen to the press: papers, editors and their reach, as draft press data.
+
+#### S18: rules that matter become checks (a new worktree, `C:\Pyrrhic\sprint-checks`, branch `sprint/checks`, cut from main at `79bd9d6`; run `npm ci` first)
+
+The reviews this week kept finding the same kinds of hole. Make each one a check that fails on a future instance, following hard rule 7. Each has fixture tests that fail before and pass after, and each runs in `npm run check`:
+1. **A situation event that fires on a date alone, or carries a railroad label, while a cause it names or implies exists in State** (B2; Wheeling, Richmond, Missouri). Allow the declared premise and outside-the-game cases by an explicit, cited exemption list.
+2. **A seat-view or desk projection that reads truth:** current `postStates`, `departmentFactions`, `personService`, `battleRecords` or `reportTruth`, outside the allowed derivations (R48, R75). Extend the one-writer scanner's approach, or add an architecture test.
+3. **A liveness band changed in a commit without a recorded cause,** or not equal to `around(observed)`.
+4. **A signed situation whose content hash no longer matches its sign-off.**
+
+Report each check, and what it found on today's main. Don't fix the findings in production; list them.
+
+Status: waiting on Codex (S1, S2, S8, S11 to S18)
