@@ -18,6 +18,9 @@ import type { VerbCommand } from '../src/log/commands.ts';
 import { commanderLossReports } from '../src/tick/commander-losses.ts';
 import { relieveHolder } from '../src/command/command.ts';
 import { applyPeopleChanges } from '../src/people/people.ts';
+import { attentionPrice } from '../src/tick/attention.ts';
+import type { MessageId } from '../src/ids.ts';
+import { setGoal } from '../src/plans/plans.ts';
 import { sendMessages } from '../src/messages/transit.ts';
 import { depot, edge, F, FIXTURE_COMBAT_RULES, R, region } from './support/map-fixture.ts';
 
@@ -71,6 +74,32 @@ const menuOf = (s: State) => principalMenu(world, s, F('b'), morningGround(world
 const lossKnown = (s: State) => knowledgeOf(s, B_SEAT).knownReports.some((r) => r.knownBody.reportClaims.some((c) => c.claimKind === 'commander-lost'));
 
 describe('posts as the principal believes them (lane 1.12; 0052)', () => {
+  it('an unreported capture changes neither the audience answer nor the attention charged', () => {
+    const { state: captured } = untilCaptured();
+    const holder = PER('b_gen');
+    // Hold the undelivered traffic fixed: only the holder/status truth differs.
+    const present: State = {
+      ...captured,
+      postStates: { ...captured.postStates, [ARMY]: { ...captured.postStates[ARMY]!, postHolder: holder } },
+      personStatus: { ...captured.personStatus, [holder]: { ...captured.personStatus[holder]!, statusKind: 'serving' } },
+    };
+    expect(lossKnown(captured)).toBe(false);
+    expect(knowledgeOf(present, B_SEAT)).toEqual(knowledgeOf(captured, B_SEAT));
+    for (const state of [present, captured]) {
+      expect(believedHolder(state, B_LEAD, ARMY)).toBe(holder);
+      expect(state.planRecords[ARMY]).toBeUndefined();
+    }
+    const command: VerbCommand = { cmd: 'audience', to: ARMY, counters: [] };
+    const issue = (state: State) => tick(world, state, [{ day: state.stateDay + 1, seat: B_SEAT, command }], { freeze: true });
+    const held = issue(present);
+    const lost = issue(captured);
+    expect(held.rejections).toEqual(lost.rejections);
+    expect(held.rejections.map((r) => r.reason)).toEqual(['bad_counters']);
+    expect(held.state.seatAttention[B_SEAT]).toEqual(lost.state.seatAttention[B_SEAT]);
+    expect(held.state.seatAttention[B_SEAT]!.attnLeft).toBe(present.seatAttention[B_SEAT]!.attnLeft);
+    expect(attentionPrice(world, present, command)).toBeGreaterThan(0);
+  });
+
   it('reads a loss report without needing a battle record', () => {
     const { state } = untilCaptured();
     const withoutBattle = { ...state, battleRecords: {} };
@@ -96,7 +125,16 @@ describe('posts as the principal believes them (lane 1.12; 0052)', () => {
     { cmd: 'observer', to: ARMY, person: PER('b_spare'), route: 'courier' },
   ];
   it.each(verbs)('$cmd accepts a believed holder, then returns undelivered without answering or applying effects', (command) => {
-    const { state } = untilCaptured();
+    const { state: captured } = untilCaptured();
+    // The audience needs an existing subject; no-plan refusal has its own paired-State test above.
+    const state = command.cmd !== 'audience' ? captured : setGoal(captured, ARMY, {
+      id: 'm.0.audience-subject' as MessageId,
+      issuer: B_LEAD,
+      goal: { goalObjective: null, goalPosture: 'hold', goalRisk: 300, goalDeadlineDays: 20, goalRail: false, goalRiver: false, goalSea: false, goalNeutral: false, goalCommitted: [], goalAwaitWord: false, goalApproveAsDrafted: true },
+      viaChain: true,
+      issuedDay: 0,
+      response: 'm.0.audience-subject|b_gen',
+    }, 0);
     const ctx = ctxFor(world, state, state.stateDay + 1, [...TICK_MECHANICS, ...MAP_MECHANICS]);
     const sent = applyVerb(ctx, state, B_SEAT, command);
     expect(sent.reason).toBeNull();

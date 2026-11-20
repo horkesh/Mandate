@@ -38,8 +38,8 @@ describe('a transfer concentrates on union-1861', () => {
       // It went by rail: the side traces the lines from New York (0019).
       expect([...(legs.get(b) ?? [])]).toContain('rail');
     }
-    // Positive control: at peace nobody is called, nothing is transferred, and nothing joins.
-    const peace = phase0.playDays(world, phase0.createState(world, setup), () => rules, 75, { freeze: true });
+    // Positive control: before the authored opening decisions, nobody is called or transferred, and nothing joins.
+    const peace = phase0.playDays(world, phase0.createState(world, setup), () => rules, 30, { freeze: true });
     expect(Object.keys(peace.state.forceJoins)).toEqual([]);
     expect(Object.keys(peace.state.forceLocations).some((b) => b.startsWith('raised.'))).toBe(false);
   });

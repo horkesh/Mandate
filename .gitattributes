@@ -2,3 +2,16 @@
 *.png binary
 *.jpg binary
 *.pdf binary
+
+# Lane 0.7l (docs/design/ASSETS.md 0.7): the game's binaries under art/ live in Git LFS. Recipes (*.recipe.json) and
+# the licence notes stay ordinary text. tools/lfs-check.ts reads these lines: a binary under art/ that is not an LFS
+# pointer is refused by the pre-commit hook and by CI.
+art/**/*.png filter=lfs diff=lfs merge=lfs -text
+art/**/*.webp filter=lfs diff=lfs merge=lfs -text
+art/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+art/**/*.wav filter=lfs diff=lfs merge=lfs -text
+art/**/*.ogg filter=lfs diff=lfs merge=lfs -text
+art/**/*.flac filter=lfs diff=lfs merge=lfs -text
+art/**/*.ttf filter=lfs diff=lfs merge=lfs -text
+art/**/*.otf filter=lfs diff=lfs merge=lfs -text
+art/**/*.woff2 filter=lfs diff=lfs merge=lfs -text

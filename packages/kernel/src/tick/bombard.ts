@@ -41,6 +41,18 @@ export function bombardFort(ctx: TickContext, start: State, attackerPost: PostId
   fire(ctx, 'combat.bombardment');
   fire(ctx, 'combat.battle_day');
   if (fort.day.losses > 0) fire(ctx, 'combat.killed_wounded', fort.day.losses);
+  // The garrison reports today's fire even if it holds. A received phase claim, never an authorization flag,
+  // can tell its principal that bombardment began. Send before a surrender vacates the commander's post.
+  if (fort.commander !== null) {
+    sendReport(ctx, start, {
+      body: { reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: fort.commander, reportAuthorPost: fort.defPost,
+        reportSubjectKind: 'region', reportSubjectId: objective, reportDay: day, reportHour: null, reportAdvice: null, reportAnswers: null,
+        reportClaims: [{ claimKind: 'battle-phase', claimRegion: objective, claimValue: 1, claimToken: 'bombard', claimConfidence: 1000 }] },
+      truth: { truthTerms: fort.day.terms.map((x) => term('observed', x.btermValue, { region: objective, rule: x.btermKind })), truthTrimmed: [] },
+      to: world.faction(fort.defFaction).principal, fromRegion: objective, tag: `bombard.${objective}`,
+    });
+    fire(ctx, 'reports.battle_dispatch');
+  }
   works.push(...fort.works);
   let state = applyForces(start, fort.forces).state;
   if (fort.surrendered === null) return { state, fort };

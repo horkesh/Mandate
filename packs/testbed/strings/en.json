@@ -145,5 +145,17 @@
   "plan.note.error.kind": "Use focus:axis:region, via:axis:region, wait:axis:days or avoid:axis:region.",
   "plan.note.error.days": "A wait note needs a whole number of days, zero or more.",
   "plan.note.error.waypoint": "A route note must name each waypoint.",
-  "plan.note.error.sendback": "Notes accompany a send-back."
+  "plan.note.error.sendback": "Notes accompany a send-back.",
+"press.headline.won": "Victory reported at {region}",
+  "press.headline.lost": "Defeat reported at {region}",
+  "press.headline.drawn": "No decision reported at {region}",
+  "press.commander": "The paper names {commander} as commander.",
+  "press.no_figures": "No casualty figures have arrived.",
+  "press.losses.first": "The returns so far list {losses} killed, wounded and missing, including any captured.",
+  "press.losses.full": "The full returns list {losses} killed, wounded, missing and captured.",
+  "press.captured": "Of these, {captured} are listed as captured.",
+  "press.framing.headline": "Public opinion on the opening of the war",
+  "press.framing.other": "The paper reports that the public holds the other side responsible for beginning the war.",
+  "press.framing.own": "The paper reports that the public holds its own side responsible for beginning the war.",
+  "press.empty": "This page carries no new battle story."
 }

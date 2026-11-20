@@ -124,7 +124,7 @@ export function search(ctx: Ctx, from: RegionId, to: RegionId, mode: SearchMode,
       const landed = next === to ? 0 : (ctx.threat.get(next) ?? 0);
       const threatMen = landed + (obstacle?.threat ?? 0);
       const threat = Math.trunc((Math.trunc((threatMen * 1000) / ctx.input.rules.menPerDay) * weights.riskWeight) / 1000);
-      // STAND-IN (lane 1.4, 1B's ships' stores): ships and boats carry their own stores; only marching outside the network costs supply.
+      // STAND-IN(owner: 1B, ships' stores; labelled by lane 1.4): ships and boats carry their own stores; only marching outside the network costs supply.
       const outside = mode === 'land' && !ctx.inSupply.has(next);
       const supply = outside ? Math.trunc((leg.daysPermille * weights.supplyCare) / 1000) : 0;
       const held = mode === 'land' && next !== to ? heldDays(ctx, next) : 0;

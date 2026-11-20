@@ -1,0 +1,222 @@
+# Lane 1.11r3 (research leads and re-sourcing): hand-over at the pause
+
+R45 update, 19 November 2026: round two and the register/bloc notes are now under `docs/research/_resource/` in `research-1861-round2`, uncommitted for the lead. Nothing has been applied to pack data. Read the R45 close-out below before running the older apply: it still pre-positions fifteen officers, blanks Stone as a civilian and keeps the ten disputed Confederate fact HOLDs as coded. Those outcomes need reconciliation with R49 and the new research. The earlier pause record follows for provenance.
+
+R51 update, 19 November 2026: rounds 1 and 2 are applied in `C:/Pyrrhic/mandate-resource-apply`, branch `phase1-resource-apply`, from `7a9b37e`. The current close-out is below. The older pause instructions and R45 record are retained as history; the current apply follows 0097, skips all fifteen R49 rows, and does not pre-position them. No commit or push was made.
+
+R52 update, 19 November 2026: read the R52 close-out and `docs/research/_resource/dating-method.md` first. Decision 0097 supersedes the older pre-positioning/bloc instructions below: R49 owns the fifteen officers; the ten disputed Confederate starts and nine civilians get none; Stone gets none pending authority; Lincoln's reputation CHANGE is rejected. R52 is research only. Earlier hand-over sections are retained for provenance.
+
+## Branches and heads (all pushed)
+
+| Branch | Head | What |
+|---|---|---|
+| `phase1-evidence-warning` | `e8c5808` | The contemporary-leg warning (0087), extended to blocs (`bloc_cites` column), refusing later reference works as a leg (`evidence.referenceWorks`), and exempting fact blocs (`evidence.factBlocs`: army, confederate). Reviewer approved up to `1027a36`; `83371b7` and `e8c5808` follow it and are with the reviewer. |
+| `phase1-taney-1861` | `d50e533` | The `taney_roger_b` row (facts only) and PROVENANCE keys `TYLER-TANEY` and `TANEY-REPORTS`. With the reviewer. Appends at the end of `people.csv`, so expect a trivial merge conflict with any other branch appending rows. |
+| `research-1861-leads` | this commit's head | Docs only: every note under `docs/research/_leads/` (J1, K1-K3, L1-L3, M1, N1, T1, T2, W1, G1), the reader outputs under `docs/research/_resource/` (rs1-rs9), the apply tools, the briefs and the batch files. |
+
+## Rulings in force (the lead's)
+
+- `army` and `confederate` are **facts** (a federal commission held on 5 March 1861; a side joined), not factions: `evidence.factBlocs: ["army","confederate"]`. A register (including the Navy Register) sources them. `referenceWorks` refuses a work only as a leg for a judgment or a factional bloc, never for a fact.
+- The **ten with no federal commission on 5 March** get **bloc none** at the start: Burnside, Grant, Halleck, Hitchcock, Hooker, Mitchel, Patterson, Rosecrans, Sherman, Stone. A source showing one held a federal commission that day keeps him `army`.
+- The **fifteen who resigned after 5 March** (Buchanan, Cooper, G. B. Crittenden, Ewell, Gorgas, Holmes, A. S. and J. E. Johnston, Lee, Longstreet, Loring, Magruder, Pemberton, E. K. Smith, Stuart) are **pre-positioned**: they keep their coded bloc as a labelled stand-in, owned by lane 1.12, with the resignation date and its register source in the row's notes. Their change to `army` is **not** applied until lane 1.12 builds resignation (Part B). `apply.js` writes the note text.
+- **Price** changes to `border_unionists` (his election as president of the Missouri convention on 28 February 1861): a plain fact, applied.
+- `CongDir37` and `NavyReg1861` stay in `referenceWorks` (period lists that state no judgment). The 12 navy captains and the 13 serving army officers stand as facts if the register entry states a commission before 5 March.
+- Lincoln's competence stays HOLD (Newton's 1913 remark is retrospective). Drop `WELLES-D1-RETRO` from the Seward cells (the readers already replaced those cites). Nicolay and Hay's narrative is not a document leg.
+- Open question for the steward (OPEN_QUESTIONS, 1B): a man's bloc does not change in play, so a civilian commissioned later never joins the army bloc.
+
+## Re-sourcing results (round 1, readers rs1-rs9; files `docs/research/_resource/rsN.csv` and `.md`)
+
+**181 judgment cells (rs1-rs6): KEEP 92, CHANGE 7, HOLD 82.** No KEEP or CHANGE rests only on a reference work. **172 blocs (rs7-rs9): KEEP 70, CHANGE 17, HOLD 85.** By bloc (KEEP / CHANGE / HOLD of n): army 21/0/23 of 44; confederate 23/16/22 of 61; moderates 4/1/20 of 25; radicals 10/0/11 of 21; war_democrats 6/0/5 of 11; border_unionists 4/0/3 of 7; peace_democrats 2/0/1 of 3.
+
+Under the rulings: the 67 factional blocs split **27 stand, 40 held** (so the held blocs include McClellan, Cameron, Fessenden, Curtin, Dennison, Morton, Yates, Morgan, Ramsey, Butler and the editors, which moves the politics calibration: lane 1.14 needs to know). The 10 civilians lose their bloc. The 35 HOLDs on fact blocs (13 army officers, 22 confederate) **stand as coded**. **Check before they do:** the 22 confederate men include several not plainly in the Confederate side on 5 March (Breckinridge, Buckner, Vance, Letcher, Polk, Lovell, Mason, Hunter, Floyd, Bulloch); the lead should confirm. The 13 army officers (Franklin, Heintzelman, Keyes, McDowell, Mansfield, Meade, Meigs, J. F. Reynolds, Ripley, Schofield, C. F. Smith, G. H. Thomas, F. J. Porter) need the register line checked (task A1 below).
+
+**Net effect on the leg check:** applying round 1 leaves **130 cells still warned** (76 reputation, 16 nerve, 13 competence, 18 traits, 4 values, 3 regard, across 90 people) because they cite only reference works. The warning rose from 353 to 464 when `referenceWorks` landed and fell to 359 with `factBlocs`.
+
+## How to apply on resume
+
+1. New worktree from the branch that holds the policy (`phase1-evidence-warning`, or main once it merges): `git worktree add -b phase1-resource-1861 <path> <base>`, then `npm install` there.
+2. Copy `docs/research/_resource/` (rs1-rs9, and rs10-rs14 if round 2 runs) into it. Set `PACK_ROOT` to the worktree path and `HELD_OUT_CELLS` and `HELD_OUT_BLOCS` to the two held-back CSVs under `packs/union-1861/source/drafts/people/` (names: `held-back-judgments-1861.csv`, `held-back-blocs-1861.csv`).
+3. `node docs/research/_resource/tools/apply.js --dry` (prints counts, the pre-positioned fifteen, the fact HOLDs that stand), then without `--dry`; then `node .../addsources.js` (45 PROVENANCE entries for the `NEW:` keys, `NEW:` already stripped from the cites); add `ArmyReg1861-09` and `NavyReg1863-RESIGN` to `evidence.referenceWorks` in `gate/source-policy.json`; `npm run pack:generate -- union-1861`.
+4. `residual.js` lists the cells still warned (it needs a throwaway `packages/cli/src/tmp-issues.ts` that prints `generatePack(...).issues` filtered to `no-contemporary-leg` as JSON to `$OUT_ISSUES`, because `pack:validate` prints only 200 lines; do not commit it).
+5. Run `npm run check` (the hook), commit with `git commit -F`, push, name the head to the reviewer, report the Union run's change to lane 1.14. Dry-run result at the pause: 82 cells held, 50 blocs blanked (40 factional + 10 civilians), 15 pre-positioned, 35 fact HOLDs standing, one error-free generate.
+
+## What remains
+
+- **The 130 residual cells** (round 2, readers rs10-rs14, stopped before writing output): batches are in `docs/research/_resource/briefs/batch10..14.md` with `BRIEF-resource2.md`. Each cell gets a contemporary leg (reputation needs someone else's judgment before 5 March 1861) or goes to the held list. Alternative: hold all 130 at once and skip the round.
+- **A1 (army register check):** verify against the 1 Sept 1861 Army Register (`officialarmyregi1861unit`), Heitman and Cullum that the 13 serving officers held a commission before 5 March 1861 and that the 10 civilians held none (Patterson: Pennsylvania militia only? Stone: D.C. militia under what authority?). Not started on disk (the reader was stopped before writing).
+- **The dating pass:** add `dated YYYY-MM-DD` to the older cells' citations (998 cited cells, 1,668 citations, 220 with embedded dates; 84 cells would be refused on embedded dates plus the weak list). Includes Holt's reputation re-entry only if the telegram's words are someone else's judgment of Holt, and Harney's regard for Price. A data change after the apply.
+- **Findings to route:** Cameron's 22 June speech (250,000 men in the field, half a million in six months) to lane 1.14 as a cross-check; the pack source note that names Henderson as Marine Commandant should read Col. John Harris (Henderson died January 1859).
+
+## Research notes delivered (read the files for words, pages and strengths)
+
+- **T1 Taney:** quote at Reports pp. 269-270 ("I shall, therefore, order ..."); Congress-only sentence p. 255; opinion undated in print, printed in the National Intelligencer by 4 June 1861 (Rebellion Record vol. 1, Diary p. 92), out by 8 June (Tyler p. 430). Use "by 4 June". 1 June is unverified. "Secretary of War ad interim" is unsourced and left out. Sent to lane 1.11 and the lead.
+- **N1 Congress and the writ:** none found, 26 May to 4 July 1861. Sent.
+- **T2 strengths:** no primary counts Confederate men for 31 July; highest primary is 190 regiments and 34 battalions accepted (Walker, 24 July, OR IV-1 pp. 496-497); about 200,000 is the reader's inference. Marines: no figure for the Washington barracks as a station; about 40 left at the Navy Yard on 24 April (ORN I-4 p. 424); Corps total 2,500 (4 July report). Sent to lane 1.14.
+- **W1 Wheeling:** Convention opened 11 June 1861 (printed Journal p. 3); reorganising ordinance "Passed June 19, 1861" (Ordinances p. 6-7; final yeas 78 in the Journal, 74 in Lewis: the date is not in doubt); Pierpont elected Governor 20 June, 77 votes (Journal p. 27); Wheat Attorney General 21 June (p. 31); Legislature met 1 July. Neither the Declaration nor the Ordinance names any county; the credentials roll (Lewis pp. 79-80) gives 35 counties, including Alexandria, Fairfax, Hampshire, Hardy and Jefferson; the 20 August Ordinance's 39 counties are after the window. **Earliest federal recognition: 25 June 1861, Cameron's letter to Pierpont as "Governor of the Commonwealth of Virginia" (OR I-2 pp. 723-724);** then 26 June (Interior certificate), 4 July (the message recognises loyal citizens but does not name the government), 13 July (Senate seats Carlile and Willey on Pierpont's credentials, Globe pp. 103, 109). **Not yet sent to lane 1.11 or the lead.**
+- **G1 Texas governor:** Sam Houston held the office on 5 March 1861 and acted as governor (his letter of 6 March, Convention Journal pp. 113-114; Cave for him, 13 March, OR I-1 pp. 612-613, saying he "cannot recognize any obligation" to the Confederate government). He did not appear for the oath at noon on 16 March; the Convention declared the offices of Governor and Secretary of State vacant and treated Lieutenant Governor Edward Clark as Governor that evening (Journal pp. 183-187). Clark confirmed OR I-1 pp. 616, 630. Houston's own 16 March address is unread (snippet only). Birth and death dates are general-record only. So the pack holder on 5 March is Houston, hostile to the Convention and Confederate control: a call from Davis to Texas on 5 March reaches a governor who refuses it. **Not yet sent to lane 1.12 or the lead.**
+- Older notes (J1, K1-K3, L1-L3, M1) were sent earlier; see `docs/research/2026-11-16-1861-gaps.md` section 7 for the digest.
+
+## Review fixes (2026-11-19)
+
+Codex's review of this branch (R44) held it for three fixes, made by the lead: the tools in `docs/research/_resource/tools/` run as CommonJS through their own `package.json` (the root package is an ES module, so `apply.js` could not start); G1's line on Clark's successors (Clark to 7 November 1861, then Lubbock, then Murrah); and T2's 200,000, which is a rough estimate for the units Walker counted and an inferred calibration band, not an upper bound. The commands above are unchanged.
+
+## R45 close-out, 19 November 2026
+
+**Where this lane stopped:** research outputs only, in `C:/Pyrrhic/mandate-research-r2` on `research-1861-round2`. No apply, pack generation, commit or gate signature. R44 and R46 files were left alone. Detailed source limits, counts and evidence are indexed by `docs/research/_resource/R45-method-and-results.md`.
+
+**Built:** `rs10.csv` to `rs14.csv`, each with its markdown note, in the unchanged apply format. All 130 residual cells are covered exactly once: **13 KEEP, 1 CHANGE, 116 HOLD**. Per batch KEEP/CHANGE/HOLD: rs10 **10/0/19**, rs11 **0/1/28**, rs12 **1/0/29**, rs13 **2/0/28**, rs14 **0/0/12**. Aggregate per field: reputation **5/1/70**, nerve **2/0/14**, competence **0/0/13**, traits **2/0/16**, values **3/0/1**, regard **1/0/2**. Per-batch field tables are in each note. [I] The CHANGE recommends Lincoln's reputation average to above on Andrew's reprinted 1860 speech, Pearson 1 p116. Its exact day is unresolved and is not asserted as 23 May.
+
+**A1:** `A1-registers.md` checks all 23 men. All thirteen serving officers held US Army commissions at the start. Nine former officers held none. Stone is the exception to the broad wording: Cullum 2 no1237 pp117-118 dates a District volunteer inspector-general appointment to 1 January 1861, while the Army Register p46 confirms his Regular Army resignation and May reappointment. His later account says presidential commission/muster, but that authority claim still needs a contemporary record. [I] Leave his bloc unassigned pending the lead's classification, preserving the distinction in his notes. Do not certify an unqualified ten-person no-federal-commission result. Patterson's Pennsylvania militia title is distinct from his later 15 April federal muster (Heitman 1 p775, Appletons 4 pp673-674).
+
+**Ten coded Confederate starts:** `ten-confederates.md` recommends **none for each [I]**: Breckinridge, Buckner, Vance, Letcher, Polk, Lovell, Mason, Hunter, Floyd and Bulloch. These are recommendations for the lead, not a change to the binding fact-HOLD ruling. None means an evidence hold, not political neutrality. Bulloch's precise start-day employment/location/commitment remains unestablished. Later military appointments do not establish earlier private allegiance for Polk or Floyd either. The table names the factual office/service evidence and its limits for every man.
+
+**Dating:** `dating.csv` starts the optional pass with **12 verified documentary date records across 9 older cells**. Most of the hand-over's 998 cells/1,668 citations remain. Exact dates are not invented for bounded-year letters or speeches, and a verified date does not rehabilitate a held judgment.
+
+**Verification:** the inherited parser and read-only apply harness pass, exit **0**, for all 130 cells. Dry-run counts: **log 0, 198 held judgment rows, 50 held blocs, 15 pre-positioned, 35 fact HOLDs standing**, no missing civilian ids. The original `node apply.js --dry` command is incompatible with this root's ESM mode, so the new research-only `.cjs` harness evaluates the original CommonJS sources unchanged and exposes no filesystem writes. Required `MANDATE_NO_GIT=1 npm run check` exits **2** before tests, missing Node type definitions. `npm run run:done-check` exits **1**, missing `tsx`. No dependencies were installed, **0 tests ran and 0 done-check criteria were evaluated**. This base's Vitest config also lacks the later no-git exclusion, so dependencies alone would not make the full command compliant. The two required checks remain unmet. Logs and inventories are in `docs/research/_resource/evidence-r45/`.
+
+**What remains:** lead/standing review of the documentary interpretations, a ruling on Stone and the ten disputed fact blocs, the rest of the dating pass, and the apply on a compatible base. Gate review belongs to the later placement/apply lane. No situation or player-facing text was authored here.
+
+## Findings outside my scope
+
+- **Apply/R49:** once resignation lands, the apply must skip the fifteen pre-positioned stand-ins in its existing notes. R45 did not change that tool or those pack rows. Its dry run still prints all fifteen. It also still preserves the ten disputed Confederate fact HOLDs and blanks Stone under the old civilian set.
+- **Lead/research:** obtain Stone's contemporary commission/order/muster authority and a precise Bulloch start-day dossier if a positive starting bloc is desired. Schofield's first-lieutenant dates differ between the registers, but both precede the start and A1's verdict is unaffected.
+- **Validation owner:** supply dependencies and the later no-git exclusion on the apply/integration base, then run the two required gates. They did not pass in this research-only checkout.
+- Earlier Harris/Henderson and Cameron strength findings remain in the earlier hand-over, without a new historical verification claim from R45.
+
+## R51 close-out, 19 November 2026
+
+For the lead: 3 items. R51 only is ready for Claude's standing review. Evidence index: `runs/r51/final-checks.json`. No R52 research or other worktree was changed. Dependencies were installed with `npm ci` first (exit 0). Git was read-only; HEAD remains `7a9b37ecc6137d23f692fa18ea5eb9c897534d4c` and the index is empty.
+
+### Applied and held
+
+The apply now implements 0097 over rs1-rs14, with a global whole-row exclusion for the fifteen R49 officers, including their judgments. The new empty `bloc_cites` column is the only schema addition; every pre-existing field of those fifteen matches the baseline. They keep this base's starts until R49 supplies their corrected rows. The ten disputed Confederate starts and nine civilians have no bloc. Stone has no bloc and retains his January 1861 District service in notes, with federal authority unresolved. A1's thirteen serving officers keep `army`. Price becomes `border_unionists`; Trumbull becomes `radicals`. Lincoln's rejected reputation change is held, with the average default, not `above`.
+
+The judgment held list has **189** distinct cells: 188 after the R49 exclusion and Lincoln hold, plus Dana's antislavery rights hold below. Fields: competence 27, nerve 24, reputation 78, traits 29, regard 5, regard toward others 18, values 7, candour 1. The bloc held list has **60** distinct people: 40 factional, nine civilians, Stone and ten disputed Confederate starts. These are new CSVs under `source/drafts/people/`; older held records are preserved.
+
+The contemporary-leg warnings fall **362 → 17**. Fourteen are on preserved R49 rows; three are the newer Baldwin, Botts and Summers factional blocs, not covered by rs1-rs14. Every remaining row and locator is in `after-warnings.txt` and `data-audit.json`. They remain warnings, not approval. Unknown-value warnings rise **790 → 919** as unsupported centres become unknown; rank-demotion 20, ship-ashore 1 and war-flag-unset 2 are unchanged. Generation has no errors.
+
+The inherited dating table has twelve records over nine cells. Eight records match surviving citations on seven cells; the four for Seward's nerve and Lyons's competence belong to held cells and do not restore them. Andrew's ratification speech is bounded to `dated 1860`; Russell's letter supporting Lyons's reputation to `dated 1853`. The earlier guessed days/months are not repeated. The bulk dating pass remains R52.
+
+`addsources.js` was run and adds **48** sources net: the original 45, less the excluded Bates diary, plus four keys specifically for quoted period documents. The containing Pearson, Nicolay/Hay, Newton and Woodburn books remain secondary. Only reader-approved document citations are remapped to the `-DOCS` keys; original narrative citations are not promoted. Both register keys are in `evidence.referenceWorks`. Two generated files changed, through `npm run pack:generate -- union-1861`: the world and March scenario. The two generated string files are unchanged.
+
+### Washington Marines
+
+The live block and its two OOB drafts now distinguish the observations in T2 section 2. March barracks strength stays unknown: no station return was found. The Navy Yard temporarily held 134 Philadelphia Marines on **23 April** (ORN I-4 pp.423-424); about **40** remained for yard defence on **24 April** (p.424), not the barracks total. The headquarters battalion left on **16 July**: **350 officers and enlisted men** in Reynolds's report of 24 July, against Welles's **12 officers and 336 men** (December report, Appendix pp.37-38). Corps-wide context is separately labelled: **2,500 privates**, 4 July report p.95; the additional **1,152** authorized in April-June, No.6 pp.108-109; and **2,964** ashore and afloat in October, December report pp.19-20. The commandant is **Col. John Harris**. The snippet-based 150-400 proposal is superseded. The 40 and 350 observations are not asserted as bounds on March station strength.
+
+### Union measurements for lane 1.14
+
+Compared one baseline Union at-war 75-day run with the same checked run produced by the final done check. Daily hashes, replay and mid-run resume pass on each. These are labelled Phase 0 mechanics runs, not a March-July history run. All existing band limits remain unchanged. **148 of 153** mechanics have identical fire counts and magnitudes; every changed mechanic stays within its band:
+
+| Mechanic | Fires before → after | Magnitude before → after | Existing fires band |
+|---|---:|---:|---:|
+| `recruitment.slow_walked` | 11 → 12 | 11 → 12 | 5-22 |
+| `messages.sent` | 5483 → 5484 | 5483 → 5484 | 2740-10960 |
+| `messages.delivered` | 5024 → 5025 | 5024 → 5025 | 2510-10042 |
+| `forces.stores_fell` | 142 → 135 | 138856 → 134059 | 71-284 |
+| `forces.stores_refilled` | 266 → 268 | 258220 → 262279 | 133-532 |
+
+The first fire-count divergence is one more slow-walked levy on day 41. Message and refill counts first diverge on day 46; stores-fell first diverges on day 56. [I] Changed/defaulted governor judgments and bloc inputs change levy compliance and timing; the resulting message and stores schedules shift. This is an inference from the data-only change and daily traces, not a proved per-officer causal attribution. No engine coefficient or liveness band was tuned. All checkpoint score fields at days 15, 30, 45, 60 and 75 are identical, including men, unknown-strength blocks, control, supply, pockets and total blocks. Full deltas and input/output hashes: `union-comparison.json`.
+
+### Verification and preservation
+
+- Cheap startup and apply dry checks passed. Six new in-memory tool tests cover R49 preservation, no-bloc rulings, Lincoln's hold, dates/repeatability, reprinted-document identity and Bates exclusion. Retained red logs include two corrected fixture assumptions and the development correction that moves the decision read after the rights hold.
+- The focused pack check caught the Bates rights conflict before a full suite. The existing licence assertion remains unchanged; after the correction the focused preflight passed **31 / 4 skipped**, plus typecheck.
+- `MANDATE_NO_GIT=1 npm run check`: **exit 0**, **100 files, 1,272 passed / 7 skipped**, typecheck, boundary, licences and decision index pass. Four skips are Git-dependent LFS checks (three mutating fixtures and the `ls-files` hook-mode check); three are established optional tests. Normal CI collection remains full. The no-git guards are the only test-infrastructure change. No Git mutation fixture ran.
+- `npm run run:done-check -- --label r51-done`: **exit 0, 6/6 Phase 0 criteria**. Union median/p95 **30.40/62.56 ms**; testbed **3.08/5.00 ms**. Drafting is sound: capped worst day **25.6 ms**. Linux/Windows hosted comparison was not run. No milestone 1A acceptance claim is made.
+- Source-data audit and final preservation audit pass. **270 protected files** are unchanged, including kernel, testbed, signed situations, gate files apart from the requested source policy, strings, pack rules and lockfile. No save fixture was regenerated. Runtime diagnostics and the delivery inventory precede this close-out. No server was started. `git diff --check` is clean; HEAD and index are unchanged.
+
+### Proposed rulings
+
+1. Keep the **Bates diary rights hold**: omit its supplemental citations and hold Dana's sole-source antislavery cell. Rejected marking the 1933 edition public domain on the strength of its GPO imprint, or weakening the existing licence test. The research itself records the caveat. Lincoln's affected cells retain independent letters. This adds one hold beyond the reader decisions; the lead may clear it with rights evidence.
+2. Use separate **primary document keys** for the reader-identified reprints under 0087. Rejected promoting whole biographies to primary or leaving approved documents warned merely because their container is secondary.
+3. Preserve **unknown March barracks strength** while correcting dated context. Rejected backdating April's 40 or July's 350, or treating observations of different bodies as a station-strength interval.
+
+## Findings outside my scope
+
+- **Item 3 is skipped as instructed.** Lane 1.14's done check is not on main at this base. Its inferred, revisable Confederate ceiling of 200,000 [I] remains for that lane after integration; no substitute check or band was added.
+- **R49** owns all fifteen excluded rows. Their starts here are deliberately not corrected or certified, and fourteen contemporary-leg warnings remain on them.
+- **Research/R52** still owns the bulk dating pass, Stone's contemporary authority and Bulloch's start-day dossier. The three newer Baldwin/Botts/Summers bloc warnings need their own research or holds before 1A's exit review.
+- **Lead/standing reviewer:** review the three proposed rulings above, especially the extra Dana rights hold. All earlier research files and signed gate material are preserved. No new gate item or signature was authored.
+
+
+## R52 close-out, 19 November 2026
+
+Research outputs only, on `research-1861-dating` at `a2ea7c2`, in `C:/Pyrrhic/mandate-research-dating`. R51 was not undertaken. R48/R49 files and every pack source are unchanged. The current rulings are 0097, not the old pre-positioned-fifteen and fact-HOLD instructions in the retained earlier hand-over.
+
+**Dating delivered:** `dating.csv` keeps the same four columns and covers all **1,017 cited cells / 1,705 current citations**, independently matched to source and generated World. The old 998/1,668 inventory is superseded by the actual input count. **412 current citations have dates/bounds (167 days, 245 bounds); 1,293 explicitly say not found**, with limitations in their row. Eleven narrower R45 records remain labelled supplements; 1,716 data rows total. Unresolved means no underlying document date established for that locator, not an assertion that it is undatable or read cover to cover. No event day, compilation imprint or missing day was invented to fill the table.
+
+**Projected check before the R51 apply:** current exact-day parser, with verified dates/bounds inserted in memory, warns **377 judgment cells** for no contemporary leg; **59 cells** separately fail weak-citations-only (overlapping, not additional). Including 67 uncited factional blocs gives 444 warnings. Respecting verified month/year bounds finds **485 definite no-leg judgments**, 312 undecided and 42 with a verified timely leg; 145 cells are definitely weak-only. The exact-day parser ignores bounds. Counts, affected-cell lists, source kinds, policy snapshot and scope are in `dating-method.md` and `evidence-r52/leg-audit.json`; these are not post-rs1-rs14 totals. The earlier 84 was an unverified embedded-date sensitivity, a different measure/base.
+
+**Date corrections:** OR I-1 p 12 report 19 April 1861; p 23 Foster journal submitted 1 October 1861, not its internal 13 April narrative; p 32 Beauregard report 27 April 1861, not the narrated 13 April; OR I-6 p 558 April 1863 inquiry. Cabinet second opinions use 29 March, not the next running-head day. Confederate Journal pp 96/106 retain bounds because a running head anticipates the next sitting. USREPORTS 24 How 66's 14 April 1860 date identifies Wolcott's advice in the case text, not Taney's decision; that current documentary locator remains unresolved. Every proposed date is research for review/application, never a rehabilitation of a held judgment.
+
+**Stone:** `stone-1861.md` delivers the 1888 Adjutant-General service statement printed in Senate Report 1054, pp 2-3. It reports District militia appointment 1 January 1861 and muster 2 January on Scott's application. The original 1861 instrument/legal appointing authority was not found. [I] Retain none under 0097; do not classify his January service as proved federal merely from the 1888 summary.
+
+**Bulloch:** `bulloch-1861.md` adds visually checked contemporary New-York Times shipping pages: 2 March 1861, p 8 (clearance/sailing on 1 March) and 25 March 1861, p 8 (arrival on 23 March), naming Bienville, Bulloch and Livingston, Crocheron & Co. [I] Probably continuing as the ship's commercial master on 5 March. Exact location, contractual employer and Confederate commitment that day remain unproved. Later memoir passages are separated from contemporary evidence. [I] Retain none under 0097; absence of proof is not neutrality.
+
+**Checks:** table/coverage/date-shape audit exit 0; source/World multiset and preservation audit exit 0; 629 protected baseline files unchanged; HEAD unchanged, index empty, `git diff --check` clean. Required `MANDATE_NO_GIT=1 npm run check` exits 2 for missing Node type definitions; `npm run run:done-check` exits 1 for missing `tsx`: 0 tests and 0 done criteria ran. No install, suite/campaign retry or pack generation. The old Vitest configuration also lacks the later no-git exclusion. Logs, input inventory, source hashes, source-code snapshots and artifact inventory are in `evidence-r52/`.
+
+Optional rs15 was not undertaken. Claude's standing review and the remaining historical proof are outstanding. The worktree is uncommitted; git was used only to read. The one final coordination status is appended to the main CODEX after a fresh read.
+
+## Findings outside my scope
+
+- **R51/integration:** preserve 0097 and R49's fifteen service records; do not use the superseded old apply choices. Apply only reviewed date rows at their real precision, replace the two corrected Sumter markers, and do not treat an unresolved embedded marker as verified. A new post-apply warning total must be calculated on that integrated data.
+- **Validator owner:** year/month bounds currently evade the exact-day evidence parser. No day should be manufactured to work around it. Documentary quotations under secondary source keys also need explicit handling; a whole biography must not be promoted to primary.
+- **Historical follow-up:** Stone's original January instrument and Bulloch's exact 5 March commitment/employment contract remain unproved. The notes identify the smallest further evidence needed without inventing an archival reference.
+- **Validation owner:** supply the compatible dependencies/no-git exclusion and satisfy the two required gates on the apply base. R52's focused checks do not waive them.
+
+## R59 close-out, 19 November 2026
+
+For the lead: 3 items. Research only in `C:/Pyrrhic/mandate-research-r3`, branch `research-1861-round3`, from `3230269`. R59's inputs are the **189 held judgments and 60 held blocs** read through `git show cbc6a10:<path>`, not this older checkout's unapplied people table. The hand-over's earlier apply instructions remain superseded by 0097 and R49.
+
+**Delivered:** `docs/research/_resource/rs15.csv` and `rs15.md`, with one row for every held judgment and KEEP/CHANGE/HOLD counts per person and field. **9 KEEP, 0 CHANGE, 180 HOLD**, across **105 people**. KEEP recommends restoring the prior coded direction after review. It does not claim an applied change. All 60 blocs remain held, with no re-entry proposed. The CSV keeps every R51 `prior_value` exactly.
+
+**New legs [I]:** Lincoln competence above, Scott competence above and reputation high, Cameron reputation below, Dix competence above, Wadsworth reputation above, Charles Sumner competence above and antislavery, Henry Wilson antislavery. The CSV names the actual contemporary judge and the printed page, labels each mapping [I], and records bias and scope. Every positive row's quoted words and printed page were checked on a page image. Dates were checked in the heading or read context, with Dix's month established on pp363-364. The new source keys name Congress's 1848 resolution, Chase's 9 January 1861 letter to Stevens, and the January 1861 bank officers' resolution about Dix. The Warden and Dix biographies remain secondary outside those documents. Dix's citation keeps a month bound.
+
+**Search limits:** cabinet and commander searches came first, then governors, followed by an alphabetical residual surname screen because this base supplies no per-cell reference-run read-frequency ranking. The priority-name and cohort counts are in `evidence-r59/counts.json`, including names with no held judgments in this list. Source files and scans are exclusively in `C:/Pyrrhic/mandate-research-sources/r59-sources/`: 56 files, 77,011,878 bytes at inventory. The twelve-source manifest distinguishes manually read passages, discovery texts, unread attempts and the reused OR OCR. It does not claim whole-book or all-hit reading. Some residual and governor rows received only the bounded surname screen, with that limit stated in their HOLD basis.
+
+**Holds preserved:** Lincoln reputation stays HOLD under 0097, with its average runtime default. Blair, Welles and the held personal relationships gain no leg from cabinet preferences. McClellan's 1857 report transmission is not an appraisal, and the Sherman letters' May praise is beyond the R59 cutoff. Banks's hostile nomination-contest letter is recorded without inventing a new general reputation band. The Bates diary rights exclusion and Dana's extra R51 hold stand. The Library of Congress newspaper endpoint returned 403, retained without a bypass.
+
+**Proposed reading of R59 [I]:** use its before-5-March cutoff even for innate fields. Its own-words exception names a value, so Chase's and Julian's own antislavery speeches are leads rather than sole legs for their held traits. The older brief permits conduct evidence for traits, but this pass does not silently widen R59's wording. Sumner and Wilson instead have external contemporary judgments. No new decision, signature, situation or player string was authored.
+
+**Verification:** the fresh inherited-parser/coverage/source checks pass, with **189 rows, 105 people, 9/0/180**, exact R51 prior values and no duplicates, known document keys, wholly pre-cutoff dates/bounds, 31 hashed source-file references, 60 bloc input rows and zero pack writes. `evidence-r59/final-checks.json` indexes the settled logs and preservation results. An initial image-offset mismatch was corrected by reading the actual printed page before citation, with the original mislabelled downloads retained under observed-page names. No source claim rests on an assumed scan index. The final scope audit preserves 790 baseline files, changes only this pre-existing hand-over, and confines all additions to docs/research. HEAD stays 3230269 and the index is empty.
+
+The required **`MANDATE_NO_GIT=1 npm run check` exits 2** for missing Node type definitions. **`npm run run:done-check` exits 1** for missing `tsx`. **Zero tests and zero done criteria ran.** `node_modules` is absent and the old Vitest config lacks the later no-Git collection exclusion. No install, expensive retry, reference campaign or pack generation was undertaken. These gates remain unmet here and are not waived by the research checks.
+
+**For the lead:**
+1. Review the nine KEEP recommendations, their band/trait inferences and the two antislavery placements. No author sign-off substitutes for the standing reviewer.
+2. Preserve the remaining 180 judgments and 60 blocs as holds unless another reviewed leg is supplied. Decide separately whether a follow-up should use the older own-conduct rule for the Chase/Julian trait leads.
+3. Route the apply opt-in and missing project gates to integration. This base's `apply.js` stops at rs14 and retains superseded bloc/fifteen-officer handling. Do not rerun it unchanged on R51. Integrate only reviewed rs15 rows with the three document-only keys and the honest month bound.
+
+## Findings outside my scope
+
+The inherited apply does not consume rs15. The exact-day evidence parser does not establish an honest month bound by itself. Dependencies and compliant no-Git test collection are absent on this research base. The owning integration lane must address those prerequisites. No pack, generated output, signed item, engine file, lockfile or other run's worktree was changed. Git remained read-only, with no commit or push.
+
+## R65 close-out, 19 November 2026
+
+For the lead: 3 items. Research only in `C:/Pyrrhic/mandate-research-values`, branch `research-1861-values`, at `459b4a5`. The deliverables are `docs/research/_resource/rs16.csv` and `rs16.md`: **82 decisions, 17 people, KEEP 2 / CHANGE 7 / HOLD 73**. The CSV covers all four resignation values for the fifteen, Houston and Clark's six scalar fields and four corresponding values, and two explicit slavery-defence companion cells. Houston's existing Union value is included as a corroboration, not counted as a newly recovered hold. Empty trait sets stay empty, and his existing Davis relationship is preserved.
+
+**Positive recommendations [I]:** Lee native_state and union from his 23 January letter (Long pp88-89), A. S. Johnston union from his 25 February letter to Porter (William Preston Johnston p270), E. Kirby Smith duty from his 1 March report (OR I-1 p559), Houston's existing union from his September 1860 speech (Crane pp599-600), Houston adopted-state attachment and civic duty from his 6 February message (Crane pp644-645, heading p642), Houston slavery_defence from the same September speech (p602), and Clark state_autonomy from his signed convention call (Texas journal pp9-12). Every positive printed page was visually checked. The CSV marks each mapping [I], limits the later books to their primary documents, and keeps Clark's signing date at a year bound rather than inventing a day.
+
+**Limits:** Lee's and J. E. Johnston's duty fields are HOLD. No newly verified pre-start state-loyalty leg is supplied for J. E. Johnston, Magruder or Stuart. Stuart's January letter and Ewell's late-January correspondence were found only through modern quotations, without an admitted original/printing. Clark's slavery_defence is an explicit companion HOLD under 0074. Houston's civic duty is not loyalty to the Army or acceptance of Davis's call. These are evidence recommendations, not a calibration fix or permission to place gated text.
+
+**Verification:** the inherited parser and actual apply judgment loop accept rs16 when explicitly opted in **in memory**, exit 0, with 82 rows, exact prior values, no duplicates, pre-cutoff dates and zero pack-write attempts. Six value strings would change and no other field would. An arithmetic-only projection under the unchanged resignation rules leaves every officer below the threshold, including Lee at 200 against 500. No campaign, model tuning or pack apply was done. The required check exits 2 for missing Node types, and done-check exits 1 for missing `tsx`: **zero tests and zero done criteria ran**. No install or expensive retry. Evidence is in `docs/research/_resource/evidence-r65/`, including `final-checks.json`, source readings/hashes, counts, failed requests and the in-memory exercise. All scans stay in `C:/Pyrrhic/mandate-research-sources/r65-sources/`.
+
+## For the lead
+
+1. Route the nine positive recommendations to Claude's standing reviewer under 0096, including Houston's civic/adopted-state mappings and Clark's explicit 0074 companion issue. No independent or gate sign-off is claimed.
+2. Preserve the 73 holds and pursue the named primary-letter leads if more values are needed. Do not backdate later resignations or fill values to make a model threshold pass.
+3. Route the reviewed rs15/rs16 opt-in, honest date-bound handling and missing project gates to integration. The old apply stops at rs14 and retains obsolete bloc/fifteen-officer handling. Its KEEP branch replaces citations, so corroborating Houston should retain the earlier citation too.
+
+## Findings outside my scope
+
+The current resignation rule does not express all the conditional commitments in the read documents, and Houston's call response remains a separate model question. Clark's slavery companion needs review before placement. The old no-Git fixture exclusions and absent dependencies prevent the required project gates here. No runtime, pack, lockfile, signed item, other request or other run's worktree changed. Git was read-only and HEAD remained `459b4a5`.
+
+## R72 merge close-out, 19 November 2026
+
+The lead's merge of main `fabef47` into `cd6ac72` remains in progress. R51's working rs1-rs14 apply, 0097 exclusions, honest date bounds and rights hold survive. R62's Buchanan correction is retained explicitly: he was dismissed, not resigned; the apply still skips his entire R49-owned row and does not restore pre-positioning. Every historical section from both hand-overs is retained, with R51 between R45 and R52, followed by R59 and R65. Neither rs15 nor rs16 was applied or newly opted in.
+
+Ran `npm ci` (exit 0). Four inherited LFS Git-fixture guards were restored for the required no-Git check; normal CI collection is unchanged. The six in-memory apply regressions pass. `MANDATE_NO_GIT=1 npm run check` exits 0: 104 files, 1,313 tests passed, 7 skips (four Git-dependent fixtures and three existing optional tests), with typecheck, boundary, licences and decisions passing. `npm run run:done-check -- --label r72-research-done` exits 0, all six binding Phase 0 criteria pass. Its separately reported 1A criteria remain 2/6: checkpoints, operation, pushback and lever-sweep fail; no 1A acceptance is claimed. Pack data, research outputs and bands are unchanged. Evidence: `runs/r72/gates.json` and logs.
+
+## Findings outside my scope
+
+R65's holds and model limits remain. R51's apply does not consume rs15/rs16 without a separate reviewed integration change. The situations merge's signed-notice blocker is separate. Git was read-only, with no staging, commit or abort, and no R70/R71 file was touched. Claude retains merge completion and standing review.

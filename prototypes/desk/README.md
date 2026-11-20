@@ -859,6 +859,72 @@ Use the earlier `DESK_EVIDENCE_REQUEST` setting with R38 for unit evidence.
 The evidence README records checks, reused results and retained failures.
 This is maker verification.
 
+## R66 audience and org board
+
+Run `npm run dev -- --at-war` from this folder. Open the org board with B or
+its desk button. The board now reads the principal's dated post catalogue
+from SeatView.posts, including internal offices and opening vacancies. The
+opening establishment supplies known parents and holders; received reports
+supply subsequent holder evidence. A post whose placement has not been
+reported stays in a separate list. Field orders remain tied to the existing
+command menu. Opening vacancies have no invented date of becoming vacant.
+Open a post to read its received papers or draft an available order.
+
+On a commandable holder's card, Request an audience opens the scene. The desk
+recedes behind a plain name-and-post card, 420×560 at 1920×1080 and 540×720 at
+3440×1440. No likeness is used. Earlier received reasons are numbered and
+linked to their source papers. Reading a source and returning preserves the
+unsigned answers. All eight counter forms serialize the existing console
+grammar. Signing queues an `audience` command; it does not hold an audience or
+advance a day. The kernel checks the request when the days run. Escape returns
+one level and the final close returns focus to the desk button. Enlarged text
+reflows and scrolls vertically; reduced motion removes the transition.
+
+**Acceptance gaps remain.** The seat API has no current audience case, allowed
+counter menu, eligible framing values, declared reply per counter or filed
+audience transcript. Earlier advice is explicitly labelled as earlier advice,
+and the desk predicts no response. R70 supplies public standing and received
+consults, advice about the man and observer letters through SeatView.people
+and the catalogue's source references. Missing records remain explicit.
+Observer letters do not imply an observer is still attached, and received
+consults retain their letter's subject rather than borrowing the private
+stance table's subject. No assessment band is inferred from hidden ability.
+
+R70 remains incomplete on the live audience projection. StatedReason stores
+only reason kind and weight; AudienceRecord stores only day, before/during
+and counter kinds, without principal attribution or a transcript. The
+preview computes framing values and replies from hidden person inputs.
+A seat-owned declaration source or a ruling permitting newly spoken
+read-only declarations is needed before the audience requirement can pass.
+The implementation adds no State and exposes none of those private inputs.
+See notes/lane-seat-view-people.md at the repository root for proposed
+choices, validation and remaining gates; runs/r70/final-checks.json indexes
+the evidence.
+
+`web/people.ts` and `web/People.tsx` take `SeatRequest` and display strings only.
+The server adapter and HTTP boundary are unchanged. New player text is in
+`web/strings.ts`. The full desk suite passed 87 tests before the final targeted
+corrections. Twelve focused tests then passed, including the fifth R66 test
+that parses all generated counters through the actual console grammar. The
+final typecheck/build passes. Eight distinct browser checks passed across the
+retained runs; unaffected board captures and suite evidence were reused after
+the final portrait proportion correction.
+
+Evidence, eight native captures with recipes, failures, scope audit and the
+437-file browser-build inventory are in `../../art-masters/R66/`.
+`final-checks.json` indexes the results. Regenerate browser fixtures with
+`npx tsx scripts/r66-fixture.ts`; run the browser checks with
+`npx playwright test --config playwright.r66.config.ts`. The R66 proof server
+uses the required loopback port 5274 and existing saved map data, without a
+map rebuild. `R66_RUN` selects a fresh evidence subfolder. Leave
+`R66_REUSE_1920` unset when regenerating all captures.
+
+Root typecheck, pack boundary, licences and decision-index checks passed.
+The inherited full root check was not run: this main checkout still has LFS
+fixtures that write Git, even with `MANDATE_NO_GIT=1`. The standalone done-check
+was not run because its CLI writes only under `runs/`, outside R66's scope.
+Those gates remain unverified. Claude's independent standing review is pending.
+
 
 ### R39 geographic legibility
 
@@ -930,3 +996,22 @@ captures at 1920×1080 and 3440×1440, name-anchor audit, texture measurements,
 timings, package inventory, retained failures and reused evidence. The default
 static allocation is 88.06 MiB, with zero sign texture bytes. Rendering timings
 use ANGLE SwiftShader and do not establish hardware frame rates.
+
+### Press stories and the week's papers
+
+Front pages render the claims received in the seat view, using pack strings for
+headlines and copy. The weekly paper lists each press story with its editor and
+date and opens the received source. Battle dispatches carrying the same battle
+ID appear as one line, linking the latest dispatch. Earlier fixtures without an
+ID can only group reports from the same place and day.
+
+From the repository root, `npm run typecheck:desk` checks the complete browser
+and server types. CI installs this folder's dependencies and runs that command
+on both platforms. It stays outside the staged hook because that hook's private
+snapshot supplies only the root dependency tree.
+
+From this folder, `npx vitest run test/intray.test.ts test/press.test.ts` checks
+the stories and grouping. `npx playwright test --config playwright.r54.config.ts`
+checks source opening and return at 1920×1080 and 3440×1440, using the real reading
+components with a small fictional snapshot. It needs no ignored map data and
+writes its captures and results to the worktree's `runs/r54/browser/`.

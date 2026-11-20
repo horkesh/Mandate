@@ -1,0 +1,114 @@
+{
+  "id": "kentucky_neutrality",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.kentucky_neutrality.title",
+  "text": "situation.kentucky_neutrality.text",
+  "earliest": "1861-05-16",
+  "event": {
+    "fired": "kentucky_neutrality_proclaimed"
+  },
+  "knowledge": {
+    "knows": {
+      "subjectKind": "situation",
+      "subjectId": "kentucky_neutrality_proclaimed"
+    }
+  },
+  "options": [
+    {
+      "id": "arm_quietly",
+      "label": "situation.kentucky_neutrality.option.arm_quietly",
+      "displayKey": 1,
+      "proposedBy": [
+        "cameron_simon"
+      ],
+      "group": "arms",
+      "honours": [
+        "union",
+        "caution"
+      ],
+      "effects": [
+        {
+          "setFlag": "kentucky_unionists_armed"
+        }
+      ]
+    },
+    {
+      "id": "move_in",
+      "label": "situation.kentucky_neutrality.option.move_in",
+      "displayKey": 2,
+      "proposedBy": [
+        "dennison_william",
+        "yates_richard"
+      ],
+      "group": "troops",
+      "honours": [
+        "union"
+      ],
+      "effects": [
+        {
+          "setFlag": "kentucky_entered"
+        }
+      ]
+    },
+    {
+      "id": "wait",
+      "label": "situation.kentucky_neutrality.option.wait",
+      "displayKey": 3,
+      "proposedBy": [
+        "scott_winfield",
+        "mcclellan_george_b"
+      ],
+      "group": "troops",
+      "honours": [
+        "caution",
+        "conciliation"
+      ],
+      "effects": [
+        {
+          "setFlag": "kentucky_left_alone"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.kentucky_neutrality.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "arm_quietly",
+      "wait"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_general_in_chief"
+    ],
+    "recommends": [
+      "wait"
+    ],
+    "reasons": [
+      {
+        "kind": "caution",
+        "weight": 600
+      }
+    ],
+    "confidence": 600
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "a border state's neutrality, arms for its Unionists and whether to send troops; no gate topic"
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-52 pt 1 pp. 137 to 138 (Garrett Davis to Cameron, 3 May), 140 to 141 (Anderson's commission, 7 May), 146 to 147 (the governors' memorial of 24 May; Scott's answer, 29 May), 156 (McClellan, 4 June), 161 (Lincoln's indorsement, 9 June), 188 (Ripley: 17,000 stands ordered since 4 May)"
+    },
+    {
+      "source": "RR",
+      "at": "vol. 1, Doc. 181, pp. 264 to 265 (Magoffin's proclamation, 20 May)"
+    }
+  ]
+}

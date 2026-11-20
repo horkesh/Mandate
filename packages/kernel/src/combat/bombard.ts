@@ -164,7 +164,8 @@ export function fortDay(world: SeatsWorld, state: State, attackers: readonly For
   if (d.choice === 'hold') return { ...base, surrendered: null, recordSource: null, forces, musters: [], command: [], people: [], control: [] };
 
   // He surrenders: only the record's terms, when this is the record's case (0074; the lead's gate condition 1).
-  const row = rules.recordTerms.find((r) => r.region === objective && r.faction === defFaction) ?? null;
+  const row = rules.recordTerms.find((r) => r.region === objective && r.faction === defFaction && r.commander === commander
+    && (r.offerWindow === null || (day > r.offerWindow.offerDay && day <= r.offerWindow.lastDay))) ?? null;
   const surrendered = row === null ? 'captured' : row.terms;
   const battle = `bombard:${objective}:${day}`;
   const musters: MusterDelta[] = [];

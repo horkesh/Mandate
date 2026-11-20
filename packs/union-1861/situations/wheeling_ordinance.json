@@ -1,0 +1,48 @@
+{
+  "id": "wheeling_ordinance",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.wheeling_ordinance.title",
+  "text": "situation.wheeling_ordinance.text",
+  "earliest": "1861-06-19",
+  "event": {
+    "all": [
+      {
+        "fired": "wheeling_convention"
+      },
+      {
+        "dayAtLeast": 106
+      }
+    ]
+  },
+  "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "government_established",
+        "subject": "st_virginia_restored",
+        "delta": 1,
+        "reason": "reorganisation-ordinance",
+        "side": null
+      }
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_secretary_state",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Civil organisation and correspondence only; no secession-cause claim, slavery policy, security order or protected-population effect."
+  },
+  "citations": [
+    {
+      "source": "WHEELING-ORDINANCES-1861",
+      "at": "Ordinances pp. 6-7, passed 19 June 1861"
+    }
+  ]
+}

@@ -242,6 +242,19 @@ describe('the people verbs, each an order to a person answered with typed reason
 });
 
 describe('the audience, before and during a plan (P3)', () => {
+  it('refuses an audience with no plan at issue without charging attention or sending a message', () => {
+    const world = indexedFixture();
+    const state = createState(world, { seed: 1 });
+    const command: AudienceCommand = { cmd: 'audience', to: POST('a_army'), counters: [] };
+    expect(state.planRecords[command.to]).toBeUndefined();
+    expect(attentionPrice(world, state, command)).toBeGreaterThan(0);
+    const issued = tick(world, state, [{ day: 1, seat: lead, command }], { freeze: true });
+    expect(issued.rejections.map((r) => r.reason)).toEqual(['bad_counters']);
+    expect(issued.state.seatAttention[lead]!.attnLeft).toBe(state.seatAttention[lead]!.attnLeft);
+    expect(issued.state.messagesInTransit.filter((m) => m.msgVerb?.verbKind === 'audience')).toEqual([]);
+    expect(issued.state.audienceHeld).toEqual(state.audienceHeld);
+  });
+
   it('before: he states his reasons about a goal not yet sent; only counters that answer them are offered; a preview changes nothing', () => {
     const world = indexedFixture();
     const pressed = days(world, createState(world, { seed: 1 }), 1, { 1: [{ cmd: 'pressure', person: P('a_gen') }] }).state;
@@ -533,7 +546,7 @@ describe('regard between people (lane 1.5’s column)', () => {
 });
 
 function option(id: string, displayKey: number, over: Partial<OptionDef> = {}): OptionDef {
-  return { id, label: `situation.x.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [], lockedCosts: [], orders: [], honours: [], watched: false, policy: null, gate: null, ...over };
+  return { id, label: `situation.x.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [], lockedCosts: [], orders: [], calls: [], honours: [], watched: false, policy: null, gate: null, ...over };
 }
 
 function decision(id: string, over: Partial<SituationDef> = {}): SituationDef {

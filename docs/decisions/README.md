@@ -95,7 +95,16 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0089](0089-codex-builds-a-desk-prototype.md) | Codex builds a desk prototype on the console's driver | accepted; amended by 0090, 0091 |
 | [0090](0090-codex-decoration-icons-and-desk-access.md) | Codex makes the first document decoration, drafts the map icons and gives the desk its keys and skins | accepted; amended by 0091 |
 | [0091](0091-codex-builds-the-staff-map-prototype.md) | Codex builds the staff map into the desk prototype now | accepted; amended by 0093 |
-| [0092](0092-codex-takes-coding-tasks.md) | Codex takes coding tasks through its command line | accepted |
+| [0092](0092-codex-takes-coding-tasks.md) | Codex takes coding tasks through its command line | accepted; amended by 0096 |
 | [0093](0093-the-map-is-the-engineers-manuscript-on-the-table.md) | The staff map is the engineer's manuscript, and it covers the table | accepted; refined by 0094, 0095 |
 | [0094](0094-claimed-control-on-the-presidents-map.md) | The president's map shows claimed control, in bold colour | accepted |
 | [0095](0095-the-staff-map-draws-no-pictorial-signs-for-now.md) | The staff map draws no pictorial signs, for now | accepted |
+| [0096](0096-codex-resumes-milestone-1a.md) | Codex resumes milestone 1A | accepted |
+| [0097](0097-the-1861-starts-blocs-after-re-sourcing.md) | The 1861 start's blocs and judgments after re-sourcing | accepted |
+| [0098](0098-rule-seat-doctrine-concentration-bombardment-and-lost-commanders.md) | Rule-seat doctrine, concentration, bombardment and lost commanders | accepted; extended by 0104 |
+| [0099](0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md) | The 1A checkpoint bands and the limits of the victory sweep | accepted |
+| [0100](0100-sourced-situations-absent-staff-advice-and-declared-governments.md) | Sourced situations, absent staff advice and declared governments | accepted |
+| [0101](0101-an-officers-resignation-service-side-and-reported-choice.md) | An officer's resignation, service side and reported choice | accepted |
+| [0102](0102-send-a-plan-back-with-notes-the-commander-may-decline.md) | Send a plan back with notes the commander may decline | accepted |
+| [0103](0103-the-press-carries-received-stories-into-the-seat-view.md) | The press carries received stories into the seat view | accepted |
+| [0104](0104-the-opening-of-the-war-follows-its-causes-and-its-news.md) | The opening of the war follows its causes and its news | accepted |

@@ -119,7 +119,7 @@ export const COMBAT_RULES = {
   fieldControlPermille: 200,
   pursuit: { followPermille: 100, pressPermille: 300, cavalryPermille: 150 },
   straggleReturnPermille: 100,
-  bombardment: { gunArms: ['artillery'], objectives: [], rangeMaxDaysPermille: 1000, moraleLossPerDay: 40, ratioCapPermille: 3000, outOfStoresMoraleLoss: 60, worksWearPerDay: 50, lossPermille: 20, surrenderMorale: 350, boldnessWeight: 500, recordTerms: [], source: 'fixture' },
+  bombardment: { gunArms: ['artillery'], objectives: [], rangeMaxDaysPermille: 1000, inPositionPreparationDays: 0, moraleLossPerDay: 40, ratioCapPermille: 3000, outOfStoresMoraleLoss: 60, worksWearPerDay: 50, lossPermille: 20, surrenderMorale: 350, boldnessWeight: 500, recordTerms: [], source: 'fixture' },
   leaders: { killedPermille: 15, woundedPermille: 40, capturedPermille: 20 },
   phases: {
     hours: [

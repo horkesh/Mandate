@@ -1,0 +1,39 @@
+{
+  "id": "houston_confederate_obligations",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.houston_confederate_obligations.title",
+  "text": "situation.houston_confederate_obligations.text",
+  "earliest": "1861-03-13",
+  "event": {
+    "dayAtLeast": 8
+  },
+  "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
+  "effects": [],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Allegiance and succession in a state office only; no secession-cause claim, slavery policy, security order or protected-population effect."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-1 pp. 612-613, Cave to Walker, 13 March 1861"
+    },
+    {
+      "source": "TX-CONV-1861",
+      "at": "pp. 113-114, Houston’s reply of 6 March"
+    }
+  ],
+  "speakers": [
+    {
+      "post": "st_gov_texas",
+      "person": "houston_samuel"
+    }
+  ]
+}

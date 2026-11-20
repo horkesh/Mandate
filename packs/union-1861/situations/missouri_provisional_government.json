@@ -1,0 +1,50 @@
+{
+  "id": "missouri_provisional_government",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.missouri_provisional_government.title",
+  "text": "situation.missouri_provisional_government.text",
+  "earliest": "1861-07-30",
+  "event": {
+    "callReceived": {
+      "post": "st_gov_missouri",
+      "days": 106
+    }
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "department_side",
+        "subject": "st_missouri",
+        "delta": 1,
+        "reason": "provisional-government",
+        "side": "union"
+      }
+    },
+    {
+      "setFlag": "missouri_provisional_government"
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_secretary_state",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "legislator"
+  },
+  "gate": {
+    "none": "a convention installs a provisional government; the governor's rival government continues in the field"
+  },
+  "citations": [
+    {
+      "source": "MO-CONV-1861",
+      "at": "the convention journal, July session (per the numbers note: the July journal itself not found)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "3.5"
+    }
+  ]
+}

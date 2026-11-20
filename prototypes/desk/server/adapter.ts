@@ -22,7 +22,7 @@ export class DeskAdapter {
     // The words of a paper are the console's existing report text, not new narrative.
     const papers = [...this.history.flatMap(t => t.days.flatMap(d => d.reports)), ...morning.view.reports];
     const paperText = Object.fromEntries(papers.map(report => {
-      const line = dispatchLog({ ...morning.view, reports: [report] })[0]!;
+      const line = dispatchLog({ ...morning.view, reports: [report] }, 0, key => this.game.strings[key] ?? key)[0]!;
       return [report.id, line.slice(line.indexOf('): ') + 3)];
     }));
     // Deliberate allow-list. Never spread ConsoleGame or return its log/state/world.

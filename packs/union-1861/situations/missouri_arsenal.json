@@ -1,0 +1,89 @@
+{
+  "id": "missouri_arsenal",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.missouri_arsenal.title",
+  "text": "situation.missouri_arsenal.text",
+  "earliest": "1861-04-20",
+  "event": {
+    "callReceived": {
+      "post": "st_gov_missouri",
+      "days": 8
+    }
+  },
+  "options": [
+    {
+      "id": "back_harney",
+      "label": "situation.missouri_arsenal.option.back_harney",
+      "displayKey": 1,
+      "proposedBy": [
+        "harney_william_s"
+      ],
+      "honours": [
+        "conciliation",
+        "order"
+      ],
+      "effects": [
+        {
+          "setFlag": "harney_course_backed"
+        }
+      ]
+    },
+    {
+      "id": "back_lyon",
+      "label": "situation.missouri_arsenal.option.back_lyon",
+      "displayKey": 2,
+      "proposedBy": [
+        "blair_francis_p",
+        "lyon_nathaniel"
+      ],
+      "honours": [
+        "union"
+      ],
+      "effects": [
+        {
+          "setFlag": "st_louis_loyalists_enrolled"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.missouri_arsenal.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "back_lyon"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "recommends": [
+      "back_lyon"
+    ],
+    "reasons": [
+      {
+        "kind": "union",
+        "weight": 600
+      }
+    ],
+    "confidence": 500
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "the arsenal and the department commander; the Camp Jackson dead are their own notice under civilian-deaths-1861, and this decision never reads it (0074)"
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-3 pp. 374 to 376 (the department commander's course and the agreement with Price)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "1, 2.5, 3.5"
+    }
+  ]
+}

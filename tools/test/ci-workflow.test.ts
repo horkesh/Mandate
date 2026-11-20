@@ -24,6 +24,24 @@ function jobs(text: string): Record<string, string> {
 describe('the CI workflow', () => {
   const all = jobs(workflow);
 
+  it('excludes both git-fixture files only in the no-git lane, keeping the ordinary gate full', () => {
+    const env: NodeJS.ProcessEnv = { ...process.env };
+    delete env.CI;
+    delete env.MANDATE_NO_GIT;
+    const exclusions = (environment: NodeJS.ProcessEnv) => {
+      const result = spawnSync(process.execPath, ['--import', 'tsx', '--input-type=module', '-e',
+        "console.log(JSON.stringify((await import('./vitest.config.ts')).default.test.exclude))"],
+      { cwd: new URL('../../', import.meta.url), env: environment, encoding: 'utf8' });
+      expect(result.status, result.stderr).toBe(0);
+      return JSON.parse(result.stdout) as string[];
+    };
+    expect(exclusions({ ...env, MANDATE_NO_GIT: '1' })).toEqual([
+      'tools/test/staged-check.test.ts', 'tools/test/lfs-git.test.ts',
+    ]);
+    expect(exclusions(env)).toEqual([]);
+    expect(exclusions({ ...env, MANDATE_NO_GIT: '0' })).toEqual([]);
+  });
+
   it('refuses any MANDATE_NO_GIT setting in CI before test exclusion can hide a file', () => {
     const env: NodeJS.ProcessEnv = { ...process.env, CI: 'true' };
     delete env.MANDATE_NO_GIT;
@@ -49,6 +67,15 @@ describe('the CI workflow', () => {
     expect(all.check).toContain('wall-clock budget tests');
   });
 
+  it('proves on the Linux job that the timed tests ran: it fails when any test is skipped (lane 1.14, from 0086)', () => {
+    const step = all.check!.slice(all.check!.indexOf('- id: no_skips'), all.check!.indexOf('- id: boundary'));
+    expect(step).toMatch(/matrix\.os == 'ubuntu-24\.04'/);
+    // It reads the report the test step writes, on the same job, after it.
+    expect(step).toContain('run: npx tsx tools/no-skips.ts runs/ci/vitest.json');
+    expect(all.check!.indexOf('- id: test')).toBeLessThan(all.check!.indexOf('- id: no_skips'));
+    expect(all.check).toContain('--outputFile.json=runs/ci/vitest.json');
+  });
+
   it('runs on pinned Linux and Windows images, never a moving -latest label', () => {
     expect(all.check).toMatch(/os: \[ubuntu-24\.04, windows-2025\]/);
     expect(workflow).not.toMatch(/-latest\b/);
@@ -63,6 +90,19 @@ describe('the CI workflow', () => {
     expect(all.check).toMatch(/run: npm run run:done-check -- --label ci-determinism/);
     expect(all.determinism).toMatch(/needs: check/);
     expect(all.determinism).toMatch(/compare-runs\.ts ci-results\/determinism-ubuntu-24\.04 ci-results\/determinism-windows-2025/);
+  });
+
+  it('fetches no LFS objects on any checkout, and refuses art pushed into plain git (lane 0.7l)', () => {
+    // Every CI download of an LFS object counts against the owner's bandwidth (docs/design/ASSETS.md 0.7).
+    const checkouts = [...workflow.matchAll(/uses: actions\/checkout@\S+\n((?: {8}.*\n)*)/g)];
+    expect(checkouts.length).toBeGreaterThan(1);
+    for (const m of checkouts) expect(m[1], 'a checkout step').toMatch(/^ {8}with:\n(?: {10}#.*\n)* {10}lfs: false$/m);
+    expect(workflow).not.toMatch(/lfs: true/);
+    expect(workflow).not.toMatch(/git lfs (pull|fetch|checkout)/);
+    // Every commit pushed, not only the tip (the review of lane 0.7l): a --no-verify commit later deleted still leaves its
+    // blob in public history. So the check job fetches the whole history.
+    expect(all.check).toMatch(/run: npx tsx tools\/lfs-check\.ts --history HEAD/);
+    expect(all.check).toMatch(/uses: actions\/checkout@\S+\n {8}with:\n(?: {10}.*\n)* {10}fetch-depth: 0\n/);
   });
 
   it('reports the outcome of every step that has an id (honest CI)', () => {

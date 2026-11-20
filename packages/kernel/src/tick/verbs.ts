@@ -160,8 +160,8 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
       if (!postOnSide(ctx, start, c.to, principal) || holder === null) return reject('unknown_post');
       const last = start.audienceHeld[holder];
       if (last !== undefined && ctx.day - last.audDay < rules.verbs.audience.cooldownDays) return reject('too_soon');
-      const stale = start.postStates[c.to]?.postHolder !== holder;
-      const outcome = previewAudience(world, start, principal, c.to, c.counters, ctx.day, stale && start.planRecords[c.to] === undefined ? 'hold' : null, planReading(world, start, c.to, ctx.day), oversightOf(ctx, start, holder, principal).value, holder);
+      // The principal's own plan records supply the subject, just as on arrival (0052).
+      const outcome = previewAudience(world, start, principal, c.to, c.counters, ctx.day, null, planReading(world, start, c.to, ctx.day), oversightOf(ctx, start, holder, principal).value, holder);
       if (typeof outcome === 'string' || outcome.problems.length > 0) return reject('bad_counters');
       sendVerb(ctx, start, principal, holder, c.to, 'in-person', { ...body('audience', { verbPost: c.to }), verbCounters: c.counters.map((k) => [k.kind, k.value, k.boldness, k.from, k.men] as const) });
       return { state: start, reason: null };
@@ -225,7 +225,7 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
 
   // Lane 1.4's oversight: a verb is an order to a person, read where he stands; an observer's or pressure's `watched` terms stack on top.
   const answer = answerOrder(world, start, me, v.verbIssuer, orderTerms(rules, `verb:${v.verbKind}`), { oversight: oversightOf(ctx, start, me, v.verbIssuer).value });
-  let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: me, post: msg.msgToPost, role: 'addressee', day: ctx.day }));
+  let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: me, post: msg.msgToPost, role: 'addressee', day: ctx.day, kind: `verb:${v.verbKind}` }));
   fire(ctx, 'verbs.answered');
   const changes: PeopleChange[] = [];
   let done = !DECLINES.has(answer.actual);
@@ -424,7 +424,7 @@ function holdAudience(ctx: TickContext, start: State, msg: TransitMessage): Stat
   for (const o of outcome.recall) state = recallObserver(state, o);
   state = recordAudience(state, holder, { audDay: ctx.day, audAbout: outcome.about, audCounters: counters.map((k) => k.kind) });
   const key = msg.msgOrigin;
-  state = recordResponse(state, responseOf(outcome.response, { order: key, person: holder, post: post, role: 'addressee', day: ctx.day }));
+  state = recordResponse(state, responseOf(outcome.response, { order: key, person: holder, post: post, role: 'addressee', day: ctx.day, kind: 'verb:audience' }));
   // A promised reinforcement is itself an order, to another holder who may drag his feet (P1).
   if (outcome.reinforce !== null) {
     const sender = believedHolder(state, principal, outcome.reinforce.from);

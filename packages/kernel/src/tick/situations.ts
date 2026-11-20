@@ -48,6 +48,7 @@ import type { Effect, SituationDef } from '../situations/types.ts';
 import { fire, sendReport, type RejectionReason, type TickContext } from './context.ts';
 import { issueOrder } from './orders.ts';
 import { applyPolicy } from './policy.ts';
+import { issueCall } from './recruitment.ts';
 
 /** Every mechanic the situations phase counts (FOUNDATION section 11.5). */
 export const SITUATION_MECHANICS = [
@@ -81,6 +82,7 @@ function conditionContext(ctx: TickContext, state: State, def: SituationDef, sin
     knowledge: knowledgeOf(state, seatIdFor(principalOf(ctx, def))),
     since,
     headquartersOf: (post) => (state.postStates[post] === undefined ? null : headquartersOf(ctx.world, state, post)),
+    practicesOf: (person) => ctx.world.map.world.people.find((p) => p.id === person)?.practices.map((x) => x.practice) ?? [],
   };
 }
 
@@ -122,7 +124,10 @@ function applyEffects(ctx: TickContext, state: State, def: SituationDef, effects
   for (const e of effects) {
     if ('setFlag' in e) set.push(e.setFlag);
     else if ('clearFlag' in e) clear.push(e.clearFlag);
-    else {
+    else if ('landing' in e) {
+      fire(ctx, 'situations.proposals');
+      ctx.proposals.push({ proposal: 'landing', ...e.landing, situation: def.id, option });
+    } else {
       fire(ctx, 'situations.proposals', e.propose.delta);
       ctx.proposals.push({ proposal: 'effect', ...e.propose, situation: def.id, option, origin: def.kind === 'notice' ? 'notice' : 'decision' });
     }
@@ -150,6 +155,12 @@ function applyDecision(ctx: TickContext, start: State, def: SituationDef, chosen
       // beyond posture and objective are the pack's (lane 1.2).
       const goal = { objective: order.objective, posture: order.posture, risk: d.risk, deadlineDays: d.deadlineDays, rail: d.rail, river: d.river, sea: d.sea, neutral: d.neutral, committed: [], awaitWord: d.awaitWord, approveAsDrafted: d.approveAsDrafted };
       const reason = issueOrder(ctx, state, principal, { cmd: 'order', to: order.to, goal, route: order.route, bypass: false });
+      if (reason === null) fire(ctx, 'situations.orders');
+      else ctx.rejections.push({ day: ctx.day, seat: principal, entry: -1, reason });
+    }
+    // Calls for regiments, through the validated call path (lane 1.11): each governor answers by his own compliance.
+    for (const call of o.calls) {
+      const reason = issueCall(ctx, state, principal, { cmd: 'call', to: call.to, regiments: call.regiments, termDays: call.termDays, route: call.route, bypass: false });
       if (reason === null) fire(ctx, 'situations.orders');
       else ctx.rejections.push({ day: ctx.day, seat: principal, entry: -1, reason });
     }
@@ -260,13 +271,18 @@ function chainAllows(state: State, def: SituationDef): boolean {
   return follows.options === null || parent.sitChosen.some((o) => follows.options!.includes(o));
 }
 
+/** The post-holder check (lane 1.11): every named man the item quotes holds his post today, or serves if it names none. */
+function speakersServe(state: State, def: SituationDef): boolean {
+  return (def.speakers ?? []).every((s) => (s.post === null ? state.personStatus[s.person]?.statusKind === 'serving' : state.postStates[s.post]?.postHolder === s.person));
+}
+
 /** The situations phase: fire, surface, keep live, reopen, and take history defaults. */
 export function runSituations(ctx: TickContext, start: State): State {
   let state = start;
   for (const def of ctx.world.situations) {
     // 1. Fire.
     if (state.situationStates[def.id] === undefined) {
-      if (!chainAllows(state, def) || !holds(def.event, conditionContext(ctx, state, def))) continue;
+      if (!chainAllows(state, def) || !speakersServe(state, def) || !holds(def.event, conditionContext(ctx, state, def))) continue;
       state = fireSituation(state, def.id, ctx.day, def.kind, []);
       if (def.kind === 'decision') state = setOpenOptions(state, def.id, openOptionsNow(ctx, state, def));
       else {

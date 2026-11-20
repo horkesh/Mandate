@@ -259,6 +259,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Gate reviewer (A7), from the lane 1.5b review (item 7):** the row hash covers a policy row's id, not its content. No pack reaches it today.
   - **Lane 1.11:** loyalty data must never come from the census; narrator text says whose loyalty it means (in a slave state, the free and voting population's); no border-state census rows are entered until lane 1.7's G-1.7a fix is merged (superseded by 0078, G-1.7b: a protection flag skips a region only where slavery has ended there in law or in fact; a policy protecting arrivals is a policy flag that raises flight and never skips).
   - From the same review, **lanes 1.4 and 1.14:** McClellan bold on paper (27 April, 80,000 men) and cautious in action (Rich Mountain, 11 July). A single boldness cannot hold both. Watch whether drafting and execution need separate terms when operations land, and in calibration.
+  - **1B, from the review of lane 1.11 (`review-lane-1.11-d5f7ef8.md`):** after Texas's succession on 16 March, Houston stays an unposted, serving Confederate, so he sits in Davis's pool although he refused the oath. It has no effect in 1A, because the rule seat appoints only generals. Settle his side once he leaves office.
 **Phase 2 (desk and map)**
 - **The desk, from lane 1.13:** Union inbox volume, now that the press is on. Codex's R43 built the in-tray's filters and a weekly summary paper in the desk prototype. Two gaps are left:
   - **The press's stories are not in the seat view.** A press paper's `ReportView` has empty claims, and its text is only "about person …", so the summary can link the papers but can't say what they print. Giving the view the story text is a view change for whoever next touches the press or the view (lane 1.11 changes `view/`).
@@ -302,7 +303,49 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
 - From lane 1.13 (minor, lane 1.4's code): at the testbed capital, the governor's wire comes from the principal himself, because `n_leader` holds the capital region's government post. `governorWire` could skip a governor who is the principal. It is harmless today.
 - From lane 1.11b's hand-over (`notes/lane-1.11b-data-entry.md`, merged a38d7ea): the cells entered before the date rule cite evidence with no date, so the date check cannot judge them (Harney's regard for Price, May 1861 evidence, is one such start-class cell); a pass that dates those citations is lane 1.11r3's. The Lillington inference and the census caveats stay labelled in the census rows' notes (0085); lane 1.14 carries them. The held-back draft CSV keeps its 118 rows, with reasons.
 - From lane 1.13's review (`review-lane-1.13.md`, item 5), **the next lane to touch the console:** one test that previews an edit, sends it, and asserts that the commander's edited plan on arrival equals the preview, on a map that does not change in between. Building the preview from the issuer's view instead of the commander's fails 0 tests today.
-- **Lane 1.14 Part A** (the done check's harness) is open on the lane 1.13 session, branch `phase1-done-check-1a`.
+- **Lane 1.14 Part A** (the done check's harness) merged as a00f2d8 (branch `phase1-done-check-1a` at 3c2754b; R44 approved it, the gate reviewer closed G-1.14d at accb12a). The 1A criteria still fail on main until the unfinished lanes land; Part B (calibration) is next. Codex's R58 measured the Union mechanics at 98 ms median under a loaded machine, against the 40 ms budget; CI's Linux job passed on 3c2754b, so watch the budget on an idle machine.
+- From Codex's R44 review of `research-1861-leads` (`review-research-1861-leads.md`, "Four lenses and proposals"; non-blocking), by lane:
+  - **The research lane:** portable paths for the research helpers, with their environment variables documented.
+  - **The research lane:** exact citation locators (Tyler p. 249, not 248; the readers' House-vote dates).
+  - **The research lane:** separate provenance keys for primary documents printed inside secondary works.
+  - **The research lane:** L3's last paragraph wrongly labels Anderson's letter of 12 April as Confederate correspondence.
+  - **Lane 1.12 (rule seats):** keep every rule reader's explanation when a flag has several readers.
+  - **The research lane (R50 re-check):** `docs/research/_leads/T2-strengths.md`'s later band summary should match the paragraph the lead corrected, which calls the 200,000 an inferred calibration band, not an upper bound.
+- From the standing reviewer's review of the lane 1.11 and 1.12 merges (`review-codex-r45-r46.md`):
+  - **Check or CI:** typecheck `prototypes/desk`. The merge broke `tsc --noEmit` there and nothing caught it.
+  - **The one-writer scanner:** its file-wide alias names give false positives, such as `requests.ts:249` with the old `to`.
+  - **The research lane:** `docs/research/_resource/tools/r45-read.py` points at another session's temporary scratchpad, so the OCR it retained is not durable.
+  - **Lane hand-overs:** both still say the merge commit was left to the lead. It is committed now (`95cdecd`, `8b15e6e`).
+- From the gate reviewer's look at R49 (resignation), by lane:
+  - **Lane 1.14 (calibration):** with the pack's dated history off, only Lee resigns, because his two values just reach the threshold. The weights are uncalibrated.
+  - **Lane 1.14 (calibration and the wording rules):** five of the fifteen wait for Virginia to join the other side, and Virginia goes only after S09's call. A player who never issues the call keeps Lee, Magruder and Stuart in US service. That is within SENSITIVE-HISTORY 3.1, but no text may present the call as the reason an officer left.
+  - **Lane 1.11 and resignation:** when Virginia counts as seceded. The register dates Magruder's resignation 20 April and Lee's 25 April. If the game counts Virginia only from ratification on 23 May, the five wait until then, and the history run drifts from the register.
+  - **Lane 1.14 (the checkpoint bands), from lane 1.11's merge (046b950):** Virginia now secedes on 20 April in the history run. The record has 17 April, and decision 0100 counts Virginia from 17 April. The call goes out on 15 April, takes about 3 days to reach Letcher, and then 2 more.
+- From the standing reviewer's review of R48 (`phase1-rule-seats-b` at `ba76d27`; `review-codex-r48-r49.md`; Codex's R57 fixes the two holes R48 was held for):
+  - **Rule seats:** a capital may be moved into a region the other side holds; nothing prevents it.
+  - **A test for each of three re-breaks** the reviewer's notes call V4, C2 and C4: R48's tests miss all three.
+  - **Is this right?** When no superior is serving, the principal authors the loss report.
+  - **Merge care:** R48 and R49 (`phase1-resignation`) both edit `whereIsPerson`, so merging the second of them needs care.
+  - **Two older small leaks**, found outside R48's scope: `dispatchOrder` drops a vacant relay post by reading truth; `fieldPosts` drops a post that has lost its blocks while its commander lives.
+- From the standing reviewer's review of R49 (`phase1-resignation`; `review-codex-r48-r49.md`), by lane:
+  - **A test for each:** a resigned man's politics bloc, the `resignAt` boundary, and the validator's no-trigger check.
+  - **The research lane:** its Buchanan note still calls his departure a resignation, when it was a dismissal.
+  - **Lane 1.14 (calibration) and research:** the values model barely acts on the real data. 13 of the 15 have no values, and Lee sits exactly on the threshold.
+- From the review of R54 (`press-in-view`; `review-codex-r54.md`):
+  - **The CLI's and the desk's `press.ts`** are byte-identical copies. Share them, or test that they are equal.
+  - **The public closing report** carries no truth term for its result.
+  - The desk typecheck in CI closes the reviewer's earlier item.
+- From the review of R51 and R52 (`review-codex-r51-r52-r57.md`):
+  - **Lane 1.14 (calibration):** Trumbull as radicals is defensible [I], but the anti-compromise votes also take in Doolittle, Foot and King. Flag it.
+  - **The research lane:** some R52 evidence still points into another session's temporary scratchpad.
+  - **The validator's owner:** the exact-day parser ignores year, month and range bounds.
+- From the standing reviewer's reviews of R59 to R63 (`review-codex-r59-r63.md`), by lane:
+  - **Lane 1.14 (calibration):** mark two competence KEEPs weak. Scott's rests on the 1848 thanks resolution, thirteen years before, and says nothing of Scott at 74, unable to take the field. Sumner's rests on one friend's praise of one speech, which is oratory, not competence. Both only keep their coded bands.
+  - **The cost of the cause-in-State ruling:** Holmes resigned on 22 April 1861, four weeks before North Carolina seceded on 20 May. Under the ruling, the history run shows him resigning around 20 May.
+  - **Cosmetic:** the source key `NavyReg1863-RESIGN` now cites Buchanan's dismissal.
+- From R65's values (`research-1861-values`, rs16):
+  - **Lane 1.14 (calibration):** with R65's values, the resignation model scores Lee at -100 (native_state +800, union -600, duty -300, against a threshold of 500). Outside the history mode it would keep him in US service, contrary to his own letter of 23 January 1861. The coefficients need calibrating. History mode is unaffected.
+  - **Gate reviewer:** Houston's `slavery_defence` value goes to the gate reviewer under 0074 when it is applied.
 - From lane 1.4b's report (`notes/lane-1.4b-detachments.md`, merged 1cf40d5), by lane:
   - **1B (the planner):** no operation leaves a garrison, because the planner drafts no garrison step. Add one if the history run needs it.
   - **Lane 1.4 or 1B, cleanup:** after a landing, the parent blocks stay aboard as 0-strength shells until a rejoin or a disbanding. Lane 1.4c (merged a810532) made sure an emptied shell can no longer be handed over in a transfer.

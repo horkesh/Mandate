@@ -1,0 +1,24 @@
+{
+  "protected_baseline_files_unchanged": 629,
+  "protected_changes": [],
+  "new_out_of_scope_files": [],
+  "source_world_citations_equal": 1705,
+  "git": {
+    "status --short": {
+      "exit": 0,
+      "output": " M docs/research/_resource/dating.csv\n M notes/lane-1.11r3-research.md\n?? docs/research/_resource/bulloch-1861.md\n?? docs/research/_resource/dating-method.md\n?? docs/research/_resource/evidence-r52/\n?? docs/research/_resource/stone-1861.md\n?? docs/research/_resource/tools/r52-dating.py\n?? docs/research/_resource/tools/r52-fetch.py\n?? docs/research/_resource/tools/r52-leg-audit.py\n?? docs/research/_resource/tools/r52-pages.py\n?? docs/research/_resource/tools/r52-read.py\n?? docs/research/_resource/tools/r52-verify.py\n"
+    },
+    "log -1 --format=%H %D": {
+      "exit": 0,
+      "output": "a2ea7c2493f11ed6e1ffc954427b6e3f121b033f HEAD -> research-1861-dating\n"
+    },
+    "diff --check": {
+      "exit": 0,
+      "output": ""
+    },
+    "diff --cached --name-only": {
+      "exit": 0,
+      "output": ""
+    }
+  }
+}

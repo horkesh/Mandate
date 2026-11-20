@@ -6,6 +6,8 @@ Worked only in `C:/Pyrrhic/mandate-sendback`, branch `plan-sendback-notes`, from
 
 ## Where it stopped
 
+R83 has resolved the working files for the lead-started merge of main at `e0a8ce7079badc3f889524405fff118e94fd8f5a` into `plan-sendback-notes` at `9f933f5ca05c28b23b5a45903582e4b7e9c94615`. The seven index conflicts remain unmerged because nothing was staged; HEAD, index and merge metadata are unchanged. Root check and desk checks pass. The standalone done check exits 1 on the history timing budget; its five other Phase 0 criteria pass. The lead's review and merge commit remain pending. No feature work was added. Details and the five remaining 1A failures are in the R83 section below.
+
 R56 is approved at `13089c4`: the lead's R67 message accepts all five proposed rulings and reports the reviewer's passing 6/6 done check with timing. That supersedes the local R56 timing hold recorded below. R67 is complete on that same base, with five new regression tests and six successful deliberate re-break checks. The root check and standalone done check both pass. R67 awaits Claude's standing review under 0096. No decision, gate signature, commit or merge was authored.
 
 ## What changed
@@ -112,10 +114,48 @@ Retained cheap-check failures: the first fixtures used the wrong received-report
 
 **Proposed rulings:** none. R67 verifies the lead's existing ruling. The one-writer, deterministic planner and principal's knowledge boundary are unchanged.
 
+## R83: main integration, merge only
+
+Worked only in this checkout, keeping the lead's merge target `e0a8ce7` and branch HEAD `9f933f5`. The coordination file's standing, command-line and writing rules, R44–R49 merge rules, 0096 and 0102 were read. Neither lockfile changed between the merge parents, and all four workspace dependency links resolve into this checkout, so no install was needed. Git commands were read-only.
+
+Resolved the seven conflicts:
+
+- `console/session.ts` passes the translator to both `commandText` and `dayLines`, retaining the note tokens and main's received-report formatting. Both sides' remaining commands survive.
+- `proxy/responses.ts` requires main's response kind alongside R56's optional note index. Note response keys and plan references survive, as do the first-call retention and doctrine-call retention rules.
+- Both packs' strings contain every key and value from both parents unchanged: 159 testbed strings and 410 Union strings, including all thirty note strings in each pack. A duplicate-key check passes.
+- Regenerated the two schemas with `npm run pack:schemas` and the day-40 save with `tools/make-save-fixture.ts`. Both pack generators report zero changed outputs; the merged worlds were already current. Schema freshness passes.
+
+One additional integration correction: the per-note `responseOf` call in `tick/orders.ts` supplies `kind: order.orderKind` along with its existing note index. No other runtime correction, feature, parameter, band, signed item or rule was changed. Proposed rulings: none.
+
+Evidence is in `runs/r83/`, with standalone summaries/saves under `runs/r83-done/` and drafting under `runs/r83-done-drafting/`. `final-checks.json` indexes the results, logs and preservation evidence.
+
+| R83 check | Result |
+|---|---|
+| Root typecheck and seven focused files | exit 0; 57 tests passed |
+| Focused merge probe | exit 0; distinct note indexes and kind; named notes, first calls and doctrine calls retained; unreferenced old responses pruned |
+| `MANDATE_NO_GIT=1 npm run check` | exit 0; 132 files, 1,489 passed / 3 existing optional skips; boundary, licences and decisions pass; 496.21 seconds |
+| `npm run run:done-check -- --label r83-done` | exit 1; Phase 0 5/6; 1A 1/6; 1,500.83 seconds, full eight-seed sweep and drafting |
+| War-by-decision median / p95 | 37.33 / 62.81 ms; unchanged limits 40 / 160 ms |
+| Testbed median / p95 | 3.95 / 5.48 ms |
+| History median / p95 | 102.72 / 177.07 ms; both exceed their unchanged limits |
+| Desk `tsc --noEmit` and suite | exit 0 each; 89 passed / 8 existing optional skips |
+| Schema freshness, conflict-marker scan and whitespace | pass |
+
+The history reaches day 148 / 31 July with no `--at-war`. Repeat/frozen daily hashes, replay, save/resume, liveness and the section-ten checks pass. There are 159 reference mechanics per pack, all inside their retained bands or quiet for stated reasons. The Union checked run retains final State hash `59ae6644ff381b02e8086ca57be88ec5f828979eeaaaed37cbcb6ebbdee7b097`.
+
+The timing criterion remains unmet. The history sample was measured in the same standalone invocation as the passing war-by-decision sample; no unloaded-host condition or cause of the difference was established. No performance tuning, limit change or costly retry was attempted. The full root check's passing evidence is retained separately and does not waive this failure.
+
+The five failing 1A categories are retained in full in `done-check.log`: checkpoints (Missouri, the western-Virginia government data gap, Confederate strength and both planned-operation counts), operation (no battle in the history run), pushback (relay holds, filter holds, trims and reservations), stand-ins (the two unowned `callReceived` labels on this merge target), and lever sweep (its Fort Monroe measurement and chain limitations). Unknown-strength passes. R79 and R85 own relevant follow-ups elsewhere; R83 did not apply their work or calibrate a band.
+
+Final runtime and preservation checks preceded this hand-over update. Eight resolved/integration files changed before documentation, 1,655 other baseline files were unchanged, no additions or deletions outside ignored evidence, and all nine captured worktree Git metadata files were byte-identical. The index still reports seven unmerged paths, deliberately left for the lead to stage after review. No stage, commit, abort, build, browser or server was run.
+
 ## For the lead
 
-1. Route R67 to Claude's standing reviewer under 0096. The supplied base already recomputes conditions through the shared constructor; the new tests prove it and catch both dropping and stale copying. This lane did not perform its own independent acceptance review.
+1. Review the R83 resolutions under 0096 and retain the unmet history timing criterion when deciding the merge's next step. The seven working-file conflicts are resolved; staging and committing remain with the lead.
+2. Retain the five failed 1A categories with their existing owners. R83 made no calibration or R79 follow-up change and ran neither expensive gate a second time.
 
 ## Findings outside my scope
+
+R83: the history timing failure and the five 1A failure categories above remain open. No cause for the timing difference was established, and no criterion was waived. No other worktree was written.
 
 No new finding beyond the existing recomputation in the supplied base and the changed index byte hash noted above. The lead's R67 receipt resolves the historical R56 timing hold, and R67's fresh local timing passes. Hosted CI and optional map-data integrations were not run. No unrelated performance change, calibration campaign, map rebuild or art repair was undertaken.

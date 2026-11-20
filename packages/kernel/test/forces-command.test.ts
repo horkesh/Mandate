@@ -17,6 +17,7 @@ import {
 import { applyForces, factionOfBlock, ForcesError, initialForces, sumStrength } from '../src/forces/forces.ts';
 import { blocksIn, initialLocations, MovementError } from '../src/movement/movement.ts';
 import type { State } from '../src/root-state.ts';
+import type { PostId } from '../src/ids.ts';
 import { createState, emptyState } from '../src/tick/setup.ts';
 import type { WorldIndex } from '../src/world/index.ts';
 import type { ScenarioStart } from '../src/world/scenario.ts';
@@ -82,6 +83,20 @@ describe('setup: forces, locations and command copied once from the start (0050)
     expect(chainBelow(S, null, P('a_corps'))).toEqual(['a_office', 'a_army', 'a_corps']);
     expect(factionOfPost(MAP, S, P('b_army'))).toBe('b');
     expect(factionOfBlock(MAP, S, B('a_ship'))).toBe('a');
+  });
+
+  it('finds holders independently of insertion order, including duplicate holders and inherited posts', () => {
+    const holder = PER('a_gen');
+    const inherited = { [P('a_0')]: S.postStates[P('a_army')]! };
+    const posts = Object.create(inherited) as Record<string, State['postStates'][PostId]>;
+    posts.z_post = S.postStates[P('a_army')]!;
+    posts.a_post = S.postStates[P('a_army')]!;
+    const state = { ...S, postStates: posts };
+    expect(heldPost(state, holder)).toBe('a_post');
+    expect(heldPost(state, PER('b_lead'))).toBeNull();
+    const next = { ...state, postStates: { ...posts, a_post: { ...posts.a_post!, postHolder: null } } };
+    expect(heldPost(next, holder)).toBe('z_post');
+    expect(heldPost(state, holder)).toBe('a_post');
   });
 
   it('runs through createState, from the start the seats World was indexed with', () => {

@@ -5,6 +5,7 @@
  * both). The Phase 2 desk replaces the text, not the rule.
  */
 import type { ClaimView, ReportView, SeatView } from '@mandate/kernel/seat-api';
+import { pressStories } from './press.ts';
 
 function claimText(c: ClaimView): string {
   const where = c.region === null ? '' : ` at ${c.region}`;
@@ -47,7 +48,7 @@ function claimText(c: ClaimView): string {
   }
 }
 
-function reportLine(r: ReportView): string {
+function reportLine(r: ReportView, t: (key: string) => string): string {
   const kind = r.subtype === null ? r.type : `${r.type}/${r.subtype}`;
   const via = r.via.length === 0 ? '' : ` via ${r.via.join(', ')}`;
   const advice = r.advice === null ? '' : ` | recommends ${r.advice.recommends} (${r.advice.reasons.map((x) => x.kind).join(', ')})`;
@@ -62,7 +63,9 @@ function reportLine(r: ReportView): string {
   const claims = opening ? `The opening country report records control and governments for ${regions.size.toString()} regions. The regional claims are entered on the staff map.` : r.claims.length === 0 ? `about ${r.subjectKind} ${r.subjectId}` : [...holdings, ...controlFallback, ...otherClaims].join('; ');
   // A battle day's dispatches carry their hour (FOUNDATION section 9: the night of the battle, hour by hour).
   const hour = r.hour === null ? '' : ` at ${r.hour.toString().padStart(2, '0')}:00`;
-  return `day ${r.receivedDay.toString().padStart(3)}  ${kind} from ${r.author} (written day ${r.day.toString()}${hour}, ${r.route}${via}): ${claims}${advice}`;
+  const stories = pressStories(r, t);
+  const copy = r.type === 'press' ? (stories.length === 0 ? t('press.empty') : stories.map(s => `${s.headline}. ${s.body}`).join('; ')) : claims;
+  return `day ${r.receivedDay.toString().padStart(3)}  ${kind} from ${r.author} (written day ${r.day.toString()}${hour}, ${r.route}${via}): ${copy}${advice}`;
 }
 
 /**
@@ -77,8 +80,8 @@ export function readingOrder(reports: readonly ReportView[]): ReportView[] {
 }
 
 /** The reports a seat holds, received on or after `sinceDay`, in reading order. */
-export function dispatchLog(view: SeatView, sinceDay = 0): string[] {
-  return readingOrder(view.reports.filter((r) => r.receivedDay >= sinceDay)).map(reportLine);
+export function dispatchLog(view: SeatView, sinceDay = 0, t: (key: string) => string = key => key): string[] {
+  return readingOrder(view.reports.filter((r) => r.receivedDay >= sinceDay)).map(r => reportLine(r,t));
 }
 
 /** What he believes of the enemy, region by region. */

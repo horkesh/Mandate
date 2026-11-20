@@ -1,0 +1,126 @@
+{
+  "id": "townsend_fugitive_order",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.townsend_fugitive_order.title",
+  "text": "situation.townsend_fugitive_order.text",
+  "earliest": "1861-07-16",
+  "event": {
+    "all": [
+      {
+        "flag": "manassas_advance_ordered"
+      },
+      {
+        "dayAtLeast": 133
+      }
+    ]
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_general_in_chief"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "fugitive-policy"
+    ],
+    "placement": "event",
+    "risks": [
+      "agency"
+    ],
+    "actingSide": null
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "II-1 p. 760 (Townsend to Mansfield, between 16 and 17 July 1861)"
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_general_in_chief",
+      "person": "scott_winfield"
+    },
+    {
+      "post": null,
+      "person": "mansfield_joseph_k_f"
+    }
+  ],
+  "gateReview": {
+    "author": "lane-1.11",
+    "reviewer": "gate-reviewer",
+    "date": "2026-11-16",
+    "questionVersions": {
+      "A1": 1,
+      "A2": 1,
+      "A3": 1,
+      "A4": 1,
+      "A5": 1,
+      "A6": 1,
+      "A7": 1,
+      "A8": 1,
+      "B1": 1,
+      "B2": 1,
+      "B3": 1,
+      "B4": 1,
+      "B5": 1,
+      "B7": 1,
+      "B9": 1,
+      "B10": 1,
+      "C1": 1,
+      "C2": 1,
+      "C3": 1,
+      "C4": 1,
+      "D1": 1,
+      "D2": 1,
+      "D3": 1,
+      "D4": 1,
+      "D5": 1,
+      "D6": 1,
+      "E1": 1,
+      "E2": 1,
+      "E3": 1,
+      "E4": 1,
+      "E5": 1,
+      "E7": 1,
+      "F1": 1,
+      "F2": 1,
+      "F3": 1,
+      "F4": 1,
+      "F5": 1,
+      "F6": 1,
+      "F7": 1,
+      "G1": 1,
+      "G2": 1,
+      "G3": 1,
+      "G4": 1,
+      "G5": 1,
+      "H1": 1,
+      "H2": 1,
+      "H3": 1,
+      "H4": 1,
+      "H5": 1,
+      "Q1": 1,
+      "Q2": 1,
+      "Q3": 1,
+      "Q4": 1,
+      "Q5": 1,
+      "Q6": 1,
+      "Q7": 1,
+      "Q8": 1,
+      "Q9": 1,
+      "Q10": 1,
+      "Q11": 1,
+      "Q12": 1
+    },
+    "contentHash": "0568cf8128224f73bb82a46ecc617b9df56cc539d046939cb7d18fc7e65f2902",
+    "notes": {
+      "item": "Townsend's order for the general-in-chief, quoted in full and attributed (OR II-1 p. 760). It fires only while Scott holds us_general_in_chief and Mansfield serves. Text only, no effects. Lincoln's 16 July question is not in it (B9, Q5).",
+      "en|situation.townsend_fugitive_order.text|\\bslaves\\b": "Q9: 'fugitive slaves' is the order's own phrase, inside the quotation and never the narrator's.",
+      "en|situation.townsend_fugitive_order.text|\\bservants?\\b": "Q9: 'servants' is the order's word for enslaved people brought with the regiments, inside the quotation, and its context makes that plain."
+    }
+  }
+}

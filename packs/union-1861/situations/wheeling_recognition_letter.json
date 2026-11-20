@@ -1,0 +1,43 @@
+{
+  "id": "wheeling_recognition_letter",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.wheeling_recognition_letter.title",
+  "text": "situation.wheeling_recognition_letter.text",
+  "earliest": "1861-06-25",
+  "event": {
+    "all": [
+      {
+        "fired": "pierpont_elected"
+      },
+      {
+        "dayAtLeast": 112
+      }
+    ]
+  },
+  "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Civil organisation and correspondence only; no secession-cause claim, slavery policy, security order or protected-population effect."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 pp. 723-724, Cameron to Pierpont, 25 June 1861; application at p. 713"
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_secretary_war",
+      "person": "cameron_simon"
+    }
+  ],
+  "namedOnly": "Pierpont is named as the addressee of Cameron’s letter, not as its speaker. Cameron’s authorship is checked against his War Department post."
+}

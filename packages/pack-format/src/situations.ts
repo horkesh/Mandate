@@ -47,7 +47,7 @@ const knows = z.strictObject({
   token: z.string().min(1).nullable().default(null),
 });
 
-/** A condition: one key names the predicate (all, any, not, dayAtLeast, flag, fired, decided, knows, goal, headquartersAt, clockAtLeast). */
+/** A condition: one key names the predicate (all, any, not, dayAtLeast, flag, fired, decided, knows, goal, headquartersAt, callReceived, clockAtLeast). */
 export const ConditionSchema: z.ZodType<Condition> = z.lazy(() =>
   z.union([
     z.strictObject({ all: z.array(ConditionSchema).min(1, 'at least one condition') }),
@@ -57,9 +57,12 @@ export const ConditionSchema: z.ZodType<Condition> = z.lazy(() =>
     z.strictObject({ flag: termId }),
     z.strictObject({ fired: idOf('situation') }),
     z.strictObject({ decided: idOf('situation'), options: z.array(termId).min(1).nullable().default(null) }),
-    z.strictObject({ knows }),
+    z.strictObject({ knows, forDays: nonNegative.optional().describe('A pack-stated deliberation interval from receipt of a matching report; omitting it requires receipt only.') }),
     z.strictObject({ goal: z.strictObject({ post: idOf('post'), posture: z.enum(phase0.POSTURES) }).describe('The post holds a goal of this posture, ordered by its principal (lane 1.2: a goal in plans, no longer a standing goal).') }),
     z.strictObject({ headquartersAt: z.strictObject({ post: idOf('post'), region: idOf('region') }) }),
+    z.strictObject({ callReceived: z.strictObject({ post: idOf('post'), days: int.min(0) }) }).describe('A call for regiments reached the holder of a post at least this many days ago (lane 1.11): a state’s act a pack-set delay after the call arrives. STAND-IN until conventions are modelled (1B).'),
+    z.strictObject({ holds: z.strictObject({ post: idOf('post'), person: idOf('person') }) }).describe('The post is held today by this person (lane 1.11).'),
+    z.strictObject({ holderPractice: z.strictObject({ post: idOf('post'), practice: termId }) }).describe('The post’s holder today carries this cited practice (lane 1.11, on lane 1.5b’s practices).'),
     z.strictObject({ clockAtLeast: nonNegative }),
     z.strictObject({ chamber: z.strictObject({ id: termId, state: z.enum(phase0.CHAMBER_STATES) }).describe('A chamber of the legislature is in this state today (lane 1.6): a public fact.') }),
     z.strictObject({
@@ -82,12 +85,16 @@ export const EffectSchema = z.union([
         'Signed permille. Every side measure reads higher-is-better for its own side: a rise helps that side, a fall harms it. The gate’s sign rule (E7, D5) relies on this, so a field where higher is worse for its side (war-weariness, say) must be declared the other way round.',
       ),
       reason: termId,
+      succession: z.strictObject({ from: idOf('person'), to: idOf('person') }).optional(),
       side: idOf('faction')
         .nullable()
         .default(null)
         .describe('The side whose measure this is, higher-is-better for that side (see delta); null for a measure no side owns. An atrocity-class item may only lower its acting side’s measures (E7, D5).'),
     }),
   }),
+  z
+    .strictObject({ landing: z.strictObject({ parent: idOf('forceBlock'), men: positive, region: idOf('region') }) })
+    .describe('A landing (lane 1.11, on lane 1.4b’s detachment path): this many men of a block aboard ship go ashore in the region, across an edge from the ship; forces applies or refuses it in phase 4c.'),
 ]);
 
 export const GateTagSchema = z.union([
@@ -121,7 +128,21 @@ export const OptionSchema = z.strictObject({
   id: lowerId,
   label: stringKey,
   displayKey: positive,
-  proposedBy: z.union([z.array(idOf('person')).min(1, 'the holders who argued for it (gate C1)'), z.literal('inaction')]),
+  proposedBy: z.union([
+    z.array(idOf('person')).min(1, 'the holders who argued for it (gate C1)'),
+    z.literal('inaction'),
+    z
+      .strictObject({ basis: z.literal('law-and-practice'), cites: z.array(z.strictObject({ source: z.string().min(1), at: z.string().min(1).nullable().default(null) })).min(1, 'the law and the practice, cited') })
+      .describe('A recorded exception (the lead’s ruling on S17): the law and practice a gate-kept option rests on, where no adviser is on record. Only an option the register supersedes or marks watched may carry it.'),
+    z
+      .strictObject({
+        basis: z.literal('principal-initiative'),
+        author: idOf('person'),
+        dated: historicalDate,
+        cites: z.array(z.strictObject({ source: z.string().min(1), at: z.string().min(1).nullable().default(null) })).min(1, 'the principal’s own document, cited'),
+      })
+      .describe('A recorded exception (the lead’s ruling on S12): the principal’s own consideration, on record before the decision, where no adviser is. Only on a gated option; the author must be the side’s principal, the document dated inside the topic’s window. Provenance only: the option shows no proposer (B9).'),
+  ]),
   group: termId.nullable().default(null),
   appearsWhen: conditionOrNull,
   expiresWhen: conditionOrNull,
@@ -138,6 +159,17 @@ export const OptionSchema = z.strictObject({
       }),
     )
     .default([]),
+  calls: z
+    .array(
+      z.strictObject({
+        to: idOf('post'),
+        regiments: int.min(1).describe('Regiments asked of the governor.'),
+        termDays: int.min(1).describe('Days the men are enlisted for, from the muster.'),
+        route: z.enum(phase0.ROUTE_KINDS),
+      }),
+    )
+    .default([])
+    .describe('Calls for regiments to governors’ posts (lane 1.11), through the validated call path: each governor answers by his own compliance (lane 1.7).'),
   honours: z.array(termId).default([]),
   watched: z.boolean().default(false),
   policy: PolicySchema.describe('The policy this option is (lane 1.5b; 0074): a policy: row of the map, and the posts whose holders carry it out. Its honours must equal the row’s.'),
@@ -176,6 +208,10 @@ export const SituationSchema = z.strictObject({
     .union([z.strictObject({ options: z.array(termId).min(1) }), z.strictObject({ delegate: idOf('post') }), z.strictObject({ unsourced: z.string().min(1) })])
     .nullable()
     .default(null),
+  staffAbsence: z
+    .strictObject({ none: z.literal('no-adviser-on-record'), cites: z.array(z.strictObject({ source: z.string().min(1), at: z.string().min(1).nullable().default(null) })).min(1, 'the research that found no adviser') })
+    .optional()
+    .describe('No staff recommendation, as a typed and cited absence (the lead’s S18 ruling): the research that found no adviser on record. The decision is then told by a plain report.'),
   staffLine: z
     .strictObject({
       authors: z.array(idOf('post')).min(1, 'an ordered list of author posts (0046)'),
@@ -196,6 +232,11 @@ export const SituationSchema = z.strictObject({
     })
     .nullable()
     .default(null),
+  speakers: z
+    .array(z.strictObject({ post: idOf('post').nullable(), person: idOf('person') }))
+    .optional()
+    .describe('The post-holder check (lane 1.11): the named men whose words or acts the text gives, each in the post he must hold that day (null: serving). The item fires only while every one does.'),
+  namedOnly: z.string().min(1).optional().describe('Why the text names a man without giving his words or acts (lane 1.11: the post-holder check).'),
   actingGovernment: idOf('department').optional(),
   gate: GateTagSchema,
   gateReview: GateReviewSchema.nullable().default(null),
@@ -269,8 +310,16 @@ export function validateSituations(items: readonly { readonly file: string; read
   const sink = new IssueSink();
   const factions = new Set(pack.manifest.factions.map((f) => f.id as string));
   const people = new Set(pack.world.people.map((p) => p.id as string));
+  // Each person's surname as the text would name him (the last word of his name, less a generational suffix).
+  // Read lazily: the default-locale strings resolve the names, and they are filled below.
+  const surnames = () => pack.world.people.flatMap((p) => {
+    const words = (defaultStrings.get(p.name) ?? p.name).replace(/[^A-Za-z .'-]/g, ' ').split(/\s+/).filter((w) => w !== '' && !/^(Jr|Sr|II|III)\.?$/.test(w));
+    const last = words[words.length - 1];
+    return last === undefined || last.length < 3 ? [] : [[p.id as string, last.replace(/[^A-Za-z'-]/g, '')] as const];
+  });
   const regions = new Set(pack.world.regions.map((r) => r.id as string));
   const posts = new Set(pack.scenarios.flatMap((s) => s.posts.map((p) => p.id as string)));
+  const forceBlocks = new Set(pack.scenarios.flatMap((s) => s.forceBlocks.map((b) => b.id as string)));
   // A post's side is its department's (null for a neutral government).
   const departmentSide = new Map(pack.world.departments.map((d) => [d.id as string, d.faction as string | null]));
   const postSide = new Map(pack.scenarios.flatMap((s) => s.posts.map((p) => [p.id as string, departmentSide.get(p.department) ?? null] as const)));
@@ -309,8 +358,16 @@ export function validateSituations(items: readonly { readonly file: string; read
   const governmentKinds = new Set(pack.world.vocabularies.departmentKinds.filter((k) => k.government).map((k) => k.id as string));
   const departmentKind = new Map(pack.world.departments.map((d) => [d.id as string, d.kind as string]));
   const selfGoverningKinds = new Set(pack.world.vocabularies.departmentKinds.filter((k) => k.selfGoverning).map((k) => k.id as string));
+  const raisingKinds = new Set<string>(pack.world.rules.recruitment.raisingPostKinds);
+  const postRaising = new Map(
+    pack.scenarios.flatMap((s) =>
+      s.posts.map((p) => [p.id as string, selfGoverningKinds.has(departmentKind.get(p.department) ?? '') ? 'self-governing' : raisingKinds.has(p.kind) ? 'raising' : 'not-raising'] as const),
+    ),
+  );
+  const temporaryPostIds = new Set(pack.scenarios.flatMap((s) => s.temporaryPosts.map((p) => p.id as string)));
+  const declaredGovernmentIds = new Set(pack.scenarios.flatMap((s) => (s.declaredGovernments ?? []).map((g) => g.id as string)));
   type Err = (kind: string, at: string, message: string, expected?: string) => void;
-  const commandProposal = (p: { readonly field: string; readonly subject: string | null; readonly delta: number; readonly side: string | null }, at: string, err: Err, fromNotice: boolean) => {
+  const commandProposal = (p: { readonly field: string; readonly subject: string | null; readonly delta: number; readonly side: string | null; readonly succession?: { readonly from: string; readonly to: string } }, at: string, err: Err, fromNotice: boolean) => {
     if (p.field === phase0.FACTION_CAPITAL_FIELD) {
       const region = pack.world.regions.find((r) => r.id === p.subject);
       if (region === undefined || !['land', 'key_point'].includes(region.kind)) err('situation-command-proposal', `${at}.subject`, 'a capital needs a land or key-point region');
@@ -318,9 +375,31 @@ export function validateSituations(items: readonly { readonly file: string; read
       if (p.delta !== 0) err('situation-command-proposal', `${at}.delta`, 'a capital move uses delta 0; its subject names the destination');
       return;
     }
+    if (p.field === phase0.POST_SUCCESSION_FIELD) {
+      if (!fromNotice) err('situation-command-proposal', at, 'institutional succession must come from a notice, not a principal decision');
+      if (p.subject === null || !posts.has(p.subject)) err('unknown-reference', `${at}.subject`, 'succession names no existing post');
+      if (p.delta !== 1 || p.side !== null) err('situation-command-proposal', at, 'succession requires delta +1 and no side measure');
+      if (p.succession === undefined || p.succession.from === p.succession.to) err('situation-command-proposal', `${at}.succession`, 'succession must name distinct incumbent and successor');
+      for (const person of Object.values(p.succession ?? {})) if (!people.has(person)) err('unknown-reference', `${at}.succession`, `unknown person ${person}`);
+      return;
+    }
+    // Lane 1.11: a government the start declares, established by an effect.
+    if (p.field === phase0.GOVERNMENT_ESTABLISHED_FIELD) {
+      if (p.subject === null || !declaredGovernmentIds.has(p.subject)) err('situation-command-proposal', `${at}.subject`, `"${p.subject ?? 'none'}" is not a government any start declares`, 'the id of a row in a start’s declared_governments.csv');
+      if (p.delta !== 1) err('situation-command-proposal', `${at}.delta`, `establishing a government has delta ${p.delta}`, '+1: it establishes the government');
+      // 0069, 0070: regions change government only by the act of those who form it, a notice, never a principal's choice.
+      if (!fromNotice) err('self-governing-decision', `${at}.field`, 'a government is established from a decision option, inaction or a locked cost, which would let a principal move regions by choice', 'the effects of a notice only: those who form it act');
+      return;
+    }
+    // Lane 1.11: a temporary post the start declares, opened by an effect (0040).
+    if (p.field === phase0.TEMPORARY_POST_FIELD) {
+      if (p.subject === null || !temporaryPostIds.has(p.subject)) err('situation-command-proposal', `${at}.subject`, `"${p.subject ?? 'none'}" is not a temporary post any start declares`, 'the id of a row in a start’s temporary_posts.csv');
+      if (p.delta !== 1) err('situation-command-proposal', `${at}.delta`, `opening a temporary post has delta ${p.delta}`, '+1: it opens the post');
+      return;
+    }
     const closing = p.field === phase0.GOVERNMENT_CLOSED_FIELD;
     if (!closing && p.field !== phase0.DEPARTMENT_SIDE_FIELD) {
-      err('situation-command-proposal', `${at}.field`, `command owns no field "${p.field}"`, `"${phase0.GOVERNMENT_CLOSED_FIELD}" (a neutral government closes or reopens) or "${phase0.DEPARTMENT_SIDE_FIELD}" (a government joins a side)`);
+      err('situation-command-proposal', `${at}.field`, `command owns no field "${p.field}"`, `"${phase0.GOVERNMENT_CLOSED_FIELD}" (a neutral government closes or reopens), "${phase0.DEPARTMENT_SIDE_FIELD}" (a government joins a side) or "${phase0.TEMPORARY_POST_FIELD}" (a declared temporary post opens)`);
       return;
     }
     if (p.subject === null) err('situation-command-proposal', `${at}.subject`, `a "${p.field}" proposal names no department`, 'a government department id');
@@ -352,6 +431,12 @@ export function validateSituations(items: readonly { readonly file: string; read
     def.staffLine?.authors.forEach((p, i) => ownSide(p, `staffLine.authors[${i}]`));
     def.report?.authors.forEach((p, i) => ownSide(p, `report.authors[${i}]`));
     def.options.forEach((o, i) => o.orders.forEach((order, j) => ownSide(order.to, `options[${i}].orders[${j}].to`)));
+    // A call may go to a neutral government's governor too (a requisition he answers by his own compliance), never the other side's.
+    def.options.forEach((o, i) =>
+      o.calls.forEach((call, j) => {
+        if (postSide.has(call.to) && postSide.get(call.to) !== null && postSide.get(call.to) !== def.faction) err('situation-side', `options[${i}].calls[${j}].to`, `\"${call.to}\" is ${postSide.get(call.to)}'s post, not ${def.faction}'s`, 'a governor of the calling side or of a neutral government');
+      }),
+    );
     def.subjects.forEach((p, i) => ref(people, 'person', p, `subjects[${i}]`));
     def.delegableTo.forEach((p, i) => ref(posts, 'post in any scenario', p, `delegableTo[${i}]`));
     const optionIds = def.options.map((o) => o.id);
@@ -361,7 +446,10 @@ export function validateSituations(items: readonly { readonly file: string; read
       if (def.options.length === 0) err('situation-missing', 'options', 'a decision has no options', 'at least one option (0040)');
       if (def.inaction === null) err('situation-missing', 'inaction', 'a decision has no inaction outcome', 'an inaction outcome, costed like the options (0040; gate Q2)');
       if (def.historicalDefault === null) err('situation-missing', 'historicalDefault', 'a decision has no historical default', 'options, a delegation, or unsourced with a reason (0040)');
-      if (def.staffLine === null) err('situation-missing', 'staffLine', 'a decision has no staff recommendation', 'an advice line by an ordered list of author posts (0040, 0046)');
+      // B9 (the lead's S12 ruling): where every option rests on the principal's own initiative, no staff line may recommend it.
+      const allInitiative = def.options.length > 0 && def.options.every((o) => phase0.isProposalBasis(o.proposedBy) && o.proposedBy.basis === 'principal-initiative');
+      if (def.staffLine !== null && def.staffAbsence !== undefined) err('situation-staff-line', 'staffAbsence', 'a decision has both a staff line and a declared absence of one', 'one or the other');
+      if (def.staffLine === null && !allInitiative && def.staffAbsence === undefined) err('situation-missing', 'staffLine', 'a decision has no staff recommendation', 'an advice line by an ordered list of author posts (0040, 0046)');
     } else {
       for (const field of ['options', 'inaction', 'historicalDefault', 'staffLine'] as const) {
         const v = def[field];
@@ -371,7 +459,12 @@ export function validateSituations(items: readonly { readonly file: string; read
     if (def.kind === 'decision' && def.effects.length > 0) err('situation-decision-effects', 'effects', 'a decision has effects of its own', "effects on its options, its locked costs or its inaction outcome");
     // F1 (review S10): a notice reaches the principal as a report with an author and a route.
     if (def.kind === 'notice' && def.report === null) err('situation-missing', 'report', 'a notice has no report', 'a report with author posts and a report type, so the notice has an author and a route (gate F1)');
-    if (def.kind === 'decision' && def.report !== null) err('situation-decision-report', 'report', 'a decision has a notice report', 'none: a decision is told through its staff line');
+    // B9 (the lead's S12 ruling): a decision whose every option rests on the principal's own initiative has no staff line, so it is told by a plain report.
+    const initiativeOnly = def.kind === 'decision' && def.options.length > 0 && def.options.every((o) => phase0.isProposalBasis(o.proposedBy) && o.proposedBy.basis === 'principal-initiative');
+    if (def.kind === 'decision' && def.staffAbsence !== undefined && def.report === null) err('situation-missing', 'report', 'a decision with no staff line has no report', 'a plain report (gate F1)');
+    if (def.kind === 'decision' && def.report !== null && !initiativeOnly && def.staffAbsence === undefined) err('situation-decision-report', 'report', 'a decision has a notice report', 'none: a decision is told through its staff line (only a decision resting wholly on the principal’s own initiative is told by a plain report)');
+    if (initiativeOnly && def.staffLine !== null) err('situation-staff-line', 'staffLine', 'a decision resting on the principal’s own initiative has a staff line', 'none (B9): no staff line recommends what the president himself considered; tell it by a plain report');
+    if (initiativeOnly && def.report === null) err('situation-missing', 'report', 'a decision resting on the principal’s own initiative has neither staff line nor report', 'a plain report (gate F1)');
     if (def.report !== null) {
       def.report.authors.forEach((p, i) => ref(posts, 'post in any scenario', p, `report.authors[${i}]`));
       const probe = { reportType: def.report.reportType, reportSubtype: def.report.subtype, reportAuthor: def.faction as never, reportAuthorPost: null, reportSubjectKind: 'situation' as const, reportSubjectId: def.id, reportClaims: [], reportDay: 1, reportHour: null, reportAdvice: null, reportAnswers: null };
@@ -408,13 +501,25 @@ export function validateSituations(items: readonly { readonly file: string; read
     });
 
     def.options.forEach((o, i) => {
-      if (o.proposedBy !== 'inaction') o.proposedBy.forEach((p, j) => ref(people, 'person', p, `options[${i}].proposedBy[${j}]`));
+      if (Array.isArray(o.proposedBy)) (o.proposedBy as readonly string[]).forEach((p, j) => ref(people, 'person', p, `options[${i}].proposedBy[${j}]`));
       o.orders.forEach((order, j) => {
         const at = `options[${i}].orders[${j}]`;
         ref(posts, 'post in any scenario', order.to, `${at}.to`);
         if (order.objective !== null) ref(regions, 'region', order.objective, `${at}.objective`);
         if (!phase0.ORDER_ROUTES.includes(order.route)) err('situation-route', `${at}.route`, `"${order.route}" is not a route a principal orders by`, `one of ${phase0.ORDER_ROUTES.join(', ')} (0052)`);
         if (order.posture !== 'hold' && order.objective === null) err('situation-order', at, `a ${order.posture} order names no objective`, 'only a hold may name none: it holds where he stands');
+      });
+      o.calls.forEach((call, j) => {
+        const at = `options[${i}].calls[${j}]`;
+        ref(posts, 'post in any scenario', call.to, `${at}.to`);
+        // The lead's ruling: a call goes to a state government's raising post, of the calling side or neutral, never to a
+        // people who govern themselves (0069, 0070; SENSITIVE-HISTORY 3.7: no seat recruits a nation). The kernel refuses it
+        // as `not_raising_post`; the pack refuses it here first.
+        const raising = postRaising.get(call.to);
+        if (raising === 'self-governing') err('self-governing-call', `${at}.to`, `"${call.to}" belongs to a people who govern themselves; no principal calls on a nation for regiments`, 'a state governor’s post (0069, 0070)');
+        else if (raising === 'not-raising') err('situation-call', `${at}.to`, `"${call.to}" is not a post that raises regiments`, `a post of a kind in rules.recruitment.raisingPostKinds`);
+        if (!phase0.ORDER_ROUTES.includes(call.route)) err('situation-route', `${at}.route`, `\"${call.route}\" is not a route a principal orders by`, `one of ${phase0.ORDER_ROUTES.join(', ')} (0052)`);
+        if (call.termDays > pack.world.rules.recruitment.maxTermDays) err('situation-call', `${at}.termDays`, `a term of ${call.termDays} days is longer than the pack allows`, `at most ${pack.world.rules.recruitment.maxTermDays} days (rules.recruitment.maxTermDays)`);
       });
     });
 
@@ -458,6 +563,7 @@ export function validateSituations(items: readonly { readonly file: string; read
           else if ('decided' in c) for (const o of c.options ?? []) if (!other.options.some((x) => x.id === o)) err('unknown-reference', at, `"${o}" is not an option of ${id}`);
         }
         if ('goal' in c) ref(posts, 'post in any scenario', c.goal.post, at);
+        if ('callReceived' in c) ref(posts, 'post in any scenario', c.callReceived.post, at);
         if ('headquartersAt' in c) {
           ref(posts, 'post in any scenario', c.headquartersAt.post, at);
           ref(regions, 'region', c.headquartersAt.region, at);
@@ -471,9 +577,31 @@ export function validateSituations(items: readonly { readonly file: string; read
       });
     }
     for (const { at, effect } of phase0.effectsOf(def)) {
+      if ('propose' in effect && effect.propose.succession !== undefined && (effect.propose.owner !== 'command' || effect.propose.field !== phase0.POST_SUCCESSION_FIELD)) err('situation-command-proposal', `${at}.propose.succession`, 'a succession payload belongs only to command.post_succession');
       if ('propose' in effect && effect.propose.side !== null) ref(factions, 'faction', effect.propose.side, `${at}.propose.side`);
       if ('propose' in effect && effect.propose.owner === 'command') commandProposal(effect.propose, `${at}.propose`, err, def.kind === 'notice');
       if ('propose' in effect && effect.propose.owner === 'politics') politicsProposal(effect.propose, `${at}.propose`, err);
+      // Lane 1.11: a landing names a start's force block and a region; forces checks the rest in play (aboard, adjacent).
+      if ('landing' in effect) {
+        ref(forceBlocks, 'force block in any scenario', effect.landing.parent, `${at}.landing.parent`);
+        ref(regions, 'region', effect.landing.region, `${at}.landing.region`);
+      }
+    }
+
+    // The post-holder check (lane 1.11, the lead's rule; rule 7): a notice whose text names a person of the World must
+    // say whose words or acts it gives (speakers, each in the post he must hold) or why it only names him (namedOnly).
+    (def.speakers ?? []).forEach((s, j) => {
+      ref(people, 'person', s.person, `speakers[${j}].person`);
+      if (s.post !== null && !temporaryPostIds.has(s.post)) ref(posts, 'post in any scenario', s.post, `speakers[${j}].post`);
+    });
+    if (def.kind === 'notice' && def.namedOnly === undefined) {
+      const text = defaultStrings.get(def.text) ?? '';
+      const declared = new Set((def.speakers ?? []).map((s) => s.person as string));
+      for (const [person, surname] of surnames()) {
+        // A place named for a man (a fort or a camp) names no man.
+        if (declared.has(person) || !new RegExp(`(?<!\\b(?:Fort|Camp) )\\b${surname}\\b`).test(text)) continue;
+        err('post-holder-check', 'speakers', `the text names ${surname} (${person}) but neither lists him in speakers nor says why it only names him`, 'speakers: [{ post, person }] when the text quotes him or gives an act of his as a holder of a post (it then fires only while he holds it); namedOnly: "<why>" when it names him without giving his words or acts (a treaty’s signers, an appointment as the record states it)');
+      }
     }
 
     // String keys, in the default locale. (Every message in the table is parsed as ICU by the World validator.)

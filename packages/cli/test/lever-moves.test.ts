@@ -11,7 +11,7 @@ import { indexedFixture, P, POST, F } from '../../kernel/test/support/seats-fixt
  * holds caution.
  */
 const S = (id: string) => toId('situation', id) as ids.SituationId;
-const opt = (id: string, displayKey: number, honours: string[], watched = false): phase0.OptionDef => ({ id, label: `situation.crossers.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [], lockedCosts: [], orders: [], honours, watched, policy: null, gate: null });
+const opt = (id: string, displayKey: number, honours: string[], watched = false): phase0.OptionDef => ({ id, label: `situation.crossers.option.${id}`, displayKey, proposedBy: [P('a_sec')], group: null, appearsWhen: null, expiresWhen: null, waitsOn: null, effects: [], lockedCosts: [], orders: [], calls: [], honours, watched, policy: null, gate: null });
 
 const CROSSERS: phase0.SituationDef = {
   id: S('crossers'),

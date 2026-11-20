@@ -159,7 +159,10 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
   // Lane 1.12 (G-1.12a): the forts the rules let be bombarded, and the record's terms, name regions of the map and sides.
   const bombardment = map.world.rules.combat.bombardment;
   for (const o of bombardment.objectives) if (!map.regions.has(o.region)) problems.push(`rules.combat.bombardment.objectives: ${o.region} is not a region`);
-  for (const t of bombardment.recordTerms) if (!factions.has(t.faction)) problems.push(`rules.combat.bombardment.recordTerms: ${t.faction} is not a faction`);
+  for (const t of bombardment.recordTerms) {
+    if (!factions.has(t.faction)) problems.push(`rules.combat.bombardment.recordTerms: ${t.faction} is not a faction`);
+    if (!people.has(t.commander)) problems.push(`rules.combat.bombardment.recordTerms: ${t.commander} is not a person`);
+  }
   if (problems.length > 0) throw new SeatsWorldError(problems);
 
   const regionIds = [...map.regions.keys()].sort(strictCompare);

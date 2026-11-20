@@ -140,6 +140,13 @@ const PROBES: Record<string, Probe> = {
     option: { fires: ['incite_mob_against_papers'], passes: ['ban_from_the_mails'] },
     label: { fires: ['Encourage the crowds against the papers'], passes: ['Send troops to disperse the mob'] },
   },
+  'riots-and-mobs#0': {
+    option: { fires: ['incite_the_mob', 'organise_a_riot'], passes: ['meet_the_governor'] },
+    label: { fires: ['Stir up the crowds against the troops'], passes: ['Meet the governor’s request that no more troops cross Maryland'] },
+  },
+  'northern-racism-cost#0': {
+    label: { fires: ['A paper voices an economic concern about freed labour'], passes: ['A paper campaigns against the proclamation with racist appeals'] },
+  },
   'civilian-deaths-1861#0': {
     option: { fires: ['fire_on_the_crowd'], passes: ['disperse_the_crowd'] },
     label: { fires: ['Order the troops to fire on the crowd'], passes: ['Bring troops around Baltimore by Annapolis'] },

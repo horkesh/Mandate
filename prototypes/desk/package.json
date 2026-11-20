@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "tsx scripts/dev.ts",
     "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:ui": "tsx scripts/r26-fixture.ts && playwright test --config playwright.r26.config.ts",
     "test:plan": "playwright test --config playwright.r26-plan.config.ts",

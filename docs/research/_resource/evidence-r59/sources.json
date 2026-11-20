@@ -1,0 +1,346 @@
+{
+  "source_root": "C:\\Pyrrhic\\mandate-research-sources\\r59-sources",
+  "records": [
+    {
+      "key": "CHASE-D",
+      "title": "Diary and Correspondence of Salmon P. Chase, AHA Annual Report 1902, volume 2 (1903)",
+      "identifier": "diaryandcorrespo00chasrich",
+      "url": "https://archive.org/details/diaryandcorrespo00chasrich",
+      "ocr": "chase-diary.txt",
+      "xml": "chase-djvu.xml",
+      "kind": "primary documents only",
+      "rights": "government printing, 1903, catalogue NOT_IN_COPYRIGHT",
+      "positive_pages": [
+        271,
+        272,
+        277,
+        278,
+        288,
+        487,
+        488,
+        489,
+        490,
+        491
+      ],
+      "read_limit": "Selected dated correspondence, not later diary or editorial notes. Page images visually inspected.",
+      "images": [
+        "chase-p271.jpg",
+        "chase-p272.jpg",
+        "chase-p277.jpg",
+        "chase-p278.jpg",
+        "chase-p288.jpg",
+        "chase-p487.jpg",
+        "chase-p488.jpg",
+        "chase-p489.jpg",
+        "chase-p490.jpg",
+        "chase-p491.jpg"
+      ],
+      "retained_files": [
+        {
+          "name": "chase-diary.txt",
+          "bytes": 1317306,
+          "sha256": "c1ae5659becdac9d66926ae473443113e540675ccaef7d12bb76f806e1d2cbb5"
+        },
+        {
+          "name": "chase-djvu.xml",
+          "bytes": 15459594,
+          "sha256": "0143fb5dbca6270f09bddceb73810eccdba3ec1d29a55a28b661d57f1159ed4e"
+        },
+        {
+          "name": "chase-p271.jpg",
+          "bytes": 1165642,
+          "sha256": "17516a87c9eba17e81d8a17b194bb508b2ded80699ea057b9117c03cef8663e6"
+        },
+        {
+          "name": "chase-p272.jpg",
+          "bytes": 1254890,
+          "sha256": "6149d40e8bb02bb6a0d44d0682de7b9627a49c617af69f21e68f2e679bc63e60"
+        },
+        {
+          "name": "chase-p277.jpg",
+          "bytes": 956146,
+          "sha256": "57c88cfa2882e621ae762ae67338f910911f60ceed1aae6a515369e13dbab96b"
+        },
+        {
+          "name": "chase-p278.jpg",
+          "bytes": 1094763,
+          "sha256": "b03db745036e22fb716ad9f460a0e3f4071a6dfe840c257a00da69b5018d421c"
+        },
+        {
+          "name": "chase-p288.jpg",
+          "bytes": 1093212,
+          "sha256": "b01538a39263a3d89e14f2916c8af51352158e8f9b92a93bc6ab0ce51bea1d5d"
+        },
+        {
+          "name": "chase-p487.jpg",
+          "bytes": 1147392,
+          "sha256": "4945315c41b7c6c2e7e38d5efa07631ff6e527b56296047975717338a7f396d4"
+        },
+        {
+          "name": "chase-p488.jpg",
+          "bytes": 1253554,
+          "sha256": "5cdea2ffc9f0be0715e7422268d4583d3d7f3a81fcabe5708ac8e5368eb825ef"
+        },
+        {
+          "name": "chase-p489.jpg",
+          "bytes": 1160308,
+          "sha256": "7631cf1490a1cd8c55406843fbb6f79d1e25a1e3719163900c4fed4bea6c5c15"
+        },
+        {
+          "name": "chase-p490.jpg",
+          "bytes": 1192051,
+          "sha256": "2965b35b57f3fb205c072295fdebdb657cc05d26b88ff81692886ca5d27553a6"
+        },
+        {
+          "name": "chase-p491.jpg",
+          "bytes": 1312981,
+          "sha256": "a4319cd3f6ae232369168b55f9191be357f591259285e499c8aaf0dd3c306f72"
+        }
+      ]
+    },
+    {
+      "key": "NEW:STAT9-SCOTT-1848",
+      "title": "Joint resolution of 9 March 1848, 9 Stat. 333",
+      "url": "https://en.wikisource.org/wiki/Page:United_States_Statutes_at_Large_Volume_9.djvu/359",
+      "ocr": "stat9-p333-scrape.md",
+      "kind": "primary government act",
+      "rights": "government work, 1848",
+      "document_date": "1848-03-09",
+      "positive_pages": [
+        333
+      ],
+      "images": [
+        "stat9-p333.jpg"
+      ],
+      "read_limit": "Printed page inspected in full. Only sections 1 and 2 used.",
+      "retained_files": [
+        {
+          "name": "stat9-p333-scrape.md",
+          "bytes": 4411,
+          "sha256": "ccb20dc863d8dcf34b6517765b7da82ab566231787bf6908d26f886b8eeb7949"
+        },
+        {
+          "name": "stat9-p333.jpg",
+          "bytes": 576762,
+          "sha256": "a82f06ff8a6ec98bfd429da2c3414a55218ed85a846a5a9bec07d4b90fa11051"
+        }
+      ]
+    },
+    {
+      "key": "NEW:CHASE-LINCOLN-1861-DOC",
+      "title": "Chase to Thaddeus Stevens, 9 January 1861, printed in Warden (1874), p377",
+      "identifier": "slamonportlandchas00wardrich",
+      "url": "https://archive.org/details/slamonportlandchas00wardrich/page/n400",
+      "ocr": "warden-chase.txt",
+      "xml": "warden-djvu.xml",
+      "kind": "primary letter only, containing biography secondary",
+      "rights": "1874 publication, catalogue NOT_IN_COPYRIGHT",
+      "document_date": "1861-01-09",
+      "positive_pages": [
+        377
+      ],
+      "images": [
+        "warden-p377.jpg"
+      ],
+      "read_limit": "Letter and its dated heading read in OCR and page image, surrounding Warden narrative not a leg.",
+      "retained_files": [
+        {
+          "name": "warden-chase.txt",
+          "bytes": 2652643,
+          "sha256": "3f8456df81566344334e11d9133a789dbc8477a0e9c1c0cc4109256d0f245a2c"
+        },
+        {
+          "name": "warden-djvu.xml",
+          "bytes": 31318485,
+          "sha256": "af8bd2f1155f8b7cc82676680e8a07ca921ae8e27442da8db437a372ebf44c77"
+        },
+        {
+          "name": "warden-p377.jpg",
+          "bytes": 581386,
+          "sha256": "8e494ca386b32d05e1e43c44675441c306c47ba19dc54aa1ebdb43576d2dc2cf"
+        }
+      ]
+    },
+    {
+      "key": "NEW:DIX-BANKERS-1861-DOC",
+      "title": "Bank officers and directors resolution, printed in Morgan Dix, Memoirs of John Adams Dix (1883), volume 1 p363",
+      "identifier": "memoirsofjohnada01dixm",
+      "url": "https://archive.org/details/memoirsofjohnada01dixm/page/363",
+      "ocr": "dix-v1.txt",
+      "kind": "primary resolution only, containing biography secondary",
+      "rights": "1883 publication, catalogue NOT_IN_COPYRIGHT",
+      "document_date": "1861-01",
+      "date_limit": "Month retained from surrounding sequence on pp363-364, including the January 11 date on p364. No day printed inside resolution.",
+      "positive_pages": [
+        363
+      ],
+      "images": [
+        "dix-p363.jpg"
+      ],
+      "read_limit": "Quoted resolution and dated sequence inspected, not the retrospective chapter as proof of ability.",
+      "retained_files": [
+        {
+          "name": "dix-v1.txt",
+          "bytes": 980665,
+          "sha256": "4e31d0b9a3a280400b12e7400fd3715a904c5babac931f7be4ed4ca39445f32d"
+        },
+        {
+          "name": "dix-p363.jpg",
+          "bytes": 539695,
+          "sha256": "33188b42462f604ff6492ad131787ca104d27786b88149f6a109c23d764fe6fb"
+        }
+      ]
+    },
+    {
+      "key": "CHASE-1847",
+      "url": "https://archive.org/details/reclamationoffug00chas",
+      "ocr": "chase-1847.txt",
+      "kind": "primary, lead only",
+      "rights": "1847 publication",
+      "document_date": "1847",
+      "images": [
+        "chase1847-p107.jpg",
+        "chase1847-observed-p108.jpg"
+      ],
+      "read_limit": "Title, opening and conclusion pp107-108 read, not a positive rs15 citation.",
+      "retained_files": [
+        {
+          "name": "chase-1847.txt",
+          "bytes": 238790,
+          "sha256": "e3ff6bf0d784bea4032d1aa9c4747b3f6afc6c4bb2bdace950ced25be73c512e"
+        },
+        {
+          "name": "chase1847-p107.jpg",
+          "bytes": 567189,
+          "sha256": "7967f09886140bce9de05533bfae8021c6cb051a6b916357c618ea45d54cdbf4"
+        },
+        {
+          "name": "chase1847-observed-p108.jpg",
+          "bytes": 337187,
+          "sha256": "187cd40386abc9ff4ec7860fda12510ac9b78b09c45d93c95414320e9494521e"
+        }
+      ]
+    },
+    {
+      "key": "JULIAN-SPEECH-LEAD",
+      "url": "https://archive.org/details/speechesonpoliti00juli",
+      "ocr": "speechesonpoliti00juli.txt",
+      "kind": "dated primary speech only, lead only",
+      "rights": "1872 publication",
+      "document_date": "1850-05-14",
+      "images": [
+        "julian-p1-label.jpg",
+        "julian-p7-label.jpg"
+      ],
+      "read_limit": "Speech heading and p7 read, retrospective bracketed introduction excluded, no positive rs15 citation.",
+      "retained_files": [
+        {
+          "name": "speechesonpoliti00juli.txt",
+          "bytes": 1511637,
+          "sha256": "4ecb97f13dc0f5782ecee29ad500c8b242b5b8167d17dea4d553bf90d4d750a6"
+        },
+        {
+          "name": "julian-p1-label.jpg",
+          "bytes": 654778,
+          "sha256": "cdf356799ce80d9de1090247fe311a2f59c2ff6321d9434b4571aaad9fce96ea"
+        },
+        {
+          "name": "julian-p7-label.jpg",
+          "bytes": 849283,
+          "sha256": "8219fb71f6bd02d52ad2d7e10bbc8ae0dbc8a0c2c9f4b1669fa2ca8384502845"
+        }
+      ]
+    },
+    {
+      "key": "SHERMAN-LETTERS-LEAD",
+      "url": "https://archive.org/details/shermanlettersco00sher",
+      "ocr": "shermanlettersco00sher.txt",
+      "kind": "dated letters only, lead only",
+      "rights": "1894 publication, title-page imprint in OCR",
+      "read_limit": "Selected January and May 1861 letters and nearby dates, not editor narrative. No positive rs15 citation.",
+      "retained_files": [
+        {
+          "name": "shermanlettersco00sher.txt",
+          "bytes": 816766,
+          "sha256": "828626be9efbeabdf27e45c4ab52ab86dc289631b4c52d4a76d1aa172a2aa98c"
+        }
+      ]
+    },
+    {
+      "key": "NYT-1861-01-14-LEAD",
+      "url": "https://archive.org/details/sim_new-york-times_the-new-york-times_1861-01-14_10_2906",
+      "ocr": "nyt-1861-01-14.txt",
+      "kind": "primary newspaper, discovery only",
+      "rights": "1861 publication",
+      "read_limit": "Surname search and selected crisis/cabinet passages only, not all columns. No positive rs15 citation.",
+      "retained_files": [
+        {
+          "name": "nyt-1861-01-14.txt",
+          "bytes": 440502,
+          "sha256": "70d037724eca1e3a228d5ba7175701551da449ff32739fb72703678cdc554151"
+        }
+      ]
+    },
+    {
+      "key": "GLOBE-1861-01-16-LEAD",
+      "url": "https://archive.org/details/sim_united-states-congress-congressional-globe_1861-01-16_24",
+      "ocr": "globe-1861-01-16.txt",
+      "kind": "primary congressional proceedings, discovery only",
+      "rights": "government/1861 publication",
+      "read_limit": "Selected surname hits and Cox passage read. Issue contains multiple sitting dates. No positive rs15 citation.",
+      "retained_files": [
+        {
+          "name": "globe-1861-01-16.txt",
+          "bytes": 460735,
+          "sha256": "63b6f86dea2676881c4040305a847c5974cf8059d2d9a7f727742571f1cbf8bd"
+        }
+      ]
+    },
+    {
+      "key": "OR-I-1-REUSED",
+      "url": "https://archive.org/details/warofrebellionco0001vari",
+      "ocr": "or-I-1.txt",
+      "kind": "official compilation, discovery only",
+      "rights": "government work, 1880 printing",
+      "read_limit": "Read-only copy of the existing rs7 OCR from scratchpad, indexed in R52 catalogue. New name screen only. Existing R52 evidence not rerun or re-certified. No positive rs15 citation.",
+      "retained_files": [
+        {
+          "name": "or-I-1.txt",
+          "bytes": 2578372,
+          "sha256": "3055cba20c14ea27c1f52373cefe1b9f7ee7b8fa1dd25579941969f3040840c4"
+        }
+      ]
+    },
+    {
+      "key": "MCCLELLAN-REPORT1857-LEAD",
+      "url": "https://archive.org/details/reportsecretary00clelgoog",
+      "ocr": "mcclellan-report1857.txt",
+      "kind": "primary government report, lead only",
+      "rights": "government/1857 publication",
+      "document_date": "1857-02-25",
+      "read_limit": "Davis transmission on printed p3 and opening report read. Assignment/completion is not appraisal, no positive rs15 citation.",
+      "retained_files": [
+        {
+          "name": "mcclellan-report1857.txt",
+          "bytes": 980474,
+          "sha256": "87a9b32c047954841461ae0001ac3a24086056650b1429160cf6ef410824ec11"
+        }
+      ]
+    },
+    {
+      "key": "WAR-REPORT1856-LEAD",
+      "url": "https://archive.org/details/reportofsecretar00unit_2",
+      "ocr": "war-report-1856.txt",
+      "kind": "primary government report, discovery only",
+      "rights": "government/1856 publication",
+      "read_limit": "Opening examined: fortification report, not the expected general annual report. No positive rs15 citation.",
+      "retained_files": [
+        {
+          "name": "war-report-1856.txt",
+          "bytes": 33218,
+          "sha256": "562e3219d9cd22304fa252d11965bd9175d21966cb090720af10e97e78d93a12"
+        }
+      ]
+    }
+  ]
+}

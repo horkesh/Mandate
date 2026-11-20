@@ -1,0 +1,3215 @@
+[
+  {
+    "person": "lincoln_abraham",
+    "cell": "competence",
+    "surname": "lincoln",
+    "hits": {
+      "chase-diary.txt": 139,
+      "warden-chase.txt": 260,
+      "dix-v1.txt": 13,
+      "shermanlettersco00sher.txt": 53,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 21,
+      "or-I-1.txt": 58,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "lincoln_abraham",
+    "cell": "regard_others:blair_montgomery",
+    "surname": "lincoln",
+    "hits": {
+      "chase-diary.txt": 139,
+      "warden-chase.txt": 260,
+      "dix-v1.txt": 13,
+      "shermanlettersco00sher.txt": 53,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 21,
+      "or-I-1.txt": 58,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "lincoln_abraham",
+    "cell": "regard_others:welles_gideon",
+    "surname": "lincoln",
+    "hits": {
+      "chase-diary.txt": 139,
+      "warden-chase.txt": 260,
+      "dix-v1.txt": 13,
+      "shermanlettersco00sher.txt": 53,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 21,
+      "or-I-1.txt": 58,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "lincoln_abraham",
+    "cell": "reputation",
+    "surname": "lincoln",
+    "hits": {
+      "chase-diary.txt": 139,
+      "warden-chase.txt": 260,
+      "dix-v1.txt": 13,
+      "shermanlettersco00sher.txt": 53,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 21,
+      "or-I-1.txt": 58,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "bates_edward",
+    "cell": "competence",
+    "surname": "bates",
+    "hits": {
+      "chase-diary.txt": 15,
+      "warden-chase.txt": 18,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 2,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 4,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "bates_edward",
+    "cell": "regard",
+    "surname": "bates",
+    "hits": {
+      "chase-diary.txt": 15,
+      "warden-chase.txt": 18,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 2,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 4,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "bates_edward",
+    "cell": "regard_others:blair_montgomery",
+    "surname": "bates",
+    "hits": {
+      "chase-diary.txt": 15,
+      "warden-chase.txt": 18,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 2,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 4,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "blair_montgomery",
+    "cell": "regard",
+    "surname": "blair",
+    "hits": {
+      "chase-diary.txt": 28,
+      "warden-chase.txt": 45,
+      "dix-v1.txt": 3,
+      "shermanlettersco00sher.txt": 12,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 29,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "blair_montgomery",
+    "cell": "regard_others:bates_edward",
+    "surname": "blair",
+    "hits": {
+      "chase-diary.txt": 28,
+      "warden-chase.txt": 45,
+      "dix-v1.txt": 3,
+      "shermanlettersco00sher.txt": 12,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 29,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "blair_montgomery",
+    "cell": "regard_others:chase_salmon_p",
+    "surname": "blair",
+    "hits": {
+      "chase-diary.txt": 28,
+      "warden-chase.txt": 45,
+      "dix-v1.txt": 3,
+      "shermanlettersco00sher.txt": 12,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 29,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "blair_montgomery",
+    "cell": "reputation",
+    "surname": "blair",
+    "hits": {
+      "chase-diary.txt": 28,
+      "warden-chase.txt": 45,
+      "dix-v1.txt": 3,
+      "shermanlettersco00sher.txt": 12,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 29,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "cameron_simon",
+    "cell": "nerve",
+    "surname": "cameron",
+    "hits": {
+      "chase-diary.txt": 11,
+      "warden-chase.txt": 21,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 5,
+      "nyt-1861-01-14.txt": 2,
+      "globe-1861-01-16.txt": 5,
+      "or-I-1.txt": 34,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "cameron_simon",
+    "cell": "regard",
+    "surname": "cameron",
+    "hits": {
+      "chase-diary.txt": 11,
+      "warden-chase.txt": 21,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 5,
+      "nyt-1861-01-14.txt": 2,
+      "globe-1861-01-16.txt": 5,
+      "or-I-1.txt": 34,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "cameron_simon",
+    "cell": "reputation",
+    "surname": "cameron",
+    "hits": {
+      "chase-diary.txt": 11,
+      "warden-chase.txt": 21,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 5,
+      "nyt-1861-01-14.txt": 2,
+      "globe-1861-01-16.txt": 5,
+      "or-I-1.txt": 34,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "cameron_simon",
+    "cell": "trait:makes_policy",
+    "surname": "cameron",
+    "hits": {
+      "chase-diary.txt": 11,
+      "warden-chase.txt": 21,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 5,
+      "nyt-1861-01-14.txt": 2,
+      "globe-1861-01-16.txt": 5,
+      "or-I-1.txt": 34,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "cameron_simon",
+    "cell": "value:career",
+    "surname": "cameron",
+    "hits": {
+      "chase-diary.txt": 11,
+      "warden-chase.txt": 21,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 5,
+      "nyt-1861-01-14.txt": 2,
+      "globe-1861-01-16.txt": 5,
+      "or-I-1.txt": 34,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "cameron_simon",
+    "cell": "value:party",
+    "surname": "cameron",
+    "hits": {
+      "chase-diary.txt": 11,
+      "warden-chase.txt": 21,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 5,
+      "nyt-1861-01-14.txt": 2,
+      "globe-1861-01-16.txt": 5,
+      "or-I-1.txt": 34,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "chase_salmon_p",
+    "cell": "regard_others:blair_montgomery",
+    "surname": "chase",
+    "hits": {
+      "chase-diary.txt": 1129,
+      "warden-chase.txt": 1986,
+      "dix-v1.txt": 4,
+      "shermanlettersco00sher.txt": 15,
+      "nyt-1861-01-14.txt": 3,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 59,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "chase_salmon_p",
+    "cell": "trait:antislavery",
+    "surname": "chase",
+    "hits": {
+      "chase-diary.txt": 1129,
+      "warden-chase.txt": 1986,
+      "dix-v1.txt": 4,
+      "shermanlettersco00sher.txt": 15,
+      "nyt-1861-01-14.txt": 3,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 59,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "seward_william_h",
+    "cell": "nerve",
+    "surname": "seward",
+    "hits": {
+      "chase-diary.txt": 106,
+      "warden-chase.txt": 151,
+      "dix-v1.txt": 6,
+      "shermanlettersco00sher.txt": 7,
+      "nyt-1861-01-14.txt": 10,
+      "globe-1861-01-16.txt": 7,
+      "or-I-1.txt": 9,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "seward_william_h",
+    "cell": "regard_others:welles_gideon",
+    "surname": "seward",
+    "hits": {
+      "chase-diary.txt": 106,
+      "warden-chase.txt": 151,
+      "dix-v1.txt": 6,
+      "shermanlettersco00sher.txt": 7,
+      "nyt-1861-01-14.txt": 10,
+      "globe-1861-01-16.txt": 7,
+      "or-I-1.txt": 9,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "welles_gideon",
+    "cell": "regard_others:seward_william_h",
+    "surname": "welles",
+    "hits": {
+      "chase-diary.txt": 12,
+      "warden-chase.txt": 28,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 4,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "welles_gideon",
+    "cell": "value:order",
+    "surname": "welles",
+    "hits": {
+      "chase-diary.txt": 12,
+      "warden-chase.txt": 28,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 4,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "stanton_edwin_m",
+    "cell": "trait:organiser",
+    "surname": "stanton",
+    "hits": {
+      "chase-diary.txt": 66,
+      "warden-chase.txt": 155,
+      "dix-v1.txt": 8,
+      "shermanlettersco00sher.txt": 54,
+      "nyt-1861-01-14.txt": 3,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 7,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "principal and US cabinet",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "scott_winfield",
+    "cell": "competence",
+    "surname": "scott",
+    "hits": {
+      "chase-diary.txt": 14,
+      "warden-chase.txt": 22,
+      "dix-v1.txt": 10,
+      "shermanlettersco00sher.txt": 19,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 89,
+      "mcclellan-report1857.txt": 1
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "scott_winfield",
+    "cell": "reputation",
+    "surname": "scott",
+    "hits": {
+      "chase-diary.txt": 14,
+      "warden-chase.txt": 22,
+      "dix-v1.txt": 10,
+      "shermanlettersco00sher.txt": 19,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 89,
+      "mcclellan-report1857.txt": 1
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "banks_nathaniel_p",
+    "cell": "reputation",
+    "surname": "banks",
+    "hits": {
+      "chase-diary.txt": 271,
+      "warden-chase.txt": 93,
+      "dix-v1.txt": 20,
+      "shermanlettersco00sher.txt": 36,
+      "nyt-1861-01-14.txt": 6,
+      "globe-1861-01-16.txt": 3,
+      "or-I-1.txt": 4,
+      "mcclellan-report1857.txt": 7
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "beauregard_pierre_g_t",
+    "cell": "reputation",
+    "surname": "beauregard",
+    "hits": {
+      "chase-diary.txt": 2,
+      "warden-chase.txt": 2,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 16,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 217,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "bragg_braxton",
+    "cell": "reputation",
+    "surname": "bragg",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 1,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 28,
+      "or-I-1.txt": 100,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "buell_don_c",
+    "cell": "reputation",
+    "surname": "buell",
+    "hits": {
+      "chase-diary.txt": 20,
+      "warden-chase.txt": 26,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 19,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 9,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "dix_john_a",
+    "cell": "competence",
+    "surname": "dix",
+    "hits": {
+      "chase-diary.txt": 4,
+      "warden-chase.txt": 7,
+      "dix-v1.txt": 424,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "fremont_john_c",
+    "cell": "regard",
+    "surname": "fremont",
+    "hits": {
+      "chase-diary.txt": 33,
+      "warden-chase.txt": 9,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 5,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "fremont_john_c",
+    "cell": "reputation",
+    "surname": "fremont",
+    "hits": {
+      "chase-diary.txt": 33,
+      "warden-chase.txt": 9,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 5,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "fremont_john_c",
+    "cell": "value:free_soil",
+    "surname": "fremont",
+    "hits": {
+      "chase-diary.txt": 33,
+      "warden-chase.txt": 9,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 5,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "halleck_henry_w",
+    "cell": "reputation",
+    "surname": "halleck",
+    "hits": {
+      "chase-diary.txt": 59,
+      "warden-chase.txt": 107,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 47,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "hardee_william_j",
+    "cell": "reputation",
+    "surname": "hardee",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 1,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 6,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "hardee_william_j",
+    "cell": "trait:organiser",
+    "surname": "hardee",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 1,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 6,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "mcclellan_george_b",
+    "cell": "reputation",
+    "surname": "mcclellan",
+    "hits": {
+      "chase-diary.txt": 116,
+      "warden-chase.txt": 165,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 28,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 5,
+      "mcclellan-report1857.txt": 12
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "mcculloch_ben",
+    "cell": "reputation",
+    "surname": "mcculloch",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 4,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 53,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "mcdowell_irvin",
+    "cell": "reputation",
+    "surname": "mcdowell",
+    "hits": {
+      "chase-diary.txt": 29,
+      "warden-chase.txt": 67,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 8,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 3,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "patterson_robert",
+    "cell": "reputation",
+    "surname": "patterson",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 6,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 7,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 13,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "pillow_gideon_j",
+    "cell": "reputation",
+    "surname": "pillow",
+    "hits": {
+      "chase-diary.txt": 4,
+      "warden-chase.txt": 9,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 6
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "pillow_gideon_j",
+    "cell": "trait:quarrelsome",
+    "surname": "pillow",
+    "hits": {
+      "chase-diary.txt": 4,
+      "warden-chase.txt": 9,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 6
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "polk_leonidas",
+    "cell": "reputation",
+    "surname": "polk",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 2,
+      "dix-v1.txt": 10,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 3,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "rosecrans_william_s",
+    "cell": "nerve",
+    "surname": "rosecrans",
+    "hits": {
+      "chase-diary.txt": 5,
+      "warden-chase.txt": 25,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "rosecrans_william_s",
+    "cell": "reputation",
+    "surname": "rosecrans",
+    "hits": {
+      "chase-diary.txt": 5,
+      "warden-chase.txt": 25,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "rosecrans_william_s",
+    "cell": "trait:organiser",
+    "surname": "rosecrans",
+    "hits": {
+      "chase-diary.txt": 5,
+      "warden-chase.txt": 25,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "sumner_edwin_v",
+    "cell": "reputation",
+    "surname": "sumner",
+    "hits": {
+      "chase-diary.txt": 127,
+      "warden-chase.txt": 66,
+      "dix-v1.txt": 3,
+      "shermanlettersco00sher.txt": 10,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 4,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "wool_john_e",
+    "cell": "competence",
+    "surname": "wool",
+    "hits": {
+      "chase-diary.txt": 3,
+      "warden-chase.txt": 24,
+      "dix-v1.txt": 7,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 5,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 5,
+      "mcclellan-report1857.txt": 7
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "wool_john_e",
+    "cell": "reputation",
+    "surname": "wool",
+    "hits": {
+      "chase-diary.txt": 3,
+      "warden-chase.txt": 24,
+      "dix-v1.txt": 7,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 5,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 5,
+      "mcclellan-report1857.txt": 7
+    },
+    "cohort": "Scott and commander search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "andrew_john_a",
+    "cell": "regard_others:blair_montgomery",
+    "surname": "andrew",
+    "hits": {
+      "chase-diary.txt": 8,
+      "warden-chase.txt": 25,
+      "dix-v1.txt": 6,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 6,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 4,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "April-call governor search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "andrew_john_a",
+    "cell": "regard_others:butler_benjamin_f",
+    "surname": "andrew",
+    "hits": {
+      "chase-diary.txt": 8,
+      "warden-chase.txt": 25,
+      "dix-v1.txt": 6,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 6,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 4,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "April-call governor search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "andrew_john_a",
+    "cell": "trait:disdains_superiors",
+    "surname": "andrew",
+    "hits": {
+      "chase-diary.txt": 8,
+      "warden-chase.txt": 25,
+      "dix-v1.txt": 6,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 6,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 4,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "April-call governor search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "curtin_andrew_g",
+    "cell": "trait:organiser",
+    "surname": "curtin",
+    "hits": {
+      "chase-diary.txt": 6,
+      "warden-chase.txt": 14,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "April-call governor search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "dennison_william",
+    "cell": "regard_others:cameron_simon",
+    "surname": "dennison",
+    "hits": {
+      "chase-diary.txt": 2,
+      "warden-chase.txt": 18,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 4,
+      "nyt-1861-01-14.txt": 3,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "April-call governor search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "morgan_edwin_d",
+    "cell": "reputation",
+    "surname": "morgan",
+    "hits": {
+      "chase-diary.txt": 7,
+      "warden-chase.txt": 21,
+      "dix-v1.txt": 52,
+      "shermanlettersco00sher.txt": 11,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 16,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "April-call governor search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "morton_oliver_h_p_t",
+    "cell": "nerve",
+    "surname": "morton",
+    "hits": {
+      "chase-diary.txt": 5,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 13,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "April-call governor search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "morton_oliver_h_p_t",
+    "cell": "regard",
+    "surname": "morton",
+    "hits": {
+      "chase-diary.txt": 5,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 13,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "April-call governor search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "morton_oliver_h_p_t",
+    "cell": "regard_others:cameron_simon",
+    "surname": "morton",
+    "hits": {
+      "chase-diary.txt": 5,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 13,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "April-call governor search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "morton_oliver_h_p_t",
+    "cell": "regard_others:dennison_william",
+    "surname": "morton",
+    "hits": {
+      "chase-diary.txt": 5,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 13,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "April-call governor search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "morton_oliver_h_p_t",
+    "cell": "regard_others:magoffin_beriah",
+    "surname": "morton",
+    "hits": {
+      "chase-diary.txt": 5,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 13,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "April-call governor search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "ramsey_alexander",
+    "cell": "reputation",
+    "surname": "ramsey",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 1,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "April-call governor search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "hunter_robert_m_t",
+    "cell": "reputation",
+    "surname": "hunter",
+    "hits": {
+      "chase-diary.txt": 15,
+      "warden-chase.txt": 27,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 4,
+      "nyt-1861-01-14.txt": 2,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 6,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "Davis and cabinet search",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "adams_charles_f",
+    "cell": "reputation",
+    "surname": "adams",
+    "hits": {
+      "chase-diary.txt": 14,
+      "warden-chase.txt": 40,
+      "dix-v1.txt": 232,
+      "shermanlettersco00sher.txt": 3,
+      "nyt-1861-01-14.txt": 5,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 66,
+      "mcclellan-report1857.txt": 1
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "bennett_james_g",
+    "cell": "competence",
+    "surname": "bennett",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 2,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 11,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "breckinridge_john_c",
+    "cell": "reputation",
+    "surname": "breckinridge",
+    "hits": {
+      "chase-diary.txt": 2,
+      "warden-chase.txt": 2,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 1,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "brown_joseph_e",
+    "cell": "reputation",
+    "surname": "brown",
+    "hits": {
+      "chase-diary.txt": 23,
+      "warden-chase.txt": 39,
+      "dix-v1.txt": 23,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 13,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 142,
+      "mcclellan-report1857.txt": 4
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "chandler_zachariah",
+    "cell": "nerve",
+    "surname": "chandler",
+    "hits": {
+      "chase-diary.txt": 5,
+      "warden-chase.txt": 5,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 4,
+      "or-I-1.txt": 15,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "covode_john",
+    "cell": "reputation",
+    "surname": "covode",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 5,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "crittenden_john_j",
+    "cell": "competence",
+    "surname": "crittenden",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 9,
+      "or-I-1.txt": 2,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "crittenden_john_j",
+    "cell": "nerve",
+    "surname": "crittenden",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 9,
+      "or-I-1.txt": 2,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "curtis_samuel_r",
+    "cell": "reputation",
+    "surname": "curtis",
+    "hits": {
+      "chase-diary.txt": 10,
+      "warden-chase.txt": 9,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 5,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 3,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "dahlgren_john_a_b",
+    "cell": "reputation",
+    "surname": "dahlgren",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 27,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "dana_charles_a",
+    "cell": "competence",
+    "surname": "dana",
+    "hits": {
+      "chase-diary.txt": 6,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 3,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "dana_charles_a",
+    "cell": "reputation",
+    "surname": "dana",
+    "hits": {
+      "chase-diary.txt": 6,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 3,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "dana_charles_a",
+    "cell": "trait:antislavery",
+    "surname": "dana",
+    "hits": {
+      "chase-diary.txt": 6,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 3,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "daniel_john_m",
+    "cell": "competence",
+    "surname": "daniel",
+    "hits": {
+      "chase-diary.txt": 6,
+      "warden-chase.txt": 19,
+      "dix-v1.txt": 5,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 5,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 21,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "daniel_john_m",
+    "cell": "nerve",
+    "surname": "daniel",
+    "hits": {
+      "chase-diary.txt": 6,
+      "warden-chase.txt": 19,
+      "dix-v1.txt": 5,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 5,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 21,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "daniel_john_m",
+    "cell": "reputation",
+    "surname": "daniel",
+    "hits": {
+      "chase-diary.txt": 6,
+      "warden-chase.txt": 19,
+      "dix-v1.txt": 5,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 5,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 21,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "daniel_john_m",
+    "cell": "trait:disdains_superiors",
+    "surname": "daniel",
+    "hits": {
+      "chase-diary.txt": 6,
+      "warden-chase.txt": 19,
+      "dix-v1.txt": 5,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 5,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 21,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "daniel_john_m",
+    "cell": "trait:quarrelsome",
+    "surname": "daniel",
+    "hits": {
+      "chase-diary.txt": 6,
+      "warden-chase.txt": 19,
+      "dix-v1.txt": 5,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 5,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 21,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "davis_charles_h",
+    "cell": "reputation",
+    "surname": "davis",
+    "hits": {
+      "chase-diary.txt": 43,
+      "warden-chase.txt": 31,
+      "dix-v1.txt": 7,
+      "shermanlettersco00sher.txt": 35,
+      "nyt-1861-01-14.txt": 9,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 94,
+      "mcclellan-report1857.txt": 3
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "du_pont_samuel_f",
+    "cell": "reputation",
+    "surname": "du",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 5,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 3,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 4
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "ellis_john_w",
+    "cell": "value:slavery_defence",
+    "surname": "ellis",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 1,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 21,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "farragut_david_g",
+    "cell": "nerve",
+    "surname": "farragut",
+    "hits": {
+      "chase-diary.txt": 12,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "farragut_david_g",
+    "cell": "trait:popular_with_troops",
+    "surname": "farragut",
+    "hits": {
+      "chase-diary.txt": 12,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "fessenden_william_p",
+    "cell": "reputation",
+    "surname": "fessenden",
+    "hits": {
+      "chase-diary.txt": 8,
+      "warden-chase.txt": 25,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 10,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "foote_andrew_h",
+    "cell": "trait:organiser",
+    "surname": "foote",
+    "hits": {
+      "chase-diary.txt": 8,
+      "warden-chase.txt": 4,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 2,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "franklin_william_b",
+    "cell": "reputation",
+    "surname": "franklin",
+    "hits": {
+      "chase-diary.txt": 11,
+      "warden-chase.txt": 38,
+      "dix-v1.txt": 7,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 2,
+      "or-I-1.txt": 4,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "gamble_hamilton_r",
+    "cell": "value:conciliation",
+    "surname": "gamble",
+    "hits": {
+      "chase-diary.txt": 3,
+      "warden-chase.txt": 1,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "grant_ulysses_s",
+    "cell": "reputation",
+    "surname": "grant",
+    "hits": {
+      "chase-diary.txt": 50,
+      "warden-chase.txt": 128,
+      "dix-v1.txt": 9,
+      "shermanlettersco00sher.txt": 262,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 15,
+      "or-I-1.txt": 28,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "greeley_horace",
+    "cell": "reputation",
+    "surname": "greeley",
+    "hits": {
+      "chase-diary.txt": 28,
+      "warden-chase.txt": 40,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 6,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "greeley_horace",
+    "cell": "trait:ambitious",
+    "surname": "greeley",
+    "hits": {
+      "chase-diary.txt": 28,
+      "warden-chase.txt": 40,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 6,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "harris_isham_g",
+    "cell": "competence",
+    "surname": "harris",
+    "hits": {
+      "chase-diary.txt": 3,
+      "warden-chase.txt": 4,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 16,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "harris_isham_g",
+    "cell": "reputation",
+    "surname": "harris",
+    "hits": {
+      "chase-diary.txt": 3,
+      "warden-chase.txt": 4,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 16,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "heintzelman_samuel_p",
+    "cell": "reputation",
+    "surname": "heintzelman",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 4,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "hill_daniel_h",
+    "cell": "reputation",
+    "surname": "hill",
+    "hits": {
+      "chase-diary.txt": 8,
+      "warden-chase.txt": 16,
+      "dix-v1.txt": 15,
+      "shermanlettersco00sher.txt": 16,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 3,
+      "or-I-1.txt": 38,
+      "mcclellan-report1857.txt": 15
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "hitchcock_ethan_a",
+    "cell": "reputation",
+    "surname": "hitchcock",
+    "hits": {
+      "chase-diary.txt": 2,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "holt_joseph",
+    "cell": "competence",
+    "surname": "holt",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 2,
+      "dix-v1.txt": 5,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 38,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "hooker_joseph",
+    "cell": "nerve",
+    "surname": "hooker",
+    "hits": {
+      "chase-diary.txt": 24,
+      "warden-chase.txt": 49,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 7,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "hooker_joseph",
+    "cell": "reputation",
+    "surname": "hooker",
+    "hits": {
+      "chase-diary.txt": 24,
+      "warden-chase.txt": 49,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 7,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "hurlbut_stephen_a",
+    "cell": "nerve",
+    "surname": "hurlbut",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "hurlbut_stephen_a",
+    "cell": "reputation",
+    "surname": "hurlbut",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "hurlbut_stephen_a",
+    "cell": "trait:candid",
+    "surname": "hurlbut",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "jackson_claiborne_f",
+    "cell": "candour",
+    "surname": "jackson",
+    "hits": {
+      "chase-diary.txt": 13,
+      "warden-chase.txt": 54,
+      "dix-v1.txt": 31,
+      "shermanlettersco00sher.txt": 13,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 5,
+      "or-I-1.txt": 41,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "jackson_claiborne_f",
+    "cell": "competence",
+    "surname": "jackson",
+    "hits": {
+      "chase-diary.txt": 13,
+      "warden-chase.txt": 54,
+      "dix-v1.txt": 31,
+      "shermanlettersco00sher.txt": 13,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 5,
+      "or-I-1.txt": 41,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "jackson_claiborne_f",
+    "cell": "regard_others:davis_jefferson",
+    "surname": "jackson",
+    "hits": {
+      "chase-diary.txt": 13,
+      "warden-chase.txt": 54,
+      "dix-v1.txt": 31,
+      "shermanlettersco00sher.txt": 13,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 5,
+      "or-I-1.txt": 41,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "jackson_claiborne_f",
+    "cell": "regard_others:lyon_nathaniel",
+    "surname": "jackson",
+    "hits": {
+      "chase-diary.txt": 13,
+      "warden-chase.txt": 54,
+      "dix-v1.txt": 31,
+      "shermanlettersco00sher.txt": 13,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 5,
+      "or-I-1.txt": 41,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "jackson_claiborne_f",
+    "cell": "regard_others:price_sterling",
+    "surname": "jackson",
+    "hits": {
+      "chase-diary.txt": 13,
+      "warden-chase.txt": 54,
+      "dix-v1.txt": 31,
+      "shermanlettersco00sher.txt": 13,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 5,
+      "or-I-1.txt": 41,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "jackson_claiborne_f",
+    "cell": "reputation",
+    "surname": "jackson",
+    "hits": {
+      "chase-diary.txt": 13,
+      "warden-chase.txt": 54,
+      "dix-v1.txt": 31,
+      "shermanlettersco00sher.txt": 13,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 5,
+      "or-I-1.txt": 41,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "jackson_claiborne_f",
+    "cell": "value:native_state",
+    "surname": "jackson",
+    "hits": {
+      "chase-diary.txt": 13,
+      "warden-chase.txt": 54,
+      "dix-v1.txt": 31,
+      "shermanlettersco00sher.txt": 13,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 5,
+      "or-I-1.txt": 41,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "jackson_thomas_j",
+    "cell": "reputation",
+    "surname": "jackson",
+    "hits": {
+      "chase-diary.txt": 13,
+      "warden-chase.txt": 54,
+      "dix-v1.txt": 31,
+      "shermanlettersco00sher.txt": 13,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 5,
+      "or-I-1.txt": 41,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "johnson_andrew",
+    "cell": "competence",
+    "surname": "johnson",
+    "hits": {
+      "chase-diary.txt": 43,
+      "warden-chase.txt": 67,
+      "dix-v1.txt": 5,
+      "shermanlettersco00sher.txt": 71,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 4,
+      "or-I-1.txt": 131,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "julian_george_w",
+    "cell": "nerve",
+    "surname": "julian",
+    "hits": {
+      "chase-diary.txt": 4,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "julian_george_w",
+    "cell": "reputation",
+    "surname": "julian",
+    "hits": {
+      "chase-diary.txt": 4,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "julian_george_w",
+    "cell": "trait:antislavery",
+    "surname": "julian",
+    "hits": {
+      "chase-diary.txt": 4,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "lane_james_h",
+    "cell": "nerve",
+    "surname": "lane",
+    "hits": {
+      "chase-diary.txt": 10,
+      "warden-chase.txt": 11,
+      "dix-v1.txt": 7,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 12,
+      "or-I-1.txt": 19,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "lane_james_h",
+    "cell": "reputation",
+    "surname": "lane",
+    "hits": {
+      "chase-diary.txt": 10,
+      "warden-chase.txt": 11,
+      "dix-v1.txt": 7,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 12,
+      "or-I-1.txt": 19,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "lane_james_h",
+    "cell": "trait:ambitious",
+    "surname": "lane",
+    "hits": {
+      "chase-diary.txt": 10,
+      "warden-chase.txt": 11,
+      "dix-v1.txt": 7,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 12,
+      "or-I-1.txt": 19,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "lane_james_h",
+    "cell": "trait:antislavery",
+    "surname": "lane",
+    "hits": {
+      "chase-diary.txt": 10,
+      "warden-chase.txt": 11,
+      "dix-v1.txt": 7,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 12,
+      "or-I-1.txt": 19,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "lane_james_h",
+    "cell": "trait:harsh_with_civilians",
+    "surname": "lane",
+    "hits": {
+      "chase-diary.txt": 10,
+      "warden-chase.txt": 11,
+      "dix-v1.txt": 7,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 12,
+      "or-I-1.txt": 19,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "lyon_nathaniel",
+    "cell": "competence",
+    "surname": "lyon",
+    "hits": {
+      "chase-diary.txt": 2,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 40,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "lyon_nathaniel",
+    "cell": "reputation",
+    "surname": "lyon",
+    "hits": {
+      "chase-diary.txt": 2,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 40,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "lyons_richard_b_p",
+    "cell": "competence",
+    "surname": "lyons",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 6,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 4
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "lyons_richard_b_p",
+    "cell": "nerve",
+    "surname": "lyons",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 6,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 4
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "lyons_richard_b_p",
+    "cell": "trait:candid",
+    "surname": "lyons",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 6,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 4
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "magoffin_beriah",
+    "cell": "competence",
+    "surname": "magoffin",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "magoffin_beriah",
+    "cell": "regard_others:morton_oliver_h_p_t",
+    "surname": "magoffin",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "magoffin_beriah",
+    "cell": "reputation",
+    "surname": "magoffin",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "mason_james_m",
+    "cell": "reputation",
+    "surname": "mason",
+    "hits": {
+      "chase-diary.txt": 11,
+      "warden-chase.txt": 15,
+      "dix-v1.txt": 6,
+      "shermanlettersco00sher.txt": 9,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 3,
+      "or-I-1.txt": 16,
+      "mcclellan-report1857.txt": 1
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "meade_george_g",
+    "cell": "reputation",
+    "surname": "meade",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 7,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 3,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 24,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "meigs_montgomery_c",
+    "cell": "reputation",
+    "surname": "meigs",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 5,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 5,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 48,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "meigs_montgomery_c",
+    "cell": "trait:organiser",
+    "surname": "meigs",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 5,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 5,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 48,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "mercier_henri",
+    "cell": "competence",
+    "surname": "mercier",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "mercier_henri",
+    "cell": "nerve",
+    "surname": "mercier",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "mitchel_ormsby_m",
+    "cell": "competence",
+    "surname": "mitchel",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 1,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 1,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "mitchel_ormsby_m",
+    "cell": "nerve",
+    "surname": "mitchel",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 1,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 1,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "mitchel_ormsby_m",
+    "cell": "reputation",
+    "surname": "mitchel",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 1,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 1,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "mitchel_ormsby_m",
+    "cell": "trait:organiser",
+    "surname": "mitchel",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 1,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 1,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "pendleton_george_h",
+    "cell": "reputation",
+    "surname": "pendleton",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 12,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "pope_john",
+    "cell": "nerve",
+    "surname": "pope",
+    "hits": {
+      "chase-diary.txt": 39,
+      "warden-chase.txt": 49,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 5,
+      "nyt-1861-01-14.txt": 2,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 14,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "pope_john",
+    "cell": "reputation",
+    "surname": "pope",
+    "hits": {
+      "chase-diary.txt": 39,
+      "warden-chase.txt": 49,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 5,
+      "nyt-1861-01-14.txt": 2,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 14,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "porter_fitz_john",
+    "cell": "reputation",
+    "surname": "porter",
+    "hits": {
+      "chase-diary.txt": 11,
+      "warden-chase.txt": 22,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 12,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 40,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "price_sterling",
+    "cell": "reputation",
+    "surname": "price",
+    "hits": {
+      "chase-diary.txt": 20,
+      "warden-chase.txt": 17,
+      "dix-v1.txt": 9,
+      "shermanlettersco00sher.txt": 12,
+      "nyt-1861-01-14.txt": 23,
+      "globe-1861-01-16.txt": 9,
+      "or-I-1.txt": 5,
+      "mcclellan-report1857.txt": 16
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "raymond_henry_j",
+    "cell": "reputation",
+    "surname": "raymond",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 1,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 2,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "reynolds_john_f",
+    "cell": "nerve",
+    "surname": "reynolds",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 5,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 18,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "reynolds_john_f",
+    "cell": "reputation",
+    "surname": "reynolds",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 5,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 18,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "ripley_james_w",
+    "cell": "reputation",
+    "surname": "ripley",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 16,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "russell_john",
+    "cell": "competence",
+    "surname": "russell",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 4,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 10,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "russell_john",
+    "cell": "reputation",
+    "surname": "russell",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 4,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 10,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "schofield_john_m",
+    "cell": "nerve",
+    "surname": "schofield",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 6,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 3,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "schofield_john_m",
+    "cell": "reputation",
+    "surname": "schofield",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 6,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 3,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "schurz_carl",
+    "cell": "reputation",
+    "surname": "schurz",
+    "hits": {
+      "chase-diary.txt": 3,
+      "warden-chase.txt": 7,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "seymour_horatio",
+    "cell": "nerve",
+    "surname": "seymour",
+    "hits": {
+      "chase-diary.txt": 7,
+      "warden-chase.txt": 40,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 24,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "sherman_william_t",
+    "cell": "reputation",
+    "surname": "sherman",
+    "hits": {
+      "chase-diary.txt": 9,
+      "warden-chase.txt": 28,
+      "dix-v1.txt": 4,
+      "shermanlettersco00sher.txt": 792,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 2,
+      "or-I-1.txt": 4,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "sickles_daniel_e",
+    "cell": "nerve",
+    "surname": "sickles",
+    "hits": {
+      "chase-diary.txt": 2,
+      "warden-chase.txt": 1,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 2,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 1
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "slidell_john",
+    "cell": "nerve",
+    "surname": "slidell",
+    "hits": {
+      "chase-diary.txt": 6,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 2,
+      "or-I-1.txt": 17,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "slidell_john",
+    "cell": "reputation",
+    "surname": "slidell",
+    "hits": {
+      "chase-diary.txt": 6,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 2,
+      "or-I-1.txt": 17,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "smith_charles_f",
+    "cell": "reputation",
+    "surname": "smith",
+    "hits": {
+      "chase-diary.txt": 63,
+      "warden-chase.txt": 97,
+      "dix-v1.txt": 4,
+      "shermanlettersco00sher.txt": 15,
+      "nyt-1861-01-14.txt": 14,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 124,
+      "mcclellan-report1857.txt": 2
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "smith_charles_f",
+    "cell": "trait:infirm",
+    "surname": "smith",
+    "hits": {
+      "chase-diary.txt": 63,
+      "warden-chase.txt": 97,
+      "dix-v1.txt": 4,
+      "shermanlettersco00sher.txt": 15,
+      "nyt-1861-01-14.txt": 14,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 124,
+      "mcclellan-report1857.txt": 2
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "stevens_thaddeus",
+    "cell": "competence",
+    "surname": "stevens",
+    "hits": {
+      "chase-diary.txt": 11,
+      "warden-chase.txt": 22,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 9,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 28,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "stevens_thaddeus",
+    "cell": "reputation",
+    "surname": "stevens",
+    "hits": {
+      "chase-diary.txt": 11,
+      "warden-chase.txt": 22,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 9,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 28,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "stevens_thaddeus",
+    "cell": "trait:ambitious",
+    "surname": "stevens",
+    "hits": {
+      "chase-diary.txt": 11,
+      "warden-chase.txt": 22,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 9,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 28,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "stevens_thaddeus",
+    "cell": "trait:quarrelsome",
+    "surname": "stevens",
+    "hits": {
+      "chase-diary.txt": 11,
+      "warden-chase.txt": 22,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 9,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 28,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "stone_charles_p",
+    "cell": "reputation",
+    "surname": "stone",
+    "hits": {
+      "chase-diary.txt": 8,
+      "warden-chase.txt": 31,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 3,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 25,
+      "mcclellan-report1857.txt": 11
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "stone_charles_p",
+    "cell": "trait:organiser",
+    "surname": "stone",
+    "hits": {
+      "chase-diary.txt": 8,
+      "warden-chase.txt": 31,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 3,
+      "nyt-1861-01-14.txt": 4,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 25,
+      "mcclellan-report1857.txt": 11
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "stringham_silas_h",
+    "cell": "competence",
+    "surname": "stringham",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 5,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "sumner_charles",
+    "cell": "competence",
+    "surname": "sumner",
+    "hits": {
+      "chase-diary.txt": 127,
+      "warden-chase.txt": 66,
+      "dix-v1.txt": 3,
+      "shermanlettersco00sher.txt": 10,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 4,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "sumner_charles",
+    "cell": "reputation",
+    "surname": "sumner",
+    "hits": {
+      "chase-diary.txt": 127,
+      "warden-chase.txt": 66,
+      "dix-v1.txt": 3,
+      "shermanlettersco00sher.txt": 10,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 4,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "sumner_charles",
+    "cell": "trait:antislavery",
+    "surname": "sumner",
+    "hits": {
+      "chase-diary.txt": 127,
+      "warden-chase.txt": 66,
+      "dix-v1.txt": 3,
+      "shermanlettersco00sher.txt": 10,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 4,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "thomas_george_h",
+    "cell": "reputation",
+    "surname": "thomas",
+    "hits": {
+      "chase-diary.txt": 19,
+      "warden-chase.txt": 45,
+      "dix-v1.txt": 15,
+      "shermanlettersco00sher.txt": 39,
+      "nyt-1861-01-14.txt": 8,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 170,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "thomas_lorenzo",
+    "cell": "reputation",
+    "surname": "thomas",
+    "hits": {
+      "chase-diary.txt": 19,
+      "warden-chase.txt": 45,
+      "dix-v1.txt": 15,
+      "shermanlettersco00sher.txt": 39,
+      "nyt-1861-01-14.txt": 8,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 170,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "totten_joseph_g",
+    "cell": "competence",
+    "surname": "totten",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 102,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "totten_joseph_g",
+    "cell": "reputation",
+    "surname": "totten",
+    "hits": {
+      "chase-diary.txt": 0,
+      "warden-chase.txt": 0,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 102,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "trumbull_lyman",
+    "cell": "competence",
+    "surname": "trumbull",
+    "hits": {
+      "chase-diary.txt": 5,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "trumbull_lyman",
+    "cell": "reputation",
+    "surname": "trumbull",
+    "hits": {
+      "chase-diary.txt": 5,
+      "warden-chase.txt": 3,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "vallandigham_clement_l",
+    "cell": "competence",
+    "surname": "vallandigham",
+    "hits": {
+      "chase-diary.txt": 2,
+      "warden-chase.txt": 12,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 4,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "vallandigham_clement_l",
+    "cell": "nerve",
+    "surname": "vallandigham",
+    "hits": {
+      "chase-diary.txt": 2,
+      "warden-chase.txt": 12,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 4,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "van_dorn_earl",
+    "cell": "reputation",
+    "surname": "van",
+    "hits": {
+      "chase-diary.txt": 38,
+      "warden-chase.txt": 44,
+      "dix-v1.txt": 51,
+      "shermanlettersco00sher.txt": 3,
+      "nyt-1861-01-14.txt": 5,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 64,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "vance_zebulon_b",
+    "cell": "competence",
+    "surname": "vance",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 2,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 1
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "vance_zebulon_b",
+    "cell": "nerve",
+    "surname": "vance",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 2,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 1
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "vance_zebulon_b",
+    "cell": "trait:organiser",
+    "surname": "vance",
+    "hits": {
+      "chase-diary.txt": 1,
+      "warden-chase.txt": 2,
+      "dix-v1.txt": 1,
+      "shermanlettersco00sher.txt": 1,
+      "nyt-1861-01-14.txt": 1,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 1
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "wade_benjamin_f",
+    "cell": "reputation",
+    "surname": "wade",
+    "hits": {
+      "chase-diary.txt": 6,
+      "warden-chase.txt": 13,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 14,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 3,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "wadsworth_james_s",
+    "cell": "reputation",
+    "surname": "wadsworth",
+    "hits": {
+      "chase-diary.txt": 16,
+      "warden-chase.txt": 10,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "weed_thurlow",
+    "cell": "competence",
+    "surname": "weed",
+    "hits": {
+      "chase-diary.txt": 15,
+      "warden-chase.txt": 10,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 1,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "wilkes_charles",
+    "cell": "reputation",
+    "surname": "wilkes",
+    "hits": {
+      "chase-diary.txt": 2,
+      "warden-chase.txt": 8,
+      "dix-v1.txt": 0,
+      "shermanlettersco00sher.txt": 0,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 0,
+      "or-I-1.txt": 0,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "wilson_henry",
+    "cell": "nerve",
+    "surname": "wilson",
+    "hits": {
+      "chase-diary.txt": 17,
+      "warden-chase.txt": 18,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 3,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 8,
+      "or-I-1.txt": 3,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "wilson_henry",
+    "cell": "reputation",
+    "surname": "wilson",
+    "hits": {
+      "chase-diary.txt": 17,
+      "warden-chase.txt": 18,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 3,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 8,
+      "or-I-1.txt": 3,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  },
+  {
+    "person": "wilson_henry",
+    "cell": "trait:antislavery",
+    "surname": "wilson",
+    "hits": {
+      "chase-diary.txt": 17,
+      "warden-chase.txt": 18,
+      "dix-v1.txt": 2,
+      "shermanlettersco00sher.txt": 3,
+      "nyt-1861-01-14.txt": 0,
+      "globe-1861-01-16.txt": 8,
+      "or-I-1.txt": 3,
+      "mcclellan-report1857.txt": 0
+    },
+    "cohort": "alphabetical residual screen",
+    "limitation": "Machine discovery counts only, including wrong people, indexes, retrospective narrative and late documents. No assertion all hits were read. Positive decisions rely only on manually read pages listed in rs15.csv. Other rows retain HOLD."
+  }
+]

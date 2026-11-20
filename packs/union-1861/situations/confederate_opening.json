@@ -1,0 +1,94 @@
+{
+  "id": "confederate_opening",
+  "kind": "decision",
+  "faction": "confederate",
+  "title": "situation.confederate_opening.title",
+  "text": "situation.confederate_opening.text",
+  "earliest": "1861-04-01",
+  "event": {
+    "any": [
+      {
+        "flag": "sumter_relief_ordered"
+      },
+      {
+        "flag": "pickens_landed"
+      },
+      {
+        "dayAtLeast": 41
+      }
+    ]
+  },
+  "railroad": "the Confederate seat opens the war (0040): on a relief attempt at Sumter, a landing at Pickens, or, failing both, the day Anderson's provisions run out (15 April)",
+  "subjects": [
+    "anderson_robert"
+  ],
+  "options": [
+    {
+      "id": "reduce_sumter",
+      "label": "situation.confederate_opening.option.reduce_sumter",
+      "displayKey": 1,
+      "proposedBy": [
+        "walker_leroy_p"
+      ],
+      "honours": [],
+      "appearsWhen": {
+        "clockAtLeast": 3
+      },
+      "effects": [
+        {
+          "setFlag": "war_begun_confederate"
+        },
+        {
+          "setFlag": "sumter_fired"
+        }
+      ],
+      "orders": [
+        {
+          "to": "cs_cmd_charleston",
+          "posture": "take",
+          "objective": "fort_sumter",
+          "route": "wire"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.confederate_opening.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "reduce_sumter"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "recommends": [
+      "reduce_sumter"
+    ],
+    "reasons": [
+      {
+        "kind": "duty",
+        "weight": 700
+      }
+    ],
+    "confidence": 700
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "the order to fire on a fort, the labelled railroad of 0040; why the states seceded is narrated under cause-of-secession, not here"
+  },
+  "citations": [
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "chronology 1861-04-10/11, 1861-04-12; design"
+    },
+    {
+      "source": "OR",
+      "at": "I-1 p. 297: Walker's 10 April authorization and Beauregard's reply. https://ehistory.osu.edu/books/official-records/001/0297. R80 ruling: the option opens three days from surfacing, tied to its relief or landing cause. The recorded authorization is a history reference, not an absolute option threshold."
+    }
+  ]
+}

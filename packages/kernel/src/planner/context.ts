@@ -55,7 +55,7 @@ export interface PlannerInput {
   /** The day of the request (stamped on the draft set). */
   readonly day: number;
   /** The pack's bombardment rules (lane 1.12): the gun arms and the batteries' range across water. */
-  readonly bombardment: Pick<BombardmentRules, 'gunArms' | 'objectives' | 'rangeMaxDaysPermille'>;
+  readonly bombardment: Pick<BombardmentRules, 'gunArms' | 'objectives' | 'rangeMaxDaysPermille' | 'inPositionPreparationDays'>;
 }
 
 /** Per-request working state: the influence field, supply set and a search counter. Built once, discarded after. */

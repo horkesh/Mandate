@@ -1,0 +1,40 @@
+{
+  "id": "baltimore_route_closed",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.baltimore_route_closed.title",
+  "text": "situation.baltimore_route_closed.text",
+  "earliest": "1861-04-19",
+  "event": {
+    "callReceived": {
+      "post": "st_gov_massachusetts",
+      "days": 4
+    }
+  },
+  "effects": [
+    {
+      "setFlag": "baltimore_route_closed"
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_general_in_chief",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "railroad-man"
+  },
+  "gate": {
+    "none": "the route north is closed (the bridges burned); the deaths that day are their own notice under civilian-deaths-1861, and this one never reads it (0074)"
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 pp. 29 to 30, 38 to 40 (Washington cut off from 19 to 25 April, per the numbers note), p. 581 (Hicks to Cameron, 20 April)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "1, 3.2"
+    }
+  ]
+}
