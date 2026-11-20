@@ -197,6 +197,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     err('rules-politics', W('rules', 0, 'politics'), problem, 'blocs from the vocabulary with a side’s voices summing to 1000, chambers and sessions complete for their kind, papers whose editor is of their side');
   }
   world.rules.politics.chambers.forEach((c, i) => useKey(c.name, W('rules.politics.chambers', i, 'name')));
+  world.rules.politics.chambers.forEach((c,i)=>c.composition?.forEach((t,j)=>t.groups.forEach((g,k)=>useKey(g.name,W(`rules.politics.chambers.${i}.composition.${j}.groups`,k,'name')))));
   // 0073: every rank has a kind from rankKinds, so a person can hold one of each kind at once.
   vocab.ranks.forEach((r, i) => term('rankKinds', r.kind, W('vocabularies.ranks', i, 'kind')));
 

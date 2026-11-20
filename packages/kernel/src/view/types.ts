@@ -16,6 +16,23 @@ import type { ControlShares, FrontSegment } from '../control/vocabulary.ts';
 import type { ClaimKind, ReportType, SubjectKind, NoteAccount } from '../knowledge/report.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { PlanStatus, Posture } from '../plans/goal.ts';
+import type { CounterTerms } from '../audience/counters.ts';
+
+export interface AttentionBudgetView {
+ readonly allowance: number; readonly spent: number; readonly left: number;
+ readonly refilledDay: number; readonly nextRefillDay: number;
+}
+export interface CongressView {
+ readonly chambers: readonly {readonly id:string; readonly name:string; readonly status:'adjourned'|'called'|'sitting'; readonly session:string|null; readonly opens:number|null; readonly closes:number|null; readonly composition?:{readonly on:string;readonly groups:readonly {readonly name:string;readonly seats:number}[];readonly cite:string}|null}[];
+ readonly sessions: readonly {readonly id:string; readonly chambers:readonly string[]; readonly callable:boolean; readonly opens:string|null; readonly closes:string|null; readonly afterCallDays:number|null; readonly sitsDays:number|null}[];
+ readonly ledger: readonly {readonly act:string; readonly day:number; readonly situation:SituationId|null; readonly option:string|null; readonly metDay:number|null; readonly answeredDay:number|null; readonly source:MessageId|null}[];
+}
+export interface AudienceView {
+ readonly id:string; readonly status:'requested'|'granted'|'filed'|'declined';
+ readonly person:PersonId; readonly post:PostId|null; readonly day:number;
+ readonly source:MessageId|null; readonly answers:MessageId|null;
+ readonly counters:readonly CounterTerms[]; readonly declared:string|null;
+}
 
 export interface ClaimView {
   readonly kind: ClaimKind;
@@ -187,6 +204,11 @@ export interface KnownPersonView {
 }
 
 export interface SeatView {
+  /** Own budget and public legislature; absent only in older saved presentation fixtures. */
+  readonly attentionBudget?: AttentionBudgetView | null;
+  readonly congress?: CongressView;
+  /** Received requests and answers, and the principal's own invitations. No private compliance preview. */
+  readonly audiences?: readonly AudienceView[];
   /** The last completed day: the view is the morning after it. */
   readonly day: number;
   readonly seat: SeatId;

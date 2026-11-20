@@ -462,7 +462,7 @@ export const RulesSchema = z.strictObject({
       ladder: z
         .strictObject({ lobbyingPerRung: signedPermille, publicDefiance: signedPermille, rival: signedPermille, cite: z.string().min(1) })
         .describe('A man’s rung, weekly: from lobbying up, his bloc gets lobbyingPerRung per rung; from public defiance, every bloc of his side gets publicDefiance; a rival’s bloc gets rival.'),
-      chambers: z.array(z.strictObject({ id: termId, faction: idOf('faction'), name: stringKey, cite: z.string().min(1) })).describe('The chambers of the legislature (0040).'),
+      chambers: z.array(z.strictObject({ id: termId, faction: idOf('faction'), name: stringKey, cite: z.string().min(1),composition:z.array(z.strictObject({on:isoDate,groups:z.array(z.strictObject({name:stringKey,seats:int.min(0)})).min(1),cite:z.string().min(1)})).optional().describe('Dated public membership counts; absent means unpublished, never estimated from support.') })).describe('The chambers of the legislature (0040).'),
       sessions: z
         .array(
           z.strictObject({

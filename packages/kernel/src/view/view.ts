@@ -27,9 +27,11 @@ import { claimedControlView } from './claimed-control.ts';
 import { controlEvidence } from '../knowledge/control-beliefs.ts';
 import { nextPeopleChange, peopleProjection, type PeopleProjection } from './people.ts';
 import type { ReportClaim } from '../knowledge/report.ts';
+import {attentionBudget, audienceProjection, congressProjection} from './desk.ts';
 import type { BeliefView, ClaimView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
 
 export interface ViewCache {
+  readonly desk: Map<SeatId, {world:SeatsWorld; day:number; budget:State['seatAttention'][SeatId]|undefined; chambers:State['chamberStates']; messages:State['messagesInTransit']; reports:readonly ReportView[]; situations:readonly SituationView[]; projection:Pick<SeatView,'attentionBudget'|'congress'|'audiences'>}>;
   readonly knowledge: KnowledgeCache;
   readonly reports: WeakMap<KnownReport, ReportView>;
   readonly lists: WeakMap<SeatKnowledge, readonly ReportView[]>;
@@ -45,7 +47,7 @@ export interface ViewCache {
 }
 
 export function createViewCache(): ViewCache {
-  return { knowledge: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
+  return { desk: new Map(), knowledge: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
 }
 
 function freeze<T extends object>(o: T): T {
@@ -197,10 +199,20 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     cache.people.set(seat, people);
   }
   const previous = cache.views.get(seat);
+  let desk=cache.desk.get(seat);
+  if(desk===undefined||desk.world!==world||desk.day!==state.stateDay||desk.budget!==state.seatAttention[seat]||desk.chambers!==state.chamberStates||desk.messages!==state.messagesInTransit||desk.reports!==reports||desk.situations!==situations){
+    const principal=world.start.factions.some(f=>f.principal===person.id);
+    const projection={attentionBudget:attentionBudget(world,state,seat),congress:congressProjection(world,state,person.id,reports,situations),audiences:principal?audienceProjection(state,person.id,reports):Object.freeze([])};
+    desk={world,day:state.stateDay,budget:state.seatAttention[seat],chambers:state.chamberStates,messages:state.messagesInTransit,reports,situations,projection};
+    cache.desk.set(seat,desk);
+  }
   if (
     previous !== undefined &&
     previous.day === state.stateDay &&
     previous.attention === attention &&
+    previous.attentionBudget === desk.projection.attentionBudget &&
+    previous.congress === desk.projection.congress &&
+    previous.audiences === desk.projection.audiences &&
     previous.posts === people.projection.posts &&
     previous.people === people.projection.people &&
     previous.faction === faction &&
@@ -230,6 +242,7 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     ...control,
     situations,
     attention,
+    ...desk.projection,
     ...people.projection,
   });
   cache.views.set(seat, view);
