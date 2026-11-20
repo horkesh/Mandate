@@ -1,0 +1,127 @@
+{
+  "status": "draft_not_loaded",
+  "cutoff": "1862-11-30",
+  "scope": "United States successor-House original contests; not a public-opinion poll",
+  "includedStates": [
+    "Delaware",
+    "Illinois",
+    "Indiana",
+    "Iowa",
+    "Kansas",
+    "Maine",
+    "Massachusetts",
+    "Michigan",
+    "Minnesota",
+    "Missouri",
+    "New Jersey",
+    "New York",
+    "Ohio",
+    "Oregon",
+    "Pennsylvania",
+    "Wisconsin"
+  ],
+  "includedContests": 151,
+  "pendingLaterExistingStates": [
+    {
+      "state": "California",
+      "seats": 3,
+      "electionDateOrYear": "1863-09-03",
+      "cite": "TA64 p.66"
+    },
+    {
+      "state": "Connecticut",
+      "seats": 4,
+      "electionDateOrYear": "1863",
+      "cite": "TA64 p.58"
+    },
+    {
+      "state": "New Hampshire",
+      "seats": 3,
+      "electionDateOrYear": "1863",
+      "cite": "TA64 p.55"
+    },
+    {
+      "state": "Rhode Island",
+      "seats": 2,
+      "electionDateOrYear": "1863",
+      "cite": "TA64 p.55"
+    },
+    {
+      "state": "Maryland",
+      "seats": 5,
+      "electionDateOrYear": "1863",
+      "cite": "TA63 p.59; TA64 p.63"
+    },
+    {
+      "state": "Kentucky",
+      "seats": 9,
+      "electionDateOrYear": "1863",
+      "cite": "TA63 p.59; TA64 pp.59–60"
+    },
+    {
+      "state": "Vermont",
+      "seats": 3,
+      "electionDateOrYear": "1863",
+      "cite": "TA63 p.53; TA64 p.55"
+    }
+  ],
+  "otherJurisdictions": [
+    {
+      "jurisdiction": "West Virginia",
+      "seats": 3,
+      "status": "later admission and representation; not a November state election",
+      "cite": "MP p.141; TA63 p.59"
+    },
+    {
+      "jurisdiction": "Nevada",
+      "seats": 1,
+      "status": "1864 admission/election component of later 38th series; exclude November",
+      "cite": "ST13 p.749; BW05 p.2201"
+    },
+    {
+      "jurisdiction": "Louisiana",
+      "status": "December 1862 election and 37th credentials, not November 38th result",
+      "cite": "TA63 p.60; MP p.123"
+    },
+    {
+      "jurisdiction": "Virginia",
+      "status": "represented/restored districts and later credential claims require separate adjudication; not counted as 38th November returns",
+      "cite": "MP pp.122–123,141"
+    }
+  ],
+  "comparators": [
+    {
+      "kind": "printed roster summary, as far as chosen",
+      "R_Union": 76,
+      "D": 74,
+      "total": 150,
+      "cite": "TA63 pp.18–19",
+      "status": "classification conflict retained; not substituted for district reconstruction"
+    },
+    {
+      "kind": "retrospective initial-election series, not final membership",
+      "congress": 37,
+      "D": 44,
+      "R": 108,
+      "Other": 31,
+      "total": 183,
+      "cite": "CD24 p.1355"
+    },
+    {
+      "kind": "retrospective initial-election series, wider cycle including later jurisdictions",
+      "congress": 38,
+      "D": 72,
+      "R": 85,
+      "Other": 27,
+      "total": 184,
+      "cite": "CD24 p.1355"
+    }
+  ],
+  "reconciliation": "[I] 151 + 29 later existing-state seats + 3 West Virginia + 1 Nevada = 184 jurisdictions/seats, not a completed party or credentials crosswalk.",
+  "holds": [
+    "Exact House-specific election statutes and receipt dates",
+    "Member-level party crosswalk to the Directory",
+    "Treatment of replacements, contested credentials and returns withheld",
+    "No assumption that a printed almanac was known nationwide on election night"
+  ]
+}

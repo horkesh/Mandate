@@ -1,0 +1,346 @@
+{
+  "draft": {
+    "status": "proposed_not_loaded",
+    "request": "S17",
+    "schemaStatus": "Proposed election-measure records; the current live checkpoint schema has no election kind. This file is deliberately not named checkpoints.json.",
+    "approval": "No lead adoption, gate signature or acceptance-criterion waiver",
+    "referenceNotes": [
+      "docs/research/2026-11-20-S3-midterms-and-checkpoint-bands.md",
+      "packs/union-1861/source/drafts/politics/README.md"
+    ],
+    "scanRegister": "packs/union-1861/source/drafts/politics/sources.json"
+  },
+  "checkpoints": [
+    {
+      "id": "midterm_contests",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "original_contests",
+      "reference": 151,
+      "min": 151,
+      "max": 151,
+      "cite": "TA63 pp.18–19,50–62; WBD pp.398–399; BD05 p.1188; WM76 p.191",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "scope": "sixteen named states; historical schedule",
+      "unit": "contests"
+    },
+    {
+      "id": "midterm_d",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "original_winners_D",
+      "reference": 71,
+      "min": 63,
+      "max": 79,
+      "cite": "TA63 pp.50–62",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "unit": "seats"
+    },
+    {
+      "id": "midterm_id",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "original_winners_ID",
+      "reference": 1,
+      "min": 0,
+      "max": 2,
+      "cite": "TA63 p.62",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "unit": "seats"
+    },
+    {
+      "id": "midterm_ru_e",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "original_winners_RU_E",
+      "reference": 79,
+      "min": 71,
+      "max": 87,
+      "cite": "TA63 pp.18–19,50–62; BD05 p.1188",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "unit": "seats"
+    },
+    {
+      "id": "midterm_big_four_d",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "D_NY_PA_OH_IL",
+      "reference": 52,
+      "min": 46,
+      "max": 58,
+      "cite": "TA63 pp.51–55,58–59",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "unit": "seats"
+    },
+    {
+      "id": "midterm_ia_ma",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "RU_Iowa_Massachusetts",
+      "reference": 16,
+      "min": 13,
+      "max": 16,
+      "cite": "TA63 pp.50,60–61",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "unit": "seats"
+    },
+    {
+      "id": "midterm_new_york_d",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "original_winners_D_by_state",
+      "reference": 17,
+      "min": 14,
+      "max": 20,
+      "cite": "TA63 pp.51–52",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "state": "New York",
+      "unit": "seats"
+    },
+    {
+      "id": "midterm_pennsylvania_d",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "original_winners_D_by_state",
+      "reference": 12,
+      "min": 9,
+      "max": 15,
+      "cite": "TA63 pp.53–54",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "state": "Pennsylvania",
+      "unit": "seats"
+    },
+    {
+      "id": "midterm_ohio_d",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "original_winners_D_by_state",
+      "reference": 14,
+      "min": 11,
+      "max": 16,
+      "cite": "TA63 pp.55–56",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "state": "Ohio",
+      "unit": "seats"
+    },
+    {
+      "id": "midterm_illinois_d",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "original_winners_D_by_state",
+      "reference": 9,
+      "min": 7,
+      "max": 11,
+      "cite": "TA63 pp.58–59",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "state": "Illinois",
+      "unit": "seats"
+    },
+    {
+      "id": "midterm_indiana_d",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "original_winners_D_by_state",
+      "reference": 7,
+      "min": 5,
+      "max": 9,
+      "cite": "TA63 pp.56–57",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "state": "Indiana",
+      "unit": "seats"
+    },
+    {
+      "id": "midterm_wisconsin_d",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "original_winners_D_by_state",
+      "reference": 3,
+      "min": 2,
+      "max": 4,
+      "cite": "TA63 pp.18–19; 62",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "state": "Wisconsin",
+      "unit": "seats"
+    },
+    {
+      "id": "midterm_maine_d",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "original_winners_D_by_state",
+      "reference": 1,
+      "min": 0,
+      "max": 2,
+      "cite": "TA63 pp.50",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "state": "Maine",
+      "unit": "seats"
+    },
+    {
+      "id": "vote_new_york_governor",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "two_candidate_vote_share",
+      "reference": 50.892,
+      "min": 48,
+      "max": 54,
+      "cite": "TA63 p.51",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "state": "New York",
+      "office": "governor",
+      "ticket": "Democratic",
+      "unit": "percent_of_named_two_candidate_sum"
+    },
+    {
+      "id": "vote_new_jersey_governor",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "two_candidate_vote_share",
+      "reference": 56.349,
+      "min": 53,
+      "max": 60,
+      "cite": "TA63 p.53",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "state": "New Jersey",
+      "office": "governor",
+      "ticket": "Democratic",
+      "unit": "percent_of_named_two_candidate_sum"
+    },
+    {
+      "id": "vote_delaware_governor",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "two_candidate_vote_share",
+      "reference": 50.343,
+      "min": 47,
+      "max": 54,
+      "cite": "TA63 p.60",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "state": "Delaware",
+      "office": "governor",
+      "ticket": "Union",
+      "unit": "percent_of_named_two_candidate_sum"
+    },
+    {
+      "id": "vote_ohio_secretary_of_state",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "two_candidate_vote_share",
+      "reference": 52.119,
+      "min": 49,
+      "max": 56,
+      "cite": "TA63 p.55",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "state": "Ohio",
+      "office": "secretary_of_state",
+      "ticket": "Democratic",
+      "unit": "percent_of_named_two_candidate_sum"
+    },
+    {
+      "id": "vote_indiana_secretary_of_state",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "two_candidate_vote_share",
+      "reference": 51.955,
+      "min": 49,
+      "max": 55,
+      "cite": "TA63 p.56",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "state": "Indiana",
+      "office": "secretary_of_state",
+      "ticket": "Democratic",
+      "unit": "percent_of_named_two_candidate_sum"
+    },
+    {
+      "id": "vote_illinois_treasurer",
+      "date": "1862-11-30",
+      "kind": "election-measure-proposal",
+      "measure": "two_candidate_vote_share",
+      "reference": 53.222,
+      "min": 50,
+      "max": 57,
+      "cite": "TA63 p.58",
+      "basis": "[I] S3 proposed design envelope, not historical uncertainty or an adopted criterion",
+      "state": "Illinois",
+      "office": "treasurer",
+      "ticket": "Democratic",
+      "unit": "percent_of_named_two_candidate_sum"
+    }
+  ],
+  "constraints": [
+    {
+      "rule": "D + ID + RU_E = original contests = 151",
+      "basis": "[I] common scope and mutually exclusive original-winner groups"
+    },
+    {
+      "rule": "state seats sum to the sixteen-state denominator; vacancies and delayed returns are distinct",
+      "basis": "[I] do not create duplicate winners or silently drop Wisconsin 6"
+    },
+    {
+      "rule": "the 37th remains the serving Congress; successor winners are not seated in November",
+      "cite": "MP pp.121,140; BDR p.162"
+    },
+    {
+      "rule": "Named historical winners remain a separate owner decision; a numeric envelope does not waive a subsequently binding winner check",
+      "basis": "[I] S3 proposed ruling"
+    }
+  ],
+  "historicalOutcomeCandidates": [
+    {
+      "state": "New York",
+      "office": "governor",
+      "winner": "Seymour",
+      "ticket": "Democratic",
+      "cite": "TA63 p.51"
+    },
+    {
+      "state": "New Jersey",
+      "office": "governor",
+      "winner": "Parker",
+      "ticket": "Democratic",
+      "cite": "TA63 p.53"
+    },
+    {
+      "state": "Delaware",
+      "office": "governor",
+      "winner": "Cannon",
+      "ticket": "Union",
+      "cite": "TA63 p.60"
+    },
+    {
+      "state": "Delaware",
+      "office": "House",
+      "winner": "Temple",
+      "ticket": "Democratic",
+      "cite": "TA63 p.60"
+    }
+  ],
+  "laterAuditOnly": {
+    "measure": "38th retrospective initial-election series",
+    "date": null,
+    "D": {
+      "reference": 72,
+      "min": 64,
+      "max": 80
+    },
+    "R": {
+      "reference": 85,
+      "min": 77,
+      "max": 93
+    },
+    "Other": {
+      "reference": 27,
+      "min": 21,
+      "max": 33
+    },
+    "total": 184,
+    "cite": "CD24 p.1355; ST13 p.749; BW05 p.2201",
+    "basis": "[I] S3 later diagnostic envelopes; never score in November; wider cycle includes 1864 Nevada."
+  },
+  "notSupplied": [
+    "National popular-vote share",
+    "Emancipation penalty or press persuasion coefficient",
+    "Universal soldier voting or per-soldier partisanship",
+    "Protected-population voting blocs",
+    "Election-night governor accessions or nationwide receipt lags"
+  ]
+}

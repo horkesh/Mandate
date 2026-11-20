@@ -1,0 +1,78 @@
+state,period_as_printed,chamber,ticket_as_printed,members,precision,as_of_date,date_status,cite,notes
+Maine,1863,senate,Republicans,24,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Maine,1863,house,Republicans,107,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Maine,1863,senate,War Democrats,3,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Maine,1863,house,War Democrats,12,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Maine,1863,senate,Straight Democrats,3,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Maine,1863,house,Straight Democrats,32,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Rhode Island,1862–63,senate,Sprague Unionists,21,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Rhode Island,1862–63,house,Sprague Unionists,50,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Rhode Island,1862–63,senate,Republican Union,11,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Rhode Island,1862–63,house,Republican Union,22,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Massachusetts,1862–63,senate,Republicans,35,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Massachusetts,1862–63,house,Republicans,198,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Massachusetts,1862–63,senate,Democrats,5,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Massachusetts,1862–63,house,Democrats,41,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+New Hampshire,1862–63,senate,Republicans,9,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+New Hampshire,1862–63,house,Republicans,203,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+New Hampshire,1862–63,senate,Democrats,3,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+New Hampshire,1862–63,house,Democrats,120,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Connecticut,1862–63,senate,Republicans,21,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Connecticut,1862–63,house,Republicans,179,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+Connecticut,1862–63,senate,Democrats,0,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,Printed em dash retained as zero in an enumerated party table [I]; not an unknown chamber.
+Connecticut,1862–63,house,Democrats,58,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.50,
+New York,1863,senate,Union,23,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.52,
+New York,1863,house,Union,64,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.52,
+New York,1863,senate,Democrats,9,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.52,
+New York,1863,house,Democrats,64,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.52,
+New Jersey,1863,senate,Unionists,8,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.53,
+New Jersey,1863,house,Unionists,15,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.53,
+New Jersey,1863,senate,Democrats,13,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.53,
+New Jersey,1863,house,Democrats,45,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.53,
+Pennsylvania,1862–63,senate,Unionists,21,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.53,
+Pennsylvania,1862–63,house,Unionists,45,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.53,
+Pennsylvania,1862–63,senate,Democrats,12,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.53,
+Pennsylvania,1862–63,house,Democrats,55,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.53,
+California,1862–63,senate,Republican Union,32,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.54,
+California,1862–63,house,Republican Union,63,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.54,
+California,1862–63,senate,Democratic Union,4,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.54,
+California,1862–63,house,Democratic Union,10,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.54,
+Ohio,1862–63,senate,Unionists,26,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.56,
+Ohio,1862–63,house,Unionists,73,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.56,
+Ohio,1862–63,senate,Democrats,8,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.56,
+Ohio,1862–63,house,Democrats,24,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.56,
+Indiana,1862–63,senate,Unionists,21,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.57," Correction to S3: two Independent senators are not Democrats. Printed Democratic joint majority is 30 (89 versus 59), not 32."
+Indiana,1862–63,house,Unionists,38,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.57," Correction to S3: two Independent senators are not Democrats. Printed Democratic joint majority is 30 (89 versus 59), not 32."
+Indiana,1862–63,senate,Democrats,27,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.57," Correction to S3: two Independent senators are not Democrats. Printed Democratic joint majority is 30 (89 versus 59), not 32."
+Indiana,1862–63,house,Democrats,62,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.57," Correction to S3: two Independent senators are not Democrats. Printed Democratic joint majority is 30 (89 versus 59), not 32."
+Indiana,1862–63,senate,Independent,2,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.57," Correction to S3: two Independent senators are not Democrats. Printed Democratic joint majority is 30 (89 versus 59), not 32."
+Indiana,1862–63,house,Independent,0,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.57,"Printed em dash retained as zero in an enumerated party table [I]; not an unknown chamber. Correction to S3: two Independent senators are not Democrats. Printed Democratic joint majority is 30 (89 versus 59), not 32."
+Illinois,1863,senate,Republicans,12,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.59,
+Illinois,1863,house,Republicans,29,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.59,
+Illinois,1863,senate,Democrats,13,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.59,
+Illinois,1863,house,Democrats,56,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.59,
+Delaware,1863,senate,Unionists,4,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.60,
+Delaware,1863,house,Unionists,7,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.60,
+Delaware,1863,senate,Democrats,5,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.60,
+Delaware,1863,house,Democrats,14,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.60,
+Michigan,1863,senate,Republicans,18,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.62,
+Michigan,1863,house,Republicans,63,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.62,
+Michigan,1863,senate,Democrats,14,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.62,
+Michigan,1863,house,Democrats,37,exact_printed_count,,publication observation; seating/accession date HOLD,TA63 p.62,
+Kentucky,"now in office, about as follows",senate,Unionists,34,approximate_source_table,,publication observation; seating/accession date HOLD,TA63 p.59,Whole table introduced as about; do not promote to an exact census of a dated chamber.
+Kentucky,"now in office, about as follows",house,Unionists,85,approximate_source_table,,publication observation; seating/accession date HOLD,TA63 p.59,Whole table introduced as about; do not promote to an exact census of a dated chamber.
+Kentucky,"now in office, about as follows",senate,Southern Rights,4,approximate_source_table,,publication observation; seating/accession date HOLD,TA63 p.59,Whole table introduced as about; do not promote to an exact census of a dated chamber.
+Kentucky,"now in office, about as follows",house,Southern Rights,9,approximate_source_table,,publication observation; seating/accession date HOLD,TA63 p.59,Whole table introduced as about; do not promote to an exact census of a dated chamber.
+Kentucky,"now in office, about as follows",senate,Vacancies,0,approximate_source_table,,publication observation; seating/accession date HOLD,TA63 p.59,Whole table introduced as about; do not promote to an exact census of a dated chamber.
+Kentucky,"now in office, about as follows",house,Vacancies,6,approximate_source_table,,publication observation; seating/accession date HOLD,TA63 p.59,Whole table introduced as about; do not promote to an exact census of a dated chamber.
+Vermont,1862–63,both,All Union,,qualitative,,publication observation; seating/accession date HOLD,TA63 p.53,"Source says all Union, no party division; no member count inferred."
+Oregon,1862–63,joint_vote,Union majority,,qualitative,,publication observation; seating/accession date HOLD,TA63 p.57,"The source argues from Harding’s election vote: Harding 28, Corbett 10, Williams 6, Whittaker 3; three absent. This is a vote, not a complete party census."
+Missouri,1863,house,Emancipationists,70,approximate,,publication observation; seating/accession date HOLD,TA63 p.62,Source says probably about 70 against about 40 of all other kinds.
+Missouri,1863,house,all other kinds,40,approximate,,publication observation; seating/accession date HOLD,TA63 p.62,Do not equate all other kinds to Democrats or to secessionists.
+Missouri,1863,senate,Emancipation majority,,probable_qualitative,,publication observation; seating/accession date HOLD,TA63 p.62,Source says probably; no exact party count.
+Wisconsin,1863,both,pretty evenly divided,,qualitative,,publication observation; seating/accession date HOLD,TA63 p.62,Source says legislature pretty evenly divided; no exact chamber counts supplied.
+Iowa,publication reference,both,unknown,,HOLD,,publication observation; seating/accession date HOLD,TA63 p.61,No chamber party count established on the read 1862-return page.
+Kansas,publication reference,both,unknown,,HOLD,,publication observation; seating/accession date HOLD,TA63 p.64,Governor/reference roster does not establish a legislative party census.
+Maryland,publication reference,both,unknown,,HOLD,,publication observation; seating/accession date HOLD,TA63 p.59,No important 1862 election reported; do not copy another office’s party.
+Tennessee,publication reference,both,unknown,,HOLD,,publication observation; seating/accession date HOLD,TA63 p.64,Military governor entry is not an ordinary statewide legislative return.
+Restored government of Virginia,publication reference,both,unknown,,HOLD,,publication observation; seating/accession date HOLD,TA63 p.64,Government table does not establish a party census or statewide control.

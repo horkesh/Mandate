@@ -34,6 +34,32 @@ Coverage floors and ceilings marked [I] are review aids. An ordinary member with
 - **Edmund Pendleton:** TA62 p.19 lists him for Virginia, but BDR p.165 does not establish him as a qualified member. His publication-only record is excluded from all session intersections. Earlier departed, never-qualified and rejected claimants are not manufactured into sitting members.
 - **Washington delegate:** TA62 p.19 prints James H. Wallace; BDR p.165 gives William H. Wallace. The identity candidate follows BDR [I], with the discrepancy retained.
 
+## Midterms and state governments
+
+| File | Meaning |
+|---|---|
+| `midterm-original-winners.csv` | 151 original winners in sixteen states, preserving printed names/initials and local-ticket categories. Wisconsin's Hanchett is restored as the original winner with his later death recorded separately. |
+| `midterm-state-counts.csv` | [I] Counts of those original contests: 71 Democratic, one Independent Democratic and 79 Republican/Union/Emancipation. Missouri's five Emancipation winners remain identifiable within the last group. |
+| `midterm-scope.json` | Pending later states, occupied/restored representation, the almanac's conflicting footer and the Directory's distinct initial-election series. |
+| `statewide-vote-references.csv` | Ten named-office, two-candidate comparisons. Candidate cells, printed totals/margins and recomputed sums/shares are distinct. |
+| `governor-party-observations.csv` | 49 governor-table observations across the 1862 and 1863 almanacs, with party evidence where established and explicit holds elsewhere. |
+| `state-legislature-party-observations.csv` | Exact, approximate and qualitative party observations, including holds. Each retains the source's period heading and local labels. |
+
+The **19 proposed checkpoint records** in `../../../checkpoints-politics-1862.draft.json` preserve S3's envelopes and cross-constraints. Their proposed election measure kind is not supported by today's live checkpoint schema; the file is deliberately inert. Bands have not been adopted, and an envelope that permits a close alternative outcome cannot waive a subsequently binding named-winner requirement. The later 184-seat comparator includes 1864 Nevada and must never be evaluated in November 1862.
+
+Ordinary general-election dates translated from TA63 p.64 are marked [I]. They are candidates, not verified House-specific statutory dates, receipt times or runtime triggers. A result, its publication, a later vacancy and a member taking a seat are separate events. A two-candidate share is not a share of all eligible voters or residents.
+
+The state-government tables are publication snapshots, sometimes incorporating incoming governors. They do **not** establish that Seymour, Parker, Cannon or every other listed successor was incumbent in November. Party observations retain the date/office of their underlying evidence; a later gubernatorial return is not automatically an earlier party history. Morton's and Salomon's earlier lieutenant-governor tickets are identified as such. Unknown party, accession and chamber fields are not filled from a state's federal delegation. The tables' loyal-government scope does not establish every Confederate state government's party or its local control.
+
+### Additional corrections and qualifications found in the scans
+
+- **Indiana legislature:** TA63 p.57 prints **21 Unionist / 27 Democratic / two Independent senators**, with **38 / 62** Unionist/Democratic representatives. Its Democratic joint majority is **30**, comparing 89 with 59. S3's prose grouped the Independents with Democrats and reported 32. S17 preserves the printed categories; no old note or live rule is rewritten.
+- **Oregon opponent:** TA63 p.57 labels McBride's Democratic congressional opponent **Wait**, not Shiel as S3's prose says. This does not change the original winner, vote totals or state seat count.
+- **New Jersey governor arithmetic:** TA63 p.53 prints candidate cells **61,307 and 47,491**, but a total **108,017** and margin **14,507**. The cells sum to **108,798**, difference **13,816** [I]. Keep both the publication claims and arithmetic; the draft does not silently repair them.
+- **Indiana secretary-of-state arithmetic:** TA63 p.57 prints a **9,543** margin, while its **128,160 and 118,517** candidate cells differ by **9,643** [I]. The office remains secretary of state.
+- **Wisconsin provisional returns:** TA63 p.62 explicitly lacks the full soldier vote and some counties, and can show losing provisional leads. Do not use those cells to overwrite the later roster or the separately corroborated original Hanchett victory. Its legislature is described only as “pretty evenly divided.”
+- **Chamber categories:** Maine's War Democrats and Straight Democrats, Rhode Island's Sprague and Republican Unionists, California's two Union labels, and Indiana's Independents remain distinct. Missouri's counts and Senate majority remain approximate/probable. None is a timeless national faction map.
+
 ## Legislative interpretation
 
 Votes identify the actual question: passage, amendment, concurrence, conference or suspension of rules. A division not taken is null, never a zero-vote or unanimous roll call. Exact-day uncertainty remains month precision where the read page gives only sequence. The first-confiscation House reference is the direct Globe's **60–48**, with MP's **61–48** retained. The original House Homestead and Legal Tender roll-call pages remain retrieval holds; the ledger explicitly cites the read Currie study for those tallies.

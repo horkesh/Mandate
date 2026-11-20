@@ -78,6 +78,18 @@ Drafted 258 named congressional observations, 689 possible member/session inters
 
 The first cheap audit passes 2,431 checks: file structure, UTF-8, page citations, source hashes, party and vote arithmetic, record resolution, unsigned/inert status and protected-path preservation. Both unchanged live packs validate (exit 0). The single required S17 done check is running with drafting; its own log and exit will be retained. The first coherent batch is submitted through the actual commit hook, with the hook's own result retained externally. No passing integrated check is claimed before that result exists.
 
+Batch 1 committed as **`9fcf122`** through the real hook: exit 0, **137 files / 1,530 tests passed / one expected failure / three skips**, plus typecheck, boundary, licences and the 106-record decision index. The runtime done check remains a separate required result.
+
+### S17 batch 2: elections and state institutions
+
+Drafted all **151 original winners in sixteen states**, their state totals, ten named-office vote references, the later-state/House-series scope distinctions, and **19 proposed checkpoint records** beside the live checkpoint file. The reference groups remain **71 D / one Independent D / 79 Republican–Union–Emancipation**, with five Missouri Emancipation winners identified. These are contemporary-ticket classifications, not the Directory's modern party crosswalk or an adopted presidential coalition.
+
+Added **49 governor-table observations** (36 with separate party evidence, 13 on party HOLD) and **77 legislative-party observations**, preserving approximate and qualitative statements. Accessions remain HOLD rather than fabricated election-night dates. The focused audit passes **2,980 checks** before the second commit.
+
+New page-backed corrections to S3 are recorded in the draft README: Indiana's Senate is 27 Democratic plus two Independent, not 29 Democratic; McBride's printed Oregon opponent is Wait, not Shiel. New Jersey's printed governor total/margin and Indiana's printed secretary-of-state margin do not reconcile with their candidate cells. Both the source claims and explicit arithmetic survive. Existing S3 research notes and every live input remain unchanged.
+
+Proposed rulings [I]: retain the November original-contest denominator and the state-pattern constraints; reject immediate seating of the 38th, counting later 1863/1864 results in November, making governor-party equal legislative control, or accepting a wrong binding historical winner merely because it is inside a band. The current checkpoint schema has no election kind, so the new file remains a schema proposal and is not loaded. Source/identity crosswalks and adoption remain with the lead.
+
 ## Findings outside my scope
 
 The earlier politics note mixes several national party counts and includes snippet-only claims. S3 supplies page-backed replacements for the corresponding 1861–62 material without rewriting that note or canon. S1 owns the reported 1A behavior failures; S2 owns timing. S5 should preserve the first note issue's replacement clause and coin exceptions. S6 owns cast values and exact governor service rows. S7 and the gate reviewer own sensitive-history wording and placement. None of those lanes' files was edited.

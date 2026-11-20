@@ -1,0 +1,11 @@
+state,office,candidate_a,ticket_a,votes_a,candidate_b,ticket_b,votes_b,two_candidate_sum,printed_total,printed_margin,margin_a,share_a_percent,calculation,cite,notes
+New York,governor,Seymour,Democratic,306649,Wadsworth,Union,295897,602546,602546,,10752,50.892214,[I] arithmetic on these two named source totals only; not all residents,TA63 p.51,
+New Jersey,governor,Parker,Democratic,61307,Ward,Union,47491,108798,108017,14507,13816,56.349381,[I] arithmetic on these two named source totals only; not all residents,TA63 p.53,Printed total 108017 and margin 14507 conflict with the named candidate cells (sum 108798; margin 13816). Both retained; do not silently repair.
+Delaware,governor,Cannon,Union,8155,Jefferson,Democratic,8044,16199,,,111,50.342614,[I] arithmetic on these two named source totals only; not all residents,TA63 p.60,
+Pennsylvania,auditor_general,Slenker,Democratic,219140,Cochran,Union,215616,434756,434756,,3524,50.405285,[I] arithmetic on these two named source totals only; not all residents,TA63 p.53,
+Ohio,secretary_of_state,Armstrong,Democratic,178755,Kennon,Union,164220,342975,,,14535,52.118959,[I] arithmetic on these two named source totals only; not all residents,TA63 p.55,
+Indiana,secretary_of_state,Athon,Democratic,128160,Peelle,Union,118517,246677,,9543,9643,51.95458,[I] arithmetic on these two named source totals only; not all residents,TA63 p.57,Printed margin 9543 conflicts with candidate-cell difference 9643; preserve both.
+Illinois,treasurer,Starne,Democratic,136662,Butler,Union,120116,256778,,,16546,53.221849,[I] arithmetic on these two named source totals only; not all residents,TA63 p.58,
+Illinois,house_at_large,Allen,Democratic,136060,Ingersoll,Union,119761,255821,,,16299,53.185626,[I] arithmetic on these two named source totals only; not all residents,TA63 p.58,
+Michigan,governor,Blair,Republican,68716,Stout,Democratic,62102,130818,130818,,6614,52.52794,[I] arithmetic on these two named source totals only; not all residents,TA63 p.61,
+Massachusetts,governor,Andrew,Republican,80835,Devens,People’s,52587,133422,133422,,28248,60.58596,[I] arithmetic on these two named source totals only; not all residents,TA63 p.50,
