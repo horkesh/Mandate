@@ -348,6 +348,11 @@ const COLUMN_OVERRIDES: Readonly<Record<string, string>> = Object.freeze({
   'centres.nerve': 'nerve',
   'centres.experience': 'experience',
   'centres.reputation': 'reputation',
+  'service.government': 'service_government',
+  'service.toFaction': 'resignation_side',
+  'service.toBloc': 'resignation_bloc',
+  'service.historicalOn': 'resigned_on',
+  'service.cites': 'resignation_cites',
   'temperament.boldness': 'boldness',
   'temperament.candour': 'candour',
   shares: 'shares',
@@ -531,6 +536,7 @@ export function generatePack(files: PackFiles): GenerateResult {
     'world',
     'people',
     wt('people').rows.map((r) => {
+      if (r.raw('resignation_side') === '' && ['service_government', 'resigned_on', 'resignation_bloc', 'resignation_cites'].some(c => r.raw(c) !== '')) r.error('service-trigger', 'resignation_side', 'service fields need the side an officer could join');
       const centre = (col: string) => r.cell(col, parseCentre(r.raw(col), sourceKeys), { direction: null, cites: [] });
       const rec = {
         id: r.id_('id'),
@@ -548,6 +554,11 @@ export function generatePack(files: PackFiles): GenerateResult {
         practices: r.cell('practices', parsePractices(r.raw('practices'), sourceKeys), []),
         traits: r.cell('traits', parseTraits(r.raw('traits'), sourceKeys), []),
         bloc: r.optionalId('bloc', 'bloc'),
+        ...(r.raw('resignation_side') === '' ? {} : { service: {
+          government: r.optionalId('service_government'), toFaction: r.optionalId('resignation_side')!,
+          toBloc: r.optionalId('resignation_bloc'), historicalOn: r.optionalDate('resigned_on'),
+          cites: cites(r, 'resignation_cites'),
+        } }),
         ...(r.raw('bloc_cites').trim() === '' ? {} : { blocCites: cites(r, 'bloc_cites') }),
         ranks: r.cell('ranks', parseRanks(r.raw('ranks')), []),
         unknowns: [] as string[],

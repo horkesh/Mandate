@@ -243,6 +243,7 @@ Module map, adapted from the AWWV-architecture note:
 | a region's civil government, which no-faction governments are closed, and each department's side | `command` | the scenario start, situations (0058, 0065) |
 | a person's ranks, one per kind (regular, volunteer, brevet) held at once, each with its date | `people` | appointments, promotion lists (0050, 0073) |
 | a person's status (serving, wounded, killed, captured) and its date | `people` | combat (0073) |
+| a person's service choice (`personService`: service side, bloc, resign or stay, day) | `people` | the people step (R49); `command` empties a resigned holder's post; rank and forces remain with their existing owners |
 | today's weather per weather zone | `weather` | its own seeded draw (0029, 0050; reserved) |
 | a force block's region or ship, and the leg it is on (`forceLocations`) | `movement` | operations, retreats, recruitment (a raised block placed at its muster region; a disbanded one removed), detachments (a garrison placed where its parent stands, a landing ashore) (0064, 0073, 0081) |
 | a raised block's enlistment (`forceEnlistments`): who raised it, on whose call, and when its men's term ends | `forces` | recruitment (0073) |

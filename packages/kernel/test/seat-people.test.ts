@@ -9,6 +9,7 @@ import { indexSeatsWorld } from '../src/seats/world.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
 import { createState } from '../src/tick/setup.ts';
 import { createViewCache, viewFor } from '../src/view/view.ts';
+import { indexWorld } from '../src/world/index.ts';
 import { indexedFixture, F, P, POST } from './support/seats-fixture.ts';
 
 const seat = seatIdFor(P('a_lead'));
@@ -116,6 +117,82 @@ const sideNotice = (id: string, side: 'a' | 'b'): SituationDef => ({
   effects: [{ propose: { owner: 'command', field: 'department_side', subject: 'a_war', side: F(side), delta: 1, reason: 'notice' } }],
   report: { authors: [POST('a_office')], reportType: 'wire-dispatch', subtype: null },
   gate: { none: 'test fixture' }, gateReview: null, citations: [],
+});
+
+function serviceWorld() {
+  const base = indexedFixture({}, [sideNotice('returns_a', 'a')]);
+  return indexSeatsWorld(indexWorld({ ...base.map.world, people: base.map.world.people.map(p => p.id === P('a_gen') ? {
+    ...p, service: { government: null, toFaction: F('b'), toBloc: null, historicalOn: '1900-06-06', cites: [{ source: 'FIXTURE', at: 'p1' }] },
+  } : p) }), base.start, { situations: base.situations });
+}
+const resignation: Partial<ReportBody> = {
+  reportSubjectKind: 'person', reportSubjectId: 'a_gen', reportDay: 5,
+  reportClaims: [{ claimKind: 'service-choice', claimRegion: null, claimValue: 1, claimToken: 'resign', claimConfidence: 1000 }],
+};
+
+it('learns a resignation only on receipt, vacating the believed post and changing standing on both sides', () => {
+  const w = serviceWorld(), cache = createViewCache();
+  const start = { ...createState(w, { seed: 1 }), stateDay: 10 };
+  const hidden: State = { ...start, personService: { [P('a_gen')]: { serviceFaction: F('b'), serviceBloc: null, serviceChoice: 'resign', serviceDay: 5 } },
+    postStates: { ...start.postStates, [POST('a_army')]: { ...start.postStates[POST('a_army')]!, postHolder: null } } };
+  const before = viewFor(w, start, seat, cache);
+  expect(viewFor(w, hidden, seat, cache).people).toBe(before.people);
+  expect(viewFor(w, hidden, seat, cache).posts).toBe(before.posts);
+  expect(viewFor(w, hidden, seat).people).toEqual(before.people);
+  for (const initial of [start, hidden]) {
+    const told = receive(initial, 'm.resign', resignation);
+    for (const c of [undefined, cache]) {
+      const view = viewFor(w, told, seat, c);
+      expect(view.posts.find(p => p.post === POST('a_army'))).toMatchObject({ holder: null, status: 'vacant', vacantSince: 5, asOfDay: 5, source: 'm.resign' });
+      expect(view.people.find(p => p.person === P('a_gen'))!.standing).toBeNull();
+      const changedTruth = { ...told, personStanding: { ...told.personStanding, [P('a_gen')]: 999 } };
+      expect(viewFor(w, changedTruth, seat, c).people.find(p => p.person === P('a_gen'))!.standing).toBeNull();
+    }
+    const otherSeat = seatIdFor(P('b_lead'));
+    const other = deliverReport(initial, otherSeat, { id: 'm.other' as MessageId, knownReceivedDay: 10, knownRoute: 'courier', knownVia: [],
+      knownBody: { reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: P('a_gen'), reportAuthorPost: POST('a_army'),
+        reportSubjectKind: 'person', reportSubjectId: 'a_gen', reportDay: 5, reportHour: null, reportClaims: resignation.reportClaims!, reportAdvice: null, reportAnswers: null } }, NO_TRUTH);
+    expect(viewFor(w, other, otherSeat, cache).people.find(p => p.person === P('a_gen'))!.standing).toBe(initial.personStanding[P('a_gen')]);
+  }
+});
+
+it('keeps a replacement and ignores older letters and later government notices after a received resignation', () => {
+  const w = serviceWorld();
+  let state = { ...createState(w, { seed: 1 }), stateDay: 10 };
+  state = receive(state, 'm.replacement', { reportDay: 6, reportAuthor: P('a_bold'), reportAuthorPost: null, reportClaims: [claim('verb-answered', 'appoint:comply')] });
+  state = receive(state, 'm.resign', resignation);
+  state = receive(state, 'm.old-letter', { reportDay: 3 });
+  state = receive(state, 'm.government', { reportDay: 7, reportAuthor: P('a_sec'), reportAuthorPost: POST('a_office'), reportSubjectKind: 'situation', reportSubjectId: 'returns_a' });
+  const view = viewFor(w, state, seat);
+  expect(view.posts.find(p => p.post === POST('a_army'))).toMatchObject({ holder: 'a_bold', status: 'held', source: 'm.replacement' });
+  expect(view.people.find(p => p.person === P('a_gen'))!.standing).toBeNull();
+});
+
+it('vacates the last believed post even when the resignation author is already unposted', () => {
+  const w = serviceWorld(), state = { ...createState(w, { seed: 1 }), stateDay: 10 };
+  const told = receive(state, 'm.unposted', { ...resignation, reportAuthorPost: null });
+  expect(viewFor(w, told, seat).posts.find(p => p.post === POST('a_army'))).toMatchObject({ holder: null, status: 'vacant' });
+});
+
+it.each([
+  { reportDay: 11 }, { reportType: 'observer-letter' as const }, { reportSubjectId: 'a_bold' },
+  { reportClaims: [{ ...resignation.reportClaims![0]!, claimToken: 'stay' }] },
+  { reportClaims: [{ ...resignation.reportClaims![0]!, claimValue: 0 }] },
+])('does not infer resignation from a future or unrelated paper (%j)', over => {
+  const w = serviceWorld(), state = { ...createState(w, { seed: 1 }), stateDay: 10 };
+  const before = viewFor(w, state, seat);
+  const after = viewFor(w, receive(state, 'm.other', { ...resignation, ...over }), seat);
+  expect(after.posts.find(p => p.post === POST('a_army'))!.holder).toBe(P('a_gen'));
+  expect(after.people.find(p => p.person === P('a_gen'))!.standing).toBe(before.people.find(p => p.person === P('a_gen'))!.standing);
+});
+
+it('waits for a future-stamped receipt and invalidates the cached catalogue when it arrives', () => {
+  const w = serviceWorld(), state = { ...createState(w, { seed: 1 }), stateDay: 10 }, cache = createViewCache();
+  const pending = receive(state, 'm.pending-resign', resignation, 11);
+  expect(viewFor(w, pending, seat, cache).posts.find(p => p.post === POST('a_army'))!.holder).toBe(P('a_gen'));
+  const after = viewFor(w, { ...pending, stateDay: 11 }, seat, cache);
+  expect(after.posts.find(p => p.post === POST('a_army'))!.holder).toBeNull();
+  expect(after.people.find(p => p.person === P('a_gen'))!.standing).toBeNull();
 });
 
 it('changes known side only on a received government notice, in written order, independent of hidden truth', () => {

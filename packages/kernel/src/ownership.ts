@@ -127,6 +127,7 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
     at('State', 'personGrievances'),
     at('State', 'personRegard'),
   ]),
+  field("a person's service, bloc and resignation choice", 'people', ['people step'], [at('State', 'personService')]),
   field("a person's stances on record (from Consult)", 'people', ['Consult answers'], [at('State', 'personStances')]),
   field("a person's status (serving, wounded, killed, captured) and its date", 'people', ['combat'], [at('State', 'personStatus')]),
   // Lane 1.5: the ladder and rivals, the audience, promises, inquiries, observers, attention and initiatives.
@@ -254,6 +255,7 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'PersonGrievance',
   'Stance',
   'PersonStatus',
+  'PersonService',
   // Lane 1.5
   'PersonPromise',
   'AttentionState',

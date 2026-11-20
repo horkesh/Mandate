@@ -6,6 +6,7 @@
  * The kernel never names a value (hard rule 3): which values a goal honours or offends, and which values make a filter
  * hold or trim and a man see the enemy larger, are stated here by the pack.
  */
+import type { ResignationRules } from './resignation.ts';
 import type { ComplianceRules } from '../compliance.ts';
 import type { StatDirection } from '../world/people.ts';
 import type { AttentionRules, VerbRules } from './verb-rules.ts';
@@ -108,6 +109,7 @@ export interface GrievanceRules {
 }
 
 export interface PeopleRules {
+  readonly resignation: ResignationRules;
   readonly shadow: ShadowRules;
   readonly compliance: ComplianceRules;
   readonly goalTerms: readonly GoalTermsRule[];
@@ -132,7 +134,7 @@ const COMPLIANCE_KEYS: readonly (keyof ComplianceRules)[] = [
 ];
 
 /** Problems with a pack's people rules, as the validator and the kernel's setup see them (the kernel takes any World it is handed). */
-export function peopleRulesProblems(rules: PeopleRules | undefined, values: readonly string[]): string[] {
+export function peopleRulesProblems(rules: PeopleRules | undefined, values: readonly string[], traits: readonly string[] = []): string[] {
   if (rules === undefined) return ['the pack states no people rules (rules.people)'];
   const problems: string[] = [];
   const permille = (v: unknown, what: string, signed = false) => {
@@ -145,6 +147,22 @@ export function peopleRulesProblems(rules: PeopleRules | undefined, values: read
   const value = (v: string, what: string) => {
     if (!known.has(v)) problems.push(`people rule ${what} names value "${v}", which is not in the pack's values vocabulary`);
   };
+  const resign = rules.resignation;
+  if (resign === undefined) problems.push('the pack states no resignation rules (rules.people.resignation)');
+  else {
+    if (typeof resign.historicalDefaults !== 'boolean') problems.push('resignation.historicalDefaults must be a boolean');
+    for (const [name, n] of [['base', resign.base], ['resignAt', resign.resignAt]] as const) if (!Number.isSafeInteger(n)) problems.push(`resignation.${name} must be a whole number`);
+    for (const row of resign.values) {
+      value(row.value, 'resignation.values');
+      if (!Number.isSafeInteger(row.weight)) problems.push('resignation value weight must be a whole number');
+      if (resign.values.filter(v => v.value === row.value).length !== 1) problems.push(`duplicate resignation value ${row.value}`);
+    }
+    for (const row of resign.traits) {
+      if (!traits.includes(row.trait)) problems.push(`unknown resignation trait ${row.trait}`);
+      if (!Number.isSafeInteger(row.weight)) problems.push('resignation trait weight must be a whole number');
+      if (resign.traits.filter(t => t.trait === row.trait).length !== 1) problems.push(`duplicate resignation trait ${row.trait}`);
+    }
+  }
   for (const d of DIRECTIONS) {
     permille(rules.shadow.centrePermille[d], `shadow.centrePermille.${d}`);
     permille(rules.shadow.regardPermille[d], `shadow.regardPermille.${d}`, true);

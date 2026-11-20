@@ -13,6 +13,7 @@ import type { ReportClaim } from './report.ts';
 import type { State } from '../root-state.ts';
 
 export const BIAS_TERM_KINDS = [
+  'service_term',
   /** The raw value observed (an enemy strength seen by scouts, a strength on the rolls). */
   'observed',
   /** The intelligence source's multiplier on what it reports (0032's enemy estimate; planner-design finding 6). */

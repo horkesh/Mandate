@@ -45,6 +45,7 @@ export const MESSAGE_RULES = {
   turns: { maxDays: 7, cite: 'FIXTURE' },
   // Lane 1.1: the people core's rules, at the packs' values.
   people: {
+    resignation: { historicalDefaults: false, base: 0, resignAt: 500, values: [], traits: [] },
     shadow: {
       centrePermille: { high: 800, above: 650, average: 500, below: 350, low: 200 },
       unknownCentre: 500,

@@ -22,6 +22,7 @@ import type { WorldIndex } from '../world/index.ts';
 import type { StatCentre } from '../world/people.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
 import { ranksOn, type PersonRank } from './ranks.ts';
+import type { PersonService } from './resignation.ts';
 import type { PeopleRules, ShadowRules } from './rules.ts';
 
 /** A person's hidden true stats and temperament, permille, drawn once at setup. */
@@ -153,6 +154,7 @@ export function initialPeople(map: WorldIndex, start: ScenarioStart, seed: numbe
 
 /** A typed change another mechanism proposes for `people` to apply (hard rule 5: one writer). */
 export type PeopleChange =
+  | { readonly change: 'service'; readonly person: PersonId; readonly service: PersonService }
   | { readonly change: 'standing'; readonly person: PersonId; readonly delta: number }
   | { readonly change: 'regard'; readonly person: PersonId; readonly toward: PersonId; readonly delta: number }
   | { readonly change: 'grievance'; readonly person: PersonId; readonly kind: string; readonly weight: number; readonly against: PersonId | null; readonly cause: string | null }
@@ -181,6 +183,10 @@ export function applyPeopleChanges(state: State, changes: readonly PeopleChange[
   for (const c of changes) {
     known(next, c.person);
     switch (c.change) {
+      case 'service':
+        if (next.personStatus[c.person]?.statusKind !== 'serving') break;
+        next = { ...next, personService: { ...next.personService, [c.person]: c.service } };
+        break;
       case 'standing':
         next = { ...next, personStanding: { ...next.personStanding, [c.person]: clampPermille((next.personStanding[c.person] ?? 0) + c.delta) } };
         break;

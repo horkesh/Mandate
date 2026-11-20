@@ -72,6 +72,7 @@ export * from './people/ranks.ts';
 // Lane 1.1: people as State, their trait inputs and rules; reading orders on the new State; responses (`proxy`).
 export * from './people/people.ts';
 export * from './people/rules.ts';
+export * from './people/resignation.ts';
 export * from './people/traits.ts';
 // Lane 1.5: the people verbs, attention, the ladder, the audience, observers, the weekly people step.
 export * from './people/verb-rules.ts';
