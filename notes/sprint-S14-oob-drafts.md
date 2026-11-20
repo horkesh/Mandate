@@ -21,6 +21,14 @@ Cheap preflight: typecheck exit 0; runtime/manifests unchanged; focused audit ex
 
 All remain [I] proposals under 0106; none accepts canon or signs a gate item. Keep source windows and measures distinct, inclusive parent totals non-additive, unknowns blocking at integration and commander observations separate from S12 cast tenure. Rejected: a timeless roster, nominal sizes, backfilling later returns, duplicate parents/children and assuming an eponym is the current commander. The draft README carries the detailed reasons.
 
+## Western, river and coastal batch
+
+Eastern commit **`e908420`** passed the real hook: exit 0, 139 files, 1,548 passed, one expected failure and three skips, plus typecheck, boundary, licences and decisions. Western/coastal additions bring the draft to **62 snapshots / 416 force observations**, before final close-out counts. Further reading supplies Grant's territorial returns, pre-Perryville returns with their date warning, the three-corps Army of Tennessee order and November return, East Tennessee's approximate return, North Carolina's effective returns and distinct naval forces. The two rations orders remain orders, not actual stocks. No `stores_days` default or fill is applied.
+
+Proposed rulings [I]: distinguish territorial from tactical divisions; reject treating Rosecrans's territorial Third Division as one normal division. Preserve the order's three Confederate corps and the numeric return's smaller coverage; reject substituting the entire East Tennessee department for Smith's unreturned corps. Keep ship crews and hull counts separate; reject interchangeable crews or a new hull instantly becoming service-ready. Preserve the disputed Buell return and Mahan transfer date instead of silently resolving them. Other sensitive-history source passages remain research leads, without effects or gate-none claims.
+
+The focused audit before this batch passes 3,695 checks; final numeric/count changes are rechecked before commit. Source scans and logs remain external. The single required done check is still running; no repeat or runtime tuning.
+
 ## Findings outside my scope
 
 The retained S4 baseline done-check failures remain assigned to S1/S2. Independent whole-branch and gate review remain with Claude after the sprint under 0106.

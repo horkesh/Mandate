@@ -1,0 +1,2400 @@
+{
+  "sprint": "S14",
+  "base": "84c3466",
+  "source_root": "C:\\Pyrrhic\\mandate-research-sources\\S4",
+  "sources": [
+    {
+      "label": "A",
+      "title": "Daniel Ammen, The Atlantic Coast (1883)",
+      "item": "atlanticcoas00amme",
+      "local_path": "atlanticcoas00amme/atlanticcoas00amme.pdf",
+      "bytes": 16040623,
+      "sha256": "f3557a20757e4958f1de9f3ee4e64509c46c6edb520b44133455ed4bf5c8f1e4",
+      "pdf_pages": 316,
+      "archive_url": "https://archive.org/details/atlanticcoas00amme",
+      "scan_url": "https://archive.org/download/atlanticcoas00amme/atlanticcoas00amme.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 14,
+          "pdf": 36,
+          "evidence": "S14/readings/A-p14.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 15,
+          "pdf": 37,
+          "evidence": "S14/readings/A-p15.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 16,
+          "pdf": 38,
+          "evidence": "S14/readings/A-p16.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 163,
+          "pdf": 189,
+          "evidence": "S14/readings/A-p163.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 164,
+          "pdf": 190,
+          "evidence": "S14/readings/A-p164.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 165,
+          "pdf": 191,
+          "evidence": "S14/readings/A-p165.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 166,
+          "pdf": 192,
+          "evidence": "S14/readings/A-p166.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 167,
+          "pdf": 193,
+          "evidence": "S14/readings/A-p167.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 168,
+          "pdf": 194,
+          "evidence": "S14/readings/A-p168.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 169,
+          "pdf": 195,
+          "evidence": "S14/readings/A-p169.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 17,
+          "pdf": 39,
+          "evidence": "S14/readings/A-p17.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 170,
+          "pdf": 196,
+          "evidence": "S14/readings/A-p170.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 177,
+          "pdf": 207,
+          "evidence": "S14/readings/A-p177.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 178,
+          "pdf": 208,
+          "evidence": "S14/readings/A-p178.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 179,
+          "pdf": 209,
+          "evidence": "S14/readings/A-p179.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 18,
+          "pdf": 40,
+          "evidence": "S14/readings/A-p18.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 180,
+          "pdf": 210,
+          "evidence": "S14/readings/A-p180.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 181,
+          "pdf": 211,
+          "evidence": "S14/readings/A-p181.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 182,
+          "pdf": 212,
+          "evidence": "S14/readings/A-p182.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 183,
+          "pdf": 213,
+          "evidence": "S14/readings/A-p183.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 184,
+          "pdf": 214,
+          "evidence": "S14/readings/A-p184.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 189,
+          "pdf": 219,
+          "evidence": "S14/readings/A-p189.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 190,
+          "pdf": 220,
+          "evidence": "S14/readings/A-p190.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 191,
+          "pdf": 221,
+          "evidence": "S14/readings/A-p191.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 192,
+          "pdf": 222,
+          "evidence": "S14/readings/A-p192.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 193,
+          "pdf": 223,
+          "evidence": "S14/readings/A-p193.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 194,
+          "pdf": 224,
+          "evidence": "S14/readings/A-p194.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 195,
+          "pdf": 225,
+          "evidence": "S14/readings/A-p195.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 20,
+          "pdf": 42,
+          "evidence": "S14/readings/A-p20.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 21,
+          "pdf": 43,
+          "evidence": "S14/readings/A-p21.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 22,
+          "pdf": 44,
+          "evidence": "S14/readings/A-p22.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 23,
+          "pdf": 45,
+          "evidence": "S14/readings/A-p23.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 24,
+          "pdf": 46,
+          "evidence": "S14/readings/A-p24.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 25,
+          "pdf": 47,
+          "evidence": "S14/readings/A-p25.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 26,
+          "pdf": 48,
+          "evidence": "S14/readings/A-p26.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 27,
+          "pdf": 49,
+          "evidence": "S14/readings/A-p27.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 53,
+          "pdf": 75,
+          "evidence": "S14/readings/A-p53.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 54,
+          "pdf": 76,
+          "evidence": "S14/readings/A-p54.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 55,
+          "pdf": 77,
+          "evidence": "S14/readings/A-p55.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 56,
+          "pdf": 78,
+          "evidence": "S14/readings/A-p56.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 57,
+          "pdf": 79,
+          "evidence": "S14/readings/A-p57.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        },
+        {
+          "printed": 58,
+          "pdf": 80,
+          "evidence": "S14/readings/A-p58.json",
+          "method": "PDF physical mapping checked against printed headers and S4 page map"
+        }
+      ]
+    },
+    {
+      "label": "D",
+      "title": "Frederick H. Dyer, A Compendium of the War of the Rebellion (1908)",
+      "item": "08697590.3359.emory.edu",
+      "local_path": "08697590.3359.emory.edu/08697590_3359.pdf",
+      "bytes": 175232086,
+      "sha256": "9823db0a23ba90b5850c2457dae503864a10266dc4fa590a94fab16a5f0b3f88",
+      "pdf_pages": 1810,
+      "archive_url": "https://archive.org/details/08697590.3359.emory.edu",
+      "scan_url": "https://archive.org/download/08697590.3359.emory.edu/08697590_3359.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 273,
+          "pdf": 280,
+          "evidence": "S14/readings/D-p273.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 274,
+          "pdf": 281,
+          "evidence": "S14/readings/D-p274.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 275,
+          "pdf": 282,
+          "evidence": "S14/readings/D-p275.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 276,
+          "pdf": 283,
+          "evidence": "S14/readings/D-p276.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 277,
+          "pdf": 284,
+          "evidence": "S14/readings/D-p277.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "L",
+      "title": "Thomas L. Livermore, Numbers and Losses in the Civil War in America, 1861–65 (1900)",
+      "item": "numberslosses00liverich",
+      "local_path": "numberslosses00liverich.pdf",
+      "bytes": 10411897,
+      "sha256": "23284174b80ff12f3678fc316b91360e157296a891481cfab00445c499680c2e",
+      "pdf_pages": 170,
+      "archive_url": "https://archive.org/details/numberslosses00liverich",
+      "scan_url": "https://archive.org/download/numberslosses00liverich/numberslosses00liverich.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 40,
+          "pdf": 52,
+          "evidence": "S14/readings/L-p40.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 41,
+          "pdf": 53,
+          "evidence": "S14/readings/L-p41.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 42,
+          "pdf": 54,
+          "evidence": "S14/readings/L-p42.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 43,
+          "pdf": 55,
+          "evidence": "S14/readings/L-p43.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 44,
+          "pdf": 56,
+          "evidence": "S14/readings/L-p44.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 45,
+          "pdf": 57,
+          "evidence": "S14/readings/L-p45.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 46,
+          "pdf": 58,
+          "evidence": "S14/readings/L-p46.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 47,
+          "pdf": 59,
+          "evidence": "S14/readings/L-p47.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 48,
+          "pdf": 60,
+          "evidence": "S14/readings/L-p48.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 49,
+          "pdf": 61,
+          "evidence": "S14/readings/L-p49.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 50,
+          "pdf": 62,
+          "evidence": "S14/readings/L-p50.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 51,
+          "pdf": 63,
+          "evidence": "S14/readings/L-p51.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 77,
+          "pdf": 89,
+          "evidence": "S14/readings/L-p77.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 78,
+          "pdf": 90,
+          "evidence": "S14/readings/L-p78.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 79,
+          "pdf": 91,
+          "evidence": "S14/readings/L-p79.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 80,
+          "pdf": 92,
+          "evidence": "S14/readings/L-p80.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 81,
+          "pdf": 93,
+          "evidence": "S14/readings/L-p81.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 82,
+          "pdf": 94,
+          "evidence": "S14/readings/L-p82.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 83,
+          "pdf": 95,
+          "evidence": "S14/readings/L-p83.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 84,
+          "pdf": 96,
+          "evidence": "S14/readings/L-p84.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 85,
+          "pdf": 97,
+          "evidence": "S14/readings/L-p85.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 86,
+          "pdf": 98,
+          "evidence": "S14/readings/L-p86.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 87,
+          "pdf": 99,
+          "evidence": "S14/readings/L-p87.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 88,
+          "pdf": 100,
+          "evidence": "S14/readings/L-p88.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 89,
+          "pdf": 101,
+          "evidence": "S14/readings/L-p89.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 90,
+          "pdf": 102,
+          "evidence": "S14/readings/L-p90.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 91,
+          "pdf": 103,
+          "evidence": "S14/readings/L-p91.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 92,
+          "pdf": 104,
+          "evidence": "S14/readings/L-p92.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 93,
+          "pdf": 105,
+          "evidence": "S14/readings/L-p93.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 94,
+          "pdf": 106,
+          "evidence": "S14/readings/L-p94.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 95,
+          "pdf": 107,
+          "evidence": "S14/readings/L-p95.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "M",
+      "title": "A. T. Mahan, The Gulf and Inland Waters (1883)",
+      "item": "gulfandinlandwa03mahagoog",
+      "local_path": "gulfandinlandwa03mahagoog/gulfandinlandwa03mahagoog.pdf",
+      "bytes": 6903596,
+      "sha256": "c3e02fb0e377429697ca98f33c3befc3ee693256b9b900794ddbd8fbbd1a4cf4",
+      "pdf_pages": 298,
+      "archive_url": "https://archive.org/details/gulfandinlandwa03mahagoog",
+      "scan_url": "https://archive.org/download/gulfandinlandwa03mahagoog/gulfandinlandwa03mahagoog.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 107,
+          "pdf": 130,
+          "evidence": "S14/readings/M-p107.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 108,
+          "pdf": 131,
+          "evidence": "S14/readings/M-p108.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 12,
+          "pdf": 33,
+          "evidence": "S14/readings/M-p12.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 13,
+          "pdf": 34,
+          "evidence": "S14/readings/M-p13.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 14,
+          "pdf": 35,
+          "evidence": "S14/readings/M-p14.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 15,
+          "pdf": 36,
+          "evidence": "S14/readings/M-p15.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 16,
+          "pdf": 37,
+          "evidence": "S14/readings/M-p16.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 17,
+          "pdf": 38,
+          "evidence": "S14/readings/M-p17.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 19,
+          "pdf": 40,
+          "evidence": "S14/readings/M-p19.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 20,
+          "pdf": 41,
+          "evidence": "S14/readings/M-p20.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 21,
+          "pdf": 42,
+          "evidence": "S14/readings/M-p21.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 22,
+          "pdf": 43,
+          "evidence": "S14/readings/M-p22.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 23,
+          "pdf": 44,
+          "evidence": "S14/readings/M-p23.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 24,
+          "pdf": 45,
+          "evidence": "S14/readings/M-p24.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 26,
+          "pdf": 47,
+          "evidence": "S14/readings/M-p26.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 27,
+          "pdf": 48,
+          "evidence": "S14/readings/M-p27.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 30,
+          "pdf": 51,
+          "evidence": "S14/readings/M-p30.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 31,
+          "pdf": 52,
+          "evidence": "S14/readings/M-p31.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 32,
+          "pdf": 53,
+          "evidence": "S14/readings/M-p32.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 33,
+          "pdf": 54,
+          "evidence": "S14/readings/M-p33.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 34,
+          "pdf": 55,
+          "evidence": "S14/readings/M-p34.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 35,
+          "pdf": 56,
+          "evidence": "S14/readings/M-p35.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 40,
+          "pdf": 61,
+          "evidence": "S14/readings/M-p40.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 41,
+          "pdf": 62,
+          "evidence": "S14/readings/M-p41.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 42,
+          "pdf": 63,
+          "evidence": "S14/readings/M-p42.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 43,
+          "pdf": 64,
+          "evidence": "S14/readings/M-p43.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 46,
+          "pdf": 67,
+          "evidence": "S14/readings/M-p46.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 47,
+          "pdf": 68,
+          "evidence": "S14/readings/M-p47.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 48,
+          "pdf": 69,
+          "evidence": "S14/readings/M-p48.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 49,
+          "pdf": 70,
+          "evidence": "S14/readings/M-p49.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 50,
+          "pdf": 71,
+          "evidence": "S14/readings/M-p50.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 51,
+          "pdf": 72,
+          "evidence": "S14/readings/M-p51.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 53,
+          "pdf": 76,
+          "evidence": "S14/readings/M-p53.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 65,
+          "pdf": 88,
+          "evidence": "S14/readings/M-p65.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 66,
+          "pdf": 89,
+          "evidence": "S14/readings/M-p66.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 67,
+          "pdf": 90,
+          "evidence": "S14/readings/M-p67.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 68,
+          "pdf": 91,
+          "evidence": "S14/readings/M-p68.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 69,
+          "pdf": 92,
+          "evidence": "S14/readings/M-p69.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 70,
+          "pdf": 93,
+          "evidence": "S14/readings/M-p70.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 71,
+          "pdf": 94,
+          "evidence": "S14/readings/M-p71.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 72,
+          "pdf": 95,
+          "evidence": "S14/readings/M-p72.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        },
+        {
+          "printed": 73,
+          "pdf": 96,
+          "evidence": "S14/readings/M-p73.json",
+          "method": "physical mapping from inspected S4 scan headers; OCR 26 misread as20, 108 as103"
+        }
+      ]
+    },
+    {
+      "label": "OR I-IV",
+      "title": "Official Records, series I, volume IV (1882)",
+      "item": "warofrebellion04secrrich",
+      "local_path": "warofrebellion04secrrich/warofrebellion04secrrich.pdf",
+      "bytes": 86460275,
+      "sha256": "886e69a1cf4e6b187012a8bffb72f860aa20c0fb6e52dc7a9e883381e2bd29cc",
+      "pdf_pages": 818,
+      "archive_url": "https://archive.org/details/warofrebellion04secrrich",
+      "scan_url": "https://archive.org/download/warofrebellion04secrrich/warofrebellion04secrrich.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 580,
+          "pdf": 600,
+          "evidence": "S14/readings/OR_I-IV-p580.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 581,
+          "pdf": 601,
+          "evidence": "S14/readings/OR_I-IV-p581.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 586,
+          "pdf": 606,
+          "evidence": "S14/readings/OR_I-IV-p586.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 587,
+          "pdf": 607,
+          "evidence": "S14/readings/OR_I-IV-p587.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 589,
+          "pdf": 609,
+          "evidence": "S14/readings/OR_I-IV-p589.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 590,
+          "pdf": 610,
+          "evidence": "S14/readings/OR_I-IV-p590.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-IX",
+      "title": "Official Records, series I, volume IX (1883)",
+      "item": "warofrebellion09unit",
+      "local_path": "warofrebellion09unit/warofrebellion09unit.pdf",
+      "bytes": 79125288,
+      "sha256": "f5320ac74f6834a4855bdb5b7ca2af37a338e44573f3d7256799a1e08ca6d082",
+      "pdf_pages": 820,
+      "archive_url": "https://archive.org/details/warofrebellion09unit",
+      "scan_url": "https://archive.org/download/warofrebellion09unit/warofrebellion09unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 10,
+          "pdf": 22,
+          "evidence": "S14/readings/OR_I-IX-p10.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 202,
+          "pdf": 214,
+          "evidence": "S14/readings/OR_I-IX-p202.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 203,
+          "pdf": 215,
+          "evidence": "S14/readings/OR_I-IX-p203.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 204,
+          "pdf": 216,
+          "evidence": "S14/readings/OR_I-IX-p204.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 205,
+          "pdf": 217,
+          "evidence": "S14/readings/OR_I-IX-p205.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 206,
+          "pdf": 218,
+          "evidence": "S14/readings/OR_I-IX-p206.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 207,
+          "pdf": 219,
+          "evidence": "S14/readings/OR_I-IX-p207.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 211,
+          "pdf": 223,
+          "evidence": "S14/readings/OR_I-IX-p211.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 239,
+          "pdf": 251,
+          "evidence": "S14/readings/OR_I-IX-p239.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 240,
+          "pdf": 252,
+          "evidence": "S14/readings/OR_I-IX-p240.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 241,
+          "pdf": 253,
+          "evidence": "S14/readings/OR_I-IX-p241.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 242,
+          "pdf": 254,
+          "evidence": "S14/readings/OR_I-IX-p242.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 270,
+          "pdf": 282,
+          "evidence": "S14/readings/OR_I-IX-p270.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 458,
+          "pdf": 470,
+          "evidence": "S14/readings/OR_I-IX-p458.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 459,
+          "pdf": 471,
+          "evidence": "S14/readings/OR_I-IX-p459.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 489,
+          "pdf": 501,
+          "evidence": "S14/readings/OR_I-IX-p489.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 490,
+          "pdf": 502,
+          "evidence": "S14/readings/OR_I-IX-p490.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 533,
+          "pdf": 545,
+          "evidence": "S14/readings/OR_I-IX-p533.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 534,
+          "pdf": 546,
+          "evidence": "S14/readings/OR_I-IX-p534.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 7,
+          "pdf": 19,
+          "evidence": "S14/readings/OR_I-IX-p7.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 74,
+          "pdf": 86,
+          "evidence": "S14/readings/OR_I-IX-p74.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 75,
+          "pdf": 87,
+          "evidence": "S14/readings/OR_I-IX-p75.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 76,
+          "pdf": 88,
+          "evidence": "S14/readings/OR_I-IX-p76.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 77,
+          "pdf": 89,
+          "evidence": "S14/readings/OR_I-IX-p77.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 78,
+          "pdf": 90,
+          "evidence": "S14/readings/OR_I-IX-p78.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 79,
+          "pdf": 91,
+          "evidence": "S14/readings/OR_I-IX-p79.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 8,
+          "pdf": 20,
+          "evidence": "S14/readings/OR_I-IX-p8.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 80,
+          "pdf": 92,
+          "evidence": "S14/readings/OR_I-IX-p80.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 9,
+          "pdf": 21,
+          "evidence": "S14/readings/OR_I-IX-p9.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-V",
+      "title": "Official Records, series I, volume V (1881)",
+      "item": "warofrebellion05unit",
+      "local_path": "warofrebellion05unit/warofrebellion05unit.pdf",
+      "bytes": 119747989,
+      "sha256": "c36ab1965afbb04c30a5dc7e9f3bff7bd39e9e17a5df3c4c9334f9275309c0e1",
+      "pdf_pages": 1226,
+      "archive_url": "https://archive.org/details/warofrebellion05unit",
+      "scan_url": "https://archive.org/download/warofrebellion05unit/warofrebellion05unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 1015,
+          "pdf": 1025,
+          "evidence": "S14/readings/OR_I-V-p1015.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 732,
+          "pdf": 742,
+          "evidence": "S14/readings/OR_I-V-p732.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 824,
+          "pdf": 834,
+          "evidence": "S14/readings/OR_I-V-p824.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 932,
+          "pdf": 942,
+          "evidence": "S14/readings/OR_I-V-p932.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 974,
+          "pdf": 984,
+          "evidence": "S14/readings/OR_I-V-p974.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-VII",
+      "title": "Official Records, series I, volume VII (1882)",
+      "item": "warofrebellion07unit",
+      "local_path": "warofrebellion07unit/warofrebellion07unit.pdf",
+      "bytes": 102409570,
+      "sha256": "4e430999ad6aa131916f94b32cb09b15e2c040abb2445c9ebb4642244702e089",
+      "pdf_pages": 1046,
+      "archive_url": "https://archive.org/details/warofrebellion07unit",
+      "scan_url": "https://archive.org/download/warofrebellion07unit/warofrebellion07unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 158,
+          "pdf": 170,
+          "evidence": "S14/readings/OR_I-VII-p158.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 159,
+          "pdf": 171,
+          "evidence": "S14/readings/OR_I-VII-p159.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 160,
+          "pdf": 172,
+          "evidence": "S14/readings/OR_I-VII-p160.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 169,
+          "pdf": 181,
+          "evidence": "S14/readings/OR_I-VII-p169.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-VIII",
+      "title": "Official Records, series I, volume VIII (1883)",
+      "item": "warofrebellion08unit",
+      "local_path": "warofrebellion08unit/warofrebellion08unit.pdf",
+      "bytes": 88512743,
+      "sha256": "0cadfc289bcadfc22272dbe917f591d7d993616e463c83cf7257c8c21f501d33",
+      "pdf_pages": 938,
+      "archive_url": "https://archive.org/details/warofrebellion08unit",
+      "scan_url": "https://archive.org/download/warofrebellion08unit/warofrebellion08unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 196,
+          "pdf": 208,
+          "evidence": "S14/readings/OR_I-VIII-p196.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 197,
+          "pdf": 209,
+          "evidence": "S14/readings/OR_I-VIII-p197.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 198,
+          "pdf": 210,
+          "evidence": "S14/readings/OR_I-VIII-p198.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 199,
+          "pdf": 211,
+          "evidence": "S14/readings/OR_I-VIII-p199.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 283,
+          "pdf": 295,
+          "evidence": "S14/readings/OR_I-VIII-p283.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 284,
+          "pdf": 296,
+          "evidence": "S14/readings/OR_I-VIII-p284.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 285,
+          "pdf": 297,
+          "evidence": "S14/readings/OR_I-VIII-p285.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 286,
+          "pdf": 298,
+          "evidence": "S14/readings/OR_I-VIII-p286.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 287,
+          "pdf": 299,
+          "evidence": "S14/readings/OR_I-VIII-p287.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-X.1",
+      "title": "Official Records, series I, volume X, part I (1884)",
+      "item": "warofrebellion101unit",
+      "local_path": "warofrebellion101unit/warofrebellion101unit.pdf",
+      "bytes": 116205347,
+      "sha256": "08aea2cabaface9893c5ae68928a1bdbcd4a10152f28db575970a48b46c1abfc",
+      "pdf_pages": 1048,
+      "archive_url": "https://archive.org/details/warofrebellion101unit",
+      "scan_url": "https://archive.org/download/warofrebellion101unit/warofrebellion101unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 100,
+          "pdf": 114,
+          "evidence": "S14/readings/OR_I-X.1-p100.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 101,
+          "pdf": 115,
+          "evidence": "S14/readings/OR_I-X.1-p101.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 102,
+          "pdf": 116,
+          "evidence": "S14/readings/OR_I-X.1-p102.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 103,
+          "pdf": 117,
+          "evidence": "S14/readings/OR_I-X.1-p103.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 104,
+          "pdf": 118,
+          "evidence": "S14/readings/OR_I-X.1-p104.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 105,
+          "pdf": 119,
+          "evidence": "S14/readings/OR_I-X.1-p105.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 106,
+          "pdf": 120,
+          "evidence": "S14/readings/OR_I-X.1-p106.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 107,
+          "pdf": 121,
+          "evidence": "S14/readings/OR_I-X.1-p107.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 112,
+          "pdf": 126,
+          "evidence": "S14/readings/OR_I-X.1-p112.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 382,
+          "pdf": 396,
+          "evidence": "S14/readings/OR_I-X.1-p382.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 383,
+          "pdf": 397,
+          "evidence": "S14/readings/OR_I-X.1-p383.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 384,
+          "pdf": 398,
+          "evidence": "S14/readings/OR_I-X.1-p384.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 396,
+          "pdf": 410,
+          "evidence": "S14/readings/OR_I-X.1-p396.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 398,
+          "pdf": 412,
+          "evidence": "S14/readings/OR_I-X.1-p398.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 399,
+          "pdf": 413,
+          "evidence": "S14/readings/OR_I-X.1-p399.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 95,
+          "pdf": 109,
+          "evidence": "S14/readings/OR_I-X.1-p95.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 96,
+          "pdf": 110,
+          "evidence": "S14/readings/OR_I-X.1-p96.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 97,
+          "pdf": 111,
+          "evidence": "S14/readings/OR_I-X.1-p97.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 98,
+          "pdf": 112,
+          "evidence": "S14/readings/OR_I-X.1-p98.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 99,
+          "pdf": 113,
+          "evidence": "S14/readings/OR_I-X.1-p99.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-XI.1",
+      "title": "Official Records, series I, volume XI, part I (1884)",
+      "item": "warofrebellion111unit",
+      "local_path": "warofrebellion111unit/warofrebellion111unit.pdf",
+      "bytes": 122258084,
+      "sha256": "fa9384a19b5a64b73ee8e09db753e3479966c9948ff08f02ac51a25c18448c8c",
+      "pdf_pages": 1194,
+      "archive_url": "https://archive.org/details/warofrebellion111unit",
+      "scan_url": "https://archive.org/download/warofrebellion111unit/warofrebellion111unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 279,
+          "pdf": 293,
+          "evidence": "S14/readings/OR_I-XI.1-p279.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 280,
+          "pdf": 294,
+          "evidence": "S14/readings/OR_I-XI.1-p280.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 281,
+          "pdf": 295,
+          "evidence": "S14/readings/OR_I-XI.1-p281.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 282,
+          "pdf": 296,
+          "evidence": "S14/readings/OR_I-XI.1-p282.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 283,
+          "pdf": 297,
+          "evidence": "S14/readings/OR_I-XI.1-p283.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-XI.2",
+      "title": "Official Records, series I, volume XI, part II (1884)",
+      "item": "warofrebellion112unit",
+      "local_path": "warofrebellion112unit/warofrebellion112unit.pdf",
+      "bytes": 114365410,
+      "sha256": "c2505c0baddb13325c08114106812910e942cdbf7ee24b6899c9c3a9d828d57e",
+      "pdf_pages": 1110,
+      "archive_url": "https://archive.org/details/warofrebellion112unit",
+      "scan_url": "https://archive.org/download/warofrebellion112unit/warofrebellion112unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 24,
+          "pdf": 30,
+          "evidence": "S14/readings/OR_I-XI.2-p24.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 25,
+          "pdf": 31,
+          "evidence": "S14/readings/OR_I-XI.2-p25.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 26,
+          "pdf": 32,
+          "evidence": "S14/readings/OR_I-XI.2-p26.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 27,
+          "pdf": 33,
+          "evidence": "S14/readings/OR_I-XI.2-p27.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 28,
+          "pdf": 34,
+          "evidence": "S14/readings/OR_I-XI.2-p28.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 29,
+          "pdf": 35,
+          "evidence": "S14/readings/OR_I-XI.2-p29.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 30,
+          "pdf": 36,
+          "evidence": "S14/readings/OR_I-XI.2-p30.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 31,
+          "pdf": 37,
+          "evidence": "S14/readings/OR_I-XI.2-p31.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 32,
+          "pdf": 38,
+          "evidence": "S14/readings/OR_I-XI.2-p32.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 33,
+          "pdf": 39,
+          "evidence": "S14/readings/OR_I-XI.2-p33.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 34,
+          "pdf": 40,
+          "evidence": "S14/readings/OR_I-XI.2-p34.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 35,
+          "pdf": 41,
+          "evidence": "S14/readings/OR_I-XI.2-p35.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 36,
+          "pdf": 42,
+          "evidence": "S14/readings/OR_I-XI.2-p36.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 483,
+          "pdf": 489,
+          "evidence": "S14/readings/OR_I-XI.2-p483.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 484,
+          "pdf": 490,
+          "evidence": "S14/readings/OR_I-XI.2-p484.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 485,
+          "pdf": 491,
+          "evidence": "S14/readings/OR_I-XI.2-p485.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 486,
+          "pdf": 492,
+          "evidence": "S14/readings/OR_I-XI.2-p486.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 487,
+          "pdf": 493,
+          "evidence": "S14/readings/OR_I-XI.2-p487.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 488,
+          "pdf": 494,
+          "evidence": "S14/readings/OR_I-XI.2-p488.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 489,
+          "pdf": 495,
+          "evidence": "S14/readings/OR_I-XI.2-p489.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 490,
+          "pdf": 496,
+          "evidence": "S14/readings/OR_I-XI.2-p490.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-XI.3",
+      "title": "Official Records, series I, volume XI, part III (1884)",
+      "item": "warofrebellion113unit",
+      "local_path": "S14/warofrebellion113unit/warofrebellion113unit.pdf",
+      "bytes": 67712113,
+      "sha256": "04d8f5ff630cb2ac0e65ef7fed1940a679fb7228db1fe19f3da995d12404f5f3",
+      "pdf_pages": 764,
+      "archive_url": "https://archive.org/details/warofrebellion113unit",
+      "scan_url": "https://archive.org/download/warofrebellion113unit/warofrebellion113unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 184,
+          "pdf": 190,
+          "evidence": "S14/readings/OR_I-XI.3-p184.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 238,
+          "pdf": 244,
+          "evidence": "S14/readings/OR_I-XI.3-p238.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 239,
+          "pdf": 245,
+          "evidence": "S14/readings/OR_I-XI.3-p239.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 367,
+          "pdf": 373,
+          "evidence": "S14/readings/OR_I-XI.3-p367.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 380,
+          "pdf": 386,
+          "evidence": "S14/readings/OR_I-XI.3-p380.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 645,
+          "pdf": 651,
+          "evidence": "S14/readings/OR_I-XI.3-p645.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-XII.2",
+      "title": "Official Records, series I, volume XII, part II (1885)",
+      "item": "warofrebellion122unit_0",
+      "local_path": "warofrebellion122unit_0/warofrebellion122unit_0.pdf",
+      "bytes": 91698831,
+      "sha256": "209bca02af90d5bde9c26d713c7fdc2f9367a2e87b4527cfb2b0a69cf5b86e04",
+      "pdf_pages": 916,
+      "archive_url": "https://archive.org/details/warofrebellion122unit_0",
+      "scan_url": "https://archive.org/download/warofrebellion122unit_0/warofrebellion122unit_0.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 249,
+          "pdf": 255,
+          "evidence": "S14/readings/OR_I-XII.2-p249.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 250,
+          "pdf": 256,
+          "evidence": "S14/readings/OR_I-XII.2-p250.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 251,
+          "pdf": 257,
+          "evidence": "S14/readings/OR_I-XII.2-p251.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 252,
+          "pdf": 258,
+          "evidence": "S14/readings/OR_I-XII.2-p252.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 253,
+          "pdf": 259,
+          "evidence": "S14/readings/OR_I-XII.2-p253.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 254,
+          "pdf": 260,
+          "evidence": "S14/readings/OR_I-XII.2-p254.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 255,
+          "pdf": 261,
+          "evidence": "S14/readings/OR_I-XII.2-p255.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 256,
+          "pdf": 262,
+          "evidence": "S14/readings/OR_I-XII.2-p256.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 257,
+          "pdf": 263,
+          "evidence": "S14/readings/OR_I-XII.2-p257.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 258,
+          "pdf": 264,
+          "evidence": "S14/readings/OR_I-XII.2-p258.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 259,
+          "pdf": 265,
+          "evidence": "S14/readings/OR_I-XII.2-p259.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 260,
+          "pdf": 266,
+          "evidence": "S14/readings/OR_I-XII.2-p260.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 261,
+          "pdf": 267,
+          "evidence": "S14/readings/OR_I-XII.2-p261.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 262,
+          "pdf": 268,
+          "evidence": "S14/readings/OR_I-XII.2-p262.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 546,
+          "pdf": 552,
+          "evidence": "S14/readings/OR_I-XII.2-p546.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 547,
+          "pdf": 553,
+          "evidence": "S14/readings/OR_I-XII.2-p547.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 548,
+          "pdf": 554,
+          "evidence": "S14/readings/OR_I-XII.2-p548.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 549,
+          "pdf": 555,
+          "evidence": "S14/readings/OR_I-XII.2-p549.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 550,
+          "pdf": 556,
+          "evidence": "S14/readings/OR_I-XII.2-p550.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-XIX.1",
+      "title": "Official Records, series I, volume XIX, part I (1887)",
+      "item": "warofrebellion191unit",
+      "local_path": "warofrebellion191unit/warofrebellion191unit.pdf",
+      "bytes": 134844693,
+      "sha256": "988fc703a1b094eca9d2cf43a3b06acf994d4f6ad1f662884c414393ec25d3d3",
+      "pdf_pages": 1238,
+      "archive_url": "https://archive.org/details/warofrebellion191unit",
+      "scan_url": "https://archive.org/download/warofrebellion191unit/warofrebellion191unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 157,
+          "pdf": 173,
+          "evidence": "S14/readings/OR_I-XIX.1-p157.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 158,
+          "pdf": 174,
+          "evidence": "S14/readings/OR_I-XIX.1-p158.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 159,
+          "pdf": 175,
+          "evidence": "S14/readings/OR_I-XIX.1-p159.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 160,
+          "pdf": 176,
+          "evidence": "S14/readings/OR_I-XIX.1-p160.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 170,
+          "pdf": 186,
+          "evidence": "S14/readings/OR_I-XIX.1-p170.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 171,
+          "pdf": 187,
+          "evidence": "S14/readings/OR_I-XIX.1-p171.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 172,
+          "pdf": 188,
+          "evidence": "S14/readings/OR_I-XIX.1-p172.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 173,
+          "pdf": 189,
+          "evidence": "S14/readings/OR_I-XIX.1-p173.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 174,
+          "pdf": 190,
+          "evidence": "S14/readings/OR_I-XIX.1-p174.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 175,
+          "pdf": 191,
+          "evidence": "S14/readings/OR_I-XIX.1-p175.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 176,
+          "pdf": 192,
+          "evidence": "S14/readings/OR_I-XIX.1-p176.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 177,
+          "pdf": 193,
+          "evidence": "S14/readings/OR_I-XIX.1-p177.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 178,
+          "pdf": 194,
+          "evidence": "S14/readings/OR_I-XIX.1-p178.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 179,
+          "pdf": 195,
+          "evidence": "S14/readings/OR_I-XIX.1-p179.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 180,
+          "pdf": 196,
+          "evidence": "S14/readings/OR_I-XIX.1-p180.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 67,
+          "pdf": 83,
+          "evidence": "S14/readings/OR_I-XIX.1-p67.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 803,
+          "pdf": 819,
+          "evidence": "S14/readings/OR_I-XIX.1-p803.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 804,
+          "pdf": 820,
+          "evidence": "S14/readings/OR_I-XIX.1-p804.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 805,
+          "pdf": 821,
+          "evidence": "S14/readings/OR_I-XIX.1-p805.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 806,
+          "pdf": 822,
+          "evidence": "S14/readings/OR_I-XIX.1-p806.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 807,
+          "pdf": 823,
+          "evidence": "S14/readings/OR_I-XIX.1-p807.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 808,
+          "pdf": 824,
+          "evidence": "S14/readings/OR_I-XIX.1-p808.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 809,
+          "pdf": 825,
+          "evidence": "S14/readings/OR_I-XIX.1-p809.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 810,
+          "pdf": 826,
+          "evidence": "S14/readings/OR_I-XIX.1-p810.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-XIX.2",
+      "title": "Official Records, series I, volume XIX, part II (1887)",
+      "item": "warofrebellion192unit",
+      "local_path": "warofrebellion192unit/warofrebellion192unit.pdf",
+      "bytes": 79097442,
+      "sha256": "feeffadde0922072422b88d3d5517da69412f1f9e08a4a910283e9ac728f9a62",
+      "pdf_pages": 838,
+      "archive_url": "https://archive.org/details/warofrebellion192unit",
+      "scan_url": "https://archive.org/download/warofrebellion192unit/warofrebellion192unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 336,
+          "pdf": 342,
+          "evidence": "S14/readings/OR_I-XIX.2-p336.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 569,
+          "pdf": 575,
+          "evidence": "S14/readings/OR_I-XIX.2-p569.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 583,
+          "pdf": 589,
+          "evidence": "S14/readings/OR_I-XIX.2-p583.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 584,
+          "pdf": 590,
+          "evidence": "S14/readings/OR_I-XIX.2-p584.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 713,
+          "pdf": 719,
+          "evidence": "S14/readings/OR_I-XIX.2-p713.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-XVI.1",
+      "title": "Official Records, series I, volume XVI, part I (1886)",
+      "item": "warofrebellion161unit",
+      "local_path": "warofrebellion161unit/warofrebellion161unit.pdf",
+      "bytes": 150031790,
+      "sha256": "97de1b361f66872936b293b627b3b61c63361dd206213fda8a5e8989964c1d30",
+      "pdf_pages": 1264,
+      "archive_url": "https://archive.org/details/warofrebellion161unit",
+      "scan_url": "https://archive.org/download/warofrebellion161unit/warofrebellion161unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 1024,
+          "pdf": 1038,
+          "evidence": "S14/readings/OR_I-XVI.1-p1024.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1025,
+          "pdf": 1039,
+          "evidence": "S14/readings/OR_I-XVI.1-p1025.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1026,
+          "pdf": 1040,
+          "evidence": "S14/readings/OR_I-XVI.1-p1026.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1027,
+          "pdf": 1041,
+          "evidence": "S14/readings/OR_I-XVI.1-p1027.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1028,
+          "pdf": 1042,
+          "evidence": "S14/readings/OR_I-XVI.1-p1028.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1029,
+          "pdf": 1043,
+          "evidence": "S14/readings/OR_I-XVI.1-p1029.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1030,
+          "pdf": 1044,
+          "evidence": "S14/readings/OR_I-XVI.1-p1030.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1031,
+          "pdf": 1045,
+          "evidence": "S14/readings/OR_I-XVI.1-p1031.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1032,
+          "pdf": 1046,
+          "evidence": "S14/readings/OR_I-XVI.1-p1032.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1033,
+          "pdf": 1047,
+          "evidence": "S14/readings/OR_I-XVI.1-p1033.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1034,
+          "pdf": 1048,
+          "evidence": "S14/readings/OR_I-XVI.1-p1034.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1035,
+          "pdf": 1049,
+          "evidence": "S14/readings/OR_I-XVI.1-p1035.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1036,
+          "pdf": 1050,
+          "evidence": "S14/readings/OR_I-XVI.1-p1036.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1091,
+          "pdf": 1105,
+          "evidence": "S14/readings/OR_I-XVI.1-p1091.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1092,
+          "pdf": 1106,
+          "evidence": "S14/readings/OR_I-XVI.1-p1092.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1093,
+          "pdf": 1107,
+          "evidence": "S14/readings/OR_I-XVI.1-p1093.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1117,
+          "pdf": 1131,
+          "evidence": "S14/readings/OR_I-XVI.1-p1117.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1118,
+          "pdf": 1132,
+          "evidence": "S14/readings/OR_I-XVI.1-p1118.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1119,
+          "pdf": 1133,
+          "evidence": "S14/readings/OR_I-XVI.1-p1119.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1120,
+          "pdf": 1134,
+          "evidence": "S14/readings/OR_I-XVI.1-p1120.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1121,
+          "pdf": 1135,
+          "evidence": "S14/readings/OR_I-XVI.1-p1121.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 1122,
+          "pdf": 1136,
+          "evidence": "S14/readings/OR_I-XVI.1-p1122.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-XVI.2",
+      "title": "Official Records, series I, volume XVI, part II (1886)",
+      "item": "warofrebellion162unit",
+      "local_path": "S14/warofrebellion162unit/warofrebellion162unit.pdf",
+      "bytes": 103012128,
+      "sha256": "833bf7aa7335e0678a0c3f5337837ec301636c75ceeb273e0032206593c68acc",
+      "pdf_pages": 1128,
+      "archive_url": "https://archive.org/details/warofrebellion162unit",
+      "scan_url": "https://archive.org/download/warofrebellion162unit/warofrebellion162unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 562,
+          "pdf": 568,
+          "evidence": "S14/readings/OR_I-XVI.2-p562.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 563,
+          "pdf": 569,
+          "evidence": "S14/readings/OR_I-XVI.2-p563.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 564,
+          "pdf": 570,
+          "evidence": "S14/readings/OR_I-XVI.2-p564.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 886,
+          "pdf": 892,
+          "evidence": "S14/readings/OR_I-XVI.2-p886.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 900,
+          "pdf": 906,
+          "evidence": "S14/readings/OR_I-XVI.2-p900.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 992,
+          "pdf": 998,
+          "evidence": "S14/readings/OR_I-XVI.2-p992.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-XVII.1",
+      "title": "Official Records, series I, volume XVII, part I (1886)",
+      "item": "warofrebellion171unit",
+      "local_path": "warofrebellion171unit/warofrebellion171unit.pdf",
+      "bytes": 96191022,
+      "sha256": "0bd056ab7722c92c1a9865a391ed3c4751536f7495c42aa3f39a8903c309f6b1",
+      "pdf_pages": 920,
+      "archive_url": "https://archive.org/details/warofrebellion171unit",
+      "scan_url": "https://archive.org/download/warofrebellion171unit/warofrebellion171unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 169,
+          "pdf": 185,
+          "evidence": "S14/readings/OR_I-XVII.1-p169.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 170,
+          "pdf": 186,
+          "evidence": "S14/readings/OR_I-XVII.1-p170.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 171,
+          "pdf": 187,
+          "evidence": "S14/readings/OR_I-XVII.1-p171.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 172,
+          "pdf": 188,
+          "evidence": "S14/readings/OR_I-XVII.1-p172.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 173,
+          "pdf": 189,
+          "evidence": "S14/readings/OR_I-XVII.1-p173.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 174,
+          "pdf": 190,
+          "evidence": "S14/readings/OR_I-XVII.1-p174.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 175,
+          "pdf": 191,
+          "evidence": "S14/readings/OR_I-XVII.1-p175.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 176,
+          "pdf": 192,
+          "evidence": "S14/readings/OR_I-XVII.1-p176.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 376,
+          "pdf": 392,
+          "evidence": "S14/readings/OR_I-XVII.1-p376.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 377,
+          "pdf": 393,
+          "evidence": "S14/readings/OR_I-XVII.1-p377.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 378,
+          "pdf": 394,
+          "evidence": "S14/readings/OR_I-XVII.1-p378.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 379,
+          "pdf": 395,
+          "evidence": "S14/readings/OR_I-XVII.1-p379.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 380,
+          "pdf": 396,
+          "evidence": "S14/readings/OR_I-XVII.1-p380.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 381,
+          "pdf": 397,
+          "evidence": "S14/readings/OR_I-XVII.1-p381.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 382,
+          "pdf": 398,
+          "evidence": "S14/readings/OR_I-XVII.1-p382.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 383,
+          "pdf": 399,
+          "evidence": "S14/readings/OR_I-XVII.1-p383.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 384,
+          "pdf": 400,
+          "evidence": "S14/readings/OR_I-XVII.1-p384.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 385,
+          "pdf": 401,
+          "evidence": "S14/readings/OR_I-XVII.1-p385.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-XVII.2",
+      "title": "Official Records, series I, volume XVII, part II (1886)",
+      "item": "warofrebellion172unit",
+      "local_path": "S14/warofrebellion172unit/warofrebellion172unit.pdf",
+      "bytes": 96210483,
+      "sha256": "2cebc26d3e21d6fce2a4e713e941983a91b57430a54c420d26d6577973d76bc5",
+      "pdf_pages": 1036,
+      "archive_url": "https://archive.org/details/warofrebellion172unit",
+      "scan_url": "https://archive.org/download/warofrebellion172unit/warofrebellion172unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 237,
+          "pdf": 243,
+          "evidence": "S14/readings/OR_I-XVII.2-p237.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 245,
+          "pdf": 251,
+          "evidence": "S14/readings/OR_I-XVII.2-p245.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 246,
+          "pdf": 252,
+          "evidence": "S14/readings/OR_I-XVII.2-p246.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 247,
+          "pdf": 253,
+          "evidence": "S14/readings/OR_I-XVII.2-p247.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 248,
+          "pdf": 254,
+          "evidence": "S14/readings/OR_I-XVII.2-p248.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 249,
+          "pdf": 255,
+          "evidence": "S14/readings/OR_I-XVII.2-p249.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 250,
+          "pdf": 256,
+          "evidence": "S14/readings/OR_I-XVII.2-p250.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 311,
+          "pdf": 317,
+          "evidence": "S14/readings/OR_I-XVII.2-p311.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 337,
+          "pdf": 343,
+          "evidence": "S14/readings/OR_I-XVII.2-p337.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 338,
+          "pdf": 344,
+          "evidence": "S14/readings/OR_I-XVII.2-p338.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 339,
+          "pdf": 345,
+          "evidence": "S14/readings/OR_I-XVII.2-p339.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 340,
+          "pdf": 346,
+          "evidence": "S14/readings/OR_I-XVII.2-p340.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 341,
+          "pdf": 347,
+          "evidence": "S14/readings/OR_I-XVII.2-p341.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 342,
+          "pdf": 348,
+          "evidence": "S14/readings/OR_I-XVII.2-p342.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 714,
+          "pdf": 720,
+          "evidence": "S14/readings/OR_I-XVII.2-p714.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-XX.2",
+      "title": "Official Records, series I, volume XX, part II (1887)",
+      "item": "warofrebellion202unit",
+      "local_path": "S14/warofrebellion202unit/warofrebellion202unit.pdf",
+      "bytes": 56581503,
+      "sha256": "7b9bca70d077a0eca423e0c65fcf591c75c02c80096aba7cbccb44d11b409c13",
+      "pdf_pages": 596,
+      "archive_url": "https://archive.org/details/warofrebellion202unit",
+      "scan_url": "https://archive.org/download/warofrebellion202unit/warofrebellion202unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 411,
+          "pdf": 417,
+          "evidence": "S14/readings/OR_I-XX.2-p411.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 412,
+          "pdf": 418,
+          "evidence": "S14/readings/OR_I-XX.2-p412.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 413,
+          "pdf": 419,
+          "evidence": "S14/readings/OR_I-XX.2-p413.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 423,
+          "pdf": 429,
+          "evidence": "S14/readings/OR_I-XX.2-p423.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 430,
+          "pdf": 436,
+          "evidence": "S14/readings/OR_I-XX.2-p430.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 75,
+          "pdf": 81,
+          "evidence": "S14/readings/OR_I-XX.2-p75.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 76,
+          "pdf": 82,
+          "evidence": "S14/readings/OR_I-XX.2-p76.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR I-XXI",
+      "title": "Official Records, series I, volume XXI (1888)",
+      "item": "warofrebellion21unit",
+      "local_path": "warofrebellion21unit/warofrebellion21unit.pdf",
+      "bytes": 135987331,
+      "sha256": "867a4a51628cc8a0af6d3c527b55729afd9eea45f45a63c8fb2ce21f760369ab",
+      "pdf_pages": 1280,
+      "archive_url": "https://archive.org/details/warofrebellion21unit",
+      "scan_url": "https://archive.org/download/warofrebellion21unit/warofrebellion21unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 1025,
+          "pdf": 1017,
+          "evidence": "S14/readings/OR_I-XXI-p1025.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    },
+    {
+      "label": "OR III-II",
+      "title": "Official Records, series III, volume II (1899)",
+      "item": "warofrebellion02unit",
+      "local_path": "S14/warofrebellion02unit/warofrebellion02unit.pdf",
+      "bytes": 92262914,
+      "sha256": "b21baacd5013a45bd555ab1822de81c291df4844e1eb96cabe88213a3e45b212",
+      "pdf_pages": 1030,
+      "archive_url": "https://archive.org/details/warofrebellion02unit",
+      "scan_url": "https://archive.org/download/warofrebellion02unit/warofrebellion02unit.pdf",
+      "read_scope": "Selected passages/lines only, not a claim to read complete pages or volume. Search hits are leads, not evidence. Tables require the retained image checks.",
+      "pages": [
+        {
+          "printed": 860,
+          "pdf": 874,
+          "evidence": "S14/readings/OR_III-II-p860.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 868,
+          "pdf": 882,
+          "evidence": "S14/readings/OR_III-II-p868.json",
+          "method": "selected PDF text; image controls tables"
+        },
+        {
+          "printed": 897,
+          "pdf": 911,
+          "evidence": "S14/readings/OR_III-II-p897.json",
+          "method": "selected PDF text; image controls tables"
+        }
+      ]
+    }
+  ],
+  "excluded": "S14/superseded-xi3-offset14 contains wrong-offset initial extracts; no evidence. Initial M page20 collision with OCR26 corrected by physical page map. Other S4 unused/rejected intake remains excluded."
+}
