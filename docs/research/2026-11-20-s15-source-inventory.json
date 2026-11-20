@@ -88,12 +88,24 @@
         "795": 805,
         "796": 806,
         "803": 813,
-        "804": 814
+        "804": 814,
+        "472": 490,
+        "849": 859,
+        "850": 860,
+        "851": 861,
+        "852": 862,
+        "853": 863,
+        "854": 864,
+        "855": 865,
+        "856": 866,
+        "857": 867,
+        "858": 868,
+        "859": 869
       }
     },
     {
       "key": "OR42",
-      "path": "s15/../or4-2/warofrebellion0402rootrich.pdf",
+      "path": "or4-2/warofrebellion0402rootrich.pdf",
       "url": "https://archive.org/download/warofrebellion0402rootrich/warofrebellion0402rootrich.pdf",
       "bytes": 131259474,
       "pages": 1156,
@@ -129,6 +141,292 @@
         "598": 2,
         "599": 3,
         "600": 4
+      }
+    },
+    {
+      "key": "T62",
+      "path": "treasury1862.pdf",
+      "url": "https://fraser.stlouisfed.org/docs/publications/treasar/AR_TREASURY_1862.pdf",
+      "bytes": 8048372,
+      "pages": 283,
+      "sha256": "228f41807ffb600d942574b8bacecc7e1337324069fb7d81f92cac89927f4cec",
+      "selected_printed_to_pdf_pages": {
+        "1": 9,
+        "2": 10,
+        "3": 11,
+        "10": 18,
+        "13": 21,
+        "14": 22,
+        "31": 39,
+        "32": 40,
+        "43": 51,
+        "222": 230,
+        "223": 231,
+        "243": 251
+      }
+    },
+    {
+      "key": "M62",
+      "path": "memminger1862/reportofsecretar09conf_bw.pdf",
+      "url": "https://archive.org/download/reportofsecretar09conf/reportofsecretar09conf_bw.pdf",
+      "bytes": 758585,
+      "pages": 14,
+      "sha256": "9c5e2f57e3f5a67c3ded67053ebb68b8214dbff9229ece8bd10dfaf99252406e",
+      "selected_printed_to_pdf_pages": {
+        "3": 4,
+        "4": 5,
+        "5": 6,
+        "6": 7
+      }
+    },
+    {
+      "key": "LT62",
+      "path": "stat12-p345.pdf",
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-12/pdf/STATUTE-12-Pg345.pdf",
+      "bytes": 1051239,
+      "pages": 4,
+      "sha256": "0842c70c49eeba32b8ff49fec351f2113b7e3e6c5e997a67600f730d89d4e24e",
+      "selected_printed_to_pdf_pages": {
+        "345": 1,
+        "346": 2
+      }
+    },
+    {
+      "key": "LN62",
+      "path": "stat12-p532.pdf",
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-12/pdf/STATUTE-12-Pg532.pdf",
+      "bytes": 653139,
+      "pages": 2,
+      "sha256": "a2d35d8833ce01a949ce444fb43fc1c6a1a96c431bdc5863176cc4be59c5450f",
+      "selected_printed_to_pdf_pages": {
+        "532": 1,
+        "533": 2
+      }
+    },
+    {
+      "key": "TX62",
+      "path": "stat12-p432-4.pdf",
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-12/pdf/STATUTE-12-Pg432-4.pdf",
+      "bytes": 11842020,
+      "pages": 58,
+      "sha256": "4f5431413e9dd71eb70300fbfcd59dae28ed41f435e401095265a7b9731890ae",
+      "selected_printed_to_pdf_pages": {
+        "432": 1,
+        "473": 42,
+        "474": 43,
+        "488": 57,
+        "489": 58
+      }
+    },
+    {
+      "key": "C60",
+      "path": "census1860/preliminaryrepor00inunit_bw.pdf",
+      "url": "https://archive.org/download/preliminaryrepor00inunit/preliminaryrepor00inunit_bw.pdf",
+      "bytes": 17732625,
+      "pages": 324,
+      "sha256": "2098a6fb32f17cae03e218617aa767e31563d9f1d7c035fcd4ed213c2cbf10a7",
+      "selected_printed_to_pdf_pages": {
+        "170": 192,
+        "230": 252,
+        "231": 253
+      }
+    },
+    {
+      "key": "SCH",
+      "path": "schwab/confederatestat00schwgoog.pdf",
+      "url": "https://archive.org/download/confederatestat00schwgoog/confederatestat00schwgoog.pdf",
+      "bytes": 9359806,
+      "pages": 359,
+      "sha256": "dff9dfcb6bcb845dddc4035b73af03d6cb89b00b60336b466a68f6b13c89a9a7",
+      "selected_printed_to_pdf_pages": {
+        "167": 184,
+        "269": 286,
+        "270": 287,
+        "271": 288
+      }
+    },
+    {
+      "key": "SCH-FOLDOUT",
+      "path": "schwab-clean/confederatestate00schw_bw.pdf",
+      "url": "https://archive.org/download/confederatestate00schw/confederatestate00schw_bw.pdf",
+      "bytes": 14641415,
+      "pages": 360,
+      "sha256": "226383fb77a8aff42d498af1593303734995eb5407befdff76f19f4e51af50a1",
+      "selected_printed_to_pdf_pages": {
+        "Appendix I unnumbered foldout opposite p.312": 331
+      }
+    },
+    {
+      "key": "A1",
+      "path": "adams1/volume1greatbrit00adam.pdf",
+      "url": "https://archive.org/download/volume1greatbrit00adam/volume1greatbrit00adam.pdf",
+      "bytes": 22500206,
+      "pages": 342,
+      "sha256": "2644099f00598e45d71e897395a49c0c3a1bc59bb5430ead1796aaf7847392f6",
+      "selected_printed_to_pdf_pages": {
+        "94": 114,
+        "204": 228,
+        "205": 229,
+        "212": 238,
+        "213": 239,
+        "230": 256,
+        "232": 258,
+        "234": 260,
+        "235": 261,
+        "267": 295
+      }
+    },
+    {
+      "key": "A2",
+      "path": "adams2/volume2greatbrit00adam.pdf",
+      "url": "https://archive.org/download/volume2greatbrit00adam/volume2greatbrit00adam.pdf",
+      "bytes": 33335081,
+      "pages": 372,
+      "sha256": "fec4ac191bce40c1baaa8419737d40c8cf226b7be3d75141bf91088dd53483d5",
+      "selected_printed_to_pdf_pages": {
+        "7": 21,
+        "9": 23,
+        "12": 26,
+        "37": 53,
+        "38": 54,
+        "39": 55,
+        "43": 59,
+        "47": 63,
+        "48": 64,
+        "49": 65,
+        "59": 75,
+        "60": 76,
+        "61": 77,
+        "62": 78,
+        "63": 79,
+        "64": 80,
+        "65": 81
+      }
+    },
+    {
+      "key": "CALL",
+      "path": "callahan/diplomatichisto00unkngoog.pdf",
+      "url": "https://archive.org/download/diplomatichisto00unkngoog/diplomatichisto00unkngoog.pdf",
+      "bytes": 4567225,
+      "pages": 317,
+      "sha256": "9d118f556b71223d89a48952e492804c34204956e1f86ed2809cebb8d746c45e",
+      "selected_printed_to_pdf_pages": {
+        "161": 168
+      }
+    },
+    {
+      "key": "N62",
+      "path": "navy1862/annualreportsna11deptgoog.pdf",
+      "url": "https://archive.org/download/annualreportsna11deptgoog/annualreportsna11deptgoog.pdf",
+      "bytes": 23607051,
+      "pages": 536,
+      "sha256": "0170149f61bf97d5ea21857ac4129840ad8ed6e1858450342963e1cb77c34222",
+      "selected_printed_to_pdf_pages": {
+        "25": 38,
+        "26": 39,
+        "27": 40,
+        "28": 41,
+        "42": 55,
+        "43": 56
+      }
+    },
+    {
+      "key": "N63",
+      "path": "s15/navy1863.pdf",
+      "url": "https://archive.org/download/reportofsecretar7310unit/reportofsecretar7310unit.pdf",
+      "bytes": 84151530,
+      "pages": 678,
+      "sha256": "d5a8473515fac623c90f1ba804e4d9512841edb733ddbe9fb24d8c780f188c02",
+      "selected_printed_to_pdf_pages": {
+        "report opening (unnumbered)": 9,
+        "562": 644,
+        "563": 645,
+        "564": 646,
+        "565": 647,
+        "566": 648,
+        "567": 649,
+        "568": 650,
+        "569": 651,
+        "570": 652,
+        "571": 653,
+        "572": 654,
+        "573": 655,
+        "574": 656,
+        "575": 657,
+        "576": 658,
+        "577": 659,
+        "578": 660,
+        "579": 661,
+        "580": 662,
+        "581": 663,
+        "582": 664,
+        "583": 665,
+        "584": 666,
+        "585": 667,
+        "586": 668
+      }
+    },
+    {
+      "key": "MC66",
+      "path": "s15/mccallum1866.pdf",
+      "url": "https://electricscotland.com/poetry/america/unitedstatesmili00unit.pdf",
+      "bytes": 3009579,
+      "pages": 48,
+      "sha256": "c0a1ec51a96f5c283c8d4a21504186b16df86fc974b75c0d7351ed151e9337ab",
+      "selected_printed_to_pdf_pages": {
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6
+      }
+    },
+    {
+      "key": "SA62",
+      "path": "s15/scientific-american-1862-02-15.pdf",
+      "url": "https://www.survivorlibrary.com/library/scientific-american-1862-02-15-v06-n07.pdf",
+      "bytes": 3833159,
+      "pages": 16,
+      "sha256": "43e78f72f9944e5cffd94a83d856e3ab9ff676ea30f6656e7da43f9d02a369db",
+      "selected_printed_to_pdf_pages": {
+        "98": 2
+      }
+    },
+    {
+      "key": "RD62",
+      "path": "s15/richmond-danville1862.pdf",
+      "url": "https://archive.org/download/46831/46831.pdf",
+      "bytes": 11862718,
+      "pages": 122,
+      "sha256": "8ea42050a47ac64feacbf382c79dcd188ce4c1c2c67c1696d1e4a43645ce436f",
+      "selected_printed_to_pdf_pages": {
+        "[231] unnumbered superintendent opening": 23,
+        "232": 24,
+        "233": 25,
+        "234": 26,
+        "235": 27,
+        "236": 28,
+        "237": 29,
+        "238": 30,
+        "239": 31,
+        "240": 32,
+        "241": 33,
+        "242": 34,
+        "243": 35,
+        "244": 36,
+        "245": 37,
+        "264": 56
+      }
+    },
+    {
+      "key": "RE62",
+      "path": "s15/rail-extension1862.pdf",
+      "url": "https://archive.org/download/communicationfro20conf/communicationfro20conf.pdf",
+      "bytes": 148339,
+      "pages": 6,
+      "sha256": "ce91a892828bb62adc2a775345e3e5b39851fd874042c09002e8a70a304c06a4",
+      "selected_printed_to_pdf_pages": {
+        "covering message (unnumbered)": 2,
+        "communication (unnumbered)": 4
       }
     }
   ]

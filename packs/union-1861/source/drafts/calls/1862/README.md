@@ -12,6 +12,8 @@ Data drafts for S15, 20 November 2026. Nothing here is loaded, imported or gener
 
 `union-retrospective-credits.csv` is quarantined comparison evidence. The Official Records editors give men furnished under each call without a dated observation window in those footnotes. The values must **not** become arrivals on July 2 or August 4. Explicit zeroes reproduce “none furnished”; Nebraska has a furnished entry but no stated quota. No Nebraska zero quota is invented.
 
+`manpower-observations.csv` adds eight attributed administrative observations. Georgia's conscripts enrolled and brought into service are different from Illinois's men accepted, men reportedly enrolled and a later conditional promise. Indiana's contemporary short-service categories remain distinct. These examples identify reporting/term differences, not national intake rates or occupational loss coefficients. [OR42 pp.95-96; OR32 pp.337-338,472]
+
 ## Source discrepancies and revisions
 
 The twenty-three printed state/district quota rows sum to **334,835 [I]** for each nominal 300,000 call. That is the sum of the table, not a repaired national call. The July credits plus Nebraska sum to **421,465 [I]**, and August's to **87,588 [I]**, matching the editors' totals. Quota and credit are different measures. [OR32 pp.188, 291, footnotes]

@@ -1,0 +1,40 @@
+{
+  "status": "research draft; not loaded",
+  "rules": [
+    {
+      "id": "us-income-duty-1862",
+      "enacted_on": "1862-07-01",
+      "sources": "TX62 pp.473-474 secs.89-92",
+      "taxable_income_floor_usd": 600,
+      "upper_income_class_threshold_usd": 10000,
+      "lower_class_rate_percent": 3,
+      "upper_class_rate_percent": 5,
+      "upper_class_base": "income exceeding 600 when total exceeds 10000; not merely the slice exceeding 10000",
+      "assessment_collection_begins": "1863-05-01",
+      "payment_due_on_or_before": "1863-06-30",
+      "notes": "Legal provisions, not receipts. Deductions, source withholding and government-security exception apply. No full annual individual-income-duty receipt in July 1862 inferred."
+    },
+    {
+      "id": "us-coin-exceptions",
+      "enacted_on": "1862-02-25",
+      "sources": "LT62 pp.345-346 secs.1,5",
+      "import_duties": "coin or earlier demand notes as statute specifies",
+      "public_debt_interest": "coin",
+      "notes": "Legal-tender status does not create foreign gold purchasing power; customs coin fund first meets statutory interest/sinking-fund uses."
+    },
+    {
+      "id": "cs-retention-not-recruitment",
+      "enacted_on": "1862-04-16",
+      "sources": "CS1 p.30 ch.31 sec.1",
+      "notes": "[I] Existing twelve-month men retained under the act must not be added as new recruits. Their supply demands continue; output implications need occupational returns."
+    },
+    {
+      "id": "us-direct-tax-recurrence",
+      "enacted_on": "1862-07-01",
+      "sources": "TX62 p.489 sec.119",
+      "single_tax_authorized_usd": 20000000,
+      "further_tax_under_1861_authority_suspended_until": "1865-04-01",
+      "notes": "July 1862 act construes the earlier direct-tax authority as one tax; no further tax under it until the stated date. Not an automatic recurring 20-million annual receipt."
+    }
+  ]
+}
