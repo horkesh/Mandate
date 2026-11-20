@@ -110,4 +110,17 @@ describe('S9 incremental people apply', () => {
     files.set(people, serialise(rows));
     expect(() => run(files)).toThrow(/HOLD.*conflict/);
   });
+  it('opts into an individually reviewed S6 innate leg without consuming the later observation table', () => {
+    const files = fixture();
+    const rows = parse(files.get(people));
+    rows.push(['mcclellan_george_b', '', '', '', '', '', '', '', '', '', '', '']);
+    files.set(people, serialise(rows));
+    files.set(`${research}s9-backlog.csv`, serialise([
+      ['person', 'cell', 'decision', 'proposed_direction', 'citations', 'basis', 'prior_value'],
+      ['mcclellan_george_b', 'competence', 'KEEP', 'above', 'NEW:SHERMAN-MCCLELLAN-1861-DOC pp120-121 dated 1861-05-20', '[I] third-party appraisal', 'above:OLD later-diary'],
+    ]));
+    expect(run(files).rows.get('mcclellan_george_b')![1]).toContain('above:SHERMAN-MCCLELLAN-1861-DOC');
+    files.set(`${research}s9-backlog.csv`, files.get(`${research}s9-backlog.csv`)!.replace(',KEEP,above,', ',HOLD,above,'));
+    expect(() => run(files)).toThrow(/S6.*HOLD/);
+  });
 });

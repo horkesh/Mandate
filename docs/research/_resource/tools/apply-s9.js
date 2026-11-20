@@ -19,6 +19,7 @@ const SOURCES = [
   ['HOUSTON-AUSTIN-1860-DOC', 'Sam Houston, Austin speech of 22 September 1860, printed in W. C. Crane (1884), pp599-610', 'expired-copyright', 'https://archive.org/details/lifeselectlitera00cran/page/n614', 'rs16; own speech only, pp599-600 and p602, dated by the heading on p599; narrative excluded.'],
   ['HOUSTON-LEGIS-1861-DOC', 'Sam Houston, Texas legislative message of 6 February 1861, printed in W. C. Crane (1884), pp642-645', 'expired-copyright', 'https://archive.org/details/lifeselectlitera00cran/page/n657', 'rs16; own message only, heading p642 and positive pp644-645. Adopted-state attachment and civic duty [I], not an Army obligation or support for Confederate calls.'],
   ['CLARK-CONVENTION-1860-DOC', 'Signed convention call, Texas convention journal, ed. E. W. Winkler (1912), pp9-12', 'expired-copyright', 'https://archive.org/details/journalofsecessi00texa/page/n20', 'rs16; call on pp10-11 and Ed. Clark signature p12; newspaper notice p9 identifies the signer. Signing date bounded to 1860, not the newspaper publication day. Gate draft only.'],
+  ['SHERMAN-MCCLELLAN-1861-DOC', 'W. T. Sherman to John Sherman, 20 May 1861, printed in The Sherman Letters, ed. Rachel Sherman Thorndike (1894), pp120-121', 'expired-copyright', 'https://archive.org/details/shermanlettersco00sher/page/120', 'S6 2c1cea0, individually read S9 backlog opt-in. Heading p120, professional appraisal p121. Only this letter is primary; editorial narrative and the separate May 22 letter are excluded. Scan hashes: p120 88789da093fb3ee132b6228440295edc5906ccd935377ad41ade08aeffb27b8f; p121 908d8c8e43ec7840bf0b739ab7e397fd937cb96f8794d928ffa1a51e17d445bd.'],
 ];
 const records = text => {
   const rows = parse(text.replace(/^\uFEFF/, '').replace(/\r\n/g, '\n'));
@@ -60,7 +61,8 @@ function applyS9(files) {
   const protectedBefore = new Map(rows.filter(r => PROTECTED.has(r[0])).map(r => [r[0], JSON.stringify(r)]));
   const provenance = JSON.parse(read(PACK + 'PROVENANCE.json'));
   for (const [key, title, basis, url, scope] of SOURCES) {
-    if (!provenance.sources.some(s => s.key === key)) provenance.sources.push({ key, title, kind: 'primary', licence: 'public-domain', basis, copyUsed: `${url}; ${scope} S9; source hashes/read limits in docs/research/_resource/evidence-r59/sources.json or evidence-r65/sources.json.`, licencePage: null, licenceReadOn: null });
+    const record = key === 'SHERMAN-MCCLELLAN-1861-DOC' ? 'S6 commit 2c1cea0, docs/research/S6/scan-manifest.json; originals under C:/Pyrrhic/mandate-research-sources/S6/.' : 'source hashes/read limits in docs/research/_resource/evidence-r59/sources.json or evidence-r65/sources.json.';
+    if (!provenance.sources.some(s => s.key === key)) provenance.sources.push({ key, title, kind: 'primary', licence: 'public-domain', basis, copyUsed: `${url}; ${scope} S9; ${record}`, licencePage: null, licenceReadOn: null });
   }
   const sources = new Map(provenance.sources.map(s => [s.key, s]));
   const policy = JSON.parse(read(PACK + 'gate/source-policy.json'));
@@ -90,9 +92,12 @@ function applyS9(files) {
     const key = id + '/' + name;
     if (!held.has(key)) held.set(key, { person: id, cell: name, prior_value: prior, reader_basis: basis });
   }
-  for (const round of [15, 16]) {
+  const rounds = [[15, 'rs15.csv'], [16, 'rs16.csv']];
+  if (files.has(RESEARCH + 's9-backlog.csv')) rounds.push(['S6', 's9-backlog.csv']);
+  for (const [round, filename] of rounds) {
     const seen = new Set();
-    for (const c of records(read(RESEARCH + `rs${round}.csv`))) {
+    for (const c of records(read(RESEARCH + filename))) {
+      if (round === 'S6' && c.decision === 'HOLD') throw new Error('S6 HOLD is a search limit, never authority to erase starting data');
       const key = c.person + '/' + c.cell;
       if (seen.has(key)) throw new Error(`Duplicate research cell: rs${round} ${key}`);
       seen.add(key);
@@ -198,6 +203,7 @@ function main() {
   const fs = require('fs'), path = require('path');
   const root = process.env.PACK_ROOT || '.';
   const names = [PEOPLE, HELD, PACK + 'PROVENANCE.json', PACK + 'gate/source-policy.json', ...['rs15.csv', 'rs16.csv', 'dating.csv'].map(f => RESEARCH + f)];
+  if (fs.existsSync(path.join(root, RESEARCH + 's9-backlog.csv'))) names.push(RESEARCH + 's9-backlog.csv');
   const files = new Map(names.map(name => [name, fs.readFileSync(path.join(root, name), 'utf8')]));
   const { outputs, report } = applyS9(files);
   if (!process.argv.includes('--dry')) for (const [name, text] of outputs) fs.writeFileSync(path.join(root, name), text);
