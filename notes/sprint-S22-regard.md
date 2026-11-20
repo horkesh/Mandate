@@ -10,15 +10,19 @@ Research hand-over, 20 November 2026. S22 only; documentation on `sprint/researc
 
 The smallest rejection checks are dependency install, typecheck, three opening-government tests, CSV shape/identity/date checks and page/scan checks. `npm ci` passed. Typecheck and opening tests passed. The separately required `MANDATE_NO_GIT=1 npm run check` and one default eight-seed `npm run run:done-check -- --label s22-done-check` with drafting are running. They test the unchanged runtime baseline; the default campaign's Phase 0 exit does not waive its supplemental 1A failures. Expected cost: several minutes for check/hook and roughly half an hour for the one campaign on the shared host. Stop after that campaign; no calibration or timing retry. After an unexpected hook/check failure, inspect retained failure categories and reproduce cheaply before any affected rerun. Reuse unaffected evidence.
 
-## Proposed rulings
-
 ## Union batch evidence
 
 The [research index](../docs/research/S22/README.md) links 67 dated-record observations across 46 directed pairs, their seven-column rs projections and 49 hash-checked cited-page scans. There are 56 qualitative CHANGE proposals and 11 HOLDs; mixed appraisals are deliberately held. Three sampled images confirm McClellan p84, Lincoln II p245 and Welles I p126. Lincoln's October date is 13 in both printed heading and body. No later memoir narrative supplies a judgment.
 
 The required no-Git check passed, exit 0: 137 files, 1,530 passed, one expected failure and three skips, plus typecheck, boundary, licences and decision index. The one campaign continues; no result is yet claimed. Audit initially found three relative-link depth errors; they were corrected and the fresh audit passes. All 1,705 base tracked paths are protected. Union commit uses the actual hook with the supported `VITEST_MAX_WORKERS=1` setting; this changes concurrency only. Expected hook cost remains several minutes; no bypass or weakened checks.
 
-## Proposed rulings (continued)
+## Confederate and partner batch evidence
+
+The second batch expands the research to 123 observations and 94 directed pairs, with 108 CHANGE proposals and 15 HOLDs. The first commit is `7c00d1c`; its actual hook passed: 139 files, 1,548 passed, one expected failure and three skips, with the chained gates. No hook bypass or timeout change. The campaign remains the single authorized run.
+
+Separate documents establish both Bragg/Smith directions. Johnston's rank protest, Davis's reply and the Jackson/Benjamin/Loring correspondence preserve the opposing claims. Scan checks establish Davis/Lee on 26 August and Lee's comparative appraisal on 2 October. The dates of Hardee's main Shiloh report (February 1863) and Bragg's later Perryville narrative (May 1863) exclude those later documents, despite their 1862 subject matter. A wrong guessed volume identifier was segregated before reading/use; corrected acquisition evidence remains external.
+
+## Proposed rulings
 
 - [I] Keep each dated observer-to-subject judgment separately, including mixed opinions and later reversals. Reject reciprocal inference, national-reputation averages and a timeless last-row-wins apply.
 - [I] Use the people data's `regard_others:<target>` cell for a named directed pair. A future temporal apply must resolve principal/issuer mapping deliberately. Reject converting friendly conventional salutations or a command assignment alone into affection or confidence.

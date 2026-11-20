@@ -24,6 +24,20 @@ Pope's **21 July** warning is directly relevant to partner confidence: he expect
 
 ## Sources and limits
 
+## Confederate and partner batch
+
+The second batch brings the table to **123 dated-record observations / 94 directed pairs**: **108 qualitative CHANGE proposals, 15 HOLDs**. [Identity notes](identities.csv) keep the existing S6 Gustavus W. Smith handle distinct from the new, provisional Edward Johnson research handle. No person is added to active data.
+
+Johnston's **12 September 1861** protest describes a personal indignity while praising Beauregard as his associate; Davis's **14 September** reply condemns the arguments and insinuations. Davis's **10 November** dispute with Beauregard also defends Benjamin. These are separately directed judgments; the administrative criticism does not prove deficient field ability. [OR IV.1, pp605–608, 611](https://archive.org/details/cu31924079579524/page/605); [OR I.5, p945](https://archive.org/details/cu31924077730194/page/945).
+
+In January–February 1862, Benjamin reassures Johnston and values Beauregard, Johnston regrets Beauregard's departure, Jackson protests direct intervention while reporting compliance, and Johnston says he cannot replace Jackson. Jackson's charges against Loring and Loring's rebuttal establish antagonism, with no judgment of guilt entered. Davis's reply to Johnston combines criticism and conditional confidence, so it remains mixed/HOLD. [OR I.5, pp1048, 1051, 1053, 1064–1065, 1070–1072](https://archive.org/details/cu31924077730194/page/1048).
+
+Bragg's **8 August** appreciation of Smith's cooperation and Smith's **11 August** explicit reciprocal confidence provide two actual documents for a partner pair. Smith's **21 September** confidence that Bragg could take Louisville accompanies concerns about his own exposed section. That expectation is not recorded as an accomplished result. Lee's **2 October** comparative officer recommendations and Davis's **26 August** confidence in Lee are contemporary judgments, preserved at those dates. [OR I.16.2, pp745–746, 751, 859](https://archive.org/details/cu31924077730228/page/745); [OR I.19.2, p643](https://archive.org/details/cu31924080772233/page/643); [OR I.12.3, p945](https://archive.org/details/cu31924077730145/page/945).
+
+Grant's April praise of Sherman and the July Sherman/Halleck/McClellan telegrams extend the Union partner evidence. The named division and brigade commendations remain role-specific and do not automatically establish army-command gifts. [OR I.10.1, pp108–110](https://archive.org/details/cu31924077730160/page/108); [OR I.17.2, p83](https://archive.org/details/warofrebellion172unit/page/83); [OR I.19.1, pp839–842](https://archive.org/details/warofrebellion191unit/page/839).
+
+## Source handling
+
 [Source and reading record](sources.md) identifies editions and selected passages. [Scan manifest](scan-manifest.json) gives each cited printed page, archive image position or physical PDF page, URL, bytes and SHA-256. Scans stay outside git under `C:/Pyrrhic/mandate-research-sources/S6/`; reused S6/S12 paths remain in place and are hash-verified. OCR is a reading aid. McClellan p84, Lincoln II p245 and Welles I p126 have been visually checked. Lincoln's heading and body both read **13 October**; OCR's 18 is rejected. Retaining a scan does not claim visual inspection of every page or reading the whole volume.
 
 Only dated documents in later printings supply contemporary legs. McClellan's later explanatory narrative, Welles's retrospective opening chapter and all editorial commentary are excluded as judgment evidence. His p655 report of Lincoln praise is an interested recipient's contemporary account, not independent corroboration. The source manuscripts have not been collated. Sensitive accusations, coercion and slavery-policy contexts remain unsigned research; no gate-none determination is supplied for future use.
