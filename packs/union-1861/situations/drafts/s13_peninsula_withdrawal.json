@@ -4,11 +4,11 @@
   "faction": "union",
   "title": "situation.s13_peninsula_withdrawal.title",
   "text": "situation.s13_peninsula_withdrawal.text",
-  "earliest": "1862-08-03",
+  "earliest": "1862-08-04",
   "event": {
     "all": [
       {
-        "dayAtLeast": 517
+        "dayAtLeast": 518
       },
       {
         "knows": {
@@ -48,7 +48,7 @@
   ],
   "speakers": [
     {
-      "post": null,
+      "post": "us_general_in_chief",
       "person": "halleck_henry_w"
     },
     {
@@ -56,5 +56,5 @@
       "person": "mcclellan_george_b"
     }
   ],
-  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion."
 }

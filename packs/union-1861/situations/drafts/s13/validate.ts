@@ -5,7 +5,7 @@ import { IntlMessageFormat } from 'intl-messageformat';
 import { loadPack, type PackData, type Issue } from '@mandate/pack-format';
 import { packFilesAt } from '../../../../../packages/cli/src/pack-files.ts';
 import { SituationSchema, validateSituations } from '../../../../../packages/pack-format/src/situations.ts';
-import { checkGate, localeStrings, RegisterSchema } from '../../../../../packages/pack-format/src/gate.ts';
+import { checkGate, localeStrings, RegisterSchema, ClassesSchema } from '../../../../../packages/pack-format/src/gate.ts';
 import { policyRows } from '../../../../../packages/pack-format/src/situation-layer.ts';
 import { IssueSink } from '../../../../../packages/pack-format/src/issues.ts';
 import { ProvenanceFileSchema, StringTableSchema } from '../../../../../packages/pack-format/src/schemas.ts';
@@ -29,6 +29,7 @@ export const live = loaded.pack;
 const extraSources = ProvenanceFileSchema.parse(json('sources.json'));
 const extraStrings = StringTableSchema.parse(json('strings.json'));
 const extraTopics = RegisterSchema.parse(json('topics.json'));
+const extraClasses = ClassesSchema.parse(json('classes.json'));
 const en = [...(live.strings.get('en') ?? []), { file: 'situations/drafts/s13/strings.json', table: extraStrings }];
 export const context: PackData = {
   ...live,
@@ -36,9 +37,15 @@ export const context: PackData = {
   strings: new Map([...live.strings, ['en', en]]),
 };
 if (!live.gate) throw new Error('No live gate');
-export const gate = { ...live.gate, register: { topics: [...live.gate.register.topics, ...extraTopics.topics] } };
+export const gate = { ...live.gate,
+  classes: { classes: [...live.gate.classes.classes, ...extraClasses.classes] },
+  register: { topics: [...live.gate.register.topics, ...extraTopics.topics] } };
 if (new Set(context.provenance.sources.map((s) => s.key)).size !== context.provenance.sources.length) throw new Error('Duplicate source declaration');
 if (new Set(gate.register.topics.map((t) => t.id)).size !== gate.register.topics.length) throw new Error('Duplicate topic declaration');
+if (new Set(gate.classes.classes.map((c) => c.id)).size !== gate.classes.classes.length) throw new Error('Duplicate class declaration');
+for (const topic of gate.register.topics) {
+  if (!gate.classes.classes.some((c) => c.id === topic.class)) throw new Error(`Unknown topic class: ${topic.class}`);
+}
 const liveKeys = new Set(en.slice(0, -1).flatMap((x) => Object.keys(x.table)));
 for (const [key, value] of Object.entries(extraStrings)) {
   if (liveKeys.has(key)) throw new Error(`Draft overwrites a live string: ${key}`);

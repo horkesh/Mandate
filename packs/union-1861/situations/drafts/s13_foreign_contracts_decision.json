@@ -1,0 +1,84 @@
+{
+  "id": "s13_foreign_contracts_decision",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s13_foreign_contracts_decision.title",
+  "text": "situation.s13_foreign_contracts_decision.text",
+  "earliest": "1862-01-29",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 331
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_foreign_contracts"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_foreign_contracts"
+    }
+  },
+  "effects": [],
+  "report": null,
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "III-1 pp. 869–870; War Department order “In respect to contracts”, 29 January 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_secretary_war",
+      "person": "stanton_edwin_m"
+    }
+  ],
+  "namedOnly": "The named addressees, subjects and prospective appointees belong to the cited paper. This draft offers the courses documented there; it does not assert their present appointment or implement a change of command.",
+  "options": [
+    {
+      "id": "foreign-restrict",
+      "label": "situation.s13_foreign_contracts_decision.option.foreign-restrict",
+      "displayKey": 10,
+      "proposedBy": [
+        "stanton_edwin_m"
+      ],
+      "group": null,
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s13_foreign_contracts_decision.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "foreign-restrict"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "recommends": [
+      "foreign-restrict"
+    ],
+    "reasons": [],
+    "confidence": 500
+  }
+}

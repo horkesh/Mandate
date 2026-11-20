@@ -51,5 +51,11 @@
       "at": "pp. 80, 83 and 87 (PDF pp. 86, 89 and 93); later memoir and reproduced dispatches, including 23 August 1862. Pages 81–82 are illustrations, not this correspondence."
     }
   ],
-  "namedOnly": "The paper names historical participants as the cited document identifies them; it assigns no new words, current office or action to a rostered person."
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion.",
+  "speakers": [
+    {
+      "post": "us_general_in_chief",
+      "person": "halleck_henry_w"
+    }
+  ]
 }

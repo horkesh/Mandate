@@ -12,8 +12,40 @@
         "Report producer and route for s13_document_fremont_proclamation; none exists in the March start.",
         "Separate the emancipation response from the shooting clause; no option may authorize a reprisal."
       ],
-      "heldOptions": [],
-      "optionEvidence": {},
+      "heldOptions": [
+        {
+          "id": "private-request",
+          "reason": "Must wait for the 2 September presidential paper, not appear on the 30 August proclamation. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        },
+        {
+          "id": "public-order",
+          "reason": "Separate response stage and received paper; no policy toward shooting is offered. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        },
+        {
+          "id": "emancipation-stand",
+          "reason": "The author supports his own declaration. This supplies no advocate for reprisals or shooting. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        }
+      ],
+      "optionEvidence": {
+        "private-request": [
+          {
+            "source": "S13-OR",
+            "at": "I-3 pp. 469–470; Lincoln to Frémont, 2 September 1861. Separate from the shooting restriction."
+          }
+        ],
+        "public-order": [
+          {
+            "source": "S13-OR",
+            "at": "I-3 pp. 485–486; Lincoln to Frémont, 11 September 1861."
+          }
+        ],
+        "emancipation-stand": [
+          {
+            "source": "S13-OR",
+            "at": "I-3 pp. 466–467; Frémont’s proclamation of 30 August. Emancipation facet only."
+          }
+        ]
+      },
       "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
       "acts": {}
     },
@@ -25,8 +57,20 @@
         "Report producer and route for s13_document_maryland_legislature_autumn; none exists in the March start.",
         "Security-order scope, case review and actual detention belong to 1B; the April Maryland notice remains distinct."
       ],
-      "heldOptions": [],
-      "optionEvidence": {},
+      "heldOptions": [
+        {
+          "id": "detain",
+          "reason": "Security and case-review owners are missing; allegations about legislators are not adjudicated fact. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        }
+      ],
+      "optionEvidence": {
+        "detain": [
+          {
+            "source": "S13-OR",
+            "at": "I-5 p. 193; Cameron to Banks, 11 September 1861."
+          }
+        ]
+      },
       "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
       "acts": {}
     },
@@ -119,7 +163,8 @@
       "stage": "received document",
       "needs": [
         "Report producer and route for s13_document_treasury_notes; none exists in the March start.",
-        "The finance owner, specie suspension and legislative bill states; later published explanation must not become an early report without a separately authored contemporary packet."
+        "The finance owner, specie suspension and legislative bill states; later published explanation must not become an early report without a separately authored contemporary packet.",
+        "Retrospective source: evidence for the historical proposition, not a document available to the 1861–62 principal. A period report with its own route and receipt must supply the packet; the retrospective source itself must never be dispatched into the period."
       ],
       "heldOptions": [],
       "optionEvidence": {},
@@ -173,18 +218,32 @@
         "Report producer and route for s13_document_compensated_emancipation; none exists in the March start.",
         "Bill/resolution passage, border-state deliberation and finance; no effect targets enslaved people as a quantity."
       ],
-      "heldOptions": [],
-      "optionEvidence": {},
+      "heldOptions": [
+        {
+          "id": "propose",
+          "reason": "Congressional offer, state acceptance and state abolition are separate acts. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        }
+      ],
+      "optionEvidence": {
+        "propose": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 129–130; message to Congress, 6 March 1862."
+          }
+        ]
+      },
       "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
       "acts": {}
     },
     {
       "catalogue": "S34",
       "id": "s13_hampton_roads_scare",
-      "stage": "received document",
+      "stage": "received naval instruction after the alarm",
       "needs": [
         "Report producer and route for s13_document_hampton_roads_scare; none exists in the March start.",
-        "Naval combat dispatch, vessel draft/reach and recall through the Army/Navy chains; Welles’s account is one-sided."
+        "Naval combat dispatch, vessel draft/reach and recall through the Army/Navy chains; Welles’s account is one-sided.",
+        "Retrospective source: evidence for the historical proposition, not a document available to the 1861–62 principal. A period report with its own route and receipt must supply the packet; the retrospective source itself must never be dispatched into the period.",
+        "The actual notice now uses the dated 10 March instruction, not Welles’s weak retrospective cabinet account. The latter’s classification is preserved under the existing WELLES-D1-RETRO key; the missing contemporary cabinet positions are held."
       ],
       "heldOptions": [
         {
@@ -192,7 +251,14 @@
           "reason": "The read p. 63 fears Burnside’s capture but does not recommend recalling him. Retain only the sourced disagreement over abandoning the Peninsula movement."
         }
       ],
-      "optionEvidence": {},
+      "optionEvidence": {
+        "cabinet-positions": [
+          {
+            "source": "WELLES-D1-RETRO",
+            "at": "pp. 61–63, weak retrospective opening, not the dated diary. Kept as a reading lead only; no offered option relies on it."
+          }
+        ]
+      },
       "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
       "acts": {}
     },
@@ -270,8 +336,30 @@
         "Report producer and route for s13_document_hunter_order; none exists in the March start.",
         "Department policy and enforcement through its holder; emancipation policy is not a people-allocation effect."
       ],
-      "heldOptions": [],
-      "optionEvidence": {},
+      "heldOptions": [
+        {
+          "id": "revoke",
+          "reason": "Preserve Lincoln’s qualification that authenticity had not yet been established; no blanket repeal of camp regulations. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        },
+        {
+          "id": "let-stand",
+          "reason": "Only the reproduced order is read here; no government authorization or voluntariness of recruitment follows. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        }
+      ],
+      "optionEvidence": {
+        "revoke": [
+          {
+            "source": "S13-STAT12",
+            "at": "pp. 1264–1265; proclamation, 19 May 1862."
+          }
+        ],
+        "let-stand": [
+          {
+            "source": "S13-STAT12",
+            "at": "pp. 1264–1265; Hunter’s 9 May order as reproduced in the 19 May proclamation."
+          }
+        ]
+      },
       "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
       "acts": {}
     },
@@ -333,7 +421,8 @@
       "stage": "received document",
       "needs": [
         "Report producer and route for s13_document_vicksburg_river_1862; none exists in the March start.",
-        "Dated river stage, sickness reports and naval orders; passage, patrol and occupation must remain distinct."
+        "Dated river stage, sickness reports and naval orders; passage, patrol and occupation must remain distinct.",
+        "Retrospective source: evidence for the historical proposition, not a document available to the 1861–62 principal. A period report with its own route and receipt must supply the packet; the retrospective source itself must never be dispatched into the period."
       ],
       "heldOptions": [
         {
@@ -353,8 +442,30 @@
         "Report producer and route for s13_document_confiscation_and_militia_acts; none exists in the March start.",
         "Bill presentation, explanatory-resolution passage and veto/adjournment rules; retain the earlier 13 March military return prohibition as distinct."
       ],
-      "heldOptions": [],
-      "optionEvidence": {},
+      "heldOptions": [
+        {
+          "id": "sign-with-resolution",
+          "reason": "Do not turn this into a single undifferentiated signing of two unrelated acts. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        },
+        {
+          "id": "veto",
+          "reason": "Prepared but not the enacted outcome; no pocket-veto rule is invented. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        }
+      ],
+      "optionEvidence": {
+        "sign-with-resolution": [
+          {
+            "source": "S13-CW2",
+            "at": "p. 209; message of 17 July 1862, distinguishing the signed act/resolution from the prepared objection."
+          }
+        ],
+        "veto": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 209–211; prepared objection transmitted after approval, 17 July 1862."
+          }
+        ]
+      },
       "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
       "acts": {}
     },
@@ -364,10 +475,33 @@
       "stage": "received document",
       "needs": [
         "Report producer and route for s13_document_emancipation_cabinet_draft; none exists in the March start.",
-        "Contemporary July cabinet chronology, private draft-ready state and a received success report; 22 July is the catalogue’s provisional earliest guard [I]."
+        "Contemporary July cabinet chronology, private draft-ready state and a received success report; 22 July is the catalogue’s provisional earliest guard [I].",
+        "Retrospective source: evidence for the historical proposition, not a document available to the 1861–62 principal. A period report with its own route and receipt must supply the packet; the retrospective source itself must never be dispatched into the period."
       ],
-      "heldOptions": [],
-      "optionEvidence": {},
+      "heldOptions": [
+        {
+          "id": "issue-now",
+          "reason": "Private draft, not a published July proclamation; the period packet must distinguish those states. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        },
+        {
+          "id": "wait-for-victory",
+          "reason": "Date is the catalogue/editorial locator. Carpenter’s Lincoln expressly could not remember the exact July day; a victory-report contract is still missing. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        }
+      ],
+      "optionEvidence": {
+        "issue-now": [
+          {
+            "source": "S13-CW2",
+            "at": "p. 213; draft first submitted to the cabinet, editorial heading 22 July 1862."
+          }
+        ],
+        "wait-for-victory": [
+          {
+            "source": "S13-CARPENTER",
+            "at": "pp. 21–22; later reported conversation with Lincoln."
+          }
+        ]
+      },
       "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
       "acts": {}
     },
@@ -379,8 +513,20 @@
         "Report producer and route for s13_document_greeley_reply; none exists in the March start.",
         "Received Greeley editorial, press publication and separate cabinet-draft state."
       ],
-      "heldOptions": [],
-      "optionEvidence": {},
+      "heldOptions": [
+        {
+          "id": "union-first-reply",
+          "reason": "A public reply is separate from publication of the private emancipation draft. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        }
+      ],
+      "optionEvidence": {
+        "union-first-reply": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 227–228; reply to Greeley, 22 August 1862."
+          }
+        ]
+      },
       "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
       "acts": {}
     },
@@ -392,8 +538,30 @@
         "Report producer and route for s13_document_emancipation_preliminary; none exists in the March start.",
         "Dated territorial-policy model, enforcement through holders and a victory understood from received reports; the January final instrument is outside scope."
       ],
-      "heldOptions": [],
-      "optionEvidence": {},
+      "heldOptions": [
+        {
+          "id": "issue-preliminary",
+          "reason": "Future freedom, immediate return prohibition and current law enforcement are distinct; no January 1863 act is included. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        },
+        {
+          "id": "delay",
+          "reason": "His concern is attributed political judgment, not a modelled prediction that border states leave. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        }
+      ],
+      "optionEvidence": {
+        "issue-preliminary": [
+          {
+            "source": "S13-STAT12",
+            "at": "pp. 1267–1268; proclamation, 22 September 1862."
+          }
+        ],
+        "delay": [
+          {
+            "source": "S13-WELLES",
+            "at": "I pp. 143–144; Blair’s objection to expediency as Welles records it, 22 September."
+          }
+        ]
+      },
       "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
       "acts": {}
     },
@@ -403,7 +571,8 @@
       "stage": "received document",
       "needs": [
         "Report producer and route for s13_document_peninsula_withdrawal; none exists in the March start.",
-        "Current army posts, evacuation/transport capacity and corps transfers; the later 29 August capital proposal is separate received advice."
+        "Current army posts, evacuation/transport capacity and corps transfers; the later 29 August capital proposal is separate received advice.",
+        "The packet includes McClellan’s 4 August protest. Its date guard is therefore 4 August, not the 3 August withdrawal instruction alone."
       ],
       "heldOptions": [],
       "optionEvidence": {},
@@ -418,8 +587,20 @@
         "Report producer and route for s13_document_military_arrests; none exists in the March start.",
         "Security-order scope, individual review and locked political consequences; the 8 August War Department order requires its own earlier packet."
       ],
-      "heldOptions": [],
-      "optionEvidence": {},
+      "heldOptions": [
+        {
+          "id": "nationwide",
+          "reason": "The proclamation is not proof of the guilt or number of people detained. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        }
+      ],
+      "optionEvidence": {
+        "nationwide": [
+          {
+            "source": "S13-CW2",
+            "at": "p. 239; proclamation, 24 September 1862."
+          }
+        ]
+      },
       "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
       "acts": {}
     },
@@ -442,10 +623,24 @@
       "stage": "received document",
       "needs": [
         "Report producer and route for s13_document_railroad_dispute; none exists in the March start.",
-        "Military railroad director and field post, train occupancy/delay and inquiry transport; no fabricated troop-loss effect."
+        "Military railroad director and field post, train occupancy/delay and inquiry transport; no fabricated troop-loss effect.",
+        "The cited paper has authors or participants without resolved roster/post identities in this base (Cooke; Woodbury; Haupt and Sturgis; or the named Army staff correspondents respectively). No invented person/post id is entered. Resolve these before promotion; the report-author route here is a proposed carrier, not a claim that the Secretary wrote their words.",
+        "Retrospective source: evidence for the historical proposition, not a document available to the 1861–62 principal. A period report with its own route and receipt must supply the packet; the retrospective source itself must never be dispatched into the period."
       ],
-      "heldOptions": [],
-      "optionEvidence": {},
+      "heldOptions": [
+        {
+          "id": "back-railroad",
+          "reason": "Separate railroad authority from the arrest threat and resolve Haupt/Sturgis identities. Do not adopt the memoir’s claimed battlefield counterfactual. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        }
+      ],
+      "optionEvidence": {
+        "back-railroad": [
+          {
+            "source": "S13-HAUPT",
+            "at": "pp. 83, 87; reproduced Halleck instruction and 23 August exchange."
+          }
+        ]
+      },
       "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
       "acts": {}
     },
@@ -520,7 +715,8 @@
       "stage": "received document",
       "needs": [
         "Report producer and route for s13_document_river_squadron; none exists in the March start.",
-        "Read the underlying act/order, dated post-department reassignment and the command hand-over to Porter; no legal date is silently chosen."
+        "Read the underlying act/order, dated post-department reassignment and the command hand-over to Porter; no legal date is silently chosen.",
+        "Retrospective source: evidence for the historical proposition, not a document available to the 1861–62 principal. A period report with its own route and receipt must supply the packet; the retrospective source itself must never be dispatched into the period."
       ],
       "heldOptions": [],
       "optionEvidence": {},
@@ -533,7 +729,8 @@
       "stage": "received document",
       "needs": [
         "Report producer and route for s13_document_bond_agent; none exists in the March start.",
-        "Treasury agency appointment and contract/commission terms; the later December conversion estimate is not information for an October decision."
+        "Treasury agency appointment and contract/commission terms; the later December conversion estimate is not information for an October decision.",
+        "The cited paper has authors or participants without resolved roster/post identities in this base (Cooke; Woodbury; Haupt and Sturgis; or the named Army staff correspondents respectively). No invented person/post id is entered. Resolve these before promotion; the report-author route here is a proposed carrier, not a claim that the Secretary wrote their words."
       ],
       "heldOptions": [],
       "optionEvidence": {},
@@ -546,7 +743,8 @@
       "stage": "received document",
       "needs": [
         "Report producer and route for s13_document_fredericksburg_bridges; none exists in the March start.",
-        "Pontoon location, equipment, transport and plan crossing; December battle/news stages remain outside scope."
+        "Pontoon location, equipment, transport and plan crossing; December battle/news stages remain outside scope.",
+        "The cited paper has authors or participants without resolved roster/post identities in this base (Cooke; Woodbury; Haupt and Sturgis; or the named Army staff correspondents respectively). No invented person/post id is entered. Resolve these before promotion; the report-author route here is a proposed carrier, not a claim that the Secretary wrote their words."
       ],
       "heldOptions": [],
       "optionEvidence": {},
@@ -578,6 +776,745 @@
       "optionEvidence": {},
       "cause": "[I] Receipt in State.knowledgeBySeat, guarded by an earliest date. No camp or squadron State is invented.",
       "acts": {}
+    },
+    {
+      "catalogue": "S27",
+      "id": "s13_stone_arrest_report",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_stone_arrest_report; missing in the March start.",
+        "Separate committee, arrest authority, charges, custody and hearing owners are needed. The December committee resolution and arrest instrument still need their own packets.",
+        "The cited paper has authors or participants without resolved roster/post identities in this base (Cooke; Woodbury; Haupt and Sturgis; or the named Army staff correspondents respectively). No invented person/post id is entered. Resolve these before promotion; the report-author route here is a proposed carrier, not a claim that the Secretary wrote their words."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Specifically received document in State, guarded by its earliest date; no underlying physical or institutional act is created.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S30",
+      "id": "s13_foreign_contracts",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_foreign_contracts; missing in the March start.",
+        "Procurement and legal claims need typed institutional acts; a domestic-production condition is not a generic prohibition of all foreign supply."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Specifically received document in State, guarded by its earliest date; no underlying physical or institutional act is created.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S48",
+      "id": "s13_military_arrests_august",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_military_arrests_august; missing in the March start.",
+        "Arrest scope, individual cases, custody, review and the courts belong to 1B. The undated evasion explanation following the order is a separate paper."
+      ],
+      "heldOptions": [
+        {
+          "id": "war-department-order",
+          "reason": "The order’s breadth, individual arrest, hearing and costs require separate owners. Candidate wording and proposer are retained in candidate-options.json; not offered by the notice."
+        }
+      ],
+      "optionEvidence": {
+        "war-department-order": [
+          {
+            "source": "S13-OR",
+            "at": "III-2 pp. 321–322; Stanton’s order, 8 August 1862."
+          }
+        ]
+      },
+      "cause": "[I] Specifically received document in State, guarded by its earliest date; no underlying physical or institutional act is created.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S24",
+      "id": "s13_fremont_department_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_fremont_department; none exists in the March start.",
+        "Conditional delivery of relief, relief mode and the successor appointment; command ownership exists, but situation effects cannot express these acts.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "conditional-relief": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 85–86; Lincoln to Curtis and enclosed General Orders No. 18, 24 October 1861."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "conditional-relief": "Command/delivery owners: conditional issue through Curtis, temporary relief to Hunter, ordered enclosure delivery. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S25",
+      "id": "s13_general_in_chief_1861_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_general_in_chief_1861; none exists in the March start.",
+        "Dated command succession and dual-command authority; retirement is not ordinary presidential relief.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "retire-scott": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 87–88; General Orders No. 94, 1 November 1861."
+          }
+        ],
+        "one-man-both": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 87–88; General Orders No. 94, 1 November 1861."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "retire-scott": "People and command: retirement with the stated pay and allowances, distinct from dismissal. Reported only: no substitute flag or unrelated numerical proposal applies it.",
+        "one-man-both": "Command: assignment, Washington headquarters and report routing, without moving a field army. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S26",
+      "id": "s13_trent_affair_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_trent_affair; none exists in the March start.",
+        "Diplomatic demand/answer records, British response clock and Navy initiative report; no invented British troop total.",
+        "[I] Staff confidence 500 is an uncalibrated draft display value, not a sourced probability or personality judgment. The author is the post; the proposal evidence names its historical advocate.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "arbitrate": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 108–109; [10 December?] draft proposing arbitration, expressly not used or sent."
+          }
+        ],
+        "release": [
+          {
+            "source": "S13-TRENT",
+            "at": "Senate Executive Document 8, 37th Congress, 2nd session (1862), pp. 5, 10–13; Seward to Lyons, 26 December 1861, selected passages."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "arbitrate": "Diplomacy: unsent draft proposal, British assent and response; do not treat it as sent. Reported only: no substitute flag or unrelated numerical proposal applies it.",
+        "release": "Diplomacy and custody: transmit the reply, arrange release and await the British response. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S28",
+      "id": "s13_war_department_secretary_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_war_department_secretary; none exists in the March start.",
+        "Cabinet resignation, nomination, confirmation and actual assumption are separate command/institutional acts.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "move-abroad": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 114–115; correspondence of 11 January 1862."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "move-abroad": "Cabinet and diplomacy: offer, acceptance, nomination, confirmation and assumption as distinct acts; no automatic Stanton appointment. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S30",
+      "id": "s13_arms_and_contracts_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_arms_and_contracts; none exists in the March start.",
+        "Ordnance procurement, contracts and field-trial returns; separate the later foreign-contract dispute rather than combine unrelated choices.",
+        "[I] Staff confidence 500 is an uncalibrated draft display value, not a sourced probability or personality judgment. The author is the post; the proposal evidence names its historical advocate.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "decline-purchases": [
+          {
+            "source": "S13-OR",
+            "at": "Series III, vol. I, pp. 733–734; Ripley to Cameron, 9 December 1861."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "decline-purchases": "Economy/ordnance: procurement decision on these proposals only. No weapon performance or inventory is changed. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S31",
+      "id": "s13_army_will_not_move_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_army_will_not_move; none exists in the March start.",
+        "A multi-command goal and deadline through the validated order chain; no army moves directly from a situation.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "date-order": [
+          {
+            "source": "S13-CW2",
+            "at": "p. 119; General War Order No. 1, 27 January 1862."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "date-order": "Plans and messages: dated readiness instruction to the listed commands; actual movement remains each command’s act. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S32",
+      "id": "s13_grant_rumour_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_grant_rumour; none exists in the March start.",
+        "Grant’s current field post, Halleck’s superior post, inquiry transport and reply; the generic inquire verb exists.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "ask-halleck": [
+          {
+            "source": "S13-OR",
+            "at": "I-7 p. 683; Lorenzo Thomas to Halleck, 10 March 1862. The later reply on the same page is not known by this paper."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "ask-halleck": "Information and observer owners: presidential inquiry through War/Adjutant-General, with answer evidence and credibility preserved. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S35",
+      "id": "s13_war_orders_march_1862_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_war_orders_march_1862; none exists in the March start.",
+        "Dated corps/departments and separate authority to create, attach and appoint; never create a permanent command graph from one date.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "corps": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 130–131; General War Order No. 2, 8 March; p. 137, Special War Order No. 3, 11 March 1862."
+          }
+        ],
+        "fremont-command": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 130–131; General War Order No. 2, 8 March; p. 137, Special War Order No. 3, 11 March 1862."
+          }
+        ],
+        "relieve-top": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 130–131; General War Order No. 2, 8 March; p. 137, Special War Order No. 3, 11 March 1862."
+          }
+        ],
+        "unite-west": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 130–131; General War Order No. 2, 8 March; p. 137, Special War Order No. 3, 11 March 1862."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "corps": "Command: corps, commanders and succession, through the dated 8 March instrument. Reported only: no substitute flag or unrelated numerical proposal applies it.",
+        "fremont-command": "Command: department scope, assignment and assumption, through the 11 March instrument. Reported only: no substitute flag or unrelated numerical proposal applies it.",
+        "relieve-top": "Command: scope of the 11 March relief, not removal from his army. Reported only: no substitute flag or unrelated numerical proposal applies it.",
+        "unite-west": "Command: 11 March boundaries, authority and report chain. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S36",
+      "id": "s13_washington_cover_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_washington_cover; none exists in the March start.",
+        "The army plan and actual command graph, dated strength-return basis and a corps transfer; no conversion from reported totals into truth.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "count-first": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 142–143; Lincoln to McClellan, 9 April 1862."
+          }
+        ],
+        "withhold-corps": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 142–143; Lincoln to McClellan, 9 April 1862."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "count-first": "Information: obtain a dated return with basis and scope, not a new true-strength constant. Reported only: no substitute flag or unrelated numerical proposal applies it.",
+        "withhold-corps": "Command and plans: corps transfer and plan review; no direct movement of blocks. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S37",
+      "id": "s13_recruiting_closed_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_recruiting_closed; none exists in the March start.",
+        "Recruiting-office states and actual implementation; do not choose between the conflicting June/July reopening dates without orders.",
+        "[I] Staff confidence 500 is an uncalibrated draft display value, not a sourced probability or personality judgment. The author is the post; the proposal evidence names its historical advocate.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "close": [
+          {
+            "source": "S13-OR",
+            "at": "III-2 pp. 2–3; General Orders No. 33, paragraph III, 3 April 1862, and circular to governors."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "close": "Recruiting and economy: return detached officers, close offices and dispose of public recruiting property; not a zero-enlistment flag. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S37",
+      "id": "s13_recruiting_call_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_recruiting_call; none exists in the March start.",
+        "National allocation, dated state credits and refilling existing regiments; no invented equal state quotas.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "refill-old": [
+          {
+            "source": "S13-CW2",
+            "at": "p. 212; Lincoln to Stanton, 22 July 1862."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "refill-old": "Recruiting: fill old regiments, preserve state credits and the distinction between enrollment, draft, muster and actual joining. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S41",
+      "id": "s13_army_of_virginia_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_army_of_virginia; none exists in the March start.",
+        "New army post, dated corps attachments and Frémont’s separately received refusal; existing transfer/relief commands remain the paths.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "merge-under-pope": [
+          {
+            "source": "S13-CW2",
+            "at": "p. 188; order constituting the Army of Virginia, 26 June 1862."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "merge-under-pope": "Command: new army, three corps, named commanders, scope and joint-operation authority. No unsupported senior alternative. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S43",
+      "id": "s13_general_in_chief_1862_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_general_in_chief_1862; none exists in the March start.",
+        "A vacancy-duration predicate, candidate availability and dated assumption; the order cannot instantly transport Halleck.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "halleck": [
+          {
+            "source": "S13-CW2",
+            "at": "p. 203; order of 11 July 1862."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "halleck": "Command: assignment, permission to leave safely, journey and actual assumption. These are distinct acts. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S47",
+      "id": "s13_peninsula_withdrawal_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_peninsula_withdrawal; none exists in the March start.",
+        "Current army posts, evacuation/transport capacity and corps transfers; the later 29 August capital proposal is separate received advice.",
+        "[I] Staff confidence 500 is an uncalibrated draft display value, not a sourced probability or personality judgment. The author is the post; the proposal evidence names its historical advocate.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data.",
+        "The packet includes McClellan’s 4 August protest. Its date guard is therefore 4 August, not the 3 August withdrawal instruction alone."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "reinforce-there": [
+          {
+            "source": "S13-OR",
+            "at": "Series I, vol. XI, part I, pp. 80–82; order and protest, 3–4 August 1862."
+          }
+        ],
+        "withdraw": [
+          {
+            "source": "S13-OR",
+            "at": "Series I, vol. XI, part I, pp. 80–82; order and protest, 3–4 August 1862."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "reinforce-there": "Plans/support: McClellan’s requested reinforcement, its sourced scope and transport; no invented available men. Reported only: no substitute flag or unrelated numerical proposal applies it.",
+        "withdraw": "Command/plans/transport: Halleck’s withdrawal terms, sequencing and subordinate compliance. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S51",
+      "id": "s13_cabinet_remonstrance_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_cabinet_remonstrance; none exists in the March start.",
+        "Cabinet stances, actual signatories and current army command; do not invent Smith’s signature.",
+        "[I] Staff confidence 500 is an uncalibrated draft display value, not a sourced probability or personality judgment. The author is the post; the proposal evidence names its historical advocate.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "consult-cabinet": [
+          {
+            "source": "S13-WELLES",
+            "at": "I p. 94; Welles’s own proposed general consultation in the entry of 31 August."
+          }
+        ],
+        "remove": [
+          {
+            "source": "S13-WELLES",
+            "at": "I pp. 94, 97–98; Stanton’s paper and Welles’s report of his explanation, 31 August."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "consult-cabinet": "Consultation owner: call the council, preserve separate stances and do not assert unanimous consent. Reported only: no substitute flag or unrelated numerical proposal applies it.",
+        "remove": "People/command: relief and successor selection; no treason finding or automatic replacement. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S53",
+      "id": "s13_after_antietam_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_after_antietam; none exists in the March start.",
+        "A received Antietam result and subsequent inactivity report, army readiness and current commander; election timing is not a substitute for those causes.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "urge-by-letter": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 245–247; Lincoln to McClellan, 13 October 1862."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "urge-by-letter": "Pressure and messages: the 13 October letter; preserve its stated distinction between suggestion and order. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S53",
+      "id": "s13_mcclellan_relief_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_mcclellan_relief; none exists in the March start.",
+        "Current army post and candidate eligibility, dispatch delivery and hand-over; do not infer that Burnside assumed on the issue date.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "relieve": [
+          {
+            "source": "S13-CW2",
+            "at": "p. 252; order of 5 November 1862, including paragraph IV on issue at the general-in-chief’s discretion."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "relieve": "Command/delivery: relief, succession, related corps changes, discretionary issue and later field assumption. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S54",
+      "id": "s13_buell_east_tennessee_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_buell_east_tennessee; none exists in the March start.",
+        "Current western army post, East Tennessee supply route and Rosecrans’s separate appointment; a goal goes through a commander.",
+        "[I] Staff confidence 500 is an uncalibrated draft display value, not a sourced probability or personality judgment. The author is the post; the proposal evidence names its historical advocate.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "accept-his-plan": [
+          {
+            "source": "S13-OR",
+            "at": "I-16 part II pp. 637–638; Buell’s suggestions and Halleck’s reply printed 23 October, footnoted “true date appears to have been October 22, 12.20 p. m.” Earliest is the conservative printed date."
+          }
+        ],
+        "order-east": [
+          {
+            "source": "S13-OR",
+            "at": "I-16 part II pp. 637–638; Buell’s suggestions and Halleck’s reply printed 23 October, footnoted “true date appears to have been October 22, 12.20 p. m.” Earliest is the conservative printed date."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "accept-his-plan": "Plans/support: Buell’s proposed route and supply prerequisites, not his estimates adopted as fact. Reported only: no substitute flag or unrelated numerical proposal applies it.",
+        "order-east": "Command/plans: Halleck’s stated objective and discretion about roads, not a direct block movement. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S16",
+      "id": "s13_kentucky_camp_protest_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_kentucky_camp_protest; no dated packet producer exists in the March start.",
+        "August stage B of a catalogue entry that began in May. Camp establishment, removal and the state’s neutrality need their own institutional owners.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "close-camp": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 76–77; Lincoln to Magoffin, 24 August 1861, reproducing Magoffin’s request of 19 August."
+          }
+        ],
+        "keep-camp": [
+          {
+            "source": "S13-CW2",
+            "at": "pp. 76–77; Lincoln to Magoffin, 24 August 1861, reproducing Magoffin’s request of 19 August."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "close-camp": "Camp/command owners: terminate or remove the force under its actual authority; do not change state control by declaration. Reported only: no substitute flag or unrelated numerical proposal applies it.",
+        "keep-camp": "Diplomacy/command: communicate the presidential refusal without treating Lincoln’s claims about popular wishes as a poll. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S19",
+      "id": "s13_atlantic_squadron_division_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_atlantic_squadron_division; no dated packet producer exists in the March start.",
+        "Autumn stage of the June blockade-board entry. Separate squadron posts, boundaries, appointment and actual assumption need 1B; no new command is created by this draft.",
+        "[I] Staff confidence 500 is an uncalibrated draft display value, not a sourced probability or personality judgment. The author is the post; the proposal evidence names its historical advocate.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "divide-squadron": [
+          {
+            "source": "S13-ORN",
+            "at": "I-6 pp. 233–234; Welles to Goldsborough, appointment and confidential instructions of 18 September 1861."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "divide-squadron": "Navy/command: separate posts and boundaries; retain Goldsborough’s interim scope until Du Pont arrives. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S37",
+      "id": "s13_recruiting_new_call",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_recruiting_new_call; missing in the March start.",
+        "Recruiting, state quotas, terms, credits, muster and actually joining units need their own owners. Do not convert the national number into invented state regiments."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Specifically received document in State, guarded by its earliest date; no underlying physical or institutional act is created.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S55",
+      "id": "s13_river_transfer_act",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_river_transfer_act; missing in the March start.",
+        "Statutory authority, expenditure responsibility, administrative handover, squadron post and actual assumption need distinct owners. The ram fleet’s scope was disputed; do not assume all river craft fall under this wording."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Specifically received document in State, guarded by its earliest date; no underlying physical or institutional act is created.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S30",
+      "id": "s13_foreign_contracts_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_foreign_contracts; missing in the March start.",
+        "Procurement and legal claims need typed institutional acts; a domestic-production condition is not a generic prohibition of all foreign supply.",
+        "[I] Staff confidence 500 is an uncalibrated draft display value, not a sourced probability or personality judgment. The author is the post; the proposal evidence names its historical advocate.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "foreign-restrict": [
+          {
+            "source": "S13-OR",
+            "at": "III-1 pp. 869–870; War Department order “In respect to contracts”, 29 January 1862."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "foreign-restrict": "Procurement/legal claims: domestic-production condition, revocation of authorities, filing deadline and opportunity to prove validity. Do not replace this with cancellation of every completed contract. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S37",
+      "id": "s13_recruiting_new_call_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_recruiting_new_call; missing in the March start.",
+        "Recruiting, state quotas, terms, credits, muster and actually joining units need their own owners. Do not convert the national number into invented state regiments.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "call-three-hundred-thousand": [
+          {
+            "source": "S13-OR",
+            "at": "III-2 pp. 179–183, 187–188; 28–30 June exchanges and the 1 July letter. The edition’s letter is dated 1 July, distinct from intended newspaper publication the next day."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "call-three-hundred-thousand": "National recruiting and state quotas: the actual terms and credit instruments must precede validated state calls. No new regiments are fabricated from the national total. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S55",
+      "id": "s13_river_squadron_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_river_squadron; none exists in the March start.",
+        "Read the underlying act/order, dated post-department reassignment and the command hand-over to Porter; no legal date is silently chosen.",
+        "Retrospective source: evidence for the historical proposition, not a document available to the 1861–62 principal. A period report with its own route and receipt must supply the packet; the retrospective source itself must never be dispatched into the period.",
+        "[I] Staff confidence 500 is an uncalibrated draft display value, not a sourced probability or personality judgment. The author is the post; the proposal evidence names its historical advocate.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "porter": [
+          {
+            "source": "S13-WELLES",
+            "at": "I pp. 157–158; entry of 1 October 1862, Welles on relieving Davis and appointing Porter. Judgments of their abilities remain his."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "porter": "Navy/command: appointment, notice, journey, actual assumption and the change of departmental authority are distinct. No new naval force is created. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
+    },
+    {
+      "catalogue": "S54",
+      "id": "s13_buell_relief",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_buell_relief; missing in the March start.",
+        "Command, departmental scope, delivery, relief mode, successor assumption and later hearing need their proper owners."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Specifically received document in State, guarded by its earliest date; no underlying physical or institutional act is created.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S54",
+      "id": "s13_buell_relief_decision",
+      "stage": "decision facet",
+      "needs": [
+        "Report producer and route for s13_document_buell_relief; missing in the March start.",
+        "Command, departmental scope, delivery, relief mode, successor assumption and later hearing need their proper owners.",
+        "No separate staff recommendation is established by the selected reading. Use its plain paper, with the typed bounded absence, instead of inventing a cabinet advocate for the principal’s own act.",
+        "Decision facets record choices and inaction, but have no implemented command/institutional effects. Build the acts below through their proper owners before any promotion to live data."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {
+        "relieve": [
+          {
+            "source": "S13-OR",
+            "at": "I-16 part II pp. 641–642; General Orders No. 168 and Halleck’s enclosed order to Buell, 24 October 1862. The separate supply instructions on p. 641 are not adopted as a policy facet here."
+          }
+        ]
+      },
+      "cause": "[I] Deliberation on the same specifically received packet as the document facet. Receipt is State; the historical order is evidence for the offered wording, not evidence that the simulated act has already happened.",
+      "acts": {
+        "relieve": "Command: delivery, turnover, Rosecrans assignment, department scope and Buell’s reporting instructions. It does not dismiss Buell from service or decide a later inquiry. Reported only: no substitute flag or unrelated numerical proposal applies it."
+      }
     }
   ]
 }

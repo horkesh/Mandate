@@ -1,0 +1,5 @@
+{
+  "classes": [
+    { "id": "civilians", "atrocity": false, "requiresAgencyReason": false }
+  ]
+}

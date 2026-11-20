@@ -1,0 +1,1423 @@
+{
+  "status": "Authoring disposition of catalogue alternatives, not a live option list or historical finding.",
+  "items": [
+    {
+      "catalogue": "S16",
+      "slug": "kentucky-neutrality",
+      "stages": [
+        "s13_kentucky_camp_protest",
+        "s13_kentucky_camp_protest_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "close-camp",
+          "status": "offered",
+          "draft": "s13_kentucky_camp_protest_decision",
+          "option": "close-camp",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 76–77; Lincoln to Magoffin, 24 August 1861, reproducing Magoffin’s request of 19 August."
+            }
+          ],
+          "limit": "Only the August camp-protest stage is in this delivery; the May neutrality choices are outside the authoring window."
+        },
+        {
+          "catalogueOption": "keep-camp",
+          "status": "offered",
+          "draft": "s13_kentucky_camp_protest_decision",
+          "option": "keep-camp",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 76–77; Lincoln to Magoffin, 24 August 1861, reproducing Magoffin’s request of 19 August."
+            }
+          ],
+          "limit": "Only the August camp-protest stage is in this delivery; the May neutrality choices are outside the authoring window."
+        }
+      ],
+      "remaining": "Only the August camp-protest stage is in this delivery; the May neutrality choices are outside the authoring window."
+    },
+    {
+      "catalogue": "S19",
+      "slug": "blockade-board",
+      "stages": [
+        "s13_atlantic_squadron_division",
+        "s13_atlantic_squadron_division_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "adopt-board",
+          "status": "held",
+          "limit": "Only the autumn division stage is supplied here. The June board choices are outside the window; the additional autumn expedition alternatives need their own read instruments."
+        },
+        {
+          "catalogueOption": "leave-to-squadrons",
+          "status": "held",
+          "limit": "Only the autumn division stage is supplied here. The June board choices are outside the window; the additional autumn expedition alternatives need their own read instruments."
+        },
+        {
+          "catalogueOption": "port-royal",
+          "status": "held",
+          "limit": "Only the autumn division stage is supplied here. The June board choices are outside the window; the additional autumn expedition alternatives need their own read instruments."
+        },
+        {
+          "catalogueOption": "take-hatteras",
+          "status": "held",
+          "limit": "Only the autumn division stage is supplied here. The June board choices are outside the window; the additional autumn expedition alternatives need their own read instruments."
+        }
+      ],
+      "remaining": "Only the autumn division stage is supplied here. The June board choices are outside the window; the additional autumn expedition alternatives need their own read instruments."
+    },
+    {
+      "catalogue": "S22",
+      "slug": "fremont-proclamation",
+      "stages": [
+        "s13_fremont_proclamation"
+      ],
+      "options": [
+        {
+          "catalogueOption": "let-stand",
+          "status": "held sourced candidate",
+          "option": "emancipation-stand",
+          "evidence": [
+            {
+              "source": "S13-OR",
+              "at": "I-3 pp. 466–467; Frémont’s proclamation of 30 August. Emancipation facet only."
+            }
+          ],
+          "limit": "The author supports his own declaration. This supplies no advocate for reprisals or shooting.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        },
+        {
+          "catalogueOption": "private-request",
+          "status": "held sourced candidate",
+          "option": "private-request",
+          "evidence": [
+            {
+              "source": "S13-OR",
+              "at": "I-3 pp. 469–470; Lincoln to Frémont, 2 September 1861. Separate from the shooting restriction."
+            }
+          ],
+          "limit": "Must wait for the 2 September presidential paper, not appear on the 30 August proclamation.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        },
+        {
+          "catalogueOption": "public-order",
+          "status": "held sourced candidate",
+          "option": "public-order",
+          "evidence": [
+            {
+              "source": "S13-OR",
+              "at": "I-3 pp. 485–486; Lincoln to Frémont, 11 September 1861."
+            }
+          ],
+          "limit": "Separate response stage and received paper; no policy toward shooting is offered.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        },
+        {
+          "catalogueOption": "relieve",
+          "status": "held",
+          "limit": "Emancipation replies need separate dated papers and policy owners. No shooting or reprisal choice is permitted."
+        }
+      ],
+      "remaining": "Emancipation replies need separate dated papers and policy owners. No shooting or reprisal choice is permitted."
+    },
+    {
+      "catalogue": "S23",
+      "slug": "maryland-legislature",
+      "stages": [
+        "s13_maryland_legislature_autumn"
+      ],
+      "options": [
+        {
+          "catalogueOption": "detain",
+          "status": "held sourced candidate",
+          "option": "detain",
+          "evidence": [
+            {
+              "source": "S13-OR",
+              "at": "I-5 p. 193; Cameron to Banks, 11 September 1861."
+            }
+          ],
+          "limit": "Security and case-review owners are missing; allegations about legislators are not adjudicated fact.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        },
+        {
+          "catalogueOption": "leave-be",
+          "status": "held",
+          "limit": "No read advocate for watch or leave-be. The detention instruction needs case, custody and review owners."
+        },
+        {
+          "catalogueOption": "watch",
+          "status": "held",
+          "limit": "No read advocate for watch or leave-be. The detention instruction needs case, custody and review owners."
+        }
+      ],
+      "remaining": "No read advocate for watch or leave-be. The detention instruction needs case, custody and review owners."
+    },
+    {
+      "catalogue": "S24",
+      "slug": "fremont-department",
+      "stages": [
+        "s13_fremont_department",
+        "s13_fremont_department_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "keep",
+          "status": "held",
+          "limit": "The read relief instrument is conditional and temporary. It does not support outright dismissal, an immediate other command, or every suggested inspection arrangement."
+        },
+        {
+          "catalogueOption": "observer-first",
+          "status": "held",
+          "limit": "The read relief instrument is conditional and temporary. It does not support outright dismissal, an immediate other command, or every suggested inspection arrangement."
+        },
+        {
+          "catalogueOption": "relieve-outright",
+          "status": "narrower sourced facet",
+          "draft": "s13_fremont_department_decision",
+          "option": "conditional-relief",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 85–86; Lincoln to Curtis and enclosed General Orders No. 18, 24 October 1861."
+            }
+          ],
+          "limit": "The read relief instrument is conditional and temporary. It does not support outright dismissal, an immediate other command, or every suggested inspection arrangement."
+        },
+        {
+          "catalogueOption": "relieve-to-post",
+          "status": "held",
+          "limit": "The read relief instrument is conditional and temporary. It does not support outright dismissal, an immediate other command, or every suggested inspection arrangement."
+        }
+      ],
+      "remaining": "The read relief instrument is conditional and temporary. It does not support outright dismissal, an immediate other command, or every suggested inspection arrangement."
+    },
+    {
+      "catalogue": "S25",
+      "slug": "general-in-chief-1861",
+      "stages": [
+        "s13_general_in_chief_1861",
+        "s13_general_in_chief_1861_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "keep-scott",
+          "status": "held",
+          "limit": "No read advocate for keeping Scott under this arrangement or naming an unspecified third man. Retirement and successor assignment are separate."
+        },
+        {
+          "catalogueOption": "one-man-both",
+          "status": "offered",
+          "draft": "s13_general_in_chief_1861_decision",
+          "option": "one-man-both",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 87–88; General Orders No. 94, 1 November 1861."
+            }
+          ],
+          "limit": "No read advocate for keeping Scott under this arrangement or naming an unspecified third man. Retirement and successor assignment are separate."
+        },
+        {
+          "catalogueOption": "third-man",
+          "status": "held",
+          "limit": "No read advocate for keeping Scott under this arrangement or naming an unspecified third man. Retirement and successor assignment are separate."
+        }
+      ],
+      "remaining": "No read advocate for keeping Scott under this arrangement or naming an unspecified third man. Retirement and successor assignment are separate."
+    },
+    {
+      "catalogue": "S26",
+      "slug": "trent-affair",
+      "stages": [
+        "s13_trent_affair",
+        "s13_trent_affair_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "hold",
+          "status": "held",
+          "limit": "No read advocate for holding the men. Arbitration is an unsent draft; release is Seward’s documented answer."
+        },
+        {
+          "catalogueOption": "release",
+          "status": "offered",
+          "draft": "s13_trent_affair_decision",
+          "option": "release",
+          "evidence": [
+            {
+              "source": "S13-TRENT",
+              "at": "Senate Executive Document 8, 37th Congress, 2nd session (1862), pp. 5, 10–13; Seward to Lyons, 26 December 1861, selected passages."
+            }
+          ],
+          "limit": "No read advocate for holding the men. Arbitration is an unsent draft; release is Seward’s documented answer."
+        }
+      ],
+      "remaining": "No read advocate for holding the men. Arbitration is an unsent draft; release is Seward’s documented answer."
+    },
+    {
+      "catalogue": "S27",
+      "slug": "committee-and-stone",
+      "stages": [
+        "s13_committee_and_stone",
+        "s13_stone_arrest_report"
+      ],
+      "options": [
+        {
+          "catalogueOption": "allow-arrest",
+          "status": "held",
+          "limit": "The custody correspondence and May presidential answer do not establish an advocate for a court of inquiry or refusal without charges. The committee opening needs its own resolution."
+        },
+        {
+          "catalogueOption": "court-of-inquiry",
+          "status": "held",
+          "limit": "The custody correspondence and May presidential answer do not establish an advocate for a court of inquiry or refusal without charges. The committee opening needs its own resolution."
+        },
+        {
+          "catalogueOption": "protect",
+          "status": "held",
+          "limit": "The custody correspondence and May presidential answer do not establish an advocate for a court of inquiry or refusal without charges. The committee opening needs its own resolution."
+        }
+      ],
+      "remaining": "The custody correspondence and May presidential answer do not establish an advocate for a court of inquiry or refusal without charges. The committee opening needs its own resolution."
+    },
+    {
+      "catalogue": "S28",
+      "slug": "war-department-1861",
+      "stages": [
+        "s13_war_department_report",
+        "s13_war_department_secretary",
+        "s13_war_department_secretary_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "cut-passage",
+          "status": "held",
+          "limit": "The report dispute is read as attributed press only. No direct presidential report-recall instrument or original arming passage is supplied. The Russia offer does not appoint Stanton or support every dismissal alternative."
+        },
+        {
+          "catalogueOption": "let-print",
+          "status": "held",
+          "limit": "The report dispute is read as attributed press only. No direct presidential report-recall instrument or original arming passage is supplied. The Russia offer does not appoint Stanton or support every dismissal alternative."
+        },
+        {
+          "catalogueOption": "keep",
+          "status": "held",
+          "limit": "The report dispute is read as attributed press only. No direct presidential report-recall instrument or original arming passage is supplied. The Russia offer does not appoint Stanton or support every dismissal alternative."
+        },
+        {
+          "catalogueOption": "move-abroad",
+          "status": "offered",
+          "draft": "s13_war_department_secretary_decision",
+          "option": "move-abroad",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 114–115; correspondence of 11 January 1862."
+            }
+          ],
+          "limit": "The report dispute is read as attributed press only. No direct presidential report-recall instrument or original arming passage is supplied. The Russia offer does not appoint Stanton or support every dismissal alternative."
+        },
+        {
+          "catalogueOption": "replace-outright",
+          "status": "held",
+          "limit": "The report dispute is read as attributed press only. No direct presidential report-recall instrument or original arming passage is supplied. The Russia offer does not appoint Stanton or support every dismissal alternative."
+        }
+      ],
+      "remaining": "The report dispute is read as attributed press only. No direct presidential report-recall instrument or original arming passage is supplied. The Russia offer does not appoint Stanton or support every dismissal alternative."
+    },
+    {
+      "catalogue": "S29",
+      "slug": "treasury-notes",
+      "stages": [
+        "s13_treasury_notes"
+      ],
+      "options": [
+        {
+          "catalogueOption": "bonds-below-par",
+          "status": "held",
+          "limit": "The later Treasury account explains alternatives, but is not contemporary advice for every option at the crisis. Read the finance committee debate and contemporary Chase papers before offering those choices."
+        },
+        {
+          "catalogueOption": "coin-rule",
+          "status": "held",
+          "limit": "The later Treasury account explains alternatives, but is not contemporary advice for every option at the crisis. Read the finance committee debate and contemporary Chase papers before offering those choices."
+        },
+        {
+          "catalogueOption": "legal-tender",
+          "status": "held",
+          "limit": "The later Treasury account explains alternatives, but is not contemporary advice for every option at the crisis. Read the finance committee debate and contemporary Chase papers before offering those choices."
+        }
+      ],
+      "remaining": "The later Treasury account explains alternatives, but is not contemporary advice for every option at the crisis. Read the finance committee debate and contemporary Chase papers before offering those choices."
+    },
+    {
+      "catalogue": "S30",
+      "slug": "arms-and-contracts",
+      "stages": [
+        "s13_arms_and_contracts",
+        "s13_foreign_contracts",
+        "s13_arms_and_contracts_decision",
+        "s13_foreign_contracts_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "foreign-cancel",
+          "status": "narrower sourced facet",
+          "draft": "s13_foreign_contracts_decision",
+          "option": "foreign-restrict",
+          "evidence": [
+            {
+              "source": "S13-OR",
+              "at": "III-1 pp. 869–870; War Department order “In respect to contracts”, 29 January 1862."
+            }
+          ],
+          "limit": "The read Ripley letter rejects specific purchase proposals, not all repeaters or all trials. Seward’s foreign-contract warning and a specific trial advocate remain unread."
+        },
+        {
+          "catalogueOption": "foreign-keep",
+          "status": "held",
+          "limit": "The read Ripley letter rejects specific purchase proposals, not all repeaters or all trials. Seward’s foreign-contract warning and a specific trial advocate remain unread."
+        },
+        {
+          "catalogueOption": "old-stock",
+          "status": "narrower sourced facet",
+          "draft": "s13_arms_and_contracts_decision",
+          "option": "decline-purchases",
+          "evidence": [
+            {
+              "source": "S13-OR",
+              "at": "Series III, vol. I, pp. 733–734; Ripley to Cameron, 9 December 1861."
+            }
+          ],
+          "limit": "The read Ripley letter rejects specific purchase proposals, not all repeaters or all trials. Seward’s foreign-contract warning and a specific trial advocate remain unread."
+        },
+        {
+          "catalogueOption": "try-repeaters",
+          "status": "held",
+          "limit": "The read Ripley letter rejects specific purchase proposals, not all repeaters or all trials. Seward’s foreign-contract warning and a specific trial advocate remain unread."
+        }
+      ],
+      "remaining": "The read Ripley letter rejects specific purchase proposals, not all repeaters or all trials. Seward’s foreign-contract warning and a specific trial advocate remain unread."
+    },
+    {
+      "catalogue": "S31",
+      "slug": "army-will-not-move",
+      "stages": [
+        "s13_army_will_not_move",
+        "s13_army_will_not_move_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "consult-generals",
+          "status": "held",
+          "limit": "The fixed-date order is read. The conferences and an advocate for waiting for a plan need their own papers."
+        },
+        {
+          "catalogueOption": "date-order",
+          "status": "offered",
+          "draft": "s13_army_will_not_move_decision",
+          "option": "date-order",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "p. 119; General War Order No. 1, 27 January 1862."
+            }
+          ],
+          "limit": "The fixed-date order is read. The conferences and an advocate for waiting for a plan need their own papers."
+        },
+        {
+          "catalogueOption": "wait-for-plan",
+          "status": "held",
+          "limit": "The fixed-date order is read. The conferences and an advocate for waiting for a plan need their own papers."
+        }
+      ],
+      "remaining": "The fixed-date order is read. The conferences and an advocate for waiting for a plan need their own papers."
+    },
+    {
+      "catalogue": "S32",
+      "slug": "grant-rumour",
+      "stages": [
+        "s13_grant_rumour",
+        "s13_grant_rumour_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "ask-halleck",
+          "status": "offered",
+          "draft": "s13_grant_rumour_decision",
+          "option": "ask-halleck",
+          "evidence": [
+            {
+              "source": "S13-OR",
+              "at": "I-7 p. 683; Lorenzo Thomas to Halleck, 10 March 1862. The later reply on the same page is not known by this paper."
+            }
+          ],
+          "limit": "The presidential inquiry is read. No read advocate for leaving the affair to the department or sending a particular observer."
+        },
+        {
+          "catalogueOption": "leave-to-department",
+          "status": "held",
+          "limit": "The presidential inquiry is read. No read advocate for leaving the affair to the department or sending a particular observer."
+        },
+        {
+          "catalogueOption": "send-someone",
+          "status": "held",
+          "limit": "The presidential inquiry is read. No read advocate for leaving the affair to the department or sending a particular observer."
+        }
+      ],
+      "remaining": "The presidential inquiry is read. No read advocate for leaving the affair to the department or sending a particular observer."
+    },
+    {
+      "catalogue": "S33",
+      "slug": "compensated-emancipation",
+      "stages": [
+        "s13_compensated_emancipation"
+      ],
+      "options": [
+        {
+          "catalogueOption": "members-first",
+          "status": "held",
+          "limit": "The message is read; a prior members-first recommendation is not. Not-now may be inaction, not invented advice."
+        },
+        {
+          "catalogueOption": "not-now",
+          "status": "held",
+          "limit": "The message is read; a prior members-first recommendation is not. Not-now may be inaction, not invented advice."
+        },
+        {
+          "catalogueOption": "propose",
+          "status": "held sourced candidate",
+          "option": "propose",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 129–130; message to Congress, 6 March 1862."
+            }
+          ],
+          "limit": "Congressional offer, state acceptance and state abolition are separate acts.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        }
+      ],
+      "remaining": "The message is read; a prior members-first recommendation is not. Not-now may be inaction, not invented advice."
+    },
+    {
+      "catalogue": "S34",
+      "slug": "hampton-roads-scare",
+      "stages": [
+        "s13_hampton_roads_scare"
+      ],
+      "options": [
+        {
+          "catalogueOption": "hold-course",
+          "status": "held",
+          "limit": "Welles reports a proposal to abandon the Peninsula movement and fear for Burnside, not a recommendation to recall him. The broader catalogue option is held."
+        },
+        {
+          "catalogueOption": "recall",
+          "status": "held",
+          "limit": "Welles reports a proposal to abandon the Peninsula movement and fear for Burnside, not a recommendation to recall him. The broader catalogue option is held."
+        }
+      ],
+      "remaining": "Welles reports a proposal to abandon the Peninsula movement and fear for Burnside, not a recommendation to recall him. The broader catalogue option is held."
+    },
+    {
+      "catalogue": "S35",
+      "slug": "war-orders-march-1862",
+      "stages": [
+        "s13_war_orders_march_1862",
+        "s13_war_orders_march_1862_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "corps",
+          "status": "offered",
+          "draft": "s13_war_orders_march_1862_decision",
+          "option": "corps",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 130–131; General War Order No. 2, 8 March; p. 137, Special War Order No. 3, 11 March 1862."
+            }
+          ],
+          "limit": "The four organizational acts are read; their owner actions remain unimplemented. No unrelated numerical proposal substitutes for them."
+        },
+        {
+          "catalogueOption": "fremont-command",
+          "status": "offered",
+          "draft": "s13_war_orders_march_1862_decision",
+          "option": "fremont-command",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 130–131; General War Order No. 2, 8 March; p. 137, Special War Order No. 3, 11 March 1862."
+            }
+          ],
+          "limit": "The four organizational acts are read; their owner actions remain unimplemented. No unrelated numerical proposal substitutes for them."
+        },
+        {
+          "catalogueOption": "relieve-top",
+          "status": "offered",
+          "draft": "s13_war_orders_march_1862_decision",
+          "option": "relieve-top",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 130–131; General War Order No. 2, 8 March; p. 137, Special War Order No. 3, 11 March 1862."
+            }
+          ],
+          "limit": "The four organizational acts are read; their owner actions remain unimplemented. No unrelated numerical proposal substitutes for them."
+        },
+        {
+          "catalogueOption": "unite-west",
+          "status": "offered",
+          "draft": "s13_war_orders_march_1862_decision",
+          "option": "unite-west",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 130–131; General War Order No. 2, 8 March; p. 137, Special War Order No. 3, 11 March 1862."
+            }
+          ],
+          "limit": "The four organizational acts are read; their owner actions remain unimplemented. No unrelated numerical proposal substitutes for them."
+        }
+      ],
+      "remaining": "The four organizational acts are read; their owner actions remain unimplemented. No unrelated numerical proposal substitutes for them."
+    },
+    {
+      "catalogue": "S36",
+      "slug": "washington-cover",
+      "stages": [
+        "s13_washington_cover",
+        "s13_washington_cover_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "count-first",
+          "status": "offered",
+          "draft": "s13_washington_cover_decision",
+          "option": "count-first",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 142–143; Lincoln to McClellan, 9 April 1862."
+            }
+          ],
+          "limit": "The presidential inquiry and withholding are read; an own-words advocate for release-all is not established by this selection."
+        },
+        {
+          "catalogueOption": "release-all",
+          "status": "held",
+          "limit": "The presidential inquiry and withholding are read; an own-words advocate for release-all is not established by this selection."
+        },
+        {
+          "catalogueOption": "withhold-corps",
+          "status": "offered",
+          "draft": "s13_washington_cover_decision",
+          "option": "withhold-corps",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 142–143; Lincoln to McClellan, 9 April 1862."
+            }
+          ],
+          "limit": "The presidential inquiry and withholding are read; an own-words advocate for release-all is not established by this selection."
+        }
+      ],
+      "remaining": "The presidential inquiry and withholding are read; an own-words advocate for release-all is not established by this selection."
+    },
+    {
+      "catalogue": "S37",
+      "slug": "recruiting",
+      "stages": [
+        "s13_recruiting_closed",
+        "s13_recruiting_call",
+        "s13_recruiting_closed_decision",
+        "s13_recruiting_call_decision",
+        "s13_recruiting_new_call",
+        "s13_recruiting_new_call_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "close",
+          "status": "offered",
+          "draft": "s13_recruiting_closed_decision",
+          "option": "close",
+          "evidence": [
+            {
+              "source": "S13-OR",
+              "at": "III-2 pp. 2–3; General Orders No. 33, paragraph III, 3 April 1862, and circular to governors."
+            }
+          ],
+          "limit": "Read closure, the national call, and refilling instruction. Do not silently add a three-year term, nine-month state quotas or an independently advocated keep-open course to the national call letter."
+        },
+        {
+          "catalogueOption": "keep-open",
+          "status": "held",
+          "limit": "Read closure, the national call, and refilling instruction. Do not silently add a three-year term, nine-month state quotas or an independently advocated keep-open course to the national call letter."
+        },
+        {
+          "catalogueOption": "call-three-year",
+          "status": "narrower sourced facet",
+          "draft": "s13_recruiting_new_call_decision",
+          "option": "call-three-hundred-thousand",
+          "evidence": [
+            {
+              "source": "S13-OR",
+              "at": "III-2 pp. 179–183, 187–188; 28–30 June exchanges and the 1 July letter. The edition’s letter is dated 1 July, distinct from intended newspaper publication the next day."
+            }
+          ],
+          "limit": "Read closure, the national call, and refilling instruction. Do not silently add a three-year term, nine-month state quotas or an independently advocated keep-open course to the national call letter."
+        },
+        {
+          "catalogueOption": "militia-draft",
+          "status": "held",
+          "limit": "Read closure, the national call, and refilling instruction. Do not silently add a three-year term, nine-month state quotas or an independently advocated keep-open course to the national call letter."
+        },
+        {
+          "catalogueOption": "refill-old",
+          "status": "offered",
+          "draft": "s13_recruiting_call_decision",
+          "option": "refill-old",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "p. 212; Lincoln to Stanton, 22 July 1862."
+            }
+          ],
+          "limit": "Read closure, the national call, and refilling instruction. Do not silently add a three-year term, nine-month state quotas or an independently advocated keep-open course to the national call letter."
+        }
+      ],
+      "remaining": "Read closure, the national call, and refilling instruction. Do not silently add a three-year term, nine-month state quotas or an independently advocated keep-open course to the national call letter."
+    },
+    {
+      "catalogue": "S38",
+      "slug": "norfolk",
+      "stages": [
+        "s13_norfolk"
+      ],
+      "options": [
+        {
+          "catalogueOption": "cooperate",
+          "status": "held",
+          "limit": "The selected Stanton wire is intelligence and a proposed attack. It does not establish the presidential visit, subordination alternatives or a separate Wilkes flotilla instrument."
+        },
+        {
+          "catalogueOption": "go-myself",
+          "status": "held",
+          "limit": "The selected Stanton wire is intelligence and a proposed attack. It does not establish the presidential visit, subordination alternatives or a separate Wilkes flotilla instrument."
+        },
+        {
+          "catalogueOption": "navy-under-army",
+          "status": "held",
+          "limit": "The selected Stanton wire is intelligence and a proposed attack. It does not establish the presidential visit, subordination alternatives or a separate Wilkes flotilla instrument."
+        },
+        {
+          "catalogueOption": "separate-flotilla",
+          "status": "held",
+          "limit": "The selected Stanton wire is intelligence and a proposed attack. It does not establish the presidential visit, subordination alternatives or a separate Wilkes flotilla instrument."
+        }
+      ],
+      "remaining": "The selected Stanton wire is intelligence and a proposed attack. It does not establish the presidential visit, subordination alternatives or a separate Wilkes flotilla instrument."
+    },
+    {
+      "catalogue": "S39",
+      "slug": "hunter-order",
+      "stages": [
+        "s13_hunter_order"
+      ],
+      "options": [
+        {
+          "catalogueOption": "let-stand",
+          "status": "held sourced candidate",
+          "option": "let-stand",
+          "evidence": [
+            {
+              "source": "S13-STAT12",
+              "at": "pp. 1264–1265; Hunter’s 9 May order as reproduced in the 19 May proclamation."
+            }
+          ],
+          "limit": "Only the reproduced order is read here; no government authorization or voluntariness of recruitment follows.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        },
+        {
+          "catalogueOption": "private-withdraw",
+          "status": "held",
+          "limit": "The reproduced Hunter order and Lincoln revocation are read. No advocate for private withdrawal has been established."
+        },
+        {
+          "catalogueOption": "revoke",
+          "status": "held sourced candidate",
+          "option": "revoke",
+          "evidence": [
+            {
+              "source": "S13-STAT12",
+              "at": "pp. 1264–1265; proclamation, 19 May 1862."
+            }
+          ],
+          "limit": "Preserve Lincoln’s qualification that authenticity had not yet been established; no blanket repeal of camp regulations.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        }
+      ],
+      "remaining": "The reproduced Hunter order and Lincoln revocation are read. No advocate for private withdrawal has been established."
+    },
+    {
+      "catalogue": "S40",
+      "slug": "new-orleans-command",
+      "stages": [
+        "s13_new_orleans_command"
+      ],
+      "options": [
+        {
+          "catalogueOption": "back-him",
+          "status": "held",
+          "limit": "GO 28 is read. No source here advocates a presidential endorsement of that exact order or withdrawal. December replacement is outside the window; occupation severity is never offered."
+        },
+        {
+          "catalogueOption": "replace",
+          "status": "held",
+          "limit": "GO 28 is read. No source here advocates a presidential endorsement of that exact order or withdrawal. December replacement is outside the window; occupation severity is never offered."
+        },
+        {
+          "catalogueOption": "withdraw-order",
+          "status": "held",
+          "limit": "GO 28 is read. No source here advocates a presidential endorsement of that exact order or withdrawal. December replacement is outside the window; occupation severity is never offered."
+        }
+      ],
+      "remaining": "GO 28 is read. No source here advocates a presidential endorsement of that exact order or withdrawal. December replacement is outside the window; occupation severity is never offered."
+    },
+    {
+      "catalogue": "S41",
+      "slug": "army-of-virginia",
+      "stages": [
+        "s13_army_of_virginia",
+        "s13_army_of_virginia_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "accept-request",
+          "status": "held",
+          "limit": "The Pope consolidation order is read. Senior-command alternatives and the later refusal/request need separate sourced papers; the player cannot simply choose any general from this document."
+        },
+        {
+          "catalogueOption": "keep-separate",
+          "status": "held",
+          "limit": "The Pope consolidation order is read. Senior-command alternatives and the later refusal/request need separate sourced papers; the player cannot simply choose any general from this document."
+        },
+        {
+          "catalogueOption": "merge-under-junior",
+          "status": "narrower sourced facet",
+          "draft": "s13_army_of_virginia_decision",
+          "option": "merge-under-pope",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "p. 188; order constituting the Army of Virginia, 26 June 1862."
+            }
+          ],
+          "limit": "The Pope consolidation order is read. Senior-command alternatives and the later refusal/request need separate sourced papers; the player cannot simply choose any general from this document."
+        },
+        {
+          "catalogueOption": "merge-under-senior",
+          "status": "held",
+          "limit": "The Pope consolidation order is read. Senior-command alternatives and the later refusal/request need separate sourced papers; the player cannot simply choose any general from this document."
+        },
+        {
+          "catalogueOption": "order-serve",
+          "status": "held",
+          "limit": "The Pope consolidation order is read. Senior-command alternatives and the later refusal/request need separate sourced papers; the player cannot simply choose any general from this document."
+        }
+      ],
+      "remaining": "The Pope consolidation order is read. Senior-command alternatives and the later refusal/request need separate sourced papers; the player cannot simply choose any general from this document."
+    },
+    {
+      "catalogue": "S42",
+      "slug": "harrisons-landing-letter",
+      "stages": [
+        "s13_harrisons_landing_letter"
+      ],
+      "options": [
+        {
+          "catalogueOption": "answer",
+          "status": "held",
+          "limit": "The general’s political letter is read. It supplies no advocate or established presidential default for answer, file or show-cabinet."
+        },
+        {
+          "catalogueOption": "file",
+          "status": "held",
+          "limit": "The general’s political letter is read. It supplies no advocate or established presidential default for answer, file or show-cabinet."
+        },
+        {
+          "catalogueOption": "show-cabinet",
+          "status": "held",
+          "limit": "The general’s political letter is read. It supplies no advocate or established presidential default for answer, file or show-cabinet."
+        }
+      ],
+      "remaining": "The general’s political letter is read. It supplies no advocate or established presidential default for answer, file or show-cabinet."
+    },
+    {
+      "catalogue": "S43",
+      "slug": "general-in-chief-1862",
+      "stages": [
+        "s13_general_in_chief_1862",
+        "s13_general_in_chief_1862_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "halleck",
+          "status": "offered",
+          "draft": "s13_general_in_chief_1862_decision",
+          "option": "halleck",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "p. 203; order of 11 July 1862."
+            }
+          ],
+          "limit": "Halleck’s assignment is read. No read advocate for restoring McClellan or leaving the office vacant as an offered recommendation."
+        },
+        {
+          "catalogueOption": "leave-vacant",
+          "status": "held",
+          "limit": "Halleck’s assignment is read. No read advocate for restoring McClellan or leaving the office vacant as an offered recommendation."
+        },
+        {
+          "catalogueOption": "restore-mcclellan",
+          "status": "held",
+          "limit": "Halleck’s assignment is read. No read advocate for restoring McClellan or leaving the office vacant as an offered recommendation."
+        }
+      ],
+      "remaining": "Halleck’s assignment is read. No read advocate for restoring McClellan or leaving the office vacant as an offered recommendation."
+    },
+    {
+      "catalogue": "S44",
+      "slug": "vicksburg-river-1862",
+      "stages": [
+        "s13_vicksburg_river_1862"
+      ],
+      "options": [
+        {
+          "catalogueOption": "ask-army",
+          "status": "held",
+          "limit": "The retrospective withdrawal account is read. The catalogue’s 23 July Welles instruction, army request and stay advocate need direct sources."
+        },
+        {
+          "catalogueOption": "release",
+          "status": "held",
+          "limit": "The retrospective withdrawal account is read. The catalogue’s 23 July Welles instruction, army request and stay advocate need direct sources."
+        },
+        {
+          "catalogueOption": "stay",
+          "status": "held",
+          "limit": "The retrospective withdrawal account is read. The catalogue’s 23 July Welles instruction, army request and stay advocate need direct sources."
+        }
+      ],
+      "remaining": "The retrospective withdrawal account is read. The catalogue’s 23 July Welles instruction, army request and stay advocate need direct sources."
+    },
+    {
+      "catalogue": "S45",
+      "slug": "confiscation-and-militia-acts",
+      "stages": [
+        "s13_confiscation_and_militia_acts"
+      ],
+      "options": [
+        {
+          "catalogueOption": "sign",
+          "status": "held",
+          "limit": "The act, resolution and prepared objection are read. Gate placement, institutional approval and policy consequences are not supplied; signing both separate acts is not conflated with the explanatory resolution."
+        },
+        {
+          "catalogueOption": "sign-with-resolution",
+          "status": "held sourced candidate",
+          "option": "sign-with-resolution",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "p. 209; message of 17 July 1862, distinguishing the signed act/resolution from the prepared objection."
+            }
+          ],
+          "limit": "Do not turn this into a single undifferentiated signing of two unrelated acts.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        },
+        {
+          "catalogueOption": "veto",
+          "status": "held sourced candidate",
+          "option": "veto",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 209–211; prepared objection transmitted after approval, 17 July 1862."
+            }
+          ],
+          "limit": "Prepared but not the enacted outcome; no pocket-veto rule is invented.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        }
+      ],
+      "remaining": "The act, resolution and prepared objection are read. Gate placement, institutional approval and policy consequences are not supplied; signing both separate acts is not conflated with the explanatory resolution."
+    },
+    {
+      "catalogue": "S46",
+      "slug": "emancipation-proclamation",
+      "stages": [
+        "s13_emancipation_cabinet_draft",
+        "s13_greeley_reply",
+        "s13_emancipation_preliminary"
+      ],
+      "options": [
+        {
+          "catalogueOption": "issue-now",
+          "status": "held sourced candidate",
+          "option": "issue-now",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "p. 213; draft first submitted to the cabinet, editorial heading 22 July 1862."
+            }
+          ],
+          "limit": "Private draft, not a published July proclamation; the period packet must distinguish those states.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        },
+        {
+          "catalogueOption": "shelve",
+          "status": "held",
+          "limit": "The dated draft, recollection of Seward, reply and preliminary proclamation are read. No advocate for permanent shelving or an August public announcement is established. Silence may be inaction, not a named recommendation."
+        },
+        {
+          "catalogueOption": "wait-for-victory",
+          "status": "held sourced candidate",
+          "option": "wait-for-victory",
+          "evidence": [
+            {
+              "source": "S13-CARPENTER",
+              "at": "pp. 21–22; later reported conversation with Lincoln."
+            }
+          ],
+          "limit": "Date is the catalogue/editorial locator. Carpenter’s Lincoln expressly could not remember the exact July day; a victory-report contract is still missing.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        },
+        {
+          "catalogueOption": "announce",
+          "status": "held",
+          "limit": "The dated draft, recollection of Seward, reply and preliminary proclamation are read. No advocate for permanent shelving or an August public announcement is established. Silence may be inaction, not a named recommendation."
+        },
+        {
+          "catalogueOption": "no-reply",
+          "status": "held",
+          "limit": "The dated draft, recollection of Seward, reply and preliminary proclamation are read. No advocate for permanent shelving or an August public announcement is established. Silence may be inaction, not a named recommendation."
+        },
+        {
+          "catalogueOption": "union-first-reply",
+          "status": "held sourced candidate",
+          "option": "union-first-reply",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 227–228; reply to Greeley, 22 August 1862."
+            }
+          ],
+          "limit": "A public reply is separate from publication of the private emancipation draft.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        },
+        {
+          "catalogueOption": "delay",
+          "status": "held sourced candidate",
+          "option": "delay",
+          "evidence": [
+            {
+              "source": "S13-WELLES",
+              "at": "I pp. 143–144; Blair’s objection to expediency as Welles records it, 22 September."
+            }
+          ],
+          "limit": "His concern is attributed political judgment, not a modelled prediction that border states leave.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        },
+        {
+          "catalogueOption": "issue-preliminary",
+          "status": "held sourced candidate",
+          "option": "issue-preliminary",
+          "evidence": [
+            {
+              "source": "S13-STAT12",
+              "at": "pp. 1267–1268; proclamation, 22 September 1862."
+            }
+          ],
+          "limit": "Future freedom, immediate return prohibition and current law enforcement are distinct; no January 1863 act is included.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        }
+      ],
+      "remaining": "The dated draft, recollection of Seward, reply and preliminary proclamation are read. No advocate for permanent shelving or an August public announcement is established. Silence may be inaction, not a named recommendation."
+    },
+    {
+      "catalogue": "S47",
+      "slug": "peninsula-withdrawal",
+      "stages": [
+        "s13_peninsula_withdrawal",
+        "s13_peninsula_withdrawal_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "hold-capital",
+          "status": "held",
+          "limit": "The 3–4 August withdrawal exchange is read. Later August 29 capital/forwarding choices need their own papers and appearance conditions."
+        },
+        {
+          "catalogueOption": "push-to-pope",
+          "status": "held",
+          "limit": "The 3–4 August withdrawal exchange is read. Later August 29 capital/forwarding choices need their own papers and appearance conditions."
+        },
+        {
+          "catalogueOption": "reinforce-there",
+          "status": "offered",
+          "draft": "s13_peninsula_withdrawal_decision",
+          "option": "reinforce-there",
+          "evidence": [
+            {
+              "source": "S13-OR",
+              "at": "Series I, vol. XI, part I, pp. 80–82; order and protest, 3–4 August 1862."
+            }
+          ],
+          "limit": "The 3–4 August withdrawal exchange is read. Later August 29 capital/forwarding choices need their own papers and appearance conditions."
+        },
+        {
+          "catalogueOption": "withdraw",
+          "status": "offered",
+          "draft": "s13_peninsula_withdrawal_decision",
+          "option": "withdraw",
+          "evidence": [
+            {
+              "source": "S13-OR",
+              "at": "Series I, vol. XI, part I, pp. 80–82; order and protest, 3–4 August 1862."
+            }
+          ],
+          "limit": "The 3–4 August withdrawal exchange is read. Later August 29 capital/forwarding choices need their own papers and appearance conditions."
+        }
+      ],
+      "remaining": "The 3–4 August withdrawal exchange is read. Later August 29 capital/forwarding choices need their own papers and appearance conditions."
+    },
+    {
+      "catalogue": "S48",
+      "slug": "military-arrests",
+      "stages": [
+        "s13_military_arrests",
+        "s13_military_arrests_august"
+      ],
+      "options": [
+        {
+          "catalogueOption": "narrow",
+          "status": "held",
+          "limit": "The August order and September proclamation are read. Narrow review and leave-to-courts need their own advocated sources and case machinery."
+        },
+        {
+          "catalogueOption": "nationwide",
+          "status": "held sourced candidate",
+          "option": "nationwide",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "p. 239; proclamation, 24 September 1862."
+            }
+          ],
+          "limit": "The proclamation is not proof of the guilt or number of people detained.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        },
+        {
+          "catalogueOption": "no-arrests",
+          "status": "held",
+          "limit": "The August order and September proclamation are read. Narrow review and leave-to-courts need their own advocated sources and case machinery."
+        }
+      ],
+      "remaining": "The August order and September proclamation are read. Narrow review and leave-to-courts need their own advocated sources and case machinery."
+    },
+    {
+      "catalogue": "S49",
+      "slug": "dakota-war",
+      "stages": [
+        "s13_dakota_war"
+      ],
+      "options": [],
+      "remaining": "Request for complete trial records only; no execution or refusal choice is offered under R3."
+    },
+    {
+      "catalogue": "S50",
+      "slug": "railroad-dispute",
+      "stages": [
+        "s13_railroad_dispute"
+      ],
+      "options": [
+        {
+          "catalogueOption": "ask-the-railroad-man",
+          "status": "held",
+          "limit": "Halleck’s non-interference instruction is reproduced in Haupt. No direct Lincoln inquiry or a leave-to-field advocate is established. Haupt and Sturgis need resolved identities."
+        },
+        {
+          "catalogueOption": "back-railroad",
+          "status": "held sourced candidate",
+          "option": "back-railroad",
+          "evidence": [
+            {
+              "source": "S13-HAUPT",
+              "at": "pp. 83, 87; reproduced Halleck instruction and 23 August exchange."
+            }
+          ],
+          "limit": "Separate railroad authority from the arrest threat and resolve Haupt/Sturgis identities. Do not adopt the memoir’s claimed battlefield counterfactual.; Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+        },
+        {
+          "catalogueOption": "leave-to-field",
+          "status": "held",
+          "limit": "Halleck’s non-interference instruction is reproduced in Haupt. No direct Lincoln inquiry or a leave-to-field advocate is established. Haupt and Sturgis need resolved identities."
+        }
+      ],
+      "remaining": "Halleck’s non-interference instruction is reproduced in Haupt. No direct Lincoln inquiry or a leave-to-field advocate is established. Haupt and Sturgis need resolved identities."
+    },
+    {
+      "catalogue": "S51",
+      "slug": "cabinet-remonstrance",
+      "stages": [
+        "s13_cabinet_remonstrance",
+        "s13_cabinet_remonstrance_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "remove",
+          "status": "offered",
+          "draft": "s13_cabinet_remonstrance_decision",
+          "option": "remove",
+          "evidence": [
+            {
+              "source": "S13-WELLES",
+              "at": "I pp. 94, 97–98; Stanton’s paper and Welles’s report of his explanation, 31 August."
+            }
+          ],
+          "limit": "Removal and cabinet consultation are supported by Welles’s account. Restoration and a specified alternative commander need their own dated instruments."
+        },
+        {
+          "catalogueOption": "restore",
+          "status": "held",
+          "limit": "Removal and cabinet consultation are supported by Welles’s account. Restoration and a specified alternative commander need their own dated instruments."
+        },
+        {
+          "catalogueOption": "someone-else",
+          "status": "held",
+          "limit": "Removal and cabinet consultation are supported by Welles’s account. Restoration and a specified alternative commander need their own dated instruments."
+        }
+      ],
+      "remaining": "Removal and cabinet consultation are supported by Welles’s account. Restoration and a specified alternative commander need their own dated instruments."
+    },
+    {
+      "catalogue": "S52",
+      "slug": "altoona-governors",
+      "stages": [
+        "s13_altoona_governors"
+      ],
+      "options": [
+        {
+          "catalogueOption": "adjust-quotas",
+          "status": "held",
+          "limit": "The governors’ address is read, but no reception date, quota bargain or stand-by-general advocate is supplied."
+        },
+        {
+          "catalogueOption": "hear-them",
+          "status": "held",
+          "limit": "The governors’ address is read, but no reception date, quota bargain or stand-by-general advocate is supplied."
+        },
+        {
+          "catalogueOption": "stand-by-general",
+          "status": "held",
+          "limit": "The governors’ address is read, but no reception date, quota bargain or stand-by-general advocate is supplied."
+        }
+      ],
+      "remaining": "The governors’ address is read, but no reception date, quota bargain or stand-by-general advocate is supplied."
+    },
+    {
+      "catalogue": "S53",
+      "slug": "after-antietam",
+      "stages": [
+        "s13_after_antietam",
+        "s13_mcclellan_relief",
+        "s13_after_antietam_decision",
+        "s13_mcclellan_relief_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "go-see",
+          "status": "held",
+          "limit": "The movement letter and November order are read. Election dates do not establish that the relief was chosen because of elections; visit and refit recommendations need their own sources."
+        },
+        {
+          "catalogueOption": "relieve-after-elections",
+          "status": "held",
+          "limit": "The movement letter and November order are read. Election dates do not establish that the relief was chosen because of elections; visit and refit recommendations need their own sources."
+        },
+        {
+          "catalogueOption": "relieve-now",
+          "status": "held",
+          "limit": "The movement letter and November order are read. Election dates do not establish that the relief was chosen because of elections; visit and refit recommendations need their own sources."
+        },
+        {
+          "catalogueOption": "urge-by-letter",
+          "status": "offered",
+          "draft": "s13_after_antietam_decision",
+          "option": "urge-by-letter",
+          "evidence": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 245–247; Lincoln to McClellan, 13 October 1862."
+            }
+          ],
+          "limit": "The movement letter and November order are read. Election dates do not establish that the relief was chosen because of elections; visit and refit recommendations need their own sources."
+        },
+        {
+          "catalogueOption": "wait",
+          "status": "held",
+          "limit": "The movement letter and November order are read. Election dates do not establish that the relief was chosen because of elections; visit and refit recommendations need their own sources."
+        }
+      ],
+      "remaining": "The movement letter and November order are read. Election dates do not establish that the relief was chosen because of elections; visit and refit recommendations need their own sources."
+    },
+    {
+      "catalogue": "S54",
+      "slug": "buell-east-tennessee",
+      "stages": [
+        "s13_buell_east_tennessee",
+        "s13_buell_east_tennessee_decision",
+        "s13_buell_relief",
+        "s13_buell_relief_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "accept-his-plan",
+          "status": "offered",
+          "draft": "s13_buell_east_tennessee_decision",
+          "option": "accept-his-plan",
+          "evidence": [
+            {
+              "source": "S13-OR",
+              "at": "I-16 part II pp. 637–638; Buell’s suggestions and Halleck’s reply printed 23 October, footnoted “true date appears to have been October 22, 12.20 p. m.” Earliest is the conservative printed date."
+            }
+          ],
+          "limit": "The operational exchange and separate turnover order are read. Their delivery, succession and later hearing are distinct."
+        },
+        {
+          "catalogueOption": "order-east",
+          "status": "offered",
+          "draft": "s13_buell_east_tennessee_decision",
+          "option": "order-east",
+          "evidence": [
+            {
+              "source": "S13-OR",
+              "at": "I-16 part II pp. 637–638; Buell’s suggestions and Halleck’s reply printed 23 October, footnoted “true date appears to have been October 22, 12.20 p. m.” Earliest is the conservative printed date."
+            }
+          ],
+          "limit": "The operational exchange and separate turnover order are read. Their delivery, succession and later hearing are distinct."
+        },
+        {
+          "catalogueOption": "relieve",
+          "status": "offered",
+          "draft": "s13_buell_relief_decision",
+          "option": "relieve",
+          "evidence": [
+            {
+              "source": "S13-OR",
+              "at": "I-16 part II pp. 641–642; General Orders No. 168 and Halleck’s enclosed order to Buell, 24 October 1862. The separate supply instructions on p. 641 are not adopted as a policy facet here."
+            }
+          ],
+          "limit": "The operational exchange and separate turnover order are read. Their delivery, succession and later hearing are distinct."
+        }
+      ],
+      "remaining": "The operational exchange and separate turnover order are read. Their delivery, succession and later hearing are distinct."
+    },
+    {
+      "catalogue": "S55",
+      "slug": "river-squadron",
+      "stages": [
+        "s13_river_squadron",
+        "s13_river_transfer_act",
+        "s13_river_squadron_decision"
+      ],
+      "options": [
+        {
+          "catalogueOption": "another-officer",
+          "status": "held",
+          "limit": "The law and Welles’s selection are read. No read advocate for another named officer or keeping Davis is established. Legal effect is not a substitute for the handover order."
+        },
+        {
+          "catalogueOption": "keep-davis",
+          "status": "held",
+          "limit": "The law and Welles’s selection are read. No read advocate for another named officer or keeping Davis is established. Legal effect is not a substitute for the handover order."
+        },
+        {
+          "catalogueOption": "porter",
+          "status": "offered",
+          "draft": "s13_river_squadron_decision",
+          "option": "porter",
+          "evidence": [
+            {
+              "source": "S13-WELLES",
+              "at": "I pp. 157–158; entry of 1 October 1862, Welles on relieving Davis and appointing Porter. Judgments of their abilities remain his."
+            }
+          ],
+          "limit": "The law and Welles’s selection are read. No read advocate for another named officer or keeping Davis is established. Legal effect is not a substitute for the handover order."
+        }
+      ],
+      "remaining": "The law and Welles’s selection are read. No read advocate for another named officer or keeping Davis is established. Legal effect is not a substitute for the handover order."
+    },
+    {
+      "catalogue": "S56",
+      "slug": "bond-agent",
+      "stages": [
+        "s13_bond_agent"
+      ],
+      "options": [
+        {
+          "catalogueOption": "bank-syndicate",
+          "status": "held",
+          "limit": "Cooke’s reproduced announcement is read, not the underlying agency agreement. No commission rate, exact appointment day, syndicate recommendation or new-notes advocate is supplied."
+        },
+        {
+          "catalogueOption": "more-notes",
+          "status": "held",
+          "limit": "Cooke’s reproduced announcement is read, not the underlying agency agreement. No commission rate, exact appointment day, syndicate recommendation or new-notes advocate is supplied."
+        },
+        {
+          "catalogueOption": "private-agent",
+          "status": "held",
+          "limit": "Cooke’s reproduced announcement is read, not the underlying agency agreement. No commission rate, exact appointment day, syndicate recommendation or new-notes advocate is supplied."
+        }
+      ],
+      "remaining": "Cooke’s reproduced announcement is read, not the underlying agency agreement. No commission rate, exact appointment day, syndicate recommendation or new-notes advocate is supplied."
+    },
+    {
+      "catalogue": "S57",
+      "slug": "fredericksburg",
+      "stages": [
+        "s13_fredericksburg_bridges"
+      ],
+      "options": [
+        {
+          "catalogueOption": "ask-who",
+          "status": "held",
+          "limit": "Bridging correspondence is read; it does not establish a presidential advocate for every plan edit or inquiry. December battle and reporting restrictions are outside this delivery."
+        },
+        {
+          "catalogueOption": "change-crossing",
+          "status": "held",
+          "limit": "Bridging correspondence is read; it does not establish a presidential advocate for every plan edit or inquiry. December battle and reporting restrictions are outside this delivery."
+        },
+        {
+          "catalogueOption": "wait-for-bridges",
+          "status": "held",
+          "limit": "Bridging correspondence is read; it does not establish a presidential advocate for every plan edit or inquiry. December battle and reporting restrictions are outside this delivery."
+        },
+        {
+          "catalogueOption": "lift-ban",
+          "status": "held",
+          "limit": "Bridging correspondence is read; it does not establish a presidential advocate for every plan edit or inquiry. December battle and reporting restrictions are outside this delivery."
+        },
+        {
+          "catalogueOption": "read-raw-wires",
+          "status": "held",
+          "limit": "Bridging correspondence is read; it does not establish a presidential advocate for every plan edit or inquiry. December battle and reporting restrictions are outside this delivery."
+        },
+        {
+          "catalogueOption": "see-the-reporter",
+          "status": "held",
+          "limit": "Bridging correspondence is read; it does not establish a presidential advocate for every plan edit or inquiry. December battle and reporting restrictions are outside this delivery."
+        },
+        {
+          "catalogueOption": "wait-for-report",
+          "status": "held",
+          "limit": "Bridging correspondence is read; it does not establish a presidential advocate for every plan edit or inquiry. December battle and reporting restrictions are outside this delivery."
+        }
+      ],
+      "remaining": "Bridging correspondence is read; it does not establish a presidential advocate for every plan edit or inquiry. December battle and reporting restrictions are outside this delivery."
+    }
+  ]
+}

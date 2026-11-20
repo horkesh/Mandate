@@ -52,5 +52,11 @@
       "at": "9 December 1861, p. 2, article reproducing the New York Tribune of 4 December, “The Cameron and Lincoln imbroglio.”"
     }
   ],
-  "namedOnly": "The paper names historical participants as the cited document identifies them; it assigns no new words, current office or action to a rostered person."
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion.",
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ]
 }

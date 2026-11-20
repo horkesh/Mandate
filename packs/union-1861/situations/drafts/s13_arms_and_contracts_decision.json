@@ -1,0 +1,84 @@
+{
+  "id": "s13_arms_and_contracts_decision",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s13_arms_and_contracts_decision.title",
+  "text": "situation.s13_arms_and_contracts_decision.text",
+  "earliest": "1861-12-09",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 280
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_arms_and_contracts"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_arms_and_contracts"
+    }
+  },
+  "effects": [],
+  "report": null,
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "Series III, vol. I, pp. 733–734; Ripley to Cameron, 9 December 1861."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_war_ordnance",
+      "person": "ripley_james_w"
+    }
+  ],
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion.",
+  "options": [
+    {
+      "id": "decline-purchases",
+      "label": "situation.s13_arms_and_contracts_decision.option.decline-purchases",
+      "displayKey": 10,
+      "proposedBy": [
+        "ripley_james_w"
+      ],
+      "group": null,
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s13_arms_and_contracts_decision.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "decline-purchases"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_war_ordnance"
+    ],
+    "recommends": [
+      "decline-purchases"
+    ],
+    "reasons": [],
+    "confidence": 500
+  }
+}

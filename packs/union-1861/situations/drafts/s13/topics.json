@@ -31,14 +31,13 @@
       "interim": "text"
     },
     {
-      "id": "civilian-conduct-1862",
-      "class": "civil-liberties",
+      "id": "occupation-orders",
+      "class": "civilians",
       "window": {
         "from": "1861-03-04",
         "to": "1862-12-31"
       },
       "placements": [
-        "decision",
         "event",
         "text"
       ],

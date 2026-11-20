@@ -1,0 +1,89 @@
+{
+  "id": "s13_recruiting_call_decision",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s13_recruiting_call_decision.title",
+  "text": "situation.s13_recruiting_call_decision.text",
+  "earliest": "1862-07-22",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 505
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_recruiting_call"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_recruiting_call"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-CW2",
+      "at": "p. 212; Lincoln to Stanton, 22 July 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ],
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion.",
+  "options": [
+    {
+      "id": "refill-old",
+      "label": "situation.s13_recruiting_call_decision.option.refill-old",
+      "displayKey": 10,
+      "proposedBy": [
+        "lincoln_abraham"
+      ],
+      "group": null,
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s13_recruiting_call_decision.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "refill-old"
+    ]
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S13-READING",
+        "at": "index.json s13_recruiting_call_decision: no cabinet or military staff recommendation assigned by this selection; this is a bounded reading result, not a claim that no adviser existed."
+      }
+    ]
+  }
+}

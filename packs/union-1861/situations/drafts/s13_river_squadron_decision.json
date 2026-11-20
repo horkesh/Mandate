@@ -1,0 +1,84 @@
+{
+  "id": "s13_river_squadron_decision",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s13_river_squadron_decision.title",
+  "text": "situation.s13_river_squadron_decision.text",
+  "earliest": "1862-10-01",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 576
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_river_squadron"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_river_squadron"
+    }
+  },
+  "effects": [],
+  "report": null,
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-WELLES",
+      "at": "I pp. 157–158; entry of 1 October 1862."
+    }
+  ],
+  "namedOnly": "The named addressees, subjects and prospective appointees belong to the cited paper. This draft offers the courses documented there; it does not assert their present appointment or implement a change of command.",
+  "options": [
+    {
+      "id": "porter",
+      "label": "situation.s13_river_squadron_decision.option.porter",
+      "displayKey": 10,
+      "proposedBy": [
+        "welles_gideon"
+      ],
+      "group": null,
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s13_river_squadron_decision.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "porter"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_navy"
+    ],
+    "recommends": [
+      "porter"
+    ],
+    "reasons": [],
+    "confidence": 500
+  },
+  "speakers": [
+    {
+      "post": "us_secretary_navy",
+      "person": "welles_gideon"
+    }
+  ]
+}

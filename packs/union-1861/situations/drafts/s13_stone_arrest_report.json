@@ -1,0 +1,55 @@
+{
+  "id": "s13_stone_arrest_report",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_stone_arrest_report.title",
+  "text": "situation.s13_stone_arrest_report.text",
+  "earliest": "1862-02-10",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 343
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_stone_arrest_report"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_stone_arrest_report"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "union-habeas-and-arrests"
+    ],
+    "placement": "event",
+    "risks": [],
+    "actingSide": null
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "II-3 p. 253; 10 February 1862 correspondence of Brooks, Hardie, Tompkins, Gorman and Williams. The conjectural footnote on p. 248 is not treated as identification evidence."
+    }
+  ],
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion."
+}

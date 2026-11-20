@@ -1,0 +1,49 @@
+{
+  "id": "s13_river_transfer_act",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_river_transfer_act.title",
+  "text": "situation.s13_river_transfer_act.text",
+  "earliest": "1862-07-16",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 499
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_river_transfer_act"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_river_transfer_act"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-STAT12",
+      "at": "p. 587, chapter 185, sections 1–2; act approved 16 July 1862. The statute does not set a 1 October effective date."
+    }
+  ]
+}

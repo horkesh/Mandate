@@ -1,0 +1,60 @@
+{
+  "id": "s13_recruiting_new_call",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_recruiting_new_call.title",
+  "text": "situation.s13_recruiting_new_call.text",
+  "earliest": "1862-07-01",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 484
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_recruiting_new_call"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_recruiting_new_call"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "III-2 pp. 179–183, 187–188; 28–30 June exchanges and the 1 July letter. The edition’s letter is dated 1 July, distinct from intended newspaper publication the next day."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    },
+    {
+      "post": "us_secretary_state",
+      "person": "seward_william_h"
+    }
+  ],
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion."
+}

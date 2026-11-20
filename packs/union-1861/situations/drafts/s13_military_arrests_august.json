@@ -1,0 +1,61 @@
+{
+  "id": "s13_military_arrests_august",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_military_arrests_august.title",
+  "text": "situation.s13_military_arrests_august.text",
+  "earliest": "1862-08-08",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 522
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_military_arrests_august"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_military_arrests_august"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "union-habeas-and-arrests"
+    ],
+    "placement": "event",
+    "risks": [],
+    "actingSide": null
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "III-2 pp. 321–322; order authorizing arrests of persons discouraging enlistments, 8 August 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_secretary_war",
+      "person": "stanton_edwin_m"
+    }
+  ],
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion."
+}

@@ -49,7 +49,21 @@
     {
       "source": "S13-CARPENTER",
       "at": "pp. 20–22; Lincoln’s later conversation as reported by Carpenter. Lincoln expressly could not remember the exact July date; 22 July is a provisional catalogue locator, not established by this recollection."
+    },
+    {
+      "source": "S13-CW2",
+      "at": "p. 213; draft first submitted to the cabinet, editorial heading 22 July 1862. This is additional evidence for the dated draft, not a verbatim cabinet minute."
     }
   ],
-  "namedOnly": "The paper names historical participants as the cited document identifies them; it assigns no new words, current office or action to a rostered person."
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion.",
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    },
+    {
+      "post": "us_secretary_state",
+      "person": "seward_william_h"
+    }
+  ]
 }

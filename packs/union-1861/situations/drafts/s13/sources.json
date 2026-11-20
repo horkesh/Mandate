@@ -27,17 +27,17 @@
       "kind": "primary",
       "licence": "public-domain",
       "basis": "government-work",
-      "copyUsed": "FRASER government scan; S5 treasury1862.pdf, pp. 7–9 reread in S13.",
+      "copyUsed": "https://fraser.stlouisfed.org/docs/publications/treasar/AR_TREASURY_1862.pdf; retained S5 government scan; selected pp. 7, 9 reread in S13.",
       "licencePage": null,
       "licenceReadOn": null
     },
     {
       "key": "S13-WELLES",
-      "title": "Gideon Welles, Diary, vol. I (1911)",
+      "title": "Gideon Welles, Diary, vol. I (1911), dated diary entries",
       "kind": "primary",
       "licence": "public-domain",
       "basis": "expired-copyright",
-      "copyUsed": "https://archive.org/details/diaryofgideonwel01well; posthumous published edition.",
+      "copyUsed": "https://archive.org/details/diaryofgideonwel01well; dated entries only. The retrospective opening pp. 61–63 retains the live policy’s weak WELLES-D1-RETRO key and is not a lone source for an offered S13 situation.",
       "licencePage": null,
       "licenceReadOn": null
     },
@@ -57,7 +57,7 @@
       "kind": "primary",
       "licence": "public-domain",
       "basis": "government-work",
-      "copyUsed": "https://www.govinfo.gov/app/details/STATUTE-12; selected government granules retained by S7.",
+      "copyUsed": "https://www.govinfo.gov/app/details/STATUTE-12; selected government granules retained by S7 and S13, listed with hashes in reading-manifest.json.",
       "licencePage": null,
       "licenceReadOn": null
     },
@@ -127,7 +127,7 @@
       "kind": "primary",
       "licence": "public-domain",
       "basis": "government-work",
-      "copyUsed": "https://archive.org/details/officialrecordso06unit; S7 retained original OCR, printed pp. 233–234 (OCR n0264–n0265) reread in S13.",
+      "copyUsed": "https://archive.org/details/officialrecordso0006unse; S7 retained original OCR, printed pp. 233–234 (OCR n0264–n0265) reread in S13.",
       "licencePage": null,
       "licenceReadOn": null
     }

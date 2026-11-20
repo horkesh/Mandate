@@ -1,0 +1,89 @@
+{
+  "id": "s13_mcclellan_relief_decision",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s13_mcclellan_relief_decision.title",
+  "text": "situation.s13_mcclellan_relief_decision.text",
+  "earliest": "1862-11-05",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 611
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_mcclellan_relief"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_mcclellan_relief"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-CW2",
+      "at": "p. 252; order of 5 November 1862, including paragraph IV on issue at the general-in-chief’s discretion."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ],
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion.",
+  "options": [
+    {
+      "id": "relieve",
+      "label": "situation.s13_mcclellan_relief_decision.option.relieve",
+      "displayKey": 10,
+      "proposedBy": [
+        "lincoln_abraham"
+      ],
+      "group": null,
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s13_mcclellan_relief_decision.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "relieve"
+    ]
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S13-READING",
+        "at": "index.json s13_mcclellan_relief_decision: no cabinet or military staff recommendation assigned by this selection; this is a bounded reading result, not a claim that no adviser existed."
+      }
+    ]
+  }
+}

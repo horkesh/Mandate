@@ -1,0 +1,101 @@
+{
+  "id": "s13_peninsula_withdrawal_decision",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s13_peninsula_withdrawal_decision.title",
+  "text": "situation.s13_peninsula_withdrawal_decision.text",
+  "earliest": "1862-08-04",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 518
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_peninsula_withdrawal"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_peninsula_withdrawal"
+    }
+  },
+  "effects": [],
+  "report": null,
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "Series I, vol. XI, part I, pp. 80–82; order and protest, 3–4 August 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_general_in_chief",
+      "person": "halleck_henry_w"
+    },
+    {
+      "post": null,
+      "person": "mcclellan_george_b"
+    }
+  ],
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion.",
+  "options": [
+    {
+      "id": "reinforce-there",
+      "label": "situation.s13_peninsula_withdrawal_decision.option.reinforce-there",
+      "displayKey": 10,
+      "proposedBy": [
+        "mcclellan_george_b"
+      ],
+      "group": null,
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    },
+    {
+      "id": "withdraw",
+      "label": "situation.s13_peninsula_withdrawal_decision.option.withdraw",
+      "displayKey": 20,
+      "proposedBy": [
+        "halleck_henry_w"
+      ],
+      "group": null,
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s13_peninsula_withdrawal_decision.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "withdraw"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_general_in_chief"
+    ],
+    "recommends": [
+      "withdraw"
+    ],
+    "reasons": [],
+    "confidence": 500
+  }
+}

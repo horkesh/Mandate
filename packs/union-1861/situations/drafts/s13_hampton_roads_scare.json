@@ -4,11 +4,11 @@
   "faction": "union",
   "title": "situation.s13_hampton_roads_scare.title",
   "text": "situation.s13_hampton_roads_scare.text",
-  "earliest": "1862-03-09",
+  "earliest": "1862-03-10",
   "event": {
     "all": [
       {
-        "dayAtLeast": 370
+        "dayAtLeast": 371
       },
       {
         "knows": {
@@ -37,25 +37,24 @@
     "subtype": "cabinet-word"
   },
   "gate": {
-    "topics": [
-      "capture-in-battle"
-    ],
-    "placement": "text",
-    "risks": [],
-    "actingSide": null
+    "none": "Proposed for review: these are naval operating precautions after the ironclad alarm, not a policy toward a protected population, security detention or an atrocity consequence."
   },
   "gateReview": null,
   "citations": [
     {
-      "source": "S13-WELLES",
-      "at": "vol. I pp. 61–63, especially p. 63; retrospective opening account of the cabinet alarm on 9 March, not a dated diary entry."
+      "source": "S13-CW2",
+      "at": "p. 136; Welles to Fox, Navy Department, 10 March 1862, 10.27 a.m., conveying the President’s instructions."
     }
   ],
   "speakers": [
     {
       "post": "us_secretary_navy",
       "person": "welles_gideon"
+    },
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
     }
   ],
-  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion."
 }

@@ -1,0 +1,84 @@
+{
+  "id": "s13_atlantic_squadron_division_decision",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s13_atlantic_squadron_division_decision.title",
+  "text": "situation.s13_atlantic_squadron_division_decision.text",
+  "earliest": "1861-09-18",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 198
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_atlantic_squadron_division"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_atlantic_squadron_division"
+    }
+  },
+  "effects": [],
+  "report": null,
+  "gate": {
+    "none": "Proposed for review: this document concerns administrative or military authority and carries no policy toward a protected population."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-ORN",
+      "at": "I-6 pp. 233–234; Welles to Goldsborough, appointment and confidential instructions of 18 September 1861."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_secretary_navy",
+      "person": "welles_gideon"
+    }
+  ],
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion.",
+  "options": [
+    {
+      "id": "divide-squadron",
+      "label": "situation.s13_atlantic_squadron_division_decision.option.divide-squadron",
+      "displayKey": 10,
+      "proposedBy": [
+        "welles_gideon"
+      ],
+      "group": null,
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s13_atlantic_squadron_division_decision.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "divide-squadron"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_navy"
+    ],
+    "recommends": [
+      "divide-squadron"
+    ],
+    "reasons": [],
+    "confidence": 500
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "s13_army_of_virginia_decision",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s13_army_of_virginia_decision.title",
+  "text": "situation.s13_army_of_virginia_decision.text",
+  "earliest": "1862-06-26",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 479
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_army_of_virginia"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_army_of_virginia"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-CW2",
+      "at": "p. 188; order constituting the Army of Virginia, 26 June 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ],
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion.",
+  "options": [
+    {
+      "id": "merge-under-pope",
+      "label": "situation.s13_army_of_virginia_decision.option.merge-under-pope",
+      "displayKey": 10,
+      "proposedBy": [
+        "lincoln_abraham"
+      ],
+      "group": null,
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s13_army_of_virginia_decision.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "merge-under-pope"
+    ]
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S13-READING",
+        "at": "index.json s13_army_of_virginia_decision: no cabinet or military staff recommendation assigned by this selection; this is a bounded reading result, not a claim that no adviser existed."
+      }
+    ]
+  }
+}

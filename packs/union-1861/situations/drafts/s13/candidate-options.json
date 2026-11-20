@@ -1,0 +1,579 @@
+{
+  "status": "Evidence and wording for held choices, never loaded or spliced into a SituationDef. Empty costs are an explicit reason these are not offered options.",
+  "items": [
+    {
+      "situation": "s13_fremont_proclamation",
+      "catalogue": "S22",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1861-09-02",
+      "option": {
+        "id": "private-request",
+        "label": "situation.s13_fremont_proclamation.candidate.private-request",
+        "displayKey": 10,
+        "proposedBy": {
+          "basis": "principal-initiative",
+          "author": "lincoln_abraham",
+          "dated": "1861-09-02",
+          "cites": [
+            {
+              "source": "S13-OR",
+              "at": "I-3 pp. 469–470; Lincoln to Frémont, 2 September 1861. Separate from the shooting restriction."
+            }
+          ]
+        },
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-OR",
+          "at": "I-3 pp. 469–470; Lincoln to Frémont, 2 September 1861. Separate from the shooting restriction."
+        }
+      ],
+      "holds": [
+        "Must wait for the 2 September presidential paper, not appear on the 30 August proclamation.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_fremont_proclamation",
+      "catalogue": "S22",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1861-09-11",
+      "option": {
+        "id": "public-order",
+        "label": "situation.s13_fremont_proclamation.candidate.public-order",
+        "displayKey": 20,
+        "proposedBy": {
+          "basis": "principal-initiative",
+          "author": "lincoln_abraham",
+          "dated": "1861-09-11",
+          "cites": [
+            {
+              "source": "S13-OR",
+              "at": "I-3 pp. 485–486; Lincoln to Frémont, 11 September 1861."
+            }
+          ]
+        },
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-OR",
+          "at": "I-3 pp. 485–486; Lincoln to Frémont, 11 September 1861."
+        }
+      ],
+      "holds": [
+        "Separate response stage and received paper; no policy toward shooting is offered.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_fremont_proclamation",
+      "catalogue": "S22",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1861-08-30",
+      "option": {
+        "id": "emancipation-stand",
+        "label": "situation.s13_fremont_proclamation.candidate.emancipation-stand",
+        "displayKey": 30,
+        "proposedBy": [
+          "fremont_john_c"
+        ],
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-OR",
+          "at": "I-3 pp. 466–467; Frémont’s proclamation of 30 August. Emancipation facet only."
+        }
+      ],
+      "holds": [
+        "The author supports his own declaration. This supplies no advocate for reprisals or shooting.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_maryland_legislature_autumn",
+      "catalogue": "S23",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1861-09-11",
+      "option": {
+        "id": "detain",
+        "label": "situation.s13_maryland_legislature_autumn.candidate.detain",
+        "displayKey": 40,
+        "proposedBy": [
+          "cameron_simon"
+        ],
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-OR",
+          "at": "I-5 p. 193; Cameron to Banks, 11 September 1861."
+        }
+      ],
+      "holds": [
+        "Security and case-review owners are missing; allegations about legislators are not adjudicated fact.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_compensated_emancipation",
+      "catalogue": "S33",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1862-03-06",
+      "option": {
+        "id": "propose",
+        "label": "situation.s13_compensated_emancipation.candidate.propose",
+        "displayKey": 50,
+        "proposedBy": {
+          "basis": "principal-initiative",
+          "author": "lincoln_abraham",
+          "dated": "1862-03-06",
+          "cites": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 129–130; message to Congress, 6 March 1862."
+            }
+          ]
+        },
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-CW2",
+          "at": "pp. 129–130; message to Congress, 6 March 1862."
+        }
+      ],
+      "holds": [
+        "Congressional offer, state acceptance and state abolition are separate acts.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_hunter_order",
+      "catalogue": "S39",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1862-05-19",
+      "option": {
+        "id": "revoke",
+        "label": "situation.s13_hunter_order.candidate.revoke",
+        "displayKey": 60,
+        "proposedBy": {
+          "basis": "principal-initiative",
+          "author": "lincoln_abraham",
+          "dated": "1862-05-19",
+          "cites": [
+            {
+              "source": "S13-STAT12",
+              "at": "pp. 1264–1265; proclamation, 19 May 1862."
+            }
+          ]
+        },
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-STAT12",
+          "at": "pp. 1264–1265; proclamation, 19 May 1862."
+        }
+      ],
+      "holds": [
+        "Preserve Lincoln’s qualification that authenticity had not yet been established; no blanket repeal of camp regulations.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_hunter_order",
+      "catalogue": "S39",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1862-05-09",
+      "option": {
+        "id": "let-stand",
+        "label": "situation.s13_hunter_order.candidate.let-stand",
+        "displayKey": 70,
+        "proposedBy": [
+          "hunter_david"
+        ],
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-STAT12",
+          "at": "pp. 1264–1265; Hunter’s 9 May order as reproduced in the 19 May proclamation."
+        }
+      ],
+      "holds": [
+        "Only the reproduced order is read here; no government authorization or voluntariness of recruitment follows.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_confiscation_and_militia_acts",
+      "catalogue": "S45",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1862-07-17",
+      "option": {
+        "id": "sign-with-resolution",
+        "label": "situation.s13_confiscation_and_militia_acts.candidate.sign-with-resolution",
+        "displayKey": 80,
+        "proposedBy": {
+          "basis": "principal-initiative",
+          "author": "lincoln_abraham",
+          "dated": "1862-07-17",
+          "cites": [
+            {
+              "source": "S13-CW2",
+              "at": "p. 209; message of 17 July 1862, distinguishing the signed act/resolution from the prepared objection."
+            }
+          ]
+        },
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-CW2",
+          "at": "p. 209; message of 17 July 1862, distinguishing the signed act/resolution from the prepared objection."
+        }
+      ],
+      "holds": [
+        "Do not turn this into a single undifferentiated signing of two unrelated acts.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_confiscation_and_militia_acts",
+      "catalogue": "S45",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1862-07-17",
+      "option": {
+        "id": "veto",
+        "label": "situation.s13_confiscation_and_militia_acts.candidate.veto",
+        "displayKey": 90,
+        "proposedBy": {
+          "basis": "principal-initiative",
+          "author": "lincoln_abraham",
+          "dated": "1862-07-17",
+          "cites": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 209–211; prepared objection transmitted after approval, 17 July 1862."
+            }
+          ]
+        },
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-CW2",
+          "at": "pp. 209–211; prepared objection transmitted after approval, 17 July 1862."
+        }
+      ],
+      "holds": [
+        "Prepared but not the enacted outcome; no pocket-veto rule is invented.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_emancipation_cabinet_draft",
+      "catalogue": "S46",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1862-07-22",
+      "option": {
+        "id": "issue-now",
+        "label": "situation.s13_emancipation_cabinet_draft.candidate.issue-now",
+        "displayKey": 100,
+        "proposedBy": {
+          "basis": "principal-initiative",
+          "author": "lincoln_abraham",
+          "dated": "1862-07-22",
+          "cites": [
+            {
+              "source": "S13-CW2",
+              "at": "p. 213; draft first submitted to the cabinet, editorial heading 22 July 1862."
+            }
+          ]
+        },
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-CW2",
+          "at": "p. 213; draft first submitted to the cabinet, editorial heading 22 July 1862."
+        }
+      ],
+      "holds": [
+        "Private draft, not a published July proclamation; the period packet must distinguish those states.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_emancipation_cabinet_draft",
+      "catalogue": "S46",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1862-07-22",
+      "option": {
+        "id": "wait-for-victory",
+        "label": "situation.s13_emancipation_cabinet_draft.candidate.wait-for-victory",
+        "displayKey": 110,
+        "proposedBy": [
+          "seward_william_h"
+        ],
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-CARPENTER",
+          "at": "pp. 21–22; later reported conversation with Lincoln."
+        }
+      ],
+      "holds": [
+        "Date is the catalogue/editorial locator. Carpenter’s Lincoln expressly could not remember the exact July day; a victory-report contract is still missing.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented.",
+      "dateBasis": "Catalogue/editorial locator, not an established exact date of Seward’s advice."
+    },
+    {
+      "situation": "s13_greeley_reply",
+      "catalogue": "S46",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1862-08-22",
+      "option": {
+        "id": "union-first-reply",
+        "label": "situation.s13_greeley_reply.candidate.union-first-reply",
+        "displayKey": 120,
+        "proposedBy": {
+          "basis": "principal-initiative",
+          "author": "lincoln_abraham",
+          "dated": "1862-08-22",
+          "cites": [
+            {
+              "source": "S13-CW2",
+              "at": "pp. 227–228; reply to Greeley, 22 August 1862."
+            }
+          ]
+        },
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-CW2",
+          "at": "pp. 227–228; reply to Greeley, 22 August 1862."
+        }
+      ],
+      "holds": [
+        "A public reply is separate from publication of the private emancipation draft.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_emancipation_preliminary",
+      "catalogue": "S46",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1862-09-22",
+      "option": {
+        "id": "issue-preliminary",
+        "label": "situation.s13_emancipation_preliminary.candidate.issue-preliminary",
+        "displayKey": 130,
+        "proposedBy": {
+          "basis": "principal-initiative",
+          "author": "lincoln_abraham",
+          "dated": "1862-09-22",
+          "cites": [
+            {
+              "source": "S13-STAT12",
+              "at": "pp. 1267–1268; proclamation, 22 September 1862."
+            }
+          ]
+        },
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-STAT12",
+          "at": "pp. 1267–1268; proclamation, 22 September 1862."
+        }
+      ],
+      "holds": [
+        "Future freedom, immediate return prohibition and current law enforcement are distinct; no January 1863 act is included.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_emancipation_preliminary",
+      "catalogue": "S46",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1862-09-22",
+      "option": {
+        "id": "delay",
+        "label": "situation.s13_emancipation_preliminary.candidate.delay",
+        "displayKey": 140,
+        "proposedBy": [
+          "blair_montgomery"
+        ],
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-WELLES",
+          "at": "I pp. 143–144; Blair’s objection to expediency as Welles records it, 22 September."
+        }
+      ],
+      "holds": [
+        "His concern is attributed political judgment, not a modelled prediction that border states leave.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_military_arrests_august",
+      "catalogue": "S48",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1862-08-08",
+      "option": {
+        "id": "war-department-order",
+        "label": "situation.s13_military_arrests_august.candidate.war-department-order",
+        "displayKey": 150,
+        "proposedBy": [
+          "stanton_edwin_m"
+        ],
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-OR",
+          "at": "III-2 pp. 321–322; Stanton’s order, 8 August 1862."
+        }
+      ],
+      "holds": [
+        "The order’s breadth, individual arrest, hearing and costs require separate owners.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_military_arrests",
+      "catalogue": "S48",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1862-09-24",
+      "option": {
+        "id": "nationwide",
+        "label": "situation.s13_military_arrests.candidate.nationwide",
+        "displayKey": 160,
+        "proposedBy": {
+          "basis": "principal-initiative",
+          "author": "lincoln_abraham",
+          "dated": "1862-09-24",
+          "cites": [
+            {
+              "source": "S13-CW2",
+              "at": "p. 239; proclamation, 24 September 1862."
+            }
+          ]
+        },
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-CW2",
+          "at": "p. 239; proclamation, 24 September 1862."
+        }
+      ],
+      "holds": [
+        "The proclamation is not proof of the guilt or number of people detained.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    },
+    {
+      "situation": "s13_railroad_dispute",
+      "catalogue": "S50",
+      "status": "held candidate; not a SituationDef option",
+      "evidenceDated": "1862-08-23",
+      "option": {
+        "id": "back-railroad",
+        "label": "situation.s13_railroad_dispute.candidate.back-railroad",
+        "displayKey": 170,
+        "proposedBy": [
+          "halleck_henry_w"
+        ],
+        "effects": [],
+        "orders": [],
+        "calls": [],
+        "lockedCosts": []
+      },
+      "citations": [
+        {
+          "source": "S13-HAUPT",
+          "at": "pp. 83, 87; reproduced Halleck instruction and 23 August exchange."
+        }
+      ],
+      "holds": [
+        "Separate railroad authority from the arrest threat and resolve Haupt/Sturgis identities. Do not adopt the memoir’s claimed battlefield counterfactual.",
+        "Gate placement, applicable policy rows and real locked costs need their owners and reviewer. No arbitrary numerical penalty is inserted to pass a validator."
+      ],
+      "acts": "The choice is reported, not applied. No new policy, arrest, appointment, statute or report owner is implemented."
+    }
+  ]
+}

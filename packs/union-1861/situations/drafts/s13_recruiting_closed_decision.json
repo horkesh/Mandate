@@ -1,0 +1,84 @@
+{
+  "id": "s13_recruiting_closed_decision",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s13_recruiting_closed_decision.title",
+  "text": "situation.s13_recruiting_closed_decision.text",
+  "earliest": "1862-04-03",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 395
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_recruiting_closed"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_recruiting_closed"
+    }
+  },
+  "effects": [],
+  "report": null,
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "III-2 pp. 2–3; General Orders No. 33, paragraph III, 3 April 1862, and circular to governors."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_secretary_war",
+      "person": "stanton_edwin_m"
+    }
+  ],
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion.",
+  "options": [
+    {
+      "id": "close",
+      "label": "situation.s13_recruiting_closed_decision.option.close",
+      "displayKey": 10,
+      "proposedBy": [
+        "stanton_edwin_m"
+      ],
+      "group": null,
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s13_recruiting_closed_decision.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "close"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "recommends": [
+      "close"
+    ],
+    "reasons": [],
+    "confidence": 500
+  }
+}

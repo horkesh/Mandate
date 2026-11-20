@@ -1,0 +1,111 @@
+{
+  "id": "s13_cabinet_remonstrance_decision",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s13_cabinet_remonstrance_decision.title",
+  "text": "situation.s13_cabinet_remonstrance_decision.text",
+  "earliest": "1862-08-31",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 545
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_cabinet_remonstrance"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_cabinet_remonstrance"
+    }
+  },
+  "effects": [],
+  "report": null,
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-WELLES",
+      "at": "vol. I pp. 94–99; entry of 31 August 1862; the paper, signature requests and Welles’s alternative."
+    },
+    {
+      "source": "S13-WELLES",
+      "at": "I p. 94; Welles’s own proposed general consultation in the entry of 31 August."
+    },
+    {
+      "source": "S13-WELLES",
+      "at": "I pp. 94, 97–98; Stanton’s paper and Welles’s report of his explanation, 31 August."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_secretary_navy",
+      "person": "welles_gideon"
+    },
+    {
+      "post": "us_secretary_war",
+      "person": "stanton_edwin_m"
+    },
+    {
+      "post": "us_secretary_treasury",
+      "person": "chase_salmon_p"
+    }
+  ],
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion.",
+  "options": [
+    {
+      "id": "consult-cabinet",
+      "label": "situation.s13_cabinet_remonstrance_decision.option.consult-cabinet",
+      "displayKey": 10,
+      "proposedBy": [
+        "welles_gideon"
+      ],
+      "group": null,
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    },
+    {
+      "id": "remove",
+      "label": "situation.s13_cabinet_remonstrance_decision.option.remove",
+      "displayKey": 20,
+      "proposedBy": [
+        "stanton_edwin_m"
+      ],
+      "group": null,
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s13_cabinet_remonstrance_decision.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "unsourced": "The readings establish the proposed courses, not a completed presidential choice for this facet."
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "recommends": [
+      "remove"
+    ],
+    "reasons": [],
+    "confidence": 500
+  }
+}

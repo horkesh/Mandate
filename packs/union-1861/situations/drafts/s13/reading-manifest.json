@@ -1,0 +1,1317 @@
+{
+  "scope": "S13, unsigned authoring only",
+  "originals": [
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S6/LINCOLN-CW2_djvu.txt",
+      "bytes": 2407661,
+      "sha256": "1da541fb6ed0c454df5fa2dc2f46b2f8449b7d68d550448751d6760a5b9501b5",
+      "source": "S13-CW2",
+      "url": "https://archive.org/details/completeworksofa02linc_0",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S6/OR-I-5_djvu.txt",
+      "bytes": 4338991,
+      "sha256": "ef9c0540bb5b24bebde263ee5b4300be30c8fc4ce8e0e1a9ed4e5a3c3a2a5dba",
+      "source": "S13-OR",
+      "url": "https://archive.org/details/cu31924077730194",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S6/OR-I-7.pages.json",
+      "bytes": 3609955,
+      "sha256": "9011d48d8f4ca0c71e57997ac9faba32fead38b7c9d963adc84ebcd0b4a3c8ec",
+      "source": "S13-OR",
+      "url": "https://archive.org/details/cu31924079609545",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S6/OR-I-11-1_djvu.txt",
+      "bytes": 4429745,
+      "sha256": "f8a7b837502d45c81152e4d2dabd9c80be8c2eca221a37a4fb5bfb5b40193c92",
+      "source": "S13-OR",
+      "url": "https://archive.org/details/cu31924079609560",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S6/OR-I-11-3_djvu.txt",
+      "bytes": 2235342,
+      "sha256": "fae3c466f52676c194120df62aacb474500652950e4837bde9115533aa3fb953",
+      "source": "S13-OR",
+      "url": "https://archive.org/details/cu31924077730137",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S6/OR-I-16-2_djvu.txt",
+      "bytes": 3246828,
+      "sha256": "720dec85eab86ffe12eb7da7d272aa7ea59bb484a1121e899f66fb5692cdd8cb",
+      "source": "S13-OR",
+      "url": "https://archive.org/details/cu31924077730228",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S6/OR-I-21b_djvu.txt",
+      "bytes": 4302597,
+      "sha256": "599c249918ce3644d033fa467d2a78f1465c4f41972f71b8c0b0ecb55caf4371",
+      "source": "S13-OR",
+      "url": "https://archive.org/details/warofrebellion21unit",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S6/OR-III-1_djvu.txt",
+      "bytes": 3366963,
+      "sha256": "86e47b4172b296ef24fb82e1816502a5aa2d9581807651c37baf620d9a1be3af",
+      "source": "S13-OR",
+      "url": "https://archive.org/details/cu31924079622175",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S6/OR-III-2_djvu.txt",
+      "bytes": 3395991,
+      "sha256": "85ac19276dcdbb50b03271aaf9621cf6731ef8053b0ee25aa5ead9cee671ea20",
+      "source": "S13-OR",
+      "url": "https://archive.org/details/cu31924079575241",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S7/WELLES/diaryofgideonwel01well_djvu.xml",
+      "bytes": 16089293,
+      "sha256": "783a02aa66a0f4cf9f67aa5ff79e48eb1fb00dd7a06adfab4ae6fdf4543454a3",
+      "source": "S13-WELLES",
+      "url": "https://archive.org/details/diaryofgideonwel01well",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S7/CARPENTER/sixmonths00lincgoog_djvu.xml",
+      "bytes": 5582120,
+      "sha256": "b34efd67809612af7954b77aee373a77d12d2c9f8984d03cd5a18935eff65dba",
+      "source": "S13-CARPENTER",
+      "url": "https://archive.org/details/sixmonths00lincgoog",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S7/OR-I-3/warofrebellionco03unit_djvu.xml",
+      "bytes": 32717125,
+      "sha256": "a5639bae848dc9dd06a1eaf861a58cf30abf8e06ea4a3f678f63d3a621b98d43",
+      "source": "S13-OR",
+      "url": "https://archive.org/details/warofrebellionco03unit",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S7/OR-I-15/warofrebellion0115rootrich_djvu.xml",
+      "bytes": 50868467,
+      "sha256": "1553dfd29a68cf17a44d55faa10a296455596e7ca849fa48cd2c1899c5516744",
+      "source": "S13-OR",
+      "url": "https://archive.org/details/warofrebellion0115rootrich",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S7/OR-II-3b/warofrebellion0203rootrich_djvu.xml",
+      "bytes": 36538694,
+      "sha256": "8b7440158c89c7063a2c1c29da3fb5a8f7f472af21ffa54c2f0b207ee6d9af04",
+      "source": "S13-OR",
+      "url": "https://archive.org/details/warofrebellion0203rootrich",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S7/ORN-6/officialrecordso0006unse_djvu.xml",
+      "bytes": 34078205,
+      "sha256": "2fdec8672eab58349cec1af2607888c9c2040a73a8400a12ac8aa5cb5b598596",
+      "source": "S13-ORN",
+      "url": "https://archive.org/details/officialrecordso0006unse",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S5/treasury1862.pdf",
+      "bytes": 8048372,
+      "sha256": "228f41807ffb600d942574b8bacecc7e1337324069fb7d81f92cac89927f4cec",
+      "source": "S13-TREAS",
+      "url": "https://fraser.stlouisfed.org/docs/publications/treasar/AR_TREASURY_1862.pdf",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S4/gulfandinlandwa03mahagoog/gulfandinlandwa03mahagoog.pdf",
+      "bytes": 6903596,
+      "sha256": "c3e02fb0e377429697ca98f33c3befc3ee693256b9b900794ddbd8fbbd1a4cf4",
+      "source": "S13-MAHAN",
+      "url": "https://archive.org/details/gulfandinlandwa03mahagoog",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S7/statutes/12-p1264.pdf",
+      "bytes": 580224,
+      "sha256": "3cc4406f90b5f52b5ecdc93234a9040ea6e1b0ed065742c36b203fb3469787c8",
+      "source": "S13-STAT12",
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-12/pdf/STATUTE-12-Pg1264.pdf",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S7/statutes/12-p1267.pdf",
+      "bytes": 617704,
+      "sha256": "fda129bf6b8c19d5d8a224c0e6eff2b0cb0bf63bc6c102d6fd5fd0d0ab073bff",
+      "source": "S13-STAT12",
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-12/pdf/STATUTE-12-Pg1267.pdf",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S7/statutes/12-p589-2.pdf",
+      "bytes": 1049350,
+      "sha256": "e74a6ff9a5ba64989daa70006854ebab19be4894dbf72a3c15a4aad10424c826",
+      "source": "S13-STAT12",
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-12/pdf/STATUTE-12-Pg589-2.pdf",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S7/statutes/12-p597.pdf",
+      "bytes": 1007388,
+      "sha256": "195bdbe72114cdf3514b7d2b1156586750ae8e8f1836cc221fd1e00e04944a63",
+      "source": "S13-STAT12",
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-12/pdf/STATUTE-12-Pg597.pdf",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S7/statutes/12-p627.pdf",
+      "bytes": 401908,
+      "sha256": "31bb0589866aaafae92f33410f5c69df59326ba93b3061e0a2ab4c8fe76e2b0a",
+      "source": "S13-STAT12",
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-12/pdf/STATUTE-12-Pg627.pdf",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/sources/haupt.pdf",
+      "bytes": 98696551,
+      "sha256": "be2df8a6ecedfa757d4ee71648dced130e4cd5e4d1a18fc9161999e3226f845e",
+      "source": "S13-HAUPT",
+      "url": "https://tile.loc.gov/storage-services/public/gdcmassbookdig/reminiscencesofg00haup/reminiscencesofg00haup.pdf",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/sources/cooke-record.pdf",
+      "bytes": 20789930,
+      "sha256": "fdd1d65428a7e5dff3f619f0b360bb29b1db47850a89c9c07cdc3f2963350188",
+      "source": "S13-COOKE",
+      "url": "https://www.congress.gov/49/crecb/1886/01/06/GPO-CRECB-1886-pt1-v17-37.pdf",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/sources/trent.pdf",
+      "bytes": 8349481,
+      "sha256": "c7ea7152cec85478fecc2bca6cb67f3f8a54008f53a3aa98822fd23762c7c670",
+      "source": "S13-TRENT",
+      "url": "https://www.govinfo.gov/content/pkg/SERIALSET-01121_00_00-008-0008-0000/pdf/SERIALSET-01121_00_00-008-0008-0000.pdf",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/sources/stat12-587-3.pdf",
+      "bytes": 560562,
+      "sha256": "5018376bf00ec8a3bc7ec26b4824e35b83b1bfd4a280406adac13fcebfb3fa81",
+      "source": "S13-STAT12",
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-12/pdf/STATUTE-12-Pg587-3.pdf",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/dispatch-1861-12-09-p2.md",
+      "bytes": 4549,
+      "sha256": "fa1a7fa249839cb31881265839ba18e1c9d5604b2c203dc1d4a640b6bfd3bf81",
+      "source": "S13-DISPATCH",
+      "url": "https://dispatch.richmond.edu/1861/12/9/2/33",
+      "reading": "Selected pages only; bibliography and draft citations govern. A full-file hash is preservation evidence, not a claim that the volume was read whole."
+    }
+  ],
+  "extracts": [
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/12-p1264.pdf.txt",
+      "bytes": 7754,
+      "sha256": "bac5242e3140938a213b2bf1a26e09c5274a975a8e77e68c0eae9ea5535c6764",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/12-p1267.pdf.txt",
+      "bytes": 9299,
+      "sha256": "45aa49f25c3a9cf72419b20554302f730e7a0c3f2cd1859e90469ab8d5a1a7ba",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/12-p589-2.pdf.txt",
+      "bytes": 18471,
+      "sha256": "f3b52868122d5c7615fbafc5bd4f25fe9cfe47be328a70723d8246abb0b9d860",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/12-p597.pdf.txt",
+      "bytes": 18483,
+      "sha256": "a919596f61f2c6f2bbd80bc970dbc622ef5c173d62d7a637babc35d169bbb8de",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/12-p627.pdf.txt",
+      "bytes": 4399,
+      "sha256": "0a0bccae5c9810a5e487873926f6347386e6b118255754ecacd88758f8705323",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/CARPENTER-p20.txt",
+      "bytes": 1342,
+      "sha256": "426b36e5afbaa5954d17e085d98db6486a924b5bfe07eef5d9153e3389e89824",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/CARPENTER-p21.txt",
+      "bytes": 1568,
+      "sha256": "c0e147688f2c3f99b84cbbef71bc6ecb38c19aceab9235201026d359db9f5fbf",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/CARPENTER-p22.txt",
+      "bytes": 1567,
+      "sha256": "9f5f61e8142df6bb5191257b3d0dfec3d50ec99cc1fc054460512590c1ec018e",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/CARPENTER-p23.txt",
+      "bytes": 1517,
+      "sha256": "9e7512007c9921861f4a50d4be9d31e383abeae07981734d1ef05fd698b1f9b3",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/COOKE-pdf15.txt",
+      "bytes": 11570,
+      "sha256": "92d8c7cfef519cd3dadddc9550ae45a901a156d0f96643b0517d762408b1863f",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/dispatch-1861-12-09-p2.md",
+      "bytes": 4549,
+      "sha256": "fa1a7fa249839cb31881265839ba18e1c9d5604b2c203dc1d4a640b6bfd3bf81",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@117-120,@121-130-pdf117.txt",
+      "bytes": 1973,
+      "sha256": "4d0664620737d21842d91100cdedfafd7393ddbf1e99692b527167915da14040",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@117-120,@121-130-pdf118.txt",
+      "bytes": 1938,
+      "sha256": "3d81b62055ad9d84614c3e7ecfd88b63d1d5d30f3631d1352d8ecae58fc0ac11",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@117-120,@121-130-pdf119.txt",
+      "bytes": 1992,
+      "sha256": "036eb90d9885979734cd208c711ffc24f4584ec57cfea51080363cca25e42245",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@117-120,@121-130-pdf120.txt",
+      "bytes": 1865,
+      "sha256": "b16e4d1ea243ccc2b1ad728bea657906d639081e482a1757d07e0ef1c04dfad9",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@117-120,@121-130-pdf121.txt",
+      "bytes": 1494,
+      "sha256": "edd59de8db7f683b3025314caa7149c1ee2dab00e798ec54687619349da8d127",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@117-120,@121-130-pdf122.txt",
+      "bytes": 1844,
+      "sha256": "a9786103352cefad9c92dd3a476eb19579b967b2d5b68222b0c5f31b0fdc12f4",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@117-120,@121-130-pdf123.txt",
+      "bytes": 1997,
+      "sha256": "f617e84505e8402d62d57240f4b4180983ec6363016993cbfa9cc1381eb9444b",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@117-120,@121-130-pdf124.txt",
+      "bytes": 1967,
+      "sha256": "5769048501fd95820a9add00a5d05bfda43bc10917a314140177b247fb688516",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@117-120,@121-130-pdf125.txt",
+      "bytes": 2013,
+      "sha256": "68ab11a4fbbf0d12eeee1eadce1f88ff0daf9d3c0d6c58d453b8e9b82dc0af36",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@117-120,@121-130-pdf126.txt",
+      "bytes": 1942,
+      "sha256": "da6069347e5c128effe2ad4e50d0e28683c9e61b0004118c0de5c1b2614f5846",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@117-120,@121-130-pdf127.txt",
+      "bytes": 1957,
+      "sha256": "a4d8c3331a91b3de4d2ec7945de5ca4206402a287cecbffaa47d47f1c1da28d5",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@117-120,@121-130-pdf128.txt",
+      "bytes": 1878,
+      "sha256": "3534e2a467677f999c44863b1b6e50d33b22d72257fb5f6306713a7e92121da6",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@117-120,@121-130-pdf129.txt",
+      "bytes": 2011,
+      "sha256": "01405fa9b46a508c5a1dcf4936da634e02ec2ad0d46be3a906ac4e58a19f1e60",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@117-120,@121-130-pdf130.txt",
+      "bytes": 1929,
+      "sha256": "f09ef8337ae6c6e004f067b6e3ba0a53bed2be2d20732ca1ee45af7f32c16284",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-@131-132-pdf131.txt",
+      "bytes": 1951,
+      "sha256": "624142d2d63b443d215e30637cf4343458be1290c6f94e360d64f026b7b14faf",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-xml-pdf123.txt",
+      "bytes": 1997,
+      "sha256": "f617e84505e8402d62d57240f4b4180983ec6363016993cbfa9cc1381eb9444b",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-xml-pdf124.txt",
+      "bytes": 1967,
+      "sha256": "5769048501fd95820a9add00a5d05bfda43bc10917a314140177b247fb688516",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/gulfandinlandwa03mahagoog-xml-pdf42.txt",
+      "bytes": 1954,
+      "sha256": "eb1009d0a31e4e8de963c979d5c3c5b9a9e2cb974443fa07dd5b913c2d0b4faf",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/HAUPT-p81.txt",
+      "bytes": 50,
+      "sha256": "5e3787dc1d04fe6f1be0db7d9dd4c73fbb8aab4787aaffde9aa49a2400054806",
+      "status": "Read during a locator search; excluded from the claim for which the original lead was wrong. See sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/HAUPT-p82.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "Read during a locator search; excluded from the claim for which the original lead was wrong. See sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/HAUPT-pdf89.txt",
+      "bytes": 2921,
+      "sha256": "62f99e41188dfb54d246a7b4eb8ff7c9c8435b941a146deef19eeb7fc49f2274",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/HAUPT-pdf92.txt",
+      "bytes": 2719,
+      "sha256": "94f9f7d3e4d842a237c683b1635875ac1a61c48a56b2a2ce35da4e968ac0d8a2",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/HAUPT-pdf93.txt",
+      "bytes": 2884,
+      "sha256": "b8ad255329f22a71d67f6bccd422bffd84b7a5d77e04b7f0cbf92eddd41a33e5",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/haupt.pdf-pdf86.txt",
+      "bytes": 2971,
+      "sha256": "6d971b8c26967b5760996a7b0b48f349916fa459aa5a2f3d47001249a0ef7379",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p106.txt",
+      "bytes": 3198,
+      "sha256": "8950932b7da889374467400d6d439fb3ae86aac7e96c578cc67a56f120baa0a6",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p107.txt",
+      "bytes": 2441,
+      "sha256": "1be731ccdfe111108f2364d45b76aeb9b630ea43590f4ce163363b543a3da643",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p108.txt",
+      "bytes": 3332,
+      "sha256": "3466638344873db0a658af5624d3dd617a1f2a7e9b1006e336941f8a22c578c6",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p109.txt",
+      "bytes": 2455,
+      "sha256": "510d2c1dd70ab5e674cfff2e4d6d9463754aaa8ffe064aae20d78bf8c390b041",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p114.txt",
+      "bytes": 2805,
+      "sha256": "4cd45110263049648c3d2a86ddabb06889e32fae6df3274851a6a59066eb93b6",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p115.txt",
+      "bytes": 3741,
+      "sha256": "4ce90a13bf5359f56cef37efac4631cd756777c8f8a98ef5636d77651bc65165",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p116.txt",
+      "bytes": 2928,
+      "sha256": "c9a38d373d72fec63fb84e98aef06a5cf4b39b7ee62f9d1e5179e75bd477132e",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p119.txt",
+      "bytes": 2485,
+      "sha256": "fdb66cd6be5147d57537b0d26b8caa6019105995ff1cdec06288e4be701cd1d4",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p129.txt",
+      "bytes": 3263,
+      "sha256": "a11edc6e6d6fcf63e8830e076bcb5cb6aa23986b3a50a3dacf581d9fa693d663",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p130.txt",
+      "bytes": 2684,
+      "sha256": "f307c836751309431955bd2fb265b4201d88f414a789f5ab8de7e0ffc4856748",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p131.txt",
+      "bytes": 2559,
+      "sha256": "5e9c641e77e5b8f499cf715ea9c977a1b341bc8b62cf87855ac0c2362313dbc2",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p137.txt",
+      "bytes": 2483,
+      "sha256": "e5944dec192599fb6d743331aaf0f23862e368bab28293b81249511b6fbd9f1b",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p138.txt",
+      "bytes": 2467,
+      "sha256": "819d32b59fbebd4da05faf43f6fff8e52a0ff686feace8c103150dab0a8a76d9",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p142.txt",
+      "bytes": 2725,
+      "sha256": "3dcd1f4609cff54895ff2297a2f13377898409174a064d94d459eef2b1710ef8",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p143.txt",
+      "bytes": 2915,
+      "sha256": "448d1cd4a50510542221c5556a383dde01ceba3efff750e0c54d75ebfd3dc8e1",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p144.txt",
+      "bytes": 2434,
+      "sha256": "2daf229cf9e21cb256c1ae91c012443cf1dc1642b3f8e56f21187ff273e58463",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p147.txt",
+      "bytes": 2374,
+      "sha256": "c1b68c80fd26c0bdad237e101c989fa2ba7a94115ddb72be74ad46383969ee42",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p153.txt",
+      "bytes": 2230,
+      "sha256": "854135dcac87749bb1702ada4705073e8b898f135f4335279fa45a0237f984b4",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p154.txt",
+      "bytes": 2791,
+      "sha256": "9a601020f74e46ee079ac1506957678a19daaca94b65f13325ad89b8aca0fee9",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p163.txt",
+      "bytes": 2814,
+      "sha256": "122c8b4d7564a3e99c7cb01a56b6f4f4c5a2a35fc692a3bc65aeef35e0a220b6",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p164.txt",
+      "bytes": 3476,
+      "sha256": "0c9e9b6e766bf193379b83f629726622bf16d6b2e9621d602ead61dfc58a206c",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p188.txt",
+      "bytes": 2654,
+      "sha256": "14526135138289bb995feebdabfd9b78573507d92dc7df79381bb9afe6f8d63c",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p203.txt",
+      "bytes": 2546,
+      "sha256": "9684f5ee0cb05af4a53cf7b43c7eb426418466bf615a4d3256f6f4050aef1755",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p204.txt",
+      "bytes": 3077,
+      "sha256": "b5f0351b021b43734c4a75fd19a3e0b0ce6822de9bf6d3b4b0728d744e700d16",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p205.txt",
+      "bytes": 3171,
+      "sha256": "5fa046c80f0bf2bb8986913ea60b3685b7a0660467732ad9b291a5cb2085b6e5",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p206.txt",
+      "bytes": 2031,
+      "sha256": "c6cd9163f5ac88b32ea3352a027b02bfbe03195191eaf779479679945832f8a3",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p207.txt",
+      "bytes": 2360,
+      "sha256": "175a50cd2a942344257ef00e39cba2fc2f5ce0dd39bbbd776b27fa5275600913",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p208.txt",
+      "bytes": 1907,
+      "sha256": "2bcd816ef54d5277281ae12847af73c71fb5d58333831e4ff1914975af8fff11",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p209.txt",
+      "bytes": 2832,
+      "sha256": "b9c6d6824bcd2cfe1a0eb23740cd398f82d1e7e5b31323b13647560613d9e417",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p210.txt",
+      "bytes": 3467,
+      "sha256": "e668a69f06726585ff3fa49105a35b7ea301ba89612667f9144bfd1c3ce188f0",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p211.txt",
+      "bytes": 3019,
+      "sha256": "2886de53cc2621aacd301ce7cafa7d25e681043c48f30d1f9a1cfeeeac6d27f7",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p212.txt",
+      "bytes": 2544,
+      "sha256": "fb2f428bb6b49eb2439755761a696c7a68877334a92eb3d3479984db7bb8258f",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p213.txt",
+      "bytes": 2982,
+      "sha256": "f6214d1bc59305a0254a375a1dc99f806564ccc200ddac2862bbbec15ed59c9b",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p214.txt",
+      "bytes": 2444,
+      "sha256": "65616e4b52f6a363e094dad16d0cf9427b668d192fc7b6fc930e503fe7e0bfb3",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p227.txt",
+      "bytes": 2615,
+      "sha256": "e3a0d6b1dd1f65bda50a7fea61c08c88495bd966de8e7d71791fb4ee3fa2b9ee",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p228.txt",
+      "bytes": 2258,
+      "sha256": "2c38780c88113eeb7e17d6dc32e17ed69bc5cf2e1e7dceaf982983c63d5dcee5",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p231.txt",
+      "bytes": 2525,
+      "sha256": "5120e6952cf0642bb062026e20de0d173a6826263bcd0ee503965b51d81ffc09",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p239.txt",
+      "bytes": 2611,
+      "sha256": "423c113f1f54acd3b7a9999ef6bb6e36180c68b5596dedd3ed62d0fb24625f87",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p240.txt",
+      "bytes": 2826,
+      "sha256": "2297a2d4340b72173c815fb1c6eef95bb406ca4f642ab00cc21379ab6cad50d3",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p245.txt",
+      "bytes": 1978,
+      "sha256": "7a334dcca069de9d4eb9a5cc72505f0e3b5ee4b21c57d2dd70f46e86bb33ca9a",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p246.txt",
+      "bytes": 3503,
+      "sha256": "f89aedb7653c3481d055c25e8a79b0373ef4b29c8a971915635840d5e847de0c",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p247.txt",
+      "bytes": 2905,
+      "sha256": "5eca7df50f46f63b17e8d9a142ef3b11fe1b2967db6d73588f0ef59702aed973",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p251.txt",
+      "bytes": 2259,
+      "sha256": "c63b011200d24e174562213e788487ff325937d2f402f95f4fb7851346031b0c",
+      "status": "Read during a locator search; excluded from the claim for which the original lead was wrong. See sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p252.txt",
+      "bytes": 2328,
+      "sha256": "863afdc3992e6322e05082f95960dd826199ae5183826c626c71790af542a2df",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p76.txt",
+      "bytes": 5236,
+      "sha256": "60752a07a625ea5607d3aac8278ddad85d8606a910e906b5ddc052d160c6e75e",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p78.txt",
+      "bytes": 2558,
+      "sha256": "11a4d370aff0281115eae80f8675fed2deed03480aadc2402ea3045c910ec3ad",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p79.txt",
+      "bytes": 2642,
+      "sha256": "acfc4f42a3b376e2cc388160dbc85c31f70da84f080e4b3a8ab867f0fff678dc",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p85.txt",
+      "bytes": 2250,
+      "sha256": "fbf7404c323cc9908d2da615b58c58cf3efc8fd041366b9e203f99e90954f50f",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p86.txt",
+      "bytes": 2623,
+      "sha256": "eb3d4252e91625ec492d4017764b59ca6fe5a259c0694f5d0e8d34d1e727b5ae",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p87.txt",
+      "bytes": 2937,
+      "sha256": "26cf7379057c42ccb2cba40017195f72e3db41391960727e8c3a3ec5835e707c",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p88.txt",
+      "bytes": 3433,
+      "sha256": "779d5d942b426bd99556de10ee8e6d1fb0489dcda3eb97c4d72f15bce6e7554d",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p89.txt",
+      "bytes": 3458,
+      "sha256": "52f6f89d93e370cbc2bf66fdb3267979cc469a11db9bab4402f1e450fcc66db9",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-passage-517890.txt",
+      "bytes": 4358,
+      "sha256": "33e06de5177fad02cebaa9fce47c857b08b4d692b60cbc34441eefce2bee8fcd",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/MAHAN-pdf125.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "Empty extraction; not evidence."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/MAHAN-pdf44.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "Empty extraction; not evidence."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-11-1-p73.txt",
+      "bytes": 4853,
+      "sha256": "b6868112c7f37114c1e349543f1b387a4a40cd62a3622c864dd65e55a47af75d",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-11-1-p74.txt",
+      "bytes": 5120,
+      "sha256": "944fc18bf5352c72be81aaab87f9b4d1e686a98933ab8ca2d524f16997b6d064",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-11-1-p80.txt",
+      "bytes": 4277,
+      "sha256": "0795a241b2ebec5d287cf29c9ce2b63abb96cd56fbadf13dead9746b973f1f8d",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-11-1-p81.txt",
+      "bytes": 5587,
+      "sha256": "f69c707670a88937e07d2e4f5b5e3c00bb74fb2a56b8a662f6c850091874cb35",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-11-1-p82.txt",
+      "bytes": 3939,
+      "sha256": "fcdfa3ef7414d190ec949fae2c43ac2cce6eae5cacfc6d633dbb6ef715d7f6a5",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-11-1-passage-36983.txt",
+      "bytes": 4405,
+      "sha256": "5fdcd6571b650857750861911c1d9e1cc02f63f5b69020c33b395662b9423cea",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-11-3-p148.txt",
+      "bytes": 3133,
+      "sha256": "cba80eb01d3a913da9e4e20711ba1da6408a253abacd3443ce5cbab14bb328c9",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-12-3-queryJuness-0.txt",
+      "bytes": 3108,
+      "sha256": "63e40dd6b3b9d6f37e5e222e8145687a19fa90d7b19a81e4223b0902592b7a0e",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-12-3-queryJuness-1.txt",
+      "bytes": 3094,
+      "sha256": "d2d46f5e405742f740b39adce06998b4c3ab6e39984204c69a84595673ceea89",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-15-p426.txt",
+      "bytes": 3186,
+      "sha256": "27a6b174d000e5c451146ebff8a75006b743c1a6d144e4c7a84ce82d9a898be1",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-16-2-p637.txt",
+      "bytes": 6588,
+      "sha256": "17ae12bc063f992e1235c9a549723211b9b1604ebb2a95142b0df8711abc0f49",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-16-2-p641.txt",
+      "bytes": 6240,
+      "sha256": "872f533238070e902a6901d931f15d76461ba9a2a3749ad3fb78526d749a874c",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-16-2-querywishsofsthes-0.txt",
+      "bytes": 3116,
+      "sha256": "8bd805d05fba46e714af91032aee95e24f56fc19624d5d9f700cb4913e2ca0eb",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-3-p466.txt",
+      "bytes": 3399,
+      "sha256": "fd1cf09db3316b6cfcf6d5bfe813be359d06b285f2e9fd00bf2ffef885a5259c",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-3-p467.txt",
+      "bytes": 3864,
+      "sha256": "ca0e06c56c5002c20d7d03391b363e89e52c7ef37d5c8ea4f56ce7ab957d48db",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-3-p469.txt",
+      "bytes": 3779,
+      "sha256": "f9b3bd7fa34cab3a1b62aacdd4494e01c4ddaf9bef0745ef1c8203201cfca5c8",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-3-p470.txt",
+      "bytes": 2480,
+      "sha256": "dc1ab517638fa6e4f9088854f280043f17b3d80eb2efaa4074c5c22cc5712a4a",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-3-p485.txt",
+      "bytes": 3439,
+      "sha256": "45a2519b68e37b93ec3ca750ec7fc71d7501a427a2b8024cb709a4aa220e3c07",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-3-p486.txt",
+      "bytes": 3692,
+      "sha256": "35efdf39be2cab87909da4bad40eda5b2c2b0fd8221f846b91fa8e62e0198e40",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-5-p193.txt",
+      "bytes": 2506,
+      "sha256": "70bd0825213961d4a028cb1258ed2cb90e79f7f7ab984923126d2d6e513dba10",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-5-p194.txt",
+      "bytes": 6404,
+      "sha256": "375c83f2169f3a4ef9c5aca4329c4ed05a44bead2371a778a42d45ca76635c18",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-I-7-p683.json",
+      "bytes": 3240,
+      "sha256": "f56fa9e4297bc0b49105af05951c84494f67618b5d43e20274ae10c413e06767",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-II-3-n0265.txt",
+      "bytes": 3511,
+      "sha256": "96054cccfa5b661fe7010a65c9c12cfaa919f63c1cb777abdf8ee4987d748009",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-II-3-n0270.txt",
+      "bytes": 2145,
+      "sha256": "ddbdd2439d6945fd862211aafff3dc8e8d46e22ca428f8015c27fb6bac98a1a2",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-1-contracts-869-870.txt",
+      "bytes": 4091,
+      "sha256": "fa4b4ad8afa22f508e5740413ae4310e9980eec4d5de6c733c9f129471642822",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-1-spencer-0.txt",
+      "bytes": 7271,
+      "sha256": "42e7b059ebbfe144a01c225a5dea4b602a1bf88c031774665c15f095941428d0",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-1-spencer-1.txt",
+      "bytes": 7291,
+      "sha256": "791c0cbd554cfff7b87ad4e5d7ed47eb7fc7d942f1344a683eae5945134efd32",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-1-spencer-2.txt",
+      "bytes": 7302,
+      "sha256": "6098e9fbf9d5f398a82bee6e9c21e6dbe57ff9412934840cbcc0e690b73b40ee",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-1-spencer-3.txt",
+      "bytes": 7349,
+      "sha256": "84bcbfcc2a8091c8b6aa1cc0e6532ea3ee5c65c0cbf8dc5ac2e20ebf3366a429",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-1-spencer-4.txt",
+      "bytes": 7281,
+      "sha256": "fff34ed3e53c33e611c32901e269ce39f228c2f4c65ccc0b6af9ffa8fc78a1b9",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-1-spencer-5.txt",
+      "bytes": 7282,
+      "sha256": "734f57f9d04d0ab850b98532b44bea4b89f18e4cc895591cdc1c4204f640ce23",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-august-arrests.txt",
+      "bytes": 4645,
+      "sha256": "cefb6a1eae6480102ca67363aa54cdffd21a903b6ba13412fa617ca5fcfdcb39",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-p179.txt",
+      "bytes": 3393,
+      "sha256": "d77af91ffcb3e202a121188680f6061e66b0d6701cde341d4104c2c3f4a0b5aa",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-p180.txt",
+      "bytes": 5910,
+      "sha256": "11afc140a367a25c6fa165bdad6320e4c37f1d3de28aca4dac288b644b1a4276",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-p182.txt",
+      "bytes": 5817,
+      "sha256": "d6bd502835ae0cf6bca9e07d9e6fd84b0c2e682e95e28472a3a1e1eb3aee07d2",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-p187.txt",
+      "bytes": 2834,
+      "sha256": "09641bafa2490152b1cc3f0ba5678f96308ffa3e85f2a2bd7dbce28289edd224",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-p188.txt",
+      "bytes": 3827,
+      "sha256": "5e1560afc6a4095ef81bd56daffa627c5f82d332bf46a7190f5e35f0718860fe",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-p189.txt",
+      "bytes": 4339,
+      "sha256": "6caf6cd673c8d84ba99964e409c715bfb7476df1a35b210b338eb35285e61ae9",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-p190.txt",
+      "bytes": 4377,
+      "sha256": "16d00bb111d5cea7eefb2969fb3aed26e41892daaf185912f7337bbd026efd41",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-p2.txt",
+      "bytes": 5538,
+      "sha256": "24943589add7687a9674d8bc269ffdfb22b6f2b12f01219e50635e839c85646d",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-p580.txt",
+      "bytes": 2440,
+      "sha256": "5ab0d54b69c89300c1d5f44c3b2215a7eb725781f5a1c73251ee60e2ac744448",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-p581.txt",
+      "bytes": 3411,
+      "sha256": "ea2593f2dba1081add6ea5f451b9d3ed4630fad9e1857a09a8bf8798b8a05535",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-p582.txt",
+      "bytes": 3035,
+      "sha256": "f7dfe11180d7e5c4810837d5280d7079c52d3d84f5a388ec5fce22d8eb21de92",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-p583.txt",
+      "bytes": 4474,
+      "sha256": "fff6119cccd0ce7894e829588935bc122163c8dd3f951da22d29d7cfee5a74e4",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-p584.txt",
+      "bytes": 3696,
+      "sha256": "5ee92af69d81388dc8989cf0babc165870e83bcc0d161ea60eb4e2ec3e0e3511",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-passage-3189592.txt",
+      "bytes": 4414,
+      "sha256": "88ea21eea688ec41a4e251941a0248f043daded5affe69cafae34bcf196bb592",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-passage-3240959.txt",
+      "bytes": 4359,
+      "sha256": "a2aca530dc222b94bacdc0c5728943726a1380a24dedd1478b26ce7dde4f8f1a",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-queryAltoona-0.txt",
+      "bytes": 3087,
+      "sha256": "2e6d8ce9af67e21efb0090701c9d1502904f958d6cf26da5c23dce8a5db32ff7",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-queryAltoona-1.txt",
+      "bytes": 3093,
+      "sha256": "dcc8198815625127f157e817a2994bb7f606eaddfe264064a3da4b4cf94484f0",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-queryAprilss-0.txt",
+      "bytes": 3095,
+      "sha256": "ab31ec98cfeb321bd60a798e04f71490685f4b1103b2b164383d18883dd5c198",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/OR-III-2-queryAprilss-1.txt",
+      "bytes": 3082,
+      "sha256": "c6981c588ae9e1e281b3bef65e5dc09dbc52b41528a253a3b00ba26e3622e09f",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/ORN-6-n0264.txt",
+      "bytes": 3749,
+      "sha256": "764a28c50eb3b3d01ecb3d54b607961d49c55e322d08bfd4ac46c6e185143ca2",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/ORN-6-n0265.txt",
+      "bytes": 3173,
+      "sha256": "59154f430c49cbd8f79e904f3c37894107570c1e9ae8f5226e061001ccb0f257",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/STAT12-p587.txt",
+      "bytes": 7835,
+      "sha256": "3c66aaecacb0f800883a615cd54751d9f5667c492bfc8bf36b327c46ad67152e",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/TREAS-pdf15.txt",
+      "bytes": 3375,
+      "sha256": "46c1513fe5da7e19147166c2dcf75c7d349dd0712bb99aa04d8e6340020daae0",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/TREAS-pdf17.txt",
+      "bytes": 3446,
+      "sha256": "6be8d1030421d50204fc92b4f9ed8e62ca803c97e7c4c35394747903440dceab",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/TREAS-pdf20.txt",
+      "bytes": 3352,
+      "sha256": "99a19c283f5301378caeaf4f38b25d298c5d6f990ce93b7a8d4590c8ad1cb84f",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/TREAS-pdf21.txt",
+      "bytes": 3527,
+      "sha256": "0a731fb729e49698dbfacd6860acd356b84b509f204820038db9c0de3f945ca4",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/TREAS-pdf22.txt",
+      "bytes": 3524,
+      "sha256": "3d8daf91e8bddf9a0e9f5299e2d7d0d40ca88f98912d022b0167d07ccdc6ba1d",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/TREAS-pdf23.txt",
+      "bytes": 3574,
+      "sha256": "96855b3cd577851ca60091bd4b9ee74797a6fa5e93af2a47881db3c23c04d504",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/TREAS-pdf93.txt",
+      "bytes": 4686,
+      "sha256": "2b35fcceff37d16c6f1e21751621a07f5b14888e64e74fac0f894121b2d1e8f6",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/TRENT-p10.txt",
+      "bytes": 4360,
+      "sha256": "934f2f3aef047bca6f006d53a00b2d6aa16053043b283deb859279550d388829",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/TRENT-p11.txt",
+      "bytes": 4210,
+      "sha256": "862f51916b52525cbb0206f8501239c0a0abbd1dea10d4df284ec505137c2186",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/TRENT-p12.txt",
+      "bytes": 4244,
+      "sha256": "83206629768444d1fe1fa24a1e6216e2b7e3b6b600014f771f521de8d02acbbb",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/TRENT-p13.txt",
+      "bytes": 3660,
+      "sha256": "bbc24690ad2ebc79409e7689edfe5d05590fe4cca75c22e8ceb55b7a5e62b8b6",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/TRENT-p14.txt",
+      "bytes": 4395,
+      "sha256": "78ed47ef5f49414e78cfe0a55451a10c73fb2a2508c74f294c2c05427f307a8e",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/TRENT-p5.txt",
+      "bytes": 4183,
+      "sha256": "56b39f6006c6bc19f26b78cbab5d57c688be9fb39a2c19ea6133477960659cc6",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/warofrebellion21unit-83-86-pdf85.txt",
+      "bytes": 4077,
+      "sha256": "53b62640bb7d063c75a87875bc7cf7ff3433954942b0469f79d727f93319ff0d",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/warofrebellion21unit-83-86-pdf86.txt",
+      "bytes": 4112,
+      "sha256": "1b899005709a3029f792d8b71f05065d92801e4fbacc31e237dde28dfd804c94",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/warofrebellion21unit-83-86-pdf87.txt",
+      "bytes": 3915,
+      "sha256": "0d85d8bd6d30022cec6f73d96952fe1efd32c6b010dc7800c0866934d0cb4390",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/warofrebellion21unit-83-86-pdf88.txt",
+      "bytes": 4569,
+      "sha256": "19eac4eca47b76b33ab22f9d0d3a19cf3bdb669929657623d2b6d63f6a5f4ab1",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-n0227.txt",
+      "bytes": 2479,
+      "sha256": "a3fe0e731b046f8283826f5b32b10c3376e2b6337f3264ace4ddc3ca9f61d617",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p142.txt",
+      "bytes": 2386,
+      "sha256": "da2c8b006802b3358316e5ddef4c51504a9df9f14fb6aae9c4920b8872fc362b",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p143.txt",
+      "bytes": 2509,
+      "sha256": "8388b6ef0bb9d394e708cf61d4cc818268cb53e8e56ea0dae219d9b3062c4020",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p144.txt",
+      "bytes": 2377,
+      "sha256": "0602fe3c2db8b2d444fa979561582b3d68a75a5b043807df4750f0db05079312",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p61.txt",
+      "bytes": 2365,
+      "sha256": "8805f5a13b2b843643d1e8faecd37d83158a5234582ce800dc591c334cbf5dce",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p62.txt",
+      "bytes": 2435,
+      "sha256": "287a5ac00f3146b5eb663fe4b3a554ab3cde22e5df26b3371a709e67e33139c5",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p63.txt",
+      "bytes": 2371,
+      "sha256": "3fb7b4b31ff508042fc20541903d6aa467d95d7dcd03653647f7ff10e674ac0e",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p78.txt",
+      "bytes": 2415,
+      "sha256": "7f09b7e6d1363c68cc05fe9fd4c2d63c6a88ac8eacab9ff1cd1bec5bfb9393b8",
+      "status": "Read during a locator search; excluded from the claim for which the original lead was wrong. See sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p79.txt",
+      "bytes": 2253,
+      "sha256": "436f58d7da119f63a3a02d316fb7e2e1bea2c91c4e63cbf845ad690bb911c3fd",
+      "status": "Read during a locator search; excluded from the claim for which the original lead was wrong. See sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p80.txt",
+      "bytes": 2491,
+      "sha256": "b91f5dd676b46d226f278bd4de45b92323f3e46f478ed5be196820fc71f5ff2a",
+      "status": "Read during a locator search; excluded from the claim for which the original lead was wrong. See sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p81.txt",
+      "bytes": 2338,
+      "sha256": "8d487dd2154ddfdfb5bbb41baeb9e74d860cf9cbbecf861cfef76657b567821a",
+      "status": "Read during a locator search; excluded from the claim for which the original lead was wrong. See sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p94.txt",
+      "bytes": 2453,
+      "sha256": "83d67eded982b0430939a20e78184178f93ac46ac01114ddee6cf7c500c73437",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p95.txt",
+      "bytes": 2415,
+      "sha256": "323a5b899b7d358f3fceb7f2787d77a1d8635dbd92105ff30e117e8954c0cae3",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p96.txt",
+      "bytes": 2414,
+      "sha256": "3541e9052871487348e80132acf10188a8dc548fba4480616e1cc4ed9a13e6c3",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p97.txt",
+      "bytes": 2418,
+      "sha256": "92978237d0f16e5944855c0857d8c4671bcc897cd01221f56d001a703da9d9d4",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p98.txt",
+      "bytes": 2479,
+      "sha256": "7437b5932826da2aef7982ad1a881deecdd307eb7201ee89393f353ca1ba3ee7",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/WELLES-p99.txt",
+      "bytes": 1992,
+      "sha256": "1a2eebacea825088d56f235fd90f6fc4050ad2117d6f491aaccb351870324d21",
+      "status": "Retained reading/search extract; use only the printed pages and adopted passages identified in sources-read.md."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p132.txt",
+      "bytes": 2372,
+      "sha256": "c933c55ef8bfcf296516199fe96f332154dcefea43acb9414a92c6f91829a88e",
+      "status": "Retained final source-policy audit reading; p. 136 is the adopted Hampton Roads instruction; p. 132 is a search reading only."
+    },
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/read/LINCOLN-CW2-p136.txt",
+      "bytes": 2168,
+      "sha256": "3c36d2177e2581d6d39f1c51fdc35384a06d48ab23d86d4b011d53f82b2d97f4",
+      "status": "Retained final source-policy audit reading; p. 136 is the adopted Hampton Roads instruction; p. 132 is a search reading only."
+    }
+  ],
+  "scans": [
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S13/scans/OR-I-3/n0498.jpg",
+      "bytes": 1323516,
+      "sha256": "e6b9c3aa4eebfb4875db00fb7c23fc1bfbe4fbfa20e8a21ac57d6c53214f25c3"
+    }
+  ],
+  "limits": [
+    "Earlier read-cached.jsonl rows include rejected OCR-index assumptions; corrected retained extracts and the bibliography supersede them.",
+    "The Dispatch is a retained relevant-article transcription, not an inspected newspaper image.",
+    "S7 research notes are reading guides, not authority to import unread underlying facts.",
+    "Failed downloads and JS-only dispatch.html are acquisition evidence only.",
+    "Welles’s retrospective opening retains the existing weak WELLES-D1-RETRO classification. S13-WELLES declares dated diary entries only. The actual Hampton Roads notice uses the contemporary 10 March instruction in CW II p. 136."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "s13_foreign_contracts",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_foreign_contracts.title",
+  "text": "situation.s13_foreign_contracts.text",
+  "earliest": "1862-01-29",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 331
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_foreign_contracts"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_foreign_contracts"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "III-1 pp. 869–870; War Department order “In respect to contracts”, 29 January 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_secretary_war",
+      "person": "stanton_edwin_m"
+    }
+  ],
+  "namedOnly": "Names of addressees, the subjects of allegations or custody, and prospective appointees identify the dated document’s participants; they do not assert that those people hold a post now. Speakers lists the rostered people whose words or official acts are given. Unrostered document authors need the identities and posts recorded in the index before promotion."
+}
