@@ -258,7 +258,7 @@ Module map, adapted from the AWWV-architecture note:
 | a force block's stores on hand | `forces` | supply (daily), operations (a sea delivery) |
 | detachments below the force block (garrisons, landings): a `forceBlockStates` record of kind `detachment` naming its parent; detach, rejoin and stand alone, with men conserved | `forces` | operations (a landing by water), a proposal naming a count of men and a region, such as a situation's `landing` effect; placed by `movement` and assigned by `command` in the same proposal (0041, 0081) |
 | stragglers: men absent from a force block who rejoin over days | `forces` | combat, attrition (0041) |
-| battle records | `combat` | (0041) |
+| battle records, including daily fire across water with its actual loss breakdown; `bombard` days use the firing batteries and exposed garrison, with no land contact, random draws or hourly distribution; ordinary save and pruning apply | `combat` | operations invokes combat's bombardment recorder; records change only through `applyBattleRecords` (0041) |
 | situation chain and wait state | `situations` | (0046) |
 | the Congress accountability ledger (`congressLedger`): acts taken while Congress was away, each met when a chamber of its side sits and answered later | `politics` | situations' `ledger-act` and `ledger-answer` effects (0046, 0084) |
 | people who have reached Union lines (`regionReachedUnionLines`) | `regions` | the derived self-emancipation term only (0046, 0074); never a lever |

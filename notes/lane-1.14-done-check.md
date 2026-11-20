@@ -12,6 +12,8 @@ First merge: combine main's resignation and review-note fields with R90/R98's ca
 
 The corrected first-merge suite passed 1,566 tests, one existing expected failure and three optional timing skips, then boundary rejected two historical names added in explanatory comments under `packages/`. Those comments are now generic; boundary/licences/decisions pass. The next hook timed out only the done-check test's 300-second setup under file concurrency (142 other files passed). Its isolated rerun passes all 14 applicable tests in 192.55 seconds. Use Vitest's supported `VITEST_MAX_WORKERS=1` for subsequent full hooks on this shared machine: serialize this lane's test files, preserving collection, timeouts and assertions. No CI or timing budget change. Logs retain all failed attempts; another hook is required because the commit must pass it.
 
+Merge 1 committed through the full hook as `1802907`: 143 files, 1,566 passed, one inherited expected failure, three optional timing skips; all chained gates passed. Serial duration 662.46 seconds. Merge 2 combines the immutable bombardment record with this history, retaining R95's `around(49)` support centre. Its cheap 148-day history has zero rejected commands and zero liveness breaches; Confederate planned operations now score one via the real fort record. Typecheck/boundary and 30 focused bombardment tests pass. Use the already verified two-worker bound for this next required hook to reduce the serial gate's eleven-minute cost; no timeout, assertion or collection change.
+
 Proposed rulings: bound this lane's test concurrency while the other sprint worktrees run, rather than raising timeouts or skipping required tests. Remaining work is the sequence above.
 
 ### Findings outside my scope

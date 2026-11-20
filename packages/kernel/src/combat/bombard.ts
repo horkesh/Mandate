@@ -29,7 +29,7 @@ import type { FortificationDelta } from '../regions/regions.ts';
 import type { State } from '../root-state.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import { commanderView } from './battle.ts';
-import type { BattleTerm } from './records.ts';
+import { battleId, lastDay, openBattleIn, type BattleDay, type BattleRecordChange, type BattleSide, type BattleTerm } from './records.ts';
 import type { CutOffChoice, JUDGE } from './order-kinds.ts';
 import type { BombardmentRules, BombardTerms } from './rules.ts';
 
@@ -115,6 +115,70 @@ export interface FortDay {
   readonly people: readonly PeopleChange[];
   readonly control: readonly ControlDelta[];
   readonly works: readonly FortificationDelta[];
+}
+
+/** Record the fire already resolved by `fortDay`; do not run the land model or calculate losses a second time. */
+export function bombardRecords(world: SeatsWorld, state: State, fort: FortDay, attackerPost: PostId, attackers: readonly ForceBlockId[], objective: RegionId, side: FactionId, day: number): readonly BattleRecordChange[] {
+  // Only known gun-arm men supplied fire in fortDay. Support and unknown/empty batteries did not fire.
+  const batteries = attackers.filter(b => world.map.world.rules.combat.bombardment.gunArms.includes(state.forceBlockStates[b]!.fbArm) && (state.forceBlockStates[b]!.fbStrength ?? 0) > 0);
+  const factions = [side, fort.defFaction].sort(strictCompare);
+  const changes: BattleRecordChange[] = [];
+  const open = openBattleIn(state, objective);
+  const previous = open === null ? null : state.battleRecords[open]!;
+  const continuing = previous !== null && previous.battleDays.length < world.map.world.rules.combat.maxBattleDays
+    && lastDay(previous)?.bdayType === 'bombard' && lastDay(previous)?.bdayDay === day - 1
+    && previous.battleFactions.every((f, i) => f === factions[i]);
+  if (previous !== null && !continuing) changes.push({ change: 'close', id: open!, day: lastDay(previous)?.bdayDay ?? previous.battleStartDay });
+  const id = continuing ? open! : battleId(objective, day);
+  if (!continuing) changes.push({ change: 'open', id, record: { battleRegion: objective, battleStartDay: day, battleEndDay: null, battleFactions: factions, battleCauses: [], battleDays: [] } });
+  const makeSide = (faction: FactionId): BattleSide => {
+    const defending = faction === fort.defFaction;
+    const blocks = [...(defending ? fort.defenders : batteries)].sort(strictCompare);
+    const present = blocks.reduce((n, b) => n + (state.forceBlockStates[b]!.fbStrength ?? 0), 0);
+    const losses = blocks.map((b) => {
+      const deltas = defending ? fort.forces.filter(d => d.change === 'battle_losses' && d.block === b) : [];
+      return deltas.reduce((total, d) => d.change !== 'battle_losses' ? total : {
+        blossBlock: b, blossKilled: total.blossKilled + d.killed, blossWounded: total.blossWounded + d.wounded,
+        blossMissing: total.blossMissing + d.missing, blossCaptured: total.blossCaptured + d.captured,
+        blossStragglersCaptured: total.blossStragglersCaptured + d.stragglersCaptured,
+      }, { blossBlock: b, blossKilled: 0, blossWounded: 0, blossMissing: 0, blossCaptured: 0, blossStragglersCaptured: 0 });
+    });
+    const killed = losses.reduce((n, b) => n + b.blossKilled, 0);
+    const wounded = losses.reduce((n, b) => n + b.blossWounded, 0);
+    const captured = losses.reduce((n, b) => n + b.blossCaptured, 0);
+    const stragglers = losses.reduce((n, b) => n + b.blossStragglersCaptured, 0);
+    const weight = (b: ForceBlockId) => Math.max(1, state.forceBlockStates[b]!.fbStrength ?? 0);
+    const totalWeight = blocks.reduce((n, b) => n + weight(b), 0);
+    const morale = (after: boolean) => totalWeight === 0 ? 0 : Math.trunc(blocks.reduce((n, b) => n + weight(b) * Math.max(0, state.forceBlockStates[b]!.fbMorale - (after && defending ? fort.day.moraleLoss : 0)), 0) / totalWeight);
+    const before = morale(false);
+    const after = morale(true);
+    const moraleTerms = defending ? fort.day.terms.filter(t => t.btermKind.startsWith('morale_')) : [];
+    const clamp = after - before - moraleTerms.reduce((n, t) => n + t.btermValue, 0);
+    const gone = defending && fort.surrendered !== null;
+    const post = defending ? fort.defPost : attackerPost;
+    return {
+      bsideFaction: faction, bsidePost: post, bsideCommander: defending ? fort.commander : (state.postStates[attackerPost]?.postHolder ?? null),
+      bsideCommit: defending ? 'defend' : 'main', bsideBlocks: blocks,
+      bsideUnknown: blocks.filter(b => state.forceBlockStates[b]!.fbStrength === null), bsidePresent: present,
+      // All defenders are exposed to fire. No land frontage or contact is assumed.
+      bsideCommitted: present, bsideEngaged: present,
+      bsideBase: defending ? world.map.world.rules.combat.bombardment.lossPermille : 0,
+      bsideTerms: defending ? [t('fire_ratio', fort.day.fireRatio - 1000, 'bombardment.ratioCapPermille')] : [],
+      bsideMultiplier: defending ? fort.day.fireRatio : 1000,
+      bsideKw: killed + wounded, bsideKwParts: defending ? fort.day.terms.filter(t => t.btermKind === 'killed_wounded') : [], bsideKilled: killed, bsideWounded: wounded,
+      bsideMissing: 0, bsideMissingParts: [], bsideCaptured: captured + stragglers,
+      bsideCapturedParts: [t('surrender', captured, null), t('stragglers_in_pocket', stragglers, null)].filter(t => t.btermValue !== 0),
+      bsideFlankDraw: -1, bsideFlankThreshold: 0, bsideFlankTerms: [], bsideFlankBroken: false,
+      bsideMoraleBefore: before, bsideMoraleAfter: after, bsideMoraleTerms: [...moraleTerms, ...(clamp === 0 ? [] : [t('morale_clamp', clamp, null)])],
+      bsideDecisions: defending ? fort.day.terms : [], bsideResult: !defending && fort.surrendered !== null ? 'gained_ground' : 'held',
+      bsideCutOff: gone ? 'surrender' : null, bsideRetreatTo: null, bsidePursue: null, bsideLosses: losses,
+      bsideHitDraw: -1, bsideHit: defending && fort.surrendered === 'captured' && fort.commander !== null ? 'captured' : null,
+    };
+  };
+  const bday: BattleDay = { bdayDay: day, bdayNumber: continuing ? previous!.battleDays.length + 1 : 1, bdayType: 'bombard', bdayAttacker: side, bdayFrontage: 0, bdayContact: 0, bdayDraws: 0, bdaySides: factions.map(makeSide) };
+  changes.push({ change: 'day', id, day: bday, causes: [attackerPost] });
+  if (fort.surrendered !== null || bday.bdayNumber >= world.map.world.rules.combat.maxBattleDays) changes.push({ change: 'close', id, day });
+  return changes;
 }
 
 /** The defenders standing in a fort: another side's land blocks there, not on a leg, not aboard, not surrendered. */

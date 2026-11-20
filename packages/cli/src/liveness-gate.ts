@@ -290,7 +290,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'plans.goal_reached': around(1),
   'politics.adjourned': around(1),
   'politics.front_page': around(63),
-  'politics.support': { ...around(16), why: "S1 merge 1 [I]: the integrated intermediate history has no field battles, removing their dispatches to editors and downstream support changes. Sumter's BattleRecord arrives in the next merge." },
+  'politics.support': { ...around(49), why: "R95: Sumter's bombardment now writes a battle record (R91), so the closing report reaches editors and their front pages move bloc support; the old centre of 16 came from a run with no battle record" },
   'politics.opened': around(2),
   'regions.self_emancipation': around(3081),
   'regions.reached_lines': around(253),
