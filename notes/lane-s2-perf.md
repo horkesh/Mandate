@@ -1,6 +1,136 @@
 # S2 and S20: tick budget without behavior changes
 
-## S20 validation plan (from fae69bc)
+For the lead: 3 items. S20 only, on sprint/perf from fae69bc, under 0106. Review the three optimizations separately; retain the local/CI distinction and all unmet criteria; route the inherited 1A and view-cache findings to their owners. No push, history rewrite, other sprint write or gate signature.
+
+## S20 result
+
+The command owner derives unposted people once per menu; the census term derives force presence once per call; the request caller reuses a deeply frozen candidate graph with its full dependency key. Every compared value and daily State hash is unchanged. The first two commits are **82f817b** and **72dfa0d**; the candidate-cache optimization and this closeout form the final commit.
+
+| Optimization | Parent | Median paired war saving | Median paired history saving |
+|---|---|---:|---:|
+| Unposted roster | fae69bc | -0.541 ms | 9.282 ms |
+| Force presence | 82f817b | 0.008 ms | 0.223 ms |
+| Frozen candidate graph | 72dfa0d | 1.807 ms | 1.278 ms |
+
+Each cell is the median of three alternating pair differences (before minus after), over complete 148-day runs. These changing-host observations are not additive or precise causal savings. Step 1 does not demonstrate a whole-war saving; step 2 war is unresolved within noise. All direct comparisons and all losses are retained below and under runs/s20/. No campaign was repeated for a better clock.
+
+## S20 settled verification
+
+One default eight-seed done check **exit 0**, **1919.19 s**, including drafting: **Phase 0 6/6; 1A 2/6**. **Budget passes this local sample** against unchanged 40/160 ms limits. The unloaded 20 ms aim and Linux CI remain unestablished. No D6 clearance or criterion waiver.
+
+The final done check reports:
+
+- union-1861, war by decision, 148 days: median 37.61 ms, p95 70.63 ms, max 77.73 ms over 148 days
+- testbed, 120 days: median 5.66 ms, p95 11.63 ms, max 41.23 ms over 120 days
+- union-1861 history run, 148 days to 1861-07-31: median 34.11 ms, p95 75.47 ms, max 120.06 ms over 148 days
+- one day of all 23 drafts back to back: median 136.0 ms, p95 221.5 ms, worst 398.8 ms over 20 days; slowest single draft 175.4 ms; a capped day (the pack's 3 slowest drafts for each of 2 sides, together) at worst 120.1 ms
+
+All 10 reported problems are retained in final-checks.json and final-done.log:
+
+- union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 20957 men, below 100000
+- union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 0 planned operations, below 1
+- union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 0 planned operations, below 1
+- union-1861 history run, 148 days to 1861-07-31: no operation fought a battle in the history run (2 operations, 0 battles)
+- union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2
+- union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1
+- union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1
+- union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 44, above 9
+- union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)
+- union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)
+
+Every final frozen daily hash matches pre-S2: **268 total (Union 148, testbed 120)**, together with daily fires, liveness, World/initial/final hashes, log counts, decisions and rejections. Replay, save/resume and saved-log replay pass for both. The unchanged day-40 fixture is reproduced byte-for-byte, SHA-256 **a3e363b949df0e7a2284241453a16b175a434c7dc320bea913e1df5f9d417b1c**.
+
+The complete printed non-timing Phase 0 and 1A/history/sweep evidence also equals the retained S2 log, including eight seeds, eight gated decisions and 248 base calls for regiments. Only the timing verdict changes. No D6 clearance follows from return being best in 0/8 seeds.
+
+Inventories and runtime diagnostics preceded this closeout: **eight delivery files**, **1670 other original files unchanged**, no deletion/unexpected change, **397 runtime/pack files equal the hash-verified snapshot**, workspace aliases here. Packs, bands, fixtures, locks, existing saves and signed material are preserved. No build, server or browser was needed. Fixture evidence is reused after verifying identical runtime hashes; no redundant reproduction. Evidence: runs/s20/preservation.json, parent-proof.json, profile-inventory.json and final-checks.json.
+
+The first two actual hooks pass (139 files / 1,535 tests; 140 files / 1,538 tests; each one existing expected failure / four skips), plus typecheck, boundary, licences and decisions. Supported MANDATE_NO_GIT=1 and VITEST_MAX_WORKERS=1 are retained without weakening timeouts or selection; no-Git mode excludes the two Git-writing fixture files. The final optimization must still pass its actual hook; its exact exit/counts are in runs/s20/commit-candidate-cache.log and the final coordination status. The standing independent review remains Claude's after the sprint under 0106.
+
+### Top twenty self costs before S2 and after S20
+
+These are sampled self milliseconds summed by function and file over each 148-day run, restricted to stacks beneath playDays (including its single final checkpoint hash). Setup, imports, pack validation and courier-table construction are excluded; GC with no playDays ancestor is not attributed to a tick function. Anonymous callbacks from one file are grouped. All raw full-run rankings, including setup and GC, remain in the JSON files. Absolute samples on this loaded host are descriptive, not paired causal savings.
+
+**Before S2** (tick-stack samples: 3979.6 ms).
+
+| Rank | Function and file | Self ms |
+|---:|---|---:|
+| 1 | deliverReport (knowledge/knowledge.ts) | 535.0 |
+| 2 | heldPost (command/command.ts) | 495.1 |
+| 3 | deepFreeze (tick/freeze.ts) | 212.2 |
+| 4 | (anonymous) (seats/requests.ts) | 123.2 |
+| 5 | principalMenu (seats/requests.ts) | 110.4 |
+| 6 | (anonymous) (seats/world.ts) | 107.6 |
+| 7 | postStateOf (command/command.ts) | 106.3 |
+| 8 | (anonymous) (command/command.ts) | 95.9 |
+| 9 | contactEdgesOf (control-index/control-index.ts) | 85.9 |
+| 10 | commandedBlocks (command/command.ts) | 84.8 |
+| 11 | (anonymous) (control-index/control-index.ts) | 82.5 |
+| 12 | controlEvidence (knowledge/control-beliefs.ts) | 82.4 |
+| 13 | set TextDecoder () | 78.9 |
+| 14 | postIdsOf (command/command.ts) | 78.7 |
+| 15 | sideOfPerson (command/command.ts) | 73.3 |
+| 16 | pruneKnowledge (knowledge/knowledge.ts) | 62.0 |
+| 17 | __name (control-index/control-index.ts) | 49.3 |
+| 18 | buildControlIndex (control-index/control-index.ts) | 46.7 |
+| 19 | write (serialize/canonical.ts) | 41.5 |
+| 20 | claimedControlView (view/claimed-control.ts) | 41.5 |
+
+**After S20: war slot** (tick-stack samples: 4850.3 ms).
+
+| Rank | Function and file | Self ms |
+|---:|---|---:|
+| 1 | deepFreeze (tick/freeze.ts) | 396.2 |
+| 2 | heldPost (command/command.ts) | 379.4 |
+| 3 | (anonymous) (seats/world.ts) | 166.1 |
+| 4 | deliverReports (knowledge/knowledge.ts) | 156.7 |
+| 5 | commandedBlocks (command/command.ts) | 145.3 |
+| 6 | contactEdgesOf (control-index/control-index.ts) | 142.1 |
+| 7 | (anonymous) (command/command.ts) | 127.1 |
+| 8 | set TextDecoder () | 124.3 |
+| 9 | postIdsOf (command/command.ts) | 115.0 |
+| 10 | (anonymous) (control-index/control-index.ts) | 110.8 |
+| 11 | postStateOf (command/command.ts) | 102.5 |
+| 12 | buildControlIndex (control-index/control-index.ts) | 98.8 |
+| 13 | pruneKnowledge (knowledge/knowledge.ts) | 90.8 |
+| 14 | __name (control-index/control-index.ts) | 85.0 |
+| 15 | sideOfPerson (command/command.ts) | 78.0 |
+| 16 | controlEvidence (knowledge/control-beliefs.ts) | 77.4 |
+| 17 | write (serialize/canonical.ts) | 71.5 |
+| 18 | edgeLeg (supply/supply.ts) | 70.9 |
+| 19 | peopleProjection (view/people.ts) | 67.3 |
+| 20 | sendReport (tick/context.ts) | 66.3 |
+
+**After S20: history slot** (tick-stack samples: 6485.1 ms).
+
+| Rank | Function and file | Self ms |
+|---:|---|---:|
+| 1 | buildControlIndex (control-index/control-index.ts) | 570.6 |
+| 2 | deepFreeze (tick/freeze.ts) | 526.2 |
+| 3 | heldPost (command/command.ts) | 488.1 |
+| 4 | (anonymous) (seats/world.ts) | 260.0 |
+| 5 | deliverReports (knowledge/knowledge.ts) | 176.6 |
+| 6 | postIdsOf (command/command.ts) | 171.5 |
+| 7 | commandedBlocks (command/command.ts) | 168.6 |
+| 8 | (anonymous) (command/command.ts) | 167.5 |
+| 9 | (anonymous) (control-index/control-index.ts) | 160.9 |
+| 10 | contactEdgesOf (control-index/control-index.ts) | 160.7 |
+| 11 | set TextDecoder () | 153.6 |
+| 12 | pruneKnowledge (knowledge/knowledge.ts) | 110.3 |
+| 13 | claimedControlView (view/claimed-control.ts) | 104.3 |
+| 14 | __name (control-index/control-index.ts) | 103.9 |
+| 15 | controlEvidence (knowledge/control-beliefs.ts) | 101.9 |
+| 16 | postStateOf (command/command.ts) | 91.9 |
+| 17 | edgeLeg (supply/supply.ts) | 88.0 |
+| 18 | write (serialize/canonical.ts) | 84.5 |
+| 19 | sideOfPerson (command/command.ts) | 83.6 |
+| 20 | generateReports (tick/generate.ts) | 82.0 |
+
+The single retained pre-S2 profile is the common baseline for both slots: the two timing calls have the same pack, days, atWar and other options on this branch. A second historical capture was not invented or rerun. Final slots are separate fresh captures using Node command-line profiling, whose import samples are removed by the same stack filter.
+
+
+Profiled median/p95 observations: final-war 28.14/57.49 ms; final-history 34.66/73.49 ms. All profiled result values equal the timed source snapshot. These profiles are descriptive; the default done check above retains its own verdict.
+
+## S20 plan and measured changes (from fae69bc)
 
 S20 continues only the performance lane under 0106. Read the main CODEX standing, command-line, writing and sprint rules, CLAUDE.md and 0106. Clean starting branch: sprint/perf at fae69bc. `npm ci` ran first, exit 0. Claude's independent whole-branch review remains deferred under 0106; no review subagent, push or other worktree write.
 
@@ -14,7 +144,7 @@ The retained S2 profiles put heldPost among the largest tick self costs. Princip
 
 New tests cover one enumeration for the roster, resignation versus staying, neutral people, inherited posts, relief and older-State reads. The missing helper failed first; an incomplete fixture was corrected before the green gate. Focused checks: 59 passed, typecheck exit 0. All 148 Union and 120 testbed daily hashes and entire untimed summaries match the pre-S2 baseline. Evidence: runs/s20/candidates-hash/comparison.json and candidates-testbed/comparison.json.
 
-Three alternating pairs per slot against fae69bc are retained in runs/s20/candidates-pairs/pairs.json. War before/after medians 39.685/40.226 ms, median paired saving **-0.541 ms**; history 78.657/46.129 ms, median paired saving **9.282 ms**. These separate changing-host samples are not causal or additive. The direct menu comparison, all values equal, saves a median paired **673.757 ms over 100 calls for both principals**, with before/after medians 902.488/228.902 ms. Its targeted next-step test ran briefly during this small comparison; no unloaded claim. All three direct pairs win (663.044–674.049 ms), supporting removal of the repeated scan despite mixed whole-run timing. No timing campaign was repeated for a nicer number.
+Three alternating pairs per slot against fae69bc are retained in runs/s20/candidates-pairs/pairs.json. War before/after medians 39.685/40.226 ms, median paired saving **-0.541 ms**; history 78.657/46.129 ms, median paired saving **9.282 ms**. These separate changing-host samples are not causal or additive. The direct menu comparison, all values equal, saves a median paired **673.757 ms over 100 calls for both principals**, with before/after medians 902.488/228.902 ms. A timestamp audit corrects this step's earlier overlap note: the micro result finished at 22:06:38.693 UTC, before the next focused command's log was created at 22:06:41.127 UTC; the shell was continuing into its hash check (runs/s20/menu-scheduling.json). No unloaded claim. All three direct pairs win (663.044–674.049 ms), supporting removal of the repeated scan despite mixed whole-run timing. No timing campaign was repeated for a nicer number.
 
 The inspector-session profile stalled; only that lane-owned process was stopped. A bounded three-day diagnostic reproduced the stall. Node's command-line CPU profiler then passed the three-day smoke and is the final-profile method. Failed/aborted evidence remains under runs/s20. The original retained pre-S2 profile is reused.
 
@@ -27,6 +157,22 @@ The history profile's selfEmancipationTerms was a remaining large self cost. Its
 The regression first failed with four force enumerations instead of one. Three tests pass, covering all terms/destinations, movement, surrender, null/zero/negative strength, missing blocks, enemy forces, department-side changes, older-State reads, no census and fully protected census. All 268 daily hashes and complete summaries remain equal to pre-S2 (runs/s20/force-regions-hash-comparisons.json).
 
 Three alternating parent/change pairs per slot, against step 1's runtime snapshot: median paired saving **0.008 ms war / 0.223 ms history** (runs/s20/force-regions-pairs/pairs.json). The independent medians of before/after run medians are 32.848/51.552 ms war and 31.377/30.486 ms history; subtracting those is not the paired estimator. Individual paired changes vary from -18.704 to +1.863 ms in war. The war effect is unresolved within host noise. A direct comparison on S2's hash-checked day-60 save retains every term and saves median paired **98.472 ms over 100 calls**; one pair loses, two win (runs/s20/force-pairs.json). No timing retry or unloaded/CI claim.
+
+Committed step 2 as **72dfa0d** through the actual hook: exit 0, 140 files, 1,538 passed, one existing expected failure, four skips; typecheck, boundary, licences and decision index pass. Duration 741.97 s. No retry or changed gate.
+
+### S20 step 3: reuse the frozen candidate graph
+
+The remaining request-freeze cost includes rebuilding and walking the same candidate graph every morning. The final candidate reuses that deeply frozen graph in the caller's ViewCache while World, post States, service choices, ranks and statuses retain identity. The full dependency key is checked for each faction; old-State reads and a different World recompute. It shares no morning view into planning and leaves S2's post-identity finding untouched.
+
+The new identity regression failed first with equal values in distinct arrays. Six focused files pass, 44 tests, plus typecheck. Tests cover every dependency, unrelated knowledge/day changes, older-State reads and mutation rejection. Its snapshot also matches all 268 daily hashes and complete summaries (runs/s20/candidate-cache-hash-comparisons.json).
+
+Three alternating pairs per slot against step 2 save median paired **1.807 ms war / 1.278 ms history**. The separate before/after medians are 25.214/24.183 ms war and 26.418/25.001 ms history. War improves in all three pairs; history improves in two and loses one. The direct request construction/freeze comparison improves in all three pairs, saving median paired **50.350 ms over 100 morning reads**; all values equal. These reads use the same retained day-60 truth with only the day changed, and are not a simulated trajectory (runs/s20/request-pairs.json). The whole-run comparisons are in runs/s20/candidate-cache-pairs/pairs.json. They ran after step 2's hook with no other validation job from this lane. Parent-proof.json verifies that the four relevant source files in both parent snapshots match actual commits 82f817b and 72dfa0d after Git line-ending normalization. The final hook remains outstanding.
+
+Runtime/preservation preflight is complete: eight delivery files, 1,670 other originals unchanged, all 397 runtime/pack files match the hash-verified final candidate snapshot, aliases resolve here, and the regenerated day-40 save is byte-identical (SHA-256 a3e363b949df0e7a2284241453a16b175a434c7dc320bea913e1df5f9d417b1c). Reuse this fixture evidence if runtime hashes remain unchanged. Final profiles and the default done check are recorded above.
+
+## Retained S2 hand-over at fae69bc
+
+The following is the historical S2 record, before S20; its old timing verdict is not the S20 verdict above. Git also retains its original text at fae69bc:notes/lane-s2-perf.md.
 
 For the lead: 1 item. Work is on `sprint/perf`, from `ceff796`, under decision 0106. `npm ci` completed first (exit 0, 51 packages, zero vulnerabilities). Independent review remains with Claude after the sprint. No push is authorized.
 
@@ -117,3 +263,15 @@ For the lead:
 1. Lead: Linux CI decides the hosted budget; this run's history budget **failed at 52.82 ms**, and the unloaded target is not established. No push or hosted job was triggered. Other sprint lanes' work is not imported or changed.
 2. View owner: an existing ViewCache can return the old post after a same-day reassignment at the same location. The final equality guard omits post identity. `runs/s2/cache-post-identity.json` reproduces cached `null` versus fresh `a_office`. Broader sharing of the morning cache into planning is therefore deferred. Fixing this changes observable behavior and is outside S2's preservation scope.
 3. S1 and the existing 1A owners: checkpoint, operation, pushback and lever-sweep failures remain binding for their milestone. All original pack bands and checkpoint bounds are preserved.
+
+## S20 proposed rulings
+
+1. Accept the command owner's single-pass unposted roster. Rejected: retaining repeated post/World searches for every person; changing service choices, availability, rank order or menu values.
+2. Accept lazy force-presence derivation local to one census-term call. Rejected: repeated neighbor scans, a cross-State presence cache, or changing any term, destination, cadence, gate content or band.
+3. Accept only the fully keyed, deeply frozen candidate graph in the caller-owned cache. Rejected: caching a whole morning request, sharing the known-problematic morning view into planning, shallow-freeze shortcuts or persisted derived data.
+
+## Findings outside my scope
+
+1. Lead/CI: Linux performance and the unloaded 20 ms aim remain unestablished. Review the whole branch and each optimization after the sprint; nothing here reaches main by itself. The largest remaining samples include request freezing, post lookups and control-index construction. The large one-slot index sample needs isolation before selecting a next change. No additional campaign was started to chase it.
+2. S1/existing 1A owners retain every checkpoint, operation, pushback and lever-sweep problem listed above. No calibration, criterion or signature changed.
+3. View owner/S18: the inherited same-day post-identity cache issue remains outside S20; runs/s2/cache-post-identity.json and the retained S2 finding describe it. Its guard is unchanged. Broader cache sharing stays deferred; no behavior-changing fix was folded into these optimizations.

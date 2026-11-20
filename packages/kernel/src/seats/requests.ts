@@ -134,7 +134,7 @@ function doctrineView(world: SeatsWorld, state: State, faction: FactionId): Doct
   };
 }
 
-export function principalMenu(world: SeatsWorld, state: State, faction: FactionId, ground: MorningGround): PrincipalMenu {
+export function principalMenu(world: SeatsWorld, state: State, faction: FactionId, ground: MorningGround, cache?: ViewCache): PrincipalMenu {
   const f = world.faction(faction);
   // Typical days to a post's seat in pack data, or where it stood at the start of play, or else his own side's capital:
   // the principal is not told where it is today (exit review P2).
@@ -180,11 +180,22 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   const vacancies: Vacancy[] = ownPosts
     .filter((id) => state.postStates[id]!.postHolder === null && !unreported.has(id) && heldAtStart.has(id) && commandedBlocks(state, id).length > 0)
     .map((id) => ({ post: id, arm: commandedBlocks(state, id).every((b) => isNaval(world.map, state, b)) ? ('naval' as const) : ('land' as const), routes: routesTo(id), appointing: inTransitTo(state, f.principal, id).includes('appoint') }));
-  const rankIndex = new Map(world.map.world.vocabularies.ranks.map((r, i) => [r.id as string, i]));
-  const candidates: Candidate[] = unpostedPeopleOnSide(world.map, state, faction)
-    .filter((p) => p.id !== f.principal && (state.personStatus[p.id]?.statusKind ?? 'serving') === 'serving')
-    .map((p) => ({ person: p.id, kind: p.kind as string, seniority: Math.max(-1, ...Object.values(state.personRanks[p.id] ?? {}).map((r) => rankIndex.get(r.rankTerm) ?? -1)) }))
-    .sort((a, b) => b.seniority - a.seniority || strictCompare(a.person, b.person));
+  const previousCandidates = cache?.candidates.get(faction);
+  let candidates: readonly Candidate[];
+  if (previousCandidates !== undefined && previousCandidates.world === world && previousCandidates.posts === state.postStates && previousCandidates.service === state.personService && previousCandidates.ranks === state.personRanks && previousCandidates.status === state.personStatus) {
+    candidates = previousCandidates.candidates;
+  } else {
+    const rankIndex = new Map(world.map.world.vocabularies.ranks.map((r, i) => [r.id as string, i]));
+    candidates = unpostedPeopleOnSide(world.map, state, faction)
+      .filter((p) => p.id !== f.principal && (state.personStatus[p.id]?.statusKind ?? 'serving') === 'serving')
+      .map((p) => ({ person: p.id, kind: p.kind as string, seniority: Math.max(-1, ...Object.values(state.personRanks[p.id] ?? {}).map((r) => rankIndex.get(r.rankTerm) ?? -1)) }))
+      .sort((a, b) => b.seniority - a.seniority || strictCompare(a.person, b.person));
+    if (cache !== undefined) {
+      // Prove the whole graph frozen before retaining it for another request.
+      candidates = freezeDeep(candidates, cache);
+      cache.candidates.set(faction, { world, posts: state.postStates, service: state.personService, ranks: state.personRanks, status: state.personStatus, candidates });
+    }
+  }
   const situations: SituationChoice[] = [];
   for (const def of world.situations) {
     const r = state.situationStates[def.id];
@@ -308,7 +319,7 @@ export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCach
   const out: SeatRequest[] = [];
   for (const faction of world.factionIds) {
     const seat = seatIdFor(world.faction(faction).principal);
-    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `principal:${faction}:${day}`, view: viewFor(world, state, seat, cache), menu: principalMenu(world, state, faction, ground) }, cache));
+    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `principal:${faction}:${day}`, view: viewFor(world, state, seat, cache), menu: principalMenu(world, state, faction, ground, cache) }, cache));
   }
   for (const def of world.situations) {
     const r = state.situationStates[def.id];
