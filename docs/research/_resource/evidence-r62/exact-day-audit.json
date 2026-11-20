@@ -1,0 +1,794 @@
+[
+  {
+    "citation": "OR I-1-p12",
+    "before": "1861-04-19",
+    "after": "1861-04-18..1861-04-19",
+    "rows": 2,
+    "verdict": "bound: multiple independently dated documents",
+    "evidence": "OR I-1 p12: Anderson telegram headed April18 [1861] and letter headed New York April19 1861, both under No6. The page-only locator selects neither separately, so retain 1861-04-18..1861-04-19. See evidence-r62/source-reading.json and evidence-r52/official-page-extracts.json."
+  },
+  {
+    "citation": "OR I-1 p12",
+    "before": "1861-04-19",
+    "after": "1861-04-18..1861-04-19",
+    "rows": 3,
+    "verdict": "bound: multiple independently dated documents",
+    "evidence": "OR I-1 p12: Anderson telegram headed April18 [1861] and letter headed New York April19 1861, both under No6. The page-only locator selects neither separately, so retain 1861-04-18..1861-04-19. See evidence-r62/source-reading.json and evidence-r52/official-page-extracts.json."
+  },
+  {
+    "citation": "WELLES-D 1862-09-12",
+    "before": "1862-09-12",
+    "after": "1862-09-12",
+    "rows": 8,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp123-124, diary entry heading 1862-09-12, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "NH-CW 6 p230-231",
+    "before": "1861-03-29",
+    "after": "1861-03-29..1861-03-30",
+    "rows": 2,
+    "verdict": "bound: multiple independently dated documents",
+    "evidence": "Nicolay/Hay Complete Works vol6 pp227-231: cabinet opinions have the March29 1861 group heading on p227, but p231 also begins the letter to John T. Stuart headed March30 1861. This page-span locator names neither document separately. Retain both days; the explicit Stuart heading, not the March30 running head alone, establishes the upper bound. See evidence-r62/source-reading.json."
+  },
+  {
+    "citation": "NH-CW 6 p228-231",
+    "before": "1861-03-29",
+    "after": "1861-03-29..1861-03-30",
+    "rows": 1,
+    "verdict": "bound: multiple independently dated documents",
+    "evidence": "Nicolay/Hay Complete Works vol6 pp227-231: cabinet opinions have the March29 1861 group heading on p227, but p231 also begins the letter to John T. Stuart headed March30 1861. This page-span locator names neither document separately. Retain both days; the explicit Stuart heading, not the March30 running head alone, establishes the upper bound. See evidence-r62/source-reading.json."
+  },
+  {
+    "citation": "JONES I-1862-04-12",
+    "before": "1862-04-12",
+    "after": "1862-04-12",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp119-120. Jones vol1, diary entry heading, retained OCR line5637 (APRIL  12TH. \u2014 The  committee  (Congressional)  which  have  been). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JCCS I-p85 dated 1861-02-25",
+    "before": "1861-02-25",
+    "after": "1861-02-25",
+    "rows": 1,
+    "verdict": "retain: single sitting date on the selected page",
+    "evidence": "R52 jccs-page-extracts.json and session-heading readings reused"
+  },
+  {
+    "citation": "JONES I-1861-10-30",
+    "before": "1861-10-30",
+    "after": "1861-10-30",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp89-90. Jones vol1, diary entry heading, retained OCR line4156 (OCTOBER  30TH. \u2014 I  understand  a  dreadful  quarrel  is  brewing  be-). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1861-11-02",
+    "before": "1861-11-02",
+    "after": "1861-11-02",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp90-91. Jones vol1, diary entry heading, retained OCR line4198 (NOVEMBER  2o. \u2014 It  has  culminated.  Mr.  Benjamin's  quarrel). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "LINCOLN 1861-05-18-blair",
+    "before": "1861-05-18",
+    "after": "1861-05-18",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Nicolay/Hay Complete Works (1894 two-volume edition), vol2 pp47-48, selected dated letter to the recipient named in the locator. Heading and recipient read; source page headers in lincoln-page-anchors.json. Date 1861-05-18; page range deliberately broad where an intervening OCR page numeral is ambiguous."
+  },
+  {
+    "citation": "NH 3-p432",
+    "before": "1861-03-29",
+    "after": "1861-03-29",
+    "rows": 1,
+    "verdict": "retain: selected documentary quotation, rather than adjacent narrative",
+    "evidence": "NH vol3 cabinet-opinion sequence and the March 29 meeting memorandum context at pp429-432"
+  },
+  {
+    "citation": "NH-CW 6 p230",
+    "before": "1861-03-29",
+    "after": "1861-03-29",
+    "rows": 5,
+    "verdict": "retain: March29 opinion group; cited pages stop before the March30 Stuart letter",
+    "evidence": "Complete Works VI pp227-230; evidence-r62/source-reading.json"
+  },
+  {
+    "citation": "NH-CW 6 p230 (\"no confidence in judgment\")",
+    "before": "1861-03-29",
+    "after": "1861-03-29",
+    "rows": 1,
+    "verdict": "retain: March29 opinion group; cited pages stop before the March30 Stuart letter",
+    "evidence": "Complete Works VI pp227-230; evidence-r62/source-reading.json"
+  },
+  {
+    "citation": "FOX-CC 1:2-3 dated 1861-01-31",
+    "before": "1861-01-31",
+    "after": "1861-01-31",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Fox vol1, letter identified by date in locator; printed letter headings read in confidentialcorr01foxg.txt, pp2-3,7-8,11-12,43-44 respectively. Surrounding correspondence is not assigned this exact date."
+  },
+  {
+    "citation": "WELLES-D 1862-12-29",
+    "before": "1862-12-29",
+    "after": "1862-12-29",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1, diary entry headed 1862-12-29; heading and surrounding text read in evidence-r52/diary-heading-extracts.json. The 1862/1863 chapter sequence distinguishes repeated month/day headings; not the 1911 publication date."
+  },
+  {
+    "citation": "DOC-1861 CHASE 1861-03-16-lincoln",
+    "before": "1861-03-16",
+    "after": "1861-03-16",
+    "rows": 4,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Chase to Lincoln, heading March16 1861, Complete Works vol6 pp201-202, read in completeworv6linc OCR cabinet opinion sequence pp192-220. This is the quoted document date, not its later imprint."
+  },
+  {
+    "citation": "NH-CW 6 p228",
+    "before": "1861-03-29",
+    "after": "1861-03-29",
+    "rows": 3,
+    "verdict": "retain: March29 opinion group; cited pages stop before the March30 Stuart letter",
+    "evidence": "Complete Works VI pp227-230; evidence-r62/source-reading.json"
+  },
+  {
+    "citation": "JONES I-1862-06-24",
+    "before": "1862-06-24",
+    "after": "1862-06-24",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp135-136. Jones vol1, diary entry heading, retained OCR line6407 (JUNE  24TH. \u2014 Gen.  Lee's  plan  works  like  a  charm  i  Although). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1862-11-02",
+    "before": "1862-11-02",
+    "after": "1862-11-02",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp181-182. Jones vol1, diary entry heading, retained OCR line8666 (NOVEMBER  2D,  SUNDAY. \u2014 I  watch  the  daily  orders  of  Adjutant). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1862-12-04",
+    "before": "1862-12-04",
+    "after": "1862-12-04",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp203-204. Jones vol1, diary entry heading, retained OCR line9750 (DECEMBER  4TH. \u2014 All  is  quiet  (before  the  storm)  on  the  Rappa-). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1861-05-26",
+    "before": "1861-05-26",
+    "after": "1861-05-26",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp42-45. Jones vol1, diary entry heading, retained OCR line1970 (MAY  26TH. \u2014 Was  called  on  by  the  Episcopal  minister  to-day,). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "WELLES-D 1863-01-09",
+    "before": "1863-01-09",
+    "after": "1863-01-09",
+    "rows": 2,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp218-219, diary entry heading 1863-01-09, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "WELLES-D 1863-06-15",
+    "before": "1863-06-15",
+    "after": "1863-06-15",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp329-330, diary entry heading 1863-06-15, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "WELLES-D 1862-10-01",
+    "before": "1862-10-01",
+    "after": "1862-10-01",
+    "rows": 8,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp156-158, diary entry heading 1862-10-01, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "WELLES-D 1862-10-09",
+    "before": "1862-10-09",
+    "after": "1862-10-09",
+    "rows": 3,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp163-164, diary entry heading 1862-10-09, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "WELLES-D 1862-08-10",
+    "before": "1862-08-10",
+    "after": "1862-08-10",
+    "rows": 11,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp71-72, diary entry heading 1862-08-10, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "JONES I-1861-06-17",
+    "before": "1861-06-17",
+    "after": "1861-06-17",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp52-53. Jones vol1, diary entry heading, retained OCR line2428 (JUNE  17TH.. \u2014 To-day  there  was  a  rumor  in  the  streets  that  Har-). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1862-10-31",
+    "before": "1862-10-31",
+    "after": "1862-10-31",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp178-179. Jones vol1, diary entry heading, retained OCR line8529 (OCTOBER  31sT. \u2014 If  it  be  not  a  Yankee  electioneering  trick  to). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1861-07-21",
+    "before": "1861-07-21",
+    "after": "1861-07-21",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp64-66. Jones vol1, diary entry heading, retained OCR line2977 (JULY  21sx. \u2014 The  President  left  the  city  this  morning  for  Ma-). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1861-10-29",
+    "before": "1861-10-29",
+    "after": "1861-10-29",
+    "rows": 2,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp89-90. Jones vol1 pp89-90. Jones vol1, diary entry heading, retained OCR line4147 (OCTOBER  29xH. \u2014 The  election  to  take  place  during  the  ensuing). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1862-11-13",
+    "before": "1862-11-13",
+    "after": "1862-11-13",
+    "rows": 3,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp188-189. Jones vol1 pp188-189. Jones vol1 pp188-189. Jones vol1, diary entry heading, retained OCR line9032 (NOVEMBER  13TH. \u2014 The  President  has  rebuked  the  Secretary  of). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1861-10-01",
+    "before": "1861-10-01",
+    "after": "1861-10-01",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp82-83. Jones vol1, diary entry heading, retained OCR line3839 (OCTOBER  IST. \u2014 I  find  that  only  a  few  hundred  alien  enemies  de-). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1862-12-23",
+    "before": "1862-12-23",
+    "after": "1862-12-23",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp221-222. Jones vol1, diary entry heading, retained OCR line10650 (DECEMBER  23o. \u2014 The  battle  of  Fredericksburg  is  still  the  topic,). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I 1861-07-20",
+    "before": "1861-07-20",
+    "after": "1861-07-20",
+    "rows": 3,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp63-64. Jones vol1 pp63-64. Jones vol1 pp63-64. Jones vol1, diary entry heading, retained OCR line2950 (JULY  20TH. \u2014 The  Secretary  works  too  much \u2014 or  rather  does). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "WELLES-D 1862-10-02",
+    "before": "1862-10-02",
+    "after": "1862-10-02",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp160-161, diary entry heading 1862-10-02, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "WELLES-D 1863-02-16",
+    "before": "1863-02-16",
+    "after": "1863-02-16",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp236-237, diary entry heading 1863-02-16, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "WELLES-D 1863-03-12",
+    "before": "1863-03-12",
+    "after": "1863-03-12",
+    "rows": 2,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp247-248, diary entry heading 1863-03-12, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "WELLES-D 1863-04-02",
+    "before": "1863-04-02",
+    "after": "1863-04-02",
+    "rows": 2,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp251-252, diary entry heading 1863-04-02, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "WELLES-D 1862-08-20",
+    "before": "1862-08-20",
+    "after": "1862-08-20",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp87-88, diary entry heading 1862-08-20, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "WELLES-D 1862-12-20",
+    "before": "1862-12-20",
+    "after": "1862-12-20",
+    "rows": 4,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp196-197, diary entry heading 1862-12-20, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "WELLES-D 1862-10-10",
+    "before": "1862-10-10",
+    "after": "1862-10-10",
+    "rows": 2,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp165-166, diary entry heading 1862-10-10, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "FOX-CC 1:43-44 dated 1861-05-01",
+    "before": "1861-05-01",
+    "after": "1861-05-01",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Fox vol1, letter identified by date in locator; printed letter headings read in confidentialcorr01foxg.txt, pp2-3,7-8,11-12,43-44 respectively. Surrounding correspondence is not assigned this exact date."
+  },
+  {
+    "citation": "FOX-CC 1:7-8 dated 1861-02-08",
+    "before": "1861-02-08",
+    "after": "1861-02-08",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Fox vol1, letter identified by date in locator; printed letter headings read in confidentialcorr01foxg.txt, pp2-3,7-8,11-12,43-44 respectively. Surrounding correspondence is not assigned this exact date."
+  },
+  {
+    "citation": "FOX-CC 1:11-12 dated 1861-03-31",
+    "before": "1861-03-31",
+    "after": "1861-03-31",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Fox vol1, letter identified by date in locator; printed letter headings read in confidentialcorr01foxg.txt, pp2-3,7-8,11-12,43-44 respectively. Surrounding correspondence is not assigned this exact date."
+  },
+  {
+    "citation": "WELLES-D 1862-09-10",
+    "before": "1862-09-10",
+    "after": "1862-09-10",
+    "rows": 2,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp118-119, diary entry heading 1862-09-10, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "WELLES-D 1863-06-14",
+    "before": "1863-06-14",
+    "after": "1863-06-14",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp327-328, diary entry heading 1863-06-14, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "JCCS I-p464 dated 1861-08-31",
+    "before": "1861-08-31",
+    "after": "1861-08-31",
+    "rows": 1,
+    "verdict": "retain: single sitting date on the selected page",
+    "evidence": "R52 jccs-page-extracts.json and session-heading readings reused"
+  },
+  {
+    "citation": "LINCOLN 1862-01-31-war-secretary",
+    "before": "1862-01-31",
+    "after": "1862-01-31",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Nicolay/Hay Complete Works (1894 two-volume edition), vol2 pp119-120, selected dated letter to the recipient named in the locator. Heading and recipient read; source page headers in lincoln-page-anchors.json. Date 1862-01-31; page range deliberately broad where an intervening OCR page numeral is ambiguous."
+  },
+  {
+    "citation": "LINCOLN 1862-02-10-hunter",
+    "before": "1862-02-10",
+    "after": "1862-02-10",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Nicolay/Hay Complete Works (1894 two-volume edition), vol2 pp123-124, selected dated letter to the recipient named in the locator. Heading and recipient read; source page headers in lincoln-page-anchors.json. Date 1862-02-10; page range deliberately broad where an intervening OCR page numeral is ambiguous."
+  },
+  {
+    "citation": "LINCOLN 1861-05-01-fox",
+    "before": "1861-05-01",
+    "after": "1861-05-01",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Nicolay/Hay Complete Works (1894 two-volume edition), vol2 pp41-42, selected dated letter to the recipient named in the locator. Heading and recipient read; source page headers in lincoln-page-anchors.json. Date 1861-05-01; page range deliberately broad where an intervening OCR page numeral is ambiguous."
+  },
+  {
+    "citation": "LINCOLN 1861-04-01-seward",
+    "before": "1861-04-01",
+    "after": "1861-04-01",
+    "rows": 3,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Nicolay/Hay Complete Works (1894 two-volume edition), vol2 pp30-32, selected dated letter to the recipient named in the locator. Heading and recipient read; source page headers in lincoln-page-anchors.json. Date 1861-04-01; page range deliberately broad where an intervening OCR page numeral is ambiguous."
+  },
+  {
+    "citation": "LINCOLN 1861-01-12-seward (Gilmer)",
+    "before": "1861-01-12",
+    "after": "1861-01-12",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Nicolay/Hay Complete Works (1894 two-volume edition), vol1 pp664-665, selected dated letter to the recipient named in the locator. Heading and recipient read; source page headers in lincoln-page-anchors.json. Date 1861-01-12; page range deliberately broad where an intervening OCR page numeral is ambiguous."
+  },
+  {
+    "citation": "LINCOLN 1861-03-04-seward",
+    "before": "1861-03-04",
+    "after": "1861-03-04",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Nicolay/Hay Complete Works (1894 two-volume edition), vol2 pp7-8, selected dated letter to the recipient named in the locator. Heading and recipient read; source page headers in lincoln-page-anchors.json. Date 1861-03-04; page range deliberately broad where an intervening OCR page numeral is ambiguous."
+  },
+  {
+    "citation": "LINCOLN 1861-04-25-scott",
+    "before": "1861-04-25",
+    "after": "1861-04-25",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Nicolay/Hay Complete Works (1894 two-volume edition), vol2 pp38-40, selected dated letter to the recipient named in the locator. Heading and recipient read; source page headers in lincoln-page-anchors.json. Date 1861-04-25; page range deliberately broad where an intervening OCR page numeral is ambiguous."
+  },
+  {
+    "citation": "WELLES-D 1862-09-07",
+    "before": "1862-09-07",
+    "after": "1862-09-07",
+    "rows": 4,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp111-112, diary entry heading 1862-09-07, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "OR I-11-1-p61",
+    "before": "1862-06-28",
+    "after": "1862-06-28..1863-08-04",
+    "rows": 2,
+    "verdict": "bound: multiple independently dated documents",
+    "evidence": "OR I-11-1 p61: independently headed telegram of June28 1862 quoted inside McClellan report No1, headed August4 1863 on p5. The page-only locator does not distinguish the telegram from the surrounding report. Retain 1862-06-28..1863-08-04; do not date the whole report from its quoted telegram. See evidence-r62/source-reading.json."
+  },
+  {
+    "citation": "JONES I-1862-01-20",
+    "before": "1862-01-20",
+    "after": "1862-01-20",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp106-107. Jones vol1, diary entry heading, retained OCR line4974 (JANUARY  20TH. \u2014 Mr.  Memminger  advertises  to  pay  interest  on). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1862-12-12",
+    "before": "1862-12-12",
+    "after": "1862-12-12",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp211-212. Jones vol1, diary entry heading, retained OCR line10152 (DECEMBER  12m. \u2014 The  enemy  have  possession  of  Fredericks-). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JCCS I-p19 dated 1861-02-05",
+    "before": "1861-02-05",
+    "after": "1861-02-05",
+    "rows": 2,
+    "verdict": "retain: single sitting date on the selected page",
+    "evidence": "R52 jccs-page-extracts.json and session-heading readings reused"
+  },
+  {
+    "citation": "JCCS I-p25 dated 1861-02-07",
+    "before": "1861-02-07",
+    "after": "1861-02-07",
+    "rows": 2,
+    "verdict": "retain: single sitting date on the selected page",
+    "evidence": "R52 jccs-page-extracts.json and session-heading readings reused"
+  },
+  {
+    "citation": "JONES I-1862-10-30",
+    "before": "1862-10-30",
+    "after": "1862-10-30",
+    "rows": 2,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp177-178. Jones vol1 pp177-178. Jones vol1, diary entry heading, retained OCR line8500 (OCTOBER  30Tn. \u2014 The  Commissary-General  is  in  hot  water  on). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1862-11-06",
+    "before": "1862-11-06",
+    "after": "1862-11-06",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp183-184. Jones vol1, diary entry heading, retained OCR line8768 (NOVEMBER  GTH. \u2014 I  believe  the  commissaries  and  quartermas-). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1861-10-15",
+    "before": "1861-10-15",
+    "after": "1861-10-15",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp85-86. Jones vol1, diary entry heading, retained OCR line3963 (OCTOBER  15TH. \u2014 I  have  been  requested  by  Gen.  Winder  to-day). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "OR I-1-p166",
+    "before": "1861-02-06",
+    "after": "1861-02-06",
+    "rows": 2,
+    "verdict": "retain: February6 letter; earlier letters are mentioned/quoted without separate document headings",
+    "evidence": "OR I-1 p166; evidence-r62/source-reading.json"
+  },
+  {
+    "citation": "WELLES-D 1862-09-02",
+    "before": "1862-09-02",
+    "after": "1862-09-02",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp104-105, diary entry heading 1862-09-02, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "JONES I-1862-03-28",
+    "before": "1862-03-28",
+    "after": "1862-03-28",
+    "rows": 2,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp117-118. Jones vol1 pp117-118. Jones vol1, diary entry heading, retained OCR line5520 (MARCH  28TH. \u2014 Mr.  Benjamin  has  been  promoted.  He  is  now). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "ORN I-4 p290 dated 1861-04-23",
+    "before": "1861-04-23",
+    "after": "1861-04-23",
+    "rows": 2,
+    "verdict": "retain: April23 Paulding report continues from p289 through p290",
+    "evidence": "ORN I-4 pp289-290; evidence-r62/source-reading.json"
+  },
+  {
+    "citation": "JONES I-1861-04-16",
+    "before": "1861-04-16",
+    "after": "1861-04-16",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp20-21. Jones vol1, diary entry heading, retained OCR line923 (APRIL  16TH. \u2014 This  day  the  Spontaneous  People's  Convention). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "DOC-1861 SEWARD 1861-04-01-thoughts",
+    "before": "1861-04-01",
+    "after": "1861-04-01",
+    "rows": 2,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Seward, Some Thoughts for the President, April1 1861, Complete Works (1894 two-volume edition) vol2 p29, document heading read at OCR lines2168ff; followed by Lincoln reply at p30. See lincoln-heading-extracts.json."
+  },
+  {
+    "citation": "DOC-1861 SEWARD 1861-04-01-thoughts (frank to his president, to the point of presumption; the Confederate-commissioners channel is candour toward an adversary and is not coded)",
+    "before": "1861-04-01",
+    "after": "1861-04-01",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Seward, Some Thoughts for the President, April1 1861, Complete Works (1894 two-volume edition) vol2 p29, document heading read at OCR lines2168ff; followed by Lincoln reply at p30. See lincoln-heading-extracts.json."
+  },
+  {
+    "citation": "WELLES-D 1862-09-27",
+    "before": "1862-09-27",
+    "after": "1862-09-27",
+    "rows": 2,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp153-154, diary entry heading 1862-09-27, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "NH-CW 6 p229-230",
+    "before": "1861-03-29",
+    "after": "1861-03-29",
+    "rows": 5,
+    "verdict": "retain: March29 opinion group; cited pages stop before the March30 Stuart letter",
+    "evidence": "Complete Works VI pp227-230; evidence-r62/source-reading.json"
+  },
+  {
+    "citation": "JONES I-1862-10-03",
+    "before": "1862-10-03",
+    "after": "1862-10-03",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp163-164. Jones vol1, diary entry heading, retained OCR line7782 (OCTOBER  3D. \u2014 Gen.  Wise  was  countermanded  in  his  march). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "WELLES-D 1863-01-10",
+    "before": "1863-01-10",
+    "after": "1863-01-10",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp218-219, diary entry heading 1863-01-10, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "JONES I-1861-05-22",
+    "before": "1861-05-22",
+    "after": "1861-05-22",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp38-40. Jones vol1, diary entry heading, retained OCR line1789 (M.AY  22D. \u2014 To-day  I  had,  in  our  office,  a  specimen  of  Mr.). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1861-05-23",
+    "before": "1861-05-23",
+    "after": "1861-05-23",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp40-41. Jones vol1, diary entry heading, retained OCR line1860 (MAY  23D. \u2014 To-day  the  President  took  the  cars  for  Pensacola,). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I 1861-05-22 (dissent in cabinet)",
+    "before": "1861-05-22",
+    "after": "1861-05-22",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp38-40. Jones vol1, diary entry heading, retained OCR line1789 (M.AY  22D. \u2014 To-day  I  had,  in  our  office,  a  specimen  of  Mr.). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I 1861-05-22",
+    "before": "1861-05-22",
+    "after": "1861-05-22",
+    "rows": 4,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp38-40. Jones vol1 pp38-40. Jones vol1 pp38-40. Jones vol1 pp38-40. Jones vol1, diary entry heading, retained OCR line1789 (M.AY  22D. \u2014 To-day  I  had,  in  our  office,  a  specimen  of  Mr.). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I 1861-05-23",
+    "before": "1861-05-23",
+    "after": "1861-05-23",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp40-41. Jones vol1, diary entry heading, retained OCR line1860 (MAY  23D. \u2014 To-day  the  President  took  the  cars  for  Pensacola,). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I 1861-07-09",
+    "before": "1861-07-09",
+    "after": "1861-07-09",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp60-61. Jones vol1, diary entry heading, retained OCR line2770 (JULY  9iH. \u2014 Mr.  Toombs  is  to  be  a  brigadier-general.  That). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1861-07-20",
+    "before": "1861-07-20",
+    "after": "1861-07-20",
+    "rows": 2,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp63-64. Jones vol1 pp63-64. Jones vol1, diary entry heading, retained OCR line2950 (JULY  20TH. \u2014 The  Secretary  works  too  much \u2014 or  rather  does). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "JONES I-1861-05-20",
+    "before": "1861-05-20",
+    "after": "1861-05-20",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Jones vol1 pp38-40. Jones vol1, diary entry heading, retained OCR line1751 (MAY  20TH. \u2014 Mr.  Walker,  the  Secretary  of  War,  is  some  forty-). Year established by printed opening April 8 1861 and January 1 1862/1863 headings at lines594,4826,10988, not by matching month/day alone. See jones-selected-extracts.json. Ambiguous November OCR numerals retain the month only."
+  },
+  {
+    "citation": "LINCOLN 1860-12-13-washburne",
+    "before": "1860-12-13",
+    "after": "1860-12-13",
+    "rows": 2,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Nicolay/Hay Complete Works (1894 two-volume edition), vol1 pp658-660, selected dated letter to the recipient named in the locator. Heading and recipient read; source page headers in lincoln-page-anchors.json. Date 1860-12-13; page range deliberately broad where an intervening OCR page numeral is ambiguous."
+  },
+  {
+    "citation": "LINCOLN 1860-12-21-washburne",
+    "before": "1860-12-21",
+    "after": "1860-12-21",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Nicolay/Hay Complete Works (1894 two-volume edition), vol1 pp660-661, selected dated letter to the recipient named in the locator. Heading and recipient read; source page headers in lincoln-page-anchors.json. Date 1860-12-21; page range deliberately broad where an intervening OCR page numeral is ambiguous."
+  },
+  {
+    "citation": "WELLES-D 1863-02-07",
+    "before": "1863-02-07",
+    "after": "1863-02-07",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp234-235, diary entry heading 1863-02-07, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "WELLES-D 1862-08-15",
+    "before": "1862-08-15",
+    "after": "1862-08-15",
+    "rows": 2,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "Welles vol1 pp81-82, diary entry heading 1862-08-15, read with surrounding year sequence; printed page headers retained in entry-page-anchors.json, entry text in diary-heading-extracts.json. Entry date, not the 1911 imprint."
+  },
+  {
+    "citation": "NH-CW 6 p228-229",
+    "before": "1861-03-29",
+    "after": "1861-03-29",
+    "rows": 3,
+    "verdict": "retain: March29 opinion group; cited pages stop before the March30 Stuart letter",
+    "evidence": "Complete Works VI pp227-230; evidence-r62/source-reading.json"
+  },
+  {
+    "citation": "OR I-1 p32 dated 1861-04-13",
+    "before": "1861-04-27",
+    "after": "1861-04-27",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "OR I1 p32 continues Beauregard detailed report (No8), headed Charleston April27 1861, with Wigfall passage at retained or1 OCR lines2609-2630; report headings at2462,2478 and continuous text throughp34, before No9 begins. April13 is the narrated event, not this report date. Replace the inherited marker if applied."
+  },
+  {
+    "citation": "OR I-1 p23 dated 1861-04-13",
+    "before": "1861-10-01",
+    "after": "1861-10-01",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "OR I1 p23 is in Foster, Engineer journal of the bombardment (No7), headed New York, October1 1861 on p16. Read retained or1 OCR lines1399ff and1917-2013: April13 is an internal event/day heading, not the report submission date. Replace the inherited dated1861-04-13 marker if this documentary locator is applied."
+  },
+  {
+    "citation": "PEARSON-ANDREW v1 p138-139",
+    "before": "1861-01-05",
+    "after": "1861-01-05",
+    "rows": 2,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "R45 supplemental documentary locator, not an exact current pack citation. Pearson v1 p138 identifies the inauguration on the fifth of January 1861 before printing the address"
+  },
+  {
+    "citation": "PEARSON-ANDREW v1 p127",
+    "before": "1860-09-13",
+    "after": "1860-09-13",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "R45 supplemental documentary locator, not an exact current pack citation. Pearson v1 p127 footnote names Springfield Republican September 13 1860 for this speech extract"
+  },
+  {
+    "citation": "PEARSON-ANDREW v1 p123-124",
+    "before": "1860-08-30",
+    "after": "1860-08-30",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "R45 supplemental documentary locator, not an exact current pack citation. Pearson v1 p124 footnote gives Springfield Republican August 30 1860 for the Bowles extract"
+  },
+  {
+    "citation": "NH 3 p388",
+    "before": "1861-03-16",
+    "after": "1861-03-16",
+    "rows": 1,
+    "verdict": "retain: selected documentary quotation, rather than adjacent narrative",
+    "evidence": "R45 supplemental documentary locator, not an exact current pack citation. NH vol3 p388 marginal source label dates Bates to Lincoln March 16 1861"
+  },
+  {
+    "citation": "NH 3 p432",
+    "before": "1861-03-29",
+    "after": "1861-03-29",
+    "rows": 1,
+    "verdict": "retain: selected documentary quotation, rather than adjacent narrative",
+    "evidence": "R45 supplemental documentary locator, not an exact current pack citation. NH vol3 cabinet-opinion sequence and the March 29 meeting memorandum context at pp429-432"
+  },
+  {
+    "citation": "WOODBURN-STEVENS p165-166",
+    "before": "1861-01-29",
+    "after": "1861-01-29",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "R45 supplemental documentary locator, not an exact current pack citation. Woodburn p166 footnote explicitly names Globe January 29 1861 for the speech"
+  },
+  {
+    "citation": "NH 3-p370-372 (withdrawal letter only)",
+    "before": "1861-03-02",
+    "after": "1861-03-02",
+    "rows": 1,
+    "verdict": "retain: selected documentary quotation, rather than adjacent narrative",
+    "evidence": "R45 supplemental documentary locator, not an exact current pack citation. NH vol3 p370 heading dates Seward's withdrawal letter March 2 1861 not the other letters in this page span"
+  },
+  {
+    "citation": "NEWTON-LYONS vol1 p31-33",
+    "before": "1861-03-26",
+    "after": "1861-03-26",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "R45 supplemental documentary locator, not an exact current pack citation. Newton vol1 p31 heading dates Lyons to Russell March 26 1861"
+  },
+  {
+    "citation": "NEWTON-LYONS vol1 p30",
+    "before": "1861-01-07",
+    "after": "1861-01-07",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "R45 supplemental documentary locator, not an exact current pack citation. Newton vol1 p30 heading dates Lyons to Russell January 7 1861"
+  },
+  {
+    "citation": "NEWTON-LYONS vol1 p37-38",
+    "before": "1861-05-06",
+    "after": "1861-05-06",
+    "rows": 1,
+    "verdict": "retain: selected letter, speech or diary entry; neighboring documents do not replace its heading",
+    "evidence": "R45 supplemental documentary locator, not an exact current pack citation. Newton vol1 p37 heading dates Russell to Lyons May 6 1861"
+  }
+]

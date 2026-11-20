@@ -3,7 +3,7 @@
 "additionalProperties": false,
 "properties": {
 "banned": {"default":[],"items":{"minLength":1,"type":"string"},"type":"array"},
-"evidence": {"additionalProperties":false,"properties":{"innateStats":{"items":{"minLength":1,"type":"string"},"type":"array"},"innateThrough":{"type":"string"},"innateTraits":{"items":{"minLength":1,"type":"string"},"type":"array"},"startBefore":{"type":"string"}},"required":["innateThrough","startBefore","innateStats","innateTraits"],"type":"object"},
+"evidence": {"additionalProperties":false,"properties":{"factBlocs":{"items":{"minLength":1,"type":"string"},"type":"array"},"factTraits":{"items":{"minLength":1,"type":"string"},"type":"array"},"innateStats":{"items":{"minLength":1,"type":"string"},"type":"array"},"innateThrough":{"type":"string"},"innateTraits":{"items":{"minLength":1,"type":"string"},"type":"array"},"referenceWorks":{"items":{"minLength":1,"type":"string"},"type":"array"},"startBefore":{"type":"string"}},"required":["innateThrough","startBefore","innateStats","innateTraits"],"type":"object"},
 "weak": {"default":[],"items":{"minLength":1,"type":"string"},"type":"array"}
 },
 "title": "Mandate gate source policy (gate/source-policy.json)",

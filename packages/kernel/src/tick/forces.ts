@@ -8,7 +8,7 @@
  */
 import { combatDay, type CombatResult } from '../combat/battle.ts';
 import { applyBattleRecords } from '../combat/records.ts';
-import { applyCombatCommand, applyCommandProposals, DEPARTMENT_SIDE_FIELD } from '../command/command.ts';
+import { applyCombatCommand, applyCommandProposals, DEPARTMENT_SIDE_FIELD, FACTION_CAPITAL_FIELD, GOVERNMENT_ESTABLISHED_FIELD, POST_SUCCESSION_FIELD, TEMPORARY_POST_FIELD } from '../command/command.ts';
 import { applyForces } from '../forces/forces.ts';
 import { stragglersStep } from '../forces/stragglers.ts';
 import type { ForceBlockId } from '../ids.ts';
@@ -21,6 +21,7 @@ import { applyRetreats } from '../movement/march.ts';
 import { storesStep } from '../forces/stores.ts';
 import type { State } from '../root-state.ts';
 import { fire, type TickContext } from './context.ts';
+import { applyDetachmentProposals, type DetachmentProposal } from './detachments.ts';
 import { dateOfDay } from '../world/calendar.ts';
 
 /** Every mechanic the forces phases count (FOUNDATION section 11.5). Declared with the map's. */
@@ -44,14 +45,36 @@ export const FORCES_MECHANICS = [
   'combat.works_stormed',
   'combat.withdrew',
   'command.government_closed',
+  'command.government_established',
   'command.government_reopened',
   'command.proposal_refused',
   'command.side_changed',
+  'command.post_succeeded',
+  'command.temporary_post_opened',
+  'forces.landed_by_situation',
+  'forces.landing_refused',
   'forces.stores_fell',
   'forces.stores_low',
   'forces.stores_refilled',
   'forces.stragglers_returned',
 ] as const;
+
+/**
+ * Situations' landings (lane 1.11), applied through `forces`' detachment path (lane 1.4b) in the same phase as `command`'s
+ * proposals: men of a block aboard go ashore across an edge from the ship. A refusal changes nothing and names its reason.
+ */
+function landingsPhase(ctx: TickContext, state: State): State {
+  const landings = ctx.proposals.flatMap((p) => (p.proposal === 'landing' ? [p] : []));
+  if (landings.length === 0) return state;
+  const proposals: DetachmentProposal[] = landings.map((p) => ({ kind: 'landing', parent: p.parent, men: p.men, region: p.region, post: null, cause: 'situations' }));
+  const result = applyDetachmentProposals(ctx.world.map, state, proposals, ctx.day);
+  if (result.made.length > 0) fire(ctx, 'forces.landed_by_situation', result.made.length);
+  for (const { reason, why } of result.refused) {
+    ctx.mapEvents.push({ event: 'proposal_refused', owner: 'forces', reason, why });
+    fire(ctx, 'forces.landing_refused');
+  }
+  return result.state;
+}
 
 /**
  * Situations' proposals that `command` owns (a neutral government closing or reopening its
@@ -61,12 +84,39 @@ export const FORCES_MECHANICS = [
  * hands back the day's map as it now is: the barrier and the tick's result never carry a map
  * State has moved past. Movement and combat see the closing from tomorrow morning.
  */
-export function commandProposalsPhase(ctx: TickContext, state: State): { readonly state: State; readonly derived: DerivedMap | null } {
+export function commandProposalsPhase(ctx: TickContext, start: State): { readonly state: State; readonly derived: DerivedMap | null } {
   const map = ctx.world.map;
+  const state = landingsPhase(ctx, start);
   const mine = ctx.proposals.flatMap((p) => (p.proposal === 'effect' && p.owner === 'command' ? [p] : []));
   if (mine.length === 0) return { state, derived: null };
-  const result = applyCommandProposals(map, state, mine, ctx.day);
+  const result = applyCommandProposals(
+    map,
+    state,
+    mine,
+    ctx.day,
+    ctx.world.start.temporaryPosts.map((p) => ({ id: p.id, name: p.name, kind: p.kind, department: p.department, parent: p.parent, holder: p.holder, seat: p.region, operation: p.operation })),
+    ctx.world.start.declaredGovernments ?? [],
+  );
   for (const a of result.applied) {
+    if (a.field === FACTION_CAPITAL_FIELD) {
+      if (a.change === 'moved') ctx.mapEvents.push({ event: 'capital_moved', faction: a.faction, region: a.subject });
+      continue;
+    }
+    if (a.field === POST_SUCCESSION_FIELD) {
+      if (a.change === 'succeeded') {
+        ctx.mapEvents.push({ event: 'post_succeeded', post: a.subject, from: a.from, to: a.to, reason: a.reason, cause: a.cause });
+        fire(ctx, 'command.post_succeeded');
+      }
+      continue;
+    }
+    if (a.field === TEMPORARY_POST_FIELD) {
+      if (a.change === 'opened') fire(ctx, 'command.temporary_post_opened');
+      continue;
+    }
+    if (a.field === GOVERNMENT_ESTABLISHED_FIELD) {
+      if (a.change === 'established') fire(ctx, 'command.government_established');
+      continue;
+    }
     if (a.field === DEPARTMENT_SIDE_FIELD) {
       // A change of side is its own event, never a closing (0065).
       if (a.side !== null) {
@@ -85,7 +135,7 @@ export function commandProposalsPhase(ctx: TickContext, state: State): { readonl
   }
   // The cause first, then what it did: the pockets the closing, reopening or change of side makes, today.
   let derived: DerivedMap | null = null;
-  if (result.state.closedGovernments !== state.closedGovernments || result.state.departmentFactions !== state.departmentFactions) {
+  if (result.state.closedGovernments !== state.closedGovernments || result.state.departmentFactions !== state.departmentFactions || result.state.regionGovernments !== state.regionGovernments) {
     const month = dateOfDay(state.calendarStart!, ctx.day).month;
     const before = deriveMap(map, { control: state.regionControl, month, network: passageOf(map, state) });
     derived = deriveMap(map, { control: result.state.regionControl, month, network: passageOf(map, result.state) });

@@ -1,0 +1,57 @@
+{
+  "research_structure": "PASS",
+  "cells": 130,
+  "decisions": {
+    "HOLD": 116,
+    "KEEP": 13,
+    "CHANGE": 1
+  },
+  "by_field": {
+    "competence": {
+      "HOLD": 13
+    },
+    "nerve": {
+      "KEEP": 2,
+      "HOLD": 14
+    },
+    "regard": {
+      "KEEP": 1,
+      "HOLD": 2
+    },
+    "reputation": {
+      "HOLD": 70,
+      "KEEP": 5,
+      "CHANGE": 1
+    },
+    "trait": {
+      "KEEP": 2,
+      "HOLD": 16
+    },
+    "value": {
+      "KEEP": 3,
+      "HOLD": 1
+    }
+  },
+  "A1_men": 23,
+  "serving_confirmed": 13,
+  "former_US_Army_no_current": 9,
+  "District_exception": "Stone, not a certified no-federal-commission verdict",
+  "bloc_recommendations": 10,
+  "dating_records": 12,
+  "dating_cells": 9,
+  "required_check": {
+    "exit": 2,
+    "tests_run": 0,
+    "reason": "missing Node type definitions"
+  },
+  "required_done_check": {
+    "exit": 1,
+    "criteria_evaluated": 0,
+    "reason": "tsx missing"
+  },
+  "no_git_full_suite_prerequisite": "older config does not exclude staged-check tests",
+  "CSV_and_apply_harness_exit": 0,
+  "apply_mutated_pack": false,
+  "servers_started": 0,
+  "inventory_items": 35
+}

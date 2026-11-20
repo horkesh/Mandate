@@ -1,0 +1,494 @@
+{
+  "id": "call_for_troops",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.call_for_troops.title",
+  "text": "situation.call_for_troops.text",
+  "earliest": "1861-04-12",
+  "event": {
+    "any": [
+      {
+        "knows": {
+          "reportType": "wire-dispatch",
+          "subjectKind": "region",
+          "subjectId": "fort_sumter",
+          "claimKind": "battle-phase",
+          "token": "bombard"
+        }
+      },
+      {
+        "knows": {
+          "reportType": "wire-dispatch",
+          "subjectKind": "region",
+          "subjectId": "fort_sumter",
+          "claimKind": "fort-surrendered"
+        }
+      },
+      {
+        "knows": {
+          "subjectKind": "situation",
+          "subjectId": "sumter_evacuated"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "any": [
+      {
+        "knows": {
+          "reportType": "wire-dispatch",
+          "subjectKind": "region",
+          "subjectId": "fort_sumter",
+          "claimKind": "fort-surrendered"
+        }
+      },
+      {
+        "knows": {
+          "subjectKind": "situation",
+          "subjectId": "sumter_evacuated"
+        }
+      },
+      {
+        "knows": {
+          "reportType": "wire-dispatch",
+          "subjectKind": "region",
+          "subjectId": "fort_sumter",
+          "claimKind": "battle-phase",
+          "token": "bombard"
+        },
+        "forDays": 2
+      }
+    ]
+  },
+  "options": [
+    {
+      "id": "larger_longer",
+      "label": "situation.call_for_troops.option.larger_longer",
+      "displayKey": 1,
+      "proposedBy": [
+        "scott_winfield"
+      ],
+      "honours": [
+        "union"
+      ],
+      "effects": [
+        {
+          "setFlag": "war_begun_union"
+        },
+        {
+          "setFlag": "congress_summoned"
+        },
+        {
+          "setFlag": "three_year_volunteers_called"
+        },
+        {
+          "propose": {
+            "owner": "politics",
+            "field": "ledger-act",
+            "subject": "militia_call_1861",
+            "delta": 1,
+            "reason": "act-while-away",
+            "side": "union"
+          }
+        },
+        {
+          "propose": {
+            "owner": "politics",
+            "field": "ledger-act",
+            "subject": "three_year_volunteers_1861",
+            "delta": 1,
+            "reason": "act-while-away",
+            "side": "union"
+          }
+        }
+      ],
+      "calls": [
+        {
+          "to": "st_gov_maine",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_new_hampshire",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_vermont",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_massachusetts",
+          "regiments": 2,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_rhode_island",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_connecticut",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_new_york",
+          "regiments": 17,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_pennsylvania",
+          "regiments": 14,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_new_jersey",
+          "regiments": 4,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_delaware",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_maryland",
+          "regiments": 4,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_virginia",
+          "regiments": 3,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_north_carolina",
+          "regiments": 2,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_tennessee",
+          "regiments": 2,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_arkansas",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_kentucky",
+          "regiments": 4,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_missouri",
+          "regiments": 4,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_illinois",
+          "regiments": 6,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_indiana",
+          "regiments": 6,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_ohio",
+          "regiments": 13,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_michigan",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_wisconsin",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_iowa",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_minnesota",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        }
+      ],
+      "appearsWhen": {
+        "clockAtLeast": 1
+      }
+    },
+    {
+      "id": "militia_call",
+      "label": "situation.call_for_troops.option.militia_call",
+      "displayKey": 2,
+      "proposedBy": [
+        "cameron_simon"
+      ],
+      "honours": [
+        "union",
+        "order"
+      ],
+      "effects": [
+        {
+          "setFlag": "war_begun_union"
+        },
+        {
+          "setFlag": "congress_summoned"
+        },
+        {
+          "propose": {
+            "owner": "politics",
+            "field": "ledger-act",
+            "subject": "militia_call_1861",
+            "delta": 1,
+            "reason": "act-while-away",
+            "side": "union"
+          }
+        },
+        {
+          "propose": {
+            "owner": "politics",
+            "field": "session-call",
+            "subject": "congress_37_1",
+            "delta": 1,
+            "reason": "session-called",
+            "side": "union"
+          }
+        }
+      ],
+      "calls": [
+        {
+          "to": "st_gov_maine",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_new_hampshire",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_vermont",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_massachusetts",
+          "regiments": 2,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_rhode_island",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_connecticut",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_new_york",
+          "regiments": 17,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_pennsylvania",
+          "regiments": 14,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_new_jersey",
+          "regiments": 4,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_delaware",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_maryland",
+          "regiments": 4,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_virginia",
+          "regiments": 3,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_north_carolina",
+          "regiments": 2,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_tennessee",
+          "regiments": 2,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_arkansas",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_kentucky",
+          "regiments": 4,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_missouri",
+          "regiments": 4,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_illinois",
+          "regiments": 6,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_indiana",
+          "regiments": 6,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_ohio",
+          "regiments": 13,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_michigan",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_wisconsin",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_iowa",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        },
+        {
+          "to": "st_gov_minnesota",
+          "regiments": 1,
+          "termDays": 90,
+          "route": "wire"
+        }
+      ],
+      "appearsWhen": {
+        "clockAtLeast": 1
+      }
+    }
+  ],
+  "inaction": {
+    "text": "situation.call_for_troops.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "militia_call"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "recommends": [
+      "militia_call"
+    ],
+    "reasons": [
+      {
+        "kind": "order",
+        "weight": 700
+      }
+    ],
+    "confidence": 600
+  },
+  "delegableTo": [],
+  "resurfaceOn": [
+    3
+  ],
+  "gate": {
+    "none": "a call for militia under the Act of 1795, which each governor answers by his own compliance; no gate topic"
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "III-1 pp. 67 to 69 (the proclamation, the requisition and the quota table), p. 77 (Pennsylvania reduced to 14)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "1, 2.5, 3.6, 4.3; Scott to McClellan, 3 May (60,000 three-year volunteers)"
+    },
+    {
+      "source": "SEWARD-REMINISCENCES",
+      "at": "Frederick W. Seward, Reminiscences of a War-Time Statesman and Diplomat (1916), pp. 151-152: Sunday 14 April consultation after Washington knew the fort would evacuate; proclamation prepared for Monday publication. Retrospective account. https://archive.org/stream/reminiscencesofwsewa/reminiscencesofwsewa_djvu.txt"
+    },
+    {
+      "source": "OR",
+      "at": "III-1 pp. 67-68: proclamation dated 15 April and requisition that day. https://ehistory.osu.edu/books/official-records/122/0067 and /0068. [I] One day from surfacing represents deliberation/publication; if the fort holds, two days from received bombardment news substitutes for surrender news, using the 12 April opening (I-1 p. 31) to 14 April consultation interval. This counterfactual interval is inferred, not a documented holding-fort policy."
+    }
+  ]
+}

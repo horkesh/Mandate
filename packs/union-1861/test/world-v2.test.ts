@@ -73,13 +73,18 @@ describe('Union 1861 world v2', () => {
     // Delaware's government is the Union's from the start (lane 1.11a): its legislature declined Mississippi's commissioner on 3 January 1861 (AAC p.256).
     expect(controlOf('delaware')).toEqual([{ faction: 'union', permille: 1000 }]);
     expect(world.departments.find((d) => d.id === 'st_delaware')!.faction).toBe('union');
-    const neutral = world.departments.filter((d) => d.faction === null && d.kind === 'state_government').map((d) => d.id as string).sort();
+    // A declared government exists in World vocabulary before it has been established in play (R47).
+    // This list is the governments active at the opening, not every future government with no side.
+    const declared = new Set(start.declaredGovernments.map((g) => g.id));
+    const neutral = world.departments.filter((d) => d.faction === null && d.kind === 'state_government' && !declared.has(d.id)).map((d) => d.id as string).sort();
     expect(neutral).toEqual(['st_arkansas', 'st_kentucky', 'st_maryland', 'st_missouri', 'st_north_carolina', 'st_tennessee', 'st_virginia']);
     // The nations' governments hold no side either: each is its own nation's, with its own polity (0069, 0070).
     const nations = world.departments.filter((d) => d.faction === null && d.kind === 'nation_government').map((d) => d.id as string).sort();
     expect(nations).toEqual(['nation_cherokee', 'nation_chickasaw', 'nation_choctaw', 'nation_muscogee', 'nation_seminole']);
-    // The two lists are every department that holds no side: a faction-null department of a third kind would fail here.
-    expect(world.departments.filter((d) => d.faction === null).map((d) => d.id as string).sort()).toEqual([...neutral, ...nations].sort());
+    // Active states, nations and the explicitly declared future governments account for every null side.
+    // A faction-null department of any other kind still fails here.
+    expect([...declared].every((id) => world.departments.find((d) => d.id === id)?.faction === null)).toBe(true);
+    expect(world.departments.filter((d) => d.faction === null).map((d) => d.id as string).sort()).toEqual([...neutral, ...nations, ...declared].sort());
   });
 
   it('keeps the licence-unclear and unlicensed sources out of the registry', () => {
@@ -146,7 +151,7 @@ describe('Union 1861 world v2', () => {
     const holders = new Set(start.posts.map((p) => p.holder).filter((h) => h !== null));
     const confederateNoPost = world.people.filter((p) => p.faction === 'confederate' && !holders.has(p.id)).map((p) => p.id as string).sort();
     expect(confederateNoPost).toEqual([
-      'bragg_braxton', 'cobb_howell', 'hardee_william_j', 'mcculloch_ben', 'northrop_lucius_b', 'polk_leonidas', 'reagan_john_h', 'semmes_raphael', 'slidell_john', 'tattnall_josiah', 'twiggs_david_e', 'van_dorn_earl', 'wigfall_louis_t', 'yancey_william_l',
+      'bragg_braxton', 'clark_edward', 'cobb_howell', 'hardee_william_j', 'mcculloch_ben', 'northrop_lucius_b', 'polk_leonidas', 'reagan_john_h', 'semmes_raphael', 'slidell_john', 'tattnall_josiah', 'twiggs_david_e', 'van_dorn_earl', 'wigfall_louis_t', 'yancey_william_l',
     ]);
   });
 
@@ -174,7 +179,11 @@ describe('Union 1861 world v2', () => {
     const holders = new Set(start.posts.map((p) => p.holder).filter((h) => h !== null));
     const noPost = world.people.filter((p) => !holders.has(p.id));
     const count = (f: (p: (typeof noPost)[number]) => boolean) => noPost.filter(f).length;
-    expect([count((p) => p.faction === 'union'), count((p) => p.faction === 'confederate')]).toEqual([83 + 1 + 8 - 1 + 3 + 1, 12 + 2]); // + Lamon (a Union man with no post, lane 1.11r3; Baldwin, Botts and Summers are Virginia men with no faction); + Vogdes, kept by ruling; + the eight sourced Union residences and the two sourced Confederate ones; - Nicolay, who now holds the secretary post (2026-11-15); + Mansfield, Paulding and Mervine, the three Union men lane 1.11a added from lane 1.9 (Carlile and Willey have no faction)
+    // R55: Clark was already Texas Lieutenant Governor on 5 March (CRANE-HOUSTON-1884 ch25, cross-checked with the official LRL office-term record).
+    // That office has no post here. Its service side follows Texas under 0055, independently of his later succession.
+    expect(person('clark_edward').provenance.some((c) => c.source === 'CRANE-HOUSTON-1884')).toBe(true);
+    expect(person('clark_edward').faction).toBe(world.departments.find(d => d.id === 'st_texas')!.faction);
+    expect([count((p) => p.faction === 'union'), count((p) => p.faction === 'confederate')]).toEqual([83 + 1 + 8 - 1 + 3 + 1, 12 + 2 + 1]); // prior inventory, plus Clark's already-held Texas office; no future office determines an opening side
   });
 
   it('has supply sources for both sides, each in a region that side holds, and depots at the navy yards (0055)', () => {

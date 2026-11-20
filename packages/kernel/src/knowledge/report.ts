@@ -78,6 +78,9 @@ export type SubjectKind = (typeof SUBJECT_KINDS)[number];
  *   its principal's casualty returns give them by the printing day, never the battle record; `claimConfidence` 900 from
  *   full returns, 500 while a first return stands for a day, and 0 with no return yet (no figure printed); once every
  *   day's full return has come, a `captured` claim beside it gives the captured apart (never before: no early split);
+ *   the public closing report sends the same result vocabulary to the side's editors, with no figures. Its
+ *   `claimBattle`, `claimBattleDays` and `claimCommander` identify what was reported. Phase dispatches and returns
+ *   carry the same battle identity, so the press never matches different battles by place alone;
  * - `framing`: who its public believes began the war, signed permille (positive: the other side).
  * - `control` (0094): `claimToken` is the faction and `claimValue` its share, permille. A report's control claims
  *   for a region are a complete snapshot; an omitted faction has no share in that snapshot.
@@ -130,6 +133,12 @@ export interface ReportClaim {
   readonly claimToken: string | null;
   /** The author's confidence, permille. */
   readonly claimConfidence: number;
+  /** Battle identity as reported, preserved through returns, filters and the front page (R54). */
+  readonly claimBattle?: string;
+  /** The days covered by this claim: one in a return, all in the public closing report. */
+  readonly claimBattleDays?: readonly number[];
+  /** The commander the source names, not a lookup of today's holder. */
+  readonly claimCommander?: PersonId | null;
 }
 
 /** A reason as the author states it: visible, typed, weighted. His true reasons are terms in `truth.ts`. */

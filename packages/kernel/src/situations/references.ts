@@ -8,7 +8,8 @@
 import { strictCompare } from '../compare.ts';
 import { ORDER_ROUTES } from '../messages/latency.ts';
 import { situationsIn, unknowableRead, type KnowablePlace } from './conditions.ts';
-import type { Condition, Effect, SituationDef } from './types.ts';
+import { isProposalBasis, type Condition, type Effect, type SituationDef } from './types.ts';
+import type { PersonId } from '../ids.ts';
 
 export interface SituationRefs {
   readonly factions: ReadonlyMap<string, unknown>;
@@ -64,12 +65,22 @@ export function situationReferenceProblems(defs: readonly SituationDef[], refs: 
       if (d.options.length === 0) at('options', 'a decision needs options');
       if (d.inaction === null) at('inaction', 'a decision needs an inaction outcome (0040)');
       if (d.historicalDefault === null) at('historicalDefault', 'a decision needs a historical default (0040)');
-      if (d.staffLine === null || d.staffLine.authors.length === 0) at('staffLine', 'a decision needs a staff line with at least one author post (0040, 0046)');
+      // B9 (lane 1.11, the lead's S12 ruling): a decision resting wholly on the principal's own initiative has no staff line,
+      // and is told by a plain report instead.
+      const initiativeOnly = d.options.length > 0 && d.options.every((o) => isProposalBasis(o.proposedBy) && o.proposedBy.basis === 'principal-initiative');
+      if (d.staffAbsence !== undefined) {
+        if (d.staffLine !== null) at('staffAbsence', 'a decision with a staff line cannot also declare the staff\'s absence');
+        if (d.report === null || d.report.authors.length === 0) at('report', 'a decision with no staff line is told by a report with at least one author post (gate F1)');
+      } else if (initiativeOnly) {
+        if (d.staffLine !== null) at('staffLine', 'a decision resting on the principal’s own initiative has no staff line (B9)');
+        if (d.report === null || d.report.authors.length === 0) at('report', 'a decision resting on the principal’s own initiative is told by a report with at least one author post (gate F1)');
+      } else if (d.staffLine === null || d.staffLine.authors.length === 0) at('staffLine', 'a decision needs a staff line with at least one author post (0040, 0046)');
     } else if (d.options.length > 0 || d.inaction !== null || d.historicalDefault !== null || d.staffLine !== null) {
       at('kind', 'a notice carries no options, inaction, historical default or staff line (0046)');
     }
     if (d.kind === 'notice' && (d.report === null || d.report.authors.length === 0)) at('report', 'a notice needs a report with at least one author post (gate F1)');
-    if (d.kind === 'decision' && d.report !== null) at('report', 'a decision is told through its staff line, not a notice report');
+    const toldByReport = d.kind === 'decision' && d.options.length > 0 && d.options.every((o) => isProposalBasis(o.proposedBy) && o.proposedBy.basis === 'principal-initiative');
+    if (d.kind === 'decision' && d.report !== null && !toldByReport && d.staffAbsence === undefined) at('report', 'a decision is told through its staff line, not a notice report');
     for (const p of d.report?.authors ?? []) if (!refs.posts.has(p)) at('report.authors', `${p} is not a post`);
     for (const p of [...(d.staffLine?.authors ?? []), ...d.delegableTo]) if (!refs.posts.has(p)) at('posts', `${p} is not a post`);
     // Standing review S6: every post the situation names is its own side's, so the other side never decides,
@@ -85,7 +96,7 @@ export function situationReferenceProblems(defs: readonly SituationDef[], refs: 
     if (hd !== null && 'options' in hd) for (const o of hd.options) if (!optionIds.has(o)) at('historicalDefault', `${o} is not an option`);
     if (hd !== null && 'delegate' in hd && !d.delegableTo.includes(hd.delegate)) at('historicalDefault', `${hd.delegate} is not among delegableTo`);
     d.options.forEach((o) => {
-      if (o.proposedBy !== 'inaction') for (const p of o.proposedBy) if (!refs.persons.has(p)) at(`option ${o.id}`, `proposer ${p} is not a person`);
+      if (Array.isArray(o.proposedBy)) for (const p of o.proposedBy as readonly PersonId[]) if (!refs.persons.has(p)) at(`option ${o.id}`, `proposer ${p} is not a person`);
       for (const order of o.orders) {
         if (!refs.posts.has(order.to)) at(`option ${o.id}`, `order to ${order.to}, not a post`);
         if (order.objective !== null && !refs.regions.has(order.objective)) at(`option ${o.id}`, `order names ${order.objective}, not a region`);

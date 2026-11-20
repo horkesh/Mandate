@@ -1,0 +1,5 @@
+#!/bin/sh
+# Git LFS's post-checkout hook (lane 0.7l), in .githooks (core.hooksPath). Without git-lfs it fails loudly: the files
+# under art/ would otherwise stay as pointer text and the game would load no art.
+command -v git-lfs >/dev/null 2>&1 || { printf >&2 "\n%s\n\n" "This repository keeps the binaries under art/ in Git LFS, but 'git-lfs' was not found on your path. Install it (https://git-lfs.com), run 'git lfs install --skip-repo', then 'git lfs pull'."; exit 2; }
+git lfs post-checkout "$@"

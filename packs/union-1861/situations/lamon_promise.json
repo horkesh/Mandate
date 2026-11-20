@@ -1,0 +1,70 @@
+{
+  "id": "lamon_promise",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.lamon_promise.title",
+  "text": "situation.lamon_promise.text",
+  "earliest": "1861-03-30",
+  "event": {
+    "dayAtLeast": 25
+  },
+  "railroad": "Governor Pickens's telegram of 30 March, asking whether Colonel Lamon spoke for the government; Lamon's visit to Charleston is not modelled, so the question comes on its date",
+  "options": [
+    {
+      "id": "assure_notice",
+      "label": "situation.lamon_promise.option.assure_notice",
+      "displayKey": 1,
+      "proposedBy": [
+        "seward_william_h"
+      ],
+      "honours": [
+        "conciliation",
+        "caution"
+      ],
+      "effects": [
+        {
+          "setFlag": "notice_promised_to_pickens"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.lamon_promise.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "assure_notice"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_state"
+    ],
+    "recommends": [
+      "assure_notice"
+    ],
+    "reasons": [
+      {
+        "kind": "conciliation",
+        "weight": 600
+      }
+    ],
+    "confidence": 600
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "a back-channel assurance about the fort; no gate topic"
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-1 p. 282 (Beauregard to Walker, 26 March: Lamon \"saying that Major Anderson and command would soon be withdrawn\")"
+    },
+    {
+      "source": "OR",
+      "at": "I-53 pp. 162 to 163 (Campbell, 13 April: Pickens's telegram of 30 March and Seward's note of 1 April)"
+    }
+  ]
+}

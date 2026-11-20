@@ -129,7 +129,8 @@ export function bombard(ctx: Ctx): Outcome {
   if (shores.length === 0) return reject('bombard', 'across_water', [gate('no_guns', `no guns of his on held ground within range of ${objective} across water (${passed.join('; ') || 'no water edge'})`)]);
   const from = [...shores].sort((a, b) => b.guns - a.guns || strictCompare(a.region, b.region))[0]!.region;
   const here = blocks.filter((b) => b.region === from);
-  const concentrate = input.profile.concentrationDays * 1000;
+  // These blocks are already on the firing shore: the pack's battery preparation replaces field concentration.
+  const concentrate = input.bombardment.inPositionPreparationDays * 1000;
   const axis: PlanAxis = {
     axisName: 'main',
     axisPost: input.post,

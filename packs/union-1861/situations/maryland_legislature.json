@@ -1,0 +1,50 @@
+{
+  "id": "maryland_legislature",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.maryland_legislature.title",
+  "text": "situation.maryland_legislature.text",
+  "earliest": "1861-04-29",
+  "event": {
+    "callReceived": {
+      "post": "st_gov_maryland",
+      "days": 14
+    }
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "department_side",
+        "subject": "st_maryland",
+        "delta": 1,
+        "reason": "legislature-declines-secession",
+        "side": "union"
+      }
+    },
+    {
+      "setFlag": "maryland_stays"
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_secretary_state",
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "governor-wire"
+  },
+  "gate": {
+    "none": "a legislature declines to secede; the cause of secession is not its subject"
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 p. 29 (Maryland, per the numbers note)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "3.2"
+    }
+  ]
+}

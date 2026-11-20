@@ -60,6 +60,15 @@ export interface EvidencePolicy {
   readonly startBefore: string;
   readonly innateStats: readonly string[];
   readonly innateTraits: readonly string[];
+  /** Traits that are facts (an office held, a service), not judgments: they need no contemporary leg (0087). */
+  readonly factTraits: readonly string[];
+  /**
+   * The pack's later reference works (a biographical directory, a register, a list of officers): they state facts (a rank, an
+   * office, a service, a date) and are not a contemporary leg for any judgment or bloc (0087). A fact may still rest on them.
+   */
+  readonly referenceWorks: readonly string[];
+  /** Blocs that are facts (a service held, a side joined), not factions: they need no contemporary leg and may rest on a register (0087). */
+  readonly factBlocs: readonly string[];
 }
 export type EvidenceClass = 'innate' | 'start';
 
@@ -70,7 +79,7 @@ export function readEvidencePolicy(files: PackFiles): EvidencePolicy | null {
     const p = (JSON.parse(text.replace(/^﻿/, '')) as { evidence?: Partial<EvidencePolicy> }).evidence;
     if (p === undefined || typeof p.innateThrough !== 'string' || typeof p.startBefore !== 'string') return null;
     const list = (v: unknown): string[] => (Array.isArray(v) ? v.filter((s): s is string => typeof s === 'string') : []);
-    return { innateThrough: p.innateThrough, startBefore: p.startBefore, innateStats: list(p.innateStats), innateTraits: list(p.innateTraits) };
+    return { innateThrough: p.innateThrough, startBefore: p.startBefore, innateStats: list(p.innateStats), innateTraits: list(p.innateTraits), factTraits: list(p.factTraits), referenceWorks: list(p.referenceWorks), factBlocs: list(p.factBlocs) };
   } catch {
     return null;
   }

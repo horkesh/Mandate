@@ -1,6 +1,6 @@
 # R49: resignation
 
-For the lead: 4 items. R61 is complete in `C:/Pyrrhic/mandate-resignation`, branch `phase1-resignation`, from `2a65888`; R49's original base was `8b15e6e`. Independent review remains with Claude under 0096. Buchanan's departure and the post-1.11 history test remain open. No merge was started.
+For the lead: 4 items. R82's merge contents are resolved in `C:/Pyrrhic/mandate-resignation`, branch `phase1-resignation`, with HEAD `5a96a16` and the lead's MERGE_HEAD `e0a8ce7`. The merge remains in progress; its index is deliberately unchanged and still has twelve unmerged paths. Nothing was staged, committed or aborted. Independent review remains with Claude under 0096. The ordinary history run now has the actual secession events and reaches 31 July; R87 follows the lead's merge commit. Buchanan's departure remains held. The R49/R61 record below is retained, with R82's integration evidence below it.
 
 ## Where this lane stopped
 
@@ -78,10 +78,57 @@ Required checks pass without changing a band or acceptance limit:
 
 Evidence: `runs/r61/final-checks.json`, linked logs, data audit, re-break restoration and final inventory; standalone summaries and saves in `runs/r61-done/`, drafting diagnostics in `runs/r61-done-drafting/`. HEAD remains `2a65888d53679ac2a450f0eb5af7365c4c3a67f5`. Git commands were read-only and the staged diff is empty. The index byte hash differs from entry after permitted status reads; no staging command was used. Remaining reads use `GIT_OPTIONAL_LOCKS=0`. No new ruling, gated wording or signature was authored.
 
+## R82: merge main into resignation (2026-11-20)
+
+Resolved only the existing merge's twelve working-file conflicts. No feature work or Git mutation:
+
+- `seats/posts.ts` keeps resignation's current `sideOfPerson` lookup and main's `capitalOf` lookup, including the principal's moving capital. Main's shared commander-loss reporter is unchanged; resignation does not turn an ordinary service departure into a capture or death report.
+- `world/people.ts`, the generator and the source schemas retain both `service` and `blocCites`.
+- The people CSV keeps every existing column of all fifteen resignation-owned rows. The other 246 main rows retain main's re-sourced fields; Thomas also retains his authored service offer and its inference note, without restoring his older reputation. All 261 people remain.
+- `PROVENANCE.json` is byte-identical to MERGE_HEAD. Its existing `ArmyReg1861-09` entry covers the resignation citations; no duplicate source was added or signed source metadata replaced.
+- The liveness table keeps main's 148-day reference and active government-closure band, plus resignation's existing `people.resigned` band. The integrated notice now offers Thomas his choice, so the obsolete quiet entry for `people.stayed` becomes `around(1)` in Union and an explicit zero reason in testbed. No existing positive band or historical checkpoint limit was widened.
+- Regenerated the three published schemas, Union's `data/world.json`, and the day-40 testbed save with their own tools. Both packs and all published schemas pass their final freshness checks. The lockfile matches both heads, and the workspace junctions resolve to this worktree, so no install was required.
+
+### Ordinary history, no `--at-war`
+
+`runs/r82/history.ts` observes the unchanged ordinary rule-seat driver through `phase0Run`, with daily hashes, replay, and day-60 save/resume. It reaches **31 July/day 148**, with zero rejections and matching replay/resume. All 148 hashes match the standalone done check's Union reference. Final State: **`f7d3e654d0b562135bde562da7f4458078907fb558e16ffad84ebcf5e803cf20`**.
+
+These are observed model dates, not changes to the register dates:
+
+| Officer | Resigns in this run | Day |
+|---|---|---:|
+| Franklin Buchanan | No resignation; still Union on 31 July, departure held | — |
+| Samuel Cooper | 7 March | 2 |
+| George B. Crittenden | 10 June | 97 |
+| Richard S. Ewell | 7 May | 63 |
+| Josiah Gorgas | 3 April | 29 |
+| Theophilus H. Holmes | 24 May | 80 |
+| Albert S. Johnston | 3 May | 59 |
+| Joseph E. Johnston | 22 April | 48 |
+| Robert E. Lee | 25 April | 51 |
+| James Longstreet | 1 June | 88 |
+| William W. Loring | 13 May | 69 |
+| John B. Magruder | 20 April | 46 |
+| John C. Pemberton | 29 April | 55 |
+| Edmund K. Smith | 6 April | 32 |
+| James E. B. Stuart | 14 May | 70 |
+
+Virginia joins on 20 April/day 46; North Carolina joins on 24 May/day 80. Under 0101's existing government prerequisite, Holmes consequently waits beyond his register's 22 April date. His row and that date are unchanged. Thomas records `stay` on 23 April/day 49; Farragut and Scott also remain Union. Davis's capital moves from Montgomery to Richmond on 29 May/day 85, and all fourteen resigned officers are unposted at the current Confederate capital at the end. There are fourteen resignations, one stay and zero commander-loss reports. Exact events, terms, current service and locations: `runs/r82/history-service.json`.
+
+### Checks and retained failures
+
+- Exact `MANDATE_NO_GIT=1 npm run check`: **exit 1**, after **132 files / 1,489 passed / 3 existing optional skips**, at the pack boundary gate. Two new liveness explanations contained a setting name under `packages/`. A cheap boundary-only reproduction confirmed both hits; only the comment and zero-band explanatory string were made generic. Final typecheck, boundary, licences, decisions, six liveness-table tests, and the recorded-history liveness gate all **exit 0**. The passing 462-second suite is reused; `runs/r82/suite-reuse.diff` proves the two text-only changes. The exact full command was not rerun or reported as exit 0.
+- Full `npm run run:done-check -- --label r82-done`: **exit 0**, **Phase 0 6/6**, full default **eight-seed** sweep and drafting included, **1,431.24 seconds**. Union war-by-decision median/p95 **36.13/62.25 ms**; history **37.64/60.70 ms**, within the unchanged **40/160** limits. These are shared-host measurements, not unloaded or Linux CI evidence. Both full references have all 160 mechanics in band.
+- **1A remains 1/6**; only unknown-strength passes. Checkpoints fail for Missouri's side, the reported western-Virginia government gap, Confederate known men **20,957**, and zero planned operations fought by either side. Operation fails with two operations and zero field battles. Pushback fails at relay holds **1**, filter holds **0**, trims **0**, and reservations **44**. Stand-ins fail for the two unowned `callReceived` labels on this merge target; R79's later fixes were not imported. The lever sweep retains the policy/grievance measurement gap and unexercised border-governor chain. Every problem is in `runs/r82/done-check.log`; none was waived, calibrated away, or retried.
+
+Final runtime/artifact checks and the preservation inventory preceded this hand-over update. The twelve resolved contents were the only source changes at that point; all **1,645 other baseline files**, **95 protected inputs**, and all **eight captured Git metadata files**, including the index, were unchanged. This hand-over is the only additional delivery file. No deletion, unexpected source addition, install, build, server, browser, other request, or other-worktree write. Evidence index: `runs/r82/final-checks.json`; raw commands and exits are retained under `runs/r82/`, with standalone summaries and drafting diagnostics under `runs/r82-done/` and `runs/r82-done-drafting/`.
+
+Proposed rulings: none. R87 retains the feature follow-ups, including replacing the old artificial at-war pack test, promoting the wording draft under the existing gate ruling, and any received-resignation catalogue treatment; R82 changes none of them.
+
 ## For the lead
 
-1. Route R61 to Claude's standing reviewer under 0096. The government mapping applies the lead's existing ruling; no further design choice is proposed.
-2. Start the integration only after Part B lands. After 1.11 merges, replace the artificial at-war prerequisite with its history event and run that test. Preserve the apply's exclusion of the fifteen stand-ins, and both the current-service and capital readers in the shared location module.
+1. Review R82 under 0096, then stage and commit the existing merge through the hook. The twelve working-file contents are resolved; the unmerged index was intentionally not changed.
+2. After that commit, route R87's follow-ups. R82 proves the actual ordinary history run without injection; the older artificial at-war pack test and wording draft remain unchanged. Preserve the fifteen-row ownership and both current-service and capital readers. Retain the five failed 1A criteria with their existing owners; passing Phase 0 does not waive them.
 3. Re-source Buchanan's voluntary departure or authorize a separate administrative-departure treatment; do not reuse the mislabeled register entry as a resignation. R61 leaves his row and the wording draft unchanged.
 4. Route the pre-existing Virginia citation-format finding below to its owner; R61 corrected only its two new citations.
 

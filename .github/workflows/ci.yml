@@ -34,6 +34,11 @@ jobs:
       - id: checkout
         name: Checkout
         uses: actions/checkout@v7
+        with:
+          # Lane 0.7l: no LFS objects until a build or test needs the art; every CI download counts against the owner's bandwidth.
+          lfs: false
+          # Lane 0.7l (review): the whole history, so the art check reads every commit pushed, not only the tip.
+          fetch-depth: 0
 
       - id: node
         name: Set up Node from .nvmrc
@@ -51,6 +56,18 @@ jobs:
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: npm run typecheck
 
+      # The prototype has a separate dependency tree. Keep its install out of
+      # the staged hook's private snapshots, but check the complete desk in CI.
+      - id: install_desk
+        name: Install browser desk dependencies
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npm --prefix prototypes/desk ci
+
+      - id: typecheck_desk
+        name: Typecheck browser desk
+        if: ${{ !cancelled() && steps.install_desk.outcome == 'success' }}
+        run: npm run typecheck:desk
+
       - id: test
         name: npm run test
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
@@ -58,6 +75,11 @@ jobs:
           # Lane 1.0t: the wall-clock budget tests run here on the Linux job only; the pre-commit hook leaves them off.
           MANDATE_TIMING: ${{ matrix.os == 'ubuntu-24.04' && '1' || '' }}
         run: npm run test -- --reporter=default --reporter=json --outputFile.json=runs/ci/vitest.json
+
+      - id: no_skips
+        name: No test skipped where the timing gate is open (Linux; lane 1.14, from 0086)
+        if: ${{ !cancelled() && steps.install.outcome == 'success' && matrix.os == 'ubuntu-24.04' }}
+        run: npx tsx tools/no-skips.ts runs/ci/vitest.json
 
       - id: boundary
         name: npm run check:boundary
@@ -73,6 +95,11 @@ jobs:
         name: npm run check:decisions
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: npm run check:decisions
+
+      - id: lfs_check
+        name: No binary under art/ in plain git, in any commit pushed (lane 0.7l; so a --no-verify commit is caught even once deleted)
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npx tsx tools/lfs-check.ts --history HEAD
 
       - id: determinism_seats
         name: Determinism run (seats layer, testbed, a hash every day, replay and resume from day 60)
@@ -106,11 +133,15 @@ jobs:
           NODE: ${{ steps.node.outcome }}
           INSTALL: ${{ steps.install.outcome }}
           TYPECHECK: ${{ steps.typecheck.outcome }}
+          INSTALL_DESK: ${{ steps.install_desk.outcome }}
+          TYPECHECK_DESK: ${{ steps.typecheck_desk.outcome }}
           TEST: ${{ steps.test.outcome }}
           TIMING: ${{ matrix.os == 'ubuntu-24.04' && 'on (MANDATE_TIMING=1)' || 'off' }}
+          NO_SKIPS: ${{ steps.no_skips.outcome }}
           BOUNDARY: ${{ steps.boundary.outcome }}
           LICENCES: ${{ steps.licences.outcome }}
           DECISIONS: ${{ steps.decisions.outcome }}
+          LFS_CHECK: ${{ steps.lfs_check.outcome }}
           DET_SEATS: ${{ steps.determinism_seats.outcome }}
           DET_SEATS_UNION: ${{ steps.determinism_seats_union.outcome }}
           DONE_CHECK: ${{ steps.done_check.outcome }}
@@ -129,11 +160,15 @@ jobs:
             echo "| set up node | $NODE |"
             echo "| npm ci | $INSTALL |"
             echo "| npm run typecheck | $TYPECHECK |"
+            echo "| install browser desk dependencies | $INSTALL_DESK |"
+            echo "| typecheck browser desk | $TYPECHECK_DESK |"
             echo "| npm run test | $TEST ($tests) |"
             echo "| wall-clock budget tests | $TIMING |"
+            echo "| no test skipped (Linux) | $NO_SKIPS |"
             echo "| npm run check:boundary | $BOUNDARY |"
             echo "| npm run check:licences | $LICENCES |"
             echo "| npm run check:decisions | $DECISIONS |"
+            echo "| no binary under art/ in plain git, in any commit | $LFS_CHECK |"
             echo "| determinism run: seats layer (testbed) | $DET_SEATS |"
             echo "| determinism run: seats layer (union-1861) | $DET_SEATS_UNION |"
             echo "| Phase 0 done check (union-1861 at war, testbed) | $DONE_CHECK |"
@@ -149,6 +184,9 @@ jobs:
       - id: checkout
         name: Checkout
         uses: actions/checkout@v7
+        with:
+          # Lane 0.7l: no LFS objects (see the check job's checkout).
+          lfs: false
 
       - id: node
         name: Set up Node from .nvmrc

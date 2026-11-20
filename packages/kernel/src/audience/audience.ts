@@ -107,8 +107,9 @@ export function previewAudience(
   planned: PlanReading | null = null,
   /** Lane 1.4's oversight where he stands (`tick/context.ts`'s `oversightOf`); null: the pack's base, for a caller that cannot place him. */
   oversight: number | null = null,
+  /** At issue time, the person the principal believes holds the post (0052). */
+  holder: PersonId | null = state.postStates[post]?.postHolder ?? null,
 ): AudienceOutcome | string {
-  const holder = state.postStates[post]?.postHolder ?? null;
   if (holder === null) return `${post} is not held`;
   const about = subject(world, state, post, prospective, planned);
   if (typeof about === 'string') return about;

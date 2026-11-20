@@ -12,6 +12,11 @@ import { describe, expect, it } from 'vitest';
 const SRC = fileURLToPath(new URL('../src/', import.meta.url));
 /** Where the field is declared (the State type) and copied from the scenario start (setup, with the empty State). */
 const ALLOWED = new Set(['root-state.ts', 'tick/setup.ts']);
+/**
+ * Lane 1.11: command's government_established (a declared government takes its regions) writes the field, after
+ * `regionMoveProblem`, refusing `self_governing_region`; the validator holds it to a notice's effects (0069).
+ */
+const GUARDED = new Set(['command/command.ts']);
 
 function sources(dir: string, prefix = ''): { readonly path: string; readonly text: string }[] {
   return readdirSync(dir, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? sources(join(dir, e.name), `${prefix}${e.name}/`) : e.name.endsWith('.ts') ? [{ path: `${prefix}${e.name}`, text: readFileSync(join(dir, e.name), 'utf8') }] : []));
@@ -33,9 +38,20 @@ const WHY =
 describe('the region writer tripwire (0070)', () => {
   it('no kernel code writes regionGovernments outside setup', () => {
     const found = sources(SRC)
-      .filter((f) => !ALLOWED.has(f.path))
+      .filter((f) => !ALLOWED.has(f.path) && !GUARDED.has(f.path))
       .flatMap((f) => regionGovernmentWrites(f.text).map((w) => `${f.path}:${w}`));
     expect(found, WHY).toEqual([]);
+  });
+
+  it('the guarded writer calls the guard before it writes, and refuses with its reason', () => {
+    for (const path of GUARDED) {
+      const text = sources(SRC).find((f) => f.path === path)!.text;
+      const guard = text.indexOf('regionMoveProblem(map, state.regionGovernments');
+      const write = text.indexOf('regionGovernments: governments');
+      expect(guard, path).toBeGreaterThan(0);
+      expect(write, path).toBeGreaterThan(guard);
+      expect(text.slice(guard, write)).toContain("refuse('self_governing_region'");
+    }
   });
 
   it('setup and the State type do declare and copy it (the allowance is real, not stale)', () => {

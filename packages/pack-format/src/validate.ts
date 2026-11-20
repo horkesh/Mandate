@@ -11,6 +11,7 @@
  */
 import { phase0, world as w } from '@mandate/kernel';
 import { citationsIn, datedAfterBoundary, type EvidenceClass, type EvidencePolicy, hasWeakMarker } from './banned-sources.ts';
+import type { Checkpoints } from './checkpoints.ts';
 import type { GateData } from './gate.ts';
 import { IntlMessageFormat } from 'intl-messageformat';
 import { type Issue, IssueSink } from './issues.ts';
@@ -39,6 +40,8 @@ export interface PackData {
   readonly weakSources?: readonly string[];
   /** The pack's evidence-date rule (`gate/source-policy.json`, `evidence`; 0085): a dated citation past its cell's boundary is weak. */
   readonly evidencePolicy?: EvidencePolicy | null;
+  /** The done check's bands (`checkpoints.json`, lane 1.14), if the pack has them. Never read by the kernel. */
+  readonly checkpoints?: Checkpoints | null;
 }
 
 /** A record's address: `world` or `scenario:<id>`, a table, an index, and optionally a field path inside the record. */
@@ -380,6 +383,9 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
 
   // ---- people
   const people = idSet('people', world.people);
+  world.rules.combat.bombardment.recordTerms.forEach((row, i) => {
+    if (!people.has(row.commander)) err('unknown-reference', W('rules.combat.bombardment.recordTerms', i, 'commander'), `"${row.commander}" is not a person in this pack`, 'the commander named by the cited surrender record');
+  });
   const clashable = new Set(world.rules.people.verbs.orderValues.flatMap((r) => r.clashes));
   // Lane 1.11a (hard rule 7; 0074): a cell whose every admissible citation is weak is refused. A citation is weak when its
   // source is on the gate's weak list (memoirs, self-reports, pointers) or banned, or its place carries a weak marker
@@ -395,7 +401,13 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     const admissible = cites.filter((x) => sources.has(x.source) && sources.get(x.source)!.kind !== 'pointer');
     return admissible.length > 0 && admissible.every((x) => weakSet.has(x.source) || hasWeakMarker(x.at) || datedAfterBoundary(x.at, cls, evidence));
   };
-  const weakExpected = 'a citation of a source the gate does not mark weak (not a memoir, a self-report, a snippet, or evidence dated after its cell’s boundary: 5 March 1861 for a cell true at the start, 31 July 1861 for an innate stat or trait), or leave the cell unknown';
+  // A contemporary leg (0087): a citation of a primary source that is not weak, carries no weak marker, and is not dated past its
+  // boundary. A later reference work (the policy's `referenceWorks`) states facts and is never a leg for a judgment or a bloc.
+  const referenceWorks = new Set(evidence?.referenceWorks ?? []);
+  const hasContemporaryLeg = (cites: readonly w.Citation[], cls: EvidenceClass): boolean =>
+    cites.some((x) => sources.get(x.source)?.kind === 'primary' && !referenceWorks.has(x.source) && !weakSet.has(x.source) && !hasWeakMarker(x.at) && !datedAfterBoundary(x.at, cls, evidence));
+  const noLegExpected = 'a citation of a primary source (a document of the time, or one printed verbatim in a later work: not a later reference work) that is not weak and is not dated past the cell’s boundary; or hold the judgment back (0087)';
+  const weakExpected ='a citation of a source the gate does not mark weak (not a memoir, a self-report, a snippet, or evidence dated after its cell’s boundary: 5 March 1861 for a cell true at the start, 31 July 1861 for an innate stat or trait), or leave the cell unknown';
   world.people.forEach((p, i) => {
     const at = (f?: string) => W('people', i, f);
     useKey(p.name, at('name'));
@@ -483,6 +495,32 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
         err('weak-citations-only', at(`traits[${j}]`), `trait "${t.trait}" rests only on weak citations`, weakExpected);
       }
     });
+    // 0087: a judgment (reputation, competence, nerve, boldness, candour, regard, a value, a trait that is not a fact) needs a
+    // contemporary leg: a primary source, not weak, and not dated past its cell's boundary. Until the older cells are
+    // re-sourced this is a warning that lists each one; a pack without an `evidence` policy is not checked.
+    if (!p.invented && evidence !== null) {
+      const judged = (field: string, what: string, cites: readonly w.Citation[], cls: EvidenceClass) => {
+        if (cites.length > 0 && !hasContemporaryLeg(cites, cls)) warn('no-contemporary-leg', at(field), `${what} rests on no contemporary leg`, noLegExpected);
+      };
+      for (const stat of ['competence', 'nerve', 'reputation'] as const) {
+        const c = p.centres[stat];
+        if (c.direction !== null) judged(`centres.${stat}`, `the ${stat} centre "${c.direction}"`, c.cites, classOf('stat', stat));
+      }
+      for (const [field, c] of [['temperament.boldness', p.temperament.boldness], ['temperament.candour', p.temperament.candour], ['regard', p.regard]] as const) {
+        if (c.direction !== null) judged(field, `the ${field} centre "${c.direction}"`, c.cites, classOf('other'));
+      }
+      p.regardOthers.forEach((o, j) => judged(`regardOthers[${j}]`, `regard toward ${o.toward}`, o.cites, classOf('other')));
+      p.values.forEach((v, j) => judged(`values[${j}]`, `value "${v.value}"`, v.cites, classOf('other')));
+      p.traits.forEach((t, j) => {
+        if (!evidence.factTraits.includes(t.trait)) judged(`traits[${j}]`, `trait "${t.trait}"`, t.cites, classOf('trait', t.trait));
+      });
+    }
+    // 0087: a bloc is a start-class judgment: it needs a contemporary leg dated before the start (a warning until the cast is re-sourced).
+    const blocCites = p.blocCites ?? [];
+    citeCheck(blocCites, at('blocCites'), false, 'his bloc');
+    if (!p.invented && evidence !== null && p.bloc !== null && !evidence.factBlocs.includes(p.bloc) && !hasContemporaryLeg(blocCites, classOf('other'))) {
+      warn('no-contemporary-leg', at('bloc'), `bloc "${p.bloc}" rests on no contemporary leg`, noLegExpected);
+    }
     p.ranks.forEach((r, j) => {
       term('ranks', r.rank, at(`ranks[${j}].rank`));
       if (j > 0 && r.from < p.ranks[j - 1]!.from) err('ranks-out-of-order', at(`ranks[${j}]`), 'ranks must be in date order');
@@ -588,6 +626,25 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       const sum = l.shares.reduce((n, sh) => n + sh.permille, 0);
       if (sum > 1000) err('loyalty-sum', S('loyalty', i), `loyalty shares sum to ${sum}`, 'at most 1000 permille in all');
       if (new Set(l.shares.map((x) => x.faction)).size !== l.shares.length) err('duplicate-entry', S('loyalty', i), 'a faction has two shares');
+    });
+    // Lane 1.11: temporary posts the start declares for a situation to open (0040): a temporary kind creatable in play,
+    // a known department, parent post, holder and region, and an id no post at the start already has.
+    const startPosts = new Set(s.posts.map((p) => p.id as string));
+    // Lane 1.11: a declared government is a government department that governs nothing at the start.
+    const governingAtStart = new Set(s.governments.map((g) => g.department as string));
+    s.declaredGovernments.forEach((g, i) => {
+      refCheck(departments, 'department', g.id, S('declaredGovernments', i, 'id'));
+      if (governingAtStart.has(g.id)) err('declared-government', S('declaredGovernments', i, 'id'), `"${g.id}" already governs a region at the start`, 'a government that governs nothing until a situation establishes it');
+      g.regions.forEach((r, j) => refCheck(regions, 'region', r, S('declaredGovernments', i, `regions[${j}]`)));
+    });
+    s.temporaryPosts.forEach((p, i) => {
+      const kind = vocab.postKinds.find((k) => k.id === p.kind);
+      if (kind === undefined || !kind.temporary || kind.creatable === 'start_only') err('temporary-post', S('temporaryPosts', i, 'kind'), `kind "${p.kind}" is not a temporary post kind creatable in play`, 'a post kind the vocabulary marks temporary and not start_only');
+      refCheck(departments, 'department', p.department, S('temporaryPosts', i, 'department'));
+      if (p.parent !== null && !startPosts.has(p.parent)) err('unknown-reference', S('temporaryPosts', i, 'parent'), `"${p.parent}" is not a post of this start`, 'a post of the same start');
+      if (p.holder !== null) refCheck(people, 'person', p.holder, S('temporaryPosts', i, 'holder'));
+      if (p.region !== null) refCheck(regions, 'region', p.region, S('temporaryPosts', i, 'region'));
+      if (startPosts.has(p.id)) err('duplicate-entry', S('temporaryPosts', i, 'id'), `"${p.id}" is already a post at the start`, 'an id for a post the start does not open');
     });
     s.edgeConditions.forEach((c, i) => refCheck(edges, 'edge', c.edge, S('edgeConditions', i, 'edge')));
     s.depotConditions.forEach((c, i) => refCheck(depots, 'depot', c.depot, S('depotConditions', i, 'depot')));

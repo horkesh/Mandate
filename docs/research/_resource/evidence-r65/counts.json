@@ -1,0 +1,153 @@
+{
+  "total": 82,
+  "people": 17,
+  "decisions": {
+    "HOLD": 73,
+    "CHANGE": 7,
+    "KEEP": 2
+  },
+  "by_person": {
+    "buchanan_franklin": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 4
+    },
+    "clark_edward": {
+      "KEEP": 0,
+      "CHANGE": 1,
+      "HOLD": 10
+    },
+    "cooper_samuel": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 4
+    },
+    "crittenden_george_b": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 4
+    },
+    "ewell_richard_s": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 4
+    },
+    "gorgas_josiah": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 4
+    },
+    "holmes_theophilus_h": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 4
+    },
+    "houston_samuel": {
+      "KEEP": 1,
+      "CHANGE": 3,
+      "HOLD": 7
+    },
+    "johnston_albert_s": {
+      "KEEP": 0,
+      "CHANGE": 1,
+      "HOLD": 3
+    },
+    "johnston_joseph_e": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 4
+    },
+    "lee_robert_e": {
+      "KEEP": 1,
+      "CHANGE": 1,
+      "HOLD": 2
+    },
+    "longstreet_james": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 4
+    },
+    "loring_william_w": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 4
+    },
+    "magruder_john_b": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 4
+    },
+    "pemberton_john_c": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 4
+    },
+    "smith_edmund_k": {
+      "KEEP": 0,
+      "CHANGE": 1,
+      "HOLD": 3
+    },
+    "stuart_james_e_b": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 4
+    }
+  },
+  "by_field": {
+    "boldness": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 2
+    },
+    "candour": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 2
+    },
+    "competence": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 2
+    },
+    "nerve": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 2
+    },
+    "regard": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 2
+    },
+    "reputation": {
+      "KEEP": 0,
+      "CHANGE": 0,
+      "HOLD": 2
+    },
+    "value:duty": {
+      "KEEP": 0,
+      "CHANGE": 2,
+      "HOLD": 15
+    },
+    "value:native_state": {
+      "KEEP": 1,
+      "CHANGE": 1,
+      "HOLD": 15
+    },
+    "value:slavery_defence": {
+      "KEEP": 0,
+      "CHANGE": 1,
+      "HOLD": 1
+    },
+    "value:state_autonomy": {
+      "KEEP": 0,
+      "CHANGE": 1,
+      "HOLD": 16
+    },
+    "value:union": {
+      "KEEP": 1,
+      "CHANGE": 2,
+      "HOLD": 14
+    }
+  }
+}

@@ -57,6 +57,10 @@ export interface Phase0Options {
   readonly saveTransform?: (text: string) => string;
   /** Called with the mid-run save's text, so the caller can write it under runs/. */
   readonly onSave?: (text: string, day: number) => void;
+  /** Lane 1.14: the start's seed, in place of the scenario's (the lever sweep runs over seeds). */
+  readonly seed?: number;
+  /** Lane 1.14: sees each day's tick result, read only (the history run's scores). Never set on a timed run. */
+  readonly onTick?: (world: phase0.SeatsWorld, result: phase0.TickResult) => void;
 }
 
 export interface DaySummary {
@@ -134,7 +138,7 @@ export function phase0Run(options: Phase0Options): Phase0Summary {
   const cadence = hashMode === 'daily' ? {} : { hashEvery: every };
   const checked = { freeze: true, deepChecks: true, ...cadence };
 
-  const initial = phase0.createState(world, { ...setup, ...(options.atWar === true ? { atWar: true } : {}) });
+  const initial = phase0.createState(world, { ...setup, ...(options.seed !== undefined ? { seed: options.seed } : {}), ...(options.atWar === true ? { atWar: true } : {}) });
   const telemetry = createTelemetry(seatsMechanics());
   const daily: DaySummary[] = [];
   const checkpoints = new Map<number, CheckpointScores>();
@@ -159,6 +163,7 @@ export function phase0Run(options: Phase0Options): Phase0Summary {
       for (const [m, c] of Object.entries(telemetry.mechanics)) if (c.fires > (before[m] ?? 0)) fires[m] = c.fires - (before[m] ?? 0);
       daily.push({ day: r.day, fires, decisionPoints: r.decisionPoints.length, rejections: r.rejections.length });
       if (r.day % every === 0 || r.day === options.days) checkpoints.set(r.day, checkpointScores(world, r));
+      options.onTick?.(world, r);
     },
   });
   const finalHash = canonicalHash(run.state);

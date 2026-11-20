@@ -111,7 +111,7 @@ export interface PrincipalDoctrine {
   readonly faction: FactionId;
   /** Whether his goals may cross a neutral government's open ground: a political act, decided per side. */
   readonly crossNeutral: boolean;
-  /** The post his raised regiments are transferred to, to concentrate; null to leave them with the governors. */
+  /** The concentration post: a Part A [I] stand-in owned by lane 1.14; null to leave regiments with the governors. */
   readonly concentrateAt: PostId | null;
   /** Why that post: the research it rests on, the choice of post labelled [I]; null exactly when `concentrateAt` is. */
   readonly concentrateSource: string | null;
@@ -131,8 +131,9 @@ export interface PrincipalDoctrine {
 }
 
 /**
- * Conflicting orders (0040, 0072). DESIGN PARAMETERS the pack states, never kernel defaults. STAND-IN: lane 1.1's
- * compliance function resolves conflicting orders and retires this window.
+ * Conflicting orders (0040, 0072). DESIGN PARAMETERS the pack states, never kernel defaults. Lane 1.1's compliance
+ * function resolves a conflict (`resolveConflict`), which retired Phase 0's stand-in, conflicts resolved by
+ * department; the window in which two orders conflict stays a design parameter.
  */
 export interface StandingRules {
   /** Days within which a chain order stands against a newer order that went around the chain (0040: conflicting orders). */

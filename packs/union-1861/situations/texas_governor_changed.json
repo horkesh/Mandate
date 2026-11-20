@@ -1,0 +1,45 @@
+{
+  "id": "texas_governor_changed",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.texas_governor_changed.title",
+  "text": "situation.texas_governor_changed.text",
+  "earliest": "1861-03-16",
+  "event": {
+    "dayAtLeast": 11
+  },
+  "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "post_succession",
+        "subject": "st_gov_texas",
+        "delta": 1,
+        "reason": "convention-succession",
+        "side": null,
+        "succession": {
+          "from": "houston_samuel",
+          "to": "clark_edward"
+        }
+      }
+    }
+  ],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Allegiance and succession in a state office only; no secession-cause claim, slavery policy, security order or protected-population effect."
+  },
+  "citations": [
+    {
+      "source": "TX-CONV-1861",
+      "at": "pp. 183-187, proceedings of 16 March 1861; p. 197 refers back to the vacancy ordinance"
+    }
+  ],
+  "namedOnly": "The Convention’s succession proceedings, not a quotation or a discretionary act by either man; command replaces the named incumbent without changing his status."
+}

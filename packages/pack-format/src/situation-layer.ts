@@ -81,7 +81,8 @@ export function policyRows(items: readonly { readonly file: string; readonly def
   });
   const mapTopics = new Set(rows.flatMap((r) => r.gateTopics));
   const superseded = new Set((gate?.register.topics ?? []).flatMap((t) => t.supersededOptions.map((s) => `${s.situation}/${s.option}`)));
-  const posts = new Set(pack.scenarios.flatMap((s) => s.posts.map((p) => p.id as string)));
+  // Lane 1.11: a declared temporary post (opened in play by an effect, 0040) may carry a policy too (lane 1.11: a command opened in play carries S17's rows).
+  const posts = new Set(pack.scenarios.flatMap((s) => [...s.posts.map((p) => p.id as string), ...(s.temporaryPosts ?? []).map((p) => p.id as string)]));
   for (const { file, def } of items) {
     const err = (kind: string, at: string, message: string, expected: string) => sink.error(kind, file, at, message, expected);
     // G-1.5g: in a decision the map gates, inaction is a policy too ("each commander decides"), so it cannot escape the map.
@@ -100,6 +101,20 @@ export function policyRows(items: readonly { readonly file: string; readonly def
       }
     }
     def.options.forEach((o, i) => {
+      // The lead's S17 ruling (a): a proposal grounded in law and practice only on an option the gate keeps.
+      if (phase0.isProposalBasis(o.proposedBy)) {
+        const topics = [...topicsOf(def.gate), ...topicsOf(o.gate)];
+        const gated = topics.length > 0;
+        if (o.proposedBy.basis === 'principal-initiative') {
+          // The lead's S12 ruling: the side's principal's own document, dated no later than the gated topic's window closes.
+          const principal = pack.scenarios.flatMap((s) => s.factions).find((f) => f.faction === def.faction)?.principal ?? null;
+          if (!gated || def.kind !== 'decision') err('proposal-basis', `options[${i}].proposedBy`, `option "${o.id}" rests on the principal's initiative but is not an option of a gated decision`, 'an option of a gated decision (the exception is recorded per topic)');
+          if (o.proposedBy.author !== principal) err('proposal-basis', `options[${i}].proposedBy.author`, `"${o.proposedBy.author}" is not the side's principal`, `the principal of ${def.faction}: only his own consideration counts`);
+          if (o.proposedBy.dated > def.earliest) err('proposal-basis', `options[${i}].proposedBy.dated`, `the document is dated ${o.proposedBy.dated}, after the situation's earliest date (${def.earliest})`, 'a document on record before the decision: dated on or before the situation\'s earliest date');
+        } else if (!gated || !(superseded.has(`${def.id}/${o.id}`) || o.watched)) {
+          err('proposal-basis', `options[${i}].proposedBy`, `option "${o.id}" names a basis in law and practice instead of a person, but the gate does not keep it`, 'the persons who argued for it (C1); a basis is allowed only on a gated option the register supersedes or marks watched');
+        }
+      }
       const gatedBy = [...new Set([...topicsOf(def.gate), ...topicsOf(o.gate)])].filter((t) => mapTopics.has(t)).sort();
       if (o.policy === null) {
         if (gatedBy.length > 0) err('policy-missing', `options[${i}].policy`, `option "${o.id}" is tagged ${gatedBy.join(', ')}, which the map from orders to values gates, but names no policy row`, 'policy: { row, carriedBy }, naming a policy: row tagged with that topic (G-1.5a)');

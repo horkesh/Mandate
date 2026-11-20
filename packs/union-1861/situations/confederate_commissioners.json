@@ -1,0 +1,73 @@
+{
+  "id": "confederate_commissioners",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.confederate_commissioners.title",
+  "text": "situation.confederate_commissioners.text",
+  "earliest": "1861-03-05",
+  "event": {
+    "dayAtLeast": 10
+  },
+  "railroad": "the commissioners reached Washington on 5 March and kept out of sight, working through former senators and the Secretary of State; the president knew of them through him by 15 March at the latest",
+  "options": [
+    {
+      "id": "hold_and_talk",
+      "label": "situation.confederate_commissioners.option.hold_and_talk",
+      "displayKey": 1,
+      "proposedBy": [
+        "seward_william_h"
+      ],
+      "honours": [
+        "conciliation"
+      ],
+      "effects": [
+        {
+          "setFlag": "seward_channel_open"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.confederate_commissioners.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "hold_and_talk"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_state"
+    ],
+    "recommends": [
+      "hold_and_talk"
+    ],
+    "reasons": [
+      {
+        "kind": "conciliation",
+        "weight": 700
+      }
+    ],
+    "confidence": 700
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "whether to receive envoys; no gate topic"
+  },
+  "citations": [
+    {
+      "source": "EPP-SUMTER",
+      "at": "Seward's memorandum to the commissioners, dated 15 March, and its covering note of 8 April (delivered then, with their consent)"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "2.4; design S3"
+    },
+    {
+      "source": "NOTE-march-1861-facts",
+      "at": "1, 17; des. 14, 18"
+    }
+  ]
+}

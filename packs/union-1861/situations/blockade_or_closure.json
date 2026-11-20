@@ -1,0 +1,112 @@
+{
+  "id": "blockade_or_closure",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.blockade_or_closure.title",
+  "text": "situation.blockade_or_closure.text",
+  "earliest": "1861-04-12",
+  "event": {
+    "fired": "sumter_fired_upon"
+  },
+  "knowledge": {
+    "knows": {
+      "subjectKind": "situation",
+      "subjectId": "sumter_fired_upon"
+    }
+  },
+  "options": [
+    {
+      "id": "blockade",
+      "label": "situation.blockade_or_closure.option.blockade",
+      "displayKey": 1,
+      "proposedBy": [
+        "seward_william_h"
+      ],
+      "honours": [
+        "union"
+      ],
+      "effects": [
+        {
+          "setFlag": "blockade_proclaimed"
+        }
+      ]
+    },
+    {
+      "id": "close_ports",
+      "label": "situation.blockade_or_closure.option.close_ports",
+      "displayKey": 2,
+      "proposedBy": [
+        "bates_edward"
+      ],
+      "honours": [
+        "union",
+        "order"
+      ],
+      "effects": [
+        {
+          "setFlag": "ports_closed"
+        }
+      ]
+    },
+    {
+      "id": "undeclared_blockade",
+      "label": "situation.blockade_or_closure.option.undeclared_blockade",
+      "displayKey": 3,
+      "proposedBy": [
+        "welles_gideon"
+      ],
+      "honours": [
+        "union",
+        "caution"
+      ],
+      "effects": [
+        {
+          "setFlag": "blockade_undeclared"
+        }
+      ]
+    }
+  ],
+  "inaction": {
+    "text": "situation.blockade_or_closure.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "blockade"
+    ]
+  },
+  "staffLine": {
+    "authors": [
+      "us_secretary_state"
+    ],
+    "recommends": [
+      "blockade"
+    ],
+    "reasons": [
+      {
+        "kind": "union",
+        "weight": 600
+      }
+    ],
+    "confidence": 600
+  },
+  "delegableTo": [],
+  "resurfaceOn": [],
+  "gate": {
+    "none": "a choice of naval and legal instrument; no gate topic"
+  },
+  "citations": [
+    {
+      "source": "SecNav1861",
+      "at": "Lincoln's message of 4 July 1861: his account of the blockade proclaimed in April"
+    },
+    {
+      "source": "NOTE-secession-winter-1861",
+      "at": "2.5"
+    },
+    {
+      "source": "NOTE-union-navy",
+      "at": "1, 5; des. 1, 2"
+    }
+  ]
+}

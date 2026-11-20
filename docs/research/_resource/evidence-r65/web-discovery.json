@@ -1,0 +1,2408 @@
+[
+  {
+    "query": "\"Albert Sidney Johnston\" \"1861\" \"January\" letter Union Texas life",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://emergingcivilwar.com/2021/01/11/albert-sidney-johnston-at-fort-point-where-narratives-collide/",
+            "title": "Albert Sidney Johnston at Fort Point: Where Narratives Collide",
+            "description": "... January, 1861. They were aware of Johnston's reputation and planned ... 25, 1861 in The Life of Albert Sidney Johnston, Comprising His ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Albert_Sidney_Johnston",
+            "title": "Albert Sidney Johnston",
+            "description": "| Albert Sidney Johnston |\n|-|\n| [![](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/ASJohnston.jpg/250px-ASJohnston.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:ASJohnston.jpg)<br>Johnston in uniform, [c.](https://en.wiktionary.org/wiki/circa#English)1861 |\n\n## Early life and education\nAlthough Albert Johnston was born in Kentucky, he lived much of his life in [Texas](https://en.wikipedia.org/wiki/Texas), which he considered his home.",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://www.worldhistory.org/Albert_Sidney_Johnston/",
+            "title": "Albert Sidney Johnston: The Highest-Ranking General Killed ...",
+            "description": "Albert Sidney Johnston, 1861 Unknown Artist (Public Domain). On 31 January 1837, Johnston was promoted to senior ...",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://archives.library.uta.edu/repositories/2/resources/221",
+            "title": "Albert Sidney Johnston Collection",
+            "description": "He became senior brigadier general in command of the army on January 31, 1837. ... Texas, 1828, 1842-1861. Includes a manuscript book of general orders ...",
+            "position": 4,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "assembly-ab-ca",
+            "capability": "legislative-records/get_member",
+            "description": "Member profile; the mid comes from list_members or from get_bill.sponsor.mid."
+          },
+          {
+            "provider": "msheritage-access-preservica-com",
+            "capability": "archive-records/list_folder",
+            "description": "Enumerate the archive top-down (root -> collection -> sub-folders -> items) or list what sits inside a folder found by search_records or get_record; take child ids to get_record (items) or back to list_folder (folders)."
+          },
+          {
+            "provider": "assembly-ab-ca",
+            "capability": "legislative-records/hansard_index",
+            "description": "Find where a member spoke, or where a subject was debated, without reading the PDFs: this is the Assembly's own index. Letter A of a busy session is large; use heading_contains to keep one speaker or subject."
+          },
+          {
+            "provider": "assembly-ab-ca",
+            "capability": "legislative-records/list_members",
+            "description": "Roster of MLAs for a legislature; the mid keys get_member and matches the sponsor id on bills."
+          },
+          {
+            "provider": "kings-printer-alberta-ca",
+            "capability": "legislation/list_gazette_issues",
+            "description": "To find which Gazette issues exist for a year and their ordinals before get_gazette_issue, or to get the Index of Regulations URL for the year."
+          },
+          {
+            "provider": "web-archive-org",
+            "capability": "captures/content",
+            "description": "Retrieve readable static text and title from an exact archived HTML capture, or the verbatim text of a plain-text, XML/RSS or JSON capture, in any declared charset. PDFs and other binary captures are rejected as invalid input. Use a timestamp from history. Reports the actual timestamp and URL after archive-only redirects. Does not execute JavaScript or load assets; maximum response 2 MiB."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "articles/lookup",
+            "description": "Read the current revision of a Wikipedia (or sister-project) article by exact title: full wikitext (or HTML with body), abstract, categories, redirects, connected Wikidata QID, license, and revision credibility signals. Use structured-contents instead when you want infobox fields, sections or references already parsed. From https://de.wikipedia.org/wiki/Berlin pass name `Berlin` and project `dewiki`. Not a search: titles must match exactly."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "articles/structured-contents",
+            "description": "Read a Wikipedia article pre-parsed into JSON: one-line description, abstract, infobox fields, sections as paragraphs and lists with links, references and tables. Best for extracting facts such as a person's birth date or a city's population without parsing HTML. Beta upstream, with the most complete coverage on en, de, fr, es, pt, it, nl, cy and id Wikipedia. Exact title, as for articles/lookup."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "reference/languages",
+            "description": "List the language codes Wikimedia projects use, with names and writing direction, to choose the language option or build a project identifier. Codes are two or three letters, sometimes with a suffix (zh-yue). Free."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "reference/projects",
+            "description": "List the Wikimedia projects available for lookup, to find the project identifier for a language and project type, such as `ptwiki` for Portuguese Wikipedia or `frwiktionary`. Free."
+          }
+        ]
+      },
+      "id": "01a1f443-9727-714c-8394-bd8a5bd2c634",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 4 web results are excerpts only (#1 \"https://emergingcivilwar.com/2021/01/11/albert-sidney-johnston-at-fort-point-where-narratives-collide/\", #2 \"https://en.wikipedia.org/wiki/Albert_Sidney_Johnston\", #3 \"https://www.worldhistory.org/Albert_Sidney_Johnston/\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"J E B Stuart\" \"1861\" \"January\" letter secession",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.facebook.com/TheVirginiaFlaggers/posts/letter-by-jeb-stuart-born-february-6th-1833-to-major-henry-hill-from-fort-wise-k/632887539130239/",
+            "title": "Letter by J.E.B. Stuart, born February 6th, 1833, to Major Henry Hill from ...",
+            "description": "Letter by J.E.B. Stuart, born February 6th, 1833, to Major Henry Hill from Fort Wise, Kansas Territory, January 11, 1861 --\n\n“For my part I have ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.facebook.com/TheVirginiaFlaggers/posts/letter-by-jeb-stuart-to-major-henry-hill-from-fort-wise-kansas-territory-january/1908187929315875/",
+            "title": "Letter by J.E.B. Stuart to Major Henry Hill from Fort Wise, Kansas ...",
+            "description": "Letter by J.E.B. Stuart to Major Henry Hill from Fort Wise, Kansas Territory, January 11, 1861 --\n\n“For my part I have had no hesitancy from the first ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://valley.newamericanhistory.org/eve/letters-and-diaries/augusta/alexander-stuart",
+            "title": "Letters of Alexander H.H. Stuart — The Eve of War",
+            "description": "Augusta County: J. E. B. Stuart to Alexander H. H. Stuart, January 28, 1857 ... Augusta County: L. M. Powell to Alexander H. H. Stuart, 19 January 1861.",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://civilwarmonths.com/2024/05/12/the-death-of-jeb-stuart/",
+            "title": "The Death of Jeb Stuart - The Civil War Months",
+            "description": "... Jeb StuartJefferson DavisPhilip SheridanRobert E. Lee. Post ... 1861 · January 1861 · February 1861 · March 1861 · April 1861 · May 1861 · June ...",
+            "position": 4,
+            "source": "web"
+          }
+        ],
+        "tools": []
+      },
+      "id": "01a1f443-973d-705a-a114-19db7b117f4f",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 4 web results are excerpts only (#1 \"https://www.facebook.com/TheVirginiaFlaggers/posts/letter-by-jeb-stuart-born-february-6th-1833-to-major-henry-hill-from-fort-wise-k/632887539130239/\", #2 \"https://www.facebook.com/TheVirginiaFlaggers/posts/letter-by-jeb-stuart-to-major-henry-hill-from-fort-wise-kansas-territory-january/1908187929315875/\", #3 \"https://valley.newamericanhistory.org/eve/letters-and-diaries/augusta/alexander-stuart\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Joseph E. Johnston\" \"1861\" \"February\" letter union resign",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.essentialcivilwarcurriculum.com/joseph-e.-johnston.html",
+            "title": "Joseph E. Johnston",
+            "description": "... February 3, 1807, near ... Johnston called this action “altogether illegal” (Narrative, 71) and sent a letter of protest to Davis on September 12, 1861.",
+            "position": 1,
+            "source": "web"
+          }
+        ],
+        "tools": []
+      },
+      "id": "01a1f443-974b-70b6-9512-df26b81c269e",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 1 web results are excerpts only (#1 \"https://www.essentialcivilwarcurriculum.com/joseph-e.-johnston.html\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Edward Clark\" \"1861\" \"January\" Texas speech lieutenant governor",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://digital.library.unt.edu/ark:/67531/metadc663533/m2/1/high_res_d/1002603809-Whitworth.pdf",
+            "title": "THE ROLE OF TEXAS IN THE CONFEDERACY",
+            "description": "end of January, 1861, he, along with many other Southern members, withdrew ... of former Lieutenant-Governor Edward Clark. Governor Clark's term of ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.tshaonline.org/handbook/entries/secession-convention",
+            "title": "Texas Secession Convention of 1861: A Historical Overview",
+            "description": "After opening with prayer on Monday afternoon, January 28, 1861, the delegates to the convention elected O. M. ... Edward Clark to assume the office of governor.",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://landmarkevents.org/assets/email/2021/02-01-history-highlight/",
+            "title": "History Highlight — Texas Secedes from the Union, 1861",
+            "description": "Each county elected two commissioners to attend the convention which met January 28, 1861. ... Governor, Edward Clark. Edward Clark (1815 ...",
+            "position": 3,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "txsmartbuy-gov",
+            "capability": "public-tenders/search_grants",
+            "description": "Finding Texas state grant opportunities and their grant numbers before calling get_grant; the facets in the output give the ids the filters take."
+          },
+          {
+            "provider": "txsmartbuy-gov",
+            "capability": "public-tenders/get_grant",
+            "description": "Reading a grant opportunity returned by search_grants."
+          },
+          {
+            "provider": "txsmartbuy-gov",
+            "capability": "public-tenders/search_awards",
+            "description": "Finding Texas agency purchase-order awards and vendors; follow with get_award for notes and attachments."
+          },
+          {
+            "provider": "txsmartbuy-gov",
+            "capability": "public-tenders/get_award",
+            "description": "Reading a purchase-order award returned by search_awards."
+          }
+        ]
+      },
+      "id": "01a1f443-9749-71e5-bfbb-e4c58517b818",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 3 web results are excerpts only (#1 \"https://digital.library.unt.edu/ark:/67531/metadc663533/m2/1/high_res_d/1002603809-Whitworth.pdf\", #2 \"https://www.tshaonline.org/handbook/entries/secession-convention\", #3 \"https://landmarkevents.org/assets/email/2021/02-01-history-highlight/\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Richard Ewell\" \"1861\" \"January\" letter",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.civilwarmonitor.com/article/voices-from-the-army-of-northern-virginia-part-4/",
+            "title": "Voices From the Army of Northern Virginia, Part 4: Corps Commanders",
+            "description": "Richard Ewell Library of Congress. Richard Ewell. The Letters of ... January 1861: “Officers generally are very much averse to any thing ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://spirit61.info/battles/potomac-front/first-battle-of-fairfax-court-house/",
+            "title": "First Battle of Fairfax Court House",
+            "description": "190, 1, 2*, 5. * Includes Lt. Col. Richard Ewell ... Virginia Governor John Letcher's January 7, 1861 Address to the Senate and House of Delegates ...",
+            "position": 2,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "efdsearch-senate-gov",
+            "capability": "financial-disclosures/get_report",
+            "description": "You have a report_id and report_kind from search_reports (or a pasted /search/view/ URL) and need the filing's contents: PTR transactions, annual report parts, paper page images or the extension notice."
+          },
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/detail",
+            "description": "Call for what one letter actually argued. The narrative sections are the investor's own words; the theses are the extraction, and each names what it was based on so a thin mention is not mistaken for a conviction."
+          },
+          {
+            "provider": "efdsearch-senate-gov",
+            "capability": "financial-disclosures/search_reports",
+            "description": "Find Senate financial disclosure filings (PTRs, annual reports, extensions, blind trusts, paper filings) by Senator or candidate name, state, report type or date, and obtain report_id values for get_report."
+          },
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/list",
+            "description": "Call to see what was published in a quarter. Returns the letter index rather than the letters - take a letterId to fund-letters/detail for the content."
+          }
+        ]
+      },
+      "id": "01a1f444-19b9-74ae-af1a-ba4ce4ffd02b",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 2 web results are excerpts only (#1 \"https://www.civilwarmonitor.com/article/voices-from-the-army-of-northern-virginia-part-4/\", #2 \"https://spirit61.info/battles/potomac-front/first-battle-of-fairfax-court-house/\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"John Magruder\" \"1861\" \"February\" letter secession",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://digital.library.unt.edu/ark:/67531/metadc503880/m2/1/high_res_d/1002772445-Fortin.pdf",
+            "title": "CONFEDERATE MILITARY OPERATIONS IN ARKANSAS, 1861 ...",
+            "description": "United States Arsenal at Little Rock, Arkansas, 29 January-. 12 February 1861, ibid., pp. ... John Magruder also made troop dispositions in Confed- erate ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.cambridge.org/core/books/cambridge-history-of-the-american-civil-war/battles-of-virginia-1861/D1A0634584CF3D9D545EF762B184CBD8",
+            "title": "The Battles of Virginia, 1861 (Chapter 2)",
+            "description": "... February 13, 1861 to determine Virginia's fate. A minority of the ... John” Magruder. In the confused clash that followed, Butler lost ...",
+            "position": 2,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "msheritage-access-preservica-com",
+            "capability": "archive-records/list_folder",
+            "description": "Enumerate the archive top-down (root -> collection -> sub-folders -> items) or list what sits inside a folder found by search_records or get_record; take child ids to get_record (items) or back to list_folder (folders)."
+          }
+        ]
+      },
+      "id": "01a1f444-19bd-700c-9c79-f1f06915f522",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 2 web results are excerpts only (#1 \"https://digital.library.unt.edu/ark:/67531/metadc503880/m2/1/high_res_d/1002772445-Fortin.pdf\", #2 \"https://www.cambridge.org/core/books/cambridge-history-of-the-american-civil-war/battles-of-virginia-1861/D1A0634584CF3D9D545EF762B184CBD8\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Samuel Cooper\" \"1861\" \"February\" letter resign",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://drtlibrary.wordpress.com/tag/samuel-cooper/",
+            "title": "Samuel Cooper – Inside the Gates",
+            "description": "... resigned his commission in the Army to join Virginia and the Confederacy in 1861. ... Less than three weeks after Texas seceded from the Union on February 1, 1861 ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.facebook.com/historic.columbus/posts/samuel-coopers-maker-is-at-the-corner-of-miller-road-and-warm-springs-road-his-a/1558263744374886/",
+            "title": "Samuel Cooper's historical marker in Columbus",
+            "description": "February 17, 1808 Image: Cooper Park, with its wide graveled path ... He was discharged August 13, 1861 at Toledo for expiration of term of ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://collections.nlm.nih.gov/pdf/nlm:nlmuid-101652066-bk",
+            "title": "General orders.",
+            "description": "February 27, 1861, vice Stockton, resigned. [Company B.] Second Lieutenant ... Colonel Samuel Cooper, Adjutant General, March 7, 1861. Lieutenant ...",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "http://finding.mdah.ms.gov/manuscripts/z2203000",
+            "title": "Jefferson Davis and Family Papers (Z/2203)",
+            "description": "In February of 1861, Davis was elected provisional president of the newly ... There is also a letter from former Confederate general Samuel Cooper regarding \"Mr.",
+            "position": 4,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "sam-gov",
+            "capability": "opportunities/entities_changes",
+            "description": "Collect registrations updated since the last run."
+          },
+          {
+            "provider": "sam-gov",
+            "capability": "opportunities/entities_status",
+            "description": "Learn whether a new monthly entity extract was published and get its URL, size, hash and record count before downloading it elsewhere."
+          },
+          {
+            "provider": "sam-gov",
+            "capability": "opportunities/entities_get",
+            "description": "You have UEIs or CAGE codes and want the registration records."
+          },
+          {
+            "provider": "sam-gov",
+            "capability": "opportunities/search",
+            "description": "Search SAM.gov contract opportunities by keyword, agency, notice status, publication date, NAICS, set-aside, notice type and response deadline. Returns one page (default 20, max 100) with an opaque cursor for the next page. By default each hit is enriched with its full notice detail (NAICS, set-aside, place of performance, full description)."
+          },
+          {
+            "provider": "firecrawl-gov-index",
+            "capability": "search",
+            "description": "Use first for any US government, legal, tax, court, permit, statute, regulation, grant or procurement question, before web search: what a city's zoning or planning code allows at an address, which business licence, permit, inspection or fee a city or county requires to open a shop, restaurant, food truck or mobile service, the text of a state code section or municipal ordinance, the official page for a form or program, federal rules and regulations, court opinions and case law, or the regulations, guidance and decisions that cite a statute (set cites). One call searches 30M+ official pages and returns URLs to cite or scrape. For the structured record behind a page (a SAM.gov notice, a Federal Register document, a bill) use that source's own provider. Filters keep only pages the index has labeled, so a filtered search can leave out relevant pages, and no results does not mean none exist. Court labels are most complete for federal courts and case-law collections."
+          }
+        ]
+      },
+      "id": "01a1f444-1943-7369-9d0b-216cc1480278",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 4 web results are excerpts only (#1 \"https://drtlibrary.wordpress.com/tag/samuel-cooper/\", #2 \"https://www.facebook.com/historic.columbus/posts/samuel-coopers-maker-is-at-the-corner-of-miller-road-and-warm-springs-road-his-a/1558263744374886/\", #3 \"https://collections.nlm.nih.gov/pdf/nlm:nlmuid-101652066-bk\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"John Pemberton\" \"1861\" \"January\" letter union",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.facebook.com/edge.psychotic/posts/lieutenant-general-john-c-pemberton-18141881-was-a-northern-born-confederate-off/10163335159568215/",
+            "title": "Lieutenant General John C. Pemberton (1814–1881) ...",
+            "description": "... 1861 to fight for the Confederacy. He was granted ... John Pemberton (August 10, 1814 – July 13, 1881)? ... Pemberton was promoted to major general on January ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://fromthepage.com/article/show?article_id=101737",
+            "title": "Waddy, John Robinson, 1834-1903",
+            "description": "When the Civil War broke out in 1861 ... John Pemberton; January 14, 1863 — J. R. Waddy; Page 1 in Letter from C. G. Armistead to J. R. Waddy; January 17, 1863 ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://petalumahistorian.com/tag/john-pemberton/",
+            "title": "John Pemberton Archives",
+            "description": "Beeton's Book of Household Management, published in 1861 ... Stockton Daily Evening Record: “Beast and the Jungle,” January 10, 1910.",
+            "position": 3,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "commbuys-com",
+            "capability": "public-tenders/get_blanket",
+            "description": "After search_bids returns a `blanket_number`, or with a statewide contract number such as `C14597-vCurrent`, to read the awarded contract's summary and attachment URLs. An unknown PO number is `not_found`."
+          }
+        ]
+      },
+      "id": "01a1f444-1988-73bb-b68e-c80331f6efe5",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 3 web results are excerpts only (#1 \"https://www.facebook.com/edge.psychotic/posts/lieutenant-general-john-c-pemberton-18141881-was-a-northern-born-confederate-off/10163335159568215/\", #2 \"https://fromthepage.com/article/show?article_id=101737\", #3 \"https://petalumahistorian.com/tag/john-pemberton/\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "JEB Stuart Henry Hill January 11 1861 letter \"McClellan\"",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://en.wikipedia.org/wiki/J._E._B._Stuart",
+            "title": "J. E. B. Stuart",
+            "description": "## American Civil War\n### Maryland\nMcClellan.",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.facebook.com/TheVirginiaFlaggers/posts/for-my-part-i-have-no-hesitancy-from-the-first-that-right-or-wrong-alone-or-othe/2602820873185907/",
+            "title": "“For my part, I have no hesitancy from the first that, right or wrong ...",
+            "description": "Excerpt of a Jeb Stuart letter on January 11, 1861 to Major Henry Hill ... letter on January 11, 1861 to Major Henry Hill ... Henry McClellan, one of Stuart's staff ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "http://dclawyeronthecivilwar.blogspot.com/2011/09/",
+            "title": "All Not So Quiet Along the Potomac: September 2011",
+            "description": "Beatie, Army of the Potomac: McClellan Takes Command: September 1861-February 1862, p. 7 (2002)). The best and most accurate account I have read ...",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://jarosebrock.wordpress.com/confederate/army-of-northern-virginia/robert-e-lee/james-ewell-brown-stuart/",
+            "title": "Cavalry Division – James Ewell Brown Stuart - Antietam Voices",
+            "description": "McClellan, Henry B. July 2 1863. According to Henry McClellan, Stuart's meeting with Lee upon his arrival at Gettysburg. Wert, Jeffry D.",
+            "position": 4,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "wikipedia",
+            "capability": "articles/lookup",
+            "description": "Read the current revision of a Wikipedia (or sister-project) article by exact title: full wikitext (or HTML with body), abstract, categories, redirects, connected Wikidata QID, license, and revision credibility signals. Use structured-contents instead when you want infobox fields, sections or references already parsed. From https://de.wikipedia.org/wiki/Berlin pass name `Berlin` and project `dewiki`. Not a search: titles must match exactly."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "articles/structured-contents",
+            "description": "Read a Wikipedia article pre-parsed into JSON: one-line description, abstract, infobox fields, sections as paragraphs and lists with links, references and tables. Best for extracting facts such as a person's birth date or a city's population without parsing HTML. Beta upstream, with the most complete coverage on en, de, fr, es, pt, it, nl, cy and id Wikipedia. Exact title, as for articles/lookup."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "reference/languages",
+            "description": "List the language codes Wikimedia projects use, with names and writing direction, to choose the language option or build a project identifier. Codes are two or three letters, sometimes with a suffix (zh-yue). Free."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "reference/projects",
+            "description": "List the Wikimedia projects available for lookup, to find the project identifier for a language and project type, such as `ptwiki` for Portuguese Wikipedia or `frwiktionary`. Free."
+          }
+        ]
+      },
+      "id": "01a1f444-4576-771b-9c5f-07392e61b901",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 4 web results are excerpts only (#1 \"https://en.wikipedia.org/wiki/J._E._B._Stuart\", #2 \"https://www.facebook.com/TheVirginiaFlaggers/posts/for-my-part-i-have-no-hesitancy-from-the-first-that-right-or-wrong-alone-or-othe/2602820873185907/\", #3 \"http://dclawyeronthecivilwar.blogspot.com/2011/09/\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Theophilus Holmes\" \"1861\" letter Union",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://encyclopediaofarkansas.net/entries/theophilus-hunter-holmes-1673/",
+            "title": "Theophilus Hunter Holmes (1804–1880)",
+            "description": "Theophilus Holmes was born on November 13, 1804, in Sampson County ... Following his promotion to major general in October 1861, Holmes served as ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.facebook.com/americanbattlefieldtrust/posts/after-over-three-decades-of-service-in-the-us-army-theophilus-holmes-found-himse/1232966322211423/",
+            "title": "After over three decades of service in the US Army, Theophilus Holmes ...",
+            "description": "Seceding from the Union in 1861 had largely been the decision of the ... Theophilus Holmes. March 16, 1865 General Henry Slocum's ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://digital.library.unt.edu/ark:/67531/metadc503880/m2/1/high_res_d/1002772445-Fortin.pdf",
+            "title": "CONFEDERATE MILITARY OPERATIONS IN ARKANSAS, 1861 ...",
+            "description": "Union invasion in 1861. Arkansas would remain relatively untouched by the ... Theophilus Holmes was assigned to command the department.5 8. Holmes was a ...",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://discoverstafford.org/artifact/civil-war-reconstruction-2/civil-war/confederate-year/brig-gen-theophilus-holmes/",
+            "title": "Brig. General Theophilus Holmes",
+            "description": "Brig. General Theophilus Holmes was Confederate commander of the Potomac Defense Line after Brig. General Ruggles. (June 6, 1861 – April 20, 1862).",
+            "position": 4,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "biblehub-com",
+            "capability": "bible/list_commentaries",
+            "description": "Discover the commentary ids for get_commentary, see who covers a chapter (Spurgeon's Treasury of David covers Psalms only, Keil-Delitzsch the Old Testament), or check a work's licence before quoting it. A chapter that does not exist is not_found."
+          },
+          {
+            "provider": "biblehub-com",
+            "capability": "bible/get_verse_commentaries",
+            "description": "Compare how many classic commentators explain one verse in a single call, for a sermon, Bible study, devotional or to check an interpretation. Long remarks are cut by Bible Hub (truncated: true); read the whole note with get_commentary. A verse that does not exist is not_found."
+          },
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/detail",
+            "description": "Call for what one letter actually argued. The narrative sections are the investor's own words; the theses are the extraction, and each names what it was based on so a thin mention is not mistaken for a conviction."
+          },
+          {
+            "provider": "hunter",
+            "capability": "people/enrich",
+            "description": "Enrich a person from an email address or a LinkedIn handle: name, role, location, and social profiles. A 404 and a partial record cost nothing. A record that includes the email, full name, and job title costs 10 credits. Use people/email-find to go from a name to an email."
+          },
+          {
+            "provider": "msheritage-access-preservica-com",
+            "capability": "archive-records/list_folder",
+            "description": "Enumerate the archive top-down (root -> collection -> sub-folders -> items) or list what sits inside a folder found by search_records or get_record; take child ids to get_record (items) or back to list_folder (folders)."
+          }
+        ]
+      },
+      "id": "01a1f444-4778-7401-8335-6a07826a2193",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 4 web results are excerpts only (#1 \"https://encyclopediaofarkansas.net/entries/theophilus-hunter-holmes-1673/\", #2 \"https://www.facebook.com/americanbattlefieldtrust/posts/after-over-three-decades-of-service-in-the-us-army-theophilus-holmes-found-himse/1232966322211423/\", #3 \"https://digital.library.unt.edu/ark:/67531/metadc503880/m2/1/high_res_d/1002772445-Fortin.pdf\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"William Loring\" \"1861\" \"February\"",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://en.wikipedia.org/wiki/William_Wing_Loring",
+            "title": "William Wing Loring",
+            "description": "... 1861. His first assignment was to quickly collect and rally the shattered ... Sherman during the Meridian Campaign of February 1864. Polk's relatively ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "http://www.thelatinlibrary.com/chron/civilwarnotes/loring.html",
+            "title": "William Wing Loring (1818-1886)",
+            "description": "\" On May 13, 1861, William Loring resigned his commission in the U.S. Army. ... In February of 1862, Loring was sent to Norfolk, Virginia. During the trip ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://digital.archives.alabama.gov/digital/collection/photo/id/6359/",
+            "title": "General William Loring, C.S.A. - Alabama Digital Archives",
+            "description": "... 1861. Commissioned as a colonel in the Confederate Army in March 1861. Promoted to brigadier general in May 1861 and major general in February ... William Loring ...",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://www.facebook.com/groups/473232591587840/posts/920869563490805/",
+            "title": "of the Confederate high command having a clear bias against non-West ...",
+            "description": "Lloyd's recent, excellent as always, Coffee Cup Challenges on William Loring ... Smith - September 19, 1861 (resigned February 17, 1863) * ...",
+            "position": 4,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "data-wa-gov",
+            "capability": "licenses/search_contractors",
+            "description": "Find or verify a Washington contractor, list contractors by trade and place, or poll for new registrations (effective_after) and suspensions (suspended_after). L&I reloads the whole register three times a day, so there is no per-row updated time; poll by these dates instead. Then call get_license for principals, insurance and signers."
+          },
+          {
+            "provider": "data-wa-gov",
+            "capability": "licenses/get_license",
+            "description": "Verify a contractor before hiring or before trusting a permit's contractor: status, expiry, insurance and who owns or signs for the business."
+          },
+          {
+            "provider": "lda-gov",
+            "capability": "lobbying-disclosures/get_filing",
+            "description": "You have a filing UUID or an lda.gov filing link and need its full contents."
+          },
+          {
+            "provider": "lda-gov",
+            "capability": "lobbying-disclosures/get_registrant",
+            "description": "You have a registrant_id and need the registrant's record."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "articles/lookup",
+            "description": "Read the current revision of a Wikipedia (or sister-project) article by exact title: full wikitext (or HTML with body), abstract, categories, redirects, connected Wikidata QID, license, and revision credibility signals. Use structured-contents instead when you want infobox fields, sections or references already parsed. From https://de.wikipedia.org/wiki/Berlin pass name `Berlin` and project `dewiki`. Not a search: titles must match exactly."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "articles/structured-contents",
+            "description": "Read a Wikipedia article pre-parsed into JSON: one-line description, abstract, infobox fields, sections as paragraphs and lists with links, references and tables. Best for extracting facts such as a person's birth date or a city's population without parsing HTML. Beta upstream, with the most complete coverage on en, de, fr, es, pt, it, nl, cy and id Wikipedia. Exact title, as for articles/lookup."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "reference/languages",
+            "description": "List the language codes Wikimedia projects use, with names and writing direction, to choose the language option or build a project identifier. Codes are two or three letters, sometimes with a suffix (zh-yue). Free."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "reference/projects",
+            "description": "List the Wikimedia projects available for lookup, to find the project identifier for a language and project type, such as `ptwiki` for Portuguese Wikipedia or `frwiktionary`. Free."
+          }
+        ]
+      },
+      "id": "01a1f444-45e8-71ca-a2be-23aa542a59aa",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 4 web results are excerpts only (#1 \"https://en.wikipedia.org/wiki/William_Wing_Loring\", #2 \"http://www.thelatinlibrary.com/chron/civilwarnotes/loring.html\", #3 \"https://digital.archives.alabama.gov/digital/collection/photo/id/6359/\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"George B. Crittenden\" \"1861\" letter Union",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://en.wikipedia.org/wiki/George_B._Crittenden",
+            "title": "George B. Crittenden",
+            "description": "George B. Crittenden. Article · Talk. Language; Download PDF; Save; Edit · Share ... The Union Army 1861–1865: Organization and Operations. Vol. II: The Western ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.essentialcivilwarcurriculum.com/kentucky-in-the-civil-war-1861-1862.html",
+            "title": "Kentucky in the Civil War 1861-1862",
+            "description": "George B. Crittenden, son of Senator John J. Crittenden, to take command ... In 1861, while Union and Confederate armies occupied different sections of ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://kynghistory.ky.gov/Our-History/History-of-the-Guard/Documents/ThePaperTrailoftheCivilWarinKY18611865%202.pdf",
+            "title": "The Paper Trail Of the Civil War In Kentucky 1861-1865",
+            "description": "This publication pertaining to the Civil War in Kentucky is a special edition spanning the four years of the Civil War. 1861-1865. Almost every entry.",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://www.facebook.com/groups/CivilWarGraves/posts/2183336248788951/",
+            "title": "Confederate General George Bibb Crittenden's birthday",
+            "description": "... 1861. Crittenden enlisted as a Corporal in Americus, Sumter ... George B. Crittenden and Union general Thomas L. Crittenden. He grew ...",
+            "position": 4,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "tenders-gov-au",
+            "capability": "public-tenders/contract_detail",
+            "description": "Pass a `cn_id` such as `CN4279555` (amendments like `CN4111658-A1` are their own ids). An unknown id is not_found (the API answers 400 errorCode 100)."
+          },
+          {
+            "provider": "law-cornell-edu",
+            "capability": "legislation/get_cfr_section",
+            "description": "To read a federal regulation, e.g. the consolidated-return intercompany transaction rules at 26 CFR 1.1502-13 or nutrition labeling at 21 CFR 101.9, or when a user pastes a law.cornell.edu/cfr/text/ URL."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "articles/lookup",
+            "description": "Read the current revision of a Wikipedia (or sister-project) article by exact title: full wikitext (or HTML with body), abstract, categories, redirects, connected Wikidata QID, license, and revision credibility signals. Use structured-contents instead when you want infobox fields, sections or references already parsed. From https://de.wikipedia.org/wiki/Berlin pass name `Berlin` and project `dewiki`. Not a search: titles must match exactly."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "articles/structured-contents",
+            "description": "Read a Wikipedia article pre-parsed into JSON: one-line description, abstract, infobox fields, sections as paragraphs and lists with links, references and tables. Best for extracting facts such as a person's birth date or a city's population without parsing HTML. Beta upstream, with the most complete coverage on en, de, fr, es, pt, it, nl, cy and id Wikipedia. Exact title, as for articles/lookup."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "reference/languages",
+            "description": "List the language codes Wikimedia projects use, with names and writing direction, to choose the language option or build a project identifier. Codes are two or three letters, sometimes with a suffix (zh-yue). Free."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "reference/projects",
+            "description": "List the Wikimedia projects available for lookup, to find the project identifier for a language and project type, such as `ptwiki` for Portuguese Wikipedia or `frwiktionary`. Free."
+          }
+        ]
+      },
+      "id": "01a1f444-4778-7149-9e86-80a8e2532c92",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 4 web results are excerpts only (#1 \"https://en.wikipedia.org/wiki/George_B._Crittenden\", #2 \"https://www.essentialcivilwarcurriculum.com/kentucky-in-the-civil-war-1861-1862.html\", #3 \"https://kynghistory.ky.gov/Our-History/History-of-the-Guard/Documents/ThePaperTrailoftheCivilWarinKY18611865%202.pdf\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Lee\" \"January 23, 1861\" \"Memoirs\" Long",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.amazon.com/Robert-Lee-Documented-Nineteenth-Century-Contemporary/dp/B0H3GJ5R4X",
+            "title": "Robert E. Lee: The Documented Man: A Biography from His ...",
+            "description": "The reader will encounter Lee's January 23, 1861 letter from Fort Mason, his ... Military Memoirs ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.perlego.com/index/history/robert-e-lee",
+            "title": "Robert E Lee | Overview & Research Examples",
+            "description": "... Memoirs & Biographies of the Lead Commanders ... January 23, 1861, in J.",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "http://leeclassof66.com/Lee_66_REL.html",
+            "title": "Lee '66 Robert E. Lee - Lee Class of 1966",
+            "description": "Long, Memoirs of Robert E. Lee (New York, 1886) ; Fitzhugh Lee, General Lee ... January 23, 1861. - - - - - - - - - - - - - - - - - - -. \"I shall carry ...",
+            "position": 3,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "archive-org",
+            "capability": "audio-assets/search_text",
+            "description": "Find where words or a phrase appear inside scanned texts: \"Melody Maker interview 1995 Oasis\", \"a review of a 1966 album in music magazines\", \"a name in a 1920s newspaper\". Pass collection to stay inside a magazine run or collection and year to pin the volume. Then call get_text with the identifier (and query) for the full text or the matching paragraphs with page positions. For item-level metadata search of audio use search_audio."
+          },
+          {
+            "provider": "archive-org",
+            "capability": "audio-assets/get_text",
+            "description": "After search_text, or for a pasted archive.org/details/... or /stream/... link: read the full OCR text of a public magazine issue, or pass query to recover the exact paragraphs (an interview, a review) in a book or magazine, restricted copies included. Pass file when search_text reported a file_basename different from the identifier."
+          },
+          {
+            "provider": "amazon-com",
+            "capability": "products/bestsellers",
+            "description": "Rank products in an Amazon US category (top sellers in headphones, books, toys) without a search query. Pair with product or specifications for details of a ranked ASIN."
+          },
+          {
+            "provider": "amazon-com",
+            "capability": "products/offer",
+            "description": "Get the featured buy-box offer for one Amazon.com ASIN or product URL: displayed price, list price and savings, boolean in-stock state with Amazon's availability text, seller and shipper, item condition, delivery promise, coupon and other-offers hints. Pass zip to see the offer for a US delivery ZIP code. Unknown values are null."
+          },
+          {
+            "provider": "amazon-com",
+            "capability": "products/photos",
+            "description": "Get the selected product image gallery."
+          }
+        ]
+      },
+      "id": "01a1f445-1b79-7412-aa65-6026a1d45467",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 3 web results are excerpts only (#1 \"https://www.amazon.com/Robert-Lee-Documented-Nineteenth-Century-Contemporary/dp/B0H3GJ5R4X\", #2 \"https://www.perlego.com/index/history/robert-e-lee\", #3 \"http://leeclassof66.com/Lee_66_REL.html\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Gorgas\" \"1860\" \"letter\" Union secession",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://leefamilyarchive.org/history-reference-essays-rachal-index/",
+            "title": "“Secession is Nothing but Revolution” A Letter of R. E. Lee to His Son “ ...",
+            "description": "If it seems advisable I will direct him to invest all the surplus funds of the Estate after settling the accounts for 1860. ... Josiah Gorgas · Josiah Warren ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://sparedshared23.com/2024/05/16/1860-william-t-early-to-septimus-d-cabaniss/",
+            "title": "1860: William T. Early to Septimus D. Cabaniss | Spared & Shared 23",
+            "description": "From William's letter, we learn that he considered the results of the 1860 ... Post navigation. Previous Post1862: Edmund J. Gorgas to John T.",
+            "position": 2,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "ecorp-sos-ga-gov",
+            "capability": "entities/get_name_history",
+            "description": "With a business_id from search_businesses, to see the entity's former names."
+          },
+          {
+            "provider": "ecorp-sos-ga-gov",
+            "capability": "entities/search_service_of_process",
+            "description": "To find lawsuits served on the Secretary of State as agent for a Georgia entity, by defendant or plaintiff name."
+          },
+          {
+            "provider": "ecorp-sos-ga-gov",
+            "capability": "entities/search_trademarks",
+            "description": "To find Georgia state (not federal USPTO) trademark registrations by mark text or registrant."
+          }
+        ]
+      },
+      "id": "01a1f445-1a47-7643-aefc-a35fbe172095",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 2 web results are excerpts only (#1 \"https://leefamilyarchive.org/history-reference-essays-rachal-index/\", #2 \"https://sparedshared23.com/2024/05/16/1860-william-t-early-to-septimus-d-cabaniss/\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Buchanan\" \"Franklin\" \"January 1861\" letter",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://search.proquest.com/openview/b52482fb112f4cdcd016052412e45524/1?pq-origsite=gscholar&cbl=18750",
+            "title": "Team of Confederates: The Political Ineptitude of James Buchanan",
+            "description": "letter written to incoming President Franklin Pierce four years before, Buchanan laid out ... January 1861 banquet in Richmond, he laid out his belief that ...",
+            "position": 1,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "fda-gov",
+            "capability": "records/complete_response_letter",
+            "description": "Read the deficiencies FDA cited and the steps it asked for in a CRL, after complete_response_letters or straight from an NDA or BLA number."
+          },
+          {
+            "provider": "fda-gov",
+            "capability": "records/complete_response_letters",
+            "description": "Find CRLs issued in a time window, to a company, for an application or citing a deficiency such as \"Form 483\" or immunogenicity. Read a letter in full with complete_response_letter; join to drug_applications and drug_application_documents through application_numbers."
+          },
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/detail",
+            "description": "Call for what one letter actually argued. The narrative sections are the investor's own words; the theses are the extraction, and each names what it was based on so a thin mention is not mistaken for a conviction."
+          }
+        ]
+      },
+      "id": "01a1f445-1ad5-7281-97a4-a5761b6ec55b",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 1 web results are excerpts only (#1 \"https://search.proquest.com/openview/b52482fb112f4cdcd016052412e45524/1?pq-origsite=gscholar&cbl=18750\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Edward Clark\" \"January\" \"1859\" address",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.myheritage.com/names/edward_clark",
+            "title": "Edward Clark Family History & Historical Records",
+            "description": "Edward Clark was born on May 19 1859, in Fort Dodge, Iowa, United States, to John Clark and Ms. Clark. Spouse. Edward married Maud Clark on January 4 1886, ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://shareok.org/bitstreams/44e20d66-ff79-44ee-89d0-5ad5232bdd2a/download",
+            "title": "CONGRESSIONAL DIRECTORY",
+            "description": "paying his way by teaching school winters; in January, 1859, he went to Florida to take ... Edward Clark, 417 Fourth street, N. W.; Office, sub-basement of ...",
+            "position": 2,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "rcc-acis-org",
+            "capability": "weather-history/monthly_climate_history",
+            "description": "Long-range context for a parcel: how wet or warm each month was compared with other years, seasonal rainfall by month."
+          },
+          {
+            "provider": "results-enr-clarityelections-com",
+            "capability": "elections/list_elections",
+            "description": "Find the election id of a county's or state's election (e.g. the 2026 General Election) before get_results, or check whether a jurisdiction publishes on Clarity at all (not_found when it has no Clarity site)."
+          },
+          {
+            "provider": "api-weather-gc-ca",
+            "capability": "weather/climate_monthly",
+            "description": "Month-by-month climate history of a station, e.g. July rainfall by year."
+          }
+        ]
+      },
+      "id": "01a1f445-1ad9-75bd-9382-1f2817ffdf72",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 2 web results are excerpts only (#1 \"https://www.myheritage.com/names/edward_clark\", #2 \"https://shareok.org/bitstreams/44e20d66-ff79-44ee-89d0-5ad5232bdd2a/download\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Edmund Kirby Smith\" \"1860\" \"letter\"",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://warfarehistorynetwork.com/article/edmund-kirby-smith-rebel-lord-of-the-trans-mississippi/",
+            "title": "Edmund Kirby Smith: Rebel Lord of the Trans-Mississippi Theater",
+            "description": "... letter. Tending the patient was a young woman named Cassie Selden. Having ... A town of 2,200 people in 1860, Shreveport became the Confederate capital ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://georgiaarchives.as.atlas-sys.com/subjects/26",
+            "title": "United States--History--Civil War, 1861-1865",
+            "description": "discussed religion in several letters, and clippings of... Dates: 1860-1864. ... Edmund Kirby Smith Civil War letter. Collection. Identifier: 1969 ...",
+            "position": 2,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "kings-printer-alberta-ca",
+            "capability": "legislation/search_legislation",
+            "description": "Start here to find the ISBN of an act or regulation. Pass `query` for title words (POST keyword search; the site matches title words, not full text) or `citation` for an exact chapter/regulation number such as '14/1997' (regulation) or 'E-9 RSA 2000' (act)."
+          },
+          {
+            "provider": "fda-gov",
+            "capability": "records/complete_response_letters",
+            "description": "Find CRLs issued in a time window, to a company, for an application or citing a deficiency such as \"Form 483\" or immunogenicity. Read a letter in full with complete_response_letter; join to drug_applications and drug_application_documents through application_numbers."
+          },
+          {
+            "provider": "kings-printer-alberta-ca",
+            "capability": "legislation/get_legislation",
+            "description": "After search_legislation. Use the ISBN of a '(Download Version)' record. Pass `section` (e.g. '25' or '23.1') for a single section; without it every section of the title is returned (acts can run to hundreds of sections)."
+          }
+        ]
+      },
+      "id": "01a1f445-5851-7210-99e6-7890017c970e",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 2 web results are excerpts only (#1 \"https://warfarehistorynetwork.com/article/edmund-kirby-smith-rebel-lord-of-the-trans-mississippi/\", #2 \"https://georgiaarchives.as.atlas-sys.com/subjects/26\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"James Longstreet\" \"February 1861\" letter",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.archives.gov/files/publications/prologue/2010/spring/civil-war-resignations.pdf",
+            "title": "Many southern-born us army officers waited until their native states voted ...",
+            "description": "He wrote to the adjutant general from New Orleans on February , 1861, “having ascertained positively on my ... James Longstreet, Hill was placed under Stonewall ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://catalog.metrolibrary.org/Series/194035?page=5",
+            "title": "Civil War (Various) - Metropolitan Library Catalog",
+            "description": "On the eve of a statewide election to determine a secession convention, pro-secession militia descended on Little Rock in February 1861. They closed in ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://virginiahistory.org/research/research-resources/guides-researchers/cabell-family-papers-cuthbert-c",
+            "title": "Cabell Family Papers - Cuthbert, C. A.",
+            "description": "## Cabell Family Papers - Cuthbert, C. A.\n**Mss12: 1861:7.**\n\n**Mss12: 1861:1.**\n\n**Mss12: 1861:4.**\n\n**Mss12: 1861 Apr [?]:1.**\n\n**Mss12: 1861:10.**\n\n**Mss12: 1861:5.**\n\n**Mss12: 1861:2.**",
+            "position": 3,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "fda-gov",
+            "capability": "records/complete_response_letters",
+            "description": "Find CRLs issued in a time window, to a company, for an application or citing a deficiency such as \"Form 483\" or immunogenicity. Read a letter in full with complete_response_letter; join to drug_applications and drug_application_documents through application_numbers."
+          },
+          {
+            "provider": "fda-gov",
+            "capability": "records/complete_response_letter",
+            "description": "Read the deficiencies FDA cited and the steps it asked for in a CRL, after complete_response_letters or straight from an NDA or BLA number."
+          },
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/detail",
+            "description": "Call for what one letter actually argued. The narrative sections are the investor's own words; the theses are the extraction, and each names what it was based on so a thin mention is not mistaken for a conviction."
+          },
+          {
+            "provider": "firecrawl-gov-index",
+            "capability": "search",
+            "description": "Use first for any US government, legal, tax, court, permit, statute, regulation, grant or procurement question, before web search: what a city's zoning or planning code allows at an address, which business licence, permit, inspection or fee a city or county requires to open a shop, restaurant, food truck or mobile service, the text of a state code section or municipal ordinance, the official page for a form or program, federal rules and regulations, court opinions and case law, or the regulations, guidance and decisions that cite a statute (set cites). One call searches 30M+ official pages and returns URLs to cite or scrape. For the structured record behind a page (a SAM.gov notice, a Federal Register document, a bill) use that source's own provider. Filters keep only pages the index has labeled, so a filtered search can leave out relevant pages, and no results does not mean none exist. Court labels are most complete for federal courts and case-law collections."
+          }
+        ]
+      },
+      "id": "01a1f445-57f1-7082-842f-b0bd64bbbbe9",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 3 web results are excerpts only (#1 \"https://www.archives.gov/files/publications/prologue/2010/spring/civil-war-resignations.pdf\", #2 \"https://catalog.metrolibrary.org/Series/194035?page=5\", #3 \"https://virginiahistory.org/research/research-resources/guides-researchers/cabell-family-papers-cuthbert-c\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Josiah Gorgas\" \"February 1861\"",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.facebook.com/AppomattoxNPS/posts/lunchtimetrivia-this-chief-of-the-confederate-ordnance-bureau-did-his-best-to-de/1381314594037528/",
+            "title": "Who developed southern military industries during the Civil War?",
+            "description": "Josiah Gorgas was a native Pennsylvanian, West Point graduate and Mexican War veteran. ... C- Josiah Gorgas. ... February, 1861. The department immediately sent ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.globalsecurity.org/military/world/csa/artillery.htm",
+            "title": "Artillery of the Confederate States",
+            "description": "Colonel Josiah Gorgas, a graduate of the United States Military ... February, 1861. The department immediately sent out purchasing ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://www.encyclopedia.com/history/united-states-and-canada/us-history/confederate-states-america",
+            "title": "Confederate States of America",
+            "description": "CONFEDERATE STATES OF AMERICA, a breakaway slaveholding republic founded in February 1861 after the secession from the Union of the lower South states. ... Josiah ...",
+            "position": 3,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "ecorp-sos-ga-gov",
+            "capability": "entities/search_service_of_process",
+            "description": "To find lawsuits served on the Secretary of State as agent for a Georgia entity, by defendant or plaintiff name."
+          },
+          {
+            "provider": "ecorp-sos-ga-gov",
+            "capability": "entities/get_name_history",
+            "description": "With a business_id from search_businesses, to see the entity's former names."
+          }
+        ]
+      },
+      "id": "01a1f445-5756-72b0-bb2c-b8e825c15e52",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 3 web results are excerpts only (#1 \"https://www.facebook.com/AppomattoxNPS/posts/lunchtimetrivia-this-chief-of-the-confederate-ordnance-bureau-did-his-best-to-de/1381314594037528/\", #2 \"https://www.globalsecurity.org/military/world/csa/artillery.htm\", #3 \"https://www.encyclopedia.com/history/united-states-and-canada/us-history/confederate-states-america\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Edward Clark\" \"1860\" secession letter Houston",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://fromthepage.com/tslac/governor-sam-houston-letterpress-book-outgoing-correspondence-march-8-december-26-1860",
+            "title": "Governor Sam Houston Letterpress book, outgoing ...",
+            "description": "... Edward Clark. Subjects covered are secession, the ... This volume contains outgoing correspondence of Governor Sam Houston dated March 8-December 26, 1860.",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.tsl.texas.gov/exhibits/civilwar/topic.html",
+            "title": "Topic Index | Texas State Library",
+            "description": "- B.F. Speer to Sam Houston, December 1860 - R.D. McAnelly to Edward Clark, April 25, 1861 - W.J. Alexander to Jeremiah Y. Dashiell, July 29 ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://www.tshaonline.org/handbook/entries/clark-edward",
+            "title": "Edward Clark: Governor of Texas and Civil War Leader",
+            "description": "Edward Clark, governor of Texas, was born in New Orleans, Louisiana, on April ... In 1860 he lived in Austin, Texas. He owned $5,000 in real estate and ...",
+            "position": 3,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "seattle-gov",
+            "capability": "seattle-city-government/find_district",
+            "description": "Map an address's coordinates to its council district and representative. Geocoding is not provided; supply lon/lat."
+          },
+          {
+            "provider": "firecrawl-gov-index",
+            "capability": "search",
+            "description": "Use first for any US government, legal, tax, court, permit, statute, regulation, grant or procurement question, before web search: what a city's zoning or planning code allows at an address, which business licence, permit, inspection or fee a city or county requires to open a shop, restaurant, food truck or mobile service, the text of a state code section or municipal ordinance, the official page for a form or program, federal rules and regulations, court opinions and case law, or the regulations, guidance and decisions that cite a statute (set cites). One call searches 30M+ official pages and returns URLs to cite or scrape. For the structured record behind a page (a SAM.gov notice, a Federal Register document, a bill) use that source's own provider. Filters keep only pages the index has labeled, so a filtered search can leave out relevant pages, and no results does not mean none exist. Court labels are most complete for federal courts and case-law collections."
+          }
+        ]
+      },
+      "id": "01a1f445-5d98-729c-bed4-0397af1e8a35",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 3 web results are excerpts only (#1 \"https://fromthepage.com/tslac/governor-sam-houston-letterpress-book-outgoing-correspondence-march-8-december-26-1860\", #2 \"https://www.tsl.texas.gov/exhibits/civilwar/topic.html\", #3 \"https://www.tshaonline.org/handbook/entries/clark-edward\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Samuel Cooper\" \"January\" \"1861\" Union letter",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://leefamilyarchive.org/history-reference-misc-nyt-1875-04-16/",
+            "title": "ROBERT E. LEE ON SECESSION IN JANUARY 1861.",
+            "description": "LEE ON SECESSION IN JANUARY 1861. At the entertainment for the benefit of ... Samuel Cooper · Samuel H. Anderson · Samuel Holten · Samuel Huntington · Samuel ...",
+            "position": 1,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "sam-gov",
+            "capability": "opportunities/entities_get",
+            "description": "You have UEIs or CAGE codes and want the registration records."
+          },
+          {
+            "provider": "sam-gov",
+            "capability": "opportunities/entities_search",
+            "description": "Find registrants by name, NAICS or state; use entities_get when you already have a UEI or CAGE."
+          },
+          {
+            "provider": "sam-gov",
+            "capability": "opportunities/entities_status",
+            "description": "Learn whether a new monthly entity extract was published and get its URL, size, hash and record count before downloading it elsewhere."
+          },
+          {
+            "provider": "sam-gov",
+            "capability": "opportunities/search",
+            "description": "Search SAM.gov contract opportunities by keyword, agency, notice status, publication date, NAICS, set-aside, notice type and response deadline. Returns one page (default 20, max 100) with an opaque cursor for the next page. By default each hit is enriched with its full notice detail (NAICS, set-aside, place of performance, full description)."
+          }
+        ]
+      },
+      "id": "01a1f446-15dd-713d-a418-e6f88e0da93f",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 1 web results are excerpts only (#1 \"https://leefamilyarchive.org/history-reference-misc-nyt-1875-04-16/\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"John C. Pemberton\" \"1861\" \"February\" letters",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.essentialcivilwarcurriculum.com/john-c-pemberton.html",
+            "title": "John C. Pemberton",
+            "description": "When Civil War came in 1861, Pemberton did not rush to join the ... February 13, 1862, he received a promotion to major general. There is no ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.huntington.org/collections/lib-msscw",
+            "title": "Civil War collection",
+            "description": "... letter to Joseph Holt, 1861 February 26 (CW 388); James A. Garfield ... Grant, Oxford, Mississippi, autograph letter signed to John C. Pemberton, 1862 December 5 ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://web.lib.unc.edu/civilwar/index.php/tag/correspondence/",
+            "title": "correspondence | Civil War Day by Day",
+            "description": "Breckinridge, John C. Pemberton, Lucius E. Polk ... Item description: Letter, 2 February 1863, from ... 30 December 1861: “The Troops are reminded ...",
+            "position": 3,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "fda-gov",
+            "capability": "records/complete_response_letters",
+            "description": "Find CRLs issued in a time window, to a company, for an application or citing a deficiency such as \"Form 483\" or immunogenicity. Read a letter in full with complete_response_letter; join to drug_applications and drug_application_documents through application_numbers."
+          },
+          {
+            "provider": "cis-scc-virginia-gov",
+            "capability": "entities/get_entity_name_history",
+            "description": "To see former and fictitious names of an entity."
+          },
+          {
+            "provider": "fda-gov",
+            "capability": "records/complete_response_letter",
+            "description": "Read the deficiencies FDA cited and the steps it asked for in a CRL, after complete_response_letters or straight from an NDA or BLA number."
+          },
+          {
+            "provider": "pennbid-bonfirehub-com",
+            "capability": "public-tenders/list_past_opportunities",
+            "description": "Look up closed PennBid solicitations by keyword, closing window or public-award flag, for example to find awarded projects of an agency; pass `project_id` to `get_opportunity` for the detail."
+          }
+        ]
+      },
+      "id": "01a1f446-15d6-77e1-8634-8b871c684310",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 3 web results are excerpts only (#1 \"https://www.essentialcivilwarcurriculum.com/john-c-pemberton.html\", #2 \"https://www.huntington.org/collections/lib-msscw\", #3 \"https://web.lib.unc.edu/civilwar/index.php/tag/correspondence/\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"George B. Crittenden\" \"January\" \"1861\"",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.americanhistorycentral.com/entries/george-bibb-crittenden/",
+            "title": "George B. Crittenden, Soldier, Lawyer, Librarian",
+            "description": "George B. Crittenden. 1812–1880. The firstborn child of U.S. Senator ... On January 2, 1861, Crittenden gained some notoriety for defeating a band of ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.nps.gov/articles/000/george-bibb-crittenden-at-the-battle-of-mill-springs.htm",
+            "title": "George Bibb Crittenden at the Battle of Mill Springs",
+            "description": "George B. Crittenden remained in the US Army until his resignation in June 1861 choosing to side with the Confederacy at the outbreak of the ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/George_B._Crittenden",
+            "title": "George B. Crittenden",
+            "description": "George B. Crittenden ... While serving on the frontier, he fought against Native Americans, including an action against Comanches on January 2, 1861, that brought ...",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://www.facebook.com/americanbattlefieldtrust/posts/onthisday-january-20-1862-160-years-ago-confederate-forces-under-gen-george-b-cr/10159995970968851/",
+            "title": "#OnThisDay January 20, 1862, 160 years ago, Confederate forces under ...",
+            "description": "OnThisDay January 20, 1862, 160 years ago, Confederate forces under Gen. George B. Crittenden escaped across the Cumberland River.",
+            "position": 4,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "rcc-acis-org",
+            "capability": "weather-history/monthly_climate_history",
+            "description": "Long-range context for a parcel: how wet or warm each month was compared with other years, seasonal rainfall by month."
+          },
+          {
+            "provider": "law-cornell-edu",
+            "capability": "legislation/get_cfr_section",
+            "description": "To read a federal regulation, e.g. the consolidated-return intercompany transaction rules at 26 CFR 1.1502-13 or nutrition labeling at 21 CFR 101.9, or when a user pastes a law.cornell.edu/cfr/text/ URL."
+          },
+          {
+            "provider": "law-cornell-edu",
+            "capability": "legislation/get_us_code_section",
+            "description": "To quote or analyze a federal statute, e.g. the text of 42 U.S.C. § 1983 or the Indian Child Welfare Act's 25 U.S.C. § 1912, or when a user pastes a law.cornell.edu/uscode/text/ URL."
+          },
+          {
+            "provider": "decisions-fct-cf-gc-ca",
+            "capability": "court-cases/resolve_citation",
+            "description": "Turn a citation or docket number from a brief, an article or another judgment into an item id, then read the decision with get_decision."
+          },
+          {
+            "provider": "nps-gov",
+            "capability": "sound-effects/get_sound",
+            "description": "Credit and MP3 link for one clip page, e.g. https://www.nps.gov/subjects/sound/sounds-elk.htm or https://www.nps.gov/yell/learn/photosmultimedia/sounds-oldfaithful.htm."
+          },
+          {
+            "provider": "nps-gov",
+            "capability": "sound-effects/search_sounds",
+            "description": "\"public domain elk bugle\", \"NPS thunderstorm sound with credit\", \"Yellowstone geyser recordings\", \"list the NPS Sound Gallery mammals\", or a pasted nps.gov sound gallery or sound library index URL. Use get_sound for one page."
+          },
+          {
+            "provider": "firecrawl-gov-index",
+            "capability": "search",
+            "description": "Use first for any US government, legal, tax, court, permit, statute, regulation, grant or procurement question, before web search: what a city's zoning or planning code allows at an address, which business licence, permit, inspection or fee a city or county requires to open a shop, restaurant, food truck or mobile service, the text of a state code section or municipal ordinance, the official page for a form or program, federal rules and regulations, court opinions and case law, or the regulations, guidance and decisions that cite a statute (set cites). One call searches 30M+ official pages and returns URLs to cite or scrape. For the structured record behind a page (a SAM.gov notice, a Federal Register document, a bill) use that source's own provider. Filters keep only pages the index has labeled, so a filtered search can leave out relevant pages, and no results does not mean none exist. Court labels are most complete for federal courts and case-law collections."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "articles/lookup",
+            "description": "Read the current revision of a Wikipedia (or sister-project) article by exact title: full wikitext (or HTML with body), abstract, categories, redirects, connected Wikidata QID, license, and revision credibility signals. Use structured-contents instead when you want infobox fields, sections or references already parsed. From https://de.wikipedia.org/wiki/Berlin pass name `Berlin` and project `dewiki`. Not a search: titles must match exactly."
+          }
+        ]
+      },
+      "id": "01a1f446-15dc-734f-a8e4-3841e9bea6ee",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 4 web results are excerpts only (#1 \"https://www.americanhistorycentral.com/entries/george-bibb-crittenden/\", #2 \"https://www.nps.gov/articles/000/george-bibb-crittenden-at-the-battle-of-mill-springs.htm\", #3 \"https://en.wikipedia.org/wiki/George_B._Crittenden\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Edward Clark\" \"1861\" \"February\" letter secession",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.tsl.texas.gov/exhibits/civilwar/documents/1861/sid_sherman_may22_1861_1.html",
+            "title": "Sidney Sherman to Governor Edward Clark, May 22, 1861",
+            "description": "Sidney Sherman to Governor Edward Clark, May 22, 1861. Records of Governor Edward Clark. Page last modified: February 18, 2016. Texas State Library and ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://txarchives.org/tslac/finding_aids/40010.xml",
+            "title": "An Inventory of Governor Edward Clark Records at the Texas State ...",
+            "description": "Edward Clark served as governor of Texas from March 16, 1861, to November 7, 1861. Clark was born on April 1, 1815, in New Orleans, Louisiana, the nephew of ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://losttexasroads.com/history/events/declaration-of-secession/",
+            "title": "Declaration of Secession",
+            "description": "On February 1, the Convention voted 166 to 8 in favor of secession. ... 1861 by his lieutenant governor, Edward Clark. The Secessionist Convention ...",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://emergingcivilwar.com/2026/11/17/the-twin-sisters-cannons-in-the-civil-war/",
+            "title": "The Twin Sisters Cannons in the Civil War",
+            "description": "... February of 1861. Recognizing Galveston's severe lack of arms ... [15] Sidney Sherman to Governor Edward Clark, May 22, 1861. Records ...",
+            "position": 4,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "firecrawl-gov-index",
+            "capability": "search",
+            "description": "Use first for any US government, legal, tax, court, permit, statute, regulation, grant or procurement question, before web search: what a city's zoning or planning code allows at an address, which business licence, permit, inspection or fee a city or county requires to open a shop, restaurant, food truck or mobile service, the text of a state code section or municipal ordinance, the official page for a form or program, federal rules and regulations, court opinions and case law, or the regulations, guidance and decisions that cite a statute (set cites). One call searches 30M+ official pages and returns URLs to cite or scrape. For the structured record behind a page (a SAM.gov notice, a Federal Register document, a bill) use that source's own provider. Filters keep only pages the index has labeled, so a filtered search can leave out relevant pages, and no results does not mean none exist. Court labels are most complete for federal courts and case-law collections."
+          }
+        ]
+      },
+      "id": "01a1f446-15d6-71eb-a431-a0fc94deab5c",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 4 web results are excerpts only (#1 \"https://www.tsl.texas.gov/exhibits/civilwar/documents/1861/sid_sherman_may22_1861_1.html\", #2 \"https://txarchives.org/tslac/finding_aids/40010.xml\", #3 \"https://losttexasroads.com/history/events/declaration-of-secession/\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Stuart\" \"Hill\" \"January 11, 1861\" -site:facebook.com",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://theenterprise.net/j-e-b-stuart-1861/",
+            "title": "J. E. B. Stuart 1861",
+            "description": "Stuart 1861. Mountain Media, LLC by Mountain ... On January 11, 1861, he was back at Fort Riley ... Hill in 1859. In February 1861, he was commanding ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.anglevalleypress.com/blog/page/2/",
+            "title": "Blog — Page 2",
+            "description": "Major General Jeb Stuart, CSA. Letter by J.E.B. Stuart to Major Henry Hill from Fort Wise, Kansas Territory, January 11, 1861. “For my part I have had no ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://www.thelatinlibrary.com/chron/civilwar.html",
+            "title": "The American Civil War (1860-1865)",
+            "description": "**1861**\n\nArthur I.\n\nStuart as far north as Tunnel Hill, near the Tennessee state line, to damage the railroad as much as possible.",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://lib.digitalnc.org/record/106943/files/scrapbooks_278454_000043.hocr",
+            "title": "Untitled",
+            "description": "Two battle scenes dealing with the eve of Malvern Hill and Malvern Hill follow. ... Alabama &eceded January 11, 1861 ... Stuart in a military conference, “Jeb, my ...",
+            "position": 4,
+            "source": "web"
+          },
+          {
+            "url": "https://onlinebooks.library.upenn.edu/webbin/book/browse?type=lcsubc&key=North%20Carolina%20%2D%2D%20History%20%2D%2D%20Civil%20War%2C%201861%2D1865%20%2D%2D%20Campaigns&c=x",
+            "title": "North Carolina -- History -- Civil War, 1861-1865 -- Campaigns",
+            "description": "... Hill, of North Carolina, (W.E. Jones, 1885), by ... Stuart Chapter [North Carolina Division, United ... January 11, 1861. (s.n., 1861), by Wm. S ...",
+            "position": 5,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "stubhub-com",
+            "capability": "events/event",
+            "description": "Read event identity, venue, source status, performers and current inventory counts. Unconfirmed times are null; utc_offset_ms is the source offset, not an IANA timezone."
+          },
+          {
+            "provider": "scrapecreators",
+            "capability": "facebook/post",
+            "description": "Retrieves a single public Facebook post or reel by URL. 2 Firecrawl credits when ScrapeCreators charges its 1 credit; a cache hit or an uncharged empty page costs nothing."
+          },
+          {
+            "provider": "towerbridge-org-uk",
+            "capability": "events/visitor_info",
+            "description": "Opening hours, last entry or address for Tower Bridge."
+          },
+          {
+            "provider": "oriane",
+            "capability": "instagram/posts-search",
+            "description": "Search Oriane's indexed Instagram posts, captions and engagement. Platform is fixed to Instagram. Coverage and freshness depend on the existing index; this is not a complete live feed. Results include profileUrl; an empty result does not trigger ingestion. Choose projection: basic 35 credits, default 50 credits, full 65 credits per nonempty call. Search limit is at most 100; URL lookup targets one record. Empty results cost zero."
+          },
+          {
+            "provider": "oriane",
+            "capability": "instagram/profiles-search",
+            "description": "Search Oriane's indexed Instagram profiles, bios and follower counts. Platform is fixed to Instagram. Coverage and freshness depend on the existing index; this is not a complete live feed. Results include profileUrl; an empty result does not trigger ingestion. Choose projection: basic 35 credits, default 50 credits, full 65 credits per nonempty call. Search limit is at most 100; URL lookup targets one record. Empty results cost zero."
+          }
+        ]
+      },
+      "id": "01a1f447-760e-73ee-8ec4-02aa1e546c72",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 5 web results are excerpts only (#1 \"https://theenterprise.net/j-e-b-stuart-1861/\", #2 \"https://www.anglevalleypress.com/blog/page/2/\", #3 \"https://www.thelatinlibrary.com/chron/civilwar.html\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Stuart\" \"right or wrong\" \"1861\" book",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.civilwarmonitor.com/article/voices-from-the-army-of-northern-virginia-part-6/",
+            "title": "Voices From the Army of Northern Virginia, Part 6: Managing the Cavalry",
+            "description": "... 1861, “that, right or wrong, alone or ... Stuart, Indiana University Press, 1958) presents McClellan's admiring portrait of Stuart ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.facebook.com/TheVirginiaFlaggers/posts/for-my-part-i-have-no-hesitancy-from-the-first-that-right-or-wrong-alone-or-othe/1034437905641865/",
+            "title": "“For my part, I have no hesitancy from the first that, right or wrong, alone ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://podcasts.apple.com/in/podcast/utilitarianism-by-john-stuart-mill-1861/id1837049710?i=1000789525245&l=or",
+            "title": "Utilitarianism by John Stuart Mill (1861)",
+            "description": "Utilitarianism by John Stuart Mill (1861) ... What makes an action right or wrong? Is morality about following rules, respecting rights, or achieving the best ...",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://digitalcommons.liberty.edu/cgi/viewcontent.cgi?article=1023&context=eml_fac_pubs",
+            "title": "Flora: Mrs. J.E.B. Stuart - Scholars Crossing",
+            "description": "summer of 1861, he wrote me: ... Thom Hutch, Clashes of Calvary: The Civil War Careers of George Armstrong Custer and Jeb Stuart. (Mechanicsburg, ...",
+            "position": 4,
+            "source": "web"
+          },
+          {
+            "url": "https://www.libertarianism.org/essays/john-stuart-mill-traditional-revisionist-interpretations",
+            "title": "John Stuart Mill: Traditional and Revisionist Interpretations",
+            "description": "Thus, in the essay on Utilitarianism(1861, 1863) discussing the utilitarian foundation of his theory of moral rights he concedes: “To have a ...",
+            "position": 5,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "studylight-org",
+            "capability": "bible/resolve_reference",
+            "description": "Check that a commentary covers a book or chapter before get_commentary, list which chapters of a book a series covers, or turn a reference into StudyLight URLs to cite. A book or chapter the series does not cover is not_found."
+          },
+          {
+            "provider": "play-google-com",
+            "capability": "media/google_books_volume",
+            "description": "Resolve an ISBN to the Play / Google Books volume id and bibliographic data before calling `book` or `reviews`."
+          },
+          {
+            "provider": "kings-printer-alberta-ca",
+            "capability": "legislation/get_legislation",
+            "description": "After search_legislation. Use the ISBN of a '(Download Version)' record. Pass `section` (e.g. '25' or '23.1') for a single section; without it every section of the title is returned (acts can run to hundreds of sections)."
+          },
+          {
+            "provider": "open-alberta-ca",
+            "capability": "open-data/search_catalogue",
+            "description": "Start here to find a publication or data set, count records (\"how many bathymetric survey publications\"), or list what changed (\"modified_since\", \"sort: updated\"). Use type publications for documents and opendata for data sets; organization takes a ministry slug from list_organizations or facets.organization[].name."
+          },
+          {
+            "provider": "studylight-org",
+            "capability": "bible/get_commentary",
+            "description": "Quote or summarize what a classic commentator (Barnes, the Pulpit Commentary, Ellicott, Benson, Poole, Wesley, the Cambridge Bible, Lange, Coke, Gray) says about a passage, for sermon preparation, Bible study or citation. A copyrighted commentary is invalid_input (not_public_domain); a book or chapter the series does not cover is not_found. One chapter per call."
+          },
+          {
+            "provider": "open-alberta-ca",
+            "capability": "open-data/get_record",
+            "description": "Use with an id or name from search_catalogue, or a pasted open.alberta.ca/publications/..., /opendata/..., /documentation/... or /dataset/... URL, to read a record's editions, licence and dates."
+          },
+          {
+            "provider": "kings-printer-alberta-ca",
+            "capability": "legislation/search_legislation",
+            "description": "Start here to find the ISBN of an act or regulation. Pass `query` for title words (POST keyword search; the site matches title words, not full text) or `citation` for an exact chapter/regulation number such as '14/1997' (regulation) or 'E-9 RSA 2000' (act)."
+          },
+          {
+            "provider": "studylight-org",
+            "capability": "bible/get_verse_commentaries",
+            "description": "Compare what Clarke, Barnes, Calvin, Henry, Spurgeon, the Pulpit Commentary, Ellicott, JFB, Wesley, Benson and others say about a single verse (\"John 3:16\"), or gather commentary for a verse study. commentaries narrows to named series. A verse the chapter lacks is not_found; a range or whole chapter is invalid_input, so use get_commentary for those."
+          },
+          {
+            "provider": "particle",
+            "capability": "podcasts/episodes/lookup",
+            "description": "Use when you hold a Spotify, Apple Podcasts or YouTube episode link, a platform episode id, or an RSS guid and need the Particle episode id to read its transcript. A transcript_status of transcribed means the transcript can be read now; requestable means it has not been transcribed yet. Guids match exactly as supplied."
+          }
+        ]
+      },
+      "id": "01a1f447-760c-709c-99bc-a9f177e040d7",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "This query reads as a scientific literature search. firecrawl_research_search_papers searches paper metadata and abstracts (PubMed, bioRxiv, medRxiv, arXiv and other sources) and takes the same query; firecrawl_research_read_paper returns the full text of a paper it finds.",
+        "All 5 web results are excerpts only (#1 \"https://www.civilwarmonitor.com/article/voices-from-the-army-of-northern-virginia-part-6/\", #2 \"https://www.facebook.com/TheVirginiaFlaggers/posts/for-my-part-i-have-no-hesitancy-from-the-first-that-right-or-wrong-alone-or-othe/1034437905641865/\", #3 \"https://podcasts.apple.com/in/podcast/utilitarianism-by-john-stuart-mill-1861/id1837049710?i=1000789525245&l=or\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Clark\" \"Lieutenant Governor\" \"1861\" \"January\" address Texas -site:facebook.com",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.nga.org/governor/edward-clark/",
+            "title": "Edward Clark - Texas",
+            "description": "... Lieutenant Governor from 1859 until 1861. When Governor Sam Houston refused ... Recent Texas Governors. Edward Clark. Gov. Dolph Briscoe. January 16, 1973 - ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.hmdb.org/m.asp?m=191269",
+            "title": "Governor Edward Clark",
+            "description": "Held office as State Representative, Senator, Secretary of State, Lieutenant Governor; Governor in 1861. ... January 29, 2022, by James Hulse of Medina, Texas.).",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://lrl.texas.gov/legeleaders/leadership/ltgovbrowse.cfm",
+            "title": "Lieutenant Governors of Texas",
+            "description": "... Lieutenant Governor John Lee Smith on January 19,1943. Walter Frank Woodul, D ... Clark vacated the office March 16, 1861 when he succeeded Sam Houston as ...",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Lieutenant_Governor_of_Texas",
+            "title": "Lieutenant Governor of Texas",
+            "description": "The current lieutenant governor is Dan Patrick, who has served since January 20, 2015. ... In 1861, Edward Clark succeeded governor Sam Houston when the latter ...",
+            "position": 4,
+            "source": "web"
+          },
+          {
+            "url": "https://www.tarrantcountytx.gov/content/dam/main/archives/Footprints1985_Vol28.pdf",
+            "title": "TEXAS",
+            "description": "The following list of applicants for Texas Revolution pensions was provided by Mike Patterson, a member of the Tarrant County Historical Commission. It was obtained from the Texas State Archives in Austin, Texas. The act which created the pensions was approved by the governor of Texas on July 28, 1876. This act granted a pension of $150 per year to every surviving indigent veteran of the Texas ...",
+            "position": 5,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "comptroller-texas-gov",
+            "capability": "entities/search_sales_tax_locations",
+            "description": "Find which businesses hold sales tax permits in a ZIP code, or locate a store by its trade name when the legal name is unknown; chain taxpayer_id into get_sales_tax_permit_holder or get_franchise_account."
+          },
+          {
+            "provider": "txsmartbuy-gov",
+            "capability": "public-tenders/search_grants",
+            "description": "Finding Texas state grant opportunities and their grant numbers before calling get_grant; the facets in the output give the ids the filters take."
+          },
+          {
+            "provider": "comptroller-texas-gov",
+            "capability": "entities/search_franchise_entities",
+            "description": "Start here to find the 11-digit taxpayer_id of a Texas LLC, corporation or partnership; pass it to get_franchise_account for status, registered agent and officers."
+          },
+          {
+            "provider": "txsmartbuy-gov",
+            "capability": "public-tenders/get_grant",
+            "description": "Reading a grant opportunity returned by search_grants."
+          },
+          {
+            "provider": "citizenscount-org",
+            "capability": "elections/get_district",
+            "description": "Who represents an NH district and who is running there, e.g. nh-governor, nh-senate-district-15, nh-executive-council-district-2, us-house-nh-district-1 or nh-house-merrimack-county-district-15."
+          },
+          {
+            "provider": "firecrawl-gov-index",
+            "capability": "search",
+            "description": "Use first for any US government, legal, tax, court, permit, statute, regulation, grant or procurement question, before web search: what a city's zoning or planning code allows at an address, which business licence, permit, inspection or fee a city or county requires to open a shop, restaurant, food truck or mobile service, the text of a state code section or municipal ordinance, the official page for a form or program, federal rules and regulations, court opinions and case law, or the regulations, guidance and decisions that cite a statute (set cites). One call searches 30M+ official pages and returns URLs to cite or scrape. For the structured record behind a page (a SAM.gov notice, a Federal Register document, a bill) use that source's own provider. Filters keep only pages the index has labeled, so a filtered search can leave out relevant pages, and no results does not mean none exist. Court labels are most complete for federal courts and case-law collections."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "articles/lookup",
+            "description": "Read the current revision of a Wikipedia (or sister-project) article by exact title: full wikitext (or HTML with body), abstract, categories, redirects, connected Wikidata QID, license, and revision credibility signals. Use structured-contents instead when you want infobox fields, sections or references already parsed. From https://de.wikipedia.org/wiki/Berlin pass name `Berlin` and project `dewiki`. Not a search: titles must match exactly."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "articles/structured-contents",
+            "description": "Read a Wikipedia article pre-parsed into JSON: one-line description, abstract, infobox fields, sections as paragraphs and lists with links, references and tables. Best for extracting facts such as a person's birth date or a city's population without parsing HTML. Beta upstream, with the most complete coverage on en, de, fr, es, pt, it, nl, cy and id Wikipedia. Exact title, as for articles/lookup."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "reference/languages",
+            "description": "List the language codes Wikimedia projects use, with names and writing direction, to choose the language option or build a project identifier. Codes are two or three letters, sometimes with a suffix (zh-yue). Free."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "reference/projects",
+            "description": "List the Wikimedia projects available for lookup, to find the project identifier for a language and project type, such as `ptwiki` for Portuguese Wikipedia or `frwiktionary`. Free."
+          }
+        ]
+      },
+      "id": "01a1f447-760e-728e-9ed2-7fd753b089e0",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 5 web results are excerpts only (#1 \"https://www.nga.org/governor/edward-clark/\", #2 \"https://www.hmdb.org/m.asp?m=191269\", #3 \"https://lrl.texas.gov/legeleaders/leadership/ltgovbrowse.cfm\" and 2 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Stuart\" \"Hill\" \"1861\" \"hesitancy\"",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://theenterprise.net/j-e-b-stuart-1861/",
+            "title": "J. E. B. Stuart 1861",
+            "description": "“For my part, I have no had no hesitancy from ... Hill in 1859. In February 1861, he was commanding ... On May 10, 1861, Stuart received a Virginia ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.facebook.com/TheVirginiaFlaggers/posts/for-my-part-i-have-no-hesitancy-from-the-first-that-right-or-wrong-alone-or-othe/2602820873185907/",
+            "title": "“For my part, I have no hesitancy from the first that, right or wrong ...",
+            "description": "Excerpt of a Jeb Stuart letter on January 11, 1861 to Major Henry Hill “For my part I have had no hesitancy from the first that, right or wrong, alone or ...",
+            "position": 2,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "hts-usitc-gov",
+            "capability": "tariff-schedule/search",
+            "description": "Find candidate HTS numbers for an article by keyword, then `records_get` for the row in its heading context."
+          },
+          {
+            "provider": "hertzcarsales-com",
+            "capability": "vehicles/suggest_inventory",
+            "description": "To turn a user's phrase into make/model facets for search_inventory, or for a quick first look at matching cars."
+          },
+          {
+            "provider": "hibid-com",
+            "capability": "online-auctions/search_lots",
+            "description": "Start here to find lot ids (for `lot` and `lot_bids`) and auction ids, or to list one auction's catalog (auction_id, sort LOT_NUMBER). For sold prices of a past auction pass archived=true with its auction_id."
+          },
+          {
+            "provider": "nhtsa-gov",
+            "capability": "recalls/car_seat_inspection_stations",
+            "description": "Find where a parent can have a child seat installation checked near a ZIP, or list a state's stations."
+          }
+        ]
+      },
+      "id": "01a1f447-d097-775b-8a74-2e1992453658",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 2 web results are excerpts only (#1 \"https://theenterprise.net/j-e-b-stuart-1861/\", #2 \"https://www.facebook.com/TheVirginiaFlaggers/posts/for-my-part-i-have-no-hesitancy-from-the-first-that-right-or-wrong-alone-or-othe/2602820873185907/\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Stuart\" \"January 11\" \"letters\"",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.facebook.com/TheVirginiaFlaggers/posts/letter-by-jeb-stuart-born-february-6th-1833-to-major-henry-hill-from-fort-wise-k/632887539130239/",
+            "title": "Letter by J.E.B. Stuart, born February 6th, 1833, to Major Henry Hill from ...",
+            "description": "Letter by J.E.B. Stuart, born February 6th, 1833, to Major Henry Hill from Fort Wise, Kansas Territory, January 11, 1861 --\n\n“For my part I have ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://dlc.library.columbia.edu/lehman/search?f%5Blib_format_sim%5D%5B%5D=correspondence&f%5Blib_name_sim%5D%5B%5D=Symington%2C+W.+Stuart&format=csv&per_page=100&site_slug=lehman",
+            "title": "https://dlc.library.columbia.edu/lehman/search?f%5...",
+            "description": "... letters (correspondence),\"\",\"\",1950-12-30,1950 December 30,1 page ... January 11,\"\",\"\",[,\"\",\"\",United States--Politics and government--1945-1953,correspondence,\"\" ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://texashistory.unt.edu/ark:/67531/metapth1712000/m1/4/",
+            "title": "[Correspondence Between Stuart D. Gibson and Barbara Jordan ...",
+            "description": "... Stuart ... or search this site for other letters. Tools ... [Correspondence Between Stuart D. Gibson and Barbara Jordan - December 17, 1977-January 11 ...",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://www.cartermuseum.org/collection/stuart-gentling-ron-tyler-january-11-1992-a20160190306001001",
+            "title": "[Stuart Gentling], to Ron Tyler. January 11, 1992.",
+            "description": "Contributors. Author Stuart Gentling · Date. January 11, 1992 · Genre/Form. Letters · Accession Number. A2016.019.03.06.001.001 · Description. Autograph letter. [ ...",
+            "position": 4,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/detail",
+            "description": "Call for what one letter actually argued. The narrative sections are the investor's own words; the theses are the extraction, and each names what it was based on so a thin mention is not mistaken for a conviction."
+          },
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/list",
+            "description": "Call to see what was published in a quarter. Returns the letter index rather than the letters - take a letterId to fund-letters/detail for the content."
+          },
+          {
+            "provider": "substack-com",
+            "capability": "newsletters/archive",
+            "description": "One page of a Substack publication's archive, newest or top first, or only its pinned posts. Each entry carries title, subtitle, URL, publish time, audience (free or paid), word count, engagement counts, section, tags and bylines. Page with cursor (or offset) and limit."
+          },
+          {
+            "provider": "fda-gov",
+            "capability": "records/complete_response_letters",
+            "description": "Find CRLs issued in a time window, to a company, for an application or citing a deficiency such as \"Form 483\" or immunogenicity. Read a letter in full with complete_response_letter; join to drug_applications and drug_application_documents through application_numbers."
+          },
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/investors",
+            "description": "Call to find the investorId for a firm, or to pick firms by style or sector focus before reading any letters. Sorted by coverage, so the most-covered firms come first."
+          },
+          {
+            "provider": "fda-gov",
+            "capability": "records/complete_response_letter",
+            "description": "Read the deficiencies FDA cited and the steps it asked for in a CRL, after complete_response_letters or straight from an NDA or BLA number."
+          }
+        ]
+      },
+      "id": "01a1f447-d096-72ec-bfd8-3b08493a18bf",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 4 web results are excerpts only (#1 \"https://www.facebook.com/TheVirginiaFlaggers/posts/letter-by-jeb-stuart-born-february-6th-1833-to-major-henry-hill-from-fort-wise-k/632887539130239/\", #2 \"https://dlc.library.columbia.edu/lehman/search?f%5Blib_format_sim%5D%5B%5D=correspondence&f%5Blib_name_sim%5D%5B%5D=Symington%2C+W.+Stuart&format=csv&per_page=100&site_slug=lehman\", #3 \"https://texashistory.unt.edu/ark:/67531/metapth1712000/m1/4/\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Magruder\" \"January\" \"1861\" \"Union\" letter",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://en.wikipedia.org/wiki/John_B._Magruder",
+            "title": "John B. Magruder",
+            "description": "# John B. Magruder\nWhen the Civil War began in 1861, Magruder left the [Union Army](https://en.wikipedia.org/wiki/Union_Army) to accept a commission in the Confederacy.",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://perryadamsantiques.com/shop/identified-items/quarter-plate-daguerreotype-of-lt-william-thomas-magruder-and-his-wife-magruder-was-the-cousin-of-prince-john-b-magruder-capt-magruder-was-killed-on-july-3-1863-at-gettysburg/",
+            "title": "Quarter Plate Daguerreotype of Lt. William Thomas Magruder and His ...",
+            "description": "As sectional tensions mounted and states began to leave the Union, officials promoted Magruder to captain with the 1st Dragoons on January 8, 1861. Soon after ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://oertx.highered.texas.gov/courseware/lesson/1047/student/?section=17",
+            "title": "Texas in the American Civil War",
+            "description": "... Union, (February 1861). At this time, African Americans comprised 30 percent ... Magruder recaptured the city on January 1, 1863 and it remained in ...",
+            "position": 3,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/detail",
+            "description": "Call for what one letter actually argued. The narrative sections are the investor's own words; the theses are the extraction, and each names what it was based on so a thin mention is not mistaken for a conviction."
+          },
+          {
+            "provider": "fda-gov",
+            "capability": "records/complete_response_letter",
+            "description": "Read the deficiencies FDA cited and the steps it asked for in a CRL, after complete_response_letters or straight from an NDA or BLA number."
+          },
+          {
+            "provider": "fda-gov",
+            "capability": "records/complete_response_letters",
+            "description": "Find CRLs issued in a time window, to a company, for an application or citing a deficiency such as \"Form 483\" or immunogenicity. Read a letter in full with complete_response_letter; join to drug_applications and drug_application_documents through application_numbers."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "articles/lookup",
+            "description": "Read the current revision of a Wikipedia (or sister-project) article by exact title: full wikitext (or HTML with body), abstract, categories, redirects, connected Wikidata QID, license, and revision credibility signals. Use structured-contents instead when you want infobox fields, sections or references already parsed. From https://de.wikipedia.org/wiki/Berlin pass name `Berlin` and project `dewiki`. Not a search: titles must match exactly."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "articles/structured-contents",
+            "description": "Read a Wikipedia article pre-parsed into JSON: one-line description, abstract, infobox fields, sections as paragraphs and lists with links, references and tables. Best for extracting facts such as a person's birth date or a city's population without parsing HTML. Beta upstream, with the most complete coverage on en, de, fr, es, pt, it, nl, cy and id Wikipedia. Exact title, as for articles/lookup."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "reference/languages",
+            "description": "List the language codes Wikimedia projects use, with names and writing direction, to choose the language option or build a project identifier. Codes are two or three letters, sometimes with a suffix (zh-yue). Free."
+          },
+          {
+            "provider": "wikipedia",
+            "capability": "reference/projects",
+            "description": "List the Wikimedia projects available for lookup, to find the project identifier for a language and project type, such as `ptwiki` for Portuguese Wikipedia or `frwiktionary`. Free."
+          }
+        ]
+      },
+      "id": "01a1f447-d0a3-71d8-aa17-4b50ea4cc4b4",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 3 web results are excerpts only (#1 \"https://en.wikipedia.org/wiki/John_B._Magruder\", #2, #3 \"https://oertx.highered.texas.gov/courseware/lesson/1047/student/?section=17\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Ewell\" \"January 29\" \"1861\" letter",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://lcdl.library.cofc.edu/lcdl/?f%5Bsubject_geographic_facet%5D%5B%5D=United+States--History--Civil+War%2C+1861-1865&per_page=100&range%5Bdaterange%5D%5Bbegin%5D=1862&range%5Bdaterange%5D%5Bend%5D=1864&search_field=dummy_range&sort=daterange+desc",
+            "title": "Civil War, 1861-1865 / Date Range: 1862 to 1864 - LCDL Catalog Search ...",
+            "description": "that General Ewell has won great victories \"here\" and he has heard good news ... Barker (Godmother) -- January 29, 1862. Date: 1862; Description: Samuel ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://fromthepage.com/cwrgm/cwrgm-rev2/article/25023805",
+            "title": "Military Procedures & Events--Disband Military Units",
+            "description": "Page 1 in Letter from B. S. Ewell; September 4, 1863 — disbanded ... Pettus; November 2, 1861 — disband all companies and regiments ... Pettus; January 29 ...",
+            "position": 2,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "fda-gov",
+            "capability": "records/complete_response_letters",
+            "description": "Find CRLs issued in a time window, to a company, for an application or citing a deficiency such as \"Form 483\" or immunogenicity. Read a letter in full with complete_response_letter; join to drug_applications and drug_application_documents through application_numbers."
+          },
+          {
+            "provider": "fda-gov",
+            "capability": "records/warning_letter",
+            "description": "Read the violations, cited regulations and requested corrective actions in a letter found with warning_letters, or a pasted fda.gov warning letter URL."
+          },
+          {
+            "provider": "raws-dri-edu",
+            "capability": "weather-history/daily",
+            "description": "Daily humidity, wind, gusts, solar, fuel temperature and RAWS precipitation for a station and month (daily temperature alone is also in rcc-acis-org as GHCN `USR0000<STN>`)."
+          },
+          {
+            "provider": "efdsearch-senate-gov",
+            "capability": "financial-disclosures/get_report",
+            "description": "You have a report_id and report_kind from search_reports (or a pasted /search/view/ URL) and need the filing's contents: PTR transactions, annual report parts, paper page images or the extension notice."
+          },
+          {
+            "provider": "msheritage-access-preservica-com",
+            "capability": "archive-records/list_folder",
+            "description": "Enumerate the archive top-down (root -> collection -> sub-folders -> items) or list what sits inside a folder found by search_records or get_record; take child ids to get_record (items) or back to list_folder (folders)."
+          }
+        ]
+      },
+      "id": "01a1f447-d096-74d9-9d11-9828b6dd81a0",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 2 web results are excerpts only (#1, #2 \"https://fromthepage.com/cwrgm/cwrgm-rev2/article/25023805\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Stuart\" \"alone or otherwise\" letter",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.facebook.com/TheVirginiaFlaggers/posts/letter-by-jeb-stuart-born-february-6th-1833-to-major-henry-hill-from-fort-wise-k/632887539130239/",
+            "title": "Letter by J.E.B. Stuart, born February 6th, 1833, to Major Henry Hill from ...",
+            "description": "Letter by J.E.B. Stuart, born February 6th, 1833, to Major Henry Hill from Fort Wise, Kansas Territory, January 11, 1861 --\n\n“For my part I have ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.facebook.com/TheVirginiaFlaggers/posts/for-my-part-i-have-no-hesitancy-from-the-first-that-right-or-wrong-alone-or-othe/1034437905641865/",
+            "title": "“For my part, I have no hesitancy from the first that, right or wrong, alone ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://www.civilwarmonitor.com/article/voices-from-the-army-of-northern-virginia-part-6/",
+            "title": "Voices From the Army of Northern Virginia, Part 6: Managing the Cavalry",
+            "description": "... alone or otherwise, I go with Virginia….” The ... Several letters highlight Stuart's quest for promotion to lieutenant general.",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://emergingcivilwar.com/2017/08/28/i-intend-to-make-the-yankees-pay-conclusion/",
+            "title": "\"I Intend to Make the Yankees Pay\": A Monumental Discussion",
+            "description": "... alone or otherwise, I go with Virginia… ... Tagged as Affair at Verdiersville, JEB Stuart, monumental-discussion, Stuart's Raid at Catlett's ...",
+            "position": 4,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "fda-gov",
+            "capability": "records/complete_response_letters",
+            "description": "Find CRLs issued in a time window, to a company, for an application or citing a deficiency such as \"Form 483\" or immunogenicity. Read a letter in full with complete_response_letter; join to drug_applications and drug_application_documents through application_numbers."
+          },
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/list",
+            "description": "Call to see what was published in a quarter. Returns the letter index rather than the letters - take a letterId to fund-letters/detail for the content."
+          },
+          {
+            "provider": "assembly-ab-ca",
+            "capability": "legislative-records/hansard_index",
+            "description": "Find where a member spoke, or where a subject was debated, without reading the PDFs: this is the Assembly's own index. Letter A of a busy session is large; use heading_contains to keep one speaker or subject."
+          },
+          {
+            "provider": "fda-gov",
+            "capability": "records/complete_response_letter",
+            "description": "Read the deficiencies FDA cited and the steps it asked for in a CRL, after complete_response_letters or straight from an NDA or BLA number."
+          },
+          {
+            "provider": "substack-com",
+            "capability": "newsletters/search",
+            "description": "Search a Substack publication's archive for posts matching a query, using Substack's own archive search. Returns the same post entries as archive, with the query echoed."
+          },
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/detail",
+            "description": "Call for what one letter actually argued. The narrative sections are the investor's own words; the theses are the extraction, and each names what it was based on so a thin mention is not mistaken for a conviction."
+          }
+        ]
+      },
+      "id": "01a1f448-1513-712c-beaa-792b9bc130a6",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 4 web results are excerpts only (#1 \"https://www.facebook.com/TheVirginiaFlaggers/posts/letter-by-jeb-stuart-born-february-6th-1833-to-major-henry-hill-from-fort-wise-k/632887539130239/\", #2 \"https://www.facebook.com/TheVirginiaFlaggers/posts/for-my-part-i-have-no-hesitancy-from-the-first-that-right-or-wrong-alone-or-othe/1034437905641865/\", #3 \"https://www.civilwarmonitor.com/article/voices-from-the-army-of-northern-virginia-part-6/\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Stuart\" \"Henry Hill\" letters book",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.academia.edu/108397802/Madeira_Quakerism_and_Rebellion_Reviving_Henry_Hill",
+            "title": "(PDF) Madeira, Quakerism, and Rebellion: Reviving Henry Hill",
+            "description": "Quaker History After Henry Hill died, family members told a visiting nephew from England that his uncle labored long over his choice of words: \"The most easy ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.amazon.com/-/es/Calvin-Stebbins/dp/B00A9HAHS4",
+            "title": "Henry Hill Goodell: The Story of His Life, with Letters and a Few ...",
+            "description": "A biography of Henry Hill Goodell, an influential American educator who developed agricultural education and helped establish the Massachusetts Agricultural ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://www.sothebys.com/en/auctions/2012/english-literature-history-l12408.html?locale=zh-Hans&p=3",
+            "title": "L12408",
+            "description": "William du-Gard and Henry Hill, 1653. 估价 3,000 ... 30. depicting Charles Edward Stuart, Bonnie Prince Charlie. ... Four letters, comprising: 估价 2,000 ...",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://www.philalandmarks.org/new-page-1",
+            "title": "The Powel's Social Circle — Philadelphia ...",
+            "description": "... Henry Hill, the poet Elizabeth Graeme Fergusson, and Dr. Benjamin Rush. Back ... (Portrait by Gilbert Stuart 1803. Clarke Art Institute.).",
+            "position": 4,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/detail",
+            "description": "Call for what one letter actually argued. The narrative sections are the investor's own words; the theses are the extraction, and each names what it was based on so a thin mention is not mistaken for a conviction."
+          },
+          {
+            "provider": "assembly-ab-ca",
+            "capability": "legislative-records/hansard_index",
+            "description": "Find where a member spoke, or where a subject was debated, without reading the PDFs: this is the Assembly's own index. Letter A of a busy session is large; use heading_contains to keep one speaker or subject."
+          },
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/list",
+            "description": "Call to see what was published in a quarter. Returns the letter index rather than the letters - take a letterId to fund-letters/detail for the content."
+          },
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/investors",
+            "description": "Call to find the investorId for a firm, or to pick firms by style or sector focus before reading any letters. Sorted by coverage, so the most-covered firms come first."
+          },
+          {
+            "provider": "amazon-com",
+            "capability": "products/bestsellers",
+            "description": "Rank products in an Amazon US category (top sellers in headphones, books, toys) without a search query. Pair with product or specifications for details of a ranked ASIN."
+          },
+          {
+            "provider": "amazon-com",
+            "capability": "products/offer",
+            "description": "Get the featured buy-box offer for one Amazon.com ASIN or product URL: displayed price, list price and savings, boolean in-stock state with Amazon's availability text, seller and shipper, item condition, delivery promise, coupon and other-offers hints. Pass zip to see the offer for a US delivery ZIP code. Unknown values are null."
+          },
+          {
+            "provider": "amazon-com",
+            "capability": "products/photos",
+            "description": "Get the selected product image gallery."
+          },
+          {
+            "provider": "amazon-com",
+            "capability": "products/prices",
+            "description": "Check current buy-box price and stock state for up to five Amazon.com ASINs in one call. Each row carries price, list price, in-stock flag, availability text, seller and condition; an ASIN that cannot be read gets an error string instead of failing the batch."
+          }
+        ]
+      },
+      "id": "01a1f448-1407-76b8-a7ac-a46167dabd23",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 4 web results are excerpts only (#1 \"https://www.academia.edu/108397802/Madeira_Quakerism_and_Rebellion_Reviving_Henry_Hill\", #2 \"https://www.amazon.com/-/es/Calvin-Stebbins/dp/B00A9HAHS4\", #3 \"https://www.sothebys.com/en/auctions/2012/english-literature-history-l12408.html?locale=zh-Hans&p=3\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"J E B Stuart\" \"January 1861\" letter Hill source",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://www.facebook.com/groups/135784675290/posts/10159791916760291/",
+            "title": "Letter written by my great great grandfather Richard Madison Cook ...",
+            "description": "Letter, 28 February 1863, from Jeb Stuart to John R. Cooke sending news of Stuart's cavalry and advising Cooke to stay out of army politics ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.nps.gov/gett/learn/historyculture/civil-war-timeline.htm",
+            "title": "Civil War Timeline - Gettysburg National Military Park (U.S. ...",
+            "description": "January 1861- Mississippi, Florida, Alabama, Georgia ... US cavalry forces cross the Rapidan River to attack General J.E.B. Stuart's ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://cwba.blogspot.com/2016/06/ray-ed-sharpshooter-selected-letters.html",
+            "title": "Ray, ed.: \"SHARPSHOOTER: The Selected Letters and Papers of Maj. ...",
+            "description": "Volume I begins in January 1861, when Blackford found himself teaching in Alabama. ... J.E.B. Stuart did on May 3. The volume ends with the army ...",
+            "position": 3,
+            "source": "web"
+          },
+          {
+            "url": "https://virginiahistory.org/sites/default/files/cwg(1).pdf",
+            "title": "Virginia's Civil War",
+            "description": "December 1861; and a letter, 11 October 1861, from J. E. B. Stuart to Earl Van Dorn ... January 1861–13 September 1864, contains copies of official letters.",
+            "position": 4,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "leginfo-legislature-ca-gov",
+            "capability": "legislation/bill_status",
+            "description": "You have a bill_id and need where the bill is now, who carries it, and how it is classified."
+          },
+          {
+            "provider": "fiscal-ai",
+            "capability": "fund-letters/detail",
+            "description": "Call for what one letter actually argued. The narrative sections are the investor's own words; the theses are the extraction, and each names what it was based on so a thin mention is not mistaken for a conviction."
+          },
+          {
+            "provider": "leginfo-legislature-ca-gov",
+            "capability": "legislation/bill",
+            "description": "You have a bill_id (from bill_search or the site) and need what the bill says."
+          },
+          {
+            "provider": "gc-nh-gov",
+            "capability": "legislation/get_bill",
+            "description": "The status, history and votes of an NH bill or resolution of the current biennium (HB 1, SB 416, CACR 5). Bills that ended in 2025 return their docket history only."
+          },
+          {
+            "provider": "nps-gov",
+            "capability": "sound-effects/get_sound",
+            "description": "Credit and MP3 link for one clip page, e.g. https://www.nps.gov/subjects/sound/sounds-elk.htm or https://www.nps.gov/yell/learn/photosmultimedia/sounds-oldfaithful.htm."
+          },
+          {
+            "provider": "nps-gov",
+            "capability": "sound-effects/search_sounds",
+            "description": "\"public domain elk bugle\", \"NPS thunderstorm sound with credit\", \"Yellowstone geyser recordings\", \"list the NPS Sound Gallery mammals\", or a pasted nps.gov sound gallery or sound library index URL. Use get_sound for one page."
+          },
+          {
+            "provider": "firecrawl-gov-index",
+            "capability": "search",
+            "description": "Use first for any US government, legal, tax, court, permit, statute, regulation, grant or procurement question, before web search: what a city's zoning or planning code allows at an address, which business licence, permit, inspection or fee a city or county requires to open a shop, restaurant, food truck or mobile service, the text of a state code section or municipal ordinance, the official page for a form or program, federal rules and regulations, court opinions and case law, or the regulations, guidance and decisions that cite a statute (set cites). One call searches 30M+ official pages and returns URLs to cite or scrape. For the structured record behind a page (a SAM.gov notice, a Federal Register document, a bill) use that source's own provider. Filters keep only pages the index has labeled, so a filtered search can leave out relevant pages, and no results does not mean none exist. Court labels are most complete for federal courts and case-law collections."
+          }
+        ]
+      },
+      "id": "01a1f448-152c-747e-ab22-00ec5eabd317",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 4 web results are excerpts only (#1 \"https://www.facebook.com/groups/135784675290/posts/10159791916760291/\", #2 \"https://www.nps.gov/gett/learn/historyculture/civil-war-timeline.htm\", #3 \"https://cwba.blogspot.com/2016/06/ray-ed-sharpshooter-selected-letters.html\" and 1 more). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Stuart\" \"11 January 1861\"",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://academic.oup.com/mnras/article/21/3/65/992613",
+            "title": "Stuart Glennie, Esq., 6 Stone Buildings, Lincoln's Inn",
+            "description": "R. Main; Stuart Glennie, Esq., 6 Stone Buildings, Lincoln's Inn, Monthly Notices of the Royal Astronomical Society, Volume 21, Issue 3, 11 January 1861, Pa.",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "http://www.firstbullrun.co.uk/Potomac/First%20Brigade/1st-south-carolina-infantry.html",
+            "title": "1st South Carolina Infantry | First Bull Run | The Manassas Campaign ...",
+            "description": "... 11 January, 1861, and D F Richardson was appointed captain, Richardson ... Stuart. Note: The 30th Virginia Cavalry, Company A, and a detachment of ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://www.worldhistory.org/American_Civil_War/",
+            "title": "American Civil War: The Birthpangs of the United States",
+            "description": "Alabama (11 January 1861); Georgia (19 January 1861); Louisiana ... Stuart, who was mortally wounded at the Battle of Yellow Tavern (11 ...",
+            "position": 3,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "fred",
+            "capability": "series/vintage-dates",
+            "description": "Call to find out when a series was actually revised, then pass one or more of these dates to `series/observations` as `vintage_dates` to see the data as it stood. The path is `vintagedates` with no underscore, and unlike its siblings the real-time period defaults to the whole span rather than to today, so a bare call returns the full revision history."
+          },
+          {
+            "provider": "raws-dri-edu",
+            "capability": "weather-history/daily",
+            "description": "Daily humidity, wind, gusts, solar, fuel temperature and RAWS precipitation for a station and month (daily temperature alone is also in rcc-acis-org as GHCN `USR0000<STN>`)."
+          },
+          {
+            "provider": "legislation-gov-uk",
+            "capability": "legislation/get_provision",
+            "description": "To read statute text: e.g. Planning Act 2008 s.14 (nationally significant infrastructure project definitions) or ss.15-30 (thresholds), or Part 3 in one call."
+          }
+        ]
+      },
+      "id": "01a1f448-8eee-76fb-9455-24a1345cb1c4",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 3 web results are excerpts only (#1 \"https://academic.oup.com/mnras/article/21/3/65/992613\", #2 \"http://www.firstbullrun.co.uk/Potomac/First%20Brigade/1st-south-carolina-infantry.html\", #3 \"https://www.worldhistory.org/American_Civil_War/\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Stuart\" \"11 Jan. 1861\"",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://isaacbrewer-familyhistory.blogspot.com/2015/02/csa-alabama.html",
+            "title": "CSA - Alabama",
+            "description": "* Alabama seceded from the Union 11 Jan 1861 ... Roddey's Cavalry Escort, Stuart's Cavalry Battalion, Young's Cavalry (State Reserves) and First Artillery ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.facebook.com/groups/696104997183220/posts/27630622749971413/",
+            "title": "Historical information on Portland, Alabama settlement",
+            "description": "Stuart, who died on April 19, 1859, aged 60 years. Lc · May be an ... 11 Jan 1861 • Alabama, USA The Alabama Secession Convention passes ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://www.worldstatesmen.org/US_states_A-D.html",
+            "title": "U.S. States A-D",
+            "description": "... 11 Jan 1861 - 8 Feb 1861 (unofficial), [Alabama Secession Banner of 1861 ... Stuart (b. 1753 - d. 1814) Ind (to 12 Sep 1794) - Gustavus Scott (b. 1753 ...",
+            "position": 3,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "branddb-wipo-int",
+            "capability": "intellectual-property/get_trademark",
+            "description": "After search_trademarks, with a result's st13."
+          },
+          {
+            "provider": "ncei-noaa-gov",
+            "capability": "storm-events/records_get",
+            "description": "Fetch one storm event with its track points and fatality records when the EVENT_ID and the data year are known."
+          },
+          {
+            "provider": "fred",
+            "capability": "series/vintage-dates",
+            "description": "Call to find out when a series was actually revised, then pass one or more of these dates to `series/observations` as `vintage_dates` to see the data as it stood. The path is `vintagedates` with no underscore, and unlike its siblings the real-time period defaults to the whole span rather than to today, so a bare call returns the full revision history."
+          },
+          {
+            "provider": "ncei-noaa-gov",
+            "capability": "storm-events/records_list",
+            "description": "Full collection of a year's details, locations or fatalities rows. Pass type and year for the first page, then only the cursor."
+          },
+          {
+            "provider": "stubhub-com",
+            "capability": "events/event",
+            "description": "Read event identity, venue, source status, performers and current inventory counts. Unconfirmed times are null; utc_offset_ms is the source offset, not an IANA timezone."
+          }
+        ]
+      },
+      "id": "01a1f448-8f44-742b-969d-863dbc3d8ee2",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 3 web results are excerpts only (#1 \"https://isaacbrewer-familyhistory.blogspot.com/2015/02/csa-alabama.html\", #2 \"https://www.facebook.com/groups/696104997183220/posts/27630622749971413/\", #3 \"https://www.worldstatesmen.org/US_states_A-D.html\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Stuart\" \"Hill\" \"1861\" site:loc.gov",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://catdir.loc.gov/catdir/enhancements/fy0835/2007051552-s.html",
+            "title": "Sample text for Library of Congress control number 2007051552",
+            "description": "... Stuart would replace Jackson. Stuart believed ... Hill as commander of the newly created Third ... 1861, when he assumed command of volunteer ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://www.loc.gov/resource/sn83045462/1861-09-12/ed-1/?sp=2&st=text",
+            "title": "Image 2 of Evening star (Washington, D.C.), September 12, 1861",
+            "description": "of infantry and Stuart's regiment of Virginia cavalry, with a single ... by a meeting at Drald Hill Park and a dinner at a city hotel At 1*2 o'clock ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://hdl.loc.gov/loc.gdc/scd0001.00107328117",
+            "title": "Lee and his generals.",
+            "description": "Stuart.--A.P. Hill.--John B. Hood.--A.S. Johnston.--Leonidas Polk.--Sterling ... - United States--History--Civil War, 1861-1865--Biography; - Generals ...",
+            "position": 3,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "msheritage-access-preservica-com",
+            "capability": "archive-records/list_folder",
+            "description": "Enumerate the archive top-down (root -> collection -> sub-folders -> items) or list what sits inside a folder found by search_records or get_record; take child ids to get_record (items) or back to list_folder (folders)."
+          },
+          {
+            "provider": "hipcamp-com",
+            "capability": "campsite-listings/land",
+            "description": "After search_lands or a pasted hipcamp.com/land URL. For dated availability and full quotes call land_sites."
+          },
+          {
+            "provider": "hibid-com",
+            "capability": "online-auctions/search_lots",
+            "description": "Start here to find lot ids (for `lot` and `lot_bids`) and auction ids, or to list one auction's catalog (auction_id, sort LOT_NUMBER). For sold prices of a past auction pass archived=true with its auction_id."
+          },
+          {
+            "provider": "firecrawl-gov-index",
+            "capability": "search",
+            "description": "Use first for any US government, legal, tax, court, permit, statute, regulation, grant or procurement question, before web search: what a city's zoning or planning code allows at an address, which business licence, permit, inspection or fee a city or county requires to open a shop, restaurant, food truck or mobile service, the text of a state code section or municipal ordinance, the official page for a form or program, federal rules and regulations, court opinions and case law, or the regulations, guidance and decisions that cite a statute (set cites). One call searches 30M+ official pages and returns URLs to cite or scrape. For the structured record behind a page (a SAM.gov notice, a Federal Register document, a bill) use that source's own provider. Filters keep only pages the index has labeled, so a filtered search can leave out relevant pages, and no results does not mean none exist. Court labels are most complete for federal courts and case-law collections."
+          },
+          {
+            "provider": "loc-gov",
+            "capability": "audio-assets/get_audio",
+            "description": "Check the rights statement and credit line of a chosen recording before reuse, or get its playable and downloadable file URLs."
+          },
+          {
+            "provider": "loc-gov",
+            "capability": "audio-assets/list_audio_collections",
+            "description": "Pick a collection to browse with search_audio's collection input, e.g. folk music, oral histories or historic commercial records."
+          }
+        ]
+      },
+      "id": "01a1f448-8efb-7716-9e3e-ca5a66636b1f",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 3 web results are excerpts only (#1 \"https://catdir.loc.gov/catdir/enhancements/fy0835/2007051552-s.html\", #2 \"https://www.loc.gov/resource/sn83045462/1861-09-12/ed-1/?sp=2&st=text\", #3 \"https://hdl.loc.gov/loc.gdc/scd0001.00107328117\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  },
+  {
+    "query": "\"Stuart\" \"Hill\" \"1861\" site:archive.org",
+    "result": {
+      "success": true,
+      "data": {
+        "web": [
+          {
+            "url": "https://dn790001.ca.archive.org/0/items/reglossescivilwar00foxwrich/reglossescivilwar00foxwrich.pdf",
+            "title": "Regimental losses in the American Civil War, 1861-1865. A treatise on ...",
+            "description": "... Hill. Aiitietam. Cold Harbor. Belmont. Pea Ridge. Fort Donelson. Antietam ... Stuart. The loss of the Fifteenth Corps in this affair was 86 killed, 501 ...",
+            "position": 1,
+            "source": "web"
+          },
+          {
+            "url": "https://archive.org/details/biggameofbaltist00adairich",
+            "title": "The big game of Baltistan and Ladakh. A summer in High Asia, being ...",
+            "description": "... Stuart Hill, 1861-. Publication date: 1899; Topics: Hunting, Baltistan ... Godfrey, Stuart Hill, 1861-; Bookplateleaf: 4; Call number: nrlf_ucb ...",
+            "position": 2,
+            "source": "web"
+          },
+          {
+            "url": "https://archive.org/download/cu31924030916187/cu31924030916187.pdf",
+            "title": "Pictorial history Thirteenth Regiment Vermont Volunteers, war of 1861- ...",
+            "description": "... Hill, who from expiration of term of service or on account of wounds and ... Stuart of Lee's army had crossed the Rappahannock and was on his way north.",
+            "position": 3,
+            "source": "web"
+          }
+        ],
+        "tools": [
+          {
+            "provider": "msheritage-access-preservica-com",
+            "capability": "archive-records/list_folder",
+            "description": "Enumerate the archive top-down (root -> collection -> sub-folders -> items) or list what sits inside a folder found by search_records or get_record; take child ids to get_record (items) or back to list_folder (folders)."
+          },
+          {
+            "provider": "msheritage-access-preservica-com",
+            "capability": "archive-records/search_records",
+            "description": "Find archive records (magazines, photographs, reports, adverts, catalogues) by keyword, or list everything of one file format or reference number; take the returned `id` to get_record or, for folders, to list_folder."
+          },
+          {
+            "provider": "msheritage-access-preservica-com",
+            "capability": "archive-records/get_record",
+            "description": "You have an id from search_records or list_folder and need the record's full header metadata, its reference number or its place in the hierarchy."
+          },
+          {
+            "provider": "archive-org",
+            "capability": "audio-assets/get_audio",
+            "description": "After search_audio, or for a pasted archive.org/details/... link: get the licence and the MP3, OGG or FLAC links and durations for one recording."
+          },
+          {
+            "provider": "archive-org",
+            "capability": "audio-assets/get_text",
+            "description": "After search_text, or for a pasted archive.org/details/... or /stream/... link: read the full OCR text of a public magazine issue, or pass query to recover the exact paragraphs (an interview, a review) in a book or magazine, restricted copies included. Pass file when search_text reported a file_basename different from the identifier."
+          },
+          {
+            "provider": "archive-org",
+            "capability": "audio-assets/search_audio",
+            "description": "Find recordings on archive.org: \"CC-BY field recordings of rain from radio aporee\", \"public-domain 78rpm jazz\", \"live recordings of a band\". Then call get_audio for file URLs and durations. Use search_collections to find a collection id."
+          }
+        ]
+      },
+      "id": "01a1f448-8ef7-742c-9132-a13079d92245",
+      "creditsUsed": 2,
+      "agent_hints": [
+        "All 3 web results are excerpts only (#1 \"https://dn790001.ca.archive.org/0/items/reglossescivilwar00foxwrich/reglossescivilwar00foxwrich.pdf\", #2 \"https://archive.org/details/biggameofbaltist00adairich\", #3 \"https://archive.org/download/cu31924030916187/cu31924030916187.pdf\"). If you need more than an excerpt, use firecrawl_scrape with {\"url\":\"<one of these URLs>\",\"formats\":[\"markdown\"]}. Retrieve only needed pages; do not re-scrape results that already contain the required content."
+      ],
+      "conversationId": "8e9c2a14-188a-86ff-9bd5-07fbd2357d13"
+    }
+  }
+]

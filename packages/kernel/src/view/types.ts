@@ -23,6 +23,9 @@ export interface ClaimView {
   readonly value: number;
   readonly token: string | null;
   readonly confidence: number;
+  readonly battle?: string;
+  readonly battleDays?: readonly number[];
+  readonly commander?: PersonId | null;
 }
 
 export interface AdviceView {
@@ -122,7 +125,8 @@ export interface GoalView {
 export interface SituationOptionView {
   readonly id: string;
   readonly label: string;
-  readonly proposedBy: readonly PersonId[] | 'inaction';
+  /** Persons, inaction, or a basis in law and practice (a gate-kept option; the view keeps its own copy of the shape). */
+  readonly proposedBy: readonly PersonId[] | 'inaction' | { readonly basis: 'law-and-practice' | 'principal-initiative'; readonly cites: readonly { readonly source: string; readonly at: string | null }[] };
   readonly group: string | null;
 }
 
@@ -143,6 +147,42 @@ export interface SituationView {
   readonly chosen: readonly string[];
   readonly delegatedTo: PersonId | null;
   readonly staffAuthor: PersonId | null;
+  /** A declared absence of advice, never the research citations behind it. Absent on older views. */
+  readonly staffAbsence?: 'no-adviser-on-record';
+}
+
+/** A post in the principal's received picture, with evidence kept apart from current command truth. */
+export interface KnownPostView {
+  readonly post: PostId;
+  readonly parent: PostId | null;
+  /** False for a post mentioned in correspondence whose place in the chain is not known. */
+  readonly placementKnown: boolean;
+  readonly holder: PersonId | null;
+  readonly status: 'held' | 'vacant' | 'unknown';
+  readonly vacantSince: number | null;
+  /** Null for the public opening catalogue. */
+  readonly source: MessageId | null;
+  readonly asOfDay: number;
+  readonly observerReports: readonly MessageId[];
+}
+
+/** A consult's received recommendation. Its subject is exactly what the letter names, never reconstructed from truth. */
+export interface KnownStanceView {
+  readonly subjectKind: SubjectKind;
+  readonly subjectId: string;
+  readonly recommends: string;
+  readonly confidence: number;
+  readonly day: number;
+  readonly source: MessageId;
+}
+
+export interface KnownPersonView {
+  readonly person: PersonId;
+  /** Live public standing for men believed own-side from opening data and received evidence (R76). Null otherwise. */
+  readonly standing: number | null;
+  readonly stances: readonly KnownStanceView[];
+  /** Received advice about this person, retaining its author and uncertainty through the source report. */
+  readonly assessments: readonly MessageId[];
 }
 
 export interface SeatView {
@@ -169,4 +209,7 @@ export interface SeatView {
   readonly situations: readonly SituationView[];
   /** What is left of his week's attention (0025, lane 1.13): his own budget, which he always knows; null for a seat that keeps none. */
   readonly attention: number | null;
+  /** The principal's public opening catalogue updated only by received correspondence. Empty for other seats. */
+  readonly posts: readonly KnownPostView[];
+  readonly people: readonly KnownPersonView[];
 }

@@ -83,6 +83,7 @@ const field = (f: string, writer: string, proposedBy: readonly string[], code: r
 const at = (record: string, key: string): FieldLocation => ({ record, key });
 
 export const OWNED_FIELDS: readonly OwnedField[] = [
+  field('each faction\'s current capital', 'command', ['scenario start', 'situations'], [at('State', 'factionCapitals')]),
   // Lane 0.4: control, set from the scenario start (0050) and changed only through `applyControl`.
   field('region control', 'control', ['combat', 'occupation'], [at('State', 'regionControl')]),
   // 0058: jurisdiction beside control. Lane 0.5 writes the passage rule that reads them.
@@ -225,7 +226,7 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'OpRequest',
   // Reports and knowledge
   'ReportBody',
-  'ReportClaim',
+  'ReportClaim', // Includes claimBattle, claimBattleDays and claimCommander: authored once, filed only by knowledge.
   'AdviceBody',
   'StatedReason',
   'ReportTruth',

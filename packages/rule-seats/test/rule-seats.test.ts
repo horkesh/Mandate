@@ -185,6 +185,16 @@ describe('a principal doing his historical jobs by his pack doctrine (lane 1.12)
     expect(quiet(principalOrders(menu, [memo(4, 'far')], 5, { openingDay: 1, goAroundObjections: false }))).toEqual([]);
   });
 
+  it('uses the wire for a bypass when it beats the messenger, including approvals and the word to go', () => {
+    const wired = { ...menu, commandable: menu.commandable.map((c) => ({ ...c, routes: [...c.routes, { route: 'wire' as const, typicalDays: 0, price: 0 }] })) };
+    expect(quiet(principalOrders(wired, [memo(4, 'far')], 5))).toEqual([{ cmd: 'order', to: post('far'), goal: take('r5'), route: 'wire', bypass: true }]);
+    const review = { post: post('far'), holder: person('x'), report: 'm.3.plan', plan: option('direct:x', 400) };
+    expect(quiet(principalOrders({ ...wired, reviews: [review], awaiting: [post('near')] }, [memo(4, 'far'), memo(4, 'near')], 5))).toEqual([
+      { cmd: 'review', to: post('far'), action: 'approve', edit: null, route: 'wire', bypass: true },
+      { cmd: 'go', to: post('near'), route: 'wire', bypass: true },
+    ]);
+  });
+
   it('approves every plan before him as drafted, and gives the word to every operation awaiting it, even at peace', () => {
     const review = { post: post('far'), holder: person('x'), report: 'm.3.plan', plan: option('direct:x', 400) };
     const before = { ...menu, atWarSince: null, reviews: [review], awaiting: [post('near')] };
