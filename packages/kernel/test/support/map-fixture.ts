@@ -120,6 +120,7 @@ export const FIXTURE_PEOPLE_RULES: PeopleRules = {
   },
   verbs: {
     weekDays: 7,
+    initiativeAt: 150,
     orderValues: [
       { order: 'verb:appoint', boldness: null, honours: ['career', 'reputation'], offends: [], gateTopics: [], notCheaperThan: null, clashes: [] },
       { order: 'verb:consult', boldness: null, honours: ['duty'], offends: [], gateTopics: [], notCheaperThan: null, clashes: [] },

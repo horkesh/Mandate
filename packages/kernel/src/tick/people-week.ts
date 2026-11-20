@@ -7,7 +7,6 @@
 import { strictCompare } from '../compare.ts';
 import { resolveDirective } from '../compliance.ts';
 import { heldPost, sideOfPerson } from '../command/command.ts';
-import type { ComplianceRung } from '../directive.ts';
 import type { PersonId } from '../ids.ts';
 import { rungIndex, rungOf, weeklyLadder } from '../ladder/ladder.ts';
 import { applyPeopleChanges, type PeopleChange } from '../people/people.ts';
@@ -19,8 +18,6 @@ import { term } from '../knowledge/truth.ts';
 import { fire, sendReport, type TickContext } from './context.ts';
 
 export const WEEK_MECHANICS = ['ladder.moved', 'ladder.rival', 'people.grievances_faded', 'people.promise_broken', 'seats.initiative'] as const;
-
-const TAKES: ReadonlySet<ComplianceRung> = new Set(['exceed', 'comply']);
 
 /** Whether today is a weekly people step. */
 export function isPeopleWeek(ctx: TickContext): boolean {
@@ -71,8 +68,9 @@ export function peopleWeek(ctx: TickContext, start: State): State {
       if (rungIndex(rungOf(state, p)) < rungIndex(initiative.fromRung)) continue;
       const last = state.seatInitiatives[seat]?.[initiative.id];
       if (last !== undefined && ctx.day - last < initiative.cooldownDays) continue;
-      const answer = resolveDirective(profileOf(world, state, p, principal), { boldness: initiative.boldness, honours: initiative.honours, offends: initiative.offends, required: 0 }, contextFor(world, state, p), rules.compliance);
-      if (!TAKES.has(answer.actual)) continue;
+      // Share the willingness terms and candour, but let this pack rule govern admission and the stated answer.
+      const answer = resolveDirective(profileOf(world, state, p, principal), { boldness: initiative.boldness, honours: initiative.honours, offends: initiative.offends, required: 0 }, contextFor(world, state, p), { ...rules.compliance, complyAt: rules.verbs.initiativeAt });
+      if (answer.willingness < rules.verbs.initiativeAt) continue;
       state = markInitiative(state, seat, initiative.id, ctx.day);
       fire(ctx, 'seats.initiative');
       ctx.events.push({ event: 'initiative', person: p, post: heldPost(state, p), message: null, terms: answer.contributions.map((k) => term('relay_term', k.amount, { person: p, rule: k.term })) });
