@@ -75,4 +75,21 @@ describe('projection truth architecture', () => {
   it('checks adapter methods and their local helper methods', () => {
     expect(projectionFindings([{ path: 'prototypes/desk/server/adapter.ts', code: 'export class DeskAdapter { snapshot(s) { return this.hidden(s); } hidden(s) { return s.postStates; } }' }], [])).toHaveLength(2);
   });
+  it('invalidates a derivation when an intermediate helper changes its truth target', () => {
+    const sources = [
+      { path, code: 'import { select } from "../select.ts"; export function view(s) { return select(s); }' },
+      { path: 'packages/kernel/src/select.ts', code: 'import { truth } from "./truth.ts"; export function select(s) { return truth(s, s.own); }' },
+      { path: 'packages/kernel/src/truth.ts', code: 'export function truth(s, id) { return s.personService[id]; }' },
+    ];
+    const hash = projectionFindings(sources, [])[0]!.hash;
+    const allowed = [{ path, symbol: 'view', hash, reason: 'Only own identity.', citation: '0052, seat identity' }];
+    expect(projectionFindings(sources, allowed)).toEqual([]);
+    expect(projectionFindings(sources.map(s => s.path.endsWith('/select.ts') ? { ...s, code: s.code.replace('s.own', 's.enemy') } : s), allowed)).toHaveLength(1);
+  });
+  it.each(['read$(s)', 'api["leak"](s)'])('follows identifier and computed namespace references: %s', expression => {
+    expect(projectionFindings([
+      { path, code: `import { leak as read$ } from "../hidden.ts"; import * as api from "../hidden.ts"; export function view(s) { return ${expression}; }` },
+      { path: 'packages/kernel/src/hidden.ts', code: 'export function leak(s) { return s.reportTruth; }' },
+    ], [])).toHaveLength(1);
+  });
 });

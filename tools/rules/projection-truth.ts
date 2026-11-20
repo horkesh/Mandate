@@ -1,11 +1,10 @@
 import { posix } from 'node:path';
 import { parseSync, transformSync } from 'rolldown/utils';
-import { lexSource } from '../../packages/kernel/test/support/source.ts';
 import { fingerprint, type Finding } from './common.ts';
 
 export interface Source { path: string; code: string }
 export interface Derivation { path: string; symbol: string; hash: string; citation: string; reason: string }
-interface Unit { path: string; symbol: string; code: string; raw: string; reads: string[] }
+interface Unit { path: string; symbol: string; raw: string; reads: string[]; refs: Set<string>; members: [string, string][] }
 interface Module { units: Unit[]; imports: Map<string, { path: string; name: string }>; exports: Map<string, { path: string; name: string }>; stars: string[] }
 const KEYS = ['postStates', 'departmentFactions', 'personService', 'battleRecords', 'reportTruth'];
 const rootPath = (p: string) => /^(?:packages\/kernel\/src\/view\/|packages\/kernel\/src\/seats\/(?:requests|believed)\.[cm]?[jt]s$|packages\/cli\/src\/desk\/|prototypes\/desk\/(?:web\/|server\/adapter\.ts$))/.test(p) && !/(?:\/test[s]?\/|\.test\.|\.d\.ts$)/.test(p);
@@ -42,7 +41,7 @@ function reads(nodes: Ast[]): string[] {
 
 /** Parsed declaration/reference graph: deliberately type-blind and conservative.
  * Function references (not just calls) are followed so callbacks and aliases cannot launder a read.
- * An unparseable file fails closed through the shared lexer.
+ * An unparseable file fails closed through the parser.
  */
 export function projectionFindings(sources: readonly Source[], allowed: readonly Derivation[]): Finding[] {
   for (const a of allowed) if (!a.citation.trim() || !a.reason.trim()) throw new Error(`uncited projection derivation ${a.path}:${a.symbol}`);
@@ -68,7 +67,17 @@ export function projectionFindings(sources: readonly Source[], allowed: readonly
     const moduleNodes: Ast[] = [];
     const makeUnit = (symbol: string, nodes: Ast[]): Unit => {
       const raw = nodes.map(n => source.code.slice(n.start, n.end)).join('\n');
-      return { path: source.path, symbol, raw, code: lexSource(raw).code, reads: reads(nodes) };
+      const refs = new Set<string>();
+      const members: [string, string][] = [];
+      for (const n of nodes) walk(n, a => {
+        if (a.type === 'Identifier') refs.add(nodeName(a));
+        if (a.type === 'MemberExpression') {
+          const object = isNode(a.object) && a.object.type === 'ThisExpression' ? 'this' : nodeName(a.object);
+          const property = a.computed ? (isNode(a.property) && a.property.type === 'Literal' ? nodeName(a.property) : '') : nodeName(a.property);
+          if (object && property) members.push([object, property]);
+        }
+      });
+      return { path: source.path, symbol, raw, reads: reads(nodes), refs, members };
     };
     for (const statement of body) {
       if (statement.type === 'ImportDeclaration') {
@@ -126,16 +135,16 @@ export function projectionFindings(sources: readonly Source[], allowed: readonly
     const cached = dependencyCache.get(u);
     if (cached !== undefined) return cached;
     const mod = modules.get(u.path)!;
-    const out = mod.units.filter(v => v !== u && v.symbol !== '<module>' && new RegExp(String.raw`\b${v.symbol}\b`).test(u.code));
-    if (u.symbol.includes('.')) for (const m of u.code.matchAll(/\bthis\s*\.\s*(\w+)/g)) {
-      out.push(...mod.units.filter(v => v.symbol === `${u.symbol.split('.')[0]}.${m[1]}`));
+    const out = mod.units.filter(v => v !== u && v.symbol !== '<module>' && u.refs.has(v.symbol));
+    if (u.symbol.includes('.')) for (const [object, property] of u.members) {
+      if (object === 'this') out.push(...mod.units.filter(v => v.symbol === `${u.symbol.split('.')[0]}.${property}`));
     }
     for (const [name, target] of mod.imports) {
       if (target.name === '*') {
-        for (const m of u.code.matchAll(new RegExp(String.raw`\b${name}\s*\.\s*(\w+)`, 'g'))) out.push(...resolvedUnits(target.path, m[1]!));
-      } else if (new RegExp(String.raw`\b${name}\b`).test(u.code)) {
+        for (const [object, property] of u.members) if (object === name) out.push(...resolvedUnits(target.path, property));
+      } else if (u.refs.has(name)) {
         out.push(...resolvedUnits(target.path, target.name));
-        for (const m of u.code.matchAll(new RegExp(String.raw`\b${name}\s*\.\s*(\w+)`, 'g'))) out.push(...resolvedUnits(target.path, `${target.name}.${m[1]}`));
+        for (const [object, property] of u.members) if (object === name) out.push(...resolvedUnits(target.path, `${target.name}.${property}`));
       }
     }
     const result = [...new Set(out)];
@@ -155,7 +164,10 @@ export function projectionFindings(sources: readonly Source[], allowed: readonly
       visit(unit);
       if (!hazards.length) continue;
       hazards.sort((a, b) => `${a.path}:${a.symbol}` < `${b.path}:${b.symbol}` ? -1 : 1);
-      const hash = fingerprint([unit.raw, hazards.map(u => [u.path, u.symbol, u.raw])]);
+      // Bind the whole derivation, including a helper that changes WHICH man's
+      // truth reaches an otherwise unchanged low-level accessor.
+      const closure = [...visited].sort((a, b) => `${a.path}:${a.symbol}` < `${b.path}:${b.symbol}` ? -1 : 1);
+      const hash = fingerprint(closure.map(u => [u.path, u.symbol, u.raw]));
       if (allowed.some(a => a.path === path && a.symbol === unit.symbol && a.hash === hash)) continue;
       found.push({ rule: 'projection-truth', path, hash, detail: `${unit.symbol} reaches ${hazards.map(u => `${u.path}:${u.symbol} (${[...new Set(u.reads)].join(', ')})`).join('; ')}` });
     }

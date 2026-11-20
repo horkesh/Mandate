@@ -1,0 +1,1469 @@
+{
+  "base": "79bd9d6",
+  "bands": {
+    "union-1861, war by decision, 148 days/people.resigned": {
+      "minFires": 3,
+      "maxFires": 14
+    },
+    "union-1861, war by decision, 148 days/people.stayed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/combat.battle_closed": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/combat.battle_day": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/combat.battle_opened": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/combat.captured": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "Sumter falls under Anderson on day 39, within the recorded offer window, so its garrison evacuates instead of being captured (R78)"
+    },
+    "union-1861, war by decision, 148 days/combat.killed_wounded": {
+      "minFires": 0,
+      "why": "Sumter's authored bombardment loss rate is zero and the 148-day run fights no field battle; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/combat.missing": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/combat.occupation": {
+      "minFires": 9,
+      "maxFires": 36
+    },
+    "union-1861, war by decision, 148 days/combat.pursuit_chosen": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/combat.surrendered": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/combat.withdrew": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/control.changed": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "union-1861, war by decision, 148 days/control.threshold_crossed": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "union-1861, war by decision, 148 days/forces.stores_fell": {
+      "minFires": 293,
+      "maxFires": 1174
+    },
+    "union-1861, war by decision, 148 days/forces.stores_low": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/forces.stores_refilled": {
+      "minFires": 352,
+      "maxFires": 1408
+    },
+    "union-1861, war by decision, 148 days/forces.stragglers_returned": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/combat.flank_broken": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/combat.routed": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/combat.works_stormed": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/operations.ended": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/operations.opened": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/operations.stage": {
+      "minFires": 3,
+      "maxFires": 14
+    },
+    "union-1861, war by decision, 148 days/operations.works": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "union-1861, war by decision, 148 days/orders.responses_pruned": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "union-1861, war by decision, 148 days/reports.battle_dispatch": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/reports.casualty_return": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/reports.governor_wire": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/reports.pocket": {
+      "minFires": 0,
+      "why": "no headquarters is cut off by a closing pocket in the 148-day Union run; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/map.pocket_closed": {
+      "minFires": 0,
+      "why": "no new pocket closes in the 148-day Union run; Sumter's opening pocket is lost, not newly closed; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/knowledge.pruned_age": {
+      "minFires": 52,
+      "maxFires": 208
+    },
+    "union-1861, war by decision, 148 days/knowledge.pruned_superseded": {
+      "minFires": 73,
+      "maxFires": 292
+    },
+    "union-1861, war by decision, 148 days/map.recomputed": {
+      "minFires": 12,
+      "maxFires": 48
+    },
+    "union-1861, war by decision, 148 days/messages.courier_delay": {
+      "minFires": 32,
+      "maxFires": 128
+    },
+    "union-1861, war by decision, 148 days/messages.mail_delay": {
+      "minFires": 1341,
+      "maxFires": 5364
+    },
+    "union-1861, war by decision, 148 days/messages.delivered": {
+      "minFires": 5271,
+      "maxFires": 21086
+    },
+    "union-1861, war by decision, 148 days/messages.sent": {
+      "minFires": 5592,
+      "maxFires": 22370
+    },
+    "union-1861, war by decision, 148 days/messages.special_messenger": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the one bypass uses the faster zero-day wire instead of a three-day messenger (R78)"
+    },
+    "union-1861, war by decision, 148 days/orders.bypassed": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "union-1861, war by decision, 148 days/movement.arrived": {
+      "minFires": 61,
+      "maxFires": 246
+    },
+    "union-1861, war by decision, 148 days/movement.leg_started": {
+      "minFires": 49,
+      "maxFires": 196
+    },
+    "union-1861, war by decision, 148 days/orders.obeyed": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "union-1861, war by decision, 148 days/orders.relay_held": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/orders.relay_objected": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "union-1861, war by decision, 148 days/orders.relayed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/plans.goal_reached": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/politics.adjourned": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/politics.front_page": {
+      "minFires": 31,
+      "maxFires": 126
+    },
+    "union-1861, war by decision, 148 days/politics.support": {
+      "minFires": 8,
+      "maxFires": 32
+    },
+    "union-1861, war by decision, 148 days/politics.opened": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/regions.self_emancipation": {
+      "minFires": 1540,
+      "maxFires": 6162
+    },
+    "union-1861, war by decision, 148 days/regions.reached_lines": {
+      "minFires": 126,
+      "maxFires": 506
+    },
+    "union-1861, war by decision, 148 days/seats.choices": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/planner.candidates": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/planner.searches": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/plans.drafted": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/plans.chosen": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/plans.goal_set": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "union-1861, war by decision, 148 days/plans.went_ahead": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/plans.approved": {
+      "minFires": 0,
+      "why": "both chosen plans go ahead as drafted without review; the editing exercise drives plan review"
+    },
+    "union-1861, war by decision, 148 days/plans.submitted": {
+      "minFires": 0,
+      "why": "both chosen plans go ahead as drafted without review; the editing exercise drives plan review"
+    },
+    "union-1861, war by decision, 148 days/planner.term.goal_fit": {
+      "minFires": 0,
+      "why": "dropping goal fit never changes a draft's chosen plan in the merged history run; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/planner.term.supply": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/planner.term.haste": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "an edit-only term (lane 0.9: drafts always concentrate as long as he wants): only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_received": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_answered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_objected": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "union-1861, war by decision, 148 days/plans.released": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no goal here says \"prepare, await my word\"; the editing exercise run gives the word"
+    },
+    "union-1861, war by decision, 148 days/seats.defaulted": {
+      "minFires": 0,
+      "why": "every request is answered in this run; the silent-seats exercise run fires it"
+    },
+    "union-1861, war by decision, 148 days/situations.decided": {
+      "minFires": 9,
+      "maxFires": 38
+    },
+    "union-1861, war by decision, 148 days/situations.delegated": {
+      "minFires": 0,
+      "why": "no authored Union situation in this window names a delegate as its historical default; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/situations.fired": {
+      "minFires": 27,
+      "maxFires": 108
+    },
+    "union-1861, war by decision, 148 days/situations.notice_reports": {
+      "minFires": 18,
+      "maxFires": 72
+    },
+    "union-1861, war by decision, 148 days/situations.noticed": {
+      "minFires": 17,
+      "maxFires": 70
+    },
+    "union-1861, war by decision, 148 days/situations.options_changed": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "union-1861, war by decision, 148 days/situations.orders": {
+      "minFires": 12,
+      "maxFires": 50
+    },
+    "union-1861, war by decision, 148 days/situations.proposals": {
+      "minFires": 13,
+      "maxFires": 52
+    },
+    "union-1861, war by decision, 148 days/command.side_changed": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "union-1861, war by decision, 148 days/command.government_established": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/command.post_succeeded": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/command.government_closed": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/command.temporary_post_opened": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/situations.resurfaced": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/situations.staff_lines": {
+      "minFires": 9,
+      "maxFires": 36
+    },
+    "union-1861, war by decision, 148 days/situations.surfaced": {
+      "minFires": 27,
+      "maxFires": 108
+    },
+    "union-1861, war by decision, 148 days/recruitment.called": {
+      "minFires": 15,
+      "maxFires": 62
+    },
+    "union-1861, war by decision, 148 days/recruitment.answered": {
+      "minFires": 9,
+      "maxFires": 38
+    },
+    "union-1861, war by decision, 148 days/recruitment.slow_walked": {
+      "minFires": 7,
+      "maxFires": 30
+    },
+    "union-1861, war by decision, 148 days/recruitment.refused": {
+      "minFires": 6,
+      "maxFires": 24
+    },
+    "union-1861, war by decision, 148 days/recruitment.mustered": {
+      "minFires": 9,
+      "maxFires": 38
+    },
+    "union-1861, war by decision, 148 days/recruitment.men": {
+      "minFires": 9,
+      "maxFires": 38
+    },
+    "union-1861, war by decision, 148 days/recruitment.disbanded": {
+      "minFires": 7,
+      "maxFires": 30
+    },
+    "union-1861, war by decision, 148 days/ladder.moved": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "union-1861, war by decision, 148 days/ladder.rival": {
+      "minFires": 0,
+      "why": "no holder reaches a rival rung with the required standing in the merged 148-day history run; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/people.grievances_faded": {
+      "minFires": 15,
+      "maxFires": 60
+    },
+    "union-1861, war by decision, 148 days/seats.attention_refilled": {
+      "minFires": 10,
+      "maxFires": 42
+    },
+    "union-1861, war by decision, 148 days/seats.attention_spent": {
+      "minFires": 14,
+      "maxFires": 58
+    },
+    "union-1861, war by decision, 148 days/seats.initiative": {
+      "minFires": 4,
+      "maxFires": 18
+    },
+    "union-1861, war by decision, 148 days/operations.repulsed": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/forces.landed_by_situation": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/politics.act": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/politics.answered": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/politics.called": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/politics.framing": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/politics.met": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/situations.policy": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/combat.bombardment": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/reports.commander_lost": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "Anderson evacuates under terms on day 39 and keeps serving; no commander is lost (R78)"
+    },
+    "union-1861, war by decision, 148 days/combat.evacuated": {
+      "minFires": 1,
+      "maxFires": 1
+    },
+    "union-1861, war by decision, 148 days/map.pocket_lost": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/seats.battle_orders": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/movement.joined": {
+      "minFires": 8,
+      "maxFires": 34
+    },
+    "union-1861, war by decision, 148 days/verbs.answered": {
+      "minFires": 24,
+      "maxFires": 98
+    },
+    "union-1861, war by decision, 148 days/verbs.declined": {
+      "minFires": 0,
+      "why": "every army asked in the merged history run answers; recruitment refusals are counted separately; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/command.government_reopened": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no pack situation reopens one yet"
+    },
+    "union-1861, war by decision, 148 days/command.proposal_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a refusal needs a proposal that cannot be applied; honest situations propose none"
+    },
+    "union-1861, war by decision, 148 days/commands.rejected": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "rule seats send only commands the menu offers; a bad command is a seat bug"
+    },
+    "union-1861, war by decision, 148 days/infrastructure.changed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/combat.records_pruned": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a closed battle is pruned after the pack's battleDays (120), longer than either reference run"
+    },
+    "union-1861, war by decision, 148 days/operations.landed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)"
+    },
+    "union-1861, war by decision, 148 days/operations.support_answered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "union-1861, war by decision, 148 days/operations.support_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "union-1861, war by decision, 148 days/operations.support_sent": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "union-1861, war by decision, 148 days/combat.breakout": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a cut-off force breaks out only when its commander believes it can fight free; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force is cut off"
+    },
+    "union-1861, war by decision, 148 days/combat.destroyed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a force is destroyed only when the breakout its commander chose fails; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force breaks out"
+    },
+    "union-1861, war by decision, 148 days/combat.cut_off": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a side is cut off only with no legal retreat (0019) in a field battle; every testbed loser has a way back, and the Union run fights no field battle in 148 days (Sumter is a bombardment, lane 1.12)"
+    },
+    "union-1861, war by decision, 148 days/combat.general_hit": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a commander is hit on a low draw on his own stream; none of the testbed run’s battle-days draws one, and the Union run fights no field battle (lane 1.12)"
+    },
+    "union-1861, war by decision, 148 days/map.pocket_relieved": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a pocket is relieved when a repair or a closing reverses; nothing reverses one in these runs"
+    },
+    "union-1861, war by decision, 148 days/movement.join_blocked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait"
+    },
+    "union-1861, war by decision, 148 days/orders.returned": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no dispatch arrives at a vacant or changed post in either reference run; the kernel test sends one before the loss is reported and drives its return"
+    },
+    "union-1861, war by decision, 148 days/orders.conflict": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a conflict needs two issuers, a chain order and one sent around it; here only the principal orders"
+    },
+    "union-1861, war by decision, 148 days/reports.filtered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+    },
+    "union-1861, war by decision, 148 days/reports.trimmed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+    },
+    "union-1861, war by decision, 148 days/situations.lapsed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)"
+    },
+    "union-1861, war by decision, 148 days/recruitment.muster_blocked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no governor called in either run has his seat region in enemy hands when his levy falls due"
+    },
+    "union-1861, war by decision, 148 days/recruitment.lapsed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a levy lapses only after waiting on enemy ground past the pack’s days, and none waits in either run"
+    },
+    "union-1861, war by decision, 148 days/plans.sent_back": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no rule seat sends a plan back: the rule-seat principal approves, the editing exercise edits"
+    },
+    "union-1861, war by decision, 148 days/planner.term.notes": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the reference principals send no notes; the send-back driver makes a timing note change the pick"
+    },
+    "union-1861, war by decision, 148 days/plans.draft_deferred": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run asks for more plans in a day than the pack’s cap of three (0062)"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_invalid": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the editing exercise edits only a moving axis’s timing, which can always be made"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_shirked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the testbed’s commanders answer the edits the exercise makes by complying or objecting, never covertly"
+    },
+    "union-1861, war by decision, 148 days/planner.term.caution": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping caution alone changes the pick"
+    },
+    "union-1861, war by decision, 148 days/planner.term.coordination": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run drafts a two-axis plan close enough to the best for coordination to decide it"
+    },
+    "union-1861, war by decision, 148 days/planner.term.exposure": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run meets a perceived enemy on the way, and the editing exercise’s “move now” changes no exposure since lane 1.1’s perception"
+    },
+    "union-1861, war by decision, 148 days/planner.term.dependence": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run drafts a support request close enough to the best for dependence to decide it"
+    },
+    "union-1861, war by decision, 148 days/planner.term.force_ratio": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the reference runs’ drafts are decided by supply and goal fit, never by the ratio alone"
+    },
+    "union-1861, war by decision, 148 days/planner.term.glory": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping glory alone changes the pick"
+    },
+    "union-1861, war by decision, 148 days/planner.term.time": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping time alone changes the pick"
+    },
+    "union-1861, war by decision, 148 days/situations.waiting": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "waiting is an option a human takes; the rule-driven principal takes the historical default (0057)"
+    },
+    "union-1861, war by decision, 148 days/verbs.consulted": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/verbs.audience": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/verbs.in_washington": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/people.promise_kept": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/people.promise_broken": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/reports.observer_letter": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/situations.policy_unpaid": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a floor cost falls on the principal only when the floored row has no stakeholder or carrier of its own, and the chosen reference-run policy pays its floor through stakeholders; the gate reviewer requires it never to fire in one"
+    },
+    "union-1861, war by decision, 148 days/seats.attention_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal prices each command by the pack’s table and sends only what his week’s attention pays for (lane 1.12), so the kernel refuses him nothing; the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/politics.refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a refusal needs a proposal politics cannot apply; honest situations propose none"
+    },
+    "union-1861, war by decision, 148 days/politics.press_silent": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "every paper’s editor serves on his paper’s side throughout both runs"
+    },
+    "union-1861, war by decision, 148 days/forces.landing_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the one situation landing in the reference runs is made"
+    },
+    "testbed, 120 days/people.resigned": {
+      "minFires": 0,
+      "why": "the testbed reference pack has no service-choice records; union-1861 fires it, and resignation.test.ts drives the government path"
+    },
+    "testbed, 120 days/people.stayed": {
+      "minFires": 0,
+      "why": "the testbed reference pack has no service-choice records; union-1861 fires it when an officer stays after his government joins"
+    },
+    "testbed, 120 days/combat.battle_closed": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/combat.battle_day": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/combat.battle_opened": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/combat.captured": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/combat.killed_wounded": {
+      "minFires": 4,
+      "maxFires": 16
+    },
+    "testbed, 120 days/combat.missing": {
+      "minFires": 4,
+      "maxFires": 16
+    },
+    "testbed, 120 days/combat.occupation": {
+      "minFires": 15,
+      "maxFires": 62
+    },
+    "testbed, 120 days/combat.pursuit_chosen": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/combat.withdrew": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/control.changed": {
+      "minFires": 17,
+      "maxFires": 70
+    },
+    "testbed, 120 days/control.threshold_crossed": {
+      "minFires": 6,
+      "maxFires": 26
+    },
+    "testbed, 120 days/forces.stores_fell": {
+      "minFires": 93,
+      "maxFires": 374
+    },
+    "testbed, 120 days/forces.stores_low": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/forces.stores_refilled": {
+      "minFires": 119,
+      "maxFires": 476
+    },
+    "testbed, 120 days/forces.stragglers_returned": {
+      "minFires": 54,
+      "maxFires": 216
+    },
+    "testbed, 120 days/combat.flank_broken": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/movement.joined": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/combat.bombardment": {
+      "minFires": 0,
+      "why": "no testbed objective lies across water from a shore with guns; the Union run fires it"
+    },
+    "testbed, 120 days/combat.evacuated": {
+      "minFires": 0,
+      "why": "no testbed fort is bombarded; the Union reference evacuates Anderson within the recorded terms"
+    },
+    "testbed, 120 days/reports.commander_lost": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no commander is lost in this testbed run; the kernel test in QUIET drives the loss report"
+    },
+    "testbed, 120 days/combat.surrendered": {
+      "minFires": 0,
+      "why": "only a cut-off force surrenders, and no testbed force is cut off; the Union run fires it"
+    },
+    "testbed, 120 days/map.pocket_lost": {
+      "minFires": 0,
+      "why": "no testbed pocket is overrun; the Union run fires it (Sumter’s, when the fort falls)"
+    },
+    "testbed, 120 days/combat.routed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/combat.works_stormed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/operations.ended": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/operations.opened": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/operations.stage": {
+      "minFires": 6,
+      "maxFires": 26
+    },
+    "testbed, 120 days/operations.works": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/orders.responses_pruned": {
+      "minFires": 8,
+      "maxFires": 32
+    },
+    "testbed, 120 days/reports.battle_dispatch": {
+      "minFires": 16,
+      "maxFires": 64
+    },
+    "testbed, 120 days/reports.casualty_return": {
+      "minFires": 8,
+      "maxFires": 32
+    },
+    "testbed, 120 days/reports.governor_wire": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/reports.pocket": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/map.pocket_closed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/knowledge.pruned_age": {
+      "minFires": 20,
+      "maxFires": 82
+    },
+    "testbed, 120 days/knowledge.pruned_superseded": {
+      "minFires": 59,
+      "maxFires": 236
+    },
+    "testbed, 120 days/map.recomputed": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "testbed, 120 days/messages.courier_delay": {
+      "minFires": 24,
+      "maxFires": 98
+    },
+    "testbed, 120 days/messages.mail_delay": {
+      "minFires": 53,
+      "maxFires": 214
+    },
+    "testbed, 120 days/messages.delivered": {
+      "minFires": 1060,
+      "maxFires": 4240
+    },
+    "testbed, 120 days/messages.sent": {
+      "minFires": 1075,
+      "maxFires": 4302
+    },
+    "testbed, 120 days/messages.special_messenger": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/movement.arrived": {
+      "minFires": 13,
+      "maxFires": 54
+    },
+    "testbed, 120 days/movement.leg_started": {
+      "minFires": 8,
+      "maxFires": 32
+    },
+    "testbed, 120 days/orders.bypassed": {
+      "minFires": 0,
+      "why": "the principal goes around an office only when it objects, which the testbed’s does not (it holds instead); union-1861 fires it"
+    },
+    "testbed, 120 days/orders.obeyed": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/orders.relay_held": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/orders.relay_objected": {
+      "minFires": 0,
+      "why": "the testbed’s one relaying office (the war ministry) holds what it dislikes rather than objecting: its holder is not candid (lane 1.1); union-1861 fires it, and the kernel test drives it"
+    },
+    "testbed, 120 days/orders.relayed": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.goal_reached": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/politics.adjourned": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/politics.front_page": {
+      "minFires": 8,
+      "maxFires": 34
+    },
+    "testbed, 120 days/politics.opened": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/politics.support": {
+      "minFires": 36,
+      "maxFires": 144
+    },
+    "testbed, 120 days/regions.self_emancipation": {
+      "minFires": 45,
+      "maxFires": 180
+    },
+    "testbed, 120 days/regions.reached_lines": {
+      "minFires": 18,
+      "maxFires": 72
+    },
+    "testbed, 120 days/seats.choices": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/seats.battle_orders": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/recruitment.called": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/recruitment.answered": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/recruitment.slow_walked": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/recruitment.mustered": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/recruitment.men": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/recruitment.disbanded": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/recruitment.refused": {
+      "minFires": 0,
+      "why": "both testbed governors answer their calls; the Union run fires it"
+    },
+    "testbed, 120 days/verbs.answered": {
+      "minFires": 18,
+      "maxFires": 72
+    },
+    "testbed, 120 days/verbs.declined": {
+      "minFires": 8,
+      "maxFires": 34
+    },
+    "testbed, 120 days/seats.defaulted": {
+      "minFires": 0,
+      "why": "every request is answered in this run; the silent-seats exercise run fires it"
+    },
+    "testbed, 120 days/planner.candidates": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/planner.searches": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.drafted": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.chosen": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.goal_set": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.went_ahead": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.approved": {
+      "minFires": 0,
+      "why": "every testbed commander picks a moving plan with no condition, so it goes ahead as drafted, unreviewed"
+    },
+    "testbed, 120 days/plans.submitted": {
+      "minFires": 0,
+      "why": "every testbed commander picks a moving plan with no condition, so it goes ahead as drafted, unreviewed"
+    },
+    "testbed, 120 days/planner.term.goal_fit": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/planner.term.supply": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/planner.term.haste": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "an edit-only term (lane 0.9: drafts always concentrate as long as he wants): only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "testbed, 120 days/plans.edit_received": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "testbed, 120 days/plans.edit_answered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "testbed, 120 days/plans.edit_objected": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "testbed, 120 days/plans.released": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no goal here says \"prepare, await my word\"; the editing exercise run gives the word"
+    },
+    "testbed, 120 days/situations.decided": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/situations.delegated": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/situations.fired": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/situations.notice_reports": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/situations.noticed": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/situations.orders": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/situations.proposals": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "testbed, 120 days/situations.staff_lines": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/situations.surfaced": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/ladder.moved": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/ladder.rival": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/people.grievances_faded": {
+      "minFires": 0,
+      "why": "no testbed man holds a grievance at any week’s end in this run (nobody is overruled, and its office holds rather than objects, so it is never bypassed); its ladder moves come from cool regard alone; union-1861 fires it"
+    },
+    "testbed, 120 days/seats.attention_refilled": {
+      "minFires": 8,
+      "maxFires": 34
+    },
+    "testbed, 120 days/seats.attention_spent": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/seats.initiative": {
+      "minFires": 7,
+      "maxFires": 30
+    },
+    "testbed, 120 days/command.temporary_post_opened": {
+      "minFires": 0,
+      "why": "no testbed situation declares or opens a temporary post; union-1861 fires it (the relief expedition)"
+    },
+    "testbed, 120 days/command.government_closed": {
+      "minFires": 0,
+      "why": "no testbed situation closes a neutral government in this run; union-1861 fires it (a border state’s neutrality)"
+    },
+    "testbed, 120 days/command.side_changed": {
+      "minFires": 0,
+      "why": "no testbed situation changes a government’s side in this run; union-1861 fires it"
+    },
+    "testbed, 120 days/command.government_established": {
+      "minFires": 0,
+      "why": "no testbed notice establishes a declared government; the Union reference does"
+    },
+    "testbed, 120 days/command.post_succeeded": {
+      "minFires": 0,
+      "why": "no testbed notice replaces an occupied post’s holder; the Union reference does"
+    },
+    "testbed, 120 days/situations.options_changed": {
+      "minFires": 0,
+      "why": "no testbed situation in this run has an option that appears or expires while it is open; union-1861 fires it"
+    },
+    "testbed, 120 days/situations.resurfaced": {
+      "minFires": 0,
+      "why": "no testbed situation in this run stays open to a resurface day; union-1861 fires it"
+    },
+    "testbed, 120 days/combat.cut_off": {
+      "minFires": 0,
+      "why": "a side is cut off only with no legal retreat (0019); every testbed loser has a way back; QUIET"
+    },
+    "testbed, 120 days/combat.general_hit": {
+      "minFires": 0,
+      "why": "a commander is hit on a low draw on his own stream; none of the testbed run's three battle-days draws one; QUIET"
+    },
+    "testbed, 120 days/operations.repulsed": {
+      "minFires": 0,
+      "why": "no testbed operation is driven back by a battle; the Union run fires it"
+    },
+    "testbed, 120 days/forces.landed_by_situation": {
+      "minFires": 0,
+      "why": "no testbed situation lands troops; the Union run fires it"
+    },
+    "testbed, 120 days/forces.landing_refused": {
+      "minFires": 0,
+      "why": "no testbed situation lands troops; QUIET"
+    },
+    "testbed, 120 days/politics.act": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/politics.answered": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/politics.called": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/politics.framing": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/politics.met": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/situations.policy": {
+      "minFires": 0,
+      "why": "no testbed decision names a policy row in this run; the Union run fires it"
+    },
+    "testbed, 120 days/command.government_reopened": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no pack situation reopens one yet"
+    },
+    "testbed, 120 days/command.proposal_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a refusal needs a proposal that cannot be applied; honest situations propose none"
+    },
+    "testbed, 120 days/commands.rejected": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "rule seats send only commands the menu offers; a bad command is a seat bug"
+    },
+    "testbed, 120 days/infrastructure.changed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it"
+    },
+    "testbed, 120 days/combat.records_pruned": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a closed battle is pruned after the pack's battleDays (120), longer than either reference run"
+    },
+    "testbed, 120 days/operations.landed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)"
+    },
+    "testbed, 120 days/operations.support_answered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "testbed, 120 days/operations.support_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "testbed, 120 days/operations.support_sent": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "testbed, 120 days/combat.breakout": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a cut-off force breaks out only when its commander believes it can fight free; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force is cut off"
+    },
+    "testbed, 120 days/combat.destroyed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a force is destroyed only when the breakout its commander chose fails; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force breaks out"
+    },
+    "testbed, 120 days/map.pocket_relieved": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a pocket is relieved when a repair or a closing reverses; nothing reverses one in these runs"
+    },
+    "testbed, 120 days/movement.join_blocked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait"
+    },
+    "testbed, 120 days/orders.returned": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no dispatch arrives at a vacant or changed post in either reference run; the kernel test sends one before the loss is reported and drives its return"
+    },
+    "testbed, 120 days/orders.conflict": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a conflict needs two issuers, a chain order and one sent around it; here only the principal orders"
+    },
+    "testbed, 120 days/reports.filtered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+    },
+    "testbed, 120 days/reports.trimmed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+    },
+    "testbed, 120 days/situations.lapsed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)"
+    },
+    "testbed, 120 days/recruitment.muster_blocked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no governor called in either run has his seat region in enemy hands when his levy falls due"
+    },
+    "testbed, 120 days/recruitment.lapsed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a levy lapses only after waiting on enemy ground past the pack’s days, and none waits in either run"
+    },
+    "testbed, 120 days/plans.sent_back": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no rule seat sends a plan back: the rule-seat principal approves, the editing exercise edits"
+    },
+    "testbed, 120 days/planner.term.notes": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the reference principals send no notes; the send-back driver makes a timing note change the pick"
+    },
+    "testbed, 120 days/plans.draft_deferred": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run asks for more plans in a day than the pack’s cap of three (0062)"
+    },
+    "testbed, 120 days/plans.edit_invalid": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the editing exercise edits only a moving axis’s timing, which can always be made"
+    },
+    "testbed, 120 days/plans.edit_shirked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the testbed’s commanders answer the edits the exercise makes by complying or objecting, never covertly"
+    },
+    "testbed, 120 days/planner.term.caution": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping caution alone changes the pick"
+    },
+    "testbed, 120 days/planner.term.coordination": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run drafts a two-axis plan close enough to the best for coordination to decide it"
+    },
+    "testbed, 120 days/planner.term.exposure": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run meets a perceived enemy on the way, and the editing exercise’s “move now” changes no exposure since lane 1.1’s perception"
+    },
+    "testbed, 120 days/planner.term.dependence": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run drafts a support request close enough to the best for dependence to decide it"
+    },
+    "testbed, 120 days/planner.term.force_ratio": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the reference runs’ drafts are decided by supply and goal fit, never by the ratio alone"
+    },
+    "testbed, 120 days/planner.term.glory": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping glory alone changes the pick"
+    },
+    "testbed, 120 days/planner.term.time": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping time alone changes the pick"
+    },
+    "testbed, 120 days/situations.waiting": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "waiting is an option a human takes; the rule-driven principal takes the historical default (0057)"
+    },
+    "testbed, 120 days/verbs.consulted": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/verbs.audience": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/verbs.in_washington": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/people.promise_kept": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/people.promise_broken": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/reports.observer_letter": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/situations.policy_unpaid": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a floor cost falls on the principal only when the floored row has no stakeholder or carrier of its own, and the chosen reference-run policy pays its floor through stakeholders; the gate reviewer requires it never to fire in one"
+    },
+    "testbed, 120 days/seats.attention_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal prices each command by the pack’s table and sends only what his week’s attention pays for (lane 1.12), so the kernel refuses him nothing; the kernel test drives it"
+    },
+    "testbed, 120 days/politics.refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a refusal needs a proposal politics cannot apply; honest situations propose none"
+    },
+    "testbed, 120 days/politics.press_silent": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "every paper’s editor serves on his paper’s side throughout both runs"
+    },
+    "testbed, commanders silent, 120 days/seats.defaulted": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, the principal edits every plan, 120 days/plans.submitted": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, the principal edits every plan, 120 days/plans.edit_received": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, the principal edits every plan, 120 days/plans.edit_answered": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, the principal edits every plan, 120 days/plans.edit_objected": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, the principal edits every plan, 120 days/plans.released": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, the principal edits every plan, 120 days/planner.term.haste": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/orders.relayed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/orders.obeyed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/plans.goal_reached": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/movement.leg_started": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/movement.arrived": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/combat.battle_day": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/combat.occupation": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/control.changed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/recruitment.called": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    }
+  }
+}

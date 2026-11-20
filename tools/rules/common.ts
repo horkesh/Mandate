@@ -26,3 +26,12 @@ export function ratchet(findings: readonly Finding[], baseline: readonly Finding
     ...(old.size !== baseline.length ? ['duplicate baseline entry'] : []),
   ];
 }
+export function baselineHistoryProblems(before: readonly Finding[], now: readonly Finding[], checkerChanged: boolean): string[] {
+  const key = (f: Finding) => `${f.rule}|${f.path}|${f.detail}`;
+  const old = new Map(before.map(f => [key(f), f]));
+  return now.flatMap(f => {
+    const previous = old.get(key(f));
+    if (previous === undefined) return [`known findings cannot grow: ${f.rule} ${f.path}`];
+    return previous.hash !== f.hash && !checkerChanged ? [`cannot refresh a known defect fingerprint without changing its checker: ${f.rule} ${f.path}`] : [];
+  });
+}

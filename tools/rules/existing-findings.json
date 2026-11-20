@@ -62,19 +62,19 @@
   {
     "rule": "projection-truth",
     "path": "packages/kernel/src/seats/requests.ts",
-    "hash": "cbb6dfc30981ee6a169b8f102239d790270cfec433785b32d6f7ab2886b9a72b",
+    "hash": "4115e46745232d2e3557e2246794ed8037be50f9ccf7bfa99c884ae76b7603b0",
     "detail": "reviewsFor reaches packages/kernel/src/seats/requests.ts:reviewsFor (postStates)"
   },
   {
     "rule": "projection-truth",
     "path": "packages/kernel/src/seats/requests.ts",
-    "hash": "4b16a5fcacaaab82524e68cbe94e48608fc1491b763897e4b7e9baf85a0bc9a5",
+    "hash": "3716c013a96c206fdb1895a5efba332bf33ba2ef34b1fe6598314e80425451b9",
     "detail": "principalMenu reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates); packages/kernel/src/seats/requests.ts:reviewsFor (postStates)"
   },
   {
     "rule": "projection-truth",
     "path": "packages/kernel/src/seats/requests.ts",
-    "hash": "727a32d7326b1b22e36dc5cda2e2f45158a3227e3bb047de9b5287a7309716c1",
+    "hash": "b7d125a678a738a527881142ee2eb598318f3b9ee88d1c1dcdcba8b5fd058083",
     "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/requests.ts:pendingRequests (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates); packages/kernel/src/seats/requests.ts:reviewsFor (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
   }
 ]

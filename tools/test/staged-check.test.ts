@@ -4,6 +4,7 @@ import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { afterAll, describe, expect, it } from 'vitest';
 import { linksUnder, removeSnapshot, SNAPSHOT_PREFIX, stagedCheck, treeEqualsIndex, workspacePackages } from '../staged-check.ts';
+import { stagedRuleHistoryProblems, ORIGIN, LEDGER } from '../rule-history.ts';
 
 /**
  * The pre-commit check runs on exactly what is being committed. Each case
@@ -76,6 +77,41 @@ function makeRepo(): Repo {
 const run = (repo: Repo) => stagedCheck({ root: repo.root, command: 'node check.js', env: { RAN_IN: repo.ranIn }, tmp: repo.tmp, log: () => {} });
 const leftovers = (repo: Repo) => readdirSync(repo.tmp);
 
+describe('the staged rule history', () => {
+  it('reads index blobs, ignoring an unstaged repair', () => {
+    const repo = makeRepo();
+    const record = { key: 'a/b', before: null, after: { minFires: 1, maxFires: 4 }, observed: 1, cause: 'A new report is delivered.', evidence: 'notes/source.md' };
+    repo.write(ORIGIN, JSON.stringify({ base: 'fixture', bands: {} }));
+    repo.write(LEDGER, JSON.stringify([record]));
+    repo.git('add', ORIGIN, LEDGER);
+    repo.git('commit', '-qm', 'fixture origin');
+    expect(stagedRuleHistoryProblems(repo.root)).toEqual([]);
+    repo.write(LEDGER, '[]'); repo.git('add', LEDGER);
+    repo.write(LEDGER, JSON.stringify([record])); // A working-tree repair cannot hide a staged deletion.
+    expect(stagedRuleHistoryProblems(repo.root)).toEqual([expect.stringContaining('append-only')]);
+    repo.git('add', LEDGER);
+    repo.write(ORIGIN, JSON.stringify({ base: 'fixture', bands: { changed: record.after } })); repo.git('add', ORIGIN);
+    expect(stagedRuleHistoryProblems(repo.root)).toEqual([expect.stringContaining('immutable')]);
+  });
+  it('honors the temporary index used by path-limited commits', () => {
+    const repo = makeRepo();
+    repo.write(ORIGIN, JSON.stringify({ base: 'fixture', bands: {} }));
+    const record = { key: 'a/b', before: null, after: { minFires: 1, maxFires: 4 }, observed: 1, cause: 'A new report is delivered.', evidence: 'notes/source.md' };
+    repo.write(LEDGER, JSON.stringify([record]));
+    repo.git('add', ORIGIN, LEDGER); repo.git('commit', '-qm', 'fixture origin');
+    const previous = process.env.GIT_INDEX_FILE;
+    try {
+      process.env.GIT_INDEX_FILE = join(repo.root, 'alternative-index');
+      repo.git('read-tree', 'HEAD');
+      repo.write(LEDGER, '[]'); repo.git('add', LEDGER);
+      expect(stagedRuleHistoryProblems(repo.root)).toEqual([expect.stringContaining('append-only')]);
+    } finally {
+      if (previous === undefined) delete process.env.GIT_INDEX_FILE; else process.env.GIT_INDEX_FILE = previous;
+    }
+    expect(stagedRuleHistoryProblems(repo.root)).toEqual([]);
+  });
+});
+
 describe('the working tree and the index', () => {
   it('knows when they are equal, and when an unstaged edit or an untracked file makes them differ', () => {
     const repo = makeRepo();
@@ -141,7 +177,7 @@ describe('the check on exactly what is being committed', () => {
     expect(run(repo).status).not.toBe(0);
   });
 
-  it('never carries the hook’s GIT_* variables into the check', () => {
+  it('never carries the hookâ€™s GIT_* variables into the check', () => {
     const repo = makeRepo();
     repo.write('value.txt', 'unstaged\n');
     const before = process.env.GIT_INDEX_FILE;
@@ -185,7 +221,7 @@ describe('cleaning up is safe', () => {
     expect(existsSync(wrongName)).toBe(true);
   });
 
-  it('unlinks links first, so a link’s target is never touched', () => {
+  it('unlinks links first, so a linkâ€™s target is never touched', () => {
     const repo = makeRepo();
     const dest = join(repo.tmp, `${SNAPSHOT_PREFIX}manual`);
     mkdirSync(join(dest, 'node_modules'), { recursive: true });
