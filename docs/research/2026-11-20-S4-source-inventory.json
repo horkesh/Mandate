@@ -1,0 +1,498 @@
+{
+  "sprint": "S4",
+  "date": "2026-11-20",
+  "source_root": "C:\\Pyrrhic\\mandate-research-sources\\S4",
+  "page_numbering": "one-based PDF and printed page examples; offsets are not universal",
+  "sources": [
+    {
+      "label": "L",
+      "item": "numberslosses00liverich",
+      "title": "Thomas L. Livermore, Numbers and Losses in the Civil War in America, 1861–65 (1900)",
+      "source_class": "retrospective numerical reconstruction",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/numberslosses00liverich",
+      "scan_url": "https://archive.org/download/numberslosses00liverich/numberslosses00liverich.pdf",
+      "local_path": "numberslosses00liverich.pdf",
+      "bytes": 10411897,
+      "sha256": "23284174b80ff12f3678fc316b91360e157296a891481cfab00445c499680c2e",
+      "pdf_pages": 170,
+      "page_examples": [
+        {
+          "printed": 77,
+          "pdf": 89
+        },
+        {
+          "printed": 92,
+          "pdf": 104
+        }
+      ]
+    },
+    {
+      "label": "D",
+      "item": "08697590.3359.emory.edu",
+      "title": "Frederick H. Dyer, A Compendium of the War of the Rebellion (1908)",
+      "source_class": "retrospective organisational compilation",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/08697590.3359.emory.edu",
+      "scan_url": "https://archive.org/download/08697590.3359.emory.edu/08697590_3359.pdf",
+      "local_path": "08697590.3359.emory.edu/08697590_3359.pdf",
+      "bytes": 175232086,
+      "sha256": "9823db0a23ba90b5850c2457dae503864a10266dc4fa590a94fab16a5f0b3f88",
+      "pdf_pages": 1810,
+      "page_examples": [
+        {
+          "printed": 271,
+          "pdf": 278
+        }
+      ]
+    },
+    {
+      "label": "OR I-II",
+      "item": "warofrebellion02secrrich",
+      "title": "Official Records, series I, volume II (1880)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion02secrrich",
+      "scan_url": "https://archive.org/download/warofrebellion02secrrich/warofrebellion02secrrich.pdf",
+      "local_path": "warofrebellion02secrrich/warofrebellion02secrrich.pdf",
+      "bytes": 124529063,
+      "sha256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e",
+      "pdf_pages": 1128,
+      "page_examples": [
+        {
+          "printed": 309,
+          "pdf": 329
+        },
+        {
+          "printed": 570,
+          "pdf": 590
+        }
+      ]
+    },
+    {
+      "label": "OR I-III",
+      "item": "warofrebellion03secrrich",
+      "title": "Official Records, series I, volume III (1881)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion03secrrich",
+      "scan_url": "https://archive.org/download/warofrebellion03secrrich/warofrebellion03secrrich.pdf",
+      "local_path": "warofrebellion03secrrich/warofrebellion03secrrich.pdf",
+      "bytes": 90648614,
+      "sha256": "c817fe6eabd4d462f25127ca84fe550476b0534711f56eb066acec7066d3b312",
+      "pdf_pages": 844,
+      "page_examples": [
+        {
+          "printed": 60,
+          "pdf": 82
+        },
+        {
+          "printed": 104,
+          "pdf": 126
+        }
+      ]
+    },
+    {
+      "label": "OR I-IV",
+      "item": "warofrebellion04secrrich",
+      "title": "Official Records, series I, volume IV (1882)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion04secrrich",
+      "scan_url": "https://archive.org/download/warofrebellion04secrrich/warofrebellion04secrrich.pdf",
+      "local_path": "warofrebellion04secrrich/warofrebellion04secrrich.pdf",
+      "bytes": 86460275,
+      "sha256": "886e69a1cf4e6b187012a8bffb72f860aa20c0fb6e52dc7a9e883381e2bd29cc",
+      "pdf_pages": 818,
+      "page_examples": [
+        {
+          "printed": 580,
+          "pdf": 600
+        },
+        {
+          "printed": 589,
+          "pdf": 609
+        }
+      ]
+    },
+    {
+      "label": "OR I-V",
+      "item": "warofrebellion05unit",
+      "title": "Official Records, series I, volume V (1881)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion05unit",
+      "scan_url": "https://archive.org/download/warofrebellion05unit/warofrebellion05unit.pdf",
+      "local_path": "warofrebellion05unit/warofrebellion05unit.pdf",
+      "bytes": 119747989,
+      "sha256": "c36ab1965afbb04c30a5dc7e9f3bff7bd39e9e17a5df3c4c9334f9275309c0e1",
+      "pdf_pages": 1226,
+      "page_examples": [
+        {
+          "printed": 290,
+          "pdf": 300
+        },
+        {
+          "printed": 308,
+          "pdf": 318
+        }
+      ]
+    },
+    {
+      "label": "OR I-VI",
+      "item": "warofrebellion06unit",
+      "title": "Official Records, series I, volume VI (1882)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion06unit",
+      "scan_url": "https://archive.org/download/warofrebellion06unit/warofrebellion06unit.pdf",
+      "local_path": "warofrebellion06unit/warofrebellion06unit.pdf",
+      "bytes": 95917965,
+      "sha256": "66c844d691b9902dd4b889b3e7808167cedd8bd04a4637a35e742c8e003ad52e",
+      "pdf_pages": 990,
+      "page_examples": [
+        {
+          "printed": 133,
+          "pdf": 145
+        },
+        {
+          "printed": 138,
+          "pdf": 150
+        }
+      ]
+    },
+    {
+      "label": "OR I-VII",
+      "item": "warofrebellion07unit",
+      "title": "Official Records, series I, volume VII (1882)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion07unit",
+      "scan_url": "https://archive.org/download/warofrebellion07unit/warofrebellion07unit.pdf",
+      "local_path": "warofrebellion07unit/warofrebellion07unit.pdf",
+      "bytes": 102409570,
+      "sha256": "4e430999ad6aa131916f94b32cb09b15e2c040abb2445c9ebb4642244702e089",
+      "pdf_pages": 1046,
+      "page_examples": [
+        {
+          "printed": 169,
+          "pdf": 181
+        }
+      ]
+    },
+    {
+      "label": "OR I-VIII",
+      "item": "warofrebellion08unit",
+      "title": "Official Records, series I, volume VIII (1883)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion08unit",
+      "scan_url": "https://archive.org/download/warofrebellion08unit/warofrebellion08unit.pdf",
+      "local_path": "warofrebellion08unit/warofrebellion08unit.pdf",
+      "bytes": 88512743,
+      "sha256": "0cadfc289bcadfc22272dbe917f591d7d993616e463c83cf7257c8c21f501d33",
+      "pdf_pages": 938,
+      "page_examples": [
+        {
+          "printed": 196,
+          "pdf": 208
+        }
+      ]
+    },
+    {
+      "label": "OR I-IX",
+      "item": "warofrebellion09unit",
+      "title": "Official Records, series I, volume IX (1883)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion09unit",
+      "scan_url": "https://archive.org/download/warofrebellion09unit/warofrebellion09unit.pdf",
+      "local_path": "warofrebellion09unit/warofrebellion09unit.pdf",
+      "bytes": 79125288,
+      "sha256": "f5320ac74f6834a4855bdb5b7ca2af37a338e44573f3d7256799a1e08ca6d082",
+      "pdf_pages": 820,
+      "page_examples": [
+        {
+          "printed": 1,
+          "pdf": 13
+        },
+        {
+          "printed": 481,
+          "pdf": 493
+        }
+      ]
+    },
+    {
+      "label": "OR I-X.1",
+      "item": "warofrebellion101unit",
+      "title": "Official Records, series I, volume X, part I (1884)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion101unit",
+      "scan_url": "https://archive.org/download/warofrebellion101unit/warofrebellion101unit.pdf",
+      "local_path": "warofrebellion101unit/warofrebellion101unit.pdf",
+      "bytes": 116205347,
+      "sha256": "08aea2cabaface9893c5ae68928a1bdbcd4a10152f28db575970a48b46c1abfc",
+      "pdf_pages": 1048,
+      "page_examples": [
+        {
+          "printed": 112,
+          "pdf": 126
+        },
+        {
+          "printed": 396,
+          "pdf": 410
+        }
+      ]
+    },
+    {
+      "label": "OR I-XI.1",
+      "item": "warofrebellion111unit",
+      "title": "Official Records, series I, volume XI, part I (1884)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion111unit",
+      "scan_url": "https://archive.org/download/warofrebellion111unit/warofrebellion111unit.pdf",
+      "local_path": "warofrebellion111unit/warofrebellion111unit.pdf",
+      "bytes": 122258084,
+      "sha256": "fa9384a19b5a64b73ee8e09db753e3479966c9948ff08f02ac51a25c18448c8c",
+      "pdf_pages": 1194,
+      "page_examples": [
+        {
+          "printed": 279,
+          "pdf": 293
+        },
+        {
+          "printed": 933,
+          "pdf": 947
+        }
+      ]
+    },
+    {
+      "label": "OR I-XI.2",
+      "item": "warofrebellion112unit",
+      "title": "Official Records, series I, volume XI, part II (1884)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion112unit",
+      "scan_url": "https://archive.org/download/warofrebellion112unit/warofrebellion112unit.pdf",
+      "local_path": "warofrebellion112unit/warofrebellion112unit.pdf",
+      "bytes": 114365410,
+      "sha256": "c2505c0baddb13325c08114106812910e942cdbf7ee24b6899c9c3a9d828d57e",
+      "pdf_pages": 1110,
+      "page_examples": [
+        {
+          "printed": 489,
+          "pdf": 495
+        }
+      ]
+    },
+    {
+      "label": "OR I-XII.1",
+      "item": "warofrebellion121unit",
+      "title": "Official Records, series I, volume XII, part I (1885)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion121unit",
+      "scan_url": "https://archive.org/download/warofrebellion121unit/warofrebellion121unit.pdf",
+      "local_path": "warofrebellion121unit/warofrebellion121unit.pdf",
+      "bytes": 88587073,
+      "sha256": "e27239616e4f70c8580a69365ffbb8d07904fde5bacd17ff9aef677ff53bc3d1",
+      "pdf_pages": 900,
+      "page_examples": [
+        {
+          "printed": 379,
+          "pdf": 391
+        }
+      ]
+    },
+    {
+      "label": "OR I-XII.2",
+      "item": "warofrebellion122unit_0",
+      "title": "Official Records, series I, volume XII, part II (1885)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion122unit_0",
+      "scan_url": "https://archive.org/download/warofrebellion122unit_0/warofrebellion122unit_0.pdf",
+      "local_path": "warofrebellion122unit_0/warofrebellion122unit_0.pdf",
+      "bytes": 91698831,
+      "sha256": "209bca02af90d5bde9c26d713c7fdc2f9367a2e87b4527cfb2b0a69cf5b86e04",
+      "pdf_pages": 916,
+      "page_examples": [
+        {
+          "printed": 546,
+          "pdf": 552
+        }
+      ]
+    },
+    {
+      "label": "OR I-XVI.1",
+      "item": "warofrebellion161unit",
+      "title": "Official Records, series I, volume XVI, part I (1886)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion161unit",
+      "scan_url": "https://archive.org/download/warofrebellion161unit/warofrebellion161unit.pdf",
+      "local_path": "warofrebellion161unit/warofrebellion161unit.pdf",
+      "bytes": 150031790,
+      "sha256": "97de1b361f66872936b293b627b3b61c63361dd206213fda8a5e8989964c1d30",
+      "pdf_pages": 1264,
+      "page_examples": [
+        {
+          "printed": 1036,
+          "pdf": 1050
+        }
+      ]
+    },
+    {
+      "label": "OR I-XVII.1",
+      "item": "warofrebellion171unit",
+      "title": "Official Records, series I, volume XVII, part I (1886)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion171unit",
+      "scan_url": "https://archive.org/download/warofrebellion171unit/warofrebellion171unit.pdf",
+      "local_path": "warofrebellion171unit/warofrebellion171unit.pdf",
+      "bytes": 96191022,
+      "sha256": "0bd056ab7722c92c1a9865a391ed3c4751536f7495c42aa3f39a8903c309f6b1",
+      "pdf_pages": 920,
+      "page_examples": [
+        {
+          "printed": 78,
+          "pdf": 94
+        },
+        {
+          "printed": 176,
+          "pdf": 192
+        }
+      ]
+    },
+    {
+      "label": "OR I-XIX.1",
+      "item": "warofrebellion191unit",
+      "title": "Official Records, series I, volume XIX, part I (1887)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion191unit",
+      "scan_url": "https://archive.org/download/warofrebellion191unit/warofrebellion191unit.pdf",
+      "local_path": "warofrebellion191unit/warofrebellion191unit.pdf",
+      "bytes": 134844693,
+      "sha256": "988fc703a1b094eca9d2cf43a3b06acf994d4f6ad1f662884c414393ec25d3d3",
+      "pdf_pages": 1238,
+      "page_examples": [
+        {
+          "printed": 170,
+          "pdf": 186
+        },
+        {
+          "printed": 803,
+          "pdf": 819
+        }
+      ]
+    },
+    {
+      "label": "OR I-XIX.2",
+      "item": "warofrebellion192unit",
+      "title": "Official Records, series I, volume XIX, part II (1887)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion192unit",
+      "scan_url": "https://archive.org/download/warofrebellion192unit/warofrebellion192unit.pdf",
+      "local_path": "warofrebellion192unit/warofrebellion192unit.pdf",
+      "bytes": 79097442,
+      "sha256": "feeffadde0922072422b88d3d5517da69412f1f9e08a4a910283e9ac728f9a62",
+      "pdf_pages": 838,
+      "page_examples": [
+        {
+          "printed": 555,
+          "pdf": 561
+        }
+      ]
+    },
+    {
+      "label": "OR I-XXI",
+      "item": "warofrebellion21unit",
+      "title": "Official Records, series I, volume XXI (1888)",
+      "source_class": "edited official documents",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/warofrebellion21unit",
+      "scan_url": "https://archive.org/download/warofrebellion21unit/warofrebellion21unit.pdf",
+      "local_path": "warofrebellion21unit/warofrebellion21unit.pdf",
+      "bytes": 135987331,
+      "sha256": "867a4a51628cc8a0af6d3c527b55729afd9eea45f45a63c8fb2ce21f760369ab",
+      "pdf_pages": 1280,
+      "page_examples": [
+        {
+          "printed": 83,
+          "pdf": 85
+        },
+        {
+          "printed": 172,
+          "pdf": 174
+        }
+      ]
+    },
+    {
+      "label": "M",
+      "item": "gulfandinlandwa03mahagoog",
+      "title": "A. T. Mahan, The Gulf and Inland Waters (1883)",
+      "source_class": "retrospective naval narrative",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/gulfandinlandwa03mahagoog",
+      "scan_url": "https://archive.org/download/gulfandinlandwa03mahagoog/gulfandinlandwa03mahagoog.pdf",
+      "local_path": "gulfandinlandwa03mahagoog/gulfandinlandwa03mahagoog.pdf",
+      "bytes": 6903596,
+      "sha256": "c3e02fb0e377429697ca98f33c3befc3ee693256b9b900794ddbd8fbbd1a4cf4",
+      "pdf_pages": 298,
+      "page_examples": [
+        {
+          "printed": 9,
+          "pdf": 30
+        },
+        {
+          "printed": 53,
+          "pdf": 76
+        },
+        {
+          "printed": 107,
+          "pdf": 130
+        },
+        {
+          "printed": 108,
+          "pdf": 131
+        }
+      ]
+    },
+    {
+      "label": "A",
+      "item": "atlanticcoas00amme",
+      "title": "Daniel Ammen, The Atlantic Coast (1883)",
+      "source_class": "retrospective naval narrative",
+      "read_scope": "selected cited pages only; not a claim to have read the whole volume",
+      "archive_url": "https://archive.org/details/atlanticcoas00amme",
+      "scan_url": "https://archive.org/download/atlanticcoas00amme/atlanticcoas00amme.pdf",
+      "local_path": "atlanticcoas00amme/atlanticcoas00amme.pdf",
+      "bytes": 16040623,
+      "sha256": "f3557a20757e4958f1de9f3ee4e64509c46c6edb520b44133455ed4bf5c8f1e4",
+      "pdf_pages": 316,
+      "page_examples": [
+        {
+          "printed": 13,
+          "pdf": 35
+        },
+        {
+          "printed": 163,
+          "pdf": 189
+        },
+        {
+          "printed": 182,
+          "pdf": 212
+        },
+        {
+          "printed": 189,
+          "pdf": 219
+        }
+      ]
+    }
+  ]
+}
