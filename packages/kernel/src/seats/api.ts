@@ -153,6 +153,8 @@ export interface SituationOptionChoice {
 export interface SituationChoice {
   readonly situation: SituationId;
   readonly options: readonly SituationOptionChoice[];
+  /** Held own-side posts of the open options' proposers, excluding consultations already sent. Absent for delegates. */
+  readonly consultPosts?: readonly PostId[];
   /** Posts the principal may hand the choice to; empty for a delegate. */
   readonly delegableTo: readonly PostId[];
 }

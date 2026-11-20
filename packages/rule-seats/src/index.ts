@@ -25,6 +25,7 @@
  *   6. asks each of his armies (the concentration post, each offensive's post) where it stands, on the doctrine's
  *      cadence (inquire, which costs no attention).
  *   He holds his capital by never ordering its garrison away: only the doctrine's offensives move an army.
+ *   At peace or war, he consults the offered posts of an open situation's proposers, within attention.
  * - **a holder handed a situation** decides it by his values: the option the kernel scored as honouring them most
  *   (lane 0.7). A rule-driven principal's own situations take their historical default inside the kernel (a history
  *   run, 0040), so no rule seat ever sees that default.
@@ -135,6 +136,12 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   for (const post of menu.awaiting) {
     const around = withheld.has(post);
     send({ cmd: 'go', to: post, route: routeTo(post, around), bypass: around });
+  }
+  // A surfaced question may need advice at peace too. The menu offers only proposers' own-side held posts whose
+  // consultation has not been sent; the existing verb carries each request and records whatever its holder answers.
+  for (const situation of menu.situations) {
+    const posts = [...new Set(situation.consultPosts ?? [])].sort(compareText);
+    if (posts.length > 0) send({ cmd: 'consult', situation: situation.situation, posts });
   }
   const answered = new Set<string>([...menu.reviews.map((r) => r.post), ...menu.awaiting]);
   // 0064, 0066: nothing of his doctrine before the morning after his side is at war.

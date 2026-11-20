@@ -60,7 +60,8 @@ const knownPerson = (ctx: TickContext, person: PersonId) => ctx.world.personIds.
 
 /** Send a verb's letter straight to `to` (no relays: it is a letter to one man). */
 function sendVerb(ctx: TickContext, state: State, issuer: PersonId, to: PersonId, toPost: PostId | null, route: TransitMessage['msgRoute'], body: Omit<VerbBody, 'verbIssuer' | 'verbIssuedDay'>): MessageId {
-  const id = mintMessageId(ctx.mint, ctx.day, issuer, to, `verb.${body.verbKind}.${body.verbPost ?? body.verbSubject ?? to}`);
+  const subject = body.verbKind === 'consult' ? `${body.verbSubject}.${body.verbPost}` : body.verbPost ?? body.verbSubject ?? to;
+  const id = mintMessageId(ctx.mint, ctx.day, issuer, to, `verb.${body.verbKind}.${subject}`);
   const leg = hop(ctx, state, route, issuer, whereIs(ctx, state, issuer), (toPost !== null ? headquartersOf(ctx.world, state, toPost) : body.verbKind === 'observer' ? headquartersOf(ctx.world, state, body.verbPost!) : whereIs(ctx, state, to)), id);
   ctx.outbox.push({
     id,

@@ -16,9 +16,11 @@ import { buildControlIndex } from '../control-index/control-index.ts';
 import { factionOfBlock, isNaval } from '../forces/forces.ts';
 import type { FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
 import { ORDER_ROUTES, routeLatency, type LatencyMap } from '../messages/latency.ts';
+import { mintMessageId } from '../messages/transit.ts';
 import type { MarchGround } from '../movement/march.ts';
 import { candidateOf, postsInStatus } from '../plans/plans.ts';
 import { isCallAnswer } from '../proxy/responses.ts';
+import { knowledgeOf } from '../knowledge/knowledge.ts';
 import { believedHolder, lossesInTransit, vacancyUnreported } from './believed.ts';
 import { capitalOf } from '../command/capitals.ts';
 import type { State } from '../root-state.ts';
@@ -188,7 +190,24 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   for (const def of world.situations) {
     const r = state.situationStates[def.id];
     if (def.faction !== faction || r === undefined || r.sitStatus !== 'open' || r.sitSurfacedDay === null || r.sitDelegate !== null) continue;
-    situations.push(situationChoice(def, r.sitOpenOptions, def.delegableTo, null));
+    const proposers = new Set(def.options.filter((o) => r.sitOpenOptions.includes(o.id)).flatMap((o) => Array.isArray(o.proposedBy) ? o.proposedBy : []));
+    const consultPosts = ownPosts.filter((post) => {
+      const holder = believedHolder(state, f.principal, post, losses);
+      if (holder === null || holder === f.principal || !proposers.has(holder)) return false;
+      // Only the identity of his own sent letter is read, never its actual response or an adviser's private stance.
+      const tag = `verb.consult.${def.id}.${post}`;
+      const sentTo = (id: string | null | undefined, person: PersonId): boolean => {
+        if (id === null || id === undefined) return false;
+        const issuedDay = Number(id.split('.')[1]);
+        if (!Number.isSafeInteger(issuedDay)) return false;
+        const expected = mintMessageId(new Set(), issuedDay, f.principal, person, tag);
+        return id === expected || id.startsWith(`${expected}.`);
+      };
+      if (state.messagesInTransit.some((m) => (m.msgVerb?.verbIssuer === f.principal && m.msgVerb.verbKind === 'consult' && m.msgVerb.verbSubject === def.id && m.msgVerb.verbPost === post) || (m.msgTo === f.principal && sentTo(m.msgReport?.reportAnswers, m.msgReport?.reportAuthor ?? m.msgFrom)))) return false;
+      if (Object.values(state.orderResponses).some((a) => a.respKind === 'verb:consult' && a.respPost === post && sentTo(a.respOrder, a.respPerson))) return false;
+      return !knowledgeOf(state, seatIdFor(f.principal)).knownReports.some((k) => sentTo(k.knownBody.reportAnswers, k.knownBody.reportAuthor));
+    });
+    situations.push({ ...situationChoice(def, r.sitOpenOptions, def.delegableTo, null), consultPosts });
   }
   const awaiting = postsInStatus(state, 'ready').filter((p) => state.planRecords[p]!.planIssuer === f.principal && !answerInTransit(state, f.principal, p, ['go']));
   const d = world.map.world.rules.plans.goalDefaults;

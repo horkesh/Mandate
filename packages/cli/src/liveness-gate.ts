@@ -120,7 +120,7 @@ function notHere(why: string): GateBand {
 const SITUATIONS_UNAUTHORED = 'union-1861 has no situations authored until the March 1861 authoring lane (0042, 0046); the testbed run exercises them';
 const FILTER_EMPTY = 'both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post';
 const NO_CANDID_RELAY = 'the testbed’s one relaying office (the war ministry) holds what it dislikes rather than objecting: its holder is not candid (lane 1.1); union-1861 fires it, and the kernel test drives it';
-const VERBS_UNUSED = 'the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it';
+const VERBS_UNUSED = 'the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it';
 /** Lane 1.12: the Union run's one engagement in 148 days is the bombardment of Fort Sumter, fire only across water. */
 const NO_UNION_BATTLE = 'the Union run fights no field battle in 148 days: its one engagement is the bombardment of Fort Sumter, fire only across water, with no crossing and no assault (lane 1.12); the testbed run fires it';
 const PV = 'packages/kernel/test/people-verbs.test.ts';
@@ -179,7 +179,6 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'situations.waiting': { why: 'waiting is an option a human takes; the rule-driven principal takes the historical default (0057)', test: 'packages/kernel/test/situations.test.ts', needle: 'waits for news to reach the principal' },
   // Lane 1.5: the people verbs no rule seat uses yet, each driven by its own kernel test (lane 1.12's doctrine drives
   // appoint, transfer and inquire, banded as verbs.answered and verbs.declined).
-  'verbs.consulted': { why: VERBS_UNUSED, test: PV, needle: 'his answer becomes a stance on record' },
   'verbs.audience': { why: VERBS_UNUSED, test: PV, needle: 'during: held about an approved plan' },
   'verbs.in_washington': { why: VERBS_UNUSED, test: PV, needle: 'promise, pressure and address act in Washington' },
   'people.promise_kept': { why: VERBS_UNUSED, test: PV, needle: 'with a promise of advancement kept by it' },
@@ -234,6 +233,7 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
  * (each pack's checkpoints.json) are independent and unchanged; these are mechanic liveness counts only.
  */
 const UNION_BANDS: Record<string, GateBand> = {
+  'verbs.consulted': around(5),
   'combat.battle_closed': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
   'combat.battle_day': around(2),
   'combat.battle_opened': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
@@ -351,6 +351,7 @@ const UNION_BANDS: Record<string, GateBand> = {
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
 const TESTBED_BANDS: Record<string, GateBand> = {
+  'verbs.consulted': quiet('the testbed history resolves its situations before a morning consultation; the Union history consults the open question’s proposers (R84)'),
   // Lane 1.3, merged with lane 1.2's plans: battles of one day each, in which the defender withdraws or routs and the winner
   // chooses whether to pursue. Re-banded from lane 1.12's run (the doctrine's levies, inquiries and concentration): four battle-days.
   'combat.battle_closed': around(4),

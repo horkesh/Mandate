@@ -98,6 +98,14 @@ describe('a holder handed a situation (lane 0.7)', () => {
 });
 
 describe('a principal doing his historical jobs by his pack doctrine (lane 1.12)', () => {
+  it('consults the offered proposer posts once per situation, including at peace, within attention', () => {
+    const situation = ids.toId('situation', 'question');
+    const choice = { situation, options: [], delegableTo: [], consultPosts: [post('near'), post('far'), post('near')] };
+    const open = { ...menu, atWarSince: null, situations: [choice] };
+    expect(principalOrders(open, [], 1)).toEqual([{ cmd: 'consult', situation, posts: [post('far'), post('near')] }]);
+    expect(principalOrders({ ...open, attention: { ...menu.attention, left: 0 } }, [], 1)).toEqual([]);
+    expect(principalOrders({ ...open, situations: [{ ...choice, consultPosts: [] }] }, [], 2)).toEqual([]);
+  });
   it('gives each offensive goal on its day, by the quickest free route, on the pack’s terms and his neutral-ground policy', () => {
     const m = doctrine({ offensives: [{ post: post('far'), objective: region('r9'), day: 30 }] });
     expect(quiet(principalOrders(m, [], 29))).toEqual([]);

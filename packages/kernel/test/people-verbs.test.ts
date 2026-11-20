@@ -13,6 +13,7 @@ import { goalTerms } from './support/test-seats.ts';
 import { answerOrder, contextFor, orderTerms, profileOf, pushbackOf } from '../src/reading/orders.ts';
 import type { State } from '../src/root-state.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
+import { morningGround, principalMenu } from '../src/seats/requests.ts';
 import { indexSeatsWorld, type SeatsWorld } from '../src/seats/world.ts';
 import type { OptionDef, SituationDef } from '../src/situations/types.ts';
 import { attentionPrice } from '../src/tick/attention.ts';
@@ -535,6 +536,34 @@ describe('the map from orders to values (0074)', () => {
 });
 
 describe('regard between people (lane 1.5’s column)', () => {
+  it('offers consultation only to held own-side posts of open-option proposers, and suppresses sent requests', () => {
+    const sit = decision('choice', { options: [
+      option('hold', 1, { proposedBy: [P('a_sec'), P('a_gen'), P('b_gen'), P('a_bold')] }),
+      option('press', 2, { proposedBy: 'inaction' }),
+    ] });
+    const world = indexedFixture({}, [sit]);
+    const initial = createState(world, { seed: 1, drivers: { a_lead: 'human' } });
+    const start = { ...initial, postStates: { ...initial.postStates, a_reserve: { ...initial.postStates[POST('a_reserve')]!, postHolder: null } } };
+    const opened = days(world, start, 1).state;
+    const offered = (state: State) => principalMenu(world, state, F('a'), morningGround(world, state, state.stateDay + 1)).situations[0]?.consultPosts;
+    expect(offered(opened)).toEqual([POST('a_army'), POST('a_office')]);
+    const sent = days(world, opened, 1, { 2: [{ cmd: 'consult', situation: S('choice'), posts: [POST('a_army'), POST('a_office')] }] });
+    expect(fired(sent.results)).toEqual([]);
+    expect(offered(sent.state)).toEqual([]);
+    const arrived = days(world, sent.state, 5).state;
+    expect(offered(arrived)).toEqual([]);
+    expect(Object.values(arrived.orderResponses).some((r) => r.respKind === 'verb:consult')).toBe(true);
+  });
+  it('keeps consultations distinct by situation even when the message key is shortened', () => {
+    const name = `question_${'long_'.repeat(20)}`;
+    const world = indexedFixture({}, [decision(name), decision('other')]);
+    const opened = days(world, createState(world, { seed: 1, drivers: { a_lead: 'human' } }), 1).state;
+    const result = days(world, opened, 3, { 2: [{ cmd: 'consult', situation: S(name), posts: [POST('a_office')] }] }).state;
+    const choices = principalMenu(world, result, F('a'), morningGround(world, result, result.stateDay + 1)).situations;
+    expect(Object.values(result.orderResponses).find((r) => r.respKind === 'verb:consult')?.respOrder).toMatch(/^m\.2\.[a-f0-9]{16}$/);
+    expect(choices.find((c) => c.situation === name)?.consultPosts).toEqual([]);
+    expect(choices.find((c) => c.situation === 'other')?.consultPosts).toEqual([POST('a_office')]);
+  });
   it('starts from the World’s cited regard for others, and the unknown elsewhere', () => {
     const world = indexedFixture();
     const people = world.map.world.people.map((p) => (p.id === P('a_gen') ? { ...p, regardOthers: [{ toward: P('a_bold'), direction: 'low' as const, cites: [{ source: 'FIXTURE', at: null }] }] } : p));
