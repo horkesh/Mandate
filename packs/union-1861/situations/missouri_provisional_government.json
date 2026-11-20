@@ -8,7 +8,7 @@
   "event": {
     "callReceived": {
       "post": "st_gov_missouri",
-      "days": 106
+      "days": 105
     }
   },
   "effects": [
@@ -44,7 +44,7 @@
     },
     {
       "source": "NOTE-secession-winter-1861",
-      "at": "3.5"
+      "at": "3.5 and section 1, 1861-07-31, citing MO-Timeline (Missouri State Archives, https://www.sos.mo.gov/archives/history/timeline/3, vacancy-ordinance entry; read for R85). [I] 105 days after the call is received: in the history run receipt is 17 April and the notice fires on 31 July. The wait is a model parameter, not a historical interval between the call and the convention; the earlier 106 days fires on 1 August after the corrected opening"
     }
   ]
 }
