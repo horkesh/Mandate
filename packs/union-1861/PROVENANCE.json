@@ -1640,6 +1640,26 @@
       "copyUsed": "https://archive.org/stream/reminiscencesofwsewa/reminiscencesofwsewa_djvu.txt; pp. 151-152 read for R80. Retrospective memoir, not a contemporary cabinet minute.",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "SC-HIST-1900",
+      "title": "Report of the State Historian of Confederate Records for 1899, in Reports and Resolutions of the General Assembly of South Carolina, Volume I (1900)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://www.carolana.com/SC/Legislators/Documents/Reports_and_Resolutions_of_the_General_Assembly_of_South_Carolina_1900_Volume_I.pdf; printed pp.11-13,65 read; p.13 visually checked. Retrospective institutional compilation, not a contemporary troop return. Retained outside the worktree in C:/Pyrrhic/mandate-research-sources/S1/.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "NYH-1861-0409",
+      "title": "The New York Herald, 9 April 1861, page 2",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://www.loc.gov/resource/sn83030313/1861-04-09/ed-1/?sp=2&st=text; Charleston correspondence dated 3 April, Pettigrew rifles 450; LOC original text checked independently of a newspaper mirror. Retained in C:/Pyrrhic/mandate-research-sources/S1/LOC-herald-1861-04-09-p2.md.",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

@@ -19,8 +19,24 @@ describe('Sumter’s cited terms (R74, OR I-1 pp. 13–15)', () => {
     expect(result.surrendered).toBe('evacuated_under_terms');
     expect(result.people).toEqual([]);
     expect(result.command).toContainEqual(expect.objectContaining({ person: anderson, why: 'evacuated' }));
-    // Captured on ece105e before R74, with this same pack/start, attackers and surrender order on 13 April.
-    expect(canonicalHash(result)).toBe('62df97f062af0b7b9dc90f6e1751334bace54edb41a284d18a668ccef5f0ac5a');
+    // The pre-R74 whole-proposal control used the original, unquantified attackers. S1 supplies
+    // three later-read strength snapshots; pin the old inputs here rather than changing that control
+    // or making production strengths fit it. The actual current pack is exercised above.
+    const initial = start();
+    const legacyBlocks = { ...initial.forceBlockStates };
+    for (const name of ['fb_st_charleston_fort_johnson', 'fb_st_charleston_fort_palmetto_stono', 'fb_st_charleston_regiment_of_rifles']) {
+      const block = ids.toId('forceBlock', name);
+      legacyBlocks[block] = { ...legacyBlocks[block]!, fbStrength: null };
+    }
+    const palmetto = ids.toId('forceBlock', 'fb_st_charleston_fort_palmetto_stono');
+    legacyBlocks[palmetto] = { ...legacyBlocks[palmetto]!, fbArm: 'artillery' };
+    const legacy = fall({ ...initial, forceBlockStates: legacyBlocks }, 39);
+    expect(canonicalHash(legacy)).toBe('62df97f062af0b7b9dc90f6e1751334bace54edb41a284d18a668ccef5f0ac5a');
+    const guns = (r: typeof result) => r.day.terms.find(t => t.btermKind === 'guns_attacker')!.btermValue;
+    expect(guns(result)).toBe(guns(legacy) + 100);
+    expect([result.surrendered, result.musters, result.command, result.people, result.control]).toEqual(
+      [legacy.surrendered, legacy.musters, legacy.command, legacy.people, legacy.control],
+    );
   });
 
   it('captures the replacement and his garrison when Anderson has been relieved before bombardment', () => {
