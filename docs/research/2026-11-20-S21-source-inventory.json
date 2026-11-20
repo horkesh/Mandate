@@ -1,0 +1,2892 @@
+{
+  "sprint": "S21",
+  "base": "73d6b7af81213fec8377907c7db4d9692792f7ef",
+  "source_root": "C:\\Pyrrhic\\mandate-research-sources\\S4",
+  "sources": [
+    {
+      "label": "A",
+      "title": "Daniel Ammen, The Atlantic Coast (1883)",
+      "item": "atlanticcoas00amme",
+      "local_path": "atlanticcoas00amme/atlanticcoas00amme.pdf",
+      "bytes": 16040623,
+      "sha256": "f3557a20757e4958f1de9f3ee4e64509c46c6edb520b44133455ed4bf5c8f1e4",
+      "pdf_pages": 316,
+      "archive_url": "https://archive.org/details/atlanticcoas00amme",
+      "scan_url": "https://archive.org/download/atlanticcoas00amme/atlanticcoas00amme.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 20,
+          "pdf": 42,
+          "evidence": "S21/readings/A-p20.json",
+          "sha256": "25cdc59d51aa3f3acc8ebb701ce6b90b3f51b3759c58f9b174110b24636bc9e7",
+          "method": "visual image",
+          "header_excerpt": "THE ATLANTIC COAST. 20 About noon a single steamer of the enemy came out, and at long range opened fire on the",
+          "images": [
+            "S21/images/A-p20.png"
+          ]
+        },
+        {
+          "printed": 27,
+          "pdf": 49,
+          "evidence": "S21/readings/A-p27.json",
+          "sha256": "8f20ba9a08b9ceb14b676c53ce054add6c39830ba5d366e411f33b18bf5d6920",
+          "method": "visual image",
+          "header_excerpt": "THE PORT ROYAL EXPEDITION. 27 been abandoned, and that the same signal was soon after made by the Pembina. At ",
+          "images": [
+            "S21/images/A-p27.png"
+          ]
+        }
+      ],
+      "source_class": "retrospective naval narrative",
+      "page_examples": [
+        {
+          "printed": 13,
+          "pdf": 35
+        },
+        {
+          "printed": 163,
+          "pdf": 189
+        },
+        {
+          "printed": 182,
+          "pdf": 212
+        },
+        {
+          "printed": 189,
+          "pdf": 219
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Later compilation/reconstruction"
+    },
+    {
+      "label": "D",
+      "title": "Frederick H. Dyer, A Compendium of the War of the Rebellion (1908)",
+      "item": "08697590.3359.emory.edu",
+      "local_path": "08697590.3359.emory.edu/08697590_3359.pdf",
+      "bytes": 175232086,
+      "sha256": "9823db0a23ba90b5850c2457dae503864a10266dc4fa590a94fab16a5f0b3f88",
+      "pdf_pages": 1810,
+      "archive_url": "https://archive.org/details/08697590.3359.emory.edu",
+      "scan_url": "https://archive.org/download/08697590.3359.emory.edu/08697590_3359.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 274,
+          "pdf": 281,
+          "evidence": "S21/readings/D-p274.json",
+          "sha256": "559fc3c60232e5a86f6a4864e369cb41597c8912c923d5d7d131113c87a7699f",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "274 COMPENDIUM OF THE WAR OF THE REBELLION Oct., COUCH'S BRIGADE.- COMMANDER. Oct., 1861 D. N. Couch ! Col. 7t"
+        }
+      ],
+      "source_class": "retrospective organisational compilation",
+      "page_examples": [
+        {
+          "printed": 271,
+          "pdf": 278
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Later compilation/reconstruction"
+    },
+    {
+      "label": "F",
+      "item": "regimentallosses00foxwuoft",
+      "title": "William F. Fox, Regimental Losses in the American Civil War, 1861-1865 (1889)",
+      "archive_url": "https://archive.org/details/regimentallosses00foxwuoft",
+      "scan_url": "https://ia601509.us.archive.org/9/items/regimentallosses00foxwuoft/regimentallosses00foxwuoft.pdf",
+      "local_path": "S21/regimentallosses00foxwuoft/regimentallosses00foxwuoft.pdf",
+      "bytes": 43258948,
+      "sha256": "2f61a73259cafe13d4ff463f3b8395ff1d7a11c38fe0e590f137adbd43e08692",
+      "pages": [
+        {
+          "printed": 34,
+          "pdf": 48,
+          "evidence": "S21/readings/F-p34.json",
+          "sha256": "bfa3c87f1000e4a23e70ac8576b6636d1b5244878d62239c6630c5bba71722f7",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "13+ RKUIMKNTAI, LOSSKS ix TIIK CMvn, WAK. Per 11 + Ct. Battle. />/: ision. 197 KilltJ. 12+ KiigageJ. Fair Oaks",
+          "images": [
+            "S21/images/F-p34.png"
+          ]
+        },
+        {
+          "printed": 57,
+          "pdf": 71,
+          "evidence": "S21/readings/F-p57.json",
+          "sha256": "2f58aa9ed1f3aa0fda58ef068816738944276c1e1fd49b144ad7789049c0fff1",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "CHAPTER VII. MUSTER-OUT-ROLLS — ANTHROPOLOGICAL STATISTICS. '1PHE statistics presented in these pages are base",
+          "images": [
+            "S21/images/F-p57.png"
+          ]
+        },
+        {
+          "printed": 59,
+          "pdf": 73,
+          "evidence": "S21/readings/F-p59.json",
+          "sha256": "61d3dcfeff073b74f2f0dda40523af2a05ef28ce0e2918d67e30a9374e520256",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "THE STORY OF THE MUSTER-OUT-ROLL. 59 \" Died of fever at Young's Point, Miss.,\" reminds one of the campaigns in",
+          "images": [
+            "S21/images/F-p59.png"
+          ]
+        },
+        {
+          "printed": 65,
+          "pdf": 79,
+          "evidence": "S21/readings/F-p65.json",
+          "sha256": "0508fb4e36943b1482c94f9648926580574871c23122dc51d848c8258e17f454",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "THE FIKST CORPS. 65 consisting of five brigades — 21 batteries in all. This Artillery Corps of the Army of the",
+          "images": [
+            "S21/images/F-p65.png"
+          ]
+        },
+        {
+          "printed": 67,
+          "pdf": 81,
+          "evidence": "S21/readings/F-p67.json",
+          "sha256": "5660c546a5c187dbf9903bce9d6730bc7d133e71a174fc11430465c8e973b49c",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "THE SECOND CORPS. 67 ments. This corps was to be designated the First, with General Hancock in command, but th",
+          "images": [
+            "S21/images/F-p67.png"
+          ]
+        },
+        {
+          "printed": 75,
+          "pdf": 89,
+          "evidence": "S21/readings/F-p75.json",
+          "sha256": "a8f7ed89bc87ba527e56bcabb6ec95a7f8d60b2ba908cbe313bedcac3d686ea6",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "FIFTH CORPS. 75 The next battle was Manassas (Second Bull Run), where the corps, still under command of Genera",
+          "images": [
+            "S21/images/F-p75.png"
+          ]
+        },
+        {
+          "printed": 550,
+          "pdf": 564,
+          "evidence": "S21/readings/F-p550.json",
+          "sha256": "5d5cdcf3011fa499f22511fa107c2a9a7be9265fe9745a96bd4b9f5565b36b7d",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "550 REGIMENAL LOSSES itf THE CIVIL WAR. D.itt. Killed. Wo'tndfrl. inel'id- Capfwrft and Engagements. (Confeder",
+          "images": [
+            "S21/images/F-p550.png"
+          ]
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pdf_pages": 616,
+      "acquisition": "S21 new retained scan",
+      "source_character": "Later compilation/reconstruction"
+    },
+    {
+      "label": "L",
+      "title": "Thomas L. Livermore, Numbers and Losses in the Civil War in America, 1861–65 (1900)",
+      "item": "numberslosses00liverich",
+      "local_path": "numberslosses00liverich.pdf",
+      "bytes": 10411897,
+      "sha256": "23284174b80ff12f3678fc316b91360e157296a891481cfab00445c499680c2e",
+      "pdf_pages": 170,
+      "archive_url": "https://archive.org/details/numberslosses00liverich",
+      "scan_url": "https://archive.org/download/numberslosses00liverich/numberslosses00liverich.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 5,
+          "pdf": 17,
+          "evidence": "S21/readings/L-p5.json",
+          "sha256": "f04201e1bf145a2a15612fe63701b23a4093df1274c89c82e1a7bf76edb72b99",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE CIVIL WAR 5 ESTIMATE BASED ON CONFEDERATE MUSTER-ROLLS UNITED STATES WAR DEPARTMENT."
+        },
+        {
+          "printed": 6,
+          "pdf": 18,
+          "evidence": "S21/readings/L-p6.json",
+          "sha256": "d65872641af547235d294754192cd0739edba6d4fc154db660c91a0c457888aa",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "6 NUMBERS AND LOSSES IN THE WAR CIVIL the extent of such increase must remain a matter of And he number adds t"
+        },
+        {
+          "printed": 34,
+          "pdf": 46,
+          "evidence": "S21/readings/L-p34.json",
+          "sha256": "e9a07ec300f7648ed041d596a5e353f30c50625a17ffb77b8b711d55bf551bb6",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE CIVIL WAR 34 fered by the armies embraced in the above 1 the table, most of the them"
+        },
+        {
+          "printed": 35,
+          "pdf": 47,
+          "evidence": "S21/readings/L-p35.json",
+          "sha256": "15745787cf883a866261ccff55e4b5b4ab709971a1b34e8f9889e31f382ea57e",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE WAR CIVIL 35 writer is the of the of the Bureau report Superintendent of made in 1 w"
+        },
+        {
+          "printed": 36,
+          "pdf": 48,
+          "evidence": "S21/readings/L-p36.json",
+          "sha256": "af855ce978fc2217a4805522789fb2b1a0868764929d8c5bd647e3bba1a8dcfa",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE CIVIL WAR 36 least 10 and battalions at least 5 companies, companies/ and another or"
+        },
+        {
+          "printed": 37,
+          "pdf": 49,
+          "evidence": "S21/readings/L-p37.json",
+          "sha256": "c96c8b0e13e972cdd6287242605ec3fa2bf17b4ade31408127240d8cc303b8eb",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE CIVIL WAR 37 number of the enrolled Confederate regularly regi ments the war may be "
+        },
+        {
+          "printed": 38,
+          "pdf": 50,
+          "evidence": "S21/readings/L-p38.json",
+          "sha256": "593ca23d9405b7316c6913991e0432f0fda3955e530cdae3c35508c55778b725",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE CIVIL WAR 38 from that State than in the other Confederate regiment States. The have"
+        },
+        {
+          "printed": 78,
+          "pdf": 90,
+          "evidence": "S14/readings/L-p78.json",
+          "sha256": "8ca7aa9fb83e7d4ef508d0fd0d6548d01fb43d0565756d49c52e97abeaa4c4ea",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "78 NUMBERS AND LOSSES IN THE CIVIL WAR WILSON S CEEEK, MO., AUGUST 10, 1861. UNION ARMY. Lyon s command, about"
+        },
+        {
+          "printed": 79,
+          "pdf": 91,
+          "evidence": "S21/readings/L-p79.json",
+          "sha256": "e52dc67aeb0553d2912b324e79e02cdfc48d9a79ca1792545b001fbbb2c753b4",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE CIVIL WAR 79 PEA MARCH RIDGE, ARK., 7, 1862. UNION ARMY. Army of the Southwest, abou"
+        },
+        {
+          "printed": 80,
+          "pdf": 92,
+          "evidence": "S21/readings/L-p80.json",
+          "sha256": "9ebcd931e8a5a897db7642a604c4080e683d4a644f1be40da0617676fab50f4c",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE CIVIL WAR 80 CONFEDERATE ARMY. Effectives 1 40,335* 1723. Wounded, 8012. Total, 9735"
+        },
+        {
+          "printed": 82,
+          "pdf": 94,
+          "evidence": "S21/readings/L-p82.json",
+          "sha256": "2ee12c3f75cef3cc69f5d50c1af688dc301b11ca1496fd910bbc7433f9ed7c6e",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND IN THE CIVIL WAR 82 LOSSES MECHANICSVILLE, JUNE 1862. 26, UNION ABMY. Present for June in 3d divis"
+        },
+        {
+          "printed": 83,
+          "pdf": 95,
+          "evidence": "S21/readings/L-p83.json",
+          "sha256": "8a1af65091e3573b0dc97a8cfdb89360d395c82356aa3095bda5bc4653d80783",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE CIVIL WAR 83 Effectives estimated at 93 per cent 34,214 Killed, 894. Wounded, 3107. "
+        },
+        {
+          "printed": 84,
+          "pdf": 96,
+          "evidence": "S21/readings/L-p84.json",
+          "sha256": "7e59af732300da4ca81ffbe68f983fc3bdefe9a7fa55ac71f2f18a30789b2c6e",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "84 NUMBERS AND LOSSES IN THE WAR CIVIL PEACH ORCHARD, SAVAGE JUNE STATION, 29, 1862. WHITE OAK SWAMP, GLENDALE"
+        },
+        {
+          "printed": 85,
+          "pdf": 97,
+          "evidence": "S21/readings/L-p85.json",
+          "sha256": "5c7915718600d27744f9f11b2e5b2fdadcd974c759e0e901ab80e35cc39de682",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE CIVIL WAR 85 724. Wounded, 4245. Total, 4969. Missing, 3067. Killed, Hit in 1000, 60"
+        },
+        {
+          "printed": 86,
+          "pdf": 98,
+          "evidence": "S21/readings/L-p86.json",
+          "sha256": "efa145ae1d67f010d995a62496eddf3a72abbfbd34bd872b07421fb5735e5d48",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE WAR 86 CIVIL SEVEN DAYS BATTLES, JUNE 25-JULY 1, 1862. UNION AKMY. Effectives engage"
+        },
+        {
+          "printed": 88,
+          "pdf": 100,
+          "evidence": "S21/readings/L-p88.json",
+          "sha256": "7a884ee79fea623646ae8e13b04affa1294b39994664d8546ac23e6fd16cfb44",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE CIVIL WAR 88 Effectives estimated at 93 per cent 15,668 Robertson and 2d, and 12th s"
+        },
+        {
+          "printed": 89,
+          "pdf": 101,
+          "evidence": "S21/readings/L-p89.json",
+          "sha256": "1787752bcaf85b4f667427c9953830306dca78cb7430e9f132906cf23fadddb3",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE CIVIL WAR 89 Ewell 10 s August and Jackson s division, (5027), estimated at 5365 1 1"
+        },
+        {
+          "printed": 92,
+          "pdf": 104,
+          "evidence": "S21/readings/L-p92.json",
+          "sha256": "2d32fa0361501aada9462d4fe8df18d440aea4bfcb8465852e0285089a8d2af8",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE CIVIL WAR 92 ANTIETAM, SEPTEMBER 1862. 16, 17, UNION ARMY. Present for ex. Morell di"
+        },
+        {
+          "printed": 93,
+          "pdf": 105,
+          "evidence": "S21/readings/L-p93.json",
+          "sha256": "5e73efdba6c047246dcef5f8005c4955755670138d560db0f1281286ab403644",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE WAR CIVIL 93 Killed, 2700. 1 Wounded, 9024. 1 about Total, 11,724. Missing, I 2000.&"
+        },
+        {
+          "printed": 94,
+          "pdf": 106,
+          "evidence": "S21/readings/L-p94.json",
+          "sha256": "80f4c4cae2d9017753f58b41958edcaca8097313f1750619bbdd5a40b42684eb",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE CIVIL WAR 94 CORINTH, OCTOBER 1862. 3, 4, UNION ARMY. Present for September 30, 1862"
+        },
+        {
+          "printed": 95,
+          "pdf": 107,
+          "evidence": "S21/readings/L-p95.json",
+          "sha256": "d6b721a304475513f0188caa5383fa4d3a2fe28ddf4b4d116cbcb2a2d6f29780",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NUMBERS AND LOSSES IN THE CIVIL WAR 95 PERRYVILLE, OCTOBER 1862. 8, UNION ARMY. Present * 39,721 for duty Effe"
+        }
+      ],
+      "source_class": "retrospective numerical reconstruction",
+      "page_examples": [
+        {
+          "printed": 77,
+          "pdf": 89
+        },
+        {
+          "printed": 92,
+          "pdf": 104
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Later compilation/reconstruction"
+    },
+    {
+      "label": "M",
+      "title": "A. T. Mahan, The Gulf and Inland Waters (1883)",
+      "item": "gulfandinlandwa03mahagoog",
+      "local_path": "gulfandinlandwa03mahagoog/gulfandinlandwa03mahagoog.pdf",
+      "bytes": 6903596,
+      "sha256": "c3e02fb0e377429697ca98f33c3befc3ee693256b9b900794ddbd8fbbd1a4cf4",
+      "pdf_pages": 298,
+      "archive_url": "https://archive.org/details/gulfandinlandwa03mahagoog",
+      "scan_url": "https://archive.org/download/gulfandinlandwa03mahagoog/gulfandinlandwa03mahagoog.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 50,
+          "pdf": 71,
+          "evidence": "S21/readings/M-p50.json",
+          "sha256": "28b7ee3cf5f046488779bf2da795c6c3b40d6504240524299893b9a32346f6ce",
+          "method": "visual image",
+          "header_excerpt": "",
+          "images": [
+            "S21/images/M-p50.png"
+          ]
+        },
+        {
+          "printed": 51,
+          "pdf": 72,
+          "evidence": "S21/readings/M-p51.json",
+          "sha256": "640ee96a757d687fe893f14aac43d79a6d47fa9f749672ae01374744512d611c",
+          "method": "visual image",
+          "header_excerpt": "",
+          "images": [
+            "S21/images/M-p51.png"
+          ]
+        },
+        {
+          "printed": 107,
+          "pdf": 130,
+          "evidence": "S21/readings/M-p107.json",
+          "sha256": "35b291a73502a5e1ed09714d6a44cd070d7452f52dda4fe091ef6aac23f10f38",
+          "method": "visual image",
+          "header_excerpt": "",
+          "images": [
+            "S21/images/M-p107.png"
+          ]
+        }
+      ],
+      "source_class": "retrospective naval narrative",
+      "page_examples": [
+        {
+          "printed": 9,
+          "pdf": 30
+        },
+        {
+          "printed": 53,
+          "pdf": 76
+        },
+        {
+          "printed": 107,
+          "pdf": 130
+        },
+        {
+          "printed": 108,
+          "pdf": 131
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Later compilation/reconstruction"
+    },
+    {
+      "label": "MA62",
+      "title": "Annual report of the Adjutant-General of the Commonwealth of Massachusetts, for year ending December 31, 1862 (1863)",
+      "scan_url": "https://antietaminstitute.org/hrc/files/original/0f2f0e1216f15851763b47ec65f5cb28c36904a5.pdf",
+      "archive_url": "https://antietaminstitute.org/hrc/s/HRC/item/1159",
+      "local_path": "S21/massachusetts-ag-1862.pdf",
+      "bytes": 33427383,
+      "sha256": "c5658514e6de010301adcd9344b1d8888eb47c904527d6de1f199064628d7456",
+      "pages": [
+        {
+          "printed": 172,
+          "pdf": 174,
+          "evidence": "S21/readings/MA62-p172.json",
+          "sha256": "f6ebc05ae3a9597ca39fb89176e6425bc8032ab167d2fb601edb3296a2b80bd2",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "ADJUTANT-GENERAL'S REPORT. 172 [Jan. ^[ay the enemy evacuated their entire line of works, 4tli, svliich wore a",
+          "images": [
+            "S21/images/MA62-p172.png"
+          ]
+        },
+        {
+          "printed": 173,
+          "pdf": 175,
+          "evidence": "S21/readings/MA62-p173.json",
+          "sha256": "bcb8b9ee1b78c412e7c2ee8c75f7c8fd80c137ccfbba1c21d308226a00ad1b86",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "HOUSE—No. 1863.] 3. 173 by Lieutenant Kirby of tbo regular service, wbich was playing witb great effect upon t",
+          "images": [
+            "S21/images/MA62-p173.png"
+          ]
+        },
+        {
+          "printed": 174,
+          "pdf": 176,
+          "evidence": "S21/readings/MA62-p174.json",
+          "sha256": "23b100f0c492b7f5c5aa5a5b7cf540456e726538398d63ab8253ca3bbb626e75",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "ADJUTANT-GENERAL'S REPORT. 174 [Jan. the approach of the troops then slowly falling back from Fair Oaks. The t",
+          "images": [
+            "S21/images/MA62-p174.png"
+          ]
+        },
+        {
+          "printed": 175,
+          "pdf": 177,
+          "evidence": "S21/readings/MA62-p175.json",
+          "sha256": "d2fc5848348cc9f12b8237f599fb8c5cb54a8a648b36369ab6db22724c6243aa",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "HOUSE—No. 1863.] 3. 175 for Alexandria. Arrived August 28tli, and left the following day for Chain Bridge. Her",
+          "images": [
+            "S21/images/MA62-p175.png"
+          ]
+        },
+        {
+          "printed": 176,
+          "pdf": 178,
+          "evidence": "S21/readings/MA62-p176.json",
+          "sha256": "888f219324b33824454a9caf515f39181e2db5dcc74cc9ad6450e622d38c326e",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "176 ADJUTANT-GENERAL'S REPORT. [Jan. ordered to tlic front, to follow up the success already achieved by the t",
+          "images": [
+            "S21/images/MA62-p176.png"
+          ]
+        },
+        {
+          "printed": 177,
+          "pdf": 179,
+          "evidence": "S21/readings/MA62-p177.json",
+          "sha256": "8bdcf6225d0919f382b8cb551cbe186e9a97a97b0b85b05b07cc046a4b7fb184",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "• HOUSE—No. 1863.] 3. 177 by kind hands in humble graves hastily dug and prepared tlio for their reception. Se",
+          "images": [
+            "S21/images/MA62-p177.png"
+          ]
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pdf_pages": 550,
+      "acquisition": "S21 new retained scan",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "ONR I-18",
+      "item": "cu31924080772191",
+      "title": "Official Records of the Union and Confederate Navies, series I, volume 18 (1904)",
+      "archive_url": "https://archive.org/details/cu31924080772191",
+      "scan_url": "https://ia600102.us.archive.org/32/items/cu31924080772191/cu31924080772191.pdf",
+      "local_path": "S21/cu31924080772191/cu31924080772191.pdf",
+      "bytes": 53869997,
+      "sha256": "f286d017e57ef71810db1b9f60057b94b546589d02d686eabcab1e3d3e95f306",
+      "pages": [
+        {
+          "printed": 71,
+          "pdf": 97,
+          "evidence": "S21/readings/ONR_I-18-p71.json",
+          "sha256": "66a7739c8db474f4a9768c11f4758313a217457cef43fded56d71cc0cedf137d",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "WEST GULP BLOCKADING SQUADRON. 71 Report of Fl(w- Officer Farragut, U. S. Navy, regarding condition of affairs"
+        },
+        {
+          "printed": 151,
+          "pdf": 181,
+          "evidence": "S21/readings/ONR_I-18-p151.json",
+          "sha256": "911be2415ab91f54b7fddbe4c7ef49ca44c0411f243ae1a5126259206b3fb107",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "\"WEST GTJIiF BLOCKADINO SQUADRON. 151 boats, rams, etc., with the names of their respective commanding oflScer"
+        },
+        {
+          "printed": 152,
+          "pdf": 182,
+          "evidence": "S21/readings/ONR_I-18-p152.json",
+          "sha256": "9cdbce21e97c288e4fb84b0e5bdae38f0d22d30ba6d6476039a73622ad52d059",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "152 WEST GULF BLOCKADING SQUADRON. instant met his highest admiration. Their steadiness, courage, and intrepid"
+        },
+        {
+          "printed": 153,
+          "pdf": 183,
+          "evidence": "S21/readings/ONR_I-18-p153.json",
+          "sha256": "9b85491d542104a34565b5f770179001c18168b8e9944efde64891c5120a02a8",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "\"WEST GULF BLOCKADING 8QUADK0N. 153 But I must say 1 never witnessed such vandalism in my life as the destruct"
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pdf_pages": 1001,
+      "acquisition": "S21 new retained scan",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "ONR I-22",
+      "item": "cu31924080777448",
+      "title": "Official Records of the Union and Confederate Navies, series I, volume 22 (1908)",
+      "archive_url": "https://archive.org/details/cu31924080777448",
+      "scan_url": "https://ia902804.us.archive.org/4/items/cu31924080777448/cu31924080777448.pdf",
+      "local_path": "S21/cu31924080777448/cu31924080777448.pdf",
+      "bytes": 47636360,
+      "sha256": "185316ef52a550b32761daad005471ee5b1b61b5d7dca8eb516d08dc8f9834a1",
+      "pages": [
+        {
+          "printed": 282,
+          "pdf": 312,
+          "evidence": "S21/readings/ONR_I-22-p282.json",
+          "sha256": "6f91aa5f959fd0a0aa172448f15be97a5221ce54de88d6b57bfc0bef28222a8a",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "282 NAVAL FOBCES ON WESTERN WATEES. had made arrangements to secure the best skill amongst our river men for t"
+        },
+        {
+          "printed": 341,
+          "pdf": 371,
+          "evidence": "S21/readings/ONR_I-22-p341.json",
+          "sha256": "4ebf2e6bc4987adbdd5977f8e2522e9f8e333a24ac6b87733d84ddae3672cc9d",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NAVAL FORCES ON WESTERN WATERS. 341 Letter from, Captain Foote, U. S. Navy, to Quartermaster-General Meigs, U."
+        },
+        {
+          "printed": 515,
+          "pdf": 545,
+          "evidence": "S21/readings/ONR_I-22-p515.json",
+          "sha256": "11fe6a43022f2c10e48be99d5e045ec5e0901cf0d0d19c86a7f32f792c5a38a7",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NAVAL FOBCES ON WESTERN WATERS. 515 Re-port of Flag-Offlcer Foote, U. S. Navy, regarding the urgent need of me"
+        },
+        {
+          "printed": 537,
+          "pdf": 567,
+          "evidence": "S21/readings/ONR_I-22-p537.json",
+          "sha256": "cc36b16f01c50ba487c8af6e98dc1820930f07ccbbee1cafdfad7d71d336b237",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "naval forces on western waters. •» 537 Special Orders, | U. S. Gunboat Tyler, ^ No. 3. j Paducah, February 2, "
+        },
+        {
+          "printed": 538,
+          "pdf": 568,
+          "evidence": "S21/readings/ONR_I-22-p538.json",
+          "sha256": "2086e05396d33b25d1851a3c99995aacf619ef1cc9f150518bee7baa6f7a3c8e",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "538 • NAVAL POBCES ON WESTERN WATEBS. Commander Porter; Garondelet, Commander Walke, and St. Essex, Commanding"
+        },
+        {
+          "printed": 539,
+          "pdf": 569,
+          "evidence": "S21/readings/ONR_I-22-p539.json",
+          "sha256": "0c21ebc4d13b13d7adb0f5633e690f27a240e79616a267e466a623f25caa12fa",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NAVAL FOBCES ON WESTERN WATEBS. 539 afterwards to pursue the rebel gunboats and secure their capture if possib"
+        },
+        {
+          "printed": 710,
+          "pdf": 744,
+          "evidence": "S21/readings/ONR_I-22-p710.json",
+          "sha256": "e71864ec02ea2a6e1782695e413d16a0aa93b6ecc236012c1d8f84b07bba9914",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "710 NAVAL FORCES ON WESTEBN WATERS. General Pope will give notice to his forces in charge of batteries observe"
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pdf_pages": 1008,
+      "acquisition": "S21 new retained scan",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "ONR I-23",
+      "item": "cu31924080772225",
+      "title": "Official Records of the Union and Confederate Navies, series I, volume 23 (1910)",
+      "archive_url": "https://archive.org/details/cu31924080772225",
+      "scan_url": "https://ia601508.us.archive.org/4/items/cu31924080772225/cu31924080772225.pdf",
+      "local_path": "S21/cu31924080772225/cu31924080772225.pdf",
+      "bytes": 40118773,
+      "sha256": "134673b6499d23de460a57c30957a204f72763e19cc2458ba7d1ba22c534dcce",
+      "pdf_pages": 840,
+      "pages": [
+        {
+          "printed": 119,
+          "pdf": 147,
+          "evidence": "S21/readings/ONR_I-23-p119.json",
+          "sha256": "2a20b2c0aff943895cf87d782c6fc7366ba8ad387b0386ffcb66c5d220ac58a7",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NAVAL FORCES ON WESTERN WATERS. 119 repaired. Besides this, one of the rebel boats was sunk in the begin- ning"
+        },
+        {
+          "printed": 120,
+          "pdf": 148,
+          "evidence": "S21/readings/ONR_I-23-p120.json",
+          "sha256": "d2656bd74b0a8043d41a2cb7b81c589de1b86055a7524e2af1051d745a1fb5db",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "120 NAVAL FOKCES ON WESTESN WATERS. arrive at the closest quarters. In the meantime, however, the firing from "
+        },
+        {
+          "printed": 135,
+          "pdf": 167,
+          "evidence": "S21/readings/ONR_I-23-p135.json",
+          "sha256": "f2b97c58f5274d0e647d1bfd79a7ae11004bb4224140d840c1fca93fac858393",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NAVAL FORCES ON WESTERN WATERS. 135 boats were without iron plating and had been spoken of in ridicule on the "
+        },
+        {
+          "printed": 171,
+          "pdf": 203,
+          "evidence": "S21/readings/ONR_I-23-p171.json",
+          "sha256": "fd24e527000d9a7a4d8f857e83ef6b23ec1aae19f1c0856addc77463293235b9",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NAVAL FORCES ON WESTERN WATERS. 171 between themselves. Mr. Dominy then told me he had been sent back by Capta",
+          "images": [
+            "S21/images/ONR_I-23-p171.png"
+          ]
+        },
+        {
+          "printed": 173,
+          "pdf": 205,
+          "evidence": "S21/readings/ONR_I-23-p173.json",
+          "sha256": "425f39f8c7e064ea439185ee75e9e7377456e2af4cc94d9de69345a030f1a30b",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NAVAL FORCES ON WESTEKN WATEHS. 173 Detailed report of Colonel Fitch, V. S. Army, regarding the capture of St."
+        },
+        {
+          "printed": 174,
+          "pdf": 206,
+          "evidence": "S21/readings/ONR_I-23-p174.json",
+          "sha256": "7944f7d51404133add1e0c7bdfac87d9806fc171021af1e0c6dea5408ab74357",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "174 NAVAL FOKCES ON WESTERN WATERS. enemy had stationed one piece to the right of their lower battery in the d"
+        },
+        {
+          "printed": 350,
+          "pdf": 384,
+          "evidence": "S21/readings/ONR_I-23-p350.json",
+          "sha256": "2c136be8eb2b5161c048c4fd661ba57e222ccc10b0a1ce40af6d8198e1eaf6f8",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "350 NAVAL FORCES ON WESTERN WATERS. tageously be done by the Government, to procure the necessary me- chanics."
+        },
+        {
+          "printed": 351,
+          "pdf": 385,
+          "evidence": "S21/readings/ONR_I-23-p351.json",
+          "sha256": "8401a3f13b80d4287aba12af08c5e5c5983d4b5e3304b382538260dc6f06c6e3",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NAVAL FORCES ON WESTERN WATERS. 351 Memorandum. The Department desiring that the \"Western Flotilla, to be styl"
+        },
+        {
+          "printed": 355,
+          "pdf": 389,
+          "evidence": "S21/readings/ONR_I-23-p355.json",
+          "sha256": "522f0b69167505b9702b7e5bd1ae1933fde3eb19d3c12fc8f8a487d8229addfc",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NAVAL FORCES ON WESTERN WATERS. 355 you in my letter of the 6th instant, and were sent when I had no informati"
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "acquisition": "S21 new retained scan",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "ONR I-6",
+      "item": "officialrecords16librgoog",
+      "title": "Official Records of the Union and Confederate Navies, series I, volume 6 (1897)",
+      "archive_url": "https://archive.org/details/officialrecords16librgoog",
+      "scan_url": "https://ia601403.us.archive.org/32/items/officialrecords16librgoog/officialrecords16librgoog_text.pdf",
+      "local_path": "S21/officialrecords16librgoog/officialrecords16librgoog_text.pdf",
+      "bytes": 73269555,
+      "sha256": "f231cf9bd5917280fff97ffd980d7dda5e13c8e22b4ef88126f37de1d335ffe0",
+      "pages": [
+        {
+          "printed": 119,
+          "pdf": 150,
+          "evidence": "S21/readings/ONR_I-6-p119.json",
+          "sha256": "03a47216a2dcd9d4f8336bfdeef41ee5e13d2d9bec053842bfbd4aae70800dfe",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "ATLANTIC BLOCKADING SQUADRON. 119 Report of Captain Ghauncey^ U. ^, Navy^ commanding U. 8, 8. 8u8que' hannuy o"
+        },
+        {
+          "printed": 120,
+          "pdf": 151,
+          "evidence": "S21/readings/ONR_I-6-p120.json",
+          "sha256": "e4dbcf197f70c3821fe3e4c786963f3e56cb65d165b449abf5113b4ce92989bc",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "120 ATLANTIC BLOCKADING SQUADRON. * If the Department has any orders I shoald be pleased to receive them at Ne"
+        },
+        {
+          "printed": 121,
+          "pdf": 152,
+          "evidence": "S21/readings/ONR_I-6-p121.json",
+          "sha256": "bba8aa4fadcf595a3f6aeb55db67a1ae2b44f499b77fea2e71a8a442a11f3ef9",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "ATLANTIC BLOGKADINQ SQUADRON, 121^ M^jor-General Batler took passage in this ship, the transports hav- ing par"
+        },
+        {
+          "printed": 138,
+          "pdf": 169,
+          "evidence": "S21/readings/ONR_I-6-p138.json",
+          "sha256": "696c7dc13ccfa71ec5c6fe9cb4bb1145f611fc85cfa7a526229e04d242901550",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "138 ATLANTIC BLOCKADING SQUADRON. [ Encl<Miircfl.— Tolegram.] GoLDSBOBO, N. C, August 30j 1861. Hatteras Inlet"
+        },
+        {
+          "printed": 140,
+          "pdf": 171,
+          "evidence": "S21/readings/ONR_I-6-p140.json",
+          "sha256": "1093d422d1c02d7bf77336f9e7b500ca2865e0489af29af4bcb037f0676280dd",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "140 ATLANTIC BLOCKADINO SQUADRON. disabled. Lieutenant Murdaugh was taken, by direction, to the Winslow^ and h"
+        },
+        {
+          "printed": 143,
+          "pdf": 174,
+          "evidence": "S21/readings/ONR_I-6-p143.json",
+          "sha256": "d09a924d656b039417207c518c332f24ec39c8d1e2ae64e508859fb8a8d3cb5b",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "ATLANTIC BLOCKADING SQUADRON. 143 Seport * of Xi^r Andrewi, C. 8. Army. On Board U. S. S. Minnesota, September"
+        },
+        {
+          "printed": 144,
+          "pdf": 175,
+          "evidence": "S21/readings/ONR_I-6-p144.json",
+          "sha256": "46701dc6aa5f5227b47448510f645206ea70c6929f26fdf1b8969c2545a0dcda",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "144 ATLANTIC BLOCKADING SQUADRON. officers having decided tbat it was to be an action of endaranoe until oar r"
+        },
+        {
+          "printed": 549,
+          "pdf": 588,
+          "evidence": "S21/readings/ONR_I-6-p549.json",
+          "sha256": "c75c94585c938cbddce8f72d497915b59fc1f1c8c9533e6d5385c75f0f41e24a",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NORTH ATLANTIC BLOCKADING SQUADRON. 549 greater surface be ^ven to her rudder, and if her boilers can be in- c"
+        },
+        {
+          "printed": 550,
+          "pdf": 589,
+          "evidence": "S21/readings/ONR_I-6-p550.json",
+          "sha256": "ca8abdf401d11360da3ecb5209b52b0bc3617021259cd95cfcac21920706763f",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "550 NORTH ATLANTIC BLOCKADING SQUADRON. were used with a determination worthy of a better caase. They con- sis"
+        },
+        {
+          "printed": 551,
+          "pdf": 590,
+          "evidence": "S21/readings/ONR_I-6-p551.json",
+          "sha256": "fd5e4800462285962e2679209a35ff56d6a3325c6d600a2d46dd7033c609cea0",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NORTH ATLANTIC BLOCKADING SQUADRON. 551 the reduction of Eoanoke Island and operate elsewhere in its vicinity,"
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pdf_pages": 944,
+      "acquisition": "S21 new retained scan",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "ONR I-7",
+      "item": "officialrecords13librgoog",
+      "title": "Official Records of the Union and Confederate Navies, series I, volume 7 (1898)",
+      "archive_url": "https://archive.org/details/officialrecords13librgoog",
+      "scan_url": "https://ia600702.us.archive.org/35/items/officialrecords13librgoog/officialrecords13librgoog_text.pdf",
+      "local_path": "S21/officialrecords13librgoog/officialrecords13librgoog_text.pdf",
+      "bytes": 57497116,
+      "sha256": "9a38fd48d0090b62251cd5b6e8920d0694cf16af71c08056b105ffa61ababec7",
+      "pdf_pages": 931,
+      "pages": [
+        {
+          "printed": 44,
+          "pdf": 77,
+          "evidence": "S21/readings/ONR_I-7-p44.json",
+          "sha256": "47e09d8bd402defd7e5922b563d1912c173df8f96ce3a2fc157b4e6f55daba3a",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "44 NORTH ATLANTIC BLOCKADING SQUADRON. [Sabenolosare. ] Naval Hospital, Norfolk, March 27 y 1862. Sir: Having "
+        },
+        {
+          "printed": 45,
+          "pdf": 78,
+          "evidence": "S21/readings/ONR_I-7-p45.json",
+          "sha256": "4cac10a8b9a4560b58f55b6c8f59e6b7efb0d0a4c0cda67da0d47e9d805c22fe",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NORTH ATLANTIC BLOCKADING SQUADRON. 46 While the Virginia was thus engaged in getting her position for attacki"
+        },
+        {
+          "printed": 46,
+          "pdf": 79,
+          "evidence": "S21/readings/ONR_I-7-p46.json",
+          "sha256": "2ba64acd8a72444037acffe8ebb767dd5d0089d21aa0117103fa5d8199683b26",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NORTH ATLANTIC BLOCKADItJO SCJ' exception of tbe Beau/orl, LieuteDont GommaudiD^ Parker, who pro- ceeded to No"
+        },
+        {
+          "printed": 47,
+          "pdf": 80,
+          "evidence": "S21/readings/ONR_I-7-p47.json",
+          "sha256": "fb597d0f083c6034b3170f95a3bf33f3b22a615effceed4d979f36e441acddd7",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NORTH ATLANTIC BLOCKADING SQUADRON. 47 know that I have nsed adequate language in describing it) entitles an o"
+        },
+        {
+          "printed": 48,
+          "pdf": 81,
+          "evidence": "S21/readings/ONR_I-7-p48.json",
+          "sha256": "5dd4d96e800c24be1fb96f27cc564c168e7f2f65f527485df9064ac3f8eb26bc",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "HOBTH ATLASnO IBtOORADmS BQDADBOV. I irere s,h)y Bei^oiided b; his Assistants, Tyuan, Campbell, Herriug, Jack,"
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "acquisition": "S21 new retained scan",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-IV",
+      "title": "Official Records, series I, volume IV (1882)",
+      "item": "warofrebellion04secrrich",
+      "local_path": "warofrebellion04secrrich/warofrebellion04secrrich.pdf",
+      "bytes": 86460275,
+      "sha256": "886e69a1cf4e6b187012a8bffb72f860aa20c0fb6e52dc7a9e883381e2bd29cc",
+      "pdf_pages": 818,
+      "archive_url": "https://archive.org/details/warofrebellion04secrrich",
+      "scan_url": "https://archive.org/download/warofrebellion04secrrich/warofrebellion04secrrich.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 586,
+          "pdf": 606,
+          "evidence": "S21/readings/OR_I-IV-p586.json",
+          "sha256": "11bd8f06e7cab040a74abdb87677751f801e34e7652874bc338d8ab473d3fb81",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "586 OPERATIONS IN N. C. AND S. E. VA. [CHAP. XIII. But of those gentlemen who served under my immediate comman"
+        },
+        {
+          "printed": 587,
+          "pdf": 607,
+          "evidence": "S21/readings/OR_I-IV-p587.json",
+          "sha256": "5757583246aced27ce367d5dee0ce17a68b636656c2556c9a27e53d20bb7a35f",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "CAPTURE OF BATTERIES AT HATTERAS INLET, N. C. 587 of the United States Government that the officers and rnen s"
+        },
+        {
+          "printed": 588,
+          "pdf": 608,
+          "evidence": "S21/readings/OR_I-IV-p588.json",
+          "sha256": "0fc922a3d956c39f5893f79540174c60e06846b3103a9d6e8f4b068563b80b39",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "into 588 a en of OPERATIONS IN N. 0. ATf£> S. E. VA. [CHAP. xm. •g* sent on the prisoners New two <*> were . w"
+        },
+        {
+          "printed": 589,
+          "pdf": 609,
+          "evidence": "S21/readings/OR_I-IV-p589.json",
+          "sha256": "8e83f0b332f8a30d54a869a2993cb4a69e8dfc3569652bc444b58a7eda7a2142",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "CHAp.Xin.] CAPTURE OF BATTERIES AT HATTERAS INLET, N. C. 589 No. 4. Report of Col. Max Weber, Twentieth New Yo"
+        },
+        {
+          "printed": 590,
+          "pdf": 610,
+          "evidence": "S21/readings/OR_I-IV-p590.json",
+          "sha256": "c022ba9817849eed09836a4d8bbb4e3d0b6d4944b63698fd180b8a6dbd174832",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "590 OPERATIONS IN N. C. AND S. E. VA. [CHAP. xm. there. (The color was afterwards delivered to Commodore Strin"
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 580,
+          "pdf": 600
+        },
+        {
+          "printed": 589,
+          "pdf": 609
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-IX",
+      "title": "Official Records, series I, volume IX (1883)",
+      "item": "warofrebellion09unit",
+      "local_path": "warofrebellion09unit/warofrebellion09unit.pdf",
+      "bytes": 79125288,
+      "sha256": "f5320ac74f6834a4855bdb5b7ca2af37a338e44573f3d7256799a1e08ca6d082",
+      "pdf_pages": 820,
+      "archive_url": "https://archive.org/details/warofrebellion09unit",
+      "scan_url": "https://archive.org/download/warofrebellion09unit/warofrebellion09unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 86,
+          "pdf": 98,
+          "evidence": "S21/readings/OR_I-IX-p86.json",
+          "sha256": "077938b4c1670fba81f640874aa10c4cdf61430e451ec155d364e89b1303d0c5",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "86 OPERATIONS IN NORTH CAROLINA. XX. [Chap. while the engagement between the and the enemy’s battery on fleet "
+        },
+        {
+          "printed": 201,
+          "pdf": 213,
+          "evidence": "S21/readings/OR_I-IX-p201.json",
+          "sha256": "1212b8a1ad3ddce09d6d8a586004e591d9672339c2d47bc20ed1147daeb65d8d",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "NEW BERNE, 201 BATTLE OF N. C. Chap. XX.] i command up to this has been expended in bringing this little that "
+        },
+        {
+          "printed": 202,
+          "pdf": 214,
+          "evidence": "S21/readings/OR_I-IX-p202.json",
+          "sha256": "fd702ed6e37c0d0c3868bc1b329814cf81030ec1c1cc442834fdd7cab041631d",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "202 OPERATIONS NORTH IN CAROLINA. XX. [Chav. column for the purpose of reeonnoitering the positions of the ene"
+        },
+        {
+          "printed": 203,
+          "pdf": 215,
+          "evidence": "S21/readings/OR_I-IX-p203.json",
+          "sha256": "baa0725df64a249f72f8323e430f2eb0de83fe39b1e3dbceefe63db6921e5b83",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "BATTLE OF NEW BERNE, 203 hap. XX. N. C. J move up the county road as a reserve. I also ordered General o 3arke"
+        },
+        {
+          "printed": 204,
+          "pdf": 216,
+          "evidence": "S21/readings/OR_I-IX-p204.json",
+          "sha256": "75a9eb76e96e21d0918a19f31df92d57694d8b60f7619027b22184c912f84ba4",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "204 OPERATIONS IN NORTH CAROLINA. IX. [Chap. and was supported by the remainder of the brigade, by order of Ge"
+        },
+        {
+          "printed": 205,
+          "pdf": 217,
+          "evidence": "S21/readings/OR_I-IX-p205.json",
+          "sha256": "dac5a9696a20d73ec7472be755338a79683d93be54d005e3c89400fd1e08a75c",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "BATTLE OF NEW BERNE, 205 Chaf. XX.] N. C. ( did not reach our position in front of the enemy’s until 3 o’clock"
+        },
+        {
+          "printed": 206,
+          "pdf": 218,
+          "evidence": "S21/readings/OR_I-IX-p206.json",
+          "sha256": "42039b57ac9f9787fe30018197ecb48ee93c4bf097a068c478654e7824ac2f02",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "206 OPERATIONS NORTH IN CAROLINA. [Chap. XX. the service since we joined the naval fleet at Hatteras Inlet. I "
+        },
+        {
+          "printed": 207,
+          "pdf": 219,
+          "evidence": "S21/readings/OR_I-IX-p207.json",
+          "sha256": "404402a6e3869d931d96b4b07482d155f4bb5c8f44ecad2245769012189c0a6e",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "BATTLE OF NEW BERNE, Chap. XX.] N. C. 207 mentioned my enemy I in first dispatch that the loss of the was less"
+        },
+        {
+          "printed": 239,
+          "pdf": 251,
+          "evidence": "S21/readings/OR_I-IX-p239.json",
+          "sha256": "e924288fadc9f1fe98d5457795c7cc674893fe217205f54dc1bbda34695b7d8d",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "BATTLE OF NEW BERNE, 239 XX.] N. C. jIIAP. ******* Every wish and measure was promptly responded when all did "
+        },
+        {
+          "printed": 240,
+          "pdf": 252,
+          "evidence": "S21/readings/OR_I-IX-p240.json",
+          "sha256": "f116f54006252e75227ebf70c8d1281e96e5bc37792da4d7aedc4797e2362142",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "240 OPERATIONS IN NORTH CAROLINA. [Chap. XX. another elevation, when we came to the below railroad, just the b"
+        },
+        {
+          "printed": 241,
+          "pdf": 253,
+          "evidence": "S21/readings/OR_I-IX-p241.json",
+          "sha256": "55abf60f009aca8cb4ba174da868da3aee09a549c5635f9332a33ac1495cb12c",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "BATTLE OF NEW BERNE, 241 Chap. XX.] N. C. and compelled yield the breastwork. The evacuation of ing forces t© "
+        },
+        {
+          "printed": 242,
+          "pdf": 254,
+          "evidence": "S21/readings/OR_I-IX-p242.json",
+          "sha256": "b8ac638eff18647dc303c2e55efb459803638debb4dc56ea6078f2802562577f",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "242 OPERATIONS IN NORTH CAROLINA. XX. [Chap. the river batteries, a distance of 6 miles of river shore, on any"
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 1,
+          "pdf": 13
+        },
+        {
+          "printed": 481,
+          "pdf": 493
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-V",
+      "title": "Official Records, series I, volume V (1881)",
+      "item": "warofrebellion05unit",
+      "local_path": "warofrebellion05unit/warofrebellion05unit.pdf",
+      "bytes": 119747989,
+      "sha256": "c36ab1965afbb04c30a5dc7e9f3bff7bd39e9e17a5df3c4c9334f9275309c0e1",
+      "pdf_pages": 1226,
+      "archive_url": "https://archive.org/details/warofrebellion05unit",
+      "scan_url": "https://archive.org/download/warofrebellion05unit/warofrebellion05unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 12,
+          "pdf": 22,
+          "evidence": "S21/readings/OR_I-V-p12.json",
+          "sha256": "c7c428f43c5177e3bcbd47467d7ce2ff47cbb1cf857dcde18b973b3d56876d75",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": : 12 OPERATIONS IN MD., VA., AND W. VA. XIV. N. [Chap. I at once designated an efficient staff, afterwards a",
+          "images": [
+            "S21/images/OR_I-V-p12.png"
+          ]
+        },
+        {
+          "printed": 13,
+          "pdf": 23,
+          "evidence": "S21/readings/OR_I-V-p13.json",
+          "sha256": "e74f45be69a2c7bf4e2b1e6c7b4ecc0105955debdee5820b09434b20874ca8a2",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": GENERAL REPORTS. 13 Chap. XIY.] Army the Poto- For convenience of reference the strength of the of mac at su",
+          "images": [
+            "S21/images/OR_I-V-p13.png"
+          ]
+        },
+        {
+          "printed": 399,
+          "pdf": 409,
+          "evidence": "S21/readings/OR_I-V-p399.json",
+          "sha256": "17d69e1174c661f075c2df3a3d1ac470967835b69d09f850f0610e7c6c200367",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "XIV.] VALLEY DISTRICT, ETC. 399 Chap. Frederick, December 20, 1861—8.30 m. p. All quiet on the line of the riv"
+        },
+        {
+          "printed": 732,
+          "pdf": 742,
+          "evidence": "S21/readings/OR_I-V-p732.json",
+          "sha256": "2a85046bdcfff569bc804e4acfeb50f9e119ec4d82b45ac3ce8f3ee6bb7eb505",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "s : . . 732 OPERATIONS IN MD., VA., AND W. YA. [Chap. XIY. N. Abstract from return of the Army of the Potomac^"
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 290,
+          "pdf": 300
+        },
+        {
+          "printed": 308,
+          "pdf": 318
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-VII",
+      "title": "Official Records, series I, volume VII (1882)",
+      "item": "warofrebellion07unit",
+      "local_path": "warofrebellion07unit/warofrebellion07unit.pdf",
+      "bytes": 102409570,
+      "sha256": "4e430999ad6aa131916f94b32cb09b15e2c040abb2445c9ebb4642244702e089",
+      "pdf_pages": 1046,
+      "archive_url": "https://archive.org/details/warofrebellion07unit",
+      "scan_url": "https://archive.org/download/warofrebellion07unit/warofrebellion07unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 170,
+          "pdf": 182,
+          "evidence": "S21/readings/OR_I-VII-p170.json",
+          "sha256": "fc5a8d86188db090cf4497d69783b611bfe9784c273937c44125435735523cbe",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "; 170 OPERATIONS IN KY., TENN., ALA., AND W. VA. xvn. N. S. [Chap. No. 6. Report of Brig, Gen, John A, McGlern"
+        },
+        {
+          "printed": 174,
+          "pdf": 186,
+          "evidence": "S21/readings/OR_I-VII-p174.json",
+          "sha256": "49bbc58a135de4d4ae4e27d3df71ccd5e919375f2f74243191c2694345c8148e",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "174 OPERATIONS IN KY., TENN., ALA., AND S.W. VA. XVIL N. [Chap. part with light artillery in the face of prote"
+        },
+        {
+          "printed": 175,
+          "pdf": 187,
+          "evidence": "S21/readings/OR_I-VII-p175.json",
+          "sha256": "90724657fd9fdbe12bb350ca6466b9bd2afad2cca9273ad6c92315f639233107",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "; ; Chap. XVn.] CAPTURE OF FORT DONELSON, TENN. 175 well as by the shouts of the enemy that the gunboats had b"
+        },
+        {
+          "printed": 229,
+          "pdf": 241,
+          "evidence": "S21/readings/OR_I-VII-p229.json",
+          "sha256": "91b0947ab1904d811bb1bff5a0855c791e16d4adde0b6be587de24d534aaa8bf",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "J : Chap. XVII. CAPTURE OF FORT D0XELS02^, TENN. 229 out particular cases. The conduct of the various companie"
+        },
+        {
+          "printed": 230,
+          "pdf": 242,
+          "evidence": "S21/readings/OR_I-VII-p230.json",
+          "sha256": "75c85937b0ababae9048ddcbca0e0e37edbc450eeb7090925cc6923bb694901f",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "230 OPERATIONS IN KY., TENN., ALA., AND W. VA. XVIL N. S. [Chap. was from that myself saw some my men who know"
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 169,
+          "pdf": 181
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-VIII",
+      "title": "Official Records, series I, volume VIII (1883)",
+      "item": "warofrebellion08unit",
+      "local_path": "warofrebellion08unit/warofrebellion08unit.pdf",
+      "bytes": 88512743,
+      "sha256": "0cadfc289bcadfc22272dbe917f591d7d993616e463c83cf7257c8c21f501d33",
+      "pdf_pages": 938,
+      "archive_url": "https://archive.org/details/warofrebellion08unit",
+      "scan_url": "https://archive.org/download/warofrebellion08unit/warofrebellion08unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 216,
+          "pdf": 228,
+          "evidence": "S21/readings/OR_I-VIII-p216.json",
+          "sha256": "216a0f8daeed9fa6a0f4766dee9c406f1897938d010d1d049f1f4b84f347057f",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "1 I AND xvn 216 OPERATIONS IN MO., ARK., KANS., IND. T. [Chap, No. 4. Missouri Infantry commas Report Col Pete"
+        },
+        {
+          "printed": 239,
+          "pdf": 251,
+          "evidence": "S21/readings/OR_I-VIII-p239.json",
+          "sha256": "ae4e3cac2172cb0c893f14ee679c3b58c9efaee97212409e313f942721a10356",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "XVI1L] PEA RIDGE, OR ELKHORN TAVERN, ARK. 239 Chap. No. 15. Reports ofBrig. Gen. A. Asboth U. Army, commanding"
+        },
+        {
+          "printed": 240,
+          "pdf": 252,
+          "evidence": "S21/readings/OR_I-VIII-p240.json",
+          "sha256": "fe5ce1304ff4c731065a4397e73223d1933e9cdf319cd5e8d59a7d722499fb05",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "J AND xvial OPERATIONS IN ARK., KANS., IND. T. [Chap, 240 MO., and men were imbued with th(| upon the Officers"
+        },
+        {
+          "printed": 241,
+          "pdf": 253,
+          "evidence": "S21/readings/OR_I-VIII-p241.json",
+          "sha256": "8eba0feee221fd067dbe6906726426077436c039789d992ba8d7d1f0a90f3840",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "XVI1T.J PEA RIDGE, OR ELKHORN iap. TAVERN, ARK. 241 eneral Jefferson C. Davis. The Benton and Fremont Hussars "
+        },
+        {
+          "printed": 243,
+          "pdf": 255,
+          "evidence": "S21/readings/OR_I-VIII-p243.json",
+          "sha256": "88bc9d06d799c0d72cb48f175013d13b2a178735fe1f49f0cb2fb03deaa70267",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "XVIII.] PEA RIDGE, OR ELKHORN TAVERN, ARK. ;hap. 243 Regiment Missouri Volunteers, were designated as the rese"
+        },
+        {
+          "printed": 245,
+          "pdf": 257,
+          "evidence": "S21/readings/OR_I-VIII-p245.json",
+          "sha256": "1ce8f8b6744c5a96ed28768686c697bb8ca5df12665bbe86677148efa8caa142",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "XVIII.] pea ridge, or elkhorn tavern, ark. 245 *at. Third Iowa Cavalry, and three pieces of Iry, flying artill",
+          "images": [
+            "S21/images/OR_I-VIII-p245.png"
+          ]
+        },
+        {
+          "printed": 261,
+          "pdf": 273,
+          "evidence": "S21/readings/OR_I-VIII-p261.json",
+          "sha256": "c5f87bba6e75f1bf3acd0630c177c243f81f6bb20741adb2d5ccfc42ce8510fd",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "XVIII pea ridge, or elkhorn tavern, ark. 261 vr. J irty-fifth Illinois to Dodge, as belonged to his brigade. i",
+          "images": [
+            "S21/images/OR_I-VIII-p261.png"
+          ]
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 196,
+          "pdf": 208
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-X.1",
+      "title": "Official Records, series I, volume X, part I (1884)",
+      "item": "warofrebellion101unit",
+      "local_path": "warofrebellion101unit/warofrebellion101unit.pdf",
+      "bytes": 116205347,
+      "sha256": "08aea2cabaface9893c5ae68928a1bdbcd4a10152f28db575970a48b46c1abfc",
+      "pdf_pages": 1048,
+      "archive_url": "https://archive.org/details/warofrebellion101unit",
+      "scan_url": "https://archive.org/download/warofrebellion101unit/warofrebellion101unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 325,
+          "pdf": 339,
+          "evidence": "S21/readings/OR_I-X.1-p325.json",
+          "sha256": "dbfb575f349dcaf049badd72d853df7a2390e781dd8e3f6ed856eda0ca2063c7",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chap. XXII.] PITTSBURG LANDING, OR SHILOH, TENN. 325 on liis reserves. The powerful re-enforcements which the ",
+          "images": [
+            "S21/images/OR_I-X.1-p325.png"
+          ]
+        },
+        {
+          "printed": 326,
+          "pdf": 340,
+          "evidence": "S21/readings/OR_I-X.1-p326.json",
+          "sha256": "cbb147921b78baba02b5ad00a0ecf0dc2d92f60f71db57e2a8ca142c64ffb849",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "326 KY., TENN., N. MISS., N. ALA., AND SW. VA. [Chap. XXn. ordnance ofiQcer. The energy of Lieutenant Horton i",
+          "images": [
+            "S21/images/OR_I-X.1-p326.png"
+          ]
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 112,
+          "pdf": 126
+        },
+        {
+          "printed": 396,
+          "pdf": 410
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-X.2",
+      "item": "warofrebellion102unit",
+      "title": "Official Records, series I, volume X, part II (1884)",
+      "archive_url": "https://archive.org/details/warofrebellion102unit",
+      "scan_url": "https://ia903102.us.archive.org/11/items/warofrebellion102unit/warofrebellion102unit.pdf",
+      "local_path": "S21/warofrebellion102unit/warofrebellion102unit.pdf",
+      "bytes": 69112620,
+      "sha256": "aa995e65bef1708da22c9763bd8d5118e4731b1497e67402afe9c3080d0ae380",
+      "pages": [
+        {
+          "printed": 377,
+          "pdf": 383,
+          "evidence": "S21/readings/OR_I-X.2-p377.json",
+          "sha256": "73b41f6fa46af281002e3b09301256bc9636d21af94bf68b676f11a237cf236e",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chap. XXII.] CORRESPONDENCE, ETC. CONFEDERATE. 377 Your line of retreat must in some measure be determined by ",
+          "images": [
+            "S21/images/OR_I-X.2-p377.png"
+          ]
+        },
+        {
+          "printed": 378,
+          "pdf": 384,
+          "evidence": "S21/readings/OR_I-X.2-p378.json",
+          "sha256": "690a503b614927cd6e77c1241d81b22d312a03dd6d5b0ea354062191ffdae8b7",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "378 KY., TENN., N. MISS., N. ALA., AND SW. YA. [Chap. XXII. Abstract from, return of the Second Grand Division",
+          "images": [
+            "S21/images/OR_I-X.2-p378.png"
+          ]
+        },
+        {
+          "printed": 382,
+          "pdf": 388,
+          "evidence": "S21/readings/OR_I-X.2-p382.json",
+          "sha256": "3f8884174dee7442962906e15d161f4bbb75a5289e688976788933f8b07e7a0a",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "382 KY., TENN., N. MISS., N. ALA., AND SW. VA. [Chap. xxn. Abstract from field return of the First and Second ",
+          "images": [
+            "S21/images/OR_I-X.2-p382.png"
+          ]
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pdf_pages": 718,
+      "acquisition": "S21 new retained scan",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XI.2",
+      "title": "Official Records, series I, volume XI, part II (1884)",
+      "item": "warofrebellion112unit",
+      "local_path": "warofrebellion112unit/warofrebellion112unit.pdf",
+      "bytes": 114365410,
+      "sha256": "c2505c0baddb13325c08114106812910e942cdbf7ee24b6899c9c3a9d828d57e",
+      "pdf_pages": 1110,
+      "archive_url": "https://archive.org/details/warofrebellion112unit",
+      "scan_url": "https://archive.org/download/warofrebellion112unit/warofrebellion112unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 53,
+          "pdf": 59,
+          "evidence": "S21/readings/OR_I-XI.2-p53.json",
+          "sha256": "0ad28a65794aef8096f81db0c23436fe4f0f8ca64ee4b7cb0154a7ba94d72d69",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ". : Chap. XXIII.l seven-days’ battles. 53 opeued a rapid of and shortly after of spherical As no fire shell ca"
+        },
+        {
+          "printed": 54,
+          "pdf": 60,
+          "evidence": "S21/readings/OR_I-XI.2-p54.json",
+          "sha256": "9c7ed5b48e4813a6750df0e5a2ff5122de340bcffd66f6dacc7fd0c3648aa93d",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "54 THE PENINSULAR CAMPAIGN, VA. [Chap. XXIII. that (lay, I received orders IToin General Sumner, commanding th"
+        },
+        {
+          "printed": 55,
+          "pdf": 61,
+          "evidence": "S21/readings/OR_I-XI.2-p55.json",
+          "sha256": "aa83ae239dd357780e29807e10157f37ed78f707b3a2fd9b69485f6ef7a1a05e",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chap. XXm.] SEVEN- days’ battles. 55 the afternoon. About that time the brigade of General Meagher in cnme up "
+        },
+        {
+          "printed": 56,
+          "pdf": 62,
+          "evidence": "S21/readings/OR_I-XI.2-p56.json",
+          "sha256": "e43087c3a286d198f7cb0202e3be3244b48e97571af6d44fc71e23d6bb2ef714",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "the peninsular campaign, VA. [Chap. XXni. S.—My P. division, which had been reduced to a skeleton by the battl"
+        },
+        {
+          "printed": 391,
+          "pdf": 397,
+          "evidence": "S21/readings/OR_I-XI.2-p391.json",
+          "sha256": "1a59a3b3492d3db0639309552006806024b86d1fa48b89cabca8028b67783346",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "XXIII.] SEVEN-DAYS^ BATTLES. 391 %jHAP. A hurled agaiust them. like result was anticipated by Eandol’s bat- te"
+        },
+        {
+          "printed": 433,
+          "pdf": 439,
+          "evidence": "S21/readings/OR_I-XI.2-p433.json",
+          "sha256": "b0ba1e6894cfe89941fca2b74ff562b27782586063c7703ba2ac45540c1f0ba4",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "XXIIL] seven-days’ battles. 433 Chap. occupied a position on an eminence near the woods occupied by Gen- nearl"
+        },
+        {
+          "printed": 629,
+          "pdf": 635,
+          "evidence": "S21/readings/OR_I-XI.2-p629.json",
+          "sha256": "d76ebc27b4a3dabd27214520433ba8b47e87c32ff20deda148d328d93862f330",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "XXIIL] SEVEN-DAYS^ BATTLES. 629 Chap. went to same belt of woods near the parsonage, already over- tlie crowde"
+        },
+        {
+          "printed": 660,
+          "pdf": 666,
+          "evidence": "S21/readings/OR_I-XI.2-p660.json",
+          "sha256": "003b82028221edd8a40e34629b8d507e49313365c6145eda0cdd5b0958b4a8b6",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "660 THE PENINSULAR CAMPAIGN, YA. [Chap. XXTTI Our troops behaved most gallantly under a most severe heavy fire"
+        },
+        {
+          "printed": 661,
+          "pdf": 667,
+          "evidence": "S21/readings/OR_I-XI.2-p661.json",
+          "sha256": "e175fce1e1f19c710ea279c5b1997e359e1ce1dd0e3bdd9bee6b2b0d1108d957",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "XXIII.] SEVEN-DAYS^ BATTLES. 661 -HAP. was command of three divisions, those of Major-General McLaws, I ill an"
+        },
+        {
+          "printed": 714,
+          "pdf": 720,
+          "evidence": "S21/readings/OR_I-XI.2-p714.json",
+          "sha256": "fe9ef8fc8688202d40a6f9c3f0f9d074f4400683cb9308f3540463bb94efc5b9",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": : 714 THE PENINSULAR CAMPAIGN, VA. XXin. [Chap. who has been acting adjutant for the regiment during few the"
+        },
+        {
+          "printed": 715,
+          "pdf": 721,
+          "evidence": "S21/readings/OR_I-XI.2-p715.json",
+          "sha256": "efeea5b66c546162188e3339b58cac98cff25097a1a3be22d314be39abbc29d2",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": ; Chap. XXm.] SEVEN-DAYS’ BATTLES. 715 At dark withdrew under orders and back to the railroad, which fell we"
+        },
+        {
+          "printed": 794,
+          "pdf": 800,
+          "evidence": "S21/readings/OR_I-XI.2-p794.json",
+          "sha256": "7a8711b5c32c1b347d1cc010eb6ca83b611dc45523d1ade77a9a31b54aa3787b",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "794 THE PENINSULAR CAMPAIGN, VA. [CHAp/NXm. My brigade consisted of the following-uained regiments, all from N"
+        },
+        {
+          "printed": 796,
+          "pdf": 802,
+          "evidence": "S21/readings/OR_I-XI.2-p796.json",
+          "sha256": "4bb37d77f64cdf59046c39076a5554cf50c05885254f2c7ebb1fbb69c7e835ca",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "796 THE PENINSULAR CAMPAIGN, VA. [Chap. XXIII. Ko. 309. Report of Capt. Joseph Graham^ Company Tenth North Car"
+        },
+        {
+          "printed": 806,
+          "pdf": 812,
+          "evidence": "S21/readings/OR_I-XI.2-p806.json",
+          "sha256": "ffba27974bd746761f1e8e3579c7947cf73f5dd9897e3692347e47c71ca81b5c",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "806 THE PENINSULAR CAMPAIGN, VA. [Chap. XXIII. driven the enemy, at least 3,000 strong, back to line of tlieir"
+        },
+        {
+          "printed": 818,
+          "pdf": 824,
+          "evidence": "S21/readings/OR_I-XI.2-p818.json",
+          "sha256": "6ebc88c32894dfdc3c2d28ac07565ab1e0689099dc7d7e3044637ba6881bfcd9",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "; 818 THE PENINSULAK CAMPAIGN, VA. XXIII. [CuAi’. Prisoners taken and sent to General Wright’s headquarters On"
+        },
+        {
+          "printed": 834,
+          "pdf": 840,
+          "evidence": "S21/readings/OR_I-XI.2-p834.json",
+          "sha256": "202a39bdba161da7045248f86d8526920ff8b093df8306cd67ccbdfb2b6bb804",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "834 THE PENINSULAR CAMPAIGN, VA. XXHL [Chap. No. 325. Report of Capt. William E. Alley Fifth Virginia Battalio"
+        },
+        {
+          "printed": 835,
+          "pdf": 841,
+          "evidence": "S21/readings/OR_I-XI.2-p835.json",
+          "sha256": "2b1eaa4ebea9472d62310f486843121870103e9114e6471c818410425d83a772",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "; XXm.] SEVEN-DAYS’ BATTLES. 835 Chap. each gun (Johnson’s battery accompanied Branch), in all about to 14,000"
+        },
+        {
+          "printed": 906,
+          "pdf": 912,
+          "evidence": "S21/readings/OR_I-XI.2-p906.json",
+          "sha256": "abe4ebe53c9340438afd1b06d88b15f38e88c0f6f209e620a84846e7b0a5c11f",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "906 THE PENINSULAR CAMPAIGN, VA. xxni. [CuAP. Qever before been nnder^fire, they acted coolly. Our loss on day"
+        },
+        {
+          "printed": 907,
+          "pdf": 913,
+          "evidence": "S21/readings/OR_I-XI.2-p907.json",
+          "sha256": "feb099da023f29d51855ab795950300b3cba03bb41296e138c1200ee5f0851f0",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "xxm.] SEVEN-DAYS^ BATTLES. 907 CftAP. shortly afterward iaspected and approved by His ExcelJency the Presi- de"
+        },
+        {
+          "printed": 913,
+          "pdf": 919,
+          "evidence": "S21/readings/OR_I-XI.2-p913.json",
+          "sha256": "de7a8d933a2e64bf049562ce9ffc089a51bd77bb1341061f507e8007444c1817",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Ohap. xxni.] seven-days’ battles. 913 No. 355. Report of Col. Junius Daniel^ Forty-fifth North Carolina Infant"
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 489,
+          "pdf": 495
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XI.3",
+      "title": "Official Records, series I, volume XI, part III (1884)",
+      "item": "warofrebellion113unit",
+      "local_path": "S14/warofrebellion113unit/warofrebellion113unit.pdf",
+      "bytes": 67712113,
+      "sha256": "04d8f5ff630cb2ac0e65ef7fed1940a679fb7228db1fe19f3da995d12404f5f3",
+      "pdf_pages": 764,
+      "archive_url": "https://archive.org/details/warofrebellion113unit",
+      "scan_url": "https://archive.org/download/warofrebellion113unit/warofrebellion113unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 97,
+          "pdf": 103,
+          "evidence": "S21/readings/OR_I-XI.3-p97.json",
+          "sha256": "e7c1ada3035f4191c09435aab498eddb4d439fd61622bec3e6d1b4683bd45190",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": : XXin.] CORRESPONDENCE, ETC. UNION. 97 Chap. Jamestown. The troops on the shore belonged to some other corp",
+          "images": [
+            "S21/images/OR_I-XI.3-p97.png"
+          ]
+        },
+        {
+          "printed": 130,
+          "pdf": 136,
+          "evidence": "S21/readings/OR_I-XI.3-p130.json",
+          "sha256": "6f07f96b659358e558425d51a10596943dd131b24ae49b2d512b8e6ec29d8e61",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": 130 THE PENINSULAR CAMPAIGN, VA. XXm. [Chap. The number of men composing the Army of the Potomac on the dOth",
+          "images": [
+            "S21/images/OR_I-XI.3-p130.png"
+          ]
+        },
+        {
+          "printed": 238,
+          "pdf": 244,
+          "evidence": "S21/readings/OR_I-XI.3-p238.json",
+          "sha256": "c0652ec4ed1376a690f537062690e9b8885deb3d36fe4d8b323d1d695fa9aa8b",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": : : 238 THE PENINSULAR CAMPAIGN, VA, XXIIT. [Chap. Abstract from Return of the Army of the Potomac, Maj. Gen"
+        },
+        {
+          "printed": 239,
+          "pdf": 245,
+          "evidence": "S21/readings/OR_I-XI.3-p239.json",
+          "sha256": "9a4bbd7e98b5290355a2c2c000a72fc18888de4fc3841bd66b84938d62a597d3",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": CHAP.XXm.] CORRESPONDENCE, ETC. UNION. 239 Statement of the comparative strength of the Army of the Potomac "
+        },
+        {
+          "printed": 367,
+          "pdf": 373,
+          "evidence": "S21/readings/OR_I-XI.3-p367.json",
+          "sha256": "542c664ecc47ee2067f0a19a6ee126de58b703e6822720dc1305e99ecd248131",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ". , : : : : : Chap. XXIU.] CORRESPONDENCE, ETC. UNION. 367 Abstract from Tri-monthly Return of the Army of the"
+        },
+        {
+          "printed": 380,
+          "pdf": 386,
+          "evidence": "S21/readings/OR_I-XI.3-p380.json",
+          "sha256": "ad2c5598477f035482a2dfcfe735db27df5944936129cf4f72226a1f784daee6",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ". 380 THE PENINSULAR CAMPAIGN, VA. XXHT. [Chap. telegraphic messages were required to be shown to the Presiden"
+        },
+        {
+          "printed": 645,
+          "pdf": 651,
+          "evidence": "S21/readings/OR_I-XI.3-p645.json",
+          "sha256": "02ba2088cca53fe7474b4e5fb9064d6ed10e84e904e2f130b59dab2f49e0108a",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": ! XXm.] CORRESPONDENCE, ETC. CONFEDERATE. 645 Chap. I Hdqrs. Department of Northern Virginia, j July 19, 186"
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XII.2",
+      "title": "Official Records, series I, volume XII, part II (1885)",
+      "item": "warofrebellion122unit_0",
+      "local_path": "warofrebellion122unit_0/warofrebellion122unit_0.pdf",
+      "bytes": 91698831,
+      "sha256": "209bca02af90d5bde9c26d713c7fdc2f9367a2e87b4527cfb2b0a69cf5b86e04",
+      "pdf_pages": 916,
+      "archive_url": "https://archive.org/details/warofrebellion122unit_0",
+      "scan_url": "https://archive.org/download/warofrebellion122unit_0/warofrebellion122unit_0.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 16,
+          "pdf": 22,
+          "evidence": "S21/readings/OR_I-XII.2-p16.json",
+          "sha256": "91f0097cbea87d653d44ed77bb5907d0ffefb53d6419d90b9e4ff212340dd119",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "16 OPERATIONS IN VA., W. VA., AND MD. XXIV? N. ICiiap. must see us behind Bull Run we wished save men and if t",
+          "images": [
+            "S21/images/OR_I-XII.2-p16.png"
+          ]
+        },
+        {
+          "printed": 42,
+          "pdf": 48,
+          "evidence": "S21/readings/OR_I-XII.2-p42.json",
+          "sha256": "2afbb4ba19ae63aef29bfd05ad5d32b2ad31eacd1ab363cee47b953326015035",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "4^ OPERATIONS IN VA., W. VA., AND MD. XXIV. ft. [Chap. actions of Hooker, King, and Ricketts on the 27th and 2"
+        },
+        {
+          "printed": 43,
+          "pdf": 49,
+          "evidence": "S21/readings/OR_I-XII.2-p43.json",
+          "sha256": "017706a6071fb4984ac11605884655ea5e4c008337f02903558662af50e174cf",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "GENERAL REPORTS. 43 Obxt. jcsrr.] Tower’s brigade, of Ricketts’ division, was pushed forward into action suppo",
+          "images": [
+            "S21/images/OR_I-XII.2-p43.png"
+          ]
+        },
+        {
+          "printed": 44,
+          "pdf": 50,
+          "evidence": "S21/readings/OR_I-XII.2-p44.json",
+          "sha256": "46dd43b52ab76988b12869bbe271a013540a06628452917456e011d8cf523630",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "; 44 OPERATIONS iN VA., W. VA., AND MD. XXIV. N. [Chap. security of our and and am quite convinced trains supp",
+          "images": [
+            "S21/images/OR_I-XII.2-p44.png"
+          ]
+        },
+        {
+          "printed": 262,
+          "pdf": 268,
+          "evidence": "S21/readings/OR_I-XII.2-p262.json",
+          "sha256": "503fdf933d226bd1be7c9296906714fdd38918d0973d9a312f8c9b8af79cab98",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "262 OPERATIONS IN VA., W. AND MD. XXIV. N. VA., [Chap. Beturn of Casualties in the Union forces, commanded by ",
+          "images": [
+            "S21/images/OR_I-XII.2-p262.png"
+          ]
+        },
+        {
+          "printed": 546,
+          "pdf": 552,
+          "evidence": "S21/readings/OR_I-XII.2-p546.json",
+          "sha256": "8261e75a99856ae0e408431f4e5195e783aaac41bfef25b72a67367d1f10dda5",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "546 OPERATIONS IN VA., W. VA., AND MD. XXIV. N. [Chap. I have the honor to be, general, very respectfully, you"
+        },
+        {
+          "printed": 547,
+          "pdf": 553,
+          "evidence": "S21/readings/OR_I-XII.2-p547.json",
+          "sha256": "c1f44bdb8786542d07f8be7bf64744f11ebdba45824670e619ea301ba28429fc",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "XXIV.] CAMPAIGN IN NORTHERN VIRGINIA. 547 Chap. Wilcox’s Division. Brig. Gen. C. M. Wilcox. Wilcox’s Brigade. "
+        },
+        {
+          "printed": 548,
+          "pdf": 554,
+          "evidence": "S21/readings/OR_I-XII.2-p548.json",
+          "sha256": "f185be052b29d3640b36f11c7bbfbff3f771ee965d6fe99f7d45af184f77e056",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "t t 548 OPERATIONS IN YA., W. AND XXIV. N. VA., Ml). [Chap. Evans’ Brigade.* Brig. Gen. N. G. Evans. Col. P. F"
+        },
+        {
+          "printed": 549,
+          "pdf": 555,
+          "evidence": "S21/readings/OR_I-XII.2-p549.json",
+          "sha256": "8921427d35c739248702d1043613ae4d8c4f82c4f9d44d0b14e98ef8f0ca8e84",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "XXJ?) CAMPAIGN NORTHERN VIRGINIA. 549 Chap. IN Artillery. Maj. L. M. Shumaker. Brockenbrough’s (Maryland) batt"
+        },
+        {
+          "printed": 550,
+          "pdf": 556,
+          "evidence": "S21/readings/OR_I-XII.2-p550.json",
+          "sha256": "85419f2b43903391d7e08767c53345ea797e827a92d90d91b8094d5988a91be7",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "t 550 OPERATIONS IN W. AND MD. XXIV. N. VA., VA., [Chap. Ewell’s Division.* Maj. Gen. R. S. Ewell. Brig. Gen. "
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 546,
+          "pdf": 552
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XII.3",
+      "item": "warofrebellion123unit",
+      "title": "Official Records, series I, volume XII, part III (1885)",
+      "archive_url": "https://archive.org/details/warofrebellion123unit",
+      "scan_url": "https://archive.org/download/warofrebellion123unit/warofrebellion123unit.pdf",
+      "local_path": "S21/warofrebellion123unit/warofrebellion123unit.pdf",
+      "bytes": 97291268,
+      "sha256": "841ecdce04480b6ac0b958bc5386c96cd775d517403d370eaa56705e2c0269b9",
+      "pages": [
+        {
+          "printed": 580,
+          "pdf": 586,
+          "evidence": "S21/readings/OR_I-XII.3-p580.json",
+          "sha256": "3641d57ead16de70d30e4f9b369293699945ba8ac8680268bd94a020964f02ff",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ". : 580 OPERATIONS IN W. AND MD. XXIV. N. VA., VA., [Chap. Fort Monroe, Va., August 16, 1862. Hou. Gideon Well",
+          "images": [
+            "S21/images/OR_I-XII.3-p580.png"
+          ]
+        },
+        {
+          "printed": 603,
+          "pdf": 609,
+          "evidence": "S21/readings/OR_I-XII.3-p603.json",
+          "sha256": "5fb58e1f994105e9c0eeb9da4725b0d2e928176c2696d02c5a4d69c55b3876c8",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": : ETC.—UNION. CORRESPONDENCE, G 03 Chap. XXIV. 1 Headquarters Army of Virginia, August 20, 1862. (Received 7"
+        },
+        {
+          "printed": 614,
+          "pdf": 620,
+          "evidence": "S21/readings/OR_I-XII.3-p614.json",
+          "sha256": "cf56d7de4394028431d96b8b8d3a93de40653a35768f6f1c3e5594abef7ba1b8",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": : . 614 OPERATIONS IN VA., W. VA., AND MD. [Chap.XXIV. N. requested by General Pope have been ordered to him",
+          "images": [
+            "S21/images/OR_I-XII.3-p614.png"
+          ]
+        },
+        {
+          "printed": 619,
+          "pdf": 625,
+          "evidence": "S21/readings/OR_I-XII.3-p619.json",
+          "sha256": "279e383f710eee469cb8dfc737accd290d1a2b0cbf8cbaab8af4546b8920aa11",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": ETC.—UNION. Chap. XXIV.] CORRESPONDENCE, 619 War Department, Washington August 1862. 21, Wool, , Major-Gener",
+          "images": [
+            "S21/images/OR_I-XII.3-p619.png"
+          ]
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pdf_pages": 1054,
+      "acquisition": "S21 new retained scan",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XIX.1",
+      "title": "Official Records, series I, volume XIX, part I (1887)",
+      "item": "warofrebellion191unit",
+      "local_path": "warofrebellion191unit/warofrebellion191unit.pdf",
+      "bytes": 134844693,
+      "sha256": "988fc703a1b094eca9d2cf43a3b06acf994d4f6ad1f662884c414393ec25d3d3",
+      "pdf_pages": 1238,
+      "archive_url": "https://archive.org/details/warofrebellion191unit",
+      "scan_url": "https://archive.org/download/warofrebellion191unit/warofrebellion191unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 305,
+          "pdf": 321,
+          "evidence": "S21/readings/OR_I-XIX.1-p305.json",
+          "sha256": "b9b8f21b82a5e17a610f8527d0d469181bc0d2f5416739643fe85cb6cc857fd3",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "305 Chap. XXXI.] THE MARYLAND CAMPAIGN. some distance in the front. During the balance of the day my regi- men"
+        },
+        {
+          "printed": 322,
+          "pdf": 338,
+          "evidence": "S21/readings/OR_I-XIX.1-p322.json",
+          "sha256": "450e346f8102888d09aa24a170c4c8e122120312b307038bb0908ac1ce0b5602",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "322 OPERATIONS IN N. VA., W. VA., MD., AND PA. [Chap. XXXI. very fall ranks. I informed Colonel Lee that he wa"
+        },
+        {
+          "printed": 323,
+          "pdf": 339,
+          "evidence": "S21/readings/OR_I-XIX.1-p323.json",
+          "sha256": "bc662b1bdcddd82e7dccacd5302a74342652d67c14e7946464a00fe9971c9786",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "THE MARYLAND CAMPAIGN. 323 CnAP. XXXI. J No. 00. Report of Capt. H. G. 0. Weyownth, Nineteenth Massactiusetts "
+        },
+        {
+          "printed": 324,
+          "pdf": 340,
+          "evidence": "S21/readings/OR_I-XIX.1-p324.json",
+          "sha256": "5d79dfb79d3d74f0464248f42121eb3264732da484f719b9d09d033549462ae3",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "324 OPERATIONS IN N. VA., W. VA., MD., AND PA. [Chap. XXXL terrible fire was opened upon Ms right by the troop"
+        },
+        {
+          "printed": 338,
+          "pdf": 354,
+          "evidence": "S21/readings/OR_I-XIX.1-p338.json",
+          "sha256": "e507fa2e6afab03d21b218cf4b46447c6c083f10656ac69f1cdb41816e1f087c",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "338 OPERATIONS IN N. VA., W. VA., MD., AND PA. [Chap. XXXL Ko. 84. Report of Maj. Gen. Fitz-JoJin Porter ^ U. "
+        },
+        {
+          "printed": 339,
+          "pdf": 355,
+          "evidence": "S21/readings/OR_I-XIX.1-p339.json",
+          "sha256": "d16e5a2e58f12f629193d1d9c363623b42a3db7bc4e3c00502a2f2c6980d1354",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chap. XXXI.] THE MARYLAND CAMPAIGN. 339 their and serious injury was inflicted upon the infantry, which in sev"
+        },
+        {
+          "printed": 504,
+          "pdf": 520,
+          "evidence": "S21/readings/OR_I-XIX.1-p504.json",
+          "sha256": "94de0d4ff90bbad422bc786c9840b4019ed0ce6cc8ce8eaca3a2caccda0d4c28",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "504 OPERATIONS IN N. VA., W. YA., MD., AND PA. [Chap. XXXI. merits of the brigade particularly engaged at the "
+        },
+        {
+          "printed": 505,
+          "pdf": 521,
+          "evidence": "S21/readings/OR_I-XIX.1-p505.json",
+          "sha256": "a4b719b59231a8f9cd6d8cd36545211aee96f8657429b53a396640c9480ea126",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "505 Chap. XXXI.] THE MARYLAND CAMPAIGN. The division was carried into action about 6.30 a. m., under the order"
+        },
+        {
+          "printed": 861,
+          "pdf": 877,
+          "evidence": "S21/readings/OR_I-XIX.1-p861.json",
+          "sha256": "c72bf1e3acea0a8ac8539fafefdf45db4d6367b80c40afbc092e1ba8eb3494e1",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chap. THU MARYLAND CAMPAIGN. 861 Return of casualties in MoLaws* division^ &c. — Continued. Return of casualti",
+          "images": [
+            "S21/images/OR_I-XIX.1-p861.png"
+          ]
+        },
+        {
+          "printed": 862,
+          "pdf": 878,
+          "evidence": "S21/readings/OR_I-XIX.1-p862.json",
+          "sha256": "330735922e0010b560ff5d0fc0ffcc178362b4a9ba8ec3f32d86b5e3123a6704",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "■i 862 OPERATIONS IN N. VA., W. VA., MD., AND PA. IChap. XSXl Eeturn of casualties in McLaws' division, 4’C. <",
+          "images": [
+            "S21/images/OR_I-XIX.1-p862.png"
+          ]
+        },
+        {
+          "printed": 885,
+          "pdf": 901,
+          "evidence": "S21/readings/OR_I-XIX.1-p885.json",
+          "sha256": "ed325de04da28d632c6c14cb09c91b4c4f8c0d9598c3e80f4fe2c3357085abf4",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "885 Chap. XXXI.) THE MARYLAND CAMPAIGN. a^raiii upon the enemy, and met them in the corn-field beyond the barn",
+          "images": [
+            "S21/images/OR_I-XIX.1-p885.png"
+          ]
+        },
+        {
+          "printed": 886,
+          "pdf": 902,
+          "evidence": "S21/readings/OR_I-XIX.1-p886.json",
+          "sha256": "c794719f228bde276ccdcf887e288dda34ab3a90b8f07fd9f8ccc595dd5e5958",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "886 OPERATIONS IN N. VA., WrVA., MD., AND PA. [CHAr. xxxi. incorrect, I was directed to bring my brigades as r",
+          "images": [
+            "S21/images/OR_I-XIX.1-p886.png"
+          ]
+        },
+        {
+          "printed": 910,
+          "pdf": 926,
+          "evidence": "S21/readings/OR_I-XIX.1-p910.json",
+          "sha256": "dd49c145a697f1b1b8320775d09d729cfbfd7692341e5f019fa28a9332a25e90",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "910 OPERATIONS IN N. VA., W. VA., MD., AND PA. [Chat. XXXr. near the first position I had held. From this poin",
+          "images": [
+            "S21/images/OR_I-XIX.1-p910.png"
+          ]
+        },
+        {
+          "printed": 911,
+          "pdf": 927,
+          "evidence": "S21/readings/OR_I-XIX.1-p911.json",
+          "sha256": "cd0d7843af33de1dc671ce92c7c6b10d8b8da9fcda698e3be4095747fca707b4",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "THE MARYLAND CAMPAIGN. 911 CllAl\\ Chinn’s house, Lieutenant Blackwell, Eighth Georgia Kegiment, has filled the",
+          "images": [
+            "S21/images/OR_I-XIX.1-p911.png"
+          ]
+        },
+        {
+          "printed": 914,
+          "pdf": 930,
+          "evidence": "S21/readings/OR_I-XIX.1-p914.json",
+          "sha256": "a9f43345cd011359518df6f5e3881ad843a9cdf817bf15f492b08b9ec37999fe",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "914 OPERATIONS IN N. VA., W. VA., MD., AND PA. [Chap. XXXL Owing to a heavy mist, which concealed Harper’s Fer"
+        },
+        {
+          "printed": 915,
+          "pdf": 931,
+          "evidence": "S21/readings/OR_I-XIX.1-p915.json",
+          "sha256": "1aa9a5fc4711660eb70efaf656eed1258c0443fd43921b8b621cb6dc61390f17",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "915 Chap. XXXI.] THE MARYLAND CAMPAIGN. Kortli Carolina and Third Arkansas Eegiments to hold the open space be"
+        },
+        {
+          "printed": 916,
+          "pdf": 932,
+          "evidence": "S21/readings/OR_I-XIX.1-p916.json",
+          "sha256": "b3cd727abb4b388a23780977c90548a10ef26225da0ae8ae41b7d5e2269dcd1b",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "916 OPERATIONS IN N. VA., W. VA., MD., AND PA. [Cuap. XXXI. aud their ammunition being now almost exhausted, C"
+        },
+        {
+          "printed": 919,
+          "pdf": 935,
+          "evidence": "S21/readings/OR_I-XIX.1-p919.json",
+          "sha256": "9b9bd84f208d2d936dc7fb2d4238f008736cefbb2b6bbb8ed72d7c47b63e7339",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "919 Chap. XXXI.] THE MARYLAND CAMPAIGN. ing out Company A and the company from the Thirtieth Virginia, as skir",
+          "images": [
+            "S21/images/OR_I-XIX.1-p919.png"
+          ]
+        },
+        {
+          "printed": 922,
+          "pdf": 938,
+          "evidence": "S21/readings/OR_I-XIX.1-p922.json",
+          "sha256": "6d74c1eb89baa71ba6f72a8ca30a9e8eb76133c956e4da03a51153bcf02c789a",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "922 OPERATIONS IN N. VA., W. VA., MD., AND PA. TChap. XXXI. Headquarters Eight Wing, September 26, 1862. Respe"
+        },
+        {
+          "printed": 923,
+          "pdf": 939,
+          "evidence": "S21/readings/OR_I-XIX.1-p923.json",
+          "sha256": "d132d3400759c5a650ca8dae837bd6b42a7104a30a614dcba860c0818633deb1",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "923 Chap. XXXI. | THE MARYLAND CAMPAIGN. extreme left, near Saint Mumma church*, on the Hagerstown pike, re- m"
+        },
+        {
+          "printed": 924,
+          "pdf": 940,
+          "evidence": "S21/readings/OR_I-XIX.1-p924.json",
+          "sha256": "a0232dd3b09ea6b7167a238301052802264f39cf03b70628c906108af32dd009",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "924 OPERATIONS IN N. VA., W. VA., MD., AND PA. [Chai*. XXXI. Colonel [J. M.] Stone, Lieutenant-Colonel [D. W.]"
+        },
+        {
+          "printed": 925,
+          "pdf": 941,
+          "evidence": "S21/readings/OR_I-XIX.1-p925.json",
+          "sha256": "762af8b47c8376c894dd87dd58eea5fc54ba473a84cabbe71a10e406e92c8157",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "925 Chap. XXXI.] THE MARYLAND CAMPAIGN. sa [Inclosure.] Missing. Killed. Wounded. Command. o5 S O o TEXAS BRIG"
+        },
+        {
+          "printed": 926,
+          "pdf": 942,
+          "evidence": "S21/readings/OR_I-XIX.1-p926.json",
+          "sha256": "780101650ee66fdcf3d67c73a2186e77a0a2ce38b36a08e82a99ce0aa28aab98",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "926 OPERATIONS IN N. VA., W. YA., MD., AND PA. [Chap. XXXL This section was in charge of Sergeant Schlemmermey"
+        },
+        {
+          "printed": 929,
+          "pdf": 945,
+          "evidence": "S21/readings/OR_I-XIX.1-p929.json",
+          "sha256": "ad29233f4aea7d453196217cbbba5c61e06747b04678921b6500518d19cfce11",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "929 Chap. XXXI.] THP] MARYLAND CAMPAIGN. occupied tbe woods on our right, where it met the enemy nnd drove and",
+          "images": [
+            "S21/images/OR_I-XIX.1-p929.png"
+          ]
+        },
+        {
+          "printed": 948,
+          "pdf": 964,
+          "evidence": "S21/readings/OR_I-XIX.1-p948.json",
+          "sha256": "f96d7bd936b87c6068b52ebcf735adde3e96e2575336fc4aac39d9b396f2c92c",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "948 OPERATIONS IN N. TA., W. VA., MB., AND PA. [Chap. XXXL After occupying this position but a short time, and",
+          "images": [
+            "S21/images/OR_I-XIX.1-p948.png"
+          ]
+        },
+        {
+          "printed": 968,
+          "pdf": 984,
+          "evidence": "S21/readings/OR_I-XIX.1-p968.json",
+          "sha256": "51e2d093666dda2aeea686ace35609a873f7a5bbb31173d95452b5d767c72dfd",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "968 OPERATIONS IN N. VA., W. VA., MD., AND PA. [Chap. XXXI. time the enemy’s batteries, which were posted on t",
+          "images": [
+            "S21/images/OR_I-XIX.1-p968.png"
+          ]
+        },
+        {
+          "printed": 981,
+          "pdf": 997,
+          "evidence": "S21/readings/OR_I-XIX.1-p981.json",
+          "sha256": "bab7abd552a4c21bffe8499339be7248b6ae6b374e2b63194e937c0d4409fe36",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "981 Chap. XXXi.] THE MARYLAND CAMPAIGN. and not until repeated calls liad been made for them. When I entered t"
+        },
+        {
+          "printed": 982,
+          "pdf": 998,
+          "evidence": "S21/readings/OR_I-XIX.1-p982.json",
+          "sha256": "8d397b8b86ec8541392f10c1cd47a0d866fe0b867d82bb01d9e5123becb7054e",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "982 OPERATIONS IN N. VA., W. VA., MD., AND PA. [Chap. XXXI. SHEPHERDSTOWN. On the morning of the 20th, at 6.30"
+        },
+        {
+          "printed": 1007,
+          "pdf": 1023,
+          "evidence": "S21/readings/OR_I-XIX.1-p1007.json",
+          "sha256": "776a415e3e611f61d24c3ca7d68699173edeb546cb949aa424ab6a15c81a43e7",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "1007 Chap. XXXI.] THE MARYLAND CAMPAIGN. which was placed in the city as provost guard. I found the division a",
+          "images": [
+            "S21/images/OR_I-XIX.1-p1007.png"
+          ]
+        },
+        {
+          "printed": 1008,
+          "pdf": 1024,
+          "evidence": "S21/readings/OR_I-XIX.1-p1008.json",
+          "sha256": "2f7ac4c8d6796a32b665c435a4d196bf88b8e1600dbdbd2fcb4c1ba353a64e71",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "1008 OPERATIONS IN N. VA., W. VA., MD., AND PA. [Chai .XXXI. were warmly engaged until night. The troops lay o",
+          "images": [
+            "S21/images/OR_I-XIX.1-p1008.png"
+          ]
+        },
+        {
+          "printed": 1022,
+          "pdf": 1038,
+          "evidence": "S21/readings/OR_I-XIX.1-p1022.json",
+          "sha256": "b8b7d68e3e72fbcbaa5490f948c78beedfd5dbf65280c74cf86a2ee9e777b78a",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "1022 OPERATIONS IN N. VA., W. VA., MD., AND PA. [Chap. XXXL of Iieavy m arches, deficient commissariat, want o",
+          "images": [
+            "S21/images/OR_I-XIX.1-p1022.png"
+          ]
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 170,
+          "pdf": 186
+        },
+        {
+          "printed": 803,
+          "pdf": 819
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XIX.2",
+      "title": "Official Records, series I, volume XIX, part II (1887)",
+      "item": "warofrebellion192unit",
+      "local_path": "warofrebellion192unit/warofrebellion192unit.pdf",
+      "bytes": 79097442,
+      "sha256": "feeffadde0922072422b88d3d5517da69412f1f9e08a4a910283e9ac728f9a62",
+      "pdf_pages": 838,
+      "archive_url": "https://archive.org/details/warofrebellion192unit",
+      "scan_url": "https://archive.org/download/warofrebellion192unit/warofrebellion192unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 336,
+          "pdf": 342,
+          "evidence": "S21/readings/OR_I-XIX.2-p336.json",
+          "sha256": "5087f9ad19f1dd5cb575f401075839d24fce4f75d016b864d2cdbbdd3ed662cf",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "336 OPERATIONS IN W. VA., MD., AND PA. [Chap. XXXI. N. VA., Everything is destroyed pontoon bridge easily repa",
+          "images": [
+            "S21/images/OR_I-XIX.2-p336.png"
+          ]
+        },
+        {
+          "printed": 569,
+          "pdf": 575,
+          "evidence": "S21/readings/OR_I-XIX.2-p569.json",
+          "sha256": "084315a8230f88cf35940cbeaa2ffcf4c2e32c7039ff3be428119e8beeb97412",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chap. XXXI.] CORRESPONDENCE, ETC. UNION. 569 Special Orders, War Department, Adjt. Gen.’s Office, Wasliingtonr"
+        },
+        {
+          "printed": 583,
+          "pdf": 589,
+          "evidence": "S21/readings/OR_I-XIX.2-p583.json",
+          "sha256": "719d041846244136c70dcea7ca47230721709a8e8221f325cefd847a96865bd6",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chap. XXXI.] CORRESPONDENCE, ETC. UNION. 583 sentations as to the necessity of cavalry on this line. The major"
+        },
+        {
+          "printed": 584,
+          "pdf": 590,
+          "evidence": "S21/readings/OR_I-XIX.2-p584.json",
+          "sha256": "29d09b8430f96f9cb5250830c81e2cd6af57cb98f8304baf03a89ce34776d949",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "584 OPERATIONS IN VA., W. MD., AND PA. [Chap. XXXL N. VA., • Lieut. Col. James A. Hardie, aide-de-camp, acting"
+        },
+        {
+          "printed": 713,
+          "pdf": 719,
+          "evidence": "S21/readings/OR_I-XIX.2-p713.json",
+          "sha256": "ee4c9ef75781a2dd48a3d3a96bf476071364d1532b92d3c52a915afe62f72cd4",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chap. XXXI.] CORRESPONDENCE, ETC. CONFEDERATE. 713 X. The Davis Legion Jeff. will report for duty to Lieut. Ge"
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 555,
+          "pdf": 561
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XVI.1",
+      "title": "Official Records, series I, volume XVI, part I (1886)",
+      "item": "warofrebellion161unit",
+      "local_path": "warofrebellion161unit/warofrebellion161unit.pdf",
+      "bytes": 150031790,
+      "sha256": "97de1b361f66872936b293b627b3b61c63361dd206213fda8a5e8989964c1d30",
+      "pdf_pages": 1264,
+      "archive_url": "https://archive.org/details/warofrebellion161unit",
+      "scan_url": "https://archive.org/download/warofrebellion161unit/warofrebellion161unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 1041,
+          "pdf": 1055,
+          "evidence": "S21/readings/OR_I-XVI.1-p1041.json",
+          "sha256": "adee20fcc76dca9488503a92b417f81bc5ac118e10bff519250fe7fdaf16d7fb",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "1041 Chap. XXVIII.] BATTLE OF PERRYVILLE, KY. Ninety-eighth Ohio, to move his troops to the right and repel th",
+          "images": [
+            "S21/images/OR_I-XVI.1-p1041.png"
+          ]
+        },
+        {
+          "printed": 1049,
+          "pdf": 1063,
+          "evidence": "S21/readings/OR_I-XVI.1-p1049.json",
+          "sha256": "e83aa0dea75a7294353117e11e0369e120839640581305724ed5387bca29d372",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chap. XXVIII.] BATTLE OF PERRYVILLE, KY. 1049 mand rendered efficient service in making reconnaissances to the",
+          "images": [
+            "S21/images/OR_I-XVI.1-p1049.png"
+          ]
+        },
+        {
+          "printed": 1059,
+          "pdf": 1073,
+          "evidence": "S21/readings/OR_I-XVI.1-p1059.json",
+          "sha256": "59bcc0099b6d31f2789dacc4ffa978032b7de645d8fc81385f381c9242784801",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "1059 Chap. XXVHX] BATTLE OF PERRYVILLE, KY. No. 14. Report of Gapt. Percival P. Older shaw , V. 8. Army , Assi",
+          "images": [
+            "S21/images/OR_I-XVI.1-p1059.png"
+          ]
+        },
+        {
+          "printed": 1060,
+          "pdf": 1074,
+          "evidence": "S21/readings/OR_I-XVI.1-p1060.json",
+          "sha256": "ca9758caebc44c5c6d0268b8eb7a303bc3726d500509b36f31186f184cfb52f2",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "1060 KY., M. AND E. TENN., N. ALA., AND SW. VA. [Chap. XXVIIL Riding toward our left and a little in advance o",
+          "images": [
+            "S21/images/OR_I-XVI.1-p1060.png"
+          ]
+        },
+        {
+          "printed": 1092,
+          "pdf": 1106,
+          "evidence": "S14/readings/OR_I-XVI.1-p1092.json",
+          "sha256": "c0400146a3558113f80eafa1471a7b11cd84099d6d3abc856463d43b86339649",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "1092 KY., M. AND E. TENN., N. ALA., AND SW. YA. [Chap. XXVm. Major-General Hardee that he did not regard the e"
+        },
+        {
+          "printed": 1118,
+          "pdf": 1132,
+          "evidence": "S21/readings/OR_I-XVI.1-p1118.json",
+          "sha256": "bbdba60803ba255d175d005629378d156d11b00b42d42c81e95cb00a0d583c33",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "1118 KY., M. AND E. TENN., N. ALA., AND SW. VA. [Chap. XXV2H. About 11 a. m., it becoming apparent that the en"
+        },
+        {
+          "printed": 1120,
+          "pdf": 1134,
+          "evidence": "S21/readings/OR_I-XVI.1-p1120.json",
+          "sha256": "c2ba9412e1c958e932d13a7e18ec35665822a973e7324311d8dac97e661d5c39",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "1120 KY., M. AND E. TENN., N. ALA., AND SW. VA. [Chap. XXVin. Wheeler and the advanced forces of the Federal a"
+        },
+        {
+          "printed": 1122,
+          "pdf": 1136,
+          "evidence": "S21/readings/OR_I-XVI.1-p1122.json",
+          "sha256": "6c922390045b9b24840a85ce5bb29f176655cd05cb2812dc68192ad76904d700",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "N. ALA., AND SW. YA. [Chap. xxvm. 1122 KY., M. AND E. TENN., severely wounded while rendering efficient servic"
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 1036,
+          "pdf": 1050
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XVI.2",
+      "title": "Official Records, series I, volume XVI, part II (1886)",
+      "item": "warofrebellion162unit",
+      "local_path": "S14/warofrebellion162unit/warofrebellion162unit.pdf",
+      "bytes": 103012128,
+      "sha256": "833bf7aa7335e0678a0c3f5337837ec301636c75ceeb273e0032206593c68acc",
+      "pdf_pages": 1128,
+      "archive_url": "https://archive.org/details/warofrebellion162unit",
+      "scan_url": "https://archive.org/download/warofrebellion162unit/warofrebellion162unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 562,
+          "pdf": 568,
+          "evidence": "S21/readings/OR_I-XVI.2-p562.json",
+          "sha256": "f5a450d9a3c08f69a2f990fe79a0f98d402bb310c2d7d83cb19b0f6d82196cec",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": , 562 AND TENN., AND SW. YA. xxvm. KY., M. E. N. ALA., [Chap. 1862—3.30 Cincinnati, Ohio, October p. m. 1, M",
+          "images": [
+            "S21/images/OR_I-XVI.2-p562.png"
+          ]
+        },
+        {
+          "printed": 563,
+          "pdf": 569,
+          "evidence": "S21/readings/OR_I-XVI.2-p563.json",
+          "sha256": "612dbfccfae2fb507bc8bef35c4dc1492dc7fbc595dbccb478585be03fe17a2d",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": : . . ETC.—UNION. Chap. XXVHL] CORRESPONDENCE, 563 <fc.—Continued. Abstract from Return of the District of t",
+          "images": [
+            "S21/images/OR_I-XVI.2-p563.png"
+          ]
+        },
+        {
+          "printed": 564,
+          "pdf": 570,
+          "evidence": "S21/readings/OR_I-XVI.2-p564.json",
+          "sha256": "669c4e601daf2b17c87ba938c59eb58ae64d84fa5706db10dd6da8ed4a7e47d0",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": : 564 M. AND TENN., ALA., AND SW. VA. XXVm. KY., E. N. [Chap. $c.—Continued. Abstract from Return of the Dis",
+          "images": [
+            "S21/images/OR_I-XVI.2-p564.png"
+          ]
+        },
+        {
+          "printed": 900,
+          "pdf": 906,
+          "evidence": "S14/readings/OR_I-XVI.2-p900.json",
+          "sha256": "ab51bdbe897fb171f4eac9b5bb7195a8bbc70230c5fff2122cfeadbe86d02c5d",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "900 KY., M. AND E. TENN., N. ALA., AND SW. VA. [Chap. XXVIII. Abstract from Field Return of the right ivirig, "
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XVII.1",
+      "title": "Official Records, series I, volume XVII, part I (1886)",
+      "item": "warofrebellion171unit",
+      "local_path": "warofrebellion171unit/warofrebellion171unit.pdf",
+      "bytes": 96191022,
+      "sha256": "0bd056ab7722c92c1a9865a391ed3c4751536f7495c42aa3f39a8903c309f6b1",
+      "pdf_pages": 920,
+      "archive_url": "https://archive.org/details/warofrebellion171unit",
+      "scan_url": "https://archive.org/download/warofrebellion171unit/warofrebellion171unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 251,
+          "pdf": 267,
+          "evidence": "S21/readings/OR_I-XVII.1-p251.json",
+          "sha256": "538c42e51ec011412751bc5bbd990cba2830b15375d2fe75e9cada3abd920f92",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": Chap. XXIX. CORINTH. 251 1 No. 45. Report Brig. Gen. Thomas A. Davies, Army, commanding Second of JJ. S. Arm",
+          "images": [
+            "S21/images/OR_I-XVII.1-p251.png"
+          ]
+        },
+        {
+          "printed": 258,
+          "pdf": 274,
+          "evidence": "S21/readings/OR_I-XVII.1-p258.json",
+          "sha256": "76721f48f99782dc8f714595e9b7b0c4e92b5847532c74961d794980e955a39b",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "258 WEST TENN. AND NORTHERN XXIX. MISS. [Chap. one-third of the number engaged. In Colonel Baldwin’s the casua",
+          "images": [
+            "S21/images/OR_I-XVII.1-p258.png"
+          ]
+        },
+        {
+          "printed": 336,
+          "pdf": 352,
+          "evidence": "S21/readings/OR_I-XVII.1-p336.json",
+          "sha256": "d7f295e83d5f8492888e3d8b9a7de5a539e54ca291e807db821b6d88ce53d2dc",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "; 336 WEST TENN. AND NORTHERN MISS. XXIX. [Chap. being detached at Kossuth, 10 miles from Corinth. Total numbe"
+        },
+        {
+          "printed": 337,
+          "pdf": 353,
+          "evidence": "S21/readings/OR_I-XVII.1-p337.json",
+          "sha256": "70e6a604681e48a06888d17f5b2d5d178988c2b66ec50332e1c7266966e94f47",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chap. XXIX.] CORINTH. 337 visions in anticipation of an advance of the enemy (Davies’ the north- west angle be"
+        },
+        {
+          "printed": 378,
+          "pdf": 394,
+          "evidence": "S14/readings/OR_I-XVII.1-p378.json",
+          "sha256": "bab95a9cc960285123cb73aa6214139f1c7775bfaf9d7637976fcdf2d9fa2951",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "378 WEST TENN. AND NORTHERN MISS. [Chap. XXTX. attempt Corinth. I had a reasonable hope of success. Field retu"
+        },
+        {
+          "printed": 379,
+          "pdf": 395,
+          "evidence": "S14/readings/OR_I-XVII.1-p379.json",
+          "sha256": "5e2b9c288d3a9b036ea5a365027eb284e75ea0a40e3885401102c19821c4ef32",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chaf. XXIX.] CORINTH. 379 The attack was commenced on the right by Lovell’s division and ex- tended gradually "
+        },
+        {
+          "printed": 385,
+          "pdf": 401,
+          "evidence": "S14/readings/OR_I-XVII.1-p385.json",
+          "sha256": "ecf62f012d5b7d558cee0ea807ff74abb2bebb20a2b9805ee89bbde57558ecd9",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chap. XXIX.] CORINTH. 385 The report from Armstrong’s brigade* does not mention any one especially by name. Th"
+        },
+        {
+          "printed": 393,
+          "pdf": 409,
+          "evidence": "S21/readings/OR_I-XVII.1-p393.json",
+          "sha256": "be9a59d3fe44da8ebcc94ed48d33243ca038ca495266ae9cec13070f551b2fa0",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "; Chap. XXIX.] CORINTH. 393 shot and shell from a battery advantageously posted in our front and supported by ",
+          "images": [
+            "S21/images/OR_I-XVII.1-p393.png"
+          ]
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 78,
+          "pdf": 94
+        },
+        {
+          "printed": 176,
+          "pdf": 192
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XVII.2",
+      "title": "Official Records, series I, volume XVII, part II (1887)",
+      "item": "warofrebellion172unit",
+      "local_path": "S14/warofrebellion172unit/warofrebellion172unit.pdf",
+      "bytes": 96210483,
+      "sha256": "2cebc26d3e21d6fce2a4e713e941983a91b57430a54c420d26d6577973d76bc5",
+      "pdf_pages": 1036,
+      "archive_url": "https://archive.org/details/warofrebellion172unit",
+      "scan_url": "https://archive.org/download/warofrebellion172unit/warofrebellion172unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 246,
+          "pdf": 252,
+          "evidence": "S21/readings/OR_I-XVII.2-p246.json",
+          "sha256": "3ac420d568e3f0197855a554f8efbe8d118f3054cdda43663532a54eba89373a",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": . . 246 WEST TENN. AND NORTHERN MISS. XXIX [Chap. Tennessee—Continued. Abstract from Monthly Return of the D",
+          "images": [
+            "S21/images/OR_I-XVII.2-p246.png"
+          ]
+        },
+        {
+          "printed": 247,
+          "pdf": 253,
+          "evidence": "S21/readings/OR_I-XVII.2-p247.json",
+          "sha256": "ac9b2350fb20de33193a21600c237001f936b799682d1ac69abfed0365850a58",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "ETC.—UNION. XXIX.] CORRESPONDENCE, 247 Chap. Cavalry. 6th Illinois, Col. Benjamin II. Grierson. Thielemann’s I",
+          "images": [
+            "S21/images/OR_I-XVII.2-p247.png"
+          ]
+        },
+        {
+          "printed": 248,
+          "pdf": 254,
+          "evidence": "S21/readings/OR_I-XVII.2-p248.json",
+          "sha256": "60b1d7ed3edb3fe6e22aa13c5d25319d27a5589f4a146e093734e4fe298bc4bb",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "248 WEST TENN. AND NORTHERN MISS. XNIX. [Chap. THIRD DIVISION.* Maj. Gen. William Rosecrans. S. SECOND DIVISIO"
+        },
+        {
+          "printed": 249,
+          "pdf": 255,
+          "evidence": "S21/readings/OR_I-XVII.2-p249.json",
+          "sha256": "d79ad385e317c3b8cd86e777f19c16fb459b8c843b3ed571caba7d69f639a34f",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "a XXIX.] CORRESPONDENCE, ETC. UNION. 249 Cij i'. SECOND DIVISION, ARMY OF THE TENNESSEE. Brig. Gen. Thomas A. "
+        },
+        {
+          "printed": 337,
+          "pdf": 343,
+          "evidence": "S21/readings/OR_I-XVII.2-p337.json",
+          "sha256": "6fee81aad43cb5eb06921fea3b0085edbcf7da52d70b306683c541000196fb46",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ". . : Chap. XXIX.] CORRESPONDENCE, ETC. UNION. 337 La Grange, November 10, 1862. Genera] Webster, Jackson Tenn"
+        },
+        {
+          "printed": 338,
+          "pdf": 344,
+          "evidence": "S21/readings/OR_I-XVII.2-p338.json",
+          "sha256": "1241a1e76aa1c70a3527b81ae2443603945ad829ede3d5bed6bfc75d352c9258",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "338 WEST TENN. AND NORTHERN XXIX. MISS. [Chap. #c.—Continued. Abstract from Tri-monthly Return of the Departme"
+        },
+        {
+          "printed": 339,
+          "pdf": 345,
+          "evidence": "S21/readings/OR_I-XVII.2-p339.json",
+          "sha256": "4ed99b321aae7893a732b292eb41f25f0dc1eb67955a97a7b4f4a5af1a8ecc02",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chap. XXIX.] CORRESPONDENCE, ETC. UNION. 339 FOURTH DIVISION. Brig. Gen. Thomas McKean. J. Infantry. * 14th Il"
+        },
+        {
+          "printed": 340,
+          "pdf": 346,
+          "evidence": "S21/readings/OR_I-XVII.2-p340.json",
+          "sha256": "83d6aca18acabe2547cca8b4928f197a30895c80ee3705d7d4037740e5bb8be4",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "340 WEST TENN. AND NORTHERN MISS. XXIX. [Chap. DIVISION.* Brig. Gen. John McArthur. 11th Iowa, Col. William Ha"
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XX.2",
+      "title": "Official Records, series I, volume XX, part II (1887)",
+      "item": "warofrebellion202unit",
+      "local_path": "S14/warofrebellion202unit/warofrebellion202unit.pdf",
+      "bytes": 56581503,
+      "sha256": "7b9bca70d077a0eca423e0c65fcf591c75c02c80096aba7cbccb44d11b409c13",
+      "pdf_pages": 596,
+      "archive_url": "https://archive.org/details/warofrebellion202unit",
+      "scan_url": "https://archive.org/download/warofrebellion202unit/warofrebellion202unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 75,
+          "pdf": 81,
+          "evidence": "S21/readings/OR_I-XX.2-p75.json",
+          "sha256": "5814245e994c393fb95f415a751efb0c30859589279c13286e536d18871bf287",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": : : XXXII.] CORRESPONDENCE, ETC. UNION. 75 Chap. Bragg commands main body. Bebels believed make stand at Tul"
+        },
+        {
+          "printed": 76,
+          "pdf": 82,
+          "evidence": "S21/readings/OR_I-XX.2-p76.json",
+          "sha256": "628e32d923b35f5f702b900e7696fa24db5b2731deb621608ccdad62e2d96d04",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": ": : 76 KY., MID. AND TENN., ALA., AND SW. YA. XXXn. E. N. [Chap. lislied before the river rises, to close the "
+        },
+        {
+          "printed": 411,
+          "pdf": 417,
+          "evidence": "S21/readings/OR_I-XX.2-p411.json",
+          "sha256": "42e1f7a42a4bae057029ace0266cdfc158697a6a416e376d50492b0f4f722cd1",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chap. XXXII.] CORRESPONDENCE, ETC. CONFEDERATE. 411 Tullahoma, November 18G2. 20, General 0. Breckinridge J. :",
+          "images": [
+            "S21/images/OR_I-XX.2-p411.png"
+          ]
+        },
+        {
+          "printed": 412,
+          "pdf": 418,
+          "evidence": "S21/readings/OR_I-XX.2-p412.json",
+          "sha256": "763c3c782e4e76b286342baaebd79f1e16f601e897fcb4f13df409b76e0d0f6d",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "412 KY., MID. AND TENN., ALA., AND SW. VA. XXXII. E. N. [CnAr. see. The enemy in heavy force before us, with a",
+          "images": [
+            "S21/images/OR_I-XX.2-p412.png"
+          ]
+        },
+        {
+          "printed": 413,
+          "pdf": 419,
+          "evidence": "S21/readings/OR_I-XX.2-p413.json",
+          "sha256": "da34bead2a0550111d7c705ace560fa1033fd9dd43472e80b5e1e1174b9ca986",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "XXXII. CORRESPONDENCE, ETC. CONFEDERATE. 413 Chai>. J Organization of troops in the Department of East Tenness",
+          "images": [
+            "S21/images/OR_I-XX.2-p413.png"
+          ]
+        },
+        {
+          "printed": 414,
+          "pdf": 420,
+          "evidence": "S21/readings/OR_I-XX.2-p414.json",
+          "sha256": "d18eed2019f967411485bdb7eec33c2538300a08c4cee221599716c8ff681aa0",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "414 KY., MID. AND TENN., ALA., AND SW. VA. XXXII. E. N. [Chap. THIRD DIVISION. (At Cumberland and Big Creek Ga"
+        },
+        {
+          "printed": 423,
+          "pdf": 429,
+          "evidence": "S21/readings/OR_I-XX.2-p423.json",
+          "sha256": "5bc92d7d505bbeeb905f42be5ee5bb6f129bba973e878ceece6a779e17ba61a9",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "XXXII.] CORRESPONDENCE, ETC. CONFEDERATE. 423 Chap. Apprehension of any immediate danger seems to have subside"
+        },
+        {
+          "printed": 430,
+          "pdf": 436,
+          "evidence": "S21/readings/OR_I-XX.2-p430.json",
+          "sha256": "a4d85f08899f5a5483c987da0cda5a17e8898ba77e112489f69acb19d5605d9d",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "430 KY., MID. AND TENN., ALA., AND SW. YA. XXXII. E. N. [Chap. corps, composed of Morrison’s regiment and Scot",
+          "images": [
+            "S21/images/OR_I-XX.2-p430.png"
+          ]
+        },
+        {
+          "printed": 431,
+          "pdf": 437,
+          "evidence": "S21/readings/OR_I-XX.2-p431.json",
+          "sha256": "c12ef57b37db87afa2a551b05e2cc6b2a757e81ae9ad5009d73609da83f9f473",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Chap. XXXJX] CORRESPONDENCE, ETC. CONFEDERATE. 431 Organization PoWs Corps Army of Tennessee about November 29"
+        },
+        {
+          "printed": 432,
+          "pdf": 438,
+          "evidence": "S21/readings/OR_I-XX.2-p432.json",
+          "sha256": "2554e0653b17e978d83c24931857ed8ee4faffc0b62e7909318544cac656d9fa",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "432 KY., MID. AND TENN., ALA., AND SW. VA. XXXIL E. N. [Chap. Fourth Brigade. Col. A. M. Manigault. 24th Alaba"
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XXI",
+      "title": "Official Records, series I, volume XXI (1888)",
+      "item": "warofrebellion21unit",
+      "local_path": "warofrebellion21unit/warofrebellion21unit.pdf",
+      "bytes": 135987331,
+      "sha256": "867a4a51628cc8a0af6d3c527b55729afd9eea45f45a63c8fb2ce21f760369ab",
+      "pdf_pages": 1280,
+      "archive_url": "https://archive.org/details/warofrebellion21unit",
+      "scan_url": "https://archive.org/download/warofrebellion21unit/warofrebellion21unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 1025,
+          "pdf": 1017,
+          "evidence": "S21/readings/OR_I-XXI-p1025.json",
+          "sha256": "3407d943171080f4a7ea30c16e57152bc19e50e7294eb14dc585b0e3098f21ed",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "CHAr. xxxm.] CORRESPONDENCE, ETC. CONFEDERATE. 1025 ing purposes. The counties of Greenbrier and Monroe, owing"
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 83,
+          "pdf": 85
+        },
+        {
+          "printed": 172,
+          "pdf": 174
+        }
+      ],
+      "acquisition": "Reused S4/S14 scan in place; hash verified in S21",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "R",
+      "item": "battleofshilohor00unit",
+      "title": "David W. Reed / Shiloh National Military Park Commission, The Battle of Shiloh and the Organizations Engaged (1902; revised 1909)",
+      "archive_url": "https://archive.org/details/battleofshilohor00unit",
+      "scan_url": "https://ia600909.us.archive.org/12/items/battleofshilohor00unit/battleofshilohor00unit_bw.pdf",
+      "local_path": "S21/battleofshilohor00unit/battleofshilohor00unit_bw.pdf",
+      "bytes": 7647895,
+      "sha256": "1d8da21642beedd1cf8638eeb966f8f23799c104abfc5bb3587eceba0e4df30e",
+      "pages": [
+        {
+          "printed": 99,
+          "pdf": 101,
+          "evidence": "S21/readings/R-p99.json",
+          "sha256": "846c1665128ddd7fb8b7a15037bdffbb7b99bfd19ea0f207c2673b83cbd6bbf1",
+          "method": "visual image",
+          "header_excerpt": "99 •}S0{ SUTl£) U0IJ0T3 Ut SUtlO sairawBff (MCOOCOCOt- ^ CC lO CO iC CO •[bjox Suissijm: tDtOt-OiO-M CO lO *ct",
+          "images": [
+            "S21/images/R-p99-rotated.png",
+            "S21/images/R-p99.png"
+          ]
+        },
+        {
+          "printed": 100,
+          "pdf": 102,
+          "evidence": "S21/readings/R-p100.json",
+          "sha256": "87ebe0fc3ab7fa1ac9d532c448ce23e0dd446697154dfc7c96c213b6265fa64f",
+          "method": "visual image",
+          "header_excerpt": "100 •^soi sun£) n CD •uot^ob ut sung to to to u< sapraWBg; rH rt rH lOOiCO O OCOCO tH 00 00 CM l^OCC COo •Ib;o",
+          "images": [
+            "S21/images/R-p100-rotated.png",
+            "S21/images/R-p100.png"
+          ]
+        },
+        {
+          "printed": 101,
+          "pdf": 103,
+          "evidence": "S21/readings/R-p101.json",
+          "sha256": "964b4107c91eee7628db66ca399202a72882bb0fa433124008b2f0f3afbed07a",
+          "method": "visual image",
+          "header_excerpt": "1 101 | o O o CO-* r- iH rH i— CM CM CM CMOS101> (OlOH O 50 CO CO Os lO lO iO :o COiOl^ CM CM 00 D ci OS Tffrf",
+          "images": [
+            "S21/images/R-p101-rotated.png",
+            "S21/images/R-p101.png"
+          ]
+        },
+        {
+          "printed": 102,
+          "pdf": 104,
+          "evidence": "S21/readings/R-p102.json",
+          "sha256": "ca81016683f0467066185d6d95e4fabe970ee75569675d578b67d98a1e6c93a8",
+          "method": "visual image",
+          "header_excerpt": "( 102 •%so\\ suno >> | o or suno i co CO CO COO> O •uoijo'b rl QO <! •sauaweg; ,— CN CO CO CO OS CN * LO^ -*i \"",
+          "images": [
+            "S21/images/R-p102-rotated.png",
+            "S21/images/R-p102.png"
+          ]
+        },
+        {
+          "printed": 103,
+          "pdf": 105,
+          "evidence": "S21/readings/R-p103.json",
+          "sha256": "13f3b29f5b6b7682b38a84c078e2ffef5d466a320a180cb703492f3174f8502d",
+          "method": "visual image",
+          "header_excerpt": "I 108 * -T td •5.S01 sunf) uo ^ •uoi;ou ut suno to CO to CM u< \"1 - •s9uawBg; 1-1 rH fi? oca CO •imox r-ICS T-",
+          "images": [
+            "S21/images/R-p103-rotated.png",
+            "S21/images/R-p103.png"
+          ]
+        },
+        {
+          "printed": 104,
+          "pdf": 106,
+          "evidence": "S21/readings/R-p104.json",
+          "sha256": "8e5abfda221c02662fbdbba6a3245d5ac1cafade443ddec2f3967df3b93f9498",
+          "method": "visual image",
+          "header_excerpt": "1 104 CN CN a •jsoi suno •nopoB ui suno CO to CO CO CN * •sauawBg rH r-l rH rH O OC1CN. rH rH en CO •IBJOX ( o",
+          "images": [
+            "S21/images/R-p104-rotated.png",
+            "S21/images/R-p104.png"
+          ]
+        },
+        {
+          "printed": 105,
+          "pdf": 107,
+          "evidence": "S21/readings/R-p105.json",
+          "sha256": "6ef1546e9398c5625cc198eb33f9461dfe79fe0ea04e97ea6dd0bffac0fe534f",
+          "method": "visual image",
+          "header_excerpt": "105 O * I i-l f~ id NXOCOiOrl MHMH rH Oi co co r» t-- i-l o iocio«ain :o r-- to C5 iO <M COlONHil a .» Q \"on 5",
+          "images": [
+            "S21/images/R-p105-rotated.png",
+            "S21/images/R-p105.png"
+          ]
+        },
+        {
+          "printed": 106,
+          "pdf": 108,
+          "evidence": "S21/readings/R-p106.json",
+          "sha256": "520ad078bfa6c661d65037b8bbdd185abca3add10cb2a5c0ce00db692f7b1625",
+          "method": "visual image",
+          "header_excerpt": "106 \" \"\" ^so^ sun*) u 1 1 •uoepb ui sano to to u to 1 to -* i-H CO u i iH * - -S9TJ9j;'Ba rt co to oM mox -c 0",
+          "images": [
+            "S21/images/R-p106-rotated.png",
+            "S21/images/R-p106.png"
+          ]
+        },
+        {
+          "printed": 111,
+          "pdf": 113,
+          "evidence": "S21/readings/R-p111.json",
+          "sha256": "b0c6894f9329c84b845b3c22df918dec8639df2cf53ad2fde6611a10d79b159e",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "Ill ISTOTIE s. UNION FORCES. The \"for duty\" in the First Division of the Army of the Tennessee made up from fi",
+          "images": [
+            "S21/images/R-p111.png"
+          ]
+        },
+        {
+          "printed": 112,
+          "pdf": 114,
+          "evidence": "S21/readings/R-p112.json",
+          "sha256": "66f62de323ef5ce2881214ee428d3bffdf11a66ddd7710209c30c686d6040126",
+          "method": "selected text; image controls table columns",
+          "header_excerpt": "112 Still another computation with same result: Total effective enlisted men April 3 (p. 398) 38,773 Officers ",
+          "images": [
+            "S21/images/R-p112.png"
+          ]
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pdf_pages": 144,
+      "acquisition": "S21 new retained scan",
+      "source_character": "Later compilation/reconstruction"
+    }
+  ],
+  "missing_citation_records": [],
+  "header_spotcheck_candidates": [
+    [
+      "ONR I-7",
+      45,
+      78,
+      "NORTH ATLANTIC BLOCKADING SQUADRON. 46 While the Virginia was thus engaged in getting her position for attacking the CongresSy the"
+    ],
+    [
+      "ONR I-7",
+      46,
+      79,
+      "NORTH ATLANTIC BLOCKADItJO SCJ' exception of tbe Beau/orl, LieuteDont GommaudiD^ Parker, who pro- ceeded to Norfolk with the wouod"
+    ],
+    [
+      "ONR I-7",
+      48,
+      81,
+      "HOBTH ATLASnO IBtOORADmS BQDADBOV. I irere s,h)y Bei^oiided b; his Assistants, Tyuan, Campbell, Herriug, Jack, and WTiite. As Mr. "
+    ],
+    [
+      "OR I-XI.2",
+      56,
+      62,
+      "the peninsular campaign, VA. [Chap. XXni. S.—My P. division, which had been reduced to a skeleton by the battle at Fair Oaks, June"
+    ],
+    [
+      "OR I-XII.2",
+      42,
+      48,
+      "4^ OPERATIONS IN VA., W. VA., AND MD. XXIV. ft. [Chap. actions of Hooker, King, and Ricketts on the 27th and 28th, and the 29th—we"
+    ],
+    [
+      "OR I-XII.3",
+      603,
+      609,
+      ": : ETC.—UNION. CORRESPONDENCE, G 03 Chap. XXIV. 1 Headquarters Army of Virginia, August 20, 1862. (Received 7 p. m.) Major-Genera"
+    ]
+  ],
+  "header_checks": "The six OCR/header candidates were visually checked: ONR I-7 PDF78=45, PDF79=46, PDF81=48; OR I-XI.2 PDF62=56; OR I-XII.2 PDF48=42; OR I-XII.3 PDF609=603. Images retained in S21/images/header-checks.png and ONR7-PDF79/81.png.",
+  "title_checks": "S21/title-check.json retains new-source title pages; S14 title/series/year checks reused for its unchanged scans.",
+  "exclusions": [
+    "Initial image-only ONR I-6 PDF has no searchable text; its zero hits are not negative historical evidence. Cited ONR I-6 pages use the separately retained OCR PDF.",
+    "Initial MA62 offset +8 reached different printed pages; cited final extracts use +2.",
+    "ONR I-23 offsets vary with plates: 119-120 +28, 135-174 +32, 350-355 +34. Preliminary wrong-offset p333 is unused.",
+    "ONR I-22 preliminary p710 extract reached printed706; final cited p710 is PDF744 (+34).",
+    "Rodgers 198-person supply requisition ONR I-22 p282 is June7, not May; preliminary note corrected before final commit.",
+    "Reed p100 prints McCook7553; p102 recap and p111 Buell quote give7552. Both are disclosed.",
+    "Keyword search logs and unread leads are excluded as factual support; source presence is not a whole-volume reading claim."
+  ],
+  "excluded_retained_scans": [
+    {
+      "label": "ONR I-6",
+      "item": "officialrecords16librgoog",
+      "title": "Official records of the Union and Confederate navies in the war of the rebellion ..",
+      "archive_url": "https://archive.org/details/officialrecords16librgoog",
+      "scan_url": "https://ia601403.us.archive.org/32/items/officialrecords16librgoog/officialrecords16librgoog.pdf",
+      "local_path": "S21/officialrecords16librgoog/officialrecords16librgoog.pdf",
+      "bytes": 34231622,
+      "sha256": "b28aa8b9187a950befe099a202a877d131429a8f5c714a17bb881f95dca63884",
+      "used_as_factual_support": false,
+      "exclusion_reason": "Image-only first download; no-text search has no historical evidentiary value. OCR companion used instead."
+    }
+  ]
+}

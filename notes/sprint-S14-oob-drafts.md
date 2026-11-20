@@ -72,6 +72,10 @@ Unknown-strength passes the inherited harness, but it read **zero Union battle r
 6. **[I] Keep checkpoint gaps visible.** Union/battle widths are review proposals, never fitted to a run. Reject a Confederate national bound from partial mixed measures or an outside-window total. The national hold and unsupported battle kinds remain integration work; 1B owners must decide their observation/schema contract. Empty pushback and copied victory weights supply no new ruling.
 7. **[I] Route review and failures to their owners.** Claude's standing reviewer reviews the whole branch after the sprint; the gate reviewer retains every placement/signature. Reject author sign-off and new gate-none claims. Unchanged runtime failures belong to S1/S2 and integration, not S14 data tuning.
 
+## S21 follow-up, 21 November 2026
+
+S14's figures above describe its pinned delivery at `73d6b7a`. S21 subsequently researched all **203 original unknown IDs**, supplying **40 explicitly measured quantities** and retaining **163 unknowns** with searched pages and next sources. The original 213 numerical observations and 416 IDs/windows remain unchanged; the draft now has 253 numerical observations. See the [S21 hand-over](sprint-S21-unknown-strengths.md), [research note](../docs/research/2026-11-20-S21-unknown-strengths.md) and [row register](../docs/research/2026-11-20-S21-strength-dispositions.csv). S21 changes neither S14 checkpoint draft, the active inputs nor the integration/review holds below. S14's historical verification results are not replaced by S21's separate evidence.
+
 ## Findings outside my scope
 
 1. **S1/S2:** the 13 baseline problems above remain, with unchanged active inputs and matching hashes. No performance repair or threshold waiver supplied.
