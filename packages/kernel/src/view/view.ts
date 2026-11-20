@@ -23,6 +23,7 @@ import { heldPost, sideOfPerson } from '../command/command.ts';
 import { whereIsPerson } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import type { WorldIndex } from '../world/index.ts';
+import { createFreezeLedger, type FreezeLedger } from '../tick/freeze.ts';
 import { claimedControlView } from './claimed-control.ts';
 import { controlEvidence } from '../knowledge/control-beliefs.ts';
 import { nextPeopleChange, peopleProjection, type PeopleProjection } from './people.ts';
@@ -30,6 +31,8 @@ import type { ReportClaim } from '../knowledge/report.ts';
 import type { BeliefView, ClaimView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
 
 export interface ViewCache {
+  /** Request graphs already deeply frozen by this caller; shared view children need no second walk. */
+  readonly requestFreeze: FreezeLedger;
   readonly knowledge: KnowledgeCache;
   readonly reports: WeakMap<KnownReport, ReportView>;
   readonly lists: WeakMap<SeatKnowledge, readonly ReportView[]>;
@@ -45,7 +48,7 @@ export interface ViewCache {
 }
 
 export function createViewCache(): ViewCache {
-  return { knowledge: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
+  return { requestFreeze: createFreezeLedger(), knowledge: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
 }
 
 function freeze<T extends object>(o: T): T {

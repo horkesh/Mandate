@@ -24,6 +24,18 @@ Focused tests cover frozen inputs, cross-seat copies of one report with first-tr
 
 Timing limitation: an initial post-change median was 32.11 ms on a changing shared host; a load sample was 57%. This is not a causal saving or an unloaded result. A back-to-back retained-baseline comparison follows; Linux CI remains the deciding gate.
 
+Back-to-back 148-day median/p95: 25.90/45.04 ms before, 21.13/41.70 ms after, an observed median saving of 4.77 ms. Shared-host load still limits causal precision. Commit `8d44c89` passed the hook: 138 files, 1,532 passed, one existing expected failure, three optional timing skips; boundary, licences and decisions passed.
+
+### 2. Reuse the request freeze ledger
+
+`pendingRequests` previously started a fresh deep-freeze walk for each request, including shared immutable report/view graphs. It now uses a weak ledger owned by the caller's ViewCache. New requests and newly reached children remain deeply frozen. No module-global state or State field is introduced.
+
+The regression first failed on repeated traversal, then passed with the ledger. It verifies stable report-list identity across repeated mornings and a new day, a single child traversal, mutation rejection on newly built menus, and a separate caller's fully frozen request. All 82 focused freeze/log/ownership/determinism tests pass. Typecheck caught a narrowing lost across a test callback; capturing the narrowed array fixed it, with typecheck and that test freshly passing. The production run needs no rerun for that test-only correction. All 148 daily hashes and the full summary remain identical (`runs/s2/freeze/comparison.json`). Timing and hook evidence follow in the final evidence table.
+
+The back-to-back step-1/step-2 sample reads 55.98/96.98 ms before and 42.28/76.88 ms after (median/p95), an observed median difference of 13.69 ms. Both medians exceed 40 ms on this busy host; neither is an unloaded pass. This sample is retained rather than retried for a better number.
+
+The first step-2 hook attempt failed only the done-check test's existing 300-second setup bound (319.78 s overall; 138 other files passed, 1,519 tests passed, one expected failure, 17 skipped including the blocked suite). A diagnostic host sample read 100% CPU. The isolated affected file then passed under the same timeout: 14 tests passed, one optional timing skip, 185.06 s. Unreached boundary/licence/decision gates also pass independently. No timeout, criterion or test changed. The justified hook retry uses the installed runner's supported `VITEST_MAX_WORKERS=1`, limiting only this lane's concurrency; all ordinary hook tests remain selected. Pending opening-cache work stays outside the index, so the hook checks the exact step-2 tree in its private snapshot.
+
 ## Proposed rulings
 
 None. The 40 ms budget and all behavior criteria remain unchanged.
