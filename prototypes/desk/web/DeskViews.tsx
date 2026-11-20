@@ -15,7 +15,7 @@ export function AttentionTokens({left,price=null}:{left:number|null;price?:Price
   {price&&<span className="attention-price" role="status">{priceLabel(price)}</span>}
  </span>;
 }
-export function AttentionSheet({data}:{data:DeskSnapshot}){
+export function AttentionSheet({data,dateOf=(day)=>`${S.day} ${day}`}:{data:DeskSnapshot;dateOf?:(day:number)=>string}){
  const menu=data.morning.menu;
  const [hover,setHover]=useState<Price|null>(null);
  if(menu.menuKind!=='principal')return <p>{S.priceMissing}</p>;
@@ -23,7 +23,7 @@ export function AttentionSheet({data}:{data:DeskSnapshot}){
  const sum=prices.every(p=>p!==null)?{min:prices.reduce((s,p)=>s+p!.min,0),max:prices.reduce((s,p)=>s+p!.max,0)}:null;
  return <section className="attention-sheet">
   <AttentionTokens left={menu.attention.left} price={hover}/>
-  <p className="hand">{S.attentionRefillMissing}</p>
+  {data.morning.view.attentionBudget?<div className="attention-refill" data-testid="attention-refill"><p>{S.attentionSpent(data.morning.view.attentionBudget.spent)}</p><p>{S.attentionAllowance(data.morning.view.attentionBudget.allowance)}</p><p>{S.attentionRefill(dateOf(data.morning.view.attentionBudget.nextRefillDay))}</p><small>{S.attentionNoCarry}</small></div>:<p className="hand">{data.morning.view.attentionBudget===null?S.attentionNoBudget:S.attentionRefillMissing}</p>}
   <section className="queued-price"><h3>{S.attentionQueue}</h3><strong>{priceLabel(sum)}</strong><p>{S.attentionQueueNote}</p>
    <ul>{data.queue.map((q,i)=><li key={i}>{presenter(data.strings).text(q.text)} <span>{priceLabel(prices[i]??null)}</span></li>)}</ul>
   </section>
@@ -52,14 +52,14 @@ export function StopSlip({turn,strings,openPaper,onDocket,onPlans,onClose,onHist
   </div>
  </section>;
 }
-export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory}:{data:DeskSnapshot;busy:boolean;run:()=>void;openPaper:(r:ReportView)=>void;onDocket:()=>void;onPlans:()=>void;onHistory:()=>void}){
+export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,setStops}:{data:DeskSnapshot;busy:boolean;run:()=>void;openPaper:(r:ReportView)=>void;onDocket:()=>void;onPlans:()=>void;onHistory:()=>void;setStops?:(points:readonly string[])=>Promise<unknown>}){
  const lastTurn=data.history.at(-1),{text}=presenter(data.strings),menu=data.morning.menu;
  return <><p className="margin-note">{S.runNote}</p>
   {lastTurn&&<StopSlip turn={lastTurn} strings={data.strings} openPaper={openPaper} onDocket={onDocket} onPlans={onPlans} onHistory={onHistory}/>}
   <h3>{data.queue.length} {S.signedCount}</h3>
   {data.queue.map((q,i)=><section key={i}><p>{text(q.text)}</p>{menu.menuKind==='principal'&&<PriceNote line={q.line} menu={menu}/>}</section>)}
   <button data-hotkey="run" data-attention-key="free" className="primary" disabled={busy} onClick={run}>{S.sendRun}</button>
-  <section className="stop-policy"><h3>{S.stopPolicy}</h3><p>{S.stopPolicyNote}</p><ul>{Object.entries(S.stopLabels).map(([key,label])=><li key={key}>{label}</li>)}</ul><p className="hand">{S.stopSettingsMissing}</p></section>
+  <section className="stop-policy"><h3>{S.stopPolicy}</h3>{data.morning.turnStops?<><p>{S.stopLimit(data.morning.turnStops.maxDays)}</p><p>{S.stopSettingsNote}</p><fieldset disabled={busy||!setStops}><legend>{S.stopPolicy}</legend>{data.morning.turnStops.points.map(({point,enabled})=><label key={point}><input type="checkbox" checked={enabled} onChange={e=>{const next=data.morning.turnStops!.points.filter(p=>p.point===point?e.target.checked:p.enabled).map(p=>p.point);void setStops?.(next);}}/>{S.stopChoice(S.stopLabels[point]??S.stopUnknown)}</label>)}<button type="button" onClick={()=>void setStops?.(data.morning.turnStops!.points.map(p=>p.point))}>{S.stopAll}</button></fieldset></>:<><p>{S.stopPolicyNote}</p><p className="hand">{S.stopSettingsMissing}</p></>}</section>
  </>;
 }
 const returnTypes=['strength-return','effective-strength','casualty-return','enemy-estimate'];
@@ -70,7 +70,7 @@ export function AccountabilityLedger({data,openPaper,dateOf,tab,setTab}:{data:De
  const decisions=data.morning.view.situations.filter(s=>!['open','waiting'].includes(s.status)||s.delegatedTo!==null);
  return <section className="accountability-ledger" data-testid="accountability-ledger">
   <nav className="ledger-tabs" aria-label={S.ledgerTitle}>
-   {[["acts",S.ledgerTitle],["returns",S.ledgerReturns]].map(([id,label])=><button key={id} aria-pressed={tab===id} onClick={()=>setTab(id!)}>{label}</button>)}
+   {[["acts",S.ledgerTitle],["returns",S.ledgerReturns],["congress",S.ledgerCongress]].map(([id,label])=><button key={id} aria-pressed={tab===id} onClick={()=>setTab(id!)}>{label}</button>)}
   </nav>
   {tab==='acts'?<div className="ledger-spread">
    <section className="ledger-leaf"><h3>{S.ledgerOrders}</h3><p className="hand">{S.ledgerOwnNote}</p>
@@ -84,14 +84,23 @@ export function AccountabilityLedger({data,openPaper,dateOf,tab,setTab}:{data:De
      {s.chosen.length>0&&<p>{S.ledgerChosen}: {s.chosen.map(id=>name(s.options.find(o=>o.id===id)?.label??id)).join('; ')}</p>}
      {papers.filter(r=>r.subjectKind==='situation'&&r.subjectId===s.id).map(r=><button data-source-paper={r.id} key={r.id} onClick={()=>openPaper(r)}>{S.boardOpenPaper}: {name(r.author,'person')}</button>)}
     </article>)}
-    <aside className="missing-projection"><h4>{S.ledgerCongress}</h4><p>{S.ledgerCongressMissing}</p></aside>
+    <button onClick={()=>setTab('congress')}>{S.ledgerCongress}</button>
    </section>
-  </div>:<section className="ledger-returns"><h3>{S.ledgerReturns}</h3>
+  </div>:tab==='congress'?<CongressLeaf data={data} dateOf={dateOf} openPaper={openPaper}/>:<section className="ledger-returns"><h3>{S.ledgerReturns}</h3>
    {!papers.some(r=>returnTypes.includes(r.type))&&<p>{S.ledgerNoReturns}</p>}
    {papers.filter(r=>returnTypes.includes(r.type)).map(r=><article key={r.id} className="return-entry"><header><h4>{S.genres[r.type]}</h4><p>{name(r.author,'person')}, {dateOf(r.day)}<br/>{name(r.subjectId,r.subjectKind)}</p></header>
     {r.claims.some(c=>figureKinds.has(c.kind))?<table><thead><tr><th>{S.ledgerMeasure}</th><th>{S.ledgerFigure}</th></tr></thead><tbody>{r.claims.filter(c=>figureKinds.has(c.kind)).map((c,i)=><tr key={i}><th scope="row">{S.claims[c.kind]??text(c.kind.replaceAll('-',' '))}{c.token?`, ${text(c.token)}`:''}</th><td>{c.value}</td></tr>)}</tbody></table>:<p>{S.ledgerNoFigures}</p>}
     <button data-source-paper={r.id} onClick={()=>openPaper(r)}>{S.ledgerTerms}</button>
    </article>)}
   </section>}
+ </section>;
+}
+function CongressLeaf({data,dateOf,openPaper}:{data:DeskSnapshot;dateOf:(day:number)=>string;openPaper:(r:ReportView)=>void}){
+ const congress=data.morning.view.congress,{name,text}=presenter(data.strings);
+ if(!congress)return <p>{S.ledgerCongressMissing}</p>;
+ return <section className="congress-sheet" data-testid="congress-sheet"><h3>{S.congressChambers}</h3>
+  {!congress.chambers.length&&<p>{S.congressNoChambers}</p>}{congress.chambers.map(c=><article key={c.id}><h4>{name(c.name)}</h4><p>{S.congressStates[c.status]}{c.opens!==null&&c.closes!==null?`, ${dateOf(c.opens)} — ${dateOf(c.closes)}`:''}</p>{c.composition?<><time>{c.composition.on}</time><dl>{c.composition.groups.map(g=><div key={g.name}><dt>{name(g.name)}</dt><dd>{g.seats}</dd></div>)}</dl><small>{c.composition.cite}</small></>:<p className="hand">{S.congressCompositionMissing}</p>}</article>)}
+  <h3>{S.congressSessions}</h3>{congress.sessions.map(s=><article key={s.id}><h4>{s.callable?S.congressCallable:S.congressRegular}</h4><p>{s.chambers.map(id=>name(congress.chambers.find(c=>c.id===id)?.name??id)).join(', ')}</p><p>{s.opens??(s.afterCallDays===null?S.unknown:S.congressAfterCall(s.afterCallDays))} — {s.closes??(s.sitsDays===null?S.unknown:S.congressSits(s.sitsDays))}</p></article>)}
+  <h3>{S.congressActs}</h3>{!congress.ledger.length&&<p>{S.congressNoActs}</p>}{congress.ledger.map((e,i)=>{const source=data.morning.view.reports.find(r=>r.id===e.source),situation=data.morning.view.situations.find(s=>s.id===e.situation);return <article key={`${e.act}:${e.day}:${i}`}><h4>{Object.hasOwn(data.strings,e.act)?name(e.act):situation?name(situation.title):S.congressAct}</h4><time>{dateOf(e.day)}</time><p>{e.metDay===null?S.congressAway:`${S.congressMet}: ${dateOf(e.metDay)}`}</p><p>{e.answeredDay===null?S.congressNoAnswer:`${S.congressAnswered}: ${dateOf(e.answeredDay)}`}</p>{source?<button data-source-paper={source.id} onClick={()=>openPaper(source)}>{S.boardOpenPaper}: {name(source.author,'person')}</button>:<p className="hand">{S.congressOwn}</p>}</article>;})}
  </section>;
 }

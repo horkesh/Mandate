@@ -14,6 +14,14 @@ export class DeskAdapter {
   private approvedPlans=new Map<string,MapPlan>();
   constructor(private readonly game: ConsoleGame) {}
 
+  setStops(points:readonly string[],expectedDay:number):DeskReply {
+    const fail=(message:string):DeskReply=>({ok:false,message,snapshot:this.snapshot()});
+    if(this.closed)return fail('This console session has ended.');
+    if(expectedDay!==this.game.morning().requestDay)return fail('The morning has changed. Review the desk before changing its stops.');
+    try {this.game.setTurnStops(points);}catch{return fail('Choose only the listed turn stops, without repeats.');}
+    return {ok:true,snapshot:this.snapshot()};
+  }
+
   snapshot(): DeskSnapshot {
     const morning = this.game.morning();
     if(morning.menu.menuKind==='principal')for(const review of morning.menu.reviews){

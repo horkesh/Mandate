@@ -37,6 +37,7 @@ async function read<T>(response: Response): Promise<T> {
   return response.json() as Promise<T>;
 }
 export const deskApi = {
+  stops:(points:readonly string[],day:number)=>fetch('/api/stops',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({points,day})}).then(read<DeskReply>),
   furnitureManifest:(pack:string)=>{
     if(pack!=='union-1861')return Promise.reject(new Error('Unknown geographic sign pack'));
     return fetch(`/map-data/${pack}-signs/manifest.json`,{cache:'no-cache'}).then(read<FurnitureManifest>);

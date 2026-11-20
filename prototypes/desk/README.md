@@ -1097,3 +1097,41 @@ are available and rendered; they do not supply the missing prospective case.
 The seat also supplies no authored live-clock ranges or live/non-live marker
 for the unanswered-situation confirmation. Those require their owning views;
 the prototype does not reconstruct them from private pack effects.
+
+### S19 seat projections and desk controls
+
+The desk now reads the seat's public Congress records, own attention allowance,
+spending and next refill, audience correspondence and the console driver's
+current turn stops. Open **Account to Congress** in the ledger, **Attention**
+on the desk, the stop checkboxes in **Let the days run**, or the correspondence
+at the top of the org board. Sources return to their source control. A visitor
+from an earlier record never opens a replacement holder's person page.
+
+Stop preferences remain in the running console process across page refreshes.
+They change when a turn returns to the desk; they add no simulation State or
+command. A new process starts with all existing stops enabled. Unselected
+decision points and their papers remain in the daybook.
+
+Run this checkout on its own port:
+
+```powershell
+$env:DESK_ART_ROOT='C:/Pyrrhic/ByOrderOfThePresident/art'
+npm run dev -- --port 5291 --saved-map --at-war
+```
+
+Close that process after use. S19's verification server was closed. From this
+folder, generate the evidence fixtures with
+`npx tsx scripts/s19-fixtures.ts`, then run
+`npx playwright test --config playwright.s19.config.ts`. Its preflight runs
+before captures; results and recipes go only to the main checkout's ignored
+`art-masters/S19/`. `scripts/s19-audit.ts` verifies image/source hashes, scope,
+the build inventory and the ignored map inputs against S8's retained inventory.
+
+Published dated chamber membership is supported, but the existing pack supplies
+no counts. Production authors also supply no explicit audience requests or
+prospective declared counter replies yet. The request-source fixture is marked
+fictional; the granted invitation and Union ledger scenes use real kernel
+commands. A prior answer never becomes a preview of the visitor's next reply.
+Detailed evidence, proposed rulings and retained baseline failures are in
+[the S19 hand-over](../../notes/sprint-S19-desk.md). Standing review remains
+deferred under 0106.

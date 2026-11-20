@@ -10,7 +10,7 @@ import {commandPrice,outOfAttention} from './business.ts';
 
 type Common={request:SeatRequest;strings:Readonly<Record<string,string>>};
 type PaperOpener={openPaper:(report:ReportView)=>void};
-export function OrgBoard({request,strings,openPost}:Common&{openPost:(post:string)=>void}) {
+export function OrgBoard({request,strings,openPost,openPaper,dateOf}:Common&{openPost:(post:string)=>void;openPaper?:(r:ReportView)=>void;dateOf?:(day:number)=>string}) {
   const {nodes}=buildOrgBoard(request),{name}=presenter(strings);
   const [query,setQuery]=useState(''),[vacant,setVacant]=useState(false);
   const filtering=query.trim()!==''||vacant;
@@ -29,6 +29,7 @@ export function OrgBoard({request,strings,openPost}:Common&{openPost:(post:strin
   }
   const placed=nodes.filter(n=>n.placed&&(n.parent===null||!nodes.some(p=>p.post===n.parent))),unplaced=nodes.filter(n=>!n.placed);
   return <section className="org-board" data-testid="org-board">
+    <AudienceCorrespondence request={request} strings={strings} openPaper={openPaper} openPost={openPost} dateOf={dateOf}/>
     <div className="org-caption"><p>{S.boardNote}</p><small>{S.boardCount(nodes.length)}</small></div>
     <div className="board-search"><label>{S.boardFilter}<input type="search" value={query} onChange={e=>setQuery(e.target.value)}/></label><button aria-pressed={vacant} onClick={()=>setVacant(v=>!v)}>{S.boardVacancies}</button></div>
     {nodes.length===0&&<p>{S.boardEmpty}</p>}
@@ -106,6 +107,7 @@ export function AudienceScene({request,strings,post,busy,queue,execute,openPaper
   const patch=(index:number,value:Partial<CounterDraft>)=>setCounters(old=>old.map((c,i)=>i===index?{...c,...value}:c));
   return <section className="audience-layout" data-testid="audience-scene">
     <section className="audience-case"><h3>{S.audienceCase}</h3><h4>{S.audienceRecord}</h4><p className="hand">{S.audiencePrior}</p>
+      <AudienceCorrespondence request={request} strings={strings} openPaper={openPaper} post={post}/>
       {record.reasons.length?<ol className="audience-reasons">{record.reasons.map((reason,i)=>{
         const report=record.reports.find(r=>r.id===reason.source)!;
         return <li key={`${reason.source}:${i}`}><p>{(S.reasonLabels as Record<string,string>)[reason.kind]??text(reason.kind.replaceAll('_',' '))}</p><Source report={report} strings={strings} openPaper={openPaper}/></li>;
@@ -136,4 +138,25 @@ export function AudienceScene({request,strings,post,busy,queue,execute,openPaper
       {!filed.length&&<p className="audience-missing">{S.audienceMissing}</p>}
     </section>
   </section>;
+}
+function AudienceCorrespondence({request,strings,openPaper,openPost,post,dateOf=(day)=>`${S.day} ${day}`} : Common & {openPaper?:(r:ReportView)=>void;openPost?:(post:string)=>void;post?:string;dateOf?:(day:number)=>string}){
+ const entries=(request.view.audiences??[]).filter(a=>post===undefined||a.post===post),{name,text}=presenter(strings);
+ return <section className="audience-correspondence" data-testid="audience-correspondence">
+  <h3>{S.audienceAppointments}</h3>
+  {!entries.length&&<p>{S.audienceNoAppointments}</p>}
+  <ul>{entries.map(a=>{
+   const source=request.view.reports.find(r=>r.id===a.source);
+   const currentHolder=request.view.posts.some(p=>p.post===a.post&&p.holder===a.person);
+   return <li key={a.id}>
+    <h4>{name(a.person,'person')}</h4>
+    <p>{S.audienceStatus[a.status]}, {dateOf(a.day)}</p>
+    {a.post&&<p>{name(a.post,'post')}</p>}
+    {a.status==='granted'&&<p>{S.audienceAwaitingReply}</p>}
+    {a.declared&&<p>{text(a.declared)}</p>}
+    {a.counters.length>0&&<p>{a.counters.map(c=>S.counterLabels[c.kind]).join(', ')}</p>}
+    {source&&openPaper&&<button data-source-paper={source.id} onClick={()=>openPaper(source)}>{S.boardOpenPaper}: {name(source.author,'person')}</button>}
+    {a.post&&openPost&&currentHolder&&<button onClick={()=>openPost(a.post!)}>{S.personPage}</button>}
+   </li>;
+  })}</ul>
+ </section>;
 }

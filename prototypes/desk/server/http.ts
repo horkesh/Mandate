@@ -27,7 +27,7 @@ export function installDesk(vite: ViteDevServer, options: { pack: string; atWar:
     catch { return json(res, 400, { error: 'Invalid path' }); }
     if (path.startsWith('/api/')) {
       if (req.method === 'GET' && path === '/api/desk') return json(res, 200, desk.snapshot());
-      if (req.method !== 'POST' || path !== '/api/command') return json(res, 404, { error: 'Unknown endpoint' });
+      if (req.method !== 'POST' || !['/api/command','/api/stops'].includes(path)) return json(res, 404, { error: 'Unknown endpoint' });
       if (!req.headers['content-type']?.startsWith('application/json')) return json(res, 415, { error: 'JSON required' });
       try {
         let body = '';
@@ -35,7 +35,11 @@ export function installDesk(vite: ViteDevServer, options: { pack: string; atWar:
           body += String(chunk);
           if (body.length > 8192) return json(res, 413, { error: 'Command too long' });
         }
-        const input = JSON.parse(body) as { line?: unknown; day?: unknown };
+        const input = JSON.parse(body) as { line?: unknown; day?: unknown; points?:unknown };
+        if(path==='/api/stops'){
+          if(!Number.isSafeInteger(input.day)||!Array.isArray(input.points)||input.points.length>10||!input.points.every(p=>typeof p==='string'))return json(res,400,{error:'Listed stop points and a morning day are required'});
+          return json(res,200,desk.setStops(input.points,input.day as number));
+        }
         if (typeof input.line !== 'string' || !Number.isSafeInteger(input.day)) return json(res, 400, { error: 'A command and morning day are required' });
         return json(res, 200, desk.execute(input.line, input.day as number));
       } catch (error) {

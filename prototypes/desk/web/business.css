@@ -1,4 +1,9 @@
 /* S8: a clerk's record, with separate leaves and a visible binding. */
+.attention-refill{border-block-end:1px solid var(--ink);padding-block-end:1em;margin-block-end:1em}
+.attention-refill p{margin:.35em 0}
+.stop-policy fieldset{display:grid;gap:.7em;min-width:0}.stop-policy fieldset label{display:flex;align-items:baseline;gap:.7em}.stop-policy input[type=checkbox]{flex:0 0 auto;width:1.2em;height:1.2em}
+.congress-sheet{max-width:70ch;margin:auto}.congress-sheet article{border-block-end:1px solid var(--ink);padding:.6em 0;overflow-wrap:anywhere}.congress-sheet h3{margin-block-start:1.5em}
+.audience-correspondence{max-width:70ch;overflow-wrap:anywhere;margin-block-end:1em}.audience-correspondence ul{padding-inline-start:1.3em}.audience-correspondence li{border-block-end:1px solid var(--ink);padding-block-end:.5em}.audience-correspondence p{margin:.35em 0}
 .attention-budget{display:flex!important;flex-direction:column;gap:.4em;font:inherit}
 .attention-coins{display:flex!important;flex-wrap:wrap;gap:5px;max-width:230px}
 .attention-coins i{width:14px;height:14px;border:1px solid #66502d;border-radius:50%;background:#b59a5d;box-shadow:inset 0 0 0 2px #dfc891}
