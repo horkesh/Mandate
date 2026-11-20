@@ -410,5 +410,8 @@
   "press.framing.own": "The paper reports that the public holds its own side responsible for beginning the war.",
   "press.empty": "This page carries no new battle story.",
   "situation.officer_resignation.title": "An officer resigns",
-  "situation.officer_resignation.text": "The officer reports that he has resigned from United States service."
+  "situation.officer_resignation.text": "The officer reports that he has resigned from United States service.",
+  "post_kind.army_command": "Army command",
+  "post.cs_cmd_harpers_ferry": "Troops near Harpers Ferry",
+  "post.cs_cmd_manassas": "Alexandria line (Manassas)"
 }

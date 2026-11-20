@@ -30,6 +30,8 @@ export interface OrderResponse {
   readonly respRole: 'relay' | 'addressee';
   /** What he answered: the order's kind (a goal, a call, an edit, ...) or the verb's (`verb:audience`); lane 1.11's `callReceived` reads it. */
   readonly respKind: string;
+  /** The dated pack call this response answers; independent of message-id shortening. */
+  readonly respCallId?: string;
   readonly respDay: number;
   readonly respActual: ComplianceRung;
   readonly respDeclared: ComplianceRung;
@@ -41,11 +43,10 @@ export interface OrderResponse {
 }
 
 /**
- * Whether a response is a governor's answer to a call (lane 1.12): its addressee's, to an order whose id names the call
- * and his post (`dispatchOrder` tags a call `call.<post>`).
+ * Whether a response is a governor's answer to a call. Read the typed kind: long message IDs may be shortened.
  */
 export function isCallAnswer(r: OrderResponse): boolean {
-  return r.respRole === 'addressee' && r.respPost !== null && r.respOrder.endsWith(`.call.${r.respPost}`);
+  return r.respRole === 'addressee' && r.respPost !== null && r.respKind === 'call';
 }
 
 /** The key of a man's response to an order: one per order per man. */
@@ -56,7 +57,7 @@ export function responseKey(order: MessageId, person: PersonId, note?: number): 
 /** A response as State, from compliance's answer. */
 export function responseOf(
   answer: DirectiveResponse,
-  at: { readonly order: MessageId; readonly person: PersonId; readonly post: PostId | null; readonly role: 'relay' | 'addressee'; readonly day: number; readonly kind: string; readonly note?: number },
+  at: { readonly order: MessageId; readonly person: PersonId; readonly post: PostId | null; readonly role: 'relay' | 'addressee'; readonly day: number; readonly kind: string; readonly note?: number; readonly callId?: string },
 ): OrderResponse {
   return {
     ...(at.note === undefined ? {} : { respNote: at.note }),
@@ -65,6 +66,7 @@ export function responseOf(
     respPost: at.post,
     respRole: at.role,
     respKind: at.kind,
+    ...(at.callId === undefined ? {} : { respCallId: at.callId }),
     respDay: at.day,
     respActual: answer.actual,
     respDeclared: answer.declared,
@@ -107,8 +109,11 @@ export function pruneResponses(state: State, day: number, keepDays: number): { r
     if (prior === undefined || r.respDay < prior.respDay || (r.respDay === prior.respDay && k < held!)) firstCall[r.respPost] = k;
   }
   for (const k of Object.values(firstCall)) named.add(k);
+  // A declared command's appointment answer is its issuance record, including a refusal. Ordinary appointment
+  // letters have no respPost; establishments name their declared destination and must not be reissued after pruning.
+  for (const [k, r] of Object.entries(state.orderResponses)) if (r.respKind === 'verb:appoint' && r.respPost !== null) named.add(k);
   // Keep every governor's call answer too: doctrine uses it to avoid duplicate calls (lane 1.12).
-  const drop = Object.keys(state.orderResponses).filter((k) => day - state.orderResponses[k]!.respDay > keepDays && !named.has(k) && !isCallAnswer(state.orderResponses[k]!));
+  const drop = Object.keys(state.orderResponses).filter((k) => day - state.orderResponses[k]!.respDay > keepDays && !named.has(k) && !isCallAnswer(state.orderResponses[k]!) && state.orderResponses[k]!.respCallId === undefined);
   if (drop.length === 0) return { state, pruned: 0 };
   const next: Record<string, OrderResponse> = { ...state.orderResponses };
   for (const k of drop) delete next[k];

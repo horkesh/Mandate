@@ -22,12 +22,12 @@ export interface Enlistment {
   readonly enlRaisedBy: PersonId;
   /** The call it answered (the order's id). */
   readonly enlCall: MessageId;
-  /** Regiments in the block. */
-  readonly enlRegiments: number;
+  /** Regiments in the block, or null for an unquantified sub-regimental bundle. */
+  readonly enlRegiments: number | null;
   /** The day it mustered. */
   readonly enlMusterDay: number;
-  /** The day its men's term ends and the block disbands. */
-  readonly enlEndsDay: number;
+  /** Fixed expiry, or null for war service, which has no fixed expiry. */
+  readonly enlEndsDay: number | null;
 }
 
 export type EnlistmentTable = Readonly<Record<ForceBlockId, Enlistment>>;
@@ -39,7 +39,7 @@ export interface NewBlock {
   readonly name: string;
   readonly department: DepartmentId;
   readonly arm: string;
-  readonly strength: number;
+  readonly strength: number | null;
   readonly storesDays: number;
   readonly enlistment: Enlistment;
 }
@@ -51,7 +51,7 @@ export interface NewBlock {
 export type MusterDelta = { readonly change: 'create'; readonly create: NewBlock; readonly cause: 'recruitment' } | { readonly change: 'disband'; readonly block: ForceBlockId; readonly cause: 'recruitment' | 'evacuated_under_terms' };
 
 /**
- * A new block's State: whole, with nothing unknown (its strength and stores are what the governor raised and issued), in
+ * A new block's State: its strength is the quota answered, or remains unknown; stores are what the governor issued, in
  * the pack's starting condition (lane 1.3: morale, experience, equipment), with no stragglers, never routed or surrendered.
  */
 function blockState(b: NewBlock, condition: BlockCondition): ForceBlockState {
@@ -90,7 +90,7 @@ export function applyMusters(map: WorldIndex, state: State, deltas: readonly Mus
     if (d.change === 'create') {
       const b = d.create;
       if (Object.prototype.hasOwnProperty.call(blocks, b.block)) throw new ForcesError([`force block ${b.block} already exists`]);
-      if (!Number.isSafeInteger(b.strength) || b.strength < 0 || !Number.isSafeInteger(b.storesDays) || b.storesDays < 0) throw new ForcesError([`force block ${b.block}: strength and stores must be whole and not negative`]);
+      if ((b.strength !== null && (!Number.isSafeInteger(b.strength) || b.strength < 0)) || !Number.isSafeInteger(b.storesDays) || b.storesDays < 0) throw new ForcesError([`force block ${b.block}: strength must be unknown or whole and nonnegative; stores must be whole and nonnegative`]);
       blocks[b.block] = blockState(b, startingCondition(map));
       enlistments[b.block] = b.enlistment;
       created.push(b.block);
@@ -109,5 +109,5 @@ export function applyMusters(map: WorldIndex, state: State, deltas: readonly Mus
 
 /** The enlistments whose term ends on or before `day`, in block id order. */
 export function enlistmentsEnding(state: State, day: number): ForceBlockId[] {
-  return (Object.keys(state.forceEnlistments) as ForceBlockId[]).filter((id) => state.forceEnlistments[id]!.enlEndsDay <= day).sort(strictCompare);
+  return (Object.keys(state.forceEnlistments) as ForceBlockId[]).filter((id) => { const end=state.forceEnlistments[id]!.enlEndsDay; return end !== null && end <= day; }).sort(strictCompare);
 }

@@ -1,5 +1,23 @@
 # Lane 1.14: the 1A done check and calibration
 
+## S1 sprint integration (2026-11-20, in progress)
+
+S1 works only in `C:/Pyrrhic/sprint-1a`, branch `sprint/1a`, from `ceff796`, under 0106. `npm ci` ran first (exit 0, 51 packages, zero vulnerabilities). Independent review and gate signatures are deferred to Claude after the sprint. No push or other-lane write is authorized.
+
+Sequence: merge `a0b4524`, `23879c4`, `cfa2c5a`, `cf31f31`, `179be08`, each through the hook; read/import R97 and recenter its mechanical liveness breaches with `around()` and causes; verify integrated history and the default done check; finish the four sourced build items, reporting July after each; close the named test gaps; spend the second eight-comparison calibration budget and recommend continue or park per criterion. Historical checkpoint and pushback bands remain binding; only the mechanical liveness bands may be recentered as S1 instructs. Timing stays 40/160 ms and belongs to S2.
+
+Validation plan: generate schemas, both affected Worlds and the save fixture with their tools; typecheck and focused affected tests before each full hook. One 148-day replay-free history probe costs seconds and rejects broken assumptions before the hook (typically 3–6 minutes). The integrated default eight-seed done check with drafting costs about 20 minutes; it must pass all non-timing Phase 0 criteria. After unexpected failure stop, inspect all failure categories, reproduce/fix cheaply, then repeat only the affected required gate. Reuse unaffected evidence. Run output stays in ignored `runs/s1/`, one folder/label per measurement. The eight calibration comparisons are a separate bounded budget, opened only after build integration. No expensive campaign outside this scope.
+
+First merge: combine main's resignation and review-note fields with R90/R98's call and reassignment fields. Generated schemas, Worlds and day-40 save are regenerated. No side's behavior is discarded. The 148-day probe has zero rejections; Johnston's eligibility changes allocation and this intermediate history has no field battle. Mechanical bands: captures 0 uses `quiet()` (the helper rejects zero, and testbed still drives captures); joining 39 and support 16 use `around()`, with causes in code. The first full hook failed only the stale resignation fixture (1,565 pass, one expected fail, three timing skips): it still expected Virginia on day 46, before R90's wire correction. Correct its pre-event/eve lengths to day 42/47 while preserving Johnston's day-48 assertion. Targeted verification precedes the required corrected hook.
+
+The corrected first-merge suite passed 1,566 tests, one existing expected failure and three optional timing skips, then boundary rejected two historical names added in explanatory comments under `packages/`. Those comments are now generic; boundary/licences/decisions pass. The next hook timed out only the done-check test's 300-second setup under file concurrency (142 other files passed). Its isolated rerun passes all 14 applicable tests in 192.55 seconds. Use Vitest's supported `VITEST_MAX_WORKERS=1` for subsequent full hooks on this shared machine: serialize this lane's test files, preserving collection, timeouts and assertions. No CI or timing budget change. Logs retain all failed attempts; another hook is required because the commit must pass it.
+
+Proposed rulings: bound this lane's test concurrency while the other sprint worktrees run, rather than raising timeouts or skipping required tests. Remaining work is the sequence above.
+
+### Findings outside my scope
+
+Linux timing belongs to S2; independent review and gated-item signatures belong to Claude and the gate reviewer after the sprint.
+
 **Current, R94 (2026-11-20):** Missouri now requires a received call and the recorded date, day 148, replacing R85's fitted 105-day wait. Six Missouri regressions and the required check pass. The full binding done check exits 1: Phase 0 6/6; 1A 2/6, with the same four failed categories as R85. R94 below supersedes only R85's Missouri interval and proposed acceptance of that interval; its eight-comparison record and other findings remain historical evidence. Claude's independent review is pending.
 
 Branch `phase1-done-check-1a`, from main at a38d7ea. It builds FOUNDATION section 12's row 1.14, Part A: the harness that scores 1A's done check. Part B, the calibration runs, waits for lanes 1.11 and 1.12. `run:done-check` now reports 1A's six criteria beside Phase 0's six. Each is PASS or FAIL, with its reasons.

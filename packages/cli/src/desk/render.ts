@@ -108,7 +108,7 @@ export function commandText(c: SeatCommand, t: Strings = key => key): string {
     case 'go':
       return `the word to go, to ${c.to}`;
     case 'call':
-      return `call ${c.regiments.toString()} regiments for ${c.termDays.toString()} days from ${c.to}`;
+      return `${c.readiness ? 'hold ready' : 'call'} ${c.men === null || c.regiments === null ? 'troops of unknown strength' : c.men === undefined ? `${c.regiments.toString()} regiments` : `${c.men.toString()} men`}${c.arm === undefined ? '' : ` of ${c.arm}`} ${c.termDays === null ? 'for the war' : `for ${c.termDays.toString()} days`} from ${c.to}`;
     case 'appoint':
       return `appoint ${c.person} to ${c.post}${c.rank === null ? '' : ` as ${c.rank}`}`;
     case 'relieve':

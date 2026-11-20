@@ -138,7 +138,9 @@ export interface DoctrineView {
   /** 0 for a side with no doctrine: he never inquires. */
   readonly crossNeutral: boolean;
   readonly concentrateAt: PostId | null;
-  readonly calls: readonly { readonly post: PostId; readonly regiments: number; readonly termDays: number; readonly day: number }[];
+  readonly concentrateFrom?: readonly PostId[];
+  readonly appointments?: readonly { readonly post: PostId; readonly person: PersonId; readonly from: PostId | null; readonly ready: boolean; readonly issued: boolean; readonly routes: readonly RouteOption[] }[];
+  readonly calls: readonly { readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly day: number; readonly atPeace?: boolean; readonly issued?: boolean }[];
   readonly offensives: readonly { readonly post: PostId; readonly objective: RegionId; readonly day: number }[];
   readonly inquireEveryDays: number;
   readonly appointKinds: { readonly land: readonly string[]; readonly naval: readonly string[] };

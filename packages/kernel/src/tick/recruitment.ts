@@ -63,19 +63,23 @@ export function issueCall(ctx: TickContext, state: State, seat: SeatId, cmd: Cal
   if (!raisingPost(ctx, state, cmd.to)) return 'not_raising_post';
   if (state.postStates[cmd.to]!.postHolder === null) return 'vacant_post';
   if (!ORDER_ROUTES.includes(cmd.route)) return 'route_unavailable';
-  if (cmd.termDays > world.map.world.rules.recruitment.maxTermDays) return 'bad_call';
-  dispatchOrder(ctx, state, seat, issuer.id, cmd.to, cmd.route, cmd.bypass, { orderKind: 'call', orderGoal: null, orderEdit: null, orderCall: { callRegiments: cmd.regiments, callTermDays: cmd.termDays } });
+  if (cmd.termDays !== null && cmd.termDays > world.map.world.rules.recruitment.maxTermDays) return 'bad_call';
+  if (cmd.arm !== undefined && !world.map.world.vocabularies.arms.some(a => a.id === cmd.arm && !a.naval)) return 'bad_call';
+  dispatchOrder(ctx, state, seat, issuer.id, cmd.to, cmd.route, cmd.bypass, { orderKind: 'call', orderGoal: null, orderEdit: null, orderCall: { callRegiments: cmd.regiments, callTermDays: cmd.termDays, ...(cmd.men === undefined ? {} : { callMen: cmd.men }), ...(cmd.callId === undefined ? {} : { callId: cmd.callId }), ...(cmd.arm === undefined ? {} : { callArm: cmd.arm }), ...(cmd.readiness === undefined ? {} : { callReadiness: cmd.readiness }) } });
   fire(ctx, 'recruitment.called');
   return null;
 }
 
 /** The share of a call a rung raises, scaled by his region's loyalty to his side (pack rules), in whole regiments. */
-export function regimentsRaised(rules: RecruitmentRules, asked: number, rung: string, loyalty: number | null): { readonly regiments: number; readonly delayDays: number; readonly loyaltyPermille: number } | null {
+export function regimentsRaised(rules: RecruitmentRules, asked: number | null, rung: string, loyalty: number | null, askedMen?: number | null): { readonly regiments: number | null; readonly men: number | null; readonly delayDays: number; readonly loyaltyPermille: number } | null {
   const row = rules.rungs.find((r) => r.rung === rung);
   if (row === undefined) return null;
   const factor = rules.loyaltyWeight === 0 || loyalty === null ? 1000 : 1000 - rules.loyaltyWeight + Math.trunc((rules.loyaltyWeight * Math.min(loyalty, rules.loyaltyFull)) / rules.loyaltyFull);
-  const regiments = Math.trunc((Math.trunc((asked * row.sharePermille) / 1000) * factor) / 1000);
-  return { regiments, delayDays: row.delayDays, loyaltyPermille: factor };
+  const regiments = asked === null ? null : Math.trunc((Math.trunc((asked * row.sharePermille) / 1000) * factor) / 1000);
+  if ((askedMen === null || (asked === null && askedMen === undefined)) && row.sharePermille > 0 && factor > 0) return { regiments: null, men: null, delayDays: row.delayDays, loyaltyPermille: factor };
+  if (askedMen === null || (asked === null && askedMen === undefined)) return { regiments: 0, men: 0, delayDays: row.delayDays, loyaltyPermille: factor };
+  const men = askedMen === undefined ? regiments! * rules.menPerRegiment : Math.trunc((Math.trunc((askedMen * row.sharePermille) / 1000) * factor) / 1000);
+  return { regiments: askedMen === undefined ? regiments : Math.ceil(men / rules.menPerRegiment), men, delayDays: row.delayDays, loyaltyPermille: factor };
 }
 
 /**
@@ -93,22 +97,23 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
   const rules = world.map.world.rules.recruitment;
   // He answers watched from where he stands (lane 1.4's oversight: his courier days from the caller, and the wire).
   const answer = answerOrder(world, start, governor, order.orderIssuer, callTerms(rules), { oversight: oversightOf(ctx, start, governor, order.orderIssuer).value });
-  let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: governor, post, role: 'addressee', day, kind: 'call' }));
+  let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: governor, post, role: 'addressee', day, kind: 'call', ...(call.callId === undefined ? {} : { callId: call.callId }) }));
   const side = postFaction(world, state, post);
   const region = state.postStates[post]!.postSeat;
   const loyalty = side === null || region === null ? null : loyaltyOf(state, region, side);
-  const actual = regimentsRaised(rules, call.callRegiments, answer.actual, loyalty);
-  const declared = regimentsRaised(rules, call.callRegiments, answer.declared, loyalty);
+  const actual = regimentsRaised(rules, call.callRegiments, answer.actual, loyalty, call.callMen);
+  const declared = regimentsRaised(rules, call.callRegiments, answer.declared, loyalty, call.callMen);
   if (actual === null || actual.regiments === 0) fire(ctx, 'recruitment.refused');
   else {
-    state = recordLevy(state, {
+    if (call.callReadiness !== true) state = recordLevy(state, {
       levyPost: post,
       levyGovernor: governor,
       levyIssuer: order.orderIssuer,
       levyCall: msg.msgOrigin,
       levyRegiments: actual.regiments,
-      levyMen: actual.regiments * rules.menPerRegiment,
+      levyMen: actual.men,
       levyTermDays: call.callTermDays,
+      ...(call.callArm === undefined ? {} : { levyArm: call.callArm }),
       levyMusterDay: day + rules.musterDays + actual.delayDays,
       levyResponse: responseKey(msg.msgOrigin, governor),
     });
@@ -120,7 +125,7 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
     body: answerBody(governor, post, day, {
       reportType: objects ? 'advice' : 'wire-dispatch',
       reportSubtype: objects ? 'memorandum' : null,
-      reportClaims: [{ claimKind: 'call-answer', claimRegion: region, claimValue: declared?.regiments ?? 0, claimToken: answer.declared, claimConfidence: 1000 }],
+      reportClaims: [{ claimKind: 'call-answer', claimRegion: region, claimValue: declared?.regiments ?? 0, claimToken: declared?.men === null ? `${answer.declared}:unknown_strength` : answer.declared, claimConfidence: declared?.men === null ? 0 : 1000 }],
       reportAdvice: objects ? { adviceRecommends: 'withdraw-order', adviceReasons: answer.statedReasons.map((r) => ({ reasonKind: r.kind, reasonWeight: 1000 })), adviceConfidence: 800 } : null,
       answers: msg.msgOrigin,
       about: post,
@@ -161,7 +166,7 @@ function reportLapse(ctx: TickContext, state: State, levy: Levy): void {
     body: answerBody(levy.levyGovernor, levy.levyPost, ctx.day, {
       reportType: 'wire-dispatch',
       reportSubtype: null,
-      reportClaims: [{ claimKind: 'levy-lapsed', claimRegion: region, claimValue: levy.levyRegiments, claimToken: 'region_enemy_held', claimConfidence: 1000 }],
+      reportClaims: [{ claimKind: 'levy-lapsed', claimRegion: region, claimValue: levy.levyRegiments ?? 0, claimToken: levy.levyRegiments === null ? 'region_enemy_held:unknown_strength' : 'region_enemy_held', claimConfidence: levy.levyRegiments === null ? 0 : 1000 }],
       reportAdvice: null,
       answers: levy.levyCall,
       about: levy.levyPost,
@@ -218,16 +223,16 @@ export function recruitmentPhase(ctx: TickContext, start: State): State {
         block,
         name: `raised.${levy.levyPost}`,
         department: p.postDepartment,
-        arm: rules.arm,
+        arm: levy.levyArm ?? rules.arm,
         strength: levy.levyMen,
         storesDays: rules.storesDays,
-        enlistment: { enlPost: levy.levyPost, enlRaisedBy: levy.levyGovernor, enlCall: levy.levyCall, enlRegiments: levy.levyRegiments, enlMusterDay: day, enlEndsDay: day + levy.levyTermDays },
+        enlistment: { enlPost: levy.levyPost, enlRaisedBy: levy.levyGovernor, enlCall: levy.levyCall, enlRegiments: levy.levyRegiments, enlMusterDay: day, enlEndsDay: levy.levyTermDays === null ? null : day + levy.levyTermDays },
       },
     });
     placements.push({ block, region: p.postSeat!, day });
     assign.push({ block, post: levy.levyPost });
     fire(ctx, 'recruitment.mustered');
-    fire(ctx, 'recruitment.men', levy.levyMen);
+    if (levy.levyMen !== null) fire(ctx, 'recruitment.men', levy.levyMen);
   }
   for (const block of ending) deltas.push({ change: 'disband', block, cause: 'recruitment' });
   const forces = applyMusters(world.map, start, deltas);

@@ -42,7 +42,7 @@
     },
     "movement": { "marchMinCapacityPermille": 1000, "courierPermille": 333 },
     "ruleSeats": { "warFlags": [{ "faction": "north", "flag": null }, { "faction": "south", "flag": null }], "principals": [{"faction":"north","crossNeutral":true,"concentrateAt":"n_army_east","concentrateSource":"TB-DESIGN","calls":[{"post":"n_brenmark_governor","regiments":2,"termDays":90,"fromDate":"1861-04-01","source":"TB-DESIGN"}],"offensives":[{"post":"n_army_east","objective":"s_capital","fromDate":"1861-04-01","source":"TB-DESIGN"}],"inquireEveryDays":7,"appointKinds":{"land":["general"],"naval":["naval_officer"]}},{"faction":"south","crossNeutral":true,"concentrateAt":"s_army_salient","concentrateSource":"TB-DESIGN","calls":[{"post":"s_lowmarch_governor","regiments":2,"termDays":365,"fromDate":"1861-04-01","source":"TB-DESIGN"}],"offensives":[{"post":"s_army_salient","objective":"n_capital","fromDate":"1861-04-01","source":"TB-DESIGN"}],"inquireEveryDays":7,"appointKinds":{"land":["general"],"naval":["naval_officer"]}}] },
-    "latency": { "wireDays": 0, "mailPermille": 2000, "specialMessengerPermille": 500, "courierNoiseMaxDays": 1, "specialMessengerPrice": 1 },
+    "latency": {"wireDays":0,"publicWires":[],"mailPermille":2000,"specialMessengerPermille":500,"courierNoiseMaxDays":1,"specialMessengerPrice":1},
     "reportTemplates": [
       { "templateType": "wire-dispatch", "templateSubtype": null, "templateRoute": "wire", "cadenceDays": 2, "maxAgeDays": 30, "keepSupersededDays": 3 },
       { "templateType": "strength-return", "templateSubtype": null, "templateRoute": "mail", "cadenceDays": 10, "maxAgeDays": 60, "keepSupersededDays": 10 },
