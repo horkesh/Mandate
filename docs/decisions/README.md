@@ -108,3 +108,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0102](0102-send-a-plan-back-with-notes-the-commander-may-decline.md) | Send a plan back with notes the commander may decline | accepted |
 | [0103](0103-the-press-carries-received-stories-into-the-seat-view.md) | The press carries received stories into the seat view | accepted |
 | [0104](0104-the-opening-of-the-war-follows-its-causes-and-its-news.md) | The opening of the war follows its causes and its news | accepted |
+| [0105](0105-1as-first-calibration-round-continue-or-park.md) | 1A's first calibration round: continue or park | accepted |
