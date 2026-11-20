@@ -117,12 +117,13 @@ export class ConsoleGame {
   }
 
   /** Send his orders on the turn's first morning, then let days pass until a decision point or the turn's end. */
-  turn(commands: readonly phase0.SeatCommand[]): TurnResult {
+  turn(commands: readonly phase0.SeatCommand[], dayLimit = this.world.map.world.rules.turns.maxDays): TurnResult {
     const max = this.world.map.world.rules.turns.maxDays;
+    if(!Number.isSafeInteger(dayLimit)||dayLimit<1||dayLimit>max)throw new RangeError(`Choose between 1 and ${max} days`);
     const days: TurnDay[] = [];
     const human: phase0.Seat = { driver: 'human', respond: () => ({ answerKind: 'commands', commands }) };
     const silent: phase0.Seat = { driver: 'human', respond: () => ({ answerKind: 'commands', commands: [] }) };
-    for (let i = 0; i < max; i++) {
+    for (let i = 0; i < dayLimit; i++) {
       const requests = phase0.pendingRequests(this.world, this.stateNow, this.viewCache);
       const entries = requests.flatMap((r) => phase0.answerEntries(r, r.requestSeat === this.seat ? (i === 0 ? human : silent) : this.rules));
       const result = phase0.tick(this.world, this.stateNow, entries, { mapCache: this.mapCache });

@@ -15,6 +15,8 @@ npm run dev
 
 Open **http://127.0.0.1:5274/**. The process owns one local session, shared by its browser tabs. Refresh preserves the game and queue. Read/file marks belong to the current page; display, sound and playback settings persist in local storage. Restart the process to begin a new game.
 
+On the turn sheet, **Maximum days this turn** can return the desk sooner than the pack's maximum. Selected decision stops still apply. The text console accepts the same limit as `end 2`, for example; plain `end` keeps the pack maximum.
+
 ### Map setup
 
 `npm run map:setup` fetches missing pinned inputs, builds stale geography in dependency order, then bakes stale map and sign images. Current recipes and output hashes reuse completed work; CRLF/LF changes alone do not invalidate geographic recipes. `python -B scripts/map-setup.py --check` lists the required geography stages. Missing pack files, tools, failed downloads and changed source hashes fail with the input named. Python dependencies and Chromium must be installed first, as above.

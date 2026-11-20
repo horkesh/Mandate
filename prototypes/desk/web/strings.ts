@@ -23,6 +23,7 @@ export const S = {
   stopPolicy:'Turn stops', stopPolicyNote:'A turn stops when a report or a decision needs attention. Lists and routine returns do not stop a turn.',
   stopSettingsMissing:'Individual stop settings are not available in this prototype.',
   stopChoice:(label:string)=>`Stop on: ${label}`, stopLimit:(n:number)=>`A turn runs at most ${n} days.`,
+  turnDays:'Maximum days this turn', turnDaysNote:'Return sooner to review the desk before a dated decision. Selected stops can still end the turn early.',
   stopSettingsNote:'These settings change when the days return to your desk. All reports and decisions remain in the papers.',
   stopSettingsSaved:'Turn stops updated.', stopAll:'Enable every stop',
   stopReturn:'Put down the stop slip', stopDocket:'Open the docket', stopPlans:'Review the plan', stopHistory:'Read the daybook',

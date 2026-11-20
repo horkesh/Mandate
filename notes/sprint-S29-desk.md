@@ -25,12 +25,20 @@ unexpected failures cheaply before any affected retry. Reuse unaffected
 evidence. Finish inventories, diagnostics and preservation checks before the
 final report and one fresh-read coordination append.
 
-Integration: only the two generated JSON schemas conflict. Regenerate all
-published schemas from the automatically merged source, retaining both the
-S19 projection vocabulary and 1A's state-force fields. Root and desk clean
-installs exit 0. The actual merge hook remains to run.
+Integration committed as `d878dd3` through the hook: 147 files, 1,601 passed,
+one expected failure, three skips. Only the two generated schemas conflicted;
+both were regenerated from the combined source. Root and desk clean installs
+and resumed typechecks pass. The owned headless Playwright preflight passes.
 
-Proposed rulings: none yet.
+The first correction lets the principal choose a shorter turn, bounded by the
+pack maximum, so a scheduled date need not be skipped. Five tests first failed
+on the ignored limit and absent control. This is a driver preference; no State,
+pack maximum or tick behavior changes. Browser operation uses only the desk's
+headless harness on 5293; captures go to the main checkout's S29 masters folder.
+
+Proposed ruling: allow `end [days]` and a turn-sheet day limit within the pack's
+maximum. Reject changing pack rules to land on a historical date, or silently
+advancing past a requested review date.
 
 Findings outside my scope: whole-branch review remains deferred to Claude under
 0106. Kernel/history acceptance failures belong to their existing owners.

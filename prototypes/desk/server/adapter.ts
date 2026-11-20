@@ -58,7 +58,7 @@ export class DeskAdapter {
       case 'end': {
         const submitted=this.snapshot().queue;
         const before=this.game.morning(),reports=[...before.view.reports];
-        const result = this.game.turn(this.queue.map(q => q.command));
+        const result = this.game.turn(this.queue.map(q => q.command),input.days);
         for(const [commandIndex,{command}] of this.queue.entries()){
           if(result.days.some(day=>day.refused.some(r=>r.commandIndex===commandIndex)))continue;
           if(command.cmd==='order'){this.approvedPlans.delete(command.to);continue;}

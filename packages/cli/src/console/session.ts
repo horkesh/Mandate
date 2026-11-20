@@ -69,7 +69,7 @@ export class ConsoleSession {
       case 'look':
         return { lines: this.look(input.what, input.all, menu), done: false };
       case 'end':
-        return { lines: this.endTurn(), done: false };
+        return { lines: this.endTurn(input.days), done: false };
     }
   }
 
@@ -97,11 +97,11 @@ export class ConsoleSession {
   /** The first day of the turn just ended, for "inbox" (what came in during it). */
   private seenLastTurn = 0;
 
-  private endTurn(): string[] {
+  private endTurn(days?:number): string[] {
     const sent = this.queue;
     this.queue = [];
     this.seenLastTurn = this.request.requestDay;
-    const result: TurnResult = this.game.turn(sent);
+    const result: TurnResult = this.game.turn(sent,days);
     const lines: string[] = [sent.length === 0 ? 'You send nothing, and wait.' : `Sent: ${sent.map(c => commandText(c, this.t)).join('; ')}.`];
     for (const d of result.days) {
       lines.push(...dayLines({ day: d.day, date: d.date, reports: d.reports, refused: d.refused.map((r) => ({ what: commandText(r.command as phase0.SeatCommand, this.t), reason: r.reason })) }, this.t));

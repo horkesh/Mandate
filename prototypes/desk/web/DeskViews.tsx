@@ -52,13 +52,16 @@ export function StopSlip({turn,strings,openPaper,onDocket,onPlans,onClose,onHist
   </div>
  </section>;
 }
-export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,setStops}:{data:DeskSnapshot;busy:boolean;run:()=>void;openPaper:(r:ReportView)=>void;onDocket:()=>void;onPlans:()=>void;onHistory:()=>void;setStops?:(points:readonly string[])=>Promise<unknown>}){
+export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,setStops}:{data:DeskSnapshot;busy:boolean;run:(days:number)=>void;openPaper:(r:ReportView)=>void;onDocket:()=>void;onPlans:()=>void;onHistory:()=>void;setStops?:(points:readonly string[])=>Promise<unknown>}){
  const lastTurn=data.history.at(-1),{text}=presenter(data.strings),menu=data.morning.menu;
+  const maxDays=data.morning.turnStops?.maxDays??7;
+  const [days,setDays]=useState(maxDays);
  return <><p className="margin-note">{S.runNote}</p>
   {lastTurn&&<StopSlip turn={lastTurn} strings={data.strings} openPaper={openPaper} onDocket={onDocket} onPlans={onPlans} onHistory={onHistory}/>}
   <h3>{data.queue.length} {S.signedCount}</h3>
   {data.queue.map((q,i)=><section key={i}><p>{text(q.text)}</p>{menu.menuKind==='principal'&&<PriceNote line={q.line} menu={menu}/>}</section>)}
-  <button data-hotkey="run" data-attention-key="free" className="primary" disabled={busy} onClick={run}>{S.sendRun}</button>
+  <label>{S.turnDays}<select disabled={busy} value={days} onChange={e=>setDays(Number(e.target.value))}>{Array.from({length:maxDays},(_,i)=>i+1).map(n=><option key={n} value={n}>{n}</option>)}</select></label><p>{S.turnDaysNote}</p>
+  <button data-hotkey="run" data-attention-key="free" className="primary" disabled={busy} onClick={()=>run(days)}>{S.sendRun}</button>
   <section className="stop-policy"><h3>{S.stopPolicy}</h3>{data.morning.turnStops?<><p>{S.stopLimit(data.morning.turnStops.maxDays)}</p><p>{S.stopSettingsNote}</p><fieldset disabled={busy||!setStops}><legend>{S.stopPolicy}</legend>{data.morning.turnStops.points.map(({point,enabled})=><label key={point}><input type="checkbox" checked={enabled} onChange={e=>{const next=data.morning.turnStops!.points.filter(p=>p.point===point?e.target.checked:p.enabled).map(p=>p.point);void setStops?.(next);}}/>{S.stopChoice(S.stopLabels[point]??S.stopUnknown)}</label>)}<button type="button" onClick={()=>void setStops?.(data.morning.turnStops!.points.map(p=>p.point))}>{S.stopAll}</button></fieldset></>:<><p>{S.stopPolicyNote}</p><p className="hand">{S.stopSettingsMissing}</p></>}</section>
  </>;
 }

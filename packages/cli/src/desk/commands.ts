@@ -42,7 +42,7 @@ export type DeskInput =
   | { readonly kind: 'look'; readonly what: 'help' | 'inbox' | 'situations' | 'plans' | 'posts' | 'enemy' | 'queue'; readonly all: boolean }
   | { readonly kind: 'preview'; readonly post: PostId; readonly edit: EditTerms }
   | { readonly kind: 'cancel'; readonly index: number }
-  | { readonly kind: 'end' }
+  | { readonly kind: 'end'; readonly days?: number }
   | { readonly kind: 'quit' }
   | { readonly kind: 'error'; readonly message: string };
 
@@ -56,7 +56,7 @@ export const HELP: readonly string[] = [
   '  enemy                  what you believe of the enemy, region by region',
   '  preview <post> <edit>  the route an arrow edit would make, before you send it',
   '  queue | cancel <n>     the orders you will send when the turn ends, or take one back',
-  '  end                    send your orders and let up to a week pass',
+  '  end [days]             send your orders and run up to this many days, within the pack maximum',
   '  quit',
   'Orders to people (each answered by the man, through his own judgement):',
   '  order <post> <hold|take|relieve> [objective] [risk=N] [deadline=N] [rail|norail] [river] [sea] [neutral] [await] [review] [by=<route>] [bypass]',
@@ -165,8 +165,11 @@ export function parseLine(line: string, request: SeatRequest, t: (key: string) =
     case 'enemy':
     case 'queue':
       return { kind: 'look', what: word, all: flags.has('all') };
-    case 'end':
-      return { kind: 'end' };
+    case 'end': {
+      if(tokens.length===1)return {kind:'end'};
+      const days=whole(tokens[1]),max=request.turnStops?.maxDays??0;
+      return tokens.length===2&&days!==null&&days>=1&&days<=max?{kind:'end',days}:fail(`Choose between 1 and ${max} whole days`);
+    }
     case 'quit':
       return { kind: 'quit' };
     case 'cancel': {
