@@ -1,0 +1,114 @@
+{
+  "status": "draft_not_loaded",
+  "constraints": [
+    {
+      "id": "grand_jury_presentment",
+      "date": "1861-08-16",
+      "actionType": "accusatory_presentment",
+      "papers": [
+        "journal_of_commerce",
+        "new_york_daily_news",
+        "new_york_day_book",
+        "freemans_journal",
+        "brooklyn_eagle"
+      ],
+      "cite": "MP p.188",
+      "description": "The printed presentment names these papers and asks the court about punishment. It does not establish conviction, guilt or a measured electoral effect.",
+      "requiresGateReview": true
+    },
+    {
+      "id": "new_york_mail_direction",
+      "date": "1861-08-22",
+      "actionType": "postal_direction_after_receipt",
+      "papers": [
+        "journal_of_commerce",
+        "new_york_daily_news",
+        "new_york_day_book",
+        "freemans_journal"
+      ],
+      "cite": "MP p.188",
+      "description": "The Post Office Department directs exclusion from the mails of the described New York-city papers from receipt of its letter. Brooklyn’s separate treatment is HOLD.",
+      "receiptDate": null,
+      "enforcementDate": null,
+      "requiresGateReview": true
+    },
+    {
+      "id": "philadelphia_bundle_seizure",
+      "date": "1861-08-22",
+      "actionType": "reported_physical_seizure",
+      "papers": [
+        "new_york_daily_news"
+      ],
+      "cite": "MP p.188",
+      "description": "The printed Philadelphia report describes seizures of newspaper bundles and suppression of sales there. Bundle quantities appear as qualified consignment observations.",
+      "requiresGateReview": true
+    },
+    {
+      "id": "september_military_proclamation",
+      "date": "1862-09-24",
+      "actionType": "asserted_military_authority",
+      "papers": [],
+      "cite": "MP p.177",
+      "description": "Lincoln’s proclamation subjects the described discouragement of enlistments and resistance to drafts to military trial, and suspends habeas corpus for the described detentions. It does not identify every newspaper affected or adjudicate legality of every arrest.",
+      "requiresGateReview": true
+    },
+    {
+      "id": "dispatch_variants",
+      "date": "1862-09-23",
+      "actionType": "printed_publication_schedule",
+      "papers": [
+        "richmond_dispatch"
+      ],
+      "cite": "RD62 p.1",
+      "description": "Daily except Sunday, semi-weekly Tuesday/Friday, and weekly Friday are separately advertised. A single cadenceDays value would erase these variants [I].",
+      "requiresGateReview": false
+    },
+    {
+      "id": "liberator_network",
+      "date": "1862-09-26",
+      "actionType": "printed_subscription_route",
+      "papers": [
+        "liberator"
+      ],
+      "cite": "LIB62 issue p.1",
+      "description": "The masthead directs prepaid remittances to the general agent, offers five copies for ten dollars in advance, and authorizes named antislavery societies’ agents to receive subscriptions. Those offers are not subscription or reader counts.",
+      "requiresGateReview": false
+    },
+    {
+      "id": "tribune_clubs",
+      "date": "1862-08-23",
+      "actionType": "printed_marketing_route",
+      "papers": [
+        "new_york_tribune"
+      ],
+      "cite": "TR62 p.4",
+      "description": "An offer addresses Tribune Clubs and sells copies of the book Among the Pines. Its book-copy prices are not newspaper subscription prices or circulation counts.",
+      "requiresGateReview": false
+    },
+    {
+      "id": "opposing_paper_reading",
+      "date": "1862-09-23",
+      "actionType": "dated_cross_paper_evidence",
+      "papers": [
+        "richmond_dispatch",
+        "new_york_herald"
+      ],
+      "cite": "RD62 pp.1–2",
+      "description": "The Dispatch quotes or discusses Northern papers, including the Herald. Access, reprinting and criticism are observed for this case; broader receipt and transport rules remain HOLD.",
+      "requiresGateReview": false
+    }
+  ],
+  "holds": [
+    "Reliable per-paper circulation during the requested window",
+    "Unique readership, shared copies, reprints and overlap between editions",
+    "Exact receipt and enforcement dates",
+    "Editor identities not established on the read pages",
+    "Quantified slant, persuasion, support, standing or turnout effects",
+    "Live editor/side identity mapping and treatment of an editor changing service"
+  ],
+  "rules": [
+    "No press suppression option, free-standing verb, locked-cost schedule or signature is authored here.",
+    "Never treat an enemy newspaper’s accusation as privileged access to State truth.",
+    "Protected people and their organizations remain actors; no population stock or mechanically uniform audience is introduced."
+  ]
+}

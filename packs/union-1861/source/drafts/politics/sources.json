@@ -10,7 +10,7 @@
       "bytes": 82001457,
       "pdfPages": 676,
       "locator": "printed n = PDF n+14",
-      "readPortions": "121–123; 140–141; 195–198; 209–218; 227–233; 356–359",
+      "readPortions": "121–123; 140–141; 177; 188; 195–198; 209–218; 227–233; 333–334; 356–359",
       "sourceKind": "contemporary documentary compilation; selection and assertions attributed",
       "readingLimit": "Only identified portions read; no whole-volume claim."
     },
@@ -36,7 +36,7 @@
       "bytes": 31136075,
       "pdfPages": 412,
       "locator": "this year: printed n = PDF n+168",
-      "readPortions": "17–19; 56; 59; 61–64",
+      "readPortions": "17–19; 56; 59; 61–64; 68 (advertisement)",
       "sourceKind": "partisan contemporary compilation; typography and qualifications retained",
       "readingLimit": "Only identified portions read; no whole-volume claim."
     },
@@ -102,6 +102,19 @@
       "pdfPages": 32,
       "locator": "printed 1951 = PDF 15",
       "readPortions": "1951, Senate proceedings 6 May 1862",
+      "sourceKind": "direct published legislative proceedings",
+      "readingLimit": "Only identified portions read; no whole-volume claim."
+    },
+    {
+      "key": "GCW",
+      "title": "Congressional Globe, 37th Congress, second session, 9 December 1861 proceedings",
+      "scanPath": "C:/Pyrrhic/mandate-research-sources/S3/sim_united-states-congress-congressional-globe_1861-12-10_2.pdf",
+      "url": "https://archive.org/details/sim_united-states-congress-congressional-globe_1861-12-10_2",
+      "sha256": "8390d0b0d85451cf183a12299017b92dbee65a5e113d4d8665cd3c03d7b982e2",
+      "bytes": 8383066,
+      "pdfPages": 16,
+      "locator": "printed 32 = PDF 16",
+      "readPortions": "32, joint inquiry resolution and debate",
       "sourceKind": "direct published legislative proceedings",
       "readingLimit": "Only identified portions read; no whole-volume claim."
     },
@@ -350,6 +363,26 @@
       "readingLimit": "Only identified portions read; no whole-volume claim."
     },
     {
+      "key": "BB-G",
+      "title": "Biographical Directory 1774–2005, biographies G",
+      "scanPath": "C:/Pyrrhic/mandate-research-sources/S3/S17/bioguide-bios-G.pdf",
+      "url": "https://www.govinfo.gov/content/pkg/GPO-CDOC-108hdoc222/pdf/GPO-CDOC-108hdoc222-4-7.pdf",
+      "sha256": "96f80f3030ac64fcb5584fffc34444d3e4b0c1736851ee36eff278c5e4f510f1",
+      "bytes": 642466,
+      "pdfPages": 76,
+      "locator": "Printed page numbers on the scan; entries continuing onto next PDF leaf cite both printed pages",
+      "readPortions": [
+        {
+          "entry": "GREELEY, Horace",
+          "pdfPage": 56,
+          "printedStart": "1149",
+          "limit": "editorial career paragraph; continuation 1150 checked for context"
+        }
+      ],
+      "sourceKind": "official retrospective biography; party of this election/appointment only",
+      "readingLimit": "Only identified portions read; no whole-volume claim."
+    },
+    {
       "key": "BB-H",
       "title": "Biographical Directory 1774–2005, biographies H",
       "scanPath": "C:/Pyrrhic/mandate-research-sources/S3/S17/bioguide-bios-H.pdf",
@@ -466,6 +499,12 @@
           "pdfPage": 72,
           "printedStart": "1553",
           "limit": "selected biographical entry paragraphs"
+        },
+        {
+          "entry": "MORGAN, Edwin Denison",
+          "pdfPage": 135,
+          "printedStart": "1616",
+          "limit": "overlapping Republican committee chairmanship and governorship"
         }
       ],
       "sourceKind": "official retrospective biography; party of this election/appointment only",
@@ -620,6 +659,12 @@
           "pdfPage": 107,
           "printedStart": "2203",
           "limit": "selected biographical entry paragraphs"
+        },
+        {
+          "entry": "WOOD, Benjamin",
+          "pdfPage": 97,
+          "printedStart": "2193",
+          "limit": "editor/publisher paragraph; continuation 2194 checked for context"
         }
       ],
       "sourceKind": "official retrospective biography; party of this election/appointment only",
@@ -644,6 +689,138 @@
       ],
       "sourceKind": "official retrospective biography; party of this election/appointment only",
       "readingLimit": "Only identified portions read; no whole-volume claim."
+    },
+    {
+      "key": "DM-S",
+      "title": "Douglass’ Monthly, volume 5 number 4, September 1862",
+      "scanPath": "C:/Pyrrhic/mandate-research-sources/S3/sim_douglass-monthly_1862-09_5_4.pdf",
+      "url": "https://archive.org/details/sim_douglass-monthly_1862-09_5_4",
+      "sha256": "d16b399648e7f9fa46f9b73cb1892ab9c5ea0abb83f17e5e5e771f3d3b132e1d",
+      "bytes": 41917008,
+      "pdfPages": 16,
+      "locator": "printed n = PDF n-704",
+      "readPortions": "705; 707–708",
+      "sourceKind": "primary newspaper; editorial arguments attributed",
+      "readingLimit": "Only identified portions read; no whole-volume claim."
+    },
+    {
+      "key": "DM-O",
+      "title": "Douglass’ Monthly, volume 5 number 5, October 1862",
+      "scanPath": "C:/Pyrrhic/mandate-research-sources/S3/sim_douglass-monthly_1862-10_5_5.pdf",
+      "url": "https://archive.org/details/sim_douglass-monthly_1862-10_5_5",
+      "sha256": "b7909ceabd2bc80baf48922312cfa970f193f8bb1ba9cedd8c57206c66f453f9",
+      "bytes": 21559965,
+      "pdfPages": 16,
+      "locator": "printed n = PDF n-720",
+      "readPortions": "721–723",
+      "sourceKind": "primary newspaper; political endorsement and overseas address",
+      "readingLimit": "Only identified portions read; no whole-volume claim."
+    },
+    {
+      "key": "HUD",
+      "title": "Frederic Hudson, Journalism in the United States from 1690 to 1872, 1873",
+      "scanPath": "C:/Pyrrhic/mandate-research-sources/S3/S17/journalisminunit00huds.pdf",
+      "url": "https://archive.org/details/journalisminunit00huds",
+      "sha256": "2fdc60c5c8c4213778e8145280fbc94ae05873a8bf4779fd321b5a4915288838",
+      "bytes": 55991601,
+      "pdfPages": 812,
+      "locator": "printed n = PDF n+10",
+      "readPortions": "title; 479; 482–483. Other consulted passages 260,446–447,480–481 did not establish an 1862 circulation or Monthly editorship.",
+      "sourceKind": "retrospective narrative; [I] sympathetic to the Herald, not a neutral circulation audit",
+      "readingLimit": "Only identified portions read; no whole-volume claim."
+    },
+    {
+      "key": "TR62",
+      "title": "New-York Daily Tribune, 23 August 1862",
+      "url": "https://www.loc.gov/item/sn83030213/1862-08-23/ed-1/",
+      "locator": "issue pages 1 and 4",
+      "readPortions": "issue pages 1 and 4",
+      "sourceKind": "original issue scans via Library of Congress IIIF; page crops retained for reading only",
+      "scans": [
+        {
+          "scanPath": "C:/Pyrrhic/mandate-research-sources/S3/S17/tribune-1862-08-23-p1.jpg",
+          "sha256": "737443cec45125f19dae37ac9b14ba9504d65cf9ca9b098df2a6c2b15c3fe3d3",
+          "bytes": 3459024,
+          "format": "JPEG",
+          "page": "1"
+        },
+        {
+          "scanPath": "C:/Pyrrhic/mandate-research-sources/S3/S17/tribune-1862-08-23-p4.jpg",
+          "sha256": "708840fa9567fa636ef07f71e4b61845e985a6542f6bb42fe32958fb913e9ada",
+          "bytes": 3040207,
+          "format": "JPEG",
+          "page": "4"
+        }
+      ],
+      "readingLimit": "Masthead and the identified columns/paragraphs read; not whole-issue reading."
+    },
+    {
+      "key": "HER62",
+      "title": "The New York Herald, 23 September 1862",
+      "url": "https://www.loc.gov/item/sn83030313/1862-09-23/ed-1/",
+      "locator": "issue page 1 only; page 4 retrieval failed",
+      "readPortions": "issue page 1 only; page 4 retrieval failed",
+      "sourceKind": "original issue scans via Library of Congress IIIF; page crops retained for reading only",
+      "scans": [
+        {
+          "scanPath": "C:/Pyrrhic/mandate-research-sources/S3/S17/herald-1862-09-23-p1.jpg",
+          "sha256": "1f505d49f2b206c0df263413fea9f6561290e42a93dcae8a14f2a1d6aac43a76",
+          "bytes": 3807653,
+          "format": "JPEG",
+          "page": "1"
+        }
+      ],
+      "readingLimit": "Masthead and the identified columns/paragraphs read; not whole-issue reading."
+    },
+    {
+      "key": "RD62",
+      "title": "Daily Dispatch, Richmond, 23 September 1862",
+      "url": "https://www.loc.gov/item/sn84024738/1862-09-23/ed-1/",
+      "locator": "issue pages 1–2",
+      "readPortions": "issue pages 1–2",
+      "sourceKind": "original issue scans via Library of Congress IIIF; page crops retained for reading only",
+      "scans": [
+        {
+          "scanPath": "C:/Pyrrhic/mandate-research-sources/S3/S17/dispatch-1862-09-23-p1.jpg",
+          "sha256": "9bfbc4d168c55f9ce07eafae45b505fcd77f59de9d2c7349501358f2dcda4662",
+          "bytes": 5263656,
+          "format": "JPEG",
+          "page": "1"
+        },
+        {
+          "scanPath": "C:/Pyrrhic/mandate-research-sources/S3/S17/dispatch-1862-09-23-p2.jpg",
+          "sha256": "9c539dc041ad94291c14c969504afde25bed023063ddaf574e10e10eeba7ade4",
+          "bytes": 5181983,
+          "format": "JPEG",
+          "page": "2"
+        }
+      ],
+      "readingLimit": "Masthead and the identified columns/paragraphs read; not whole-issue reading."
+    },
+    {
+      "key": "LIB62",
+      "title": "The Liberator, Boston, 26 September 1862",
+      "url": "https://www.loc.gov/item/sn84031524/1862-09-26/ed-1/",
+      "locator": "issue image 1 = front page (printed number not asserted); image 2 = printed 154",
+      "readPortions": "issue image 1 = front page (printed number not asserted); image 2 = printed 154",
+      "sourceKind": "original issue scans via Library of Congress IIIF; page crops retained for reading only",
+      "scans": [
+        {
+          "scanPath": "C:/Pyrrhic/mandate-research-sources/S3/S17/liberator-1862-09-26-p1.jpg",
+          "sha256": "4156bc80430d16a510d3105fff1bb6958cd8b8bca5d593ebdf1d98c5cd6dc818",
+          "bytes": 1760827,
+          "format": "JPEG",
+          "page": "issue 1"
+        },
+        {
+          "scanPath": "C:/Pyrrhic/mandate-research-sources/S3/S17/liberator-1862-09-26-p2.jpg",
+          "sha256": "fdd4dbd737f5740c719a98da901c912e884e234d97b79f08a2f3e7ab8d8933c0",
+          "bytes": 1709789,
+          "format": "JPEG",
+          "page": "154"
+        }
+      ],
+      "readingLimit": "Masthead and the identified columns/paragraphs read; not whole-issue reading."
     }
   ],
   "rules": [

@@ -13,7 +13,7 @@ The starting evidence is the four [S3 research notes](../../../../../docs/resear
 | `congress-session-members.csv` | [I] Session intersections of the member records' coverage bounds. This is neither a daily attendance return nor a legal-entitlement or quorum count. Partial sessions are retained. |
 | `congress-delegates.csv` | Territorial delegates separately; do not add them to voting representative totals. |
 | `political-alignments.csv` | Named signatories and a dated letter: documentary alignments, with the positions attributed. These are the sourced faction-related observations; they do not establish permanent caucuses. |
-| `legislative-ledger.json` | Statutes, a presidential recommendation and a proclamation, with distinct vote questions. These are historical references, not executable `ledger-act` effects. |
+| `legislative-ledger.json` | Fourteen entries and 24 vote questions: statutes, a presidential recommendation, a proclamation, the joint war committee and Cameron's censure. These are historical references, not executable `ledger-act` effects. |
 | `senate-roll-calls.csv` | Five complete recorded Senate roll calls. Only the named, cast votes are represented. An omitted senator is not classified as voting nay. |
 
 `member_id` is a draft research key, not a live person id. No personality, value, reputation, support permille, vote discipline or allegiance is inferred from party. Every member's permanent `faction` remains unknown: the read rosters classify parties, and the dated documents supply alignments. A future crosswalk must preserve that distinction.
@@ -42,7 +42,7 @@ Coverage floors and ceilings marked [I] are review aids. An ordinary member with
 | `midterm-state-counts.csv` | [I] Counts of those original contests: 71 Democratic, one Independent Democratic and 79 Republican/Union/Emancipation. Missouri's five Emancipation winners remain identifiable within the last group. |
 | `midterm-scope.json` | Pending later states, occupied/restored representation, the almanac's conflicting footer and the Directory's distinct initial-election series. |
 | `statewide-vote-references.csv` | Ten named-office, two-candidate comparisons. Candidate cells, printed totals/margins and recomputed sums/shares are distinct. |
-| `governor-party-observations.csv` | 49 governor-table observations across the 1862 and 1863 almanacs, with party evidence where established and explicit holds elsewhere. |
+| `governor-party-observations.csv` | 49 governor-table observations across the 1862 and 1863 almanacs: 37 with separate party evidence, twelve on party HOLD. |
 | `state-legislature-party-observations.csv` | Exact, approximate and qualitative party observations, including holds. Each retains the source's period heading and local labels. |
 
 The **19 proposed checkpoint records** in `../../../checkpoints-politics-1862.draft.json` preserve S3's envelopes and cross-constraints. Their proposed election measure kind is not supported by today's live checkpoint schema; the file is deliberately inert. Bands have not been adopted, and an envelope that permits a close alternative outcome cannot waive a subsequently binding named-winner requirement. The later 184-seat comparator includes 1864 Nevada and must never be evaluated in November 1862.
@@ -66,11 +66,32 @@ Votes identify the actual question: passage, amendment, concurrence, conference 
 
 Sensitive historical summaries and documentary positions are unsigned research drafts. They prescribe neither player text nor placement. The separate gate reviewer must review any eventual treatment of slavery, freedom, colonization, military service, land rights or coercive state power. No human price, stock, labour allocation or persuasion coefficient is supplied.
 
+## Press
+
+| File | Meaning |
+|---|---|
+| `press-papers.csv` | Eleven research identities, publication variants, five page-backed editor observations and explicit identity/role holds. No live person, side or faction crosswalk. |
+| `press-role-observations.csv` | Six named role observations. The Liberator's general agent is kept distinct from its editor. |
+| `press-content-observations.json` | Thirteen attributed observations: editorial positions, endorsements, document publication, cross-paper reading and a retrospective network account. |
+| `press-reach-observations.csv` | Fifteen qualified quantities: an advertised circulation, reported seized consignments, and 1860 aggregate publication/circulation columns. All runtime reach fields remain HOLD. |
+| `press-distribution-constraints.json` | Eight documentary observations about a presentment, mail direction, reported seizure, asserted military authority, publication variants and subscription/reprint routes. No executable suppression option or receipt rule. |
+
+The sample includes Douglass' Monthly, the New-York Daily Tribune, the Liberator, the New York Herald, the Richmond Dispatch, Thompson's Bank Note and Commercial Reporter, and the five papers named in the printed grand-jury presentment. Greeley's editorship is in BB-G pp.1149–1150; Garrison's in LIB62 issue p.1; Bennett's in HUD pp.479,482–483; Thompson's in TA62 p.68; Wood's in BB-W pp.2193–2194. Douglass' editorial role remains HOLD under the page-citation rule: the read issue titles establish the paper, while the unpaginated catalog lead does not establish a paginated role observation. The Dispatch's damaged header also leaves its editor unknown.
+
+DM-S pp.705,707–708 and DM-O pp.721–723 supply the paper's dated arguments; LIB62 p.154 contains both the proclamation and the separate abolitionist discussion; HER62 p.1 prints the proclamation on 23 September. These are publication observations, not proof that every reader had received them. RD62 pp.1–2 quotes and criticizes Northern papers, a case of access across the conflict rather than a universal transport model. Hudson's later account is attributed and retrospective; its broad war-period network claim is not a precise 1862 coverage count.
+
+TA62 p.68's **100,000** is a publisher's advertised circulation claim, with editions not separated. MP p.188's **over 1,000** and **nearly 500** are reported newspaper consignments, the latter shared across four destinations. TA63 p.27's daily, weekly and annual columns describe different periods and an **1860** aggregate. None establishes unique readers, persuaded voters, a November 1862 per-paper circulation, or a runtime permille. No conversion is proposed.
+
+The presentment's accusation is not a conviction. The separate mail order applies from receipt, which is unknown; Brooklyn's inclusion in the accusation does not establish its inclusion in the New York-city mail direction (MP p.188). The Tribune Clubs offer read on TR62 p.4 sells the **book** *Among the Pines*, not newspaper copies. Those distinctions are retained in the data.
+
+Seven original newspaper-page JPEG scans were read alongside the cited PDFs. The failed Tribune PDF endpoints and the Herald page-4 image failures are retained as acquisition evidence, never cited as read pages. Unused whole-volume downloads are separate from the 39 cited scan files; no full-volume reading claim is made.
+
 ## Proposed rulings
 
 1. [I] Adopt source-specific party observations, dated documentary alignments and explicit uncertainty. Reject timeless faction assignments or deriving policy support from party totals.
 2. [I] Prefer explicitly cited official roster/biography evidence where it resolves a transcription conflict; retain incompatible evidence and HOLD unresolved qualification dates. Reject silently repairing the almanac or making every printed name a seated member.
 3. [I] Keep these tables inert until their schemas, identity crosswalks, historical scope and source conflicts receive lead review. Reject copying them into live data or generating outputs during S17.
+4. [I] Retain the press's dated arguments, roles, publication variants and qualified quantities separately. Reject replacing them with permanent party loyalty, uniform audiences, delivery certainty or an invented persuasion/reach coefficient.
 
 ## Findings outside my scope
 

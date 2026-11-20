@@ -20,6 +20,19 @@
       "loadable": false
     },
     {
+      "id": "conduct_war_committee_senate",
+      "date": "1861-12-09",
+      "datePrecision": "day",
+      "recordType": "congressional_resolution",
+      "title": "Senate resolution for a joint war-conduct committee",
+      "cite": "GCW p.32",
+      "summary": "The Senate agreed to the modified resolution for an inquiry committee. This record establishes Senate action; House concurrence and final appointments are separate source questions.",
+      "effectiveDate": null,
+      "effectiveDateStatus": "not a general statutory implementation row",
+      "requiresGateReview": false,
+      "loadable": false
+    },
+    {
       "id": "legal_tender_1",
       "date": "1862-02-25",
       "datePrecision": "day",
@@ -69,6 +82,19 @@
       "effectiveDate": null,
       "effectiveDateStatus": "HOLD: separate implementation date not established",
       "requiresGateReview": true,
+      "loadable": false
+    },
+    {
+      "id": "cameron_censure",
+      "date": "1862-04-30",
+      "datePrecision": "day",
+      "recordType": "congressional_resolution",
+      "title": "House censure of Simon Cameron",
+      "cite": "MP p.333 n.",
+      "summary": "McPherson records the House censure resolution. His description of supposed responsibility is not an independent adjudication of procurement allegations.",
+      "effectiveDate": null,
+      "effectiveDateStatus": "not a general statutory implementation row",
+      "requiresGateReview": false,
       "loadable": false
     },
     {
@@ -492,6 +518,36 @@
       "method": "roll_call",
       "cite": "MP p.197",
       "notes": "Agreed; different coalition from the underlying bill.",
+      "loadable": false
+    },
+    {
+      "id": "conduct_committee_senate",
+      "actId": "conduct_war_committee_senate",
+      "date": "1861-12-09",
+      "datePrecision": "day",
+      "chamber": "senate",
+      "question": "Agree to modified joint-inquiry resolution",
+      "yeas": 33,
+      "nays": 3,
+      "totalCast": 36,
+      "method": "roll_call",
+      "cite": "GCW p.32",
+      "notes": "",
+      "loadable": false
+    },
+    {
+      "id": "cameron_censure_house",
+      "actId": "cameron_censure",
+      "date": "1862-04-30",
+      "datePrecision": "day",
+      "chamber": "house",
+      "question": "Pass Cameron censure resolution",
+      "yeas": 79,
+      "nays": 45,
+      "totalCast": 124,
+      "method": "roll_call",
+      "cite": "MP p.333 n.",
+      "notes": "The censure tally and Lincoln’s later defense are different evidence.",
       "loadable": false
     }
   ],
