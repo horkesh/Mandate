@@ -1,6 +1,6 @@
 # Lane 1.14: the 1A done check and calibration
 
-**Current, R85 (2026-11-20):** eight comparisons complete; two sourced data corrections retained, all global parameter trials rejected. Phase 0 6/6; 1A 2/6 remains unmet. The R85 section supersedes R58's stopping point; prior Part A/R58 records below are historical.
+**Current, R94 (2026-11-20):** Missouri now requires a received call and the recorded date, day 148, replacing R85's fitted 105-day wait. Six Missouri regressions and the required check pass. The full binding done check exits 1: Phase 0 6/6; 1A 2/6, with the same four failed categories as R85. R94 below supersedes only R85's Missouri interval and proposed acceptance of that interval; its eight-comparison record and other findings remain historical evidence. Claude's independent review is pending.
 
 Branch `phase1-done-check-1a`, from main at a38d7ea. It builds FOUNDATION section 12's row 1.14, Part A: the harness that scores 1A's done check. Part B, the calibration runs, waits for lanes 1.11 and 1.12. `run:done-check` now reports 1A's six criteria beside Phase 0's six. Each is PASS or FAIL, with its reasons.
 
@@ -273,7 +273,31 @@ All eight named Phase 0 stand-ins are retired according to the scanner's labels/
 
 **Proposed rulings:** accept the sourced department-reference correction and 105-day model inference; reject the three global parameter candidates rather than weakening gates. Keep the current bands and CI flag until 1A's residuals pass or the lead explicitly rules on them. A new batch requires the lead's continue-or-park ruling after R82/R83/R84 integration; no run remains in this budget.
 
+## R94: Missouri by cause and recorded date (2026-11-20)
+
+Handled R94 only in `C:/Pyrrhic/mandate-done-check-1b`, retaining branch `phase1-done-check-1b` at `ede2a556bdd854953a2ea93b80ad9bf7871a9a8c`. Git was read-only. Existing dependencies resolve to this worktree's own packages; no install was needed. Other requests and worktrees were left alone.
+
+**Change and source.** `packs/union-1861/situations/missouri_provisional_government.json` now has exactly `all: [callReceived { post: st_gov_missouri, days: 0 }, dayAtLeast 148]`. Its citation identifies 31 July 1861 as the recorded date, rather than an inferred interval after receipt. Reread the Missouri State Archives timeline's vacancy-ordinance entry: <https://www.sos.mo.gov/archives/history/timeline/3>. The July convention journal remains unread; its existing source limitation is preserved. R94's lead ruling supplies the cause-plus-date model, following 0100 item 16. A call received after day 148 permits the notice on receipt, without another wait. Only the event and citation changed; the notice's text, effects, report, earliest metadata and gate classification are unchanged. No signed item changed.
+
+**Regressions.** `packs/union-1861/test/r94-missouri.test.ts` drives the loaded notice through real ticks and checks both its fired day and the command-owned government side. Call receipts on days 20, 43, 147 and 148 all fire on day 148, never earlier. Without a received call there is no notice, flag or side change through day 160. A day-151 receipt fires on day 151, once, with the flag and Union side retained on day 152. Refused calls are used: receipt is the prerequisite, not compliance. Before the data change the new tests failed in four cases and passed in two (`runs/r94/red.log`, exit 1); after it, all six and the two Wheeling regressions passed (`green.log`, exit 0). The full suite below verifies the final fixture with the pack's exact governor identifier.
+
+**Required checks and all failures.**
+
+- Typecheck and pack boundary preflight: both exit 0 (`runs/r94/preflight-exits.json`).
+- Exact `MANDATE_NO_GIT=1 npm run check`: exit 0, **130 files / 1,477 passed / 3 existing optional timing skips**, plus boundary, licences and decision index; **184.74 s** (`check.log`, `check-exit.json`).
+- One full `npm run run:done-check -- --milestone 1a --label r94-final`, with eight seeds, the original fork horizon and drafting: **exit 1**, **1,532.32 s**, **Phase 0 6/6; 1A 2/6** (`done-check.log`, `done-check-exit.json`, `final-checks.json`). All ten reported problems were inspected. No gate was retried or waived.
+- Missouri is Union on day 148 and passes its unchanged checkpoint. The same four 1A categories fail: **checkpoints** (Confederate known men 20,957 below 100,000; both sides' fought-operation counts 0 below 1); **operation** (two operations, zero battle records); **pushback** (relay holds 1 below 2, filter holds 0 below 1, trims 0 below 1, reservations 44 above 9); **lever sweep** (people/grievance remains unmeasured and no new border levy in 24 policy moves). Unknown strength and stand-ins pass as scored; zero history battle records still limits the strength claim. The eight-seed sweep weighs eight decisions and records 248 base-run calls; return is best in 0/8. Those results do not clear D6.
+- War/history tick median–p95 are **38.04/63.70** and **39.20/62.40 ms**, within the unchanged **40/160** limits; testbed is **3.84/5.61 ms**. No unloaded or CI claim. Drafting is sound: capped worst day **25.2 ms**, with the configured three drafts per side. The full log and `runs/r94-final-drafting/` retain the report.
+
+**Reference comparison and preservation.** The fresh reference summaries match R85 for every daily State hash (148 Union, 120 testbed), final State hash, replay, resume, rejections and liveness row. Union final State remains `704c3934f6625007a596b231fbbe152c156aa62e8ff8761d6b735838b62dc3fd`; its World hash changes because the loaded situation and citation changed. Comparison: `runs/r94/reference-comparison.json`. This reuses R85 as the comparison baseline; no R85 campaign was repeated. R94 is required verification, not a new parameter search or the second calibration budget.
+
+Runtime checks, the complete failure list and five output artifacts were inventoried before this hand-over (`runs/r94/final-checks.json`, `artifact-inventory.json`). The pre-document audit found only the Missouri edit and new test among 1,651 baseline files; all 1,650 other baseline files were unchanged. This hand-over is the third delivery file. `runs/r94/final-preservation.json` records the final inventory, including documentation. Generated World, signed situations, gate material, provenance, saves, lockfiles and all numeric/liveness bands are preserved. No build, server, browser or other-worktree write. The worktree's CODEX.md is unchanged; the only main-checkout write is the single requested status append after a fresh coordination read.
+
+**For the lead:** review and commit R94 under 0096. No new ruling is requested: R94 already replaces the fitted interval. R85's remaining failures and their owners remain open; this checkout does not include the other runs' changes.
+
 ## Findings outside my scope
+
+- R94 adds no new finding outside scope. The R85 items below retain their owners; this run neither implements nor remeasures their changes from other worktrees.
 
 - 1.11/1.12 and the gate reviewer own Virginia's signed receipt/transport timing. The date was not fitted by an unreviewed signed edit.
 - 1.7/1.12 own missing repeat calls, state-force coverage, field opposition and the post-policy border levy. The full sweep cannot establish D6 until that chain and 1B's missing consequence channel exist.
