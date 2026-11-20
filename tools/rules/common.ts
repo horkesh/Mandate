@@ -3,7 +3,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
 export interface Finding { rule: string; path: string; detail: string; hash: string }
-export interface JsonItem { path: string; value: Record<string, unknown> }
+export interface JsonItem { path: string; value: Record<string, unknown>; context?: unknown }
 export function fingerprint(value: unknown): string {
   const ordered = (v: unknown): unknown => Array.isArray(v) ? v.map(ordered)
     : v !== null && typeof v === 'object' ? Object.fromEntries(Object.entries(v).sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([k, x]) => [k, ordered(x)])) : v;

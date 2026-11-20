@@ -1,0 +1,44 @@
+[
+  {
+    "path": "packages/kernel/src/seats/believed.ts",
+    "symbol": "believedHolder",
+    "hash": "29c6fb1758ae4ae579363d3030cf1174b376c8b3d0e517bf8aea1b7a5c6ea99d",
+    "reason": "Kernel-only reconstruction of a holder pending the received loss report.",
+    "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only)"
+  },
+  {
+    "path": "packages/kernel/src/seats/believed.ts",
+    "symbol": "vacancyUnreported",
+    "hash": "8713b6ea5cfcb8a529a3616d05cce78c98de08429186de0da0d9c4f35e229d9c",
+    "reason": "Kernel-only vacancy consistency while a received loss is pending.",
+    "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only)"
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "symbol": "morningGround",
+    "hash": "4d8339a36bc93b39e28630a8c27a787c4fe91ab10b8526690e12cb64aed19a18",
+    "reason": "Kernel-only morning ground and transport calculation.",
+    "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only)"
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "symbol": "battleMenus",
+    "hash": "eba81399fb85a7afff2b0926dc65014b9ae72cc75b645d8b413d9827beb37696",
+    "reason": "Kernel-judged combat options for the commander, under 0052.",
+    "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only)"
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "symbol": "postOfSeatPerson",
+    "hash": "6652195a86be516fe3c011cca8ef334767e693100d204573f6c445a4d07652d2",
+    "reason": "Identity of the seat holder himself, not a received person catalogue.",
+    "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only)"
+  },
+  {
+    "path": "packages/kernel/src/view/view.ts",
+    "symbol": "viewFor",
+    "hash": "d0156cc15b94657400360127774cee7759f61c7174aad3c2d02aef0df5bf448a",
+    "reason": "Own seat identity, faction and physical location; the people catalogue itself consumes received evidence.",
+    "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only)"
+  }
+]

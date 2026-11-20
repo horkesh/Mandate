@@ -14,12 +14,12 @@ export function causeFindings(items: readonly JsonItem[], exemptions: readonly C
   }
   const paths = new Set(exemptions.map(e => e.path));
   if (paths.size !== exemptions.length) throw new Error('duplicate cause exemption');
-  return items.flatMap(({ path, value }) => {
+  return items.flatMap(({ path, value, context }) => {
     const event = ConditionSchema.parse(value.event);
     const bare = holdsOnNothing(event);
     const railroad = typeof value.railroad === 'string' && value.railroad.length > 0;
     if (!bare && !railroad) return [];
-    const hash = fingerprint(value);
+    const hash = fingerprint(context === undefined ? value : { value, context });
     if (exemptions.some(e => e.path === path && e.hash === hash)) return [];
     return [{ rule: 'situation-cause', path, hash, detail: [bare ? 'event can hold with no positive cause in State' : '', railroad ? 'railroad label requires a cited premise/outside-model exemption' : ''].filter(Boolean).join('; ') }];
   });

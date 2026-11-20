@@ -2,61 +2,79 @@
   {
     "rule": "situation-cause",
     "path": "packs/union-1861/situations/chickasaw_treaty.json",
-    "hash": "08d2a34ec1d06273ed02435d29589e2fc88a269e034b2db15757503a66b7ff0c",
+    "hash": "e688e29d256a5cda8e90c7f55a0299a8c663052b559ecac3851521c8eae76e80",
     "detail": "railroad label requires a cited premise/outside-model exemption"
   },
   {
     "rule": "situation-cause",
     "path": "packs/union-1861/situations/choctaw_treaty.json",
-    "hash": "e9b56e86aee3b9a3e2fc1c0ecd0651785f3fd7a89e49b4bfdd5ba05d50c89d6c",
+    "hash": "c1140ff2cd4aa18ad6a49e64876d2c3781c23e8dd4c2f2555f265071ab20f51a",
     "detail": "railroad label requires a cited premise/outside-model exemption"
   },
   {
     "rule": "situation-cause",
     "path": "packs/union-1861/situations/indian_territory_posts_given_up.json",
-    "hash": "d7a0f5e45103130855a3257c82e07835fcf4f74f4eb5e5d0660e3edf456630fb",
+    "hash": "1494571d18284be599a63cefa9d327ccdf94275bca7d0afbac6d85955341af42",
     "detail": "railroad label requires a cited premise/outside-model exemption"
   },
   {
     "rule": "situation-cause",
     "path": "packs/union-1861/situations/muscogee_treaty.json",
-    "hash": "d340a7dbcebe57e86b76664d41c0aef28103d6cb561da11c7807bfab1846ee05",
+    "hash": "5bc676823a57af98aadd52e5c973ef1c4a76bb0bb060d2a7c7987fe32ffdddbc",
     "detail": "railroad label requires a cited premise/outside-model exemption"
   },
   {
     "rule": "situation-cause",
     "path": "packs/union-1861/situations/pickens_refused.json",
-    "hash": "d17998721014511458eb316291cb752b2ea086d99ca2521436529fc2f93c417f",
+    "hash": "f1eea7ecc5ace95ab2086b9ca9341f88621b05cd024985053412fc664ac98ec1",
     "detail": "railroad label requires a cited premise/outside-model exemption"
   },
   {
     "rule": "situation-cause",
     "path": "packs/union-1861/situations/pierpont_elected.json",
-    "hash": "160373e5756ed436fae80cd3e8dda54473e9b744258e2499d9e3ce5ef7cf390f",
+    "hash": "5e88c886bdbf4aab4778ee9267f33020e7749d8fe15391e8d44bc4400309a9cd",
     "detail": "railroad label requires a cited premise/outside-model exemption"
   },
   {
     "rule": "situation-cause",
     "path": "packs/union-1861/situations/texas_governor_changed.json",
-    "hash": "36b5fd0790f82485af4f449f79875ccee30794eb0bcb9693de3aa73ad00d6418",
+    "hash": "bab3ee570059bc129c314fbdc8d796d376ebdd4defd79b357dc9ffc16c85d18c",
     "detail": "event can hold with no positive cause in State; railroad label requires a cited premise/outside-model exemption"
   },
   {
     "rule": "situation-cause",
     "path": "packs/union-1861/situations/wheeling_legislature.json",
-    "hash": "d71a4d19155a8c5e8fb08fe47eb6acce6309db5395d759557add5f44c645bdb1",
+    "hash": "ffe8803717f2b2e58234c6caffc3c5b1bc1a05655cf8569d2cf18605d7a92875",
     "detail": "railroad label requires a cited premise/outside-model exemption"
   },
   {
     "rule": "situation-cause",
     "path": "packs/union-1861/situations/wheeling_ordinance.json",
-    "hash": "c978b6873c50c56317d46b549cc5e406ff045a4b91a3a6651534dedd70e3bdb6",
+    "hash": "554f63910a68c45d4459972fb96422cc85b37f928d20ec9c8431761937a693ad",
     "detail": "railroad label requires a cited premise/outside-model exemption"
   },
   {
     "rule": "situation-cause",
     "path": "packs/union-1861/situations/wheeling_recognition_letter.json",
-    "hash": "be547fea1fda1d02838228865c18472b1f6acde00a971f679a1bb7b0e6c45c3b",
+    "hash": "546520eaa14a635dbbd7ab77296bb9e087e8e234352b08b217e518120f82a7f0",
     "detail": "railroad label requires a cited premise/outside-model exemption"
+  },
+  {
+    "rule": "projection-truth",
+    "path": "packages/kernel/src/seats/requests.ts",
+    "hash": "cbb6dfc30981ee6a169b8f102239d790270cfec433785b32d6f7ab2886b9a72b",
+    "detail": "reviewsFor reaches packages/kernel/src/seats/requests.ts:reviewsFor (postStates)"
+  },
+  {
+    "rule": "projection-truth",
+    "path": "packages/kernel/src/seats/requests.ts",
+    "hash": "4b16a5fcacaaab82524e68cbe94e48608fc1491b763897e4b7e9baf85a0bc9a5",
+    "detail": "principalMenu reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates); packages/kernel/src/seats/requests.ts:reviewsFor (postStates)"
+  },
+  {
+    "rule": "projection-truth",
+    "path": "packages/kernel/src/seats/requests.ts",
+    "hash": "727a32d7326b1b22e36dc5cda2e2f45158a3227e3bb047de9b5287a7309716c1",
+    "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/requests.ts:pendingRequests (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates); packages/kernel/src/seats/requests.ts:reviewsFor (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
   }
 ]

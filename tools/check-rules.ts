@@ -3,16 +3,24 @@ import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { filesUnder, jsonAt, ratchet, type Finding, type JsonItem } from './rules/common.ts';
 import { causeFindings, type CauseExemption } from './rules/situation-causes.ts';
+import { projectionFindings, type Derivation } from './rules/projection-truth.ts';
+import { withSituationContext } from './rules/pack-content.ts';
 
 export const ROOT = fileURLToPath(new URL('../', import.meta.url));
 export function ruleFindings(root: string): Finding[] {
   const situations: JsonItem[] = filesUnder(root, 'packs').filter(p => /\/situations\/(?:drafts\/)?[^/]+\.json$/.test(p))
     .map(path => ({ path, value: JSON.parse(readFileSync(join(root, path), 'utf8')) as Record<string, unknown> }));
-  return causeFindings(situations, jsonAt<CauseExemption[]>(ROOT, 'tools/rules/cause-exemptions.json'));
+  const sources = ['packages', 'prototypes/desk'].flatMap(p => filesUnder(root, p)).filter(p => /\.[cm]?[jt]sx?$/.test(p) && !/(?:\/tests?\/|\.test\.|\.d\.ts$)/.test(p))
+    .map(path => ({ path, code: readFileSync(join(root, path), 'utf8').replaceAll('\r\n', '\n') }));
+  return [
+    ...causeFindings(withSituationContext(root, situations), jsonAt<CauseExemption[]>(ROOT, 'tools/rules/cause-exemptions.json')),
+    ...projectionFindings(sources, jsonAt<Derivation[]>(ROOT, 'tools/rules/projection-derivations.json')),
+  ];
 }
 export function checkRules(root: string): string[] {
   return ratchet(ruleFindings(root), jsonAt<Finding[]>(ROOT, 'tools/rules/existing-findings.json'));
 }
+
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   if (process.argv.includes('--report')) console.log(JSON.stringify(ruleFindings(ROOT), null, 2));
   else {

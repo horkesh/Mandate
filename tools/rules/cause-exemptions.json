@@ -1,63 +1,63 @@
 [
   {
     "path": "packs/union-1861/situations/cherokee_neutrality.json",
-    "hash": "f71d61aac6ee556f1969387f33f500d08cf46f1af0e19b100ee1f1fd09459f8a",
+    "hash": "140c6fdeb1874aa8a9ee92eb1e8cb92a9461505d7291ffaaa0c2b3d1c97d28a5",
     "kind": "outside-model",
     "reason": "The council proclamation is an independent institutional act under 0070; the council choice has no State representation.",
     "citation": "notes/lane-1.11-situations.md, R69 remaining date-only audit; [{\"source\": \"OR\", \"at\": \"I-13 p. 490 (Ross's proclamation of 17 May)\"}, {\"source\": \"NOTE-indian-territory-1861-sources\", \"at\": \"Ross, 17 May\"}]"
   },
   {
     "path": "packs/union-1861/situations/confederate_commissioners.json",
-    "hash": "3ab96ed4eccc7a75882b588ed9040bf6f502c44021e633c6ab9f01628d3177c3",
+    "hash": "a93b7be0c0695c10d33902f8494ba78bb03da8a74d24727bdb51fa85a34002c7",
     "kind": "outside-model",
     "reason": "The dated contact is not a separately represented event in State.",
     "citation": "notes/lane-1.11-situations.md, R69 remaining date-only audit; [{\"source\": \"EPP-SUMTER\", \"at\": \"Seward's memorandum to the commissioners, dated 15 March, and its covering note of 8 April (delivered then, with their consent)\"}, {\"source\": \"NOTE-secession-winter-1861\", \"at\": \"2.4; design S3\"}, {\"source\": \"NOTE-march-1861-facts\", \"at\": \"1, 17; des. 14, 18\"}]"
   },
   {
     "path": "packs/union-1861/situations/confederate_opening.json",
-    "hash": "2f34caab399828673ff8b1d147414ef4e27b0f0598c02ae048306eaf6322aa9a",
+    "hash": "f1904a2e799fe6cee79a7acb208dc5ce6bc94d01fe5b59c91406e05cd4d9f00a",
     "kind": "premise",
     "reason": "The 0040 opening explicitly permits its provision-date fallback; this does not exempt other date fallbacks.",
     "citation": "notes/lane-1.11-situations.md, R69 remaining date-only audit; [{\"source\": \"NOTE-secession-winter-1861\", \"at\": \"chronology 1861-04-10/11, 1861-04-12; design\"}, {\"source\": \"OR\", \"at\": \"I-1 p. 297: Walker's 10 April authorization and Beauregard's reply. https://ehistory.osu.edu/books/official-records/001/0297. R80 ruling: the option opens three days from surfacing, tied to its relief or landing cause. The recorded authorization is a history reference, not an absolute option threshold.\"}]"
   },
   {
     "path": "packs/union-1861/situations/confederate_protection_act.json",
-    "hash": "3a07c19185d0d030edb3f3ffe5eace561da370fb8346a7be551d255f8333094c",
+    "hash": "b1e88fd7120e039201aa4c90c932105c6d2d3bd6a2675138697e80f1e110311f",
     "kind": "outside-model",
     "reason": "The institutional act is independent under 0070; this Congress has no represented choice.",
     "citation": "notes/lane-1.11-situations.md, R69 remaining date-only audit; [{\"source\": \"CSA-STAT\", \"at\": \"p. 289 (the Creek treaty's preamble recites \\\"An act for the protection of certain Indian tribes,\\\" approved 21 May 1861) and p. 290 (Art. IV); the act itself is not printed in the volume\"}, {\"source\": \"NOTE-indian-territory-1861-sources\", \"at\": \"the act of 21 May\"}]"
   },
   {
     "path": "packs/union-1861/situations/houston_confederate_obligations.json",
-    "hash": "e23cb087c6df70570d28bd3c82172be590bcd0389f2aa3cfc5afbd279ed32300",
+    "hash": "1896de6bc9f22bfee58305ae42e9e6b195752726f15c041cf040919e0e6a5357",
     "kind": "outside-model",
     "reason": "R69 retains the pre-opening Texas institutional act; a convention has no seat in 1A.",
-    "citation": "notes/lane-1.11-situations.md, R69 remaining date-only audit; [{\"source\": \"OR\", \"at\": \"I-1 pp. 612-613, Cave to Walker, 13 March 1861\"}, {\"source\": \"TX-CONV-1861\", \"at\": \"pp. 113-114, Houston’s reply of 6 March\"}]"
+    "citation": "notes/lane-1.11-situations.md, R69 remaining date-only audit; [{\"source\": \"OR\", \"at\": \"I-1 pp. 612-613, Cave to Walker, 13 March 1861\"}, {\"source\": \"TX-CONV-1861\", \"at\": \"pp. 113-114, Houston\u00e2\u20ac\u2122s reply of 6 March\"}]"
   },
   {
     "path": "packs/union-1861/situations/lamon_promise.json",
-    "hash": "71209293ac820585af3f9b9069725ef8e9ebbc8d1540c63f18422894c126b800",
+    "hash": "8c3fd1c324ac949c6870964dc0eb58242a4894bc0dad0bfacf414d9232862c4f",
     "kind": "outside-model",
     "reason": "The visit and correspondence named by the label are not separately represented in State.",
     "citation": "notes/lane-1.11-situations.md, R69 remaining date-only audit; [{\"source\": \"OR\", \"at\": \"I-1 p. 282 (Beauregard to Walker, 26 March: Lamon \\\"saying that Major Anderson and command would soon be withdrawn\\\")\"}, {\"source\": \"OR\", \"at\": \"I-53 pp. 162 to 163 (Campbell, 13 April: Pickens's telegram of 30 March and Seward's note of 1 April)\"}]"
   },
   {
     "path": "packs/union-1861/situations/pickens_reinforcement.json",
-    "hash": "522c7334085116284a9e9535d975d39f73c2ef32e54568f8b3de7177a74ffad5",
+    "hash": "980fb932f3717a981a34f028054751c67817b0c167840cefe6a1697a4b2e94d6",
     "kind": "premise",
     "reason": "Opening premise, explicitly authorized by 0042.",
     "citation": "notes/lane-1.11-situations.md, R69 remaining date-only audit; [{\"source\": \"ORN\", \"at\": \"I-4 pp. 109 to 110 (Adams to Welles, 1 April: he will not land the company under an Army order that breaks the truce)\"}, {\"source\": \"NOTE-secession-winter-1861\", \"at\": \"2.1, 2.3; design S2\"}, {\"source\": \"NOTE-march-1861-facts\", \"at\": \"3; des. 5 to 8\"}]"
   },
   {
     "path": "packs/union-1861/situations/sumter_garrison.json",
-    "hash": "650dd361991ca9fe6da5ed916b40a8f9cde0193fc241f0337caf2457ef896ea8",
+    "hash": "4dc5d6c0c68181c38db376350cd20fd6c10cf6c35c3223848cdcf13ade577ffb",
     "kind": "premise",
     "reason": "Opening premise, explicitly authorized by 0042.",
     "citation": "notes/lane-1.11-situations.md, R69 remaining date-only audit; [{\"source\": \"OR\", \"at\": \"I-1 p. 197 (Anderson's estimate of the force a relief needs, 20,000, per the numbers note's correction 9)\"}, {\"source\": \"NOTE-secession-winter-1861\", \"at\": \"1, 2.1, 2.2\"}, {\"source\": \"NOTE-march-1861-facts\", \"at\": \"2, 4, 5, 7, 11; des. 11, 17, 20\"}]"
   },
   {
     "path": "packs/union-1861/situations/virginia_unionists.json",
-    "hash": "5214dc29e5f661d4feab6f939b0d8910fc8b143445ffe17d9a0744b427a2cf58",
+    "hash": "7a4a7dd98bd60acf2a46961a81bc5fb04178cd38be2cc046b75b652ed7f4456c",
     "kind": "outside-model",
     "reason": "The visit named by the label is not separately represented in State.",
     "citation": "notes/lane-1.11-situations.md, R69 remaining date-only audit; [{\"source\": \"FOX-CC\", \"at\": \"vol. 1 p. 38 (Fox's memo of April 1861: \\\"The last card was to send for a Union man from the Virginia Convention and say to him that Sumpter would be evacuated at once if the Union people ... would adjourn it\\\")\"}, {\"source\": \"JCR\", \"at\": \"Part II pp. 102 to 105 (Baldwin, sworn: \\\"No pledge; no undertaking; no offer\\\"), pp. 114 to 116 (Botts, sworn: the offer made), p. 71 (Lewis)\"}]"

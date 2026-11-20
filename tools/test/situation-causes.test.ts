@@ -33,4 +33,11 @@ describe('B2 cause ratchet', () => {
   it('does not mistake a rail-dispatch report subtype for a railroad exemption', () => {
     expect(causeFindings([{ ...item({ flag: 'route_closed' }), value: { ...item({ flag: 'route_closed' }).value, report: { subtype: 'railroad-man' } } }], [])).toEqual([]);
   });
+  it('invalidates an exemption after text-only or cited-source edits', () => {
+    const source = { ...item({ dayAtLeast: 1 }, 'opening premise'), context: 'original resolved text and sources' };
+    const hash = causeFindings([source], [])[0]!.hash;
+    const exemption = { path: source.path, hash, kind: 'premise' as const, reason: 'Opening only.', citation: '0042, opening' };
+    expect(causeFindings([source], [exemption])).toEqual([]);
+    expect(causeFindings([{ ...source, context: 'wording now implies a modeled cause' }], [exemption])).toHaveLength(1);
+  });
 });
