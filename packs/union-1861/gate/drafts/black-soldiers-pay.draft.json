@@ -1,0 +1,127 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "black-soldiers-pay",
+  "subject": "service",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": false,
+    "entrySha256": null,
+    "status": null,
+    "needsSource": null
+  },
+  "entry": {
+    "id": "black-soldiers-pay",
+    "class": "black-military-service",
+    "window": {
+      "from": "1862-07-17",
+      "to": "1864-06-15"
+    },
+    "placements": [
+      "text"
+    ],
+    "status": "record",
+    "interim": "text",
+    "agencyReasons": [
+      "agency:black-enlistment",
+      "agency:pay-protest"
+    ],
+    "protectedGroups": [
+      "Black soldiers",
+      "Black servicemen",
+      "Black families"
+    ],
+    "protectedFields": [],
+    "refused": [
+      {
+        "fieldPattern": "(?:^|[-_])(?:black_pay_savings|racial_pay_savings|pay_gap_profit)(?:$|[-_])",
+        "reason": "The pay gap is not a player saving or profit (SENSITIVE-HISTORY 3.3, R2)."
+      }
+    ]
+  },
+  "sources": [
+    "pay",
+    "saxton"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "SENSITIVE-HISTORY section 3 entry for this topic",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "text",
+      "recommendation": "[I] Interim cited statutory comparison only: $13 private pay against $10 under the July act, of which $3 may be clothing. Individual cash deductions/payment dates require records.",
+      "evidence": [
+        "pay",
+        "saxton"
+      ]
+    },
+    {
+      "placement": "derived",
+      "recommendation": "[I] For R2 to decide: grievance/enlistment response with agency reasons; no finance saving from discriminatory pay.",
+      "evidence": [
+        "pay",
+        "saxton"
+      ]
+    },
+    {
+      "placement": "decision",
+      "recommendation": "[I] For R2 to decide, not cleared: pressing Congress, with sourced advocate and locked costs; no pay-gap dial.",
+      "evidence": [
+        "pay",
+        "saxton"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] Each reason names people’s own choices responding to conditions; protected inputs have no player writer. The ids are candidate vocabulary, not implemented terms.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "Black"
+      },
+      {
+        "term": "racial pay"
+      },
+      {
+        "term": "Black soldiers[’']? pay"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Do not change may into necessarily deducted. Taylor’s 1902 memories extend into 1863–64; date the claims.",
+      "No narrative praise for a profitable inequality or credit to the president alone."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The statute allowed three dollars of the ten-dollar pay in clothing.",
+        "rejectExample": "Discriminatory pay saves the army money.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [
+    "R2"
+  ],
+  "remaining": [
+    "R2 remains a ship-blocker. Payrolls and later equal-pay implementation are not established by statutes."
+  ],
+  "proposedRuling": "[I] Retain record with interim text only; propose grievance/advocacy separately for R2, never budget savings.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

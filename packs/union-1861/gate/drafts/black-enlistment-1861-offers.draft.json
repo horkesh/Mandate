@@ -1,0 +1,133 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "black-enlistment-1861-offers",
+  "subject": "service",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "bf958c5198377dbd71f5de142d2bc4559e578622e9a92f1c2c90015c69f14de9",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "black-enlistment-1861-offers",
+    "class": "black-military-service",
+    "window": {
+      "from": "1861-04-15",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "decision",
+      "event"
+    ],
+    "status": "open",
+    "protectedGroups": [
+      "free Black men",
+      "free Black women",
+      "Black men",
+      "Black women",
+      "Black people",
+      "Black Northerners",
+      "Black volunteers",
+      "Black soldiers",
+      "Black sailors",
+      "Black regiments",
+      "colored men",
+      "enslaved people",
+      "freedpeople",
+      "refugees from slavery",
+      "Black children"
+    ],
+    "agencyReasons": [
+      "agency:black-volunteer-offer",
+      "agency:black-enlistment"
+    ],
+    "refused": [
+      {
+        "optionPattern": "(?:recruit|raise|enlist|levy|draft|conscript|muster|enrol)[a-z_-]*(?:black|colou?red|negro(?:es)?|african)",
+        "labelPattern": "^(?!.*\\b(?:ask|request|seek)\\w*\\b.{0,40}\\b(?:Congress|authority|law)\\b)(?!.*\\b(?:decline|refuse|not|no)\\b).*\\b(?:recruit|raise|enlist|levy|draft|conscript|muster|enrol|arm)\\w*\\b.{0,40}\\b(?:Black|colou?red|negro(?:es)?|African)\\b",
+        "reason": "no recruit verb: the offers are the men's own acts, and acceptance runs through Congress (S13's ask-congress), never through a player draw on a pool (SENSITIVE-HISTORY 3.3, refused; [SW 6.4]; 0026)"
+      },
+      {
+        "optionPattern": "^accept[a-z_-]*(?:black|colou?red|negro|african)",
+        "labelPattern": "^(?!.*\\b(?:ask|request|seek)\\w*\\b.{0,40}\\b(?:Congress|authority|law)\\b)(?!.*\\b(?:decline|refuse|not|no)\\b).*\\b(?:accept|receive)\\w*\\b.{0,40}\\b(?:Black|colou?red|negro(?:es)?|African)\\b",
+        "reason": "held, not refused: a direct acceptance by the president under the 3 May 1861 call is needs-source (the only basis in the notes is that the exclusion \"rested more on policy than statute\", [SW 6.4]); when a research lane sources a lawful path, this signature is lifted and an accept option may be added (SENSITIVE-HISTORY 3.3)"
+      }
+    ],
+    "protectedFields": []
+  },
+  "sources": [
+    "law",
+    "hunter-service"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "decision",
+      "recommendation": "[I] Carry decline/refer-governors/ask-congress route with locked costs; no S7 proof of lawful direct acceptance under 3 May call.",
+      "evidence": [
+        "law",
+        "hunter-service"
+      ]
+    },
+    {
+      "placement": "event",
+      "recommendation": "[I] Offers are men’s own acts, not a player recruitment pool. Later 1862 authority is a separate legal step.",
+      "evidence": [
+        "law",
+        "hunter-service"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] Each reason names people’s own choices responding to conditions; protected inputs have no player writer. The ids are candidate vocabulary, not implemented terms.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "Black"
+      },
+      {
+        "term": "Black volunteers?"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Do not describe the 1862 law as proof of authority in May 1861. Forecasts are not offers actually accepted."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "Black men offered to serve.",
+        "rejectExample": "Draw Black recruits from the available pool.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [
+    "R2"
+  ],
+  "remaining": [
+    "The lawful direct-acceptance facet remains needs-source."
+  ],
+  "proposedRuling": "[I] Retain the existing direct-acceptance hold and Congress route; reject backdating later authority.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

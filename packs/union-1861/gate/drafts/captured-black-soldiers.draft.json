@@ -1,0 +1,123 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "captured-black-soldiers",
+  "subject": "service",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": false,
+    "entrySha256": null,
+    "status": null,
+    "needsSource": null
+  },
+  "entry": {
+    "id": "captured-black-soldiers",
+    "class": "atrocities",
+    "window": {
+      "from": "1862-11-14",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "event",
+      "text"
+    ],
+    "status": "open",
+    "interim": null,
+    "agencyReasons": [],
+    "protectedGroups": [
+      "Black soldiers",
+      "Black captives",
+      "Black teamsters",
+      "enslaved people"
+    ],
+    "protectedFields": [],
+    "refused": [
+      {
+        "optionPattern": "(?:execute|enslave|sell|hang|shoot|kill)[a-z_-]*(?:black|captives?|prisoners?|soldiers?)",
+        "reason": "No seat may execute or enslave captives. Atrocity conduct cannot be a lever (rule 1)."
+      }
+    ]
+  },
+  "sources": [
+    "black-captives",
+    "exchange"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "SENSITIVE-HISTORY section 3 entry for this topic",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "event",
+      "recommendation": "[I] Confederate reported capture/policy/threat is conduct under the interim rule and sign rule, never an execute/enslave choice. November is in scope; December proclamation is later than S23’s window.",
+      "evidence": [
+        "black-captives",
+        "exchange"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] Name Manuel when the source does; keep killed, captured, threatened sale, jail instruction and threatened execution distinct. Do not supply the four men’s ultimate fate.",
+      "evidence": [
+        "black-captives",
+        "exchange"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "Black"
+      },
+      {
+        "term": "captured"
+      },
+      {
+        "term": "Seddon"
+      },
+      {
+        "term": "St[.]? Catherines"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Captor descriptions of legal status and exemplary punishment remain attributed. No assumption of uniform prisoner protection.",
+      "No Union gain may depend on atrocity-class conduct (D5). Retain the R2/R4 dependency, not uniform leave-play as a complete treatment."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "Seddon directed summary execution; these pages do not establish the captives’ fate.",
+        "rejectExample": "The order proves the four captives were executed.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "atrocity",
+    "agency"
+  ],
+  "reviewDependencies": [
+    "R2",
+    "R4",
+    "0074"
+  ],
+  "remaining": [
+    "Actual fate, regiment and legally distinct status of each captive remain unresolved; R2/R4 own capture treatment."
+  ],
+  "proposedRuling": "[I] Recommend atrocity-class event/text from the 14 November report, with no individual fate inferred; reject beginning the topic only in December.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

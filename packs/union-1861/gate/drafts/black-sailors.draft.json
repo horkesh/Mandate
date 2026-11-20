@@ -1,0 +1,122 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "black-sailors",
+  "subject": "service",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": false,
+    "entrySha256": null,
+    "status": null,
+    "needsSource": null
+  },
+  "entry": {
+    "id": "black-sailors",
+    "class": "black-military-service",
+    "window": {
+      "from": "1861-09-25",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "decision",
+      "text"
+    ],
+    "status": "open",
+    "interim": null,
+    "agencyReasons": [
+      "agency:black-naval-enlistment"
+    ],
+    "protectedGroups": [
+      "Black sailors",
+      "refugees from slavery"
+    ],
+    "protectedFields": [],
+    "refused": [
+      {
+        "fieldPattern": "(?:^|[-_])(?:black|freedmen)[-_](?:sailor_pool|naval_pool|crew_stock)(?:$|[-_])",
+        "reason": "No naval recruitment pool of protected people (SENSITIVE-HISTORY 3.3)."
+      }
+    ]
+  },
+  "sources": [
+    "navy"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "SENSITIVE-HISTORY section 3 entry for this topic",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "decision",
+      "recommendation": "[I] Departmental reception/enlistment policy through Welles with locked costs; actual enlisted service is the men’s choice.",
+      "evidence": [
+        "navy"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] No crew model exists: enlistment stays text. The September acknowledgment’s rating/pay is local administrative evidence, not a uniform career or whole-war total.",
+      "evidence": [
+        "navy"
+      ]
+    },
+    {
+      "placement": "derived",
+      "recommendation": "[I] Only a future crew-model ruling could authorize an agency derivation; absent from candidate placements.",
+      "evidence": [
+        "navy"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] Each reason names people’s own choices responding to conditions; protected inputs have no player writer. The ids are candidate vocabulary, not implemented terms.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "Black"
+      },
+      {
+        "term": "Black sailors?"
+      },
+      {
+        "term": "refugees from slavery"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Explain boys as the recorded rating, not proof of childhood. Do not transfer army clothing deductions to navy.",
+      "The acknowledgment summarizes the letter; no invented full Welles quotation."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The acknowledgment describes a ten-dollar monthly entry rating.",
+        "rejectExample": "All Black sailors received equal pay and promotion.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [
+    "R2"
+  ],
+  "remaining": [
+    "Full original 25 September letter, individual ratings, pay receipt, discipline and promotion remain held."
+  ],
+  "proposedRuling": "[I] Recommend departmental policy plus text under the existing no-crews model; reject a naval recruitment pool.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "black-enlistment",
+  "subject": "service",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": false,
+    "entrySha256": null,
+    "status": null,
+    "needsSource": null
+  },
+  "entry": {
+    "id": "black-enlistment",
+    "class": "black-military-service",
+    "window": {
+      "from": "1861-08-01",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "decision",
+      "derived",
+      "event",
+      "text"
+    ],
+    "status": "record",
+    "interim": null,
+    "agencyReasons": [
+      "agency:black-enlistment",
+      "agency:refusal-of-coerced-service"
+    ],
+    "protectedGroups": [
+      "enslaved people",
+      "freedpeople",
+      "refugees from slavery",
+      "free Black men",
+      "Black women",
+      "Black children",
+      "Black soldiers"
+    ],
+    "protectedFields": [],
+    "refused": [
+      {
+        "fieldPattern": "(?:^|[-_])(?:black|colou?red)[-_](?:pool|quota|recruitment_rate|reserve|labou?r)(?:$|[-_])",
+        "reason": "No race-selected manpower/labor pool or rate dial (0026; SENSITIVE-HISTORY 3.3)."
+      },
+      {
+        "optionPattern": "(?:recruit|levy|draft|conscript|assign)[a-z_-]*(?:black|colou?red|freedmen|freedpeople)",
+        "reason": "Men’s service is their own choice, not a player levy or labor assignment."
+      }
+    ]
+  },
+  "sources": [
+    "hunter-service",
+    "saxton",
+    "pay",
+    "law"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "SENSITIVE-HISTORY section 3 entry for this topic",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "decision",
+      "recommendation": "[I] Policy and requests for authority through named holders, never recruit/rate controls. December Cameron report is inherited context; its exact author/date requires its own primary leg.",
+      "evidence": [
+        "hunter-service",
+        "saxton",
+        "pay",
+        "law"
+      ]
+    },
+    {
+      "placement": "derived",
+      "recommendation": "[I] Enlistment is men’s own response to policy, treatment, pay and capture risk; authority ceilings never become actual strength.",
+      "evidence": [
+        "hunter-service",
+        "saxton",
+        "pay",
+        "law"
+      ]
+    },
+    {
+      "placement": "event",
+      "recommendation": "[I] Separately reported organizations/service after authority and source review, including disputed or coerced recruitment.",
+      "evidence": [
+        "hunter-service",
+        "saxton",
+        "pay",
+        "law"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] Retain Hunter/Stanton disagreement, Pierce’s coercion evidence, separate Saxton laborer/armed volunteer ceilings and limited detachment return.",
+      "evidence": [
+        "hunter-service",
+        "saxton",
+        "pay",
+        "law"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] Each reason names people’s own choices responding to conditions; protected inputs have no player writer. The ids are candidate vocabulary, not implemented terms.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "Black"
+      },
+      {
+        "term": "colou?red"
+      },
+      {
+        "term": "enlist\\w*"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "No general all-voluntary claim for Hunter. No 10,000 soldiers by adding the two 5,000 authorizations.",
+      "Native Guards recitals prove neither Confederate combat nor every recruit’s prior status. Race is not a force-selection key."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "Pierce reported men retained against their will.",
+        "rejectExample": "Hunter’s authority produced fifty thousand willing soldiers.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [
+    "R2",
+    "R4",
+    "0074"
+  ],
+  "remaining": [
+    "R2 and R4 must re-rule capture before Black units fight; full muster/discharge, officer and Kansas/Island Mound sources remain held."
+  ],
+  "proposedRuling": "[I] Recommend record-held policy/agency/service facets with conflicts retained; reject automatic growth from authorizations.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}
