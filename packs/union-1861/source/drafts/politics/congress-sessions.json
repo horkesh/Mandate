@@ -1,0 +1,95 @@
+{
+  "status": "draft_not_loaded",
+  "window": {
+    "from": "1861-08-01",
+    "through": "1862-11-30"
+  },
+  "sessions": [
+    {
+      "id": "congress_37_1",
+      "congress": 37,
+      "start": "1861-07-04",
+      "end": "1861-08-06",
+      "scope": "overlaps requested window",
+      "cite": "BDR p.162; MP p.121"
+    },
+    {
+      "id": "congress_37_2",
+      "congress": 37,
+      "start": "1861-12-02",
+      "end": "1862-07-17",
+      "scope": "within requested window",
+      "cite": "BDR p.162; MP p.121"
+    },
+    {
+      "id": "congress_37_3",
+      "congress": 37,
+      "start": "1862-12-01",
+      "end": "1863-03-03",
+      "scope": "later audit reference only; outside November checkpoint",
+      "cite": "BDR p.162; MP p.121 conflicts: March 4"
+    }
+  ],
+  "specialSenateSession": {
+    "start": "1861-03-04",
+    "end": "1861-03-28",
+    "scope": "outside requested window; no House sitting implied",
+    "cite": "BDR p.162"
+  },
+  "rules": [
+    "[I] Endpoints inclusive for draft intersection only; session dates are not daily attendance.",
+    "[I] Recess does not seat the 38th; party observations are not membership dates.",
+    "No faction is inferred from a roll call or typography."
+  ],
+  "almanacPrintedTotals": [
+    {
+      "chamber": "senate",
+      "Republican": 30,
+      "Democratic": 13,
+      "Unionist": 5,
+      "vacancies": 2,
+      "total": 50,
+      "cite": "TA62 p.17"
+    },
+    {
+      "chamber": "house",
+      "Republican": 106,
+      "Democratic": 42,
+      "Unionist": 26,
+      "vacancies": 4,
+      "total": 178,
+      "cite": "TA62 p.18"
+    }
+  ],
+  "almanacVacancies": [
+    {
+      "chamber": "house",
+      "state": "Illinois",
+      "seatLabel": "6",
+      "cite": "TA62 p. 18",
+      "kind": "publication_roster_vacancy_not_dated_service"
+    },
+    {
+      "chamber": "house",
+      "state": "Kentucky",
+      "seatLabel": "1",
+      "cite": "TA62 p. 18",
+      "kind": "publication_roster_vacancy_not_dated_service"
+    },
+    {
+      "chamber": "house",
+      "state": "Missouri",
+      "seatLabel": "3",
+      "cite": "TA62 p. 18",
+      "kind": "publication_roster_vacancy_not_dated_service"
+    },
+    {
+      "chamber": "house",
+      "state": "Missouri",
+      "seatLabel": "5",
+      "cite": "TA62 p. 18",
+      "kind": "publication_roster_vacancy_not_dated_service"
+    }
+  ],
+  "adoption": "HOLD: service boundary and party conflicts, claims and exact seat crosswalk need lead review. No aggregate here certifies a sitting quorum."
+}

@@ -57,6 +57,27 @@ The final document audit checks links, UTF-8 decoding, the outside-scope endings
 2. Route sensitive-history material to the gate reviewer; no wording or placement is signed here.
 3. Keep later elections separate from information available at the November checkpoint.
 
+## S17: politics as data drafts
+
+S17 continues from `0401894` on the same branch. Its files are inert drafts under `packs/union-1861/source/drafts/politics/`, with a proposed checkpoint beside `checkpoints.json`. No importer, live pack, generated world, strings, runtime rule, signed item or other sprint worktree is in scope. New source scans and evidence stay in `C:/Pyrrhic/mandate-research-sources/S3/S17/`; existing S3 scans are reused without modification.
+
+### Work and validation plan
+
+1. Read S3's notes and the actual cited pages again. Draft Congress's sessions, member/party observations and dated membership changes, then legislative ledger records. A party label does not establish a faction; unsourced faction cells stay unknown.
+2. Draft the sixteen-state midterm references and proposed checkpoint bands. Keep original winners, later vacancies, returns and seating separate. Draft governors and state chambers from dated observations, not an invented daily officeholding series.
+3. Extend the press draft with papers, editors, publication variants, dated editorial positions, distribution constraints and measured reach where sources support it. Circulation copies, readers, persuasion and the runtime's reach parameter are different measures.
+4. Before each coherent commit, run cheap syntax, citation, arithmetic, identity/date and inertness audits. Run the real pre-commit hook for each commit, retaining logs and exits externally. Do not bypass it or push. Expected cost: several minutes per hook; stop retries after an unexpected failure and diagnose every retained category first.
+5. Run the inherited required done check once, after cheap startup/prerequisite checks. Expected cost: roughly twenty minutes. Its own Phase 0 and supplemental 1A outcomes remain binding as reported; no timing waiver or out-of-scope calibration. Reuse S3's historical failure evidence as context, not as a passing S17 result. Stop expensive retries after failure.
+6. Finish inventories and preservation checks before the final hand-over. Record proposed rulings and residuals, read the shared CODEX fresh, then append one UTF-8 status preserving its prior bytes.
+
+Independent review and gate sign-off remain deferred under 0106. This run is maker verification, not acceptance.
+
+### S17 batch 1: Congress and ledger
+
+Drafted 258 named congressional observations, 689 possible member/session intersections, seven separately typed territorial delegates, 12 historical ledger entries, 22 vote questions and five complete Senate roll calls (196 cast votes). The 29 documentary-alignment observations preserve the border replies, Maynard's separate response and Sumner's dated letter without inventing permanent factions. The source register and draft README retain qualification/term distinctions and the conflicts concerning Baker, Wright, Upton, Shiel, Todd, Jackson, Phelps, Vandever and the publication-only Pendleton claim. No live identity or party crosswalk is applied.
+
+The first cheap audit passes 2,431 checks: file structure, UTF-8, page citations, source hashes, party and vote arithmetic, record resolution, unsigned/inert status and protected-path preservation. Both unchanged live packs validate (exit 0). The single required S17 done check is running with drafting; its own log and exit will be retained. The first coherent batch is submitted through the actual commit hook, with the hook's own result retained externally. No passing integrated check is claimed before that result exists.
+
 ## Findings outside my scope
 
 The earlier politics note mixes several national party counts and includes snippet-only claims. S3 supplies page-backed replacements for the corresponding 1861–62 material without rewriting that note or canon. S1 owns the reported 1A behavior failures; S2 owns timing. S5 should preserve the first note issue's replacement clause and coin exceptions. S6 owns cast values and exact governor service rows. S7 and the gate reviewer own sensitive-history wording and placement. None of those lanes' files was edited.
