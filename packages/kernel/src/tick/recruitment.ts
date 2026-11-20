@@ -114,6 +114,7 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
       levyMen: actual.men,
       levyTermDays: call.callTermDays,
       ...(call.callArm === undefined ? {} : { levyArm: call.callArm }),
+      ...(call.callId === undefined ? {} : { levyCallId: call.callId }),
       levyMusterDay: day + rules.musterDays + actual.delayDays,
       levyResponse: responseKey(msg.msgOrigin, governor),
     });
@@ -226,7 +227,9 @@ export function recruitmentPhase(ctx: TickContext, start: State): State {
         arm: levy.levyArm ?? rules.arm,
         strength: levy.levyMen,
         storesDays: rules.storesDays,
-        enlistment: { enlPost: levy.levyPost, enlRaisedBy: levy.levyGovernor, enlCall: levy.levyCall, enlRegiments: levy.levyRegiments, enlMusterDay: day, enlEndsDay: levy.levyTermDays === null ? null : day + levy.levyTermDays },
+        enlistment: { enlPost: levy.levyPost, enlRaisedBy: levy.levyGovernor, enlCall: levy.levyCall, enlRegiments: levy.levyRegiments, enlMusterDay: day, enlEndsDay: levy.levyTermDays === null ? null : day + levy.levyTermDays,
+          ...(levy.levyCallId === undefined ? {} : { enlCallId: levy.levyCallId }),
+        },
       },
     });
     placements.push({ block, region: p.postSeat!, day });
@@ -239,4 +242,59 @@ export function recruitmentPhase(ctx: TickContext, start: State): State {
   for (const _ of forces.disbanded) fire(ctx, 'recruitment.disbanded');
   const moved = placeAndRemove(world.map, forces.state, placements, forces.disbanded);
   return musterAssignments(moved, [...due, ...lapsed], assign, forces.disbanded);
+}
+
+/** Institutional entries are proposals, never orders to a governor. Each owner applies its own part. */
+export function stateForcesPhase(ctx: TickContext, start: State): State {
+  let state = start;
+  for (const p of ctx.proposals) {
+    if (p.proposal !== 'effect' || p.owner !== 'recruitment' || p.field !== 'state_forces') continue;
+    const entry = p.stateForces;
+    const post = p.subject as PostId;
+    const office = state.postStates[post];
+    const refuse = (why: string) => ctx.mapEvents.push({ event: 'proposal_refused', owner: 'recruitment', reason: p.reason, why });
+    if (p.origin !== 'notice' || p.delta !== 1 || entry === undefined || office === undefined || office.postSeat === null ||
+      !raisingPost(ctx, state, post) || p.side === null || postFaction(ctx.world, state, post) !== p.side ||
+      !/^[a-z][a-z0-9_]*$/.test(entry.id) || !ctx.world.map.world.vocabularies.arms.some(a => a.id === entry.arm && !a.naval) ||
+      (entry.men !== null && (!Number.isSafeInteger(entry.men) || entry.men < 0)) ||
+      (entry.regiments !== null && (!Number.isSafeInteger(entry.regiments) || entry.regiments < 1)) ||
+      (entry.termDays !== null && (!Number.isSafeInteger(entry.termDays) || entry.termDays < 1 || entry.termDays > ctx.world.map.world.rules.recruitment.maxTermDays)) ||
+      (entry.termUnknown === true && entry.termDays !== null)) {
+      refuse('invalid_state_forces_notice'); continue;
+    }
+    const block = toId('forceBlock', `state-forces.${entry.id}`);
+    // A return can include a prior requisition. Credit its surviving men, or its still-pending levy,
+    // without changing that call's answer, expiry, assignment or journey. Durable enlistment identity
+    // works after proxy response pruning too.
+    const includes = (id: string | undefined) => id !== undefined && (entry.includesCalls ?? []).includes(id);
+    const priorMen = Object.entries(state.forceEnlistments).reduce((n, [id, e]) =>
+      e.enlPost === post && includes(e.enlCallId) ? n + (state.forceBlockStates[id as ForceBlockId]?.fbStrength ?? 0) : n, 0)
+      + Object.values(state.postLevies).reduce((n, l) => l.levyPost === post && includes(l.levyCallId) ? n + (l.levyMen ?? 0) : n, 0);
+    const men = entry.men === null ? null : Math.max(0, entry.men - priorMen);
+    const old = state.forceBlockStates[block];
+    if (old !== undefined) {
+      const enlistment = state.forceEnlistments[block];
+      if (enlistment?.enlSourceAct === undefined || enlistment.enlPost !== post || old.fbArm !== entry.arm) { refuse('state_force_identity_conflict'); continue; }
+      if (old.fbStrength === null && men !== null) {
+        state = applyMusters(ctx.world.map, state, [{ change: 'quantify', block, men, regiments: entry.regiments, cause: 'recruitment' }]).state;
+      }
+      continue;
+    }
+    // Situation records survive the contingent: a later return is evidence about the old entry,
+    // never authority to raise it again after disbanding or surrender. No second identity ledger.
+    const enteredBefore = ctx.world.situations.some(s => s.id !== p.situation &&
+      state.situationStates[s.id] !== undefined && state.situationStates[s.id]!.sitFiredDay < ctx.day &&
+      s.effects.some(e => 'propose' in e && e.propose.owner === 'recruitment' && e.propose.field === 'state_forces' && e.propose.stateForces?.id === entry.id));
+    if (enteredBefore) { refuse('state_force_no_longer_present'); continue; }
+    const created = applyMusters(ctx.world.map, state, [{ change: 'create', cause: 'recruitment', create: {
+      block, name: `raised.${post}`, department: office.postDepartment, arm: entry.arm, strength: men,
+      storesDays: ctx.world.map.world.rules.recruitment.storesDays,
+      enlistment: { enlPost: post, enlRaisedBy: office.postHolder, enlCall: toId('message', `state-act.${p.situation}.${entry.id}`),
+        enlRegiments: entry.regiments, enlMusterDay: ctx.day, enlEndsDay: entry.termDays === null ? null : ctx.day + entry.termDays,
+        enlSourceAct: p.situation, ...(entry.termUnknown === true ? { enlTermUnknown: true } : {}),
+      },
+    } }]).state;
+    state = musterAssignments(placeAndRemove(ctx.world.map, created, [{ block, region: office.postSeat, day: ctx.day }], []), [], [{ block, post }], []);
+  }
+  return state;
 }

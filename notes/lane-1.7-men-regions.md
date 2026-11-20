@@ -181,3 +181,114 @@ For the lead:
 
 1. State-force transfers still pass through governor compliance on this head; their replacement by the states' own dated acts belongs to R97. Northern Virginia's Confederate concentration belongs to R98. No battle is forced here.
 2. Retain the four failed 1A categories with their existing owners and integrate the accepted checkpoint/other-lane fixes separately. CI budget confirmation remains required despite the passing local measurement.
+
+
+## R97: state forces enter by their states’ own acts (2026-11-20)
+
+R97 only, in `C:/Pyrrhic/mandate-transfers-1861`, `phase1-transfers-1861`, from the lead’s R90/R96 commit `4f6e8b3`. `npm ci` ran first: exit 0, 51 packages, zero vulnerabilities. Git was read-only. R98’s worktree and concentration changes were not touched or imported. Claude’s independent review remains pending under 0096. Evidence: `runs/r97/final-checks.json`.
+
+### Where it stopped
+
+Seven notices replace eleven transfer requisitions. Each state act waits on its own secession flag as well as its sourced date. Four transfers create eleven aggregate contingents through the existing `forces`, `movement` and `command` owners in phase 4c, after command’s side proposals. A vacant governorship cannot veto a state’s act. Ordinary calls still travel, cost attention and receive the governor’s own compliance. No values, thresholds, prices, rates, military-control assignments or concentration instructions were fitted.
+
+Virginia enters with unknown strength on 6 June. Its 17 June return fills the same block. Tennessee’s resolution enters unknown contingents on 29 June; the 2 July tender fills their quantities. A later return preserves location, assignment, condition, entry and expiry, and cannot recreate a contingent that has left play. Situation records provide that last guard; no second identity ledger was added.
+
+### The read record and gate placement
+
+Live Ohio State endpoints returned 403. Read the retained primary-page extracts from R90 instead, and copied them into this worktree’s ignored `runs/r97/sources/`. `sources-read.json` identifies each of the fifteen read pages, its URL, original path and SHA-256; `source-index.json` retains the live-access failures. No claim of a fresh online reading or complete-volume reading.
+
+| Notice | Recorded date | Fired in this history | Read source |
+|---|---|---|---|
+| Virginia’s proclamation | 6 June | day 93, 6 June | OR I-2 pp. [911](https://ehistory.osu.edu/books/official-records/002/0911)–[912](https://ehistory.osu.edu/books/official-records/002/0912), proclamation dated 6 June, published in General Orders 25 on 8 June |
+| Virginia’s quantitative return | 17 June | day 104, 17 June | OR IV-1 p. [388](https://ehistory.osu.edu/books/official-records/127/0388), message’s date; p. [392](https://ehistory.osu.edu/books/official-records/127/0392), summary item 2, upward of 40,000 volunteers |
+| North Carolina’s ordinance | 27 June | day 114, 27 June | OR IV-1 pp. [396–397](https://ehistory.osu.edu/books/official-records/127/0397), ten war-term regiments; pp. [402](https://ehistory.osu.edu/books/official-records/127/0402)–[404](https://ehistory.osu.edu/books/official-records/127/0404), transfer ordinance, four already-serving twelve-month regiments and 2,000 accepted |
+| Tennessee’s military league | 7 May | day 66, 10 May: secession cause first present | OR IV-1 pp. [296–297](https://ehistory.osu.edu/books/official-records/127/0297), agreement subject to both governments’ ratification; authority only, no duplicate numerical entry |
+| Tennessee’s legislative resolution | 29 June | day 116, 29 June | OR IV-1 p. [411](https://ehistory.osu.edu/books/official-records/127/0411), resolution authorizing placement at Confederate disposal |
+| Tennessee’s tender | 2 July | day 119, 2 July | OR IV-1 p. [417](https://ehistory.osu.edu/books/official-records/127/0417), 22 infantry regiments, two cavalry regiments, ten artillery companies; incomplete field batteries |
+| Arkansas’s articles | 15 July | day 132, 15 July | OR I-3 pp. [609](https://ehistory.osu.edu/books/official-records/003/0609)–[610](https://ehistory.osu.edu/books/official-records/003/0610), consenting troops, seven infantry regiments, one cavalry regiment, one cavalry battalion, five artillery companies, existing enlistments and clothing obligation |
+
+All seven carry an explicit `gate.none` reason: administrative military service only, with no motive, secession-cause claim, slavery policy, security order, civilian conduct or protected-population effect. No gated topic was placed in text or effect, no draft required, and no signature written. Existing signed material is preserved. Placement remains subject to the independent reviewer; a gate concern goes to the gate reviewer rather than being self-signed.
+
+### Proposed rulings and limits [I]
+
+1. **Aggregate entry for forces not separately represented before transfer.** Use the existing block, placement and assignment owners at the state government’s seat, with existing recruitment stores and condition rules, then ordinary transfers and joins. This is an administrative approximation, not sourced field disposition. Virginia keeps the single default-arm infantry aggregate from R90; the read total has no arm breakdown, so this is not a claim that all its volunteers were infantry. Reject another governor-compliance request, a new economy stock, invented field posts or a forced battle.
+2. **Separate act from quantity.** Virginia’s later 40,000 is not back-projected to 6 June. Tennessee’s tender is not a certificate of completed muster on 29 June or 2 July. Later quantities fill the same contingents. Regimental men use the unchanged 1,000-men norm [I], not exact reported headcounts. Sub-regimental headcounts remain null. Reject duplicate numerical transfers in May and July or fresh blocks for the same later returns.
+3. **Preserve uncertainty about original expiries.** The former twelve-month-from-model-muster approximation is removed for these institutional entries. `enlEndsDay: null` with `enlTermUnknown: true` means an unread original expiry, distinct from North Carolina’s known war service. No new twelve-month term starts at transfer. The governor recorded at entry is bookkeeping, nullable during a vacancy, not an assertion that he personally raised every regiment. Original individual dates and expiries remain for research beyond this horizon.
+4. **Credit the included North Carolina requisition dynamically.** Its four already-serving regiment equivalents credit surviving men or pending levies linked to the April requisition, using durable `enlCallId` after response pruning. This history’s April answer is `object`, so the credited amount is zero and all four equivalents enter. Reject the old fixed subtraction of one merely requested regiment. Other earlier calls have no read regiment-to-regiment crosswalk; no such identity was invented.
+
+The navy, staff, property and August discharge provisions remain cited/catalogued where numerical units or later-horizon execution are absent. No ships, ordnance staff strengths, field batteries or later August discharges were invented.
+
+### History, strength and unchanged bands
+
+The 148-day history has zero command rejections and zero refused institutional proposals. Replay, day-60 resume and saved-log replay match. Final State: `9c9d7bbacbfd203638e9365d5966674218bac14b7acaf07cf45a1948e3ffdabf`. The correction scan matches all 148 daily State hashes and all liveness rows. A focused post-entry save round-trip preserves the new source-act and unknown-term fields and resumes identically.
+
+| 31 July men | R90/R96 retained evidence | R97 | Unchanged band |
+|---|---|---|---|
+| Union | 62,686 known + four unknown blocks | 62,686 known + four unknown blocks | 95,000–250,000; below the non-binding floor, not fitted |
+| Confederate | 46,457 known + 17 unknown blocks | 134,457 known + 20 unknown blocks | 100,000–200,000; inside both binding edges |
+
+The 88,000 additional known men are source-described contingents represented by the unchanged regimental norm or Virginia’s lower represented 40,000; they are model quantities, not an exact return of all men present. Calls fall from 89 to 78; seven removed objected entries and four removed delayed entries account for the call-response deltas. Normal muster counters do not count institutional entries as new governor musters; the notice proposals and State records carry their separate trail.
+
+**No numerical band changed.** Twenty-nine measured rows move (including magnitude-only changes); all old/new values, unchanged bounds and direct or labelled inferred causes are in `band-reconciliation.json`. Five existing liveness bands are breached:
+
+| Mechanic | Observed | Unchanged bounds |
+|---|---:|---:|
+| `combat.occupation` | 50 | 9–36 |
+| `control.changed` | 52 | 10–40 |
+| `control.threshold_crossed` | 24 | 5–20 |
+| `movement.joined` | 35 | 8–34 |
+| `movement.leg_started` | 199 | 49–196 |
+
+[I] Additional contingents press control at their seats and during ordinary joining marches. No isolated counterfactual was run for downstream effects. Recentring needs the lead’s ruling; no other passing check waives these breaches.
+
+### Verification and retained failures
+
+- Exact `MANDATE_NO_GIT=1 npm run check`: exit **1**, 1,499 passed / three failed / three existing skips, 182.27 s total (Vitest 169.02 s). All three failures are assertions over the five liveness breaches above. The chain stops before boundary/licence/decision checks; those were run separately and pass.
+- After the single lost-contingent correction: **85 focused tests pass**, final typecheck passes, and all 148 normal-history hashes/liveness rows match. Reuse the unaffected full-suite evidence; no full-suite rerun or exit-0 claim. Generated pack/schema freshness, boundary, licences, decisions and whitespace checks pass.
+- The first default done-check attempt was stopped after a cheap test reproduced a later return recreating a departed contingent (299.66 s, interrupted exit -1). Its partial summaries/saves and log are retained; it is not a completed result. The six-line guard was verified cheaply before the final attempt.
+- One completed default eight-seed done check with drafting: exit **1**, **1216.77 s**. Its criteria:
+
+  - PASS  [behaviour] rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply
+  - PASS  [hash] the same state hash on every run, with State frozen or not (Linux against Windows is the CI determinism job, over the summaries this writes)
+  - PASS  [resume] a mid-run save, loaded, resumes to the continuous run’s final hash, and the log replays to every hash
+  - FAIL  [liveness] every Phase 0 mechanic is inside its band in the reference runs, or quiet for a stated reason
+  - PASS  [section-ten] the tests named in FOUNDATION section 10 are present and none is skipped (that they pass is the suite’s)
+  - PASS  [budget] the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)
+  - FAIL  [checkpoints] the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought
+  - FAIL  [operation] at least one operation drafted by the kernel planner, chosen by its commander’s seat, approved, executed and fought with the battle model, with a breakdown
+  - FAIL  [pushback] pushback fires inside its bands: lower bounds from the record’s sourced cases (S01–S21), upper bounds the lead’s
+  - PASS  [unknown-strength] no block fights with unknown strength: every battle record, in every run, lists none unknown
+  - PASS  [stand-ins] the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane
+  - FAIL  [lever-sweep] the lever sweep (D6): no watched option, nor an atrocity-class decision’s inaction, is the victory-only bot’s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active
+
+Local timing, retained without a retry:
+
+- union-1861, war by decision, 148 days: median 34.23 ms, p95 57.51 ms, max 75.97 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 61)
+- testbed, 120 days: median 3.75 ms, p95 5.15 ms, max 6.85 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)
+- union-1861 history run, 148 days to 1861-07-31: median 34.02 ms, p95 51.58 ms, max 67.16 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 61)
+- union-1861, war by decision, 148 days: median 34.23 ms, p95 57.51 ms, max 75.97 ms over 148 days
+- testbed, 120 days: median 3.75 ms, p95 5.15 ms, max 6.85 ms over 120 days
+- union-1861 history run, 148 days to 1861-07-31: median 34.02 ms, p95 51.58 ms, max 67.16 ms over 148 days
+- one day of all 23 drafts back to back: median 37.3 ms, p95 46.4 ms, worst 49.4 ms over 20 days; slowest single draft 11.5 ms; a capped day (the pack's 3 slowest drafts for each of 2 sides, together) at worst 28.7 ms
+
+Linux CI decides the budget; no unloaded-host, causal-performance or CI claim. All failure reasons, including the unchanged 1A failures and sweep limitations, remain in `done-final.log` and `done-result.json`. No D6 clearance or acceptance-criterion waiver.
+
+### Preservation and hand-off
+
+Final runtime inputs, artifact inventory and preservation checks completed before this documentation. `runtime-final.json` verifies all 570 runtime inputs, 4 captured Git metadata files and fifteen page copies. `pre-closeout-audit.json` preserves all 117 baseline protected inputs, including signed notices, gate files, source tables, checkpoints, liveness bounds, lockfiles and saves. The Union doctrine and every remaining call are unchanged as data; Confederate concentration and other doctrine fields are preserved. No build, server, browser, commit, stage or other-worktree write.
+
+For Claude: (1) review the implementation, source pages, gate-none placement and labelled representation/expiry choices under 0096; (2) rule on the five liveness breaches and keep the remaining milestone failures binding through integration. R97’s calls-array edit must meet R98’s separate concentration edits without dropping either.
+
+### Findings outside my scope
+
+- R98 owns northern Virginia’s concentration, appointments and whether forces meet; its worktree was not touched.
+- The inherited Missouri/western-Virginia checkpoint gaps and the operation/pushback/sweep failures retain their existing owners; the complete final problem list is `done-result.json`.
+- Original State enlistment expiries, absent naval unit descriptions and any unsourced crosswalk to other already represented calls remain research/data limits. No quota, expiry, unit or new field disposition was invented to fill them.
+
+## S1: R97 integrated with northern concentration and resignation (2026-11-20)
+
+Imported R97 here on `sprint/1a`, retaining R98's separate command/concentration work and main's resignation owner. Four focused files / 28 tests, typecheck, generation and boundary pass. The initial 148-day integrated probe has zero rejections: Confederate known men 130,862, Union 58,497, all sourced checkpoints passing. An emerged Manassas field battle runs 27-29 July: Stone/Beauregard start 45,600/40,000, and the last day reads 43,175/54,144. These are model outputs. No battle participant has unknown strength. The five requested mechanical rows now centre on occupation 102, control changes 105, threshold crossings 40, joins 40 and legs 240; all 43 changed counts receive the same helper and a cause. The retained-row rescore has no breaches. The full hook/default done check remain the next required gates; no historical/pushback band or D6 criterion is waived. Integration evidence and further S1 work are tracked in `notes/lane-1.14-done-check.md`, S1.
+
+### Findings outside my scope
+
+The missing complete national allocation, Regular recruitment and sourced opening strength remain S1's next build work. The prior R97 source/expiry limits remain explicit. Independent review and all gate signatures remain with Claude after the sprint.

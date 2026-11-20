@@ -731,3 +731,12 @@ For the lead:
 2. **Steward:** reconcile lane 1.11's historical placeholder pointer when integrating R89. Only this lane's hand-over was updated here.
 
 Fresh CODEX at closeout records R85 received and the separate R90?R94 follow-ups under the lead's 0105 ruling. None was imported or undertaken. The missing-carrier question goes to the lead and gate reviewer for routing into the next integrated measurement; the failures reported above are those of R89's required `a9c35ba` base.
+
+
+## R97: state-force transfers (2026-11-20)
+
+R97 is implemented in `C:/Pyrrhic/mandate-transfers-1861` on `phase1-transfers-1861`, from R90/R96 at `4f6e8b3`. Seven notices replace eleven governor transfer requisitions; ordinary calls retain compliance. The current hand-over, read pages, modelling inferences, 31 July strength, all changed measured rows and final checks are in `notes/lane-1.7-men-regions.md`, R97, and `runs/r97/final-checks.json`. No concentration or appointment change from R98 was imported. Integration must retain both R97’s calls-array changes and R98’s independently authored doctrine changes.
+
+### Findings outside my scope
+
+Claude’s independent review and ruling on the five unchanged liveness-band breaches remain pending. R98 and the other inherited milestone failures retain their own owners.

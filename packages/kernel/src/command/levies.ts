@@ -28,6 +28,7 @@ export interface Levy {
   /** Days the men are enlisted for, from the muster. */
   readonly levyTermDays: number | null;
   readonly levyArm?: string;
+  readonly levyCallId?: string;
   /** The day they muster. */
   readonly levyMusterDay: number;
   /** His response to the call (`proxy`'s key). */

@@ -86,6 +86,10 @@ export const EffectSchema = z.union([
       ),
       reason: termId,
       succession: z.strictObject({ from: idOf('person'), to: idOf('person') }).optional(),
+      stateForces: z.strictObject({
+        id: z.string().regex(/^[a-z][a-z0-9_]*$/), regiments: positive.nullable(), men: nonNegative.nullable(),
+        arm: termId, termDays: positive.nullable(), termUnknown: z.boolean().optional(), includesCalls: z.array(termId).optional(),
+      }).optional(),
       side: idOf('faction')
         .nullable()
         .default(null)
@@ -577,6 +581,25 @@ export function validateSituations(items: readonly { readonly file: string; read
       });
     }
     for (const { at, effect } of phase0.effectsOf(def)) {
+      if ('propose' in effect && (effect.propose.stateForces !== undefined || effect.propose.owner === 'recruitment')) {
+        const p = effect.propose;
+        const entry = p.stateForces;
+        const fail = (message: string) => err('situation-state-forces', `${at}.propose`, message);
+        if (p.owner !== 'recruitment' || p.field !== 'state_forces' || entry === undefined) fail('stateForces belongs only to recruitment.state_forces');
+        if (def.kind !== 'notice') fail('state forces enter service only through their state’s own notice');
+        if (p.delta !== 1 || p.side !== def.faction) fail('state forces require delta +1 and the notice faction');
+        if (p.subject === null || postRaising.get(p.subject) !== 'raising') fail('state forces require a raising state post, never a self-governing nation');
+        if (p.subject !== null && postSide.has(p.subject) && postSide.get(p.subject) !== null && postSide.get(p.subject) !== p.side) fail('state forces cannot enter another side’s service');
+        if (entry !== undefined) {
+          if (!pack.world.vocabularies.arms.some(a => a.id === entry.arm && !a.naval)) fail('state forces require a land arm from the pack vocabulary');
+          if (entry.termDays !== null && entry.termDays > pack.world.rules.recruitment.maxTermDays) fail('term exceeds the pack maximum');
+          if (entry.termUnknown === true && entry.termDays !== null) fail('an unknown original expiry cannot also have a fixed term');
+          for (const id of entry.includesCalls ?? []) {
+            const prior = pack.world.rules.ruleSeats.principals.flatMap(p => p.calls).find(c => c.id === id);
+            if (prior === undefined || prior.post !== p.subject || (prior.arm ?? pack.world.rules.recruitment.arm) !== entry.arm) fail('an included call must name a pack requisition for the same post and arm');
+          }
+        }
+      }
       if ('propose' in effect && effect.propose.succession !== undefined && (effect.propose.owner !== 'command' || effect.propose.field !== phase0.POST_SUCCESSION_FIELD)) err('situation-command-proposal', `${at}.propose.succession`, 'a succession payload belongs only to command.post_succession');
       if ('propose' in effect && effect.propose.side !== null) ref(factions, 'faction', effect.propose.side, `${at}.propose.side`);
       if ('propose' in effect && effect.propose.owner === 'command') commandProposal(effect.propose, `${at}.propose`, err, def.kind === 'notice');

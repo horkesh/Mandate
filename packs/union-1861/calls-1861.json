@@ -208,10 +208,15 @@
       "kind": "transfer",
       "term": "All mustered Virginia volunteer forces by regiment, navy, staff and stores; original enlistments",
       "source": "OR I-2 pp.911-912; OR IV-1 p.392 (https://ehistory.osu.edu/books/official-records/002/0912)",
-      "doctrine": [
+      "gap": "Transfer occurs 6 June with unknown strength; the same contingent is quantified at 40,000 on 17 June, the first read return. No back-projection.",
+      "formerDoctrine": [
         "cs_va_transfer_virginia"
       ],
-      "gap": "40,000 known only from 17 June message; model entry is deferred to that date, not back-projected"
+      "notices": [
+        "virginia_forces_transferred",
+        "virginia_forces_return"
+      ],
+      "execution": "R97: the state’s own notice, conditional on its secession; existing forces, placement and command owners; no governor compliance or new enlistment term."
     },
     {
       "id": "nc_transfer",
@@ -220,11 +225,16 @@
       "kind": "transfer",
       "term": "Organized State troops transferred by regiment; levying ceases 20 August; four twelve-month regiments already in service plus 2,000 accepted; discharge residue on 20 August",
       "source": "OR IV-1 pp.397,402-404 (https://ehistory.osu.edu/books/official-records/127/0402)",
-      "doctrine": [
+      "formerDoctrine": [
         "cs_nc_state_transfer_north_carolina",
         "cs_nc_volunteers_north_carolina",
         "cs_nc_additional_north_carolina"
-      ]
+      ],
+      "notices": [
+        "north_carolina_forces_transferred"
+      ],
+      "execution": "R97: the state’s own notice, conditional on its secession; existing forces, placement and command owners; no governor compliance or new enlistment term.",
+      "gap": "[I] Four already-serving twelve-month regiments use the unchanged 1,000-men norm; surviving men or pending levies from the included 22 April requisition are credited dynamically, never counted twice. Ten war-term regiments also use that norm, not an exact sourced headcount. Original fixed expiries are unknown."
     },
     {
       "id": "tn_league",
@@ -233,7 +243,10 @@
       "kind": "transfer-authority",
       "term": "Military force and operations under Confederate President until admission; subject to both governments ratification; quantitative tender read on 2 July",
       "source": "OR IV-1 pp.296-297 (https://ehistory.osu.edu/books/official-records/127/0297); quantitative tender pp.411,417",
-      "execution": "Authority only; no duplicate May and July numerical forces"
+      "execution": "R97 notice: military-league authority only; the quantified entry follows the 29 June resolution and 2 July tender, not duplicate May and July forces.",
+      "notices": [
+        "tennessee_military_league"
+      ]
     },
     {
       "id": "tn_tender",
@@ -245,12 +258,17 @@
       "artilleryCompanies": 10,
       "term": "Tender of provisional army under 29 June resolution; original enlistments",
       "source": "OR IV-1 pp.411,417 (https://ehistory.osu.edu/books/official-records/127/0417)",
-      "doctrine": [
+      "gap": "Artillery strength unknown; engineer corps and ordnance staff lack field-force descriptions. Tender is not a completion certificate.",
+      "formerDoctrine": [
         "cs_tn_infantry_tennessee",
         "cs_tn_cavalry_tennessee",
         "cs_tn_artillery_tennessee"
       ],
-      "gap": "Artillery strength unknown; engineer corps and ordnance staff lack field-force descriptions. Tender is not a completion certificate."
+      "notices": [
+        "tennessee_forces_transferred",
+        "tennessee_forces_return"
+      ],
+      "execution": "R97: the state’s own notice, conditional on its secession; existing forces, placement and command owners; no governor compliance or new enlistment term."
     },
     {
       "id": "ar_transfer",
@@ -263,13 +281,17 @@
       "artilleryCompanies": 5,
       "term": "Consenting State troops; original enlistments and clothing obligations",
       "source": "OR I-3 pp.609-610 (https://ehistory.osu.edu/books/official-records/003/0609)",
-      "doctrine": [
+      "gap": "Cavalry battalion and artillery companies enter with unknown headcount and regiment equivalents",
+      "formerDoctrine": [
         "cs_ar_infantry_arkansas",
         "cs_ar_cavalry_arkansas",
         "cs_ar_cavalry_battalion_arkansas",
         "cs_ar_artillery_arkansas"
       ],
-      "gap": "Cavalry battalion and artillery companies enter with unknown headcount and regiment equivalents"
+      "notices": [
+        "arkansas_forces_transferred"
+      ],
+      "execution": "R97: the state’s own notice, conditional on its secession; existing forces, placement and command owners; no governor compliance or new enlistment term."
     }
   ]
 }

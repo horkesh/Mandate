@@ -412,5 +412,21 @@
   "situation.officer_resignation.text": "The officer reports that he has resigned from United States service.",
   "post_kind.army_command": "Army command",
   "post.cs_cmd_harpers_ferry": "Troops near Harpers Ferry",
-  "post.cs_cmd_manassas": "Alexandria line (Manassas)"
+  "post.cs_cmd_manassas": "Alexandria line (Manassas)",
+  "reason.state-forces-transferred": "State forces transferred by the state’s own act.",
+  "reason.state-forces-return": "A later return supplies the contingent’s quantity.",
+  "situation.virginia_forces_transferred.title": "Virginia transfers its forces",
+  "situation.virginia_forces_transferred.text": "Virginia’s proclamation of 6 June transfers its mustered volunteer forces by regiment to Confederate authority. The proclamation also transfers the state navy and directs the staff to continue under Confederate control.",
+  "situation.virginia_forces_return.title": "Virginia’s force return",
+  "situation.virginia_forces_return.text": "The governor’s message of 17 June reports that Virginia has armed and equipped upward of 40,000 volunteers.",
+  "situation.north_carolina_forces_transferred.title": "North Carolina transfers its forces",
+  "situation.north_carolina_forces_transferred.text": "North Carolina’s convention transfers its organized State troops by regiment under the ordinance of 27 June. Its provisions distinguish the war-term State troops from the four twelve-month volunteer regiments already in Confederate service and the additional 2,000 volunteers accepted.",
+  "situation.tennessee_forces_transferred.title": "Tennessee places its forces at Confederate disposal",
+  "situation.tennessee_forces_transferred.text": "Tennessee’s General Assembly authorizes the governor on 29 June to place the state’s volunteer forces at the disposal of the Confederacy for muster into its service.",
+  "situation.tennessee_forces_return.title": "Tennessee tenders its provisional army",
+  "situation.tennessee_forces_return.text": "Tennessee’s tender of 2 July lists twenty-two infantry regiments, two cavalry regiments and ten artillery companies in its provisional army. The infantry are reported armed and equipped; the field batteries are not yet completed.",
+  "situation.arkansas_forces_transferred.title": "Arkansas transfers its forces",
+  "situation.arkansas_forces_transferred.text": "Arkansas’s military board transfers the consenting state troops under the articles of 15 July: seven infantry regiments, one cavalry regiment, a cavalry battalion and five artillery companies. The articles retain the state’s clothing obligation for the men’s existing enlistments.",
+  "situation.tennessee_military_league.title": "Tennessee’s military league",
+  "situation.tennessee_military_league.text": "Tennessee’s military league of 7 May places its military forces and operations under the Confederate President’s direction, subject to ratification by both governments. The agreement supplies authority rather than a count of troops."
 }

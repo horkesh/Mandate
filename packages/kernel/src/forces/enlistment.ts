@@ -9,7 +9,7 @@
  * There is no `men` stock in `economy` in 1A (that is 1B): a regiment goes straight from the governor into a block.
  */
 import { strictCompare } from '../compare.ts';
-import type { DepartmentId, ForceBlockId, MessageId, PersonId, PostId } from '../ids.ts';
+import type { DepartmentId, ForceBlockId, MessageId, PersonId, PostId, SituationId } from '../ids.ts';
 import type { State } from '../root-state.ts';
 import type { WorldIndex } from '../world/index.ts';
 import { ForcesError, startingCondition, STORES_MILLI, type BlockCondition, type ForceBlockState } from './forces.ts';
@@ -18,16 +18,21 @@ import { ForcesError, startingCondition, STORES_MILLI, type BlockCondition, type
 export interface Enlistment {
   /** The post whose holder raised it (a governor's). */
   readonly enlPost: PostId;
-  /** The governor who raised it. */
-  readonly enlRaisedBy: PersonId;
-  /** The call it answered (the order's id). */
+  /** The governor recorded at entry, or null for an institutional act while that office is vacant. */
+  readonly enlRaisedBy: PersonId | null;
+  /** The call it answered, or a stable act reference when enlSourceAct is present. */
   readonly enlCall: MessageId;
   /** Regiments in the block, or null for an unquantified sub-regimental bundle. */
   readonly enlRegiments: number | null;
-  /** The day it mustered. */
+  /** Model service-entry day; an institutional transfer does not assert a new historical enlistment. */
   readonly enlMusterDay: number;
-  /** Fixed expiry, or null for war service, which has no fixed expiry. */
+  /** Fixed expiry, or null for war service or an explicitly unknown original expiry. */
   readonly enlEndsDay: number | null;
+  /** Present for an institutional entry; enlCall then identifies the act, not a dispatched call. */
+  readonly enlSourceAct?: SituationId;
+  /** A null expiry whose original date is unknown, rather than known war service. */
+  readonly enlTermUnknown?: boolean;
+  readonly enlCallId?: string;
 }
 
 export type EnlistmentTable = Readonly<Record<ForceBlockId, Enlistment>>;
@@ -48,7 +53,9 @@ export interface NewBlock {
  * `create` and `disband`: the changes recruitment proposes for `forces` (the proposer `OWNED_FIELDS` lists). Lane 1.12: a
  * garrison evacuated under the record's terms after a bombardment leaves play by the same disbanding, with its own cause.
  */
-export type MusterDelta = { readonly change: 'create'; readonly create: NewBlock; readonly cause: 'recruitment' } | { readonly change: 'disband'; readonly block: ForceBlockId; readonly cause: 'recruitment' | 'evacuated_under_terms' };
+export type MusterDelta = { readonly change: 'create'; readonly create: NewBlock; readonly cause: 'recruitment' }
+  | { readonly change: 'quantify'; readonly block: ForceBlockId; readonly men: number; readonly regiments: number | null; readonly cause: 'recruitment' }
+  | { readonly change: 'disband'; readonly block: ForceBlockId; readonly cause: 'recruitment' | 'evacuated_under_terms' };
 
 /**
  * A new block's State: its strength is the quota answered, or remains unknown; stores are what the governor issued, in
@@ -87,6 +94,14 @@ export function applyMusters(map: WorldIndex, state: State, deltas: readonly Mus
   const created: ForceBlockId[] = [];
   const disbanded: ForceBlockId[] = [];
   for (const d of deltas) {
+    if (d.change === 'quantify') {
+      const b = blocks[d.block];
+      const e = enlistments[d.block];
+      if (b === undefined || e?.enlSourceAct === undefined || b.fbStrength !== null || !Number.isSafeInteger(d.men) || d.men < 0) throw new ForcesError([`invalid quantified return for ${d.block}`]);
+      blocks[d.block] = { ...b, fbStrength: d.men };
+      enlistments[d.block] = { ...e, enlRegiments: d.regiments };
+      continue;
+    }
     if (d.change === 'create') {
       const b = d.create;
       if (Object.prototype.hasOwnProperty.call(blocks, b.block)) throw new ForcesError([`force block ${b.block} already exists`]);

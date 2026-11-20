@@ -155,7 +155,7 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('the framing term (who the public believes began the war)', 'politics', ["the war's opening situations", 'the press'], [at('State', 'warFraming')]),
   field('the Congress accountability ledger: acts taken while Congress was away', 'politics', ['situations (an act owed an answer; an answer)', 'the chambers meeting'], [at('State', 'congressLedger')]),
   field('people who have reached Union lines', 'regions', ['the derived self-emancipation term (0046); never a lever'], [at('State', 'regionReachedUnionLines')]),
-  field("a raised block's enlistment: who raised it on whose call, and when its men's term ends", 'forces', ['recruitment'], [at('State', 'forceEnlistments')]),
+  field("a block's enlistment: raiser, durable call identity or institutional source act, and fixed, war-service or explicitly unknown expiry", 'forces', ['recruitment (calls and notice-only state-force entries)'], [at('State', 'forceEnlistments')]),
   field('seat assignments', 'seats', ['setup', "the player's settings"], [at('State', 'seatAssignments')]),
   // Reserved by world format v2 (lane 0.2): State that starts from a scenario
   // start or a World rule, with its owner named before the mechanic is built.
