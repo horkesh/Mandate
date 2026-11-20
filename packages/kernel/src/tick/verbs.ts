@@ -425,6 +425,15 @@ function holdAudience(ctx: TickContext, start: State, msg: TransitMessage): Stat
   state = recordAudience(state, holder, { audDay: ctx.day, audAbout: outcome.about, audCounters: counters.map((k) => k.kind) });
   const key = msg.msgOrigin;
   state = recordResponse(state, responseOf(outcome.response, { order: key, person: holder, post: post, role: 'addressee', day: ctx.day, kind: 'verb:audience' }));
+  // File what the visitor said through received knowledge, never his private
+  // response. The existing seat view and both desks can read this answer.
+  sendReport(ctx, state, {
+    body: answerBody(holder, post, ctx.day, key, { kind: 'post', id: post }, [
+      { claimKind: 'verb-answered', claimRegion: null, claimValue: 1, claimToken: `audience:${outcome.declared}`, claimConfidence: 1000 },
+    ], { adviceRecommends: outcome.declared, adviceReasons: stated(outcome.response), adviceConfidence: 1000 }),
+    truth: { truthTerms: outcome.response.contributions.map(k => term('relay_term', k.amount, { person: holder, post, rule: k.term })), truthTrimmed: [] },
+    to: principal, tag: `answer.audience.${post}`, route: 'in-person',
+  });
   // A promised reinforcement is itself an order, to another holder who may drag his feet (P1).
   if (outcome.reinforce !== null) {
     const sender = believedHolder(state, principal, outcome.reinforce.from);

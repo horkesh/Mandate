@@ -17,6 +17,7 @@ import { indexSeatsWorld, type SeatsWorld } from '../src/seats/world.ts';
 import type { OptionDef, SituationDef } from '../src/situations/types.ts';
 import { attentionPrice } from '../src/tick/attention.ts';
 import { createState } from '../src/tick/setup.ts';
+import { viewFor } from '../src/view/view.ts';
 import { createTelemetry, type Telemetry } from '../src/telemetry.ts';
 import { MAP_MECHANICS } from '../src/tick/map.ts';
 import { SITUATION_MECHANICS } from '../src/tick/situations.ts';
@@ -242,6 +243,37 @@ describe('the people verbs, each an order to a person answered with typed reason
 });
 
 describe('the audience, before and during a plan (P3)', () => {
+  it('delivers only the visitor’s declared answer and stated reasons to the requesting seat', () => {
+    const world = indexedFixture({ persons: { a_gen: { candour: 'low', regard: 'average' } } });
+    const start = planned(applyPeopleChanges(createState(world, { seed: 1 }), [
+      { change: 'grievance', person: P('a_gen'), kind: 'passed_over', weight: 900, against: P('a_lead'), cause: null },
+    ], 0, world.map.world.rules.people, []));
+    const held = audienceArrives(world, start, { cmd: 'audience', to: POST('a_army'), counters: [] });
+    const response = audienceResponse(held.state);
+    const reply = held.state.messagesInTransit.find(m => m.msgReport?.reportAnswers === response.respOrder);
+    expect(reply, 'A held audience must send its visitor’s answer to the principal').toBeDefined();
+    expect(reply!.msgTo).toBe(P('a_lead'));
+    expect(reply!.msgReport).toMatchObject({
+      reportAuthor: P('a_gen'), reportAuthorPost: POST('a_army'),
+      reportSubjectKind: 'post', reportSubjectId: 'a_army', reportDay: held.day,
+      reportClaims: [expect.objectContaining({ claimKind: 'verb-answered', claimValue: 1, claimToken: `audience:${response.respDeclared}` })],
+      reportAdvice: { adviceRecommends: response.respDeclared },
+    });
+    // The reply is received knowledge, never a projection of private responses.
+    expect(viewFor(world, held.state, lead).reports.some(r => r.answers === response.respOrder)).toBe(false);
+    const received = days(world, held.state, reply!.msgArriveDay - held.day).state;
+    const report = viewFor(world, received, lead).reports.find(r => r.answers === response.respOrder)!;
+    expect(report).toBeDefined();
+    expect(report.receivedDay).toBe(reply!.msgArriveDay);
+    expect(response.respActual).not.toBe(response.respDeclared);
+    expect(report.advice!.reasons).toEqual(response.respStated.map(r => ({
+      kind: r.kind, weight: 'gap' in r ? r.gap : 'weight' in r ? Math.min(1000, r.weight) : 1000,
+    })));
+    expect(report.advice!.reasons.some(r => r.kind === 'holds_grievance')).toBe(false);
+    const changedTruth = { ...received, orderResponses: {} };
+    expect(viewFor(world, changedTruth, lead).reports).toEqual(viewFor(world, received, lead).reports);
+  });
+
   it('refuses an audience with no plan at issue without charging attention or sending a message', () => {
     const world = indexedFixture();
     const state = createState(world, { seed: 1 });
