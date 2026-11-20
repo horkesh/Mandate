@@ -71,6 +71,14 @@ All paths in this table are under C:/Pyrrhic/mandate-reviews/decision-drafts/1b/
 2. Review D02–D07's interfaces and route D08–D14 to the separate gate reviewer. Preserve the exact evidence holds, 0074 restrictions and all failed runtime criteria. An accepted record precedes the corresponding implementation/signature.
 3. Let the steward synchronise accepted choices into FOUNDATION, ROADMAP, OPEN_QUESTIONS, the decision index and phase pointers. S10 leaves those shared canon and routing files unchanged.
 
+## S11 working hand-over
+
+S11 starts from `b9346453738ccc3f19d66e41acfdf9f66b9dbdac` on `sprint/plan-1b`. Scope: one plainly proposed design note for each of the 26 rows, committed separately through the unchanged hook, followed by a self-review and the smallest justified revision to this proposal. No implementation, research apply, accepted decision or signature is authorised. Other worktrees are read neither as completed inputs nor as files to change.
+
+Current progress: 1/26 notes delivered in critical-path reading order through 1.15. Each completed note is committed separately through the unchanged hook. Per-commit results and logs are in ignored runs/s11/commits.json and commit-*.log. The final self-review will reconcile sizes and sub-brief prerequisites; this progress count is not phase acceptance.
+
+Validation plan: `npm ci`, workspace-link and branch/base inventory, typecheck, pack boundary and one-day starts first; exact `MANDATE_NO_GIT=1 npm run check` once; the real hook on each note commit; one default eight-seed done check with drafting on unchanged runtime inputs. Retain inherited failures and timing limitations. Logs and inventories live only under ignored `runs/s11/`; do not rerun the campaign for a documentation correction. Independent and gate reviews remain deferred under 0106.
+
 ## Findings outside my scope
 
 The midterm milestone and December release/topic window need the explicit lead disposition above; neither was silently narrowed. S7's policy remit should not be assumed to clear Dakota-voiced evidence, other territorial nations, freedpeople's camps or prison conditions; 1.21 gives each a bounded home. S1/S2 acceptance and timing, S8 desk work, S9's actual warning counts and all other sprint outcomes remain with their own runs. Any retained baseline runtime failure above stays with those existing owners; S10 changes no simulation to fit it.
