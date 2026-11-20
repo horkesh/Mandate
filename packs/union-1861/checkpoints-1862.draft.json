@@ -1,0 +1,33 @@
+{
+  "checkpoints": [
+    {
+      "id": "men_union_november_proposal",
+      "date": "1862-11-24",
+      "kind": "men",
+      "faction": "union",
+      "min": 500000,
+      "max": 700000,
+      "floorBinding": false,
+      "cite": "OR III-II p.868, Vincent, 24 November 1862: army-command returns 527,679 pfd, 595,196 present, 775,336 present/absent; separate volunteer muster/pay-roll series 666,185 pfd, dates differ and many rolls are 31 October. [I] 500,000-700,000 is a broad review tolerance across these lagged duty series, not a confidence interval or proved endpoint bound. Regular aggregate 26,255 is not added as verified Regular pfd. Non-binding floor; no new run or calibration."
+    },
+    {
+      "id": "hold_men_confederate_november",
+      "date": "1862-11-24",
+      "kind": "men",
+      "faction": "confederate",
+      "min": 0,
+      "max": null,
+      "floorBinding": false,
+      "cite": "HOLD, not an accepted band: no complete November national pfd count established. L pp.41-47 explains mixed-date/incomplete Confederate returns; January 1863 is outside the window. OR I-XXI p.1025 and OR I-XX.2 p.412 cover partial commands with different measures and missing returns. [I] The schema permits min 0/max null, used solely as an explicit unbounded hold; it cannot satisfy a 1B men-under-arms acceptance criterion, prove zero or justify loading unknowns."
+    }
+  ],
+  "pushback": [],
+  "victory": {
+    "capital": 1000,
+    "government": 100,
+    "menShare": 1,
+    "groundShare": 1,
+    "mandate": 1,
+    "cite": "[I] Existing 1A victory weights copied from checkpoints.json solely to preserve its envelope. No new 1B military victory or pushback ruling; decision 0099 remains unchanged."
+  }
+}

@@ -20,12 +20,29 @@ Reading evidence stays outside every worktree in `C:/Pyrrhic/mandate-research-so
 
 These paths are outside `source/world/` and `source/scenarios/`, which the current generator reads. No manifest, scenario header, loader, runtime checkpoint, strings, generated data or gate signature is changed. The supplied CSV shape does **not** make these drafts valid applied State: parent accounting, cast crosswalks, temporal command changes, the strength-measure mapping and scenario membership still require integration decisions.
 
+## Checkpoint proposals
+
+The pack root holds two separate drafts beside the unchanged `checkpoints.json`:
+
+- [checkpoints-1862.draft.json](../../../../checkpoints-1862.draft.json) uses today's exact checkpoint envelope and schema. It proposes one broad Union November men band from Vincent's two lagged duty series, with a non-binding floor. The Confederate entry is explicitly **HOLD**, `min=0`, `max=null`, non-binding: it represents an unestablished national count, never an accepted band or evidence that zero is acceptable. No January 1863 count is backdated.
+- [checkpoints-battles-1862.draft.json](../../../../checkpoints-battles-1862.draft.json) retains the same top-level envelope but proposes **unsupported** `battle-strength` and `battle-casualties` kinds. Its 68 bands cover 17 source windows and both sides. Today's schema deliberately does not accept these kinds. They require 1B ownership, observation and schema decisions before any use; this research changes none of those systems.
+
+Every battle band preserves its source measure, reference, window and an explicit **[I] review tolerance**. Strength tolerances are 10 percent, or 20 percent for the named approximate/disputed cases, rounded outward to 100 men. Casualty tolerances are 15 percent, rounded outward to 10 men. These are proposed comparison widths, not source confidence intervals, accepted calibration targets or proof that every historically possible result lies inside them. No run was used to set them.
+
+The `date` closes a source window; it is not a trigger to schedule a historical battle. Shiloh spans two days and two Union armies; Manassas/Chantilly is a combined window. Seven Days includes its subsidiary rows, all marked with the same overlap group: **never add their losses or strengths**. Killed, wounded and missing/captured remain distinct. Combined killed-and-wounded stays combined; missing unreported remains `null`, with a band only on the recorded categories. Casualties are not all deaths or permanent losses. Antietam's Confederate reconstruction remains disputed; Perryville's 4,211 component sum and 4,241 printed variant remain disclosed.
+
+Empty `pushback` arrays mean no military-lane proposal, not a claim of zero historical pushback. Existing victory weights are copied only to retain the file envelope, with that limitation in their citation; S14 makes no new victory ruling. The default reader still names only `checkpoints.json`, and all active inputs are preserved. Main-draft schema success and the battle-draft schema gap are both recorded in external `checkpoint-schema.json`.
+
+No paired numerical band is invented for every smaller action. Kernstown, Winchester, Cross Keys/Port Republic, Iuka, Mill Springs, Valverde/Glorieta and other operations retain source/report windows and missing-return work in S4/S14 rather than guessed national or division totals. Coastal and naval success likewise needs named operations and reaches; it cannot be represented by a fleet's hull count in a men-under-arms band.
+
 ## Proposed rulings
 
 1. **[I] Keep dated observations.** Reject one timeless 1862 roster, backfilled monthly strengths and automatic historical battle scheduling.
 2. **[I] Keep inclusive totals as evidence.** Reject loading parent totals alongside child strengths as additional manpower. A future apply must choose non-overlapping leaves and report uncovered troops; it must never infer an unknown leaf's share.
 3. **[I] Preserve unknown strength as a blocking integration condition.** Reject nominal division-size defaults. A draft unknown is honest research output, not a waiver of 1A/1B's unknown-strength criterion.
 4. **[I] Keep command observations separate from cast tenure.** Reject assuming a unit's namesake was its current commander or assigning synthetic person IDs before the S12 crosswalk.
+5. **[I] Keep national and battle comparisons separate.** Reject scoring a field army's selected battle effectives as the whole faction's men, treating a bandless hold as acceptance, or extending today's scorer invisibly in a data-only lane.
+6. **[I] Use sourced references before simulation tuning.** The numerical widths are review proposals. Reject fitting them to a convenient run, adding overlapping campaign totals, or turning missing casualty categories into zero.
 
 ## Findings outside my scope
 
