@@ -1,0 +1,19 @@
+# S22 sources and selected reading
+
+Printed page citations refer to the editions below. Only the identified dated documents supply contemporary judgments under 0087. External evidence is in `C:/Pyrrhic/mandate-research-sources/S6/S22/`; the manifest identifies reused S6/S12 scans individually. No whole-volume or original-manuscript reading is claimed.
+
+| Key (prefixed `NEW:S22-` in CSV) | Edition / scan | Selected reading and exclusions |
+|---|---|---|
+| `MCCLELLAN` | George B. McClellan, *McClellan's Own Story*, scanned Cornell copy, [PDF](https://antietaminstitute.org/hrc/files/original/49a9576dfe4913155df745bbd15c5bf90cf55141.pdf) | Private letters pp82–92, 612–613, 654–655, 660–661; delivered judgments use pp84–85, 91, 654–655. Printed page +24 = physical PDF page. Narrative searches, pp137/152 and other later recollections do not supply judgments. The anonymous/undated August entries are excluded. Full PDF retained; selected pages rendered and hashed. Contemporary-letter key remains a proposal, not automatic clearance of the weak memoir key. |
+| `LINCOLN-CW2` | Abraham Lincoln, *Complete Works*, edited Nicolay and Hay, II, [completeworksofa02linc_0](https://archive.org/details/completeworksofa02linc_0) | Read pp24–27, 83–88, 92, 142–143, 197, 245–248. Delivered legs: Blair's 29 March 1861 memorandum, 1 November 1861 retirement order, 9 April and 13 October 1862 letters. Other pages supply context/search limits, not unstated personal judgments. |
+| `CHASE` | *Diary and Correspondence of Salmon P. Chase*, AHA Annual Report 1902, II, GPO 1903, [diaryandcorrespo00chasrich](https://archive.org/details/diaryandcorrespo00chasrich) | Re-read pp45–48, 51–53, 57, 61–68; newly selected directed relationships, not new archival witnesses independent of S12. August 3 heading p53 controls the continuation on p57. Earlier/later diary reminiscences are not assigned invented utterance dates. Footnotes and editorial identifications are not the diarist's words. |
+| `WELLES` | Gideon Welles, *Diary*, I, [diaryofgideonwel01well](https://archive.org/details/diaryofgideonwel01well) | Dated entries pp100–103, 106–111, 118–119, 121–127, 147–149; use the September 1862 current judgments. The opening retrospective chapter is excluded. Earlier conversations recalled in an entry are reported as such, never assigned an exact day from the entry date. Duplicate/blank OCR labels are not silently substituted for printed pages. |
+| `SHERMAN-LETTERS` | Rachel Sherman Thorndike, ed., *The Sherman Letters*, [shermanlettersco00sher](https://archive.org/details/shermanlettersco00sher) | Read pp137–138, 140–141, 151–153; directed judgments from dated letters of 23 February and 16 April 1862. Compiler narration and John Sherman's opinions are not attributed to William T. Sherman. |
+| `OR-I-7` | *War of the Rebellion*, I, VII, [cu31924079609545](https://archive.org/details/cu31924079609545) | Read pp257–260 and 679–687. Union projections use Halleck/McClellan dispatches pp679–684. March 4 bad-habits statement is explicitly a rumor; the reading does not establish it as fact. |
+| `OR-I-10-2` | *War of the Rebellion*, I, X, part II, [cu31924077728230](https://archive.org/details/cu31924077728230) | Read pp31–32. The 13 March 1862 Halleck telegram supports professional confidence. Unrelated neighboring coercive orders are not entered as behavior or policy. |
+
+Search snippets and catalogue metadata discover editions; they supply no historical judgment. The rejected narrative leads remain in the external search/acquisition records. `reading.jsonl` records selected OCR page requests; it is a navigation log, not a claim that truncated tool output or every retained page was fully read.
+
+## Findings outside my scope
+
+- Collation with original manuscripts and review of a new contemporary-document source key remain for the research/source-policy owners. This lane changes no admissibility policy.

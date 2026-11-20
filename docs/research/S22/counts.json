@@ -1,0 +1,23 @@
+{
+  "observations": 67,
+  "directed_pairs": 46,
+  "directions": {
+    "lower": 37,
+    "higher": 19,
+    "mixed": 10,
+    "undated-recollection": 1
+  },
+  "decisions": {
+    "CHANGE": 56,
+    "HOLD": 11
+  },
+  "sources": {
+    "NEW:S22-MCCLELLAN": 7,
+    "NEW:S22-LINCOLN-CW2": 4,
+    "NEW:S22-CHASE": 22,
+    "NEW:S22-WELLES": 23,
+    "NEW:S22-OR-I-7": 6,
+    "NEW:S22-OR-I-10-2": 1,
+    "NEW:S22-SHERMAN-LETTERS": 4
+  }
+}
