@@ -6,10 +6,17 @@
   "text": "situation.missouri_provisional_government.text",
   "earliest": "1861-07-30",
   "event": {
-    "callReceived": {
-      "post": "st_gov_missouri",
-      "days": 106
-    }
+    "all": [
+      {
+        "callReceived": {
+          "post": "st_gov_missouri",
+          "days": 0
+        }
+      },
+      {
+        "dayAtLeast": 148
+      }
+    ]
   },
   "effects": [
     {
@@ -44,7 +51,7 @@
     },
     {
       "source": "NOTE-secession-winter-1861",
-      "at": "3.5"
+      "at": "3.5 and section 1, 1861-07-31, citing MO-Timeline (Missouri State Archives, https://www.sos.mo.gov/archives/history/timeline/3, vacancy-ordinance entry; read for R85 and R94). The date, 31 July 1861 (day 148), is the recorded one. Under R94's cause-plus-recorded-date ruling, the notice also requires a call received by Missouri's governor, with no fitted interval after receipt; a call received after day 148 permits the notice then"
     }
   ]
 }

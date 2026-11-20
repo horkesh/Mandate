@@ -1,4 +1,6 @@
-# Lane 1.14, Part A: the 1A done check's harness
+# Lane 1.14: the 1A done check and calibration
+
+**Current, R94 (2026-11-20):** Missouri now requires a received call and the recorded date, day 148, replacing R85's fitted 105-day wait. Six Missouri regressions and the required check pass. The full binding done check exits 1: Phase 0 6/6; 1A 2/6, with the same four failed categories as R85. R94 below supersedes only R85's Missouri interval and proposed acceptance of that interval; its eight-comparison record and other findings remain historical evidence. Claude's independent review is pending.
 
 Branch `phase1-done-check-1a`, from main at a38d7ea. It builds FOUNDATION section 12's row 1.14, Part A: the harness that scores 1A's done check. Part B, the calibration runs, waits for lanes 1.11 and 1.12. `run:done-check` now reports 1A's six criteria beside Phase 0's six. Each is PASS or FAIL, with its reasons.
 
@@ -173,15 +175,133 @@ Why these weights:
 5. **The sweep plays each move 30 days on, from the morning the decision is open, and weighs each gated decision once per seed.** The done check sweeps 8 seeds; its test sweeps 2.
 6. **Stand-in labels follow one format, `STAND-IN(<key>; owner: <lane>)`, on one line.** Three stale labels were reworded: the credibility stand-in that lane 1.6 replaced, the conflict-window note, and the capital objective.
 
-## For the lead
+## Part A's items for the lead (historical)
 
 1. Every item from the first report is ruled (above).
 2. Missouri has no rival government in the pack, so its band scores the one `st_missouri`.
 3. When Part B starts, add `--milestone 1a` to CI's `run:done-check` step.
 4. The channel list (`VICTORY_READS`) is what 1B extends when national will, foreign patience and enemy capacity get owners. Until then, a gated option that proposes to them is reported unmeasured, as G-1.14c intends.
 
+## R85, Part B: eight measured comparisons (2026-11-20)
+
+**Stopped at the budget.** Worktree C:/Pyrrhic/mandate-done-check-1b, branch phase1-done-check-1b, HEAD ff07445735e0423581f5107ce89b348770fde024 throughout. npm ci ran before the work: exit 0, 51 packages added, zero vulnerabilities. Git commands were read-only. No measurement includes R82, R83 or R84's integration, even if those branches land elsewhere during this run. The lead must prepare the merge of main and a new measurement before this branch lands.
+
+Final Phase 0: **6/6**. Final 1A harness: **2/6**, still unmet. R86 owns the separate console-session acceptance item. The two retained changes are source-data reconciliations. All global design parameters and generated World are restored byte-for-byte to entry. No numeric band, expected side, checkpoint date, victory weight or liveness band changed. CI's milestone flag remains unchanged; no failed criterion was waived.
+
+Fresh coordination read before the status: R82, R83 and R84 are now committed elsewhere as c278f46, e1ff5e7 and a9c35ba. R87-R89 are new, separate requests; none was undertaken here. R88 still routes the absent history battle to R85. That operation criterion remains failed at this exhausted calibration budget and needs the owner work below, not a substituted testbed battle.
+
+### Retained data and source limits
+
+1. **The Restored Government checkpoint reference.** side_western_virginia now names the existing st_virginia_restored department rather than an empty list. Its expectation remains Union on 31 July. The old citation incorrectly said the department did not exist. The existing western_virginia recognition option already sets this department to Union. Read source/world/departments.csv and OR I-2 p. 723, Cameron's 25 June letter addressing Peirpoint as governor: https://ehistory.osu.edu/books/official-records/002/0723. Source copy: runs/r85/source-or-i2-p723.md. This corrects a reference; it does not relax an outcome.
+2. **Missouri's receipt-based wait: 106 to 105 days [I].** The first call answer is day 43, 17 April. The old wait fires on day 149, 1 August. A 105-day wait fires on day 148, 31 July, as the Missouri State Archives' vacancy-ordinance entry dates it: https://www.sos.mo.gov/archives/history/timeline/3. The existing numbers note and secession-winter note also place the government within this window. The interval itself is a model inference, not a historical causal interval. It remains receipt-based in other openings. The notice fires on 31 July but has not surfaced to the principal when this run stops. Its gate.none and all effects are unchanged. The timeline is an institutional secondary source; the July convention journal was not read, and the excluded HathiTrust link was not opened. No other timeline claim was adopted.
+
+**Sequencing limit:** these data discrepancies were confirmed after the initial global-parameter probes. Those probes therefore predate the corrected data control; they were not presented as source-corrected runs and none was retained. Run 6 restores every global parameter before isolating the reference correction; run 7 adds only the modelled Missouri wait. Any next parameter batch starts from the corrected data after integration.
+
+### Run record
+
+Every mutating comparison changes one parameter or data reference against its named control. Citation changes explain that same change. Controls, pure battle probes and final verification are all counted conservatively within eight. The reference runner's internal replay, resume, repeat and timing copies, and the required suite's immutable verification runs, are not additional parameter searches. No ninth comparison ran.
+
+For all history rows the six columns are the actual 1A criteria. “Not rerun” does not mean pass; those candidates did not obtain fresh D6 evidence. Original observations and original scores are retained.
+
+| Run | One change / control and reason | Checkpoints | Operation | Pushback | Unknown strength | Stand-ins | Lever sweep |
+|---|---|---|---|---|---|---|---|
+| 1 | ff07445 baseline; exact npm run run:done-check -- --milestone 1a --label r85-01-baseline | FAIL: 5 rows | FAIL | FAIL: 4 bands | PASS | PASS | FAIL |
+| 2 | Advance goal boldness 600 to 500 against run 1 [I], testing the lane 1.1 calibration note's temperament mismatch; hold stays 400 | FAIL: same 5 | FAIL | FAIL: same 4, reservations 44 | PASS | PASS | Not rerun |
+| 3 | Restore goal; complyAt 150 to 10 against run 1 [I], testing whether small positive willingness should count as ordinary compliance under 0099's reservations band | FAIL: same 5 | FAIL | FAIL: 3 bands; reservations 4 | PASS | PASS | Not rerun |
+| 4 | Pure assault control at attacker base rate 180; existing CSV, four works setups, 20 named seeds each | Not rerun | Not rerun | Not rerun | Not rerun | Not rerun | Not rerun |
+| 5 | Pure assault attacker rate 180 to 600 against run 4 [I], testing the Wagner deficit without moving any band | Not rerun | Not rerun | Not rerun | Not rerun | Not rerun | Not rerun |
+| 6 | Global knobs restored; only the sourced Restored Government reference correction against run 1 | FAIL: 4 rows | FAIL | FAIL: 4 bands | PASS | PASS | Not rerun |
+| 7 | Only Missouri wait 106 to 105 against run 6, sourced date plus explicit model inference above | FAIL: 3 rows | FAIL | FAIL: 4 bands | PASS | PASS | Not rerun |
+| 8 | Required full verification of run 7; no further change; eight seeds and original 400-day fork cap | FAIL | FAIL | FAIL | PASS | PASS | FAIL |
+
+Evidence for runs 2, 3, 6 and 7: runs/r85/02-goal.json, 03-threshold.json, 06-source-control.json and 07-missouri.json, each with final State and command exit/time files. They call the existing phase0Run and pure scorers; observers run after the timing sample and never write State. Run 1's full CLI log, exit and summaries are retained under runs/r85/01-baseline* and runs/r85-01-baseline/. Run 8 is runs/r85/final-gate/result.json and 08-final-gate.log. Its input hashes before/after match.
+
+### Parameter decisions, in the requested order
+
+- **Goal boldness: reject run 2.** No criterion, pushback count or operation outcome improved. Walker's goal willingness moved from -164 to -124, but he still objected; Beauregard's changed from 128 to 88, still reservations. A lower requested boldness is not uniformly more agreeable to bolder men. Hold 400 / advance 600 stand.
+- **Compliance: reject run 3 as a production setting.** Reservations fall 44 to 4 inside 1–9, but spontaneous cabinet initiatives rise 9 to 27, outside the unchanged 4–18 liveness band. The required check exits 1: 3 failures, 1,468 passes and 3 existing skips. All three failures are that one liveness regression, asserted by the reference and done-check tests. The same complyAt threshold governs requested orders and self-proposed initiatives. Do not change an initiative cooldown simply to hide the coupling. Restore 150; continue with the people/seat owners before another threshold batch.
+- **Discontent and ladder: leave uncalibrated.** The observed ladder ends with Houston lobbying and Toombs grumbling; ten moves occur. Its formula is grievance load less half regard. No sourced rung-count band in this five-month window identifies new thresholds or disposition weights. Changing these to offset run 3's initiative admission would tune a different mechanism to a proxy.
+- **Credibility and M2 politics: leave uncalibrated.** The politics hand-over's sourced calibration targets are the 1862 midterms and the later lows; they are outside this window. No relief in this history run identifies per-relief credibility. Keep the M2 cites rather than claiming that July calibrated drift, address, ladder politics, credibility or press standing.
+- **Drafting versus execution: case not exercised.** The Union commander is Stone at us_dc_militia, not a McClellan planning/execution case. He selects the supply-line advance, reaches Manassas on day 145, and works there. At the end its sole standing force is 600 Union militia, with no opponent. More aggressive planning weights cannot provide the missing opposing establishment.
+- **Fort Wagner: reject run 5.** The current lesser-side contact model gives Wagner 62 attacker K+W per 1,000 against the CSV's integer-truncated 213. Raising the shared assault base rate makes Wagner 208, but Fredericksburg becomes 322 and Franklin 722, beyond the unchanged 40–220 attacker band. All 80 candidate samples fail the 2–7 absolute-loss ratio. Current rates pass those checks. This supports investigating assault contact geometry with lane 1.3, not raising every assault's rate. The probe uses the existing resolveDay, existing CSV and named streams; it is not a second campaign runner. The early coverage prose mistakenly described three setups; metadata was corrected to four one-modelled-day setups without changing or repeating observations. Raw logs remain.
+
+| Works setup | Current attacker / defender K+W per 1,000 | Rate-600 candidate | CSV attacker / defender |
+|---|---:|---:|---:|
+| Fredericksburg | 96 / 34 | 322 / 34 | 102 / 64 |
+| Chickasaw Bayou | 56 / 34 | 188 / 34 | 39 / 14 |
+| Fort Wagner | 62 / 49 | 208 / 49 | 213 / 94 |
+| Franklin | 216 / 45 | 722 / 45 | 206 / 43 |
+
+The CSV follows the existing model's setup days; those are not new assertions about the historical duration. All loss-breakdown parts sum in both comparisons. The existing full Livermore harness passes unchanged.
+
+### Diagnosis and continue-or-park recommendation
+
+| Criterion | Final diagnosis | Recommendation and owner |
+|---|---|---|
+| Checkpoints | Restored Government and Missouri now satisfy their existing rows. Confederate known men remain 20,957 against 100,000–200,000; both sides have zero scored fought operations. Union men are 18,686, reported below their non-binding floor, not silently passed as enrolled strength. | **Continue**, data/recruitment 1.7 and rule seats 1.12: supply the missing sourced calls/state-force transfers before changing men per regiment. The doctrine contains the 8 April call but suppresses repeat calls once answered and runs only after war; the research note also lists 9 March and 16 April calls. Keep all strength and operation bands. |
+| Operation | Two approved operations, zero BattleRecords. Sumter's bombardment emits battle telemetry and reports but tick/bombard.ts writes no BattleRecord, which operationsFought/operationScore require. The Union executes into unopposed Manassas. | **Continue**, combat/operations 1.3–1.4 and rule seats 1.12: preserve actual bombardment loss terms in the record consumed by the scorer, and supply sourced field establishments. Do not count telemetry as the required record or force an arbitrary battle by a weight change. |
+| Pushback | Relay objections 2 (0–6), holds 1 (2–6), filter holds 0 (1–9), trims 0 (1–4), reservations 44 (1–9), slow walks 5 (2–9), objections 11 (10–42). The filter office is vacant; cabinet/caller screening cannot be relabelled as telegram filtering. | **Continue**, people 1.1/1.5 and rule seats/report routes 1.12: resolve the requested-order/initiative coupling and exercise sourced relay/filter cases. No band recentering or invented filter holder. |
+| Unknown strength | PASS as scored: history has no BattleRecords, while the testbed battle records contain none unknown. This is not evidence that a missing history battle was checked. | Keep the gate; repeat after the battle-record and establishment work. Owners 1.3/1.10/1.14. |
+| Stand-ins | PASS; four well-formed labels below, with 1B owners. M2 rule groups are listed as calibration evidence, not code-label failures. | No label change. Keep the uncalibrated data explicit. |
+| Lever sweep | 8 seeds, 8 decisions weighed, 248 base-run calls. Return's best-choice count is not D6 clearance: grievance effects remain unmeasured and the policy-to-border-levy chain remains unexercised. | **Park D6 clearance until 1B** owns the missing channel (0099, G-1.14c/d); **continue the recruitment-chain item now** with 1.7/1.12. Existing calls precede the policy fork and the doctrine suppresses later calls. Do not remove the required new levy, shorten 400 days, or score an unmeasured consequence as zero cost. |
+
+Final sweep details: return is best in **0/8** seeds; **zero flagged choices, zero unpaid floors and zero unmet ledger waits**. All **24** policy moves retain the unexercised recruitment-chain finding. The unmeasured channel is people/grievance through policy pushback. Those failures prevent D6 clearance despite the zero best-choice count.
+
+Virginia still fires on day 46, 20 April, against the record's 17 April. Letcher's call answer is day 44 and the signed situation waits two further days. The requested route is already wire; transport/relay behavior and the signed causal interval need review by 1.11/1.12 and the gate reviewer. No signed item was edited to make this date fit.
+
+### The stand-ins, exactly as the criterion reads them
+
+| File and line | Label / owner |
+|---|---|
+| packages/kernel/src/forces/stores.ts:74 | Ships and troops afloat do not consume stores; owner 1B, ships' stores |
+| packages/kernel/src/planner/route.ts:127 | Ships/boats' own stores bypass marching supply cost; owner 1B, ships' stores |
+| packages/kernel/src/situations/types.ts:74 | call-received-delay; owner 1B, conventions and legislatures |
+| packages/pack-format/src/situations.ts:63 | The same call-received-delay schema label; owner 1B, conventions and legislatures |
+
+All eight named Phase 0 stand-ins are retired according to the scanner's labels/tells. Zero malformed labels. The five M2-carried groups remain rules.politics.drift, address, ladder, credibility and press.standing. Pack-only assumptions outside that scanner are not claimed retired.
+
+### Final verification and preservation
+
+- Final exact MANDATE_NO_GIT=1 npm run check: **exit 0**, 129 files, 1,471 passed / 3 existing opt-in timing skips. Time 183.52 s. The rejected threshold's failed check and the successful restoration check are retained separately; there was no unchanged retry to seek a different verdict.
+- Focused compliance, 1A scorer/sweep-fixture and Livermore checks: **53 passed**, exit 0. The later focused checkpoint command selected one existing file, **5 passed**; no nonexistent opening-file selector was counted as coverage. The full suite supplies the actual opening tests.
+- Final full done check: Phase 0 **6/6**, 1A **2/6**. Binding 1A exit is 1. Evidence is complete even when the criterion fails.
+- Final Union hash **704c3934f6625007a596b231fbbe152c156aa62e8ff8761d6b735838b62dc3fd**; replay and day-60 resume match. Its first 147 daily State hashes match the baseline, with only day 148 changed by Missouri. All 120 testbed hashes match the baseline. Zero rejected commands. World hash changes include the edited situation/citation; generated World and all global rules are byte-identical.
+- Full-run tick cost, median / p95 / max ms: Union war by decision **32.73 / 54.28 / 68.79**; testbed **3.85 / 5.11 / 5.72**; history **31.35 / 52.37 / 66.41**. The baseline history failed at 93.64 / 164.22 against unchanged 40 / 160. Later candidate times varied from 26.12 to 35.04 median. No unloaded condition or causal speedup is claimed; Linux/integration timing still decides.
+- Press mail counted apart: **4,622** received press seat/report pairs and **294** other received mail pairs after day zero in run 7. These are deduplicated (seat, report id) observations, not a claim that messages.sent equals report delivery count. Input/behavior equality with run 8 is checked by its final hash.
+- Before this hand-over, preservation checked 1,650 entry files: only the checkpoint reference/citation and ungated Missouri wait/citation differed; 1,648 others were unchanged. Among 182 explicitly protected inputs, 181 were unchanged and the sole exception was that ungated Missouri file. All signed situations, gate material, PROVENANCE.json, saves, lockfiles, liveness bands and generated World were preserved. This hand-over is the third delivery file. Final inventory and hashes are runs/r85/final-preservation.json.
+- No package build, server or browser campaign. No write in another run's worktree, no Git mutation, no signature or decision record authored. Claude's independent review remains required under 0096.
+
+**Proposed rulings:** accept the sourced department-reference correction and 105-day model inference; reject the three global parameter candidates rather than weakening gates. Keep the current bands and CI flag until 1A's residuals pass or the lead explicitly rules on them. A new batch requires the lead's continue-or-park ruling after R82/R83/R84 integration; no run remains in this budget.
+
+## R94: Missouri by cause and recorded date (2026-11-20)
+
+Handled R94 only in `C:/Pyrrhic/mandate-done-check-1b`, retaining branch `phase1-done-check-1b` at `ede2a556bdd854953a2ea93b80ad9bf7871a9a8c`. Git was read-only. Existing dependencies resolve to this worktree's own packages; no install was needed. Other requests and worktrees were left alone.
+
+**Change and source.** `packs/union-1861/situations/missouri_provisional_government.json` now has exactly `all: [callReceived { post: st_gov_missouri, days: 0 }, dayAtLeast 148]`. Its citation identifies 31 July 1861 as the recorded date, rather than an inferred interval after receipt. Reread the Missouri State Archives timeline's vacancy-ordinance entry: <https://www.sos.mo.gov/archives/history/timeline/3>. The July convention journal remains unread; its existing source limitation is preserved. R94's lead ruling supplies the cause-plus-date model, following 0100 item 16. A call received after day 148 permits the notice on receipt, without another wait. Only the event and citation changed; the notice's text, effects, report, earliest metadata and gate classification are unchanged. No signed item changed.
+
+**Regressions.** `packs/union-1861/test/r94-missouri.test.ts` drives the loaded notice through real ticks and checks both its fired day and the command-owned government side. Call receipts on days 20, 43, 147 and 148 all fire on day 148, never earlier. Without a received call there is no notice, flag or side change through day 160. A day-151 receipt fires on day 151, once, with the flag and Union side retained on day 152. Refused calls are used: receipt is the prerequisite, not compliance. Before the data change the new tests failed in four cases and passed in two (`runs/r94/red.log`, exit 1); after it, all six and the two Wheeling regressions passed (`green.log`, exit 0). The full suite below verifies the final fixture with the pack's exact governor identifier.
+
+**Required checks and all failures.**
+
+- Typecheck and pack boundary preflight: both exit 0 (`runs/r94/preflight-exits.json`).
+- Exact `MANDATE_NO_GIT=1 npm run check`: exit 0, **130 files / 1,477 passed / 3 existing optional timing skips**, plus boundary, licences and decision index; **184.74 s** (`check.log`, `check-exit.json`).
+- One full `npm run run:done-check -- --milestone 1a --label r94-final`, with eight seeds, the original fork horizon and drafting: **exit 1**, **1,532.32 s**, **Phase 0 6/6; 1A 2/6** (`done-check.log`, `done-check-exit.json`, `final-checks.json`). All ten reported problems were inspected. No gate was retried or waived.
+- Missouri is Union on day 148 and passes its unchanged checkpoint. The same four 1A categories fail: **checkpoints** (Confederate known men 20,957 below 100,000; both sides' fought-operation counts 0 below 1); **operation** (two operations, zero battle records); **pushback** (relay holds 1 below 2, filter holds 0 below 1, trims 0 below 1, reservations 44 above 9); **lever sweep** (people/grievance remains unmeasured and no new border levy in 24 policy moves). Unknown strength and stand-ins pass as scored; zero history battle records still limits the strength claim. The eight-seed sweep weighs eight decisions and records 248 base-run calls; return is best in 0/8. Those results do not clear D6.
+- War/history tick median–p95 are **38.04/63.70** and **39.20/62.40 ms**, within the unchanged **40/160** limits; testbed is **3.84/5.61 ms**. No unloaded or CI claim. Drafting is sound: capped worst day **25.2 ms**, with the configured three drafts per side. The full log and `runs/r94-final-drafting/` retain the report.
+
+**Reference comparison and preservation.** The fresh reference summaries match R85 for every daily State hash (148 Union, 120 testbed), final State hash, replay, resume, rejections and liveness row. Union final State remains `704c3934f6625007a596b231fbbe152c156aa62e8ff8761d6b735838b62dc3fd`; its World hash changes because the loaded situation and citation changed. Comparison: `runs/r94/reference-comparison.json`. This reuses R85 as the comparison baseline; no R85 campaign was repeated. R94 is required verification, not a new parameter search or the second calibration budget.
+
+Runtime checks, the complete failure list and five output artifacts were inventoried before this hand-over (`runs/r94/final-checks.json`, `artifact-inventory.json`). The pre-document audit found only the Missouri edit and new test among 1,651 baseline files; all 1,650 other baseline files were unchanged. This hand-over is the third delivery file. `runs/r94/final-preservation.json` records the final inventory, including documentation. Generated World, signed situations, gate material, provenance, saves, lockfiles and all numeric/liveness bands are preserved. No build, server, browser or other-worktree write. The worktree's CODEX.md is unchanged; the only main-checkout write is the single requested status append after a fresh coordination read.
+
+**For the lead:** review and commit R94 under 0096. No new ruling is requested: R94 already replaces the fitted interval. R85's remaining failures and their owners remain open; this checkout does not include the other runs' changes.
+
 ## Findings outside my scope
 
-- The pack's politics values carried from M2 (`rules.politics.drift`, `address`, `ladder`, `credibility`, `press.standing`) are listed in the stand-ins evidence. Calibration (Part B) replaces them.
-- The Union mechanics timing budget fails in the required R58 done-check and in one isolated timing-only reproduction. Cause remains undetermined; the result and unchanged limits are recorded above for the lead and Part B.
-- The remaining four failed 1A criteria still need the situations/data lanes and Part B. The old finding about an unguarded stopwatch assertion is retired: lane 1.13's guard is present in this merged tree.
+- R94 adds no new finding outside scope. The R85 items below retain their owners; this run neither implements nor remeasures their changes from other worktrees.
+
+- 1.11/1.12 and the gate reviewer own Virginia's signed receipt/transport timing. The date was not fitted by an unreviewed signed edit.
+- 1.7/1.12 own missing repeat calls, state-force coverage, field opposition and the post-policy border levy. The full sweep cannot establish D6 until that chain and 1B's missing consequence channel exist.
+- 1.1/1.5 and the seats owner must resolve ordinary compliance versus spontaneous initiative admission before another global-threshold calibration. The isolated reservations improvement was rejected because its required gate failed.
+- 1.3/1.4 own the bombardment record gap and a bounded assault-contact investigation. The Wagner result is not permission to increase every assault's losses.
+- 1B owns the sourced politics/ladder targets outside this window and the four labelled stand-ins. They remain uncalibrated; a passing label scan does not settle their values.
+- The lead/steward must integrate R82, R83 and R84, prepare main's merge into this branch under read-only-Git rules, obtain independent review, and remeasure on the integrated head. None of this run's evidence includes those changes.

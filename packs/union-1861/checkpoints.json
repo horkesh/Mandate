@@ -50,9 +50,9 @@
       "date": "1861-07-31",
       "kind": "government-side",
       "name": "western Virginia (the Restored Government at Wheeling)",
-      "departments": [],
+      "departments": ["st_virginia_restored"],
       "side": "union",
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: Union, the Restored Government of Virginia at Wheeling, Pierpont governor from 20 June, senators seated 13 July (WV Archives). The pack has no department for it yet"
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: Union, the Restored Government of Virginia at Wheeling, Pierpont governor from 20 June, senators seated 13 July (WV Archives). Department reference: source/world/departments.csv, st_virginia_restored; OR I-2 p. 723, Cameron to Governor Francis H. Peirpoint, 25 June 1861 (https://ehistory.osu.edu/books/official-records/002/0723), read for R85. The existing western_virginia recognition option sets this department to Union; the expected side and checkpoint date are unchanged"
     },
     {
       "id": "side_muscogee",
