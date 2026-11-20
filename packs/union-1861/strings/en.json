@@ -378,5 +378,8 @@
   "press.framing.headline": "Public opinion on the opening of the war",
   "press.framing.other": "The paper reports that the public holds the other side responsible for beginning the war.",
   "press.framing.own": "The paper reports that the public holds its own side responsible for beginning the war.",
-  "press.empty": "This page carries no new battle story."
+  "press.empty": "This page carries no new battle story.",
+  "post_kind.army_command": "Army command",
+  "post.cs_cmd_harpers_ferry": "Troops near Harpers Ferry",
+  "post.cs_cmd_manassas": "Alexandria line (Manassas)"
 }

@@ -2,7 +2,13 @@
 
 Main merged at `364aba0` on 2026-11-19, by R46. R48 starts from the committed merge at `8b15e6e`, in `C:/Pyrrhic/mandate-rule-seats-b`, branch `phase1-rule-seats-b`.
 
-## Where lane 1.12 stopped (2026-11-19, R81)
+## Where lane 1.12 stopped (2026-11-20, R98)
+
+R98 adds sourced, government-dependent northern command assignments and concentration through existing transfers and joins, on `phase1-manassas-1861` at `4f6e8b3`. Beauregard takes the new command after his appointment letter arrives; Johnston's entry waits on the resignation/service implementation missing from this base. The existing Union advance produces battles at Manassas on 27, 29 and 31 July, with Stone still commanding the Union post. No battle date, location or weight was added. The full R98 account and proposed rulings are at the end of this hand-over.
+
+Exact no-Git check: exit 0, 133 files / 1,489 passed / three existing skips. One normal eight-seed done check with drafting: exit 0, Phase 0 6/6; 1A 2/6. **1A remains unmet:** checkpoints, pushback, unknown strength and the lever sweep fail. Four unknown Confederate blocks fought; the watched return option is best in 3/8 seeds. No D6 clearance. Evidence: `runs/r98/final-checks.json`. Independent review remains with Claude under 0096.
+
+### R81 stopping point (retained)
 
 **R80 is committed as `f444fa2`; R81 changes only the cost of looking up a post holder.** Its linear scan returns the same code-unit-first own matching post. The two decision-led 148-day paths preserve every daily hash and liveness count; the normal done check also preserves all 120 testbed hashes, replay and save/resume. R80 below remains the account of the opening's dates and delivery order. All save fixtures, bands, pack data and signed/gate inputs remain unchanged.
 
@@ -506,3 +512,67 @@ The history still has no Confederate force near Manassas or battle there. The co
 ## Findings outside my scope
 
 The R90 primary hand-over routes the source/term limits, missing national enlistment path, call-purpose/compliance issue, absent Manassas establishment and every unmet gate. R87–R89 and R91–R93 were not undertaken here.
+
+## R98: Confederate concentration in northern Virginia (2026-11-20)
+
+For the lead: 3 items. R98 only in `C:/Pyrrhic/mandate-manassas-1861`, branch `phase1-manassas-1861`, retaining `4f6e8b30c344319802511eca534dff6a2c6a95cc`. `npm ci` ran first: exit 0, 51 packages, zero vulnerabilities. Git was read-only; R97's checkout was not touched. Review remains with Claude under 0096. Evidence index: `runs/r98/final-checks.json`.
+
+### Delivered and sourced
+
+- Pack doctrine declares Johnston's Harpers Ferry command and Beauregard's Alexandria-line command at Manassas. Both wait for Virginia's live department side to be Confederate and for an eligible serving officer. The commands have no opening forces. Dated concentration changes select an established command; governors and the named former concentration send troops through ordinary compliance, transfer and join orders.
+- The appointment verb can establish an appointment-created declared temporary command. An optional expected old post permits reassignment; delivery guards both holder links and changes them atomically through command. Failed delivery or a changed destination leaves the old holder intact. Troops stay in the old post until a separate transfer. Existing verb prices, compliance and message latency apply. No new State field, default price, combat weight or player battle verb was added. Appointment answers retain their issuance record across response pruning; sourced appointees are reserved before ordinary vacancy selection.
+- Primary source read: Cornell's OR I-2, scan `cu31924077730186`, retained OCR SHA-256 `66d9a89b843925389e1d2d5d9798dc4e0c66f9a0488bbfcc8705659e4b37ebbf`. **Johnston:** assignment 15 May, pp. 844–845; the President's intended army near Harpers Ferry, p. 856; assumed command 23 May, his retrospective report, p. 470. **Beauregard:** Alexandria-line assignment 31 May, Special Orders 149, p. 896; arrival 1 June in his 3 June letter from Camp Pickens, pp. 901–902; explicit Camp Pickens–Manassas location, p. 907 (geographical self-identification only, no political content used). Full source limits and rejected alternatives: `docs/research/2026-11-20-northern-virginia-concentration.md`.
+
+### Proposed rulings [I]
+
+1. Use the sourced assignment dates for doctrine letters; normal delivery determines completion, rather than forcing historical arrivals. Davis's doctrine exercises the R98 authorization; the printed 31 May order is by Lee. In this history Beauregard's letter is sent on **31 May/day 87** and completes on **5 June/day 92**, later than his recorded arrival. Reject adjusting courier weights or forcing headquarters placement to match a date.
+2. Preserve Johnston's cross-side eligibility guard. This base still has him serving as Union Quartermaster General, without 0101's resignation/service owner, so **his Harpers Ferry command does not open in this run**. A fixture supplying only the missing service prerequisite makes his sourced assignment eligible. Reject changing his starting side or implementing the separate resignation lane here. The existing Union operation likewise remains under **Stone**, because this base has no McDowell department establishment; R98 does not repair that other-side gap.
+3. Keep the existing bundle-transfer semantics: the named former Charleston concentration sends its commanded blocks, including opening blocks, while new levies go to the latest established northern command. This is an allocation approximation, not a sourced regiment list. It does not move an already established Johnston army to Manassas. Review this choice explicitly: four unknown opening blocks reach combat. Reject inventing their headcounts, hiding their participation or fitting the battle to a date or result. New establishment answers also prevent repeated dated appointments after ordinary response pruning.
+
+### History, without fitting
+
+The 148-day history, all seats on rules, uses the pack's own peace and war. Virginia's existing notice changes its side on day 43. The first **86 daily State hashes match R96**; the first difference is the 31 May appointment letter. All 148 daily hashes match the final done-check reference; replay, day-60 resume and saved-log replay pass, zero rejections. Final State: `8edd464f25f17d1806ff534a9f102b77c12636ee2f56e2a7c770a5ed84dd3381`. The unaffected testbed's 120 hashes and liveness match R96.
+
+| Emerged field battle | Confederate known present | Union known present | Commanders and result |
+|---|---:|---:|---|
+| Manassas, 27 July/day 144 | 158 | 45,600 | Beauregard withdraws; Stone gains ground |
+| Manassas, 29 July/day 146 | 19,261, plus four unknown blocks | 44,579 | Beauregard withdraws; Stone gains ground |
+| Manassas, 31 July/day 148 | 126 | 41,263 | Beauregard's side is routed; Stone gains ground |
+
+These are simulation observations, not the historical battle. The unchanged Union goal is issued 16 July; its planner chooses a supply-line operation beginning day 137, fought from day 144. A 158-man block first appears at Manassas or a graph-adjacent region on 21 July, not a full army on that date. At the end, the new command has 31 assigned blocks (20 raised in play), 35,791 known men, with all 31 under joining orders after withdrawals. Full daily locations, operations, holder transitions and battle records: `runs/r98/history-spatial.json`; compact findings: `history-findings.json`.
+
+On **31 July**, Union known men are **59,329** with four unknown blocks, against unchanged **95,000–250,000** (floor reported, non-binding). Confederate known men are **42,829** with 17 unknown blocks, below unchanged **100,000–200,000**. R96 had 62,686 and 46,457 respectively; field losses change those totals. State-force acts from R97 and the absent national enlistment path have not been imported.
+
+### Liveness bands and causes
+
+Exactly six breached liveness bands use the **unchanged `around(observed)`** helper. No historical, pushback, strength, timing or lever bound changed. Old/new numbers, retained bounds, and all **37 changed measured rows** with direct or labelled inferred causes are in `runs/r98/band-reconciliation.json`. Retained R96 reference evidence supplies the baseline; no baseline campaign was repeated. Stale no-field-battle explanations on latent bands were corrected without changing their bounds.
+
+| Mechanic | Observed | Old bounds → new | Cause |
+|---|---:|---|---|
+| `combat.captured` | 3 | 0–0 → 1–6 | Emerged field combat captures men; Sumter still evacuates under terms. |
+| `combat.occupation` | 44 | 9–36 → 22–88 | [I] Northern joining marches and the summer operation expose more regions to occupation. |
+| `control.changed` | 49 | 10–40 → 24–98 | [I] The changed movements, occupations and battles produce more control proposals. |
+| `control.threshold_crossed` | 21 | 5–20 → 10–42 | [I] Additional control updates cross existing thresholds. |
+| `movement.leg_started` | 197 | 49–196 → 98–394 | Transfers to the new command start northern joining marches. |
+| `politics.support` | 52 | 8–32 → 26–104 | Field-battle reports reach editors, whose pages move bloc support. |
+
+### Checks and remaining criteria
+
+- **Exact `MANDATE_NO_GIT=1 npm run check`: exit 0**, **133 files / 1,489 passed / three existing skips**, **152.99 s**. All chained gates pass. Initial full check: one one-writer-scanner failure, with 1,487 other tests passed. Replaced a loose null comparison with a strict one; a focused failing regression also exposed the officer competing with a routine vacancy, corrected before the final run. **73 focused tests**, typecheck and boundary/licence/decision checks passed before the required exact rerun. No scanner or acceptance rule was weakened.
+- **One default eight-seed done check with drafting: exit 0**, **1,295.39 s**, **Phase 0 6/6; 1A 2/6**. Default exit binds Phase 0 only. All **14 reported problems** remain in `done.log` and `final-checks.json`. The operation criterion now passes, through the existing Union planner operation.
+- **Timing, median/p95:** Union reference **37.78/56.65 ms**; testbed **3.59/5.50**; Union history **33.30/52.31**, within unchanged **40/160** limits. Drafting: 23 commands, 16 with land forces; day median/p95 **40.3/52.3 ms**, capped worst **26.0 ms**. Linux CI decides the budget. No timing retry, unloaded-host or CI claim.
+- **Checkpoints still fail:** Missouri neutral; western-Virginia checkpoint department list absent; Confederate known strength below 100,000; Confederate fought-operation count zero. Union fought-operation count is now one. Union's strength floor remains non-binding.
+- **Pushback still fails:** relay holds **1 < 2**, filter holds **0 < 1**, trims **0 < 1**, reservations **77 > 9**, slow walks **17 > 9**. These bounds are unchanged.
+- **Unknown-strength now fails:** on 29 July four Confederate blocks fight: `fb_st_charleston_1st_infantry_regulars`, `fb_st_charleston_fort_johnson`, `fb_st_charleston_fort_palmetto_stono`, `fb_st_charleston_regiment_of_rifles`. The reference and history both report it. Unknown strengths remain unknown; the criterion is not waived.
+- **Lever sweep fails:** eight seeds, eight gated decisions and **712** base-run calls. Watched `return` is best in **3/8**, above one quarter. The unmeasured people/grievance channel and all **24 policy moves** without a new border-governor call remain separate failures. **No D6 clearance**, no gate promotion or sign-off.
+
+Runtime diagnostics and artifact inventories were completed before this final documentation. The three workspace packages resolve inside this checkout. All 115 audited situation/gate/source/lock/save paths, including 84 situation/gate paths, and all historical checkpoint bounds are preserved. Original doctrine rows and all other rules are unchanged apart from the new appointment/concentration arrays and the new post kind. HEAD remains pinned and staged diff empty. No build, server, browser, Git mutation or other-worktree write; the sole main-checkout write is the required final CODEX status.
+
+For the lead:
+1. Review the implementation, source note and three proposed rulings under 0096, especially the old concentration's full bundle and its unknown-strength consequence.
+2. Integrate the missing resignation/service and McDowell establishments through their owners, and merge R97 separately; Johnston's placement criterion remains unmet here.
+3. Retain all failed 1A criteria with their owners and send timing to Linux CI. New field battles and a passing Phase 0 exit waive none of them.
+
+## Findings outside my scope
+
+Johnston's service and McDowell's absent establishment are integration prerequisites. Four unknown opening blocks now fight, and the watched return option wins 3/8 sweep seeds; both remain failures, requiring sourced force-allocation/strength work and the existing gate/calibration owners respectively. R97's state acts, national enlistment, Missouri/western-Virginia checkpoint gaps and the other pushback/sweep gaps remain with their existing owners. No other request was undertaken.

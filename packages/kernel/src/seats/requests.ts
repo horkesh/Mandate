@@ -7,7 +7,7 @@
  * for orders, and is shown the plans submitted to him that have reached him.
  */
 import { strictCompare } from '../compare.ts';
-import { commandedBlocks, heldPost, sideOfPerson } from '../command/command.ts';
+import { commandedBlocks, departmentSide, heldPost, sideOfPerson } from '../command/command.ts';
 import { commanderView, mayAttackToday, presenceByRegion, sideCommand } from '../combat/battle.ts';
 import { believedRatio, commitAtDawn, cutOffChoice, pursuitChoice, standAtNight } from '../combat/decide.ts';
 import { BATTLE_ORDER_OPTIONS } from '../combat/order-kinds.ts';
@@ -123,9 +123,13 @@ function doctrineView(world: SeatsWorld, state: State, faction: FactionId): Doct
   if (row === undefined) return { crossNeutral: false, concentrateAt: null, calls: [], offensives: [], inquireEveryDays: 0, appointKinds: { land: [], naval: [] } };
   if (state.calendarStart === null) throw new RangeError('the seats layer needs a calendar (a scenario start)');
   const start = daysFromCivil(parseIsoDate(state.calendarStart));
+  const due = (date: string, department: Parameters<typeof departmentSide>[1]) => state.stateDay + 1 >= daysFromCivil(parseIsoDate(date)) - start && departmentSide(state, department) === faction;
+  const concentration = [...(row.concentrations ?? [])].filter(c => due(c.fromDate, c.requiresDepartment) && (state.postStates[c.post]?.postHolder ?? null) !== null && postFaction(world, state, c.post) === faction)
+    .sort((a, b) => strictCompare(b.fromDate, a.fromDate) || strictCompare(a.post, b.post))[0];
   return {
     crossNeutral: row.crossNeutral,
-    concentrateAt: row.concentrateAt,
+    concentrateAt: concentration?.post ?? row.concentrateAt,
+    ...(concentration === undefined ? {} : { concentrateFrom: concentration.fromPosts }),
     calls: row.calls.map((c) => ({ post: c.post, regiments: c.regiments, termDays: c.termDays, day: daysFromCivil(parseIsoDate(c.fromDate)) - start,
       ...(c.men === undefined ? {} : { men: c.men }), ...(c.atPeace === undefined ? {} : { atPeace: c.atPeace }),
       ...(c.arm === undefined ? {} : { arm: c.arm }),
@@ -143,9 +147,9 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   // Typical days to a post's seat in pack data, or where it stood at the start of play, or else his own side's capital:
   // the principal is not told where it is today (exit review P2).
   const routesTo = (id: PostId): RouteOption[] => {
-    const p = state.postStates[id]!;
+    const p = state.postStates[id];
     const capital = capitalOf(state, faction);
-    const to = p.postSeat ?? world.startHeadquarters(id) ?? capital;
+    const to = p?.postSeat ?? world.start.temporaryPosts.find(p => p.id === id)?.region ?? world.startHeadquarters(id) ?? capital;
     const routes: RouteOption[] = [];
     for (const route of ORDER_ROUTES) {
       const l = routeLatency(ground.latency, world.rules.latency, route, capital, to, faction, null);
@@ -197,11 +201,19 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   }
   const awaiting = postsInStatus(state, 'ready').filter((p) => state.planRecords[p]!.planIssuer === f.principal && !answerInTransit(state, f.principal, p, ['go']));
   const d = world.map.world.rules.plans.goalDefaults;
+  const doctrine = doctrineView(world, state, faction);
+  const appointments = world.map.world.rules.ruleSeats.principals.find(r => r.faction === faction)?.appointments;
+  const appointmentView = appointments?.map(a => ({
+    post: a.post, person: a.person, from: a.fromPost,
+    ready: state.stateDay + 1 >= daysFromCivil(parseIsoDate(a.fromDate)) - daysFromCivil(parseIsoDate(state.calendarStart!)) && departmentSide(state, a.requiresDepartment) === faction && sideOfPerson(world.map, state, a.person) === faction && heldPost(state, a.person) === a.fromPost && (state.personStatus[a.person]?.statusKind ?? 'serving') === 'serving' && state.postStates[a.post] === undefined,
+    issued: state.messagesInTransit.some(m => m.msgVerb?.verbKind === 'appoint' && m.msgVerb.verbIssuer === f.principal && m.msgVerb.verbPost === a.post) || Object.values(state.orderResponses).some(r => r.respKind === 'verb:appoint' && r.respPost === a.post && r.respPerson === a.person),
+    routes: routesTo(a.fromPost ?? a.post),
+  }));
   return {
     menuKind: 'principal',
     faction,
     atWarSince: warSince(world, state, faction),
-    doctrine: doctrineView(world, state, faction),
+    doctrine: appointmentView === undefined ? doctrine : { ...doctrine, appointments: appointmentView },
     raising,
     vacancies,
     candidates,

@@ -9,7 +9,7 @@
  * `scenario.ts`; every open list (terrains, post kinds, arms, ranks, traits)
  * belongs to the pack.
  */
-import type { DepartmentId, FactionId, PostId, RegionId } from '../ids.ts';
+import type { DepartmentId, FactionId, PersonId, PostId, RegionId } from '../ids.ts';
 import type {
   CensusRecord,
   DepotRecord,
@@ -111,10 +111,14 @@ export interface PrincipalDoctrine {
   readonly faction: FactionId;
   /** Whether his goals may cross a neutral government's open ground: a political act, decided per side. */
   readonly crossNeutral: boolean;
-  /** The concentration post: a Part A [I] stand-in owned by lane 1.14; null to leave regiments with the governors. */
+  /** The initial concentration post, before any eligible dated change; null leaves regiments with governors. */
   readonly concentrateAt: PostId | null;
   /** Why that post: the research it rests on, the choice of post labelled [I]; null exactly when `concentrateAt` is. */
   readonly concentrateSource: string | null;
+  /** Dated, cause-dependent concentration changes. Existing troops move only from the expressly named posts. */
+  readonly concentrations?: readonly { readonly post: PostId; readonly fromDate: string; readonly requiresDepartment: DepartmentId; readonly fromPosts: readonly PostId[]; readonly source: string }[];
+  /** Establish a declared command through a sourced appointment, after the named government joins this side. */
+  readonly appointments?: readonly { readonly post: PostId; readonly person: PersonId; readonly fromPost: PostId | null; readonly fromDate: string; readonly requiresDepartment: DepartmentId; readonly source: string }[];
   /**
    * Each identified requisition goes once, from its date, including a repeat to the same governor. An unnamed legacy
    * row is still suppressed by any prior call to that post. An authored situation remains the sole issuer of its call.

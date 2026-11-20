@@ -361,6 +361,35 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
     };
     if (r.concentrateAt !== null) onSide(r.concentrateAt, 'concentrateAt');
     if ((r.concentrateAt === null) !== (r.concentrateSource === null)) problems.push(`${at}.concentrateSource: a concentration post cites its source, and only a concentration post has one`);
+    const declared = new Map(start.temporaryPosts.map(p => [p.id, p]));
+    const onDeclaredSide = (id: PostId, field: string) => {
+      const p = posts.get(id) ?? declared.get(id);
+      if (p === undefined || map.world.departments.find(d => d.id === p.department)?.faction !== r.faction) problems.push(`${at}.${field}: ${id} is not a declared post on this side`);
+    };
+    const datedCause = (date: string, department: string, source: string) => {
+      try { parseIsoDate(date); } catch { problems.push(`${at}: invalid doctrine date ${date}`); }
+      if (!map.world.departments.some(d => d.id === department)) problems.push(`${at}: unknown prerequisite department ${department}`);
+      if (source.trim().length === 0) problems.push(`${at}: dated doctrine requires a source`);
+    };
+    const establishmentPosts = new Set<string>();
+    for (const a of r.appointments ?? []) {
+      onDeclaredSide(a.post, 'appointments.post');
+      datedCause(a.fromDate, a.requiresDepartment, a.source);
+      const p = declared.get(a.post);
+      if (p === undefined || p.holder !== a.person || !map.world.vocabularies.postKinds.some(k => k.id === p.kind && k.temporary && k.creatable === 'appoint')) problems.push(`${at}: appointment must name its declared holder and an appointment-created temporary post`);
+      if (!map.world.people.some(p => p.id === a.person)) problems.push(`${at}: unknown appointee ${a.person}`);
+      if (a.fromPost !== null) onSide(a.fromPost, 'appointments.fromPost');
+      if (establishmentPosts.has(a.post)) problems.push(`${at}: duplicate establishment ${a.post}`);
+      establishmentPosts.add(a.post);
+    }
+    const concentrationDates = new Set<string>();
+    for (const c of r.concentrations ?? []) {
+      onDeclaredSide(c.post, 'concentrations.post');
+      for (const from of c.fromPosts) onDeclaredSide(from, 'concentrations.fromPosts');
+      datedCause(c.fromDate, c.requiresDepartment, c.source);
+      if (concentrationDates.has(c.fromDate)) problems.push(`${at}: ambiguous concentration date ${c.fromDate}`);
+      concentrationDates.add(c.fromDate);
+    }
     if (!(r.inquireEveryDays >= 1)) problems.push(`${at}.inquireEveryDays must be at least 1`);
     for (const arm of ['land', 'naval'] as const) for (const k of r.appointKinds[arm]) if (!kinds.has(k)) problems.push(`${at}.appointKinds.${arm}: "${k}" is not a person kind`);
     const called = new Set<string>();

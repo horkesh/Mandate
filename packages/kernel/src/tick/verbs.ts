@@ -11,7 +11,7 @@
  * and an amount, and the sending commander picks the blocks (0033).
  */
 import { strictCompare } from '../compare.ts';
-import { appointHolder, CommandError, factionOfPost, heldPost, relieveHolder, sideOfPerson, transferForce } from '../command/command.ts';
+import { appointHolder, CommandError, createTemporaryPost, factionOfPost, heldPost, relieveHolder, sideOfPerson, transferForce } from '../command/command.ts';
 import { noteLetter, postObserver, recallObserver } from '../command/observers.ts';
 import type { ComplianceRung, DirectiveResponse } from '../directive.ts';
 import type { MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
@@ -110,12 +110,16 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
   const holderOf = (post: PostId) => believedHolder(start, principal, post);
   switch (c.cmd) {
     case 'appoint': {
-      if (!postOnSide(ctx, start, c.post, principal)) return reject('unknown_post');
+      const declared = world.start.temporaryPosts.find(p => p.id === c.post && p.holder === c.person);
+      const mayOpen = declared !== undefined && world.map.world.vocabularies.postKinds.some(k => k.id === declared.kind && k.temporary && k.creatable === 'appoint') && start.departmentFactions[declared.department] === sideOfPerson(world.map, start, principal);
+      if (!postOnSide(ctx, start, c.post, principal) && !(start.postStates[c.post] === undefined && mayOpen)) return reject('unknown_post');
       if (holderOf(c.post) !== null) return reject('post_held');
       if (!knownPerson(ctx, c.person) || !sameSide(ctx, start, c.person, principal) || c.person === principal) return reject('unknown_person');
-      if (heldPost(start, c.person) !== null) return reject('person_holds_post');
+      if ((start.personStatus[c.person]?.statusKind ?? 'serving') !== 'serving') return reject('unknown_person');
+      const held = heldPost(start, c.person);
+      if (c.from === undefined ? held !== null : held !== c.from || c.from === c.post || !postOnSide(ctx, start, c.from, principal)) return reject('person_holds_post');
       if (c.rank !== null && !world.map.world.vocabularies.ranks.some((r) => r.id === c.rank)) return reject('unknown_rank');
-      sendVerb(ctx, start, principal, c.person, null, c.route, body('appoint', { verbPost: c.post, verbRank: c.rank }));
+      sendVerb(ctx, start, principal, c.person, null, c.route, body('appoint', { verbPost: c.post, verbRank: c.rank, verbTo: c.from ?? null }));
       return { state: start, reason: null };
     }
     case 'relieve': {
@@ -225,7 +229,8 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
 
   // Lane 1.4's oversight: a verb is an order to a person, read where he stands; an observer's or pressure's `watched` terms stack on top.
   const answer = answerOrder(world, start, me, v.verbIssuer, orderTerms(rules, `verb:${v.verbKind}`), { oversight: oversightOf(ctx, start, me, v.verbIssuer).value });
-  let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: me, post: msg.msgToPost, role: 'addressee', day: ctx.day, kind: `verb:${v.verbKind}` }));
+  const establishment = v.verbKind === 'appoint' && world.start.temporaryPosts.some(p => p.id === v.verbPost);
+  let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: me, post: establishment ? v.verbPost : msg.msgToPost, role: 'addressee', day: ctx.day, kind: `verb:${v.verbKind}` }));
   fire(ctx, 'verbs.answered');
   const changes: PeopleChange[] = [];
   let done = !DECLINES.has(answer.actual);
@@ -243,10 +248,17 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
     case 'appoint': {
       const post = v.verbPost!;
       // The post may have filled, or he may have taken another, while the letter travelled: then he cannot take it.
-      if (state.postStates[post]?.postHolder !== null || heldPost(state, me) !== null) done = false;
+      if ((state.postStates[post]?.postHolder ?? null) !== null || heldPost(state, me) !== v.verbTo || !sameSide(ctx, state, me, v.verbIssuer) || (state.personStatus[me]?.statusKind ?? 'serving') !== 'serving') done = false;
       if (done) {
         try {
-          state = appointHolder(world.map, state, post, me);
+          let next = v.verbTo === null ? state : relieveHolder(state, v.verbTo);
+          if (next.postStates[post] === undefined) {
+            const spec = world.start.temporaryPosts.find(p => p.id === post && p.holder === me);
+            if (spec === undefined || !world.map.world.vocabularies.postKinds.some(k => k.id === spec.kind && k.creatable === 'appoint')) throw new CommandError(['no appointment-created command is declared']);
+            next = createTemporaryPost(world.map, next, { ...spec, seat: spec.region, holder: null });
+          }
+          // Keep both holder changes atomic: a failed destination guard leaves the old command intact.
+          state = appointHolder(world.map, next, post, me);
         } catch (e) {
           if (!(e instanceof CommandError)) throw e;
           done = false;

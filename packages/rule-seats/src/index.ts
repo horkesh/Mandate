@@ -152,6 +152,15 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   const opening = Math.max(policy.openingDay, menu.atWarSince + 1);
   if (day < opening) { sendCalls(true); return orders; }
   const doctrine = menu.doctrine;
+  const appointed = new Set((doctrine.appointments ?? []).filter(a => a.ready || a.issued).map(a => a.person));
+
+  // Sourced establishments wait for their date, their government's side and an eligible serving commander.
+  // The appointment letter carries the expected old post; command alone changes both holder links on arrival.
+  for (const a of doctrine.appointments ?? []) {
+    if (!a.ready || a.issued) continue;
+    const route = quickest(a.routes);
+    if (route !== undefined) send({ cmd: 'appoint', post: a.post, person: a.person, rank: null, route: route.route, ...(a.from === null ? {} : { from: a.from }) });
+  }
 
   // 2. Each offensive goal on its day: the doctrine's dated row, or the opening morning if its date has passed.
   for (const o of doctrine.offensives) {
@@ -173,7 +182,6 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
     }
   }
   // 3. A post commanding troops with nobody to command them gets the senior man of the right kind (lane 1.5's appoint).
-  const appointed = new Set<string>();
   for (const v of menu.vacancies) {
     if (v.appointing) continue;
     const kinds = doctrine.appointKinds[v.arm];
@@ -188,7 +196,7 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   // 5. What a governor raised goes to the doctrine's post to concentrate (a transfer, answered by the governor himself).
   if (doctrine.concentrateAt !== null) {
     for (const c of menu.commandable) {
-      if (!c.raising || c.post === doctrine.concentrateAt || c.men === 0 || c.inTransit.includes('transfer')) continue;
+      if ((!c.raising && !doctrine.concentrateFrom?.includes(c.post)) || c.post === doctrine.concentrateAt || c.men === 0 || c.inTransit.includes('transfer')) continue;
       const route = quickest(c.routes);
       if (route === undefined) continue;
       send({ cmd: 'transfer', from: c.post, to: doctrine.concentrateAt, force: 'blocks', amount: 999, route: route.route });

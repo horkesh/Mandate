@@ -105,6 +105,9 @@ export function pruneResponses(state: State, day: number, keepDays: number): { r
     if (prior === undefined || r.respDay < prior.respDay || (r.respDay === prior.respDay && k < held!)) firstCall[r.respPost] = k;
   }
   for (const k of Object.values(firstCall)) named.add(k);
+  // A declared command's appointment answer is its issuance record, including a refusal. Ordinary appointment
+  // letters have no respPost; establishments name their declared destination and must not be reissued after pruning.
+  for (const [k, r] of Object.entries(state.orderResponses)) if (r.respKind === 'verb:appoint' && r.respPost !== null) named.add(k);
   // Keep every governor's call answer too: doctrine uses it to avoid duplicate calls (lane 1.12).
   const drop = Object.keys(state.orderResponses).filter((k) => day - state.orderResponses[k]!.respDay > keepDays && !named.has(k) && !isCallAnswer(state.orderResponses[k]!) && state.orderResponses[k]!.respCallId === undefined);
   if (drop.length === 0) return { state, pruned: 0 };

@@ -44,8 +44,8 @@ export interface RegionControlStart {
 }
 
 /**
- * A temporary post the start declares but does not open (0040; lane 1.11): an expedition command a situation's effect
- * opens, with its holder (a man without a post may hold it, as Fox did).
+ * A temporary post the start declares but does not open (0040): a situation's effect or an allowed appointment
+ * opens it. A reassignment releases its commander's expected old post atomically on delivery.
  */
 export interface TemporaryPostStart {
   readonly id: PostId;

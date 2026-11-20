@@ -57,6 +57,30 @@ const menu: PrincipalMenu = {
   goalDefaults: DEFAULTS,
 };
 const doctrine = (over: Partial<PrincipalMenu['doctrine']>): PrincipalMenu => ({ ...menu, doctrine: { ...menu.doctrine, ...over } });
+
+describe('dated command establishments', () => {
+  const appointment = { post: post('new_army'), person: person('near_holder'), from: post('near'), ready: true, issued: false, routes: army('near', 2).routes };
+  it('issues a ready assignment through the appointment verb, with the old post named', () => {
+    const commands = principalOrders(doctrine({ appointments: [appointment] }), [], 3);
+    expect(commands).toContainEqual({ cmd: 'appoint', post: appointment.post, person: appointment.person, from: appointment.from, rank: null, route: 'courier' });
+    for (const row of [{ ...appointment, ready: false }, { ...appointment, issued: true }]) {
+      expect(principalOrders(doctrine({ appointments: [row] }), [], 3).some(c => c.cmd === 'appoint')).toBe(false);
+    }
+    expect(principalOrders({ ...doctrine({ appointments: [appointment] }), atWarSince: null }, [], 3)).toEqual([]);
+  });
+  it('uses the same transfer path to bring the former concentration forward', () => {
+    const m = { ...doctrine({ concentrateAt: post('far'), concentrateFrom: [post('near')] }), commandable: [army('near', 2), army('far', 6)] };
+    expect(principalOrders(m, [], 3)).toContainEqual({ cmd: 'transfer', from: post('near'), to: post('far'), force: 'blocks', amount: 999, route: 'courier' });
+  });
+  it('does not appoint an officer to a vacancy while his sourced assignment is being issued or is in transit', () => {
+    for (const issued of [false, true]) {
+      const m = { ...doctrine({ appointments: [{ ...appointment, from: null, issued }] }),
+        candidates: [{ person: appointment.person, kind: 'general', seniority: 10 }],
+        vacancies: [{ post: post('other'), arm: 'land' as const, routes: appointment.routes, appointing: false }] };
+      expect(principalOrders(m, [], 3).some(c => c.cmd === 'appoint' && c.post === post('other'))).toBe(false);
+    }
+  });
+});
 /** Days that are not his doctrine's inquiry days, so tests of the other jobs see only their own commands. */
 const quiet = (orders: readonly { cmd: string }[]) => orders.filter((o) => o.cmd !== 'inquire');
 const memo = (receivedDay: number, about: string): ReportView => ({

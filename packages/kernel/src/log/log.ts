@@ -73,7 +73,7 @@ export function entryProblems(raw: unknown, i: number): string[] {
     pressure: ['cmd', 'person'],
     address: ['bloc', 'cmd'],
   };
-  const fields = [...FIELDS[c.cmd as string]!, ...(c.cmd === 'call' ? ['men', 'callId', 'arm', 'readiness'].filter(k => Object.hasOwn(c,k)) : [])].sort(strictCompare);
+  const fields = [...FIELDS[c.cmd as string]!, ...(c.cmd === 'call' ? ['men', 'callId', 'arm', 'readiness'].filter(k => Object.hasOwn(c,k)) : []), ...(c.cmd === 'appoint' && Object.hasOwn(c, 'from') ? ['from'] : [])].sort(strictCompare);
   const keys = Object.keys(c).sort(strictCompare);
   if (keys.join() !== fields.join()) return [...problems, `${at}: ${String(c.cmd)} has fields [${keys.join(', ')}], expected [${fields.join(', ')}]`];
   const id = (v: unknown) => typeof v === 'string' && isWellFormedId(v);
@@ -138,6 +138,7 @@ function verbProblems(c: Partial<Record<string, unknown>>): string[] {
     case 'appoint':
       need('post', 'a post id');
       need('person', 'a person id');
+      if (Object.hasOwn(c, 'from')) need('from', 'a post id');
       maybe('rank', 'a rank id');
       route();
       break;

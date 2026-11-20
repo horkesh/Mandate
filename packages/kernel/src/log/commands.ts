@@ -146,6 +146,8 @@ export type ReliefMode = (typeof RELIEF_MODES)[number];
 /** Appoint a person to a post (a vacant one: relieve its holder first), optionally conferring a rank (a volunteer general). */
 export interface AppointCommand {
   readonly cmd: 'appoint';
+  /** Reassignment from the named current post; absent keeps the ordinary unposted-candidate guard. */
+  readonly from?: PostId;
   readonly post: PostId;
   readonly person: PersonId;
   readonly rank: string | null;
