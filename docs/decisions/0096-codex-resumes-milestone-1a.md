@@ -1,6 +1,6 @@
 # 0096: Codex resumes milestone 1A
 
-Status: accepted (2026-11-19). The owner: "Give him more work, he can do anything you can, I want to use his tokens". Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0092 (Codex's scope and its use of git).
+Status: accepted (2026-11-19). The owner: "Give him more work, he can do anything you can, I want to use his tokens". Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0092 (Codex's scope and its use of git). Amended by 0106 (the sprint to 22 November: Codex commits on its own branches, and review is deferred to the sprint's end).
 
 ## Context
 

@@ -1,6 +1,6 @@
 # 0092: Codex takes coding tasks through its command line
 
-Status: accepted (2026-11-18). The owner: "since we now know you can use Codex CLI, use it for coding tasks as well". Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0048 (Codex's scope). Amended by 0096 (Codex takes over the paused 1A lanes, reviews Claude's work, and may use git to read).
+Status: accepted (2026-11-18). The owner: "since we now know you can use Codex CLI, use it for coding tasks as well". Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0048 (Codex's scope). Amended by 0096 (Codex takes over the paused 1A lanes, reviews Claude's work, and may use git to read). Amended by 0106 (during the sprint to 22 November, Codex commits on its own sprint branch).
 
 ## Context
 
