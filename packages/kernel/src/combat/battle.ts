@@ -244,6 +244,8 @@ export function combatDay(world: PrincipalLookup, ground: MarchGround, state: St
   for (const [region, all] of presence) {
     const shares = state.regionControl[region] ?? {};
     const open = openBattleIn(state, region);
+    // Operations already resolved today's fire across water. The shore batteries are not standing in the fort.
+    if (open !== null && lastDay(state.battleRecords[open]!)?.bdayDay === day && lastDay(state.battleRecords[open]!)?.bdayType === 'bombard') continue;
     // Neutral ground nobody holds a share of is passed, never fought over (0055; review S1).
     const neutral = Object.keys(shares).length === 0 && ground.network.neutralGround?.[region] !== undefined;
     if (all.length < 2 || neutral) {

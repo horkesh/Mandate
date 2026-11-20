@@ -1,0 +1,58 @@
+{
+  "id": "virginia_forces_transferred",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.virginia_forces_transferred.title",
+  "text": "situation.virginia_forces_transferred.text",
+  "earliest": "1861-06-06",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 93
+      },
+      {
+        "flag": "virginia_seceded"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_virginia",
+        "delta": 1,
+        "reason": "state-forces-transferred",
+        "side": "confederate",
+        "stateForces": {
+          "id": "cs_va_transfer_virginia",
+          "regiments": null,
+          "men": null,
+          "arm": "infantry",
+          "termDays": null,
+          "termUnknown": true
+        }
+      }
+    },
+    {
+      "setFlag": "virginia_forces_transferred"
+    }
+  ],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative entry of state military forces only; no motive or secession-cause claim, slavery policy, security order, civilian conduct or protected-population effect."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 pp. 911–912, proclamation dated 6 June, published in General Orders 25 on 8 June"
+    }
+  ],
+  "namedOnly": "The state institution’s act is reported; no individual’s speech or discretionary decision is asserted."
+}

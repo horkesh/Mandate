@@ -289,9 +289,11 @@ export const RulesSchema = z.strictObject({
             crossNeutral: z.boolean().describe('Whether his goals may cross a neutral government’s open ground: a political act (lane 1.12).'),
             concentrateAt: idOf('post').nullable().describe('The post his raised regiments are transferred to; null leaves them with the governors.'),
             concentrateSource: z.string().min(1).nullable().describe('Why that post: the research it rests on, the choice of post labelled [I]; null exactly when concentrateAt is.'),
+            concentrations: z.array(z.strictObject({ post: idOf('post'), fromDate: historicalDate, requiresDepartment: idOf('department'), fromPosts: z.array(idOf('post')), source: z.string().min(1) })).optional().describe('Dated concentration changes after a government joins this side and the receiving command exists; transfer only from named old posts and governors.'),
+            appointments: z.array(z.union([z.strictObject({ post: idOf('post'), person: idOf('person'), fromPost: idOf('post').nullable(), fromDate: historicalDate, requiresDepartment: idOf('department'), source: z.string().min(1) }), z.strictObject({ post: idOf('post'), person: idOf('person'), onDate: isoDate, source: z.string().min(1) })])).optional().describe('Sourced appointments establishing declared commands through the existing appointment verb, conditional on government side and commander eligibility.'),
             calls: z
-              .array(z.strictObject({ post: idOf('post'), regiments: positive, termDays: positive, fromDate: historicalDate, source: z.string().min(1) }))
-              .describe('His calls for regiments, each once, from its date (or the day after war, if later); each cites its source. Remove a row when a situation makes the same call (one owner per levy).'),
+              .array(z.strictObject({ id: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(), post: idOf('post'), regiments: positive.nullable().describe('Regiments requested; null when only an unquantified sub-regimental unit is documented.'), men: positive.nullable().optional().describe('Exact headcount; null preserves an unquantified unit, absent uses menPerRegiment.'), arm: termId.optional(), readiness: z.boolean().optional(), termDays: positive.nullable().describe('Days from muster, or null for the war.'), fromDate: historicalDate, atPeace: z.boolean().optional(), source: z.string().min(1) }))
+              .describe('Each identified dated requisition goes once; distinct IDs allow repeats to a governor. atPeace permits a cited pre-war call. readiness records an answer without muster. Remove a row when a situation owns the same requisition.'),
             offensives: z
               .array(z.strictObject({ post: idOf('post'), objective: idOf('region'), fromDate: historicalDate, source: z.string().min(1) }))
               .describe('The offensive goals he gives, each from its date (or the day after war, if later); each cites its source.'),
@@ -308,6 +310,7 @@ export const RulesSchema = z.strictObject({
   latency: z
     .strictObject({
       wireDays: nonNegative.describe('Days for a message on the wire between two wired regions. A design parameter.'),
+      publicWires: z.array(z.strictObject({ from: idOf('region'), to: idOf('region'), faction: idOf('faction'), fromDate: historicalDate, throughDate: historicalDate, source: z.string().min(1) })).optional().describe('Cited public-office access between these places on these dates, independent of military control; enemy-held endpoints close it. No entry means no public access.'),
       mailPermille: nonNegative.describe('The mail against a courier, permille (slower: above 1000). A design parameter.'),
       specialMessengerPermille: permille.describe('A special messenger against a courier, permille (faster: at most 1000). A design parameter.'),
       courierNoiseMaxDays: nonNegative.describe('The most extra days a courier or the mail can lose to roads and weather. A design parameter.'),
@@ -562,6 +565,7 @@ export const RulesSchema = z.strictObject({
       verbs: z
         .strictObject({
           weekDays: positive,
+          initiativeAt: int.describe('Willingness needed for spontaneous initiative admission, separate from ordinary compliance (0105). Design parameter.'),
           orderValues: z
             .array(z.strictObject({ order: z.string().min(1), boldness: permille.nullable(), honours: z.array(termId), offends: z.array(termId), gateTopics: z.array(termId), notCheaperThan: z.string().min(1).nullable(), clashes: z.array(termId).default([]) }))
             .describe('The map from orders to values (0074): gate content; a row tagged with gate topics needs the gate reviewer’s sign-off.'),

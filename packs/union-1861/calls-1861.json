@@ -1,0 +1,297 @@
+{
+  "status": "R90 sourced call and transfer catalogue; record is distinct from execution",
+  "records": [
+    {
+      "id": "cs_feb28",
+      "date": "1861-02-28",
+      "side": "confederate",
+      "kind": "authorization",
+      "maximumMen": null,
+      "term": "State forces tendered, not less than twelve months unless sooner discharged; existing officers and enlistments retained",
+      "source": "OR IV-1 p.117 (https://ehistory.osu.edu/books/official-records/127/0117)",
+      "execution": "Legal basis, not another numerical levy"
+    },
+    {
+      "id": "cs_mar06",
+      "date": "1861-03-06",
+      "side": "confederate",
+      "kind": "authorization",
+      "maximumMen": 100000,
+      "term": "Volunteers twelve months unless sooner discharged; militia at most six months; companies, squadrons, battalions and regiments",
+      "source": "OR IV-1 pp.126-127 (https://ehistory.osu.edu/books/official-records/127/0126)",
+      "execution": "Ceiling, not a 100,000-man call in addition to the requisitions"
+    },
+    {
+      "id": "cs_mar11",
+      "date": "1861-03-11",
+      "side": "confederate",
+      "kind": "appropriation",
+      "term": "Regular Army support for twelve months; Secretary may apply appropriations to provisional forces",
+      "source": "OR IV-1 pp.148-149 (https://ehistory.osu.edu/books/official-records/127/0149)",
+      "execution": "Funding authority, not another levy or a change of enlistments"
+    },
+    {
+      "id": "cs_mar12",
+      "date": "1861-03-12",
+      "side": "confederate",
+      "kind": "appropriation",
+      "dollars": 5000000,
+      "term": "Pay, subsistence and transportation of volunteers under the public-defense act",
+      "source": "OR IV-1 p.149 (https://ehistory.osu.edu/books/official-records/127/0149)",
+      "execution": "Funding authority, not another troop call"
+    },
+    {
+      "id": "cs_mar09",
+      "date": "1861-03-09",
+      "side": "confederate",
+      "kind": "call",
+      "men": 11700,
+      "term": "Immediate service under provisional-forces act",
+      "source": "OR IV-1 p.135 (https://ehistory.osu.edu/books/official-records/127/0135)",
+      "doctrine": [
+        "cs_mar09_south_carolina",
+        "cs_mar09_alabama",
+        "cs_mar09_florida",
+        "cs_mar09_georgia",
+        "cs_mar09_louisiana",
+        "cs_mar09_mississippi",
+        "cs_mar09_texas"
+      ]
+    },
+    {
+      "id": "cs_apr08",
+      "date": "1861-04-08",
+      "side": "confederate",
+      "kind": "call",
+      "men": 19500,
+      "term": "Held in instant readiness; unpaid until mustered; 3,000 each except Florida 1,500",
+      "source": "OR IV-1 p.211 (https://ehistory.osu.edu/books/official-records/127/0211)",
+      "doctrine": [
+        "cs_apr08_south_carolina",
+        "cs_apr08_alabama",
+        "cs_apr08_florida",
+        "cs_apr08_georgia",
+        "cs_apr08_louisiana",
+        "cs_apr08_mississippi",
+        "cs_apr08_texas"
+      ]
+    },
+    {
+      "id": "cs_apr16",
+      "date": "1861-04-16",
+      "side": "confederate",
+      "kind": "call",
+      "men": 32000,
+      "term": "Additional 5,000 each except Florida 2,000, held ready for instant movement",
+      "source": "OR IV-1 pp.221-222 (https://ehistory.osu.edu/books/official-records/127/0221)",
+      "doctrine": [
+        "cs_apr16_south_carolina",
+        "cs_apr16_alabama",
+        "cs_apr16_florida",
+        "cs_apr16_georgia",
+        "cs_apr16_louisiana",
+        "cs_apr16_mississippi",
+        "cs_apr16_texas"
+      ]
+    },
+    {
+      "id": "cs_may08",
+      "date": "1861-05-08",
+      "side": "confederate",
+      "kind": "authorization",
+      "maximumMen": null,
+      "term": "Additional volunteers for and during the existing war, unless sooner discharged",
+      "source": "OR IV-1 p.302 (https://ehistory.osu.edu/books/official-records/127/0302)",
+      "execution": "No 400,000 figure; no unsourced numerical levy"
+    },
+    {
+      "id": "cs_jun30",
+      "date": "1861-06-30",
+      "side": "confederate",
+      "kind": "call",
+      "men": 30000,
+      "term": "Reserve corps for the war, companies accepted without prerequisite arms; additional two cavalry companies from TN, MS, AR, AL, GA have 60-100 privates per company, not a fixed headcount",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412)",
+      "doctrine": [
+        "cs_jun30_reserve_south_carolina",
+        "cs_jun30_reserve_alabama",
+        "cs_jun30_reserve_florida",
+        "cs_jun30_reserve_georgia",
+        "cs_jun30_reserve_louisiana",
+        "cs_jun30_reserve_mississippi",
+        "cs_jun30_reserve_texas",
+        "cs_jun30_reserve_virginia",
+        "cs_jun30_reserve_north_carolina",
+        "cs_jun30_reserve_tennessee",
+        "cs_jun30_reserve_arkansas",
+        "cs_jun30_cavalry_tennessee",
+        "cs_jun30_cavalry_mississippi",
+        "cs_jun30_cavalry_arkansas",
+        "cs_jun30_cavalry_alabama",
+        "cs_jun30_cavalry_georgia"
+      ],
+      "gap": "Supplementary companies enter with unknown headcount and regiment equivalents, not invented full regiments"
+    },
+    {
+      "id": "us_apr15",
+      "date": "1861-04-15",
+      "side": "union",
+      "kind": "call",
+      "men": 75000,
+      "quotaRegiments": 94,
+      "quotaAggregate": 73391,
+      "term": "Three months unless sooner discharged; Pennsylvania 16 reduced to 14 on 16 April; each governor notified by telegram",
+      "source": "OR III-1 pp.67-69,76 (https://ehistory.osu.edu/books/official-records/122/0068)",
+      "situation": "call_for_troops",
+      "execution": "Existing authored decision remains sole issuer; no duplicate doctrine row"
+    },
+    {
+      "id": "us_may03",
+      "date": "1861-05-03",
+      "side": "union",
+      "kind": "call",
+      "volunteers": 42034,
+      "regulars": 22714,
+      "seamen": 18000,
+      "term": "Volunteers three years unless sooner discharged; regular increase eight infantry, one cavalry, one artillery; seamen one to three years; organization 39 volunteer infantry and one cavalry, 4 May",
+      "source": "OR III-1 pp.146,151-156 (https://ehistory.osu.edu/books/official-records/122/0146)",
+      "execution": "National terms recorded; no invented state quotas or conversion of regulars/seamen into governors infantry. Executable accepted state requisitions have their own sourced rows.",
+      "gap": "The national volunteer allocation and central Army/Navy enlistment path remain unrepresented"
+    },
+    {
+      "id": "us_jul22",
+      "date": "1861-07-22",
+      "side": "union",
+      "kind": "authorization",
+      "maximumMen": 500000,
+      "term": "Six months to three years, disbanded at end of war; requisitions state number, arm and states with regard to existing service and Federal population",
+      "source": "OR III-1 pp.380-381,383 (https://ehistory.osu.edu/books/official-records/122/0381)",
+      "execution": "Authorization, not automatic 500,000 new men"
+    },
+    {
+      "id": "us_jul25",
+      "date": "1861-07-25",
+      "side": "union",
+      "kind": "authorization",
+      "maximumMen": 500000,
+      "term": "Volunteers during the war; supplementary act",
+      "source": "OR III-1 p.383 (https://ehistory.osu.edu/books/official-records/122/0383)",
+      "execution": "No automatic duplicate levy; New York proclamation of 25 July and additional acceptance of 30 July have sourced rows"
+    },
+    {
+      "id": "us_jul29",
+      "date": "1861-07-29",
+      "published": "1861-07-31",
+      "side": "union",
+      "kind": "authorization",
+      "infantryRegiments": 9,
+      "cavalryRegiments": 1,
+      "artilleryRegiments": 1,
+      "term": "Regular Army increase; three-year enlistments in 1861 and 1862, five years thereafter; officers conduct recruitment",
+      "source": "OR III-1 pp.372-374 (https://ehistory.osu.edu/books/official-records/122/0374)",
+      "execution": "Regular establishment, not another governor levy; not counted again as the May regular increase"
+    },
+    {
+      "id": "us_jul31",
+      "date": "1861-07-31",
+      "side": "union",
+      "kind": "authorization",
+      "term": "Acceptance under the 22 July act without previous proclamation, in numbers from states required by the service",
+      "source": "OR III-1 p.372 (https://ehistory.osu.edu/books/official-records/122/0372)",
+      "execution": "No number specified, no invented numerical levy"
+    },
+    {
+      "id": "va_transfer",
+      "date": "1861-06-06",
+      "published": "1861-06-08",
+      "side": "confederate",
+      "kind": "transfer",
+      "term": "All mustered Virginia volunteer forces by regiment, navy, staff and stores; original enlistments",
+      "source": "OR I-2 pp.911-912; OR IV-1 p.392 (https://ehistory.osu.edu/books/official-records/002/0912)",
+      "gap": "Transfer occurs 6 June with unknown strength; the same contingent is quantified at 40,000 on 17 June, the first read return. No back-projection.",
+      "formerDoctrine": [
+        "cs_va_transfer_virginia"
+      ],
+      "notices": [
+        "virginia_forces_transferred",
+        "virginia_forces_return"
+      ],
+      "execution": "R97: the state’s own notice, conditional on its secession; existing forces, placement and command owners; no governor compliance or new enlistment term."
+    },
+    {
+      "id": "nc_transfer",
+      "date": "1861-06-27",
+      "side": "confederate",
+      "kind": "transfer",
+      "term": "Organized State troops transferred by regiment; levying ceases 20 August; four twelve-month regiments already in service plus 2,000 accepted; discharge residue on 20 August",
+      "source": "OR IV-1 pp.397,402-404 (https://ehistory.osu.edu/books/official-records/127/0402)",
+      "formerDoctrine": [
+        "cs_nc_state_transfer_north_carolina",
+        "cs_nc_volunteers_north_carolina",
+        "cs_nc_additional_north_carolina"
+      ],
+      "notices": [
+        "north_carolina_forces_transferred"
+      ],
+      "execution": "R97: the state’s own notice, conditional on its secession; existing forces, placement and command owners; no governor compliance or new enlistment term.",
+      "gap": "[I] Four already-serving twelve-month regiments use the unchanged 1,000-men norm; surviving men or pending levies from the included 22 April requisition are credited dynamically, never counted twice. Ten war-term regiments also use that norm, not an exact sourced headcount. Original fixed expiries are unknown."
+    },
+    {
+      "id": "tn_league",
+      "date": "1861-05-07",
+      "side": "confederate",
+      "kind": "transfer-authority",
+      "term": "Military force and operations under Confederate President until admission; subject to both governments ratification; quantitative tender read on 2 July",
+      "source": "OR IV-1 pp.296-297 (https://ehistory.osu.edu/books/official-records/127/0297); quantitative tender pp.411,417",
+      "execution": "R97 notice: military-league authority only; the quantified entry follows the 29 June resolution and 2 July tender, not duplicate May and July forces.",
+      "notices": [
+        "tennessee_military_league"
+      ]
+    },
+    {
+      "id": "tn_tender",
+      "date": "1861-07-02",
+      "side": "confederate",
+      "kind": "transfer",
+      "infantryRegiments": 22,
+      "cavalryRegiments": 2,
+      "artilleryCompanies": 10,
+      "term": "Tender of provisional army under 29 June resolution; original enlistments",
+      "source": "OR IV-1 pp.411,417 (https://ehistory.osu.edu/books/official-records/127/0417)",
+      "gap": "Artillery strength unknown; engineer corps and ordnance staff lack field-force descriptions. Tender is not a completion certificate.",
+      "formerDoctrine": [
+        "cs_tn_infantry_tennessee",
+        "cs_tn_cavalry_tennessee",
+        "cs_tn_artillery_tennessee"
+      ],
+      "notices": [
+        "tennessee_forces_transferred",
+        "tennessee_forces_return"
+      ],
+      "execution": "R97: the state’s own notice, conditional on its secession; existing forces, placement and command owners; no governor compliance or new enlistment term."
+    },
+    {
+      "id": "ar_transfer",
+      "date": "1861-07-15",
+      "side": "confederate",
+      "kind": "transfer",
+      "infantryRegiments": 7,
+      "cavalryRegiments": 1,
+      "cavalryBattalions": 1,
+      "artilleryCompanies": 5,
+      "term": "Consenting State troops; original enlistments and clothing obligations",
+      "source": "OR I-3 pp.609-610 (https://ehistory.osu.edu/books/official-records/003/0609)",
+      "gap": "Cavalry battalion and artillery companies enter with unknown headcount and regiment equivalents",
+      "formerDoctrine": [
+        "cs_ar_infantry_arkansas",
+        "cs_ar_cavalry_arkansas",
+        "cs_ar_cavalry_battalion_arkansas",
+        "cs_ar_artillery_arkansas"
+      ],
+      "notices": [
+        "arkansas_forces_transferred"
+      ],
+      "execution": "R97: the state’s own notice, conditional on its secession; existing forces, placement and command owners; no governor compliance or new enlistment term."
+    }
+  ]
+}

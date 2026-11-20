@@ -1,0 +1,94 @@
+{
+  "id": "tennessee_forces_transferred",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.tennessee_forces_transferred.title",
+  "text": "situation.tennessee_forces_transferred.text",
+  "earliest": "1861-06-29",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 116
+      },
+      {
+        "flag": "tennessee_seceded"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_tennessee",
+        "delta": 1,
+        "reason": "state-forces-transferred",
+        "side": "confederate",
+        "stateForces": {
+          "id": "cs_tn_infantry_tennessee",
+          "regiments": null,
+          "men": null,
+          "arm": "infantry",
+          "termDays": null,
+          "termUnknown": true
+        }
+      }
+    },
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_tennessee",
+        "delta": 1,
+        "reason": "state-forces-transferred",
+        "side": "confederate",
+        "stateForces": {
+          "id": "cs_tn_cavalry_tennessee",
+          "regiments": null,
+          "men": null,
+          "arm": "cavalry",
+          "termDays": null,
+          "termUnknown": true
+        }
+      }
+    },
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_tennessee",
+        "delta": 1,
+        "reason": "state-forces-transferred",
+        "side": "confederate",
+        "stateForces": {
+          "id": "cs_tn_artillery_tennessee",
+          "regiments": null,
+          "men": null,
+          "arm": "artillery",
+          "termDays": null,
+          "termUnknown": true
+        }
+      }
+    },
+    {
+      "setFlag": "tennessee_forces_transferred"
+    }
+  ],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative entry of state military forces only; no motive or secession-cause claim, slavery policy, security order, civilian conduct or protected-population effect."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "IV-1 p. 411, joint resolution adopted 29 June"
+    }
+  ],
+  "namedOnly": "The state institution’s act is reported; no individual’s speech or discretionary decision is asserted."
+}

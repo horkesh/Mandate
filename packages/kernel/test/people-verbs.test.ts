@@ -13,6 +13,7 @@ import { goalTerms } from './support/test-seats.ts';
 import { answerOrder, contextFor, orderTerms, profileOf, pushbackOf } from '../src/reading/orders.ts';
 import type { State } from '../src/root-state.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
+import { morningGround, principalMenu } from '../src/seats/requests.ts';
 import { indexSeatsWorld, type SeatsWorld } from '../src/seats/world.ts';
 import type { OptionDef, SituationDef } from '../src/situations/types.ts';
 import { attentionPrice } from '../src/tick/attention.ts';
@@ -67,6 +68,58 @@ const audienceResponse = (state: State) => Object.values(state.orderResponses).f
 
 const answered = (state: State) =>
   knowledgeOf(state, lead).knownReports.flatMap((r) => r.knownBody.reportClaims.filter((c) => c.claimKind === 'verb-answered').map((c) => `${r.knownBody.reportAuthor}:${c.claimToken}:${c.claimValue}`));
+
+describe('appointment to a declared temporary command (0040)', () => {
+  function commandWorld(creation: 'appoint' | 'directive' | 'start_only' = 'appoint', refusing = false): SeatsWorld {
+    const base = indexedFixture(refusing ? { persons: { a_spy: { regard: 'low', candour: 'high', values: ['reputation'] } } } : {});
+    const row = { post: POST('new_command'), person: P('a_spy'), onDate: '1900-06-03', source: 'TB-DESIGN: a dated appointment' };
+    const map = indexWorld({ ...base.map.world,
+      vocabularies: { ...base.map.world.vocabularies, postKinds: base.map.world.vocabularies.postKinds.map((k) => k.id === 'expedition' ? { ...k, creatable: creation } : k) },
+      rules: { ...base.map.world.rules, ruleSeats: { ...base.map.world.rules.ruleSeats, principals: base.map.world.rules.ruleSeats.principals.map((r) => r.faction === F('a') ? { ...r, appointments: creation === 'appoint' ? [row] : [] } : r) } },
+    });
+    return indexSeatsWorld(map, { ...base.start, temporaryPosts: [{ id: POST('new_command'), name: 'post.new_command', kind: 'expedition', department: toId('department', 'a_war'), parent: POST('a_office'), holder: null, region: R('a_cap'), operation: 'new_operation' }] });
+  }
+
+  it('offers a dated appointment only to the rule driver on its day, without opening the post', () => {
+    const world = commandWorld();
+    const start = createState(world, { seed: 1 });
+    const offer = (state: State) => principalMenu(world, state, F('a'), morningGround(world, state, state.stateDay + 1));
+    expect(offer(start).historicalAppointments ?? []).toEqual([]);
+    const due = { ...start, stateDay: 1 };
+    expect(offer(due).historicalAppointments).toEqual([expect.objectContaining({ post: POST('new_command'), person: P('a_spy') })]);
+    expect(due.postStates[POST('new_command')]).toBeUndefined();
+    expect(offer({ ...due, stateDay: 2 }).historicalAppointments ?? []).toEqual([]);
+    const human = createState(world, { seed: 1, drivers: { a_lead: 'human' } });
+    expect(offer({ ...human, stateDay: 1 }).historicalAppointments).toBeUndefined();
+    const ai = createState(world, { seed: 1, drivers: { a_lead: 'ai' } });
+    expect(offer({ ...ai, stateDay: 1 }).historicalAppointments).toBeUndefined();
+  });
+
+  it('opens the command only when the appointee accepts the delivered letter, retaining other holders', () => {
+    const world = commandWorld();
+    const start = createState(world, { seed: 1, drivers: { a_lead: 'human' } });
+    const run = days(world, start, 2, { 1: [{ cmd: 'appoint', post: POST('new_command'), person: P('a_spy'), rank: null, route: 'courier' }] });
+    expect(fired(run.results)).toEqual([]);
+    expect(run.state.postStates[POST('new_command')]).toMatchObject({ postHolder: P('a_spy'), postOperation: 'new_operation' });
+    expect(run.state.postStates[POST('a_army')]).toEqual(start.postStates[POST('a_army')]);
+    expect(run.fires('command.temporary_post_opened')).toBe(1);
+    expect(answers(run.state, 'a_spy')).toEqual([expect.objectContaining({ respKind: 'verb:appoint' })]);
+  });
+
+  it('leaves no command behind when the man declines and rejects undeclared or non-appointment kinds', () => {
+    const world = commandWorld('appoint', true);
+    const command: Command = { cmd: 'appoint', post: POST('new_command'), person: P('a_spy'), rank: null, route: 'courier' };
+    const no = days(world, createState(world, { seed: 1 }), 2, { 1: [command] });
+    expect(fired(no.results)).toEqual([]);
+    expect(no.state.postStates[POST('new_command')]).toBeUndefined();
+    expect(no.fires('verbs.declined')).toBe(1);
+    for (const kind of ['directive', 'start_only'] as const) {
+      const bad = commandWorld(kind);
+      expect(fired(days(bad, createState(bad, { seed: 1 }), 1, { 1: [command] }).results)).toEqual(['unknown_post']);
+    }
+    expect(fired(days(world, createState(world, { seed: 1 }), 1, { 1: [{ ...command, post: POST('undeclared') }] }).results)).toEqual(['unknown_post']);
+  });
+});
 
 /** `state` with an approved plan to hold at a_army (the plans machinery would put it there; here its status is set directly). */
 function planned(state: State): State {
@@ -464,6 +517,33 @@ describe('M2’s audience cases on the new State (P3)', () => {
 });
 
 describe('the ladder, rivals and seat initiatives (P5, P6; 0040)', () => {
+  it('admits initiatives by their own threshold while ordinary orders still use complyAt', () => {
+    const base = indexedFixture();
+    const world = withPeople(base, { initiativeAt: 150, initiatives: [{ id: 'write_to_the_press', kinds: ['officer'], boldness: 800, honours: ['glory'], offends: [], fromRung: 'loyal', cooldownDays: 28, recommends: 'publish' }] });
+    const people = world.map.world.rules.people;
+    const lowCompliance = indexSeatsWorld(indexWorld({ ...world.map.world, rules: { ...world.map.world.rules, people: { ...people, compliance: { ...people.compliance, complyAt: -1000 } } } }), world.start);
+    const run = (w: SeatsWorld) => days(w, createState(w, { seed: 1 }), 21);
+    const before = run(world);
+    const after = run(lowCompliance);
+    expect(before.fires('seats.initiative')).toBe(1);
+    expect(after.state.seatInitiatives).toEqual(before.state.seatInitiatives);
+    expect(after.results.flatMap(r => r.events.filter(e => e.event === 'initiative'))).toEqual(before.results.flatMap(r => r.events.filter(e => e.event === 'initiative')));
+    const terms = { boldness: 800, honours: ['glory'], offends: [], required: 0 };
+    expect(answerOrder(world, createState(world, { seed: 1 }), P('a_gen'), P('a_lead'), terms).actual).not.toBe('comply');
+    expect(answerOrder(lowCompliance, createState(lowCompliance, { seed: 1 }), P('a_gen'), P('a_lead'), terms).actual).toBe('comply');
+    // The new rule can independently stop even an initiative that would exceed an order.
+    const highInitiative = withPeople(world, { initiativeAt: 10000 });
+    expect(run(highInitiative).fires('seats.initiative')).toBe(0);
+    expect(answerOrder(highInitiative, createState(highInitiative, { seed: 1 }), P('a_bold'), P('a_lead'), terms)).toEqual(answerOrder(world, createState(world, { seed: 1 }), P('a_bold'), P('a_lead'), terms));
+  });
+
+  it('requires a whole initiative admission threshold in every pack', () => {
+    const rules = indexedFixture().map.world.rules.people;
+    const check = (initiativeAt: unknown) => verbRulesProblems(rules.attention, { ...rules.verbs, initiativeAt } as PeopleRules['verbs'], [], []);
+    for (const value of [undefined, 1.5, NaN, Infinity]) expect(check(value)).toContain('people rule verbs.initiativeAt must be a whole number');
+    for (const value of [-1000, 0, 150, 10000]) expect(check(value)).not.toContain('people rule verbs.initiativeAt must be a whole number');
+  });
+
   it('a man with grievances climbs one rung a week; a famous one on lobbying becomes a rival; his rung costs willingness', () => {
     const world = indexedFixture();
     const s = createState(world, { seed: 1 });
@@ -567,6 +647,34 @@ describe('the map from orders to values (0074)', () => {
 });
 
 describe('regard between people (lane 1.5’s column)', () => {
+  it('offers consultation only to held own-side posts of open-option proposers, and suppresses sent requests', () => {
+    const sit = decision('choice', { options: [
+      option('hold', 1, { proposedBy: [P('a_sec'), P('a_gen'), P('b_gen'), P('a_bold')] }),
+      option('press', 2, { proposedBy: 'inaction' }),
+    ] });
+    const world = indexedFixture({}, [sit]);
+    const initial = createState(world, { seed: 1, drivers: { a_lead: 'human' } });
+    const start = { ...initial, postStates: { ...initial.postStates, a_reserve: { ...initial.postStates[POST('a_reserve')]!, postHolder: null } } };
+    const opened = days(world, start, 1).state;
+    const offered = (state: State) => principalMenu(world, state, F('a'), morningGround(world, state, state.stateDay + 1)).situations[0]?.consultPosts;
+    expect(offered(opened)).toEqual([POST('a_army'), POST('a_office')]);
+    const sent = days(world, opened, 1, { 2: [{ cmd: 'consult', situation: S('choice'), posts: [POST('a_army'), POST('a_office')] }] });
+    expect(fired(sent.results)).toEqual([]);
+    expect(offered(sent.state)).toEqual([]);
+    const arrived = days(world, sent.state, 5).state;
+    expect(offered(arrived)).toEqual([]);
+    expect(Object.values(arrived.orderResponses).some((r) => r.respKind === 'verb:consult')).toBe(true);
+  });
+  it('keeps consultations distinct by situation even when the message key is shortened', () => {
+    const name = `question_${'long_'.repeat(20)}`;
+    const world = indexedFixture({}, [decision(name), decision('other')]);
+    const opened = days(world, createState(world, { seed: 1, drivers: { a_lead: 'human' } }), 1).state;
+    const result = days(world, opened, 3, { 2: [{ cmd: 'consult', situation: S(name), posts: [POST('a_office')] }] }).state;
+    const choices = principalMenu(world, result, F('a'), morningGround(world, result, result.stateDay + 1)).situations;
+    expect(Object.values(result.orderResponses).find((r) => r.respKind === 'verb:consult')?.respOrder).toMatch(/^m\.2\.[a-f0-9]{16}$/);
+    expect(choices.find((c) => c.situation === name)?.consultPosts).toEqual([]);
+    expect(choices.find((c) => c.situation === 'other')?.consultPosts).toEqual([POST('a_office')]);
+  });
   it('starts from the World’s cited regard for others, and the unknown elsewhere', () => {
     const world = indexedFixture();
     const people = world.map.world.people.map((p) => (p.id === P('a_gen') ? { ...p, regardOthers: [{ toward: P('a_bold'), direction: 'low' as const, cites: [{ source: 'FIXTURE', at: null }] }] } : p));

@@ -85,9 +85,16 @@ export interface CallCommand {
   /** The governor's post. */
   readonly to: PostId;
   /** Regiments asked of him. */
-  readonly regiments: number;
-  /** Days the men are enlisted for, from the muster. */
-  readonly termDays: number;
+  readonly regiments: number | null;
+  /** A separately sourced headcount; absent uses the pack's men per regiment. */
+  readonly men?: number | null;
+  /** Identity of a dated pack call, distinct from another call to the same governor. */
+  readonly callId?: string;
+  readonly arm?: string;
+  /** Hold ready only; an absolute requisition must follow before muster. */
+  readonly readiness?: boolean;
+  /** Days from muster, or null for service during the war. */
+  readonly termDays: number | null;
   readonly route: RouteKind;
   readonly bypass: boolean;
 }
@@ -142,6 +149,8 @@ export type ReliefMode = (typeof RELIEF_MODES)[number];
 /** Appoint a person to a post (a vacant one: relieve its holder first), optionally conferring a rank (a volunteer general). */
 export interface AppointCommand {
   readonly cmd: 'appoint';
+  /** Reassignment from the named current post; absent keeps the ordinary unposted-candidate guard. */
+  readonly from?: PostId;
   readonly post: PostId;
   readonly person: PersonId;
   readonly rank: string | null;

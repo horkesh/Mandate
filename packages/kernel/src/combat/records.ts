@@ -108,7 +108,8 @@ export interface BattleDay {
   readonly bdayDay: number;
   /** 1 on the battle's first day. */
   readonly bdayNumber: number;
-  readonly bdayType: BattleType;
+  /** Fire across water has its own daily resolution, without a land-battle rate or phase distribution. */
+  readonly bdayType: BattleType | 'bombard';
   /** The attacking side, or null in a meeting engagement (both attack). */
   readonly bdayAttacker: FactionId | null;
   readonly bdayFrontage: number;

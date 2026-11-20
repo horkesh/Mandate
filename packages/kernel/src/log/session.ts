@@ -68,7 +68,7 @@ export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
     if (c.cmd === 'delegate') return { day, seat, command: { cmd: 'delegate', situation: c.situation, to: c.to } };
     if (c.cmd === 'go') return { day, seat, command: { cmd: 'go', to: c.to, route: c.route, bypass: c.bypass } };
     if (c.cmd === 'battle') return { day, seat, command: { cmd: 'battle', post: c.post, commit: c.commit, night: c.night, cutOff: c.cutOff, pursue: c.pursue } };
-    if (c.cmd === 'call') return { day, seat, command: { cmd: 'call', to: c.to, regiments: c.regiments, termDays: c.termDays, route: c.route, bypass: c.bypass } };
+    if (c.cmd === 'call') return { day, seat, command: { cmd: 'call', to: c.to, regiments: c.regiments, termDays: c.termDays, route: c.route, bypass: c.bypass, ...(c.men === undefined ? {} : { men: c.men }), ...(c.callId === undefined ? {} : { callId: c.callId }), ...(c.arm === undefined ? {} : { arm: c.arm }), ...(c.readiness === undefined ? {} : { readiness: c.readiness }) } };
     if (c.cmd === 'review') {
       const e = c.edit;
       const edit = e === null ? null : { kind: e.kind, axis: e.axis, region: e.region, via: [...e.via], concentration: e.concentration };
@@ -77,7 +77,7 @@ export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
     // Lane 1.5: the people verbs, copied field by field like the rest.
     switch (c.cmd) {
       case 'appoint':
-        return { day, seat, command: { cmd: 'appoint', post: c.post, person: c.person, rank: c.rank, route: c.route } };
+        return { day, seat, command: { cmd: 'appoint', post: c.post, person: c.person, rank: c.rank, route: c.route, ...(c.from === undefined ? {} : { from: c.from }) } };
       case 'relieve':
         return { day, seat, command: { cmd: 'relieve', post: c.post, mode: c.mode, to: c.to, route: c.route } };
       case 'transfer':

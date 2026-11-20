@@ -1,0 +1,96 @@
+{
+  "id": "north_carolina_forces_transferred",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.north_carolina_forces_transferred.title",
+  "text": "situation.north_carolina_forces_transferred.text",
+  "earliest": "1861-06-27",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 114
+      },
+      {
+        "flag": "north_carolina_seceded"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_north_carolina",
+        "delta": 1,
+        "reason": "state-forces-transferred",
+        "side": "confederate",
+        "stateForces": {
+          "id": "cs_nc_state_transfer_north_carolina",
+          "regiments": 10,
+          "men": 10000,
+          "arm": "infantry",
+          "termDays": null
+        }
+      }
+    },
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_north_carolina",
+        "delta": 1,
+        "reason": "state-forces-transferred",
+        "side": "confederate",
+        "stateForces": {
+          "id": "cs_nc_volunteers_north_carolina",
+          "regiments": 4,
+          "men": 4000,
+          "arm": "infantry",
+          "termDays": null,
+          "termUnknown": true,
+          "includesCalls": [
+            "cs_apr22_absolute_north_carolina"
+          ]
+        }
+      }
+    },
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_north_carolina",
+        "delta": 1,
+        "reason": "state-forces-transferred",
+        "side": "confederate",
+        "stateForces": {
+          "id": "cs_nc_additional_north_carolina",
+          "regiments": 2,
+          "men": 2000,
+          "arm": "infantry",
+          "termDays": null,
+          "termUnknown": true
+        }
+      }
+    },
+    {
+      "setFlag": "north_carolina_forces_transferred"
+    }
+  ],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative entry of state military forces only; no motive or secession-cause claim, slavery policy, security order, civilian conduct or protected-population effect."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "IV-1 pp. 396–397, Walker to Graham and Ruffin, 23 June, ten war-term regiments; pp. 402–404, ordinance passed 27 June"
+    }
+  ],
+  "namedOnly": "The state institution’s act is reported; no individual’s speech or discretionary decision is asserted."
+}

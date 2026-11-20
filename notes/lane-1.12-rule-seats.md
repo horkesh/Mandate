@@ -2,7 +2,21 @@
 
 Main merged at `364aba0` on 2026-11-19, by R46. R48 starts from the committed merge at `8b15e6e`, in `C:/Pyrrhic/mandate-rule-seats-b`, branch `phase1-rule-seats-b`.
 
-## Where lane 1.12 stopped (2026-11-19, R81)
+## Where lane 1.12 stopped (2026-11-20, R98)
+
+R98 adds sourced, government-dependent northern command assignments and concentration through existing transfers and joins, on `phase1-manassas-1861` at `4f6e8b3`. Beauregard takes the new command after his appointment letter arrives; Johnston's entry waits on the resignation/service implementation missing from this base. The existing Union advance produces battles at Manassas on 27, 29 and 31 July, with Stone still commanding the Union post. No battle date, location or weight was added. The full R98 account and proposed rulings are at the end of this hand-over.
+
+Exact no-Git check: exit 0, 133 files / 1,489 passed / three existing skips. One normal eight-seed done check with drafting: exit 0, Phase 0 6/6; 1A 2/6. **1A remains unmet:** checkpoints, pushback, unknown strength and the lever sweep fail. Four unknown Confederate blocks fought; the watched return option is best in 3/8 seeds. No D6 clearance. Evidence: `runs/r98/final-checks.json`. Independent review remains with Claude under 0096.
+
+### R81 stopping point (retained)
+
+## Where lane 1.12 stopped (2026-11-20, R89)
+
+**R89 delivers the Butler history appointment under the lead's command-mapping ruling.** On 22 May/day 78 Lincoln sends an ordinary appointment to `us_dept_virginia`; Butler accepts with reservations. Dimick retains `us_fort_monroe` every day through 31 July. The unsigned placeholder and its two strings are removed. The R89 section below supersedes the earlier Butler holds and the original Part B brief's Fort Monroe post ID. R84's consultation remains built; the lead accepted keeping the July message as the ledger's answer to Congress.
+
+R89 history/replay/day-60 resume pass. The normal eight-seed done check with drafting exits 0, **Phase 0 6/6, 1A 2/6**. The exact full check exits 1 at one stale placeholder assertion: **1,480 passed / 1 failed / 3 existing skips**. Corrected that test only; its nine cases and all remaining gates pass. Unaffected suite evidence is reused, not reported as an exact full-command exit 0. Evidence: `runs/r89/final-checks.json`. Independent review belongs to Claude under 0096. The human-driven sweep's missing department carrier is a new finding for the lead, gate reviewer and R85; the four failed 1A categories remain binding.
+
+The following R81 summary is historical. Decision 0104 now records the accepted Linux CI result; its earlier pending-CI statements below are the limits of that earlier run, not a new R84 hold.
 
 **R80 is committed as `f444fa2`; R81 changes only the cost of looking up a post holder.** Its linear scan returns the same code-unit-first own matching post. The two decision-led 148-day paths preserve every daily hash and liveness count; the normal done check also preserves all 120 testbed hashes, replay and save/resume. R80 below remains the account of the opening's dates and delivery order. All save fixtures, bands, pack data and signed/gate inputs remain unchanged.
 
@@ -496,3 +510,233 @@ For the lead:
 
 1. **Lead / steward:** unloaded and Linux CI confirmation remain outstanding. The 28 ms number is met in the recorded loaded samples, but this is not an unloaded or hosted-CI claim.
 2. **Lead / lane 1.14 and R79:** the inherited five 1A failure categories, hook bound, stand-in labels and Taney follow-ups remain separate work. No R79 item was undertaken.
+
+## R90: shared call doctrine (2026-11-20)
+
+The R90 hand-over is in **`notes/lane-1.7-men-regions.md`, R90**, with `runs/r90/final-checks.json` as evidence index. It supersedes Part A's once-per-governor suppression: 65 identified dated requisitions may repeat to a governor, while each identity is sent once. Explicit sourced peacetime calls do not set a war flag. Conditional readiness requests receive an answer without mustering. The authored 15 April militia decision remains its sole issuer. The public Cameron–Letcher wire brings the unchanged signed Virginia situation to 17 April.
+
+The history still has no Confederate force near Manassas or battle there. The concentration post remains Charleston. Virginia, North Carolina and Tennessee object to transfer calls; Arkansas's transfer is due after July. The full check exits 1 (four band-dependent failures remain after a focused fixture correction); the full done check exits 1, Phase 0 4/6 and 1A 2/6, including a 40.44 ms history median against 40. No band, threshold, trait, signed item or men-per-regiment rule was fitted. Independent review remains with Claude under 0096.
+
+## Findings outside my scope
+
+The R90 primary hand-over routes the source/term limits, missing national enlistment path, call-purpose/compliance issue, absent Manassas establishment and every unmet gate. R87–R89 and R91–R93 were not undertaken here.
+
+## R98: Confederate concentration in northern Virginia (2026-11-20)
+
+For the lead: 3 items. R98 only in `C:/Pyrrhic/mandate-manassas-1861`, branch `phase1-manassas-1861`, retaining `4f6e8b30c344319802511eca534dff6a2c6a95cc`. `npm ci` ran first: exit 0, 51 packages, zero vulnerabilities. Git was read-only; R97's checkout was not touched. Review remains with Claude under 0096. Evidence index: `runs/r98/final-checks.json`.
+
+### Delivered and sourced
+
+- Pack doctrine declares Johnston's Harpers Ferry command and Beauregard's Alexandria-line command at Manassas. Both wait for Virginia's live department side to be Confederate and for an eligible serving officer. The commands have no opening forces. Dated concentration changes select an established command; governors and the named former concentration send troops through ordinary compliance, transfer and join orders.
+- The appointment verb can establish an appointment-created declared temporary command. An optional expected old post permits reassignment; delivery guards both holder links and changes them atomically through command. Failed delivery or a changed destination leaves the old holder intact. Troops stay in the old post until a separate transfer. Existing verb prices, compliance and message latency apply. No new State field, default price, combat weight or player battle verb was added. Appointment answers retain their issuance record across response pruning; sourced appointees are reserved before ordinary vacancy selection.
+- Primary source read: Cornell's OR I-2, scan `cu31924077730186`, retained OCR SHA-256 `66d9a89b843925389e1d2d5d9798dc4e0c66f9a0488bbfcc8705659e4b37ebbf`. **Johnston:** assignment 15 May, pp. 844–845; the President's intended army near Harpers Ferry, p. 856; assumed command 23 May, his retrospective report, p. 470. **Beauregard:** Alexandria-line assignment 31 May, Special Orders 149, p. 896; arrival 1 June in his 3 June letter from Camp Pickens, pp. 901–902; explicit Camp Pickens–Manassas location, p. 907 (geographical self-identification only, no political content used). Full source limits and rejected alternatives: `docs/research/2026-11-20-northern-virginia-concentration.md`.
+
+### Proposed rulings [I]
+
+1. Use the sourced assignment dates for doctrine letters; normal delivery determines completion, rather than forcing historical arrivals. Davis's doctrine exercises the R98 authorization; the printed 31 May order is by Lee. In this history Beauregard's letter is sent on **31 May/day 87** and completes on **5 June/day 92**, later than his recorded arrival. Reject adjusting courier weights or forcing headquarters placement to match a date.
+2. Preserve Johnston's cross-side eligibility guard. This base still has him serving as Union Quartermaster General, without 0101's resignation/service owner, so **his Harpers Ferry command does not open in this run**. A fixture supplying only the missing service prerequisite makes his sourced assignment eligible. Reject changing his starting side or implementing the separate resignation lane here. The existing Union operation likewise remains under **Stone**, because this base has no McDowell department establishment; R98 does not repair that other-side gap.
+3. Keep the existing bundle-transfer semantics: the named former Charleston concentration sends its commanded blocks, including opening blocks, while new levies go to the latest established northern command. This is an allocation approximation, not a sourced regiment list. It does not move an already established Johnston army to Manassas. Review this choice explicitly: four unknown opening blocks reach combat. Reject inventing their headcounts, hiding their participation or fitting the battle to a date or result. New establishment answers also prevent repeated dated appointments after ordinary response pruning.
+
+### History, without fitting
+
+The 148-day history, all seats on rules, uses the pack's own peace and war. Virginia's existing notice changes its side on day 43. The first **86 daily State hashes match R96**; the first difference is the 31 May appointment letter. All 148 daily hashes match the final done-check reference; replay, day-60 resume and saved-log replay pass, zero rejections. Final State: `8edd464f25f17d1806ff534a9f102b77c12636ee2f56e2a7c770a5ed84dd3381`. The unaffected testbed's 120 hashes and liveness match R96.
+
+| Emerged field battle | Confederate known present | Union known present | Commanders and result |
+|---|---:|---:|---|
+| Manassas, 27 July/day 144 | 158 | 45,600 | Beauregard withdraws; Stone gains ground |
+| Manassas, 29 July/day 146 | 19,261, plus four unknown blocks | 44,579 | Beauregard withdraws; Stone gains ground |
+| Manassas, 31 July/day 148 | 126 | 41,263 | Beauregard's side is routed; Stone gains ground |
+
+These are simulation observations, not the historical battle. The unchanged Union goal is issued 16 July; its planner chooses a supply-line operation beginning day 137, fought from day 144. A 158-man block first appears at Manassas or a graph-adjacent region on 21 July, not a full army on that date. At the end, the new command has 31 assigned blocks (20 raised in play), 35,791 known men, with all 31 under joining orders after withdrawals. Full daily locations, operations, holder transitions and battle records: `runs/r98/history-spatial.json`; compact findings: `history-findings.json`.
+
+On **31 July**, Union known men are **59,329** with four unknown blocks, against unchanged **95,000–250,000** (floor reported, non-binding). Confederate known men are **42,829** with 17 unknown blocks, below unchanged **100,000–200,000**. R96 had 62,686 and 46,457 respectively; field losses change those totals. State-force acts from R97 and the absent national enlistment path have not been imported.
+
+### Liveness bands and causes
+
+Exactly six breached liveness bands use the **unchanged `around(observed)`** helper. No historical, pushback, strength, timing or lever bound changed. Old/new numbers, retained bounds, and all **37 changed measured rows** with direct or labelled inferred causes are in `runs/r98/band-reconciliation.json`. Retained R96 reference evidence supplies the baseline; no baseline campaign was repeated. Stale no-field-battle explanations on latent bands were corrected without changing their bounds.
+
+| Mechanic | Observed | Old bounds → new | Cause |
+|---|---:|---|---|
+| `combat.captured` | 3 | 0–0 → 1–6 | Emerged field combat captures men; Sumter still evacuates under terms. |
+| `combat.occupation` | 44 | 9–36 → 22–88 | [I] Northern joining marches and the summer operation expose more regions to occupation. |
+| `control.changed` | 49 | 10–40 → 24–98 | [I] The changed movements, occupations and battles produce more control proposals. |
+| `control.threshold_crossed` | 21 | 5–20 → 10–42 | [I] Additional control updates cross existing thresholds. |
+| `movement.leg_started` | 197 | 49–196 → 98–394 | Transfers to the new command start northern joining marches. |
+| `politics.support` | 52 | 8–32 → 26–104 | Field-battle reports reach editors, whose pages move bloc support. |
+
+### Checks and remaining criteria
+
+- **Exact `MANDATE_NO_GIT=1 npm run check`: exit 0**, **133 files / 1,489 passed / three existing skips**, **152.99 s**. All chained gates pass. Initial full check: one one-writer-scanner failure, with 1,487 other tests passed. Replaced a loose null comparison with a strict one; a focused failing regression also exposed the officer competing with a routine vacancy, corrected before the final run. **73 focused tests**, typecheck and boundary/licence/decision checks passed before the required exact rerun. No scanner or acceptance rule was weakened.
+- **One default eight-seed done check with drafting: exit 0**, **1,295.39 s**, **Phase 0 6/6; 1A 2/6**. Default exit binds Phase 0 only. All **14 reported problems** remain in `done.log` and `final-checks.json`. The operation criterion now passes, through the existing Union planner operation.
+- **Timing, median/p95:** Union reference **37.78/56.65 ms**; testbed **3.59/5.50**; Union history **33.30/52.31**, within unchanged **40/160** limits. Drafting: 23 commands, 16 with land forces; day median/p95 **40.3/52.3 ms**, capped worst **26.0 ms**. Linux CI decides the budget. No timing retry, unloaded-host or CI claim.
+- **Checkpoints still fail:** Missouri neutral; western-Virginia checkpoint department list absent; Confederate known strength below 100,000; Confederate fought-operation count zero. Union fought-operation count is now one. Union's strength floor remains non-binding.
+- **Pushback still fails:** relay holds **1 < 2**, filter holds **0 < 1**, trims **0 < 1**, reservations **77 > 9**, slow walks **17 > 9**. These bounds are unchanged.
+- **Unknown-strength now fails:** on 29 July four Confederate blocks fight: `fb_st_charleston_1st_infantry_regulars`, `fb_st_charleston_fort_johnson`, `fb_st_charleston_fort_palmetto_stono`, `fb_st_charleston_regiment_of_rifles`. The reference and history both report it. Unknown strengths remain unknown; the criterion is not waived.
+- **Lever sweep fails:** eight seeds, eight gated decisions and **712** base-run calls. Watched `return` is best in **3/8**, above one quarter. The unmeasured people/grievance channel and all **24 policy moves** without a new border-governor call remain separate failures. **No D6 clearance**, no gate promotion or sign-off.
+
+Runtime diagnostics and artifact inventories were completed before this final documentation. The three workspace packages resolve inside this checkout. All 115 audited situation/gate/source/lock/save paths, including 84 situation/gate paths, and all historical checkpoint bounds are preserved. Original doctrine rows and all other rules are unchanged apart from the new appointment/concentration arrays and the new post kind. HEAD remains pinned and staged diff empty. No build, server, browser, Git mutation or other-worktree write; the sole main-checkout write is the required final CODEX status.
+
+For the lead:
+1. Review the implementation, source note and three proposed rulings under 0096, especially the old concentration's full bundle and its unknown-strength consequence.
+2. Integrate the missing resignation/service and McDowell establishments through their owners, and merge R97 separately; Johnston's placement criterion remains unmet here.
+3. Retain all failed 1A criteria with their owners and send timing to Linux CI. New field battles and a passing Phase 0 exit waive none of them.
+
+## Findings outside my scope
+
+Johnston's service and McDowell's absent establishment are integration prerequisites. Four unknown opening blocks now fight, and the watched return option wins 3/8 sweep seeds; both remain failures, requiring sourced force-allocation/strength work and the existing gate/calibration owners respectively. R97's state acts, national enlistment, Missouri/western-Virginia checkpoint gaps and the other pushback/sweep gaps remain with their existing owners. No other request was undertaken.
+
+## R84: consult policy, the July message, and the Butler source conflict (2026-11-20)
+
+For the lead: 3 items. R84 only in `C:/Pyrrhic/mandate-rule-seats-c`, branch `phase1-rule-seats-c`, from `ff07445`. `npm ci` ran first, exit 0, zero vulnerabilities. Git commands were read-only. No other run's worktree was written. **The Butler acceptance item remains unmet.**
+
+### Consult
+
+The principal menu offers `consultPosts` for surfaced, open, undelegated questions. These are held own-side posts of the currently open options' named proposers, using the principal's believed holders. An unposted proposer, a foreign holder, the principal himself, inaction and a proposal's documentary basis do not invent an adviser. The rule seat sends one grouped, sorted, deduplicated `consult` command within the existing attention budget, after answering commanders and before its war-only doctrine. Advice can be sought at peace.
+
+Pending letters, responses to those letters and received replies suppress repeat requests while that evidence is retained. No private stance or actual compliance rung enters the choice. Consultation message keys now include the situation as well as the post; the menu reconstructs the existing content key, including its shortened form, so long IDs and two questions for one post remain distinct. No new State field, owner, save schema or pack default was added. The existing consultation verb, compliance, stance, report and attention owners apply the effects. History defaults and the tick order are unchanged; situations that resolve before the next morning acquire no artificial consultation delay.
+
+The regression first failed without the policy. The first kernel fixture accidentally used the rules driver and therefore closed its question immediately; it was corrected to a human driver. The corrected kernel regression also fails against the retained original source. Final focused result: **49 passed**. The additional long-key regression checks suppression after delivery and independence of another open question. The required full gate includes all three new tests.
+
+### Butler: stopped, not delivered
+
+Scott's order to Butler is dated **18 May 1861** and directs him to assume Fort Monroe command while Dimick retains command of the regular garrison. Butler acknowledges receiving the transfer order in his letter to Cameron of that date. Source read: *Private and Official Correspondence of Gen. Benjamin F. Butler*, I, [pp. 94–96](https://archive.org/details/privateoffice01butlrich/page/94/mode/2up). These pages establish the order date; they do not establish the placeholder's 22 May effective date. The retained OCR and read excerpt are identified in `runs/r84/sources-read.json`.
+
+On this base `us_fort_monroe` is occupied by Dimick, and `appoint` requires a vacant post. The placeholder instead opens `us_dept_virginia` with Butler. Three signed items reference that distinct post: `fort_monroe_arrivals`, `fort_monroe_escape` and `fort_monroe_escape_asked` (`butler-dependencies.json`). Simply relieving Dimick to satisfy the requested ID would erase the garrison command that the read order preserves. Simply removing the notice would leave those items without their existing command.
+
+`docs/LANES.md`, “The brief”, says **“If the evidence contradicts the brief, stop and report.”** That is the stop applied to this item. The appointment, temporary-post row, placeholder, strings and signed items remain byte-identical. No gate signature was authored and no unreviewed substitute was loaded.
+
+**Proposed ruling [I]:** represent Butler's superior command while retaining Dimick's garrison command, and distinguish the 18 May order from arrival/assumption. The lead and lane 1.12 own the post mapping and the appointment path; any retargeting of the three signed items must be drafted and reviewed by the gate reviewer. Rejected: treating the two commands as one vacancy, asserting 22 May from the read order, and deleting the notice while leaving its dependent command absent. This recommendation is not an implemented appointment or a waiver of R84 item 2.
+
+### The 4 July message
+
+`special_session` already models the message through `ask_war_footing`: it sets `war_footing_asked` and answers the spring's acts on the accountability ledger. It does **not** invoke `address`.
+
+**Proposed ruling [I]: keep that treatment.** The read message addresses the Senate and House and asks for legislative authority for men and money: *Lincoln's First Message to Congress*, Old South Leaflets 189, [pp. 1 and 8, collected folios 253 and 260](https://upload.wikimedia.org/wikipedia/commons/d/dd/Lincoln%27s_first_message_to_Congress_-_message_to_Congress_in_special_session%2C_July_4%2C_1861_%28IA_lincolnsfirstmes00unit%29.pdf#page=8). The existing `address` verb chooses one political bloc, increases its support and penalizes same-side blocs with no shared values (`politics/addressChanges`). The read text does not establish a bloc to receive that effect. Rejected: choosing a bloc without evidence or inventing a second Congress-address mechanic for this item. No player text or situation was changed. In the measured history the situation resolves on **4 July/day 122**.
+
+### Every original “For Part B” item
+
+| Item | Current disposition / owner |
+|---|---|
+| Situations own their calls and goals; duplicate doctrine rows removed | Built in R78/R80; retained. Union doctrine calls are empty and the Sumter offensive row is absent. |
+| Each government sets its war flag; history without `--at-war` | Built and accepted in 0104; R84 history and done check verify the decision-led path. |
+| Consult policy | Built in R84, as above; Claude's independent review pending. |
+| 4 July message as `address` | Assessed above; ledger treatment retained, proposed ruling for the lead. |
+| Confederate capital as State, one owner | Built in R48/R57, accepted in 0098; retained and tested. |
+| Butler appointment and placeholder retirement | **Unmet.** Lead / lane 1.12 own the command-model correction; gate reviewer owns any changed signed items. |
+| Concentration against 31 July strength and fought-operation bands | Lane 1.14 / **R85** calibration. R84 neither tunes parameters nor widens these bands. |
+| Lane 1.11's Sumter hook | Built in R78 and accepted in 0104; retained. |
+| People messages bounce like orders; `believedHolder` covers all capture routes | Built in R48/R60/R74 and accepted in 0098; required suite passes. |
+| Resignation, its historical defaults, roster correction and July appointment case | Separate resignation lane, **R82** merge and the lead's planned R87 follow-ups. No resignation work undertaken here. |
+| Owner labels for bombardment/concentration and gun-count stand-ins | Existing labels retained: **lane 1.14** for parameters/concentration; **1B** for gun counts. R79's call-delay labels name 1B, conventions and legislatures. |
+
+Audience, observer, promise, pressure and relieve still have no sourced automatic policy trigger. That original Part A residual remains with the lead / lane 1.12 for later authoring; R84 does not invent triggers for them.
+
+### History, every changed band measure, and validation
+
+The original-runtime snapshot is byte-verified against the entry inventory and `git show ff07445`; its workspace imports resolve into its own snapshot under `runs/r84/baseline`. It reproduces the previous final State `59ae6644ff381b02e8086ca57be88ec5f828979eeaaaed37cbcb6ebbdee7b097`. No second checkout or Git mutation was used.
+
+The changed history reaches **31 July/day 148**, without `--at-war`, zero rejections, daily replay matching and day-60 save/resume matching. Final State: **`2c33d5c0df4f5812850e502e95ad40bc136f051a154dd0bcbaf9ebb13f13e979`**. Every situation record and war flag equals the baseline, including the firing notice on day 38 and call on day 41. Five consultations answer the open Sumter question; their stances and correspondence change hashes from day 2. The standalone done check independently matches all 148 daily hashes and every liveness row. Its testbed replay and day-40 resume also match.
+
+`band-reconciliation.json` retains old/new fires, magnitude, bounds and causes for **all seven changed liveness rows**:
+
+| Measure | Before → after | Cause |
+|---|---|---|
+| `knowledge.pruned_age`, magnitude | 1,261 → 1,266 (fires remain 96) | Five additional advice reports age out. |
+| `messages.sent` | 11,164 → 11,174 | Five letters and five replies. |
+| `messages.delivered` | 10,516 → 10,526 | The same correspondence arrives. |
+| `orders.responses_pruned`, fires / magnitude | 20 / 33 → 21 / 38 | Five consultation responses reach the existing pruning age. |
+| `seats.attention_spent` | 27 → 28 | One grouped consult costs the existing one point. |
+| `verbs.answered` | 48 → 53 | Five advisers answer. |
+| `verbs.consulted` | 0 → 5 | Five recommendations become stances. |
+
+**Only the Union consultation liveness band changes:** QUIET 0..0 becomes the existing half-to-double rule at five, **2..10**. It leaves global QUIET; the testbed retains an explicit **0..0** band because its history resolves its questions before a morning consultation. Every other liveness bound and every historical checkpoint/pushback band is unchanged. The historical reservations measure moves **44 → 48**, exactly the four new consultation responses on that rung; its **1..9** band is retained. The baseline 44 is also the starting measure in the R85 request. No proxy was changed to hide this consequence.
+
+- Exact `MANDATE_NO_GIT=1 npm run check`: **exit 0, 129 files / 1,474 passed / 3 existing timing skips**, test duration 182.47 s. Typecheck, boundary, licences and decision index pass. Git-writing fixture files are excluded by the existing no-Git mode.
+- Normal `npm run run:done-check -- --label r84-done`, including the default eight seeds, unchanged fork cap and drafting: **exit 0; Phase 0 6/6, 1A 2/6**. War median/p95 **37.86/61.32 ms**, history **36.85/62.02 ms**, unchanged limits **40/160**. These are local observations, not an unloaded comparison or CI result. The full campaign ran once and took about 24 minutes; it was not shortened or retried.
+- All four failed 1A categories remain: **checkpoints** (Missouri neutral, missing western-Virginia government mapping, 20,957 Confederate men, neither side fought a planned operation); **operation** (two operations, zero field battles); **pushback** (holds 1 < 2, filter holds 0 < 1, trims 0 < 1, reservations 48 > 9); **lever sweep** (policy-pushback channel unmeasured and border recruitment chain unexercised). Unknown-strength and stand-ins pass. Return best in 0/8 is not D6 clearance. Every problem is retained in `final-checks.json` and the full log.
+- After the full gates, corrected a header comment and the obsolete explanation that consult still waited for Part B. The testbed consultation entry initially used `notHere`; final review restored its original 0..0 ceiling with an explicit `quiet` reason. The final band-table check passes **6 tests**, and both retained full-run summaries pass every final bound in `final-band-check.log`. State-producing code is unchanged, so the full behavioral evidence is reused; no campaign was repeated for these table/explanation corrections.
+- Final runtime/import and preservation checks precede this closeout: **227 protected inputs unchanged**, including every pack, signed item, save fixture and lockfile; no deletion. No package build, server or browser. HEAD remains `ff07445`, staged diff empty; no Git mutation command ran. Evidence and the source snapshot remain ignored under `runs/r84/`.
+
+For the lead:
+
+1. Review consult under 0096 and rule on pre-war consultation priority and retaining the July ledger treatment.
+2. Resolve the Butler command mapping from the cited order before authoring the appointment/placeholder replacement. R84 item 2 remains unmet.
+3. Route the four failed 1A criteria and the four additional reservations to R85 and their existing owners; no limit has been waived.
+
+## Findings outside my scope
+
+1. **Lane 1.14 / R85 and the lead:** the inherited checkpoint, operation, pushback and lever-sweep failures remain, with reservations now 48. Re-measure after integration as the batch request requires.
+2. **Resignation lane / R82 and planned R87:** resignation's roster and historical service transitions remain outside R84. No other worktree was inspected or written for that work.
+
+
+## R89: Butler to the Department of Virginia (2026-11-20)
+
+For the lead: 2 items. R89 only, in `C:/Pyrrhic/mandate-rule-seats-c`, branch `phase1-rule-seats-c` at `a9c35ba`. Git was read-only. The requested history behavior is delivered; review remains with Claude under 0096. Evidence: `runs/r89/final-checks.json`.
+
+### Dates and the command mapping
+
+Scott's order of **18 May 1861** directs Butler to assume the superior command and preserves Dimick's regular-garrison command: *Private and Official Correspondence of Gen. Benjamin F. Butler*, I, [pp. 94?95](https://archive.org/details/privateoffice01butlrich/page/94/mode/2up), read. Butler's report to Scott of **24 May**, written at Department of Virginia headquarters, dates his arrival to Wednesday at 8 a.m. and lists Dimick commanding the regulars: [ibid., p. 104](https://archive.org/details/privateoffice01butlrich/page/104/mode/1up), and [OR I-2, p. 648](https://ehistory.osu.edu/books/official-records/002/0648), both read. That Wednesday is **22 May**; the calendar check and retained OCR pages are in `sources-read.json` and `butler-pages-read.txt`.
+
+**Proposed ruling [I]:** use 22 May as the rule-seat appointment's effective date at daily granularity, representing arrival/assumption under the 18 May order. This does not claim Lincoln issued Scott's order on 22 May, or model the intervening journey. The lead's R89 ruling supplies the mapping to `us_dept_virginia`, preserving `us_fort_monroe` for Dimick. Rejected: relieving Dimick, opening the department in the March start, or claiming 22 May from the order date alone. The temporary representation of the department remains the existing **1B** stand-in; R89 does not build general department creation.
+
+### Built
+
+- The pack doctrine has one cited, dated `appointments` row. The principal menu offers it only on its date, only to a `rules` driver, only for an available own-side serving candidate and an available post. Human and AI menus carry no historical appointment row. No date mutates command State itself.
+- The rule seat sends `appoint`, within existing attention and war rules. A post already appointed that day cannot also receive a generic vacancy appointment. The letter, compliance, recorded answer, reply, pruning and command-log replay use their existing owners.
+- `appoint` may open a scenario-declared temporary command whose kind permits appointment. It creates the post only after the appointee accepts; refusal leaves no empty command. Side, parent, kind, existing holder and existing appointment guards apply. `command` remains the only post writer. No new State field, save schema, rank, trait, combat parameter or numeric kernel default.
+- `us_dept_virginia` is declared with no forced holder and an appointment-created temporary kind. Its history appointment is Butler's. Dimick's post row, holder and force assignments are unchanged.
+- Inspected the old `butler_at_fort_monroe` notice: `gate.none`, no signature. Removed it and its two strings; retained its bytes in ignored evidence. All 25 signed situations and gate records are unchanged. Neither the three dependent signed items nor their post IDs were retargeted.
+- Regenerated the two affected published schemas and Union data with their tools. Final freshness: **zero schema updates; zero pack files written, four unchanged**. Parsed generated differences are only the doctrine appointment, the added post kind, and the department template's kind and empty holder (`generated-differences.json`).
+
+### History and every moved band measure
+
+The decision-led run, with no `--at-war`, reaches **31 July/day 148**, zero rejections. The department is absent before day 78; Butler accepts on **22 May/day 78**, with `comply_with_reservations`. Dimick remains the garrison holder every day. Replay and day-60 save/resume match. Final State: **`1c8aca4d77301c98f58bf3d431d6cd8e15a6e54ace2de4abcc02205b26f36d46`**. The first changed State day against retained R84 is 78. All other situation records and all flags are equal after excluding the retired notice.
+
+The normal done check independently reproduces every one of the **148 Union daily hashes and liveness rows** on the final source. All **120 testbed hashes and liveness rows** equal retained R84. This also verifies reuse of the earlier history after the generic-vacancy exclusion: the department is not a held-at-start generic vacancy.
+
+No numeric liveness, historical checkpoint, pushback or timing bound changes. `band-reconciliation.json` gives old/new values, retained bounds and causes for all ten changed liveness measures:
+
+| Measure | Before ? after | Cause |
+|---|---|---|
+| `messages.sent` | 11,174 ? 11,175 | One notice report replaced by an appointment and reply. |
+| `messages.delivered` | 10,526 ? 10,527 | The same net extra correspondence arrives. |
+| `orders.responses_pruned`, fires / magnitude | 21 / 38 ? 22 / 39 | The appointment answer ages out. |
+| `seats.attention_spent` | 28 ? 29 | The existing appointment cost. |
+| `situations.fired` | 54 ? 53 | Placeholder retired. |
+| `situations.notice_reports` | 36 ? 35 | Its report retired. |
+| `situations.noticed` | 35 ? 34 | Its receipt retired. |
+| `situations.proposals`, fires / magnitude | 26 / 590 ? 25 / 589 | No placeholder command proposal. |
+| `situations.surfaced` | 54 ? 53 | Placeholder retired. |
+| `verbs.answered` | 53 ? 54 | Butler answers the appointment. |
+
+The department still opens once, so `command.temporary_post_opened` is unchanged. Historical reservations move **48 ? 49** because of Butler's answer; their **1..9** bound is retained.
+
+### Checks and remaining failures
+
+- Test-first regressions initially fail for the missing behavior. Final focused preflight: **71 passed** across four files, including the human/AI controls, refusal, declaration/kind checks and duplicate vacancy exclusion.
+- Exact **`MANDATE_NO_GIT=1 npm run check` exits 1**, after typecheck and **129 passing files / one failing file; 1,480 passed / one failed / three existing timing skips**. The sole failure reads the removed notice's firing day. Corrected only `packages/cli/test/union-opening.test.ts` to require the actual day-78 appointment log and absence of the notice; **all nine cases pass**. Final typecheck, boundary, licences and decision index exit 0. The 1,480 passing tests are reused with the exact test-only delta in `suite-reuse.diff`: **1,481 unique cases now have passing evidence**. The full command was not rerun or represented as exit 0.
+- Normal **`npm run run:done-check -- --label r89-done` exits 0**, default eight seeds and drafting, **Phase 0 6/6; 1A 2/6**. War-by-decision median/p95 **35.64/57.84 ms**, history **37.73/60.61 ms**, against unchanged **40/160 ms** limits. Testbed **6.74/36.83 ms**. These are local measurements, not unloaded or CI claims. No expensive gate was retried.
+- **Checkpoints fail:** Missouri remains neutral; the scorer still lacks the western-Virginia government mapping; Confederate known strength is 20,957 below 100,000; neither side fought a planned operation. **Operation fails:** two operations, zero field battles. **Pushback fails:** relay holds 1 < 2, filter holds 0 < 1, trims 0 < 1, reservations 49 > 9. **Lever sweep fails:** policy pushback is unmeasured and the border-recruitment chain is unexercised in 24 weighed moves. The full problem list is in `done-criteria.json`. Only the reservations count changes from R84's problem list.
+- The sweep still weighs **eight gated decisions over eight seeds**, with **248 base calls** and `return` best in **0/8**. That is not D6 clearance. Its principals are human-driven, so R89's automatic appointment is absent. A supplemental 84-day base-path probe issues **zero appointments**, has **no department**, and sees the signed alternate escape notice fire on **day 84**. That notice negates `holderPractice`, so no holder also satisfies it. The probe stops before the policy choice; existing `applyPolicy` drops null carried-by holders. The full sweep therefore still opens the decision, but lacks the department carrier. The earlier source-analysis prediction of an unopened decision was not confirmed. **Lead / gate reviewer / R85 own this consequence**, including the signed wording's request from a missing department holder. No signed guard, carrier mapping, floor or sweep policy was changed here.
+- A UTF-16 shell-log parser error was corrected in the evidence reader only; no run was repeated for it. Runtime diagnostics, generated-data inventory and protected-input checks preceded this closeout. Final audit: **21 delivery/hand-over paths**, **1,630 other baseline files unchanged**, one authorized notice deletion and one added pack test; all **seven captured Git metadata files** preserved. Campaign source hashes are unchanged. No install, build, server, browser, other request or other-worktree write.
+
+For the lead:
+
+1. Review R89 under 0096, including the effective-date inference and ordinary appointment path. The requested history appointment and Dimick preservation are delivered.
+2. Retain the four failed 1A criteria and route the missing human-bot carrier / signed-notice context to the gate reviewer and the next integrated lane 1.14 measurement before using the sweep as historical policy evidence. The original lane 1.11 hand-over's placeholder description is now historical and should be reconciled by the steward on integration.
+
+## Findings outside my scope
+
+1. **Lead, gate reviewer and lane 1.14 / R85:** the human-driven sweep needs a sourced appointment of its own; its current alternate notice can fire while the department has no holder. Signed authoring and sweep calibration remain separate work. All four existing 1A failures and the 49 reservations remain binding.
+2. **Steward:** reconcile lane 1.11's historical placeholder pointer when integrating R89. Only this lane's hand-over was updated here.
+
+Fresh CODEX at closeout records R85 received and the separate R90?R94 follow-ups under the lead's 0105 ruling. None was imported or undertaken. The missing-carrier question goes to the lead and gate reviewer for routing into the next integrated measurement; the failures reported above are those of R89's required `a9c35ba` base.
+
+
+## R97: state-force transfers (2026-11-20)
+
+R97 is implemented in `C:/Pyrrhic/mandate-transfers-1861` on `phase1-transfers-1861`, from R90/R96 at `4f6e8b3`. Seven notices replace eleven governor transfer requisitions; ordinary calls retain compliance. The current hand-over, read pages, modelling inferences, 31 July strength, all changed measured rows and final checks are in `notes/lane-1.7-men-regions.md`, R97, and `runs/r97/final-checks.json`. No concentration or appointment change from R98 was imported. Integration must retain both R97’s calls-array changes and R98’s independently authored doctrine changes.
+
+### Findings outside my scope
+
+Claude’s independent review and ruling on the five unchanged liveness-band breaches remain pending. R98 and the other inherited milestone failures retain their own owners.

@@ -29,6 +29,8 @@ export const ORDER_ROUTES: readonly RouteKind[] = Object.freeze(['courier', 'spe
 
 /** How long each route takes beside the map's courier days. Every pack states them (`WorldRules.latency`); the kernel has no default (0072). */
 export interface LatencyRules {
+  /** Documented access to public offices, apart from military ownership; absent permits no exception. */
+  readonly publicWires?: readonly { readonly from: RegionId; readonly to: RegionId; readonly faction: FactionId; readonly fromDate: string; readonly throughDate: string; readonly source: string }[];
   /** Days for a message on the wire between two wired regions. */
   readonly wireDays: number;
   /** Mail against courier, permille (slower: above 1000). */
@@ -55,6 +57,7 @@ export function latencyProblems(rules: LatencyRules): string[] {
 
 /** The map facts latency needs: courier days from the typed edges and the day's wire owners (`seats/world.ts`, `latencyMapFor`). */
 export interface LatencyMap {
+  publicWire?(from: RegionId, to: RegionId, faction: FactionId): boolean;
   courierDays(from: RegionId, to: RegionId): number;
   daysToWire(from: RegionId, faction: FactionId): number | null;
   region(id: RegionId): { readonly wireOwner: FactionId | null };
@@ -110,6 +113,10 @@ export function routeLatency(
       parts.push({ part: 'messenger', days: Math.trunc((courier * rules.specialMessengerPermille) / 1000) });
       return done();
     case 'wire': {
+      if (map.publicWire?.(from, to, faction)) {
+        parts.push({ part: 'public wire', days: rules.wireDays });
+        return done();
+      }
       const a = map.region(from).wireOwner === faction ? 0 : map.daysToWire(from, faction);
       const b = map.region(to).wireOwner === faction ? 0 : map.daysToWire(to, faction);
       // Off the wire at either end, the message rides to the nearest office first; if that is no

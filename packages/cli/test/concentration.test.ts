@@ -28,7 +28,10 @@ describe('a transfer concentrates on union-1861', () => {
         }
       },
     });
-    const ny = Object.keys(run.state.forceLocations).filter((b) => b.startsWith('raised.st_gov_new_york.'));
+    // Follow the original militia levy. The sourced 3 May repeat has had fewer days to march by day 75.
+    const militia = Object.values(run.state.orderResponses).find(r => r.respKind === 'call' && r.respRole === 'addressee' && r.respPost === 'st_gov_new_york' && r.respCallId === undefined)!;
+    expect(militia).toBeDefined();
+    const ny = Object.keys(run.state.forceLocations).filter((b) => run.state.forceEnlistments[b as ids.ForceBlockId]?.enlCall === militia.respOrder);
     expect(ny.length).toBeGreaterThan(0);
     for (const b of ny) {
       // Handed to Washington's post, it stands at Washington with no order left to join.
@@ -38,10 +41,11 @@ describe('a transfer concentrates on union-1861', () => {
       // It went by rail: the side traces the lines from New York (0019).
       expect([...(legs.get(b) ?? [])]).toContain('rail');
     }
-    // Positive control: before the authored opening decisions, nobody is called or transferred, and nothing joins.
+    // Before the opening decisions no Union levy has been called. The other side's sourced March calls may raise troops,
+    // while the concentration doctrine still waits for that side's own war decision.
     const peace = phase0.playDays(world, phase0.createState(world, setup), () => rules, 30, { freeze: true });
     expect(Object.keys(peace.state.forceJoins)).toEqual([]);
-    expect(Object.keys(peace.state.forceLocations).some((b) => b.startsWith('raised.'))).toBe(false);
+    expect(Object.entries(peace.state.forceBlockStates).some(([b,force]) => b.startsWith('raised.') && phase0.departmentSide(peace.state,force.fbDepartment) === 'union')).toBe(false);
   });
 
   it('a goal to hold Washington holds Washington, the post’s seat, not New York where its strongest block stands', () => {

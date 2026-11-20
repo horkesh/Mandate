@@ -14,7 +14,9 @@ export default defineConfig({
     // on tests that pass alone. One generous bound, named here and nowhere else: a hung test still fails, a slow one does not.
     testTimeout: 120_000,
     // The done-check test bounds its sweep; the full eight-seed, 400-day sweep runs in the CLI/CI.
-    hookTimeout: 300_000,
+    // S1: the unchanged setup exhausted 300 s both with two file workers and alone. Its 600 s probe passes all
+    // assertions. Bound setup at ten minutes; this does not set the simulation's separate 40/160 ms tick budget.
+    hookTimeout: 600_000,
     include: ['packages/*/test/**/*.test.ts', 'packs/*/test/**/*.test.ts', 'tools/test/**/*.test.ts'],
     // Codex's command-line lane must never invoke git, including test fixtures.
     // Exclude files that write Git fixtures before collection; the ordinary gate remains full.

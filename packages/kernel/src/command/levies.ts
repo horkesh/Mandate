@@ -22,11 +22,13 @@ export interface Levy {
   /** The call (the order's id). */
   readonly levyCall: MessageId;
   /** Regiments he will raise, after his compliance and the region's loyalty. */
-  readonly levyRegiments: number;
+  readonly levyRegiments: number | null;
   /** Men in them. */
-  readonly levyMen: number;
+  readonly levyMen: number | null;
   /** Days the men are enlisted for, from the muster. */
-  readonly levyTermDays: number;
+  readonly levyTermDays: number | null;
+  readonly levyArm?: string;
+  readonly levyCallId?: string;
   /** The day they muster. */
   readonly levyMusterDay: number;
   /** His response to the call (`proxy`'s key). */

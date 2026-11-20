@@ -69,6 +69,8 @@ export interface InitiativeRule {
 export interface VerbRules {
   /** Days between the weekly people steps (ladder, rivals, grievance decay, initiatives, due promises). */
   readonly weekDays: number;
+  /** Willingness needed to take a spontaneous initiative, apart from an order's compliance thresholds (0105). */
+  readonly initiativeAt: number;
   readonly orderValues: readonly OrderValueRow[];
   readonly relief: readonly ReliefRule[];
   /** An appointment's own boldness and values are the `verb:appoint` row; an appointee who refuses declines the post. */
@@ -99,6 +101,7 @@ export function verbRulesProblems(attention: AttentionRules | undefined, verbs: 
   if (attention === undefined) problems.push('the pack states no attention rules (rules.people.attention)');
   if (verbs === undefined) problems.push('the pack states no verb rules (rules.people.verbs)');
   if (attention === undefined || verbs === undefined) return problems;
+  if (!Number.isSafeInteger(verbs.initiativeAt)) problems.push('people rule verbs.initiativeAt must be a whole number');
   const whole = (v: unknown, what: string) => {
     if (typeof v !== 'number' || !Number.isSafeInteger(v) || v < 0) problems.push(`people rule ${what} must be a whole number, at least 0`);
   };
