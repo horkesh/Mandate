@@ -1,0 +1,335 @@
+{
+  "people": 55,
+  "rows": 532,
+  "decisions": {
+    "HOLD": 464,
+    "KEEP": 20,
+    "CHANGE": 48
+  },
+  "existing_people": 44,
+  "provisional_people": [
+    "watts_thomas_h",
+    "bragg_thomas",
+    "browne_william_m",
+    "smith_gustavus_w",
+    "campbell_john_a",
+    "salomon_edward",
+    "berry_n_s",
+    "holbrook_frederick",
+    "bradford_a_w",
+    "shorter_john_gill",
+    "milton_john"
+  ],
+  "eligibility": {
+    "START_INNATE_CANDIDATE": 1,
+    "HOLD": 464,
+    "1B_OBSERVATION": 67
+  },
+  "per_person": {
+    "andrew_john_a": {
+      "HOLD": 8,
+      "KEEP": 2
+    },
+    "beauregard_pierre_g_t": {
+      "HOLD": 9
+    },
+    "benjamin_judah_p": {
+      "HOLD": 9
+    },
+    "berry_n_s": {
+      "HOLD": 8,
+      "CHANGE": 2
+    },
+    "blair_austin": {
+      "HOLD": 8,
+      "CHANGE": 2
+    },
+    "bradford_a_w": {
+      "HOLD": 9
+    },
+    "bragg_braxton": {
+      "CHANGE": 3,
+      "HOLD": 7
+    },
+    "bragg_thomas": {
+      "HOLD": 9
+    },
+    "breckinridge_john_c": {
+      "HOLD": 7,
+      "CHANGE": 1,
+      "KEEP": 1
+    },
+    "brown_joseph_e": {
+      "CHANGE": 2,
+      "HOLD": 7,
+      "KEEP": 2
+    },
+    "browne_william_m": {
+      "HOLD": 9
+    },
+    "buckingham_william_a": {
+      "HOLD": 9
+    },
+    "buell_don_c": {
+      "HOLD": 9
+    },
+    "burnside_ambrose_e": {
+      "HOLD": 10,
+      "CHANGE": 2
+    },
+    "campbell_john_a": {
+      "HOLD": 9
+    },
+    "curtin_andrew_g": {
+      "HOLD": 8,
+      "KEEP": 2
+    },
+    "davis_jefferson": {
+      "HOLD": 9
+    },
+    "gamble_hamilton_r": {
+      "HOLD": 9
+    },
+    "grant_ulysses_s": {
+      "CHANGE": 3,
+      "HOLD": 7
+    },
+    "halleck_henry_w": {
+      "CHANGE": 4,
+      "HOLD": 8
+    },
+    "hardee_william_j": {
+      "HOLD": 7,
+      "KEEP": 2
+    },
+    "holbrook_frederick": {
+      "HOLD": 9
+    },
+    "hunter_robert_m_t": {
+      "HOLD": 9
+    },
+    "jackson_thomas_j": {
+      "HOLD": 10,
+      "CHANGE": 1
+    },
+    "johnston_joseph_e": {
+      "HOLD": 8,
+      "CHANGE": 3
+    },
+    "kirkwood_samuel_j": {
+      "HOLD": 8,
+      "CHANGE": 2
+    },
+    "lee_robert_e": {
+      "CHANGE": 2,
+      "HOLD": 7
+    },
+    "loring_william_w": {
+      "HOLD": 9
+    },
+    "mallory_stephen_r": {
+      "HOLD": 8,
+      "KEEP": 1
+    },
+    "mcclellan_george_b": {
+      "KEEP": 3,
+      "HOLD": 7,
+      "CHANGE": 2
+    },
+    "memminger_christopher_g": {
+      "HOLD": 9
+    },
+    "milton_john": {
+      "HOLD": 9,
+      "CHANGE": 1
+    },
+    "morgan_edwin_d": {
+      "HOLD": 9
+    },
+    "morton_oliver_h_p_t": {
+      "HOLD": 8,
+      "CHANGE": 1,
+      "KEEP": 1
+    },
+    "olden_charles_s": {
+      "HOLD": 9
+    },
+    "pettus_john_j": {
+      "HOLD": 10
+    },
+    "pierpont_francis_h": {
+      "HOLD": 8,
+      "KEEP": 2
+    },
+    "polk_leonidas": {
+      "HOLD": 7,
+      "CHANGE": 1,
+      "KEEP": 1
+    },
+    "pope_john": {
+      "CHANGE": 2,
+      "HOLD": 8
+    },
+    "ramsey_alexander": {
+      "HOLD": 9
+    },
+    "randolph_george_w": {
+      "HOLD": 8,
+      "CHANGE": 1
+    },
+    "reagan_john_h": {
+      "HOLD": 9
+    },
+    "salomon_edward": {
+      "HOLD": 8,
+      "CHANGE": 2
+    },
+    "seddon_james_a": {
+      "HOLD": 9
+    },
+    "sherman_william_t": {
+      "HOLD": 7,
+      "KEEP": 2,
+      "CHANGE": 3
+    },
+    "shorter_john_gill": {
+      "HOLD": 9
+    },
+    "smith_gustavus_w": {
+      "HOLD": 9
+    },
+    "sprague_william": {
+      "HOLD": 8,
+      "CHANGE": 2
+    },
+    "stanton_edwin_m": {
+      "HOLD": 9,
+      "CHANGE": 1
+    },
+    "tod_david": {
+      "HOLD": 8,
+      "CHANGE": 2
+    },
+    "vance_zebulon_b": {
+      "HOLD": 10
+    },
+    "walker_leroy_p": {
+      "HOLD": 9
+    },
+    "washburn_israel": {
+      "HOLD": 8,
+      "CHANGE": 2
+    },
+    "watts_thomas_h": {
+      "HOLD": 9
+    },
+    "yates_richard": {
+      "HOLD": 8,
+      "CHANGE": 1,
+      "KEEP": 1
+    }
+  },
+  "per_field": {
+    "boldness": {
+      "HOLD": 48,
+      "CHANGE": 6,
+      "KEEP": 1
+    },
+    "candour": {
+      "HOLD": 49,
+      "CHANGE": 6
+    },
+    "competence": {
+      "HOLD": 49,
+      "CHANGE": 3,
+      "KEEP": 3
+    },
+    "experience": {
+      "HOLD": 55
+    },
+    "nerve": {
+      "HOLD": 50,
+      "CHANGE": 1,
+      "KEEP": 4
+    },
+    "regard": {
+      "KEEP": 3,
+      "HOLD": 43,
+      "CHANGE": 9
+    },
+    "regard_others:beauregard_pierre_g_t": {
+      "CHANGE": 1
+    },
+    "regard_others:buell_don_c": {
+      "CHANGE": 1
+    },
+    "regard_others:goldsborough_louis_m": {
+      "CHANGE": 1
+    },
+    "regard_others:grant_ulysses_s": {
+      "CHANGE": 2
+    },
+    "regard_others:halleck_henry_w": {
+      "CHANGE": 1
+    },
+    "regard_others:jackson_thomas_j": {
+      "CHANGE": 1
+    },
+    "regard_others:stanton_edwin_m": {
+      "CHANGE": 1
+    },
+    "reputation": {
+      "HOLD": 54,
+      "KEEP": 1
+    },
+    "trait:holds_grudges": {
+      "HOLD": 1
+    },
+    "trait:insubordinate": {
+      "HOLD": 1
+    },
+    "trait:joint_minded": {
+      "CHANGE": 1
+    },
+    "trait:organiser": {
+      "HOLD": 55
+    },
+    "trait:rank_proud": {
+      "HOLD": 1
+    },
+    "trait:self_doubting": {
+      "HOLD": 1
+    },
+    "trait:shifts_blame": {
+      "HOLD": 1
+    },
+    "value:caution": {
+      "CHANGE": 1
+    },
+    "value:duty": {
+      "HOLD": 54,
+      "CHANGE": 1
+    },
+    "value:glory": {
+      "CHANGE": 1
+    },
+    "value:order": {
+      "CHANGE": 2
+    },
+    "value:slavery_defence": {
+      "KEEP": 1,
+      "CHANGE": 1
+    },
+    "value:slavery_noninterference": {
+      "KEEP": 1
+    },
+    "value:state_autonomy": {
+      "KEEP": 1,
+      "HOLD": 2
+    },
+    "value:union": {
+      "KEEP": 5,
+      "CHANGE": 8
+    }
+  }
+}

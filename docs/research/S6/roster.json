@@ -1,0 +1,442 @@
+[
+  {
+    "person": "mcclellan_george_b",
+    "name": "George B. McClellan",
+    "group": "command",
+    "evidence": "NEW:S6-SHERMAN-LETTERS p121 dated 1861-05-20+NEW:S6-OR-I-11-1 p74 dated 1862-07-07",
+    "limit": "Separate professional appraisal in May 1861 from later policy and command conduct. Own report is not proof of his gifts.",
+    "identity": "existing"
+  },
+  {
+    "person": "halleck_henry_w",
+    "name": "Henry W. Halleck",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-7 p625 dated 1862-02-16+NEW:S6-OR-I-10-2 p41 dated 1862-03-16",
+    "limit": "Offensive urgency and later restrictions coexist. Sherman's confidence is a particular observer's view, not a public reputation census.",
+    "identity": "existing"
+  },
+  {
+    "person": "grant_ulysses_s",
+    "name": "Ulysses S. Grant",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-7 p161 dated 1862-02-16+NEW:S6-OR-I-10-2 p36 dated 1862-03-14",
+    "limit": "Surrender demand and replies to criticism are conduct. Do not use his own Shiloh report to award his own competence or nerve.",
+    "identity": "existing"
+  },
+  {
+    "person": "pope_john",
+    "name": "John Pope",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-12-3 p473 dated 1862-07-14+NEW:S6-OR-I-12-3 p474 dated 1862-07-14",
+    "limit": "Read the operational telegram alongside the address. His boasts about Western victories cannot source his own gifts or reputation.",
+    "identity": "existing"
+  },
+  {
+    "person": "burnside_ambrose_e",
+    "name": "Ambrose E. Burnside",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-9b p75 dated 1862-02-14+NEW:S6-OR-I-9b p80 dated 1862-02-14",
+    "limit": "The detailed Roanoke report is dated 14 February, not the 10th. The later December admission is outside S6's horizon.",
+    "identity": "existing"
+  },
+  {
+    "person": "buell_don_c",
+    "name": "Don Carlos Buell",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-10-2 p10 dated 1862-03-06+NEW:S6-OR-I-10-2 p27 dated 1862-03-10",
+    "limit": "Transport and supply objections do not demonstrate cowardice. An instruction to relieve him is an office fact, not a professional assessment.",
+    "identity": "existing"
+  },
+  {
+    "person": "stanton_edwin_m",
+    "name": "Edwin M. Stanton",
+    "group": "civilian",
+    "evidence": "NEW:S6-LINCOLN-CW2 p118 dated 1862-01-24+NEW:S6-OR-III-1 p870 dated 1862-01-29",
+    "limit": "The ordnance request and contract order show administrative priorities. Lincoln's authorization shows permission, not proof of Stanton's organising gift.",
+    "identity": "existing"
+  },
+  {
+    "person": "lee_robert_e",
+    "name": "Robert E. Lee",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-19-2 p590 dated 1862-09-03+NEW:S6-OR-I-19-2 p591 dated 1862-09-03",
+    "limit": "Crossing proposal expressly admits shortages and limits. Routine thanks to Davis the next day is not high personal regard.",
+    "identity": "existing"
+  },
+  {
+    "person": "jackson_thomas_j",
+    "name": "Thomas J. Jackson",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-5 p1053 dated 1862-01-31",
+    "limit": "He reports compliance before requesting reassignment or resignation. Do not equate a resignation request with disobedience or a rank dispute.",
+    "identity": "existing"
+  },
+  {
+    "person": "bragg_braxton",
+    "name": "Braxton Bragg",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-10-1 p389 dated 1862-04-11+NEW:S6-OR-I-16-1 p1087 dated 1862-10-12",
+    "limit": "Beauregard praises corps-level battlefield ability. October conduct does not establish army-level genius. The long report dated May 1863 is excluded.",
+    "identity": "existing"
+  },
+  {
+    "person": "sherman_william_t",
+    "name": "William T. Sherman",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-10-1 p110 dated 1862-04-09+NEW:S6-SHERMAN-LETTERS p141 dated 1862-04-16",
+    "limit": "Grant explicitly praises judgment and skill and describes persistence under fire. Read only the letters, not the later editor's framing, for relationships.",
+    "identity": "existing"
+  },
+  {
+    "person": "johnston_joseph_e",
+    "name": "Joseph E. Johnston",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-5 p1051 dated 1862-01-29+NEW:S6-OR-I-5 p1057 dated 1862-02-01",
+    "limit": "Administrative protest supports dated conduct, not an automatic permanent quarrelsome or rank-proud label.",
+    "identity": "existing"
+  },
+  {
+    "person": "beauregard_pierre_g_t",
+    "name": "Pierre G. T. Beauregard",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-5 p1051 dated 1862-01-29",
+    "limit": "Johnston regrets losing him and calls him distinguished. This is a particular relationship, not a demonstration of his innate command gifts.",
+    "identity": "existing"
+  },
+  {
+    "person": "polk_leonidas",
+    "name": "Leonidas Polk",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-10-1 p389 dated 1862-04-11",
+    "limit": "Beauregard collectively praises named corps/reserve commanders' ability and personal exposure. The band is role-bounded and not an army-command rating.",
+    "identity": "existing"
+  },
+  {
+    "person": "hardee_william_j",
+    "name": "William J. Hardee",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-10-1 p389 dated 1862-04-11",
+    "limit": "Beauregard collectively praises named corps/reserve commanders' ability and personal exposure. The band is role-bounded and not an army-command rating.",
+    "identity": "existing"
+  },
+  {
+    "person": "breckinridge_john_c",
+    "name": "John C. Breckinridge",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-10-1 p389 dated 1862-04-11",
+    "limit": "Beauregard collectively praises named corps/reserve commanders' ability and personal exposure. The band is role-bounded and not an army-command rating.",
+    "identity": "existing"
+  },
+  {
+    "person": "loring_william_w",
+    "name": "William W. Loring",
+    "group": "command",
+    "evidence": "NEW:S6-OR-I-5 p1054 dated 1862-01-31",
+    "limit": "His account of sickness, exposure and supply is counterevidence to reducing the Romney dispute to personality. Own hardship report does not establish gifts.",
+    "identity": "existing"
+  },
+  {
+    "person": "davis_jefferson",
+    "name": "Jefferson Davis",
+    "group": "principal",
+    "evidence": "NEW:S6-OR-IV-2 p178 dated 1862-11-15",
+    "limit": "Acceptance of a resignation does not establish personal animosity, competence, or a general reputation centre.",
+    "identity": "existing"
+  },
+  {
+    "person": "benjamin_judah_p",
+    "name": "Judah P. Benjamin",
+    "group": "cabinet",
+    "evidence": "NEW:S6-JCCS2 p73 dated 1862-03-18+NEW:S6-JCCS2 p74 dated 1862-03-18",
+    "limit": "Confirmation establishes consent to office, not a gift, value, or personal regard. See the cabinet note for the separate nomination and confirmation dates.",
+    "identity": "existing"
+  },
+  {
+    "person": "memminger_christopher_g",
+    "name": "Christopher G. Memminger",
+    "group": "cabinet",
+    "evidence": "NEW:S6-JCCS2 p73 dated 1862-03-18+NEW:S6-JCCS2 p74 dated 1862-03-18",
+    "limit": "Confirmation establishes consent to office, not a gift, value, or personal regard. See the cabinet note for the separate nomination and confirmation dates.",
+    "identity": "existing"
+  },
+  {
+    "person": "randolph_george_w",
+    "name": "George W. Randolph",
+    "group": "cabinet",
+    "evidence": "NEW:S6-JCCS2 p73 dated 1862-03-18+NEW:S6-JCCS2 p74 dated 1862-03-18",
+    "limit": "Confirmation establishes consent to office, not a gift, value, or personal regard. See the cabinet note for the separate nomination and confirmation dates.",
+    "identity": "existing"
+  },
+  {
+    "person": "mallory_stephen_r",
+    "name": "Stephen R. Mallory",
+    "group": "cabinet",
+    "evidence": "NEW:S6-JCCS2 p73 dated 1862-03-18+NEW:S6-JCCS2 p74 dated 1862-03-18",
+    "limit": "Confirmation establishes consent to office, not a gift, value, or personal regard. See the cabinet note for the separate nomination and confirmation dates.",
+    "identity": "existing"
+  },
+  {
+    "person": "reagan_john_h",
+    "name": "John H. Reagan",
+    "group": "cabinet",
+    "evidence": "NEW:S6-JCCS2 p73 dated 1862-03-18+NEW:S6-JCCS2 p74 dated 1862-03-18",
+    "limit": "Confirmation establishes consent to office, not a gift, value, or personal regard. See the cabinet note for the separate nomination and confirmation dates.",
+    "identity": "existing"
+  },
+  {
+    "person": "watts_thomas_h",
+    "name": "Thomas H. Watts",
+    "group": "cabinet",
+    "evidence": "NEW:S6-JCCS2 p73 dated 1862-03-18+NEW:S6-JCCS2 p74 dated 1862-03-18",
+    "limit": "Confirmation establishes consent to office, not a gift, value, or personal regard. See the cabinet note for the separate nomination and confirmation dates.",
+    "identity": "provisional-missing-person"
+  },
+  {
+    "person": "hunter_robert_m_t",
+    "name": "Robert M. T. Hunter",
+    "group": "cabinet",
+    "evidence": "NEW:S6-WRIGHT p151",
+    "limit": "Office/reference evidence only. No contemporary leg for a character centre was established in the passages read. Missing pack identities remain proposals.",
+    "identity": "existing"
+  },
+  {
+    "person": "walker_leroy_p",
+    "name": "Leroy P. Walker",
+    "group": "cabinet",
+    "evidence": "NEW:S6-WRIGHT p153",
+    "limit": "Office/reference evidence only. No contemporary leg for a character centre was established in the passages read. Missing pack identities remain proposals.",
+    "identity": "existing"
+  },
+  {
+    "person": "bragg_thomas",
+    "name": "Thomas Bragg",
+    "group": "cabinet",
+    "evidence": "NEW:S6-WRIGHT p152",
+    "limit": "Office/reference evidence only. No contemporary leg for a character centre was established in the passages read. Missing pack identities remain proposals.",
+    "identity": "provisional-missing-person"
+  },
+  {
+    "person": "browne_william_m",
+    "name": "William M. Browne",
+    "group": "cabinet",
+    "evidence": "NEW:S6-WRIGHT p152",
+    "limit": "Office/reference evidence only. No contemporary leg for a character centre was established in the passages read. Missing pack identities remain proposals.",
+    "identity": "provisional-missing-person"
+  },
+  {
+    "person": "smith_gustavus_w",
+    "name": "Gustavus W. Smith",
+    "group": "cabinet",
+    "evidence": "NEW:S6-WRIGHT p154",
+    "limit": "Office/reference evidence only. No contemporary leg for a character centre was established in the passages read. Missing pack identities remain proposals.",
+    "identity": "provisional-missing-person"
+  },
+  {
+    "person": "seddon_james_a",
+    "name": "James A. Seddon",
+    "group": "cabinet",
+    "evidence": "NEW:S6-OR-IV-2 p196 dated 1862-11-20",
+    "limit": "Office/reference evidence only. No contemporary leg for a character centre was established in the passages read. Missing pack identities remain proposals.",
+    "identity": "existing"
+  },
+  {
+    "person": "campbell_john_a",
+    "name": "J. A. Campbell",
+    "group": "cabinet",
+    "evidence": "NEW:S6-OR-IV-2 p179 dated 1862-11-17",
+    "limit": "Office/reference evidence only. No contemporary leg for a character centre was established in the passages read. Missing pack identities remain proposals.",
+    "identity": "provisional-missing-person"
+  },
+  {
+    "person": "curtin_andrew_g",
+    "name": "A. G. Curtin",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p582 dated 1862-09-24+NEW:S6-OR-III-2 p583 dated 1862-09-24+NEW:S6-OR-III-2 p584 dated 1862-09-24",
+    "limit": "Altoona public address and printed signatures. Institutional cooperation is not private affection. Morton signs through a representative. Conditional emancipation endorsement is not proof of a universal abolition value.",
+    "identity": "existing"
+  },
+  {
+    "person": "andrew_john_a",
+    "name": "John A. Andrew",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p582 dated 1862-09-24+NEW:S6-OR-III-2 p583 dated 1862-09-24+NEW:S6-OR-III-2 p584 dated 1862-09-24",
+    "limit": "Altoona public address and printed signatures. Institutional cooperation is not private affection. Morton signs through a representative. Conditional emancipation endorsement is not proof of a universal abolition value.",
+    "identity": "existing"
+  },
+  {
+    "person": "yates_richard",
+    "name": "Richard Yates",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p582 dated 1862-09-24+NEW:S6-OR-III-2 p583 dated 1862-09-24+NEW:S6-OR-III-2 p584 dated 1862-09-24",
+    "limit": "Altoona public address and printed signatures. Institutional cooperation is not private affection. Morton signs through a representative. Conditional emancipation endorsement is not proof of a universal abolition value.",
+    "identity": "existing"
+  },
+  {
+    "person": "washburn_israel",
+    "name": "Israel Washburn Jr.",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p582 dated 1862-09-24+NEW:S6-OR-III-2 p583 dated 1862-09-24+NEW:S6-OR-III-2 p584 dated 1862-09-24",
+    "limit": "Altoona public address and printed signatures. Institutional cooperation is not private affection. Morton signs through a representative. Conditional emancipation endorsement is not proof of a universal abolition value.",
+    "identity": "existing"
+  },
+  {
+    "person": "salomon_edward",
+    "name": "Edward Salomon",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p582 dated 1862-09-24+NEW:S6-OR-III-2 p583 dated 1862-09-24+NEW:S6-OR-III-2 p584 dated 1862-09-24",
+    "limit": "Altoona public address and printed signatures. Institutional cooperation is not private affection. Morton signs through a representative. Conditional emancipation endorsement is not proof of a universal abolition value.",
+    "identity": "provisional-missing-person"
+  },
+  {
+    "person": "kirkwood_samuel_j",
+    "name": "Samuel J. Kirkwood",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p582 dated 1862-09-24+NEW:S6-OR-III-2 p583 dated 1862-09-24+NEW:S6-OR-III-2 p584 dated 1862-09-24",
+    "limit": "Altoona public address and printed signatures. Institutional cooperation is not private affection. Morton signs through a representative. Conditional emancipation endorsement is not proof of a universal abolition value.",
+    "identity": "existing"
+  },
+  {
+    "person": "morton_oliver_h_p_t",
+    "name": "O. P. Morton, by D. G. Rose",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p582 dated 1862-09-24+NEW:S6-OR-III-2 p583 dated 1862-09-24+NEW:S6-OR-III-2 p584 dated 1862-09-24",
+    "limit": "Altoona public address and printed signatures. Institutional cooperation is not private affection. Morton signs through a representative. Conditional emancipation endorsement is not proof of a universal abolition value.",
+    "identity": "existing"
+  },
+  {
+    "person": "sprague_william",
+    "name": "William Sprague",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p582 dated 1862-09-24+NEW:S6-OR-III-2 p583 dated 1862-09-24+NEW:S6-OR-III-2 p584 dated 1862-09-24",
+    "limit": "Altoona public address and printed signatures. Institutional cooperation is not private affection. Morton signs through a representative. Conditional emancipation endorsement is not proof of a universal abolition value.",
+    "identity": "existing"
+  },
+  {
+    "person": "pierpont_francis_h",
+    "name": "F. H. Peirpoint",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p582 dated 1862-09-24+NEW:S6-OR-III-2 p583 dated 1862-09-24+NEW:S6-OR-III-2 p584 dated 1862-09-24",
+    "limit": "Altoona public address and printed signatures. Institutional cooperation is not private affection. Morton signs through a representative. Conditional emancipation endorsement is not proof of a universal abolition value.",
+    "identity": "existing"
+  },
+  {
+    "person": "tod_david",
+    "name": "David Tod",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p582 dated 1862-09-24+NEW:S6-OR-III-2 p583 dated 1862-09-24+NEW:S6-OR-III-2 p584 dated 1862-09-24",
+    "limit": "Altoona public address and printed signatures. Institutional cooperation is not private affection. Morton signs through a representative. Conditional emancipation endorsement is not proof of a universal abolition value.",
+    "identity": "existing"
+  },
+  {
+    "person": "berry_n_s",
+    "name": "N. S. Berry",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p582 dated 1862-09-24+NEW:S6-OR-III-2 p583 dated 1862-09-24+NEW:S6-OR-III-2 p584 dated 1862-09-24",
+    "limit": "Altoona public address and printed signatures. Institutional cooperation is not private affection. Morton signs through a representative. Conditional emancipation endorsement is not proof of a universal abolition value.",
+    "identity": "provisional-missing-person"
+  },
+  {
+    "person": "blair_austin",
+    "name": "Austin Blair",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p582 dated 1862-09-24+NEW:S6-OR-III-2 p583 dated 1862-09-24+NEW:S6-OR-III-2 p584 dated 1862-09-24",
+    "limit": "Altoona public address and printed signatures. Institutional cooperation is not private affection. Morton signs through a representative. Conditional emancipation endorsement is not proof of a universal abolition value.",
+    "identity": "existing"
+  },
+  {
+    "person": "morgan_edwin_d",
+    "name": "E. D. Morgan",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p180 dated 1862-06-28+NEW:S6-OR-III-2 p181 dated 1862-06-30",
+    "limit": "Printed June 28 address conflicts with June 30 circulation of a proposed memorial. Do not invent an individual signature date or transfer the Altoona signatories to this document. Judgment rows held pending execution/circulation research.",
+    "identity": "existing"
+  },
+  {
+    "person": "buckingham_william_a",
+    "name": "W. A. Buckingham",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p180 dated 1862-06-28+NEW:S6-OR-III-2 p181 dated 1862-06-30",
+    "limit": "Printed June 28 address conflicts with June 30 circulation of a proposed memorial. Do not invent an individual signature date or transfer the Altoona signatories to this document. Judgment rows held pending execution/circulation research.",
+    "identity": "existing"
+  },
+  {
+    "person": "holbrook_frederick",
+    "name": "Frederick Holbrook",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p180 dated 1862-06-28+NEW:S6-OR-III-2 p181 dated 1862-06-30",
+    "limit": "Printed June 28 address conflicts with June 30 circulation of a proposed memorial. Do not invent an individual signature date or transfer the Altoona signatories to this document. Judgment rows held pending execution/circulation research.",
+    "identity": "provisional-missing-person"
+  },
+  {
+    "person": "bradford_a_w",
+    "name": "A. W. Bradford",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p180 dated 1862-06-28+NEW:S6-OR-III-2 p181 dated 1862-06-30",
+    "limit": "Printed June 28 address conflicts with June 30 circulation of a proposed memorial. Do not invent an individual signature date or transfer the Altoona signatories to this document. Judgment rows held pending execution/circulation research.",
+    "identity": "provisional-missing-person"
+  },
+  {
+    "person": "gamble_hamilton_r",
+    "name": "H. R. Gamble",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p180 dated 1862-06-28+NEW:S6-OR-III-2 p181 dated 1862-06-30",
+    "limit": "Printed June 28 address conflicts with June 30 circulation of a proposed memorial. Do not invent an individual signature date or transfer the Altoona signatories to this document. Judgment rows held pending execution/circulation research.",
+    "identity": "existing"
+  },
+  {
+    "person": "ramsey_alexander",
+    "name": "Alexander Ramsey",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p180 dated 1862-06-28+NEW:S6-OR-III-2 p181 dated 1862-06-30",
+    "limit": "Printed June 28 address conflicts with June 30 circulation of a proposed memorial. Do not invent an individual signature date or transfer the Altoona signatories to this document. Judgment rows held pending execution/circulation research.",
+    "identity": "existing"
+  },
+  {
+    "person": "olden_charles_s",
+    "name": "C. S. Olden",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-III-2 p180 dated 1862-06-28+NEW:S6-OR-III-2 p181 dated 1862-06-30",
+    "limit": "Printed June 28 address conflicts with June 30 circulation of a proposed memorial. Do not invent an individual signature date or transfer the Altoona signatories to this document. Judgment rows held pending execution/circulation research.",
+    "identity": "existing"
+  },
+  {
+    "person": "brown_joseph_e",
+    "name": "Joseph E. Brown",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-IV-1b p1084 dated 1862-04-22",
+    "limit": "State-authority arguments include explicit concern for plantation oversight and slavery. Keep that motive visible and gated. He expressly disclaims impugning Davis's intentions.",
+    "identity": "existing"
+  },
+  {
+    "person": "vance_zebulon_b",
+    "name": "Zebulon B. Vance",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-IV-2 p178 dated 1862-11-13",
+    "limit": "The complaint to Memminger offers alternative explanations and requests investigation. It is not a finding of Treasury corruption or personal hostility to Davis.",
+    "identity": "existing"
+  },
+  {
+    "person": "pettus_john_j",
+    "name": "John J. Pettus",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-IV-2 p178 dated 1862-11-15",
+    "limit": "He proposes preserving State organizations and says he wants to strengthen the Confederate government. No own slavery motive was established here for a state_autonomy tag.",
+    "identity": "existing"
+  },
+  {
+    "person": "shorter_john_gill",
+    "name": "Jno. Gill Shorter",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-IV-2 p196 dated 1862-11-20",
+    "limit": "Addressing Seddon as Secretary is a dated office lead, not proof of assumption or a gift.",
+    "identity": "provisional-missing-person"
+  },
+  {
+    "person": "milton_john",
+    "name": "John Milton",
+    "group": "governor",
+    "evidence": "NEW:S6-OR-IV-2 p56 dated 1862-08-18+NEW:S6-OR-IV-2 p57 dated 1862-08-18",
+    "limit": "The opening scan dates this letter 18 August. The secretary's certification on p59 identifies the copy forwarded to the Florida delegation. Motive is distinct from proof of his economic or military claims.",
+    "identity": "provisional-missing-person"
+  }
+]
