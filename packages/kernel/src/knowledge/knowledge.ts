@@ -96,6 +96,43 @@ export function deliverReport(state: State, seat: SeatId, report: KnownReport, t
   };
 }
 
+export interface ReportDelivery {
+  readonly seat: SeatId;
+  readonly report: KnownReport;
+  readonly truth: ReportTruth;
+}
+
+/** Consecutive arrivals, with no intervening reader: copy each table and each seat's list only once. */
+export function deliverReports(state: State, deliveries: readonly ReportDelivery[]): State {
+  if (deliveries.length === 0) return state;
+  const knowledge = { ...state.knowledgeBySeat };
+  let truth: Record<MessageId, ReportTruth> | undefined;
+  const lists = new Map<SeatId, KnownReport[]>();
+  const ids = new Map<SeatId, Set<MessageId>>();
+  for (const d of deliveries) {
+    let reports = lists.get(d.seat);
+    if (reports === undefined) {
+      const held = storedKnowledgeOf(state, d.seat);
+      reports = [...held.knownReports];
+      lists.set(d.seat, reports);
+      ids.set(d.seat, new Set([
+        ...held.knownReports.map(r => r.id), ...(held.knownControlReports ?? []).map(r => r.id),
+        ...(held.knownOpeningControl === undefined ? [] : [held.knownOpeningControl]),
+      ]));
+    }
+    const seen = ids.get(d.seat)!;
+    if (seen.has(d.report.id)) throw new RangeError(`seat ${d.seat} already holds report ${d.report.id}`);
+    seen.add(d.report.id);
+    reports.push(d.report);
+    if ((truth ?? state.reportTruth)[d.report.id] === undefined) {
+      truth ??= { ...state.reportTruth };
+      truth[d.report.id] = d.truth;
+    }
+  }
+  for (const [seat, reports] of lists) knowledge[seat] = { ...storedKnowledgeOf(state, seat), knownReports: reports.sort(reportOrder) };
+  return { ...state, knowledgeBySeat: knowledge, reportTruth: truth ?? state.reportTruth };
+}
+
 /**
  * The supersession key: a newer report with the same template, author and
  * subject replaces an older one. A report answering an order is about that

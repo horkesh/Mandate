@@ -5,7 +5,7 @@
  * today too, so the phase repeats until nothing more is due.
  */
 import { sideOfPerson } from '../command/command.ts';
-import { deliverReport } from '../knowledge/knowledge.ts';
+import { deliverReport, deliverReports, type ReportDelivery } from '../knowledge/knowledge.ts';
 import { term } from '../knowledge/truth.ts';
 import { mintMessageId, sendMessages, takeDue, type TransitMessage } from '../messages/transit.ts';
 import type { State } from '../root-state.ts';
@@ -47,9 +47,34 @@ export function deliverDue(ctx: TickContext, start: State): State {
     const taken = takeDue(state, ctx.day);
     if (taken.due.length === 0) return state;
     state = taken.state;
-    for (const msg of taken.due) state = deliverOne(ctx, state, msg);
+    for (let i = 0; i < taken.due.length;) {
+      const first = taken.due[i]!;
+      if (!isReportArrival(first)) {
+        state = deliverOne(ctx, state, first);
+        i++;
+        continue;
+      }
+      const arrivals: TransitMessage[] = [];
+      const deliveries: ReportDelivery[] = [];
+      while (i < taken.due.length && isReportArrival(taken.due[i]!)) {
+        const msg = taken.due[i++]!;
+        arrivals.push(msg);
+        deliveries.push({ seat: seatIdFor(msg.msgTo), report: {
+          id: msg.msgOrigin, knownReceivedDay: ctx.day, knownRoute: msg.msgRoute, knownVia: msg.msgVia, knownBody: msg.msgReport!,
+        }, truth: msg.msgTruth ?? { truthTerms: [], truthTrimmed: [] } });
+      }
+      state = deliverReports(state, deliveries);
+      for (const msg of arrivals) {
+        fire(ctx, 'messages.delivered');
+        reportDecisionPoints(ctx, state, msg);
+      }
+    }
     state = sendMessages(state, ctx.outbox.splice(0));
   }
+}
+
+function isReportArrival(msg: TransitMessage): boolean {
+  return msg.msgVerb === null && msg.msgOrder === null && msg.msgRole !== 'filter';
 }
 
 function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State {
@@ -78,8 +103,15 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
     { id: msg.msgOrigin, knownReceivedDay: ctx.day, knownRoute: msg.msgRoute, knownVia: msg.msgVia, knownBody: report },
     msg.msgTruth ?? { truthTerms: [], truthTrimmed: [] },
   );
+  reportDecisionPoints(ctx, next, msg);
+  return next;
+}
+
+function reportDecisionPoints(ctx: TickContext, state: State, msg: TransitMessage): void {
+  const report = msg.msgReport!;
+  const seat = seatIdFor(msg.msgTo);
   const world = ctx.world;
-  const side = sideOfPerson(world.map, next, msg.msgTo);
+  const side = sideOfPerson(world.map, state, msg.msgTo);
   if (side !== null && world.factionIds.includes(side) && world.faction(side).principal === msg.msgTo) {
     if (report.reportType === 'advice' && report.reportSubtype === 'memorandum' && report.reportAnswers !== null) {
       ctx.decisionPoints.push({ point: 'objection', seat, report: msg.msgOrigin, situation: null });
@@ -93,7 +125,6 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
       ctx.decisionPoints.push({ point: 'order-conflict', seat, report: msg.msgOrigin, situation: null });
     }
   }
-  return next;
 }
 
 /** A wire reaches the filter post on its way to the principal: its holder may hold it or cut claims (decision 0032), as his values ask (lane 1.1). */
