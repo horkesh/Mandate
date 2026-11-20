@@ -73,7 +73,7 @@ export function entryProblems(raw: unknown, i: number): string[] {
     pressure: ['cmd', 'person'],
     address: ['bloc', 'cmd'],
   };
-  const fields = FIELDS[c.cmd as string]!;
+  const fields = [...FIELDS[c.cmd as string]!, ...(c.cmd === 'call' ? ['men', 'callId', 'arm', 'readiness'].filter(k => Object.hasOwn(c,k)) : [])].sort(strictCompare);
   const keys = Object.keys(c).sort(strictCompare);
   if (keys.join() !== fields.join()) return [...problems, `${at}: ${String(c.cmd)} has fields [${keys.join(', ')}], expected [${fields.join(', ')}]`];
   const id = (v: unknown) => typeof v === 'string' && isWellFormedId(v);
@@ -94,8 +94,12 @@ export function entryProblems(raw: unknown, i: number): string[] {
     routed();
   } else if (c.cmd === 'call') {
     routed();
-    if (typeof c.regiments !== 'number' || !Number.isSafeInteger(c.regiments) || c.regiments < 1) problems.push(`${at}: call.regiments must be a whole number of regiments, at least 1`);
-    if (typeof c.termDays !== 'number' || !Number.isSafeInteger(c.termDays) || c.termDays < 1) problems.push(`${at}: call.termDays must be a whole number of days, at least 1`);
+    if (c.regiments !== null && (typeof c.regiments !== 'number' || !Number.isSafeInteger(c.regiments) || c.regiments < 1)) problems.push(`${at}: call.regiments must be positive whole regiments or null for unknown`);
+    if (c.termDays !== null && (typeof c.termDays !== 'number' || !Number.isSafeInteger(c.termDays) || c.termDays < 1)) problems.push(`${at}: call.termDays must be positive whole days or null for the war`);
+    if (Object.hasOwn(c, 'men') && c.men !== null && (typeof c.men !== 'number' || !Number.isSafeInteger(c.men) || c.men < 1)) problems.push(`${at}: call.men must be positive whole men or null for unknown strength`);
+    if (Object.hasOwn(c, 'callId') && (typeof c.callId !== 'string' || !/^[a-z][a-z0-9_]*$/.test(c.callId))) problems.push(`${at}: call.callId must be a pack call id`);
+    if (Object.hasOwn(c,'arm') && !id(c.arm)) problems.push(`${at}: call.arm must name an arm`);
+    if (Object.hasOwn(c,'readiness') && typeof c.readiness !== 'boolean') problems.push(`${at}: call.readiness must be boolean`);
   } else if (c.cmd === 'battle') {
     if (!id(c.post)) problems.push(`${at}: battle.post must be a post id`);
     problems.push(...battleOrdersProblems(c as { commit: unknown; night: unknown; cutOff: unknown; pursue: unknown }).map((p) => `${at}: ${p}`));

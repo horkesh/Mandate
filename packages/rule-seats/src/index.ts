@@ -137,10 +137,20 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
     send({ cmd: 'go', to: post, route: routeTo(post, around), bypass: around });
   }
   const answered = new Set<string>([...menu.reviews.map((r) => r.post), ...menu.awaiting]);
+  const sendCalls = (peaceOnly: boolean): void => {
+    for (const call of menu.doctrine.calls) {
+      if (day < call.day || (peaceOnly && call.atPeace !== true)) continue;
+      const r = menu.raising.find(x => x.post === call.post);
+      const route = r === undefined ? undefined : quickest(r.routes);
+      if (r === undefined || route === undefined || (call.id === undefined ? r.called : call.issued === true)) continue;
+      send({ cmd: 'call', to: r.post, regiments: call.regiments, termDays: call.termDays, route: route.route, bypass: false,
+        ...(call.id === undefined ? {} : { callId: call.id }), ...(call.men === undefined ? {} : { men: call.men }), ...(call.arm === undefined ? {} : { arm: call.arm }), ...(call.readiness === undefined ? {} : { readiness: call.readiness }) });
+    }
+  };
   // 0064, 0066: nothing of his doctrine before the morning after his side is at war.
-  if (menu.atWarSince === null) return orders;
+  if (menu.atWarSince === null) { sendCalls(true); return orders; }
   const opening = Math.max(policy.openingDay, menu.atWarSince + 1);
-  if (day < opening) return orders;
+  if (day < opening) { sendCalls(true); return orders; }
   const doctrine = menu.doctrine;
 
   // 2. Each offensive goal on its day: the doctrine's dated row, or the opening morning if its date has passed.
@@ -173,15 +183,8 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
     appointed.add(man.person);
     send({ cmd: 'appoint', post: v.post, person: man.person, rank: null, route: route.route });
   }
-  // 4. Each call the doctrine lists, once, from its date: a governor already called (a call on its way, or answered,
-  // whoever made it, a situation's option included) is not called again (one owner per levy, rule 5).
-  for (const call of doctrine.calls) {
-    if (day < call.day) continue;
-    const r = menu.raising.find((x) => x.post === call.post);
-    const route = r === undefined ? undefined : quickest(r.routes);
-    if (r === undefined || r.called || route === undefined) continue;
-    send({ cmd: 'call', to: r.post, regiments: call.regiments, termDays: call.termDays, route: route.route, bypass: false });
-  }
+  // 4. Each dated requisition once. A later identified call is independent of the governor's earlier answers.
+  sendCalls(false);
   // 5. What a governor raised goes to the doctrine's post to concentrate (a transfer, answered by the governor himself).
   if (doctrine.concentrateAt !== null) {
     for (const c of menu.commandable) {

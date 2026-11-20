@@ -42,8 +42,12 @@ export type OrderKind = (typeof ORDER_KINDS)[number];
 
 /** A call for regiments, as an order carries it (lane 1.7). */
 export interface CallSpec {
-  readonly callRegiments: number;
-  readonly callTermDays: number;
+  readonly callRegiments: number | null;
+  readonly callTermDays: number | null;
+  readonly callMen?: number | null;
+  readonly callId?: string;
+  readonly callArm?: string;
+  readonly callReadiness?: boolean;
 }
 
 export interface OrderBody {

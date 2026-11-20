@@ -134,6 +134,22 @@ describe('a principal doing his historical jobs by his pack doctrine (lane 1.12)
     expect(quiet(principalOrders({ ...m, raising: raising(true) }, [], 3))).toEqual([]);
   });
 
+  it('distinguishes sourced repeat calls and permits only explicitly peaceful calls before war', () => {
+    const raising = [{ post: post('gov'), holder: person('holder'), routes: [{ route: 'courier' as const, typicalDays: 3, price: 0 }], called: true }];
+    const m = doctrine({ calls: [
+      { id: 'first', post: post('gov'), regiments: 2, termDays: 365, day: 3, atPeace: true, issued: true },
+      { id: 'second', post: post('gov'), regiments: 1, men: 500, termDays: 365, day: 5, atPeace: true, issued: false },
+      { id: 'war_only', post: post('gov'), regiments: 3, termDays: 365, day: 5, issued: false },
+    ] });
+    const peace = { ...m, raising, atWarSince: null };
+    expect(quiet(principalOrders(peace, [], 4))).toEqual([]);
+    expect(quiet(principalOrders(peace, [], 5))).toEqual([
+      { cmd: 'call', to: post('gov'), regiments: 1, men: 500, callId: 'second', termDays: 365, route: 'courier', bypass: false },
+    ]);
+    const issued = { ...peace, doctrine: { ...peace.doctrine, calls: peace.doctrine.calls.map(c => ({ ...c, issued: true })) } };
+    expect(quiet(principalOrders(issued, [], 6))).toEqual([]);
+  });
+
   it('concentrates what a governor raised at his doctrine’s post, once while the transfer is on its way', () => {
     const levy = army('gov', 3, { raising: true, men: 2000 });
     const m = { ...doctrine({ concentrateAt: post('near') }), commandable: [army('near', 2), levy] };

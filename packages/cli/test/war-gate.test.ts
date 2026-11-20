@@ -38,7 +38,11 @@ describe('the war gate on union-1861', () => {
   it('keeps the peace until the opening decisions, then each side is at war from its own decision, with no labelled option (lane 1.11)', () => {
     const start = phase0.createState(world, setup);
     const peace = phase0.playDays(world, start, seats, 30, { freeze: true });
-    expect(doctrine(peace.log)).toEqual([]);
+    expect(doctrine(peace.log).filter(e => e.command.cmd !== 'call')).toEqual([]);
+    // The record has provisional-force requisitions before either government's war decision (R90).
+    const beforeWar = peace.log.filter(e => e.command.cmd === 'call');
+    expect(beforeWar).toHaveLength(7);
+    expect(beforeWar.every(e => e.day === 4 && e.command.cmd === 'call' && e.command.callId?.startsWith('cs_mar09_'))).toBe(true);
     expect(peace.state.situationFlags[warFlags.find((r) => r.faction === 'confederate')!.flag!]).toBeUndefined();
     let firstFire: number | null = null;
     let firstKnowledge: number | null = null;
@@ -78,11 +82,11 @@ describe('the war gate on union-1861', () => {
     // no dated doctrine row duplicates it; what they raise still goes to the concentration post. Sumter's goal belongs to the
     // authored opening alone: the doctrine sends no second goal down the chain, and only answers its relay objection.
     expect(Math.min(...doctrine(warRun.log).map((e) => e.day))).toBe(1);
-    expect(Math.min(...warRun.log.filter((e) => e.command.cmd === 'call').map((e) => e.day))).toBe(34);
+    expect(Math.min(...warRun.log.filter((e) => e.command.cmd === 'call').map((e) => e.day))).toBe(4);
     expect(callers(warRun.log, 34)).toEqual(['seat:davis_jefferson']);
     expect(callers(warRun.log, 41)).not.toContain('seat:lincoln_abraham');
     const nyAnswers = Object.values(warRun.state.orderResponses).filter((r) =>
-      r.respKind === 'call' && r.respRole === 'addressee' && r.respPost === 'st_gov_new_york');
+      r.respKind === 'call' && r.respRole === 'addressee' && r.respPost === 'st_gov_new_york' && r.respCallId === undefined);
     expect(nyAnswers).toHaveLength(1);
     expect(nyAnswers[0]!.respDay).toBe(41);
     expect(Object.keys(warRun.state.forceBlockStates).some((b) => b.startsWith('raised.st_gov_new_york.'))).toBe(true);
@@ -101,10 +105,11 @@ describe('the war gate on union-1861', () => {
     expect(canonicalHash(war)).not.toBe(canonicalHash(peace));
   });
 
-  it('a war that begins mid-run starts his doctrine the next morning, and each governor is called once', () => {
+  it('a war that begins mid-run starts martial doctrine next morning, and each dated requisition is sent once', () => {
     const peace = phase0.createState(world, setup);
     const early = phase0.playDays(world, peace, seats, 10, { freeze: true });
-    expect(doctrine(early.log)).toEqual([]);
+    expect(doctrine(early.log).filter(e => e.command.cmd !== 'call')).toEqual([]);
+    expect(early.log.filter(e=>e.command.cmd==='call')).toHaveLength(7);
     // What a situation's effect would do on day 10: set the pack's war flags (the test plays the situation's part).
     const flags = Object.fromEntries(warFlags.map((r) => [r.flag, 10]));
     const declared = { ...early.state, situationFlags: flags };
@@ -113,7 +118,7 @@ describe('the war gate on union-1861', () => {
     // Each call still waits for its own date (8 and 15 April), and goes once.
     expect(Math.min(...late.log.filter((e) => e.command.cmd === 'call').map((e) => e.day))).toBe(34);
     expect(callers(late.log, 34)).toEqual(['seat:davis_jefferson']);
-    const called = late.log.filter((e) => e.command.cmd === 'call').map((e) => (e.command as unknown as { readonly to: string }).to);
+    const called = late.log.filter((e) => e.command.cmd === 'call').map((e) => (e.command as unknown as { readonly callId: string }).callId);
     expect(new Set(called).size).toBe(called.length);
     expect(late.state.forceLocations).not.toEqual(early.state.forceLocations);
   });

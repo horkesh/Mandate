@@ -230,7 +230,9 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
  * bombardment, not the retired generic march on Washington. Concentrating levies march, consume stores
  * and refill at depots; the spring's decisions change governments and bring Congress into session.
  * Every positive centre below is the retained history run's count, with the usual half-to-double band.
- * runs/r73/band-reconciliation.json records each change and its cause. Historical checkpoint bands
+ * runs/r73/band-reconciliation.json records each change and its cause. R96 recentres only the eight
+ * full-run breaches caused by R90's sourced calls; runs/r96/band-reconciliation.json lists them.
+ * Historical checkpoint bands
  * (each pack's checkpoints.json) are independent and unchanged; these are mechanic liveness counts only.
  */
 const UNION_BANDS: Record<string, GateBand> = {
@@ -247,7 +249,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'control.changed': around(20),
   'control.threshold_crossed': around(10),
   'forces.stores_fell': around(587),
-  'forces.stores_low': around(2),
+  'forces.stores_low': { ...around(29), why: "R96 [I]: R90's sourced calls muster more blocks that consume stores while concentrating; the stores rules are unchanged" },
   'forces.stores_refilled': around(704),
   'forces.stragglers_returned': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
   'combat.flank_broken': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
@@ -272,7 +274,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'messages.sent': around(11185),
   'messages.special_messenger': quiet('the one bypass uses the faster zero-day wire instead of a three-day messenger (R78)'),
   'orders.bypassed': around(4),
-  'movement.arrived': around(123),
+  'movement.arrived': { ...around(260), why: "R96 [I]: R90's additional levies and answered transfers produce more joining marches and arrivals through the existing movement path" },
   'movement.leg_started': around(98),
   'orders.obeyed': around(3),
   'orders.relay_held': around(1),
@@ -318,18 +320,18 @@ const UNION_BANDS: Record<string, GateBand> = {
   'situations.resurfaced': around(2),
   'situations.staff_lines': around(18),
   'situations.surfaced': around(54),
-  'recruitment.called': around(31),
-  'recruitment.answered': around(19),
-  'recruitment.slow_walked': around(15),
-  'recruitment.refused': around(12),
-  'recruitment.mustered': around(19),
+  'recruitment.called': { ...around(89), why: "R96: R90's 65 identified doctrine requisitions and the unchanged 24 authored militia orders replace 31 calls; repeated sourced calls have distinct identities" },
+  'recruitment.answered': { ...around(54), why: "R96: more of R90's distinct sourced calls reach governors, including readiness requests that receive answers without muster; compliance rules are unchanged" },
+  'recruitment.slow_walked': { ...around(50), why: "R96: more of R90's sourced calls reach governors and take the existing delayed-response path; compliance thresholds and delays are unchanged" },
+  'recruitment.refused': { ...around(35), why: "R96: more of R90's sourced calls reach governors and are refused under the existing compliance rules; no threshold was fitted" },
+  'recruitment.mustered': { ...around(39), why: "R96: R90's additional absolute requisitions and transfer entries use the existing raising path, producing 39 musters including four unknown-strength blocks" },
   'recruitment.men': around(19),
   'recruitment.disbanded': around(15),
   'ladder.moved': around(10),
   'ladder.rival': notHere("no holder reaches a rival rung with the required standing in the merged 148-day history run; the testbed run fires it"),
   'people.grievances_faded': around(30),
   'seats.attention_refilled': around(21),
-  'seats.attention_spent': around(29),
+  'seats.attention_spent': { ...around(96), why: "R96: R90's additional priced calls and transfers consume more attention; prices and refill rules are unchanged" },
   'seats.initiative': around(9),
   'operations.repulsed': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
   'forces.landed_by_situation': around(1),
@@ -511,7 +513,10 @@ export const REFERENCE_RUNS: readonly ReferenceRun[] = [
     days: 30,
     atWar: false,
     seats: 'rules',
-    bands: Object.fromEntries(PEACE_QUIET.map((m) => [m, quiet(`union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine`)])),
+    bands: {
+      ...Object.fromEntries(PEACE_QUIET.map((m) => [m, quiet(`union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine`)])),
+      'recruitment.called': { ...around(7), why: "R96: R90's seven sourced 9 March provisional-force requisitions precede the war decisions; other war doctrine still waits on each side's own decision" },
+    },
   },
 ];
 

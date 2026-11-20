@@ -51,7 +51,7 @@ describe('a call for regiments, answered by each governor through his own compli
     const levy = Object.values(s.postLevies)[0]!;
     expect(levy).toMatchObject({ levyPost: NORTH_GOVERNOR, levyGovernor: P('n_governor'), levyIssuer: P('n_leader'), levyTermDays: 90, levyResponse: phase0.responseKey(levy.levyCall, P('n_governor')) });
     expect(levy.levyRegiments).toBeGreaterThan(0);
-    expect(levy.levyMen).toBe(levy.levyRegiments * world.map.world.rules.recruitment.menPerRegiment);
+    expect(levy.levyMen).toBe(levy.levyRegiments! * world.map.world.rules.recruitment.menPerRegiment);
     expect(fires('recruitment.called')).toBe(1);
     expect(fires('recruitment.answered')).toBe(1);
     // His answer goes back to the First Minister: the regiments he says he will raise, and the rung he declares.
@@ -132,7 +132,7 @@ describe('region loyalty is State owned by regions, read where a levy is raised 
     // End to end: the same call to a province whose loyalty has fallen raises fewer regiments.
     const loyal = play(world, state, 3, (d) => (d === 1 ? [['n_leader', call(NORTH_GOVERNOR, 10, 90)]] : [])).state;
     const shaken = play(world, { ...state, regionLoyalty: { ...state.regionLoyalty, [R('n_heartland')]: { north: 300 } } }, 3, (d) => (d === 1 ? [['n_leader', call(NORTH_GOVERNOR, 10, 90)]] : [])).state;
-    expect(Object.values(shaken.postLevies)[0]!.levyRegiments).toBeLessThan(Object.values(loyal.postLevies)[0]!.levyRegiments);
+    expect(Object.values(shaken.postLevies)[0]!.levyRegiments).toBeLessThan(Object.values(loyal.postLevies)[0]!.levyRegiments!);
   });
 });
 
@@ -233,6 +233,7 @@ describe('the standing review of lane 1.7: refusals, a blocked muster, a battle 
     const mustered = play(world, first.state, levy.levyMusterDay - first.state.stateDay).state;
     const block = ids.toId('forceBlock', `raised.${NORTH_GOVERNOR}.d${levy.levyMusterDay}`);
     const ends = mustered.forceEnlistments[block]!.enlEndsDay;
+    if (ends === null) throw new Error('this fixture enlisted for ninety days');
     const battle = (endDay: number | null) => ({
       ['battle.n_heartland.d1']: { battleRegion: R('n_heartland'), battleStartDay: ends - 1, battleEndDay: endDay, battleFactions: [], battleCauses: [], battleDays: [{ bdaySides: [{ bsideBlocks: [block] }] }] },
     }) as unknown as phase0.State['battleRecords'];

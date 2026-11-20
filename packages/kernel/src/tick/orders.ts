@@ -249,7 +249,7 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
   // watched from where he stands (lane 1.4's oversight).
   const terms = order.orderKind === 'call' ? callTerms(world.map.world.rules.recruitment) : goalTerms(rules, relayKindOf(start, order));
   const answer = answerOrder(world, start, relayer.id, order.orderIssuer, terms, { oversight: oversightOf(ctx, start, relayer.id, order.orderIssuer).value });
-  const state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: relayer.id, post, role: 'relay', day: ctx.day, kind: order.orderKind }));
+  const state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: relayer.id, post, role: 'relay', day: ctx.day, kind: order.orderKind, ...(order.orderCall?.callId === undefined ? {} : { callId: order.orderCall.callId }) }));
   const decision = relayAction(rules, answer, relayer.id, post);
   if (decision.action === 'object') {
     fire(ctx, 'orders.relay_objected');

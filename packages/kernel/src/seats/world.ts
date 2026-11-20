@@ -19,6 +19,7 @@
  *   goals come from his pack doctrine (`rules.ruleSeats.principals`).
  */
 import { strictCompare } from '../compare.ts';
+import { daysFromCivil, parseIsoDate } from '../world/calendar.ts';
 import { wireOwnerOf, type ControlIndex } from '../control-index/control-index.ts';
 import type { FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import { templateProblems, type ReportTemplate } from '../knowledge/templates.ts';
@@ -155,6 +156,14 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
     }),
   );
   problems.push(...doctrineProblems(map, start, factions, postSides));
+  for (const wire of rules.latency.publicWires ?? []) {
+    if (!map.regions.has(wire.from) || !map.regions.has(wire.to)) problems.push('latency.publicWires: unknown endpoint');
+    if (!factions.has(wire.faction)) problems.push('latency.publicWires: unknown faction');
+    try {
+      if (daysFromCivil(parseIsoDate(wire.throughDate)) < daysFromCivil(parseIsoDate(wire.fromDate))) problems.push('latency.publicWires: date range is reversed');
+    } catch { problems.push('latency.publicWires: invalid date'); }
+    if (wire.source.trim().length === 0) problems.push('latency.publicWires: a public route needs a source');
+  }
   // Lane 1.12 (G-1.12a): the forts the rules let be bombarded, and the record's terms, name regions of the map and sides.
   const bombardment = map.world.rules.combat.bombardment;
   for (const o of bombardment.objectives) if (!map.regions.has(o.region)) problems.push(`rules.combat.bombardment.objectives: ${o.region} is not a region`);
@@ -268,7 +277,7 @@ function courierTable(map: WorldIndex, ids: readonly RegionId[], courierPermille
  * whoever holds each region (0052: the wire belongs to a side). Build one per
  * tick from the morning's control index.
  */
-export function latencyMapFor(world: SeatsWorld, index: ControlIndex): LatencyMap {
+export function latencyMapFor(world: SeatsWorld, index: ControlIndex, day?: number): LatencyMap {
   const wired = new Map<FactionId, RegionId[]>();
   for (const region of world.regionIds) {
     const owner = wireOwnerOf(index, region).owner;
@@ -278,6 +287,13 @@ export function latencyMapFor(world: SeatsWorld, index: ControlIndex): LatencyMa
     wired.set(owner, list);
   }
   return {
+    publicWire: (from, to, faction) => day !== undefined && (world.rules.latency.publicWires ?? []).some(w => {
+      const start = daysFromCivil(parseIsoDate(world.start.startDate));
+      const when = start + day;
+      const matches = w.faction === faction && ((w.from === from && w.to === to) || (w.from === to && w.to === from));
+      const uncontested = [from,to].every(r => { const holder=wireOwnerOf(index,r).owner; return holder === null || holder === faction; });
+      return matches && uncontested && when >= daysFromCivil(parseIsoDate(w.fromDate)) && when <= daysFromCivil(parseIsoDate(w.throughDate));
+    }),
     courierDays: (from, to) => world.courierDays(from, to),
     daysToWire: (from, faction) => {
       const list = wired.get(faction);
@@ -330,6 +346,7 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
   const selfGoverning = new Set(map.world.vocabularies.departmentKinds.filter((k) => k.selfGoverning).map((k) => k.id));
   const posts = new Map(start.posts.map((p) => [p.id as string, p]));
   const kinds = new Set(map.world.vocabularies.personKinds.map((k) => k.id as string));
+  const callIds = new Set<string>();
   for (const id of [...factions.keys()].sort(strictCompare)) {
     // A faction with no row has no doctrine: its rule-seat principal answers his commanders and gives no order of his own.
     // A pack states one row for each faction (the pack validator requires it); two are a contradiction.
@@ -348,13 +365,20 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
     for (const arm of ['land', 'naval'] as const) for (const k of r.appointKinds[arm]) if (!kinds.has(k)) problems.push(`${at}.appointKinds.${arm}: "${k}" is not a person kind`);
     const called = new Set<string>();
     r.calls.forEach((c, j) => {
-      onSide(c.post, `calls[${j}].post`);
+      if (!posts.has(c.post)) problems.push(`${at}.calls[${j}].post: ${c.post} is not a start post`);
+      else if (postSides.get(c.post)?.faction !== null && postSides.get(c.post)?.faction !== r.faction) problems.push(`${at}.calls[${j}].post: ${c.post} belongs to another side at the start`);
       const p = posts.get(c.post);
       const dept = p === undefined ? undefined : map.world.departments.find((d) => d.id === p.department);
       if (p !== undefined && (!recruitment.raisingPostKinds.includes(p.kind) || (dept !== undefined && selfGoverning.has(dept.kind)))) problems.push(`${at}.calls[${j}]: ${c.post} does not raise regiments (rules.recruitment.raisingPostKinds)`);
-      if (c.termDays > recruitment.maxTermDays) problems.push(`${at}.calls[${j}]: a term of ${c.termDays} days is longer than the pack's ${recruitment.maxTermDays}`);
-      if (called.has(c.post)) problems.push(`${at}.calls[${j}]: ${c.post} is called twice`);
-      called.add(c.post);
+      if (c.termDays !== null && c.termDays > recruitment.maxTermDays) problems.push(`${at}.calls[${j}]: a term of ${c.termDays} days is longer than the pack's ${recruitment.maxTermDays}`);
+      if (c.arm !== undefined && !map.world.vocabularies.arms.some(a => a.id === c.arm && !a.naval)) problems.push(`${at}.calls[${j}]: ${c.arm} is not a land arm`);
+      const key = c.id ?? c.post;
+      if (c.id !== undefined) {
+        if (callIds.has(c.id)) problems.push(`${at}.calls[${j}]: duplicate pack call id ${c.id}`);
+        callIds.add(c.id);
+      }
+      if (called.has(key)) problems.push(`${at}.calls[${j}]: duplicate call ${key}`);
+      called.add(key);
     });
     r.offensives.forEach((o, j) => {
       onSide(o.post, `offensives[${j}].post`);

@@ -106,7 +106,7 @@ export interface RuleSeatRules {
   readonly principals: readonly PrincipalDoctrine[];
 }
 
-/** A rule-seat principal's doctrine (lane 1.12). Nothing here acts before his side is at war (0064, 0066). */
+/** A rule-seat principal's doctrine. Martial actions wait for war; a cited call may explicitly permit peacetime issue. */
 export interface PrincipalDoctrine {
   readonly faction: FactionId;
   /** Whether his goals may cross a neutral government's open ground: a political act, decided per side. */
@@ -116,12 +116,12 @@ export interface PrincipalDoctrine {
   /** Why that post: the research it rests on, the choice of post labelled [I]; null exactly when `concentrateAt` is. */
   readonly concentrateSource: string | null;
   /**
-   * His calls for regiments, each once, from its date (or the day after war, if later): a raising post, how many, for
-   * how long. One owner per levy (rule 5): a row is the doctrine's call; when a situation's option makes the same call
-   * (lane 1.12 Part B), the row is removed from the pack, and the kernel's record of a call (`pruneResponses` keeps a
-   * governor's answer) stops the seat calling a governor who has been called already.
+   * Each identified requisition goes once, from its date, including a repeat to the same governor. An unnamed legacy
+   * row is still suppressed by any prior call to that post. An authored situation remains the sole issuer of its call.
+   * Exact men override conversion by regiment; null men/regiments preserve an unquantified unit. Readiness alone
+   * records an answer without mustering. Null termDays means war service, with no invented fixed expiry.
    */
-  readonly calls: readonly { readonly post: PostId; readonly regiments: number; readonly termDays: number; readonly fromDate: string; readonly source: string }[];
+  readonly calls: readonly { readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly fromDate: string; readonly atPeace?: boolean; readonly source: string }[];
   /** The offensive goals he gives, each on its day (or the day after war, if later): a post to take a region. */
   readonly offensives: readonly { readonly post: PostId; readonly objective: RegionId; readonly fromDate: string; readonly source: string }[];
   /** How often he asks each army where it stands and what it faces (an inquiry costs no attention), in days. */

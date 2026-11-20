@@ -496,3 +496,13 @@ For the lead:
 
 1. **Lead / steward:** unloaded and Linux CI confirmation remain outstanding. The 28 ms number is met in the recorded loaded samples, but this is not an unloaded or hosted-CI claim.
 2. **Lead / lane 1.14 and R79:** the inherited five 1A failure categories, hook bound, stand-in labels and Taney follow-ups remain separate work. No R79 item was undertaken.
+
+## R90: shared call doctrine (2026-11-20)
+
+The R90 hand-over is in **`notes/lane-1.7-men-regions.md`, R90**, with `runs/r90/final-checks.json` as evidence index. It supersedes Part A's once-per-governor suppression: 65 identified dated requisitions may repeat to a governor, while each identity is sent once. Explicit sourced peacetime calls do not set a war flag. Conditional readiness requests receive an answer without mustering. The authored 15 April militia decision remains its sole issuer. The public Cameron–Letcher wire brings the unchanged signed Virginia situation to 17 April.
+
+The history still has no Confederate force near Manassas or battle there. The concentration post remains Charleston. Virginia, North Carolina and Tennessee object to transfer calls; Arkansas's transfer is due after July. The full check exits 1 (four band-dependent failures remain after a focused fixture correction); the full done check exits 1, Phase 0 4/6 and 1A 2/6, including a 40.44 ms history median against 40. No band, threshold, trait, signed item or men-per-regiment rule was fitted. Independent review remains with Claude under 0096.
+
+## Findings outside my scope
+
+The R90 primary hand-over routes the source/term limits, missing national enlistment path, call-purpose/compliance issue, absent Manassas establishment and every unmet gate. R87–R89 and R91–R93 were not undertaken here.

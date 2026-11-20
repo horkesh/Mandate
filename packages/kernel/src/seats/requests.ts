@@ -45,7 +45,7 @@ export interface MorningGround {
 export function morningGround(world: SeatsWorld, state: State, day: number): MorningGround {
   const index = buildControlIndex(world.map, state.regionControl);
   if (state.calendarStart === null) throw new RangeError('the seats layer needs a calendar (a scenario start)');
-  return { march: { map: world.map, index, network: passageOf(world.map, state), month: dateOfDay(state.calendarStart, day).month }, latency: latencyMapFor(world, index) };
+  return { march: { map: world.map, index, network: passageOf(world.map, state), month: dateOfDay(state.calendarStart, day).month }, latency: latencyMapFor(world, index, day) };
 }
 
 /**
@@ -126,7 +126,12 @@ function doctrineView(world: SeatsWorld, state: State, faction: FactionId): Doct
   return {
     crossNeutral: row.crossNeutral,
     concentrateAt: row.concentrateAt,
-    calls: row.calls.map((c) => ({ post: c.post, regiments: c.regiments, termDays: c.termDays, day: daysFromCivil(parseIsoDate(c.fromDate)) - start })),
+    calls: row.calls.map((c) => ({ post: c.post, regiments: c.regiments, termDays: c.termDays, day: daysFromCivil(parseIsoDate(c.fromDate)) - start,
+      ...(c.men === undefined ? {} : { men: c.men }), ...(c.atPeace === undefined ? {} : { atPeace: c.atPeace }),
+      ...(c.arm === undefined ? {} : { arm: c.arm }),
+      ...(c.readiness === undefined ? {} : { readiness: c.readiness }),
+      ...(c.id === undefined ? {} : { id: c.id, issued: state.messagesInTransit.some(m => m.msgOrder !== null && m.msgOrder.orderCall?.callId === c.id && m.msgOrder.orderIssuer === world.faction(faction).principal) || Object.values(state.orderResponses).some(r => r.respCallId === c.id && r.respPost === c.post) }),
+    })),
     offensives: row.offensives.map((o) => ({ post: o.post, objective: o.objective, day: daysFromCivil(parseIsoDate(o.fromDate)) - start })),
     inquireEveryDays: row.inquireEveryDays,
     appointKinds: { land: [...row.appointKinds.land], naval: [...row.appointKinds.naval] },
@@ -169,7 +174,7 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   }
   // Lane 1.12: what his doctrine reads. Posts that raise regiments, held; posts commanding troops that nobody holds; and
   // the men he may appoint to them, senior first.
-  const raising: RaisingPost[] = ownPosts
+  const raising: RaisingPost[] = (Object.keys(state.postStates).sort(strictCompare) as PostId[]).filter(id => postFaction(world,state,id) === faction || postFaction(world,state,id) === null)
     .filter((id) => state.postStates[id]!.postHolder !== null && raisesRegiments(id))
     .map((id) => ({ post: id, holder: state.postStates[id]!.postHolder!, routes: routesTo(id), called: calledOn(state, f.principal, id) }));
   // A vacancy is a post that had a holder when the scenario began and has lost him (to a wound, a capture, a relief), and
