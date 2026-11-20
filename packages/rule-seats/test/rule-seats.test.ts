@@ -98,6 +98,19 @@ describe('a holder handed a situation (lane 0.7)', () => {
 });
 
 describe('a principal doing his historical jobs by his pack doctrine (lane 1.12)', () => {
+  it('sends offered historical appointments through the ordinary verb, within attention', () => {
+    const offered = { post: post('expedition'), person: person('officer'), routes: [{ route: 'courier' as const, typicalDays: 0, price: 0 }] };
+    const m = { ...menu, historicalAppointments: [offered] };
+    expect(quiet(principalOrders(m, [], 5))).toEqual([{ cmd: 'appoint', post: post('expedition'), person: person('officer'), rank: null, route: 'courier' }]);
+    expect(quiet(principalOrders({ ...m, attention: { ...menu.attention, left: 0 } }, [], 5))).toEqual([]);
+    expect(quiet(principalOrders({ ...m, atWarSince: null }, [], 5))).toEqual([]);
+  });
+  it('does not also fill a historical appointment’s post through the generic vacancy policy', () => {
+    const target = { post: post('vacant'), arm: 'land' as const, routes: [{ route: 'courier' as const, typicalDays: 0, price: 0 }], appointing: false };
+    const m = { ...menu, vacancies: [target], candidates: [{ person: person('historical'), kind: 'general', seniority: 1 }, { person: person('other'), kind: 'general', seniority: 0 }],
+      historicalAppointments: [{ post: target.post, person: person('historical'), routes: target.routes }] };
+    expect(quiet(principalOrders(m, [], 5))).toEqual([{ cmd: 'appoint', post: target.post, person: person('historical'), rank: null, route: 'courier' }]);
+  });
   it('consults the offered proposer posts once per situation, including at peace, within attention', () => {
     const situation = ids.toId('situation', 'question');
     const choice = { situation, options: [], delegableTo: [], consultPosts: [post('near'), post('far'), post('near')] };

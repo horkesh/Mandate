@@ -68,6 +68,58 @@ const audienceResponse = (state: State) => Object.values(state.orderResponses).f
 const answered = (state: State) =>
   knowledgeOf(state, lead).knownReports.flatMap((r) => r.knownBody.reportClaims.filter((c) => c.claimKind === 'verb-answered').map((c) => `${r.knownBody.reportAuthor}:${c.claimToken}:${c.claimValue}`));
 
+describe('appointment to a declared temporary command (0040)', () => {
+  function commandWorld(creation: 'appoint' | 'directive' | 'start_only' = 'appoint', refusing = false): SeatsWorld {
+    const base = indexedFixture(refusing ? { persons: { a_spy: { regard: 'low', candour: 'high', values: ['reputation'] } } } : {});
+    const row = { post: POST('new_command'), person: P('a_spy'), onDate: '1900-06-03', source: 'TB-DESIGN: a dated appointment' };
+    const map = indexWorld({ ...base.map.world,
+      vocabularies: { ...base.map.world.vocabularies, postKinds: base.map.world.vocabularies.postKinds.map((k) => k.id === 'expedition' ? { ...k, creatable: creation } : k) },
+      rules: { ...base.map.world.rules, ruleSeats: { ...base.map.world.rules.ruleSeats, principals: base.map.world.rules.ruleSeats.principals.map((r) => r.faction === F('a') ? { ...r, appointments: creation === 'appoint' ? [row] : [] } : r) } },
+    });
+    return indexSeatsWorld(map, { ...base.start, temporaryPosts: [{ id: POST('new_command'), name: 'post.new_command', kind: 'expedition', department: toId('department', 'a_war'), parent: POST('a_office'), holder: null, region: R('a_cap'), operation: 'new_operation' }] });
+  }
+
+  it('offers a dated appointment only to the rule driver on its day, without opening the post', () => {
+    const world = commandWorld();
+    const start = createState(world, { seed: 1 });
+    const offer = (state: State) => principalMenu(world, state, F('a'), morningGround(world, state, state.stateDay + 1));
+    expect(offer(start).historicalAppointments ?? []).toEqual([]);
+    const due = { ...start, stateDay: 1 };
+    expect(offer(due).historicalAppointments).toEqual([expect.objectContaining({ post: POST('new_command'), person: P('a_spy') })]);
+    expect(due.postStates[POST('new_command')]).toBeUndefined();
+    expect(offer({ ...due, stateDay: 2 }).historicalAppointments ?? []).toEqual([]);
+    const human = createState(world, { seed: 1, drivers: { a_lead: 'human' } });
+    expect(offer({ ...human, stateDay: 1 }).historicalAppointments).toBeUndefined();
+    const ai = createState(world, { seed: 1, drivers: { a_lead: 'ai' } });
+    expect(offer({ ...ai, stateDay: 1 }).historicalAppointments).toBeUndefined();
+  });
+
+  it('opens the command only when the appointee accepts the delivered letter, retaining other holders', () => {
+    const world = commandWorld();
+    const start = createState(world, { seed: 1, drivers: { a_lead: 'human' } });
+    const run = days(world, start, 2, { 1: [{ cmd: 'appoint', post: POST('new_command'), person: P('a_spy'), rank: null, route: 'courier' }] });
+    expect(fired(run.results)).toEqual([]);
+    expect(run.state.postStates[POST('new_command')]).toMatchObject({ postHolder: P('a_spy'), postOperation: 'new_operation' });
+    expect(run.state.postStates[POST('a_army')]).toEqual(start.postStates[POST('a_army')]);
+    expect(run.fires('command.temporary_post_opened')).toBe(1);
+    expect(answers(run.state, 'a_spy')).toEqual([expect.objectContaining({ respKind: 'verb:appoint' })]);
+  });
+
+  it('leaves no command behind when the man declines and rejects undeclared or non-appointment kinds', () => {
+    const world = commandWorld('appoint', true);
+    const command: Command = { cmd: 'appoint', post: POST('new_command'), person: P('a_spy'), rank: null, route: 'courier' };
+    const no = days(world, createState(world, { seed: 1 }), 2, { 1: [command] });
+    expect(fired(no.results)).toEqual([]);
+    expect(no.state.postStates[POST('new_command')]).toBeUndefined();
+    expect(no.fires('verbs.declined')).toBe(1);
+    for (const kind of ['directive', 'start_only'] as const) {
+      const bad = commandWorld(kind);
+      expect(fired(days(bad, createState(bad, { seed: 1 }), 1, { 1: [command] }).results)).toEqual(['unknown_post']);
+    }
+    expect(fired(days(world, createState(world, { seed: 1 }), 1, { 1: [{ ...command, post: POST('undeclared') }] }).results)).toEqual(['unknown_post']);
+  });
+});
+
 /** `state` with an approved plan to hold at a_army (the plans machinery would put it there; here its status is set directly). */
 function planned(state: State): State {
   const plan = {

@@ -9,7 +9,7 @@
  * `scenario.ts`; every open list (terrains, post kinds, arms, ranks, traits)
  * belongs to the pack.
  */
-import type { DepartmentId, FactionId, PostId, RegionId } from '../ids.ts';
+import type { DepartmentId, FactionId, PersonId, PostId, RegionId } from '../ids.ts';
 import type {
   CensusRecord,
   DepotRecord,
@@ -124,6 +124,8 @@ export interface PrincipalDoctrine {
   readonly calls: readonly { readonly post: PostId; readonly regiments: number; readonly termDays: number; readonly fromDate: string; readonly source: string }[];
   /** The offensive goals he gives, each on its day (or the day after war, if later): a post to take a region. */
   readonly offensives: readonly { readonly post: PostId; readonly objective: RegionId; readonly fromDate: string; readonly source: string }[];
+  /** Effective appointments offered only on this date to a rules driver; absent means no historical appointments. */
+  readonly appointments?: readonly { readonly post: PostId; readonly person: PersonId; readonly onDate: string; readonly source: string }[];
   /** How often he asks each army where it stands and what it faces (an inquiry costs no attention), in days. */
   readonly inquireEveryDays: number;
   /** The person kinds he appoints to a vacant post commanding land troops, and naval ones (the pack's person kinds). */

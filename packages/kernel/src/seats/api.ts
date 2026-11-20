@@ -171,6 +171,8 @@ export interface PrincipalMenu {
   readonly atWarSince: number | null;
   /** His doctrine (lane 1.12): what the rule-seat principal does, from the pack. */
   readonly doctrine: DoctrineView;
+  /** Due historical appointments, only for the rules driver; never in a human or AI menu. */
+  readonly historicalAppointments?: readonly { readonly post: PostId; readonly person: PersonId; readonly routes: readonly RouteOption[] }[];
   /** Posts on his side that raise regiments, held (lane 1.12). */
   readonly raising: readonly RaisingPost[];
   /** Posts commanding troops on his side that have lost the holder the scenario gave them (lane 1.12). */

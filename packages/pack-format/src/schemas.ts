@@ -295,6 +295,8 @@ export const RulesSchema = z.strictObject({
               .array(z.strictObject({ post: idOf('post'), objective: idOf('region'), fromDate: historicalDate, source: z.string().min(1) }))
               .describe('The offensive goals he gives, each from its date (or the day after war, if later); each cites its source.'),
             inquireEveryDays: positive.describe('How often he asks each army where it stands, in days (an inquiry costs no attention).'),
+            appointments: z.array(z.strictObject({ post: idOf('post'), person: idOf('person'), onDate: isoDate, source: z.string().min(1) })).optional()
+              .describe('Effective appointments on the cited date, only for a rules-driven principal. Omitted: none. Never shown to a human or AI driver.'),
             appointKinds: z
               .strictObject({ land: z.array(termId), naval: z.array(termId) })
               .describe('The person kinds he appoints to a vacant post commanding land troops, and naval ones.'),

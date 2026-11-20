@@ -32,9 +32,12 @@ describe('the opening of 1861 (lane 1.11)', () => {
   it('S17: the Fort Monroe command opens before the question, its holder carries both rows, and the history run holds the men', () => {
     const fortCommand = run.state.postStates['us_dept_virginia' as never] as { postHolder: string | null } | undefined;
     expect(fortCommand?.postHolder).toBe('butler_benjamin_f');
-    const opened = run.state.situationStates[S('butler_at_fort_monroe')]!.sitFiredDay!;
+    // R89 retires the notice: the rules principal now sends the ordinary appointment, effective 22 May.
+    const appointment = run.log.find((e) => e.command.cmd === 'appoint' && e.command.post === 'us_dept_virginia');
+    expect(appointment).toMatchObject({ day: 78, command: { cmd: 'appoint', person: 'butler_benjamin_f' } });
+    expect(run.state.situationStates[S('butler_at_fort_monroe')]).toBeUndefined();
     const question = run.state.situationStates[S('fort_monroe_arrivals')]!;
-    expect(opened).toBeLessThan(question.sitFiredDay!);
+    expect(appointment!.day).toBeLessThan(question.sitFiredDay!);
     // His practice is to hold them, so the escape notice that prints his refusal is the one that fires.
     expect(run.state.situationStates[S('fort_monroe_escape')]).toBeDefined();
     expect(run.state.situationStates[S('fort_monroe_escape_asked')]).toBeUndefined();

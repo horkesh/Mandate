@@ -11,7 +11,7 @@
  * and an amount, and the sending commander picks the blocks (0033).
  */
 import { strictCompare } from '../compare.ts';
-import { appointHolder, CommandError, factionOfPost, heldPost, relieveHolder, sideOfPerson, transferForce } from '../command/command.ts';
+import { appointHolder, CommandError, createTemporaryPost, declaredAppointment, factionOfPost, heldPost, relieveHolder, sideOfPerson, transferForce } from '../command/command.ts';
 import { noteLetter, postObserver, recallObserver } from '../command/observers.ts';
 import type { ComplianceRung, DirectiveResponse } from '../directive.ts';
 import type { MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
@@ -111,8 +111,10 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
   const holderOf = (post: PostId) => believedHolder(start, principal, post);
   switch (c.cmd) {
     case 'appoint': {
-      if (!postOnSide(ctx, start, c.post, principal)) return reject('unknown_post');
-      if (holderOf(c.post) !== null) return reject('post_held');
+      const side = sideOfPerson(world.map, start, principal)!;
+      const template = declaredAppointment(world.map, start, world.start.temporaryPosts, c.post, side);
+      if (template === undefined && !postOnSide(ctx, start, c.post, principal)) return reject('unknown_post');
+      if (template === undefined && holderOf(c.post) !== null) return reject('post_held');
       if (!knownPerson(ctx, c.person) || !sameSide(ctx, start, c.person, principal) || c.person === principal) return reject('unknown_person');
       if (heldPost(start, c.person) !== null) return reject('person_holds_post');
       if (c.rank !== null && !world.map.world.vocabularies.ranks.some((r) => r.id === c.rank)) return reject('unknown_rank');
@@ -244,10 +246,14 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
     case 'appoint': {
       const post = v.verbPost!;
       // The post may have filled, or he may have taken another, while the letter travelled: then he cannot take it.
-      if (state.postStates[post]?.postHolder !== null || heldPost(state, me) !== null) done = false;
+      if ((state.postStates[post] !== undefined && state.postStates[post]!.postHolder !== null) || heldPost(state, me) !== null) done = false;
       if (done) {
         try {
-          state = appointHolder(world.map, state, post, me);
+          const side = sideOfPerson(world.map, state, v.verbIssuer)!;
+          const template = declaredAppointment(world.map, state, world.start.temporaryPosts, post, side);
+          const opened = template === undefined ? state : createTemporaryPost(world.map, state, template);
+          state = appointHolder(world.map, opened, post, me);
+          if (template !== undefined) fire(ctx, 'command.temporary_post_opened');
         } catch (e) {
           if (!(e instanceof CommandError)) throw e;
           done = false;

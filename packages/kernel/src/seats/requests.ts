@@ -7,7 +7,7 @@
  * for orders, and is shown the plans submitted to him that have reached him.
  */
 import { strictCompare } from '../compare.ts';
-import { commandedBlocks, heldPost, sideOfPerson } from '../command/command.ts';
+import { commandedBlocks, declaredAppointment, heldPost, sideOfPerson } from '../command/command.ts';
 import { commanderView, mayAttackToday, presenceByRegion, sideCommand } from '../combat/battle.ts';
 import { believedRatio, commitAtDawn, cutOffChoice, pursuitChoice, standAtNight } from '../combat/decide.ts';
 import { BATTLE_ORDER_OPTIONS } from '../combat/order-kinds.ts';
@@ -30,7 +30,7 @@ import { deepFreeze } from '../tick/freeze.ts';
 import { passageOf } from '../tick/passage.ts';
 import { choosingPosts, optionView, planKey, planOptions } from '../tick/plans.ts';
 import { createViewCache, viewFor, type ViewCache } from '../view/view.ts';
-import { dateOfDay, daysFromCivil, parseIsoDate } from '../world/calendar.ts';
+import { dateOfDay, daysFromCivil, formatIsoDate, parseIsoDate } from '../world/calendar.ts';
 import type { BattleMenu, Candidate, CommandablePost, DelegatedMenu, DoctrineView, PlanMenu, RaisingPost, Vacancy, PlanReview, PrincipalMenu, RouteOption, SeatRequest, SituationChoice } from './api.ts';
 import { fieldPosts, headquartersOf, isFieldPost, postFaction, relayChain } from './posts.ts';
 import { seatIdFor } from './seats.ts';
@@ -186,6 +186,25 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     .filter((p) => p.id !== f.principal && sideOfPerson(world.map, state, p.id) === faction && heldPost(state, p.id) === null && (state.personStatus[p.id]?.statusKind ?? 'serving') === 'serving')
     .map((p) => ({ person: p.id, kind: p.kind as string, seniority: Math.max(-1, ...Object.values(state.personRanks[p.id] ?? {}).map((r) => rankIndex.get(r.rankTerm) ?? -1)) }))
     .sort((a, b) => b.seniority - a.seniority || strictCompare(a.person, b.person));
+  const historicalAppointments: NonNullable<PrincipalMenu['historicalAppointments']>[number][] = [];
+  const history = state.seatAssignments[seatIdFor(f.principal)]?.seatDriver === 'rules';
+  if (history) {
+    const today = formatIsoDate(dateOfDay(state.calendarStart!, state.stateDay + 1));
+    const rows = world.map.world.rules.ruleSeats.principals.find((r) => r.faction === faction)?.appointments ?? [];
+    for (const a of [...rows].sort((a, b) => strictCompare(a.post, b.post) || strictCompare(a.person, b.person))) {
+      if (a.onDate !== today || !candidates.some((p) => p.person === a.person) || inTransitTo(state, f.principal, a.post).includes('appoint')) continue;
+      const template = declaredAppointment(world.map, state, world.start.temporaryPosts, a.post, faction);
+      const existing = state.postStates[a.post];
+      if (template === undefined && (existing === undefined || postFaction(world, state, a.post) !== faction || believedHolder(state, f.principal, a.post, losses) !== null)) continue;
+      // The letter goes to the man, not to a post that does not exist yet (the appoint verb's own route).
+      const to = capitalOf(state, faction);
+      const routes = ORDER_ROUTES.flatMap((route): RouteOption[] => {
+        const l = routeLatency(ground.latency, world.rules.latency, route, to, to, faction, null);
+        return l.ok ? [{ route, typicalDays: l.latency.days, price: route === 'special-messenger' ? world.rules.latency.specialMessengerPrice : 0 }] : [];
+      });
+      historicalAppointments.push({ post: a.post, person: a.person, routes });
+    }
+  }
   const situations: SituationChoice[] = [];
   for (const def of world.situations) {
     const r = state.situationStates[def.id];
@@ -216,6 +235,7 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     faction,
     atWarSince: warSince(world, state, faction),
     doctrine: doctrineView(world, state, faction),
+    ...(history ? { historicalAppointments } : {}),
     raising,
     vacancies,
     candidates,
