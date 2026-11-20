@@ -56,6 +56,11 @@ jobs:
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: npm run typecheck
 
+      - id: rules
+        name: npm run check:rules
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npm run check:rules
+
       # The prototype has a separate dependency tree. Keep its install out of
       # the staged hook's private snapshots, but check the complete desk in CI.
       - id: install_desk
@@ -133,6 +138,7 @@ jobs:
           NODE: ${{ steps.node.outcome }}
           INSTALL: ${{ steps.install.outcome }}
           TYPECHECK: ${{ steps.typecheck.outcome }}
+          RULES: ${{ steps.rules.outcome }}
           INSTALL_DESK: ${{ steps.install_desk.outcome }}
           TYPECHECK_DESK: ${{ steps.typecheck_desk.outcome }}
           TEST: ${{ steps.test.outcome }}
@@ -160,6 +166,7 @@ jobs:
             echo "| set up node | $NODE |"
             echo "| npm ci | $INSTALL |"
             echo "| npm run typecheck | $TYPECHECK |"
+            echo "| npm run check:rules | $RULES |"
             echo "| install browser desk dependencies | $INSTALL_DESK |"
             echo "| typecheck browser desk | $TYPECHECK_DESK |"
             echo "| npm run test | $TEST ($tests) |"
