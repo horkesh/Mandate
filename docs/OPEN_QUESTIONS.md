@@ -320,6 +320,7 @@ Source names: the lane notes are in the lead's shared notes folder (`lead-routin
   - **Lane 1.14 (calibration):** with the pack's dated history off, only Lee resigns, because his two values just reach the threshold. The weights are uncalibrated.
   - **Lane 1.14 (calibration and the wording rules):** five of the fifteen wait for Virginia to join the other side, and Virginia goes only after S09's call. A player who never issues the call keeps Lee, Magruder and Stuart in US service. That is within SENSITIVE-HISTORY 3.1, but no text may present the call as the reason an officer left.
   - **Lane 1.11 and resignation:** when Virginia counts as seceded. The register dates Magruder's resignation 20 April and Lee's 25 April. If the game counts Virginia only from ratification on 23 May, the five wait until then, and the history run drifts from the register.
+  - **Lane 1.14 (the checkpoint bands), from lane 1.11's merge (046b950):** Virginia now secedes on 20 April in the history run. The record has 17 April, and decision 0100 counts Virginia from 17 April. The call goes out on 15 April, takes about 3 days to reach Letcher, and then 2 more.
 - From the standing reviewer's review of R48 (`phase1-rule-seats-b` at `ba76d27`; `review-codex-r48-r49.md`; Codex's R57 fixes the two holes R48 was held for):
   - **Rule seats:** a capital may be moved into a region the other side holds; nothing prevents it.
   - **A test for each of three re-breaks** the reviewer's notes call V4, C2 and C4: R48's tests miss all three.
