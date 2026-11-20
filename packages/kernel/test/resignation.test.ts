@@ -11,6 +11,7 @@ import { pendingRequests } from '../src/seats/requests.ts';
 import { indexWorld } from '../src/world/index.ts';
 import type { State } from '../src/root-state.ts';
 import { F, P, POST, indexedFixture } from './support/seats-fixture.ts';
+import { viewFor } from '../src/view/view.ts';
 
 const home = toId('department', 'neutral_gov');
 function fixture(history = false, on = '1900-06-10') {
@@ -52,8 +53,17 @@ describe('an officer chooses his service', () => {
     expect(heldPost(done.state, P('a_bold'))).toBe(POST('a_reserve'));
     expect(done.state.personService?.[P('a_bold')]?.serviceChoice).toBe('stay');
     expect(done.results.flatMap(r => r.events).filter(e => e.event === 'service_choice')).toHaveLength(2);
+    const beforeLetter = viewFor(world, done.state, seatIdFor(P('a_lead')));
+    expect(beforeLetter.posts.find(p => p.post === POST('a_army'))!.holder).toBe(P('a_gen'));
+    expect(beforeLetter.people.find(p => p.person === P('a_gen'))!.standing).toBe(done.state.personStanding[P('a_gen')]);
     const again = through(world, done.state, 28);
     expect(again.results.flatMap(r => r.events).filter(e => e.event === 'service_choice')).toHaveLength(0);
+    const afterLetter = viewFor(world, again.state, seatIdFor(P('a_lead')));
+    expect(afterLetter.posts.find(p => p.post === POST('a_army'))!.holder).toBeNull();
+    expect(afterLetter.people.find(p => p.person === P('a_gen'))!.standing).toBeNull();
+    const letter = afterLetter.reports.find(r => r.author === P('a_gen') && r.claims.some(c => c.kind === 'service-choice'));
+    expect(letter?.claims).toEqual([{ kind: 'service-choice', token: 'resign', region: null, value: 1, confidence: 1000 }]);
+    expect(JSON.stringify(letter)).not.toContain('service_term');
   });
 
   it('keeps rank, appears among the other principal’s candidates, and accepts his appointment', () => {

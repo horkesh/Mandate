@@ -32,6 +32,7 @@ export function peopleProjection(
   const departments = new Set(world.map.world.departments.filter(d => d.faction === faction).map(d => d.id));
   const posts = new Map<PostId, KnownPostView>();
   const knownSides = new Map<DepartmentId, FactionId>();
+  const serviceSides = new Map<PersonId, FactionId | null>();
   const postDepartments = new Map<PostId, DepartmentId>();
   const people = new Set<PersonId>([principal]);
   const today = calendar === null ? null : formatIsoDate(dateOfDay(calendar, day));
@@ -79,7 +80,17 @@ export function peopleProjection(
     for (const via of r.via) ensure(via);
     people.add(r.author);
     if (r.subjectKind === 'person') people.add(r.subjectId as PersonId);
-    if (r.authorPost !== null) tell(r.authorPost, r.author, 'held', r);
+    const resigned = r.type === 'wire-dispatch' && r.subtype === null && r.subjectKind === 'person' && r.subjectId === r.author
+      && r.claims.some(c => c.kind === 'service-choice' && c.token === 'resign' && c.value === 1);
+    if (resigned) {
+      // The letter supplies the act; the public service row supplies its destination, never hidden personService.
+      serviceSides.set(r.author, world.map.world.people.find(p => p.id === r.author)?.service?.toFaction ?? null);
+      if (r.authorPost !== null) {
+        const old = ensure(r.authorPost);
+        if (old.holder === null && old.status === 'unknown') tell(r.authorPost, null, 'vacant', r);
+      }
+      for (const post of posts.values()) if (post.holder === r.author) tell(post.post, null, 'vacant', r);
+    } else if (r.authorPost !== null) tell(r.authorPost, r.author, 'held', r);
     if (r.subjectKind !== 'post') continue;
     const post = r.subjectId as PostId;
     ensure(post);
@@ -100,6 +111,8 @@ export function peopleProjection(
       const department = postDepartments.get(post.post);
       if (department !== undefined && knownSides.has(department)) side = knownSides.get(department)!;
     }
+    // An explicit service choice supersedes the side inferred from a government's posts (0101, R76).
+    if (serviceSides.has(person)) side = serviceSides.get(person)!;
     const stances: KnownStanceView[] = [];
     const assessments: KnownPersonView['assessments'][number][] = [];
     for (const r of chronological) {

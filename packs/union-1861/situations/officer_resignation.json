@@ -25,12 +25,7 @@
     "subtype": "cabinet-word"
   },
   "gate": {
-    "topics": [
-      "cause-of-secession"
-    ],
-    "placement": "text",
-    "risks": [],
-    "actingSide": null
+    "none": "an officer's reported change of service only; no motive, no secession-cause claim, slavery policy, security order or protected-population effect"
   },
   "citations": [
     {
