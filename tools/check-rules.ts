@@ -7,6 +7,8 @@ import { projectionFindings, type Derivation } from './rules/projection-truth.ts
 import { livenessProblems, type Bands, type LivenessChange } from './rules/liveness-causes.ts';
 import { currentBands } from './rules/liveness-snapshot.ts';
 import { withSituationContext } from './rules/pack-content.ts';
+import { signedPackFindings } from './rules/signed-pack.ts';
+import { signaturePresenceFindings } from './rules/signed-situations.ts';
 
 export const ROOT = fileURLToPath(new URL('../', import.meta.url));
 export function ruleFindings(root: string): Finding[] {
@@ -17,6 +19,8 @@ export function ruleFindings(root: string): Finding[] {
   return [
     ...causeFindings(withSituationContext(root, situations), jsonAt<CauseExemption[]>(ROOT, 'tools/rules/cause-exemptions.json')),
     ...projectionFindings(sources, jsonAt<Derivation[]>(ROOT, 'tools/rules/projection-derivations.json')),
+    ...signedPackFindings(root, situations),
+    ...signaturePresenceFindings(situations, jsonAt<string[]>(ROOT, 'tools/rules/signed-inventory.json')),
   ];
 }
 export function checkRules(root: string): string[] {

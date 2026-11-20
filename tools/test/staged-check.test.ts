@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { afterAll, describe, expect, it } from 'vitest';
 import { linksUnder, removeSnapshot, SNAPSHOT_PREFIX, stagedCheck, treeEqualsIndex, workspacePackages } from '../staged-check.ts';
-import { stagedRuleHistoryProblems, ORIGIN, LEDGER } from '../rule-history.ts';
+import { stagedRuleHistoryProblems, ORIGIN, LEDGER, SIGNED_PATHS } from '../rule-history.ts';
 
 /**
  * The pre-commit check runs on exactly what is being committed. Each case
@@ -78,6 +78,12 @@ const run = (repo: Repo) => stagedCheck({ root: repo.root, command: 'node check.
 const leftovers = (repo: Repo) => readdirSync(repo.tmp);
 
 describe('the staged rule history', () => {
+  it('does not allow a commit to shrink the signed-situation inventory', () => {
+    const repo = makeRepo();
+    repo.write(SIGNED_PATHS, '["packs/fixture/situations/notice.json"]'); repo.git('add', SIGNED_PATHS); repo.git('commit', '-qm', 'fixture signature inventory');
+    repo.write(SIGNED_PATHS, '[]'); repo.git('add', SIGNED_PATHS);
+    expect(stagedRuleHistoryProblems(repo.root)).toEqual([expect.stringContaining('cannot remove')]);
+  });
   it('reads index blobs, ignoring an unstaged repair', () => {
     const repo = makeRepo();
     const record = { key: 'a/b', before: null, after: { minFires: 1, maxFires: 4 }, observed: 1, cause: 'A new report is delivered.', evidence: 'notes/source.md' };
@@ -177,7 +183,7 @@ describe('the check on exactly what is being committed', () => {
     expect(run(repo).status).not.toBe(0);
   });
 
-  it('never carries the hookâ€™s GIT_* variables into the check', () => {
+  it('never carries the hookÃ¢â‚¬â„¢s GIT_* variables into the check', () => {
     const repo = makeRepo();
     repo.write('value.txt', 'unstaged\n');
     const before = process.env.GIT_INDEX_FILE;
@@ -221,7 +227,7 @@ describe('cleaning up is safe', () => {
     expect(existsSync(wrongName)).toBe(true);
   });
 
-  it('unlinks links first, so a linkâ€™s target is never touched', () => {
+  it('unlinks links first, so a linkÃ¢â‚¬â„¢s target is never touched', () => {
     const repo = makeRepo();
     const dest = join(repo.tmp, `${SNAPSHOT_PREFIX}manual`);
     mkdirSync(join(dest, 'node_modules'), { recursive: true });

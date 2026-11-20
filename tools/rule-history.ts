@@ -4,6 +4,7 @@ import { baselineHistoryProblems, fingerprint, type Finding } from './rules/comm
 
 export const ORIGIN = 'tools/rules/liveness-origin.json';
 export const LEDGER = 'tools/rules/liveness-changes.json';
+export const SIGNED_PATHS = 'tools/rules/signed-inventory.json';
 export const FINDINGS = 'tools/rules/existing-findings.json';
 /** Read exact index blobs, honoring GIT_INDEX_FILE, never the working copy.
  * Missing in both trees means an older/disposable fixture repository predates S18.
@@ -31,6 +32,13 @@ export function stagedRuleHistoryProblems(root: string): string[] {
       const changed = execFileSync('git', ['diff', '--cached', '--name-only', 'HEAD', '--', 'tools/rules/*.ts', 'tools/check-rules.ts'], { cwd: root, encoding: 'utf8' }).trim().length > 0;
       problems.push(...baselineHistoryProblems(JSON.parse(oldFindings) as Finding[], JSON.parse(newFindings) as Finding[], changed));
     }
+  }
+  const oldSigned = read(`HEAD:${SIGNED_PATHS}`);
+  const newSigned = read(`:${SIGNED_PATHS}`);
+  if (oldSigned !== null) {
+    const before = JSON.parse(oldSigned) as string[];
+    const now = newSigned === null ? [] : JSON.parse(newSigned) as string[];
+    if (before.some(path => !now.includes(path))) problems.push('the signature inventory cannot remove a previously signed situation');
   }
   if (oldOrigin === null && newOrigin === null && oldLedger === null && newLedger === null) return problems;
   if (newOrigin === null || newLedger === null) return ['liveness origin and cause history must remain present in the staged tree'];
