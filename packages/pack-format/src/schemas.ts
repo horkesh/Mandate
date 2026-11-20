@@ -565,6 +565,7 @@ export const RulesSchema = z.strictObject({
       verbs: z
         .strictObject({
           weekDays: positive,
+          initiativeAt: int.describe('Willingness needed for spontaneous initiative admission, separate from ordinary compliance (0105). Design parameter.'),
           orderValues: z
             .array(z.strictObject({ order: z.string().min(1), boldness: permille.nullable(), honours: z.array(termId), offends: z.array(termId), gateTopics: z.array(termId), notCheaperThan: z.string().min(1).nullable(), clashes: z.array(termId).default([]) }))
             .describe('The map from orders to values (0074): gate content; a row tagged with gate topics needs the gate reviewer’s sign-off.'),

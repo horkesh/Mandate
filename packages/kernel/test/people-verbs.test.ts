@@ -517,6 +517,33 @@ describe('M2’s audience cases on the new State (P3)', () => {
 });
 
 describe('the ladder, rivals and seat initiatives (P5, P6; 0040)', () => {
+  it('admits initiatives by their own threshold while ordinary orders still use complyAt', () => {
+    const base = indexedFixture();
+    const world = withPeople(base, { initiativeAt: 150, initiatives: [{ id: 'write_to_the_press', kinds: ['officer'], boldness: 800, honours: ['glory'], offends: [], fromRung: 'loyal', cooldownDays: 28, recommends: 'publish' }] });
+    const people = world.map.world.rules.people;
+    const lowCompliance = indexSeatsWorld(indexWorld({ ...world.map.world, rules: { ...world.map.world.rules, people: { ...people, compliance: { ...people.compliance, complyAt: -1000 } } } }), world.start);
+    const run = (w: SeatsWorld) => days(w, createState(w, { seed: 1 }), 21);
+    const before = run(world);
+    const after = run(lowCompliance);
+    expect(before.fires('seats.initiative')).toBe(1);
+    expect(after.state.seatInitiatives).toEqual(before.state.seatInitiatives);
+    expect(after.results.flatMap(r => r.events.filter(e => e.event === 'initiative'))).toEqual(before.results.flatMap(r => r.events.filter(e => e.event === 'initiative')));
+    const terms = { boldness: 800, honours: ['glory'], offends: [], required: 0 };
+    expect(answerOrder(world, createState(world, { seed: 1 }), P('a_gen'), P('a_lead'), terms).actual).not.toBe('comply');
+    expect(answerOrder(lowCompliance, createState(lowCompliance, { seed: 1 }), P('a_gen'), P('a_lead'), terms).actual).toBe('comply');
+    // The new rule can independently stop even an initiative that would exceed an order.
+    const highInitiative = withPeople(world, { initiativeAt: 10000 });
+    expect(run(highInitiative).fires('seats.initiative')).toBe(0);
+    expect(answerOrder(highInitiative, createState(highInitiative, { seed: 1 }), P('a_bold'), P('a_lead'), terms)).toEqual(answerOrder(world, createState(world, { seed: 1 }), P('a_bold'), P('a_lead'), terms));
+  });
+
+  it('requires a whole initiative admission threshold in every pack', () => {
+    const rules = indexedFixture().map.world.rules.people;
+    const check = (initiativeAt: unknown) => verbRulesProblems(rules.attention, { ...rules.verbs, initiativeAt } as PeopleRules['verbs'], [], []);
+    for (const value of [undefined, 1.5, NaN, Infinity]) expect(check(value)).toContain('people rule verbs.initiativeAt must be a whole number');
+    for (const value of [-1000, 0, 150, 10000]) expect(check(value)).not.toContain('people rule verbs.initiativeAt must be a whole number');
+  });
+
   it('a man with grievances climbs one rung a week; a famous one on lobbying becomes a rival; his rung costs willingness', () => {
     const world = indexedFixture();
     const s = createState(world, { seed: 1 });

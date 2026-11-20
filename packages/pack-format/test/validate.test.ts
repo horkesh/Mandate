@@ -291,6 +291,8 @@ const cases: { name: string; files: () => FileMap; kind: string; file: string; s
   { name: 'a conflict window of no days', files: () => editJson('pack.json', (m: { rules: { standing: { conflictWindowDays: number } } }) => (m.rules.standing.conflictWindowDays = 0)), kind: 'shape/too_small', file: 'pack.json' },
   { name: 'a daily drafting cap of no draft at all', files: () => editJson('pack.json', (m: { rules: { planner: { dailyDraftCap: number } } }) => (m.rules.planner.dailyDraftCap = 0)), kind: 'shape/too_small', file: 'pack.json' },
   { name: 'an assault margin below the open field', files: () => editJson('pack.json', (m: { rules: { people: { traits: { assaultMargin: number } } } }) => (m.rules.people.traits.assaultMargin = 900)), kind: 'shape/too_small', file: 'pack.json' },
+  { name: 'a missing initiative admission threshold', files: () => editJson('pack.json', (m: { rules: { people: { verbs: { initiativeAt?: number } } } }) => { delete m.rules.people.verbs.initiativeAt; }), kind: 'shape/invalid_type', file: 'pack.json' },
+  { name: 'a fractional initiative admission threshold', files: () => editJson('pack.json', (m: { rules: { people: { verbs: { initiativeAt: number } } } }) => { m.rules.people.verbs.initiativeAt = 1.5; }), kind: 'shape/invalid_type', file: 'pack.json' },
   {
     name: 'a scenario folder the manifest does not list',
     files: () => {
