@@ -80,15 +80,38 @@ Not all internal revenue waited until 1863. For example, the act provided three-
 | Further departmental estimates to 1 December 1862 | $214,004,427.10 | War $199,799,725.58; Navy $9,560,905.29. This is a March forecast, not the observed December total. [M62 p. 6] |
 | Paper authorization under discussion in March | Existing $150m; recommended another $50m | Memminger expressly recommends pausing at $200m to inspect effects, while warning about over-issue. A recommendation is not passage. [M62 pp. 7-10] |
 
-The original scan's p. 4 prints the start year as **1851** in a statement about the Provisional Government; [I] the intended year is 1861, as the report's subject and loan chronology establish. The same scan prints $9,813,515.49 for the bank loan on p. 4 but $9,813,545.49 on p. 5. Retain these as source discrepancies, rather than precision that the evidence cannot bear. [M62 pp. 1-5]
+The original scan's p. 4 prints the start year as **1851** in a statement about the Provisional Government; [I] the intended year is 1861, as the report's subject and loan chronology establish. The same scan prints $9,813,515.49 for the bank loan on p. 4 but $9,813,545.49 on p. 5. Page 5 first prints appropriations remaining as $83,794,509.39, then uses $83,794,509.35 lower down; [I] subtracting its printed expenditure from appropriations gives the latter. Retain these as source discrepancies, rather than precision that the evidence cannot bear. [M62 pp. 1-5]
 
 Schwab records the subsequent expansion: the August 1861 non-interest note ceiling of $100m rose to $150m in December; April 1862 legislation provided further notes and bonds; and interest-bearing instruments also circulated. He discusses the difficulty of withdrawing money by making notes and bonds mutually convertible. His analytical judgement should remain attributed to him. [SCH pp. 11-12, 21-23]
 
+### The August report: obligations outran uncommitted note authority
+
+Memminger's **18 August 1862** report, transmitted to Congress on the 19th, supplies a second contemporary account. Its totals run **from the government's commencement to 1 August**, not just the months since the March report or a Union-style July-June fiscal year. The *Official Records* reproduce the report and its tax-office enclosure. [OR42 pp. 59-65]
+
+| Measure through 1 August 1862 | Reported amount | Accounting boundary |
+|---|---:|---|
+| Cumulative Treasury receipts | $302,555,196.60 | Includes notes, deposits and borrowing, not ordinary tax revenue alone. [OR42 p. 59] |
+| Customs / war tax | $1,437,399.96 / $10,539,910.70 | Separate receipt lines within that cumulative total. [OR42 p. 59] |
+| Call deposits received under the December 1861 act | $37,585,200 | Gross receipt line, not the balance of call certificates still outstanding. [OR42 p. 59] |
+| Expenditure statement | $328,748,830.70 | War $298,376,549.41; Navy $14,605,777.86; civil/miscellaneous $15,766,503.43. [OR42 p. 59] |
+| Difference from receipts | $26,193,634.10 | Credits on the Treasury books to disbursing officers, not yet paid. [OR42 p. 59] |
+| Requisitions with no warrants yet issued | $18,524,128.15 | War $18,112,192.15; Navy $411,936. Add to the expenditure statement for the broader obligation measure. [OR42 pp. 59-60] |
+| Broader aggregate | $347,272,958.85 | Includes those requisitions; Memminger says about $5m of deposit-certificate redemptions should be deducted when considering actual expenses. [OR42 p. 60] |
+| Notes already issued | $206,044,035 | $180,956,935 general currency of $5 and above; $846,000 below $5; $1,441,200 bearing 3.65%; $22,799,900 bearing 7.30%. [OR42 p. 60] |
+| Remaining general-currency authority | $16,755,865 | His ceiling calculation counts $183,244,135 already issued against $200m. Preserve his instrument grouping rather than substituting the $206m all-note total. [OR42 p. 60] |
+| Appropriations not drawn / additional estimates to January 1863 | $164,687,389.93 / $44,863,097.13 | Together $209,550,487.06 of prospective supplies required; not receipts or completed payments. [OR42 p. 60] |
+
+[I] The two immediate unpaid categories total **$44,717,762.25**; against the report's $16,755,865 unused authority, that leaves **$27,961,897.25** to cover by other instruments or new authority. Memminger prints the bridge rounded to dollars. This is a concrete financing-pressure observation, not a claim that all government obligations were payable simultaneously in gold. His preferred funded borrowing had produced too little relative to need; he advocated further Treasury notes while acknowledging the dangers of excess. [OR42 pp. 60-61]
+
+He also reports **129 clerks** engaged in note issue, about **72 signing**. Changes of signatories and counterfeiting led him to propose engraved facsimile signatures, new plates and a separate printing bureau at Columbia. These are his administrative numbers and proposed remedies, not proof those remedies were enacted. [OR42 p. 62] [I] Note authority, physical production, acceptance and funding back into bonds can each constrain settlement. A legislative issue ceiling alone does not describe the process.
+
 ### Confederate taxes were a collection and state-credit problem
 
-The August 1861 war tax was **one-half percent** on the specified assessed property, with exemptions. States could anticipate their residents' assessments and receive a ten-percent rebate. Assessment and collection deadlines were subsequently extended; no revenue from this tax came in during the Confederacy's first fiscal year. Schwab reports approximately $10.5m in the five months ending 1 August 1862 and about $5m more during the final five months of 1862. These later figures are rounded and not a November observation. [SCH pp. 285-286]
+The August 1861 war tax was **one-half percent** on the specified assessed property, with exemptions. States could anticipate their residents' assessments and receive a ten-percent rebate. Assessment and collection deadlines were subsequently extended; no revenue from this tax came in during the Confederacy's first fiscal year. Schwab reports approximately $10.5m in the five months ending 1 August 1862 and $6m more during the final five months of 1862. These later figures are rounded and not a November observation. The same paragraph then reports more than $4m in the first nine months of 1863 and an apparent total of about $18m; [I] the listed period figures do not reconcile with that total, so none is promoted here to a reconciled cumulative tax series. The original commissioner's returns remain needed. [SCH pp. 285-286; p. 286 scan checked]
 
 Schwab's state examples show why a transfer to Richmond did not necessarily withdraw purchasing power from households: Alabama borrowed from banks, Georgia issued bonds, and Florida issued state notes. South Carolina collected from residents after a temporary advance. The federal receipt and the consolidated burden on state credit were different transactions. [SCH pp. 287-289]
+
+The August primary report lists **$10,168,967.90 paid by seven named states**, separately from the $10,539,910.70 tax-receipt line above. It describes Georgia's remaining settlement and South Carolina's payment through six-percent call certificates as not yet finally closed, and says several states' returns were incomplete despite advance payment. North Carolina and Alabama had overpaid their assessments. [OR42 pp. 62-63] [I] These are differently described accounting stages; do not silently force the state list to equal the Treasury receipt line or label an advance as completed household collection. The primary report confirms an August point without resolving Schwab's later aggregate discrepancy or supplying monthly receipts through November.
 
 [I] Tax-assessment descriptions include the enslavers' legally recognized claims over people. Those are evidence of the slaveholding state's tax structure, never a proposed stock, valuation tool or lever for managing people. This research does not revise the sensitive-history register or its protected-population rules.
 
@@ -145,6 +168,12 @@ Schwab reports foreign purchasing through Fraser, Trenholm & Co. and agents incl
 The Erlanger contract belongs to **January 1863**, with the public loan offered in **March 1863**. Its terms included £3m face value, seven-percent interest, an issue to the public at 90, and a banking purchase/guarantee at 77 with commissions; bonds could be exchanged for cotton on specified terms. Face amount, subscription price, net usable proceeds and cotton actually delivered are distinct. [SCH pp. 30-33]
 
 [I] Extend 1B's explanation into this adjacent topic to show what problem remained unsolved, but give the November 1862 Treasury **zero proceeds from the future Erlanger flotation**. This is a chronology constraint, not a claim that all foreign credit was absent before it.
+
+### A modern check on treating prices as probabilities
+
+Weidenmier and Oosterlinck estimate Confederate victory probabilities from Amsterdam gold bonds for **summer 1863 onward**. Their identification assumes repayment corresponds to victory and defeat gives zero recovery. They also explain why the Erlanger bonds' cotton-conversion option complicates inference from their prices. [WO07 pp. 2, 4-5; abstract]
+
+[I] This supports distinguishing instruments and stating assumptions before interpreting market prices. It does not supply an observed probability for a British Cabinet decision, a national-will statistic, or a November 1862 calibration point. Their later-period estimates must not be backdated to 1B. The work is a methodological check, not a substitute for the missing 1862 series.
 
 ## Remaining work for implementation
 
