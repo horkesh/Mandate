@@ -1,6 +1,6 @@
 # Congress and politics, August 1861 to November 1862
 
-S3 research, 2026-11-20. Draft for the lead under decision 0106. This supplies historical evidence, not accepted mechanics, gate placement, dialogue or signatures. [I] marks an interpretation or a proposed representation. Unsupported quantities remain HOLD. The next documentation step covers state election returns, the midterm checkpoint, governors and the press. Source keys and scan locators are in the [source register](2026-11-20-S3-source-register.md).
+S3 research, 2026-11-20. Draft for the lead under decision 0106. This supplies historical evidence, not accepted mechanics, gate placement, dialogue or signatures. [I] marks an interpretation or a proposed representation. Unsupported quantities remain HOLD. The companion [midterms note](2026-11-20-S3-midterms-and-checkpoint-bands.md) separates November returns from the later House; the [state and press note](2026-11-20-S3-state-politics-soldier-voting-and-press.md) covers the adjacent backlog. Source keys and scan locators are in the [source register](2026-11-20-S3-source-register.md).
 
 ## 1. Congress's calendar and the limits of an election result
 
