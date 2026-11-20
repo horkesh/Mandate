@@ -1,10 +1,9 @@
 {
-  "input_holds": 464,
-  "decisions": {
-    "HOLD": 457,
-    "CHANGE": 7
-  },
-  "new_passage_cells": 18,
-  "carried_holds": 446,
-  "assessment_rows": 25
+  "s6_hold_cells": 464,
+  "newly_read_cells": 31,
+  "carried_hold_cells": 433,
+  "proposed_changes": 10,
+  "remaining_holds": 454,
+  "observer_records": 39,
+  "s6_positive_rows_preserved": 68
 }

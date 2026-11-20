@@ -1,0 +1,25 @@
+{
+  "records": 55,
+  "common_judgment_cells": 495,
+  "prewar_histories": 27,
+  "authority_categories": {
+    "Union civil": 23,
+    "Union civil, competing authority": 1,
+    "Union provisional civil, competing authority": 1,
+    "Union acting civil": 1,
+    "Union civil, January predecessor": 3,
+    "Union civil, predecessor": 1,
+    "Union civil, predecessor boundary HOLD": 1,
+    "civil, neutrality dispute": 1,
+    "Confederate civil/claimed civil": 13,
+    "Confederate civil, predecessor": 1,
+    "Confederate governor-elect; accession day HOLD": 1,
+    "Confederate acting civil": 1,
+    "Confederate civil, December successor": 1,
+    "Confederate provisional civil": 1,
+    "Union military, competing authority": 4,
+    "Union military appointment; effective reach HOLD": 1
+  },
+  "proposed_observations": 4,
+  "held_common_cells": 491
+}

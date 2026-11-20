@@ -1,18 +1,19 @@
 {
-  "command_rows": 248,
-  "research_handles": 235,
+  "command_rows": 252,
+  "research_handles": 239,
   "service_records": 128,
   "register_events": 101,
-  "judgment_cells": 2115,
-  "proposed_observations": 2,
-  "held_judgment_cells": 2113,
+  "judgment_cells": 2151,
+  "proposed_observations": 3,
+  "held_judgment_cells": 2148,
   "sides": {
     "Confederate": 100,
-    "Union": 135
+    "Union": 139
   },
   "windows": {
     "1862-09-14": 99,
     "1862-09": 84,
-    "1862-04-06": 65
+    "1862-04-06": 65,
+    "1862-09-23": 4
   }
 }
