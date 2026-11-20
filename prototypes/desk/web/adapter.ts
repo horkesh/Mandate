@@ -7,11 +7,13 @@ import type {FurnitureManifest} from './map/furniture-plan.ts';
 
 export interface DeskDay {
   day: number; date: string; reports: readonly ReportView[];
-  refused: readonly { command: unknown; reason: string }[];
+  refused: readonly { command: unknown; reason: string; commandIndex?:number }[];
   points: readonly string[];
 }
 export interface DeskTurn {
  days: readonly DeskDay[]; stopped: 'week' | readonly string[];
+ /** The desk's own signed slips at dispatch, never an acknowledgement. */
+ submitted?: readonly {line:string;text:string}[];
  /** Received-report projections, made by the kernel on the server. */
  controlUpdates?:Readonly<Record<string,Pick<SeatView,'controlBeliefs'|'claimedFronts'>>>;
 }

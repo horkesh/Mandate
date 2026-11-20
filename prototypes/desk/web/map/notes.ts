@@ -7,8 +7,9 @@ export interface HeldMark {
   readonly axis: string;
   readonly region?: string;
 }
+export interface WaitNote {readonly axis:string;readonly days:number}
 
-export function sendbackLine(post: string, marks: readonly HeldMark[], plan: OptionView): string {
+export function sendbackLine(post: string, marks: readonly HeldMark[], plan: OptionView, waits:readonly WaitNote[]=[]): string {
   const encode = (value: string) => encodeURIComponent(value);
   const tokens = marks.map(mark => {
     const kind = mark.kind === 'objective' ? 'focus' : mark.kind === 'waypoints' ? 'via' : 'avoid';
@@ -16,5 +17,9 @@ export function sendbackLine(post: string, marks: readonly HeldMark[], plan: Opt
     if (!region) throw new Error('The mark has no named place.');
     return `${kind}:${encode(mark.axis)}:${mark.kind === 'waypoints' ? region.split(',').map(encode).join(',') : encode(region)}`;
   });
-  return [`sendback ${post}`, ...tokens].join(' ');
+  const waitTokens=waits.map(w=>{
+    if(!w.axis||!Number.isSafeInteger(w.days)||w.days<0)throw Error('A wait note needs an axis and whole nonnegative days.');
+    return `wait:${encode(w.axis)}:${w.days}`;
+  });
+  return [`sendback ${post}`, ...tokens,...waitTokens].join(' ');
 }

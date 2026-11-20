@@ -1015,3 +1015,85 @@ the stories and grouping. `npx playwright test --config playwright.r54.config.ts
 checks source opening and return at 1920×1080 and 3440×1440, using the real reading
 components with a small fictional snapshot. It needs no ignored map data and
 writes its captures and results to the worktree's `runs/r54/browser/`.
+
+### S8 remaining desk views
+
+Run `npm run dev -- --port 5288 --saved-map --at-war` from this folder after
+installing both dependency trees. `--saved-map` requires the existing ignored
+atlas and compact geometry; it does not rebuild geography. `DESK_ART_ROOT` may
+point to an existing art directory, read only. The server still binds to
+127.0.0.1, checks the selected port's Host and Origin, and serves only its art
+allowlist. Leave 5274 for other runs.
+
+For this worktree, set `DESK_ART_ROOT` to
+`C:/Pyrrhic/ByOrderOfThePresident/art`. The saved map files were copied without
+editing from that checkout's ignored `prototypes/desk/public/map-data/`.
+
+S8 adds a stop slip with related final-day papers, pausable playback, the
+attention price table and an accountability spread. Submitted slips remain in
+the shell's history after dispatch. Rejections retain their occurrence index;
+a dispatch never implies compliance. Received decisions and numeric returns
+keep their source papers. The board can search known posts and vacancies.
+The audience can display a filed answer received through ordinary report
+transport, separately from its earlier reasons and unsigned counters.
+Plan review also accepts the existing wait-note grammar. Wait notes are sent
+only as requests for a redraft. Unaffordable acts stay visible with a refill
+explanation; free inquiries remain available. Returning from a ledger source
+preserves its leaf and restores focus to the source control. During playback,
+global panel shortcuts wait for the next morning, and the menu and docket use
+the held snapshot rather than the completed turn's final morning.
+
+Proposed rulings: keep missing seat projections explicit rather than reading
+State or pack effects. Reject inferred Congressional ratification, a refill
+date guessed from weekdays, and an audience preview from hidden traits. Keep
+the shell's own submitted slips in its existing turn history; reject a new
+simulation ledger or a claim that dispatch proves execution.
+
+Evidence and native captures are in
+`C:/Pyrrhic/ByOrderOfThePresident/art-masters/S8/`. Generate actual seat fixtures
+with `npx tsx scripts/s8-fixtures.ts`; then run
+`npx playwright test --config playwright.s8.config.ts`. The preflight checks
+startup, art, port isolation, forbidden server-source access and core selectors
+before the native capture tests. The dev server is owned and closed by
+Playwright. The S8 test uses the actual adapter and console grammar.
+
+Maker checks: the complete desk suite passed 101 tests with three existing
+skips, and its typecheck/build passed. Thirteen distinct browser checks passed
+across the retained runs, including both native sizes, 200% high contrast,
+1280×800 plan reflow, source return, exhaustion, wait notes and pausable
+playback. `final-captures.log` retains the nine-test capture pass;
+`playback-boundary-verified.log` retains the final keyboard correction. Earlier
+unaffected evidence is reused. The two unchanged ultrawide board/audience
+captures were reused; all 29 PNGs have matching dimensions, recipes and hashes.
+`final-inventory.json` records 430 build files (471,638,003 bytes) and the source
+scope audit. The build resolves art through the local server and is not a
+standalone shipping package. `runtime-final.json` records port 5288 closed.
+
+The exact root `MANDATE_NO_GIT=1 npm run check` initially exited 1 when the
+existing done-check setup exceeded 300 seconds: 136 files passed, 1,516 tests
+passed, one expected failure and 17 skips. Its isolated correction verification
+passed 14 tests with one skip in 170.88 seconds; no timeout or simulation code
+changed. Boundary, licences and decision-index checks passed separately. The
+staged-tree commit gate is recorded in `hook.log`.
+
+One required default eight-seed done check, with drafting, exited 1 in
+2,038.59 seconds: Phase 0 5/6 and 1A 2/6. Phase 0 fails only timing; Union
+reference/history median–p95 were 55.13/97.37 and 45.94/74.83 ms against the
+unchanged 40/160 limits. The 1A checkpoint, operation, pushback and sweep gaps
+remain. All 12 reported problems are retained in `done-check.log`; no D6
+clearance or criterion waiver. Replay, daily hashes and save/resume pass.
+This shared-host run overlapped the small UI correction checks early on;
+it establishes neither unloaded-host nor CI performance. The simulation and
+pack inputs are unchanged. The full check was not repeated for reassurance.
+The raw run artifacts are preserved under `done-artifacts/`.
+
+These are maker results. Claude's independent review remains deferred under
+0106; nothing is signed or cleared for main.
+
+Findings outside my scope: the seat API still lacks the Congress ledger,
+attention allowance/refill date, configurable stops, and a current audience
+case with legal counter values and declared replies. Filed audience answers
+are available and rendered; they do not supply the missing prospective case.
+The seat also supplies no authored live-clock ranges or live/non-live marker
+for the unanswered-situation confirmation. Those require their owning views;
+the prototype does not reconstruct them from private pack effects.

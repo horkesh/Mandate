@@ -16,6 +16,8 @@ import { LOOKS, LOOK_NAMES, readLook } from './skins.ts';
 import { STUDY } from './study-strings.ts';
 import { M } from './strings.ts';
 import { sendbackLine } from './notes.ts';
+import type {WaitNote} from './notes.ts';
+import {commandPrice,outOfAttention,priceLabel} from '../business.ts';
 import { noteAccountLines } from '../notes.ts';
 import {glyphSvg} from './furniture.ts';
 import {claimWords,controlColour,reportControlWords} from './control.ts';
@@ -41,6 +43,7 @@ const cache = new Map<string,Promise<MapGeometry>>();
 const EMPTY_MARKS: PencilMark[]=[];
 const EMPTY_HANDLES: Handle[]=[];
 const pencilNotebook=new Map<string,PencilMark[]>();
+const waitNotebook=new Map<string,WaitNote[]>();
 function loadGeometry(pack: string) { if(!cache.has(pack))cache.set(pack,deskApi.runtimeGeometry(pack));return cache.get(pack)!; }
 
 export interface TableMapProps {
@@ -218,15 +221,17 @@ export function MapReview({destination="",data,execute,busy,textEdit,table=false
   const [post,setPost]=useState(reviews[0]?.post??'');
   const [marks,setMarksState]=useState<PencilMark[]>([]),[message,setMessage]=useState(''),[checking,setChecking]=useState(false);
   const [axis,setAxis]=useState(''),[region,setRegion]=useState('');
+  const [waitDays,setWaitDays]=useState(''),[waits,setWaitsState]=useState<WaitNote[]>([]);
   const [geometry,setGeometry]=useState<MapGeometry|null>(null);
   const review=reviewOpen?(reviews.find(r=>r.post===post)??reviews[0]):undefined;
   const noteKey=`${data.pack}:${data.morning.requestKey}:${review?.post??''}`;
   const setMarks=(update:PencilMark[]|((old:PencilMark[])=>PencilMark[]))=>setMarksState(old=>{const next=typeof update==='function'?update(old):update;pencilNotebook.set(noteKey,next);return next;});
+  const setWaits=(next:WaitNote[])=>{waitNotebook.set(noteKey,next);setWaitsState(next);};
   const {name:t,text:display}=presenter(data.strings);
   const axisName=review?.plan.axes.find(a=>a.name===axis)?.name??review?.plan.axes[0]?.name??'';
   const lock=useRef(false);
   useEffect(()=>{loadGeometry(data.pack).then(setGeometry).catch(()=>{});},[data.pack]);
-  useEffect(()=>{setMarksState(pencilNotebook.get(noteKey)??[]);setMessage('');},[noteKey]);
+  useEffect(()=>{setMarksState(pencilNotebook.get(noteKey)??[]);setWaitsState(waitNotebook.get(noteKey)??[]);setWaitDays('');setMessage('');},[noteKey]);
   const propose=useCallback(async(axis:string,kind:MapEditKind,region?:string)=>{
     if(!review||lock.current||busy)return;lock.current=true;setChecking(true);setMessage(M.previewing);
     try {
@@ -240,15 +245,20 @@ export function MapReview({destination="",data,execute,busy,textEdit,table=false
   const send=async(notes:boolean)=>{
     if(!review||lock.current||busy)return;lock.current=true;setChecking(true);
     try {
-      const commands=notes?[sendbackLine(review.post,marks,review.plan)]:marks.map(m=>m.line);
+      const commands=notes?[sendbackLine(review.post,marks,review.plan,waits)]:marks.map(m=>m.line);
       let count=0;
       for(const line of commands){const result=await execute(line);if(!result?.ok){setMessage(result?.message??M.rejected);return;}count++;}
       setMessage(notes?(data.strings['plan.note.sent']??''):M.queued);
       setMarks([]);
+      if(notes)setWaits([]);
     }finally{lock.current=false;setChecking(false);}
   };
   const handles:Handle[]=review?.plan.axes.flatMap(a=>a.regions.length?[{axis:a.name,kind:'objective' as const,region:a.regions.at(-1)!},{axis:a.name,kind:'waypoints' as const,region:a.regions[Math.max(0,Math.floor((a.regions.length-1)/2))]!}]:[])??[];
   const paper=review?data.morning.view.reports.find(r=>r.id===review.report):undefined;
+  const editCost=menu.menuKind==='principal'?menu.attention.costs.review_edit:undefined;
+  const marksPrice=editCost===undefined?null:{min:marks.length*editCost,max:marks.length*editCost};
+  const cannotPay=menu.menuKind==='principal'&&outOfAttention(menu.attention.left,marksPrice);
+  const cannotSendBack=menu.menuKind==='principal'&&outOfAttention(menu.attention.left,commandPrice(`sendback ${review?.post??''}`,menu));
   return <div className={`plan-map-layout ${review?'has-plan':'map-only'} ${table?'table-map-layout':''}`}>
     {review&&<aside className="map-plan-sheet">
       {reviews.length>1&&<label>{M.plan}<select aria-label={M.plan} value={review?.post??''} onChange={e=>{setPost(e.target.value);setAxis('');}}>{reviews.map(r=><option key={r.post} value={r.post}>{t(r.holder,'person')}</option>)}</select></label>}
@@ -259,9 +269,12 @@ export function MapReview({destination="",data,execute,busy,textEdit,table=false
         <fieldset disabled={busy||checking}><legend>{M.pencil}</legend><label>{M.chooseAxis}<select aria-label={M.chooseAxis} value={axisName} onChange={e=>setAxis(e.target.value)}>{review.plan.axes.map(a=><option key={a.name} value={a.name}>{display(a.name)}</option>)}</select></label>
           <label>{M.chooseRegion}<select aria-label={M.chooseRegion} value={region} onChange={e=>setRegion(e.target.value)}><option value="">{M.chooseRegion}</option>{geometry?.regions.filter(r=>r.point).map(r=><option key={r.id} value={r.id}>{t(r.id,'region')}</option>)}</select></label><div className="actions"><button disabled={!region} onClick={()=>void propose(axisName,'objective',region)}>{M.markObjective}</button><button disabled={!region} onClick={()=>void propose(axisName,'waypoints',region)}>{M.markWaypoint}</button></div>
         </fieldset>
+        <fieldset disabled={busy||checking}><legend>{M.waitNote}</legend><label>{M.waitDays}<input type="number" min="0" step="1" value={waitDays} onChange={e=>setWaitDays(e.target.value)}/></label><button disabled={waitDays===''||!Number.isSafeInteger(Number(waitDays))||Number(waitDays)<0||!axisName} onClick={()=>{setWaits([...waits.filter(w=>w.axis!==axisName),{axis:axisName,days:Number(waitDays)}]);setWaitDays('');}}>{M.waitNote}</button><p className="map-handle-note">{M.waitOnly}</p></fieldset>
         <p className="map-handle-note">{M.handles}</p><h4>{M.pencil}</h4>{marks.length?<ol className="pencil-list">{marks.map(m=><li key={m.number}>{m.kind==='objective'?M.objective:m.kind==='waypoints'?M.waypoint:M.strike}: {m.region?t(m.region,'region'):display(m.axis)}<code>{display(m.line)}</code></li>)}</ol>:<p>{M.noMarks}</p>}
+        {waits.length>0&&<ul className="wait-notes">{waits.map(w=><li key={w.axis}>{M.waitLine(display(w.axis),w.days)} <button onClick={()=>setWaits(waits.filter(n=>n.axis!==w.axis))}>{M.removeWait}</button></li>)}</ul>}
+        <p className="action-price">{S.marksPrice(marks.length)}. {S.notesFree}<br/>{M.order}: {priceLabel(marksPrice)}{cannotPay&&<span>{S.attentionAfterRefill}</span>}</p>
         {marks.length>0&&<p className="map-handle-note">{M.separate}</p>}
-        <div className="actions"><button className="primary" disabled={!marks.length||busy||checking} onClick={()=>void send(false)}>{M.order}</button><button data-hotkey="n" disabled={busy||checking} onClick={()=>void send(true)}>{data.strings['plan.note.send']??M.sendback}</button><button disabled={!marks.length||checking} onClick={()=>setMarks([])}>{M.clear}</button><button data-hotkey="a" disabled={!!marks.length||busy||checking} onClick={()=>void execute(`approve ${review.post}`)}>{S.approve}</button>{textEdit&&<button disabled={busy||checking} onClick={()=>textEdit(`edit ${review.post} timing days=3`)}>{S.edit}</button>}</div><p className="map-handle-note">{data.strings['plan.note.explanation']??''}</p>
+        <div className="actions"><button data-attention-key="review_edit" className="primary" disabled={!marks.length||busy||checking||cannotPay} onClick={()=>void send(false)}>{M.order}</button><button data-attention-key="review_send_back" data-hotkey="n" disabled={busy||checking||cannotSendBack} onClick={()=>void send(true)}>{data.strings['plan.note.send']??M.sendback}</button><button disabled={(!marks.length&&!waits.length)||checking} onClick={()=>{setMarks([]);setWaits([]);}}>{M.clear}</button><button data-attention-key="review_approve" data-hotkey="a" disabled={!!marks.length||!!waits.length||busy||checking} onClick={()=>void execute(`approve ${review.post}`)}>{S.approve}</button>{textEdit&&<button disabled={busy||checking} onClick={()=>textEdit(`edit ${review.post} timing days=3`)}>{S.edit}</button>}</div><p className="map-handle-note">{data.strings['plan.note.explanation']??''}</p>
       </>:<p>{M.noPlan}</p>}
       {message&&<p role="status" className="map-review-message">{display(message)}</p>}
     </aside>}

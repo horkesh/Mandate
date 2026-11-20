@@ -48,6 +48,7 @@ export class DeskAdapter {
         this.queue.splice(input.index - 1, 1); return reply();
       case 'preview': return reply({ preview: this.game.preview(input.post, input.edit) });
       case 'end': {
+        const submitted=this.snapshot().queue;
         const before=this.game.morning(),reports=[...before.view.reports];
         const result = this.game.turn(this.queue.map(q => q.command));
         for(const [commandIndex,{command}] of this.queue.entries()){
@@ -64,7 +65,7 @@ export class DeskAdapter {
           reports.push(report);
           if(report.claims.some(c=>c.kind==='control'||c.kind==='control-government'))controlUpdates[report.id]=this.game.controlFromReports(reports);
         }
-        const turn:DeskTurn={...result,controlUpdates};
+        const turn:DeskTurn={...result,controlUpdates,submitted};
         this.queue = [];
         this.history.push(turn);
         return reply({ turn });
