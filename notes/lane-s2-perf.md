@@ -1,4 +1,22 @@
-# S2: tick budget without behavior changes
+# S2 and S20: tick budget without behavior changes
+
+## S20 validation plan (from fae69bc)
+
+S20 continues only the performance lane under 0106. Read the main CODEX standing, command-line, writing and sprint rules, CLAUDE.md and 0106. Clean starting branch: sprint/perf at fae69bc. `npm ci` ran first, exit 0. Claude's independent whole-branch review remains deferred under 0106; no review subagent, push or other worktree write.
+
+Question: which largest remaining self costs can be removed while preserving every daily hash, fixture and band? Retain a private source snapshot and inventory in ignored runs/s20, smoke three days, then inspect the retained S2 and fresh profiles. Optimize one coherent cost at a time, with focused tests first. Before shipping each candidate compare three alternating parent/change pairs for each 148-day war/history timing slot (their setup/options are currently identical), reporting median paired differences. Reject a candidate without demonstrated savings. Compare all 148 Union and 120 testbed daily hashes and complete untimed summaries; final frozen replay/resume and fixture bytes must also match. Stop expensive retries on unexpected failures until diagnosed cheaply.
+
+Each optimization commits separately through the actual hook with the Codex footer. Use MANDATE_NO_GIT=1 and VITEST_MAX_WORKERS=1 as established in S2, without changing test selection/timeouts. Expected cost: smoke/focused checks seconds, profiles/pairs minutes, hooks several minutes each, one final default done check roughly 30 minutes. Preserve all agreed criteria and retain inherited failures. Reuse S2 pre-optimization profiles and unaffected evidence; write top-twenty self summaries before S2 and after S20. Complete inventories and runtime/preservation checks before final closeout. Never stop another lane's process or change its files.
+
+### S20 step 1: derive the unposted roster once
+
+The retained S2 profiles put heldPost among the largest tick self costs. Principal menus scanned posts for every person, and sideOfPerson repeated that scan plus a World roster search. The command owner now derives the unposted roster in one pass, applying the same starting-side/resigned-service rule for people with no post. Status, principal exclusion, rank ordering and every menu value remain unchanged. No global cache, State field or saved derived data.
+
+New tests cover one enumeration for the roster, resignation versus staying, neutral people, inherited posts, relief and older-State reads. The missing helper failed first; an incomplete fixture was corrected before the green gate. Focused checks: 59 passed, typecheck exit 0. All 148 Union and 120 testbed daily hashes and entire untimed summaries match the pre-S2 baseline. Evidence: runs/s20/candidates-hash/comparison.json and candidates-testbed/comparison.json.
+
+Three alternating pairs per slot against fae69bc are retained in runs/s20/candidates-pairs/pairs.json. War before/after medians 39.685/40.226 ms, median paired saving **-0.541 ms**; history 78.657/46.129 ms, median paired saving **9.282 ms**. These separate changing-host samples are not causal or additive. The direct menu comparison, all values equal, saves a median paired **673.757 ms over 100 calls for both principals**, with before/after medians 902.488/228.902 ms. Its targeted next-step test ran briefly during this small comparison; no unloaded claim. All three direct pairs win (663.044–674.049 ms), supporting removal of the repeated scan despite mixed whole-run timing. No timing campaign was repeated for a nicer number.
+
+The inspector-session profile stalled; only that lane-owned process was stopped. A bounded three-day diagnostic reproduced the stall. Node's command-line CPU profiler then passed the three-day smoke and is the final-profile method. Failed/aborted evidence remains under runs/s20. The original retained pre-S2 profile is reused.
 
 For the lead: 1 item. Work is on `sprint/perf`, from `ceff796`, under decision 0106. `npm ci` completed first (exit 0, 51 packages, zero vulnerabilities). Independent review remains with Claude after the sprint. No push is authorized.
 

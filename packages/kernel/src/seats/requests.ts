@@ -7,7 +7,7 @@
  * for orders, and is shown the plans submitted to him that have reached him.
  */
 import { strictCompare } from '../compare.ts';
-import { commandedBlocks, heldPost, sideOfPerson } from '../command/command.ts';
+import { commandedBlocks, heldPost, unpostedPeopleOnSide } from '../command/command.ts';
 import { commanderView, mayAttackToday, presenceByRegion, sideCommand } from '../combat/battle.ts';
 import { believedRatio, commitAtDawn, cutOffChoice, pursuitChoice, standAtNight } from '../combat/decide.ts';
 import { BATTLE_ORDER_OPTIONS } from '../combat/order-kinds.ts';
@@ -181,8 +181,8 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     .filter((id) => state.postStates[id]!.postHolder === null && !unreported.has(id) && heldAtStart.has(id) && commandedBlocks(state, id).length > 0)
     .map((id) => ({ post: id, arm: commandedBlocks(state, id).every((b) => isNaval(world.map, state, b)) ? ('naval' as const) : ('land' as const), routes: routesTo(id), appointing: inTransitTo(state, f.principal, id).includes('appoint') }));
   const rankIndex = new Map(world.map.world.vocabularies.ranks.map((r, i) => [r.id as string, i]));
-  const candidates: Candidate[] = world.map.world.people
-    .filter((p) => p.id !== f.principal && sideOfPerson(world.map, state, p.id) === faction && heldPost(state, p.id) === null && (state.personStatus[p.id]?.statusKind ?? 'serving') === 'serving')
+  const candidates: Candidate[] = unpostedPeopleOnSide(world.map, state, faction)
+    .filter((p) => p.id !== f.principal && (state.personStatus[p.id]?.statusKind ?? 'serving') === 'serving')
     .map((p) => ({ person: p.id, kind: p.kind as string, seniority: Math.max(-1, ...Object.values(state.personRanks[p.id] ?? {}).map((r) => rankIndex.get(r.rankTerm) ?? -1)) }))
     .sort((a, b) => b.seniority - a.seniority || strictCompare(a.person, b.person));
   const situations: SituationChoice[] = [];

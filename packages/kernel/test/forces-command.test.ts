@@ -13,6 +13,8 @@ import {
   initialDepartmentSides,
   relieveHolder,
   transferForce,
+  unpostedPeopleOnSide,
+  sideOfPerson,
 } from '../src/command/command.ts';
 import { applyForces, factionOfBlock, ForcesError, initialForces, sumStrength } from '../src/forces/forces.ts';
 import { blocksIn, initialLocations, MovementError } from '../src/movement/movement.ts';
@@ -22,8 +24,8 @@ import { createState, emptyState } from '../src/tick/setup.ts';
 import type { WorldIndex } from '../src/world/index.ts';
 import type { ScenarioStart } from '../src/world/scenario.ts';
 import { worldOf } from './support/tick-context.ts';
-import { B, block, DEP, forcesIndex, forcesStart, P, PER, post } from './support/forces-fixture.ts';
-import { depot, edge, R, region } from './support/map-fixture.ts';
+import { B, block, DEP, forcesIndex, forcesStart, P, PER, post, person } from './support/forces-fixture.ts';
+import { depot, edge, F, R, region } from './support/map-fixture.ts';
 
 const MAP = forcesIndex({
   regions: ['a1', 'a2', 'mid', 'b2', 'b1'].map((r) => region(r)).concat([region('w', 'river')]),
@@ -60,6 +62,36 @@ function stateFrom(map: WorldIndex, start: ScenarioStart): State {
 }
 
 const S = stateFrom(MAP, START);
+
+describe('unposted people on a side', () => {
+  it('matches individual side and post lookups, reading the post table once for the whole roster', () => {
+    const map = forcesIndex({ regions: [region('a1')], edges: [], people: [person('spare', 'a'), person('stayed', 'a'), person('resigned', 'a'), person('neutral', null), person('a_gen', 'a')] });
+    const state: State = { ...S, personService: {
+      [PER('resigned')]: { serviceFaction: F('b'), serviceBloc: null, serviceChoice: 'resign', serviceDay: 1 },
+      [PER('stayed')]: { serviceFaction: F('b'), serviceBloc: null, serviceChoice: 'stay', serviceDay: 1 },
+    } };
+    const expected = (faction: ReturnType<typeof F> | null) => map.world.people.filter(p => sideOfPerson(map, state, p.id) === faction && heldPost(state, p.id) === null);
+    let scans = 0;
+    const counted: State = { ...state, postStates: new Proxy(state.postStates, { ownKeys: target => { scans++; return Reflect.ownKeys(target); } }) };
+    for (const faction of [F('a'), F('b'), null]) {
+      scans = 0;
+      expect(unpostedPeopleOnSide(map, counted, faction)).toEqual(expected(faction));
+      expect(scans).toBe(1);
+    }
+    expect(unpostedPeopleOnSide(map, state, F('a')).map(p => p.id)).toEqual(['spare', 'stayed']);
+    expect(unpostedPeopleOnSide(map, state, F('b')).map(p => p.id)).toEqual(['resigned']);
+  });
+
+  it('ignores inherited posts and recomputes after a relief without changing older States', () => {
+    const inherited = { [P('inherited')]: { ...S.postStates[P('a_army')]!, postHolder: PER('b_lead') } };
+    const state = { ...S, postStates: Object.assign(Object.create(inherited), S.postStates) };
+    const next = relieveHolder(state, P('a_army'));
+    expect(unpostedPeopleOnSide(MAP, state, F('b')).some(p => p.id === PER('b_lead'))).toBe(true);
+    expect(unpostedPeopleOnSide(MAP, state, F('a')).some(p => p.id === PER('a_gen'))).toBe(false);
+    expect(unpostedPeopleOnSide(MAP, next, F('a')).some(p => p.id === PER('a_gen'))).toBe(true);
+    expect(unpostedPeopleOnSide(MAP, state, F('a')).some(p => p.id === PER('a_gen'))).toBe(false);
+  });
+});
 
 describe('setup: forces, locations and command copied once from the start (0050)', () => {
   it('copies blocks with strength, stores in milli-days and unknowns kept unknown', () => {

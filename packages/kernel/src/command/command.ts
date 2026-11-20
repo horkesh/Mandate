@@ -35,6 +35,7 @@ import type { DepartmentId, FactionId, ForceBlockId, InstallationId, PersonId, P
 import type { State } from '../root-state.ts';
 import { parseIsoDate } from '../world/calendar.ts';
 import type { WorldIndex } from '../world/index.ts';
+import type { PersonRecord } from '../world/people.ts';
 import type { PostLinkKind, ScenarioStart } from '../world/scenario.ts';
 
 /** A department change waiting for its date. */
@@ -229,6 +230,21 @@ export function heldPost(state: State, person: PersonId): PostId | null {
     if (state.postStates[id]!.postHolder === person && (first === null || strictCompare(id, first) < 0)) first = id;
   }
   return first;
+}
+
+/**
+ * The unposted roster on a side, in World order. A menu needs every available person:
+ * scan the posts once rather than looking up each person's post separately. With no
+ * post, a person's side is his chosen service after resignation or his starting side,
+ * exactly as in sideOfPerson. No derived roster is saved or shared between States.
+ */
+export function unpostedPeopleOnSide(map: WorldIndex, state: State, faction: FactionId | null): PersonRecord[] {
+  const holders = new Set(Object.values(state.postStates).map(p => p.postHolder));
+  return map.world.people.filter(p => {
+    if (holders.has(p.id)) return false;
+    const chosen = state.personService?.[p.id];
+    return (chosen?.serviceChoice === 'resign' ? chosen.serviceFaction : p.faction) === faction;
+  });
 }
 
 /** The faction a post serves, through its department's side today (0065); null for a neutral government's post. */
