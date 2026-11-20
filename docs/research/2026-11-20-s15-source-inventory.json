@@ -1,0 +1,135 @@
+{
+  "status": "research draft; selected pages read, not whole volumes",
+  "external_root": "C:/Pyrrhic/mandate-research-sources/S5",
+  "sources": [
+    {
+      "key": "CS1",
+      "path": "s15/cs-session1.pdf",
+      "url": "https://archive.org/download/statutesatlargeoconf/statutesatlargeoconf.pdf",
+      "bytes": 4533283,
+      "pages": 88,
+      "sha256": "d814efaff6e9d6f108b4db8d605e7e006007998e7e2bc80e07558e9d62d6e410",
+      "selected_printed_to_pdf_pages": {
+        "29": 39,
+        "30": 40,
+        "31": 41,
+        "32": 42,
+        "51": 61,
+        "52": 62
+      }
+    },
+    {
+      "key": "CS2",
+      "path": "s15/cs-session2.pdf",
+      "url": "https://archive.org/download/statutesatlargeo213conf/statutesatlargeo213conf.pdf",
+      "bytes": 4971532,
+      "pages": 68,
+      "sha256": "c4fa30cd3fb21c91f1a77e76dab747c1104c53c1aae2a6b94dffeb8deea1d27a",
+      "selected_printed_to_pdf_pages": {
+        "61": 15,
+        "62": 16,
+        "77": 31,
+        "78": 32,
+        "79": 33
+      }
+    },
+    {
+      "key": "OR31",
+      "path": "s15/or3-1.pdf",
+      "url": "https://archive.org/download/warofrebellion0301rootrich/warofrebellion0301rootrich.pdf",
+      "bytes": 93053509,
+      "pages": 1030,
+      "sha256": "5f16c334dddaa3843b625f0375b01a16c6105da9fde1a44e6da69505c50802b8",
+      "selected_printed_to_pdf_pages": {
+        "68": 84,
+        "69": 85,
+        "325": 341
+      }
+    },
+    {
+      "key": "OR32",
+      "path": "s15/or3-2.pdf",
+      "url": "https://archive.org/download/warofrebellion0302rootrich/warofrebellion0302rootrich.pdf",
+      "bytes": 103045304,
+      "pages": 1022,
+      "sha256": "9f7572c3f238d4d90932ef78528cf912591bb554313c5368c1df838f8eae8939",
+      "selected_printed_to_pdf_pages": {
+        "85": 103,
+        "86": 104,
+        "187": 205,
+        "188": 206,
+        "291": 309,
+        "292": 310,
+        "295": 313,
+        "296": 314,
+        "323": 341,
+        "330": 348,
+        "331": 349,
+        "332": 350,
+        "333": 351,
+        "334": 352,
+        "335": 353,
+        "336": 354,
+        "337": 355,
+        "338": 356,
+        "339": 357,
+        "340": 358,
+        "341": 359,
+        "342": 360,
+        "343": 361,
+        "344": 362,
+        "462": 480,
+        "463": 481,
+        "464": 482,
+        "466": 484,
+        "467": 485,
+        "468": 486,
+        "470": 488,
+        "795": 805,
+        "796": 806,
+        "803": 813,
+        "804": 814
+      }
+    },
+    {
+      "key": "OR42",
+      "path": "s15/../or4-2/warofrebellion0402rootrich.pdf",
+      "url": "https://archive.org/download/warofrebellion0402rootrich/warofrebellion0402rootrich.pdf",
+      "bytes": 131259474,
+      "pages": 1156,
+      "sha256": "3cbdccf95043bcfbe17bbbe7e3f1f13f6d2d1599bfec63944e87a2a731720006",
+      "selected_printed_to_pdf_pages": {
+        "33": 47,
+        "34": 48,
+        "59": 73,
+        "60": 74,
+        "61": 75,
+        "62": 76,
+        "63": 77,
+        "64": 78,
+        "65": 79,
+        "95": 109,
+        "96": 110,
+        "114": 128,
+        "115": 129,
+        "116": 130,
+        "132": 146,
+        "133": 147
+      }
+    },
+    {
+      "key": "USM62",
+      "path": "s15/militia-1862.pdf",
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-12/pdf/STATUTE-12-Pg597.pdf",
+      "bytes": 1007388,
+      "pages": 4,
+      "sha256": "195bdbe72114cdf3514b7d2b1156586750ae8e8f1836cc221fd1e00e04944a63",
+      "selected_printed_to_pdf_pages": {
+        "597": 1,
+        "598": 2,
+        "599": 3,
+        "600": 4
+      }
+    }
+  ]
+}

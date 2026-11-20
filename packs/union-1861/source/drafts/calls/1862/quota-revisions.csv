@@ -1,0 +1,6 @@
+date,state_code,measure,quantity,unit,sources,notes
+1862-08-08,IL,both calls combined after prior-service credit,35320,men,OR32 p.323,"Erroneous calculation; explicitly corrected August 9, not an active final quota."
+1862-08-09,IL,militia quota,26148,men,OR32 pp.337-338,Prior telegram erroneous; earlier field service not credited in fixing volunteer quota.
+1862-08-26,DE,drafted quota,2000,men,OR32 p.462,Retain alongside initial 1720; no inferred cause of change.
+1862-08-26,DE,volunteer baseline for excess-credit calculation,1440,men,OR32 p.462,Volunteers mustered July 2 to September 1 above baseline deductible from draft; do not subtract all volunteers twice.
+1862-08-26,NY,drafted quota,59755,men,OR32 pp.467-468,Printed 59755 differs from earlier 59705. Retain as variant; no silent correction.
