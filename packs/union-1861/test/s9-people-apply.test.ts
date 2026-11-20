@@ -47,6 +47,22 @@ function run(files = fixture()) {
 }
 
 describe('S9 incremental people apply', () => {
+  it('S16 defers every change to Seward and Walker while their historical answers need a ruling', () => {
+    const files = fixture();
+    const rows = parse(files.get(people));
+    const deferred = ['seward_william_h', 'walker_leroy_p'].map(id => [id, 'above:OLD p8', '', '', 'order:OLD p9', '', '', '', '', 'prior row', '', '']);
+    files.set(people, serialise([...rows, ...deferred]));
+    files.set(`${research}rs15.csv`, files.get(`${research}rs15.csv`) + 'seward_william_h,value:order,HOLD,,,later evidence,order:OLD p9\n');
+    files.set(`${research}dating.csv`, files.get(`${research}dating.csv`) + deferred.map(r => `${r[0]}/competence,OLD p8,1862-01-01,later document\n${r[0]}/value:order,OLD p9,1861-04,later month\n`).join(''));
+    const result = run(files);
+    for (const row of deferred) {
+      expect(result.rows.get(row[0]!)).toEqual(row);
+      expect(result.outputs.get(held)).not.toContain(`${row[0]},`);
+    }
+    expect(result.rows.get('lincoln_abraham')![1]).toContain('CHASE-LINCOLN-1861-DOC');
+    const again = run(new Map([...files, ...result.outputs]));
+    expect([...again.outputs]).toEqual([...result.outputs]);
+  });
   it('restores rs15 held directions and keeps Lincoln reputation held', () => {
     const { rows, outputs } = run();
     expect(rows.get('lincoln_abraham')![1]).toBe('above:CHASE-LINCOLN-1861-DOC p377 dated 1861-01-09');
@@ -83,6 +99,14 @@ describe('S9 incremental people apply', () => {
     const first = run();
     const again = run(new Map([...first.files, ...first.outputs]));
     expect([...again.outputs]).toEqual([...first.outputs]);
+  });
+  it('deduplicates corroborating citations after their dates are normalized', () => {
+    const files = fixture();
+    const rows = parse(files.get(people));
+    rows.find((r: string[]) => r[0] === 'late')[1] = 'above:OLD p8+OLD p8 dated 1861-01';
+    files.set(people, serialise(rows));
+    files.set(`${research}dating.csv`, files.get(`${research}dating.csv`)!.replace('1861-07..1861-08', '1861-01'));
+    expect(run(files).rows.get('late')![1]).toBe('above:OLD p8 dated 1861-01');
   });
   it('rejects a malformed date before producing outputs', () => {
     const files = fixture();

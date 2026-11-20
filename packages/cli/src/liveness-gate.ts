@@ -335,7 +335,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'people.grievances_faded': around(30),
   'seats.attention_refilled': around(21),
   'seats.attention_spent': around(29),
-  'seats.initiative': around(9),
+  'seats.initiative': { ...around(3), why: 'S16 dating holds remove two cabinet officers\' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json.' },
   'operations.repulsed': notHere("the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"),
   'forces.landed_by_situation': around(1),
   'politics.act': around(2),

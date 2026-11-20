@@ -1,0 +1,55 @@
+{
+  "status": "draft",
+  "request": "S9",
+  "loaded": false,
+  "note": "Unsigned people-data recommendations for the gate reviewer under 0106. These are data-placement drafts, not playable situations. No live value, trait, option, text or sign-off is supplied by this file.",
+  "recommendations": [
+    {
+      "person": "sumner_charles",
+      "cell": "trait:antislavery",
+      "decision": "KEEP",
+      "direction": "antislavery",
+      "citations": "CHASE-D p277-278 dated 1858-07-16",
+      "inference": "STRONG letter, Chase to Sumner, 16 July 1858, opening on p277 and assessment on p278. Chase describes Sumner's opposition to slavery in principle, contrasting it with other senators' narrower objections to political encroachment, and hopes for his return to rebuke its defenders. [I] This explicit contemporary judgment of another man supports antislavery. It is the letter, not a biographical gloss or Sumner's own estimate. Research recommendation only, with later sensitive-history placement/review still required.",
+      "gateReason": "rs15 requests later review of this antislavery placement; draft for the gate under 0106."
+    },
+    {
+      "person": "wilson_henry",
+      "cell": "trait:antislavery",
+      "decision": "KEEP",
+      "direction": "antislavery",
+      "citations": "CHASE-D p271-272 dated 1855-02-15",
+      "inference": "STRONG letter, Chase to A. M. G. as printed, 15 February 1855, date on p271 and assessment on p272. Chase says Wilson is \"true as steel on the Slavery question\" and would break up the organization rather than see it used for slavery. [I] This is another contemporary's explicit assessment, supporting antislavery. The passage is not Wilson estimating himself. Research recommendation only, with later sensitive-history placement/review still required.",
+      "gateReason": "rs15 requests later review of this antislavery placement; draft for the gate under 0106."
+    },
+    {
+      "person": "houston_samuel",
+      "cell": "value:slavery_defence",
+      "decision": "CHANGE",
+      "direction": "slavery_defence",
+      "citations": "HOUSTON-AUSTIN-1860-DOC p602 dated 1860-09-22",
+      "inference": "STRONG speech only, Houston at Austin, 22 September 1860, Crane p602, heading on p599. He warns that dissolution would endanger slavery and connects its security with that of the Union. [I] CHANGE from absent to slavery_defence. Unionism here must not be read as abolitionism. This companion finding keeps the speech's stated purpose visible. Any placement follows 0074 and its cost-only rule, with no positive reward for honoring this value.",
+      "gateReason": "0074 cost-only value; S9 explicitly requires a gate draft."
+    },
+    {
+      "person": "clark_edward",
+      "cell": "value:state_autonomy",
+      "decision": "CHANGE",
+      "direction": "state_autonomy",
+      "citations": "CLARK-CONVENTION-1860-DOC pp9-12 dated 1860",
+      "inference": "STRONG signed public call only, Texas journal pp9-12. The call claims the Texas people's power to alter their government without official consent on p10, and Ed. Clark signs on p12. The contemporary newspaper notice quoted on p9 identifies him as Lieutenant Governor. [I] CHANGE from absent to state_autonomy from his endorsement of that declaration. Publication is identified as 8 December 1860 on p9, but no signing day is printed, so the citation keeps a year bound. No general personality rating follows. Read the separate slavery_defence HOLD and 0074 placement limitation before applying.",
+      "gateReason": "0074 cause-of-secession placement; review the explicit companion slavery_defence HOLD before placing this value."
+    }
+  ],
+  "companionHolds": [
+    {
+      "person": "clark_edward",
+      "cell": "value:slavery_defence",
+      "decision": "HOLD",
+      "proposed_direction": "",
+      "citations": "",
+      "basis": "The signed call on Texas journal pp9-12 invokes the threatened Southern social order but does not explicitly name slavery in its substantive declaration. The December 1860 newspaper notice is reprinted on p9. [I] No separately supported slavery_defence value is entered from euphemism alone. HOLD, as an explicit companion research lead under 0074. Do not silently omit this issue when reviewing or placing the proposed state_autonomy value, and do not borrow another Clark's vote or another man's declaration.",
+      "prior_value": ""
+    }
+  ]
+}

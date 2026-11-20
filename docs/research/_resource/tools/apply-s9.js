@@ -5,6 +5,10 @@ const RESEARCH = 'docs/research/_resource/';
 const PEOPLE = PACK + 'source/world/people.csv';
 const HELD = PACK + 'source/drafts/people/held-back-judgments-1861.csv';
 const PROTECTED = new Set(['buchanan_franklin', 'cooper_samuel', 'crittenden_george_b', 'ewell_richard_s', 'gorgas_josiah', 'holmes_theophilus_h', 'johnston_albert_s', 'johnston_joseph_e', 'lee_robert_e', 'longstreet_james', 'loring_william_w', 'magruder_john_b', 'pemberton_john_c', 'smith_edmund_k', 'stuart_james_e_b']);
+// S16: defer these whole people, rather than weaken their historical assertions.
+// Keep their pre-S9 rows until the lead rules on the dated-value proposals in the hand-over.
+const DEFERRED = new Set(['seward_william_h', 'walker_leroy_p']);
+const PRESERVED = new Set([...PROTECTED, ...DEFERRED]);
 const GATED = new Map([
   ['houston_samuel/value:slavery_defence', '0074 cost-only value; S9 explicitly requires a gate draft.'],
   ['clark_edward/value:state_autonomy', '0074 cause-of-secession placement; review the explicit companion slavery_defence HOLD before placing this value.'],
@@ -58,7 +62,7 @@ function applyS9(files) {
   const header = table[0], column = name => { const i = header.indexOf(name); if (i < 0) throw new Error(`Missing people column ${name}`); return i; };
   const rows = table.slice(1).filter(r => r.some(Boolean));
   const byId = new Map(rows.map(row => [row[0], row]));
-  const protectedBefore = new Map(rows.filter(r => PROTECTED.has(r[0])).map(r => [r[0], JSON.stringify(r)]));
+  const protectedBefore = new Map(rows.filter(r => PRESERVED.has(r[0])).map(r => [r[0], JSON.stringify(r)]));
   const provenance = JSON.parse(read(PACK + 'PROVENANCE.json'));
   for (const [key, title, basis, url, scope] of SOURCES) {
     const record = key === 'SHERMAN-MCCLELLAN-1861-DOC' ? 'S6 commit 2c1cea0, docs/research/S6/scan-manifest.json; originals under C:/Pyrrhic/mandate-research-sources/S6/.' : 'source hashes/read limits in docs/research/_resource/evidence-r59/sources.json or evidence-r65/sources.json.';
@@ -69,7 +73,7 @@ function applyS9(files) {
   const evidence = policy.evidence;
   const weak = new Set([...(policy.weak || []), ...(policy.banned || [])]);
   const held = new Map(records(read(HELD)).map(c => [c.person + '/' + c.cell, c]));
-  const report = { research: [], protected: [], dating: [], heldByDating: [], draft: [] };
+  const report = { research: [], protected: [], deferred: [...DEFERRED].filter(id => byId.has(id)), dating: [], heldByDating: [], draft: [] };
   const drafts = [];
   function cell(row, name) {
     const [kind, sub] = name.includes(':') ? name.split(/:(.+)/) : ['stat', name];
@@ -102,6 +106,7 @@ function applyS9(files) {
       if (seen.has(key)) throw new Error(`Duplicate research cell: rs${round} ${key}`);
       seen.add(key);
       if (PROTECTED.has(c.person)) { report.protected.push({ round, cell: key, decision: c.decision }); continue; }
+      if (DEFERRED.has(c.person)) continue;
       const row = byId.get(c.person);
       if (!row) throw new Error(`Unknown person: ${c.person}`);
       const target = cell(row, c.cell), prior = target.get();
@@ -159,7 +164,7 @@ function applyS9(files) {
   };
   for (const row of rows) {
     const id = row[0];
-    if (PROTECTED.has(id)) continue;
+    if (PRESERVED.has(id)) continue;
     const names = ['competence', 'nerve', 'experience', 'reputation', 'boldness', 'candour', 'regard'].filter(n => header.includes(n));
     for (const [field, kind] of [['values', 'value'], ['traits', 'trait'], ['regard_others', 'regard_others']]) {
       if (header.includes(field)) for (const s of parts(row[column(field)])) names.push(kind + ':' + s.split(':')[0]);
@@ -168,13 +173,13 @@ function applyS9(files) {
       const target = cell(row, name), prior = target.get();
       if (!prior || prior === 'unknown') continue;
       const prefix = target.prefix(prior), key = id + '/' + name;
-      const updated = citations(prior, target).map(cite => {
+      const updated = [...new Set(citations(prior, target).map(cite => {
         const d = dates.get(key + '/' + locator(cite));
         if (!d) return cite;
         const clean = cite.replace(/\s+dated[: ]\s*\d{4}(?:-\d{2}){0,2}(?:\.\.\d{4}(?:-\d{2}){0,2})?/g, '');
         report.dating.push({ cell: key, citation: cite, date: d.date, source: d['source of the date'] });
         return d.date === 'not found' ? clean : `${clean} dated ${d.date}`;
-      });
+      }))];
       const dated = prefix + updated.join('+');
       target.set(dated);
       const innate = target.kind === 'stat' ? evidence.innateStats.includes(target.name) : target.kind === 'trait' && evidence.innateTraits.includes(target.name);
@@ -208,7 +213,7 @@ function main() {
   const { outputs, report } = applyS9(files);
   if (!process.argv.includes('--dry')) for (const [name, text] of outputs) fs.writeFileSync(path.join(root, name), text);
   if (process.env.S9_REPORT) fs.writeFileSync(process.env.S9_REPORT, JSON.stringify(report, null, 2) + '\n');
-  console.log(JSON.stringify({ dry: process.argv.includes('--dry'), research: report.research.length, protectedRecommendations: report.protected.length, matchedDates: report.dating.length, heldByDating: report.heldByDating.length, gateDrafts: report.draft, outputs: [...outputs.keys()] }, null, 2));
+  console.log(JSON.stringify({ dry: process.argv.includes('--dry'), research: report.research.length, protectedRecommendations: report.protected.length, deferredPeople: report.deferred, matchedDates: report.dating.length, heldByDating: report.heldByDating.length, gateDrafts: report.draft, outputs: [...outputs.keys()] }, null, 2));
 }
 exports.applyS9 = applyS9;
 exports.main = main;
