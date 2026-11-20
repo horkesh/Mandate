@@ -1,0 +1,10 @@
+{
+  "input_holds": 464,
+  "decisions": {
+    "HOLD": 457,
+    "CHANGE": 7
+  },
+  "new_passage_cells": 18,
+  "carried_holds": 446,
+  "assessment_rows": 25
+}
