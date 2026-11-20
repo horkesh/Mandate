@@ -1,0 +1,136 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "union-freedpeople-camps",
+  "subject": "slavery",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "9833bc44959bc4af103118e53ebdc8d61918bde2f70314e3103455d16fcfffc2",
+    "status": "open",
+    "needsSource": true
+  },
+  "entry": {
+    "id": "union-freedpeople-camps",
+    "class": "slavery-and-emancipation",
+    "window": {
+      "from": "1861-05-23",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "event",
+      "text"
+    ],
+    "status": "open",
+    "needsSource": true,
+    "agencyReasons": [
+      "agency:flight-to-union-lines",
+      "agency:family-reunion",
+      "agency:education",
+      "agency:refusal-to-emigrate"
+    ],
+    "refused": [
+      {
+        "optionPattern": "(?:assign|lease|hire_out|hire-out|contract_out|contract-out|put_to_work|put-to-work|set_to_work|set-to-work|work_gang|work-gang)[a-z_-]*(?:freedpeople|freedmen|freedwomen|contrabands?|refugees|fugitives?)",
+        "labelPattern": "\\b(?:assign|lease|hire out|contract out)\\w*\\b.{0,40}\\b(?:freedpeople|freedmen|freedwomen|contrabands?|refugees|fugitives?)\\b|\\b(?:put|set)\\b.{0,30}\\b(?:freedpeople|freedmen|freedwomen|contrabands?|refugees|fugitives?)\\b.{0,20}\\bto (?:work|labou?r)\\b",
+        "reason": "no Union labour stock or resource fed by freedpeople, and no lever that assigns their labour; the topic is needs-source as a whole, so nothing about Union camps is authored until a research lane sources it (SENSITIVE-HISTORY 3.2, refused; [SW 6.3])"
+      }
+    ],
+    "protectedGroups": [
+      "enslaved people",
+      "freedpeople",
+      "refugees from slavery",
+      "free Black men",
+      "Black women",
+      "Black children"
+    ],
+    "protectedFields": []
+  },
+  "sources": [
+    "port-royal",
+    "colyer",
+    "jacobs",
+    "barker"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "event",
+      "recommendation": "[I] After review, local conditions, aid, coercion and residents’ acts may be separately dated notices; do not generalize one camp to the system.",
+      "evidence": [
+        "port-royal",
+        "colyer",
+        "jacobs",
+        "barker"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] Propose lifting the whole-topic source hold only for separately supported local reports; unsupported registers, deaths and payment claims stay held. No lift occurs here.",
+      "evidence": [
+        "port-royal",
+        "colyer",
+        "jacobs",
+        "barker"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] Each reason names people’s own choices responding to conditions; protected inputs have no player writer. The ids are candidate vocabulary, not implemented terms.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "freedpeople"
+      },
+      {
+        "term": "Camp Barker"
+      },
+      {
+        "term": "Port Royal"
+      },
+      {
+        "term": "contrabands?"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Distinguish Duff Green’s Row, Alexandria, Camp Barker, plantations and quartermaster camps.",
+      "State observer/date/denominator; promised, owed and paid wages differ. Do not publish the unresolved Barker death numeral or construct a mortality rate."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "Residents arranged schooling and sought payment for their work.",
+        "rejectExample": "The camp supplied workers for the army.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [
+    "SENSITIVE-HISTORY 3.2 whole-topic source hold"
+  ],
+  "remaining": [
+    "Whole-topic needsSource remains true in the candidate; reviewer must scope any lift and retire associated held wording rules explicitly.",
+    "Camp registers, cumulative deaths, actual payroll receipts and corroborated visit dates remain held."
+  ],
+  "proposedRuling": "[I] Recommend bounded local event/text clearance after review rather than a blanket source lift or a labor-allocation system.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

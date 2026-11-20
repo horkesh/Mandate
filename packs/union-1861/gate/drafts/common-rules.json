@@ -1,0 +1,30 @@
+{
+  "draft": true,
+  "purpose": "Reviewer instructions, not player copy or sign-off.",
+  "precedence": [
+    "Accepted decisions including 0046 and 0074",
+    "SENSITIVE-HISTORY section 3",
+    "S7 evidence with explicit limits",
+    "S23 recommendations marked [I]"
+  ],
+  "rules": [
+    "Every topic file is an unsigned review dossier. entry alone uses the existing register schema; all other keys are out-of-world annotations. Nothing is copied to a live register.",
+    "Existing entries are carried from pinned 5c1e8ed; existing refused signatures, windows and holds are preserved. New entry status is a candidate for review, not approval.",
+    "Sources are dossier-local references, not new PROVENANCE ids. The cited research was read; this run does not claim a new primary-source inspection. Adopt primary rows and their scoped locators before live use.",
+    "A7 requires an independent reviewer, current question versions and a hash over the final content, cited rows and strings. No gateReview/signature field is written here. The reviewer signs only after approved placement and source adoption.",
+    "A8 ship blockers remain: R2 pay, R3 Dakota, R4 prisoners, R6 guerrillas, whole-topic camp sources; new record candidates cannot be interpreted as a release clearance.",
+    "B5/0060: every decision and inaction has unconditional locked costs on the decider’s side. No detection/chance/cancellation escape. Cost size, active owners and proponents require later evidence.",
+    "D5/E7: atrocities are never options; dependency taint follows effects/causes across tags. No atrocity-derived positive acting-side term, whoever appointed the commander. 0074 restrictive options only, letting-stand only watched inaction; Dakota remains R3’s separate question.",
+    "D6: watched options and atrocity-dependent inaction require the actual seeded sweep after mechanics exist. More than one-quarter best-choice seeds flags review; these draft probes are no sweep clearance.",
+    "Protected people are agents, never pools, counted/spent/assigned by a verb, target, goal, transfer, initiative or setup. Protected census inputs are read-only to derivations; existing regions-owned arrival state remains under 0046, not a new stock.",
+    "Agency reasons are typed candidates; each nonzero future term must explain people’s choices and have an owner/graph review. Reasons do not authorize a field or quantitative effect.",
+    "Setting vocabulary stays in the pack. Existing class flags are referenced, not changed. Native-nation atrocity conduct must additionally receive a suitable atrocity tag/class before any live authoring.",
+    "No player text is delivered except clearly labeled wording examples. No slogans, clipped triads, aphorisms, all-caps eyebrow labels, hindsight defaults or praise/scolding.",
+    "Names of people, acts, dates, estimates and motives require the exact cited source. Publication, report, event, receipt and knowledge dates differ. B2 requires State causes, not a fixed date alone, absent an accepted railroad.",
+    "Disputed figures retain source/date/category. Comparable estimates may be ranges; incompatible categories are separate statements, not manufactured intervals. No rates from stocks and cumulative deaths.",
+    "Narrator prefers enslaved people and enslaver. Contraband as a noun for people, slurs and Lost Cause formulations are confined to short, attributed, cited quotations with reviewer note. No new quotation exemption is granted.",
+    "Keep all live forbidden, triggers, anachronisms, proper-noun allowlists and source policy. Draft trigger candidates request review; ordinary proper names must not become false positive topic assignments.",
+    "No more than a short contextual excerpt if a future quotation is adopted. Earlier quotation/voice rules in 0074 remain, including no generated voice or value reason from founding quotations.",
+    "The final January proclamation, December Dakota execution review, December capture proclamation, 1863 riots/commutation/impressment and 1864 massacres stay outside the August 1861–November 1862 core."
+  ]
+}

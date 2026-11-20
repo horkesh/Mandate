@@ -1,0 +1,175 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "emancipation-policy",
+  "subject": "slavery",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": false,
+    "entrySha256": null,
+    "status": null,
+    "needsSource": null
+  },
+  "entry": {
+    "id": "emancipation-policy",
+    "class": "slavery-and-emancipation",
+    "window": {
+      "from": "1861-08-30",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "decision",
+      "derived",
+      "event",
+      "text"
+    ],
+    "status": "record",
+    "interim": null,
+    "agencyReasons": [
+      "agency:self-emancipation",
+      "agency:black-enlistment",
+      "agency:refusal-to-emigrate"
+    ],
+    "protectedGroups": [
+      "enslaved people",
+      "freedpeople",
+      "refugees from slavery",
+      "free Black men",
+      "Black women",
+      "Black children"
+    ],
+    "protectedFields": [],
+    "refused": [
+      {
+        "fieldPattern": "(?:^|[-_])(?:virtue|morality|karma|emancipation_bonus)(?:$|[-_])",
+        "reason": "No moral score or direct emancipation unlock (H5; SENSITIVE-HISTORY 3.2)."
+      },
+      {
+        "optionPattern": "(?:send|ship|deport|price|sell|trade|reenslave)[a-z_-]*(?:freedpeople|freedmen|refugees|enslaved)",
+        "reason": "People are never sent, priced or re-enslaved as policy quantities; colonization requires their own choice."
+      }
+    ]
+  },
+  "sources": [
+    "law",
+    "fremont",
+    "hunter-order",
+    "preliminary",
+    "cabinet",
+    "colonization"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "SENSITIVE-HISTORY section 3 entry for this topic",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "decision",
+      "recommendation": "[I] Separate Frémont emancipation, compensated-state proposals, DC signing, Hunter revocation, July signing/resolution, colonization policy and proclamation timing. Every option/inaction has locked actor costs; no direct people/resource grant.",
+      "evidence": [
+        "law",
+        "fremont",
+        "hunter-order",
+        "preliminary",
+        "cabinet",
+        "colonization"
+      ]
+    },
+    {
+      "placement": "derived",
+      "recommendation": "[I] Only agency-bearing self-emancipation/enlistment and sourced actor reactions; no virtue score or direct strength unlock.",
+      "evidence": [
+        "law",
+        "fremont",
+        "hunter-order",
+        "preliminary",
+        "cabinet",
+        "colonization"
+      ]
+    },
+    {
+      "placement": "event",
+      "recommendation": "[I] Legislative acts and non-player policy responses are distinct events. No fixed September date replaces a State cause.",
+      "evidence": [
+        "law",
+        "fremont",
+        "hunter-order",
+        "preliminary",
+        "cabinet",
+        "colonization"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] Separate September announcement from January implementation; include Black criticism and consent. No August address reconstructed from an editorial.",
+      "evidence": [
+        "law",
+        "fremont",
+        "hunter-order",
+        "preliminary",
+        "cabinet",
+        "colonization"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] Each reason names people’s own choices responding to conditions; protected inputs have no player writer. The ids are candidate vocabulary, not implemented terms.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "emancipat\\w*"
+      },
+      {
+        "term": "coloni[sz]ation"
+      },
+      {
+        "term": "Hunter"
+      },
+      {
+        "term": "Fr[ée]mont"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Frémont’s shooting clause is not an emancipation choice; no uphold-execution option.",
+      "Colonization policy may be debated; people are never sent, priced or counted by an option. Every colonization option is watched.",
+      "Seward’s advice is retrospective testimony; exact July date/voice remains held. Appropriations are fixed policy sums, never a per-person game price."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "People refused a proposal to leave the country.",
+        "rejectExample": "Ship freedpeople abroad to reduce costs.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "scoring",
+    "hindsight",
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [
+    "R7",
+    "R2 for enlistment",
+    "R6 for shooting clause"
+  ],
+  "remaining": [
+    "R7 must settle mechanisms, holder/proposers, known-policy/expiry owners and cost sizes before promotion.",
+    "Exact July cabinet chronology, actual emigration/appropriation spending and some advocate legs remain unresolved."
+  ],
+  "proposedRuling": "[I] Carry lane 1.8 C.2 as a record-held candidate; recommend separate policy facets, agency terms and watched colonization. Reject virtue scoring and direct resource unlocks.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

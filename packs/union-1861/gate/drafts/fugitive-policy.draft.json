@@ -1,0 +1,151 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "fugitive-policy",
+  "subject": "slavery",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "dee0f24e63fe87f375e9ead3d960a4944ca9056a55ae1ce10c5d10326f51b4b2",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "fugitive-policy",
+    "class": "slavery-and-emancipation",
+    "window": {
+      "from": "1861-05-23",
+      "to": "1862-07-17"
+    },
+    "placements": [
+      "decision",
+      "event",
+      "text"
+    ],
+    "status": "open",
+    "protectedGroups": [
+      "fugitives from slavery",
+      "people who reached Union lines",
+      "enslaved people",
+      "freedpeople",
+      "refugees from slavery",
+      "free Black men",
+      "Black women",
+      "Black children"
+    ],
+    "agencyReasons": [
+      "agency:flight-to-union-lines"
+    ],
+    "supersededOptions": [
+      {
+        "situation": "fort_monroe_arrivals",
+        "option": "return",
+        "law": "confiscation_and_militia_acts"
+      }
+    ],
+    "refused": [
+      {
+        "labelPattern": "^(?!.*\\bslavery\\b)(?!.*\\b(?:not|never|no|refuses?|declines?|forbids?)\\s+(?:to\\s+)?(?:return|deliver|surrender|send|give|hand|restor)).*\\b(?:return|deliver|send(?:ing)? back|surrender|give up|hand over|restor)\\w*\\b.{0,40}\\b(?:fugitives?|refugees|runaways?|escaped|arrivals|enslaved|slaves?|contrabands?)\\b|^(?!.*\\bslavery\\b)(?!.*\\b(?:not|never|no|refuses?|declines?|forbids?)\\s+(?:to\\s+)?return).*\\breturn\\w*\\b.{0,40}\\b(?:1850|fugitive (?:slave )?(?:act|law))\\b|^(?=.*\\b(?:fugitives?|runaways?|escaped|arrivals|enslaved|slaves?|contrabands?|men|women|people|them)\\b).*\\brestor\\w*\\b.{0,30}\\bproperty\\b|^(?=.*\\b(?:fugitives?|runaways?|escaped|arrivals|enslaved|slaves?|contrabands?|men|women|people|them)\\b).*\\b(?:return|deliver|surrender|restor)\\w*\\b.{0,40}\\bto (?:their|the|its) (?:owners?|masters?|claimants?)\\b|^(?!.*\\bslavery\\b)(?!.*\\b(?:not|never|no|refuses?|declines?|forbids?)\\s+(?:to\\s+)?(?:send|turn|drive|expel|exclude)).*\\b(?:send\\w*|turn\\w*|drive\\w*)\\b.{0,30}\\b(?:fugitives?|refugees from slavery|runaways?|escaped (?:men|people|slaves)|arrivals|enslaved|slaves?)\\b.{0,20}\\b(?:back|away|out)\\b|^(?!.*\\bslavery\\b)(?!.*\\b(?:not|never|no)\\b).*\\b(?:expel\\w*|exclud\\w*|turn(?:s|ed|ing)? away|keep\\w* out)\\b.{0,30}\\b(?:fugitives?|runaways?|arrivals|enslaved|slaves?)\\b",
+        "optionPattern": "(?:restore|return|deliver|surrender)[a-z_-]*(?:property|owners?|masters?|claimants?)",
+        "reason": "an option that returns people to slavery says so plainly, \"return them to slavery\": \"restore property\", \"to their owners\" or \"under the 1850 law\" alone is euphemism, and so is sending, turning or driving them back, away or out, or excluding them from the lines (Q6 covers keeping them from freedom as well as return); \"property\" and \"owners\" are read only where the label names people, so a railroad restored to its owners passes (SENSITIVE-HISTORY 3.2, the ruling on return, term 4, and Q6; 0046)"
+      }
+    ],
+    "protectedFields": []
+  },
+  "sources": [
+    "law",
+    "fremont",
+    "preliminary",
+    "navy"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "decision",
+      "recommendation": "[I] Policy through a named holder, with every option and inaction costed; return/exclusion must be watched. Never move or recapture people as a quantity.",
+      "evidence": [
+        "law",
+        "fremont",
+        "preliminary",
+        "navy"
+      ]
+    },
+    {
+      "placement": "event",
+      "recommendation": "[I] A holder’s practice is conduct with locked costs, not an obedience reward for slavery values (0074).",
+      "evidence": [
+        "law",
+        "fremont",
+        "preliminary",
+        "navy"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] Distinguish 6 August forfeiture of claim, 13 March military-use ban, 17 July surrender/adjudication bans and September enforcement.",
+      "evidence": [
+        "law",
+        "fremont",
+        "preliminary",
+        "navy"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] Each reason names people’s own choices responding to conditions; protected inputs have no player writer. The ids are candidate vocabulary, not implemented terms.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "fugitives?"
+      },
+      {
+        "term": "military returns?"
+      },
+      {
+        "term": "Confiscation Act"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "A return/exclusion label must plainly say slavery; legal citation alone is insufficient.",
+      "Do not state that military returns first became prohibited in July. Retain live supersededOptions unchanged pending a conduct-specific ruling."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "Return them to slavery.",
+        "rejectExample": "Restore their owners’ property.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [
+    "R7",
+    "0046",
+    "0074"
+  ],
+  "remaining": [
+    "Lead/gate must distinguish conduct prohibited from 13 March from July’s added clauses; the draft does not alter expiry or backdate knowledge.",
+    "Check each command’s actual practice and the relevant policy/knowledge owner."
+  ],
+  "proposedRuling": "[I] Recommend a separate March prohibition gate for use of commanded forces, retaining July’s independent prohibitions. Reject a blind July-to-March date replacement.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

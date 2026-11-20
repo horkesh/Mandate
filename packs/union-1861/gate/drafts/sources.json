@@ -1,0 +1,203 @@
+{
+  "draft": true,
+  "sourceManifest": "docs/research/s7-sources.csv",
+  "retainedScans": "C:/Pyrrhic/mandate-research-sources/S7/",
+  "sources": {
+    "law": {
+      "note": "docs/research/2026-11-20-s7-slavery-policy-and-emancipation.md",
+      "section": "1",
+      "citation": "12 Stat. 319; 354; 376–378; 432; 589–592; 597–600; 617; 627",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Statutory clauses and jurisdictions differ. Authority is not implementation."
+    },
+    "fremont": {
+      "note": "docs/research/2026-11-20-s7-slavery-policy-and-emancipation.md",
+      "section": "2",
+      "citation": "OR I.3 pp. 466–467, 469–470, 485–486",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Shooting restraint was ordered on 2 September; emancipation modification was first requested. Treat them separately."
+    },
+    "hunter-order": {
+      "note": "docs/research/2026-11-20-s7-slavery-policy-and-emancipation.md",
+      "section": "3",
+      "citation": "12 Stat. 1264–1265",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "19 May voided the freedom declaration; it was not the same administrative act as organizing a regiment."
+    },
+    "preliminary": {
+      "note": "docs/research/2026-11-20-s7-slavery-policy-and-emancipation.md",
+      "section": "4",
+      "citation": "12 Stat. 1267–1268",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "22 September announces a future act and immediately enforces March/July provisions. Final January 1863 language is outside the window."
+    },
+    "cabinet": {
+      "note": "docs/research/2026-11-20-s7-slavery-policy-and-emancipation.md",
+      "section": "4, Cabinet evidence and its limitations",
+      "citation": "Carpenter (1866) pp. 20–23; Welles, Diary I (1911) pp. 142–144",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Retrospective reported conversation and published diary; no exact July date or verbatim contemporary Seward speech established."
+    },
+    "colonization": {
+      "note": "docs/research/2026-11-20-s7-slavery-policy-and-emancipation.md",
+      "section": "5",
+      "citation": "12 Stat. 378, 582, 592; Douglass’ Monthly, September 1862 pp. 707–708",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Consent/appropriations are not consent in a particular case, expenditure or emigration. Unsigned editorial is not a population poll."
+    },
+    "confederate-acts": {
+      "note": "docs/research/2026-11-20-s7-slavery-policy-and-emancipation.md",
+      "section": "6",
+      "citation": "Confederate Statutes, First Congress, second session, ch. 45 pp. 77–79 and ch. 62 pp. 89–90",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Policing exemption clauses differ; 13 October restoration/work act is not the 1863 impressment act. Reception and implementation are unmeasured."
+    },
+    "port-royal": {
+      "note": "docs/research/2026-11-20-s7-freedpeople-and-black-service.md",
+      "section": "1–2",
+      "citation": "Pierce, The Negroes at Port Royal (1862) pp. 3–7, 18–20, 30–35; 2 June report in 1863 printing pp. 315–316, 320",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "White federal agent’s mediated, paternalist account. Plantations, camps, residents, payroll and actual payments have different dates and denominators."
+    },
+    "hunter-service": {
+      "note": "docs/research/2026-11-20-s7-freedpeople-and-black-service.md",
+      "section": "3",
+      "citation": "House Ex. Docs. 133 pp. 1–2 and 143 pp. 1–3 (37th Congress, 2nd session); Pierce June report p. 320",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Hunter claimed authority; Stanton denied departmental authority; Pierce reported compulsion. Forecasts are not enlistment returns."
+    },
+    "saxton": {
+      "note": "docs/research/2026-11-20-s7-freedpeople-and-black-service.md",
+      "section": "4",
+      "citation": "OR I.14 pp. 189–191, 377–378; OR I.15 pp. 555–557, 601",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Separate laborer/armed volunteer authorizations, actual enrollment and detachment returns. Butler’s request is not an independently found presidential approval."
+    },
+    "pay": {
+      "note": "docs/research/2026-11-20-s7-freedpeople-and-black-service.md",
+      "section": "5",
+      "citation": "12 Stat. 326, 599; Susie King Taylor (1902) pp. 11–16",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Statute says $3 may be clothing; it does not establish every deduction or payment date. Taylor’s later pay dispute is not dated to July 1862."
+    },
+    "black-captives": {
+      "note": "docs/research/2026-11-20-s7-freedpeople-and-black-service.md",
+      "section": "6",
+      "citation": "OR II.4 pp. 945–946, 954",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Mercer’s report, captor’s labels and Seddon’s threat are distinct. Fate/regiment of Manuel and the other captives remains unresolved."
+    },
+    "colyer": {
+      "note": "docs/research/2026-11-20-s7-freedpeople-and-black-service.md",
+      "section": "7",
+      "citation": "Colyer (1864), report of spring 1862, pp. 5–6, 9–10, 13, 18–21, 43–44, 47, 51",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Later publication, mediated Kinnegy testimony and reproduced newspaper/conversation have different evidentiary weight."
+    },
+    "navy": {
+      "note": "docs/research/2026-11-20-s7-freedpeople-and-black-service.md",
+      "section": "8",
+      "citation": "ORN I.6 pp. 8, 10, 110, 256–257",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "27 September acknowledgment summarizes 25 September instructions; not the full original letter or every sailor’s rating/pay receipt."
+    },
+    "jacobs": {
+      "note": "docs/research/2026-11-20-s7-washington-camps-and-jacobs.md",
+      "section": "Source, page and date; Agency and decisions in the residents’ accounts",
+      "citation": "Jacobs, signed Linda, The Liberator, 5 September 1862, printed p. 144, cols. 2–4",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "UNC labels p. 3; retained image says 144. Publication is not every visit’s date. Camp Barker is not named."
+    },
+    "barker": {
+      "note": "docs/research/2026-11-20-s7-washington-camps-and-jacobs.md",
+      "section": "Camp Barker: an October newspaper report",
+      "citation": "Evening Star, 24 October 1862 p. 3 col. 1",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Unsigned favorable report; current residents, registrations and hospital patients are different measures. Cumulative death numeral remains unread with confidence."
+    },
+    "exchange": {
+      "note": "docs/research/2026-11-20-s7-prisoners-and-exchange.md",
+      "section": "1–2",
+      "citation": "OR II.1 pp. 511–513; OR II.4 pp. 266–268, 835–838, 892–894, 943–945",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Capture/parole/delivery/completed exchange differ; equivalents are not distinct people. Local recognition explanation is not the complete national policy."
+    },
+    "prisons": {
+      "note": "docs/research/2026-11-20-s7-prisoners-and-exchange.md",
+      "section": "3–6",
+      "citation": "OR II.3 pp. 315–316; OR II.4 pp. 106–111, 154–155, 166, 230–232, 254–256, 277–278, 658–660, 749, 758, 868",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Local interested accounts; mixed stocks/cumulative deaths do not give comparable mortality rates. Hoffman’s 20,500 is on p. 278."
+    },
+    "east-tennessee": {
+      "note": "docs/research/2026-11-20-s7-guerrillas-civilians-and-dakota-voices.md",
+      "section": "1–2",
+      "citation": "OR II.1 pp. 848–856, 869–872, 879–883",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Orders, reports, petitions and allegations differ; edition prints request/reply dates out of order. No calibrated severity/loyalty relationship."
+    },
+    "osceola-palmyra": {
+      "note": "docs/research/2026-11-20-s7-guerrillas-civilians-and-dakota-voices.md",
+      "section": "3–4",
+      "citation": "OR I.3 pp. 196, 516–517; OR I.13 p. 909; OR II.4 p. 946",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Osceola date and casualty categories conflict; Palmyra material is allegation/conditional retaliation, not a complete original execution file."
+    },
+    "occupation": {
+      "note": "docs/research/2026-11-20-s7-guerrillas-civilians-and-dakota-voices.md",
+      "section": "5",
+      "citation": "OR I.15 pp. 425–426, 465, 468–469",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Order 28 is a gendered threat, not proof of particular assault; food order not distribution receipts; Mumford sentence and later execution report are distinct."
+    },
+    "big-eagle": {
+      "note": "docs/research/2026-11-20-s7-guerrillas-civilians-and-dakota-voices.md",
+      "section": "6",
+      "citation": "Minnesota Historical Society Collections VI (1894) pp. 382–390, 397, 399–400",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "June 1894 interview, interpreters Eastman/Huggan and editor Holcombe. Retrospective, mediated, internally divided perspectives; not a contemporary trial record."
+    },
+    "wisconsin": {
+      "note": "docs/research/2026-11-20-s7-guerrillas-civilians-and-dakota-voices.md",
+      "section": "7",
+      "citation": "OR II.4 pp. 718, 725, 742, 751",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Salomon’s reported custody/capacity and interim War Department permission; actual dispositions and local riot chronology unresolved."
+    },
+    "native-1862": {
+      "note": "docs/research/2026-11-14-gate-and-catalogue-facts.md",
+      "section": "2.2–2.5",
+      "citation": "Research synthesis citing OR I.8 pp. 534–535, 624–625, 665–666; OR I.13 pp. 137–138, 487–503, 564–565, 620–621; CIA 1862 pp. 3, 26–28, 136–137, 155–157",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Inherited research, not newly checked treaty texts; distinct nations/factions, uncertain totals and request voice remain qualified. No new source clearance."
+    },
+    "confederate-habeas": {
+      "note": "docs/research/2026-11-14-gate-and-catalogue-facts.md",
+      "section": "6",
+      "citation": "Research synthesis citing Confederate laws pp. 1, 40, 84; Richardson I pp. 172–175, 259–260; OR I.13 pp. 39, 44, 835–836, 899–901",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Dates and jurisdiction are separate from East Tennessee practice. Unread orders/snippet totals remain leads."
+    },
+    "maryland": {
+      "note": "docs/research/2026-11-14-gate-and-catalogue-facts.md",
+      "section": "9",
+      "citation": "Research synthesis citing OR I.5 pp. 193–197; OR II.1 pp. 667–680, 682",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Government’s fear and opponents’ objections are attributed; no guilt finding or national count follows."
+    },
+    "war-aims": {
+      "note": "docs/research/2026-11-20-s7-slavery-policy-and-emancipation.md",
+      "section": "1, Earlier war-aims context",
+      "citation": "Senate Misc. Doc. 7, 37th Congress, 1st session, submitted 24 July 1861 p. 1",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Submission wording does not establish passage/House wording and does not expressly use slavery."
+    },
+    "committee": {
+      "note": "docs/research/2026-11-14-union-politics.md",
+      "section": "1.3",
+      "citation": "Inherited research section 1.3: Joint Committee creation and Stone; SENSITIVE-HISTORY section 3.6",
+      "use": "Read research synthesis; consult its primary scan and s7-sources.csv before live adoption.",
+      "limit": "Weak/partly snippet sourcing. Exact establishment record, Stone chronology and primary reports need adoption before new day-specific text."
+    }
+  }
+}

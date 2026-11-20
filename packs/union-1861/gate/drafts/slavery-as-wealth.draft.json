@@ -1,0 +1,109 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "slavery-as-wealth",
+  "subject": "slavery",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "fe8e3cfd2ee67fab797893c5bb48d4e2f4f3f126370a617d652ea5364a639569",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "slavery-as-wealth",
+    "class": "slavery-and-emancipation",
+    "window": {
+      "from": "1861-03-04",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "text"
+    ],
+    "status": "open",
+    "refused": [
+      {
+        "fieldPattern": "(?:^|[-_.:/])(?:slaves?|enslaved|slavery)[-_.:/](?:[a-z]+[-_.:/])?(?:value|values|valuation|worth|wealth|price|prices|capital|collateral|assets?)(?:$|[-_.:/])|(?:^|[-_.:/])(?:value|values|valuation|worth|wealth|price|prices|capital|collateral|assets?)[-_.:/](?:[a-z]+[-_.:/])?(?:slaves?|enslaved|slavery)(?:$|[-_.:/])",
+        "reason": "no finance term values enslaved people; the economists' account of Confederate wealth appears only attributed (SENSITIVE-HISTORY 3.2, refused; [CS 3.3])"
+      }
+    ],
+    "protectedGroups": [
+      "enslaved people",
+      "freedpeople",
+      "refugees from slavery",
+      "free Black men",
+      "Black women",
+      "Black children"
+    ],
+    "agencyReasons": [],
+    "protectedFields": []
+  },
+  "sources": [
+    "confederate-acts"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "text",
+      "recommendation": "[I] Carry attributed accounts of slaveholders’ financial claims only with the people and coercion named. S7 adds statutory context, not an asset valuation.",
+      "evidence": [
+        "confederate-acts"
+      ]
+    },
+    {
+      "placement": "refused",
+      "recommendation": "[I] No finance/credit term prices people or treats them as collateral. A historical document’s valuation is not a game balance-sheet asset.",
+      "evidence": [
+        "confederate-acts"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "slavery"
+      },
+      {
+        "term": "enslav\\w*"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Do not narrate an enslaver’s valuation as a person’s value. Attribute historical claims; no new aggregate wealth estimate."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "Slaveholders claimed people as property.",
+        "rejectExample": "Enslaved people add value to the treasury.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [],
+  "remaining": [
+    "The inherited economists’ argument needs its original citation before new player text; S7 does not quantify wealth."
+  ],
+  "proposedRuling": "[I] Carry the existing text-only refusal; reject a finance term that values people.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "confederate-enslaved-labour",
+  "subject": "slavery",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "32c7e4c28fa5335fa9ebc63bd5e9d371b5698823b26f792b0d69692d915fb80a",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "confederate-enslaved-labour",
+    "class": "slavery-and-emancipation",
+    "window": {
+      "from": "1861-03-04",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "text"
+    ],
+    "status": "open",
+    "agencyReasons": [
+      "agency:escape-from-impressment"
+    ],
+    "refused": [
+      {
+        "optionPattern": "(?:impress|requisition|hire_out|hire-out|lease|levy|conscript|draft|commandeer)[a-z_-]*(?:slaves?|enslaved|negro(?:es)?|black|colou?red)",
+        "labelPattern": "\\b(?:impress|requisition|hire out|lease|levy|conscript|draft|commandeer)\\w*\\b.{0,40}\\b(?:slaves?|enslaved|negro(?:es)?|Black (?:men|workers|labou?rers))\\b",
+        "reason": "no verb for either side to impress or requisition enslaved labour, and no field counting it as a resource; in the slice it is text from Confederate payrolls and Butler's stated reason (SENSITIVE-HISTORY 3.2, refused; [SW 6.3], [CS 4.2])"
+      }
+    ],
+    "protectedGroups": [
+      "enslaved people",
+      "freedpeople",
+      "refugees from slavery",
+      "free Black men",
+      "Black women",
+      "Black children"
+    ],
+    "protectedFields": []
+  },
+  "sources": [
+    "confederate-acts",
+    "port-royal"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "text",
+      "recommendation": "[I] 13 October re-enslavement/restoration/work law is evidence of coercive policy; propose separately cited text only within the inherited envelope. Do not backdate the 1863 impressment law.",
+      "evidence": [
+        "confederate-acts",
+        "port-royal"
+      ]
+    },
+    {
+      "placement": "refused",
+      "recommendation": "[I] No controller for work, depots, restoration or guarding people. Escape remains a self-emancipation term; no labor stat.",
+      "evidence": [
+        "confederate-acts",
+        "port-royal"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] Each reason names people’s own choices responding to conditions; protected inputs have no player writer. The ids are candidate vocabulary, not implemented terms.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "enslav\\w*"
+      },
+      {
+        "term": "impress\\w*"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Describe forced work plainly and attribute officials’ property language. Refuse an efficient-labor framing.",
+      "A law is not proof a depot, return or work detail was implemented."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The act authorized forced work while people were held.",
+        "rejectExample": "Allocate enslaved labor to repair the line.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [],
+  "remaining": [
+    "Local implementation, payrolls and individual escapes remain source questions."
+  ],
+  "proposedRuling": "[I] Retain text-only treatment and permanent resource/assignment refusals; reject a new economic input.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

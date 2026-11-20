@@ -1,0 +1,113 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "prize-money-and-cotton",
+  "subject": "slavery",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": false,
+    "entrySha256": null,
+    "status": null,
+    "needsSource": null
+  },
+  "entry": {
+    "id": "prize-money-and-cotton",
+    "class": "slavery-and-emancipation",
+    "window": {
+      "from": "1861-11-01",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "refused"
+    ],
+    "status": "open",
+    "interim": null,
+    "agencyReasons": [],
+    "protectedGroups": [
+      "enslaved people",
+      "freedpeople",
+      "refugees from slavery",
+      "free Black men",
+      "Black women",
+      "Black children"
+    ],
+    "protectedFields": [],
+    "refused": [
+      {
+        "optionPattern": "(?:assign|allocate|lease|hire_out|put_to_work)[a-z_-]*(?:freedpeople|freedmen|refugees|plantation_labou?r)",
+        "reason": "No player lever directs freedpeople’s labor on plantations (SENSITIVE-HISTORY 3.8)."
+      }
+    ]
+  },
+  "sources": [
+    "port-royal",
+    "colyer"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "SENSITIVE-HISTORY section 3 entry for this topic",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "refused",
+      "recommendation": "[I] Only the protected-people facet is gated: no player order assigns plantation/cotton labor. Commodity cotton and prize incentives remain ordinary systems.",
+      "evidence": [
+        "port-royal",
+        "colyer"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] Conditions on occupied plantations belong to union-freedpeople-camps after its source review, not a new cotton-labor resource.",
+      "evidence": [
+        "port-royal",
+        "colyer"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "plantations?"
+      },
+      {
+        "term": "freedpeople"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Do not write cotton production as if no people cultivated it. No Red River 1864 episode in 1B."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "Residents sought payment for cotton work.",
+        "rejectExample": "Assign freedpeople to increase cotton output.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [],
+  "remaining": [
+    "Source review and any allowed camp-text facet remain with union-freedpeople-camps; no crop/labor coefficient supplied."
+  ],
+  "proposedRuling": "[I] Register only the gated refused facet; reject gating all ordinary cotton trade or creating plantation labor controls.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "self-emancipation",
+  "subject": "slavery",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "35d5d7d0fe9e156ee8237ea0873e013ede15cb825676bcddafa46944757d0afd",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "self-emancipation",
+    "class": "slavery-and-emancipation",
+    "window": {
+      "from": "1861-05-23",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "derived",
+      "event"
+    ],
+    "status": "open",
+    "protectedFields": [
+      "enslaved_population",
+      "region_enslaved_population",
+      "reached_union_lines",
+      "region_reached_union_lines"
+    ],
+    "protectedGroups": [
+      "enslaved people",
+      "enslaved men",
+      "enslaved women",
+      "enslaved children",
+      "the enslaved",
+      "slaves",
+      "freedpeople",
+      "freedmen",
+      "freedwomen",
+      "refugees from slavery",
+      "fugitives",
+      "contrabands",
+      "free Black men",
+      "Black women",
+      "Black children"
+    ],
+    "agencyReasons": [
+      "agency:self-emancipation",
+      "agency:flight-to-union-lines",
+      "agency:resistance-within-confederacy",
+      "agency:escape-from-impressment"
+    ],
+    "refused": [
+      {
+        "fieldPattern": "(?:^|[-_.:/])(?:enslaved|slaves?|slavery|freedpeople|freedmen|freedwomen|fugitives?|contrabands?|black|colou?red|negro(?:es)?|african)[-_.:/](?:[a-z]+[-_.:/])?(?:population|people|persons|men|women|count|counts|number|numbers|total|labou?r|labou?rers|workers?|hands|stock|pool|manpower|recruits?|recruitment|enlistments?|levy|levies|draft|quotas?|arrivals?|property|chattels?)(?:$|[-_.:/])|(?:^|[-_.:/])(?:population|people|persons|men|women|count|counts|number|numbers|total|labou?r|labou?rers|workers?|hands|stock|pool|manpower|recruits?|recruitment|enlistments?|levy|levies|draft|quotas?|arrivals?|property|chattels?)[-_.:/](?:[a-z]+[-_.:/])?(?:enslaved|slaves?|slavery|freedpeople|freedmen|freedwomen|fugitives?|contrabands?|black|colou?red|negro(?:es)?|african)(?:$|[-_.:/])",
+        "reason": "no seat counts, stocks, spends or moves enslaved people, freedpeople, fugitives or Black men as a quantity, labour or manpower: the census population is protected input read only by derivations, and people who reach Union lines are State written by regions from the derived term (SENSITIVE-HISTORY 3.2, refused, and rule 3; 0046; [SW 6.2])"
+      },
+      {
+        "optionPattern": "(?:entice|encourage|incite|induce|prevent|halt|block|recapture|round_up|round-up|hunt|track|seize|count|tally|spend|sell|trade)[a-z_-]*(?:slaves?|enslaved|fugitives?|runaways?|contrabands?|freedpeople|freedmen|negro(?:es)?|escapes?|escapees)",
+        "labelPattern": "\\b(?:entic|encourag|incit|induc|recaptur|round(?:ing)? up|hunt|track(?:ing)? down|seiz|tally|spend|sell)\\w*\\b.{0,40}\\b(?:slaves?|enslaved|fugitives?|runaways?|contrabands?|freedpeople|freedmen|negro(?:es)?)\\b|\\bcount(?:s|ed|ing)?\\b.{0,40}\\b(?:slaves?|enslaved|fugitives?|runaways?|contrabands?|freedpeople|freedmen)\\b|\\b(?:prevent|halt|block)\\w*\\b.{0,25}\\b(?:escapes?|flight|running away)\\b",
+        "reason": "no verb, option or initiative for either side to encourage, entice, prevent, recapture, count or spend self-emancipation: it is the people's own act, derived, never a lever (SENSITIVE-HISTORY 3.2, refused; [CS 4.3]; 0046)"
+      },
+      {
+        "optionPattern": "(?:servile|slave|negro)[a-z_-]*(?:insurrection|revolt|rising|uprising|rebellion)",
+        "labelPattern": "\\b(?:servile|slave|negro)\\s+(?:insurrections?|revolts?|risings?|uprisings?|rebellions?)\\b",
+        "reason": "no \"suppress insurrection\" action for any seat; servile war appears only as an attributed contemporary view (SENSITIVE-HISTORY 3.2, refused, and trap 8; [SW 6.8], [CS 3.1])"
+      }
+    ]
+  },
+  "sources": [
+    "port-royal",
+    "colyer",
+    "jacobs"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "derived",
+      "recommendation": "[I] Carry two independent routes: resistance/escape within Confederate-held territory and flight to Union lines in response to known policy and reach. No Union labor or men stock.",
+      "evidence": [
+        "port-royal",
+        "colyer",
+        "jacobs"
+      ]
+    },
+    {
+      "placement": "event",
+      "recommendation": "[I] Named, sourced arrivals can raise policy questions; people already on occupied plantations are not all new arrivals.",
+      "evidence": [
+        "port-royal",
+        "colyer",
+        "jacobs"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] Each reason names people’s own choices responding to conditions; protected inputs have no player writer. The ids are candidate vocabulary, not implemented terms.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "self[- ]emancipation"
+      },
+      {
+        "term": "enslav\\w*"
+      },
+      {
+        "term": "fugitives?"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "People are the subjects of escape, refusal, family reunion and education. Attribute Pierce/Colyer’s mediated testimony.",
+      "Separate publication dates from acts; no national total from local estimates."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "People escaped slavery and reached Union lines.",
+        "rejectExample": "Union forces gained a labor pool.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [],
+  "remaining": [
+    "National response coefficients and a complete account of resistance away from Union reach remain unestablished."
+  ],
+  "proposedRuling": "[I] Retain the live derived/event envelope and protected fields; add S7 source support without a new resource.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}
