@@ -18,6 +18,16 @@ Three alternating pairs per slot against fae69bc are retained in runs/s20/candid
 
 The inspector-session profile stalled; only that lane-owned process was stopped. A bounded three-day diagnostic reproduced the stall. Node's command-line CPU profiler then passed the three-day smoke and is the final-profile method. Failed/aborted evidence remains under runs/s20. The original retained pre-S2 profile is reused.
 
+Committed step 1 as **82f817b** through the actual hook: exit 0, 139 files, 1,535 passed, one existing expected failure, four skips; typecheck, boundary, licences and decision index pass. Duration 832.57 s. The fourth skip is the Git-executable-mode check in the private snapshot; no-Git mode also excludes the two Git-writing fixture files. A diagnostic read 100% host CPU. No retry, timeout change, selection change or bypass.
+
+### S20 step 2: derive force presence once per term call
+
+The history profile's selfEmancipationTerms was a remaining large self cost. Its per-region presence predicate repeatedly enumerated every force location, including when neighboring census regions asked about the same place. A local, lazy Set now enumerates locations once per call, with the same known positive strength, not-surrendered and department-side rules. No term, destination, arithmetic, source, cadence or gate content changes. No persisted or cross-State cache.
+
+The regression first failed with four force enumerations instead of one. Three tests pass, covering all terms/destinations, movement, surrender, null/zero/negative strength, missing blocks, enemy forces, department-side changes, older-State reads, no census and fully protected census. All 268 daily hashes and complete summaries remain equal to pre-S2 (runs/s20/force-regions-hash-comparisons.json).
+
+Three alternating parent/change pairs per slot, against step 1's runtime snapshot: median paired saving **0.008 ms war / 0.223 ms history** (runs/s20/force-regions-pairs/pairs.json). The independent medians of before/after run medians are 32.848/51.552 ms war and 31.377/30.486 ms history; subtracting those is not the paired estimator. Individual paired changes vary from -18.704 to +1.863 ms in war. The war effect is unresolved within host noise. A direct comparison on S2's hash-checked day-60 save retains every term and saves median paired **98.472 ms over 100 calls**; one pair loses, two win (runs/s20/force-pairs.json). No timing retry or unloaded/CI claim.
+
 For the lead: 1 item. Work is on `sprint/perf`, from `ceff796`, under decision 0106. `npm ci` completed first (exit 0, 51 packages, zero vulnerabilities). Independent review remains with Claude after the sprint. No push is authorized.
 
 ## Plan and evidence
