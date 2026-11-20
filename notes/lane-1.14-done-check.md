@@ -14,7 +14,9 @@ The corrected first-merge suite passed 1,566 tests, one existing expected failur
 
 Merge 1 committed through the full hook as `1802907`: 143 files, 1,566 passed, one inherited expected failure, three optional timing skips; all chained gates passed. Serial duration 662.46 seconds. Merge 2 combines the immutable bombardment record with this history, retaining R95's `around(49)` support centre. Its cheap 148-day history has zero rejected commands and zero liveness breaches; Confederate planned operations now score one via the real fort record. Typecheck/boundary and 30 focused bombardment tests pass. Use the already verified two-worker bound for this next required hook to reduce the serial gate's eleven-minute cost; no timeout, assertion or collection change.
 
-Proposed rulings: bound this lane's test concurrency while the other sprint worktrees run, rather than raising timeouts or skipping required tests. Remaining work is the sequence above.
+Merge 2 committed as `e76c334`: 143 files, 1,571 passed, one inherited expected failure and three optional timing skips; chained gates pass. Merge 3 preserves both sourced appointment contracts in one discriminated union: effective-date, rules-driver-only appointments and cause-dependent reassignment from an expected old post. Both travel through the normal appointment verb. Creation telemetry fires only after the destination appointment succeeds. Its focused six-file check passes 113 tests. The first focused failure exposed a duplicate fixture post-kind identifier; replace its creation rule instead of appending a conflicting second definition. The 148-day probe has zero rejections and no liveness breaches. July has no field battle; known strengths remain Union 62,686 and Confederate 46,457. Logs: `runs/s1/merge-3-*`.
+
+Proposed rulings: bound this lane's test concurrency while the other sprint worktrees run, rather than raising timeouts or skipping required tests. Preserve both appointment contracts instead of dropping resignation-aware reassignment or effective-date history. Remaining work is the sequence above.
 
 ### Findings outside my scope
 

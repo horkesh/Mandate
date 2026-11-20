@@ -120,7 +120,7 @@ export interface PrincipalDoctrine {
   /** Dated, cause-dependent concentration changes. Existing troops move only from the expressly named posts. */
   readonly concentrations?: readonly { readonly post: PostId; readonly fromDate: string; readonly requiresDepartment: DepartmentId; readonly fromPosts: readonly PostId[]; readonly source: string }[];
   /** Establish a declared command through a sourced appointment, after the named government joins this side. */
-  readonly appointments?: readonly { readonly post: PostId; readonly person: PersonId; readonly fromPost: PostId | null; readonly fromDate: string; readonly requiresDepartment: DepartmentId; readonly source: string }[];
+  readonly appointments?: readonly (({ readonly post: PostId; readonly person: PersonId; readonly source: string }) & ({ readonly fromPost: PostId | null; readonly fromDate: string; readonly requiresDepartment: DepartmentId } | { readonly onDate: string }))[];
   /**
    * Each identified requisition goes once, from its date, including a repeat to the same governor. An unnamed legacy
    * row is still suppressed by any prior call to that post. An authored situation remains the sole issuer of its call.
@@ -375,7 +375,7 @@ export interface RankTerm {
   readonly name: StringKey;
   /** Higher is senior; promotion over a senior costs standing (FOUNDATION section 5). */
   readonly seniority: number;
-  /** Its kind from the pack's ankKinds (a regular, a volunteer or a brevet rank): a person holds one rank of each kind at once (0073). */
+  /** Its kind from the pack's rankKinds (a regular, a volunteer or a brevet rank): one rank of each kind at once (0073). */
   readonly kind: string;
 }
 

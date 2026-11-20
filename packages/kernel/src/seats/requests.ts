@@ -7,7 +7,7 @@
  * for orders, and is shown the plans submitted to him that have reached him.
  */
 import { strictCompare } from '../compare.ts';
-import { commandedBlocks, departmentSide, heldPost, sideOfPerson } from '../command/command.ts';
+import { commandedBlocks, declaredAppointment, departmentSide, heldPost, sideOfPerson } from '../command/command.ts';
 import { commanderView, mayAttackToday, presenceByRegion, sideCommand } from '../combat/battle.ts';
 import { believedRatio, commitAtDawn, cutOffChoice, pursuitChoice, standAtNight } from '../combat/decide.ts';
 import { BATTLE_ORDER_OPTIONS } from '../combat/order-kinds.ts';
@@ -16,9 +16,11 @@ import { buildControlIndex } from '../control-index/control-index.ts';
 import { factionOfBlock, isNaval } from '../forces/forces.ts';
 import type { FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
 import { ORDER_ROUTES, routeLatency, type LatencyMap } from '../messages/latency.ts';
+import { mintMessageId } from '../messages/transit.ts';
 import type { MarchGround } from '../movement/march.ts';
 import { candidateOf, postsInStatus } from '../plans/plans.ts';
 import { isCallAnswer } from '../proxy/responses.ts';
+import { knowledgeOf } from '../knowledge/knowledge.ts';
 import { believedHolder, lossesInTransit, vacancyUnreported } from './believed.ts';
 import { capitalOf } from '../command/capitals.ts';
 import type { State } from '../root-state.ts';
@@ -28,7 +30,7 @@ import { deepFreeze } from '../tick/freeze.ts';
 import { passageOf } from '../tick/passage.ts';
 import { choosingPosts, optionView, planKey, planOptions } from '../tick/plans.ts';
 import { createViewCache, viewFor, type ViewCache } from '../view/view.ts';
-import { dateOfDay, daysFromCivil, parseIsoDate } from '../world/calendar.ts';
+import { dateOfDay, daysFromCivil, formatIsoDate, parseIsoDate } from '../world/calendar.ts';
 import type { BattleMenu, Candidate, CommandablePost, DelegatedMenu, DoctrineView, PlanMenu, RaisingPost, Vacancy, PlanReview, PrincipalMenu, RouteOption, SeatRequest, SituationChoice } from './api.ts';
 import { fieldPosts, headquartersOf, isFieldPost, postFaction, relayChain } from './posts.ts';
 import { seatIdFor } from './seats.ts';
@@ -194,17 +196,53 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     .filter((p) => p.id !== f.principal && sideOfPerson(world.map, state, p.id) === faction && heldPost(state, p.id) === null && (state.personStatus[p.id]?.statusKind ?? 'serving') === 'serving')
     .map((p) => ({ person: p.id, kind: p.kind as string, seniority: Math.max(-1, ...Object.values(state.personRanks[p.id] ?? {}).map((r) => rankIndex.get(r.rankTerm) ?? -1)) }))
     .sort((a, b) => b.seniority - a.seniority || strictCompare(a.person, b.person));
+  const historicalAppointments: NonNullable<PrincipalMenu['historicalAppointments']>[number][] = [];
+  const history = state.seatAssignments[seatIdFor(f.principal)]?.seatDriver === 'rules';
+  if (history) {
+    const today = formatIsoDate(dateOfDay(state.calendarStart!, state.stateDay + 1));
+    const rows = world.map.world.rules.ruleSeats.principals.find((r) => r.faction === faction)?.appointments ?? [];
+    for (const a of [...rows].sort((a, b) => strictCompare(a.post, b.post) || strictCompare(a.person, b.person))) {
+      if (!('onDate' in a) || a.onDate !== today || !candidates.some((p) => p.person === a.person) || inTransitTo(state, f.principal, a.post).includes('appoint')) continue;
+      const template = declaredAppointment(world.map, state, world.start.temporaryPosts, a.post, faction);
+      const existing = state.postStates[a.post];
+      if (template === undefined && (existing === undefined || postFaction(world, state, a.post) !== faction || believedHolder(state, f.principal, a.post, losses) !== null)) continue;
+      // The letter goes to the man, not to a post that does not exist yet (the appoint verb's own route).
+      const to = capitalOf(state, faction);
+      const routes = ORDER_ROUTES.flatMap((route): RouteOption[] => {
+        const l = routeLatency(ground.latency, world.rules.latency, route, to, to, faction, null);
+        return l.ok ? [{ route, typicalDays: l.latency.days, price: route === 'special-messenger' ? world.rules.latency.specialMessengerPrice : 0 }] : [];
+      });
+      historicalAppointments.push({ post: a.post, person: a.person, routes });
+    }
+  }
   const situations: SituationChoice[] = [];
   for (const def of world.situations) {
     const r = state.situationStates[def.id];
     if (def.faction !== faction || r === undefined || r.sitStatus !== 'open' || r.sitSurfacedDay === null || r.sitDelegate !== null) continue;
-    situations.push(situationChoice(def, r.sitOpenOptions, def.delegableTo, null));
+    const proposers = new Set(def.options.filter((o) => r.sitOpenOptions.includes(o.id)).flatMap((o) => Array.isArray(o.proposedBy) ? o.proposedBy : []));
+    const consultPosts = ownPosts.filter((post) => {
+      const holder = believedHolder(state, f.principal, post, losses);
+      if (holder === null || holder === f.principal || !proposers.has(holder)) return false;
+      // Only the identity of his own sent letter is read, never its actual response or an adviser's private stance.
+      const tag = `verb.consult.${def.id}.${post}`;
+      const sentTo = (id: string | null | undefined, person: PersonId): boolean => {
+        if (id === null || id === undefined) return false;
+        const issuedDay = Number(id.split('.')[1]);
+        if (!Number.isSafeInteger(issuedDay)) return false;
+        const expected = mintMessageId(new Set(), issuedDay, f.principal, person, tag);
+        return id === expected || id.startsWith(`${expected}.`);
+      };
+      if (state.messagesInTransit.some((m) => (m.msgVerb?.verbIssuer === f.principal && m.msgVerb.verbKind === 'consult' && m.msgVerb.verbSubject === def.id && m.msgVerb.verbPost === post) || (m.msgTo === f.principal && sentTo(m.msgReport?.reportAnswers, m.msgReport?.reportAuthor ?? m.msgFrom)))) return false;
+      if (Object.values(state.orderResponses).some((a) => a.respKind === 'verb:consult' && a.respPost === post && sentTo(a.respOrder, a.respPerson))) return false;
+      return !knowledgeOf(state, seatIdFor(f.principal)).knownReports.some((k) => sentTo(k.knownBody.reportAnswers, k.knownBody.reportAuthor));
+    });
+    situations.push({ ...situationChoice(def, r.sitOpenOptions, def.delegableTo, null), consultPosts });
   }
   const awaiting = postsInStatus(state, 'ready').filter((p) => state.planRecords[p]!.planIssuer === f.principal && !answerInTransit(state, f.principal, p, ['go']));
   const d = world.map.world.rules.plans.goalDefaults;
   const doctrine = doctrineView(world, state, faction);
   const appointments = world.map.world.rules.ruleSeats.principals.find(r => r.faction === faction)?.appointments;
-  const appointmentView = appointments?.map(a => ({
+  const appointmentView = appointments?.filter(a => 'fromDate' in a).map(a => ({
     post: a.post, person: a.person, from: a.fromPost,
     ready: state.stateDay + 1 >= daysFromCivil(parseIsoDate(a.fromDate)) - daysFromCivil(parseIsoDate(state.calendarStart!)) && departmentSide(state, a.requiresDepartment) === faction && sideOfPerson(world.map, state, a.person) === faction && heldPost(state, a.person) === a.fromPost && (state.personStatus[a.person]?.statusKind ?? 'serving') === 'serving' && state.postStates[a.post] === undefined,
     issued: state.messagesInTransit.some(m => m.msgVerb?.verbKind === 'appoint' && m.msgVerb.verbIssuer === f.principal && m.msgVerb.verbPost === a.post) || Object.values(state.orderResponses).some(r => r.respKind === 'verb:appoint' && r.respPost === a.post && r.respPerson === a.person),
@@ -215,6 +253,7 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     faction,
     atWarSince: warSince(world, state, faction),
     doctrine: appointmentView === undefined ? doctrine : { ...doctrine, appointments: appointmentView },
+    ...(history ? { historicalAppointments } : {}),
     raising,
     vacancies,
     candidates,

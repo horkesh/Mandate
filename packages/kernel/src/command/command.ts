@@ -416,6 +416,16 @@ export interface TemporaryPostSpec {
   readonly operation: string;
 }
 
+/** A declared command an appointment may open (0040); no post is created until its appointee accepts. */
+export function declaredAppointment(map: WorldIndex, state: State, templates: ScenarioStart['temporaryPosts'], post: PostId, side: FactionId): TemporaryPostSpec | undefined {
+  const p = templates.find((t) => t.id === post);
+  if (p === undefined || state.postStates[post] !== undefined || departmentSide(state, p.department) !== side) return undefined;
+  const kind = map.world.vocabularies.postKinds.find((k) => k.id === p.kind);
+  if (kind?.creatable !== 'appoint' || !kind.temporary) return undefined;
+  if (p.parent !== null && (state.postStates[p.parent] === undefined || factionOfPost(map, state, p.parent) !== side)) return undefined;
+  return { ...p, holder: null, seat: p.region };
+}
+
 /** Create a temporary post. Its kind must be temporary and creatable in play; its parent on its side. */
 export function createTemporaryPost(map: WorldIndex, state: State, spec: TemporaryPostSpec): State {
   const problems: string[] = [];

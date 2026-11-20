@@ -25,6 +25,7 @@
  *   6. asks each of his armies (the concentration post, each offensive's post) where it stands, on the doctrine's
  *      cadence (inquire, which costs no attention).
  *   He holds his capital by never ordering its garrison away: only the doctrine's offensives move an army.
+ *   At peace or war, he consults the offered posts of an open situation's proposers, within attention.
  * - **a holder handed a situation** decides it by his values: the option the kernel scored as honouring them most
  *   (lane 0.7). A rule-driven principal's own situations take their historical default inside the kernel (a history
  *   run, 0040), so no rule seat ever sees that default.
@@ -117,11 +118,12 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   let left = menu.attention.left ?? Number.MAX_SAFE_INTEGER;
   const orders: SeatCommand[] = [];
   /** Send it if he can pay for it today; else it waits for a later morning (or his weekly refill). */
-  const send = (c: SeatCommand): void => {
+  const send = (c: SeatCommand): boolean => {
     const cost = price(menu, c);
-    if (cost > left) return;
+    if (cost > left) return false;
     left -= cost;
     orders.push(c);
+    return true;
   };
   // 1. Plans submitted to him, approved as drafted; operations awaiting his word, released (by the quickest free route).
   // An office that withheld his answer (its objection reached him yesterday) is gone around with the same answer, by the
@@ -135,6 +137,12 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   for (const post of menu.awaiting) {
     const around = withheld.has(post);
     send({ cmd: 'go', to: post, route: routeTo(post, around), bypass: around });
+  }
+  // A surfaced question may need advice at peace too. The menu offers only proposers' own-side held posts whose
+  // consultation has not been sent; the existing verb carries each request and records whatever its holder answers.
+  for (const situation of menu.situations) {
+    const posts = [...new Set(situation.consultPosts ?? [])].sort(compareText);
+    if (posts.length > 0) send({ cmd: 'consult', situation: situation.situation, posts });
   }
   const answered = new Set<string>([...menu.reviews.map((r) => r.post), ...menu.awaiting]);
   const sendCalls = (peaceOnly: boolean): void => {
@@ -153,6 +161,7 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   if (day < opening) { sendCalls(true); return orders; }
   const doctrine = menu.doctrine;
   const appointed = new Set((doctrine.appointments ?? []).filter(a => a.ready || a.issued).map(a => a.person));
+  const appointedPosts = new Set<string>();
 
   // Sourced establishments wait for their date, their government's side and an eligible serving commander.
   // The appointment letter carries the expected old post; command alone changes both holder links on arrival.
@@ -181,9 +190,18 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
       send({ cmd: 'order', to: target.post, goal: takeGoal(menu, region), route: routeTo(target.post, true), bypass: true });
     }
   }
+  // The history driver alone is offered sourced appointments due today. These use the same letter and compliance
+  // as any appointment; their date never opens a command or replaces a holder by itself.
+  for (const a of menu.historicalAppointments ?? []) {
+    const route = quickest(a.routes);
+    if (route !== undefined && !appointed.has(a.person) && send({ cmd: 'appoint', post: a.post, person: a.person, rank: null, route: route.route })) {
+      appointed.add(a.person);
+      appointedPosts.add(a.post);
+    }
+  }
   // 3. A post commanding troops with nobody to command them gets the senior man of the right kind (lane 1.5's appoint).
   for (const v of menu.vacancies) {
-    if (v.appointing) continue;
+    if (v.appointing || appointedPosts.has(v.post)) continue;
     const kinds = doctrine.appointKinds[v.arm];
     const man = menu.candidates.find((c) => kinds.includes(c.kind) && !appointed.has(c.person));
     const route = quickest(v.routes);

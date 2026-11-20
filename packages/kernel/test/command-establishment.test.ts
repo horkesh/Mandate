@@ -11,7 +11,7 @@ import { entryProblems } from '../src/log/log.ts';
 
 function fixture() {
   const base = indexedFixture();
-  const map = indexWorld({ ...base.map.world, vocabularies: { ...base.map.world.vocabularies, postKinds: [...base.map.world.vocabularies.postKinds, { id: 'expedition', name: 'post.expedition', role: null, temporary: true, creatable: 'appoint' as const }] } });
+  const map = indexWorld({ ...base.map.world, vocabularies: { ...base.map.world.vocabularies, postKinds: base.map.world.vocabularies.postKinds.map(k => k.id === 'expedition' ? { ...k, creatable: 'appoint' as const } : k) } });
   return indexSeatsWorld(map, { ...base.start, temporaryPosts: [{ id: POST('a_new'), name: 'post.new', kind: 'expedition', department: base.start.posts[0]!.department, parent: POST('a_office'), holder: P('a_bold'), region: R('a_front'), operation: 'new_army' }] });
 }
 const order = { cmd: 'appoint' as const, post: POST('a_new'), person: P('a_bold'), from: POST('a_reserve'), rank: null, route: 'courier' as const };

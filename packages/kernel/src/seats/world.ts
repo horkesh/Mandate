@@ -374,7 +374,7 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
       if (source.trim().length === 0) problems.push(`${at}: dated doctrine requires a source`);
     };
     const establishmentPosts = new Set<string>();
-    for (const a of r.appointments ?? []) {
+    for (const a of (r.appointments ?? []).filter(a => 'fromDate' in a)) {
       onDeclaredSide(a.post, 'appointments.post');
       datedCause(a.fromDate, a.requiresDepartment, a.source);
       const p = declared.get(a.post);
@@ -415,6 +415,26 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
       onSide(o.post, `offensives[${j}].post`);
       if (!map.regions.has(o.objective)) problems.push(`${at}.offensives[${j}]: ${o.objective} is not a region`);
     });
+    const appointed = new Set<string>();
+    for (const [j, a] of (r.appointments ?? []).entries()) {
+      if (!('onDate' in a)) continue;
+      const here = `${at}.appointments[${j}]`;
+      if (appointed.has(a.post)) problems.push(`${here}: ${a.post} has more than one historical appointment`);
+      appointed.add(a.post);
+      try { parseIsoDate(a.onDate); } catch { problems.push(`${here}.onDate: a full calendar date is required`); }
+      if (!a.source.trim()) problems.push(`${here}.source: the appointment must cite its record`);
+      const person = map.world.people.find((p) => p.id === a.person);
+      if (person === undefined || person.faction !== r.faction || factions.get(r.faction)?.principal === a.person) problems.push(`${here}.person: an own-side person other than the principal is required`);
+      const post = posts.get(a.post);
+      if (post !== undefined) onSide(a.post, `appointments[${j}].post`);
+      else {
+        const template = start.temporaryPosts.find((p) => p.id === a.post);
+        const kind = map.world.vocabularies.postKinds.find((k) => k.id === template?.kind);
+        const dept = map.world.departments.find((d) => d.id === template?.department);
+        if (template === undefined || !kind?.temporary || kind.creatable !== 'appoint' || dept?.faction !== r.faction) problems.push(`${here}.post: an own-side start post or a declared temporary command creatable by appointment is required`);
+        if (template?.parent !== null && template?.parent !== undefined) onSide(template.parent, `appointments[${j}].parent`);
+      }
+    }
   });
   return problems;
 }
