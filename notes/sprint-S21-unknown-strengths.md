@@ -12,7 +12,7 @@ S21 only, branch `sprint/research-military`, from `73d6b7af81213fec8377907c7db4d
 
 ## Current batch
 
-Eastern first pass: 108 original unknown rows researched, 26 quantified observations and 82 still unknown. Quantities include rounded reports, two source reconstructions and three upper bounds; they are not 26 exact battle-day duty returns. The row register and research note record their dates, measures and limits. Western, coastal, naval and remaining dated-command rows are next. Dependencies and typecheck pass; the single required done check is running. Final source inventory and checks will follow the settled evidence.
+Eastern/Western and dated-command pass: 174 original unknown rows researched, 39 quantified observations and 135 still unknown within that processed set. Quantities include rounded reports, four source reconstructions and three upper bounds; they are not 39 exact battle-day duty returns. The row register and research note record their dates, measures and limits. The remaining 29 coastal/naval rows are next. Dependencies and typecheck pass; the single required done check is running. The Eastern commit `9211ea1` passed the actual hook. Final source inventory and checks will follow the settled evidence.
 
 ## Findings outside my scope
 
