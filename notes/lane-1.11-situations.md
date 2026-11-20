@@ -364,3 +364,47 @@ Initial parse/quiet-table failures, fixture failures, the five-minute hook failu
 2. **Lane 1.14 / lead:** the unchanged historical bands report a missing western-Virginia checkpoint department, Confederate men below their floor, no planned field battle on either side, pushback outside its bands, and two pre-existing unowned stand-in labels (`situations/types.ts:73`, `pack-format/src/situations.ts:63`). The sweep retains its unmeasured-channel and unexercised-chain failures. These were not fitted away in this merge.
 3. **Lead / reviewer:** all eleven conflicted working-file contents are now resolved, but the index intentionally remains unmerged. HEAD, index and captured merge metadata are unchanged. R73 does not stage, commit or abort, and does not claim merge acceptance while the timing criterion fails.
 4. **R74:** the historical-commander/date-window condition remains that separate request's work. Its worktree was not accessed or changed.
+
+## R79 follow-ups, 20 November 2026
+
+For the lead: 2 items. R79 only, on `phase1-situations-followups` at `e0a8ce7`. `npm ci` ran first and passed (51 packages added, 56 audited, zero vulnerabilities). Git commands were read-only. Evidence: `runs/r79/final-checks.json` and its indexed logs.
+
+### Hook workload and labels
+
+The done-check test now uses the existing `sweepSeeds: 0` mode: zero real-pack sweep seeds and forks in its `beforeAll`. The full eight-seed sweep, with the existing 400-day fork cap, remains in `npm run run:done-check`, which CI already runs. The small fictional sweep tests in `done-check-1a.test.ts` remain. `hookTimeout` is back to **300,000 ms**. No production harness, runner, sweep implementation, reference length, assertion about Phase 0, criterion or budget changed.
+
+Observed no-Git check times on this checkout:
+
+| Workload | Whole check | Done-check test file |
+|---|---:|---:|
+| Before, two seeds and existing fork cap | 414.30 s | not separately captured |
+| Intermediate, one seed and 30-day forks | 154.85 s | 147.43 s |
+| Final, zero sweep seeds and forks | 146.23 s | 138.18 s |
+
+**The roughly 96-second target remains unmet.** Zero seeds is the existing minimum; the retained reference/history work still costs more. No reference campaign or correctness check was shortened to fit the target. The intermediate optional cap parameter was removed, restoring the production harness byte-for-byte. These measure `MANDATE_NO_GIT=1 npm run check`, excluding Git-writing fixture tests; the actual pre-commit hook was not invoked because it can create an index snapshot through Git. The baseline command also passed `--reporter=default` to the final decisions-index script, not Vitest; all three suite invocations used the normal Vitest reporter.
+
+Both `callReceived` descriptions now say `STAND-IN(call-received-delay; owner: 1B, conventions and legislatures)`. The published situation schema was regenerated with its tool. The checker finds zero unowned labels, and the full done check's stand-ins criterion now passes.
+
+### Taney consolidation stopped at the requested hash guard
+
+The loaded Merryman writ's hash matches its sign-off: `e960bbf08e738e900b1fb9f1aef0257ca62ac4594526b5544518f9174f76c6c8`. An in-memory candidate folds the headnote/p. 253 caveat into `TANEY-REPORTS` and removes `TANEY-REPORTS-CATALOGUE`. The loader rejects it with `gate-stale-review`; the candidate hash is `196776cecbb12398222ae5460aa983b55996e2bc24c094366a59d9fa0decfd5a`. `gateContentHash` includes each cited source row, including `copyUsed`.
+
+R79 explicitly says to stop if the signed hash would change. Both provenance rows, the signed item, its strings and its sign-off are therefore unchanged. No new signature was written and no gate check was weakened. The orphan remains pending a fresh gate review if the lead wants this consolidation.
+
+### Settled verification and preservation
+
+- Final exact `MANDATE_NO_GIT=1 npm run check`: **exit 0, 129 files / 1,471 passed / 3 existing optional skips**. Types, boundary, licences and decision index pass. The earlier baseline and intermediate checks also passed with identical counts. Focused harness/schema checks passed **33 tests**; their unaffected evidence is reused.
+- Full `npm run run:done-check -- --label r79-done`: **exit 0**, **Phase 0 6/6**, eight seeds, 24 moves, replay and save/resume matching. It ran once, taking **1,107.98 s**. War-by-decision median/p95: **28.62/50.51 ms**; history: **28.41/53.12 ms**, within unchanged **40/160** limits. The Union final hash remains `59ae6644ff381b02e8086ca57be88ec5f828979eeaaaed37cbcb6ebbdee7b097`.
+- **1A 2/6:** unknown strength and stand-ins pass; checkpoints, operation, pushback and lever sweep fail. All problems are retained in `done-check.log`: Missouri neutral, missing western-Virginia checkpoint government, Confederate men 20,957, no planned battle, relay/filter/trim counts below their floors, reservations 44 above nine, and unmeasured grievance/recruitment-chain channels. No acceptance limit was waived.
+- The full CLI campaign started with the intermediate cap parameter supported but omitted. That default path is unchanged: eight seeds and the existing fork cap. Its evidence is reused after removing the unused parameter; no simulation logic or pack input changed and no campaign was repeated.
+- Final delivery: **six files** including this hand-over; **1,644 other baseline files**, **237 protected pack/fixture/lockfile/schema inputs**, and all **25 signed hashes** preserved. No deletion or unexpected path. Four of five captured Git metadata files match; the index byte hash changed, with empty staged diff and unchanged HEAD. Its cause is not established; no metadata was restored. No build, server, browser or other worktree write.
+
+Proposed rulings: none. Claude's standing review remains pending under 0096.
+
+For the lead:
+1. Review the bounded test and retain the unmet roughly 96-second target. Any further reduction needs a separate decision about the retained reference/history workload.
+2. Route the Taney consolidation to a fresh gate review before changing its signed source row; retain the four failed 1A gates with their existing owners.
+
+## Findings outside my scope
+
+The four remaining 1A failures and the cost of the retained reference/history checks are not repaired in R79. The Taney orphan remains because consolidation would change Merryman's signed hash. No other request was undertaken.

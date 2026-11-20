@@ -34,8 +34,9 @@ import { TIMING } from '../../kernel/test/support/timing.ts';
  */
 let result: DoneCheckResult;
 beforeAll(() => {
-  // Two seeds keep the lever sweep's share of the suite small; `run:done-check` sweeps eight (`SWEEP`).
-  result = runDoneCheck({ sweepSeeds: 2 });
+  // No real-pack sweep seeds or forks in the hook. `run:done-check` in the CLI/CI keeps all eight seeds and
+  // the 400-day fork cap; done-check-1a.test.ts tests the sweep on the small fictional fixture here.
+  result = runDoneCheck({ sweepSeeds: 0 });
 });
 
 const union = () => result.runs.find((r) => r.checked.pack === 'union-1861')!;
@@ -51,12 +52,12 @@ describe('the done check on union-1861 at war and the testbed', () => {
     const a = result.criteria.filter((c) => c.milestone === '1A');
     expect(a.map((c) => c.id)).toEqual([...MILESTONE_1A]);
     for (const c of a) expect(c.problems.length + c.evidence.length, c.id).toBeGreaterThan(0);
-    // The history run plays the Union pack to its last checkpoint with its own peace and war, and is timed and swept.
+    // The history run plays the Union pack to its last checkpoint with its own peace and war, and is timed.
     const h = result.history.find((x) => x.pack === 'union-1861')!;
     expect(h.summary.atWar).toBe(false);
     expect(h.summary.finalDay).toBe(148);
     expect(h.timed.timing!.days).toBe(148);
-    expect(h.sweep!.seeds).toBe(2);
+    expect(h.sweep).toBeNull();
     // Phase 0's criteria alone decide `passed`; `passed1A` needs every criterion.
     const phase0 = result.criteria.filter((c) => c.milestone === 'phase0').every((c) => c.problems.length === 0);
     expect(result.passed).toBe(phase0);
