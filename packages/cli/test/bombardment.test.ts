@@ -2,6 +2,7 @@ import { createTelemetry, ids, phase0 } from '@mandate/kernel';
 import { createRuleSeat } from '@mandate/rule-seats';
 import { describe, expect, it } from 'vitest';
 import { seatsWorld } from '../src/seats-world.ts';
+import { observeRun, operationsFought, operationScore, unknownStrengthScore } from '../src/history-run.ts';
 
 describe('the sourced opening of the bombardment (R78)', () => {
   it('issues the 10 April authorization once, wires the bypass, and evacuates Anderson on 13 April', () => {
@@ -9,10 +10,11 @@ describe('the sourced opening of the bombardment (R78)', () => {
     const rules = createRuleSeat();
     const telemetry = createTelemetry([...phase0.TICK_MECHANICS, ...phase0.MAP_MECHANICS]);
     let state = phase0.createState(world, setup);
+    const observer = observeRun(null, '1861-03-05');
     const days: { day: number; state: typeof state }[] = [];
     const log = [];
     for (let day = 1; day <= 55; day++) {
-      const run = phase0.playDays(world, state, () => rules, 1, { telemetry, freeze: true });
+      const run = phase0.playDays(world, state, () => rules, 1, { telemetry, freeze: true, onDay: r => observer.onTick(world, r) });
       state = run.state;
       days.push({ day, state });
       log.push(...run.log);
@@ -36,6 +38,18 @@ describe('the sourced opening of the bombardment (R78)', () => {
     expect(state.personStatus[ids.toId('person', 'anderson_robert')]?.statusKind ?? 'serving').toBe('serving');
     expect(telemetry.mechanics['combat.evacuated']!.fires).toBe(1);
     expect(telemetry.mechanics['combat.captured']!.fires).toBe(0);
+    const observed = observer.observations();
+    const fought = operationsFought(observed, 55).filter(o => o.op.faction === 'confederate');
+    expect(fought).toHaveLength(1);
+    expect(fought[0]!.op.record.opMethod).toBe('bombard');
+    const battle = observed.battles.get(fought[0]!.battle)!;
+    expect(battle.battleCauses).toEqual([command]);
+    expect(battle.battleStartDay).toBe(38);
+    expect(battle.battleEndDay).toBe(39);
+    expect(battle.battleDays.map(d => d.bdayDay)).toEqual([38, 39]);
+    expect(battle.battleDays.every(d => d.bdaySides.every(s => s.bsideKw === 0 && s.bsideCaptured === 0))).toBe(true);
+    expect(operationScore(observed).problems).toEqual([]);
+    expect(unknownStrengthScore([{ name: 'opening', battles: observed.battles }]).problems).toEqual([]);
     expect(state.situationStates[ids.toId('situation', 'sumter_evacuated')]?.sitStatus).toBe('noticed');
     const principal = phase0.seatIdFor(world.faction(ids.toId('faction', 'union')).principal);
     expect(phase0.knowledgeOf(state, principal).knownReports.some((r) => r.knownBody.reportClaims.some((c) => c.claimKind === 'fort-surrendered' && c.claimToken === 'evacuated_under_terms'))).toBe(true);

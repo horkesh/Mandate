@@ -4,6 +4,150 @@ Lane 1.3 is FOUNDATION section 12's row 1.3 (decision 0073), on 1A's critical pa
 (0064, `combat/contest.ts`, now deleted) with the combat note's model (`docs/research/2026-11-14-combat-model.md`), under
 R4's battle ruling as 0074 records it. Branch `claude/phase1-combat-3ba74b`, with main merged in after 0074.
 
+## R95: support band after Sumter's record (2026-11-20)
+
+This is the current hand-over for `phase1-bombard-record` at `3cbf71e`, with R91 still uncommitted.
+Handled R95 only, under the lead's ruling in the main checkout's CODEX.md. Git was read-only.
+
+**One band recentred.** In `packages/cli/src/liveness-gate.ts`, Union `politics.support` changes from
+`around(16)` (8..32) to `around(49)` (24..98). The existing `around()` function is unchanged. The band's `why`
+records the cause: R91 gives Sumter's bombardment a battle record, so its closing report reaches the editors and
+their front pages move bloc support. The old centre came from the run with no battle record. The fresh run still
+fires support 49 times. No other band is out of range; none was changed. The full eight-row comparison, including
+report, message and pruning effects, remains in R91's table below and `runs/r91/band-comparison.json`.
+The immutable loss reduction in `combat/bombard.ts` and every other R91 implementation file are byte-identical
+to the delivered R91 versions. No production parameter changed. Proposed rulings: none beyond the lead's ruling.
+
+**Verification.** Local dependency links resolve to this worktree. The retained history reproduces the single old
+band failure, then passes every band with the new centre; the table is sound. Fresh affected checks pass **45 tests
+in three files**. Exact **`MANDATE_NO_GIT=1 npm run check` exits 0**, **129 files / 1,476 passed / three existing
+optional timing skips**, in **130.80 s**. Typecheck, boundary, licences and decision index all pass. The full suite
+also verifies `one-writer.test.ts`; the focused command's `ownership.test.ts` filter named no file.
+
+**One full done check.** `npm run run:done-check -- --label r95-done` exits **0** in **1,116.86 s**, with normal
+eight seeds and drafting: **Phase 0 6/6; 1A 3/6**. Its default reports 1A without making it binding; those three
+failures remain unmet. Liveness and operation pass. Local tick costs (median / p95, ms):
+
+| Run | Median | p95 |
+|---|---:|---:|
+| Union reference, 148 days, war by decision | 28.34 | 45.62 |
+| Testbed, 120 days | 2.68 | 3.63 |
+| Union history to 31 July, 148 days | 26.48 | 42.05 |
+
+These are loaded-host measurements, inside the unchanged 40/160 limits. Linux CI decides the budget; no CI or
+causal performance claim is made. Drafting is sound: all-command day median/p95 27.5/33.4 ms, capped worst 18.5 ms.
+No expensive retry or additional campaign ran.
+
+All **148 Union / 120 testbed daily hashes**, daily telemetry and liveness counts match R91. Replay, mid-run
+save/resume and saved-log replay pass; zero rejections. Union final State remains
+`28183d6d1984e906e3a6ded545195924f1eb294cab4dc052b21c2e9dd29f0c85`.
+Reuse R91's unchanged detailed history and loss/operation comparison; the fresh full check covers its regressions.
+
+**Evidence and preservation.** `runs/r95/final-checks.json` indexes commands, exits, all twelve criteria, all ten
+remaining 1A problems, timings, checked summaries, saves and drafting. Raw logs: `runs/r95/check.log` and
+`runs/r95/done-check.log`. Runtime diagnostics and artifact hashes were settled before this hand-over update.
+All **561 runtime inputs**, including **198 pack files**, match the done-check manifest. Relative to R91, only
+the liveness table differs. Signed material, generated Worlds, fixture saves, lockfiles and checkpoint bounds are
+preserved. All five captured own-worktree Git metadata files are unchanged. R95 edits only the liveness table
+and this hand-over; Claude's independent review remains pending under 0096.
+
+**For the lead.** Review R91/R95 and route the Linux timing result through CI. Retain the existing criterion owners:
+checkpoints still fail on Missouri neutral, western Virginia's checkpoint reference, Confederate men 20,957 and
+Union fought operations zero. Pushback still fails on relay holds 1, filter holds zero, trims zero and reservations
+44. The sweep retains its unmeasured grievance channel and the 24 moves without a border levy; D6 clearance stays
+parked under 0105. The other requests' changes were not imported into this worktree.
+
+**Findings outside my scope (R95).** The three failed 1A categories above remain with their existing owners.
+The support mismatch is resolved by the lead's recentering ruling. No new finding.
+
+## R91: bombardment battle records (2026-11-20; original delivery evidence)
+
+Implemented R91 only in `C:/Pyrrhic/mandate-bombard-record`, branch `phase1-bombard-record`, retaining HEAD
+`3cbf71e`. Read the main checkout's CODEX standing, command-line and writing rules, 0096 and 0105.
+`npm ci` ran first (exit 0, 51 packages added, zero vulnerabilities). Git was read-only. The earlier lane report
+below remains as historical context; R95 above is the current hand-over.
+
+**Built.** `combat/bombard.ts` turns the existing `FortDay` into ordinary `BattleRecordChange` proposals;
+`tick/bombard.ts` applies them through `applyBattleRecords` before forces and evacuation remove any inputs.
+Killed, wounded, captured and captured stragglers come from the actual force proposals. The record retains the
+bombardment's own K+W term and its morale terms, with a clamp contribution when needed. No second loss calculation
+or land-combat resolution runs. Consecutive fire days share a record, the attacking post supplies its cause, and
+surrender or the existing maximum closes it. The later field-combat phase leaves today's open bombardment alone.
+The existing battle pruner and save envelope carry the record; no new State field, save version or pack rule.
+
+**Choices for the lead's review.** Record the day as `bombard`, with zero land contact and draws. The daily model has
+no hourly distribution, so `dayShape` supplies no invented phases; the existing bombardment dispatch still reports
+the opening. This rejects labelling fire as an assault or supplying new phase weights. The attacking participants
+are the known, positive-strength gun-arm blocks that actually supplied fire to `fortDay`; non-firing support is not
+listed as a firing force. Unknown defenders under fire remain listed and count as none, under 0076. This rejects
+guessing strengths or treating every supporting block as a firing battery. Normal casualty returns, governor wires
+and closing-result press reports read the new record.
+
+**Testbed and opening.** The first regression run failed four assertions because no record existed. Final focused
+checks pass 100 tests across bombardment, combat, operations, determinism and the sourced opening. Five added kernel
+tests cover consecutive days and closure, real nonzero losses and captured stragglers with summing parts, firing
+participants, unknown defenders, and an open-record save/resume. The lifecycle test also verifies zero-loss evacuation,
+the verdict, closed-record save round-trip and both sides of the pruning boundary.
+
+**History, 148 days to 31 July, no `--at-war`.** One Confederate planned operation fought, up from zero, inside its
+unchanged 1..4 checkpoint band: `op:cs_cmd_charleston:38` caused `battle:fort_sumter:38`. Its two fire days are 12 and
+13 April (days 38 and 39), closing on 39. Both sides' losses are zero and every K+W breakdown sums; no firing strength
+is unknown. The operation criterion now passes. The Union count remains zero against 1..26. Known men remain Union
+18,686 (95,000..250,000, non-binding floor) and Confederate 20,957 (100,000..200,000, failed). Government and strength
+snapshots are byte-equivalent to the baseline comparison. The first 37 daily hashes match the baseline. Replay and
+day-60 resume match with zero rejections; all 148 daily hashes also match the full done check's checked run.
+Final hash: `28183d6d1984e906e3a6ded545195924f1eb294cab4dc052b21c2e9dd29f0c85`.
+
+Every changed mechanic is below. No numeric band or production parameter was changed. Counts are fires; the last
+column gives magnitude where it differs from the fire count.
+
+| Mechanic | Before | After | Magnitude before to after / cause |
+|---|---:|---:|---|
+| `reports.casualty_return` | 0 | 8 | First and full returns from the two recorded fire days |
+| `reports.governor_wire` | 0 | 2 | The normal daily battle wire |
+| `messages.sent` | 11,164 | 11,176 | The returns, governor wires and closing-result papers |
+| `messages.delivered` | 10,516 | 10,528 | Those added reports arrive |
+| `messages.courier_delay` | 66 | 67 | One added return's ordinary courier delay |
+| `knowledge.pruned_age` | 96 | 96 | 1,261 to 1,267; extra report contents |
+| `knowledge.pruned_superseded` | 146 | 146 | 8,855 to 8,861; extra report contents |
+| `politics.support` | 16 | 49 | Closing-battle press effects now fire; **fails unchanged 8..32** |
+
+The Confederate fought-operation checkpoint changes from failed to passed. The remaining checkpoint and pushback
+values are unchanged. Detailed comparison: `runs/r91/band-comparison.json`.
+
+**Required checks and retained failures.** Exact `MANDATE_NO_GIT=1 npm run check` exits 1: 129 files, 1,472 passed,
+four failed, three existing timing skips. One failure identified five writes to immutable `BlockLoss` keys in a local
+accumulator. Replaced that construction with an immutable reduction, retaining the arithmetic. The complete ownership
+and bombardment suites then pass 73 tests. The other three failures all assert the same unchanged support band.
+The full suite was not repeated or represented as exit 0; its unaffected passes are reused. Final typecheck,
+boundary, licences and decision index each exit 0. The full done check uses the corrected code; its 148 matching
+history hashes also verify that the construction correction preserves the run.
+
+`npm run run:done-check -- --label r91-done` exits 1, with the full eight seeds and drafting measurement:
+**Phase 0 4/6; 1A 3/6.** Phase 0 fails liveness (support 49 above 32) and budget. Checked/history Union medians and p95s
+are **46.21/71.94** and **40.28/63.70 ms**, against unchanged **40/160** limits. Testbed is **4.28/5.97 ms**. No unloaded
+or CI claim. 1A passes operation, unknown strength and stand-ins; checkpoints, pushback and lever sweep remain failed.
+At this base the retained checkpoint failures are Missouri neutral, western Virginia's checkpoint reference,
+Confederate men and Union operations. Pushback retains relay holds 1, filter holds 0, trims 0 and reservations 44.
+The sweep weighs eight decisions, makes 248 base-run calls, and finds return best in 2/8 seeds. Its grievance channel
+is unmeasured and all 24 policy moves lack a new border levy; this supplies no D6 clearance under 0105. No expensive
+gate was retried.
+
+**Evidence and preservation.** `runs/r91/final-checks.json` indexes the commands, exits, history, full run artifacts
+and input hashes; the full raw log is `runs/r91/done-check.log`. The standalone history is
+`runs/r91/history-after.json`, with baseline and comparison alongside it. All 561 recorded runtime inputs match the
+full-run manifest, including 198 unchanged pack files. Runtime checks and the seven-file implementation inventory
+were completed before this documentation update. The delivery adds the existing FOUNDATION ownership-row update and
+this hand-over. No pack data, band, signature, generated World, fixture save or lockfile changed. The five captured
+worktree Git metadata files, including HEAD and index, are byte-identical. Claude's standing review remains pending
+under 0096.
+
+**Findings outside my scope (R91).** The new `politics.support` liveness failure needs the lead and 1.14's integrated
+calibration ruling before acceptance; its old limit was preserved. The two measured tick medians also remain unmet.
+Route the unchanged checkpoint, raising, Union-operation and pushback gaps to their existing owners; D6 clearance
+stays parked under 0105, with the recruitment chain continuing there. The old pruning finding below was resolved by
+lane 1.4; R91 uses that existing owner and policy. No other request was undertaken.
+
 ## What is built, and where
 
 | Piece | Where |

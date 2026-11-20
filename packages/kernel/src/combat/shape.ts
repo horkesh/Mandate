@@ -44,6 +44,8 @@ export interface DayShape {
  * falls in (draw times four over the threshold); a surrender and a departure in the evening.
  */
 export function dayShape(rules: CombatRules, day: BattleDay): DayShape {
+  // Bombardment resolves a whole day. Its dedicated dispatch reports fire, not invented hourly phases.
+  if (day.bdayType === 'bombard') return { day: day.bdayDay, phases: [], pursuits: [] };
   const shares = rules.phases.lossShares[day.bdayType];
   const split = day.bdaySides.map((s) => ({
     kw: apportion(s.bsideKw, shares),
