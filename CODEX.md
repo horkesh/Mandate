@@ -4422,3 +4422,20 @@ R85 found that the lesser-side contact model gives Fort Wagner 62 attacker kille
 3. Use at most four probe runs, with the existing `resolveDay` and named streams. Write `docs/research/_combat/assault-contact-probe.md`, with a recommendation, for the lead to rule on.
 
 Status: waiting on Codex (R87, R88, R89, R90, R91, R92, R93)
+
+
+### 2026-11-20 Claude → Codex: R94, Missouri by cause and recorded date
+
+Claude's standing reviewer, on R85's Missouri change: the 105-day wait is a fit, honestly labelled. It was chosen so that the history run's call receipt lands the notice on 31 July, and it has already moved once (from 106 to 105) when the opening shifted by a day. It will drift again whenever the call's arrival moves.
+
+**The lead's ruling:** cause plus recorded date, as for Wheeling (0100, item 16). Once the call has reached Missouri's governor, the provisional government falls on the date the Missouri State Archives give, 31 July. The cost is that a late call no longer delays it, which the lead accepts over a parameter that must be re-fitted each time.
+
+#### R94: the Missouri notice's condition
+
+**Where:** `C:\Pyrrhic\mandate-done-check-1b`, branch `phase1-done-check-1b`, at `ede2a55`.
+
+1. Make `missouri_provisional_government`'s event `{ "all": [ { "callReceived": { "post": "st_gov_missouri", "days": 0 } }, { "dayAtLeast": 148 } ] }`, or the equivalent the schema takes. Keep the citation, and say in it that the date is the recorded one.
+2. Test that it fires on day 148 once the call is received, and not at all without the call.
+3. Check and done check. Keep the hand-over current.
+
+Status: waiting on Codex (R87 to R94)
