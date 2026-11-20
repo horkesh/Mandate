@@ -28,7 +28,7 @@ export class DeskAdapter {
     // Deliberate allow-list. Never spread ConsoleGame or return its log/state/world.
     return structuredClone({
       pack: this.game.pack, morning, date: this.game.dateOf(morning.requestDay),
-      strings: this.game.strings, queue: this.queue.map(q => ({ line: q.line, text: commandText(q.command) })),
+      strings: this.game.strings, queue: this.queue.map(q => ({ line: q.line, text: commandText(q.command, key => this.game.strings[key] ?? key) })),
       history: this.history, paperText, help: HELP, closed: this.closed,approvedPlans:[...this.approvedPlans.values()],
     });
   }
@@ -37,7 +37,7 @@ export class DeskAdapter {
     const reply = (extra: Partial<DeskReply> = {}): DeskReply => ({ ok: true, snapshot: this.snapshot(), ...extra });
     if (this.closed) return reply({ ok: false, message: 'This console session has ended.' });
     if (expectedDay !== this.game.morning().requestDay) return reply({ ok: false, message: 'The morning has changed. Review the desk before sending another order.' });
-    const input = parseLine(line, this.game.morning());
+    const input = parseLine(line, this.game.morning(), key=>this.game.strings[key]??key);
     switch (input.kind) {
       case 'error': return reply({ ok: false, message: input.message });
       case 'look': return reply();

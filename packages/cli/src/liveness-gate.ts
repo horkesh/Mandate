@@ -166,6 +166,7 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'recruitment.lapsed': { why: 'a levy lapses only after waiting on enemy ground past the pack’s days, and none waits in either run', test: 'packages/cli/test/men-regions.test.ts', needle: 'lapses past the pack’s days' },
   // Lane 1.2: the plan cycle's paths that no rule seat takes, each driven by its own kernel test.
   'plans.sent_back': { why: 'no rule seat sends a plan back: the rule-seat principal approves, the editing exercise edits', test: 'packages/kernel/test/plans.test.ts', needle: 'sends the plan back, and he drafts it again' },
+  'planner.term.notes': { why: 'the reference principals send no notes; the send-back driver makes a timing note change the pick', test: 'packages/kernel/test/sendback-notes.test.ts', needle: 'a compliant commander reads a note' },
   'plans.draft_deferred': { why: 'no reference run asks for more plans in a day than the pack’s cap of three (0062)', test: 'packages/kernel/test/plans.test.ts', needle: 'defers drafts past the day’s cap' },
   'plans.edit_invalid': { why: 'the editing exercise edits only a moving axis’s timing, which can always be made', test: 'packages/kernel/test/plans.test.ts', needle: 'refuses an edit no route can make' },
   'plans.edit_shirked': { why: 'the testbed’s commanders answer the edits the exercise makes by complying or objecting, never covertly', test: 'packages/cli/test/planner.test.ts', needle: 'executes a covert rung’s concrete plan' },

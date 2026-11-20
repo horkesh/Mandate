@@ -200,6 +200,10 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'PlanGoal',
   'EditSpec',
   'PlanRecord',
+  'PlanNote',
+  'NoteReading',
+  'NoteDisposition',
+  'NoteAccount',
   'Enlistment',
   // Lane 1.12: a block's order to join its post, replaced whole by `movement`.
   'ForceJoin',

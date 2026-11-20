@@ -170,6 +170,9 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   for (const problem of phase0.peopleRulesProblems(world.rules.people, vocab.values.map((v) => v.id))) {
     err('rules-people', W('rules', 0, 'people'), problem, 'whole permille for each people rule, and values from the pack’s values vocabulary');
   }
+  for (const [i,n] of world.rules.plans.notes.terms.entries()) for (const value of [...n.honours,...n.offends]) {
+    if (!vocab.values.some(v=>v.id===value)) err('rules-notes', W('rules.plans.notes.terms',i,'honours/offends'), `unknown value "${value}"`, 'a value from this pack’s vocabulary');
+  }
   // Lane 1.3: the combat rules, by the kernel's own rule (it checks the same when it indexes a World): every terrain the
   // frontage table names is in the vocabulary, the phase shares sum to 1000, and the phases run in order.
   for (const problem of phase0.combatRulesProblems(world.rules.combat, vocab.terrains.map((t) => t.id))) {

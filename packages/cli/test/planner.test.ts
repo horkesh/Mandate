@@ -337,11 +337,26 @@ describe('liveness of the scoring terms, over drafts and edits (0062; lane 0.9)'
         }
       }
     }
+    const { input } = drafted(CASES[0]!, SEATINGS[0]!);
+    const marked = planner.draft({ ...input, noteScoreWeight: 600, notes: [{ weight: 1000, mark: {
+      markKind: 'wait', markAxis: 'main', markDays: input.profile.concentrationDays + 1, markRegion: null, markVia: [],
+    } }] });
+    for (const t of planner.liveTerms(marked)) live.add(t);
     expect([...live].sort()).toEqual([...planner.TERMS].sort());
   });
 });
 
 describe('determinism (decision 0002)', () => {
+  it('scores a route or wait after an objective note against the suggested objective', () => {
+    const {input}=caseInput(SUPPLY,SEATINGS[0]!);
+    const focus={markKind:'focus' as const,markAxis:'main',markRegion:R('w_valley'),markVia:[],markDays:null};
+    const wait={markKind:'wait' as const,markAxis:'main',markRegion:null,markVia:[],markDays:7};
+    const set=planner.draft({...input,beliefs:new Map([[R('w_valley'),100],[input.goal.goalObjective!,9000]]),noteScoreWeight:600,notes:[{mark:focus,weight:1000},{mark:wait,weight:1000}]});
+    const first=set.draftCandidates.find(c=>c.candVariant.endsWith('+note0'));
+    const combined=set.draftCandidates.find(c=>c.candVariant.endsWith('+note0+note1'));
+    expect(first).toBeDefined();expect(combined).toBeDefined();
+    expect(combined!.candPerceived).toBe(first!.candPerceived);
+  });
   it('gives the same draft set twice, and under permuted inputs', () => {
     for (const spec of CASES) {
       for (const s of SEATINGS) {

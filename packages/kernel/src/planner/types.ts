@@ -124,7 +124,7 @@ export interface PlanGate {
   readonly gateDetail: string;
 }
 
-export const TERMS = ['caution', 'coordination', 'dependence', 'exposure', 'force_ratio', 'glory', 'goal_fit', 'haste', 'supply', 'time'] as const;
+export const TERMS = ['caution', 'coordination', 'dependence', 'exposure', 'force_ratio', 'glory', 'goal_fit', 'haste', 'notes', 'supply', 'time'] as const;
 export type TermKind = (typeof TERMS)[number];
 
 /** One scoring term with its cause, so the score is explainable (hard rule 6). */
@@ -138,6 +138,7 @@ export const METHODS = ['bombard', 'by_water', 'direct', 'flank', 'holding', 'pi
 export type Method = (typeof METHODS)[number];
 
 export interface PlanCandidate {
+  readonly candNotes?: readonly NoteDisposition[];
   /** Content-derived: method, variant, then each axis's regions (FOUNDATION M10). Computed once, never reassigned. */
   readonly id: string;
   readonly candMethod: Method;
@@ -153,6 +154,14 @@ export interface PlanCandidate {
   readonly candPerceived: number;
   /** His strength over that, permille. */
   readonly candRatio: number;
+}
+
+/** Internal breakdown. The principal gets only the commander's stated account by report. */
+export interface NoteDisposition {
+  readonly noteIndex: number;
+  readonly noteFollowed: boolean;
+  readonly noteWhy: 'followed' | 'declined' | 'own_judgement' | 'unavailable';
+  readonly noteAmount: number;
 }
 
 export interface PlanRejected {

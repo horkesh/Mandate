@@ -18,6 +18,13 @@ import type { MessageId, PersonId, PostId } from '../ids.ts';
 import type { PlanCandidate, DraftSet, TermKind } from '../planner/types.ts';
 import type { State } from '../root-state.ts';
 import type { EditSpec, PlanGoal, PlanStatus } from './goal.ts';
+import type { PlanNote } from './notes.ts';
+
+/** Only the mark and the reference to proxy's response persist here. */
+export interface NoteReading {
+  readonly readingMark: PlanNote;
+  readonly readingResponse: string;
+}
 
 export { PLAN_STATUSES, type PlanStatus } from './goal.ts';
 
@@ -49,6 +56,7 @@ export interface PendingCounter {
 
 /** A post's goal and its plan. Immutable: `plans` replaces it whole. */
 export interface PlanRecord {
+  readonly planNotes?: readonly NoteReading[];
   readonly planGoal: PlanGoal;
   readonly planIssuer: PersonId;
   /** Whether the goal came down his own chain of command (false: it went around a relaying post). */
@@ -163,9 +171,9 @@ export function approve(state: State, post: PostId): State {
 }
 
 /** The principal sends the plan back: he drafts again, on the map as it is when he gets it. */
-export function sendBack(state: State, post: PostId): State {
+export function sendBack(state: State, post: PostId, notes: readonly NoteReading[] = []): State {
   const record = state.planRecords[post]!;
-  return put(state, post, { ...record, planStatus: 'drafting', planChosen: null, planApproved: null, planSubmitted: null });
+  return put(state, post, { ...record, ...(notes.length || record.planNotes !== undefined ? { planNotes: notes } : {}), planStatus: 'drafting', planChosen: null, planApproved: null, planSubmitted: null });
 }
 
 /** "Go" (0040): an assembled operation held for the principal's word moves. */

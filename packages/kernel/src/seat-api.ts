@@ -11,9 +11,12 @@
  */
 export type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId } from './ids.ts';
 export type { ClaimKind, ReportType, SubjectKind } from './knowledge/report.ts';
+export type { NoteAccount } from './knowledge/report.ts';
 export { ADVICE_SUBTYPES, CLAIM_KINDS, INFORMAL_SUBTYPES, REPORT_TYPES } from './knowledge/report.ts';
 export type { BattleCommand, CallCommand, ChooseCommand, Command, DecideCommand, DelegateCommand, EditTerms, GoCommand, GoalTerms, OrderCommand, ReviewAction, ReviewCommand, SeatCommand } from './log/commands.ts';
 export { REVIEW_ACTIONS } from './log/commands.ts';
+export { NOTE_KINDS } from './plans/notes.ts';
+export type { PlanNote, NoteKind } from './plans/notes.ts';
 export type { BattleOrders, CutOffChoice, NightChoice, Pursuit } from './combat/order-kinds.ts';
 export { ALL_JUDGE, BATTLE_ORDER_OPTIONS, JUDGE } from './combat/order-kinds.ts';
 // Lane 1.13: the people verbs as a console sends them, and the audience's counters (both plain vocabulary, no State).

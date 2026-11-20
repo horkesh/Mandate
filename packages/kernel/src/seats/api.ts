@@ -13,6 +13,7 @@
  * command log; replay and resume read the log and never ask a seat again.
  */
 import type { BATTLE_ORDER_OPTIONS, CutOffChoice, NightChoice, Pursuit } from '../combat/order-kinds.ts';
+import type { NoteAccount } from '../knowledge/report.ts';
 import type { Commit } from '../combat/rules.ts';
 import type { FactionId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import type { GoalTerms, SeatCommand } from '../log/commands.ts';
@@ -70,6 +71,8 @@ export interface PlanMenu {
 
 /** A plan submitted to the principal for review, once his commander's dispatch has reached him. */
 export interface PlanReview {
+  /** Only the account in the principal's received submission, never the actual compliance record. */
+  readonly notes?: readonly NoteAccount[];
   readonly post: PostId;
   readonly holder: PersonId;
   /** The dispatch that brought it. */

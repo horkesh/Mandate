@@ -63,7 +63,8 @@ export function reviewsFor(state: State, principal: PersonId): PlanReview[] {
     if (r.planIssuer !== principal || r.planSubmitted === null || travelling.has(r.planSubmitted) || holder === null || r.planChosen === null) continue;
     // He knows what he has already sent: a plan he has answered, the answer still on its way, is not before him again.
     if (answerInTransit(state, principal, post, ['approve', 'edit', 'send_back'])) continue;
-    out.push({ post, holder, report: r.planSubmitted, plan: optionView(candidateOf(r, r.planChosen)!) });
+    const account = state.knowledgeBySeat[seatIdFor(principal)]?.knownReports.find(k => k.id === r.planSubmitted)?.knownBody.reportNotes;
+    out.push({ post, holder, report: r.planSubmitted, plan: optionView(candidateOf(r, r.planChosen)!, false), ...(account === undefined ? {} : { notes: account }) });
   }
   return out;
 }

@@ -15,6 +15,7 @@ import type { CounterTerms } from '../audience/counters.ts';
 import type { BattleOrders } from '../combat/order-kinds.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { EditKind, Posture } from '../plans/goal.ts';
+import type { PlanNote } from '../plans/notes.ts';
 
 /** A goal as a command carries it (the plans record's `PlanGoal`, unprefixed). */
 export interface GoalTerms {
@@ -62,6 +63,8 @@ export interface ReviewCommand {
   readonly action: ReviewAction;
   /** The edit, for `edit`; null otherwise. */
   readonly edit: EditTerms | null;
+  /** Nonbinding marks, only on send_back. Omitted in older logs. */
+  readonly notes?: readonly PlanNote[];
   readonly route: RouteKind;
   readonly bypass: boolean;
 }

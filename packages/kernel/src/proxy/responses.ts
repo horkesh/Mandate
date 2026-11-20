@@ -20,6 +20,8 @@ export interface ResponseTerm {
 }
 
 export interface OrderResponse {
+  /** Index within a send-back's notes; absent for other orders. */
+  readonly respNote?: number;
   /** The order, by its origin id (the same through every hop). */
   readonly respOrder: MessageId;
   readonly respPerson: PersonId;
@@ -47,16 +49,17 @@ export function isCallAnswer(r: OrderResponse): boolean {
 }
 
 /** The key of a man's response to an order: one per order per man. */
-export function responseKey(order: MessageId, person: PersonId): string {
-  return `${order}|${person}`;
+export function responseKey(order: MessageId, person: PersonId, note?: number): string {
+  return `${order}|${person}${note === undefined ? '' : `|note:${note}`}`;
 }
 
 /** A response as State, from compliance's answer. */
 export function responseOf(
   answer: DirectiveResponse,
-  at: { readonly order: MessageId; readonly person: PersonId; readonly post: PostId | null; readonly role: 'relay' | 'addressee'; readonly day: number; readonly kind: string },
+  at: { readonly order: MessageId; readonly person: PersonId; readonly post: PostId | null; readonly role: 'relay' | 'addressee'; readonly day: number; readonly kind: string; readonly note?: number },
 ): OrderResponse {
   return {
+    ...(at.note === undefined ? {} : { respNote: at.note }),
     respOrder: at.order,
     respPerson: at.person,
     respPost: at.post,
@@ -75,7 +78,7 @@ export function responseOf(
 
 /** The only writer of responses: record (or replace) a man's response to an order. */
 export function recordResponse(state: State, response: OrderResponse): State {
-  return { ...state, orderResponses: { ...state.orderResponses, [responseKey(response.respOrder, response.respPerson)]: response } };
+  return { ...state, orderResponses: { ...state.orderResponses, [responseKey(response.respOrder, response.respPerson, response.respNote)]: response } };
 }
 
 /**
@@ -87,6 +90,7 @@ export function pruneResponses(state: State, day: number, keepDays: number): { r
   const named = new Set<string>();
   for (const r of Object.values(state.planRecords)) {
     named.add(r.planResponse);
+    for (const n of r.planNotes ?? []) named.add(n.readingResponse);
     for (const c of r.planCounters) if (c.counterResponse !== null) named.add(c.counterResponse);
   }
   for (const o of Object.values(state.operationRecords)) for (const q of o.opRequests) if (q.oreqResponse !== null) named.add(q.oreqResponse);

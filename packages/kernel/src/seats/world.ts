@@ -24,6 +24,7 @@ import type { FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.
 import { templateProblems, type ReportTemplate } from '../knowledge/templates.ts';
 import { latencyProblems, type LatencyMap, type LatencyRules } from '../messages/latency.ts';
 import type { PlannerRules, PlansRules, StandingRules } from '../world/world.ts';
+import { noteRulesProblems } from '../plans/note-rules.ts';
 import { situationReferenceProblems } from '../situations/references.ts';
 import type { SituationDef } from '../situations/types.ts';
 import { peopleRulesProblems, type PeopleRules, type TraitRules } from '../people/rules.ts';
@@ -230,6 +231,7 @@ export function plannerRuleProblems(planner: PlannerRules, plans: PlansRules): s
   if (!Number.isSafeInteger(d.risk) || d.risk < 0 || d.risk > 1000) problems.push('plans rule goalDefaults.risk must be a permille');
   if (!Number.isSafeInteger(d.deadlineDays) || d.deadlineDays < 1) problems.push('plans rule goalDefaults.deadlineDays must be a whole number of days, at least 1');
   if (!Number.isSafeInteger(plans.holdingRisk)) problems.push('plans rule holdingRisk must be a whole number');
+  problems.push(...noteRulesProblems(plans.notes));
   return problems;
 }
 

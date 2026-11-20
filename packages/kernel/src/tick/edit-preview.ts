@@ -42,5 +42,5 @@ export function previewEdit(world: SeatsWorld, state: State, post: PostId, edit:
   const derived = deriveMap(world.map, { control: state.regionControl, month, network });
   const input = plannerInputFor(world, state, derived, network, month, viewFor(world, state, seatIdFor(holder), createViewCache()), post, record.planGoal, day);
   const result = applyEdit(input, record.planDraft, chosen, spec);
-  return result.ok ? { ok: true, plan: optionView(result.edited) } : { ok: false, reason: result.reason };
+  return result.ok ? { ok: true, plan: optionView(result.edited, false) } : { ok: false, reason: result.reason };
 }

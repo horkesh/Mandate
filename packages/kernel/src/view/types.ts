@@ -13,7 +13,7 @@
  */
 import type { EdgeId, FactionId, ForceBlockId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import type { ControlShares, FrontSegment } from '../control/vocabulary.ts';
-import type { ClaimKind, ReportType, SubjectKind } from '../knowledge/report.ts';
+import type { ClaimKind, ReportType, SubjectKind, NoteAccount } from '../knowledge/report.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { PlanStatus, Posture } from '../plans/goal.ts';
 
@@ -35,6 +35,7 @@ export interface AdviceView {
 }
 
 export interface ReportView {
+  readonly notes?: readonly NoteAccount[];
   readonly id: MessageId;
   readonly type: ReportType;
   readonly subtype: string | null;

@@ -387,6 +387,14 @@ export const RulesSchema = z.strictObject({
     .describe('The planner (0062): design parameters the pack states, not sourced facts.'),
   plans: z
     .strictObject({
+      notes: z.strictObject({
+        maxMarks: positive,
+        maxWaypoints: positive,
+        maxWaitDays: nonNegative,
+        scoreWeight: nonNegative,
+        rungs: z.array(z.strictObject({ rung: z.enum(COMPLIANCE_RUNGS), weight: permille })).refine(rows => rows.length === COMPLIANCE_RUNGS.length && new Set(rows.map(r => r.rung)).size === COMPLIANCE_RUNGS.length, 'one note weight per compliance rung'),
+        terms: z.array(z.strictObject({ kind: z.enum(['focus', 'via', 'wait', 'avoid']), boldness: permille, honours: z.array(termId), offends: z.array(termId) })).refine(rows => rows.length === 4 && new Set(rows.map(r => r.kind)).size === 4, 'one directive term row per note kind'),
+      }).describe('Nonbinding send-back marks: bounds, soft score weight, compliance weights and value terms. Design parameters, not historical facts.'),
       goalDefaults: z
         .strictObject({ risk: permille, deadlineDays: positive, rail: z.boolean(), river: z.boolean(), sea: z.boolean(), neutral: z.boolean(), awaitWord: z.boolean(), approveAsDrafted: z.boolean() })
         .describe('The goal terms an order carries when it names only a posture and an objective (a situation’s option).'),

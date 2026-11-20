@@ -162,6 +162,12 @@ describe('the kernel checks the planner and plans rules of any World it is hande
     expect(() => indexSeatsWorld(withPlanner({}, { holdingRisk: 0.5 }), forcesStart(CONTROL, [], []))).toThrow('plans rule holdingRisk must be a whole number');
     expect(() => indexSeatsWorld(withPlanner({}), forcesStart(CONTROL, [], []))).not.toThrow();
   });
+  it('checks note bounds and requires a weight for every compliance rung', () => {
+    const rules=mapWith().world.rules.plans.notes;
+    for(const notes of [{...rules,maxMarks:0},{...rules,rungs:rules.rungs.slice(1)},{...rules,rungs:rules.rungs.map(r=>({...r,weight:1001}))}]) {
+      expect(()=>indexSeatsWorld(withPlanner({}, {notes}),forcesStart(CONTROL,[],[]))).toThrow(/note/);
+    }
+  });
 });
 
 describe('latency and the report templates read the pack\'s rules (0072)', () => {

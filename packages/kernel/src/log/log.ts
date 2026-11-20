@@ -13,6 +13,7 @@ import { strictCompare } from '../compare.ts';
 import { isWellFormedId, type SeatId } from '../ids.ts';
 import { ROUTE_KINDS } from '../messages/latency.ts';
 import { EDIT_KINDS, POSTURES } from '../plans/goal.ts';
+import { noteProblems } from '../plans/notes.ts';
 import { COUNTER_KINDS } from '../audience/counters.ts';
 import { COMMAND_KINDS, RELIEF_MODES, REVIEW_ACTIONS, type Command } from './commands.ts';
 
@@ -73,7 +74,7 @@ export function entryProblems(raw: unknown, i: number): string[] {
     pressure: ['cmd', 'person'],
     address: ['bloc', 'cmd'],
   };
-  const fields = FIELDS[c.cmd as string]!;
+  const fields = c.cmd === 'review' && Object.hasOwn(c, 'notes') ? [...FIELDS.review!, 'notes'].sort(strictCompare) : FIELDS[c.cmd as string]!;
   const keys = Object.keys(c).sort(strictCompare);
   if (keys.join() !== fields.join()) return [...problems, `${at}: ${String(c.cmd)} has fields [${keys.join(', ')}], expected [${fields.join(', ')}]`];
   const id = (v: unknown) => typeof v === 'string' && isWellFormedId(v);
@@ -87,6 +88,10 @@ export function entryProblems(raw: unknown, i: number): string[] {
     problems.push(...goalTermsProblems(c.goal).map((p) => `${at}: order.goal ${p}`));
   } else if (c.cmd === 'review') {
     routed();
+    if (Object.hasOwn(c, 'notes')) {
+      if (c.action !== 'send_back' || !Array.isArray(c.notes)) problems.push(`${at}: notes belong only to a send-back`);
+      else for (const n of c.notes) problems.push(...noteProblems(n).map(p => `${at}: ${p}`));
+    }
     if (!(REVIEW_ACTIONS as readonly unknown[]).includes(c.action)) problems.push(`${at}: review.action must be one of ${REVIEW_ACTIONS.join(', ')}`);
     if ((c.action === 'edit') !== (c.edit !== null)) problems.push(`${at}: review.edit is given for an edit and only for an edit`);
     if (c.edit !== null) problems.push(...editTermsProblems(c.edit).map((p) => `${at}: review.edit ${p}`));
