@@ -41,16 +41,22 @@ function openingReportOf(state: State, id: MessageId): KnownReport {
 }
 
 export type KnowledgeCache = WeakMap<SeatKnowledge, { readonly opening: KnownReport; readonly claims: readonly ReportClaim[] | undefined; readonly knowledge: SeatKnowledge }>;
+/** Resolved public bulletins survive replacement of a seat's ordinary report list. */
+export type OpeningReportCache = WeakMap<KnownReport, { readonly claims: readonly ReportClaim[] | undefined; readonly report: KnownReport }>;
 
 /** What the seat holds, resolving its opening bulletin for the map without copying it into saved knowledge. */
-export function knowledgeOf(state: State, seat: SeatId, cache?: KnowledgeCache): SeatKnowledge {
+export function knowledgeOf(state: State, seat: SeatId, cache?: KnowledgeCache, openings?: OpeningReportCache): SeatKnowledge {
   const held = storedKnowledgeOf(state, seat);
   if (held.knownOpeningControl === undefined) return held;
   const stored = state.openingControlReports?.[held.knownOpeningControl];
   const previous = cache?.get(held);
   if (previous !== undefined && previous.opening === stored && previous.claims === state.openingControlClaims) return previous.knowledge;
-  const opening = openingReportOf(state, held.knownOpeningControl);
-  const knowledge = { ...held, knownControlReports: [{ ...opening, knownPublicOpening: true as const }, ...(held.knownControlReports ?? [])] };
+  let opening = stored === undefined ? undefined : openings?.get(stored);
+  if (opening === undefined || opening.claims !== state.openingControlClaims) {
+    opening = { claims: state.openingControlClaims, report: { ...openingReportOf(state, held.knownOpeningControl), knownPublicOpening: true } };
+    openings?.set(stored!, opening);
+  }
+  const knowledge = { ...held, knownControlReports: [opening.report, ...(held.knownControlReports ?? [])] };
   cache?.set(held, { opening: stored!, claims: state.openingControlClaims, knowledge });
   return knowledge;
 }

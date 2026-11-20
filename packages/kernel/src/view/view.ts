@@ -13,7 +13,7 @@
  */
 import type { EdgeId, PersonId, RegionId, SeatId } from '../ids.ts';
 import { latestEnemyClaims, latestObstructionClaims, latestWorksClaims, perceived } from '../knowledge/beliefs.ts';
-import { knowledgeOf, reportsForView, type KnowledgeCache, type KnownReport, type SeatKnowledge } from '../knowledge/knowledge.ts';
+import { knowledgeOf, reportsForView, type KnowledgeCache, type OpeningReportCache, type KnownReport, type SeatKnowledge } from '../knowledge/knowledge.ts';
 import type { PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import { seatOf } from '../seats/seats.ts';
@@ -34,6 +34,7 @@ export interface ViewCache {
   /** Request graphs already deeply frozen by this caller; shared view children need no second walk. */
   readonly requestFreeze: FreezeLedger;
   readonly knowledge: KnowledgeCache;
+  readonly openings: OpeningReportCache;
   readonly reports: WeakMap<KnownReport, ReportView>;
   readonly lists: WeakMap<SeatKnowledge, readonly ReportView[]>;
   /** Beliefs depend on what he holds and on how he reads it, so both are in the key (review F4). */
@@ -48,7 +49,7 @@ export interface ViewCache {
 }
 
 export function createViewCache(): ViewCache {
-  return { requestFreeze: createFreezeLedger(), knowledge: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
+  return { requestFreeze: createFreezeLedger(), knowledge: new WeakMap(), openings: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
 }
 
 function freeze<T extends object>(o: T): T {
@@ -125,7 +126,7 @@ function same<T>(a: readonly T[], b: readonly T[]): boolean {
 export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: ViewCache = createViewCache()): SeatView {
   const person = world.person(seatOf(state, seat).seatPerson);
   const post = heldPost(state, person.id);
-  const knowledge = knowledgeOf(state, seat, cache.knowledge);
+  const knowledge = knowledgeOf(state, seat, cache.knowledge, cache.openings);
 
   let reports = cache.lists.get(knowledge);
   if (reports === undefined) {

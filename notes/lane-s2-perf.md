@@ -36,10 +36,56 @@ The back-to-back step-1/step-2 sample reads 55.98/96.98 ms before and 42.28/76.8
 
 The first step-2 hook attempt failed only the done-check test's existing 300-second setup bound (319.78 s overall; 138 other files passed, 1,519 tests passed, one expected failure, 17 skipped including the blocked suite). A diagnostic host sample read 100% CPU. The isolated affected file then passed under the same timeout: 14 tests passed, one optional timing skip, 185.06 s. Unreached boundary/licence/decision gates also pass independently. No timeout, criterion or test changed. The justified hook retry uses the installed runner's supported `VITEST_MAX_WORKERS=1`, limiting only this lane's concurrency; all ordinary hook tests remain selected. Pending opening-cache work stays outside the index, so the hook checks the exact step-2 tree in its private snapshot.
 
+The retry passed and created `a3285d7`: 139 files, 1,532 passed, one existing expected failure, four skips; 617.85 s. Typecheck, boundary, licences and decision index pass. `runs/s2/commit-freeze-retry.log` retains the exact staged-snapshot gate. No history was rewritten.
+
+### 3. Reuse the public opening bulletin
+
+The opening bulletin and shared claims do not change when an ordinary report arrives. Previously, replacing SeatKnowledge also rebuilt that opening report wrapper, defeating ReportView reuse. A caller-owned weak cache now resolves the stored opening report once per claim array. It invalidates on replacement of either input. Existing callers without this optional cache keep their API and values.
+
+The new regression failed first on the lost opening identity. Then 80 focused knowledge/view/ownership tests and typecheck passed. It covers ordinary report arrival, changed opening claims, replacement of the stored report, and reading the old State again. Every cached view equals a freshly derived view. All 148 Union daily hashes and the full summary match baseline (`runs/s2/opening/comparison.json`).
+
+Three alternating direct comparisons over 61 views have identical values throughout. Before/after totals: 84.69/67.57, 64.46/60.92 and 66.24/42.12 ms; median 66.24 to 60.92 ms (5.32 ms over 61 views). The separate whole-tick comparison reads median/p95 41.46/109.39 before and 35.52/107.18 ms after. These are observed shared-host differences, not unloaded or CI claims.
+
+### Planner backlog: experiments rejected
+
+No planner change is retained. Three bounded implementations preserved all 23 Union draft sets but did not show a saving in warmed alternating comparisons:
+
+- Per-edge direction maps: 38.06 to 39.94 ms over all 23 drafts.
+- Two direction tables per request: 44.14 to 44.35 ms.
+- Reuse of the selected land-block list: 810.71 to 816.86 ms over 20 repetitions of 23 drafts.
+
+The latter larger batch reduced sensitivity to timer noise; it still supplied no positive evidence. All three sources, tests and measurements remain only in ignored `runs/s2/step4*` snapshots and `draft-pair*.json`. The original planner files were restored byte-for-byte. No cap, route, candidate, score, search count or drafting behavior changed. Reject shipping these caches on intuition alone.
+
+### Final verification
+
+Final war/history CPU profiles are retained under `runs/s2/final-war-profile/` and `final-history-profile/`. The slots use identical 148-day setup/options today. Profiled median/p95: 35.29/122.10 and 34.17/104.31 ms, inside 40/160 on this loaded host. Load records are retained. No other validation job of this lane ran during those samples. The unloaded 20 ms aim and Linux CI remain unestablished.
+
+The testbed's 120 daily hashes and full summary match baseline. Both original and final code reproduce the day-40 save byte-for-byte (SHA-256 `a3e363b949df0e7a2284241453a16b175a434c7dc320bea913e1df5f9d417b1c`). Runtime workspace aliases point here. The final runtime matches the hash-verified step-3 snapshot; original pack, fixture, band and lock inputs are preserved. Evidence: `runtime-preflight.json`, `testbed-final/comparison.json`, `preservation-final.json`.
+
+The one default eight-seed `npm run run:done-check -- --label s2-final-done`, including drafting, **exited 1** after about 30 minutes. **Phase 0: 5/6; 1A: 2/6. The budget remains failed.** War by decision median/p95 is **28.07/53.80 ms**; testbed **3.52/6.15**; history **52.82/126.68**, above the unchanged 40 ms median limit. The history and reference timing calls use identical setup/options; source inspection confirms this, but the cause of their different timings is not established. The separately profiled sub-40 results do not waive this failure. No timing retry or unloaded-host claim.
+
+All eleven reported problems are retained in `runs/s2/final-checks.json` and `final-done.log`: the budget failure; the Confederate strength floor and two operation checkpoint floors; no planned operation fought; four pushback breaches; the sweep's unmeasured people/grievance channel and its unexercised border-governor chain. 1A passes unknown strength and stand-ins, while checkpoints, operation, pushback and lever sweep fail. Watched return is best 0/8, but that supplies no D6 clearance. No band, criterion or signature was changed.
+
+The final checked (frozen) summaries match the original source on **all 268 daily hashes**, daily fires, all liveness rows, World/initial/final hashes, command counts, decision points and rejections. Replay, save/resume and saved-log replay pass for both. Union final State remains `55a35b1034c19b09f121d3ffcd311219b416e864257b43b1bb9370a33c8e7006`; testbed `69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb`. The original checked/unfrozen comparisons and focused gates are reused rather than repeated after documentation changes. The evidence parser's initial UTF-8 assumption was corrected for PowerShell's UTF-16 log; no production code or campaign was rerun for it.
+
+Final inventories and runtime diagnostics preceded this closeout: **eight delivery files**, **1,668 other original files unchanged**, no original deletion or unexpected change, and **397 runtime/pack files** matching the hash-verified source. The done check produced five core summary/save/drafting artifacts. Planner experiments are restored to the original byte hashes. No build, server, browser, push or other-worktree write. `runs/s2/final-checks.json` indexes the settled evidence.
+
+The opening-report commit runs the same full `check` script through the hook. Its raw result is retained in `runs/s2/commit-opening.log` and the final coordination status records the counts. The supported single-worker setting used successfully for step 2 is retained; timeouts and selection stay unchanged. The required no-Git mode excludes its two Git-writing fixture files. Three timing tests remain optional; the extra skip in step 2's private snapshot was the Git-executable-mode check, whose repository was absent there. Independent review remains Claude's under 0106.
+
+For the lead:
+
+1. Review the three optimization commits independently. Retain the failed budget and obtain an unloaded comparison and Linux CI verdict before accepting S2; the 20 ms aim is also unestablished.
+2. Keep the four reported 1A failure categories with their existing owners. No scenario or calibration work from S1 was imported.
+3. Route the reproduced post-cache issue below to the view owner. Do not broaden cache sharing on this branch to conceal it.
+
 ## Proposed rulings
 
-None. The 40 ms budget and all behavior criteria remain unchanged.
+1. Accept consecutive report batches within the knowledge owner, flushing before every intervening reader. Rejected: changed report cadence/order, dropped reports or in-place State mutation.
+2. Accept caller-owned freeze and opening-report caches keyed by immutable inputs. Rejected: global mutable caches or persisted derived data.
+3. Park the measured planner caches. Rejected: retaining extra allocation and invalidation code without evidence of a saving. The 40 ms budget, 20 ms unloaded aim and all behavior criteria remain unchanged.
 
 ## Findings outside my scope
 
-Linux CI decides the hosted budget. Other sprint lanes' work is not imported or changed.
+1. Lead: Linux CI decides the hosted budget; this run's history budget **failed at 52.82 ms**, and the unloaded target is not established. No push or hosted job was triggered. Other sprint lanes' work is not imported or changed.
+2. View owner: an existing ViewCache can return the old post after a same-day reassignment at the same location. The final equality guard omits post identity. `runs/s2/cache-post-identity.json` reproduces cached `null` versus fresh `a_office`. Broader sharing of the morning cache into planning is therefore deferred. Fixing this changes observable behavior and is outside S2's preservation scope.
+3. S1 and the existing 1A owners: checkpoint, operation, pushback and lever-sweep failures remain binding for their milestone. All original pack bands and checkpoint bounds are preserved.
