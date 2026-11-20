@@ -1,0 +1,56 @@
+{
+  "id": "s13_confiscation_and_militia_acts",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_confiscation_and_militia_acts.title",
+  "text": "situation.s13_confiscation_and_militia_acts.text",
+  "earliest": "1862-07-17",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 500
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_confiscation_and_militia_acts"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_confiscation_and_militia_acts"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_attorney_general"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy",
+      "black-enlistment"
+    ],
+    "placement": "text",
+    "risks": [],
+    "actingSide": null
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-STAT12",
+      "at": "pp. 589–592, ch. 195, especially §§9–12; pp. 597–600, ch. 201, especially §§12–15; p. 627, explanatory resolution; all 17 July 1862."
+    }
+  ],
+  "namedOnly": "The paper names historical participants as the cited document identifies them; it assigns no new words, current office or action to a rostered person."
+}

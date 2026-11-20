@@ -1,0 +1,61 @@
+{
+  "id": "s13_dakota_war",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_dakota_war.title",
+  "text": "situation.s13_dakota_war.text",
+  "earliest": "1862-11-10",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 616
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_dakota_war"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_dakota_war"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "dakota-war-1862"
+    ],
+    "placement": "text",
+    "risks": [],
+    "actingSide": null
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-CW2",
+      "at": "p. 252; Lincoln to Pope, 10 November 1862. Request for full records and particulars, not an execution order."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ],
+  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+}

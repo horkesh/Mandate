@@ -1,0 +1,135 @@
+{
+  "formatVersion": 2,
+  "sources": [
+    {
+      "key": "S13-CW2",
+      "title": "Abraham Lincoln, Complete Works, ed. Nicolay and Hay, vol. II (1894)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/completeworksofa02linc_0; S6 cached OCR, selected pages reread in S13.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S13-OR",
+      "title": "War of the Rebellion: Official Records, specified series, volume and part",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "Government documents; individual editions, pages, files and reading limits in S13 sources-read.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S13-TREAS",
+      "title": "Report of the Secretary of the Treasury on the State of the Finances for 1862",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "FRASER government scan; S5 treasury1862.pdf, pp. 7–9 reread in S13.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S13-WELLES",
+      "title": "Gideon Welles, Diary, vol. I (1911)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/diaryofgideonwel01well; posthumous published edition.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S13-MAHAN",
+      "title": "A. T. Mahan, The Gulf and Inland Waters (1883)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/gulfandinlandwa03mahagoog; S4 retained scan; retrospective history.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S13-STAT12",
+      "title": "United States Statutes at Large, vol. XII",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://www.govinfo.gov/app/details/STATUTE-12; selected government granules retained by S7.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S13-CARPENTER",
+      "title": "F. B. Carpenter, Six Months at the White House with Abraham Lincoln (1866)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/sixmonths00lincgoog; retrospective reported conversation, pp. 20–22; p. 23 also read for its discrepant September recollection.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S13-HAUPT",
+      "title": "Herman Haupt, Reminiscences (1901)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://tile.loc.gov/storage-services/public/gdcmassbookdig/reminiscencesofg00haup/reminiscencesofg00haup.pdf; later memoir, pp. 80, 83, 87.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S13-DISPATCH",
+      "title": "Richmond Daily Dispatch, 9 December 1861",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://dispatch.richmond.edu/1861/12/9/2/33; p. 2; attributed press, not an official instruction.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S13-TRENT",
+      "title": "United States Senate Executive Document 8, 37th Congress, 2nd session (1862): Trent correspondence",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://www.govinfo.gov/content/pkg/SERIALSET-01121_00_00-008-0008-0000/pdf/SERIALSET-01121_00_00-008-0008-0000.pdf; selected pp. 5, 10–13 read in retained government scan.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S13-COOKE",
+      "title": "Congressional Record, 6 January 1886, reproduced Cooke circular",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://www.congress.gov/49/crecb/1886/01/06/GPO-CRECB-1886-pt1-v17-37.pdf; p. 456; later reproduction of contemporary notice.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S13-READING",
+      "title": "S13 authoring and reading record (2026-11-20)",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "packs/union-1861/situations/drafts/s13/README.md; per-item reading limits in index.json; an absence here is not evidence no adviser existed.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S13-ORN",
+      "title": "Official Records of the Union and Confederate Navies, series I, vol. 6",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://archive.org/details/officialrecordso06unit; S7 retained original OCR, printed pp. 233–234 (OCR n0264–n0265) reread in S13.",
+      "licencePage": null,
+      "licenceReadOn": null
+    }
+  ]
+}

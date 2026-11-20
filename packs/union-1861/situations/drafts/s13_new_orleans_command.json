@@ -1,0 +1,61 @@
+{
+  "id": "s13_new_orleans_command",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_new_orleans_command.title",
+  "text": "situation.s13_new_orleans_command.text",
+  "earliest": "1862-05-15",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 437
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_new_orleans_command"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_new_orleans_command"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "civilian-conduct-1862"
+    ],
+    "placement": "text",
+    "risks": [],
+    "actingSide": null
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "Series I, vol. XV, p. 426; General Orders No. 28, 15 May 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": null,
+      "person": "butler_benjamin_f"
+    }
+  ],
+  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+}

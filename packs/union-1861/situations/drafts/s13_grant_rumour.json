@@ -1,0 +1,56 @@
+{
+  "id": "s13_grant_rumour",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_grant_rumour.title",
+  "text": "situation.s13_grant_rumour.text",
+  "earliest": "1862-03-10",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 371
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_grant_rumour"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_grant_rumour"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "I-7 p. 683; Lorenzo Thomas to Halleck, 10 March 1862. The later reply on the same page is not known by this paper."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ],
+  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+}

@@ -1,0 +1,56 @@
+{
+  "id": "s13_atlantic_squadron_division",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_atlantic_squadron_division.title",
+  "text": "situation.s13_atlantic_squadron_division.text",
+  "earliest": "1861-09-18",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 198
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_atlantic_squadron_division"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_atlantic_squadron_division"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this document concerns administrative or military authority and carries no policy toward a protected population."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-ORN",
+      "at": "I-6 pp. 233–234; Welles to Goldsborough, appointment and confidential instructions of 18 September 1861."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_secretary_navy",
+      "person": "welles_gideon"
+    }
+  ],
+  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+}

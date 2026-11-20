@@ -1,0 +1,583 @@
+{
+  "window": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "items": [
+    {
+      "catalogue": "S22",
+      "id": "s13_fremont_proclamation",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_fremont_proclamation; none exists in the March start.",
+        "Separate the emancipation response from the shooting clause; no option may authorize a reprisal."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S23",
+      "id": "s13_maryland_legislature_autumn",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_maryland_legislature_autumn; none exists in the March start.",
+        "Security-order scope, case review and actual detention belong to 1B; the April Maryland notice remains distinct."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S24",
+      "id": "s13_fremont_department",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_fremont_department; none exists in the March start.",
+        "Conditional delivery of relief, relief mode and the successor appointment; command ownership exists, but situation effects cannot express these acts."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S25",
+      "id": "s13_general_in_chief_1861",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_general_in_chief_1861; none exists in the March start.",
+        "Dated command succession and dual-command authority; retirement is not ordinary presidential relief."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S26",
+      "id": "s13_trent_affair",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_trent_affair; none exists in the March start.",
+        "Diplomatic demand/answer records, British response clock and Navy initiative report; no invented British troop total."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S27",
+      "id": "s13_committee_and_stone",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_committee_and_stone; none exists in the March start.",
+        "The December committee opening and February arrest need their own contemporary packets; this May answer is a sourced later stage, not a redating of either event."
+      ],
+      "heldOptions": [
+        {
+          "id": "court-of-inquiry",
+          "reason": "No advocate for the catalogue alternative has been established by this reading."
+        }
+      ],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S28",
+      "id": "s13_war_department_report",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_war_department_report; none exists in the March start.",
+        "Read the unaltered report and the recall instruments before offering the catalogue cut/print decision; policy placement remains held."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S28",
+      "id": "s13_war_department_secretary",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_war_department_secretary; none exists in the March start.",
+        "Cabinet resignation, nomination, confirmation and actual assumption are separate command/institutional acts."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S29",
+      "id": "s13_treasury_notes",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_treasury_notes; none exists in the March start.",
+        "The finance owner, specie suspension and legislative bill states; later published explanation must not become an early report without a separately authored contemporary packet."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S30",
+      "id": "s13_arms_and_contracts",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_arms_and_contracts; none exists in the March start.",
+        "Ordnance procurement, contracts and field-trial returns; separate the later foreign-contract dispute rather than combine unrelated choices."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S31",
+      "id": "s13_army_will_not_move",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_army_will_not_move; none exists in the March start.",
+        "A multi-command goal and deadline through the validated order chain; no army moves directly from a situation."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S32",
+      "id": "s13_grant_rumour",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_grant_rumour; none exists in the March start.",
+        "Grant’s current field post, Halleck’s superior post, inquiry transport and reply; the generic inquire verb exists."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S33",
+      "id": "s13_compensated_emancipation",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_compensated_emancipation; none exists in the March start.",
+        "Bill/resolution passage, border-state deliberation and finance; no effect targets enslaved people as a quantity."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S34",
+      "id": "s13_hampton_roads_scare",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_hampton_roads_scare; none exists in the March start.",
+        "Naval combat dispatch, vessel draft/reach and recall through the Army/Navy chains; Welles’s account is one-sided."
+      ],
+      "heldOptions": [
+        {
+          "id": "recall-burnside",
+          "reason": "The read p. 63 fears Burnside’s capture but does not recommend recalling him. Retain only the sourced disagreement over abandoning the Peninsula movement."
+        }
+      ],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S35",
+      "id": "s13_war_orders_march_1862",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_war_orders_march_1862; none exists in the March start.",
+        "Dated corps/departments and separate authority to create, attach and appoint; never create a permanent command graph from one date."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S36",
+      "id": "s13_washington_cover",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_washington_cover; none exists in the March start.",
+        "The army plan and actual command graph, dated strength-return basis and a corps transfer; no conversion from reported totals into truth."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S37",
+      "id": "s13_recruiting_closed",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_recruiting_closed; none exists in the March start.",
+        "Recruiting-office states and actual implementation; do not choose between the conflicting June/July reopening dates without orders."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S37",
+      "id": "s13_recruiting_call",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_recruiting_call; none exists in the March start.",
+        "National allocation, dated state credits and refilling existing regiments; no invented equal state quotas."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S38",
+      "id": "s13_norfolk",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_norfolk; none exists in the March start.",
+        "Visit/delegate state, joint operation, naval support and field landing; no immediate control proposal.",
+        "The May 7 [1] wire is a narrower sourced stage; the presidential visit, command dispute and separate flotilla need distinct primary packets and dated owners."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S39",
+      "id": "s13_hunter_order",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_hunter_order; none exists in the March start.",
+        "Department policy and enforcement through its holder; emancipation policy is not a people-allocation effect."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S40",
+      "id": "s13_new_orleans_command",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_new_orleans_command; none exists in the March start.",
+        "Department of the Gulf and its current holder; source the response separately; December assumption by Banks is outside this window."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S41",
+      "id": "s13_army_of_virginia",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_army_of_virginia; none exists in the March start.",
+        "New army post, dated corps attachments and Frémont’s separately received refusal; existing transfer/relief commands remain the paths."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S42",
+      "id": "s13_harrisons_landing_letter",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_harrisons_landing_letter; none exists in the March start.",
+        "Actual dated delivery, cabinet consultation and source for the presidential answer; use a memorandum, not an invented staff recommendation."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S43",
+      "id": "s13_general_in_chief_1862",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_general_in_chief_1862; none exists in the March start.",
+        "A vacancy-duration predicate, candidate availability and dated assumption; the order cannot instantly transport Halleck."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S44",
+      "id": "s13_vicksburg_river_1862",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_vicksburg_river_1862; none exists in the March start.",
+        "Dated river stage, sickness reports and naval orders; passage, patrol and occupation must remain distinct."
+      ],
+      "heldOptions": [
+        {
+          "id": "release",
+          "reason": "Read Mahan’s retrospective account of withdrawal, not the catalogue’s 23 July Welles instruction. No attribution of that instruction as read."
+        }
+      ],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S45",
+      "id": "s13_confiscation_and_militia_acts",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_confiscation_and_militia_acts; none exists in the March start.",
+        "Bill presentation, explanatory-resolution passage and veto/adjournment rules; retain the earlier 13 March military return prohibition as distinct."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S46",
+      "id": "s13_emancipation_cabinet_draft",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_emancipation_cabinet_draft; none exists in the March start.",
+        "Contemporary July cabinet chronology, private draft-ready state and a received success report; 22 July is the catalogue’s provisional earliest guard [I]."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S46",
+      "id": "s13_greeley_reply",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_greeley_reply; none exists in the March start.",
+        "Received Greeley editorial, press publication and separate cabinet-draft state."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S46",
+      "id": "s13_emancipation_preliminary",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_emancipation_preliminary; none exists in the March start.",
+        "Dated territorial-policy model, enforcement through holders and a victory understood from received reports; the January final instrument is outside scope."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S47",
+      "id": "s13_peninsula_withdrawal",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_peninsula_withdrawal; none exists in the March start.",
+        "Current army posts, evacuation/transport capacity and corps transfers; the later 29 August capital proposal is separate received advice."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S48",
+      "id": "s13_military_arrests",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_military_arrests; none exists in the March start.",
+        "Security-order scope, individual review and locked political consequences; the 8 August War Department order requires its own earlier packet."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S49",
+      "id": "s13_dakota_war",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_dakota_war; none exists in the March start.",
+        "R3, Dakota voices and trial files; no execution choice or count is authored. The August causes need a separate sourced account and arrival route."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S50",
+      "id": "s13_railroad_dispute",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_railroad_dispute; none exists in the March start.",
+        "Military railroad director and field post, train occupancy/delay and inquiry transport; no fabricated troop-loss effect."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S51",
+      "id": "s13_cabinet_remonstrance",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_cabinet_remonstrance; none exists in the March start.",
+        "Cabinet stances, actual signatories and current army command; do not invent Smith’s signature."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S52",
+      "id": "s13_altoona_governors",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_altoona_governors; none exists in the March start.",
+        "Delegation/audience and dated state quotas; verify the original address’s dates and signatory list before deriving attendance totals."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S53",
+      "id": "s13_after_antietam",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_after_antietam; none exists in the March start.",
+        "A received Antietam result and subsequent inactivity report, army readiness and current commander; election timing is not a substitute for those causes."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S53",
+      "id": "s13_mcclellan_relief",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_mcclellan_relief; none exists in the March start.",
+        "Current army post and candidate eligibility, dispatch delivery and hand-over; do not infer that Burnside assumed on the issue date."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S54",
+      "id": "s13_buell_east_tennessee",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_buell_east_tennessee; none exists in the March start.",
+        "Current western army post, East Tennessee supply route and Rosecrans’s separate appointment; a goal goes through a commander."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S55",
+      "id": "s13_river_squadron",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_river_squadron; none exists in the March start.",
+        "Read the underlying act/order, dated post-department reassignment and the command hand-over to Porter; no legal date is silently chosen."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S56",
+      "id": "s13_bond_agent",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_bond_agent; none exists in the March start.",
+        "Treasury agency appointment and contract/commission terms; the later December conversion estimate is not information for an October decision."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S57",
+      "id": "s13_fredericksburg_bridges",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_fredericksburg_bridges; none exists in the March start.",
+        "Pontoon location, equipment, transport and plan crossing; December battle/news stages remain outside scope."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt of the specifically identified document in State.knowledgeBySeat, with an earliest-date guard. The date alone cannot fire it. This does not claim that physical events wait for their news.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S16",
+      "id": "s13_kentucky_camp_protest",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_kentucky_camp_protest; no dated packet producer exists in the March start.",
+        "August stage B of a catalogue entry that began in May. Camp establishment, removal and the state’s neutrality need their own institutional owners."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt in State.knowledgeBySeat, guarded by an earliest date. No camp or squadron State is invented.",
+      "acts": {}
+    },
+    {
+      "catalogue": "S19",
+      "id": "s13_atlantic_squadron_division",
+      "stage": "received document",
+      "needs": [
+        "Report producer and route for s13_document_atlantic_squadron_division; no dated packet producer exists in the March start.",
+        "Autumn stage of the June blockade-board entry. Separate squadron posts, boundaries, appointment and actual assumption need 1B; no new command is created by this draft."
+      ],
+      "heldOptions": [],
+      "optionEvidence": {},
+      "cause": "[I] Receipt in State.knowledgeBySeat, guarded by an earliest date. No camp or squadron State is invented.",
+      "acts": {}
+    }
+  ]
+}

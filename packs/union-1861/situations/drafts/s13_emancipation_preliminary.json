@@ -1,0 +1,61 @@
+{
+  "id": "s13_emancipation_preliminary",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_emancipation_preliminary.title",
+  "text": "situation.s13_emancipation_preliminary.text",
+  "earliest": "1862-09-22",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 567
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_emancipation_preliminary"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_emancipation_preliminary"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy"
+    ],
+    "placement": "text",
+    "risks": [],
+    "actingSide": null
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-STAT12",
+      "at": "pp. 1267–1268; preliminary proclamation, 22 September 1862; March article, p. 354; July act, pp. 591–592."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ],
+  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+}

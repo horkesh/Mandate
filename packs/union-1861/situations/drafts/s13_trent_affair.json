@@ -1,0 +1,56 @@
+{
+  "id": "s13_trent_affair",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_trent_affair.title",
+  "text": "situation.s13_trent_affair.text",
+  "earliest": "1861-12-26",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 297
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_trent_affair"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_trent_affair"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_state"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-TRENT",
+      "at": "Senate Executive Document 8, 37th Congress, 2nd session (1862), pp. 5, 10–13; Seward to Lyons, 26 December 1861, selected passages."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_secretary_state",
+      "person": "seward_william_h"
+    }
+  ],
+  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+}

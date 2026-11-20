@@ -1,0 +1,60 @@
+{
+  "id": "s13_peninsula_withdrawal",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_peninsula_withdrawal.title",
+  "text": "situation.s13_peninsula_withdrawal.text",
+  "earliest": "1862-08-03",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 517
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_peninsula_withdrawal"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_peninsula_withdrawal"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "Series I, vol. XI, part I, pp. 80–82; order and protest, 3–4 August 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": null,
+      "person": "halleck_henry_w"
+    },
+    {
+      "post": null,
+      "person": "mcclellan_george_b"
+    }
+  ],
+  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+}

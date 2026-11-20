@@ -1,0 +1,61 @@
+{
+  "id": "s13_hunter_order",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_hunter_order.title",
+  "text": "situation.s13_hunter_order.text",
+  "earliest": "1862-05-19",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 441
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_hunter_order"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_hunter_order"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy"
+    ],
+    "placement": "text",
+    "risks": [],
+    "actingSide": null
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-STAT12",
+      "at": "pp. 1264–1265; proclamation of 19 May 1862, reproducing Hunter’s General Orders No. 11 of 9 May."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ],
+  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+}

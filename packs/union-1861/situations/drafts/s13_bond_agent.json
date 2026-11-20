@@ -1,0 +1,50 @@
+{
+  "id": "s13_bond_agent",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_bond_agent.title",
+  "text": "situation.s13_bond_agent.text",
+  "earliest": "1862-11-01",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 607
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_bond_agent"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_bond_agent"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_treasury"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-COOKE",
+      "at": "Congressional Record, 6 January 1886, p. 456; reproduction of Jay Cooke’s circular dated 1 November 1862."
+    }
+  ],
+  "namedOnly": "The paper names historical participants as the cited document identifies them; it assigns no new words, current office or action to a rostered person."
+}

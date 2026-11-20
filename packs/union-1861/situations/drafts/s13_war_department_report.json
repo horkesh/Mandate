@@ -1,0 +1,56 @@
+{
+  "id": "s13_war_department_report",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_war_department_report.title",
+  "text": "situation.s13_war_department_report.text",
+  "earliest": "1861-12-09",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 280
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_war_department_report"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_war_department_report"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_president_secretary"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy",
+      "black-enlistment"
+    ],
+    "placement": "text",
+    "risks": [],
+    "actingSide": null
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-DISPATCH",
+      "at": "9 December 1861, p. 2, article reproducing the New York Tribune of 4 December, “The Cameron and Lincoln imbroglio.”"
+    }
+  ],
+  "namedOnly": "The paper names historical participants as the cited document identifies them; it assigns no new words, current office or action to a rostered person."
+}

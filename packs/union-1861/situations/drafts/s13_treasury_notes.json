@@ -1,0 +1,50 @@
+{
+  "id": "s13_treasury_notes",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_treasury_notes.title",
+  "text": "situation.s13_treasury_notes.text",
+  "earliest": "1861-12-30",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 301
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_treasury_notes"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_treasury_notes"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_treasury"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-TREAS",
+      "at": "Report on the Finances, December 1862, pp. 7–9; retrospective account of the December 1861 suspension and currency legislation."
+    }
+  ],
+  "namedOnly": "The paper names historical participants as the cited document identifies them; it assigns no new words, current office or action to a rostered person."
+}

@@ -1,0 +1,60 @@
+{
+  "id": "s13_buell_east_tennessee",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_buell_east_tennessee.title",
+  "text": "situation.s13_buell_east_tennessee.text",
+  "earliest": "1862-10-23",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 598
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_buell_east_tennessee"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_buell_east_tennessee"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "I-16 part II pp. 637–638; Buell’s suggestions and Halleck’s reply printed 23 October, footnoted “true date appears to have been October 22, 12.20 p. m.” Earliest is the conservative printed date."
+    }
+  ],
+  "speakers": [
+    {
+      "post": null,
+      "person": "halleck_henry_w"
+    },
+    {
+      "post": null,
+      "person": "buell_don_c"
+    }
+  ],
+  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+}

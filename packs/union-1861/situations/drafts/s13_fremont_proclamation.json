@@ -1,0 +1,62 @@
+{
+  "id": "s13_fremont_proclamation",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_fremont_proclamation.title",
+  "text": "situation.s13_fremont_proclamation.text",
+  "earliest": "1861-08-30",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 179
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_fremont_proclamation"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_fremont_proclamation"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy",
+      "union-habeas-and-arrests"
+    ],
+    "placement": "event",
+    "risks": [],
+    "actingSide": null
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "Series I, vol. III, pp. 466–467; proclamation, 30 August 1861."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_dept_west",
+      "person": "fremont_john_c"
+    }
+  ],
+  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+}

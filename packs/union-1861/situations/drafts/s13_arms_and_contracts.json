@@ -1,0 +1,56 @@
+{
+  "id": "s13_arms_and_contracts",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_arms_and_contracts.title",
+  "text": "situation.s13_arms_and_contracts.text",
+  "earliest": "1861-12-09",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 280
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_arms_and_contracts"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_arms_and_contracts"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "Series III, vol. I, pp. 733–734; Ripley to Cameron, 9 December 1861."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_war_ordnance",
+      "person": "ripley_james_w"
+    }
+  ],
+  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+}

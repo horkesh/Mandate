@@ -1,0 +1,55 @@
+{
+  "id": "s13_altoona_governors",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_altoona_governors.title",
+  "text": "situation.s13_altoona_governors.text",
+  "earliest": "1862-09-24",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 569
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_altoona_governors"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_altoona_governors"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_president_secretary"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy"
+    ],
+    "placement": "text",
+    "risks": [],
+    "actingSide": null
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "III-2 pp. 582–584; address dated Altoona, 24 September 1862. This paper does not establish the date or form of its reception by Lincoln."
+    }
+  ],
+  "namedOnly": "The paper names historical participants as the cited document identifies them; it assigns no new words, current office or action to a rostered person."
+}

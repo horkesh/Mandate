@@ -1,0 +1,56 @@
+{
+  "id": "s13_kentucky_camp_protest",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_kentucky_camp_protest.title",
+  "text": "situation.s13_kentucky_camp_protest.text",
+  "earliest": "1861-08-24",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 173
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_kentucky_camp_protest"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_kentucky_camp_protest"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this document concerns administrative or military authority and carries no policy toward a protected population."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-CW2",
+      "at": "pp. 76–77; Lincoln to Magoffin, 24 August 1861, reproducing Magoffin’s request of 19 August."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ],
+  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+}

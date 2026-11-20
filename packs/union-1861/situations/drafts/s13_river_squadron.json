@@ -1,0 +1,50 @@
+{
+  "id": "s13_river_squadron",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_river_squadron.title",
+  "text": "situation.s13_river_squadron.text",
+  "earliest": "1862-10-01",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 576
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_river_squadron"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_river_squadron"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_navy"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed for review: this paper concerns military command, administration or finance; it contains no policy toward a protected population, security order or atrocity consequence."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-MAHAN",
+      "at": "The Gulf and Inland Waters, pp. 21 and 107; conflicting general and detailed transfer passages."
+    }
+  ],
+  "namedOnly": "The paper names historical participants as the cited document identifies them; it assigns no new words, current office or action to a rostered person."
+}

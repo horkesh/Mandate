@@ -1,0 +1,61 @@
+{
+  "id": "s13_norfolk",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_norfolk.title",
+  "text": "situation.s13_norfolk.text",
+  "earliest": "1862-05-07",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 429
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_norfolk"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_norfolk"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_navy"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "capture-in-battle"
+    ],
+    "placement": "text",
+    "risks": [],
+    "actingSide": null
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "I-11 part III p. 148; Stanton to McClellan, printed “May 7 [1], 1862”. Preserve the editorial date qualification."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_secretary_war",
+      "person": "stanton_edwin_m"
+    }
+  ],
+  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+}

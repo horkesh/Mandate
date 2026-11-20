@@ -1,0 +1,61 @@
+{
+  "id": "s13_harrisons_landing_letter",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.s13_harrisons_landing_letter.title",
+  "text": "situation.s13_harrisons_landing_letter.text",
+  "earliest": "1862-07-07",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 490
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s13_document_harrisons_landing_letter"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s13_document_harrisons_landing_letter"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy"
+    ],
+    "placement": "text",
+    "risks": [],
+    "actingSide": null
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "Series I, vol. XI, part I, pp. 73–74; McClellan’s letter dated 7 July 1862, delivered during Lincoln’s visit."
+    }
+  ],
+  "speakers": [
+    {
+      "post": null,
+      "person": "mcclellan_george_b"
+    }
+  ],
+  "namedOnly": "Other names identify the addressees, subjects or prospective appointees in the dated document. Only the declared speakers act in issuing or reporting this document; its receipt makes no appointment and does not assert that an addressee still holds a historical office."
+}

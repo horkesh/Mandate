@@ -1,0 +1,63 @@
+{
+  "topics": [
+    {
+      "id": "emancipation-policy",
+      "class": "slavery-and-emancipation",
+      "window": {
+        "from": "1861-03-04",
+        "to": "1862-12-31"
+      },
+      "placements": [
+        "decision",
+        "event",
+        "text"
+      ],
+      "status": "record",
+      "interim": "text"
+    },
+    {
+      "id": "black-enlistment",
+      "class": "black-military-service",
+      "window": {
+        "from": "1861-03-04",
+        "to": "1862-12-31"
+      },
+      "placements": [
+        "decision",
+        "event",
+        "text"
+      ],
+      "status": "record",
+      "interim": "text"
+    },
+    {
+      "id": "civilian-conduct-1862",
+      "class": "civil-liberties",
+      "window": {
+        "from": "1861-03-04",
+        "to": "1862-12-31"
+      },
+      "placements": [
+        "decision",
+        "event",
+        "text"
+      ],
+      "status": "record",
+      "interim": "text"
+    },
+    {
+      "id": "dakota-war-1862",
+      "class": "native-nations",
+      "window": {
+        "from": "1861-03-04",
+        "to": "1862-12-31"
+      },
+      "placements": [
+        "event",
+        "text"
+      ],
+      "status": "record",
+      "interim": "text"
+    }
+  ]
+}
