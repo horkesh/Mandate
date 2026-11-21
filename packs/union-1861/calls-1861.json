@@ -155,7 +155,7 @@
       "seamen": 18000,
       "term": "Volunteers three years unless sooner discharged; regular increase eight infantry, one cavalry, one artillery; seamen one to three years; organization 39 volunteer infantry and one cavalry, 4 May",
       "source": "OR III-1 pp.146,151-156 (https://ehistory.osu.edu/books/official-records/122/0146)",
-      "execution": "National terms recorded; no invented state quotas or conversion of regulars/seamen into governors infantry. Executable accepted state requisitions have their own sourced rows.",
+      "execution": "S1 executes sixteen read May 15-16 additional state quotas, preserving New York's separate tender; Minnesota follows the sourced remuster of its existing regiment. GO 16 May 4 directs additional Regular units to be raised; the central recruiting path preserves unknown actual strength. The national 42034/22714 organization figures are not duplicate levies. Naval enlistment remains catalogue-only.",
       "gap": "The national volunteer allocation and central Army/Navy enlistment path remain unrepresented"
     },
     {
@@ -292,6 +292,57 @@
         "arkansas_forces_transferred"
       ],
       "execution": "R97: the state’s own notice, conditional on its secession; existing forces, placement and command owners; no governor compliance or new enlistment term."
+    },
+    {
+      "id": "us_may15_16_allocations",
+      "date": "1861-05-15",
+      "side": "union",
+      "kind": "call",
+      "regiments": 57,
+      "source": "OR III-1 pp.203-204,207-208; letters dated May 15-16, with the p.208 clarification that New York's fourteen are additional.",
+      "doctrine": [
+        "us_may15_vol_massachusetts",
+        "us_may16_vol_connecticut",
+        "us_may16_vol_illinois",
+        "us_may16_vol_indiana",
+        "us_may16_vol_iowa",
+        "us_may16_vol_maine",
+        "us_may16_vol_michigan",
+        "us_may16_vol_new_hampshire",
+        "us_may16_vol_new_jersey",
+        "us_may16_vol_ohio",
+        "us_may16_vol_vermont",
+        "us_may16_vol_wisconsin",
+        "us_may15_vol_kansas",
+        "us_may15_vol_nebraska",
+        "us_may15_vol_rhode_island",
+        "us_may16_vol_new_york"
+      ],
+      "execution": "Sixteen distinct additional quotas (56 regiments) use the governor call path. Minnesota's one-regiment quota follows the read voluntary May 11 remuster, extending an eligible surviving original levy rather than duplicating it. No unit is fabricated if the original call was refused, expired or too late. Aggregate consent/replacement and original model muster credit are disclosed approximations [I].",
+      "renewals": [
+        {
+          "state": "minnesota",
+          "regiments": 1,
+          "quotaDate": "1861-05-15",
+          "notice": "minnesota_first_remuster",
+          "source": "OR III-1 p.204; MN-FIRST-1916 p.17"
+        }
+      ]
+    },
+    {
+      "id": "us_may04_regular_organization",
+      "date": "1861-05-04",
+      "side": "union",
+      "kind": "call",
+      "requestedMinimumMen": 18154,
+      "maximumOrganizationMen": 22714,
+      "source": "OR III-1 pp.154-155,157; GO1861 GO16 pp.36-40.",
+      "doctrine": [
+        "us_may04_regular_infantry",
+        "us_may04_regular_cavalry",
+        "us_may04_regular_artillery"
+      ],
+      "execution": "The directed 8 infantry, 1 cavalry and 1 artillery regiments use C. F. Smith's central recruiting path with unknown actual strength [I]. The 16160+997+997 minimum and 22714 maximum describe organization, not a return. No numerical new Regular army is fabricated, and the default doctrine leaves zero-known-strength recruiting units at the bureau. Common model processing/term representation remains; July 29's establishment is not another nine-regiment levy."
     }
   ]
 }

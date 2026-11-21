@@ -202,10 +202,25 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   if (history) {
     const today = formatIsoDate(dateOfDay(state.calendarStart!, state.stateDay + 1));
     const rows = world.map.world.rules.ruleSeats.principals.find((r) => r.faction === faction)?.appointments ?? [];
-    historicalAppointees.push(...new Set(rows.filter(a => 'onDate' in a && a.onDate >= today).map(a => a.person)));
+    // An effective date makes an unsent letter due. Attention can defer sending, but a refusal is final.
+    // Read only the identity of the principal's own sent letter, not its private answer or willingness.
+    const issued = (post: PostId, person: PersonId): boolean => {
+      const sent = (id: string | null | undefined): boolean => {
+        if (id == null) return false;
+        const day = Number(id.split('.')[1]);
+        if (!Number.isSafeInteger(day)) return false;
+        const expected = mintMessageId(new Set(), day, f.principal, person, `verb.appoint.${post}`);
+        return id === expected || id.startsWith(`${expected}.`);
+      };
+      return state.messagesInTransit.some(m => sent(m.id) || (m.msgTo === f.principal && sent(m.msgReport?.reportAnswers))) ||
+        Object.values(state.orderResponses).some(r => sent(r.respOrder)) ||
+        knowledgeOf(state, seatIdFor(f.principal)).knownReports.some(k => sent(k.knownBody.reportAnswers));
+    };
+    const unsent = rows.filter(a => 'onDate' in a && !issued(a.post, a.person));
+    historicalAppointees.push(...new Set(unsent.map(a => a.person)));
     historicalAppointees.sort(strictCompare);
-    for (const a of [...rows].sort((a, b) => strictCompare(a.post, b.post) || strictCompare(a.person, b.person))) {
-      if (!('onDate' in a) || a.onDate !== today || !candidates.some((p) => p.person === a.person) || inTransitTo(state, f.principal, a.post).includes('appoint')) continue;
+    for (const a of [...unsent].sort((a, b) => strictCompare(a.post, b.post) || strictCompare(a.person, b.person))) {
+      if (!('onDate' in a) || a.onDate > today || !candidates.some((p) => p.person === a.person) || inTransitTo(state, f.principal, a.post).includes('appoint')) continue;
       const template = declaredAppointment(world.map, state, world.start.temporaryPosts, a.post, faction);
       const existing = state.postStates[a.post];
       if (template === undefined && (existing === undefined || postFaction(world, state, a.post) !== faction || believedHolder(state, f.principal, a.post, losses) !== null)) continue;

@@ -48,6 +48,7 @@ import type { Effect, SituationDef } from '../situations/types.ts';
 import { fire, sendReport, type RejectionReason, type TickContext } from './context.ts';
 import { issueOrder } from './orders.ts';
 import { applyPolicy } from './policy.ts';
+import { renewableBlock } from '../recruitment/renewal.ts';
 import { issueCall } from './recruitment.ts';
 
 /** Every mechanic the situations phase counts (FOUNDATION section 11.5). */
@@ -82,6 +83,7 @@ function conditionContext(ctx: TickContext, state: State, def: SituationDef, sin
     knowledge: knowledgeOf(state, seatIdFor(principalOf(ctx, def))),
     since,
     headquartersOf: (post) => (state.postStates[post] === undefined ? null : headquartersOf(ctx.world, state, post)),
+    renewableEnlistment: r => renewableBlock(ctx.world, state, def.faction, r, ctx.day) !== undefined,
     practicesOf: (person) => ctx.world.map.world.people.find((p) => p.id === person)?.practices.map((x) => x.practice) ?? [],
   };
 }

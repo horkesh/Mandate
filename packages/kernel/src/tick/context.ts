@@ -18,7 +18,7 @@ import type { BiasTerm, ReportTruth } from '../knowledge/truth.ts';
 import { routeLatency, type LatencyMap, type RouteKind } from '../messages/latency.ts';
 import { mintMessageId, type IdMint, type Hop, type TransitMessage } from '../messages/transit.ts';
 import type { State } from '../root-state.ts';
-import type { StateForces } from '../situations/types.ts';
+import type { StateForces, EnlistmentRenewal } from '../situations/types.ts';
 import { recordFire, type Telemetry } from '../telemetry.ts';
 import { heldPost, sideOfPerson, type SideChange } from '../command/command.ts';
 import { filterPostOf, whereIsPerson } from '../seats/posts.ts';
@@ -95,6 +95,7 @@ export type Proposal =
       readonly side: FactionId | null;
       readonly succession?: { readonly from: PersonId; readonly to: PersonId };
       readonly stateForces?: StateForces;
+      readonly renewal?: EnlistmentRenewal;
       /** The situation, and the option (null: its inaction or a notice), it comes from. */
       readonly situation: SituationId;
       readonly option: string | null;

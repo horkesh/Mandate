@@ -12,7 +12,7 @@ import type { PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import type { SeatKnowledge } from '../knowledge/knowledge.ts';
 import type { State } from '../root-state.ts';
 import type { SituationRecord } from './situations.ts';
-import type { Condition, KnowsPattern } from './types.ts';
+import type { Condition, KnowsPattern, EnlistmentRenewal } from './types.ts';
 
 export interface ConditionContext {
   readonly state: State;
@@ -27,6 +27,8 @@ export interface ConditionContext {
   /** Where a post's headquarters is today (lane 0.5: derived from its force blocks); absent, nothing stands anywhere. */
   readonly headquartersOf?: (post: PostId) => RegionId | null;
   /** A person's cited practices (lane 1.5b), for `holderPractice`; absent, nobody has any. */
+  /** State-only eligibility, supplied by the simulation; never exposed as a knowledge predicate. */
+  readonly renewableEnlistment?: (renewal: EnlistmentRenewal) => boolean;
   readonly practicesOf?: (person: PersonId) => readonly string[];
 }
 
@@ -60,6 +62,7 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
   if ('knows' in c) return knowsMatch(ctx.knowledge, c.knows, ctx.since, ctx.day - (c.forDays ?? 0));
   if ('goal' in c) return ctx.state.planRecords[c.goal.post]?.planGoal.goalPosture === c.goal.posture;
   if ('headquartersAt' in c) return ctx.headquartersOf !== undefined && ctx.headquartersOf(c.headquartersAt.post) === c.headquartersAt.region;
+  if ('renewableEnlistment' in c) return ctx.renewableEnlistment?.(c.renewableEnlistment) ?? false;
   if ('callReceived' in c) {
     const { post, days } = c.callReceived;
     return Object.values(ctx.state.orderResponses).some((r) => r.respPost === post && r.respRole === 'addressee' && r.respKind === 'call' && ctx.day - r.respDay >= days);
@@ -88,7 +91,7 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
 
 /** The predicate at the top of a condition. */
 export function predicateOf(c: Condition): string {
-  for (const k of ['all', 'any', 'not', 'dayAtLeast', 'flag', 'fired', 'decided', 'knows', 'goal', 'headquartersAt', 'callReceived', 'holds', 'holderPractice', 'clockAtLeast', 'chamber', 'ledger'] as const) if (k in c) return k;
+  for (const k of ['all', 'any', 'not', 'dayAtLeast', 'flag', 'fired', 'decided', 'knows', 'goal', 'headquartersAt', 'renewableEnlistment', 'callReceived', 'holds', 'holderPractice', 'clockAtLeast', 'chamber', 'ledger'] as const) if (k in c) return k;
   return 'unknown';
 }
 

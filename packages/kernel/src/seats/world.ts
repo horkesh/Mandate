@@ -396,9 +396,10 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
     for (const arm of ['land', 'naval'] as const) for (const k of r.appointKinds[arm]) if (!kinds.has(k)) problems.push(`${at}.appointKinds.${arm}: "${k}" is not a person kind`);
     const called = new Set<string>();
     r.calls.forEach((c, j) => {
-      if (!posts.has(c.post)) problems.push(`${at}.calls[${j}].post: ${c.post} is not a start post`);
-      else if (postSides.get(c.post)?.faction !== null && postSides.get(c.post)?.faction !== r.faction) problems.push(`${at}.calls[${j}].post: ${c.post} belongs to another side at the start`);
-      const p = posts.get(c.post);
+      const p = posts.get(c.post) ?? declared.get(c.post);
+      const side = posts.has(c.post) ? postSides.get(c.post)?.faction : map.world.departments.find(d => d.id === p?.department)?.faction;
+      if (p === undefined) problems.push(`${at}.calls[${j}].post: ${c.post} is not a declared post`);
+      else if (side !== null && side !== r.faction) problems.push(`${at}.calls[${j}].post: ${c.post} belongs to another side at the start`);
       const dept = p === undefined ? undefined : map.world.departments.find((d) => d.id === p.department);
       if (p !== undefined && (!recruitment.raisingPostKinds.includes(p.kind) || (dept !== undefined && selfGoverning.has(dept.kind)))) problems.push(`${at}.calls[${j}]: ${c.post} does not raise regiments (rules.recruitment.raisingPostKinds)`);
       if (c.termDays !== null && c.termDays > recruitment.maxTermDays) problems.push(`${at}.calls[${j}]: a term of ${c.termDays} days is longer than the pack's ${recruitment.maxTermDays}`);

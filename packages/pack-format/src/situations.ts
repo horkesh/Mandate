@@ -48,6 +48,10 @@ const knows = z.strictObject({
 });
 
 /** A condition: one key names the predicate (all, any, not, dayAtLeast, flag, fired, decided, knows, goal, headquartersAt, callReceived, clockAtLeast). */
+const renewal = z.strictObject({
+  post: idOf('post'), arm: termId, regiments: positive, fromTermDays: positive, termDays: positive,
+  musteredBy: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+});
 export const ConditionSchema: z.ZodType<Condition> = z.lazy(() =>
   z.union([
     z.strictObject({ all: z.array(ConditionSchema).min(1, 'at least one condition') }),
@@ -60,6 +64,7 @@ export const ConditionSchema: z.ZodType<Condition> = z.lazy(() =>
     z.strictObject({ knows, forDays: nonNegative.optional().describe('A pack-stated deliberation interval from receipt of a matching report; omitting it requires receipt only.') }),
     z.strictObject({ goal: z.strictObject({ post: idOf('post'), posture: z.enum(phase0.POSTURES) }).describe('The post holds a goal of this posture, ordered by its principal (lane 1.2: a goal in plans, no longer a standing goal).') }),
     z.strictObject({ headquartersAt: z.strictObject({ post: idOf('post'), region: idOf('region') }) }),
+    z.strictObject({ renewableEnlistment: renewal }),
     z.strictObject({ callReceived: z.strictObject({ post: idOf('post'), days: int.min(0) }) }).describe('A call for regiments reached the holder of a post at least this many days ago (lane 1.11): a state’s act a pack-set delay after the call arrives. STAND-IN(call-received-delay; owner: 1B, conventions and legislatures).'),
     z.strictObject({ holds: z.strictObject({ post: idOf('post'), person: idOf('person') }) }).describe('The post is held today by this person (lane 1.11).'),
     z.strictObject({ holderPractice: z.strictObject({ post: idOf('post'), practice: termId }) }).describe('The post’s holder today carries this cited practice (lane 1.11, on lane 1.5b’s practices).'),
@@ -86,6 +91,7 @@ export const EffectSchema = z.union([
       ),
       reason: termId,
       succession: z.strictObject({ from: idOf('person'), to: idOf('person') }).optional(),
+      renewal: renewal.optional(),
       stateForces: z.strictObject({
         id: z.string().regex(/^[a-z][a-z0-9_]*$/), regiments: positive.nullable(), men: nonNegative.nullable(),
         arm: termId, termDays: positive.nullable(), termUnknown: z.boolean().optional(), includesCalls: z.array(termId).optional(),
@@ -567,6 +573,13 @@ export function validateSituations(items: readonly { readonly file: string; read
           else if ('decided' in c) for (const o of c.options ?? []) if (!other.options.some((x) => x.id === o)) err('unknown-reference', at, `"${o}" is not an option of ${id}`);
         }
         if ('goal' in c) ref(posts, 'post in any scenario', c.goal.post, at);
+        if ('renewableEnlistment' in c) {
+          const r = c.renewableEnlistment;
+          ref(posts, 'post in any scenario', r.post, at);
+          if (at !== 'event' || def.kind !== 'notice') err('situation-renewal', at, 'renewal eligibility is event-only for an autonomous notice');
+          if (!historicalDate.safeParse(r.musteredBy).success) err('situation-renewal', at, 'invalid original muster cutoff');
+          if (!pack.world.vocabularies.arms.some(a => a.id === r.arm && !a.naval) || r.termDays <= r.fromTermDays || r.termDays > pack.world.rules.recruitment.maxTermDays) err('situation-renewal', at, 'renewal eligibility requires a land arm and a longer valid term');
+        }
         if ('callReceived' in c) ref(posts, 'post in any scenario', c.callReceived.post, at);
         if ('headquartersAt' in c) {
           ref(posts, 'post in any scenario', c.headquartersAt.post, at);
@@ -581,7 +594,7 @@ export function validateSituations(items: readonly { readonly file: string; read
       });
     }
     for (const { at, effect } of phase0.effectsOf(def)) {
-      if ('propose' in effect && (effect.propose.stateForces !== undefined || effect.propose.owner === 'recruitment')) {
+      if ('propose' in effect && (effect.propose.stateForces !== undefined || (effect.propose.owner === 'recruitment' && effect.propose.field !== 'renew_enlistment'))) {
         const p = effect.propose;
         const entry = p.stateForces;
         const fail = (message: string) => err('situation-state-forces', `${at}.propose`, message);
@@ -598,6 +611,23 @@ export function validateSituations(items: readonly { readonly file: string; read
             const prior = pack.world.rules.ruleSeats.principals.flatMap(p => p.calls).find(c => c.id === id);
             if (prior === undefined || prior.post !== p.subject || (prior.arm ?? pack.world.rules.recruitment.arm) !== entry.arm) fail('an included call must name a pack requisition for the same post and arm');
           }
+        }
+      }
+      if ('propose' in effect && (effect.propose.renewal !== undefined || (effect.propose.owner === 'recruitment' && effect.propose.field === 'renew_enlistment'))) {
+        const p = effect.propose;
+        const r = p.renewal;
+        const fail = (message: string) => err('situation-renewal', `${at}.propose`, message);
+        if (p.owner !== 'recruitment' || p.field !== 'renew_enlistment' || r === undefined) fail('renewal belongs only to recruitment.renew_enlistment');
+        if (def.kind !== 'notice') fail('voluntary remuster is notice-only');
+        if (p.delta !== 1 || p.side !== def.faction || p.subject !== r?.post || postRaising.get(p.subject ?? '') !== 'raising') fail('renewal requires its own raising post and notice side, delta +1');
+        if (p.subject !== null && postSide.get(p.subject) !== p.side) fail('renewal cannot target another side or a neutral government');
+        if (r !== undefined) {
+          if (!pack.world.vocabularies.arms.some(a => a.id === r.arm && !a.naval) || r.termDays <= r.fromTermDays || r.termDays > pack.world.rules.recruitment.maxTermDays) fail('renewal requires a land arm and a longer term within the pack maximum');
+          let guarded = false;
+          walk(def.event, c => { if ('renewableEnlistment' in c && JSON.stringify(c.renewableEnlistment) === JSON.stringify(r)) guarded = true; });
+          // A nested disjunction or negation would not require eligibility. Require it in an all-only path.
+          const required = (c: Condition): boolean => 'renewableEnlistment' in c ? JSON.stringify(c.renewableEnlistment) === JSON.stringify(r) : 'all' in c && c.all.some(required);
+          if (!guarded || !required(def.event)) fail('renewal notice must require the identical qualifying enlistment in its event');
         }
       }
       if ('propose' in effect && effect.propose.succession !== undefined && (effect.propose.owner !== 'command' || effect.propose.field !== phase0.POST_SUCCESSION_FIELD)) err('situation-command-proposal', `${at}.propose.succession`, 'a succession payload belongs only to command.post_succession');

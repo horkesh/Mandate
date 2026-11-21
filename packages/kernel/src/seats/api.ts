@@ -176,7 +176,7 @@ export interface PrincipalMenu {
   readonly atWarSince: number | null;
   /** His doctrine (lane 1.12): what the rule-seat principal does, from the pack. */
   readonly doctrine: DoctrineView;
-  /** Rules driver only: people reserved for a sourced effective appointment today or later. */
+  /** Rules driver only: people reserved until their sourced effective appointment letter is sent. */
   readonly historicalAppointees?: readonly PersonId[];
   /** Due historical appointments, only for the rules driver; never in a human or AI menu. */
   readonly historicalAppointments?: readonly { readonly post: PostId; readonly person: PersonId; readonly routes: readonly RouteOption[] }[];

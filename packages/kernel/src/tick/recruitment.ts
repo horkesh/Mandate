@@ -29,6 +29,7 @@ import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
 import { term } from '../knowledge/truth.ts';
 import { answerOrder } from '../reading/orders.ts';
 import { callTerms, type RecruitmentRules } from '../recruitment/rules.ts';
+import { renewableBlock } from '../recruitment/renewal.ts';
 import { loyaltyOf } from '../regions/regions.ts';
 import type { State } from '../root-state.ts';
 import { postFaction } from '../seats/posts.ts';
@@ -36,7 +37,7 @@ import { fire, oversightOf, sendReport, type RejectionReason, type TickContext }
 import { answerBody, dispatchOrder } from './orders.ts';
 
 /** Every mechanic recruitment counts (FOUNDATION section 11.5). */
-export const RECRUITMENT_MECHANICS = ['recruitment.called', 'recruitment.answered', 'recruitment.slow_walked', 'recruitment.refused', 'recruitment.mustered', 'recruitment.men', 'recruitment.muster_blocked', 'recruitment.lapsed', 'recruitment.disbanded'] as const;
+export const RECRUITMENT_MECHANICS = ['recruitment.called', 'recruitment.answered', 'recruitment.slow_walked', 'recruitment.refused', 'recruitment.mustered', 'recruitment.men', 'recruitment.muster_blocked', 'recruitment.lapsed', 'recruitment.disbanded', 'recruitment.renewed'] as const;
 
 /** Whether a post answers a call: a raising kind, held, with a seat region, of a department that is not self-governing (SENSITIVE-HISTORY 3.7: no seat recruits a nation). */
 function raisingPost(ctx: TickContext, state: State, post: PostId): boolean {
@@ -79,7 +80,11 @@ export function regimentsRaised(rules: RecruitmentRules, asked: number | null, r
   if ((askedMen === null || (asked === null && askedMen === undefined)) && row.sharePermille > 0 && factor > 0) return { regiments: null, men: null, delayDays: row.delayDays, loyaltyPermille: factor };
   if (askedMen === null || (asked === null && askedMen === undefined)) return { regiments: 0, men: 0, delayDays: row.delayDays, loyaltyPermille: factor };
   const men = askedMen === undefined ? regiments! * rules.menPerRegiment : Math.trunc((Math.trunc((askedMen * row.sharePermille) / 1000) * factor) / 1000);
-  return { regiments: askedMen === undefined ? regiments : Math.ceil(men / rules.menPerRegiment), men, delayDays: row.delayDays, loyaltyPermille: factor };
+  // An explicit headcount can describe a different organization size. Preserve the known nominal quota;
+  // converting its men by the pack's default again would invent additional regiments. A positive
+  // sub-regimental remainder has unknown whole-unit count, rather than a fabricated extra regiment.
+  const nominal = askedMen === undefined || asked !== null ? (men > 0 && regiments === 0 ? null : regiments) : Math.ceil(men / rules.menPerRegiment);
+  return { regiments: nominal, men, delayDays: row.delayDays, loyaltyPermille: factor };
 }
 
 /**
@@ -242,6 +247,25 @@ export function recruitmentPhase(ctx: TickContext, start: State): State {
   for (const _ of forces.disbanded) fire(ctx, 'recruitment.disbanded');
   const moved = placeAndRemove(world.map, forces.state, placements, forces.disbanded);
   return musterAssignments(moved, [...due, ...lapsed], assign, forces.disbanded);
+}
+
+/** A notice may renew a qualifying existing unit's term; forces owns the only changed field. */
+export function renewalPhase(ctx: TickContext, start: State): State {
+  let state = start;
+  for (const p of ctx.proposals) {
+    if (p.proposal !== 'effect' || p.owner !== 'recruitment' || p.field !== 'renew_enlistment') continue;
+    const r = p.renewal;
+    const notice = ctx.world.situations.find(s => s.id === p.situation);
+    const block = r === undefined || p.side === null ? undefined : renewableBlock(ctx.world, state, p.side, r, ctx.day);
+    if (p.origin !== 'notice' || notice?.kind !== 'notice' || notice.faction !== p.side || p.option !== null ||
+      p.delta !== 1 || r === undefined || p.subject !== r.post || block === undefined) {
+      ctx.mapEvents.push({ event: 'proposal_refused', owner: 'recruitment', reason: p.reason, why: 'invalid_enlistment_renewal' });
+      continue;
+    }
+    state = applyMusters(ctx.world.map, state, [{ change: 'renew', block, day: ctx.day, fromTermDays: r.fromTermDays, termDays: r.termDays, situation: p.situation, cause: 'recruitment' }]).state;
+    fire(ctx, 'recruitment.renewed');
+  }
+  return state;
 }
 
 /** Institutional entries are proposals, never orders to a governor. Each owner applies its own part. */

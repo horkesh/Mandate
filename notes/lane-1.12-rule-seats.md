@@ -10,6 +10,8 @@ Both intermediate 148-day histories have zero rejected commands and fight at Man
 
 Proposed [I]: effective assumption dates through ordinary delivery, future rule-seat candidate reservations, guarded declared-post offensives and the explicit aggregate concentration approximation. Reject starting-side changes, date-created armies and forced junctions. Patterson's 27 July discharge remains a sourced lifecycle limitation; these appointment rows do not implement retirement. Independent review/signatures remain Claude's after 0106; nothing is signed here.
 
+S1 national follow-up supersedes the intermediate July above: sixteen additional quotas and the ordinary recruiting path change the history. McDowell vs Beauregard fights July27 and29 at90,600/40,000 and83,156/16,000 present. New workload exposed a lost exact-day appointment: an unsent sourced appointment now stays due/reserved until its letter is sent, without retrying refusal [I]. McDowell accepts May29 under actual attention/delivery. Ordinary human/AI menus are unchanged. National detail, the first failed history, correction controls and remaining pushback/source limits are retained in the S1 national section of `lane-1.14-done-check.md`.
+
 Main merged at `364aba0` on 2026-11-19, by R46. R48 starts from the committed merge at `8b15e6e`, in `C:/Pyrrhic/mandate-rule-seats-b`, branch `phase1-rule-seats-b`.
 
 ## Where lane 1.12 stopped (2026-11-20, R98)

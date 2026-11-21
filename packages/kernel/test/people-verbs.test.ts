@@ -80,7 +80,7 @@ describe('appointment to a declared temporary command (0040)', () => {
     return indexSeatsWorld(map, { ...base.start, temporaryPosts: [{ id: POST('new_command'), name: 'post.new_command', kind: 'expedition', department: toId('department', 'a_war'), parent: POST('a_office'), holder: null, region: R('a_cap'), operation: 'new_operation' }] });
   }
 
-  it('offers a dated appointment only to the rule driver on its day, without opening the post', () => {
+  it('keeps an unsent dated appointment due only for the rule driver, without opening the post', () => {
     const world = commandWorld();
     const start = createState(world, { seed: 1 });
     const offer = (state: State) => principalMenu(world, state, F('a'), morningGround(world, state, state.stateDay + 1));
@@ -88,11 +88,22 @@ describe('appointment to a declared temporary command (0040)', () => {
     const due = { ...start, stateDay: 1 };
     expect(offer(due).historicalAppointments).toEqual([expect.objectContaining({ post: POST('new_command'), person: P('a_spy') })]);
     expect(due.postStates[POST('new_command')]).toBeUndefined();
-    expect(offer({ ...due, stateDay: 2 }).historicalAppointments ?? []).toEqual([]);
+    expect(offer({ ...due, stateDay: 2 }).historicalAppointments).toEqual([expect.objectContaining({ post: POST('new_command'), person: P('a_spy') })]);
+    expect(offer({ ...due, stateDay: 2 }).historicalAppointees).toContain(P('a_spy'));
     const human = createState(world, { seed: 1, drivers: { a_lead: 'human' } });
     expect(offer({ ...human, stateDay: 1 }).historicalAppointments).toBeUndefined();
     const ai = createState(world, { seed: 1, drivers: { a_lead: 'ai' } });
     expect(offer({ ...ai, stateDay: 1 }).historicalAppointments).toBeUndefined();
+  });
+
+  it('does not offer a declined dated appointment again after its letter is answered', () => {
+    const world = commandWorld('appoint', true);
+    const run = days(world, createState(world, { seed: 1 }), 3, { 2: [{ cmd: 'appoint', post: POST('new_command'), person: P('a_spy'), rank: null, route: 'courier' }] });
+    expect(run.state.postStates[POST('new_command')]).toBeUndefined();
+    expect(run.fires('verbs.declined')).toBe(1);
+    const menu = principalMenu(world, run.state, F('a'), morningGround(world, run.state, 4));
+    expect(menu.historicalAppointments).toEqual([]);
+    expect(menu.historicalAppointees).not.toContain(P('a_spy'));
   });
 
   it('opens the command only when the appointee accepts the delivered letter, retaining other holders', () => {

@@ -128,6 +128,8 @@ const FEW_BATTLE_DAYS = 'the reference runs fight only a few battle-days (two bo
 
 /** Mechanics that fire in neither reference run: the reason, and the kernel test that proves the mechanic is alive. */
 export const QUIET: Readonly<Record<string, QuietReason>> = {
+  'planner.term.time': { why: "S1 national: neither full reference fires planner.term.time on this observed path; the named live case drives it explicitly.", test: "packages/cli/test/planner.test.ts", needle: "counts every scoring term live in some case" },
+  'recruitment.renewed': { why: 'S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal.', test: 'packages/cli/test/enlistment-renewal.test.ts', needle: 'changes only the term and renewal source' },
   'map.pocket_relieved': { why: "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening.", test: "packages/kernel/test/map-tick.test.ts", needle: "then its opening" },
   // R73: doctrine retires the generic Washington attack; the editing exercise edits every reviewed plan.
   'operations.repulsed': { why: 'no reference operation meets a field battle that drives its axis back; the kernel test drives repeated repulses', test: 'packages/kernel/test/operations.test.ts', needle: 'driven back, an axis withdraws, pauses and tries again' },
@@ -237,64 +239,64 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
  * (each pack's checkpoints.json) are independent and unchanged; these are mechanic liveness counts only.
  */
 const UNION_BANDS: Record<string, GateBand> = {
-  'planner.term.time': around(1), // S1 appointments [I]: the actual holder and headquarters change candidate geometry and which unchanged scoring terms decide a pick.
+  'planner.term.time': quiet("S1 national: neither full reference fires planner.term.time on this observed path; the named live case drives it explicitly."),
   'people.resigned': around(7),
   // R82: an integrated government notice offers one officer his choice; he stays.
   'people.stayed': around(1),
   // The bombardment of Fort Sumter: two days of fire, then Anderson's surrender, evacuated under the record's terms.
-  'combat.battle_closed': { ...around(1), why: "R97 [I]: the State-force contingents reach the northern command, so the existing summer order now meets an opposing army at the junction; the unchanged field resolver supplies these events." },
+  'combat.battle_closed': around(2), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
   'verbs.consulted': around(5),
-  'combat.battle_day': around(7), // S1 appointments [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
-  'combat.battle_opened': { ...around(1), why: "R97 [I]: the State-force contingents reach the northern command, so the existing summer order now meets an opposing army at the junction; the unchanged field resolver supplies these events." },
-  'combat.captured': { ...around(1), why: "R97 [I]: the State-force contingents reach the northern command, so the existing summer order now meets an opposing army at the junction; the unchanged field resolver supplies these events." },
-  'combat.killed_wounded': around(10), // S1 appointments [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
-  'combat.missing': around(10), // S1 appointments [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
-  'combat.occupation': around(111), // S1 effective-date [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
+  'combat.battle_day': around(4), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
+  'combat.battle_opened': around(2), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
+  'combat.captured': around(2), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
+  'combat.killed_wounded': around(4), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
+  'combat.missing': around(4), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
+  'combat.occupation': around(124), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
   'combat.pursuit_chosen': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
   'combat.surrendered': around(1),
-  'combat.withdrew': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
-  'control.changed': around(114), // S1 effective-date [I]: the command concentration and emerged field movements change occupation through the existing control owner.
+  'combat.withdrew': around(2), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
+  'control.changed': around(128), // S1 national [I]: the command concentration and emerged field movements change occupation through the existing control owner.
   'control.threshold_crossed': around(39), // S1 effective-date [I]: the command concentration and emerged field movements change occupation through the existing control owner.
-  'forces.stores_fell': around(1084), // S1 effective-date [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.
-  'forces.stores_low': around(46), // S1 appointments [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.
-  'forces.stores_refilled': around(841), // S1 effective-date [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.
-  'forces.stragglers_returned': { ...around(14), why: "R97 [I]: actual State-force contingents add supply consumers and joining journeys; field combat supplies stragglers that return through the existing forces owner." },
-  'combat.flank_broken': { ...around(1), why: "R97 [I]: the State-force contingents reach the northern command, so the existing summer order now meets an opposing army at the junction; the unchanged field resolver supplies these events." },
-  'combat.routed': { ...around(1), why: "R97 [I]: the State-force contingents reach the northern command, so the existing summer order now meets an opposing army at the junction; the unchanged field resolver supplies these events." },
+  'forces.stores_fell': around(1443), // S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.
+  'forces.stores_low': around(56), // S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.
+  'forces.stores_refilled': around(1090), // S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.
+  'forces.stragglers_returned': around(50), // S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.
+  'combat.flank_broken': quiet("S1 national: no combat.flank_broken event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses."),
+  'combat.routed': quiet("S1 national: no combat.routed event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses."),
   'combat.works_stormed': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
-  'operations.ended': around(1),
+  'operations.ended': around(2), // S1 national [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.
   'operations.opened': around(2),
-  'operations.stage': around(6), // S1 appointments [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.
-  'operations.works': { ...around(1), why: "R97 [I]: the existing summer plan now reaches field combat rather than unopposed ground; battle stages replace some of its former construction days." },
-  'orders.responses_pruned': around(23), // S1 appointments [I]: new command and transfer responses alter the ordinary retained/pruned response set.
-  'reports.battle_dispatch': around(42), // S1 appointments [I]: new command locations, field phases and routed traffic change reports through existing senders.
-  'reports.casualty_return': around(18), // S1 appointments [I]: new command locations, field phases and routed traffic change reports through existing senders.
-  'reports.governor_wire': around(7), // S1 appointments [I]: new command locations, field phases and routed traffic change reports through existing senders.
+  'operations.stage': around(9), // S1 national [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.
+  'operations.works': around(2), // S1 national [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.
+  'orders.responses_pruned': around(27), // S1 national [I]: new command and transfer responses alter the ordinary retained/pruned response set.
+  'reports.battle_dispatch': around(18), // S1 national [I]: new command locations, field phases and routed traffic change reports through existing senders.
+  'reports.casualty_return': around(12), // S1 national [I]: new command locations, field phases and routed traffic change reports through existing senders.
+  'reports.governor_wire': around(4), // S1 national [I]: new command locations, field phases and routed traffic change reports through existing senders.
   'reports.pocket': { ...around(3), why: "R97 [I]: the field engagement adds hour-stamped battle dispatches and casualty returns; the new movements and pocket changes generate their ordinary reports." },
   'map.pocket_closed': around(3), // S1 effective-date [I]: changed command journeys, occupation and retreat require the existing map owner to recompute.
-  'knowledge.pruned_age': around(106), // S1 effective-date [I]: additional command letters and changed field reports alter ordinary received traffic and age pruning.
+  'knowledge.pruned_age': around(107), // S1 national [I]: additional command letters and changed field reports alter ordinary received traffic and age pruning.
   'knowledge.pruned_superseded': around(146),
   'map.pocket_relieved': quiet("S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening."),
-  'map.recomputed': around(51), // S1 effective-date [I]: changed command journeys, occupation and retreat require the existing map owner to recompute.
-  'messages.courier_delay': around(125), // S1 effective-date [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
-  'messages.mail_delay': around(2689), // S1 appointments [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
-  'messages.delivered': around(11084), // S1 effective-date [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
-  'messages.sent': around(11755), // S1 effective-date [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
+  'map.recomputed': around(52), // S1 national [I]: changed command journeys, occupation and retreat require the existing map owner to recompute.
+  'messages.courier_delay': around(126), // S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
+  'messages.mail_delay': around(2703), // S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
+  'messages.delivered': around(11226), // S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
+  'messages.sent': around(11894), // S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
   'messages.special_messenger': quiet('the one bypass uses the faster zero-day wire instead of a three-day messenger (R78)'),
   'orders.bypassed': around(4),
-  'movement.arrived': around(544), // S1 effective-date [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
-  'movement.leg_started': around(231), // S1 effective-date [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
+  'movement.arrived': around(638), // S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
+  'movement.leg_started': around(310), // S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
   'orders.obeyed': around(3),
   'orders.relay_held': around(1),
   'orders.relay_objected': around(3),
-  'orders.relayed': around(1),
-  'plans.goal_reached': around(1),
+  'orders.relayed': around(4), // S1 national [I]: new command and transfer responses alter the ordinary retained/pruned response set.
+  'plans.goal_reached': around(2), // S1 national [I]: the integrated sourced build changes this existing counter through its normal owner.
   'politics.adjourned': around(1),
   'politics.front_page': around(63),
-  'politics.support': { ...around(67), why: "R97 [I]: the emerged field battle and its casualty reports reach editors and change ordinary press effects; no troop notice directly changes support." },
+  'politics.support': around(85), // S1 national [I]: the emerged field movements and reports change ordinary political inputs; no troop notice directly writes support.
   'politics.opened': around(2),
-  'regions.self_emancipation': around(3089), // S1 appointments [I]: the changed Union positions change the existing derived lines/arrival process, without a new policy effect.
-  'regions.reached_lines': around(261), // S1 appointments [I]: the changed Union positions change the existing derived lines/arrival process, without a new policy effect.
+  'regions.self_emancipation': around(3097), // S1 national [I]: the changed Union positions change the existing derived lines/arrival process, without a new policy effect.
+  'regions.reached_lines': around(274), // S1 national [I]: the changed Union positions change the existing derived lines/arrival process, without a new policy effect.
   'seats.choices': around(2),
   'planner.candidates': around(2),
   'planner.searches': around(2),
@@ -324,22 +326,22 @@ const UNION_BANDS: Record<string, GateBand> = {
   'command.government_established': around(1),
   'command.post_succeeded': around(1),
   'command.government_closed': around(2),
-  'command.temporary_post_opened': around(6), // S1 appointments [I]: accepted dated appointments open the declared commands through the ordinary verb, without creating forces.
+  'command.temporary_post_opened': around(7), // S1 national [I]: accepted dated appointments open the declared commands through the ordinary verb, without creating forces.
   'situations.resurfaced': around(2),
   'situations.staff_lines': around(18),
   'situations.surfaced': { ...around(61), why: "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle." },
-  'recruitment.called': { ...around(78), why: "R97: seven State-act notices replace eleven governor transfer requisitions; fewer ordinary calls therefore reach compliance. Ordinary calls, thresholds, quota conversion and delays are unchanged." },
-  'recruitment.answered': { ...around(50), why: "R97: seven State-act notices replace eleven governor transfer requisitions; fewer ordinary calls therefore reach compliance. Ordinary calls, thresholds, quota conversion and delays are unchanged." },
-  'recruitment.slow_walked': { ...around(46), why: "R97: seven State-act notices replace eleven governor transfer requisitions; fewer ordinary calls therefore reach compliance. Ordinary calls, thresholds, quota conversion and delays are unchanged." },
-  'recruitment.refused': { ...around(28), why: "R97: seven State-act notices replace eleven governor transfer requisitions; fewer ordinary calls therefore reach compliance. Ordinary calls, thresholds, quota conversion and delays are unchanged." },
-  'recruitment.mustered': { ...around(39), why: "R96: R90's additional absolute requisitions and transfer entries use the existing raising path, producing 39 musters including four unknown-strength blocks" },
-  'recruitment.men': around(19),
+  'recruitment.called': around(97), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
+  'recruitment.answered': around(61), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
+  'recruitment.slow_walked': around(55), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
+  'recruitment.refused': around(36), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
+  'recruitment.mustered': around(50), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
+  'recruitment.men': around(46), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
   'recruitment.disbanded': around(15),
   'ladder.moved': around(10),
   'ladder.rival': notHere("no holder reaches a rival rung with the required standing in the merged 148-day history run; the testbed run fires it"),
   'people.grievances_faded': around(30),
   'seats.attention_refilled': around(21),
-  'seats.attention_spent': around(98), // S1 appointments [I]: appointments, normal transfers and changed battle days consume attention and decision requests.
+  'seats.attention_spent': around(130), // S1 national [I]: appointments, normal transfers and changed battle days consume attention and decision requests.
   'seats.initiative': around(9),
   'operations.repulsed': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
   'forces.landed_by_situation': around(1),
@@ -353,15 +355,15 @@ const UNION_BANDS: Record<string, GateBand> = {
   'reports.commander_lost': quiet('Anderson evacuates under terms on day 39 and keeps serving; no commander is lost (R78)'),
   'combat.evacuated': { minFires: 1, maxFires: 1 },
   'map.pocket_lost': around(1),
-  'seats.battle_orders': around(64), // S1 appointments [I]: appointments, normal transfers and changed battle days consume attention and decision requests.
-  'movement.joined': around(54), // S1 appointments [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
-  'verbs.answered': around(75), // S1 effective-date [I]: dated appointments and ordinary concentration transfers add their normal answers.
+  'seats.battle_orders': around(60), // S1 national [I]: appointments, normal transfers and changed battle days consume attention and decision requests.
+  'movement.joined': around(64), // S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
+  'verbs.answered': around(88), // S1 national [I]: dated appointments and ordinary concentration transfers add their normal answers.
   'verbs.declined': notHere("every army asked in the merged history run answers; recruitment refusals are counted separately; the testbed run fires it"),
 };
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
 const TESTBED_BANDS: Record<string, GateBand> = {
-  'planner.term.time': quiet("Unchanged testbed has no such deciding event; the S1 Union reference now drives this mechanic."),
+  'planner.term.time': quiet("S1 national: neither full reference fires planner.term.time on this observed path; the named live case drives it explicitly."),
   'people.resigned': notHere('the testbed reference pack has no service-choice records; union-1861 fires it, and resignation.test.ts drives the government path'),
   'people.stayed': notHere('the testbed reference pack has no service-choice records; union-1861 fires it when an officer stays after his government joins'),
   'verbs.consulted': quiet('the testbed history resolves its situations before a morning consultation; the Union history consults the open question’s proposers (R84)'),

@@ -1,0 +1,62 @@
+{
+  "id": "minnesota_first_remuster",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.minnesota_first_remuster.title",
+  "text": "situation.minnesota_first_remuster.text",
+  "earliest": "1861-05-11",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 67
+      },
+      {
+        "renewableEnlistment": {
+          "post": "st_gov_minnesota",
+          "arm": "infantry",
+          "regiments": 1,
+          "fromTermDays": 90,
+          "termDays": 1095,
+          "musteredBy": "1861-05-11"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "renew_enlistment",
+        "subject": "st_gov_minnesota",
+        "delta": 1,
+        "reason": "voluntary-remuster",
+        "side": "union",
+        "renewal": {
+          "post": "st_gov_minnesota",
+          "arm": "infantry",
+          "regiments": 1,
+          "fromTermDays": 90,
+          "termDays": 1095,
+          "musteredBy": "1861-05-11"
+        }
+      }
+    }
+  ],
+  "report": {
+    "authors": [
+      "st_gov_minnesota"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Voluntary military re-enlistment and service credit only; no policy concerning slavery, civilians, security, protected populations or an institution whose conduct requires a gate placement."
+  },
+  "citations": [
+    {
+      "source": "MN-FIRST-1916",
+      "at": "p.17: May 4 suggestion, May 10 officer tender, voluntary May 11 remuster, original April 29 service credit, replacements for men declining. Retrospective regimental history. [I] A qualifying surviving one-regiment levy retains its existing model muster credit and aggregate men. No individual consent fraction, replacement count, new regiment or forced April 29 muster is invented."
+    }
+  ],
+  "namedOnly": "The regiment's voluntary remuster is reported; no individual's words or decision are attributed."
+}

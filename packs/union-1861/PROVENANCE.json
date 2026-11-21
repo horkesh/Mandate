@@ -1670,6 +1670,16 @@
       "copyUsed": "https://archive.org/download/generalordersofw00unit/generalordersofw00unit_djvu.txt; GO12 p.31, GO16 pp.36-40 (p.40 scanned table visually checked), GO26 p.61, GO46 pp.83-84, July 29 act section 5 p.101. Read entries retained in C:/Pyrrhic/mandate-research-sources/S1/.",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "MN-FIRST-1916",
+      "title": "History of the First Regiment Minnesota Volunteer Infantry, 1861-1864 (Stillwater: Easton & Masterman, 1916)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/download/historyoffirstre00minn/historyoffirstre00minn_djvu.txt; printed p.17 read for the voluntary May 11 remuster, credited from April 29; retrospective regimental history, not a newly verified May 1861 muster roll. Retained in C:/Pyrrhic/mandate-research-sources/S1/first-minnesota-history.txt.",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

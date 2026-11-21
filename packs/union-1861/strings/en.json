@@ -428,5 +428,9 @@
   "situation.arkansas_forces_transferred.title": "Arkansas transfers its forces",
   "situation.arkansas_forces_transferred.text": "Arkansas’s military board transfers the consenting state troops under the articles of 15 July: seven infantry regiments, one cavalry regiment, a cavalry battalion and five artillery companies. The articles retain the state’s clothing obligation for the men’s existing enlistments.",
   "situation.tennessee_military_league.title": "Tennessee’s military league",
-  "situation.tennessee_military_league.text": "Tennessee’s military league of 7 May places its military forces and operations under the Confederate President’s direction, subject to ratification by both governments. The agreement supplies authority rather than a count of troops."
+  "situation.tennessee_military_league.text": "Tennessee’s military league of 7 May places its military forces and operations under the Confederate President’s direction, subject to ratification by both governments. The agreement supplies authority rather than a count of troops.",
+  "post_kind.recruiting_office": "Recruiting office",
+  "situation.minnesota_first_remuster.title": "The First Minnesota re-enlists",
+  "situation.minnesota_first_remuster.text": "The First Minnesota has re-enlisted for three years, with service credited from its original muster.",
+  "reason.voluntary-remuster": "Voluntary re-enlistment"
 }

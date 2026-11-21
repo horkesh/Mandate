@@ -1,6 +1,6 @@
 /**
  * New blocks and their enlistments (lane 1.7; FOUNDATION section 12 row 1.7): `forces` creates a block a governor's
- * regiments muster into, and disbands one whose men's term has run out (the ninety-day men).
+ * regiments muster into, renews a sourced voluntary term without adding men, and disbands one whose men's term has run out (the ninety-day men).
  *
  * One recruitment proposal makes each block, applied in one phase (`tick/recruitment.ts`): `forces` creates it here
  * (its strength, stores and enlistment), `movement` places it at its muster region and `command` assigns it to the
@@ -26,10 +26,12 @@ export interface Enlistment {
   readonly enlRegiments: number | null;
   /** Model service-entry day; an institutional transfer does not assert a new historical enlistment. */
   readonly enlMusterDay: number;
-  /** Fixed expiry, or null for war service or an explicitly unknown original expiry. */
+  /** Current fixed expiry, or null for war service or an explicitly unknown original expiry. */
   readonly enlEndsDay: number | null;
   /** Present for an institutional entry; enlCall then identifies the act, not a dispatched call. */
   readonly enlSourceAct?: SituationId;
+  /** The voluntary remuster's source; the original call, source and service credit stay intact. */
+  readonly enlRenewedBy?: SituationId;
   /** A null expiry whose original date is unknown, rather than known war service. */
   readonly enlTermUnknown?: boolean;
   readonly enlCallId?: string;
@@ -50,10 +52,11 @@ export interface NewBlock {
 }
 
 /**
- * `create` and `disband`: the changes recruitment proposes for `forces` (the proposer `OWNED_FIELDS` lists). Lane 1.12: a
+ * `create`, `quantify`, `renew` and `disband`: the changes recruitment proposes for `forces` (the proposer `OWNED_FIELDS` lists). Lane 1.12: a
  * garrison evacuated under the record's terms after a bombardment leaves play by the same disbanding, with its own cause.
  */
 export type MusterDelta = { readonly change: 'create'; readonly create: NewBlock; readonly cause: 'recruitment' }
+  | { readonly change: 'renew'; readonly block: ForceBlockId; readonly day: number; readonly fromTermDays: number; readonly termDays: number; readonly situation: SituationId; readonly cause: 'recruitment' }
   | { readonly change: 'quantify'; readonly block: ForceBlockId; readonly men: number; readonly regiments: number | null; readonly cause: 'recruitment' }
   | { readonly change: 'disband'; readonly block: ForceBlockId; readonly cause: 'recruitment' | 'evacuated_under_terms' };
 
@@ -83,7 +86,7 @@ function blockState(b: NewBlock, condition: BlockCondition): ForceBlockState {
 }
 
 /**
- * Apply recruitment's creations and disbandings, in order: the only way a block comes to be or ceases in play. A block
+ * Apply recruitment's creations, quantified returns, term renewals and disbandings in order. A block
  * created must be new; a block disbanded must exist, and its detachments go with it. Returns the blocks created and
  * disbanded (detachments included), in id order.
  */
@@ -94,6 +97,17 @@ export function applyMusters(map: WorldIndex, state: State, deltas: readonly Mus
   const created: ForceBlockId[] = [];
   const disbanded: ForceBlockId[] = [];
   for (const d of deltas) {
+    if (d.change === 'renew') {
+      const b = blocks[d.block];
+      const e = enlistments[d.block];
+      if (b === undefined || e === undefined || b.fbSurrenderedDay !== null || b.fbStrength === 0 ||
+        e.enlEndsDay === null || e.enlTermUnknown === true || e.enlEndsDay <= d.day ||
+        e.enlEndsDay - e.enlMusterDay !== d.fromTermDays || !Number.isSafeInteger(d.termDays) || d.termDays <= d.fromTermDays || d.termDays > map.world.rules.recruitment.maxTermDays) {
+        throw new ForcesError([`invalid term renewal for ${d.block}`]);
+      }
+      enlistments[d.block] = { ...e, enlEndsDay: e.enlMusterDay + d.termDays, enlRenewedBy: d.situation };
+      continue;
+    }
     if (d.change === 'quantify') {
       const b = blocks[d.block];
       const e = enlistments[d.block];

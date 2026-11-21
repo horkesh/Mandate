@@ -2,6 +2,12 @@
 
 Branch `phase1-men-regions`, from `main` at 2e4655b, with main merged in after lanes 1.3 and 1.8b landed (no rebase). Built to FOUNDATION section 12 row 1.7 (0073) and the lead's brief. The standing reviewer approved it (`review-lane-1.7.md`); its re-check covers the merge and the fixes below. The gate reviewer reads the gated parts (the self-emancipation term, arrivals State, the census input) against lane 1.8b's merged register.
 
+## Current S1 enlistment integration (2026-11-21)
+
+R97 and the five requested merges are committed on `sprint/1a`. S1 adds sixteen sourced national volunteer quotas (56 regiments), guarded declared Regular recruiting with three arms and unknown actual men, and a notice-only voluntary whole-unit remuster. `forces` remains the single enlistment writer; renewal preserves original call/source/muster credit and men, with separate optional renewal provenance. No remuster or institutional transfer is a new border governor levy. The Minnesota notice creates nothing when the original call is refused, as in the current history. Aggregate consent/replacement remains a named1B stand-in. Foundation/ownership, schema and conservation/save/refusal regressions accompany it.
+
+Corrected July history: McDowell vs Beauregard at Manassas July27 and29;90,600/40,000 then83,156/16,000 present. National checkpoints pass; the same five pushback criteria remain unmet. Actual Regular requests reach Smith but he objects; fictional positive controls verify that accepted unknown-strength recruiting calls can muster. The legal organization is never reported as men enlisted. Detailed sources, limits, tests, proposed rulings and evidence are in the S1 national section of `lane-1.14-done-check.md`. The fourth Charleston strength remains a source HOLD; independent review remains deferred by0106.
+
 ## The answer
 
 Block creation is one proposal applied in one phase, with no second owner. The recruitment phase (`tick/recruitment.ts`, phase 2d) builds one proposal per block. Each owner then applies its own part, writing only its own field:

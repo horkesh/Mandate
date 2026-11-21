@@ -106,6 +106,10 @@ export function situationReferenceProblems(defs: readonly SituationDef[], refs: 
     });
     for (const { at: where, condition } of conditionsOf(d)) {
       walk(condition, (c) => {
+        if ('renewableEnlistment' in c) {
+          if (!refs.posts.has(c.renewableEnlistment.post)) at(where, `${c.renewableEnlistment.post} is not a post`);
+          if (where !== 'event' || d.kind !== 'notice') at(where, 'renewal eligibility is event-only for a notice');
+        }
         if ('goal' in c && !refs.posts.has(c.goal.post)) at(where, `${c.goal.post} is not a post`);
         if ('headquartersAt' in c) {
           if (!refs.posts.has(c.headquartersAt.post)) at(where, `${c.headquartersAt.post} is not a post`);

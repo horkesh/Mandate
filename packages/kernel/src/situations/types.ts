@@ -74,6 +74,8 @@ export type Condition =
    * state's act a pack-set delay after the call arrives. STAND-IN(call-received-delay; owner: 1B, conventions and legislatures):
    * a run where the call comes late moves the act with it.
    */
+  /** Event-only: an existing live unit qualifies for a sourced voluntary term renewal. */
+  | { readonly renewableEnlistment: EnlistmentRenewal }
   | { readonly callReceived: { readonly post: PostId; readonly days: number } }
   /** The post's holder today is this person (lane 1.11: the post-holder check). */
   | { readonly holds: { readonly post: PostId; readonly person: PersonId } }
@@ -117,6 +119,7 @@ export type Effect =
         readonly succession?: { readonly from: PersonId; readonly to: PersonId };
         /** A state's already raised forces, entering service by its own institutional act. */
         readonly stateForces?: StateForces;
+        readonly renewal?: EnlistmentRenewal;
       };
     }
   /**
@@ -124,6 +127,17 @@ export type Effect =
    * edge from the ship. `forces` applies it, or refuses it with a typed reason, in phase 4c beside `command`'s proposals.
    */
   | { readonly landing: { readonly parent: ForceBlockId; readonly men: number; readonly region: RegionId } };
+
+/** A whole existing regiment's voluntary remuster; no new men or unit are asserted. */
+export interface EnlistmentRenewal {
+  readonly post: PostId;
+  readonly arm: string;
+  readonly regiments: number;
+  readonly fromTermDays: number;
+  readonly termDays: number;
+  /** The source's last eligible original muster date, not the remuster date. */
+  readonly musteredBy: string;
+}
 
 export interface StateForces {
   /** Stable identity, also used by a later quantified return for the same contingent. */

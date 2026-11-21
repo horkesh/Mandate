@@ -22,12 +22,14 @@ describe('R89: Butler’s superior command, with Dimick’s garrison retained', 
     expect(row![0]!.source).toContain('94-95');
     expect(row![0]!.source).toContain('648');
     const on21May = { ...start, stateDay: 76, situationFlags: { war_begun_union: 41 } };
-    expect(request(on21May).menu).not.toHaveProperty('historicalAppointments.0');
+    const early = request(on21May).menu;
+    if (early.menuKind !== 'principal') throw Error('expected principal menu');
+    expect(early.historicalAppointments?.some(a => a.post === department)).toBe(false);
     expect(on21May.postStates[department]).toBeUndefined();
     const on22May = { ...on21May, stateDay: 77 };
     const answer = createRuleSeat().respond(request(on22May));
     if (answer.answerKind !== 'commands') throw Error('expected principal commands');
-    const appointments = answer.commands.filter((c) => c.cmd === 'appoint');
+    const appointments = answer.commands.filter((c) => c.cmd === 'appoint' && c.post === department);
     expect(appointments).toEqual([{ cmd: 'appoint', post: department, person: person('butler_benjamin_f'), rank: null, route: 'courier' }]);
     const result = phase0.tick(world, on22May, appointments.map((command) => ({ day: 78, seat: lincoln, command })), { freeze: true });
     expect(result.rejections).toEqual([]);
@@ -36,7 +38,7 @@ describe('R89: Butler’s superior command, with Dimick’s garrison retained', 
     expect(result.state.postStates[fort]!.postHolder).toBe(person('dimick_justin'));
     const next = request(result.state);
     if (next.menu.menuKind !== 'principal') throw Error('expected principal menu');
-    expect(next.menu.historicalAppointments).toEqual([]);
+    expect(next.menu.historicalAppointments?.some(a => a.post === department)).toBe(false);
   });
 
   it('offers no automatic appointment to a human or AI principal, and no notice creates the command', () => {
