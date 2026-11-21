@@ -2,6 +2,21 @@
 
 Branch `phase1-men-regions`, from `main` at 2e4655b, with main merged in after lanes 1.3 and 1.8b landed (no rebase). Built to FOUNDATION section 12 row 1.7 (0073) and the lead's brief. The standing reviewer approved it (`review-lane-1.7.md`); its re-check covers the merge and the fixes below. The gate reviewer reads the gated parts (the self-emancipation term, arrivals State, the census input) against lane 1.8b's merged register.
 
+
+## S1 final enlistment delivery (2026-11-21)
+
+S1's integration, build and test changes are committed through the real hook; final calibration and closeout are proposed for review under 0106. The complete default eight-seed verification with drafting passes all five non-timing Phase 0 criteria. 1A is 4/6, still unmet for pushback and D6; timing remains S2's. Retain ordinary complyAt 10 as a proposed partial improvement: reservations fall from 101 to 16, still above 9. InitiativeAt stays 150 and every sourced band is unchanged. The eight-comparison budget is spent; there is no ninth run. Final Manassas is McDowell against Beauregard on July 27 and 29, with 90,600/40,000 and 83,156/16,000 men present. These are model outputs.
+
+The default sweep's 0/8 return-best result does not clear D6: its grievance channel is missing and all 24 strict border-levy chains remain unexercised. Transfer and remuster cannot count as a new governor levy. The fourth Charleston source count and Patterson discharge lifecycle remain held. Saunders's correct Union value is now grounded in his Iowa home under 0055, with a read 1880 official directory citation. Only his source metadata changes after the frozen measurement, with full World equivalence proof. No starting-side exception or other cast values were introduced.
+
+All eight public console tests pass, including actual July battle existence and separate chronology. Full sources, per-build tables, exact eight comparisons, verdict/recommendations and preservation evidence are at the top of `lane-1.14-done-check.md`. Older stopping points below are superseded by that delivery. Independent review and signatures remain Claude's; no accepted ruling is recorded here.
+
+## Current S1 enlistment integration (2026-11-21)
+
+R97 and the five requested merges are committed on `sprint/1a`. S1 adds sixteen sourced national volunteer quotas (56 regiments), guarded declared Regular recruiting with three arms and unknown actual men, and a notice-only voluntary whole-unit remuster. `forces` remains the single enlistment writer; renewal preserves original call/source/muster credit and men, with separate optional renewal provenance. No remuster or institutional transfer is a new border governor levy. The Minnesota notice creates nothing when the original call is refused, as in the current history. Aggregate consent/replacement remains a named1B stand-in. Foundation/ownership, schema and conservation/save/refusal regressions accompany it.
+
+Corrected July history: McDowell vs Beauregard at Manassas July27 and29;90,600/40,000 then83,156/16,000 present. National checkpoints pass; the same five pushback criteria remain unmet. Actual Regular requests reach Smith but he objects; fictional positive controls verify that accepted unknown-strength recruiting calls can muster. The legal organization is never reported as men enlisted. Detailed sources, limits, tests, proposed rulings and evidence are in the S1 national section of `lane-1.14-done-check.md`. The fourth Charleston strength remains a source HOLD; independent review remains deferred by0106.
+
 ## The answer
 
 Block creation is one proposal applied in one phase, with no second owner. The recruitment phase (`tick/recruitment.ts`, phase 2d) builds one proposal per block. Each owner then applies its own part, writing only its own field:
@@ -292,3 +307,7 @@ Imported R97 here on `sprint/1a`, retaining R98's separate command/concentration
 ### Findings outside my scope
 
 The missing complete national allocation, Regular recruitment and sourced opening strength remain S1's next build work. The prior R97 source/expiry limits remain explicit. Independent review and all gate signatures remain with Claude after the sprint.
+
+## Findings outside my scope
+
+1A remains unmet; see the S1 final verdict in `lane-1.14-done-check.md`. The lead owns deferred review/rulings and unavailable review-ID reconciliation. S2 owns the integrated timing problem;1 Bowns grievance consequences and individual service/consent. The fourth Charleston strength, discharge lifecycle, filter-role source and strict new-border-levy chain remain bounded follow-ups. No other lane's files or branch was written.

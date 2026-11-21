@@ -1,31 +1,87 @@
 [
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.5-people-verbs.md",
     "line": 125,
     "needle": "### One measured comparison"
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.14-done-check.md",
-    "line": 17,
+    "line": 100,
     "needle": "Merge 3 preserves"
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.14-done-check.md",
-    "line": 33,
+    "line": 106,
+    "needle": "The first merge-5 hook stopped"
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 106,
+    "needle": "The first merge-5 hook stopped"
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 160,
     "needle": "Proposed rulings: retain"
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.14-done-check.md",
-    "line": 21,
+    "line": 104,
     "needle": "Merge 5 is the read R93"
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 20,
+    "needle": "The closeout commit carries ordinary"
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 68,
+    "needle": "The four Charleston requests yielded"
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 70,
+    "needle": "The national path covers"
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 84,
+    "needle": "Proposed rulings [I]: retain 10"
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 78,
+    "needle": "The test-gap commit"
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 72,
+    "needle": "A closeout source audit corrected"
   },
   {
     "branch": "desk",
@@ -330,1057 +386,1505 @@
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "docs/design/FOUNDATION.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "docs/research/2026-11-14-union-information-flows.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "docs/research/2026-11-20-northern-virginia-concentration.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "docs/research/_combat/assault-contact-probe.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.12-rule-seats.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.14-done-check.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.3-combat.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.5-people-verbs.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.7-men-regions.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/cli/src/desk/render.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/cli/src/liveness-gate.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/cli/test/bombardment.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/cli/test/calls-schedule.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/cli/test/concentration.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packages/cli/test/console-session.test.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packages/cli/test/enlistment-renewal.test.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/cli/test/fixtures/saves/testbed-seats-day40.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/cli/test/men-regions.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packages/cli/test/recruiting-office.test.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/cli/test/state-forces.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/cli/test/union-opening.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/cli/test/war-gate.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/combat/battle.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/combat/bombard.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/combat/records.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/combat/shape.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/command/command.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/command/levies.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/forces/enlistment.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/log/commands.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/log/log.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/log/session.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/messages/latency.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/messages/transit.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/ownership.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/people/verb-rules.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/proxy/responses.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packages/kernel/src/recruitment/renewal.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/seats/api.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/seats/requests.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/seats/world.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packages/kernel/src/situations/conditions.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packages/kernel/src/situations/references.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/situations/types.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/tick/bombard.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/tick/context.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/tick/orders.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/tick/people-week.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/tick/recruitment.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packages/kernel/src/tick/situations.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/tick/tick.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/tick/verbs.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/world/scenario.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/world/world.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/test/bombard.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packages/kernel/test/capitals.test.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/test/command-establishment.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packages/kernel/test/declared-recruiting.test.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/test/people-verbs.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/test/support/map-fixture.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/pack-format/schemas/pack.schema.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/pack-format/schemas/situation.schema.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/pack-format/schemas/world.schema.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/pack-format/src/schemas.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/pack-format/src/situations.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packages/pack-format/test/renewal-validation.test.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/pack-format/test/state-forces.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/pack-format/test/support/fixture.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/pack-format/test/validate.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/rule-seats/src/index.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/rule-seats/test/rule-seats.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/testbed/data/world.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/testbed/pack.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/PROVENANCE.json",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/calls-1861.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/data/scenarios/march_1861.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/data/strings/en.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/data/world.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/pack.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/arkansas_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/situations/minnesota_first_remuster.json",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/north_carolina_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/tennessee_forces_return.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/tennessee_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/tennessee_military_league.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/virginia_forces_return.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/virginia_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/source/scenarios/march_1861/force_blocks.csv",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/source/scenarios/march_1861/holders.csv",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/source/scenarios/march_1861/posts.csv",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/source/scenarios/march_1861/temporary_posts.csv",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/source/world/people.csv",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/strings/en.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/test/butler-appointment.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/test/calls-1861.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/test/charleston-strengths.test.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/test/dated-appointments.test.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/test/national-enlistment.test.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/test/northern-concentration.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/test/record-terms.test.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/test/resignation.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/test/state-forces.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/test/world-v2.test.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "vitest.config.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.7-men-regions.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.7-men-regions.md",
-    "line": 101,
+    "line": 116,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
-    "path": "notes/lane-1.7-men-regions.md",
-    "line": 1,
-    "needle": null
-  },
-  {
-    "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
-    "path": "notes/lane-1.7-men-regions.md",
-    "line": 102,
-    "needle": null
-  },
-  {
-    "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.7-men-regions.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.7-men-regions.md",
-    "line": 103,
+    "line": 117,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
-    "path": "notes/lane-1.7-men-regions.md",
-    "line": 1,
-    "needle": null
-  },
-  {
-    "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
-    "path": "notes/lane-1.7-men-regions.md",
-    "line": 104,
-    "needle": null
-  },
-  {
-    "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.7-men-regions.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.7-men-regions.md",
-    "line": 214,
+    "line": 118,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
-    "path": "notes/lane-1.7-men-regions.md",
-    "line": 1,
-    "needle": null
-  },
-  {
-    "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
-    "path": "notes/lane-1.7-men-regions.md",
-    "line": 215,
-    "needle": null
-  },
-  {
-    "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.7-men-regions.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.7-men-regions.md",
-    "line": 216,
+    "line": 119,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.7-men-regions.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.7-men-regions.md",
-    "line": 217,
+    "line": 229,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.7-men-regions.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.7-men-regions.md",
+    "line": 230,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.7-men-regions.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.7-men-regions.md",
+    "line": 231,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.7-men-regions.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.7-men-regions.md",
+    "line": 232,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.12-rule-seats.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.12-rule-seats.md",
-    "line": 536,
+    "line": 557,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
-    "path": "notes/lane-1.12-rule-seats.md",
-    "line": 1,
-    "needle": null
-  },
-  {
-    "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
-    "path": "notes/lane-1.12-rule-seats.md",
-    "line": 537,
-    "needle": null
-  },
-  {
-    "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.12-rule-seats.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.12-rule-seats.md",
-    "line": 538,
+    "line": 558,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.12-rule-seats.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.12-rule-seats.md",
+    "line": 559,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.5-people-verbs.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.5-people-verbs.md",
     "line": 125,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.5-people-verbs.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.5-people-verbs.md",
     "line": 139,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.14-done-check.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.14-done-check.md",
-    "line": 17,
+    "line": 100,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
-    "path": "notes/lane-1.14-done-check.md",
-    "line": 1,
-    "needle": null
-  },
-  {
-    "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
-    "path": "notes/lane-1.14-done-check.md",
-    "line": 23,
-    "needle": null
-  },
-  {
-    "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.14-done-check.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.14-done-check.md",
-    "line": 33,
+    "line": 106,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.14-done-check.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.14-done-check.md",
-    "line": 21,
+    "line": 160,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 104,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 20,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 68,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 70,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 84,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 78,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 72,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 45,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 46,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 47,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 48,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 49,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 50,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 51,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 52,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 53,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 54,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 55,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "notes/lane-1.14-done-check.md",
+    "line": 56,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.12-rule-seats.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.14-done-check.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.3-combat.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.5-people-verbs.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.7-men-regions.md",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/seats/requests.ts",
     "line": 148,
     "needle": "export function principalMenu"
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/test/command-establishment.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/tick/recruitment.ts",
-    "line": 193,
+    "line": 198,
     "needle": "export function recruitmentPhase"
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/cli/test/state-forces.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "notes/lane-1.7-men-regions.md",
-    "line": 212,
+    "line": 227,
     "needle": "### Proposed rulings and limits"
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/test/state-forces.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/src/combat/bombard.ts",
     "line": 121,
     "needle": "export function bombardRecords"
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packages/kernel/test/bombard.test.ts",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/test/dated-appointments.test.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packages/cli/test/enlistment-renewal.test.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packages/kernel/src/recruitment/renewal.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/test/charleston-strengths.test.ts",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/arkansas_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/arkansas_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/arkansas_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/situations/minnesota_first_remuster.json",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/situations/minnesota_first_remuster.json",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+    "path": "packs/union-1861/situations/minnesota_first_remuster.json",
+    "line": 1,
+    "needle": null
+  },
+  {
+    "branch": "1a",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/north_carolina_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/north_carolina_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/north_carolina_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/tennessee_forces_return.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/tennessee_forces_return.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/tennessee_forces_return.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/tennessee_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/tennessee_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/tennessee_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/tennessee_military_league.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/tennessee_military_league.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/tennessee_military_league.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/virginia_forces_return.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/virginia_forces_return.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/virginia_forces_return.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/virginia_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/virginia_forces_transferred.json",
     "line": 1,
     "needle": null
   },
   {
     "branch": "1a",
-    "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "path": "packs/union-1861/situations/virginia_forces_transferred.json",
     "line": 1,
     "needle": null

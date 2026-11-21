@@ -1,6 +1,6 @@
 # sprint/research-cast: review packet
 
-Pinned remote tip: `4d475c2e0b4ac8682262d5fe031493aa211a9459`. Comparison: `origin/main...origin/sprint/research-cast` at main `b01764406738b42633277c8bf00099e093bf20e9`; merge base `ceff796b3c793ef28e79b5d51d7dfe5a2dfabf39`. Snapshot: 2026-11-21T01:39:50.624621+00:00.
+Pinned remote tip: `4d475c2e0b4ac8682262d5fe031493aa211a9459`. Comparison: `origin/main...origin/sprint/research-cast` at main `df0cf216e8bba2be74e992922bd8dd0730135456`; merge base `ceff796b3c793ef28e79b5d51d7dfe5a2dfabf39`. Snapshot: 2026-11-21T02:11:37.186520+00:00.
 
 This is navigation for the standing reviewer and the lead under 0106. It is not a verdict, accepted ruling, gate sign-off or permission to merge. Locations below refer to the pinned branch, not to the audit worktree.
 
@@ -8,7 +8,7 @@ This is navigation for the standing reviewer and the lead under 0106. It is not 
 
 S6/S12/S22 add dated cast/governor/officer/regard research and sidecars. S6: 55 people/532 cells. S12: a substantial bounded pool, not exhaustive tenure coverage. S22: 169 records/132 directed pairs, 148 regard CHANGE proposals and 23 officer-stat CHANGE proposals; every experience cell remains HOLD.
 
-8 commits reachable from the branch but not pinned main; 48 changed paths. Descendants include shared commits; counts across packets must not be added. Immutable [full diff](https://github.com/horkesh/Mandate/compare/b01764406738b42633277c8bf00099e093bf20e9...4d475c2e0b4ac8682262d5fe031493aa211a9459) and [inventory](_evidence/inventory.json). Raw git diff, its command, size and SHA-256 are retained under `_evidence/validation-raw/diffs/` (local, ignored), with the receipt in the inventory.
+8 commits reachable from the branch but not pinned main; 48 changed paths. Descendants include shared commits; counts across packets must not be added. Immutable [full diff](https://github.com/horkesh/Mandate/compare/df0cf216e8bba2be74e992922bd8dd0730135456...4d475c2e0b4ac8682262d5fe031493aa211a9459) and [inventory](_evidence/inventory.json). Raw git diff, its command, size and SHA-256 are retained under `_evidence/validation-raw/diffs/` (local, ignored), with the receipt in the inventory.
 
 ### Commits
 

@@ -1,6 +1,6 @@
 # sprint/research-politics: review packet
 
-Pinned remote tip: `cd9213219ed251d73dd78c622325e44feeac39d1`. Comparison: `origin/main...origin/sprint/research-politics` at main `b01764406738b42633277c8bf00099e093bf20e9`; merge base `ceff796b3c793ef28e79b5d51d7dfe5a2dfabf39`. Snapshot: 2026-11-21T01:39:50.624621+00:00.
+Pinned remote tip: `cd9213219ed251d73dd78c622325e44feeac39d1`. Comparison: `origin/main...origin/sprint/research-politics` at main `df0cf216e8bba2be74e992922bd8dd0730135456`; merge base `ceff796b3c793ef28e79b5d51d7dfe5a2dfabf39`. Snapshot: 2026-11-21T02:11:37.186520+00:00.
 
 This is navigation for the standing reviewer and the lead under 0106. It is not a verdict, accepted ruling, gate sign-off or permission to merge. Locations below refer to the pinned branch, not to the audit worktree.
 
@@ -8,7 +8,7 @@ This is navigation for the standing reviewer and the lead under 0106. It is not 
 
 S3 research and S17 unloaded Congress/member/session/vote/press/state observations plus nineteen election checkpoint proposals. All 151 original winners in sixteen states are recorded under local-ticket labels; later elections, vacancies and seating remain separate.
 
-5 commits reachable from the branch but not pinned main; 26 changed paths. Descendants include shared commits; counts across packets must not be added. Immutable [full diff](https://github.com/horkesh/Mandate/compare/b01764406738b42633277c8bf00099e093bf20e9...cd9213219ed251d73dd78c622325e44feeac39d1) and [inventory](_evidence/inventory.json). Raw git diff, its command, size and SHA-256 are retained under `_evidence/validation-raw/diffs/` (local, ignored), with the receipt in the inventory.
+5 commits reachable from the branch but not pinned main; 26 changed paths. Descendants include shared commits; counts across packets must not be added. Immutable [full diff](https://github.com/horkesh/Mandate/compare/df0cf216e8bba2be74e992922bd8dd0730135456...cd9213219ed251d73dd78c622325e44feeac39d1) and [inventory](_evidence/inventory.json). Raw git diff, its command, size and SHA-256 are retained under `_evidence/validation-raw/diffs/` (local, ignored), with the receipt in the inventory.
 
 ### Commits
 

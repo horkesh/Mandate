@@ -1,10 +1,10 @@
 {
-  "utc": "2026-11-21T01:39:50.624621+00:00",
+  "utc": "2026-11-21T02:11:37.186520+00:00",
   "head": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
-  "main": "b01764406738b42633277c8bf00099e093bf20e9",
+  "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
   "refs": {
-    "origin/main": "b01764406738b42633277c8bf00099e093bf20e9",
-    "origin/sprint/1a": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "origin/main": "df0cf216e8bba2be74e992922bd8dd0730135456",
+    "origin/sprint/1a": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
     "origin/sprint/audit": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
     "origin/sprint/checks": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
     "origin/sprint/desk": "7db8c80a605c4410f458487778cadc7008ac8909",
@@ -22,7 +22,7 @@
   "branches": {
     "1a": {
       "ref": "origin/sprint/1a",
-      "sha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+      "sha": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
       "mergeBase": "ceff796b3c793ef28e79b5d51d7dfe5a2dfabf39",
       "changes": [
         "M\tdocs/design/FOUNDATION.md",
@@ -39,8 +39,11 @@
         "M\tpackages/cli/test/bombardment.test.ts",
         "A\tpackages/cli/test/calls-schedule.test.ts",
         "M\tpackages/cli/test/concentration.test.ts",
+        "M\tpackages/cli/test/console-session.test.ts",
+        "A\tpackages/cli/test/enlistment-renewal.test.ts",
         "M\tpackages/cli/test/fixtures/saves/testbed-seats-day40.json",
         "M\tpackages/cli/test/men-regions.test.ts",
+        "A\tpackages/cli/test/recruiting-office.test.ts",
         "A\tpackages/cli/test/state-forces.test.ts",
         "M\tpackages/cli/test/union-opening.test.ts",
         "M\tpackages/cli/test/war-gate.test.ts",
@@ -59,21 +62,27 @@
         "M\tpackages/kernel/src/ownership.ts",
         "M\tpackages/kernel/src/people/verb-rules.ts",
         "M\tpackages/kernel/src/proxy/responses.ts",
+        "A\tpackages/kernel/src/recruitment/renewal.ts",
         "M\tpackages/kernel/src/seats/api.ts",
         "M\tpackages/kernel/src/seats/requests.ts",
         "M\tpackages/kernel/src/seats/world.ts",
+        "M\tpackages/kernel/src/situations/conditions.ts",
+        "M\tpackages/kernel/src/situations/references.ts",
         "M\tpackages/kernel/src/situations/types.ts",
         "M\tpackages/kernel/src/tick/bombard.ts",
         "M\tpackages/kernel/src/tick/context.ts",
         "M\tpackages/kernel/src/tick/orders.ts",
         "M\tpackages/kernel/src/tick/people-week.ts",
         "M\tpackages/kernel/src/tick/recruitment.ts",
+        "M\tpackages/kernel/src/tick/situations.ts",
         "M\tpackages/kernel/src/tick/tick.ts",
         "M\tpackages/kernel/src/tick/verbs.ts",
         "M\tpackages/kernel/src/world/scenario.ts",
         "M\tpackages/kernel/src/world/world.ts",
         "M\tpackages/kernel/test/bombard.test.ts",
+        "M\tpackages/kernel/test/capitals.test.ts",
         "A\tpackages/kernel/test/command-establishment.test.ts",
+        "A\tpackages/kernel/test/declared-recruiting.test.ts",
         "M\tpackages/kernel/test/people-verbs.test.ts",
         "M\tpackages/kernel/test/support/map-fixture.ts",
         "M\tpackages/pack-format/schemas/pack.schema.json",
@@ -81,6 +90,7 @@
         "M\tpackages/pack-format/schemas/world.schema.json",
         "M\tpackages/pack-format/src/schemas.ts",
         "M\tpackages/pack-format/src/situations.ts",
+        "A\tpackages/pack-format/test/renewal-validation.test.ts",
         "A\tpackages/pack-format/test/state-forces.test.ts",
         "M\tpackages/pack-format/test/support/fixture.ts",
         "M\tpackages/pack-format/test/validate.test.ts",
@@ -88,6 +98,7 @@
         "M\tpackages/rule-seats/test/rule-seats.test.ts",
         "M\tpacks/testbed/data/world.json",
         "M\tpacks/testbed/pack.json",
+        "M\tpacks/union-1861/PROVENANCE.json",
         "A\tpacks/union-1861/calls-1861.json",
         "M\tpacks/union-1861/data/scenarios/march_1861.json",
         "M\tpacks/union-1861/data/strings/en.json",
@@ -95,19 +106,29 @@
         "M\tpacks/union-1861/pack.json",
         "A\tpacks/union-1861/situations/arkansas_forces_transferred.json",
         "D\tpacks/union-1861/situations/butler_at_fort_monroe.json",
+        "A\tpacks/union-1861/situations/minnesota_first_remuster.json",
         "A\tpacks/union-1861/situations/north_carolina_forces_transferred.json",
         "A\tpacks/union-1861/situations/tennessee_forces_return.json",
         "A\tpacks/union-1861/situations/tennessee_forces_transferred.json",
         "A\tpacks/union-1861/situations/tennessee_military_league.json",
         "A\tpacks/union-1861/situations/virginia_forces_return.json",
         "A\tpacks/union-1861/situations/virginia_forces_transferred.json",
+        "M\tpacks/union-1861/source/scenarios/march_1861/force_blocks.csv",
+        "M\tpacks/union-1861/source/scenarios/march_1861/holders.csv",
+        "M\tpacks/union-1861/source/scenarios/march_1861/posts.csv",
         "M\tpacks/union-1861/source/scenarios/march_1861/temporary_posts.csv",
+        "M\tpacks/union-1861/source/world/people.csv",
         "M\tpacks/union-1861/strings/en.json",
         "A\tpacks/union-1861/test/butler-appointment.test.ts",
         "A\tpacks/union-1861/test/calls-1861.test.ts",
+        "A\tpacks/union-1861/test/charleston-strengths.test.ts",
+        "A\tpacks/union-1861/test/dated-appointments.test.ts",
+        "A\tpacks/union-1861/test/national-enlistment.test.ts",
         "A\tpacks/union-1861/test/northern-concentration.test.ts",
+        "M\tpacks/union-1861/test/record-terms.test.ts",
         "M\tpacks/union-1861/test/resignation.test.ts",
         "A\tpacks/union-1861/test/state-forces.test.ts",
+        "M\tpacks/union-1861/test/world-v2.test.ts",
         "M\tvitest.config.ts"
       ],
       "commits": [
@@ -123,7 +144,12 @@
         "f72c709384e06d9a3466021fdb827dae66a8b31a\te76c3348640fa6b7962fe3932a024a0380e4e131 cfa2c5a93488ae127a6b23e4a7ed7deb1fab12f3\tMerge dated rule-seat appointments into sprint/1a",
         "df291e65354427ce1c50d5730f6824b289be7f1d\tf72c709384e06d9a3466021fdb827dae66a8b31a cf31f3152077d78aa8db093b2c7ef02a2e0f5501\tMerge independent initiative threshold into sprint/1a",
         "9d0ad8256e3783bd5176b753c4dd3803d0dcd26e\tdf291e65354427ce1c50d5730f6824b289be7f1d 179be08fca58efead08664f14f76f2b0e836ad67\tMerge bounded assault-contact findings into sprint/1a",
-        "bf6cc66c025a0567a991f1a94eb9ba20656f4004\t9d0ad8256e3783bd5176b753c4dd3803d0dcd26e\tIntegrate state-force acts with northern concentration"
+        "bf6cc66c025a0567a991f1a94eb9ba20656f4004\t9d0ad8256e3783bd5176b753c4dd3803d0dcd26e\tIntegrate state-force acts with northern concentration",
+        "7032e4e4f890a99845ccdca31aac96cdd43052ae\tbf6cc66c025a0567a991f1a94eb9ba20656f4004\tSource three Charleston opening strengths",
+        "ca428f77b96e2dcefd1ecb905bd65e265e6de6bb\t7032e4e4f890a99845ccdca31aac96cdd43052ae\tDate department appointments and Harpers Ferry command",
+        "cffb0d1af30ee45f27d1288bd9a7dc0e3f923769\tca428f77b96e2dcefd1ecb905bd65e265e6de6bb\tImplement sourced national enlistment paths",
+        "9edd547323efe6f1afa2e741d3532eeccbdc5388\tcffb0d1af30ee45f27d1288bd9a7dc0e3f923769\tClose battle chronology and command regression gaps",
+        "78eb7dbff1243409265ab2f71b41ceab08abeb36\t9edd547323efe6f1afa2e741d3532eeccbdc5388\tCalibrate ordinary compliance and report S1 limits"
       ],
       "handovers": [
         "notes/lane-1.12-rule-seats.md",
@@ -132,42 +158,53 @@
         "notes/lane-1.5-people-verbs.md",
         "notes/lane-1.7-men-regions.md"
       ],
-      "stat": " docs/design/FOUNDATION.md                          |  14 +-\n .../research/2026-11-14-union-information-flows.md |  12 +\n .../2026-11-20-northern-virginia-concentration.md  |  30 +++\n docs/research/_combat/assault-contact-probe.md     |  91 +++++++\n notes/lane-1.12-rule-seats.md                      | 246 ++++++++++++++++-\n notes/lane-1.14-done-check.md                      |  36 +++\n notes/lane-1.3-combat.md                           | 144 ++++++++++\n notes/lane-1.5-people-verbs.md                     |  48 ++++\n notes/lane-1.7-men-regions.md                      | 215 +++++++++++++++\n packages/cli/src/desk/render.ts                    |   2 +-\n packages/cli/src/liveness-gate.ts                  | 123 +++++----\n packages/cli/test/bombardment.test.ts              |  16 +-\n packages/cli/test/calls-schedule.test.ts           |  49 ++++\n packages/cli/test/concentration.test.ts            |  10 +-\n .../test/fixtures/saves/testbed-seats-day40.json   |   2 +-\n packages/cli/test/men-regions.test.ts              |   7 +-\n packages/cli/test/state-forces.test.ts             | 114 ++++++++\n packages/cli/test/union-opening.test.ts            |   7 +-\n packages/cli/test/war-gate.test.ts                 |  17 +-\n packages/kernel/src/combat/battle.ts               |   2 +\n packages/kernel/src/combat/bombard.ts              |  66 ++++-\n packages/kernel/src/combat/records.ts              |   5 +-\n packages/kernel/src/combat/shape.ts                |   2 +\n packages/kernel/src/command/command.ts             |  10 +\n packages/kernel/src/command/levies.ts              |   8 +-\n packages/kernel/src/forces/enlistment.ts           |  43 ++-\n packages/kernel/src/log/commands.ts                |  15 +-\n packages/kernel/src/log/log.ts                     |  15 +-\n packages/kernel/src/log/session.ts                 |   4 +-\n packages/kernel/src/messages/latency.ts            |   7 +\n packages/kernel/src/messages/transit.ts            |  10 +-\n packages/kernel/src/ownership.ts                   |   4 +-\n packages/kernel/src/people/verb-rules.ts           |   3 +\n packages/kernel/src/proxy/responses.ts             |  15 +-\n packages/kernel/src/seats/api.ts                   |   8 +-\n packages/kernel/src/seats/requests.ts              |  76 +++++-\n packages/kernel/src/seats/world.ts                 |  83 +++++-\n packages/kernel/src/situations/types.ts            |  15 ++\n packages/kernel/src/tick/bombard.ts                |   6 +-\n packages/kernel/src/tick/context.ts                |   2 +\n packages/kernel/src/tick/orders.ts                 |   2 +-\n packages/kernel/src/tick/people-week.ts            |   7 +-\n packages/kernel/src/tick/recruitment.ts            |  93 +++++--\n packages/kernel/src/tick/tick.ts                   |   2 +\n packages/kernel/src/tick/verbs.ts                  |  35 ++-\n packages/kernel/src/world/scenario.ts              |   4 +-\n packages/kernel/src/world/world.ts                 |  22 +-\n packages/kernel/test/bombard.test.ts               | 104 +++++++-\n packages/kernel/test/command-establishment.test.ts |  64 +++++\n packages/kernel/test/people-verbs.test.ts          | 108 ++++++++\n packages/kernel/test/support/map-fixture.ts        |   1 +\n packages/pack-format/schemas/pack.schema.json      |   2 +-\n packages/pack-format/schemas/situation.schema.json |   6 +-\n packages/pack-format/schemas/world.schema.json     |   2 +-\n packages/pack-format/src/schemas.ts                |   8 +-\n packages/pack-format/src/situations.ts             |  23 ++\n packages/pack-format/test/state-forces.test.ts     |  19 ++\n packages/pack-format/test/support/fixture.ts       |   1 +\n packages/pack-format/test/validate.test.ts         |   2 +\n packages/rule-seats/src/index.ts                   |  61 +++--\n packages/rule-seats/test/rule-seats.test.ts        |  61 +++++\n packs/testbed/data/world.json                      |   4 +-\n packs/testbed/pack.json                            |   4 +-\n packs/union-1861/calls-1861.json                   | 297 +++++++++++++++++++++\n packs/union-1861/data/scenarios/march_1861.json    |   4 +-\n packs/union-1861/data/strings/en.json              |   2 +\n packs/union-1861/data/world.json                   |  10 +-\n packs/union-1861/pack.json                         |  10 +-\n .../situations/arkansas_forces_transferred.json    | 112 ++++++++\n .../situations/butler_at_fort_monroe.json          |  51 ----\n .../north_carolina_forces_transferred.json         |  96 +++++++\n .../situations/tennessee_forces_return.json        |  91 +++++++\n .../situations/tennessee_forces_transferred.json   |  94 +++++++\n .../situations/tennessee_military_league.json      |  39 +++\n .../situations/virginia_forces_return.json         |  55 ++++\n .../situations/virginia_forces_transferred.json    |  58 ++++\n .../scenarios/march_1861/temporary_posts.csv       |   4 +-\n packs/union-1861/strings/en.json                   |  24 +-\n packs/union-1861/test/butler-appointment.test.ts   |  56 ++++\n packs/union-1861/test/calls-1861.test.ts           |  30 +++\n .../union-1861/test/northern-concentration.test.ts |  58 ++++\n packs/union-1861/test/resignation.test.ts          |   6 +-\n packs/union-1861/test/state-forces.test.ts         |  48 ++++\n vitest.config.ts                                   |   4 +-\n 84 files changed, 3092 insertions(+), 274 deletions(-)\n",
+      "stat": " docs/design/FOUNDATION.md                          |  14 +-\n .../research/2026-11-14-union-information-flows.md |  12 +\n .../2026-11-20-northern-virginia-concentration.md  |  30 ++\n docs/research/_combat/assault-contact-probe.md     |  91 ++++++\n notes/lane-1.12-rule-seats.md                      | 271 +++++++++++++++-\n notes/lane-1.14-done-check.md                      | 201 ++++++++++++\n notes/lane-1.3-combat.md                           | 144 +++++++++\n notes/lane-1.5-people-verbs.md                     |  48 +++\n notes/lane-1.7-men-regions.md                      | 234 ++++++++++++++\n packages/cli/src/desk/render.ts                    |   2 +-\n packages/cli/src/liveness-gate.ts                  | 151 +++++----\n packages/cli/test/bombardment.test.ts              |  16 +-\n packages/cli/test/calls-schedule.test.ts           |  49 +++\n packages/cli/test/concentration.test.ts            |  10 +-\n packages/cli/test/console-session.test.ts          |  57 +++-\n packages/cli/test/enlistment-renewal.test.ts       | 109 +++++++\n .../test/fixtures/saves/testbed-seats-day40.json   |   2 +-\n packages/cli/test/men-regions.test.ts              |   7 +-\n packages/cli/test/recruiting-office.test.ts        |  35 +++\n packages/cli/test/state-forces.test.ts             | 114 +++++++\n packages/cli/test/union-opening.test.ts            |   7 +-\n packages/cli/test/war-gate.test.ts                 |  17 +-\n packages/kernel/src/combat/battle.ts               |   2 +\n packages/kernel/src/combat/bombard.ts              |  66 +++-\n packages/kernel/src/combat/records.ts              |   5 +-\n packages/kernel/src/combat/shape.ts                |   2 +\n packages/kernel/src/command/command.ts             |  10 +\n packages/kernel/src/command/levies.ts              |   8 +-\n packages/kernel/src/forces/enlistment.ts           |  63 +++-\n packages/kernel/src/log/commands.ts                |  15 +-\n packages/kernel/src/log/log.ts                     |  15 +-\n packages/kernel/src/log/session.ts                 |   4 +-\n packages/kernel/src/messages/latency.ts            |   7 +\n packages/kernel/src/messages/transit.ts            |  10 +-\n packages/kernel/src/ownership.ts                   |   4 +-\n packages/kernel/src/people/verb-rules.ts           |   3 +\n packages/kernel/src/proxy/responses.ts             |  15 +-\n packages/kernel/src/recruitment/renewal.ts         |  31 ++\n packages/kernel/src/seats/api.ts                   |  10 +-\n packages/kernel/src/seats/requests.ts              |  94 +++++-\n packages/kernel/src/seats/world.ts                 |  88 +++++-\n packages/kernel/src/situations/conditions.ts       |   7 +-\n packages/kernel/src/situations/references.ts       |   4 +\n packages/kernel/src/situations/types.ts            |  29 ++\n packages/kernel/src/tick/bombard.ts                |   6 +-\n packages/kernel/src/tick/context.ts                |   3 +\n packages/kernel/src/tick/orders.ts                 |   2 +-\n packages/kernel/src/tick/people-week.ts            |   7 +-\n packages/kernel/src/tick/recruitment.ts            | 119 ++++++-\n packages/kernel/src/tick/situations.ts             |   2 +\n packages/kernel/src/tick/tick.ts                   |   3 +\n packages/kernel/src/tick/verbs.ts                  |  35 ++-\n packages/kernel/src/world/scenario.ts              |   4 +-\n packages/kernel/src/world/world.ts                 |  22 +-\n packages/kernel/test/bombard.test.ts               | 133 +++++++-\n packages/kernel/test/capitals.test.ts              |  30 ++\n packages/kernel/test/command-establishment.test.ts |  76 +++++\n packages/kernel/test/declared-recruiting.test.ts   |  31 ++\n packages/kernel/test/people-verbs.test.ts          | 119 +++++++\n packages/kernel/test/support/map-fixture.ts        |   1 +\n packages/pack-format/schemas/pack.schema.json      |   2 +-\n packages/pack-format/schemas/situation.schema.json |   8 +-\n packages/pack-format/schemas/world.schema.json     |   2 +-\n packages/pack-format/src/schemas.ts                |   8 +-\n packages/pack-format/src/situations.ts             |  53 ++++\n .../pack-format/test/renewal-validation.test.ts    |  32 ++\n packages/pack-format/test/state-forces.test.ts     |  19 ++\n packages/pack-format/test/support/fixture.ts       |   1 +\n packages/pack-format/test/validate.test.ts         |   2 +\n packages/rule-seats/src/index.ts                   |  63 +++-\n packages/rule-seats/test/rule-seats.test.ts        |  61 ++++\n packs/testbed/data/world.json                      |   4 +-\n packs/testbed/pack.json                            |   4 +-\n packs/union-1861/PROVENANCE.json                   |  52 ++-\n packs/union-1861/calls-1861.json                   | 348 +++++++++++++++++++++\n packs/union-1861/data/scenarios/march_1861.json    |  14 +-\n packs/union-1861/data/strings/en.json              |   7 +\n packs/union-1861/data/world.json                   |  14 +-\n packs/union-1861/pack.json                         |  18 +-\n .../situations/arkansas_forces_transferred.json    | 112 +++++++\n .../situations/butler_at_fort_monroe.json          |  51 ---\n .../situations/minnesota_first_remuster.json       |  62 ++++\n .../north_carolina_forces_transferred.json         |  96 ++++++\n .../situations/tennessee_forces_return.json        |  91 ++++++\n .../situations/tennessee_forces_transferred.json   |  94 ++++++\n .../situations/tennessee_military_league.json      |  39 +++\n .../situations/virginia_forces_return.json         |  55 ++++\n .../situations/virginia_forces_transferred.json    |  58 ++++\n .../source/scenarios/march_1861/force_blocks.csv   |   8 +-\n .../source/scenarios/march_1861/holders.csv        |   1 +\n .../source/scenarios/march_1861/posts.csv          |   1 +\n .../scenarios/march_1861/temporary_posts.csv       |   7 +-\n packs/union-1861/source/world/people.csv           |   1 +\n packs/union-1861/strings/en.json                   |  28 +-\n packs/union-1861/test/butler-appointment.test.ts   |  58 ++++\n packs/union-1861/test/calls-1861.test.ts           |  30 ++\n packs/union-1861/test/charleston-strengths.test.ts |  23 ++\n packs/union-1861/test/dated-appointments.test.ts   |  63 ++++\n packs/union-1861/test/national-enlistment.test.ts  |  81 +++++\n .../union-1861/test/northern-concentration.test.ts |  72 +++++\n packs/union-1861/test/record-terms.test.ts         |  20 +-\n packs/union-1861/test/resignation.test.ts          |   6 +-\n packs/union-1861/test/state-forces.test.ts         |  48 +++\n packs/union-1861/test/world-v2.test.ts             |   4 +-\n vitest.config.ts                                   |   4 +-\n 105 files changed, 4211 insertions(+), 320 deletions(-)\n",
       "tests": [
         "packages/cli/test/bombardment.test.ts",
         "packages/cli/test/calls-schedule.test.ts",
         "packages/cli/test/concentration.test.ts",
+        "packages/cli/test/console-session.test.ts",
+        "packages/cli/test/enlistment-renewal.test.ts",
         "packages/cli/test/men-regions.test.ts",
+        "packages/cli/test/recruiting-office.test.ts",
         "packages/cli/test/state-forces.test.ts",
         "packages/cli/test/union-opening.test.ts",
         "packages/cli/test/war-gate.test.ts",
         "packages/kernel/test/bombard.test.ts",
+        "packages/kernel/test/capitals.test.ts",
         "packages/kernel/test/command-establishment.test.ts",
+        "packages/kernel/test/declared-recruiting.test.ts",
         "packages/kernel/test/people-verbs.test.ts",
+        "packages/pack-format/test/renewal-validation.test.ts",
         "packages/pack-format/test/state-forces.test.ts",
         "packages/pack-format/test/validate.test.ts",
         "packages/rule-seats/test/rule-seats.test.ts",
         "packs/union-1861/test/butler-appointment.test.ts",
         "packs/union-1861/test/calls-1861.test.ts",
+        "packs/union-1861/test/charleston-strengths.test.ts",
+        "packs/union-1861/test/dated-appointments.test.ts",
+        "packs/union-1861/test/national-enlistment.test.ts",
         "packs/union-1861/test/northern-concentration.test.ts",
+        "packs/union-1861/test/record-terms.test.ts",
         "packs/union-1861/test/resignation.test.ts",
-        "packs/union-1861/test/state-forces.test.ts"
+        "packs/union-1861/test/state-forces.test.ts",
+        "packs/union-1861/test/world-v2.test.ts"
       ],
       "diffReceipt": {
         "path": "_evidence/validation-raw/diffs/1a.diff",
-        "sha256": "0b029c6c7a70fa5844e75aaea15a5918045ae74cc637ab88f559707e01cf7e62",
-        "bytes": 1523863,
+        "sha256": "5893c774f9f9eb42878bfe2b1e44a2e5e4dcc166ebcf5cf0dfbd619723f5335d",
+        "bytes": 1758848,
         "command": [
           "git",
           "diff",
           "--no-ext-diff",
           "--no-color",
-          "c09e5bedb32443e18f806b83187a8959f294643a...bf6cc66c025a0567a991f1a94eb9ba20656f4004"
+          "df0cf216e8bba2be74e992922bd8dd0730135456...78eb7dbff1243409265ab2f71b41ceab08abeb36"
         ],
         "equivalentFinalComparison": {
-          "main": "b01764406738b42633277c8bf00099e093bf20e9",
+          "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
           "sameMergeBase": true,
-          "reason": "Triple-dot diff uses the common ancestor; the refresh changed main only in CODEX and retained the same branch merge base."
+          "reason": "Main advanced only in CODEX; the triple-dot comparison retains its common ancestor."
         }
       }
     },
@@ -208,9 +245,9 @@
           "c09e5bedb32443e18f806b83187a8959f294643a...9ab0f5e7473d36685b2556c518214d6eaf8bcc95"
         ],
         "equivalentFinalComparison": {
-          "main": "b01764406738b42633277c8bf00099e093bf20e9",
+          "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
           "sameMergeBase": true,
-          "reason": "Triple-dot diff uses the common ancestor; the refresh changed main only in CODEX and retained the same branch merge base."
+          "reason": "Main advanced only in CODEX; the triple-dot comparison retains its common ancestor."
         }
       }
     },
@@ -278,9 +315,9 @@
           "c09e5bedb32443e18f806b83187a8959f294643a...39c279cefc3e836e9a7f6a39acbb6772393a16ab"
         ],
         "equivalentFinalComparison": {
-          "main": "b01764406738b42633277c8bf00099e093bf20e9",
+          "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
           "sameMergeBase": true,
-          "reason": "Triple-dot diff uses the common ancestor; the refresh changed main only in CODEX and retained the same branch merge base."
+          "reason": "Main advanced only in CODEX; the triple-dot comparison retains its common ancestor."
         }
       }
     },
@@ -509,9 +546,9 @@
           "b01764406738b42633277c8bf00099e093bf20e9...7db8c80a605c4410f458487778cadc7008ac8909"
         ],
         "equivalentFinalComparison": {
-          "main": "b01764406738b42633277c8bf00099e093bf20e9",
+          "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
           "sameMergeBase": true,
-          "reason": "Triple-dot diff uses the common ancestor; the refresh changed main only in CODEX and retained the same branch merge base."
+          "reason": "Main advanced only in CODEX; the triple-dot comparison retains its common ancestor."
         }
       }
     },
@@ -558,9 +595,9 @@
           "c09e5bedb32443e18f806b83187a8959f294643a...637e1d427d4489ff4b084b83d3c397c50d349ae0"
         ],
         "equivalentFinalComparison": {
-          "main": "b01764406738b42633277c8bf00099e093bf20e9",
+          "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
           "sameMergeBase": true,
-          "reason": "Triple-dot diff uses the common ancestor; the refresh changed main only in CODEX and retained the same branch merge base."
+          "reason": "Main advanced only in CODEX; the triple-dot comparison retains its common ancestor."
         }
       }
     },
@@ -740,9 +777,9 @@
           "c09e5bedb32443e18f806b83187a8959f294643a...3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab"
         ],
         "equivalentFinalComparison": {
-          "main": "b01764406738b42633277c8bf00099e093bf20e9",
+          "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
           "sameMergeBase": true,
-          "reason": "Triple-dot diff uses the common ancestor; the refresh changed main only in CODEX and retained the same branch merge base."
+          "reason": "Main advanced only in CODEX; the triple-dot comparison retains its common ancestor."
         }
       }
     },
@@ -809,9 +846,9 @@
           "c09e5bedb32443e18f806b83187a8959f294643a...97a03792e492c2267c3f0890bfb8ecd40867fa8a"
         ],
         "equivalentFinalComparison": {
-          "main": "b01764406738b42633277c8bf00099e093bf20e9",
+          "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
           "sameMergeBase": true,
-          "reason": "Triple-dot diff uses the common ancestor; the refresh changed main only in CODEX and retained the same branch merge base."
+          "reason": "Main advanced only in CODEX; the triple-dot comparison retains its common ancestor."
         }
       }
     },
@@ -972,9 +1009,9 @@
           "c09e5bedb32443e18f806b83187a8959f294643a...4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b"
         ],
         "equivalentFinalComparison": {
-          "main": "b01764406738b42633277c8bf00099e093bf20e9",
+          "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
           "sameMergeBase": true,
-          "reason": "Triple-dot diff uses the common ancestor; the refresh changed main only in CODEX and retained the same branch merge base."
+          "reason": "Main advanced only in CODEX; the triple-dot comparison retains its common ancestor."
         }
       }
     },
@@ -1061,9 +1098,9 @@
           "c09e5bedb32443e18f806b83187a8959f294643a...4d475c2e0b4ac8682262d5fe031493aa211a9459"
         ],
         "equivalentFinalComparison": {
-          "main": "b01764406738b42633277c8bf00099e093bf20e9",
+          "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
           "sameMergeBase": true,
-          "reason": "Triple-dot diff uses the common ancestor; the refresh changed main only in CODEX and retained the same branch merge base."
+          "reason": "Main advanced only in CODEX; the triple-dot comparison retains its common ancestor."
         }
       }
     },
@@ -1150,9 +1187,9 @@
           "c09e5bedb32443e18f806b83187a8959f294643a...c70441af68b9052f6ea52d9e23b2d303fa72dda6"
         ],
         "equivalentFinalComparison": {
-          "main": "b01764406738b42633277c8bf00099e093bf20e9",
+          "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
           "sameMergeBase": true,
-          "reason": "Triple-dot diff uses the common ancestor; the refresh changed main only in CODEX and retained the same branch merge base."
+          "reason": "Main advanced only in CODEX; the triple-dot comparison retains its common ancestor."
         }
       }
     },
@@ -1234,9 +1271,9 @@
           "c09e5bedb32443e18f806b83187a8959f294643a...4220d6124ca3b93aa6513e5096e9fc3a95859eb6"
         ],
         "equivalentFinalComparison": {
-          "main": "b01764406738b42633277c8bf00099e093bf20e9",
+          "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
           "sameMergeBase": true,
-          "reason": "Triple-dot diff uses the common ancestor; the refresh changed main only in CODEX and retained the same branch merge base."
+          "reason": "Main advanced only in CODEX; the triple-dot comparison retains its common ancestor."
         }
       }
     },
@@ -1362,9 +1399,9 @@
           "c09e5bedb32443e18f806b83187a8959f294643a...7fbd1082c061094fa0fca7fd0e2f68f2b083b994"
         ],
         "equivalentFinalComparison": {
-          "main": "b01764406738b42633277c8bf00099e093bf20e9",
+          "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
           "sameMergeBase": true,
-          "reason": "Triple-dot diff uses the common ancestor; the refresh changed main only in CODEX and retained the same branch merge base."
+          "reason": "Main advanced only in CODEX; the triple-dot comparison retains its common ancestor."
         }
       }
     },
@@ -1424,9 +1461,9 @@
           "c09e5bedb32443e18f806b83187a8959f294643a...cd9213219ed251d73dd78c622325e44feeac39d1"
         ],
         "equivalentFinalComparison": {
-          "main": "b01764406738b42633277c8bf00099e093bf20e9",
+          "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
           "sameMergeBase": true,
-          "reason": "Triple-dot diff uses the common ancestor; the refresh changed main only in CODEX and retained the same branch merge base."
+          "reason": "Main advanced only in CODEX; the triple-dot comparison retains its common ancestor."
         }
       }
     },
@@ -1602,13 +1639,13 @@
           "c09e5bedb32443e18f806b83187a8959f294643a...6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
         ],
         "equivalentFinalComparison": {
-          "main": "b01764406738b42633277c8bf00099e093bf20e9",
+          "main": "df0cf216e8bba2be74e992922bd8dd0730135456",
           "sameMergeBase": true,
-          "reason": "Triple-dot diff uses the common ancestor; the refresh changed main only in CODEX and retained the same branch merge base."
+          "reason": "Main advanced only in CODEX; the triple-dot comparison retains its common ancestor."
         }
       }
     }
   },
-  "codexSha256": "af0e0c9fe5ef575eae0853b312f2c55db36366b9a08fff57cc86652e8c6fe79f",
+  "codexSha256": "23c61598ea7a37b87f2395a702984622c9317e3cefb06e4b3fd4b6ed9a685bdc",
   "codexSprintStartLine": 4805
 }

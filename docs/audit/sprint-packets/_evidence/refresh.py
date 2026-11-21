@@ -8,9 +8,12 @@ changed={k:(d['refs'].get(k),v) for k,v in refs.items() if d['refs'].get(k)!=v}
 if changed:
     initial_main=d['main']
     stamp=d['utc'].replace(':','-')
-    save('inventory-initial.json',d)
+    suffix='initial' if not (OUT/'inventory-initial.json').exists() else 'before-s1'
+    save(f'inventory-{suffix}.json',d)
     prior=json.loads((OUT/'merge-tree.json').read_text(encoding='utf-8'))
-    save('merge-tree-initial.json',prior)
+    save(f'merge-tree-{suffix}.json',prior)
+    history=json.loads((OUT/'refresh-history.json').read_text(encoding='utf-8')) if (OUT/'refresh-history.json').exists() else []
+    if not history and (OUT/'refresh-receipt.json').exists():history.append(json.loads((OUT/'refresh-receipt.json').read_text(encoding='utf-8')))
     base=refs['origin/main']
     for ref,sha in refs.items():
         if ref=='origin/main':continue
@@ -18,10 +21,15 @@ if changed:
         rows=need('diff','--name-status',f'{base}...{sha}').splitlines()
         files=[s.split('\t')[-1] for s in rows]
         notes=[f for f in files if f.startswith('notes/') and f.endswith('.md')]
+        old=d['branches'].get(n,{})
         d['branches'][n]={'ref':ref,'sha':sha,'mergeBase':need('merge-base',base,sha).strip(),'changes':rows,'commits':need('log','--reverse','--format=%H%x09%P%x09%s',f'{base}..{sha}').splitlines(),'handovers':notes,'stat':need('diff','--stat',f'{base}...{sha}'),'tests':[f for f in files if '.test.' in f]}
         if ref in changed:
             raw=OUT/'validation-raw'/'diffs';raw.mkdir(parents=True,exist_ok=True)
             (raw/f'{n}.diff').write_text(need('diff','--no-ext-diff','--no-color',f'{base}...{sha}'),encoding='utf-8')
+            data=(raw/f'{n}.diff').read_bytes()
+            d['branches'][n]['diffReceipt']={'path':f'_evidence/validation-raw/diffs/{n}.diff','sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'command':['git','diff','--no-ext-diff','--no-color',base+'...'+sha]}
+        elif 'diffReceipt' in old:d['branches'][n]['diffReceipt']=old['diffReceipt']
+        d['branches'][n]['diffReceipt']['equivalentFinalComparison']={'main':base,'sameMergeBase':old.get('mergeBase')==d['branches'][n]['mergeBase'],'reason':'Main advanced only in CODEX; the triple-dot comparison retains its common ancestor.'}
         for f in notes:
             dest=OUT/'handovers'/n/f;dest.parent.mkdir(parents=True,exist_ok=True)
             dest.write_text(need('show',f'{sha}:{f}'),encoding='utf-8')
@@ -42,7 +50,8 @@ if changed:
             pairs.append({'left':left,'right':right,'leftSha':lsha,'rightSha':rsha,'command':['git',*args],'exit':code,'tree':ls[0],'conflicts':conflicts,'stdout':stdout,'stderr':stderr});ran+=1
     save('merge-tree.json',pairs)
     d.update(refs=refs,main=base,utc=datetime.datetime.now(datetime.timezone.utc).isoformat())
-    save('refresh-receipt.json',{'changed':changed,'rerunPairs':ran,'reusedPairs':reused,'mainChanges':need('diff','--name-only',initial_main,base).splitlines()})
+    receipt={'changed':changed,'rerunPairs':ran,'reusedPairs':reused,'mainChanges':need('diff','--name-only',initial_main,base).splitlines()}
+    save('refresh-receipt.json',receipt);history.append(receipt);save('refresh-history.json',history)
 raw=pathlib.Path('C:/Pyrrhic/ByOrderOfThePresident/CODEX.md').read_bytes();text=raw.decode('utf-8-sig')
 start=text.index('### 2026-11-20 Claude → Codex: the sprint to 22 November')
 (OUT/'CODEX-sprint-snapshot.md').write_text(text[start:].replace('\r\n','\n').rstrip()+'\n',encoding='utf-8',newline='\n')

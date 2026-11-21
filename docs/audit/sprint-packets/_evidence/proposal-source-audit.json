@@ -1,10 +1,10 @@
 {
-  "scope": "Explicit proposed-ruling headings in every changed branch hand-over. This is a source-marker cross-check, not automatic semantic approval.",
+  "scope": "Explicit proposal headings in changed hand-overs; source-marker cross-check, not semantic approval.",
   "records": [
     {
       "branch": "1a",
       "file": "notes/lane-1.12-rule-seats.md",
-      "line": 534,
+      "line": 555,
       "heading": "### Proposed rulings [I]",
       "rulingIds": [
         9,
@@ -16,7 +16,7 @@
     {
       "branch": "1a",
       "file": "notes/lane-1.7-men-regions.md",
-      "line": 93,
+      "line": 108,
       "heading": "### Sources and proposed rulings",
       "rulingIds": [
         1,
@@ -29,7 +29,7 @@
     {
       "branch": "1a",
       "file": "notes/lane-1.7-men-regions.md",
-      "line": 212,
+      "line": 227,
       "heading": "### Proposed rulings and limits [I]",
       "rulingIds": [
         5,
@@ -59,7 +59,7 @@
       "line": 534,
       "heading": "### Proposed rulings [I]",
       "rulingIds": [],
-      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+      "disposition": "Shared bf6cc66 integration proposals in 1a.md, excluding later 78eb7db additions"
     },
     {
       "branch": "desk",
@@ -67,7 +67,7 @@
       "line": 93,
       "heading": "### Sources and proposed rulings",
       "rulingIds": [],
-      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+      "disposition": "Shared bf6cc66 integration proposals in 1a.md, excluding later 78eb7db additions"
     },
     {
       "branch": "desk",
@@ -75,7 +75,7 @@
       "line": 212,
       "heading": "### Proposed rulings and limits [I]",
       "rulingIds": [],
-      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+      "disposition": "Shared bf6cc66 integration proposals in 1a.md, excluding later 78eb7db additions"
     },
     {
       "branch": "people-data",
@@ -83,7 +83,7 @@
       "line": 128,
       "heading": "### Proposed rulings",
       "rulingIds": [],
-      "disposition": "Pre-S9/main history, not a new sprint proposal; retained unchanged in the copied hand-over"
+      "disposition": "Pre-S9/main history, unchanged; not a new sprint proposal"
     },
     {
       "branch": "people-data",
@@ -104,7 +104,7 @@
       "line": 534,
       "heading": "### Proposed rulings [I]",
       "rulingIds": [],
-      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+      "disposition": "Shared bf6cc66 integration proposals in 1a.md, excluding later 78eb7db additions"
     },
     {
       "branch": "perf",
@@ -112,7 +112,7 @@
       "line": 93,
       "heading": "### Sources and proposed rulings",
       "rulingIds": [],
-      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+      "disposition": "Shared bf6cc66 integration proposals in 1a.md, excluding later 78eb7db additions"
     },
     {
       "branch": "perf",
@@ -120,7 +120,7 @@
       "line": 212,
       "heading": "### Proposed rulings and limits [I]",
       "rulingIds": [],
-      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+      "disposition": "Shared bf6cc66 integration proposals in 1a.md, excluding later 78eb7db additions"
     },
     {
       "branch": "perf",
@@ -180,7 +180,7 @@
       "line": 80,
       "heading": "### Author self-review and proposed rulings",
       "rulingIds": [],
-      "disposition": "S11 recommendations unpacked from the more specific proposal section-11 table and external D01-D14 clauses"
+      "disposition": "S11 recommendations unpacked from proposal section-11 table and D01-D14 clauses"
     },
     {
       "branch": "playtest",
@@ -188,7 +188,7 @@
       "line": 534,
       "heading": "### Proposed rulings [I]",
       "rulingIds": [],
-      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+      "disposition": "Shared bf6cc66 integration proposals in 1a.md, excluding later 78eb7db additions"
     },
     {
       "branch": "playtest",
@@ -196,7 +196,7 @@
       "line": 93,
       "heading": "### Sources and proposed rulings",
       "rulingIds": [],
-      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+      "disposition": "Shared bf6cc66 integration proposals in 1a.md, excluding later 78eb7db additions"
     },
     {
       "branch": "playtest",
@@ -204,7 +204,7 @@
       "line": 212,
       "heading": "### Proposed rulings and limits [I]",
       "rulingIds": [],
-      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+      "disposition": "Shared bf6cc66 integration proposals in 1a.md, excluding later 78eb7db additions"
     },
     {
       "branch": "research-cast",
@@ -299,7 +299,7 @@
       "line": 39,
       "heading": "## Proposed rulings",
       "rulingIds": [],
-      "disposition": "S7 explicitly reports no proposed ruling; S23 proposals are in its separate README and 33 dossiers"
+      "disposition": "S7 explicitly reports no proposed ruling; S23 uses separate README/dossiers"
     },
     {
       "branch": "research-military",

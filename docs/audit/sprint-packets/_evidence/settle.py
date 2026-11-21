@@ -12,6 +12,7 @@ write(E/'runtime-diagnostics.json',diag)
 raw=[]
 for f in sorted(RAW.rglob('*')):
     if f.is_file():
+        if not (f.suffix=='.diff' or f.name.startswith(('done-','save-')) or f.name in ['preflight.json','preflight.log','check.json','check.log']):continue
         data=f.read_bytes();raw.append({'path':str(f.relative_to(P)).replace('\\','/'),'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
 write(E/'runtime-inventory.json',{'files':raw,'note':'Before the commit; the later hook/commit/status append receipts remain separately local and in CODEX.'})
 excluded={'validation-summary.json','delivery-inventory.json'}

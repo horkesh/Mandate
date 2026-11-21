@@ -89,14 +89,14 @@ def manual(n,text,p,needle):add(n,text,p,pathline(n,p,needle),'S32 unpacking of 
 # resolved against its branch object, never the audit worktree's version.
 META = {
 '1a': {
- 'summary':'Integrates the five named Phase 1A branches and R97 state-force acts. Includes call doctrine and reassignment, fort battle records, independent initiative admission, a report-only assault experiment, and regenerated schemas/World/save data. The remote hand-over is still explicitly in progress; later S1 build items, named test gaps and the second calibration budget are not delivered at this tip.',
- 'evidence':'S1 history reports Manassas on model days 144–146, 58,497 known Union men/four unknown blocks and 130,862 Confederate men/twenty unknown blocks. No unknown block fights. These are model outputs. The Union floor was already nonbinding. The final S1 status is absent from the pinned shared CODEX; S30 and S27 provide downstream evidence for this same integrated runtime, not proof of S1 backlog completion.',
+ 'summary':'Delivers the five ordered integrations, R97, three sourced Charleston counts, dated commands/Johnston, national enlistment/guarded remuster/Regular recruiting, regression gaps and the completed eight-comparison budget. Final complyAt is 10, initiativeAt 150. Fourth Charleston strength, discharge lifecycle, filter-role source and strict border levy remain held; 1A is not complete.',
+ 'evidence':'S1 final default run: exit 1, Phase 0 5/6 (all non-timing criteria pass), 1A 4/6. Pushback and D6 remain unmet. Final rule-seat Manassas has McDowell/Beauregard on July 27/29, model strengths 90,600/40,000 then 83,156/16,000. July-31 known men 99,791 Union/124,218 Confederate, four/seventeen unknown blocks; no unknown block fights. A separate public-word console route receives battle dispatches under Stone. Unavailable B4/B5/V4/C2/C4 descriptions remain unclosed IDs despite new ordinary contract tests.',
  'lenses':[
   ('Canon and decisions','Check the two appointment contracts, State ownership and the removal of administrative acts from governor compliance. Review the 600-second setup-ceiling proposal separately from the unchanged 40/160 ms production budget.','packages/kernel/src/seats/requests.ts','export function principalMenu','packages/kernel/test/command-establishment.test.ts'),
   ('Determinism','Check durable call IDs, unknown enlistment expiries, response-pruning behavior and bombardment record creation. Regenerate rather than hand-edit schemas, Worlds and the save fixture.','packages/kernel/src/tick/recruitment.ts','export function recruitmentPhase','packages/cli/test/state-forces.test.ts'),
   ('History','Read the state acts and later quantity evidence before accepting state-seat aggregates or the 1,000-men regiment norm. Dates of authority, delivery, muster and transfer must remain separate.','notes/lane-1.7-men-regions.md','### Proposed rulings and limits','packs/union-1861/test/state-forces.test.ts'),
   ('Realism','A fort operation must earn its battle record from actual bombardment. Normal routed appointments may complete after their sourced issue date; a forced historical arrival or invented filtering officer is not a repair.','packages/kernel/src/combat/bombard.ts','export function bombardRecords','packages/kernel/test/bombard.test.ts')],
- 'gate':'The seven new administrative notices claim gate.none; review each exact exemption below. The imported combat/transfer work does not lift 0074/R2/R4/R6 or authorize protected-person effects. Existing signed material remains a separate preservation obligation.',
+ 'gate':'The eight administrative/remuster notices claim gate.none; review each exact exemption below. The imported combat/transfer work does not lift 0074/R2/R4/R6 or authorize protected-person effects. Existing signed material remains a separate preservation obligation.',
  'extra':'S1 and people-data both change liveness-gate.ts. Their observations come from different input States; choosing either side of the conflict cannot establish a valid integrated band. S18 will also reject unmatched history/fingerprints even though its textual merge is clean.'},
 'audit': {
  'summary':'S26 adds a report and twelve evidence files: eleven current contract findings, eight outstanding accepted delivery requirements, three section-10 prose/row discrepancies and sixteen deferred capability groups. S32 adds only this packet directory on the local branch; the pinned remote audit tip below predates S32.',
@@ -127,7 +127,7 @@ META = {
   ('History','The pack has no published party-count data at this tip; bloc support is not a count of seats. Future composition and unreceived audience cases must stay invisible.','packages/kernel/src/politics/rules.ts','composition','packages/kernel/test/desk-projections.test.ts'),
   ('Realism','A sent slip is not compliance; an objection is not an audience request. Check wait-note grammar, rejected occurrences, keyboard focus/reflow and the still-missing prospective case.','prototypes/desk/web/DeskViews.tsx',None,'prototypes/desk/test/s19.spec.ts')],
  'gate':'No new signature or historical likeness. Rendering existing sensitive papers still requires their approved agency/uncertainty/terms to survive. No missing policy/cost/ratification is invented by these views.',
- 'extra':'S29 includes 1a, so their earlier generated-schema conflicts are resolved at this pin; preserve that generated source union. view/view.ts still conflicts with perf, and liveness-gate.ts conflicts with people-data. S29 proves no human Manassas dispatch; the separate automated battle is not substitute evidence. Its appointment table has Butler only, with McDowell/Patterson absent. Pending S33 is outside this packet?s delivered scope.'},
+ 'extra':'S29 includes bf6cc66, not the later 78eb7db build; earlier schema conflicts were resolved only for that older integration. New conflicts are listed by the refreshed matrix. view/view.ts still conflicts with perf, and liveness-gate.ts conflicts with people-data. S29 proves no human Manassas dispatch; the separate automated battle is not substitute evidence. Its appointment table has Butler only, with McDowell/Patterson absent. Pending S33 is outside this delivered packet scope.'},
 'people-data': {
  'summary':'Incremental S9 apply/date holds, a curated one-row S6 opt-in, four unsigned people recommendations and S16 runtime data. S16 defers all new Seward/Walker row changes and changes only the initiative liveness band to around(3). Final held list is 414; 102 of 261 people change and all fifteen service-owned rows are protected.',
  'evidence':'S9’s initially blocked applied candidate is superseded by S16, whose unchanged historical tests pass. Warnings remain 17 identical cells. S16 reports reproducible apply outputs, historical wire/bombardment/evacuation assertions and a full check; its campaign still fails timing and four 1A criteria.',
@@ -137,9 +137,9 @@ META = {
   ('History','Seward’s April motives and Walker’s April direction are not proven March-5 values. Keeping the baseline is a deliberate deferral, not new verification of that baseline.','notes/lane-1.11r3-research.md','**Seward proposed ruling:**','packages/cli/test/union-opening.test.ts'),
   ('Realism','Verify the unchanged memorandum and extra bypass assertions. Explain the initiative-band change from held Bates/Smith motives rather than suppressing historical refusal.','notes/lane-1.11r3-research.md','Only **`seats.initiative`**','packs/union-1861/test/r47-authoring.test.ts')],
  'gate':'Four recommendations in s9-people-gate.json remain unsigned: Sumner/Wilson antislavery traits, Houston slavery_defence and Clark state_autonomy. Clark’s companion slavery_defence HOLD must be reviewed with his value. 0074 costOnly remains binding.',
- 'extra':'liveness-gate.ts conflicts with 1a, perf and playtest. The S16 around(3) observation uses its own pre-integration input set; do not overwrite S1’s independently recentered integrated bands. A merged data change also invalidates using S30 hashes as preservation proof of the combined runtime.'},
+ 'extra':'liveness-gate.ts conflicts with 1a, perf and playtest; current 1a also conflicts in PROVENANCE.json and generated world.json. Preserve both reviewed source additions and regenerate the combined World. The S16 around(3) observation uses its own pre-integration input set; do not overwrite S1’s independently recentered integrated bands. A merged data change also invalidates using S30 hashes as preservation proof of the combined runtime.'},
 'perf': {
- 'summary':'Contains all integrated 1a commits plus S2/S20/S30 optimizations: report batching, caller-owned immutable-input caches, unposted-roster/force-presence derivations, candidate-graph reuse, report-route holder lookup and one-pass command membership. Each retained optimization has a separate commit; rejected freezer/view/relay/wire/planner candidates are not delivered.',
+ 'summary':'Contains the older bf6cc66 integration, not the later 78eb7db S1 build/calibration, plus S2/S20/S30 optimizations: report batching, caller-owned immutable-input caches, unposted-roster/force-presence derivations, candidate-graph reuse, report-route holder lookup and one-pass command membership. Each retained optimization has a separate commit; rejected freezer/view/relay/wire/planner candidates are not delivered.',
  'evidence':'S30 reports all 268 daily hashes matching its integrated baseline, replay/save/resume equality, and one default run: Phase 0 6/6, 1A 4/6; war/history medians 27.83/26.30 ms. Linux CI and unloaded 20 ms aim remain unestablished. Paired savings are nonadditive; holder lookup has a negative war estimate.',
  'lenses':[
   ('Canon and decisions','Review the integrated ancestry as well as each perf commit. Derived holder/membership/candidate data must remain caller-owned and never persisted.','notes/lane-s2-perf.md','## S30 proposed rulings','packages/kernel/test/post-membership.test.ts'),
@@ -147,7 +147,7 @@ META = {
   ('History','Preserve inherited signed/pack/calibration inputs and S1’s unresolved dates/unknowns. Performance equality does not prove historical validity.','notes/lane-s2-perf.md','## S30 settled verification','packages/kernel/test/self-emancipation-lookup.test.ts'),
   ('Realism','The same-day post-identity view-cache bug remains inherited and unresolved. Do not broaden morning-view sharing just because the candidate graph is safely reusable.','notes/lane-s2-perf.md','same-day reassignment','packages/kernel/test/principal-candidate-cache.test.ts')],
  'gate':'No new standalone draft. Inherits 1a’s seven administrative gate.none claims. The self-emancipation lookup optimization must preserve every term, cadence and agency path; performance equality is not D6 clearance.',
- 'extra':'1a is an ancestor; review/merge it first, then the perf-only delta. view/view.ts conflicts with desk; liveness-gate.ts conflicts with people-data. Pairwise clean checks with the S18 tooling do not resolve its fingerprint/history requirements.'},
+ 'extra':'The older bf6cc66 integration is shared; current 78eb7db is not an ancestor of perf. Preserve the later S1 build/calibration when combining the perf changes. view/view.ts conflicts with desk, and current 1a conflicts in seats/requests.ts where its appointment changes meet the candidate optimization; liveness-gate.ts conflicts with people-data. Pairwise clean checks with the S18 tooling do not resolve its fingerprint/history requirements.'},
 'plan-1b': {
  'summary':'Proposes 26 lanes (1.15–1.40), 26 corresponding design notes, a revised bounded dependency sequence and fourteen external unnumbered decision drafts D01–D14. The final remote commit contains the eighteen notes whose earlier status/hand-over said commit delivery was blocked; it does not retroactively satisfy the per-note-commit request.',
  'evidence':'The hand-over reports a 64-node/173-edge acyclic dependency audit, not estimates of duration or proof of sources/acceptance. Eight individual S11 note commits plus a final combined eighteen-note commit are present. D01–D14 are separately hash-checked in this packet’s evidence; the S11 text requires reconciliation before acceptance.',
@@ -159,7 +159,7 @@ META = {
  'gate':'External D08–D14 and all sensitive facets in the design notes are unsigned proposals. They retain R2/R3/R4/R6/R7, capture-before-Black-service, the camps hold and terminal verdict restrictions; no design note authorizes an atrocity lever.',
  'extra':'No textual conflicts. Source branches and gate classification should be reviewed before accepting data/mechanic contracts. Merging proposal documents does not open 1B or waive the separate 1A exit review/playtest.'},
 'playtest': {
- 'summary':'Inherits 1a and adds S27’s five console-only July playthroughs, transcript-derived evidence/audit, nine reported-defect regressions and a normal-suite collector. No production correction, band, historical assertion, signature or player copy changes.',
+ 'summary':'Inherits the older bf6cc66 integration and adds S27’s five console-only July playthroughs, transcript-derived evidence/audit, nine reported-defect regressions and a normal-suite collector. No production correction, band, historical assertion, signature or player copy changes.',
  'evidence':'Five strategies, 217 turns/740 July days, all reach July without main-strategy parser/send-time failures or crashes. None sees an hour-stamped field-battle dispatch by July; the independent rule-seat history does fight at Manassas. The first actionable morning is March 6, leaving the requested March-5 criterion unmet.',
  'lenses':[
   ('Canon and decisions','Read B01 and B09’s explicit owner interpretations. Preserve console-only player setup and distinguish menu/receipt knowledge from physical truth.','docs/playtests/2026-11-21-console-playtests.md','**B01**','docs/playtests/s27-console-regressions.test.ts'),
@@ -167,7 +167,7 @@ META = {
   ('History','Do not infer event dates from report receipt, or trait/appointment corrections from a playtest observation. Five strategies are not independent seeds or historical-source verification.','docs/playtests/2026-11-21-console-playtests.md','## What each strategy','docs/playtests/s27-audit.mjs'),
   ('Realism','Prioritize unreadable closed notices and hold flags parsed as places; preserve legitimate resistance. Summaries must retain timing, bypass and audience arguments.','docs/playtests/2026-11-21-console-playtests.md','**B02**','docs/playtests/s27-writing-regressions.test.ts')],
  'gate':'No new sensitive-copy draft. B06 hides authored notice bodies; B09 flags two existing substantive policy labels. Any later rewrite needs author/gate review and renewed content hashes, not policy removal to shorten text. Inherits 1a’s seven gate.none notices.',
- 'extra':'1a is an ancestor; changes beyond it are only the eight S27 paths. People-data still conflicts through inherited liveness-gate.ts; desk conflicts through inherited generated schemas. A later production fix may make an expected-failure test unexpectedly pass.'},
+ 'extra':'The shared bf6cc66 integration predates current 78eb7db; S27 adds eight paths beyond that older pin. Reconcile the final S1 passing console battle test with inherited expected-failure assumptions. People-data still conflicts through the inherited liveness-gate.ts. The new S1 console battle behavior also requires explicit reconciliation of inherited expected-failure assumptions. A later production fix may make an expected-failure test unexpectedly pass.'},
 'research-cast': {
  'summary':'S6/S12/S22 add dated cast/governor/officer/regard research and sidecars. S6: 55 people/532 cells. S12: a substantial bounded pool, not exhaustive tenure coverage. S22: 169 records/132 directed pairs, 148 regard CHANGE proposals and 23 officer-stat CHANGE proposals; every experience cell remains HOLD.',
  'evidence':'Research identities, observation/transmission dates and conflicting witnesses are explicit. The old apply clears HOLD and lacks temporal semantics; do not feed these tables into it. Source scans remain external; selected-page reading is not whole-volume verification.',
@@ -259,13 +259,26 @@ def collect_primary():
     manual('1a','Keep initiativeAt as an independent required pack rule, at behavior-preserving 150 in both packs; reject retaining the trial complyAt=10 as production calibration.','notes/lane-1.5-people-verbs.md','### One measured comparison')
     lines('1a','notes/lane-1.5-people-verbs.md',139,139)
     manual('1a','Keep both effective-date appointments and cause-dependent reassignment; reject dropping either side’s resignation-aware/dated contract during integration.','notes/lane-1.14-done-check.md','Merge 3 preserves')
-    lines('1a','notes/lane-1.14-done-check.md',23,23)
+    p='notes/lane-1.14-done-check.md'
+    needle='The first merge-5 hook stopped'
+    manual('1a',blob('1a',p).splitlines()[pathline('1a',p,needle)-1],p,needle)
     manual('1a','Use bounded test-file concurrency after the retained failures, with a 600-second runner setup ceiling; reject skipping setup, suppressing criteria or treating the ceiling as a relaxed production tick budget.','notes/lane-1.14-done-check.md','Proposed rulings: retain')
     manual('1a','Keep R93 as a report-only parked contact experiment; reject retaining its failed exposure formula or moving historical/loss bounds to make it pass.','notes/lane-1.14-done-check.md','Merge 5 is the read R93')
+    if B['1a']['sha'].startswith('78eb7db'):
+        for needle,text in [
+          ('The closeout commit carries ordinary','Retain ordinary complyAt=10 with initiativeAt=150 as a partial improvement. Reject 3/5 despite five reservations because delayed recruitment falls below the fixed 27 floor; reject 30/50 as worse reservation results. Reservations 16 still fail 1..9; no candidate band is recentered.'),
+          ('The four Charleston requests yielded','Apply only the three read Charleston counts and retain Anderson’s First SC Regular Infantry as a source HOLD. Reject the all-State-regulars 960 as that regiment or backdating the August-1862 700.'),
+          ('The national path covers','Keep sixteen additional quotas/56 regiments, guarded voluntary whole-unit remuster and three-arm Regular recruiting with unknown actual men. Reject paper establishment as troops, duplicate levy and invented individual consent/replacement fractions.'),
+          ('Proposed rulings [I]: retain 10','Keep sourced command/quota paths and due-until-sent appointments; reject retrying refusal, forced battles, future-office starting sides and relabeling transfers/remusters as new border levies.'),
+          ('The test-gap commit','Keep the added ordinary contract regressions and reconcile the unavailable B4/B5/V4/C2/C4 descriptions separately. Reject treating named replacement tests as proof that unavailable review IDs are closed.'),
+          ('A closeout source audit corrected','Use Saunders’s sourced Iowa-home mapping under 0055. Reject his future-office rationale; the source-only provenance correction is not a new behavioral campaign or adoption of other biography cells.')]:manual('1a',text,p,needle)
+        for line,text in enumerate(blob('1a',p).splitlines(),1):
+            if text.startswith(('| phase 0','| 1A ')):
+                add('1a',text,p,line,'S1 final per-criterion continue/park recommendation')
     for n in ['desk','perf','playtest']:
         # Inherited rulings are reviewed once in 1a; this records their coverage
         # without duplicating the full integration packet.
-        add(n,'Inherits every integration proposal in 1a.md, including the runner ceiling, appointment contracts, call/transfer representation and parked R93 experiment. Review them with 1a; neither descendant supersedes those choices.','notes/lane-1.14-done-check.md',3,'inherited coverage')
+        add(n,'Shares the earlier bf6cc66 integration proposals with 1a.md: runner ceiling, appointment contracts, call/transfer representation and parked R93. It does not include the later 78eb7db build/calibration proposals. Review the shared choices once and the later S1 additions separately.','notes/lane-1.14-done-check.md',3,'inherited coverage')
     for needle,text in [
       ('Proposed rulings: use public','Use public chamber records and own recorded choices; reject certifying ratification from hidden congressLedger state.'),
       ('explicit audience requests','Show explicit audience requests and own invitations; reject an objection as a request or reconstruction of a private prospective case.'),
@@ -424,15 +437,17 @@ def write_packet(n,blocks):
     out+=['','## Proposed rulings for the lead','','Each number is a source proposal the lead can accept, revise or overturn. Choices and rejected alternatives retain the author’s wording unless marked as S32 unpacking. Status restatements are retained for traceability; they are not additional witnesses. A withdrawn or superseded proposal is labeled by its source and is not silently revived. Where the source supplies no rejected alternative, this packet does not manufacture one.','']
     for i,r in enumerate(rules,1):
         text=rewrite_source_links(n,r['path'],r['text'])
-        if n=='1a' and r['path']=='notes/lane-1.7-men-regions.md' and r['line']==103:
+        if n=='1a' and r['path']=='notes/lane-1.7-men-regions.md' and r['text'].startswith("Enter Virginia's 40,000"):
             text='**Historical R90 proposal; its fixed subtraction and transfer-time expiry approximation are superseded by R97 below.** '+text
+        if n=='1a' and r['text'].startswith('Keep initiativeAt as an independent'):
+            text='**Historical R92 trial disposition; S1 later selects complyAt=10 through its separate eight-comparison budget, below.** '+text
         if n=='desk' and 'S29 author status' in r['origin'] and 'interrupted' in r['text'].lower():
             text='**Earlier interrupted attempt, superseded by the resumed S29 delivery at 7db8c80.** '+text
         if n=='1a' and ('R84 author status' in r['origin']):
             text='**Historical R84 status; its Butler hold is superseded by R89’s delivered appointment.** '+text
         if n=='1a' and ('R90 author status' in r['origin']):
             text='**Historical R90 status; institutional transfer representation is superseded by R97.** '+text
-        if n=='1a' and r['path']=='notes/lane-1.12-rule-seats.md' and r['line']==537:
+        if n=='1a' and r['path']=='notes/lane-1.12-rule-seats.md' and r['text'].startswith("Preserve Johnston's cross-side"):
             text='**R98 baseline limit; S1 later supplies the resignation/service integration while retaining this eligibility guard.** '+text
         if n=='people-data' and 'S9 author status' in r['origin']:
             text='**Historical S9 candidate/hold; S16’s explicit whole-row deferrals supersede its runtime-delivery block and withdrawn two-band idea.** '+text
@@ -454,6 +469,8 @@ def write_packet(n,blocks):
         # branch has no such test, point to its concrete validation contract.
         out.append(f'| {lens} | {question} {link(n,p,needle)} | {link(n,test)} |')
     out+=['','A test link identifies the relevant guard or validation contract, not a claim that S32 ran that branch. Research/design inventories lack a general test for historical truth; compare cited pages and scope/measure sidecars before adoption. Run the required project/hook checks after integration and every behavior-triggered regression.','', '## Gate items','',m['gate'],'']
+    if n=='1a':
+        out[-4:-4]=['','S1 final-build focus: '+link(n,'packs/union-1861/test/dated-appointments.test.ts')+' covers dated/due appointments; '+link(n,'packages/cli/test/enlistment-renewal.test.ts')+' covers guarded renewal; '+link(n,'packages/kernel/src/recruitment/renewal.ts')+' is the new renewal implementation; '+link(n,'packs/union-1861/test/charleston-strengths.test.ts')+' preserves the three read counts and fourth HOLD. The partial complyAt=10 selection must not be turned into a passing pushback verdict.','']
     recs=GATES[n]
     if recs:
         out+=['| Draft / item | Topic or classification | Remaining review |','|---|---|---|']
@@ -461,7 +478,7 @@ def write_packet(n,blocks):
             target=source_link(n,p,pathline(n,p) if not p.startswith('_external/') else 1)
             out.append('| '+target+' — '+str(item).replace('|','&#124;')+' | '+str(topics).replace('|','&#124;')+' | '+str(state).replace('|','&#124;').replace('\n',' ')+' |')
     else:out+=['No new per-item draft is added by this branch. Inherited or later-use review obligations are described above.']
-    if n in ['desk','perf','playtest']:out+=['','The exact seven inherited administrative notice paths and exemption claims are listed in [1a](1a.md#gate-items).']
+    if n in ['desk','perf','playtest']:out+=['','The seven inherited administrative notices are listed here; current 1a adds the separately reviewed Minnesota remuster claim. The shared pin is bf6cc66, not current 78eb7db.']
     out+=['','## Conflicts from merge-tree','','Every row is an actual `git merge-tree --write-tree --name-only <pinned-left> <pinned-right>` result. Exit 0 means textually clean, exit 1 means conflicted. No checkout, merge or conflict resolution was performed. [All 105 commands, exits, trees, complete stdout/stderr](_evidence/merge-tree.json).','', '| Other tip | Exit | Conflicting files |','|---|---:|---|']
     relevant=[]
     for pair in PAIRS:

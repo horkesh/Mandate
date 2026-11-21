@@ -1,6 +1,6 @@
 # sprint/checks: review packet
 
-Pinned remote tip: `39c279cefc3e836e9a7f6a39acbb6772393a16ab`. Comparison: `origin/main...origin/sprint/checks` at main `b01764406738b42633277c8bf00099e093bf20e9`; merge base `79bd9d633dd78c973b134d6557f046595bd53df9`. Snapshot: 2026-11-21T01:39:50.624621+00:00.
+Pinned remote tip: `39c279cefc3e836e9a7f6a39acbb6772393a16ab`. Comparison: `origin/main...origin/sprint/checks` at main `df0cf216e8bba2be74e992922bd8dd0730135456`; merge base `79bd9d633dd78c973b134d6557f046595bd53df9`. Snapshot: 2026-11-21T02:11:37.186520+00:00.
 
 This is navigation for the standing reviewer and the lead under 0106. It is not a verdict, accepted ruling, gate sign-off or permission to merge. Locations below refer to the pinned branch, not to the audit worktree.
 
@@ -8,7 +8,7 @@ This is navigation for the standing reviewer and the lead under 0106. It is not 
 
 Adds B2 cause/exemption, projection-truth, liveness-cause/history and signed-content checks, their fixtures, CI/check wiring and a staged-history hook extension. Production packs/runtime are unchanged. S25 is not present at this remote tip.
 
-4 commits reachable from the branch but not pinned main; 28 changed paths. Descendants include shared commits; counts across packets must not be added. Immutable [full diff](https://github.com/horkesh/Mandate/compare/b01764406738b42633277c8bf00099e093bf20e9...39c279cefc3e836e9a7f6a39acbb6772393a16ab) and [inventory](_evidence/inventory.json). Raw git diff, its command, size and SHA-256 are retained under `_evidence/validation-raw/diffs/` (local, ignored), with the receipt in the inventory.
+4 commits reachable from the branch but not pinned main; 28 changed paths. Descendants include shared commits; counts across packets must not be added. Immutable [full diff](https://github.com/horkesh/Mandate/compare/df0cf216e8bba2be74e992922bd8dd0730135456...39c279cefc3e836e9a7f6a39acbb6772393a16ab) and [inventory](_evidence/inventory.json). Raw git diff, its command, size and SHA-256 are retained under `_evidence/validation-raw/diffs/` (local, ignored), with the receipt in the inventory.
 
 ### Commits
 

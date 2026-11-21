@@ -1,6 +1,6 @@
 # sprint/desk: review packet
 
-Pinned remote tip: `7db8c80a605c4410f458487778cadc7008ac8909`. Comparison: `origin/main...origin/sprint/desk` at main `b01764406738b42633277c8bf00099e093bf20e9`; merge base `ceff796b3c793ef28e79b5d51d7dfe5a2dfabf39`. Snapshot: 2026-11-21T01:39:50.624621+00:00.
+Pinned remote tip: `7db8c80a605c4410f458487778cadc7008ac8909`. Comparison: `origin/main...origin/sprint/desk` at main `df0cf216e8bba2be74e992922bd8dd0730135456`; merge base `ceff796b3c793ef28e79b5d51d7dfe5a2dfabf39`. Snapshot: 2026-11-21T02:11:37.186520+00:00.
 
 This is navigation for the standing reviewer and the lead under 0106. It is not a verdict, accepted ruling, gate sign-off or permission to merge. Locations below refer to the pinned branch, not to the audit worktree.
 
@@ -8,7 +8,7 @@ This is navigation for the standing reviewer and the lead under 0106. It is not 
 
 S8 builds desk turn flow, attention, accountability, map wait notes and received people views; S19 adds public chamber composition, own attention/audience projections and driver stop preferences, then UI controls/accessibility. S29’s integrated merge/playtest is absent from the remote tip: its interrupted uncommitted work is outside this review snapshot.
 
-23 commits reachable from the branch but not pinned main; 140 changed paths. Descendants include shared commits; counts across packets must not be added. Immutable [full diff](https://github.com/horkesh/Mandate/compare/b01764406738b42633277c8bf00099e093bf20e9...7db8c80a605c4410f458487778cadc7008ac8909) and [inventory](_evidence/inventory.json). Raw git diff, its command, size and SHA-256 are retained under `_evidence/validation-raw/diffs/` (local, ignored), with the receipt in the inventory.
+23 commits reachable from the branch but not pinned main; 140 changed paths. Descendants include shared commits; counts across packets must not be added. Immutable [full diff](https://github.com/horkesh/Mandate/compare/df0cf216e8bba2be74e992922bd8dd0730135456...7db8c80a605c4410f458487778cadc7008ac8909) and [inventory](_evidence/inventory.json). Raw git diff, its command, size and SHA-256 are retained under `_evidence/validation-raw/diffs/` (local, ignored), with the receipt in the inventory.
 
 ### Commits
 
@@ -194,7 +194,7 @@ Each number is a source proposal the lead can accept, revise or overturn. Choice
 5. Complete the prospective audience case, legal counters and declared replies. The filed answer works but is not a current numbered case. Reject inventing one from private traits or old reasons. — [docs/playtests/2026-11-21-desk-history-run.md:202](https://github.com/horkesh/Mandate/blob/7db8c80a605c4410f458487778cadc7008ac8909/docs/playtests/2026-11-21-desk-history-run.md#L202); hand-over.
 6. Have the contract owner classify the plan DTO's numeric score/weighted terms. The review carries score 772 and terms including `goal_fit`, `force_ratio`, `time`, `supply`, `glory`; [optionView](https://github.com/horkesh/Mandate/blob/7db8c80a605c4410f458487778cadc7008ac8909/packages/kernel/src/tick/plans.ts) with `false` hides private notes but retains those fields. The desk does **not** display the numbers. This is a possible oversharing review question, not a proven canon violation or permission to use the numbers as advice. — [docs/playtests/2026-11-21-desk-history-run.md:205](https://github.com/horkesh/Mandate/blob/7db8c80a605c4410f458487778cadc7008ac8909/docs/playtests/2026-11-21-desk-history-run.md#L205); hand-over.
 7. Preserve missing human Manassas as open acceptance. [I] Different holders, explicit review and transport make this trajectory differ from automated history; they do not prove which caused the absence. Reject fabricated reports, truth imported from the automated run, or pack tuning for a screenshot. The next bounded investigation belongs to the human operation/appointment contract owner, using the retained commands/replies. — [docs/playtests/2026-11-21-desk-history-run.md:212](https://github.com/horkesh/Mandate/blob/7db8c80a605c4410f458487778cadc7008ac8909/docs/playtests/2026-11-21-desk-history-run.md#L212); hand-over.
-8. Inherits every integration proposal in 1a.md, including the runner ceiling, appointment contracts, call/transfer representation and parked R93 experiment. Review them with 1a; neither descendant supersedes those choices. — [notes/lane-1.14-done-check.md:3](https://github.com/horkesh/Mandate/blob/7db8c80a605c4410f458487778cadc7008ac8909/notes/lane-1.14-done-check.md#L3); inherited coverage.
+8. Shares the earlier bf6cc66 integration proposals with 1a.md: runner ceiling, appointment contracts, call/transfer representation and parked R93. It does not include the later 78eb7db build/calibration proposals. Review the shared choices once and the later S1 additions separately. — [notes/lane-1.14-done-check.md:3](https://github.com/horkesh/Mandate/blob/7db8c80a605c4410f458487778cadc7008ac8909/notes/lane-1.14-done-check.md#L3); inherited coverage.
 9. Use public chamber records and own recorded choices; reject certifying ratification from hidden congressLedger state. — [notes/sprint-S19-desk.md:28](https://github.com/horkesh/Mandate/blob/7db8c80a605c4410f458487778cadc7008ac8909/notes/sprint-S19-desk.md#L28); S32 unpacking of the cited proposal [I].
 10. Show explicit audience requests and own invitations; reject an objection as a request or reconstruction of a private prospective case. — [notes/sprint-S19-desk.md:30](https://github.com/horkesh/Mandate/blob/7db8c80a605c4410f458487778cadc7008ac8909/notes/sprint-S19-desk.md#L30); S32 unpacking of the cited proposal [I].
 11. Keep stop preferences in the console driver; reject new State or simulation commands. — [notes/sprint-S19-desk.md:31](https://github.com/horkesh/Mandate/blob/7db8c80a605c4410f458487778cadc7008ac8909/notes/sprint-S19-desk.md#L31); S32 unpacking of the cited proposal [I].
@@ -244,7 +244,7 @@ No new signature or historical likeness. Rendering existing sensitive papers sti
 | [packs/union-1861/situations/virginia_forces_return.json:1](https://github.com/horkesh/Mandate/blob/7db8c80a605c4410f458487778cadc7008ac8909/packs/union-1861/situations/virginia_forces_return.json#L1) — virginia_forces_return | proposed gate.none | classification review |
 | [packs/union-1861/situations/virginia_forces_transferred.json:1](https://github.com/horkesh/Mandate/blob/7db8c80a605c4410f458487778cadc7008ac8909/packs/union-1861/situations/virginia_forces_transferred.json#L1) — virginia_forces_transferred | proposed gate.none | classification review |
 
-The exact seven inherited administrative notice paths and exemption claims are listed in [1a](1a.md#gate-items).
+The seven inherited administrative notices are listed here; current 1a adds the separately reviewed Minnesota remuster claim. The shared pin is bf6cc66, not current 78eb7db.
 
 ## Conflicts from merge-tree
 
@@ -253,7 +253,7 @@ Every row is an actual `git merge-tree --write-tree --name-only <pinned-left> <p
 | Other tip | Exit | Conflicting files |
 |---|---:|---|
 | origin/main | 0 | None |
-| sprint/1a | 0 | None |
+| sprint/1a | 1 | `packages/pack-format/schemas/situation.schema.json` |
 | sprint/audit | 0 | None |
 | sprint/checks | 0 | None |
 | sprint/people-data | 1 | `packages/cli/src/liveness-gate.ts` |
@@ -267,7 +267,7 @@ Every row is an actual `git merge-tree --write-tree --name-only <pinned-left> <p
 | sprint/research-politics | 0 | None |
 | sprint/situations-1862 | 0 | None |
 
-S29 includes 1a, so their earlier generated-schema conflicts are resolved at this pin; preserve that generated source union. view/view.ts still conflicts with perf, and liveness-gate.ts conflicts with people-data. S29 proves no human Manassas dispatch; the separate automated battle is not substitute evidence. Its appointment table has Butler only, with McDowell/Patterson absent. Pending S33 is outside this packet?s delivered scope.
+S29 includes bf6cc66, not the later 78eb7db build; earlier schema conflicts were resolved only for that older integration. New conflicts are listed by the refreshed matrix. view/view.ts still conflicts with perf, and liveness-gate.ts conflicts with people-data. S29 proves no human Manassas dispatch; the separate automated battle is not substitute evidence. Its appointment table has Butler only, with McDowell/Patterson absent. Pending S33 is outside this delivered packet scope.
 
 These are pairwise probes only. A clean pair does not establish a clean cumulative merge, compatible semantics, passing rules/history checks or preservation of signed content. Regenerate generated conflicts with their owning tools; handwritten conflict choices need the owning lane and reviewer.
 
@@ -279,4 +279,4 @@ S32’s own validation receipts are in [README](README.md#s32-validation). That 
 
 ## Findings outside my scope
 
-S29 includes 1a, so their earlier generated-schema conflicts are resolved at this pin; preserve that generated source union. view/view.ts still conflicts with perf, and liveness-gate.ts conflicts with people-data. S29 proves no human Manassas dispatch; the separate automated battle is not substitute evidence. Its appointment table has Butler only, with McDowell/Patterson absent. Pending S33 is outside this packet?s delivered scope. Standing review, lead rulings, separate gate review, cumulative integration, runtime repairs, CI and pushing remain with their owners.
+S29 includes bf6cc66, not the later 78eb7db build; earlier schema conflicts were resolved only for that older integration. New conflicts are listed by the refreshed matrix. view/view.ts still conflicts with perf, and liveness-gate.ts conflicts with people-data. S29 proves no human Manassas dispatch; the separate automated battle is not substitute evidence. Its appointment table has Butler only, with McDowell/Patterson absent. Pending S33 is outside this delivered packet scope. Standing review, lead rulings, separate gate review, cumulative integration, runtime repairs, CI and pushing remain with their owners.

@@ -1,6 +1,6 @@
 # sprint/research-gate: review packet
 
-Pinned remote tip: `4220d6124ca3b93aa6513e5096e9fc3a95859eb6`. Comparison: `origin/main...origin/sprint/research-gate` at main `b01764406738b42633277c8bf00099e093bf20e9`; merge base `ceff796b3c793ef28e79b5d51d7dfe5a2dfabf39`. Snapshot: 2026-11-21T01:39:50.624621+00:00.
+Pinned remote tip: `4220d6124ca3b93aa6513e5096e9fc3a95859eb6`. Comparison: `origin/main...origin/sprint/research-gate` at main `df0cf216e8bba2be74e992922bd8dd0730135456`; merge base `ceff796b3c793ef28e79b5d51d7dfe5a2dfabf39`. Snapshot: 2026-11-21T02:11:37.186520+00:00.
 
 This is navigation for the standing reviewer and the lead under 0106. It is not a verdict, accepted ruling, gate sign-off or permission to merge. Locations below refer to the pinned branch, not to the audit worktree.
 
@@ -8,7 +8,7 @@ This is navigation for the standing reviewer and the lead under 0106. It is not 
 
 S7 primary-source notes and S23’s 33 unsigned topic dossiers: twenty inherited-entry continuations and thirteen additions, with common rules, coverage, sources and verification. The live register, source policy, strings, runtime and all signatures are untouched.
 
-7 commits reachable from the branch but not pinned main; 46 changed paths. Descendants include shared commits; counts across packets must not be added. Immutable [full diff](https://github.com/horkesh/Mandate/compare/b01764406738b42633277c8bf00099e093bf20e9...4220d6124ca3b93aa6513e5096e9fc3a95859eb6) and [inventory](_evidence/inventory.json). Raw git diff, its command, size and SHA-256 are retained under `_evidence/validation-raw/diffs/` (local, ignored), with the receipt in the inventory.
+7 commits reachable from the branch but not pinned main; 46 changed paths. Descendants include shared commits; counts across packets must not be added. Immutable [full diff](https://github.com/horkesh/Mandate/compare/df0cf216e8bba2be74e992922bd8dd0730135456...4220d6124ca3b93aa6513e5096e9fc3a95859eb6) and [inventory](_evidence/inventory.json). Raw git diff, its command, size and SHA-256 are retained under `_evidence/validation-raw/diffs/` (local, ignored), with the receipt in the inventory.
 
 ### Commits
 

@@ -11,14 +11,9 @@
       "sha256": "b29332e9c8e1df1d947d8664180538b8c668362b309e789af7a853d276cc50d0"
     },
     {
-      "path": "_evidence/validation-raw/commit-message.txt",
-      "bytes": 230,
-      "sha256": "392e77a7008f5f788dc16f0762095a89db584577e3b5617f7028883a1e1382b4"
-    },
-    {
       "path": "_evidence/validation-raw/diffs/1a.diff",
-      "bytes": 1523863,
-      "sha256": "0b029c6c7a70fa5844e75aaea15a5918045ae74cc637ab88f559707e01cf7e62"
+      "bytes": 1758848,
+      "sha256": "5893c774f9f9eb42878bfe2b1e44a2e5e4dcc166ebcf5cf0dfbd619723f5335d"
     },
     {
       "path": "_evidence/validation-raw/diffs/audit.diff",
@@ -129,11 +124,6 @@
       "path": "_evidence/validation-raw/save-union-1861-60.json",
       "bytes": 1355096,
       "sha256": "4292377f7e7b92471cb79c083bc6c150b8a3f1a6e562522ecfa923214e71ff37"
-    },
-    {
-      "path": "_evidence/validation-raw/staged-whitespace.log",
-      "bytes": 290019,
-      "sha256": "bd930c3b83f935dd8d5908360bed26dbc9e942147b78a279082554b6afe25290"
     }
   ],
   "note": "Before the commit; the later hook/commit/status append receipts remain separately local and in CODEX."

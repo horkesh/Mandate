@@ -1,14 +1,14 @@
 # sprint/perf: review packet
 
-Pinned remote tip: `3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab`. Comparison: `origin/main...origin/sprint/perf` at main `b01764406738b42633277c8bf00099e093bf20e9`; merge base `ceff796b3c793ef28e79b5d51d7dfe5a2dfabf39`. Snapshot: 2026-11-21T01:39:50.624621+00:00.
+Pinned remote tip: `3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab`. Comparison: `origin/main...origin/sprint/perf` at main `df0cf216e8bba2be74e992922bd8dd0730135456`; merge base `ceff796b3c793ef28e79b5d51d7dfe5a2dfabf39`. Snapshot: 2026-11-21T02:11:37.186520+00:00.
 
 This is navigation for the standing reviewer and the lead under 0106. It is not a verdict, accepted ruling, gate sign-off or permission to merge. Locations below refer to the pinned branch, not to the audit worktree.
 
 ## What changes
 
-Contains all integrated 1a commits plus S2/S20/S30 optimizations: report batching, caller-owned immutable-input caches, unposted-roster/force-presence derivations, candidate-graph reuse, report-route holder lookup and one-pass command membership. Each retained optimization has a separate commit; rejected freezer/view/relay/wire/planner candidates are not delivered.
+Contains the older bf6cc66 integration, not the later 78eb7db S1 build/calibration, plus S2/S20/S30 optimizations: report batching, caller-owned immutable-input caches, unposted-roster/force-presence derivations, candidate-graph reuse, report-route holder lookup and one-pass command membership. Each retained optimization has a separate commit; rejected freezer/view/relay/wire/planner candidates are not delivered.
 
-23 commits reachable from the branch but not pinned main; 97 changed paths. Descendants include shared commits; counts across packets must not be added. Immutable [full diff](https://github.com/horkesh/Mandate/compare/b01764406738b42633277c8bf00099e093bf20e9...3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab) and [inventory](_evidence/inventory.json). Raw git diff, its command, size and SHA-256 are retained under `_evidence/validation-raw/diffs/` (local, ignored), with the receipt in the inventory.
+23 commits reachable from the branch but not pinned main; 97 changed paths. Descendants include shared commits; counts across packets must not be added. Immutable [full diff](https://github.com/horkesh/Mandate/compare/df0cf216e8bba2be74e992922bd8dd0730135456...3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab) and [inventory](_evidence/inventory.json). Raw git diff, its command, size and SHA-256 are retained under `_evidence/validation-raw/diffs/` (local, ignored), with the receipt in the inventory.
 
 ### Commits
 
@@ -155,7 +155,7 @@ Each number is a source proposal the lead can accept, revise or overturn. Choice
 9. Park the request/view holder extension after its negative direct median; reject retaining extra cache plumbing on intuition alone. Prefer local one-pass command membership for post lists, rejecting a cross-State cache or changed eligibility. — [notes/lane-s2-perf.md:219](https://github.com/horkesh/Mandate/blob/3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab/notes/lane-s2-perf.md#L219); hand-over.
 10. Park nearest-wire memoization after negative whole-run paired medians in both slots. Reject accepting a direct-query proxy or unpaired medians instead of the requested estimator; no repeated timing campaign to seek a win. — [notes/lane-s2-perf.md:221](https://github.com/horkesh/Mandate/blob/3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab/notes/lane-s2-perf.md#L221); hand-over.
 11. Park the local relay candidate after its negative direct median as well; reject retaining a work-count reduction without a measured runtime benefit. No broader view/cache or planner changes are delivered. — [notes/lane-s2-perf.md:223](https://github.com/horkesh/Mandate/blob/3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab/notes/lane-s2-perf.md#L223); hand-over.
-12. Inherits every integration proposal in 1a.md, including the runner ceiling, appointment contracts, call/transfer representation and parked R93 experiment. Review them with 1a; neither descendant supersedes those choices. — [notes/lane-1.14-done-check.md:3](https://github.com/horkesh/Mandate/blob/3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab/notes/lane-1.14-done-check.md#L3); inherited coverage.
+12. Shares the earlier bf6cc66 integration proposals with 1a.md: runner ceiling, appointment contracts, call/transfer representation and parked R93. It does not include the later 78eb7db build/calibration proposals. Review the shared choices once and the later S1 additions separately. — [notes/lane-1.14-done-check.md:3](https://github.com/horkesh/Mandate/blob/3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab/notes/lane-1.14-done-check.md#L3); inherited coverage.
 13. **Proposed rulings:** (1) accept single-pass availability, rejecting repeated person/post searches or altered candidate values; (2) accept a local lazy presence set, rejecting cross-State caching or changed terms/cadence; (3) accept only fully keyed, deeply frozen candidate graphs, rejecting whole-morning/planning-view sharing, shallow-freeze shortcuts or persisted derived data. — CODEX.md:5648 (preserved in the linked status snapshot); S20 author status.
 14. **3. Proposed rulings, with rejected alternatives.** Accept the caller-owned inverse holder table, keyed by exact immutable post-table identity, and local one-pass force membership. Reject global/persisted caches, cached service/location, changed post eligibility and insertion-order shortcuts. Park the freezer variants, the general view-holder extension and the local relay candidate after no consistent direct saving; park nearest-wire memoization after negative whole-run paired medians in both slots, despite its direct-query win. Reject using a proxy or unpaired medians to overrule the requested estimator. Every rejected production edit and test is absent from the delivery; evidence is retained. — CODEX.md:5917 (preserved in the linked status snapshot); S30 author status.
 
@@ -198,7 +198,7 @@ No new standalone draft. Inherits 1a’s seven administrative gate.none claims. 
 | [packs/union-1861/situations/virginia_forces_return.json:1](https://github.com/horkesh/Mandate/blob/3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab/packs/union-1861/situations/virginia_forces_return.json#L1) — virginia_forces_return | proposed gate.none | classification review |
 | [packs/union-1861/situations/virginia_forces_transferred.json:1](https://github.com/horkesh/Mandate/blob/3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab/packs/union-1861/situations/virginia_forces_transferred.json#L1) — virginia_forces_transferred | proposed gate.none | classification review |
 
-The exact seven inherited administrative notice paths and exemption claims are listed in [1a](1a.md#gate-items).
+The seven inherited administrative notices are listed here; current 1a adds the separately reviewed Minnesota remuster claim. The shared pin is bf6cc66, not current 78eb7db.
 
 ## Conflicts from merge-tree
 
@@ -207,7 +207,7 @@ Every row is an actual `git merge-tree --write-tree --name-only <pinned-left> <p
 | Other tip | Exit | Conflicting files |
 |---|---:|---|
 | origin/main | 0 | None |
-| sprint/1a | 0 | None |
+| sprint/1a | 1 | `packages/kernel/src/seats/requests.ts` |
 | sprint/audit | 0 | None |
 | sprint/checks | 0 | None |
 | sprint/desk | 1 | `packages/kernel/src/view/view.ts` |
@@ -221,7 +221,7 @@ Every row is an actual `git merge-tree --write-tree --name-only <pinned-left> <p
 | sprint/research-politics | 0 | None |
 | sprint/situations-1862 | 0 | None |
 
-1a is an ancestor; review/merge it first, then the perf-only delta. view/view.ts conflicts with desk; liveness-gate.ts conflicts with people-data. Pairwise clean checks with the S18 tooling do not resolve its fingerprint/history requirements.
+The older bf6cc66 integration is shared; current 78eb7db is not an ancestor of perf. Preserve the later S1 build/calibration when combining the perf changes. view/view.ts conflicts with desk, and current 1a conflicts in seats/requests.ts where its appointment changes meet the candidate optimization; liveness-gate.ts conflicts with people-data. Pairwise clean checks with the S18 tooling do not resolve its fingerprint/history requirements.
 
 These are pairwise probes only. A clean pair does not establish a clean cumulative merge, compatible semantics, passing rules/history checks or preservation of signed content. Regenerate generated conflicts with their owning tools; handwritten conflict choices need the owning lane and reviewer.
 
@@ -233,4 +233,4 @@ S32’s own validation receipts are in [README](README.md#s32-validation). That 
 
 ## Findings outside my scope
 
-1a is an ancestor; review/merge it first, then the perf-only delta. view/view.ts conflicts with desk; liveness-gate.ts conflicts with people-data. Pairwise clean checks with the S18 tooling do not resolve its fingerprint/history requirements. Standing review, lead rulings, separate gate review, cumulative integration, runtime repairs, CI and pushing remain with their owners.
+The older bf6cc66 integration is shared; current 78eb7db is not an ancestor of perf. Preserve the later S1 build/calibration when combining the perf changes. view/view.ts conflicts with desk, and current 1a conflicts in seats/requests.ts where its appointment changes meet the candidate optimization; liveness-gate.ts conflicts with people-data. Pairwise clean checks with the S18 tooling do not resolve its fingerprint/history requirements. Standing review, lead rulings, separate gate review, cumulative integration, runtime repairs, CI and pushing remain with their owners.

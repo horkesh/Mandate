@@ -1,5 +1,26 @@
 # Lane 1.12: rule-seat principals and commander seats (Parts A and B)
 
+
+## S1 final command and rule-seat delivery (2026-11-21)
+
+S1's integration, build and test changes are committed through the real hook; final calibration and closeout are proposed for review under 0106. The complete default eight-seed verification with drafting passes all five non-timing Phase 0 criteria. 1A is 4/6, still unmet for pushback and D6; timing remains S2's. Retain ordinary complyAt 10 as a proposed partial improvement: reservations fall from 101 to 16, still above 9. InitiativeAt stays 150 and every sourced band is unchanged. The eight-comparison budget is spent; there is no ninth run. Final Manassas is McDowell against Beauregard on July 27 and 29, with 90,600/40,000 and 83,156/16,000 men present. These are model outputs.
+
+The default sweep's 0/8 return-best result does not clear D6: its grievance channel is missing and all 24 strict border-levy chains remain unexercised. Transfer and remuster cannot count as a new governor levy. The fourth Charleston source count and Patterson discharge lifecycle remain held. Saunders's correct Union value is now grounded in his Iowa home under 0055, with a read 1880 official directory citation. Only his source metadata changes after the frozen measurement, with full World equivalence proof. No starting-side exception or other cast values were introduced.
+
+All eight public console tests pass, including actual July battle existence and separate chronology. Full sources, per-build tables, exact eight comparisons, verdict/recommendations and preservation evidence are at the top of `lane-1.14-done-check.md`. Older stopping points below are superseded by that delivery. Independent review and signatures remain Claude's; no accepted ruling is recorded here.
+
+## Current S1 command-roster integration (2026-11-21)
+
+This supersedes the older R98 stop reports below: S1 has merged the five requested branches and R97, preserving main's normal resignation and both appointment contracts. The full eight-seed integration check passes every non-timing Phase 0 criterion; timing is S2's, and pushback/D6 remain unmet.
+
+S1 now supplies Patterson 27 April and McDowell 28 May effective appointments, using the read GO 12/GO 26 and OR I-2 pp. 1-2, 59-60. Commands start unopened, are created by accepted normal appointments and create no troops. The old DC concentration and July 16 offensive use McDowell's new department [I]. A rules-only future-appointee reservation prevents an earlier generic vacancy taking either man; human/AI menus gain no historical offers. Johnston's opening waits until his sourced 23 May assumption (OR I-2 p. 470), his day 48 ordinary resignation and Virginia's side. No starting faction is rewritten.
+
+Both intermediate 148-day histories have zero rejected commands and fight at Manassas under McDowell/Beauregard on 25-29 July: Union/Confederate 45,600/40,000 first day, 43,532/53,932 last day. These are model strengths. Both retain passing checkpoints/operation/unknown-strength, while the same five pushback bands fail. Mechanical-only recentering and the named live pocket driver preserve the Phase 0 contract. Exact daily table, hashes, source distinctions, positive-control tests and proposed rulings: `notes/lane-1.14-done-check.md`, S1 dated command placements. Evidence: `runs/s1/appointments*`, `johnston*`. The command-roster hook is next; national paths and test gaps remain open.
+
+Proposed [I]: effective assumption dates through ordinary delivery, future rule-seat candidate reservations, guarded declared-post offensives and the explicit aggregate concentration approximation. Reject starting-side changes, date-created armies and forced junctions. Patterson's 27 July discharge remains a sourced lifecycle limitation; these appointment rows do not implement retirement. Independent review/signatures remain Claude's after 0106; nothing is signed here.
+
+S1 national follow-up supersedes the intermediate July above: sixteen additional quotas and the ordinary recruiting path change the history. McDowell vs Beauregard fights July27 and29 at90,600/40,000 and83,156/16,000 present. New workload exposed a lost exact-day appointment: an unsent sourced appointment now stays due/reserved until its letter is sent, without retrying refusal [I]. McDowell accepts May29 under actual attention/delivery. Ordinary human/AI menus are unchanged. National detail, the first failed history, correction controls and remaining pushback/source limits are retained in the S1 national section of `lane-1.14-done-check.md`.
+
 Main merged at `364aba0` on 2026-11-19, by R46. R48 starts from the committed merge at `8b15e6e`, in `C:/Pyrrhic/mandate-rule-seats-b`, branch `phase1-rule-seats-b`.
 
 ## Where lane 1.12 stopped (2026-11-20, R98)
@@ -740,3 +761,7 @@ R97 is implemented in `C:/Pyrrhic/mandate-transfers-1861` on `phase1-transfers-1
 ### Findings outside my scope
 
 Claude’s independent review and ruling on the five unchanged liveness-band breaches remain pending. R98 and the other inherited milestone failures retain their own owners.
+
+## Findings outside my scope
+
+1A remains unmet; see the S1 final verdict in `lane-1.14-done-check.md`. The lead owns deferred review/rulings and unavailable review-ID reconciliation. S2 owns the integrated timing problem;1 Bowns grievance consequences and individual service/consent. The fourth Charleston strength, discharge lifecycle, filter-role source and strict new-border-levy chain remain bounded follow-ups. No other lane's files or branch was written.

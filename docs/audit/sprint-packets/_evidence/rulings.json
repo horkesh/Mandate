@@ -187,7 +187,7 @@
       "origin": "hand-over"
     },
     {
-      "text": "Inherits every integration proposal in 1a.md, including the runner ceiling, appointment contracts, call/transfer representation and parked R93 experiment. Review them with 1a; neither descendant supersedes those choices.",
+      "text": "Shares the earlier bf6cc66 integration proposals with 1a.md: runner ceiling, appointment contracts, call/transfer representation and parked R93. It does not include the later 78eb7db build/calibration proposals. Review the shared choices once and the later S1 additions separately.",
       "path": "notes/lane-1.14-done-check.md",
       "line": 3,
       "origin": "inherited coverage"
@@ -1787,7 +1787,7 @@
       "origin": "hand-over"
     },
     {
-      "text": "Inherits every integration proposal in 1a.md, including the runner ceiling, appointment contracts, call/transfer representation and parked R93 experiment. Review them with 1a; neither descendant supersedes those choices.",
+      "text": "Shares the earlier bf6cc66 integration proposals with 1a.md: runner ceiling, appointment contracts, call/transfer representation and parked R93. It does not include the later 78eb7db build/calibration proposals. Review the shared choices once and the later S1 additions separately.",
       "path": "notes/lane-1.14-done-check.md",
       "line": 3,
       "origin": "inherited coverage"
@@ -1843,7 +1843,7 @@
       "origin": "hand-over"
     },
     {
-      "text": "Inherits every integration proposal in 1a.md, including the runner ceiling, appointment contracts, call/transfer representation and parked R93 experiment. Review them with 1a; neither descendant supersedes those choices.",
+      "text": "Shares the earlier bf6cc66 integration proposals with 1a.md: runner ceiling, appointment contracts, call/transfer representation and parked R93. It does not include the later 78eb7db build/calibration proposals. Review the shared choices once and the later S1 additions separately.",
       "path": "notes/lane-1.14-done-check.md",
       "line": 3,
       "origin": "inherited coverage"
@@ -1895,67 +1895,67 @@
     {
       "text": "Preserve conditional readiness separately from active muster; reject treating both April totals as troops already in service or adding a statutory maximum as another call.",
       "path": "notes/lane-1.7-men-regions.md",
-      "line": 101,
+      "line": 116,
       "origin": "hand-over"
     },
     {
       "text": "Use only the documented public-wire exchange, without assigning Union control to Richmond or changing Virginia's signed delay; reject false territorial control and an unbounded inference of public wire access.",
       "path": "notes/lane-1.7-men-regions.md",
-      "line": 102,
+      "line": 117,
       "origin": "hand-over"
     },
     {
       "text": "Enter Virginia's 40,000 on the first read quantitative date, 17 June, without back-projecting that count to 6 June. Treat North Carolina's four already-serving twelve-month regiments as three additional equivalents after its separate 22 April requisition, avoiding that explicit overlap. The original individual State enlistment dates are unknown: twelve months from the model muster for the Virginia/Tennessee/Arkansas entries is an **inferred horizon-limited approximation**, not a sourced expiry. Review this limit before accepting the data.",
       "path": "notes/lane-1.7-men-regions.md",
-      "line": 103,
+      "line": 118,
       "origin": "hand-over"
     },
     {
       "text": "Preserve unknown sub-regimental headcounts and war terms instead of inventing full regiments or a fixed war-end date. New York's July entry uses the verified 25 July public proclamation date; the exact earlier presidential requisition date is not established here.",
       "path": "notes/lane-1.7-men-regions.md",
-      "line": 104,
+      "line": 119,
       "origin": "hand-over"
     },
     {
       "text": "**Aggregate entry for forces not separately represented before transfer.** Use the existing block, placement and assignment owners at the state government’s seat, with existing recruitment stores and condition rules, then ordinary transfers and joins. This is an administrative approximation, not sourced field disposition. Virginia keeps the single default-arm infantry aggregate from R90; the read total has no arm breakdown, so this is not a claim that all its volunteers were infantry. Reject another governor-compliance request, a new economy stock, invented field posts or a forced battle.",
       "path": "notes/lane-1.7-men-regions.md",
-      "line": 214,
+      "line": 229,
       "origin": "hand-over"
     },
     {
       "text": "**Separate act from quantity.** Virginia’s later 40,000 is not back-projected to 6 June. Tennessee’s tender is not a certificate of completed muster on 29 June or 2 July. Later quantities fill the same contingents. Regimental men use the unchanged 1,000-men norm [I], not exact reported headcounts. Sub-regimental headcounts remain null. Reject duplicate numerical transfers in May and July or fresh blocks for the same later returns.",
       "path": "notes/lane-1.7-men-regions.md",
-      "line": 215,
+      "line": 230,
       "origin": "hand-over"
     },
     {
       "text": "**Preserve uncertainty about original expiries.** The former twelve-month-from-model-muster approximation is removed for these institutional entries. `enlEndsDay: null` with `enlTermUnknown: true` means an unread original expiry, distinct from North Carolina’s known war service. No new twelve-month term starts at transfer. The governor recorded at entry is bookkeeping, nullable during a vacancy, not an assertion that he personally raised every regiment. Original individual dates and expiries remain for research beyond this horizon.",
       "path": "notes/lane-1.7-men-regions.md",
-      "line": 216,
+      "line": 231,
       "origin": "hand-over"
     },
     {
       "text": "**Credit the included North Carolina requisition dynamically.** Its four already-serving regiment equivalents credit surviving men or pending levies linked to the April requisition, using durable `enlCallId` after response pruning. This history’s April answer is `object`, so the credited amount is zero and all four equivalents enter. Reject the old fixed subtraction of one merely requested regiment. Other earlier calls have no read regiment-to-regiment crosswalk; no such identity was invented.",
       "path": "notes/lane-1.7-men-regions.md",
-      "line": 217,
+      "line": 232,
       "origin": "hand-over"
     },
     {
       "text": "Use the sourced assignment dates for doctrine letters; normal delivery determines completion, rather than forcing historical arrivals. Davis's doctrine exercises the R98 authorization; the printed 31 May order is by Lee. In this history Beauregard's letter is sent on **31 May/day 87** and completes on **5 June/day 92**, later than his recorded arrival. Reject adjusting courier weights or forcing headquarters placement to match a date.",
       "path": "notes/lane-1.12-rule-seats.md",
-      "line": 536,
+      "line": 557,
       "origin": "hand-over"
     },
     {
       "text": "Preserve Johnston's cross-side eligibility guard. This base still has him serving as Union Quartermaster General, without 0101's resignation/service owner, so **his Harpers Ferry command does not open in this run**. A fixture supplying only the missing service prerequisite makes his sourced assignment eligible. Reject changing his starting side or implementing the separate resignation lane here. The existing Union operation likewise remains under **Stone**, because this base has no McDowell department establishment; R98 does not repair that other-side gap.",
       "path": "notes/lane-1.12-rule-seats.md",
-      "line": 537,
+      "line": 558,
       "origin": "hand-over"
     },
     {
       "text": "Keep the existing bundle-transfer semantics: the named former Charleston concentration sends its commanded blocks, including opening blocks, while new levies go to the latest established northern command. This is an allocation approximation, not a sourced regiment list. It does not move an already established Johnston army to Manassas. Review this choice explicitly: four unknown opening blocks reach combat. Reject inventing their headcounts, hiding their participation or fitting the battle to a date or result. New establishment answers also prevent repeated dated appointments after ordinary response pruning.",
       "path": "notes/lane-1.12-rule-seats.md",
-      "line": 538,
+      "line": 559,
       "origin": "hand-over"
     },
     {
@@ -1973,26 +1973,134 @@
     {
       "text": "Keep both effective-date appointments and cause-dependent reassignment; reject dropping either side’s resignation-aware/dated contract during integration.",
       "path": "notes/lane-1.14-done-check.md",
-      "line": 17,
+      "line": 100,
       "origin": "S32 unpacking of the cited proposal [I]"
     },
     {
       "text": "The first merge-5 hook stopped at the done-check setup's 300-second deadline: 143 other files / 1,571 tests pass, one inherited expected failure, 17 skips (14 caused by the failed setup, three optional timing checks). Boundary/licence/decision gates were not reached; merge 4's unchanged-input evidence is retained. Stop and diagnose, not a two-worker retry. An isolated one-worker run also exhausted 300 seconds. The bounded 600-second probe passes all 14 applicable assertions in 282.14 seconds, with the existing optional timing skip. CPU samples of 69-79 percent and about 12 GiB free memory establish host observations only, not a cause. The revised approach makes the one named runner setup ceiling 600 seconds and uses one file worker for the hook. Every assertion, collected test and milestone/tick budget is preserved. This runner-only change is a proposed ruling; reject skipping the setup, suppressing a failing criterion, or attributing a production regression without evidence. Evidence and stopping rule: `runs/s1/merge-5-timeout-plan.json`. Another setup timeout stops expensive retries for a new diagnosis.",
       "path": "notes/lane-1.14-done-check.md",
-      "line": 23,
-      "origin": "hand-over"
+      "line": 106,
+      "origin": "S32 unpacking of the cited proposal [I]"
     },
     {
       "text": "Use bounded test-file concurrency after the retained failures, with a 600-second runner setup ceiling; reject skipping setup, suppressing criteria or treating the ceiling as a relaxed production tick budget.",
       "path": "notes/lane-1.14-done-check.md",
-      "line": 33,
+      "line": 160,
       "origin": "S32 unpacking of the cited proposal [I]"
     },
     {
       "text": "Keep R93 as a report-only parked contact experiment; reject retaining its failed exposure formula or moving historical/loss bounds to make it pass.",
       "path": "notes/lane-1.14-done-check.md",
-      "line": 21,
+      "line": 104,
       "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "Retain ordinary complyAt=10 with initiativeAt=150 as a partial improvement. Reject 3/5 despite five reservations because delayed recruitment falls below the fixed 27 floor; reject 30/50 as worse reservation results. Reservations 16 still fail 1..9; no candidate band is recentered.",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 20,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "Apply only the three read Charleston counts and retain Anderson’s First SC Regular Infantry as a source HOLD. Reject the all-State-regulars 960 as that regiment or backdating the August-1862 700.",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 68,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "Keep sixteen additional quotas/56 regiments, guarded voluntary whole-unit remuster and three-arm Regular recruiting with unknown actual men. Reject paper establishment as troops, duplicate levy and invented individual consent/replacement fractions.",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 70,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "Keep sourced command/quota paths and due-until-sent appointments; reject retrying refusal, forced battles, future-office starting sides and relabeling transfers/remusters as new border levies.",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 84,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "Keep the added ordinary contract regressions and reconcile the unavailable B4/B5/V4/C2/C4 descriptions separately. Reject treating named replacement tests as proof that unavailable review IDs are closed.",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 78,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "Use Saunders’s sourced Iowa-home mapping under 0055. Reject his future-office rationale; the source-only provenance correction is not a new behavioral campaign or adoption of other biography cells.",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 72,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "| phase 0 behaviour | PASS | park tuning; preserve the working mechanism |",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 45,
+      "origin": "S1 final per-criterion continue/park recommendation"
+    },
+    {
+      "text": "| phase 0 hash | PASS | park; retain deterministic checks |",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 46,
+      "origin": "S1 final per-criterion continue/park recommendation"
+    },
+    {
+      "text": "| phase 0 resume | PASS | park; retain save/replay controls |",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 47,
+      "origin": "S1 final per-criterion continue/park recommendation"
+    },
+    {
+      "text": "| phase 0 liveness | PASS | park band changes; preserve fixed required floors |",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 48,
+      "origin": "S1 final per-criterion continue/park recommendation"
+    },
+    {
+      "text": "| phase 0 section-ten | PASS | park; preserve single owners and pure kernel |",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 49,
+      "origin": "S1 final per-criterion continue/park recommendation"
+    },
+    {
+      "text": "| phase 0 budget | FAIL | continue with S2 on integrated runtime; no budget increase |",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 50,
+      "origin": "S1 final per-criterion continue/park recommendation"
+    },
+    {
+      "text": "| 1A checkpoints | PASS | park numerical tuning; preserve sourced bands |",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 51,
+      "origin": "S1 final per-criterion continue/park recommendation"
+    },
+    {
+      "text": "| 1A operation | PASS | park forced-battle work; retain emerged battle and record regressions |",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 52,
+      "origin": "S1 final per-criterion continue/park recommendation"
+    },
+    {
+      "text": "| 1A pushback | FAIL | continue source/role mapping and bounded compliance work; no ninth comparison here |",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 53,
+      "origin": "S1 final per-criterion continue/park recommendation"
+    },
+    {
+      "text": "| 1A unknown-strength | PASS | park calibration; continue the fourth Charleston source HOLD |",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 54,
+      "origin": "S1 final per-criterion continue/park recommendation"
+    },
+    {
+      "text": "| 1A stand-ins | PASS | park 1A replacement work; route remaining named stand-ins to 1B |",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 55,
+      "origin": "S1 final per-criterion continue/park recommendation"
+    },
+    {
+      "text": "| 1A lever-sweep | FAIL | parkD 6 clearance to 1B under 0105; continue strict new-border-governor levy chain |",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 56,
+      "origin": "S1 final per-criterion continue/park recommendation"
     },
     {
       "text": "**July proposed ruling [I]: retain the ledger response.** `special_session` answers Congress through `ask_war_footing`. The read message addresses Congress and requests legislative authority ([Old South Leaflets 189, pp. 1, 8; collected pp. 253, 260](https://upload.wikimedia.org/wikipedia/commons/d/dd/Lincoln%27s_first_message_to_Congress_-_message_to_Congress_in_special_session%2C_July_4%2C_1861_%28IA_lincolnsfirstmes00unit%29.pdf#page=8)); `address` instead rewards one political bloc and penalizes others. No sourced bloc was established. Rejected inventing one. Every other Part B item is built or assigned in the hand-over; calibration remains R85, resignation its own lane, and the stand-ins retain their owners.",
@@ -2029,6 +2137,12 @@
       "path": "CODEX.md",
       "line": 4624,
       "origin": "R90 author status"
+    },
+    {
+      "text": "**4. Proposed rulings and remaining work.** Accept the partial compliance change, sourced command/quota paths, unknown actual Regular strength, conservative whole-unit renewal and due-until-sent appointment rule [I]. Reject invented strengths/levies, future-office starting sides, retries of refusal, candidate-band fitting, forced battle and claiming D6 from 0/8 alone. Lead/independent/gate review remains deferred under 0106; no accepted decision or signature was written. Remaining bounded items: fourth Charleston return, Patterson's sourced discharge lifecycle, correct wire-filter traffic/holder source, strict border levy and S2's integrated timing. OR III-1 p.324's July 8 restriction names no censor; caller screening/public censorship cannot simply become the modeled incoming wire filter.",
+      "path": "CODEX.md",
+      "line": 6001,
+      "origin": "S1 author status"
     }
   ]
 }

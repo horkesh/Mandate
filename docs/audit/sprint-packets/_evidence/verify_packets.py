@@ -45,6 +45,9 @@ for i,x in enumerate(refs):
     ok=0<line<=len(ls)
     if x.get('needle'):ok=ok and x['needle'] in ls[line-1]
     check('source reference '+str(i),ok,x if not ok else None)
+for x in json.loads((E/'proposal-source-audit.json').read_text(encoding='utf-8'))['records']:
+    ls=blobs[(branches[x['branch']]['sha'],x['file'])].splitlines()
+    check('proposal source marker '+x['branch']+'/'+str(x['line']),ls[x['line']-1]==x['heading'] and bool(x['disposition']))
 
 for n,b in branches.items():
     packet=(P/f'{n}.md').read_text(encoding='utf-8')
@@ -76,7 +79,7 @@ for n,b in branches.items():
         check(n+' local link '+target,(P/pathpart).exists())
 
 # Exhaustive structured candidate check, independent of the generated gate JSON.
-for n,count in [('research-gate',33),('situations-1862',115),('1a',7),('desk',7),('perf',7),('playtest',7)]:
+for n,count in [('research-gate',33),('situations-1862',115),('1a',8),('desk',7),('perf',7),('playtest',7)]:
     b=branches[n];candidate_paths=[]
     for row in b['changes']:
         if row.startswith('D\t'):continue

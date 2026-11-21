@@ -1,14 +1,14 @@
 # sprint/playtest: review packet
 
-Pinned remote tip: `4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b`. Comparison: `origin/main...origin/sprint/playtest` at main `b01764406738b42633277c8bf00099e093bf20e9`; merge base `ceff796b3c793ef28e79b5d51d7dfe5a2dfabf39`. Snapshot: 2026-11-21T01:39:50.624621+00:00.
+Pinned remote tip: `4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b`. Comparison: `origin/main...origin/sprint/playtest` at main `df0cf216e8bba2be74e992922bd8dd0730135456`; merge base `ceff796b3c793ef28e79b5d51d7dfe5a2dfabf39`. Snapshot: 2026-11-21T02:11:37.186520+00:00.
 
 This is navigation for the standing reviewer and the lead under 0106. It is not a verdict, accepted ruling, gate sign-off or permission to merge. Locations below refer to the pinned branch, not to the audit worktree.
 
 ## What changes
 
-Inherits 1a and adds S27’s five console-only July playthroughs, transcript-derived evidence/audit, nine reported-defect regressions and a normal-suite collector. No production correction, band, historical assertion, signature or player copy changes.
+Inherits the older bf6cc66 integration and adds S27’s five console-only July playthroughs, transcript-derived evidence/audit, nine reported-defect regressions and a normal-suite collector. No production correction, band, historical assertion, signature or player copy changes.
 
-14 commits reachable from the branch but not pinned main; 92 changed paths. Descendants include shared commits; counts across packets must not be added. Immutable [full diff](https://github.com/horkesh/Mandate/compare/b01764406738b42633277c8bf00099e093bf20e9...4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b) and [inventory](_evidence/inventory.json). Raw git diff, its command, size and SHA-256 are retained under `_evidence/validation-raw/diffs/` (local, ignored), with the receipt in the inventory.
+14 commits reachable from the branch but not pinned main; 92 changed paths. Descendants include shared commits; counts across packets must not be added. Immutable [full diff](https://github.com/horkesh/Mandate/compare/df0cf216e8bba2be74e992922bd8dd0730135456...4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b) and [inventory](_evidence/inventory.json). Raw git diff, its command, size and SHA-256 are retained under `_evidence/validation-raw/diffs/` (local, ignored), with the receipt in the inventory.
 
 ### Commits
 
@@ -133,7 +133,7 @@ Each number is a source proposal the lead can accept, revise or overturn. Choice
 1. **[I] Proposed for the lead:** preserve reported defects as expected failures with an explicit red mode until fixes are reviewed. Rejected alternatives: skipped tests, unconditional failing assertions, disabling the hook, or fixing production in S27. — [docs/playtests/2026-11-21-console-playtests.md:137](https://github.com/horkesh/Mandate/blob/4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b/docs/playtests/2026-11-21-console-playtests.md#L137); hand-over.
 2. **[I] Proposed:** retain the missing 5 March criterion and distinguish console receipt, last printed menus and physical truth. Rejected alternatives: altering initial State, direct kernel orders, using the rule-seat history as a substitute for console play, or counting August as July. — [docs/playtests/2026-11-21-console-playtests.md:139](https://github.com/horkesh/Mandate/blob/4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b/docs/playtests/2026-11-21-console-playtests.md#L139); hand-over.
 3. **[I] Proposed:** apply the literal imperative-triad rule to the two substantive labels pending the lead's interpretation. Rejected alternatives: silently exempting them or deleting policy acts to shorten their wording. Any sensitive-copy rewrite remains for its author and gate reviewer; no signature or player copy was changed here. — [docs/playtests/2026-11-21-console-playtests.md:141](https://github.com/horkesh/Mandate/blob/4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b/docs/playtests/2026-11-21-console-playtests.md#L141); hand-over.
-4. Inherits every integration proposal in 1a.md, including the runner ceiling, appointment contracts, call/transfer representation and parked R93 experiment. Review them with 1a; neither descendant supersedes those choices. — [notes/lane-1.14-done-check.md:3](https://github.com/horkesh/Mandate/blob/4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b/notes/lane-1.14-done-check.md#L3); inherited coverage.
+4. Shares the earlier bf6cc66 integration proposals with 1a.md: runner ceiling, appointment contracts, call/transfer representation and parked R93. It does not include the later 78eb7db build/calibration proposals. Review the shared choices once and the later S1 additions separately. — [notes/lane-1.14-done-check.md:3](https://github.com/horkesh/Mandate/blob/4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b/notes/lane-1.14-done-check.md#L3); inherited coverage.
 5. **2. Regressions and proposed rulings [I].** Nine cases have actual red assertion evidence: missing first morning; hold flags consumed as objectives; lost timing, bypass and audience arguments; unreadable notice bodies; raw refusal codes; singular-day wording; and the literal imperative-triad conflict. Normal tests use expected failures, with explicit red mode; fixtures are guarded outside them. **No game, pack, signature or band fix.** Propose retaining expected failures and the March gap, and applying the literal writing rule pending your interpretation. Reject skips, bypassing the hook, hidden-State setup, forced battles and deleting policy acts to shorten labels. The report distinguishes proven defects from resistance, allocation observations and completeness questions. — CODEX.md:5773 (preserved in the linked status snapshot); S27 author status.
 
 ### Status and hand-over coverage
@@ -172,7 +172,7 @@ No new sensitive-copy draft. B06 hides authored notice bodies; B09 flags two exi
 | [packs/union-1861/situations/virginia_forces_return.json:1](https://github.com/horkesh/Mandate/blob/4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b/packs/union-1861/situations/virginia_forces_return.json#L1) — virginia_forces_return | proposed gate.none | classification review |
 | [packs/union-1861/situations/virginia_forces_transferred.json:1](https://github.com/horkesh/Mandate/blob/4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b/packs/union-1861/situations/virginia_forces_transferred.json#L1) — virginia_forces_transferred | proposed gate.none | classification review |
 
-The exact seven inherited administrative notice paths and exemption claims are listed in [1a](1a.md#gate-items).
+The seven inherited administrative notices are listed here; current 1a adds the separately reviewed Minnesota remuster claim. The shared pin is bf6cc66, not current 78eb7db.
 
 ## Conflicts from merge-tree
 
@@ -195,7 +195,7 @@ Every row is an actual `git merge-tree --write-tree --name-only <pinned-left> <p
 | sprint/research-politics | 0 | None |
 | sprint/situations-1862 | 0 | None |
 
-1a is an ancestor; changes beyond it are only the eight S27 paths. People-data still conflicts through inherited liveness-gate.ts; desk conflicts through inherited generated schemas. A later production fix may make an expected-failure test unexpectedly pass.
+The shared bf6cc66 integration predates current 78eb7db; S27 adds eight paths beyond that older pin. Reconcile the final S1 passing console battle test with inherited expected-failure assumptions. People-data still conflicts through the inherited liveness-gate.ts. The new S1 console battle behavior also requires explicit reconciliation of inherited expected-failure assumptions. A later production fix may make an expected-failure test unexpectedly pass.
 
 These are pairwise probes only. A clean pair does not establish a clean cumulative merge, compatible semantics, passing rules/history checks or preservation of signed content. Regenerate generated conflicts with their owning tools; handwritten conflict choices need the owning lane and reviewer.
 
@@ -207,4 +207,4 @@ S32’s own validation receipts are in [README](README.md#s32-validation). That 
 
 ## Findings outside my scope
 
-1a is an ancestor; changes beyond it are only the eight S27 paths. People-data still conflicts through inherited liveness-gate.ts; desk conflicts through inherited generated schemas. A later production fix may make an expected-failure test unexpectedly pass. Standing review, lead rulings, separate gate review, cumulative integration, runtime repairs, CI and pushing remain with their owners.
+The shared bf6cc66 integration predates current 78eb7db; S27 adds eight paths beyond that older pin. Reconcile the final S1 passing console battle test with inherited expected-failure assumptions. People-data still conflicts through the inherited liveness-gate.ts. The new S1 console battle behavior also requires explicit reconciliation of inherited expected-failure assumptions. A later production fix may make an expected-failure test unexpectedly pass. Standing review, lead rulings, separate gate review, cumulative integration, runtime repairs, CI and pushing remain with their owners.

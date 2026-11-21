@@ -1,10 +1,10 @@
 {
-  "passed": 7227,
+  "passed": 7311,
   "failed": 0,
   "branches": 14,
   "pairs": 105,
-  "sourceReferences": 2473,
-  "uniqueSourceBlobs": 894,
+  "sourceReferences": 2545,
+  "uniqueSourceBlobs": 915,
   "protectedOriginalFiles": 1686,
   "rulingEntries": {
     "audit": 4,
@@ -20,10 +20,10 @@
     "plan-1b": 112,
     "playtest": 5,
     "desk": 15,
-    "1a": 23
+    "1a": 42
   },
   "gateRows": {
-    "1a": 7,
+    "1a": 8,
     "audit": 0,
     "checks": 0,
     "desk": 7,
@@ -14540,6 +14540,531 @@
       "detail": null
     },
     {
+      "check": "source reference 2473",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2474",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2475",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2476",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2477",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2478",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2479",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2480",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2481",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2482",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2483",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2484",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2485",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2486",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2487",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2488",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2489",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2490",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2491",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2492",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2493",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2494",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2495",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2496",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2497",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2498",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2499",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2500",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2501",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2502",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2503",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2504",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2505",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2506",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2507",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2508",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2509",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2510",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2511",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2512",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2513",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2514",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2515",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2516",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2517",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2518",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2519",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2520",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2521",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2522",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2523",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2524",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2525",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2526",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2527",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2528",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2529",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2530",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2531",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2532",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2533",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2534",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2535",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2536",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2537",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2538",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2539",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2540",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2541",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2542",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2543",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source reference 2544",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker 1a/555",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker 1a/108",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker 1a/227",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker checks/59",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker desk/534",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker desk/93",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker desk/212",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker people-data/128",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker people-data/253",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker perf/534",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker perf/93",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker perf/212",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker perf/213",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker perf/485",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker perf/497",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker plan-1b/13",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker plan-1b/80",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker playtest/534",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker playtest/93",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker playtest/212",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker research-cast/41",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker research-cast/17",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker research-cast/13",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker research-foreign-economy/46",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker research-foreign-economy/56",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker research-foreign-economy/15",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker research-gate/39",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker research-military/65",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker research-military/50",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker research-military/65",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker research-military/16",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker research-politics/25",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "proposal source marker situations-1862/11",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "1a raw diff size/hash",
       "pass": true,
       "detail": null
@@ -14680,6 +15205,31 @@
       "detail": null
     },
     {
+      "check": "1a commit 7032e4e4f890",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a commit ca428f77b96e",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a commit cffb0d1af30e",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a commit 9edd547323ef",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a commit 78eb7dbff124",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "1a changed path docs/design/FOUNDATION.md",
       "pass": true,
       "detail": null
@@ -14750,12 +15300,27 @@
       "detail": null
     },
     {
+      "check": "1a changed path packages/cli/test/console-session.test.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a changed path packages/cli/test/enlistment-renewal.test.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "1a changed path packages/cli/test/fixtures/saves/testbed-seats-day40.json",
       "pass": true,
       "detail": null
     },
     {
       "check": "1a changed path packages/cli/test/men-regions.test.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a changed path packages/cli/test/recruiting-office.test.ts",
       "pass": true,
       "detail": null
     },
@@ -14850,6 +15415,11 @@
       "detail": null
     },
     {
+      "check": "1a changed path packages/kernel/src/recruitment/renewal.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "1a changed path packages/kernel/src/seats/api.ts",
       "pass": true,
       "detail": null
@@ -14861,6 +15431,16 @@
     },
     {
       "check": "1a changed path packages/kernel/src/seats/world.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a changed path packages/kernel/src/situations/conditions.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a changed path packages/kernel/src/situations/references.ts",
       "pass": true,
       "detail": null
     },
@@ -14895,6 +15475,11 @@
       "detail": null
     },
     {
+      "check": "1a changed path packages/kernel/src/tick/situations.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "1a changed path packages/kernel/src/tick/tick.ts",
       "pass": true,
       "detail": null
@@ -14920,7 +15505,17 @@
       "detail": null
     },
     {
+      "check": "1a changed path packages/kernel/test/capitals.test.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "1a changed path packages/kernel/test/command-establishment.test.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a changed path packages/kernel/test/declared-recruiting.test.ts",
       "pass": true,
       "detail": null
     },
@@ -14960,6 +15555,11 @@
       "detail": null
     },
     {
+      "check": "1a changed path packages/pack-format/test/renewal-validation.test.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "1a changed path packages/pack-format/test/state-forces.test.ts",
       "pass": true,
       "detail": null
@@ -14991,6 +15591,11 @@
     },
     {
       "check": "1a changed path packs/testbed/pack.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a changed path packs/union-1861/PROVENANCE.json",
       "pass": true,
       "detail": null
     },
@@ -15030,6 +15635,11 @@
       "detail": null
     },
     {
+      "check": "1a changed path packs/union-1861/situations/minnesota_first_remuster.json",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "1a changed path packs/union-1861/situations/north_carolina_forces_transferred.json",
       "pass": true,
       "detail": null
@@ -15060,7 +15670,27 @@
       "detail": null
     },
     {
+      "check": "1a changed path packs/union-1861/source/scenarios/march_1861/force_blocks.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a changed path packs/union-1861/source/scenarios/march_1861/holders.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a changed path packs/union-1861/source/scenarios/march_1861/posts.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "1a changed path packs/union-1861/source/scenarios/march_1861/temporary_posts.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a changed path packs/union-1861/source/world/people.csv",
       "pass": true,
       "detail": null
     },
@@ -15080,7 +15710,27 @@
       "detail": null
     },
     {
+      "check": "1a changed path packs/union-1861/test/charleston-strengths.test.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a changed path packs/union-1861/test/dated-appointments.test.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a changed path packs/union-1861/test/national-enlistment.test.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "1a changed path packs/union-1861/test/northern-concentration.test.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a changed path packs/union-1861/test/record-terms.test.ts",
       "pass": true,
       "detail": null
     },
@@ -15095,7 +15745,17 @@
       "detail": null
     },
     {
+      "check": "1a changed path packs/union-1861/test/world-v2.test.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "1a changed path vitest.config.ts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a merge peer people-data",
       "pass": true,
       "detail": null
     },
@@ -15105,7 +15765,12 @@
       "detail": null
     },
     {
-      "check": "1a merge peer people-data",
+      "check": "1a merge peer desk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a merge peer playtest",
       "pass": true,
       "detail": null
     },
@@ -15120,37 +15785,12 @@
       "detail": null
     },
     {
-      "check": "1a merge peer situations-1862",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "1a merge peer research-foreign-economy",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "1a merge peer perf",
       "pass": true,
       "detail": null
     },
     {
-      "check": "1a merge peer plan-1b",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "1a merge peer main",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "1a merge peer research-politics",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "1a merge peer desk",
+      "check": "1a merge peer situations-1862",
       "pass": true,
       "detail": null
     },
@@ -15160,12 +15800,27 @@
       "detail": null
     },
     {
-      "check": "1a merge peer playtest",
+      "check": "1a merge peer plan-1b",
       "pass": true,
       "detail": null
     },
     {
       "check": "1a merge peer research-gate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a merge peer research-foreign-economy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a merge peer research-politics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a merge peer main",
       "pass": true,
       "detail": null
     },
@@ -15290,7 +15945,107 @@
       "detail": null
     },
     {
+      "check": "1a ruling source 24",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 25",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 26",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 27",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 28",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 29",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 30",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 31",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 32",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 33",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 34",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 35",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 36",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 37",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 38",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 39",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 40",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 41",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a ruling source 42",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "1a gate item arkansas_forces_transferred",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a gate item minnesota_first_remuster",
       "pass": true,
       "detail": null
     },
@@ -15436,6 +16191,11 @@
     },
     {
       "check": "1a local link _evidence/CODEX-pre-sprint-statuses.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1a local link _evidence/CODEX-sprint-snapshot.md",
       "pass": true,
       "detail": null
     },
@@ -15620,7 +16380,7 @@
       "detail": null
     },
     {
-      "check": "audit merge peer research-cast",
+      "check": "audit merge peer 1a",
       "pass": true,
       "detail": null
     },
@@ -15630,42 +16390,7 @@
       "detail": null
     },
     {
-      "check": "audit merge peer research-military",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "audit merge peer situations-1862",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "audit merge peer research-foreign-economy",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "audit merge peer perf",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "audit merge peer plan-1b",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "audit merge peer main",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "audit merge peer 1a",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "audit merge peer research-politics",
+      "check": "audit merge peer research-cast",
       "pass": true,
       "detail": null
     },
@@ -15675,17 +16400,52 @@
       "detail": null
     },
     {
-      "check": "audit merge peer checks",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "audit merge peer playtest",
       "pass": true,
       "detail": null
     },
     {
+      "check": "audit merge peer research-military",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "audit merge peer perf",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "audit merge peer situations-1862",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "audit merge peer checks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "audit merge peer plan-1b",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "audit merge peer research-gate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "audit merge peer research-foreign-economy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "audit merge peer research-politics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "audit merge peer main",
       "pass": true,
       "detail": null
     },
@@ -15970,7 +16730,7 @@
       "detail": null
     },
     {
-      "check": "checks merge peer research-cast",
+      "check": "checks merge peer 1a",
       "pass": true,
       "detail": null
     },
@@ -15980,47 +16740,7 @@
       "detail": null
     },
     {
-      "check": "checks merge peer research-military",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "checks merge peer audit",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "checks merge peer situations-1862",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "checks merge peer research-foreign-economy",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "checks merge peer perf",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "checks merge peer plan-1b",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "checks merge peer main",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "checks merge peer 1a",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "checks merge peer research-politics",
+      "check": "checks merge peer research-cast",
       "pass": true,
       "detail": null
     },
@@ -16035,7 +16755,47 @@
       "detail": null
     },
     {
+      "check": "checks merge peer research-military",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "checks merge peer audit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "checks merge peer perf",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "checks merge peer situations-1862",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "checks merge peer plan-1b",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "checks merge peer research-gate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "checks merge peer research-foreign-economy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "checks merge peer research-politics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "checks merge peer main",
       "pass": true,
       "detail": null
     },
@@ -16990,12 +17750,22 @@
       "detail": null
     },
     {
-      "check": "desk merge peer research-cast",
+      "check": "desk merge peer 1a",
       "pass": true,
       "detail": null
     },
     {
       "check": "desk merge peer people-data",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "desk merge peer research-cast",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "desk merge peer playtest",
       "pass": true,
       "detail": null
     },
@@ -17010,37 +17780,12 @@
       "detail": null
     },
     {
-      "check": "desk merge peer situations-1862",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "desk merge peer research-foreign-economy",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "desk merge peer perf",
       "pass": true,
       "detail": null
     },
     {
-      "check": "desk merge peer plan-1b",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "desk merge peer main",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "desk merge peer 1a",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "desk merge peer research-politics",
+      "check": "desk merge peer situations-1862",
       "pass": true,
       "detail": null
     },
@@ -17050,12 +17795,27 @@
       "detail": null
     },
     {
-      "check": "desk merge peer playtest",
+      "check": "desk merge peer plan-1b",
       "pass": true,
       "detail": null
     },
     {
       "check": "desk merge peer research-gate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "desk merge peer research-foreign-economy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "desk merge peer research-politics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "desk merge peer main",
       "pass": true,
       "detail": null
     },
@@ -17235,11 +17995,6 @@
       "detail": null
     },
     {
-      "check": "desk local link 1a.md#gate-items",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "desk local link _evidence/merge-tree.json",
       "pass": true,
       "detail": null
@@ -17400,7 +18155,22 @@
       "detail": null
     },
     {
+      "check": "people-data merge peer 1a",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "people-data merge peer research-cast",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "people-data merge peer desk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "people-data merge peer playtest",
       "pass": true,
       "detail": null
     },
@@ -17415,42 +18185,12 @@
       "detail": null
     },
     {
-      "check": "people-data merge peer situations-1862",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "people-data merge peer research-foreign-economy",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "people-data merge peer perf",
       "pass": true,
       "detail": null
     },
     {
-      "check": "people-data merge peer plan-1b",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "people-data merge peer main",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "people-data merge peer 1a",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "people-data merge peer research-politics",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "people-data merge peer desk",
+      "check": "people-data merge peer situations-1862",
       "pass": true,
       "detail": null
     },
@@ -17460,12 +18200,27 @@
       "detail": null
     },
     {
-      "check": "people-data merge peer playtest",
+      "check": "people-data merge peer plan-1b",
       "pass": true,
       "detail": null
     },
     {
       "check": "people-data merge peer research-gate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "people-data merge peer research-foreign-economy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "people-data merge peer research-politics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "people-data merge peer main",
       "pass": true,
       "detail": null
     },
@@ -18255,12 +19010,27 @@
       "detail": null
     },
     {
-      "check": "perf merge peer research-cast",
+      "check": "perf merge peer 1a",
       "pass": true,
       "detail": null
     },
     {
       "check": "perf merge peer people-data",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "perf merge peer research-cast",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "perf merge peer desk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "perf merge peer playtest",
       "pass": true,
       "detail": null
     },
@@ -18280,7 +19050,7 @@
       "detail": null
     },
     {
-      "check": "perf merge peer research-foreign-economy",
+      "check": "perf merge peer checks",
       "pass": true,
       "detail": null
     },
@@ -18290,12 +19060,12 @@
       "detail": null
     },
     {
-      "check": "perf merge peer main",
+      "check": "perf merge peer research-gate",
       "pass": true,
       "detail": null
     },
     {
-      "check": "perf merge peer 1a",
+      "check": "perf merge peer research-foreign-economy",
       "pass": true,
       "detail": null
     },
@@ -18305,22 +19075,7 @@
       "detail": null
     },
     {
-      "check": "perf merge peer desk",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "perf merge peer checks",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "perf merge peer playtest",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "perf merge peer research-gate",
+      "check": "perf merge peer main",
       "pass": true,
       "detail": null
     },
@@ -18481,11 +19236,6 @@
     },
     {
       "check": "perf local link _evidence/handovers/perf/notes/lane-s2-perf.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "perf local link 1a.md#gate-items",
       "pass": true,
       "detail": null
     },
@@ -18765,12 +19515,27 @@
       "detail": null
     },
     {
-      "check": "plan-1b merge peer research-cast",
+      "check": "plan-1b merge peer 1a",
       "pass": true,
       "detail": null
     },
     {
       "check": "plan-1b merge peer people-data",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "plan-1b merge peer research-cast",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "plan-1b merge peer desk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "plan-1b merge peer playtest",
       "pass": true,
       "detail": null
     },
@@ -18785,37 +19550,12 @@
       "detail": null
     },
     {
-      "check": "plan-1b merge peer situations-1862",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "plan-1b merge peer research-foreign-economy",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "plan-1b merge peer perf",
       "pass": true,
       "detail": null
     },
     {
-      "check": "plan-1b merge peer main",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "plan-1b merge peer 1a",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "plan-1b merge peer research-politics",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "plan-1b merge peer desk",
+      "check": "plan-1b merge peer situations-1862",
       "pass": true,
       "detail": null
     },
@@ -18825,12 +19565,22 @@
       "detail": null
     },
     {
-      "check": "plan-1b merge peer playtest",
+      "check": "plan-1b merge peer research-gate",
       "pass": true,
       "detail": null
     },
     {
-      "check": "plan-1b merge peer research-gate",
+      "check": "plan-1b merge peer research-foreign-economy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "plan-1b merge peer research-politics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "plan-1b merge peer main",
       "pass": true,
       "detail": null
     },
@@ -21195,12 +21945,22 @@
       "detail": null
     },
     {
-      "check": "playtest merge peer research-cast",
+      "check": "playtest merge peer 1a",
       "pass": true,
       "detail": null
     },
     {
       "check": "playtest merge peer people-data",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "playtest merge peer research-cast",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "playtest merge peer desk",
       "pass": true,
       "detail": null
     },
@@ -21215,42 +21975,12 @@
       "detail": null
     },
     {
-      "check": "playtest merge peer situations-1862",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "playtest merge peer research-foreign-economy",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "playtest merge peer perf",
       "pass": true,
       "detail": null
     },
     {
-      "check": "playtest merge peer plan-1b",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "playtest merge peer main",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "playtest merge peer 1a",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "playtest merge peer research-politics",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "playtest merge peer desk",
+      "check": "playtest merge peer situations-1862",
       "pass": true,
       "detail": null
     },
@@ -21260,7 +21990,27 @@
       "detail": null
     },
     {
+      "check": "playtest merge peer plan-1b",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "playtest merge peer research-gate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "playtest merge peer research-foreign-economy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "playtest merge peer research-politics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "playtest merge peer main",
       "pass": true,
       "detail": null
     },
@@ -21361,11 +22111,6 @@
     },
     {
       "check": "playtest local link _evidence/handovers/playtest/notes/lane-1.7-men-regions.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "playtest local link 1a.md#gate-items",
       "pass": true,
       "detail": null
     },
@@ -21735,7 +22480,22 @@
       "detail": null
     },
     {
+      "check": "research-cast merge peer 1a",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "research-cast merge peer people-data",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-cast merge peer desk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-cast merge peer playtest",
       "pass": true,
       "detail": null
     },
@@ -21750,42 +22510,12 @@
       "detail": null
     },
     {
-      "check": "research-cast merge peer situations-1862",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-cast merge peer research-foreign-economy",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "research-cast merge peer perf",
       "pass": true,
       "detail": null
     },
     {
-      "check": "research-cast merge peer plan-1b",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-cast merge peer main",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-cast merge peer 1a",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-cast merge peer research-politics",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-cast merge peer desk",
+      "check": "research-cast merge peer situations-1862",
       "pass": true,
       "detail": null
     },
@@ -21795,12 +22525,27 @@
       "detail": null
     },
     {
-      "check": "research-cast merge peer playtest",
+      "check": "research-cast merge peer plan-1b",
       "pass": true,
       "detail": null
     },
     {
       "check": "research-cast merge peer research-gate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-cast merge peer research-foreign-economy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-cast merge peer research-politics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-cast merge peer main",
       "pass": true,
       "detail": null
     },
@@ -22365,12 +23110,27 @@
       "detail": null
     },
     {
-      "check": "research-foreign-economy merge peer research-cast",
+      "check": "research-foreign-economy merge peer 1a",
       "pass": true,
       "detail": null
     },
     {
       "check": "research-foreign-economy merge peer people-data",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-foreign-economy merge peer research-cast",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-foreign-economy merge peer desk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-foreign-economy merge peer playtest",
       "pass": true,
       "detail": null
     },
@@ -22385,37 +23145,12 @@
       "detail": null
     },
     {
-      "check": "research-foreign-economy merge peer situations-1862",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "research-foreign-economy merge peer perf",
       "pass": true,
       "detail": null
     },
     {
-      "check": "research-foreign-economy merge peer plan-1b",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-foreign-economy merge peer main",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-foreign-economy merge peer 1a",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-foreign-economy merge peer research-politics",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-foreign-economy merge peer desk",
+      "check": "research-foreign-economy merge peer situations-1862",
       "pass": true,
       "detail": null
     },
@@ -22425,12 +23160,22 @@
       "detail": null
     },
     {
-      "check": "research-foreign-economy merge peer playtest",
+      "check": "research-foreign-economy merge peer plan-1b",
       "pass": true,
       "detail": null
     },
     {
       "check": "research-foreign-economy merge peer research-gate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-foreign-economy merge peer research-politics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-foreign-economy merge peer main",
       "pass": true,
       "detail": null
     },
@@ -23105,12 +23850,27 @@
       "detail": null
     },
     {
-      "check": "research-gate merge peer research-cast",
+      "check": "research-gate merge peer 1a",
       "pass": true,
       "detail": null
     },
     {
       "check": "research-gate merge peer people-data",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-gate merge peer research-cast",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-gate merge peer desk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-gate merge peer playtest",
       "pass": true,
       "detail": null
     },
@@ -23125,42 +23885,12 @@
       "detail": null
     },
     {
-      "check": "research-gate merge peer situations-1862",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-gate merge peer research-foreign-economy",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "research-gate merge peer perf",
       "pass": true,
       "detail": null
     },
     {
-      "check": "research-gate merge peer plan-1b",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-gate merge peer main",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-gate merge peer 1a",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-gate merge peer research-politics",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-gate merge peer desk",
+      "check": "research-gate merge peer situations-1862",
       "pass": true,
       "detail": null
     },
@@ -23170,7 +23900,22 @@
       "detail": null
     },
     {
-      "check": "research-gate merge peer playtest",
+      "check": "research-gate merge peer plan-1b",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-gate merge peer research-foreign-economy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-gate merge peer research-politics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-gate merge peer main",
       "pass": true,
       "detail": null
     },
@@ -24105,7 +24850,7 @@
       "detail": null
     },
     {
-      "check": "research-military merge peer research-cast",
+      "check": "research-military merge peer 1a",
       "pass": true,
       "detail": null
     },
@@ -24115,42 +24860,7 @@
       "detail": null
     },
     {
-      "check": "research-military merge peer audit",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-military merge peer situations-1862",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-military merge peer research-foreign-economy",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-military merge peer perf",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-military merge peer plan-1b",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-military merge peer main",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-military merge peer 1a",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-military merge peer research-politics",
+      "check": "research-military merge peer research-cast",
       "pass": true,
       "detail": null
     },
@@ -24160,17 +24870,52 @@
       "detail": null
     },
     {
-      "check": "research-military merge peer checks",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "research-military merge peer playtest",
       "pass": true,
       "detail": null
     },
     {
+      "check": "research-military merge peer audit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-military merge peer perf",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-military merge peer situations-1862",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-military merge peer checks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-military merge peer plan-1b",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "research-military merge peer research-gate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-military merge peer research-foreign-economy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-military merge peer research-politics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-military merge peer main",
       "pass": true,
       "detail": null
     },
@@ -24995,12 +25740,27 @@
       "detail": null
     },
     {
-      "check": "research-politics merge peer research-cast",
+      "check": "research-politics merge peer 1a",
       "pass": true,
       "detail": null
     },
     {
       "check": "research-politics merge peer people-data",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-politics merge peer research-cast",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-politics merge peer desk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-politics merge peer playtest",
       "pass": true,
       "detail": null
     },
@@ -25015,37 +25775,12 @@
       "detail": null
     },
     {
-      "check": "research-politics merge peer situations-1862",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-politics merge peer research-foreign-economy",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "research-politics merge peer perf",
       "pass": true,
       "detail": null
     },
     {
-      "check": "research-politics merge peer plan-1b",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-politics merge peer main",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-politics merge peer 1a",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "research-politics merge peer desk",
+      "check": "research-politics merge peer situations-1862",
       "pass": true,
       "detail": null
     },
@@ -25055,12 +25790,22 @@
       "detail": null
     },
     {
-      "check": "research-politics merge peer playtest",
+      "check": "research-politics merge peer plan-1b",
       "pass": true,
       "detail": null
     },
     {
       "check": "research-politics merge peer research-gate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-politics merge peer research-foreign-economy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "research-politics merge peer main",
       "pass": true,
       "detail": null
     },
@@ -26065,12 +26810,27 @@
       "detail": null
     },
     {
-      "check": "situations-1862 merge peer research-cast",
+      "check": "situations-1862 merge peer 1a",
       "pass": true,
       "detail": null
     },
     {
       "check": "situations-1862 merge peer people-data",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "situations-1862 merge peer research-cast",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "situations-1862 merge peer desk",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "situations-1862 merge peer playtest",
       "pass": true,
       "detail": null
     },
@@ -26085,37 +26845,7 @@
       "detail": null
     },
     {
-      "check": "situations-1862 merge peer research-foreign-economy",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "situations-1862 merge peer perf",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "situations-1862 merge peer plan-1b",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "situations-1862 merge peer main",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "situations-1862 merge peer 1a",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "situations-1862 merge peer research-politics",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "situations-1862 merge peer desk",
       "pass": true,
       "detail": null
     },
@@ -26125,12 +26855,27 @@
       "detail": null
     },
     {
-      "check": "situations-1862 merge peer playtest",
+      "check": "situations-1862 merge peer plan-1b",
       "pass": true,
       "detail": null
     },
     {
       "check": "situations-1862 merge peer research-gate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "situations-1862 merge peer research-foreign-economy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "situations-1862 merge peer research-politics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "situations-1862 merge peer main",
       "pass": true,
       "detail": null
     },
@@ -26844,8 +27589,8 @@
       "check": "1a exhaustive candidate count",
       "pass": true,
       "detail": {
-        "actual": 7,
-        "expected": 7
+        "actual": 8,
+        "expected": 8
       }
     },
     {
@@ -35478,107 +36223,12 @@
       "detail": null
     },
     {
-      "check": "write scope docs/audit/sprint-packets/_evidence/.gitignore",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/CODEX-pre-sprint-statuses.md",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "write scope docs/audit/sprint-packets/_evidence/CODEX-sprint-snapshot.md",
       "pass": true,
       "detail": null
     },
     {
       "check": "write scope docs/audit/sprint-packets/_evidence/build_packets.py",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/collect.py",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/delivery-inventory.json",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions.json",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions/D01-phase-1b-scope-and-sequence.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions/D02-people-evidence-and-declarations.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions/D03-home-front-elections-and-wills.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions/D04-economy-foreign-and-capacity.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions/D05-proposals-sieges-and-carriage.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions/D06-recurring-and-grouped-situations.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions/D07-phase-1-check-and-calibration.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions/D08-r2-black-military-service.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions/D09-r3-native-nations.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions/D10-r4-prisoners-and-exchange.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions/D11-r6-civilians-and-commanders.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions/D12-r7-emancipation-and-fugitive-policy.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions/D13-r5-verdict-and-reckoning.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/external-decisions/D14-freedpeople-camps-research-and-placement.md",
       "pass": true,
       "detail": null
     },
@@ -35598,232 +36248,12 @@
       "detail": null
     },
     {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/1a/notes/lane-1.3-combat.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/1a/notes/lane-1.5-people-verbs.md",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "write scope docs/audit/sprint-packets/_evidence/handovers/1a/notes/lane-1.7-men-regions.md",
       "pass": true,
       "detail": null
     },
     {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/audit/docs/audit/2026-11-21-canon-against-code.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/checks/notes/sprint-S18-checks.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/desk/docs/playtests/2026-11-21-desk-history-run.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/desk/notes/lane-1.12-rule-seats.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/desk/notes/lane-1.14-done-check.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/desk/notes/lane-1.3-combat.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/desk/notes/lane-1.5-people-verbs.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/desk/notes/lane-1.7-men-regions.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/desk/notes/sprint-S19-desk.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/desk/notes/sprint-S29-desk.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/people-data/notes/lane-1.11r3-research.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/perf/notes/lane-1.12-rule-seats.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/perf/notes/lane-1.14-done-check.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/perf/notes/lane-1.3-combat.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/perf/notes/lane-1.5-people-verbs.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/perf/notes/lane-1.7-men-regions.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/perf/notes/lane-s2-perf.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/plan-1b/docs/design/PHASE-1B-PROPOSAL.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/plan-1b/notes/lane-1b-plan.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/playtest/docs/playtests/2026-11-21-console-playtests.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/playtest/notes/lane-1.12-rule-seats.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/playtest/notes/lane-1.14-done-check.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/playtest/notes/lane-1.3-combat.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/playtest/notes/lane-1.5-people-verbs.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/playtest/notes/lane-1.7-men-regions.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/research-cast/notes/sprint-S12-cast.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/research-cast/notes/sprint-S22-regard.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/research-cast/notes/sprint-S6-cast.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/research-foreign-economy/notes/lane-s5-foreign-economy.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/research-foreign-economy/notes/sprint-S15-manpower-economy.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/research-foreign-economy/notes/sprint-S24-supply.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/research-gate/notes/lane-s7-research-gate.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/research-gate/packs/union-1861/gate/drafts/README.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/research-military/notes/sprint-S14-oob-drafts.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/research-military/notes/sprint-S21-unknown-strengths.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/research-military/notes/sprint-S31-unknown-strengths.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/research-military/notes/sprint-S4-research-military.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/research-politics/notes/sprint-S3-politics.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/situations-1862/notes/sprint-S13-situations.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/handovers/situations-1862/notes/sprint-S28-situations.md",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/inventory-initial.json",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "write scope docs/audit/sprint-packets/_evidence/inventory.json",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/merge-tree-initial.json",
       "pass": true,
       "detail": null
     },
@@ -35834,11 +36264,6 @@
     },
     {
       "check": "write scope docs/audit/sprint-packets/_evidence/packet-checks.json",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/preservation-before.json",
       "pass": true,
       "detail": null
     },
@@ -35868,21 +36293,6 @@
       "detail": null
     },
     {
-      "check": "write scope docs/audit/sprint-packets/_evidence/run-done.ts",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/runtime-diagnostics.json",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/runtime-inventory.json",
-      "pass": true,
-      "detail": null
-    },
-    {
       "check": "write scope docs/audit/sprint-packets/_evidence/settle.py",
       "pass": true,
       "detail": null
@@ -35894,16 +36304,6 @@
     },
     {
       "check": "write scope docs/audit/sprint-packets/_evidence/status-source.json",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/validate-runtime.py",
-      "pass": true,
-      "detail": null
-    },
-    {
-      "check": "write scope docs/audit/sprint-packets/_evidence/validation-summary.json",
       "pass": true,
       "detail": null
     },
@@ -35983,6 +36383,21 @@
       "detail": null
     },
     {
+      "check": "write scope docs/audit/sprint-packets/_evidence/inventory-before-s1.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "write scope docs/audit/sprint-packets/_evidence/merge-tree-before-s1.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "write scope docs/audit/sprint-packets/_evidence/refresh-history.json",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "status exists 1a/R84",
       "pass": true,
       "detail": null
@@ -36034,6 +36449,11 @@
     },
     {
       "check": "status exists 1a/R97",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "status exists 1a/S1",
       "pass": true,
       "detail": null
     },
