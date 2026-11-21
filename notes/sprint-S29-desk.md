@@ -60,11 +60,27 @@ weeks, compares the exact public morning/history at day 56, then runs the
 affected May-to-July path with all five issued markers required. Its evidence
 goes to `art-masters/S29/final-history/`; earlier attempts stay at the S29 root.
 
+The pending-decision correction derives the checkbox selection and a pending
+notice from the desk's own signed queue. It prevents a second decision or
+referral slip until that slip is recalled or dispatched. Two tests reproduced
+the reset and duplicate-signature problem; the corrected real Pickens snapshot
+passes native browser checks at both sizes without advancing the simulation.
+This does not mark a decision accepted before the kernel checks it.
+
+The nested-audience interruption was a harness error: it looked for Put down
+but the nested dialog correctly offered Back. The revised helper follows the
+dialog header's actual close/back control and verifies the desk is active.
+Its small browser check passes. The 82-command recovery reproduced the exact
+day-138 morning/history, and the governor-corrected fork reproduced day 56
+from 49 commands. No State was loaded or edited to reconstruct either session.
+
 Proposed ruling: allow `end [days]` and a turn-sheet day limit within the pack's
 maximum. Reject changing pack rules to land on a historical date, or silently
 advancing past a requested review date.
 Use the identified requisition's seat-menu fields rather than reconstructing a
 call from a regiment count. Reject inferring missing terms or changing the pack.
+Keep signed decisions visibly pending from the out-tray, rather than clearing
+their selections or pretending that queueing applied their effects.
 
 Findings outside my scope: whole-branch review remains deferred to Claude under
 0106. Kernel/history acceptance failures belong to their existing owners.

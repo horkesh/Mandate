@@ -25,6 +25,7 @@ export const S = {
   stopChoice:(label:string)=>`Stop on: ${label}`, stopLimit:(n:number)=>`A turn runs at most ${n} days.`,
   turnDays:'Maximum days this turn', turnDaysNote:'Return sooner to review the desk before a dated decision. Selected stops can still end the turn early.',
   callsDue:'Calls due', callsDueNote:'These dated requisitions are supplied by today’s menu. Signing queues the letter for dispatch.',
+  decisionQueued:'Decision in the out-tray. It is checked when the days run. Recall the slip there to change your answer.',
   signCall:'Sign this call', callQueued:'Call in the out-tray', callForWar:'For the war',callReadiness:'Hold ready',callUnknownStrength:'Strength not supplied',
   callMen:(n:number)=>`${n.toLocaleString('en-US')} men`,callRegiments:(n:number)=>`${n.toLocaleString('en-US')} regiments`,callTerm:(n:number)=>`For ${n} days`,
   callArms:{infantry:'Infantry',cavalry:'Cavalry',artillery:'Artillery'} as Record<string,string>,
