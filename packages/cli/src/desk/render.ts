@@ -12,7 +12,8 @@ import { noteAccountLines, noteText } from './notes.ts';
 export type Strings = (key: string) => string;
 
 /** Days from a plan's start, from its permille days. */
-const days = (permille: number): string => `${Math.ceil(permille / 1000).toString()} days`;
+export const dayCount = (n: number): string => `${n.toString()} ${n === 1 ? 'day' : 'days'}`;
+const days = (permille: number): string => dayCount(Math.ceil(permille / 1000));
 
 function axisLine(a: AxisView): string {
   return `    ${a.name} (${a.post}, ${a.mode}, ${a.strength.toString()} men): ${a.regions.join(' > ')}, arriving in ${days(a.arrival)}; ${a.phases.join(', ')}`;
@@ -79,7 +80,11 @@ export function morningLines(request: SeatRequest, sinceDay: number, t: Strings,
 /** The days of a turn passing: each day's new reports, any of his orders refused, and why the turn stopped. */
 export function dayLines(day: { readonly day: number; readonly date: string; readonly reports: readonly ReportView[]; readonly refused: readonly { readonly what: string; readonly reason: string }[] }, t: Strings = key => key): string[] {
   const out = [`--- ${day.date} (day ${day.day.toString()}) ---`];
-  for (const r of day.refused) out.push(`  Refused: ${r.what} (${r.reason})`);
+  for (const r of day.refused) {
+    const key = `console.refusal.${r.reason}`;
+    const text = t(key);
+    out.push(`  Refused: ${r.what} (${text === key ? t('console.refusal.unavailable') : text})`);
+  }
   const view = { reports: day.reports } as unknown as Parameters<typeof dispatchLog>[0];
   for (const l of dispatchLog(view, 0, t)) out.push(`  ${l}`);
   return out;
@@ -94,9 +99,10 @@ export function enemyLines(request: SeatRequest): string[] {
 export function commandText(c: SeatCommand, t: Strings = key => key): string {
   switch (c.cmd) {
     case 'order':
-      return `order ${c.to} to ${c.goal.posture}${c.goal.objective === null ? '' : ` ${c.goal.objective}`} (risk ${c.goal.risk.toString()}, ${c.goal.deadlineDays.toString()} days) by ${c.route}${c.bypass ? ', around the chain' : ''}`;
+      return `order ${c.to} to ${c.goal.posture}${c.goal.objective === null ? '' : ` ${c.goal.objective}`} (risk ${c.goal.risk.toString()}, ${dayCount(c.goal.deadlineDays)}) by ${c.route}${c.bypass ? ', around the chain' : ''}`;
     case 'review':
-      return c.action === 'edit' && c.edit !== null ? `edit ${c.to}'s plan: ${c.edit.kind}${c.edit.axis === null ? '' : ` ${c.edit.axis}`}${c.edit.region === null ? '' : ` to ${c.edit.region}`}${c.edit.via.length > 0 ? ` via ${c.edit.via.join(',')}` : ''}` : `${c.action === 'approve' ? 'approve' : 'send back'} ${c.to}'s plan${c.notes?.length ? ': '+c.notes.map(n => noteText(n,t)).join(' ') : ''}`;
+      return (c.action === 'edit' && c.edit !== null ? `edit ${c.to}'s plan: ${c.edit.kind}${c.edit.axis === null ? '' : ` ${c.edit.axis}`}${c.edit.region === null ? '' : ` to ${c.edit.region}`}${c.edit.via.length > 0 ? ` via ${c.edit.via.join(',')}` : ''}${c.edit.concentration === null ? '' : ` days=${c.edit.concentration.toString()}`}` : `${c.action === 'approve' ? 'approve' : 'send back'} ${c.to}'s plan${c.notes?.length ? ': '+c.notes.map(n => noteText(n,t)).join(' ') : ''}`)
+        + ` by ${c.route}${c.bypass ? ', around the chain' : ', through the chain'}`;
     case 'decide':
       return `decide ${c.situation}: ${c.options.length === 0 ? 'let it take its course' : c.options.join(', ')}`;
     case 'delegate':
@@ -104,11 +110,11 @@ export function commandText(c: SeatCommand, t: Strings = key => key): string {
     case 'transfer':
       return `transfer ${c.amount.toString()} ${c.force} from ${c.from} to ${c.to}`;
     case 'audience':
-      return `audience with ${c.to}${c.counters.length === 0 ? '' : `: ${c.counters.map((k) => k.kind).join(', ')}`}`;
+      return `audience with ${c.to}${c.counters.length === 0 ? '' : `: ${c.counters.map(k => k.kind === 'adjust' ? `adjust:${k.boldness}` : k.kind === 'frame' ? `frame:${k.value}` : k.kind === 'reinforce' ? `reinforce:${k.from}:${k.men}` : k.kind).join(', ')}`}`;
     case 'go':
       return `the word to go, to ${c.to}`;
     case 'call':
-      return `${c.readiness ? 'hold ready' : 'call'} ${c.men === null || c.regiments === null ? 'troops of unknown strength' : c.men === undefined ? `${c.regiments.toString()} regiments` : `${c.men.toString()} men`}${c.arm === undefined ? '' : ` of ${c.arm}`} ${c.termDays === null ? 'for the war' : `for ${c.termDays.toString()} days`} from ${c.to}`;
+      return `${c.readiness ? 'hold ready' : 'call'} ${c.men === null || c.regiments === null ? 'troops of unknown strength' : c.men === undefined ? `${c.regiments.toString()} regiments` : `${c.men.toString()} men`}${c.arm === undefined ? '' : ` of ${c.arm}`} ${c.termDays === null ? 'for the war' : `for ${dayCount(c.termDays)}`} from ${c.to}`;
     case 'appoint':
       return `appoint ${c.person} to ${c.post}${c.rank === null ? '' : ` as ${c.rank}`}`;
     case 'relieve':

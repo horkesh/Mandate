@@ -409,6 +409,9 @@ describe('notices, effects and proposals', () => {
     };
     const { world, state } = setup([notice]);
     const run = days(world, state, 2);
+    expect(viewFor(world, state, lead).reports.some(r => r.text === notice.text)).toBe(false);
+    expect(viewFor(world, run.results[0]!.state, lead).reports.some(r => r.text === notice.text)).toBe(false);
+    expect(viewFor(world, run.state, lead).reports.find(r => r.subjectId === 'told')?.text).toBe(notice.text);
     expect(run.state.situationStates[S('told')]!.sitStatus).toBe('noticed');
     // Gate F1 (review S10): the notice goes as a report from its author, and surfaces when that report arrives.
     expect(run.state.situationStates[S('told')]!.sitStaffAuthor).toBe(P('a_sec'));

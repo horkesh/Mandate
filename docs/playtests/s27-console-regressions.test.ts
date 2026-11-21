@@ -4,10 +4,7 @@ import { ConsoleSession } from '../../packages/cli/src/console/session.ts';
 
 /** S27 black-box regressions. The driver is constructed only to obtain a text
  * session. These players never read State, World, menus, logs or a runner.
- * S27_ASSERT_FIXED=1 runs the desired assertions as ordinary failing tests.
- * Otherwise it.fails preserves the known defects through the required hook;
- * a correction must turn its unexpected pass into an ordinary passing test. */
-const bug = process.env.S27_ASSERT_FIXED === '1' ? it : it.fails;
+ * S35 promotes B01–B08 to ordinary passing requirements. */
 
 class Player {
   readonly lines: string[];
@@ -91,39 +88,39 @@ describe('S27 reproducible console defects on the integrated 1A', () => {
     expect(noticeSituations.some(line => line.startsWith('sumter_garrison: '))).toBe(true);
   });
 
-  bug('S27-B01: offers the requested first playable morning, 5 March', () => {
+  it('S27-B01: offers the requested first playable morning, 5 March', () => {
     expect(opening.find(line => line.startsWith('=== '))).toContain('1861-03-05');
   });
 
-  bug('S27-B02: an optional hold-order flag is not consumed as its objective', () => {
+  it('S27-B02: an optional hold-order flag is not consumed as its objective', () => {
     expect(holdResult.filter(line => line.includes('Refused:'))).toEqual([]);
   });
 
-  bug('S27-B03: the queue preserves different concentration-day edits', () => {
+  it('S27-B03: the queue preserves different concentration-day edits', () => {
     expect(timingQueue[0]).toMatch(/\b1\s+days?\b|days=1\b/);
     expect(timingQueue[1]).toMatch(/\b8\s+days?\b|days=8\b/);
   });
 
-  bug('S27-B04: the queue distinguishes approval through the chain from a bypass', () => {
+  it('S27-B04: the queue distinguishes approval through the chain from a bypass', () => {
     const withoutQueueNumber = approvalQueue.map(line => line.replace(/^\d+\. /, ''));
     expect(new Set(withoutQueueNumber).size).toBe(2);
   });
 
-  bug('S27-B05: the queue preserves the values of different audience counters', () => {
+  it('S27-B05: the queue preserves the values of different audience counters', () => {
     expect(audienceQueue[0]).toContain('100');
     expect(audienceQueue[1]).toContain('900');
   });
 
-  bug('S27-B06: a delivered notice is readable through at least one console reading command', () => {
+  it('S27-B06: a delivered notice is readable through at least one console reading command', () => {
     // This is the existing authored en string, not new player copy or history.
     expect([...noticeInbox, ...noticeSituations].join('\n')).toContain('The officer reports that he has resigned from United States service.');
   });
 
-  bug('S27-B07: a refused order explains its problem without an internal reason code', () => {
+  it('S27-B07: a refused order explains its problem without an internal reason code', () => {
     expect(invalidGoalResult.filter(line => line.includes('Refused:')).join('\n')).not.toMatch(/\(bad_goal\)/);
   });
 
-  bug('S27-B08: a one-day edit preview uses the singular unit', () => {
+  it('S27-B08: a one-day edit preview uses the singular unit', () => {
     expect(previewTiming.join('\n')).not.toMatch(/\b1 days\b/);
   });
 

@@ -66,7 +66,8 @@ function reportLine(r: ReportView, t: (key: string) => string): string {
   // A battle day's dispatches carry their hour (FOUNDATION section 9: the night of the battle, hour by hour).
   const hour = r.hour === null ? '' : ` at ${r.hour.toString().padStart(2, '0')}:00`;
   const stories = pressStories(r, t);
-  const copy = r.type === 'press' ? (stories.length === 0 ? t('press.empty') : stories.map(s => `${s.headline}. ${s.body}`).join('; ')) : claims;
+  const body = r.text === undefined ? claims : `${claims}. ${t(r.text)}`;
+  const copy = r.type === 'press' ? (stories.length === 0 ? t('press.empty') : stories.map(s => `${s.headline}. ${s.body}`).join('; ')) : body;
   return `day ${r.receivedDay.toString().padStart(3)}  ${kind} from ${r.author} (written day ${r.day.toString()}${hour}, ${r.route}${via}): ${copy}${advice}`;
 }
 

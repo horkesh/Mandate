@@ -1,0 +1,501 @@
+{
+    "source":  "C:\\Pyrrhic\\ByOrderOfThePresident\\art-masters\\S29\\completed-history\\browser-commands.jsonl",
+    "sha256":  "fa350fd61026755980993cebda4b72a0a143c8e3cb40d7a6b3d5ab9c3c142f06",
+    "commands":  [
+                     {
+                         "day":  1,
+                         "line":  "end 6",
+                         "ok":  true
+                     },
+                     {
+                         "day":  2,
+                         "line":  "decide pickens_reinforcement land_company",
+                         "ok":  true
+                     },
+                     {
+                         "day":  2,
+                         "line":  "end 5",
+                         "ok":  true
+                     },
+                     {
+                         "day":  7,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  9,
+                         "line":  "decide seward_memorandum answer_in_person",
+                         "ok":  true
+                     },
+                     {
+                         "day":  9,
+                         "line":  "end 5",
+                         "ok":  true
+                     },
+                     {
+                         "day":  11,
+                         "line":  "decide confederate_commissioners hold_and_talk",
+                         "ok":  true
+                     },
+                     {
+                         "day":  11,
+                         "line":  "end 3",
+                         "ok":  true
+                     },
+                     {
+                         "day":  14,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  21,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  25,
+                         "line":  "end 3",
+                         "ok":  true
+                     },
+                     {
+                         "day":  26,
+                         "line":  "decide lamon_promise assure_notice",
+                         "ok":  true
+                     },
+                     {
+                         "day":  26,
+                         "line":  "end 2",
+                         "ok":  true
+                     },
+                     {
+                         "day":  28,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  29,
+                         "line":  "end 6",
+                         "ok":  true
+                     },
+                     {
+                         "day":  31,
+                         "line":  "decide virginia_unionists offer_fort",
+                         "ok":  true
+                     },
+                     {
+                         "day":  31,
+                         "line":  "end 4",
+                         "ok":  true
+                     },
+                     {
+                         "day":  33,
+                         "line":  "decide pickens_refused courier_order special_expedition",
+                         "ok":  true
+                     },
+                     {
+                         "day":  33,
+                         "line":  "decide sumter_garrison provision_notice",
+                         "ok":  true
+                     },
+                     {
+                         "day":  33,
+                         "line":  "end 2",
+                         "ok":  true
+                     },
+                     {
+                         "day":  35,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  40,
+                         "line":  "decide blockade_or_closure blockade",
+                         "ok":  true
+                     },
+                     {
+                         "day":  40,
+                         "line":  "end 2",
+                         "ok":  true
+                     },
+                     {
+                         "day":  41,
+                         "line":  "end 1",
+                         "ok":  true
+                     },
+                     {
+                         "day":  42,
+                         "line":  "decide call_for_troops militia_call",
+                         "ok":  true
+                     },
+                     {
+                         "day":  42,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  45,
+                         "line":  "end 4",
+                         "ok":  true
+                     },
+                     {
+                         "day":  46,
+                         "line":  "decide gosport_yard defend",
+                         "ok":  true
+                     },
+                     {
+                         "day":  46,
+                         "line":  "end 3",
+                         "ok":  true
+                     },
+                     {
+                         "day":  47,
+                         "line":  "end 2",
+                         "ok":  true
+                     },
+                     {
+                         "day":  48,
+                         "line":  "decide washington_cut_off around_baltimore",
+                         "ok":  true
+                     },
+                     {
+                         "day":  48,
+                         "line":  "transfer st_gov_massachusetts us_dc_militia blocks 999",
+                         "ok":  true
+                     },
+                     {
+                         "day":  48,
+                         "line":  "transfer st_gov_ohio us_dc_militia blocks 999",
+                         "ok":  true
+                     },
+                     {
+                         "day":  48,
+                         "line":  "transfer st_gov_pennsylvania us_dc_militia blocks 999",
+                         "ok":  true
+                     },
+                     {
+                         "day":  48,
+                         "line":  "end 1",
+                         "ok":  true
+                     },
+                     {
+                         "day":  49,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  50,
+                         "line":  "end 6",
+                         "ok":  true
+                     },
+                     {
+                         "day":  53,
+                         "line":  "decide missouri_arsenal back_lyon",
+                         "ok":  true
+                     },
+                     {
+                         "day":  53,
+                         "line":  "transfer st_gov_connecticut us_dc_militia blocks 999",
+                         "ok":  true
+                     },
+                     {
+                         "day":  53,
+                         "line":  "transfer st_gov_illinois us_dc_militia blocks 999",
+                         "ok":  true
+                     },
+                     {
+                         "day":  53,
+                         "line":  "transfer st_gov_indiana us_dc_militia blocks 999",
+                         "ok":  true
+                     },
+                     {
+                         "day":  53,
+                         "line":  "transfer st_gov_new_hampshire us_dc_militia blocks 999",
+                         "ok":  true
+                     },
+                     {
+                         "day":  53,
+                         "line":  "transfer st_gov_new_york us_dc_militia blocks 999",
+                         "ok":  true
+                     },
+                     {
+                         "day":  53,
+                         "line":  "transfer st_gov_rhode_island us_dc_militia blocks 999",
+                         "ok":  true
+                     },
+                     {
+                         "day":  53,
+                         "line":  "transfer st_gov_wisconsin us_dc_militia blocks 999",
+                         "ok":  true
+                     },
+                     {
+                         "day":  53,
+                         "line":  "end 3",
+                         "ok":  true
+                     },
+                     {
+                         "day":  54,
+                         "line":  "end 2",
+                         "ok":  true
+                     },
+                     {
+                         "day":  55,
+                         "line":  "decide habeas_on_the_line suspend_on_line",
+                         "ok":  true
+                     },
+                     {
+                         "day":  55,
+                         "line":  "end 1",
+                         "ok":  true
+                     },
+                     {
+                         "day":  56,
+                         "line":  "end 3",
+                         "ok":  true
+                     },
+                     {
+                         "day":  58,
+                         "line":  "transfer st_gov_maine us_dc_militia blocks 999",
+                         "ok":  true
+                     },
+                     {
+                         "day":  58,
+                         "line":  "end 1",
+                         "ok":  true
+                     },
+                     {
+                         "day":  59,
+                         "line":  "call st_gov_new_york scheduled=us_may03_accepted_new_york",
+                         "ok":  true
+                     },
+                     {
+                         "day":  59,
+                         "line":  "transfer st_gov_maryland us_dc_militia blocks 999",
+                         "ok":  true
+                     },
+                     {
+                         "day":  59,
+                         "line":  "end 4",
+                         "ok":  true
+                     },
+                     {
+                         "day":  62,
+                         "line":  "end 1",
+                         "ok":  true
+                     },
+                     {
+                         "day":  63,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  70,
+                         "line":  "transfer st_gov_new_york us_dc_militia blocks 999",
+                         "ok":  true
+                     },
+                     {
+                         "day":  70,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  71,
+                         "line":  "end 6",
+                         "ok":  true
+                     },
+                     {
+                         "day":  77,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  82,
+                         "line":  "decide fort_monroe_arrivals approve_holding",
+                         "ok":  true
+                     },
+                     {
+                         "day":  82,
+                         "line":  "decide kentucky_neutrality arm_quietly wait",
+                         "ok":  true
+                     },
+                     {
+                         "day":  82,
+                         "line":  "end 2",
+                         "ok":  true
+                     },
+                     {
+                         "day":  84,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  91,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  98,
+                         "line":  "call st_gov_indiana scheduled=us_jun11_indiana",
+                         "ok":  true
+                     },
+                     {
+                         "day":  98,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  105,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  112,
+                         "line":  "transfer st_gov_indiana us_dc_militia blocks 999",
+                         "ok":  true
+                     },
+                     {
+                         "day":  112,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  114,
+                         "line":  "decide western_virginia cross_river recognise",
+                         "ok":  true
+                     },
+                     {
+                         "day":  114,
+                         "line":  "end 5",
+                         "ok":  true
+                     },
+                     {
+                         "day":  118,
+                         "line":  "decide mcdowell_advance advance_now",
+                         "ok":  true
+                     },
+                     {
+                         "day":  118,
+                         "line":  "end 1",
+                         "ok":  true
+                     },
+                     {
+                         "day":  119,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  123,
+                         "line":  "decide special_session ask_war_footing",
+                         "ok":  true
+                     },
+                     {
+                         "day":  123,
+                         "line":  "end 3",
+                         "ok":  true
+                     },
+                     {
+                         "day":  126,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  133,
+                         "line":  "order us_dc_militia take manassas review",
+                         "ok":  true
+                     },
+                     {
+                         "day":  133,
+                         "line":  "end 7",
+                         "ok":  true
+                     },
+                     {
+                         "day":  136,
+                         "line":  "order us_dc_militia take manassas review bypass",
+                         "ok":  true
+                     },
+                     {
+                         "day":  136,
+                         "line":  "end 4",
+                         "ok":  true
+                     },
+                     {
+                         "day":  138,
+                         "line":  "sendback us_dc_militia wait:main:0",
+                         "ok":  true
+                     },
+                     {
+                         "day":  138,
+                         "line":  "cancel 1",
+                         "ok":  true
+                     },
+                     {
+                         "day":  138,
+                         "line":  "sendback us_dc_militia wait:main:0 by=wire bypass",
+                         "ok":  true
+                     },
+                     {
+                         "day":  138,
+                         "line":  "audience us_dc_militia",
+                         "ok":  true
+                     },
+                     {
+                         "day":  138,
+                         "line":  "end 1",
+                         "ok":  true
+                     },
+                     {
+                         "day":  139,
+                         "line":  "end 1",
+                         "ok":  true
+                     },
+                     {
+                         "day":  140,
+                         "line":  "preview us_dc_militia waypoints axis=main via=northern_virginia",
+                         "ok":  true
+                     },
+                     {
+                         "day":  140,
+                         "line":  "edit us_dc_militia waypoints axis=main via=northern_virginia",
+                         "ok":  true
+                     },
+                     {
+                         "day":  140,
+                         "line":  "cancel 1",
+                         "ok":  true
+                     },
+                     {
+                         "day":  140,
+                         "line":  "edit us_dc_militia waypoints axis=main via=northern_virginia by=wire bypass",
+                         "ok":  true
+                     },
+                     {
+                         "day":  140,
+                         "line":  "end 2",
+                         "ok":  true
+                     },
+                     {
+                         "day":  142,
+                         "line":  "call st_gov_new_york scheduled=us_jul25_new_york",
+                         "ok":  true
+                     },
+                     {
+                         "day":  142,
+                         "line":  "end 5",
+                         "ok":  true
+                     },
+                     {
+                         "day":  147,
+                         "line":  "call st_gov_new_york scheduled=us_jul30_cavalry_new_york",
+                         "ok":  true
+                     },
+                     {
+                         "day":  147,
+                         "line":  "call st_gov_new_york scheduled=us_jul30_artillery_new_york",
+                         "ok":  true
+                     },
+                     {
+                         "day":  147,
+                         "line":  "end 2",
+                         "ok":  true
+                     }
+                 ]
+}
