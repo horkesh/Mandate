@@ -1139,3 +1139,46 @@ commands. A prior answer never becomes a preview of the visitor's next reply.
 Detailed evidence, proposed rulings and retained baseline failures are in
 [the S19 hand-over](../../notes/sprint-S19-desk.md). Standing review remains
 deferred under 0106.
+
+### S29 integrated history playtest
+
+The turn sheet accepts a shorter maximum within the pack's turn length and
+offers due identified governor calls with their complete published terms.
+Signing queues the requisition; an issued marker establishes dispatch. The
+docket keeps signed decisions visibly pending until recalled or dispatched.
+Command-line equivalents are `end [days]` and
+`call <governor-post> scheduled=<id>`.
+
+S29 uses only this prototype's **headless Playwright harness**, on port 5293.
+It starts at peace, owns its server and closes it afterward. It never uses
+Computer Use, desktop control or a real browser. Captures stay under
+`C:/Pyrrhic/ByOrderOfThePresident/art-masters/S29/`, with recipes and public
+snapshots. From this folder, use a new evidence subfolder for a fresh run:
+
+```powershell
+$env:S29_OUTPUT='C:/Pyrrhic/ByOrderOfThePresident/art-masters/S29/new-history'
+$env:S29_RUN='new-history'
+$env:S29_FOCUSED_PLAN='1'
+Remove-Item Env:S29_RESUME -ErrorAction SilentlyContinue
+Remove-Item Env:S29_CHECK_CONTROLS -ErrorAction SilentlyContinue
+node --import tsx scripts/s29-prepare.ts
+npx playwright test --config playwright.s29.config.ts
+```
+
+Do not overwrite retained attempts. Preparation extracts the pack's historical
+choice reference, never State. All playthrough writes use UI controls.
+`S29_RESUME=1` requires a retained prefix/manifest: it replays UI commands and
+compares the exact public morning, history and queue instead of loading State.
+`S29_FOCUSED_PLAN=1` sends notes before the edit and uses direct review replies
+after a received relay objection. Both strategies require actual received
+Manassas evidence, rather than fabricating a battle to pass.
+
+`scripts/s29-audit.ts` checks primary captures, build and preserved integrated
+and map inputs. Retained production suite: 115 passed, three skips; build
+passes with its existing chunk warning. The final human trajectory reaches
+31 July with all five calls issued, edit, received note account and filed
+audience, but its Manassas battle assertion **fails**. The default done check
+also stays red: timing, pushback and lever-sweep measurement/coverage. No
+threshold changed. Read [the report](../../docs/playtests/2026-11-21-desk-history-run.md)
+and [handover](../../notes/sprint-S29-desk.md) before treating results as
+acceptance. The automatic history's battle is not proof of the human scene.

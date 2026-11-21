@@ -1,0 +1,42 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {resolve} from 'node:path';
+import {rest} from './support/s29-controls.ts';
+import {S} from '../web/strings.ts';
+const out=resolve('../../../ByOrderOfThePresident/art-masters/S29');
+const load=(name:string)=>JSON.parse(readFileSync(`${out}/snapshots/${name}.json`,'utf8'));
+const hash=(path:string)=>createHash('sha256').update(readFileSync(path)).digest('hex');
+test('nested audience returns through Back to an active desk without advancing',async({page})=>{
+ const scene=load('audience-request-138'),writes:string[]=[];page.on('request',r=>{if(r.method()!=='GET')writes.push(r.url());});
+ await page.route('**/api/desk',r=>r.fulfill({json:scene}));await page.goto('/');
+ await page.getByRole('navigation',{name:S.deskObjects}).getByRole('button',{name:S.board,exact:true}).click();
+ await page.getByLabel(S.boardFilter).fill('District');await page.locator('[data-post="us_dc_militia"] > button').click();
+ await page.getByRole('button',{name:S.audience,exact:true}).click();await expect(page.getByTestId('audience-scene')).toBeVisible();
+ await expect(page.locator('dialog[open] > .panel-header > button.close')).toContainText(S.back);
+ await rest(page);await expect(page.getByTestId('desk')).not.toHaveAttribute('inert','');
+ await page.getByRole('button',{name:S.run,exact:true}).click();await expect(page.getByLabel(S.turnDays)).toBeVisible();expect(writes).toEqual([]);
+});
+for(const size of [{width:1920,height:1080},{width:3440,height:1440}])test(`pending real decision remains legible at ${size.width}`,async({page})=>{
+ const source='decision-33-sumter_garrison',scene=load(source),writes:string[]=[];
+ page.on('request',r=>{if(r.method()!=='GET')writes.push(r.url());});await page.route('**/api/desk',r=>r.fulfill({json:scene}));
+ await page.setViewportSize(size);await page.goto('/');await expect(page.getByTestId('map-canvas-host')).toHaveAttribute('data-ready','ready',{timeout:30000});
+ await page.locator('.table-docket > button').click();const section=page.locator('.situation').filter({has:page.getByRole('heading',{name:scene.strings['situation.pickens_refused.title'],exact:true})});
+ await expect(section.getByRole('status')).toContainText('Decision in the out-tray');await expect(section.locator('input:checked')).toHaveCount(2);await expect(section.getByRole('button',{name:S.signDecision,exact:true})).toBeDisabled();
+ const name=`pending-decision-${size.width}x${size.height}`,file=`${out}/${name}.png`;await page.evaluate(()=>document.fonts.ready);await page.screenshot({path:file});
+ writeFileSync(`${file}.recipe.json`,JSON.stringify({request:'S29',asset:file,date:'2026-11-21',tool:'Playwright Chromium',mode:'Headless native browser capture of retained real snapshot',prompt:null,plan:'No image service',client:'Codex',model:'No image model',requestedSize:`${size.width}x${size.height}`,actualSize:`${size.width}x${size.height}`,references:[{path:`${out}/snapshots/${source}.json`,sha256:hash(`${out}/snapshots/${source}.json`)}],humanEdits:[],postProcess:[],sha256:hash(file),notes:'Targeted read-only correction verification. GET fixture is the unchanged real S29 snapshot; no new report or simulation act.'},null,2));
+ expect(writes).toEqual([]);
+});
+for(const size of [{width:1920,height:1080},{width:3440,height:1440}])test(`actual dated call reflows with keyboard controls at ${size.width}`,async({page})=>{
+ const source=`${out}/final-history/snapshots/call-59-us_may03_accepted_new_york.json`,scene=JSON.parse(readFileSync(source,'utf8')),writes:string[]=[];
+ page.on('request',r=>{if(r.method()!=='GET')writes.push(r.url());});await page.route('**/api/desk',r=>r.fulfill({json:scene}));
+ await page.addInitScript(()=>localStorage.setItem('presidential-desk-presentation',JSON.stringify({scale:200,contrast:true,muted:true})));
+ await page.setViewportSize(size);await page.goto('/');await expect(page.getByTestId('map-canvas-host')).toHaveAttribute('data-ready','ready',{timeout:30000});
+ await page.getByRole('button',{name:S.run,exact:true}).click();
+ const limit=page.getByLabel(S.turnDays);await limit.focus();await limit.press('ArrowUp');await expect(limit).toHaveValue('6');
+ const call=page.locator('[data-call-id="us_may03_accepted_new_york"]');await expect(call).toBeVisible();await expect(call).toContainText('38 regiments');await expect(call).toContainText('For 730 days');
+ await call.scrollIntoViewIfNeeded();expect(await page.getByRole('dialog').evaluate(el=>el.scrollWidth<=el.clientWidth+1)).toBe(true);
+ const file=`${out}/final-history/call-200-contrast-${size.width}x${size.height}.png`;await page.evaluate(()=>document.fonts.ready);await page.screenshot({path:file});
+ writeFileSync(`${file}.recipe.json`,JSON.stringify({request:'S29',asset:file,date:'2026-11-21',tool:'Playwright Chromium',mode:'Headless native browser capture of retained real snapshot',prompt:null,plan:'No image service',client:'Codex',model:'No image model',requestedSize:`${size.width}x${size.height}`,actualSize:`${size.width}x${size.height}`,references:[{path:source,sha256:hash(source)}],humanEdits:[],postProcess:[],sha256:hash(file),notes:'Read-only accessibility verification of the actual final-history May call; no simulation act.'},null,2));
+ expect(writes).toEqual([]);
+});
