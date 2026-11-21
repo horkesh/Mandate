@@ -1,0 +1,386 @@
+{
+  "codeHead": "5482371fea08bcf3d3154ffca7aa3319796054ad",
+  "receipts": {
+    "npm-ci": {
+      "args": [
+        "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.CMD",
+        "ci"
+      ],
+      "exit": 0,
+      "seconds": 3.4528634999951464,
+      "started": "2026-11-21T05:46:10.451798+00:00",
+      "finished": "2026-11-21T05:46:13.904680+00:00",
+      "head": "50a5820d195a514204e5e437c594f712c8301247",
+      "nodeOptions": null,
+      "noGit": null
+    },
+    "step0-focused": {
+      "args": [
+        "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\node.EXE",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tools/test/liveness-causes.test.ts",
+        "tools/test/rule-history.test.ts",
+        "packages/cli/test/planner.test.ts",
+        "packages/cli/test/liveness-gate.test.ts",
+        "--maxWorkers",
+        "1"
+      ],
+      "exit": 0,
+      "seconds": 18.526868100001593,
+      "started": "2026-11-21T05:47:42.964352+00:00",
+      "finished": "2026-11-21T05:48:01.491237+00:00",
+      "head": "50a5820d195a514204e5e437c594f712c8301247",
+      "nodeOptions": null,
+      "noGit": null
+    },
+    "step0-rules": {
+      "args": [
+        "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.CMD",
+        "run",
+        "check:rules"
+      ],
+      "exit": 0,
+      "seconds": 1.9979717999958666,
+      "started": "2026-11-21T05:48:05.026341+00:00",
+      "finished": "2026-11-21T05:48:07.024330+00:00",
+      "head": "50a5820d195a514204e5e437c594f712c8301247",
+      "nodeOptions": null,
+      "noGit": null
+    },
+    "step0-typecheck": {
+      "args": [
+        "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.CMD",
+        "run",
+        "typecheck"
+      ],
+      "exit": 0,
+      "seconds": 1.2873349000001326,
+      "started": "2026-11-21T05:48:07.137146+00:00",
+      "finished": "2026-11-21T05:48:08.424498+00:00",
+      "head": "50a5820d195a514204e5e437c594f712c8301247",
+      "nodeOptions": null,
+      "noGit": null
+    },
+    "commit-canon": {
+      "args": [
+        "C:\\Program Files\\Git\\cmd\\git.EXE",
+        "commit",
+        "-F",
+        "runs/s41/commit-canon.txt"
+      ],
+      "exit": 0,
+      "seconds": 447.09862489999796,
+      "started": "2026-11-21T05:48:21.054536+00:00",
+      "finished": "2026-11-21T05:55:48.153179+00:00",
+      "head": "a611ee327889eb03ad489f3bdb97db7566b6506d",
+      "nodeOptions": "--require=C:/Pyrrhic/sprint-1a/runs/s40/one-worker.cjs",
+      "noGit": null
+    },
+    "merge-targeted": {
+      "args": [
+        "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\node.EXE",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/cli/test/play-fixes.test.ts",
+        "packages/cli/test/desk-localization.test.ts",
+        "packs/union-1861/test/s27-console-playtests.test.ts",
+        "packages/kernel/test/sendback-notes.test.ts",
+        "packages/kernel/test/canon-receipts.test.ts",
+        "packs/union-1861/test/s35-scoring.test.ts",
+        "tools/test/rule-history.test.ts",
+        "--maxWorkers",
+        "1"
+      ],
+      "exit": 0,
+      "seconds": 40.7061681999985,
+      "started": "2026-11-21T05:58:47.861258+00:00",
+      "finished": "2026-11-21T05:59:28.567444+00:00",
+      "head": "a611ee327889eb03ad489f3bdb97db7566b6506d",
+      "nodeOptions": null,
+      "noGit": null
+    },
+    "preview-basis-green": {
+      "args": [
+        "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\node.EXE",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/sendback-notes.test.ts",
+        "packages/kernel/test/canon-receipts.test.ts",
+        "--maxWorkers",
+        "1"
+      ],
+      "exit": 0,
+      "seconds": 1.4821550999986357,
+      "started": "2026-11-21T06:00:43.143715+00:00",
+      "finished": "2026-11-21T06:00:44.625886+00:00",
+      "head": "a611ee327889eb03ad489f3bdb97db7566b6506d",
+      "nodeOptions": null,
+      "noGit": null
+    },
+    "rule-controls": {
+      "args": [
+        "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\node.EXE",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tools/test/rule-history.test.ts",
+        "tools/test/liveness-causes.test.ts",
+        "tools/test/projection-truth.test.ts",
+        "tools/test/situation-causes.test.ts",
+        "tools/test/signed-situations.test.ts",
+        "packages/cli/test/desk-localization.test.ts",
+        "--maxWorkers",
+        "1"
+      ],
+      "exit": 0,
+      "seconds": 2.9662057000023196,
+      "started": "2026-11-21T06:02:07.173137+00:00",
+      "finished": "2026-11-21T06:02:10.139360+00:00",
+      "head": "a611ee327889eb03ad489f3bdb97db7566b6506d",
+      "nodeOptions": null,
+      "noGit": null
+    },
+    "desk-units": {
+      "args": [
+        "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.CMD",
+        "--prefix",
+        "prototypes/desk",
+        "test",
+        "--",
+        "--maxWorkers",
+        "1"
+      ],
+      "exit": 1,
+      "seconds": 39.877949000001536,
+      "started": "2026-11-21T06:02:10.253836+00:00",
+      "finished": "2026-11-21T06:02:50.131802+00:00",
+      "head": "a611ee327889eb03ad489f3bdb97db7566b6506d",
+      "nodeOptions": null,
+      "noGit": null
+    },
+    "desk-correction": {
+      "args": [
+        "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.CMD",
+        "--prefix",
+        "prototypes/desk",
+        "test",
+        "--",
+        "test/s8.test.ts",
+        "test/s39-records.test.ts",
+        "test/presentation.test.ts",
+        "test/r70.test.ts",
+        "--maxWorkers",
+        "1"
+      ],
+      "exit": 0,
+      "seconds": 7.443201900001441,
+      "started": "2026-11-21T06:03:37.933643+00:00",
+      "finished": "2026-11-21T06:03:45.376863+00:00",
+      "head": "a611ee327889eb03ad489f3bdb97db7566b6506d",
+      "nodeOptions": null,
+      "noGit": null
+    },
+    "saved-map-controls": {
+      "args": [
+        "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.CMD",
+        "--prefix",
+        "prototypes/desk",
+        "test",
+        "--",
+        "test/r22.test.ts",
+        "test/r23.test.ts",
+        "test/r25.test.ts",
+        "test/r28.test.ts",
+        "test/r35.test.ts",
+        "test/r39.test.ts",
+        "--maxWorkers",
+        "1"
+      ],
+      "exit": 0,
+      "seconds": 17.802046299999347,
+      "started": "2026-11-21T06:14:47.899283+00:00",
+      "finished": "2026-11-21T06:15:05.701347+00:00",
+      "head": "a611ee327889eb03ad489f3bdb97db7566b6506d",
+      "nodeOptions": null,
+      "noGit": null
+    },
+    "correction-ownership": {
+      "args": [
+        "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\node.EXE",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/one-writer.test.ts",
+        "packages/kernel/test/sendback-notes.test.ts",
+        "tools/test/rule-history.test.ts",
+        "--maxWorkers",
+        "1"
+      ],
+      "exit": 0,
+      "seconds": 5.495835000001534,
+      "started": "2026-11-21T06:13:47.531855+00:00",
+      "finished": "2026-11-21T06:13:53.027708+00:00",
+      "head": "a611ee327889eb03ad489f3bdb97db7566b6506d",
+      "nodeOptions": null,
+      "noGit": null
+    },
+    "commit-play": {
+      "args": [
+        "C:\\Program Files\\Git\\cmd\\git.EXE",
+        "commit",
+        "-F",
+        "runs/s41/commit-play.txt"
+      ],
+      "exit": 1,
+      "seconds": 445.5049027999994,
+      "started": "2026-11-21T06:05:58.329545+00:00",
+      "finished": "2026-11-21T06:13:23.834464+00:00",
+      "head": "a611ee327889eb03ad489f3bdb97db7566b6506d",
+      "nodeOptions": "--require=C:/Pyrrhic/sprint-1a/runs/s40/one-worker.cjs",
+      "noGit": "1"
+    },
+    "commit-play-corrected": {
+      "args": [
+        "C:\\Program Files\\Git\\cmd\\git.EXE",
+        "commit",
+        "-F",
+        "runs/s41/commit-play.txt"
+      ],
+      "exit": 0,
+      "seconds": 445.8990632999994,
+      "started": "2026-11-21T06:14:17.504566+00:00",
+      "finished": "2026-11-21T06:21:43.403647+00:00",
+      "head": "5482371fea08bcf3d3154ffca7aa3319796054ad",
+      "nodeOptions": "--require=C:/Pyrrhic/sprint-1a/runs/s40/one-worker.cjs",
+      "noGit": "1"
+    },
+    "done-check": {
+      "args": [
+        "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.CMD",
+        "run",
+        "run:done-check",
+        "--",
+        "--milestone",
+        "1a",
+        "--label",
+        "s41-candidate"
+      ],
+      "exit": 1,
+      "seconds": 900.0988451000012,
+      "started": "2026-11-21T06:21:50.778985+00:00",
+      "finished": "2026-11-21T06:36:50.877848+00:00",
+      "head": "5482371fea08bcf3d3154ffca7aa3319796054ad",
+      "nodeOptions": null,
+      "noGit": null
+    },
+    "desk-replay": {
+      "args": [
+        "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\node.EXE",
+        "node_modules/@playwright/test/cli.js",
+        "test",
+        "--config",
+        "playwright.s41.config.ts"
+      ],
+      "exit": 0,
+      "seconds": 822.4941016000012,
+      "started": "2026-11-21T06:38:09.722825+00:00",
+      "finished": "2026-11-21T06:51:52.216945+00:00",
+      "head": "5482371fea08bcf3d3154ffca7aa3319796054ad",
+      "nodeOptions": null,
+      "noGit": null
+    }
+  },
+  "rules": {
+    "findings": 13,
+    "signedCount": 29,
+    "signedFindings": [],
+    "livenessProblems": []
+  },
+  "port": {
+    "port": 5317,
+    "closed": true,
+    "connectExit": 10061
+  },
+  "sourceReplayFiles": [
+    {
+      "source": "C:\\Pyrrhic\\sprint-play\\art-masters\\S39\\advance\\actions.jsonl",
+      "bytes": 20695,
+      "sha256": "f2eaa558117d7f9f58a0de1fd1521cc83342b112487fa793f4db0399cad61c54"
+    },
+    {
+      "source": "C:\\Pyrrhic\\sprint-play\\art-masters\\S39\\advance\\commands.jsonl",
+      "bytes": 3884,
+      "sha256": "31d30be8da9a7f296d79dccf9cd933b593b05247d1e7db4ff3ea0670eef5c9ca"
+    },
+    {
+      "source": "C:\\Pyrrhic\\sprint-play\\art-masters\\S39\\advance\\last-turn-reply.json",
+      "bytes": 3408866,
+      "sha256": "14e8013b82ba3839e63a412eaee8d1c1fbd565786caef18f7bdc3cb5b4cec8d7"
+    }
+  ],
+  "logs": {
+    "npm-ci": {
+      "path": "runs/s41/npm-ci.log",
+      "sha256": "84008e7bacc85b5d5f75131963cf68282359fb6ab17ba99e328e625d1a0fc0df"
+    },
+    "step0-focused": {
+      "path": "runs/s41/step0-focused.log",
+      "sha256": "98d46115adf3cd7f69897372cfdd74f33450c95266a1d224a2147fe1258a2200"
+    },
+    "step0-rules": {
+      "path": "runs/s41/step0-rules.log",
+      "sha256": "9e3641d0a16ce60cee441d47917a303b3ca9fe16823f0761738f59cc2295c231"
+    },
+    "step0-typecheck": {
+      "path": "runs/s41/step0-typecheck.log",
+      "sha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    },
+    "commit-canon": {
+      "path": "runs/s41/commit-canon.log",
+      "sha256": "f96f262939e551120820965937f21cdc181d28319ad5beb317cbaceb60d00224"
+    },
+    "merge-targeted": {
+      "path": "runs/s41/merge-targeted.log",
+      "sha256": "c30051db30c1a36d29c2ed618658f18923242e2866be0f651b7ad3a6cba7e467"
+    },
+    "preview-basis-green": {
+      "path": "runs/s41/preview-basis-green.log",
+      "sha256": "6d4dd1c2a539c159543e3910e039a89ffe17099b13753b3a940e880ede2e04f7"
+    },
+    "rule-controls": {
+      "path": "runs/s41/rule-controls.log",
+      "sha256": "9d60e6753819a01654f090c8350f1a5e65cd38dfbc806fca2ff2625f48b0a17d"
+    },
+    "desk-units": {
+      "path": "runs/s41/desk-units.log",
+      "sha256": "59f60f5e035f9fce0d9022b00de7abd12de945dfa71229c75c08ba43fd89a3b6"
+    },
+    "desk-correction": {
+      "path": "runs/s41/desk-correction.log",
+      "sha256": "bdba4c1a68a0fccfc0609b1ce3d216a61eb4a1071c74bbd81b3dc326b35ddea1"
+    },
+    "saved-map-controls": {
+      "path": "runs/s41/saved-map-controls.log",
+      "sha256": "e9911fff697abd37717d546afb7bec4533359cbf6ae9de20c96148ee55d9eadd"
+    },
+    "correction-ownership": {
+      "path": "runs/s41/correction-ownership.log",
+      "sha256": "ae9461a2a179050ed58befa23eeaddb84d7ee602f82019f2a50f71fdef72128a"
+    },
+    "commit-play": {
+      "path": "runs/s41/commit-play.log",
+      "sha256": "667fe68b980e23a58b3c028a989fe446c44512b77c76c9ee2123f4ec73c11f38"
+    },
+    "commit-play-corrected": {
+      "path": "runs/s41/commit-play-corrected.log",
+      "sha256": "4ebea028284625d21c216bcd6729cac045328725d186b132fffb47542c9eec20"
+    },
+    "done-check": {
+      "path": "runs/s41/done-check.log",
+      "sha256": "ddb76847ef706c308364edc9e2a5dcec79c499b53f8cc96a3c1fe02b572ecbdc"
+    },
+    "desk-replay": {
+      "path": "runs/s41/desk-replay.log",
+      "sha256": "a9d12a1353e90b6fd8750a036dfd799cee7c7b75d34ba8bce088b5e6334cafbf"
+    }
+  }
+}

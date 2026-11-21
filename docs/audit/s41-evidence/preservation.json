@@ -1,0 +1,81 @@
+{
+  "head": "5482371fea08bcf3d3154ffca7aa3319796054ad",
+  "originalPaths": 1816,
+  "canonPaths": 1838,
+  "currentPaths": 1871,
+  "missingOriginalPaths": [],
+  "protectedPathsChecked": 166,
+  "protectedChangesFromCanon": [],
+  "heldRequestsBlobUnchanged": true,
+  "packages": {
+    "docs/research/_resource/tools/package.json": {
+      "blob": "5bbefffbabee392d1855491b84dc0a716b6a3bf2",
+      "sha256": "8005a3491db7d92f36ac66369861589f9c47123d3a7c71e643fc2c06168cd45a",
+      "bytes": 25
+    },
+    "package-lock.json": {
+      "blob": "e3048a5cc3a73665abe93473359e6c25e3467a78",
+      "sha256": "82dbb02254bcc312709e8db78ae7ed7dd9fc26e0bdea4760c5549c956cc429d9",
+      "bytes": 69293
+    },
+    "package.json": {
+      "blob": "a3cb4527efb4916b9b59ac1b2586fe189210da60",
+      "sha256": "bc019b9d2445a17e4dcaaf98f331a57676cfab29f86bd49356b50ccce114a729",
+      "bytes": 1464
+    },
+    "packages/cli/package.json": {
+      "blob": "7ff9ddec59e1083338070e4798fbffb3fe8664d1",
+      "sha256": "9831538271a75c8bd564d21b3906ec0172ffa1612706168445c376be082f76b0",
+      "bytes": 454
+    },
+    "packages/kernel/package.json": {
+      "blob": "0a7ad42ee94070346b5b5458f132821c2841db72",
+      "sha256": "cadb9be3b77f4cf7ea8c485c35ff589e428559039368fa02b78e5a8046dc825f",
+      "bytes": 385
+    },
+    "packages/pack-format/package.json": {
+      "blob": "afdf74610b8f33df6b9ff43456ab802b43b266c9",
+      "sha256": "7e49c716a4f78134a943f21f25fc93e88ecf8bc1bea8e852ab4f78365fe43d33",
+      "bytes": 789
+    },
+    "packages/rule-seats/package.json": {
+      "blob": "334654983da36bfca77f6bcb68f67a428812d5fc",
+      "sha256": "08755847f8bdaf29965239b2f6cfa2c40a0565906d1d34162b27aaf75d365ef8",
+      "bytes": 459
+    },
+    "prototypes/desk/package-lock.json": {
+      "blob": "e39fdebde411aeb1f8d6748b187b33a4419d6a4b",
+      "sha256": "022041c25aabad6eba14931604acb543fd4d6abfa4524742c9d23008759f0337",
+      "bytes": 82514
+    },
+    "prototypes/desk/package.json": {
+      "blob": "5fada4c7a490b961f3ba6d18fdde3012ea61c932",
+      "sha256": "a1875f97f9d56e1677b8de3efbb3c7cb14e6b06696955bf09394af224ed6b966",
+      "bytes": 1463
+    },
+    "prototypes/map-icons/package-lock.json": {
+      "blob": "a5e6cbda6992fbdc3a4e7f0fe62b9440250a991b",
+      "sha256": "3b544ca2b62d3af5fce4e9bfa681e7f87b2095b49e1e907a24aa5c8d8299df39",
+      "bytes": 1215
+    },
+    "prototypes/map-icons/package.json": {
+      "blob": "088cc803136146c784ea18d1676cc696de16aa1f",
+      "sha256": "93f088a9cfdf0d4bed98c71426d98ada7166c0838ae2fa64399ff9c35cc1b287",
+      "bytes": 457
+    },
+    "prototypes/map-tripwire/package-lock.json": {
+      "blob": "a49a651b4fef6afe04288bfeb559420353cc4fa6",
+      "sha256": "77137df775d047bd4f67b1ba3be6a387a930d9edd2e6a141c0578326d35b225c",
+      "bytes": 40292
+    },
+    "prototypes/map-tripwire/package.json": {
+      "blob": "76c0dde59028457ff6b1bb3ddb8c4b369b3d3800",
+      "sha256": "5a64613899dbedcbf58954f40fead4771d51e08fa1395856fb0e82210f231d57",
+      "bytes": 786
+    }
+  },
+  "savedMapInputs": 166,
+  "savedMapBytes": 476374571,
+  "savedMapChanges": [],
+  "missingCanonPaths": []
+}

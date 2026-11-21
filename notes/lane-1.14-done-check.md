@@ -1,5 +1,13 @@
 # Lane 1.14: the 1A done check and calibration
 
+**Latest: S41 complete on the last code merge `5482371` (2026-11-21).**
+Step 0's canon merge is `a611ee3`; both passed the actual hook. Phase 0 is
+6/6 locally; binding 1A remains 4/6. The exact 86-command headless advance
+replay reaches completed 31 July, with received-paper divergence from 8 June.
+Start review at [integrated candidate](../docs/audit/integrated-candidate.md).
+The older sections below are retained history; they do not reopen S40's time
+blocker or supersede this S41 closeout. Whole-branch/gate review is pending.
+
 ## S37 pushback audit (2026-11-21): delivered, 1A remains unmet
 
 For the lead: three items. S37 only, `sprint/1a` from `ddea338`.
@@ -917,3 +925,86 @@ Retain the held receipt contracts, all historical pushback and D6 gaps, source/l
 
 
 S41 hook correction: the first play-merge hook exits 1 in 445.50 seconds, with only two assertions failing in one-writer.test.ts; 202 other files / 1,920 assertions pass, with three existing timing skips. The optional note-basis object and its nested note entries were missing from IMMUTABLE_RECORDS. Both are now explicitly immutable under knowledge; no owner or write permission changed. The complete focused ownership/preview/history selection passes 62 assertions. The one desk-suite failure was a generic label hiding supplied pack wording; pack wording now wins, with all 30 affected tests passing and the other 136 passing assertions reused. The exact mandatory hook is retried because a merge must commit through it; no done-check campaign has started. A receipt-construction alias was corrected to preserve the derivation's true before hash, and the headless harness now saves each batch's rendered text for divergence evidence. Neither affects simulation. All failures and exits remain in runs/s41.
+
+
+## S41 final delivery (2026-11-21)
+
+For the lead: three items. S41 only in `C:/Pyrrhic/sprint-1a`, `sprint/1a`,
+from `50a5820` with `ed4fb19` staged. Applied the post-S40 ruling first and
+committed canon as `a611ee327889eb03ad489f3bdb97db7566b6506d`; then fetched and
+merged the complete play pin `f595bd7` as
+`5482371fea08bcf3d3154ffca7aa3319796054ad`. Both actual hooks pass; no push,
+history rewrite, signature or other worktree write. Root npm ci ran first;
+workspace packages resolve here. Only the final authorized shared CODEX append
+will touch the main checkout, through UTF-8 Python after a fresh read.
+
+1. The time band alone returns 1..4 to 0..0 under the lead's explicit ruling.
+   The constructed planner control changes its pick when time is dropped.
+   Origin 338 stays immutable; the exact quiet list grows 24 to 25, then freezes.
+   S36/S40 received views, S34 caches, S37 counting and S39 desk work remain.
+   Received preview enclosures retain the admitted note basis; zero/seven-day
+   tests cover departure, privacy and save/load. Console fixes use pack strings.
+   All 13 finding identities and six derivation identities/reasons/citations
+   remain; only exact documented helper closures migrate. No truth exception.
+   The concentration patch stays held and requests.ts is unchanged from canon.
+2. Actual code hook: 203 files / 1,922 passed / three timing skips, exit 0 in
+   445.90 s. Ordinary step-0 hook: 203 / 1,912, nine then-inherited expected
+   failures and three skips, exit 0 in 447.10 s. The first play hook's only
+   failures were two omitted immutable-record declarations; corrected with
+   62 focused passes before the mandatory retry. S27's B01–B09 now pass normally.
+   Both typechecks, S18 checks and chained gates pass. One default eight-seed
+   done check, drafting and --milestone 1a: exit 1, 900.10 s; Phase 0 6/6,
+   1A 4/6. All seven problems remain: holds 1/2..6, filter holds 0/1..9,
+   trims 0/1..4, reservations 17/1..9, slow walks 18/2..9; unmeasured grievance
+   and the unexercised border-governor levy chain. No band or scoring fit.
+   Reference/history medians/p95: 22.48/36.80 and 21.39/33.65 ms; testbed
+   2.38/3.92. Unchanged 40/160 limits; no final-head Linux CI or unloaded claim.
+   Drafting sound, capped worst 25.2 ms. All 268 daily hashes and all counters
+   match S40. Against S39, inherited S36 changes 113 Union and 120 testbed hashes;
+   the causes and complete lists are portable. No campaign was repeated.
+3. Exact S39 advance replay: headless prototype Playwright only, owned 5317,
+   now closed. 86 commands / 44 turns / day 148, 31 July; zero dispatch refusals
+   or page errors. Ten disclosed selector recoveries handle retained failed
+   attempts/updated presentation labels without adding or repeating commands.
+   31 public paper records and two turn/stop records differ. First: 8 June's
+   receipt lacks Stone's four June 7 Richmond phase papers; turn 35 now stops
+   on a June 15 objective receipt rather than June 12 battle news, and turn 36
+   catches up at day 105. Later Manassas control and July casualty papers differ.
+   These are attributed reports; S36 causation is marked [I], not private-State
+   reconstruction. Thirty unedited capture/recipe pairs retain actual dates;
+   premature inherited July-31 source names are corrected to July 25.
+
+Final package inventories, runtime diagnostics and preservation checks preceded
+the final-result report. All 1,871 measured tracked files / 854 runtime inputs
+are unchanged across the done check; all 1,816 entry paths and 1,838 canon paths
+remain. 166 protected canon-base paths, 13 manifests/locks, and 166 saved-map
+inputs / 476,374,571 bytes are preserved. The ordinary first-hook Git fixture
+evidence and unaffected desk passes are explicitly reused. No package/release
+certification. Portable index: `docs/audit/integrated-candidate.md` and
+`docs/audit/s41-evidence/`; raw logs/exits, inventories and later closeout/append
+receipts: `runs/s41/`; public replay/captures: `art-masters/S41/replay/`.
+
+The report measures all 17 remote and all 17 local sprint tips: nine code
+branches contained, eight deliberately excluded with reasons. It links each
+of the 353 original numbered packet source entries on pinned origin/sprint/audit,
+distinguishes historical/ruled proposals, and routes 23 later entries including
+S40's held receipt contracts and the appointment departmentSide prerequisite.
+Those counts include duplicate source restatements, not unique new decisions.
+Proposed ruling [I]: accept the mechanical reconciliation and received-only
+follow-ups, rejecting dropped branch contracts, hidden preview inputs, broad
+fingerprint exceptions, scoring changes or passing other checks as a waiver.
+
+## Findings outside my scope (S41)
+
+- The lead and reviewers retain whole-branch/gate verdicts and disposition of
+  the packet/status proposals; nothing is signed. The time ruling, A02 menu
+  interpretation and B09 label interpretation are already given, not asked again.
+- Supply Davis's Virginia government-side receipts and durable temporary-post
+  establishment memory before adopting the held concentration patch. The dated
+  appointment departmentSide prerequisite is a separate unresolved read.
+- Keep all five pushback failures, both D6 gaps, the nonbinding Union-strength
+  qualification, source/lifecycle/identity holds, 1B proposals and unsigned gate
+  items open. No new calibration or extra campaign is authorized here.
+- Linux CI on the final candidate, owner/exit review, steward integration,
+  pushing and release remain with their owners. S41's requested work is delivered
+  for review; 1A is not cleared.

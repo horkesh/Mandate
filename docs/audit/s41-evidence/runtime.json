@@ -1,0 +1,1482 @@
+{
+  "receipt": {
+    "args": [
+      "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.CMD",
+      "run",
+      "run:done-check",
+      "--",
+      "--milestone",
+      "1a",
+      "--label",
+      "s41-candidate"
+    ],
+    "exit": 1,
+    "seconds": 900.0988451000012,
+    "started": "2026-11-21T06:21:50.778985+00:00",
+    "finished": "2026-11-21T06:36:50.877848+00:00",
+    "head": "5482371fea08bcf3d3154ffca7aa3319796054ad",
+    "nodeOptions": null,
+    "noGit": null
+  },
+  "criteria": [
+    {
+      "id": "behaviour",
+      "milestone": "phase0",
+      "pass": true,
+      "text": "rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 632 arrivals, 4 battle-days, 120 control changes, confederate 4 front segments 77 supplied 3 pockets; union 4 front segments 38 supplied 0 pockets",
+        "testbed, 120 days: 27 arrivals, 4 battle-days, 35 control changes, north 13 front segments 13 supplied 1 pockets; south 13 front segments 1 supplied 1 pockets"
+      ],
+      "problems": []
+    },
+    {
+      "id": "hash",
+      "milestone": "phase0",
+      "pass": true,
+      "text": "the same state hash on every run, with State frozen or not (Linux against Windows is the CI determinism job, over the summaries this writes)",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 148 daily hashes, final bffdb4255a3bf375",
+        "testbed, 120 days: 120 daily hashes, final ee1b76d81d16951c"
+      ],
+      "problems": []
+    },
+    {
+      "id": "resume",
+      "milestone": "phase0",
+      "pass": true,
+      "text": "a mid-run save, loaded, resumes to the continuous run\u2019s final hash, and the log replays to every hash",
+      "evidence": [
+        "union-1861, war by decision, 148 days: from day 60, matches",
+        "testbed, 120 days: from day 40, matches"
+      ],
+      "problems": []
+    },
+    {
+      "id": "liveness",
+      "milestone": "phase0",
+      "pass": true,
+      "text": "every Phase 0 mechanic is inside its band in the reference runs, or quiet for a stated reason",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 162 mechanics inside their bands",
+        "testbed, 120 days: 162 mechanics inside their bands",
+        "testbed, commanders silent, 120 days: 1 mechanics inside their bands",
+        "testbed, the principal edits every plan, 120 days: 6 mechanics inside their bands",
+        "union-1861 before the opening decisions, 30 days (the war gate, 0064): 9 mechanics inside their bands"
+      ],
+      "problems": []
+    },
+    {
+      "id": "section-ten",
+      "milestone": "phase0",
+      "pass": true,
+      "text": "the tests named in FOUNDATION section 10 are present and none is skipped (that they pass is the suite\u2019s)",
+      "evidence": [
+        "packages/kernel/test/compliance.test.ts",
+        "packages/kernel/test/rng.test.ts",
+        "packages/kernel/test/banned-apis.test.ts",
+        "packages/kernel/test/people-verbs.test.ts"
+      ],
+      "problems": []
+    },
+    {
+      "id": "budget",
+      "milestone": "phase0",
+      "pass": true,
+      "text": "the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)",
+      "evidence": [
+        "union-1861, war by decision, 148 days: median 22.48 ms, p95 36.80 ms, max 65.52 ms over 148 days (plans.drafted 2, ladder.moved 9, situations.fired 62)",
+        "testbed, 120 days: median 2.38 ms, p95 3.92 ms, max 5.59 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+        "union-1861 history run, 148 days to 1861-07-31: median 21.39 ms, p95 33.65 ms, max 41.01 ms over 148 days (plans.drafted 2, ladder.moved 9, situations.fired 62)"
+      ],
+      "problems": []
+    },
+    {
+      "id": "checkpoints",
+      "milestone": "1A",
+      "pass": true,
+      "text": "the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+        "union-1861 history run, 148 days to 1861-07-31: side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+        "union-1861 history run, 148 days to 1861-07-31: men_union (1861-07-31, day 148): union 92089 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+        "union-1861 history run, 148 days to 1861-07-31: men_union (1861-07-31, day 148): below the lower edge, reported and not failed (the band's floor is not binding: no primary return bounds it)",
+        "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate 124046 men of known strength, 17 blocks of unknown strength (band 100000..200000)",
+        "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 1 planned operations (band 1..26): op:us_dept_northeastern_virginia:137 at manassas",
+        "union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+        "union-1861 history run, 148 days to 1861-07-31: confederate at war since day 36",
+        "union-1861 history run, 148 days to 1861-07-31: union at war since day 41"
+      ],
+      "problems": []
+    },
+    {
+      "id": "operation",
+      "milestone": "1A",
+      "pass": true,
+      "text": "at least one operation drafted by the kernel planner, chosen by its commander\u2019s seat, approved, executed and fought with the battle model, with a breakdown",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38",
+        "union-1861 history run, 148 days to 1861-07-31: op:us_dept_northeastern_virginia:137 (union, direct) fought battle battle:manassas:144"
+      ],
+      "problems": []
+    },
+    {
+      "id": "pushback",
+      "milestone": "1A",
+      "pass": false,
+      "text": "pushback fires inside its bands: lower bounds from the record\u2019s sourced cases (S01\u2013S21), upper bounds the lead\u2019s",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: relay objections: 2 (band 0..6)",
+        "union-1861 history run, 148 days to 1861-07-31: relay holds: 1 (band 2..6)",
+        "union-1861 history run, 148 days to 1861-07-31: filter holds: 0 (band 1..9)",
+        "union-1861 history run, 148 days to 1861-07-31: trims: 0 (band 1..4)",
+        "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 17 (band 1..9)",
+        "union-1861 history run, 148 days to 1861-07-31: slow walks: 18 (band 2..9)",
+        "union-1861 history run, 148 days to 1861-07-31: objections to a plan: 38 (band 10..42)"
+      ],
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+        "union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+        "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+        "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 17, above 9",
+        "union-1861 history run, 148 days to 1861-07-31: slow walks: 18, above 9"
+      ]
+    },
+    {
+      "id": "unknown-strength",
+      "milestone": "1A",
+      "pass": true,
+      "text": "no block fights with unknown strength: every battle record, in every run, lists none unknown",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 3 battles, 4 battle-days read",
+        "testbed, 120 days: 4 battles, 4 battle-days read",
+        "union-1861 history run, 148 days to 1861-07-31: 3 battles, 4 battle-days read"
+      ],
+      "problems": []
+    },
+    {
+      "id": "stand-ins",
+      "milestone": "1A",
+      "pass": true,
+      "text": "the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane",
+      "evidence": [
+        "standing goals: gone (lane 1.4\u2019s operations (4a64082))",
+        "the consistency judgement: gone (lane 1.2\u2019s planner (0062))",
+        "the trait adapter: gone (lane 1.1\u2019s people recast (`standin/traits.ts` deleted))",
+        "weakest-first transfers: gone (lane 1.5\u2019s people verbs (0079: the sender\u2019s answer picks the blocks))",
+        "conflicts resolved by department: gone (lane 1.1\u2019s compliance (`resolveConflict`))",
+        "the simple contest: gone (lane 1.3\u2019s battle model (0076))",
+        "the generic rule-seat principal: no label names it, so it is gone",
+        "the capital as objective: no label names it, so it is gone",
+        "other stand-ins: packages/kernel/src/forces/stores.ts:74 (owner 1B, ships' stores), packages/kernel/src/planner/route.ts:127 (owner 1B, ships' stores), packages/kernel/src/recruitment/renewal.ts:3 (owner 1B, recruitment and service), packages/kernel/src/situations/types.ts:74 (owner 1B, conventions and legislatures), packages/pack-format/src/situations.ts:68 (owner 1B, conventions and legislatures)",
+        "pack values carried from M2, for calibration: union-1861 rules.politics.drift, union-1861 rules.politics.address, union-1861 rules.politics.ladder, union-1861 rules.politics.credibility, union-1861 rules.politics.press.standing"
+      ],
+      "problems": []
+    },
+    {
+      "id": "lever-sweep",
+      "milestone": "1A",
+      "pass": false,
+      "text": "the lever sweep (D6): no watched option, nor an atrocity-class decision\u2019s inaction, is the victory-only bot\u2019s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: 8 seeds, 8 gated decisions weighed, 744 calls for regiments in the base runs",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: return best in 0 of 8 seeds weighed"
+      ],
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+      ]
+    }
+  ],
+  "phase0Passed": 6,
+  "phase1APassed": 4,
+  "problems": [
+    "union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+    "union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+    "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+    "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 17, above 9",
+    "union-1861 history run, 148 days to 1861-07-31: slow walks: 18, above 9",
+    "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+    "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+  ],
+  "timingLines": [
+    "union-1861, war by decision, 148 days: median 22.48 ms, p95 36.80 ms, max 65.52 ms over 148 days",
+    "testbed, 120 days: median 2.38 ms, p95 3.92 ms, max 5.59 ms over 120 days",
+    "union-1861 history run, 148 days to 1861-07-31: median 21.39 ms, p95 33.65 ms, max 41.01 ms over 148 days",
+    "one day of all 23 drafts back to back: median 27.9 ms, p95 35.1 ms, worst 38.1 ms over 20 days; slowest single draft 13.5 ms; a capped day (the pack's 3 slowest drafts for each of 2 sides, together) at worst 25.2 ms"
+  ],
+  "referenceHashComparison": [
+    {
+      "pack": "union-1861",
+      "worldHash": {
+        "before": "eda10201e7017e312bce643bbf2278a2a45255bf6b820eb753b945e8b19cb1c7",
+        "after": "eda10201e7017e312bce643bbf2278a2a45255bf6b820eb753b945e8b19cb1c7"
+      },
+      "initialHash": {
+        "before": "cf2b9c789c8782bebd9d911714d898c4c17970982ccd264f3b776857aacc86c2",
+        "after": "cf2b9c789c8782bebd9d911714d898c4c17970982ccd264f3b776857aacc86c2"
+      },
+      "finalHash": {
+        "before": "bffdb4255a3bf3759a2c3c782f87468a4d286744eeee9b2130e1669bb8bee3d3",
+        "after": "bffdb4255a3bf3759a2c3c782f87468a4d286744eeee9b2130e1669bb8bee3d3"
+      },
+      "changedDays": [],
+      "unchangedDays": 148,
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 60,
+        "finalHash": "bffdb4255a3bf3759a2c3c782f87468a4d286744eeee9b2130e1669bb8bee3d3",
+        "matches": true,
+        "savedLogReplays": true
+      },
+      "rejections": 0
+    },
+    {
+      "pack": "testbed",
+      "worldHash": {
+        "before": "712959b385a5e4734ec82826639291b92a744b720f2f327c6ada1bfd5c327da5",
+        "after": "712959b385a5e4734ec82826639291b92a744b720f2f327c6ada1bfd5c327da5"
+      },
+      "initialHash": {
+        "before": "e8c1b5c7d8e59bb974677f859b43ee5b4660e1ddf60cacc0875993a8f24dee7b",
+        "after": "e8c1b5c7d8e59bb974677f859b43ee5b4660e1ddf60cacc0875993a8f24dee7b"
+      },
+      "finalHash": {
+        "before": "ee1b76d81d16951cd9d9cfcaecce1f773128ad5df4bfedea6b1ed60f4b014b56",
+        "after": "ee1b76d81d16951cd9d9cfcaecce1f773128ad5df4bfedea6b1ed60f4b014b56"
+      },
+      "changedDays": [],
+      "unchangedDays": 120,
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 40,
+        "finalHash": "ee1b76d81d16951cd9d9cfcaecce1f773128ad5df4bfedea6b1ed60f4b014b56",
+        "matches": true,
+        "savedLogReplays": true
+      },
+      "rejections": 0
+    }
+  ],
+  "observedCounterChangesFromS40": [],
+  "referenceHashComparisonFromS39": [
+    {
+      "pack": "union-1861",
+      "worldHash": {
+        "before": "0fb1ffbd096d002a51b252c3c90d8a47ed7e671c47249651150a7ab7ab16a728",
+        "after": "eda10201e7017e312bce643bbf2278a2a45255bf6b820eb753b945e8b19cb1c7"
+      },
+      "initialHash": {
+        "before": "cf2b9c789c8782bebd9d911714d898c4c17970982ccd264f3b776857aacc86c2",
+        "after": "cf2b9c789c8782bebd9d911714d898c4c17970982ccd264f3b776857aacc86c2"
+      },
+      "finalHash": {
+        "before": "d2e9277f12d7b46dfb8ae48be469f8777f2c6b3f8e4d0f8f32adf091b0d9ee82",
+        "after": "bffdb4255a3bf3759a2c3c782f87468a4d286744eeee9b2130e1669bb8bee3d3"
+      },
+      "changedDays": [
+        {
+          "day": 36,
+          "before": "4f84ead8cabdf860f1845881be05b1cd7be40151f298382a1eac0be4e46394cf",
+          "after": "7e99c7a996e716a64fa01c04d2f7f0b8e775d9c1f464f050b981f739fa548a12"
+        },
+        {
+          "day": 37,
+          "before": "b2ca5eef45f103eddae4a44cb52226d822d534916759e80169f0c61d5e6eca63",
+          "after": "cc39129e6d10b67b9ab042d3a9e116cd04cd4ded7d9331aad99f918f8092d1d7"
+        },
+        {
+          "day": 38,
+          "before": "fcd21a662fdedce6d19a9eaf52631006bd7b765ce8c6989e39530e55f19371f9",
+          "after": "39500a53481127083a0c7e05407ce616efdca5d227c0832da9a75891a1c26aa1"
+        },
+        {
+          "day": 39,
+          "before": "861a345043e9614cb695ebb9bd9f58f30cab8c9f8ee04a582cc7df7f9e606c6a",
+          "after": "4e4b29a2175ad7d0098fb6417db8e87ecec24571cb7daa284ac77b645a4fab05"
+        },
+        {
+          "day": 40,
+          "before": "543042b5c2b0c3db1b14f6ad4a27ea7d0169c0cb72051c44d792cccdde28dd57",
+          "after": "c12af229565eb9044504e1be7c6c84f75f4c602487b4c847b7cfe7b199447654"
+        },
+        {
+          "day": 41,
+          "before": "24255edcead8f95f633b13bf0d9e188ac71733920c5a797d189dda6fb50c52e3",
+          "after": "85b8de7d44925c8fc7c5cf676b6b40183e5b3d7a19e0720e5826b31603f2ecf5"
+        },
+        {
+          "day": 42,
+          "before": "16dcbda68a2979162fcf975a88b8a5bd38ad9a29594403269ad25113114f631a",
+          "after": "003a062d6fa332ece5b6c83fe57599ceb97637f3bd8f6a3b7db3c35bef087fcd"
+        },
+        {
+          "day": 43,
+          "before": "a23d4187c7a1c68b2c5d52e7b18eecf773233fddcc27e3a069f479639b9a045d",
+          "after": "e73196de0077fcda629cb8749ce0a737fa5a495e90a526770e55188d2384fb41"
+        },
+        {
+          "day": 44,
+          "before": "794d93f7feb061064a9a7d03545c505cacd718b6387b3c467c2c65b3585dcaec",
+          "after": "893eed4b73b7d34ce9ead3006d31d76ac76a951cf53f178c1bd126e84627eb7b"
+        },
+        {
+          "day": 45,
+          "before": "80aacc96bc43aaae0bedb6b18b1b5492703de746c2a1afa1b289c859f952b46d",
+          "after": "f6d6033b934e117050453a4dd86010e4c5c7fdf3c42600eec5d704c942b4902a"
+        },
+        {
+          "day": 46,
+          "before": "e808fd9a3eb05c50e06fc2aac80da7dbdc9fb4c756daccd3a183a875e56f67dc",
+          "after": "dd9e2c1028713a7b80e97c22940e4b690244dafa736e098ffa7a6db937f5d9a4"
+        },
+        {
+          "day": 47,
+          "before": "0430a2a4b28953f37145e6edc77c94f10969994063858fc36a50b539a14a29e7",
+          "after": "d11be0e948b9744cc8b70c420815e310516e57228b562eb70a300b3552df938b"
+        },
+        {
+          "day": 48,
+          "before": "86a2dc074815ad0a3b0beeda6bbbd37c20079a8cbb3c6bdc3e2b7cec87910bf8",
+          "after": "47d77866d00dc83ecc3e8378c044eb0ef829dfea1541e061d8a2b5d8c0c01207"
+        },
+        {
+          "day": 49,
+          "before": "bf94c3321f59691d9382a879730144c82b7acc24f82d4225886d77667ff54bd0",
+          "after": "7466cc62ec89bdd3b1132fd0461e221320a7ed5cfc1762ef9326c633051a147c"
+        },
+        {
+          "day": 50,
+          "before": "27fdd640b2f23ba7dad32116147afd5fb9d33ee233741b277cb1f3f4a6d2d81c",
+          "after": "601c201240e6687777720872e03193ba3c079cfd5b563b0f83ad566fdafd85a1"
+        },
+        {
+          "day": 51,
+          "before": "dbb45441bf7f85a02a68eefef1c55ddb8ecd4477f6f4c90471ee70623858e214",
+          "after": "44db7452ca9bd00009c54f9c512469d8368885c1b4817368493fc069c4efa1d8"
+        },
+        {
+          "day": 52,
+          "before": "6869d01645da8c351536d5782a35110f6a47b0d1195556cc024443d2af43546f",
+          "after": "7d435f9962a824495aeaddb4c3f388eab8bec2c04cb415a008fbe4b97a7f702c"
+        },
+        {
+          "day": 53,
+          "before": "1af8afc01de12980c57c8e7733aa0871e12e8fa01f551a8bf50a0b3eef707305",
+          "after": "bb1233fabb2f94ba21f9e197abfc0b1be5e14b5fba8718cf64bc92a401d8102e"
+        },
+        {
+          "day": 54,
+          "before": "2b84cf300cd5860e1957d0f95eae7cbf422d59e7c0b50ac784acb3bbd728cb29",
+          "after": "4f85604e87b5b877d428ca38d0ff436d0f6637e43fa4969f524aa3c0974c51d9"
+        },
+        {
+          "day": 55,
+          "before": "2c287597c62f462d5352759cbc10b5b70874000044481b84f37d6ca0c9180327",
+          "after": "045803842525963726806f7164ddc63d62c1aeca171f24f09d4095a10f1d6e95"
+        },
+        {
+          "day": 56,
+          "before": "8d6aa5a1f2728355fed58c776aadc6904a2d86362e5bc989a5c78fc44877172b",
+          "after": "e014cb83d1fdb4026c8ac91b38c52ce456ed8792a57097293356ca66c5d618ba"
+        },
+        {
+          "day": 57,
+          "before": "989c4e1ab484aed676d8c507e76f53142e357edc25a4549c39c267e9c9768841",
+          "after": "4089f6c8dcdef27c58ea2a528c8c49b4b97266f235f23508af76c75699274646"
+        },
+        {
+          "day": 58,
+          "before": "1d01c53ff49941dd4ac00ee07d84d6f71ff8770125372cb2405617569f0bbccc",
+          "after": "660dd2197fdb4aa3bcd8147d7be21a9360c05ef11a784aaad2e28b1a9dd0b32f"
+        },
+        {
+          "day": 59,
+          "before": "64d2cc9509c7af065fa1cefbbce8d8735efba043d90ed1e88ab89560a30c077e",
+          "after": "664db1071a0344e2f442703dc87e2a8cdaf00c67c7df20950db98f6f0decbf5a"
+        },
+        {
+          "day": 60,
+          "before": "3b0c34a8c1111ebfe10530278027b0e5cdf4297ab7a2e0c267f64703a7e2e800",
+          "after": "7500c530ef7034a3deec65f17dc8b5ff1ef1e94f2802b0b13c55e1121c09fb31"
+        },
+        {
+          "day": 61,
+          "before": "7a0204dd9dfa4544aaae546619e61414b047e0079224eab848919c47603c5b47",
+          "after": "3b0d3eb18c0a80ff870aabf853f5f00d10f4524bf755b48db97b986e5be622b7"
+        },
+        {
+          "day": 62,
+          "before": "93ec33e9841abf4ec9b6f494260497164defb360c73ee6684f1059c530c21e33",
+          "after": "de59d61338c1d25fa399441bdb5d8ce139ecfa01364e08bc837e85bd1db25056"
+        },
+        {
+          "day": 63,
+          "before": "5ffbe22a61da18e0f90e5d57fb2df991f34196f8c1c0d205f0edcec3aa7bc452",
+          "after": "23e762a05f30a8b031a8986f4ddee034f494ea7dd4f53348c7be76f548bd1aa2"
+        },
+        {
+          "day": 64,
+          "before": "5947f5dd6557974365a96182105318c03fe709b238ddae5255b6f106363a15c5",
+          "after": "7d299867658c7e7423334bbc046a427fd7f827ac3b50ace572bc3bccc8e91738"
+        },
+        {
+          "day": 65,
+          "before": "af814d628e6baf17395445e17ecbdb29a2a933db5499095ee9ef8f54c5baca5e",
+          "after": "c3e6e6566f99582f7e97e514d270f293b3e498da2c65e11123a025f6d82042ec"
+        },
+        {
+          "day": 66,
+          "before": "9e05d57d83a74bd7b7230174d4b13cf7b2ca27e19372dfb2e0cbc22a66990557",
+          "after": "43bba42a6ff1c7c324223f7e513991ea29fd306a2eebea71825c95f3a196f4e2"
+        },
+        {
+          "day": 67,
+          "before": "05c0db5b499d985709671d3bcfaa27eb80742c4608af72e5f46ce1eeccee049f",
+          "after": "07f4360ac1c2a011930bbceea0ac599258d5cf82127197a52108aed6ca7f3068"
+        },
+        {
+          "day": 68,
+          "before": "e84452d1f201dd181b18598816e163230cec0e6fe83cebd16a095002cddf818e",
+          "after": "c2d129cf50c81301fde587da965585957b33a93f5282db15b2aa6a4c20fc0316"
+        },
+        {
+          "day": 69,
+          "before": "56bb5e7c991846763185c9f03bddd9f5854f9bf4923d9af8223fa5d31bc6cbdb",
+          "after": "3fe0c061a20302397e15c22da80dfa2516f8626e99048dfd12f3ce5b107f3855"
+        },
+        {
+          "day": 70,
+          "before": "d312d070a5420957679dd57d6762550e44fb4ba74c0fde889c07953c87d9e864",
+          "after": "3682b2ec8a3538db9e69439e55a2a94d6e948ad13bd705aa924d7508de58e198"
+        },
+        {
+          "day": 71,
+          "before": "cbc075429c5891a8d4af5b818d0af58c16ad69d2ac17845158fde4f36911a6dd",
+          "after": "81992e23e69381cc36f390cd8eacc184e2285d1ea18c3c18c316f0bd9fac20ed"
+        },
+        {
+          "day": 72,
+          "before": "2992f09d8554cf98f42830fad2b8165494baa1d8aa32f7508e79141cf862d40e",
+          "after": "be56c1830b19c8dbed2ccb839e2bdd99db9641079a09a69e9bf7e6dd06bbeab5"
+        },
+        {
+          "day": 73,
+          "before": "ce5b5ca7cb774dc2ed911fb7eef5cf763146da9d3cb9a99a368b6e787dec951f",
+          "after": "6d00ea35efdd57474691528bb7352ea2e7fc50eecb191103ef902a00772eeeaa"
+        },
+        {
+          "day": 74,
+          "before": "f3b836afba4ae50ce201634b0b59915f9ce72b7185bfc7d12b6085b05f7c981f",
+          "after": "80507957f126114ea66046e3a5369253d8b0835288acddbbfae594032daa4a2c"
+        },
+        {
+          "day": 75,
+          "before": "0f38454e8cc87320adba03ed362ab3d3b6929e0f708c1d492ea8c47a8ab96165",
+          "after": "cca4176b0f78001ae8714f0ba71054af0599fa04b7691cc277f757108c13b7d1"
+        },
+        {
+          "day": 76,
+          "before": "b8251634320af8be2c5b6a3420bab2279149b4152783de9a75108a45d7e31df9",
+          "after": "4fe0121ffca898300391202ab15f38aa4a6d213c86f04c0ff70fa873f8cc2620"
+        },
+        {
+          "day": 77,
+          "before": "b109bcbbe04480a4986b2993e0432140b95776e50ba5c0c522671c39469ac258",
+          "after": "bf1916875092d2d7455209cc412782eb82a1059aeaab2b0d749ebfb7e5f3e148"
+        },
+        {
+          "day": 78,
+          "before": "11d535408f586f9e120a8e3368d2f7aa01cf45a119bf034881b792f234ab6637",
+          "after": "140c1eec82c7f5de4c143808ececda47f893b189cd688a74355e15fab5d865e5"
+        },
+        {
+          "day": 79,
+          "before": "52555f781e67c29554d084dbf9d26b86a5cc49adc00ffc51e3e4fb6b60df6109",
+          "after": "f8f23bbe0c8c2634253c518aeda66c447451def46c0b8fa1f5f437100d7d1bb4"
+        },
+        {
+          "day": 80,
+          "before": "d47acd6167eb59f6d68ac6e9fc32f7dbaa5708a875e9fbc3101b2d5142643996",
+          "after": "4a472bd074c759efceddb2a0865fe396430ef30c6856a470e786fd88a639b923"
+        },
+        {
+          "day": 81,
+          "before": "681019ccfe4897036eb9dc8667bbc501aa9e5f9ec47b0ef921333a2a042f84e6",
+          "after": "2d2e28f38b53814b9bba30cb5f8999bce3c661144e197ceb4a91b4a5fce1bf78"
+        },
+        {
+          "day": 82,
+          "before": "900ce5a039f1d1a0b16c0221751f884fc2dc07edd00bc5b2643be8320bc390bb",
+          "after": "d1e0f54cb2be7bf365bf821258900ce6fc3da51b7b2b717d7bfef30a1bddf66c"
+        },
+        {
+          "day": 83,
+          "before": "b6fea5da3269bb0cccb6e855d092e3baba500cd3cf6da417bb8bc8b8fdcb1dc0",
+          "after": "3d6be1147cff79635fa7ff07ce5a612e127d3c6e472e48d8c2b0b7c61043729e"
+        },
+        {
+          "day": 84,
+          "before": "09c6f7e57cbde4ed5286f2ba520a8c2c0e6f03cc27b241cd70f8aeb29f8f8259",
+          "after": "d316ed8953b141a6165e8e8e9abe7e0b84fe8e483c67684d480a04cc4575ba86"
+        },
+        {
+          "day": 85,
+          "before": "0a246d71588a2966cdc3883b8a58ce8f9c4417f8a3bdc1fb3bc4c2abeff7efcf",
+          "after": "9fb5c0176f7f9cb204dcb47fee113950c92b1889a6a9c0346746c4a9af26e258"
+        },
+        {
+          "day": 86,
+          "before": "6f1c9a38f67a8c86d6bca4d6aed1f27ee5c3d3e6738f88111a0c98978479c138",
+          "after": "947f59e3fbb586ef0c933956606f54066d304faa86f0ca56e45076c96a65302d"
+        },
+        {
+          "day": 87,
+          "before": "2776bd3f66ea0ca6285fc0e1115560fc4ed3c505328cac129139f3ba19896623",
+          "after": "e75a917d04c19cffb82eed787be4dfe8ddd65e0c4aaf50b6c497bda8cb5229fc"
+        },
+        {
+          "day": 88,
+          "before": "5211e8e606a16ca6a7863b6f1e4cb8f63a6dc276839384a254b3de35b0df8627",
+          "after": "5480d4c6bd7104a601ae63cc77d8ce903f3dbdd690f2e1173a5211b7c0e05a99"
+        },
+        {
+          "day": 89,
+          "before": "abc37e98e509e9817d3936563300f5de5248b5a9bd504bb03d03a457d20ad7b2",
+          "after": "a62c79649695ca582ff44d156a3fbea835dbe0ec99420b697f79a28512635c08"
+        },
+        {
+          "day": 90,
+          "before": "133046786fb960d8d6d67375923ffffe161b90fb8af621b67e418a3ddf3bf875",
+          "after": "62edbe5ae9dde18f3586a76b33e96b679e7729ce3f1d45c0415c2c24df6399ab"
+        },
+        {
+          "day": 91,
+          "before": "379966a7d6fd6b6481cd0ef4c29f52852ae0948b49a45de7078b4c6775b7f584",
+          "after": "d9d7002ff2d4af44e68acba997236817436b228ac913f6513c3bab363689c364"
+        },
+        {
+          "day": 92,
+          "before": "9a9929a74e87706c5d41dbe4ed9916881a4fecaf10472fa9d0dc87e06d19ad2a",
+          "after": "3baec82df0ebb332623275ac30bb62eb43a5f499a560b57009d1903517af7437"
+        },
+        {
+          "day": 93,
+          "before": "a61528b0b57cf735d1fe55332902e81cb5a583d513c1b9207e4d98d3fc40e87d",
+          "after": "565634ff7a7072531213f38e1614af840433945708497155ab0b2daaf08a124f"
+        },
+        {
+          "day": 94,
+          "before": "c00242af31b9373b26d77272bbf9d7b677ed2657aaad2c6fc89dd1ca9651d1e9",
+          "after": "bec20973b597e76af4ff5f17e198dba32460b420bb9f950eea7a810b4352443e"
+        },
+        {
+          "day": 95,
+          "before": "6ff1cfe387b2be6a99fe53f796cddbdb02301def3b3fbb8a543eaa295f908068",
+          "after": "2048db5b2aad53fb0ea0b891b3a49c1c06dfb31211733c584b673b84be7d2674"
+        },
+        {
+          "day": 96,
+          "before": "7dceff595a6bf900b8996db3d527c9b21e22261d19f8e567741962f5a825acdb",
+          "after": "53fee813cdaa0dfde66f915b473ba8e72772cbc7df23a95dd1035257e7adc0b9"
+        },
+        {
+          "day": 97,
+          "before": "ae753206d4ce77da3e63425e326d402c67010e26680f12dc5d69435b7ede3eeb",
+          "after": "97ecf14f3f95187954abb6b9d31c27c64944a3632409579499d945f218c6db62"
+        },
+        {
+          "day": 98,
+          "before": "417967bdf2abe3f61ccee68f9f3858fc0715cedd5bbd2a076898964ecd0f94d9",
+          "after": "46de23f92fccb906f6b770b7cc4f206d0b256b137746e1e714a89213f2903c97"
+        },
+        {
+          "day": 99,
+          "before": "c0895e5a5c90a53fed8f808b8deb8d6d130af8b0689026a16de7a931e260b3e7",
+          "after": "7c11c6d027b29ad8f24b27a7db70ea03ab03d7003d93e0d7f1db306a1dea7bf3"
+        },
+        {
+          "day": 100,
+          "before": "02de50a091f731eef07d942d85dc79aa8aedd1db26d56f96df2695c9b38b95b6",
+          "after": "9a477195366f598459cfec812c5d1eefa526ec3b17659618f93e8d7a91235ab1"
+        },
+        {
+          "day": 101,
+          "before": "89a202297e1efed8766e519246c21a87a8b0ce72b2635b0a355bffe4631f39af",
+          "after": "60d9a0584fed00618c805c6f406cc727e177f808e091f2e706a1022cf9f755f6"
+        },
+        {
+          "day": 102,
+          "before": "b4a0992f6c19b7e5e54f96fd7da93377be92148e50d74a65bad325822ce5adc0",
+          "after": "278888cc89b435800425fb58b1f4c42e7d70b81992cad39414f12bda6347ee2c"
+        },
+        {
+          "day": 103,
+          "before": "95412bef44a25a6efde228191c64718924e37452cbd783a217624079814dc92d",
+          "after": "a8aa7c6446d724f8fd5b789fcf86d8e4a6268509999cceb5786ff003fbc26a6f"
+        },
+        {
+          "day": 104,
+          "before": "94801bead1c58c7fbbb15707d1f0df600d009a9068a3b9de57e5572b3940703e",
+          "after": "636933d832e4272f40b5b5089fb04db020cf96bf18da1b08162abe7e9501b1bc"
+        },
+        {
+          "day": 105,
+          "before": "fca44c223999b97fa7cad70912a47922328656936742977dd772683fe1124d16",
+          "after": "a0fb91a8605feecf5b506a2fd3588042fc48297b8ae7e99006c51b5682002054"
+        },
+        {
+          "day": 106,
+          "before": "de8d58a4b777528c0f8f7dd326e7d78c91b72eafb3c4e606d3f268dc0eb09204",
+          "after": "e70257440673d5ce1590da45be33a39db7b03ea05dd43973ba30deca80d2e395"
+        },
+        {
+          "day": 107,
+          "before": "ec12710f52d52c6147fd4866abfd5b7f025f2126fef435f659d9ebfcde1feebe",
+          "after": "ffce3fe309a448f37c993fd371ef2afb147133b0bed23e54d879f316d6f6dd35"
+        },
+        {
+          "day": 108,
+          "before": "4fe75158d89817d8bddf34ed98a7bcf45f986bbe159e12f5819fda72929a6712",
+          "after": "e1e0de7a2ec897023da67732b73267d75061bfd54796ed6d3fde82be22506b6e"
+        },
+        {
+          "day": 109,
+          "before": "77d6ab89ea7fdcaf1172950485477578e0918e68346e740e87842d3159da6f4c",
+          "after": "3b336129dd6c60e47817591d37ec794b9abdef212a17d5883ae582fdf982a7b7"
+        },
+        {
+          "day": 110,
+          "before": "aff94b7e4c43457e05a764ff816a31ab4c6a0033e000b76024b5ad3a2e0bc93d",
+          "after": "76c6affe51d65cb6043df2a7bedd4c038ca5796c3639afc7540930322e443736"
+        },
+        {
+          "day": 111,
+          "before": "bb321607a447ded159ddb02edf2247f7539c93c29cd494afb10ffc6756ad53f1",
+          "after": "3b16c6cc7fe5a9496eb7f4810912752117e7dcea9e0018e88bf83ca01f9af22f"
+        },
+        {
+          "day": 112,
+          "before": "80e6ba1eae562ee1eb672941cb5f3197e7ec6324a200c9ced984474b5df299d2",
+          "after": "99ea0afd3c549d1b63b51f0ad5ee916a27d67aa988aea1d1fac2c9c59b3eabc8"
+        },
+        {
+          "day": 113,
+          "before": "18febd88e0a4eb704631ee6d59c8a2d9e6f5db56df197e16f2023c27797e4111",
+          "after": "7503a05d5c6c88f721adaf0d4054cf4375b51f16e1b4b3aa99930739a811891a"
+        },
+        {
+          "day": 114,
+          "before": "8cd69420e6f6b0810ebcddca3005b3020ffb255c9fb51cfff803633422fcbbc4",
+          "after": "30924db304880e56b8194d726a1cd4cb0dbcc038fdc1bb862b7df7279ae4d02a"
+        },
+        {
+          "day": 115,
+          "before": "99a8f0623b77410e96099be1d3e88d54c034102c5134c1e93d26b714b22eff96",
+          "after": "4a56e66d2cfe6b7aaa133c82de1ea51015ac32d4e7c6bbe01b107fc329e3e2ab"
+        },
+        {
+          "day": 116,
+          "before": "fc57792ee31de142f8933c95af6f4e20e116ce3080ff2383fd26d97416285ba1",
+          "after": "8699794b7491db0e9c690dbbf3efc7b9cd2b99907d16c67c903b3abe5fd80a33"
+        },
+        {
+          "day": 117,
+          "before": "769f963f9b33e052ec02d4ebf1a964749be044f253cb712c823a09faf0950d3c",
+          "after": "3cecef0fe3a4a596249c8b21c6c859b33286dd9ff23cc28aaa780d0962aa46b2"
+        },
+        {
+          "day": 118,
+          "before": "ce6051fed4c6d8363c5a9779b8a8c88b6779dfdb41d2714cf62e277e3f7a832c",
+          "after": "b6c027b30c8a56e257ef04752ab46dfd91e469297716ffba85ebfd98a4cac65e"
+        },
+        {
+          "day": 119,
+          "before": "e2f79aae3ead4365eb504864cb799e20f5fe9398a094abc655b5e6705514006d",
+          "after": "1d526c64658bd878039ee4b6d1ff6fed4ed30d36464b86fcc84843f1f3ac8575"
+        },
+        {
+          "day": 120,
+          "before": "7cbffd46d6b4894e40cdfb2c8e33c8d1e410dbaece4a4c68fd5c6875dff8ee40",
+          "after": "a6a8a4a1114a9819ec29288657b67ec8bd0fae53b5df43432e6a4b7bec35fa40"
+        },
+        {
+          "day": 121,
+          "before": "7b60985ca3a8c3249fdaa6ca0d82bca888131a10a027a44411b181f66cfaae5b",
+          "after": "d935596a9e8c9260984bd83c708aea3fe684bf91da0c09c03884646db25b9b57"
+        },
+        {
+          "day": 122,
+          "before": "37f72288cd0625ecb3f8b683622ca86de439ccf067606ca3a33448ed0d6cd735",
+          "after": "e24c1613cabfe4dc88e8816e0910c27f533ae7604b28bc045ad46420ae7ac9c8"
+        },
+        {
+          "day": 123,
+          "before": "2475128f0440d98532e6095a800f27e23b63577b8a87d62ea00baef4f7d75b76",
+          "after": "7bf43150d2870ffbae270be43f14816f4719855dd23254d89b5dd6225d026332"
+        },
+        {
+          "day": 124,
+          "before": "97a7a0fdc0351e2daa3385f5bf92c88bd09aafebcab035f5a6c45d69bd7904e3",
+          "after": "46f7cedaa8fa39ffbf16c681e72db4df6daf486add56cee0d77220c57abed839"
+        },
+        {
+          "day": 125,
+          "before": "bca3d77f90103d6bf234e4f15674c50be5eee53e6c25da4eac20f7a0ff5b740e",
+          "after": "85b0cd771dbf881fa79cf752300ade1d7a27e9bc2b96cc8bda812cf87a4eae09"
+        },
+        {
+          "day": 126,
+          "before": "e8a0328708f0b76fda3e5c502c8c1ea576d85926cc87cef70f1e5358ec5f7296",
+          "after": "bb5de3c9732f39e5bc6810663983a2a4c033c007c870dc6b836984dd83f5aafe"
+        },
+        {
+          "day": 127,
+          "before": "d73d642cc831245733dd4b4931cdce1749dbc05583b69fbf9f0ac2525ca1fe5b",
+          "after": "3d9260a85df4ff1d1768b4c4c95f7e1aa38dd1436523e4b980594383a4100f25"
+        },
+        {
+          "day": 128,
+          "before": "a64b8ae75c0b78042989385fc0c8c26d09cd586aab6b85a0133b65bb2fd97350",
+          "after": "c76d17274ce9884424906c57e670ce2aaa96b4ed427b6985907a154be199e4f4"
+        },
+        {
+          "day": 129,
+          "before": "63cb6ccdc2a5d472b3c711a26a6243bca98bca949060cc4c356ace6a4a400238",
+          "after": "ec58df8a3d053d6f7de4d049585baf4991ee8d0c3b8fe47c783a8c5165a499c1"
+        },
+        {
+          "day": 130,
+          "before": "16cdde7d6eb1c359fdfb93551c7ceaf2c0e84506dfcd93a076b727e0d0c0b9ad",
+          "after": "b2c3bd9bcbf603cde2ed29fc6f16151de6272874ad00762747650e085aad7a4b"
+        },
+        {
+          "day": 131,
+          "before": "c097680e0afd2c532464562decfef65d630c9919ef78f825c7c4db1138ebb095",
+          "after": "81dc83022d133f301d487247a44b309a3f3ab9339d4400d6599da2df58376d63"
+        },
+        {
+          "day": 132,
+          "before": "f976378c9b16f58d31c870fc81c55796ce157b22641214eb95df13c2d16295e7",
+          "after": "80fd4bb6abd06bedf4e4929b475dca4a9bc24e409acf16b32b61bf735c55d0c6"
+        },
+        {
+          "day": 133,
+          "before": "5a15286954e3f6db240654630429091205a6ba172b51a3076844aa189da98a28",
+          "after": "874e591ae3746a2fe63e85dd0551c3f2505b03c2c4df1df11eaf583173edf4f9"
+        },
+        {
+          "day": 134,
+          "before": "1f298ae041c02c1bcc07741ab43d59dfdb1bf53d69c2bb5dfb71f2ca7ea09e87",
+          "after": "69e6452dc49a1508a828a985a21a46ea94d15c1ed38ba2af3871e5018d26d453"
+        },
+        {
+          "day": 135,
+          "before": "2659cbf42d41bbc3e4bd67cd140eed0f412c923db9ea2d04da05dfd4364e2c96",
+          "after": "d8a7bac515a1ba65b7c23afd5e332ebce4ccd419a3b4c2384ecd42592ef96277"
+        },
+        {
+          "day": 136,
+          "before": "98b32c8d69e397d34ba5fad530832cc55e106687f4348d895fd350d3798f84eb",
+          "after": "16e8780e77d7b638e044e59fb07708db79772d30221462c0fe5ccab3c798439c"
+        },
+        {
+          "day": 137,
+          "before": "2dbb7ad166ed6caead9dd332949853d8f0dd1e95912abaf030c7392151c48d55",
+          "after": "74bfe40d77ece247d16f841085976886708d10ad4582991b52b312c0b2838eea"
+        },
+        {
+          "day": 138,
+          "before": "70f589e8538eaa8a495a68ec783708469bb8fa9b42544291215e71e4d91bf7b6",
+          "after": "e1ec48e207169cde1e0d4d92491d7111787948cd823f8d0f469288cc511217fa"
+        },
+        {
+          "day": 139,
+          "before": "25e56dfcd8c30dd123d98d0835bb6ade1544c53949c8d8380204ef035967e46b",
+          "after": "533aa287923452e52503cc8d265cfd26e805ebd38c4a775058db89032e647e95"
+        },
+        {
+          "day": 140,
+          "before": "f51cf9d178eb007ea20392c6364ceb3901f631b0579203f91e2c50e3fc7ac35b",
+          "after": "a953258bf057ea870b3026c03030f5d9ed854c90b1508d7726cedd7fe7f53074"
+        },
+        {
+          "day": 141,
+          "before": "e8ff282ebd2b79efff71a61a87976f0b43bdbe331cabab91fdab0d19ae6a9465",
+          "after": "1955bd6652649fa8e7c3586df5e873eec9705b1ab099cb3c31db2cc08fdc4129"
+        },
+        {
+          "day": 142,
+          "before": "bc0038e743b7dea67b1174a9e2d6ba65003d4c11f70b25ba050a11373652bb7c",
+          "after": "8d53dc0b5a825f6a7fd086e7267a8ffb759fd34bb37253677d184397ae9cffe0"
+        },
+        {
+          "day": 143,
+          "before": "bd75a757a05f7effdbae74b556dfde1e8fb8644f61a7f3a5f77304f2788d0282",
+          "after": "8a78f47ba509c64c0dd8053ff18a420300f6309d0aceaf1a58fbdd7c385b2496"
+        },
+        {
+          "day": 144,
+          "before": "908318e956f916c9dff95e30ce645509e602d2ae5e93fd5539287ebd6492af22",
+          "after": "cbd33c7b7113028fd0f212c894ad69b1da5713c32c639d6462a68d03be4d2670"
+        },
+        {
+          "day": 145,
+          "before": "24c45ae519d4e566b24f94daa13b35c02eb3480c1b9a2cacdbece6998a8c6a90",
+          "after": "7b7d9dcdc011fece0025eeecd66edc1bdf9ad9252e93011e9e1924649ee80d07"
+        },
+        {
+          "day": 146,
+          "before": "22e42bd9f665c30e271ad4a3cc5f53574a0856dad74a2ddc14dd5dd92ac1fee2",
+          "after": "8b671601f72bcf1dfd186b2e09f0cb4fa0c86e6d29d3c737767132ad133b95c0"
+        },
+        {
+          "day": 147,
+          "before": "cedb7f61a3cf245cd70b2fbc3924fc38a4211adc4d23a2fb69f47433449089cf",
+          "after": "3ae8ce12248034fc3fef83b25b653700c310883c8f119f5b90ec30f5c11bd2dd"
+        },
+        {
+          "day": 148,
+          "before": "d2e9277f12d7b46dfb8ae48be469f8777f2c6b3f8e4d0f8f32adf091b0d9ee82",
+          "after": "bffdb4255a3bf3759a2c3c782f87468a4d286744eeee9b2130e1669bb8bee3d3"
+        }
+      ],
+      "cause": "Inherited S36 received-only correspondence, submitted enclosures and later received-input choices, already traced in docs/audit/s40-evidence/runtime.json. S41 matches every S40 daily hash; its desk/note-preview follow-up introduces no additional reference State divergence."
+    },
+    {
+      "pack": "testbed",
+      "worldHash": {
+        "before": "da5bfbf0de57227a8c56d2ccaa89600786c4d83716b91b949294217f35820604",
+        "after": "712959b385a5e4734ec82826639291b92a744b720f2f327c6ada1bfd5c327da5"
+      },
+      "initialHash": {
+        "before": "e8c1b5c7d8e59bb974677f859b43ee5b4660e1ddf60cacc0875993a8f24dee7b",
+        "after": "e8c1b5c7d8e59bb974677f859b43ee5b4660e1ddf60cacc0875993a8f24dee7b"
+      },
+      "finalHash": {
+        "before": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+        "after": "ee1b76d81d16951cd9d9cfcaecce1f773128ad5df4bfedea6b1ed60f4b014b56"
+      },
+      "changedDays": [
+        {
+          "day": 1,
+          "before": "a0b6a65c5313d8a420f3efff15eec6687c6355434a9cf699794cec22920f08f8",
+          "after": "1b3acc6ee2975160882daa078aeb90e04d9e585ff296f8481a6586c2685c8f0a"
+        },
+        {
+          "day": 2,
+          "before": "0e4d3ae75c59dc8b1a7b64bb98855de5fa1c7063e96170440bdcfd7196068139",
+          "after": "6f6e444f7a9ce27b83ece36cdadf2e37ba4114e7f7b3734261eb32d7c995f527"
+        },
+        {
+          "day": 3,
+          "before": "99e6dc34849e1400ec77d96576b2cd3c8a2e40e0d7328169400c09882ee7c86e",
+          "after": "6527a103a8906f3e9c9aa098f2e58a4b58363e1d16a5b049a0f455f22a73c24e"
+        },
+        {
+          "day": 4,
+          "before": "f588a4391be111a4848d207871483d571927b27dc445cc4a75486651c3f3fd7a",
+          "after": "25ec9703a9bf1d7acbf2bb2a0c8a114cf40e35f85d14ff5e83811e5bce868a82"
+        },
+        {
+          "day": 5,
+          "before": "b18fde13bbb106595713e6f3146da1a8a625b2104c082408360e41b4b26d0524",
+          "after": "fc5388251cf878bb5977f9b423cb4b92ff044c0fa7011fd9e2d0d1eea2f82659"
+        },
+        {
+          "day": 6,
+          "before": "ea62a082feade153191564f97b012a956d6001337567aa5f953c94c2871d7e92",
+          "after": "db922b9e31939d88d2656c77b755aa3a0ca883a2dd424abdaca7733774187fbf"
+        },
+        {
+          "day": 7,
+          "before": "128aecd5e5d969960a46d9af398cedc39d4d744925aa185083692f29d1ebee63",
+          "after": "a608c44b8607b7575e8e2f22222460158c15fa46d65a9f7101990d5b245935c7"
+        },
+        {
+          "day": 8,
+          "before": "28b1e7427d1ee800fc9dfb6ead7d8dd3eb9f9a996d9494e92ed18e5a4be1f2ef",
+          "after": "a4c3a98cf6e36e70829f6adbaa0ca35305a06a495daa5f87ba5905ee78917036"
+        },
+        {
+          "day": 9,
+          "before": "b54758ac61e5c7f08a4947b31e8508fc80fff2b71720a2c348087e5c632d6515",
+          "after": "2afece817a761baa358115618d2d4b6e5c374690f451929980df25cb20c0e0fa"
+        },
+        {
+          "day": 10,
+          "before": "ade4d65c9b7f8404d9ac8362e6f263b4daebbffee1f0305e9bb84600a0957cc2",
+          "after": "d902e6f0fbf4a6b87bd687b656c476cf72558b6d3a1a16ba09264bc543ead92d"
+        },
+        {
+          "day": 11,
+          "before": "d610ef88e73f58d9333c870ad33eb01591163bce05f4103051a55ab30c43367b",
+          "after": "319c303facb906e69760028d98872f9153732c0f3f1a97a57bf856287d87d455"
+        },
+        {
+          "day": 12,
+          "before": "4027804ec4e6e8466edc90a335a01099d8fdf83cd70108614d648542bf17d3a5",
+          "after": "1fd5c26848debc5c0716f278828a100d9f59b270593fb494a76b8918eedc1c07"
+        },
+        {
+          "day": 13,
+          "before": "9dad3706a9fb6deedb3f766d5d5326bdf3b829ee8509f930a7343bb0706eb8e4",
+          "after": "bf30b4064b834e62a317446a415fd3569bef91da3c67663b9bb1bb153d7748ad"
+        },
+        {
+          "day": 14,
+          "before": "bda27118f70d5b6f4a168eed17229f6f4c2c6ee42b53c466a3b5e5146238f623",
+          "after": "009406ab90ad8633bd5fb9c07407cdd9a698dd7bf79aa23c399986f96d4e3a3c"
+        },
+        {
+          "day": 15,
+          "before": "c04b6f0b5a910fd4f7ea8c17f4ed4c0806678977966b742ab0414140102826b5",
+          "after": "28f92ca55d3db5cc4ff127eaaf2d4e6151fa02e519e269a8fecfa823a338f7b7"
+        },
+        {
+          "day": 16,
+          "before": "4b5403d5cf504d8da1d3f573f94870d9357028b0d87e72a6355b19a1b193a8a1",
+          "after": "f9aa314cce588f04b0d5f8aba43ea2e84711daa388ba6977e71caaae87df5782"
+        },
+        {
+          "day": 17,
+          "before": "5e06ba18e04beb5a601e92134b6352394b92e058a7f37bad3b17f1170c7b515d",
+          "after": "c009954e2460d507b423a9430ff832f2564e10c086773db170b9f6027924d737"
+        },
+        {
+          "day": 18,
+          "before": "0aa4d609ea3fd2c920936f34c26b416c132bf8ca0c02c8a24559c67056932f98",
+          "after": "85bb477020b2c138c284bb6eb0789b171ec5f363092a8edde888052dacbdc077"
+        },
+        {
+          "day": 19,
+          "before": "696a9d5fddae0ea0833b4683ae1c06491663ac5a98dd2848fc81b5bd8a16eec2",
+          "after": "9189fb3a846bc6122ed3739bab597dc758e5295309800735231ebbbf5b4084c3"
+        },
+        {
+          "day": 20,
+          "before": "9f6dcd00cae9e90b52893dbdf85f233a4d01955d2d4fe375e7ebfad39c86afc3",
+          "after": "92dad377aec95f1dc69d3c3addfcda1c60a40350a3c6f65c8f70c5fa003e3d80"
+        },
+        {
+          "day": 21,
+          "before": "da1a623e9642c1cb0b51ff7c7e7a119d87fe33546de8b82e6255258b2df7bbbc",
+          "after": "e680faf83018b1a294e5f5a8c3bc1ea0a4227b55a4aff56c962c3df5ede54170"
+        },
+        {
+          "day": 22,
+          "before": "644c115908ac2bf8ecb1de5e4f19266b37b76d4f7e0498ff6af9cc0562da7de2",
+          "after": "0caeee818c9fe3411dc39913e8bdf920e92558c42909b05efea40b761a8e50e9"
+        },
+        {
+          "day": 23,
+          "before": "4b878c932e742144b7e79f3d4ecf76c4ac02c3d70aa9c3e5b362a5d0a59e2eb3",
+          "after": "3180d1f3148a46bea0030c8af6d5dadd6e985d94e0e03e7ac295dbd05484067f"
+        },
+        {
+          "day": 24,
+          "before": "c7463c200bd04089cfe8e044586681906a376240e73f44a3842babb7758322d7",
+          "after": "ec6c578f2572e3fce0533050bad7b274a6346db91187cd39ce1bd381b555ad2c"
+        },
+        {
+          "day": 25,
+          "before": "1268e78c78c204d88a5231b2bd38460dd49ed23c70b704e0ba796727524fabd7",
+          "after": "205c3d2bbf5ae1d17862e1cb1b5c1119cbc047e2776960c1ca2e29c3dee6be57"
+        },
+        {
+          "day": 26,
+          "before": "6c67898e55e0a479cb595d73f2580cc2ce0b38da376228a36952b166a1a9804a",
+          "after": "115ca011a637519f73a8ac4836004c8e2387b965f48ef989e52ac206bbf6cbdd"
+        },
+        {
+          "day": 27,
+          "before": "bba9f30217436ef404436716cf7e6dd460c4da8b52eda599f48c805662ec26dc",
+          "after": "20a5a91a746a9c40a9f66d098e92098052eb847653f8f953c0aef1dc0fc3edf3"
+        },
+        {
+          "day": 28,
+          "before": "6b637528956980152cd062342957cd3c7eb8dfefbeed58c440ce96d54d1c045e",
+          "after": "8ec9f2cfa2528955b7adfd6264a81eda2b7531d8f6dde808b840a32d0328ba28"
+        },
+        {
+          "day": 29,
+          "before": "636637fb04f6ea24fdf0b4fa6a188fb4e99b91b680f77e1125fe26f7b08dc88f",
+          "after": "5f8a8b1d9c23420e26dcd42f57815d80a7321395c3bb3000e049c5580dfe0973"
+        },
+        {
+          "day": 30,
+          "before": "9fdb61722da298968eb7ff33597e49cffa90eacc432c3cbf6132f64d79c73a09",
+          "after": "989916ed1bec3de26dbf0896c3f1d3f578936d149f4188cb8181247105343eda"
+        },
+        {
+          "day": 31,
+          "before": "158ebb2dc0d9b92f0db35f42e776603ee336bb62469185c4d4d0ec286a262970",
+          "after": "64020f47e1fa2e552e1baf457e24ec8841c1d96dc1d91cb3e80d12e36ef1cede"
+        },
+        {
+          "day": 32,
+          "before": "33ce140c720494355429668f50ba6c7602df388844b8055b1019c05324e322b8",
+          "after": "802b94f70970ed5bad303b4f5fa1f76c43c78ea7bdd6167507a54f410138b42c"
+        },
+        {
+          "day": 33,
+          "before": "b87ed7dafa12d41902dc5f5688a5d0047c5405c5785ba18ecb7d395e6d907c2f",
+          "after": "40b63696faeb6528be41e848b8386683e6aab41cfeea088988e8ee0187cacf99"
+        },
+        {
+          "day": 34,
+          "before": "2ee2e9a7ff9982b5cb5d1973ee1959c88e5ba6e3217dd328395ecbdd1249f768",
+          "after": "3391608037576fef67287b490d5852f88882753d9d6ec09c49d899ff88c1233b"
+        },
+        {
+          "day": 35,
+          "before": "f4b163ba13bad8e361bcee81ef903fae89f28f637c4c660bb15df7539a830919",
+          "after": "454274bf37eb74d0eb3fd0ce58b7d5da6ee84c8b762050ea2e140cf42c13bd1e"
+        },
+        {
+          "day": 36,
+          "before": "2d93e595741308720f6fec4f42f50760534e862b0802a2aee8be1844fc240a98",
+          "after": "4052d5ef06823f7115b8c34b3ec9bad9ed04ef5f3f5fd4cf21bdc69255678762"
+        },
+        {
+          "day": 37,
+          "before": "3d2c7045c8e87282c49dc12de3d48f76c02253ad87762719e358dfe84ca4b1f9",
+          "after": "093d922eac331445416785ee38dd6336a73f9f2a470f3218ed51c0f286d2240a"
+        },
+        {
+          "day": 38,
+          "before": "8fc6ac5c6cde8476f66e8d3103a98db101de511d52b9fc44e42a2905320abd1a",
+          "after": "f0e488cf596504ac3c260c5127701dc06f1debae585bbde2b14bf15f4d031a32"
+        },
+        {
+          "day": 39,
+          "before": "c361a32e35b96d803f359e08dbe403673c0e8f9f53a0a37d12b95ac31b2c250b",
+          "after": "737f5732b4d64c1ecfa4321139209c03c0e1a1954581319a53347460f9e91eab"
+        },
+        {
+          "day": 40,
+          "before": "59451bb2b23765a489187595c7300162f1fbcdcf00eb25ffe2d495e5dcb9d8c0",
+          "after": "32c67bcf8e701ade959fcbcf8c3aa795e364fb27285ba023dc0d3fd4ca391fd9"
+        },
+        {
+          "day": 41,
+          "before": "32d0f54eb4b67242e2852be3dfceacb3ee86b1cb726973e03eb79d9e8e954ee9",
+          "after": "b711d9510bc59cae091945c2fb8695101b56d2e8bf6cec43f55024ebd28a722e"
+        },
+        {
+          "day": 42,
+          "before": "7d6321b0845921c210322c4ff946467067d21da05e67b5cb687cebaec6fdd626",
+          "after": "8b60d05b1862251e9fcc36eb226897763ff018ae4ebbe66ef35a5d047542695d"
+        },
+        {
+          "day": 43,
+          "before": "5375a059bb8a5933066559efa50af9e5aa70eaa0e50db6880db9103b69178495",
+          "after": "0fd9460a8806f4a6d675237bceaab4d3e931f89b65cc74ce3e5a97f50d8d8b79"
+        },
+        {
+          "day": 44,
+          "before": "4d83c00e9ab346ea275d8b832ce8cceccf51462b0caeefc159db42e6b53eaba9",
+          "after": "9d9dfe7923f0d80ee217d1011405c26f44f4036b2f08aa6a43730299b06c8700"
+        },
+        {
+          "day": 45,
+          "before": "0ab261d05f4b8a28fbbb94c5ac88c832b0c1f01d37976c8649c62fba82221094",
+          "after": "d22cdd9785405f8cb5747e9876d0c78baeca291a56836694dda895a629282055"
+        },
+        {
+          "day": 46,
+          "before": "0e8ac20c50209503be69dec70596211ffcd630747ef6dbd505ad07f33f804984",
+          "after": "1e43bd75bcfcce3695967d3f01bb2ec5a42b8b0396a9dadb139cd494402506a2"
+        },
+        {
+          "day": 47,
+          "before": "2fde14e1e7091a07d1e9a4fae7a74f5463e9f3806b77d3e15c5121bd520fd6d3",
+          "after": "0884ae9712d7613c1c941af47c170ffcc321ad1140a9b29cfa48ef0984fd968c"
+        },
+        {
+          "day": 48,
+          "before": "adc1944d66b98ec1250c5e0e259d1d2b4ea6930d36803626d441a6d532bd95ea",
+          "after": "63c2107d77b51c849ccd5c011dca9dbfe655be479c8d5b4b10224ea56046c5be"
+        },
+        {
+          "day": 49,
+          "before": "6a1bc9f2c0c26d8001944b95278b661393795bad7bc6fa76ae3c78cc549f0d89",
+          "after": "97a232cb01a15b8db044f35141e46f16a1781bfd7ef6682803cebf31b3647258"
+        },
+        {
+          "day": 50,
+          "before": "eb4b52f9d2560dd47ff06bd9d00d1efaa466caef483d0baa93eed46a4fba7e04",
+          "after": "4cc4660e902cffb3ccb715452c007b7e75d0525c7011da727ed5945e820c02e6"
+        },
+        {
+          "day": 51,
+          "before": "24d46cd4cff49fe7240d3a2b44238702db587e10f5d49b5eab09af534979c1ed",
+          "after": "70a97ccab73e9c14dbe1e7b7af136422820df7e237dd56a74c93ebbd638334be"
+        },
+        {
+          "day": 52,
+          "before": "bc1d4927164f19b66776d50a042af323cfd8cbab7882ac9269819f926c6cea08",
+          "after": "710c8601dd003a72b9184efdcce817293bd57fbe02cebc580537f62933ec72fe"
+        },
+        {
+          "day": 53,
+          "before": "efed657d1012a648a32a28125bf886a299cd38cd57d44b73f398d390bc0938d9",
+          "after": "5242de42a41f8e1d3c23c51b331cb71bd5eeda37ffa572163ef7fc8781288ad3"
+        },
+        {
+          "day": 54,
+          "before": "570609cf8cf85c604e789b131beb5b4270681eb558253418c00fff7709105905",
+          "after": "97af4ea4977159876ba0b486cbcec9a1b9ff8981b7a6bbf77ff81a566efb2ac9"
+        },
+        {
+          "day": 55,
+          "before": "00e0cbf1eb3eff5a7f2b552b1d9b2b910d4e17de8df3907c24cc28da8cea8b2d",
+          "after": "4c810a88af8441cf6b9164a2adfbe09b826c4b3a8f2c28e2067eb0d416a8027d"
+        },
+        {
+          "day": 56,
+          "before": "4d407a8048f4b350388398f97eed86cab72b17bd5cbe4db0dc749d9e6887aea4",
+          "after": "e70f1cb9068e1991bf82b3e6c17a1b8e5b4ad45c148c1278eb2ff26dbfef68d1"
+        },
+        {
+          "day": 57,
+          "before": "0717f4d761bceb4112652ee9aa264b5961f585d225bada515786b7804fcffd55",
+          "after": "9fcfb7aa60113b02fbe358eeb50c963ba5d94b14e18ddbb4a8b6a0535616e9db"
+        },
+        {
+          "day": 58,
+          "before": "3bf1edc2e1811a63ce86c5352a581742d2f7023a55f4d0096058409a94980d4d",
+          "after": "4754e6325765156609415ca0b39f2a1e301fed2fd02e34fc8a80a42ae1695dd2"
+        },
+        {
+          "day": 59,
+          "before": "fe4ebaeb1c6bb50a6b6ec5e0c7dc07f3948e3edecde454d13f31d2dd964ff734",
+          "after": "985cf9f6d82d773b98e9746818537339626d9dc151d9a8c407f0a26379c0e120"
+        },
+        {
+          "day": 60,
+          "before": "7534ada3f51179dfbe5bec2fabb901b3672a08bfde87c8fc2e6e4476a34369a9",
+          "after": "21efb13fbd478bbd6b0b913337b931441d212d07aaaaba38b6a5dd551579a414"
+        },
+        {
+          "day": 61,
+          "before": "0eb81dd21cb45ea42349c019855fb9aaed11657d9d6929837a35d85a85bec132",
+          "after": "6c341e1e57550cbcb038a78b0eabfa555383db03d9addd802c6fe0db1939d6a7"
+        },
+        {
+          "day": 62,
+          "before": "979aa79677749752f3caad097420d97d11ea3231ca2eedf05a35a9e643eb4f4c",
+          "after": "de015cd1a77c45e394b38c11e9eeebe7805c9833800c4de3d02c238b57d1f66e"
+        },
+        {
+          "day": 63,
+          "before": "e5d8501a0e5d688a931996bc1652cf403dcce4774c9e882d67bd86b5db4953b5",
+          "after": "6bae106743a8a8e17296e14a01bb10c76e02f7d7e38b81dde27486fe31dba724"
+        },
+        {
+          "day": 64,
+          "before": "dfe0b6afba4867d3e0cfb80d0304077ce7cad0d52ffeb00bfac2b46a4408e7b4",
+          "after": "2339e2ab5859d3922df4657eb13ec8d27d398879b3b9523e38da854f2cdb5113"
+        },
+        {
+          "day": 65,
+          "before": "08480d2b79a0b1a42fe80a816481d09d72968a3c04979c886d57279a06e00580",
+          "after": "7ef1b2996a1d7611a5265b8f3a78a8c11d966e2e771504617ca4185466764321"
+        },
+        {
+          "day": 66,
+          "before": "1cf5af553ea88845831a55c35808fd65991cbf3891396a528e94b528b5a81dd7",
+          "after": "8173b69b42f0cba5183780801d8cd2bba58a9bdce0ee3dc9d1cbb3034b539b6c"
+        },
+        {
+          "day": 67,
+          "before": "a93448396310734efe694cd771187555bd5bd0d44d8c7001c61d8c3cb785fdca",
+          "after": "053f44818066d5c1f2c22e175ec8dc030a4cacc4af0eda52217640b4261ecc57"
+        },
+        {
+          "day": 68,
+          "before": "c0cffabd635a88ebb1c99499443ceae67a6c7dc75b2b65084750c391bd4e4b25",
+          "after": "bfc5d7080659d0dfa34c954fd4b9711945de49d51222f306349550cb1562850d"
+        },
+        {
+          "day": 69,
+          "before": "995ba4527f5af90772b8abfb2a8bac6da0e7ddb43cc79bf6dc11804708aed864",
+          "after": "b6508a4c2d19914c4f0c402f4334dffac19e92630bb45ba06036644b23ac9bed"
+        },
+        {
+          "day": 70,
+          "before": "9a14386d213e35bed1d27ae2d8f647e3e208ba3eb770053be2f1954291c4b4cb",
+          "after": "76d458b03b88a0b2a7c67a52f65f687975c154de663dacaa4d5ba1effa38a3eb"
+        },
+        {
+          "day": 71,
+          "before": "a5cc1bedad48a1f15c5ca484e301a82c530130c599b43cf10fe4658d030f791f",
+          "after": "5da8e741d1e42cb6679c509d348cf19547882618ff054c24ed46c192341291ee"
+        },
+        {
+          "day": 72,
+          "before": "83b3d5fdf471413832efc152c78a38f97cb292e24e4b9e4e8753d4baf1b69a1b",
+          "after": "df56c0be0d6d316a6709c6c039086313f830d2cd1e61aa401be165f28bd0285b"
+        },
+        {
+          "day": 73,
+          "before": "735db73013505c46554a80a5ce95df99d91919e304fa08e779981678f092dc30",
+          "after": "368f1771468eaff8e0c8a430bc621d21f675e9a75c472802156518b0c1b584bf"
+        },
+        {
+          "day": 74,
+          "before": "d2f0810a16bef735f460987078f19306451e93e9371b6ed9810150c69a3481e7",
+          "after": "1df40081cb29d70dd770dfa87236184c2a1f64a3077b0911dc99a20a8883e56d"
+        },
+        {
+          "day": 75,
+          "before": "aedeb7787ec29da727e46899d6d711bec68dcc4684bb7f4881c8d15313230f57",
+          "after": "16d67fcb588c22b7925ba5c85aafa60c990b004d0b3cb3eeae6b0f2afe14e158"
+        },
+        {
+          "day": 76,
+          "before": "cb2a37d941a565458089eef312edd7e180fb62b35294ae99b4224bc04f28461e",
+          "after": "664ac3e407af6368121abe77621b0cbb6544a207ae62833f7e9669eba81f116a"
+        },
+        {
+          "day": 77,
+          "before": "57c6e94212b65139a92b81af4c1356cfb64ee225b02ee151d19b9cf07b9352fa",
+          "after": "bcae548fca0c53ab7ad4dd878ffc7f10c5b419f4cc4586788fc24c42644bc1d2"
+        },
+        {
+          "day": 78,
+          "before": "fe2ec8951c7b3074372aa8df2f2073d790b959e90cd5846c220e2a14d4af8464",
+          "after": "bd9f1d3d25dd8b5899c861e0cfd24ad5618d4bd7327311af7de04153281fb753"
+        },
+        {
+          "day": 79,
+          "before": "3e04845baef73d663bbf93fc0926f2b658c71205d0f8c31ca61a69424ac207d6",
+          "after": "1fcc31b94b77c0087cbcdc9ddd0f5c8f9443e676dd2711f63809b2886fe05420"
+        },
+        {
+          "day": 80,
+          "before": "b8ddcb50e17cf2c3977750fd32df0ffd8d9d2fab4a8cf1ab3186104b55f8c7f4",
+          "after": "07ea50094310fc5c25ecb5496b751911399767b0786227aaf56557a2aaa1e7c1"
+        },
+        {
+          "day": 81,
+          "before": "f39682ce186c82fea1176f8311844bf8f1e2f17288aab7f2e7c0f013a44832d6",
+          "after": "959005c970154b0413f2c1ab1aacb9faaf37879b8b1b7079c6aa3c26cd762d7b"
+        },
+        {
+          "day": 82,
+          "before": "dd0d47ba8230d7711eebc3fe1274d226de032ba60be4e9c4dc04133ab9a85b3e",
+          "after": "cd99a00c81483e9476ac053cdffe3fb2ad1ca1a175c3a4b1517c41b309c67a4d"
+        },
+        {
+          "day": 83,
+          "before": "c6d631248f9549a0aa9f7de14eda5358abfd5f6aff69033701f968aeaece3392",
+          "after": "93ef12ca45e89a24b052ddb80ef853c4f0fa0049d71f278f0ee34c8bb7c1e3ef"
+        },
+        {
+          "day": 84,
+          "before": "1d6fc57cbf584dadb397cdc1f8c108251a1a3aacd44b8fc1bcf00d9403f353a1",
+          "after": "23b8900710576d205cce0c38a6857149e0b6e0d98bae5f892018995a61661cc8"
+        },
+        {
+          "day": 85,
+          "before": "d00053bad692920cd4786809c79f0ce090d25e3b2639ab0054a6171e1096ae39",
+          "after": "d1e917c222bef8276df52068715a5a60f79f86d7ba4c7792efc96776c6ac2b39"
+        },
+        {
+          "day": 86,
+          "before": "12121a94a2e01fc5be0ff64b47fd8c37f302688ee839618bfd65f577e59ccbc4",
+          "after": "7f15c85b9428f350df32b38c535ba978b8be54a1fff0d44a9310d69f3de1f88d"
+        },
+        {
+          "day": 87,
+          "before": "80a114ff60749c333deed1d5b1deccbf2861d02318b8ec3084c39a47313eba66",
+          "after": "804f6fc98a114252d1b0c703a8588db825a6ac703103bb08a8048e6e9a4bd2a2"
+        },
+        {
+          "day": 88,
+          "before": "2b6e41d6f0c8aeabb75f55c1275cc4a326aac05cd32a6ed288b83c13e2d45f0a",
+          "after": "0e44061d32ed465f06a12c0234210cb6a49c96ef61a3a92e5e3c3e7fb482669a"
+        },
+        {
+          "day": 89,
+          "before": "7e3a09bf80d746051f18d42f908fd6af23be3b667b0f6aa58594fd6c8d8c6773",
+          "after": "a18551fc4a96e75465a27351505e8df27ec2ff8ad1b66999f8bb92d00d991f61"
+        },
+        {
+          "day": 90,
+          "before": "d19f488099ed46d0b742f18b6804362b187c758090b778ed14931b74b1cf8ec8",
+          "after": "7e614aad125eaf10e3cf6d114c031cd0789bb99ec26eaffbb2d4574d4ea2a502"
+        },
+        {
+          "day": 91,
+          "before": "9c3c5144f421c56637918fe32b193fa177be37b9f445a1037a0e23ec505240a7",
+          "after": "8c57eed62933f9f808bd3457ffe92d8acecfb1426367ae4278ac46c6bc797747"
+        },
+        {
+          "day": 92,
+          "before": "a2d213570dd48c76659315a7053a5c6b3393ac4ab373121416e5dd3360452059",
+          "after": "26dc6a6b248bb3b02459c25e682a399e38ec00c45504041feb773733d526d80d"
+        },
+        {
+          "day": 93,
+          "before": "5617d1e58012ecd044042e28f82aa00d8f947cdf9f7ebbe5223a9789aded5784",
+          "after": "303fab4a90be40a2c493d60d8ab02ab0a1869914fb88316937ca41dc924d0816"
+        },
+        {
+          "day": 94,
+          "before": "f44302d7690f1fb7e652723ccc037f930c42f57444584f0e208d65477da28c66",
+          "after": "dc79a4b6260f82cecf4138447ad8be9f5da293fc0ebfd3c3d4eac344388bca80"
+        },
+        {
+          "day": 95,
+          "before": "9a3f6ba58da1fb6a9b01c11a1e6f45ef39dac34a3f5bafe76585cc63f8010dc7",
+          "after": "048d89120b03d5acf428dcc9fe81358fca4f487c0cf5acf145275c7ffd88d8d2"
+        },
+        {
+          "day": 96,
+          "before": "ce22856019327c31427c7fe3e90147f8e6cd09fc2179c50d0608c3ec1532dab7",
+          "after": "dbd97698d2dfac357171efea9b8c97579be1407d61178f8c2cdcee612611db07"
+        },
+        {
+          "day": 97,
+          "before": "44f6cc9a727e8665d744367dcea7b14fb46e0101650f87111be76a5a4b12f429",
+          "after": "2a54cd572e9f2ab033c78e6ab188983be1d8cf4d94bb0f20c72d44e870ce1a44"
+        },
+        {
+          "day": 98,
+          "before": "740b63cce19efa421099986fc4f775705a086561ea1bf5e504932f028c8efb34",
+          "after": "0ca64920d1f486d46c1f1b06a5ade8fcc8a8510600c002fdffaa0dd88112c830"
+        },
+        {
+          "day": 99,
+          "before": "b2ae6dc12544ba22fe371d40c07200154d7a12411009abd2125ba4b3eeb10461",
+          "after": "411674f8589135f33755d26508925bab57915e016da7c104a603d7752e7a6d6f"
+        },
+        {
+          "day": 100,
+          "before": "121b24b61509b59c4640398c17fb083d48efff67e6f4dcf27a16d7d97c38a54d",
+          "after": "46b507c6049d769370f8c168e5629da0c7fd9618b8b93cf5c219fbf21e13f75d"
+        },
+        {
+          "day": 101,
+          "before": "9ff0c88143d364bb808bcf37029f6cc16152043eaac7fb5abd5fe0d5ecc7fb4a",
+          "after": "746daa3d6c537f37390c24fcb712e0a7ba9676551c1becd0ce25c94e8f312361"
+        },
+        {
+          "day": 102,
+          "before": "2329bbdba93eb1258395445e5e7261a57fa06ca7218893ed50e7718c6e205a20",
+          "after": "7d8fcfb617a4b0cca18ce8e3ae14c1ced4e7faed3ecfd99be9c473c8abd53351"
+        },
+        {
+          "day": 103,
+          "before": "0cf7b128040eeaa30480bc6df39988c4dbc1b9cba833593c3dfe7f41caa566ab",
+          "after": "6cb67134aef2a2ddd7510dafaf645c26f0a39780d248bfe7d0579e7802f15e32"
+        },
+        {
+          "day": 104,
+          "before": "4444f10dd8ea5127fba565f5786c8c0bd0fb2553f94379e077403f47bc0458ba",
+          "after": "e64a37074422af3badee3473be6859ea727514e270e1521b3b92bfebde998fb5"
+        },
+        {
+          "day": 105,
+          "before": "162f2704f6b37d26801b80be6a4b5c852d521dd76857d02454a9486572489daa",
+          "after": "5e64a6a5b6c2c3c822195a041553ed2f6fbb1a16a95e95e422c11a5193575702"
+        },
+        {
+          "day": 106,
+          "before": "99bd00364cad93801474487705ef698eb8946e8ddf9604b6f2f925d2f299b610",
+          "after": "deaa03a42a1b7dafe11be7e7632d4eb32906f6fe351579cc3e54480105e56572"
+        },
+        {
+          "day": 107,
+          "before": "9396a07bfe4579bb68bb29ddd245cdc6c1c664a852e0ae2f3b22edfecce38b4f",
+          "after": "05e30321e2c638d9a9f4b865991d1cfc4e4796e100fd3ca0c691e438e6640149"
+        },
+        {
+          "day": 108,
+          "before": "bf7896c515d01c601a44472595c5c28e2c0570360b3f0649b44a782417c9a82a",
+          "after": "0e5aa162c152d95278d1fadd6de286bc08cdbe2488572d951c4035327462d740"
+        },
+        {
+          "day": 109,
+          "before": "2b331a19760b02c3007e94e8027c045ea1e34400f0fc83808ce0f989e77c7e4c",
+          "after": "cfa4b848db65c34fc4b4d342d0f3445922e34eaea835de1df20180e30b96883c"
+        },
+        {
+          "day": 110,
+          "before": "cf2fafa25276c4b5650d25c44c0be1a0e3649c89efe3f7430d1d962f47f42bbc",
+          "after": "224eedabd73ce1c8116dd0b3817581645a028f305adfc0df78726bb696d03817"
+        },
+        {
+          "day": 111,
+          "before": "cf5164fbee99e94bc89536da031199c9fed4457fb2f9f898c422f0f644fa6df2",
+          "after": "4dceec02bb4853125ff669966a13955984be1cf0c292218a5b62c0d0d077783e"
+        },
+        {
+          "day": 112,
+          "before": "f819defdc476e8928f15f7c455c717e7640d1ef3fdaeb90ec53a033d3d0bfa0f",
+          "after": "c48eca9212ff6c753c918c337c9bc2ae12e4d4b902108abfa4ed2cd3dcdcde56"
+        },
+        {
+          "day": 113,
+          "before": "79c6791733a198c02404b5cb49182f828ec4fe92175899b5c8305ff44c9ed24f",
+          "after": "004c6cfc4d1545a342e8ed0688eff2f8452a9d625f54e9864022f79e2a6d905d"
+        },
+        {
+          "day": 114,
+          "before": "cf594890535423ba39ff604a77816b44d032b0bfcfa24eb625c7c0b35326fd82",
+          "after": "d99bb455c14d511f53598fc49694548bfa261320a01f5d309a5a45d23af7c442"
+        },
+        {
+          "day": 115,
+          "before": "ab7f5c884b18883f4d029db47e9d50702211c65cfbd38b5750339402ddb318d1",
+          "after": "eb7b1394887dfd1b9c6c86416facc224339af6a28f8af4e83998bc179ab4f966"
+        },
+        {
+          "day": 116,
+          "before": "4c631d090d1b17048345a946c05d92b4dc148561a155f426ba922b5c07a0a90f",
+          "after": "c9721f5623c43cff5d02009b6585fb4b5933009caa79a27f93b660218f96673b"
+        },
+        {
+          "day": 117,
+          "before": "843570699d974ec66d7253868f52f989a3ae307d444049f18e8ca92b8c36a7f2",
+          "after": "b1b977ca39fb8bdcd7f6490adc5952918ebd7ef1896e7089aeb4c123185dc02b"
+        },
+        {
+          "day": 118,
+          "before": "af8f152500e2333be1237cda2d092c7dcf110a98765928c53588390e20c06e64",
+          "after": "da0f2d0634a1c956e7b84ec0fd1061283069bca7dc6604311db97f58df5a8f4b"
+        },
+        {
+          "day": 119,
+          "before": "ba8f3f819c30a8f5f621093ca24628b14521b3838b92b28321475c0999d08874",
+          "after": "263cab3581666a0d0e7e4cf5ecd018a441c19aa1e910145db4760615a654b618"
+        },
+        {
+          "day": 120,
+          "before": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+          "after": "ee1b76d81d16951cd9d9cfcaecce1f773128ad5df4bfedea6b1ed60f4b014b56"
+        }
+      ],
+      "cause": "Inherited S36 received-only correspondence, submitted enclosures and later received-input choices, already traced in docs/audit/s40-evidence/runtime.json. S41 matches every S40 daily hash; its desk/note-preview follow-up introduces no additional reference State divergence."
+    }
+  ],
+  "trackedDeltaDuringMeasurement": [],
+  "runtimeDeltaDuringMeasurement": []
+}

@@ -1,0 +1,4174 @@
+{
+  "outcome": "All 86 recorded commands were accepted in order across 44 turns; completed day 148, 31 July, with 0 dispatch refusals and no page errors.",
+  "comparisonText": "31 received paper records differ; the first differing receipt is day 95. 2 turn/stop records differ. There were 10 disclosed UI selector recoveries; none added or repeated a command. Raw rendered text also changes with the already-delivered S39 presentation corrections and S36 received menus; it is not a private-State comparison. The first changed receipt is 8 June (day 95): the four Stone Richmond phase papers written 7 June are absent. Turn 35 ends on an objective receipt on 15 June (day 102), rather than the source battle-report stop on 12 June (day 99); turn 36 catches up at day 105. A new Richmond arrival is written 14 June/received 15 June. Later Manassas control papers and Scott's July casualty claims differ. These are attributed public papers; [I] the rule-seat divergence is attributable to the received-only S36 integration, not a private-State reconstruction from this desk replay.",
+  "summary": {
+    "completedDay": 148,
+    "date": "1861-07-31",
+    "commands": 86,
+    "turns": 44,
+    "exactCommands": true,
+    "errors": [],
+    "blocked": 10,
+    "source": "docs/audit/s41-evidence/advance-commands.json"
+  },
+  "commandsExact": true,
+  "commandCount": 86,
+  "turnCount": 44,
+  "completedDay": 148,
+  "date": "1861-07-31",
+  "refusals": [],
+  "recoveries": [
+    {
+      "batch": 6,
+      "step": 1,
+      "original": {
+        "op": "click",
+        "name": "Begin the next morning"
+      },
+      "reason": "The recorded first-morning action uses an earlier presentation label. The merged desk offers To the next morning; this is a read-only continuation with no additional command.",
+      "steps": [
+        {
+          "op": "click",
+          "name": "To the next morning"
+        }
+      ]
+    },
+    {
+      "batch": 7,
+      "step": 0,
+      "original": {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      "reason": "The preceding recovery already completed this read-only morning continuation. The original action log also retained failed UI attempts; skip this duplicate continuation without issuing any command.",
+      "skip": true
+    },
+    {
+      "batch": 17,
+      "step": 4,
+      "original": {
+        "op": "click",
+        "name": "Docket 1"
+      },
+      "reason": "The merged received-record desk shows two open docket entries and a stop slip; the recording asked for the older Docket 1 label. Use the stop slip native Open the docket control. No command is added.",
+      "steps": [
+        {
+          "op": "click",
+          "name": "Open the docket"
+        }
+      ]
+    },
+    {
+      "batch": 18,
+      "step": 0,
+      "original": {
+        "seq": 18,
+        "op": "click",
+        "name": "Open the docket"
+      },
+      "reason": "The previous read-only recovery already opened the docket; this is the original source log second attempt at that same navigation. Skip the duplicate read, leaving the recorded command sequence intact.",
+      "skip": true
+    },
+    {
+      "batch": 24,
+      "step": 0,
+      "original": {
+        "seq": 24,
+        "op": "click",
+        "name": "Related paper: Robert Anderson ? Telegraphic dispatch"
+      },
+      "reason": "The recorded exact paper label contains a question mark from the original encoding. Its next recorded action uses the visible author prefix; skip this failed read attempt and let that next recorded action open the same received paper.",
+      "skip": true
+    },
+    {
+      "batch": 29,
+      "step": 3,
+      "original": {
+        "op": "select",
+        "label": "Maximum days this turn",
+        "value": "1"
+      },
+      "reason": "The recorded label selector failed before the one-day turn. Select the same public native control using the recorded alternative dialog selector, then execute the same end 1. The subsequent source retry batch will be redundant and its navigation/command click attempts must be skipped rather than submitted twice.",
+      "steps": [
+        {
+          "op": "select",
+          "selector": "dialog[open] select",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "batch": 30,
+      "step": 0,
+      "original": {
+        "op": "select",
+        "selector": "dialog[open] select",
+        "value": "1"
+      },
+      "reason": "This is the original retry batch for the one-day turn already submitted at batch 29 after its label-selector repair. The desk is already at the next docket. Skip this redundant attempt, including its absent send button; preserve exactly one end 1 and the original next decision.",
+      "skip": true
+    },
+    {
+      "batch": 30,
+      "step": 1,
+      "original": {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      "reason": "This is the original retry batch for the one-day turn already submitted at batch 29 after its label-selector repair. The desk is already at the next docket. Skip this redundant attempt, including its absent send button; preserve exactly one end 1 and the original next decision.",
+      "skip": true
+    },
+    {
+      "batch": 30,
+      "step": 2,
+      "original": {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      "reason": "This is the original retry batch for the one-day turn already submitted at batch 29 after its label-selector repair. The desk is already at the next docket. Skip this redundant attempt, including its absent send button; preserve exactly one end 1 and the original next decision.",
+      "skip": true
+    },
+    {
+      "batch": 30,
+      "step": 3,
+      "original": {
+        "op": "click",
+        "selector": ".table-docket > button"
+      },
+      "reason": "This is the original retry batch for the one-day turn already submitted at batch 29 after its label-selector repair. The desk is already at the next docket. Skip this redundant attempt, including its absent send button; preserve exactly one end 1 and the original next decision.",
+      "skip": true
+    }
+  ],
+  "publicPapersBefore": 2167,
+  "publicPapersAfter": 2163,
+  "changedPapers": [
+    {
+      "id": "m.101.stone_charles_p.lincoln_abraham.arrived.us_dc_militia",
+      "beforeHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "afterHash": "342fa269c9d0e4f5c5f29a234abf24b9c106851e14db50ec63a0b7e126dda46e",
+      "before": null,
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 101,
+        "receivedDay": 102,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "arrived",
+            "region": "richmond",
+            "value": 1,
+            "token": null,
+            "confidence": 1000
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.101.stone_charles_p.lincoln_abraham.return.full.union",
+      "beforeHash": "05e034d6c6a5660540a1859c1d3ad13ce92221c25c328c270aa1bf27e4f737db",
+      "afterHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 101,
+        "receivedDay": 106,
+        "type": "casualty-return",
+        "subtype": null,
+        "subjectKind": "region",
+        "subjectId": "richmond",
+        "claims": [
+          {
+            "kind": "own-losses",
+            "region": "richmond",
+            "value": 0,
+            "token": "full",
+            "confidence": 900,
+            "battle": "battle:richmond:94",
+            "battleDays": [
+              94
+            ]
+          },
+          {
+            "kind": "missing",
+            "region": "richmond",
+            "value": 0,
+            "token": "full",
+            "confidence": 800,
+            "battle": "battle:richmond:94",
+            "battleDays": [
+              94
+            ]
+          },
+          {
+            "kind": "captured",
+            "region": "richmond",
+            "value": 0,
+            "token": "full",
+            "confidence": 800,
+            "battle": "battle:richmond:94",
+            "battleDays": [
+              94
+            ]
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": null
+    },
+    {
+      "id": "m.105.cameron_simon.lincoln_abraham.control.manassas.union",
+      "beforeHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "afterHash": "72c56cc40aebf63aa0055c6ec7090ec84b5a21b8a596d2173ddfcd528302eb06",
+      "before": null,
+      "after": {
+        "author": "cameron_simon",
+        "authorPost": "us_secretary_war",
+        "day": 105,
+        "receivedDay": 106,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "region",
+        "subjectId": "manassas",
+        "claims": [
+          {
+            "kind": "control",
+            "region": "manassas",
+            "value": 100,
+            "token": "confederate",
+            "confidence": 1000
+          },
+          {
+            "kind": "control",
+            "region": "manassas",
+            "value": 36,
+            "token": "union",
+            "confidence": 1000
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": [
+          {
+            "region": "manassas",
+            "holder": null,
+            "contested": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "m.105.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "2c7b99b0f3b807ae888c40dd7bb87372c22dd512b10cf328c18ae03777135f16",
+      "afterHash": "1aecef503c26c90a26d8f7d01d89c2755b095ed188b665fe9e4b399eb8ba97ec",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 105,
+        "receivedDay": 106,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 105,
+        "receivedDay": 106,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.107.cameron_simon.lincoln_abraham.control.manassas.union",
+      "beforeHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "afterHash": "c66a0fd3f1671927718dde160ebd67a9a96e3574e1909c31024aa7549275b398",
+      "before": null,
+      "after": {
+        "author": "cameron_simon",
+        "authorPost": "us_secretary_war",
+        "day": 107,
+        "receivedDay": 108,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "region",
+        "subjectId": "manassas",
+        "claims": [
+          {
+            "kind": "control",
+            "region": "manassas",
+            "value": 300,
+            "token": "confederate",
+            "confidence": 1000
+          },
+          {
+            "kind": "control",
+            "region": "manassas",
+            "value": 36,
+            "token": "union",
+            "confidence": 1000
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": [
+          {
+            "region": "manassas",
+            "holder": "confederate",
+            "contested": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "m.107.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "872dc5879c2042f0efd972df987b12076a2374e95a092b5b7ffe809bd166faac",
+      "afterHash": "0f26a18265154881dc33ecbcb79adfc0f2e152a44d1dbdc2a0969c6c9eaf965d",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 107,
+        "receivedDay": 108,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 107,
+        "receivedDay": 108,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.109.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "95b589298228a0f7a3052cda0cce6fb3d1c3bd374fc4f5bb5413d58870fdace8",
+      "afterHash": "19f316331e50187bc672db05e41378cc88e5b13212c66382719d7f9050499183",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 109,
+        "receivedDay": 110,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 109,
+        "receivedDay": 110,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.111.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "e168ebe369627f2588e6d0ab727a1f8d3fd75e53b8f9c115f20749d9cdf09eb2",
+      "afterHash": "d44e619e5c4fe06358405f6d60111996e0b53e585c30562329fb70fdd6855745",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 111,
+        "receivedDay": 112,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 111,
+        "receivedDay": 112,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.113.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "41abc2fbb91f6ec85e635151d10cd96999515225c9feb63256ac579e3dee9a42",
+      "afterHash": "78387d4da621eb1ab27d1936fb375c3a8e023822198091ebab4036b8739abbc2",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 113,
+        "receivedDay": 114,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 113,
+        "receivedDay": 114,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.115.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "b4e38c99b38d7f1a346a0cfa2e3108280295100fed408e6ccf49789913d3e748",
+      "afterHash": "df44d33f529a094b1099722a8b53225004747a467aab160cd9119c6f6142d277",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 115,
+        "receivedDay": 116,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 115,
+        "receivedDay": 116,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.117.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "6e2f94b53502da2fb623569e363021789f081649f23aa25ac79fab6d2dcbb095",
+      "afterHash": "5a6824c6c02735a174d9c993a13d2b3074a316b7def0fd5e3c01fea8729406e1",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 117,
+        "receivedDay": 118,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 117,
+        "receivedDay": 118,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.119.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "98a54ffc195f4cbe84435a3353ecae11a1d78d49149d94ec666a04c6a0c9b436",
+      "afterHash": "e352bf81f91b805844d552f917b5c46e1e587ac8876d88756a22d53c5222fdd7",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 119,
+        "receivedDay": 120,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 119,
+        "receivedDay": 120,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.121.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "b31521e1dcaa524aa67a6163a1162a27cd9f47d3fb5d68019cef2775f2317a67",
+      "afterHash": "dad3e1d7c6a6cd89577bc053424bd52cd255882d1820c0de91f50d3f6f68b3ae",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 121,
+        "receivedDay": 122,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 19957,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 121,
+        "receivedDay": 122,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 19957,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.123.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "c6af00bd9675860f64e09d32ab9257463b423b97c90ebf8e3bd6cbd08160a8a1",
+      "afterHash": "04e920519a6de09b1571b5c6918b413617e8423c50931c95ba9a76c4f7ce262d",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 123,
+        "receivedDay": 124,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 19957,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 123,
+        "receivedDay": 124,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 19957,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.125.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "3ebb64ce5bbb992037a204f4f9dfc6debc68c631a10ea2bab7e46c8ed603b8b4",
+      "afterHash": "75f65af387be0dcf8713eaf6143e85c64ae892557244706f48eea3c2985ef90b",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 125,
+        "receivedDay": 126,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 125,
+        "receivedDay": 126,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.127.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "45907b1bca2212dedbf4957600e0e5c1847c699e82b99f2b8fa23d442fba216e",
+      "afterHash": "34fab4508b6f53627dbdf5aa38439908884396aaa87709fbd4f4d2332dcd2434",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 127,
+        "receivedDay": 128,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 127,
+        "receivedDay": 128,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.129.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "0f9c7c2d1cb9dc318cb2632aa21180ffbeaf0291bd299e48e61033c16f63ecf2",
+      "afterHash": "1bb62379cff2e790ac1e129b9cd90be4292c30a87b75777f5dbb30da2bc9fc72",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 129,
+        "receivedDay": 130,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 129,
+        "receivedDay": 130,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.131.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "11d58b7ad09c37f6c156e1c2c7bb81cf6257078e579386aec9c0242b13b5c793",
+      "afterHash": "1a8418872097726c7ff4a6d046094e526a5793d093544bc2ed267d6343fe79e0",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 131,
+        "receivedDay": 132,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 131,
+        "receivedDay": 132,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.133.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "52c07d8f977201b33fcef140856117a9306ef3ca2e14c9f41ba9e2265bcbb659",
+      "afterHash": "55ae7cdd2a88c5405c69682ca85631309cbcb1479d2ba1fdc7b43addf1a10117",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 133,
+        "receivedDay": 134,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 133,
+        "receivedDay": 134,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.135.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "beforeHash": "f3768ec4a4d91e479df806d18576af1dd66da623e75f39f9f4efe58492ec2aa3",
+      "afterHash": "42f94f319ab7288fd6c3779dd31d7be8946b45c29680caaa516bc2bfa47c0bd6",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 135,
+        "receivedDay": 136,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 16000,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 40000,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 135,
+        "receivedDay": 136,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "post",
+        "subjectId": "us_dc_militia",
+        "claims": [
+          {
+            "kind": "position",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 1000
+          },
+          {
+            "kind": "goal-status",
+            "region": "richmond",
+            "value": 0,
+            "token": "holding",
+            "confidence": 1000
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "charlottesville",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "chesterfield",
+            "value": 16000,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "hanover",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "james_river",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "peninsula",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 600
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.136.scott_winfield.lincoln_abraham.return.first.union",
+      "beforeHash": "35f7842086377cb0fde7ec8d0a4a7adcc83b3922b6807fd6263b23bad4916493",
+      "afterHash": "fa1cc7ec0b935a961ce583c43ed36a03a0a61217f0053931394637caf7e7dedc",
+      "before": {
+        "author": "scott_winfield",
+        "authorPost": "us_general_in_chief",
+        "day": 136,
+        "receivedDay": 137,
+        "type": "casualty-return",
+        "subtype": null,
+        "subjectKind": "region",
+        "subjectId": "richmond",
+        "claims": [
+          {
+            "kind": "own-losses",
+            "region": "richmond",
+            "value": 95,
+            "token": "first",
+            "confidence": 600,
+            "battle": "battle:richmond:136",
+            "battleDays": [
+              136
+            ]
+          },
+          {
+            "kind": "missing",
+            "region": "richmond",
+            "value": 455,
+            "token": "first",
+            "confidence": 500,
+            "battle": "battle:richmond:136",
+            "battleDays": [
+              136
+            ]
+          },
+          {
+            "kind": "casualties",
+            "region": "richmond",
+            "value": 144,
+            "token": "enemy",
+            "confidence": 400,
+            "battle": "battle:richmond:136",
+            "battleDays": [
+              136
+            ]
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "scott_winfield",
+        "authorPost": "us_general_in_chief",
+        "day": 136,
+        "receivedDay": 137,
+        "type": "casualty-return",
+        "subtype": null,
+        "subjectKind": "region",
+        "subjectId": "richmond",
+        "claims": [
+          {
+            "kind": "own-losses",
+            "region": "richmond",
+            "value": 56,
+            "token": "first",
+            "confidence": 600,
+            "battle": "battle:richmond:136",
+            "battleDays": [
+              136
+            ]
+          },
+          {
+            "kind": "missing",
+            "region": "richmond",
+            "value": 503,
+            "token": "first",
+            "confidence": 500,
+            "battle": "battle:richmond:136",
+            "battleDays": [
+              136
+            ]
+          },
+          {
+            "kind": "casualties",
+            "region": "richmond",
+            "value": 160,
+            "token": "enemy",
+            "confidence": 400,
+            "battle": "battle:richmond:136",
+            "battleDays": [
+              136
+            ]
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.143.scott_winfield.lincoln_abraham.return.full.union",
+      "beforeHash": "4c0b1d5b81eaa87b0407dd60615ac6a801cf7653b7154818c8e7762d39d67fe0",
+      "afterHash": "aef3a784fb2691a061773bebb6c6719a91f0f301b60dc7aae95555c9bd9a81ad",
+      "before": {
+        "author": "scott_winfield",
+        "authorPost": "us_general_in_chief",
+        "day": 143,
+        "receivedDay": 144,
+        "type": "casualty-return",
+        "subtype": null,
+        "subjectKind": "region",
+        "subjectId": "richmond",
+        "claims": [
+          {
+            "kind": "own-losses",
+            "region": "richmond",
+            "value": 119,
+            "token": "full",
+            "confidence": 900,
+            "battle": "battle:richmond:136",
+            "battleDays": [
+              136
+            ]
+          },
+          {
+            "kind": "missing",
+            "region": "richmond",
+            "value": 0,
+            "token": "full",
+            "confidence": 800,
+            "battle": "battle:richmond:136",
+            "battleDays": [
+              136
+            ]
+          },
+          {
+            "kind": "captured",
+            "region": "richmond",
+            "value": 455,
+            "token": "full",
+            "confidence": 800,
+            "battle": "battle:richmond:136",
+            "battleDays": [
+              136
+            ]
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "scott_winfield",
+        "authorPost": "us_general_in_chief",
+        "day": 143,
+        "receivedDay": 144,
+        "type": "casualty-return",
+        "subtype": null,
+        "subjectKind": "region",
+        "subjectId": "richmond",
+        "claims": [
+          {
+            "kind": "own-losses",
+            "region": "richmond",
+            "value": 71,
+            "token": "full",
+            "confidence": 900,
+            "battle": "battle:richmond:136",
+            "battleDays": [
+              136
+            ]
+          },
+          {
+            "kind": "missing",
+            "region": "richmond",
+            "value": 0,
+            "token": "full",
+            "confidence": 800,
+            "battle": "battle:richmond:136",
+            "battleDays": [
+              136
+            ]
+          },
+          {
+            "kind": "captured",
+            "region": "richmond",
+            "value": 503,
+            "token": "full",
+            "confidence": 800,
+            "battle": "battle:richmond:136",
+            "battleDays": [
+              136
+            ]
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.146.cameron_simon.lincoln_abraham.control.manassas.union",
+      "beforeHash": "e602409c6fe1222a4ebb84fc76df669d85de78c27f9f57e81bd9b9104a43fc2c",
+      "afterHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "before": {
+        "author": "cameron_simon",
+        "authorPost": "us_secretary_war",
+        "day": 146,
+        "receivedDay": 147,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "region",
+        "subjectId": "manassas",
+        "claims": [
+          {
+            "kind": "control",
+            "region": "manassas",
+            "value": 100,
+            "token": "confederate",
+            "confidence": 1000
+          },
+          {
+            "kind": "control",
+            "region": "manassas",
+            "value": 36,
+            "token": "union",
+            "confidence": 1000
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": [
+          {
+            "region": "manassas",
+            "holder": null,
+            "contested": false
+          }
+        ]
+      },
+      "after": null
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.battle.afternoon.union",
+      "beforeHash": "0d625d642ccb794ffe3b26c3a76da806ccd7055984a7f2e481b5d779af4e565c",
+      "afterHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 94,
+        "receivedDay": 95,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "region",
+        "subjectId": "richmond",
+        "claims": [
+          {
+            "kind": "battle-phase",
+            "region": "richmond",
+            "value": 1,
+            "token": "afternoon",
+            "confidence": 600,
+            "battle": "battle:richmond:94",
+            "battleDays": [
+              94
+            ],
+            "commander": "stone_charles_p"
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 500
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": 17,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": null
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.battle.dawn.union",
+      "beforeHash": "16f447a83292bebbdd41bb159d1b465ea544d42033ebd8c83909aa21eaa76db9",
+      "afterHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 94,
+        "receivedDay": 95,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "region",
+        "subjectId": "richmond",
+        "claims": [
+          {
+            "kind": "battle-phase",
+            "region": "richmond",
+            "value": 1,
+            "token": "dawn",
+            "confidence": 600,
+            "battle": "battle:richmond:94",
+            "battleDays": [
+              94
+            ],
+            "commander": "stone_charles_p"
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 500
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": 8,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": null
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.battle.evening.union",
+      "beforeHash": "7ed3e16adf0a523f9219728e15b9643dc59c1dbff77bd7cb441a76dd91accf1b",
+      "afterHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 94,
+        "receivedDay": 95,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "region",
+        "subjectId": "richmond",
+        "claims": [
+          {
+            "kind": "battle-phase",
+            "region": "richmond",
+            "value": 1,
+            "token": "evening",
+            "confidence": 600,
+            "battle": "battle:richmond:94",
+            "battleDays": [
+              94
+            ],
+            "commander": "stone_charles_p"
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 500
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": 21,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": null
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.battle.morning.union",
+      "beforeHash": "389f57a3e8ec3d9b989ede84edeb25bdf76bddf2420ac88a410d4d56f282fe21",
+      "afterHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 94,
+        "receivedDay": 95,
+        "type": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "region",
+        "subjectId": "richmond",
+        "claims": [
+          {
+            "kind": "battle-phase",
+            "region": "richmond",
+            "value": 1,
+            "token": "morning",
+            "confidence": 600,
+            "battle": "battle:richmond:94",
+            "battleDays": [
+              94
+            ],
+            "commander": "stone_charles_p"
+          },
+          {
+            "kind": "enemy-strength",
+            "region": "richmond",
+            "value": 0,
+            "token": null,
+            "confidence": 500
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": 12,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": null
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.return.first.union",
+      "beforeHash": "0c2c694cee7e9d65cb6834b57fd822914f3426e939cee9c2d586eec49254f29a",
+      "afterHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "before": {
+        "author": "stone_charles_p",
+        "authorPost": "us_dc_militia",
+        "day": 94,
+        "receivedDay": 99,
+        "type": "casualty-return",
+        "subtype": null,
+        "subjectKind": "region",
+        "subjectId": "richmond",
+        "claims": [
+          {
+            "kind": "own-losses",
+            "region": "richmond",
+            "value": 0,
+            "token": "first",
+            "confidence": 600,
+            "battle": "battle:richmond:94",
+            "battleDays": [
+              94
+            ]
+          },
+          {
+            "kind": "missing",
+            "region": "richmond",
+            "value": 0,
+            "token": "first",
+            "confidence": 500,
+            "battle": "battle:richmond:94",
+            "battleDays": [
+              94
+            ]
+          },
+          {
+            "kind": "casualties",
+            "region": "richmond",
+            "value": 0,
+            "token": "enemy",
+            "confidence": 400,
+            "battle": "battle:richmond:94",
+            "battleDays": [
+              94
+            ]
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": null
+    },
+    {
+      "id": "m.98.bennett_james_g.lincoln_abraham.press.herald.lincoln_abraham",
+      "beforeHash": "3472b03806269c0324e5f37ac212265451b6911632f19810346a4e6f6f0864d4",
+      "afterHash": "e7d1034d9156c556f48052951e61f79773e1c0ca5fe21f57b108f983f2e30476",
+      "before": {
+        "author": "bennett_james_g",
+        "authorPost": null,
+        "day": 98,
+        "receivedDay": 108,
+        "type": "press",
+        "subtype": null,
+        "subjectKind": "person",
+        "subjectId": "bennett_james_g",
+        "claims": [
+          {
+            "kind": "battle-result",
+            "region": "richmond",
+            "value": 0,
+            "token": "won",
+            "confidence": 0,
+            "battle": "battle:richmond:94",
+            "commander": "stone_charles_p"
+          },
+          {
+            "kind": "framing",
+            "region": null,
+            "value": 500,
+            "token": null,
+            "confidence": 1000
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "bennett_james_g",
+        "authorPost": null,
+        "day": 98,
+        "receivedDay": 108,
+        "type": "press",
+        "subtype": null,
+        "subjectKind": "person",
+        "subjectId": "bennett_james_g",
+        "claims": [
+          {
+            "kind": "framing",
+            "region": null,
+            "value": 500,
+            "token": null,
+            "confidence": 1000
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.98.greeley_horace.lincoln_abraham.press.tribune.lincoln_abraham",
+      "beforeHash": "5daeebe560b366b2bdb07430acc0322a54f13728c1c0783b07ba6328665813e9",
+      "afterHash": "7a798e93ba7d9016e7f9620cf42bb874c2640dd6be8f5d038c685c8c7b81f5fd",
+      "before": {
+        "author": "greeley_horace",
+        "authorPost": null,
+        "day": 98,
+        "receivedDay": 109,
+        "type": "press",
+        "subtype": null,
+        "subjectKind": "person",
+        "subjectId": "greeley_horace",
+        "claims": [
+          {
+            "kind": "battle-result",
+            "region": "richmond",
+            "value": 0,
+            "token": "won",
+            "confidence": 0,
+            "battle": "battle:richmond:94",
+            "commander": "stone_charles_p"
+          },
+          {
+            "kind": "framing",
+            "region": null,
+            "value": 500,
+            "token": null,
+            "confidence": 1000
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "greeley_horace",
+        "authorPost": null,
+        "day": 98,
+        "receivedDay": 109,
+        "type": "press",
+        "subtype": null,
+        "subjectKind": "person",
+        "subjectId": "greeley_horace",
+        "claims": [
+          {
+            "kind": "framing",
+            "region": null,
+            "value": 500,
+            "token": null,
+            "confidence": 1000
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    },
+    {
+      "id": "m.98.raymond_henry_j.lincoln_abraham.press.times.lincoln_abraham",
+      "beforeHash": "55b65a0d87a9c27b36bde4048a0f99724706953388687493ba769a4483618934",
+      "afterHash": "e91bf8f8697d6e3aedf19af0af4dd87593ec87464bf5db8d16b744446723b971",
+      "before": {
+        "author": "raymond_henry_j",
+        "authorPost": null,
+        "day": 98,
+        "receivedDay": 109,
+        "type": "press",
+        "subtype": null,
+        "subjectKind": "person",
+        "subjectId": "raymond_henry_j",
+        "claims": [
+          {
+            "kind": "battle-result",
+            "region": "richmond",
+            "value": 0,
+            "token": "won",
+            "confidence": 0,
+            "battle": "battle:richmond:94",
+            "commander": "stone_charles_p"
+          },
+          {
+            "kind": "framing",
+            "region": null,
+            "value": 500,
+            "token": null,
+            "confidence": 1000
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      },
+      "after": {
+        "author": "raymond_henry_j",
+        "authorPost": null,
+        "day": 98,
+        "receivedDay": 109,
+        "type": "press",
+        "subtype": null,
+        "subjectKind": "person",
+        "subjectId": "raymond_henry_j",
+        "claims": [
+          {
+            "kind": "framing",
+            "region": null,
+            "value": 500,
+            "token": null,
+            "confidence": 1000
+          }
+        ],
+        "advice": null,
+        "notes": null,
+        "text": null,
+        "hour": null,
+        "openingControl": null,
+        "reportedControl": []
+      }
+    }
+  ],
+  "firstChangedReceiptDay": 95,
+  "changedStops": [
+    {
+      "turn": 35,
+      "beforeDays": [
+        97,
+        98,
+        99
+      ],
+      "afterDays": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "beforeStop": [
+        "battle-report"
+      ],
+      "afterStop": [
+        "objective-reached"
+      ]
+    },
+    {
+      "turn": 36,
+      "beforeDays": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "afterDays": [
+        103,
+        104,
+        105
+      ],
+      "beforeStop": [
+        "battle-report"
+      ],
+      "afterStop": [
+        "battle-report"
+      ]
+    }
+  ],
+  "renderedDifferentBatches": [
+    {
+      "batch": 0,
+      "beforeHash": "b9c74d521346c1c5495136eb1ebcc25cfe1ec3a8a69b3a2bffe549b88613d6f9",
+      "afterHash": "b9f55bfbac8e9ae45e301e4b0e90028db7f55210bbb823088a0e6a95a912bf43"
+    },
+    {
+      "batch": 1,
+      "beforeHash": "cce5f648f5cfce07eda21210a2ccf10f91e7604894c5b681c8f39306b61a992f",
+      "afterHash": "bace685b81453223793cbcd71fce006d2f01ee25436dfebcb3ff905dc8c0c567"
+    },
+    {
+      "batch": 2,
+      "beforeHash": "61938687af61a10211c5e33caf69c9fec6bb57abe9674741c3c98664fada46e2",
+      "afterHash": "ce9b43a71619ec210f379e982ee162569addf6257b4b8e3b80353c69226b34b8"
+    },
+    {
+      "batch": 3,
+      "beforeHash": "2f3eaf30d1b6b4122af44ef2f967a44b2de98b3e5bd0739936d88f4108f2a46f",
+      "afterHash": "45d4940ea213e9418a1f40d17d569a8a559ef8f3d1815233aacea628498ca19a"
+    },
+    {
+      "batch": 4,
+      "beforeHash": "68c329ff5ea33f54fddb3c377cb5a281171fa8485c9a1eff3f526a268ccdcf00",
+      "afterHash": "b328cce0ebb005ad1da0bbaa52bf7ca30e9ea4fa508423ce2baa45696fb981ad"
+    },
+    {
+      "batch": 5,
+      "beforeHash": "f44c05750999c98089c7b016e0d40d3eddfe0264ad614a473d76f22caffd213d",
+      "afterHash": "3e25713691fbf6395288f4df6dc8331b7fd33f3ece81298854c8a53e4325ee49"
+    },
+    {
+      "batch": 6,
+      "beforeHash": "932d2265f2800b1078e80d7275d179627339d158fff4275fbb49d2a37a8ded0e",
+      "afterHash": "fa644c01535ac8e077aa32e62ece10496857c5da02d5dfb7a75adacfdffb564a"
+    },
+    {
+      "batch": 7,
+      "beforeHash": "71c48ef6a1380042e72b64837d04948cb329c28d6b9a6b0230feec2bdbb8a679",
+      "afterHash": "a947b60f99b2a728668f8e0b57800dcfed978b7f26df4ec1ed6fab426ec3390f"
+    },
+    {
+      "batch": 8,
+      "beforeHash": "99bc1761f1a39155316b6254b2075a863b369920315a5c449f544502fbed935a",
+      "afterHash": "88a069d8c1ed8c2923961e44617f5852cc3069d5c8780cd384f96f5c3e054562"
+    },
+    {
+      "batch": 9,
+      "beforeHash": "a0cdb86184b5fbac86aa4847cf4e1d6826d4ce39381485fa8b716f0402e0fec3",
+      "afterHash": "bde13d3b50ef3bd2d484a143595fd3cebc9c40b66ecb4fc277d1aea8357b46ae"
+    },
+    {
+      "batch": 10,
+      "beforeHash": "43dcd1bfd1e4eca3bd2b2018fb8b8cf3ea612feafd2d71eaabb06f75766ce57b",
+      "afterHash": "6cb7a95fc1f92d9220344856422851b274836439d2ffb98adc18fa237a6c082e"
+    },
+    {
+      "batch": 11,
+      "beforeHash": "667619522f9ec0e624b638d0853d2812b629959d025824f59f0e24e1b943a7a3",
+      "afterHash": "4feec6f51064bc3bdffe47db7a6cfda39ef61af6d203b7c4129c577c5cee2afb"
+    },
+    {
+      "batch": 12,
+      "beforeHash": "d683c54e5beb116d50f13f6b5b0b15b2be2274443a033d5661ed4aa2a3fd9665",
+      "afterHash": "952c79745a9776cbb03ae53a2298cb936be0423929a96d455282afe14b739b87"
+    },
+    {
+      "batch": 13,
+      "beforeHash": "0688aabdefe56f66e5513011e5fdadcd0c02e32d14b3e87be37d0a85291bfd80",
+      "afterHash": "4b143ff69e062f339b179d00ca43722435b93f1c5926bf99d0864573122d315e"
+    },
+    {
+      "batch": 14,
+      "beforeHash": "4d11b992bb3d1f591b669636b513da87de3b25051972ba040da0f56bda03ef5d",
+      "afterHash": "2bef5477b6a9f7f2748bc5b42a7e7a864eefac720bc2c7a8eb3d020ce3a43c9d"
+    },
+    {
+      "batch": 15,
+      "beforeHash": "aff1f3111950c51e64314a8708c7e856aa51c8af2a49abf37a99955fd3d9b2ac",
+      "afterHash": "ef7fe1703c118073582aa26622d769fa0cc69bfc999fe3a8bc6d116fdeb15e45"
+    },
+    {
+      "batch": 16,
+      "beforeHash": "aafc3553fef03f2e4d2e38fedc6d8921dda80fbacd2f818098b1752d9a21b9c4",
+      "afterHash": "33b1b496e6d6b3cb7ee4bf47143207a968fc6b1907f7066d48bdea2ded10febb"
+    },
+    {
+      "batch": 17,
+      "beforeHash": "a3b728ff7771da8971a2c0d88b5ba7edfaaec81fb310cb5a85aa3057e0fd24f8",
+      "afterHash": "e6ee6c209cfb017edffca661f637bd0ace3aa4765261ed4b6e4de81464d86ea5"
+    },
+    {
+      "batch": 18,
+      "beforeHash": "f57eadd73d7573b8db0d8f8159e324c6195ae95d8e94e037e44d5ee88c2e181c",
+      "afterHash": "e6ee6c209cfb017edffca661f637bd0ace3aa4765261ed4b6e4de81464d86ea5"
+    },
+    {
+      "batch": 19,
+      "beforeHash": "c3e01859a6ab87c7656648a4d7ca78d3a051856dc9481da8cb34c486170da57c",
+      "afterHash": "b276331e8317a87be2e73ec8350743d3b9b646393a6ba342f3c72211d323d3e0"
+    },
+    {
+      "batch": 20,
+      "beforeHash": "9dfc1813b1c6ba96f661cf39cbf9e3b78d87a8ad0decda29de6d483be0b653e6",
+      "afterHash": "02dd2de887f41c0a323b963f8c25e0bed35c89822e4658734b16bbaa5f61837a"
+    },
+    {
+      "batch": 21,
+      "beforeHash": "a3f2114db2ad91ad25aa63f4bd2a06db503aae5d73c330a47223d0210ed9f52a",
+      "afterHash": "efa2945bbf1b6ccb541f9c5051939d77844975a25d2c49b9e7665bf996468e07"
+    },
+    {
+      "batch": 22,
+      "beforeHash": "eb84d61bb85df9fdaad0249a615babe07f8375aa8866fd1d6defeba9bfcd51bc",
+      "afterHash": "3ac383961a8ba7516747a79aa3cbdc6950dec9e97675211cd49f41424dc5d1c1"
+    },
+    {
+      "batch": 23,
+      "beforeHash": "495ed424451770d4c195326617977c35ec227aeb8afb16fa79442d1d40022787",
+      "afterHash": "06f7a8af0f0a3f523a3998fb741193eb1c373fc5c810efdd66fb2ade549dfc14"
+    },
+    {
+      "batch": 24,
+      "beforeHash": "495ed424451770d4c195326617977c35ec227aeb8afb16fa79442d1d40022787",
+      "afterHash": "06f7a8af0f0a3f523a3998fb741193eb1c373fc5c810efdd66fb2ade549dfc14"
+    },
+    {
+      "batch": 25,
+      "beforeHash": "f2db8ae77d9e8d99830bb58b93683118d256e897b4cd810d2e08371a42545901",
+      "afterHash": "61aa98a7f740d0b833ded20afa538b8673f1d29c39b50679d7820aaebd04951b"
+    },
+    {
+      "batch": 26,
+      "beforeHash": "560773dc9926610211491e45bab5ace68b20ec3bc675dc6c80093370bb0d83d0",
+      "afterHash": "0fcc82ae3fab9a451ec44e15340f0e47f6c6af460fe5ba8e43f29c8875e1777c"
+    },
+    {
+      "batch": 27,
+      "beforeHash": "3e4d8e0398958eb4962f1ccf016603020f108aecb344a5d5e48814dc39ab1211",
+      "afterHash": "9acb245c1506fd12be06144151b58541a346701d72adbb07a33ca476a3c74fc6"
+    },
+    {
+      "batch": 28,
+      "beforeHash": "0482fde4a4f9b13eaa91e8522766c7d29f016dc5b891117d4bd67620e8ebc0ae",
+      "afterHash": "db0d62a4f24e07062f2865cc4549621a3732bd55670ad444d78370cda4cfcb7a"
+    },
+    {
+      "batch": 29,
+      "beforeHash": "0363694c51ce00e52e34c517b35f64b3eadb1d16dfba15a04ed69b8846454d67",
+      "afterHash": "491881d110570915c87fd312aea71af29ea5d37888bfa42880f1f5b4681c0b36"
+    },
+    {
+      "batch": 30,
+      "beforeHash": "df6afdcaf691cd91f225c22c59b12fc4c14ae3999f03f4582786a7267f4ff4ee",
+      "afterHash": "491881d110570915c87fd312aea71af29ea5d37888bfa42880f1f5b4681c0b36"
+    },
+    {
+      "batch": 31,
+      "beforeHash": "67b7f9bce222cd5d978b15332533e78e12d117b65359d39e5b990aad61288812",
+      "afterHash": "61ce67ac77ba67317b3ea4f1d8ec5003bae1dcbc556f0b5466eb0cf002b719dc"
+    },
+    {
+      "batch": 32,
+      "beforeHash": "2f612f9308d3b9dd7a3b496463950dd9ca7e27a1bbb80f9325cd6ff9dc41dc5b",
+      "afterHash": "ccc5347ac77cdf36b36af98c89cb913787abe15b3df34dd0f3ef6e80df8e9673"
+    },
+    {
+      "batch": 33,
+      "beforeHash": "4dddfc93bc5b43668f4b333f527d8c73749d06443c15ae1c82299d0cde607a1f",
+      "afterHash": "762fb1521b17850b101f73551c3ec577571368732e63b4b8c5c69de0c9eb2a2a"
+    },
+    {
+      "batch": 34,
+      "beforeHash": "f27f8ae76db3a21acf4b7f3b19c65cf2425bddfd234cd170e4e236cd42cd6601",
+      "afterHash": "9e7951ce312cc22673fd8b65bda96f7af571bb6c42df22601b5702f8e640cf70"
+    },
+    {
+      "batch": 35,
+      "beforeHash": "830303827c44d95f53aa50b063bcab7517ff4342414773be20f158673d50726f",
+      "afterHash": "ecd7b2ff378862ffd93906387ca2d5fb09848a96748e39fb076acaca0a30018a"
+    },
+    {
+      "batch": 36,
+      "beforeHash": "d9e82624760ba95ebf2e250eab1fd8c483b36de34d2643196c96c416e5f7f87a",
+      "afterHash": "134a07369543f55650a0533b7ca661d53de2d06407679d5452fcae9e2fb5578c"
+    },
+    {
+      "batch": 37,
+      "beforeHash": "20c61926b3c716eda81f870318e3aef85f07400122f1d68a1300fba53d2e83a6",
+      "afterHash": "9e2c84796294a69fceca1091daa580fc16c929955aa93674f4dd5f0bce293bcc"
+    },
+    {
+      "batch": 38,
+      "beforeHash": "a5c726484079e5421c45e15e33fa157de30ac1c33f867211c4196cba235f9fbc",
+      "afterHash": "8d1c641a0de095502e03125d0c3cf8f804dbd876cbad95856db9ebfb22b4c64e"
+    },
+    {
+      "batch": 39,
+      "beforeHash": "84ac9a5bdc05d4c1deeaa70709d399443d7271cf7e2dc09f0897fbf1318a00f7",
+      "afterHash": "c6bc0e02d225b3a8c2d260c632e0650b43405536ed93a1f822031d825f5e1498"
+    },
+    {
+      "batch": 40,
+      "beforeHash": "85f624237a47a05810f0c0d1c738cfe3bb399b05863b132631df52c7992490e1",
+      "afterHash": "f96e7da1a091076e7f8c58f052d9c5db96f45151b38c94ec19536e589171e0dd"
+    },
+    {
+      "batch": 41,
+      "beforeHash": "3de2277d866857d82f1537d60963ce809c784fa1828364fb9bd57ca6656131a8",
+      "afterHash": "0651c1800db8be9ddb0ae10778e369a79d5da55a80bcf691802a55cf4c37476d"
+    },
+    {
+      "batch": 42,
+      "beforeHash": "968cd671e6123aede32a7c26693ae92ab899ae649c6370bf2eaeceb6c5617602",
+      "afterHash": "38bf45d02943f266a79e58ed4f3cf9f564261d3a1ce694231ffa14fccdf15a19"
+    },
+    {
+      "batch": 43,
+      "beforeHash": "96f5c60edb00e3cbf923c81f96b22c34c65eafe7bdcdfb91e3f9904f33b56804",
+      "afterHash": "a2da251d77d49f0ad52076b92d5b72bf00a260ce0e40c4e4e901446b1b684ae1"
+    },
+    {
+      "batch": 44,
+      "beforeHash": "3396ee8012c4f35756d6e0269b980ad0a95a62209fb3a9df464d2b733c1c6bab",
+      "afterHash": "2876ce93e8645ee796f6e2eab0a22a8ec6d1f4ef2722d23e67332778bb377b51"
+    },
+    {
+      "batch": 45,
+      "beforeHash": "fe053ff6570c93266b20c65fbc3ec59de75b03a531cb47e1c40c90f573df2527",
+      "afterHash": "d8c0d1e42cd084e8ffd09e77630a4eb38b5317eae35b9570315a79e2a696b1f5"
+    },
+    {
+      "batch": 46,
+      "beforeHash": "380a5c3df562d254c8e45aa76c7808e9e129269fd1bad73575ff2e1c2f2a5780",
+      "afterHash": "9e4c590adf6fd5f2db84d690082fbce8bea4e3e3cc7b5a0c5e7556fba96cac14"
+    },
+    {
+      "batch": 47,
+      "beforeHash": "cc92a100be2491ee2b368adbb2cdc4d22bf96844be880c4eafd3773acaf7213f",
+      "afterHash": "ddc8982cdca858207f11be92ebd63d4a27fce874b71abe5d4f3eb5ecdafad393"
+    },
+    {
+      "batch": 48,
+      "beforeHash": "5791303e4e07ce55fd0d62a5c2164b5ea9f7401f946298c6c5658073baff47a8",
+      "afterHash": "b1012a2eff9e808dd0f1c4bde1f8ee87fd6b96d90e8583eda98e22df9d1759a2"
+    },
+    {
+      "batch": 49,
+      "beforeHash": "c735d6ff2f8c4d48a7090f71fcfa4346d2134dda5ba9ee424ba76e3b169472eb",
+      "afterHash": "36649236155a48832ded90707a340abb16ed45e248d428962f2743f023518f95"
+    },
+    {
+      "batch": 50,
+      "beforeHash": "8b517fcd6df1b398352f37640ebb27fb614e635215edd6af48f3d7ae52750dc0",
+      "afterHash": "7f960bdbfc6977db45c4559ff8cdef5b4e4086a678ad323c3213cc02cc7fcb83"
+    },
+    {
+      "batch": 51,
+      "beforeHash": "8cf5679dc6997d3c0666d4d7295457463fb29553d9d297f6c4b73c6ce048adbc",
+      "afterHash": "e5730dbce939af4f072cf27e9bcefdc9ed6ad003a29a58422cbb77d302d1174f"
+    },
+    {
+      "batch": 52,
+      "beforeHash": "5adcb8bf2a8adbaed5f63b223a699b761db99d5d0bcab61df3f4c81e5cb4f30f",
+      "afterHash": "b496bebe62f518c06955fb6a6e11dc2002e2a60dc516041fea7497ce1a357c93"
+    },
+    {
+      "batch": 53,
+      "beforeHash": "feaaf670aa0c9c879a0673c5d22f27fde4ad8ba9172b623712439ea9fd0c79e6",
+      "afterHash": "fa95f4e66f35da7b568a63ab21a17436e89dd07c48cab8050b0ed8699925ccf7"
+    },
+    {
+      "batch": 54,
+      "beforeHash": "f619422d76dd384bc7530e10e3b012ab5a2dc4eaf067913990a77f24ee38d8e2",
+      "afterHash": "927dc3af7407c3681da0ce61dfefe68dd22bd5e10eb982e7f6ead3b2ee7c3008"
+    },
+    {
+      "batch": 55,
+      "beforeHash": "50514d7ce45abc8c95126be6176b8251075084f7cad1242e1a5c3c6e82dcea4f",
+      "afterHash": "5d1b07f6469f201bd9bfc40d52924907c4507279f1017f28bd2262efb503f2f2"
+    },
+    {
+      "batch": 56,
+      "beforeHash": "5ad1c3e9ad8e3b201832a8ca5eb08c7a68c69c2f24d22d3ec391597d222312cb",
+      "afterHash": "d7e845998429d0bf955dd0ee406aae46fb67704760fe051a46c3e7abfd6502f0"
+    },
+    {
+      "batch": 57,
+      "beforeHash": "9fa4f90fbec48ae15938a08eb864ca9799efd10285b5bdf2da06e677b0054879",
+      "afterHash": "d181c14fecaeea643e957eef3d41296c498ac182b9adc569aa8d7e98e608d0c9"
+    },
+    {
+      "batch": 58,
+      "beforeHash": "4b48e34b64f2354509bcc8b890bc741021d24388cdf0b72ad4e1cb5d3d6617fd",
+      "afterHash": "67a4f6b2aab1080e91f96f88dbd3cf3ae261956d6308cbc60e2dadc6d5bbb9c2"
+    },
+    {
+      "batch": 59,
+      "beforeHash": "ed4f3eb3bc863842dd91a0a857cf00fb6704f9800919dc4a6c165b4921770430",
+      "afterHash": "6e5740d783fcf46379918c31b470f8fd492d3e29bc8683b6f235de104fa7df0c"
+    },
+    {
+      "batch": 60,
+      "beforeHash": "796cd5ffd1832f216bf2eaa9587d9e42eb108fa78c4d8a23d5ad7f6603faccb1",
+      "afterHash": "83e935d8b6621405c391a889470c140695495435ce9051e1c0b068315f623f17"
+    },
+    {
+      "batch": 61,
+      "beforeHash": "f36217d217976f99639eb53098ad44b24d703c072eb1b34486590ad2be6b049c",
+      "afterHash": "b9da1739b8aaab42d026442bd19c4ab0127fda698fc1ca9a301bf0050da32716"
+    },
+    {
+      "batch": 62,
+      "beforeHash": "12ee570861c924076511a02fec833c933acab8fee5d47c7f7bc176b0e2f62637",
+      "afterHash": "cf32adf25da552b135d4e2f2e41c4f63f9abac1a0b8e2f2f79c994e1e8c06240"
+    },
+    {
+      "batch": 63,
+      "beforeHash": "141502ad3b4b45c7f6889cbe3bbef2e78ce923f9509322b8839d6ddd8ae44c1b",
+      "afterHash": "348c04136799f6ecfd0aec92b5faa1fdb8bc7ead3cbb039ac4f690b983410b5e"
+    },
+    {
+      "batch": 64,
+      "beforeHash": "d5f4c104c4497fca497df2cb1696d1217c7cb92037696702b5434b95cf39ca1f",
+      "afterHash": "ea8bd79f9acb19ab0da7eec0a9a553108d3fe73a62acf019d20f1b4a3b5c0cc0"
+    },
+    {
+      "batch": 65,
+      "beforeHash": "1dc4d4d5942ec19e05dd9f3c9fd0a0bf7a98c3b8a6de5936a457d304ca8565e6",
+      "afterHash": "26a650915cd60f4e39eeb77509d6da86406d4b050112842b719fcc4ed4b4c210"
+    },
+    {
+      "batch": 66,
+      "beforeHash": "da8157694cc67813782cf94382ceb570d5e495a044f9ab0b6dc36725e907f3bb",
+      "afterHash": "a8547f84bdc4cd6199b65f4ad9c4a58de27fb6e19b34e4fb6d730f3778da6c7a"
+    },
+    {
+      "batch": 67,
+      "beforeHash": "567a166391a0fdd4ef78f23f17243f92e6e0b8482065a78beb5a45a4dc47b0d3",
+      "afterHash": "da269cc0b9f12ddcac0701c292b9c1f3bc95056c10c55743a6df024577035e9c"
+    },
+    {
+      "batch": 68,
+      "beforeHash": "5086e102442484240b05b8ed673f7527a768e793dd154c3080ef1d28ee578281",
+      "afterHash": "f0879c742a611bbdf0853c9de662f1647b6cc4d9f972efa80c2e7dc27cc8120d"
+    },
+    {
+      "batch": 69,
+      "beforeHash": "04b8e3c844e5d5bfcd0e3d2557fb134992692166de2cc98c50a26707acaef485",
+      "afterHash": "50781624325af1d3426566ecd84b1c55e763d14b273c0c03cfd0e67079c92aa5"
+    },
+    {
+      "batch": 70,
+      "beforeHash": "21a880e86e74da3d4559594109a2bca5ab12f1cc64a299309bdc772fb2ee83a0",
+      "afterHash": "92b8259999d2382cfe628b4548d7dd0c1bf35c368addad64993575a100b8690d"
+    },
+    {
+      "batch": 71,
+      "beforeHash": "006c96df38c53b33aa84c71dca8cc61b6a02c148262a5205983ccc99c370466b",
+      "afterHash": "4541cd202a3e16bb2a0a5f2dbada7eba62a9a6abb49185a7e681b6805810c8b9"
+    },
+    {
+      "batch": 72,
+      "beforeHash": "0257881bebc4042313fcf45d3fc70f457a6bdf532d6f3f953f200bb90cdc6d37",
+      "afterHash": "ff8ca54acbf9be3fcf51dfa3aa24b2b1b709f9b293b7acb06687f8fd90b0fa23"
+    },
+    {
+      "batch": 73,
+      "beforeHash": "bee7e50db1024ba0f9754cf8f5009d532b1394393a8e08fa44644aed7252d810",
+      "afterHash": "4fb5f294343793ca7ee73129b729d9db107ba462200313b17a84428309522a73"
+    },
+    {
+      "batch": 74,
+      "beforeHash": "ca9d278d4bdc705047c8e8fa1541b818f856caf942c8b4b23130a3ddbd0c1e87",
+      "afterHash": "34d078a6782ade43ec255ec0635ece32819918bdce401da978032ecfd8882f43"
+    },
+    {
+      "batch": 75,
+      "beforeHash": "ed9bced4859f8cc6422e3d08afc118e99077eed0fc0f5cf642b7a6dd1a02313c",
+      "afterHash": "68f840d61b00e581c771597378921467d94675e2b4d225936c352d9532b48e95"
+    },
+    {
+      "batch": 76,
+      "beforeHash": "a98cb04e8deb932ac44ec6778006a11504cdb85fe9e8f1f2a4e9bd6dfa0eb30e",
+      "afterHash": "790ea852a445af7e3145f62ffee60a658a460c23653c2b7b3185451c99f817f4"
+    },
+    {
+      "batch": 77,
+      "beforeHash": "c0992879e52e4e64ab20a18408c757972fc694fb64eb0e1a6ed148ba21992153",
+      "afterHash": "1aef8c465fd8f79ad1b42dc336f633d6c068c6235077a37623145fc79b63dba4"
+    },
+    {
+      "batch": 78,
+      "beforeHash": "6ef3723c97482027338c6ac18cf76c9ade5bb0bf2b34460bfd9dc906dc9acb35",
+      "afterHash": "7f7e360e30913f59290cf25496248104d0556f6c33b154210c510d9f666e14c4"
+    },
+    {
+      "batch": 79,
+      "beforeHash": "571ebfaf05c961d3cce52725913199b92199ad231f23c2bf1f9241e02b3f4511",
+      "afterHash": "0147c20f2df0a2258611507578f709fa19a29c35d1b72a81a9593600f48b9254"
+    },
+    {
+      "batch": 80,
+      "beforeHash": "c44a4882acf0ce3bb9272932160a44f93b33840859d89723f17b9829c5bb8403",
+      "afterHash": "1537f624c28e4f15277124a9f9425ac095b8cb96369eee2d6973f747dfff9f83"
+    },
+    {
+      "batch": 81,
+      "beforeHash": "73e33acb37e19a84e6f7988018789ea6169299ead3fde3f4ded041a817226850",
+      "afterHash": "1360afdfec37f4b98e3cd6c18514435a40ad062921243bf80a0f1411380661ca"
+    },
+    {
+      "batch": 82,
+      "beforeHash": "0eff00271fdc32f5eb98372f72f842963c395e4669acbacb69339dde40aaaa42",
+      "afterHash": "be95f2222a5594dfca0c8a33c666977564f157703f6e20ae047b652353da0952"
+    },
+    {
+      "batch": 83,
+      "beforeHash": "51dbfe684452dd87975c442058aeb5ce98a719fd39725e0af1407990145c8781",
+      "afterHash": "c87cb3a068be6ad441c02aa62b6beee386073e73e10adb9e6fefc2f069acc4a2"
+    },
+    {
+      "batch": 84,
+      "beforeHash": "bf131c4939f87f12a0a48e6745de5c537e4a5bf85175c4c535bf87413a47f01d",
+      "afterHash": "1a7e4f0b1b427f93e33cf20ef008abda8b3c21608bad7ba5f15c3741686c765d"
+    },
+    {
+      "batch": 85,
+      "beforeHash": "a6e390b0e4616489a3513d1141444c8620bfb4661faa088d53e77340c62b8c79",
+      "afterHash": "559f928e3342484cb8979370d4cfa43d534fe8d9134711e2905b4dfd95d6fe17"
+    },
+    {
+      "batch": 86,
+      "beforeHash": "88f2a92ca9ced03cd3e04455663aed272bf10d0ba63caf87d98ddf6a420083ed",
+      "afterHash": "d9ac8b6818fe6299bb5705da4339ff46e9dd38fea96f687d6e729ee2ad462c8b"
+    },
+    {
+      "batch": 87,
+      "beforeHash": "670ccc754687b3822ebc09b20b9774d2682715b177feb04978e17de656645bf7",
+      "afterHash": "07632a7b4f6b67c1dc9943df37bf871f38b754f634e1a8b8ceb0a721c725f675"
+    },
+    {
+      "batch": 88,
+      "beforeHash": "1c544496ee4183337e68855fe90cc57f96122f6768bbaa74d743638f5a93f8c3",
+      "afterHash": "2072f3a303bcbfedc87638a6cc82bde0c4f639e3ceb8677814cfa245d8d44727"
+    }
+  ],
+  "captures": [
+    {
+      "file": "art-masters/S41/replay/opening-3440.png",
+      "sha256": "11e11d933073758c682d141131e99ef8b9bc84d21fff94ce8be3f73a4becfb92",
+      "completedDay": 0,
+      "gameDate": "1861-03-05",
+      "sourceActionName": "opening-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/opening-paper-3440.png",
+      "sha256": "96bc32d59357d22cc90f1aeb75611ddbf3eb2dbaec1d02f3066ae1d55ca2ee30",
+      "completedDay": 0,
+      "gameDate": "1861-03-05",
+      "sourceActionName": "opening-paper-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/opening-command-card-3440.png",
+      "sha256": "ca9a73cb274063df1d3d46d31fc94a8a82d3669049018eb1f4ff6010d14841b5",
+      "completedDay": 0,
+      "gameDate": "1861-03-05",
+      "sourceActionName": "opening-command-card-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/first-decisions-3440.png",
+      "sha256": "1dd5e8f4945cf7528dab500b48f1805c5bb1bc1b409ba9ed8f482eb33a17d948",
+      "completedDay": 1,
+      "gameDate": "1861-03-06",
+      "sourceActionName": "first-decisions-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/sumter-relief-3440.png",
+      "sha256": "f6ea055f19bd8a1a7c79dd7ae5b71b8e23a9e9ad81b906509ec06c3b2aff45f1",
+      "completedDay": 32,
+      "gameDate": "1861-04-06",
+      "sourceActionName": "sumter-relief-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/call-with-no-choice-3440.png",
+      "sha256": "aadb7b8d4ab0de3a5dadbb10085026bd8d603ae884bec10c2e8736c4e5c6fa8c",
+      "completedDay": 40,
+      "gameDate": "1861-04-14",
+      "sourceActionName": "call-with-no-choice-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/early-richmond-plan-3440.png",
+      "sha256": "9af0f39c74d166989dbe0ba1dff8676b12d1032f974b79c4f04c7095cbd2f9e2",
+      "completedDay": 47,
+      "gameDate": "1861-04-21",
+      "sourceActionName": "early-richmond-plan-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/early-advance-report-3440.png",
+      "sha256": "4becf3b10c0bf2465757c5366e463d766b7bd06f55f8aa6f89082e7a25baf982",
+      "completedDay": 70,
+      "gameDate": "1861-05-14",
+      "sourceActionName": "early-advance-report-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/richmond-arrival-3440.png",
+      "sha256": "e02a0133f83139c588f53074835f0d23aa3b84f9524e0b233d49d654620a71d3",
+      "completedDay": 75,
+      "gameDate": "1861-05-19",
+      "sourceActionName": "richmond-arrival-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/richmond-arrival-1920.png",
+      "sha256": "577a3fe9443d34eb8b69973ffd2f1a4ce1fd5b23e4b171e961d58f8e0464ec02",
+      "completedDay": 75,
+      "gameDate": "1861-05-19",
+      "sourceActionName": "richmond-arrival-1920"
+    },
+    {
+      "file": "art-masters/S41/replay/decision-outtray-gap-3440.png",
+      "sha256": "59fea96197c9b682a3476fb7839c5272b0aa5bdc593ba6639b49aa60ea032098",
+      "completedDay": 81,
+      "gameDate": "1861-05-25",
+      "sourceActionName": "decision-outtray-gap-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/audience-after-arrival-3440.png",
+      "sha256": "46009a05ac8fe2bd8df10721fc8cb7f31eff562ac9cb8440f9ac0eb24791d2eb",
+      "completedDay": 93,
+      "gameDate": "1861-06-06",
+      "sourceActionName": "audience-after-arrival-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/july-advance-choice-3440.png",
+      "sha256": "5c74410fac52b12f7768be246d40f98eb864660fc0a1d04cb28455f9214dea54",
+      "completedDay": 117,
+      "gameDate": "1861-06-30",
+      "sourceActionName": "july-advance-choice-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/mcdowell-missing-board-3440.png",
+      "sha256": "c1c322ab2894ca253737b3313b5dd8966634362a88f1471239b69cd58ce5e344",
+      "completedDay": 129,
+      "gameDate": "1861-07-12",
+      "sourceActionName": "mcdowell-missing-board-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/appointment-form-gap-3440.png",
+      "sha256": "934af78a22d89c20f413370f85aea6e3835f5c3a36d980168e018e42c059127b",
+      "completedDay": 129,
+      "gameDate": "1861-07-12",
+      "sourceActionName": "appointment-form-gap-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/unavailable-advance-3440.png",
+      "sha256": "f3885be85a51a2a364ac68fa22f70cd6d3b2a10f2fbac958ae2df1c89cd603b7",
+      "completedDay": 136,
+      "gameDate": "1861-07-19",
+      "sourceActionName": "unavailable-advance-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/july25-3440.png",
+      "sha256": "5f2031e0a713905d2c1d15dabe3e06035f29823605278021dd553c9054df3210",
+      "completedDay": 142,
+      "gameDate": "1861-07-25",
+      "sourceActionName": "july31-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/july25-1920.png",
+      "sha256": "a57b09f1c63053320b9bac7f7883442bba7f8a352d505172560a9b18131557d4",
+      "completedDay": 142,
+      "gameDate": "1861-07-25",
+      "sourceActionName": "july31-1920"
+    },
+    {
+      "file": "art-masters/S41/replay/completed-july31-1920.png",
+      "sha256": "1c992317acde84cda8e81bb52dc1d93b2b07c04541f00da253fdfa45d18e8e74",
+      "completedDay": 148,
+      "gameDate": "1861-07-31",
+      "sourceActionName": "completed-july31-1920"
+    },
+    {
+      "file": "art-masters/S41/replay/completed-july31-3440.png",
+      "sha256": "44660bc2c27ccf6858be012526455f15a0c87ee1d3c07527bd1cd3c2750061e9",
+      "completedDay": 148,
+      "gameDate": "1861-07-31",
+      "sourceActionName": "completed-july31-3440"
+    },
+    {
+      "file": "art-masters/S41/replay/blocked-1.png",
+      "sha256": "1684ba67026f2c6cdae648eedb702b8033c63aa4d3f00fde0685091b7bf66507",
+      "completedDay": 1,
+      "gameDate": "1861-03-06",
+      "recovery": 1
+    },
+    {
+      "file": "art-masters/S41/replay/blocked-2.png",
+      "sha256": "395635659efdfc27bd74d50378a8665b804eb6b6ec640d3574f40fa280bf5de0",
+      "completedDay": 1,
+      "gameDate": "1861-03-06",
+      "recovery": 2
+    },
+    {
+      "file": "art-masters/S41/replay/blocked-3.png",
+      "sha256": "982f728204935c7e28b6261a6fc86654cc803a226829ad19535923ac3ab7e54e",
+      "completedDay": 25,
+      "gameDate": "1861-03-30",
+      "recovery": 3
+    },
+    {
+      "file": "art-masters/S41/replay/blocked-4.png",
+      "sha256": "a35ad360154c19ec9383290da23810c803c2aa1dc41a19becb1d1e0d93095347",
+      "completedDay": 25,
+      "gameDate": "1861-03-30",
+      "recovery": 4
+    },
+    {
+      "file": "art-masters/S41/replay/blocked-5.png",
+      "sha256": "60f0f072aa4a01671f3466e275e9bbf588d9f957b80c8a7b4409910e1a8b5007",
+      "completedDay": 39,
+      "gameDate": "1861-04-13",
+      "recovery": 5
+    },
+    {
+      "file": "art-masters/S41/replay/blocked-6.png",
+      "sha256": "16daae5b7458b85174158d829c1358ab6ebec79bc3b01db02583126c3bd03102",
+      "completedDay": 40,
+      "gameDate": "1861-04-14",
+      "recovery": 6
+    },
+    {
+      "file": "art-masters/S41/replay/blocked-7.png",
+      "sha256": "a203ccd8e819e4714c07f49e6ff57e211cdd935b24c101c696b2a566c2a97979",
+      "completedDay": 41,
+      "gameDate": "1861-04-15",
+      "recovery": 7
+    },
+    {
+      "file": "art-masters/S41/replay/blocked-8.png",
+      "sha256": "a203ccd8e819e4714c07f49e6ff57e211cdd935b24c101c696b2a566c2a97979",
+      "completedDay": 41,
+      "gameDate": "1861-04-15",
+      "recovery": 8
+    },
+    {
+      "file": "art-masters/S41/replay/blocked-9.png",
+      "sha256": "a203ccd8e819e4714c07f49e6ff57e211cdd935b24c101c696b2a566c2a97979",
+      "completedDay": 41,
+      "gameDate": "1861-04-15",
+      "recovery": 9
+    },
+    {
+      "file": "art-masters/S41/replay/blocked-10.png",
+      "sha256": "a203ccd8e819e4714c07f49e6ff57e211cdd935b24c101c696b2a566c2a97979",
+      "completedDay": 41,
+      "gameDate": "1861-04-15",
+      "recovery": 10
+    }
+  ],
+  "pixelEdits": 0,
+  "sourceInventory": [
+    {
+      "source": "C:\\Pyrrhic\\sprint-play\\art-masters\\S39\\advance\\actions.jsonl",
+      "bytes": 20695,
+      "sha256": "f2eaa558117d7f9f58a0de1fd1521cc83342b112487fa793f4db0399cad61c54"
+    },
+    {
+      "source": "C:\\Pyrrhic\\sprint-play\\art-masters\\S39\\advance\\commands.jsonl",
+      "bytes": 3884,
+      "sha256": "31d30be8da9a7f296d79dccf9cd933b593b05247d1e7db4ff3ea0670eef5c9ca"
+    },
+    {
+      "source": "C:\\Pyrrhic\\sprint-play\\art-masters\\S39\\advance\\last-turn-reply.json",
+      "bytes": 3408866,
+      "sha256": "14e8013b82ba3839e63a412eaee8d1c1fbd565786caef18f7bdc3cb5b4cec8d7"
+    }
+  ]
+}
