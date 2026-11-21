@@ -12,18 +12,22 @@ const json = (res: ServerResponse, code: number, data: unknown) => {
   res.end(JSON.stringify(data));
 };
 
-export function installDesk(vite: ViteDevServer, options: { pack: string; atWar: boolean }) {
+export function installDesk(vite: ViteDevServer, options: { pack: string; atWar: boolean; port?:number; artRoot?:string }) {
+  const port=options.port??5274;
+  if(!Number.isSafeInteger(port)||port<1024||port>65535)throw Error('Invalid local desk port');
+  const authority=`127.0.0.1:${port}`,origin=`http://${authority}`;
+  const artRoot=resolve(options.artRoot??resolve(root,'art'));
   const desk = createDeskAdapter(options);
   vite.middlewares.use(async (req: IncomingMessage, res: ServerResponse, next: () => void) => {
     const host = req.headers.host;
-    if (host !== '127.0.0.1:5274') return json(res, 403, { error: 'Loopback host only' });
-    if (req.headers.origin && req.headers.origin !== 'http://127.0.0.1:5274') return json(res, 403, { error: 'Same origin only' });
+    if (host !== authority) return json(res, 403, { error: 'Loopback host only' });
+    if (req.headers.origin && req.headers.origin !== origin) return json(res, 403, { error: 'Same origin only' });
     let path: string;
-    try { path = decodeURIComponent(new URL(req.url ?? '/', 'http://127.0.0.1:5274').pathname).replaceAll('\\', '/'); }
+    try { path = decodeURIComponent(new URL(req.url ?? '/', origin).pathname).replaceAll('\\', '/'); }
     catch { return json(res, 400, { error: 'Invalid path' }); }
     if (path.startsWith('/api/')) {
       if (req.method === 'GET' && path === '/api/desk') return json(res, 200, desk.snapshot());
-      if (req.method !== 'POST' || path !== '/api/command') return json(res, 404, { error: 'Unknown endpoint' });
+      if (req.method !== 'POST' || !['/api/command','/api/stops'].includes(path)) return json(res, 404, { error: 'Unknown endpoint' });
       if (!req.headers['content-type']?.startsWith('application/json')) return json(res, 415, { error: 'JSON required' });
       try {
         let body = '';
@@ -31,7 +35,11 @@ export function installDesk(vite: ViteDevServer, options: { pack: string; atWar:
           body += String(chunk);
           if (body.length > 8192) return json(res, 413, { error: 'Command too long' });
         }
-        const input = JSON.parse(body) as { line?: unknown; day?: unknown };
+        const input = JSON.parse(body) as { line?: unknown; day?: unknown; points?:unknown };
+        if(path==='/api/stops'){
+          if(!Number.isSafeInteger(input.day)||!Array.isArray(input.points)||input.points.length>10||!input.points.every(p=>typeof p==='string'))return json(res,400,{error:'Listed stop points and a morning day are required'});
+          return json(res,200,desk.setStops(input.points,input.day as number));
+        }
         if (typeof input.line !== 'string' || !Number.isSafeInteger(input.day)) return json(res, 400, { error: 'A command and morning day are required' });
         return json(res, 200, desk.execute(input.line, input.day as number));
       } catch (error) {
@@ -44,8 +52,8 @@ export function installDesk(vite: ViteDevServer, options: { pack: string; atWar:
       const appArt = /^\/art\/(?:_pilot|app\/(?:chrome|textures|sound))\/[a-z0-9@.-]+\.(?:png|wav)$/.test(path);
       const documentArt = /^\/art\/union-1861\/documents\/(?:telegraph-form-header|general-orders-head|masthead-ornament|rule-double|rule-thick-thin)(?:@2x)?\.png$/.test(path);
       if (!appArt && !documentArt) return json(res, 404, {});
-      const file = resolve(root, path.slice(1));
-      if (!file.startsWith(resolve(root, 'art') + sep) || !existsSync(file)) return json(res, 404, {});
+      const file = resolve(artRoot, path.slice('/art/'.length));
+      if (!file.startsWith(artRoot + sep) || !existsSync(file)) return json(res, 404, {});
       res.writeHead(200, { 'Content-Type': file.endsWith('.png') ? 'image/png' : 'audio/wav', 'Content-Length': statSync(file).size, 'Cache-Control': 'public, max-age=3600' });
       createReadStream(file).pipe(res); return;
     }

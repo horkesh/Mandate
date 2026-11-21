@@ -82,6 +82,29 @@ Before repeating the hook, rerun that entire authoring file, the apply test,
 typecheck and all four static checks. Retain both failed logs; this retry
 answers whether all consumers now agree on the corrected location.
 
+### S34 desk integration checks
+
+Playtest merge `954dce6` retains nine expected failures; they are open defects,
+not fixes. The desk merge retains the request-freeze, candidate and opening
+report caches alongside its desk cache. The situation schema is regenerated.
+Root/desk typechecks pass; 14 focused cache/projection/history controls pass.
+The desk unit suite is 110 passed, eight optional geography checks skipped:
+this worktree lacks their ignored derived map inputs. No skip or selector
+changed, and no browser, capture, geometry or package campaign was started.
+
+The desk's public projection helpers change the closure of `viewFor` and
+`pendingRequests`, but not their protected read paths. Refresh the existing
+view derivation with its original citation, and the one still-unresolved
+request fingerprint; the 14 identities remain identical. Receipt:
+`runs/s34/desk-fingerprint-receipt.json`. S18's history guard would otherwise
+reject the explicitly authorized integration migration. A red/green control
+adds a narrow exception only while MERGE_HEAD is the exact requested
+`7db8c80a605c4410f458487778cadc7008ac8909`: existing projection identities
+may migrate their hashes, while new identities, other rules, other heads,
+abbreviated heads and ordinary commits still fail. The baseline does not
+grow. Proposed ruling [I]: accept that one named-merge reconciliation;
+reject a permanent refresh switch or a blanket permission for future merges.
+
 ## S1 delivery for lead review (2026-11-21): 1A remains unmet
 
 S1's bounded integration/build/test/calibration work is delivered on `sprint/1a` in `C:/Pyrrhic/sprint-1a`, from `ceff796`. `npm ci` ran first: exit 0, 51 packages, zero vulnerabilities. No push, history rewrite or other-lane write. Every completed commit used the real hook and Codex footer. The five requested merges are separate and ordered; R97 was read from its supplied worktree without changing it. Independent review and gate signatures remain deferred to Claude under 0106; nothing is signed here. The current delivery has a source HOLD and unmet acceptance, so it is not a claim that 1A is finished.

@@ -42,7 +42,7 @@ export type DeskInput =
   | { readonly kind: 'look'; readonly what: 'help' | 'inbox' | 'situations' | 'plans' | 'posts' | 'enemy' | 'queue'; readonly all: boolean }
   | { readonly kind: 'preview'; readonly post: PostId; readonly edit: EditTerms }
   | { readonly kind: 'cancel'; readonly index: number }
-  | { readonly kind: 'end' }
+  | { readonly kind: 'end'; readonly days?: number }
   | { readonly kind: 'quit' }
   | { readonly kind: 'error'; readonly message: string };
 
@@ -56,7 +56,7 @@ export const HELP: readonly string[] = [
   '  enemy                  what you believe of the enemy, region by region',
   '  preview <post> <edit>  the route an arrow edit would make, before you send it',
   '  queue | cancel <n>     the orders you will send when the turn ends, or take one back',
-  '  end                    send your orders and let up to a week pass',
+  '  end [days]             send your orders and run up to this many days, within the pack maximum',
   '  quit',
   'Orders to people (each answered by the man, through his own judgement):',
   '  order <post> <hold|take|relieve> [objective] [risk=N] [deadline=N] [rail|norail] [river] [sea] [neutral] [await] [review] [by=<route>] [bypass]',
@@ -64,6 +64,7 @@ export const HELP: readonly string[] = [
   '  edit <post> <objective|waypoints|timing|add_axis|remove_axis> [axis=<name>] [region=<r>] [via=<r>,<r>] [days=N]',
   '  go <post>                             the word an operation prepared under "await my word" waits for',
   '  call <post> <regiments> <termDays>    a call for regiments to a governor',
+  '  call <post> scheduled=<id>           the complete dated requisition offered by today’s menu',
   '  decide <situation> [option ...]       no options: let it take its course',
   '  delegate <situation> <post>',
   '  appoint <post> <person> [rank] | relieve <post> <own_request|outright|quiet_department> [to-post]',
@@ -108,12 +109,12 @@ function noteFrom(token: string, t: (key: string) => string): PlanNote | string 
 /** The route an order to `post` goes by: the one named, else the wire where it reaches him, else the courier. */
 function routeTo(menu: PrincipalMenu, post: string, named: string | undefined): RouteKind | string {
   if (named !== undefined) return named;
-  const routes = menu.commandable.find((c) => c.post === post)?.routes ?? [];
+  const routes = menu.commandable.find((c) => c.post === post)?.routes ?? menu.raising.find(c=>c.post===post)?.routes ?? [];
   return routes.some((r) => r.route === 'wire') ? 'wire' : 'courier';
 }
 
 function knownRoute(menu: PrincipalMenu, post: string, route: string): string | null {
-  const routes = menu.commandable.find((c) => c.post === post)?.routes;
+  const routes = menu.commandable.find((c) => c.post === post)?.routes ?? menu.raising.find(c=>c.post===post)?.routes;
   if (routes === undefined) return null;
   return routes.some((r) => r.route === route) ? null : `${route} is not a route to ${post} (${routes.map((r) => r.route).join(', ')})`;
 }
@@ -165,8 +166,11 @@ export function parseLine(line: string, request: SeatRequest, t: (key: string) =
     case 'enemy':
     case 'queue':
       return { kind: 'look', what: word, all: flags.has('all') };
-    case 'end':
-      return { kind: 'end' };
+    case 'end': {
+      if(tokens.length===1)return {kind:'end'};
+      const days=whole(tokens[1]),max=request.turnStops?.maxDays??0;
+      return tokens.length===2&&days!==null&&days>=1&&days<=max?{kind:'end',days}:fail(`Choose between 1 and ${max} whole days`);
+    }
     case 'quit':
       return { kind: 'quit' };
     case 'cancel': {
@@ -237,8 +241,17 @@ export function parseLine(line: string, request: SeatRequest, t: (key: string) =
       return { kind: 'command', word: 'go', command: { cmd: 'go', to: post, route: routeTo(menu, post, opts.get('by')) as RouteKind, bypass: flags.has('bypass') } };
     }
     case 'call': {
-      const problem = commandable(post);
-      if (problem !== null) return fail(problem);
+      if(post===undefined)return fail('Name a governor for the call.');
+      if(!menu.raising.some(r=>r.post===post))return fail(`${post} is not a governor offered for a call on today’s menu.`);
+      if(opts.has('scheduled')){
+        if(words.length!==1||[...opts.keys()].some(k=>k!=='scheduled'&&k!=='by'))return fail('A scheduled call uses its published terms without overrides.');
+        const call=menu.doctrine.calls.find(c=>c.id===opts.get('scheduled')&&c.post===post);
+        if(!call||call.issued===true||call.day>request.requestDay||(menu.atWarSince===null&&call.atPeace!==true))return fail('That dated call is not available on today’s menu.');
+        const route=routeTo(menu,post!,opts.get('by')),bad=knownRoute(menu,post!,route);
+        if(bad)return fail(bad);
+        return {kind:'command',word:'call',command:{cmd:'call',to:post!,callId:call.id!,regiments:call.regiments,termDays:call.termDays,
+          ...(call.men===undefined?{}:{men:call.men}),...(call.arm===undefined?{}:{arm:call.arm}),...(call.readiness===undefined?{}:{readiness:call.readiness}),route:route as RouteKind,bypass:false}};
+      }
       const regiments = whole(words[1]);
       const termDays = whole(words[2]);
       if (regiments === null || termDays === null) return fail('call <post> <regiments> <termDays>');

@@ -19,6 +19,7 @@ import type { FactionId, PersonId, PostId, RegionId, SeatId, SituationId } from 
 import type { GoalTerms, SeatCommand } from '../log/commands.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { GoalView, SeatView } from '../view/types.ts';
+import type { TurnStopsView } from './turn-stops.ts';
 
 export const SEAT_DRIVERS = ['ai', 'human', 'rules'] as const;
 export type SeatDriver = (typeof SEAT_DRIVERS)[number];
@@ -226,6 +227,8 @@ export interface BattleMenu {
 export type Menu = PrincipalMenu | PlanMenu | DelegatedMenu | BattleMenu;
 
 export interface SeatRequest {
+  /** The human driver's current turn settings, when supplied by that driver. Not simulation State. */
+  readonly turnStops?: TurnStopsView;
   /** The day the answer applies to (the morning of it). */
   readonly requestDay: number;
   readonly requestSeat: SeatId;

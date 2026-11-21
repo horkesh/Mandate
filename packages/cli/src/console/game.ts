@@ -11,6 +11,7 @@
 import { canonicalHash, ids, phase0, world as w } from '@mandate/kernel';
 import { createRuleSeat } from '@mandate/rule-seats';
 import { packStrings, seatsWorld } from '../seats-world.ts';
+import {TURN_STOP_POINTS, type TurnStopPoint} from '@mandate/kernel/seat-api';
 
 export interface GameOptions {
   readonly pack: string;
@@ -54,6 +55,7 @@ export class ConsoleGame {
   private readonly rules = createRuleSeat();
   private readonly mapCache = phase0.createDerivedMapCache();
   private viewCache = phase0.createViewCache();
+  private stopPoints:readonly TurnStopPoint[] = TURN_STOP_POINTS;
 
   constructor(options: GameOptions) {
     const sw = seatsWorld(options.pack);
@@ -86,7 +88,13 @@ export class ConsoleGame {
   morning(): phase0.SeatRequest {
     const request = phase0.pendingRequests(this.world, this.stateNow, this.viewCache).find((r) => r.requestSeat === this.seat);
     if (request === undefined) throw new Error(`no request for ${this.seat}: the principal is asked every morning`);
-    return request;
+    return {...request,turnStops:{maxDays:this.world.map.world.rules.turns.maxDays,points:TURN_STOP_POINTS.map(point=>({point,enabled:this.stopPoints.includes(point)}))}};
+  }
+
+  /** Presentation settings belong to this driver, never the State or command log. */
+  setTurnStops(points:readonly string[]):void {
+    if(points.some(p=>!TURN_STOP_POINTS.includes(p as TurnStopPoint))||new Set(points).size!==points.length)throw Error('Unknown or repeated turn stop');
+    this.stopPoints=TURN_STOP_POINTS.filter(p=>points.includes(p));
   }
 
   /** Presentation playback of reports already delivered to this seat. This
@@ -109,12 +117,13 @@ export class ConsoleGame {
   }
 
   /** Send his orders on the turn's first morning, then let days pass until a decision point or the turn's end. */
-  turn(commands: readonly phase0.SeatCommand[]): TurnResult {
+  turn(commands: readonly phase0.SeatCommand[], dayLimit = this.world.map.world.rules.turns.maxDays): TurnResult {
     const max = this.world.map.world.rules.turns.maxDays;
+    if(!Number.isSafeInteger(dayLimit)||dayLimit<1||dayLimit>max)throw new RangeError(`Choose between 1 and ${max} days`);
     const days: TurnDay[] = [];
     const human: phase0.Seat = { driver: 'human', respond: () => ({ answerKind: 'commands', commands }) };
     const silent: phase0.Seat = { driver: 'human', respond: () => ({ answerKind: 'commands', commands: [] }) };
-    for (let i = 0; i < max; i++) {
+    for (let i = 0; i < dayLimit; i++) {
       const requests = phase0.pendingRequests(this.world, this.stateNow, this.viewCache);
       const entries = requests.flatMap((r) => phase0.answerEntries(r, r.requestSeat === this.seat ? (i === 0 ? human : silent) : this.rules));
       const result = phase0.tick(this.world, this.stateNow, entries, { mapCache: this.mapCache });
@@ -126,7 +135,8 @@ export class ConsoleGame {
       const refused = result.rejections.filter((x) => x.seat === this.seat && x.entry >= 0).map((x) => ({ command: entries[x.entry]!.command, reason: x.reason,commandIndex:ownEntries.indexOf(x.entry) }));
       const points = result.decisionPoints.filter((p) => p.seat === this.seat).map((p) => p.point);
       days.push({ day: result.day, date: this.dateOf(result.day), reports: view.reports.filter((r) => r.receivedDay === result.day), refused, points });
-      if (points.length > 0) return { days, stopped: [...new Set(points)].sort() };
+      const selected=points.filter(p=>this.stopPoints.includes(p));
+      if (selected.length > 0) return { days, stopped: [...new Set(selected)].sort() };
     }
     return { days, stopped: 'week' };
   }

@@ -34,7 +34,8 @@ export function stagedRuleHistoryProblems(root: string): string[] {
     if (newFindings === null) problems.push('the known-finding baseline must remain present, even when empty');
     else {
       const changed = execFileSync('git', ['diff', '--cached', '--name-only', 'HEAD', '--', 'tools/rules/*.ts', 'tools/check-rules.ts'], { cwd: root, encoding: 'utf8' }).trim().length > 0;
-      problems.push(...baselineHistoryProblems(JSON.parse(oldFindings) as Finding[], JSON.parse(newFindings) as Finding[], changed));
+      const merge = spawnSync('git', ['rev-parse', '--verify', 'MERGE_HEAD'], { cwd: root, encoding: 'utf8' });
+      problems.push(...baselineHistoryProblems(JSON.parse(oldFindings) as Finding[], JSON.parse(newFindings) as Finding[], changed, merge.status === 0 ? merge.stdout.trim() : null));
     }
   }
   const oldSigned = read(`HEAD:${SIGNED_PATHS}`);

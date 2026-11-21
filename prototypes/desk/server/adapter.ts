@@ -14,6 +14,14 @@ export class DeskAdapter {
   private approvedPlans=new Map<string,MapPlan>();
   constructor(private readonly game: ConsoleGame) {}
 
+  setStops(points:readonly string[],expectedDay:number):DeskReply {
+    const fail=(message:string):DeskReply=>({ok:false,message,snapshot:this.snapshot()});
+    if(this.closed)return fail('This console session has ended.');
+    if(expectedDay!==this.game.morning().requestDay)return fail('The morning has changed. Review the desk before changing its stops.');
+    try {this.game.setTurnStops(points);}catch{return fail('Choose only the listed turn stops, without repeats.');}
+    return {ok:true,snapshot:this.snapshot()};
+  }
+
   snapshot(): DeskSnapshot {
     const morning = this.game.morning();
     if(morning.menu.menuKind==='principal')for(const review of morning.menu.reviews){
@@ -48,8 +56,9 @@ export class DeskAdapter {
         this.queue.splice(input.index - 1, 1); return reply();
       case 'preview': return reply({ preview: this.game.preview(input.post, input.edit) });
       case 'end': {
+        const submitted=this.snapshot().queue;
         const before=this.game.morning(),reports=[...before.view.reports];
-        const result = this.game.turn(this.queue.map(q => q.command));
+        const result = this.game.turn(this.queue.map(q => q.command),input.days);
         for(const [commandIndex,{command}] of this.queue.entries()){
           if(result.days.some(day=>day.refused.some(r=>r.commandIndex===commandIndex)))continue;
           if(command.cmd==='order'){this.approvedPlans.delete(command.to);continue;}
@@ -64,7 +73,7 @@ export class DeskAdapter {
           reports.push(report);
           if(report.claims.some(c=>c.kind==='control'||c.kind==='control-government'))controlUpdates[report.id]=this.game.controlFromReports(reports);
         }
-        const turn:DeskTurn={...result,controlUpdates};
+        const turn:DeskTurn={...result,controlUpdates,submitted};
         this.queue = [];
         this.history.push(turn);
         return reply({ turn });

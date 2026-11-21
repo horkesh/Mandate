@@ -23,6 +23,7 @@ import { recordFire, type Telemetry } from '../telemetry.ts';
 import { heldPost, sideOfPerson, type HeldPostCache, type SideChange } from '../command/command.ts';
 import { filterPostOf, whereIsPerson } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
+import type { TurnStopPoint } from '../seats/turn-stops.ts';
 
 export type RejectionReason =
   | 'bad_goal'
@@ -111,7 +112,7 @@ export interface Price {
 
 /** Something the shell may end a turn on (FOUNDATION section 9). */
 export interface DecisionPoint {
-  readonly point: 'battle-report' | 'objection' | 'objective-reached' | 'order-conflict' | 'plan-review' | 'pocket-closed' | 'situation-lapsed' | 'situation-options' | 'situation-resurfaced' | 'situation-surfaced';
+  readonly point: TurnStopPoint;
   readonly seat: SeatId;
   /** The report it rests on, if any. */
   readonly report: MessageId | null;

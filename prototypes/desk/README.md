@@ -15,6 +15,10 @@ npm run dev
 
 Open **http://127.0.0.1:5274/**. The process owns one local session, shared by its browser tabs. Refresh preserves the game and queue. Read/file marks belong to the current page; display, sound and playback settings persist in local storage. Restart the process to begin a new game.
 
+On the turn sheet, **Maximum days this turn** can return the desk sooner than the pack's maximum. Selected decision stops still apply. The text console accepts the same limit as `end 2`, for example; plain `end` keeps the pack maximum.
+
+The same sheet lists **Calls due** when an identified requisition is eligible on the seat's menu. Signing copies its supplied regiment or men count, arm, term and readiness. A queued call cannot be signed twice there. The shared text grammar is `call <post> scheduled=<id>`; it accepts the published terms without overrides.
+
 ### Map setup
 
 `npm run map:setup` fetches missing pinned inputs, builds stale geography in dependency order, then bakes stale map and sign images. Current recipes and output hashes reuse completed work; CRLF/LF changes alone do not invalidate geographic recipes. `python -B scripts/map-setup.py --check` lists the required geography stages. Missing pack files, tools, failed downloads and changed source hashes fail with the input named. Python dependencies and Chromium must be installed first, as above.
@@ -1015,3 +1019,166 @@ the stories and grouping. `npx playwright test --config playwright.r54.config.ts
 checks source opening and return at 1920×1080 and 3440×1440, using the real reading
 components with a small fictional snapshot. It needs no ignored map data and
 writes its captures and results to the worktree's `runs/r54/browser/`.
+
+### S8 remaining desk views
+
+Run `npm run dev -- --port 5288 --saved-map --at-war` from this folder after
+installing both dependency trees. `--saved-map` requires the existing ignored
+atlas and compact geometry; it does not rebuild geography. `DESK_ART_ROOT` may
+point to an existing art directory, read only. The server still binds to
+127.0.0.1, checks the selected port's Host and Origin, and serves only its art
+allowlist. Leave 5274 for other runs.
+
+For this worktree, set `DESK_ART_ROOT` to
+`C:/Pyrrhic/ByOrderOfThePresident/art`. The saved map files were copied without
+editing from that checkout's ignored `prototypes/desk/public/map-data/`.
+
+S8 adds a stop slip with related final-day papers, pausable playback, the
+attention price table and an accountability spread. Submitted slips remain in
+the shell's history after dispatch. Rejections retain their occurrence index;
+a dispatch never implies compliance. Received decisions and numeric returns
+keep their source papers. The board can search known posts and vacancies.
+The audience can display a filed answer received through ordinary report
+transport, separately from its earlier reasons and unsigned counters.
+Plan review also accepts the existing wait-note grammar. Wait notes are sent
+only as requests for a redraft. Unaffordable acts stay visible with a refill
+explanation; free inquiries remain available. Returning from a ledger source
+preserves its leaf and restores focus to the source control. During playback,
+global panel shortcuts wait for the next morning, and the menu and docket use
+the held snapshot rather than the completed turn's final morning.
+
+Proposed rulings: keep missing seat projections explicit rather than reading
+State or pack effects. Reject inferred Congressional ratification, a refill
+date guessed from weekdays, and an audience preview from hidden traits. Keep
+the shell's own submitted slips in its existing turn history; reject a new
+simulation ledger or a claim that dispatch proves execution.
+
+Evidence and native captures are in
+`C:/Pyrrhic/ByOrderOfThePresident/art-masters/S8/`. Generate actual seat fixtures
+with `npx tsx scripts/s8-fixtures.ts`; then run
+`npx playwright test --config playwright.s8.config.ts`. The preflight checks
+startup, art, port isolation, forbidden server-source access and core selectors
+before the native capture tests. The dev server is owned and closed by
+Playwright. The S8 test uses the actual adapter and console grammar.
+
+Maker checks: the complete desk suite passed 101 tests with three existing
+skips, and its typecheck/build passed. Thirteen distinct browser checks passed
+across the retained runs, including both native sizes, 200% high contrast,
+1280×800 plan reflow, source return, exhaustion, wait notes and pausable
+playback. `final-captures.log` retains the nine-test capture pass;
+`playback-boundary-verified.log` retains the final keyboard correction. Earlier
+unaffected evidence is reused. The two unchanged ultrawide board/audience
+captures were reused; all 29 PNGs have matching dimensions, recipes and hashes.
+`final-inventory.json` records 430 build files (471,638,003 bytes) and the source
+scope audit. The build resolves art through the local server and is not a
+standalone shipping package. `runtime-final.json` records port 5288 closed.
+
+The exact root `MANDATE_NO_GIT=1 npm run check` initially exited 1 when the
+existing done-check setup exceeded 300 seconds: 136 files passed, 1,516 tests
+passed, one expected failure and 17 skips. Its isolated correction verification
+passed 14 tests with one skip in 170.88 seconds; no timeout or simulation code
+changed. Boundary, licences and decision-index checks passed separately. The
+staged-tree commit gate is recorded in `hook.log`.
+
+One required default eight-seed done check, with drafting, exited 1 in
+2,038.59 seconds: Phase 0 5/6 and 1A 2/6. Phase 0 fails only timing; Union
+reference/history median–p95 were 55.13/97.37 and 45.94/74.83 ms against the
+unchanged 40/160 limits. The 1A checkpoint, operation, pushback and sweep gaps
+remain. All 12 reported problems are retained in `done-check.log`; no D6
+clearance or criterion waiver. Replay, daily hashes and save/resume pass.
+This shared-host run overlapped the small UI correction checks early on;
+it establishes neither unloaded-host nor CI performance. The simulation and
+pack inputs are unchanged. The full check was not repeated for reassurance.
+The raw run artifacts are preserved under `done-artifacts/`.
+
+These are maker results. Claude's independent review remains deferred under
+0106; nothing is signed or cleared for main.
+
+Findings outside my scope: the seat API still lacks the Congress ledger,
+attention allowance/refill date, configurable stops, and a current audience
+case with legal counter values and declared replies. Filed audience answers
+are available and rendered; they do not supply the missing prospective case.
+The seat also supplies no authored live-clock ranges or live/non-live marker
+for the unanswered-situation confirmation. Those require their owning views;
+the prototype does not reconstruct them from private pack effects.
+
+### S19 seat projections and desk controls
+
+The desk now reads the seat's public Congress records, own attention allowance,
+spending and next refill, audience correspondence and the console driver's
+current turn stops. Open **Account to Congress** in the ledger, **Attention**
+on the desk, the stop checkboxes in **Let the days run**, or the correspondence
+at the top of the org board. Sources return to their source control. A visitor
+from an earlier record never opens a replacement holder's person page.
+
+Stop preferences remain in the running console process across page refreshes.
+They change when a turn returns to the desk; they add no simulation State or
+command. A new process starts with all existing stops enabled. Unselected
+decision points and their papers remain in the daybook.
+
+Run this checkout on its own port:
+
+```powershell
+$env:DESK_ART_ROOT='C:/Pyrrhic/ByOrderOfThePresident/art'
+npm run dev -- --port 5291 --saved-map --at-war
+```
+
+Close that process after use. S19's verification server was closed. From this
+folder, generate the evidence fixtures with
+`npx tsx scripts/s19-fixtures.ts`, then run
+`npx playwright test --config playwright.s19.config.ts`. Its preflight runs
+before captures; results and recipes go only to the main checkout's ignored
+`art-masters/S19/`. `scripts/s19-audit.ts` verifies image/source hashes, scope,
+the build inventory and the ignored map inputs against S8's retained inventory.
+
+Published dated chamber membership is supported, but the existing pack supplies
+no counts. Production authors also supply no explicit audience requests or
+prospective declared counter replies yet. The request-source fixture is marked
+fictional; the granted invitation and Union ledger scenes use real kernel
+commands. A prior answer never becomes a preview of the visitor's next reply.
+Detailed evidence, proposed rulings and retained baseline failures are in
+[the S19 hand-over](../../notes/sprint-S19-desk.md). Standing review remains
+deferred under 0106.
+
+### S29 integrated history playtest
+
+The turn sheet accepts a shorter maximum within the pack's turn length and
+offers due identified governor calls with their complete published terms.
+Signing queues the requisition; an issued marker establishes dispatch. The
+docket keeps signed decisions visibly pending until recalled or dispatched.
+Command-line equivalents are `end [days]` and
+`call <governor-post> scheduled=<id>`.
+
+S29 uses only this prototype's **headless Playwright harness**, on port 5293.
+It starts at peace, owns its server and closes it afterward. It never uses
+Computer Use, desktop control or a real browser. Captures stay under
+`C:/Pyrrhic/ByOrderOfThePresident/art-masters/S29/`, with recipes and public
+snapshots. From this folder, use a new evidence subfolder for a fresh run:
+
+```powershell
+$env:S29_OUTPUT='C:/Pyrrhic/ByOrderOfThePresident/art-masters/S29/new-history'
+$env:S29_RUN='new-history'
+$env:S29_FOCUSED_PLAN='1'
+Remove-Item Env:S29_RESUME -ErrorAction SilentlyContinue
+Remove-Item Env:S29_CHECK_CONTROLS -ErrorAction SilentlyContinue
+node --import tsx scripts/s29-prepare.ts
+npx playwright test --config playwright.s29.config.ts
+```
+
+Do not overwrite retained attempts. Preparation extracts the pack's historical
+choice reference, never State. All playthrough writes use UI controls.
+`S29_RESUME=1` requires a retained prefix/manifest: it replays UI commands and
+compares the exact public morning, history and queue instead of loading State.
+`S29_FOCUSED_PLAN=1` sends notes before the edit and uses direct review replies
+after a received relay objection. Both strategies require actual received
+Manassas evidence, rather than fabricating a battle to pass.
+
+`scripts/s29-audit.ts` checks primary captures, build and preserved integrated
+and map inputs. Retained production suite: 115 passed, three skips; build
+passes with its existing chunk warning. The final human trajectory reaches
+31 July with all five calls issued, edit, received note account and filed
+audience, but its Manassas battle assertion **fails**. The default done check
+also stays red: timing, pushback and lever-sweep measurement/coverage. No
+threshold changed. Read [the report](../../docs/playtests/2026-11-21-desk-history-run.md)
+and [handover](../../notes/sprint-S29-desk.md) before treating results as
+acceptance. The automatic history's battle is not proof of the human scene.

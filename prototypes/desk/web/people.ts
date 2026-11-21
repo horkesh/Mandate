@@ -4,6 +4,7 @@ export interface PostCard {
   post:string; parent:string|null; placed:boolean; holder:string|null;
   status:'held'|'vacant'|'unknown'; commandable:CommandablePost|null;
   reports:readonly ReportView[]; vacantSince:number|null; asOfDay:number;
+  source:string|null;
 }
 export interface CounterDraft {kind:CounterKind; value?:string; boldness?:number; from?:string; men?:number}
 /** Both presenters take the seat boundary itself, never the server snapshot or game. */
@@ -15,7 +16,7 @@ export function postReports(request:SeatRequest,post:string,holder:string|null):
 }
 export function buildOrgBoard(request:SeatRequest):{nodes:PostCard[]} {
   const menu=request.menu.menuKind==='principal'?request.menu:null;
-  return {nodes:request.view.posts.map(p=>({post:p.post,parent:p.parent,placed:p.placementKnown,holder:p.holder,status:p.status,vacantSince:p.vacantSince,asOfDay:p.asOfDay,
+  return {nodes:request.view.posts.map(p=>({post:p.post,parent:p.parent,placed:p.placementKnown,holder:p.holder,status:p.status,vacantSince:p.vacantSince,asOfDay:p.asOfDay,source:p.source,
     commandable:menu?.commandable.find(c=>c.post===p.post&&c.holder===p.holder)??null,reports:postReports(request,p.post,p.holder)}))};
 }
 export function audienceRecord(request:SeatRequest,post:string) {

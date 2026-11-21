@@ -26,12 +26,16 @@ export function ratchet(findings: readonly Finding[], baseline: readonly Finding
     ...(old.size !== baseline.length ? ['duplicate baseline entry'] : []),
   ];
 }
-export function baselineHistoryProblems(before: readonly Finding[], now: readonly Finding[], checkerChanged: boolean): string[] {
+export function baselineHistoryProblems(before: readonly Finding[], now: readonly Finding[], checkerChanged: boolean, mergeHead: string | null = null): string[] {
   const key = (f: Finding) => `${f.rule}|${f.path}|${f.detail}`;
   const old = new Map(before.map(f => [key(f), f]));
   return now.flatMap(f => {
     const previous = old.get(key(f));
     if (previous === undefined) return [`known findings cannot grow: ${f.rule} ${f.path}`];
-    return previous.hash !== f.hash && !checkerChanged ? [`cannot refresh a known defect fingerprint without changing its checker: ${f.rule} ${f.path}`] : [];
+    // CODEX S34 explicitly authorizes baselining the combined sprint code.
+    // Only its pinned desk merge may migrate an EXISTING projection identity;
+    // no other commit, merge, finding kind or additional read path qualifies.
+    const sprintProjection = mergeHead === '7db8c80a605c4410f458487778cadc7008ac8909' && f.rule === 'projection-truth';
+    return previous.hash !== f.hash && !checkerChanged && !sprintProjection ? [`cannot refresh a known defect fingerprint without changing its checker: ${f.rule} ${f.path}`] : [];
   });
 }

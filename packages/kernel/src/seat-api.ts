@@ -51,3 +51,6 @@ export type {
 } from './seats/api.ts';
 export type { AdviceView, BeliefView, ClaimedFrontView, ClaimView, ControlBeliefSource, ControlBeliefView, GoalView, KnownPersonView, KnownPostView, KnownStanceView, ObstructionView, ReportView, SeatView, SituationOptionView, SituationView, WorksView } from './view/types.ts';
 export type { SituationId } from './ids.ts';
+export { TURN_STOP_POINTS } from './seats/turn-stops.ts';
+export type { TurnStopPoint, TurnStopsView } from './seats/turn-stops.ts';
+export type { AttentionBudgetView, CongressView, AudienceView } from './view/types.ts';

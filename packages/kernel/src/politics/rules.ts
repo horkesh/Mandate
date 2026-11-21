@@ -5,6 +5,7 @@
 import type { FactionId, PersonId, RegionId } from '../ids.ts';
 import type { StringKey } from '../world/graph.ts';
 import type { World } from '../world/world.ts';
+import {parseIsoDate} from '../world/calendar.ts';
 
 /** A bloc (M2's `Bloc`, recast): its voice in Washington and how events move it. Its id is the pack's bloc vocabulary. */
 export interface BlocRule {
@@ -29,6 +30,8 @@ export interface ChamberRule {
   readonly faction: FactionId;
   readonly name: StringKey;
   readonly cite: string;
+  /** Dated public seat counts, when the pack publishes them; never inferred from bloc support. */
+  readonly composition?: readonly {readonly on:string;readonly groups:readonly {readonly name:StringKey;readonly seats:number}[];readonly cite:string}[];
 }
 
 /**
@@ -89,6 +92,19 @@ export function politicsRulesProblems(world: World): string[] {
     if (chambers.has(c.id)) problems.push(`politics chamber ${c.id} is stated twice`);
     chambers.add(c.id);
     if (!factions.has(c.faction)) problems.push(`politics chamber ${c.id}: faction ${c.faction} is not in the pack`);
+    const dates=new Set<string>();
+    for(const table of c.composition??[]){
+      try{parseIsoDate(table.on);}catch{problems.push(`politics chamber ${c.id}: composition date ${table.on} is invalid`);}
+      if(table.groups.length===0||table.cite.trim().length===0)problems.push(`politics chamber ${c.id}: composition needs groups and a citation`);
+      if(dates.has(table.on))problems.push(`politics chamber ${c.id}: composition date ${table.on} is repeated`);
+      dates.add(table.on);
+      const groups=new Set<string>();
+      for(const g of table.groups){
+        if(groups.has(g.name))problems.push(`politics chamber ${c.id}: composition group ${g.name} is repeated`);
+        groups.add(g.name);
+        if(!Number.isSafeInteger(g.seats)||g.seats<0)problems.push(`politics chamber ${c.id}: composition seats must be nonnegative integers`);
+      }
+    }
   }
   const sessions = new Set<string>();
   for (const s of rules.sessions) {

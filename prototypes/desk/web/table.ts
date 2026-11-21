@@ -1,5 +1,22 @@
 import type {ReportView} from '@mandate/kernel/seat-api';
 import type {DeskDay,DeskSnapshot,DeskTurn} from './adapter.ts';
+/** These links are candidates in the last delivery day, not invented point-to-report IDs. */
+export function stopEntries(turn:DeskTurn):{reason:string;papers:ReportView[]}[]{
+ if(turn.stopped==='week')return [{reason:'week',papers:[]}];
+ const reports=turn.days.at(-1)?.reports??[];
+ return turn.stopped.map(reason=>({reason,papers:reports.filter(r=>{
+  const has=(...kinds:string[])=>r.claims.some(c=>kinds.includes(c.kind));
+  switch(reason){
+   case 'battle-report':return has('battle-phase','battle-result','casualties','own-losses');
+   case 'objection':return has('order-objected')||r.claims.some(c=>['plan-answer','verb-answered'].includes(c.kind)&&/object|refus/.test(c.token??''));
+   case 'plan-review':return has('plan-submitted');
+   case 'pocket-closed':return has('pocket');
+   case 'objective-reached':return has('arrived','goal-status');
+   case 'order-conflict':return has('order-returned','order-objected');
+   default:return reason.startsWith('situation-')&&r.subjectKind==='situation';
+  }
+ })}));
+}
 export function reportPlace(report:ReportView){return report.claims.find(c=>c.region)?.region??(report.subjectKind==='region'?report.subjectId:'');}
 export interface DayFrame {day:DeskDay;report?:ReportView;phase:'mark'|'land'|'date'}
 /** Preserve the console's order within a delivery day; never reorder by knowledge age. */
