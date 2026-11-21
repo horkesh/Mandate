@@ -120,6 +120,18 @@ function playMonths(atWar = false): Played {
         chosen.set(id, previous);
       }
     }
+    // R90's accepted New York tender is a separate long-term call. A human must send it and
+    // concentrate the levy, just as he must order the later advance. Selectors come from posts;
+    // dates are the printed calendar, with no State, runner, hidden menu or injected battle.
+    const callPosts = p.type('posts');
+    if (p.date >= '1861-05-03' && callPosts.some(line => line.startsWith('st_gov_new_york: ')) && !p.commands.some(c => c.startsWith('call st_gov_new_york '))) {
+      p.type('call st_gov_new_york 38 730');
+    }
+    if (p.date >= '1861-06-01' && p.commands.some(c => c.startsWith('call st_gov_new_york ')) &&
+        callPosts.some(line => line.startsWith('st_gov_new_york: ')) && callPosts.some(line => line.startsWith('us_dc_militia: ')) &&
+        !p.commands.some(c => c.startsWith('transfer st_gov_new_york '))) {
+      p.type('transfer st_gov_new_york us_dc_militia blocks 999');
+    }
     // The advance decision has no order effect. A human must order the holder.
     // The command is sent after the desk offers and we choose the advance.
     if (chosen.has('mcdowell_advance') && !p.commands.some(c => c.startsWith('order '))) {
@@ -142,6 +154,16 @@ function playMonths(atWar = false): Played {
       p.type('edit us_dc_militia objective region=northern_virginia bypass');
       p.type('audience us_dc_militia');
     }
+    const edited = p.commands.some(c => c.startsWith('edit '));
+    const answeredEdit = p.transcript.some(line => line.includes('answers your edit:'));
+    const resumedAdvance = edited && p.commands.slice(p.commands.findIndex(c => c.startsWith('edit ')) + 1).includes('order us_dc_militia take manassas review bypass');
+    if (edited && answeredEdit && !resumedAdvance) {
+      // Resume the original objective after testing the intermediate arrow edit. These are printed
+      // desk facts and ordinary player words, not a hidden plan or battle injection.
+      p.type('order us_dc_militia take manassas review bypass');
+    } else if (edited && resumedAdvance && review && plans.some(line => line.includes('manassas')) && !p.commands.some(c => c.startsWith('approve '))) {
+      p.type('approve us_dc_militia bypass');
+    }
     p.type('end');
   }
   p.type('inbox all');
@@ -150,12 +172,13 @@ function playMonths(atWar = false): Played {
 
 /** Weekly turns may run past July. Such output is preserved as evidence, but
  * cannot satisfy a required activity in the March–July acceptance window. */
-function throughJuly(p: Player): string[] {
-  const after = p.transcript.findIndex(line => /^(?:---|===) 1861-08-/.test(line));
-  return after < 0 ? p.transcript : p.transcript.slice(0, after);
+function throughJulyLines(lines: readonly string[]): string[] {
+  const after = lines.findIndex(line => /^(?:---|===) 1861-08-/.test(line));
+  return after < 0 ? [...lines] : lines.slice(0, after);
 }
+function throughJuly(p: Player): string[] { return throughJulyLines(p.transcript); }
 
-function battleDispatchProblems(lines: readonly string[]): string[] {
+function battleDispatchProblems(lines: readonly string[], requireBattle = true): string[] {
   const groups = new Map<string, number[]>();
   for (const line of lines) {
     const dispatch = /wire-dispatch from (\w+) \(written day (\d+) at (\d\d):00.*?: .*?at (\w+): going (?:well|badly)/.exec(line);
@@ -165,7 +188,7 @@ function battleDispatchProblems(lines: readonly string[]): string[] {
     hours.push(Number(dispatch[3]));
     groups.set(key, hours);
   }
-  if (groups.size === 0) return ['No hour-stamped battle dispatch reached this desk (1A operation gap; owner R85 / lane 1.14 calibration).'];
+  if (groups.size === 0 && requireBattle) return ['No hour-stamped battle dispatch reached this desk (1A operation gap; owner R85 / lane 1.14 calibration).'];
   const problems: string[] = [];
   for (const [battleDay, hours] of groups) {
     if (hours.length < 2) problems.push(`${battleDay}: no sequence of battle-day hours.`);
@@ -186,7 +209,7 @@ describe('R86: the history months through the player’s console (1A criterion 2
     // R86 asks for the nearest honest route when July has no battle dispatch.
     // Continue this same session, without a new seed or hidden setup, to the
     // end of August. This evidence cannot satisfy the July requirement.
-    if (battleDispatchProblems(throughJuly(played.player)).length > 0) {
+    if (!throughJuly(played.player).some(line => /wire-dispatch .*written day \d+ at \d\d:00/.test(line))) {
       const start = played.player.transcript.length;
       for (let turn = 0; turn < 32 && played.player.date <= '1861-08-31'; turn++) {
         const out = played.player.type('end');
@@ -208,6 +231,10 @@ describe('R86: the history months through the player’s console (1A criterion 2
 
   it('decides the opening, troop call and special session as authored when offered', () => {
     expect(played.missingChoices).toEqual([]);
+    expect(played.player.commands).toContain('call st_gov_new_york 38 730');
+    expect(played.player.commands).toContain('transfer st_gov_new_york us_dc_militia blocks 999');
+    expect(throughJuly(played.player)).toContain('Sent: call 38 regiments for 730 days from st_gov_new_york.');
+    expect(throughJuly(played.player)).toContain('Sent: transfer 999 blocks from st_gov_new_york to us_dc_militia.');
     for (const [id, options] of Object.entries(CHOICES)) {
       for (const option of options) {
         expect.soft(played.player.commands.some(c => c.startsWith(`decide ${id} `) && c.split(' ').slice(2).includes(option)), `Historical choice ${id}/${option} was never offered or sent; owner lane 1.11`).toBe(true);
@@ -232,11 +259,17 @@ describe('R86: the history months through the player’s console (1A criterion 2
     expect(answer, 'No completed audience is printed in the history months; owner lane 1.5/1.13').toBe(true);
   });
 
-  // R88: no battle reaches this desk by 31 July. R85 / lane 1.14 calibration
-  // owns the 1A operation gap. A battle must turn this into an unexpected pass;
-  // then replace it.fails with a plain it. No other step is an expected failure.
-  it.fails('reads a battle day’s dispatches with their hours in chronological order', () => {
-    expect(battleDispatchProblems(throughJuly(played.player))).toEqual([]);
+  // S1: the public long-term call, concentration and resumed goal now bring battle dispatches by July.
+  // Existence and chronology are ordinary independent assertions.
+  it('receives at least one hour-stamped battle dispatch by 31 July', () => {
+    expect(throughJuly(played.player).some(line => /wire-dispatch .*written day \d+ at \d\d:00.*going (?:well|badly)/.test(line))).toBe(true);
+  });
+
+  it('keeps every received battle-day dispatch sequence in chronological order', () => {
+    // Absence is tested separately above; an ordering defect must never satisfy an expected failure.
+    // Each turn is a printed received list. Reopening inbox all repeats already-read reports and
+    // does not constitute another chronological sequence of newly received dispatches.
+    for (const turn of played.player.turns) expect(battleDispatchProblems(throughJulyLines(turn), false)).toEqual([]);
   });
 });
 
@@ -250,6 +283,8 @@ describe('R86 supplemental battle route, not a substitute for the history months
     expect(battleDispatchProblems([...battle].reverse()).join('\n')).toContain('not in chronological order');
     expect(battleDispatchProblems(battle.map(line => line.replace(/ at \d\d:00/, ''))).join('\n')).toContain('No hour-stamped');
     expect(battleDispatchProblems([]).join('\n')).toContain('No hour-stamped');
+    expect(battleDispatchProblems([], false)).toEqual([]);
+    expect(battleDispatchProblems([...battle].reverse(), false).join('\n')).toContain('not in chronological order');
     if (process.env.R86_EVIDENCE_DIR) {
       mkdirSync(process.env.R86_EVIDENCE_DIR, { recursive: true });
       writeFileSync(join(process.env.R86_EVIDENCE_DIR, 'supplemental-transcript.txt'), `${p.transcript.join('\n')}\n`);

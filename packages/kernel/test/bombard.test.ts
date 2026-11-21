@@ -182,6 +182,35 @@ function play(g: ReturnType<typeof game>, objective: string, days: number) {
   return { state: s, telemetry, fell };
 }
 
+describe('bombardment record cadence', () => {
+  it('closes an interrupted record on its last firing day and starts a fresh day-one record', () => {
+    const g = game({ boldness: 'high' });
+    const guns = [toId('forceBlock', 'a_guns')];
+    const first = bombardFort(ctxFor(g.world, g.state, 1, [...TICK_MECHANICS, ...MAP_MECHANICS]), g.state, P('a_army'), guns, R('fort'), F('a'), []).state;
+    const original = Object.values(first.battleRecords)[0]!;
+    const third = bombardFort(ctxFor(g.world, first, 3, [...TICK_MECHANICS, ...MAP_MECHANICS]), first, P('a_army'), guns, R('fort'), F('a'), []).state;
+    const records = Object.values(third.battleRecords).sort((a, b) => a.battleStartDay - b.battleStartDay);
+    expect(records).toHaveLength(2);
+    expect(records[0]).toEqual({ ...original, battleEndDay: 1 });
+    expect(records[1]).toMatchObject({ battleStartDay: 3, battleEndDay: null, battleDays: [{ bdayDay: 3, bdayNumber: 1 }] });
+  });
+
+  it('retains separate bounded records when the maximum is one firing day, without overwriting yesterday', () => {
+    const g = game();
+    const raw = g.world.map.world;
+    const world = worldOf(indexWorld({ ...raw, rules: { ...raw.rules, combat: { ...raw.rules.combat, maxBattleDays: 1 } } }), g.world.start);
+    const guns = [toId('forceBlock', 'a_guns')];
+    const first = bombardFort(ctxFor(world, g.state, 1, [...TICK_MECHANICS, ...MAP_MECHANICS]), g.state, P('a_army'), guns, R('fort'), F('a'), []).state;
+    const original = Object.values(first.battleRecords)[0]!;
+    expect(original.battleEndDay).toBe(1);
+    const second = bombardFort(ctxFor(world, first, 2, [...TICK_MECHANICS, ...MAP_MECHANICS]), first, P('a_army'), guns, R('fort'), F('a'), []).state;
+    const records = Object.values(second.battleRecords).sort((a, b) => a.battleStartDay - b.battleStartDay);
+    expect(records).toHaveLength(2);
+    expect(records[0]).toEqual(original);
+    expect(records[1]).toMatchObject({ battleStartDay: 2, battleEndDay: 2, battleDays: [{ bdayDay: 2, bdayNumber: 1 }] });
+  });
+});
+
 describe('a fort across water is bombarded until its commander surrenders (tick/bombard.ts)', () => {
   it('keeps the daily fire in one battle, with the attacking post as its cause, then closes and prunes it', () => {
     const { state, telemetry } = play(game({ recordTerms: true }), 'fort', 15);

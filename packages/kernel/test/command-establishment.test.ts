@@ -53,6 +53,18 @@ describe('an appointment establishes a declared command', () => {
     expect(changed.postStates[POST('a_reserve')]!.postHolder).toBe(P('a_bold'));
     expect(changed.postStates[POST('a_new')]!.postHolder).toBe(P('a_spy'));
   });
+  it('keeps the source holder when the declared destination parent changes side in transit', () => {
+    const world = fixture();
+    const start = createState(world, { seed: 1 });
+    const sent = tick(world, start, [{ day: 1, seat: seatIdFor(P('a_lead')), command: order }]);
+    expect(sent.rejections).toEqual([]);
+    const parent = sent.state.postStates[POST('a_office')]!;
+    let state: State = { ...sent.state, postStates: { ...sent.state.postStates, [POST('a_office')]: { ...parent, postDepartment: world.start.posts.find(p => p.id === POST('b_office'))!.department } } };
+    for (let day = 2; day <= 6; day++) state = tick(world, state, [], { freeze: true }).state;
+    expect(state.postStates[POST('a_reserve')]!.postHolder).toBe(P('a_bold'));
+    expect(state.postStates[POST('a_new')]).toBeUndefined();
+  });
+
   it('does not release a different source holder when that source changes in transit', () => {
     const world = fixture(); const start = createState(world, { seed: 1 });
     const sent = tick(world, start, [{ day: 1, seat: seatIdFor(P('a_lead')), command: order }]);
