@@ -41,16 +41,22 @@ function openingReportOf(state: State, id: MessageId): KnownReport {
 }
 
 export type KnowledgeCache = WeakMap<SeatKnowledge, { readonly opening: KnownReport; readonly claims: readonly ReportClaim[] | undefined; readonly knowledge: SeatKnowledge }>;
+/** Resolved public bulletins survive replacement of a seat's ordinary report list. */
+export type OpeningReportCache = WeakMap<KnownReport, { readonly claims: readonly ReportClaim[] | undefined; readonly report: KnownReport }>;
 
 /** What the seat holds, resolving its opening bulletin for the map without copying it into saved knowledge. */
-export function knowledgeOf(state: State, seat: SeatId, cache?: KnowledgeCache): SeatKnowledge {
+export function knowledgeOf(state: State, seat: SeatId, cache?: KnowledgeCache, openings?: OpeningReportCache): SeatKnowledge {
   const held = storedKnowledgeOf(state, seat);
   if (held.knownOpeningControl === undefined) return held;
   const stored = state.openingControlReports?.[held.knownOpeningControl];
   const previous = cache?.get(held);
   if (previous !== undefined && previous.opening === stored && previous.claims === state.openingControlClaims) return previous.knowledge;
-  const opening = openingReportOf(state, held.knownOpeningControl);
-  const knowledge = { ...held, knownControlReports: [{ ...opening, knownPublicOpening: true as const }, ...(held.knownControlReports ?? [])] };
+  let opening = stored === undefined ? undefined : openings?.get(stored);
+  if (opening === undefined || opening.claims !== state.openingControlClaims) {
+    opening = { claims: state.openingControlClaims, report: { ...openingReportOf(state, held.knownOpeningControl), knownPublicOpening: true } };
+    openings?.set(stored!, opening);
+  }
+  const knowledge = { ...held, knownControlReports: [opening.report, ...(held.knownControlReports ?? [])] };
   cache?.set(held, { opening: stored!, claims: state.openingControlClaims, knowledge });
   return knowledge;
 }
@@ -94,6 +100,43 @@ export function deliverReport(state: State, seat: SeatId, report: KnownReport, t
     knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownReports } },
     reportTruth: state.reportTruth[report.id] === undefined ? { ...state.reportTruth, [report.id]: truth } : state.reportTruth,
   };
+}
+
+export interface ReportDelivery {
+  readonly seat: SeatId;
+  readonly report: KnownReport;
+  readonly truth: ReportTruth;
+}
+
+/** Consecutive arrivals, with no intervening reader: copy each table and each seat's list only once. */
+export function deliverReports(state: State, deliveries: readonly ReportDelivery[]): State {
+  if (deliveries.length === 0) return state;
+  const knowledge = { ...state.knowledgeBySeat };
+  let truth: Record<MessageId, ReportTruth> | undefined;
+  const lists = new Map<SeatId, KnownReport[]>();
+  const ids = new Map<SeatId, Set<MessageId>>();
+  for (const d of deliveries) {
+    let reports = lists.get(d.seat);
+    if (reports === undefined) {
+      const held = storedKnowledgeOf(state, d.seat);
+      reports = [...held.knownReports];
+      lists.set(d.seat, reports);
+      ids.set(d.seat, new Set([
+        ...held.knownReports.map(r => r.id), ...(held.knownControlReports ?? []).map(r => r.id),
+        ...(held.knownOpeningControl === undefined ? [] : [held.knownOpeningControl]),
+      ]));
+    }
+    const seen = ids.get(d.seat)!;
+    if (seen.has(d.report.id)) throw new RangeError(`seat ${d.seat} already holds report ${d.report.id}`);
+    seen.add(d.report.id);
+    reports.push(d.report);
+    if ((truth ?? state.reportTruth)[d.report.id] === undefined) {
+      truth ??= { ...state.reportTruth };
+      truth[d.report.id] = d.truth;
+    }
+  }
+  for (const [seat, reports] of lists) knowledge[seat] = { ...storedKnowledgeOf(state, seat), knownReports: reports.sort(reportOrder) };
+  return { ...state, knowledgeBySeat: knowledge, reportTruth: truth ?? state.reportTruth };
 }
 
 /**

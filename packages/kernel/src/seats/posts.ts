@@ -17,7 +17,7 @@
  */
 import { strictCompare } from '../compare.ts';
 import { capitalOf } from '../command/capitals.ts';
-import { sideOfPerson, chainBelow, commandedBlocks, factionOfPost, heldPost, postIdsOf, postStateOf } from '../command/command.ts';
+import { sideOfPerson, chainBelow, commandedBlocks, factionOfPost, heldPost, postIdsOf, postStateOf, type HeldPostCache } from '../command/command.ts';
 import type { FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
 import type { State } from '../root-state.ts';
 import type { PostKindRole } from '../world/world.ts';
@@ -40,7 +40,8 @@ export function isFieldPost(state: State, post: PostId): boolean {
 
 /** Field posts with a holder on a side, in id order: the commanders the seats layer asks and hears from. */
 export function fieldPosts(world: SeatsWorld, state: State): PostId[] {
-  return postIdsOf(state).filter((id) => state.postStates[id]!.postHolder !== null && isFieldPost(state, id) && postFaction(world, state, id) !== null);
+  const commanding = new Set(Object.values(state.forceAssignments));
+  return postIdsOf(state).filter((id) => state.postStates[id]!.postHolder !== null && commanding.has(id) && postFaction(world, state, id) !== null);
 }
 
 /** Every post below `post` in the chain, and `post` itself. */
@@ -87,12 +88,12 @@ export function headquartersOf(world: SeatsWorld, state: State, post: PostId): R
 }
 
 /** Where a person is: his post's headquarters, or his side's capital for a man without a post (a principal). */
-export function whereIsPerson(world: SeatsWorld, state: State, person: PersonId): RegionId {
+export function whereIsPerson(world: SeatsWorld, state: State, person: PersonId, cache?: HeldPostCache): RegionId {
   const principalSide = world.factionIds.find((f) => world.faction(f).principal === person);
   if (principalSide !== undefined) return capitalOf(state, principalSide);
-  const post = heldPost(state, person);
+  const post = heldPost(state, person, cache);
   if (post !== null) return headquartersOf(world, state, post);
-  const faction = sideOfPerson(world.map, state, person);
+  const faction = sideOfPerson(world.map, state, person, cache);
   if (faction === null || !world.factionIds.includes(faction)) throw new RangeError(`${person} holds no post and has no side's capital to stand in`);
   return capitalOf(state, faction);
 }
@@ -115,9 +116,10 @@ export function filterPostOf(world: SeatsWorld, state: State, faction: FactionId
 
 /** Offices: held posts on a side that are neither field nor filter posts, and whose holder is not the principal. */
 export function offices(world: SeatsWorld, state: State): PostId[] {
+  const commanding = new Set(Object.values(state.forceAssignments));
   return postIdsOf(state).filter((id) => {
     const p = state.postStates[id]!;
-    if (p.postHolder === null || isFieldPost(state, id)) return false;
+    if (p.postHolder === null || commanding.has(id)) return false;
     const faction = postFaction(world, state, id);
     if (faction === null || !world.factionIds.includes(faction)) return false;
     if (world.faction(faction).principal === p.postHolder) return false;

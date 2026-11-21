@@ -35,6 +35,7 @@ import type { DepartmentId, FactionId, ForceBlockId, InstallationId, PersonId, P
 import type { State } from '../root-state.ts';
 import { parseIsoDate } from '../world/calendar.ts';
 import type { WorldIndex } from '../world/index.ts';
+import type { PersonRecord } from '../world/people.ts';
 import type { PostLinkKind, ScenarioStart } from '../world/scenario.ts';
 
 /** A department change waiting for its date. */
@@ -220,8 +221,30 @@ export function postIdsOf(state: State): PostId[] {
   return (Object.keys(state.postStates) as PostId[]).sort(strictCompare);
 }
 
-/** The post a person holds, or null. */
-export function heldPost(state: State, person: PersonId): PostId | null {
+/** A caller's inverse lookup over immutable post tables, never part of State. */
+export type HeldPostCache = WeakMap<PostTable, ReadonlyMap<PersonId, PostId>>;
+
+export function createHeldPostCache(): HeldPostCache {
+  return new WeakMap();
+}
+
+/** The post a person holds, or null. A caller may reuse the inverse of an unchanged post table. */
+export function heldPost(state: State, person: PersonId, cache?: HeldPostCache): PostId | null {
+  if (cache !== undefined) {
+    let holders = cache.get(state.postStates);
+    if (holders === undefined) {
+      const next = new Map<PersonId, PostId>();
+      for (const id of Object.keys(state.postStates) as PostId[]) {
+        const holder = state.postStates[id]!.postHolder;
+        if (holder === null) continue;
+        const previous = next.get(holder);
+        if (previous === undefined || strictCompare(id, previous) < 0) next.set(holder, id);
+      }
+      holders = next;
+      cache.set(state.postStates, holders);
+    }
+    return holders.get(person) ?? null;
+  }
   // A lookup need not sort the entire table. Keep the same first-in-code-unit-order
   // result even for a malformed table in which a person holds more than one post.
   let first: PostId | null = null;
@@ -229,6 +252,21 @@ export function heldPost(state: State, person: PersonId): PostId | null {
     if (state.postStates[id]!.postHolder === person && (first === null || strictCompare(id, first) < 0)) first = id;
   }
   return first;
+}
+
+/**
+ * The unposted roster on a side, in World order. A menu needs every available person:
+ * scan the posts once rather than looking up each person's post separately. With no
+ * post, a person's side is his chosen service after resignation or his starting side,
+ * exactly as in sideOfPerson. No derived roster is saved or shared between States.
+ */
+export function unpostedPeopleOnSide(map: WorldIndex, state: State, faction: FactionId | null): PersonRecord[] {
+  const holders = new Set(Object.values(state.postStates).map(p => p.postHolder));
+  return map.world.people.filter(p => {
+    if (holders.has(p.id)) return false;
+    const chosen = state.personService?.[p.id];
+    return (chosen?.serviceChoice === 'resign' ? chosen.serviceFaction : p.faction) === faction;
+  });
 }
 
 /** The faction a post serves, through its department's side today (0065); null for a neutral government's post. */
@@ -247,12 +285,12 @@ export function factionOfPost(_map: WorldIndex, state: State, id: PostId): Facti
  * neutral state's officer of no side follows his state into a side). A man in a post past `command`'s guard, the other side's man in
  * one of ours, keeps his own side, so no guard that reads this hands anything to the other side (standing review S6).
  */
-export function sideOfPerson(map: WorldIndex, state: State, person: PersonId): FactionId | null {
+export function sideOfPerson(map: WorldIndex, state: State, person: PersonId, cache?: HeldPostCache): FactionId | null {
   const record = map.world.people.find((x) => x.id === person);
   if (record === undefined) throw new CommandError([`${person} is not a person in the World`]);
   const chosen = state.personService?.[person];
   if (chosen?.serviceChoice === 'resign') return chosen.serviceFaction;
-  const post = heldPost(state, person);
+  const post = heldPost(state, person, cache);
   if (post === null) return record.faction;
   const side = factionOfPost(map, state, post);
   const startSide = map.world.departments.find((d) => d.id === postStateOf(state, post).postDepartment)?.faction ?? null;

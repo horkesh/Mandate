@@ -39,7 +39,7 @@ import type { State } from '../root-state.ts';
 import type { OptionView } from '../seats/api.ts';
 import { applyPeopleChanges, type PeopleChange } from '../people/people.ts';
 import { morningGround } from '../seats/requests.ts';
-import { heldPost, sideOfPerson } from '../command/command.ts';
+import { createHeldPostCache, heldPost, sideOfPerson } from '../command/command.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import type { Telemetry } from '../telemetry.ts';
 import { createViewCache, type ViewCache } from '../view/view.ts';
@@ -145,6 +145,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   const battleOrders = new Map<PostId, BattleOrders>();
   const ctx: TickContext = {
     world,
+    postHolders: createHeldPostCache(),
     latency: ground.latency,
     day,
     seed: state.gameSeed,

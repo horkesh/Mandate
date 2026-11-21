@@ -58,14 +58,15 @@ function flagsSet<T extends { readonly flag: string; readonly permille: number }
   return { sum: set.reduce((s, f) => s + f.permille, 0), set };
 }
 
-/** Whether the lines' side has a force standing in `region`: a block with men present, not surrendered (lane 1.3 keeps surrendered blocks in State). */
-function linesForceIn(state: State, region: RegionId, lines: FactionId): boolean {
-  return (Object.keys(state.forceLocations) as (keyof typeof state.forceLocations)[]).some((b) => {
-    if (state.forceLocations[b]!.locRegion !== region) return false;
+/** Regions with the lines' force present: unknown strengths and surrendered blocks do not count. Derived for one call only. */
+function linesForceRegions(state: State, lines: FactionId): ReadonlySet<RegionId> {
+  const regions = new Set<RegionId>();
+  for (const b of Object.keys(state.forceLocations) as (keyof typeof state.forceLocations)[]) {
     const block = state.forceBlockStates[b];
-    if (block === undefined || block.fbSurrenderedDay !== null || (block.fbStrength ?? 0) <= 0) return false;
-    return state.departmentFactions[block.fbDepartment] === lines;
-  });
+    if (block === undefined || block.fbSurrenderedDay !== null || (block.fbStrength ?? 0) <= 0) continue;
+    if (state.departmentFactions[block.fbDepartment] === lines) regions.add(state.forceLocations[b]!.locRegion);
+  }
+  return regions;
 }
 
 /** Whether a region is governed by the enslaving side: a government on a side other than the lines' (not neutral, not unknown, not the lines' own). */
@@ -98,6 +99,10 @@ export function selfEmancipationTerms(map: WorldIndex, state: State, rules: Self
   const pressure = flagsSet(state, rules.pressureFlags);
   const policyFlags = flagsSet(state, rules.policyFlags);
   const policy = Math.max(0, Math.min(1000, rules.policyBase + policyFlags.sum));
+  // Adjacent census regions often ask about the same force locations. Enumerate
+  // them at most once, and only if an eligible census region needs the lookup.
+  let forceRegions: ReadonlySet<RegionId> | undefined;
+  const forceIn = (region: RegionId): boolean => (forceRegions ??= linesForceRegions(state, lines)).has(region);
   const out: SelfEmancipationTerm[] = [];
   for (const c of [...map.world.census].sort((a, b) => strictCompare(a.region, b.region))) {
     if (c.enslavedPopulation <= 0 || protectedHere.has(c.region)) continue;
@@ -108,13 +113,13 @@ export function selfEmancipationTerms(map: WorldIndex, state: State, rules: Self
     // its force there reaching further.
     const here = holds(c.region);
     const near = here
-      ? [{ region: c.region, force: linesForceIn(state, c.region, lines) }]
+      ? [{ region: c.region, force: forceIn(c.region) }]
       : [...new Set(edgesOf(map, c.region).map((e) => otherEnd(e, c.region)))]
           .filter((r) => {
             const k = map.regions.get(r)?.kind;
             return (k === 'land' || k === 'key_point') && holds(r);
           })
-          .map((r) => ({ region: r, force: linesForceIn(state, r, lines) }))
+          .map((r) => ({ region: r, force: forceIn(r) }))
           .sort((a, b) => Number(b.force) - Number(a.force) || shareOf(map, state.regionControl, b.region, lines) - shareOf(map, state.regionControl, a.region, lines) || strictCompare(a.region, b.region));
     const best = near[0] ?? null;
     const reach = best === null ? 0 : best.force ? rules.reachWithForce : rules.reachLinesOnly;

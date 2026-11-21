@@ -35,6 +35,28 @@ function tell(state: State, id: string, author: string, stamp: number, arrival: 
 }
 
 describe('the seat’s claimed control', () => {
+  it('reuses the opening view when other reports change, and invalidates both opening inputs', () => {
+    const w = world();
+    const state = createState(w, { seed: 1 });
+    const cache = createViewCache();
+    const original = viewFor(w, state, seat, cache).reports[0]!;
+    const told = tell(state, 'new-paper', 'a_sec', 1, 2, []);
+    const after = viewFor(w, told, seat, cache);
+    expect(after.reports.find(r => r.id === original.id)).toBe(original);
+    expect(after).toEqual(viewFor(w, told, seat));
+    const changedClaims = { ...told, openingControlClaims: [control(region, a, 1000)] };
+    const changed = viewFor(w, changedClaims, seat, cache);
+    expect(changed.reports.find(r => r.id === original.id)).not.toBe(original);
+    expect(changed).toEqual(viewFor(w, changedClaims, seat));
+    const stored = changedClaims.openingControlReports![original.id]!;
+    const changedReport = { ...changedClaims, openingControlReports: {
+      ...changedClaims.openingControlReports, [original.id]: { ...stored, knownReceivedDay: 9 },
+    } };
+    expect(viewFor(w, changedReport, seat, cache)).toEqual(viewFor(w, changedReport, seat));
+    // Returning to the old State must never keep the replacement's claims or stamp.
+    expect(viewFor(w, state, seat, cache)).toEqual(viewFor(w, state, seat));
+  });
+
   it('never fills a control-only opening override with government truth', () => {
     const base = indexedFixture();
     const governments = base.start.control.map(row => ({ region: row.region, department: toId('department', 'a_war'), provenance: [] }));

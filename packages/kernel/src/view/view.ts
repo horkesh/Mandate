@@ -11,9 +11,9 @@
  * re-rendering them. Every view object is frozen: a seat cannot edit what it
  * was shown.
  */
-import type { EdgeId, PersonId, RegionId, SeatId } from '../ids.ts';
+import type { EdgeId, FactionId, PersonId, RegionId, SeatId } from '../ids.ts';
 import { latestEnemyClaims, latestObstructionClaims, latestWorksClaims, perceived } from '../knowledge/beliefs.ts';
-import { knowledgeOf, reportsForView, type KnowledgeCache, type KnownReport, type SeatKnowledge } from '../knowledge/knowledge.ts';
+import { knowledgeOf, reportsForView, type KnowledgeCache, type OpeningReportCache, type KnownReport, type SeatKnowledge } from '../knowledge/knowledge.ts';
 import type { PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import { seatOf } from '../seats/seats.ts';
@@ -23,14 +23,21 @@ import { heldPost, sideOfPerson } from '../command/command.ts';
 import { whereIsPerson } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import type { WorldIndex } from '../world/index.ts';
+import { createFreezeLedger, type FreezeLedger } from '../tick/freeze.ts';
 import { claimedControlView } from './claimed-control.ts';
 import { controlEvidence } from '../knowledge/control-beliefs.ts';
 import { nextPeopleChange, peopleProjection, type PeopleProjection } from './people.ts';
 import type { ReportClaim } from '../knowledge/report.ts';
+import type { Candidate } from '../seats/api.ts';
 import type { BeliefView, ClaimView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
 
 export interface ViewCache {
+  /** Request graphs already deeply frozen by this caller; shared view children need no second walk. */
+  readonly requestFreeze: FreezeLedger;
+  /** The available roster depends on command/service/rank/status inputs, not the day or incoming papers. */
+  readonly candidates: Map<FactionId, { readonly world: SeatsWorld; readonly posts: State['postStates']; readonly service: State['personService']; readonly ranks: State['personRanks']; readonly status: State['personStatus']; readonly candidates: readonly Candidate[] }>;
   readonly knowledge: KnowledgeCache;
+  readonly openings: OpeningReportCache;
   readonly reports: WeakMap<KnownReport, ReportView>;
   readonly lists: WeakMap<SeatKnowledge, readonly ReportView[]>;
   /** Beliefs depend on what he holds and on how he reads it, so both are in the key (review F4). */
@@ -45,7 +52,7 @@ export interface ViewCache {
 }
 
 export function createViewCache(): ViewCache {
-  return { knowledge: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
+  return { requestFreeze: createFreezeLedger(), candidates: new Map(), knowledge: new WeakMap(), openings: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
 }
 
 function freeze<T extends object>(o: T): T {
@@ -122,7 +129,7 @@ function same<T>(a: readonly T[], b: readonly T[]): boolean {
 export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: ViewCache = createViewCache()): SeatView {
   const person = world.person(seatOf(state, seat).seatPerson);
   const post = heldPost(state, person.id);
-  const knowledge = knowledgeOf(state, seat, cache.knowledge);
+  const knowledge = knowledgeOf(state, seat, cache.knowledge, cache.openings);
 
   let reports = cache.lists.get(knowledge);
   if (reports === undefined) {

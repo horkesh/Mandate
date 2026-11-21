@@ -20,7 +20,7 @@ import { mintMessageId, type IdMint, type Hop, type TransitMessage } from '../me
 import type { State } from '../root-state.ts';
 import type { StateForces, EnlistmentRenewal } from '../situations/types.ts';
 import { recordFire, type Telemetry } from '../telemetry.ts';
-import { heldPost, sideOfPerson, type SideChange } from '../command/command.ts';
+import { heldPost, sideOfPerson, type HeldPostCache, type SideChange } from '../command/command.ts';
 import { filterPostOf, whereIsPerson } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 
@@ -148,6 +148,8 @@ export type MapEvent =
 
 export interface TickContext {
   readonly world: SeatsWorld;
+  /** Inverse holder lookups shared by this tick's report routes; keyed by the exact post table. */
+  readonly postHolders?: HeldPostCache;
   /** Latency on the morning's map: courier days from the edges, the wire of whoever holds each region (0052). */
   readonly latency: LatencyMap;
   readonly day: number;
@@ -175,12 +177,12 @@ export function fire(ctx: TickContext, mechanic: string, change = 1): void {
 
 /** Where a person is: his post's headquarters, or his faction's seat region for a principal without a post. */
 export function whereIs(ctx: TickContext, state: State, person: PersonId): RegionId {
-  return whereIsPerson(ctx.world, state, person);
+  return whereIsPerson(ctx.world, state, person, ctx.postHolders);
 }
 
 /** A person's side today (0065: his post's while he holds one); every man who sends or receives in the seats layer has one. */
 export function sideOf(ctx: TickContext, state: State, person: PersonId): FactionId {
-  const f = sideOfPerson(ctx.world.map, state, person);
+  const f = sideOfPerson(ctx.world.map, state, person, ctx.postHolders);
   if (f === null) throw new RangeError(`${person} has no side`);
   return f;
 }
@@ -190,7 +192,7 @@ export function sideOf(ctx: TickContext, state: State, person: PersonId): Factio
  * requisition, lane 1.11), its recipient's, since he sends it toward that side's lines.
  */
 function travelSide(ctx: TickContext, state: State, sender: PersonId, recipient: PersonId | null): FactionId {
-  const own = sideOfPerson(ctx.world.map, state, sender);
+  const own = sideOfPerson(ctx.world.map, state, sender, ctx.postHolders);
   if (own !== null || recipient === null) return own ?? sideOf(ctx, state, sender);
   return sideOf(ctx, state, recipient);
 }
@@ -272,7 +274,7 @@ export function sendReport(
   const filterId = filterPostOf(world, state, faction.id);
   const filterHolder = filterId === null ? null : state.postStates[filterId]!.postHolder;
   const filter = filterId !== null && filterHolder !== null && filterHolder !== from ? { id: filterId, holder: filterHolder } : undefined;
-  const toPost = heldPost(state, report.to);
+  const toPost = heldPost(state, report.to, ctx.postHolders);
   const addressee: Hop = { hopPerson: report.to, hopPost: toPost, hopRole: 'addressee' };
   // Only a report that really goes by wire meets the filter; one sent off the wire rides past it.
   const throughFilter = filter !== undefined && report.to === faction.principal && takenRoute(ctx, state, route, from, fromRegion, whereIs(ctx, state, report.to), report.to) === 'wire';

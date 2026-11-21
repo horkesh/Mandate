@@ -6,6 +6,7 @@ import {
   CommandError,
   commandedBlocks,
   createTemporaryPost,
+  createHeldPostCache,
   dissolveOperation,
   factionOfPost,
   heldPost,
@@ -13,6 +14,8 @@ import {
   initialDepartmentSides,
   relieveHolder,
   transferForce,
+  unpostedPeopleOnSide,
+  sideOfPerson,
 } from '../src/command/command.ts';
 import { applyForces, factionOfBlock, ForcesError, initialForces, sumStrength } from '../src/forces/forces.ts';
 import { blocksIn, initialLocations, MovementError } from '../src/movement/movement.ts';
@@ -22,8 +25,8 @@ import { createState, emptyState } from '../src/tick/setup.ts';
 import type { WorldIndex } from '../src/world/index.ts';
 import type { ScenarioStart } from '../src/world/scenario.ts';
 import { worldOf } from './support/tick-context.ts';
-import { B, block, DEP, forcesIndex, forcesStart, P, PER, post } from './support/forces-fixture.ts';
-import { depot, edge, R, region } from './support/map-fixture.ts';
+import { B, block, DEP, forcesIndex, forcesStart, P, PER, post, person } from './support/forces-fixture.ts';
+import { depot, edge, F, R, region } from './support/map-fixture.ts';
 
 const MAP = forcesIndex({
   regions: ['a1', 'a2', 'mid', 'b2', 'b1'].map((r) => region(r)).concat([region('w', 'river')]),
@@ -60,6 +63,78 @@ function stateFrom(map: WorldIndex, start: ScenarioStart): State {
 }
 
 const S = stateFrom(MAP, START);
+
+describe('caller-owned holder lookups', () => {
+  it('enumerates an immutable post table once for every person and side query', () => {
+    let scans = 0;
+    const state = { ...S, postStates: new Proxy(S.postStates, { ownKeys: target => { scans++; return Reflect.ownKeys(target); } }) };
+    const cache = createHeldPostCache();
+    for (let i = 0; i < 3; i++) for (const person of MAP.world.people) {
+      expect(heldPost(state, person.id, cache)).toBe(heldPost(S, person.id));
+      expect(sideOfPerson(MAP, state, person.id, cache)).toBe(sideOfPerson(MAP, S, person.id));
+    }
+    expect(scans).toBe(1);
+  });
+
+  it('keeps duplicate ordering, own properties and old-State reads after relief or appointment', () => {
+    const holder = PER('a_gen');
+    const posts = Object.assign(Object.create({ [P('a_inherited')]: S.postStates[P('a_army')]! }), {
+      [P('z_post')]: S.postStates[P('a_army')]!, [P('a_post')]: S.postStates[P('a_army')]!,
+    });
+    const state = { ...S, postStates: posts };
+    const cache = createHeldPostCache();
+    expect(heldPost(state, holder, cache)).toBe('a_post');
+    const next = relieveHolder(state, P('a_post'));
+    expect(heldPost(next, holder, cache)).toBe('z_post');
+    const empty = relieveHolder(next, P('z_post'));
+    expect(heldPost(empty, holder, cache)).toBeNull();
+    const appointed = appointHolder(MAP, empty, P('a_post'), holder);
+    expect(heldPost(appointed, holder, cache)).toBe('a_post');
+    expect(heldPost(state, holder, cache)).toBe('a_post');
+    expect(heldPost(next, holder, cache)).toBe('z_post');
+    expect(heldPost(state, PER('b_lead'), cache)).toBeNull();
+  });
+
+  it('reads department sides and service choices freshly even when the holder table is unchanged', () => {
+    const cache = createHeldPostCache();
+    const person = PER('a_gen');
+    const changed = { ...S, departmentFactions: { ...S.departmentFactions, [DEP('a_war')]: F('b') } };
+    const resigned = { ...changed, personService: { [person]: { serviceFaction: F('a'), serviceBloc: null, serviceChoice: 'resign' as const, serviceDay: 1 } } };
+    for (const state of [S, changed, resigned, S]) {
+      expect(sideOfPerson(MAP, state, person, cache)).toBe(sideOfPerson(MAP, state, person));
+    }
+  });
+});
+
+describe('unposted people on a side', () => {
+  it('matches individual side and post lookups, reading the post table once for the whole roster', () => {
+    const map = forcesIndex({ regions: [region('a1')], edges: [], people: [person('spare', 'a'), person('stayed', 'a'), person('resigned', 'a'), person('neutral', null), person('a_gen', 'a')] });
+    const state: State = { ...S, personService: {
+      [PER('resigned')]: { serviceFaction: F('b'), serviceBloc: null, serviceChoice: 'resign', serviceDay: 1 },
+      [PER('stayed')]: { serviceFaction: F('b'), serviceBloc: null, serviceChoice: 'stay', serviceDay: 1 },
+    } };
+    const expected = (faction: ReturnType<typeof F> | null) => map.world.people.filter(p => sideOfPerson(map, state, p.id) === faction && heldPost(state, p.id) === null);
+    let scans = 0;
+    const counted: State = { ...state, postStates: new Proxy(state.postStates, { ownKeys: target => { scans++; return Reflect.ownKeys(target); } }) };
+    for (const faction of [F('a'), F('b'), null]) {
+      scans = 0;
+      expect(unpostedPeopleOnSide(map, counted, faction)).toEqual(expected(faction));
+      expect(scans).toBe(1);
+    }
+    expect(unpostedPeopleOnSide(map, state, F('a')).map(p => p.id)).toEqual(['spare', 'stayed']);
+    expect(unpostedPeopleOnSide(map, state, F('b')).map(p => p.id)).toEqual(['resigned']);
+  });
+
+  it('ignores inherited posts and recomputes after a relief without changing older States', () => {
+    const inherited = { [P('inherited')]: { ...S.postStates[P('a_army')]!, postHolder: PER('b_lead') } };
+    const state = { ...S, postStates: Object.assign(Object.create(inherited), S.postStates) };
+    const next = relieveHolder(state, P('a_army'));
+    expect(unpostedPeopleOnSide(MAP, state, F('b')).some(p => p.id === PER('b_lead'))).toBe(true);
+    expect(unpostedPeopleOnSide(MAP, state, F('a')).some(p => p.id === PER('a_gen'))).toBe(false);
+    expect(unpostedPeopleOnSide(MAP, next, F('a')).some(p => p.id === PER('a_gen'))).toBe(true);
+    expect(unpostedPeopleOnSide(MAP, state, F('a')).some(p => p.id === PER('a_gen'))).toBe(false);
+  });
+});
 
 describe('setup: forces, locations and command copied once from the start (0050)', () => {
   it('copies blocks with strength, stores in milli-days and unknowns kept unknown', () => {

@@ -7,7 +7,7 @@
  * for orders, and is shown the plans submitted to him that have reached him.
  */
 import { strictCompare } from '../compare.ts';
-import { commandedBlocks, declaredAppointment, departmentSide, heldPost, sideOfPerson } from '../command/command.ts';
+import { commandedBlocks, declaredAppointment, departmentSide, heldPost, sideOfPerson, unpostedPeopleOnSide } from '../command/command.ts';
 import { commanderView, mayAttackToday, presenceByRegion, sideCommand } from '../combat/battle.ts';
 import { believedRatio, commitAtDawn, cutOffChoice, pursuitChoice, standAtNight } from '../combat/decide.ts';
 import { BATTLE_ORDER_OPTIONS } from '../combat/order-kinds.ts';
@@ -145,7 +145,7 @@ function doctrineView(world: SeatsWorld, state: State, faction: FactionId): Doct
   };
 }
 
-export function principalMenu(world: SeatsWorld, state: State, faction: FactionId, ground: MorningGround): PrincipalMenu {
+export function principalMenu(world: SeatsWorld, state: State, faction: FactionId, ground: MorningGround, cache?: ViewCache): PrincipalMenu {
   const f = world.faction(faction);
   // Typical days to a post's seat in pack data, or where it stood at the start of play, or else his own side's capital:
   // the principal is not told where it is today (exit review P2).
@@ -191,11 +191,22 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   const vacancies: Vacancy[] = ownPosts
     .filter((id) => state.postStates[id]!.postHolder === null && !unreported.has(id) && heldAtStart.has(id) && commandedBlocks(state, id).length > 0)
     .map((id) => ({ post: id, arm: commandedBlocks(state, id).every((b) => isNaval(world.map, state, b)) ? ('naval' as const) : ('land' as const), routes: routesTo(id), appointing: inTransitTo(state, f.principal, id).includes('appoint') }));
-  const rankIndex = new Map(world.map.world.vocabularies.ranks.map((r, i) => [r.id as string, i]));
-  const candidates: Candidate[] = world.map.world.people
-    .filter((p) => p.id !== f.principal && sideOfPerson(world.map, state, p.id) === faction && heldPost(state, p.id) === null && (state.personStatus[p.id]?.statusKind ?? 'serving') === 'serving')
-    .map((p) => ({ person: p.id, kind: p.kind as string, seniority: Math.max(-1, ...Object.values(state.personRanks[p.id] ?? {}).map((r) => rankIndex.get(r.rankTerm) ?? -1)) }))
-    .sort((a, b) => b.seniority - a.seniority || strictCompare(a.person, b.person));
+  const previousCandidates = cache?.candidates.get(faction);
+  let candidates: readonly Candidate[];
+  if (previousCandidates !== undefined && previousCandidates.world === world && previousCandidates.posts === state.postStates && previousCandidates.service === state.personService && previousCandidates.ranks === state.personRanks && previousCandidates.status === state.personStatus) {
+    candidates = previousCandidates.candidates;
+  } else {
+    const rankIndex = new Map(world.map.world.vocabularies.ranks.map((r, i) => [r.id as string, i]));
+    candidates = unpostedPeopleOnSide(world.map, state, faction)
+      .filter((p) => p.id !== f.principal && (state.personStatus[p.id]?.statusKind ?? 'serving') === 'serving')
+      .map((p) => ({ person: p.id, kind: p.kind as string, seniority: Math.max(-1, ...Object.values(state.personRanks[p.id] ?? {}).map((r) => rankIndex.get(r.rankTerm) ?? -1)) }))
+      .sort((a, b) => b.seniority - a.seniority || strictCompare(a.person, b.person));
+    if (cache !== undefined) {
+      // Prove the whole graph frozen before retaining it for another request.
+      candidates = freezeDeep(candidates, cache);
+      cache.candidates.set(faction, { world, posts: state.postStates, service: state.personService, ranks: state.personRanks, status: state.personStatus, candidates });
+    }
+  }
   const historicalAppointees: PersonId[] = [];
   const historicalAppointments: NonNullable<PrincipalMenu['historicalAppointments']>[number][] = [];
   const history = state.seatAssignments[seatIdFor(f.principal)]?.seatDriver === 'rules';
@@ -382,14 +393,14 @@ export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCach
   const out: SeatRequest[] = [];
   for (const faction of world.factionIds) {
     const seat = seatIdFor(world.faction(faction).principal);
-    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `principal:${faction}:${day}`, view: viewFor(world, state, seat, cache), menu: principalMenu(world, state, faction, ground) }));
+    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `principal:${faction}:${day}`, view: viewFor(world, state, seat, cache), menu: principalMenu(world, state, faction, ground, cache) }, cache));
   }
   for (const def of world.situations) {
     const r = state.situationStates[def.id];
     if (r === undefined || r.sitStatus !== 'open' || r.sitDelegate === null) continue;
     const seat = seatIdFor(r.sitDelegate);
     const menu: DelegatedMenu = { menuKind: 'delegated-situation', choice: situationChoice(def, r.sitOpenOptions, [], valuesOf(world.map, r.sitDelegate)) };
-    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `delegated:${def.id}:${day}`, view: viewFor(world, state, seat, cache), menu }));
+    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `delegated:${def.id}:${day}`, view: viewFor(world, state, seat, cache), menu }, cache));
   }
   for (const post of choosingPosts(state, day)) {
     const options = planOptions(state, post, day);
@@ -398,13 +409,13 @@ export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCach
     const seat = seatIdFor(holder);
     const view = viewFor(world, state, seat, cache);
     const menu: PlanMenu = { menuKind: 'plan-selection', post, goal: view.goal!, options };
-    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: planKey(post, day), view, menu }));
+    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: planKey(post, day), view, menu }, cache));
   }
   for (const { menu, holder } of battleMenus(world, state, ground.march, day)) {
     const seat = seatIdFor(holder);
     // Hard rule 1 (0016): the battle menu never reaches a seat the player drives; his battles are his traits' (`judge`).
     if (state.seatAssignments[seat]?.seatDriver === 'human') continue;
-    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `battle:${menu.post}:${day}`, view: viewFor(world, state, seat, cache), menu }));
+    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `battle:${menu.post}:${day}`, view: viewFor(world, state, seat, cache), menu }, cache));
   }
   return out.sort((a, b) => (a.requestSeat < b.requestSeat ? -1 : a.requestSeat > b.requestSeat ? 1 : a.requestKey < b.requestKey ? -1 : 1));
 }
@@ -415,6 +426,6 @@ export function postOfSeatPerson(state: State, person: Parameters<typeof heldPos
 }
 
 /** Requests are handed to code outside the kernel: freeze them all the way down so no seat can edit what it was given. */
-function freezeDeep<T>(value: T): T {
-  return deepFreeze(value);
+function freezeDeep<T>(value: T, cache: ViewCache): T {
+  return deepFreeze(value, cache.requestFreeze);
 }
