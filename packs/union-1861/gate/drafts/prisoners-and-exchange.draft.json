@@ -1,0 +1,143 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "prisoners-and-exchange",
+  "subject": "prisoners",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "d93b671ab4b310d671a0b1fcbdbf0733d5c08c9dc6f457083ab531a0906c090c",
+    "status": "record",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "prisoners-and-exchange",
+    "class": "prisoners",
+    "window": {
+      "from": "1861-03-04",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "decision",
+      "event",
+      "text"
+    ],
+    "status": "record",
+    "refused": [
+      {
+        "fieldPattern": "(?:^|[-_.:/])(?:prisoners?|captives?|pows?|hostages?|parolees?|paroled)(?:$|[-_.:/])|(?:^|[-_.:/])(?:captured|taken|surrendered)[-_.:/](?:men|soldiers|troops|officers|count|counts|total|number|numbers|held)(?:$|[-_.:/])",
+        "reason": "held until R4, not refused for ever: no prisoner stock, pool or count that any seat holds, spends, trades, exchanges or paroles, and no field counting the captured on the captor's side (a captured count is the loser's loss, never the captor's holding); the captured leave play as a typed loss in the battle record (R4 battle ruling, draft, points 2 and 6; SENSITIVE-HISTORY 3.6; [GCF 5])"
+      },
+      {
+        "optionPattern": "exchange[a-z_-]*prisoners?|prisoners?[a-z_-]*(?:exchange|swap|trade|parole)|cartel|parol(?:e|ed|es|ing)|hostages?|draw[_-]lots?|by[_-]lot|retaliat|reprisal",
+        "labelPattern": "\\b(?:exchang|swap|trad|parol)\\w*\\b.{0,30}\\bprisoners?\\b|\\bprisoners?\\b.{0,30}\\b(?:exchang|swap|trad|parol)\\w*\\b|\\bcartel\\b|\\bparol(?:e|ed|es|ing)\\b|\\bhostages?\\b|\\bby lot\\b|\\bretaliat\\w*\\b|\\breprisals?\\b|\\bon (?:their|his|its) (?:word|honou?r|oath|pledge|parole)\\b|\\b(?:releas\\w*|free|freeing|let\\w*\\b.{0,20}\\bgo|send\\w*\\b.{0,20}\\bhome)\\b.{0,40}\\b(?:captured|captives?|prisoners?|surrendered)\\b|\\b(?:captured|captives?|prisoners?|surrendered)\\b.{0,40}\\b(?:go home|released|set free|let go|sent home)\\b|\\bsend\\w*\\b.{0,30}\\b(?:captured|captives?|prisoners?|surrendered)\\b.{0,30}\\bhome\\b",
+        "reason": "held until R4, not refused for ever: exchange, parole, hostages, the Corcoran lot and retaliation are R4 proper's; no option names a captured man's fate until then (R4 battle ruling, draft, point 6; SENSITIVE-HISTORY 3.6 and 4, R4; [GCF 5.1, 5.2])"
+      },
+      {
+        "optionPattern": "(?:execute|shoot|kill|hang)[a-z_-]*(?:prisoners?|captives?|hostages?)",
+        "reason": "Refused for ever (rule 1), not merely held for R4: no execution or reprisal killing option."
+      }
+    ],
+    "agencyReasons": [],
+    "protectedGroups": [],
+    "protectedFields": []
+  },
+  "sources": [
+    "exchange",
+    "prisons",
+    "black-captives"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "decision",
+      "recommendation": "[I] For R4: agreements/policy through War Department and agents with locked costs. No exchange inventory or price from the cartel equivalents is authorized.",
+      "evidence": [
+        "exchange",
+        "prisons",
+        "black-captives"
+      ]
+    },
+    {
+      "placement": "event",
+      "recommendation": "[I] For R4: separately dated captivity, camps, political confinement, parole, delivery and exchange reports. Exclusions and Black captives prevent a uniform automatic-return rule.",
+      "evidence": [
+        "exchange",
+        "prisons",
+        "black-captives"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] For R4: local conditions and petitioners’ accounts on both sides, preserving interested reports and missing denominators. No interim text clearance is introduced here.",
+      "evidence": [
+        "exchange",
+        "prisons",
+        "black-captives"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "prisoners?"
+      },
+      {
+        "term": "parol\\w*"
+      },
+      {
+        "term": "cartel"
+      },
+      {
+        "term": "hostages?"
+      },
+      {
+        "term": "retaliat\\w*"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Do not divide 650 cumulative deaths by 7,807 present as mortality. Dorr combines death, escape and parole.",
+      "Rank equivalents are administrative accounting, never human worth/strength. Hoffman’s approximate 20,500 holding is p. 278.",
+      "Conditional threats are not executions; Baxter’s unratified drafts are not agreements in force."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The petitioners described conditions at the parole camp.",
+        "rejectExample": "Trade prisoners for immediate manpower gains.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [
+    "R4",
+    "R2",
+    "0074"
+  ],
+  "remaining": [
+    "R4 stays record/no interim. National comparable mortality, complete federal refusal rationale and actual individual exchanges remain held."
+  ],
+  "proposedRuling": "[I] Keep all R4 holds and permanent killing refusals; propose policy/events/text for review without choosing a prisoner-stock system.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

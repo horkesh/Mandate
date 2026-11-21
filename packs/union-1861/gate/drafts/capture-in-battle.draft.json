@@ -1,0 +1,121 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "capture-in-battle",
+  "subject": "prisoners",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "c03233e7e23d8a92410384cb35bcfee99256186fbb4c87c428a68e5ad2a35268",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "capture-in-battle",
+    "class": "prisoners",
+    "window": {
+      "from": "1861-03-04",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "event",
+      "text"
+    ],
+    "status": "open",
+    "refused": [
+      {
+        "fieldPattern": "(?:^|[-_.:/])(?:captured|seized|confiscated|taken)[-_.:/](?:slaves?|enslaved|negro(?:es)?|contrabands?|servants?|property)(?:$|[-_.:/])|(?:^|[-_.:/])(?:slaves?|enslaved|negro(?:es)?|contrabands?|servants?)[-_.:/](?:captured|seized|confiscated|taken)(?:$|[-_.:/])",
+        "optionPattern": "(?:capture|seize|confiscate|take)[a-z_-]*(?:slaves?|enslaved|negro(?:es)?|contrabands?|servants?)",
+        "labelPattern": "\\b(?:captur(?:e|es|ed|ing)|seiz(?:e|es|ed|ing)|confiscat(?:e|es|ed|ing))\\b.{0,40}\\b(?:slaves?|enslaved|negro(?:es)?|contrabands?|servants?)\\b",
+        "reason": "only soldiers of a force block are captured: no person is taken as property, and people who reach or are found by Union forces are self-emancipation and fugitive policy, never a capture (R4 battle ruling, draft in notes/lane-1.8-gate.md, point 4)"
+      },
+      {
+        "optionPattern": "no[_-]quarter|take[_-]no[_-]prisoners|(?:execute|shoot|kill|hang)[a-z_-]*(?:prisoners?|captives?|captured|surrendered)",
+        "labelPattern": "\\bno quarter\\b|\\btake no prisoners\\b|\\b(?:execut|shoot|shot|kill|hang)\\w*\\b.{0,30}\\b(?:prisoners?|captives?|the captured|surrendered)\\b",
+        "reason": "killing the captured is atrocity-class and never a choice for any seat (SENSITIVE-HISTORY rule 1; R4 battle ruling, draft, point 5)"
+      }
+    ],
+    "agencyReasons": [],
+    "protectedGroups": [],
+    "protectedFields": []
+  },
+  "sources": [
+    "exchange",
+    "black-captives"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "event",
+      "recommendation": "[I] Carry 0074: captured soldiers leave strength as typed losses; no captor holding or automated return. Black forces require the R2/R4 re-ruling first.",
+      "evidence": [
+        "exchange",
+        "black-captives"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] A notice may state cited surrender terms without effects implementing parole/exchange. Missing is not captured; no civilian/teamster capture through force arithmetic.",
+      "evidence": [
+        "exchange",
+        "black-captives"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "captured"
+      },
+      {
+        "term": "surrender(?:ed|s)?"
+      },
+      {
+        "term": "prisoners?"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Separate capture, parole, delivery and completed exchange; no return-to-service timer.",
+      "Use source-specific ranges only for comparable quantities. No count of protected civilians as captured property."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The return listed missing and captured separately.",
+        "rejectExample": "The captor gained a stock of prisoners.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [
+    "0074",
+    "R2",
+    "R4"
+  ],
+  "remaining": [
+    "Do not extend 1A leave-play silently to Black units; R2/R4 must place their treatment first."
+  ],
+  "proposedRuling": "[I] Retain the 0074 envelope and all inherited refusals; reject a prisoner inventory or a complete exchange mechanic.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}
