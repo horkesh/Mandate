@@ -1,36 +1,56 @@
 # Lane 1.14: the 1A done check and calibration
 
-## S37 pushback audit (2026-11-21): work in progress
+## S37 pushback audit (2026-11-21): delivered, 1A remains unmet
 
-Scope: S37 only, `sprint/1a` from `ddea338`. Reconcile N3-11,
-N3-27, N3-06 and N3-07 with sources, dated posts and actual counters;
-also inspect the filter ceiling's N3-09 and X-03. Extract every addressee
-reservation and slow walk in seeds 1861–1868 through day 148. S35 owns
-the note/edit scoring correction; no other sprint is imported here.
+For the lead: three items. S37 only, `sprint/1a` from `ddea338`.
+Report: [pushback cases](../docs/research/2026-11-21-pushback-cases.md),
+with four floor traces, eight page-cited source receipts and every simulated
+reservation/slow walk in CSV and JSON. Recipes accompany the data. No other
+sprint was merged or implemented; no push or signature.
 
-Validation plan: first check source readability, local workspace links,
-counter fixtures and a one-day audit startup. Then run one eight-seed,
-read-only extraction (no sweep forks), expected under five minutes. Require
-exact agreement with the history observer's counts and terms summing to
-willingness. Test a demonstrated counter defect before correcting it.
-After focused checks and typecheck, run the actual commit hook and exactly
-one default `npm run run:done-check -- --milestone 1a --label s37-final`
-(eight seeds, drafting, unchanged 400-day fork cap; expected 20–30 minutes).
-Reuse S34's unaffected source, band and protected-input inventories after
-hash comparison. Do not retry an expensive failed command before diagnosis.
-No band relaxation, invented holder, threshold tuning, signature or push.
+1. **Counter fix, `2d45c99`.** `reports.filtered` keeps its key but fires only
+   for a positive deliberate hold. Pass-through and trim-only visits are
+   excluded. Trims already count reports, with claims as magnitude. Four
+   branch controls demonstrate this. The corrected fixture failed the two
+   zero-hold cases before the fix; 59 focused tests and typecheck then pass.
+   Actual hook: 173 files, 1,787 passed, nine inherited expected failures,
+   three timing skips; all chained gates pass. No band was changed.
+2. **Ceilings.** All 331 addressee responses are identified: 115 reservations,
+   216 slow walks, zero edits or notes. S35's isolated note/edit correction
+   therefore leaves these eight base-run counts unchanged [I]. Slow walks
+   are all calls; reservations are 78 calls, 36 transfers and one goal.
+   Temperament and deterrence are the only nonzero willingness terms.
+   `complyAt` is already 10. All vectors sum; all eight follow-up log-run
+   final hashes match. Of the requests, 252 join to explicit commands and
+   79 to the kernel's historical-default militia call, not a seat log entry.
+3. **One binding done check**, drafting and eight seeds, unchanged 400-day
+   fork cap: exit 1 in 1,376.33 s, Phase 0 6/6 locally, 1A 4/6. All seven
+   failure statements remain: five pushback bands, unmeasured grievance and
+   unexercised border levy chain. Every numerical band and every measured
+   reference counter is unchanged from S34. Reference/history median–p95
+   31.66/57.63 and 31.19/49.13 ms, unchanged 40/160 limits. No CI claim.
 
-Evidence is retained under `runs/s37/`; newly downloaded sources go only
-to `C:/Pyrrhic/mandate-research-sources/S37/`. Whole-branch and gate review
-remain deferred to Claude under 0106.
+**Proposed rulings [I]:** N3-11 needs the missing staff/ship dispatch path;
+N3-27 is authorized delivery discretion; N3-06 is an outward diplomatic
+reply, not incoming-wire filtering; N3-07 needs an originator-disclosure
+mechanism and keeps its source qualification. Reject elapsed transport or
+authorized delay as proof of reluctant relay holding, invented holders,
+unrelated screening, fabricated complete wires to trim, silent deduplication,
+and threshold tuning to hide absent cases. The sourced Thomas bureau
+appointment (OR III-1 p. 964) is proposed separately, not applied as the
+0105 filter-office holder. No pack kind currently declares a filter role.
+Keep the accepted bounds binding pending the lead's ruling.
 
-Counter correction in progress: `reports.filtered` retains its existing key
-but fires only for `decision.holdDays > 0`. Trim-only and immediate-forward
-visits are excluded. The four-case regression first exposed a fixture rule
-alias (corrected before the production edit), then failed only its two
-zero-hold cases. After the one-line correction, 59 focused tests and root
-typecheck pass. `reports.trimmed` already counts one report, with claim
-count as magnitude; its two-claim control needs no production change.
+Evidence: `runs/s37/final-verdict.json`, measurement inventories, runtime
+diagnostics, preservation and dossier audits, hook/check receipts and the
+eight seed/log files. Readability, workspace links, a one-day startup and
+counter controls preceded expensive checks. A cheap dossier-join failure
+revealed the kernel-default source; it was corrected without a simulation
+retry. All 1,776 tracked files / 839 runtime inputs stayed identical during
+measurement; every pack, art and save fixture matches S34. All 268 reference
+daily hashes, activity, replay and resumes match, zero rejections. Final
+inventories and runtime diagnostics preceded final-result documentation.
+Whole-branch and gate review remain deferred under 0106.
 
 ## S34 integrated candidate (2026-11-21): 1A remains unmet
 
@@ -780,3 +800,19 @@ S1's calibration budget is spent and1A remains unmet. The lead must obtain the d
   claimed. The unchanged desk lockfile's npm install reports one low and
   one high audit finding (`runs/s34/npm-ci-desk.log`); dependency changes
   were outside this integration and no automatic audit fix was run.
+
+## Findings outside my scope (S37)
+
+- Lead ruling: the four floor classifications and the qualified source claim
+  behind N3-07; all accepted bands remain binding.
+- Command-data owner: Lorenzo Thomas's ordinary bureau appointment from
+  7 March (OR III-1 p. 964), and Craven attested commanding Crusader on
+  11 March (Welles, Galaxy p. 95), with opening/end tenure held. These are
+  distinct from an unsourced wire-filter role. Crusader's existing ship post
+  has an unknown holder, not an absent post; the corrected final trace says so.
+- Mechanism owners: Pickens staff/ship dispatch preparation and carriage,
+  entrusted conditional relief delivery, and an agent's own disclosure of
+  unofficial conduct. The current flags do not implement those contracts.
+- S35 and S36 retain their own fixes. Their branches were not imported or
+  edited. Existing grievance, border-levy, Linux CI and whole-branch/gate
+  review obligations remain open. Nothing is signed.

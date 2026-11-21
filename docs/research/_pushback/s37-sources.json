@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Welles, Fort Pickens, The Galaxy 11(1), January 1871",
+    "url": "https://archive.org/download/sim_galaxy_1871-01_11_1/sim_galaxy_1871-01_11_1_djvu.xml",
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\galaxy-1871-01.xml",
+    "sha256": "61a5e17c887aa81a0c589f480eeccdb790bafeaeca1c0e77b9ef1774854c96d9",
+    "bytes": 8731460,
+    "printedPagesContainingPassagesRead": "95-97",
+    "readScope": "Selected cited passages, not a cover-to-cover reading."
+  },
+  {
+    "title": "Official Records, series I volume III",
+    "url": "https://archive.org/download/warofrebellionco03unit/warofrebellionco03unit_djvu.xml",
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\or-i3.xml",
+    "sha256": "a5639bae848dc9dd06a1eaf861a58cf30abf8e06ea4a3f678f63d3a621b98d43",
+    "bytes": 32717125,
+    "printedPagesContainingPassagesRead": "374,381",
+    "readScope": "Selected cited passages, not a cover-to-cover reading."
+  },
+  {
+    "title": "Nicolay and Hay, eds., Abraham Lincoln: Complete Works, volume II, copyright 1894; copy carries renewal 1922",
+    "url": "https://archive.org/download/abrahamlincolnco02linco/abrahamlincolnco02linco_djvu.txt",
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\lincoln-works2.txt",
+    "sha256": "0aa94ec41fab888f027af48c6491f31c92ad65c432c817141a7bbfba8160eb5f",
+    "bytes": 2740723,
+    "printedPagesContainingPassagesRead": "47-48",
+    "readScope": "Selected cited passages, not a cover-to-cover reading."
+  },
+  {
+    "title": "Richardson, A Compilation of the Messages and Papers of the Confederacy, volume I, 1905",
+    "url": "https://archive.org/download/compmessages01richrich/compmessages01richrich_djvu.txt",
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\confederacy-messages1.txt",
+    "sha256": "a460466f113697f0df2df71bf865daff2fa0e421e35fa84e38b3f40bbdaf6dbc",
+    "bytes": 1668781,
+    "printedPagesContainingPassagesRead": "85-88",
+    "readScope": "Selected cited passages, not a cover-to-cover reading."
+  },
+  {
+    "title": "Burlingame, Abraham Lincoln: A Life, volume II chapter 22, Knox published online manuscript",
+    "url": "https://www.knox.edu/documents/LincolnStudies/BurlingameVol2Chap22.pdf",
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\burlingame-ch22.pdf",
+    "sha256": "d68684364db93073ad66d715171d212813c7680090366a739013c2cf134f333f",
+    "bytes": 296122,
+    "printedPagesContainingPassagesRead": "2349-2351,2392",
+    "readScope": "Selected cited passages, not a cover-to-cover reading."
+  },
+  {
+    "title": "Official Records, series III volume I",
+    "url": "https://archive.org/download/warofrebellion0301rootrich/warofrebellion0301rootrich_djvu.txt",
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\or-iii1-correct.txt",
+    "sha256": "db2df410494a49bee01c6a683a129abfed05a7aaccc61a068363b9aa8cbf6bff",
+    "bytes": 3331774,
+    "printedPagesContainingPassagesRead": "87,964",
+    "readScope": "Selected cited passages, not a cover-to-cover reading."
+  },
+  {
+    "title": "Bates, Lincoln in the Telegraph Office, 1907",
+    "url": "https://archive.org/stream/lincolnintelegra00bates/lincolnintelegra00bates_djvu.txt",
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\bates-archive-stream.txt",
+    "sha256": "ce75187304a089939b0a3788242520c09236cb8c185468f09163cc4b54c419cb",
+    "bytes": 737313,
+    "printedPagesContainingPassagesRead": "25-29,93-96",
+    "readScope": "Selected cited passages, not a cover-to-cover reading."
+  },
+  {
+    "title": "Herndon and Weik, Abraham Lincoln: The True Story of a Great Life, volume II",
+    "url": "https://archive.org/download/abrahamlincolntr02hernuoft/abrahamlincolntr02hernuoft_djvu.txt",
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\hay.txt",
+    "sha256": "630e2415ac459c22cbe0b149c1f09679a1e8a75462456995f9d4325ee1d3e579",
+    "bytes": 715404,
+    "printedPagesContainingPassagesRead": "225-226",
+    "readScope": "Selected cited passages, not a cover-to-cover reading."
+  }
+]

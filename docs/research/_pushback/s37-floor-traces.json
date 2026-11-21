@@ -1,0 +1,60 @@
+{
+  "sourcePin": "ddea3384942652660f86f281af24c549b484afc6",
+  "counterFix": "2d45c991f927ddb8b432b790a5d04fdde8e09dd3",
+  "classifications": {
+    "N3-11": "d: staff/ship dispatch preparation and transit absent from the relay chain; no named deliberate withholder in Welles pp.95-97",
+    "N3-27": "c: delivery discretion expressly authorised by Lincoln, Complete Works II pp.47-48; OR I-3 pp.374,381",
+    "N3-06": "c: delayed outward diplomatic reply, Richardson I pp.85-88; not an incoming military wire",
+    "N3-07": "d: originator omission is not filtering a pre-existing received report; nondisclosure evidence remains qualified, Burlingame II ch22 pp.2349-2351,2392"
+  },
+  "pack": {
+    "filterPostKinds": 0,
+    "ordinaryRoles": {
+      "cabinet": null,
+      "bureau": null,
+      "private_secretary": null
+    },
+    "S02land_company": "sets pickens_landing_ordered only; no reader found",
+    "S03hold_and_talk": "sets seward_channel_open only; no reader found",
+    "S14back_lyon": "sets st_louis_loyalists_enrolled only; no reader found",
+    "pickensParentChain": [
+      "us_fort_pickens",
+      "us_general_in_chief",
+      "us_secretary_war",
+      "us_president"
+    ],
+    "adjutantParent": "us_secretary_war",
+    "adjutantChildren": [],
+    "adjutantHolderAfterMarch7": null,
+    "BlairJrScenarioPost": null,
+    "Crusader": {
+      "post": "us_ship_crusader",
+      "parent": "us_navy_home_squadron",
+      "holder": null,
+      "sourceHolderCell": "unknown",
+      "dispatchCarryingRoute": false
+    }
+  },
+  "proposedData": [
+    {
+      "post": "us_war_adjutant_general",
+      "person": "thomas_lorenzo",
+      "from": "1861-03-07",
+      "source": "OR III-1 p.964, principal officials table",
+      "applied": false,
+      "reason": "A sourced ordinary bureau appointment, not the filter-office holder authorised by 0105 item 4. Does not put this sibling bureau in the Pickens chain or establish a deliberate hold."
+    },
+    {
+      "post": "us_ship_crusader",
+      "personAttested": "T. A. M. Craven",
+      "firstAttested": "1861-03-11",
+      "source": "Welles, The Galaxy 11(1), January 1871, pp.95-96",
+      "startTenure": "HOLD: source does not establish 5 March tenure",
+      "endTenure": "HOLD",
+      "castPersonAbsent": true,
+      "applied": false,
+      "reason": "Dated ship-command attestation; not an incoming-wire filter-office appointment under 0105 item 4. Carrier route and tenure remain separate requirements."
+    }
+  ],
+  "bandChanges": []
+}
