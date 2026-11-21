@@ -20,7 +20,7 @@ const post = POST('a_reserve');
 const seat = seatIdFor(P('a_lead'));
 const note = { markKind: 'wait', markAxis: 'main', markDays: 7, markRegion: null, markVia: [] } as const;
 
-function run(resentful = false, covert = false) {
+function run(resentful = false, covert = false, waitDays = 7) {
   const world = indexedFixture({ posts: { a_reserve: { strength: 2000 } }, persons: {
     a_bold: { boldness: 'high', candour: covert ? 'low' : 'high', regard: resentful ? 'low' : 'high', values: ['glory'] },
   } });
@@ -32,7 +32,7 @@ function run(resentful = false, covert = false) {
     const request = pendingRequests(world, state).find(r => r.requestSeat === seat)!;
     const review = request.menu.menuKind === 'principal' && request.menu.reviews.length > 0;
     const command = day === 1 ? { cmd: 'order' as const, to: post, goal: goalTerms('take', 'b_mid', { approveAsDrafted: false }), route: 'special-messenger' as const, bypass: true }
-      : review && !sent ? { cmd: 'review', to: post, action: 'send_back', edit: null, notes: [note], route: 'special-messenger', bypass: true } as ReviewCommand
+      : review && !sent ? { cmd: 'review', to: post, action: 'send_back', edit: null, notes: [{...note,markDays:waitDays}], route: 'special-messenger', bypass: true } as ReviewCommand
       : null;
     if (command?.cmd === 'review') sent = true;
     const entries = command ? [{ day, seat, command }] : [];
@@ -47,6 +47,40 @@ function run(resentful = false, covert = false) {
   expect(sent && arrived).toBe(true);
   return { world, state, log, record: state.planRecords[post]! };
 }
+
+function editedNote(waitDays: number, concentration: number) {
+  const before = run(false, false, waitDays);
+  let state = before.state;
+  const edit: ReviewCommand = {cmd:'review',to:post,action:'edit',
+    edit:{kind:'timing',axis:'main',region:null,via:[],concentration},route:'special-messenger',bypass:true};
+  const entries: LogEntry[] = [{day:state.stateDay+1,seat,command:edit}];
+  const sent = tick(before.world,state,entries,{freeze:true});
+  expect(sent.rejections).toEqual([]);
+  state = sent.state;
+  for (let days=0; days<5 && state.planRecords[post]!.planCounters.length===0; days++) state=tick(before.world,state,[],{freeze:true}).state;
+  const record=state.planRecords[post]!;
+  expect(record.planCounters).toHaveLength(1);
+  return {...before,state,record,log:[...before.log,...entries]};
+}
+
+it('scores an edit that still follows a delivered zero-day wait note on the draft’s note basis', () => {
+  const {world,state,record,log}=editedNote(0,0);
+  expect(record.planCounters[0]!.counterFell.some(t=>t.dropTerm==='notes')).toBe(false);
+  const approved=record.planApproved!;
+  expect(approved.candNotes![0]!.noteFollowed).toBe(true);
+  expect(approved.candTerms.find(t=>t.contribTerm==='notes')!.contribAmount).toBeGreaterThan(0);
+  expect(approved.candScore).toBe(approved.candTerms.reduce((n,t)=>n+t.contribAmount,0));
+  expect(canonicalHash(replay(world,createState(world,{seed:7}),log,state.stateDay).state)).toBe(canonicalHash(state));
+  const worldHash=canonicalHash(world.map.world);
+  const save=decodeSave(encodeSave({worldHash,state,log}),{expectedWorldHash:worldHash});
+  expect(canonicalHash(tick(world,save.state as unknown as State,[],{freeze:true}).state)).toBe(canonicalHash(tick(world,state,[],{freeze:true}).state));
+});
+
+it('still charges the note departure when a timing edit actually removes the requested wait', () => {
+  const {record}=editedNote(7,0);
+  expect(record.planCounters[0]!.counterFell.find(t=>t.dropTerm==='notes')!.dropAmount).toBeGreaterThan(0);
+  expect(record.planNotes).toHaveLength(1);
+});
 
 it('a compliant commander reads a note and gives its preferred timing a soft scoring term', () => {
   const { record } = run();

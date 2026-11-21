@@ -16,7 +16,6 @@ it('maps request mornings separately from dated event days without moving the ti
   expect(text).toContain('--- 1861-04-02 (day 1) ---');
   expect(text.find(l => l.startsWith('=== '))).toContain(game.dateOf(game.state.stateDay));
 });
-
 it.each(['bypass', 'review', 'await', 'rail', 'norail', 'river', 'sea', 'neutral', 'review bypass by=wire'])(
   'does not turn the optional hold flag %s into an objective', flags => {
     const game = new ConsoleGame({ pack: 'testbed' });
@@ -58,4 +57,3 @@ it('supplies wording for every typed refusal, including the S27 supplemental cas
   const strings = new ConsoleGame({ pack: 'testbed' }).strings;
   for (const reason of Object.keys(reasons)) expect(strings[`console.refusal.${reason}`], reason).toMatch(/\.$/);
 });
-
