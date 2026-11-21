@@ -20,6 +20,9 @@ import { seatIdFor } from '../src/seats/seats.ts';
 import { sendReport, type TickContext } from '../src/tick/context.ts';
 import { createState } from '../src/tick/setup.ts';
 import { tick, type TickResult } from '../src/tick/tick.ts';
+import { TICK_MECHANICS } from '../src/tick/tick.ts';
+import { deliverDue } from '../src/tick/deliver.ts';
+import { createTelemetry } from '../src/telemetry.ts';
 import { viewFor } from '../src/view/view.ts';
 import { F, indexedFixture, P, POST, R } from './support/seats-fixture.ts';
 import { order, scriptedSeats } from './support/test-seats.ts';
@@ -206,6 +209,40 @@ describe('orders through chains (0040)', () => {
 });
 
 describe('filters on the wire (0032)', () => {
+  it.each([
+    { holdDays: 0, cut: false },
+    { holdDays: 0, cut: true },
+    { holdDays: 2, cut: false },
+    { holdDays: 2, cut: true },
+  ])('counts deliberate holds separately from passing and trimming ($holdDays days, cut $cut)', ({ holdDays, cut }) => {
+    const base = indexedFixture();
+    const people = { ...base.rules.people, filter: {
+      ...base.rules.people.filter,
+      holdFor: [{ value: 'order', days: holdDays }],
+      trimFor: cut ? [{ value: 'order', claimKinds: ['own-losses'] }] : [],
+    } };
+    const world = { ...withRules(base, { people }), rules: { ...base.rules, people } };
+    let state = createState(world, { seed: 2 });
+    const telemetry = createTelemetry(TICK_MECHANICS);
+    const ctx: TickContext = { world, latency: latencyMapFor(world, buildControlIndex(world.map, state.regionControl)), day: 1, seed: 2, mint: createIdMint(state), telemetry, outbox: [], rejections: [], events: [], proposals: [], prices: [], decisionPoints: [], controlDeltas: [], infrastructureDeltas: [], mapEvents: [] };
+    sendReport(ctx, state, {
+      body: { reportType: 'wire-dispatch', reportSubtype: null,
+        reportAuthor: P('a_bold'), reportAuthorPost: POST('a_reserve'),
+        reportSubjectKind: 'post', reportSubjectId: 'a_reserve',
+        reportClaims: [1, 2].map(n => ({ claimKind: 'own-losses', claimRegion: null, claimValue: n, claimToken: null, claimConfidence: 500 })),
+        reportDay: 1, reportHour: 14, reportAdvice: null, reportAnswers: null },
+      truth: NO_TRUTH, to: P('a_lead'), tag: 'count-probe',
+    });
+    state = deliverDue(ctx, sendMessages(state, ctx.outbox.splice(0)));
+    // A band counts acts, not claims or days. Trim magnitude still counts the two claims.
+    expect(telemetry.mechanics['reports.filtered']).toEqual({ fires: holdDays > 0 ? 1 : 0, magnitude: holdDays > 0 ? 1 : 0 });
+    expect(telemetry.mechanics['reports.trimmed']).toEqual({ fires: cut ? 1 : 0, magnitude: cut ? 2 : 0 });
+    const event = ctx.events.find(e => e.event === 'filtered')!;
+    expect(event).toBeDefined();
+    expect(event.terms.filter(t => t.termKind === 'filter_hold').map(t => t.termValue)).toEqual(holdDays > 0 ? [holdDays] : []);
+    expect(state.stateDay).toBe(0);
+  });
+
   it('holds a wire for a day and cuts the losses from it, keeping the cut in the truth layer', () => {
     const world = indexedFixture();
     let state = createState(world, { seed: 2 });

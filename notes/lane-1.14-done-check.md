@@ -1,5 +1,37 @@
 # Lane 1.14: the 1A done check and calibration
 
+## S37 pushback audit (2026-11-21): work in progress
+
+Scope: S37 only, `sprint/1a` from `ddea338`. Reconcile N3-11,
+N3-27, N3-06 and N3-07 with sources, dated posts and actual counters;
+also inspect the filter ceiling's N3-09 and X-03. Extract every addressee
+reservation and slow walk in seeds 1861–1868 through day 148. S35 owns
+the note/edit scoring correction; no other sprint is imported here.
+
+Validation plan: first check source readability, local workspace links,
+counter fixtures and a one-day audit startup. Then run one eight-seed,
+read-only extraction (no sweep forks), expected under five minutes. Require
+exact agreement with the history observer's counts and terms summing to
+willingness. Test a demonstrated counter defect before correcting it.
+After focused checks and typecheck, run the actual commit hook and exactly
+one default `npm run run:done-check -- --milestone 1a --label s37-final`
+(eight seeds, drafting, unchanged 400-day fork cap; expected 20–30 minutes).
+Reuse S34's unaffected source, band and protected-input inventories after
+hash comparison. Do not retry an expensive failed command before diagnosis.
+No band relaxation, invented holder, threshold tuning, signature or push.
+
+Evidence is retained under `runs/s37/`; newly downloaded sources go only
+to `C:/Pyrrhic/mandate-research-sources/S37/`. Whole-branch and gate review
+remain deferred to Claude under 0106.
+
+Counter correction in progress: `reports.filtered` retains its existing key
+but fires only for `decision.holdDays > 0`. Trim-only and immediate-forward
+visits are excluded. The four-case regression first exposed a fixture rule
+alias (corrected before the production edit), then failed only its two
+zero-hold cases. After the one-line correction, 59 focused tests and root
+typecheck pass. `reports.trimmed` already counts one report, with claim
+count as magnitude; its two-claim control needs no production change.
+
 ## S34 integrated candidate (2026-11-21): 1A remains unmet
 
 One candidate on `sprint/1a`, starting at `78eb7db`. Pinned remote inputs,

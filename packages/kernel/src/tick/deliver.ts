@@ -137,7 +137,9 @@ function filterReport(ctx: TickContext, state: State, msg: TransitMessage): void
   const kept = body.reportClaims.filter((c) => !decision.trims.includes(c.claimKind));
   const truth = msg.msgTruth ?? { truthTerms: [], truthTrimmed: [] };
   const terms = [...decision.terms, ...cut.map((c) => term('filter_trim', c.claimValue, { person: holder.id, post, ...(c.claimRegion === null ? {} : { region: c.claimRegion }), rule: `values:${trimValueOf(ctx.world.rules.people, holder, c.claimKind)}` }))];
-  fire(ctx, 'reports.filtered');
+  // The historical pushback band counts held reports, not every visit to a filter.
+  // Keep the existing mechanic key; a pass-through (including trim-only) is not a hold.
+  if (decision.holdDays > 0) fire(ctx, 'reports.filtered');
   if (cut.length > 0) fire(ctx, 'reports.trimmed', cut.length);
   ctx.events.push({ event: 'filtered', person: holder.id, post, message: msg.msgOrigin, terms });
   const next = msg.msgPending[0]!;
