@@ -1,6 +1,11 @@
 // Apply rounds 1 and 2 (rs1-rs14), under decision 0097 and R51. Lane 1.11r3.
 const fs = require('fs');
 const { parse, serialise } = require('./csvlib.js');
+// S9 is incremental on the already-applied start; never replay the old rounds over it.
+if (process.argv.includes('--s9')) {
+  require('./apply-s9.js').main();
+  process.exit(0);
+}
 const root = (process.env.PACK_ROOT || '.').replace(/\\/g, '/').replace(/\/?$/, '/'); // a worktree holding packs/ and docs/research/_resource/
 const res = root + 'docs/research/_resource/';
 const peopleFile = root + 'packs/union-1861/source/world/people.csv';

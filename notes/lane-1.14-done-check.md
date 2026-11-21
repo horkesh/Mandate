@@ -1,5 +1,35 @@
 # Lane 1.14: the 1A done check and calibration
 
+## S34 integration in progress (2026-11-21)
+
+One candidate on `sprint/1a`, starting at `78eb7db`. Pinned remote inputs,
+in order: perf `3155d90`, people-data `637e1d4`, checks `39c279c`, playtest
+`4bf2b8b`, desk `7db8c80`. S25 and S33 were still in progress when fetched;
+their later commits remain to merge. No push, other-worktree write or signature.
+Whole-branch and gate reviews remain deferred under 0106.
+
+Validation question: preserve the combined code and explain precisely which
+Phase 0 and 1A criteria hold. Typecheck and focused conflict/startup checks
+precede each real merge hook; use two Vitest workers and unchanged gates.
+Then run all four S18 checks, the full check, and one default eight-seed
+done check with drafting and `--milestone 1a`. Expected cost: minutes per
+hook and 25–45 minutes for the done check. Stop unexpected expensive retries,
+inspect every failure category, prove any correction cheaply and reuse
+unaffected evidence. No calibration campaign or acceptance-band change.
+Inventories and runtime diagnostics precede final-result documentation.
+
+Performance merged as `cc41c52`: retain both cached candidate derivation and
+dated appointments. Actual hook exits 0: 157 files, 1,669 passed, three skips.
+The people-data startup/reference check found one liveness breach before
+its hook: `planner.term.time` fires once, on day 136, versus a quiet 0–0
+band. Change only that mechanic to `around(1)` = 1–4, remove its global
+QUIET entry, and retain the testbed's zero band. Cause [I]: the sourced cast
+changes alter which planner candidate wins when its existing time term is
+dropped; no planner coefficient changes. Retained reference rescoring and
+band-structure checks pass without another run. Evidence: `runs/s34/people-reference.json`
+and `people-rescored.json`. S16's initiative band and reason are retained;
+S1's combat/recruitment bounds and all historical acceptance bands remain.
+
 ## S1 delivery for lead review (2026-11-21): 1A remains unmet
 
 S1's bounded integration/build/test/calibration work is delivered on `sprint/1a` in `C:/Pyrrhic/sprint-1a`, from `ceff796`. `npm ci` ran first: exit 0, 51 packages, zero vulnerabilities. No push, history rewrite or other-lane write. Every completed commit used the real hook and Codex footer. The five requested merges are separate and ordered; R97 was read from its supplied worktree without changing it. Independent review and gate signatures remain deferred to Claude under 0106; nothing is signed here. The current delivery has a source HOLD and unmet acceptance, so it is not a claim that 1A is finished.

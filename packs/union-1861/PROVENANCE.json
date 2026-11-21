@@ -1607,7 +1607,7 @@
       "kind": "primary",
       "licence": "public-domain",
       "basis": "expired-copyright",
-      "copyUsed": "https://archive.texashistorytrust.org/view/728572066/142/; /143/; /144/. Only the verbatim 1860 letter, not the 1943 editors\u00e2\u20ac\u2122 judgments or annotations. The printing identifies Governors\u00e2\u20ac\u2122 Letters and Executive Records, 1859-1861 pp. 210-211, Texas State Library.",
+      "copyUsed": "https://archive.texashistorytrust.org/view/728572066/142/; /143/; /144/. Only the verbatim 1860 letter, not the 1943 editorsâ€™ judgments or annotations. The printing identifies Governorsâ€™ Letters and Executive Records, 1859-1861 pp. 210-211, Texas State Library.",
       "licencePage": null,
       "licenceReadOn": null
     },
@@ -1688,6 +1688,76 @@
       "licence": "public-domain",
       "basis": "expired-copyright",
       "copyUsed": "Wikimedia copy of Internet Archive congressionaldir014667mbp; title pages and Saunders entry read 21 November 2026. Official lifetime biography, treated conservatively as retrospective for 1861 home inference. https://upload.wikimedia.org/wikipedia/commons/6/6e/Congressional_Directory_Compiled_For_The_Use_Of_Congress_Second_Edition_%28IA_congressionaldir014667mbp%29.pdf",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CHASE-LINCOLN-1861-DOC",
+      "title": "Chase to Thaddeus Stevens, 9 January 1861, printed in R. B. Warden (1874), p377",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/slamonportlandchas00wardrich/page/n400; rs15; letter only, p377 dated 1861-01-09; Warden narrative excluded. S9; source hashes/read limits in docs/research/_resource/evidence-r59/sources.json or evidence-r65/sources.json.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "STAT9-SCOTT-1848",
+      "title": "Joint resolution of 9 March 1848, thanks of Congress to Scott and his troops, 9 Stat. 333",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://en.wikisource.org/wiki/Page:United_States_Statutes_at_Large_Volume_9.djvu/359; rs15; sections 1-2 of the resolution, p333 dated 1848-03-09; not an assessment of health in 1861. S9; source hashes/read limits in docs/research/_resource/evidence-r59/sources.json or evidence-r65/sources.json.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "DIX-BANKERS-1861-DOC",
+      "title": "Bank officers and directors resolution, printed in Morgan Dix, Memoirs of John Adams Dix (1883), vol. 1 pp363-364",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/memoirsofjohnada01dixm/page/363; rs15; quoted resolution only, bounded to January 1861. No day is supplied; surrounding biography excluded. S9; source hashes/read limits in docs/research/_resource/evidence-r59/sources.json or evidence-r65/sources.json.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "HOUSTON-AUSTIN-1860-DOC",
+      "title": "Sam Houston, Austin speech of 22 September 1860, printed in W. C. Crane (1884), pp599-610",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/lifeselectlitera00cran/page/n614; rs16; own speech only, pp599-600 and p602, dated by the heading on p599; narrative excluded. S9; source hashes/read limits in docs/research/_resource/evidence-r59/sources.json or evidence-r65/sources.json.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "HOUSTON-LEGIS-1861-DOC",
+      "title": "Sam Houston, Texas legislative message of 6 February 1861, printed in W. C. Crane (1884), pp642-645",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/lifeselectlitera00cran/page/n657; rs16; own message only, heading p642 and positive pp644-645. Adopted-state attachment and civic duty [I], not an Army obligation or support for Confederate calls. S9; source hashes/read limits in docs/research/_resource/evidence-r59/sources.json or evidence-r65/sources.json.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CLARK-CONVENTION-1860-DOC",
+      "title": "Signed convention call, Texas convention journal, ed. E. W. Winkler (1912), pp9-12",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/journalofsecessi00texa/page/n20; rs16; call on pp10-11 and Ed. Clark signature p12; newspaper notice p9 identifies the signer. Signing date bounded to 1860, not the newspaper publication day. Gate draft only. S9; source hashes/read limits in docs/research/_resource/evidence-r59/sources.json or evidence-r65/sources.json.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "SHERMAN-MCCLELLAN-1861-DOC",
+      "title": "W. T. Sherman to John Sherman, 20 May 1861, printed in The Sherman Letters, ed. Rachel Sherman Thorndike (1894), pp120-121",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/shermanlettersco00sher/page/120; S6 2c1cea0, individually read S9 backlog opt-in. Heading p120, professional appraisal p121. Only this letter is primary; editorial narrative and the separate May 22 letter are excluded. Scan hashes: p120 88789da093fb3ee132b6228440295edc5906ccd935377ad41ade08aeffb27b8f; p121 908d8c8e43ec7840bf0b739ab7e397fd937cb96f8794d928ffa1a51e17d445bd. S9; S6 commit 2c1cea0, docs/research/S6/scan-manifest.json; originals under C:/Pyrrhic/mandate-research-sources/S6/.",
       "licencePage": null,
       "licenceReadOn": null
     }

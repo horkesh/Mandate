@@ -128,7 +128,6 @@ const FEW_BATTLE_DAYS = 'the reference runs fight only a few battle-days (two bo
 
 /** Mechanics that fire in neither reference run: the reason, and the kernel test that proves the mechanic is alive. */
 export const QUIET: Readonly<Record<string, QuietReason>> = {
-  'planner.term.time': { why: "S1 national: neither full reference fires planner.term.time on this observed path; the named live case drives it explicitly.", test: "packages/cli/test/planner.test.ts", needle: "counts every scoring term live in some case" },
   'recruitment.renewed': { why: 'S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal.', test: 'packages/cli/test/enlistment-renewal.test.ts', needle: 'changes only the term and renewal source' },
   'map.pocket_relieved': { why: "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening.", test: "packages/kernel/test/map-tick.test.ts", needle: "then its opening" },
   // R73: doctrine retires the generic Washington attack; the editing exercise edits every reviewed plan.
@@ -239,7 +238,7 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
  * (each pack's checkpoints.json) are independent and unchanged; these are mechanic liveness counts only.
  */
 const UNION_BANDS: Record<string, GateBand> = {
-  'planner.term.time': quiet("S1 national: neither full reference fires planner.term.time on this observed path; the named live case drives it explicitly."),
+  'planner.term.time': { ...around(1), why: 'S34 people-data integration [I]: changed sourced commander ratings alter the planner choice; dropping the time term changes one selected candidate. The planner and its scoring coefficients are unchanged. Observed once in runs/s34/people-reference.json.' },
   'people.resigned': around(7),
   // R82: an integrated government notice offers one officer his choice; he stays.
   'people.stayed': around(1),
@@ -342,7 +341,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'people.grievances_faded': around(30),
   'seats.attention_refilled': around(21),
   'seats.attention_spent': around(130), // S1 national [I]: appointments, normal transfers and changed battle days consume attention and decision requests.
-  'seats.initiative': around(9),
+  'seats.initiative': { ...around(3), why: 'S16 dating holds remove two cabinet officers\' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json.' },
   'operations.repulsed': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
   'forces.landed_by_situation': around(1),
   'politics.act': around(2),

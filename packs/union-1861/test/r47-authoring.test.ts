@@ -21,17 +21,26 @@ describe('R47 sourced authoring', () => {
     expect(established.state.regionControl).toEqual(start.regionControl);
   });
 
-  it('keeps Houston as the opening holder and enters only the R55 sourced judgments', () => {
+  it('keeps Houston as the opening holder and enters the R55 and S9 sourced judgments, with gated placements still draft', () => {
     const map = v2Map('union-1861')!;
     expect(map.start.posts.find((p) => p.id === 'st_gov_texas')?.holder).toBe('houston_samuel');
     for (const id of ['houston_samuel', 'clark_edward']) {
       const person = map.world.people.find((p) => p.id === id)!;
       expect(person).toBeDefined();
-      expect(person.values.map((v) => v.value)).toEqual(id === 'houston_samuel' ? ['union'] : []);
+      expect(person.values.map((v) => v.value)).toEqual(id === 'houston_samuel' ? ['union', 'native_state', 'duty'] : []);
       expect(person.regardOthers.map((r) => [r.toward, r.direction])).toEqual(id === 'houston_samuel' ? [['davis_jefferson', 'low']] : []);
       expect(person.traits).toEqual([]);
       expect(person.born).toBeNull();
     }
+    const houston = map.world.people.find((p) => p.id === 'houston_samuel')!;
+    expect(houston.values.find((v) => v.value === 'union')?.cites.map((c) => c.source)).toEqual(['HOUSTON-DALY-1860', 'HOUSTON-AUSTIN-1860-DOC']);
+    expect(houston.values.some((v) => v.value === 'slavery_defence')).toBe(false);
+    const draft = raw('situations/drafts/s9-people-gate.json');
+    expect(draft.status).toBe('draft');
+    expect(draft.gateReview).toBeUndefined();
+    expect(draft.recommendations.map((r: { person: string; cell: string }) => `${r.person}/${r.cell}`)).toEqual([
+      'sumner_charles/trait:antislavery', 'wilson_henry/trait:antislavery', 'houston_samuel/value:slavery_defence', 'clark_edward/value:state_autonomy',
+    ]);
   });
 
   it('succeeds Houston on 16 March without leaving him in the desk command menu', () => {
