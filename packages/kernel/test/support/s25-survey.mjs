@@ -113,6 +113,8 @@ if (command === 'list') {
     const g = manifest.find(g => g.group === group);
     g.mutants.push({ id: `${group}-explicit`, file, start, before, after, expression, line: code.slice(0, start).split('\n').length, kind: 'explicit', sourceHash: hash(code) });
   }
+  // Edit preview is imported by its dedicated send-back suite, not the daily tick suites.
+  for (const g of manifest) for (const m of g.mutants) if (m.file.endsWith('/tick/edit-preview.ts')) m.tests = [...g.tests, `${test}sendback-notes.test.ts`];
   writeFileSync(manifestPath, JSON.stringify({ base: '39c279cefc3e836e9a7f6a39acbb6772393a16ab', groups: manifest, unassigned: all.filter(f => !used.has(f)) }, null, 2));
   console.log(manifest.map(g => `${g.group}: ${g.mutants.length} mutations, ${g.files.length} files, ${g.tests.length} suites`).join('\n'));
   process.exit(0);
@@ -151,7 +153,7 @@ for (const g of chosen) {
       writeFileSync(selectedPath, JSON.stringify(mutant));
     }
     const started = Date.now();
-    const suites = mutant && stage === 'after' && additions.length ? additions : [...g.tests, ...additions];
+    const suites = mutant && stage === 'after' && additions.length ? additions : [...(mutant?.tests ?? g.tests), ...additions];
     const result = spawnSync(process.execPath, [resolve(root, 'node_modules/vitest/vitest.mjs'), 'run', '--config', configPath, '--reporter=json', `--outputFile=${prefix}.result.json`, ...suites], {
       cwd: root, encoding: 'utf8', timeout: 180_000, maxBuffer: 16 * 1024 * 1024,
       env: { ...process.env, MANDATE_NO_GIT: '1', S25_MUTANT: mutant ? selectedPath : '', S25_APPLIED: `${prefix}.applied.json` },
