@@ -1,0 +1,1037 @@
+{
+  "source": "C:\\Pyrrhic\\sprint-play\\art-masters\\S39\\advance\\last-turn-reply.json",
+  "sourceSha256": "14e8013b82ba3839e63a412eaee8d1c1fbd565786caef18f7bdc3cb5b4cec8d7",
+  "papers": [
+    {
+      "id": "m.72.stone_charles_p.lincoln_abraham.arrived.us_dc_militia",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "stone_charles_p",
+      "authorPost": "us_dc_militia",
+      "subjectKind": "post",
+      "subjectId": "us_dc_militia",
+      "claims": [
+        {
+          "kind": "arrived",
+          "region": "richmond",
+          "value": 1,
+          "token": null,
+          "confidence": 1000
+        }
+      ],
+      "reportedControl": [],
+      "day": 72,
+      "hour": null,
+      "advice": null,
+      "answers": "m.46.lincoln_abraham.stone_charles_p.order.us_dc_militia",
+      "receivedDay": 75,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.battle.afternoon.union",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "stone_charles_p",
+      "authorPost": "us_dc_militia",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "battle-phase",
+          "region": "richmond",
+          "value": 1,
+          "token": "afternoon",
+          "confidence": 600,
+          "battle": "battle:richmond:94",
+          "battleDays": [
+            94
+          ],
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "enemy-strength",
+          "region": "richmond",
+          "value": 0,
+          "token": null,
+          "confidence": 500
+        }
+      ],
+      "reportedControl": [],
+      "day": 94,
+      "hour": 17,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 95,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.battle.dawn.union",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "stone_charles_p",
+      "authorPost": "us_dc_militia",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "battle-phase",
+          "region": "richmond",
+          "value": 1,
+          "token": "dawn",
+          "confidence": 600,
+          "battle": "battle:richmond:94",
+          "battleDays": [
+            94
+          ],
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "enemy-strength",
+          "region": "richmond",
+          "value": 0,
+          "token": null,
+          "confidence": 500
+        }
+      ],
+      "reportedControl": [],
+      "day": 94,
+      "hour": 8,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 95,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.battle.evening.union",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "stone_charles_p",
+      "authorPost": "us_dc_militia",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "battle-phase",
+          "region": "richmond",
+          "value": 1,
+          "token": "evening",
+          "confidence": 600,
+          "battle": "battle:richmond:94",
+          "battleDays": [
+            94
+          ],
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "enemy-strength",
+          "region": "richmond",
+          "value": 0,
+          "token": null,
+          "confidence": 500
+        }
+      ],
+      "reportedControl": [],
+      "day": 94,
+      "hour": 21,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 95,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.battle.morning.union",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "stone_charles_p",
+      "authorPost": "us_dc_militia",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "battle-phase",
+          "region": "richmond",
+          "value": 1,
+          "token": "morning",
+          "confidence": 600,
+          "battle": "battle:richmond:94",
+          "battleDays": [
+            94
+          ],
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "enemy-strength",
+          "region": "richmond",
+          "value": 0,
+          "token": null,
+          "confidence": 500
+        }
+      ],
+      "reportedControl": [],
+      "day": 94,
+      "hour": 12,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 95,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.95.stone_charles_p.lincoln_abraham.arrived.us_dc_militia",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "stone_charles_p",
+      "authorPost": "us_dc_militia",
+      "subjectKind": "post",
+      "subjectId": "us_dc_militia",
+      "claims": [
+        {
+          "kind": "arrived",
+          "region": "richmond",
+          "value": 1,
+          "token": null,
+          "confidence": 1000
+        }
+      ],
+      "reportedControl": [],
+      "day": 95,
+      "hour": null,
+      "advice": null,
+      "answers": "m.46.lincoln_abraham.stone_charles_p.order.us_dc_militia",
+      "receivedDay": 96,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.return.first.union",
+      "type": "casualty-return",
+      "subtype": null,
+      "author": "stone_charles_p",
+      "authorPost": "us_dc_militia",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "own-losses",
+          "region": "richmond",
+          "value": 0,
+          "token": "first",
+          "confidence": 600,
+          "battle": "battle:richmond:94",
+          "battleDays": [
+            94
+          ]
+        },
+        {
+          "kind": "missing",
+          "region": "richmond",
+          "value": 0,
+          "token": "first",
+          "confidence": 500,
+          "battle": "battle:richmond:94",
+          "battleDays": [
+            94
+          ]
+        },
+        {
+          "kind": "casualties",
+          "region": "richmond",
+          "value": 0,
+          "token": "enemy",
+          "confidence": 400,
+          "battle": "battle:richmond:94",
+          "battleDays": [
+            94
+          ]
+        }
+      ],
+      "reportedControl": [],
+      "day": 94,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 99,
+      "route": "courier",
+      "via": []
+    },
+    {
+      "id": "m.100.stone_charles_p.lincoln_abraham.battle.afternoon.union",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "stone_charles_p",
+      "authorPost": "us_dc_militia",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "battle-phase",
+          "region": "richmond",
+          "value": 1,
+          "token": "afternoon",
+          "confidence": 600,
+          "battle": "battle:richmond:100",
+          "battleDays": [
+            100
+          ],
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "enemy-strength",
+          "region": "richmond",
+          "value": 158,
+          "token": null,
+          "confidence": 500
+        }
+      ],
+      "reportedControl": [],
+      "day": 100,
+      "hour": 17,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 101,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.100.stone_charles_p.lincoln_abraham.battle.dawn.union",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "stone_charles_p",
+      "authorPost": "us_dc_militia",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "battle-phase",
+          "region": "richmond",
+          "value": 1,
+          "token": "dawn",
+          "confidence": 600,
+          "battle": "battle:richmond:100",
+          "battleDays": [
+            100
+          ],
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "enemy-strength",
+          "region": "richmond",
+          "value": 158,
+          "token": null,
+          "confidence": 500
+        }
+      ],
+      "reportedControl": [],
+      "day": 100,
+      "hour": 8,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 101,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.100.stone_charles_p.lincoln_abraham.battle.evening.union",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "stone_charles_p",
+      "authorPost": "us_dc_militia",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "battle-phase",
+          "region": "richmond",
+          "value": 1,
+          "token": "evening",
+          "confidence": 600,
+          "battle": "battle:richmond:100",
+          "battleDays": [
+            100
+          ],
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "enemy-strength",
+          "region": "richmond",
+          "value": 158,
+          "token": null,
+          "confidence": 500
+        }
+      ],
+      "reportedControl": [],
+      "day": 100,
+      "hour": 21,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 101,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.100.stone_charles_p.lincoln_abraham.battle.morning.union",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "stone_charles_p",
+      "authorPost": "us_dc_militia",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "battle-phase",
+          "region": "richmond",
+          "value": 1,
+          "token": "morning",
+          "confidence": 600,
+          "battle": "battle:richmond:100",
+          "battleDays": [
+            100
+          ],
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "enemy-strength",
+          "region": "richmond",
+          "value": 158,
+          "token": null,
+          "confidence": 500
+        }
+      ],
+      "reportedControl": [],
+      "day": 100,
+      "hour": 12,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 101,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.100.stone_charles_p.lincoln_abraham.return.first.union",
+      "type": "casualty-return",
+      "subtype": null,
+      "author": "stone_charles_p",
+      "authorPost": "us_dc_militia",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "own-losses",
+          "region": "richmond",
+          "value": 20,
+          "token": "first",
+          "confidence": 600,
+          "battle": "battle:richmond:100",
+          "battleDays": [
+            100
+          ]
+        },
+        {
+          "kind": "missing",
+          "region": "richmond",
+          "value": 2,
+          "token": "first",
+          "confidence": 500,
+          "battle": "battle:richmond:100",
+          "battleDays": [
+            100
+          ]
+        },
+        {
+          "kind": "casualties",
+          "region": "richmond",
+          "value": 15,
+          "token": "enemy",
+          "confidence": 400,
+          "battle": "battle:richmond:100",
+          "battleDays": [
+            100
+          ]
+        }
+      ],
+      "reportedControl": [],
+      "day": 100,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 105,
+      "route": "courier",
+      "via": []
+    },
+    {
+      "id": "m.101.stone_charles_p.lincoln_abraham.return.full.union",
+      "type": "casualty-return",
+      "subtype": null,
+      "author": "stone_charles_p",
+      "authorPost": "us_dc_militia",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "own-losses",
+          "region": "richmond",
+          "value": 0,
+          "token": "full",
+          "confidence": 900,
+          "battle": "battle:richmond:94",
+          "battleDays": [
+            94
+          ]
+        },
+        {
+          "kind": "missing",
+          "region": "richmond",
+          "value": 0,
+          "token": "full",
+          "confidence": 800,
+          "battle": "battle:richmond:94",
+          "battleDays": [
+            94
+          ]
+        },
+        {
+          "kind": "captured",
+          "region": "richmond",
+          "value": 0,
+          "token": "full",
+          "confidence": 800,
+          "battle": "battle:richmond:94",
+          "battleDays": [
+            94
+          ]
+        }
+      ],
+      "reportedControl": [],
+      "day": 101,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 106,
+      "route": "courier",
+      "via": []
+    },
+    {
+      "id": "m.98.bennett_james_g.lincoln_abraham.press.herald.lincoln_abraham",
+      "type": "press",
+      "subtype": null,
+      "author": "bennett_james_g",
+      "authorPost": null,
+      "subjectKind": "person",
+      "subjectId": "bennett_james_g",
+      "claims": [
+        {
+          "kind": "battle-result",
+          "region": "richmond",
+          "value": 0,
+          "token": "won",
+          "confidence": 0,
+          "battle": "battle:richmond:94",
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "framing",
+          "region": null,
+          "value": 500,
+          "token": null,
+          "confidence": 1000
+        }
+      ],
+      "reportedControl": [],
+      "day": 98,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 108,
+      "route": "mail",
+      "via": []
+    },
+    {
+      "id": "m.98.greeley_horace.lincoln_abraham.press.tribune.lincoln_abraham",
+      "type": "press",
+      "subtype": null,
+      "author": "greeley_horace",
+      "authorPost": null,
+      "subjectKind": "person",
+      "subjectId": "greeley_horace",
+      "claims": [
+        {
+          "kind": "battle-result",
+          "region": "richmond",
+          "value": 0,
+          "token": "won",
+          "confidence": 0,
+          "battle": "battle:richmond:94",
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "framing",
+          "region": null,
+          "value": 500,
+          "token": null,
+          "confidence": 1000
+        }
+      ],
+      "reportedControl": [],
+      "day": 98,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 109,
+      "route": "mail",
+      "via": []
+    },
+    {
+      "id": "m.98.raymond_henry_j.lincoln_abraham.press.times.lincoln_abraham",
+      "type": "press",
+      "subtype": null,
+      "author": "raymond_henry_j",
+      "authorPost": null,
+      "subjectKind": "person",
+      "subjectId": "raymond_henry_j",
+      "claims": [
+        {
+          "kind": "battle-result",
+          "region": "richmond",
+          "value": 0,
+          "token": "won",
+          "confidence": 0,
+          "battle": "battle:richmond:94",
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "framing",
+          "region": null,
+          "value": 500,
+          "token": null,
+          "confidence": 1000
+        }
+      ],
+      "reportedControl": [],
+      "day": 98,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 109,
+      "route": "mail",
+      "via": []
+    },
+    {
+      "id": "m.107.stone_charles_p.lincoln_abraham.return.full.union",
+      "type": "casualty-return",
+      "subtype": null,
+      "author": "stone_charles_p",
+      "authorPost": "us_dc_militia",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "own-losses",
+          "region": "richmond",
+          "value": 26,
+          "token": "full",
+          "confidence": 900,
+          "battle": "battle:richmond:100",
+          "battleDays": [
+            100
+          ]
+        },
+        {
+          "kind": "missing",
+          "region": "richmond",
+          "value": 2,
+          "token": "full",
+          "confidence": 800,
+          "battle": "battle:richmond:100",
+          "battleDays": [
+            100
+          ]
+        },
+        {
+          "kind": "captured",
+          "region": "richmond",
+          "value": 0,
+          "token": "full",
+          "confidence": 800,
+          "battle": "battle:richmond:100",
+          "battleDays": [
+            100
+          ]
+        }
+      ],
+      "reportedControl": [],
+      "day": 107,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 112,
+      "route": "courier",
+      "via": []
+    },
+    {
+      "id": "m.105.bennett_james_g.lincoln_abraham.press.herald.lincoln_abraham",
+      "type": "press",
+      "subtype": null,
+      "author": "bennett_james_g",
+      "authorPost": null,
+      "subjectKind": "person",
+      "subjectId": "bennett_james_g",
+      "claims": [
+        {
+          "kind": "battle-result",
+          "region": "richmond",
+          "value": 22,
+          "token": "won",
+          "confidence": 500,
+          "battle": "battle:richmond:100",
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "framing",
+          "region": null,
+          "value": 500,
+          "token": null,
+          "confidence": 1000
+        }
+      ],
+      "reportedControl": [],
+      "day": 105,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 115,
+      "route": "mail",
+      "via": []
+    },
+    {
+      "id": "m.105.raymond_henry_j.lincoln_abraham.press.times.lincoln_abraham",
+      "type": "press",
+      "subtype": null,
+      "author": "raymond_henry_j",
+      "authorPost": null,
+      "subjectKind": "person",
+      "subjectId": "raymond_henry_j",
+      "claims": [
+        {
+          "kind": "battle-result",
+          "region": "richmond",
+          "value": 22,
+          "token": "won",
+          "confidence": 500,
+          "battle": "battle:richmond:100",
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "framing",
+          "region": null,
+          "value": 500,
+          "token": null,
+          "confidence": 1000
+        }
+      ],
+      "reportedControl": [],
+      "day": 105,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 115,
+      "route": "mail",
+      "via": []
+    },
+    {
+      "id": "m.105.greeley_horace.lincoln_abraham.press.tribune.lincoln_abraham",
+      "type": "press",
+      "subtype": null,
+      "author": "greeley_horace",
+      "authorPost": null,
+      "subjectKind": "person",
+      "subjectId": "greeley_horace",
+      "claims": [
+        {
+          "kind": "battle-result",
+          "region": "richmond",
+          "value": 22,
+          "token": "won",
+          "confidence": 500,
+          "battle": "battle:richmond:100",
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "framing",
+          "region": null,
+          "value": 500,
+          "token": null,
+          "confidence": 1000
+        }
+      ],
+      "reportedControl": [],
+      "day": 105,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 116,
+      "route": "mail",
+      "via": []
+    },
+    {
+      "id": "m.136.scott_winfield.lincoln_abraham.battle.afternoon.union",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "scott_winfield",
+      "authorPost": "us_general_in_chief",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "battle-phase",
+          "region": "richmond",
+          "value": 1,
+          "token": "afternoon",
+          "confidence": 600,
+          "battle": "battle:richmond:136",
+          "battleDays": [
+            136
+          ],
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "enemy-strength",
+          "region": "richmond",
+          "value": 28800,
+          "token": null,
+          "confidence": 500
+        }
+      ],
+      "reportedControl": [],
+      "day": 136,
+      "hour": 17,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 137,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.136.scott_winfield.lincoln_abraham.battle.dawn.union",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "scott_winfield",
+      "authorPost": "us_general_in_chief",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "battle-phase",
+          "region": "richmond",
+          "value": 0,
+          "token": "dawn",
+          "confidence": 600,
+          "battle": "battle:richmond:136",
+          "battleDays": [
+            136
+          ],
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "enemy-strength",
+          "region": "richmond",
+          "value": 28800,
+          "token": null,
+          "confidence": 500
+        }
+      ],
+      "reportedControl": [],
+      "day": 136,
+      "hour": 8,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 137,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.136.scott_winfield.lincoln_abraham.battle.evening.union",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "scott_winfield",
+      "authorPost": "us_general_in_chief",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "battle-phase",
+          "region": "richmond",
+          "value": 0,
+          "token": "evening",
+          "confidence": 600,
+          "battle": "battle:richmond:136",
+          "battleDays": [
+            136
+          ],
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "enemy-strength",
+          "region": "richmond",
+          "value": 28800,
+          "token": null,
+          "confidence": 500
+        }
+      ],
+      "reportedControl": [],
+      "day": 136,
+      "hour": 21,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 137,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.136.scott_winfield.lincoln_abraham.battle.morning.union",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "scott_winfield",
+      "authorPost": "us_general_in_chief",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "battle-phase",
+          "region": "richmond",
+          "value": 1,
+          "token": "morning",
+          "confidence": 600,
+          "battle": "battle:richmond:136",
+          "battleDays": [
+            136
+          ],
+          "commander": "stone_charles_p"
+        },
+        {
+          "kind": "enemy-strength",
+          "region": "richmond",
+          "value": 28800,
+          "token": null,
+          "confidence": 500
+        }
+      ],
+      "reportedControl": [],
+      "day": 136,
+      "hour": 12,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 137,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.136.scott_winfield.lincoln_abraham.return.first.union",
+      "type": "casualty-return",
+      "subtype": null,
+      "author": "scott_winfield",
+      "authorPost": "us_general_in_chief",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "own-losses",
+          "region": "richmond",
+          "value": 95,
+          "token": "first",
+          "confidence": 600,
+          "battle": "battle:richmond:136",
+          "battleDays": [
+            136
+          ]
+        },
+        {
+          "kind": "missing",
+          "region": "richmond",
+          "value": 455,
+          "token": "first",
+          "confidence": 500,
+          "battle": "battle:richmond:136",
+          "battleDays": [
+            136
+          ]
+        },
+        {
+          "kind": "casualties",
+          "region": "richmond",
+          "value": 144,
+          "token": "enemy",
+          "confidence": 400,
+          "battle": "battle:richmond:136",
+          "battleDays": [
+            136
+          ]
+        }
+      ],
+      "reportedControl": [],
+      "day": 136,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 137,
+      "route": "courier",
+      "via": []
+    },
+    {
+      "id": "m.143.scott_winfield.lincoln_abraham.return.full.union",
+      "type": "casualty-return",
+      "subtype": null,
+      "author": "scott_winfield",
+      "authorPost": "us_general_in_chief",
+      "subjectKind": "region",
+      "subjectId": "richmond",
+      "claims": [
+        {
+          "kind": "own-losses",
+          "region": "richmond",
+          "value": 119,
+          "token": "full",
+          "confidence": 900,
+          "battle": "battle:richmond:136",
+          "battleDays": [
+            136
+          ]
+        },
+        {
+          "kind": "missing",
+          "region": "richmond",
+          "value": 0,
+          "token": "full",
+          "confidence": 800,
+          "battle": "battle:richmond:136",
+          "battleDays": [
+            136
+          ]
+        },
+        {
+          "kind": "captured",
+          "region": "richmond",
+          "value": 455,
+          "token": "full",
+          "confidence": 800,
+          "battle": "battle:richmond:136",
+          "battleDays": [
+            136
+          ]
+        }
+      ],
+      "reportedControl": [],
+      "day": 143,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 144,
+      "route": "courier",
+      "via": []
+    }
+  ],
+  "scope": "Read-only retained public desk snapshot; no old-pin private trace claimed."
+}

@@ -1,0 +1,132 @@
+{
+  "source": "docs\\audit\\s41-evidence\\replay.json",
+  "sha256": "887afa916b7257bc51abd32f433de0653bcc880aa03d598a397d452a8e61edc6",
+  "comparisons": [
+    {
+      "id": "m.101.stone_charles_p.lincoln_abraham.arrived.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.101.stone_charles_p.lincoln_abraham.return.full.union",
+      "match": true
+    },
+    {
+      "id": "m.105.cameron_simon.lincoln_abraham.control.manassas.union",
+      "match": true
+    },
+    {
+      "id": "m.105.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.107.cameron_simon.lincoln_abraham.control.manassas.union",
+      "match": true
+    },
+    {
+      "id": "m.107.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.109.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.111.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.113.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.115.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.117.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.119.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.121.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.123.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.125.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.127.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.129.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.131.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.133.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.135.stone_charles_p.lincoln_abraham.dispatch.us_dc_militia",
+      "match": true
+    },
+    {
+      "id": "m.136.scott_winfield.lincoln_abraham.return.first.union",
+      "match": true
+    },
+    {
+      "id": "m.143.scott_winfield.lincoln_abraham.return.full.union",
+      "match": true
+    },
+    {
+      "id": "m.146.cameron_simon.lincoln_abraham.control.manassas.union",
+      "match": true
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.battle.afternoon.union",
+      "match": true
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.battle.dawn.union",
+      "match": true
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.battle.evening.union",
+      "match": true
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.battle.morning.union",
+      "match": true
+    },
+    {
+      "id": "m.94.stone_charles_p.lincoln_abraham.return.first.union",
+      "match": true
+    },
+    {
+      "id": "m.98.bennett_james_g.lincoln_abraham.press.herald.lincoln_abraham",
+      "match": true
+    },
+    {
+      "id": "m.98.greeley_horace.lincoln_abraham.press.tribune.lincoln_abraham",
+      "match": true
+    },
+    {
+      "id": "m.98.raymond_henry_j.lincoln_abraham.press.times.lincoln_abraham",
+      "match": true
+    }
+  ],
+  "allMatch": true,
+  "scope": "All 31 changed S41 records, not an independent comparison of all 2163 papers; opening bulletin excluded from daily delivery capture."
+}

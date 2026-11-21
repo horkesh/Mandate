@@ -1,0 +1,805 @@
+{
+  "battle:richmond:100": {
+    "battleRegion": "richmond",
+    "battleStartDay": 100,
+    "battleEndDay": 100,
+    "battleFactions": [
+      "confederate",
+      "union"
+    ],
+    "battleCauses": [
+      "cs_cmd_harpers_ferry",
+      "us_dc_militia"
+    ],
+    "battleDays": [
+      {
+        "bdayDay": 100,
+        "bdayNumber": 1,
+        "bdayType": "attack_hasty",
+        "bdayAttacker": "union",
+        "bdayFrontage": 30000,
+        "bdayContact": 158,
+        "bdayDraws": 6,
+        "bdaySides": [
+          {
+            "bsideFaction": "confederate",
+            "bsidePost": "cs_cmd_harpers_ferry",
+            "bsideCommander": "johnston_joseph_e",
+            "bsideCommit": "defend",
+            "bsideBlocks": [
+              "fb_st_georgetown_coast_guard"
+            ],
+            "bsideUnknown": [],
+            "bsidePresent": 158,
+            "bsideCommitted": 158,
+            "bsideEngaged": 158,
+            "bsideBase": 95,
+            "bsideTerms": [
+              {
+                "btermKind": "terrain",
+                "btermValue": -100,
+                "btermSource": "urban"
+              },
+              {
+                "btermKind": "competence",
+                "btermValue": -83,
+                "btermSource": "stone_charles_p"
+              },
+              {
+                "btermKind": "numbers",
+                "btermValue": 110,
+                "btermSource": null
+              },
+              {
+                "btermKind": "noise",
+                "btermValue": 116,
+                "btermSource": null
+              }
+            ],
+            "bsideMultiplier": 1043,
+            "bsideKw": 15,
+            "bsideKwParts": [
+              {
+                "btermKind": "base",
+                "btermValue": 14,
+                "btermSource": "attack_hasty"
+              },
+              {
+                "btermKind": "terrain",
+                "btermValue": -2,
+                "btermSource": "urban"
+              },
+              {
+                "btermKind": "competence",
+                "btermValue": -1,
+                "btermSource": "stone_charles_p"
+              },
+              {
+                "btermKind": "numbers",
+                "btermValue": 2,
+                "btermSource": null
+              },
+              {
+                "btermKind": "noise",
+                "btermValue": 2,
+                "btermSource": null
+              }
+            ],
+            "bsideKilled": 2,
+            "bsideWounded": 13,
+            "bsideMissing": 0,
+            "bsideMissingParts": [
+              {
+                "btermKind": "result_withdrew",
+                "btermValue": 4,
+                "btermSource": "withdrew"
+              },
+              {
+                "btermKind": "flank_broken",
+                "btermValue": 3,
+                "btermSource": null
+              },
+              {
+                "btermKind": "captured_on_field",
+                "btermValue": -1,
+                "btermSource": null
+              },
+              {
+                "btermKind": "missing_in_pocket",
+                "btermValue": -6,
+                "btermSource": null
+              }
+            ],
+            "bsideCaptured": 143,
+            "bsideCapturedParts": [
+              {
+                "btermKind": "captured_on_field",
+                "btermValue": 1,
+                "btermSource": null
+              },
+              {
+                "btermKind": "missing_in_pocket",
+                "btermValue": 6,
+                "btermSource": null
+              },
+              {
+                "btermKind": "surrender",
+                "btermValue": 136,
+                "btermSource": null
+              }
+            ],
+            "bsideFlankDraw": 38,
+            "bsideFlankThreshold": 197,
+            "bsideFlankTerms": [
+              {
+                "btermKind": "flank_base",
+                "btermValue": 50,
+                "btermSource": null
+              },
+              {
+                "btermKind": "enemy_numbers",
+                "btermValue": 147,
+                "btermSource": null
+              }
+            ],
+            "bsideFlankBroken": true,
+            "bsideMoraleBefore": 600,
+            "bsideMoraleAfter": 274,
+            "bsideMoraleTerms": [
+              {
+                "btermKind": "losses",
+                "btermValue": -141,
+                "btermSource": null
+              },
+              {
+                "btermKind": "flank_broken",
+                "btermValue": -150,
+                "btermSource": null
+              },
+              {
+                "btermKind": "nerve",
+                "btermValue": -5,
+                "btermSource": "johnston_joseph_e"
+              },
+              {
+                "btermKind": "experience",
+                "btermValue": -30,
+                "btermSource": null
+              }
+            ],
+            "bsideDecisions": [
+              {
+                "btermKind": "believed_ratio",
+                "btermValue": 166,
+                "btermSource": "johnston_joseph_e"
+              },
+              {
+                "btermKind": "demand",
+                "btermValue": 1056,
+                "btermSource": "johnston_joseph_e"
+              },
+              {
+                "btermKind": "probe_at",
+                "btermValue": 739,
+                "btermSource": "johnston_joseph_e"
+              },
+              {
+                "btermKind": "night_believed_ratio",
+                "btermValue": 157,
+                "btermSource": "johnston_joseph_e"
+              },
+              {
+                "btermKind": "hold_at",
+                "btermValue": 633,
+                "btermSource": "johnston_joseph_e"
+              },
+              {
+                "btermKind": "cut_off_believed_ratio",
+                "btermValue": 157,
+                "btermSource": "johnston_joseph_e"
+              },
+              {
+                "btermKind": "breakout_at",
+                "btermValue": 422,
+                "btermSource": "johnston_joseph_e"
+              }
+            ],
+            "bsideResult": "withdrew",
+            "bsideCutOff": "surrender",
+            "bsideRetreatTo": null,
+            "bsidePursue": null,
+            "bsideLosses": [
+              {
+                "blossBlock": "fb_st_georgetown_coast_guard",
+                "blossKilled": 2,
+                "blossWounded": 13,
+                "blossMissing": 0,
+                "blossCaptured": 143,
+                "blossStragglersCaptured": 0
+              }
+            ],
+            "bsideHitDraw": 295,
+            "bsideHit": "captured"
+          },
+          {
+            "bsideFaction": "union",
+            "bsidePost": "us_dc_militia",
+            "bsideCommander": "stone_charles_p",
+            "bsideCommit": "main",
+            "bsideBlocks": [
+              "fb_us_dc_militia"
+            ],
+            "bsideUnknown": [],
+            "bsidePresent": 600,
+            "bsideCommitted": 420,
+            "bsideEngaged": 420,
+            "bsideBase": 190,
+            "bsideTerms": [
+              {
+                "btermKind": "terrain",
+                "btermValue": -100,
+                "btermSource": "urban"
+              },
+              {
+                "btermKind": "competence",
+                "btermValue": 83,
+                "btermSource": "johnston_joseph_e"
+              },
+              {
+                "btermKind": "numbers",
+                "btermValue": -110,
+                "btermSource": null
+              },
+              {
+                "btermKind": "noise",
+                "btermValue": 23,
+                "btermSource": null
+              }
+            ],
+            "bsideMultiplier": 896,
+            "bsideKw": 26,
+            "bsideKwParts": [
+              {
+                "btermKind": "base",
+                "btermValue": 29,
+                "btermSource": "attack_hasty"
+              },
+              {
+                "btermKind": "terrain",
+                "btermValue": -3,
+                "btermSource": "urban"
+              },
+              {
+                "btermKind": "competence",
+                "btermValue": 2,
+                "btermSource": "johnston_joseph_e"
+              },
+              {
+                "btermKind": "numbers",
+                "btermValue": -3,
+                "btermSource": null
+              },
+              {
+                "btermKind": "noise",
+                "btermValue": 1,
+                "btermSource": null
+              }
+            ],
+            "bsideKilled": 3,
+            "bsideWounded": 23,
+            "bsideMissing": 2,
+            "bsideMissingParts": [
+              {
+                "btermKind": "result_gained_ground",
+                "btermValue": 2,
+                "btermSource": "gained_ground"
+              }
+            ],
+            "bsideCaptured": 0,
+            "bsideCapturedParts": [],
+            "bsideFlankDraw": 744,
+            "bsideFlankThreshold": 50,
+            "bsideFlankTerms": [
+              {
+                "btermKind": "flank_base",
+                "btermValue": 50,
+                "btermSource": null
+              }
+            ],
+            "bsideFlankBroken": false,
+            "bsideMoraleBefore": 600,
+            "bsideMoraleAfter": 502,
+            "bsideMoraleTerms": [
+              {
+                "btermKind": "losses",
+                "btermValue": -64,
+                "btermSource": null
+              },
+              {
+                "btermKind": "nerve",
+                "btermValue": -4,
+                "btermSource": "stone_charles_p"
+              },
+              {
+                "btermKind": "experience",
+                "btermValue": -30,
+                "btermSource": null
+              }
+            ],
+            "bsideDecisions": [
+              {
+                "btermKind": "believed_ratio",
+                "btermValue": 3797,
+                "btermSource": "stone_charles_p"
+              },
+              {
+                "btermKind": "demand",
+                "btermValue": 1000,
+                "btermSource": "stone_charles_p"
+              },
+              {
+                "btermKind": "boldness",
+                "btermValue": 503,
+                "btermSource": "stone_charles_p"
+              },
+              {
+                "btermKind": "night_believed_ratio",
+                "btermValue": 4013,
+                "btermSource": "stone_charles_p"
+              },
+              {
+                "btermKind": "hold_at",
+                "btermValue": 600,
+                "btermSource": "stone_charles_p"
+              }
+            ],
+            "bsideResult": "gained_ground",
+            "bsideCutOff": null,
+            "bsideRetreatTo": null,
+            "bsidePursue": null,
+            "bsideLosses": [
+              {
+                "blossBlock": "fb_us_dc_militia",
+                "blossKilled": 3,
+                "blossWounded": 23,
+                "blossMissing": 2,
+                "blossCaptured": 0,
+                "blossStragglersCaptured": 0
+              }
+            ],
+            "bsideHitDraw": 754,
+            "bsideHit": null
+          }
+        ]
+      }
+    ]
+  },
+  "battle:richmond:136": {
+    "battleRegion": "richmond",
+    "battleStartDay": 136,
+    "battleEndDay": 136,
+    "battleFactions": [
+      "confederate",
+      "union"
+    ],
+    "battleCauses": [
+      "cs_cmd_manassas",
+      "us_dc_militia"
+    ],
+    "battleDays": [
+      {
+        "bdayDay": 136,
+        "bdayNumber": 1,
+        "bdayType": "attack_hasty",
+        "bdayAttacker": "confederate",
+        "bdayFrontage": 30000,
+        "bdayContact": 574,
+        "bdayDraws": 6,
+        "bdaySides": [
+          {
+            "bsideFaction": "confederate",
+            "bsidePost": "cs_cmd_manassas",
+            "bsideCommander": "beauregard_pierre_g_t",
+            "bsideCommit": "all_out",
+            "bsideBlocks": [
+              "state-forces.cs_nc_additional_north_carolina",
+              "state-forces.cs_nc_state_transfer_north_carolina",
+              "state-forces.cs_nc_volunteers_north_carolina"
+            ],
+            "bsideUnknown": [],
+            "bsidePresent": 16000,
+            "bsideCommitted": 16000,
+            "bsideEngaged": 16000,
+            "bsideBase": 190,
+            "bsideTerms": [
+              {
+                "btermKind": "terrain",
+                "btermValue": -100,
+                "btermSource": "urban"
+              },
+              {
+                "btermKind": "quality",
+                "btermValue": -13,
+                "btermSource": null
+              },
+              {
+                "btermKind": "competence",
+                "btermValue": -109,
+                "btermSource": "stone_charles_p"
+              },
+              {
+                "btermKind": "own_posture",
+                "btermValue": 200,
+                "btermSource": "all_out"
+              },
+              {
+                "btermKind": "numbers",
+                "btermValue": -144,
+                "btermSource": null
+              },
+              {
+                "btermKind": "noise",
+                "btermValue": -11,
+                "btermSource": null
+              }
+            ],
+            "bsideMultiplier": 823,
+            "bsideKw": 89,
+            "bsideKwParts": [
+              {
+                "btermKind": "base",
+                "btermValue": 108,
+                "btermSource": "attack_hasty"
+              },
+              {
+                "btermKind": "terrain",
+                "btermValue": -11,
+                "btermSource": "urban"
+              },
+              {
+                "btermKind": "quality",
+                "btermValue": -1,
+                "btermSource": null
+              },
+              {
+                "btermKind": "competence",
+                "btermValue": -12,
+                "btermSource": "stone_charles_p"
+              },
+              {
+                "btermKind": "own_posture",
+                "btermValue": 22,
+                "btermSource": "all_out"
+              },
+              {
+                "btermKind": "numbers",
+                "btermValue": -16,
+                "btermSource": null
+              },
+              {
+                "btermKind": "noise",
+                "btermValue": -1,
+                "btermSource": null
+              }
+            ],
+            "bsideKilled": 13,
+            "bsideWounded": 76,
+            "bsideMissing": 7,
+            "bsideMissingParts": [
+              {
+                "btermKind": "result_gained_ground",
+                "btermValue": 7,
+                "btermSource": "gained_ground"
+              }
+            ],
+            "bsideCaptured": 0,
+            "bsideCapturedParts": [],
+            "bsideFlankDraw": 698,
+            "bsideFlankThreshold": 50,
+            "bsideFlankTerms": [
+              {
+                "btermKind": "flank_base",
+                "btermValue": 50,
+                "btermSource": null
+              }
+            ],
+            "bsideFlankBroken": false,
+            "bsideMoraleBefore": 600,
+            "bsideMoraleAfter": 525,
+            "bsideMoraleTerms": [
+              {
+                "btermKind": "losses",
+                "btermValue": -7,
+                "btermSource": null
+              },
+              {
+                "btermKind": "nerve",
+                "btermValue": -38,
+                "btermSource": "beauregard_pierre_g_t"
+              },
+              {
+                "btermKind": "experience",
+                "btermValue": -30,
+                "btermSource": null
+              }
+            ],
+            "bsideDecisions": [
+              {
+                "btermKind": "believed_ratio",
+                "btermValue": 27874,
+                "btermSource": "beauregard_pierre_g_t"
+              },
+              {
+                "btermKind": "demand",
+                "btermValue": 1000,
+                "btermSource": "beauregard_pierre_g_t"
+              },
+              {
+                "btermKind": "boldness",
+                "btermValue": 851,
+                "btermSource": "beauregard_pierre_g_t"
+              },
+              {
+                "btermKind": "night_believed_ratio",
+                "btermValue": 31632,
+                "btermSource": "beauregard_pierre_g_t"
+              },
+              {
+                "btermKind": "hold_at",
+                "btermValue": 600,
+                "btermSource": "beauregard_pierre_g_t"
+              }
+            ],
+            "bsideResult": "gained_ground",
+            "bsideCutOff": null,
+            "bsideRetreatTo": null,
+            "bsidePursue": null,
+            "bsideLosses": [
+              {
+                "blossBlock": "state-forces.cs_nc_additional_north_carolina",
+                "blossKilled": 2,
+                "blossWounded": 9,
+                "blossMissing": 1,
+                "blossCaptured": 0,
+                "blossStragglersCaptured": 0
+              },
+              {
+                "blossBlock": "state-forces.cs_nc_state_transfer_north_carolina",
+                "blossKilled": 8,
+                "blossWounded": 48,
+                "blossMissing": 4,
+                "blossCaptured": 0,
+                "blossStragglersCaptured": 0
+              },
+              {
+                "blossBlock": "state-forces.cs_nc_volunteers_north_carolina",
+                "blossKilled": 3,
+                "blossWounded": 19,
+                "blossMissing": 2,
+                "blossCaptured": 0,
+                "blossStragglersCaptured": 0
+              }
+            ],
+            "bsideHitDraw": 422,
+            "bsideHit": null
+          },
+          {
+            "bsideFaction": "union",
+            "bsidePost": "us_dc_militia",
+            "bsideCommander": "stone_charles_p",
+            "bsideCommit": "defend",
+            "bsideBlocks": [
+              "fb_us_dc_militia"
+            ],
+            "bsideUnknown": [],
+            "bsidePresent": 574,
+            "bsideCommitted": 574,
+            "bsideEngaged": 574,
+            "bsideBase": 95,
+            "bsideTerms": [
+              {
+                "btermKind": "terrain",
+                "btermValue": -100,
+                "btermSource": "urban"
+              },
+              {
+                "btermKind": "quality",
+                "btermValue": 13,
+                "btermSource": null
+              },
+              {
+                "btermKind": "competence",
+                "btermValue": 109,
+                "btermSource": "beauregard_pierre_g_t"
+              },
+              {
+                "btermKind": "enemy_posture",
+                "btermValue": 200,
+                "btermSource": "all_out"
+              },
+              {
+                "btermKind": "numbers",
+                "btermValue": 144,
+                "btermSource": null
+              },
+              {
+                "btermKind": "noise",
+                "btermValue": -61,
+                "btermSource": null
+              }
+            ],
+            "bsideMultiplier": 1305,
+            "bsideKw": 71,
+            "bsideKwParts": [
+              {
+                "btermKind": "base",
+                "btermValue": 54,
+                "btermSource": "attack_hasty"
+              },
+              {
+                "btermKind": "terrain",
+                "btermValue": -6,
+                "btermSource": "urban"
+              },
+              {
+                "btermKind": "quality",
+                "btermValue": 1,
+                "btermSource": null
+              },
+              {
+                "btermKind": "competence",
+                "btermValue": 6,
+                "btermSource": "beauregard_pierre_g_t"
+              },
+              {
+                "btermKind": "enemy_posture",
+                "btermValue": 11,
+                "btermSource": "all_out"
+              },
+              {
+                "btermKind": "numbers",
+                "btermValue": 8,
+                "btermSource": null
+              },
+              {
+                "btermKind": "noise",
+                "btermValue": -3,
+                "btermSource": null
+              }
+            ],
+            "bsideKilled": 10,
+            "bsideWounded": 61,
+            "bsideMissing": 0,
+            "bsideMissingParts": [
+              {
+                "btermKind": "result_routed",
+                "btermValue": 35,
+                "btermSource": "routed"
+              },
+              {
+                "btermKind": "flank_broken",
+                "btermValue": 14,
+                "btermSource": null
+              },
+              {
+                "btermKind": "captured_on_field",
+                "btermValue": -14,
+                "btermSource": null
+              },
+              {
+                "btermKind": "missing_in_pocket",
+                "btermValue": -35,
+                "btermSource": null
+              }
+            ],
+            "bsideCaptured": 503,
+            "bsideCapturedParts": [
+              {
+                "btermKind": "captured_on_field",
+                "btermValue": 14,
+                "btermSource": null
+              },
+              {
+                "btermKind": "missing_in_pocket",
+                "btermValue": 35,
+                "btermSource": null
+              },
+              {
+                "btermKind": "surrender",
+                "btermValue": 454,
+                "btermSource": null
+              }
+            ],
+            "bsideFlankDraw": 38,
+            "bsideFlankThreshold": 248,
+            "bsideFlankTerms": [
+              {
+                "btermKind": "flank_base",
+                "btermValue": 50,
+                "btermSource": null
+              },
+              {
+                "btermKind": "enemy_numbers",
+                "btermValue": 192,
+                "btermSource": null
+              },
+              {
+                "btermKind": "enemy_quality",
+                "btermValue": 6,
+                "btermSource": null
+              }
+            ],
+            "bsideFlankBroken": true,
+            "bsideMoraleBefore": 502,
+            "bsideMoraleAfter": 143,
+            "bsideMoraleTerms": [
+              {
+                "btermKind": "losses",
+                "btermValue": -184,
+                "btermSource": null
+              },
+              {
+                "btermKind": "flank_broken",
+                "btermValue": -150,
+                "btermSource": null
+              },
+              {
+                "btermKind": "nerve",
+                "btermValue": -4,
+                "btermSource": "stone_charles_p"
+              },
+              {
+                "btermKind": "experience",
+                "btermValue": -21,
+                "btermSource": null
+              }
+            ],
+            "bsideDecisions": [
+              {
+                "btermKind": "believed_ratio",
+                "btermValue": 35,
+                "btermSource": "stone_charles_p"
+              },
+              {
+                "btermKind": "demand",
+                "btermValue": 1000,
+                "btermSource": "stone_charles_p"
+              },
+              {
+                "btermKind": "probe_at",
+                "btermValue": 700,
+                "btermSource": "stone_charles_p"
+              },
+              {
+                "btermKind": "cut_off_believed_ratio",
+                "btermValue": 31,
+                "btermSource": "stone_charles_p"
+              },
+              {
+                "btermKind": "breakout_at",
+                "btermValue": 400,
+                "btermSource": "stone_charles_p"
+              }
+            ],
+            "bsideResult": "routed",
+            "bsideCutOff": "surrender",
+            "bsideRetreatTo": null,
+            "bsidePursue": null,
+            "bsideLosses": [
+              {
+                "blossBlock": "fb_us_dc_militia",
+                "blossKilled": 10,
+                "blossWounded": 61,
+                "blossMissing": 0,
+                "blossCaptured": 503,
+                "blossStragglersCaptured": 0
+              }
+            ],
+            "bsideHitDraw": 423,
+            "bsideHit": "captured"
+          }
+        ]
+      }
+    ]
+  }
+}

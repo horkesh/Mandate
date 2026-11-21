@@ -1,0 +1,267 @@
+{
+  "op:us_dc_militia:48": {
+    "opPost": "us_dc_militia",
+    "opCommander": "stone_charles_p",
+    "opOrder": "m.46.lincoln_abraham.stone_charles_p.order.us_dc_militia",
+    "opPlan": "supply_line:depot_steps:washington>northern_virginia>manassas>fredericksburg>hanover>richmond",
+    "opMethod": "supply_line",
+    "opPosture": "take",
+    "opObjective": "richmond",
+    "opStartDay": 48,
+    "opEndDay": 102,
+    "opOutcome": "objective_reached",
+    "opAxes": [
+      {
+        "oaxName": "main",
+        "oaxPost": "us_dc_militia",
+        "oaxBlocks": [
+          "fb_us_dc_militia"
+        ],
+        "oaxRoute": {
+          "routeFrom": "washington",
+          "routeTo": "richmond",
+          "routeLegs": [
+            {
+              "legEdge": "road:northern_virginia:washington",
+              "legFrom": "washington",
+              "legTo": "northern_virginia",
+              "legType": "road",
+              "legDays": 1000,
+              "legThreat": 0,
+              "legSupply": 1000,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            },
+            {
+              "legEdge": "road:manassas:northern_virginia",
+              "legFrom": "northern_virginia",
+              "legTo": "manassas",
+              "legType": "road",
+              "legDays": 3000,
+              "legThreat": 0,
+              "legSupply": 3000,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            },
+            {
+              "legEdge": "road:fredericksburg:manassas",
+              "legFrom": "manassas",
+              "legTo": "fredericksburg",
+              "legType": "road",
+              "legDays": 4000,
+              "legThreat": 0,
+              "legSupply": 4000,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            },
+            {
+              "legEdge": "road:fredericksburg:hanover",
+              "legFrom": "fredericksburg",
+              "legTo": "hanover",
+              "legType": "road",
+              "legDays": 3000,
+              "legThreat": 0,
+              "legSupply": 3000,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            },
+            {
+              "legEdge": "road:hanover:richmond",
+              "legFrom": "hanover",
+              "legTo": "richmond",
+              "legType": "road",
+              "legDays": 3000,
+              "legThreat": 0,
+              "legSupply": 3000,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            }
+          ],
+          "routeCost": 28000,
+          "routeDays": 14000
+        },
+        "oaxPhases": [
+          {
+            "phaseKind": "concentrate",
+            "phaseStart": 0,
+            "phaseDays": 2000,
+            "phaseRegion": "washington"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 2000,
+            "phaseDays": 1000,
+            "phaseRegion": "northern_virginia"
+          },
+          {
+            "phaseKind": "depot_step",
+            "phaseStart": 3000,
+            "phaseDays": 2000,
+            "phaseRegion": "northern_virginia"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 5000,
+            "phaseDays": 3000,
+            "phaseRegion": "manassas"
+          },
+          {
+            "phaseKind": "depot_step",
+            "phaseStart": 8000,
+            "phaseDays": 2000,
+            "phaseRegion": "manassas"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 10000,
+            "phaseDays": 4000,
+            "phaseRegion": "fredericksburg"
+          },
+          {
+            "phaseKind": "depot_step",
+            "phaseStart": 14000,
+            "phaseDays": 2000,
+            "phaseRegion": "fredericksburg"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 16000,
+            "phaseDays": 3000,
+            "phaseRegion": "hanover"
+          },
+          {
+            "phaseKind": "depot_step",
+            "phaseStart": 19000,
+            "phaseDays": 2000,
+            "phaseRegion": "hanover"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 21000,
+            "phaseDays": 3000,
+            "phaseRegion": "richmond"
+          }
+        ],
+        "oaxObjective": "richmond",
+        "oaxStage": "end",
+        "oaxSince": 102,
+        "oaxUntil": null,
+        "oaxRepulses": 0,
+        "oaxPursuit": null,
+        "oaxSteps": [
+          "northern_virginia",
+          "manassas",
+          "fredericksburg",
+          "hanover"
+        ],
+        "oaxArrived": 72,
+        "oaxLog": [
+          {
+            "axevDay": 48,
+            "axevStage": "assemble",
+            "axevReason": "opened",
+            "axevRegion": "washington"
+          },
+          {
+            "axevDay": 50,
+            "axevStage": "march",
+            "axevReason": "concentrated",
+            "axevRegion": "washington"
+          },
+          {
+            "axevDay": 51,
+            "axevStage": "pause",
+            "axevReason": "depot_step",
+            "axevRegion": "northern_virginia"
+          },
+          {
+            "axevDay": 53,
+            "axevStage": "march",
+            "axevReason": "pause_over",
+            "axevRegion": "northern_virginia"
+          },
+          {
+            "axevDay": 56,
+            "axevStage": "pause",
+            "axevReason": "depot_step",
+            "axevRegion": "manassas"
+          },
+          {
+            "axevDay": 58,
+            "axevStage": "march",
+            "axevReason": "pause_over",
+            "axevRegion": "manassas"
+          },
+          {
+            "axevDay": 62,
+            "axevStage": "pause",
+            "axevReason": "depot_step",
+            "axevRegion": "fredericksburg"
+          },
+          {
+            "axevDay": 64,
+            "axevStage": "march",
+            "axevReason": "pause_over",
+            "axevRegion": "fredericksburg"
+          },
+          {
+            "axevDay": 67,
+            "axevStage": "pause",
+            "axevReason": "depot_step",
+            "axevRegion": "hanover"
+          },
+          {
+            "axevDay": 69,
+            "axevStage": "march",
+            "axevReason": "pause_over",
+            "axevRegion": "hanover"
+          },
+          {
+            "axevDay": 72,
+            "axevStage": "works",
+            "axevReason": "objective_reached",
+            "axevRegion": "richmond"
+          },
+          {
+            "axevDay": 94,
+            "axevStage": "assault",
+            "axevReason": "enemy_ahead",
+            "axevRegion": "richmond"
+          },
+          {
+            "axevDay": 95,
+            "axevStage": "works",
+            "axevReason": "enemy_gone",
+            "axevRegion": "richmond"
+          },
+          {
+            "axevDay": 101,
+            "axevStage": "assault",
+            "axevReason": "enemy_ahead",
+            "axevRegion": "richmond"
+          },
+          {
+            "axevDay": 101,
+            "axevStage": "works",
+            "axevReason": "enemy_gone",
+            "axevRegion": "richmond"
+          },
+          {
+            "axevDay": 102,
+            "axevStage": "end",
+            "axevReason": "objective_held",
+            "axevRegion": "richmond"
+          }
+        ]
+      }
+    ],
+    "opRequests": [],
+    "opEncirclement": null,
+    "opEncirclementWhy": null
+  }
+}

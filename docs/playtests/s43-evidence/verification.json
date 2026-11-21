@@ -1,0 +1,12 @@
+{
+  "verdict": "pass",
+  "originalFilesUnchanged": 1879,
+  "jsonFilesParsed": 15,
+  "localLinksResolved": 25,
+  "sourcePages": 24,
+  "commandHashesMatched": 86,
+  "dailyHashesRetained": 148,
+  "changedPublicRecordsMatched": 31,
+  "sourceCodeOrBandEdits": 0,
+  "reportSha256": "1a8adcfce89e4992c8f6ffd6a2e02381b0e11a984ad0b708eaf3642f33c79e8e"
+}

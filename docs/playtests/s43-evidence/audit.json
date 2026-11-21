@@ -1,0 +1,54 @@
+{
+  "day": 148,
+  "commands": 86,
+  "turns": 44,
+  "controlHashes": true,
+  "s41ChangedPapersMatch": true,
+  "rawFiles": [
+    {
+      "path": "runs\\s43\\daily-private.json",
+      "bytes": 46929890,
+      "sha256": "16404c63454931a661597f0517014fb62651f670f025e822727e0a612d9f6945"
+    },
+    {
+      "path": "runs\\s43\\early-preflight-transcript.json",
+      "bytes": 33038,
+      "sha256": "9367a25e688df8764e0559a776edb6117b1e1bbf56e8fc3f08aa1f0473ed536b"
+    },
+    {
+      "path": "runs\\s43\\early-preflight.json",
+      "bytes": 230,
+      "sha256": "ffaf576d8c344110e0a534cc8629e4247d59705567cf304fbb694dc530a5ef85"
+    },
+    {
+      "path": "runs\\s43\\early-world-context.json",
+      "bytes": 1976989,
+      "sha256": "9e21dad51fda20f2564b4c39f6b8f06dc58ef8b91a1ce300b35563c3eedfd099"
+    },
+    {
+      "path": "runs\\s43\\issued-entries.json",
+      "bytes": 47427,
+      "sha256": "0051c91e156889df29774fdb6da43e2f8ed46e10d12e7128f13dc04f12a8b9ee"
+    },
+    {
+      "path": "runs\\s43\\public-papers.json",
+      "bytes": 2845253,
+      "sha256": "a213436f410f659354778ab2d0f9a0268a6ab209bf9d0a430c871b9983448e04"
+    },
+    {
+      "path": "runs\\s43\\summary.json",
+      "bytes": 1328,
+      "sha256": "83b1e5fe1072a552734f84eb09b02f8750af89832bfcd9b8f73dd3b30d3f0de7"
+    },
+    {
+      "path": "runs\\s43\\transcript.json",
+      "bytes": 503453,
+      "sha256": "009c011c5480f3f0a41515b3f34c3781ec6a4aa1f112f940d4f8a3f2ab8881d2"
+    },
+    {
+      "path": "runs\\s43\\world-context.json",
+      "bytes": 1976989,
+      "sha256": "9e21dad51fda20f2564b4c39f6b8f06dc58ef8b91a1ce300b35563c3eedfd099"
+    }
+  ]
+}

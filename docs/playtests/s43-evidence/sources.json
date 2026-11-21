@@ -1,0 +1,163 @@
+{
+  "book": "The War of the Rebellion, Official Records, series I, volume II (1880)",
+  "scan": {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion02secrrich\\warofrebellion02secrrich.pdf",
+    "sha256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e",
+    "url": "https://archive.org/download/warofrebellion02secrrich/warofrebellion02secrrich.pdf",
+    "printedToPdfOffset": 20
+  },
+  "readPages": [
+    620,
+    621,
+    646,
+    718,
+    719,
+    720,
+    721,
+    726,
+    730,
+    774,
+    775,
+    777,
+    778,
+    783,
+    784,
+    827,
+    845,
+    846,
+    847,
+    895,
+    911,
+    912,
+    927,
+    928
+  ],
+  "textArtifact": "source-pages.txt",
+  "textSha256": "6d5e3043683f64482f9d75fc5f8f54a042fc12bae7eea2d52853ec7b48281a83",
+  "imageChecks": [
+    {
+      "printedPage": 718,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S43\\or2-718.png",
+      "sha256": "f0e9d91b8e8792451630d589405fdab40c091b24355547809030e8f0a0049ae4"
+    },
+    {
+      "printedPage": 726,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S43\\or2-726.png",
+      "sha256": "c87038a796598d0c14417508087b6067b19afb2c5c186c40aaa0b6aff45d2c63"
+    },
+    {
+      "printedPage": 847,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S43\\or2-847.png",
+      "sha256": "cc5512ebb8fdf8adf368c52d81a1f4a7acd5a198e9843f094f351240843f3d97"
+    },
+    {
+      "printedPage": 895,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S43\\or2-895.png",
+      "sha256": "657db182772bf93f88985c8d5a23c51b5ecf15032001e985341e47106f29ba7f"
+    },
+    {
+      "printedPage": 928,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S43\\or2-928.png",
+      "sha256": "50d9cef35006d5c46ce198c49bf1060a5e8fb3fc0f82677d65bf4b7f53e325b9"
+    }
+  ],
+  "links": [
+    {
+      "printedPage": 620,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0620"
+    },
+    {
+      "printedPage": 621,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0621"
+    },
+    {
+      "printedPage": 646,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0646"
+    },
+    {
+      "printedPage": 718,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0718"
+    },
+    {
+      "printedPage": 719,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0719"
+    },
+    {
+      "printedPage": 720,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0720"
+    },
+    {
+      "printedPage": 721,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0721"
+    },
+    {
+      "printedPage": 726,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0726"
+    },
+    {
+      "printedPage": 730,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0730"
+    },
+    {
+      "printedPage": 774,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0774"
+    },
+    {
+      "printedPage": 775,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0775"
+    },
+    {
+      "printedPage": 777,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0777"
+    },
+    {
+      "printedPage": 778,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0778"
+    },
+    {
+      "printedPage": 783,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0783"
+    },
+    {
+      "printedPage": 784,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0784"
+    },
+    {
+      "printedPage": 827,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0827"
+    },
+    {
+      "printedPage": 845,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0845"
+    },
+    {
+      "printedPage": 846,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0846"
+    },
+    {
+      "printedPage": 847,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0847"
+    },
+    {
+      "printedPage": 895,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0895"
+    },
+    {
+      "printedPage": 911,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0911"
+    },
+    {
+      "printedPage": 912,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0912"
+    },
+    {
+      "printedPage": 927,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0927"
+    },
+    {
+      "printedPage": 928,
+      "url": "https://ehistory.osu.edu/books/official-records/002/0928"
+    }
+  ],
+  "qualification": "All cited text pages were read. Five pages rendered; 726 and 895 inspected visually before the quantitative table was written. No claim to have read the whole volume."
+}

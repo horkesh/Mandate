@@ -1,0 +1,692 @@
+{
+  "source": "/C:/Pyrrhic/sprint-realism/docs/audit/s41-evidence/advance-commands.json",
+  "sourceSha256": "c4ec83124c744d011a85ded888949e23049ab2d4ab8ee825a57d710ef33f405c",
+  "commandCount": 86,
+  "turns": 44,
+  "initialHash": "2c7429511a3f996050141180bb5fd0774db01c027778f2c973e438156b1cecae",
+  "finalHash": "7d633d7cb0ad144c9a5c05c925d7cbb7ed80e3fb17a506ff4e1c49501df2e8a9",
+  "day": 148,
+  "worldHash": "eda10201e7017e312bce643bbf2278a2a45255bf6b820eb753b945e8b19cb1c7",
+  "observerControlEveryCommand": true,
+  "battles": null,
+  "refusalWordSearch": [
+    {
+      "i": 14,
+      "text": "Before you: pickens_refused, sumter_garrison. Type \"situations\"."
+    },
+    {
+      "i": 15,
+      "text": "Queued 1: decide pickens_refused: courier_order. It goes when you end the turn."
+    },
+    {
+      "i": 17,
+      "text": "Sent: decide pickens_refused: courier_order; decide sumter_garrison: provision_notice."
+    },
+    {
+      "i": 17,
+      "text": "  day  37  advice/requested from welles_gideon (written day 32, in-person): about situation pickens_refused | recommends department_order (order)"
+    }
+  ],
+  "reportingCorrection": "Initial summary used batRegion rather than battleRegion; audit.py reads complete retained daily battleRecords with the correct field. No game rerun.",
+  "date": "1861-07-31",
+  "dailyHashes": [
+    {
+      "day": 1,
+      "hash": "0ac1092677c1431effb312c4e2a0f41d9d575b59a265f67a7b9994873c012d3a"
+    },
+    {
+      "day": 2,
+      "hash": "0956bb0fbe0ff5b3c79365a0c4025e13a010b8839c0b1f13ff30441b916eb674"
+    },
+    {
+      "day": 3,
+      "hash": "50773dfe67bd9bb03524b93f3abddc107cd9fd087b21edc1bf5caddc639d208e"
+    },
+    {
+      "day": 4,
+      "hash": "507b35984adcd3b6c8e50aebb7331f8864d4f953d7e1ca4912f66d57ffd4cecf"
+    },
+    {
+      "day": 5,
+      "hash": "2c5bef371a4166c8f081ae4a6549cedfde241329ff339f45904947ef7622fecc"
+    },
+    {
+      "day": 6,
+      "hash": "08b41eadee874ca7b938867ed54f04447aee06a1baa13092d30d5a5a3a9e1b6c"
+    },
+    {
+      "day": 7,
+      "hash": "ed04316d714c9480534aed58d5c0b7c3807b4f58f1d0a10d418bad1c10a84002"
+    },
+    {
+      "day": 8,
+      "hash": "bb90294a79c5ed7abb4ecb2038dc4b90ca4d3683eb0025a89913199d8faabe7b"
+    },
+    {
+      "day": 9,
+      "hash": "a0795a5fe659c2bc97162deff053cf9575a1352b1debfbebf48e81453f70340d"
+    },
+    {
+      "day": 10,
+      "hash": "c5a1271cbe3c516cf06e5c9059fe51c8a10ec90dd26bc310a86a71fa29a65c87"
+    },
+    {
+      "day": 11,
+      "hash": "91a80887cb8c25309654bf185f648205f6723438eb99df4d3e011e832d8db2ed"
+    },
+    {
+      "day": 12,
+      "hash": "769aa194d36524e13b7874235bca8f32354c56936f279fbcd373e582ad172e75"
+    },
+    {
+      "day": 13,
+      "hash": "542be41d29036818af18a5388152951a333a5a0a1c50a4cef7f40c183f982381"
+    },
+    {
+      "day": 14,
+      "hash": "c8604b29ff93c3ba55dade436c692a3d3c088c01d24a0df6e64cc00f8ae69fd7"
+    },
+    {
+      "day": 15,
+      "hash": "232fba6ed5e3e7b9a64c5c12f7b1484b6416969a8c517e7bc4bb1c42c6f39d68"
+    },
+    {
+      "day": 16,
+      "hash": "91d07551a32e8477f6766ab300e1b0f4f880839bd7b4b1ba223ab7508b2c2fc0"
+    },
+    {
+      "day": 17,
+      "hash": "50e3c308871ab1c77c9625eccf83af21d9991ec997f96ed2346afbcf74d76537"
+    },
+    {
+      "day": 18,
+      "hash": "2e787de8a58a106fd2ac7356790cacb220f3fbb6b8ba7197b7172fde8f35055d"
+    },
+    {
+      "day": 19,
+      "hash": "9583e2f9dcac7bd15381da2de0041bb1a3ad4a145ca522ef4d6822f0ecd08f45"
+    },
+    {
+      "day": 20,
+      "hash": "979237cab1d2b7dc70f67e6ef67d4bfd21b0da8920da7ef67229df6bbc11410c"
+    },
+    {
+      "day": 21,
+      "hash": "12e98e50ca54295971fa835857f84cc0eda5b77c9298aa115a979e912585da78"
+    },
+    {
+      "day": 22,
+      "hash": "15946666946571a0b61c4733d81df6d9b4698d8e5fcb292f598b6d4491454e46"
+    },
+    {
+      "day": 23,
+      "hash": "5e4bbbc4c2a7a008f1c11df6482176df710c20c30a73562a0aad1546031bceb4"
+    },
+    {
+      "day": 24,
+      "hash": "94b7ccee8c787b912c4611053a3796877fffd0d5c0ff373262dcc2c82c098b64"
+    },
+    {
+      "day": 25,
+      "hash": "6fb779240d2c58e96866aa2e953f10e29ebd550c62fb1f0b6872144f52eda8e3"
+    },
+    {
+      "day": 26,
+      "hash": "76c8f10e8438c789d97f996e79360f7b0df782a52c40be59d48632ff8e0c1aaa"
+    },
+    {
+      "day": 27,
+      "hash": "d06f8674c5b8f6abe64e8bd8d27ca153ee3bc123a65b6260a6e4f00f4819cc2a"
+    },
+    {
+      "day": 28,
+      "hash": "1c69749df905abb4a536ad9a7768b45463b35d4faa7ad7390d42f256ad0a9f2a"
+    },
+    {
+      "day": 29,
+      "hash": "1f825c2951c989558845f4155fa0692382f84acee171c89410917f270a4ce603"
+    },
+    {
+      "day": 30,
+      "hash": "bd275a7dd90bf8cbc556738d0d5d673a9ce61d335447434bbe7afd0272fe6239"
+    },
+    {
+      "day": 31,
+      "hash": "867c11a55965f0748b772049ce8f4b286904d6bae68843688754784d809f014a"
+    },
+    {
+      "day": 32,
+      "hash": "633184824de6b8f8e8a3ad346ace9dc60eed170b78e58e1cb07bb46bc5185f7e"
+    },
+    {
+      "day": 33,
+      "hash": "15d98f2e4012a70530cb5c1e229703d3601d99fd312905da2100e34f68413470"
+    },
+    {
+      "day": 34,
+      "hash": "f424eefd19888dfe68a0d1ad68595119b7f5548a06b8830f2e370456ad171d06"
+    },
+    {
+      "day": 35,
+      "hash": "d8de128c8e8ed8f31d58e51b45720d08fbc09aa73f4ebe0e9b0b7e21ea4fac1c"
+    },
+    {
+      "day": 36,
+      "hash": "245ec559736c42a5907c4d5bf58c687d158a735262f3f085a5b25e051438f775"
+    },
+    {
+      "day": 37,
+      "hash": "bb8fc49b5ada1d4f033181b4630a670057d8e76f6deaacf917df5fead9498595"
+    },
+    {
+      "day": 38,
+      "hash": "b9bb8bff9c91ab4a82836a6b1d2223a49fcfee293f3c5c69339659a3de7b03bd"
+    },
+    {
+      "day": 39,
+      "hash": "601829ba4076c14126d0571eb3bb8ef3d5db019048f9d3da6c5965c8cfd4714c"
+    },
+    {
+      "day": 40,
+      "hash": "43f177d0dc7ccfcecb327da6ff2e176773425438cdc73c092ac37c466624bba5"
+    },
+    {
+      "day": 41,
+      "hash": "dfd9cbfa31f64bc2346b92fdc4bec47b53ae9ad03e2e2b99cd6f8f083e1bdbd7"
+    },
+    {
+      "day": 42,
+      "hash": "1950085a1c42d5aa502cdac3ca011e16d57e05a47c0f326d7dbea20f7dba1982"
+    },
+    {
+      "day": 43,
+      "hash": "7a8c8b6b945bfd4edbadb8c49c6763be0c645da75e0883dc950dd6020a580d3b"
+    },
+    {
+      "day": 44,
+      "hash": "200e6ad26e270ebab42c1cd66b1a1e455ae0dac6cff0746a232648190cd584a3"
+    },
+    {
+      "day": 45,
+      "hash": "8d546d17486ce599e46e45dcc5c85139ac853c5238ecc96f51fb26048ac0f040"
+    },
+    {
+      "day": 46,
+      "hash": "743e369b9f3abaece18588c99f2d0d1a8b9d3919d7f4b86df10a29b2dc02a0a1"
+    },
+    {
+      "day": 47,
+      "hash": "adb7bbc97d53cc4fbfdd407b8a518f2d794dd415da007177b21455686908ede3"
+    },
+    {
+      "day": 48,
+      "hash": "67e75ba5e0ffc41c93d78ceb454fd4020e98de4c8060a7357211b070431f75f3"
+    },
+    {
+      "day": 49,
+      "hash": "67598494d57d9346369ff4c8e39677474d9eed72bd0c1a1c8e44efa759d001c4"
+    },
+    {
+      "day": 50,
+      "hash": "40b8b132afab62ee40cfcf9495383dcea596a83187f26a1543bf1e507f494fdf"
+    },
+    {
+      "day": 51,
+      "hash": "e9c2752b6672452550a52a73bc7511f4589d5982df0ce9cea003646d86b5f8cb"
+    },
+    {
+      "day": 52,
+      "hash": "26a3007147f10ed7c771ec6b53d1a534d7471c3264acd6f55c646785b2990a8b"
+    },
+    {
+      "day": 53,
+      "hash": "b297a9206459fbe4278dec05c7418dab72c5d6c94b9fbb39b5adbbe734f64041"
+    },
+    {
+      "day": 54,
+      "hash": "7d522a20775907345b3431b1e1d4a3c65e87f8b4e0c47af150e033f45268e942"
+    },
+    {
+      "day": 55,
+      "hash": "b5956dc537443321ddd3b756417c46e006825a0129a8525fe9ff979c09485fa8"
+    },
+    {
+      "day": 56,
+      "hash": "1fe11ca3e7790fde51f24d3b46a6e63e3bf9b9acb5a6e08d5b2e4687b522dbb0"
+    },
+    {
+      "day": 57,
+      "hash": "fd04434d6a14d50b69e1430f33e0ac28255caa99d511cb8254b091aec82c4959"
+    },
+    {
+      "day": 58,
+      "hash": "8812964622049f50a57c60154ba181d50314875b3ff97f0e608638a77c47e51e"
+    },
+    {
+      "day": 59,
+      "hash": "f521c3107f04b6f05194c7c363f95e80ae817a1f311a0959b89babd1edc187c6"
+    },
+    {
+      "day": 60,
+      "hash": "3b44c24da368b08eb7d3d19f19ddf7ea14795023cb2ced2f98a01f07a2f5d6f4"
+    },
+    {
+      "day": 61,
+      "hash": "6268103b426ceff92faa71171202f16cbeb0a83676372c952a9510cee5b52580"
+    },
+    {
+      "day": 62,
+      "hash": "444d28801bc772363d2367f99852acc9cb237ccaa83145c94c241d9dd82006ac"
+    },
+    {
+      "day": 63,
+      "hash": "272fceddb0ef26dcc34ee54c0a2d7cfce3fb68c7efb5903c27d1a9dad5817bf4"
+    },
+    {
+      "day": 64,
+      "hash": "4aab2985dde4d247a155a241a98e5fd4a1955659a60ff2a9a9cc60c27d6e7173"
+    },
+    {
+      "day": 65,
+      "hash": "9c508076349df26d7bf58c8dee116eaa697700baa29f027f443049d794e3d422"
+    },
+    {
+      "day": 66,
+      "hash": "2a311ed3bb2e9ff93266320fce40a51a15eaa03945808f9b9292f5d1348c867e"
+    },
+    {
+      "day": 67,
+      "hash": "2b281aea3d42c006ec912044ee5e53d54defd04a09d29a69c6143f5e215b90bf"
+    },
+    {
+      "day": 68,
+      "hash": "7d5283a20d514af3fdba546c8d49b44d686423d0b480d4b43fe2362b1657b612"
+    },
+    {
+      "day": 69,
+      "hash": "188a1c4626c8333a4a8a9b13eaabedc8f94c958837db10b4f942e7f9b58b672d"
+    },
+    {
+      "day": 70,
+      "hash": "3a4029495071c66e246e6d246182e5ed2d1e1029f132f9b995a9c4e4dd58b14d"
+    },
+    {
+      "day": 71,
+      "hash": "d9e75ca2687a5385b1989a81460a25f73031349f86d139047f6bce637e011353"
+    },
+    {
+      "day": 72,
+      "hash": "8ab6f8677f8f68d10eddcb36044a85f71d424d4420c90eaa8e846f452253e827"
+    },
+    {
+      "day": 73,
+      "hash": "c88f12571e3b95019edbf27f76e0f6ccca4244c804830e1324b0d4be680926c7"
+    },
+    {
+      "day": 74,
+      "hash": "1c3c5d0ea4f6a4597ef7e9538a6f9ffdc7ce8baf2bdf2aae62902625bb5363df"
+    },
+    {
+      "day": 75,
+      "hash": "55036540d5c85d35db91b0e77b99ce4b6099c65ee1a08283872686e4ebea23f6"
+    },
+    {
+      "day": 76,
+      "hash": "4bef945287a9108a2723f32624106b25bf55c79d20bfc3da72f3667dbadc5e09"
+    },
+    {
+      "day": 77,
+      "hash": "9627fd50917a44aa8db0757eaee2cdc4a8b9296714cd60817cf7b0f6bf5da88d"
+    },
+    {
+      "day": 78,
+      "hash": "9ef917b1d2b63e6d9780b7e792e7a9d3087f0eda62cbd9976b99504072e9ac3c"
+    },
+    {
+      "day": 79,
+      "hash": "2a9ec2a8b1ce3cd85728b71ec63a5dca2cc109933921db6cff75a0688197d748"
+    },
+    {
+      "day": 80,
+      "hash": "3ef65bb73b9c36481d5cde05024ab1e6c7fc97d7bb2376e4b89950057776d6c5"
+    },
+    {
+      "day": 81,
+      "hash": "f839a16f7896e504500bd51f0c88b896e0cb993b52fd72d49f30ce93d34e6248"
+    },
+    {
+      "day": 82,
+      "hash": "e314df73ea3950002a59c0bf4c15043ca8e682438aaa5e88a94a17fddd7eccd7"
+    },
+    {
+      "day": 83,
+      "hash": "77846fe1d80da24b0d0512b0adbdb89e6407471e6b38e66b2c321bc499c127a0"
+    },
+    {
+      "day": 84,
+      "hash": "5663796b7e81ec128347710e6717e3a1545d60ee4122afdae55165ca8d638626"
+    },
+    {
+      "day": 85,
+      "hash": "0a544cb4e7a04d21d3be63fe3889a435d8e8f193fd0f306cab47e647e9ac896a"
+    },
+    {
+      "day": 86,
+      "hash": "25d5ae4cbf0ad50b6b7078adb1e1ede54ab6d8f939f73a8d8df074d490b78813"
+    },
+    {
+      "day": 87,
+      "hash": "2c1b710dfb0b0794645de6e03fb46d7a2b0cb022b96aa1ce264617171d3f4780"
+    },
+    {
+      "day": 88,
+      "hash": "377af4faf605ccc9d5f212e56b14d7c3b9b2c9dafc6b384f5cb9acca38a9bc97"
+    },
+    {
+      "day": 89,
+      "hash": "9bb374bd0c113291151b952e8a92511feb25ccb3ddb755c0ef39215ba3f5bfbb"
+    },
+    {
+      "day": 90,
+      "hash": "23757418185c0c0a20c551a17251d9a2163b22b80fb07b89b1acf2059ab9cb24"
+    },
+    {
+      "day": 91,
+      "hash": "c7a8b0e459492470a6facd5fa39b47d345c2dcca7de87add9ad6a20d022abf1f"
+    },
+    {
+      "day": 92,
+      "hash": "cde5daef3c8d8b31b0eecc372c79d12e7013b54d9257d9ce3f646ae36b88ce0d"
+    },
+    {
+      "day": 93,
+      "hash": "9f4eb116d84cfef4995df03f5371244c572bfa9aadaeaf6f510a36ef15f5287a"
+    },
+    {
+      "day": 94,
+      "hash": "a63b1cf79d0d9881e70cb1dd759557d4e55e4d8c99bc85129e79287a186ece6f"
+    },
+    {
+      "day": 95,
+      "hash": "c7bae27b4626e0d534bd88945b53e1f4be783c14885f0ebb4b18242d56bfcc29"
+    },
+    {
+      "day": 96,
+      "hash": "8fc0a5f6dbcc722d341c311b6e6d1f2cfc17a410e8f42afe9503ad306b8219a6"
+    },
+    {
+      "day": 97,
+      "hash": "77cbcc649020ea98a3475d030a50de1e409850c64bfc21fcc8778beff42a2f01"
+    },
+    {
+      "day": 98,
+      "hash": "b43b94fde25e2ca71aa36e97603558b60c7c3637c860aed7e2d7b0e6152c530e"
+    },
+    {
+      "day": 99,
+      "hash": "59acde42280960c02fabfd04378055f011e1553bbb329c6e01e0bb9e37ae331c"
+    },
+    {
+      "day": 100,
+      "hash": "e77c432fb27b0ceb4aead7f9c9b8e89dff19ef97a6e6224f5f18ddfaa4342cae"
+    },
+    {
+      "day": 101,
+      "hash": "b8c7a27add0862d0667fb4aeb4c8b88fa7331181a33095074b538aa51ad856b2"
+    },
+    {
+      "day": 102,
+      "hash": "6668ba0d6e3027e272b67d99da3a69c4f15ec4fdc891820fe32921345d84817f"
+    },
+    {
+      "day": 103,
+      "hash": "f158500206af4459857a644d477a7556e97de68910d8d41ab550f16975a4757c"
+    },
+    {
+      "day": 104,
+      "hash": "ea419abc8d595a7a29d5b4e213c38fcde450633f9edad1c680d60bb1ce30a3ea"
+    },
+    {
+      "day": 105,
+      "hash": "8e12ffa1de8d31414a7b1811fc00045c3be98ea189c39fa13b8c53c0bb426c3b"
+    },
+    {
+      "day": 106,
+      "hash": "21583eed75a0e4b2a9346ef0fcfaf771a26bb9142a7f0a659b9537de1c88da2a"
+    },
+    {
+      "day": 107,
+      "hash": "f264b0145f76d0e60a4f05a6f098eaec7582347c58898bf66ad71ec581dfc939"
+    },
+    {
+      "day": 108,
+      "hash": "9525bc7a5603067de1f984ada28aed8ee345360093058bd31fb2d4af1e612244"
+    },
+    {
+      "day": 109,
+      "hash": "1e6f80a3382220927ea9e453b98ce89ef0da8d20a9b84db40e6385df51d99d3a"
+    },
+    {
+      "day": 110,
+      "hash": "e5199d47ea967ef2cc194ea796b8c54b4093bf219605a7be72ce302f2ee8fd9b"
+    },
+    {
+      "day": 111,
+      "hash": "ccd5b346e4dbd9307314ec2efad49f6125cdbd84aeabf95cc1c9dd82ff0c7c1b"
+    },
+    {
+      "day": 112,
+      "hash": "758250501f905f30f5ab4ae4462ee091915ad7e4966540e1485aa309dc3de211"
+    },
+    {
+      "day": 113,
+      "hash": "11c83ff167c9f36a492d6ce2075e7b6e74c627f272e51b116d4c88aedb538326"
+    },
+    {
+      "day": 114,
+      "hash": "612b98e569462ff304e60e5bafb06cbd208b9f13a6c04500b795c57da8f0b43a"
+    },
+    {
+      "day": 115,
+      "hash": "b23a2a0bf268c67f53cda050679f1136c7a59c75096e5fca14ccd29acb330a4f"
+    },
+    {
+      "day": 116,
+      "hash": "18b208b91650d1f91818a798c76f230f7724bba8e6a4f300b9578a36a59696bc"
+    },
+    {
+      "day": 117,
+      "hash": "bc5ad825acd4782d4c1145877e0a2d1890895de1a8b3537269bcab2f92f073b1"
+    },
+    {
+      "day": 118,
+      "hash": "f30fad9627d889fb892611734947d00e43ff903c2cd5f1b906935cc4927fceba"
+    },
+    {
+      "day": 119,
+      "hash": "04fac7bbfb33bc52b338e66a0ada8367ad8cdf332aa8f4910e887705c838c566"
+    },
+    {
+      "day": 120,
+      "hash": "3e563468e0dcd8a2f48c1fcf17327b575477a65749f8ffe66880ce414fa9545f"
+    },
+    {
+      "day": 121,
+      "hash": "d0de590cecaa528e63cc55cd2fa6cc2a12697fb65658e484246c41610884e990"
+    },
+    {
+      "day": 122,
+      "hash": "01c75f4295681ee087a3670c628dd6ae5f5e878f1d2ceecc05b569c49891575d"
+    },
+    {
+      "day": 123,
+      "hash": "4e8f0209161cf21a5fe873d2e3cfd7b614908f3751e5b60f2c44b81d50850bbd"
+    },
+    {
+      "day": 124,
+      "hash": "9fbe18a516682b95025410fe1f293705bb03e67332271f45f25ce07a4b2b812c"
+    },
+    {
+      "day": 125,
+      "hash": "7aacce73e54c6dd84885f0965aced8785f8a482b5aa07df40a71fc15f965f072"
+    },
+    {
+      "day": 126,
+      "hash": "cbbbe3959954ee081da4f8017005fe83b9a32b0437f20a8b7e0419ff9b45081e"
+    },
+    {
+      "day": 127,
+      "hash": "664d55ce4d5f431ad7258601fc33ceb7d7c3b934f0e08fdba7388342d60a4a1e"
+    },
+    {
+      "day": 128,
+      "hash": "e8174889b7800677ea8ca6b611c084378d8780ea7d96fb8706b5074f0bedfe2f"
+    },
+    {
+      "day": 129,
+      "hash": "eded4fcc2c0f61747160683bbf24d07a010043579080d79c02ce8ef48bfd4cef"
+    },
+    {
+      "day": 130,
+      "hash": "09df8aa787da07b00aaceef74c61e04f18b714a852ccef972e4be1f88b2a9921"
+    },
+    {
+      "day": 131,
+      "hash": "748a5fb159a3dd1b875f25e71854623e45ccb4b04ed1c18ed72435c561b6fa42"
+    },
+    {
+      "day": 132,
+      "hash": "e042bd9c14fb5eb95e027c2edebe9f587c2101401333b1089178b59002d38ff8"
+    },
+    {
+      "day": 133,
+      "hash": "4cc85d8bce6dbd3147f16d488291268ceaee3fdd91259c92b75384c4a8042159"
+    },
+    {
+      "day": 134,
+      "hash": "32abf68b640e41c20dfc3abcaa127b8d24c9ec9e76574e4bbba2bff01299bb3e"
+    },
+    {
+      "day": 135,
+      "hash": "fa9764a0da9eb0955737f3d84bec71ba4311081833769dd21de8b91094ea1ad1"
+    },
+    {
+      "day": 136,
+      "hash": "1768cbc5797ab8a656d2369a0b2520c91462d67c54d9c44017a475a364ce8f21"
+    },
+    {
+      "day": 137,
+      "hash": "681da7b6a86803507accb354281c4d3c7369b699c2509fa80df88f7e5855b3e6"
+    },
+    {
+      "day": 138,
+      "hash": "b18fd57be5ea69b902e23931c3236a24f6109dd4e550ce271782b4d22b1bc3e8"
+    },
+    {
+      "day": 139,
+      "hash": "b4d671e896e238a784580e11c084372b6bd8ef0db217075769b0c7a7850f59cf"
+    },
+    {
+      "day": 140,
+      "hash": "94ab5c87f7596b506e8922344d0064785aa3316b1626f3a217ab0e509f18614f"
+    },
+    {
+      "day": 141,
+      "hash": "c085ba893e40541fb38b6e4b99ff3c216e829c045fedd639c6a9522491df3d79"
+    },
+    {
+      "day": 142,
+      "hash": "e001c11c6efefe2fe1cf1483dbf3fb055c94140c6178e404faf9faad5f0d5216"
+    },
+    {
+      "day": 143,
+      "hash": "bc63cb35a4e54ff8612d108cfffbf073f11e0864cec79f0c08445be9188d5e21"
+    },
+    {
+      "day": 144,
+      "hash": "e839147f322d7c50404a9e443a0d7fccc706bde01bcae504d3705d86a8717134"
+    },
+    {
+      "day": 145,
+      "hash": "5974ea356ebb60ad46fb4d46bd9b7f087bf514e874734af0ea5c481e5786caa0"
+    },
+    {
+      "day": 146,
+      "hash": "97cb1e3980cc074cb195fedb960512399766837ddfb0ad99fb108f4485e1c2f0"
+    },
+    {
+      "day": 147,
+      "hash": "36a39f26105e2a0da9ee0735bef9c96654f52757a14b4a3211658154bc577e67"
+    },
+    {
+      "day": 148,
+      "hash": "7d633d7cb0ad144c9a5c05c925d7cbb7ed80e3fb17a506ff4e1c49501df2e8a9"
+    }
+  ],
+  "allStoneStoresUnknown": true,
+  "noManassasBattle": true,
+  "initialStone": {
+    "id": "fb_us_dc_militia",
+    "name": "force_block.fb_us_dc_militia.name",
+    "kind": "block",
+    "parent": null,
+    "department": "us_war",
+    "post": "us_dc_militia",
+    "region": "washington",
+    "aboard": null,
+    "arm": "infantry",
+    "strength": 600,
+    "strengthDate": "1861-04-18",
+    "nonCombatants": 0,
+    "storesDays": null,
+    "storesDate": null,
+    "unknowns": [
+      "storesDays"
+    ],
+    "provenance": [
+      {
+        "source": "NOTE-march-1861-facts",
+        "at": "q.15"
+      },
+      {
+        "source": "OOB-LANE",
+        "at": "needs-source (primary source not reached)"
+      }
+    ]
+  },
+  "rules": {
+    "stores": {
+      "menPerCapacityUnit": 20000,
+      "capDays": 30,
+      "lowDays": 7,
+      "norms": [
+        {
+          "post": "us_navy_home_squadron",
+          "postKind": null,
+          "arm": "naval",
+          "faction": "union",
+          "days": 30,
+          "cite": "ORN I-4 pp. 228-229, 234: ships of the Home Squadron ordered ready for sea with one month's stores (practice for a short expedition, not a regulation; lane 1.10, docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix K)"
+        }
+      ]
+    },
+    "operations": {
+      "pauseDays": 3,
+      "maxRepulses": 3,
+      "pursuitDays": {
+        "follow": 1,
+        "press": 2
+      },
+      "holdControlPermille": 500,
+      "works": {
+        "perNightPermille": 50,
+        "capPermille": 300,
+        "lostWhenStormedPermille": 150
+      },
+      "returns": {
+        "firstLowPermille": 200,
+        "revealDays": 7
+      }
+    }
+  }
+}

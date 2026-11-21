@@ -1,0 +1,604 @@
+[
+  {
+    "index": 0,
+    "line": "inquire us_dc_militia",
+    "before": 0,
+    "after": 0,
+    "signingDate": "1861-03-05"
+  },
+  {
+    "index": 1,
+    "line": "end 7",
+    "before": 0,
+    "after": 1,
+    "signingDate": "1861-03-05"
+  },
+  {
+    "index": 2,
+    "line": "decide pickens_reinforcement land_company",
+    "before": 1,
+    "after": 1,
+    "signingDate": "1861-03-06"
+  },
+  {
+    "index": 3,
+    "line": "end 7",
+    "before": 1,
+    "after": 8,
+    "signingDate": "1861-03-06"
+  },
+  {
+    "index": 4,
+    "line": "decide seward_memorandum answer_in_person",
+    "before": 8,
+    "after": 8,
+    "signingDate": "1861-03-13"
+  },
+  {
+    "index": 5,
+    "line": "end 7",
+    "before": 8,
+    "after": 10,
+    "signingDate": "1861-03-13"
+  },
+  {
+    "index": 6,
+    "line": "decide confederate_commissioners hold_and_talk",
+    "before": 10,
+    "after": 10,
+    "signingDate": "1861-03-15"
+  },
+  {
+    "index": 7,
+    "line": "end 7",
+    "before": 10,
+    "after": 17,
+    "signingDate": "1861-03-15"
+  },
+  {
+    "index": 8,
+    "line": "end 7",
+    "before": 17,
+    "after": 24,
+    "signingDate": "1861-03-22"
+  },
+  {
+    "index": 9,
+    "line": "end 7",
+    "before": 24,
+    "after": 25,
+    "signingDate": "1861-03-29"
+  },
+  {
+    "index": 10,
+    "line": "decide lamon_promise assure_notice",
+    "before": 25,
+    "after": 25,
+    "signingDate": "1861-03-30"
+  },
+  {
+    "index": 11,
+    "line": "end 7",
+    "before": 25,
+    "after": 28,
+    "signingDate": "1861-03-30"
+  },
+  {
+    "index": 12,
+    "line": "end 7",
+    "before": 28,
+    "after": 30,
+    "signingDate": "1861-04-02"
+  },
+  {
+    "index": 13,
+    "line": "decide virginia_unionists",
+    "before": 30,
+    "after": 30,
+    "signingDate": "1861-04-04"
+  },
+  {
+    "index": 14,
+    "line": "end 7",
+    "before": 30,
+    "after": 32,
+    "signingDate": "1861-04-04"
+  },
+  {
+    "index": 15,
+    "line": "decide pickens_refused courier_order",
+    "before": 32,
+    "after": 32,
+    "signingDate": "1861-04-06"
+  },
+  {
+    "index": 16,
+    "line": "decide sumter_garrison provision_notice",
+    "before": 32,
+    "after": 32,
+    "signingDate": "1861-04-06"
+  },
+  {
+    "index": 17,
+    "line": "end 7",
+    "before": 32,
+    "after": 39,
+    "signingDate": "1861-04-06"
+  },
+  {
+    "index": 18,
+    "line": "decide blockade_or_closure blockade",
+    "before": 39,
+    "after": 39,
+    "signingDate": "1861-04-13"
+  },
+  {
+    "index": 19,
+    "line": "end 7",
+    "before": 39,
+    "after": 40,
+    "signingDate": "1861-04-13"
+  },
+  {
+    "index": 20,
+    "line": "end 1",
+    "before": 40,
+    "after": 41,
+    "signingDate": "1861-04-14"
+  },
+  {
+    "index": 21,
+    "line": "decide call_for_troops militia_call",
+    "before": 41,
+    "after": 41,
+    "signingDate": "1861-04-15"
+  },
+  {
+    "index": 22,
+    "line": "end 1",
+    "before": 41,
+    "after": 42,
+    "signingDate": "1861-04-15"
+  },
+  {
+    "index": 23,
+    "line": "order us_dc_militia take richmond review",
+    "before": 42,
+    "after": 42,
+    "signingDate": "1861-04-16"
+  },
+  {
+    "index": 24,
+    "line": "end 7",
+    "before": 42,
+    "after": 44,
+    "signingDate": "1861-04-16"
+  },
+  {
+    "index": 25,
+    "line": "end 7",
+    "before": 44,
+    "after": 45,
+    "signingDate": "1861-04-18"
+  },
+  {
+    "index": 26,
+    "line": "order us_dc_militia take richmond review by=wire bypass",
+    "before": 45,
+    "after": 45,
+    "signingDate": "1861-04-19"
+  },
+  {
+    "index": 27,
+    "line": "decide gosport_yard defend",
+    "before": 45,
+    "after": 45,
+    "signingDate": "1861-04-19"
+  },
+  {
+    "index": 28,
+    "line": "end 7",
+    "before": 45,
+    "after": 46,
+    "signingDate": "1861-04-19"
+  },
+  {
+    "index": 29,
+    "line": "end 7",
+    "before": 46,
+    "after": 47,
+    "signingDate": "1861-04-20"
+  },
+  {
+    "index": 30,
+    "line": "approve us_dc_militia by=wire bypass",
+    "before": 47,
+    "after": 47,
+    "signingDate": "1861-04-21"
+  },
+  {
+    "index": 31,
+    "line": "decide washington_cut_off around_baltimore",
+    "before": 47,
+    "after": 47,
+    "signingDate": "1861-04-21"
+  },
+  {
+    "index": 32,
+    "line": "end 7",
+    "before": 47,
+    "after": 48,
+    "signingDate": "1861-04-21"
+  },
+  {
+    "index": 33,
+    "line": "end 7",
+    "before": 48,
+    "after": 49,
+    "signingDate": "1861-04-22"
+  },
+  {
+    "index": 34,
+    "line": "end 7",
+    "before": 49,
+    "after": 50,
+    "signingDate": "1861-04-23"
+  },
+  {
+    "index": 35,
+    "line": "end 7",
+    "before": 50,
+    "after": 52,
+    "signingDate": "1861-04-24"
+  },
+  {
+    "index": 36,
+    "line": "decide missouri_arsenal back_lyon",
+    "before": 52,
+    "after": 52,
+    "signingDate": "1861-04-26"
+  },
+  {
+    "index": 37,
+    "line": "end 7",
+    "before": 52,
+    "after": 53,
+    "signingDate": "1861-04-26"
+  },
+  {
+    "index": 38,
+    "line": "inquire us_dc_militia",
+    "before": 53,
+    "after": 53,
+    "signingDate": "1861-04-27"
+  },
+  {
+    "index": 39,
+    "line": "end 7",
+    "before": 53,
+    "after": 54,
+    "signingDate": "1861-04-27"
+  },
+  {
+    "index": 40,
+    "line": "decide habeas_on_the_line suspend_on_line",
+    "before": 54,
+    "after": 54,
+    "signingDate": "1861-04-28"
+  },
+  {
+    "index": 41,
+    "line": "end 7",
+    "before": 54,
+    "after": 57,
+    "signingDate": "1861-04-28"
+  },
+  {
+    "index": 42,
+    "line": "end 7",
+    "before": 57,
+    "after": 61,
+    "signingDate": "1861-05-01"
+  },
+  {
+    "index": 43,
+    "line": "call st_gov_new_york scheduled=us_may03_accepted_new_york",
+    "before": 61,
+    "after": 61,
+    "signingDate": "1861-05-05"
+  },
+  {
+    "index": 44,
+    "line": "end 7",
+    "before": 61,
+    "after": 68,
+    "signingDate": "1861-05-05"
+  },
+  {
+    "index": 45,
+    "line": "inquire us_dc_militia",
+    "before": 68,
+    "after": 68,
+    "signingDate": "1861-05-12"
+  },
+  {
+    "index": 46,
+    "line": "end 7",
+    "before": 68,
+    "after": 70,
+    "signingDate": "1861-05-12"
+  },
+  {
+    "index": 47,
+    "line": "decide western_virginia cross_river",
+    "before": 70,
+    "after": 70,
+    "signingDate": "1861-05-14"
+  },
+  {
+    "index": 48,
+    "line": "end 7",
+    "before": 70,
+    "after": 75,
+    "signingDate": "1861-05-14"
+  },
+  {
+    "index": 49,
+    "line": "call st_gov_massachusetts scheduled=us_may15_vol_massachusetts",
+    "before": 75,
+    "after": 75,
+    "signingDate": "1861-05-19"
+  },
+  {
+    "index": 50,
+    "line": "call st_gov_connecticut scheduled=us_may16_vol_connecticut",
+    "before": 75,
+    "after": 75,
+    "signingDate": "1861-05-19"
+  },
+  {
+    "index": 51,
+    "line": "call st_gov_illinois scheduled=us_may16_vol_illinois",
+    "before": 75,
+    "after": 75,
+    "signingDate": "1861-05-19"
+  },
+  {
+    "index": 52,
+    "line": "call st_gov_indiana scheduled=us_may16_vol_indiana",
+    "before": 75,
+    "after": 75,
+    "signingDate": "1861-05-19"
+  },
+  {
+    "index": 53,
+    "line": "call st_gov_iowa scheduled=us_may16_vol_iowa",
+    "before": 75,
+    "after": 75,
+    "signingDate": "1861-05-19"
+  },
+  {
+    "index": 54,
+    "line": "call st_gov_maine scheduled=us_may16_vol_maine",
+    "before": 75,
+    "after": 75,
+    "signingDate": "1861-05-19"
+  },
+  {
+    "index": 55,
+    "line": "call st_gov_michigan scheduled=us_may16_vol_michigan",
+    "before": 75,
+    "after": 75,
+    "signingDate": "1861-05-19"
+  },
+  {
+    "index": 56,
+    "line": "call st_gov_new_hampshire scheduled=us_may16_vol_new_hampshire",
+    "before": 75,
+    "after": 75,
+    "signingDate": "1861-05-19"
+  },
+  {
+    "index": 57,
+    "line": "call st_gov_new_jersey scheduled=us_may16_vol_new_jersey",
+    "before": 75,
+    "after": 75,
+    "signingDate": "1861-05-19"
+  },
+  {
+    "index": 58,
+    "line": "call st_gov_ohio scheduled=us_may16_vol_ohio",
+    "before": 75,
+    "after": 75,
+    "signingDate": "1861-05-19"
+  },
+  {
+    "index": 59,
+    "line": "call st_gov_vermont scheduled=us_may16_vol_vermont",
+    "before": 75,
+    "after": 75,
+    "signingDate": "1861-05-19"
+  },
+  {
+    "index": 60,
+    "line": "call st_gov_wisconsin scheduled=us_may16_vol_wisconsin",
+    "before": 75,
+    "after": 75,
+    "signingDate": "1861-05-19"
+  },
+  {
+    "index": 61,
+    "line": "end 7",
+    "before": 75,
+    "after": 81,
+    "signingDate": "1861-05-19"
+  },
+  {
+    "index": 62,
+    "line": "decide fort_monroe_arrivals approve_holding",
+    "before": 81,
+    "after": 81,
+    "signingDate": "1861-05-25"
+  },
+  {
+    "index": 63,
+    "line": "decide kentucky_neutrality arm_quietly",
+    "before": 81,
+    "after": 81,
+    "signingDate": "1861-05-25"
+  },
+  {
+    "index": 64,
+    "line": "call st_gov_kansas scheduled=us_may15_vol_kansas",
+    "before": 81,
+    "after": 81,
+    "signingDate": "1861-05-25"
+  },
+  {
+    "index": 65,
+    "line": "call st_gov_rhode_island scheduled=us_may15_vol_rhode_island",
+    "before": 81,
+    "after": 81,
+    "signingDate": "1861-05-25"
+  },
+  {
+    "index": 66,
+    "line": "call st_gov_new_york scheduled=us_may16_vol_new_york",
+    "before": 81,
+    "after": 81,
+    "signingDate": "1861-05-25"
+  },
+  {
+    "index": 67,
+    "line": "end 7",
+    "before": 81,
+    "after": 82,
+    "signingDate": "1861-05-25"
+  },
+  {
+    "index": 68,
+    "line": "end 7",
+    "before": 82,
+    "after": 83,
+    "signingDate": "1861-05-26"
+  },
+  {
+    "index": 69,
+    "line": "end 7",
+    "before": 83,
+    "after": 86,
+    "signingDate": "1861-05-27"
+  },
+  {
+    "index": 70,
+    "line": "end 7",
+    "before": 86,
+    "after": 93,
+    "signingDate": "1861-05-30"
+  },
+  {
+    "index": 71,
+    "line": "audience us_dc_militia",
+    "before": 93,
+    "after": 93,
+    "signingDate": "1861-06-06"
+  },
+  {
+    "index": 72,
+    "line": "end 7",
+    "before": 93,
+    "after": 96,
+    "signingDate": "1861-06-06"
+  },
+  {
+    "index": 73,
+    "line": "end 7",
+    "before": 96,
+    "after": 102,
+    "signingDate": "1861-06-09"
+  },
+  {
+    "index": 74,
+    "line": "end 7",
+    "before": 102,
+    "after": 105,
+    "signingDate": "1861-06-15"
+  },
+  {
+    "index": 75,
+    "line": "end 7",
+    "before": 105,
+    "after": 112,
+    "signingDate": "1861-06-18"
+  },
+  {
+    "index": 76,
+    "line": "end 7",
+    "before": 112,
+    "after": 117,
+    "signingDate": "1861-06-25"
+  },
+  {
+    "index": 77,
+    "line": "decide mcdowell_advance advance_now",
+    "before": 117,
+    "after": 117,
+    "signingDate": "1861-06-30"
+  },
+  {
+    "index": 78,
+    "line": "end 7",
+    "before": 117,
+    "after": 122,
+    "signingDate": "1861-06-30"
+  },
+  {
+    "index": 79,
+    "line": "decide special_session ask_war_footing",
+    "before": 122,
+    "after": 122,
+    "signingDate": "1861-07-05"
+  },
+  {
+    "index": 80,
+    "line": "call st_gov_indiana scheduled=us_jun11_indiana",
+    "before": 122,
+    "after": 122,
+    "signingDate": "1861-07-05"
+  },
+  {
+    "index": 81,
+    "line": "end 7",
+    "before": 122,
+    "after": 129,
+    "signingDate": "1861-07-05"
+  },
+  {
+    "index": 82,
+    "line": "end 7",
+    "before": 129,
+    "after": 136,
+    "signingDate": "1861-07-12"
+  },
+  {
+    "index": 83,
+    "line": "end 7",
+    "before": 136,
+    "after": 137,
+    "signingDate": "1861-07-19"
+  },
+  {
+    "index": 84,
+    "line": "end 5",
+    "before": 137,
+    "after": 142,
+    "signingDate": "1861-07-20"
+  },
+  {
+    "index": 85,
+    "line": "end 6",
+    "before": 142,
+    "after": 148,
+    "signingDate": "1861-07-25"
+  }
+]

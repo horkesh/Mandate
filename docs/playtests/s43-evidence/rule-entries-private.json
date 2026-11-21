@@ -1,0 +1,473 @@
+[
+  {
+    "day": 37,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "order",
+      "to": "cs_cmd_charleston",
+      "goal": {
+        "objective": "fort_sumter",
+        "posture": "take",
+        "risk": 500,
+        "deadlineDays": 30,
+        "rail": true,
+        "river": false,
+        "sea": false,
+        "neutral": false,
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true
+      },
+      "route": "wire",
+      "bypass": true
+    }
+  },
+  {
+    "day": 37,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_alabama",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "courier"
+    }
+  },
+  {
+    "day": 37,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_georgia",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 37,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_mississippi",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 37,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_south_carolina",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 37,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_texas",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 37,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_charleston",
+      "subject": null,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 38,
+    "seat": "seat:beauregard_pierre_g_t",
+    "command": {
+      "cmd": "choose",
+      "request": "plan:cs_cmd_charleston:38",
+      "option": "bombard:across_water:charleston"
+    }
+  },
+  {
+    "day": 44,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_charleston",
+      "subject": null,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 51,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_charleston",
+      "subject": null,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 54,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_alabama",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "courier"
+    }
+  },
+  {
+    "day": 54,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_georgia",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 56,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_mississippi",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 58,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_charleston",
+      "subject": null,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 65,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_charleston",
+      "subject": null,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 68,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_arkansas",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 72,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_charleston",
+      "subject": null,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 79,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "appoint",
+      "post": "cs_cmd_harpers_ferry",
+      "person": "johnston_joseph_e",
+      "rank": null,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 79,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_charleston",
+      "subject": null,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 80,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "cs_cmd_charleston",
+      "to": "cs_cmd_harpers_ferry",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 86,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_harpers_ferry",
+      "subject": null,
+      "route": "courier"
+    }
+  },
+  {
+    "day": 87,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "appoint",
+      "post": "cs_cmd_manassas",
+      "person": "beauregard_pierre_g_t",
+      "rank": null,
+      "route": "wire",
+      "from": "cs_cmd_charleston"
+    }
+  },
+  {
+    "day": 94,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_virginia",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "courier"
+    }
+  },
+  {
+    "day": 94,
+    "seat": "seat:letcher_john",
+    "command": {
+      "cmd": "battle",
+      "post": "st_gov_virginia",
+      "commit": "judge",
+      "night": "judge",
+      "cutOff": "judge",
+      "pursue": "judge"
+    }
+  },
+  {
+    "day": 100,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_manassas",
+      "subject": null,
+      "route": "courier"
+    }
+  },
+  {
+    "day": 100,
+    "seat": "seat:johnston_joseph_e",
+    "command": {
+      "cmd": "battle",
+      "post": "cs_cmd_harpers_ferry",
+      "commit": "judge",
+      "night": "judge",
+      "cutOff": "judge",
+      "pursue": "judge"
+    }
+  },
+  {
+    "day": 107,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_manassas",
+      "subject": null,
+      "route": "courier"
+    }
+  },
+  {
+    "day": 114,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_manassas",
+      "subject": null,
+      "route": "courier"
+    }
+  },
+  {
+    "day": 115,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_north_carolina",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "courier"
+    }
+  },
+  {
+    "day": 120,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "call",
+      "to": "st_gov_virginia",
+      "regiments": 3,
+      "termDays": null,
+      "route": "courier",
+      "bypass": false,
+      "men": 3000,
+      "callId": "cs_jun30_reserve_virginia"
+    }
+  },
+  {
+    "day": 120,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_tennessee",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 121,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_manassas",
+      "subject": null,
+      "route": "courier"
+    }
+  },
+  {
+    "day": 127,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_georgia",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 128,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_manassas",
+      "subject": null,
+      "route": "courier"
+    }
+  },
+  {
+    "day": 130,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_alabama",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 133,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_arkansas",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 135,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_manassas",
+      "subject": null,
+      "route": "courier"
+    }
+  },
+  {
+    "day": 136,
+    "seat": "seat:beauregard_pierre_g_t",
+    "command": {
+      "cmd": "battle",
+      "post": "cs_cmd_manassas",
+      "commit": "judge",
+      "night": "judge",
+      "cutOff": "judge",
+      "pursue": "judge"
+    }
+  },
+  {
+    "day": 136,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_mississippi",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 140,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_south_carolina",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    }
+  },
+  {
+    "day": 142,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "inquire",
+      "to": "cs_cmd_manassas",
+      "subject": null,
+      "route": "courier"
+    }
+  }
+]
