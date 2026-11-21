@@ -40,7 +40,8 @@ export function isFieldPost(state: State, post: PostId): boolean {
 
 /** Field posts with a holder on a side, in id order: the commanders the seats layer asks and hears from. */
 export function fieldPosts(world: SeatsWorld, state: State): PostId[] {
-  return postIdsOf(state).filter((id) => state.postStates[id]!.postHolder !== null && isFieldPost(state, id) && postFaction(world, state, id) !== null);
+  const commanding = new Set(Object.values(state.forceAssignments));
+  return postIdsOf(state).filter((id) => state.postStates[id]!.postHolder !== null && commanding.has(id) && postFaction(world, state, id) !== null);
 }
 
 /** Every post below `post` in the chain, and `post` itself. */
@@ -115,9 +116,10 @@ export function filterPostOf(world: SeatsWorld, state: State, faction: FactionId
 
 /** Offices: held posts on a side that are neither field nor filter posts, and whose holder is not the principal. */
 export function offices(world: SeatsWorld, state: State): PostId[] {
+  const commanding = new Set(Object.values(state.forceAssignments));
   return postIdsOf(state).filter((id) => {
     const p = state.postStates[id]!;
-    if (p.postHolder === null || isFieldPost(state, id)) return false;
+    if (p.postHolder === null || commanding.has(id)) return false;
     const faction = postFaction(world, state, id);
     if (faction === null || !world.factionIds.includes(faction)) return false;
     if (world.faction(faction).principal === p.postHolder) return false;

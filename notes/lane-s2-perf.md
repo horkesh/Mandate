@@ -22,17 +22,33 @@ The command owner now offers an optional caller-owned inverse holder lookup, key
 
 Three new tests first failed because the lookup factory was absent; 85 focused command/transport/log/determinism tests and typecheck then passed. They cover a single enumeration, duplicate holders, inherited posts, relief/appointment, old States, department-side changes and resignation choices. Direct generated reports on integrated days 61 and 141 are identical (66 and 82 messages). Three alternating direct pairs improve throughout: median paired saving **80.216 ms over 40 generation calls**. All **268 daily hashes** and every compared summary field match the integrated baseline.
 
-Three alternating whole-run parent/change pairs per slot save median paired **-1.644 ms war / 6.261 ms history**. War loses two pairs and improves one; no whole-war saving is established. History improves all three. Before/after medians of run medians are 75.548/80.508 ms war and 68.243/63.814 ms history; subtracting these is not the paired estimator. Keep all losses and shared-host limits; no rerun for a better number. Six relevant source files in the parent snapshot match actual merge commit 53657eb after Git line-ending normalization. The actual hook remains pending. Evidence: `holders-direct.json`, `holders-pairs/pairs.json`, both hash comparisons and `integrated-parent-proof.json`.
+Three alternating whole-run parent/change pairs per slot save median paired **-1.644 ms war / 6.261 ms history**. War loses two pairs and improves one; no whole-war saving is established. History improves all three. Before/after medians of run medians are 75.548/80.508 ms war and 68.243/63.814 ms history; subtracting these is not the paired estimator. Keep all losses and shared-host limits; no rerun for a better number. Six relevant source files in the parent snapshot match actual merge commit 53657eb after Git line-ending normalization. Committed as **e09fe47**, actual staged-snapshot hook exit 0: **149 files / 1,606 passed / one expected failure / four skips**, 322.68 seconds, with all chained gates passing. The extra skip is the existing repository-mode check in the private snapshot. Evidence: `holders-direct.json`, `holders-pairs/pairs.json`, both hash comparisons, `integrated-parent-proof.json` and `commit-holders.log`.
 
 ### S30 rejected experiment
 
 Three direct pairs tested guarded child recursion, key iteration and own-property iteration against the existing deep freezer on integrated day-140 State. None showed a consistent saving; no production freezer change, weakened backstop or expensive whole-run campaign was retained. Evidence: `runs/s30/freeze-experiment.json`.
+
+### S30 rejected extension: holder lookups for requests and views
+
+An experimental request caller's ViewCache owned the same exact-post-table lookup, used for views, relay chains and appointment eligibility. The experiment shared no whole view and left the existing final view-reuse guard unchanged.
+
+Its regression first read **105** post-table enumerations instead of one; all 11 focused tests and typecheck then passed, with view equality across post/side/service changes and older States. But three alternating direct pairs over 40 retained-State morning reads saved **-12.804 ms** at the median (two losses, one gain). Parked it at this cheap gate: no daily-hash or whole-run campaign. All five experimental source edits and its test were removed from the delivery; the complete candidate remains in ignored `runs/s30/views/`, with `views-direct.json`, red/green and typecheck logs. No costly retry for a better number.
+
+### S30 step 2: derive command membership once per post list
+
+`fieldPosts` and `offices` each derive the set of posts commanding any force once, instead of enumerating and sorting force assignments separately for every held post. Each invocation reads its actual State afresh. Post order, sides, holders, principal/filter exclusions and all returned values remain unchanged; no cache is shared or persisted.
+
+Two new cost regressions first saw six assignment enumerations instead of one. Four semantic tests cover empty assignments, neutral governments, vacancies, transfers, inherited properties, principals, filters and older States. All 42 focused tests pass. Typecheck caught an unbranded test-only department property access; the typed post-department lookup corrected it, with fresh typecheck and all four new tests passing. Other passing focused evidence is reused.
+
+Three alternating direct pairs over integrated day-60/day-140 field and office lists improve throughout, with identical values and median paired saving **174.998 ms over 400 list builds**. All **268 daily hashes** and compared summary fields match the integrated baseline. Three alternating whole-run pairs per slot save median paired **4.259 ms war / 6.717 ms history**. War improves two pairs and loses one; history improves all three. Before/after medians of run medians are 48.294/44.035 ms war and 48.302/43.906 ms history. These host-dependent estimates are not additive. Parent snapshot matches actual e09fe47 in all six checked sources. The hook is next. Evidence: `membership-direct.json`, `membership-pairs/pairs.json`, both hash comparisons and `holders-parent-proof.json`.
 
 ## S30 proposed rulings
 
 Retain both appointment behavior and the existing candidate optimization, rejecting either-side conflict replacement. Further choices will be recorded with their rejected alternatives after measurement.
 
 Accept a command-owned inverse lookup held by the tick caller, keyed by exact post-table identity. Reject module-global caching, caching a person's side/location, persisting derived data, or assuming insertion order for duplicate holders. Reject the freezer candidates for lack of consistent direct benefit.
+
+Park the request/view holder extension after its negative direct median; reject retaining extra cache plumbing on intuition alone. Prefer local one-pass command membership for post lists, rejecting a cross-State cache or changed eligibility.
 
 ## S30 findings outside my scope
 
