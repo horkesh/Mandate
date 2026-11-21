@@ -6,6 +6,7 @@ import {
   CommandError,
   commandedBlocks,
   createTemporaryPost,
+  createHeldPostCache,
   dissolveOperation,
   factionOfPost,
   heldPost,
@@ -62,6 +63,48 @@ function stateFrom(map: WorldIndex, start: ScenarioStart): State {
 }
 
 const S = stateFrom(MAP, START);
+
+describe('caller-owned holder lookups', () => {
+  it('enumerates an immutable post table once for every person and side query', () => {
+    let scans = 0;
+    const state = { ...S, postStates: new Proxy(S.postStates, { ownKeys: target => { scans++; return Reflect.ownKeys(target); } }) };
+    const cache = createHeldPostCache();
+    for (let i = 0; i < 3; i++) for (const person of MAP.world.people) {
+      expect(heldPost(state, person.id, cache)).toBe(heldPost(S, person.id));
+      expect(sideOfPerson(MAP, state, person.id, cache)).toBe(sideOfPerson(MAP, S, person.id));
+    }
+    expect(scans).toBe(1);
+  });
+
+  it('keeps duplicate ordering, own properties and old-State reads after relief or appointment', () => {
+    const holder = PER('a_gen');
+    const posts = Object.assign(Object.create({ [P('a_inherited')]: S.postStates[P('a_army')]! }), {
+      [P('z_post')]: S.postStates[P('a_army')]!, [P('a_post')]: S.postStates[P('a_army')]!,
+    });
+    const state = { ...S, postStates: posts };
+    const cache = createHeldPostCache();
+    expect(heldPost(state, holder, cache)).toBe('a_post');
+    const next = relieveHolder(state, P('a_post'));
+    expect(heldPost(next, holder, cache)).toBe('z_post');
+    const empty = relieveHolder(next, P('z_post'));
+    expect(heldPost(empty, holder, cache)).toBeNull();
+    const appointed = appointHolder(MAP, empty, P('a_post'), holder);
+    expect(heldPost(appointed, holder, cache)).toBe('a_post');
+    expect(heldPost(state, holder, cache)).toBe('a_post');
+    expect(heldPost(next, holder, cache)).toBe('z_post');
+    expect(heldPost(state, PER('b_lead'), cache)).toBeNull();
+  });
+
+  it('reads department sides and service choices freshly even when the holder table is unchanged', () => {
+    const cache = createHeldPostCache();
+    const person = PER('a_gen');
+    const changed = { ...S, departmentFactions: { ...S.departmentFactions, [DEP('a_war')]: F('b') } };
+    const resigned = { ...changed, personService: { [person]: { serviceFaction: F('a'), serviceBloc: null, serviceChoice: 'resign' as const, serviceDay: 1 } } };
+    for (const state of [S, changed, resigned, S]) {
+      expect(sideOfPerson(MAP, state, person, cache)).toBe(sideOfPerson(MAP, state, person));
+    }
+  });
+});
 
 describe('unposted people on a side', () => {
   it('matches individual side and post lookups, reading the post table once for the whole roster', () => {

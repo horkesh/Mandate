@@ -7,16 +7,32 @@ For the lead: 3 items. S30 only in `C:/Pyrrhic/sprint-perf`, `sprint/perf`, star
 1. Root `npm ci` first (exit 0; 51 packages, zero vulnerabilities). Resolve the one `seats/requests.ts` conflict by retaining S20's candidate derivation/cache and 1A's dated historical appointment menu. Run typecheck and focused appointment/candidate tests before the real merge hook. No generated file conflicts.
 2. Retain an integrated runtime snapshot, inventory, three-day startup smoke, daily-hash baseline and CPU profiles for the 148-day war-by-decision and history slots. These slots currently use the same setup/options; keep distinct samples. Restrict rankings to tick stacks and retain full profiles separately.
 3. Select the largest measured self costs, one coherent optimization per commit. Before an expensive run, verify its assumptions with focused semantic tests and typecheck. Compare every daily hash, daily fires, liveness row, checkpoint, decision and rejection to the integrated baseline. Stop immediately on divergence. Measure three alternating parent/change pairs per slot and retain all losses. Snapshot parents must match their actual commits. No retries for better clocks.
-4. Each commit runs the actual pre-commit hook (`MANDATE_NO_GIT=1`, supported single-worker execution, unchanged timeouts/checks). Expected cost: seconds for focused checks, tens of seconds per full-run sample, several minutes per hook on this shared host. Diagnose unexpected failure before an affected retry; reuse unaffected evidence.
+4. Each commit runs the actual pre-commit hook (`MANDATE_NO_GIT=1`, supported worker setting, unchanged timeouts/checks). The merge used one worker and took 1,314.16 seconds; subsequent commits use two workers to reduce serialization, with the same test selection. Expected cost: seconds for focused checks, tens of seconds per full-run sample, several minutes per hook on this shared host. Diagnose unexpected failure before an affected retry; reuse unaffected evidence.
 5. Final validation: frozen daily hashes, replay and save/resume for Union and testbed; fixture reproduction, aliases, final package/runtime inventory and protected-input preservation; final profiles; one default eight-seed `npm run run:done-check` including drafting (roughly 30–45 minutes). Record every failure; no band, budget, signature, behavior or State/schema change. Complete inventories before final documentation. The 40/160 ms gate, 20 ms unloaded aim and Linux CI distinction remain.
 
 ## S30 progress
 
-Merge resolution prepared; targeted checks and merge hook pending. Raw logs and snapshots stay in ignored `runs/s30/`.
+Merged `bf6cc66` as **53657eb**, preserving both handwritten sides. Typecheck initially caught the retained `sideOfPerson` use missing from the combined import; corrected it before the hook. Typecheck and 49 focused command/candidate/appointment/rule-seat tests then passed. The actual merge hook exited 0: **149 files, 1,604 passed, one expected failure, three skips**, plus boundary, licences and all 106 decision records. No bypass or retry. Its source snapshot was copied before the commit completed and will be checked against the committed tree before timing claims. Baseline hashes and profiles are running. Raw logs and snapshots stay in ignored `runs/s30/`.
+
+The integrated baseline is complete: Union 148 hashes ending `c62e0a1a610d59983dd83a48f92130c86ca965344dec7c5c414c47cfe74a7004`, zero rejections; testbed 120 hashes. War/history CPU profiles rank `heldPost` and `deepFreeze` first, followed by force scans and latency lookups. Tick-stack totals varied from 44,712.85 to 12,423.22 sampled ms across the two slots; these shared-host samples are rankings, not causal savings. Full rankings and caller stacks are retained.
+
+### S30 step 1: holder lookups in report routes
+
+The command owner now offers an optional caller-owned inverse holder lookup, keyed solely by the immutable post table it reads. The tick uses it for report side, location and addressee queries. A new post table recomputes; old-State reads retain their own results; service and department sides stay fresh. No global cache, saved data, changed routing or new State field.
+
+Three new tests first failed because the lookup factory was absent; 85 focused command/transport/log/determinism tests and typecheck then passed. They cover a single enumeration, duplicate holders, inherited posts, relief/appointment, old States, department-side changes and resignation choices. Direct generated reports on integrated days 61 and 141 are identical (66 and 82 messages). Three alternating direct pairs improve throughout: median paired saving **80.216 ms over 40 generation calls**. All **268 daily hashes** and every compared summary field match the integrated baseline.
+
+Three alternating whole-run parent/change pairs per slot save median paired **-1.644 ms war / 6.261 ms history**. War loses two pairs and improves one; no whole-war saving is established. History improves all three. Before/after medians of run medians are 75.548/80.508 ms war and 68.243/63.814 ms history; subtracting these is not the paired estimator. Keep all losses and shared-host limits; no rerun for a better number. Six relevant source files in the parent snapshot match actual merge commit 53657eb after Git line-ending normalization. The actual hook remains pending. Evidence: `holders-direct.json`, `holders-pairs/pairs.json`, both hash comparisons and `integrated-parent-proof.json`.
+
+### S30 rejected experiment
+
+Three direct pairs tested guarded child recursion, key iteration and own-property iteration against the existing deep freezer on integrated day-140 State. None showed a consistent saving; no production freezer change, weakened backstop or expensive whole-run campaign was retained. Evidence: `runs/s30/freeze-experiment.json`.
 
 ## S30 proposed rulings
 
 Retain both appointment behavior and the existing candidate optimization, rejecting either-side conflict replacement. Further choices will be recorded with their rejected alternatives after measurement.
+
+Accept a command-owned inverse lookup held by the tick caller, keyed by exact post-table identity. Reject module-global caching, caching a person's side/location, persisting derived data, or assuming insertion order for duplicate holders. Reject the freezer candidates for lack of consistent direct benefit.
 
 ## S30 findings outside my scope
 

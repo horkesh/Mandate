@@ -17,7 +17,7 @@
  */
 import { strictCompare } from '../compare.ts';
 import { capitalOf } from '../command/capitals.ts';
-import { sideOfPerson, chainBelow, commandedBlocks, factionOfPost, heldPost, postIdsOf, postStateOf } from '../command/command.ts';
+import { sideOfPerson, chainBelow, commandedBlocks, factionOfPost, heldPost, postIdsOf, postStateOf, type HeldPostCache } from '../command/command.ts';
 import type { FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
 import type { State } from '../root-state.ts';
 import type { PostKindRole } from '../world/world.ts';
@@ -87,12 +87,12 @@ export function headquartersOf(world: SeatsWorld, state: State, post: PostId): R
 }
 
 /** Where a person is: his post's headquarters, or his side's capital for a man without a post (a principal). */
-export function whereIsPerson(world: SeatsWorld, state: State, person: PersonId): RegionId {
+export function whereIsPerson(world: SeatsWorld, state: State, person: PersonId, cache?: HeldPostCache): RegionId {
   const principalSide = world.factionIds.find((f) => world.faction(f).principal === person);
   if (principalSide !== undefined) return capitalOf(state, principalSide);
-  const post = heldPost(state, person);
+  const post = heldPost(state, person, cache);
   if (post !== null) return headquartersOf(world, state, post);
-  const faction = sideOfPerson(world.map, state, person);
+  const faction = sideOfPerson(world.map, state, person, cache);
   if (faction === null || !world.factionIds.includes(faction)) throw new RangeError(`${person} holds no post and has no side's capital to stand in`);
   return capitalOf(state, faction);
 }
