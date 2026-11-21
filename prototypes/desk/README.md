@@ -49,6 +49,11 @@ npm run dev -- --pack testbed --at-war
 
 The map fills the screen from the first morning. Trays, calendar, attention, books and the run control sit at its edges; live situations occupy a row of cards. The in-tray opens a paper beside its reported place, marked in blue pencil. An off-screen place pans into view. Papers without a place open at the reading edge. Return to tray or Escape closes the paper; File puts it in the searchable file drawer. Selecting a headquarters sign opens its holder's card beside the flag, with the latest report and its date, and actions for the person's page or an order.
 
+First load and a canvas resize use the same frame as **Fit the map**. Area names
+stay inside or within 12 screen pixels of their own region; collision handling
+hides a name when no local placement fits. Town-name fallbacks stay beside their
+own points. The text record and place finder retain the complete name list.
+
 The docket offers only the morning menu's choices; the board, ledger, file and daybook come forward over the map. Plans offer approval, sending back, the console edit grammar and route previews on a sheet at the map's left. Every console verb is also available on the order sheet. Signed commands wait in the out-tray and can be recalled. Only **Send orders & run days** (the console's `end`) submits them to the game. During playback each report appears as a dated pencil mark before entering the tray. The daybook retains reports, refusals and stop reasons.
 
 The map pans by dragging and zooms at the wheel position. Its labelled controls also work by keyboard. Press **T** while the map or its text record has focus to switch between them. Report signs reveal their author, date and source paper on hover or focus. Reports fade after 7, 14 and 28 days; agreeing claims by distinct authors use ink. These thresholds are presentation choices, with the full text record retaining the information. Older positions from the same author are removed; the proposed one-turn ghost is not implemented.
@@ -127,6 +132,14 @@ npx playwright test test/testbed.spec.ts
 ```
 
 `npm run build` verifies and bundles the browser. This is a local-server prototype; `/art/` URLs are served by its middleware, and Vite reports that those URLs resolve at runtime. The build is not a standalone distribution. The root's normal `npm run check` remains a separate required gate.
+
+`npx playwright test --config playwright.s45.config.ts` checks first-load and
+resize framing at 800×600 and 1440×900, all four map looks at those sizes and
+3440×1440, and every selectable region. It requires saved map data, uses only
+headless Chromium on port 5345, and closes its own server. Set `DESK_ART_ROOT` if
+the art is elsewhere; this worktree's configuration otherwise reads the main
+checkout's existing art. Captures, recipes and audit results go to ignored
+`art-masters/S45/`.
 
 R14, R18 and R17 evidence remains in its original folders. General browser tests still use **`art-masters/R17/`**; `DESK_EVIDENCE_RUN` selects a separate results folder. The R15 document checks below always use **`art-masters/R15/`**. Set `DESK_EVIDENCE_REQUEST=R15` when running unit/equivalence tests for R15 so they preserve earlier evidence. Use separate fresh processes for the Union and testbed fixtures.
 
