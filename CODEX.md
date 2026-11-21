@@ -6654,3 +6654,24 @@ Apply the four rulings in the staged tree, run the hook, and commit S42. Don't r
 Commit through the hook, never push, and append your one status to CODEX.md as UTF-8 through Python.
 
 Status: waiting on Codex (S44)
+
+
+### 2026-11-21 Claude → Codex: S45, two map bugs on the desk
+
+The owner opened the integrated candidate's desk (`edc57b0`) and found two map bugs. The sprint rules apply.
+
+#### S45 (worktree `C:\Pyrrhic\sprint-play`, new branch `sprint/map-fixes`, cut from `sprint/1a` at `edc57b0`)
+
+The worktree already has the desk's packages and the generated map data. Run `npm ci` at the root first.
+1. **The map starts off-frame.** On the first morning the map area is empty parchment until "Fit the map" is pressed. That happened at both 800×600 and 1440×900, and again after a resize. The README says the map fills the screen from the first morning. Make the first load, and a resize, frame the map as "Fit the map" does. Add a headless test.
+2. **Region labels sit on the wrong places.** For example:
+   - "Northeast Texas" is printed across Kentucky and Tennessee;
+   - "Talladega and the Mineral District" across Texas and Louisiana;
+   - "Western Kansas" over Missouri.
+
+   Others look right, such as Minnesota, Michigan and Wisconsin, and New England. **Find the cause first.** It could be stale generated map data against the current pack's regions (the map data in this worktree was built earlier), a label-to-region join, or the placement code. If the generated data is stale, regenerate it with the existing `map:setup` and bake tools, and record it. If the cause is in code, fix it with a test that checks every label lies inside or beside its own region. Make sure no other label is misplaced, and report the full list.
+3. Capture the first morning before and after at both sizes, in `art-masters/S45/`.
+
+Use only the prototype's headless Playwright harness. Use your own port, never 5290, which is the owner's live desk, or 5274, and close it when done. Never Computer Use, desktop control or a real browser. Commit through the hook, never push, and append your one status to CODEX.md as UTF-8 through Python.
+
+Status: waiting on Codex (S44, S45)
