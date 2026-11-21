@@ -1,6 +1,162 @@
 # S30: performance on integrated 1A
 
-For the lead: 3 items. S30 only in `C:/Pyrrhic/sprint-perf`, `sprint/perf`, starting at `e9f7ca0`. Integrate the read-only `sprint/1a` ref at `bf6cc66`, preserve the six existing optimizations, then optimize measured self costs without changing integrated behavior. Review remains Claude's after the sprint under 0106. Never push or write another lane's worktree.
+For the lead: 3 items. Completed S30 only in `C:/Pyrrhic/sprint-perf`, `sprint/perf`, starting at `e9f7ca0`. Merged the read-only `sprint/1a` ref at `bf6cc66`, preserved the six existing optimizations, and retained two further measured changes with integrated behavior unchanged. Review remains Claude's after the sprint under 0106. No push or other sprint-worktree write.
+
+## S30 result
+
+Merged integrated 1A at **53657eb** and retained two optimizations, each in its own commit through the actual hook. Every integrated daily hash and compared non-timing value is unchanged. The four other candidate groups below were parked after measurement; their production edits and tests are absent from the delivery.
+
+| Optimization | Commit | Parent | Median paired war saving | Median paired history saving |
+|---|---|---|---:|---:|
+| Report-route holder lookup | e09fe47 | 53657eb | -1.644 ms | 6.261 ms |
+| One-pass command membership | dab3bf1 | e09fe47 | 4.259 ms | 6.717 ms |
+
+Each cell is the median of three alternating parent/change pair differences over full 148-day runs. Keep all losses: the first optimization establishes no whole-war saving. These changing-host estimates are not additive and do not establish Linux CI or unloaded performance.
+
+## S30 settled verification
+
+One default eight-seed done check with drafting **exited 0**, **1384.98 seconds**: **Phase 0 6/6; supplemental 1A 4/6**. The unchanged local 40/160 ms budget passes this sample. The unloaded 20 ms aim and Linux CI remain unestablished. No criterion, band, timeout, signature or runtime behavior was changed.
+
+The checkpoint pass carries an existing qualification: Union known strength is **58,497**, with four unknown blocks, below the nominal 95,000 floor that the integrated band already marks nonbinding for lack of a primary bound. It does not establish that floor. Confederate known strength is **130,862**, with 20 unknown blocks. The unknown-strength criterion actually reads **two battles / five battle-days** in each Union slot. The sweep has **624 base-run calls**; return is best in **6/8** seeds, while grievance remains unmeasured and all 24 policy moves leave the border-governor levy chain unexercised. No qualification or clearance was introduced by S30.
+
+The history's operation criterion reads `op:cs_cmd_charleston:38` fighting `battle:fort_sumter:38`, and `op:us_dc_militia:137` fighting `battle:manassas:144`. Calls, state acts and these battles are part of the integrated run whose daily hashes are preserved.
+
+Drafting remains unchanged: all 23 commands (16 with land force), 20 measured days, median/p95/worst **42.7/49.0/54.5 ms**, slowest draft **11.6 ms**, capped day worst **29.1 ms**. The full drafting JSON is under `runs/s30-final-done-drafting/`.
+
+| Default timed run | Median ms | p95 ms | Maximum ms |
+|---|---:|---:|---:|
+| union-1861, war by decision, 148 days | 27.83 | 51.10 | 101.40 |
+| testbed, 120 days | 3.58 | 5.30 | 8.53 |
+| union-1861 history run, 148 days to 1861-07-31 | 26.30 | 49.39 | 63.17 |
+
+All **268 frozen daily hashes** equal the integrated baseline: Union 148, testbed 120. Daily fires, liveness, World/initial/final hashes, command counts, decision points, rejections and final checkpoint scores match. Both command-log replays, mid-run resumes and saved-log replays pass. Union ends **c62e0a1a610d59983dd83a48f92130c86ca965344dec7c5c414c47cfe74a7004**; testbed **69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb**. The early checked-run evidence was read during the sweep and reused; no campaign was repeated.
+
+Before closeout documentation, the inventory verified **7 performance-delivery paths**, **1689 other integrated originals unchanged**, and **408 runtime/pack files** matching the hash-verified final snapshot. Workspace aliases resolve inside this worktree. The day-40 save reproduces byte for byte, SHA-256 **e28244789099688f3656bec814fbbc97dc59b5072956c1f11845972128b888a5**. All integrated pack inputs, fixtures, liveness/checkpoint bands, locks and signed material are preserved. No build, server or browser was needed.
+
+Actual source-step hooks:
+
+- merge: exit 0; 149 files / 1604 passed / 1 expected failure / 3 skips; 1314.16 s, in place.
+- holders: exit 0; 149 files / 1606 passed / 1 expected failure / 4 skips; 322.68 s, staged snapshot.
+- membership: exit 0; 150 files / 1610 passed / 1 expected failure / 4 skips; 351.71 s, staged snapshot.
+
+Every hook ran the chained check (typecheck, tests, boundary, licences and decision index), with standing no-Git mode excluding its two Git-writing fixtures. Private snapshots add the existing repository-mode skip. Supported worker settings changed concurrency only; no gate, test selection or timeout was weakened. The documentation closeout uses the same actual hook; its final exit/counts and commit hash are authoritative in `runs/s30/commit-closeout.log`, `runs/s30/final-checks.json` and the single final CODEX append. Claude retains independent whole-branch review under 0106.
+
+8 reported problems remain:
+
+- 1A / pushback: union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2
+- 1A / pushback: union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1
+- 1A / pushback: union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1
+- 1A / pushback: union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 86, above 9
+- 1A / pushback: union-1861 history run, 148 days to 1861-07-31: slow walks: 13, above 9
+- 1A / lever-sweep: union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: watched option return is the union bot’s best choice in 6 of 8 seeds, more than a quarter
+- 1A / lever-sweep: union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)
+- 1A / lever-sweep: union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)
+
+Raw evidence is indexed in **runs/s30/final-checks.json**. All failed tests, rejected candidates, paired losses, profiles, source proofs and the complete default log remain on disk. No push, rewritten history, other sprint-worktree write or gate signature.
+
+### S30 top twenty sampled self costs
+
+Each table sums samples by function and file beneath `playDays` over 148 days, including its final checkpoint hash. Setup, pack validation and courier-table construction are excluded; unparented GC is not attributed to a tick. Anonymous callbacks in one file are grouped. The loaded host makes absolute sample totals descriptive; the alternating pairs above are the saving estimates. Full rankings and raw profiles are retained under `runs/s30/`.
+
+**Integrated baseline: war** (44712.8 sampled tick-stack ms).
+
+| Rank | Function and file | Self ms |
+|---:|---|---:|
+| 1 | heldPost (command/command.ts) | 4333.0 |
+| 2 | deepFreeze (tick/freeze.ts) | 4099.4 |
+| 3 | commandedBlocks (command/command.ts) | 1620.6 |
+| 4 | (anonymous) (seats/world.ts) | 1429.8 |
+| 5 | (anonymous) (seats/requests.ts) | 1342.9 |
+| 6 | deliverReports (knowledge/knowledge.ts) | 1321.5 |
+| 7 | postStateOf (command/command.ts) | 1120.0 |
+| 8 | (anonymous) (control-index/control-index.ts) | 1103.7 |
+| 9 | claimedControlView (view/claimed-control.ts) | 989.1 |
+| 10 | tick (tick/tick.ts) | 903.8 |
+| 11 | set SubtleCrypto (runtime) | 826.6 |
+| 12 | viewFor (view/view.ts) | 798.0 |
+| 13 | filterPostOf (seats/posts.ts) | 777.7 |
+| 14 | edgeLeg (supply/supply.ts) | 774.6 |
+| 15 | contactEdgesOf (control-index/control-index.ts) | 736.7 |
+| 16 | sideOfPerson (command/command.ts) | 732.5 |
+| 17 | generateReports (tick/generate.ts) | 681.9 |
+| 18 | buildControlIndex (control-index/control-index.ts) | 582.9 |
+| 19 | principalMenu (seats/requests.ts) | 556.5 |
+| 20 | controlEvidence (knowledge/control-beliefs.ts) | 541.0 |
+
+**Integrated baseline: history** (12423.2 sampled tick-stack ms).
+
+| Rank | Function and file | Self ms |
+|---:|---|---:|
+| 1 | deepFreeze (tick/freeze.ts) | 1462.3 |
+| 2 | heldPost (command/command.ts) | 875.6 |
+| 3 | (anonymous) (seats/world.ts) | 579.3 |
+| 4 | (anonymous) (seats/requests.ts) | 512.8 |
+| 5 | deliverReports (knowledge/knowledge.ts) | 338.7 |
+| 6 | (anonymous) (control-index/control-index.ts) | 326.9 |
+| 7 | contactEdgesOf (control-index/control-index.ts) | 325.0 |
+| 8 | commandedBlocks (command/command.ts) | 306.5 |
+| 9 | edgeLeg (supply/supply.ts) | 244.7 |
+| 10 | pruneKnowledge (knowledge/knowledge.ts) | 239.1 |
+| 11 | (anonymous) (command/command.ts) | 232.7 |
+| 12 | set filename (runtime) | 226.3 |
+| 13 | search (supply/supply.ts) | 226.0 |
+| 14 | claimedControlView (view/claimed-control.ts) | 221.0 |
+| 15 | sideOfPerson (command/command.ts) | 217.6 |
+| 16 | (anonymous) (cli/phase0-run.ts) | 199.2 |
+| 17 | generateReports (tick/generate.ts) | 192.7 |
+| 18 | postStateOf (command/command.ts) | 190.7 |
+| 19 | postIdsOf (command/command.ts) | 188.3 |
+| 20 | legOf (supply/supply.ts) | 175.2 |
+
+**After S30: war** (4353.6 sampled tick-stack ms).
+
+| Rank | Function and file | Self ms |
+|---:|---|---:|
+| 1 | deepFreeze (tick/freeze.ts) | 399.6 |
+| 2 | heldPost (command/command.ts) | 221.5 |
+| 3 | (anonymous) (seats/world.ts) | 217.3 |
+| 4 | deliverReports (knowledge/knowledge.ts) | 168.5 |
+| 5 | (anonymous) (seats/requests.ts) | 150.6 |
+| 6 | contactEdgesOf (control-index/control-index.ts) | 139.3 |
+| 7 | set filename (runtime) | 115.7 |
+| 8 | postIdsOf (command/command.ts) | 106.6 |
+| 9 | (anonymous) (control-index/control-index.ts) | 96.0 |
+| 10 | edgeLeg (supply/supply.ts) | 90.7 |
+| 11 | pruneKnowledge (knowledge/knowledge.ts) | 82.6 |
+| 12 | controlEvidence (knowledge/control-beliefs.ts) | 77.7 |
+| 13 | daysToGoal (movement/march.ts) | 77.1 |
+| 14 | commandedBlocks (command/command.ts) | 76.7 |
+| 15 | postStateOf (command/command.ts) | 76.1 |
+| 16 | __name (control-index/control-index.ts) | 73.6 |
+| 17 | sideOfPerson (command/command.ts) | 68.2 |
+| 18 | legOf (supply/supply.ts) | 65.9 |
+| 19 | buildControlIndex (control-index/control-index.ts) | 65.2 |
+| 20 | (anonymous) (command/command.ts) | 63.0 |
+
+**After S30: history** (4349.4 sampled tick-stack ms).
+
+| Rank | Function and file | Self ms |
+|---:|---|---:|
+| 1 | deepFreeze (tick/freeze.ts) | 396.0 |
+| 2 | heldPost (command/command.ts) | 205.4 |
+| 3 | (anonymous) (seats/world.ts) | 194.6 |
+| 4 | deliverReports (knowledge/knowledge.ts) | 183.8 |
+| 5 | (anonymous) (seats/requests.ts) | 162.3 |
+| 6 | contactEdgesOf (control-index/control-index.ts) | 134.4 |
+| 7 | postIdsOf (command/command.ts) | 111.5 |
+| 8 | set filename (runtime) | 104.5 |
+| 9 | (anonymous) (control-index/control-index.ts) | 95.7 |
+| 10 | edgeLeg (supply/supply.ts) | 94.9 |
+| 11 | controlEvidence (knowledge/control-beliefs.ts) | 91.2 |
+| 12 | pruneKnowledge (knowledge/knowledge.ts) | 87.8 |
+| 13 | buildControlIndex (control-index/control-index.ts) | 79.8 |
+| 14 | (anonymous) (command/command.ts) | 79.8 |
+| 15 | claimedControlView (view/claimed-control.ts) | 73.8 |
+| 16 | postStateOf (command/command.ts) | 72.1 |
+| 17 | legOf (supply/supply.ts) | 71.8 |
+| 18 | __name (control-index/control-index.ts) | 71.5 |
+| 19 | sideOfPerson (command/command.ts) | 70.0 |
+| 20 | daysToGoal (movement/march.ts) | 63.1 |
 
 ## S30 plan and validation
 
@@ -12,7 +168,7 @@ For the lead: 3 items. S30 only in `C:/Pyrrhic/sprint-perf`, `sprint/perf`, star
 
 ## S30 progress
 
-Merged `bf6cc66` as **53657eb**, preserving both handwritten sides. Typecheck initially caught the retained `sideOfPerson` use missing from the combined import; corrected it before the hook. Typecheck and 49 focused command/candidate/appointment/rule-seat tests then passed. The actual merge hook exited 0: **149 files, 1,604 passed, one expected failure, three skips**, plus boundary, licences and all 106 decision records. No bypass or retry. Its source snapshot was copied before the commit completed and will be checked against the committed tree before timing claims. Baseline hashes and profiles are running. Raw logs and snapshots stay in ignored `runs/s30/`.
+Merged `bf6cc66` as **53657eb**, preserving both handwritten sides. Typecheck initially caught the retained `sideOfPerson` use missing from the combined import; corrected it before the hook. Typecheck and 49 focused command/candidate/appointment/rule-seat tests then passed. The actual merge hook exited 0: **149 files, 1,604 passed, one expected failure, three skips**, plus boundary, licences and all 106 decision records. No bypass or retry. Its source snapshot was copied before the commit completed and will be checked against the committed tree before timing claims. Baseline hashes and profiles completed; all final source proofs and preservation checks passed. Raw logs and snapshots stay in ignored `runs/s30/`.
 
 The integrated baseline is complete: Union 148 hashes ending `c62e0a1a610d59983dd83a48f92130c86ca965344dec7c5c414c47cfe74a7004`, zero rejections; testbed 120 hashes. War/history CPU profiles rank `heldPost` and `deepFreeze` first, followed by force scans and latency lookups. Tick-stack totals varied from 44,712.85 to 12,423.22 sampled ms across the two slots; these shared-host samples are rankings, not causal savings. Full rankings and caller stacks are retained.
 
@@ -32,7 +188,7 @@ Three direct pairs tested guarded child recursion, key iteration and own-propert
 
 An experimental request caller's ViewCache owned the same exact-post-table lookup, used for views, relay chains and appointment eligibility. The experiment shared no whole view and left the existing final view-reuse guard unchanged.
 
-Its regression first read **105** post-table enumerations instead of one; all 11 focused tests and typecheck then passed, with view equality across post/side/service changes and older States. But three alternating direct pairs over 40 retained-State morning reads saved **-12.804 ms** at the median (two losses, one gain). Parked it at this cheap gate: no daily-hash or whole-run campaign. All five experimental source edits and its test were removed from the delivery; the complete candidate remains in ignored `runs/s30/views/`, with `views-direct.json`, red/green and typecheck logs. No costly retry for a better number.
+Its regression first read **105** post-table enumerations instead of one; all 11 focused tests and typecheck then passed, with view equality across post/side/service changes and older States. But three alternating direct pairs over 40 retained-State morning reads saved **-12.804 ms** at the median (two losses, one gain). Parked it at this cheap gate: no daily-hash or whole-run campaign. All five experimental source edits and its test were removed from the delivery; the production-source candidate remains in ignored `runs/s30/views/`, with `views-direct.json`, red/green and typecheck logs. No costly retry for a better number.
 
 ### S30 step 2: derive command membership once per post list
 
@@ -40,7 +196,19 @@ Its regression first read **105** post-table enumerations instead of one; all 11
 
 Two new cost regressions first saw six assignment enumerations instead of one. Four semantic tests cover empty assignments, neutral governments, vacancies, transfers, inherited properties, principals, filters and older States. All 42 focused tests pass. Typecheck caught an unbranded test-only department property access; the typed post-department lookup corrected it, with fresh typecheck and all four new tests passing. Other passing focused evidence is reused.
 
-Three alternating direct pairs over integrated day-60/day-140 field and office lists improve throughout, with identical values and median paired saving **174.998 ms over 400 list builds**. All **268 daily hashes** and compared summary fields match the integrated baseline. Three alternating whole-run pairs per slot save median paired **4.259 ms war / 6.717 ms history**. War improves two pairs and loses one; history improves all three. Before/after medians of run medians are 48.294/44.035 ms war and 48.302/43.906 ms history. These host-dependent estimates are not additive. Parent snapshot matches actual e09fe47 in all six checked sources. The hook is next. Evidence: `membership-direct.json`, `membership-pairs/pairs.json`, both hash comparisons and `holders-parent-proof.json`.
+Three alternating direct pairs over integrated day-60/day-140 field and office lists improve throughout, with identical values and median paired saving **174.998 ms over 400 list builds**. All **268 daily hashes** and compared summary fields match the integrated baseline. Three alternating whole-run pairs per slot save median paired **4.259 ms war / 6.717 ms history**. War improves two pairs and loses one; history improves all three. Before/after medians of run medians are 48.294/44.035 ms war and 48.302/43.906 ms history. These host-dependent estimates are not additive. Parent snapshot matches actual e09fe47 in all six checked sources. Committed as **dab3bf1**, actual staged-snapshot hook exit 0: **150 files / 1,610 passed / one expected failure / four skips**, 351.71 seconds, with every chained gate passing. Evidence: `membership-direct.json`, `membership-pairs/pairs.json`, both hash comparisons, `holders-parent-proof.json` and `commit-membership.log`.
+
+### S30 rejected candidate: nearest-wire searches local to one latency map
+
+The experimental latency map owned a lazy origin/side distance lookup. Its World and morning wire ownership are already fixed; a replacement map starts empty. It caches only completed searches, preserving every destination check and all path failures, including a missing path after an earlier zero-distance result. Public-office wire rules and direct courier distances are unchanged. No State field or global cache.
+
+The regression first made four courier queries instead of two. Three new tests and 47 focused routing/pack-rule/determinism tests pass with typecheck. They cover distinct origins/sides, no wire, new control, another World, older maps, zero distance and uncached failures. Three alternating direct pairs compare all force-location origin/side queries on retained day-60/day-140 maps (72 and 76 queries, no fixture errors), with identical values and median paired saving **96.461 ms over 7,400 queries**. All 268 daily hashes and summary comparisons match.
+
+The actual whole-run estimator is negative: median paired **-0.801 ms war / -2.102 ms history**, two losses and one gain in each slot. Unpaired medians (28.789/28.509 ms war, 35.225/29.530 ms history) would misleadingly suggest a win. Parked this candidate despite its direct benefit. No hook or repeated campaign. The production edit and test are removed; the source snapshot, test, all hashes and pairs remain under `runs/s30/wire/`, `rejected-wire-distance.test.ts` and the wire logs/JSON. The parent snapshot matches actual dab3bf1 in seven checked sources.
+
+The final bounded profile candidate is the principal menu's repeated holder lookup for relay paths, measured against actual **dab3bf1**, with the wire experiment removed. The cheaper alternative to the rejected general view-cache extension is one local derivation per menu. It must pass its direct gate before any further full-run pairs; no new acceptance or calibration campaign is added.
+
+The two new relay tests first showed five holder-table scans versus three without commandable posts. One local principal-post derivation removed that growth, preserving both relay paths with and without a held principal post. All 22 focused menu/appointment tests and typecheck passed. But three alternating direct pairs over 200 menus saved median paired **-17.334 ms** (two losses, one gain). Parked at the cheap gate; no further full-run pairs. The production change and test are removed, retained in `runs/s30/relay/`, `rejected-principal-relay-lookups.test.ts`, `relay-direct.json` and logs. Final production source is exactly the two retained optimizations at dab3bf1; the final campaign will reuse their 268-hash evidence and add the required frozen replay/resume checks.
 
 ## S30 proposed rulings
 
@@ -49,6 +217,10 @@ Retain both appointment behavior and the existing candidate optimization, reject
 Accept a command-owned inverse lookup held by the tick caller, keyed by exact post-table identity. Reject module-global caching, caching a person's side/location, persisting derived data, or assuming insertion order for duplicate holders. Reject the freezer candidates for lack of consistent direct benefit.
 
 Park the request/view holder extension after its negative direct median; reject retaining extra cache plumbing on intuition alone. Prefer local one-pass command membership for post lists, rejecting a cross-State cache or changed eligibility.
+
+Park nearest-wire memoization after negative whole-run paired medians in both slots. Reject accepting a direct-query proxy or unpaired medians instead of the requested estimator; no repeated timing campaign to seek a win.
+
+Park the local relay candidate after its negative direct median as well; reject retaining a work-count reduction without a measured runtime benefit. No broader view/cache or planner changes are delivered.
 
 ## S30 findings outside my scope
 
@@ -333,3 +505,9 @@ For the lead:
 1. Lead/CI: Linux performance and the unloaded 20 ms aim remain unestablished. Review the whole branch and each optimization after the sprint; nothing here reaches main by itself. The largest remaining samples include request freezing, post lookups and control-index construction. The large one-slot index sample needs isolation before selecting a next change. No additional campaign was started to chase it.
 2. S1/existing 1A owners retain every checkpoint, operation, pushback and lever-sweep problem listed above. No calibration, criterion or signature changed.
 3. View owner/S18: the inherited same-day post-identity cache issue remains outside S20; runs/s2/cache-post-identity.json and the retained S2 finding describe it. Its guard is unchanged. Broader cache sharing stays deferred; no behavior-changing fix was folded into these optimizations.
+
+## Findings outside my scope (S30)
+
+1. Lead/CI: review the integrated merge, both optimizations and whole branch under 0106. Local Phase 0 is 6/6 in the one default campaign; the unloaded 20 ms aim and Linux CI remain unestablished. Do not infer causal savings from absolute profile samples: even the unchanged freezer fell from 4,099.4 to 399.6 sampled war ms as host load changed.
+2. S1/existing 1A owners retain the 8 reported 1A problems above. Performance preservation waives none of them, and supplies no D6 or gate clearance. No gameplay/calibration fix was folded into S30.
+3. View owner/S18: the inherited same-day post-identity cache finding remains outside scope; its final reuse guard is unchanged. The measured view-cache and relay extensions were parked, as were nearest-wire and freezer candidates. Planner experiments from S2 remain rejected; no broader cache, ownership or drafting change is delivered.
