@@ -24,7 +24,9 @@ Reference median/p95 **33.01/59.39 ms**, history **31.95/57.37 ms**, testbed **3
 
 Focused audit passes full cast/post coverage, interval arithmetic, priors, citation resolution, scan hashes and preservation of **all 1,721 original tracked files**, including all S22 and live-pack files. Source inventories, runtime diagnosis and preservation evidence preceded closing narrative. An extension check caught draft post IDs outside the live cast; the correction now lists exclusions explicitly. Data/locator failures were corrected cheaply without an expensive campaign retry.
 
-Actual commit hooks remain the closeout gate. Commands: explicit S38-only staging, `git diff --cached --check`, then `git commit -F` with the Codex footer. Expected cost several minutes per hook; stop at an unexpected failure, inspect all categories, correct and verify cheaply before a justified retry. No bypass. Reuse the unchanged campaign/no-Git evidence above.
+Research commit **`50c114357ca71c24c7bf799ac0c2c65d193994b8`** passed the actual hook: **139 files, 1,548 passed, one expected failure and three skips**, **131.06 s**, plus all chained checks. Branch was clean afterward. It contains only the 22 new S38 research/handover files. Both the 117 source/derivation files and five runtime artifacts were rehashed successfully. The closing commit records these receipts; its actual-hook log/exit are `commit-closeout.log` and `commit-closeout.exit` in S38's external evidence directory.
+
+Each commit uses explicit S38-only staging, `git diff --cached --check`, then `git commit -F` with the Codex footer. Expected cost several minutes per hook; stop at an unexpected failure, inspect every category, correct and verify cheaply before a justified retry. No bypass, push or history rewrite. The unchanged campaign/no-Git evidence is reused. Final CODEX status is appended only after the closing receipt and fresh preservation/scope checks; it names both commits.
 
 ## Findings outside my scope
 

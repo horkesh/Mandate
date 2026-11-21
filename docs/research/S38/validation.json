@@ -167,5 +167,47 @@
       "sha256": "7d6107406151f0fb5e108c425cdad4ced1efc5fd7c668b330400d3a1c761e7c8"
     }
   ],
-  "limits": "One default done check only; 1A results nonbinding at this pinned baseline. No changed bands, runtime, settings, timeout or historical inputs. No Linux CI claim. The retained summaries contain checkpoint hashes and daily activity, not an exported hash for every day."
+  "limits": "One default done check only; 1A results nonbinding at this pinned baseline. No changed bands, runtime, settings, timeout or historical inputs. No Linux CI claim. The retained summaries contain checkpoint hashes and daily activity, not an exported hash for every day.",
+  "research_commit": "50c114357ca71c24c7bf799ac0c2c65d193994b8",
+  "research_commit_hook": {
+    "exit": 0,
+    "files_passed": 139,
+    "tests_passed": 1548,
+    "expected_failures": 1,
+    "skipped": 3,
+    "duration_seconds": 131.06,
+    "log": {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\commit-research.log",
+      "bytes": 20642,
+      "sha256": "79faa73e27ee8acf5a831b450f7961463fded4bdcb7fc74c6f910190b8f58a99"
+    },
+    "chained_checks": [
+      "typecheck",
+      "pack boundary",
+      "licences",
+      "106-decision index"
+    ]
+  },
+  "csv_parser_check": {
+    "exit": 0,
+    "rows": 392,
+    "columns": 7,
+    "semantic_round_trip": true,
+    "apply_imported": false,
+    "log": {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\csv-parser.log",
+      "bytes": 188,
+      "sha256": "f112830378d0be675b2760a8fa29f4251048673cc9ea82945f54ff635ff3c6a0"
+    }
+  },
+  "retained_source_runtime_inventory_audit": {
+    "status": "PASS",
+    "source_and_runtime_files_checked": 122,
+    "errors": []
+  },
+  "closing_commit_receipt": {
+    "log": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\commit-closeout.log",
+    "exit": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\commit-closeout.exit",
+    "rule": "Actual normal hook required; inspect receipt, no bypass."
+  }
 }
