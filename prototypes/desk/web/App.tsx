@@ -217,7 +217,7 @@ export function App() {
   function content(): ReactNode {
     if (!current) return null;
     if(current.summary)return <WeeklyPaper data={tableData} openPaper={paper}/>;
-    if (current.paper) return <><Paper report={current.paper} text={politicalPaperText(data!.morning,data!.strings,current.paper,data!.paperText[current.paper.id] ?? '')} t={t} dateOf={day => dateForReport(data!, day)} plain={plain} display={display} />
+    if (current.paper) return <><Paper report={current.paper} text={politicalPaperText(tableData.morning,data!.strings,current.paper,data!.paperText[current.paper.id] ?? '')} t={t} dateOf={day => dateForReport(data!, day)} plain={plain} display={display} />
       <div className="actions"><button data-hotkey="f" onClick={() => { setFiled(previous => new Set(previous).add(current.paper!.id)); sound('stamp'); back(); }}>{S.filePaper}</button>
         {current.paper.authorPost && <button data-hotkey="i" onClick={() => order(`inquire ${current.paper!.authorPost}`)}>{S.ask}</button>}</div></>;
     if(current.audience){const key=`${tableData.morning.requestKey}:${menu.commandable.find(p=>p.post===current.audience)?.holder??''}:${current.audience}`;return <AudienceScene key={key} request={tableData.morning} strings={data!.strings} post={current.audience} busy={busy||!!playback||data!.closed} queue={data!.queue} execute={execute} openPaper={sourcePaper} draft={audienceDrafts[key]??[]} setDraft={value=>setAudienceDrafts(old=>({...old,[key]:value}))}/>;}
