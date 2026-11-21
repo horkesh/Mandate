@@ -1,0 +1,138 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "guerrilla-war-west",
+  "subject": "civilians",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "5e73de4dd327b618633b93ca2f093a56b5f87d92e82b1eac465dff752984b8ff",
+    "status": "record",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "guerrilla-war-west",
+    "class": "guerrilla-war",
+    "window": {
+      "from": "1861-07-01",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "derived",
+      "event",
+      "decision"
+    ],
+    "status": "record",
+    "refused": [
+      {
+        "optionPattern": "(?:reprisal|retaliat|burn|lay_waste|lay-waste|devastate|punish)[a-z_-]*(?:towns?|villages?|civilians|count(?:y|ies)|homes|farms|population|inhabitants|families)",
+        "labelPattern": "\\b(?:reprisals?|retaliat\\w*|burn|lay waste|devastat\\w*|punish\\w*)\\b.{0,40}\\b(?:towns?|villages?|civilians|count(?:y|ies)|homes|farms|population|inhabitants|families)\\b",
+        "reason": "refused for ever (rule 1; 0029); not lifted by R6: reprisal against civilians is never a lever for any seat, and raids strike rail, river edges and depots, never civilians; R6 decides only commanders' conduct toward civilians as events (SENSITIVE-HISTORY 3.6, refused; [SW 6.7], [U62]; 0046)"
+      },
+      {
+        "optionPattern": "(?:hang|shoot|execute|kill|lynch)[a-z_-]*(?:bushwhacker|guerrilla|jayhawker|partisan|bridge_?burner|raider|marauder|irregular|hostage|parole_?breaker|spy|spies)",
+        "labelPattern": "\\b(?:hang|hangs|hanged|hung|shoot|shot|execut\\w*|kill\\w*|lynch\\w*)\\b.{0,30}\\b(?:bushwhackers?|guerrillas?|jayhawkers?|partisans?|bridge[- ]burners?|raiders?|marauders?|irregulars?|hostages?|parole[- ]breakers?|spies)\\b",
+        "reason": "refused for ever (rule 1): no seat hangs, shoots, executes, lynches or kills irregulars, hostages, spies or men who broke parole, with a trial or without one; Halleck's GO 2 (\"hung as robbers and murderers\") and GO 32 (\"immediately shot\") are events, never an option ([GCF 10]); on this topic until R6's split moves it to executions-and-reprisals, and not lifted by R6 (SENSITIVE-HISTORY rule 1, 3.6)"
+      }
+    ],
+    "agencyReasons": [],
+    "protectedGroups": [],
+    "protectedFields": []
+  },
+  "sources": [
+    "fremont",
+    "osceola-palmyra",
+    "east-tennessee"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "derived",
+      "recommendation": "[I] Carry regional pressure only; no measured coefficient from a commander’s claim that executions helped.",
+      "evidence": [
+        "fremont",
+        "osceola-palmyra",
+        "east-tennessee"
+      ]
+    },
+    {
+      "placement": "event",
+      "recommendation": "[I] For R6: raids and reprisals are commanders’ conduct under E7; appointment never creates a benefit route. Keep atrocity conduct separate from ordinary pressure.",
+      "evidence": [
+        "fremont",
+        "osceola-palmyra",
+        "east-tennessee"
+      ]
+    },
+    {
+      "placement": "decision",
+      "recommendation": "[I] A restrictive/revoking reply may address an order; never uphold its shooting clause. 0074 permits letting it stand only as watched inaction, not an option.",
+      "evidence": [
+        "fremont",
+        "osceola-palmyra",
+        "east-tennessee"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "guerrillas?"
+      },
+      {
+        "term": "bushwhack\\w*"
+      },
+      {
+        "term": "jayhawk\\w*"
+      },
+      {
+        "term": "reprisals?"
+      },
+      {
+        "term": "bridge[- ]burn\\w*"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Osceola date/categories differ; do not merge Lane’s killed/wounded with Plumly’s killed into a casualty interval.",
+      "Retain permanent irregular/hostage killing and civilian-target refusals even after any R6 lift. A bridge target is not a civilian target."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The reports disagree about the raid’s date and losses.",
+        "rejectExample": "Reprisals restored control and reduced guerrilla pressure.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "atrocity",
+    "lost-cause"
+  ],
+  "reviewDependencies": [
+    "R6",
+    "0074"
+  ],
+  "remaining": [
+    "R6 remains record/no interim; original Palmyra selection/execution file, civilian voices and effect calibration remain unresolved."
+  ],
+  "proposedRuling": "[I] Preserve the two permanent live signatures. Defer any executions-and-reprisals split to R6; reject a rename that drops the refusal.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

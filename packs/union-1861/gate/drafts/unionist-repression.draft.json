@@ -1,0 +1,125 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "unionist-repression",
+  "subject": "civilians",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": false,
+    "entrySha256": null,
+    "status": null,
+    "needsSource": null
+  },
+  "entry": {
+    "id": "unionist-repression",
+    "class": "atrocities",
+    "window": {
+      "from": "1861-11-25",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "event",
+      "derived",
+      "text"
+    ],
+    "status": "record",
+    "interim": null,
+    "agencyReasons": [],
+    "protectedGroups": [
+      "Unionist families",
+      "civilian prisoners"
+    ],
+    "protectedFields": [],
+    "refused": [
+      {
+        "optionPattern": "(?:execute|hang|shoot|kill|expel|deport)[a-z_-]*(?:unionists?|families|civilians|prisoners?)",
+        "reason": "No choice to kill or collectively punish civilians/Unionists; reported coercion is conduct, not a player tool."
+      }
+    ]
+  },
+  "sources": [
+    "east-tennessee"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "SENSITIVE-HISTORY section 3 entry for this topic",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "event",
+      "recommendation": "[I] For R6: execution/expulsion/detention conduct is attributed; source the reported acts separately from threats.",
+      "evidence": [
+        "east-tennessee"
+      ]
+    },
+    {
+      "placement": "derived",
+      "recommendation": "[I] For review: Unionists’ own resistance/refusal, never severity rewards. E7 applies to atrocity-derived acting-side measures.",
+      "evidence": [
+        "east-tennessee"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] Read objections from Confederate petitioners alongside coercive instructions. The in-scope evidence is East Tennessee; Shelton Laurel remains 1863.",
+      "evidence": [
+        "east-tennessee"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "Unionists?"
+      },
+      {
+        "term": "bridge[- ]burn\\w*"
+      },
+      {
+        "term": "expulsion"
+      },
+      {
+        "term": "hang(?:ed|ing)?"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Benjamin’s instruction was government policy, not merely a local commander’s proposal. Do not adopt officials’ guilt/beneficial-effect claims.",
+      "Retain printed February request/reply date conflict; expulsion orders are not completed movements."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "Petitioners challenged the arrests and sought release or trial.",
+        "rejectExample": "Execute Unionists to secure local loyalty.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "atrocity",
+    "agency"
+  ],
+  "reviewDependencies": [
+    "R6",
+    "0074"
+  ],
+  "remaining": [
+    "R6 review, individual trial/expulsion outcomes and causal quantities remain held; no national repression count."
+  ],
+  "proposedRuling": "[I] Recommend an in-window East Tennessee candidate, held for R6, with later Shelton Laurel excluded. Reject claiming S7 cleared every repression facet.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

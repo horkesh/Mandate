@@ -1,0 +1,118 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "occupation-orders",
+  "subject": "civilians",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": false,
+    "entrySha256": null,
+    "status": null,
+    "needsSource": null
+  },
+  "entry": {
+    "id": "occupation-orders",
+    "class": "atrocities",
+    "window": {
+      "from": "1862-05-15",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "event",
+      "text"
+    ],
+    "status": "record",
+    "interim": null,
+    "agencyReasons": [],
+    "protectedGroups": [
+      "women under occupation",
+      "civilian prisoners"
+    ],
+    "protectedFields": [],
+    "refused": [
+      {
+        "optionPattern": "(?:raise|increase|set|tighten)[a-z_-]*(?:occupation_severity|civilian_terror)",
+        "reason": "No occupation severity or terror lever (SENSITIVE-HISTORY 3.6)."
+      },
+      {
+        "optionPattern": "(?:confirm|approve|uphold|execute|hang)[a-z_-]*(?:execution|sentence|mumford)",
+        "reason": "0074 forbids confirming an atrocity-class sentence as an option; only restrictive options and watched inaction."
+      }
+    ]
+  },
+  "sources": [
+    "occupation"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "SENSITIVE-HISTORY section 3 entry for this topic",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "event",
+      "recommendation": "[I] For R6: gendered coercion and reported execution are conduct, with nonpositive acting-side terms; not an occupation-severity slider.",
+      "evidence": [
+        "occupation"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] For R6: separate Order 28’s threat, Mumford’s sentence and Butler’s later implementation report; food distribution remains an announced action until receipts.",
+      "evidence": [
+        "occupation"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "occupation"
+      },
+      {
+        "term": "Mumford"
+      },
+      {
+        "term": "General Orders? No[.]? 28"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "No threat described as harmless courtesy or proof of a specific assault.",
+      "The six parole-breakers’ commutation is a different case and cannot be assigned to Mumford. Ordinary relief/pressure does not excuse atrocity benefits."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "Butler reported that the execution occurred on 7 June.",
+        "rejectExample": "Confirm the execution to improve control.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "atrocity",
+    "lost-cause"
+  ],
+  "reviewDependencies": [
+    "R6",
+    "0074"
+  ],
+  "remaining": [
+    "R6 remains a hold; full trial file, enforcement and distribution receipts remain unresolved."
+  ],
+  "proposedRuling": "[I] Recommend record-held atrocity event/text; separate any non-atrocity administration from this class before decision authoring.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

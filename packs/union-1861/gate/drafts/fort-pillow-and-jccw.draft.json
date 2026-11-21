@@ -1,0 +1,106 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "fort-pillow-and-jccw",
+  "subject": "civilians",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": false,
+    "entrySha256": null,
+    "status": null,
+    "needsSource": null
+  },
+  "entry": {
+    "id": "fort-pillow-and-jccw",
+    "class": "atrocities",
+    "window": {
+      "from": "1861-12-09",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "event",
+      "text"
+    ],
+    "status": "record",
+    "interim": null,
+    "agencyReasons": [],
+    "protectedGroups": [],
+    "protectedFields": [],
+    "refused": []
+  },
+  "sources": [
+    "committee"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "SENSITIVE-HISTORY section 3 entry for this topic",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "event",
+      "recommendation": "[I] The committee’s in-window existence is context for ordinary oversight under its own political machinery; no Fort Pillow/Sand Creek atrocity is dated into 1B.",
+      "evidence": [
+        "committee"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] Only separately sourced in-window investigative records; do not treat creation of a committee as evidence it investigated a later massacre.",
+      "evidence": [
+        "committee"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "Joint Committee on the Conduct of the War"
+      },
+      {
+        "term": "Fort Pillow"
+      },
+      {
+        "term": "Sand Creek"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Label future atrocity/report facets later and hold them for their own sources/review. Stone arrest conflict is unresolved.",
+      "Do not use an atrocity-class tag for ordinary oversight decisions that could raise support; split/tag that facet before authoring."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The committee existed by the 1861–62 period.",
+        "rejectExample": "The 1862 committee reported the Fort Pillow massacre.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "atrocity",
+    "hindsight"
+  ],
+  "reviewDependencies": [
+    "SENSITIVE-HISTORY 3.6",
+    "R3 for Sand Creek"
+  ],
+  "remaining": [
+    "Primary creation instrument, exact Stone chronology and specific reports remain held for promotion; later massacres are outside S23."
+  ],
+  "proposedRuling": "[I] Recommend a conservative record-held candidate until the in-window committee facet is separated/re-sourced; reject opening all later atrocity facets with one 1861 start.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

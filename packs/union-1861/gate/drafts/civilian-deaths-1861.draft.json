@@ -1,0 +1,109 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "civilian-deaths-1861",
+  "subject": "civilians",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "1f8338256c7f0e917a6ff7279ec9f0e23696257179c2a63da915b0e43ef4809a",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "civilian-deaths-1861",
+    "class": "atrocities",
+    "window": {
+      "from": "1861-04-19",
+      "to": "1861-12-31"
+    },
+    "placements": [
+      "event",
+      "text"
+    ],
+    "status": "open",
+    "refused": [
+      {
+        "optionPattern": "(?:fire|shoot|volley|open_fire|open-fire)[a-z_-]*(?:crowds?|mobs?|civilians|rioters?|townspeople)",
+        "labelPattern": "\\b(?:fire|shoot|open fire)\\w*\\b.{0,25}\\b(?:crowds?|mobs?|civilians|rioters?|townspeople)\\b",
+        "reason": "no option to fire on a crowd; the Pratt Street and Camp Jackson dead are events from their causes and the commander's seat, and no term from them helps the acting side (SENSITIVE-HISTORY 3.6, refused, and E7; [SW 6.7])"
+      }
+    ],
+    "agencyReasons": [],
+    "protectedGroups": [],
+    "protectedFields": []
+  },
+  "sources": [
+    "osceola-palmyra",
+    "occupation"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "event",
+      "recommendation": "[I] Carry existing 1861 deaths only; new occupation/irregular killing notices belong to reviewed conduct topics, not an unbounded reuse of this id.",
+      "evidence": [
+        "osceola-palmyra",
+        "occupation"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] Earlier deaths may be cited context; no generic casualty figure from conflicting raid reports.",
+      "evidence": [
+        "osceola-palmyra",
+        "occupation"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "civilians?"
+      },
+      {
+        "term": "massacres?"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Preserve source/category distinctions and nonpositive acting-side sign. Do not silently extend the 1861 window to every 1862 death.",
+      "No option to fire on a crowd, even if an arrest/security decision has another tag."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The sources distinguish civilian deaths from military losses.",
+        "rejectExample": "Fire on the crowd to restore loyalty.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "atrocity"
+  ],
+  "reviewDependencies": [
+    "0074"
+  ],
+  "remaining": [
+    "S7 does not re-source the old Baltimore/Camp Jackson figures; existing reviewed figures are carried without new claims."
+  ],
+  "proposedRuling": "[I] Retain the exact live window and permanent refusal; reject assigning new 1862 conduct to this 1861 container.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

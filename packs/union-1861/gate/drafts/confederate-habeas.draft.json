@@ -1,0 +1,117 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "confederate-habeas",
+  "subject": "civilians",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": false,
+    "entrySha256": null,
+    "status": null,
+    "needsSource": null
+  },
+  "entry": {
+    "id": "confederate-habeas",
+    "class": "civil-liberties",
+    "window": {
+      "from": "1862-02-27",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "decision",
+      "event",
+      "text"
+    ],
+    "status": "open",
+    "interim": null,
+    "agencyReasons": [],
+    "protectedGroups": [],
+    "protectedFields": [],
+    "refused": []
+  },
+  "sources": [
+    "confederate-habeas",
+    "east-tennessee"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "SENSITIVE-HISTORY section 3 entry for this topic",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "decision",
+      "recommendation": "[I] Inherited 0046 symmetric security-policy placement through holders, with locked political/court/holder costs; no free-standing arrest/habeas verb.",
+      "evidence": [
+        "confederate-habeas",
+        "east-tennessee"
+      ]
+    },
+    {
+      "placement": "event",
+      "recommendation": "[I] Distinguish statutory authority, jurisdiction-specific proclamation and actual local conduct. Execution conduct belongs to its atrocity topic.",
+      "evidence": [
+        "confederate-habeas",
+        "east-tennessee"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] Attribute jurisdiction disputes; no states-rights explanation severed from slavery.",
+      "evidence": [
+        "confederate-habeas",
+        "east-tennessee"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "habeas"
+      },
+      {
+        "term": "martial law"
+      },
+      {
+        "term": "arrests?"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Do not equate a local officer’s martial-law claim with Congress’s authority or national suspension.",
+      "No new national arrest count from snippets; coercion and killing are not the same class."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The officer questioned whether he had authority to suspend the writ.",
+        "rejectExample": "Martial law made every arrest lawful and costless.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [
+    "0046 R8"
+  ],
+  "remaining": [
+    "Exact instruments/territories must be checked against GCF 6 before day-specific authoring; unread Bragg/Van Dorn orders and counts remain held."
+  ],
+  "proposedRuling": "[I] Recommend policy symmetry with locked costs and separately sourced conduct; reject blanket suspension or severity rewards.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

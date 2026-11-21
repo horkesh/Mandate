@@ -1,0 +1,116 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "press-suppression",
+  "subject": "civilians",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "cd627465844e7af10b28ac0741264a7f5813355b93570a6746cfb3cc5d4ea18e",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "press-suppression",
+    "class": "civil-liberties",
+    "window": {
+      "from": "1861-04-12",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "decision",
+      "event"
+    ],
+    "status": "open",
+    "refused": [
+      {
+        "optionPattern": "(?:incite|rouse|stir_up|stir-up|unleash|encourage|let_loose|let-loose)[a-z_-]*(?:mobs?|crowds?|rioters?)",
+        "labelPattern": "\\b(?:incit|rous|stir(?:ring)? up|unleash|encourag|let loose|egg on)\\w*\\b.{0,30}\\b(?:mobs?|crowds?|rioters?)\\b",
+        "reason": "mob attacks on papers are events no seat causes or uses: mobs are never an instrument of any seat (SENSITIVE-HISTORY 3.5, refused; [UP 4.3], [SW 6.6])"
+      }
+    ],
+    "agencyReasons": [],
+    "protectedGroups": [],
+    "protectedFields": []
+  },
+  "sources": [
+    "maryland",
+    "occupation",
+    "wisconsin"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "decision",
+      "recommendation": "[I] Press/mail/security order through its holder with locked trust/bloc costs; no suppress-paper verb.",
+      "evidence": [
+        "maryland",
+        "occupation",
+        "wisconsin"
+      ]
+    },
+    {
+      "placement": "event",
+      "recommendation": "[I] Mob attacks are independent conduct, never instruments a principal orders. S7 provides local coercion context, not a new national press census.",
+      "evidence": [
+        "maryland",
+        "occupation",
+        "wisconsin"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "censor\\w*"
+      },
+      {
+        "term": "suppress\\w* (?:the )?(?:papers?|press|newspapers?)"
+      },
+      {
+        "term": "mobs?"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Name the acting institution and paper only when sourced; do not call suppression a neutral communications improvement.",
+      "No June 1863 Chicago or May 1864 newspaper episode in this window."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The order restricted publication.",
+        "rejectExample": "Use a mob to silence the paper.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [
+    "0046 R8"
+  ],
+  "remaining": [
+    "New day-specific bans, receipt and response claims need primary instruments; S7 supplies no newspaper reach/circulation effects."
+  ],
+  "proposedRuling": "[I] Carry policy and independent-event facets; reject a free-standing verb or seat-directed mob.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

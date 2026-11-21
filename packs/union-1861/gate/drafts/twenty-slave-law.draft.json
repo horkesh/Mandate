@@ -1,0 +1,117 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "twenty-slave-law",
+  "subject": "civilians",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": false,
+    "entrySha256": null,
+    "status": null,
+    "needsSource": null
+  },
+  "entry": {
+    "id": "twenty-slave-law",
+    "class": "slavery-and-emancipation",
+    "window": {
+      "from": "1862-10-11",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "event",
+      "text"
+    ],
+    "status": "open",
+    "interim": null,
+    "agencyReasons": [
+      "agency:resistance-within-confederacy"
+    ],
+    "protectedGroups": [
+      "enslaved people",
+      "freedpeople",
+      "refugees from slavery",
+      "free Black men",
+      "Black women",
+      "Black children"
+    ],
+    "protectedFields": [],
+    "refused": [
+      {
+        "optionPattern": "(?:set|raise|lower|choose)[a-z_-]*(?:slave_exemption|overseer_exemption|plantation_exemption)",
+        "reason": "No seat chooses control of a protected population as an exemption dial (0046 interim rule)."
+      }
+    ]
+  },
+  "sources": [
+    "confederate-acts"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "SENSITIVE-HISTORY section 3 entry for this topic",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "event",
+      "recommendation": "[I] Interim Confederate rule: exemption law touching protected people is an event, not a rule-seat choice. Preserve the accepted State prerequisites of Confederate conscription and the preliminary proclamation; the statute alone does not prove the latter was the sole historical cause.",
+      "evidence": [
+        "confederate-acts"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] Describe the policing purpose and differentiated clauses, including grouped small plantations; retain slavery explicitly.",
+      "evidence": [
+        "confederate-acts"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] Each reason names people’s own choices responding to conditions; protected inputs have no player writer. The ids are candidate vocabulary, not implemented terms.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "Twenty[- ]Slave Law"
+      },
+      {
+        "term": "overseers?"
+      },
+      {
+        "term": "plantations?"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Do not reduce the act to every enslaver of twenty people was exempt.",
+      "Do not neutralize slavery policing as an occupational exemption. Reception/resentment amounts require independent evidence."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The plantation clauses provided exemptions for policing enslaved people.",
+        "rejectExample": "The law simply protected essential agricultural workers.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [],
+  "remaining": [
+    "Reception petitions/debates and quantitative resentment remain unsourced here."
+  ],
+  "proposedRuling": "[I] Recommend event/text with differentiated clauses; reject a player exemption slider, slavery-free paraphrase or assumed effect size.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

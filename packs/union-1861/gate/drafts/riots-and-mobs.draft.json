@@ -1,0 +1,111 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "riots-and-mobs",
+  "subject": "civilians",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "b0d39e39c7dc6370a58b8c0afaa532364a4d7d6943613e5b2d5f69d9a9aaddd8",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "riots-and-mobs",
+    "class": "civil-liberties",
+    "window": {
+      "from": "1861-04-19",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "event",
+      "text"
+    ],
+    "status": "open",
+    "refused": [
+      {
+        "optionPattern": "(?:incite|rouse|stir|organi[sz]e)[a-z_-]*(?:mobs?|riots?|crowds?)",
+        "labelPattern": "\\b(?:incit|rous|stir(?:ring)? up|organi[sz])\\w*\\b.{0,25}\\b(?:mobs?|riots?|crowds?)\\b",
+        "reason": "no seat raises a mob: a rally or a riot is an event from its causes, never a lever (0074; SENSITIVE-HISTORY 3.6)"
+      }
+    ],
+    "agencyReasons": [],
+    "protectedGroups": [],
+    "protectedFields": []
+  },
+  "sources": [
+    "wisconsin"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "docs/decisions/0074-the-gate-for-1a.md; riots-and-mobs",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "event",
+      "recommendation": "[I] Carry ordinary non-atrocity public reaction only from its own cause; no seat-directed mob. Any racist killing or other atrocity needs its own topic/class and dependency checks.",
+      "evidence": [
+        "wisconsin"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] November Wisconsin response can be proposed with attribution; exact local riot chronology and motives are not established.",
+      "evidence": [
+        "wisconsin"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "riots?"
+      },
+      {
+        "term": "mobs?"
+      },
+      {
+        "term": "draft resistance"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "No New York July 1863 riot backdated to Wisconsin. Do not invent ethnic composition or motives.",
+      "Do not tag atrocity gains as ordinary public reaction to escape D5 (0074)."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The governor reported resistance and requested a disposition for those held.",
+        "rejectExample": "The riot’s victims increased support for the acting side.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [
+    "0074",
+    "D5"
+  ],
+  "remaining": [
+    "Local chronology, participants’ accounts and actual dispositions remain held."
+  ],
+  "proposedRuling": "[I] Carry the existing ordinary-event topic for independently caused reaction; reject laundering atrocity benefits through a different tag.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

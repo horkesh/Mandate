@@ -1,0 +1,125 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "union-habeas-and-arrests",
+  "subject": "civilians",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "9470f1f51a8aeea5e126afe1ae3082037d2dd39d37ca3000c494a7ee251814ef",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "union-habeas-and-arrests",
+    "class": "civil-liberties",
+    "window": {
+      "from": "1861-03-04",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "decision",
+      "event",
+      "derived"
+    ],
+    "status": "open",
+    "refused": [
+      {
+        "fieldPattern": "(?:^|[-_.:/])arrest(?:s|ed|ees)?[-_.:/](?:count|total|score|tally)(?:$|[-_.:/])",
+        "reason": "no arrest count as a score or tally, and no card per arrested person: arrests are events and decisions with their own costs, never a number any seat is scored on (SENSITIVE-HISTORY 3.5, refused)"
+      }
+    ],
+    "agencyReasons": [],
+    "protectedGroups": [],
+    "protectedFields": []
+  },
+  "sources": [
+    "maryland",
+    "wisconsin",
+    "prisons"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "decision",
+      "recommendation": "[I] Security policy through a named holder with unconditional bloc/trust/accountability costs, including inaction; no arrest verb.",
+      "evidence": [
+        "maryland",
+        "wisconsin",
+        "prisons"
+      ]
+    },
+    {
+      "placement": "event",
+      "recommendation": "[I] Holder arrests and limited camp-perimeter rules are separate from authorization. November Wisconsin interim permission is not the final presidential decision.",
+      "evidence": [
+        "maryland",
+        "wisconsin",
+        "prisons"
+      ]
+    },
+    {
+      "placement": "derived",
+      "recommendation": "[I] Only sourced calibration/accountability effects, never arrest count as score; no synthetic national rate.",
+      "evidence": [
+        "maryland",
+        "wisconsin",
+        "prisons"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "habeas"
+      },
+      {
+        "term": "arrests?|arrested"
+      },
+      {
+        "term": "martial law"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Attribute the government’s Maryland suspicions rather than declare guilt. Preserve contrary testimony.",
+      "Do not merge exemption claims, drafted men and prisoners accused of resistance. Permission to parole/transfer is not proof of disposition."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "Salomon reported prisoners held and asked for instructions.",
+        "rejectExample": "More arrests increased loyalty without cost.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [
+    "0046 R8"
+  ],
+  "remaining": [
+    "Actual Wisconsin dispositions, day-specific Stone chronology and national custody totals remain unresolved."
+  ],
+  "proposedRuling": "[I] Carry existing policy/event/derived envelope and arrest-score refusal; reject free or unnoticed arrests.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}
