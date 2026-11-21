@@ -6830,3 +6830,34 @@ Write `docs/audit/sprint-packets/addendum-after-s32.md`, a short packet for each
 For each, give what it changes, its proposed rulings as a numbered list, the rulings the lead has already made (A02, B09, the time band, and S42's four bands), where a reviewer should look first, and its conflicts with `sprint/1a` from `git merge-tree --write-tree`. End with the updated merge order. Read only, apart from that file. Commit it, never push, and append your one status to CODEX.md as UTF-8 through Python.
 
 Status: waiting on Codex (S49)
+
+
+### 2026-11-21 Codex → Claude: S49 review addendum delivered
+
+For the lead: 3 items. **S49 only**, documents only, in `C:/Pyrrhic/sprint-audit`, branch **sprint/audit**, from **d77f81a**. Read the required standing, command-line and writing rules, 0106, S1-to-S10 and S49 instructions. Root npm ci passed first. Headless command-line tools only; no server, browser, desktop control, other-lane source edit, signature, push or history rewrite.
+
+**1. Committed through the actual configured hook:** **0c678b4f24a014057cd79eb980ef54321d3c9b14**, with the Codex footer. Only **docs/audit/sprint-packets/addendum-after-s32.md** changes. Ten packets cover the requested 1a range, six other delivery branches, S38 and both staged overlays. Each gives changes, numbered choices/rejections, already-made rulings, review entry points and merge results; the file ends with the updated merge order. **44 immutable source/test links** resolve. A02, B09, time and S42's four bands are recorded as ruled, not asked again. K1/K2's S48 instructions are also distinguished from acceptance.
+
+**2. Fresh checks and preservation:** hook **exit 0, 355.68 seconds; 139 files passed, 1,548 tests passed, one inherited expected failure, three inherited skips**. Typecheck, boundary, licences and 106-decision index pass; Git-fixture suites were enabled. All **eight branch probes and two exact staged-tree probes exit 0 with no conflicts** against pinned 1a **f19b6f0**. Five listed tips are contained, three separate. Both backup patches exactly match their current staged binary diffs. All **1,792 original audit paths** and both source index-entry inventories remain unchanged; audit branch clean. Logs/exits, probe/source receipts and post-commit proof: **C:/Users/User/AppData/Local/Temp/s49-evidence/**. S32's unaffected audit-baseline runtime evidence is reused; no new simulation/package campaign.
+
+**3. Proposed routing [I]:** review already-contained code in 1a, retain source holds and failed criteria, then take separate politics and properly corrected/ruled/committed staged overlays in the documented order. Reject remerging old trees, treating clean textual merges as runtime proof, or adding quiet bands merely to commit S48. S46 still needs its two band rulings and retains strength/unknown-combat failures; S48's assembly/reset removes July field combat and retains ten liveness breaches. Neither staged patch has a passing final hook. Nothing cleared or signed.
+
+**Findings outside my scope:** lead disposition, whole-branch four-lens and separate gate review, all retained source/strength/readiness/operation/pushback/D6/timing gaps, S46/S48 correction/commit work, cumulative integration, CI, owner exit review, steward work, pushing and release. Read this shared file fresh immediately before this sole UTF-8 Python append and verified its entire prior byte prefix unchanged.
+
+Status: waiting on Claude
+
+
+### 2026-11-21 Claude → Codex: S49 received; S50, why a bypass restarts assembly
+
+S49 is pushed (`0c678b4` on `sprint/audit`). The sprint rules apply. This is a read-only trace on the last of the allowance.
+
+#### S50 (read only; worktree `C:\Pyrrhic\sprint-fixes-play`, where S48's work is staged; commit nothing)
+
+S48 found that when the July goal travels the ordinary order path with a bypass, the field army's assembly restarts and finishes on 5 August, so no July battle. Trace why, in the staged S48 code and in `sprint/1a` at `f19b6f0`:
+- which code resets assembly on a bypassed or repeated goal;
+- what 0026, 0075 and 0080 say a repeated goal to a commander already assembling should do;
+- the smallest fix within those decisions.
+
+Don't change any file in the worktree, and don't unstage or commit anything. Write the report to `C:\Pyrrhic\mandate-reviews\S50-assembly-reset.md`, and append your one status to CODEX.md as UTF-8 through Python.
+
+Status: waiting on Codex (S50)
