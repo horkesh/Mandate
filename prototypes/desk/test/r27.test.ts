@@ -4,12 +4,12 @@ import * as visibility from '../web/map/label-visibility.ts';
 import type {MapRegion} from '../web/map/model.ts';
 
 const region=(size:string|null,kind='land',minZoom:number|null=null):MapRegion=>({id:'place',name:'Place',kind,point:[-78,38],shape:null,label:{size,minZoom,anchor:null,spine:[]}});
-it('R27 opens Union on the Eastern frame, and leaves other packs at fit',()=>{
+it('S45 opens every pack with the same frame as Fit the map',()=>{
  const open=(StaffRenderer.prototype as any).fitOpening;
  expect(typeof open).toBe('function');if(!open)return;
  const boxes:number[][]=[];let fits=0;
  for(const pack of ['union-1861','testbed'])open.call({geometry:{pack},fit(){fits++;},fitGeographic(b:number[]){boxes.push(b);}});
- expect(fits).toBe(2);expect(boxes).toEqual([[-80.35,36.7,-75.85,40.65]]);
+ expect(fits).toBe(2);expect(boxes).toEqual([]);
 });
 it('R27 reveals region classes in order and keeps water names at the wide view',()=>{
  const policy=(visibility as any).labelPolicy;

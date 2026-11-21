@@ -1,0 +1,3311 @@
+{
+  "request": "S45",
+  "base": "edc57b05142a95757ef120080edf8d934406fa0c",
+  "scope": "Observed misplacements across 12 fit views (four looks, three sizes) and 219 focused regions on the first morning. This is the full list from those 231 views, not an enumeration of every possible camera position.",
+  "before": {
+    "count": 114,
+    "observations": 1719,
+    "labels": [
+      {
+        "id": "al_black_belt",
+        "name": "Selma and the Black Belt",
+        "observations": 11,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fl_peninsula_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tx_southeast"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "charleston"
+          }
+        ]
+      },
+      {
+        "id": "al_east",
+        "name": "Tuskegee and Opelika",
+        "observations": 1,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "al_valley_east"
+          }
+        ]
+      },
+      {
+        "id": "al_hills",
+        "name": "Talladega and the mineral district",
+        "observations": 2,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 3440,
+              "height": 1440
+            },
+            "look": "A",
+            "focus": "fit"
+          }
+        ]
+      },
+      {
+        "id": "al_southwest",
+        "name": "Clarke and Monroe",
+        "observations": 7,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "red_river_lower"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "augusta"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "jackson_ms"
+          }
+        ]
+      },
+      {
+        "id": "al_valley_west",
+        "name": "Decatur and Tuscumbia",
+        "observations": 28,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "red_river_lower"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_southwest"
+          }
+        ]
+      },
+      {
+        "id": "al_wiregrass",
+        "name": "Southeast Alabama",
+        "observations": 32,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fl_peninsula_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_southwest"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_louisiana"
+          }
+        ]
+      },
+      {
+        "id": "ar_northwest",
+        "name": "Fayetteville and Fort Smith",
+        "observations": 2,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "mo_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "mo_southwest"
+          }
+        ]
+      },
+      {
+        "id": "ar_south",
+        "name": "Camden and El Dorado",
+        "observations": 18,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_valley_ozarks"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tx_southeast"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "chattanooga"
+          }
+        ]
+      },
+      {
+        "id": "ar_southwest",
+        "name": "Washington and Arkadelphia",
+        "observations": 12,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_south"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tx_north_central"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_northwest"
+          }
+        ]
+      },
+      {
+        "id": "ar_white_arkansas",
+        "name": "Lower White and Arkansas",
+        "observations": 1,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_southwest"
+          }
+        ]
+      },
+      {
+        "id": "atlanta",
+        "name": "Atlanta",
+        "observations": 23,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "baton_rouge"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "clarksville"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tn_plateau"
+          }
+        ]
+      },
+      {
+        "id": "baltimore",
+        "name": "Baltimore",
+        "observations": 6,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tn_holston"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "cumberland_gap"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ky_central_south"
+          }
+        ]
+      },
+      {
+        "id": "bowling_green",
+        "name": "Bowling Green",
+        "observations": 12,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "augusta"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_south"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ohio_north"
+          }
+        ]
+      },
+      {
+        "id": "brownsville",
+        "name": "Brownsville",
+        "observations": 3,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tx_brazos"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "la_river_parishes"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tx_san_antonio_austin"
+          }
+        ]
+      },
+      {
+        "id": "cairo",
+        "name": "Cairo",
+        "observations": 11,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "sc_upstate_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "atlanta"
+          }
+        ]
+      },
+      {
+        "id": "cape_fear",
+        "name": "Fayetteville and the Cape Fear",
+        "observations": 41,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "sc_upstate_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "albemarle_pamlico"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_northeast"
+          }
+        ]
+      },
+      {
+        "id": "charleston",
+        "name": "Charleston",
+        "observations": 15,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "clarksville"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tn_holston"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "cumberland_gap"
+          }
+        ]
+      },
+      {
+        "id": "chattanooga",
+        "name": "Chattanooga",
+        "observations": 17,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "red_river_lower"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_valley_ozarks"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "wv_central"
+          }
+        ]
+      },
+      {
+        "id": "columbia_sc",
+        "name": "Columbia",
+        "observations": 4,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ky_central_south"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "al_valley_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ky_west_coal"
+          }
+        ]
+      },
+      {
+        "id": "columbus_ky",
+        "name": "Columbus (Kentucky)",
+        "observations": 14,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "sc_upstate_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "augusta"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "illinois_north"
+          }
+        ]
+      },
+      {
+        "id": "corinth",
+        "name": "Corinth",
+        "observations": 15,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_southwest"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "augusta"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "mo_southeast"
+          }
+        ]
+      },
+      {
+        "id": "cumberland_gap",
+        "name": "Cumberland Gap",
+        "observations": 13,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "albemarle_pamlico"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "baltimore"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "mo_southeast"
+          }
+        ]
+      },
+      {
+        "id": "cumberland_valley_pa",
+        "name": "Chambersburg and Carlisle",
+        "observations": 29,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "wv_central"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ohio_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "cumberland_valley_pa"
+          }
+        ]
+      },
+      {
+        "id": "dakota",
+        "name": "Dakota",
+        "observations": 10,
+        "examples": [
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "A",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "B",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "C",
+            "focus": "fit"
+          }
+        ]
+      },
+      {
+        "id": "danville",
+        "name": "Danville",
+        "observations": 7,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "bowling_green"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "indiana_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "harrisburg"
+          }
+        ]
+      },
+      {
+        "id": "eastern_kentucky",
+        "name": "Eastern Kentucky",
+        "observations": 88,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "albemarle_pamlico"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "northern_virginia"
+          }
+        ]
+      },
+      {
+        "id": "fl_peninsula_north",
+        "name": "Alachua and Marion",
+        "observations": 11,
+        "examples": [
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "B",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "C",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "0",
+            "focus": "fit"
+          }
+        ]
+      },
+      {
+        "id": "fl_peninsula_south",
+        "name": "South Florida",
+        "observations": 1,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fl_peninsula_north"
+          }
+        ]
+      },
+      {
+        "id": "florida_parishes",
+        "name": "Florida Parishes",
+        "observations": 4,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "baton_rouge"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "houston"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "la_river_west"
+          }
+        ]
+      },
+      {
+        "id": "fort_donelson",
+        "name": "Fort Donelson and Dover",
+        "observations": 23,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_northeast"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "augusta"
+          }
+        ]
+      },
+      {
+        "id": "fort_henry",
+        "name": "Fort Henry",
+        "observations": 91,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_valley_ozarks"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "bowling_green"
+          }
+        ]
+      },
+      {
+        "id": "fort_monroe",
+        "name": "Fort Monroe",
+        "observations": 28,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "sc_upstate_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "northern_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_northeast"
+          }
+        ]
+      },
+      {
+        "id": "fort_pickens",
+        "name": "Fort Pickens",
+        "observations": 15,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_northeast"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "atlanta"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "augusta"
+          }
+        ]
+      },
+      {
+        "id": "fort_sumter",
+        "name": "Fort Sumter",
+        "observations": 16,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tn_holston"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tn_plateau"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fort_pickens"
+          }
+        ]
+      },
+      {
+        "id": "forts_jackson_st_philip",
+        "name": "Forts Jackson and St. Philip",
+        "observations": 8,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fl_peninsula_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "houston"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tx_east"
+          }
+        ]
+      },
+      {
+        "id": "ga_chattahoochee",
+        "name": "Columbus (Georgia)",
+        "observations": 4,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "sc_upstate_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "augusta"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "lowcountry"
+          }
+        ]
+      },
+      {
+        "id": "ga_coast",
+        "name": "Georgia Coast",
+        "observations": 7,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "charleston"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fort_sumter"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "georgetown_pee_dee"
+          }
+        ]
+      },
+      {
+        "id": "ga_mountains",
+        "name": "North Georgia Mountains",
+        "observations": 10,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "al_valley_east"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "montgomery"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "murfreesboro"
+          }
+        ]
+      },
+      {
+        "id": "ga_south",
+        "name": "Thomasville and the Wiregrass",
+        "observations": 2,
+        "examples": [
+          {
+            "size": {
+              "width": 3440,
+              "height": 1440
+            },
+            "look": "B",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 3440,
+              "height": 1440
+            },
+            "look": "0",
+            "focus": "fit"
+          }
+        ]
+      },
+      {
+        "id": "galveston",
+        "name": "Galveston",
+        "observations": 2,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tx_north_central"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ms_central_north"
+          }
+        ]
+      },
+      {
+        "id": "grafton",
+        "name": "Grafton and Fairmont",
+        "observations": 65,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "northern_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southern_maryland"
+          }
+        ]
+      },
+      {
+        "id": "harpers_ferry",
+        "name": "Harpers Ferry",
+        "observations": 7,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "indiana_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tn_plateau"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ky_central_south"
+          }
+        ]
+      },
+      {
+        "id": "illinois_south",
+        "name": "Southern Illinois",
+        "observations": 55,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_valley_ozarks"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "bowling_green"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "cairo"
+          }
+        ]
+      },
+      {
+        "id": "indiana_north",
+        "name": "Central and Northern Indiana",
+        "observations": 1,
+        "examples": [
+          {
+            "size": {
+              "width": 3440,
+              "height": 1440
+            },
+            "look": "A",
+            "focus": "fit"
+          }
+        ]
+      },
+      {
+        "id": "island_no_10",
+        "name": "Island No. 10",
+        "observations": 31,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "sc_upstate_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_northeast"
+          }
+        ]
+      },
+      {
+        "id": "kansas_west",
+        "name": "Western Kansas",
+        "observations": 4,
+        "examples": [
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "B",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "C",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "0",
+            "focus": "fit"
+          }
+        ]
+      },
+      {
+        "id": "knoxville",
+        "name": "Knoxville",
+        "observations": 22,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "cairo"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "mo_southeast"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "cincinnati"
+          }
+        ]
+      },
+      {
+        "id": "ky_central_south",
+        "name": "Danville and Perryville",
+        "observations": 5,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_northeast"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "columbia_sc"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tn_west_north"
+          }
+        ]
+      },
+      {
+        "id": "ky_lake_cumberland",
+        "name": "Somerset and Columbia",
+        "observations": 6,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "rockbridge_highlands"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_mountains"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ohio_southwest"
+          }
+        ]
+      },
+      {
+        "id": "ky_north",
+        "name": "Covington and Maysville",
+        "observations": 3,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "nashville"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ky_pennyrile"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "illinois_south"
+          }
+        ]
+      },
+      {
+        "id": "ky_upper_cumberland",
+        "name": "London and Barbourville",
+        "observations": 2,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "sc_upstate_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "nashville"
+          }
+        ]
+      },
+      {
+        "id": "ky_west_coal",
+        "name": "Henderson and Owensboro",
+        "observations": 9,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "chattanooga"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "it_cherokee"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "cincinnati"
+          }
+        ]
+      },
+      {
+        "id": "louisville",
+        "name": "Louisville",
+        "observations": 17,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_valley_ozarks"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "illinois_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "pennsylvania_north"
+          }
+        ]
+      },
+      {
+        "id": "lynchburg",
+        "name": "Lynchburg",
+        "observations": 58,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "northern_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_northeast"
+          }
+        ]
+      },
+      {
+        "id": "manassas",
+        "name": "Manassas Junction",
+        "observations": 65,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "albemarle_pamlico"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "northern_virginia"
+          }
+        ]
+      },
+      {
+        "id": "memphis",
+        "name": "Memphis",
+        "observations": 17,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "sc_upstate_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_southwest"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_northeast"
+          }
+        ]
+      },
+      {
+        "id": "michigan_wisconsin",
+        "name": "Michigan and Wisconsin",
+        "observations": 1,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fit"
+          }
+        ]
+      },
+      {
+        "id": "minnesota",
+        "name": "Minnesota",
+        "observations": 4,
+        "examples": [
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "B",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "C",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "0",
+            "focus": "fit"
+          }
+        ]
+      },
+      {
+        "id": "mo_northeast",
+        "name": "Hannibal and Macon",
+        "observations": 9,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "indiana_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ky_green_river"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fort_donelson"
+          }
+        ]
+      },
+      {
+        "id": "mo_southwest",
+        "name": "Neosho and Cassville",
+        "observations": 23,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_valley_ozarks"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "it_cherokee"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "it_chickasaw"
+          }
+        ]
+      },
+      {
+        "id": "mobile",
+        "name": "Mobile",
+        "observations": 10,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fl_peninsula_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "al_valley_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ms_central_north"
+          }
+        ]
+      },
+      {
+        "id": "ms_central_north",
+        "name": "Grenada and Canton",
+        "observations": 10,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "baton_rouge"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_louisiana"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "al_valley_west"
+          }
+        ]
+      },
+      {
+        "id": "ms_northeast",
+        "name": "Tupelo and Columbus",
+        "observations": 8,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tn_holston"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "columbus_ky"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tn_plateau"
+          }
+        ]
+      },
+      {
+        "id": "ms_south",
+        "name": "Piney Woods and the Gulf Coast",
+        "observations": 2,
+        "examples": [
+          {
+            "size": {
+              "width": 3440,
+              "height": 1440
+            },
+            "look": "B",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 3440,
+              "height": 1440
+            },
+            "look": "0",
+            "focus": "fit"
+          }
+        ]
+      },
+      {
+        "id": "ms_southwest",
+        "name": "Natchez and Grand Gulf",
+        "observations": 1,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "la_river_parishes"
+          }
+        ]
+      },
+      {
+        "id": "nashville",
+        "name": "Nashville",
+        "observations": 9,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_south"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "georgetown_pee_dee"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "montgomery"
+          }
+        ]
+      },
+      {
+        "id": "nc_coastal_plain",
+        "name": "Goldsboro and Weldon",
+        "observations": 1,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "savannah"
+          }
+        ]
+      },
+      {
+        "id": "nc_mountains",
+        "name": "North Carolina mountains",
+        "observations": 8,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "charlottesville"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "culpeper_orange"
+          }
+        ]
+      },
+      {
+        "id": "nc_sandhills",
+        "name": "Sandhills",
+        "observations": 47,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "sc_upstate_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "albemarle_pamlico"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_northeast"
+          }
+        ]
+      },
+      {
+        "id": "new_bern",
+        "name": "New Bern and Fort Macon",
+        "observations": 9,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "albemarle_pamlico"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "columbia_sc"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "cape_fear"
+          }
+        ]
+      },
+      {
+        "id": "new_jersey",
+        "name": "New Jersey",
+        "observations": 41,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "northern_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southern_maryland"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "baltimore"
+          }
+        ]
+      },
+      {
+        "id": "new_madrid",
+        "name": "New Madrid",
+        "observations": 93,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_valley_ozarks"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_northeast"
+          }
+        ]
+      },
+      {
+        "id": "new_orleans",
+        "name": "New Orleans",
+        "observations": 10,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tx_brazos"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "la_river_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "north_louisiana"
+          }
+        ]
+      },
+      {
+        "id": "new_york",
+        "name": "New York",
+        "observations": 5,
+        "examples": [
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "A",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "B",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "C",
+            "focus": "fit"
+          }
+        ]
+      },
+      {
+        "id": "norfolk",
+        "name": "Norfolk and Gosport",
+        "observations": 11,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "sc_upstate_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "baltimore_county"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "eastern_kentucky"
+          }
+        ]
+      },
+      {
+        "id": "north_louisiana",
+        "name": "Monroe and the north Louisiana hills",
+        "observations": 3,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tx_southeast"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tx_east"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "north_louisiana"
+          }
+        ]
+      },
+      {
+        "id": "northeast_arkansas",
+        "name": "Northeast Arkansas",
+        "observations": 8,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "B",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "0",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 3440,
+              "height": 1440
+            },
+            "look": "B",
+            "focus": "fit"
+          }
+        ]
+      },
+      {
+        "id": "northeast_florida",
+        "name": "Jacksonville and Fernandina",
+        "observations": 3,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fl_peninsula_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "northeast_florida"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fl_peninsula_south"
+          }
+        ]
+      },
+      {
+        "id": "ohio_north",
+        "name": "Central and Northern Ohio",
+        "observations": 1,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "illinois_south"
+          }
+        ]
+      },
+      {
+        "id": "ohio_southeast",
+        "name": "Southeastern Ohio",
+        "observations": 8,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "baltimore"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "delaware"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "eastern_shore"
+          }
+        ]
+      },
+      {
+        "id": "ohio_southwest",
+        "name": "Southwestern Ohio",
+        "observations": 1,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "indiana_south"
+          }
+        ]
+      },
+      {
+        "id": "paducah",
+        "name": "Paducah",
+        "observations": 11,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_northeast"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "atlanta"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "illinois_north"
+          }
+        ]
+      },
+      {
+        "id": "parkersburg",
+        "name": "Parkersburg",
+        "observations": 5,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "clarksville"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "nc_foothills"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fort_donelson"
+          }
+        ]
+      },
+      {
+        "id": "pennsylvania_north",
+        "name": "Central and Northern Pennsylvania",
+        "observations": 7,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "B",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "0",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "northern_virginia"
+          }
+        ]
+      },
+      {
+        "id": "pensacola",
+        "name": "Pensacola",
+        "observations": 21,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fl_peninsula_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_northeast"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "augusta"
+          }
+        ]
+      },
+      {
+        "id": "petersburg",
+        "name": "Petersburg",
+        "observations": 22,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "atlanta"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "baltimore"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ohio_north"
+          }
+        ]
+      },
+      {
+        "id": "pittsburgh",
+        "name": "Pittsburgh",
+        "observations": 1,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "indiana_north"
+          }
+        ]
+      },
+      {
+        "id": "port_hudson",
+        "name": "Port Hudson",
+        "observations": 15,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_south"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "al_valley_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_atlanta_east"
+          }
+        ]
+      },
+      {
+        "id": "raleigh",
+        "name": "Raleigh",
+        "observations": 2,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "potomac_highlands"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ky_lake_cumberland"
+          }
+        ]
+      },
+      {
+        "id": "red_river_lower",
+        "name": "Alexandria and the lower Red",
+        "observations": 24,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "red_river_lower"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "baton_rouge"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_louisiana"
+          }
+        ]
+      },
+      {
+        "id": "richmond",
+        "name": "Richmond",
+        "observations": 14,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ohio_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "pennsylvania_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "chattanooga"
+          }
+        ]
+      },
+      {
+        "id": "rolla",
+        "name": "Rolla",
+        "observations": 3,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tn_plateau"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_dalton"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ky_lake_cumberland"
+          }
+        ]
+      },
+      {
+        "id": "savannah",
+        "name": "Savannah",
+        "observations": 9,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "sc_upstate_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tn_cleveland"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "corinth"
+          }
+        ]
+      },
+      {
+        "id": "sc_upstate_east",
+        "name": "Spartanburg and York",
+        "observations": 14,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "sc_upstate_west"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "columbus_ky"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "al_valley_west"
+          }
+        ]
+      },
+      {
+        "id": "ship_island",
+        "name": "Ship Island",
+        "observations": 24,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "fl_peninsula_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_northeast"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "atlanta"
+          }
+        ]
+      },
+      {
+        "id": "southwest_louisiana",
+        "name": "Bayou Teche and Opelousas",
+        "observations": 3,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "B",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "C",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "0",
+            "focus": "fit"
+          }
+        ]
+      },
+      {
+        "id": "southwest_virginia",
+        "name": "Abingdon and Saltville",
+        "observations": 6,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "danville"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "nc_foothills"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "harpers_ferry"
+          }
+        ]
+      },
+      {
+        "id": "springfield_mo",
+        "name": "Springfield (Missouri)",
+        "observations": 13,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "bowling_green"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_south"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "indiana_north"
+          }
+        ]
+      },
+      {
+        "id": "st_louis",
+        "name": "St. Louis",
+        "observations": 11,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "chattanooga"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "it_choctaw"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tn_cleveland"
+          }
+        ]
+      },
+      {
+        "id": "tn_cleveland",
+        "name": "Cleveland and Athens",
+        "observations": 1,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "new_madrid"
+          }
+        ]
+      },
+      {
+        "id": "tn_holston",
+        "name": "Clinch and Holston",
+        "observations": 55,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "northern_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southern_maryland"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "atlanta"
+          }
+        ]
+      },
+      {
+        "id": "tn_plateau",
+        "name": "Cumberland Plateau",
+        "observations": 5,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "atlanta"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "jackson_ms"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ms_east"
+          }
+        ]
+      },
+      {
+        "id": "tn_southwest",
+        "name": "Grand Junction and Pittsburg Landing",
+        "observations": 8,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "bowling_green"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ky_green_river"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tn_west_north"
+          }
+        ]
+      },
+      {
+        "id": "tn_west_central",
+        "name": "Jackson and Paris",
+        "observations": 3,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ky_central_south"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "eastern_kentucky"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tn_west_north"
+          }
+        ]
+      },
+      {
+        "id": "tx_brazos",
+        "name": "Brazos Valley",
+        "observations": 4,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "B",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "C",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "0",
+            "focus": "fit"
+          }
+        ]
+      },
+      {
+        "id": "tx_east",
+        "name": "Marshall and Tyler",
+        "observations": 12,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "it_cherokee"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "it_choctaw"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "corinth"
+          }
+        ]
+      },
+      {
+        "id": "tx_east_central",
+        "name": "Nacogdoches and Huntsville",
+        "observations": 4,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ms_south"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ship_island"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "al_west"
+          }
+        ]
+      },
+      {
+        "id": "tx_north_central",
+        "name": "Dallas and Waco",
+        "observations": 12,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tx_southeast"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "tx_brazos"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_south"
+          }
+        ]
+      },
+      {
+        "id": "tx_northeast",
+        "name": "Northeast Texas",
+        "observations": 7,
+        "examples": [
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "B",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 800,
+              "height": 600
+            },
+            "look": "0",
+            "focus": "fit"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_valley_ozarks"
+          }
+        ]
+      },
+      {
+        "id": "tx_san_antonio_austin",
+        "name": "San Antonio and Austin",
+        "observations": 1,
+        "examples": [
+          {
+            "size": {
+              "width": 3440,
+              "height": 1440
+            },
+            "look": "A",
+            "focus": "fit"
+          }
+        ]
+      },
+      {
+        "id": "vicksburg",
+        "name": "Vicksburg",
+        "observations": 21,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_southwest"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ar_valley_ozarks"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "it_cherokee"
+          }
+        ]
+      },
+      {
+        "id": "washington",
+        "name": "Washington",
+        "observations": 5,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "pennsylvania_north"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "cincinnati"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "cumberland_gap"
+          }
+        ]
+      },
+      {
+        "id": "wilmington",
+        "name": "Wilmington and the Cape Fear",
+        "observations": 16,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "southwest_virginia"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_southwest"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "charlottesville"
+          }
+        ]
+      },
+      {
+        "id": "yazoo_delta",
+        "name": "Yazoo Delta",
+        "observations": 23,
+        "examples": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "ga_southwest"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "atlanta"
+          },
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "look": "A",
+            "focus": "chattanooga"
+          }
+        ]
+      }
+    ]
+  },
+  "after": {
+    "views": 231,
+    "focusedRegions": 219,
+    "renderedRegionIds": 130,
+    "labelObservations": 4801,
+    "misplacedLabels": [],
+    "sixNamedExamplesRendered": true
+  },
+  "rawEvidence": {
+    "before-full-label-audit.json": "4037f11e654f6e8ad29f81f4d3c2a309085afe1f097d96c1c4ec47b2d7be2a05",
+    "after-label-audit.json": "71972729505dd3aad2737b889ba822a2d2e63a79a8352c269e462557a25f919b",
+    "data-audit.json": "531834945a18e325c119a4e1b01a570349249d66c8e70bd27127e27d62bd435b",
+    "final-inventory.json": "ac6aff6b01b70530c70690d27a4a2acada3f25d8776d319cfa19944df54fb451"
+  }
+}
