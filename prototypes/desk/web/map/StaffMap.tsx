@@ -73,7 +73,7 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
   const host=useRef<HTMLDivElement>(null),engine=useRef<StaffRenderer|null>(null);
   const twin=useRef<HTMLDivElement>(null),previousText=useRef(false);
   const {name:t,text:display}=presenter(strings);
-  const dateOf=(day:number)=>reportDate(request.requestDay,date,day);
+  const dateOf=(day:number)=>reportDate(request.view.day,date,day);
   const describeControl=(region:string)=>claimWords(t(region,'region'),(comparisonControl?.controlBeliefs??request.view.controlBeliefs)?.[region as keyof typeof request.view.controlBeliefs],t,dateOf);
   const model=useMemo(()=>{
     if(!geometry)return null;const result=buildMapModel(request,geometry);
@@ -211,7 +211,7 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
 
 function MapFallback({request,date,strings}:{request:SeatRequest;date:string;strings:Readonly<Record<string,string>>}) {
   const {name:t,text:display}=presenter(strings);
-  return <><ul>{request.view.reports.map(r=><li key={r.id}>{t(r.author,'person')}, {reportDate(request.requestDay,date,r.day)}: {[...reportControlWords(r,t),...r.claims.filter(c=>c.kind!=='control').map(c=>`${c.kind==='enemy-strength'&&c.value===0?S.noEnemySeen:S.claims[c.kind]??display(c.kind)}${c.region?` at ${t(c.region,'region')}`:''}${c.value?`: ${display(String(c.value))}`:''}`)].join('; ')}</li>)}</ul>{request.menu.menuKind==='principal'&&request.menu.reviews.map(r=><section key={r.post}><h3>{t(r.holder,'person')}</h3>{r.plan.axes.map(a=><p key={a.name}>{display(a.name)}: {a.regions.map(id=>t(id,'region')).join(' → ')}</p>)}</section>)}</>;
+  return <><ul>{request.view.reports.map(r=><li key={r.id}>{t(r.author,'person')}, {reportDate(request.view.day,date,r.day)}: {[...reportControlWords(r,t),...r.claims.filter(c=>c.kind!=='control').map(c=>`${c.kind==='enemy-strength'&&c.value===0?S.noEnemySeen:S.claims[c.kind]??display(c.kind)}${c.region?` at ${t(c.region,'region')}`:''}${c.value?`: ${display(String(c.value))}`:''}`)].join('; ')}</li>)}</ul>{request.menu.menuKind==='principal'&&request.menu.reviews.map(r=><section key={r.post}><h3>{t(r.holder,'person')}</h3>{r.plan.axes.map(a=><p key={a.name}>{display(a.name)}: {a.regions.map(id=>t(id,'region')).join(' → ')}</p>)}</section>)}</>;
 }
 
 export function MapReview({destination="",data,execute,busy,textEdit,table=false,reviewOpen=true,mapProps={}}:{destination?:string;data:DeskSnapshot;execute:(line:string)=>Promise<DeskReply|undefined>;busy:boolean;textEdit?:(line:string)=>void;table?:boolean;reviewOpen?:boolean;mapProps?:TableMapProps}) {
@@ -266,7 +266,7 @@ export function MapReview({destination="",data,execute,busy,textEdit,table=false
   return <div className={`plan-map-layout ${review?'has-plan':'map-only'} ${table?'table-map-layout':''}`}>
     {review&&<aside className="map-plan-sheet">
       {reviews.length>1&&<label>{M.plan}<select aria-label={M.plan} value={review?.post??''} onChange={e=>{setPost(e.target.value);setAxis('');}}>{reviews.map(r=><option key={r.post} value={r.post}>{t(r.holder,'person')}</option>)}</select></label>}
-      {review?<><div className="plan-holder"><span className="likeness">{S.noLikeness}</span><div><h3>{t(review.holder,'person')}</h3><p className="plan-byline">{t(review.post,'post')}<br/>{paper&&reportDate(data.morning.requestDay,data.date,paper.day)}</p></div></div><p>{display(review.plan.method)} / {display(review.plan.variant)}</p>
+      {review?<><div className="plan-holder"><span className="likeness">{S.noLikeness}</span><div><h3>{t(review.holder,'person')}</h3><p className="plan-byline">{t(review.post,'post')}<br/>{paper&&reportDate(data.morning.view.day,data.date,paper.day)}</p></div></div><p>{display(review.plan.method)} / {display(review.plan.variant)}</p>
         <p className="approval-meaning">{M.approvalMeaning}</p><p className="map-handle-note">{M.approvalAwait} {M.approvalDispatch} {M.approvalReply}</p>
         {recipient&&<fieldset disabled={busy||checking}><legend>{M.reviewDelivery}</legend><label>{M.deliveryRoute}<select aria-label={M.deliveryRoute} value={route} onChange={e=>setRoute(e.target.value)}><option value="">{M.usualRoute}</option>{recipient.routes.map(r=><option key={r.route} value={r.route}>{r.route}: {M.deliveryDays(r.typicalDays,r.price)}</option>)}</select></label>
          {recipient.relays.length>0&&<><p>{S.through}: {recipient.relays.map(p=>t(p,'post')).join(' → ')}</p><label><input type="checkbox" checked={bypass} onChange={e=>setBypass(e.target.checked)}/>{M.bypass}</label><p className="map-handle-note">{M.bypassRisk}</p></>}

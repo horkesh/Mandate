@@ -25,7 +25,8 @@ function makePresenter(strings: Readonly<Record<string, string>>) {
   // The console's prose carries identifiers too. Preserve its wording around
   // those tokens; grammar keywords are desk vocabulary rather than pack names.
   const tokens = /\b[a-z0-9]+(?:[_.][a-z0-9]+)*\b/g;
-  const text = (value: string): string => value.replace(/\benemy(?:-strength)?\s+0\s+at\b/gi, 'no enemy seen at').replace(tokens, token => {
+  const text = (value: string): string => value.replace(/\b1 regiments\b/g,'1 regiment').replace(/\benemy(?:-strength)?\s+0\s+at\b/gi, 'no enemy seen at').replace(tokens, token => {
+    if (Object.hasOwn(S.reasonLabels, token)) return S.reasonLabels[token as keyof typeof S.reasonLabels];
     if (Object.hasOwn(S.commandTerms, token)) return S.commandTerms[token]!;
     if (names.has(token) || Object.hasOwn(strings, token)) return name(token);
     return /_/.test(token) ? name(token) : token;

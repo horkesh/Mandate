@@ -6,6 +6,7 @@ import { dispatchLog } from '../../../packages/cli/src/desk/dispatches.ts';
 import type { SeatCommand } from '@mandate/kernel/seat-api';
 import type { DeskReply, DeskSnapshot, DeskTurn } from '../web/adapter.ts';
 import type {MapPlan} from '../web/map/model.ts';
+import {slipText} from '../web/business.ts';
 
 export class DeskAdapter {
   private queue: { line: string; command: SeatCommand }[] = [];
@@ -36,7 +37,7 @@ export class DeskAdapter {
     // Deliberate allow-list. Never spread ConsoleGame or return its log/state/world.
     return structuredClone({
       pack: this.game.pack, morning, date: this.game.dateOfRequest(morning.requestDay),
-      strings: this.game.strings, queue: this.queue.map(q => ({ line: q.line, text: commandText(q.command, key => this.game.strings[key] ?? key) })),
+      strings: this.game.strings, queue: this.queue.map(q => ({ line: q.line, text: slipText(morning,this.game.strings,q.line,commandText(q.command, key => this.game.strings[key] ?? key)) })),
       history: this.history, paperText, help: HELP, closed: this.closed,approvedPlans:[...this.approvedPlans.values()],
     });
   }

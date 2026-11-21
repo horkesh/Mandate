@@ -116,9 +116,9 @@ export function regionStep(regions: readonly MapRegion[], current: string, direc
   return ids[Math.max(0, Math.min(ids.length - 1, i + direction))] ?? current;
 }
 
-export function reportDate(requestDay: number, isoDate: string, day: number): string {
+export function reportDate(completedDay: number, isoDate: string, day: number): string {
   const d = new Date(isoDate + 'T12:00:00Z');
   if (!Number.isFinite(d.valueOf())) return String(day);
-  d.setUTCDate(d.getUTCDate() + day - requestDay);
+  d.setUTCDate(d.getUTCDate() + day - completedDay);
   return d.toISOString().slice(0,10);
 }

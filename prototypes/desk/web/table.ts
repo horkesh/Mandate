@@ -4,14 +4,14 @@ import type {DeskDay,DeskSnapshot,DeskTurn} from './adapter.ts';
 export function stopEntries(turn:DeskTurn):{reason:string;papers:ReportView[]}[]{
  if(turn.stopped==='week')return [{reason:'week',papers:[]}];
  const reports=turn.days.at(-1)?.reports??[];
- return turn.stopped.map(reason=>({reason,papers:reports.filter(r=>{
+ return [...new Set(turn.stopped)].map(reason=>({reason,papers:reports.filter(r=>{
   const has=(...kinds:string[])=>r.claims.some(c=>kinds.includes(c.kind));
   switch(reason){
    case 'battle-report':return has('battle-phase','battle-result','casualties','own-losses');
-   case 'objection':return has('order-objected')||r.claims.some(c=>['plan-answer','verb-answered'].includes(c.kind)&&/object|refus/.test(c.token??''));
+   case 'objection':return has('order-objected')||r.claims.some(c=>['plan-answer','verb-answered','call-answer','support-answer'].includes(c.kind)&&/object|refus/.test(c.token??''));
    case 'plan-review':return has('plan-submitted');
    case 'pocket-closed':return has('pocket');
-   case 'objective-reached':return has('arrived','goal-status');
+   case 'objective-reached':return has('arrived');
    case 'order-conflict':return has('order-returned','order-objected');
    default:return reason.startsWith('situation-')&&r.subjectKind==='situation';
   }
@@ -35,7 +35,7 @@ export function playbackSnapshot(before:DeskSnapshot,after:DeskSnapshot,frames:D
  const claimedFronts=[...(before.morning.view.claimedFronts??[]).filter(f=>same(f.own,before.morning.view.controlBeliefs)&&same(f.faces,before.morning.view.controlBeliefs)),...(after.morning.view.claimedFronts??[]).filter(f=>same(f.own,after.morning.view.controlBeliefs)&&same(f.faces,after.morning.view.controlBeliefs))];
  const uniqueFronts=[...new Map(claimedFronts.map(f=>[`${f.faction}:${f.edge}`,f])).values()];
  const update=[...delivered].reverse().map(r=>after.history.map(t=>t.controlUpdates?.[r.id]).find(Boolean)).find(Boolean);
- const view={...before.morning.view,reports,
+ const view={...before.morning.view,day:frames[index]?.day.day??before.morning.view.day,reports,
   controlBeliefs:update?.controlBeliefs??controlBeliefs,claimedFronts:update?.claimedFronts??uniqueFronts,
   enemyBeliefs:{...before.morning.view.enemyBeliefs,...Object.fromEntries(Object.entries(after.morning.view.enemyBeliefs).filter(([,b])=>ids.has(b.source)))},
   worksBeliefs:{...before.morning.view.worksBeliefs,...Object.fromEntries(Object.entries(after.morning.view.worksBeliefs).filter(([,b])=>ids.has(b.source)))}};

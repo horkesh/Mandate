@@ -1,8 +1,13 @@
 import type {DeskSnapshot} from './adapter.ts';
+export function availableCalls(data:DeskSnapshot){
+ const menu=data.morning.menu;
+ return menu.menuKind==='principal'?menu.doctrine.calls.filter(c=>c.id&&!c.issued&&c.day<=data.morning.requestDay&&(menu.atWarSince!==null||c.atPeace===true)&&menu.raising.some(p=>p.post===c.post)):[];
+}
 /** Calendar arithmetic from the public morning, with no World or hidden clock. */
 export function deskDate(data:DeskSnapshot,day:number):string {
  const date=new Date(`${data.date}T12:00:00Z`);
- date.setUTCDate(date.getUTCDate()+day-data.morning.requestDay);
+ if(!Number.isFinite(date.valueOf()))return String(day);
+ date.setUTCDate(date.getUTCDate()+day-data.morning.view.day);
  return date.toISOString().slice(0,10);
 }
 /** Own slips prove a dispatch, never delivery or compliance. */

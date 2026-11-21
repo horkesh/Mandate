@@ -1,13 +1,13 @@
 import {useState} from 'react';
 import type {PrincipalMenu,ReportView} from '@mandate/kernel/seat-api';
 import type {DeskSnapshot,DeskTurn} from './adapter.ts';
-import {commandPrice,ledgerRows,priceLabel,received,outOfAttention} from './business.ts';
+import {commandPrice,ledgerRows,priceLabel,received,outOfAttention,refusalText,slipText,operationRecords} from './business.ts';
 import type {Price} from './business.ts';
 import {presenter} from './presentation.ts';
 import {stopEntries} from './table.ts';
 import {S} from './strings.ts';
 import './business.css';
-import {deskDate,ownGoalStatus} from './plan-business.ts';
+import {deskDate,ownGoalStatus,availableCalls} from './plan-business.ts';
 
 export function AttentionTokens({left,price=null}:{left:number|null;price?:Price|null}){
  return <span className="attention-budget" data-testid="attention-budget">
@@ -43,6 +43,7 @@ export function StopSlip({turn,strings,openPaper,onDocket,onPlans,onClose,onHist
  const {name}=presenter(strings);
  return <section className="business-stop" data-testid="stop-slip" aria-label={S.stopped}>
   <header><h3>{S.stopped}</h3><time>{turn.days.at(-1)?.date??S.stopNoDay}</time></header>
+  {turn.days.flatMap(day=>day.refused.map((r,i)=><p className="refusal" key={`${day.day}:${i}`}>{S.refused}: {presenter(strings).text(turn.submitted?.find((_,index)=>index===r.commandIndex)?.text??S.orders)}. {refusalText(r.reason,strings)}</p>))}
   <ul>{stopEntries(turn).map(({reason,papers})=><li key={reason}>
    <p>{S.stopLabels[reason]??S.stopUnknown}</p>
    {papers.length?<ul>{papers.map(r=><li key={r.id}><button onClick={()=>openPaper(r)}>{S.stopPaper}: {name(r.author,'person')} — {S.genres[r.type]??S.paper}</button></li>)}</ul>:<small>{S.stopNoPaper}</small>}
@@ -57,7 +58,7 @@ export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,se
  const lastTurn=data.history.at(-1),{text}=presenter(data.strings),menu=data.morning.menu;
   const maxDays=data.morning.turnStops?.maxDays??7;
   const [days,setDays]=useState(maxDays);
-  const calls=menu.menuKind==='principal'?menu.doctrine.calls.filter(c=>c.id&&!c.issued&&c.day<=data.morning.requestDay&&(menu.atWarSince!==null||c.atPeace===true)&&menu.raising.some(p=>p.post===c.post)):[];
+  const calls=availableCalls(data);
   const advances=menu.menuKind==='principal'&&menu.atWarSince!==null?menu.doctrine.offensives.filter(o=>o.day<=data.morning.requestDay):[];
   const {name}=presenter(data.strings);
  return <><p className="margin-note">{S.runNote}</p>
@@ -75,7 +76,7 @@ export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,se
   </section>}
   {lastTurn&&<StopSlip turn={lastTurn} strings={data.strings} openPaper={openPaper} onDocket={onDocket} onPlans={onPlans} onHistory={onHistory}/>}
   <h3>{data.queue.length} {S.signedCount}</h3>
-  {data.queue.map((q,i)=><section key={i}><p>{text(q.text)}</p>{menu.menuKind==='principal'&&<PriceNote line={q.line} menu={menu}/>}</section>)}
+  {data.queue.map((q,i)=><section key={i}><p>{text(slipText(data.morning,data.strings,q.line,q.text))}</p>{menu.menuKind==='principal'&&<PriceNote line={q.line} menu={menu}/>}</section>)}
   <label>{S.turnDays}<select disabled={busy} value={days} onChange={e=>setDays(Number(e.target.value))}>{Array.from({length:maxDays},(_,i)=>i+1).map(n=><option key={n} value={n}>{n}</option>)}</select></label><p>{S.turnDaysNote}</p>
   <button data-hotkey="run" data-attention-key="free" className="primary" disabled={busy} onClick={()=>run(days)}>{S.sendRun}</button>
   {calls.length>0&&<section className="scheduled-calls"><h3>{S.callsDue}</h3><p>{S.callsDueNote}</p>{calls.map(c=>{
@@ -88,6 +89,50 @@ export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,se
   })}</section>}
   <section className="stop-policy"><h3>{S.stopPolicy}</h3>{data.morning.turnStops?<><p>{S.stopLimit(data.morning.turnStops.maxDays)}</p><p>{S.stopSettingsNote}</p><fieldset disabled={busy||!setStops}><legend>{S.stopPolicy}</legend>{data.morning.turnStops.points.map(({point,enabled})=><label key={point}><input type="checkbox" checked={enabled} onChange={e=>{const next=data.morning.turnStops!.points.filter(p=>p.point===point?e.target.checked:p.enabled).map(p=>p.point);void setStops?.(next);}}/>{S.stopChoice(S.stopLabels[point]??S.stopUnknown)}</label>)}<button type="button" onClick={()=>void setStops?.(data.morning.turnStops!.points.map(p=>p.point))}>{S.stopAll}</button></fieldset></>:<><p>{S.stopPolicyNote}</p><p className="hand">{S.stopSettingsMissing}</p></>}</section>
  </>;
+}
+
+export function CallsBadge({data}:{data:DeskSnapshot}){
+ const count=availableCalls(data).filter(c=>!data.queue.some(q=>{const words=q.line.trim().split(/\s+/);return words[0]==='call'&&words[1]===c.post&&words.includes(`scheduled=${c.id}`);})).length;
+ return count?<small>{S.callsAvailable(count)}</small>:null;
+}
+export function FirstMorningNote({data}:{data:DeskSnapshot}){
+ return data.history.length===0?<aside className="first-morning-note" data-testid="first-morning-note">{S.firstMorningNote}</aside>:null;
+}
+
+/** The principal's own correspondence, with no access to operation State. */
+export function OperationsSheet({data,openPaper,dateOf=(day)=>deskDate(data,day)}:{data:DeskSnapshot;openPaper:(r:ReportView)=>void;dateOf?:(day:number)=>string}){
+ const records=operationRecords(data),{name,text}=presenter(data.strings),menu=data.morning.menu;
+ function claimWords(r:ReportView){return r.claims.flatMap(c=>{
+  const place=c.region?` — ${name(c.region,'region')}`:'';
+  if(c.kind==='operation')return [(c.token&&S.operationStages[c.token]||text(c.token??S.unknown))+place];
+  if(['order-obeyed','plan-answer','verb-answered','support-answer'].includes(c.kind))return [`${S.progressDeclared}: ${text(c.token??S.unknown)}`];
+  if(c.kind==='call-answer')return [`${S.progressCall}: ${text(c.token??S.unknown)}; ${c.token?.endsWith(':unknown_strength')?S.callUnknownStrength:S.callRegiments(c.value)}`];
+  if(c.kind==='battle-phase')return [`${S.claims[c.kind]}: ${text(c.token??S.unknown)}${place}. ${c.value===1?S.battleReportedWell:S.battleReportedBadly}`];
+  if(c.kind==='battle-result')return [`${S.claims[c.kind]}: ${text(c.token??S.unknown)}${place}${c.confidence>0?`; ${c.value}`:''}`];
+  if(['own-losses','casualties','missing','captured'].includes(c.kind))return [`${S.claims[c.kind]}: ${c.value}${place}`];
+  if(['arrived','position','goal-status','plan-submitted','order-objected'].includes(c.kind))return [`${S.claims[c.kind]??text(c.kind)}${c.kind==='goal-status'?`: ${text(c.token??S.unknown)}`:''}${place}`];
+  return [];
+ });}
+ return <section className="operations-record" data-testid="operations-record"><p>{S.progressNote}</p>{!records.length&&<p>{S.progressNone}</p>}
+  {records.map(record=>{
+   const plan=menu.menuKind==='principal'?menu.reviews.find(r=>r.post===record.post)?.plan:undefined;
+   const supplied=plan??record.plans.at(-1)?.plan;
+   const milestones=record.reports.filter(r=>r.claims.some(c=>!['position','goal-status','enemy-strength','works','control','control-government'].includes(c.kind)));
+   const latestStatus=[...record.reports].reverse().find(r=>r.claims.some(c=>c.kind==='position'||c.kind==='goal-status'));
+   const papers=[...new Map([...milestones,...(latestStatus?[latestStatus]:[])].map(r=>[r.id,r])).values()].sort((a,b)=>b.receivedDay-a.receivedDay||b.day-a.day);
+   return <article className="command-record" key={record.post}><h3>{name(record.post,'post')}</h3>
+    {menu.menuKind==='principal'&&menu.awaiting.includes(record.post as typeof menu.awaiting[number])&&<p>{S.awaiting}</p>}
+    {supplied&&<section className="received-clock"><h4>{S.progressPlanClock}</h4>{supplied.axes.map(a=><p key={a.name}>{text(a.name)}: {S.progressDuration(Math.ceil(a.arrival/1000))}</p>)}<p>{S.progressNoStart}</p><small>{S.progressClockNote}</small></section>}
+    {record.orders.length>0&&<details><summary>{S.progressOwn} ({record.orders.length})</summary><p>{S.ledgerOwnNote}</p><ol>{record.orders.map(o=><li key={o.id}><time>{o.date}</time><p>{text(slipText(data.morning,data.strings,o.line,o.text))}</p>{o.refusal&&<p className="refusal">{refusalText(o.refusal,data.strings)}</p>}</li>)}</ol></details>}
+    <h4>{S.progressPapers}</h4>{!papers.length&&<p>{S.progressNoReplies}</p>}
+    {papers.map(r=><section className="progress-paper" key={r.id}><strong>{name(r.author,'person')}</strong><p>{S.progressAsOf(`${dateOf(r.day)}${r.hour===null?'':`, ${String(r.hour).padStart(2,'0')}:00`}`,dateOf(r.receivedDay))}</p><small>{S.progressAge(Math.max(0,data.morning.view.day-r.day))}</small>
+     {claimWords(r).map((line,i)=><p key={i}>{line}</p>)}{r.claims.some(c=>['order-obeyed','plan-answer','verb-answered','call-answer'].includes(c.kind))&&<small>{S.progressAnswerNote}</small>}
+     {r.advice&&<><p>{S.recommends}: {text(r.advice.recommends)}</p><ul>{r.advice.reasons.map((reason,i)=><li key={i}>{text(reason.kind)}</li>)}</ul></>}
+     <button data-source-paper={r.id} onClick={()=>openPaper(r)}>{S.ledgerTerms}</button>
+    </section>)}
+   </article>;
+  })}
+ </section>;
 }
 const returnTypes=['strength-return','effective-strength','casualty-return','enemy-estimate'];
 const figureKinds=new Set(['present-for-duty','present-and-absent','effective-strength','enemy-strength','own-losses','casualties','missing','captured']);

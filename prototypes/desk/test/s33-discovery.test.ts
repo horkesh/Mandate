@@ -7,7 +7,9 @@ import {TurnSheet} from '../web/DeskViews.tsx';
 const render=(data:any)=>renderToStaticMarkup(createElement(TurnSheet,{data,busy:false,run:()=>{},openPaper:()=>{},onDocket:()=>{},onPlans:()=>{},onHistory:()=>{}}));
 function fixture(){
  const data=new DeskAdapter(new ConsoleGame({pack:'testbed'})).snapshot();
- Object.assign(data.morning,{requestDay:4});data.date='1900-06-05';
+ // S35 separates the request boundary from event days: completed day 3 is
+ // June 4, so the due day-4 proposal is dated June 5.
+ Object.assign(data.morning,{requestDay:4});Object.assign(data.morning.view,{day:3});data.date='1900-06-04';
  if(data.morning.menu.menuKind!=='principal')throw Error('principal');
  const post=data.morning.menu.commandable[0]!.post;
  Object.assign(data.morning.menu,{atWarSince:1});

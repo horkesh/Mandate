@@ -10,7 +10,7 @@ import {commandPrice,outOfAttention} from './business.ts';
 
 type Common={request:SeatRequest;strings:Readonly<Record<string,string>>};
 type PaperOpener={openPaper:(report:ReportView)=>void};
-export function OrgBoard({request,strings,openPost,openPaper,dateOf}:Common&{openPost:(post:string)=>void;openPaper?:(r:ReportView)=>void;dateOf?:(day:number)=>string}) {
+export function OrgBoard({request,strings,openPost,openPaper,dateOf,onPersonnel}:Common&{openPost:(post:string)=>void;openPaper?:(r:ReportView)=>void;dateOf?:(day:number)=>string;onPersonnel?:()=>void}) {
   const {nodes}=buildOrgBoard(request),{name}=presenter(strings);
   const [query,setQuery]=useState(''),[vacant,setVacant]=useState(false);
   const filtering=query.trim()!==''||vacant;
@@ -29,6 +29,7 @@ export function OrgBoard({request,strings,openPost,openPaper,dateOf}:Common&{ope
   }
   const placed=nodes.filter(n=>n.placed&&(n.parent===null||!nodes.some(p=>p.post===n.parent))),unplaced=nodes.filter(n=>!n.placed);
   return <section className="org-board" data-testid="org-board">
+    {onPersonnel&&<button onClick={onPersonnel}>{S.personnelTitle}</button>}
     <AudienceCorrespondence request={request} strings={strings} openPaper={openPaper} openPost={openPost} dateOf={dateOf}/>
     <div className="org-caption"><p>{S.boardNote}</p><small>{S.boardCount(nodes.length)}</small></div>
     <div className="board-search"><label>{S.boardFilter}<input type="search" value={query} onChange={e=>setQuery(e.target.value)}/></label><button aria-pressed={vacant} onClick={()=>setVacant(v=>!v)}>{S.boardVacancies}</button></div>
@@ -36,6 +37,27 @@ export function OrgBoard({request,strings,openPost,openPaper,dateOf}:Common&{ope
     {filtering?<><p>{S.boardMatches(matches.length)}</p>{!matches.length&&<p>{S.boardNoMatches}</p>}<ul className="board-results">{matches.map(n=>branch(n))}</ul></>:<><ul className="org-roots">{placed.map(n=>branch(n))}</ul>
     {unplaced.length>0&&<section className="org-unplaced"><h3>{S.boardUnplaced}</h3><ul>{unplaced.map(n=>branch(n))}</ul></section>}</>}
   </section>;
+}
+
+/** A nomination based on received identities, never the live eligible-candidate catalogue. */
+export function PersonnelSheet({request,strings,order,openPaper,dateOf=(day)=>`${S.day} ${day}`} : Common&PaperOpener&{order:(line:string)=>void;dateOf?:(day:number)=>string}){
+ const {name}=presenter(strings),vacancies=request.view.posts.filter(p=>p.status==='vacant');
+ const people=request.view.people.filter(p=>p.person!==request.view.person);
+ const [post,setPost]=useState(''),[person,setPerson]=useState('');
+ const reports=request.view.reports.filter(r=>r.day<=request.view.day&&r.receivedDay<=request.view.day);
+ const sourced=request.view.posts.flatMap(p=>{const source=reports.find(r=>r.id===p.source);return source?[{post:p,source}]:[];});
+ return <section className="personnel-sheet" data-testid="personnel-sheet"><p>{S.personnelNote}</p><h3>{S.personnelKnownVacancies}</h3>
+  {!vacancies.length?<p>{S.personnelNoVacancies}</p>:<ul>{vacancies.map(p=><li key={p.post}>{name(p.post,'post')}{p.vacantSince!==null&&<small>{S.boardVacantSince(dateOf(p.vacantSince))}</small>}</li>)}</ul>}
+  <form onSubmit={e=>{e.preventDefault();if(vacancies.some(p=>p.post===post)&&people.some(p=>p.person===person))order(`appoint ${post} ${person}`);}}>
+   <label>{S.personnelVacancy}<select required value={post} onChange={e=>setPost(e.target.value)}><option value="">{S.selection}</option>{vacancies.map(p=><option key={p.post} value={p.post}>{name(p.post,'post')}</option>)}</select></label>
+   <label>{S.personnelNominee}<select required value={person} onChange={e=>setPerson(e.target.value)}><option value="">{S.selection}</option>{people.map(p=><option key={p.person} value={p.person}>{name(p.person,'person')}</option>)}</select></label>
+   {!people.length&&<p>{S.personnelNoPeople}</p>}
+   {person&&<p>{request.view.posts.filter(p=>p.holder===person).length?`${S.personnelHolding}: ${request.view.posts.filter(p=>p.holder===person).map(p=>name(p.post,'post')).join(', ')}`:S.personnelNoPost}</p>}
+   <p>{S.personnelNoAssumption}</p><p>{S.personnelEligibility}</p><button disabled={!post||!person}>{S.personnelDraft}</button>
+  </form>
+  <h3>{S.personnelEstablishment}</h3><p>{S.personnelNoEstablishment}</p>
+  {sourced.length>0&&<><h4>{S.personnelChanges}</h4><ul>{sourced.map(({post:p,source:r})=><li key={p.post}><strong>{name(p.post,'post')}</strong><p>{p.holder?name(p.holder,'person'):p.status==='vacant'?S.boardVacant:S.boardUnknown}</p><p>{dateOf(p.asOfDay)}</p><button data-source-paper={r.id} onClick={()=>openPaper(r)}>{name(r.author,'person')}: {S.boardOpenPaper}</button></li>)}</ul></>}
+ </section>;
 }
 
 function Source({report,strings,openPaper}:PaperOpener&{report:ReportView;strings:Common['strings']}) {
