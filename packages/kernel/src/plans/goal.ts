@@ -100,18 +100,29 @@ export interface EditSpec {
   readonly editConcentration: number | null;
 }
 
+export interface EditProblem {
+  readonly kind: 'bad-kind' | 'needs-axis' | 'extra-axis' | 'needs-region' | 'extra-region'
+    | 'needs-waypoints' | 'extra-waypoints' | 'needs-days' | 'extra-days' | 'invalid-days';
+  readonly edit: EditKind;
+}
+
 /** Problems with an edit's shape: the fields its kind needs, and no others. */
-export function editProblems(e: EditSpec): string[] {
-  const problems: string[] = [];
-  if (!(EDIT_KINDS as readonly string[]).includes(e.editKind)) return [`edit kind must be one of ${EDIT_KINDS.join(', ')}`];
+export function editIssues(e: EditSpec): EditProblem[] {
+  const problems: EditProblem[] = [];
+  const edit = e.editKind;
+  if (!(EDIT_KINDS as readonly string[]).includes(edit)) return [{ kind: 'bad-kind', edit }];
   const needsAxis = e.editKind !== 'add_axis';
-  if (needsAxis !== (e.editAxis !== null)) problems.push(needsAxis ? `a ${e.editKind} edit names its axis` : 'adding an axis names no existing axis');
+  if (needsAxis !== (e.editAxis !== null)) problems.push({ kind: needsAxis ? 'needs-axis' : 'extra-axis', edit });
   const needsRegion = e.editKind === 'objective' || e.editKind === 'add_axis';
-  if (needsRegion !== (e.editRegion !== null)) problems.push(needsRegion ? `a ${e.editKind} edit names a region` : `a ${e.editKind} edit names no region`);
-  if ((e.editKind === 'waypoints') !== e.editVia.length > 0) problems.push(e.editKind === 'waypoints' ? 'a waypoints edit names at least one waypoint' : `a ${e.editKind} edit names no waypoints`);
+  if (needsRegion !== (e.editRegion !== null)) problems.push({ kind: needsRegion ? 'needs-region' : 'extra-region', edit });
+  if ((e.editKind === 'waypoints') !== (e.editVia.length > 0)) {
+    problems.push({ kind: e.editKind === 'waypoints' ? 'needs-waypoints' : 'extra-waypoints', edit });
+  }
   const needsDays = e.editKind === 'timing';
-  if (needsDays !== (e.editConcentration !== null)) problems.push(needsDays ? 'a timing edit names the days he may concentrate' : `a ${e.editKind} edit names no days`);
-  if (e.editConcentration !== null && (!Number.isSafeInteger(e.editConcentration) || e.editConcentration < 0)) problems.push('concentration days must be a whole number, at least 0');
+  if (needsDays !== (e.editConcentration !== null)) problems.push({ kind: needsDays ? 'needs-days' : 'extra-days', edit });
+  if (e.editConcentration !== null && (!Number.isSafeInteger(e.editConcentration) || e.editConcentration < 0)) {
+    problems.push({ kind: 'invalid-days', edit });
+  }
   return problems;
 }
 

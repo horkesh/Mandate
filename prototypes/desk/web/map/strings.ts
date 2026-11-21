@@ -24,6 +24,7 @@ export const M = {
   own:'Your marks', asks:'Support requested', askedOf:'Asked of',
   by:'By', written:'Written', source:'Source paper', asOf:'As of',
   report:'Report', headquarters:'Headquarters reported', enemy:'Enemy estimate',
+  claimAt:' at {region}',
   works:'Works reported', situation:'Situation reported', battle:'Battle reported', pocket:'Pocket reported', operation:'Operation reported', goal:'Goal reported',
   noKnowledge:'No located report has reached this map.', noPlan:'No plan waits for review.',
   unplaced:'Reports without a map location', offmap:'Off-map places',

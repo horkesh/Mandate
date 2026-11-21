@@ -94,6 +94,7 @@ export function goalStatus(state: State, post: PostId): { readonly token: string
 
 export function generateReports(ctx: TickContext, state: State): void {
   const { world, day } = ctx;
+  const confidence = world.map.world.rules.reportConfidence;
   const tpl = (type: ReportType, subtype: string | null = null) => templateFor(world.rules.templates, type, subtype);
   const fields = fieldPosts(world, state).filter((id) => world.factionIds.includes(postFaction(world, state, id)!));
   const holderOf = (id: PostId) => state.postStates[id]!.postHolder!;
@@ -121,12 +122,12 @@ export function generateReports(ctx: TickContext, state: State): void {
       const edges = new Set<EdgeId>();
       for (const region of world.watched(hq)) {
         const seen = enemy.get(region) ?? 0;
-        claims.push(claim('enemy-strength', region, Math.trunc((seen * bias) / 1000), null, 700));
+        claims.push(claim('enemy-strength', region, Math.trunc((seen * bias) / 1000), null, confidence.scoutEnemyStrength));
         terms.push(term('observed', seen, { region, post: id }));
         if (bias !== 1000) terms.push(term('intelligence_bias', bias, { person: author, region, post: id }));
         const works = state.regionFortification[region] ?? 0;
         if (works > 0) {
-          claims.push(claim('works', region, works, null, 700));
+          claims.push(claim('works', region, works, null, confidence.scoutWorks));
           terms.push(term('observed', works, { region, post: id, rule: 'works' }));
         }
         for (const e of world.map.edgesAt.get(region) ?? []) if (obstructed.has(e.id)) edges.add(e.id);
@@ -134,7 +135,7 @@ export function generateReports(ctx: TickContext, state: State): void {
       for (const edge of [...edges].sort(strictCompare)) {
         const o = obstructionFor(world.map, index, network, edge, side);
         const by = o?.by === null || o?.by === undefined ? null : (world.map.world.installations.find((i) => i.id === o.by)?.region ?? null);
-        claims.push(claim('obstruction', by, o === null ? 0 : 1, edge, 700));
+        claims.push(claim('obstruction', by, o === null ? 0 : 1, edge, confidence.scoutObstruction));
       }
       sendReport(ctx, state, {
         body: body(author, chief === null ? id : null, day, 'enemy-estimate', null, { kind: 'enemy', id }, claims),
@@ -158,12 +159,12 @@ export function generateReports(ctx: TickContext, state: State): void {
       for (const region of world.watched(hq)) {
         const b = beliefs.get(region);
         if (b === undefined) continue;
-        claims.push(claim('enemy-strength', region, b.value, null, 600));
+        claims.push(claim('enemy-strength', region, b.value, null, confidence.dispatchEnemyStrength));
         terms.push(...b.terms);
       }
       if (status === 'awaiting-strength') {
         // He wants men, so he quotes the smaller "effective" figure (decision 0032).
-        claims.push(claim('effective-strength', null, Math.trunc((strength * world.rules.traits.wantsMenPermille) / 1000), null, 800));
+        claims.push(claim('effective-strength', null, Math.trunc((strength * world.rules.traits.wantsMenPermille) / 1000), null, confidence.dispatchEffectiveStrength));
         terms.push(term('observed', strength, { post: id }), term('wants_men', world.rules.traits.wantsMenPermille, { person: holder.id, post: id }));
       }
       sendReport(ctx, state, {
@@ -183,8 +184,8 @@ export function generateReports(ctx: TickContext, state: State): void {
       const paper = Math.trunc((strength * world.rules.traits.paperPermille) / 1000);
       sendReport(ctx, state, {
         body: body(holderOf(id), id, day, 'strength-return', null, { kind: 'post', id }, [
-          claim('present-for-duty', null, strength, null, 900),
-          claim('present-and-absent', null, paper, null, 900),
+          claim('present-for-duty', null, strength, null, confidence.returnPresentForDuty),
+          claim('present-and-absent', null, paper, null, confidence.returnPaperStrength),
         ]),
         truth: { truthTerms: [term('observed', strength, { post: id }), term('paper_strength', world.rules.traits.paperPermille, { post: id })], truthTrimmed: [] },
         to,
@@ -207,7 +208,7 @@ export function generateReports(ctx: TickContext, state: State): void {
       for (const subject of [...latest.keys()].sort(strictCompare)) {
         const { value } = latest.get(subject)!;
         sendReport(ctx, state, {
-          body: body(holder, id, day, 'informal', 'cabinet-word', { kind: 'post', id: subject }, [claim('present-for-duty', null, value, null, 700)]),
+          body: body(holder, id, day, 'informal', 'cabinet-word', { kind: 'post', id: subject }, [claim('present-for-duty', null, value, null, confidence.cabinetWord)]),
           truth: { truthTerms: [term('reported', value, { person: holder })], truthTrimmed: [] },
           to: principal,
           tag: `word.${subject}`,

@@ -14,12 +14,13 @@ import { commandedBlocks, sideOfPerson } from '../command/command.ts';
 import type { MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
 import { term } from '../knowledge/truth.ts';
 import { believedHolder, vacancyUnreported } from '../seats/believed.ts';
+import { receivedPlanPapers } from '../seats/received.ts';
 import type { ReportBody, ReportClaim } from '../knowledge/report.ts';
 import type { EditTerms, GoCommand, GoalTerms, OrderCommand, ReviewCommand } from '../log/commands.ts';
 import type { Hop, OrderBody, TransitMessage } from '../messages/transit.ts';
 import { mintMessageId } from '../messages/transit.ts';
 import { ORDER_ROUTES } from '../messages/latency.ts';
-import { editProblems, goalKindOf, goalProblems, sameGoal, type EditSpec, type GoalKind, type PlanGoal } from '../plans/goal.ts';
+import { editIssues, goalKindOf, goalProblems, sameGoal, type EditSpec, type GoalKind, type PlanGoal } from '../plans/goal.ts';
 import { approve, planOf, receiveCounter, release, sendBack, setGoal, type PlanRecord, type NoteReading } from '../plans/plans.ts';
 import { copyNote, noteProblems } from '../plans/notes.ts';
 import type { State } from '../root-state.ts';
@@ -83,10 +84,11 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   if (side === null || !world.factionIds.includes(side) || world.faction(side).principal !== issuer.id) return 'not_a_principal';
   if (state.postStates[cmd.to] === undefined) return 'unknown_post';
   const target = state.postStates[cmd.to]!;
+  const paper = cmd.cmd === 'review' ? receivedPlanPapers(state,issuer.id).find(r => r.knownBody.reportPlan?.paperPost === cmd.to) : undefined;
   if ((!isFieldPost(state, cmd.to) && !vacancyUnreported(state, issuer.id, cmd.to)) || postFaction(world, state, cmd.to) !== side) return 'not_field_post';
   // Lane 1.12 (0052): refused at once only if he knows the post vacant. One he still believes held (the report of its
   // commander's loss not yet in his hands) is accepted, and the dispatch comes back undelivered when it arrives.
-  if (target.postHolder === null && believedHolder(state, issuer.id, cmd.to) === null) return 'vacant_post';
+  if (target.postHolder === null && believedHolder(state, issuer.id, cmd.to) === null && paper === undefined) return 'vacant_post';
   // Only the routes the principal's menu offers (review N1): an order "in person" would be a visit, a verb of its own.
   if (!ORDER_ROUTES.includes(cmd.route)) return 'route_unavailable';
 
@@ -100,19 +102,19 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
     body = { orderKind: 'goal', orderGoal: goal, orderEdit: null, orderCall: null };
   } else {
     const plan = planOf(state, cmd.to);
-    if (plan === undefined || plan.planIssuer !== issuer.id) return 'no_plan';
+    if ((plan === undefined || plan.planIssuer !== issuer.id) && paper === undefined) return 'no_plan';
     if (cmd.cmd === 'go') {
-      if (plan.planStatus !== 'ready') return 'no_plan';
+      if (plan?.planStatus !== 'ready') return 'no_plan';
       body = { orderKind: 'go', orderGoal: null, orderEdit: null, orderCall: null };
     } else if (cmd.action === 'edit') {
-      if (plan.planStatus !== 'review' && plan.planStatus !== 'approved' && plan.planStatus !== 'ready') return 'no_plan';
-      if (plan.planApproved === null && plan.planChosen === null) return 'no_plan';
+      if (paper === undefined && plan?.planStatus !== 'approved' && plan?.planStatus !== 'ready') return 'no_plan';
+      if (paper === undefined && plan?.planApproved === null && plan?.planChosen === null) return 'no_plan';
       const edit = editOf(cmd.edit!);
-      if (editProblems(edit).length > 0) return 'bad_review';
+      if (editIssues(edit).length > 0) return 'bad_review';
       if ([edit.editRegion, ...edit.editVia].some((r) => r !== null && !world.regionIds.includes(r))) return 'bad_review';
       body = { orderKind: 'edit', orderGoal: null, orderEdit: edit, orderCall: null };
     } else {
-      if (plan.planStatus !== 'review') return 'no_plan';
+      if (paper === undefined) return 'no_plan';
       const notes = cmd.notes;
       if (notes !== undefined) {
         const limits = world.map.world.rules.plans.notes;
@@ -120,7 +122,7 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
         for (const n of notes) {
           if (noteProblems(n).length || n.markVia.length > limits.maxWaypoints || (n.markDays !== null && n.markDays > limits.maxWaitDays)) return 'bad_review';
           if ([n.markRegion, ...n.markVia].some(r => r !== null && !world.regionIds.includes(r))) return 'bad_review';
-          if (!plan.planDraft?.draftCandidates.find(c => c.id === plan.planChosen)?.candAxes.some(a => a.axisName === n.markAxis)) return 'bad_review';
+          if (!paper.knownBody.reportPlan!.paperChosen.candAxes.some(a => a.axisName === n.markAxis)) return 'bad_review';
         }
       }
       body = { orderKind: cmd.action, orderGoal: null, orderEdit: null, orderCall: null, ...(notes === undefined ? {} : { orderNotes: notes.map(copyNote) }) };
@@ -146,7 +148,7 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
   // The addressee is the man the issuer believes holds the post (lane 1.12): its holder, or the commander a battle took
   // whose loss has not been reported to him.
   const hops: Hop[] = [...(cmd.bypass ? [] : relays), cmd.to].map((p, i, all) => ({
-    hopPerson: i === all.length - 1 ? believedHolder(state, issuer.id, p)! : state.postStates[p]!.postHolder!,
+    hopPerson: i === all.length - 1 ? (believedHolder(state, issuer.id, p) ?? receivedPlanPapers(state,issuer.id).find(r => r.knownBody.reportPlan?.paperPost === p)?.knownBody.reportAuthor)! : state.postStates[p]!.postHolder!,
     hopPost: p,
     hopRole: i === all.length - 1 ? 'addressee' : 'relay',
   }));
@@ -228,9 +230,10 @@ export function answerBody(
   author: PersonId,
   authorPost: PostId | null,
   day: number,
-  partial: Pick<ReportBody, 'reportType' | 'reportSubtype' | 'reportClaims' | 'reportAdvice' | 'reportNotes'> & { readonly answers: MessageId; readonly about: PostId },
+  partial: Pick<ReportBody, 'reportType' | 'reportSubtype' | 'reportClaims' | 'reportAdvice' | 'reportNotes' | 'reportPlan'> & { readonly answers: MessageId; readonly about: PostId },
 ): ReportBody {
   return {
+    ...(partial.reportPlan === undefined ? {} : { reportPlan: partial.reportPlan }),
     ...(partial.reportNotes === undefined ? {} : { reportNotes: partial.reportNotes }),
     reportType: partial.reportType,
     reportSubtype: partial.reportSubtype,
@@ -272,7 +275,7 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
         reportSubtype: 'memorandum',
         // The token names the kind of order withheld (a goal, or an answer to a plan): he knows what he sent.
         reportClaims: [{ claimKind: 'order-objected', claimRegion: objectiveOf(state, order), claimValue: 1, claimToken: order.orderKind, claimConfidence: 1000 }],
-        reportAdvice: { adviceRecommends: 'withdraw-order', adviceReasons: decision.stated, adviceConfidence: 800 },
+        reportAdvice: { adviceRecommends: 'withdraw-order', adviceReasons: decision.stated, adviceConfidence: ctx.world.map.world.rules.reportConfidence.orderObjection },
         answers: msg.msgOrigin,
         about: order.orderTarget,
       }),

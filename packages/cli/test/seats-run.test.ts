@@ -3,6 +3,8 @@ import { canonicalHash, decodeSave, phase0 } from '@mandate/kernel';
 import { createRuleSeat } from '@mandate/rule-seats';
 import { describe, expect, it } from 'vitest';
 import { dispatchLog } from '../src/desk/dispatches.ts';
+import { deskStrings } from '../src/pack-text.ts';
+import { packStrings } from '../src/seats-world.ts';
 import { seatsRun, seatsWorld } from '../src/seats-run.ts';
 
 const REGENERATE =
@@ -65,7 +67,7 @@ describe('the desk reads a view, never State', () => {
     const seat = createRuleSeat();
     const end = phase0.playDays(world, phase0.createState(world, setup), () => seat, 20).state;
     const principal = world.faction(world.factionIds[0]!).principal;
-    const lines = dispatchLog(phase0.viewFor(world, end, phase0.seatIdFor(principal)));
+    const lines = dispatchLog(phase0.viewFor(world, end, phase0.seatIdFor(principal)), 0, deskStrings(packStrings('testbed')));
     expect(lines.length).toBeGreaterThan(0);
     expect(lines.join('\n')).toContain('wire-dispatch');
   });

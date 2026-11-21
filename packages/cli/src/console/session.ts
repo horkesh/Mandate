@@ -4,10 +4,13 @@
  * arrive (0027). A scripted test feeds it lines, and `npm run play` feeds it the keyboard.
  */
 import type { DeskInput } from '../desk/commands.ts';
-import { HELP, parseLine } from '../desk/commands.ts';
+import { helpLines, parseLine } from '../desk/commands.ts';
 import { commandText, dayLines, enemyLines, morningLines, planLines, planReviewLines, postLines, situationLines } from '../desk/render.ts';
 import { dispatchLog } from '../desk/dispatches.ts';
+import type { DeskStrings } from '../desk/strings.ts';
+import { deskStrings } from '../pack-text.ts';
 import type { ConsoleGame, TurnResult } from './game.ts';
+import { previewReasonText } from './preview-text.ts';
 import type { phase0 } from '@mandate/kernel';
 
 export interface Handled {
@@ -21,17 +24,16 @@ export class ConsoleSession {
   private request: phase0.SeatRequest;
   /** The first day whose reports he has not yet been shown. */
   private seenFrom = 0;
+  private readonly t: DeskStrings;
 
   constructor(private readonly game: ConsoleGame) {
     this.request = game.morning();
+    this.t = deskStrings(game.strings, game.locale);
   }
-
-  private readonly t = (key: string): string => this.game.strings[key] ?? key;
 
   /** The opening screen: who he is, and the first morning. */
   start(): string[] {
-    const lines = ['By Order of the President: the console (type "help" for every order you can give).', ...this.morningScreen()];
-    return lines;
+    return [this.t('console.start'), ...this.morningScreen()];
   }
 
   private morningScreen(): string[] {
@@ -41,30 +43,31 @@ export class ConsoleSession {
   }
 
   handle(line: string): Handled {
-    const input: DeskInput = parseLine(line, this.request, this.t);
+    const t = this.t;
+    const input: DeskInput = parseLine(line, this.request, t);
     const menu = this.request.menu as phase0.PrincipalMenu;
     switch (input.kind) {
       case 'error':
         return { lines: [input.message], done: false };
       case 'quit':
-        return { lines: [`Left on day ${this.request.requestDay.toString()} (${this.game.dateOf(this.request.requestDay)}).`], done: true };
+        return { lines: [t('console.quit', { day: String(this.request.requestDay), date: this.game.dateOf(this.request.requestDay) })], done: true };
       case 'command':
         this.queue.push(input.command);
-        return { lines: [`Queued ${this.queue.length.toString()}: ${commandText(input.command, this.t)}. It goes when you end the turn.`], done: false };
+        return { lines: [t('console.queue.add', { index: String(this.queue.length), command: commandText(input.command, t) })], done: false };
       case 'cancel': {
-        if (input.index < 1 || input.index > this.queue.length) return { lines: [`No order ${input.index.toString()} in the queue.`], done: false };
+        if (input.index < 1 || input.index > this.queue.length) return { lines: [t('console.queue.missing', { index: String(input.index) })], done: false };
         const [gone] = this.queue.splice(input.index - 1, 1);
-        return { lines: [`Taken back: ${commandText(gone!, this.t)}.`], done: false };
+        return { lines: [t('console.queue.cancelled', { command: commandText(gone!, t) })], done: false };
       }
       case 'preview': {
         const p = this.game.preview(input.post, input.edit);
-        if (!p.ok) return { lines: [`That edit cannot be made: ${p.reason}.`], done: false };
+        if (!p.ok) return { lines: [t('console.preview.invalid', { reason: previewReasonText(p.reason, t) })], done: false };
         const review = menu.reviews.find((r) => r.post === input.post);
-        const before = review === undefined ? [] : ['As submitted:', ...planLines(review.plan)];
+        const before = review === undefined ? [] : [t('console.preview.before'), ...planLines(review.plan, t)];
         // Lane 0.9's finding 5: say plainly what the edit does to the time it takes, before he sends it.
         const longest = (plan: phase0.OptionView) => Math.max(0, ...plan.axes.map((a) => Math.ceil(a.arrival / 1000)));
-        const change = review === undefined ? [] : [`The plan arrives in ${longest(p.plan).toString()} days instead of ${longest(review.plan).toString()}.`];
-        return { lines: [...before, 'As edited (on today’s map; it reaches him days later):', ...planLines(p.plan), ...change], done: false };
+        const change = review === undefined ? [] : [t('console.preview.arrival', { edited: String(longest(p.plan)), submitted: String(longest(review.plan)) })];
+        return { lines: [...before, t('console.preview.after'), ...planLines(p.plan, t), ...change], done: false };
       }
       case 'look':
         return { lines: this.look(input.what, input.all, menu), done: false };
@@ -76,21 +79,22 @@ export class ConsoleSession {
   private look(what: 'help' | 'inbox' | 'situations' | 'plans' | 'posts' | 'enemy' | 'queue', all: boolean, menu: phase0.PrincipalMenu): string[] {
     switch (what) {
       case 'help':
-        return [...HELP];
+        return helpLines(this.t);
       case 'inbox': {
         const lines = dispatchLog(this.request.view, all ? 0 : this.seenLastTurn, this.t);
-        return lines.length === 0 ? ['Your inbox is empty.'] : lines;
+        return lines.length === 0 ? [this.t('console.inbox.empty')] : lines;
       }
       case 'situations':
         return situationLines(this.request.view.situations, menu, this.t);
       case 'plans':
         return planReviewLines(menu, this.t);
       case 'posts':
-        return postLines(menu);
+        return postLines(menu, this.t);
       case 'enemy':
-        return enemyLines(this.request);
+        return enemyLines(this.request, this.t);
       case 'queue':
-        return this.queue.length === 0 ? ['Nothing queued.'] : this.queue.map((c, i) => `${(i + 1).toString()}. ${commandText(c, this.t)}`);
+        return this.queue.length === 0 ? [this.t('console.queue.empty')]
+          : this.queue.map((c, i) => this.t('console.queue.entry', { index: String(i + 1), command: commandText(c, this.t) }));
     }
   }
 
@@ -102,19 +106,20 @@ export class ConsoleSession {
     this.queue = [];
     this.seenLastTurn = this.request.requestDay;
     const result: TurnResult = this.game.turn(sent);
-    const lines: string[] = [sent.length === 0 ? 'You send nothing, and wait.' : `Sent: ${sent.map(c => commandText(c, this.t)).join('; ')}.`];
+    const lines: string[] = [sent.length === 0 ? this.t('console.turn.wait')
+      : this.t('console.turn.sent', { commands: sent.map(c => commandText(c, this.t)).join('; ') })];
     for (const d of result.days) {
       lines.push(...dayLines({ day: d.day, date: d.date, reports: d.reports, refused: d.refused.map((r) => ({ what: commandText(r.command as phase0.SeatCommand, this.t), reason: r.reason })) }, this.t));
     }
-    lines.push(result.stopped === 'week' ? 'A week has passed.' : `The turn stops: ${result.stopped.join(', ')}.`);
+    lines.push(result.stopped === 'week' ? this.t('console.turn.week') : this.t('console.turn.stopped', { points: result.stopped.join(', ') }));
     this.request = this.game.morning();
     this.seenFrom = this.request.requestDay;
     lines.push(...morningLines(this.request, this.request.requestDay, this.t, { date: this.game.dateOf(this.request.requestDay), attention: this.request.view.attention }).slice(0, 1));
     const menu = this.request.menu as phase0.PrincipalMenu;
     const open = this.request.view.situations.filter((s) => s.status === 'open');
-    if (open.length > 0) lines.push(`Before you: ${open.map((s) => s.id).join(', ')}. Type "situations".`);
-    if (menu.reviews.length > 0) lines.push(`Plans for your review: ${menu.reviews.map((r) => r.post).join(', ')}. Type "plans".`);
-    if (menu.awaiting.length > 0) lines.push(`Waiting for your word: ${menu.awaiting.join(', ')}.`);
+    if (open.length > 0) lines.push(this.t('console.morning.situations', { situations: open.map(s => s.id).join(', ') }));
+    if (menu.reviews.length > 0) lines.push(this.t('console.morning.plans', { posts: menu.reviews.map(r => r.post).join(', ') }));
+    if (menu.awaiting.length > 0) lines.push(this.t('console.morning.awaiting', { posts: menu.awaiting.join(', ') }));
     return lines;
   }
 }

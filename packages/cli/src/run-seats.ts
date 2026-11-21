@@ -13,7 +13,8 @@ import { createRuleSeat } from '@mandate/rule-seats';
 import { dispatchLog, enemyPicture } from './desk/dispatches.ts';
 import { createRunDir, writeRunFile } from './io/runs.ts';
 import { seatsRun, seatsWorld } from './seats-run.ts';
-import { packStrings } from './seats-world.ts';
+import { packPresentation } from './seats-world.ts';
+import { deskStrings } from './pack-text.ts';
 
 function parse(argv: readonly string[]) {
   const positional: string[] = [];
@@ -67,8 +68,9 @@ if (args.show !== undefined) {
   const seat = createRuleSeat();
   const end = phase0.playDays(world, phase0.createState(world, setup), () => seat, args.days).state;
   const view = phase0.viewFor(world, end, phase0.seatIdFor(world.person(ids.toId('person', args.show)).id));
-  const strings = packStrings(args.pack);
-  lines.push('', `${args.show}'s dispatches:`, ...dispatchLog(view, 0, key => strings[key] ?? key).map((l) => `  ${l}`), '', `${args.show}'s picture of the enemy:`, ...enemyPicture(view).map((l) => `  ${l}`));
+  const { table, locale } = packPresentation(args.pack);
+  const t = deskStrings(table, locale);
+  lines.push('', `${args.show}'s dispatches:`, ...dispatchLog(view, 0, t).map((l) => `  ${l}`), '', `${args.show}'s picture of the enemy:`, ...enemyPicture(view, t).map((l) => `  ${l}`));
 }
 lines.push('', `summary     ${summaryPath}`);
 console.log(lines.join('\n'));

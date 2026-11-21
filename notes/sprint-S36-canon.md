@@ -1,0 +1,43 @@
+# S36 — received canon contracts
+
+Branch `sprint/fixes-canon`, base `78eb7dbff1243409265ab2f71b41ceab08abeb36`. S36 only. `npm ci` ran first, exit 0. Headless only; no push or other sprint worktree writes. Decision 0106 defers standing and gate review.
+
+## Scope and validation
+
+Confirm A01–A11 against this base; fix A01–A05 first, then A06–A11. Add paired-State regressions for the five High findings. Reconcile O01–O03 in FOUNDATION as a proposal without changing code ownership. Leave D01–D16 alone.
+
+Cheap gates: fixture/pack loading, regression reproduction, focused tests and typecheck. Retain pinned reference/history daily hashes and rule choices, compare after fixes, explain changes and every moved liveness band. Final gates: actual pre-commit hook and exactly one default eight-seed done check with `--milestone 1a`, drafting included. Expected final cost: tens of minutes locally. Stop on unexpected expensive failure, inspect all retained categories, correct/verify cheaply before an affected retry. Do not retry the campaign or tune numerical acceptance criteria. Raw logs and reproducible comparison scripts live in ignored `runs/s36/`.
+
+## Findings confirmed on the base
+
+All eleven S26 current-contract paths remain: live totals/candidate filters, live review and preview inputs, true planner control, literal player text, fixed report confidences, World provenance alias, missing post cache key, missing received succession, and conventional gate direction. S1 changed appointments and operations but did not remove these paths.
+
+## Proposed rulings
+
+1. A01 uses the latest received present-for-duty figure with source, author and date; no received number is `null`. Reject live totals and equating unknown with zero. The existing all-block transfer request does not require a headcount; retain it for unknown counts and suppress it for reported zero. A provisional null-as-zero rule was rejected during cheap comparison, before the campaign.
+2. A02 follows the lead's ruling: candidates use opening public ranks/offices and received service/loss papers. Actual service, status and office eligibility resolve the appointment; typed `appointment-refused` claims provide readable reasons. Reject live filtering or broader truth exceptions.
+3. A03/A04 use immutable submitted-plan enclosures and bounded sender copies, owned by knowledge. Keep the latest enclosure per post beyond ordinary dispatch age so late objections can reopen it. Preview uses that enclosure's historical scoring basis and has no current commander/profile/intelligence read. Its private coefficients never enter `SeatView` or the menu; execution still re-expands and resolves compliance on arrival. Reject silently replacing a received paper with a live draft or promising that preview predicts execution. This enclosure is historical correspondence, not a persisted current derived cache; its adoption remains a proposed ruling for review.
+4. A05 rebuilds the planner's holding index from the commander's received control claims. Preserve the accepted own-side supply/edge-condition exceptions; reject using the true enemy-holder index.
+5. A06 injects the existing ICU formatter from the driver into the desk, moves player English to both packs' string tables, localizes typed preview/refusal failures and the prototype map location phrase. Preserve grammar tokens and non-seat saved diagnostics; reject a new formatter, English fallbacks or a boundary exemption.
+6. A07 makes all 27 audited confidence defaults mandatory validated pack data, preserving their numerical values. Certainty and 0103's accepted press ladder remain unchanged.
+7. A08 clones/freezes World provenance; A09 keys the cache on own post; A10 applies only received notice succession, in written chronology, against the known predecessor. Reject mutating World, fresh truth reads or premature future receipts.
+8. A11 reads the measure owner's declared direction, including explicit provisional declarations for the two already reserved politics fields. It fails closed for undeclared measures. Reject inferring benefit from sign, per-pack direction overrides or re-signing gate content. No deferred system was built.
+9. O01–O03 are expressly proposed FOUNDATION edits naming the existing writers; no code owner changed to fit the prose.
+
+## Settled cheap evidence
+
+`runs/s36/preflight.log`: 11 files / 462 tests passed, exit 0. Earlier High/plan/verb/ownership verification: 106 passed, exit 0. Red evidence is retained against the pinned base for A01–A05/A08–A10; A06/A07/A11 have focused red/green logs in worker evidence folders. Root and desk typechecks, pack validators and the headless adapter tests pass. Full check, hook and final done-check evidence follows after completion.
+
+The first full no-git check exposed four old test-fixture categories (15 failed assertions): bombardment supplied enemy strength but no received shore control; gate wiring edited on private `planStatus` before receipt; a rule-seat test vacated an incumbent but left him alive/eligible; a resignation test nominated before its actual letter arrived. Corrected fixtures retain all numerical bounds, offer windows and outcome assertions. Bombardment now receives control evidence; gate wiring uses the received review; the appointment case uses a killed incumbent, received loss paper and a distinct eligible spare; resignation asserts absence before actual arrival, eligibility on receipt and final appointment by the original day-15 limit. The 75 targeted tests pass. Unreached boundary, licence and decision gates were checked separately and pass. No runtime code, band, timeout, skip or assertion was relaxed to resolve these failures.
+
+That check completed in 511.96 seconds, exit 1: 6 files failed / 149 passed; 19 failed / 1,658 passed / three conditional skips. The remaining four failures were generated-artifact checks: three save tests rejected the old World hash after adding pack confidence rules, and the published situation schema lacked the new `appointment-refused` claim. Regenerated both with `tools/make-save-fixture.ts` and `npm run pack:schemas`, preserving the prior save and SHA-256 locally. This is the repository's unreleased-fixture policy, not a migration or compatibility claim. The final root hook will revalidate the corrected complete tree with Git fixtures enabled; no redundant full no-git retry is planned.
+
+The final A02 follow-through test first failed when a delivered `not_serving` refusal still left its author on the candidate menu. The menu now reads received typed appointment refusals, with no live status read; 83 affected tests pass. Final comparative hashes and all eight changed rule responses remain exactly as above. Reference/history evidence is reused when their complete run argument signatures are identical.
+
+Pinned baseline reference and history: Union final `0cfa53c7505b94a60d454e824f2a8fa0c4ade794005e60b8391666e71944a52b`; testbed `69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb`. Settled comparison: Union `2b007d310e5f9b8cab193d74485dacc99e4b3334f45c4cb39652caa209a6285c`; testbed `ee1b76d81d16951cd9d9cfcaecce1f773128ad5df4bfedea6b1ed60f4b014b56`. First changed hash: Union day 36, testbed day 1, when own sent-order copies enter knowledge. Both Union runs match each other. All have zero rejections.
+
+Eight changed Union rule responses (identical in reference and history): day 70 Lincoln nominates Loring instead of Sumner from the unreceived service picture; day 78 he then nominates Sumner and delays the New Hampshire transfer under the attention budget; day 85 he sends that transfer; Davis sends Virginia's transfer on day 94 rather than 105, can inquire on day 100, and sends Mississippi's transfer on day 136 rather than 137. Received strength and the eligibility refusal account for the timing, without numerical tuning. Testbed has no changed choices. The machine comparison retains exact before/after commands. No liveness band changed or breached; changed counts/magnitudes are retained, with unchanged acceptance bands.
+
+## Findings outside my scope
+
+S35, other sprint integrations, deferred D01–D16, acceptance-band calibration, standing/gate review, Linux CI, pushing and release remain with their owners.

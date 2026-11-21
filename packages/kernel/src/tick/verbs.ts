@@ -36,6 +36,9 @@ import { returnDispatch } from './orders.ts';
 import type { CounterTerms } from '../audience/counters.ts';
 import { situationChoice } from '../seats/requests.ts';
 import { seatIdFor } from '../seats/seats.ts';
+import { receivedCandidates } from '../seats/received.ts';
+import { viewFor } from '../view/view.ts';
+import type { AppointmentRefusal } from '../knowledge/report.ts';
 import { fire, hop, oversightOf, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
 
 /** Every mechanic the people verbs count (FOUNDATION section 11.5). */
@@ -117,9 +120,10 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
       if (template !== undefined && expected !== null && expected !== undefined && expected !== c.person) return reject('unknown_post');
       if (template === undefined && !postOnSide(ctx, start, c.post, principal)) return reject('unknown_post');
       if (template === undefined && holderOf(c.post) !== null) return reject('post_held');
-      if (!knownPerson(ctx, c.person) || !sameSide(ctx, start, c.person, principal) || c.person === principal) return reject('unknown_person');
-      if ((start.personStatus[c.person]?.statusKind ?? 'serving') !== 'serving') return reject('unknown_person');
-      const held = heldPost(start, c.person);
+      if (!knownPerson(ctx, c.person) || c.person === principal) return reject('unknown_person');
+      const picture = viewFor(world, start, seat);
+      const held = picture.posts.find(p => p.holder === c.person)?.post ?? null;
+      if (held === null && !receivedCandidates(world, start, principal, side).some(p => p.person === c.person)) return reject('unknown_person');
       if (c.from === undefined ? held !== null : held !== c.from || c.from === c.post || !postOnSide(ctx, start, c.from, principal)) return reject('person_holds_post');
       if (c.rank !== null && !world.map.world.vocabularies.ranks.some((r) => r.id === c.rank)) return reject('unknown_rank');
       sendVerb(ctx, start, principal, c.person, null, c.route, body('appoint', { verbPost: c.post, verbRank: c.rank, verbTo: c.from ?? null }));
@@ -237,6 +241,7 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
   fire(ctx, 'verbs.answered');
   const changes: PeopleChange[] = [];
   let done = !DECLINES.has(answer.actual);
+  let appointmentRefusal: AppointmentRefusal | null = null;
   const myPost = heldPost(state, me);
   const reportTo = (claims: readonly ReportClaim[], advice: Advice = null, type: Kind = 'wire-dispatch', subtype: string | null = null) =>
     sendReport(ctx, state, {
@@ -251,7 +256,11 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
     case 'appoint': {
       const post = v.verbPost!;
       // The post may have filled, or he may have taken another, while the letter travelled: then he cannot take it.
-      if ((state.postStates[post]?.postHolder ?? null) !== null || heldPost(state, me) !== v.verbTo || !sameSide(ctx, state, me, v.verbIssuer) || (state.personStatus[me]?.statusKind ?? 'serving') !== 'serving') done = false;
+      if ((state.personStatus[me]?.statusKind ?? 'serving') !== 'serving') appointmentRefusal = 'not_serving';
+      else if (!sameSide(ctx, state, me, v.verbIssuer)) appointmentRefusal = 'other_side';
+      else if ((state.postStates[post]?.postHolder ?? null) !== null) appointmentRefusal = 'post_held';
+      else if (heldPost(state, me) !== v.verbTo) appointmentRefusal = 'person_holds_post';
+      if (appointmentRefusal !== null) done = false;
       if (done) {
         try {
           const openingPost = state.postStates[post] === undefined;
@@ -267,6 +276,7 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
         } catch (e) {
           if (!(e instanceof CommandError)) throw e;
           done = false;
+          appointmentRefusal = 'undeclared_post';
         }
       }
       if (done) {
@@ -339,7 +349,7 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
         const subject = v.verbSubject as RegionId | null;
         if (subject !== null) {
           const belief = enemyBeliefs(state, world.rules.traits, traitsOf(world, state, me), knowledgeOf(state, seatIdFor(me))).get(subject);
-          if (belief !== undefined) claims.push({ claimKind: 'enemy-strength', claimRegion: subject, claimValue: belief.value, claimToken: null, claimConfidence: 600 });
+          if (belief !== undefined) claims.push({ claimKind: 'enemy-strength', claimRegion: subject, claimValue: belief.value, claimToken: null, claimConfidence: ctx.world.map.world.rules.reportConfidence.inquiryEnemyStrength });
         }
         claims.push(answered(true));
         state = applyPeopleChanges(state, changes, ctx.day, rules, vocab);
@@ -357,7 +367,7 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
         const choice = situationChoice(def, record.sitOpenOptions, [], traitsOf(world, state, me).values);
         const best = [...choice.options].sort((a, b) => b.score - a.score || strictCompare(a.optionId, b.optionId))[0];
         if (best !== undefined) {
-          const confidence = Math.max(100, best.score);
+          const confidence = Math.max(ctx.world.map.world.rules.reportConfidence.consultMinimum, best.score);
           changes.push({ change: 'stance', person: me, subject: sit, recommends: best.optionId, confidence });
           state = applyPeopleChanges(state, changes, ctx.day, rules, vocab);
           reportTo([answered(true)], { adviceRecommends: best.optionId, adviceReasons: stated(answer), adviceConfidence: confidence }, 'advice', 'requested');
@@ -383,8 +393,10 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
     fire(ctx, 'verbs.declined');
     ctx.events.push({ event: 'objected', person: me, post: msg.msgToPost, message: msg.msgOrigin, terms: [term('relay_objection', answer.willingness, { person: me, rule: answer.actual })] });
   }
-  if (!done && DECLINES.has(answer.actual)) {
-    reportTo([answered(false)], { adviceRecommends: 'withdraw-order', adviceReasons: stated(answer), adviceConfidence: 800 }, 'advice', 'memorandum');
+  if (appointmentRefusal !== null) {
+    reportTo([answered(false), { claimKind: 'appointment-refused', claimRegion: null, claimValue: 0, claimToken: appointmentRefusal, claimConfidence: 1000 }]);
+  } else if (!done && DECLINES.has(answer.actual)) {
+    reportTo([answered(false)], { adviceRecommends: 'withdraw-order', adviceReasons: stated(answer), adviceConfidence: ctx.world.map.world.rules.reportConfidence.verbObjection }, 'advice', 'memorandum');
   } else reportTo([answered(done)]);
   return state;
 }
@@ -404,7 +416,7 @@ export function observerLetters(ctx: TickContext, start: State): State {
     const holder = state.postStates[p.obsPost]?.postHolder ?? null;
     const claims: ReportClaim[] = [];
     if (isFieldPost(state, p.obsPost)) claims.push({ claimKind: 'position', claimRegion: headquartersOf(ctx.world, state, p.obsPost), claimValue: 0, claimToken: null, claimConfidence: 1000 });
-    if (holder !== null) claims.push({ claimKind: 'goal-status', claimRegion: null, claimValue: 0, claimToken: (state.planRecords[p.obsPost]?.planStatus ?? 'holding') as string, claimConfidence: 700 });
+    if (holder !== null) claims.push({ claimKind: 'goal-status', claimRegion: null, claimValue: 0, claimToken: (state.planRecords[p.obsPost]?.planStatus ?? 'holding') as string, claimConfidence: ctx.world.map.world.rules.reportConfidence.observerGoalStatus });
     sendReport(ctx, state, {
       body: answerBody(o, null, ctx.day, `m.${p.obsSince}.observer.${o}` as MessageId, { kind: 'post', id: p.obsPost }, claims, null, 'observer-letter'),
       truth: { truthTerms: [], truthTrimmed: [] },

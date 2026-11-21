@@ -262,6 +262,27 @@ describe('battle reports: the night of the battle, hour by hour, and the returns
     }
   });
 
+  it('uses the pack’s separate phase, enemy and first-return confidences in battle traffic', async () => {
+    const { battleReports } = await import('../src/tick/battle-reports.ts');
+    const { ctxFor } = await import('./support/tick-context.ts');
+    const { SEATS_MECHANICS } = await import('../src/tick/tick.ts');
+    const { MAP_MECHANICS } = await import('../src/tick/map.ts');
+    const { day, results } = fight();
+    const state = results[day.bdayDay - 1]!.state;
+    const { world } = g0;
+    const map = { ...world.map, world: { ...world.map.world, rules: {
+      ...world.map.world.rules,
+      reportConfidence: { ...world.map.world.rules.reportConfidence, battlePhase: 211, battleEnemyStrength: 212, firstReturnOwnLosses: 213, firstReturnMissing: 214, firstReturnEnemyLosses: 215 },
+    } } };
+    const ctx = ctxFor({ ...world, map }, state, day.bdayDay, [...SEATS_MECHANICS, ...MAP_MECHANICS]);
+    battleReports(ctx, state, state.regionControl);
+    const reports = ctx.outbox.filter((m) => m.msgTo === PER('b_lead')).map((m) => m.msgReport);
+    const dispatch = reports.find((r) => r?.reportClaims.some((c) => c.claimKind === 'battle-phase'));
+    const first = reports.find((r) => r?.reportType === 'casualty-return' && r.reportClaims.some((c) => c.claimToken === 'first'));
+    expect(dispatch?.reportClaims.map((c) => c.claimConfidence)).toEqual([211, 212]);
+    expect(first?.reportClaims.map((c) => c.claimConfidence)).toEqual([213, 214, 215]);
+  });
+
   it('carries no control claim when the existing holder wins the battle', () => {
     const { told, results, day } = fight('high', 'a_state');
     expect(results[day.bdayDay - 1]!.state.regionControl[R('mid')]![F('a')]).toBeGreaterThan(600);

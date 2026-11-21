@@ -17,6 +17,18 @@ const tpl = (templateType: string, templateSubtype: string | null, templateRoute
 /** The rules 0072 moved out of the kernel, at the testbed's and Union's values: latency, report templates, standing goals. */
 export const MESSAGE_RULES = {
   latency: { wireDays: 0, mailPermille: 2000, specialMessengerPermille: 500, courierNoiseMaxDays: 1, specialMessengerPrice: 1 },
+  reportConfidence: {
+    battlePhase: 600, battleEnemyStrength: 500,
+    firstReturnOwnLosses: 600, firstReturnMissing: 500, firstReturnEnemyLosses: 400,
+    fullReturnOwnLosses: 900, fullReturnMissing: 800, fullReturnCaptured: 800,
+    governorWire: 400, pocket: 900, commanderLoss: 900,
+    scoutEnemyStrength: 700, scoutWorks: 700, scoutObstruction: 700,
+    dispatchEnemyStrength: 600, dispatchEffectiveStrength: 800,
+    returnPresentForDuty: 900, returnPaperStrength: 900, cabinetWord: 700,
+    initiativeAdvice: 700, orderObjection: 800, planObjection: 800,
+    recruitmentObjection: 800, verbObjection: 800,
+    inquiryEnemyStrength: 600, consultMinimum: 100, observerGoalStatus: 700,
+  },
   reportTemplates: [
     tpl('wire-dispatch', null, 'wire', 2, 30, 3),
     tpl('strength-return', null, 'mail', 10, 60, 10),

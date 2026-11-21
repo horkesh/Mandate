@@ -203,6 +203,14 @@ The **command log** sits beside State and is the truth about what happened: repl
 
 Module map, adapted from the AWWV-architecture note:
 
+**S36 proposed reconciliation (O01–O03; pending lead review under 0106).** Replace the grouped people-core module row with separate State-writer rows for `people`, `audience`, `proxy` and `ladder`, and pure-function rows for `compliance` and `reading`. `proxy` writes declared and actual order responses (`proxy/responses.ts`, `recordResponse`); compliance and reading compute them and write no State. Add a `regions` State row for the existing `regions/regions.ts` writer: `applyFortification` writes fortification and `applyArrivals` records arrivals. Population, loyalty and supply-value reservations do not claim additional implemented runtime writers. Expand the movement row to include its existing joining-order responsibility: `movement/join.ts` writes `forceJoins` through `orderJoins`, `endJoins` and `markJoins`, alongside location. Add the following missing field row to the field table:
+
+| Proposed State field | Only writer | Proposed by |
+|---|---|---|
+| a block's joining order (`forceJoins`), directing it to its post's seat (0098) | `movement` | transfer verbs; operations resolve the day's legs and request clearing |
+
+These three changes reconcile the prose with the implemented writers and `ownership.ts`; they propose no code-owner change or deferred capability.
+
 | Module | Layer | Owns |
 |---|---|---|
 | `world/graph` | World | regions, typed edges, capacities, depots, terrain |
@@ -280,7 +288,7 @@ Module map, adapted from the AWWV-architecture note:
 | immutable notes carried by an order (`OrderBody.orderNotes`) | `messages` | the principal's validated send-back command, relayed and returned on the ordinary order route (0052, 0098) |
 | the received commander's account of each note (`ReportBody.reportNotes`, immutable `NoteAccount`); the transit copy travels with the ordinary report | `knowledge` | message delivery; the account contains stated reasons and the submitted plan's disposition, without actual compliance weights; `messages` owns the transit record |
 | operations and their lifecycles (`operationRecords`: one per goal and plan, axes copied from the plan, each stage with a typed reason) | `operations` | plan approval, movement and combat outcomes, support answers (0080) |
-| knowledge (reports per seat) | `knowledge` | message delivery, pruning |
+| knowledge (reports per seat); S36 proposed: immutable submitted-plan enclosures (`ReportBody.reportPlan`) and bounded own sent-order copies (`SeatKnowledge.knownSentOrders`, last goal and last review reply per post) | `knowledge` | message delivery, sender copies filed when an order first enters transit, pruning; `messages` owns each transit copy |
 | messages in transit | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules |
 | economy stocks | `economy` | weekly step, verbs |
 | situations fired, live (open options, clocks) and decided | `situations` | cause evaluation, decisions, delegated seats' choices |

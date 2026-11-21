@@ -27,6 +27,7 @@ import { claimedControlView } from './claimed-control.ts';
 import { controlEvidence } from '../knowledge/control-beliefs.ts';
 import { nextPeopleChange, peopleProjection, type PeopleProjection } from './people.ts';
 import type { ReportClaim } from '../knowledge/report.ts';
+import { isProposalBasis } from '../situations/types.ts';
 import type { BeliefView, ClaimView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
 
 export interface ViewCache {
@@ -204,6 +205,7 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     previous.posts === people.projection.posts &&
     previous.people === people.projection.people &&
     previous.faction === faction &&
+    previous.post === post &&
     previous.region === region &&
     previous.goal === goal &&
     previous.enemyBeliefs === beliefs.beliefs &&
@@ -260,7 +262,7 @@ function situationViews(world: SeatsWorld, state: State, seat: SeatId, person: P
         options: freeze(
           def.options
             .filter((o) => r.sitOpenOptions.includes(o.id))
-            .map((o) => freeze({ id: o.id, label: o.label, proposedBy: o.proposedBy === 'inaction' ? 'inaction' : Array.isArray(o.proposedBy) ? freeze([...(o.proposedBy as readonly PersonId[])]) : o.proposedBy, group: o.group })),
+            .map((o) => freeze({ id: o.id, label: o.label, proposedBy: isProposalBasis(o.proposedBy) ? freeze({ ...o.proposedBy, cites: freeze(o.proposedBy.cites.map(c => freeze({ ...c }))) }) : o.proposedBy === 'inaction' ? 'inaction' : freeze([...o.proposedBy]), group: o.group })),
         ),
         chosen: freeze([...r.sitChosen]),
         delegatedTo: r.sitDelegate,

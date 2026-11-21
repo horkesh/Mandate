@@ -74,6 +74,10 @@ export function peopleProjection(
           if (!('propose' in effect)) continue;
           const p = effect.propose;
           if (p.owner === 'command' && p.field === 'department_side' && p.subject !== null && p.side !== null && p.delta > 0) knownSides.set(p.subject as DepartmentId, p.side);
+          if (p.owner === 'command' && p.field === 'post_succession' && p.subject !== null && p.succession !== undefined && p.succession !== null && p.delta > 0) {
+            const old = ensure(p.subject as PostId);
+            if (old.status === 'unknown' || old.holder === p.succession.from) tell(p.subject as PostId, p.succession.to, p.succession.to === null ? 'vacant' : 'held', r);
+          }
         }
       }
     }

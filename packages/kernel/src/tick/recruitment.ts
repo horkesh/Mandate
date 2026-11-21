@@ -132,7 +132,7 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
       reportType: objects ? 'advice' : 'wire-dispatch',
       reportSubtype: objects ? 'memorandum' : null,
       reportClaims: [{ claimKind: 'call-answer', claimRegion: region, claimValue: declared?.regiments ?? 0, claimToken: declared?.men === null ? `${answer.declared}:unknown_strength` : answer.declared, claimConfidence: declared?.men === null ? 0 : 1000 }],
-      reportAdvice: objects ? { adviceRecommends: 'withdraw-order', adviceReasons: answer.statedReasons.map((r) => ({ reasonKind: r.kind, reasonWeight: 1000 })), adviceConfidence: 800 } : null,
+      reportAdvice: objects ? { adviceRecommends: 'withdraw-order', adviceReasons: answer.statedReasons.map((r) => ({ reasonKind: r.kind, reasonWeight: 1000 })), adviceConfidence: ctx.world.map.world.rules.reportConfidence.recruitmentObjection } : null,
       answers: msg.msgOrigin,
       about: post,
     }),

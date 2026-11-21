@@ -12,7 +12,6 @@ import type { ControlIndex } from '../control-index/control-index.ts';
 import type { EdgeId, FactionId, ForceBlockId, PostId, RegionId } from '../ids.ts';
 import type { MarchGround } from '../movement/march.ts';
 import type { PlanGoal } from '../plans/goal.ts';
-import type { FactionSupply } from '../supply/supply.ts';
 import { otherEnd } from '../world/index.ts';
 import type { PlannerRules } from '../world/world.ts';
 import type { BombardmentRules } from '../combat/rules.ts';
@@ -29,7 +28,7 @@ export interface PlannerInput {
    */
   readonly ground: MarchGround;
   /** His side's supply: which regions his trains reach (the derived map). */
-  readonly supply: FactionSupply;
+  readonly supply: { readonly paths: ReadonlyMap<RegionId, unknown> };
   readonly faction: FactionId;
   /** Men he believes the enemy has per region, through his perception (his view's beliefs). Never truth. */
   readonly beliefs: ReadonlyMap<RegionId, number>;

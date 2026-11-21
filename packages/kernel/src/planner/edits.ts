@@ -21,7 +21,7 @@ import { blocksOf, makeCtx, type Ctx, type PlannerInput } from './context.ts';
 import { weights } from './methods.ts';
 import { overlap, search, viaRoute } from './route.ts';
 import { demandFor, makeCandidate } from './score.ts';
-import type { PlanAxis, PlanCandidate, DraftSet, PlannerForce, TermKind } from './types.ts';
+import type { AxisMode, PlanAxis, PlanCandidate, DraftSet, PlannerForce, TermKind } from './types.ts';
 
 /** A term that fell between his chosen plan and the edited one, and by how much. */
 export interface Fell {
@@ -29,9 +29,33 @@ export interface Fell {
   readonly drop: number;
 }
 
+export type EditFailure =
+  | { readonly kind: 'no-axis'; readonly axis: string | null }
+  | { readonly kind: 'holding-axis'; readonly axis: string }
+  | { readonly kind: 'no-axis-route'; readonly mode: AxisMode; readonly from: RegionId; readonly region: RegionId | null }
+  | { readonly kind: 'no-waypoint'; readonly region: RegionId | null; readonly mode: AxisMode }
+  | { readonly kind: 'too-many-axes' }
+  | { readonly kind: 'too-few-blocks' }
+  | { readonly kind: 'no-route'; readonly region: RegionId | null }
+  | { readonly kind: 'last-axis' };
+
 export type EditResult =
   | { readonly ok: true; readonly edited: PlanCandidate; readonly distance: number; readonly fell: readonly Fell[] }
-  | { readonly ok: false; readonly reason: string };
+  | { readonly ok: false; readonly reason: EditFailure };
+
+/** Preserve the existing technical diagnostic written to the saved plan counter. */
+export function editFailureDiagnostic(reason: EditFailure): string {
+  switch (reason.kind) {
+    case 'no-axis': return `no axis ${reason.axis}`;
+    case 'holding-axis': return `axis ${reason.axis} holds where it stands; give a new goal instead`;
+    case 'no-axis-route': return `no ${reason.mode} route from ${reason.from} to ${reason.region}`;
+    case 'no-waypoint': return `waypoint ${reason.region} cannot be reached by ${reason.mode}`;
+    case 'too-many-axes': return 'the plan already has as many axes as he can run, and one more';
+    case 'too-few-blocks': return 'too few blocks to form another axis';
+    case 'no-route': return `no route to ${reason.region}`;
+    case 'last-axis': return 'a plan needs one axis';
+  }
+}
 
 function blocksOfAxis(ctx: Ctx, axis: PlanAxis): PlannerForce[] {
   return axis.axisBlocks.map((id) => ctx.input.forces.find((f) => f.id === id)).filter((f): f is PlannerForce => f !== undefined);
@@ -60,36 +84,36 @@ export function applyEdit(input: PlannerInput, set: DraftSet, chosen: PlanCandid
   switch (edit.editKind) {
     case 'objective': {
       const a = find(edit.editAxis);
-      if (!a) return { ok: false, reason: `no axis ${edit.editAxis}` };
-      if (a.axisRoute.routeLegs.length === 0) return { ok: false, reason: `axis ${a.axisName} holds where it stands; give a new goal instead` };
+      if (!a) return { ok: false, reason: { kind: 'no-axis', axis: edit.editAxis } };
+      if (a.axisRoute.routeLegs.length === 0) return { ok: false, reason: { kind: 'holding-axis', axis: a.axisName } };
       const r = search(ctx, a.axisRoute.routeFrom, edit.editRegion!, searchModeOf(a.axisMode), w);
-      if (r === null) return { ok: false, reason: `no ${a.axisMode} route from ${a.axisRoute.routeFrom} to ${edit.editRegion}` };
+      if (r === null) return { ok: false, reason: { kind: 'no-axis-route', mode: a.axisMode, from: a.axisRoute.routeFrom, region: edit.editRegion } };
       axes = chosen.candAxes.map((x) => (x.axisName === a.axisName ? rebuild(ctx, x, { route: r }) : x));
       break;
     }
     case 'waypoints': {
       const a = find(edit.editAxis);
-      if (!a) return { ok: false, reason: `no axis ${edit.editAxis}` };
-      if (a.axisRoute.routeLegs.length === 0) return { ok: false, reason: `axis ${a.axisName} holds where it stands; give a new goal instead` };
+      if (!a) return { ok: false, reason: { kind: 'no-axis', axis: edit.editAxis } };
+      if (a.axisRoute.routeLegs.length === 0) return { ok: false, reason: { kind: 'holding-axis', axis: a.axisName } };
       const { route, unreachable } = viaRoute(ctx, a.axisRoute.routeFrom, edit.editVia, a.axisRoute.routeTo, searchModeOf(a.axisMode), w);
-      if (route === null) return { ok: false, reason: `waypoint ${unreachable} cannot be reached by ${a.axisMode}` };
+      if (route === null) return { ok: false, reason: { kind: 'no-waypoint', region: unreachable, mode: a.axisMode } };
       axes = chosen.candAxes.map((x) => (x.axisName === a.axisName ? rebuild(ctx, x, { route }) : x));
       break;
     }
     case 'timing': {
       const a = find(edit.editAxis);
-      if (!a) return { ok: false, reason: `no axis ${edit.editAxis}` };
+      if (!a) return { ok: false, reason: { kind: 'no-axis', axis: edit.editAxis } };
       axes = chosen.candAxes.map((x) => (x.axisName === a.axisName ? rebuild(ctx, x, { concentrationDays: edit.editConcentration! }) : x));
       break;
     }
     case 'add_axis': {
-      if (chosen.candAxes.length >= input.profile.maxAxes + 1) return { ok: false, reason: 'the plan already has as many axes as he can run, and one more' };
+      if (chosen.candAxes.length >= input.profile.maxAxes + 1) return { ok: false, reason: { kind: 'too-many-axes' } };
       const mine = chosen.candAxes.filter((x) => x.axisPost === input.post);
       const pool = mine.flatMap((x) => blocksOfAxis(ctx, x));
-      if (pool.length < 2) return { ok: false, reason: 'too few blocks to form another axis' };
+      if (pool.length < 2) return { ok: false, reason: { kind: 'too-few-blocks' } };
       const from = mine[0]!.axisRoute.routeFrom;
       const r = search(ctx, from, edit.editRegion!, 'land', w);
-      if (r === null) return { ok: false, reason: `no route to ${edit.editRegion}` };
+      if (r === null) return { ok: false, reason: { kind: 'no-route', region: edit.editRegion } };
       const [keep, give] = splitBlocks(pool, [2, 1]);
       const others = chosen.candAxes.filter((x) => x.axisPost !== input.post);
       axes = [rebuild(ctx, mine[0]!, { blocks: keep! }), buildAxis(ctx, { name: `added:${edit.editRegion}`, post: input.post, mode: 'land', route: r, blocks: give!, depotSteps: false }), ...others];
@@ -97,8 +121,8 @@ export function applyEdit(input: PlannerInput, set: DraftSet, chosen: PlanCandid
     }
     case 'remove_axis': {
       const a = find(edit.editAxis);
-      if (!a) return { ok: false, reason: `no axis ${edit.editAxis}` };
-      if (chosen.candAxes.length === 1) return { ok: false, reason: 'a plan needs one axis' };
+      if (!a) return { ok: false, reason: { kind: 'no-axis', axis: edit.editAxis } };
+      if (chosen.candAxes.length === 1) return { ok: false, reason: { kind: 'last-axis' } };
       const rest = chosen.candAxes.filter((x) => x.axisName !== a.axisName);
       // His own blocks from the removed axis go to his first remaining axis; a partner's simply stay home.
       const target = rest.find((x) => x.axisPost === a.axisPost);

@@ -19,6 +19,7 @@ import type { EditSpec, PlanGoal } from '../plans/goal.ts';
 import type { PlanNote } from '../plans/notes.ts';
 import type { CounterKind } from '../audience/counters.ts';
 import type { State } from '../root-state.ts';
+import { rememberSentOrders } from '../knowledge/knowledge.ts';
 import { sha256OfText } from '../serialize/sha256.ts';
 import type { RouteKind } from './latency.ts';
 
@@ -156,7 +157,8 @@ export function sendMessages(state: State, messages: readonly TransitMessage[]):
     if (m.msgArriveDay < m.msgSentDay) throw new RangeError(`message ${m.id} arrives before it is sent`);
     if ([m.msgOrder, m.msgVerb, m.msgReport].filter((x) => x !== null).length !== 1) throw new RangeError(`message ${m.id} must carry exactly one of an order, a verb and a report`);
   }
-  return { ...state, messagesInTransit: [...state.messagesInTransit, ...messages].sort(byArrival) };
+  const remembered = rememberSentOrders(state, messages);
+  return { ...remembered, messagesInTransit: [...remembered.messagesInTransit, ...messages].sort(byArrival) };
 }
 
 /** Take every message due on or before `day` out of transit, in (arrival day, id) order. */

@@ -261,7 +261,9 @@ describe('the 0026 edit grammar', () => {
 
   it('refuses a waypoint no route reaches, as a validation failure with a reason', () => {
     const { input, set } = drafted(SUPPLY, seat('fighter'));
-    expect(planner.applyEdit(input, set, pick(set), edit('waypoints', { via: ['island_fort'] }))).toEqual({ ok: false, reason: 'waypoint island_fort cannot be reached by land' });
+    expect(planner.applyEdit(input, set, pick(set), edit('waypoints', { via: ['island_fort'] }))).toEqual({
+      ok: false, reason: { kind: 'no-waypoint', region: 'island_fort', mode: 'land' },
+    });
   });
 
   it('shortens his concentration ("move now"): haste falls, and the timid man objects or shirks', () => {
@@ -310,7 +312,7 @@ describe('the 0026 edit grammar', () => {
     const { input, set } = drafted(SUPPLY, seat('fighter'));
     const chosen = pick(set);
     const r = planner.applyEdit(input, set, chosen, edit('waypoints', { via: ['e_lowlands'] }));
-    if (!r.ok) throw new Error(r.reason);
+    if (!r.ok) throw new Error(r.reason.kind);
     expect(set.draftCandidates.map((c) => c.id)).toContain(planner.concretePlan(input, set, chosen, r.edited, 'reinterpret').id);
     expect(planner.concretePlan(input, set, chosen, r.edited, 'slow_walk').candAxes[0]!.axisArrival).toBeGreaterThan(r.edited.candAxes[0]!.axisArrival);
     expect(planner.concretePlan(input, set, chosen, r.edited, 'object')).toBe(chosen);

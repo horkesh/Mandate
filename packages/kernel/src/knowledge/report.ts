@@ -14,6 +14,7 @@
  */
 import { isWellFormedId, type MessageId, type PersonId, type PostId, type RegionId } from '../ids.ts';
 import type { PlanNote } from '../plans/notes.ts';
+import type { PlanPaper } from './plan-paper.ts';
 
 /** The report types of 0032, plus advice (0040). Each is a pack-tunable template (`ReportTemplate`). */
 export const REPORT_TYPES = [
@@ -88,6 +89,7 @@ export type SubjectKind = (typeof SUBJECT_KINDS)[number];
  * - `control-government`: the named department governs the region, with value 1 for neutral and 0 for aligned.
  */
 export const CLAIM_KINDS = [
+  'appointment-refused',
   'service-choice',
   'arrived',
   'battle-phase',
@@ -125,6 +127,7 @@ export const CLAIM_KINDS = [
   'works',
 ] as const;
 export type ClaimKind = (typeof CLAIM_KINDS)[number];
+export type AppointmentRefusal = 'post_held' | 'person_holds_post' | 'other_side' | 'not_serving' | 'undeclared_post';
 
 /** One typed claim. `claimToken` is a closed word from the claim kind's vocabulary (e.g. `holding`), never prose. */
 export interface ReportClaim {
@@ -164,6 +167,8 @@ export interface AdviceBody {
 
 /** What a report says. Shared by a message in transit and the report as a seat holds it. */
 export interface ReportBody {
+  /** Sealed plan enclosure; public projections expose only its OptionView, never the planner's private inputs. */
+  readonly reportPlan?: PlanPaper;
   readonly reportNotes?: readonly NoteAccount[];
   readonly reportType: ReportType;
   /** Required for `informal` (an `InformalSubtype`) and `advice` (an `AdviceSubtype`); null otherwise. */

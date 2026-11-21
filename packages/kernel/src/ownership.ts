@@ -230,6 +230,9 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'OpRequest',
   // Reports and knowledge
   'ReportBody',
+  'PlanPaper',
+  'PlanPaper.paperNetwork',
+  'KnownSentOrder',
   'ReportClaim', // Includes claimBattle, claimBattleDays and claimCommander: authored once, filed only by knowledge.
   'AdviceBody',
   'StatedReason',

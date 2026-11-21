@@ -3,6 +3,7 @@ import { phase0 } from '@mandate/kernel';
 import { describe, expect, it } from 'vitest';
 import { DESK_COMMANDS, parseLine, VERB_COMMANDS } from '../src/desk/commands.ts';
 import { ConsoleGame } from '../src/console/game.ts';
+import { deskStrings } from '../src/pack-text.ts';
 
 /**
  * The verb list is the interface (FOUNDATION section 11.10; AWWV's shell let unit orders back in). Lane 1.13: the
@@ -47,9 +48,11 @@ describe('the console commands are the kernel verb list (lane 1.13: the new kern
   });
 
   it('recognises every declared command and nothing undeclared: no word moves a force (hard rule 1)', () => {
-    const request = new ConsoleGame({ pack: 'testbed' }).morning();
+    const game = new ConsoleGame({ pack: 'testbed' });
+    const request = game.morning();
+    const t = deskStrings(game.strings, game.locale);
     const unknown = (line: string) => {
-      const r = parseLine(line, request);
+      const r = parseLine(line, request, t);
       return r.kind === 'error' && r.message.startsWith('Unknown command');
     };
     for (const word of [...Object.keys(VERB_COMMANDS), ...DESK_COMMANDS]) expect(unknown(word), word).toBe(false);

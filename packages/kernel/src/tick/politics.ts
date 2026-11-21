@@ -19,12 +19,21 @@ import { addressChanges, applyPolitics, driftChanges, type PoliticsChange } from
 import { frontPage } from '../politics/press.ts';
 import type { PoliticsRules } from '../politics/rules.ts';
 import type { State } from '../root-state.ts';
+import type { MeasureDirection } from '../situations/types.ts';
 import { fire, sendReport, type Proposal, type TickContext } from './context.ts';
 import { isPeopleWeek } from './people-week.ts';
 
 /** The fields of `politics` a situation's effect may name: the ones built here, and the ones 1B builds (reported, not applied). */
 export const POLITICS_FIELDS = ['bloc-support', 'framing', 'ledger-act', 'ledger-answer', 'session-call'] as const;
 export const POLITICS_RESERVED_FIELDS = ['foreign-patience', 'national-will'] as const;
+
+/** The numeric fields moved by effectChange, plus the reserved 1B fields the gate already checks. */
+export const POLITICS_MEASURE_DIRECTIONS: ReadonlyMap<string, MeasureDirection> = new Map([
+  ['bloc-support', 'higher-is-better'],
+  ['framing', 'higher-is-better'],
+  ['foreign-patience', 'higher-is-better'],
+  ['national-will', 'higher-is-better'],
+]);
 
 export const POLITICS_MECHANICS = [
   'politics.act',

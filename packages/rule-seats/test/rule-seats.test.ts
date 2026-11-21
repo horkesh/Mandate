@@ -202,6 +202,8 @@ describe('a principal doing his historical jobs by his pack doctrine (lane 1.12)
     expect(quiet(principalOrders({ ...m, commandable: [army('near', 2), { ...levy, inTransit: ['transfer'] }] }, [], 3))).toEqual([]);
     // A governor with nothing raised, or no concentration post, sends nothing.
     expect(quiet(principalOrders({ ...m, commandable: [army('near', 2), { ...levy, men: 0 }] }, [], 3))).toEqual([]);
+    // An all-block standing request needs no headcount; unknown is different from a received zero return.
+    expect(quiet(principalOrders({ ...m, commandable: [army('near', 2), { ...levy, men: null }] }, [], 3))).toEqual(quiet(principalOrders(m, [], 3)));
     expect(quiet(principalOrders({ ...m, doctrine: { ...m.doctrine, concentrateAt: null } }, [], 3))).toEqual([]);
   });
 
@@ -305,15 +307,37 @@ describe('rule seats run a whole side (the testbed, every seat on the rules mode
   });
 
   it('reappoints a post that lost the holder the scenario gave it, the next morning, and fills no other post', () => {
-    const s0 = phase0.createState(world, { seed: start.seed });
     const army = post('n_army_east');
+    const replacement = ids.toId('person', 'n_replacement');
+    // The opening pack already has every general posted. Give this fixture one eligible spare.
+    const original = world.map.world.people.find((p) => p.id === start.posts.find((p) => p.id === army)!.holder)!;
+    const appointmentWorld = phase0.indexSeatsWorld(w.indexWorld({
+      ...world.map.world, people: [...world.map.world.people, { ...original, id: replacement, name: 'person.n_replacement.name' }],
+    }), start);
+    const s0 = phase0.createState(appointmentWorld, { seed: start.seed });
     expect(s0.postStates[army]!.postHolder).not.toBeNull();
-    // As the battle model leaves one: its general hit, the post vacant (the kernel test drives the hit itself).
-    const vacated = { ...s0, postStates: { ...s0.postStates, [army]: { ...s0.postStates[army]!, postHolder: null } } };
-    const { log } = phase0.playDays(world, vacated, () => seat, 2, { freeze: true });
-    const appointments = log.filter((e) => e.command.cmd === 'appoint').map((e) => (e.command as { readonly post?: string }).post);
-    expect(appointments).toEqual([army]);
+    const parent = s0.postStates[army]!.postParent!;
+    // A battle kills the incumbent. The principal then receives the superior's loss dispatch.
+    const vacated = {
+      ...s0,
+      postStates: { ...s0.postStates, [army]: { ...s0.postStates[army]!, postHolder: null } },
+      personStatus: { ...s0.personStatus, [original.id]: { statusKind: 'killed' as const, statusDay: 0 } },
+    };
+    const told = phase0.deliverReport(vacated, phase0.seatIdFor(ids.toId('person', 'n_leader')), {
+      id: ids.toId('message', 'commander-lost.east'), knownReceivedDay: 0, knownRoute: 'courier', knownVia: [],
+      knownBody: {
+        reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: s0.postStates[parent]!.postHolder!, reportAuthorPost: parent,
+        reportSubjectKind: 'post', reportSubjectId: army, reportDay: 0, reportHour: null, reportAdvice: null, reportAnswers: null,
+        reportClaims: [{
+          claimKind: 'commander-lost', claimRegion: phase0.headquartersOf(appointmentWorld, s0, army), claimValue: 0,
+          claimToken: 'killed', claimConfidence: appointmentWorld.map.world.rules.reportConfidence.commanderLoss,
+        }],
+      },
+    }, phase0.NO_TRUTH);
+    const { log } = phase0.playDays(appointmentWorld, told, () => seat, 2, { freeze: true });
+    const appointments = log.flatMap(({ day, command }) => command.cmd === 'appoint' ? [{ day, post: command.post, person: command.person }] : []);
+    expect(appointments).toEqual([{ day: 1, post: army, person: replacement }]);
     // Positive control: with the post held, nobody is appointed.
-    expect(phase0.playDays(world, s0, () => seat, 2, { freeze: true }).log.filter((e) => e.command.cmd === 'appoint')).toEqual([]);
+    expect(phase0.playDays(appointmentWorld, s0, () => seat, 2, { freeze: true }).log.filter((e) => e.command.cmd === 'appoint')).toEqual([]);
   });
 });

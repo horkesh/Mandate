@@ -3,11 +3,11 @@ import { toId, type PersonId, type SituationId } from '../src/ids.ts';
 import type { Command } from '../src/log/commands.ts';
 import type { LogEntry } from '../src/log/log.ts';
 import type { OrderValueRow } from '../src/people/verb-rules.ts';
-import { candidateOf } from '../src/plans/plans.ts';
 import { applyPeopleChanges } from '../src/people/people.ts';
 import { answerOrder, orderTerms, pushbackOf } from '../src/reading/orders.ts';
 import type { State } from '../src/root-state.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
+import { reviewsFor } from '../src/seats/requests.ts';
 import { indexSeatsWorld, type SeatsWorld } from '../src/seats/world.ts';
 import type { OptionDef, SituationDef } from '../src/situations/types.ts';
 import { createTelemetry } from '../src/telemetry.ts';
@@ -272,12 +272,11 @@ describe('an edit read against what the plan holds (lane 1.5b; finding of lane 1
     let edited: string | null = null;
     let sent = false;
     for (let day = 1; day <= 12 && edited === null; day++) {
-      const record = state.planRecords[POST('a_army')];
-      const reviewing = !sent && record?.planStatus === 'review';
-      // "Move now" on his chosen plan's first axis.
-      const axis = reviewing ? candidateOf(record!, record!.planChosen!)!.candAxes[0]!.axisName : null;
-      const commands: Command[] = day === 1 ? [take] : reviewing ? [{ cmd: 'review', to: POST('a_army'), action: 'edit', edit: { kind: 'timing', axis, region: null, via: [], concentration: 0 }, route: 'special-messenger', bypass: true }] : [];
-      if (reviewing) sent = true;
+      const review = sent ? undefined : reviewsFor(state, P('a_lead')).find((r) => r.post === POST('a_army'));
+      // "Move now" on the first axis in the commander's received plan.
+      const axis = review?.plan.axes[0]?.name ?? null;
+      const commands: Command[] = day === 1 ? [take] : review === undefined ? [] : [{ cmd: 'review', to: review.post, action: 'edit', edit: { kind: 'timing', axis, region: null, via: [], concentration: 0 }, route: 'special-messenger', bypass: true }];
+      if (review !== undefined) sent = true;
       const r = tick(wd, state, commands.map((command): LogEntry => ({ day, seat: lead, command })), { freeze: true });
       expect(r.rejections, `day ${day}`).toEqual([]);
       state = r.state;

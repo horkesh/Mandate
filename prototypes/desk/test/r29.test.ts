@@ -7,6 +7,7 @@ import {dayFrames,playbackSnapshot} from '../web/table.ts';
 import {presenter} from '../web/presentation.ts';
 import {claimWords,controlOpacity,CONTROL_COLOURS,sharedFront,contactMark} from '../web/map/control.ts';
 import {dispatchLog} from '../../../packages/cli/src/desk/dispatches.ts';
+import {deskStrings} from '../../../packages/cli/src/pack-text.ts';
 
 const geometry:MapGeometry={version:1,pack:'testbed',schematic:true,base:[],regions:[]};
 const belief=(report:string,holder='north')=>({shares:{north:holder==='north'?800:100,south:holder==='north'?100:800},holder,contested:false,asOfDay:2,mark:'pencil',sources:[{report,author:'staff',authorPost:'n_war_office',asOfDay:2}]});
@@ -74,9 +75,10 @@ it('R29 approves only submitted orders, forgets cancellation, and keeps sessions
 });
 it('R29 names the faction and government in control dispatches and keeps the opening readable',()=>{
  const game=new ConsoleGame({pack:'testbed'}),view=game.morning().view;
- expect(dispatchLog(view)[0]).toContain('opening country report');expect(dispatchLog(view)[0]!.length).toBeLessThan(400);
+ const t=deskStrings(game.strings,game.locale);
+ expect(dispatchLog(view,0,t)[0]).toContain('opening country report');expect(dispatchLog(view,0,t)[0]!.length).toBeLessThan(400);
  const source=view.reports[0]!;const paper={...source,openingControl:undefined,reportedControl:[{region:'w_valley',holder:'north',contested:false}],day:1,claims:[{kind:'control',token:'north',region:'w_valley',value:650,confidence:1000},{kind:'control-government',token:'border',region:'w_valley',value:1,confidence:1000}]} as any;
- const text=dispatchLog({...view,reports:[paper]})[0]!;expect(text).not.toMatch(/650|‰/);expect(text).toContain('neutral government border');
+ const text=dispatchLog({reports:[paper]},0,t)[0]!;expect(text).not.toMatch(/650|‰/);expect(text).toContain('neutral government border');
 });
 
 it('R32 hides share figures in hover text while naming holder and contested ground',()=>{

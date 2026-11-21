@@ -8,7 +8,9 @@
  * held report is kept beside it and dropped when no seat holds it.
  */
 import { strictCompare } from '../compare.ts';
-import type { MessageId, SeatId } from '../ids.ts';
+import type { MessageId, PostId, SeatId } from '../ids.ts';
+import type { TransitMessage } from '../messages/transit.ts';
+import { seatIdFor } from '../seats/seats.ts';
 import type { State } from '../root-state.ts';
 import { controlEvidence } from './control-beliefs.ts';
 import type { KnownReport } from './records.ts';
@@ -19,12 +21,41 @@ import type { ReportTruth } from './truth.ts';
 export type { KnownReport } from './records.ts';
 
 export interface SeatKnowledge {
+  /** At most the last goal and last review reply per post: copies of the principal's own sent letters. */
+  readonly knownSentOrders?: readonly KnownSentOrder[];
   /** In (received day, id) order. */
   readonly knownReports: readonly KnownReport[];
   /** Control excerpts of expired reports still supporting the map, in the same order. */
   readonly knownControlReports?: readonly KnownReport[];
   /** A shared day-zero bulletin. Its body lives in the opening report table. */
   readonly knownOpeningControl?: MessageId;
+}
+
+export interface KnownSentOrder {
+  readonly sentPost: PostId;
+  readonly sentMessage: MessageId;
+  readonly sentKind: 'goal' | 'approve' | 'send_back' | 'edit';
+  readonly sentDay: number;
+  readonly sentPaper: MessageId | null;
+}
+
+/** Knowledge owns the sender's copy, filed when a message first enters transit, never when its private answer changes. */
+export function rememberSentOrders(start: State, messages: readonly TransitMessage[]): State {
+  let state = start;
+  for (const message of messages) {
+    const order = message.msgOrder;
+    if (order === null || message.msgFrom !== order.orderIssuer || message.msgSentDay !== order.orderIssuedDay || !(['goal','approve','send_back','edit'] as const).some(k => k === order.orderKind)) continue;
+    const seat = seatIdFor(order.orderIssuer);
+    if (state.seatAssignments[seat] === undefined) continue;
+    const held = storedKnowledgeOf(state, seat);
+    const old = held.knownSentOrders ?? [];
+    if (old.some(o => o.sentMessage === message.msgOrigin)) continue;
+    const paper = [...held.knownReports].filter(r => r.knownBody.reportPlan?.paperPost === order.orderTarget).sort((a,b) => b.knownBody.reportDay - a.knownBody.reportDay || strictCompare(b.id,a.id))[0];
+    const row: KnownSentOrder = { sentPost: order.orderTarget, sentMessage: message.msgOrigin, sentKind: order.orderKind as KnownSentOrder['sentKind'], sentDay: order.orderIssuedDay, sentPaper: paper?.id ?? null };
+    const kept = old.filter(o => o.sentPost !== row.sentPost || (o.sentKind === 'goal') !== (row.sentKind === 'goal'));
+    state = { ...state, knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownSentOrders: [...kept,row].sort((a,b) => strictCompare(a.sentPost,b.sentPost) || strictCompare(a.sentKind,b.sentKind)) } } };
+  }
+  return state;
 }
 
 export const EMPTY_KNOWLEDGE: SeatKnowledge = Object.freeze({ knownReports: Object.freeze([]) });
@@ -134,7 +165,16 @@ export function pruneKnowledge(state: State, templates: readonly ReportTemplate[
       newest.set(k, Math.max(newest.get(k) ?? -1, stampOrder(r)));
     }
     const expiredControl: KnownReport[] = [];
+    const pendingPapers = new Map<string, KnownReport>();
+    for (const r of held.knownReports) if (r.knownBody.reportPlan !== undefined) {
+      const post = r.knownBody.reportPlan.paperPost;
+      const prior = pendingPapers.get(post);
+      if (prior === undefined || stampOrder(r) > stampOrder(prior)) pendingPapers.set(post,r);
+    }
     const kept = held.knownReports.filter((r) => {
+      // Keep only the latest enclosure per post beyond ordinary dispatch pruning. A late refusal can reopen it;
+      // the sender's bounded order copies still prevent an answered paper from becoming actionable again.
+      if (r.knownBody.reportPlan !== undefined && pendingPapers.get(r.knownBody.reportPlan.paperPost) === r) return true;
       const tpl = templateFor(templates, r.knownBody.reportType, r.knownBody.reportSubtype);
       const age = day - r.knownBody.reportDay;
       const aged = age > tpl.maxAgeDays;
@@ -164,6 +204,7 @@ export function pruneKnowledge(state: State, templates: readonly ReportTemplate[
       archive = candidates.filter((r) => sources.has(r.id)).sort(reportOrder);
     }
     next[seat] = {
+      ...held,
       knownReports: kept,
       ...(archive === undefined || archive.length === 0 ? {} : { knownControlReports: archive }),
       ...(held.knownOpeningControl === undefined ? {} : { knownOpeningControl: held.knownOpeningControl }),

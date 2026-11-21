@@ -15,7 +15,7 @@
 import type { BATTLE_ORDER_OPTIONS, CutOffChoice, NightChoice, Pursuit } from '../combat/order-kinds.ts';
 import type { NoteAccount } from '../knowledge/report.ts';
 import type { Commit } from '../combat/rules.ts';
-import type { FactionId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
+import type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import type { GoalTerms, SeatCommand } from '../log/commands.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { GoalView, SeatView } from '../view/types.ts';
@@ -95,8 +95,9 @@ export interface CommandablePost {
   /** Posts an order relays through on the way; going around them is `bypass`. */
   readonly relays: readonly PostId[];
   readonly routes: readonly RouteOption[];
-  /** Known men it commands (a block of unknown strength counts none). Lane 1.12. */
-  readonly men: number;
+  /** Latest received present-for-duty return; null means no figure has reached the principal. */
+  readonly men: number | null;
+  readonly strengthReport?: { readonly source: MessageId; readonly author: PersonId; readonly asOfDay: number } | null;
   /** Whether it is a post that raises regiments (a governor's): the blocks it commands are levies to concentrate. */
   readonly raising: boolean;
   /** The kinds of his orders and verbs to this post still on their way (`order`, `call`, `transfer`, `inquire`...). */
