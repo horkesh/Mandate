@@ -1,0 +1,5 @@
+boundary_id,citations,disposition,reason
+S22-B01,NEW:S22-OR-I-10-1 p566 dated 1863-02-07,EXCLUDE_OUTSIDE_WINDOW,[I] Hardee main Shiloh report is dated February 7 1863. The April 1862 battle does not move its later judgments into S22.
+S22-B02,NEW:S22-OR-I-16-1 p1088 dated 1863-05-20,EXCLUDE_LATER_DOCUMENT_ON_SAME_PAGE,[I] The May 20 1863 full narrative begins below the eligible October 12 1862 brief report and November order. Preserve document boundaries within the page.
+S22-B03,NEW:S22-OR-I-19-1 p226 dated undated,HOLD_DATE,[I] Doubleday Antietam report has a blank original date and an explicit memorandum about it. The September 26 date belongs to the next report and is not borrowed.
+S22-B04,NEW:S22-MCCLELLAN p160 dated retrospective+NEW:S22-MCCLELLAN p161 dated retrospective,EXCLUDE_NARRATIVE,[I] Later general recollections of relations with Lincoln and appointment conversations do not qualify as dated period judgments. The quoted diary fragment on p160 needs its own date and transmission before use.

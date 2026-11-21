@@ -1,0 +1,15 @@
+{
+  "officers": 239,
+  "cells": 717,
+  "assessments": 118,
+  "officers_with_selected_appraisals": 37,
+  "proposed_cells": 23,
+  "decisions": {
+    "HOLD": 694,
+    "CHANGE": 23
+  },
+  "proposed_by_cell": {
+    "competence": 5,
+    "nerve": 18
+  }
+}

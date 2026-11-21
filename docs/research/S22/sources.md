@@ -30,6 +30,18 @@ Search snippets and catalogue metadata discover editions; they supply no histori
 
 New source keys remain proposals. These are later government printings of identified period documents, not access to the original manuscripts. The OR pagination is the printed page; the scan manifest records the corresponding archive image. One guessed XVI-part-I identifier was rejected **before historical use**, segregated under `rejected-or16-identifier/`; the corrected volume is recorded when its selected pages are used. It supplies no finding from the rejected copy.
 
+## Final selected readings
+
+- `OR-I-16-1`: *War of the Rebellion*, I, XVI, part I, corrected scan [cu31924079609594](https://archive.org/details/cu31924079609594), pp1084–1085 and 1087–1088 read. Only Bragg's **12 October 1862** brief report supplies the delivered judgments, pp1087–1088. The **20 May 1863** narrative beginning on p1088 is excluded. The earlier McCook passage was not used without its document date.
+- `LINCOLN-CW2`: additional selected readings pp29–32, 164–166, 178–179, 198 and 219–221. Delivered additions use the **1 April 1861** exchange, **26–27 May**, **12 June**, **3 July** and **6 August 1862** documents, with their distinct targets and boundaries. No April memorandum is backdated to March 5. The speech's ambiguous final pronoun supplies no stat proposal.
+- `CHASE`: pp87–89 establish the **22 September 1862** entry and Chase's own appraisals of Lincoln and Seward. Policy context remains unsigned research, with no gate effect. Search excerpts from p105 identify a possible further witness but supply no new delivered judgment.
+- `WELLES`: pp165 and 168 read as **10 October 1862**. Chase's ability and administrative shortcomings stay together; a brief attribution of kindness to Lincoln does not clear broad regard. Search leads outside the November horizon are not used.
+- `OR-I-17-2`: pp627–628, 687–688 and 726–727 read for Bragg/Hardee, western partner expectations, Price/Van Dorn, Davis/Pemberton and Van Dorn's complaint to Randolph. Dates are **29 June**, **27 August**, **11–13 October**. Van Dorn's **12 October** telegram is marked received **13 October**; dispatch and receipt are not interchangeable.
+- `OR-I-19-1`: pp219–221 and 226 additionally read. McClellan's **20 September** Hooker letter is a distinct document from Hooker's November reports. Doubleday's missing original date is an explicit HOLD. Retained image checks confirm pp213 and 216.
+- `MCCLELLAN`: pp160–161 were read and excluded as later narrative; a quoted diary fragment needs its own date before use. Retained source-boundary renderings do not confer admissibility.
+
+All **17 delivered source groups / 119 cited-page images** are hashed in the external `source-inventory.json` and the repository scan manifest. The 119 includes exclusion proofs, not 119 qualifying judgment pages. Additional visual checks include Lincoln p220, OR I.10.1 p463, OR I.19.1 pp213/216 and OR I.16.1 p1088. No whole-volume reading, comprehensive search, manuscript collation or visual inspection of every retained page is claimed.
+
 ## Findings outside my scope
 
 - Collation with original manuscripts and review of a new contemporary-document source key remain for the research/source-policy owners. This lane changes no admissibility policy.

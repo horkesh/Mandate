@@ -1,33 +1,33 @@
 {
-  "observations": 123,
-  "directed_pairs": 94,
+  "observations": 169,
+  "directed_pairs": 132,
   "directions": {
-    "lower": 47,
-    "higher": 61,
-    "mixed": 13,
-    "undated-recollection": 1,
-    "insufficient": 1
+    "lower": 49,
+    "higher": 99,
+    "mixed": 15,
+    "": 6
   },
   "decisions": {
-    "CHANGE": 108,
-    "HOLD": 15
+    "CHANGE": 148,
+    "HOLD": 21
   },
   "sources": {
     "NEW:S22-MCCLELLAN": 7,
-    "NEW:S22-LINCOLN-CW2": 4,
-    "NEW:S22-CHASE": 22,
-    "NEW:S22-WELLES": 23,
+    "NEW:S22-LINCOLN-CW2": 12,
+    "NEW:S22-CHASE": 24,
+    "NEW:S22-WELLES": 25,
     "NEW:S22-OR-I-7": 11,
     "NEW:S22-OR-I-10-2": 1,
     "NEW:S22-SHERMAN-LETTERS": 4,
     "NEW:S22-OR-IV-1a": 3,
     "NEW:S22-OR-I-5": 13,
-    "NEW:S22-OR-I-10-1": 9,
+    "NEW:S22-OR-I-10-1": 27,
     "NEW:S22-OR-I-12-3": 1,
     "NEW:S22-OR-I-19-2": 8,
     "NEW:S22-OR-IV-2": 1,
     "NEW:S22-OR-I-16-2": 3,
-    "NEW:S22-OR-I-17-2": 3,
-    "NEW:S22-OR-I-19-1": 10
+    "NEW:S22-OR-I-17-2": 10,
+    "NEW:S22-OR-I-19-1": 14,
+    "NEW:S22-OR-I-16-1": 5
   }
 }

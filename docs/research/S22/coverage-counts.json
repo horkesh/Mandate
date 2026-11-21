@@ -1,0 +1,9 @@
+{
+  "candidate_directed_pairs": 252,
+  "statuses": {
+    "HOLD_NOT_ESTABLISHED_IN_SELECTED_READING": 120,
+    "DATED_DIRECTION_FOUND": 122,
+    "DATED_RECORD_HELD": 10
+  },
+  "no_record_holds": 120
+}
