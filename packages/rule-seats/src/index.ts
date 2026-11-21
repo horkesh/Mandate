@@ -203,7 +203,7 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   for (const v of menu.vacancies) {
     if (v.appointing || appointedPosts.has(v.post)) continue;
     const kinds = doctrine.appointKinds[v.arm];
-    const man = menu.candidates.find((c) => kinds.includes(c.kind) && !appointed.has(c.person));
+    const man = menu.candidates.find((c) => kinds.includes(c.kind) && !appointed.has(c.person) && !(menu.historicalAppointees ?? []).includes(c.person));
     const route = quickest(v.routes);
     if (man === undefined || route === undefined) continue;
     appointed.add(man.person);

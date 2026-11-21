@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { ids, phase0, world as w } from '@mandate/kernel';
+import { ids, phase0 } from '@mandate/kernel';
 import { createRuleSeat } from '@mandate/rule-seats';
 import { seatsWorld } from '../../../packages/cli/src/seats-world.ts';
 
@@ -30,17 +30,31 @@ describe('northern Virginia concentration follows sourced commands and Virginiaâ
     const answer = rules.respond(m.request);
     expect(answer).toMatchObject({ answerKind: 'commands', commands: expect.arrayContaining([expect.objectContaining({ cmd: 'appoint', post: P('cs_cmd_manassas'), from: P('cs_cmd_charleston') })]) });
   });
-  it('makes Johnston eligible on 15 May after a fixture supplies his missing service change', () => {
-    const base=seatsWorld('union-1861');
-    // Integration control only: represent the prerequisite supplied by the separate resignation owner.
-    const map=w.indexWorld({ ...base.world.map.world, people:base.world.map.world.people.map(p=>p.id==='johnston_joseph_e'?{...p,faction:CS}:p) });
-    const world=phase0.indexSeatsWorld(map,{...base.world.start,posts:base.world.start.posts.map(p=>p.id==='us_war_quartermaster_general'?{...p,holder:null}:p)},{situations:base.world.situations});
-    const start=phase0.createState(world,base.setup);
-    const state={...start,stateDay:70,situationFlags:{...start.situationFlags,war_begun_confederate:38},departmentFactions:{...start.departmentFactions,[VA]:CS}};
-    const request=phase0.pendingRequests(world,state).find(r=>r.menu.menuKind==='principal' && r.menu.faction===CS)!;
-    expect(request.menu).toMatchObject({doctrine:{appointments:expect.arrayContaining([expect.objectContaining({post:'cs_cmd_harpers_ferry',ready:true})])}});
-    const answer=rules.respond(request);
-    expect(answer).toMatchObject({answerKind:'commands',commands:expect.arrayContaining([expect.objectContaining({cmd:'appoint',post:'cs_cmd_harpers_ferry',person:'johnston_joseph_e'})])});
+  it('makes Johnston eligible on the sourced May 23 assumption only after his ordinary resignation', () => {
+    const { world, setup } = seatsWorld('union-1861');
+    const johnston = ids.toId('person', 'johnston_joseph_e');
+    const initial = phase0.createState(world, setup);
+    expect(phase0.sideOfPerson(world.map, initial, johnston)).toBe(ids.toId('faction', 'union'));
+    const before = phase0.playDays(world, initial, () => rules, 77, { freeze: true }).state;
+    expect(before.personService?.[johnston]).toMatchObject({ serviceChoice: 'resign', serviceFaction: CS, serviceDay: 48 });
+    expect(before.postStates[P('cs_cmd_harpers_ferry')]).toBeUndefined();
+    const early = phase0.pendingRequests(world, before).find(r => r.menu.menuKind === 'principal' && r.menu.faction === CS)!;
+    expect(early.menu).toMatchObject({ doctrine: { appointments: expect.arrayContaining([expect.objectContaining({ post: P('cs_cmd_harpers_ferry'), ready: false })]) } });
+    const eve = phase0.playDays(world, before, () => rules, 1, { freeze: true }).state;
+    const request = phase0.pendingRequests(world, eve).find(r => r.menu.menuKind === 'principal' && r.menu.faction === CS)!;
+    expect(request.menu).toMatchObject({ doctrine: { appointments: expect.arrayContaining([expect.objectContaining({ post: P('cs_cmd_harpers_ferry'), ready: true })]) } });
+    const answer = rules.respond(request);
+    if (answer.answerKind !== 'commands') throw Error('expected commands');
+    const command = answer.commands.find(c => c.cmd === 'appoint' && c.post === P('cs_cmd_harpers_ferry'))!;
+    expect(command).toMatchObject({ person: johnston });
+    const arrived = phase0.tick(world, eve, [{ day: 79, seat: request.requestSeat, command }], { freeze: true });
+    expect(arrived.rejections).toEqual([]);
+    expect(arrived.state.postStates[P('cs_cmd_harpers_ferry')]?.postHolder).toBe(johnston);
+    const withoutAppointment = phase0.tick(world, eve, [], { freeze: true });
+    expect(Object.keys(arrived.state.forceBlockStates)).toEqual(Object.keys(withoutAppointment.state.forceBlockStates));
+    const row = world.map.world.rules.ruleSeats.principals.find(r => r.faction === CS)!.appointments!.find(a => a.post === P('cs_cmd_harpers_ferry'))!;
+    expect(row).toMatchObject({ fromDate: '1861-05-23' });
+    expect(row.source).toContain('470');
   });
   it('opens the command only after delivery, then selects it for concentration', () => {
     const m = menu(true, 87);

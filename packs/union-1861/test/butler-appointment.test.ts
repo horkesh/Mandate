@@ -17,7 +17,7 @@ describe('R89: Butler’s superior command, with Dimick’s garrison retained', 
     const start = phase0.createState(world, setup);
     // Scott's order is 18 May (Butler Correspondence I, pp. 94–95). His 24 May report dates arrival to
     // Wednesday morning (ibid. p. 104; OR I-2 p. 648), 22 May. R89 uses that effective date at daily granularity [I].
-    const row = world.map.world.rules.ruleSeats.principals.find((r) => r.faction === 'union')!.appointments;
+    const row = world.map.world.rules.ruleSeats.principals.find((r) => r.faction === 'union')!.appointments?.filter(a => a.post === department);
     expect(row).toEqual([expect.objectContaining({ post: department, person: person('butler_benjamin_f'), onDate: '1861-05-22' })]);
     expect(row![0]!.source).toContain('94-95');
     expect(row![0]!.source).toContain('648');

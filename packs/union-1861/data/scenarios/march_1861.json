@@ -740,6 +740,8 @@
 "temporaryPosts": [
 {"department":"cs_war","holder":"johnston_joseph_e","id":"cs_cmd_harpers_ferry","kind":"army_command","name":"post.cs_cmd_harpers_ferry.name","operation":"shenandoah_command","parent":"cs_secretary_war","region":"harpers_ferry"},
 {"department":"cs_war","holder":"beauregard_pierre_g_t","id":"cs_cmd_manassas","kind":"army_command","name":"post.cs_cmd_manassas.name","operation":"alexandria_command","parent":"cs_secretary_war","region":"manassas"},
+{"department":"us_war","holder":null,"id":"us_dept_northeastern_virginia","kind":"temporary_appointment","name":"post.us_dept_northeastern_virginia.name","operation":"northeastern_virginia_command","parent":"us_general_in_chief","region":"northern_virginia"},
+{"department":"us_war","holder":null,"id":"us_dept_pennsylvania","kind":"temporary_appointment","name":"post.us_dept_pennsylvania.name","operation":"pennsylvania_command","parent":"us_general_in_chief","region":"philadelphia"},
 {"department":"us_war","holder":null,"id":"us_dept_virginia","kind":"temporary_appointment","name":"post.us_dept_virginia.name","operation":"fort_monroe_command","parent":"us_general_in_chief","region":"fort_monroe"},
 {"department":"us_war","holder":"fox_gustavus_v","id":"us_sumter_relief_expedition","kind":"temporary_command","name":"post.us_sumter_relief_expedition.name","operation":"sumter_relief","parent":"us_secretary_war","region":"new_york"}
 ]

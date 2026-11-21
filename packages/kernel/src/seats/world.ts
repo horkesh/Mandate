@@ -412,7 +412,7 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
       called.add(key);
     });
     r.offensives.forEach((o, j) => {
-      onSide(o.post, `offensives[${j}].post`);
+      onDeclaredSide(o.post, `offensives[${j}].post`);
       if (!map.regions.has(o.objective)) problems.push(`${at}.offensives[${j}]: ${o.objective} is not a region`);
     });
     const appointed = new Set<string>();

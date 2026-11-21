@@ -1,5 +1,15 @@
 # Lane 1.12: rule-seat principals and commander seats (Parts A and B)
 
+## Current S1 command-roster integration (2026-11-21)
+
+This supersedes the older R98 stop reports below: S1 has merged the five requested branches and R97, preserving main's normal resignation and both appointment contracts. The full eight-seed integration check passes every non-timing Phase 0 criterion; timing is S2's, and pushback/D6 remain unmet.
+
+S1 now supplies Patterson 27 April and McDowell 28 May effective appointments, using the read GO 12/GO 26 and OR I-2 pp. 1-2, 59-60. Commands start unopened, are created by accepted normal appointments and create no troops. The old DC concentration and July 16 offensive use McDowell's new department [I]. A rules-only future-appointee reservation prevents an earlier generic vacancy taking either man; human/AI menus gain no historical offers. Johnston's opening waits until his sourced 23 May assumption (OR I-2 p. 470), his day 48 ordinary resignation and Virginia's side. No starting faction is rewritten.
+
+Both intermediate 148-day histories have zero rejected commands and fight at Manassas under McDowell/Beauregard on 25-29 July: Union/Confederate 45,600/40,000 first day, 43,532/53,932 last day. These are model strengths. Both retain passing checkpoints/operation/unknown-strength, while the same five pushback bands fail. Mechanical-only recentering and the named live pocket driver preserve the Phase 0 contract. Exact daily table, hashes, source distinctions, positive-control tests and proposed rulings: `notes/lane-1.14-done-check.md`, S1 dated command placements. Evidence: `runs/s1/appointments*`, `johnston*`. The command-roster hook is next; national paths and test gaps remain open.
+
+Proposed [I]: effective assumption dates through ordinary delivery, future rule-seat candidate reservations, guarded declared-post offensives and the explicit aggregate concentration approximation. Reject starting-side changes, date-created armies and forced junctions. Patterson's 27 July discharge remains a sourced lifecycle limitation; these appointment rows do not implement retirement. Independent review/signatures remain Claude's after 0106; nothing is signed here.
+
 Main merged at `364aba0` on 2026-11-19, by R46. R48 starts from the committed merge at `8b15e6e`, in `C:/Pyrrhic/mandate-rule-seats-b`, branch `phase1-rule-seats-b`.
 
 ## Where lane 1.12 stopped (2026-11-20, R98)

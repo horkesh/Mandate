@@ -1660,6 +1660,16 @@
       "copyUsed": "https://www.loc.gov/resource/sn83030313/1861-04-09/ed-1/?sp=2&st=text; Charleston correspondence dated 3 April, Pettigrew rifles 450; LOC original text checked independently of a newspaper mirror. Retained in C:/Pyrrhic/mandate-research-sources/S1/LOC-herald-1861-04-09-p2.md.",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "GO1861",
+      "title": "General Orders of the War Department, 1861-1863",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://archive.org/download/generalordersofw00unit/generalordersofw00unit_djvu.txt; GO12 p.31, GO16 pp.36-40 (p.40 scanned table visually checked), GO26 p.61, GO46 pp.83-84, July 29 act section 5 p.101. Read entries retained in C:/Pyrrhic/mandate-research-sources/S1/.",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }
