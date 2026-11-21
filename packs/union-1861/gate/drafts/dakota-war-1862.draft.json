@@ -1,0 +1,146 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "dakota-war-1862",
+  "subject": "nations",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": false,
+    "entrySha256": null,
+    "status": null,
+    "needsSource": null
+  },
+  "entry": {
+    "id": "dakota-war-1862",
+    "class": "native-nations",
+    "window": {
+      "from": "1862-08-18",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "event",
+      "derived",
+      "text"
+    ],
+    "status": "record",
+    "interim": null,
+    "agencyReasons": [
+      "agency:dakota-deliberation",
+      "agency:dakota-surrender"
+    ],
+    "protectedGroups": [
+      "Dakota",
+      "Dakota people",
+      "Dakota families",
+      "Native nations",
+      "Native men",
+      "Native women",
+      "Black Creeks",
+      "Cherokee",
+      "Muscogee",
+      "Creek people",
+      "Seminole",
+      "Choctaw",
+      "Chickasaw"
+    ],
+    "protectedFields": [
+      "dakota_population",
+      "dakota_prisoner_population"
+    ],
+    "refused": [
+      {
+        "optionPattern": "(?:execute|hang|kill|deport|allocate|recruit)[a-z_-]*(?:dakota|native|indians?|prisoners?)",
+        "reason": "No execution/deportation/population allocation lever is cleared; R3 remains held."
+      },
+      {
+        "fieldPattern": "(?:^|[-_])(?:dakota|native)[-_](?:manpower|pool|execution_score|removal_bonus)(?:$|[-_])",
+        "reason": "Protected people are not manpower, a stock or a score (0021; 0026)."
+      }
+    ]
+  },
+  "sources": [
+    "big-eagle"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "SENSITIVE-HISTORY section 3 entry for this topic",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "event",
+      "recommendation": "[I] For R3 only: causes, divisions and surrender experiences must include Dakota testimony with its provenance. Trial/execution choices are not cleared.",
+      "evidence": [
+        "big-eagle"
+      ]
+    },
+    {
+      "placement": "derived",
+      "recommendation": "[I] For R3 only: people’s responses, not a player-managed nation/population. All atrocity conduct must also carry the applicable atrocity class/sign/dependency checks.",
+      "evidence": [
+        "big-eagle"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] Big Eagle’s mediated 1894 account narrows the voice gap; it does not clear trials, detention deaths or removals. No interim text permission introduced.",
+      "evidence": [
+        "big-eagle"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] Each reason names people’s own choices responding to conditions; protected inputs have no player writer. The ids are candidate vocabulary, not implemented terms.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "Dakota"
+      },
+      {
+        "term": "Mankato"
+      },
+      {
+        "term": "Acton"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Big Eagle is one participant, not a single Dakota will. His Acton narrative is secondhand and his surrender expectation is remembered.",
+      "December review/executions and 1863 removal are beyond November. Do not silently decide the 38/39 question or supply a clemency menu.",
+      "Treat civilians and captives as people; do not repeat the editor’s civilization/barbarism opposition as narrator language."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "Big Eagle later recalled disagreement among Dakota people.",
+        "rejectExample": "Choose executions to improve Minnesota loyalty.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "atrocity",
+    "agency",
+    "scoring",
+    "hindsight"
+  ],
+  "reviewDependencies": [
+    "R3",
+    "0074 Dakota exception"
+  ],
+  "remaining": [
+    "R3 remains a ship-blocker/no interim; commission records, individual recommendations, confinement deaths and removal sources remain held."
+  ],
+  "proposedRuling": "[I] Keep record/no interim and propose only bounded voice support. Refuse an execution lever pending R3; reject treating the interview as a trial-file substitute.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

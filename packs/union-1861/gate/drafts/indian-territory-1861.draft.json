@@ -1,0 +1,196 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "indian-territory-1861",
+  "subject": "nations",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "e738024a257f880c594e2372a5eae685aa1c0bc27c9047d70afd34a3179beaf6",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "indian-territory-1861",
+    "class": "native-nations",
+    "window": {
+      "from": "1861-03-04",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "derived",
+      "event",
+      "text"
+    ],
+    "status": "open",
+    "protectedFields": [
+      "nation-population",
+      "native-population",
+      "nation-enslaved-population"
+    ],
+    "protectedGroups": [
+      "Cherokee",
+      "Cherokees",
+      "Muscogee",
+      "Creek Nation",
+      "Creek people",
+      "Upper Creeks",
+      "Lower Creeks",
+      "Seminole",
+      "Seminoles",
+      "Choctaw",
+      "Choctaws",
+      "Chickasaw",
+      "Chickasaws",
+      "Wichita",
+      "Wichitas",
+      "Caddo",
+      "Caddos",
+      "Waco",
+      "Tonkawa",
+      "Anadarko",
+      "Kichai",
+      "Penateka",
+      "Comanche",
+      "Comanches",
+      "Great Osage",
+      "Osage people",
+      "Osages",
+      "Quapaw",
+      "Quapaws",
+      "Senecas",
+      "Seneca people",
+      "Shawnees",
+      "Delawares",
+      "Indian Territory",
+      "Indian nations",
+      "Indians",
+      "Native nations",
+      "Native men",
+      "Native people",
+      "Native peoples",
+      "Dakota",
+      "Dakota people",
+      "Dakota families",
+      "Native women",
+      "Black Creeks"
+    ],
+    "agencyReasons": [
+      "agency:nation-council",
+      "agency:nation-neutrality",
+      "agency:nation-treaty",
+      "agency:native-enlistment",
+      "agency:loyalist-flight"
+    ],
+    "refused": [
+      {
+        "fieldPattern": "(?:^|[-_.:/])(?:nation|native|indian|tribal|tribe)s?[-_.:/](?:population|people|men|manpower|labou?r|warriors?|recruits?|recruitment|enlistments?|levy|levies|draft|quotas?|pool)(?:$|[-_.:/])|(?:^|[-_.:/])(?:manpower|recruits?|recruitment|enlistments?|levy|levies|draft|quotas?)[-_.:/](?:nation|native|indian|tribal|tribe)s?(?:$|[-_.:/])",
+        "reason": "no seat recruits Native nations or Native men, or counts them as manpower: a nation's people are never a pool either side draws on (SENSITIVE-HISTORY 3.7, refused; 0021)"
+      },
+      {
+        "fieldPattern": "(?:^|[-_.:/])(?:manpower|recruit(?:s|ment|ments|ing)?|enlist(?:s|ment|ments|ing)?|levy|levies|draft(?:s|ing)?|conscript(?:s|ion)?|quotas?|volunteers?|labou?r|warriors?|population)(?:$|[-_.:/])",
+        "subjectPattern": "^(?:nation_|it_)",
+        "reason": "recruitment, manpower or population aimed at a nation's government or its land (the nations' departments, their regions and the Leased District) treats its people as a pool, which no seat may draw on (SENSITIVE-HISTORY 3.7, refused; 0070)"
+      },
+      {
+        "optionPattern": "(?:recruit|levy|raise|draft|conscript|enlist|muster|call_out|call_up)[a-z_]*(?:nation|native|indian|tribe|tribal|warrior|brave|cherokee|muscogee|creek|seminole|choctaw|chickasaw|wichita|caddo|comanche|osage|quapaw|seneca|shawnee|delaware)",
+        "labelPattern": "\\b(?:recruit|levy|raise|draft|conscript|muster|call (?:out|up))\\w*\\b.{0,40}\\b(?:Cherokees?|Muscogee|Creeks?|Seminoles?|Choctaws?|Chickasaws?|Wichitas?|Caddos?|Comanches?|Osages?|Quapaws?|Senecas?|Shawnees?|Delawares|Indians?|Native|warriors?|braves?|tribes?)\\b",
+        "reason": "no principal has a verb to recruit Native nations or Native men: their enlistment, on either side, is their own choice, derived from conditions and policy (SENSITIVE-HISTORY 3.7, refused; rule 5)"
+      },
+      {
+        "optionPattern": "(?:annex|seize|possess|claim)[a-z_]*(?:nation|native|indian|tribe|tribal|cherokee|muscogee|creek|seminole|choctaw|chickasaw|wichita|caddo|comanche|osage|quapaw|seneca|shawnee|delaware|territory)",
+        "labelPattern": "\\b(?:annex|take possession of|claim)\\w*\\b.{0,40}\\b(?:Cherokees?|Muscogee|Creeks?|Seminoles?|Choctaws?|Chickasaws?|Wichitas?|Caddos?|Comanches?|Osages?|Quapaws?|Senecas?|Shawnees?|Delawares|Indians?|Indian Territory|Native|nations?|tribes?)\\b",
+        "reason": "a nation is never either side's possession: only its own act changes its side or closes its land (0069, 0070)"
+      }
+    ]
+  },
+  "sources": [
+    "native-1862"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "event",
+      "recommendation": "[I] Continue nations’ own councils, treaties and changes of side, not Confederate possessions. 1862 refugees and campaigns require their own voices/source bounds.",
+      "evidence": [
+        "native-1862"
+      ]
+    },
+    {
+      "placement": "derived",
+      "recommendation": "[I] Nation decisions, neutrality, enlistment and loyalist flight remain agency terms; diplomacy is not a manpower allocation.",
+      "evidence": [
+        "native-1862"
+      ]
+    },
+    {
+      "placement": "text",
+      "recommendation": "[I] Retain internal divisions and slavery within nations. Refugee estimates differ in date/population; no single pooled Native will or erased Black Creeks.",
+      "evidence": [
+        "native-1862"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] Each reason names people’s own choices responding to conditions; protected inputs have no player writer. The ids are candidate vocabulary, not implemented terms.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "Indian Territory"
+      },
+      {
+        "term": "Cherokees?"
+      },
+      {
+        "term": "Muscogee"
+      },
+      {
+        "term": "Creek (?:Nation|people)"
+      },
+      {
+        "term": "Native nations?"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "GCF’s treaty list/summary is not full treaty text. Contested Reserve/Leased District interpretation remains held.",
+      "No invented words/aim for Opothleyahola or the chiefs’ petition. A nation’s alliance is its own act; no annex/recruit label."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The nation’s council chose its position.",
+        "rejectExample": "Recruit the Native nations as a reserve of manpower.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "agency",
+    "resource"
+  ],
+  "reviewDependencies": [
+    "0069",
+    "0070",
+    "R3"
+  ],
+  "remaining": [
+    "R3’s seat/protection questions, treaty-text disputes, refugee denominators and missing request voice remain with the reviewer/research owner."
+  ],
+  "proposedRuling": "[I] Carry existing 0069/0070 agency envelope and all nation-target refusals; reject a unified Native faction or blanket source lift.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}
