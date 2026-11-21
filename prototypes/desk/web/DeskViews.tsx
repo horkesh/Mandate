@@ -58,6 +58,7 @@ export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,se
   const maxDays=data.morning.turnStops?.maxDays??7;
   const [days,setDays]=useState(maxDays);
   const calls=menu.menuKind==='principal'?menu.doctrine.calls.filter(c=>c.id&&!c.issued&&c.day<=data.morning.requestDay&&(menu.atWarSince!==null||c.atPeace===true)&&menu.raising.some(p=>p.post===c.post)):[];
+  const advances=menu.menuKind==='principal'&&menu.atWarSince!==null?menu.doctrine.offensives.filter(o=>o.day<=data.morning.requestDay):[];
   const {name}=presenter(data.strings);
  return <><p className="margin-note">{S.runNote}</p>
   {menu.menuKind==='principal'&&(menu.reviews.length>0||menu.awaiting.length>0)&&<section data-testid="pending-plans" aria-live="polite">
@@ -65,8 +66,8 @@ export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,se
    {menu.awaiting.length>0&&<p>{S.planGoCount(menu.awaiting.length)}</p>}
    <button disabled={busy} onClick={onPlans}>{S.openPlans}</button>
   </section>}
-  {menu.menuKind==='principal'&&menu.doctrine.offensives.length>0&&<section className="advance-agenda" data-testid="advance-agenda"><h3>{S.proposedAdvances}</h3><p>{S.advanceDateNote}</p>
-   {menu.doctrine.offensives.map(o=>{const status=ownGoalStatus(data,o.post,o.objective),post=menu.commandable.find(p=>p.post===o.post);
+  {menu.menuKind==='principal'&&advances.length>0&&<section className="advance-agenda" data-testid="advance-agenda"><h3>{S.proposedAdvances}</h3><p>{S.advanceDateNote}</p>
+   {advances.map(o=>{const status=ownGoalStatus(data,o.post,o.objective),post=menu.commandable.find(p=>p.post===o.post);
     return <article key={`${o.post}:${o.day}:${o.objective}`}><h4>{name(o.post,'post')}</h4><p><time>{deskDate(data,o.day)}</time>: {name(o.objective,'region')}</p>
      {status?<p role="status">{status==='queued'?S.goalQueued:S.goalDispatched}</p>:post?<button disabled={busy||!onOrder} onClick={()=>onOrder?.(`order ${o.post} take ${o.objective} review`)}>{S.reviewGoalOrder}</button>:<p>{S.advanceUnavailable}</p>}
     </article>;

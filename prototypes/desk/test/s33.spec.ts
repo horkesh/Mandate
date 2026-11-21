@@ -19,9 +19,11 @@ test('S33 startup preflight',async({page,request})=>{
  await page.getByRole('navigation',{name:S.deskObjects}).getByRole('button',{name:S.orders,exact:true}).click();
  await expect(page.getByRole('textbox',{name:S.command,exact:true})).toBeVisible();await rest(page);
  await page.getByRole('button',{name:S.run,exact:true}).click();await expect(page.getByLabel(S.turnDays)).toHaveValue('7');
+ await expect(page.getByTestId('advance-agenda')).toHaveCount(0);
  expect((await request.get('/server/adapter.ts')).status()).toBe(404);
 });
 test('S33 press the advance through goal, arrow edit and approval',async({page,request})=>{
+ const discovery=process.env.S33_DISCOVERY==='1';
  let data=await(await request.get('/api/desk')).json() as DeskSnapshot;
  mkdirSync(out,{recursive:true});writeFileSync(`${out}/commands.jsonl`,'');
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
@@ -34,15 +36,20 @@ test('S33 press the advance through goal, arrow edit and approval',async({page,r
  async function book(name:string){await rest(page);await page.getByRole('navigation',{name:S.deskObjects}).getByRole('button',{name,exact:true}).click();}
  async function sign(line:string){await book(S.orders);await page.getByRole('textbox',{name:S.command,exact:true}).fill(line);const r=await act(()=>page.getByRole('button',{name:S.sign,exact:true}).click());await rest(page);if(r.turn)await page.getByRole('button',{name:S.nextMorning,exact:true}).click();return r;}
  // Re-enter the unchanged S29 human prefix through the visible order sheet, never a saved State.
- const prefix=readFileSync(resolve('../../../ByOrderOfThePresident/art-masters/S29/completed-history/browser-commands.jsonl'),'utf8').trim().split(/\r?\n/).map(l=>JSON.parse(l));
- // The completed S29 record keeps its earlier UI prefix separately.
- const earlier=readFileSync(resolve('../../../ByOrderOfThePresident/art-masters/S29/completed-history/resume-prefix.jsonl'),'utf8').trim().split(/\r?\n/).map(l=>JSON.parse(l));
- const commands=[...earlier,...prefix];
+ const prefixPath=resolve(discovery?'../../../ByOrderOfThePresident/art-masters/S33/press-advance/commands.jsonl':'../../../ByOrderOfThePresident/art-masters/S29/completed-history/resume-prefix.jsonl');
+ const commands=readFileSync(prefixPath,'utf8').trim().split(/\r?\n/).map(l=>JSON.parse(l));
  let count=0;
  for(const entry of commands){if(entry.day>=133)break;expect(data.morning.requestDay).toBe(entry.day);await sign(entry.line);count++;}
- expect(data.morning.requestDay).toBe(133);save('prefix.json',{commands:count,day:133,source:'S29 completed-history UI command records'});
+ expect(data.morning.requestDay).toBe(133);save('prefix.json',{commands:count,day:133,source:prefixPath,sha256:hash(prefixPath)});
  await capture(page,'advance-morning',data);
- await sign('order us_dc_militia take manassas review');
+ if(discovery){
+  await page.getByRole('button',{name:S.run,exact:true}).click();
+  await expect(page.getByTestId('advance-agenda')).toContainText('1861-07-16');
+  for(const size of [{width:3440,height:1440},{width:1920,height:1080}]){await page.setViewportSize(size);await capture(page,`advance-agenda-${size.width}`,data);}
+  await page.getByRole('button',{name:S.reviewGoalOrder,exact:true}).click();
+  const goal=await act(()=>page.getByRole('button',{name:S.sign,exact:true}).click());
+  expect(goal.snapshot.queue.at(-1)?.line).toBe('order us_dc_militia take manassas review');await rest(page);await page.setViewportSize({width:3440,height:1440});
+ }else await sign('order us_dc_militia take manassas review');
  const seen=new Set<string>();let edited=false,approved=false;
  while(data.morning.requestDay<=148){
   const day=data.morning.requestDay,menu=data.morning.menu;if(menu.menuKind!=='principal')throw Error('principal');
@@ -51,17 +58,30 @@ test('S33 press the advance through goal, arrow edit and approval',async({page,r
    if(kind==='goal'||kind==='order')await sign('order us_dc_militia take manassas review by=wire bypass');
   }
   if(menu.reviews.some(r=>r.post==='us_dc_militia')&&!edited){
+   if(discovery){
+    await expect(page.locator('#plan-pending-count')).toContainText('1 plan awaiting review');
+    await capture(page,`review-badge-${day}`,data);
+    await page.getByRole('button',{name:S.run,exact:true}).click();await expect(page.getByTestId('pending-plans')).toContainText('1 plan awaiting review');
+    await page.getByRole('button',{name:S.openPlans,exact:true}).click();
+   }
    await book(S.plans);await expect(page.locator('.map-plan-sheet')).toBeVisible();
    await capture(page,`review-${day}`,data);
    const review=menu.reviews.find(r=>r.post==='us_dc_militia')!,axis=review.plan.axes.find(a=>a.regions.length>2)!;
+   if(discovery){
+    await expect(page.locator('.map-plan-sheet')).toContainText(M.plannedArrival(Math.ceil(axis.arrival/1000)));
+    await expect(page.locator('.map-plan-sheet')).toContainText(M.approvalMeaning);
+    await page.getByLabel(M.deliveryRoute,{exact:true}).selectOption('wire');await page.getByLabel(M.bypass,{exact:true}).check();
+    for(const size of [{width:3440,height:1440},{width:1920,height:1080}]){await page.setViewportSize(size);await page.locator('.map-plan-sheet').evaluate(e=>e.scrollTop=0);await capture(page,`review-delivery-${day}-${size.width}`,data);await page.locator('.axis-sheet').first().scrollIntoViewIfNeeded();await capture(page,`review-timing-${day}-${size.width}`,data);}
+    await page.setViewportSize({width:3440,height:1440});
+   }
    await page.getByLabel(M.chooseAxis,{exact:true}).selectOption(axis.name);await page.getByLabel(M.chooseRegion,{exact:true}).selectOption(axis.regions[1]!);
    await act(()=>page.getByRole('button',{name:M.markWaypoint,exact:true}).click());await expect(page.locator('.pencil-list li')).toHaveCount(1);await capture(page,`arrow-${day}`,data);
    await act(()=>page.getByRole('button',{name:M.order,exact:true}).click());
    await act(()=>page.getByRole('button',{name:S.approve,exact:true}).click());edited=true;approved=true;
    // Review route defaults traverse Scott. Keep terms, but use the lawful order sheet to bypass his already received objection.
    const slips=data.queue.filter(q=>/^(edit|approve) /.test(q.line));
-   for(let i=0;i<slips.length;i++)await sign(`cancel ${data.queue.length}`);
-   for(const q of slips)await sign(`${q.line} by=wire bypass`);
+   if(discovery)expect(slips.map(q=>q.line)).toEqual(['edit us_dc_militia waypoints axis=main via=northern_virginia by=wire bypass','approve us_dc_militia by=wire bypass']);
+   else{for(let i=0;i<slips.length;i++)await sign(`cancel ${data.queue.length}`);for(const q of slips)await sign(`${q.line} by=wire bypass`);}
   }
   for(const c of menu.doctrine.calls.filter(c=>c.id&&!c.issued&&c.day<=day))await sign(`call ${c.post} scheduled=${c.id}`);
   for(const post of menu.awaiting)await sign(`go ${post} by=wire bypass`);
@@ -75,4 +95,5 @@ test('S33 press the advance through goal, arrow edit and approval',async({page,r
  save('final.json',data);const reports=data.history.flatMap(t=>t.days.flatMap(d=>d.reports));const battle=reports.filter(r=>r.claims.some(c=>c.region==='manassas'&&['battle-phase','battle-result'].includes(c.kind)));
  save('result.json',{throughDay:148,edited,approved,errors,battle});
  expect(edited).toBe(true);expect(approved).toBe(true);expect(errors).toEqual([]);expect(battle.length,'Manassas dispatch reaches this human desk by 31 July').toBeGreaterThan(0);
+ if(discovery){const previous=JSON.parse(readFileSync(resolve('../../../ByOrderOfThePresident/art-masters/S33/press-advance/final.json'),'utf8'));expect(data.morning).toEqual(previous.morning);expect(data.history).toEqual(previous.history);expect(data.queue).toEqual(previous.queue);save('equivalence.json',{morning:true,history:true,queue:true,reference:'press-advance/final.json',sha256:hash(resolve('../../../ByOrderOfThePresident/art-masters/S33/press-advance/final.json'))});}
 });
