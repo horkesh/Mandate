@@ -106,7 +106,7 @@ export class ConsoleSession {
     for (const d of result.days) {
       lines.push(...dayLines({ day: d.day, date: d.date, reports: d.reports, refused: d.refused.map((r) => ({ what: commandText(r.command as phase0.SeatCommand, this.t), reason: r.reason })) }, this.t));
     }
-    lines.push(result.stopped === 'week' ? 'A week has passed.' : `The turn stops: ${result.stopped.join(', ')}.`);
+    lines.push(result.stopped === 'week' ? (days===undefined?'A week has passed.':`${result.days.length} ${result.days.length===1?'day has':'days have'} passed.`) : `The turn stops: ${result.stopped.join(', ')}.`);
     this.request = this.game.morning();
     this.seenFrom = this.request.requestDay;
     lines.push(...morningLines(this.request, this.request.requestDay, this.t, { date: this.game.dateOf(this.request.requestDay), attention: this.request.view.attention }).slice(0, 1));
